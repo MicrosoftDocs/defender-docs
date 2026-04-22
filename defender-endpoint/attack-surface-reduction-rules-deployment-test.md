@@ -40,6 +40,14 @@ Begin your attack surface reduction rules deployment with ring 1.
 
 > :::image type="content" source="media/asr-rules-testing-steps.png" alt-text="The Microsoft Defender for Endpoint attack surface reduction (ASR rules) test steps. Audit attack surface reduction rules, configure ASR rules exclusions. Configure ASR rules Intune. ASR rules exclusions. ASR rules event viewer." lightbox="media/asr-rules-testing-steps.png":::
 
+## Assess and evaluate rules before deployment
+
+In Defender for Endpoint Plan 2 or with the [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) add-on, you can use ASR rule security recommendations to assess the impact of enabling a rule before you enable it in **Block** mode.
+
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Exposure management** \> **Recommendations** (or directly to the **Security recommendations** page at <https://security.microsoft.com/exposure-recommendations>). On the **Security recommendations** page, select an ASR rule to open the details flyout, and then select the **Devices** tab. The **User impact** value shows the percentage of devices that can accept a new policy enabling the rule in block mode without adversely affecting productivity.
+
+:::image type="content" source="media/asrrecommendation.png" alt-text="Screenshot of the Devices tab of an ASR rule security recommendation showing user impact." lightbox="media/asrrecommendation.png":::
+
 ## Step 1: Test attack surface reduction rules using Audit
 
 Begin the testing phase by turning on the attack surface reduction rules with the rules set to Audit, starting with your champion users or devices in ring 1. Typically, the recommendation is that you enable all the rules (in Audit) so that you can determine which rules are triggered during the testing phase.
@@ -231,7 +239,7 @@ To review apps that would be blocked, open Event Viewer and filter for Event ID 
 
 [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
 
-[Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
+[Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 

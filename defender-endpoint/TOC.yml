@@ -674,12 +674,10 @@
             href: attack-surface-reduction-rules-deployment-test.md
           - name: Enable attack surface reduction rules
             href: attack-surface-reduction-rules-deployment-implement.md
-          - name: Operationalize attack surface reduction rules
+          - name: Manage and monitor attack surface reduction rules
             href: attack-surface-reduction-rules-deployment-operationalize.md
           - name: Attack surface reduction rules reference
             href: attack-surface-reduction-rules-reference.md
-          - name: Troubleshoot attack surface reduction rules
-            href: troubleshoot-asr-rules.md
           - name: Enable ASR rules alternate configuration methods
             href: attack-surface-reduction-rules-enable.md
       - name: Controlled folder access

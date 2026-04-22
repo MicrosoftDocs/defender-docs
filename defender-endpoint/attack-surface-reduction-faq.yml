@@ -8,7 +8,7 @@ metadata:
   audience: ITPro
   author: chrisda
   ms.author: chrisda
-  ms.reviewer: sugamar 
+  ms.reviewer: sugamar
   ms.custom: asr
   ms.topic: faq
   ms.collection:
@@ -28,40 +28,25 @@ sections:
       - question: |
           Is attack surface reduction part of Windows?
         answer: |
-          Yes. But the full set of attack surface reduction rules and features are available only with a Windows enterprise license.
-
-          Microsoft Defender Antivirus is the native anti-malware component of Windows. Attack surface reduction was introduced in the exploit guard features of Microsoft Defender Antivirus in Windows 10 version 1709 (October 2017). For more information, see [Attack surface reduction rules reference - Microsoft Defender Antivirus exclusions and attack surface reduction rules](attack-surface-reduction-rules-reference.md#microsoft-defender-antivirus-exclusions-and-asr-rules).
-
-          > [!TIP]
-          > Some Microsoft Defender Antivirus exclusions also apply to attack surface reduction rule exclusions.
+          Yes. Attack surface reduction (ASR) rules are a feature of Microsoft Defender Antivirus, which is included in all current editions of Windows. However, centralized management and reporting for ASR rules requires [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md). For more information, see [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md).
 
       - question: |
           Do I need an enterprise license to run attack surface reduction rules?
         answer: |
-          Yes. The full set of attack surface reduction rules and features is supported only if you have an enterprise license for Windows 10 or later.
-
-          A limited number of attack surface reduction rules might work without an enterprise license.
-
-          If you have Microsoft 365 for business, set Microsoft Defender Antivirus as your primary security solution, and enable the rules through PowerShell. Using attack surface reduction without an enterprise license isn't officially supported and you can't use the full capabilities of attack surface reduction.
+          No. ASR rules are a feature of Microsoft Defender Antivirus, so they work on all current editions of Windows. However, centralized management, reporting, and configuration of ASR rules through services like Microsoft Intune or Microsoft Configuration Manager requires [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) and the corresponding enterprise licensing.
 
           To learn more about Windows licensing, see <https://www.microsoft.com/licensing/product-licensing/windows>.
 
       - question: |
-          Is attack surface reduction supported if I have a Windows Enterprise E3 license?
+          What additional attack surface reduction capabilities are available with Microsoft Defender for Endpoint?
         answer: |
-          Yes.
+          Microsoft Defender for Endpoint provides centralized management and monitoring for ASR rules, including:
 
-      - question: |
-          Which attack surface reduction features are supported with a Windows Enterprise E5 license?
-        answer: |
-          All attack surface reduction features in Windows Enterprise E3 are also supported in Windows Enterprise E5.
+          - Centralized deployment and configuration of ASR rules across devices.
+          - ASR rule reporting and alert visibility in the Microsoft Defender portal.
+          - Advanced hunting queries for ASR rule events.
 
-          Windows Enterprise E5 adds greater integration with Defender for Endpoint:
-
-          - View alerts in real-time.
-          - Fine-tune rule exclusions.
-          - Configure attack surface reduction rules.
-          - View lists of event reports.
+          These capabilities require a Defender for Endpoint license (for example, as part of Microsoft 365 E3 or E5). For more information, see [Deployment and configuration methods for ASR rules](attack-surface-reduction-rules-overview.md#deployment-and-configuration-methods-for-asr-rules).
 
       - question: |
           What are the currently supported attack surface reduction rules?
@@ -71,24 +56,17 @@ sections:
       - question: |
           Do I need to turn on all attack surface reduction rules at the same time, or can I turn on individual rules?
         answer: |
-          We recommend that you first enable most attack surface reduction rules in [audit mode](attack-surface-reduction-overview.md#audit-mode). With this approach, you can determine the possible effect to your organization. For example, your line-of-business applications.
+          You can enable ASR rules individually. We recommend that you first enable most rules in [Audit mode](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) to determine the possible effect to your organization (for example, to your line-of-business applications).
 
       - question: |
           How do attack surface reduction rule exclusions work?
         answer: |
-          One exclusion affects all attack surface reduction rules.
+          ASR rules support the following types of exclusions:
 
-          Exclusions support wildcards, paths, and environment variables. For more information, see [Configure and validate exclusions based on file extension and folder location](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus).
+          - **Global ASR rule exclusions** apply to all ASR rules. All ASR rule configuration methods support global exclusions.
+          - **Per-ASR rule exclusions** apply to individual rules, so you can assign different exclusions to different rules. Only Group Policy and endpoint security policies in Microsoft Intune support per-rule exclusions.
 
-          Be aware of the following issues with exclusions for attack surface reduction rules (including wildcards and environment variables):
-
-          - Most exclusions are independent from Microsoft Defender Antivirus exclusions. However, Microsoft Defender Antivirus exclusions apply to some attack surface reduction rules. For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules).
-          - Wildcards can't define a drive letter.
-          - To exclude more than one folder in a path, use multiple instances of `\*\` to indicate multiple nested folders. For example, `c:\Folder\*\*\Test`.
-          - Microsoft Configuration Manager supports wildcards (`*` or `?`).
-          - To exclude a file that contains random characters (for example, from automated file generation), use `?` symbol. For example, `C:\Folder\fileversion?.docx`.
-          - Exclusions in Group Policy don't support quotation marks. The engine natively handles long filenames and spaces, so you don't need to use quotation marks.
-          - Attack surface reduction rules run under `NT AUTHORITY\SYSTEM` account, so environment variables are limited to machine variables.
+          Not all ASR rules honor Microsoft Defender Antivirus exclusions. For a full breakdown of exclusion support per rule, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
       - question: |
           How do I know what I need to exclude?
@@ -108,7 +86,7 @@ sections:
       - question: |
           How do I configure per-rule exclusions?
         answer: |
-          For information, see [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md).
+          Per-ASR rule exclusions are supported only in Group Policy and endpoint security policies in Microsoft Intune. For configuration instructions, see [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md). For information about the different types of exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
       - question: |
           Which attack surface reduction rules does Microsoft recommend?
@@ -117,7 +95,7 @@ sections:
 
           - Typically, you can enable the following **standard protection rules** in **Block** mode without testing in **Audit** mode:
             - [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
-            - [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+            - [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem) **Note**: If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) (which we recommend, along with [Credential Guard](/windows/security/identity-protection/credential-guard)), this rule is redundant.
             - [Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription) **Note**: The Microsoft Configuration Manager (or previous versions) client relies heavily on WMI, so we recommend extensive testing in **Audit** mode before you activate this rule in **Block** mode.
 
             For details about each of these rules, see [Standard protection rules](attack-surface-reduction-rules-reference.md#standard-protection-rules).
@@ -135,6 +113,8 @@ sections:
           Test attack surface reduction rules in **Audit** mode to identify any line-of-business applications that you need to exclude from attack surface reduction.
 
           Large organizations should consider rolling out attack surface reduction rules in expanding "rings" where you audit and enable rules to more devices. You can organize devices into rings by using Microsoft Intune or a Group Policy management tool.
+
+          For instructions, see [Attack surface reduction rules deployment overview]
 
       - question: |
           How long should I test an attack surface reduction rule in audit mode before I enable it?
@@ -155,7 +135,7 @@ sections:
         answer: |
           Yes. For more information, see the following articles:
 
-          - [Excluding files and folders from attack surface reduction rules](attack-surface-reduction-rules-enable.md#exclude-files-and-folders-from-attack-surface-reduction-rules)
+          - [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules)
           - [Configure and validate exclusions based on file extension and folder location](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists).
 
       - question: |
@@ -208,11 +188,13 @@ sections:
 
           If you can't enable LSA protection and/or Credential Guard, you can configure this rule to provide equivalent protection against malware that targets `lsass.exe`.
 
+  - name: Related content
+    questions:
       - question: |
-          See also
+          Where can I find more information about attack surface reduction rules?
         answer: |
-          - [Attack surface reduction overview](attack-surface-reduction-rules-overview.md)
-          - [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
-          - [Attack surface reduction rules deployment Step 3: Implement attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
+          - [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md)
+          - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+          - [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
+          - [Implement attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
           - [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
-          - [Compatibility of Microsoft Defender Antivirus with other antivirus/antimalware](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility)

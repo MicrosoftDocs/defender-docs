@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "defender-endpoint/troubleshoot-asr-rules.md",
+      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-deployment-operationalize",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-endpoint/mde-security-settings-management.md",
       "redirect_url": "/intune/intune-service/protect/mde-security-integration",
       "redirect_document_id": false
@@ -244,7 +249,7 @@
       "source_path": "defender-endpoint/mac-whatsnew.md",
       "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "defender-endpoint/ios-whatsnew.md",
       "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",

@@ -140,7 +140,7 @@ You can access these events in Windows Event Viewer:
 |Windows Defender (Operational)|1121|Event when rule fires in block mode|
 
 > [!NOTE]
-> For ASR rules [that support **Warn** mode](attack-surface-reduction-rules-reference.md#asr-rule-modes), users receive a notification pop-up.
+> For ASR rules [that support **Warn** mode](attack-surface-reduction-rules-overview.md#modes-for-asr-rules), users receive a notification pop-up.
 
 ## Custom XML templates for attack surface reduction events
 

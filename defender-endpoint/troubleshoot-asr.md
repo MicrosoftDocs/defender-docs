@@ -36,31 +36,29 @@ Use the following steps to troubleshooting these problems:
 
 ## Confirm prerequisites
 
-Attack surface reduction rules are active and working on devices that meet the following conditions:
+For ASR rule requirements, see [Requirements for ASR rules](attack-surface-reduction-rules-overview.md#requirements-for-asr-rules).
 
-- Windows 10 Enterprise or later.
-- Microsoft Defender Antivirus is the only active antivirus protection app. Microsoft Defender Antivirus disables itself [if any other antivirus app is installed on the device](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
-- [Real-time protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-real-time-protection-microsoft-defender-antivirus) is enabled.
-- Attack surface reduction rules on the device are in one of the following modes:
-  - **Block** mode.
-  - **Warn** mode.
-  - Not configured or disabled.
+Verify ASR rules on the device are in one of the following modes:
 
-If these prerequisites are met, proceed to the next step to test the rule in audit mode.
+- **Block** mode.
+- **Warn** mode.
+- Not configured or disabled.
+
+If these prerequisites are met, proceed to the next step.
 
 <a name="best-practices-when-setting-up-attack-surface-reduction-rules-using-group-policy"></a>
 
 ## Verify rule ID values in group policy
 
-If you used group policy to configure attack surface reduction rules, verify there are no extra characters like quotation marks or spaces in the identifying GUID value.
+If you used group policy to configure ASR rules, verify there are no extra characters like quotation marks or spaces in the identifying GUID value.
 
-For more information about configuring attack surface reduction rules in group policy, see [Configure ASR rules in group policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-group-policy).
+For more information about configuring ASR rules in group policy, see [Configure ASR rules in group policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-group-policy).
 
 <a name="querying-which-rules-are-active"></a>
 
 ### Verify active rules and actions on the device
 
-Run the following command in PowerShell to see the state of all configured attack surface reduction rules on a device:
+Run the following command in PowerShell on the device to see the state of all configured ASR rules:
 
 ```powershell
 $p = Get-MpPreference;0..([math]::Min($p.AttackSurfaceReductionRules_Ids.Count,$p.AttackSurfaceReductionRules_Actions.Count)-1) | % {[pscustomobject]@{Id=$p.AttackSurfaceReductionRules_Ids[$_];Action=$p.AttackSurfaceReductionRules_Actions[$_]}} | Format-Table -AutoSize
@@ -88,7 +86,7 @@ d4f940ab-401b-4efc-aadc-ad5f3c50688a      2
 e6db77e5-3df2-4cf1-b95a-636979351e5b      1
 ```
 
-In this example, [the displayed rules](attack-surface-reduction-rules-reference.md#asr-rule-to-guid-matrix) are active in [different modes](attack-surface-reduction-rules-reference.md#asr-rule-modes) (2 = **Audit** mode, 1 = **Block** mode).
+In this example, [the displayed rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) are active in [different modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) (2 = **Audit** mode, 1 = **Block** mode).
 
 <a name="use-audit-mode-to-test-the-rule"></a>
 

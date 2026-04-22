@@ -52,7 +52,7 @@ You need to carefully plan and deploy attack surface reduction rules to test the
 
 ## Important predeployment caveat
 
-We recommended that you enable the following three _standard protection rules_. See [Attack surface reduction rules by type](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules) for important details about the two types of attack surface reduction rules.
+We recommended that you enable the following three _standard protection rules_. See [Attack surface reduction rules by type](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) for important details about the two types of attack surface reduction rules.
 
 - [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 - [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
@@ -80,20 +80,9 @@ Before you start, review the following documentation:
 
 Attack surface reduction rules are only one capability of the attack surface reduction capabilities within Microsoft Defender for Endpoint. This document goes into more detail on deploying attack surface reduction rules effectively to stop advanced threats like human-operated ransomware and other threats.
 
-### Attack surface reduction rules list by category
+<a name="attack-surface-reduction-rules-list-by-category"></a>
 
-The following table shows attack surface reduction rules by category:
-
-|Polymorphic threats|Lateral movement & credential theft|Productivity apps rules|Email rules|Script rules|Misc rules|
-|---|---|---|---|---|---|
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|Block process creations originating from PSExec and WMI commands|Block Office applications from creating executable content|Block executable content from email client and webmail|Block execution of potentially obfuscated scripts|Block abuse of exploited vulnerable signed drivers (Device) <sup>[[1](#fn1)]<sup></sup>|
-|Block untrusted and unsigned processes that run from USB|Block credential stealing from the Windows local security authority subsystem<sup>[[2](#fn1)]<sup></sup>|Block all Office applications from creating child processes|Block Office communication application from creating child processes|Block JavaScript or VBScript from launching downloaded executable content||
-|Use advanced protection against ransomware|Block persistence through WMI event subscription|Block Office applications from injecting code into other processes|Block Office communication application from creating child processes|||
-|||Block Adobe Reader from creating child processes||||
-
-(<a id="fn1">1</a>) _Block abuse of exploited vulnerable signed drivers (Device)_ is now available under **Endpoint Security** > **Attack Surface Reduction**.
-
-(<a id="fn1">2</a>) Some attack surface reduction rules generate considerable noise, but don't block functionality. For example, if you're updating Chrome, Chrome accesses **lsass.exe**; passwords are stored in **lsass** on the device. However, Chrome shouldn't be accessing local device **lsass.exe**. If you enable the rule to block access to **lsass**, you see many events. Those events are good events because the software update process shouldn't access lsass.exe. Using this rule blocks Chrome updates from accessing **lsass**, but won't block Chrome from updating. This is also true of other applications that make unnecessary calls to **lsass.exe**. The _block access to lsass_ rule blocks unnecessary calls to **lsass**, but doesn't block the application from running.
+For a list of ASR rules by category, see [Attack surface reduction rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
 
 ### Attack surface reduction infrastructure requirements
 
@@ -151,7 +140,7 @@ Some rules don't work well if unsigned, internally developed application and scr
 
 [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
 
-[Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
+[Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 
@@ -208,6 +197,3 @@ Some rules don't work well if unsigned, internally developed application and scr
 [Attack surface reduction rules configurations](https://security.microsoft.com/asr?viewid=configuration)
 
 [Attack surface reduction rules exclusions](https://security.microsoft.com/asr?viewid=exclusions)
-
-
-

@@ -62,6 +62,6 @@ For more information about our privacy statement, see [Microsoft Privacy Stateme
   > [!NOTE]
   > On Windows devices, if you use the attack surface reduction rule [Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands), you might want to take one of the following actions to temporarily allow the analyzer to run cloud connectivity checks without being blocked:
   >
-  > - [Configure an exclusion to the ASR rule](attack-surface-reduction-rules-enable.md#exclude-files-and-folders-from-attack-surface-reduction-rules).
+  > - [Configure an exclusion to the ASR rule](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
   > - Set the rule to **Audit** mode.
   > - Disable the rule.

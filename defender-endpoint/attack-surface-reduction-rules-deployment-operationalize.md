@@ -1,5 +1,5 @@
 ---
-title: Operationalize attack surface reduction rules
+title: Manage and monitor attack surface reduction rules
 description: Provides guidance to operationalize your attack surface reduction rules deployment.
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -9,22 +9,21 @@ ms.author: lwainstein
 ms.reviewer: sugamar, yongrhee
 ms.custom: asr
 ms.topic: article
-ms.collection: 
+ms.collection:
 - m365-security
 - m365solution-asr-rules
 - highpri
 - tier1
 - mde-asr
-ms.date: 03/26/2025
+ms.date: 04/21/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Operationalize attack surface reduction rules
 
+# Manage and monitor attack surface reduction rules
 
-After you've fully deployed attack surface reduction rules, it's vital that you have processes in place to monitor and respond to ASR-related activities. Activities include: 
+After you fully deployed attack surface reduction (ASR) rules, it's vital that you have processes in place to monitor and respond to ASR-related activities. The article describes the tools and methods you use to monitor ASR rules.
 
 ## Managing ASR rules false positives
 
@@ -32,21 +31,23 @@ False positives/negatives can occur with any threat protection solution. False p
 
 ## Keeping up with ASR rules reports
 
-Consistent, regular review of reports is an essential aspect of maintaining your attack surface reduction rules deployment and keeping abreast of newly emerging threats. Your organization should have scheduled reviews of attack surface reduction rules events on a cadence that keeps current with attack surface reduction rules-reported events. Depending on the size of your organization, reviews might be daily, hourly, or continuous monitoring.
+Consistent, regular review of reports is important to maintain your ASR rules deployment and keeping up with emerging threats. Schedule reviews of ASR rule events using a frequency that keeps up with ASR rule-reported events. Depending on the size of your organization, your reviews might be daily, hourly, or require continuous monitoring.
+
+For complete information about the ASR rules report, see [Attack surface reduction rules report](attack-surface-reduction-rules-report.md).
 
 ## ASR rules Advanced Hunting
 
-One of the most powerful features of [Microsoft Defender XDR](https://security.microsoft.com) is advanced hunting. If you're not familiar with advanced hunting, see: [Proactively hunt for threats with advanced hunting](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview).
+One of the most powerful features of [Microsoft Defender XDR](https://security.microsoft.com) is advanced hunting. If you're not familiar with advanced hunting, see: [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
-> :::image type="content" source="media/asr-defender365-advanced-hunting2.png" alt-text="The Advanced Hunting page in the Microsoft Defender portal. Microsoft Defender for Endpoint attack surface reduction rules used in advanced hunting" lightbox="media/asr-defender365-advanced-hunting2.png":::
+Advanced hunting in Microsoft Defender Endpoint Plan 2 is a Kusto Query Language (KQL) threat-hunting tool in the Microsoft Defender portal that lets you explore up to 30 days of the captured (raw) data from devices. You can proactively inspect events to find interesting indicators and entities for both known and potential threats. The flexible access to data allows hunting for both known and potential threats.
 
-Advanced hunting is a query-based (Kusto Query Language) threat-hunting tool that lets you explore up to 30 days of the captured data. Through advanced hunting, you can proactively inspect events in order to locate interesting indicators and entities. The flexible access to data facilitates unconstrained hunting for both known and potential threats.
+Through advanced hunting, it's possible to extract ASR rule information, create reports, and get in-depth information on the context of a specific audit or block event from ASR rules.
 
-Through advanced hunting, it's possible to extract attack surface reduction rules information, create reports, and get in-depth information on the context of a given attack surface reduction rule audit or block event.
+ASR rule events are available in the `DeviceEvents` table on the **Advanced hunting** page of the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>.
 
- You can query attack surface reduction rule events from the DeviceEvents table in the advanced hunting section of the Microsoft Defender portal. For example, the following query shows how to report all the events that have attack surface reduction rules as data source, for the last 30 days. The query then summarizes by the ActionType count with the name of the attack surface reduction rule.
+Attack surface reduction events shown in advanced hunting are throttled to unique processes seen every hour. The time of the attack surface reduction event is the first time the event is seen within that hour.
 
-Attack surface reduction events shown in the advancing hunting portal are throttled to unique processes seen every hour. The time of the attack surface reduction event is the first time the event is seen within that hour.
+The following sample query reports all events from the last 30 days with ASR rules as the data source. The query summarizes by `ActionType` count, which is the ASR rule.
 
 ```kusto
 DeviceEvents
@@ -55,17 +56,9 @@ DeviceEvents
 | summarize EventCount=count() by ActionType
 ```
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/asr-defender365-advanced-hunting4.png" alt-text="The Advanced hunting query results in the Microsoft Defender portal" lightbox="media/asr-defender365-advanced-hunting4.png":::
+:::image type="content" source="media/advanced-hunting-attack-surface-reduction-rules-query.png" alt-text="Screenshot of the Advanced hunting page in the Microsoft Defender portal with the example DeviceEvents query results." lightbox="media/advanced-hunting-attack-surface-reduction-rules-query.png":::
 
-The above shows that 187 events were registered for AsrLsassCredentialTheft:
-
-- 102 for Blocked
-- 85 for Audited
-- Two events for AsrOfficeChildProcess (1 for Audited and 1 for Block)
-- Eight events for AsrPsexecWmiChildProcessAudited
-
-If you want to focus on the AsrOfficeChildProcess rule and get details on the actual files and processes involved, change the filter for ActionType and replace the summarize line with a projection of the wanted fields (in this case they're DeviceName, FileName, FolderPath, etc.).
+To focus on a specific rule and get details on the actual files and processes involved, change the filter for `ActionType` and replace the `summarize` line with a `project` line that contains the fields you want (for example, `DeviceName`, `FileName`, `FolderPath`, etc.).
 
 ```kusto
 DeviceEvents
@@ -74,12 +67,32 @@ DeviceEvents
 | project DeviceName, FileName, FolderPath, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
 ```
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/asr-defender365-advanced-hunting5b.png" alt-text="The Advanced hunting query focused results in the Microsoft Defender portal" lightbox="media/asr-defender365-advanced-hunting5b.png":::
-
-The true benefit of advanced hunting is that you can shape the queries to your liking. By shaping your query you can see the exact story of what was happening, regardless of whether you want to pinpoint something on an individual machine, or you want to extract insights from your entire environment.
+The true benefit of advanced hunting is that you can shape the queries to your liking. You can pinpoint something on an individual machine, or you can extract insights from your entire environment.
 
 For more information about hunting options, see: [Demystifying attack surface reduction rules - Part 3](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-3/ba-p/1360968).
+
+<a name="microsoft-defender-for-endpoint-machine-timeline"></a>
+
+## ASR events in the device timeline
+
+A narrower scoped alternative to advanced hunting is the Defender for Endpoint device timeline. For more information, see [Microsoft Defender for Endpoint device timeline](device-timeline-event-flag.md).
+
+To open the device timeline of a device in the Microsoft Defender portal, do the following steps:
+
+1. Open the **Device Inventory** page at <https://security.microsoft.com/machines>.
+1. On the appropriate tab of the **Device Inventory** page (for example, **All devices** or **Computers & mobile**) select a device by clicking on the link in the **Name** column value.
+1. In the details page that opens, select the **Timeline** tab.
+1. On the **Timeline** tab, select **Filter**. In the **Filter** flyout that opens, select **ASR events** from the **Event group** section, and then select **Apply**.
+
+   The default timeframe is **1 week**, but you can also select **1 day**, **3 days**, **30 days**, or a custom date range within 30 days.
+
+:::image type="content" source="media/device-inventory-timeline.png" alt-text="Screenshot of the Timeline tab of the device details page of a device selected from the Device Inventory page of the Microsoft Defender portal. The results are filtered by the Event group value ASR events." lightbox="media/device-inventory-timeline.png":::
+
+<a name="how-to-troubleshoot-attack-surface-reduction-rules"></a>
+
+## Troubleshoot ASR rules
+
+To troubleshoot ASR rules, see [Troubleshoot attack surface reduction rules](troubleshoot-asr.md).
 
 ## Articles in this deployment collection
 
@@ -92,5 +105,3 @@ For more information about hunting options, see: [Demystifying attack surface re
 [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
-
-

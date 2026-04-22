@@ -39,7 +39,7 @@ When you're implementing attack surface reduction rules, move the first test rin
 > [!TIP]
 > Rule exclusions are better than turning off rules or switching them back to **Audit** mode.
 >
-> Take advantage of the **Warn** mode in available rules to limit disruptions. **Warn** mode enables you to capture triggered events and view potential disruptions without actually blocking user access (they can click through the warning notification). For more information, see [ASR rule modes](attack-surface-reduction-rules-reference.md#asr-rule-modes).
+> Take advantage of the **Warn** mode in available rules to limit disruptions. **Warn** mode enables you to capture triggered events and view potential disruptions without actually blocking user access (they can click through the warning notification). For more information, see [ASR rule modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules).
 
 ## Step 2: Expand deployment to ring n + 1
 
@@ -140,7 +140,7 @@ You can customize the notification for when a rule is triggered and blocks an ap
 
 [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 
-[Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
+[Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 

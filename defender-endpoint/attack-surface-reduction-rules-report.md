@@ -1,4 +1,4 @@
-﻿---
+---
 title: Attack surface reduction rules report
 description: Admins can learn about the Attack surface reduction rules report in the Microsoft Defender portal, which includes information about ASR rule detections, configuration, and blocked threats.
 ms.service: defender-endpoint
@@ -27,7 +27,7 @@ The Attack surface reduction (ASR) rules report provides detailed insights into 
 
 - Detected threats.
 - Blocked threats.
-- Devices that aren't configured to use the [standard protection rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules) to block threats.
+- Devices that aren't configured to use the [standard protection rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) to block threats.
 
 The report provides an easy-to-use interface that enables you to complete the following tasks:
 
@@ -82,7 +82,7 @@ The **Detections** tab is the default tab of the page. To go directly to the **D
 
 By default, the information on the page is filtered:
 
-- **Rules**: The value **Standard protection** is selected by default to show data for [standard protection rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules) only, but you can change the value to **All** to show data for all ASR rules.
+- **Rules**: The value **Standard protection** is selected by default to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) only, but you can change the value to **All** to show data for all ASR rules.
 
 - **Date**: The date range of the last 30 days is selected by default, but you can change the **Start time** and **End time** values to a range within the last 30 days.
 - **Select rules**: The value **Any** is selected by default, but you can change the value to one or more of the following values:
@@ -100,7 +100,7 @@ Below the filters, the following information is shown:
 - **Audit detections**: The number of threat detections by ASR rules in **Audit** mode during the specified time period.
 - **Blocked Detections**: The number of threat detections by ASR rules in **Block** mode during the specified time period
 
-  For more information about **Audit** mode and **Block** mode, see [Attack surface reduction rule modes](attack-surface-reduction-rules-reference.md#asr-rule-modes).
+  For more information about **Audit** mode and **Block** mode, see [Attack surface reduction rule modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules).
 
 The graph shows audited and blocked detections per day over the specified date range. HHover a detection type in the graph to see specific information about that detection type for that day.
 
@@ -168,7 +168,7 @@ To go directly to the **Configuration** tab of the **Attack surface reduction ru
 
 The **Configuration** tab provides summary and per-device ASR rule configuration details.
 
-**Rules** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules) only, but you can switch to **All** to show data for all ASR rules.
+**Rules** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) only, but you can switch to **All** to show data for all ASR rules.
 
 The **Device configuration overview** section shows a current snapshot of device states related to ASR rules:
 
@@ -188,7 +188,7 @@ The details table shows the following information for each affected device:
 - **Rules in audit mode**: The number of rules on the device in **Audit** mode.
 - **Rules in warn mode**: The number of rules on the device in **Warn** mode.
 
-  For more information about the different ASR rule modes, see [ASR rule modes](attack-surface-reduction-rules-reference.md#asr-rule-modes).
+  For more information about the different ASR rule modes, see [ASR rule modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules).
 
 - **Rules turned off**: The number of ASR rules that aren't enabled on the device.
 - **Rules not applicable**: ???
@@ -228,7 +228,7 @@ To go directly to the **Add exclusions** tab of the **Attack surface reduction r
 
 The **Add exclusions** tab lists detections by ASR rules across all devices.
 
-**Rules** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-reference.md#attack-surface-reduction-rules) only, but you can switch to **All** to show data for all ASR rules.
+**Rules** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) only, but you can switch to **All** to show data for all ASR rules.
 
 The details table shows the following information:
 
@@ -265,6 +265,6 @@ Select **Filter** to filter rules by **Standard protection** or **All**.
 - [Plan attack surface reduction rules deployment](attack-surface-reduction-rules-deployment-plan.md)
 - [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 - [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
-- [Operationalize attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
+- [Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
 - [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
