@@ -29,6 +29,21 @@ This article provides an overview of predictive shielding so that you can unders
 
 Learn [how predictive shielding works](#how-predictive-shielding-works) or how to [manage predictive shielding in Microsoft Defender](shield-predict-threats-manage.md).
 
+## Why predictive shielding matters
+
+In a typical attack, defenders react after malicious activity is detected — but attackers move fast. By the time a compromised device is identified, lateral movement or data exfiltration might already be underway. Predictive shielding shifts the balance by acting during an attack, before the attacker reaches their next target.
+
+**When predictive shielding becomes relevant:**
+
+- An active attack is detected in your environment (for example, a compromised device or credential).
+- Defender identifies other assets that are likely targets based on exposure data, attacker behavior patterns, and organizational topology.
+- Instead of waiting for the attacker to reach those assets, predictive shielding proactively applies targeted restrictions — such as containing at-risk user accounts, hardening GPO settings, or enforcing Safeboot — to cut off the attack path.
+
+This means security teams gain critical response time. Rather than racing to manually isolate every potentially affected asset, Defender autonomously narrows the attacker's options while analysts investigate.
+
+<!-- TODO: Confirm with PM (Aviv Sharon) whether "accelerated telemetry collection from at-risk systems" is accurate and documentable. If confirmed, add:
+"During an active attack, Defender also increases telemetry collection frequency from devices identified as at-risk, providing security teams with richer, more granular data to inform their investigation." -->
+
 ## How predictive shielding expands on automatic attack disruption
 
 The evolving threat landscape creates an imbalance: defenders must secure every asset, while attackers need only one opening. Traditional defenses are reactive, responding after malicious activity begins. This approach leaves defenders chasing attackers, who often act too quickly or subtly to detect in real time. While some attacker behaviors must be blocked outright, static prevention disrupts productivity and adds operational overhead.
@@ -103,5 +118,6 @@ Predictive shielding uses Defender for Endpoint-based actions. To use these acti
 
 - [Manage predictive shielding in Microsoft Defender](shield-predict-threats-manage.md) - Learn how to manage predictive shielding actions and investigate their impact in your environment.
 - [Automatic attack disruption in Microsoft Defender](automatic-attack-disruption.md) - Learn how automatic attack disruption works to identify and neutralize confirmed malicious activities.
+- [Microsoft Defender for Endpoint capabilities](/defender-endpoint/microsoft-defender-endpoint#defender-for-endpoint-capabilities) - See how predictive shielding fits within the full Defender for Endpoint protection stack.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
