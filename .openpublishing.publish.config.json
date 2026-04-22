@@ -179,6 +179,7 @@
       "build_output_subfolder": "sentinel-azure",
       "locale": "en-us",
       "monikers": [],
+      "moniker_ranges": [],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
