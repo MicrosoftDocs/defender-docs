@@ -48,8 +48,6 @@ If you're using non-Microsoft antivirus/antimalware software, you might be able 
 
 This section describes what happens when you use Microsoft Defender Antivirus alongside non-Microsoft antivirus/antimalware products on endpoints that aren't onboarded to Defender for Endpoint. 
 
-In general, Microsoft Defender Antivirus doesn't run in passive mode on devices that aren't onboarded to Defender for Endpoint.
-
 The following table summarizes what to expect:
 
 |Windows version|Primary antivirus/antimalware solution|Microsoft Defender Antivirus state|
@@ -91,6 +89,7 @@ The following table summarizes the state of Microsoft Defender Antivirus in seve
 | Microsoft Defender Antivirus | Yes | Active mode | N/A  |
 | Microsoft Defender Antivirus | No | Active mode | On, Evaluation, or Off |
 | A non-Microsoft antivirus/antimalware solution | Yes | Passive mode (automatically) | Evaluation or On|
+| A non-Microsoft antivirus/antimalware solution | No | Passive mode | Evaluation or On|
 | A non-Microsoft antivirus/antimalware solution | No | Disabled (automatically) | N/A or Off|
 
 > [!NOTE]
