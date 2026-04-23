@@ -322,7 +322,7 @@ These watchlists provide the configuration for the Microsoft Sentinel solution f
 :::zone pivot="connection-agentless"
 
 > [!NOTE]
-> For SAP S/4HANA Cloud, public edition (GROW with SAP) published as Sentinel Solution for SAP [partner add-on by SAP SE](https://learn.microsoft.com/en-us/azure/sentinel/sap/solution-partner-overview#solutions-provided-by-sap-as-vendor), only watchlists referenced by the public cloud-applicable analytics rules (marked with <sup>**PC**</sup> above) are relevant.
+> For SAP S/4HANA Cloud, public edition (GROW with SAP) published as Sentinel Solution for SAP [partner add-on by SAP SE](/sentinel/sap/solution-partner-overview#solutions-provided-by-sap-as-vendor), only watchlists referenced by the public cloud-applicable analytics rules (marked with <sup>**PC**</sup> above) are relevant.
 
 | Watchlist name | Description and fields |
 | --------- | --------- |
