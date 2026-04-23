@@ -98,7 +98,7 @@ Last seen   | The date and time of the most recent sign in event over this conne
 
 ### Define Service Account classification rules
 
-Service account classification rules let you define your own criteria for identifying service accounts. These rules help you include service accounts that Defender for Identity doesn't identify automatically. For example, some organizations name all their service accounts with a prefix like `srv`. Defender for Identity doesn't automatically detect such naming conventions. By creating a classification rule based on that pattern, you can include those accounts in the Service accounts view.
+Service account classification rules let you define your own criteria for identifying service accounts. These rules help you include service accounts that Defender for Identity doesn't identify automatically. For example, some organizations name all their service accounts with a prefix like `srv`. Defender for Identity doesn't automatically detect such naming conventions. By creating a classification rule based on that pattern, you can include those accounts in the Service accounts view. Classification rules are applied only to accounts that are not already automatically identified by Defender for Identity. Accounts detected automatically are excluded from this view.
 
 Classification rules work alongside Defender for Identity’s automatic discovery and provide a more complete and customized view of service accounts in your environment.
 
