@@ -7,7 +7,8 @@
     - name: What is Microsoft Defender for Cloud?
       displayName: Defender for cloud, servers, storage, sql, containers, app service,
         key vault, resource manager, dns, open-source relational databases,
-        Azure cosmos db, db, Azure, defender
+        Azure cosmos db, db, Azure, defender, Defender Experts, managed XDR,
+        managed detection and response, MDR
       href: defender-for-cloud-introduction.md
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
@@ -650,6 +651,9 @@
     displayName: hybrid, arc, Defender for Servers
     items:
     - name: Overview
+      displayName: Defender for Servers overview, Defender Experts for Defender for Servers,
+        managed XDR, managed detection and response, MDR, proactive threat hunting,
+        Ask Defender Experts
       href: defender-for-servers-overview.md
     - name: Common questions
       href: faq-defender-for-servers.yml

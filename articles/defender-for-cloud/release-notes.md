@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 04/01/2026
+ms.date: 04/23/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,12 +32,21 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| April 23, 2026 | GA | [Microsoft Defender Experts for Microsoft Defender for Servers as a managed XDR option](#microsoft-defender-experts-for-microsoft-defender-for-servers-as-a-managed-xdr-option) |
 | April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
 
-## General availability of Defender for Storage integration in Azure Portal Storage Center
+### Microsoft Defender Experts for Microsoft Defender for Servers as a managed XDR option
+
+April 23, 2026
+
+Defender for Cloud documentation now points to Microsoft Defender Experts for Microsoft Defender for Servers, a managed extended detection and response (XDR) service for server workloads. Microsoft analysts and automation work together to detect, prioritize, and respond to threats on machines protected by Defender for Servers Plan 1 or Plan 2 across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises environments. Defender Experts for Defender for Servers is sold separately and includes Defender Experts for Hunting and Ask Defender Experts.
+
+For more information, see [Microsoft Defender Experts for Microsoft Defender for Servers](/defender-xdr/dex-servers-overview) and [Get started with Microsoft Defender Experts for Microsoft Defender for Servers](/defender-xdr/get-started-dex-servers).
+
+### General availability of Defender for Storage integration in Azure Portal Storage Center
 
 April 20, 2026
 
