@@ -49,7 +49,9 @@ Defender Experts for Defender for Servers includes:
 
 Defender Experts for Defender for Servers is sold separately. You need Defender for Servers Plan 1 or Plan 2 enabled and Microsoft Defender for Endpoint deployed on your Windows and Linux machines. Defender Experts for Defender for Servers is standalone, so you don't need Microsoft Defender Experts for XDR to use it. If you use both, the two complement each other.
 
-To learn more, see [Microsoft Defender Experts for Microsoft Defender for Servers](/defender-xdr/dex-servers-overview). To enable the service, see [Get started with Microsoft Defender Experts for Microsoft Defender for Servers](/defender-xdr/get-started-dex-servers).
+Learn more about [Microsoft Defender Experts for Defender for Servers](/defender-xdr/dex-servers-overview). 
+
+Learn how to [enable Defender Experts for Defender for Servers](/defender-xdr/get-started-dex-servers).
 
 ## Defender for Servers plans
 
