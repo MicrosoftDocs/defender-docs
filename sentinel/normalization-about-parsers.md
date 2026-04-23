@@ -39,6 +39,7 @@ The following table lists the available unifying parsers:
 
 | Schema | Unifying parser | 
 | ------ | ------------------------- |
+| Agent Event | _Im_AgentEvent |
 | Alert Event | _Im_AlertEvent |
 | Asset Entity | _Im_AssetEntity |
 | Audit Event | _Im_AuditEvent |

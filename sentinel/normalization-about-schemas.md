@@ -23,6 +23,7 @@ Schema references outline the fields that comprise each schema. ASIM currently d
 
 | Schema | Schema Name for Tests | Version | Status |
 | ------ | --------------------- | ------- | ------ |
+| [Agent Event](normalization-schema-agent.md) | `AgentEvent` | 0.1.0 | GA |
 | [Alert Event](normalization-schema-alert.md) | `AlertEvent` | 0.1 | GA |
 | [Audit Event](normalization-schema-audit.md) | `AuditEvent` | 0.1.2 | GA |
 | [Authentication Event](normalization-schema-authentication.md) | `Authentication` | 0.1.4 | GA |
