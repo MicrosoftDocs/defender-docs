@@ -651,7 +651,7 @@
     displayName: hybrid, arc, Defender for Servers
     items:
     - name: Overview
-      displayName: Defender for Servers overview, Defender Experts for Defender for Servers,
+      displayName: Defender for Servers overview, Defender Experts for Servers,
         managed XDR, managed detection and response, proactive threat hunting,
         Ask Defender Experts
       href: defender-for-servers-overview.md

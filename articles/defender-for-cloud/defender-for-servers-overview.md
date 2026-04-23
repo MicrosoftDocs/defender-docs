@@ -35,23 +35,23 @@ This integration allows Defender for Servers to use the endpoint detection and r
 
 [Learn more](integration-defender-for-endpoint.md) about the integration.
 
-## Managed detection and response with Defender Experts for Defender for Servers
+## Managed detection and response with Defender Experts for Servers
 
-Microsoft Defender Experts for Microsoft Defender for Servers is a managed extended detection and response (XDR) service for server workloads. Microsoft analysts work alongside automation to detect, prioritize, and respond to threats on machines protected by Defender for Servers Plan 1 or Plan 2.
+Microsoft Defender Experts for Servers is a managed extended detection and response (XDR) service for server workloads. Microsoft analysts work alongside automation to detect, prioritize, and respond to threats on machines protected by Defender for Servers Plan 1 or Plan 2.
 
-Defender Experts for Defender for Servers covers all Plan 1 and Plan 2 alerts where the Detection Source is Microsoft Defender for Servers. Coverage includes Windows and Linux machines on Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises environments. Domain Name System (DNS) alerts aren't in scope.
+Defender Experts for Servers covers all Plan 1 and Plan 2 alerts where the Detection Source is Microsoft Defender for Servers. Coverage includes Windows and Linux machines on Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises environments. Domain Name System (DNS) alerts aren't in scope.
 
-Defender Experts for Defender for Servers includes:
+Defender Experts for Servers includes:
 
 - **Managed detection and response**: Microsoft analysts triage, investigate, and contain incidents on your servers, then hand off with guided steps to fix what's left.
 - **Proactive threat hunting**: Defender Experts for Hunting is included. Microsoft hunters search your Defender for Servers data for emerging threats.
 - **Ask Defender Experts**: Submit questions about specific incidents, alerts, or threat-actor activity from the Microsoft Defender portal.
 
-Defender Experts for Defender for Servers is sold separately. You need Defender for Servers Plan 1 or Plan 2 enabled and Microsoft Defender for Endpoint deployed on your Windows and Linux machines. Defender Experts for Defender for Servers is standalone, so you don't need Microsoft Defender Experts for XDR to use it. If you use both, the two complement each other.
+Defender Experts for Servers is sold separately. You need Defender for Servers Plan 1 or Plan 2 enabled and Microsoft Defender for Endpoint deployed on your Windows and Linux machines. Defender Experts for Servers is standalone, so you don't need Microsoft Defender Experts for XDR to use it. If you use both, the two complement each other.
 
-Learn more about [Microsoft Defender Experts for Defender for Servers](/defender-xdr/dex-servers-overview). 
+Learn more about [Microsoft Defender Experts for Servers](/defender-xdr/dex-servers-overview). 
 
-Learn how to [enable Defender Experts for Defender for Servers](/defender-xdr/get-started-dex-servers).
+Learn how to [enable Defender Experts for Servers](/defender-xdr/get-started-dex-servers).
 
 ## Defender for Servers plans
 
