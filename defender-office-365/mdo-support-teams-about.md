@@ -4,12 +4,12 @@ author: chrisda
 ms.author: chrisda
 ms.topic: overview
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
   - m365-security
   - tier1
 description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 04/07/2026
+ms.date: 04/20/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -68,7 +68,6 @@ These features are summarized in the following table:
 |Teams message entity panel||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 |User-reported Teams items||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
 |Remove users from Teams chats (admin remediation)|||:::image type="icon" source="media/feature_present_icon.png":::|
-|Attack simulation training with Teams messages|||:::image type="icon" source="media/feature_present_icon.png":::|
 |Advanced hunting on Teams messages|||:::image type="icon" source="media/feature_present_icon.png":::|
 
 <a name='configure-zap-for-teams-protection-in-defender-for-office-365-plan-2'></a>

@@ -16,6 +16,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-xdr/ai-agent-inventory.md",
+      "redirect_url": "/defender-xdr/security-for-ai/ai-agent-inventory",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-xdr/eval-overview.md",
       "redirect_url": "/defender-xdr/pilot-deploy-overview",
       "redirect_document_id": false

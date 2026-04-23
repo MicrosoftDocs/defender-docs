@@ -16,7 +16,7 @@ Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
 - Doesn't support VPN integration.
 - Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
-- Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute?view=o365-worldwide).
+- Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute).
 
 ## Server requirements
 
@@ -26,6 +26,16 @@ Before activating the Defender for Identity sensor v3.x, make sure that the serv
 - Doesn't have a Defender for Identity sensor v2.x already deployed.
 - Is running Windows Server 2019 or later.
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
+
+### Supported server types
+
+The v3.x sensor supports domain controllers, including domain controllers with these identity roles:
+
+- Active Directory Federation Services (AD FS)
+- Active Directory Certificate Services (AD CS)
+- Microsoft Entra Connect
+
+Use the [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) for standalone servers that run AD FS, AD CS, or Microsoft Entra Connect.
 
 ## Licensing requirements
 
