@@ -84,16 +84,16 @@ Each capability addresses a different part of the attack surface:
 
 ## Audit mode
 
-Most attack surface reduction capabilities support audit mode, which lets you see a record of what _would_ happen if the feature was fully enabled. Audit mode helps you evaluate the impact of attack surface reduction features on your environment without affecting productivity.
-
-In audit mode, the features don't block apps, scripts, or connections. Instead, the Windows Event Log records events as if the features were active. You can review event logs and use advanced hunting in the Microsoft Defender portal to understand how each feature would affect your line-of-business applications. For more information, see [View attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md).
-
-The following capabilities support audit mode:
+Audit mode helps you evaluate the impact of attack surface reduction features on your environment without affecting productivity. The following capabilities support audit mode:
 
 - [ASR rules](attack-surface-reduction-rules-deployment-test.md#step-1-test-attack-surface-reduction-rules-using-audit)
 - [Controlled folder access](enable-controlled-folders.md).
 - [Exploit protection](defender-endpoint/enable-exploit-protection.md)
 - [Network protection](enable-network-protection.md)
+
+In audit mode, the features don't block apps, scripts, or connections. Instead, the Windows Event Log records events as if the features were active. You can review event logs and use advanced hunting in the Microsoft Defender portal to understand how each feature would affect your line-of-business applications. For more information about the data in Windows Event Viewer, see [View attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md).
+
+You can also use advanced hunting in the Microsoft Defender portal to understand how each feature would affect your line-of-business applications.
 
 ## Management tools
 
@@ -110,7 +110,7 @@ The right tool depends on your organization's infrastructure and management pref
 
 - [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md)
 - [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
-- [View attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md)
+- [Attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md)
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Protect devices from exploits](exploit-protection.md)
 - [Network protection](network-protection.md)

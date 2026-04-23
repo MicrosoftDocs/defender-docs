@@ -124,6 +124,6 @@ When tampering is detected, an alert is raised. Some of the alert titles for tam
 - Tampering with Microsoft Defender for Endpoint sensor settings
 - Tampering with the Microsoft Defender for Endpoint sensor
 
-If the [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) attack surface reduction rule is triggered, the event is viewable in the [ASR Report](attack-surface-reduction-rules-report.md) and in [Advanced Hunting](attack-surface-reduction-rules-deployment-operationalize.md#asr-rules-advanced-hunting).
+If the [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) attack surface reduction rule is triggered, the event is viewable in the [ASR Report](attack-surface-reduction-rules-report.md) and in [Advanced Hunting](attack-surface-reduction-rules-monitor.md#asr-rule-events-in-advanced-hunting).
 
 If [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) (WDAC) is enabled, the [block and audit activity can be seen in Advanced Hunting](/windows/security/threat-protection/windows-defender-application-control/querying-application-control-events-centrally-using-advanced-hunting).

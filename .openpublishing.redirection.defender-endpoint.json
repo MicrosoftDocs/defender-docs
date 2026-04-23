@@ -2,7 +2,7 @@
   "redirections": [
     {
       "source_path": "defender-endpoint/troubleshoot-asr-rules.md",
-      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-deployment-operationalize",
+      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-monitor",
       "redirect_document_id": false
     },
     {

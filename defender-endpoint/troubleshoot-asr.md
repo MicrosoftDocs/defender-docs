@@ -115,19 +115,14 @@ If you did the tests in this section and the rule still isn't working as expecte
 
 ### View block and audit events in Windows Event Viewer
 
-You can view attack surface reduction rule events in the **Windows Defender** area of Windows Event Viewer.
+You can view attack surface reduction rule events in **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational** in Windows Event Viewer. Filter for the following **Event ID** values:
 
-1. Open **Event Viewer**. For example:
-   1. Open the **Start** menu, and then type **event**.
-   1. Select the **Event Viewer** result.
+- **Block events**: 1121
+- **Audit events**: 1122
+- **User override events in Warn mode**: 1129
+- **Configuration changes**: 5007
 
-1. In **Event viewer** console tree, go to **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational**.
-
-1. In the details pane of **Operational**, you can filter the entries for attack surface reduction rule events using the following **Event ID** values**:
-   - **Block events**: 1121, 1126, 1131, 1133
-   - **Audit events**: 1122, 1125, 1132, 1134
-   - **User override events in Warn mode**: 1129
-   - **Attack surface reduction configuration changes**: 5007
+For detailed information, see [View attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md#browse-attack-surface-reduction-events-in-windows-event-viewer).
 
 :::image type="content" source="media/eventviewerscrnew.png" alt-text="Screenshot of the Event Viewer page." lightbox="media/eventviewerscrnew.png":::
 
@@ -153,16 +148,16 @@ When you report a problem involving attack surface reduction rules, you need to 
 
 1. Download the [MDE Client Analyzer](overview-client-analyzer.md).
 
-1. Close any apps that aren't essential to reproducing the issue, and then run the MDE Client Analyzer [locally or using Live Response](run-analyzer-windows.md).
+1. Close any apps on the device that aren't essential to reproducing the issue.
 
-   > [!TIP]
-   > Ensure that log collection takes place during the reproduction attempt.
-
-1. Run the MDE Client Analyzer with the `-v` switch:
+1. Run the MDE Client Analyzer with the `-v` switch [locally or using Live Response](run-analyzer-windows.md):
 
    ```dos
    C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd -v
    ```
+
+   > [!TIP]
+   > Ensure that log collection takes place during the reproduction attempt.
 
 <a name="manual-process"></a>
 

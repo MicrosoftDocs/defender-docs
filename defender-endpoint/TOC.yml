@@ -660,26 +660,28 @@
         href: attack-surface-reduction-windows-events.md
       - name: Attack surface reduction FAQ
         href: attack-surface-reduction-faq.yml
-      - name: Attack surface reduction rules
+      - name: ASR rules
         items:
-        - name: Learn about ASR rules
+        - name: About ASR rules
           href: attack-surface-reduction-rules-overview.md
-        - name: Attack surface reduction rules deployment guide
+        - name: ASR rules deployment guide
           items:
-          - name: Attack surface reduction rules deployment overview
+          - name: ASR rules deployment guide
             href: attack-surface-reduction-rules-deployment.md
-          - name: Plan attack surface reduction rules deployment
+          - name: Plan your ASR rules deployment
             href: attack-surface-reduction-rules-deployment-plan.md
-          - name: Test attack surface reduction rules
+          - name: Test your ASR rules deployment
             href: attack-surface-reduction-rules-deployment-test.md
-          - name: Enable attack surface reduction rules
+          - name: Enable your ASR rules deployment
             href: attack-surface-reduction-rules-deployment-implement.md
-          - name: Manage and monitor attack surface reduction rules
+          - name: Manage and monitor your ASR rules deployment
             href: attack-surface-reduction-rules-deployment-operationalize.md
-          - name: Attack surface reduction rules reference
-            href: attack-surface-reduction-rules-reference.md
-          - name: Enable ASR rules alternate configuration methods
-            href: attack-surface-reduction-rules-enable.md
+        - name: Configure and deploy ASR rules
+          href: attack-surface-reduction-rules-enable.md
+        - name: Monitor ASR rule activity
+          href: attack-surface-reduction-rules-monitor.md
+        - name: ASR rules reference
+          href: attack-surface-reduction-rules-reference.md
       - name: Controlled folder access
         items:
         - name: Protect folders

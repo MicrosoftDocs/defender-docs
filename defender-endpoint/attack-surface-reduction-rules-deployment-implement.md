@@ -4,8 +4,8 @@ description: Provides guidance to implement your attack surface reduction rules 
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.reviewer: sugamar
 ms.custom: asr
 ms.topic: how-to
@@ -23,6 +23,8 @@ appliesto:
 ---
 
 # Implement attack surface reduction rules
+
+This article is part of the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 When you're implementing attack surface reduction rules, move the first test ring into an enabled, functional state.
 

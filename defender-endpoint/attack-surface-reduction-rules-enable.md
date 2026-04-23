@@ -57,7 +57,7 @@ To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surfa
 - **Platform**: Windows
 - **Profile**: Attack Surface Reduction Rules
 - **Configuration settings**:
-  - **Attack surface reduction**: In most cases, you can set the standard protection rules to **Block** mode without any testing. For all other rules, you should set them to **Audit** mode for testing before you enable them in **Block** or **Warn** mode. For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
+  - **Attack surface reduction**: Typically, you can set the standard protection rules to **Block** mode without any testing. For all other rules, you should set them to **Audit** mode for testing before you enable them in **Block** or **Warn** mode. For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
 
     After you set the rule mode to **Audit**, **Block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
 

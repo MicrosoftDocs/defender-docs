@@ -4,8 +4,8 @@ description: Provides guidance to plan your attack surface reduction rules deplo
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.reviewer: sugamar, yongrhee
 ms.custom: asr
 ms.topic: article
@@ -15,7 +15,7 @@ ms.collection:
 - highpri
 - tier1
 - mde-asr
-ms.date: 03/27/2025
+ms.date: 04/22/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -23,18 +23,38 @@ appliesto:
 
 # Plan attack surface reduction rules deployment
 
-Always plan your deployment before you test or enable attack surface reduction (ASR) rules . Careful planning helps you test your ASR rules deployment and get ahead of any rule exceptions. When planning to test ASR rules, make sure you start with the right business unit. Start with a small group of people in a specific business unit. You can identify some champions within a particular business unit who can provide feedback to help tune your implementation.
+This article is part of the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
+
+This first step in your attack surface reduction (ASR) rules deployment is to plan the deployment before testing or enabling rules. This article describes a sound planning methodology that you can adjust to meet your business needs.
 
 > :::image type="content" source="media/asr-rules-planning-steps.png" alt-text="The ASR rule planning steps." lightbox="media/asr-rules-planning-steps.png":::
 
 > [!TIP]
-> Typically, you can enable the **standard protection** rules without extensive testing. For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
+> Typically, you can enable the three _standard protection rules_ without extensive testing. For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
+
+## Infrastructure requirements for the deployment guide
+
+Although there are [multiple ways to enable ASR rules](attack-surface-reduction-rules-enable.md), this deployment guide is based on an infrastructure consisting of:
+
+- Microsoft Entra ID
+- Microsoft Intune
+- Windows 10 and Windows 11 devices
+- Microsoft Defender for Endpoint E5 or Windows E5 licenses
+
+To take full advantage of ASR rules and reporting, we recommend using a Microsoft Defender XDR E5, Windows E5, or A5 license. Learn more at [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
+
+> [!NOTE]
+> If you're transitioning from a non-Microsoft host intrusion prevention system (HIPS) to Microsoft Defender Antivirus and ASR rules, we recommend running the HIPS solution alongside ASR rules util you shift to the [implementation phase](attack-surface-reduction-rules-deployment-implement.md). Contact the antivirus solution provider for exclusion recommendations.
+
+### Considerations for unsigned apps
+
+Some ASR rules don't work well if you frequently use unsigned, internally developed apps and scripts. It's more difficult to deploy ASR rules if you don't enforce code signing.
 
 ## Start your ASR rules deployment with the right business unit
 
-How you select the first business unit to receive ASR rules depends on the following factors:
+How you select the first business unit to receive ASR rules in the [testing phase](attack-surface-reduction-rules-deployment-test.md) depends on the following factors:
 
-- Size of business unit
+- Size of the business unit (smaller is usually easier to manage)
 - Availability of ASR rule champions
 - Distribution and usage of affected software. For example:
   - Software
@@ -44,8 +64,8 @@ How you select the first business unit to receive ASR rules depends on the follo
 
 Your business needs might clearly dictate one of the following choices:
 
-- Include multiple business units to get a broad sampling of software, shared folders, scripts, macros, and line of business apps.
-- Limit the initial scope to a single business unit, the repeat the roll out to other business units individually.
+- Include multiple business units to get a broad sampling of software, shared folders, scripts, macros, and line of business apps that might be affected by ASR rules.
+- Limit the initial scope to a single business unit, work through all the issues in that business unit, the repeat the roll out to other business units individually.
 
 ## Identify ASR rule champions
 
@@ -53,39 +73,36 @@ ASR rule champions are people in the affected business units who can help you du
 
 It's important to provide a feedback and response channel for your ASR rule champions to alert you to work disruptions and to receive ASR rules rollout communications.
 
-## Get inventory of line-of-business apps and understand the business unit processes
+## Inventory line-of-business apps and understand the business unit processes
 
-Having a full understanding of the applications and per-business-unit processes that are used across your organization is critical to a successful ASR rules deployment. Additionally, it's imperative that you understand how those apps are used within the various business units in your organization.
-To start, you should get an inventory of the apps that are approved for use across the breadth of the organization. You can use tools such as the Microsoft 365 Apps admin center to help inventory software applications. See: [Overview of inventory in the Microsoft 365 Apps admin center](/deployoffice/admincenter/inventory).
+A full understanding of the apps and business processes in your organization is critical to a successful ASR rules deployment. It's imperative that you understand how those apps are used within the various business units in your organization.
+
+Take inventory of the approved apps in your organization. You can use tools like the Microsoft 365 Apps admin center to help. For more information, see [Overview of inventory in the Microsoft 365 Apps admin center](/microsoft-365-apps/admin-center/inventory).
 
 ## Define reporting and response ASR rules team roles and responsibilities
 
-Clearly articulating roles and responsibilities of persons responsible for monitoring and communicating ASR rules status and activity is a core activity of attack surface reduction  maintenance. Therefore, it's important to determine:
+Clearly articulating roles and responsibilities of persons responsible for monitoring and communicating ASR rules status and activity is a core activity of attack surface reduction maintenance. Therefore, it's important to determine:
 
-- The person or team responsible for gathering reports
-- How and with whom reports are shared
-- How escalation is addressed for newly identified threats or unwanted blockages caused by ASR rules
+- Who's responsible for gathering reports.
+- How and with whom reports are shared.
+- How to escalate and address new threats or unwanted blocks by ASR rules.
 
 Typical roles and responsibilities include:
 
-- IT admins: Implement ASR rules, manage exclusions. Work with different business units on apps and processes. Assembling and sharing reports to stakeholders
-- Certified security operations center (CSOC) analyst: Responsible for investigating high-priority, blocked processes, to determine whether the threat is valid or not
-- Chief information security officer (CISO): Responsible for the overall security posture and health of the organization
+- **IT admins**: Implement ASR rules and manage exclusions. Work with different business units on apps and processes. Create and share reports to stakeholders.
+- **Certified security operations center (CSOC) analysts**: Investigate high-priority blocked processes.
+- **Chief information security officer (CISO)**: Responsible for the overall security posture and health of the organization.
 
 ## ASR rules ring deployment
 
-For large enterprises, Microsoft recommends deploying ASR rules in "rings." Rings are groups of devices that are visually represented as concentric circles that radiate outward like nonoverlapping tree rings. When the innermost ring is successfully deployed, you can transition to the next ring into the testing phase. Thorough assessment of your business units, attack surface reduction  rules champions, apps, and processes is imperative to defining your rings.
+For large enterprises, Microsoft recommends deploying ASR rules in "rings." Rings are groups of devices that are visually represented as concentric circles that radiate outward like nonoverlapping tree rings. When the innermost ring is successfully deployed, you can transition to the next ring into the testing phase. Thorough assessment of your business units, attack surface reduction rules champions, apps, and processes is imperative to defining your rings.
 In most cases, your organization has deployment rings for phased rollouts of Windows updates. You can use your existing ring design to implement ASR rules.
 See: [Create a deployment plan for Windows](/windows/deployment/update/create-deployment-plan)
 
-## Other articles in this deployment collection
+## See also
 
-[Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
-
-[Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
-
-[Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
-
-[Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
-
-[Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+- [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
+- [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
+- [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
+- [Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
+- [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
