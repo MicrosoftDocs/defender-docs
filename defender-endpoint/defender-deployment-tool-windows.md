@@ -117,11 +117,11 @@ asdf
    Copy the key and save it, as it will be needed with the deployment tool.
 
    After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
----
 
 ### [Restricted](#tab/restricted)
 
 RESTRICTED TBD
+
 ---
 
 > [!NOTE] 
