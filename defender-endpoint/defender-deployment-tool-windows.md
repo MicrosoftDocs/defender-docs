@@ -88,6 +88,10 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 ## Generate and download a new onboarding package
 
+asdf
+
+### [Full](#tab/full)
+
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
 
 1. In the Step 1 dropdown menu, choose **Windows (preview)**.
@@ -113,6 +117,12 @@ There are prerequisites that pertain to all supported Windows and Windows Server
    Copy the key and save it, as it will be needed with the deployment tool.
 
    After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
+---
+
+### [Restricted](#tab/restricted)
+
+RESTRICTED TBD
+---
 
 > [!NOTE] 
 > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
