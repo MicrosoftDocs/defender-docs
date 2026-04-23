@@ -127,7 +127,7 @@ The discovery chain outlines the observed connections between a discovery seed a
 
 In the example, you can see that the seed domain is tied to this asset through the contact email in its Whois record. That same contact email was used to register the IP block that includes this particular IP address asset.
 
-![Screenshot that shows the discovery chain.](media/Inventory_3.png)
+![Screenshot that shows the discovery chain.](media/inventory-3.png)
 
 ### Discovery information
 
@@ -146,7 +146,7 @@ The Defender EASM IP reputation data displays instances when the IP address was 
 
 In this example, the IP address is present on an abnormally high number of threat feeds. This information indicates that the asset should be thoroughly investigated to prevent malicious activity in the future.
 
-![Screenshot that shows the asset details page IP reputation tab.](media/Inventory_4.png)
+![Screenshot that shows the asset details page IP reputation tab.](media/inventory-4.png)
 
 ### Services
 
@@ -154,25 +154,25 @@ The **Services** tab is available for IP address, domain, and host assets. This 
 
 Defender EASM's services data is key to understanding the infrastructure that powers your asset. It can also alert you to resources that are exposed on the open internet that should be protected.
 
-![Screenshot that shows the asset details page Services tab.](media/Inventory_5.png)
+![Screenshot that shows the asset details page Services tab.](media/inventory-5.png)
 
 ### IP addresses
 
 This section provides insight on any IP addresses that are running on the asset's infrastructure. On the **Services** tab, Defender EASM provides the name of the IP address and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the IP address was observed during the most recent scan of the asset. If there's no checkbox in this column, the IP address was seen in prior scans, but it isn't currently running on the asset.
 
-![Screenshot that shows the asset details page IP address section of the Services tab.](media/Inventory_6.png)
+![Screenshot that shows the asset details page IP address section of the Services tab.](media/inventory-6.png)
 
 ### Mail servers
 
 This section provides a list of any mail servers that are running on the asset. This information indicates that the asset is capable of sending emails. In this section, Defender EASM provides the name of the mail server and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the mail server was detected during the most recent scan of the asset.
 
-![Screenshot that shows the asset details page Mail server section of the Services tab.](media/Inventory_7.png)
+![Screenshot that shows the asset details page Mail server section of the Services tab.](media/inventory-7.png)
 
 ### Name servers
 
 This section displays any name servers that are running on the asset to provide resolution for a host. In this section, Defender EASM provides the name of the mail server and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the name server was detected during the most recent scan of the asset.
 
-![Screenshot that shows the asset details page Name server section of the Services tab.](media/Inventory_8.png)
+![Screenshot that shows the asset details page Name server section of the Services tab.](media/inventory-8.png)
 
 ### Open ports
 
@@ -180,7 +180,7 @@ This section lists any open ports detected on the asset. Microsoft regularly sca
 
 In this section, Defender EASM provides the open port number, a description of the port, the last state it was observed in, and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the port was observed as open during the most recent scan. Defender EASM considers a port “open” when our system can successfully complete a syn-ack handshake that results in attributed banners. When we can establish a TCP connection but are unable to complete our service fingerprinting, we mark the port as “filtered”. A "closed" port is still accessible but there is no service listening on the port and thus denies connections.
 
-![Screenshot that shows the asset details page Open ports section of the Services tab.](media/Inventory_9.png)
+![Screenshot that shows the asset details page Open ports section of the Services tab.](media/inventory-9.png)
 
 ### Trackers
 
@@ -192,7 +192,7 @@ In this section, Defender EASM provides the tracker type (for example, GoogleAna
 
 Web components are details that describe the infrastructure of an asset as observed through a Microsoft scan. These components provide a high-level understanding of the technologies used on the asset. Microsoft categorizes the specific components and includes version numbers when possible.
 
-![Screenshot that shows the top of the Web components tab.](media/Inventory_10.png)
+![Screenshot that shows the top of the Web components tab.](media/inventory-10.png)
 
 The **Web components** section provides the category, name, and version of the component and a list of any applicable CVEs that should be remediated. Defender EASM also provides **First seen** and **Last seen** date columns and a **Recent** column. A checked box indicates that this infrastructure was observed during the most recent scan of the asset.
 
@@ -255,19 +255,19 @@ The **Resources** tab provides insight on any JavaScript resources running on an
 
 Defender EASM provides the resource URL, resource host, MD5 value, and first-seen and last-seen dates to help organizations effectively monitor the use of JavaScript resources across their inventory.
 
-![Screenshot that shows the Resources tab.](media/Inventory_12.png)
+![Screenshot that shows the Resources tab.](media/inventory-12.png)
 
 ### SSL certificates
 
 Certificates are used to secure communications between a browser and a web server via SSL. use of certificates ensures that sensitive data in transit can't be read, tampered with, or forged. This section of Defender EASM lists any SSL certificates detected on the asset, including key data like the issue and expiry dates.
 
-![Screenshot that shows the SSL certificates tab.](media/Inventory_13.png)
+![Screenshot that shows the SSL certificates tab.](media/inventory-13.png)
 
 ### Whois
 
 The Whois protocol is used to query and respond to the databases that store data related to the registration and ownership of internet resources. Whois contains key registration data that can apply to domains, hosts, IP addresses, and IP blocks in Defender EASM. On the **Whois** data tab, Microsoft provides a robust amount of information associated with the registry of the asset.
 
-![Screenshot that shows the Whois Values tab.](media/Inventory_14.png)
+![Screenshot that shows the Whois Values tab.](media/inventory-14.png)
 
 The following fields are included in the table in the **Values** section on the **Whois** tab.
 

@@ -29,11 +29,11 @@ Before you create a Defender EASM resource group, become familiar with how to ac
 
 1. To create a new resource group, select **Resource groups** in the Azure portal.
 
-    ![Screenshot that shows the Resource groups option highlighted on the Azure home page.](media/QuickStart-1.png)
+    ![Screenshot that shows the Resource groups option highlighted on the Azure home page.](media/quickstart-1.png)
 
 1. Under **Resource groups**, select **Create**.
 
-    ![Screenshot that shows Create highlighted in the Resource groups list view.](media/QuickStart-2.png)
+    ![Screenshot that shows Create highlighted in the Resource groups list view.](media/quickstart-2.png)
 
 1. Select or enter the following property values:
 
@@ -55,7 +55,7 @@ Before you create a Defender EASM resource group, become familiar with how to ac
       -  norwayeast
       -  francecentral
 
-    ![Screenshot that shows the Create a resource group Basics tab.](media/QuickStart-3.png)
+    ![Screenshot that shows the Create a resource group Basics tab.](media/quickstart-3.png)
 
 1. Select **Review + create**.
 
@@ -71,7 +71,7 @@ After you create a resource group, you can create Defender EASM resources in the
 
 1. Select **Create** to create a Defender EASM resource.
 
-    ![Screenshot that shows the Create button highlighted in the Defender EASM list view.](media/QuickStart-5.png)
+    ![Screenshot that shows the Create button highlighted in the Defender EASM list view.](media/quickstart-5.png)
 
 1. Select or enter the following property values:
 
@@ -80,7 +80,7 @@ After you create a resource group, you can create Defender EASM resources in the
    - **Name**: Give the Defender EASM workspace a name.
    - **Region**: Select an Azure location. See the supported regions listed in the preceding section.
 
-    ![Screenshot that shows the Create Microsoft Defender EASM workspace Basics tab.](media/QuickStart-6.png)
+    ![Screenshot that shows the Create Microsoft Defender EASM workspace Basics tab.](media/quickstart-6.png)
 
 1. Select **Review + create**.
 
