@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 04/01/2026
+ms.date: 04/23/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,10 +32,31 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| April 30, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
 | April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
+### General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration
+
+April 30, 2026
+
+The native integration between Microsoft Defender for Cloud and GitHub Advanced Security (GHAS) is now generally available. This integration connects runtime security signals from Defender for Cloud with code-level vulnerability management in GHAS, enabling developers and security teams to prioritize and remediate vulnerabilities based on actual production risk.
+
+**Key capabilities:**
+
+- **Runtime context in GitHub** - GHAS alerts are enriched with runtime risk factors from Defender for Cloud, including internet exposure, sensitive data access, and lateral movement potential.
+- **AI-powered remediation** - GitHub Copilot Autofix provides validated, ready-to-merge security fixes with multi-fix bundling for efficiency.
+- **Security campaigns** - Security teams can trigger targeted GitHub Security Campaigns from Defender for Cloud to mobilize developer teams on prioritized vulnerabilities.
+- **Bidirectional sync** - GitHub issue status and ownership changes sync to Defender for Cloud within minutes.
+
+**Prerequisites:**
+
+- Defender Cloud Security Posture Management (DCSPM) plan
+- GitHub account with connector configured in Defender for Cloud
+- GitHub Advanced Security license on connected repositories
+
+Learn more about [GitHub Advanced Security integration](github-advanced-security-overview.md) and how to [deploy the integration](github-advanced-security-deploy.md).
 
 ## General availability of Defender for Storage integration in Azure Portal Storage Center
 
@@ -554,11 +575,11 @@ Learn more about [Serverless protection](serverless-protection.md).
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
-### GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration
+### GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration (Preview)
 
 November 26, 2025
 
-Announcing the preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
+Microsoft Defender for Cloud announced the preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
 
 This integration helps organizations secure code to cloud and accelerate fixing security issues in their software portfolio. It uses agentic remediation from GitHub Advanced Security's security campaigns and autofix agent with Microsoft Defender for Cloud runtime context-based vulnerability prioritization. The result is fewer distractions, faster fixes, better collaboration, and secure code to cloud. 
 

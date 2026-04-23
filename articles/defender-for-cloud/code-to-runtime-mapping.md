@@ -1,7 +1,7 @@
 ---
 title: Code to runtime for recommendations
 description: Learn how to use code to runtime visibility to trace security issues from runtime back to source code and fix them at the origin to prevent recurrence.
-ms.date: 03/10/2026
+ms.date: 04/23/2026
 ms.topic: how-to
 ms.author: dlanger
 author: DebLanger
@@ -160,7 +160,7 @@ This streamlined collaboration between security and engineering reduces repeated
 
 ## Related content
 
-- [What is GitHub Advanced Security integration with Microsoft Defender for Cloud (preview)?](github-advanced-security-overview.md)
+- [What is GitHub Advanced Security integration with Microsoft Defender for Cloud?](github-advanced-security-overview.md)
 - [Deploy GitHub Advanced Security integration with Microsoft Defender for Cloud](github-advanced-security-deploy.md)
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
 - [Container image mapping](container-image-mapping.md)

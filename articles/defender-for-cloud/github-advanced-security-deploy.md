@@ -1,7 +1,7 @@
 ---
 title: Deploy GitHub Advanced Security Integration with Microsoft Defender for Cloud
 description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-runtime security.
-ms.date: 03/03/2026
+ms.date: 04/23/2026
 ms.topic: how-to
 ms.author: dlanger
 author: DebLanger
@@ -26,8 +26,8 @@ By following this guide, you:
 
 | Aspect | Details |
 | ------ | ------- |
-| Environmental requirements | - GitHub account with a connector created in Defender for Cloud<br>- GHAS license<br>- Defender Cloud Security Posture Management (DCSPM) enabled on the subscription<br>- Microsoft Security Copilot (optional for automated remediation) |
-| Roles and permissions | - Security Admin permissions<br>- Security Admin  on the Azure subscription (to view findings in Defender for Cloud)<br>- GitHub organization owner |
+| Environmental requirements | - GitHub account with a connector created in Defender for Cloud<br>- GitHub Advanced Security (GHAS) license on connected repositories<br>- Defender Cloud Security Posture Management (DCSPM) plan enabled on the subscription<br>- Microsoft Security Copilot (optional for AI-powered automated remediation) |
+| Roles and permissions | - Security Admin permissions<br>- Security Admin on the Azure subscription (to view findings in Defender for Cloud)<br>- GitHub organization owner (for connecting repositories and configuring security campaigns) |
 | Cloud environments | - Available in commercial clouds only (not in Azure Government, Azure operated by 21Vianet, or other sovereign clouds) |
 
 ## Prepare your environment
@@ -184,11 +184,18 @@ To create a scanning campaign, you must work at the GitHub organization level. T
 1. In GitHub, go to the GitHub organization that you used for the setup testing.
 
 1. Select **Security** > **Campaigns** > **Create campaign** > **From code scanning filters**.
-   This campaign defines which cloud discovered artifacts (such as container images or workloads) are evaluated and tracked across your environment.
+   
+   Security campaigns allow security administrators and AppSec engineers to trigger targeted remediation efforts from Defender for Cloud. Campaigns use runtime context to scope impact and drive focused remediation, mobilizing developer teams on prioritized vulnerabilities based on actual production risk.
 
    :::image type="content" source="media/github-advanced-security/security-campaigns-code-scanning.jpg" alt-text="Screenshot of options in GitHub to create a campaign from code or secret scanning filters." lightbox="media/github-advanced-security/security-campaigns-code-scanning.jpg":::
 
 1. Create the following campaign. This campaign shows open alerts with medium severity where the image deployed from the repository is tied to a critical resource. Your test repository should be detected with this campaign.
+
+   **Campaign configuration tips:**
+   - Use runtime risk filters to focus on vulnerabilities with actual production impact
+   - Filter by severity, status, and specific runtime contexts (internet exposure, sensitive data, critical resources)
+   - Combine multiple risk factors to create highly targeted campaigns
+   - Regularly review campaign results to adjust targeting criteria
 
    :::image type="content" source="media/github-advanced-security/campaigns-creation-filters.jpg" alt-text="Screenshot of a GitHub campaign with filters for open alerts, severity, and runtime risk." lightbox="media/github-advanced-security/campaigns-creation-filters.jpg":::
 
@@ -270,7 +277,7 @@ On the GitHub side, if you have a GitHub Copilot license, you can resolve the is
 
 ## Related content
 
-- [What is GitHub Advanced Security integration with Microsoft Defender for Cloud (preview)?](github-advanced-security-overview.md)
+- [What is GitHub Advanced Security integration with Microsoft Defender for Cloud?](github-advanced-security-overview.md)
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
 - [Quickstart: Connect your GitHub environment to Microsoft Defender for Cloud](quickstart-onboard-github.md)
 - [Configure agentless code scanning (preview)](agentless-code-scanning.md)
