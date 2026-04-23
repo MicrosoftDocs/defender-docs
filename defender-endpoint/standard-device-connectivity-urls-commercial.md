@@ -34,7 +34,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|Common|443|`settings-win.data.microsoft.com`|Connected User Experiences and Telemetry Channel|Optional|Yes|||||Only required for Windows 10 1703 and below. Not required on Windows Server.|
 |Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|`x.cp.wd.microsoft.com`|Used by Microsoft Defender Antivirus to provide cloud-delivered protection and security intelligence updates|Required||||Yes|Yes||
 |Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|`cdn.x.cp.wd.microsoft.com`|Microsoft Defender Antivirus Content Delivery Network (CDN) - Security Intelligence updates|Required||||Yes|Yes||
-|Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|`officecdn-microsoft-com.akamaized.net`|Microsoft Office Content Delivery Network (CDN) - Product Updates|Required||||Yes|Yes||
+|Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|Root URL for public Microsoft CDN endpoints (referred to as ChannelURL) - for the updated URL, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates)|Microsoft Office Content Delivery Network (CDN) - Product Updates|Required||||Yes|Yes|New CDN endpoint starting with macOS build 101.26012.0012|
 |Microsoft Defender for Endpoint|WW|Common (Linux)|443|`packages.microsoft.com`|Required to download and update the MDE Linux agent|Required|||||Yes||
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`login.windows.net`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`*.security.microsoft.com`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
@@ -153,6 +153,8 @@ Because these Defender for Endpoint-related processes generate network communica
 
 |Date|Change Log|
 |---|---|
+|04/14/2026|Replaced `officecdn-microsoft-com.akamaized.net` with new CDN ChannelURL reference for Mac/Linux product updates. New CDN endpoint starting with macOS build 101.26012.0012.|
+|04/13/2026|Added SmartScreen URLs (`*.checkappexec.microsoft.com`, `*.urs.microsoft.com`) to [Microsoft Defender URLs](#microsoft-defender-urls).|
 |03/26/2026|Added new Azure UAE North (AEN) and Azure UAE Central (AEC) URLs to the [Microsoft Defender URLs](#microsoft-defender-urls) section: `winatp-gw-aec0a.microsoft.com`, `winatp-gw-aen0a.microsoft.com`, `automatedirstrprdaen0a.blob.core.windows.net`,`automatedirstrprdaec0a.blob.core.windows.net`.|
 |03/26/2026|Renamed **Microsoft Defender processes** section to **Client processes**, and aligned the content for all URL lists.|
 |16/06/2025|Corrected row 94, Defender Core service and ECS, to be listed as "Required". <br> Corrected row 93, `*.events.data.microsoft.com`, to be listed as "Required".|

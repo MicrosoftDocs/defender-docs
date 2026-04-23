@@ -223,6 +223,7 @@ For known issues, see [macOS known issues](#macos-known-issues).
 | General      | CVE‑2025‑68664/5 LangGrinch (langchain vulnerability) |
 | General      | Mitigation for a possible EDLP performance issue related to MDM profile behavior |
 | General      | Device Control - policy conditional on secure digital card details |
+| Documentation | Replaced endpoint URL for Microsoft CDN with a reference to the Microsoft AutoUpdate (MAU) product documentation. For more information, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates). For the full list of required URLs, see [Standard connectivity URLs](standard-device-connectivity-urls-commercial.md). |
 | General      | Bug and performance fixes |
 
 ### macOS | February 2026 | Platform: 101.25122.0008
