@@ -1,6 +1,6 @@
 ---
 title: Investigate accounts from connected apps
-description: Learn how to investigate accounts from connected apps in Microsoft Defender for Cloud Apps. Review account activity, permissions, group memberships, and external user access.
+description: Learn how to investigate accounts from connected apps in Microsoft Defender for Cloud Apps. Review account activity, permissions, group memberships, and access for people outside the organization.
 #customer intent: As a security admin, I want to investigate accounts from connected apps so that I can identify inactive accounts, review permissions, and detect external user activity.
 ms.date: 01/29/2023
 ms.topic: how-to
@@ -11,9 +11,12 @@ ms.custom: msecd-doc-authoring-106
 
 Microsoft Defender for Cloud Apps shows you account information from your connected applications. After you connect an app using the [App connector](/defender-cloud-apps/enable-instant-visibility-protection-and-governance-actions-for-your-apps), Defender for Cloud Apps reads account data including permissions, group memberships, aliases, and app usage.
 
-When Defender for Cloud Apps detects a new account in a connected app, for example through activities or file sharing, it adds the account to the accounts list. This lets you see external user activity in your cloud apps.
+When Defender for Cloud Apps detects a new account in a connected app, for example through activities or file sharing, it adds the account to the accounts list. This lets you see activity from people outside the organization in your cloud apps.
 
 You can view the **Cloud application accounts** inventory from the tile at the top of the [Identity Inventory page](/defender-for-identity/identity-inventory).
+
+> [!TIP]
+> If the [Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration) is enabled, cloud application accounts also appear in the **Human identities** tab on the Identity inventory page, providing a centralized view of all identities across your environment.
 
 ## Cloud application accounts page
 
