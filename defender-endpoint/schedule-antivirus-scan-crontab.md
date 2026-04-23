@@ -100,6 +100,18 @@ sudo grep mdatp /var/log/cron
 sudo nano mdatp_cron_job.log
 ```
 
+#### Verify scan execution
+
+Linux does not provide a direct mechanism to confirm that a scheduled scan executed.
+
+Scheduled scans configured through crontab do not surface a status field or dedicated confirmation in Microsoft Defender for Endpoint on Linux.
+
+To verify that a scan ran, use the following command:
+
+`mdatp scan list`
+
+Review the output and correlate the scan type and timestamp with your configured cron schedule to determine whether the scan executed.
+
 ## If you're using Ansible, Chef, Puppet, or SaltStack
 
 Use the following commands:
@@ -111,6 +123,8 @@ cron - Manage cron.d and crontab entries
 ```
 
 For more information, see [Ansible documentation](https://docs.ansible.com/ansible/latest).
+
+
 
 ### To set crontabs in Chef
 
