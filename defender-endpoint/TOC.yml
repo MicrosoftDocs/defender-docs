@@ -676,7 +676,7 @@
             href: attack-surface-reduction-rules-deployment-implement.md
           - name: Manage and monitor your ASR rules deployment
             href: attack-surface-reduction-rules-deployment-operationalize.md
-        - name: Configure and deploy ASR rules
+        - name: Configure ASR rules and exceptions
           href: attack-surface-reduction-rules-enable.md
         - name: Monitor ASR rule activity
           href: attack-surface-reduction-rules-monitor.md
