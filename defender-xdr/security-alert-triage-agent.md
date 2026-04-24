@@ -67,7 +67,7 @@ These prerequisites apply regardless of the alert types you want the agent to tr
 | **Security Copilot plugins** | The Security Alert Triage Agent automatically activates: Microsoft Defender XDR, Microsoft Threat Intelligence, and Security Alert Triage Agent. |
 | **Alert-tuning rules** | Disable tuning rules that suppress the alerts you want the agent to triage. The agent doesn't classify suppressed alerts. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert). |
 | **Unified RBAC** | Enable unified role-based access control and activate the relevant workloads for the alert types you want to triage. For more information, see [Workload-specific prerequisites](#workload-specific-prerequisites). |
-| **Products and licenses** | Specific products and licenses are required depending on the alert types you want the agent to triage. For more information, see [Workload-specific prerequisites](#workload-specific-prerequisites). |
+| **Products and licenses** | You need specific products and licenses based on the alert types you want the agent to triage. For more information, see [Workload-specific prerequisites](#workload-specific-prerequisites). |
 
 ### Workload-specific prerequisites
 
