@@ -66,7 +66,7 @@ These prerequisites apply regardless of the alert types you want the agent to tr
 | **Security Copilot** | Provisioned capacity in **Security Compute Units (SCU)**. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion). |
 | **Security Copilot plugins** | The Security Alert Triage Agent automatically activates: Microsoft Defender XDR, Microsoft Threat Intelligence, and Security Alert Triage Agent. |
 | **Alert-tuning rules** | Disable tuning rules that suppress the alerts you want the agent to triage. The agent doesn't classify suppressed alerts. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert). |
-| **Unified RBAC** | Enable unified role-based access control and activate the relevant workloads for the alert types you want to triage. For more information, see [Activate URBAC settings](#activate-urbac-settings). |
+| **Unified RBAC** | Enable unified role-based access control and activate the relevant workloads for the alert types you want to triage. For more information, see [Workload-specific prerequisites](#workload-specific-prerequisites). |
 | **Products and licenses** | Specific products and licenses are required depending on the alert types you want the agent to triage. For more information, see [Workload-specific prerequisites](#workload-specific-prerequisites). |
 
 ### Workload-specific prerequisites
@@ -78,6 +78,12 @@ The following prerequisites depend on the alert types you want the agent to tria
 ##### Products and licenses
 
 - [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
+
+##### Activate unified RBAC
+
+Activate **Microsoft Defender for Office 365** in Microsoft Defender XDR unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
+
+:::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Security Alert Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
 
 ##### Microsoft Defender configuration
 
@@ -114,6 +120,10 @@ For more information, see [Alert policies in the Microsoft Defender portal](aler
 
 - [Microsoft Defender for Containers (part of Microsoft Defender for Cloud)](/azure/defender-for-cloud/defender-for-containers-deployment-overview)
 
+##### Activate unified RBAC
+
+Unified RBAC for cloud alerts is enabled automatically. No additional activation is required.
+
 No additional configuration is required beyond the general prerequisites.
 
 #### [Identity alerts](#tab/identity-alerts)
@@ -124,25 +134,13 @@ No additional configuration is required beyond the general prerequisites.
 - **Microsoft Defender for Identity**
 - **Microsoft Defender for Cloud Apps** deployed
 
+##### Activate unified RBAC
+
+Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** in Microsoft Defender XDR unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
+
 No additional configuration is required beyond the general prerequisites.
 
 ---
-
-### Activate URBAC settings
-
-Microsoft Defender uses unified role-based access control (RBAC) to govern access to alerts and incidents. You must enable unified RBAC and activate the relevant workloads before the agent can triage alerts.
-
-Activate the workloads for the alert types you want the agent to triage in Microsoft Defender XDR settings:
-
-| Alert type | Workload to activate |
-|---|---|
-| Email and collaboration alerts | Microsoft Defender for Office 365 |
-| Cloud alerts | Enabled automatically |
-| Identity alerts | Microsoft Defender for Identity and Microsoft Defender for Cloud Apps |
-
-:::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Security Alert Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
-
-For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
 ## Required permissions
 
@@ -259,7 +257,7 @@ These permissions are under the **Security operations** permissions group:
 
 To create a role:
 
-1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Activate URBAC settings](activate-defender-rbac.md).
+1. Ensure that the relevant Defender workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Workload-specific prerequisites](#workload-specific-prerequisites).
 1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
 
    Make sure to grant the agent access to all the [supported alerts](#supported-alerts) you want to associate with the Security Alert Triage Agent.
