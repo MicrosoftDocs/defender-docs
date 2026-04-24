@@ -87,7 +87,7 @@ The following table describes the operating system support for ASR rules in Micr
 
 Although Defender for Endpoint supports ASR rules, you need a separate service to deploy the rules to devices. The supported methods for deploying ASR rules are described in the following table.
 
-|Rule name|[Intune](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-microsoft-intune)|[Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|[MDM CSP](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp)|[Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|
+|Rule name|[Intune](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-microsoft-intune)|[Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|[MDM CSP](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp)|[Centralized Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|
 |---|:---:|:---:|:---:|:---:|
 |**Standard protection rules**|||||
 |Block abuse of exploited vulnerable signed drivers (Device)|Y|N|Y|Y|

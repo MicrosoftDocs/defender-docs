@@ -186,7 +186,7 @@ The following table summarizes the available methods. For detailed configuration
 |[Microsoft Intune custom profiles with OMA-URIs](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-intune-using-custom-profiles-with-oma-uris-and-csps)|An alternative method for configuring ASR rules in Intune using Open Mobile Alliance – Uniform Resource (OMA-URI) profiles.|
 |[Any MDM solution using the Policy CSP](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp)|Use the Windows [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider) with any MDM solution.|
 |[Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|Uses the Microsoft Defender Antivirus policy in the **Assets and compliance** workspace.|
-|[Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|Use Group Policy to configure and distribute ASR rules to domain-joined devices. Or you can configure Group Policy locally on individual devices.|
+|[Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|Use Centralized Group Policy to configure and distribute ASR rules to domain-joined devices. Or you can configure Group Policy locally on individual devices.|
 |[PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell)|Configure ASR rules locally on individual devices. PowerShell support all ASR rules.|
 
 ## File and folder exclusions for ASR rules

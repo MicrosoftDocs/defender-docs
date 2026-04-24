@@ -283,7 +283,7 @@ For instructions, see the attack surface reduction information in [Create and de
 > [!WARNING]
 > If you manage your computers and devices with Intune, Microsoft Configuration Manager, or other enterprise-level management software, the management software overwrites any conflicting group policy settings on startup.
 
-1. Open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
+1. In Centralized Group Policy, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console) on your Group Policy management computer.
 
 1. In the GPMC console tree, expand Group Policy Objects in the forest and domain containing the GPO you want to edit.
 
@@ -301,6 +301,9 @@ For instructions, see the attack surface reduction information in [Create and de
    - Double-click on the setting.
    - Right-click on the setting, and then select **Edit**
    - Select the setting, and then select **Action** \> **Edit**.
+
+> [!TIP]
+> You can also configure Group Policy locally on individual devices by using the Local Group Policy Editor (`gpedit.msc`). Navigate to the same path: **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**.
 
 The available settings are described in the following subsections.
 
