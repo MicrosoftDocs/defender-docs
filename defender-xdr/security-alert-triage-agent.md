@@ -85,6 +85,14 @@ Activate **Defender for Office 365** in Microsoft Defender XDR unified RBAC sett
 
 :::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Security Alert Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
 
+#### Microsoft Defender configuration
+
+- Enable **Monitor reported messages in Outlook** in **User reported settings**.  
+  For more information, see [Configure user reported settings](#configure-user-reported-settings).
+
+- Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts.  
+  For more information, see [Alert policies in the Microsoft Defender portal](alert-policies.md).
+
 #### Configure user reported settings
 
 Enable **Monitor reported messages in Outlook** to define how users report potentially malicious messages in Microsoft Outlook and select any of the **Reported message destinations** options:
