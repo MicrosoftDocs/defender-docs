@@ -4,7 +4,6 @@ description: The steps to configure quarantine policies and permissions across d
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection:
 - m365-guidance-templates
