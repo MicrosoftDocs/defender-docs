@@ -75,11 +75,11 @@ The following prerequisites depend on the alert types you want the agent to tria
 
 #### [Email and collaboration alerts](#tab/email-alerts)
 
-##### Products and licenses
+##### Product and license requirements
 
 - [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
 
-##### Activate unified RBAC
+##### Unified RBAC requirements
 
 Activate **Defender for Office 365** in Microsoft Defender XDR unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
@@ -108,11 +108,11 @@ For more information, see [Alert policies in the Microsoft Defender portal](aler
 
 #### [Cloud alerts](#tab/cloud-alerts)
 
-##### Products and licenses
+##### Product and license requirements
 
 - [Microsoft Defender for Containers (part of Microsoft Defender for Cloud)](/azure/defender-for-cloud/defender-for-containers-deployment-overview)
 
-##### Activate unified RBAC
+##### Unified RBAC requirements
 
 Unified RBAC for cloud alerts is enabled automatically. No additional activation is required.
 
@@ -120,13 +120,13 @@ No additional configuration is required beyond the general prerequisites.
 
 #### [Identity alerts](#tab/identity-alerts)
 
-##### Products and licenses
+##### Product and license requirements
 
 - [Entra ID P2 license](/entra/fundamentals/licensing)
 - **Microsoft Defender for Identity**
-- **Microsoft Defender for Cloud Apps** deployed
+- **Microsoft Defender for Cloud Apps** 
 
-##### Activate unified RBAC
+##### Unified RBAC requirements
 
 Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** in Microsoft Defender XDR unified RBAC settings.For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
