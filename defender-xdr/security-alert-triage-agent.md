@@ -131,6 +131,7 @@ No additional configuration is required beyond the general prerequisites.
 Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** in Microsoft Defender XDR unified RBAC settings.For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
 :::image type="content" source="media/security-alert-triage-agent/rbac-settings-defender-identity.png" alt-text="Screenshot of Microsoft Defender XDR Permissions and roles page showing unified RBAC activation with Identity and Cloud Apps settings." lightbox="media/security-alert-triage-agent/rbac-settings-defender-identity.png":::
+
 ---
 
 ## Required permissions
