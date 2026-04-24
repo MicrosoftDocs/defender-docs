@@ -81,7 +81,7 @@ The following prerequisites depend on the alert types you want the agent to tria
 
 #### Activate unified RBAC
 
-Activate **Microsoft Defender for Office 365** in Microsoft Defender XDR unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
+Activate **Defender for Office 365** in Microsoft Defender XDR unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
 :::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Security Alert Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
 
@@ -138,8 +138,7 @@ No additional configuration is required beyond the general prerequisites.
 
 Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** in Microsoft Defender XDR unified RBAC settings.For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
-No additional configuration is required beyond the general prerequisites.
-
+:::image type="content" source="media/security-alert-triage-agent/rbac-settings-defender-identity.png" alt-text="Screenshot of Microsoft Defender XDR Permissions and roles page showing unified RBAC activation with Identity and Cloud Apps settings." lightbox="media/security-alert-triage-agent/rbac-settings-defender-identity.png":::
 ---
 
 ## Required permissions
