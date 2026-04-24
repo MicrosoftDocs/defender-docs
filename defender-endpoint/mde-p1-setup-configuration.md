@@ -179,7 +179,7 @@ Attack surface reduction rules are available on devices running Windows. We reco
 
 1. On the **Basics** tab, specify a name and description for the policy, and then choose **Next**.
 
-1. On the **Configuration settings** tab, expand under **Defender**, configure your attack surface reduction rules, and then choose **Next**. For more information about attack surface reduction rules, see [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md).
+1. On the **Configuration settings** tab, expand under **Defender**, configure your attack surface reduction (ASR) rules, and then choose **Next**. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
    At a minimum, we recommend enabling the following three standard protection rules:
 

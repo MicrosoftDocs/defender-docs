@@ -212,7 +212,7 @@
     },
     {
       "source_path": "defender-endpoint/enable-attack-surface-reduction.md",
-      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-enable",
+      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-configure",
       "redirect_document_id": false
     },
     {

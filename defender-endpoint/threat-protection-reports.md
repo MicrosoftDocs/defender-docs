@@ -104,7 +104,7 @@ The following reports provide in-depth information about events and actions rela
   - [Sensor health & OS report](device-health-sensor-health-os.md)
 - [Host firewall reporting](host-firewall-reporting.md)
 - [Web protection monitoring report](web-protection-monitoring.md)
-- [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
+- [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
 - [Device control report](device-control-report.md)
 
 ## Create custom reports using Power BI

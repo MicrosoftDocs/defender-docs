@@ -1,5 +1,5 @@
 ---
-title: Attack surface reduction rules report
+title: ASR rules report
 description: Admins can learn about the Attack surface reduction rules report in the Microsoft Defender portal, which includes information about ASR rule detections, configuration, and blocked threats.
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -21,13 +21,13 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Attack surface reduction rules report in the Microsoft Defender portal
+# Attack surface reduction (ASR) rules report in the Microsoft Defender portal
 
 The Attack surface reduction (ASR) rules report provides detailed insights into the rules enforced on devices within your organization. For example:
 
 - Detected threats.
 - Blocked threats.
-- Devices that aren't configured to use the [standard protection rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) to block threats.
+- Devices that aren't configured to use the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) to block threats.
 
 The report provides an easy-to-use interface that enables you to complete the following tasks:
 
@@ -36,7 +36,7 @@ The report provides an easy-to-use interface that enables you to complete the fo
 - Add and manage exclusions.
 - Gather detailed information.
 
-For more information about ASR rules, see [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md).
+For more information about ASR rules, see [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md).
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ The **Detections** tab is the default tab of the page. To go directly to the **D
 
 By default, the information on the page is filtered:
 
-- **Rules**: The value **Standard protection** is selected by default to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) only, but you can change the value to **All** to show data for all ASR rules.
+- **Rules**: The value **Standard protection** is selected by default to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) only, but you can change the value to **All** to show data for all ASR rules.
 
 - **Date**: The date range of the last 30 days is selected by default, but you can change the **Start time** and **End time** values to a range within the last 30 days.
 - **Select rules**: The value **Any** is selected by default, but you can change the value to one or more of the following values:
@@ -168,7 +168,7 @@ To go directly to the **Configuration** tab of the **Attack surface reduction ru
 
 The **Configuration** tab provides summary and per-device ASR rule configuration details.
 
-**Rules** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) only, but you can switch to **All** to show data for all ASR rules.
+**Rules** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) only, but you can switch to **All** to show data for all ASR rules.
 
 The **Device configuration overview** section shows a current snapshot of device states related to ASR rules:
 
@@ -228,7 +228,7 @@ To go directly to the **Add exclusions** tab of the **Attack surface reduction r
 
 The **Add exclusions** tab lists detections by ASR rules across all devices.
 
-**Rules** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) only, but you can switch to **All** to show data for all ASR rules.
+**Rules** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) only, but you can switch to **All** to show data for all ASR rules.
 
 The details table shows the following information:
 
@@ -250,7 +250,7 @@ When you select a file, a **Summary & expected impact** fly out opens, presentin
 
 The Add exclusion page has two buttons for actions that can be used on any detected files (after selection). You can:
 
-- **Add exclusion** which opens Microsoft Intune ASR policy page. For more information, see [Configure ASR rules in Microsoft Intune](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-microsoft-intune) in "Enable ASR rules alternate configuration methods."
+- **Add exclusion** which opens Microsoft Intune ASR policy page. For more information, see [Configure ASR rules in Microsoft Intune](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-microsoft-intune) in "Enable ASR rules alternate configuration methods."
 - **Get exclusion paths** which downloads file paths in a csv format.
 
   :::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png" alt-text="Shows the ASR rules report add exclusions tab flyout impact summary." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-flyout.png":::
@@ -261,10 +261,10 @@ Select **Filter** to filter rules by **Standard protection** or **All**.
 
 ## See also
 
-- [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
-- [Plan attack surface reduction rules deployment](attack-surface-reduction-rules-deployment-plan.md)
-- [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
-- [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
-- [Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
-- [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
-- [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+- [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
+- [Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)
+- [Test your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-test.md)
+- [Enable attack surface reduction (ASR) rules](attack-surface-reduction-rules-deployment-implement.md)
+- [Manage and monitor your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-operationalize.md)
+- [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
+- [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)

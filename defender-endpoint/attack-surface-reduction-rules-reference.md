@@ -1,5 +1,5 @@
 ---
-title: Attack surface reduction rules reference
+title: ASR rules reference
 description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -20,9 +20,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Attack surface reduction rules reference
+# Attack surface reduction (ASR) rules reference
 
-_Attack surfaces_ are the places where your organization is vulnerable to threats and attacks. Attack surface reduction rules (ASR rules) in Microsoft Defender for Endpoint enables you to reduce the attack surface of **Microsoft Windows devices**. For more information about ASR rules, see [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md).
+_Attack surfaces_ are the places where your organization is vulnerable to threats and attacks. Attack surface reduction rules (ASR rules) in Microsoft Defender for Endpoint enables you to reduce the attack surface of **Microsoft Windows devices**. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 This article is a technical reference for ASR rules that provides the following information:
 
@@ -87,7 +87,7 @@ The following table describes the operating system support for ASR rules in Micr
 
 Although Defender for Endpoint supports ASR rules, you need a separate service to deploy the rules to devices. The supported methods for deploying ASR rules are described in the following table.
 
-|Rule name|[Intune](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-microsoft-intune)|[Configuration Manager](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|[MDM CSP](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp)|[Group Policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-exclusions-in-group-policy)|
+|Rule name|[Intune](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-microsoft-intune)|[Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|[MDM CSP](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp)|[Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|
 |---|:---:|:---:|:---:|:---:|
 |**Standard protection rules**|||||
 |Block abuse of exploited vulnerable signed drivers (Device)|Y|N|Y|Y|
@@ -112,7 +112,7 @@ Although Defender for Endpoint supports ASR rules, you need a separate service t
 |Use advanced protection against ransomware|Y|1802 or later|Y|Y|
 
 > [!TIP]
-> You can also configure ASR rules locally on individual devices using Group Policy or [PowerShell](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-powershell). All ASR rules are supported by both methods on local devices.
+> You can also configure ASR rules locally on individual devices using Group Policy or [PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell). All ASR rules are supported by both methods on local devices.
 
 <a id="CMS1">1</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the other available ASR policy configuration methods or in existing Intune ASR policies created before the issue.
 
@@ -318,7 +318,7 @@ This rule blocks email opened with Microsoft Outlook, Outlook.com, and other pop
 #### Block executable files from running unless they meet a prevalence, age, or trusted list criterion
 
 > [!TIP]
-> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-enable.md) or in existing Intune ASR policies created before the issue.
+> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-configure.md) or in existing Intune ASR policies created before the issue.
 
 This ASR rule blocks executable files (for example, .exe, .dll, or .scr, from launching). Launching untrusted or unknown executable files can be risky, as it's not initially clear if the files are malicious.
 
@@ -472,7 +472,7 @@ Safe Mode is still manually accessible from the Windows Recovery Environment.
 - **Dependencies**: Microsoft Defender Antivirus
 
 > [!NOTE]
-> Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
+> Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
 
 #### Block untrusted and unsigned processes that run from USB
 
@@ -502,7 +502,7 @@ This ASR rule blocks the propagation and use of executable files identified as c
 - **Dependencies**: Microsoft Defender Antivirus
 
 > [!NOTE]
-> Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
+> Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
 
 #### Block Webshell creation for Servers
 
@@ -523,7 +523,7 @@ This ASR rule blocks web shell script creation on Windows servers running Micros
 >
 > - This rule isn't supported when deployed via Microsoft Intune to Windows Server 2012 R2 or Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 > - If you manage ASR rules in Microsoft Defender for Endpoint, don't configure this ASR in Group Policy or other local settings (leave the value as `Not Configured`). Any other value (for example, `Enabled` or `Disabled`) can cause conflicts and prevent the rule from applying correctly.
-> - Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
+> - Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
 
 #### Block Win32 API calls from Office macros
 
@@ -553,7 +553,7 @@ This ASR rule provides an extra layer of protection against ransomware. It uses 
 
 This rule doesn't just block files with a bad reputation. Instead, the rule errs on the side of caution and also blocks files _that don't yet have a positive reputation_. Typically, blocks on benign, unknown files by this rule eventually resolve themselves. The file's reputation and trust values incrementally increase as non-problematic usage increases.
 
-If blocks on benign, unknown files don't resolve in a timely manner, you can configure a [per-rule exclusion](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions) or use the [Allow action for an indicator of compromise (IoC)](indicators-overview.md#enforcement-types-for-indicators).
+If blocks on benign, unknown files don't resolve in a timely manner, you can configure a [per-ASR rule exclusion](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules) for this rule or use the [Allow action for an indicator of compromise (IoC)](indicators-overview.md#enforcement-types-for-indicators).
 
 - **Microsoft Intune name**: `Use advanced protection against ransomware`
 - **Microsoft Configuration Manager name**: `Use advanced protection against ransomware`
@@ -565,12 +565,12 @@ If blocks on benign, unknown files don't resolve in a timely manner, you can con
 
 ## See also
 
-- [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
-- [Plan attack surface reduction rules deployment](attack-surface-reduction-rules-deployment-plan.md)
-- [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
-- [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
-- [Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
-- [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
-- [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+- [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
+- [Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)
+- [Test your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-test.md)
+- [Enable attack surface reduction (ASR) rules](attack-surface-reduction-rules-deployment-implement.md)
+- [Manage and monitor your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-operationalize.md)
+- [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
+- [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
-- [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
+- [Troubleshoot ASR rules](troubleshoot-asr.md)

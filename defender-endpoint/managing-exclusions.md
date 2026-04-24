@@ -72,9 +72,9 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 
 |Exclusion Type|Instructions|
 |---|---|
-|Custom antivirus exclusion|1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Home** > **Endpoint security** > **Antivirus**. <br/> 2. Select **Create Policy**. <br/> 3. For **Platform**, select **Windows**. <br/> 4. Select a template. Both **Microsoft Defender Antivirus exclusions** and **Microsoft Defender Antivirus** support custom antivirus exclusions|
-|Attack surface reduction rule only exclusions|1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Home** > **Endpoint security** > **Attack surface reduction**. <br/> 2. Select **Create Policy**. <br/> 3. For **Platform**, select **Windows**. <br/> 4. For **Profile**, select **Attack surface reduction rules**. <br/>5. Under **Configuration Settings**, scroll down to **Attack Surface Reduction Only Exclusions**.|
-|Attack surface reduction per-rule exclusions|1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Home** > **Endpoint security** > **Attack surface reduction**. <br/> 2. Select **Create Policy**. <br/> 3. For **Platform**, select **Windows**. <br/> 4. For **Profile**, select **Attack surface reduction rules**. <br/> 5. Under **Configuration Settings**, scroll down to the rule to create an exclusion. <br/> 6. Change it from `Not configured` to `Block`,`Audit`, or `Warn`. <br/>7. Select **Add** to enter the path to be excluded.|
+|Custom antivirus exclusions|1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Home** > **Endpoint security** > **Antivirus**. <br/> 2. Select **Create Policy**. <br/> 3. For **Platform**, select **Windows**. <br/> 4. Select a template. Both **Microsoft Defender Antivirus exclusions** and **Microsoft Defender Antivirus** support custom antivirus exclusions|
+|Global exclusions for all attack surface reduction (ASR) rules only|For complete instructions, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies).|
+|Per-ASR rule exclusions|For complete instructions, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies).|
 |Controlled folder access exclusion|1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Home** > **Endpoint security** > **Attack surface reduction**. <br/> 2. Select **Create Policy**. <br/> 3. For **Platform**, select **Windows**. <br/> 4. For **Profile**, select **Attack surface reduction rules**. <br/>5. Under **Configuration Settings**, scroll down to **Controlled Folder Access Allowed Applications**.|
 |Automation folder exclusions|Not supported|
 |Automatic antivirus exclusions|Not supported in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).|
@@ -82,8 +82,6 @@ Many exclusions can be managed in the [Microsoft Intune admin center](https://go
 **Learn More**:
 
 - [Create Microsoft Defender antivirus exclusion policies in Intune](configure-exclusions-microsoft-defender-antivirus.md#create-microsoft-defender-antivirus-exclusion-policies-in-intune)
-- [Modify exclusions in Microsoft Defender antivirus exclusion policies in Intune](configure-exclusions-microsoft-defender-antivirus.md#modify-exclusions-in-microsoft-defender-antivirus-exclusion-policies-in-intune))
-- [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions)
 
 ### MDM CSP
 
@@ -123,8 +121,8 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 |---|---|---|
 |Custom antivirus exclusion - Path|**Windows components** > **Microsoft Defender Antivirus** > **Exclusions** > **Path Exclusions**|See [Use Group Policy to configure folder or file extension exclusions](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-group-policy-to-configure-folder-or-file-extension-exclusions)|
 |Custom antivirus exclusions - Process|**Windows components** > **Microsoft Defender Antivirus** > **Exclusions** > **Process Exclusions**|See [Use Group Policy to exclude files that have been opened by specified processes from scans](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md#use-group-policy-to-exclude-files-that-have-been-opened-by-specified-processes-from-scans)|
-|Attack Surface Reduction only exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction** > **Exclude files and paths from Attack Surface Reduction rules**|See [Group Policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-exclusions-in-group-policy)|
-|Attack surface reduction rule per rule exclusion|**Windows components > Microsoft Defender Antivirus > Microsoft Defender Exploit Guard > Attack surface reduction > Apply a list of exclusions to specific Attack Surface Reduction (ASR) rules**|See [Group Policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-exclusions-in-group-policy)|
+|Attack Surface Reduction only exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction** > **Exclude files and paths from Attack Surface Reduction rules**|See [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|
+|Attack surface reduction rule per rule exclusion|**Windows components > Microsoft Defender Antivirus > Microsoft Defender Exploit Guard > Attack surface reduction > Apply a list of exclusions to specific Attack Surface Reduction (ASR) rules**|See [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|
 |Automatic antivirus exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Exclusions** > **Enabled**|See [Use Group Policy to disable the auto-exclusions list on Windows Server 2016, Windows Server 2019, and later](configure-server-exclusions-microsoft-defender-antivirus.md#use-group-policy-to-disable-the-auto-exclusions-list-on-windows-server-2016-windows-server-2019-and-later)|
 |Automation folder exclusions|Not supported||
 |Controlled Folder Access exclusions|**Windows components** > **Microsoft Defender Antivirus** > **Windows Defender Exploit Guard** > **Controlled folder access** > **Configure allowed applications**|See [Use group policy to allow specific apps](customize-controlled-folders.md#use-group-policy-to-allow-specific-apps)|
@@ -151,7 +149,7 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 |Exclusion Type|Reference|
 |---|---|
 |Custom antivirus exclusion|See [exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
-|Attack Surface Reduction only exclusions|See [Microsoft Configuration Manager](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-microsoft-configuration-manager)|
+|Attack Surface Reduction only exclusions|See [Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-microsoft-configuration-manager)|
 |Attack surface reduction rule per rule exclusion|Not supported|
 |Controlled Folder Access exclusions|See [Microsoft Configuration Manager](enable-controlled-folders.md#microsoft-configuration-manager)|
 |Automation folder exclusions|Not supported|

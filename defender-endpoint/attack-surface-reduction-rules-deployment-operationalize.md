@@ -1,5 +1,5 @@
 ---
-title: Manage and monitor attack surface reduction rules
+title: Manage and monitor your ASR rules deployment
 description: Provides guidance to operationalize your attack surface reduction rules deployment.
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Manage and monitor attack surface reduction rules
+# Manage and monitor your attack surface reduction (ASR) rules deployment
 
 This article is part of the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
@@ -36,7 +36,7 @@ False positives/negatives can occur with any threat protection solution. False p
 
 Consistent, regular review of reports is important to maintain your ASR rules deployment and keeping up with emerging threats. Schedule reviews of ASR rule events using a frequency that keeps up with ASR rule-reported events. Depending on the size of your organization, your reviews might be daily, hourly, or require continuous monitoring.
 
-For complete information about the ASR rules report, see [Attack surface reduction rules report](attack-surface-reduction-rules-report.md).
+For complete information about the ASR rules report, see [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md).
 
 <a name='asr-rules-advanced-hunting'></a>
 
@@ -58,12 +58,12 @@ To troubleshoot ASR rules, see [Troubleshoot attack surface reduction rules](tro
 
 ## Articles in this deployment collection
 
-[Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
+[Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 
-[Plan attack surface reduction rules deployment](attack-surface-reduction-rules-deployment-plan.md)
+[Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)
 
-[Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
+[Test your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-test.md)
 
-[Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
+[Enable attack surface reduction (ASR) rules](attack-surface-reduction-rules-deployment-implement.md)
 
-[Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+[Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)

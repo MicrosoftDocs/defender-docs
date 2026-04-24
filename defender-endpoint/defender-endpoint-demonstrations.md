@@ -58,7 +58,7 @@ The following table lists the available demonstrations alphabetically, with thei
 ## See also
 
 [Attack surface protection overview](attack-surface-reduction-overview.md)
-[Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
+[Test your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-test.md)
 [Next Generation Protection overview](next-generation-protection.md)
 [Endpoint detection and response overview](overview-endpoint-detection-response.md)
 [Microsoft Defender for Endpoint security blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bg-p/MicrosoftDefenderATPBlog)

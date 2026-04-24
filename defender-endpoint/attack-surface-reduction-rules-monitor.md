@@ -1,5 +1,5 @@
 ---
-title: Monitor attack surface reduction rule activity
+title: Monitor ASR rules activity
 description: Describes how to use advanced hunting and the device timeline to monitor attack surface reduction (ASR) rule events.
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -22,9 +22,9 @@ appliesto:
   - Microsoft Defender for Business
 ---
 
-# Monitor attack surface reduction rule activity
+# Monitor attack surface reduction (ASR) rules activity
 
-A critical part of any deployment of attack surface reduction (ASR) rules deployment is monitoring the affect of rules on devices. This article describes the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md).
+A critical part of any deployment of attack surface reduction (ASR) rules deployment is monitoring the affect of rules on devices. This article describes the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 ## ASR rules report
 
@@ -106,8 +106,8 @@ To troubleshoot ASR rules, see [Troubleshoot attack surface reduction rules](tro
 
 ## See also
 
-- [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md)
-- [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
-- [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
-- [Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
+- [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
+- [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
+- [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)
+- [Manage and monitor your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-operationalize.md)
 - [Troubleshoot attack surface reduction rules](troubleshoot-asr.md)

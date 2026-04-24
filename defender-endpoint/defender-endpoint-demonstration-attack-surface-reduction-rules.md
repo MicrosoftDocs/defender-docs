@@ -197,6 +197,6 @@ Clean up **C:\Demo** encryption by running the [encrypt/decrypt file](https://de
 
 [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md)
 
-[Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+[Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)

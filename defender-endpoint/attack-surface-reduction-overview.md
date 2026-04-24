@@ -1,4 +1,4 @@
-﻿---
+---
 title: Attack surface reduction overview in Microsoft Defender for Endpoint
 description: Reduce your organization's attack surface with Microsoft Defender for Endpoint capabilities, including ASR rules, exploit protection, network protection, and controlled folder access.
 author: chrisda
@@ -32,7 +32,7 @@ These capabilities block risky software behaviors, prevent connections to malici
 
 Attack surface reduction in Defender for Endpoint includes the following capabilities:
 
-- **Attack surface reduction (ASR) rules in Windows** constrain risky software behaviors that attackers exploit, such as launching executables that attempt to download files, running obfuscated scripts, or performing actions that apps don't normally initiate during day-to-day work. For more information, see [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md).
+- **Attack surface reduction (ASR) rules in Windows** constrain risky software behaviors that attackers exploit, such as launching executables that attempt to download files, running obfuscated scripts, or performing actions that apps don't normally initiate during day-to-day work. For more information, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 - **Controlled folder access in Windows** protects valuable data from malicious apps and threats like ransomware. It checks apps against a list of known, trusted apps and prevents untrusted apps from modifying files in protected folders. For more information, see [Protect important folders with controlled folder access](controlled-folders.md).
 
@@ -108,8 +108,8 @@ The right tool depends on your organization's infrastructure and management pref
 
 ## Related content
 
-- [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md)
-- [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
+- [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
+- [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 - [Attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md)
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Protect devices from exploits](exploit-protection.md)

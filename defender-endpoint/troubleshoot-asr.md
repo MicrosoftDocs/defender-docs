@@ -22,41 +22,22 @@ appliesto:
 
 # Troubleshoot attack surface reduction rules
 
-When you use [attack surface reduction rules](attack-surface-reduction-rules-overview.md), you might run into issues. For example:
+Even after you carefully [plan](attack-surface-reduction-rules-deployment-plan.md), [test](attack-surface-reduction-rules-deployment-test.md) and [implement](attack-surface-reduction-rules-deployment-implement.md) attack surface reduction (ASR) rules on Windows devices in your organization, you still might run into issues. For example:
 
-- A rule blocks a file or process, or does some other action that it shouldn't (false positive).
-- A rule doesn't work as described, or doesn't block a file or process that it should (false negative).
+- An ASR rule blocks a file or process, or does some other action that it shouldn't (false positive).
+- An ASR rule doesn't work as described, or doesn't block a file or process that it should (false negative).
 
-Use the following steps to troubleshooting these problems:
+This article describes the steps you can take yourself to troubleshoot the issues, including collecting data to open a support case with Microsoft if you are unable to fix the problem yourself.
 
-1. [Confirm prerequisites](#confirm-prerequisites).
-1. [Use audit mode to test the rule](#use-audit-mode-to-test-the-rule).
-1. [Add exclusions for the specified rule](#add-exclusions-for-a-false-positive) (for false positives).
-1. [Collect and submit support logs](#collect-microsoft-defender-anti-malware-protection-diagnostic-data-for-file-submissions).
-
-## Confirm prerequisites
+## Confirm ASR rule prerequisites
 
 For ASR rule requirements, see [Requirements for ASR rules](attack-surface-reduction-rules-overview.md#requirements-for-asr-rules).
 
-Verify ASR rules on the device are in one of the following modes:
-
-- **Block** mode.
-- **Warn** mode.
-- Not configured or disabled.
-
-If these prerequisites are met, proceed to the next step.
-
 <a name="best-practices-when-setting-up-attack-surface-reduction-rules-using-group-policy"></a>
-
-## Verify rule ID values in group policy
-
-If you used group policy to configure ASR rules, verify there are no extra characters like quotation marks or spaces in the identifying GUID value.
-
-For more information about configuring ASR rules in group policy, see [Configure ASR rules in group policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-group-policy).
 
 <a name="querying-which-rules-are-active"></a>
 
-### Verify active rules and actions on the device
+## Verify the active ASR rules and actions on devices
 
 Run the following command in PowerShell on the device to see the state of all configured ASR rules:
 
@@ -86,61 +67,54 @@ d4f940ab-401b-4efc-aadc-ad5f3c50688a      2
 e6db77e5-3df2-4cf1-b95a-636979351e5b      1
 ```
 
-In this example, [the displayed rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules) are active in [different modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) (2 = **Audit** mode, 1 = **Block** mode).
+In this example, the [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules) are active in [different modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) on the device (2 = **Audit** mode, 1 = **Block** mode).
+
+> [!NOTE]
+> If you used [Group Policy to configure ASR rules](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-group-policy), verify there are no extra characters like quotation marks or spaces in the ASR rule GUID value.
 
 <a name="use-audit-mode-to-test-the-rule"></a>
 
-## Test problem rules in Audit mode
-
- **Audit mode** doesn't block files or processes identified by the attack surface reduction rule, but logs the detection. Follow these instructions from [Use the demo tool to see how attack surface reduction rules work](attack-surface-reduction-rules-deployment-test.md) to test the specific rule you're having problems with:
-
-1. Enable **Audit** mode for the rule. Use group policy to set the rule mode to 2 as described in [Configure ASR rules in group policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-group-policy).
-
-1. Do the action that causes the issue. For example, open the file or run the process that isn't blocked but should be blocked (false negative).
-
-1. [Review the attack surface reduction rule event logs](attack-surface-reduction-rules-overview.md) to see if the file or process would have been blocked if the rule was in **Block** mode.
-
-If a rule isn't blocking a file or process that you expect it to block, verify the rule isn't in **Audit** mode. The rule might be in **Audit** mode in the following scenarios:
-
-- You were testing another feature.
-- The rule was set to **Audit** mode by an automated PowerShell script.
-- You forgot to disable the rule or enable it in **Block** mode after the test was completed.
-
-If you did the tests in this section and the rule still isn't working as expected, proceed to one of the following sections in this article:
-
-- **False positive** (good files blocked): [Add exclusions for a false positive](#add-exclusions-for-a-false-positive).
-- **False negative** (bad files allowed): [Collect diagnostic data](#collect-diagnostic-data) and report the issue to Microsoft.
-
 <a name="querying-blocking-and-auditing-events"></a>
 
-### View block and audit events in Windows Event Viewer
+## Switch misbehaving ASR rules to Block mode for testing
 
-You can view attack surface reduction rule events in **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational** in Windows Event Viewer. Filter for the following **Event ID** values:
+ASR rules in **Audit mode** don't block files or processes, but the actions that the rule would have taken in **Block** or **Warn** mode are recorded.
 
-- **Block events**: 1121
-- **Audit events**: 1122
-- **User override events in Warn mode**: 1129
-- **Configuration changes**: 5007
+Whatever method you used to distribute ASR rules to devices, use that same method to set the problematic rules to **Audit** mode. For instructions, see [Configure attack surface reduction rules](attack-surface-reduction-rules-configure.md).
 
-For detailed information, see [View attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md#browse-attack-surface-reduction-events-in-windows-event-viewer).
+> [!TIP]
+> If the ASR rule was already in **Audit** mode, that explains why it wasn't blocking the files or processes you expected it to block (false negative). ASR rules can accidentally get into **Audit** mode in the following scenarios:
+>
+> - You were testing another feature and forgot to set the ASR rule back into **Block** or **Warn** mode.
+> - An automated PowerShell script changed the rule mode.
 
-:::image type="content" source="media/eventviewerscrnew.png" alt-text="Screenshot of the Event Viewer page." lightbox="media/eventviewerscrnew.png":::
+After you configure the rule in **Audit** mde, do the following steps:
 
-## Add exclusions for a false positive
+1. Do the action on the device that causes the issue. For example, open the file or run the process that isn't blocked but should be blocked (false negative).
+2. [Review the ASR rule activity](attack-surface-reduction-rules-monitor.md).
 
-If the attack surface reduction rule is blocking something that it shouldn't block, you can add exclusions to safelist the excluded files or folders.
+   Specifically, filter **Event ID** values in Windows Event viewer by the following values in the **Applications and Services Logs** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational**  log:
 
-To add an exclusion, see [Customize attack surface reduction](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules).
+   - **Block events**: 1121
+   - **Audit events**: 1122
+   - **User override events in Warn mode**: 1129
+   - **Configuration changes**: 5007
 
-## Report a false positive or false negative
+   For detailed information, see [View attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md#browse-attack-surface-reduction-events-in-windows-event-viewer).
 
-Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for network protection. With a Windows E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
+   :::image type="content" source="media/eventviewerscrnew.png" alt-text="Screenshot of the Event Viewer page." lightbox="media/eventviewerscrnew.png":::
+
+## Steps to take if the ASR rule still doesn't work as expected
+
+If the ASR rule still isn't working as expected, do one of the following steps:
+
+- For false positives, and the file or path as an exclusion to the ASR rule. For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+- Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for network protection. With a Windows E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
+- When you report a problem involving ASR rules to Microsoft, you need to collect and submit diagnostic data to help troubleshoot issue the issue as described in the next section.
 
 <a name="collect-microsoft-defender-anti-malware-protection-diagnostic-data-for-file-submissions"></a>
 
-## Collect diagnostic data
-
-When you report a problem involving attack surface reduction rules, you need to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues.
+## Collect diagnostic data for for Microsoft support
 
 <a name="using-the-mde-client-analyzer"></a>
 
@@ -174,5 +148,5 @@ In the `MpSupportFiles.cab` file, the following files are most relevant:
 ## Related articles
 
 - [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)
-- [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
+- [Configure attack surface reduction (ASR) rules and exceptions](attack-surface-reduction-rules-configure.md)
 - [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)

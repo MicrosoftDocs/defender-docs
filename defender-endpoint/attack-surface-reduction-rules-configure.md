@@ -1,5 +1,5 @@
 ---
-title: Enable attack surface reduction rules
+title: Configure ASR rules and exceptions
 description: Enable attack surface reduction rules to protect your devices from attacks that use macros, scripts, and common injection techniques.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ appliesto:
 ms.date: 04/15/2026
 ---
 
-# Enable attack surface reduction rules
+# Configure attack surface reduction (ASR) rules and exceptions
 
 [Attack surface reduction rules](attack-surface-reduction-rules-overview.md) help prevent actions that malware often abuses to compromise devices and networks. This article describes how to enable and configure attack surface reduction rules.
 
@@ -57,7 +57,7 @@ To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surfa
 - **Platform**: Windows
 - **Profile**: Attack Surface Reduction Rules
 - **Configuration settings**:
-  - **Attack surface reduction**: Typically, you can set the standard protection rules to **Block** mode without any testing. For all other rules, you should set them to **Audit** mode for testing before you enable them in **Block** or **Warn** mode. For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
+  - **Attack surface reduction**: Typically, you can set the standard protection rules to **Block** mode without any testing. For all other rules, you should set them to **Audit** mode for testing before you enable them in **Block** or **Warn** mode. For more information, see [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules).
 
     After you set the rule mode to **Audit**, **Block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
 
@@ -135,7 +135,7 @@ For general information about OMA-URIs in Intune, see [Deploy OMA-URIs to target
        <RuleGuidN>=<ModeForRuleGuidN>
        ```
 
-       - GUID values for ASR rules are available at [Attack surface reduction rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
+       - GUID values for ASR rules are available at [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules).
        - The following [rule modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) are available:
          - `0`: Off
          - `1`: Block
@@ -233,7 +233,7 @@ You can configure ASR rules using the [AttackSurfaceReductionRules](/windows/cli
 **OMA-URI path**: `./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules`<br/>
 **Value**: `<RuleGuid1>=<ModeForRuleGuid1>|<RuleGuid2>=<ModeForRuleGuid2>|...<RuleGuidN>=<ModeForRuleGuidN>`
 
-- GUID values for ASR rules are available at [Attack surface reduction rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules)
+- GUID values for ASR rules are available at [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules)
 - The following [rule modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) are available:
   - `0`: Off
   - `1`: Block
@@ -320,7 +320,7 @@ The available settings are described in the following subsections.
    2. **Set the state for each ASR rule**: Select **Show...**.
 
 1. In the **Set the state for each ASR rule** dialog that opens, configure the following settings:
-   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
+   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-overview.md#asr-rules).
    - **Value**: Enter one of the following [rule mode](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) values:
      - `0`: Off
      - `1`: Block
@@ -349,7 +349,7 @@ The paths or filenames with paths you specify are used as exclusions for all ASR
    2. **Exclusions from ASR rules**: Select **Show...**.
 
 1. In the **Exclusions from ASR rules** dialog that opens, configure the following settings:
-   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
+   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-overview.md#asr-rules).
    - **Value**: Enter one of the following types of values:
      - To exclude all files in a folder, enter the full folder path. For example, `C:\Data\Test`.
      - To exclude a specific file in a specify folder (recommended), enter the path and filename. For example, `C:\Data\Test\test.exe`.
@@ -374,7 +374,7 @@ The paths or filenames with paths you specify are used as exclusions for all ASR
    2. **Exclusions for each ASR rule**: Select **Show...**.
 
 1. In the **Exclusions for each ASR rule** dialog that opens, configure the following settings:
-   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
+   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-overview.md#asr-rules).
    - **Value**: Enter one or more exclusions for the ASR rule. Use the syntax `Path1\ProcessName1>Path2\ProcessName2>...PathN\ProcessNameN`. For example, `C:\Windows\Notepad.exe>c:\Windows\regedit.exe>C:\SomeFolder\test.exe`.
 
    Repeat this step as many times as necessary. When you're finished, select **OK**.
@@ -400,7 +400,7 @@ On the target device, use the following PowerShell command syntax in an elevated
 
   To add new rules and their corresponding modes without affecting any existing values, use the **Add-MpPreference** cmdlet. To remove the specified rules and their corresponding modes without affecting other existing values, use the **Remove-MpPreference** cmdlet. The command syntax is identical for the three cmdlets.
 
-- GUID values for ASR rules are available at [Attack surface reduction rules](attack-surface-reduction-rules-overview.md#attack-surface-reduction-rules).
+- GUID values for ASR rules are available at [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules).
 - Valid values for the _AttackSurfaceReductionRules\_Actions_ parameter are:
   - `0` or `Disabled`
   - `1` or `Enabled` (**Block** mode)
@@ -442,6 +442,6 @@ On the target device, use the following PowerShell command syntax in an elevated
 
 ## Related content
 
-- [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+- [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)
 - [Evaluate attack surface reduction](attack-surface-reduction-rules-deployment-test.md)
 - [Attack surface reduction FAQ](attack-surface-reduction-rules-overview.md)

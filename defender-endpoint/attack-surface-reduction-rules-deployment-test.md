@@ -1,5 +1,5 @@
 ---
-title: Test ASR rules
+title: Test your ASR rules deployment
 description: Learn how to test ASR rules in Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -21,7 +21,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Test attack surface reduction rules
+# Test your attack surface reduction (ASR) rules deployment
 
 This article is part of the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
@@ -48,14 +48,14 @@ Typically, we recommend enabling all ASR rules in **Audit** mode at the same tim
 
 Typically, ASR rules in **Audit** mode don't affect users. But the rules generate logged events that you can evaluate.
 
-If your organization has Microsoft Intune (included in subscriptions like Microsoft 365 E5 or available as an add-on), we recommend using the **Attack surface reduction** endpoint security policy in Intune to configure and distribute ASR rules in **Audit** mode. For instructions, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies).
+If your organization has Microsoft Intune (included in subscriptions like Microsoft 365 E5 or available as an add-on), we recommend using the **Attack surface reduction** endpoint security policy in Intune to configure and distribute ASR rules in **Audit** mode. For instructions, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies).
 
 If you don't have Intune, other ASR rule deployment methods are are available:
 
-- [Microsoft Configuration Manager](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)
-- [Group Policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-group-policy)
-- [Any MDM solution using the Policy CSP](attack-surface-reduction-rules-enable.md#configure-global-asr-rule-exclusions-in-any-mdm-solution-using-the-policy-csp)
-- [PowerShell](attack-surface-reduction-rules-enable.md#configure-asr-rules-in-powershell)
+- [Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)
+- [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-group-policy)
+- [Any MDM solution using the Policy CSP](attack-surface-reduction-rules-configure.md#configure-global-asr-rule-exclusions-in-any-mdm-solution-using-the-policy-csp)
+- [PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell)
 
 > [!TIP]
 > The deployment method you use for ASR rules doesn't affect reporting data, as long as the devices are enrolled in Defender for Endpoint.
@@ -68,7 +68,7 @@ If you don't have Intune, other ASR rule deployment methods are are available:
 
 After ASR rules are deployed in **Audit** mode, review the triggered events to identify potential exclusions using some or all of the following methods:
 
-In Defender for Endpoint Plan 2 or Microsoft Defender for Business, use the **Attack surface reduction rules report** in the Microsoft Defender portal. For complete information, see [Attack surface reduction rules report](attack-surface-reduction-rules-report.md).
+In Defender for Endpoint Plan 2 or Microsoft Defender for Business, use the **Attack surface reduction rules report** in the Microsoft Defender portal. For complete information, see [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md).
 
 In Defender for Endpoint Plan 2, use Advanced hunting to find ASR rule events. For more information, see [ASR rule events in Advanced Hunting](attack-surface-reduction-rules-monitor.md#asr-rule-events-in-advanced-hunting)
 
@@ -86,32 +86,32 @@ After you review ASR rule data from **Audit** mode, you might find that some ASR
 
 For an overview of supported exclusion types for ASR rules, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
-If you used an **Attack surface reduction** endpoint security policy in Microsoft Intune to deploy the ASR rules, use the same policy to configure ASR rule exclusions. For instructions, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies).
+If you used an **Attack surface reduction** endpoint security policy in Microsoft Intune to deploy the ASR rules, use the same policy to configure ASR rule exclusions. For instructions, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies).
 
 If you used a different method to deploy the ASR rules, use the same method to configure ASR rule exclusions:
 
-- [Microsoft Configuration Manager](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)
-- [Group Policy](attack-surface-reduction-rules-enable.md#configure-asr-rules-and-exclusions-in-group-policy)
-- [Any MDM solution using the Policy CSP](attack-surface-reduction-rules-enable.md#configure-global-asr-rule-exclusions-in-any-mdm-solution-using-the-policy-csp)
-- [PowerShell](attack-surface-reduction-rules-enable.md#configure-global-asr-rule-exclusions-in-powershell)
+- [Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)
+- [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)
+- [Any MDM solution using the Policy CSP](attack-surface-reduction-rules-configure.md#configure-global-asr-rule-exclusions-in-any-mdm-solution-using-the-policy-csp)
+- [PowerShell](attack-surface-reduction-rules-configure.md#configure-global-asr-rule-exclusions-in-powershell)
 
 > [!TIP]
 > Rule exclusions are better than turning off rules or switching them back to **Audit** mode. Take advantage of **Warn** mode in available rules to limit disruptions without disabling the rule entirely. For more information, see [Modes for ASR rules](attack-surface-reduction-rules-overview.md#modes-for-asr-rules).
 
 ## See also
 
-- [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md)
-- [Plan attack surface reduction rules deployment](attack-surface-reduction-rules-deployment-plan.md)
-- [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
-- [Manage and monitor attack surface reduction rules](attack-surface-reduction-rules-deployment-operationalize.md)
-- [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
+- [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
+- [Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)
+- [Enable attack surface reduction (ASR) rules](attack-surface-reduction-rules-deployment-implement.md)
+- [Manage and monitor your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-operationalize.md)
+- [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
 - [Troubleshoot attack surface reduction rules](troubleshoot-asr.md)
-- [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+- [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)
 
 ## Step 99: Attack surface reduction rules report details (to be moved to report article)
 
 > [!NOTE]
-> The following content is scheduled to be consolidated into the [Attack surface reduction rules report](attack-surface-reduction-rules-report.md) article.
+> The following content is scheduled to be consolidated into the [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) article.
 
 The attack surface reduction rules reporting page is found in **Microsoft Defender portal** > **Reports** > **Attack surface reduction rules**. This page has three tabs:
 

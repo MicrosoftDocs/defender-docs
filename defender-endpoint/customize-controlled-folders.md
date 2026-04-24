@@ -181,6 +181,6 @@ For more information about customizing the notification when a rule is triggered
 
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Enable controlled folder access](enable-controlled-folders.md)
-- [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
+- [Configure attack surface reduction (ASR) rules and exceptions](attack-surface-reduction-rules-configure.md)
 
 

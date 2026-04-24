@@ -86,7 +86,7 @@ sections:
       - question: |
           How do I configure per-rule exclusions?
         answer: |
-          Per-ASR rule exclusions are supported only in Group Policy and endpoint security policies in Microsoft Intune. For configuration instructions, see [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md). For information about the different types of exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+          Per-ASR rule exclusions are supported only in Group Policy and endpoint security policies in Microsoft Intune. For configuration instructions, see [Enable attack surface reduction rules](attack-surface-reduction-rules-configure.md). For information about the different types of exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
       - question: |
           Which attack surface reduction rules does Microsoft recommend?
@@ -197,4 +197,4 @@ sections:
           - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
           - [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
           - [Implement attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
-          - [Enable attack surface reduction rules](attack-surface-reduction-rules-enable.md)
+          - [Enable attack surface reduction rules](attack-surface-reduction-rules-configure.md)

@@ -43,7 +43,7 @@ To view attack surface reduction events, you have the following options as expla
 >
 > The Microsoft Defender portal also provides reporting for attack surface reduction features that's easier to use than Windows Event Viewer:
 >
-> - [Attack surface reduction rules report](attack-surface-reduction-rules-report.md)
+> - [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
 > - [Controlled folder access report](controlled-folders.md)
 > - [Exploit protection report](exploit-protection.md)
 > - [Network protection report](network-protection.md)
@@ -234,7 +234,7 @@ The custom view filters to show only the events related to that feature.
 ## Related content
 
 - [Attack surface reduction capabilities overview](attack-surface-reduction-overview.md)
-- [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md)
+- [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Protect devices from exploits](exploit-protection.md)
 - [Network protection](network-protection.md)

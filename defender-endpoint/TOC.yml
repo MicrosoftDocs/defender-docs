@@ -70,7 +70,7 @@
         href: mde-demonstration-amsi.md
       - name: Antimalware validation demonstration
         href: validate-antimalware.md
-      - name: Attack surface reduction rules demonstration
+      - name: ASR rules demonstration
         href: defender-endpoint-demonstration-attack-surface-reduction-rules.md
       - name: App reputation demonstration
         href: defender-endpoint-demonstration-app-reputation.md
@@ -558,11 +558,11 @@
           displayName: Troubleshooting Security Intelligence Updates from Microsoft Update source
         - name: Troubleshoot attack surface reduction issues
           items:
-          - name: Network protection
+          - name: Troubleshoot network protection
             href: troubleshoot-np.md
-          - name: Attack surface reduction rules
+          - name: Troubleshoot ASR rules
             href: troubleshoot-asr.md
-          - name: Migrate to Attack surface reduction rules
+          - name: Migrate to ASR rules
             href: migrating-asr-rules.md
 
   - name: Defender for Endpoint Security Operations Guide
@@ -677,9 +677,11 @@
           - name: Manage and monitor your ASR rules deployment
             href: attack-surface-reduction-rules-deployment-operationalize.md
         - name: Configure ASR rules and exceptions
-          href: attack-surface-reduction-rules-enable.md
-        - name: Monitor ASR rule activity
+          href: attack-surface-reduction-rules-configure.md
+        - name: Monitor ASR rules activity
           href: attack-surface-reduction-rules-monitor.md
+        - name: ASR rules report
+          href: attack-surface-reduction-rules-report.md
         - name: ASR rules reference
           href: attack-surface-reduction-rules-reference.md
       - name: Controlled folder access
@@ -1003,7 +1005,7 @@
         href: /intune/intune-service/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
       - name: Increase compliance with the security baseline
         href: configure-machines-security-baseline.md
-      - name: Optimize attack surface reduction rule deployment and detections
+      - name: Optimize ASR rules deployment and detections
         href: configure-machines-asr.md
       - name: Built-in protection
         href: built-in-protection.md
@@ -1167,7 +1169,7 @@
           href: web-protection-monitoring.md
         - name: Device control reports
           href: device-control-report.md
-        - name: Attack surface reduction rules report
+        - name: ASR rules report
           href: attack-surface-reduction-rules-report.md
         - name: Aggregated reports
           href: aggregated-reporting.md
