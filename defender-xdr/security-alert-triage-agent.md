@@ -75,17 +75,17 @@ The following prerequisites depend on the alert types you want the agent to tria
 
 #### [Email and collaboration alerts](#tab/email-alerts)
 
-#### Products and licenses
+##### Products and licenses
 
 - [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
 
-#### Activate unified RBAC
+##### Activate unified RBAC
 
 Activate **Defender for Office 365** in Microsoft Defender XDR unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
 :::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Security Alert Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
 
-#### Microsoft Defender configuration
+##### Microsoft Defender configuration
 
 - Enable **Monitor reported messages in Outlook** in **User reported settings**.  
   For more information, see [Configure user reported settings](#configure-user-reported-settings).
@@ -93,7 +93,7 @@ Activate **Defender for Office 365** in Microsoft Defender XDR unified RBAC sett
 - Turn on the **Email reported by user as malware or phish** alert policy to triage phishing alerts.  
   For more information, see [Alert policies in the Microsoft Defender portal](alert-policies.md).
 
-#### Configure user reported settings
+##### Configure user reported settings
 
 Enable **Monitor reported messages in Outlook** to define how users report potentially malicious messages in Microsoft Outlook and select any of the **Reported message destinations** options:
 
@@ -103,7 +103,7 @@ For more information, see [Use the Microsoft Defender portal to configure user r
 
 If you’re using a third-party email reporting tool, review [Options for third-party reporting tools](/defender-office-365/submissions-user-reported-messages-custom-mailbox) and view your vendor’s configuration options to integrate reported messages with Microsoft Defender.
 
-#### Add alert policy
+##### Add alert policy
 
 The Security Alert Triage Agent addresses email and collaboration incidents that include alerts with the type **Email reported by user as malware or phish**.
 
@@ -116,11 +116,11 @@ For more information, see [Alert policies in the Microsoft Defender portal](aler
 
 #### [Cloud alerts](#tab/cloud-alerts)
 
-#### Products and licenses
+##### Products and licenses
 
 - [Microsoft Defender for Containers (part of Microsoft Defender for Cloud)](/azure/defender-for-cloud/defender-for-containers-deployment-overview)
 
-#### Activate unified RBAC
+##### Activate unified RBAC
 
 Unified RBAC for cloud alerts is enabled automatically. No additional activation is required.
 
@@ -128,13 +128,13 @@ No additional configuration is required beyond the general prerequisites.
 
 #### [Identity alerts](#tab/identity-alerts)
 
-#### Products and licenses
+##### Products and licenses
 
 - [Entra ID P2 license](/entra/fundamentals/licensing)
 - **Microsoft Defender for Identity**
 - **Microsoft Defender for Cloud Apps** deployed
 
-#### Activate unified RBAC
+##### Activate unified RBAC
 
 Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** in Microsoft Defender XDR unified RBAC settings.For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
