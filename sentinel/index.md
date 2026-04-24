@@ -1,1 +1,0 @@
-# Welcome to sentinel-azure!

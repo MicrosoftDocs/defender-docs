@@ -4,7 +4,6 @@ description: Detailed steps to add Advanced Hunting community queries
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection:
 - m365-guidance-templates
