@@ -31,7 +31,8 @@ You can also get product updates and important notifications through the [messag
 
 ## April 2026
 
-- (Preview) The [`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table in advanced hunting now includes additional columns that provide deeper visibility into AI agents operating in your Microsoft 365 environment. These fields expand coverage beyond Copilot Studio to all agent types, including Microsoft Foundry, third-party marketplace, and custom line-of-business agents.
+- (GA) [Built-in alert tuning rules](investigate-alerts.md#built-in-alert-tuning-rules) are now generally available. Built-in alert tuning rules suppress alerts from common benign activity in Defender for Endpoint and Defender for Office 365 without affecting Automated Investigation and Response (AIR) investigations and email notifications.
+- (Preview) The[`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table in advanced hunting now includes additional columns that provide deeper visibility into AI agents operating in your Microsoft 365 environment. These fields expand coverage beyond Copilot Studio to all agent types, including Microsoft Foundry, third-party marketplace, and custom line-of-business agents.
 - Microsoft Defender Experts for XDR customers can now see **Defender Experts** as a distinct entry in the Microsoft Defender portal navigation menu. This feature adds to the existing home page status card as in-portal experiences that provide consistent and predictable access to the service. [Learn more](start-using-mdex-xdr.md) 
 
 ## March 2026
