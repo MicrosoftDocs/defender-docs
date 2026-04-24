@@ -29,6 +29,10 @@ In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 or Micr
 
 Users can report Teams messages from chats, channels, and meeting conversations as malicious or non-malicious. They can also report Teams calls from their call history as scam or not scam. Admins can view the Teams messages and calls that users report.
 
+For more information, watch the following video:
+
+[!VIDEO https://www.youtube.com/watch?v=ungHDS4XG4I]
+
 > [!NOTE]
 > User reporting of calls and messages in Teams is not supported in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD).
 >
@@ -108,7 +112,7 @@ The value of this setting is meaningful only if reporting is turned on in the Te
 
 2. On the **User reported settings** page, go to the **Microsoft Teams** section for the **Monitor reported items in Microsoft Teams** setting.
 
-   As previously described, this setting is turned on by default for new tenants, and existing tenants need to enable it. Typically, you leave it turned on if message reporting is also turned on in Teams admin center. [Learn more about reported message destinations](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
+   As previously described, this setting is turned on by default for new tenants, and existing tenants need to enable it. Typically, you leave it turned on if message reporting is also turned on in Teams admin center. [Learn more about reported item destinations](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
 
    :::image type="content" source="media/submissions-teams-turn-on-off-defender-portal.png" alt-text="Screenshot of the 'Monitor reported items in Microsoft Teams' setting in the Microsoft Defender portal." lightbox="media/submissions-teams-turn-on-off-defender-portal.png":::
 

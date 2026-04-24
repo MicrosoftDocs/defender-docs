@@ -42,7 +42,7 @@ Permissions:
 
 - A user with the [Tenant Governance Relationship Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-relationship-administrator) role in the governing tenant.
 - To send an invitation from the governed tenant, the user must have the [Tenant Governance Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-administrator) role.
-- To assign permissions to a remote tenant group, the user must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles/privileged#user-access-administrator) role in Azure RBAC or [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) role in Entra RBAC.
+- To assign permissions to a remote tenant group, the user must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles/privileged#user-access-administrator) role in Azure RBAC and at least a [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) role in Entra RBAC.
 
 ## Enable tenant governance settings
 
@@ -162,13 +162,13 @@ Assigning Microsoft Sentinel roles enables multitenant management features inclu
 - Content distribution
 - Direct management through the Defender portal
 
-### Assign permissions to Log Analytics workspace
+### Assign permissions to resource group
 
 Follow these steps to grant Microsoft Sentinel permissions to your delegated access groups.
 
 1. In the governed tenant, sign in to the [Azure portal](https://portal.azure.com).
 
-1. Navigate to your Log Analytics workspace.
+1. Navigate to your resource group.
 
 1. Select **Access Control (IAM)**.
 
