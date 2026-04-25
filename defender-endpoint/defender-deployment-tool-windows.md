@@ -107,7 +107,20 @@ asdf
    * Provide a name for the package. Be sure to create a name that's unique and descriptive.
 
    * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
-   
+
+   * Select the security operations mode for the package. Choose **Full functionality** for standard devices or **Restricted** for high-value assets.
+
+      If you choose **Restricted**, a list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
+
+      :::image type="content" source="./media/defender-deployment-tool-windows/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode menu in the Microsoft Defender portal.":::
+
+      > [!NOTE]
+      > Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
+      > 
+      > Restricted mode with all response actions allowed **is not** equivalent to full functionality. When you onboard a device using a restricted package, running scripts is disabled by design, whereas onboarding with a full functionality package provides unrestricted access to all supported response actions and capabilities.
+
+      For more information about the security operations modes and the selective response actions capability, see [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md).
+
    * When you're done configuring the package, select **Generate**.
 
 1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
