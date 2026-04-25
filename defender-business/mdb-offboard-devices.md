@@ -117,7 +117,7 @@ Choose the operating system for your server:
 7. Type `python MicrosoftDefenderATPOffboardingLinuxServer_valid_until_YYYY-MM-DD.py` in the terminal.
 
 > [!NOTE]
-> This procedure offboards the server, meaning that no new detections, vulnerability, or security data will be sent to the Microsoft Defender portal. However, it doesn't remove the Defender for Endpoint software and services from the device. For information about how to completely uninstall Defender for Endpoint on Linux servers, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](../defender-endpoint/linux-off-board-endpoints.md).
+> This procedure offboards the server, meaning that the server stops sending new detections, vulnerability, or security data to Defender for Business. However, it doesn't remove the Defender for Business software and services from the device. For information about how to completely uninstall Defender for Business on Linux servers, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-off-board-endpoints).
 
 ## [**Mobile devices**](#tab/mobiles)
 
