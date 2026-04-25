@@ -31,7 +31,7 @@ Users can report Teams messages from chats, channels, and meeting conversations 
 
 For more information, watch the following video:
 
-[!VIDEO https://www.youtube.com/watch?v=ungHDS4XG4I]
+> [!VIDEO https://www.youtube.com/embed/ungHDS4XG4I]
 
 > [!NOTE]
 > User reporting of calls and messages in Teams is not supported in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD).
