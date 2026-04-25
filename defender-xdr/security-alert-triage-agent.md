@@ -367,15 +367,15 @@ To view agent metrics and manage the agent, go to the Security Alert Triage Agen
 
    - The **Overview** tab provides details about the agent’s current status, identity, role, and recent activity. 
 
-      :::image type="content" source="media\security-alert-triage-agent\security-alert-triage-agent-overview.png" alt-text="Screenshot of the Overview tab on the Security Alert Triage Agent page." lightbox="/defender/media/agents-in-defender/security-alert-triage-agent/security-alert-triage-agent-page-overview.png":::
+      :::image type="content" source="media/security-alert-triage-agent/phishing-triage-agent-page-overview.png" alt-text="Screenshot of the Overview tab on the Security Alert Triage Agent page." lightbox="media/security-alert-triage-agent/phishing-triage-agent-page-overview.png":::
 
       Select an activity from the **Recent activity** list to view details about the agent's investigation and the agent full workflow.
 
-      :::image type="content" source="/defender/media/agents-in-defender/security-alert-triage-agent\security-alert-triage-agent-activity-details.png" alt-text="Screenshot of the activity details pane that opens from the Security Alert Triage Agent page." lightbox="/defender/media/agents-in-defender/security-alert-triage-agent/security-alert-triage-agent-activity-details.png":::
+      :::image type="content" source="media/security-alert-triage-agent/security-alert-triage-agent-activity-details.png" alt-text="Screenshot of the activity details pane that opens from the Security Alert Triage Agent page." lightbox="media/security-alert-triage-agent/security-alert-triage-agent-activity-details.png":::
 
       Select **See full agent workflow** to view a graphical representation of the agent’s decision-making process for that specific activity.
 
-      :::image type="content" source="/defender/media/agents-in-defender/security-alert-triage-agent/security-alert-triage-agent-workflow.png" alt-text="Screenshot of the full agent workflow page that opens from the Security Alert Triage Agent page." lightbox="/defender/media/agents-in-defender/security-alert-triage-agent/security-alert-triage-agent-workflow.png":::
+      :::image type="content" source="media/security-alert-triage-agent/security-alert-triage-agent-workflow.png" alt-text="Screenshot of the full agent workflow page that opens from the Security Alert Triage Agent page." lightbox="media/security-alert-triage-agent/security-alert-triage-agent-workflow.png":::
 
 
    - The **Performance** tab displays key metrics about the agent’s activity over time, including daily activity, mean time to triage (MTTT), and SCU consumption. 
