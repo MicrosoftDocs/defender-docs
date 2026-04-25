@@ -178,7 +178,7 @@ Before enabling ASR rules in **Block** mode, assess their effects in **Audit** m
 
 Microsoft Defender for Endpoint supports ASR rules but doesn't include a built-in method to deploy ASR rule settings to devices. Instead, you use a separate deployment or management tool to create and distribute ASR rule policies to devices. Not all deployment methods support every ASR rule. For per-rule details, see [Deployment method support for ASR rules](attack-surface-reduction-rules-reference.md#deployment-method-support-for-asr-rules).
 
-The following table summarizes the available methods. For detailed configuration instructions, see [Configure attack surface reduction (ASR) rules and exceptions](attack-surface-reduction-rules-configure.md).
+The following table summarizes the available methods. For detailed configuration instructions, see [Configure attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md).
 
 |Method|Description|
 |---|---|
@@ -199,6 +199,10 @@ You can exclude specific **files** and **folders** from being evaluated by ASR r
 You can use the following methods to exclude files and folders from ASR rules:
 
 - **Microsoft Defender Antivirus exclusions**: Not all ASR rules honor these exclusions. For more information about Microsoft Defender Antivirus exclusions, see [Configure custom exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md).
+
+  > [!TIP]
+  > All ASR rules honor **process** exclusions in Microsoft Defender Antivirus.
+
 - **Global ASR rule exclusions**: These exclusions apply to all ASR rules. All ASR rule configuration methods also support configuring global ASR rule exclusions.
 - **Per-ASR rule exclusions**: Assign different exclusions selectively to different ASR rules. Only the following ASR rule configuration methods also support configuring per-ASR rule exclusions:
   - [Group Policy](attack-surface-reduction-rules-configure.md#configure-per-asr-rule-exclusions-in-group-policy) (and the corresponding registry settings)

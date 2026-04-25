@@ -57,7 +57,7 @@ By default, local changes made to the lists (by users with administrator privile
 You can [configure how locally and globally defined exclusions lists are merged](configure-local-policy-overrides-microsoft-defender-antivirus.md#merge-lists) to allow local changes to override managed deployment settings.
 
 > [!NOTE]
-> **Network Protection** and **Attack surface reduction rules** are directly affected by process exclusions on all platforms, meaning that a process exclusion on any OS (Windows, macOS, Linux) results in Network Protection or ASR being unable to inspect traffic or enforce rules for that specific process.
+> **Network Protection** and [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) are directly affected by process exclusions on all platforms. A process exclusion on any OS (Windows, macOS, or Linux) means Network Protection or ASR rules can't inspect traffic or enforce rules for that specific process.
 
 ### Image name vs full path for process exclusions
 

@@ -539,13 +539,15 @@ Most organizations don't require Win32 API calls from VBA macros, even if they u
   - `AsrOfficeMacroWin32ApiCallsBlocked`
 - **Dependencies**: Microsoft Defender Antivirus, Antimalware Scan Interface (AMSI)
 
+#### Use advanced protection against ransomware
+
 > [!NOTE]
 >
 > - This rule isn't supported when deployed via Microsoft Intune to Windows Server 2012 R2 or Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 > - This rule has limited exclusion support. For details, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 > - To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
 
-This ASR rule provides an extra layer of protection against ransomware. It uses both client and cloud heuristics to determine whether a file resembles ransomware. This rule doesn't block files that have one or more of the following characteristics:
+This ASR rule provides an extra layer of protection against ransomware.It uses both client and cloud heuristics to determine whether a file resembles ransomware. This rule doesn't block files that have one or more of the following characteristics:
 
 - The file is found to be unharmful in the Microsoft cloud.
 - The file is a valid signed file.

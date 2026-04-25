@@ -32,7 +32,7 @@ When you're implementing attack surface reduction rules, move the first test rin
 
 ## Step 1: Transition attack surface reduction rules from Audit to Block
 
-1. After you determine all required exclusions for rules in **Audit** mode, start setting some rules to **Block** mode. Start with the rule with the fewest triggered events. For instructions, see [Configure attack surface reduction (ASR) rules and exceptions](attack-surface-reduction-rules-configure.md).
+1. After you determine all required exclusions for rules in **Audit** mode, start setting some rules to **Block** mode. Start with the rule with the fewest triggered events. For instructions, see [Configure attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md).
 
 1. Review the [reporting page in the Microsoft Defender portal](threat-protection-reports.md). Also review feedback from your champions.
 

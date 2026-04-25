@@ -1,5 +1,5 @@
 ---
-title: Configure ASR rules and exceptions
+title: Configure ASR rules and exclusions
 description: Enable attack surface reduction rules to protect your devices from attacks that use macros, scripts, and common injection techniques.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ appliesto:
 ms.date: 04/15/2026
 ---
 
-# Configure attack surface reduction (ASR) rules and exceptions
+# Configure attack surface reduction (ASR) rules and exclusions
 
 [Attack surface reduction rules](attack-surface-reduction-rules-overview.md) help prevent actions that malware often abuses to compromise devices and networks. This article describes how to enable and configure attack surface reduction rules.
 
@@ -59,7 +59,7 @@ To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surfa
 - **Configuration settings**:
   - **Attack surface reduction**: Typically, you can set the standard protection rules to **Block** mode without any testing. For all other rules, you should set them to **Audit** mode for testing before you enable them in **Block** or **Warn** mode. For more information, see [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules).
 
-    After you set the rule mode to **Audit**, **Block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
+    After you set the rule mode to **Audit**, **BYes. To block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
 
   - **Attack surface reduction only exclusions**: Use this section to specify exclusions that apply to all ASR rules.
 

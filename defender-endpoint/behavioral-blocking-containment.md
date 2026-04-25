@@ -9,7 +9,7 @@ ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
 ms.custom: admindeeplinkDEFENDER
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 ms.date: 10/20/2025
@@ -41,16 +41,15 @@ The following image shows an example of an alert that was triggered by behaviora
 
 :::image type="content" source="media/blocked-behav-alert.png" alt-text="The Alerts page with an alert through behavioral blocking and containment" lightbox="media/blocked-behav-alert.png":::
 
-
 ## Prerequisites
 
-### Supported operating systems 
+### Supported operating systems
 
 - Windows
 
 ## Components of behavioral blocking and containment
 
-- **On-client, policy-driven [attack surface reduction rules](attack-surface-reduction-rules-overview.md)** Predefined common attack behaviors are prevented from executing, according to your attack surface reduction rules. When such behaviors attempt to execute, they can be seen in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> as informational alerts. Attack surface reduction rules aren't enabled by default; you configure your policies in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender).
+- **On-client, policy-driven [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)** Prevent predefined, common attack behavior from apps. To monitor ASR rule detections, see [Monitor attack surface reduction (ASR) rules activity](attack-surface-reduction-rules-monitor.md).
 
 - **[Client behavioral blocking](client-behavioral-blocking.md)** Threats on endpoints are detected through machine learning, and then are blocked and remediated automatically. (Client behavioral blocking is enabled by default.)
 
@@ -110,7 +109,8 @@ A few minutes after the artifact was blocked, multiple instances of the same fil
 This example shows that with behavioral blocking and containment capabilities, threats are detected, contained, and blocked automatically.
 
 > [!TIP]
-> If you're looking for Antivirus related information for other platforms, see:
+> If you're looking for Antivirus related information for other platforms, see the following articles:
+>
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 > - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
@@ -123,12 +123,10 @@ This example shows that with behavioral blocking and containment capabilities, t
 
 - [Learn more about Defender for Endpoint](overview-endpoint-detection-response.md)
 
-- [Configure your attack surface reduction rules](attack-surface-reduction-rules-overview.md)
+- [Learn more about attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)
 
 - [Enable EDR in block mode](edr-in-block-mode.md)
 
 - [See recent global threat activity](https://www.microsoft.com/wdsi/threats)
 
 - [Get an overview of Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
-
-

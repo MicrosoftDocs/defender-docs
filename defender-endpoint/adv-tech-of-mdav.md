@@ -52,7 +52,7 @@ For more information, see [Microsoft 365 Defender demonstrates 100 percent prote
 
 ## How next-generation protection works with other Defender for Endpoint capabilities
 
-Together with [attack surface reduction](attack-surface-reduction-overview.md), which includes advanced capabilities like hardware-based isolation, application control, exploit protection, network protection, controlled folder access, attack surface reduction rules, and network firewall, [next-generation protection](microsoft-defender-antivirus-windows.md) engines deliver Microsoft Defender for Endpoint's prebreach capabilities, stopping attacks before they can infiltrate devices and compromise networks.
+Together with [attack surface reduction](attack-surface-reduction-overview.md), which includes advanced capabilities like hardware-based isolation, application control, exploit protection, network protection, controlled folder access, [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md), and network firewall, [next-generation protection](microsoft-defender-antivirus-windows.md) engines deliver Microsoft Defender for Endpoint's prebreach capabilities, stopping attacks before they can infiltrate devices and compromise networks.
 
 As part of Microsoft's defense-in-depth solution, the superior performance of these engines accrues to the [Microsoft Defender for Endpoint](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint) unified endpoint protection, where antivirus detections and other next-generation protection capabilities enrich endpoint detection and response, automated investigation and remediation, advanced hunting, threat and vulnerability management, managed threat hunting service, and other capabilities.
 
@@ -69,7 +69,7 @@ Microsoft Defender Antivirus (MDAV) provides memory protection with different en
 |Emulation|Detonation-based Machine Learning|
 |Memory scanning|N/A|
 
-An additional layer to help prevent memory-based attacks is to use the Attack Surface Reduction (ASR) rule – **Block Office applications from injecting code into other processes**. For more information see, [Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes).
+An additional layer to help prevent memory-based attacks is to use the ASR rule [Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes).
 
 ## Frequently asked questions
 

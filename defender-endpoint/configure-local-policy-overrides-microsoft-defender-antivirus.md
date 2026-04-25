@@ -98,7 +98,7 @@ You can also configure how locally defined lists are combined or merged with glo
 
 - [Exclusion lists](configure-exclusions-microsoft-defender-antivirus.md)
 - [Specified remediation lists](configure-remediation-microsoft-defender-antivirus.md)
-- [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)
+- [File and folder exclusions for attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules)
 
 By default, lists configured in local group policy and the Windows Security app are merged with lists defined by the appropriate GPO you deployed. Where there are conflicts, the globally defined list takes precedence. You can disable this setting to ensure that only globally defined lists (for example, from any deployed GPOs) are used.
 

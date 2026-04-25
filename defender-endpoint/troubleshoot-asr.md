@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot problems with attack surface reduction rules
-description: Resources and sample code to troubleshoot issues with attack surface reduction rules in Microsoft Defender for Endpoint.
+title: Troubleshoot ASR rules
+description: Resources and sample code to troubleshoot issues with attack surface reduction (ASR) rules in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
@@ -20,7 +20,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Troubleshoot attack surface reduction rules
+# Troubleshoot attack surface reduction (ASR) rules
 
 Even after you carefully [plan](attack-surface-reduction-rules-deployment-plan.md), [test](attack-surface-reduction-rules-deployment-test.md) and [implement](attack-surface-reduction-rules-deployment-implement.md) attack surface reduction (ASR) rules on Windows devices in your organization, you still might run into issues. For example:
 

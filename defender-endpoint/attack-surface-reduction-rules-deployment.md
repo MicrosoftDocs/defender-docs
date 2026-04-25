@@ -57,7 +57,7 @@ Use the following articles to plan, test, implement, and manage your ASR rules d
 
 - [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
 - [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)
-- [Configure attack surface reduction (ASR) rules and exceptions](attack-surface-reduction-rules-configure.md)
+- [Configure attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md)
 - [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
 - [Attack surface reduction FAQ](attack-surface-reduction-faq.yml)
 - [Demystifying attack surface reduction rules - Part 1](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420)

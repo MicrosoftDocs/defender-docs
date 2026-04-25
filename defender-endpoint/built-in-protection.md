@@ -8,11 +8,11 @@ ms.date: 06/24/2024
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.custom: 
+ms.custom:
 ms.reviewer: joshbregman
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -28,7 +28,7 @@ appliesto:
 >
 > - [Enable cloud protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - [Turn tamper protection on](prevent-changes-to-security-settings-with-tamper-protection.md)
-> - [Set standard attack surface reduction rules to block mode](attack-surface-reduction-rules-deployment.md)
+> - [Enable standard protection attack surface reduction (ASR) rules in Block mode](attack-surface-reduction-rules-overview.md#asr-rules)
 > - [Enable network protection in block mode](enable-network-protection.md)
 
 ## What is built-in protection, and how does it work?
@@ -38,7 +38,7 @@ Built-in protection is a set of default settings to help ensure your devices are
 As devices are onboarded to Defender for Endpoint, built-in protection settings are applied automatically. However, your security team can [change your built-in protection settings](#can-i-change-built-in-protection-settings). |
 
 > [!NOTE]
-> Built-in protection sets default values for Windows and Mac devices. If endpoint security settings change, such as through baselines or policies in [Microsoft Intune](/intune/endpoint-manager-overview), those settings override the built-in protection settings.  
+> Built-in protection sets default values for Windows and Mac devices. If endpoint security settings change, such as through baselines or policies in [Microsoft Intune](/intune/endpoint-manager-overview), those settings override the built-in protection settings.
 
 ## Can I opt out?
 
@@ -58,7 +58,7 @@ You can opt out of built-in protection by specifying your own security settings.
 
 ## Can I change built-in protection settings?
 
-Built-in protection is a set of default settings. Your security team isn't required to keep these default settings in place. To suit your organization's business needs, your security team can change your security settings. The following table lists tasks your security team might perform, along with links to learn more. 
+Built-in protection is a set of default settings. Your security team isn't required to keep these default settings in place. To suit your organization's business needs, your security team can change your security settings. The following table lists tasks your security team might perform, along with links to learn more.
 
 | Task | Description |
 |:---|:---|
