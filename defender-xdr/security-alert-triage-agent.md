@@ -136,19 +136,19 @@ Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud 
 
 ## Required permissions for analysts and administrators
 
-Users who interact with the Security Alert Triage Agent need the following permissions. These permissions apply to all alert types.
+Users who interact with the Security Alert Triage Agent need these permissions:
 
 | User action | Required permissions |
 |------------|---------------------|
-| **View agent results** | The same permissions as the agent itself (or higher), as described in [Security Alert Triage Agent required permissions](#security-alert-triage-agent-required-permissions). |
+| **View agent results** | The same permissions as the agent (or higher), as described in [Security Alert Triage Agent required permissions](#security-alert-triage-agent-required-permissions). |
 | **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
 | **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID**. |
 
-The following permissions apply only to email and collaboration alerts, which support the feedback workflow.
+These permissions apply only to email and collaboration alerts, which support the feedback workflow:
 
 | User action | Required permissions |
 |------------|---------------------|
-| **Teach agent through feedback** | The same permissions as the agent itself (or higher), as described in [Security Alert Triage Agent required permissions](#security-alert-triage-agent-required-permissions). |
+| **Teach agent through feedback** | The same permissions as the agent(or higher), as described in [Security Alert Triage Agent required permissions](#security-alert-triage-agent-required-permissions). |
 | **View feedback page** | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
 | **Reject feedback** | **Security Administrator** in **Microsoft Entra ID**. |
 
