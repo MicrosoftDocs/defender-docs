@@ -111,12 +111,12 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
       :::image type="content" source="./media/defender-deployment-tool-windows/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode menu in the Microsoft Defender portal.":::
 
+      For more information about the security operations modes and the selective response actions capability, see [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md).
+
       > [!NOTE]
       > Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
       > 
       > Restricted mode with all response actions allowed **is not** equivalent to full functionality. When you onboard a device using a restricted package, running scripts is disabled by design, whereas onboarding with a full functionality package provides unrestricted access to all supported response actions and capabilities.
-
-      For more information about the security operations modes and the selective response actions capability, see [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md).
 
    * When you're done configuring the package, select **Generate**.
 
