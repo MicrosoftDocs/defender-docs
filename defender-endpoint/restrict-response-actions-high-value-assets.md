@@ -1,7 +1,6 @@
 ---
-title: Limit Security Operations on Critical Assets in Defender
+title: Limit security operations on critical assets in Microsoft Defender for Endpoint
 description: Learn how to onboard Tier-0 and high-value assets with restricted security operations in Microsoft Defender for Endpoint to reduce operational risk.
-#customer intent: As a security engineer, I want to configure which response actions are allowed on high-value assets during onboarding.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
@@ -9,14 +8,10 @@ ms.reviewer: amibarayev
 ms.localizationpriority: medium
 ms.date: 04/15/2026
 ms.topic: concept-article
-# customer intent: As a security admin, I want to restrict response actions on high-value assets I'm onboarding to reduce operational risk.
+#customer intent: As a security engineer, I want to configure which response actions are allowed on high-value assets I'm onboarding to reduce operational risk.
 ---
 
 # Restrict response actions on high-value assets (preview)
-# Selective response actions for Tier-0 and high-value assets
-
-> [!IMPORTANT]
-> This feature is currently in **Private Preview**.
 
 This article provides an overview of the selective response actions capability in Microsoft Defender for Endpoint. This capability allows organizations to restrict high-impact security operations on devices during onboarding to reduce operational risk on critical infrastructure.
 
@@ -26,36 +21,34 @@ This article provides an overview of the selective response actions capability i
 
 Deploying Microsoft Defender for Endpoint on high-value assets (HVAs) — such as domain controllers, ADFS servers, and other Tier-0 systems — introduces operational risk due to the powerful actions available to privileged users. Capabilities such as isolating devices, executing scripts, or initiating live response sessions can cause significant disruption to critical infrastructure if misused, either unintentionally or due to compromised accounts.
 
-In addition, organizations enforcing privileged access management often prohibit cloud-based admin privileges on Tier-0 systems.
+In addition, organizations that enforce privileged access management often prohibit cloud-based admin privileges on Tier-0 systems.
 
-Selective response actions mitigate these risks by providing controls that restrict or customize high-impact security operations on HVAs. This capability reduces the risk of accidental or malicious disruption by limiting the intrusive actions that can be performed on Tier-0 assets.
+The selective response actions capability mitigates these risks by providing controls that restrict or customize high-impact security operations on HVAs. This capability reduces the risk of accidental or malicious disruption by limiting the intrusive actions that can be performed on Tier-0 assets.
 
 ## Security operations modes
 
-The security operations mode is chosen during the onboarding process when you configure the deployment package using the Defender deployment tool (DDT). Two modes are available:
+The selective response actions capability is applied to a device via its onboarding configuration. When you create the deployment package using the Defender deployment tool (DDT), you are asked to choose one of two security operations modes:
 
-- **Full Control**: Grants full access to all security operations. This is the default mode and is recommended for standard devices that aren't considered high-value assets.
-- **Restricted**: Limits high-impact security operations to protect sensitive or high-value assets. Use this mode to enforce stricter security boundaries on Tier-0 and HVA devices.
+- **Full Control**: Full control means that all security operations are allowed on the device once it is onboarded. This is the default mode and is recommended for standard devices that aren't considered high-value assets.
+- **Restricted**: Restricted means that the only high-impact security operations allowed on the device once it is onboarded are the ones you specified during the creation of the deployment package to protect sensitive or high-value assets. Use this mode to enforce stricter security boundaries on Tier-0 and HVA devices.
+
+   In restricted mode, the following capabilities can be individually allowed or disallowed.
+
+   | Capability | Description | Remarks |
+   |---|---|---|
+   | **Basic response** | Run antivirus scan, collect file, and collect investigation package. | The *Collect file* capability refers to retrieving a file from the **File** page in the portal, not the `GetFile` command available under Live Response. |
+   | **Advanced response** | Isolate device, restrict app execution, and request remediation. | *Request remediation* allows security administrators to initiate remediation actions for identified vulnerabilities on a specific device. |
+   | **Live response** | Allows live response sessions to the remote device. | |
+   | **Device protection** | Allows automatic incident response (AIR). | |
+
+   > [!NOTE]
+   > Devices onboarded in Restricted mode don't support the execution of Live Response scripts, even when Live Response is enabled. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
 
 For detailed instructions on creating and deploying onboarding packages, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md).
 
-> [!NOTE]
-> Devices onboarded in Restricted mode don't support the execution of Live Response scripts, even when Live Response is enabled. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
+## Visibility and identification
 
-### Configurable capabilities in Restricted mode
-
-When Restricted mode is selected, the following capabilities can be individually allowed or disallowed:
-
-| Capability | Description | Remarks |
-|---|---|---|
-| **Basic response** | Run antivirus scan, collect file, and collect investigation package. | The *Collect file* capability refers to retrieving a file from the **File** page in the portal, not the `GetFile` command available under Live Response. |
-| **Advanced response** | Isolate device, restrict app execution, and request remediation. | *Request remediation* allows security administrators to initiate remediation actions for identified vulnerabilities on a specific device. |
-| **Live response** | Allows live response sessions to the remote device. | |
-| **Device protection** | Allows automatic incident response (AIR). | |
-
-### Visibility and identification
-
-Devices onboarded in Restricted mode are identified in the Defender portal in several ways:
+Devices onboarded in restricted mode are identified in the Defender portal in several ways:
 
 - **Device Inventory page**: A **Security operations** property indicates the onboarding mode of each device as either **Full** or **Restricted**.
 - **Device page**: A **Security operations** status reflects the level of remote security capabilities configured for the device. Devices in Restricted mode are automatically tagged with **Restricted security operations**. Select **View security operations information** to see a detailed list of all security controls and their current status (enabled or disabled).
@@ -63,21 +56,21 @@ Devices onboarded in Restricted mode are identified in the Defender portal in se
 
 Restricted mode doesn't reduce detection, alerting, or sensor coverage. All alerts, timelines, and threat detections continue to function normally.
 
-### Changing restriction settings
+## Changing restriction settings
 
-Once a device is onboarded with restricted settings, its security operations configuration can't be changed or modified—neither from the Microsoft Defender portal nor locally on the device. To update a device's response capabilities, you must offboard the device and re-onboard it using a new deployment package with the desired settings. The device ID remains the same, and all historical data are preserved.
+Once a device is onboarded with restricted settings, its security operations configuration can't be changed or modified. To update a device's response capabilities, you must offboard the device and re-onboard it using a new deployment package with the desired settings. The device ID remains the same, and all historical data are preserved.
 
 > [!NOTE]
 > Restricted mode is independent of High Value device classification. It can be applied to High Value devices, Tier-0 assets, or any other devices where you want to restrict remote response security operations.
 
 ## Enabling the feature
 
-To use selective response actions, enable the feature in the Microsoft Defender portal:
+To use the selective response actions capability, enable the feature in the Microsoft Defender portal:
 
 1. Navigate to **Settings** > **Endpoints** > **Advanced features**.
 2. Turn on **Allow restricted operations during onboarding**.
 
-Once enabled, the Restricted mode option becomes available when creating Defender deployment packages for Windows through the Defender deployment tool (DDT). You can then create onboarding packages that specify which security operations to allow on each device.
+Once enabled, the restricted mode option becomes available when creating Defender deployment packages for Windows through the Defender deployment tool (DDT). You can then create deployment packages that specify which security operations to allow on each device.
 
 ## Prerequisites and supported operating systems
 
