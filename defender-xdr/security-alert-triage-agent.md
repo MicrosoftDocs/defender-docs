@@ -17,7 +17,7 @@ ms.topic: how-to
 search.appverid:
 - MOE150
 - MET150
-ms.date: 01/25/2026
+ms.date: 04/25/2026
 appliesto:
 - Microsoft Defender XDR
 #customer intent: As a security analyst, I want to learn about the Security Alert Triage Agent in Microsoft Defender so that I can triage and classify security incidents efficiently at scale.
@@ -128,7 +128,7 @@ No additional configuration is required beyond the general prerequisites.
 
 ##### Unified RBAC requirements
 
-Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** in Microsoft Defender XDR unified RBAC settings.For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
+Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud Apps** in Microsoft Defender XDR unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
 :::image type="content" source="media/security-alert-triage-agent/rbac-settings-defender-identity.png" alt-text="Screenshot of Microsoft Defender XDR Permissions and roles page showing unified RBAC activation with Identity and Cloud Apps settings." lightbox="media/security-alert-triage-agent/rbac-settings-defender-identity.png":::
 
@@ -148,7 +148,7 @@ These permissions apply only to email and collaboration alerts, which support th
 
 | User action | Required permissions |
 |------------|---------------------|
-| **Teach agent through feedback** | The same permissions as the agent(or higher), as described in [Security Alert Triage Agent required permissions](#security-alert-triage-agent-required-permissions). |
+| **Teach agent through feedback** | The same permissions as the agent (or higher), as described in [Security Alert Triage Agent required permissions](#security-alert-triage-agent-required-permissions). |
 | **View feedback page** | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
 | **Reject feedback** | **Security Administrator** in **Microsoft Entra ID**. |
 
@@ -165,7 +165,7 @@ Open the Security Alert Triage Agent setup wizard in one of two ways:
 - From the Security Store in the Microsoft Defender portal, as explained in [Deploy AI agents in Microsoft Defender](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
 - From the **Incidents** queue in the Microsoft Defender portal, select **Set up agent**.
 
-   :::image type="content" source="media/security-alert-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted." lightbox="media/security-alert-triage-agent/phishing-triage-setup-incident.png":::
+   :::image type="content" source="media/security-alert-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Security Alert Triage Agent setup option highlighted." lightbox="media/security-alert-triage-agent/phishing-triage-setup-incident.png":::
 
 Follow the steps in the setup wizard, as described in the sections below.
 
@@ -215,7 +215,7 @@ In alignment with [the principle of least privileges](/entra/identity-platform/s
 
 - If you use an existing user account, you need to [assign the required permissions](#security-alert-triage-agent-required-permissions) to that identity before assigning the agent identity during setup - you can't do this from the setup wizard.
 
-   :::image type="content" source="media/security-alert-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Security Alert Triage Agent setup wizard" lightbox="media/security-alert-triage-agent/setup-assign-user.PNG":::
+   :::image type="content" source="media/security-alert-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user account screen in the Security Alert Triage Agent setup wizard" lightbox="media/security-alert-triage-agent/setup-assign-user.PNG":::
 
 ##### Security Alert Triage Agent required permissions
 
@@ -240,7 +240,7 @@ To create a role:
 
    Make sure to grant the agent access to all the [supported alerts](#supported-alerts) you want to associate with the Security Alert Triage Agent.
 
-      :::image type="content" source="/defender-xdr/media/security-alert-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender-xdr/media/security-alert-triage-agent/agent-permissions-sources.png":::
+      :::image type="content" source="/defender-xdr/media/security-alert-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Security Alert Triage" lightbox="/defender-xdr/media/security-alert-triage-agent/agent-permissions-sources.png":::
 
 1. Assign the role to the agent. 
 
@@ -300,7 +300,7 @@ For supported alert types, analysts can optionally provide feedback on agent cla
 
 To provide feedback and teach the agent, follow these steps:
 
-1. In the incident page, look for the Security Alert Triage Agent card in the Copilot or Tasks side panel under the Guided Response triage section.
+1. In the incident page, look for the Security Alert Triage Agent card in the Copilot or Tasks side panel under the Guided Response Triage section.
 1. Review the agent's classification and reasoning displayed in the card's title and content. If the decision doesn't align with your organization's classification criteria, select **Change classification**. Alternatively, you can update the classification by selecting the specific alert from the **Alerts** tab, then choosing **Manage alert**.
 
    :::image type="content" source="media/security-alert-triage-agent/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Security Alert Triage Agent card" lightbox="media/security-alert-triage-agent/change-classification.png":::
@@ -502,7 +502,7 @@ The Security Alert Triage Agent operates within a zero-trust environment. The sy
 
 ### I want to try the Security Alert Triage Agent - how do I set it up in Microsoft Defender?
 
-To set up the agent, you must have access to **Security Copilot in Microsoft Defender** and meet the necessary [prerequisites](#prerequisites). If you haven’t onboarded to Security Copilot, see [Get started with Security Copilot](/security-copilot/get-started-security-copilot) or contact your Microsoft representative. After you've onboarded to Security Copilot, it can take a bit of time for the agent setup option to become available in the Microsoft Defender portal. 
+To set up the agent, you must have access to **Security Copilot in Microsoft Defender** and meet the necessary [prerequisites](#prerequisites). If you haven’t onboarded to Security Copilot, see [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or contact your Microsoft representative. After you've onboarded to Security Copilot, it can take a bit of time for the agent setup option to become available in the Microsoft Defender portal. 
 
  
 ### I've tried the Security Alert Triage Agent - how can I estimate the SCU capacity needed for the agent in my organization?
