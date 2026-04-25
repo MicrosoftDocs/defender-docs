@@ -494,26 +494,6 @@
           items:
           - name: Overview
             href: security-copilot-agents-defender.md          
-          - name: Alert Triage Agent (Preview)
-            items:
-            - name: Overview
-              href: alert-triage-agent-overview.md
-              displayName: Alert Triage Agent, alert classification, triage automation
-            - name: Permissions and prerequisites
-              href: alert-triage-agent-prerequisites.md
-              displayName: Alert Triage Agent, alert classification, triage automation
-            - name: Setup
-              href: alert-triage-agent-setup.md
-              displayName: Alert Triage Agent, alert classification, triage automation
-            - name: Use the agent
-              href: alert-triage-agent-usage.md
-              displayName: Alert Triage Agent, alert classification, triage automation
-            - name: Monitor and manage the agent
-              href: alert-triage-agent-management.md
-              displayName: Alert Triage Agent, alert classification, triage automation
-            - name: FAQ
-              href: alert-triage-agent-faq.md
-              displayName: Alert Triage Agent, alert classification, triage automation
           - name: Phishing Triage Agent
             href: phishing-triage-agent.md
           - name: Threat Intelligence Briefing Agent
