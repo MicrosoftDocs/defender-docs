@@ -27,24 +27,24 @@ The selective response actions capability mitigates these risks by providing con
 
 ## Security operations modes
 
-The selective response actions capability is applied to a device via its onboarding configuration. When you create the deployment package using the Defender deployment tool (DDT), you are asked to choose one of two security operations modes:
+The set of high-impact response actions that are allowed or disallowed on a device is determined by the deployment package used to onboard the device. When you create the deployment package using the Defender deployment tool (DDT), you choose one of two security operations modes:
 
-- **Full Control**: Full control means that all security operations are allowed on the device once it is onboarded. This is the default mode and is recommended for standard devices that aren't considered high-value assets.
-- **Restricted**: Restricted means that the only high-impact security operations allowed on the device once it is onboarded are the ones you specified during the creation of the deployment package to protect sensitive or high-value assets. Use this mode to enforce stricter security boundaries on Tier-0 and HVA devices.
+- **Full Control**: *Full control* means that all security operations are allowed on the device once it is onboarded. This is the default mode and is recommended for standard devices that aren't considered high-value assets.
+- **Restricted**: *Restricted* means that the only high-impact security operations allowed on the device once it is onboarded are those you specify. Use this mode to enforce stricter security boundaries on Tier-0 and HVA devices.
 
-   In restricted mode, the following capabilities can be individually allowed or disallowed.
+If you choose restricted mode, you can then individually allow or disallow the following capabilities.
 
-   | Capability | Description | Remarks |
-   |---|---|---|
-   | **Basic response** | Run antivirus scan, collect file, and collect investigation package. | The *Collect file* capability refers to retrieving a file from the **File** page in the portal, not the `GetFile` command available under Live Response. |
-   | **Advanced response** | Isolate device, restrict app execution, and request remediation. | *Request remediation* allows security administrators to initiate remediation actions for identified vulnerabilities on a specific device. |
-   | **Live response** | Allows live response sessions to the remote device. | |
-   | **Device protection** | Allows automatic incident response (AIR). | |
+| Capability | Description | Remarks |
+|---|---|---|
+| **Basic response** | Run antivirus scan, collect file, and collect investigation package. | The *Collect file* capability refers to retrieving a file from the **File** page in the portal, not the `GetFile` command available under Live Response. |
+| **Advanced response** | Isolate device, restrict app execution, and request remediation. | *Request remediation* allows security administrators to initiate remediation actions for identified vulnerabilities on a specific device. |
+| **Live response** | Allows live response sessions to the remote device. | |
+| **Device protection** | Allows automatic incident response (AIR). | |
 
-   > [!NOTE]
-   > Devices onboarded in Restricted mode don't support the execution of Live Response scripts, even when Live Response is enabled. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
+> [!NOTE]
+> Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
 
-For detailed instructions on creating and deploying onboarding packages, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md).
+For instructions on creating and deploying onboarding packages, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md).
 
 ## Visibility and identification
 
