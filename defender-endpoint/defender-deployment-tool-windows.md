@@ -39,7 +39,7 @@ The following table describes some of the main features the tool supports.
 | **Help** | A built-in help function displays all available command-line options. |
 | **Configuration files** | You can generate reusable configuration files that make bulk deployments more efficient and less error-prone. |
 | **Working without connectivity** | When connectivity is temporarily unavailable, offline onboarding and offboarding are possible. |
-| **Selective response actions** | The [selective response actions capability](restrict-response-actions-high-value-assets.md) allows you to restrict high-impact security operations on high-value assets (HVAs) during onboarding to reduce operational risk on critical infrastructure. |
+| **Protections for high-value assets** | The [selective response actions capability](restrict-response-actions-high-value-assets.md) allows you to restrict high-impact security operations on high-value assets (HVAs) during onboarding to reduce operational risk on critical infrastructure. |
 | **Deployment key entry** | To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page. |
 | **Custom expiry** | Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
 | **Ability to view deployment packages** | You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
@@ -61,6 +61,9 @@ The Defender deployment tool supports the following operating systems: Windows 7
 
 There are prerequisites that pertain to all supported Windows and Windows Server devices, as well as prerequisites that are specific to Windows 7 SP1 and Windows Server 2008 R2 SP1 devices.
 
+> [!NOTE]
+> If you plan to use the selective response actions feature to restrict high-impact security operations on high-value assets, see also the [prerequisites for that feature](./restrict-response-actions-high-value-assets.md#prerequisites-and-supported-operating-systems).
+
 ### General prerequisites
 
 - Administrative privileges are required for most operations.
@@ -70,6 +73,8 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 - Access to the domain *definitionupdates.microsoft.com*. The tool is downloaded and updated from this domain. Since the files it downloads are hosted on a content distribution platform, there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services.
 
 - While the tool checks for connectivity against your specific tenant before proceeding, other connectivity requirements, such as access to the consolidated *\*.endpoint.security.microsoft.com/*\*, apply to (additional) functionality you might want to use with the product. See [Configure your network environment to ensure connectivity with the Defender for Endpoint service](./configure-environment.md).
+
+- The selective response actions feature must be enabled if you plan to use that feature to restrict high-impact security operations on high-value assets. See [Enabling the selective response actions feature](./restrict-response-actions-high-value-assets.md#enabling-the-feature).
 
 ### Additional prerequisites for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
@@ -107,9 +112,9 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
    * Select the security operations mode for the package. Choose **Full functionality** for standard devices or **Restricted** for high-value assets.
 
-      If you choose **Restricted**, a list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
+      If you choose restricted mode, a list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
 
-      :::image type="content" source="./media/defender-deployment-tool-windows/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode menu in the Microsoft Defender portal.":::
+      :::image type="content" source="./media/defender-deployment-tool-windows/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode options in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/security-operations-mode-menu.png":::
 
       For more information about the security operations modes and the selective response actions capability, see [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md).
 
