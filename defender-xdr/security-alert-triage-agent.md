@@ -83,13 +83,13 @@ The following prerequisites depend on the alert types you want the agent to tria
 
 Activate **Defender for Office 365** in Microsoft Defender XDR unified RBAC settings. For more information, see [Activate workloads in Microsoft Defender XDR settings](activate-defender-rbac.md#activate-in-microsoft-defender-xdr-settings).
 
-:::image type="content" source="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Security Alert Triage Agent." lightbox="media/phishing-triage-agent/activate-defender-for-office-365-workloads.png":::
+:::image type="content" source="media/security-alert-triage-agent/activate-defender-for-office-365-workloads.png" alt-text="Screenshot of the Activate unified role-based access control page showing the Defender for Office 365 toggle, which needs to be enabled for the Security Alert Triage Agent." lightbox="media/security-alert-triage-agent/activate-defender-for-office-365-workloads.png":::
 
 ##### Configure user reported settings
 
 Enable **Monitor reported messages in Outlook** to define how users report potentially malicious messages in Microsoft Outlook and select any of the **Reported message destinations** options:
 
-:::image type="content" source="media/phishing-triage-agent/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the Outlook report button and reported message destinations configurations." lightbox="media/phishing-triage-agent/configure-user-reported-settings.png":::
+:::image type="content" source="media/security-alert-triage-agent/configure-user-reported-settings.png" alt-text="Screenshot of the User reported settings page showing the Outlook report button and reported message destinations configurations." lightbox="media/security-alert-triage-agent/configure-user-reported-settings.png":::
 
 For more information, see [Use the Microsoft Defender portal to configure user reported settings](/defender-office-365/submissions-user-reported-messages-custom-mailbox).
 
@@ -165,7 +165,7 @@ Open the Security Alert Triage Agent setup wizard in one of two ways:
 - From the Security Store in the Microsoft Defender portal, as explained in [Deploy AI agents in Microsoft Defender](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
 - From the **Incidents** queue in the Microsoft Defender portal, select **Set up agent**.
 
-   :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted." lightbox="media/phishing-triage-agent/phishing-triage-setup-incident.png":::
+   :::image type="content" source="media/security-alert-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted." lightbox="media/security-alert-triage-agent/phishing-triage-setup-incident.png":::
 
 Follow the steps in the setup wizard, as described in the sections below.
 
@@ -183,7 +183,7 @@ The setup wizard walks you through assigning the agent an identity and the permi
 
 The agent requires an identity to operate. The wizard prompts you to select one of two identity types.
 
-:::image type="content" source="media/phishing-triage-agent/setup-assign-identity.png" alt-text="Screenshot of the Select a new identity screen in the Security Alert Triage Agent setup wizard." lightbox="media/phishing-triage-agent/setup-assign-identity.png":::   
+:::image type="content" source="media/security-alert-triage-agent/setup-assign-identity.png" alt-text="Screenshot of the Select a new identity screen in the Security Alert Triage Agent setup wizard." lightbox="media/security-alert-triage-agent/setup-assign-identity.png":::   
 
 Select:
 
@@ -211,11 +211,11 @@ In alignment with [the principle of least privileges](/entra/identity-platform/s
 
 - If you use an Agent ID, the dropdown only displays roles in your organization that have the permissions the agent needs. Select an existing role in your organization or automatically create a new role with the required permissions if you don't already have a suitable role set up.
 
-   :::image type="content" source="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG" alt-text="Screenshot of the Create a new agent identity screen in the Security Alert Triage Agent setup wizard." lightbox="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG":::   
+   :::image type="content" source="media/security-alert-triage-agent/setup-assign-entra-agent-id.PNG" alt-text="Screenshot of the Create a new agent identity screen in the Security Alert Triage Agent setup wizard." lightbox="media/security-alert-triage-agent/setup-assign-entra-agent-id.PNG":::   
 
 - If you use an existing user account, you need to [assign the required permissions](#security-alert-triage-agent-required-permissions) to that identity before assigning the agent identity during setup - you can't do this from the setup wizard.
 
-   :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Security Alert Triage Agent setup wizard" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
+   :::image type="content" source="media/security-alert-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Security Alert Triage Agent setup wizard" lightbox="media/security-alert-triage-agent/setup-assign-user.PNG":::
 
 ##### Security Alert Triage Agent required permissions
 
@@ -231,7 +231,7 @@ This table summarizes the required permissions and data scopes for each alert ty
 
 These permissions are under the **Security operations** permissions group:
 
-:::image type="content" source="media/phishing-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Alert Triage" lightbox="media/phishing-triage-agent/agent-permissions.png":::
+:::image type="content" source="media/security-alert-triage-agent/agent-permissions.png" alt-text="Screenshot of required permissions for Alert Triage" lightbox="media/security-alert-triage-agent/agent-permissions.png":::
 
 To create a role:
 
@@ -240,7 +240,7 @@ To create a role:
 
    Make sure to grant the agent access to all the [supported alerts](#supported-alerts) you want to associate with the Security Alert Triage Agent.
 
-      :::image type="content" source="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender-xdr/media/phishing-triage-agent/agent-permissions-sources.png":::
+      :::image type="content" source="/defender-xdr/media/security-alert-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Phishing Triage" lightbox="/defender-xdr/media/security-alert-triage-agent/agent-permissions-sources.png":::
 
 1. Assign the role to the agent. 
 
@@ -269,7 +269,7 @@ To maintain transparency, the agent routinely updates incident fields during the
 
 When an alert is identified as a true threat, the Security Alert Triage Agent marks it as a True Positive, allowing analysts to filter and prioritize incidents based on confirmed classifications.
 
-:::image type="content" source="media/phishing-triage-agent/incident-queue-agent-only.png" alt-text="Screenshot of the incident queue filtered by the Security Alert Triage Agent tag" lightbox="media/phishing-triage-agent/incident-queue-agent-only.png":::
+:::image type="content" source="media/security-alert-triage-agent/incident-queue-agent-only.png" alt-text="Screenshot of the incident queue filtered by the Security Alert Triage Agent tag" lightbox="media/security-alert-triage-agent/incident-queue-agent-only.png":::
 
 ### Transparency and explainability in alert triage
 
@@ -280,15 +280,15 @@ To review the agent’s findings, follow these steps:
 1. Select an incident from the incident queue.
 1. On the incident page, look for the Security Alert Triage Agent card in the Copilot or Tasks side panel under the Guided Response Triage section. The task is marked as completed and assigned to the agent. The card presents the agent’s verdict based on its classification, highlighting key pieces of incriminating evidence that informed the decision.
 
-   :::image type="content" source="media/phishing-triage-agent/incident-main.png" alt-text="Screenshot of the incident page with the Security Alert Triage Agent card highlighted" lightbox="media/phishing-triage-agent/incident-main.png":::
+   :::image type="content" source="media/security-alert-triage-agent/incident-main.png" alt-text="Screenshot of the incident page with the Security Alert Triage Agent card highlighted" lightbox="media/security-alert-triage-agent/incident-main.png":::
 
 1. You can select the **More actions** ellipsis to view more alert details, copy the agent’s classification details to the clipboard, or manage feedback.
 
-   :::image type="content" source="media/phishing-triage-agent/more-actions-card.png" alt-text="Screenshot highlighting the more actions options within the Security Alert Triage Agent card" lightbox="media/phishing-triage-agent/more-actions-card.png":::
+   :::image type="content" source="media/security-alert-triage-agent/more-actions-card.png" alt-text="Screenshot highlighting the more actions options within the Security Alert Triage Agent card" lightbox="media/security-alert-triage-agent/more-actions-card.png":::
 
 1. To view the steps the agent took prior to reaching its classification, select **View agent activity** in the Security Alert Triage Agent card. This shows the logic behind the agent’s final classification.
 
-   :::image type="content" source="media/phishing-triage-agent/view-agent-activity.png" alt-text="Screenshot highlighting the View agent activity pane." lightbox="media/phishing-triage-agent/view-agent-activity.png"::: 
+   :::image type="content" source="media/security-alert-triage-agent/view-agent-activity.png" alt-text="Screenshot highlighting the View agent activity pane." lightbox="media/security-alert-triage-agent/view-agent-activity.png"::: 
 
 
 ### Teach the agent your organization's context through feedback
@@ -303,11 +303,11 @@ To provide feedback and teach the agent, follow these steps:
 1. In the incident page, look for the Security Alert Triage Agent card in the Copilot or Tasks side panel under the Guided Response triage section.
 1. Review the agent's classification and reasoning displayed in the card's title and content. If the decision doesn't align with your organization's classification criteria, select **Change classification**. Alternatively, you can update the classification by selecting the specific alert from the **Alerts** tab, then choosing **Manage alert**.
 
-   :::image type="content" source="media/phishing-triage-agent/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Security Alert Triage Agent card" lightbox="media/phishing-triage-agent/change-classification.png":::
+   :::image type="content" source="media/security-alert-triage-agent/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Security Alert Triage Agent card" lightbox="media/security-alert-triage-agent/change-classification.png":::
 
 1. In the **Manage alert** pane, select the new classification from the **Classification** dropdown menu. Then, provide your reason for the change by filling out the **Why did you change this classification** field. This step records your input on the feedback management page for auditing purposes only. The agent won't use this feedback to improve its decision-making until you explicitly select **Use this feedback to teach the agent**. If you choose not to use this feedback for teaching the agent, you can select **Save**, which will only audit the feedback without inserting it into the agent's memory.
 
-   :::image type="content" source="media/phishing-triage-agent/manage-alert-why.png" alt-text="Screenshot highlighting the classification and feedback fields in the Manage alert pane" lightbox="media/phishing-triage-agent/manage-alert-why.png":::
+   :::image type="content" source="media/security-alert-triage-agent/manage-alert-why.png" alt-text="Screenshot highlighting the classification and feedback fields in the Manage alert pane" lightbox="media/security-alert-triage-agent/manage-alert-why.png":::
 
 1. To apply your feedback, select **Use this feedback to teach the agent**. You can use the [guide to writing feedback](#best-practices-for-writing-feedback) to help you craft effective input, and then choose **Evaluate feedback** to allow you to preview how the agent translates your feedback into a lesson and assess whether the outcome aligns with your intent. Additionally, the feedback evaluation performs basic safety checks to ensure that the applied feedback is relevant for the agent to use and doesn't conflict with previous feedback.
 
@@ -348,9 +348,9 @@ Here are examples of failures you might encounter when writing feedback to the a
 
 | Failure message | Recommended action |
 |:---|:---|
-| :::image type="content" source="media/phishing-triage-agent/feedback-irrelevant.png" alt-text="Screenshot the error message about irrelevant information in the feedback provided" lightbox="media/phishing-triage-agent/feedback-irrelevant.png":::  </br> Part of the feedback provided can't be addressed as the agent currently doesn't support this type of input and therefore couldn't be translated to a lesson at all. | Rewrite your feedback and ensure that it follows the best practices. Select **Evaluate feedback** to try again.  |
-|:::image type="content" source="media/phishing-triage-agent/feedback-unsupported.png" alt-text="Screenshot the error message about unsupported features in the feedback provided" lightbox="media/phishing-triage-agent/feedback-unsupported.png"::: </br> The feedback contains input that the agent can support but it's not relevant to the email at hand and therefore couldn't be translated into an actionable lesson to be saved in the memory. | Rewrite your feedback and ensure that it addresses descriptions of the email that it can support. Then select **Evaluate feedback** to try again. |
-| :::image type="content" source="media/phishing-triage-agent/feedback-conflict.png" alt-text="Screenshot the error message about conflicting data in the feedback provided" lightbox="media/phishing-triage-agent/feedback-conflict.png"::: </br> The given feedback conflicts with previous feedback given to a similar email. | In the [feedback management page](#view-and-manage-feedback-to-the-agent) search for the feedback ID to view the feedback that it conflicts with. Based on your review, you can:<br>- Reject the previous feedback in the feedback management page. Thereafter, select **Evaluate** to try inserting your feedback again.<br>- Rewrite your given feedback in a way that isn't conflicting and then select **Evaluate feedback** for the agent to reevaluate your new input. |
+| :::image type="content" source="media/security-alert-triage-agent/feedback-irrelevant.png" alt-text="Screenshot the error message about irrelevant information in the feedback provided" lightbox="media/security-alert-triage-agent/feedback-irrelevant.png":::  </br> Part of the feedback provided can't be addressed as the agent currently doesn't support this type of input and therefore couldn't be translated to a lesson at all. | Rewrite your feedback and ensure that it follows the best practices. Select **Evaluate feedback** to try again.  |
+|:::image type="content" source="media/security-alert-triage-agent/feedback-unsupported.png" alt-text="Screenshot the error message about unsupported features in the feedback provided" lightbox="media/security-alert-triage-agent/feedback-unsupported.png"::: </br> The feedback contains input that the agent can support but it's not relevant to the email at hand and therefore couldn't be translated into an actionable lesson to be saved in the memory. | Rewrite your feedback and ensure that it addresses descriptions of the email that it can support. Then select **Evaluate feedback** to try again. |
+| :::image type="content" source="media/security-alert-triage-agent/feedback-conflict.png" alt-text="Screenshot the error message about conflicting data in the feedback provided" lightbox="media/security-alert-triage-agent/feedback-conflict.png"::: </br> The given feedback conflicts with previous feedback given to a similar email. | In the [feedback management page](#view-and-manage-feedback-to-the-agent) search for the feedback ID to view the feedback that it conflicts with. Based on your review, you can:<br>- Reject the previous feedback in the feedback management page. Thereafter, select **Evaluate** to try inserting your feedback again.<br>- Rewrite your given feedback in a way that isn't conflicting and then select **Evaluate feedback** for the agent to reevaluate your new input. |
 
 > [!NOTE]
 > You can choose not to resolve feedback failures. You can leave your feedback and select **Save** without checking the box for teaching the agent. The feedback won't be saved to the agent's memory and will only be documented on the feedback management page for your future tracking classification changes.
