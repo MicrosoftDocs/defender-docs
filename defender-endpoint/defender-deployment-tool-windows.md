@@ -135,7 +135,7 @@ Once you've determined which type of package you want to generate, select the re
 
 [!INCLUDE [generate-deployment-package-prefix](includes/generate-deployment-package-prefix.md)]
 
-   * Select **Restricted**.
+      * Select **Restricted**.
 
       A list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
       
