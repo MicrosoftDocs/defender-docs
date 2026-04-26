@@ -30,14 +30,14 @@ appliesto:
 
 Security Operations Centers (SOCs) process large volumes of alerts across multiple workloads, each with its own triage requirements and context. This can introduce variability in how alerts are evaluated and make it difficult to consistently identify and prioritize high‑risk activity. 
 
-The Microsoft Security Copilot Security Alert Triage Agent is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across supported security workloads.
+The Microsoft Security Copilot Security Alert Triage Agent in Microsoft Defender is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across supported security workloads.
 
 The Security Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. 
 
 This article provides an overview of the Security Alert Triage Agent, how it works, and its alert triage capabilities.
 
 > [!NOTE]
-> The Security Alert Triage Agent is currently in preview. It extends the capabilities of the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency in controlled evaluations. The agent uses the same core triage logic and reasoning while expanding its scope to include identity and cloud alerts in Microsoft Defender. This enables organizations to apply consistent, AI‑driven triage across a broader set of security signals.
+> The Security Alert Triage Agent is currently in preview. It extends the capabilities of the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency in controlled evaluations. The agent uses the same core triage logic and reasoning while expanding its scope to include a broader set of alerts in Microsoft Defender, starting with identity and cloud alerts. This enables organizations to apply consistent, AI‑driven triage across a broader set of security signals.
 
 ## How the Security Alert Triage Agent works
 
