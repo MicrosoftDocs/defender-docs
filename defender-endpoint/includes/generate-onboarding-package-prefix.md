@@ -12,11 +12,11 @@ ms.service: defender-endpoint
 
 1. Under **Deploy by downloading and applying packages or files**, select the **Onboard** button.
 
-   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
+   :::image type="content" source="../media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="../media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
 
 1. The **Generate Defender deployment tool with an access key** page appears.
 
-   :::image type="content" source="./media/defender-deployment-tool-windows/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/configure-deployment-package.png":::
+   :::image type="content" source="../media/defender-deployment-tool-windows/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="../media/defender-deployment-tool-windows/configure-deployment-package.png":::
 
    * Provide a name for the package. Be sure to create a name that's unique and descriptive.
 
