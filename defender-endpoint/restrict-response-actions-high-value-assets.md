@@ -13,33 +13,32 @@ ms.topic: concept-article
 
 # Restrict response actions on high-value assets (preview)
 
-This article provides an overview of the selective response actions capability in Microsoft Defender for Endpoint. This capability allows organizations to restrict high-impact security operations on devices during onboarding to reduce operational risk on critical infrastructure.
+This article provides an overview of the selective response actions capability in Microsoft Defender for Endpoint. It's target audience is security administrators and IT operations teams responsible for managing Microsoft Defender for Endpoint in environments that include Tier-0 systems and high-value assets (HVAs) such as domain controllers, ADFS servers, and other critical infrastructure.
 
-**Target audience:** Security administrators and IT operations teams responsible for managing Microsoft Defender for Endpoint in environments that include Tier-0 systems and high-value assets such as domain controllers, ADFS servers, and other critical infrastructure.
+## Overview
 
-## Why selective response actions are needed
+The selective response actions capability is a Microsoft Defender for Endpoint feature that lets you restrict or customize high-impact security operations during onboarding so you can reduce operational risk on Tier-0 systems and other high-value assets. In practice, it limits intrusive actions such as device isolation, script execution, or Live Response on sensitive devices. 
 
-Deploying Microsoft Defender for Endpoint on high-value assets (HVAs) — such as domain controllers, ADFS servers, and other Tier-0 systems — introduces operational risk due to the powerful actions available to privileged users. Capabilities such as isolating devices, executing scripts, or initiating live response sessions can cause significant disruption to critical infrastructure if misused, either unintentionally or due to compromised accounts.
+### Why is the selective response actions capability needed?
 
-In addition, organizations that enforce privileged access management often prohibit cloud-based admin privileges on Tier-0 systems.
+Deploying Microsoft Defender for Endpoint on high-value assets (HVAs) — such as domain controllers, ADFS servers, and other Tier-0 systems — introduces operational risk due to the powerful actions available to privileged users. Response actions such as isolating devices, executing scripts, or initiating live response sessions can cause significant disruption to critical infrastructure if misused, either unintentionally or due to compromised accounts.
 
-The selective response actions capability mitigates these risks by providing controls that restrict or customize high-impact security operations on HVAs. This capability reduces the risk of accidental or malicious disruption by limiting the intrusive actions that can be performed on Tier-0 assets.
+Another reason the selective response actions capability is needed is that organizations that enforce privileged access management often prohibit cloud-based admin privileges on Tier-0 systems.
 
-## Security operations modes
+The selective response actions capability mitigates these risks. By limiting the intrusive actions that can be performed on Tier-0 assets, this capability reduces the risk of accidental or malicious disruption.
 
-The set of high-impact response actions that are allowed or disallowed on a device is determined by the deployment package used to onboard the device. When you create the deployment package using the Defender deployment tool (DDT), you choose one of two security operations modes:
+## How do you onboard a device with the selective response actions capability?
 
-- **Full functionality**: *Full functionalilty* means that all security operations are allowed on the device once it is onboarded. This is the default mode and is recommended for standard devices that aren't considered high-value assets.
-- **Restricted**: *Restricted* means that the only high-impact security operations allowed on the device once it is onboarded are those you specify. Use this mode to enforce stricter security boundaries on Tier-0 and HVA devices.
+To onboard a device with the selective response actions capability, you first use the Defender deployment tool (DDT) to create an onboarding package with restricted security operations settings. When creating the package, you choose which high-impact response actions to allow on the device once it's onboarded. Then, when you run the DDT tool on the target device using that package, the device is onboarded with those specific restrictions in place.
 
-If you choose restricted mode, you can then individually allow or disallow the following capabilities.
+The following table describes high-impact response actions that you can allow or disallow.
 
 [!INCLUDE [configurable-selective-response-actions](includes/configurable-selective-response-actions.md)]
 
+For detailed instructions on how to use the Defender deployment tool to create to an onboarding packages with restricted security operations settings, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md?tab=restricted-functionality).
+
 > [!NOTE]
 > Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
-
-For instructions on creating and deploying onboarding packages, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md).
 
 ## Visibility and identification
 
