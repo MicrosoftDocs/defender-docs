@@ -23,6 +23,11 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## April 2026
+
+### Automatic Windows event auditing configuration for sensors v3.x is now generally available
+
+The [Automatic Windows event-auditing configuration for sensors v3.x](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) is now generally available. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones.
 
 ## March 2026
 
@@ -173,7 +178,7 @@ To ensure consistent protection, we recommend that you make sure all servers wit
 
 - The latest Windows cumulative update.
 - Automatic Windows event auditing enabled.
-For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
+For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically).
 
 ### Sensor updates
 
