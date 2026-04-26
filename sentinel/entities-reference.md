@@ -95,7 +95,8 @@ The following section contains a more in-depth look at the full schemas of each 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | **Type** | String | 'account' |
-| **Name** | String | The name of the account. This field should hold only the name without any domain added to it. |
+| **Name** | String | The name of the account. This field should hold only the User Principal Name (UPN) prefix without any domain added to it. For example, for the UPN user@contoso.com, the **Name** field holds only `user`, not the domain name. |
+| **UserPrincipalName** | String | The full UPN for the account, in the format `username@domain`. For example: user@contoso.com. This field captures the complete UPN when available. |
 | ***FullName*** | -- | *Not part of schema, included for backward compatibility with old version of entity mapping.* |
 | **NTDomain** | String | The NETBIOS domain name as it appears in the alert format&mdash;domain\username. <br>*Examples:* Finance, NT AUTHORITY |
 | **DnsDomain** | String | The fully qualified domain DNS name. <br>*Examples:* finance.contoso.com |
@@ -111,6 +112,9 @@ The following section contains a more in-depth look at the full schemas of each 
 | **CloudAppAccountId** | String | The AccountID in alerts from the CloudApp provider. Refers to account IDs in third-party apps that are not supported in other Microsoft products. |
 | **IsAnonymized** | Bool? | Indicates whether the user name is anonymized. Optional. Default value: `false`. |
 | **Stream** | Stream | The source of discovery logs related to the specific account. Optional. |
+
+> [!IMPORTANT]
+> Starting **July 1, 2026**, the **Name** field will consistently hold only the UPN prefix for all accounts. Previously, it could sometimes hold the full UPN. If you have automation rules, playbooks, or queries that compare **Name** against a full UPN value (like `user@contoso.com`), update them to use the **UserPrincipalName** field or compare the UPN prefix and suffix separately using **Name** + **UPNSuffix**.
 
 #### Strong identifiers of an account entity
 
