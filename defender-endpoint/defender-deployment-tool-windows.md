@@ -94,6 +94,45 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 ## Generate and download a new onboarding package
 
+The Defender deployment tool can generate two kinds of onboarding packages - a full functionality package that allows all supported response actions on devices onboarded with the package, and a restricted functionality package that can restrict certain high-impact response actions on onboarded devices. Before generating a new onboarding package, determine which mode is appropriate for your devices.
+
+*  Generate a full functionality package if you're onboarding standard devices.
+*  Generate a restricted functionality package if you're onboarding Tier-0 and high-value assets such as domain controllers, critical servers, and other sensitive devices, and you want to enforce stricter security boundaries. For more information about the selective response actions capability and the security operations modes, see [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md).
+
+Once you've determined which type of package you want to generate, select the relevant tab below for instructions on how to generate the package.
+
+# [Full functionality](#tab/full-functionality)
+
+1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
+
+1. In the Step 1 dropdown menu, choose **Windows (preview)**.
+
+1. Under **Deploy by downloading and applying packages or files**, select the **Onboard** button.
+
+   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
+
+1. The **Generate Defender deployment tool with an access key** page appears.
+
+   :::image type="content" source="./media/defender-deployment-tool-windows/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/configure-deployment-package.png":::
+
+   * Provide a name for the package. Be sure to create a name that's unique and descriptive.
+
+   * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
+
+   * Make sure **Full functionality** is selected.
+
+   * Select **Generate**.
+
+1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
+
+   :::image type="content" source="./media/defender-deployment-tool-windows/deployment-package-download-page.png" alt-text="Screenshot showing the key that is generated for the deployment tool package." lightbox="./media/defender-deployment-tool-windows/deployment-package-download-page.png":::
+
+   Copy the key and save it, as it will be needed with the deployment tool.
+
+   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
+
+# [Restricted functionality](#tab/restricted-functionality)
+
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
 
 1. In the Step 1 dropdown menu, choose **Windows (preview)**.
@@ -139,6 +178,8 @@ There are prerequisites that pertain to all supported Windows and Windows Server
    Copy the key and save it, as it will be needed with the deployment tool.
 
    After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
+
+---
 
 > [!NOTE] 
 > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
