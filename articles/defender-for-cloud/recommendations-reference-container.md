@@ -22,12 +22,9 @@ The recommendations that appear in your environment are based on the resources t
 > For example, the recommendation *Endpoint protection health failures should be remediated* relies on the recommendation that checks whether an endpoint protection solution is installed (*Endpoint protection solution should be installed*). The underlying recommendation *does* have a policy.
 > Limiting policies to only foundational recommendations simplifies policy management.
 
-
-
+Microsoft Defender for Cloud performs vulnerability assessment for container images and running containers across supported environments. Findings are surfaced as individual security recommendations in Defender for Cloud, generated based on the cloud provider, resource type (container registries or running containers), and the enabled Defender plans. Rather than relying on a fixed set of recommendations, Defender for Cloud dynamically evaluates container workloads and images and presents the relevant recommendations in the Recommendations experience, where they can be filtered and prioritized based on risk and scope. This approach ensures that vulnerability assessment results remain accurate and up to date as new environments, threats, and capabilities are introduced.
 
 ## Azure container recommendations
-
-
 
 ### Azure Arc-enabled Kubernetes clusters should have the Azure Policy extension installed
 
@@ -109,19 +106,6 @@ Images running on your Kubernetes cluster should come from known and monitored c
 
 **Type**: Kubernetes Data plane
 
-### [Preview] Container images in Azure registry should have vulnerability findings resolved
-
->[!NOTE]
-> This preview recommendation is going to be deprecated on April 13, 2026. [Deprecation of preview of container and container images vulnerability recommendations](release-notes.md#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations)
-
-**Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Scanning and remediating vulnerabilities for container images in the registry helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.
-
-The new recommendation is in preview and not used for secure score calculation.
-
-**Severity**: High
-
-**Type**: Vulnerability Assessment
-
 ### (Enable if required) Container registries should be encrypted with a customer-managed key (CMK)
 
 **Description**: Recommendations to use customer-managed keys for encryption of data at rest are not assessed by default, but are available to enable for applicable scenarios. Data is encrypted automatically using platform-managed keys, so the use of customer-managed keys should only be applied when obligated by compliance or restrictive policy requirements.
@@ -152,23 +136,6 @@ Use customer-managed keys to manage the encryption at rest of the contents of yo
 
 **Type**: Control plane
 
-### [Preview] Containers running in Azure should have vulnerability findings resolved
-
->[!NOTE]
-> This preview recommendation is going to be deprecated on April 13, 2026. [Deprecation of preview of container and container images vulnerability recommendations](release-notes.md#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations)
-
-**Description**: Defender for Cloud creates an inventory of all container workloads currently running in your Kubernetes clusters, and provides vulnerability reports for those workloads by matching the images and the vulnerability reports created for the registry images. Scanning and remediating vulnerabilities of container workloads is critical to ensure a robust and secure software supply chain, reduce the risk of security incidents, and ensures compliance with industry standards.
-
-The new recommendation is in preview and not used for secure score calculation.
-
-> [!NOTE]
-> Starting October 6, 2024, this recommendation was updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
-> To support this improvement the assessment key for this recommendation has been updated to `c5045ea3-afc6-4006-ab8f-86c8574dbf3d`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you change the API call to use the new assessment key.
-
-**Severity**: High
-
-**Type**: Vulnerability Assessment
-
 ### Containers sharing sensitive host namespaces should be avoided
 
 **Description**: To protect against privilege escalation outside the container, avoid pod access to sensitive host namespaces (host process ID and host IPC) in a Kubernetes cluster.
@@ -187,7 +154,6 @@ AppArmor (Application Armor) is a Linux security module that protects an operati
 **Severity**: High
 
 **Type**: Kubernetes data plane
-
 
 ### Container with privilege escalation should be avoided
 
@@ -346,39 +312,9 @@ Privileged containers have all of the root capabilities of a host machine. They 
 
 ## AWS container recommendations
 
-### [Preview] Container images in AWS registry should have vulnerability findings resolved
-
->[!NOTE]
-> This preview recommendation is going to be deprecated on April 13, 2026. [Deprecation of preview of container and container images vulnerability recommendations](release-notes.md#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations)
-
-**Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Scanning and remediating vulnerabilities for container images in the registry helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.
-
-The new recommendation is in preview and not used for secure score calculation.
-
-**Severity**: High
-
-**Type**: Vulnerability Assessment
-
 ### AWS registry container images should have vulnerability findings resolved
 
 **Description**: Scans your AWS registries container images for commonly known vulnerabilities (CVEs) and provides a detailed vulnerability report for each image. Resolving vulnerabilities can greatly improve your security posture, ensuring images are safe to use prior to deployment.
-
-**Severity**: High
-
-**Type**: Vulnerability Assessment
-
-### [Preview] Containers running in AWS should have vulnerability findings resolved
-
->[!NOTE]
-> This preview recommendation is going to be deprecated on April 13, 2026. [Deprecation of preview of container and container images vulnerability recommendations](release-notes.md#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations)
-
-**Description**: Defender for Cloud creates an inventory of all container workloads currently running in your Kubernetes clusters and provides vulnerability reports for those workloads by matching the images and the vulnerability reports created for the registry images. Scanning and remediating vulnerabilities of container workloads is critical to ensure a robust and secure software supply chain, reduce the risk of security incidents, and ensures compliance with industry standards.
-
-The new recommendation is in preview and not used for secure score calculation.
-
-> [!NOTE]
-> Starting October 6, 2024, this recommendation was updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
-> To support this improvement the assessment key for this recommendation has been updated to `8749bb43-cd24-4cf9-848c-2a50f632043c`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the API call to use the new assessment key.
 
 **Severity**: High
 
@@ -430,42 +366,9 @@ All the [Kubernetes data plane security recommendations](kubernetes-workload-pro
 
 **Severity**: High
 
-
-### [Preview] Container images in GCP registry should have vulnerability findings resolved
-
->[!NOTE]
-> This preview recommendation is going to be deprecated on April 13, 2026. [Deprecation of preview of container and container images vulnerability recommendations](release-notes.md#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations)
-
-**Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Scanning and remediating vulnerabilities for container images in the registry helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.
-
-Recommendation ***GCP registry container images should have vulnerability findings resolved (powered by Microsoft Defender vulnerability Management)*** will be removed when the new recommendation is generally available. 
-
-The new recommendation is in preview and not used for secure score calculation.
-
-**Severity**: High
-
-**Type**: Vulnerability Assessment
-
 ### GCP registry container images should have vulnerability findings resolved
 
 **Description**: Scans your GCP registries container images for commonly known vulnerabilities (CVEs) and provides a detailed vulnerability report for each image. Resolving vulnerabilities can greatly improve your security posture, ensuring images are safe to use prior to deployment.
-
-**Severity**: High
-
-**Type**: Vulnerability Assessment
-
-### [Preview] Containers running in GCP should have vulnerability findings resolved
-
->[!NOTE]
-> This preview recommendation is going to be deprecated on April 13, 2026. [Deprecation of preview of container and container images vulnerability recommendations](release-notes.md#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations)
-
-**Description**: Defender for Cloud creates an inventory of all container workloads currently running in your Kubernetes clusters and provides vulnerability reports for those workloads by matching the images and the vulnerability reports created for the registry images. Scanning and remediating vulnerabilities of container workloads is critical to ensure a robust and secure software supply chain, reduce the risk of security incidents, and ensures compliance with industry standards.
-
-The new recommendation is in preview and not used for secure score calculation.
-
-> [!NOTE]
-> Starting October 6, 2024, this recommendation was updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
-> To support this improvement the assessment key for this recommendation has been updated to `1b3abfa4-9e53-46f1-9627-51f2957f8bba`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the API call to use the new assessment key.
 
 **Severity**: High
 
