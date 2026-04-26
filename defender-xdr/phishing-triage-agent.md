@@ -85,7 +85,7 @@ If you’re using a third-party email reporting tool, review [Options for third-
 The Phishing Triage Agent addresses phishing incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
 
 > [!IMPORTANT]
-> The Phishing Triage Agent doesn't classify alerts suppressed by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert.
+> The Phishing Triage Agent doesn't triage alerts resolved by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that resolve this alert.
 
 ## Permissions required
 
