@@ -95,12 +95,12 @@ The following section contains a more in-depth look at the full schemas of each 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | **Type** | String | 'account' |
-| **Name** | String | The name of the account. This field should hold only the User Principal Name (UPN) prefix without any domain added to it. For example, for the UPN user@contoso.com, the **Name** field holds only `user`, not the domain name. |
-| **UserPrincipalName** | String | The full UPN for the account, in the format `username@domain`. For example: user@contoso.com. This field captures the complete UPN when available. |
+| **Name** | String | The name of the account. This field should hold only the User Principal Name (UPN) prefix without any domain added to it. <br>*Example:* For the UPN user@contoso.com, this field holds only `user`. |
+| **UserPrincipalName** | String | The full UPN for the account when available, in the format `username@domain.com`. <br>*Example:* `user@contoso.com` |
 | ***FullName*** | -- | *Not part of schema, included for backward compatibility with old version of entity mapping.* |
 | **NTDomain** | String | The NETBIOS domain name as it appears in the alert format&mdash;domain\username. <br>*Examples:* Finance, NT AUTHORITY |
-| **DnsDomain** | String | The fully qualified domain DNS name. <br>*Examples:* finance.contoso.com |
-| **UPNSuffix** | String | The user principal name suffix for the account. In many cases the UPN Suffix is also the domain name. <br>*Examples:* contoso.com |
+| **DnsDomain** | String | The fully qualified domain DNS name. <br>*Example:* `finance.contoso.com` |
+| **UPNSuffix** | String | The user principal name suffix for the account. In many cases the UPN Suffix is also the domain name. <br>*Example:* `contoso.com` |
 | **Host** | Entity ([Host](#host)) | The host that contains the account, if it's a local account. |
 | **Sid** | String | The account's security identifier. |
 | **AadTenantId** | Guid? | The Microsoft Entra tenant ID, if known. |
