@@ -149,12 +149,9 @@ Once you've determined which type of package you want to generate, select the re
 
    * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
 
-   * Select the security operations mode for the package. Choose **Full functionality** for standard devices or **Restricted** for high-value assets.
+   * Select **Restricted**.
 
-      If you choose restricted mode, a list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
-
-      > [!NOTE]
-      > Restricted mode requires Sense version 10.8798 or later on the target device, and specific updates on the Windows versions it supports. For more information, see [Prerequisites and supported operating systems for selective response actions](./restrict-response-actions-high-value-assets.md#prerequisites-and-supported-operating-systems).
+      A list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
       
       :::image type="content" source="./media/defender-deployment-tool-windows/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode options in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/security-operations-mode-menu.png":::
 
@@ -180,9 +177,6 @@ Once you've determined which type of package you want to generate, select the re
    After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
 
 ---
-
-> [!NOTE] 
-> For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
 
 ## Deploy Defender endpoint security on devices
 
