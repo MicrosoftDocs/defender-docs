@@ -4,7 +4,7 @@ description: Defend your AWS resources with Microsoft Defender for Cloud, a guid
 author: ElazarK
 ms.author: elkrieger
 ms.topic: install-set-up-deploy
-ms.date: 01/06/2026
+ms.date: 04/19/2026
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -72,7 +72,7 @@ Region availability: All public AWS regions except Tel Aviv, Milan, Jakarta, Spa
 
 ### [Defender for Servers](#tab/Defender-for-Servers)
 
-- [Microsoft Defender for Servers enabled](enable-enhanced-security.md) on your subscription.  
+- [Microsoft Defender for Servers enabled](connect-azure-subscription.md) on your subscription.  
 - An active AWS account with EC2 instances.  
 - Azure Arc for servers installed on your EC2 instances. Autoprovisioning is recommended and requires the **Owner** role on the Azure subscription.  
   Ensure that you fulfilled the [network requirements for Azure Arc](/azure/azure-arc/servers/network-requirements?tabs=azure-cloud).

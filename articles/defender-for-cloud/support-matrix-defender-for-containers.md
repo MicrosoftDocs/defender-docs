@@ -4,7 +4,7 @@ description: Review support requirements for container capabilities in Microsoft
 ms.topic: limits-and-quotas
 author: Elazark
 ms.author: elkrieger
-ms.date: 02/22/2026
+ms.date: 04/23/2026
 ms.custom: references_regions
 ---
 
@@ -174,7 +174,7 @@ The following table lists the features provided by Defender for Containers for t
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1arc)</sup> <sup>[2](#footnote2arc)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br>* [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br>* [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer) |
+| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1arc)</sup> <sup>[2](#footnote2arc)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br>* [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/) (Preview)<br>* [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer) (Preview) |
 
 <sup><a name="footnote1arc"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters are tested.
 
@@ -306,6 +306,7 @@ The following table lists the features provided by Defender for Containers for t
 Defender for Containers relies on the Defender sensor for several features. The Defender sensor is supported only with Linux Kernel 5.4 and above, on the following host operating systems:
 
 - Amazon Linux 2
+- AWS Bottlerocket (provisioning Via Helm only)
 - CentOS 8  (CentOS reached end of service on June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)
 - Debian 10
 - Debian 11
