@@ -20,6 +20,7 @@ The listed features were released in the last six months. For information about 
 
 ## April 2026
 
+- [[Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts](#updated-call-to-action-update-automation-by-july-1-2026---account-name-is-now-consistently-the-upn-prefix-for-analytics-rule-alerts)
 - [Microsoft Sentinel data federation (Preview)](#microsoft-sentinel-data-federation-preview)
 - [Transform data with filter and split features (Preview)](#transform-data-with-filter-and-split-features-preview)
 - [Accelerate Microsoft Sentinel connector development with Visual Studio Code connector builder agent (Preview)](#accelerate-microsoft-sentinel-connector-development-with-visual-studio-code-connector-builder-agent-preview)
@@ -28,6 +29,31 @@ The listed features were released in the last six months. For information about 
 - [AI-powered SIEM migration tool is now generally available](#ai-powered-siem-migration-tool-is-now-generally-available)
 - [Cost estimation tool for customers and partners (Preview)](#cost-estimation-tool-for-customers-and-partners-preview)
 - [Configure row-level access using Microsoft Sentinel scoping (Preview)](#configure-row-level-access-using-microsoft-sentinel-scoping-preview)
+
+- ### [Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts
+
+Microsoft Sentinel is updating how the account entity's **Account Name** value is populated for analytics rule alerts when the full UPN is mapped into Account Name. This change improves consistency for downstream automation rules and Logic Apps playbooks.
+
+This change might affect automation logic that filters on or compares the `AccountName` property (Logic Apps: `AccountName`), especially if it expects the full UPN.
+
+**What's changing**
+
+- When a full UPN (for example, `user@domain.com`) is mapped to Account Name in an analytics rule, Account Name will always be the UPN prefix only (`user`). Previously, it could sometimes be `user` and sometimes `user@domain.com`.
+- Additional UPN-related fields will be added to the account entity in the `SecurityAlert` table: `UserPrincipalName` (full UPN, for example  `user@domain.com`), `UPNSuffix`, and the UPN prefix.
+
+For example:
+- **Before**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` or `user@domain.com`  
+- **After**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` + `UPNSuffix`: `domain.com` 
+
+**What you need to do**
+
+Update any automation rules or logic apps that compare against the full UPN. Replace direct equality checks with separate comparisons for the UPN prefix and UPN suffix. We strongly recommend using **Contains** and **Starts with** operations instead of strict equality to maintain compatibility both before and after the change.
+
+For example, replace conditions such as `AccountName` **Equals** `user@domain.com` with logic like:
+- `AccountName` **Contains** `user` or **Starts with** `user`
+- `UPNSuffix` **Equals** `domain.com` / **Starts with** `domain.com` / **Contains** `domain.com`
+
+For more information, including before and after examples, read the blog article [Update: Changing the Account Name Entity Mapping in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/update-changing-the-account-name-entity-mapping-in-microsoft-sentinel/4489040).
 
 ### Microsoft Sentinel data federation (Preview)
 Powered by Microsoft Fabric, Microsoft Sentinel data federation lets you analyze security data where it already lives, without copying or duplicating it. You can federate data from Microsoft Fabric, Azure Data Lake Storage, and Azure Databricks into Microsoft Sentinel data lake, then use familiar Microsoft Sentinel experiences like KQL, notebooks, and custom graphs across both federated and native data.
@@ -134,31 +160,6 @@ The following API versions will be retired on June 1, 2026:
 - **2025-07-01-preview** (preview)
 
 ## February 2026
-
-### [Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts
-
-Microsoft Sentinel is updating how the account entity's **Account Name** value is populated for analytics rule alerts when the full UPN is mapped into Account Name. This change improves consistency for downstream automation rules and Logic Apps playbooks.
-
-This change might affect automation logic that filters on or compares the `AccountName` property (Logic Apps: `AccountName`), especially if it expects the full UPN.
-
-**What's changing**
-
-- When a full UPN (for example, `user@domain.com`) is mapped to Account Name in an analytics rule, Account Name will always be the UPN prefix only (`user`). Previously, it could sometimes be `user` and sometimes `user@domain.com`.
-- Additional UPN-related fields will be added to the account entity in the `SecurityAlert` table: `UserPrincipalName` (full UPN), `UPNSuffix`, and the UPN prefix.
-
-For example:
-- **Before**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` or `user@domain.com`  
-- **After**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` + `UPNSuffix`: `@domain.com` 
-
-**What you need to do**
-
-Update any automation rules or logic apps that compare against the full UPN. Replace direct equality checks with separate comparisons for the UPN prefix and UPN suffix. We strongly recommend using **Contains** and **Starts with** operations instead of strict equality to maintain compatibility both before and after the change.
-
-For example, replace conditions such as `AccountName` **Equals** `user@domain.com` with logic like:
-- `AccountName` **Contains** `user` or **Starts with** `user`
-- `UPNSuffix` **Equals** `domain.com` / **Starts with** `domain.com` / **Contains** `domain.com`
-
-For more information, including before and after examples, read the blog article [Update: Changing the Account Name Entity Mapping in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/update-changing-the-account-name-entity-mapping-in-microsoft-sentinel/4489040).
 
 ### Microsoft Sentinel UEBA behaviors layer is now generally available
 
