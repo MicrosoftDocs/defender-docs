@@ -37,7 +37,7 @@ The Security Alert Triage Agent evaluates alerts using AI‑driven reasoning, de
 This article provides an overview of the Security Alert Triage Agent, how it works, and its alert triage capabilities.
 
 > [!NOTE]
-> The Security Alert Triage Agent is currently in preview. It extends the capabilities of the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency in controlled evaluations. The agent uses the same core triage logic and reasoning while expanding its scope to include a broader set of alerts in Microsoft Defender, starting with identity and cloud alerts. This enables organizations to apply consistent, AI‑driven triage across a broader set of security signals.
+> The Security Alert Triage Agent is currently in preview. It extends the [Phishing Triage Agent](phishing-triage-agent.md) by applying the same AI‑driven triage logic to a broader set of alerts in Microsoft Defender, starting with identity and cloud alerts.
 
 ## How the Security Alert Triage Agent works
 
