@@ -135,6 +135,31 @@ The following API versions will be retired on June 1, 2026:
 
 ## February 2026
 
+### [Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts
+
+Microsoft Sentinel is updating how the account entity's **Account Name** value is populated for analytics rule alerts when the full UPN is mapped into Account Name. This change improves consistency for downstream automation rules and Logic Apps playbooks.
+
+This change might affect automation logic that filters on or compares the `AccountName` property (Logic Apps: `AccountName`), especially if it expects the full UPN.
+
+**What's changing**
+
+- When a full UPN (for example, `user@domain.com`) is mapped to Account Name in an analytics rule, Account Name will always be the UPN prefix only (`user`). Previously, it could sometimes be `user` and sometimes `user@domain.com`.
+- Additional UPN-related fields will be added to the account entity in the `SecurityAlert` table: `UserPrincipalName` (full UPN), `UPNSuffix`, and the UPN prefix.
+
+For example:
+- **Before**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` or `user@domain.com`  
+- **After**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` + `UPNSuffix`: `@domain.com` 
+
+**What you need to do**
+
+Update any automation rules or logic apps that compare against the full UPN. Replace direct equality checks with separate comparisons for the UPN prefix and UPN suffix. We strongly recommend using **Contains** and **Starts with** operations instead of strict equality to maintain compatibility both before and after the change.
+
+For example, replace conditions such as `AccountName` **Equals** `user@domain.com` with logic like:
+- `AccountName` **Contains** `user` or **Starts with** `user`
+- `UPNSuffix` **Equals** `domain.com` / **Starts with** `domain.com` / **Contains** `domain.com`
+
+For more information, including before and after examples, read the blog article [Update: Changing the Account Name Entity Mapping in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/update-changing-the-account-name-entity-mapping-in-microsoft-sentinel/4489040).
+
 ### Microsoft Sentinel UEBA behaviors layer is now generally available
 
 The UEBA behaviors layer in Microsoft Sentinel is now generally available, summarizing clear, human‑readable behavioral insights from high-volume, raw security logs. The behaviors layer aggregates and sequences related events into normalized behaviors, helping analysts more quickly understand who did what to whom without manually correlating raw logs. For more information, see [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](../sentinel/entity-behaviors-layer.md).
