@@ -30,7 +30,7 @@ The listed features were released in the last six months. For information about 
 - [Cost estimation tool for customers and partners (Preview)](#cost-estimation-tool-for-customers-and-partners-preview)
 - [Configure row-level access using Microsoft Sentinel scoping (Preview)](#configure-row-level-access-using-microsoft-sentinel-scoping-preview)
 
-- ### [Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts
+### [Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts
 
 Microsoft Sentinel is updating how the account entity's **Account Name** value is populated for analytics rule alerts when the full UPN is mapped into Account Name. This change improves consistency for downstream automation rules and Logic Apps playbooks.
 
