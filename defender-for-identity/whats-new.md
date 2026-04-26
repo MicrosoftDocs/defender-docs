@@ -29,6 +29,10 @@ For updates about versions and features released six months ago or earlier, see 
 
  Custom account correlation rules let you link accounts that belong to the same identity, such as privileged accounts with unique naming conventions. You can correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN by defining rules based on UPN prefix, UPN suffix, domain UPN, or employee ID. For more information, see [Create custom account correlation rules](custom-account-correlation-rules.md).
 
+### Automatic Windows event auditing configuration for sensors v3.x is now generally available
+
+The [Automatic Windows event-auditing configuration for sensors v3.x](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) is now generally available. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones.
+
 ## March 2026
 
 ### Sensor v3.x support for domain controllers with Microsoft Entra Connect identity roles
@@ -215,7 +219,7 @@ To ensure consistent protection, we recommend that you make sure all servers wit
 
 - The latest Windows cumulative update.
 - Automatic Windows event auditing enabled.
-For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
+For more information, see [Configure automatic windows auditing](deploy/configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically).
 
 ### Sensor updates
 
