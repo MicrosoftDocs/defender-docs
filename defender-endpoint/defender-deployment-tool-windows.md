@@ -74,7 +74,7 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 - While the tool checks for connectivity against your specific tenant before proceeding, other connectivity requirements, such as access to the consolidated *\*.endpoint.security.microsoft.com/*\*, apply to (additional) functionality you might want to use with the product. See [Configure your network environment to ensure connectivity with the Defender for Endpoint service](./configure-environment.md).
 
-- The selective response actions feature must be enabled if you plan to use that feature to restrict high-impact security operations on high-value assets. See [Enabling the selective response actions feature](./restrict-response-actions-high-value-assets.md#enabling-the-feature).
+- The selective response actions feature must be enabled if you plan to use that feature to restrict high-impact security operations on high-value assets. See [Enabling the selective response actions feature](./restrict-response-actions-high-value-assets.md#enabling-the-selective-response-actions-feature).
 
 ### Additional prerequisites for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
