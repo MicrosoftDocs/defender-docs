@@ -114,7 +114,14 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
       If you choose restricted mode, a list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
 
+      > [!NOTE]
+      > Restricted mode requires Sense version 10.8798 or later on the target device, and specific updates on the Windows versions it supports. For more information, see [Prerequisites and supported operating systems for selective response actions](./restrict-response-actions-high-value-assets.md#prerequisites-and-supported-operating-systems).
+      
       :::image type="content" source="./media/defender-deployment-tool-windows/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode options in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/security-operations-mode-menu.png":::
+
+      The following table describes the available security operations that you can allow or disallow when you choose restricted mode.
+
+      [!INCLUDE [configurable-selective-response-actions](includes/configurable-selective-response-actions.md)]
 
       For more information about the security operations modes and the selective response actions capability, see [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md).
 

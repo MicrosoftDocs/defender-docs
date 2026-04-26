@@ -29,17 +29,12 @@ The selective response actions capability mitigates these risks by providing con
 
 The set of high-impact response actions that are allowed or disallowed on a device is determined by the deployment package used to onboard the device. When you create the deployment package using the Defender deployment tool (DDT), you choose one of two security operations modes:
 
-- **Full Control**: *Full control* means that all security operations are allowed on the device once it is onboarded. This is the default mode and is recommended for standard devices that aren't considered high-value assets.
+- **Full functionality**: *Full functionalilty* means that all security operations are allowed on the device once it is onboarded. This is the default mode and is recommended for standard devices that aren't considered high-value assets.
 - **Restricted**: *Restricted* means that the only high-impact security operations allowed on the device once it is onboarded are those you specify. Use this mode to enforce stricter security boundaries on Tier-0 and HVA devices.
 
 If you choose restricted mode, you can then individually allow or disallow the following capabilities.
 
-| Capability | Description | Remarks |
-|---|---|---|
-| **Basic response** | Run antivirus scan, collect file, and collect investigation package. | The *Collect file* capability refers to retrieving a file from the **File** page in the portal, not the `GetFile` command available under Live Response. |
-| **Advanced response** | Isolate device, restrict app execution, and request remediation. | *Request remediation* allows security administrators to initiate remediation actions for identified vulnerabilities on a specific device. |
-| **Live response** | Allows live response sessions to the remote device. | |
-| **Device protection** | Allows automatic incident response (AIR). | |
+[!INCLUDE [configurable-selective-response-actions](includes/configurable-selective-response-actions.md)]
 
 > [!NOTE]
 > Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
