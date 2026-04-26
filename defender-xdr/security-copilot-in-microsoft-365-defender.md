@@ -98,7 +98,7 @@ Responses are formatted with structured tables, bullet points, and section heade
 - Stop generation: Select *Stop* to interrupt a response that's is taking too long or heading in the wrong direction
 - Retry: If something goes wrong, select *Retry* to attempt the response again
 
-### [Security Copilot](#tab/copilot-in-defender)
+### [Copilot in Defender embedded skills](#tab/copilot-in-defender)
 
 ## Key features
 
@@ -199,18 +199,7 @@ Prompting in Copilot helps you navigate and use the capabilities effectively. Yo
 
 ## Provide feedback
 
-All Copilot in Defender capabilities have an option for providing feedback. Reviewing and [providing feedback](/security-copilot/rai-faqs-security-copilot#what-are-the-limitations-of-security-copilot-how-can-users-minimize-the-impact-of-security-copilots-limitations-when-using-the-system) about the results helps improve future responses. To provide feedback, perform the following steps:
-
-In Copilot:
-
-1. Select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](media/copilot-in-defender/copilot-defender-feedback.png) located at the bottom of any results card in the Copilot side panel.
-2. Select **Looks right** if you deem the results accurate. You can provide more information in the next dialog box.
-3. Select **Needs improvement** if you assessed the result as lacking or incomplete. You can provide more information about your assessment in the next dialog box and submit this assessment to Microsoft.
-4. You can also report the results if it contains questionable or ambiguous information by selecting **Inappropriate**. Provide more information about the results in the next dialog box and select Submit.
-
-In Defender Chat experience:
-
-Use the 👍 / 👎 buttons on any response.
+All Copilot in Defender capabilities have an option for providing feedback. Reviewing and [providing feedback](/security-copilot/rai-faqs-security-copilot#what-are-the-limitations-of-security-copilot-how-can-users-minimize-the-impact-of-security-copilots-limitations-when-using-the-system) helps improve future responses. To provide feedback, use the 👍 / 👎 buttons on any response.
 
 ## Privacy and data security
 
