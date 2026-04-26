@@ -382,7 +382,7 @@ Furthermore, after an identity is considered "contained", that user will be bloc
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-lateral-move-block.png" alt-text="Shows a user contain lateral movement block event" lightbox="/defender/media/defender-endpoint/user-contain-lateral-move-block.png":::
 
-To view the current status of the contain user action and other actions, see [Track the action status in the Activities tab](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab).
+To view the current status of the contain user action and other actions, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
 
 ### Undo contain user actions
 
@@ -427,7 +427,7 @@ To enrich predictive shielding actions, we recommend you use the Microsoft Defen
 
 After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
-To view the current status of the Safeboot hardening action and other actions, see [Track the action status in the Activities tab](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab).
+To view the current status of the Safeboot hardening action and other actions, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
 
 ## Consult a threat expert
 
@@ -448,7 +448,7 @@ All other related details are also shown, for example, submission date/time, sub
 
 :::image type="content" source="media/action-center-details.png" alt-text="The action center with information" lightbox="media/action-center-details.png":::
 
-The **Activities** tab in the **Incident** page shows the details and status of actions that were taken as part of the incident response. For more information, see [Track the action status in the Activities tab](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab).
+The **Activities** tab in the **Incident** page shows the details and status of actions that were taken as part of the incident response. For more information, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
 
 ## See also
 

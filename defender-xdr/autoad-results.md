@@ -43,7 +43,7 @@ The Action center ([https://security.microsoft.com/action-center](https://securi
 You can release the contained assets, for example, enable a blocked user account or release a device from containment, from the action details pane. You can release the contained assets after you mitigate the risk and complete the investigation of an incident. For more information about the action center, see [Action center](m365d-action-center.md).
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
-## Track the action status in the Activities tab
+## Track the action status in the Activities tab (Preview)
 
 The **Activities** tab in the **Incident** page allows you to view details related to a specific incident, including the date and time the activity started, the triggering alert, and more. 
 
