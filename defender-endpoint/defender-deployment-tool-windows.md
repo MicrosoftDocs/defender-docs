@@ -133,21 +133,7 @@ Once you've determined which type of package you want to generate, select the re
 
 # [Restricted functionality](#tab/restricted-functionality)
 
-1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
-
-1. In the Step 1 dropdown menu, choose **Windows (preview)**.
-
-1. Under **Deploy by downloading and applying packages or files**, select the **Onboard** button.
-
-   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
-
-1. The **Generate Defender deployment tool with an access key** page appears.
-
-   :::image type="content" source="./media/defender-deployment-tool-windows/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/configure-deployment-package.png":::
-
-   * Provide a name for the package. Be sure to create a name that's unique and descriptive.
-
-   * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
+[!INCLUDE [generate-onboarding-package-suffix](includes/generate-onboarding-package-suffix.md)]
 
    * Select **Restricted**.
 
@@ -168,13 +154,7 @@ Once you've determined which type of package you want to generate, select the re
 
    * When you're done configuring the package, select **Generate**.
 
-1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
-
-   :::image type="content" source="./media/defender-deployment-tool-windows/deployment-package-download-page.png" alt-text="Screenshot showing the key that is generated for the deployment tool package." lightbox="./media/defender-deployment-tool-windows/deployment-package-download-page.png":::
-
-   Copy the key and save it, as it will be needed with the deployment tool.
-
-   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
+[!INCLUDE [generate-onboarding-package-suffix](includes/generate-onboarding-package-suffix.md)]
 
 ---
 
