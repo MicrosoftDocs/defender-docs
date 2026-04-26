@@ -62,7 +62,7 @@ Microsoft Defender surfaces detections as near‑real‑time alerts in the Defen
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
-Near-real-time detections rely on Agent 365 observability data, which also provides valuable context for [investigating incidents and threat hunting](#investigate-ai-agent-threats-and-hunt-for-risks-using-advanced-hunting). Microsoft Defender analyzes this data to identify suspicious agent behavior and generate alerts.
+Near-real-time detections rely on Agent 365 observability data (agent activity logs collected through Agent 365), which also provides valuable context for [investigating incidents and threat hunting](#investigate-ai-agent-threats-and-hunt-for-risks-using-advanced-hunting). Microsoft Defender analyzes this data to identify suspicious agent behavior and generate alerts.
 
 #### Enable near-real-time detections and advanced threat hunting
 
