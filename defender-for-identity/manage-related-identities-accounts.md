@@ -50,6 +50,9 @@ Use the procedures in this article to manually link accounts to identities, and 
 >
 > These features continue to use the Cloud Application Accounts inventory.
 
+> [!TIP]
+> To automatically correlate accounts using naming conventions or employee IDs, see [Create custom account correlation rules](custom-account-correlation-rules.md).
+
 ## Prerequisites
 
 - You must have [Unified role-based access control (URBAC)](/defender-for-identity/role-groups) roles: Global Administrator or Security Data (Manage).
