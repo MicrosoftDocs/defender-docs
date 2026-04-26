@@ -19,13 +19,15 @@ If you deployed Defender components by remediating a security recommendation:
 
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
-2. Locate the relevant recommendation.
+1. Locate the relevant recommendation.
 
-3. Confirm that the recommendation status changes to **Healthy**.
+1. Confirm that the recommendation status changes to **Healthy**.
 
-## Verify Defender sensor deployment on AKS
+## Verify Defender sensor deployment
 
-To verify that the Defender sensor is enabled on an Azure Kubernetes Service (AKS) cluster, run the following command:
+To verify that the Defender sensor is enabled:
+
+**For AKS clusters:**
 
 ```azurecli
 az aks show \
@@ -35,6 +37,19 @@ az aks show \
 ```
 
 The output should be `true`.
+
+**For Arc-enabled clusters and Helm:**
+
+```azurecli
+az k8s-extension list \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group> \
+  --cluster-type connectedClusters \
+  --subscription <subscription-id> \
+  --query "[?extensionType=='microsoft.azuredefender.kubernetes' && provisioningState=='Succeeded']"
+```
+
+The command should return a non-empty array if the extension was installed successfully.
 
 ## Verify Azure Policy add-on on AKS
 
@@ -83,17 +98,17 @@ kubectl get pods -n kube-system -l app=defender
 **For Arc-enabled clusters and Helm:**
 
 ```bash
-kubectl get pods -n defender-k8s-sensor
+kubectl get pods -n mdc -l app=defender-k8s-sensor
 ```
 
 Confirm that the Defender sensor pods are in a `Running` state.
 
-## Verify the Defender DaemonSet (optional)
+## Verify the Defender DaemonSet (Arc-enabled clusters and Helm)
 
 You can also verify that the Defender DaemonSet is deployed correctly.
 
 ```bash
-kubectl get ds microsoft-defender-collector-ds -n kube-system
+kubectl get ds -n mdc microsoft-defender-collectors-ds
 ```
 
 Confirm that the **DESIRED**, **CURRENT**, and **READY** values match the number of cluster nodes.

@@ -224,22 +224,6 @@ az k8s-extension create \
 
 ---
 
-## Configure namespace exclusions (optional)
-
-After deploying the Defender sensor as an Azure Arc Kubernetes extension, you can exclude specific namespaces from monitoring.
-
-1. In the Azure portal, open the **Arc-enabled Kubernetes** cluster.
-
-1. Select **Extensions**.
-
-1. Select **Microsoft Defender for Containers**.
-
-1. Select **Manage**.
-
-1. Configure namespace exclusions as needed.
-
-1. Select **Save**.
-
 ## Next steps
 
 - [Verify Defender for Containers deployment](defender-for-containers-verify-deployment.md).

@@ -139,6 +139,8 @@ az connectedk8s delete \
 
 ## Disable Defender for Containers plan on the AWS connector
 
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select the relevant AWS connector.
@@ -152,6 +154,8 @@ az connectedk8s delete \
 ## Delete the AWS connector (optional)
 
 If you no longer want Defender for Cloud to monitor your AWS account:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
@@ -263,6 +267,8 @@ az connectedk8s delete \
 ```
 
 ## Disable Defender for Containers plan on the GCP connector
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
