@@ -35,7 +35,7 @@ The following table describes high-impact response actions that you can allow or
 
 [!INCLUDE [configurable-selective-response-actions](includes/configurable-selective-response-actions.md)]
 
-For detailed instructions on how to use the Defender deployment tool to create to an onboarding packages with restricted security operations settings, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md?tab=restricted-functionality).
+For detailed instructions on how to use the Defender deployment tool to create to an onboarding packages with restricted security operations settings, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md?tabs=restricted-functionality).
 
 > [!NOTE]
 > Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
