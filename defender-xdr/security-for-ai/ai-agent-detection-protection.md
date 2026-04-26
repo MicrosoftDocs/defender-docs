@@ -18,6 +18,9 @@ Deployed AI agents operate autonomously, invoking tools, accessing data, and tak
 
 This article explains how Microsoft Defender detects, blocks, and enables security teams to investigate threats to AI agents managed through [Microsoft Agent 365](/microsoft-agent-365/overview), including the extended detection and protection capabilities available for supported agent platforms.
 
+> [!NOTE]
+> Some capabilities described in this article currently require onboarding through Microsoft Defender for Cloud Apps. This is a temporary configuration that will be part of the Agent 365 product experience. Starting June 30, 2026, your organization needs an Agent 365 subscription to continue using agent protection and visibility capabilities. [Learn more about Agent 365](/microsoft-agent-365/).
+
 ## Block unsafe AI agent actions in real time
 
 Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Defender integrates directly with [Microsoft Agent 365’s Agent Tooling Gateway (ATG)](/microsoft-agent-365/tooling-servers-overview) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
