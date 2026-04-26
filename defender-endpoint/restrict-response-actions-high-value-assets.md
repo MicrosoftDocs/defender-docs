@@ -69,7 +69,7 @@ Once enabled, the restricted mode option becomes available when creating Defende
 
 ## Prerequisites and supported operating systems
 
-Restricted mode requires:
+The feature switch XXX must be enabled.To use Restricted mode requires:
 
 - **Sense version 10.8798 or later** on the target device.
 - One of the following supported operating systems with the corresponding update installed:
