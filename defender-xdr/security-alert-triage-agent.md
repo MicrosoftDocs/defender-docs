@@ -110,6 +110,7 @@ For more information, see [Alert policies in the Microsoft Defender portal](aler
 
 ##### Product and license requirements
 
+- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [Microsoft Defender for Containers (part of Microsoft Defender for Cloud)](/azure/defender-for-cloud/defender-for-containers-deployment-overview)
 
 ##### Unified RBAC requirements
@@ -134,7 +135,7 @@ Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud 
 
 ---
 
-## Required permissions for analysts and administrators
+## Required permissions for agent users
 
 Users who interact with the Security Alert Triage Agent need these permissions:
 
@@ -144,7 +145,7 @@ Users who interact with the Security Alert Triage Agent need these permissions:
 | **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
 | **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID**. |
 
-These permissions apply only to email and collaboration alerts, which support the feedback workflow:
+These permissions apply to the agent feedback workflow:
 
 | User action | Required permissions |
 |------------|---------------------|
@@ -156,7 +157,7 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 ## Set up the Security Alert Triage Agent
 
-Make sure you have the [permissions required](#required-permissions-for-analysts-and-administrators) and all [prerequisites](#prerequisites) are met before setting up the agent.
+Make sure you have the [permissions required for agent users](#required-permissions-for-agent-users) and all [prerequisites](#prerequisites) are met before setting up the agent.
 
 ### Begin setup
 
