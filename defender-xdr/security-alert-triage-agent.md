@@ -43,9 +43,9 @@ This article provides an overview of the Security Alert Triage Agent, how it wor
 
 The Security Alert Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender that classifies and triages alerts across supported workloads and alert types. The agent’s key capabilities include:
 
-- **Autonomous triage:** Uses advanced AI tools to evaluate alerts and determine whether they represent malicious activity or benign behavior without requiring step‑by‑step human input.
-- **Transparent rationale:** Records classification verdicts and supporting reasoning in natural language, including the evidence used to reach each conclusion.
-- **Learning based on feedback:** For supported alert types, the agent can incorporate analyst feedback when explicitly provided and approved. This capability is currently available for email and collaboration alerts only.
+- **Autonomous triage:** Uses advanced AI tools to evaluate alerts and determine whether they represent malicious activity or false alarms without requiring step‑by‑step human input.
+- **Transparent rationale:** Records classification verdicts and provides supporting reasoning in natural language and visual graphs, including the evidence used to reach each conclusion.
+- **Learning based on feedback:** For supported alert types, the agent can incorporate analyst feedback when explicitly provided and approved to tune its verdict analysis. This capability is currently available for email and collaboration alerts only.
 
 ## Supported alerts
 
@@ -64,7 +64,7 @@ These prerequisites apply regardless of the alert types you want the agent to tr
 | Prerequisite | Details |
 |:---|:---|
 | **Security Copilot** | Provisioned capacity in **Security Compute Units (SCU)**. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion). |
-| **Security Copilot plugins** | The Security Alert Triage Agent automatically activates: Microsoft Defender XDR, Microsoft Threat Intelligence, and Security Alert Triage Agent. |
+| **Security Copilot plugins** | The Security Alert Triage Agent automatically activates: Microsoft Defender XDR, Microsoft Threat Intelligence, and Security Alert Triage Agent. For more information, see [Plugins overview - Microsoft Security Copilot](/copilot/security/plugin-overview). |
 | **Alert-tuning rules** | Disable tuning rules that resolve the alerts you want the agent to triage. The agent doesn't triage resolved alerts. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert). |
 | **Unified RBAC** | Enable unified role-based access control and activate the relevant workloads for the alert types you want to triage. For more information, see [Workload-specific prerequisites](#workload-specific-prerequisites). |
 | **Products and licenses** | You need specific products and licenses based on the alert types you want the agent to triage. For more information, see [Workload-specific prerequisites](#workload-specific-prerequisites). |
