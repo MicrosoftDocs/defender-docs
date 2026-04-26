@@ -21,3 +21,4 @@ ms.service: defender-endpoint
    * Provide a name for the package. Be sure to create a name that's unique and descriptive.
 
    * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
+   
