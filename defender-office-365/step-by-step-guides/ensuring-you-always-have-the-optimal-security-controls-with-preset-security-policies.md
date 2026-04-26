@@ -4,7 +4,6 @@ description: Step to set up preset security policies in Microsoft Defender for O
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection:
 - m365-guidance-templates
