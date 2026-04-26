@@ -3,7 +3,7 @@ title: How-to enable agentless container posture
 description: Learn how to onboard agentless containers
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 03/02/2026
+ms.date: 04/19/2026
 ---
 
 # Onboard agentless container posture in Defender CSPM
@@ -14,7 +14,7 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
 
 ## Prerequisites
 
-- [Defender CSPM plan is enabled for your environment](enable-enhanced-security.md).
+- [Defender CSPM plan is enabled for your environment](connect-azure-subscription.md).
 
 ## How to onboard agentless container posture in Defender CSPM
 
@@ -105,7 +105,7 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
 
 ## Related content
 
-- [Enable Defender CSPM](enable-enhanced-security.md)
+- [Enable Defender CSPM](connect-azure-subscription.md)
 
 - [Agentless container posture capabilities](concept-agentless-containers.md)
 

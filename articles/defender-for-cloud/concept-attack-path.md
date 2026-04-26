@@ -2,7 +2,7 @@
 title: Investigate risks with security explorer/attack paths in Microsoft Defender for Cloud
 description: Learn about investigating risks with security explorer/attack paths in Microsoft Defender for Cloud.
 ms.topic: concept-article
-ms.date: 09/10/2025
+ms.date: 04/19/2026
 #customer intent: As a security analyst, I want to understand attack paths so that I can mitigate risks effectively.
 ---
 
@@ -59,5 +59,5 @@ Learn how to use the [cloud security explorer](how-to-manage-cloud-security-expl
 ## Next steps
 
 - [Identify and remediate attack paths](how-to-manage-attack-path.md)
-- [Enabling agentless scanning for machines](enable-vulnerability-assessment-agentless.md#enabling-agentless-scanning-for-machines)
+- [Enable agentless scanning for machines](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-azure)
 - [Build a query with the cloud security explorer](how-to-manage-cloud-security-explorer.md)
