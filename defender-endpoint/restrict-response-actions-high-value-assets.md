@@ -58,14 +58,15 @@ Once a device is onboarded with restricted settings, its security operations con
 > [!NOTE]
 > Restricted mode is independent of High Value device classification. It can be applied to High Value devices, Tier-0 assets, or any other devices where you want to restrict remote response security operations.
 
-## Enabling the feature
+## Enabling the selective response actions feature
 
 To use the selective response actions capability, enable the feature in the Microsoft Defender portal:
 
-1. Navigate to **Settings** > **Endpoints** > **Advanced features**.
-2. Turn on **Allow restricted operations during onboarding**.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+2. Navigate to **Settings** > **Endpoints** > **Advanced features**.
+3. Turn on **Allow restricted operations during onboarding**.
 
-Once enabled, the restricted mode option becomes available when creating Defender deployment packages for Windows through the Defender deployment tool (DDT). You can then create deployment packages that specify which security operations to allow on each device.
+Once enabled, the restricted mode option becomes available when creating Defender deployment packages for Windows through the Defender deployment tool (DDT). You can then create deployment packages that specify which security operations to allow on the devices you're onboarding.
 
 ## Prerequisites and supported operating systems
 
