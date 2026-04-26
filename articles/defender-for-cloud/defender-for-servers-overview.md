@@ -46,6 +46,8 @@ Defender for Servers offers two plans:
 
 For Defender for Servers pricing, review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
+For more details about billing scenarios and licensing, see [Common questions about Defender for Servers](/azure/defender-for-cloud/faq-defender-for-servers).
+
 ## Plan protection features
 
 Plan features are summarized in the table.
