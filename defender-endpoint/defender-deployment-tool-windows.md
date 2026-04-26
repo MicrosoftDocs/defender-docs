@@ -133,7 +133,7 @@ Once you've determined which type of package you want to generate, select the re
 
 # [Restricted functionality](#tab/restricted-functionality)
 
-[!INCLUDE [generate-onboarding-package-prefix](includes/generate-onboarding-package-prefix.md)]
+[!INCLUDE [generate-deployment-package-prefix](includes/generate-deployment-package-prefix.md)]
 
    * Select **Restricted**.
 
@@ -154,7 +154,7 @@ Once you've determined which type of package you want to generate, select the re
 
    * When you're done configuring the package, select **Generate**.
 
-[!INCLUDE [generate-onboarding-package-suffix](includes/generate-onboarding-package-suffix.md)]
+[!INCLUDE [generate-deployment-package-suffix](includes/generate-deployment-package-suffix.md)]
 
 ---
 
