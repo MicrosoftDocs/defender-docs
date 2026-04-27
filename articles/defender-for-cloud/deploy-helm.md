@@ -78,7 +78,7 @@ To inspect configurable chart values, such as feature flags or pod resource limi
 helm pull oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers
 ```
 
-Use the relevant tab to install the sensor for your environment.
+To install the sensor for your environment:
 
 # [AKS](#tab/aks)
 
