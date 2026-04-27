@@ -58,13 +58,29 @@ Failures with curl error 35 or 60 typically indicate certificate pinning rejecti
 ## TLS/SSL inspection
 
 TLS/SSL inspection isn't supported by Microsoft Defender for Endpoint on Linux.
+To verify whether TLS/SSL inspection is enabled, run the following commands:
+
+```bash
+curl -v https://winatp-gw-weu.microsoft.com 2>&1 | grep "issuer"
+curl -v https://packages.microsoft.com 2>&1 | grep "issuer"
+```
+
+Review the certificate issuer in the output. The issuer must be Microsoft, not your proxy certificate authority (CA). If it reflects your organization’s proxy or firewall certificate authority (CA), TLS/SSL inspection is active and breaking Microsoft Defender for Endpoint connectivity.
+
+Make sure to exempt all Microsoft Defender for Endpoint service domains from TLS/SSL inspection on your proxy or firewall. After applying the changes, run:
+
+
+```bash
+sudo systemctl restart mdatp
+mdatp connectivity test
+```
+
 
 | Symptom or error                                            | What it indicates                          | Required action                                               |
 | ----------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------- |
 | `curl error 60`                                             | Certificate validation failure.             | TLS/SSL inspection is active. Configure a bypass.                 |
 | `CERTIFICATE_VERIFY_FAILED`                                 | Certificate chain has been replaced.        | TLS/SSL inspection is active. Configure a bypass.                 |
 | `HTTP 502 Bad Gateway`                                      | TLS session disrupted by proxy or firewall. | TLS/SSL inspection is active. Configure a bypass. |
-
 
 
 ## Troubleshooting steps for environments without proxy or with transparent proxy
