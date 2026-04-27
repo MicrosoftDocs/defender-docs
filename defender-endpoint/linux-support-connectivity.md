@@ -61,9 +61,9 @@ TLS/SSL inspection isn't supported by Microsoft Defender for Endpoint on Linux.
 
 | Symptom or error                                            | What it indicates                          | Required action                                               |
 | ----------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------- |
-| `curl error 60`                                             | Certificate validation failure             | TLS/SSL inspection is active. Configure a bypass                 |
-| `CERTIFICATE_VERIFY_FAILED`                                 | Certificate chain has been replaced        | TLS/SSL inspection is active. Configure a bypass                 |
-| `HTTP 502 Bad Gateway`                                      | TLS session disrupted by proxy or firewall | TLS/SSL inspection is active. Configure a bypass |
+| `curl error 60`                                             | Certificate validation failure.             | TLS/SSL inspection is active. Configure a bypass.                 |
+| `CERTIFICATE_VERIFY_FAILED`                                 | Certificate chain has been replaced.        | TLS/SSL inspection is active. Configure a bypass.                 |
+| `HTTP 502 Bad Gateway`                                      | TLS session disrupted by proxy or firewall. | TLS/SSL inspection is active. Configure a bypass. |
 
 
 
