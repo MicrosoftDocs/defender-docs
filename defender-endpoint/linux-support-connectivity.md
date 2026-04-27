@@ -12,7 +12,7 @@ ms.collection:
 - mde-linux
 ms.topic: troubleshooting-general
 ms.subservice: linux
-ms.date: 03/28/2025
+ms.date: 04/27/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
