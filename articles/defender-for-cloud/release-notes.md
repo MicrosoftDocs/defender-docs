@@ -43,7 +43,7 @@ April 30, 2026
 
 Defender for Containers sensor installation using Helm now uses direct Helm chart deployment instead of installation scripts. The updated flow includes environment-specific Helm commands for AKS, EKS, and GKE clusters.
 
-Learn more about [installing the Defender for Containers sensor by using Helm](install-defender-for-containers-sensor-using-helm.md).
+Learn more about [installing the Defender for Containers sensor by using Helm](deploy-helm.md).
 
 ### General availability of Defender for Storage integration in Azure Portal Storage Center
 
