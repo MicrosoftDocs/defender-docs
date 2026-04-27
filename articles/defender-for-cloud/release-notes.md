@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 04/27/2026
+ms.date: 04/30/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,8 +32,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| April 27, 2026 | GA | [Anti-malware detection and blocking is now generally available](#anti-malware-detection-and-blocking-is-now-generally-available) |
-| April 27, 2026 | GA | [DNS Detection for Kubernetes is now generally available](#dns-detection-for-kubernetes-is-now-generally-available) |
+| April 30, 2026 | GA | [Anti-malware detection and blocking is now generally available](#anti-malware-detection-and-blocking-is-now-generally-available) |
+| April 30, 2026 | GA | [DNS Detection for Kubernetes is now generally available](#dns-detection-for-kubernetes-is-now-generally-available) |
 | April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
@@ -41,7 +41,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Anti-malware detection and blocking is now generally available
 
-April 27, 2026
+April 30, 2026
 
 Container runtime anti-malware detection and blocking is now generally available in Defender for Containers for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE).
 
@@ -51,7 +51,7 @@ Learn more about [anti-malware detection and blocking](anti-malware.md).
 
 ### DNS Detection for Kubernetes is now generally available
 
-April 27, 2026
+April 30, 2026
 
 DNS Detection for Kubernetes is now generally available in Defender for Containers for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE).
 
