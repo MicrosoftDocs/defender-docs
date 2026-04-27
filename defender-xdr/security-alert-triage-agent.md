@@ -495,7 +495,7 @@ Your existing phishing triage configuration and feedback carry over automaticall
 
 ### When is the agent triggered?
 
-This agent runs automatically when a new alert is detected. Make sure to disable any built-in tuning rules that resolve the alert types you want the agent to triage. For more information, see [Prerequisites](#prerequisites).
+This agent runs automatically when a new alert is detected. Built in tuning rules resolving supported alert types will be disabled during setup.
 
 ### Can the Security Alert Triage Agent be trusted?
 
