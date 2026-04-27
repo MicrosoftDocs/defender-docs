@@ -155,7 +155,7 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 ## Set up the Security Alert Triage Agent
 
-Make sure you have the [required user permissions](#required-user-permissions) and all [prerequisites](#prerequisites) are met before setting up the agent.
+Make sure you have the [required user permissions](#required-user-permissions) and that all [prerequisites](#prerequisites) are met before setting up the agent.
 
 ### Begin setup
 
@@ -438,7 +438,7 @@ This page provides a comprehensive list of all feedback submitted to the agent. 
 - The user who provided the feedback
 - Feedback submission date, feedback ID, alert ID, and the incident ID
 
-:::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-feedback-management.png" alt-text="Screenshot of the Feedback management page" lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-feedback-management.png":::
+:::image type="content" source="media/security-alert-triage-agent/phishing-triage-feedback-management.png" alt-text="Screenshot of the Feedback management page" lightbox="media/security-alert-triage-agent/phishing-triage-feedback-management.png":::
 
 This table explains the feedback statuses:
 
@@ -484,7 +484,7 @@ Following are responses to commonly asked questions about the Security Alert Tri
 
 The **Security Alert Triage Agent** is an autonomous Microsoft Security Copilot agent in Microsoft Defender that helps security teams triage alerts at scale. It evaluates alerts using AI‑driven reasoning, arrives at a verdict, and records its conclusions directly in Microsoft Defender incidents to help analysts prioritize what requires action.
 
-The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), extended to triage additional alert types beyond email and collaboration. The Security Alert Triage Agent is modular - you choose which alert types you want the agent to triage. The agent now extends to identity and cloud alert, starting with containers, which are currently in preview. Email and collaboration alert triage capabilities are already generally available (GA). The set of supported alerts is expected to grow over time.
+The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), extended to triage additional alert types beyond email and collaboration. The Security Alert Triage Agent is modular - you choose which alert types you want the agent to triage. The agent now extends to identity and cloud alerts, starting with containers, which are currently in preview. Email and collaboration alert triage capabilities are already generally available (GA). The set of supported alerts is expected to grow over time.
 
 If you’re already using the Phishing Triage Agent, you don’t need to install a new agent. Your existing agent will continue to operate, and you can enable the additional alert types through configuration. To onboard to the expanded capabilities, review the [prerequisites](#prerequisites) for the additional alert types and [edit the agent settings](#edit-agent-settings) to select the alert types you want to enable.
 
