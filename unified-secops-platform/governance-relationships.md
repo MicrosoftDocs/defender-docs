@@ -44,10 +44,15 @@ Permissions:
 - To send an invitation from the governed tenant, the user must have the [Tenant Governance Administrator](/entra/identity/role-based-access-control/permissions-reference#tenant-governance-administrator) role.
 - To assign permissions to a remote tenant group, the user must have the [User Access Administrator](/azure/role-based-access-control/built-in-roles/privileged#user-access-administrator) role in Azure RBAC and at least a [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) role in Entra RBAC.
 
-<!---
 ## Enable tenant governance settings
 
 Before you can configure delegated access, you must enable your tenant to receive governance invitations. This setting is disabled by default.
+
+Go to the Delegated access page and turn on the Enable invitations toggle.
+
+:::image type="content" source="media/governance-relationships/enable-invitations.png" alt-text="Screenshot showing governance invitations enabled in tenant settings.":::
+
+<!---
 
 ### Enable governance invitations in Microsoft Entra Admin Center (recommended)
 
