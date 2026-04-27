@@ -162,6 +162,7 @@ jobs:
           echo "Found: $AUTH_FILE"
 
           RESOLVE_FAILED=false
+          : > /tmp/resolve-failed.flag
 
           # Resolve team references with pagination and cache
           declare -A TEAM_CACHE
@@ -181,7 +182,8 @@ jobs:
               body=$(echo "$response" | sed '$d')
               if [ "$http_code" != "200" ]; then
                 echo "::error::Failed to resolve team $key (HTTP $http_code)" >&2
-                RESOLVE_FAILED=true
+                # Subshell variable assignments don't propagate; use a sentinel file.
+                echo "1" > /tmp/resolve-failed.flag
                 break
               fi
               page_members=$(echo "$body" | jq -r '.[].login' 2>/dev/null || true)
@@ -198,11 +200,13 @@ jobs:
           # Parse rules and collect all authorized usernames
           ALL_USERS=""
           while IFS= read -r line || [ -n "$line" ]; do
+            line="${line%$'\r'}"
             [[ "$line" =~ ^[[:space:]]*# ]] && continue
             [[ -z "${line// }" ]] && continue
-            owners=$(echo "$line" | grep -oE '@[^ ]+' | sed 's/@//' || true)
+            owners=$(echo "$line" | grep -oE '@[^ [:space:]]+' | sed 's/@//' || true)
             [ -z "$owners" ] && continue
             for entry in $owners; do
+              entry="${entry%$'\r'}"
               if [[ "$entry" == *"/"* ]]; then
                 org_name=$(echo "$entry" | cut -d'/' -f1)
                 team_name=$(echo "$entry" | cut -d'/' -f2)
@@ -227,7 +231,7 @@ jobs:
           echo "Resolved $RESOLVED_COUNT unique approvers."
           cat /tmp/resolved-approvers.txt
 
-          if [ "$RESOLVE_FAILED" = "true" ] || [ "$RESOLVED_COUNT" -eq 0 ]; then
+          if [ "$RESOLVE_FAILED" = "true" ] || [ -s /tmp/resolve-failed.flag ] || [ "$RESOLVED_COUNT" -eq 0 ]; then
             echo "failed=true" >> "$GITHUB_OUTPUT"
             echo "::warning::Approvers resolution incomplete; cache will not be saved. Live membership fallback will be used."
           else
@@ -266,10 +270,12 @@ jobs:
           fi
 
           while IFS= read -r line || [ -n "$line" ]; do
+            line="${line%$'\r'}"
             [[ "$line" =~ ^[[:space:]]*# ]] && continue
             [[ -z "${line// }" ]] && continue
-            owners=$(echo "$line" | grep -oE '@[^ ]+' | sed 's/@//' || true)
+            owners=$(echo "$line" | grep -oE '@[^ [:space:]]+' | sed 's/@//' || true)
             for entry in $owners; do
+              entry="${entry%$'\r'}"
               if [[ "$entry" == *"/"* ]]; then
                 echo "$entry" >> /tmp/auth-teams.txt
               fi
