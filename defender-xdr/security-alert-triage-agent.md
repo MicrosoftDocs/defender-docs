@@ -204,7 +204,7 @@ Select:
    **Set conditional access policies for Security Copilot** to enable the agent to function based on the user account created for it. For more information, see [Troubleshoot Conditional Access policies for Microsoft Security Copilot](/entra/identity/conditional-access/troubleshoot-security-copilot-policies).
 
 > [!NOTE]
-> You can change the agent identity after setup as described in [Change the agent’s identity and role](#change-the-agents-identity-and-role). 
+> You can change the agent identity after setup as described in [Edit agent settings](#edit-agent-settings). 
 
 #### Assign permissions
 
@@ -236,7 +236,7 @@ These permissions are under the **Security operations** permissions group:
 
 To create a role manually:
 
-1. Ensure that the relevant unifited RBAC workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Workload-specific prerequisites](#workload-specific-prerequisites).
+1. Ensure that the relevant unified RBAC workloads are activated to allow the agent to effectively analyze alerts with comprehensive context. Follow the steps in [Workload-specific prerequisites](#workload-specific-prerequisites).
 1. [Create a role](../defender-xdr/create-custom-rbac-roles.md#create-a-custom-role) with the required permissions or assign an existing role with these permissions to the agent.
 
    Make sure to grant the role access to all of the relevant data sources based on the [supported alerts](#supported-alerts) you want to associate with the Security Alert Triage Agent.
@@ -316,7 +316,7 @@ To provide feedback and teach the agent, follow these steps:
    > You can only provide feedback to the agent once per alert, and it can only be used to teach the agent how to classify email and collaboration alerts, specifically by selecting either True Positive (phishing) or False Positive (not malicious).
    > Always review your feedback and verify the AI-generated response before saving the lesson.
 
-1. If the result meets your expectations, you can choose to insert the lesson into the agent's memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent's memory if applicable. All feedback recorded for audit purposes, and lessons added to the agent's memory, can be later reviewed in the [feedback management page](#view-and-manage-feedback-to-the-agent).
+1. If the result meets your expectations, you can choose to insert the lesson into the agent's memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent's memory if applicable. All feedback is recorded for audit purposes, and lessons added to the agent's memory can be reviewed later in the [feedback management page](#view-and-manage-feedback-to-the-agent).
 
 The agent utilizes stored feedback to triage and classify similar alerts in the future. When a relevant alert that matches the feedback characteristics is received, the agent applies this feedback to determine its classification, incorporating it as supporting evidence in its decision-making process.
 
@@ -400,14 +400,20 @@ To view agent metrics and manage the agent, go to the Security Alert Triage Agen
    Select **Manage agent** on the card to open the **Security Alert Triage Agent** page, which has more performance metrics and management options.
 
 
-### Change the agent’s identity and role
+### Edit agent settings
 
-To manage the agent’s identity and role: 
+To edit the agent’s settings: 
 
-1. Select **Security Copilot > Agents**, look for the Security Alert Triage Agent under **Agents in use** and select **Go to agent**. 
-1. Select the **ellipsis (...) > Edit agent** at the top right corner of the page. This opens the **Edit agent** page. 
-1. Select **Identity and role > Select a new identity**.
-1.  Select a new identity, as described in the [Assign the agent's identity and permissions](#assign-the-agents-identity-and-permissions). 
+1. Select **Security Copilot > Agents**. 
+1. Look for the Security Alert Triage Agent under **Agents in use**, and select **Go to agent**. 
+1. Select the **ellipsis (...) > Edit agent** at the top right corner of the **Security Alert Triage Agent** page.
+
+   The **Edit agent** page has three tabs:
+
+   - **Identity and role** - Change the agent’s identity. Select **Select a new identity** and follow the steps described in [Assign the agent’s identity and permissions](#assign-the-agents-identity-and-permissions).
+   - **Feedback** - View and manage user-submitted feedback. For more information, see [View and manage feedback to the agent](#view-and-manage-feedback-to-the-agent).
+   - **Supported alerts** - View which of the supported alert types the agent can triage. To activate or deactivate specific alert types for the agent, select **Edit supported alerts** to open the **Agent supported alerts** page, where you can toggle individual alert types on or off for the agent. For more information, see [Select which alert types to triage](#select-which-alert-types-to-triage).
+   
 
 ### View and manage feedback to the agent
 
