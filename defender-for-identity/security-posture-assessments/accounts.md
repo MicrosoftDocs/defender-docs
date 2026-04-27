@@ -358,7 +358,7 @@ Privileged accounts such as Domain Admins or Enterprise Admins shouldn't be dele
 
 **Security recommendation**
 
-It's recommended to enable this setting for:
+We recommend that you enable this setting for:
 
 Domain Admins
 Enterprise Admins
