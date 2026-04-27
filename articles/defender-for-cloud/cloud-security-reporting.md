@@ -68,7 +68,9 @@ To access cloud reporting:
 
 ## View built-in reports
 
-Built-in reports provide predefined views of your cloud security data.
+Microsoft Defender for Cloud includes **built-in reports** that provide predefined, out-of-the-box views of your cloud security posture. These reports help security teams and stakeholders quickly understand risk, coverage, and compliance across environments without requiring custom queries or workbooks.
+
+Built-in reports are designed for high-level visibility and decision-making and combine data from secure score, recommendations, vulnerabilities, alerts, and regulatory compliance.
 
 **To view a built-in report:**
 
@@ -77,6 +79,105 @@ Built-in reports provide predefined views of your cloud security data.
 1. Review the report sections and cards to understand your security posture.
 
     :::image type="content" source="media/cloud-security-reporting/built-in-cloud-reports.png" alt-text="Screenshot of Microsoft Defender Reporting page, Cloud tab selected, showing built-in reports CNAPP Executive summary and Cloud posture." lightbox="media/cloud-security-reporting/built-in-cloud-reports.png":::
+
+### CNAPP Executive summary report
+
+The **CNAPP Executive summary** report provides a consolidated, high-level summary of cloud-native application protection platform (CNAPP) signals across your environment. It is designed for security leaders and stakeholders who need a quick, holistic view of cloud risk, coverage, and trends.
+
+#### Overview
+
+Provides a high-level snapshot of key security indicators, including:
+
+- **Threat detection** – The number and severity distribution of active security alerts.
+- **Cloud secure score** – An overall percentage score representing alignment with security best practices.
+- **Security coverage** – The number of assessed assets and how many are protected by enabled security plans.
+
+#### Secure score
+
+Shows how the cloud secure score changes over time, including:
+
+- Overall secure score trend.
+- Secure score breakdown by workload, helping identify areas with higher risk or slower improvement.
+
+#### Vulnerability management
+
+Provides insights into vulnerability exposure and remediation, including:
+
+- Vulnerabilities over time, grouped by severity.
+- Top detected cloud CVEs.
+- Top security recommendations related to vulnerabilities.
+- Visual insights showing vulnerability distribution across environments and resource types.
+
+#### Security recommendations
+
+Displays detected security recommendations across the environment, highlighting configuration gaps and best practice deviations that can be remediated to reduce risk.
+
+#### Investigation & response
+
+Summarizes detection and response activity, including:
+
+- Trends in security alerts by severity.
+- Alert response status, such as resolved, in progress, or dismissed alerts.
+
+#### Regulatory compliance
+
+Shows compliance posture across supported regulatory frameworks, highlighting non-compliant standards and areas that require attention.
+
+#### When to use this report
+
+Use the **CNAPP Executive summary** report when you need to:
+
+- Get a quick, executive-level view of overall cloud security risk
+- Monitor trends in secure score, vulnerabilities, and alerts over time
+- Review security posture and coverage across multiple workloads and environments
+- Support leadership briefings and high-level security reviews
+
+### Cloud posture report
+
+The **Cloud posture** report provides a centralized view of your overall cloud security posture across environments and workloads. It helps you assess security risk, track progress over time, and prioritize remediation efforts.
+
+#### Overview
+
+Summarizes the current security posture, including:
+
+- **Cloud secure score**, showing overall alignment with security best practices.
+- **New cloud secure score impact**, highlighting the potential score improvement from addressing outstanding recommendations.
+- **Defender CSPM plan coverage**, showing which environments are protected by Defender CSPM.
+
+#### Security posture
+
+Shows how the cloud secure score evolves over time, helping you track improvement or regression in your security posture.
+
+The report also provides secure score breakdowns by:
+
+- **Environment**, such as subscriptions or accounts.
+- **Workload**, including compute, containers, databases, and networking.
+
+These views help identify environments or workload types with higher risk exposure.
+
+#### Recommendations
+
+Highlights actionable security recommendations and remediation status, including:
+
+- Most common recommendations by criticality.
+- Recommendations with the highest potential risk reduction.
+
+This section helps prioritize remediation efforts based on impact.
+
+#### Regulatory compliance
+
+Displays compliance posture against supported regulatory standards and frameworks, helping identify compliance gaps and track progress toward regulatory requirements.
+
+#### When to use this report
+
+Use the **Cloud posture** report when you need to:
+
+- Monitor overall security posture and secure score progress
+- Identify high-risk environments or workload types
+- Prioritize remediation based on recommendation impact
+- Track compliance posture across regulatory frameworks
+
+For deeper analysis and custom reporting, you can export data to workbooks, Log Analytics, or external reporting tools.
 
 ## Create a custom report
 
@@ -176,12 +277,6 @@ Report visibility controls who can access each report in your organization.
 - Visibility follows a one-way hierarchy: **Private → Tenant-level access → Public**
 - Once a report is set to a broader visibility level, it cannot be reverted to a more restricted level
 - To reduce visibility, duplicate the report and configure the desired visibility on the new copy
-
-## Next steps
-
-- Explore built-in reports to understand your cloud security posture
-- Create custom reports tailored to your organization's needs
-- Share reports with stakeholders using PDF export
 
 ## Related content
 
