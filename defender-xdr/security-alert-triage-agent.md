@@ -30,7 +30,7 @@ appliesto:
 
 Security Operations Centers (SOCs) process large volumes of alerts across multiple workloads, each with its own triage requirements and context. This can introduce variability in how alerts are evaluated and make it difficult to consistently identify and prioritize high‑risk activity. 
 
-The Microsoft Security Copilot Security Alert Triage Agent in Microsoft Defender is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by applying consistent reasoning, prioritization, and enrichment across supported security workloads.
+The Microsoft Security Copilot Security Alert Triage Agent is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by dynamically reasoning based on evidence to arrive at a verdict for supported security workloads.
 
 The Security Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. 
 
@@ -135,7 +135,7 @@ Activate **Microsoft Defender for Identity** and **Microsoft Defender for Cloud 
 
 ---
 
-## Required permissions for agent users
+## Required user permissions
 
 Users who interact with the Security Alert Triage Agent need these permissions:
 
@@ -157,16 +157,17 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 ## Set up the Security Alert Triage Agent
 
-Make sure you have the [permissions required for agent users](#required-permissions-for-agent-users) and all [prerequisites](#prerequisites) are met before setting up the agent.
+Make sure you have the [required user permissions](#required-user-permissions) and all [prerequisites](#prerequisites) are met before setting up the agent.
 
 ### Begin setup
 
 Open the Security Alert Triage Agent setup wizard in one of two ways:
 
-- From the Security Store in the Microsoft Defender portal, as explained in [Deploy AI agents in Microsoft Defender](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal).
 - From the **Incidents** queue in the Microsoft Defender portal, select **Set up agent**.
 
    :::image type="content" source="media/security-alert-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Security Alert Triage Agent setup option highlighted." lightbox="media/security-alert-triage-agent/phishing-triage-setup-incident.png":::
+
+- From the Security Store in the Microsoft Defender portal, as explained in [Deploy AI agents in Microsoft Defender](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal). The agent might appear as **Phishing Triage Agent** in the Security Store—it’s the same agent.
 
 Follow the steps in the setup wizard, as described in the sections below.
 
