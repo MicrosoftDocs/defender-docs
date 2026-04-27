@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 04/08/2026
+ms.date: 04/20/2026
 ms.collection:
 - m365-security
 - tier1
@@ -29,9 +29,12 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Feature |New Microsoft Secure Score recommendation |Preview |Microsoft Secure Score now includes the **Ensure devices are updated to Secure Boot 2023 certificates and boot manager**, which helps identify devices that haven't yet transitioned to the new Secure Boot 2023 certificates required ahead of the June 2026 expiration.<br><br>Devices that remain on older Secure Boot certificates may become unable to receive new security protections for the early boot process as the certificates approach expiration in June 2026.<br><br>This recommendation provides centralized visibility into deployment status across the environment, which enables organizations to identify exposure, prioritize remediation, and track rollout progress at scale. |
+|Feature |[View action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview) |Preview |You can now view the current status of automatic attack disruption and predictive shielding actions related to a specific incident. You view this data in the **Activities** tab of the incident page. The data applies to the [Contain user](respond-machine-alerts.md#contain-user-from-the-network), [GPO hardening](respond-machine-alerts.md#gpo-hardening-preview), [Safeboot hardening](respond-machine-alerts.md#safeboot-hardening-preview) response actions. |
 |Release - Linux |Build 101.26032.0000 |GA |Release version 30.126032.0000.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--april-2026--101260320000). |
 |Release - macOS |Build 101.26032.0016 |GA |Release version 20.126032.16.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260320016).|
-|Release - Windows |Windows Defender Antivirus: Platform 4.18.26030.3011 / Engine 1.1.26030.3008 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--march-2026--platform-418260303011--engine-11260303008). |
+|Release - macOS |Build 4.18.25040.1 |GA |Release version 4.18.25040.1 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--418250401).|
+|Release - Windows|Windows Defender Antivirus: Platform 4.18.26030.3011 / Engine 1.1.26030.3008 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--march-2026--platform-418260303011--engine-11260303008). |
 |Release - macOS |Build 101.26022.0020 |GA |Release version 20.126022.20.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220020). |
 |Release - macOS |Build 101.26022.0018 |GA |Release version 20.126022.18.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220018).|
 |Release - Android |Build 1.0.8805.0103 |GA |Build 1.0.8805.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--april-2026--platform-1088050103). |
