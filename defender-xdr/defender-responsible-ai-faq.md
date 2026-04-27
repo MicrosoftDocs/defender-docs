@@ -1,6 +1,6 @@
 ---
 title: Responsible AI for Defender and Defender Chat
-description: Learn how <icrosoft applies responsible AI to Defender Chat
+description: Learn how Microsoft applies Responsible AI principles to Microsoft Defender Chat to ensure that AI-generated guidance and insights are trustworthy and reliable for security investigations.
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
@@ -8,7 +8,7 @@ ms.reviewer: Yuval.Zvulun
 ms.topic: faq
 ms.date: 04/10/2026
 
-#customer intent: As a 
+#customer intent: As a security professional using Microsoft Defender Chat, I want to understand how Responsible AI principles are applied so that I can trust the AI-generated guidance and insights provided during security investigations.
 ---
 
 # Responsible AI FAQ for Microsoft Defender Chat
