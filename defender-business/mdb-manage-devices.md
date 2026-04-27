@@ -87,7 +87,7 @@ When Microsoft Defender Antivirus detects threat, the following things happen:
 - If you [secured your Windows devices](/microsoft-365/admin/security-and-compliance/m365bp-devices-enrollment), the threat detections and insights are available on the **Threats and antivirus** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/activethreats>.
 
   > [!TIP]
-  > In Microsoft 365 Business Premium, if you have more than 800 devices [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enroll), you're prompted to view threat detections and insights from Microsoft Intune instead of from the **Threats and antivirus** page.
+  > In Microsoft 365 Business Premium, if you have more than 800 devices [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment), you're prompted to view threat detections and insights from Microsoft Intune instead of from the **Threats and antivirus** page.
 
 In most cases, users don't need to take any further action. As soon as a malicious file or program is detected on a device, Microsoft Defender Antivirus blocks it and prevents it from running. Plus, newly detected threats are added to the antivirus and anti-malware engine so that other devices and users are also protected.
 
