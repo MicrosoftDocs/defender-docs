@@ -39,7 +39,7 @@ The following table describes some of the main features the tool supports.
 | **Help** | A built-in help function displays all available command-line options. |
 | **Configuration files** | You can generate reusable configuration files that make bulk deployments more efficient and less error-prone. |
 | **Working without connectivity** | When connectivity is temporarily unavailable, offline onboarding and offboarding are possible. |
-| **Protections for high-value assets** | The [selective response actions capability (preview)](restrict-response-actions-high-value-assets.md) allows you to restrict high-impact security operations on high-value assets (HVAs) during onboarding to reduce operational risk on critical infrastructure. |
+| **Protections for high-value assets** | The [selective response actions capability (preview)](restrict-response-actions-high-value-assets.md) allows you to restrict high-impact security operations on high-value assets (HVAs) during onboarding to reduce operational risk on critical infrastructure. You configure these restrictions when [creating the onboarding package](#generate-and-download-a-new-onboarding-package). |
 | **Deployment key entry** | To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page. |
 | **Custom expiry** | Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
 | **Ability to view deployment packages** | You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
@@ -55,7 +55,7 @@ To view the complete command reference after [downloading the tool](#generate-an
 The Defender deployment tool supports the following operating systems: Windows 7 SP1, Windows Server 2008 R2 SP1, Windows Server 2012 R2, 2016, 2019, 2022, 2025, Windows 10 (version 1809 and newer), and all versions of Windows 11.
 
 > [!NOTE]
-> The Defender endpoint security solution that the deployment tool installs on Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is **in preview**, and is different than the one for newer versions of Windows and Windows Server. For more information, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
+> The selective response actions capability has different operating system requirements. If you're planning to use this capability, See [Restrict response actions on high-value assets: Supported operating systems](./restrict-response-actions-high-value-assets.md#prerequisites-and-supported-operating-systems).
 
 ## Prerequisites
 
@@ -154,10 +154,6 @@ Once you've determined which type of package you want to generate, select the re
       A list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
       
       :::image type="content" source="./media/defender-deployment-tool-windows/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode options in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/security-operations-mode-menu.png":::
-
-      The following table describes the available security operations that you can allow or disallow when you choose restricted mode.
-
-      [!INCLUDE [configurable-selective-response-actions](includes/configurable-selective-response-actions.md)]
 
       For more information about the security operations modes and the selective response actions capability, see [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md).
 
