@@ -2,12 +2,9 @@
 title: Graph icons and visualizations in Microsoft Defender
 description: Learn about the different icons used in graph nodes and edges when visualizing attack paths, blast radius, and entity relationships in Microsoft Defender 
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender
@@ -20,7 +17,6 @@ ms.topic: overview
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-search.appverid: met150
 ms.date: 09/30/2025
 
 ---

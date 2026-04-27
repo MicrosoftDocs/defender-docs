@@ -6,14 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: meghapriya
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
 ms.date: 08/18/2025
 appliesto:
   - Microsoft Defender for Endpoint for servers

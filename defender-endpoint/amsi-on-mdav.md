@@ -16,9 +16,6 @@ ms.subservice: ngp
 ms.custom: 
 - QuickDraft
 - partner-contribution
-search.appverid: MET150
-f1.keywords:
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2

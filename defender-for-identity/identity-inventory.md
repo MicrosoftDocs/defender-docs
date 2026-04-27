@@ -4,26 +4,46 @@
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
 title: View the Identity inventory
-description: The Identity Inventory provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience. The updated Identities Inventory page is located under Assets in the Microsoft Defender portal.
+description: View and manage all identities across your organization from the Identity inventory page in Microsoft Defender. Investigate identity types, domains, and attributes.
 author: AbbyMSFT
 ms.author: abbyweisberg
 ms.service: microsoft-defender-for-identity
 ms.topic: article
-ms.date: 03/22/2026
+ms.custom: msecd-doc-authoring-106
+ms.date: 04/15/2026
 ms.reviewer: maelgami 
 appliesto: 
 - Microsoft Defender for Identity
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender XDR
+
+#customer intent: As a security admin, I want to view all identities in one place so that I can investigate and manage them efficiently.
+
 ---
 
 # View the Identity inventory
 
 The **Identity inventory** provides a centralized view of all identities in your organization, so you can investigate, monitor, and manage them efficiently. At a glance, see key details like the identity's type, domain, tags, and other attributes to quickly spot identities that require attention.
 
+When you [enable the Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration) in Microsoft Defender for Cloud Apps, SaaS and cloud application accounts are ingested into the Identity inventory. This provides a centralized view of identities across on-premises, cloud, and SaaS environments. With the integration enabled, you get access to unified experiences including the identity timeline, identity-centric response, improved identity correlation, and identity-centric protection.
+
+> [!IMPORTANT]
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate from the Identity inventory. As a result, identity correlations defined in the Identity inventory, including manual and policy-based correlations, don't currently affect the following Defender for Cloud Apps capabilities:
+>
+> - Built-in detections
+> - UEBA (User and Entity Behavior Analytics)
+> - Scoped deployment
+> - Governance actions
+> - Defender for Cloud Apps policies
+> - Activity log
+> - Cloud discovery user enrichment and anonymization
+> - RBAC scoping
+>
+> These features continue to use the Cloud Application Accounts inventory. For more information, see the relevant Defender for Cloud Apps documentation.
+
 The **Identity inventory** page includes tabs for:
 
-- **Human identities**: Human identities discovered in your environment from Active Directory and Microsoft Entra ID.
+- **Human identities**: Human identities discovered in your environment from Active Directory and Microsoft Entra ID. When the Identity inventory integration is enabled, this tab also includes SaaS and cloud application accounts from Defender for Cloud Apps.
 - **Non-Human identities (Preview)**: Non-human identities discovered in your SaaS, Entra ID, and on-premises environments, including:
   - OAuth apps registered in:
     - Microsoft Entra ID
@@ -59,7 +79,7 @@ The top section of the Identity inventory page gives you quick insights into you
 
 - The **Critical Active Directory service accounts** card helps you quickly identify all Active Directory accounts designated as critical, making it easier to focus on identities most at risk.
 
-- The **Cloud application accounts** card connects you to your [Cloud application accounts](/defender-cloud-apps/accounts) identified by the Defender for Cloud apps application connectors.
+- The **Cloud application accounts** card connects you to your [Cloud application accounts](/defender-cloud-apps/accounts) identified by the Defender for Cloud apps application connectors. When the Identity inventory integration is enabled, cloud application accounts also appear in the **Human identities** tab.
 
 ## The identity inventory lists
 

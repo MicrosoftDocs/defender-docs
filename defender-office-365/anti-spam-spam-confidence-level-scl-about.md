@@ -1,14 +1,9 @@
 ---
 title: Spam confidence level
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: 34681000-0022-4b92-b38a-e32b3ed96bf6
 ms.collection: 
   - m365-security

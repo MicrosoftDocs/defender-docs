@@ -1,16 +1,11 @@
 ---
 title: Remove yourself from the blocked senders list and address 5.7.511 Access denied errors
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 06/10/2024
-audience: ITPro
 ms.topic: troubleshooting
 
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.assetid: 0bcecdd4-3343-4cc0-9e58-e19d4de515e8
 ms.collection:
   - m365-security

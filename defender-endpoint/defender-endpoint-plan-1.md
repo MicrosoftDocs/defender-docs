@@ -1,10 +1,8 @@
 ---
 title: Overview of Microsoft Defender for Endpoint Plan 1
 description: Get an overview of Defender for Endpoint Plan 1. Learn about the features and capabilities included in this endpoint protection subscription.
-search.appverid: MET150 
 author: paulinbar
 ms.author: painbar
-audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -13,7 +11,6 @@ ms.date: 05/02/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
 ms.reviewer: shlomiakirav
-f1.keywords: NOCSH
 ms.collection: 
 - m365-security
 - tier1

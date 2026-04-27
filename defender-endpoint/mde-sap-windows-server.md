@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Microsoft Defender Endpoint on Windows Server with SAP"
 description: Understand how Microsoft Defender for Endpoint with EDR and other advanced security capabilities interacts with SAP applications.
 author: paulinbar
@@ -12,9 +12,6 @@ ms.collection:
 ms.custom:
 - partner-contribution
 ms.reviewer: cgardin
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

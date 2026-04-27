@@ -1,10 +1,7 @@
 ---
 title: Threat hunting in Threat Explorer and Real-time detections
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.date: 05/19/2025
 ms.localizationpriority: medium
@@ -15,7 +12,6 @@ description: Learn about threat hunting and remediation in Microsoft Defender fo
 ms.custom:
 - seo-marvel-apr2020
 ms.service: defender-office-365
-search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>

@@ -11,9 +11,6 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: efratka
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: Admin
 ---
 
 # Set up or edit your controlled folder access policy in Microsoft Defender for Business
