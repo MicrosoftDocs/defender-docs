@@ -167,7 +167,7 @@ Open the Security Alert Triage Agent setup wizard in one of two ways:
 
    :::image type="content" source="media/security-alert-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Security Alert Triage Agent setup option highlighted." lightbox="media/security-alert-triage-agent/phishing-triage-setup-incident.png":::
 
-- From the Security Store in the Microsoft Defender portal, as explained in [Deploy AI agents in Microsoft Defender](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal). The agent might appear as **Phishing Triage Agent** in the Security Store—it’s the same agent.
+- From the Security Store in the Microsoft Defender portal, as explained in [Deploy AI agents in Microsoft Defender](../defender-xdr/security-copilot-agents-defender.md#discover-and-deploy-agents-in-the-microsoft-defender-portal). The agent might appear as **Phishing Triage Agent** in the Security Store, but it’s the same agent.
 
 Follow the steps in the setup wizard, as described in the sections below.
 
