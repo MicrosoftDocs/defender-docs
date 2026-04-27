@@ -3,7 +3,7 @@ title: Install Defender for Containers sensor using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
-ms.date: 02/18/2026
+ms.date: 04/27/2026
 ms.author: elkrieger
 ai-usage: ai-assisted
 ---
@@ -30,136 +30,87 @@ Implement all prerequisite requirements for the Defender for Containers sensor a
 
 - Ensure the following components of the Defender for Containers plan are enabled:
    - Defender sensor
-   - Security findings
-   - Registry access
-
-## Install the sensors Helm chart
-
-Depending on your deployment type, follow the relevant instructions to install the Defender for Containers sensor by using Helm:
-
-### [AKS & AKS Automatic](#tab/aks)
-
-#### Prerequisites
-
-**AKS Automatic Only**: Run the following command for AKS Automatic:
-
-  ```azurecli
-  # Update Azure CLI to the latest version 
-  az upgrade 
+  - Kubernetes API access
     
-  # If you don't have the AKS preview extension installed yet 
-  az extension add --name aks-preview 
+- For Multicloud environments (AWS or GCP), ensure the **Auto provision Defender's sensor for Azure Arc** toggle is disabled
+
+  - If your environment also contains clusters that need auto-provisioning, keep the toggle enabled, and apply the tag **ms_defender_e2e_discovery_exclude=true** to clusters you intend to deploy the sensor onto with helm.
     
-  # Update the AKS extension specifically 
-  az extension update --name aks-preview
-  ```
-
-**AKS and AKS Automatic**:
-
-- Helm version 3.8 or later (the available version supports OCI)
-
-- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) and [logged in](/cli/azure/reference-index?view=azure-cli-latest&preserve-view=true) to an account with resource group owner role for the target cluster.
-
-- Azure resource ID for the target cluster
-
-  > [!NOTE]
-  > To generate a list of your AKS clusters' Azure resource IDs, use the following command with a `<SUBSCRIPTION_ID>` and `<RESOURCE_GROUP>`:
-  >
-  >```azurecli
-  >az aks list \
-  >--subscription <SUBSCRIPTION_ID> \
-  >--resource-group <RESOURCE_GROUP> \
-  >--query "[].id" \
-  >-o tsv
-  >```
-
 - Your environment may have policy assignments that can cause the generally available version of the Sensor to deploy. We recommend checking for and removing the conflicting policies before proceeding with the installation:
 
-   The policy assignment ID is `64def556-fbad-4622-930e-72d1d5589bf5`. 
+ The policy definition ID is `64def556-fbad-4622-930e-72d1d5589bf5`. 
 
-   Review [the list of policy definitions for your subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions), and search for this policy assignment to remove it.
+ Review [the list of policy definitions for your subscription](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyMenuBlade/~/Definitions), and search for this policy assignment to remove it.
 
-   Or, run the [delete_conflicting_policies.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/delete_conflicting_policies.sh) script with the following command:
-
-   ```bash   
-   delete_conflicting_policies.sh <CLUSTER_AZURE_RESOURCE_ID>
-   ```
-   This command removes resource group and subscription level policies for setting up the generally available (GA) version of Defender for Containers. It can affect clusters other than the one you're configuring.
+## Install the Helm chart
 
 #### Installation
 
-Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/install_defender_sensor_aks.sh) script to install the Defender for Containers sensor and remove any existing deployment.
+Defender for Containers Helm charts are published to mcr.microsoft.com/azuredefender/microsoft-defender-for-containers
 
-Run the script with the command:
-    
-```bash   
-install_defender_sensor_aks.sh --resource-id <CLUSTER_AZURE_RESOURCE_ID> [--version <VERSION>] [--namespace <NAMESPACE>]
+You may list the published versions by running
+
+
+```bash
+curl https://mcr.microsoft.com/v2/azuredefender/dev/microsoft-defender-for-containers/tags/list
 ```
 
-Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional parameters with your own values: 
+You may install a version by running 
 
-- Replace `<CLUSTER_AZURE_RESOURCE_ID>` with the Azure resource ID of your AKS cluster.
-    
-- Replace `<VERSION>` with:
-  - `latest` for the most recent version.
-  - A specific semantic version.
-    
-- For AKS Automatic clusters, replace `<NAMESPACE>` with `kube-system`. For standard AKS clusters, don’t specify the `--namespace` parameter. The default namespace is `mdc`.
-  
-> [!NOTE]
-> This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
 
-### [EKS and GKE](#tab/eks-and-gke)
+```bash
+helm install defender-k8s 
+```
 
-## Prerequisites
+In order to identify your cluster, you must set one of the nodes of global.cloudIdentifiers, based on which cloud environment the cluster is running in, for example
 
-- Helm version 3.8 or later (the available version supports OCI)
 
-- Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) and [logged in](/cli/azure/reference-index?view=azure-cli-latest&preserve-view=true) to an account with resource group owner role for the security connector.
+```bash
+helm install defender-k8s 
+    --set global.cloudIdentifiers.Azure.subscriptionId="$CLUSTERSUBSCRIPTIONID" \
+    --set global.cloudIdentifiers.Azure.resourceGroupName="$CLUSTERRG" \
+    --set global.cloudIdentifiers.Azure.clusterName="$CLUSTERNAME" \
+    --set global.cloudIdentifiers.Azure.region="$CLUSTERREGION"
+```
 
-- Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
 
-- Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get the security connector resource ID for the account your cluster belongs to.
+```bash
+helm install defender-k8s --create-namespace --namespace mdc oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers:tag \
+    --set global.cloudIdentifiers.AWS.accountId="$ACCOUNTID" \
+    --set global.cloudIdentifiers.AWS.region="$CLUSTERREGION" \
+    --set global.cloudIdentifiers.AWS.clusterName="$CLUSTERNAME"
 
-    For example:
-     ```bash
-        az resource show \
-        --name <connector-name> \
-        --resource-group <resource-group-name> \
-        --resource-type "Microsoft.Security/securityConnectors" \
-        --subscription <subscription-id> \
-        --query id -o tsv
-    ```
-     In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
+```
 
-## Installation
+```bash
+helm install defender-k8s --create-namespace --namespace mdc oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers:tag \
+    --set global.cloudIdentifiers.GCP.projectId="$ACCOUNTID" \
+    --set global.cloudIdentifiers.GCP.location="$CLUSTERLOCATION" \
+    --set global.cloudIdentifiers.GCP.clusterName="$CLUSTERNAME"
+```
 
-1. Use the [install_defender_sensor_mc.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/install_defender_sensor_mc.sh) script to install the Defender for Containers sensor and remove any existing deployment.
+You may find other configuration options for the deployment (like feature flags, or resource limits for pods) by inspecting the values.yaml file for the chart
 
-1. Set the `kubeconfig` context to the target cluster by using the following command:
 
-   ```bash
-   install_defender_sensor_mc.sh --id <SECURITY_CONNECTOR_AZURE_RESOURCE_ID> --version <VERSION> --distribution <DISTRIBUTION>
-   ```
-    
-    Replace the placeholder text `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>`, `<VERSION>`, and `<DISTRIBUTION>` with your own values.
+```
+helm pull oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers:tag
+```
 
-    - Replace `<SECURITY_CONNECTOR_AZURE_RESOURCE_ID>` with the Azure resource ID of your security connector.
+**For** **AKS Automatic only**: set the namespace to kube-system
 
-    - Replace `<VERSION>` with:
-      - `latest` for the most recent version.
-      - A specific semantic version.
-    
-   - Replace `<DISTRIBUTION>` with:
-      - `eks`
-      - `gke`
-      - `eksautomode`
+**For AKS clusters with preexisting deployments of Defender for Containers**: disable the existing deployment as describe [here](/azure/defender-for-cloud/defender-for-containers-azure-configure), and remove any leftover resoures by running
 
-    > [!NOTE]
-    > This script might create a Log Analytics workspace in your Azure account.
-    >
-    > This script tests for an Arc-managed deployment of the Defender for Containers sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
-      
+
+```bash
+kubectl delete crd/policies.defender.microsoft.com || true
+kubectl delete crd/runtimepolicies.defender.microsoft.com || true
+kubectl delete crd/securityartifactpolicies.defender.microsoft.com || true
+kubectl delete ClusterRole defender-admission-controller-cluster-role || true
+kubectl delete ClusterRole defender-admission-controller-resource-cluster-role || true
+kubectl delete ClusterRoleBinding defender-admission-controller-cluster-role-binding || true
+kubectl delete ClusterRoleBinding defender-admission-controller-cluster-resource-role-binding || true
+```
+
 ---
 
 ### Verify the installation
@@ -224,8 +175,7 @@ Run the following command to update an existing Helm-based deployment:
 
 ```bash
 helm upgrade microsoft-defender-for-containers \
-oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers \
---version <version> \
+oci://mcr.microsoft.com/azuredefender/microsoft-defender-for-containers:tag \
 --reuse-values
 ```
 
