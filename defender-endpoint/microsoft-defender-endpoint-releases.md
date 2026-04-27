@@ -392,6 +392,10 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |Configuration|Offline security intelligence updates now run at most once per configured update interval, reducing redundant downloads during service restarts while leaving cloud‑based updates unchanged.|
 |Bug Fix|Resolved an SELinux policy cleanup issue affecting upgrades on some RHEL‑based Linux systems. Upgrading to version 101.26032.0000 ensures safe removal of legacy SELinux modules while preserving customer‑defined policies.|
 
+### Linux | March 24, 2026 | Update: post-release fix
+ 
+Fixed an issue in the January 2026 release, where real-time scanning of the /dev/watchdog device could trigger unexpected system reboots on systems with hardware watchdog enabled. For more information, see [Linux | January 2026 | Platform: 101.25102.0005](#linux--january-2026--platform-101251020005).
+
 ### Linux | March 2026 | 101.26021.0002
 
 #### Release details
