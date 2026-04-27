@@ -58,6 +58,10 @@ Response actions run along the top of a specific device page and include:
 > [!IMPORTANT]
 > For information on availability and support for each response action, see the supported minimum operating system requirements for each feature.
 
+### Limiting high-impact response actions on high-value assets
+
+Some high-impact response actions can be restricted on high-value assets to prevent potential business disruption. For more information, see [Restrict response actions on high-value assets](./restrict-response-actions-high-value-assets.md).
+
 ## Manage tags
 
 Add or manage tags to create a logical group affiliation. Device tags support proper mapping of the network, enabling you to attach different tags to capture context and to enable dynamic list creation as part of an incident.
