@@ -482,6 +482,10 @@ Sample logs that might indicate the issue:
 
 If permissions need to be reconfigured, follow the steps outlined in this [guide](deploy/active-directory-federation-services.md).
 
+## Auditing health alerts persist on sensor v3
+
+In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
+
 ## Next steps
 
 - [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
