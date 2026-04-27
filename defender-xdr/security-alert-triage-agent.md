@@ -28,11 +28,9 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-Security Operations Centers (SOCs) process large volumes of alerts across multiple workloads, each with its own triage requirements and context. This can introduce variability in how alerts are evaluated and make it difficult to consistently identify and prioritize high‑risk activity. 
+Security Operations Centers (SOCs) process large volumes of alerts across multiple workloads, each requiring different context, signals, and investigative depth. Differences in how these alerts are evaluated can lead to inconsistent triage decisions and slow the ability to distinguish real threats from false alarms. As a result, high-risk activity can be missed or delayed, while analysts spend disproportionate time filtering noise instead of acting on what matters most.
 
-The Microsoft Security Copilot Security Alert Triage Agent is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by dynamically reasoning based on evidence to arrive at a verdict for supported security workloads.
-
-The Security Alert Triage Agent evaluates alerts using AI‑driven reasoning, arrives at a verdict, and records its conclusions directly in Microsoft Defender incidents. 
+The Microsoft Security Copilot Security Alert Triage Agent is an autonomous agent embedded in Microsoft Defender that helps security teams triage alerts at scale. It applies AI-driven, dynamic reasoning across evidence to deliver clear verdicts for supported security workloads. By identifying which alerts represent real attacks and which are false positives, the agent enables analysts to focus on investigating real threats, with transparent, step-by-step reasoning to support every decision.
 
 This article provides an overview of the Security Alert Triage Agent, how it works, and its alert triage capabilities.
 
@@ -382,7 +380,7 @@ To view agent metrics and manage the agent, go to the Security Alert Triage Agen
 
    - The **Performance** tab displays key metrics about the agent’s activity over time, including daily activity, mean time to triage (MTTT), and SCU consumption. 
 
-      :::image type="content" source="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page.png" alt-text="Screenshot of the Performance tab on the Security Alert Triage Agent page." lightbox="/defender/media/agents-in-defender/phishing-triage/phishing-triage-agent-page.png":::
+      :::image type="content" source="media/security-alert-triage-agent/phishing-triage-agent-page.png" alt-text="Screenshot of the Performance tab on the Security Alert Triage Agent page." lightbox="media/security-alert-triage-agent/phishing-triage-agent-page.png":::
 
    Select the ellipsis (...) at the top right corner of the page to access management options for the agent, as described in the sections below.
 
