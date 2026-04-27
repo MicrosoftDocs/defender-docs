@@ -34,7 +34,7 @@ This first step in your attack surface reduction (ASR) rules deployment is to pl
 
 ## Infrastructure requirements for the deployment guide
 
-Although there are [multiple ways to enable ASR rules](attack-surface-reduction-rules-configure.md), this deployment guide is based on an infrastructure consisting of:
+Although there are [multiple ways to enable ASR rules](attack-surface-reduction-rules-configure.md), this deployment guide is based on an infrastructure consisting of the following features:
 
 - Microsoft Entra ID
 - Microsoft Intune
@@ -44,13 +44,9 @@ Although there are [multiple ways to enable ASR rules](attack-surface-reduction-
 To take full advantage of ASR rules and reporting, we recommend using a Microsoft Defender XDR E5, Windows E5, or A5 license. Learn more at [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
 > [!NOTE]
-> If you're transitioning from a non-Microsoft host intrusion prevention system (HIPS) to Microsoft Defender Antivirus and ASR rules, we recommend running the HIPS solution alongside ASR rules util you shift to the [implementation phase](attack-surface-reduction-rules-deployment-implement.md). Contact the antivirus solution provider for exclusion recommendations.
+> If you're transitioning from a non-Microsoft host intrusion prevention system (HIPS) to Microsoft Defender Antivirus and ASR rules, we recommend running the HIPS solution alongside ASR rules util you enable rules in **Block** mode during the [implementation phase](attack-surface-reduction-rules-deployment-implement.md). Contact the antivirus solution provider for exclusion recommendations.
 
-### Considerations for unsigned apps
-
-Some ASR rules don't work well if you frequently use unsigned, internally developed apps and scripts. It's more difficult to deploy ASR rules if you don't enforce code signing.
-
-## Start your ASR rules deployment with the right business unit
+## Step 1: Identify business units
 
 How you select the first business unit to receive ASR rules in the [testing phase](attack-surface-reduction-rules-deployment-test.md) depends on the following factors:
 
@@ -67,19 +63,22 @@ Your business needs might clearly dictate one of the following choices:
 - Include multiple business units to get a broad sampling of software, shared folders, scripts, macros, and line of business apps that might be affected by ASR rules.
 - Limit the initial scope to a single business unit, work through all the issues in that business unit, the repeat the roll out to other business units individually.
 
-## Identify ASR rule champions
+## Step 2: Identify ASR rule champions
 
 ASR rule champions are people in the affected business units who can help you during the preliminary testing and implementation phases. Typically, a champion has more technical skills and doesn't mind intermittent workflow outages. Champion involvement continues throughout the broader expansion of ASR rules deployment to your organization. Your ASR rule champions are the first to experience each level of the ASR rules rollout.
 
 It's important to provide a feedback and response channel for your ASR rule champions to alert you to work disruptions and to receive ASR rules rollout communications.
 
-## Inventory line-of-business apps and understand the business unit processes
+## Step 3: Inventory line-of-business apps and understand the business unit processes
 
 A full understanding of the apps and business processes in your organization is critical to a successful ASR rules deployment. It's imperative that you understand how those apps are used within the various business units in your organization.
 
 Take inventory of the approved apps in your organization. You can use tools like the Microsoft 365 Apps admin center to help. For more information, see [Overview of inventory in the Microsoft 365 Apps admin center](/microsoft-365-apps/admin-center/inventory).
 
-## Define reporting and response ASR rules team roles and responsibilities
+> [!NOTE]
+> Some ASR rules don't work well if you frequently use unsigned, internally developed apps and scripts. It's more difficult to deploy ASR rules if you don't enforce code signing.
+
+## Step 4: Define reporting and response ASR rules team roles and responsibilities
 
 Clearly articulating roles and responsibilities of persons responsible for monitoring and communicating ASR rules status and activity is a core activity of attack surface reduction maintenance. Therefore, it's important to determine:
 
@@ -93,11 +92,11 @@ Typical roles and responsibilities include:
 - **Certified security operations center (CSOC) analysts**: Investigate high-priority blocked processes.
 - **Chief information security officer (CISO)**: Responsible for the overall security posture and health of the organization.
 
-## ASR rules ring deployment
+## Step 5: Define ASR rule deployment rings
 
-For large enterprises, Microsoft recommends deploying ASR rules in "rings." Rings are groups of devices that are visually represented as concentric circles that radiate outward like nonoverlapping tree rings. When the innermost ring is successfully deployed, you can transition to the next ring into the testing phase. Thorough assessment of your business units, attack surface reduction rules champions, apps, and processes is imperative to defining your rings.
-In most cases, your organization has deployment rings for phased rollouts of Windows updates. You can use your existing ring design to implement ASR rules.
-See: [Create a deployment plan for Windows](/windows/deployment/update/create-deployment-plan)
+For large enterprises, we recommend deploying ASR rules in _rings_. You define rings through the assessment of your business units, ASR rule champions, apps, and processes. After you successfully deploy ASR rules to the first ring, you can transition to the next ring into the testing phase, and so on. If you already defined rings for phased rollout of Windows updates, you can likely use those same rings to deploy ASR rules.
+
+For more information about rings, see: [Windows: Create a deployment plan](/windows/deployment/update/create-deployment-plan)
 
 ## See also
 

@@ -269,19 +269,19 @@ For information about how ASR rule setting conflicts are handled for the availab
 
 ## Notifications and alerts for ASR rules
 
-When an active ASR rule in **Block** or **Warn** mode is triggered on a device, a notification is displayed on the device. You can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) with your company details and contact information.
+When an ASR rule in **Block** or **Warn** mode is triggered on a device, a notification is displayed on the device. You can customize the information in the notifications. For more information, see [Customize contact information in Windows Security](/windows/security/threat-protection/windows-defender-security-center/wdsc-customize-contact-information).
 
-Also, when certain attack surface reduction rules are triggered, alerts are generated.
-
-Notifications and any alerts that are generated can be viewed in the [Microsoft Defender portal](https://security.microsoft.com).
+[Endpoint Detection and Response (EDR)](overview-endpoint-detection-response.md) alerts in Defender for Endpoint are generated when supported ASR rules are triggered.
 
 For specific details about notification and alert functionality, see [Alerts and notifications from ASR rule actions](attack-surface-reduction-rules-reference.md#alerts-and-notifications-from-asr-rule-actions).
+
+To view ASR alert activity in the Microsoft Defender portal and on devices in Windows Event Viewer, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md)
 
 <a name='review-attack-surface-reduction-events-in-the-microsoft-365-defender-portal'></a>
 
 ## Monitor ASR rule activity
 
-For complete information, see [Monitor attack surface reduction (ASR) rules activity](attack-surface-reduction-rules-monitor.md)
+For complete information, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md)
 
 ## See also
 
@@ -290,6 +290,6 @@ For complete information, see [Monitor attack surface reduction (ASR) rules acti
 - [Test your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-test.md)
 - [Enable attack surface reduction (ASR) rules](attack-surface-reduction-rules-deployment-implement.md)
 - [Manage and monitor your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-operationalize.md)
-- [Monitor attack surface reduction (ASR) rules activity](attack-surface-reduction-rules-monitor.md)
+- [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md)
 - [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)

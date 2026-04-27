@@ -195,7 +195,7 @@ When a user visits a website whose url has a bad reputation, a toast notificatio
 
 :::image type="content" source="media/network-protection-phishing-blocked.png" alt-text="Shows a network protection known phishing content blocked notification." lightbox="media/network-protection-phishing-blocked.png":::
 
-Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) shown for a blocked connection with your organization's details and contact information.
+Your security operations team can [customize the notification](attack-surface-reduction-rules-overview.md#notifications-and-alerts-for-asr-rules) shown for a blocked connection with your organization's details and contact information.
 
 ## SmartScreen Unblock
 

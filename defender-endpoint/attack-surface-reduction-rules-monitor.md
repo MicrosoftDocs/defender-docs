@@ -1,5 +1,5 @@
 ---
-title: Monitor ASR rules activity
+title: Monitor ASR rule activity
 description: Describes how to use advanced hunting and the device timeline to monitor attack surface reduction (ASR) rule events.
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Defender for Business
 ---
 
-# Monitor attack surface reduction (ASR) rules activity
+# Monitor attack surface reduction (ASR) rule activity
 
 A critical part of any deployment of attack surface reduction (ASR) rules deployment is monitoring the affect of rules on devices. This article describes the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 

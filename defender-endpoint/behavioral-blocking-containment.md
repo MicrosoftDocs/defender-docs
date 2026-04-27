@@ -49,7 +49,7 @@ The following image shows an example of an alert that was triggered by behaviora
 
 ## Components of behavioral blocking and containment
 
-- **On-client, policy-driven [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)** Prevent predefined, common attack behavior from apps. To monitor ASR rule detections, see [Monitor attack surface reduction (ASR) rules activity](attack-surface-reduction-rules-monitor.md).
+- **On-client, policy-driven [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)** Prevent predefined, common attack behavior from apps. To monitor ASR rule detections, see [Monitor attack surface reduction (ASR) rule activity(attack-surface-reduction-rules-monitor.md).
 
 - **[Client behavioral blocking](client-behavioral-blocking.md)** Threats on endpoints are detected through machine learning, and then are blocked and remediated automatically. (Client behavioral blocking is enabled by default.)
 
