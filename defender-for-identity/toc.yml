@@ -114,6 +114,10 @@ items:
       href: dashboard.md
     - name: Manage related identities and accounts
       href: manage-related-identities-accounts.md
+    - name: Create custom account correlation rules
+      href: custom-account-correlation-rules.md
+  - name: View and manage health issues
+    href: health-alerts.md
   - name: Best practices for security testing
     href: security-testing-best-practices.md
   - name: Defender for Identity reports

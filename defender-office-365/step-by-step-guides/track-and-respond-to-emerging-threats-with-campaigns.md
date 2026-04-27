@@ -4,7 +4,6 @@ description: Walkthrough of threat campaigns within Microsoft Defender for Offic
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection: 
 - m365-guidance-templates

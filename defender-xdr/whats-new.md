@@ -6,7 +6,6 @@ ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/15/2026
-manager: orspodek
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -32,9 +31,9 @@ You can also get product updates and important notifications through the [messag
 
 ## April 2026
 
-- (Preview) Microsoft Defender now integrates with Microsoft Agent 365 to provide comprehensive security for AI agents onboarded to A365. Microsoft Defender discovers agents registered with Agent 365 and provides visibility into agent inventory and configuration. Agents that integrate the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/) enable discovery, threat detection and investigation through near‑real‑time detections, alerts, and Advanced Hunting. Agents onboarded through the [Microsoft Agent 365’s Agent Tooling Gateway (ATG)](/microsoft-agent-365/tooling-servers-overview) benefit from by real-time protection, which evaluates and can block unsafe agent-initiated tool actions before execution.
-    For more information, see [Protect AI agents using Microsoft Defender](../defender-xdr/security-for-ai/defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender-preview).
+- (Preview) You can now view the current status of automatic attack disruption and predictive shielding actions related to a specific incident. You view this data in the **Activities** tab of the incident page. [Learn more](autoad-results.md#track-the-action-status-in-the-activities-tab-preview)
 - (Preview) The [`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table in advanced hunting now includes additional columns that provide deeper visibility into AI agents operating in your Microsoft 365 environment. These fields expand coverage beyond Copilot Studio to all agent types, including Microsoft Foundry, third-party marketplace, and custom line-of-business agents.
+- (GA) [Built-in alert tuning rules](investigate-alerts.md#built-in-alert-tuning-rules) are now generally available. Built-in alert tuning rules suppress alerts from common benign activity in Defender for Endpoint and Defender for Office 365 without affecting Automated Investigation and Response (AIR) investigations and email notifications.
 - Microsoft Defender Experts for XDR customers can now see **Defender Experts** as a distinct entry in the Microsoft Defender portal navigation menu. This feature adds to the existing home page status card as in-portal experiences that provide consistent and predictable access to the service. [Learn more](start-using-mdex-xdr.md) 
 
 ## March 2026
@@ -64,7 +63,6 @@ You can also get product updates and important notifications through the [messag
     - The [`GraphApiAuditEvents`](advanced-hunting-graphapiauditevents-table.md) table provides information about Microsoft Entra ID API requests made to Microsoft Graph API for resources in the tenant.
 
 ## January 2026
-
 - (Preview) Custom detection rules in Microsoft Defender now support Near Real-Time (NRT) configuration on [Microsoft Sentinel data](custom-detection-rules.md#tables-that-support-continuous-nrt-frequency).
 - (Preview) In advanced hunting, if the query result exceeds the 64-MB size limit, the portal now returns the maximum number of records it can within this limit and displays a message indicating that the displayed results are partial due to size constraints. [Learn more](advanced-hunting-overview.md#quotas-and-usage-parameters)
 - (Preview) The [`BehaviorInfo`](advanced-hunting-behaviorinfo-table.md) and [`BehaviorEntities`](advanced-hunting-behaviorentities-table.md) tables in advanced hunting now include additional columns and information about behavior data types and alerts from User and Entity Behavior Analytics (UEBA), providing more insights on the relationships between identified behaviors and entities. [Learn more about UEBA behaviors](/azure/sentinel/entity-behaviors-layer)
