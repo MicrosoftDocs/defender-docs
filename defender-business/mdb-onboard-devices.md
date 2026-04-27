@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 09/24/2025
+ms.date: 04/26/2026
 ms.reviewer: efratka, nehabha, muktaagarwal
 ms.collection:
  - SMB
@@ -370,12 +370,13 @@ After the command runs, the Command Prompt window closes automatically. If succe
 > Make sure that you meet the following requirements before you onboard a Linux Server endpoint:
 >
 > - You have a Microsoft Defender for Business servers license. (For more information, see [How to get Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers).)
-> - You meet the [prerequisites for Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux#prerequisites).
+> - You meet the [prerequisites for Microsoft Defender for Endpoint on Linux](/defender-endpoint/mde-linux-prerequisites).
 
 ### Onboard Linux Server endpoints
 
 You can use the following methods to onboard an instance of Linux Server to Defender for Business:
 
+- **Defender deployment tool**: [Deploy Microsoft Defender for Endpoint on Linux with Defender deployment tool](/defender-endpoint/linux-install-with-defender-deployment-tool)
 - **Local script**: [Deploy Microsoft Defender for Endpoint on Linux manually](/defender-endpoint/linux-install-manually).
 - **Ansible**: [Deploy Microsoft Defender for Endpoint on Linux with Ansible](/defender-endpoint/linux-install-with-ansible).
 - **Chef**: [Deploy Defender for Endpoint on Linux with Chef](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef).
