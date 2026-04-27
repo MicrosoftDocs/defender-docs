@@ -32,12 +32,12 @@ Security Operations Centers (SOCs) process large volumes of alerts across multip
 
 The Microsoft Security Copilot Security Alert Triage Agent is an autonomous Microsoft Security Copilot agent that helps security teams triage alerts at scale by dynamically reasoning based on evidence to arrive at a verdict for supported security workloads.
 
-The Security Alert Triage Agent evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents. 
+The Security Alert Triage Agent evaluates alerts using AI‑driven reasoning, arrives at a verdict, and records its conclusions directly in Microsoft Defender incidents. 
 
 This article provides an overview of the Security Alert Triage Agent, how it works, and its alert triage capabilities.
 
 > [!NOTE]
-> The Security Alert Triage Agent is currently in preview. It extends the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency in controlled evaluations. The agent applies the same core triage logic and reasoning to a broader set of alerts in Microsoft Defender, starting with a subset of identity and cloud alerts. The set of supported alerts is expected to grow over time.
+> The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency in controlled evaluations. The agent is extended to triage a broader set of alerts in Microsoft Defender, starting with a subset of identity and cloud alerts. These expanded capabilities are currently in preview. The set of supported alerts is expected to grow over time.
 
 ## How the Security Alert Triage Agent works
 
@@ -64,7 +64,7 @@ These prerequisites apply regardless of the alert types you want the agent to tr
 | Prerequisite | Details |
 |:---|:---|
 | **Security Copilot** | Provisioned capacity in **Security Compute Units (SCU)**. See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion). |
-| **Security Copilot plugins** | The Security Alert Triage Agent automatically activates: Microsoft Defender XDR, Microsoft Threat Intelligence, and Security Alert Triage Agent. For more information, see [Plugins overview - Microsoft Security Copilot](/copilot/security/plugin-overview). |
+| **Security Copilot plugins** | The Security Alert Triage Agent automatically activates these plugins: Microsoft Defender XDR, Microsoft Threat Intelligence, and Security Alert Triage Agent. For more information, see [Plugins overview - Microsoft Security Copilot](/copilot/security/plugin-overview). |
 | **Alert-tuning rules** | Disable tuning rules that resolve the alerts you want the agent to triage. The agent doesn't triage resolved alerts. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert). |
 | **Unified RBAC** | Enable unified role-based access control and activate the relevant workloads for the alert types you want to triage. For more information, see [Workload-specific prerequisites](#workload-specific-prerequisites). |
 | **Products and licenses** | You need specific products and licenses based on the alert types you want the agent to triage. For more information, see [Workload-specific prerequisites](#workload-specific-prerequisites). |
@@ -244,7 +244,7 @@ To create a role manually:
 
       :::image type="content" source="/defender-xdr/media/security-alert-triage-agent/agent-permissions-sources.png" alt-text="Screenshot of required data sources for Security Alert Triage" lightbox="/defender-xdr/media/security-alert-triage-agent/agent-permissions-sources.png":::
 
-1. Assign the role to the agent. 
+1. Assign the role to the agent identity. 
 
 > [!IMPORTANT]
 > After assigning the agent its permissions, ensure the user group monitoring the agent has equal or higher permissions to oversee its activity and output. To do this, compare the permissions of the user group to the agent in the Permissions page in the Microsoft Defender portal.
@@ -473,11 +473,9 @@ Following are responses to commonly asked questions about the Security Alert Tri
 
 ### What is the Security Alert Triage Agent, how does it differ from the Phishing Triage Agent, and how do I onboard if I’m already using the agent to triage phishing alerts?
 
-The **Security Alert Triage Agent** is an autonomous Microsoft Security Copilot agent in Microsoft Defender that helps security teams triage alerts at scale. It evaluates alerts using AI‑driven reasoning, determines their relevance and risk, and records its conclusions directly in Microsoft Defender incidents to help analysts prioritize what requires action.
+The **Security Alert Triage Agent** is an autonomous Microsoft Security Copilot agent in Microsoft Defender that helps security teams triage alerts at scale. It evaluates alerts using AI‑driven reasoning, arrives at a verdict, and records its conclusions directly in Microsoft Defender incidents to help analysts prioritize what requires action.
 
-The Security Alert Triage Agent builds on the Phishing Triage Agent, which focuses on triaging user‑reported email and collaboration alerts. Those email and collaboration triage capabilities are generally available (GA).
-
-The Security Alert Triage Agent extends this same triage model to additional alert types, starting with a set of identity and cloud alerts. The set of supported alerts is expected to grow over time. These extended capabilities are currently in preview, while email and collaboration alert triage functionality remains GA.
+The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), extended to triage additional alert types beyond email and collaboration. Email and collaboration alert triage capabilities are generally available (GA), while the expanded identity and cloud alert capabilities are currently in preview. The set of supported alerts is expected to grow over time.
 
 If you’re already using the Phishing Triage Agent, you don’t need to install a new agent. To onboard to the expanded capabilities, open the agent setup wizard, review the prerequisites for the additional alert types, and select the alert types you want the agent to triage.
 
