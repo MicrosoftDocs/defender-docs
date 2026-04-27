@@ -75,24 +75,17 @@ This article walks you through the process of creating and publishing workbooks 
    ```json
    {
     "workbookKey": "YourWorkbookKey", // in the format of "<Name>Workbook". Ensure that the key is unique across all workbooks
- 
-    "logoFileName": "",// If you have a logo, provide the filename here
- 
-    "description": "description of the workbook.", // Will be displayed on the workbooks blade next to the logo and preview images
+     "logoFileName": "",// If you have a logo, provide the filename here
+     "description": "description of the workbook.", // Will be displayed on the workbooks blade next to the logo and preview mages
  
     "dataTypesDependencies": [ "Datatype" ],//The data type(s) that your workbook queries
- 
-    "dataConnectorsDependencies": [],//Relevant connectors
- 
-    "previewImagesFileNames": [ ],//The relative path of the preview images you saved under workbooks/images/previews
- 
-    "version": "1.0", // if this is a new workbook - this should be "1.0"
+     "dataConnectorsDependencies": [],//Relevant connectors
+     "previewImagesFileNames": [ ],//The relative path of the preview images you saved under workbooks/images/previews
+     "version": "1.0", // if this is a new workbook - this should be "1.0"
  
     "title": "Workbook title",//This should be the name of the workbook which will be displayed in the main workbooks blade - for example "Palo Alto overview"
- 
-    "templateRelativePath": "MyNewWorkbook.json",//The relative path of the JSON of the template (the gallery template you saved) 
- 
-    "subtitle": "",
+     "templateRelativePath": "MyNewWorkbook.json",//The relative path of the JSON of the template (the gallery template you saved) 
+     "subtitle": "",
  
     "provider": "Your company name" //Name of the company/author who owns the workbook and is responsible for providing support
     }
