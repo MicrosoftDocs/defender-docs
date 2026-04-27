@@ -124,8 +124,8 @@ No additional configuration is required beyond the general prerequisites.
 ##### Product and license requirements
 
 - [Entra ID P2 license](/entra/fundamentals/licensing)
-- Microsoft Defender for Identity
-- Microsoft Defender for Cloud Apps 
+- [Microsoft Defender for Identity](/defender-for-identity/what-is)
+- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 ##### Unified RBAC requirements
 
