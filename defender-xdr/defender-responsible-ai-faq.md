@@ -1,11 +1,11 @@
 ---
 title: Responsible AI for Defender and Defender Chat
-description: Learn what steps you need to take to get started with Microsoft Defender XDR
+description: Learn how <icrosoft applies responsible AI to Defender Chat
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: Yuval.Zvulun
-ms.topic: concept-article
+ms.topic: faq
 ms.date: 04/10/2026
 ---
 
