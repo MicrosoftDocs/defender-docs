@@ -18,7 +18,7 @@ Defender for Containers supports multiple deployment models for deploying the se
 
 - **Automatic installation flows**: When deploying the sensor by using Helm, skip automatic installation prompts and recommendations in the Azure portal to avoid conflicts with the existing deployment.
 
-## General prerequisites
+## Prerequisites
 
 Before you install the sensor by using Helm, make sure that:
 
