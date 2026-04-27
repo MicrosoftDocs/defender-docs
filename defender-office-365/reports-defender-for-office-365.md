@@ -12,7 +12,7 @@ description: Admins can learn how to find and use the Defender for Office 365 re
 ms.custom:
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 6/27/2025
+ms.date: 4/27/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -151,6 +151,83 @@ When you're finished configuring the filters, select **Apply**, **Cancel**, or :
 On the **Post delivery activities** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)** and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
 :::image type="content" source="media/post-delivery-activities-report.png" alt-text="The Post-delivery activities report." lightbox="media/post-delivery-activities-report.png":::
+
+## Protection & posture insights report
+
+> [!NOTE]
+> This report requires Microsoft Defender for Office 365 Plan 2.
+
+The **Protection & posture insights** report is an on-demand, tenant-specific report that helps you understand how effectively your organization is protected against threats targeting email and collaboration workloads. The report brings together protection effectiveness, security posture, and threat activity into a single, downloadable view. You can use it to assess risk, identify configuration gaps, and communicate security outcomes to stakeholders.
+
+On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Protection & posture insights**, and then select **Generate** to create the report. After the report is generated, the following actions are available:
+
+- **Download report**: Download the report as an HTML file.
+- **Open report**: Open the report in the Defender portal. The report is long, so you need to scroll to see all sections. **Print as PDF** is available to save or print the report.
+
+:::image type="content" source="media/protection-posture-insights-report-widget-post-generate.png" alt-text="Screenshot of the Protection & posture insights report widget after report generation with Download report and Open report available." lightbox="media/protection-posture-insights-report-widget-post-generate.png":::
+
+### What the report contains
+
+The report includes the following information:
+
+- Tenant-specific telemetry from Microsoft Defender for Office 365.
+- Metrics covering threat detection, prevention, delivery outcomes, and policy coverage.
+- Breakdowns of threats by type, confidence, detection technology, and user impact.
+
+Together, these insights show both which threats were present and how effectively your controls handled them.
+
+### Recommended actions
+
+Use the report to:
+
+- Identify configuration gaps, such as incomplete policy coverage or suboptimal threshold settings.
+- Investigate scenarios where threats were delivered to the Inbox or Junk Email folder due to policy overrides or configuration choices.
+- Understand whether priority accounts (if configured) are being disproportionately targeted.
+- Prioritize remediation for high-risk users and prevalent threat types.
+- Support operational decision-making, posture improvements, and stakeholder communications.
+
+### Report sections
+
+- **Executive Summary**: An overview of how many threats and unwanted messages were detected during the reporting period.
+- **Effectiveness**: Complete transparency into the threats that Defender for Office 365 blocked within email.
+- **Threat Landscape**: Broader attacker behaviors and techniques via threat intelligence articles.
+- **Threat Classification**: Threats detected with AI, attributing their intent and type using large language model (LLM) analysis.
+- **Zero-Day Threats (Detonation)**: Threats detected through sandboxing, indicating exposure to advanced attacks and evasion techniques.
+- **Priority Accounts**: The top five users tagged as priority accounts that were targeted with phishing and malware.
+- **Policy Coverage**: Whether your policy configuration ensures all users benefit from key protections.
+- **Delivery Locations**: Where threats ultimately land, directly reflecting user exposure.
+- **Detection Trends**: How threat activity and detection volumes changed over the reporting period.
+- **Inbound Detection Technology**: Which detection layers are doing the work, helping assess defense-in-depth.
+- **Phish Threshold Policy Level**: Detection aggressiveness to outcomes and false-positive risk.
+- **Quarantine Statistics**: The percentage of quarantined email messages that were ultimately released (likely false positives) to help you further tune your protection.
+
+### Frequently asked questions
+
+#### How is policy coverage calculated?
+
+Policy coverage is calculated by evaluating how often messages for each user were processed by Safe Attachments and Safe Links:
+
+- **Protected**: More than 95% of messages were processed for sandboxing.
+- **Partially protected**: Between 10% and 95% of messages were processed.
+- **Unprotected**: Fewer than 10% of messages were processed.
+
+If your overall policy coverage is lower than expected, review your policies to ensure the correct users, groups, and domains are included.
+
+#### Why doesn't the priority accounts insight show user names?
+
+User identities are obfuscated and shown as Microsoft Entra account GUIDs. You can search for the displayed GUID in the Microsoft Entra admin center to identify the corresponding user.
+
+#### How does this report differ from the Defender portal dashboards?
+
+The report provides a consolidated, point-in-time view focused on outcomes and posture, generated directly from tenant telemetry at the time the report is created.
+
+#### Can I validate these findings by using Advanced Hunting?
+
+Yes. Select **Go hunt** in the report to open relevant Advanced Hunting queries. More queries and insights are added over time.
+
+#### How can I provide feedback on the report?
+
+Submit feedback at <https://aka.ms/PPIReportFeedback>.
 
 ## Threat protection status report
 
