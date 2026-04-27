@@ -124,9 +124,30 @@ The page shows a list of jobs and their types. Select a notebook job to view its
 
 ## Service parameters and limits and troubleshooting
 
-For a list of service limits for the Microsoft Sentinel data lake, see [Microsoft Sentinel data lake service limits](notebooks.md#service-parameters-and-limits-for-vs-code-notebooks).  
-  
+### Column names
 
+The following rules apply to column names when using the save_as method to write data from a notebook to the Microsoft Sentinel data lake.
+
++ Column names must start with a letter.
+
++ The following standard columns aren't supported for export. The ingestion process overwrites these columns in the destination tier:
+
+    + TenantId
+    + _TimeReceived
+    + Type
+    + SourceSystem
+    + _ResourceId
+    + _SubscriptionId
+    + _ItemId
+    + _BilledSize
+    + _IsBillable
+    + _WorkspaceId
+
++ `TimeGenerated` is overwritten if it's older than two days. To preserve the original event time, write the source timestamp to a separate column.
+
+For a list of service limits for the Microsoft Sentinel data lake, see [Microsoft Sentinel data lake service limits](notebooks.md#service-parameters-and-limits-for-vs-code-notebooks).  
+
+### Troubleshooting
 For information on troubleshooting, see [Troubleshoot notebooks on the Microsoft Sentinel data lake](notebooks-troubleshooting.md).
 
 ## Related content
