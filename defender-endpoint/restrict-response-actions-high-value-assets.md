@@ -56,7 +56,7 @@ For detailed instructions on how to use the Defender deployment tool to create t
    | Windows 11 24H2 | KB5062660 |
    | Windows 11 25H2 | All |
 
-- To use restricted mode, the feature switch **Allow restricted operations during onboarding** must be enabled. See [Enabling the selective response actions feature](#enabling-the-selective-response-actions-feature).#
+- To use restricted mode, the feature switch **Allow restricted operations during onboarding** must be enabled. See [Enabling the selective response actions feature](#enabling-the-selective-response-actions-feature).
 
 ## Enabling the selective response actions feature
 
@@ -83,12 +83,14 @@ The security operations status of devices can be identified in several ways:
 
 - When the device is in restricted mode, a tag labeled *Restricted security operations* is automatically added to the device to help security teams quickly identify assets with limited functionality. You can see this tag on the **Device page**. The **Device page** also includes a **Security operations** status to reflect the level of remote security capabilities configured for the device:
 
-   :::image type="content" source="./media/restrict-response-actions-high-value-assets/device-page.png" alt-text="Device page showing security operations status" lightbox="./media/restrict-response-actions-high-value-assets/device-page.png":::
-
    - **Full** indicates the device is onboarded with the complete set of Microsoft Defender for Endpoint capabilities. All remote response actions are available.
-   - **Restricted** indicates the device is onboarded with a limited set of response actions available. In the preceding image, you can see that initiating Live Response sessions has been disallowed on the device.
+   - **Restricted** indicates the device is onboarded with a limited set of response actions available.
 
-   To access a detailed list of all security controls and their current status (enabled or disabled) on the device, select **View security operations information**.
+   :::image type="content" source="./media/restrict-response-actions-high-value-assets/device-page.png" alt-text="Device page showing security operations status" lightbox="./media/restrict-response-actions-high-value-assets/device-page.png":::
+   
+   In the preceding image, you can see that initiating Live Response sessions has been disallowed on the device.
+
+   To access a detailed list of all security controls and their current status (enabled or disabled) on the device, select **View security operations information** to display the **Device Security Operations** pane.
 
    :::image type="content" source="./media/restrict-response-actions-high-value-assets/security-operations-details.png" alt-text="Device page showing security operations details." lightbox="./media/restrict-response-actions-high-value-assets/security-operations-details.png":::
 
