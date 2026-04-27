@@ -417,15 +417,15 @@ To edit the agent’s settings:
    
       1. Select **Edit supported alerts** to open the **Agent supported alerts** page.
 
-         :::image type="content" source="media/security-alert-triage-agent/edit-agent-supported-alerts.png" alt-text="":::
+         :::image type="content" source="media/security-alert-triage-agent/edit-agent-supported-alerts.png" alt-text="Screenshot of the Edit supported alerts option on the Edit agent page." lightbox="media/security-alert-triage-agent/edit-agent-supported-alerts.png":::
       
       1. Toggle individual alert types on or off and select **Update**.
 
-         :::image type="content" source="media/security-alert-triage-agent/agent-supported-alerts-settings.png" alt-text="":::
+         :::image type="content" source="media/security-alert-triage-agent/agent-supported-alerts-settings.png" alt-text="Screenshot of the Agent supported alerts page with toggles for each alert type." lightbox="media/security-alert-triage-agent/agent-supported-alerts-settings.png":::
 
       1. Select **Update role permissions** to apply the updates.   
 
-         :::image type="content" source="media/security-alert-triage-agent/update-role-permissions-security-agent.png" alt-text="Screenshot of Agent supported alerts panel with toggles for email, cloud, and identity alerts, and Update button highlighted.":::
+         :::image type="content" source="media/security-alert-triage-agent/update-role-permissions-security-agent.png" alt-text="Screenshot of Agent supported alerts panel with toggles for email, cloud, and identity alerts, and Update button highlighted." lightbox="media/security-alert-triage-agent/update-role-permissions-security-agent.png":::
 
 ### View and manage feedback to the agent
 
@@ -486,9 +486,9 @@ Following are responses to commonly asked questions about the Security Alert Tri
 
 The **Security Alert Triage Agent** is an autonomous Microsoft Security Copilot agent in Microsoft Defender that helps security teams triage alerts at scale. It evaluates alerts using AI‑driven reasoning, arrives at a verdict, and records its conclusions directly in Microsoft Defender incidents to help analysts prioritize what requires action.
 
-The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), extended to triage additional alert types beyond email and collaboration. Email and collaboration alert triage capabilities are generally available (GA), while the expanded identity and cloud alert capabilities are currently in preview. The set of supported alerts is expected to grow over time.
+The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), extended to triage additional alert types beyond email and collaboration. The Security Alert Triage Agent is modular - you choose which alert types you want the agent to triage. The agent now extends to identity and cloud alert, starting with containers, which are currently in preview. Email and collaboration alert triage capabilities are already generally available (GA). The set of supported alerts is expected to grow over time.
 
-If you’re already using the Phishing Triage Agent, you don’t need to install a new agent. The Security Alert Triage Agent is modular—you choose which alert types you want the agent to triage. To onboard to the expanded capabilities, review the [prerequisites](#prerequisites) for the additional alert types and [edit the agent settings](#edit-agent-settings) to select the alert types you want to enable.
+If you’re already using the Phishing Triage Agent, you don’t need to install a new agent. Your existing agent will continue to operate, and you can enable the additional alert types through configuration. To onboard to the expanded capabilities, review the [prerequisites](#prerequisites) for the additional alert types and [edit the agent settings](#edit-agent-settings) to select the alert types you want to enable.
 
 Your existing phishing triage configuration and feedback carry over automatically. For more information, see [How the Security Alert Triage Agent works](#how-the-security-alert-triage-agent-works) and [Set up the Security Alert Triage Agent](#set-up-the-security-alert-triage-agent).
 
