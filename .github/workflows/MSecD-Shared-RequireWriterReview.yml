@@ -152,12 +152,16 @@ jobs:
             fi
           done
 
+          : > /tmp/auth-teams.txt
           if [ -z "$AUTH_FILE" ]; then
             echo "::warning::No authorized-approvers.txt found."
             touch /tmp/resolved-approvers.txt
+            echo "failed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           echo "Found: $AUTH_FILE"
+
+          RESOLVE_FAILED=false
 
           # Resolve team references with pagination and cache
           declare -A TEAM_CACHE
@@ -176,7 +180,8 @@ jobs:
               http_code=$(echo "$response" | tail -n1)
               body=$(echo "$response" | sed '$d')
               if [ "$http_code" != "200" ]; then
-                echo "::warning::Failed to resolve team $key (HTTP $http_code)" >&2
+                echo "::error::Failed to resolve team $key (HTTP $http_code)" >&2
+                RESOLVE_FAILED=true
                 break
               fi
               page_members=$(echo "$body" | jq -r '.[].login' 2>/dev/null || true)
@@ -201,6 +206,8 @@ jobs:
               if [[ "$entry" == *"/"* ]]; then
                 org_name=$(echo "$entry" | cut -d'/' -f1)
                 team_name=$(echo "$entry" | cut -d'/' -f2)
+                # Record team for live-fallback membership checks later
+                echo "${org_name}/${team_name}" >> /tmp/auth-teams.txt
                 resolved=$(resolve_team "$org_name" "$team_name")
                 ALL_USERS="$ALL_USERS $resolved"
               else
@@ -209,43 +216,159 @@ jobs:
             done
           done < "$AUTH_FILE"
 
+          # Deduplicate the recorded team list
+          if [ -s /tmp/auth-teams.txt ]; then
+            sort -u /tmp/auth-teams.txt -o /tmp/auth-teams.txt
+          fi
+
           # Write deduplicated lowercase list
           echo "$ALL_USERS" | tr ' ' '\n' | grep -v '^$' | tr '[:upper:]' '[:lower:]' | sort -u > /tmp/resolved-approvers.txt
-          echo "Resolved $(wc -l < /tmp/resolved-approvers.txt) unique approvers."
+          RESOLVED_COUNT=$(wc -l < /tmp/resolved-approvers.txt)
+          echo "Resolved $RESOLVED_COUNT unique approvers."
           cat /tmp/resolved-approvers.txt
 
+          if [ "$RESOLVE_FAILED" = "true" ] || [ "$RESOLVED_COUNT" -eq 0 ]; then
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+            echo "::warning::Approvers resolution incomplete; cache will not be saved. Live membership fallback will be used."
+          else
+            echo "failed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Save approvers cache
-        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.approvers-cache.outputs.cache-hit != 'true'
+        if: >-
+          steps.resolve.outputs.skip != 'true'
+          && steps.pr-state.outputs.skip != 'true'
+          && steps.approvers-cache.outputs.cache-hit != 'true'
+          && steps.resolve-approvers.outputs.failed != 'true'
         uses: actions/cache/save@v4
         with:
           path: /tmp/resolved-approvers.txt
           key: approvers-${{ steps.cache-key.outputs.hash }}-${{ steps.cache-key.outputs.date }}
 
+      - name: Extract team references for live fallback
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
+        id: teams-list
+        run: |
+          # Build /tmp/auth-teams.txt from the local approvers file. Runs on
+          # every execution so live fallback works even on cache-hit runs.
+          AUTH_FILE=""
+          for path in "authorized-approvers.txt" ".github/authorized-approvers.txt" "docs/authorized-approvers.txt"; do
+            if [ -f "$path" ]; then
+              AUTH_FILE="$path"
+              break
+            fi
+          done
+
+          : > /tmp/auth-teams.txt
+          if [ -z "$AUTH_FILE" ]; then
+            echo "No authorized-approvers.txt found; live fallback will be a no-op."
+            exit 0
+          fi
+
+          while IFS= read -r line || [ -n "$line" ]; do
+            [[ "$line" =~ ^[[:space:]]*# ]] && continue
+            [[ -z "${line// }" ]] && continue
+            owners=$(echo "$line" | grep -oE '@[^ ]+' | sed 's/@//' || true)
+            for entry in $owners; do
+              if [[ "$entry" == *"/"* ]]; then
+                echo "$entry" >> /tmp/auth-teams.txt
+              fi
+            done
+          done < "$AUTH_FILE"
+
+          if [ -s /tmp/auth-teams.txt ]; then
+            sort -u /tmp/auth-teams.txt -o /tmp/auth-teams.txt
+            echo "Team references for live fallback:"
+            cat /tmp/auth-teams.txt
+          fi
+
       - name: Check if sign-off author is authorized
         if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true'
         id: signoff-auth
+        env:
+          TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           USER=$(echo "${{ env.TEST_USER || steps.signoff.outputs.author }}" | tr '[:upper:]' '[:lower:]')
           if grep -qx "$USER" /tmp/resolved-approvers.txt; then
             echo "authorized=true" >> "$GITHUB_OUTPUT"
-            echo "Sign-off author '$USER' is authorized."
-          else
-            echo "authorized=false" >> "$GITHUB_OUTPUT"
-            echo "Sign-off author '$USER' is NOT authorized."
+            echo "Sign-off author '$USER' is authorized (cache hit)."
+            exit 0
           fi
+          # Live fallback: check team membership directly via API.
+          if [ -s /tmp/auth-teams.txt ]; then
+            while IFS= read -r team_ref || [ -n "$team_ref" ]; do
+              org=$(echo "$team_ref" | cut -d'/' -f1)
+              team=$(echo "$team_ref" | cut -d'/' -f2)
+              http_code=$(curl -s -o /dev/null -w "%{http_code}" \
+                -H "Authorization: token $TOKEN" \
+                "https://api.github.com/orgs/${org}/teams/${team}/memberships/${USER}")
+              if [ "$http_code" = "200" ]; then
+                echo "authorized=true" >> "$GITHUB_OUTPUT"
+                echo "Sign-off author '$USER' is authorized (live fallback: ${team_ref})."
+                exit 0
+              fi
+            done < /tmp/auth-teams.txt
+          fi
+          echo "authorized=false" >> "$GITHUB_OUTPUT"
+          echo "Sign-off author '$USER' is NOT authorized."
 
       - name: Check if PR author is authorized
         if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.pr-state.outputs.has_qualifies == 'true' && steps.signoff.outputs.is_signoff != 'true'
         id: pr-author-auth
+        env:
+          TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           USER=$(echo "${{ env.TEST_USER || steps.pr-state.outputs.pr_author }}" | tr '[:upper:]' '[:lower:]')
           if grep -qx "$USER" /tmp/resolved-approvers.txt; then
             echo "authorized=true" >> "$GITHUB_OUTPUT"
-            echo "PR author '$USER' is authorized."
-          else
-            echo "authorized=false" >> "$GITHUB_OUTPUT"
-            echo "PR author '$USER' is NOT authorized."
+            echo "PR author '$USER' is authorized (cache hit)."
+            exit 0
           fi
+          if [ -s /tmp/auth-teams.txt ]; then
+            while IFS= read -r team_ref || [ -n "$team_ref" ]; do
+              org=$(echo "$team_ref" | cut -d'/' -f1)
+              team=$(echo "$team_ref" | cut -d'/' -f2)
+              http_code=$(curl -s -o /dev/null -w "%{http_code}" \
+                -H "Authorization: token $TOKEN" \
+                "https://api.github.com/orgs/${org}/teams/${team}/memberships/${USER}")
+              if [ "$http_code" = "200" ]; then
+                echo "authorized=true" >> "$GITHUB_OUTPUT"
+                echo "PR author '$USER' is authorized (live fallback: ${team_ref})."
+                exit 0
+              fi
+            done < /tmp/auth-teams.txt
+          fi
+          echo "authorized=false" >> "$GITHUB_OUTPUT"
+          echo "PR author '$USER' is NOT authorized."
+
+      - name: Check if reopener is authorized
+        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && github.event_name == 'pull_request_target' && github.event.action == 'reopened'
+        id: reopener-auth
+        env:
+          TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          USER=$(echo "${{ env.TEST_USER || github.event.sender.login }}" | tr '[:upper:]' '[:lower:]')
+          if grep -qx "$USER" /tmp/resolved-approvers.txt; then
+            echo "authorized=true" >> "$GITHUB_OUTPUT"
+            echo "Reopener '$USER' is authorized (cache hit)."
+            exit 0
+          fi
+          if [ -s /tmp/auth-teams.txt ]; then
+            while IFS= read -r team_ref || [ -n "$team_ref" ]; do
+              org=$(echo "$team_ref" | cut -d'/' -f1)
+              team=$(echo "$team_ref" | cut -d'/' -f2)
+              http_code=$(curl -s -o /dev/null -w "%{http_code}" \
+                -H "Authorization: token $TOKEN" \
+                "https://api.github.com/orgs/${org}/teams/${team}/memberships/${USER}")
+              if [ "$http_code" = "200" ]; then
+                echo "authorized=true" >> "$GITHUB_OUTPUT"
+                echo "Reopener '$USER' is authorized (live fallback: ${team_ref})."
+                exit 0
+              fi
+            done < /tmp/auth-teams.txt
+          fi
+          echo "authorized=false" >> "$GITHUB_OUTPUT"
+          echo "Reopener '$USER' is NOT authorized."
 
       # --- Branch 1: Unauthorized sign-off → hold-off + block label ---
 
@@ -355,3 +478,46 @@ jobs:
             -d @-
 
           echo "Explanation comment added."
+
+      # --- Branch 4: Authorized reopen → restore label ---
+
+      - name: Restore auto-merge label on authorized reopen
+        if: >-
+          steps.resolve.outputs.skip != 'true'
+          && steps.pr-state.outputs.skip != 'true'
+          && github.event_name == 'pull_request_target'
+          && github.event.action == 'reopened'
+          && steps.reopener-auth.outputs.authorized == 'true'
+          && steps.pr-state.outputs.has_blocked == 'true'
+          && steps.signoff.outputs.is_signoff != 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          REOPENER: ${{ env.TEST_USER || github.event.sender.login }}
+          PR_NUMBER: ${{ steps.pr-state.outputs.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          echo "Reopener '$REOPENER' is authorized. Restoring auto-merge label..."
+
+          curl -s -X DELETE \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/blocked-qualifies-for-auto-merge"
+
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+            -d '{"labels":["qualifies-for-auto-merge"]}'
+
+          echo "Restored 'qualifies-for-auto-merge' label."
+
+          COMMENT_BODY="Auto-merge restored on reopen by authorized approver @${REOPENER}."
+
+          jq -n --arg body "$COMMENT_BODY" '{body: $body}' | \
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
+            -d @-
+
+          echo "Confirmation comment added."
