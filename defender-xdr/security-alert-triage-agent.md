@@ -514,8 +514,6 @@ To set up the agent, you must have access to **Security Copilot in Microsoft Def
  
 ### I've tried the Security Alert Triage Agent - how can I estimate the SCU capacity needed for the agent in my organization?
 
-After setup, the agent automatically starts consuming SCUs provisioned for the workspace when the trial period ends.
-
 It's important to ensure that your organization has sufficient SCUs for healthy agent operation. To evaluate SCU usage and plan capacity going forward, see the [Usage monitoring dashboard in the Security Copilot portal](https://securitycopilot.microsoft.com/usage-monitoring) and check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion). The dashboard shows:
 
 - **Cost per email processed**
