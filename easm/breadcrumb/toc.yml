@@ -1,0 +1,11 @@
+- name: Azure
+  tocHref: /azure/
+  topicHref: /azure/index
+  items:
+  - name: Security
+    tocHref: /azure/security/
+    topicHref: /azure/security/
+    items:
+    - name: Microsoft Defender External Attack Surface Management
+      tocHref: /azure/external-attack-surface-management/
+      topicHref: /azure/external-attack-surface-management/
