@@ -29,7 +29,7 @@ The selective response actions capability mitigates these risks. By limiting the
 
 ### How does the feature work??
 
-First, the feature must be enabled on the tenant. See [Enable selective response actions](enable-selective-response-actions.md).
+First, the feature must be enabled on the tenant. See [Enable selective response actions](#enabling-the-selective-response-actions-feature).
 
 Once the feature is enabled, you use the Defender deployment tool (DDT) to create an onboarding package with restricted security operations settings. When you're configuring the package, you choose between full functionality (where all response actions are allowed on the onboarded device) and restricted functionality (where high-impact response actions can be disallowed). If you choose restricted functionality, you can then specify which actions are allowed on the device once it's onboarded.
 
