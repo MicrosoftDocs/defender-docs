@@ -64,7 +64,7 @@ To access cloud reporting:
 1. Go to the **Reporting** page in the Microsoft Defender portal.
 . Select the **Cloud** tab.
 
-:::image type="content" source="media/cloud-security-reporting/reports-cloud.webp" alt-text="Screenshot of Microsoft Defender Reports page with the Cloud tab selected, showing Unified security summary and Query resources reports." lightbox="media/cloud-security-reporting/reports-cloud.webp":::---
+:::image type="content" source="media/cloud-security-reporting/reports-cloud.png" alt-text="Screenshot of Microsoft Defender Reports page with the Cloud tab selected, showing Unified security summary and Query resources reports." lightbox="media/cloud-security-reporting/reports-cloud.png":::
 
 ## View built-in reports
 
@@ -76,7 +76,7 @@ Built-in reports provide predefined views of your cloud security data.
 1. Select a report such as **CNAPP Executive Summary** or **Cloud Posture**.
 1. Review the report sections and cards to understand your security posture.
 
-    :::image type="content" source="media/cloud-security-reporting/cnapp-report.png" alt-text="Screenshot of Microsoft Defender Reporting page, Cloud tab selected, showing built-in reports CNAPP Executive summary and Cloud posture." lightbox="media/cloud-security-reporting/cnapp-report.png":::
+    :::image type="content" source="media/cloud-security-reporting/built-in-cloud-reports.png" alt-text="Screenshot of Microsoft Defender Reporting page, Cloud tab selected, showing built-in reports CNAPP Executive summary and Cloud posture." lightbox="media/cloud-security-reporting/built-in-cloud-reports.png":::
 
 ## Create a custom report
 
@@ -94,7 +94,7 @@ You can create custom reports to address specific reporting needs.
    - Edit card titles as needed
    - Adjust card sizes for optimal layout
 
-    :::image type="content" source="media/cloud-security-reporting/report-add-card.webp" alt-text="Screenshot of Add card panel in a report showing secure score charts, filter options, and a search bar.":::
+    :::image type="content" source="media/cloud-security-reporting/report-add-card.png" alt-text="Screenshot of Add card panel in a report showing secure score charts, filter options, and a search bar.":::
 
 1. Select **Save**.
 
@@ -134,7 +134,7 @@ You can export reports to PDF for sharing or archival purposes.
 1. Wait for the export to complete.
 1. The PDF file downloads to your local device.
 
-:::image type="content" source="media/cloud-security-reporting/export-report.webp" alt-text="Screenshot of an Export to PDF dialog in a report, showing upload logo option, Export to PDF and Cancel buttons." lightbox="media/cloud-security-reporting/export-report.webp":::
+:::image type="content" source="media/cloud-security-reporting/export-report.png" alt-text="Screenshot of an Export to PDF dialog in a report, showing upload logo option, Export to PDF and Cancel buttons." lightbox="media/cloud-security-reporting/export-report.png":::
 
 ## Filter reports
 
@@ -157,7 +157,7 @@ Report visibility controls who can access each report in your organization.
 - **Tenant-level access**: Available to users with permissions to view tenant-level data
 - **Public**: Available to users with minimal permissions
 
-:::image type="content" source="media/cloud-security-reporting/report-visibility.webp" alt-text="Screenshot of Microsoft Defender Experts Reports page with the Visible to filter set to Private and the Apply button highlighted." lightbox="media/cloud-security-reporting/report-visibility.webp":::
+:::image type="content" source="media/cloud-security-reporting/report-visibility.png" alt-text="Screenshot of Microsoft Defender Experts Reports page with the Visible to filter set to Private and the Apply button highlighted." lightbox="media/cloud-security-reporting/report-visibility.png":::
 
 ### Update report visibility
 
