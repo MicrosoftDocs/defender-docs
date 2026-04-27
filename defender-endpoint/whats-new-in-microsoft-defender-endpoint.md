@@ -29,6 +29,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Feature |[View action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview) |Preview |You can now view the current status of automatic attack disruption and predictive shielding actions related to a specific incident. You view this data in the **Activities** tab of the incident page. The data applies to the [Contain user](respond-machine-alerts.md#contain-user-from-the-network), [GPO hardening](respond-machine-alerts.md#gpo-hardening-preview), [Safeboot hardening](respond-machine-alerts.md#safeboot-hardening-preview) response actions. |
 |Release - Linux |Build 101.26032.0000 |GA |Release version 30.126032.0000.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--april-2026--101260320000). |
 |Release - macOS |Build 101.26032.0016 |GA |Release version 20.126032.16.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260320016).|
 |Release - Windows |Windows Defender Antivirus: Platform 4.18.26030.3011 / Engine 1.1.26030.3008 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--march-2026--platform-418260303011--engine-11260303008). |
