@@ -477,7 +477,7 @@ The **Security Alert Triage Agent** is an autonomous Microsoft Security Copilot 
 
 The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), extended to triage additional alert types beyond email and collaboration. Email and collaboration alert triage capabilities are generally available (GA), while the expanded identity and cloud alert capabilities are currently in preview. The set of supported alerts is expected to grow over time.
 
-If you’re already using the Phishing Triage Agent, you don’t need to install a new agent. To onboard to the expanded capabilities, open the agent setup wizard, review the prerequisites for the additional alert types, and select the alert types you want the agent to triage.
+If you’re already using the Phishing Triage Agent, you don’t need to install a new agent. The Security Alert Triage Agent is modular—you choose which alert types you want the agent to triage. To onboard to the expanded capabilities, review the prerequisites for the additional alert types and [edit the agent settings](#edit-agent-settings) to select the alert types you want to enable.
 
 Your existing phishing triage configuration and feedback carry over automatically. For more information, see [How the Security Alert Triage Agent works](#how-the-security-alert-triage-agent-works) and [Set up the Security Alert Triage Agent](#set-up-the-security-alert-triage-agent).
 
