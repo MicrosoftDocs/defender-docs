@@ -174,6 +174,9 @@ Once you've determined which type of package you want to generate, select the re
 
 ---
 
+> [!NOTE] 
+> For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
+
 ## Deploy Defender endpoint security on devices
 
 The Defender deployment tool can be used interactively or non-interactively.
