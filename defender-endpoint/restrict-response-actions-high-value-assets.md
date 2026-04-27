@@ -27,7 +27,7 @@ Another reason the selective response actions capability is needed is that organ
 
 The selective response actions capability mitigates these risks. By limiting the intrusive actions that can be performed on Tier-0 assets, this capability reduces the risk of accidental or malicious disruption.
 
-### How does the feature work??
+### How does the feature work?
 
 First, the feature must be enabled on the tenant. See [Enable selective response actions](#enabling-the-selective-response-actions-feature).
 
