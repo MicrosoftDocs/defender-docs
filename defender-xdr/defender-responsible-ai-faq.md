@@ -7,6 +7,8 @@ author: mberdugo
 ms.reviewer: Yuval.Zvulun
 ms.topic: faq
 ms.date: 04/10/2026
+
+#customer intent: As a 
 ---
 
 # Responsible AI FAQ for Microsoft Defender Chat
