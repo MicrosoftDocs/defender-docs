@@ -17,7 +17,7 @@ This FAQ describes how Responsible AI (RAI) principles apply to **Microsoft Defe
 
 Microsoft Defender Chat is a natural language, generative AI-powered chat experience embedded within the Microsoft Defender XDR portal. It enables Security Operations Center (SOC) analysts, security administrators, and IT professionals to investigate security incidents, analyze threats, and perform complex security tasks through a conversational interface. 
 
-The system takes **natural language text input** (up to 1,024 characters per message) and produces AI-generated responses in rich markdown format, including formatted text, tables, links, and structured data. Users type questions or describe security tasks in everyday language, and the system leverages large language models (LLMs) alongside integrated Microsoft Defender XDR data sources to deliver contextual, actionable security insights. 
+The system takes **natural language text input** (up to 1,024 characters per message) and produces AI-generated responses in rich markdown format, including formatted text, tables, links, and structured data. Users type questions or describe security tasks in everyday language, and the system applies large language models (LLMs) alongside integrated Microsoft Defender XDR data sources to deliver contextual, actionable security insights. 
 
 At a high level, the Defender Chat: 
 
@@ -39,7 +39,7 @@ The Defender Chat helps SOC analysts and security professionals with the followi
 
 - **Identity and user enrichment**: Investigate user profiles with details such as department, job title, manager, and contact information. Review risk scores from multiple sources (Threat Score, Defender Risk Score, Entra ID Risk Level), associated devices, logon types, and activity timelines. 
 
-- **IP address intelligence**: Investigate IP addresses with geolocation data, reputation scores and rules, organizational prevalence (how many devices in the organization have communicated with the IP), and observed device associations. 
+- **IP address intelligence**: Investigate IP addresses with geolocation data, reputation scores, and rules, organizational prevalence (how many devices in the organization communicated with the IP), and observed device associations. 
 
 - **Multi-step investigation plans**: For complex investigations requiring multiple data retrieval steps, the system proposes structured plans for user review and approval before execution. Users can approve or reject these plans, maintaining full control over the investigation workflow. 
 
@@ -47,7 +47,7 @@ The Defender Chat helps SOC analysts and security professionals with the followi
 
 ## What is the Defender Chat intended use? 
 
-Microsoft Defender Chat is intended to support security professionals,including SOC analysts, security administrators, and IT professionals, in performing security investigation and response tasks within the Microsoft Defender XDR portal. Its primary intended uses include: 
+Microsoft Defender Chat is intended to support security professionals, including SOC analysts, security administrators, and IT professionals, in performing security investigation and response tasks within the Microsoft Defender XDR portal. Its primary intended uses include: 
 
 - **Security incident triage and investigation**: Helping analysts quickly understand the scope, severity, and impact of security incidents by aggregating and summarizing data from multiple Defender XDR data sources. 
 
@@ -61,13 +61,13 @@ Microsoft Defender Chat is **not** intended for:
 
 - Automated remediation or response actions (it's a read-only investigation tool; it doesn't modify security configurations, quarantine devices, or take enforcement actions). 
 
-- Use outside the security investigation domain. Prompts unrelated to security operations may produce incomplete or inaccurate responses. 
+- Use outside the security investigation domain. Prompts unrelated to security operations can produce incomplete or inaccurate responses. 
 
-- Replacement of human analyst judgment. All AI-generated analysis should be reviewed and validated by qualified security professionals before decisions or actions are taken. 
+- Replacement of human analyst judgment. Qualified security professionals should review all AI-generated analysis before decisions or actions are taken. 
 
 ## How was Microsoft Defender Chat evaluated? What metrics are used to measure performance? 
 
-Microsoft Defender Chat has undergone thorough evaluation prior to release, including: 
+Microsoft Defender Chat underwent thorough evaluation before release, including: 
 
 - **Red teaming exercises**: Rigorous testing to identify failure modes, edge cases, and scenarios where the system might produce responses outside its intended scope or that conflict with Microsoft's AI Principles. 
 
@@ -75,29 +75,29 @@ Microsoft Defender Chat has undergone thorough evaluation prior to release, incl
 
 - **Tool execution reliability**: Evaluation of the system's ability to correctly invoke the appropriate data retrieval tools, handle errors gracefully, and produce consistent results across different query types and data conditions. 
 
-- **Safety evaluation**: Testing to ensure the system does not reveal internal implementation details, tool names, or system prompt information to users, and that it handles adversarial or out-of-scope prompts appropriately. 
+- **Safety evaluation**: Testing to ensure the system doesn't reveal internal implementation details, tool names, or system prompt information to users, and that it handles adversarial or out-of-scope prompts appropriately. 
 
-User feedback plays a critical role in ongoing evaluation. Every response includes *thumbs up* and *thumbs down* feedback buttons. When a response is inaccurate, incomplete, or unclear, users are encouraged to use the thumbs down button and provide details. When responses are accurate and helpful, the thumbs up button helps confirm positive performance. This feedback is sent directly to Microsoft and is used to continuously improve the system. 
+User feedback plays a critical role in ongoing evaluation. Every response includes *thumbs up* and *thumbs down* feedback buttons. When a response is inaccurate, incomplete, or unclear, users are encouraged to use the thumbs down button and provide details. When responses are accurate and helpful, the *thumbs up* button helps confirm positive performance. This feedback is sent directly to Microsoft and is used to continuously improve the system. 
 
 ## What are the limitations of Microsoft Defender Chat? How can users minimize the impact of its limitations when using the system? 
 
-Like any AI-powered system, Microsoft Defender Chat has known limitations: 
+Like any AI-powered system, Microsoft Defender Chat has some known limitations: 
 
-- **AI-generated content may be incorrect**: The system generates responses probabilistically and may produce inaccurate, incomplete, or outdated information. A persistent disclaimer ("AI-generated content may be incorrect. Check it for accuracy.") is displayed in the interface at all times. Users should always verify AI-generated analysis against authoritative data sources before making decisions. 
+- **AI-generated content might be incorrect**: The system generates responses probabilistically and might produce inaccurate, incomplete, or outdated information. A persistent disclaimer ("AI-generated content might be incorrect. Check it for accuracy.") is displayed in the interface always. Users should always verify AI-generated analysis against authoritative data sources before making decisions. 
 
-- **Scope limited to security operations**: The system is designed to respond to prompts related to the security domain, specifically Microsoft Defender XDR investigation scenarios. Questions outside this scope may produce irrelevant, incomplete, or inaccurate responses. 
+- **Scope limited to security operations**: The system is designed to respond to prompts related to the security domain, specifically Microsoft Defender XDR investigation scenarios. Questions outside this scope might produce irrelevant, incomplete, or inaccurate responses. 
 
-- **Read-only access**: The system retrieves and analyzes data but cannot take remediation or response actions. Users who need to take action based on the analysis must do so through the standard Defender XDR portal workflows. 
+- **Read-only access**: The system retrieves and analyzes data but can't take remediation or response actions. Users who need to take action based on the analysis must do so through the standard Defender XDR portal workflows. 
 
-- **Data currency**: Responses are based on the data available at the time of the query. If underlying data changes between queries, responses may become stale. Default lookback windows (typically 7 or 30 days depending on the query type) may not capture all relevant historical data. 
+- **Data currency**: Responses are based on the data available at the time of the query. If underlying data changes between queries, responses may become stale. Default lookback windows (typically 7 or 30 days depending on the query type) might not capture all relevant historical data. 
 
-- **Input length limitations**: User messages are limited to 1,024 characters. Complex queries may need to be broken into multiple messages. 
+- **Input length limitations**: User messages are limited to 1,024 characters. Complex queries might need to be broken into multiple messages. 
 
-- **Contextual inference**: The system infers context from the current page URL and conversation history. In some cases, these inferences may be incorrect, leading to results that don't match the user's intent. If results seem off, users should provide explicit identifiers (incident IDs, device names, etc.) rather than relying on contextual references like "this incident" or "here." 
+- **Contextual inference**: The system infers context from the current page URL and conversation history. In some cases, these inferences might be incorrect, leading to results that don't match the user's intent. If results seem off, users should provide explicit identifiers (incident IDs, device names, etc.) rather than relying on contextual references like "this incident" or "here." 
 
-- **Rate limiting and capacity**: During periods of high demand, the system may experience throttling. Users will see a message indicating high demand and should try again after a brief wait. 
+- **Rate limiting and capacity**: During periods of high demand, the system might experience throttling. Users will see a message indicating high demand and should try again after a brief wait. 
 
-- **Permission-dependent results**: The system respects existing Defender XDR role-based access control (RBAC). If a user does not have permission to access certain incidents, alerts, or entities, the system will return an error for those specific queries. Results reflect only what the authenticated user is authorized to view. 
+- **Permission-dependent results**: The system respects existing Defender XDR role-based access control (RBAC). If a user doesn't have permission to access certain incidents, alerts, or entities, the system returns an error for those specific queries. Results reflect only what the authenticated user is authorized to view. 
 
 **To minimize the impact of these limitations**: 
 
@@ -115,7 +115,7 @@ Like any AI-powered system, Microsoft Defender Chat has known limitations:
 
 Microsoft Defender Chat provides several mechanisms for effective and responsible use: 
 
-- **Natural language interaction**: Users can type everyday language to describe what they need. For example, "Show me the highest severity incidents from the last 7 days" or "What devices are affected by incident 12345?" 
+- **Natural language interaction**: Users can type everyday language to describe what they need. For example, "Show me the highest severity incidents from the last seven days" or "What devices are affected by incident 12345?" 
 
 - **Transparent reasoning**: As the system processes a request, it displays a "Reasoning" section showing the tools being invoked and their status (in progress, completed, failed, or skipped), along with the duration. This gives users visibility into how the system arrives at its conclusions. 
 
@@ -129,7 +129,7 @@ Microsoft Defender Chat provides several mechanisms for effective and responsibl
 
 - **Feedback mechanism**: Every response includes thumbs up and thumbs down buttons, enabling users to provide immediate, contextual feedback on response quality. 
 
-- **AI-generated content disclaimer**: A persistent disclaimer reminds users that AI-generated content may be incorrect and should be checked for accuracy. 
+- **AI-generated content disclaimer**: A persistent disclaimer reminds users that AI-generated content might be incorrect and should be checked for accuracy. 
 
 - **Access controls**: The system inherits Microsoft Defender XDR RBAC permissions. Administrators control which users can access the Chat feature, and the system only returns data that the authenticated user is authorized to view. 
 
@@ -139,7 +139,7 @@ Microsoft Defender Chat provides several mechanisms for effective and responsibl
 
 Microsoft Defender Chat provides built-in feedback mechanisms directly in the interface: 
 
-- **Per-response feedback**: Every completed response includes *thumbs up* (I like this) and *thumbs down* (I don't like this) buttons. Clicking either button opens a feedback dialog where you can provide additional detail about what was helpful or what could be improved. This feedback is sent directly to Microsoft and is used to improve the system. 
+- **Per-response feedback**: Every completed response includes *thumbs up* (I like this) and *thumbs down* (I don't like this) buttons. Clicking either button opens a feedback dialog where you can provide more detail about what was helpful or what could be improved. This feedback is sent directly to Microsoft and is used to improve the system. 
 
 - **General product feedback**: For broader feedback about the Chat experience, you can use the standard feedback channels available within the Microsoft Defender XDR portal. 
 
@@ -147,23 +147,23 @@ Your feedback is valuable and directly contributes to improving the accuracy, re
 
 ## How is Microsoft approaching Responsible AI for Defender Chat? 
 
-At Microsoft, we take our commitment to responsible AI seriously. Defender Chat has been developed in accordance with [Microsoft's AI Principles](https://www.microsoft.com/ai/principles-and-approach) and the [Microsoft Responsible AI Standard](https://aka.ms/RAIStandardPDF). Key aspects of our approach include: 
+At Microsoft, we take our commitment to responsible AI seriously. Defender Chat was developed in accordance with [Microsoft's AI Principles](https://www.microsoft.com/ai/principles-and-approach) and the [Microsoft Responsible AI Standard](https://aka.ms/RAIStandardPDF). Key aspects of our approach include: 
 
 - **Human-centered design**: The system is designed to augment security analysts' capabilities, not replace their judgment. Features like plan approval, transparent reasoning, and persistent accuracy disclaimers keep humans at the center of the investigation process. 
 
 - **Safety systems**: The system includes safeguards to prevent misuse, including scope limitation to security investigation scenarios, restrictions on revealing internal implementation details, and graceful handling of out-of-scope or adversarial prompts. 
 
-- **Privacy and data security**: The system operates within the existing Microsoft Defender XDR security and privacy framework. Conversation data is stored locally in the user's browser and is not used to improve the chat. The system respects existing RBAC permissions and does not access data beyond what the authenticated user is authorized to view. For more information regarding privacy handling within XDR see [Data retention and data security in Microsoft Defender XDR](./data-privacy.md). 
+- **Privacy and data security**: The system operates within the existing Microsoft Defender XDR security and privacy framework. Conversation data is stored locally in the user's browser and isn't used to improve the chat. The system respects existing RBAC permissions and doesn't access data beyond what the authenticated user is authorized to view. For more information regarding privacy handling within XDR, see [Data retention and data security in Microsoft Defender XDR](./data-privacy.md). 
 
 - **Continuous improvement**: User feedback collected through the built-in feedback mechanisms is used to continuously evaluate and improve system performance, accuracy, and safety. 
 
 - **Transparency**: This FAQ, the persistent AI-generated content disclaimer, and the visible reasoning process are all part of our commitment to transparency about the system's capabilities and limitations. 
 
-Responsible AI is an ongoing journey. We are committed to making our AI systems more reliable, trustworthy, and safe, and your feedback helps us achieve that goal. 
+Responsible AI is an ongoing journey. We're committed to making our AI systems more reliable, trustworthy, and safe, and your feedback helps us achieve that goal. 
 
 ## Do you comply with the EU AI Act? 
 
-We are committed to compliance with the EU AI Act. Our multi-year effort to define, evolve, and implement our Responsible AI Standard and internal governance has strengthened our readiness. For more information, see [The EU AI Act: A Microsoft overview](https://www.microsoft.com/trust-center/compliance/eu-ai-act). 
+We're committed to compliance with the EU AI Act. Our multi-year effort to define, evolve, and implement our Responsible AI Standard and internal governance strengthened our readiness. For more information, see [The EU AI Act: A Microsoft overview](https://www.microsoft.com/trust-center/compliance/eu-ai-act). 
 
 At Microsoft, we recognize the importance of regulatory compliance as a cornerstone of trust and reliability in AI technologies. We're committed to creating responsible AI by design. Our goal is to develop and deploy AI that will have a beneficial impact on and earn trust from society. 
 
