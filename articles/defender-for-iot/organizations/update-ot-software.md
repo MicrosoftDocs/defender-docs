@@ -31,7 +31,7 @@ To perform the procedures described in this article, make sure that you have:
 
 - **Required access permissions**:
 
-    - **To download update packages or push updates from the Azure portal**, you need access to the Azure portal as a [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner) user.
+    - **To download update packages or push updates from the Azure portal**, you need access to the Azure portal as a [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) user.
 
     - **To run updates on an OT sensor**, you need access as an **Admin** user.
 

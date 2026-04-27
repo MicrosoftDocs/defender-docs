@@ -27,7 +27,7 @@ Before you start, make sure you have:
 
 - The subscription ID for the relevant subscription. In the Azure portal **Subscriptions** page, copy the subscription ID and save it for a later stage.
 
-- The resource group for the relevant subscription. Learn more about [resource groups](../../azure-resource-manager/management/manage-resource-groups-portal.md).
+- The resource group for the relevant subscription. Learn more about [resource groups](/azure/azure-resource-manager/management/manage-resource-groups-portal).
 
 ## Create the playbook
 

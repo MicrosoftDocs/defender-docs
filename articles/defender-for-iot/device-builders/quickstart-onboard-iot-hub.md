@@ -10,7 +10,7 @@ ms.custom: mode-other
 
 This article explains how to enable Microsoft Defender for IoT on an Azure IoT hub.
 
-[Azure IoT Hub](../../iot-hub/iot-concepts-and-iot-hub.md) is a managed service that acts as a central message hub for communication between IoT applications and IoT devices. You can connect millions of devices and their backend solutions reliably and securely. Almost any device can be connected to an IoT Hub. Defender for IoT integrates into Azure IoT Hub to provide real-time monitoring, recommendations, and alerts.
+[Azure IoT Hub](/azure/iot-hub/iot-concepts-and-iot-hub) is a managed service that acts as a central message hub for communication between IoT applications and IoT devices. You can connect millions of devices and their backend solutions reliably and securely. Almost any device can be connected to an IoT Hub. Defender for IoT integrates into Azure IoT Hub to provide real-time monitoring, recommendations, and alerts.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ This article explains how to enable Microsoft Defender for IoT on an Azure IoT h
     - To add role assignments, you need the Owner, Role Based Access Control Administrator and User Access Administrator roles. 
     - To register resource providers, you need th Owner and Contributor roles. 
     
-    Learn more about [privileged administrator roles in Azure](../../role-based-access-control/role-assignments-steps.md#privileged-administrator-roles).
+    Learn more about [privileged administrator roles in Azure](/azure/role-based-access-control/role-assignments-steps#privileged-administrator-roles).
 
 > [!NOTE]
 > Defender for IoT currently only supports standard tier IoT Hubs.
@@ -34,7 +34,7 @@ You can create a hub in the Azure portal. For all new IoT hubs, Defender for IoT
 
 **To create an IoT Hub**:
 
-1. Follow the steps to [create an IoT hub using the Azure portal](../../iot-hub/iot-hub-create-through-portal.md#create-an-iot-hub).
+1. Follow the steps to [create an IoT hub using the Azure portal](/azure/iot-hub/iot-hub-create-through-portal#create-an-iot-hub).
 
 1. Under the **Management** tab, ensure that **Defender for IoT** is set to **On**. By default, Defender for IoT will be set to **On** .
 
@@ -103,7 +103,7 @@ To set up permissions needed to access the IoT hub:
 1. [Set up resource providers and access control for the IoT hub](#allow-access-to-the-iot-hub).
 1. To allow access to a Log Analytics workspace, also [set up resource providers and access control for Log Analytics workspace](#allow-access-to-a-log-analytics-workspace).
 
-Learn more about [resource providers and resource types](../../azure-resource-manager/management/resource-providers-and-types.md#register-resource-provider).
+Learn more about [resource providers and resource types](/azure/azure-resource-manager/management/resource-providers-and-types#register-resource-provider).
 
 ### Allow access to the IoT Hub
 

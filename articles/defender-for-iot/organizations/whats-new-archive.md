@@ -732,7 +732,7 @@ For more information, see [Manage OT plans on Azure subscriptions](how-to-manage
 
 For sensor software versions 22.x, Defender for IoT now supports *site-based access control*, which allows customers to control user access to Defender for IoT features on the Azure portal at the *site* level.
 
-For example, apply the [Security Reader](../../role-based-access-control/built-in-roles.md#security-reader), [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner) roles to determine user access to Azure resources such as the **Alerts**, **Device inventory**, or **Workbooks** pages.
+For example, apply the [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader), [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) roles to determine user access to Azure resources such as the **Alerts**, **Device inventory**, or **Workbooks** pages.
 
 To manage site-based access control, select the site in the **Sites and sensors** page, and then select the **Manage site access control (Preview)** link. For example:
 
@@ -1150,7 +1150,7 @@ For more information, see [Manage your device inventory from the Azure portal](h
 
 ### Use Azure Monitor workbooks with Microsoft Defender for IoT (Public preview)
 
-[Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) provide graphs and dashboards that visually reflect your data, and are now available directly in Microsoft Defender for IoT with data from [Azure Resource Graph](../../governance/resource-graph/index.yml).
+[Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) provide graphs and dashboards that visually reflect your data, and are now available directly in Microsoft Defender for IoT with data from [Azure Resource Graph](/azure/governance/resource-graph/).
 
 In the Azure portal, use the new Defender for IoT **Workbooks** page to view workbooks created by Microsoft and provided out-of-the-box, or create custom workbooks of your own.
 

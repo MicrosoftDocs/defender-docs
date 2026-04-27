@@ -13,9 +13,9 @@ This article explains how to install, and authenticate the Defender micro agent 
 
 ## Prerequisites 
 
-1. Navigate to your IoT Hub or, [create a new IoT hub](../../iot-hub/iot-hub-create-through-portal.md#create-an-iot-hub).
+1. Navigate to your IoT Hub or, [create a new IoT hub](/azure/iot-hub/iot-hub-create-through-portal#create-an-iot-hub).
 
-1. [Register an IoT Edge device in IoT Hub](../../iot-edge/how-to-register-device.md) and [retrieve connection strings](../../iot-edge/how-to-register-device.md#view-registered-devices-and-retrieve-connection-strings).
+1. [Register an IoT Edge device in IoT Hub](/azure/iot-edge/how-to-register-device) and [retrieve connection strings](/azure/iot-edge/how-to-register-device#view-registered-devices-and-retrieve-connection-strings).
     
 1. Add the appropriate Microsoft package repository. 
 
@@ -51,7 +51,7 @@ This article explains how to install, and authenticate the Defender micro agent 
         sudo apt-get update
         ```
 
-1. Install and configure [Edge runtime version 1.2](../../iot-edge/how-to-install-iot-edge.md)
+1. Install and configure [Edge runtime version 1.2](/azure/iot-edge/how-to-install-iot-edge)
 
 ## Installation 
 

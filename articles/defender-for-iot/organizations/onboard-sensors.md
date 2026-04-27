@@ -19,7 +19,7 @@ Before you onboard an OT network sensor to Defender for IoT, make sure that you 
 
 - An [OT plan onboarded](getting-started.md) to Defender for IoT
 
-- Access to the Azure portal as a [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner) user.
+- Access to the Azure portal as a [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) user.
 
 - An understanding of which [site and zone](best-practices/plan-corporate-monitoring.md#plan-ot-sites-and-zones) you'll want to assign to your sensor.
 

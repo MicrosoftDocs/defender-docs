@@ -31,7 +31,7 @@ Before performing the procedures in this article, make sure that you have:
 
     For more information, see [Enterprise IoT security in Microsoft Defender XDR](concept-enterprise.md#enterprise-iot-security-in-microsoft-defender-xdr).
 
-- Access to the Microsoft Defender Portal as a [Security administrator](../../active-directory/roles/permissions-reference.md#security-administrator)
+- Access to the Microsoft Defender Portal as a [Security administrator](/azure/active-directory/roles/permissions-reference#security-administrator)
 
 ## Obtain a standalone, Enterprise IoT trial license
 
@@ -148,5 +148,5 @@ For more information, see:
 - [Securing IoT devices in the enterprise](concept-enterprise.md)
 - [Defender for IoT subscription billing](billing.md)
 - [Manage sensors with Defender for IoT in the Azure portal](how-to-manage-sensors-on-the-cloud.md)
-- [Create an additional Azure subscription](../../cost-management-billing/manage/create-subscription.md)
-- [Upgrade your Azure subscription](../../cost-management-billing/manage/upgrade-azure-subscription.md)
+- [Create an additional Azure subscription](/azure/cost-management-billing/manage/create-subscription)
+- [Upgrade your Azure subscription](/azure/cost-management-billing/manage/upgrade-azure-subscription)

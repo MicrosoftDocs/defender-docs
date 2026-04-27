@@ -7,9 +7,9 @@ ms.topic: how-to
 
 # Provision the Microsoft Defender for IoT micro agent using DPS
 
-This article explains how to provision the standalone Microsoft Defender for IoT micro agent using [Azure IoT Hub Device Provisioning Service](../../iot-dps/about-iot-dps.md) with [X.509 certificate attestation](../../iot-dps/concepts-x509-attestation.md).
+This article explains how to provision the standalone Microsoft Defender for IoT micro agent using [Azure IoT Hub Device Provisioning Service](/azure/iot-dps/about-iot-dps) with [X.509 certificate attestation](/azure/iot-dps/concepts-x509-attestation).
 
-To learn how to configure the Microsoft Defender for IoT micro agent for Edge devices see [Create and provision IoT Edge devices at scale](../../iot-edge/how-to-provision-devices-at-scale-linux-tpm.md)
+To learn how to configure the Microsoft Defender for IoT micro agent for Edge devices see [Create and provision IoT Edge devices at scale](/azure/iot-edge/how-to-provision-devices-at-scale-linux-tpm)
 
 [!INCLUDE [device-agents-note](../includes/device-agents-note.md)]
 
@@ -17,9 +17,9 @@ To learn how to configure the Microsoft Defender for IoT micro agent for Edge de
 
 - An Azure account with an active subscription. For more information, see [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- An [IoT hub](../../iot-hub/iot-hub-create-through-portal.md).
+- An [IoT hub](/azure/iot-hub/iot-hub-create-through-portal).
 
-- [IoT Hub Device Provisioning Service](../../iot-dps/quick-setup-auto-provision.md).
+- [IoT Hub Device Provisioning Service](/azure/iot-dps/quick-setup-auto-provision).
 
 ## Provision
 
@@ -37,7 +37,7 @@ To learn how to configure the Microsoft Defender for IoT micro agent for Edge de
 
 1. [Configure the micro agent to use the created module](tutorial-standalone-agent-binary-installation.md#authenticate-using-a-module-identity-connection-string) (note that the device does not have to exist yet).
 
-1. Navigate back to DPS and [provision the device through DPS](../../iot-dps/quick-create-simulated-device-x509.md).
+1. Navigate back to DPS and [provision the device through DPS](/azure/iot-dps/quick-create-simulated-device-x509).
 
 1. Navigate to the configured device in the destination IoT Hub.
 

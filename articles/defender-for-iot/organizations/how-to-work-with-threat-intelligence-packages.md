@@ -29,9 +29,9 @@ To perform the procedures in this article, make sure that you have:
 
 - Relevant permissions on the Azure portal and any OT network sensors you want to update.
 
-  - **To download threat intelligence packages from the Azure portal**, you need access to the Azure portal as a [Security Reader](../../role-based-access-control/built-in-roles.md#security-reader), [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner) role.
+  - **To download threat intelligence packages from the Azure portal**, you need access to the Azure portal as a [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader), [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) role.
 
-  - **To push threat intelligence updates to cloud-connected OT sensors from the Azure portal**, you need access to the Azure portal as a [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner) role.
+  - **To push threat intelligence updates to cloud-connected OT sensors from the Azure portal**, you need access to the Azure portal as a [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) role.
 
   - **To manually upload threat intelligence packages to OT sensors**, you need access to the OT sensor as an **Admin** user.
 

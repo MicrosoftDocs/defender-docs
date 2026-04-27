@@ -21,7 +21,7 @@ Before performing the procedures in this article, make sure that you have:
 
 - Access to the OT sensor as an **Admin** user. Selected procedures and CLI access also requires a privileged user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
-- To download software for OT sensors, you need access to the Azure portal as a [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner) user.
+- To download software for OT sensors, you need access to the Azure portal as a [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) user.
 
 - An [SSL/TLS certificate prepared](ot-deploy/create-ssl-certificates.md) if you need to update your sensor's certificate.
 

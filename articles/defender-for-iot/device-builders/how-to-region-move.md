@@ -20,7 +20,7 @@ You can move a Microsoft Defender for IoT "iotsecuritysolutions" resource to a d
 
 - Make sure that your Azure subscription allows you to create "iotsecuritysolutions" resources in the target region.
 
-- Make sure that your subscription has enough resources to support the addition of resources for this process. For more information, see [Azure subscription and service limits, quotas, and constraints](../../azure-resource-manager/management/azure-subscription-service-limits.md#azure-networking-limits)
+- Make sure that your subscription has enough resources to support the addition of resources for this process. For more information, see [Azure subscription and service limits, quotas, and constraints](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-networking-limits)
 
 ## Alert preparation
 
@@ -50,7 +50,7 @@ Before transitioning the resource to the new region, we recommended using [log a
 
 ## Moving IoT Hub
 
-You're now ready to move your resource to your new location. Follow [these instructions](../../iot-hub/iot-hub-how-to-clone.md) to move your IoT Hub.
+You're now ready to move your resource to your new location. Follow [these instructions](/azure/iot-hub/iot-hub-how-to-clone) to move your IoT Hub.
 
 After transferring, and enabling the resource, you can link to the same log analytics workspace that was configured earlier.
 
@@ -96,6 +96,6 @@ Don’t clean up until you have finished verifying that the resource has moved, 
 
 In this tutorial, you moved an Azure resource from one region to another and cleaned up the source resource.
 
-- Learn more about [Moving your resources to a new resource group or subscription.](../../azure-resource-manager/management/move-resource-group-and-subscription.md).
+- Learn more about [Moving your resources to a new resource group or subscription.](/azure/azure-resource-manager/management/move-resource-group-and-subscription).
 
-- Learn how to [move VMs to another Azure region](../../site-recovery/azure-to-azure-tutorial-migrate.md).
+- Learn how to [move VMs to another Azure region](/azure/site-recovery/azure-to-azure-tutorial-migrate).

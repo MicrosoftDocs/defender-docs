@@ -14,7 +14,7 @@ introduction: |
 
   We recommend using Microsoft Defender for IoT's out-of-the-box [data connector](../iot-solution.md) and [solution](../iot-advanced-threat-monitoring.md) to integrate with Microsoft Sentinel and bridge the gap between the IT and OT security challenge.
 
-  However, if you have other security information and event management (SIEM) systems, you can also use Microsoft Sentinel to forward Defender for IoT cloud alerts on to that partner SIEM, via [Microsoft Sentinel](/azure/sentinel/) and [Azure Event Hubs](../../../event-hubs/index.yml).
+  However, if you have other security information and event management (SIEM) systems, you can also use Microsoft Sentinel to forward Defender for IoT cloud alerts on to that partner SIEM, via [Microsoft Sentinel](/azure/sentinel/) and [Azure Event Hubs](/azure/event-hubs/).
 
   While this article uses Splunk as an example, you can use the process described below with any SIEM that supports Event Hub ingestion, such as IBM QRadar.
 
@@ -38,9 +38,9 @@ procedureSection:
       **To register a Microsoft Entra application and define permissions**:
     steps:
       - |
-        In [Microsoft Entra ID](../../../active-directory/index.yml), register a new application. On the **Certificates & secrets** page, add a new client secret for the service principal.
+        In [Microsoft Entra ID](/azure/active-directory/), register a new application. On the **Certificates & secrets** page, add a new client secret for the service principal.
 
-        For more information, see [Register an application with the Microsoft identity platform](../../../active-directory/develop/quickstart-register-app.md)
+        For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
       - |
         In your app's **API permissions** page, grant API permissions to read data from your app.
 
@@ -48,7 +48,7 @@ procedureSection:
 
           - Make sure that admin consent is required for your permission.
 
-        For more information, see [Configure a client application to access a web API](../../../active-directory/develop/quickstart-configure-app-access-web-apis.md#add-permissions-to-access-your-web-api)
+        For more information, see [Configure a client application to access a web API](/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-permissions-to-access-your-web-api)
       - |
         From your app's **Overview** page, note the following values for your app:
 
@@ -69,7 +69,7 @@ procedureSection:
 
         In your event hub, make sure to define the **Partition Count** and **Message Retention** settings.
 
-        For more information, see [Create an event hub using the Azure portal](../../../event-hubs/event-hubs-create.md).
+        For more information, see [Create an event hub using the Azure portal](/azure/event-hubs/event-hubs-create).
       - |
         In your event hub namespace, select the **Access control (IAM)** page and add a new role assignment.
 

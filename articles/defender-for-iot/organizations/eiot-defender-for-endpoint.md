@@ -25,7 +25,7 @@ Make sure that you have:
 
 - IoT devices in your network, visible in the Microsoft Defender XDR **Device inventory**
 
-- Access to the Microsoft Defender Portal as a [Security administrator](../../active-directory/roles/permissions-reference.md#security-administrator)
+- Access to the Microsoft Defender Portal as a [Security administrator](/azure/active-directory/roles/permissions-reference#security-administrator)
 
 - Microsoft Defender for Endpoint agents deployed in your environment. For more information, see [onboard Microsoft Defender for Endpoint](/defender-endpoint/onboarding).
 

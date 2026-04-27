@@ -32,7 +32,7 @@ Before you perform the procedures in this article, make sure you have:
 
 - **An OT sensor** [installed](ot-deploy/install-software-ot-sensor.md) and [activated](ot-deploy/activate-deploy-sensor.md), with access as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
-To download a predefined SNMP MIB file from the Azure portal, you need access to the Azure portal as a [Security admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner) user. For more information, see [Azure user roles and permissions for Defender for IoT](roles-azure.md).
+To download a predefined SNMP MIB file from the Azure portal, you need access to the Azure portal as a [Security admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) user. For more information, see [Azure user roles and permissions for Defender for IoT](roles-azure.md).
 
 ## Configure SNMP monitoring settings on your OT sensor
 

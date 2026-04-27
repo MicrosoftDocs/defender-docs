@@ -18,7 +18,7 @@ Device twins play a key role in both device management and process automation, f
 
 Defender for IoT offers the capability to fully integrate your existing IoT device management platform, enabling you to manage your device security status and make use of the existing device control capabilities. You can integrate your Defender for IoT by using the IoT Hub twin mechanism.  
 
-To learn more about the general concept of module twins in Azure IoT Hub, see [Understand and use module twins in IoT Hub](../../iot-hub/iot-hub-devguide-module-twins.md).
+To learn more about the general concept of module twins in Azure IoT Hub, see [Understand and use module twins in IoT Hub](/azure/iot-hub/iot-hub-devguide-module-twins).
 
 Defender for IoT uses the module twin mechanism, and maintains a Defender-IoT-micro-agent twin named `DefenderIotMicroAgent` for each of your devices.
 
@@ -40,7 +40,7 @@ In this tutorial you'll learn how to:
 
 - Verify you are running one of the following [operating systems](concept-agent-portfolio-overview-os-support.md).
 
-- An [IoT hub](../../iot-hub/iot-hub-create-through-portal.md).
+- An [IoT hub](/azure/iot-hub/iot-hub-create-through-portal).
 
 - You must have [enabled Microsoft Defender for IoT on your Azure IoT Hub](quickstart-onboard-iot-hub.md).
 

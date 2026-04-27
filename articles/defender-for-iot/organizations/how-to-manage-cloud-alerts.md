@@ -25,9 +25,9 @@ Microsoft Defender for IoT alerts enhance your network security and operations w
 
 - **To have alerts in Defender for IoT**, you must have an [OT](onboard-sensors.md) onboarded, and network data streaming into Defender for IoT.
 
-- **To view alerts on the Azure portal**, you must have access as a [Security Reader](../../role-based-access-control/built-in-roles.md#security-reader), [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner)
+- **To view alerts on the Azure portal**, you must have access as a [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader), [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner)
 
-- **To manage alerts on the Azure portal**, you must have access as a [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner). Alert management activities include modifying their statuses or severities, *Learning* an alert, accessing PCAP data, or using alert suppression rules.
+- **To manage alerts on the Azure portal**, you must have access as a [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner). Alert management activities include modifying their statuses or severities, *Learning* an alert, accessing PCAP data, or using alert suppression rules.
 
 For more information, see [Azure user roles and permissions for Defender for IoT](roles-azure.md).
 

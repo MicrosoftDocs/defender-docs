@@ -10,17 +10,17 @@ ms.collection:
 
 # Azure user roles and permissions for Defender for IoT
 
-Microsoft Defender for IoT uses [Azure Role-Based Access Control (RBAC)](../../role-based-access-control/index.yml) to provide access to Defender for IoT monitoring services and data on the Azure portal.
+Microsoft Defender for IoT uses [Azure Role-Based Access Control (RBAC)](/azure/role-based-access-control/) to provide access to Defender for IoT monitoring services and data on the Azure portal.
 
-The built-in Azure [Security Reader](../../role-based-access-control/built-in-roles.md#security-reader), [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), and [Owner](../../role-based-access-control/built-in-roles.md#owner) roles are relevant for use in Defender for IoT.
+The built-in Azure [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader), [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), and [Owner](/azure/role-based-access-control/built-in-roles#owner) roles are relevant for use in Defender for IoT.
 
-This article provides a reference of Defender for IoT actions available for each role in the Azure portal. For more information, see [Azure built-in roles](../../role-based-access-control/built-in-roles.md).
+This article provides a reference of Defender for IoT actions available for each role in the Azure portal. For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
 
 ## Roles and permissions reference
 
 Permissions are applied to user roles across an entire Azure subscription, or in some cases, across individual Defender for IoT sites. For more information, see [Zero Trust and your OT networks](concept-zero-trust.md) and [Manage site-based access control (Public preview)](manage-users-portal.md#manage-site-based-access-control-public-preview).
 
-|Action and scope |[Security Reader](../../role-based-access-control/built-in-roles.md#security-reader)  |[Security Admin](../../role-based-access-control/built-in-roles.md#security-admin)  |[Contributor](../../role-based-access-control/built-in-roles.md#contributor) |[Owner](../../role-based-access-control/built-in-roles.md#owner) |
+|Action and scope |[Security Reader](/azure/role-based-access-control/built-in-roles#security-reader)  |[Security Admin](/azure/role-based-access-control/built-in-roles#security-admin)  |[Contributor](/azure/role-based-access-control/built-in-roles#contributor) |[Owner](/azure/role-based-access-control/built-in-roles#owner) |
 |---------|---------|---------|---------|---------|
 | **[Grant permissions to others](manage-users-portal.md)**<br>Apply per subscription or site | -       |  -       |   -      | ✔ |
 |  **Onboard [OT](onboard-sensors.md) or [Enterprise IoT sensors](eiot-sensor.md)**  <br>Apply per subscription only | -       |  ✔       |   ✔      | ✔ |

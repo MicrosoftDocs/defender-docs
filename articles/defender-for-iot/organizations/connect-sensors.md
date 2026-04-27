@@ -132,9 +132,9 @@ Attach the gateway to the `GatewaySubnet` subnet you created [earlier](#step-2-d
 
 For more information, see:
 
-- [About VPN gateways](../../vpn-gateway/vpn-gateway-about-vpngateways.md)
-- [Connect a virtual network to an ExpressRoute circuit using the portal](../../expressroute/expressroute-howto-linkvnet-portal-resource-manager.md)
-- [Modify local network gateway settings using the Azure portal](../../vpn-gateway/vpn-gateway-modify-local-network-gateway-portal.md)
+- [About VPN gateways](/azure/vpn-gateway/vpn-gateway-about-vpngateways)
+- [Connect a virtual network to an ExpressRoute circuit using the portal](/azure/expressroute/expressroute-howto-linkvnet-portal-resource-manager)
+- [Modify local network gateway settings using the Azure portal](/azure/vpn-gateway/vpn-gateway-modify-local-network-gateway-portal)
 
 #### Step 4: Define network security groups
 
@@ -266,7 +266,7 @@ For more information, see [What are virtual machine scale sets?](/azure/virtual-
 
 Azure Load Balancer is a layer-4 load balancer that distributes incoming traffic among healthy virtual machine instances using a hash-based distribution algorithm.
 
-For more information, see the [Azure Load Balancer documentation](../../load-balancer/load-balancer-overview.md).
+For more information, see the [Azure Load Balancer documentation](/azure/load-balancer/load-balancer-overview).
 
 **To create an Azure load balancer for your sensor connection**:
 

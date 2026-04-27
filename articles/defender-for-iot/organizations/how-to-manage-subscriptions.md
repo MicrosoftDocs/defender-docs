@@ -25,7 +25,7 @@ Before performing the procedures in this article, make sure that you have:
 
 - An Azure subscription. If you need to, [sign up for a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- A [Security admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner) user role for the Azure subscription that you're using for the integration
+- A [Security admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) user role for the Azure subscription that you're using for the integration
 
 - An understanding of your site size. For more information, see [Calculate devices in your network](best-practices/plan-prepare-deploy.md#calculate-devices-in-your-network).
 
@@ -55,7 +55,7 @@ This procedure describes how to add an OT plan for Defender for IoT in the Azure
 
 1. In [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started), select **Plans and pricing** > **Add plan**.
 
-1. In the **Plan settings** pane, select the Azure subscription where you want to add a plan. You can only add a single subscription, and you need a [Security admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner) role for the selected subscription.
+1. In the **Plan settings** pane, select the Azure subscription where you want to add a plan. You can only add a single subscription, and you need a [Security admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) role for the selected subscription.
 
    > [!NOTE]
    > If your subscription isn't listed, check your account details and confirm your permissions with the subscription owner. Also make sure that you have the right subscriptions selected in your Azure settings > **Directories + subscriptions** page.
@@ -208,6 +208,6 @@ For more information, see:
 
 - [Manage sensors with Defender for IoT in the Azure portal](how-to-manage-sensors-on-the-cloud.md)
 
-- [Create an additional Azure subscription](../../cost-management-billing/manage/create-subscription.md)
+- [Create an additional Azure subscription](/azure/cost-management-billing/manage/create-subscription)
 
-- [Upgrade your Azure subscription](../../cost-management-billing/manage/upgrade-azure-subscription.md)
+- [Upgrade your Azure subscription](/azure/cost-management-billing/manage/upgrade-azure-subscription)

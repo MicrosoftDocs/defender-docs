@@ -27,7 +27,7 @@ Before you use the procedures on this page, note the following prerequisites:
 
 |To ...  |You must have ...  |
 |---------|---------|
-|[Create alert suppression rules on the Azure portal](#create-alert-suppression-rules-on-the-azure-portal-public-preview)     | A Defender for IoT subscription with at least one cloud-connected OT sensor and  access as a [Security Admin](../../role-based-access-control/built-in-roles.md#security-admin), [Contributor](../../role-based-access-control/built-in-roles.md#contributor), or [Owner](../../role-based-access-control/built-in-roles.md#owner).       |
+|[Create alert suppression rules on the Azure portal](#create-alert-suppression-rules-on-the-azure-portal-public-preview)     | A Defender for IoT subscription with at least one cloud-connected OT sensor and  access as a [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner).       |
 |[Create a DNS allowlist on an OT sensor](#allow-internet-connections-on-an-ot-network)     |   An OT network sensor installed and access to the sensor as the default *Admin* user.      |
 |[Create alert comments on an OT sensor](#create-alert-comments-on-an-ot-sensor)     |    An OT network sensor installed and access to the sensor as any user with an **Admin** role.     |
 |[Create custom alert rules on an OT sensor](#create-custom-alert-rules-on-an-ot-sensor)     |    An OT network sensor installed and access to the sensor as any user with an **Admin** role.     |

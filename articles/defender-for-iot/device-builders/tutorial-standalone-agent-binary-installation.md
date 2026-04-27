@@ -29,7 +29,7 @@ In this tutorial you'll learn how to:
 
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- An [IoT hub](../../iot-hub/iot-hub-create-through-portal.md).
+- An [IoT hub](/azure/iot-hub/iot-hub-create-through-portal).
 
 - Verify you're running one of the following [operating systems](concept-agent-portfolio-overview-os-support.md).
 
@@ -213,7 +213,7 @@ You will need to copy the module identity connection string from the DefenderIoT
 
 **To authenticate using a certificate**:
 
-1. Procure a certificate by following [these instructions](../../iot-hub/tutorial-x509-scripts.md).
+1. Procure a certificate by following [these instructions](/azure/iot-hub/tutorial-x509-scripts).
 
 1. Place the PEM-encoded public part of the certificate, and the private key, in `/etc/defender_iot_micro_agent`, to files called `certificate_public.pem`, and `certificate_private.pem`.
 
