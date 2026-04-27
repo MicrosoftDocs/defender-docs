@@ -1082,7 +1082,7 @@
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
-            href: respond-machine-alerts.md#check-activity-details-in-action-center
+            href: respond-machine-alerts.md#check-activity-details-and-status
 
         - name: Take response actions on a file
           items:
