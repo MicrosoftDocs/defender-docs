@@ -1082,9 +1082,7 @@
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
-            href: respond-machine-alerts.md#check-activity-details-in-action-center
-          - name: Restrict response actions on high-value assets
-            href: restrict-response-actions-high-value-assets.md
+            href: respond-machine-alerts.md#check-activity-details-and-status
 
         - name: Take response actions on a file
           items:
