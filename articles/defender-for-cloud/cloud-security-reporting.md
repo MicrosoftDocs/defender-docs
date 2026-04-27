@@ -1,4 +1,5 @@
 ---
+title: Cloud security reporting in Microsoft Defender portal (Preview)
 description: Learn how to create, customize, and export cloud security reports in Microsoft Defender portal, including built-in reports and custom report options.
 ms.topic: how-to
 ms.date: 04/27/2026
@@ -185,4 +186,8 @@ Report visibility controls who can access each report in your organization.
 ## Related content
 
 - [Cloud overview dashboard](cloud-infrastructure-dashboard.md)
+- [Export alerts and recommendations](continuous-export.md)
+- [Download a CSV report](export-alerts-to-csv.md)
 - [Generate threat intelligence reports](threat-intelligence-reports.md)
+- [Create custom dashboards with Azure Workbooks](custom-dashboards-azure-workbooks.md)
+- [Add Defender for Cloud data to Power BI](add-data-power-bi.md)
