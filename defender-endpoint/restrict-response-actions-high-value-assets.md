@@ -81,14 +81,14 @@ The security operations status of devices can be identified in several ways:
 
    :::image type="content" source="./media/restrict-response-actions-high-value-assets/device-inventory.png" alt-text="Device Inventory page showing security operations status" lightbox="./media/restrict-response-actions-high-value-assets/device-inventory.png":::
 
-- The **Device page** in the Defender portal includes a Security operations status to reflect the level of remote security capabilities configured for the device:
-
-   - **Full** indicates the device is onboarded with the complete set of Microsoft Defender for Endpoint capabilities. All remote response actions are available.
-   - **Restricted** indicates the device is onboarded with a limited set of response actions available.
-
-   When the device is in restricted mode, a tag labeled Restricted security operations is automatically added to the device to help security teams quickly identify assets with limited functionality. To access a detailed list of all security controls and their current status (enabled or disabled) on the device, select **View security operations information**.
+- When the device is in restricted mode, a tag labeled *Restricted security operations* is automatically added to the device to help security teams quickly identify assets with limited functionality. You can see this tag on the **Device page**. The **Device page** also includes a **Security operations** status to reflect the level of remote security capabilities configured for the device:
 
    :::image type="content" source="./media/restrict-response-actions-high-value-assets/device-page.png" alt-text="Device page showing security operations status" lightbox="./media/restrict-response-actions-high-value-assets/device-page.png":::
+
+   - **Full** indicates the device is onboarded with the complete set of Microsoft Defender for Endpoint capabilities. All remote response actions are available.
+   - **Restricted** indicates the device is onboarded with a limited set of response actions available. In the preceding image, you can see that initiating Live Response sessions has been disallowed on the device.
+
+   To access a detailed list of all security controls and their current status (enabled or disabled) on the device, select **View security operations information**.
 
    :::image type="content" source="./media/restrict-response-actions-high-value-assets/security-operations-details.png" alt-text="Device page showing security operations details." lightbox="./media/restrict-response-actions-high-value-assets/security-operations-details.png":::
 
@@ -102,17 +102,17 @@ Once a device is onboarded with restricted settings, its security operations con
 
 ## Frequently asked questions
 
-### Is using a Restricted package with all response actions allowed the same as Full mode?
-
-No. Even if all response actions are allowed, onboarding a device using a Restricted package isn't the same as Full mode. In restricted mode, running scripts is disabled by design. Full mode provides unrestricted access to all supported response actions and capabilities.
-
-### Does restricted mode affect alert generation or detection capabilities?
-
-No. Restricted mode doesn't reduce detection, alerting, or sensor coverage. All alerts, timelines, and threat detections continue to function normally.
-
-### Is there a relationship between restricted mode and devices classified as High Value?
+### Is there a relationship between Restricted mode and devices classified as High Value?
 
 No. Devices classified as High Value use an organization-defined tag to identify critical assets such as domain controllers, internet-facing machines, or executive devices. Restricted mode is independent of High Value classification and can be applied to High Value devices, Tier-0 assets, or any other devices where you want to restrict remote response security operations.
+
+### Is using Restricted mode with all response actions allowed the same as using Full mode?
+
+No. Even if all response actions are allowed, onboarding a device in Restricted mode isn't the same as using Full mode. In restricted mode, running scripts is disabled by design, whereas Full mode provides unrestricted access to all supported response actions and capabilities.
+
+### Does Restricted mode affect alert generation or detection capabilities?
+
+No. Restricted mode doesn't reduce detection, alerting, or sensor coverage. All alerts, timelines, and threat detections continue to function normally.
 
 ### How do I restrict response actions on a device that's already onboarded to Defender for Endpoint?
 
