@@ -4,7 +4,7 @@ description: Learn how to review, manage, and delete recommendation exemptions i
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 04/16/2026
+ms.date: 04/28/2026
 #customer intent: As a user, I want to review and manage exempted resources in Microsoft Defender for Cloud so that I can keep my security posture accurate.
 ---
 
@@ -96,6 +96,9 @@ policyresources
 
 To delete an exemption, you need the `Microsoft.Authorization/policyExemptions/delete` permission at the scope where the exemption was created.
 
+> [!IMPORTANT]
+> When you delete an exemption, Defender for Cloud re-evaluates the previously exempted resources. Resources that don't meet the recommendation requirements return to an **Unhealthy** state, which can lower your secure score. Allow up to 24 hours for the re-evaluation to complete.
+
 If you receive a "Failed to delete the exemption(s)" error or a deleted exemption reappears:
 
 - **Check permissions.** Verify that you have delete permissions at the scope where the exemption was created, not just at the subscription level.
@@ -135,6 +138,8 @@ If the recommendation still shows resources as unhealthy after 24 hours:
 
 - **Verify exemption scope.** Ensure the exemption covers the specific resources that show as unhealthy. Check whether the exemption is at the correct scope level (management group, subscription, or resource).
 
+- **Check resource-level permissions.** Subscription-scoped role assignments might not provide sufficient access to manage exemptions on individual resources. Verify that your RBAC role covers the resource or resource group level for the specific resource you want to exempt.
+
 - **Check exemption type.** Waiver exemptions exclude resources from the secure score calculation, but resources might still show in recommendations. Mitigated exemptions should show resources as healthy.
 
 - **Verify the recommendation evaluates the exempted policy.** Some recommendations are based on multiple policies. Ensure you exempted the correct underlying policy.
@@ -170,6 +175,49 @@ If previously visible exemptions no longer appear, or you can't find where exemp
 - **Verify scope and filters.** Exemptions are visible at the scope where they were created. Check whether you're viewing the correct subscription or management group.
 
 - **Check permissions.** Ensure you have `Microsoft.Authorization/policyExemptions/read` permission at the correct scope level.
+
+## Resolve duplicate or conflicting exemptions
+
+Multiple exemptions on the same resource for the same recommendation can cause unexpected behavior, such as conflicting exemption types or statuses that don't update correctly. Maintain a single authoritative exemption per recommendation and resource combination.
+
+### Identify duplicate exemptions
+
+Run the following query in Azure Resource Graph Explorer to find resources with multiple exemptions:
+
+```kusto
+policyresources
+| where type == "microsoft.authorization/policyexemptions"
+| where subscriptionId == "<your-subscription-id>"
+| summarize ExemptionCount = count(), ExemptionNames = make_list(name) by tostring(properties.policyAssignmentId), tostring(properties.resourceSelectors)
+| where ExemptionCount > 1
+```
+
+### Clean up duplicate exemptions
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Environment settings** > **Exemptions box**, or go to **Azure Policy** > **Exemptions**.
+
+1. Filter by the affected subscription or resource group.
+
+1. Review overlapping exemptions and decide which one to keep as the authoritative exemption.
+
+1. Delete the extra exemptions.
+
+To delete duplicate exemptions in bulk with PowerShell:
+
+```azurepowershell-interactive
+# List all exemptions for a specific policy assignment
+$exemptions = Get-AzPolicyExemption -PolicyAssignmentIdFilter "<policy-assignment-id>"
+
+# Review and remove duplicates (keep the first, remove the rest)
+$exemptions | Select-Object -Skip 1 | ForEach-Object {
+    Remove-AzPolicyExemption -Id $_.Id -Force
+}
+```
+
+> [!IMPORTANT]
+> After you clean up duplicate exemptions, allow up to 24 hours for Defender for Cloud to re-evaluate the affected resources. If the recommendation status doesn't update, verify that the remaining exemption has the correct scope and type.
 
 ## Get a notification when users create exemptions
 

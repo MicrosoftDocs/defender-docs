@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
 author: Elazark
-ms.date: 04/14/2026
+ms.date: 04/28/2026
 ---
 
 # Exempt resources from recommendations
@@ -51,6 +51,8 @@ You need the following RBAC actions:
 
 - Subscription-level permissions don't inherit upward to management groups. If the policy assignment is at the management group level, you need the role assigned at that level.
 
+- To manage exemptions for specific resources, you need the required RBAC actions at the resource or resource group level. Subscription-scoped role assignments might not provide sufficient access to create or delete exemptions on individual resources. Verify that your role assignment covers the scope of the resource you want to exempt.
+
 - Microsoft Cloud Security Benchmark (MCSB) must be assigned on the subscription.
 
     > [!IMPORTANT]
@@ -77,6 +79,9 @@ You need the following RBAC actions:
 - Besides the portal, you can create exemptions by using the Azure Policy application programming interface (API). For more information, see [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
 
 - When you create an exemption at the management group level, ensure the *Windows Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on that management group. Grant this role the same way that you grant user permissions.
+
+> [!TIP]
+> If you run into issues after you create an exemption, see [Review and manage recommendation exemptions](review-exemptions.md) for guidance on [resolving unhealthy status](review-exemptions.md#resolve-an-exemption-that-doesnt-update-the-recommendation-status), [permission errors at management group level](review-exemptions.md#resolve-permission-errors-at-management-group-level), [missing exemptions in the portal](review-exemptions.md#find-exemptions-that-arent-visible-in-the-portal), [deleting exemptions](review-exemptions.md#delete-an-exemption), and [cleaning up duplicate exemptions](review-exemptions.md#resolve-duplicate-or-conflicting-exemptions).
 
 ## Define an exemption
 
