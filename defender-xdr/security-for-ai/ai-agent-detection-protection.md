@@ -18,15 +18,9 @@ Deployed AI agents operate autonomously, invoking tools, accessing data, and tak
 
 This article explains how Microsoft Defender detects, blocks, and enables security teams to investigate threats to AI agents managed through [Microsoft Agent 365](/microsoft-agent-365/overview), including the extended detection and protection capabilities available for supported agent platforms.
 
-> [!NOTE]
-> Some capabilities described in this article currently require onboarding through Microsoft Defender for Cloud Apps. This is a temporary configuration that will be part of the Agent 365 product experience. Starting June 30, 2026, your organization needs an [Agent 365 subscription](https://www.microsoft.com/en/microsoft-agent-365) to continue using agent protection and visibility capabilities.
-
 ## Block unsafe AI agent actions in real time
 
-Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Defender integrates directly with [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
-
-> [!NOTE]
-> Real-time protection is available only for AI agents that use tools currently supported in Work IQ MCP. Agents that rely on unsupported tools or do not integrate with Work IQ MCP are outside the scope of this capability.
+Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Defender integrates directly with [Microsoft Agent 365’s Agent Tooling Gateway (ATG)](/microsoft-agent-365/tooling-servers-overview) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
 
 Real-time protection focuses on high-confidence threats, including:
 
@@ -38,9 +32,11 @@ Real-time protection focuses on high-confidence threats, including:
 - Credential leakage through legitimate channels such as email or external APIs  
 
 > [!NOTE]
-> For agents built with Microsoft Copilot Studio, Microsoft Defender also provides real-time protection by evaluating model prompts and responses. This capability doesn't depend on Work IQ.
+> Beyond the real-time protection through the Agent Tooling Gateway (ATG), which evaluates agent-initiated tool invocations at runtime, Microsoft Defender also evaluates user prompts for agents built with Microsoft Copilot Studio.
 
-When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate blocked actions using familiar Defender workflows.
+When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
+
+Beyond the core real‑time protection capabilities available for all Microsoft Agent 365‑managed agents, you can enable an extended set of real‑time protection capabilities for agents built with Microsoft Copilot Studio.
 
 ### Enable real-time protection
 
@@ -68,17 +64,14 @@ For more information, see [Incidents and alerts in the Microsoft Defender portal
 
 Near-real-time detections rely on Agent 365 observability data, which also provides valuable context for [investigating incidents and threat hunting](#investigate-ai-agent-threats-and-hunt-for-risks-using-advanced-hunting). Microsoft Defender analyzes this data to identify suspicious agent behavior and generate alerts.
 
-> [!NOTE]
-> For agents built with Microsoft Copilot Studio and Microsoft Foundry, Microsoft Defender also supports detections based on evaluation of model prompts and responses. 
-
-### Enable near-real-time detections and advanced threat hunting
+#### Enable near-real-time detections and advanced threat hunting
 
 To enable near-real-time alerts and threat hunting: 
 
 1. Enable the Microsoft 365 app connector to collect Agent 365 observability data for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
 1. Ensure that your AI agent emits observability data to Microsoft 365. 
     - Agents built with Microsoft Copilot Studio send observability data to Microsoft 365 by default.
-    - For AI agents built on other platforms, enable observability using the Microsoft Agent 365 SDK, as described in the [Agent 365 development lifecycle documentation](/microsoft-agent-365/developer/a365-dev-lifecycle#1-build-and-run-agent).
+    - For AI agents built on other platforms, integrate the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/) to emit observability data to Microsoft 365.
 
 ### Enable extended near-real-time detections for Microsoft Copilot Studio and Microsoft Foundry agents
 
