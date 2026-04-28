@@ -645,6 +645,7 @@
       - name: Collect custom device data
         items:
         - name: Overview
+          displayName: custom data collection, telemetry, threat hunting
           href: custom-data-collection.md
         - name: Create custom data collection rules
           href: create-custom-data-collection-rules.md
