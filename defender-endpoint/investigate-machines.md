@@ -244,7 +244,7 @@ The device timeline includes several features to help you investigate events eff
 
 :::image type="content" source="media/custom-time-range.png" alt-text="Screenshot of the custom time range.":::
 
-:::image type="content" source="media/timeline-device.png" alt-text="The device timeline with events" lightbox="media/timeline-device.png":::
+:::image type="content" source="media/timeline-device.png" alt-text="Screenshot of the device timeline with events." lightbox="media/timeline-device.png":::
 
 > [!NOTE]
 > For firewall events to be displayed, you need to enable the audit policy, see [Audit Filtering Platform connection](/windows/security/threat-protection/auditing/audit-filtering-platform-connection).
@@ -277,7 +277,7 @@ Select an event to view relevant details about that event. A panel displays gene
 
 To further inspect the event and related events, you can quickly run an [advanced hunting](/defender-xdr/advanced-hunting-overview) query by selecting **Hunt for related events**. The query returns the selected event and the list of other events that occurred around the same time on the same endpoint.
 
-:::image type="content" source="media/event-details.png" alt-text="The event details panel" lightbox="media/event-details.png":::
+:::image type="content" source="media/event-details.png" alt-text="Screenshot of the event details panel." lightbox="media/event-details.png":::
 
 ### MITRE ATT&CK techniques in the device timeline
 
@@ -327,7 +327,7 @@ To flag an event:
 1. Find the event that you want to flag.
 1. Select the flag icon in the Flag column.
 
-:::image type="content" source="media/device-flags.png" alt-text="The device timeline flag" lightbox="media/device-flags.png":::
+:::image type="content" source="media/device-flags.png" alt-text="Screenshot of the device timeline flag icon." lightbox="media/device-flags.png":::
 
 To view flagged events:
 
@@ -379,7 +379,7 @@ To view internet-facing devices in the Microsoft Defender portal:
 
 1. Go to **Assets** \> **Device** in the [Microsoft Defender portal](https://security.microsoft.com/machines/).
 
-   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-tag.png" alt-text="Screenshot of the internet-facing tag" lightbox="/defender/media/defender-endpoint/internet-facing-tag.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-tag.png" alt-text="Screenshot of the internet-facing tag." lightbox="/defender/media/defender-endpoint/internet-facing-tag.png":::
 
 1. Look for devices with the **internet facing** tag in the **Tags** column.
 
@@ -393,11 +393,11 @@ At the top of the page, you can view a counter that shows the number of devices 
 
 Use filters to focus on internet-facing devices and investigate the risk they might introduce:
 
-   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-filter.png" alt-text="Screenshot of the internet-facing filter" lightbox="/defender/media/defender-endpoint/internet-facing-filter.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-filter.png" alt-text="Screenshot of the internet-facing filter." lightbox="/defender/media/defender-endpoint/internet-facing-filter.png":::
 
 The internet-facing device tag also appears in Microsoft Defender Vulnerability Management, allowing you to filter for internet-facing devices from the [weaknesses](/defender-vulnerability-management/tvm-weaknesses) and [security recommendations](/defender-vulnerability-management/tvm-security-recommendation) pages in the Microsoft Defender portal.
 
-   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-weaknesses.png" alt-text="Screenshot of the internet-facing weaknesses" lightbox="/defender/media/defender-endpoint/internet-facing-weaknesses.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-weaknesses.png" alt-text="Screenshot of the internet-facing weaknesses." lightbox="/defender/media/defender-endpoint/internet-facing-weaknesses.png":::
 
 > [!NOTE]
 > If no new events for a device occur for 48 hours, the Internet-facing tag is removed and it's no longer visible in the Microsoft Defender portal.
@@ -406,7 +406,7 @@ The internet-facing device tag also appears in Microsoft Defender Vulnerability 
 
 To view detailed information about an internet-facing device, select the device in the device inventory to open its flyout pane:
 
-   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-details.png" alt-text="Screenshot of the internet facing device details page" lightbox="/defender/media/defender-endpoint/internet-facing-details.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-details.png" alt-text="Screenshot of the internet-facing device details page." lightbox="/defender/media/defender-endpoint/internet-facing-details.png":::
 
 The flyout includes:
 
