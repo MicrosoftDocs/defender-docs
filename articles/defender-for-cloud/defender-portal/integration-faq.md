@@ -4,7 +4,7 @@ description: Frequently asked questions about integrating and using Microsoft De
 author: dlanger
 ms.author: DebLanger
 ms.topic: faq
-ms.date: 02/09/2026
+ms.date: 04/28/2026
 ms.service: defender-for-cloud
 ---
 

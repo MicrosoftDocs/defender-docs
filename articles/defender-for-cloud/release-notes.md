@@ -39,7 +39,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## General availability of Defender for Cloud integration into the Defender portal
 
-April 30, 2026
+April 29, 2026
 
 Microsoft Defender for Cloud is now integrated into the Microsoft Defender portal, unifying cloud security posture management and threat protection in a single experience. This integration provides a centralized view across hybrid and multicloud environments, including Azure, AWS, and GCP.
 
