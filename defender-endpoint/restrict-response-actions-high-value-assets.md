@@ -64,7 +64,7 @@ To use the selective response actions capability, enable the feature in the Micr
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 2. Navigate to **Settings** > **Endpoints** > **Advanced features**.
-3. Turn on **Allow restricted operations during onboarding**.
+3. Turn on **Allow restricted security operations during onboarding**.
 
 :::image type="content" source="./media/restrict-response-actions-high-value-assets/enable-selective-response-actions.png" alt-text="Advanced features page showing Allow restricted operations during onboarding enabled." lightbox="./media/restrict-response-actions-high-value-assets/enable-selective-response-actions.png":::
 
