@@ -17,18 +17,18 @@ This article provides an overview of the selective response actions capability i
 
 ## Overview
 
-The selective response actions capability is a Microsoft Defender for Endpoint feature that lets you restrict or customize high-impact security operations during onboarding so you can reduce operational risk on Tier-0 systems and other high-value assets. In practice, it limits intrusive actions such as device isolation, script execution, or Live Response on sensitive devices. 
+Selective Response Actions is a Microsoft Defender for Endpoint capability that enables organizations to tailor high-impact security operations during onboarding. It provides precise control over how response actions are applied on Tier-0 systems and other high-value assets, helping maintain operational stability while delivering strong protection.
 
 ### Background
 
-Deploying Microsoft Defender for Endpoint on high-value assets (HVAs) — such as domain controllers, ADFS servers, and other Tier-0 systems — introduces operational risk due to the powerful actions available to privileged users. Response actions such as isolating devices, executing scripts, or initiating live response sessions can cause significant disruption to critical infrastructure if misused, either unintentionally or due to compromised accounts.
+Deploying Microsoft Defender for Endpoint on high-value assets (HVAs), such as domain controllers, ADFS servers, and other Tier-0 systems, requires a thoughtful approach to balance strong protection with operational stability. Given the powerful response capabilities available, organizations often seek greater control over how these actions are applied in sensitive environments.
 
-Another reason the selective response actions capability is needed is that organizations that enforce privileged access management often prohibit cloud-based admin privileges on Tier-0 systems.
+Many organizations, especially those with strict privileged access management policies, also prefer to limit cloud-initiated administrative actions on Tier-0 systems to align with their security and compliance requirements.
 
-The selective response actions capability mitigates these risks. By limiting the intrusive actions that can be performed on Tier-0 assets, this capability reduces the risk of accidental or malicious disruption.
+The Selective Response Actions capability addresses these needs by providing a more controlled and flexible approach. It enables organizations to define exactly which actions are allowed on critical assets, helping maintain operational continuity while still benefiting from Defender’s protection.
 
 > [!NOTE]
-> Restricted mode isn't related to High Value device classification. Devices classified as High Value use an organization-defined tag to identify critical assets such as domain controllers, internet-facing machines, or executive devices. Restricted mode is independent of High Value classification and can be applied to High Value devices, Tier-0 assets, or any other devices where you want to restrict remote response security operations.
+> The Selective Response Actions capability is independent of High Value device classification. High Value classification relies on an organization-defined tag to identify critical assets such as domain controllers, internet-facing machines, or executive devices, whereas the Selective Response Actions capability can be applied to High Value devices, Tier-0 assets, or any other devices where you want greater control over which remote response security operations are allowed.
 
 ### How does the feature work?
 
