@@ -87,7 +87,7 @@ Your conversations are saved automatically. Use the Conversations panel on t
 
 > [!NOTE]
 >
-> Conversations are stored locally in your browser. They aren't synced across devices or shared with other users.
+> - Conversations aren't synced across devices or shared with other users. The last ten conversations are stored locally in your browser.
 
 ### Working with Responses
 
