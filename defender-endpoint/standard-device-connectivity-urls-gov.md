@@ -35,7 +35,8 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|US Gov|Common|443|`login.live.com`|Windows Push Notification Services (WNS) - Live Response|Required|Yes|||||Required for Live Response Performance (Direct Connection or proxy bypass required)|
 |Microsoft Defender for Endpoint|US Gov|Common|443|`settings-win.data.microsoft.com`|Connected User Experiences and Telemetry Channel|Optional|Yes|||||Not required for Windows 10 1809 (RS5) and above / Windows 2019|
 |Microsoft Defender for Endpoint|US Gov|Common (Mac) (Linux)|443|`cdn.x.cp.wd.microsoft.com`|Microsoft Defender Antivirus Content Delivery Network (CDN) - Security Intelligence updates|Required|||Yes|Yes|||
-|Microsoft Defender for Endpoint|US Gov|Common (Mac)|443|`officecdn-microsoft-com.akamaized.net`|Microsoft Office Content Delivery Network (CDN) -  Product Updates|Required|||Yes|Yes|||
+|Microsoft Defender for Endpoint|WW|Common (Mac/Linux)|443|Root URL for public Microsoft CDN endpoints (referred to as ChannelURL) - for the updated URL, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates)|
+|Microsoft Defender for Endpoint|US Gov|Common (Mac/Linux)|443|Root URL for public Microsoft CDN endpoints (referred to as ChannelURL) - for the updated URL, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates)|Microsoft Office Content Delivery Network (CDN) - Product Updates|Required||||Yes|Yes|New CDN endpoint starting with macOS build 101.26012.0012|
 |Microsoft Defender for Endpoint|US Gov|Microsoft Monitoring Agent (MMA)|443|`*.ods.opinsights.azure.us`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
 |Microsoft Defender for Endpoint|US Gov|Microsoft Monitoring Agent (MMA)|443|`*.oms.opinsights.azure.us`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
 |Microsoft Defender for Endpoint|US Gov|Microsoft Monitoring Agent (MMA)|443|`*.blob.core.usgovcloudapi.net`|MMA for Win 7/8.1/2008R2/2012R2/2016|Optional||Yes|Yes|||Refer to steps at <https://aka.ms/mde_network_requirements> to eliminate wildcards (*)|
@@ -118,6 +119,7 @@ Because these Defender for Endpoint-related processes generate network communica
 
 |Date|Change log|
 |---|---|
+|04/14/2026|Replaced `officecdn-microsoft-com.akamaized.net` with new CDN ChannelURL reference for Mac/Linux product updates. New CDN endpoint starting with macOS build 101.26012.0012.|
 |03/23/2026|Renamed **Microsoft Defender processes** section to **Client processes**, and aligned the content for all URL lists.|
 |15/08/2023|Removed URL: `https://msdl.microsoft.com/download/symbols`.|
 |05/12/2022|URL details updated:<br>Updated line 58: Updated from required to optional.<br>Updated line 62: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 63: Changed from optional to required. Guidance text updated. Added Mac and Linux.<br>Updated line 64: Changed from optional to required. Guidance text updated. Added Mac and Linux.|
