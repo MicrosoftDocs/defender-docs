@@ -80,15 +80,16 @@ The Microsoft Defender portal delivers a unified security operations experience 
 
 ### How to get started?
 
-During the preview phase, Defender for Cloud customers with at any paid plan can access the consumption experiences in the Defender portal. 
+Defender for Cloud customers with at any paid plan can access the consumption experiences in the Defender portal.
 
-- To enable the preview, follow the steps outlined in [Enable preview features in the Defender portal](enable-preview-features.md)
+To get started, go to **Defender portal** → **Cloud security** → **Overview**, and select **Prepare my tenant**.
+
+>[!Note]
+> Data may take up to 24 hours to appear.
 
 - Read the [known limitations](known-limitations.md)
 
 - Read the [FAQ](integration-faq.md)  
-
-Once enabled, open Defender for Cloud by choosing **Cloud infrastructure** in the left menu or from within the Defender portal's cloud-integrated experiences.
 
 ## Next steps
 
