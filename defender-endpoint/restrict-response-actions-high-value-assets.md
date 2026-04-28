@@ -27,6 +27,9 @@ Another reason the selective response actions capability is needed is that organ
 
 The selective response actions capability mitigates these risks. By limiting the intrusive actions that can be performed on Tier-0 assets, this capability reduces the risk of accidental or malicious disruption.
 
+> [!NOTE]
+> Restricted mode isn't related to High Value device classification. Devices classified as High Value use an organization-defined tag to identify critical assets such as domain controllers, internet-facing machines, or executive devices. Restricted mode is independent of High Value classification and can be applied to High Value devices, Tier-0 assets, or any other devices where you want to restrict remote response security operations.
+
 ### How does the feature work?
 
 First, the feature must be enabled on the tenant. See [Enable selective response actions](#enabling-the-selective-response-actions-feature).
@@ -40,7 +43,9 @@ The following table describes high-impact response actions that you can allow or
 For detailed instructions on how to use the Defender deployment tool to create to an onboarding packages with restricted security operations settings, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md?tabs=restricted-functionality).
 
 > [!NOTE]
-> Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
+> Onboarding a device in Restricted mode with all response actions allowed isn't the same as using Full mode. In restricted mode, running scripts is disabled by design. Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. Full mode, on the other hand, provides unrestricted access to all supported response actions and capabilities.
+>
+> Restricted mode doesn't reduce detection, alerting, or sensor coverage. All alerts, timelines, and threat detections continue to function normally.
 
 ## Prerequisites and supported operating systems
 
@@ -104,23 +109,7 @@ The security operations status of devices can be identified in several ways:
 
 Once a device is onboarded with restricted settings, its security operations configuration can't be changed or modified. To update a device's response capabilities, you must offboard the device and re-onboard it using a new deployment package with the desired settings. The device ID remains the same, and all historical data are preserved.
 
-## Frequently asked questions
-
-### Is there a relationship between Restricted mode and devices classified as High Value?
-
-No. Devices classified as High Value use an organization-defined tag to identify critical assets such as domain controllers, internet-facing machines, or executive devices. Restricted mode is independent of High Value classification and can be applied to High Value devices, Tier-0 assets, or any other devices where you want to restrict remote response security operations.
-
-### Is using Restricted mode with all response actions allowed the same as using Full mode?
-
-No. Even if all response actions are allowed, onboarding a device in Restricted mode isn't the same as using Full mode. In restricted mode, running scripts is disabled by design, whereas Full mode provides unrestricted access to all supported response actions and capabilities.
-
-### Does Restricted mode affect alert generation or detection capabilities?
-
-No. Restricted mode doesn't reduce detection, alerting, or sensor coverage. All alerts, timelines, and threat detections continue to function normally.
-
-### How do I restrict response actions on a device that's already onboarded to Defender for Endpoint?
-
-You must first offboard the device and then re-onboard it using an onboarding package configured with restricted settings. The device ID remains the same, and all historical data are preserved.
+If you want to restrict response actions on a device that's already onboarded to Defender for Endpoint in Full mode, you must first offboard the device and then re-onboard it using an onboarding package configured with restricted settings. The device ID remains the same, and all historical data are preserved.
 
 ## Related resources
 
