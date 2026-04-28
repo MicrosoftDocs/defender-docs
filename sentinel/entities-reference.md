@@ -113,7 +113,7 @@ The following section contains a more in-depth look at the full schemas of each 
 | **Stream** | Stream | The source of discovery logs related to the specific account. Optional. |
 
 > [!IMPORTANT]
-> Starting **July 1, 2026**, the **Name** field will consistently hold only the UPN prefix for all accounts. Previously, it could sometimes hold the full UPN. If you have automation rules, playbooks, or queries that compare **Name** against a full UPN value (like `user@contoso.com`), update them to reconstruct the full value from **Name** + **UPNSuffix** (or the relevant domain field) or use available additional data instead.
+> Starting **July 1, 2026**, the **Name** field will consistently hold only the UPN prefix for all accounts. Previously, it could sometimes hold the full UPN. If you have automation rules, playbooks, or queries that compare **Name** against a full UPN value (like `user@contoso.com`), update them to reconstruct the full value from **Name** + **UPNSuffix** (or the relevant domain field), or use other available data instead.
 
 #### Strong identifiers of an account entity
 
