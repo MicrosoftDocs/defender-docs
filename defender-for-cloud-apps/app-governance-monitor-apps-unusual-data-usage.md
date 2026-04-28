@@ -33,8 +33,6 @@ Monitoring unusual data usage can help detect:
 
 - Sudden spikes in application activity.
 
-- Unexpected increases in API usage by an application.
-
 - Potential misuse of applications accessing Microsoft 365 data.
 
 - Applications that might be transferring unusually large volumes of data.
