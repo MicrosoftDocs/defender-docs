@@ -10,6 +10,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
 #Customer intent: As an SAP BASIS team member, I want to configure SAP authorizations and deploy optional SAP Change Requests so that I can ensure proper connectivity and log retrieval from SAP systems for security monitoring.
 zone_pivot_groups: sentinel-sap-connection
 
@@ -215,7 +216,7 @@ This procedure has steps both in Microsoft Sentinel and your SAP system, and req
 
 
 ## Run the prerequisite checker
-1. The **Prerequisite checker** iflow is included in the package. We recommend running this iflow **manually** before continuing to the next step to ensure that your SAP system meets the system prerequisites before attempting integration from Microsoft Sentinel.
+1. The **Prerequisite checker** iflow is included in the package. Configure and deploy this iflow before continuing to the next step, so your SAP system meets the system prerequisites before integration with Microsoft Sentinel. After deployment, the iflow runs on a schedule in SAP Cloud Integration; review the latest run status to confirm success.
 
     [!INCLUDE [sap-agentless-prerequisites](../includes/sap-agentless-prerequisites.md)]
 
