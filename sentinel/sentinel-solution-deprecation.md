@@ -1,8 +1,8 @@
 ---
 title: 'Managing end-to-end lifecycle of deprecated solutions in Microsoft Sentinel'
 description: This article walks you through the process of identifying deprecated solutions in Microsoft Sentinel and managing the lifecycle of these solutions.
-author: anilgodavarthy
-ms.author: angodavarthy
+author: mberdugo
+ms.author: monaberdugo
 ms.service: microsoft-sentinel
 ms.topic: concept-article
 ms.date: 12/30/2025
