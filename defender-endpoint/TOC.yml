@@ -631,12 +631,16 @@
     - name: Devices
       items:
       - name: Overview
+        displayName: devices, device inventory
         href: devices-overview.md
       - name: Explore devices in the device inventory
+        displayName: device inventory
         href: machines-view-overview.md
       - name: Manage device scope and relevance
+        displayName: exclude devices, transient devices
         href: manage-device-scope-relevance.md
       - name: Manage device tags and target devices
+        displayName: target devices
         href: machine-tags.md
       - name: Collect custom device data
         items:
@@ -1036,6 +1040,7 @@
         - name: Investigate files
           href: investigate-files.md
         - name: Investigate devices
+          displayName: device timeline, event flags, internet-facing devices
           href: investigate-machines.md
         - name: Investigate an IP address
           href: investigate-ip.md

@@ -1,6 +1,7 @@
 ﻿---
 title: Investigate devices in Microsoft Defender for Endpoint
 description: Learn how to investigate devices by reviewing alerts, timelines, network connections, and security assessments in Microsoft Defender for Endpoint.
+keywords: investigate devices, device timeline, event flags, MITRE ATT&CK, internet-facing devices, device investigation, device details, network connections
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein

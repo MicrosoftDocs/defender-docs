@@ -1,6 +1,7 @@
 ---
 title: Manage device scope and relevance in Microsoft Defender for Endpoint
 description: Control which devices are relevant to your security operations through automatic transient tagging and manual device exclusion.
+keywords: device scope, device relevance, exclude devices, transient devices, device exclusion, transient tagging, device inventory, manage devices
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein

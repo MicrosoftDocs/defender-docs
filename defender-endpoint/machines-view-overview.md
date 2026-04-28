@@ -1,6 +1,7 @@
 ﻿---
 title: Explore devices in the device inventory
 description: Learn how to view, customize, and manage devices in the Microsoft Defender for Endpoint device inventory.
+keywords: device inventory, explore devices, view devices, filter devices, device list, device management, device details
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein

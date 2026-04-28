@@ -1,6 +1,7 @@
 ﻿---
 title: Create and manage device tags and target devices
 description: Use device tags, device groups, and targeting to organize devices and apply security actions at scale in Microsoft Defender for Endpoint.
+keywords: device tags, device groups, target devices, manage tags, organize devices, device targeting, security actions, dynamic tags
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein

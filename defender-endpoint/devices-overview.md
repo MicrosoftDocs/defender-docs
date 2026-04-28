@@ -1,6 +1,7 @@
 ---
 title: Devices in Microsoft Defender for Endpoint
 description: Understand the device lifecycle, roles, and how to manage devices in Microsoft Defender for Endpoint
+keywords: device lifecycle, device management, manage devices, device inventory, onboarded devices, discovered devices, device groups, device tags
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
