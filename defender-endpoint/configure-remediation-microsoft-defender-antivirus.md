@@ -8,7 +8,8 @@ author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.custom: nextgen
-ms.date: 10/20/2025
+ms.date: 04/28/2026
+ai-usage: ai-assisted
 ms.reviewer: yongrhee
 ms.collection: 
 - m365-security
@@ -38,6 +39,15 @@ When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remov
 > If you are certain Microsoft Defender Antivirus quarantined a file based on a false positive, you can restore the file from quarantine after the device reboots. See [Restore quarantined files in Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md). To avoid this problem in the future, you can exclude files from the scans. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
 
 Also see [About regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md) for more remediation-related settings.
+
+> [!WARNING]
+> **Non-remediating threat actions:** Actions **Allow (6)** and **None (11)** don't remediate detected threats. **Allow (6)** suppresses ongoing detection events, while **None (11)** continues to generate alerts and Protection History entries. Neither action can be configured when [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where:
+>
+> - Automatic remediation isn't practical for operations.
+> - Other procedures exist to respond to detected threats.
+> - Compensating security controls are deployed.
+>
+> Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
 
 ## Prerequisites
 

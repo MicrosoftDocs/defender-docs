@@ -7,7 +7,8 @@ metadata:
   ms.reviewer: yongrhee
   ms.service: defender-endpoint
   ms.topic: troubleshooting
-  ms.date: 06/10/2025
+  ms.date: 04/28/2026
+  ai-usage: ai-assisted
   ms.localizationpriority: medium
   ms.custom: nextgen
   ms.subservice: ngp
@@ -553,6 +554,9 @@ sections:
 
              - Block: The resource was blocked from executing.
 
+           > [!WARNING]
+           > **Non-remediating threat actions:** The **Allow** and **No action** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **No action** continues to generate alerts and Protection History entries. Neither action can be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
+
           - Action Status: Description of other actions
 
           - Error Code: Error code Result code associated with threat status. Standard HRESULT values.
@@ -654,6 +658,9 @@ sections:
 
              - Block: The resource was blocked from executing
 
+           > [!WARNING]
+           > **Non-remediating threat actions:** The **Allow** and **No action** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **No action** continues to generate alerts and Protection History entries. Neither action can be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
+
           - Action Status: Description of additional actions
 
           - Error Code: Error code Result code associated with threat status. Standard HRESULT values.
@@ -728,6 +735,9 @@ sections:
              - No action: No action
 
              - Block: The resource was blocked from executing.
+
+           > [!WARNING]
+           > **Non-remediating threat actions:** The **Allow** and **No action** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **No action** continues to generate alerts and Protection History entries. Neither action can be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
 
           - Action Status: Description of other actions
 
