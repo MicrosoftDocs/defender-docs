@@ -5,7 +5,7 @@ author: anilgodavarthy
 ms.author: angodavarthy
 ms.service: microsoft-sentinel
 ms.topic: concept-article
-ms.date: 12/30/2024
+ms.date: 12/30/2025
 
 #CustomerIntent: As a Microsoft Sentinel user, I should be able to find and manage the lifecycle deprecated solutions in Microsoft Sentinel so that I can always have the latest updates.
 ---
@@ -23,6 +23,9 @@ Here are some of the primary reasons why Solutions are sometimes deprecated in M
 - The product or service is acquired by another company necessitating ownership transfer to a different entity.
 
 In these cases, users have to uninstall the original solution and install alternate solutions where available. For more information on how to delete/uninstall solutions in Microsoft Sentinel, see [Delete installed Microsoft Sentinel out-of-the-box content and solutions](/azure/sentinel/sentinel-solutions-delete).
+
+> [!Warning]
+> Microsoft Sentinel solutions that are deprecated are no longer supported by Microsoft. They do not receive updates or bug fixes, and functionality or reliability may degrade over time. Continued use should be carefully evaluated, and migration to a supported alternative is recommended.
 
 ## Identifying solutions that are marked as deprecated
 
