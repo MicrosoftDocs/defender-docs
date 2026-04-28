@@ -496,6 +496,8 @@
             href: security-copilot-agents-defender.md          
           - name: Phishing Triage Agent
             href: phishing-triage-agent.md
+          - name: Security Alert Triage Agent (Preview)
+            href: security-alert-triage-agent.md
           - name: Threat Intelligence Briefing Agent
             href: threat-intel-briefing-agent-defender.md
           - name: Threat Hunting Agent
