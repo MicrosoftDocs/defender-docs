@@ -175,7 +175,7 @@ You might need to extract the following types of identifiers from the Defender p
 1. Each initiative displays its name and identifier.
 1. Copy the initiative ID associated with the specific recommendation.
 
-### How do I find Environment IDs for Cloud Scopes?
+### How do I find Environment IDs for Cloud Scopes (preview)?
 
 1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud**.
 1. Check the scope filter dropdown - the environment filter lists all environment identifiers.

@@ -28,11 +28,11 @@ These are the known limitations for Defender for Cloud in the Defender portal.
 - This is currently not supported in Government clouds.
 - Identity‑scoped recommendations ignore domain/tenant and device‑group filters: Identity-based recommendations in the Identity Security initiative are scoped to identity objects rather than devices. As a result, domain or tenant filters may not fully exclude identities from other domains (such as acquired environments), and device‑group filters do not apply. These filters appear in the UI but are disabled for identity‑scoped views, and changing them does not affect results.
 
-## Opt-In
+## Opt-In (preview)
 
 Access and permissions are managed using cloud scopes instead of device groups.
 
-## Opt-Out
+## Opt-Out (preview)
 
 Restores your previous setup and permissions.
 
