@@ -19,7 +19,7 @@ This article provides an overview of the selective response actions capability i
 
 The selective response actions capability is a Microsoft Defender for Endpoint feature that lets you restrict or customize high-impact security operations during onboarding so you can reduce operational risk on Tier-0 systems and other high-value assets. In practice, it limits intrusive actions such as device isolation, script execution, or Live Response on sensitive devices. 
 
-### Why is the selective response actions capability needed?
+### Background
 
 Deploying Microsoft Defender for Endpoint on high-value assets (HVAs) — such as domain controllers, ADFS servers, and other Tier-0 systems — introduces operational risk due to the powerful actions available to privileged users. Response actions such as isolating devices, executing scripts, or initiating live response sessions can cause significant disruption to critical infrastructure if misused, either unintentionally or due to compromised accounts.
 
@@ -65,6 +65,8 @@ To use the selective response actions capability, enable the feature in the Micr
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 2. Navigate to **Settings** > **Endpoints** > **Advanced features**.
 3. Turn on **Allow restricted operations during onboarding**.
+
+:::image type="content" source="./media/restrict-response-actions-high-value-assets/enable-selective-response-actions.png" alt-text="Advanced features page showing Allow restricted operations during onboarding enabled." lightbox="./media/restrict-response-actions-high-value-assets/enable-selective-response-actions.png":::
 
 Once enabled, the restricted mode option becomes available when creating Defender deployment packages for Windows through the Defender deployment tool (DDT). You can then create deployment packages that specify which security operations to allow on the devices you're onboarding.
 
