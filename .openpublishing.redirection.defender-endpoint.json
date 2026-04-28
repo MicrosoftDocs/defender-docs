@@ -206,6 +206,26 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-endpoint/exclude-devices.md",
+      "redirect_url": "/defender-endpoint/manage-device-scope-relevance#exclude-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/transient-device-tagging.md",
+      "redirect_url": "/defender-endpoint/manage-device-scope-relevance#view-and-manage-transient-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/internet-facing-devices.md",
+      "redirect_url": "/defender-endpoint/investigate-machines#investigate-internet-facing-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/device-timeline-event-flag.md",
+      "redirect_url": "/defender-endpoint/investigate-machines#investigate-device-timeline",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management.md",
       "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
       "redirect_document_id": false
