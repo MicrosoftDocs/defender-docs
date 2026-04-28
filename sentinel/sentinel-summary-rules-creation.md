@@ -95,3 +95,8 @@ The `binSize` attribute represents the frequency at which the query runs in minu
 When a customer creates a new summary from the template, the template `version` is saved. If a new template version is published, customers are notified in the UX. Versions follow the format `a`, `b`, and `c`, in which `a` is the major version, `b` is the minor version, and `c` is the patch. The version field is the last line of the template.
 
 This field is mandatory.
+
+## Limitations
+
++ **First excution**: The first execution of your summary rule is deayed by a number of hours. Subsequet executions run as configured
++ **Cross-workspace references**: References to tables accoss workspaces are not supported in summary rules.
