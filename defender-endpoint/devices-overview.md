@@ -37,7 +37,7 @@ Devices appear in your inventory through two primary methods:
 - **Discovery**: Devices automatically discovered on your network without an agent installed. Discovery happens through onboarded endpoints that observe network traffic (basic discovery) or actively probe the environment (standard discovery). Discovered devices show an **Onboarding status** of **Can be onboarded**, **Unsupported**, or **Insufficient info**. For more information, see [Device discovery overview](device-discovery.md).
 - **IoT and OT devices**: IoT and operational technology (OT) devices — such as printers, cameras, and industrial control systems — appear in the inventory when you enable [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/microsoft-defender-iot). These devices appear on the **IoT/OT devices** tab and include extra fields like device type, subtype, vendor, and model.
 
-The **Discovery sources** column in the [device inventory](machines-view-overview.md) tells you how each device was found: **MDE** (found by the Defender for Endpoint sensor), **Microsoft Defender for IoT** (discovered by Defender for IoT), and other sources. Use this column to understand why a device appears and whether it requires onboarding. For more detail on discovery source values, see [Device inventory field reference](device-inventory-field-reference.md#discovery-sources-values).
+The **Discovery sources** column in the [device inventory](machines-view-overview.md) tells you how each device was found: **MDE** (found by the Defender for Endpoint sensor), **Microsoft Defender for IoT** (discovered by Defender for IoT), and other sources. Use this column to understand why a device appears and whether it requires onboarding.
 
 ## The device lifecycle and journey
 

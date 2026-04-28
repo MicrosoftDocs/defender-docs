@@ -24,7 +24,7 @@ appliesto:
 
 The **Device inventory** is the authoritative source for all devices visible to Microsoft Defender for Endpoint. It shows devices that are onboarded (with the full agent installed) and devices discovered on your network through [device discovery](device-discovery.md).
 
-This article explains how to view, customize, and manage devices in your device inventory. For detailed descriptions of every column, filter, and field value, see [Device inventory field reference](device-inventory-field-reference.md).
+This article explains how to view, customize, and manage devices in your device inventory.
 
 To understand how devices appear in the inventory through onboarding and discovery, including IoT/OT devices and discovery sources, see [Devices in Microsoft Defender for Endpoint](devices-overview.md).
 
@@ -47,10 +47,10 @@ The device inventory opens on the **All devices** tab. You can see information s
 
 When you open the device inventory, you can:
 
-- **View device categories**: Switch between tabs (All devices, Computers & mobile, Network devices, IoT/OT, Uncategorized) to focus on specific device types. For details on what each tab contains, see [Device categories](device-inventory-field-reference.md#device-categories).
-- **Review device counts**: Check the count pills at the top of each tab (total, critical assets, high risk, high exposure, not onboarded, newly discovered) to prioritize your work. For details, see [Device counts and cards](device-inventory-field-reference.md#device-counts-and-cards).
-- **View special cards**: Classify critical assets or check for attack path warnings. For details, see [Device counts and cards](device-inventory-field-reference.md#device-counts-and-cards).
-- **Check device details**: View columns like risk level, exposure level, onboarding status, sensor health, managed by, tags, and more for each device. For details on every column, see [Columns reference](device-inventory-field-reference.md#columns-reference).
+- **View device categories**: Switch between tabs (All devices, Computers & mobile, Network devices, IoT/OT, Uncategorized) to focus on specific device types.
+- **Review device counts**: Check the count pills at the top of each tab (total, critical assets, high risk, high exposure, not onboarded, newly discovered) to prioritize your work.
+- **View special cards**: Classify critical assets or check for attack path warnings.
+- **Check device details**: View columns like risk level, exposure level, onboarding status, sensor health, managed by, tags, and more for each device.
 
 > [!NOTE]
 > Device discovery integration with [Microsoft Defender for IoT in the Defender portal (Preview)](/defender-for-iot/microsoft-defender-iot) is available to help locate, identify, and secure your complete OT/IOT asset inventory. Devices discovered with this integration appear on the **IoT/OT devices** tab.
@@ -76,7 +76,7 @@ Choose which columns to display in your device inventory view.
 1. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** at the top of the device inventory.
 1. Select or clear the checkboxes for columns you want to show or hide. The changes apply immediately.
 
-Default columns vary by tab. For the full list of columns with descriptions, default status, and example values, see [Columns reference](device-inventory-field-reference.md#columns-reference).
+Default columns vary by tab.
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
@@ -105,8 +105,6 @@ Here are a few common filter scenarios to get you started:
 - Filter by **Onboarding status** > **Can be onboarded** to find discovered devices ready for agent deployment.
 - Filter by **Tags** to scope the view to a specific business group (for example, `Finance` or `HQ-Building-A`).
 - Filter by **Managed by** > **Unknown** to identify unmanaged devices.
-
-For the full list of available filters, possible values, and guidance on when to use each, see [Filters reference](device-inventory-field-reference.md#filters-reference).
 
 ### Sort devices
 
@@ -148,7 +146,6 @@ Use the device inventory to perform common security tasks.
 
 Now that you understand how to explore the device inventory, continue through the device lifecycle:
 
-- **[Device inventory field reference](device-inventory-field-reference.md)**: Detailed descriptions for every column, filter, and field value
 - **[Manage device scope and relevance](manage-device-scope-relevance.md)**: Control which devices are relevant to your security operations
 - **[Create and manage device tags](machine-tags.md)**: Add business context and organize devices into groups
 - **[Create and manage device tags and target devices](machine-tags.md)**: Use tags to apply security actions at scale

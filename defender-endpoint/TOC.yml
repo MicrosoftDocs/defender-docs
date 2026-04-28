@@ -634,8 +634,6 @@
         items:
         - name: Explore devices
           href: machines-view-overview.md
-        - name: Device inventory field and filter reference
-          href: device-inventory-field-reference.md
       - name: Manage device scope and relevance
         href: manage-device-scope-relevance.md
       - name: Manage device tags and target devices
