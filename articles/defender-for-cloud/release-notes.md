@@ -32,10 +32,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| April 30, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | April 30, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
+
+### Daily score calculation enhancement for risk-based Cloud secure score
+
+April 30, 2026
+
+We've improved how daily Cloud secure score values are calculated to more accurately reflect your posture and the impact of actions taken throughout the day.
+
+Daily scores represent end-of-day snapshots instead of averaged values over the course of the day, providing a more consistent and precise view of the score at each point in time. This helps you better understand score changes and correlate them with changes introduced during the day.
+
+Historical values have been recalculated to align with this definition, so you may notice slight differences when comparing trends across this period.
+
+For more information, see [Cloud secure score](secure-score-security-controls.md?pivots=defender-portal).
 
 ## General availability of Defender for Cloud integration into the Defender portal
 
@@ -49,7 +62,7 @@ Microsoft Defender for Cloud is now integrated into the Microsoft Defender porta
 - A centralized cloud asset inventory with enriched risk, health, and coverage data
 - Integrated posture management through Microsoft Security Exposure Management (MSEM), including secure score, recommendations, attack paths, and vulnerabilities
 - A new recommendation model with individual findings for improved prioritization and governance
-- A risk-based Cloud Secure Score for more accurate assessment and prioritization
+- A risk-based Cloud Secure Score for more accurate assessment and prioritization including improved daily secure score calculations
 
 > [!Note]
 > Cloud scopes is still in preview.
