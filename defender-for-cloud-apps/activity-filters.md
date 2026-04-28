@@ -20,6 +20,9 @@ The action types for events and activities are determined by the source service,
 For a full list of Microsoft 365 activities monitored by Defender for Cloud Apps, see [Search the audit log in the Microsoft Purview portal](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance#audited-activities).
 
 
+> [!NOTE]
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. The activity log uses a separate data pipeline that isn't yet integrated with the [Identity inventory](/defender-for-identity/identity-inventory). Correlations defined in the Identity inventory don't affect the user details shown in the activity log. For a full list of affected features, see [Enable Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration).
+
 The **Activity log** can be filtered to enable you to find specific activities. You create policies based on the activities and then define what you want to be alerted about and act on. You can search for activities performed on certain files. The type of activities and the information we get for each activity depends on the app and what kind of data the app can provide.
 
 For example, you can use the **Activity log** to find users in your organization who are using operating systems or browsers that are out of date, as follows:
@@ -119,9 +122,9 @@ To view IP address insights:
 
     - **Admin activities**: The number of administrative activities performed from this IP address in the past 30 days. You can perform the following IP address actions:
 
-        - Set as a Corporate IP and add to allowlist
-        - Set as a VPN IP address and add to allowlist
-        - Set as a Risky IP and add to blocklist
+        - Set as a Corporate IP and add to allow list
+        - Set as a VPN IP address and add to allow list
+        - Set as a Risky IP and add to block list
 
 :::image type="content" source="media/activity-filters/ip-address-insights.png" alt-text="Screenshot that shows IP address activities over the last 30 days." lightbox="media/activity-filters/ip-address-insights.png":::
 
