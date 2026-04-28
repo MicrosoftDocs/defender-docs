@@ -98,6 +98,8 @@ If you don't specify any other options, the file/folder is excluded from all typ
 
 > [!NOTE]  
 > Wildcards are supported in file/folder exclusions.
+>
+> A backslash (\) is required before the colon (:) and after a file extension.
 
 #### Folders
 
