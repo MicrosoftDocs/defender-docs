@@ -61,7 +61,7 @@ For detailed instructions on how to use the Defender deployment tool to create t
    | Windows 11 24H2 | KB5062660 |
    | Windows 11 25H2 | All |
 
-- To use restricted mode, the feature switch **Allow restricted operations during onboarding** must be enabled. See [Enabling the selective response actions feature](#enabling-the-selective-response-actions-feature).
+- To use restricted mode, the feature switch **Allow restricted securityoperations during onboarding** must be enabled. See [Enabling the selective response actions feature](#enabling-the-selective-response-actions-feature).
 
 ## Enabling the selective response actions feature
 
