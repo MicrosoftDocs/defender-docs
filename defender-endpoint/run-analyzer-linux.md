@@ -1,4 +1,4 @@
----
+﻿---
 title: Run the client analyzer on Linux
 description: Run the Defender for Endpoint client analyzer on Linux
 author: chrisda
@@ -8,12 +8,15 @@ ms.service: defender-endpoint
 ms.subservice: linux
 ms.localizationpriority: medium
 ms.topic: troubleshooting-general
-ms.date: 09/23/2025
+ms.date: 04/09/2026
 ms.custom: partner-contribution
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
+search.appverid: met150
+audience: ITPro
+f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -21,7 +24,7 @@ appliesto:
 
 # Run the client analyzer on Linux
 
-If you have issues with Microsoft Defender for Endpoint on Linux and need support, you might be asked to provide the output from the Client Analyzer tool. It is a diagnostic tool which help administrators and support teams troubleshoot issues with Microsoft Defender for Endpoint. It collects detailed information about installation, configuration, service health, logs, connectivity status, etc. This tool is primarily used for checking system health, validating configurations, and helping troubleshoot potential issues.
+If you have issues with Microsoft Defender for Endpoint on Linux and need support, you might be asked to provide the output from the Client Analyzer tool. It's a diagnostic tool that helps administrators and support teams troubleshoot issues with Microsoft Defender for Endpoint. It collects detailed information about installation, configuration, service health, logs, connectivity status, etc. This tool is primarily used for checking system health, validating configurations, and helping troubleshoot potential issues.
 
 This article explains how to use the tool on your device or with live response. You can use either a Python-based solution or a binary version that doesn't need Python.
 
@@ -35,23 +38,26 @@ The binary version of client analyzer is made available in two ways:
 
 ### Run the Client Analyzer binary shipped with Microsoft Defender for Linux:
 > [!NOTE]
-> Starting with the Defender for Endpoint version `101.25082.0000`, the Client Analyzer is shipped with an agent. It can be found at the following location: `/opt/microsoft/mdatp/tools/client_analyzer/binary`
+> Starting with the Microsoft Defender for Endpoint version `101.25082.0000`, the Client Analyzer is shipped with an agent. It can be found at the following location: `/opt/microsoft/mdatp/tools/client_analyzer/binary`
 
-To run this client analyzer follow these steps:
+Running this tool generates a diagnostic package as a `.zip` file in the `/tmp` directory.
+
+To run the Client Analyzer, follow these steps:
 
 1. Go to the directory `/opt/microsoft/mdatp/tools/client_analyzer/binary`:
 
     ```bash
     cd /opt/microsoft/mdatp/tools/client_analyzer/binary
     ```
-1. Run the tool as _root_ to generate a diagnostic package:
+1. Run the tool with root privileges to generate a diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
    ```
+
 ### Download and run the Client Analyzer standalone binary tool
 
-Follow the steps below to use the standalone ClientAnalyzer binary
+To use the standalone ClientAnalyzer binary, complete the following steps.
 
 1. Download the [XMDE Client Analyzer Binary](https://go.microsoft.com/fwlink/?linkid=2336125) tool to the Linux machine that you need to investigate. If you're using a terminal, download the tool by entering the following command:
 
@@ -82,12 +88,12 @@ Follow the steps below to use the standalone ClientAnalyzer binary
    - **SupportToolLinuxamd64Binary.zip**: For x86 Linux devices
    - **SupportToolLinuxarm64Binary.zip**: For ARM Linux devices
 
-1. Unzip the sepecific zip based on your Linux OS architecture. For example, we use here the `SupportToolLinuxamd64Binary.zip` file.
+1. Unzip the specific zip based on your Linux OS architecture. For example, we use here the `SupportToolLinuxamd64Binary.zip` file.
 
      ```bash
      unzip -q SupportToolLinuxamd64Binary.zip
      ```
-1. Run the tool as _root_ to generate a diagnostic package:
+1. Run the tool with root privileges to generate a diagnostic package:
 
    ```bash
    sudo ./MDESupportTool -d
@@ -107,26 +113,26 @@ The python version of client analyzer is made available in two ways:
 > - If your device is behind a proxy, then you can pass the proxy server as an environment variable to the `mde_support_tool.sh` script. For example: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`.
 
 > [!WARNING]
-> Running the Python-based client analyzer requires the installation of PIP packages which could cause some issues in your environment. To avoid issues from occurring, we recommend that you install the packages into a user PIP environment.
+> Running the Python-based client analyzer requires the installation of PIP packages, which could cause some issues in your environment. To avoid issues from occurring, we recommend that you install the packages into a user PIP environment.
 
 ### Run Client Analyzer python version shipped with Microsoft Defender for Linux
 
 > [!NOTE]
 > Starting with the Defender for Endpoint version `101.25082.0000`, the Client Analyzer is shipped with an agent. It can be found at the following location: `/opt/microsoft/mdatp/tools/client_analyzer/python`
 
-To run this client analyzer follow these steps:
+To run this client analyzer, follow these steps:
 
 1. Go to directory `/opt/microsoft/mdatp/tools/client_analyzer/python`:
 
     ```bash
     cd /opt/microsoft/mdatp/tools/client_analyzer/python
     ```
-1. Run as a root user to install required dependencies.
+1. Run with root privileges to install required dependencies.
 
     ```bash
     sudo ./mde_support_tool.sh
     ```
-1. To collect the diagnostic package and generate the result archive file, run again as root.
+1. To collect the diagnostic package and generate the result archive file, run again with root privileges.
 
     ```bash
     sudo ./mde_support_tool.sh -d
@@ -170,7 +176,7 @@ To run this client analyzer follow these steps:
     ./mde_support_tool.sh
     ```
 
-1. To collect the diagnostic package and generate the result archive file, run again as root:
+1. To collect the diagnostic package and generate the result archive file, run again with root privileges:
 
     ```bash
     sudo ./mde_support_tool.sh -d
@@ -181,7 +187,7 @@ To run this client analyzer follow these steps:
 
 ## Command line options
 
-Below are the command line options provided by client analyzer:
+The client analyzer provides the following command-line options:
 
 ```console
 
@@ -329,7 +335,7 @@ The files generated when using this mode are summarized in the following table:
 | `last_info.txt` | Listing of last logged in users |
 | `locale_info.txt` | Show current locale |
 | `tmp_files_owned_by_mdatp.txt` | /tmp files owned by group: mdatp <br/>(Present only when Defender for Endpoint is installed) |
-| `mdatp_config.txt` | All the Defender for Endpoint configurations <br/>(Present only when Defender for Endpoint is installed) |
+| `mdatp_config.txt` | All Defender for Endpoint configurations <br/>(Present only when Defender for Endpoint is installed) |
 | `mpenginedb.db`<br/>`mpenginedb.db-wal`<br/> `mpenginedb.db-shm` | Antivirus definitions file <br/>(Present only when Defender for Endpoint is installed) |
 | `iptables_rules.txt` | Linux iptables rules |
 | `network_info.txt` | Network information |
@@ -361,7 +367,7 @@ Collect extensive machine performance tracing of Defender for Endpoint processes
 
 Usage example: `sudo ./MDESupportTool performance --frequency 500`
 
-Below is the file generated when using this mode:
+This mode generates the following file:
 
 | File  | Remarks |
 | ------ | ------ |
@@ -427,7 +433,7 @@ A single report `installation_report.json` is generated. The keys in the file ar
 | agent_version  | Version of Defender for Endpoint installed.  |
 | onboarding_status | The onboarding and ring info |
 | support_status | MDE is supported with the current system configurations. |
-| distro | The distro on which the agent is installed in supported or not. |
+| distro | The distro on which the agent is installed is supported or not. |
 | connectivitytest | The connectivity tests status.|
 | min_requirement | The minimum requirements for CPU and Memory are met.|
 | external_depedency | The external dependencies are satisfied or not. |
@@ -509,13 +515,48 @@ sudo ./mde_support_tool.sh skipfaultyrules -e true
 
 ## Use live response in Defender for Endpoint to collect support logs
 
-The XMDE Client Analyzer tool can be downloaded as a [binary](https://aka.ms/XMDEClientAnalyzerBinary) or [Python](https://aka.ms/XMDEClientAnalyzer) package that can be extracted and executed on Linux machines. Both versions of the XMDE Client Analyzer can be executed during a Live Response session.
+The XMDE Client Analyzer can be run during a Live Response session either by using the version that is already included with Microsoft Defender for Endpoint on Linux, or by downloading the Client Analyzer as a [binary](https://aka.ms/XMDEClientAnalyzerBinary) or [Python](https://aka.ms/XMDEClientAnalyzer) package and extracting it on the device.
 
 - For installation, the `unzip` package is required.
 - For execution, the `acl` package is required.
 
 > [!IMPORTANT]
-> Window uses the Carriage Return and Line Feed invisible characters to represent the end of one line and beginning of a new line in a file, but Linux systems uses only the Line Feed invisible character at the end of its file lines. When you use the following scripts, if done on Windows, this difference can result in errors and failures of the scripts to run. A potential solution to this is to utilize the Windows Subsystem for Linux and the `dos2unix` package to reformat the script so it aligns with the Unix and Linux format standard.
+> Windows uses the carriage return and line feed invisible characters to represent the end of one line and beginning of a new line in a file. Linux systems use only the Line Feed invisible character at the end of file lines. When you use the following scripts, if done on Windows, this difference can result in errors and failures of the scripts to run. A potential solution to this is to utilize the Windows Subsystem for Linux (WSL) and the `dos2unix` package to reformat the script so it aligns with the Unix and Linux format standard.
+
+
+#### Run Client Analyzer from the Microsoft Defender for Endpoint installation
+
+If Microsoft Defender for Endpoint is already installed on the device, you can run the Client Analyzer directly from the agent installation without downloading or installing additional packages.
+
+- Create an `MDESupportToolBinary.sh` file and paste the following content into it.
+
+   ```bash
+   #! /usr/bin/bash
+
+   echo "cd /opt/microsoft/mdatp/tools/client_analyzer/binary"
+   cd /opt/microsoft/mdatp/tools/client_analyzer/binary
+
+   echo "Running MDESupportTool"
+   ./MDESupportTool $@
+
+   Execute:
+   run MDESupportToolBinary.sh -parameters "--bypass-disclaimer -d"
+
+
+   MDESupportToolPython.sh
+
+   #! /usr/bin/bash
+
+   echo "cd /opt/microsoft/mdatp/tools/client_analyzer/python"
+   cd /opt/microsoft/mdatp/tools/client_analyzer/python
+
+   echo "Running MDESupportTool"
+   ./mde_support_tool.sh $@
+
+   Execute:
+   run MDESupportToolPython.sh -parameters "--bypass-disclaimer -d"
+
+   ```
 
 ### Install the XMDE Client Analyzer
 
@@ -533,7 +574,7 @@ Due to the limited commands available in live response, the steps detailed must 
 
 The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](run-analyzer-linux.md#run-the-binary-version-of-the-client-analyzer). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
-1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
+- Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash 
@@ -559,7 +600,7 @@ The following script performs the first six steps of the [Running the Binary ver
 
 The following script performs the first six steps of the [Running the Python version of the Client Analyzer](run-analyzer-linux.md#run-the-python-based-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
-1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
+- Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash
@@ -584,6 +625,7 @@ The following script performs the first six steps of the [Running the Python ver
    ```
 > [!TIP]
 > Watch this video to learn more about endpoint settings: [Defender for Endpoint client analyzer endpoint settings](https://www.youtube.com/watch?v=Frw2xFjzphE)
+
 #### Run the client analyzer install scripts
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you want to investigate.
@@ -600,6 +642,7 @@ The following script performs the first six steps of the [Running the Python ver
    run InstallXMDEClientAnalyzer.sh
    ```
 
+
 ### Run the XMDE client analyzer
 
 Live response doesn't support running the XMDE Client Analyzer or Python directly, so an execution script is necessary.
@@ -611,7 +654,7 @@ Live response doesn't support running the XMDE Client Analyzer or Python directl
 
 The binary version of the client analyzer accepts command line parameters to perform different analysis tests. To provide similar capabilities during live response, the execution script takes advantage of the `$@` bash variable to pass all input parameters provided to the script to the XMDE Client Analyzer.
 
-1. Create a bash file `MDESupportTool.sh` and paste the following content into it.
+- Create a bash file `MDESupportTool.sh` and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash
@@ -628,7 +671,7 @@ The binary version of the client analyzer accepts command line parameters to per
 
 The Python version of the client analyzer accepts command line parameters to perform different analysis tests. To provide similar capabilities during live response, the execution script takes advantage of the `$@` bash variable to pass all input parameters provided to the script to the XMDE Client Analyzer.
 
-1. Create a bash file `MDESupportTool.sh` and paste the following content into it.
+- Create a bash file `MDESupportTool.sh` and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash  
@@ -682,9 +725,3 @@ The Python version of the client analyzer accepts command line parameters to per
 - [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
-
-
-
-
-
-
