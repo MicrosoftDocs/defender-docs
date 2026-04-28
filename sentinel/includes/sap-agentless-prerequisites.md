@@ -7,8 +7,6 @@ ai-usage: ai-assisted
 
 <!-- docutune:disable -->
 
-The **Prerequisite checker** iflow is included in the integration package. You no longer need to trigger it manually with an external PowerShell or REST client. After deployment, the iflow runs on a schedule in SAP Cloud Integration; review the latest run status to confirm success.
-
 **To configure and deploy the tool**:
 
 1. Open the integration package, navigate to the **Artifacts** tab, and select the **Prerequisite checker** iflow > **Configure**.
