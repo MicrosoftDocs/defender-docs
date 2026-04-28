@@ -13,6 +13,7 @@ zone_pivot_groups: sentinel-sap-connection
 ms.custom:
   - devx-track-azurecli
   - sfi-image-nochange
+ai-usage: ai-assisted
 
 #Customer intent: As a security, infrastructure, or SAP BASIS team member, I want to connect my SAP system to Microsoft Sentinel so that I can ingest SAP data into Microsoft Sentinel for enhanced monitoring and threat detection.
 
@@ -398,26 +399,43 @@ This procedure is only relevant when you want to customize the SAP agentless dat
 
 ### Prerequisites for customizing data connector behavior
 
-- You must have access to the [SAP Integration Suite](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/sap-cloud-integration), with permissions to [edit value mappings](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/working-with-mapping).
-- An SAP integration package, either existing or new, to upload the default value mapping file.
+- You must have access to the [SAP Integration Suite](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/sap-cloud-integration), with permissions to [create and edit value mappings](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/working-with-mapping).
+- A separate SAP integration package, either existing or new, that is dedicated to hosting the value mapping artifact. The Microsoft Sentinel for SAP integration package installed from the marketplace is in configure-only mode, so you can't add it there.
 
-### Download the configuration file and customize settings
+### Create the value mapping artifact and customize settings
 
-1. Download the default [**example-parameters.zip**](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/Agentless/example-parameters.zip) file, which provides settings that define default behavior and is a good starting point to start customizing.
+Create a value mapping artifact in your SAP Integration Suite tenant and add only the parameters you want to override. Any parameter you don't define keeps its default value.
 
-    Save the **example-parameters.zip** file to a location accessible to your SAP Integration Suite environment.
+You have two options for getting the artifact in place:
 
-1. Use the standard SAP procedures for uploading a Value Mapping file and making changes to customize your data connector settings:
+- **Option 1 (recommended): Import the prebuilt Key Value Map** from the [Microsoft Sentinel for SAP community repository](https://github.com/Azure-Samples/Sentinel-For-SAP-Community/). The repository ships a **Data Collector Customizing (Key Value Map)** pre-populated blueprint for customizing. Download the latest base package from the [releases page](https://github.com/Azure-Samples/Sentinel-For-SAP-Community/releases/latest) and import it into your SAP Integration Suite tenant. Then continue with the customization steps below.
 
-    1. Upload the **example-parameters.zip** file to the SAP Integration Suite as a value mapping artifact. For more information, see the [SAP documentation](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/creating-value-mapping).
-    1. Use one of the following methods to customize your settings:
+    > [!TIP]
+    > The same community repository hosts other Microsoft-provided integration recipes you can adopt alongside the agentless data connector, such as **SAP Ariba**, **SAP S/4HANA Cloud public edition (GROW)**, **SAP User block**, and **SAP Table Reader**. Browse the [integration-artifacts folder](https://github.com/Azure-Samples/Sentinel-For-SAP-Community/tree/main/integration-artifacts) for the full and up-to-date list. Community contributions are welcome.
 
-        - **To customize settings across all SAP systems**, add value mappings for the **global** bi-directional mapping agency.
-        - **To customize settings for specific SAP systems**, add new bi-directional mapping agencies for each SAP system, and then add value mappings for each one. Name your agencies to exactly match the name of the RFC destination that you want to customize, such as myRfc, key, myRfc, value.
+- **Option 2: Create the artifact manually.** In your dedicated package, create a new **Value Mapping** artifact. For more information, see the SAP documentation on [creating a value mapping](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/creating-value-mapping).
 
-        For more information, see [SAP documentation on configuring Value Mappings](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/configuring-value-mappings)
+After the value mapping artifact is in place, customize and activate it:
 
-    Make sure to deploy the artifact when you're done customizing to activate the updated settings.
+1. Add the entries that customize your data connector behavior. Use one of the following approaches:
+
+    - **To customize settings across all SAP systems**, add value mappings under the **global** bi-directional mapping agency, using the parameter name as the source key and your override as the target value.
+    - **To customize settings for specific SAP systems**, create a separate bi-directional mapping agency for each SAP system. Name each agency to exactly match the name of the RFC destination that you want to customize (for example, `myRfc, key, myRfc, value`), and add the parameter entries under that agency.
+
+    For more information, see the SAP documentation on [configuring value mappings](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/configuring-value-mappings).
+
+1. Save and **deploy** the value mapping artifact to activate the updated settings.
+
+:::image type="content" source="./media/deploy-data-connector-agent-container/agentless-value-mapping-artifact.png" alt-text="Screenshot placeholder of the value mapping artifact in SAP Cloud Integration with example agentless data connector parameters." lightbox="./media/deploy-data-connector-agent-container/agentless-value-mapping-artifact.png":::
+
+Use the following table as a guide for what to enter in the value mapping artifact. Add only the rows for the parameters you want to override:
+
+| Field in the value mapping artifact | What to enter |
+|-------------------------------------|---------------|
+| **Agency (source and target)** | `global` for all SAP systems, or the RFC destination name (for example, `myRfc`) to scope the override to a specific SAP system. |
+| **Identifier (source and target)** | `key` as the source identifier and `value` as the target identifier. |
+| **Source value** | The parameter name from the customizable parameters table (for example, `collect-changedocs-logs`). |
+| **Target value** | The override value for that parameter (for example, `false`). |
 
 The following table lists the customizable parameters for the SAP agentless data connector for Microsoft Sentinel:
 
