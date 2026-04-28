@@ -12,7 +12,7 @@ ms.collection:
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-ms.date: 03/12/2026
+ms.date: 04/28/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -105,9 +105,9 @@ The following Linux server distributions are supported:
 | Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
 | Amazon Linux | 2, 2023 | 2, 2023 |
 | Fedora | 33–42 | - |
-| Rocky Linux | 8.7+, 9.2+ | - |
-| Alma Linux | 8.4+, 9.2+ | - |
-| Mariner | 2 | - |
+| Rocky Linux | 8.7+, 9.2+ | 8.7+, 9.2+ |
+| Alma Linux | 8.4+, 9.2+ | 8.4+, 9.2+ |
+| Mariner | 2 | 2 |
 
 > [!NOTE]
 > Distributions and versions that aren't explicitly listed above, and custom operating systems, are unsupported (even if they're derived from the officially supported distributions).
