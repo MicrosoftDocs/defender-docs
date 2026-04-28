@@ -10,10 +10,6 @@ ms.service: defender-for-cloud
 
 # FAQ for Defender portal
 
-> [!NOTE]
-> This is currently in preview.
-> For details about current gaps and restrictions, see [Known limitations](known-limitations.md).
-
 This article answers frequently asked questions about using Microsoft Defender for Cloud in the Defender portal, including integration, migration, and compatibility topics.
 
 ## Overview
