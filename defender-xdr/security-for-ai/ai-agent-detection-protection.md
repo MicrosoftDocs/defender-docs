@@ -37,9 +37,7 @@ Real-time protection focuses on high-confidence threats, including:
 > [!NOTE]
 > For agents built with Microsoft Copilot Studio, Microsoft Defender also provides real-time protection by evaluating model prompts and responses. This capability doesn't depend on Work IQ.
 
-When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
-
-Beyond the core real‑time protection capabilities available for all Microsoft Agent 365‑managed agents, you can enable an extended set of real‑time protection capabilities for agents built with Microsoft Copilot Studio.
+When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate blocked actions using familiar Defender workflows.
 
 ### Enable real-time protection
 
