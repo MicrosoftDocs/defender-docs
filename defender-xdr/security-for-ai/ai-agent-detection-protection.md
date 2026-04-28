@@ -19,7 +19,7 @@ Deployed AI agents operate autonomously, invoking tools, accessing data, and tak
 This article explains how Microsoft Defender detects, blocks, and enables security teams to investigate threats to AI agents managed through [Microsoft Agent 365](/microsoft-agent-365/overview), including the extended detection and protection capabilities available for supported agent platforms.
 
 > [!NOTE]
-> Some capabilities described in this article currently require onboarding through Microsoft Defender for Cloud Apps. This is a temporary configuration that will be part of the Agent 365 product experience. Starting July 1, 2026, your organization needs an [Agent 365 subscription](https://www.microsoft.com/en/microsoft-agent-365) to continue using agent protection and visibility capabilities.
+> Some capabilities described in this article currently require onboarding through Microsoft Defender for Cloud Apps. This is a temporary configuration that will be part of the Agent 365 product experience. Starting June 30, 2026, your organization needs an [Agent 365 subscription](https://www.microsoft.com/en/microsoft-agent-365) to continue using agent protection and visibility capabilities.
 
 ## Block unsafe AI agent actions in real time
 
