@@ -4,7 +4,6 @@ description: The steps to connect Microsoft Defender for Office 365 to Sentinel.
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection:
 - m365-guidance-templates
