@@ -1,4 +1,4 @@
-﻿---
+---
 title: View device control events and information in Microsoft Defender for Endpoint
 description: Monitor your organization's data security through device control reports.
 ms.service: defender-endpoint
@@ -7,13 +7,11 @@ ms.date: 06/25/2024
 ms.author: lwainstein
 author: limwainstein
 ms.topic: article
-audience: ITPro
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

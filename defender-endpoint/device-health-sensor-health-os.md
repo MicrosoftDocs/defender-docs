@@ -1,13 +1,11 @@
-﻿---
+---
 title: Device health Sensor health & OS report
 description: Use the device health report to track device health, OS platforms, and Windows 10 versions.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 03/25/2025
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
