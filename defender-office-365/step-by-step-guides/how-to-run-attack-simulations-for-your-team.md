@@ -4,7 +4,6 @@ description: The steps to send an Attack Simulation payload to your target users
 ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
 ms.collection: 
 - m365-guidance-templates

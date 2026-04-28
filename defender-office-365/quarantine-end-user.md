@@ -13,7 +13,8 @@ ms.custom:
 description: Users can learn how to view and manage quarantined email messages in Microsoft 365 that were meant to be delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 04/01/2026
+ms.date: 04/27/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -58,7 +59,7 @@ You view and manage your quarantined messages in the Microsoft Defender portal o
 
 - To open the Microsoft Defender portal, go to <https://security.microsoft.com>. To go directly to the **Quarantine** page, use <https://security.microsoft.com/quarantine>.
 
-- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
+- Admins can configure how long messages are kept in quarantine before they're permanently deleted in anti-spam policies. Messages expired from quarantine are unrecoverable. For more information, see [Configure anti-spam policies for cloud mailboxes](anti-spam-policies-configure.md).
 
 - By default, messages that were quarantined for high confidence phishing, malware, or by mail flow rules are only available to admins, and aren't visible to users. For more information, see [Manage quarantined messages and files as an admin](quarantine-admin-manage-messages-files.md).
 
@@ -93,7 +94,7 @@ You can sort the entries by clicking on an available column header. Select :::im
   - **Message sender is blocked by administrator settings**
 
   > [!TIP]
-  > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+  > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides. For more information, see [Limits for junk email settings](configure-junk-email-settings-on-exo-mailboxes.md#limits-for-junk-email-settings).
 
 - **Released by**<sup>\*</sup>
 - **Message ID**
@@ -130,7 +131,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Show all senders**
 
   > [!TIP]
-  > If a sender is blocked and **Don't show blocked senders** is selected, messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+  > If a sender is blocked and **Don't show blocked senders** is selected, messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides. For more information, see [Limits for junk email settings](configure-junk-email-settings-on-exo-mailboxes.md#limits-for-junk-email-settings).
 
 - **Release status**: Any of the following values:
   - **Needs review**
@@ -154,10 +155,10 @@ When you're finished on the **Filters** flyout, select **Apply**. To clear the f
 
 Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific messages. Wildcards aren't supported. You can search by the following values:
 
-- Sender email address
-- Subject. Use the entire subject of the message. The search isn't case-sensitive.
+- **Sender email address**
+- **Subject**: Use the entire subject of the message. The search isn't case-sensitive.
 
-After you enter the search criteria, press the ENTER key to filter the results.
+After you enter the search criteria, press the **Enter** key to filter the results.
 
 > [!NOTE]
 > The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
@@ -167,7 +168,7 @@ After you find a specific quarantined message, select the message to view detail
 > [!TIP]
 > On mobile devices, the previously described controls are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**.
 >
-> :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
+> :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Screenshot of selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
 
 #### View quarantined message details
 
@@ -217,11 +218,11 @@ To take action on the message, see the next section.
 
    - Select the message from the list by selecting the check box next to the first column. The available actions are no longer grayed out.
 
-     :::image type="content" source="media/quarantine-user-message-selected-message-actions.png" alt-text="Available actions after you select a quarantined message on the Email tab of the Quarantine page." lightbox="media/quarantine-user-message-selected-message-actions.png":::
+     :::image type="content" source="media/quarantine-user-message-selected-message-actions.png" alt-text="Screenshot of available actions after you select a quarantined message on the Email tab of the Quarantine page." lightbox="media/quarantine-user-message-selected-message-actions.png":::
 
    - Select the message from the list by clicking anywhere in the row other than the check box. The available actions are in the details flyout that opens.
 
-     :::image type="content" source="media/quarantine-user-message-details-flyout-actions.png" alt-text="The available actions in the details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-flyout-actions.png":::
+     :::image type="content" source="media/quarantine-user-message-details-flyout-actions.png" alt-text="Screenshot of the available actions in the details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-flyout-actions.png":::
 
    Using either method to select the message, some actions are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** or **More options**.
 
@@ -232,11 +233,11 @@ After you select the quarantined message, the available actions are described in
 >
 > - When you select the message by selecting the check box, all actions are under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**:
 >
->   :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
+>   :::image type="content" source="media/quarantine-user-message-main-page-mobile-actions.png" alt-text="Screenshot of selecting a quarantined message and then selecting More on a mobile device." lightbox="media/quarantine-user-message-main-page-mobile-actions.png":::
 >
 > - When you select the message by clicking anywhere in the row other than the check box, most options are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** in the details flyout:
 >
->   :::image type="content" source="media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="The details of a quarantined message with available actions shown." lightbox="media/quarantine-user-message-details-flyout-mobile-actions.png":::
+>   :::image type="content" source="media/quarantine-user-message-details-flyout-mobile-actions.png" alt-text="Screenshot of the details of a quarantined message with available actions shown." lightbox="media/quarantine-user-message-details-flyout-mobile-actions.png":::
 
 #### Release quarantined email
 
@@ -265,6 +266,9 @@ In the **Messages released to your Inbox** flyout that opens, select **Done**.
 Back on the **Email** tab, the **Release status** value of the message is **Released**.
 
 The message is delivered to your Inbox (or some other folder, depending on any [Inbox rules](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) in your mailbox).
+
+> [!NOTE]
+> Releasing a message from quarantine re-delivers it to your mailbox rather than restoring it in place. As a result, the message appears in Outlook with the re-delivery time as the delivery timestamp instead of the original delivery time. The original send date is preserved in the message headers.
 
 #### Request the release of quarantined email
 
