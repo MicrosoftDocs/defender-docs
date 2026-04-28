@@ -2,8 +2,8 @@
 title: Activate Microsoft Defender unified role-based access control (URBAC)
 description: Activate Microsoft Defender unified role-based access control (URBAC) to enforce permissions and assignments configured in your new custom or imported roles.
 ms.service: defender-xdr
-ms.author: guywild
-author: guywi-ms
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 ms.collection: 
 - m365-security
