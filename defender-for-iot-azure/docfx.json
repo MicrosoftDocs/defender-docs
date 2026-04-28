@@ -40,6 +40,7 @@
     "globalMetadata": {
       "feedback_system": "Standard",
       "breadcrumb_path": "~/breadcrumb/d4iot-azure/toc.yml",
+      "uhfHeaderId": "azure",
       "permissioned-type": "public"
     },
     "fileMetadata": {},

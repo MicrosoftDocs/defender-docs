@@ -6,7 +6,6 @@ f1.keywords:
   - NOCSH
 author: MSFTBen
 ms.author: benharri
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
