@@ -111,11 +111,3 @@ See [Create custom data collection rules](create-custom-data-collection-rules.md
 
 - **[Create custom data collection rules](create-custom-data-collection-rules.md)**: Step-by-step instructions for creating and managing rules
 - **[Create and manage device tags and target devices](machine-tags.md)**: Configure dynamic tags for device targeting
-
-## See also
-
-- [Advanced hunting overview](/defender-xdr/advanced-hunting-overview)
-- [Configure asset rules](/defender-xdr/configure-asset-rules)
-- [Microsoft Sentinel workspace connection](/azure/sentinel/quickstart-onboard)
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
