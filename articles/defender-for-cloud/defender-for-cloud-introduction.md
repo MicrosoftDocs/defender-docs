@@ -67,7 +67,7 @@ You can also check out the E-book ["From plan to deployment: Implementing a Clou
 
 ## Cloud security posture management (CSPM)
 
-The security of your cloud and on-premises resources depends on proper configuration and deployment. Defenders for Cloud recommendations help you secure your environment.
+The security of your cloud and on-premises resources depends on proper configuration and deployment. Defender for Cloud recommendations help you secure your environment.
 
 Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced CSPM capabilities by using the Defender CSPM plan.
 

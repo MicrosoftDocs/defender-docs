@@ -117,7 +117,7 @@ When planning access control using Azure Role-based access control for Defender 
 
 A security policy defines the desired configuration of your workloads and helps ensure compliance with company or regulatory security requirements. In Defender for Cloud, you can define policies for your Azure subscriptions, which can be tailored to the type of workload or the sensitivity of data.
 
-Defenders for Cloud policies contain the following components:
+Defender for Cloud policies contain the following components:
 
 - [Data collection](monitoring-components.md): agent provisioning and data collection settings.
 
