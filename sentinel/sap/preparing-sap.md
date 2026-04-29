@@ -207,9 +207,7 @@ This procedure has steps both in Microsoft Sentinel and your SAP system, and req
        If, after you deploy the Azure resources, the values in the steps 2 and 3 aren't automatically populated, close and re-expand step 1 to refresh the values in steps 2 and 3.
    1. Deploy an OAuth2 client credentials artifact in the SAP Integration (SAP Admin).
       
-    1. Deploy the SAP agentless data connector package to the SAP Integration Suite (SAP Admin).
-
-        This procedure is performed from the SAP Integration Suite portal ([SAP Cloud Integration Web UI](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/overview-of-sap-cloud-integration-web-ui)).
+    1. Deploy the SAP agentless data connector package to the SAP Integration Suite (SAP Admin). This procedure is performed from  the SAP Integration Suite portal ([SAP Cloud Integration Web UI](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/overview-of-sap-cloud-integration-web-ui)).
 
         1. Open the **Discover** section.
         1. Search for **Microsoft Sentinel Solution** and open it.
