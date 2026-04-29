@@ -137,12 +137,11 @@ To connect your AWS to Defender for Cloud by using a native connector:
    1. Scan interval - Select an Interval to scan the AWS environment every 4, 6, 12, or 24 hours. Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. 
    1. AWS account ID – Insert AWS account ID  
    1. Excluded accounts (optional) – appears only when the Management account is selected. Insert accounts ID to exclude, separated by commas (“,”) 
-   1. 
    1. add screenshot
 
-1. Select **Next: Select plans**, and choose the Defender plans you want to enable.
+1. Select **Next: Select plans**.
 
-   Review the default plan selections, as some plans might be enabled automatically depending on your configuration. For example, the Databases plan extends Defender for SQL coverage to AWS EC2, RDS Custom for SQL Server, and open-source relational databases on RDS.
+1. choose which Defender for Cloud plans and capabilities you want to enable. Each plan has its own requirements for permissions and might incur charges.  
 
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-plans-selection.png" alt-text="Screenshot showing the plan selection step for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-plans-selection.png":::
 
@@ -153,7 +152,12 @@ To connect your AWS to Defender for Cloud by using a native connector:
    >
    > `arn:aws:iam::<accountId>:role/CspmMonitorAws`
 
-1. Select **Configure access**, and choose:
+change to:
+To present the current status of your recommendations, the Microsoft Defender Cloud Security Posture Management plan queries the AWS resource APIs several times a day. These read-only API calls incur no charges, but they're registered in CloudTrail if you enable a trail for read events. 
+
+AWS's documentation explains that there are no extra charges for keeping one trail. If you're exporting the data out of AWS (for example, to an external SIEM system), this increased volume of calls might also increase ingestion costs. In such cases, we recommend filtering out the read-only calls from the Defender for Cloud user or ARN role: arn:aws:iam::[accountId]:role/CspmMonitorAws. (This is the default role name. Confirm the role name configured on your account.) 
+
+1. Select **Configure access**, and choose a deployment type:
 
     - **Default access**: Grants permissions required for current and future capabilities.
     - **Least privilege access**: Grants only the permissions required today. You might receive notifications if additional access is needed later.
@@ -163,6 +167,8 @@ To connect your AWS to Defender for Cloud by using a native connector:
     - **AWS CloudFormation**
     - **Terraform**.
 
+new image
+
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot showing deployment method configuration." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
 
    > [!NOTE]
@@ -171,33 +177,17 @@ To connect your AWS to Defender for Cloud by using a native connector:
     > [!NOTE]
     > If you select **Management account** to create a connector to a management account, the tab for onboarding by using Terraform isn't visible in the UI. Terraform onboarding is still supported. For guidance, see [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/onboarding-your-aws-gcp-environment-to-microsoft-defender-for/ba-p/3798664).
 
-1. Follow the on-screen instructions to deploy the CloudFormation template. If you select Terraform, follow the equivalent deployment instructions provided in the portal.
-
+1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on AWS. 
+    1. For management account: 
+        1. If you plan to onboard using Terraform please review: Onboarding your AWS/GCP environment to [Microsoft Defender for Cloud with Terraform - Microsoft Community Hub](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/onboarding-your-awsgcp-environment-to-microsoft-defender-for-cloud-with-terrafor/3798664). 
+        1. If you prefer the AWS CloudFormation deployment method follow the on-screen instructions to complete the required dependencies on AWS. If you're onboarding a management account, Yyou need to run the CloudFormation template both as Stack and as StackSet. Connectors are created for the member accounts up to 24 hours after the onboarding. 
+    1. For a regular account:
+        1. 
 1. Select **Next: Review and generate**.
 
 1. Select **Create**.
 
 Defender for Cloud starts scanning your AWS resources. Security recommendations appear within a few hours. After onboarding, you can monitor AWS posture, alerts, and resource inventory in Defender for Cloud.
-
-## Validate connector health
-
-To confirm that your AWS connector is operating correctly:
-
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-
-1. Go to **Defender for Cloud** > **Environment settings**.
-
-1. Locate the AWS account and review the **Connectivity status** column to see whether the connection is healthy or has issues.
-
-1. Select the value shown in the **Connectivity status** column to view more details.
-
-The Environment details page lists any detected configuration or permission issues affecting the connection to the AWS account.
-
-:::image type="content" source="media/quickstart-onboard-aws/environment-details-connector-health.png" alt-text="Screenshot of the environment details page in Microsoft Defender for Cloud showing the connectivity status for a connected Amazon Web Services account." lightbox="media/quickstart-onboard-aws/environment-details-connector-health.png":::
-
-If an issue is present, you can select it to view a description of the problem and the recommended remediation steps. In some cases, a remediation script is provided to help resolve the issue.
-
-Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
 
 ## Deploy a CloudFormation template to your AWS account
 
@@ -246,18 +236,36 @@ As part of onboarding, deploy the generated CloudFormation template:
 >
 > To fix this error, the CloudFormation StackSets page has a prompt with a button that you can select to enable trusted access. After trusted access is enabled, run the CloudFormation Stack again.
 
-### Do you need to update the CloudFormation template?
+### Do you need to update the CloudFormation template? (ask where this needs to go)
 
 This table helps you determine whether you need to update the CloudFormation template deployed in your AWS account.
 
-| Step | Question | If YES | If NO |
-|--|--|--|--|
-| 1 | Did you enable a new Defender plan (for example, CSPM, Databases, Defender for Containers)? | Update the CloudFormation Stack with the latest template. | Go to Step 2. |
-| 2 | Are you modifying plan configuration (for example, enabling autoprovisioning or changing region)? | Update the CloudFormation Stack with the latest template. | Go to Step 3. |
-| 3 | Did Microsoft release a new version of the template? (For example, support new features, fix bugs, or update runtime) | Update the CloudFormation Stack with the latest template. | Go to Step 4. |
-| 4 | Are you experiencing deployment errors<sup>[1](#footnote1)</sup> (for example, Access Denied error, Entity already exist, Lambda runtime)? | Update the CloudFormation Stack with the latest template. | No update of CloudFormation template needed. |
+- if you  enabled a new Defender plan (for example, CSPM, Databases, Defender for Containers)? 
+-if you are modifying plan configuration (for example, enabling autoprovisioning or changing region)? 
+- if icrosoft released a new version of the template? (For example, support new features, fix bugs, or update runtime) 
+-- if youre you experiencing deployment errors<sup>[1](#footnote1)</sup> (for example, Access Denied error, Entity already exist, Lambda runtime)? 
 
 <sup><a name="footnote1"></a>1</sup> If you're receiving specific errors, or errors with the CloudFormation template deployment, refer to the [CloudFormation error resolution table](troubleshoot-connectors.md#cloudformation-error-resolution-table).
+
+## Validate connector health
+
+To confirm that your AWS connector is operating correctly:
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Environment settings**.
+
+1. Locate the AWS account and review the **Connectivity status** column to see whether the connection is healthy or has issues.
+
+1. Select the value shown in the **Connectivity status** column to view more details.
+
+The Environment details page lists any detected configuration or permission issues affecting the connection to the AWS account.
+
+:::image type="content" source="media/quickstart-onboard-aws/environment-details-connector-health.png" alt-text="Screenshot of the environment details page in Microsoft Defender for Cloud showing the connectivity status for a connected Amazon Web Services account." lightbox="media/quickstart-onboard-aws/environment-details-connector-health.png":::
+
+If an issue is present, you can select it to view a description of the problem and the recommended remediation steps. In some cases, a remediation script is provided to help resolve the issue.
+
+Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
 
 ## View your current coverage
 
