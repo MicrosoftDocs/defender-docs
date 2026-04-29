@@ -34,7 +34,7 @@ By following this guide, you:
 
 ### Step 1: Set up the GitHub repository and run the workflow
 
-To test the integration, use your own repositories or an [example sandbox project](test) that has a test GitHub repository with all the contents to build a vulnerable container image.
+To test the integration, use your own repositories or an [example sandbox project](github-advanced-security-deploy-sandbox.md) that has a test GitHub repository with all the contents to build a vulnerable container image.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Go to **Microsoft Defender for Cloud** > **DevOps security**.
@@ -42,9 +42,9 @@ To test the integration, use your own repositories or an [example sandbox projec
 1. Validate that it really belongs to org you're monitoring (Example: **zava-corporation** org)
 1. Review if there are any findings for the repo
 1. Ensure **Advanced security status** is **On**, indicating you have GitHub Advanced Security enabled on the monitored repo– > your onboarded repo.
-1. If your repo not found, refer to Microsoft Defender for Cloud documentation for trouble shooting and [GitHub connector onboarding](https://learn.microsoft.com/en-us/azure/defender-for-cloud/quickstart-onboard-github).
+1. If your repo not found, refer to Microsoft Defender for Cloud documentation for trouble shooting and [GitHub connector onboarding](quickstart-onboard-github.md).
 1. Make sure that agentless scanning is turned on for your GitHub connector.
-    :::image type="content" source="media/github-advanced-security-deploy/agentless-scan.png" alt-text="Screenshot of Plan Configuration in Defender CSPM with Agentless code scanning toggled on and all scanner options enabled." lightbox="media/github-advanced-security-deploy/agentless-scan.png":::
+    :::image type="content" source="media/github-advanced-security-deploy/defender-cspm-agentless-code-scanning.png" alt-text="Screenshot of Plan Configuration in Defender CSPM with Agentless code scanning toggled on and all scanner options enabled." lightbox="media/github-advanced-security-deploy/defender-cspm-agentless-code-scanning.png":::
 
 ### Step 2: Validate that your environment is ready
 
@@ -60,7 +60,7 @@ Validation confirms that your environment is correctly configured to surface cod
 > [!NOTE]
 > It can take up to 24 hours after the previous steps are applied to see the following results.
 
-Test that [GitHub agentless scanning](https://learn.microsoft.com/en-us/azure/defender-for-cloud/agentless-code-scanning) picks up the repository.
+Test that [GitHub agentless scanning](agentless-code-scanning.md) picks up the repository.
 
 Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer** and perform the query. The validation queries test whether Defender can identify artifacts produced by your pipelines and workloads. If the queries return results, it indicates that scanning and correlation are working as expected.
 
@@ -68,7 +68,7 @@ Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer** and perform
 
 > [!NOTE]
 >
-> If no results are returned, it may indicate that artifacts aren't yet generated, scanning isn't configured, or permissions are missing. See [User roles and permissions](https://learn.microsoft.com/en-us/azure/defender-for-cloud/permissions) for more information.
+> If no results are returned, it may indicate that artifacts aren't yet generated, scanning isn't configured, or permissions are missing. See [User roles and permissions](permissions.md) for more information.
 
 1. Validate that Defender for Cloud (in Azure Container Registry) scanned the container image and used it to create a container.
 1. In your query, add the conditions for your specific deployment.
