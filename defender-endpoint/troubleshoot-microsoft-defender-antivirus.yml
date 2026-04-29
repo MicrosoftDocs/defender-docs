@@ -552,10 +552,12 @@ sections:
 
              - No action: No action
 
+             - None: No remediation action is taken, but detection events and alerts continue to be generated.
+
              - Block: The resource was blocked from executing.
 
            > [!WARNING]
-           > **Non-remediating threat actions:** The **Allow** and **No action** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **No action** continues to generate alerts and Protection History entries. Neither action can be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
+           > **Non-remediating threat actions:** The **Allow**, **No action**, and **None** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **No action** and **None** continue to generate alerts and Protection History entries. These actions can't be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
 
           - Action Status: Description of other actions
 
@@ -656,10 +658,12 @@ sections:
 
              - No action: No action
 
+             - None: No remediation action is taken, but detection events and alerts continue to be generated.
+
              - Block: The resource was blocked from executing
 
            > [!WARNING]
-           > **Non-remediating threat actions:** The **Allow** and **No action** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **No action** continues to generate alerts and Protection History entries. Neither action can be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
+           > **Non-remediating threat actions:** The **Allow**, **No action**, and **None** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **No action** and **None** continue to generate alerts and Protection History entries. These actions can't be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
 
           - Action Status: Description of additional actions
 
@@ -734,10 +738,12 @@ sections:
 
              - No action: No action
 
+             - None: No remediation action is taken, but detection events and alerts continue to be generated.
+
              - Block: The resource was blocked from executing.
 
            > [!WARNING]
-           > **Non-remediating threat actions:** The **Allow** and **No action** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **No action** continues to generate alerts and Protection History entries. Neither action can be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
+           > **Non-remediating threat actions:** The **Allow**, **No action**, and **None** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **No action** and **None** continue to generate alerts and Protection History entries. These actions can't be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
 
           - Action Status: Description of other actions
 
