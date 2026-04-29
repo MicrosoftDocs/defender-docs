@@ -44,7 +44,7 @@ To test the integration, use your own repositories or an [example sandbox projec
 1. Ensure **Advanced security status** is **On**, indicating you have GitHub Advanced Security enabled on the monitored repo– > your onboarded repo.
 1. If your repo not found, refer to Microsoft Defender for Cloud documentation for trouble shooting and [GitHub connector onboarding](quickstart-onboard-github.md).
 1. Make sure that agentless scanning is turned on for your GitHub connector.
-    :::image type="content" source="media/github-advanced-security-deploy/defender-cspm-agentless-code-scanning.png" alt-text="Screenshot of Plan Configuration in Defender CSPM with Agentless code scanning toggled on and all scanner options enabled." lightbox="media/github-advanced-security-deploy/defender-cspm-agentless-code-scanning.png":::
+    :::image type="content" source="media/github-advanced-security-deploy/agentless-scan.png" alt-text="Screenshot of Plan Configuration in Defender CSPM with Agentless code scanning toggled on and all scanner options enabled." lightbox="media/github-advanced-security-deploy/agentless-scan.png":::
 
 ### Step 2: Validate that your environment is ready
 

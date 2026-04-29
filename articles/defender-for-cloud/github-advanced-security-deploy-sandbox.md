@@ -1,18 +1,17 @@
 ---
 title: Deploy GitHub Advanced Security integration with Microsoft Defender for Cloud (Sandbox project)
 description: Set up and validate a sandbox environment to evaluate GitHub Advanced Security and Microsoft Defender for Cloud integration end to end.
-author: DeborahLanger
-ms.author: delanger
+author: dlanger
+ms.author: dlanger
 ms.topic: how-to
 ms.date: 03/03/2026
 ms.service: defender-for-cloud
-ms.subservice: devops-security
 ms.custom: ignite-2025, github-advanced-security
 ---
 
 # GitHub Advanced Security Integration with Microsoft Defender for Cloud – Sandbox Project
 
-_Source:_ <https://learn.microsoft.com/en-us/azure/defender-for-cloud/github-advanced-security-deploy>
+_Source:_ [Set up GitHub Advanced Security native integration with Microsoft Defender for Cloud](github-advanced-security-deploy.md)
 
 This guide provides setup steps for a sandbox project that helps you evaluate GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud integration end to end with a simple use case.
 
@@ -66,9 +65,9 @@ Before you set up a repository, make sure that:
 
 You can find this information in the Azure portal by following these steps:
 
-    1. Select the container registry that you want to deploy to.
-    1. Under **Settings**, select **Access keys**.
-    1. The **Access keys** pane shows the keys for the authentication server, username, and password.
+1. Select the container registry that you want to deploy to.
+1. Under **Settings**, select **Access keys**.
+1. The **Access keys** pane shows the keys for the authentication server, username, and password.
 
 In your repository, select **Actions**, select the **Build and Push to ACR** workflow, and then select **Run workflow**.
 
