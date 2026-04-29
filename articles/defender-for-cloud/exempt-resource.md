@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
 author: Elazark
-ms.date: 02/05/2026
+ms.date: 04/28/2026
 ---
 
 # Exempt resources from recommendations
@@ -31,14 +31,38 @@ For each scope, create an exemption rule to:
 
 ## Before you start
 
- To create exemptions, you need the following permissions:
-  - **Owner** or **Security Admin** on the scope where you create the exemption.
-  - To create a rule, you need permissions to edit policies in Azure Policy. [Learn more](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
+To create exemptions, you need the following permissions:
+
+- **Owner** or **Security Admin** on the scope where you create the exemption.
+- To create a rule, you need permissions to edit policies in Azure Policy. [Learn more](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
+- You must have exemption permission on all initiative assignments at the target scope. If a recommendation is part of multiple initiatives, you must create the exemption with permissions across all of them. A missing permission on even one initiative can cause the exemption to fail.
+
+You need the following RBAC actions:
+
+| Action | Description |
+|--------|-------------|
+| `Microsoft.Authorization/policyExemptions/write` | Create an exemption |
+| `Microsoft.Authorization/policyExemptions/delete` | Delete an exemption |
+| `Microsoft.Authorization/policyExemptions/read` | View an exemption |
+| `Microsoft.Authorization/policyAssignments/exempt/action` | Perform an exemption operation on a linked scope |
+
+> [!NOTE]
+> If any of these actions are missing, the **Exempt** button might be hidden. Custom roles have limited support for exemption operations. Only built-in roles can perform certain exemption-related actions. Use one of the following built-in roles to manage exemptions: **Security Admin** (recommended), **Owner**, **Contributor** at the subscription level, or **Resource Policy Contributor**.
+
+- Subscription-level permissions don't inherit upward to management groups. If the policy assignment is at the management group level, you need the role assigned at that level.
+
+- To manage exemptions for specific resources, you need the required RBAC actions at the resource or resource group level. Subscription-scoped role assignments might not provide sufficient access to create or delete exemptions on individual resources. Verify that your role assignment covers the scope of the resource you want to exempt.
+
+- Microsoft Cloud Security Benchmark (MCSB) must be assigned on the subscription.
+
+    > [!IMPORTANT]
+    > Defender for Cloud exemptions rely on the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative to evaluate and retrieve the compliance state of resources in the Defender for Cloud portal. Without MCSB assigned:
+    >
+    > - Some portal features might not work as expected.
+    > - Resources might not appear in compliance views.
+    > - Exemption options might occasionally be unavailable.
 
 - You can create exemptions for recommendations that belong to Defender for Cloud's default [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative or to other built-in regulatory standards.
-
-    > [!NOTE]  
-    > Defender for Cloud exemptions rely on the Microsoft Cloud Security Benchmark (MCSB) initiative to evaluate and retrieve the compliance state of resources in the Defender for Cloud portal. If the MCSB initiative isn't assigned, the portal works only partially and some resources might not appear.
 
 - Some recommendations in the Microsoft Cloud Security Benchmark (MCSB) don't support exemptions. You can find a list of these recommendations in [the exemptions FAQ](faq-general.yml).
 
@@ -46,17 +70,28 @@ For each scope, create an exemption rule to:
 
 - You don't create exemptions for custom recommendations.
 
+- Preview recommendations might not support exemptions. Check whether the recommendation shows a **Preview** tag.
+
+- KQL-based recommendations use standard assignments and don't use Azure Policy exemption events in the Activity Logs.
+
 - If you disable a recommendation, you also exempt all of its subrecommendations.
 
 - Besides the portal, you can create exemptions by using the Azure Policy application programming interface (API). For more information, see [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
 
 - When you create an exemption at the management group level, ensure the *Windows Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on that management group. Grant this role the same way that you grant user permissions.
 
+> [!TIP]
+> If you run into issues after you create an exemption, see [Review and manage recommendation exemptions](review-exemptions.md) for guidance on [resolving unhealthy status](review-exemptions.md#resolve-an-exemption-that-doesnt-update-the-recommendation-status), [permission errors at management group level](review-exemptions.md#resolve-permission-errors-at-management-group-level), [missing exemptions in the portal](review-exemptions.md#find-exemptions-that-arent-visible-in-the-portal), [deleting exemptions](review-exemptions.md#delete-an-exemption), and [cleaning up duplicate exemptions](review-exemptions.md#resolve-duplicate-or-conflicting-exemptions).
+
 ## Define an exemption
 
 To create an exemption rule:
 
-1. In the Defender for Cloud portal, open the **Recommendations** page and select the recommendation that you want to exempt.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Recommendations**.
+
+1. Select a recommendation.
 
 1. Select **Exempt**.
 
@@ -86,7 +121,7 @@ To create an exemption rule:
 
 ## After you create the exemption
 
-An exemption can take up to 24 hours to take effect. After it takes effect:
+An exemption can take up to 24 hours to take effect. Defender for Cloud evaluates resources periodically, typically every 12-24 hours. After the exemption takes effect:
 
 - The recommendation or resources don't affect your secure score.
 
@@ -94,7 +129,21 @@ An exemption can take up to 24 hours to take effect. After it takes effect:
 
 - If you exempt a recommendation, Defender for Cloud hides it by default on the **Recommendations** page. This behavior occurs because the default options of the **Recommendation status** filter on that page exclude **Not applicable** recommendations. The same behavior occurs if you exempt all recommendations in a security control.
 
+### Understand how the exemption type affects the recommendation status
+
+The exemption type that you select determines how the exemption affects the recommendation and secure score:
+
+- **Mitigated** exemptions: Exempt resources count as healthy. Secure score increases.
+- **Waiver** exemptions: Exempt resources are excluded from the secure score calculation. Resources don't count toward secure score but might still appear in recommendations.
+
+> [!NOTE]
+> Preview recommendations have no impact on secure score regardless of exemption status.
+
+### Verify that the exemption is working
+
+If the recommendation still shows resources as unhealthy after 24 hours, see [Resolve an exemption that doesn't update the recommendation status](review-exemptions.md#resolve-an-exemption-that-doesnt-update-the-recommendation-status) for detailed steps.
+
 ## Next step
 
 > [!div class="nextstep"]
-> [Review exempted resources](review-exemptions.md) in Defender for Cloud.
+> [Review and manage recommendation exemptions](review-exemptions.md)
