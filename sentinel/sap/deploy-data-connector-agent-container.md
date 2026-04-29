@@ -442,19 +442,57 @@ Use the following table as a guide for what to enter in the value mapping artifa
 
 The following table lists the customizable parameters for the SAP agentless data connector for Microsoft Sentinel:
 
+#### General collection controls
+
+| Parameter | Description | Allowed values | Default value |
+|-----------|-------------|----------------|---------------|
+| **collect-audit-logs** | Determines whether Audit Log data is ingested or not. | **true**: Ingested
+**false**: Not ingested | **true** |
+| **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not. | **true**: Ingested
+**false**: Not ingested | **true** |
+| **collect-user-master-data** | Master switch that determines whether User Master data collection runs at all. If set to **false**, neither user details nor role authorizations are ingested. | **true**: User Master data collection enabled
+**false**: User Master data collection disabled | **true** |
+| **collect-user-master-data-users** | Determines whether User Details data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested
+**false**: Not ingested | **true** |
+| **collect-user-master-data-roles** | Determines whether Role Authorization data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested
+**false**: Not ingested | **true** |
+| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data population, including users and roles. | Integer, between **1**-**14** | **7** |
+| **offset-in-seconds** | Determines the offset, in seconds, for both the start and end times of a data collection window. Use this parameter to delay data collection by the configured number of seconds. | Integer, between **1**-**600** | **60** |
+
+#### Audit Log parameters
+
+| Parameter | Description | Allowed values | Default value |
+|-----------|-------------|----------------|---------------|
+| **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients
+**false**: Not read from all clients | **false** |
+| **max-rows** | Acts as a safeguard that limits the number of Audit Log records processed in a single data collection window. This parameter no longer applies to Change Docs collection. | Integer, between **1**-**1000000** | **150000** |
+
+#### Change Docs parameters
+
 | Parameter | Description | Allowed values | Default value |
 |-----------|-------------|----------------|---------------|
 | **changedocs-object-classes** | List of object classes that are ingested from Change Docs logs. | Comma separated list of object classes | `BANK, CLEARING, IBAN, IDENTITY, KERBEROS, OA2_CLIENT, PCA_BLOCK, PCA_MASTER, PFCG, SECM, SU_USOBT_C, SECURITY_POLICY, STATUS, SU22_USOBT, SU22_USOBX, SUSR_PROF, SU_USOBX_C, USER_CUA` |
-| **collect-audit-logs** | Determines whether Audit Log data is ingested or not. | **true**: Ingested<br>**false**: Not ingested | **true** |
-| **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not. | **true**: Ingested<br>**false**: Not ingested | **true** |
-| **collect-user-master-data** | Determines whether User Master data is ingested or not. | **true**: Ingested<br>**false**: Not ingested | **true** |
-| **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients<br>**false**: Not read from all clients | **false** |
-| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data, including all roles and users. This parameter doesn't affect the ingestion of changes to User Master data. | Integer, between **1**-**14** | **7** |
-| **offset-in-seconds** | Determines the offset, in seconds, for both the start and end times of a data collection window. Use this parameter to delay data collection by the configured number of seconds. | Integer, between **1**-**600** | **60** |
-| **max-rows** | Acts as a safeguard that limits the number of records processed in a single data collection window. This helps prevent performance or memory issues in CPI caused by a sudden increase in event volume. | Integer, between 1–1000000 | 150000 |
-| **max-changedocs-headers** | Acts as a safeguard that limits the number of Change Docs header records (CDHDR records) processed in a single data collection window. Use this parameter to reduce runtime and memory pressure during spikes in header volume. | Integer, greater than **0** | 1000 |
-| **max-changedocs-details** | Acts as a safeguard that defines how many Change Docs records (CDPOS records) are processed per internal batch during collection. Use this parameter to tune throughput versus memory usage. | Integer, greater than **0** | 10000 |
-| **change-docs-batch-size** | Number of CDHDR records used per detail-fetch call. Reduce if RFC calls time out. | Integer, greater than **0** | 1000 |
+| **max-changedocs-headers** | Acts as a safeguard that limits the number of Change Docs header records (CDHDR records) processed in a single data collection window. Use this parameter to reduce runtime and memory pressure during spikes in header volume. | Integer, between **1**-**1000000** | **1000** |
+| **max-changedocs-details** | Acts as a safeguard that limits the number of Change Docs detail records (CDPOS records) processed in a single data collection window. Use this parameter to tune throughput versus memory usage. | Integer, between **1**-**1000000** | **10000** |
+| **change-docs-batch-size** | Number of Change Docs header records used per detail-fetch call. Reduce this value if RFC calls time out. | Integer, between **1**-**1000** | **1000** |
+
+#### User Details parameters
+
+| Parameter | Description | Allowed values | Default value |
+|-----------|-------------|----------------|---------------|
+| **max-users** | Acts as a safeguard that limits the number of unique users processed in a single collection cycle. | Integer, between **1**-**1000000** | **125** |
+| **user-batch-size** | Number of users processed per batch when retrieving active user data. Reduce this value if RFC calls time out. | Integer, between **1**-**1000** | **125** |
+| **role-profiles-max** | Determines the maximum combined number of profiles and roles that can be emitted for a user before the connector writes a wildcard truncation marker instead of the full list. | Integer, between **1**-**10000** | **1000** |
+| **role-profiles-batch-size** | Number of profiles or roles written per output row. Users with more profiles or roles than this value are split across multiple rows. | Integer, between **1**-**1000** | **14** |
+
+#### Role Authorization parameters
+
+| Parameter | Description | Allowed values | Default value |
+|-----------|-------------|----------------|---------------|
+| **max-roles** | Acts as a safeguard that limits the number of roles processed in a single collection cycle. | Integer, between **1**-**1000000** | **50** |
+| **max-roles-authz-overall** | Acts as a safeguard that limits the cumulative number of role authorization records fetched across all roles in a single collection cycle. | Integer, between **1**-**1000000** | **25000** |
+| **max-roles-authz-individual** | Acts as a safeguard that limits the number of authorization records fetched for an individual role. Roles that exceed this limit are skipped. | Integer, between **1**-**1000000** | **5000** |
+| **role-authz-batch-size** | Number of records fetched per batch when retrieving role authorization data. Reduce this value if RFC calls time out. | Integer, between **1**-**1000** | **100** |
 
 #### Truncation behaviour of the safeguards
 

@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 1. Open the integration package, navigate to the **Artifacts** tab, and select the **Prerequisite checker** iflow > **Configure**.
 1. Set the target destination name for the remote function call (RFC) to the SAP system you want to check. For example, `A4H-100-Sentinel-RFC`.
 1. Deploy the iflow as you would otherwise for your SAP systems.
-1. For best results run the checker for 24 hours to catch any anomalies like rogue overnight batch jobs, or any unknown usage spikes.
+1. For best results run the checker for **24 hours** with **1min frequency** to catch any anomalies like rogue overnight batch jobs, or any unknown usage spikes.
 
 **To review the check status**:
 
