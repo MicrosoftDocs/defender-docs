@@ -9,14 +9,16 @@ ms.date: 01/06/2026
 
 # Connect AWS accounts to Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud helps protect workloads running in Amazon Web Services (AWS). To assess your AWS resources and get security recommendations, you need to connect your AWS account to Defender for Cloud. The connector gathers configuration and security signals from AWS services. By using this information, Defender for Cloud can analyze posture, generate recommendations, and surface alerts.
+Workloads often span multiple cloud platforms, so cloud security services must do the same. Microsoft Defender for Cloud helps protect workloads in Amazon Web Services (AWS), but you need to set up the connection between them and Defender for Cloud. 
 
-For more information, watch the [New AWS connector in Defender for Cloud](episode-one.md) video from the *Defender for Cloud in the Field* video series.
+The following screenshot shows AWS accounts displayed in the [Defender for Cloud overview dashboard](cloud-infrastructure-dashboard.md?pivots=defender-portal):
 
 :::image type="content" source="./media/quickstart-onboard-aws/aws-account-in-overview.png" alt-text="Screenshot showing AWS accounts listed in the Defender for Cloud overview dashboard." lightbox="./media/quickstart-onboard-aws/aws-account-in-overview.png":::
 
-> [!IMPORTANT]
-> If you already connected your AWS account to Microsoft Sentinel, you might need to do extra configuration when connecting it to Defender for Cloud. This extra configuration prevents deployment or ingestion problems. For more information, see [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
+For more information, watch the [New AWS connector in Defender for Cloud](episode-one.md) video from the *Defender for Cloud in the Field* video series.
+
+> [!NOTE]
+> If you have an AWS account that is connected to Microsoft Sentinel, you can't connect it to Defender for Cloud. To ensure the connector works correctly, follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
 ## Authentication architecture
 
@@ -30,11 +32,13 @@ Before you connect your AWS account, make sure you have:
 
 - A Microsoft Azure subscription. If you don't have one, [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
 
-- [Microsoft Defender for Cloud enabled](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on that subscription.
+- [Microsoft Defender for Cloud enabled](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 - Access to an AWS account.
 
-- Permission to create resources in Azure (Contributor or above).
+- Contributor level permission for the relevant Azure subscription.
+
+- If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management#before-you-start) for your tenant. 
 
 Additional requirements apply when enabling specific Defender plans. Review the [native connector plan requirements](#native-connector-plan-requirements).
 
@@ -107,6 +111,11 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
 ## Connect your AWS account
 
+> [!IMPORTANT]
+> Use only the management account for onboarding. Delegated accounts aren't supported.
+
+To connect your AWS to Defender for Cloud by using a native connector: 
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Defender for Cloud** > **Environment settings**.
@@ -119,16 +128,17 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
     :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-details.png" alt-text="Screenshot that shows the tab for entering account details for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-details.png":::
 
-    Use the **AWS regions** dropdown to select the regions Defender for Cloud monitors. Regions you deselect don't receive API calls from Defender for Cloud.
-
-1. Select a scan interval (4, 6, 12, or 24 hours). 
-
-   This selection defines the standard interval for most posture checks. Some data collectors with fixed intervals run more frequently, regardless of this setting:
-
-   | Scan interval | Data collectors |
-   |--|--|
-   | 1 hour | EC2Instance, ECRImage, ECRRepository, RDSDBInstance, S3Bucket, S3BucketTags, S3Region, EKSCluster, EKSClusterName, EKSNodegroup, EKSNodegroupName, AutoScalingAutoScalingGroup |
-   | 12 hours | EcsClusterArn, EcsService, EcsServiceArn, EcsTaskDefinition, EcsTaskDefinitionArn, EcsTaskDefinitionTags, AwsPolicyVersion, LocalPolicyVersion, AwsEntitiesForPolicy, LocalEntitiesForPolicy, BucketEncryption, BucketPolicy, S3PublicAccessBlockConfiguration, BucketVersioning, S3LifecycleConfiguration, BucketPolicyStatus, S3ReplicationConfiguration, S3AccessControlList, S3BucketLoggingConfig, PublicAccessBlockConfiguration |
+   1. Select Management account to create a connector to a management account. Auto provisioning mechanism will create connectors for each member account discovered under the specified management account and newly created accounts, enabling Defender for Cloud to operate. 
+   1. Select Single account to create a connector to a single account. 
+   1. AWS regions - the regions in which the customer has resources that should be protected by Defender for Cloud is rolled out .. All regions are selected by default. 
+   1. Subscription – select an Azure subscription in which the security connector will be created. 
+   1. Resource group - select a resource group in which the security connector will be created. 
+   1. Location – select the location where the security connector will be created. 
+   1. Scan interval - Select an Interval to scan the AWS environment every 4, 6, 12, or 24 hours. Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. 
+   1. AWS account ID – Insert AWS account ID  
+   1. Excluded accounts (optional) – appears only when the Management account is selected. Insert accounts ID to exclude, separated by commas (“,”) 
+   1. 
+   1. add screenshot
 
 1. Select **Next: Select plans**, and choose the Defender plans you want to enable.
 
