@@ -92,6 +92,8 @@ Provides a high-level snapshot of key security indicators, including:
 - **Cloud secure score** – An overall percentage score representing alignment with security best practices.
 - **Security coverage** – The number of assessed assets and how many are protected by enabled security plans.
 
+:::image type="content" source="media/cloud-security-reporting/executive-summary-report.png" alt-text="Screenshot of CNAPP Executive summary showing threat detection, cloud secure score, and security coverage cards with view buttons." lightbox="media/cloud-security-reporting/executive-summary-report.png":::
+
 #### Secure score
 
 Shows how the cloud secure score changes over time, including:
@@ -143,6 +145,8 @@ Summarizes the current security posture, including:
 - **Cloud secure score**, showing overall alignment with security best practices.
 - **New cloud secure score impact**, highlighting the potential score improvement from addressing outstanding recommendations.
 - **Defender CSPM plan coverage**, showing which environments are protected by Defender CSPM.
+
+:::image type="content" source="media/cloud-security-reporting/cloud-posture-report.png" alt-text="Screenshot of Cloud posture report showing cloud secure score, Defender CSPM plan coverage, and security posture trends over time." lightbox="media/cloud-security-reporting/cloud-posture-report.png":::
 
 #### Security posture
 
