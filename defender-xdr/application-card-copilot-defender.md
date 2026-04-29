@@ -139,7 +139,7 @@ Performance and safety evaluations assess whether AI applications are operating 
 
 ### Performance and quality evaluations
 
-Performance evaluations for AI applications are essential to improving their reliability in real-world applications. Metrics like groundedness, relevance, and coherence help assess the accuracy and consistency of AI-generated outputs, so that they are factually supported in grounded content scenarios, contextually appropriate, and logically structured. For Microsoft Copilot in Microsoft Defender, we conducted performance evaluations for the following metrics, which are available through Microsoft Foundry:
+Performance evaluations for AI applications are essential to improving their reliability in real-world applications. Metrics like groundedness, relevance, and coherence help assess the accuracy and consistency of AI-generated outputs, so that they are factually supported in grounded content scenarios, contextually appropriate, and logically structured. For Microsoft Copilot in Microsoft Defender, we conducted performance evaluations for the following metrics, which are available through [Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry):
 
 - Groundedness
 - Coherence
