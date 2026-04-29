@@ -156,6 +156,8 @@ On the **Post delivery activities** page, the :::image type="icon" source="media
 
 > [!NOTE]
 > This report requires Microsoft Defender for Office 365 Plan 2.
+>
+> This report is currently in Preview, isn't available in all organizations, and is subject to change.
 
 The **Protection & posture insights** report is an on-demand, tenant-specific report that helps you understand how effectively your organization is protected against threats targeting email and collaboration workloads. The report brings together protection effectiveness, security posture, and threat activity into a single, downloadable view. You can use it to assess risk, identify configuration gaps, and communicate security outcomes to stakeholders.
 
