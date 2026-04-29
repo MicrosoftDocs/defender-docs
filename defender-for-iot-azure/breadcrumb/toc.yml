@@ -1,0 +1,11 @@
+- name: Azure
+  tocHref: /azure/
+  topicHref: /azure/index
+  items:
+  - name: Security
+    tocHref: /azure/security/
+    topicHref: /azure/security/
+    items:
+    - name: Microsoft Defender for IoT
+      tocHref: /azure/defender-for-iot/
+      topicHref: /azure/defender-for-iot/
