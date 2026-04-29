@@ -4,7 +4,7 @@ description: Learn about the prerequisites and permissions required to enable Mi
 ms.topic: reference
 author: Elazark
 ms.author: elkrieger
-ms.date: 11/30/2025
+ms.date: 04/29/2026
 ---
 
 # Prerequisites for Microsoft Defender for Storage
@@ -19,7 +19,7 @@ This article lists the prerequisites and permissions required to [enable Microso
 
 - The following storage types are supported:
 
-  |Capability | Azure Blob Standard | Azure Blob Premium v2 | Azure Page Blob | Azure Data Lake Storage Gen 2 | Azure Blob (Standard + Premium) + NFS 3.0 | Azure File Standard (SMB) | Azure File Premium Provisioned v1/v2 (SMB) |
+  |Capability | Azure Blob Standard | Azure Blob Premium v2 | Azure Page Blob | Azure Data Lake Storage Gen 2 | Azure Blob (Standard + Premium) + Network File System (NFS) 3.0 | Azure File Standard (SMB) | Azure File Premium Provisioned v1/v2 (SMB) |
   |--|--|--|--|--|--|--|
   | Activity Monitoring | Supported | Supported | Supported | Supported | Not supported | Supported | Supported |
   | Sensitive Data Discovery | Supported | Supported | Supported | Supported | Not supported | Supported | Not supported |
@@ -29,7 +29,7 @@ This article lists the prerequisites and permissions required to [enable Microso
 - Storage accounts that belong to a resource group with any of the following names aren't supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`.
 
 > [!NOTE]
-> AWS S3 buckets aren't directly supported by Defender for Storage. You can use Microsoft Sentinel with the AWS S3 connector to consume AWS GuardDuty findings and display them within the Defender portal **Alerts** table. For more information, see [Microsoft Sentinel data connectors](/azure/sentinel/data-connectors-reference#sentinel-data-connectors/azure/sentinel/connect-aws?tabs=s3).
+> Defender for Storage doesn't directly support Amazon Web Services (AWS) S3 buckets. You can use Microsoft Sentinel with the AWS S3 connector to consume AWS GuardDuty findings and display them within the Defender portal **Alerts** table. For more information, see [Microsoft Sentinel data connectors](/azure/sentinel/data-connectors-reference#sentinel-data-connectors/azure/sentinel/connect-aws?tabs=s3).
 
 ## Permissions
 
