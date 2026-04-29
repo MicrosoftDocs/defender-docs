@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how to use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Foundry 
 author: poliveria
 ms.topic: how-to
-ms.date: 01/30/2026
+ms.date: 04/27/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -123,7 +123,7 @@ Custom tools let you build deterministic workflows by prescribing exactly what d
         ```
     - **Scope:** Use the following:         
         ```
-        4500ebfb-89b6-4b14-a480-7f749797bfcd/.default
+        4500ebfb-89b6-4b14-a480-7f749797bfcd/.default,offline_access
         ```
        
     :::image type="content" source="media/sentinel-mcp/custom-foundry-mcp-details.png" alt-text="Screenshot of the MCP details in add tool setup in Microsoft Foundry." lightbox="media/sentinel-mcp/custom-foundry-mcp-details.png":::

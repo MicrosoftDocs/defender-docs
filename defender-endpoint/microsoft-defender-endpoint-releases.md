@@ -30,7 +30,8 @@ This table includes supported releases for all supported platforms in the past s
 |---------|---------|---------|---------|---------|
 |Linux  |101.26032.0000  |April 2026 |- Release version: 30.126032.0000.0<br>- Engine version: 1.1.26010.1004<br>- Signature version: 1.445.617.0 |[Release details and updates](#linux--april-2026--101260320000) |
 |macOS |101.26032.0016  |April 2026 |- Release version: 20.126032.16.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260320016) |
-|macOS |101.26022.0020  |April 2026 |- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
+|macOS |4.18.25040.1  |April 2026 |- Release version: 4.18.25040.1<br>- Engine version: 1.1.25030.1<br>- Signature version: 1.421.40.0 |[Release details and updates](#macos--april-2026--418250401) |
+|macOS |101.26022.0020  |April 2026|- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
 |macOS |101.26022.0018  |April 2026 |- Release version: 20.126022.18.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220018) |
 |Android |1.0.8805.0103  |April 2026 |- Build: 1.0.8805.0103<br>- Released: April 7, 2025 |[Release details and updates](#android--april-2026--platform-1088050103) |
 |Windows Antivirus |Platform 4.18.26030.3011 / Engine 1.1.26030.3008 |March 2026 |- Platform: 4.18.26030.3011<br>- Engine: 1.1.26030.3008<br>- Security intelligence: 1.449.16.0 |[Release details and updates](#windows-antivirus--march-2026--platform-418260303011--engine-11260303008) |
@@ -150,6 +151,21 @@ For known issues, see [macOS known issues](#macos-known-issues).
 |--------------|----------------|
 | General      | Bug and performance fixes |
 
+### macOS | April-2026 | 4.18.25040.1
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 4.18.25040.1    | 1.1.25030.1    | 1.421.40.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| Root detection | Native root detection for Microsoft Defender is now GA. |
+| General      | Performance improvement and bug fixes. |
+
 ### macOS | April-2026 | 101.26022.0020
 
 #### Versions
@@ -223,6 +239,7 @@ For known issues, see [macOS known issues](#macos-known-issues).
 | General      | CVE‑2025‑68664/5 LangGrinch (langchain vulnerability) |
 | General      | Mitigation for a possible EDLP performance issue related to MDM profile behavior |
 | General      | Device Control - policy conditional on secure digital card details |
+| Documentation | Replaced endpoint URL for Microsoft CDN with a reference to the Microsoft AutoUpdate (MAU) product documentation. For more information, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates). For the full list of required URLs, see [Standard connectivity URLs](standard-device-connectivity-urls-commercial.md). |
 | General      | Bug and performance fixes |
 
 ### macOS | February 2026 | Platform: 101.25122.0008
@@ -374,6 +391,10 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |Visibility |Expanded visibility into Linux kernel module (.ko) file activity - including creation, rename, and deletion.|
 |Configuration|Offline security intelligence updates now run at most once per configured update interval, reducing redundant downloads during service restarts while leaving cloud‑based updates unchanged.|
 |Bug Fix|Resolved an SELinux policy cleanup issue affecting upgrades on some RHEL‑based Linux systems. Upgrading to version 101.26032.0000 ensures safe removal of legacy SELinux modules while preserving customer‑defined policies.|
+
+### Linux | March 24, 2026 | Update: post-release fix
+ 
+Fixed an issue in the January 2026 release, where real-time scanning of the /dev/watchdog device could trigger unexpected system reboots on systems with hardware watchdog enabled. For more information, see [Linux | January 2026 | Platform: 101.25102.0005](#linux--january-2026--platform-101251020005).
 
 ### Linux | March 2026 | 101.26021.0002
 
