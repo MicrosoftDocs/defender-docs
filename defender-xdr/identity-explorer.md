@@ -60,7 +60,7 @@ To use Identity Explorer, you need:
 1. In the new hunting graph page, select **Search with Predefined scenarios**.
 1. Browse the identity-specific scenarios listed in the side panel.
 
-   :::image type="content" source="./media/identity-explorer/hunting-graph-scenrio.png" alt-text="Screenshot of the Select a scenario panel in the hunting graph showing predefined identity scenarios." lightbox="./media/identity-explorer/hunting-graph-scenrio.png":::
+   :::image type="content" source="./media/identity-explorer/hunting-graph-scenario.png" alt-text="Screenshot of the Select a scenario panel in the hunting graph showing predefined identity scenarios." lightbox="./media/identity-explorer/hunting-graph-scenario.png":::
 
 Identity Explorer scenarios are also accessible from the [Domain page](/defender-for-identity/investigate-domain) and [User page](investigate-users.md) in Microsoft Defender for Identity, which link directly into the relevant predefined graph queries.
 
