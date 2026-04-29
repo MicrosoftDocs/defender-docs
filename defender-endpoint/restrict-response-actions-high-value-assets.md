@@ -100,6 +100,10 @@ The security operations status of devices can be identified in several ways:
 
    :::image type="content" source="./media/restrict-response-actions-high-value-assets/advanced-hunting.png" alt-text="Advanced Hunting property showing the value of the RestrictedDeviceSecurityOperations property." lightbox="./media/restrict-response-actions-high-value-assets/advanced-hunting.png":::
 
+- The selective response is also blocked when using public API. If you attempt to perform a restricted action via the API, you receive an error message indicating that the operation isn't allowed on the device.
+
+   :::image type="content" source="./media/restrict-response-actions-high-value-assets/api-error-message.png" alt-text="Error message when attempting a restricted response action via public API." lightbox="./media/restrict-response-actions-high-value-assets/api-error-message.png":::
+
 ## Changing restriction settings
 
 Once a device is onboarded with restricted settings, its security operations configuration can't be changed or modified. To update a device's response capabilities, you must offboard the device and re-onboard it using a new deployment package with the desired settings. The device ID remains the same, and all historical data are preserved.
