@@ -16,7 +16,7 @@ In addition to its built-in [advanced protection plans](defender-for-cloud-intro
 
 ## Threat protection for Azure network layer
 
-Defenders for Cloud network-layer analytics are based on sample [IPFIX data](https://en.wikipedia.org/wiki/IP_Flow_Information_Export), which are packet headers collected by Azure core routers. Based on this data feed, Defender for Cloud uses machine learning models to identify and flag malicious traffic activities. Defender for Cloud also uses the Microsoft Threat Intelligence database to enrich IP addresses.
+Defender for Cloud network-layer analytics are based on sample [IPFIX data](https://en.wikipedia.org/wiki/IP_Flow_Information_Export), which are packet headers collected by Azure core routers. Based on this data feed, Defender for Cloud uses machine learning models to identify and flag malicious traffic activities. Defender for Cloud also uses the Microsoft Threat Intelligence database to enrich IP addresses.
 
 Some network configurations restrict Defender for Cloud from generating alerts on suspicious network activity. For Defender for Cloud to generate network alerts, ensure that:
 
