@@ -600,7 +600,7 @@
     - name: Microsoft Sentinel data lake overview
       href: datalake/sentinel-lake-overview.md
       displayName: data lake
-    - name: Which logs should you ingest into the data lake
+    - name: Direct ingestion into the data lake
       href: datalake/sentinel-lake-log-ingestion-guidance.md
       displayName: data lake
     - name: Data federation in the Microsoft Sentinel data lake

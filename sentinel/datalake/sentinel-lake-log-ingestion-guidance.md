@@ -1,32 +1,35 @@
 ---
-title: Which logs should you ingest into the data lake
+title: Which Logs to Ingest directly into the Microsoft Sentinel data lake
 titleSuffix: Microsoft Security
-description: Learn how to choose which log sources to ingest into the Microsoft Sentinel data lake tier versus the analytics tier based on detection, hunting, and cost requirements.
+description: Learn which log sources to ingest into the Microsoft Sentinel data lake tier versus the analytics tier based on detection, hunting, and cost needs.
 author: EdB-MSFT
 ms.service: microsoft-sentinel
-ms.subservice: sentinel-platform 
+ms.subservice: sentinel-platform
 ms.topic: concept-article
 ms.date: 04/23/2026
 ms.author: ebaynash
 ms.collection: ms-security
+ms.custom: msecd-doc-authoring-1012
+ai-usage: ai-assisted
 
 # Customer intent: As a security administrator, I want to understand which log sources to ingest into the data lake versus the analytics tier so that I can balance cost efficiency with real-time detection and long-term security insights.
 
---- 
+---
 
-# Ingest directly into the data lake tier
+# Microsoft Sentinel data lake direct ingestion guidance
 
-You can configure log sources to ingest directly into the data lake tier without mirroring to the analytics tier. Direct ingestion is useful when you have high-volume log sources that you want to retain for hunting and forensic purposes but don't need for real-time alerting. By ingesting these sources directly into the data lake tier, you avoid analytics tier ingestion costs while still making the data available for KQL queries, Spark notebooks, and long-term analysis. This article helps you determine which log sources are good candidates for direct data lake ingestion based on their value for detection, hunting, and investigation workloads.
+You can configure log sources to ingest directly into the data lake tier without mirroring to the analytics tier. Direct ingestion is useful when you have high-volume log sources that you want to retain for hunting and forensic purposes but don't need for real-time alerting.
+
+By ingesting these sources directly into the data lake tier, you avoid analytics tier ingestion costs while still making the data available for KQL queries, Spark notebooks, and long-term analysis. This article helps you determine which log sources are good candidates for direct data lake ingestion based on their value for detection, hunting, and investigation workloads.
 
 Configure direct data lake ingestion from the connector setup pages or the **Table management** page in the Microsoft Defender portal. For more information, see [Configure table settings in Microsoft Sentinel](../manage-table-tiers-retention.md).
-
 
 
 ## Which logs should you ingest into the data lake?
 
 After you onboard to [Microsoft Sentinel data lake](sentinel-lake-overview.md), you can choose which log sources to send to the data lake tier, the analytics tier, or both. The analytics tier is optimized for real-time detection and alerting, while the data lake tier is optimized for cost-effective long-term retention and hunting. Use the following guidance to determine which log sources to ingest into each tier based on their value for different security workloads.
 
-### Analytics tier
+### Analytics tier use cases
 
 You use the analytics tier to ingest log data into Microsoft Sentinel workspaces, where you can run analytics rules, custom detections, and live queries. Ingest log sources into the analytics tier when you need:
 
@@ -34,7 +37,7 @@ You use the analytics tier to ingest log data into Microsoft Sentinel workspaces
 - **Active incident investigation**: Run live queries against current data during incident response.
 - **High-fidelity signals**: Ingest sources with direct detection value, such as EDR alerts, privileged access logs, authentication events, and threat intelligence indicators.
 
-## Data lake tier
+### Data lake tier use cases
 
 You use the data lake tier to store logs at lower cost for workloads that don't require real-time alerting. Ingest log sources into the data lake tier when you need:
 
@@ -47,7 +50,7 @@ You use the data lake tier to store logs at lower cost for workloads that don't 
 
 You can't run analytics rules or custom detections on data in the data lake tier. If you ingest logs only into the data lake tier, those logs don't generate alerts. To maintain real-time detection coverage, keep time-sensitive, high-fidelity log sources in the analytics tier. 
 
-## Log source guidance
+## Choose an ingestion tier by log source type
 
 Use the following table as a general guide to decide where to ingest each log source type. Assess your own workloads, alerting requirements, and risk tolerance when you configure log ingestion. Some of the log sources have dedicated Microsoft Sentinel connectors while others may require Syslog, CEF, API-based, or custom connectors for ingestion. 
 
@@ -81,14 +84,14 @@ Use the following table as a general guide to decide where to ingest each log so
 | Firewall Traffic Logs | High | High | High | High | Suitable fit |
 | GitHub/GitLab/Code Repo Logs | Low-Medium | Medium | Medium | High | Suitable fit |
 | Google Workspace Logs | Medium | Medium | Medium | High | Suitable fit |
-| Identity (Entra ID, Okta, LDAP) | Medium | High | High | High | Poor fit |
+| Identity (Microsoft Entra ID, Okta, LDAP) | Medium | High | High | High | Poor fit |
 | IIS/Apache Logs | Medium | High | High | High | Suitable fit |
 | IoT Device Logs | High | Medium | Medium | Medium | Suitable fit |
 | Kubernetes/Container Logs (alerts, critical) | High | High | High | High | Poor fit |
 | Kubernetes/Container Logs (raw logs) | High | High | High | High | Suitable fit |
 | LAN/WAN Router Switch | High | Medium | Medium | Medium | Suitable fit |
 | Linux Server AuditD | Medium | High | High | High | Poor fit |
-| Mobile Device Management (Intune) | Medium | Medium | Medium | Medium | Suitable fit |
+| Mobile Device Management (Microsoft Intune) | Medium | Medium | Medium | Medium | Suitable fit |
 | Microsoft Office Logs (Teams, Office, SharePoint) | Medium | Medium | Medium | High | Poor fit |
 | Microsoft XDR Alerts (Defender: Office, Identity, Endpoint, CloudApp) | Medium | High | High | High | Poor fit |
 | Multifactor authentication (MFA) | Medium | High | Medium | High | Poor fit |
