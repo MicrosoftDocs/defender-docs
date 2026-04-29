@@ -1,16 +1,17 @@
 ---
-title: Create new watchlists
+title: Create New Watchlists
 titleSuffix: Microsoft Sentinel
-description: Create watchlist in Microsoft Sentinel for allowlists or blocklists, to enrich event data, and help investigate threats.
+description: Learn how to create a watchlist in Microsoft Sentinel to build allowlists or blocklists, enrich event data, and investigate threats.
 author: guywi-ms
 ms.author: guywild
 ms.topic: how-to
-ms.date: 12/11/2025
+ms.date: 04/29/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1012
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to manage watchlists in my SIEM platform so that I can correlate critical data with security events and enhance threat detection.
@@ -26,7 +27,7 @@ You can create a watchlist by using any of the following methods:
 - [Upload a watchlist file from your Azure Storage account](#create-a-large-watchlist-from-file-in-azure-storage-preview)
 - [Create a watchlist manually](#create-a-watchlist-manually-preview)
 
-You can currently upload local files up to 3.8 MB in size. A file that's over 3.8 MB and up to 500 MB is considered a large watchlist. To upload a large watchlist, upload the file to an Azure Storage account. Before you create a watchlist, review the [limitations of watchlists](watchlists.md#watchlist-limitations).
+You can upload local files up to 3.8 MB. A file that's over 3.8 MB and up to 500 MB is considered a large watchlist. To upload a large watchlist, upload the file to an Azure Storage account. Before you create a watchlist, review the [limitations of watchlists](watchlists.md#watchlist-limitations).
 
 Data in the Log Analytics Watchlist table is retained for 28 days.
 
@@ -50,7 +51,7 @@ If you didn't use a watchlist template to create your file:
 
 1. Select **+ New** to open the **Watchlist wizard**.
 
-   :::image type="content" source="./media/watchlists-create/sentinel-watchlist-new-defender.png" alt-text="Screenshot of add watchlist option on watchlist page." lightbox="./media/watchlists-create/sentinel-watchlist-new-defender.png":::
+   :::image type="content" source="./media/watchlists-create/sentinel-watchlist-new-defender.png" alt-text="Screenshot of the Microsoft Sentinel Watchlist page with the New button highlighted." lightbox="./media/watchlists-create/sentinel-watchlist-new-defender.png":::
 
 1. On the **General** page, enter the name, description, and alias for the watchlist, and then select **Next: Source**.
 
@@ -66,7 +67,7 @@ If you didn't use a watchlist template to create your file:
    |Upload file   |  Either drag and drop your data file, or select **Browse for files** and select the file to upload.      |
    |SearchKey  |  Enter the name of a column in your watchlist that you expect to use as a join with other data or a frequent object of searches. For example, if your server watchlist contains country/region names and their respective two-letter country codes, and you expect to use the country codes often for search or joins, use the **Code** column as the SearchKey.    |
 
-   >[!NOTE]
+   > [!NOTE]
    > If your CSV file is larger than 3.8 MB, you need to use the instructions for [Create a large watchlist from file in Azure Storage](#create-a-large-watchlist-from-file-in-azure-storage-preview).
 
    :::image type="content" source="./media/watchlists-create/sentinel-watchlist-source.png" alt-text="Screenshot showing the watchlist source tab." lightbox="./media/watchlists-create/sentinel-watchlist-source.png":::
@@ -103,7 +104,7 @@ It might take several minutes for the watchlist to be created and the new data t
 
 ## Create a large watchlist from file in Azure Storage (preview)
 
-If you have a large watchlist up to 500 MB in size, upload your watchlist file to your Azure Storage account. Then create a shared access signature URL for Microsoft Sentinel to retrieve the watchlist data. A shared access signature URL is an URI that contains both the resource URI and shared access signature token of a resource like a CSV file in your storage account. Finally, add the watchlist to your workspace in Microsoft Sentinel.
+If you have a large watchlist up to 500 MB, upload your watchlist file to your Azure Storage account. Then create a shared access signature URL for Microsoft Sentinel to retrieve the watchlist data. A shared access signature URL is a URI that contains both the resource URI and shared access signature token of a resource like a CSV file in your storage account. Finally, add the watchlist to your workspace in Microsoft Sentinel.
 
 For more information about shared access signatures, see [Azure Storage shared access signature token](/azure/storage/common/storage-sas-overview#sas-token).
 
@@ -142,6 +143,9 @@ If you don't use AzCopy, upload your file by using the Azure portal. Go to your 
 
 Create a shared access signature URL for Microsoft Sentinel to retrieve the watchlist data.
 
+> [!NOTE]
+> Only public Blob SAS URI is supported.
+
 1. Follow the steps in [Create SAS tokens for blobs in the Azure portal](/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=blobs#create-sas-tokens-in-the-azure-portal).
 1. Set the shared access signature token expiry time to at least six hours.
 1. Keep the default value for **Allowed IP addresses** as blank.
@@ -149,7 +153,7 @@ Create a shared access signature URL for Microsoft Sentinel to retrieve the watc
 
 ### Step 3: Add Azure to the CORS tab
 
-Before using a SAS URI, add the Azure portal to the Cross Origin Resource Sharing (CORS).
+Before you use a SAS URI, add the Azure portal to the Cross-Origin Resource Sharing (CORS) configuration.
 
 1. Go to the storage account settings, **Resource sharing** page.
 1. Select the **Blob service** tab.
@@ -203,8 +207,8 @@ To create a watchlist from scratch:
 
 It might take several minutes for the watchlist to be created and the new data to be available in queries.
 
->[!NOTE]
->Watchlists you create manually automatically contain a single entry that uses default values. You can update this entry as needed. For more information, see [Manage watchlists](watchlists-manage.md).
+> [!NOTE]
+> Watchlists you create manually automatically contain a single entry that uses default values. You can update this entry as needed. For more information, see [Manage watchlists](watchlists-manage.md).
 
 ## View watchlist status
 
@@ -240,7 +244,7 @@ To download one of the watchlist templates:
 
 1. Select **Download Schema**.
 
-   :::image type="content" source="./media/watchlists-create/create-watchlist-download-schema.png" alt-text="Screenshot of templates tab with download schema selected.":::
+   :::image type="content" source="./media/watchlists-create/create-watchlist-download-schema.png" alt-text="Screenshot of the Watchlist Templates tab with the Download Schema option selected from the context menu.":::
 
 1. Populate your local version of the file and save it locally as a CSV file.
 
@@ -252,7 +256,7 @@ If you delete and recreate a watchlist, you might see both the deleted and recre
 
 ## Related content
 
-To learn more about Microsoft Sentinel, see the following articles:
+For more information about watchlists and Microsoft Sentinel, see:
 
 - Learn how to [get visibility into your data and potential threats](get-visibility.md)
 - Get started [detecting threats with Microsoft Sentinel](./detect-threats-built-in.md)
