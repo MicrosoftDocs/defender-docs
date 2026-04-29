@@ -1,7 +1,7 @@
 ---
 title: Migrate from Defender for Storage (classic)
 description: Learn about how to migrate from Defender for Storage (classic) to the new Defender for Storage plan to take advantage of its enhanced capabilities and pricing.
-ms.date: 05/13/2025
+ms.date: 04/19/2026
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
@@ -112,4 +112,4 @@ Get-AzPolicyAssignment -Scope "/subscriptions/{subscriptionId}"
 In this article, you learned about migrating to the new Microsoft Defender for Storage plan.
 
 > [!div class="nextstepaction"]
-> [Enable Defender for Storage](enable-enhanced-security.md)
+> [Enable Defender for Storage](connect-azure-subscription.md)

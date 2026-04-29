@@ -1,24 +1,24 @@
 ---
 title: Deploy GitHub Advanced Security Integration with Microsoft Defender for Cloud
-description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-cloud security.
-ms.date: 12/08/2025
+description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-runtime security.
+ms.date: 03/03/2026
 ms.topic: how-to
 ms.author: dlanger
 author: DebLanger
 #customer intent: As a security administrator, I want to deploy and configure GitHub Advanced Security integration with Microsoft Defender for Cloud to protect applications from code to production.
 ---
 
-# Deploy GitHub Advanced Security integration with Microsoft Defender for Cloud
+# Setup GitHub Advanced Security native integration with Microsoft Defender for Cloud
 
-This guide walks you through setup steps and other actions to help you integrate GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud. This integration helps you maximize Microsoft's cloud-native application security.
+This guide provides setup steps and other actions to help you integrate GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud with a use case that  helps you validate the integration end to end. This integration helps maximize Microsoft's cloud-native application security by correlating runtime risks and context with the originated code for faster AI-powered remediation.
 
 By following this guide, you:
 
 - Set up your GitHub repository for Defender for Cloud coverage.
 - Create a runtime risk factor.
 - Test real use cases in Defender for Cloud.
-- Link code to cloud resources.
-- Start a security campaign on GitHub. This campaign uses runtime context to prioritize GHAS security alerts based on runtime context.
+- Link code to runtime resources.
+- Start a security campaign on GitHub. This campaign uses runtime context to prioritize GHAS security alerts.
 - Create GitHub issues from Defender for Cloud to start remediation.
 - Close the loop between engineering and security teams.
 
@@ -26,8 +26,8 @@ By following this guide, you:
 
 | Aspect | Details |
 | ------ | ------- |
-| Environmental requirements | - GitHub account with a connector created in Defender for Cloud<br>- GHAS license<br>- Defender Cloud Security Posture Management (CSPM) enabled on the subscription<br>- Microsoft Security Copilot (optional for automated remediation) |
-| Roles and permissions | - Security Admin permissions<br>- Security Reader on the Azure subscription (to view findings in Defender for Cloud)<br>- GitHub organization owner |
+| Environmental requirements | - GitHub account with a connector created in Defender for Cloud<br>- GHAS license<br>- Defender Cloud Security Posture Management (DCSPM) enabled on the subscription<br>- Microsoft Security Copilot (optional for automated remediation) |
+| Roles and permissions | - Security Admin permissions<br>- Security Admin  on the Azure subscription (to view findings in Defender for Cloud)<br>- GitHub organization owner |
 | Cloud environments | - Available in commercial clouds only (not in Azure Government, Azure operated by 21Vianet, or other sovereign clouds) |
 
 ## Prepare your environment
@@ -102,7 +102,7 @@ One way to complete this step is by connecting to the cluster and using the `kub
        kubectl run $containerName --image=$registryName.azurecr.io/mdc-mock-0001:mdc-ghas-integration
        ```
 
-### Step 2: Create the first risk factor (business-critical rule)
+### Step 2: Create the example risk factor (business-critical rule)
 
 One of the risk factors that Defender for Cloud detects for this integration is business criticality. Organizations can create rules to label resources as business critical.
 
@@ -132,14 +132,28 @@ One of the risk factors that Defender for Cloud detects for this integration is 
 
 ### Step 3: Validate that your environment is ready
 
+Validation confirms that your environment is correctly configured to surface code to runtime recommendations and generate actionable results.
+
+During this step, Defender verifies that:
+
+- Full code to runtime visibility
+- Source code repositories are continuously monitored by Microsoft Defender for Cloud for security vulnerabilities.
+- Build artifacts (such as container images) are scanned in container registries before deployment.
+- Runtime workloads deployed to Kubernetes clusters are monitored for security risks.
+- Defender for Cloud correlates and traces each artifact from code, through build and deployment, to runtime — and back.
+  
 > [!NOTE]
 > It can take up to 24 hours after the previous steps are applied to see the following results.
 
 1. Test that [GitHub agentless scanning](agentless-code-scanning.md) picks up the repository.
 
 1. Go to Cloud Security Explorer and perform the query.
+   The validation queries test whether Defender can identify artifacts produced by your pipelines and workloads. If the queries return results, it indicates that scanning and correlation are working as expected.
 
    :::image type="content" source="media/github-advanced-security/validate-mdc-container-scan-results.jpg" alt-text="Screenshot of search results in the Cloud Security Explorer query builder, with filters set to GitHub repositories and container images." lightbox="media/github-advanced-security/validate-mdc-container-scan-results.jpg":::
+
+   > [!NOTE]
+   > If no results are returned, it may indicate that artifacts are not yet generated, scanning is not configured, or permissions are missing. See [User roles and permissions](permissions.md) for more information.
 
 1. Validate that Defender for Cloud (in Azure Container Registry) scanned the container image and used it to create a container. In your query, add the conditions for your specific deployment.
 
@@ -151,6 +165,13 @@ One of the risk factors that Defender for Cloud detects for this integration is 
 
 1. Validate that the risk factors are configured correctly on the Defender for Cloud side. Search for your container name on the Defender for Cloud inventory page, and you should see it marked as critical.
 
+   > [!NOTE]
+   > This step is required only if risk factors are not already configured in your environment.
+
+1. If you already use risk factors, you can verify their configuration under **Settings** > **Resource criticality**.
+
+Successful validation ensures that subsequent steps, such as recommendations, campaigns, and GitHub issue generation produce meaningful results.
+
 ### Step 4: Create a GitHub campaign
 
 Because the workflow deploys an image that creates a running container with one of the risk factors (business critical), developers can see risk factors in GitHub.
@@ -158,9 +179,12 @@ Because the workflow deploys an image that creates a running container with one 
 > [!NOTE]
 > After you classify your resource as critical, it can take up to 12 hours for Defender for Cloud to send the data to GitHub. [Learn more](https://docs.github.com/en/code-security/securing-your-organization/understanding-your-organizations-exposure-to-vulnerabilities/alerts-in-production-code).
 
+To create a scanning campaign, you must work at the GitHub organization level. This experience is not available at the individual repository level.
+
 1. In GitHub, go to the GitHub organization that you used for the setup testing.
 
 1. Select **Security** > **Campaigns** > **Create campaign** > **From code scanning filters**.
+   This campaign defines which cloud discovered artifacts (such as container images or workloads) are evaluated and tracked across your environment.
 
    :::image type="content" source="media/github-advanced-security/security-campaigns-code-scanning.jpg" alt-text="Screenshot of options in GitHub to create a campaign from code or secret scanning filters." lightbox="media/github-advanced-security/security-campaigns-code-scanning.jpg":::
 
@@ -172,39 +196,66 @@ Because the workflow deploys an image that creates a running container with one 
 
 1. Enter the required information, and then publish the campaign.
 
-### Step 5: Evaluate code-to-cloud recommendations
+### Step 5: Evaluate recommendations
 
-Use code-to-cloud recommendations and security alerts to understand the status of security issues. You can then assign the recommendation for resolution to the relevant engineering team with the help of the connection between Dependabot security alerts and matching common vulnerabilities and exposures (CVE) IDs in Defender for Cloud.
+Use **code-to-runtime recommendations** and **security alerts** to understand the status of security issues. You can then assign the recommendation for resolution to the relevant engineering team with the help of the connection between Dependabot security alerts and matching common vulnerabilities and exposures (CVE) IDs in Defender for Cloud.
 
-To view the code-to-cloud recommendations:
+#### Code-to-runtime recommendations
+
+To view the code-to-runtime recommendations:
 
 1. In the Defender for Cloud portal, go to the **Recommendations** tab.
 
-1. Search for the name of the container that you created. Then, open one of the recommendations that includes the word **Update**.
+1. Search for the name of the container that you created. Then, open one of the **Update software** recommendations, the recommendation name begins with **Update**.
 
-   If you used the example repository, look for **Update brace-expansion recommendation**.
+   If you used the example repository, look for the **Update brace-expansion** recommendation.
 
-1. Go to the **Remediation Insights** tab and view the code-to-cloud diagram. The diagram maps your running container to the container image in the code repository and to the code repository of the origin in GitHub.
+1. Go to the **Remediation Insights** tab and view the code to runtime diagram. The diagram maps your running container to the container image in the code repository and to the code repository of the origin in GitHub.
+
+   When the campaign runs, Defender surfaces code to runtime recommendations that correlate cloud findings with code and build artifacts.
+
+The following view provides context about the affected assets and risk signals. This view helps you understand why a recommendation was generated before you take action.
 
    :::image type="content" source="media/github-advanced-security/github-issue-creation-panel.jpg" alt-text="Screenshot of the Remediation Insights tab that shows a diagram of linked development phases." lightbox="media/github-advanced-security/github-issue-creation-panel.jpg":::
 
-## View security alerts
+#### Security alerts
+
+Security alerts appear as part of the recommendation evaluation flow. These alerts provide additional context about active risks and help prioritize remediation, but they do not automatically create GitHub issues.
 
 1. Select the **Associated CVEs** tab. Notice that some CVE IDs have a **View on GitHub** link in the **Related GitHub Alerts** column.
 
-1. Select the link to open the relevant GHAS security alert.
+1. Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub you must have access permissions to the relevant GitHub repository. Contact your GitHub administrator if you don't.)
 
 :::image type="content" source="media/github-advanced-security/associated-cves-tab-view.jpg" alt-text="Screenshot of the Associated CVEs tab that shows a link to a related GitHub alert." lightbox="media/github-advanced-security/associated-cves-tab-view.jpg":::
 
-## Create a GitHub issue
+#### Create a GitHub issue
 
 To close the loop between security and engineering teams, you can create a GitHub issue that prioritizes the security issues that the engineering team should focus on. This prioritization can include passing findings that GHAS didn't pick up but that Defender for Cloud detected for CVE IDs that aren't part of direct dependencies. These findings can include vulnerabilities in the base image, operating system, or software like NGINX.
 
 The GitHub issue is automatically generated with all the CVE IDs found in the scope of the recommendation. The recommendation is with and without Dependabot alert matches, including other runtime contexts on the repository of origin.
 
-:::image type="content" source="media/github-advanced-security/github-issue-security-alert.jpg" alt-text="Screenshot of a GitHub issues list that shows three entries marked with security and vulnerability tags." lightbox="media/github-advanced-security/github-issue-security-alert.jpg":::
+From the recommendation view, you can explicitly generate a GitHub issue to track remediation work.
 
-When you assign the issue, the issue status is updated in the Defender for Cloud portal.
+1. Open the relevant **Update software** recommendation.
+1. Select the **Remediation Insights** tab.
+1. Review the affected **Runtime** box.
+1. **Validate whether a GitHub issue already exists** - If a GitHub issue already exists, a GitHub icon is displayed on the box. Hover over the icon to view issue details.  
+If no issue exists and you have the required permissions, you can generate a new GitHub issue.
+
+1. Select **Take action**.
+1. Select **Generate GitHub issue** option from the popup.
+1. If the issue was created successfully you will see a popup notification with a link to the issue.
+1. The issue is created in the code repository of origin.
+  
+   > [!NOTE]
+   > If the **Generate GitHub issue** option isn’t available, required GitHub or repository permissions may be missing.  
+   > Contact your GitHub or repository administrator to request access.
+
+    :::image type="content" source="media/github-advanced-security/github-issue-security-alert.jpg" alt-text="Screenshot of a GitHub issues list that shows three entries marked with security and vulnerability tags." lightbox="media/github-advanced-security/github-issue-security-alert.jpg":::
+
+1. When the issue is assigned to a GitHub user or if its status is changed, the update is reflected in the Defender for Cloud portal.
+   
+**Track ownership and status updates** - Changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress.
 
 :::image type="content" source="media/github-advanced-security/github-issue-security-details.jpg" alt-text="Screenshot of a GitHub issue with security and vulnerability tags, including details like CVE IDs, runtime risk factors, and deployment info." lightbox="media/github-advanced-security/github-issue-security-details.jpg":::
 

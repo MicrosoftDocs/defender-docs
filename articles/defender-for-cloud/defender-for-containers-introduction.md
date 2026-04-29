@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender for Containers, a cloud-native solut
 ms.topic: overview
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/13/2025
+ms.date: 12/14/2025
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
 ---
 
@@ -20,7 +20,7 @@ Defender for Containers helps you with five core domains of container security:
 
 - [**Run-time threat protection**](#run-time-protection-for-kubernetes-nodes-and-clusters) - a rich threat detection suite for Kubernetes clusters, nodes, and workloads, powered by Microsoft leading threat intelligence, provides mapping to MITRE ATT&CK framework for easy understanding of risk and relevant context, and automated response. Security operators can also investigate and respond to threats to Kubernetes services through the [Microsoft Defender XDR portal](/defender-xdr/investigate-respond-container-threats).
 
-- **Containers software supply chain protection** - strengthens your software supply chain by embedding security checks from build to deployment. It scans container images for vulnerabilities, signs vulnerability artifacts with Microsoft certificates to ensure integrity and authenticity, and associates these artifacts with images in the registry for validation. You can enforce organizational security policies by creating rules that block risky images and assess deployments against these rules, helping prevent the introduction of vulnerabilities into your containerized environments. For more information, see [Gated deployment for Kubernetes container images](runtime-gated-overview.md).
+- **Containers software supply chain protection** - strengthens your software supply chain by embedding security checks from build to deployment. This includes the [Microsoft Defender for Cloud CLI](/azure/defender-for-cloud/defender-cli-overview), which empowers developers to scan container images for vulnerabilities and misconfigurations directly within CI/CD pipelines (such as GitHub Actions or Azure Pipelines) or local development environments. By shifting security to the left, findings are surfaced early, allowing for remediation before images are pushed to a registry. The solution also signs vulnerability artifacts with Microsoft certificates to ensure integrity and authenticity, associating them with images for validation. You can enforce organizational security policies by creating rules that block risky images and assess deployments against these rules, preventing the introduction of vulnerabilities into your environments. For more information, see [Gated deployment for Kubernetes container images](runtime-gated-overview.md).
 
 - **Deployment & monitoring** - Monitors your Kubernetes clusters for missing sensors and provides frictionless at-scale deployment for sensor-based capabilities, support for standard Kubernetes monitoring tools, and management of unmonitored resources.
 
@@ -46,7 +46,11 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 
 ### Sensor-based capabilities
 
-**Binary drift detection** - Defender for Containers provides a sensor-based capability that alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats. For more information, see [Binary drift protection (preview)](binary-drift-detection.md).
+**Anti-malware** - Defender for Containers provides a sensor-based capability that detects and alerts you to malicious activities within containers. This helps in identifying and mitigating potential security threats proactively. For more information, see [Anti-malware protection (preview)](anti-malware.md).
+
+**Binary drift detection** - Defender for Containers provides a sensor-based capability that alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats. For more information, see [Binary drift protection](binary-drift-detection.md).
+
+**Binary drift blocking** - Defender for Containers provides a sensor-based capability that blocks unauthorized external processes within containers. You can define drift policies to specify conditions under which processes should be blocked, helping you prevent potential security threats. For more information, see [Binary drift protection](binary-drift-detection.md).
 
 **Kubernetes data plane hardening** - To protect the workloads of your Kubernetes containers with best practice recommendations, you can install the [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes). Learn more about [monitoring components](monitoring-components.md) for Defender for Cloud.
 
@@ -72,7 +76,9 @@ Defender for Containers provides real-time threat protection for [supported cont
 
 Threat protection is provided for Kubernetes at the cluster, node, and workload levels. Both sensor-based coverage that requires the [Defender sensor](defender-for-cloud-glossary.md#defender-sensor) and agentless coverage based on analysis of the Kubernetes audit logs are used to detect threats. Security alerts are only triggered for actions and deployments that occur after you enable Defender for Containers on your subscription.
 
-Examples of security events that Microsoft Defenders for Containers monitors include:
+### Runtime detection examples
+
+Examples of security events that Microsoft Defender for Containers monitors include:
 
 - Exposed Kubernetes dashboards
 - Creation of high privileged roles
@@ -85,6 +91,31 @@ Defender for Containers includes threat detection with over 60 Kubernetes-aware 
 Defender for Cloud monitors the attack surface of multicloud Kubernetes deployments based on the MITRE ATT&CK&reg; matrix for Containers, a framework developed by the [Center for Threat-Informed Defense](https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/) in close partnership with Microsoft.
 
 Defender for Cloud is [integrated with Microsoft Defender XDR](concept-integration-365.md). When Defender for Containers is enabled, security operators can use [Defender XDR to investigate and respond](/defender-xdr/investigate-respond-container-threats) to security issues in supported Kubernetes services.
+
+### Microsoft-maintained container images
+
+Defender for Containers deploys container images that are maintained and updated by Microsoft as part of the runtime protection components. These images are published to Microsoft Container Registry (MCR).
+
+Customers don't modify or patch these images directly. Microsoft maintains and updates them as part of the Defender for Containers release process.
+
+The following images are used by Defender for Containers runtime protection components:
+
+| Image | Purpose | MCR path |
+|---|---|---|
+| `security-publisher` | Publishes security findings collected from Kubernetes environments | `mcr.microsoft.com/azuredefender/stable/security-publisher` |
+| `low-level-collector` | Collects low-level runtime telemetry from Kubernetes nodes | `mcr.microsoft.com/azuredefender/stable/low-level-collector` |
+| `pod-collector` | Collects Kubernetes pod runtime data used for threat detection | `mcr.microsoft.com/azuredefender/stable/pod-collector` |
+| `anti-malware-collector` | Collects malware detection signals for container workloads | `mcr.microsoft.com/azuredefender/stable/anti-malware-collector` |
+| `old-file-cleaner` | Cleans up temporary and stale files as part of initialization workflows | `mcr.microsoft.com/azuredefender/stable/old-file-cleaner` |
+| `audit-logs-enabler` | Enables audit log collection for supported environments (for example, on-premises clusters) | `mcr.microsoft.com/azuredefender/stable/audit-logs-enabler` |
+| `defender-admission-controller` | Enforces runtime gating policies for Kubernetes workloads | `mcr.microsoft.com/mdc/prd/defender-admission-controller` |
+
+Updates are delivered through the deployment mechanism used by your environment. For example:
+
+- When deployed using the **AKS add-on**, updates are delivered through the AKS release lifecycle.
+- When deployed using **Helm**, updates are released within 30 days through updated chart versions.
+
+If you detect a vulnerability in a Microsoft-maintained Defender image, open an Azure support request and include the image name, tag, and CVE identifier.
 
 ## Learn more
 

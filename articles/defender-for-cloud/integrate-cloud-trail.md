@@ -1,5 +1,5 @@
 ---
-title: Integrate AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)
+title: Integrate AWS CloudTrail logs
 description: Learn how to enable and validate AWS CloudTrail management event ingestion in Microsoft Defender for Cloud to enhance CIEM, configuration insights, and identity risk detection.
 author: ElazarK
 ms.author: elkrieger
@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 12/09/2025
 ---
 
-# Integrate AWS CloudTrail logs with Microsoft Defender for Cloud (Preview)
+# Integrate AWS CloudTrail logs (Preview)
 
 Microsoft Defender for Cloud can collect AWS CloudTrail management events to increase visibility into identity operations, permission changes, and other control-plane activity across your AWS environments.
 
@@ -38,15 +38,13 @@ Before enabling CloudTrail ingestion, ensure that your AWS account has:
 > [!NOTE]
 > **Microsoft Sentinel users:** If you already stream AWS CloudTrail logs to Microsoft Sentinel, enabling CloudTrail ingestion in Defender for Cloud may require updates to your Sentinel configuration. Review the updated workflow to avoid ingestion conflicts by following [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
-## Configure CloudTrail ingestion in Microsoft Defender for Cloud
-
-After your AWS account is connected:
+## Configure CloudTrail ingestion
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select your AWS connector.
+1. Select the relevant AWS connector.
 
 1. Under **Monitoring coverage**, open **Settings**.
 

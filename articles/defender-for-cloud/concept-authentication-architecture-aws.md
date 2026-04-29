@@ -1,7 +1,7 @@
 ---
 title: Authentication architecture for AWS connectors
 description: Learn how Microsoft Defender for Cloud authenticates to AWS using short-lived credentials, federated trust, and role-based access controls.
-ms.topic: article
+ms.topic: concept-article
 ms.date: 11/02/2025
 ---
 
@@ -55,7 +55,7 @@ Before AWS issues temporary credentials, it performs several checks:
 
 AWS grants access only when all validation rules succeed.
 
-## Related articles
+## Related content
 
 - [Connect your AWS account](quickstart-onboard-aws.md)
 - [Troubleshoot multicloud connectors](troubleshoot-connectors.md)

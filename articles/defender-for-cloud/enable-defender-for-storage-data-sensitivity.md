@@ -1,7 +1,7 @@
 ---
 title: Enable sensitive data threat detection
 description: Learn how to enable and configure sensitive data threat detection in Microsoft Defender for Storage to protect your data and enhance security.
-ms.date: 07/01/2025
+ms.date: 04/19/2026
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
@@ -41,4 +41,4 @@ You can also create and publish sensitivity labels for your tenant in Microsoft 
 In this article, you learned about Microsoft Defender for Storage's sensitive data scanning.
 
 > [!div class="nextstepaction"]
-> [Enable Defender for Storage](enable-enhanced-security.md)
+> [Enable Defender for Storage](connect-azure-subscription.md)

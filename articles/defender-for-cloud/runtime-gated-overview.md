@@ -4,15 +4,15 @@ description: Enforce container image security in Kubernetes with gated deploymen
 #customer intent: As a Kubernetes administrator, I want to enforce security policies for container images so that I can prevent the deployment of vulnerable workloads.
 author: Elazark
 ms.author: elkrieger
-ms.date: 10/29/2025
+ms.date: 02/16/2026
 ms.topic: overview
 ---
 
 # Gated deployment for Kubernetes container images
 
-Microsoft Defender for Containers supports **gated deployment**, which enforces container image security policies at deployment time in Kubernetes environments, including Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE). Enforcement uses vulnerability scan results from supported container registries, including Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry.
+Microsoft Defender for Containers supports **gated deployment**, which enforces container image security policies at deployment time in Kubernetes environments. Supported environments include Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE). Enforcement uses vulnerability scan results from supported container registries, including Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry.
 
-Gated deployment integrates with the Kubernetes admission controller to ensure that only container images that meet your organization's security requirements run in your Kubernetes environment. It evaluates container images against defined security rules before they're admitted into the cluster, enabling security teams to block vulnerable workloads and maintain compliance.
+Gated deployment integrates with the Kubernetes admission controller to ensure that only container images that meet your organization's security requirements run in your Kubernetes environment. It evaluates container images against defined security rules before they're admitted into the cluster. By using gated deployment, security teams can block vulnerable workloads and maintain compliance.
 
 ## Benefits
 
@@ -30,7 +30,7 @@ Many customers already use Microsoft Defender for Containers vulnerability scann
 | Audit | Lets deployment continue and generates admission events for vulnerable images that violate security rules |
 | Deny | Blocks deployment of images that violate security rules |
 
-Start in Audit mode to assess impact, then move to Deny mode to enforce rules.
+Start in audit mode to assess impact, then move to deny mode to enforce rules.
 
 ## How it works
 
@@ -41,7 +41,7 @@ Start in Audit mode to assess impact, then move to Deny mode to enforce rules.
 
 ## Key features
 
-- Use the default Audit rule that automatically flags image deployments with High or Critical vulnerabilities on eligible clusters
+- Use the default audit rule that automatically flags image deployments with high or critical vulnerabilities on eligible clusters.
 - Set time-bound, scoped exemptions.
 - Target rules granularly by cluster, namespace, pod, or image.
 - Monitor admission events via Defender for Cloud.

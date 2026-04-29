@@ -5,7 +5,7 @@ author: Elazark
 ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 02/19/2025
+ms.date: 04/19/2026
 ms.custom: template-concept
 #customer intent: As a user, I want to understand how agentless machine scanning works in Defender for Cloud so that I can effectively collect data from my machines.
 ---
@@ -138,4 +138,4 @@ In addition, permissions to an existing GCP KMS role are granted to support scan
 
 ## Next steps
 
-[Enable agentless machine scanning](enable-vulnerability-assessment-agentless.md).
+[Enable agentless machine scanning](enable-agentless-scanning-vms.md).

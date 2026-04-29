@@ -1,7 +1,7 @@
 ---
 title: Suppressing false positives or other unwanted security alerts
 description: This article explains how to use Microsoft Defender for Cloud's suppression rules to hide unwanted security alerts, such as false positives.
-ms.date: 08/20/2025
+ms.date: 01/29/2026
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
@@ -9,28 +9,15 @@ ms.custom: sfi-image-nochange
 ---
 # Suppress alerts from Microsoft Defender for Cloud
 
-This page explains how you can use alerts suppression rules to suppress false positives or other unwanted security alerts from Defender for Cloud.
+Microsoft Defender for Cloud generates security alerts when it detects threats in your environment. These alerts can sometimes include false positives or other unwanted alerts. You can automatically suppress any false positives or unwanted alerts by using alert suppression rules.
 
-## Availability
+## Prerequisites
 
 Required roles and permissions:
-- **Security admin** and **Owner** can create/delete rules.
+- **Security admin** and **Owner** can create and delete rules.
 - **Security reader** and **Reader** can view rules.
 
 For cloud availability, see the [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-defender-for-cloud.md).
-
-## What are suppression rules?
-
-The Microsoft Defender plans detect threats in your environment and generate security alerts. When a single alert isn't interesting or relevant, you can manually dismiss it. Suppression rules let you automatically dismiss similar alerts in the future.
-
-Just like when you identify an email as spam, you want to review your suppressed alerts periodically to make sure you're not missing any real threats.
-
-Some examples of how to use suppression rule are:
-
-- Suppress alerts that you've identified as false positives
-- Suppress alerts that are being triggered too often to be useful
-
-:::image type="content" source="./media/alerts-suppression-rules/create-suppression-rule.gif" alt-text="Create alert suppression rule.":::
 
 ## Create a suppression rule
 
@@ -39,53 +26,70 @@ You can apply suppression rules to management groups or to subscriptions.
 - To suppress alerts for a management group, use [Azure Policy](/azure/governance/policy/overview).
 - To suppress alerts for subscriptions, use the Azure portal or the [REST API](#create-and-manage-suppression-rules-with-the-api).
 
-Alert types that were never triggered on a subscription or management group before the rule was created won't be suppressed.
+The rule doesn't suppress alert types that never triggered on a subscription or management group before the rule was created.
 
-To create a rule for a specific alert in the Azure portal:
+Create a suppression rule for a specific alert in the Azure portal:
 
-1. From Defender for Cloud's security alerts page, select the alert you want to suppress.
-1. From the details pane, select **Take action**.
-1. In the **Suppress similar alerts** section of the Take action tab, select **Create suppression rule**.
-1. In the **New suppression rule** pane, enter the details of your new rule.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-    - **Entities** - The resources that the rule applies to. You can specify a single resource, multiple resources, or resources that contain a partial resource ID. If you don't specify any resources, the rule applies to all resources in the subscription.
-    - **Name** - A name for the rule. Rule names must begin with a letter or a number, be between 2 and 50 characters, and contain no symbols other than dashes (-) or underscores (_).
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
+
+    :::image type="content" source="media/alerts-suppression-rules/alerts-page.jpg" alt-text="Screenshot that shows how to navigate to the alerts page." lightbox="media/alerts-suppression-rules/alerts-page.jpg":::
+
+1. Select an alert.
+
+1. Select **Take action**.
+
+    :::image type="content" source="media/alerts-suppression-rules/take-action.jpg" alt-text="Screenshot that shows the location of the take action button." lightbox="media/alerts-suppression-rules/take-action.jpg":::
+
+1. Select **Create suppression rule**.
+
+    :::image type="content" source="media/alerts-suppression-rules/create-suppression-rule.png" alt-text="Screenshot that shows the location of the create suppression rule button." lightbox="media/alerts-suppression-rules/create-suppression-rule.png":::
+
+1. Enter the appropriate details:
+
+    - **Subscription** - The subscription where you want to create the rule.
+    - (Optional) **Entities** - The resources that the rule applies to. You can specify a single resource, multiple resources, or resources that contain a partial resource ID. If you don't specify any resources, the rule applies to all resources in the subscription.
+    - **Rule name** - A name for the rule. Rule names must begin with a letter or a number, be between 2 and 50 characters, and contain no symbols other than dashes (-) or underscores (_).
     - **State** - Enabled or disabled.
     - **Reason** - Select one of the built-in reasons or 'other' to specify your own reason in the comment.
-    - **Expiration date** - An end date and time for the rule. Rules can run for without any time limit as set in Expiration date.
+    - (Optional) **Expiration date** - An end date and time for the rule. Rules can run without any time limit as set in Expiration date.
 
-1. You select **Simulate** to see the number of previously received alerts that would have been dismissed if the rule was active.
-1. Save the rule.
+1. (Optional) Select **Simulate** to test your rule.
 
-You can also select the **Suppression rules** button in the Security Alerts page and select **Create suppression rule** to enter the details of your new rule.
+1. Select **Apply**.
 
-:::image type="content" source="media/alerts-suppression-rules/create-new-suppression-rule.png" alt-text="Screenshot of the Create suppression rule button in the Suppression rules page.":::
-
-> [!NOTE]
-> For some alerts, suppression rules aren't applicable for certain entities. If the rule isn't available, a message displays at the end of the **Create a suppression rule** process.
+The rule is created and listed in the **Suppression rules** page.
 
 ## Edit a suppression rule
 
-To edit a rule, you've created from the suppression rules page:
+You can edit a rule that you created from the suppression rules page.
 
-1. From Defender for Cloud's security alerts page, select **Suppression rules** at the top of the page.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
+
+1. Select **Suppression rules**.
 
     :::image type="content" source="media/alerts-suppression-rules/suppression-rules-button.png" alt-text="Screenshot that shows the suppression rule button in the Security Alerts page." lightbox="media/alerts-suppression-rules/suppression-rules-button.png":::
 
-1. The suppression rules page opens with all the rules for the selected subscriptions.
+1. Select the relevant subscriptions.
 
-    :::image type="content" source="media/alerts-suppression-rules/suppression-rules-page.png" alt-text="Screenshot that shows the Suppression rules page where you can review the suppression rules and create new ones." lightbox="media/alerts-suppression-rules/suppression-rules-page.png":::
+1. Select the three dots button **...** for the rule you want to edit.
 
-1. To edit a single rule, open the three dots (...) at the end of the rule and select **Edit**.
-1. Change the details of the rule and select **Apply**.
+1. Select **Edit**.
+
+1. Edit the rule details.
+
+1. Select **Apply**.
 
 To delete a rule, use the same three dots menu and select **Remove**.
 
 ## Create and manage suppression rules with the API
 
-You can create, view, or delete alert suppression rules using the Defender for Cloud REST API.
+You can create, view, or delete alert suppression rules by using the Defender for Cloud REST API.
 
-A suppression rule can be created for an alert that has already been triggered. Use the [Alerts REST API](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true) to retrieve the alert that you want to suppress, then create a suppression rule with the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true), using the retrieved alert information.
+Create a suppression rule for an alert that the API already triggered. Use the [Alerts REST API](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true) to retrieve the alert that you want to suppress. Then, use the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) to create a suppression rule by using the retrieved alert information.
 
 The relevant methods for suppression rules in the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) are:
 
@@ -102,12 +106,11 @@ The relevant methods for suppression rules in the [Alerts Suppression Rules REST
   - To list all suppression rules configured for a specified subscription. This method returns an array of the applicable rules.
 
 - **DELETE**:
-  - Deletes an existing suppression rule (but doesn't change the status of alerts already dismissed by it).
+  - To delete an existing suppression rule. This method doesn't change the status of alerts that the suppression rule already dismissed.
 
 For details and usage examples, see the [API documentation](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
 ## Next step
 
-This article described the suppression rules in Microsoft Defender for Cloud that automatically dismiss unwanted alerts.
-
-Learn more about [security alerts generated by Defender for Cloud](alerts-reference.md).
+> [!div class="nextstep"]
+> [Security alerts generated by Defender for Cloud](alerts-reference.md).

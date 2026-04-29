@@ -227,10 +227,14 @@ During the **public preview** phase, the following limitations apply:
 - **Branch coverage**: Scans cover only the default branch (usually `main`).  
 - **Tool customization**: You can't customize scanning tools.
 
-SBOM currently has the following limitations:
+Syft (SBOM) currently has the following limitations:
+
+- SBOMs can't be download, the results of Syft can be used to [query specific packages](/azure/defender-for-cloud/query-software-bill-of-materials) and the repositories that use them.
+
 - Repository needs a lock file otherwise only direct dependencies will be found
 - The SBOM size limitation is restricted to 1MB. If there are a lot of packages identified, our ingestion into the Cloud Map will fail.
-- SBOM enablement is not configurable. An SBOM will be generated on every Agentless scan.
+- SBOM enablement is not configurable or downloadable. An SBOM will be generated on every Agentless scan.
+
 - Timeout is set to 15 minutes for the SBOM tool to run.
 - Disabling Agentless doesn't delete the SBOM recommendations.
 
