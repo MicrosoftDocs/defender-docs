@@ -49,7 +49,7 @@ You can't run analytics rules or custom detections on data in the data lake tier
 
 ## Log source guidance
 
-Use the following table as a general guide to decide where to ingest each log source type. Assess your own workloads, alerting requirements, and risk tolerance when you configure log ingestion.
+Use the following table as a general guide to decide where to ingest each log source type. Assess your own workloads, alerting requirements, and risk tolerance when you configure log ingestion. Some of the log sources have dedicated Microsoft Sentinel connectors while others may require Syslog, CEF, API-based, or custom connectors for ingestion. 
 
 | Log source type | Typical log volume | Value for real-time threat detection and alerting | Value for threat hunting | Value for incident investigation and forensics | Data lake only ingestion fit |
 |---|---|---|---|---|---|
