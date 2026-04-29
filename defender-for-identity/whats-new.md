@@ -25,6 +25,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### April 2026
 
+### **Identity Explorer in the hunting graph (Preview)**
+
+Identity Explorer provides identity-focused visualization capabilities in [advanced hunting](/defender-xdr/advanced-hunting-overview) by rendering identity attack paths and exposure scenarios as interactive graphs. Use Identity Explorer to discover lateral movement paths, privilege escalation routes, and credential-access risks. Identity Explorer scenarios are accessible from the [Domain page](investigate-domain.md) and [User page](/defender-xdr/investigate-users) in Microsoft Defender for Identity, or from the [hunting graph](/defender-xdr/advanced-hunting-graph) in the Microsoft Defender portal. For more information, see [Identity Explorer in the hunting graph](/defender-xdr/identity-explorer).
+
 ### **Custom account correlation rules (Preview)**
 
  Custom account correlation rules let you link accounts that belong to the same identity, such as privileged accounts with unique naming conventions. You can correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN by defining rules based on UPN prefix, UPN suffix, domain UPN, or employee ID. For more information, see [Create custom account correlation rules](custom-account-correlation-rules.md).

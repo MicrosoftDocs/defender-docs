@@ -22,6 +22,9 @@ The Active Directory domain page in Microsoft Defender brings together domain he
 - A Microsoft Defender for Identity license, or another license that includes Defender for Identity (such as E5).
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
 
+> [!TIP]
+> You can explore identity attack paths and exposure scenarios for your domain using Identity Explorer in the hunting graph. Several Identity Explorer scenarios are accessible directly from the Domain page. For more information, see [Identity Explorer in the hunting graph](/defender-xdr/identity-explorer).
+
 ## Access the Domain page
 
 You can reach the Active Directory domain page through multiple entry points in Microsoft Defender:

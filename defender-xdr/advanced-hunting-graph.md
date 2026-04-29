@@ -84,7 +84,10 @@ The following table describes the predefined scenarios in the hunting graph, the
 | **Access to Azure DevOps repositories** | Provide an Azure DevOps (ADO) repository name to view users that have read and/or write access to said repository.<br><br>Use this scenario to identify entities with access to ADO repositories, which often contain sensitive assets and therefore valuable targets for threat actors. This scenario gives you visibility and lets you plan your response in case of a breach. | Target ADO repository | Collection |
 | **Choke points to SQL data stores** | This scenario identifies the nodes that appear in the highest number of paths leading to SQL data stores. The scenario discovers paths in the graph where users have roles or permissions to access the SQL data stores.<br><br>Use this scenario to gain visibility to stores that might contain sensitive information, assess the impact in case of a breach, and prepare your mitigation and response. | (None) | Lateral movement, Collection |
 
-Filter the scenarios according to MITRE technique they're associated with by selecting their corresponding buttons:
+> [!TIP]
+> Identity Explorer adds identity-focused predefined scenarios to the hunting graph, including lateral movement paths, privilege escalation routes, and credential-access risks. For more information, see [Identity Explorer in the hunting graph](identity-explorer.md).
+
+Filter the scenariosaccording to MITRE technique they're associated with by selecting their corresponding buttons:
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-select-scenario.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the available options." lightbox="./media/advanced-hunting-graph/hunting-graph-select-scenario.png":::
 
@@ -120,5 +123,7 @@ To add a filter, select **Add filter** then the select any of the supported node
 After selecting a scenario and applying the necessary filters, select **Run scenario** to render the graph. Once the graph is rendered, you can then explore it further by selecting nodes and edges to view more information about entities and relationships, or expand or focus on certain entities.
 
 ## See also
+
+- [Identity Explorer in the hunting graph](identity-explorer.md)
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender](advanced-hunting-overview.md)
 - [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](advanced-hunting-modes.md)
