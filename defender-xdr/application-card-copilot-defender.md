@@ -14,6 +14,7 @@ ms.collection:
 - tier1
 - security-copilot
 - msec-ai-copilot
+ai-usage: ai-assisted
 ms.custom: responsible-ai-transparency
 ms.topic: concept-article
 ms.date: 04/12/2026
@@ -28,15 +29,15 @@ Microsoft's Application and Platform cards are intended to help you understand h
 
 As part of its commitment to responsible AI, Microsoft adheres to six core principles: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. These principles are embedded in the Responsible AI Standard, which guides teams in designing, building, and testing AI applications. Application and Platform Cards play a key role in operationalizing these principles by offering transparency around capabilities, intended uses, and limitations. For further insight, readers are encouraged to explore Microsoft's [Responsible AI Transparency Report](https://www.microsoft.com/ai/responsible-ai) and [Code of Conduct](https://www.microsoft.com/ai/principles-and-approach), which outline how enterprise customers and individuals can engage with AI responsibly.
 
-## 1. Overview
+## Overview
 
 Microsoft Copilot in Microsoft Defender is the integration of Microsoft Security Copilot within the Microsoft Defender portal. It is an AI-powered security application designed to help security analysts investigate and respond to cybersecurity threats more efficiently and effectively. By combining large language models with security-specific data and intelligence, Copilot in Defender provides contextual insights, automated analysis, and actionable recommendations directly within the security workflows that analysts use every day.
 
 Security operations center (SOC) teams face growing volumes of alerts, increasingly sophisticated attacks, and the challenge of staffing experienced analysts. Copilot in Defender addresses these challenges by accelerating incident investigation, reducing the time required to analyze complex threats, and enabling analysts at all experience levels to perform tasks that traditionally required deep expertise. The application draws on data from the workloads that Microsoft Defender monitors, including endpoints, identities, email, cloud applications, and more, to deliver relevant and contextualized assistance.
 
-Microsoft Copilot in Microsoft Defender is intended for enterprise customers, specifically security analysts, incident responders, threat hunters, and threat intelligence analysts who use the Microsoft Defender portal to protect their organizations. For more information, see [Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md) and the [Responsible AI FAQs for Microsoft Copilot in Microsoft Defender](responsible-ai-copilot-defender.md).
+Microsoft Copilot in Microsoft Defender is intended for enterprise customers, specifically security analysts, incident responders, threat hunters, and threat intelligence analysts who use the Microsoft Defender portal to protect their organizations. For more information, see [Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md).
 
-## 2. Key terms
+## Key terms
 
 The following list provides a glossary of key terms related to Microsoft Copilot in Microsoft Defender:
 
@@ -58,7 +59,7 @@ The following list provides a glossary of key terms related to Microsoft Copilot
 
 **Security Copilot:** The Microsoft Security platform that brings together AI and human expertise to help security teams respond to threats faster and more effectively. Copilot in Defender is the embedded experience of Security Copilot within the Microsoft Defender portal.
 
-## 3. Key features or capabilities
+## Key features or capabilities
 
 The key features and capabilities outlined here describe what Microsoft Copilot in Microsoft Defender is designed to do and how it performs across supported tasks.
 
@@ -86,7 +87,7 @@ The key features and capabilities outlined here describe what Microsoft Copilot 
 
 - **Threat intelligence analysis:** Copilot consolidates and summarizes threat intelligence so security teams can prioritize threats based on exposure levels, understand threat actors that may target their industry, and stay informed about emerging vulnerabilities and campaigns.
 
-## 4. Intended uses
+## Intended uses
 
 Microsoft Copilot in Microsoft Defender can be used in multiple scenarios across a variety of industries. Some examples of use cases include:
 
@@ -104,13 +105,13 @@ Microsoft Copilot in Microsoft Defender can be used in multiple scenarios across
 
 - **Assessing identity and device risk during investigations:** While investigating a suspicious sign-in incident, an analyst uses Copilot to generate an identity summary that highlights the user's role, recent role changes, sign-in patterns, and risk flags from Microsoft Entra ID. The analyst also generates a device summary for the endpoint involved, revealing vulnerable software and unusual activity. Together, these summaries enable the analyst to quickly determine the scope of the compromise and take targeted action.
 
-## 5. Models and training data
+## Models and training data
 
 Microsoft Defender extends Microsoft Security Copilot, leveraging its existing agents and underlying AI models. As such, it's dependent on any external configuration that these provide. For example, model choice for Microsoft Security Copilot for the embedded natural language prompt experience. To learn more, see [Microsoft Security Copilot Responsible AI FAQ](/copilot/security/rai-faqs-security-copilot).
 
 Customer data is not shared with OpenAI or used to train Azure OpenAI foundation models. Administrators have full control over how their organization's data is used, including whether to allow Microsoft to capture data for product validation or security AI model improvement. Data sharing preferences can be configured at any time, and customer data is stored in the geographic location selected during setup. For detailed information about data handling, storage, retention, and sharing controls, see [Privacy and data security in Microsoft Security Copilot](/copilot/security/privacy-data-security).
 
-## 6. Performance
+## Performance
 
 Microsoft Copilot in Microsoft Defender is designed to perform reliably across a range of security investigation and response workflows within the Microsoft Defender portal. The application operates in environments where security analysts interact with incident data, alerts, threat intelligence, device and identity information, file metadata, and scripts. Copilot processes text-based inputs, including natural language prompts, script content, and structured security data, and generates text-based outputs such as summaries, recommendations, KQL queries, reports, and classification verdicts. It does not process or generate image, video, or audio content.
 
@@ -120,7 +121,7 @@ Copilot in Defender performs best when analysts interact with it within the inte
 
 Performance is also influenced by the complexity of the input. Simple, clearly scoped prompts tend to produce more accurate and actionable results, while prompts that are ambiguous, extremely long, or outside the security domain may yield less relevant outputs. For autonomous agents such as the Phishing Triage Agent and Dynamic Threat Detection Agent, performance is measured through classification accuracy and detection precision, with continuous improvement driven by analyst feedback and ongoing model refinement.
 
-## 7. Limitations
+## Limitations
 
 Understanding Microsoft Copilot in Microsoft Defender's limitations is crucial to determine if it is used within safe and effective boundaries. While we encourage customers to leverage Microsoft Copilot in Microsoft Defender in their innovative solutions or applications, it's important to note that Microsoft Copilot in Microsoft Defender was not designed for every possible scenario. We encourage users to refer to either the [Microsoft Enterprise AI Services Code of Conduct](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure) (for organizations) or the Code of Conduct section in the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement) (for individuals) as well as the following considerations when choosing a use case:
 
@@ -140,11 +141,11 @@ Understanding Microsoft Copilot in Microsoft Defender's limitations is crucial t
 
 - **Not a substitute for human judgment:** Copilot in Defender is designed to assist, not replace, security analysts. All recommendations, summaries, and classifications should be reviewed by a qualified analyst before action is taken, particularly for consequential decisions such as containment, remediation, or escalation.
 
-## 8. Evaluations
+## Evaluations
 
 Performance and safety evaluations assess whether AI applications are operating reliably and securely by examining factors like groundedness, relevance, and coherence while identifying the risks of generating harmful content. The following evaluations were conducted with safety components already in place, which are also described in [9. Safety Components and Mitigations](#9-safety-components-and-mitigations).
 
-### 8.1 Performance and quality evaluations
+### Performance and quality evaluations
 
 Performance evaluations for AI applications are essential to improving their reliability in real-world applications. Metrics like groundedness, relevance, and coherence help assess the accuracy and consistency of AI-generated outputs, so that they are factually supported in grounded content scenarios, contextually appropriate, and logically structured. For Microsoft Copilot in Microsoft Defender, we conducted performance evaluations for the following metrics, which are available through Microsoft Foundry:
 
@@ -153,7 +154,7 @@ Performance evaluations for AI applications are essential to improving their rel
 - Fluency
 - Similarity
 
-### 8.1a Performance and quality evaluation methods
+### Performance and quality evaluation methods
 
 Performance evaluations for Microsoft Copilot in Microsoft Defender were conducted on text-based outputs generated across the full range of supported capabilities, including incident summarization, guided responses, script and file analysis, identity and device summarization, KQL query generation, and threat intelligence briefings. Evaluations used AI-assisted automated evaluators available through Microsoft Foundry, applied against curated datasets of realistic security investigation scenarios drawn from synthetic and representative real-world inputs.
  
@@ -167,7 +168,7 @@ Similarity measures the degree of alignment between generated outputs and refere
  
 Each metric was scored on a numerical scale using AI-assisted judges calibrated against human annotations. Evaluations were run iteratively across dataset updates to track quality over time and support continuous improvement.
 
-### 8.2 Risk and safety evaluations
+### Risk and safety evaluations
 
 Evaluating potential risks associated with AI-generated content is essential for safeguarding against content risks with varying degrees of severity. This includes evaluating an AI application's predisposition towards generating harmful content or testing vulnerabilities to jailbreak attacks. For Microsoft Copilot in Microsoft Defender, we conducted risk and safety evaluations for the following metrics available through Microsoft Foundry:
 
@@ -181,7 +182,7 @@ Evaluating potential risks associated with AI-generated content is essential for
 - Code vulnerability
 - Ungrounded attributes
 
-### 8.2a Risk and safety evaluation methods
+### Risk and safety evaluation methods
 
 Risk and safety evaluations for Microsoft Copilot in Microsoft Defender were conducted using adversarial datasets and AI-assisted classifiers available through Microsoft Foundry, applied to text-based inputs and outputs. Adversarial prompts were crafted to simulate attempts to elicit harmful, policy-violating, or off-topic content across a range of risk categories. Outputs were scored for the presence of such content using classifiers trained and calibrated to Microsoft's safety standards.
  
@@ -209,7 +210,7 @@ Each metric was scored using AI-assisted classifiers, with scores calibrated aga
 
 Our evaluation data is custom-built to assess AI application performance across key areas of safety and quality, simulating real-world scenarios and risks. We begin by identifying relevant evaluation aspects of concern based on multi-disciplinary research and expert input. These concerns are translated into targeted evaluation objectives and guide formulation of evaluation metrics. For safety, we create adversarial prompts to elicit undesirable or edge-case responses, which are then scored using AI-assisted annotators trained to assess alignment with Microsoft's safety standards. For quality, we craft rubric-based prompts relevant to scenarios including evaluating retrieval-augmented generation (RAG) applications and agents. Datasets are curated from diverse sources including synthetic and public datasets to simulate real-world user scenarios. Using the curated datasets, both evaluations undergo iterative refinement and human alignment to improve metric efficacy and reliability. This methodology forms the foundation of repeatable, rigorous assessments that reflect how customers use evaluations to build better and safer AI.
 
-### 8.3 Custom evaluations
+### Custom evaluations
 
 Microsoft Copilot in Microsoft Defender underwent substantial custom evaluation and testing prior to release. This included comprehensive red teaming, a practice in which dedicated teams rigorously test the product to identify failure modes and scenarios that might cause the application to produce outputs outside its intended uses or that do not align with the [Microsoft AI Principles](https://www.microsoft.com/ai/responsible-ai). Red teaming exercises were designed to evaluate the application's resilience against adversarial inputs, attempts to elicit harmful or off-topic content, and edge-case scenarios that could compromise safety or reliability.
 
@@ -217,7 +218,7 @@ In addition to red teaming, Microsoft conducted iterative testing across the ful
 
 An invite-only early access program provided an additional evaluation mechanism, enabling real-world users to interact with the application and provide structured feedback before general availability. User feedback, collected through "Off-target," "Report," and "Confirm" buttons on every Copilot response, is an ongoing evaluation signal that Microsoft uses to identify quality issues and drive continuous improvement. For autonomous agents such as the Phishing Triage Agent, evaluation also includes classification accuracy metrics and analyst feedback on triage decisions to continuously refine the agent's performance.
 
-## 9. Safety components and mitigations
+## Safety components and mitigations
 
 - **Red teaming and adversarial testing:** Before release, Microsoft conducted extensive red teaming to identify failure modes and conditions under which the application could generate outputs outside its intended scope. Dedicated teams simulated adversarial inputs, jailbreak attempts, and edge-case scenarios to assess the application's resilience and inform the design of safety controls.
 
@@ -239,7 +240,7 @@ An invite-only early access program provided an additional evaluation mechanism,
 
 - **EU AI Act compliance:** Microsoft is committed to compliance with the EU AI Act. The application is developed in alignment with Microsoft's Responsible AI Standard, which accounts for regulatory proposals including the EU AI Act. For more information, see [Microsoft's compliance with the EU AI Act](https://www.microsoft.com/trust-center/compliance/eu-ai-act).
 
-## 10. Best practices for deploying and adopting Microsoft Copilot in Microsoft Defender
+## Best practices for deploying and adopting Microsoft Copilot in Microsoft Defender
 
 Responsible AI is a shared commitment between Microsoft and its customers. While Microsoft builds AI applications with safety, fairness, and transparency at the core, customers play a critical role in deploying and using these technologies responsibly within their own contexts. To support this partnership, we offer the following best practices for deployers and end users to help customers implement responsible AI effectively.
 
@@ -277,12 +278,11 @@ Deployers should:
 
 - **Plan for compute capacity and latency:** Response generation may take up to several minutes and requires GPU capacity. Deployers should plan for potential latency during periods of high demand and communicate expected response times to analysts so they can plan their workflows accordingly.
 
-## 11. Learn more about Microsoft Copilot in Microsoft Defender
+## Learn more about Microsoft Copilot in Microsoft Defender
 
 For additional guidance or to learn more about the responsible use of Microsoft Copilot in Microsoft Defender, we recommend reviewing the following documentation:
 
 - [Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
-- [Responsible AI FAQs for Microsoft Copilot in Microsoft Defender](responsible-ai-copilot-defender.md)
 - [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot)
 - [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security)
 - [Microsoft's compliance with the EU AI Act](https://www.microsoft.com/trust-center/compliance/eu-ai-act)
