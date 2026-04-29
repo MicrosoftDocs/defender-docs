@@ -2,12 +2,9 @@
 title: Automatic attack disruption in Microsoft Defender
 description: Automatically contain assets controlled by attackers by using automatic attack disruption in Microsoft Defender.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
@@ -15,9 +12,6 @@ ms.collection:
   - usx-security
 ms.topic: concept-article
 ai-usage: ai-assisted
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 06/22/2025
 appliesto:
   - Microsoft Defender XDR
@@ -122,6 +116,7 @@ The Microsoft Defender user experience now includes additional visual cues to en
 - A tag titled *Attack Disruption*
 - A yellow banner at the top of the page that highlights the automatic action taken
 - The current asset status is shown in the incident graph if an action is done on an asset, for example, account disabled or device contained
+- The **Policy status** column (Preview) in the **Activities** tab shows the current status of all actions and policies relevant to the incident. Filter by **Provider: Attack disruption** and **Policy status: Active, Inactive, No status** to view disruption policy statuses.
 
 3. Via API:
 

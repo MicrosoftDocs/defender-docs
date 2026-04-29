@@ -17,7 +17,6 @@ ms.collection:
 - tier2
 - mde-ngp
 ms.topic: how-to
-search.appverid: met150
 ---
 
 # Configure Microsoft Defender Antivirus scanning options

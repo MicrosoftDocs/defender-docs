@@ -1,16 +1,11 @@
 ---
 title: View and manage actions in the Action center
 description: View and manage remediation actions for affected assets using the Action center in the Microsoft Defender portal.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-- NOCSH
 ms.author: guywild
 author: guywi-ms
-manager: orspodek
 ms.localizationpriority: medium
 ms.date: 04/28/2025
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2

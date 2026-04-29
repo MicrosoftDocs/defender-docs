@@ -2,7 +2,6 @@
 title: Reports for Attack simulation training
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: concept-article
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -11,8 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
 description: Admins can learn how Attack simulation training in the Microsoft Defender portal affects users and can gain insights from simulation and training outcomes.
-search.appverid: met150
-ms.date: 02/06/2026
+ms.date: 04/23/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -465,6 +463,7 @@ When you export information from the reports, the CSV file contains more informa
 |Country|The user's Country property value in Microsoft Entra ID at the time of simulation.|
 |Manager|The user's Manager property value in Microsoft Entra ID at the time of simulation.|
 
+### User Activity Signals
 How user activity signals are captured is described in the following table.
 
 |Field|Description|Calculation logic|
@@ -474,13 +473,32 @@ How user activity signals are captured is described in the following table.
 |Read Message|The user read the simulation message.|Message read signals might experience issues in the following scenarios: <ul><li>The user reported the message as phishing in Outlook without leaving the reading pane, and **Mark items as read when viewed in the Reading Pane** wasn't configured (default).</li><li>The user reported the unread message as phishing in Outlook, the message was deleted, and **Mark messages as read when deleted** wasn't configured (default).</li></ul>|
 |Out of Office|Determines whether the user is out of office.|Currently calculated by the Automatic replies setting from Outlook.|
 |Compromised User|The user was compromised. The compromise signal varies based on the social engineering technique.|<ul><li>**Credential Harvest**: The user entered their credentials on the sign in page (credentials aren't stored by Microsoft).¹</li><li>**Malware Attachment**: The user opened the payload attachment and selected **Enable Editing** in [Protected View](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653).</li><li>**Link in Attachment**: The user opened the attachment and entered their credentials after clicking on the payload link.</li><li>**Link to Malware**: The user clicked on the payload link and entered their credentials.</li><li>**Drive by URL**: The user clicked on the payload link (entering credentials isn't required).¹</li><li>**OAuth Consent Grant**: The user clicked on the payload link and accepted the prompt to share permissions.¹</li></ul>|
-|Clicked Message Link|The user clicked on the payload link in the simulation message.|The URL in the simulation is unique for each user, which allows individual user activity tracking. Non-Microsoft filtering services or email forwarding can lead to false positives. For more information, see [I see clicks or compromise events from users who insist they didn't click the link in the simulation message OR I see clicks within a few seconds of delivery for many users (false positives). What's going on?](attack-simulation-training-faq.md#i-see-clicks-or-compromise-events-from-users-who-insist-they-didnt-click-the-link-in-the-simulation-message-or-i-see-clicks-within-a-few-seconds-of-delivery-for-many-users-false-positives-whats-going-on)|
+|Clicked Message Link|The user clicked on the payload link in the simulation message. For the **Drive-by URL** technique, a click event also leads to compromise.|The URL in the simulation is unique for each user, which allows individual user activity tracking. Non-Microsoft filtering services or email forwarding can lead to false positives. For more information, see [I see clicks or compromise events from users who insist they didn't click the link in the simulation message OR I see clicks within a few seconds of delivery for many users (false positives). What's going on?](attack-simulation-training-faq.md#i-see-clicks-or-compromise-events-from-users-who-insist-they-didnt-click-the-link-in-the-simulation-message-or-i-see-clicks-within-a-few-seconds-of-delivery-for-many-users-false-positives-whats-going-on)|
 |Forwarded Message|The user forwarded the message.||
 |Replied to Message|The user replied to the message.||
 |Deleted message|The user deleted the message.|The signal comes from the Outlook activity of the user. If the user reports the message as phishing, the message might be moved to the Deleted Items folder, which is identified as a deletion.|
-|Permissions granted|The user shared permissions in an **OAuth Consent Grant** simulation.||
+|Permissions granted|The user shared permissions in an **OAuth Consent Grant** simulation. This action is also considered a compromised event.||
 
 ¹ The clicked link can be a selected URL or a scanned QR code.
+
+### Training assignment trigger behavior by technique
+
+When you choose **Select training courses and modules myself** for training assignments in simulations and simulation automations, you can use the following triggers to assign training:
+
+- **All users**
+- **Clicked payload**
+- **Compromised**
+
+But not all training assignment triggers apply to every social engineering technique. The following table summarizes the available and recommended training assignment triggers by technique:
+
+|Technique|Training assignemnt:<br>All users|Training assignemnt:<br>Clicked payload|Training assignemnt:<br>Compromised|Recommendation|
+|---|---|---|---|---|
+|**Credential Harvest**|Supported|Supported|Supported|Use any training assignment trigger based on your training strategy.|
+|**Malware Attachment**|Supported|Not applicable (no click event)|Supported|Assign training for **All users** or **Compromised**. Don't assign training for **Clicked payload**.|
+|**Link in Attachment**|Supported|Supported|Supported|Use any training assignment trigger based on your training strategy.|
+|**Link to Malware**|Supported|Supported|Supported|Use any trigger training assignment based on your training strategy.|
+|**Drive-by URL**|Supported|Not recommended (click = compromise)|Supported|Assign training for **All users** or **Compromised**.|
+|**OAuth Consent Grant**|Supported|Supported|Supported|Use any training assignment trigger based on your training strategy.|
 
 ## Related Links
 

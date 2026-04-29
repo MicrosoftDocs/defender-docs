@@ -12,7 +12,6 @@ ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2
-search.appverid: met150
 appliesto:
 - Microsoft Defender XDR
 #customer intent: As a SOC analyst, I want to know how to create custom reports using Microsoft Graph security API and Power BI so that I can visualize my data and make informed decisions.

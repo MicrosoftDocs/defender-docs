@@ -2,20 +2,14 @@
 title: Custom roles for role-based access control
 description: Learn how to manage custom roles for Microsoft Defender XDR in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/25/2025
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: concept-article
-search.appverid: 
-  - MOE150
-  - MET150
 appliesto:
 - Microsoft Defender for Cloud
 - Microsoft Defender for Cloud Apps
