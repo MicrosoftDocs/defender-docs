@@ -449,9 +449,16 @@ The following table lists the customizable parameters for the SAP agentless data
 | **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not. | **true**: Ingested<br>**false**: Not ingested | **true** |
 | **collect-user-master-data** | Determines whether User Master data is ingested or not. | **true**: Ingested<br>**false**: Not ingested | **true** |
 | **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients<br>**false**: Not read from all clients | **false** |
-| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data, including all roles and users. This parameter doesn't affect the ingestion of changes to User Master data. | Integer, between **1**-**14** | **1** |
+| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data, including all roles and users. This parameter doesn't affect the ingestion of changes to User Master data. | Integer, between **1**-**14** | **7** |
 | **offset-in-seconds** | Determines the offset, in seconds, for both the start and end times of a data collection window. Use this parameter to delay data collection by the configured number of seconds. | Integer, between **1**-**600** | **60** |
 | **max-rows** | Acts as a safeguard that limits the number of records processed in a single data collection window. This helps prevent performance or memory issues in CPI caused by a sudden increase in event volume. | Integer, between 1–1000000 | 150000 |
+| **max-changedocs-headers** | Acts as a safeguard that limits the number of Change Docs header records (CDHDR records) processed in a single data collection window. Use this parameter to reduce runtime and memory pressure during spikes in header volume. | Integer, greater than **0** | 1000 |
+| **max-changedocs-details** | Acts as a safeguard that defines how many Change Docs records (CDPOS records) are processed per internal batch during collection. Use this parameter to tune throughput versus memory usage. | Integer, greater than **0** | 10000 |
+| **change-docs-batch-size** | Number of CDHDR records used per detail-fetch call. Reduce if RFC calls time out. | Integer, greater than **0** | 1000 |
+
+#### Truncation behaviour of the safeguards
+
+When either limit is reached, a marker record is written to the output with a descriptive message indicating which limit was hit, the actual record count, and the collection time window. The two limits produce distinct markers (TRUNCATED_HEADERS and TRUNCATED_DETAILS) so they can be distinguished in Sentinel.
 
 :::zone-end
 
