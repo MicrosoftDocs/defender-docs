@@ -7,7 +7,7 @@ ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: concept-article
 ms.date: 04/23/2026
-ms.author: ebaynash
+ms.author: edbaynash
 ms.collection: ms-security
 ms.custom: msecd-doc-authoring-1012
 ai-usage: ai-assisted
@@ -122,3 +122,4 @@ Use the following table as a general guide to decide where to ingest each log so
 - [Manage data tiers and retention in Microsoft Sentinel](../manage-data-overview.md)
 - [Configure table settings in Microsoft Sentinel](../manage-table-tiers-retention.md)
 - [Set up connectors for the Microsoft Sentinel data lake](sentinel-lake-connectors.md)
+- [Microsoft Sentinel data lake overview](sentinel-lake-overview.md)
