@@ -49,7 +49,7 @@ Health issues in Microsoft Defender for Identity can have different statuses dep
 For example, if a domain controller is taken offline for maintenance, a "Sensor stopped communicating" alert might be triggered. You can use the API to change the alert status from Open to Suppressed. After the domain controller is back online, revert the status to Open and let Microsoft Defender for Identity close the alert automatically when the issue is resolved.
 
 > [!NOTE]
-> In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
+> In some v3 sensor environments, health alerts about Windows event auditing might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
 
 ## Health issues
 
