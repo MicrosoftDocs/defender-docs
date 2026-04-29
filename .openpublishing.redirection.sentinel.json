@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path_from_root": "/sentinel/datalake/sentinel-mcp-responsible-ai-faq.md",
+      "redirect_url": "/azure/sentinel/datalake/sentinel-mcp-application-card",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/sentinel/summary-rules-tutorial.md",
       "redirect_url": "/azure/sentinel/datalake/kql-jobs",
       "redirect_document_id": false
