@@ -29,6 +29,10 @@ In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 or Micr
 
 Users can report Teams messages from chats, channels, and meeting conversations as malicious or non-malicious. They can also report Teams calls from their call history as scam or not scam. Admins can view the Teams messages and calls that users report.
 
+For more information, watch the following video:
+
+> [!VIDEO https://www.youtube.com/embed/ungHDS4XG4I]
+
 > [!NOTE]
 > User reporting of calls and messages in Teams is not supported in U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD).
 >

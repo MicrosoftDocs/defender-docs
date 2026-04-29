@@ -41,7 +41,7 @@ In the **Incidents** page, filter by the **Predictive Shielding** tag to find in
 :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png" alt-text="Screenshot of the incident list filtered by the Predictive Shielding tag." lightbox="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png":::
 
 > [!NOTE]
-> While the incident and alert details show historical data from the inception of the incident, the **Activities** tab shows a snapshot of the current status. For more information, see [Review the activity information](#review-the-activity-information).
+> While the incident and alert details show historical data from the inception of the incident, the **Activities** tab shows a snapshot of the current status. For more information, see [Track the action status in the Activities tab](autoad-results.md#track-the-action-status-in-the-activities-tab-preview).
 
 You can then select the relevant incident, and review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
 
