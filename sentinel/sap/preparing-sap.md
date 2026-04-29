@@ -206,23 +206,17 @@ This procedure has steps both in Microsoft Sentinel and your SAP system, and req
     1. Trigger automatic deployment of Azure resources (SOC Engineer).
        If, after you deploy the Azure resources, the values in the steps 2 and 3 aren't automatically populated, close and re-expand step 1 to refresh the values in steps 2 and 3.
    1. Deploy an OAuth2 client credentials artifact in the SAP Integration (SAP Admin).
-   1. Deploy a Secure Parameter artifact in SAP Integration (SAP Admin) named **workspaceKey** containing the Log Analytics workspace key visible in the data connector UI.
       
     1. Deploy the SAP agentless data connector package to the SAP Integration Suite (SAP Admin).
-        1. Download the [integration package](https://aka.ms/SAPAgentlessPackage) and upload it to your SAP Integration Suite. For more information, see the [SAP documentation](https://help.sap.com/docs/integration-suite/sap-integration-suite/importing-integration-packages).
+
+        This procedure is performed from the SAP Integration Suite portal ([SAP Cloud Integration Web UI](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/overview-of-sap-cloud-integration-web-ui)).
+
+        1. Open the **Discover** section.
+        1. Search for **Microsoft Sentinel Solution** and open it.
+        1. Click on **Copy** to import the integration package into your Cloud Integration tenant.
         1. Open the package and go to the **Artifacts** tab. Then select the **Data Collector** configuration. For more information, see the [SAP documentation](https://help.sap.com/docs/integration-suite/sap-integration-suite/importing-integration-packages).
         1. Configure the integration flow with the **LogIngestionURL** and the **DCRImmutableID**.
         1. Deploy the iflow using SAP Cloud Integration as the runtime service.
-
-
-## Run the prerequisite checker
-1. The **Prerequisite checker** iflow is included in the package. Configure and deploy this iflow before continuing to the next step, so your SAP system meets the system prerequisites before integration with Microsoft Sentinel. After deployment, the iflow runs on a schedule in SAP Cloud Integration; review the latest run status to confirm success.
-
-    [!INCLUDE [sap-agentless-prerequisites](../includes/sap-agentless-prerequisites.md)]
-
-1. Scroll further down in the **Configuration** area, and expand and follow the instructions in the **Add monitored SAP Systems - Run the steps below for each monitored SAP system:** area for each SAP system you want to monitor.
-
-    When you get to step **2. Connect SAP System to Microsoft Sentinel / SOC Engineer**, continue with [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agent-container.md).
 
 ## Configure SAP Cloud Connector settings
 
@@ -273,6 +267,23 @@ This procedure has steps both in Microsoft Sentinel and your SAP system, and req
             
    - **Location**: Only required when you connect multiple Cloud Connectors to the same BTP subaccount.  For more information, see the [SAP Documentation](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/parameters-influencing-communication-behavior).
    
+## Run the prerequisite checker
+1. The **Prerequisite checker** iflow is included in the package. Configure and deploy this iflow before continuing to the next step, so your SAP system meets the system prerequisites before integration with Microsoft Sentinel. After deployment, the iflow runs on a schedule in SAP Cloud Integration; review the latest run status to confirm success.
+
+    [!INCLUDE [sap-agentless-prerequisites](../includes/sap-agentless-prerequisites.md)]
+
+1. On the Sentinel portal, scroll further down in the **Configuration** area, and expand and follow the instructions in the **Add monitored SAP Systems - Run the steps below for each monitored SAP system:** area for each SAP system you want to monitor.
+
+    When you get to step **2. Connect SAP System to Microsoft Sentinel / SOC Engineer**, continue with [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agent-container.md).
+
+## Deploy the SAP Data Collector integration flow
+
+Once the Prerequisite checker iflow succeeds for the targeted SAP System, the permanent collection flow can be deployed.
+
+> [!NOTE]
+> Use the Prerequisite checker iflow for every new SAP system that shall be onboarded before registering from Sentinel.
+
+1. The **Data Collector** iflow is included in the package. Configure and deploy this iflow to conclude the preparational setup. See this [connector onboarding video](https://youtu.be/PbO1S1E29Yk?si=naFbtoE2Cotl-lj3&t=958) for guidance.
 
 :::zone-end
 

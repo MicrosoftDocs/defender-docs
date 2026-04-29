@@ -337,6 +337,12 @@ At this stage, the system's **Health** status is **Pending**. If the agent is up
 
 :::zone pivot="connection-agentless"
 
+## Watch the connector onboarding video
+
+Use the onboarding video to support the deployment and configuration of the Microsoft Sentinel Solution for SAP - agentless data connector described in this documentation.
+
+> [!VIDEO https://www.youtube.com/embed/PbO1S1E29Yk]
+
 ## Connect your agentless data connector
 
 1. In Microsoft Sentinel, go to the **Configuration > Data connectors** page and locate the **Microsoft Sentinel for SAP - agentless** data connector.
@@ -357,9 +363,6 @@ At this stage, the system's **Health** status is **Pending**. If the agent is up
         - Retrieve the client ID and client secret from the Entra ID app registration to use for authorization on the DCR. 
         
         The SAP admin uses the client ID and client secret information to post to the DCR.              
-
-        > [!NOTE]
-        > If you're a SAP administrator and don't have access to the connector installation, download the [integration package](https://aka.ms/SAPAgentlessPackage) directly. 
 
 1. Scroll down and select **Add SAP client**.
 

@@ -16,9 +16,8 @@ ai-usage: ai-assisted
 **To review the check status**:
 
 1. In SAP Cloud Integration, open **Monitor** > **Integrations** and locate the latest run of the **Prerequisite checker** iflow. Confirm that the run completed with status **Completed** (HTTP 200) and that the response payload doesn't contain warnings or errors.
-1. Inspect the message processing log (MPL) attachments and properties for the per-check results.
+1. Inspect the message processing log (MPL) **attachments** and properties for the per-check results.
 
-<!-- TODO: Add screenshot of the Prerequisite checker iflow run in SAP Cloud Integration Monitor showing the Completed status and the response details. -->
 :::image type="content" source="./media/preparing-sap/agentless-prerequisite-checker-status.png" alt-text="Screenshot placeholder of the Prerequisite checker iflow run status in SAP Cloud Integration Monitor." lightbox="./media/preparing-sap/agentless-prerequisite-checker-status.png":::
 
 Use the following table to interpret the results:
@@ -30,3 +29,5 @@ Use the following table to interpret the results:
 | **Failed** or non-200 status | The checker couldn't reach the target SAP system or hit a configuration error. | Verify the RFC destination and credentials, then redeploy and rerun the iflow. |
 
 If any findings remain, consult the response details for guidance on remediation steps. Legacy SAP systems often require extra SAP notes. Furthermore, see the [troubleshooting section](../sap/sap-deploy-troubleshoot.md) for common issues and resolutions.
+
+1. Undeploy the scheduled **Prerequisite checker** iflow once SAP system check was completed successfully. Repeat this sequence for every new SAP system that shall be onboarded.
