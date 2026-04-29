@@ -18,7 +18,7 @@ ai-usage: ai-assisted
 1. In SAP Cloud Integration, open **Monitor** > **Integrations** and locate the latest run of the **Prerequisite checker** iflow. Confirm that the run completed with status **Completed** (HTTP 200) and that the response payload doesn't contain warnings or errors.
 1. Inspect the message processing log (MPL) **Attachments** and properties for the per-check results. Open the file attached to the MPL entry.
 
-:::image type="content" source="./media/preparing-sap/agentless-prerequisite-checker-status.png" alt-text="Screenshot placeholder of the Prerequisite checker iflow run status in SAP Cloud Integration Monitor." lightbox="./media/preparing-sap/agentless-prerequisite-checker-status.png":::
+:::image type="content" source="../sap/media/preparing-sap/agentless-prerequisite-checker-status.png" alt-text="Screenshot placeholder of the Prerequisite checker iflow run status in SAP Cloud Integration Monitor." lightbox="../sap/media/preparing-sap/agentless-prerequisite-checker-status.png":::
 
 Use the following table to interpret the results:
 
