@@ -113,7 +113,16 @@ For information on Jobs, see [Jobs and Scheduling](#jobs-and-scheduling). For mo
 
    table_name = "EntraGroups"  
    df = data_provider.read_table(table_name)  
-   df.select("displayName", "groupTypes", "mail", "mailNickname", "description", "tenantId").show(100,   truncate=False)  
+   df_filtered = df.select("displayName", "groupTypes", "mail", "mailNickname", "description", "tenantId").show(100,   truncate=False)  
+   
+   # Transform the dataframe
+   df_transformed = df.filter(df.mail.isNotNull()).select("displayName", "groupTypes", "mail", "mailNickname", "description", "tenantId")
+   
+   write_options = {
+        'mode': 'overwrite'
+    }
+   # Save to a new table
+   data_provider.save_as_table(df_transformed, "EntraGroups_Processed_SPRK", write_options=write_options)
    ```  
   The editor provides intellisense code completion for both the `MicrosoftSentinelProvider` class and the table names in the data lake.
 
