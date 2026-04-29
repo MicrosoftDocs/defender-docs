@@ -4,7 +4,7 @@ description: A description of what's new and changed in Microsoft Defender for C
 author: Elazark
 ms.author: elkrieger
 ms.topic: reference
-ms.date: 12/23/2025
+ms.date: 04/19/2026
 ms.custom: sfi-ga-nochange, sfi-image-nochange
 ---
 
@@ -497,7 +497,7 @@ For more information about Defender for Cloud Regulatory Compliance offering, [L
 
 January 30, 2025
 
-We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#preview-container-images-in-azure-registry-should-have-vulnerability-findings-resolved), [AWS](recommendations-reference-container.md#preview-container-images-in-aws-registry-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#preview-container-images-in-gcp-registry-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
+We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#azure-registry-container-images-should-have-vulnerabilities-resolved-powered-by-microsoft-defender-vulnerability-management), [AWS](recommendations-reference-container.md#aws-registry-container-images-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#gcp-registry-container-images-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
 
 **What's Changing?**
 
@@ -2870,7 +2870,7 @@ You can learn more about the [permissions used to scan AWS instances](faq-permis
 1. Select **Click to download the CloudFormation template**.
 1. Navigate to your AWS environment and apply the updated template.
 
-Learn more about [agentless scanning](concept-agentless-data-collection.md) and [enabling agentless scanning in AWS](enable-vulnerability-assessment-agentless.md#agentless-vulnerability-assessment-on-aws).
+Learn more about [agentless scanning](concept-agentless-data-collection.md) and [enabling agentless scanning in AWS](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-aws).
 
 ### Revised JIT (Just-In-Time) rule naming conventions in Defender for Cloud
 
@@ -2962,7 +2962,7 @@ Microsoft Defender Vulnerability Management is now enabled as the default, built
 
 If a subscription has a VA solution enabled on any of its VMs, no changes are made and Microsoft Defender Vulnerability Management won't be enabled by default on the remaining VMs in that subscription. You can choose to [enable a VA solution](deploy-vulnerability-assessment-defender-vulnerability-management.md) on the remaining VMs on your subscriptions.
 
-Learn how to [Find vulnerabilities and collect software inventory with agentless scanning (Preview)](enable-vulnerability-assessment-agentless.md).
+Learn how to [Find vulnerabilities and collect software inventory with agentless scanning (Preview)](enable-agentless-scanning-vms.md).
 
 ### Download a CSV report of your cloud security explorer query results (Preview)
 
@@ -3014,7 +3014,7 @@ If you require any assistance updating permissions, you can [create an Azure sup
 You can also learn more about [Defender for DevOps](defender-for-devops-introduction.md).
 If a subscription has a VA solution enabled on any of its VMs, no changes are made and Microsoft Defender Vulnerability Management won't be enabled by default on the remaining VMs in that subscription. You can choose to [enable a VA solution](deploy-vulnerability-assessment-defender-vulnerability-management.md) on the remaining VMs on your subscriptions.
 
-Learn how to [Find vulnerabilities and collect software inventory with agentless scanning (Preview)](enable-vulnerability-assessment-agentless.md).
+Learn how to [Find vulnerabilities and collect software inventory with agentless scanning (Preview)](enable-agentless-scanning-vms.md).
 
 ### Defender for DevOps Pull Request annotations in Azure DevOps repositories now includes Infrastructure as Code misconfigurations
 
@@ -3523,7 +3523,7 @@ With agentless scanning for VMs, you get wide visibility on installed software a
 Agentless vulnerability scanning is available in both Defender Cloud Security Posture Management (CSPM) and in [Defender for Servers P2](defender-for-servers-introduction.md), with native support for AWS and Azure VMs.
 
 - Learn more about [agentless scanning](concept-agentless-data-collection.md).
-- Find out how to enable [agentless vulnerability assessment](enable-vulnerability-assessment-agentless.md).
+- Find out how to enable [agentless vulnerability assessment](enable-agentless-scanning-vms.md).
 
 ### Defender for DevOps (Preview)
 
@@ -3875,7 +3875,7 @@ Learn more about [Microsoft Defender for Azure Cosmos DB](concept-defender-for-c
 
 With the addition of support for Azure Cosmos DB, Defender for Cloud now provides one of the most comprehensive workload protection offerings for cloud-based databases. Security teams and database owners can now have a centralized experience to manage their database security of their environments.
 
-Learn how to [enable protections](enable-enhanced-security.md) for your databases.
+Learn how to [enable protections](connect-azure-subscription.md) for your databases.
 
 ### General availability (GA) of Defender for SQL on machines for AWS and GCP environments
 

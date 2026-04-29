@@ -2,7 +2,7 @@
 title: Microsoft Defender for Cloud Regional Availability
 description: Discover the regional availability of Microsoft Defender for Cloud plans across Azure, AWS, and GCP. Find supported services by region and platform.
 ms.topic: concept-article
-ms.date: 09/11/2025
+ms.date: 04/14/2026
 ms.custom: references_regions 
 ai-usage: ai-assisted
 
@@ -50,10 +50,10 @@ Austria East, Belgium Central, Central US (EU Access Program), Chile Central, Ch
 ### Defender for APIs
 
 **Supported regions:**  
-Asia East, Asia Southeast, Australia Central 2, Australia East, Australia Southeast, Austria East, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Central US (EU Access Program), East US, East US 2, East US 2 (EU Access Program), India Central, India South, India West, Japan East, Japan West, North Central US, North Europe, South Central US, UK South, UK West, West Central US, West Europe, West US, West US 2, West US 3
+Asia East, Asia Southeast, Australia Central, Australia Central 2, Australia East, Australia Southeast, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Central US (EU Access Program), East US, East US 2, East US 2 (EU Access Program), France Central, France South, Germany North, Germany West Central, India Central, India South, India West, Italy North, Japan East, Japan West, Korea Central, Korea South, North Central US, North Europe, Norway East, Norway West, South Africa North, South Africa West, South Central US, Sweden Central, Sweden South, Switzerland North, Switzerland West, UK South, UK West, West Central US, West Europe, West US, West US 2, West US 3
 
 **Unsupported regions:**  
-Asia Northeast, Belgium Central, Chile Central, China East 2, China East 3, China North, China North 2, China North 3, EU SSLV, France Central, France South, Germany North, Germany West Central, Indonesia Central, Israel Central, Israel North West, Italy North, Jio India Central, Jio India West, Korea Central, Korea South, Malaysia South, Mexico Central, New Zealand North, Norway East, Norway West, Poland Central, Qatar, South Africa North, South Africa West, South East US, South East US 3, South US 2, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
+Asia Northeast, Belgium Central, Chile Central, China East 2, China East 3, China North, China North 2, China North 3, EU SSLV, Indonesia Central, Israel Central, Israel North West, Jio India Central, Jio India West, Malaysia South, Mexico Central, New Zealand North, Poland Central, Qatar, South East US, South East US 3, South US 2, Spain Central, Taiwan North, Taiwan North West, UAE Central, UAE North, US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
 
 ### Defender for Key Vault
 
@@ -132,10 +132,10 @@ Belgium Central, Central US (EU Access Program), Chile Central, China North 2, E
 
 ### API Security Posture Management (DCSPM)
 **Supported regions:**  
-Asia East, Asia Southeast, Australia Central 2, Australia East, Australia Southeast, Austria East, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Central US (EU Access Program), East US, East US 2, East US 2 (EU Access Program), India Central, India South, India West, Japan East, Japan West, North Central US, North Europe, South Central US, UK South, UK West, West Central US, West Europe, West US, West US 2, West US 3
+Asia East, Asia Southeast, Australia Central 2, Australia East, Australia Southeast, Austria East, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Central US (EU Access Program), East US, East US 2, East US 2 (EU Access Program), France Central, France South, Germany North, Germany West Central, India Central, India South, India West, Italy North, Japan East, Japan West, Korea Central, Korea South, North Central US, North Europe, Norway East, Norway West, South Africa North, South Africa West, South Central US, Sweden Central, Sweden South, Switzerland North, Switzerland West, UK South, UK West, West Central US, West Europe, West US, West US 2, West US 3
 
 **Unsupported regions:**  
-Asia Northeast, Belgium Central, Chile Central, China East 2, China East 3, China North, China North 2, China North 3, EU SSLV, France Central, France South, Germany North, Germany West Central, Indonesia Central, Israel Central, Israel North West, Italy North, Jio India Central, Jio India West, Korea Central, Korea South, Malaysia South, Mexico Central, New Zealand North, Norway East, Norway West, Poland Central, Qatar, South Africa North, South Africa West, South East US, South East US 3, South US 2, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
+Asia Northeast, Belgium Central, Chile Central, China East 2, China East 3, China North, China North 2, China North 3, EU SSLV, Indonesia Central, Israel Central, Israel North West, Jio India Central, Jio India West, Malaysia South, Mexico Central, New Zealand North, Poland Central, Qatar, South East US, South East US 3, South US 2, Spain Central, Taiwan North, Taiwan North West, UAE Central, UAE North, US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
 
 ### DevOps security (security connector for ADO/GH/GL)
 

@@ -2,7 +2,7 @@
 title: Remediate machine secrets in Microsoft Defender for Cloud
 description: Learn how to remediate security issues with machine secrets in Microsoft Defender for Cloud.
 ms.topic: overview
-ms.date: 02/19/2025
+ms.date: 04/19/2026
 ---
 
 # Remediate machine secrets
@@ -29,7 +29,7 @@ It’s important to be able to prioritize secrets and identify which ones need i
 
 - An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - [Defender for Cloud](get-started.md) must be available in your Azure subscription.
-- At least one of these plans [must be enabled](enable-enhanced-security.md#enable-defender-plans-to-get-the-enhanced-security-features):
+- At least one of these plans [must be enabled](connect-azure-subscription.md#enable-all-paid-plans-on-your-subscription):
   - [Defender for Servers Plan 2](defender-for-servers-overview.md)
   - [Defender CSPM](concept-cloud-security-posture-management.md)
 - [Agentless machine scanning](concept-agentless-data-collection.md) must be enabled.

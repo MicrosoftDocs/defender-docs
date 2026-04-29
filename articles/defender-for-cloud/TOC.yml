@@ -779,10 +779,10 @@
           - name: Overview
             displayName: k8s, containers, aks, nodes
             href: kubernetes-nodes-overview.md
-          - name: Kubernetes node vulnerability assessment
+          - name: Review and remediate VA findings for Kubernetes nodes
             displayName: k8s, containers, aks, node, vulnerability, assessment
             href: kubernetes-nodes-va.md
-          - name: Kubernetes node malware detection
+          - name: Review and remediate malware alerts for Kubernetes nodes
             displayName: k8s, containers, aks, node, malware
             href: kubernetes-nodes-malware.md
       - name: Image and runtime container vulnerability assessment
@@ -847,9 +847,10 @@
                 displayName: faq, frequently asked questions, gated deployment
                 href: faq-runtime-gated.md
       - name: Protect clusters with AKS Security Dashboard
-        displayName: k8s, containers
-        href: cluster-security-dashboard.md
-      - name: Investigate clusters with Cloud Security Explorer
+        items:
+          - name: Overview
+            href: cluster-security-dashboard.md
+      - name: Investigate Kubernetes vulnerabilities with Cloud Security Explorer
         displayName: k8s, containers
         href: cloud-security-explorer-kubernetes-clusters.md
       - name: Defender for container registries (deprecated)
