@@ -66,7 +66,7 @@ You can create a job in one of three ways:
 
     :::image type="content" source="./media/notebook-jobs/job-configuration.png" lightbox="./media/notebook-jobs/job-configuration.png" alt-text="A screenshot showing the job configuration page."  :::
 
-1. To view your jobs, select the Microsoft Sentinel icon in the left toolbar. Jobs are displayed on the **Jobs** panel.
+1. To view your jobs, select the Microsoft Sentinel ![the sentinel icon](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar. Jobs are displayed on the **Jobs** panel.
 
 1. Select a job to see the job details. 
 1. You can run the job immediately by selecting **Run now**, disable and enable the job schedule, or delete the job.
