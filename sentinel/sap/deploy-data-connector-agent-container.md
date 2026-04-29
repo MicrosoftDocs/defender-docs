@@ -446,16 +446,10 @@ The following table lists the customizable parameters for the SAP agentless data
 
 | Parameter | Description | Allowed values | Default value |
 |-----------|-------------|----------------|---------------|
-| **collect-audit-logs** | Determines whether Audit Log data is ingested or not. | **true**: Ingested
-**false**: Not ingested | **true** |
-| **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not. | **true**: Ingested
-**false**: Not ingested | **true** |
-| **collect-user-master-data** | Master switch that determines whether User Master data collection runs at all. If set to **false**, neither user details nor role authorizations are ingested. | **true**: User Master data collection enabled
-**false**: User Master data collection disabled | **true** |
-| **collect-user-master-data-users** | Determines whether User Details data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested
-**false**: Not ingested | **true** |
-| **collect-user-master-data-roles** | Determines whether Role Authorization data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested
-**false**: Not ingested | **true** |
+| **collect-audit-logs** | Determines whether Audit Log data is ingested or not. | **true**: Ingested, **false**: Not ingested | **true** |
+| **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not. | **true**: Ingested, **false**: Not ingested | **true** |
+| **collect-user-master-data-users** | Determines whether User Details data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested, **false**: Not ingested | **true** |
+| **collect-user-master-data-roles** | Determines whether Role Authorization data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested, **false**: Not ingested | **true** |
 | **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data population, including users and roles. | Integer, between **1**-**14** | **7** |
 | **offset-in-seconds** | Determines the offset, in seconds, for both the start and end times of a data collection window. Use this parameter to delay data collection by the configured number of seconds. | Integer, between **1**-**600** | **60** |
 
@@ -463,8 +457,7 @@ The following table lists the customizable parameters for the SAP agentless data
 
 | Parameter | Description | Allowed values | Default value |
 |-----------|-------------|----------------|---------------|
-| **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients
-**false**: Not read from all clients | **false** |
+| **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients, **false**: Not read from all clients | **false** |
 | **max-rows** | Acts as a safeguard that limits the number of Audit Log records processed in a single data collection window. This parameter no longer applies to Change Docs collection. | Integer, between **1**-**1000000** | **150000** |
 
 #### Change Docs parameters
