@@ -42,7 +42,7 @@ You must be at least a Security Administrator in Microsoft Entra ID to activate 
 
 Before you activate Microsoft Defender unified RBAC, consider the following:
 
-* The following roles are not supported: the Microsoft Sentinel Playbook Operator, Automation Contributor and Workbook Contributor role. These continue to be managed in Azure.  
+* The following roles are not supported for unified RBAC: the Microsoft Sentinel *Playbook Operator*, *Automation Contributor* and *Workbook Contributor*. These roles continue to be managed in Azure.  
 * Assigning permissions to a service principal or to a GDAP user group in Microsoft Sentinel isn't supported in unified RBAC. If you need either capability, don't activate Sentinel in unified RBAC yet. Continue using Azure RBAC for Microsoft Sentinel.
 * The Microsoft Defender unified RBAC model only impacts the Microsoft Defender portal. It doesn't impact the [Microsoft Purview portal](https://purview.microsoft.com) or the [Exchange Admin Center](https://admin.exchange.microsoft.com).
 * Once unified RBAC is activated for Microsoft Sentinel, use unified RBAC in the Defender portal to manage Sentinel permissions. Making permission changes in the Azure portal after unified RBAC is active for a workspace might lead to sync errors. If a sync error occurs, a notification appears on the **Permissions** page in the Defender portal with instructions on how to resolve it.
