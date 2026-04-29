@@ -4,7 +4,7 @@ description: Learn how to review, manage, and delete recommendation exemptions i
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 04/28/2026
+ms.date: 04/29/2026
 #customer intent: As a user, I want to review and manage exempted resources in Microsoft Defender for Cloud so that I can keep my security posture accurate.
 ---
 
@@ -57,8 +57,15 @@ When you exempt a resource, it doesn't prompt security recommendations. You can 
 
 To view all recommendations that have exemption rules:
 
-1. In the **Recommendations** page, select **Open query**.
-1. Enter the following query and select **Run query**.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Defender for Cloud** > **Recommendations**.
+
+1. Select **Open query**.
+
+1. Enter the following query.
+
+1. Select **Run query**.
 
     ```kusto
     securityresources
@@ -144,7 +151,11 @@ If the recommendation still shows resources as unhealthy after 24 hours:
 
 - **Verify the recommendation evaluates the exempted policy.** Some recommendations are based on multiple policies. Ensure you exempted the correct underlying policy.
 
-- **Ensure the exemption was created from Defender for Cloud.** Exemptions created in Azure Policy instead of Defender for Cloud might not fully integrate. Always use **Defender for Cloud** > **Recommendations** > **Exempt**.
+- **Ensure the exemption was created from Defender for Cloud.** Exemptions created in Azure Policy instead of Defender for Cloud might not fully integrate.
+
+    1. Go to **Defender for Cloud** > **Recommendations**.
+
+    1. Select **Exempt**.
 
 - **Check for initiative conflicts.** If the same recommendation exists in multiple initiatives, you might need a separate exemption for each initiative. Newly assigned initiatives might override existing exemptions.
 
@@ -156,7 +167,11 @@ You can create exemptions at the subscription level but receive permission error
 
 To resolve permission errors at the management group level:
 
-- **Assign permissions at the management group level.** Subscription-level permissions don't inherit upward. Go to **Management group** > **Access control (IAM)** and assign **Security Admin** or the appropriate role at the management group level.
+- **Assign permissions at the management group level.** Subscription-level permissions don't inherit upward.
+
+    1. Go to **Management group** > **Access control (IAM)**.
+
+    1. Assign **Security Admin** or the appropriate role at the management group level.
 
 - **Verify role assignment scope.** Custom roles must be assigned at the management group level, not only at the subscription level. Use Azure CLI to verify:
 
@@ -170,7 +185,9 @@ To resolve permission errors at the management group level:
 
 If previously visible exemptions no longer appear, or you can't find where exemptions are listed:
 
-- **Check the centralized exemptions view.** As of January 2026, exemptions are managed from a central location. Go to **Defender for Cloud** > **Environment settings** > **Exemptions box**, or go to **Azure Policy** > **Exemptions**.
+- **Check the centralized exemptions view.** As of January 2026, exemptions are managed from a central location.
+
+    1. Go to **Defender for Cloud** > **Environment settings** > **Exemptions box**, or go to **Azure Policy** > **Exemptions**.
 
 - **Verify scope and filters.** Exemptions are visible at the scope where they were created. Check whether you're viewing the correct subscription or management group.
 
@@ -196,11 +213,13 @@ policyresources
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Go to **Defender for Cloud** > **Environment settings** > **Exemptions box**, or go to **Azure Policy** > **Exemptions**.
+1. Go to **Defender for Cloud** > **Environment settings** > **Exemptions**.
 
 1. Filter by the affected subscription or resource group.
 
-1. Review overlapping exemptions and decide which one to keep as the authoritative exemption.
+1. Review the overlapping exemptions.
+
+1. Review all exemptions.
 
 1. Delete the extra exemptions.
 
