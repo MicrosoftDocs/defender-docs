@@ -6,7 +6,7 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: amibarayev
 ms.localizationpriority: medium
-ms.date: 04/15/2026
+ms.date: 04/29/2026
 ms.topic: concept-article
 #customer intent: As a security engineer, I want to configure which response actions are allowed on high-value assets I'm onboarding to reduce operational risk.
 ---
@@ -25,7 +25,7 @@ Deploying Microsoft Defender for Endpoint on high-value assets (HVAs), such as d
 
 Many organizations, especially those with strict privileged access management policies, also prefer to limit cloud-initiated administrative actions on Tier-0 systems to align with their security and compliance requirements.
 
-The Selective Response Actions capability addresses these needs by providing a more controlled and flexible approach. It enables organizations to define exactly which actions are allowed on critical assets, helping maintain operational continuity while still benefiting from Defender’s protection.
+The Selective Response Actions capability addresses these needs by providing a more controlled and flexible approach. It enables organizations to define exactly which response actions are allowed on critical assets, helping maintain operational continuity while still benefiting from Defender’s protection.
 
 ### How does the feature work?
 
