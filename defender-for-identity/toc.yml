@@ -112,9 +112,9 @@ items:
     href: dashboard.md
   - name: Identity security initiative (Preview)
     href: identity-security-initiative.md
-  - name: Investigate identity password protection
+  - name: Identity password protection
     href: password-protection.md
-  - name: Investigate an Active Directory domain
+  - name: Active Directory domain security
     href: investigate-domain.md
   - name: View service accounts
     href: service-account-discovery.md
@@ -136,17 +136,17 @@ items:
       href: security-posture-assessments/cloud-identities.md
 - name: Detect
   items:
-  - name: Alerts overview
+  - name: Security alerts overview
     href: alerts-overview.md
-  - name: Defender for Identity classic alerts
+  - name: Classic alerts reference
     href: alerts-mdi-classic.md
-  - name: Defender for Identity XDR alerts
+  - name: Defender for Identity alerts in Defender format
     href: alerts-xdr.md
   - name: View and manage security alerts
     href: understanding-security-alerts.md
-  - name: Monitored activities
+  - name: Monitored activities reference
     href: monitored-activities.md
-  - name: Understanding Network Name Resolution (NNR)
+  - name: Network Name Resolution (NNR)
     href: nnr-policy.md
 - name: Investigate
   items:
