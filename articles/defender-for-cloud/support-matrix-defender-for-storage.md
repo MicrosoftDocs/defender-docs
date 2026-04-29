@@ -26,10 +26,10 @@ This article lists the prerequisites and permissions required to [enable Microso
   | On-upload Malware Scanning | Supported only for blobs | Supported only for blobs | Not supported | Supported only for blobs | Supported only for blobs | Not supported | Not supported |
   | On-demand Malware Scanning | Supported | Supported | Not supported | Supported | Supported | Supported | Not supported |
   
-- Storage accounts that belong to a resource group with any of the following names are not supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`.
+- Storage accounts that belong to a resource group with any of the following names aren't supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`.
 
 > [!NOTE]
-> AWS S3 buckets are not directly supported by Defender for Storage. You can use Microsoft Sentinel with the AWS S3 connector to consume AWS GuardDuty findings and display them within the Defender portal **Alerts** table. For more information, see [Sentinel data connectors](/azure/sentinel/data-connectors-reference#sentinel-data-connectors/azure/sentinel/connect-aws?tabs=s3).
+> AWS S3 buckets aren't directly supported by Defender for Storage. You can use Microsoft Sentinel with the AWS S3 connector to consume AWS GuardDuty findings and display them within the Defender portal **Alerts** table. For more information, see [Microsoft Sentinel data connectors](/azure/sentinel/data-connectors-reference#sentinel-data-connectors/azure/sentinel/connect-aws?tabs=s3).
 
 ## Permissions
 
