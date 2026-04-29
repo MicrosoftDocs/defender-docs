@@ -4,7 +4,7 @@ description: Review support requirements for container capabilities in Microsoft
 ms.topic: limits-and-quotas
 author: Elazark
 ms.author: elkrieger
-ms.date: 02/22/2026
+ms.date: 04/23/2026
 ms.custom: references_regions
 ---
 
@@ -72,7 +72,7 @@ The following table lists the features provided by Defender for Containers for t
 | Aspect | Details |
 |--|--|
 | Registries and images | **Supported**<br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br> * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
-| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-24.04 <br> * Fedora 31-37<br> * Azure Linux 1-3<br> * Windows server 2016, 2019, 2022<br> * Chainguard OS/Wolfi OS <br> * Alma Linux 8.4 or later <br> * Rocky Linux 8.7 or later<br> * Minimus <br> * Photon OS 2.0-5.0 |
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.22<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-24.04 <br> * Fedora 31-37<br> * Azure Linux 1-3<br> * Windows server 2016, 2019, 2022<br> * Chainguard OS/Wolfi OS <br> * Alma Linux 8.4 or later <br> * Rocky Linux 8.7 or later<br> * Minimus <br> * Photon OS 2.0-5.0 |
 | Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * PHP <br> * Ruby <br> * Rust <br> * .NET <br> * Java<br> * Go |
 
 ## Runtime protection features
@@ -174,7 +174,7 @@ The following table lists the features provided by Defender for Containers for t
 
 | Aspect | Details |
 |--|--|
-| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1arc)</sup> <sup>[2](#footnote2arc)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br>* [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/)<br>* [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer) |
+| Kubernetes distributions and configurations | **Supported via Arc enabled Kubernetes** <sup>[1](#footnote1arc)</sup> <sup>[2](#footnote2arc)</sup><br>* [Azure Kubernetes Service hybrid](/azure/aks/hybrid/aks-hybrid-options-overview)<br>* [Azure Red Hat OpenShift](https://azure.microsoft.com/services/openshift/) (Preview)<br>* [Red Hat OpenShift](https://www.openshift.com/learn/topics/kubernetes/) (version 4.6 or newer) (Preview) |
 
 <sup><a name="footnote1arc"></a>1</sup> Any Cloud Native Computing Foundation (CNCF) certified Kubernetes clusters should be supported, but only the specified clusters are tested.
 
