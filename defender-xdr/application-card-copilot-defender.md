@@ -18,6 +18,7 @@ ai-usage: ai-assisted
 ms.custom: responsible-ai-transparency
 ms.topic: concept-article
 ms.date: 04/12/2026
+ai-usage: ai-assisted
 #customer intent: I want to understand how Microsoft Copilot in Microsoft Defender works, its intended uses, limitations, and responsible AI practices.
 ---
 
