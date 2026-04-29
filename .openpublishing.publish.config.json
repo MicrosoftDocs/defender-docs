@@ -30,6 +30,7 @@
       "build_output_subfolder": "d4iot-azure",
       "locale": "en-us",
       "monikers": [],
+      "moniker_ranges": [],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
@@ -153,6 +154,7 @@
       "build_output_subfolder": "easm-azure",
       "locale": "en-us",
       "monikers": [],
+      "moniker_ranges": [],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
