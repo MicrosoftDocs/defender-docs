@@ -62,7 +62,7 @@ Microsoft Defender for Cloud is now integrated into the Microsoft Defender porta
 - A centralized cloud asset inventory with enriched risk, health, and coverage data
 - Integrated posture management through Microsoft Security Exposure Management (MSEM), including secure score, recommendations, attack paths, and vulnerabilities
 - A new recommendation model with individual findings for improved prioritization and governance
-- A risk-based Cloud Secure Score for more accurate assessment and prioritization including improved daily secure score calculations
+- A risk-based Cloud secure score for more accurate assessment and prioritization including improved daily secure score calculations
 
 > [!Note]
 > Cloud scopes is still in preview.
