@@ -165,8 +165,8 @@ items:
          href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
        - name: Investigate an Active Directory domain
          href: investigate-domain.md
-       - name: Identity Explorer
-         href: /defender-xdr/identity-explorer?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+       - name: Identity scenarios in the hunting graph
+         href: /defender-xdr/hunting-graph-identity?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
        - name: Investigate identity password protection
          href: password-protection.md
     - name: View service accounts

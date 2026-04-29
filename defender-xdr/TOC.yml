@@ -386,8 +386,8 @@
           href: advanced-hunting-extend-data.md
         - name: Hunt using hunting graph
           href: advanced-hunting-graph.md
-        - name: Identity Explorer
-          href: identity-explorer.md
+        - name: Identity scenarios
+          href: hunting-graph-identity.md
       - name: Track and respond to emerging threats
         items:
         - name: Threat analytics

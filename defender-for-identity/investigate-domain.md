@@ -23,7 +23,7 @@ The Active Directory domain page in Microsoft Defender brings together domain he
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
 
 > [!TIP]
-> You can explore identity attack paths and exposure scenarios for your domain using Identity Explorer in the hunting graph. Several Identity Explorer scenarios are accessible directly from the Domain page. For more information, see [Identity Explorer in the hunting graph](/defender-xdr/identity-explorer).
+> You can explore identity attack paths and exposure scenarios for your domain using predefined identity scenarios in the hunting graph. Several identity scenarios are accessible directly from the Domain page. For more information, see [Identity scenarios in the hunting graph](/defender-xdr/hunting-graph-identity).
 
 ## Access the Domain page
 

@@ -25,9 +25,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### April 2026
 
-### **Identity Explorer in the hunting graph (Preview)**
+### **Identity scenarios in the hunting graph (Preview)**
 
-Identity Explorer provides identity-focused visualization capabilities in [advanced hunting](/defender-xdr/advanced-hunting-overview) by rendering identity attack paths and exposure scenarios as interactive graphs. Use Identity Explorer to discover lateral movement paths, privilege escalation routes, and credential-access risks. Identity Explorer scenarios are accessible from the [Domain page](investigate-domain.md) and [User page](/defender-xdr/investigate-users) in Microsoft Defender for Identity, or from the [hunting graph](/defender-xdr/advanced-hunting-graph) in the Microsoft Defender portal. For more information, see [Identity Explorer in the hunting graph](/defender-xdr/identity-explorer).
+The [hunting graph](/defender-xdr/advanced-hunting-graph) now includes predefined identity-focused scenarios that visualize identity attack paths and exposure risks as interactive graphs. Use these scenarios to discover lateral movement paths, privilege escalation routes, and credential-access risks. The identity scenarios are accessible from the [Domain page](investigate-domain.md) and [User page](/defender-xdr/investigate-users) in Microsoft Defender for Identity, or from the [hunting graph](/defender-xdr/advanced-hunting-graph) in the Microsoft Defender portal. For more information, see [Identity scenarios in the hunting graph](/defender-xdr/hunting-graph-identity).
 
 ### **Custom account correlation rules (Preview)**
 

@@ -85,7 +85,7 @@ The following table describes the predefined scenarios in the hunting graph, the
 | **Choke points to SQL data stores** | This scenario identifies the nodes that appear in the highest number of paths leading to SQL data stores. The scenario discovers paths in the graph where users have roles or permissions to access the SQL data stores.<br><br>Use this scenario to gain visibility to stores that might contain sensitive information, assess the impact in case of a breach, and prepare your mitigation and response. | (None) | Lateral movement, Collection |
 
 > [!TIP]
-> Identity Explorer adds identity-focused predefined scenarios to the hunting graph, including lateral movement paths, privilege escalation routes, and credential-access risks. For more information, see [Identity Explorer in the hunting graph](identity-explorer.md).
+> The hunting graph includes identity-focused predefined scenarios, including lateral movement paths, privilege escalation routes, and credential-access risks. For more information, see [Identity scenarios in the hunting graph](hunting-graph-identity.md).
 
 Filter the scenariosaccording to MITRE technique they're associated with by selecting their corresponding buttons:
 
@@ -124,6 +124,6 @@ After selecting a scenario and applying the necessary filters, select **Run scen
 
 ## See also
 
-- [Identity Explorer in the hunting graph](identity-explorer.md)
+- [Identity scenarios in the hunting graph](hunting-graph-identity.md)
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender](advanced-hunting-overview.md)
 - [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](advanced-hunting-modes.md)

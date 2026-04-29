@@ -1,6 +1,6 @@
 ---
-title: Identity Explorer in the hunting graph
-description: Discover identity attack paths, lateral movement routes, and credential-access risks using Identity Explorer predefined scenarios in the hunting graph.
+title: Identity scenarios in the hunting graph
+description: Discover identity attack paths, lateral movement routes, and credential-access risks using predefined identity scenarios in the hunting graph.
 ms.service: defender-xdr
 ms.author: abbyweisberg
 author: AbbyMSFT
@@ -22,51 +22,51 @@ ms.date: 04/29/2026
 ai-usage: ai-assisted
 ---
 
-# Identity Explorer in the hunting graph (Preview)
+# Explore identities using the hunting graph (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Identity Explorer provides identity-focused visualization in [advanced hunting](advanced-hunting-overview.md) by rendering attack paths and exposure scenarios as interactive graphs. Security analysts and threat hunters can use these graphs to discover lateral movement paths, privilege escalation routes, and credential-access risks more easily and intuitively.
+The [hunting graph](advanced-hunting-graph.md) in the Microsoft Defender portal includes predefined identity scenarios that show attack paths and exposure risks as interactive graphs. Security analysts and threat hunters can use these graphs to find lateral movement paths, privilege escalation routes, and credential-access risks.
 
-:::image type="content" source="./media/identity-explorer/hunting-graph.png" alt-text="Screenshot of an Identity Explorer graph in advanced hunting showing the Paths to domain admins scenario with identity nodes and relationship edges." lightbox="./media/identity-explorer/hunting-graph.png":::
+:::image type="content" source="./media/hunting-graph-identity/hunting-graph.png" alt-text="Screenshot of an identity scenario graph in advanced hunting showing the Paths to domain admins scenario with identity nodes and relationship edges." lightbox="./media/hunting-graph-identity/hunting-graph.png":::
 
-## Understand the Identity Explorer scenarios
+## How the hunting graph visualizes identity risks
 
-Identity-based attacks such as lateral movement, privilege escalation, and credential theft are among the most common techniques attackers use to move through an environment after gaining initial access. These attacks exploit relationships between identities — for example, group memberships, delegated permissions, or cached credentials on devices — to reach higher-value targets.
+Identity-based attacks like lateral movement, privilege escalation, and credential theft are among the most common ways attackers move through an environment after initial access. These attacks exploit relationships between identities (for example, group memberships, delegated permissions, or cached credentials on devices) to reach higher-value targets.
 
-Identity Explorer scenarios are predefined hunting graph queries that visualize these identity relationships and attack paths. Each scenario maps to one or more [MITRE ATT&CK](https://attack.mitre.org/) techniques and focuses on a specific type of identity risk:
+The predefined identity scenarios are hunting graph queries that show these relationships and attack paths visually. Each scenario maps to one or more [MITRE ATT&CK](https://attack.mitre.org/) techniques and focuses on a specific type of identity risk:
 
-- **Lateral movement** scenarios show how an attacker could move between identities, devices, or cloud resources by exploiting existing permissions and trust relationships.
-- **Privilege escalation** scenarios reveal paths where a non-privileged user could gain elevated access — for example, by reaching a Domain Admins group or a sensitive service principal.
-- **Credential access** scenarios identify accounts that are vulnerable to offline password attacks, such as Kerberoasting or AS-REP roasting, and show whether those accounts have paths to critical assets.
+- **Lateral movement** scenarios show how an attacker could move between identities, devices, or cloud resources by using existing permissions and trust relationships.
+- **Privilege escalation** scenarios show paths where a non-privileged user could gain elevated access. For example, an attacker might reach a Domain Admins group or a sensitive service principal.
+- **Credential access** scenarios identify accounts vulnerable to offline password attacks, like Kerberoasting or AS-REP roasting, and show whether those accounts have paths to critical assets.
 
-By rendering these relationships as interactive graphs, Identity Explorer helps you spot risky configurations — such as overly broad permissions, exposed service accounts, or short paths to domain compromise — that tabular data alone might not reveal.
+The hunting graph helps you spot risky configurations that tabular data alone might miss. These include overly broad permissions, exposed service accounts, or short paths to domain compromise.
 
 ## Prerequisites
 
-To use Identity Explorer, you need:
+To use the predefined identity scenarios in the hunting graph, you need:
 
 - A user role with at least [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions in Microsoft Entra ID. [Read about required roles and permissions for advanced hunting](custom-roles.md).
 - [Microsoft Sentinel data lake](/azure/sentinel/datalake/sentinel-lake-overview) access.
 - At least [read-only](/security-exposure-management/prerequisites) access in Microsoft Security Exposure Management.
 
-## Access Identity Explorer scenarios
+## Access the identity scenarios
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Investigation & response** > **Hunting** > **Advanced hunting**.
 1. Open the hunting graph by selecting the graph icon at the top of the page or by selecting **Create new** > **Hunting graph**.
 
-   ![Screenshot of the Create new menu in advanced hunting with the Hunting graph option highlighted.](./media/identity-explorer/new-hunting-graph.png)
+   ![Screenshot of the Create new menu in advanced hunting with the Hunting graph option highlighted.](./media/hunting-graph-identity/new-hunting-graph.png)
 
 1. In the new hunting graph page, select **Search with Predefined scenarios**.
 1. Browse the identity-specific scenarios listed in the side panel.
 
-   :::image type="content" source="./media/identity-explorer/hunting-graph-scenario.png" alt-text="Screenshot of the Select a scenario panel in the hunting graph showing predefined identity scenarios." lightbox="./media/identity-explorer/hunting-graph-scenario.png":::
+   :::image type="content" source="./media/hunting-graph-identity/hunting-graph-scenario.png" alt-text="Screenshot of the Select a scenario panel in the hunting graph showing predefined identity scenarios." lightbox="./media/hunting-graph-identity/hunting-graph-scenario.png":::
 
-Identity Explorer scenarios are also accessible from the [Domain page](/defender-for-identity/investigate-domain) and [User page](investigate-users.md) in Microsoft Defender for Identity, which link directly into the relevant predefined graph queries.
+The identity scenarios are also available from the [Domain page](/defender-for-identity/investigate-domain) and [User page](investigate-users.md) in Microsoft Defender for Identity, which link directly to the relevant graph queries.
 
 ## Scenario reference
 
-The following table describes the Identity Explorer scenarios. All scenarios are available in the hunting graph. The **Also available from** column indicates additional entry points in the Defender portal.
+The following table describes the predefined identity scenarios. All scenarios are available in the hunting graph. The **Also available from** column shows other entry points in the Defender portal.
 
 | Scenario | Description | MITRE Technique | Also available from |
 |---|---|---|---|
