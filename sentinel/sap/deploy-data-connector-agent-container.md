@@ -13,6 +13,7 @@ zone_pivot_groups: sentinel-sap-connection
 ms.custom:
   - devx-track-azurecli
   - sfi-image-nochange
+ai-usage: ai-assisted
 
 #Customer intent: As a security, infrastructure, or SAP BASIS team member, I want to connect my SAP system to Microsoft Sentinel so that I can ingest SAP data into Microsoft Sentinel for enhanced monitoring and threat detection.
 
@@ -336,6 +337,12 @@ At this stage, the system's **Health** status is **Pending**. If the agent is up
 
 :::zone pivot="connection-agentless"
 
+## Watch the connector onboarding video
+
+Use the onboarding video to support the deployment and configuration of the Microsoft Sentinel Solution for SAP - agentless data connector described in this documentation.
+
+> [!VIDEO https://www.youtube.com/embed/PbO1S1E29Yk]
+
 ## Connect your agentless data connector
 
 1. In Microsoft Sentinel, go to the **Configuration > Data connectors** page and locate the **Microsoft Sentinel for SAP - agentless** data connector.
@@ -356,9 +363,6 @@ At this stage, the system's **Health** status is **Pending**. If the agent is up
         - Retrieve the client ID and client secret from the Entra ID app registration to use for authorization on the DCR. 
         
         The SAP admin uses the client ID and client secret information to post to the DCR.              
-
-        > [!NOTE]
-        > If you're a SAP administrator and don't have access to the connector installation, download the [integration package](https://aka.ms/SAPAgentlessPackage) directly. 
 
 1. Scroll down and select **Add SAP client**.
 
@@ -398,39 +402,94 @@ This procedure is only relevant when you want to customize the SAP agentless dat
 
 ### Prerequisites for customizing data connector behavior
 
-- You must have access to the [SAP Integration Suite](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/sap-cloud-integration), with permissions to [edit value mappings](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/working-with-mapping).
-- An SAP integration package, either existing or new, to upload the default value mapping file.
+- You must have access to the [SAP Integration Suite](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/sap-cloud-integration), with permissions to [create and edit value mappings](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/working-with-mapping).
+- A separate SAP integration package, either existing or new, that is dedicated to hosting the value mapping artifact. The Microsoft Sentinel for SAP integration package installed from the marketplace is in configure-only mode, so you can't add it there.
 
-### Download the configuration file and customize settings
+### Create the value mapping artifact and customize settings
 
-1. Download the default [**example-parameters.zip**](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/SAP/Agentless/example-parameters.zip) file, which provides settings that define default behavior and is a good starting point to start customizing.
+Create a value mapping artifact in your SAP Integration Suite tenant and add only the parameters you want to override. Any parameter you don't define keeps its default value.
 
-    Save the **example-parameters.zip** file to a location accessible to your SAP Integration Suite environment.
+You have two options for getting the artifact in place:
 
-1. Use the standard SAP procedures for uploading a Value Mapping file and making changes to customize your data connector settings:
+- **Option 1 (recommended): Import the prebuilt Key Value Map** from the [Microsoft Sentinel for SAP community repository](https://github.com/Azure-Samples/Sentinel-For-SAP-Community/). The repository ships a **Data Collector Customizing (Key Value Map)** pre-populated blueprint for customizing. Download the latest base package from the [releases page](https://github.com/Azure-Samples/Sentinel-For-SAP-Community/releases/latest) and import it into your SAP Integration Suite tenant. Then continue with the customization steps below.
 
-    1. Upload the **example-parameters.zip** file to the SAP Integration Suite as a value mapping artifact. For more information, see the [SAP documentation](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/creating-value-mapping).
-    1. Use one of the following methods to customize your settings:
+    > [!TIP]
+    > The same community repository hosts other Microsoft-provided integration recipes you can adopt alongside the agentless data connector, such as **SAP Ariba**, **SAP S/4HANA Cloud public edition (GROW)**, **SAP User block**, and **SAP Table Reader**. Browse the [integration-artifacts folder](https://github.com/Azure-Samples/Sentinel-For-SAP-Community/tree/main/integration-artifacts) for the full and up-to-date list. Community contributions are welcome.
 
-        - **To customize settings across all SAP systems**, add value mappings for the **global** bi-directional mapping agency.
-        - **To customize settings for specific SAP systems**, add new bi-directional mapping agencies for each SAP system, and then add value mappings for each one. Name your agencies to exactly match the name of the RFC destination that you want to customize, such as myRfc, key, myRfc, value.
+- **Option 2: Create the artifact manually.** In your dedicated package, create a new **Value Mapping** artifact. For more information, see the SAP documentation on [creating a value mapping](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/creating-value-mapping).
 
-        For more information, see [SAP documentation on configuring Value Mappings](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/configuring-value-mappings)
+After the value mapping artifact is in place, customize and activate it:
 
-    Make sure to deploy the artifact when you're done customizing to activate the updated settings.
+1. Add the entries that customize your data connector behavior. Use one of the following approaches:
+
+    - **To customize settings across all SAP systems**, add value mappings under the **global** bi-directional mapping agency, using the parameter name as the source key and your override as the target value.
+    - **To customize settings for specific SAP systems**, create a separate bi-directional mapping agency for each SAP system. Name each agency to exactly match the name of the RFC destination that you want to customize (for example, `myRfc, key, myRfc, value`), and add the parameter entries under that agency.
+
+    For more information, see the SAP documentation on [configuring value mappings](https://help.sap.com/docs/cloud-integration/sap-cloud-integration/configuring-value-mappings).
+
+1. Save and **deploy** the value mapping artifact to activate the updated settings.
+
+:::image type="content" source="./media/deploy-data-connector-agent-container/agentless-value-mapping-artifact.png" alt-text="Screenshot placeholder of the value mapping artifact in SAP Cloud Integration with example agentless data connector parameters." lightbox="./media/deploy-data-connector-agent-container/agentless-value-mapping-artifact.png":::
+
+Use the following table as a guide for what to enter in the value mapping artifact. Add only the rows for the parameters you want to override:
+
+| Field in the value mapping artifact | What to enter |
+|-------------------------------------|---------------|
+| **Agency (source and target)** | `global` for all SAP systems, or the RFC destination name (for example, `myRfc`) to scope the override to a specific SAP system. |
+| **Identifier (source and target)** | `key` as the source identifier and `value` as the target identifier. |
+| **Source value** | The parameter name from the customizable parameters table (for example, `collect-changedocs-logs`). |
+| **Target value** | The override value for that parameter (for example, `false`). |
 
 The following table lists the customizable parameters for the SAP agentless data connector for Microsoft Sentinel:
+
+#### General collection controls
+
+| Parameter | Description | Allowed values | Default value |
+|-----------|-------------|----------------|---------------|
+| **collect-audit-logs** | Determines whether Audit Log data is ingested or not. | **true**: Ingested, **false**: Not ingested | **true** |
+| **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not. | **true**: Ingested, **false**: Not ingested | **true** |
+| **collect-user-master-data-users** | Determines whether User Details data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested, **false**: Not ingested | **true** |
+| **collect-user-master-data-roles** | Determines whether Role Authorization data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested, **false**: Not ingested | **true** |
+| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data population, including users and roles. | Integer, between **1**-**14** | **7** |
+| **offset-in-seconds** | Determines the offset, in seconds, for both the start and end times of a data collection window. Use this parameter to delay data collection by the configured number of seconds. | Integer, between **1**-**600** | **60** |
+
+#### Audit Log parameters
+
+| Parameter | Description | Allowed values | Default value |
+|-----------|-------------|----------------|---------------|
+| **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients, **false**: Not read from all clients | **false** |
+| **max-rows** | Acts as a safeguard that limits the number of Audit Log records processed in a single data collection window. This parameter no longer applies to Change Docs collection. | Integer, between **1**-**1000000** | **150000** |
+
+#### Change Docs parameters
 
 | Parameter | Description | Allowed values | Default value |
 |-----------|-------------|----------------|---------------|
 | **changedocs-object-classes** | List of object classes that are ingested from Change Docs logs. | Comma separated list of object classes | `BANK, CLEARING, IBAN, IDENTITY, KERBEROS, OA2_CLIENT, PCA_BLOCK, PCA_MASTER, PFCG, SECM, SU_USOBT_C, SECURITY_POLICY, STATUS, SU22_USOBT, SU22_USOBX, SUSR_PROF, SU_USOBX_C, USER_CUA` |
-| **collect-audit-logs** | Determines whether Audit Log data is ingested or not. | **true**: Ingested<br>**false**: Not ingested | **true** |
-| **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not. | **true**: Ingested<br>**false**: Not ingested | **true** |
-| **collect-user-master-data** | Determines whether User Master data is ingested or not. | **true**: Ingested<br>**false**: Not ingested | **true** |
-| **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients<br>**false**: Not read from all clients | **false** |
-| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data, including all roles and users. This parameter doesn't affect the ingestion of changes to User Master data. | Integer, between **1**-**14** | **1** |
-| **offset-in-seconds** | Determines the offset, in seconds, for both the start and end times of a data collection window. Use this parameter to delay data collection by the configured number of seconds. | Integer, between **1**-**600** | **60** |
-| **max-rows** | Acts as a safeguard that limits the number of records processed in a single data collection window. This helps prevent performance or memory issues in CPI caused by a sudden increase in event volume. | Integer, between 1–1000000 | 150000 |
+| **max-changedocs-headers** | Acts as a safeguard that limits the number of Change Docs header records (CDHDR records) processed in a single data collection window. Use this parameter to reduce runtime and memory pressure during spikes in header volume. | Integer, between **1**-**1000000** | **1000** |
+| **max-changedocs-details** | Acts as a safeguard that limits the number of Change Docs detail records (CDPOS records) processed in a single data collection window. Use this parameter to tune throughput versus memory usage. | Integer, between **1**-**1000000** | **10000** |
+| **change-docs-batch-size** | Number of Change Docs header records used per detail-fetch call. Reduce this value if RFC calls time out. | Integer, between **1**-**1000** | **1000** |
+
+#### User Details parameters
+
+| Parameter | Description | Allowed values | Default value |
+|-----------|-------------|----------------|---------------|
+| **max-users** | Acts as a safeguard that limits the number of unique users processed in a single collection cycle. | Integer, between **1**-**1000000** | **125** |
+| **user-batch-size** | Number of users processed per batch when retrieving active user data. Reduce this value if RFC calls time out. | Integer, between **1**-**1000** | **125** |
+| **role-profiles-max** | Determines the maximum combined number of profiles and roles that can be emitted for a user before the connector writes a wildcard truncation marker instead of the full list. | Integer, between **1**-**10000** | **1000** |
+| **role-profiles-batch-size** | Number of profiles or roles written per output row. Users with more profiles or roles than this value are split across multiple rows. | Integer, between **1**-**1000** | **14** |
+
+#### Role Authorization parameters
+
+| Parameter | Description | Allowed values | Default value |
+|-----------|-------------|----------------|---------------|
+| **max-roles** | Acts as a safeguard that limits the number of roles processed in a single collection cycle. | Integer, between **1**-**1000000** | **50** |
+| **max-roles-authz-overall** | Acts as a safeguard that limits the cumulative number of role authorization records fetched across all roles in a single collection cycle. | Integer, between **1**-**1000000** | **25000** |
+| **max-roles-authz-individual** | Acts as a safeguard that limits the number of authorization records fetched for an individual role. Roles that exceed this limit are skipped. | Integer, between **1**-**1000000** | **5000** |
+| **role-authz-batch-size** | Number of records fetched per batch when retrieving role authorization data. Reduce this value if RFC calls time out. | Integer, between **1**-**1000** | **100** |
+
+#### Truncation behaviour of the safeguards
+
+When either limit is reached, a marker record is written to the output with a descriptive message indicating which limit was hit, the actual record count, and the collection time window. The two limits produce distinct markers (TRUNCATED_HEADERS and TRUNCATED_DETAILS) so they can be distinguished in Sentinel.
 
 :::zone-end
 

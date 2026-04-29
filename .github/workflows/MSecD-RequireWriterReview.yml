@@ -1,0 +1,32 @@
+name: Require Writer Review
+
+permissions:
+  pull-requests: write
+  contents: read
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, labeled]
+  issue_comment:
+    types:
+      - created
+      - edited
+
+concurrency:
+  group: require-writer-review-${{ github.event.pull_request.number || github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  require-writer-review:
+    # Skip noise from unrelated label events. Only react to labeled events when
+    # the label is one this workflow actually gates on. All other event types
+    # (opened, synchronize, reopened, issue_comment) always proceed.
+    if: >-
+      (github.repository_owner == 'MicrosoftDocs' || github.repository_owner == 'microsoftgraph')
+      && (
+        github.event.action != 'labeled'
+        || github.event.label.name == 'qualifies-for-auto-merge'
+        || github.event.label.name == 'blocked-qualifies-for-auto-merge'
+      )
+    uses: MicrosoftDocs/defender-docs/.github/workflows/MSecD-Shared-RequireWriterReview.yml@workflows-test
+    secrets: inherit
