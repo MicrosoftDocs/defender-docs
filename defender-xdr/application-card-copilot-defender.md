@@ -40,25 +40,19 @@ Microsoft Copilot in Microsoft Defender is intended for enterprise customers, sp
 
 ## Key terms
 
-The following list provides a glossary of key terms related to Microsoft Copilot in Microsoft Defender:
+The following table provides a glossary of key terms related to Microsoft Copilot in Microsoft Defender.
 
-**Advanced hunting:** A query-based threat hunting tool in Microsoft Defender that uses Kusto Query Language (KQL) to let security teams proactively search for threats, suspicious activities, and indicators of compromise across security data. Copilot in Defender can generate KQL queries from natural language requests.
-
-**Guided response:** An AI-generated set of recommended actions provided by Copilot in Defender to help security analysts triage, contain, investigate, and remediate security incidents. Each recommendation includes a rationale explaining why the action is suggested.
-
-**Incident:** A collection of correlated alerts and associated data that together represent a potential or confirmed security attack. Copilot in Defender can summarize incidents, highlight key details, and suggest appropriate response actions.
-
-**KQL (Kusto Query Language):** A read-only query language used in advanced hunting within Microsoft Defender and Microsoft Sentinel. Copilot in Defender can translate natural language questions into KQL queries, reducing the technical barrier for threat hunters.
-
-**Large language model (LLM):** A type of AI model trained on large datasets of text that can understand and generate natural language. Copilot in Defender uses large language models to analyze security data, generate summaries, and provide recommendations.
-
-**MITRE ATT&CK:** A globally recognized knowledge base of adversary tactics and techniques based on real-world observations. Copilot in Defender maps findings from script analysis and threat detection to MITRE ATT&CK techniques to help analysts understand attacker behavior.
-
-**Red teaming:** A security testing practice in which a team simulates real-world attacks against a product to identify failure modes, vulnerabilities, and scenarios outside of intended use. Microsoft conducted red teaming on Copilot in Defender before release.
-
-**Security Compute Units (SCUs):** The provisioned capacity units that measure and manage the compute resources consumed by Microsoft Security Copilot. Access to Copilot in Defender requires provisioned SCU capacity.
-
-**Security Copilot:** The Microsoft Security platform that brings together AI and human expertise to help security teams respond to threats faster and more effectively. Copilot in Defender is the embedded experience of Security Copilot within the Microsoft Defender portal.
+|Term  |Description  |
+|---------|---------|
+|**Advanced hunting**|A query-based threat hunting tool in Microsoft Defender that uses Kusto Query Language (KQL) to let security teams proactively search for threats, suspicious activities, and indicators of compromise across security data. Copilot in Defender can generate KQL queries from natural language requests.|
+|**Guided response**|An AI-generated set of recommended actions provided by Copilot in Defender to help security analysts triage, contain, investigate, and remediate security incidents. Each recommendation includes a rationale explaining why the action is suggested.|
+|**Incident**|A collection of correlated alerts and associated data that together represent a potential or confirmed security attack. Copilot in Defender can summarize incidents, highlight key details, and suggest appropriate response actions.|
+|**KQL (Kusto Query Language)**|A read-only query language used in advanced hunting within Microsoft Defender and Microsoft Sentinel. Copilot in Defender can translate natural language questions into KQL queries, reducing the technical barrier for threat hunters.|
+|**Large language model (LLM)**|A type of AI model trained on large datasets of text that can understand and generate natural language. Copilot in Defender uses large language models to analyze security data, generate summaries, and provide recommendations.|
+|**MITRE ATT&CK**|A globally recognized knowledge base of adversary tactics and techniques based on real-world observations. Copilot in Defender maps findings from script analysis and threat detection to MITRE ATT&CK techniques to help analysts understand attacker behavior.|
+|**Red teaming**|A security testing practice in which a team simulates real-world attacks against a product to identify failure modes, vulnerabilities, and scenarios outside of intended use. Microsoft conducted red teaming on Copilot in Defender before release.|
+|**Security Compute Units (SCUs)**|The provisioned capacity units that measure and manage the compute resources consumed by Microsoft Security Copilot. Access to Copilot in Defender requires provisioned SCU capacity.|
+|**Security Copilot**|The Microsoft Security platform that brings together AI and human expertise to help security teams respond to threats faster and more effectively. Copilot in Defender is the embedded experience of Security Copilot within the Microsoft Defender portal.|
 
 ## Key features or capabilities
 
