@@ -2,7 +2,7 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 07/15/2025
+ms.date: 04/29/2026
 ---
 
 ## Service parameters and limits for VS Code Notebooks
@@ -17,6 +17,7 @@ The following section lists the service parameters and limits for Microsoft Sent
 |Interactive query timeout|2 hours|
 |Interactive session inactivity timeout|20 minutes|
 |Language|Python|
+|Graph query timeout|7.5 minutes|
 |Notebook job timeout| 8 hours|
 |Max concurrent notebook jobs|3, subsequent jobs are queued|
 |Max concurrent users on interactive querying|8-10 on Large pool|

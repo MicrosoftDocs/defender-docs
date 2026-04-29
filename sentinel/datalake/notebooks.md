@@ -7,7 +7,7 @@ ms.author: edbaynash
 ms.topic: how-to  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
-ms.date: 03/26/2026
+ms.date: 04/29/2026
 
 # Customer intent: As a security engineer or data scientist, I want to explore and analyze security data in the Microsoft Sentinel data lake using Jupyter notebooks, so that I can gain insights and build advanced analytics solutions.
 ---
@@ -53,7 +53,7 @@ The Microsoft Sentinel extension for Visual Studio Code (VS Code) is installed f
 1. Select the Extensions Marketplace in the left toolbar.
 1. Search for *Sentinel*.
 1. Select the **Microsoft Sentinel** extension and select **Install**.
-1. After the extension is installed,  the Microsoft Sentinel shield icon appears in the left toolbar.
+1. After the extension is installed, the Microsoft Sentinel icon appears in the left toolbar.
 
   :::image type="content" source="./media/notebooks/install-Sentinel-extension.png" lightbox="./media/notebooks/install-sentinel-extension.png" alt-text="A screenshot showing the extension market place.":::  
 
@@ -68,7 +68,7 @@ After installing the Microsoft Sentinel extension, you can start exploring data 
 
 ### Sign in to the Microsoft Sentinel extension
  
-1. Select the Microsoft Sentinel shield icon in the left toolbar.
+1. Select the Microsoft Sentinel icon in the left toolbar.
 
 1. A dialog appears with the following text **The extension "Microsoft Sentinel" wants to sign in using Microsoft**. Select **Allow**.
 
@@ -149,7 +149,9 @@ The status bar at the bottom of the notebook provides information about the curr
 
 ## Set session timeouts
 
-You can set the session timeout and timeout warnings for interactive notebooks. To change the timeout, select the connection status in the status bar at the bottom of the notebook. Choose from the following options:
+You can set the session timeout and timeout warnings for interactive notebooks. These settings are persisted in the extension settings so they're preserved across sessions.
+
+To change the timeout, select the connection status in the status bar at the bottom of the notebook. Choose from the following options:
 - **Set session timeout period**: Sets the time in minutes before the session times out. The default is 30 minutes.
 - **Reset session timeout period**: Resets the session timeout to the default value of 30 minutes.
 - **Set session timeout warning period**: Sets the time in minutes before the timeout that a warning is displayed that the session is about to time out. The default is 5 minutes.
