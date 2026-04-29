@@ -53,7 +53,7 @@ The Microsoft Sentinel extension for Visual Studio Code (VS Code) is installed f
 1. Select the Extensions Marketplace in the left toolbar.
 1. Search for *Sentinel*.
 1. Select the **Microsoft Sentinel** extension and select **Install**.
-1. After the extension is installed, the Microsoft Sentinel icon appears in the left toolbar.
+1. After the extension is installed, the Microsoft Sentinel ![the sentinel icon](./media/notebook-jobs/sentinel-icon.png) icon appears in the left toolbar.
 
   :::image type="content" source="./media/notebooks/install-Sentinel-extension.png" lightbox="./media/notebooks/install-sentinel-extension.png" alt-text="A screenshot showing the extension market place.":::  
 
@@ -68,7 +68,7 @@ After installing the Microsoft Sentinel extension, you can start exploring data 
 
 ### Sign in to the Microsoft Sentinel extension
  
-1. Select the Microsoft Sentinel icon in the left toolbar.
+1. Select the Microsoft Sentinel ![the sentinel icon](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar.
 
 1. A dialog appears with the following text **The extension "Microsoft Sentinel" wants to sign in using Microsoft**. Select **Allow**.
 
