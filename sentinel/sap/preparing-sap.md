@@ -274,15 +274,6 @@ This procedure has steps both in Microsoft Sentinel and your SAP system, and req
 
     When you get to step **2. Connect SAP System to Microsoft Sentinel / SOC Engineer**, continue with [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agent-container.md).
 
-## Deploy the SAP Data Collector integration flow
-
-Once the Prerequisite checker iflow succeeds for the targeted SAP System, the permanent collection flow can be deployed.
-
-> [!NOTE]
-> Use the Prerequisite checker iflow for every new SAP system that shall be onboarded before registering from Sentinel.
-
-1. The **Data Collector** iflow is included in the package. Configure and deploy this iflow to conclude the preparational setup. See this [connector onboarding video](https://youtu.be/PbO1S1E29Yk?si=naFbtoE2Cotl-lj3&t=958) for guidance.
-
 :::zone-end
 
 
