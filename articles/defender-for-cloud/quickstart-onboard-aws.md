@@ -177,8 +177,8 @@ To connect your AWS to Defender for Cloud by using a native connector:
    > [!NOTE]
    > When onboarding a **management account**, Defender for Cloud uses AWS StackSets and automatically creates connectors for child accounts. Autoprovisioning is enabled for newly discovered accounts.
 
-    > [!NOTE]
-    > If you select **Management account** to create a connector to a management account, the tab for onboarding by using Terraform isn't visible in the UI. Terraform onboarding is still supported. For guidance, see [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/onboarding-your-aws-gcp-environment-to-microsoft-defender-for/ba-p/3798664).
+  > [!NOTE]
+  > If you select **Management account** to create a connector to a management account, the tab for onboarding by using Terraform isn't visible in the UI. Terraform onboarding is still supported. For guidance, see [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/onboarding-your-aws-gcp-environment-to-microsoft-defender-for/ba-p/3798664).
 
 1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on AWS. 
     1. For management account: 
