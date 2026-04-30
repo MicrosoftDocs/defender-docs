@@ -69,7 +69,7 @@ The following table lists the features provided by Defender for Containers for t
 | Aspect | Details |
 |--|--|
 | Registries and images | **Supported**<br> * Container images in Docker V2 format  <br> * Images with [Open Container Initiative (OCI)](https://github.com/opencontainers/image-spec/blob/main/spec.md) image format specification <br>  **Unsupported**<br> * Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images is currently unsupported <br> * Public repositories <br> * Manifest lists <br>|
-| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.21<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-24.04 <br> * Fedora 31-37<br> * Azure Linux 1-3<br> * Windows server 2016, 2019, 2022<br> * Chainguard OS/Wolfi OS <br> * Alma Linux 8.4 or later <br> * Rocky Linux 8.7 or later<br> * Minimus <br> * Photon OS 2.0-5.0 |
+| Operating systems | **Supported** <br> * Alpine Linux 3.12-3.22<br> * Red Hat Enterprise Linux 6-9 <br> * CentOS 6-9 (CentOS is End Of Service as of June 30, 2024. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).)<br> * Oracle Linux 6-9 <br> * Amazon Linux 1, 2 <br> * openSUSE Leap, openSUSE Tumbleweed <br> * SUSE Enterprise Linux 11-15 <br> * Debian GNU/Linux 7-12 <br> * Google Distroless (based on Debian GNU/Linux 7-12)<br> * Ubuntu 12.04-24.04 <br> * Fedora 31-37<br> * Azure Linux 1-3<br> * Windows server 2016, 2019, 2022<br> * Chainguard OS/Wolfi OS <br> * Alma Linux 8.4 or later <br> * Rocky Linux 8.7 or later<br> * Minimus <br> * Photon OS 2.0-5.0 |
 | Language specific packages <br><br>  | **Supported** <br> * Python <br> * Node.js <br> * PHP <br> * Ruby <br> * Rust <br> * .NET <br> * Java<br> * Go |
 
 ## Runtime protection features
@@ -133,7 +133,7 @@ The following table lists the features provided by Defender for Containers for t
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Plans | Clouds availability |
 |--|--|--|--|--|--|--|--|
 | Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | GKE | Preview - currently supports audit logs & process events | Preview - currently supports audit logs | Requires **Defender sensor** | **Defender for Containers** | GCP |
-| Anti-malware | Detection of malware | GKE | Preview | - | Requires **Defender sensor via Helm** | **Defender for Conatiners** | Commercial clouds |
+| Anti-malware | Detection of malware | GKE | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | Commercial clouds |
 | Binary drift detection | Detects binary of runtime container from container image | GKE | GA | - | Requires **Defender sensor** | **Defender for Containers** | GCP |
 | Binary drift blocking | Blocks binary drift in runtime containers | GKE | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | GCP |
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | GKE | GA | GA | Enabled with plan | **Defender for Containers** | GCP |
