@@ -139,6 +139,11 @@ To learn more about the triage tool, see [Triage tool collection](/azure/senti
 
 Installing, configuring, and using the triage tool carries no cost, provided you're onboarded to the required products and services. You can get access to triage at no additional charge when Microsoft Defender, Microsoft Defender for Endpoint, or Microsoft Sentinel is set up in the Microsoft Defender portal. 
 
+##### Microsoft Sentinel MCP graph tool  
+To learn more about the graph tool, see [Graph tool collection](/azure/sentinel/datalake/sentinel-mcp-graph-tool). 
+
+Installing and configuring the Microsoft Sentinel MCP graph tools doesn't incur any cost. Charges apply only when the tools are used to query the graph, which triggers the graph meter.
+
 ### Understand your Microsoft Sentinel bill
 
 Billable meters are the individual components of your service that appear on your bill and are shown in Microsoft Cost Management. At the end of your billing cycle, the charges for each meter are summed. Your bill or invoice shows a section for all Microsoft Sentinel costs. There's a separate line item for each meter.
