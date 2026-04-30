@@ -86,7 +86,7 @@ Microsoft Defender for Cloud is now integrated into the Microsoft Defender porta
 
 This integration enables security teams to monitor, prioritize, and respond to risks across their entire environment from a single location.
 
-#### Individual recommendations for Defender for Cloud**
+#### Individual recommendations for Defender for Cloud
 
 **Secure score impact:**
 
