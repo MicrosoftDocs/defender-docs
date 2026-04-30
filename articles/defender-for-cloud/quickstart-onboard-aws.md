@@ -124,40 +124,45 @@ To connect your AWS to Defender for Cloud by using a native connector:
 
     :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-environment-settings.png" alt-text="Screenshot that shows connecting an AWS account to an Azure subscription." lightbox="media/quickstart-onboard-aws/add-aws-account-environment-settings.png":::
 
-1. Enter the AWS account details, including the Azure region where the connector resource will be created.
+1. Enter a **Name** for your connector.
+
+1. For the **Onboard** field:
+    - Select **Management account** to create a connector to a management account. Auto provisioning mechanism will create connectors for each member account discovered under the specified management account and newly created accounts, enabling Defender for Cloud to operate. 
+    - Select **Single account** to create a connector to a single account. 
+
+1. Select the regions in which the customer has resources that should be protected by Defender for Cloud is rolled out .. All regions are selected by default.
+
+1. Select the **Subscription** in which the security connector will be created.
+
+1. Select the **resource group** in which the security connector will be created.
+
+1. Select the **Location** where the security connector will be created. 
+
+1. Select an Interval to scan the AWS environment every 4, 6, 12, or 24 hours. Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. 
+
+1. Enter your AWS account ID 
+
+1. **Management account only:** If needed, enter accounts ID to exclude, separated by commas (“,”).
 
     :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-details.png" alt-text="Screenshot that shows the tab for entering account details for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-details.png":::
 
-   1. Select Management account to create a connector to a management account. Auto provisioning mechanism will create connectors for each member account discovered under the specified management account and newly created accounts, enabling Defender for Cloud to operate. 
-   1. Select Single account to create a connector to a single account. 
-   1. AWS regions - the regions in which the customer has resources that should be protected by Defender for Cloud is rolled out .. All regions are selected by default. 
-   1. Subscription – select an Azure subscription in which the security connector will be created. 
-   1. Resource group - select a resource group in which the security connector will be created. 
-   1. Location – select the location where the security connector will be created. 
-   1. Scan interval - Select an Interval to scan the AWS environment every 4, 6, 12, or 24 hours. Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. 
-   1. AWS account ID – Insert AWS account ID  
-   1. Excluded accounts (optional) – appears only when the Management account is selected. Insert accounts ID to exclude, separated by commas (“,”) 
-   1. add screenshot
-
 1. Select **Next: Select plans**.
 
-1. choose which Defender for Cloud plans and capabilities you want to enable. Each plan has its own requirements for permissions and might incur charges.  
+1. Choose the Defender plans you want to enable. 
+
+   > [!NOTE]
+   > Each plan might incur charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
 
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-plans-selection.png" alt-text="Screenshot showing the plan selection step for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-plans-selection.png":::
 
-   Each plan might incur charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
-
    > [!IMPORTANT]
-   > To present up-to-date recommendations, Defender CSPM queries AWS resource APIs several times a day. These read-only API calls incur no AWS charges. However, if you enable read-event logging, CloudTrail might record them. Exporting this data to external SIEM systems might increase ingestion costs. If required, filter read-only calls from:
+   > To present the current status of your recommendations, the Microsoft Defender Cloud Security Posture Management plan queries the AWS resource APIs several times a day. These read-only API calls incur no charges, but they're registered in CloudTrail if you enable a trail for read events. 
    >
-   > `arn:aws:iam::<accountId>:role/CspmMonitorAws`
+   > AWS's documentation explains that there are no extra charges for keeping one trail. If you're exporting the data out of AWS (for example, to an external SIEM system), this increased volume of calls might also increase ingestion costs. In such cases, we recommend filtering out the read-only calls from the Defender for Cloud user or ARN role: `arn:aws:iam::[accountId]:role/CspmMonitorAws` (This is the default role name. Confirm the role name configured on your account.) 
 
-change to:
-To present the current status of your recommendations, the Microsoft Defender Cloud Security Posture Management plan queries the AWS resource APIs several times a day. These read-only API calls incur no charges, but they're registered in CloudTrail if you enable a trail for read events. 
+1. Select **Configure access**.
 
-AWS's documentation explains that there are no extra charges for keeping one trail. If you're exporting the data out of AWS (for example, to an external SIEM system), this increased volume of calls might also increase ingestion costs. In such cases, we recommend filtering out the read-only calls from the Defender for Cloud user or ARN role: arn:aws:iam::[accountId]:role/CspmMonitorAws. (This is the default role name. Confirm the role name configured on your account.) 
-
-1. Select **Configure access**, and choose a deployment type:
+1. Select the permissions type:
 
     - **Default access**: Grants permissions required for current and future capabilities.
     - **Least privilege access**: Grants only the permissions required today. You might receive notifications if additional access is needed later.
@@ -166,8 +171,6 @@ AWS's documentation explains that there are no extra charges for keeping one t
 
     - **AWS CloudFormation**
     - **Terraform**.
-
-new image
 
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot showing deployment method configuration." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
 
