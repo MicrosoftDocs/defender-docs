@@ -1,7 +1,7 @@
 ---
 title: Respond to Defender open-source database alerts
 description: Configure Microsoft Defender for open-source relational databases to detect potential security threats.
-ms.date: 07/31/2025
+ms.date: 04/20/2026
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
@@ -15,7 +15,6 @@ Microsoft Defender for Cloud detects anomalous activities indicating unusual and
 
 - [Azure Database for PostgreSQL](/azure/postgresql/)
 - [Azure Database for MySQL](/azure/mysql/)
-- [Azure Database for MariaDB](/azure/mariadb/)
 
 
 And for RDS instances on AWS (Preview):
