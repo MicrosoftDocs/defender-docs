@@ -30,11 +30,8 @@ Create policies that automatically flag and deactivate apps whose data usage mat
 - **Data usage trend**: The percentage increase in the total number of downloads and uploads compared to the previous day reaches your specified threshold
 
 Monitoring unusual data usage can help detect:
-
 - Sudden spikes in application activity.
-
 - Potential misuse of applications accessing Microsoft 365 data.
-
 - Applications that might be transferring unusually large volumes of data.
 
 ## Next step
