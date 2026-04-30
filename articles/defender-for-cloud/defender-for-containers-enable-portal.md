@@ -15,7 +15,11 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 ## Prerequisites
 
-- An AKS cluster. See the [support matrix](support-matrix-defender-for-containers.md).
+Before you begin, make sure that: 
+
+- You have an AKS cluster. See the [support matrix](support-matrix-defender-for-containers.md).
+
+- You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 
 ## Enable the Defender for Containers plan
 
@@ -73,9 +77,15 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 ## Prerequisites
 
-- An [AWS project onboarded to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
+Before you begin, make sure that: 
 
-- One or more Amazon EKS clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
+- You have an [AWS project onboarded to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
+
+- You have one or more Amazon EKS clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
+
+- You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
+
+- You reviewed the required [cloud IAM permissions](containers-permissions.md). 
 
 ## Enable the Defender for Containers plan
 
@@ -106,9 +116,6 @@ This article explains how to enable the Microsoft Defender for Containers plan i
     
     - **Kubernetes API access**  
       Allows Defender for Cloud to access the Kubernetes API server for cluster inventory, configuration analysis, and capabilities that rely on Kubernetes metadata and state.
-
-      > [!IMPORTANT]  
-      > If you enable **Kubernetes API access**, the Kubernetes API server must be publicly accessible.
     
     - **Registry access** 
       Enables agentless vulnerability assessment for container images in Amazon ECR. Images pushed to ECR are scanned automatically (typically within 24 hours).
@@ -148,9 +155,15 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 ## Prerequisites
 
-- A [GCP project onboarded to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+Before you begin, make sure that:
 
-- One or more Google Kubernetes Engine (GKE) clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
+- You have a [GCP project onboarded to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+
+- You have oe or more Google Kubernetes Engine (GKE) clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
+
+- You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
+
+- You reviewed the required [cloud IAM permissions](containers-permissions.md). 
 
 ## Enable the Defender for Containers plan
 
@@ -222,11 +235,13 @@ This article explains how to enable the Microsoft Defender for Containers plan i
 
 ## Prerequisites
 
-To enable Defender for Containers on an Azure Arc-enabled Kubernetes cluster, make sure that it is:
+Before you begin, make sure that:
 
-- [Connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+- Your cluster is:
+    - [Connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+    - Supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
 
-- Supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
+- You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 
 ## Enable the Defender for Containers plan
 
