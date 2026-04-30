@@ -12,7 +12,7 @@ ms.collection:
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-ms.date: 04/28/2026
+ms.date: 04/30/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -114,7 +114,7 @@ The following Linux server distributions are supported:
 > Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions. The minimal requirement for the kernel version is `3.10.0-327` or later.
 > 
 > Microsoft Defender for Endpoint on Linux **can be installed and may function** on customized operating systems that meet minimal kernel requirements and are derived from known, standard, vendor‑provided Linux distributions that Microsoft supports. Customers are free to onboard and run Defender for Endpoint on such environments; Microsoft does not block onboarding or execution.
-> However, these customized environments aren't part of Microsoft’s validated or maintained support baseline. As a result, they are treated as custom OS configurations from a support perspective.
+> However, these customized environments aren't part of Microsoft's validated or maintained support baseline. As a result, they are treated as custom OS configurations from a support perspective.
 > Customers are expected to validate Defender for Endpoint within these custom environments and, if needed, reproduce issues on a supported, standard (unmodified) Linux distribution. If an issue can't be reproduced on a supported standard base distribution, Microsoft might not be able to proceed with further investigation or remediation.
 > For full support coverage and a predictable support experience, customers are recommended to run Defender for Endpoint on a supported, vendor-provided Linux distribution as outlined in the official prerequisites.
 
