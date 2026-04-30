@@ -134,9 +134,9 @@ The GitHub issue is automatically generated on the code repo of origin, with all
 
 From the recommendation view, you can explicitly generate a GitHub issue to track remediation work.
 
-1.	Go to the **Remediation Insights** tab and view the code-to-runtime diagram. The diagram maps your running container to the container image in the code repository and to the code repository of origin in GitHub.
+1. Go to the **Remediation Insights** tab and view the code-to-runtime diagram. The diagram maps your running container to the container image in the code repository and to the code repository of origin in GitHub.
 
-    :::image type="content" source="media/github-advanced-security-deploy/code-runtime-diagram.png" alt-text="Screenshot of Remediation Insights showing code-to-runtime diagram with risk levels, impacted assets, and Take Action menu open." lightbox="media/github-advanced-security-deploy/code-runtime-diagram.png":::
+    :::image type="content" source="media/github-advanced-security-deploy/code-runtime-flow-diagram.png" alt-text="Screenshot of Remediation Insights showing code-to-runtime diagram with risk levels and Take Action menu open on the Runtime box." lightbox="media/github-advanced-security-deploy/code-runtime-flow-diagram.png":::
 
 1. On the **Remediation Insights** tab review, the affected **Runtime** box.
 1. **Validate whether a GitHub issue already exists**. If a GitHub issue already exists, a GitHub icon is displayed on the box. Hover over the icon to view issue details.
