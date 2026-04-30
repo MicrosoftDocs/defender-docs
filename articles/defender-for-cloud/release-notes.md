@@ -39,7 +39,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
-### General availability: Individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations
+### General availability: Individual recommendations for Defender for Cloud in Azure portal and deprecation of legacy grouped recommendations
 
 April 30, 2026
 
