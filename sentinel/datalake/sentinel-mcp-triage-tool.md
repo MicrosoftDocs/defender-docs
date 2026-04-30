@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the triage collection
 author: poliveria
 ms.topic: how-to
-ms.date: 12/01/2025
+ms.date: 04/40/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -12,10 +12,7 @@ ms.subservice: sentinel-platform
 #customer intent: As a security analyst, I want to know the different tools available to triage incidents and hunt for threats 
 ---
 
-# Prioritize incidents and hunt for threats with triage collection (preview)
-
-> [!IMPORTANT]
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Prioritize incidents and hunt for threats with triage collection
 
 The triage collection in the Microsoft Sentinel Model Context Protocol (MCP) server integrates your AI models with APIs that support incident triage and hunting. This integration lets you prioritize incidents quickly and hunt over your own data easily, reducing mean time to resolution, risk exposure, and dwell time.
 
