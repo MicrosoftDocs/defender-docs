@@ -43,7 +43,7 @@ Before you begin configuring Windows event collection, run a PowerShell script t
 
 1. Review the report and make any necessary adjustments before configuring Windows event collection.
 
-## Configure Defender for Identity to collect Windows events automatically (Preview)
+## Configure Defender for Identity to collect Windows events automatically
 
 > [!NOTE]
 > Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x.
