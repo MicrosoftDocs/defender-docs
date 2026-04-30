@@ -164,9 +164,11 @@ The **Protection & posture insights** report is an on-demand, tenant-specific re
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Protection & posture insights**, and then select **Generate** to create the report. After the report is generated, the following actions are available:
 
 - **Download report**: Download the report as an HTML file.
-- **Open report**: Open the report in the Defender portal. The report is long, so you need to scroll to see all sections. **Print as PDF** is available to save or print the report.
+- **Open report**: Open the report in the Defender portal. The report is long, so scroll to view all sections, or alternatively use the navigation bar to jump directly to areas of interest within the report. **Print as PDF** is available to save or print the report.
 
 :::image type="content" source="media/protection-posture-insights-report-widget-post-generate.png" alt-text="Screenshot of the Protection & posture insights report widget after report generation with Download report and Open report available." lightbox="media/protection-posture-insights-report-widget-post-generate.png":::
+
+The report includes data from the previous 30 days and can be generated once every 24 hours. If report generation fails, it can be retried after 60 minutes.
 
 ### What the report contains
 
