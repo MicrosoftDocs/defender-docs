@@ -21,9 +21,6 @@ Microsoft Sentinel's Logstash output plugin supports pipeline transformations an
 
 In this article, learn how to set up the Logstash plugin to stream data into Log Analytics or Microsoft Sentinel using DCRs, with full control over the output schema.
 
-> [!NOTE]
-> A [previous version of the Logstash plugin](connect-logstash) allows you to connect data sources through Logstash via the Data Collection API.
-
 With the plugin, you can:
 
 - Control the configuration of the column names and types.
