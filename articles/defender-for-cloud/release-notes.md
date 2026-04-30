@@ -50,7 +50,7 @@ Historical values have been recalculated to align with this definition, so you m
 
 For more information, see [Cloud secure score](secure-score-security-controls.md?pivots=defender-portal).
 
-## General availability of Defender for Cloud integration into the Defender portal
+### General availability of Defender for Cloud integration into the Defender portal
 
 April 30, 2026
 
@@ -69,9 +69,7 @@ Microsoft Defender for Cloud is now integrated into the Microsoft Defender porta
 
 This integration enables security teams to monitor, prioritize, and respond to risks across their entire environment from a single location.
 
-**Individual recommendations for Defender for Cloud**
-
-Individual recommendations for Defender for Cloud that were previously represented as grouped recommendations are now generally available. These individual recommendations provide granular, context-aware findings that improve risk-based secure score calculations and enable more precise prioritization and governance.
+#### Individual recommendations for Defender for Cloud**
 
 **Secure score impact:**
 
