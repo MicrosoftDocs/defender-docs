@@ -672,8 +672,8 @@
           href: datalake/troubleshoot-sentinel-mcp.md
         - name: Billing, limits, and availability
           href: datalake/sentinel-mcp-billing.md
-        - name: Responsible AI FAQs
-          href: datalake/sentinel-mcp-responsible-ai-faq.md
+        - name: Application card for Microsoft Sentinel MCP server
+          href: datalake/sentinel-mcp-application-card.md
     - name: KQL for data lake exploration
       items:
         - name: Overview
