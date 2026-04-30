@@ -116,8 +116,6 @@ items:
     href: password-protection.md
   - name: Active Directory domain security
     href: investigate-domain.md
-  - name: View service accounts
-    href: service-account-discovery.md
   - name: Security posture assessments
     items:
     - name: Overview
@@ -156,6 +154,8 @@ items:
     href: /defender-xdr/investigate-users?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
   - name: Investigate a non-human identity
     href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+  - name: View service accounts
+    href: service-account-discovery.md
   - name: Investigate security alerts
     href: investigate-security-alerts.md
 - name: Respond
