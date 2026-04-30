@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
 
-# Install a Microsoft Defender for Identity sensor
+# Install a Microsoft Defender for Identity sensor v2.x
 
 This article describes how to install a Microsoft Defender for Identity sensor v2.x, including a standalone sensor. We recommend installing the sensor from the Defender portal. 
 
