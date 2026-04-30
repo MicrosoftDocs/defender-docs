@@ -97,12 +97,12 @@ To create a scanning campaign, you must work at the GitHub organization level. T
 1. This campaign help prioritize GHAS findings that belong to code that is truly deployed and running.
 1. Select **Runtime Risks** filters for the campaign.
 
-    :::image type="content" source="media/github-advanced-security-deploy/select-filters.png" alt-text="Screenshot of GitHub code scanning campaign creation with a filter bar, Filter button, and a tooltip about filtering by artifact metadata.":::
+    :::image type="content" source="media/github-advanced-security-deploy/select-filters.png" alt-text="Screenshot of GitHub code scanning campaign creation with a filter bar, Filter button, and a tooltip about filtering by artifact metadata."lightbox="media/github-advanced-security-deploy/select-filters.png":::
 
     :::image type="content" source="media/github-advanced-security-deploy/advanced-filters.png" alt-text="Screenshot of advanced filters dialog in GitHub campaign creation with Runtime Risk filter and selectable risk factors menu open." lightbox="media/github-advanced-security-deploy/advanced-filters.png":::
 1. Select **Save** > **Publish as campaign**. Enter the required information and then publish the campaign.
 1. Track campaign advancement.
-    :::image type="content" source="media/github-advanced-security-deploy/test-campaign.png" alt-text="Screenshot of GitHub campaign page showing overdue status, campaign progress bar, critical alerts list, and filter options.":::
+    :::image type="content" source="media/github-advanced-security-deploy/test-campaign.png" alt-text="Screenshot of GitHub campaign page showing overdue status, campaign progress bar, critical alerts list, and filter options."lightbox="media/github-advanced-security-deploy/test-campaign.png":::
 
 ### Step 4: Recommendations mobilization
 
@@ -112,9 +112,9 @@ Use running Containers VA recommendations code-to-runtime functionality and corr
 1. Search for the name of the container that you created from your code repo.
 1. Open one of the **Update software** recommendations; the recommendation name begins with Update
 1. Select the **Findings** tab
-   Security alerts appear as part of the recommendation evaluation flow. 
+   Security alerts appear as part of the recommendation evaluation flow.
    These alerts provide indications about GitHub Advanced security findings that already known to  the engineering.
-   Note that some CVE IDs have a View on GitHub link in the Related GitHub Alerts column. 
+   Note that some CVE IDs have a View on GitHub link in the Related GitHub Alerts column.
 
     :::image type="content" source="media/github-advanced-security-deploy/cve-findings.png" alt-text="Screenshot of Defender for Cloud Findings tab showing CVE-2024-21409 alerts, fix status, CVSS scores, and GitHub alert details popup." lightbox="media/github-advanced-security-deploy/cve-findings.png":::
 
@@ -148,12 +148,12 @@ From the recommendation view, you can explicitly generate a GitHub issue to trac
 
 > [!NOTE]
 > If the **Generate GitHub** issue option isn't available, required GitHub or repository permissions might be missing. Contact your GitHub or repository administrator to request access.
-   
-:::image type="content" source="media/github-advanced-security-deploy/update-github-admin.png" alt-text="Screenshot of a GitHub issue showing security vulnerabilities for bysybox with labels like Defender for Cloud, dependencies, and security." lightbox="media/github-advanced-security-deploy/update-github-admin.png":::
+
+   :::image type="content" source="media/github-advanced-security-deploy/github-issue.png" alt-text="Screenshot of GitHub issues list showing open issues for dependencies with labels like Defender for Cloud and security." lightbox="media/github-advanced-security-deploy/github-issue.png":::
 
 1. **Track ownership and status updates** - changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress from **Recommendations** view.
 
-    :::image type="content" source="media/github-advanced-security-deploy/recommendations-page.jpg" alt-text="Screenshot of Microsoft Defender for Cloud Recommendations page showing high-risk issues with GitHub issue details popup." lightbox="media/github-advanced-security-deploy/recommendations-page.jpg":::
+    :::image type="content" source="media/github-advanced-security-deploy/recommendations-pane.png" alt-text="Screenshot of Microsoft Defender for Cloud Recommendations page showing high-risk issues with GitHub issue details popup." lightbox="media/github-advanced-security-deploy/recommendations-pane.png":::
 
 ## Make agentic fixes
 

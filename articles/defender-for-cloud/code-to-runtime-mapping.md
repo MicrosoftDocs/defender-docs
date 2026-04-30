@@ -15,7 +15,7 @@ Modern cloud applications move through stages that might include source code, pi
 
 Code to runtime gives you end-to-end visibility across the software development lifecycle (SDLC). This feature helps you find the origin of an issue, assess its blast radius, and fix the issue at the source.
 
-Before continueing, take a look at the [prerequisites](container-image-mapping.md).
+Before continuing, take a look at the [prerequisites](container-image-mapping.md).
 
 ## Where you see code to runtime
 
