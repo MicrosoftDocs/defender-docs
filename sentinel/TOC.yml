@@ -717,6 +717,9 @@
         - name: Create and manage notebook jobs
           href: datalake/notebook-jobs.md
           displayName: data lake
+        - name: Troubleshoot notebooks
+          href: datalake/notebooks-troubleshooting.md
+          displayName: data lake
         - name: Notebook examples for data lake exploration
           href: datalake/notebook-examples.md
     - name: Microsoft Sentinel data lake service limits

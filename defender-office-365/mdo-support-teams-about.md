@@ -47,8 +47,6 @@ Microsoft Defender for Office 365 Plan 1 provides the following extra Teams prot
 
 - **Report Teams items**: Users can report Teams items (messages or calls) as malicious or not malicious. Depending on the reported items settings in the organization, reported items go to the specified reporting mailbox, to Microsoft, or both. For more information, see [User reported settings in Teams](submissions-teams.md) and the following video:
 
-  [!VIDEO https://www.youtube.com/watch?v=ungHDS4XG4I]
-
 Microsoft 365 E5 and Defender for Office 365 Plan 2 extend Teams protection with a set of extra capabilities designed to disrupt the attack chain:
 
 - **Remove users from Teams chat**: To remediate malicious attacks, you can remove users from teams chats directly from the [Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
