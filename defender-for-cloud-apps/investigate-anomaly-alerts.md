@@ -23,12 +23,12 @@ To explain and make it easier to map the relationship between Defender for Cloud
 This guide provides information about investigating and remediating Defender for Cloud Apps alerts in the following categories.
 
 > [!div class="checklist"]
-> > - [Initial Access](#initial-access-alerts)
+- [Initial Access](#initial-access-alerts)
 - [Persistence](#persistence-alerts)
 - [Privilege Escalation](#privilege-escalation-alerts)
 - [Credential Access](#credential-access-alerts)
 - [Collection](#collection-alerts)
-> - [Exfiltration](#exfiltration-alerts)
+- [Exfiltration](#exfiltration-alerts)
 
 ## Security alert classifications
 
