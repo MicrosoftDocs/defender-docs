@@ -47,6 +47,8 @@ Behaviors currently support low-fidelity, Defender for Cloud Apps and Defender f
 |**Suspicious Power BI report sharing**  |Suspicious Power BI report sharing   |SuspiciousPowerBiReportSharing|
 |**Unusual addition of credentials to an OAuth app**  |Unusual addition of credentials to an OAuth app  |UnusualAdditionOfCredentialsToAnOauthApp|
 
+> [!NOTE]
+> *"Multiple VM creation activities"* and *"Multiple delete VM activities"* are scheduled to be deprecated during **May 2026**. After deprecation, these behaviors will stop being generated and won't be available for hunting, custom detections, or correlation in Microsoft Defender XDR. Records generated before the deprecation date will be retained according to the standard data retention policy.
 
 ## Defender for Cloud Apps' transition from alerts to behaviors
 
