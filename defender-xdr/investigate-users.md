@@ -40,7 +40,7 @@ From the **Overview** page, use the **Actions** menu to trigger [remediation act
 - Require the user to sign in again or force a password reset
 - View Microsoft Entra account settings, related governance, the user's owned files, or shared files
 
-:::image type="content" source="media/investigate-users/identity-actions.png" alt-text="Screenshot of the identity page with the identity actions menu showing.":::
+:::image type="content" source="media/investigate-users/identity-actions.png" alt-text="Screenshot of the identity page with the identity actions menu showing." lightbox="media/investigate-users/identity-actions.png":::
 
 ## Overview tab
 
@@ -77,7 +77,7 @@ Other details appear depending on enabled services and features. For example:
 
 The **Incidents and alerts** tab lists all alerts and incidents involving the identity within the supported retention window. See the incidents page or the alerts page for a detailed description of the specific item.
 
-:::image type="content" source="media/investigate-users/identity-incidents-and-alerts.png" alt-text="Screenshot of the Incidents and alerts tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/identity-incidents-and-alerts.png" alt-text="Screenshot of the Incidents and alerts tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-incidents-and-alerts.png":::
 
 ## Observed in organization tab
 
@@ -120,7 +120,7 @@ The **Timeline** tab provides a chronological view of identity related activity 
 
 The timeline helps reconstruct sequences of activity and correlate events during investigations.
 
-:::image type="content" source="media/investigate-users/identity-timeline.png" alt-text="Screenshot of the Timeline tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/identity-timeline.png" alt-text="Screenshot of the Timeline tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-timeline.png":::
 
 ### Types of activities that appear in the timeline
 
@@ -166,7 +166,7 @@ The following information is displayed in the timeline:
 
 The **Security recommendations** tab displays identity related posture assessments identified through Identity Security Posture Management (ISPM). These recommendations highlight misconfigurations or risky settings across the identity’s accounts, and selecting a recommendation opens the details in Microsoft Secure Score for remediation guidance.
 
-:::image type="content" source="media/investigate-users/identity-posture-recommendations.png" alt-text="Screenshot of the Security recommendations tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/identity-posture-recommendations.png" alt-text="Screenshot of the Security recommendations tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-posture-recommendations.png":::
 
 ## Attack paths tab
 
@@ -213,7 +213,7 @@ For more information about the hunting graph and its features, see [Hunt for thr
 
 When Microsoft Sentinel is connected to the Defender portal, this tab shows a Microsoft Sentinel timeline for the identity. The timeline includes alerts associated with the identity, including alerts also shown on the **Incidents and alerts** tab and alerts created by Microsoft Sentinel. It also shows bookmarked hunts that reference the identity, activity events from external data sources, and unusual behaviors identified by Microsoft Sentinel anomaly rules.
 
-:::image type="content" source="media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of the Microsoft Sentinel events tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of the Microsoft Sentinel events tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/user-incident-sentinel-events.png":::
 
 ### Insights
 
@@ -254,7 +254,7 @@ Insights are based on the following data sources:
 
 To further explore any insight, select the link accompanying the insight. The link opens the **Advanced hunting** page with the query underlying the insight and its raw results. You can modify the query or drill down into the results to expand your investigation.
 
-:::image type="content" source="media/investigate-users/insights-advanced-hunting.png" alt-text="Screenshot of the Advanced hunting screen with insight query.":::
+:::image type="content" source="media/investigate-users/insights-advanced-hunting.png" alt-text="Screenshot of the Advanced hunting screen with insight query." lightbox="media/investigate-users/insights-advanced-hunting.png":::
 
 ## Next steps
 
