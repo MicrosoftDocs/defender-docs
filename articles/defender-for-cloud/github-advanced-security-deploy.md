@@ -111,12 +111,12 @@ Use running Containers VA recommendations code-to-runtime functionality and corr
 1. In the Defender for Cloud portal, go to the **Recommendations** tab.
 1. Search for the name of the container that you created from your code repo.
 1. Open one of the **Update software** recommendations; the recommendation name begins with Update
-1. Select the **Findings** tab
+1. Select the **Associated CVEs** tab
    Security alerts appear as part of the recommendation evaluation flow.
    These alerts provide indications about GitHub Advanced security findings that already known to  the engineering.
    Note that some CVE IDs have a View on GitHub link in the Related GitHub Alerts column.
 
-    :::image type="content" source="media/github-advanced-security-deploy/cve-findings.png" alt-text="Screenshot of Defender for Cloud Findings tab showing CVE-2024-21409 alerts, fix status, CVSS scores, and GitHub alert details popup." lightbox="media/github-advanced-security-deploy/cve-findings.png":::
+    :::image type="content" source="media/github-advanced-security-deploy/findings.png" alt-text="Screenshot of Defender for Cloud Findings tab showing CVE-2024-21409 alerts, fix status, CVSS scores, and GitHub alert details popup." lightbox="media/github-advanced-security-deploy/findings.png":::
 
 Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub, you must have access permissions to the relevant GitHub repository. If you don’t have access permissions, you can always copy the link for subsequent usage or contact your GitHub administrator.)
 

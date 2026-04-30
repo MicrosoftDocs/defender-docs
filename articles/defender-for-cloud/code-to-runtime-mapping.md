@@ -4,7 +4,7 @@ description: Learn how to use code to runtime visibility to trace security issue
 ms.date: 04/23/2026
 ms.topic: how-to
 ms.author: dlanger
-author: DebLanger
+author: dlanger
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to trace runtime security issues back to their source code origin and understand the blast radius to fix issues effectively at the source.
 ---
@@ -58,7 +58,7 @@ For any recommendation supported by code to runtime, Defender correlates data ac
 - Fixing only at runtime can cause the issue to reappear during the next deployment.
 - Fixing at the source prevents recurring regressions.
 - Understanding impact helps you plan rollouts and coordinate work.
-- Helps you identify the owner for the fix
+- Helps you identify the owner for the fix.
 
 ## Walk the SDLC chain from runtime back to source
 
