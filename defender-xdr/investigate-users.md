@@ -184,7 +184,7 @@ The **Identity Explorer** tab uses the [hunting graph](advanced-hunting-graph.md
 
 Use the Identity Explorer to discover lateral movement paths, privilege escalation routes, and credential-access risks associated with the identity.
 
-:::image type="content" source="media/hunting-graph-identity/hunting-graph.png" alt-text="Screenshot of the Identity Explorer tab showing an identity scenario graph with nodes and relationship edges." lightbox="media/hunting-graph-identity/hunting-graph.png":::
+:::image type="content" source="media/hunting-graph-identity/hunting-graph.png" alt-text="Screenshot of the Identity Explorer tab on the Identity page showing an entity relationship map with identity nodes and connections." lightbox="media/hunting-graph-identity/hunting-graph.png":::
 
 ### Search with predefined scenarios
 
