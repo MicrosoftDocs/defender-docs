@@ -12,7 +12,8 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 04/02/2026
+ms.date: 04/27/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -321,6 +322,9 @@ In the **Release email to recipient inboxes** flyout that opens, configure the f
 When you're finished on the **Release email to recipient inboxes** flyout, select **Release message**.
 
 Back on the **Email** tab, the **Release status** value of the message is **Released**.
+
+> [!NOTE]
+> Releasing a message from quarantine re-delivers it to the recipient's mailbox rather than restoring it in place. As a result, the message appears in Outlook with the re-delivery time as the delivery timestamp instead of the original delivery time. The original send date is preserved in the message headers.
 
 #### Approve or deny release requests from users for quarantined email
 
