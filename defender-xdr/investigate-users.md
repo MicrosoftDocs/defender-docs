@@ -4,7 +4,7 @@ description: Learn how to use the Identity page in Microsoft Defender. Investiga
 #customer intent: As a security analyst using Microsoft Defender, I want to understand how to use the Identity page so that I can investigate potentially compromised identities, assess risk, and correlate alerts across linked user accounts.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 02/15/2026
+ms.date: 04/30/2026
 ms.topic: article
 ms.service: microsoft-defender
 ---
@@ -98,7 +98,7 @@ Each identity can include multiple related accounts from different identity prov
 
 Microsoft Defender uses internal correlation logic to determine the primary account.
 
-:::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-observed-in-organization.png":::
 
 ## Risk score tab (Preview)
 
@@ -177,6 +177,37 @@ The **Attack paths** tab visualizes potential lateral movement paths that involv
 The **Policies** tab displays identity‑related security policies that are relevant to the identity based on its attributes, roles, and observed activity.
 
 This view provides investigation context by showing which policies apply to the identity and how they influence access or risk evaluation. Policies are managed elsewhere; this tab helps analysts correlate policy enforcement with sign‑ins, alerts, and investigation findings.
+
+## Identity Explorer tab (Preview)
+
+The **Identity Explorer** tab uses the [hunting graph](advanced-hunting-graph.md) to visualize identity attack paths and exposure scenarios as interactive graphs. The graph is pre-seeded with the current identity, so you can immediately see how the identity relates to other entities in your environment.
+
+Use the Identity Explorer to discover lateral movement paths, privilege escalation routes, and credential-access risks associated with the identity.
+
+:::image type="content" source="media/hunting-graph-identity/hunting-graph.png" alt-text="Screenshot of the Identity Explorer tab showing an identity scenario graph with nodes and relationship edges." lightbox="media/hunting-graph-identity/hunting-graph.png":::
+
+### Search with predefined scenarios
+
+Select **Search with predefined scenarios** to run identity-focused queries. Each scenario maps to one or more [MITRE ATT&CK](https://attack.mitre.org/) techniques and focuses on a specific type of identity risk.
+
+:::image type="content" source="media/hunting-graph-identity/hunting-graph-scenario.png" alt-text="Screenshot of the predefined identity scenarios panel in Identity Explorer." lightbox="media/hunting-graph-identity/hunting-graph-scenario.png":::
+
+The following table describes the predefined identity scenarios available in Identity Explorer.
+
+| Scenario | Description | MITRE Technique |
+|---|---|---|
+| **Synced Entra users with permissions on OAuth application, allowing authentication as privileged Service Principal** | OAuth applications acting as privileged service principals that can access resources without user interaction. | Privilege Escalation, Lateral Movement |
+| **Non-privileged users have a path leading to sensitive user/group (On-Prem/Cloud)** | Non-privileged users who have paths to sensitive identities, showing potential privilege escalation. | Privilege Escalation, Lateral Movement |
+| **Service accounts with RDP access to critical device** | Service accounts that can remotely access critical devices via RDP, creating persistent access risks if compromised. | Lateral Movement |
+| **Kerberoastable users with a path to a critical asset** | Kerberoastable users with attack paths to critical assets, allowing offline password attacks that can lead to privilege escalation. | Privilege Escalation, Credential Access |
+| **Synced Entra users with direct permissions to cloud resources** | Microsoft Entra users with hybrid permissions on multiple cloud resources, breaking security boundaries and violating least privilege. | Lateral Movement |
+| **External Entra users with direct permissions to cloud resources** | External identities with direct access to cloud resources, representing third-party risk and possible data exposure. | Lateral Movement |
+| **Non-privileged users with a path to own AD domain (DCSync)** | Non-privileged users with paths that enable full Active Directory domain compromise via DCSync. | Privilege Escalation, Credential Access |
+| **Non-privileged users that can reach Domain Admins group (<5 hops)** | Non-privileged users who can reach the Domain Admins group in fewer than five steps. | Privilege Escalation, Lateral Movement |
+| **ASREPRoastable users with a path to a critical asset** | AS-REP roastable accounts with paths to critical assets that can be attacked through offline password cracking. | Privilege Escalation, Credential Access |
+| **Non-privileged user account which is exposed on multiple devices have RDP login permissions to critical assets (On-Prem/Cloud)** | Non-privileged users exposed on multiple devices who can remotely access critical assets via RDP. | Credential Access |
+
+For more information about the hunting graph and its features, see [Hunt for threats using the hunting graph](advanced-hunting-graph.md).
 
 ## Microsoft Sentinel events tab
 
