@@ -1,7 +1,7 @@
 ---
 title: Deploy GitHub Advanced Security Integration with Microsoft Defender for Cloud
 description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-runtime security.
-ms.date: 04/29/2026
+ms.date: 04/30/2026
 ms.topic: how-to
 ms.author: dlanger
 author: dlanger
@@ -67,7 +67,6 @@ Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer** and perform
 :::image type="content" source="media/github-advanced-security-deploy/validate-mdc-container-scan-results.jpg" alt-text="Screenshot of Defender for Cloud’s Cloud Security Explorer showing a query for GitHub repository pushes to container images." lightbox="media/github-advanced-security-deploy/validate-mdc-container-scan-results.jpg":::
 
 > [!NOTE]
->
 > If no results are returned, it may indicate that artifacts aren't yet generated, scanning isn't configured, or permissions are missing. See [User roles and permissions](permissions.md) for more information.
 
 1. Validate that Defender for Cloud (in Azure Container Registry) scanned the container image and used it to create a container.
@@ -82,13 +81,11 @@ Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer** and perform
 1. Validate that the risk factors are configured correctly on the Defender for Cloud side. Search for your container name on the Defender for Cloud inventory page, and you should see it marked as critical.
 
 > [!NOTE]
->
 > This step is required only if risk factors aren't already configured in your environment. If you already use risk factors, you can verify their configuration under Settings > Resource criticality.
 
 Successful validation ensures that subsequent steps, such as recommendations, campaigns, and GitHub issue generation, produce meaningful results.
 
 > [!NOTE]
->
 > After you classify your resource as critical, it can take up to 12 hours for Defender for Cloud to send the data to GitHub.  [**Learn more**](https://docs.github.com/en/code-security/securing-your-organization/understanding-your-organizations-exposure-to-vulnerabilities/alerts-in-production-code).
 
 ### Step 3: Create a GitHub campaign
@@ -121,20 +118,13 @@ Use running Containers VA recommendations code-to-runtime functionality and corr
 
     :::image type="content" source="media/github-advanced-security-deploy/cve-findings.png" alt-text="Screenshot of Defender for Cloud Findings tab showing CVE-2024-21409 alerts, fix status, CVSS scores, and GitHub alert details popup." lightbox="media/github-advanced-security-deploy/cve-findings.png":::
 
-#### Security alerts
-
-Security alerts appear as part of the recommendation evaluation flow. These alerts provide additional context about active risks and help prioritize remediation, but they don't automatically create GitHub issues.
-
-1. Select the **Associated CVEs** tab. Notice that some CVE IDs have a **View on GitHub** link in the **Related GitHub Alerts** column.
-
-1. Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub you must have access permissions to the relevant GitHub repository. Contact your GitHub administrator if you don't.)
-
-:::image type="content" source="media/github-advanced-security/associated-cves-tab-view.jpg" alt-text="Screenshot of the Associated CVEs tab that shows a link to a related GitHub alert." lightbox="media/github-advanced-security/associated-cves-tab-view.jpg":::
-
 Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub, you must have access permissions to the relevant GitHub repository. If you don’t have access permissions, you can always copy the link for subsequent usage or contact your GitHub administrator.)
-If we have an alert enrichment – meaning there's a matched Dependabot alert and it's known to the engineering, if the status is Active, meaning no one fixed it yet and we need to prioritize the fix.
-If there's no finding enrichment, meaning we found in Runtime risk that's unknown to the engineering, and it need to be prioritized for a fix.
-What’s next? How would I know who is the relevant team for the fix?  How would I know which context can help engineering with the fix?
+
+If there's an alert enrichment, there's a matched Dependabot alert that is already known to engineering. If the status is **Active**, no one has fixed it yet, and the issue needs to be prioritized for a fix.
+
+If there's no finding enrichment, this indicates a runtime risk unknown to engineering that needs to be prioritized for a fix.
+
+What’s next? How would I know who is the relevant team for the fix? How would I know which context can help engineering with the fix?
 
 #### Create a GitHub issue
 
@@ -157,19 +147,9 @@ From the recommendation view, you can explicitly generate a GitHub issue to trac
     :::image type="content" source="media/github-advanced-security-deploy/link-issue.png" alt-text="Screenshot of GitHub issues list showing open issues for dependencies with labels like Defender for Cloud and security." lightbox="media/github-advanced-security-deploy/link-issue.png":::
 
 > [!NOTE]
-> If the Generate GitHub issue option isn't available, required GitHub or repository permissions might be missing. Contact your GitHub or repository administrator to request access.
-    :::image type="content" source="media/github-advanced-security-deploy/update-github-admin.png" alt-text="Screenshot of a GitHub issue showing security vulnerabilities for bysybox with labels like Defender for Cloud, dependencies, and security." lightbox="media/github-advanced-security-deploy/update-github-admin.png":::
-
-1. Select **Take action**.
-1. Select **Generate GitHub issue** option from the popup.
-1. If the issue was created successfully you see a popup notification with a link to the issue.
-1. The issue is created in the code repository of origin.
-  
-   > [!NOTE]
-   > If the **Generate GitHub issue** option isn't available, required GitHub or repository permissions might be missing.  
-   > Contact your GitHub or repository administrator to request access.
-
-    :::image type="content" source="media/github-advanced-security/github-issue-security-alert.jpg" alt-text="Screenshot of a GitHub issues list that shows three entries marked with security and vulnerability tags." lightbox="media/github-advanced-security/github-issue-security-alert.jpg":::
+> If the **Generate GitHub** issue option isn't available, required GitHub or repository permissions might be missing. Contact your GitHub or repository administrator to request access.
+   
+:::image type="content" source="media/github-advanced-security-deploy/update-github-admin.png" alt-text="Screenshot of a GitHub issue showing security vulnerabilities for bysybox with labels like Defender for Cloud, dependencies, and security." lightbox="media/github-advanced-security-deploy/update-github-admin.png":::
 
 1. **Track ownership and status updates** - changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress from **Recommendations** view.
 

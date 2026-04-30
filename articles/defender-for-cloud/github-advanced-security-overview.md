@@ -1,10 +1,10 @@
 ---
 title: GitHub Advanced Security Integration with Microsoft Defender for Cloud
 description: Learn how GitHub Advanced Security integrates with Microsoft Defender for Cloud to provide unified code-to-runtime security from development to production.
-ms.date: 04/23/2026
+ms.date: 04/30/2026
 ms.topic: overview
 ms.author: dlanger
-author: DebLanger
+author: dlanger
 #customer intent: As a security administrator, I want to understand how GitHub Advanced Security integrates with Microsoft Defender for Cloud to provide comprehensive application security across the development lifecycle.
 ---
 
@@ -25,7 +25,6 @@ Use this integration to:
 This overview explains how the integration works and helps you understand its core capabilities before deployment. The integration is currently in preview.
 
 > [!NOTE]
->
 > For the current preview release, native integration of GHAS with Defender for Cloud is supported only for container workloads.
 
 ## Availability and prerequisites
