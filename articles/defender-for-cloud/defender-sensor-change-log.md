@@ -3,7 +3,7 @@ title: Defender Sensor for Defender for Containers Changelog
 description: Learn about the version history and updates for the Defender sensor in Microsoft Defender for Containers.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/17/2026
+ms.date: 04/29/2026
 ai-usage: ai-assisted
 ---
 
@@ -60,11 +60,11 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 - **What's included:**
 
-  - Defender for containers runtime anti-malware. Learn more about [anti-malware detection and blocking](anti-malware.md).
+  - Defender for containers runtime antimalware. Learn more about [antimalware detection and blocking](anti-malware.md).
     
   - Binary drift blocking 
     
-### Sensor v0.9 (deployed by Helm or Arc for K8s in Preview mode)
+### Sensor v0.9 (AKS 1.35 or by Helm)
 
 **Sensor v0.9.53— Preview**
 
@@ -160,7 +160,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
   - Improved memory efficiency and reduced CPU consumption  
   - Bug fixes and security enhancements  
     
-### Sensor v0.8 (relevant to all AKS supported versions and Arc for K8s)
+### Sensor v0.8 (AKS versions 1.34 and below and Arc for K8s)
 
 **Sensor v0.8.50 — GA**
 

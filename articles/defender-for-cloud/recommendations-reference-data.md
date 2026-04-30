@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud data security r
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 04/15/2026
+ms.date: 04/20/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -360,15 +360,6 @@ This configuration enforces that SSL is always enabled for accessing your databa
 
 **Severity**: High
 
-### Geo-redundant backup should be enabled for Azure Database for MariaDB
-
-**Description**: Azure Database for MariaDB allows you to choose the redundancy option for your database server.
-It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery options in case of a region failure.
-Configuring geo-redundant storage for backup is only allowed when creating a server.
-(Related policy: [Geo-redundant backup should be enabled for Azure Database for MariaDB](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0ec47710-77ff-4a3d-9181-6aa50af424d0)).
-
-**Severity**: Low
-
 ### Geo-redundant backup should be enabled for Azure Database for MySQL
 
 **Description**: Azure Database for MySQL allows you to choose the redundancy option for your database server.
@@ -503,14 +494,6 @@ Learn more in [Introduction to Microsoft Defender for Storage](defender-for-stor
 
 **Severity**: Medium
 
-### Private endpoint should be enabled for MariaDB servers
-
-**Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure Database for MariaDB.
-Configure a private endpoint connection to enable access to traffic coming only from known networks and prevent access from all other IP addresses, including within Azure.
-(Related policy: [Private endpoint should be enabled for MariaDB servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0a1302fb-a631-4106-9753-f3d494733990)).
-
-**Severity**: Medium
-
 ### Private endpoint should be enabled for MySQL servers
 
 **Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure Database for MySQL.
@@ -538,13 +521,6 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Description**: This policy audits any Cognitive Services account in your environment with public network access enabled. Public network access should be disabled so that only connections from private endpoints are allowed.
 (Related policy: [Public network access should be disabled for Cognitive Services accounts](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0725b4dd-7e76-479c-a735-68e7ee23d5ca)).
-
-**Severity**: Medium
-
-### Public network access should be disabled for MariaDB servers
-
-**Description**: Disable the public network access property to improve security and ensure your Azure Database for MariaDB can only be accessed from a private endpoint. This configuration strictly disables access from any public address space outside of Azure IP range, and denies all logins that match IP or virtual network-based firewall rules.
-(Related policy: [Public network access should be disabled for MariaDB servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2ffdccbe47-f3e3-4213-ad5d-ea459b2fa077)).
 
 **Severity**: Medium
 
