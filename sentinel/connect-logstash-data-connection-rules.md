@@ -108,7 +108,7 @@ In this scenario, you configure the Logstash input plugin to send events to Micr
 
 In this example, the Logstash configuration file looks like this:
 
-```ruby
+```
 input {
       generator {
             lines => [
@@ -123,7 +123,7 @@ To create the sample file, follow these steps:
 
 1. Copy the output plugin configuration below to your Logstash configuration file.
 
-    ```ruby
+    ```
     output {
         microsoft-sentinel-log-analytics-logstash-output-plugin {
           create_sample_file => true
@@ -171,7 +171,7 @@ In this scenario, you configure the Logstash input plugin to send syslog events 
 
     Here is an example for the Logstash input plugin:
 
-    ```ruby
+    ```
     input {
          syslog {
              port => 514
@@ -180,7 +180,7 @@ In this scenario, you configure the Logstash input plugin to send syslog events 
     ```
 2. Copy the output plugin configuration below to your Logstash configuration file.
 
-    ```ruby
+    ```
     output {
         microsoft-sentinel-log-analytics-logstash-output-plugin {
           create_sample_file => true
@@ -369,7 +369,7 @@ After you retrieve the required values:
 
 ##### Example: Service principal output plugin configuration
 
-```ruby
+```
 output {
     microsoft-sentinel-log-analytics-logstash-output-plugin {
       client_app_Id => "<enter your client_app_id value here>"
@@ -404,7 +404,7 @@ Required configuration for managed identity:
 
 ##### Example: System-assigned managed identity
 
-```ruby
+```
 output {
     microsoft-sentinel-log-analytics-logstash-output-plugin {
       managed_identity => true
@@ -417,7 +417,7 @@ output {
 
 ##### Example: User-assigned managed identity
 
-```ruby
+```
 output {
     microsoft-sentinel-log-analytics-logstash-output-plugin {
       managed_identity => true
