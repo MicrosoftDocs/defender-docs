@@ -69,6 +69,20 @@ Microsoft Defender for Cloud is now integrated into the Microsoft Defender porta
 
 This integration enables security teams to monitor, prioritize, and respond to risks across their entire environment from a single location.
 
+**Individual recommendations for Defender for Cloud**
+
+Individual recommendations for Defender for Cloud that were previously represented as grouped recommendations are now generally available. These individual recommendations provide granular, context-aware findings that improve risk-based secure score calculations and enable more precise prioritization and governance.
+
+**Secure score impact:**
+
+- **Risk-based secure score (Defender portal)**: Individual recommendations now contribute to the score based on their specific risk context rather than as part of a grouped recommendation. The risk-based secure score is currently available in the Microsoft Defender portal only.
+
+- **Classic secure score (Azure portal)**: The classic secure score in the Azure portal is also affected by these individual recommendations. However, customers should not expect a material change in their overall score, as the individual recommendations replace their previously grouped equivalents and are designed to keep the score functionally stable.
+
+**Deprecation notice:**
+
+Classic (grouped) recommendation types are deprecated from the Azure portal and will be removed on **July 30, 2026**. These recommendations are currently tagged as **Set for deprecation**.
+
 For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
 
 ## General availability of Defender for Storage integration in Azure Portal Storage Center
