@@ -115,7 +115,7 @@ The following Linux server distributions are supported:
 > 
 > Microsoft Defender for Endpoint on Linux **can be installed and may function** on customized operating systems that meet minimal kernel requirements and are derived from known, standard, vendor‑provided Linux distributions that Microsoft supports . Customers are free to onboard and run MDE on such environments; Microsoft does not block onboarding or execution.
 > However, these customized environments are not part of Microsoft’s validated or maintained support baseline. As a result, they are treated as custom OS configurations from a support perspective.
-> Customers are expected to validate MDE within these custom environments and, if needed, reproduce issues on a supported, standard (unmodified) Linux distribution. If an issue cannot be reproduced on a supported distribution, Microsoft may be unable to proceed with further investigation or remediation.
+> Customers are expected to validate MDE within these custom environments and, if needed, reproduce issues on a supported, standard (unmodified) Linux distribution. If an issue cannot be reproduced on a supported standard base distribution, Microsoft may be unable to proceed with further investigation or remediation.
 > For full support coverage and a predictable support experience, customers are recommended to run MDE on a supported, vendor-provided Linux distribution as outlined in the official prerequisites.
 
 > [!WARNING]
