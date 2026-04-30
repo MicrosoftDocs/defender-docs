@@ -10,7 +10,6 @@ metadata:
   ms.date: 06/10/2025
   ms.localizationpriority: medium
   ms.custom: nextgen
-  manager: bagol
   ms.subservice: ngp
   ms.collection:
   - m365-security
@@ -1102,23 +1101,23 @@ sections:
 
          Symbolic name: `MALWAREPROTECTION_SIGNATURE_FASTPATH_UPDATED`
 
-         Message: The antimalware engine used the Dynamic Signature Service to get other definitions.
+         Message: Microsoft Defender Antivirus used cloud protection (cloud-delivered protection), previously referred to as Dynamic Signature Service, to retrieve additional security intelligence.
 
-         Description: Microsoft Defender Antivirus used Dynamic Signature Service to retrieve more signatures to help protect your machine.
+         Description: Microsoft Defender Antivirus used cloud protection (cloud-delivered protection), previously referred to as Dynamic Signature Service, to retrieve additional security intelligence to help protect your device.
 
-          - Current Signature Version: Current signature version
+          - Current Security Intelligence Version: Current security intelligence version
 
-          - Signature Type: Signature type. Examples: Antivirus, Antispyware, Antimalware, or Network Inspection System
+          - Security Intelligence Type: Security intelligence type. Examples: Antivirus, Antispyware, Antimalware, or Network Inspection System
 
           - Current Engine Version: Current engine version
 
-          - Dynamic Signature Type: Dynamic signature type. Examples: Version, Timestamp, No limit, or Duration
+          - Cloud Protection Intelligence Type. Examples: Version, Timestamp, No limit, or Duration
 
           - Persistence Path: Path
 
-          - Dynamic Signature Version: Version number
+          - Cloud Protection Intelligence Version: Version number
 
-          - Dynamic Signature Compilation Timestamp: Timestamp
+          - Cloud Protection Intelligence Compilation Timestamp: Timestamp
 
           - Persistence Limit Type: Persistence limit type. Examples: VDM version, Timestamp, or No limit
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender Antivirus updates - Previous versions for technical upgrade support
 description: Understand the type of technical support offered for previous versions of Microsoft Defender Antivirus
 ms.service: defender-endpoint
@@ -7,14 +7,12 @@ author: chrisda
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
 ms.date: 07/23/2025
-audience: ITPro
 ms.collection:
 - m365-security
 - tier1
 - mde-ngp
 ms.topic: reference
 ms.subservice: ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -26,6 +24,41 @@ appliesto:
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### November-2025 (Platform: 4.18.25110.6 | Engine: 1.1.25110.1)
+
+- Security intelligence update version: **1.443.6.0**
+- Release date:  **December 11, 2025 (Engine) / December 17, 2025 (Platform)**
+- Platform: **4.18.25110.6**
+- Engine: **1.1.25110.1**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Performance**: Performance improvements when querying WMI due to Behavior Monitor detections.
+- **PowerShell compatibility**: Fixed potential hang in PowerShell on Server 2016 due to Defender Filter Driver.
+- **Application compatibility**: Resolved an application compatibility issue due to a loopback with SMB1 enabled.
+- **Attack Surface Reduction**: Fixed issue with ASR path exclusion requiring extra "\" characters to function appropriately.
+- **Network Inspection**: Resolved high I/O issue with NisSrv.exe due to high volume of network logging events.
+- **Threat enumeration**: Fixed error in threat enumeration causing repeated failure notifications every 15 minutes in SCCM.
+- **Drive mapping**: Improved drive mapping enumeration for devices with many drives, which resulted in false positive detections for ASR rules.
+- **Service stability**: Fixed a crash with Defender related to long scan times causing the service to hang in Windows Server 2019.
+
+### October-2025 (Platform: 4.18.25100.9008 | Engine: 1.1.25100.9002)
+
+- Security intelligence update version: **1.441.131.0**
+- Release date:  **November 6, 2025 (Engine) / November 17, 2025 (Platform)**
+- Platform: **4.18.25100.9008**
+- Engine: **1.1.25100.9002**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Network Inspection Service**: Fixed Network Inspection Service stability issue: The service now correctly restarts when memory usage exceeds the threshold, which prevents the service from getting stuck in a faulty or pending state.
+- **Anti-malware Service**: Reduced startup delay for Anti-malware Service: Improved Defender service startup time by removing its dependency on Core Service startup. This change improves overall system startup performance.
+- **x86 compatibility**: Fixed crash in Defender settings on x86 devices: Corrected an issue that caused the system to crash when applying Defender configuration settings on 32-bit machines.
+- **Service startup**: Fixed Defender startup issue: The platform no longer crashes when processing invalid Attack Surface Reduction rule exclusions.
+- **System resources**: Reduced system resource usage: Defender no longer generates excessive Data Loss Prevention (DLP) logs that caused high disk activity, improving overall performance and stability.
 
 ### September-2025 (Platform: 4.18.25090.3009 | Engine: 1.1.25090.3001)
 

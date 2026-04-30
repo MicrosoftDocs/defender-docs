@@ -14,9 +14,6 @@ ms.collection:
 - highpri
 - tier1
 ms.reviewer: davidb, nehabha, efratka
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 ---
 
 # Use the streaming API with Microsoft Defender for Business

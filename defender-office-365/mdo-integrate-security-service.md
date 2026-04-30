@@ -1,15 +1,9 @@
 ---
 title: Integrate non-Microsoft security services with Microsoft 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.collection: 
   - tier1
 ms.custom:

@@ -328,6 +328,8 @@
             href: linux-updates.md
           - name: Schedule an update for Defender for Endpoint on Linux
             href: linux-update-mde-linux.md
+        - name: Offboard Defender for Endpoint on Linux
+          href: linux-off-board-endpoints.md
         - name: Privacy for Defender for Endpoint on Linux
           href: linux-privacy.md
         - name: Additional resources for Defender for Endpoint on Linux
@@ -1080,7 +1082,7 @@
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
-            href: respond-machine-alerts.md#check-activity-details-in-action-center
+            href: respond-machine-alerts.md#check-activity-details-and-status
 
         - name: Take response actions on a file
           items:

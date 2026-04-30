@@ -7,14 +7,12 @@ ms.author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 ms.date: 10/25/2024
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
 ms.topic: article
 ms.subservice: ngp
-search.appverid: met150
 ---
 
 # Contextual file and folder exclusions
@@ -100,6 +98,8 @@ If you don't specify any other options, the file/folder is excluded from all typ
 
 > [!NOTE]  
 > Wildcards are supported in file/folder exclusions.
+>
+> A backslash ( \ ) is required before the colon ( : ) and after a file extension.
 
 #### Folders
 

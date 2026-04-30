@@ -64,8 +64,14 @@
         href: /defender-cloud-apps/what-is-defender-for-cloud-apps?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your IoT/OT assets
         href: protect-against-iot-ot-threats.md
-      - name: Protect your custom AI agents
-        href: ai-agent-inventory.md
+      - name: Protect your AI assets
+        items:
+        - name: Secure AI using Microsoft Defender
+          href: security-for-ai/defender-security-for-ai.md
+        - name: Discover AI agents and manage posture
+          href: security-for-ai/ai-agent-inventory.md
+        - name: Detect, block, and investigate threats to AI agents
+          href: security-for-ai/ai-agent-detection-protection.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -490,6 +496,8 @@
             href: security-copilot-agents-defender.md          
           - name: Phishing Triage Agent
             href: phishing-triage-agent.md
+          - name: Security Alert Triage Agent (Preview)
+            href: security-alert-triage-agent.md
           - name: Threat Intelligence Briefing Agent
             href: threat-intel-briefing-agent-defender.md
           - name: Threat Hunting Agent

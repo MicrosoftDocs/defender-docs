@@ -1,15 +1,9 @@
 ---
 title: Set up Safe Links policies in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: bdd5372d-775e-4442-9c1b-609627b94b5d
 ms.collection:
   - m365-security

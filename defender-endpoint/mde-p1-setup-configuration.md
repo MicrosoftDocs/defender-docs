@@ -1,7 +1,6 @@
-﻿---
+---
 title: Set up and configure Microsoft Defender for Endpoint Plan 1
 description: Learn how to set up and configure Defender for Endpoint Plan 1. Review the requirements, plan your rollout, and set up your environment. 
-search.appverid: MET150 
 author: paulinbar
 ms.author: painbar
 ms.topic: overview
@@ -10,7 +9,6 @@ ms.subservice: onboard
 ms.localizationpriority: medium
 ms.date: 03/04/2025
 ms.reviewer: yonghree, pahuijbr
-f1.keywords: NOCSH
 ms.collection: 
 - m365-security
 - tier2

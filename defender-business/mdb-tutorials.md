@@ -1,16 +1,13 @@
 ---
 title: Learning resources for Microsoft Defender for Business
 description: Get an overview of learning resources to help you get started with security operations and Defender for Business.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: concept-article
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: efratka, nehabha, yaelbenari
 ms.date: 09/11/2025
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security

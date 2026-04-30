@@ -1,21 +1,14 @@
 ---
 title: Alert policies in the Microsoft Defender portal
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
-manager: deniseb
-ms.date: 03/31/2026
-audience: Admin
+ms.date: 04/29/2026
 ms.topic: article
 ms.service: defender-xdr
 ms.localizationpriority: medium
 ms.collection:
 - tier1
 - M365-security-compliance
-search.appverid:
-- MET150
-- MOE150
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
@@ -121,6 +114,9 @@ You can also define user tags as a condition of an alert policy. This definition
 - **Automated investigations**. Some alerts trigger automated investigations to identify potential threats and risks that need remediation or mitigation. In most cases these alerts are triggered by detection of malicious emails or activities, but in some cases the alerts are triggered by administrator actions in the security portal. For more information about automated investigations, see [Automated investigation and response (AIR) in Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/air-about).
 
 - **Email notifications**. You can set up the policy so that email notifications are sent (or not sent) to a list of users when an alert is triggered. You can also set a daily notification limit so that once the maximum number of notifications is reached, no more notifications are sent for the alert during that day. In addition to email notifications, you or other administrators can view the alerts that are triggered by a policy on the **Alerts** page. Consider enabling email notifications for alert policies of a specific category or that have a higher severity setting.
+
+    > [!NOTE]
+    > Some alert policies generate aggregated alerts. In these cases, activity from multiple users or entities might be included in a single alert when events occur within the policy's aggregation window. Aggregation behavior depends on the alert type and workload, and might not be configurable for certain system alerts. Licensing affects which alert policies and configuration options are available, but doesn't necessarily change aggregation behavior.
 
 ## Default alert policies
 

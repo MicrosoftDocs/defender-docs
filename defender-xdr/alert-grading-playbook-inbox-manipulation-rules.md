@@ -2,20 +2,14 @@
 title: Alert classification for suspicious inbox manipulation rules
 description: Alert classification for suspicious inbox manipulation rules to review the alerts and take recommended actions to remediate the attack and protect your network.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - met150
 ms.date: 04/18/2025
 appliesto:
   - Microsoft Defender XDR

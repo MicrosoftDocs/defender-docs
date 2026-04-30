@@ -1,4 +1,4 @@
-﻿---
+---
 title: Take response actions on a device in Microsoft Defender for Endpoint
 description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
@@ -6,14 +6,12 @@ ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 12/31/2025
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Business
 ---
@@ -384,6 +382,8 @@ Furthermore, after an identity is considered "contained", that user will be bloc
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-lateral-move-block.png" alt-text="Shows a user contain lateral movement block event" lightbox="/defender/media/defender-endpoint/user-contain-lateral-move-block.png":::
 
+To view the current status of the contain user action and other actions, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
+
 ### Undo contain user actions
 
 > [!TIP]
@@ -427,13 +427,15 @@ To enrich predictive shielding actions, we recommend you use the Microsoft Defen
 
 After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
+To view the current status of the Safeboot hardening action and other actions, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
+
 ## Consult a threat expert
 
 You can consult a Microsoft threat expert for more insights regarding a potentially compromised device or already compromised ones. Microsoft Threat Experts can be engaged directly from within the Microsoft Defender XDR for timely and accurate response. Experts provide insights not just regarding a potentially compromised device, but also to better understand complex threats, targeted attack notifications that you get, or if you need more information about the alerts, or a threat intelligence context that you see on your portal dashboard.
 
 See [Configure and manage Endpoint Attack Notifications](configure-microsoft-threat-experts.md) for details.
 
-## Check activity details in Action center
+## Check activity details and status
 
 The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) provides information on actions that were taken on a device or file. You are able to view the following details:
 
@@ -445,6 +447,8 @@ The Action center ([https://security.microsoft.com/action-center](https://securi
 All other related details are also shown, for example, submission date/time, submitting user, and if the action succeeded or failed.
 
 :::image type="content" source="media/action-center-details.png" alt-text="The action center with information" lightbox="media/action-center-details.png":::
+
+The **Activities** tab in the **Incident** page shows the details and status of actions that were taken as part of the incident response. For more information, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
 
 ## See also
 

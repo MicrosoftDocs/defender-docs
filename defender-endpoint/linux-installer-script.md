@@ -1,4 +1,4 @@
-﻿---
+---
 title: Installer script based deployment for Microsoft Defender for Endpoint on Linux 
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using an installer script.
 ms.service: defender-endpoint
@@ -6,14 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr; meghapriya
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
 ms.date: 03/24/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

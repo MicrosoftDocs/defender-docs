@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint on Android
 ms.reviewer: denishdonga
 description: Describes how to install and use Microsoft Defender for Endpoint on Android
@@ -6,13 +6,11 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - mde-android
 ms.topic: install-set-up-deploy
 ms.subservice: android
-search.appverid: met150
 ms.date: 01/31/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

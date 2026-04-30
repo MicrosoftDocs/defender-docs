@@ -2,19 +2,13 @@
 title: Microsoft Security Copilot Dynamic Threat Detection Agent
 description: Investigate incidents and alerts using the Microsoft Security Copilot Dynamic Threat Detection Agent in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
 ms.topic: article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 12/22/2025
 appliesto: 
 - Microsoft Defender XDR

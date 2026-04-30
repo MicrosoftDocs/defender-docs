@@ -2,21 +2,15 @@
 title: Prioritize incidents in the Microsoft Defender portal
 description: Learn how to prioritize and filter incidents in the Microsoft Defender portal to improve your organization's security response. Discover actionable steps to manage incidents effectively.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - usx-security
   - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: concept-article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 10/26/2025
 appliesto: 
 - Microsoft Defender XDR 
