@@ -23,15 +23,12 @@ To explain and make it easier to map the relationship between Defender for Cloud
 This guide provides information about investigating and remediating Defender for Cloud Apps alerts in the following categories.
 
 > [!div class="checklist"]
->
-> - [Initial Access](#initial-access-alerts)
-> - [Execution](#execution-alerts)
-> - [Persistence](#persistence-alerts)
-> - [Privilege Escalation](#privilege-escalation-alerts)
-> - [Credential Access](#credential-access-alerts)
-> - [Collection](#collection-alerts)
-> - [Exfiltration](#exfiltration-alerts)
-> - [Impact](#impact-alerts)
+- [Initial Access](#initial-access-alerts)
+- [Persistence](#persistence-alerts)
+- [Privilege Escalation](#privilege-escalation-alerts)
+- [Credential Access](#credential-access-alerts)
+- [Collection](#collection-alerts)
+- [Exfiltration](#exfiltration-alerts)
 
 ## Security alert classifications
 
@@ -200,87 +197,12 @@ This detection identifies apps with characters, such as foreign letters, that re
 
 1. On the **Google** or **Salesforce** tabs on the **App governance** page, select the app to open the **App drawer**, and then select **Related activity**. This opens the **Activity log** page filtered for activities performed by the app. Keep in mind that some apps perform activities that are registered as having been performed by a user. These activities are automatically filtered out of the results in the activity log. For further investigation using the activity log, see [Activity log](activity-filters.md).
 1. If you suspect that an app is suspicious, we recommended that you investigate the app's name and publisher in different app stores. When checking app stores, focus on the following types of apps:
-    - Apps with a low number of downloads.
-    - Apps with a low rating or score or bad comments.
-    - Apps with a suspicious publisher or website.
-    - Apps that haven't been recently updated. This might indicate an app that is no longer supported.
-    - Apps that have irrelevant permissions. This might indicate that an app is risky.
+   - Apps with a low number of downloads.
+   - Apps with a low rating or score or bad comments.
+   - Apps with a suspicious publisher or website.
+   - Apps that haven't been recently updated. This might indicate an app that is no longer supported.
+   - Apps that have irrelevant permissions. This might indicate that an app is risky.
 1. If you still suspect that an app is suspicious, you can research the app name, publisher, and URL online.
-
-## Execution alerts
-
-This section describes alerts indicating that a malicious actor might be attempting to run malicious code in your organization.
-
-### Multiple storage deletion activities
-
-Activities in a single session indicating that a user performed an unusual number of cloud storage or database deletions from resources such as Azure blobs, AWS S3 buckets, or Cosmos DB when compared to the baseline learned. This can indicate an attempted breach of your organization.
-
-**Learning period**
-
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
-
-**TP**, **B-TP**, or **FP**?
-
-1. **TP**: If you're to confirm that the deletions were unauthorized.
-
-    **Recommended action**: Suspend the user, reset their password, and scan all devices for malicious threats. Review all user activity for other indicators of compromise and explore the scope of impact.
-1. **FP**: If, after your investigation, you're able to confirm that the administrator was authorized to perform these deletion activities.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Contact the user and confirm the activity.
-1. Review the activity log for other indicators of compromise and see who made the change.
-1. Review that user's activities for changes to other services.
-
-### Multiple VM creation activities
-
-Activities in a single session indicating that a user performed an unusual number of VM creation actions when compared to the baseline learned. Multiple VM creations on a breached Cloud infrastructure could indicate an attempt to run crypto mining operations from within your organization.
-
-**Learning period**
-
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
-
-**TP**, **B-TP**, or **FP**?
-
-To improve accuracy and alert only when there's a strong indication of a breach, this detection establishes a baseline on each environment in the organization to reduce **B-TP** incidents, such as an administrator legitimately created more VMs than the established baseline, and only alert when the unusual behavior is detected.
-
-- **TP**: If you're able to confirm that the creation activities weren't performed by a legitimate user.
-
-    **Recommended action**: Suspend the user, reset their password, and scan all devices for malicious threats. Review all user activity for other indicators of compromise and explore the scope of impact. In addition, contact the user, confirm their legitimate actions, and then make sure you disable or delete any compromised VMs.
-- **B-TP**: If, after your investigation, you're able to confirm that the administrator was authorized to perform these creation activities.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Review all user activity for other indicators of compromise.
-1. Review the resources created or modified by the user and verify that they conform with your organization's policies.
-
-### Suspicious creation activity for cloud region (preview)
-
-Activities indicating that a user performed an unusual resource creation action in an uncommon AWS region when compared to the baseline learned. Resource creation in uncommon cloud regions could indicate an attempt to perform a malicious activity such as crypto mining operations from within your organization.
-
-**Learning period**
-
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
-
-**TP**, **B-TP**, or **FP**?
-
-To improve accuracy and alert only when there's a strong indication of a breach, this detection establishes a baseline on each environment in the organization to reduce **B-TP** incidents.
-
-- **TP**: If you're able to confirm that the creation activities weren't performed by a legitimate user.
-
-    **Recommended action**: Suspend the user, reset their password, and scan all devices for malicious threats. Review all user activity for other indicators of compromise and explore the scope of impact. In addition, contact the user, confirm their legitimate actions, and then make sure you disable or delete any compromised cloud resources.
-- **B-TP**: If, after your investigation, you're able to confirm that the administrator was authorized to perform these creation activities.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Review all user activity for other indicators of compromise.
-1. Review the resources created and verify that they conform with your organization's policies.
 
 ## Persistence alerts
 
@@ -303,28 +225,11 @@ Activity performed by a terminated user can indicate that a terminated employee 
 
 1. Cross-reference HR records to confirm that user is terminated.
 1. Validate the existence of the Microsoft Entra user account.
-    > [!NOTE]
-    > If using Microsoft Entra Connect, validate the on-premises Active Directory object and confirm a successful sync cycle.
+   > [!NOTE]
+   > If using Microsoft Entra Connect, validate the on-premises Active Directory object and confirm a successful sync cycle.
+   
 1. Identify all apps that the terminated user had access to and decommission the accounts.
 1. Update decommissioning procedures.
-
-### Suspicious change of CloudTrail logging service
-
-Activities in a single session indicating that, a user performed suspicious changes to the AWS CloudTrail logging service. This can indicate an attempted breach of your organization. When disabling CloudTrail, operational changes are no longer be logged. An attacker can perform malicious activities while avoiding a CloudTrail audit event, such as modifying an S3 bucket from private to public.
-
-**TP**, **B-TP**, or **FP**?
-
-1. **TP**: If you're able to confirm that the activity wasn't performed by a legitimate user.
-
-    **Recommended action**: Suspend the user, reset their password, and reverse the CloudTrail activity.
-1. **FP**: If you're able to confirm that the user legitimately disabled the CloudTrail service.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Review the activity log for other indicators of compromise and see who made the change to the CloudTrail service.
-1. Optional: Create a playbook using Power Automate to contact users and their managers to verify their activity.
 
 ### Suspicious email deletion activity (by user)
 
@@ -652,34 +557,6 @@ Establishing a new user's activity pattern requires an initial learning period o
 1. Review the sensitivity of the shared files with the resource owner and validate the access level.
 1. Create a file policy for similar documents to detect future sharing of sensitive files.
 
-## Impact alerts
-
-This section describes alerts indicating that a malicious actor might be attempting to manipulate, interrupt, or destroy your systems and data in your organization.
-
-### Multiple delete VM activities
-
-Activities in a single session indicating that a user performed an unusual number of VM deletions when compared to the baseline learned. Multiple VM deletions could indicate an attempt to disrupt or destroy an environment. However, there are many normal scenarios where VMs are deleted.
-
-**TP**, **B-TP**, or **FP**?
-
-To improve accuracy and alert only when there's a strong indication of a breach, this detection establishes a baseline on each environment in the organization to reduce **B-TP** incidents and only alert when the unusual behavior is detected.
-
-**Learning period**
-
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
-
-- **TP**: If you're able to confirm that the deletions were unauthorized.
-
-    **Recommended action**: Suspend the user, reset their password, and scan all devices for malicious threats. Review all user activity for other indicators of compromise and explore the scope of impact.
-- **B-TP**: If, after your investigation, you're able to confirm that the administrator was authorized to perform these deletion activities.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Contact the user and confirm the activity.
-1. Review all user activity for additional indicators of compromise such as the alert is followed by one of the following alerts: [Impossible Travel](#impossible-travel), [Activity from anonymous IP address](#activity-from-anonymous-ip-address), or [Activity from infrequent country](#activity-from-infrequent-country).
-
 ### Ransomware activity
 
 Ransomware is a cyberattack in which an attacker locks victims out of their devices or blocks them from accessing their files until the victim pays a ransom. Ransomware can be spread by a malicious shared file or compromised network. Defender for Cloud Apps uses security research expertise, threat intelligence, and learned behavioral patterns to identify ransomware activity. For example, a high rate of file uploads, or files deletions, might represent an encryption process that is common among ransomware operations.
@@ -731,15 +608,6 @@ Establishing a new user's activity pattern requires an initial learning period o
 
 1. Review the deletion activities and create a list of deleted files. If needed, recover the deleted files.
 1. Optionally, create a playbook using Power Automate to contact users and their managers to verify the activity.
-
-### Investigation priority score increase (legacy)
-
-Starting November 2024, **Investigate risky users** support for Microsoft Defender for Cloud Apps is retired. If this feature was used in your organization and is needed, we recommend using the Entra risk score feature. Please use the following resources for additional information:
-
-- [Investigate risk Microsoft Entra ID Protection - Microsoft Entra ID Protection | Microsoft Learn](/entra/id-protection/howto-identity-protection-investigate-risk)
-
-- [Microsoft Entra ID Protection risk-based access policies - Microsoft Entra ID Protection | Microsoft Learn](/entra/id-protection/concept-identity-protection-policies)
-
 
 ## See also
 
