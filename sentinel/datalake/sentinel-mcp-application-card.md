@@ -1,5 +1,5 @@
 ---
-title: 	Application card: Microsoft Sentinel MCP server
+title: 	Application card for Microsoft Sentinel MCP server
 titleSuffix: Microsoft Security
 description: Learn about the capabilities, intended uses, limitations, and responsible AI practices for Microsoft Sentinel's Model Context Protocol (MCP) server.
 author: poliveria
