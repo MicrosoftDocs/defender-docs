@@ -16,7 +16,6 @@ We recommend alternate installation methods for these use cases:
 
 - If you're using a proxy, we recommend that you install the sensor and configure your proxy together [from the command line](#command-for-running-a-silent-installation-with-a-proxy-configuration). If you need to update your proxy settings later on, use PowerShell or the Azure CLI. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
 
-- Installing the v2.x sensor isn't recommended when using the MDE‑integrated MDI sensor (v3.x). For more information, see [Microsoft Defender for Identity deployment overview](deploy-defender-identity.md)
 
 ## Prerequisites
 
