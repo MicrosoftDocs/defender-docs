@@ -49,12 +49,12 @@ For detailed instructions on how to use the Defender deployment tool to create o
 
    | Operating System | Required KB |
    |---|---|
-   | Windows Server 2025, all editions | [KB5063878](https://support.microsoft.com/topic/august-12-2025-kb5063878-os-build-26100-4946-69b2de20-e07d-404a-a19f-fd88c4ae27e0f) |
-   | Windows Server 2022 | [KB5063880](https://support.microsoft.com/topic/august-12-2025-kb5063880-os-build-20348-4052-471ee125-e622-486c-ab3e-58447c8ca4e57) |
-   | Windows Server 2019 | [KB5063877](https://support.microsoft.com/topic/august-12-2025-kb5063877-os-build-17763-7678-8944ed94-aec7-4780-b0a0-11664ba421379) |
-   | Windows 10 22H2 | [KB5062649](https://support.microsoft.com/topic/july-22-2025-kb5062649-os-build-19045-6159-preview-86aa67e1-195e-41c8-9ccb5-bc27c17d5c5d) |
-   | Windows 11 23H2 | [KB5062663](https://support.microsoft.com/topic/july-22-2025-kb5062663-os-builds-22631-5699-preview-94936799-dd0c-45d0-99d1a-1b8351fb6b94) |
-   | Windows 11 24H2 | [KB5062660](https://support.microsoft.com/topic/july-22-2025-kb5062660-os-build-26100-4770-preview-9c5bc200-52b6-4c1a-bee70-80df6bbfe9c3) |
+   | Windows Server 2025, all editions | [KB5063878](https://support.microsoft.com/topic/august-12-2025-kb5063878-os-build-26100-4946-69b2de20-e07d-404a-a19f-fd8c4ae27e0f) |
+   | Windows Server 2022 | [KB5063880](https://support.microsoft.com/topic/august-12-2025-kb5063880-os-build-20348-4052-471ee125-e622-486c-ab3e-5847c8ca4e57) |
+   | Windows Server 2019 | [KB5063877](https://support.microsoft.com/topic/august-12-2025-kb5063877-os-build-17763-7678-8944ed94-aec7-4780-b0a0-1164ba421379) |
+   | Windows 10 22H2 | [KB5062649](https://support.microsoft.com/topic/july-22-2025-kb5062649-os-build-19045-6159-preview-86aa67e1-195e-41c8-9cb5-bc27c17d5c5d) |
+   | Windows 11 23H2 | [KB5062663](https://support.microsoft.com/topic/july-22-2025-kb5062663-os-builds-22631-5699-preview-94936799-dd0c-45d0-9d1a-1b8351fb6b94) |
+   | Windows 11 24H2 | [KB5062660](https://support.microsoft.com/topic/july-22-2025-kb5062660-os-build-26100-4770-preview-9c5bc200-52b6-4c1a-be70-80df6bbfe9c3) |
    | Windows 11 25H2 | All |
 
 - To use restricted mode, the feature switch **Allow restricted security operations during onboarding** must be enabled. See [Enabling the selective response actions feature](#enabling-the-selective-response-actions-feature).
