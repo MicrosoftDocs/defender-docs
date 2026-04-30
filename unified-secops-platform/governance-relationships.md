@@ -48,6 +48,12 @@ Permissions:
 
 Before you can configure delegated access, you must enable your tenant to receive governance invitations. This setting is disabled by default.
 
+Go to the Delegated access page and turn on the Enable invitations toggle.
+
+:::image type="content" source="media/governance-relationships/enable-invitations.png" alt-text="Screenshot showing governance invitations enabled in tenant settings.":::
+
+<!---
+
 ### Enable governance invitations in Microsoft Entra Admin Center (recommended)
 
 To enable governance invitations from the governing tenant, follow these steps:
@@ -82,6 +88,8 @@ Content-Type: application/json
   "canReceiveInvitations": true
 }
 ```
+
+--->
 
 ## Set up delegated access
 
