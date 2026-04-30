@@ -7,43 +7,188 @@
           "**/*.yml"
         ],
         "exclude": [
-          "**/obj/**",
+          "**/_themes/**",
           "**/includes/**",
-          "_themes/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices.md",
-          "SECURITY.md"
-        ]
+          "**/obj/**",
+          "**/*.graffle"
+        ],
+        "src": ".",
+        "dest": "defender-for-iot"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "breadcrumb",
+        "dest": "breadcrumb/defender-for-iot"
       }
     ],
     "resource": [
       {
         "files": [
+          "**/*.gif",
+          "**/*.jpeg",
+          "**/*.jpg",
           "**/*.png",
-          "**/*.jpg"
+          "**/*.svg"
         ],
         "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "**/docfx.json",
-          "_repo.en-us/**"
-        ]
+          "**/_themes/**",
+          "**/obj/**"
+        ],
+        "src": ".",
+        "dest": "defender-for-iot"
       }
     ],
+    "globalMetadata": {
+      "contributors_to_exclude": [
+        "alexbuckgit",
+        "American-Dipper",
+        "AnnaMHuff",
+        "cdpark",
+        "Court72",
+        "damabe",
+        "denrea",
+        "dksimpson",
+        "garycentric",
+        "GitHubber17",
+        "Jak-MS",
+        "JamesJBarnett",
+        "JasonWHowell",
+        "JillGrant615",
+        "JKirsch1",
+        "Jmart1428",
+        "JustPies",
+        "ktoliver",
+        "LizCasey1",
+        "MeeraDi",
+        "meganbradley",
+        "mohitp930",
+        "mSarts",
+        "ms-robkni",
+        "openpublishingbuild",
+        "paulth1",
+        "PMEds28",
+        "PRmerger",
+        "PRMerger17",
+        "PRMerger-2",
+        "PRMerger3",
+        "PRMerger4",
+        "PRMerger5",
+        "PRMerger9",
+        "rjagiewich",
+        "rmca14",
+        "Saisang",
+        "sdwheeler",
+        "ShannonLeavitt",
+        "ShawnJackson",
+        "ShawnKupfer",
+        "tfosmark",
+        "TimShererWithAquent",
+        "ttorble",
+        "tysonn",
+        "v-albemi",
+        "v-ccolin",
+        "v-dirichards",
+        "v-emilypr",
+        "v-lmcdonald",
+        "v-regandowner",
+        "v-savila",
+        "v-shils",
+        "v-stsavell",
+        "v-thepet",
+        "v-thpra"
+      ],
+      "breadcrumb_path": "~/breadcrumb/toc.yml",
+      "brand": "azure",
+      "feedback_github_repo": "MicrosoftDocs/defender-docs",
+      "feedback_help_link_url": "https://techcommunity.microsoft.com/t5/microsoft-defender-for-iot-blog/bg-p/MicrosoftDefenderIoTBlog",
+      "feedback_help_link_type": "ask-the-community",
+      "feedback_product_url": "https://feedback.azure.com/d365community/forum/79b1327d-d925-ec11-b6e6-000d3a4f06a4",
+      "feedback_system": "Standard",
+      "learn_banner_products": [
+        "azure"
+      ],
+      "featureFlags": [
+        "show_learn_banner"
+      ],
+      "searchScope": [
+        "Azure"
+      ],
+      "permissioned-type": "public",
+      "recommendations": true,
+      "recommendation_types": [
+        "Training",
+        "Certification"
+      ],
+      "uhfHeaderId": "azure",
+      "ms.suite": "office",
+      "adobe-target": true,
+      "zone_pivot_group_filename": "zone-pivot-groups.json",
+      "ms.service": "defender-easm"
+    },
+    "fileMetadata": {
+      "author": {
+        "device-builders/*.md": "limwainstein",
+        "organizations/*.md": "limwainstein",
+        "organizations/**/*.md": "limwainstein"
+      },
+      "manager": {
+        "device-builders/*.md": "bagol",
+        "organizations/*.md": "bagol",
+        "organizations/**/*.md": "bagol",
+        "device-builders/*.yml": "bagol",
+        "organizations/*.yml": "bagol",
+        "organizations/**/*.yml": "bagol"
+      },
+      "ms.author": {
+        "device-builders/*.md": "lwainstein",
+        "organizations/*.md": "lwainstein",
+        "organizations/**/*.md": "lwainstein"
+      },
+      "ms.service": {
+        "device-builders/*.md": "defender-for-iot",
+        "organizations/*.md": "defender-for-iot",
+        "organizations/**/*.yml": "defender-for-iot",
+        "organizations/**/*.md": "defender-for-iot"
+      },
+      "ms.subservice": {
+        "device-builders/*.md": "device-builders"
+      },
+      "searchScope": {
+        "**/*.yml": [
+          "Azure",
+          "Defender for IoT"
+        ],
+        "device-builders/*.md": [
+          "Azure",
+          "Defender for IoT"
+        ],
+        "device-builders/**/*.yml": [
+          "Azure",
+          "Defender for IoT"
+        ],
+        "organizations/*.md": [
+          "Azure",
+          "Defender for IoT"
+        ],
+        "organizations/**/*.md": [
+          "Azure",
+          "Defender for IoT"
+        ],
+        "organizations/**/*.yml": [
+          "Azure",
+          "Defender for IoT"
+        ]
+      },
+      "titleSuffix": {
+        "device-builders/*.md": "Microsoft Defender for IoT",
+        "organizations/*.md": "Microsoft Defender for IoT",
+        "organizations/**/*.md": "Microsoft Defender for IoT"
+      }
+    },
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {
-      "feedback_system": "Standard",
-      "breadcrumb_path": "~/breadcrumb/d4iot-azure/toc.yml",
-      "uhfHeaderId": "azure",
-      "permissioned-type": "public"
-    },
-    "fileMetadata": {},
     "template": []
   }
 }
