@@ -21,4 +21,4 @@ The following table lists the service parameters and limits for the Microsoft Se
 | New table setup latency                            | 90-120 minutes                             |
 | Switching data between tiers latency               | 90-120 minutes                             |
 
-For information on log analytics workspace ingestion limits, see [Log Analytics workspaces, data collection volume and retention](/azure/azure-monitor/fundamentals/service-limits#logs-ingestion-api).
+For information on Log Analytics workspace ingestion limits, see [Log Analytics workspaces, data collection volume and retention](/azure/azure-monitor/fundamentals/service-limits#logs-ingestion-api).
