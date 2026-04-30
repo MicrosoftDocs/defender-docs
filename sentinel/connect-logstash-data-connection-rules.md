@@ -10,14 +10,14 @@ ms.custom: msecd-doc-authoring-1012
 #customer intent: As a security engineer, I want to configure the Logstash output plugin with DCRs so that I can stream external log data into Microsoft Sentinel with full control over the output schema.
 ---
 
-# Use Logstash to stream logs with pipeline transformations via DCR-based API
+# Stream logs to Microsoft Sentinel with Logstash and DCR-based API
 
 > [!IMPORTANT]
 > Data ingestion using the Logstash output plugin with Data Collection Rules (DCRs) is currently in public preview. This feature is provided without a service level agreement. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
 Microsoft Sentinel's Logstash output plugin supports pipeline transformations and advanced configuration via Data Collection Rules (DCRs). The plugin forwards logs from external data sources into custom or standard tables in Log Analytics or Microsoft Sentinel.
 
-In this article, learn how to set up the Logstash plugin to stream data into Log Analytics or Microsoft Sentinel using DCRs, with full control over the output schema. Learn how to **deploy the plugin**.
+In this article, learn how to set up the Logstash plugin to stream data into Log Analytics or Microsoft Sentinel using DCRs, with full control over the output schema.
 
 > [!NOTE]
 > A [previous version of the Logstash plugin](connect-logstash) allows you to connect data sources through Logstash via the Data Collection API.
@@ -34,7 +34,7 @@ To learn more about working with the Logstash data collection engine, see [Getti
 
 ## Architecture overview
 
-[![Diagram of the Logstash architecture.](media/connect-logstash-data-collection-rules/logstash-data-collection-rule-architecture.png)](media/connect-logstash-data-collection-rules/logstash-data-collection-rule-architecture.png#lightbox)
+:::image type="content" source="media/connect-logstash-data-collection-rules/logstash-data-collection-rule-architecture.png" alt-text="Diagram of the Logstash architecture showing input, filter, and output plugin stages sending data to Log Analytics via the Logs Ingestion API." lightbox="media/connect-logstash-data-collection-rules/logstash-data-collection-rule-architecture.png":::
 
 The Logstash engine is composed of three components:
 
@@ -43,28 +43,28 @@ The Logstash engine is composed of three components:
 - Output plugins: Customized sending of collected and processed data to various destinations.
 
 > [!NOTE]
-> - Microsoft supports only the Microsoft Sentinel-provided Logstash output plugin discussed here. The current plugin is named **[microsoft-sentinel-log-analytics-logstash-output-plugin](https://github.com/Azure/Azure-Sentinel/tree/master/DataConnectors/microsoft-sentinel-log-analytics-logstash-output-plugin)**, v2.1.0. You can [open a support ticket](https://portal.azure.com/#create/Microsoft.Support) for any issues regarding the output plugin.
+> - Microsoft supports only the Microsoft Sentinel-provided Logstash output plugin discussed here. The current plugin is **[microsoft-sentinel-log-analytics-logstash-output-plugin](https://github.com/Azure/Azure-Sentinel/tree/master/DataConnectors/microsoft-sentinel-log-analytics-logstash-output-plugin)**, v2.1.0. You can [open a support ticket](https://portal.azure.com/#create/Microsoft.Support) for any issues regarding the output plugin.
 > - Microsoft does not support third-party Logstash output plugins for Microsoft Sentinel, or any other Logstash plugin or component of any type.
 > - See the prerequisites for the plugin's Logstash version support.
 
-The Microsoft Sentinel output plugin for Logstash sends JSON-formatted data to your Log Analytics workspace, using the Log Analytics Log Ingestion API. The data is ingested into custom logs or a standard table.
+The plugin sends JSON-formatted data to your Log Analytics workspace using the Logs Ingestion API. The data is ingested into custom logs or a standard table.
 
 - Learn more about the [Logs ingestion API](/azure/azure-monitor/logs/logs-ingestion-api-overview).
 
 ## Deploy the Microsoft Sentinel output plugin in Logstash
 
-**To set up the plugin, follow these steps**:
+To set up the plugin, follow these steps:
 
-1. Review the prerequisites
-2. Install the plugin
-3. Create a sample file
-4. Create the required DCR-related resources
-5. Configure Logstash configuration file
-6. Restart Logstash
-7. View incoming logs in Microsoft Sentinel
-8. Monitor output plugin audit logs
+- Review the prerequisites
+- Install the plugin
+- Create a sample file
+- Create the required DCR-related resources
+- Configure Logstash configuration file
+- Restart Logstash
+- View incoming logs in Microsoft Sentinel
+- Monitor output plugin audit logs
 
-### Prerequisites
+### Logstash plugin prerequisites
 
 - Install a supported version of Logstash. The plugin supports the following Logstash versions:
 
@@ -91,7 +91,7 @@ The Microsoft Sentinel output plugin is available in the [Logstash collection on
     logstash-plugin install microsoft-sentinel-log-analytics-logstash-output-plugin
     ```
 
-- If your Logstash system does not have Internet access, follow the instructions in the Logstash [Offline Plugin Management](https://www.elastic.co/guide/en/logstash/current/offline-plugins.html) document to prepare and use an offline plugin pack. (This requires building another Logstash system with internet access.)
+- If your Logstash system doesn't have internet access, follow the instructions in the Logstash [Offline Plugin Management](https://www.elastic.co/guide/en/logstash/current/offline-plugins.html) document to prepare and use an offline plugin pack. (This requires building another Logstash system with internet access.)
 
 ### Create a sample file
 
@@ -219,7 +219,7 @@ In this scenario, you configure the Logstash input plugin to send syslog events 
 
 ### Create the required DCR resources
 
-To configure the Microsoft Sentinel DCR-based Logstash plugin, you first need to create the DCR-related resources.
+To configure the Microsoft Sentinel DCR-based Logstash plugin, first create the DCR-related resources.
 
 In this section, you create resources to use for your DCR, in one of these scenarios:
 
@@ -266,7 +266,7 @@ If you come across any issues, see the [troubleshooting steps](/azure/azure-moni
 
 Keep these points in mind:
 
-- The `streamDeclarations` column names and types should be the same as the sample file fields, but you do not have to specify all of them. For example, in the DCR below, the `PRI`, `type` and `ls_version` fields are omitted from the `streamDeclarations` column.
+- The `streamDeclarations` column names and types should be the same as the sample file fields, but you don't have to specify all of them. For example, in the DCR below, the `PRI`, `type` and `ls_version` fields are omitted from the `streamDeclarations` column.
 - The `dataflows` property transforms the input to the Syslog table format, and sets the `outputStream` to `Microsoft-Syslog`.
 
 ```json
@@ -452,10 +452,12 @@ Restart Logstash with the updated output plugin configuration. Verify that data 
 
 ### View incoming logs in Microsoft Sentinel
 
+To verify that log data reaches your workspace, follow these steps:
+
 1. Verify that messages are being sent to the output plugin.
 1. From the Microsoft Sentinel navigation menu, select **Logs**. Under the **Tables** heading, expand the **Custom Logs** category. Find and select the name of the table you specified (with a `_CL` suffix) in the configuration.
 
-    :::image type="content" source="media/connect-logstash/logstash-custom-logs-menu.png" alt-text="Screenshot of Logstash custom logs.":::
+    :::image type="content" source="media/connect-logstash/logstash-custom-logs-menu.png" alt-text="Screenshot of the Microsoft Sentinel Logs page showing the Custom Logs category expanded with a Logstash custom table selected.":::
 1. To see records in the table, query the table by using the table name as the schema.
 
     :::image type="content" source="media/connect-logstash/logstash-custom-logs-query.png" alt-text="Screenshot of a Logstash custom logs query.":::
@@ -464,7 +466,7 @@ Restart Logstash with the updated output plugin configuration. Verify that data 
 
 To monitor the connectivity and activity of the Microsoft Sentinel output plugin, enable the appropriate Logstash log file. See the [Logstash Directory Layout](https://www.elastic.co/guide/en/logstash/current/dir-layout.html#dir-layout) document for the log file location.
 
-If you are not seeing any data in this log file, generate and send some events locally (through the input and filter plugins) to make sure the output plugin is receiving data. Microsoft Sentinel will support only issues relating to the output plugin.
+If you aren't seeing any data in this log file, generate and send some events locally through the input and filter plugins to make sure the output plugin is receiving data. Microsoft Sentinel supports only issues related to the output plugin.
 
 ## Network security
 
@@ -474,7 +476,7 @@ Define network settings and enable network isolation for the Microsoft Sentinel 
 
 Microsoft Sentinel output plugin supports [Azure virtual network service tags](/azure/virtual-network/service-tags-overview). Both *AzureMonitor* and *AzureActiveDirectory* tags are required.
 
-Azure Virtual Network service tags can be used to define network access controls on [network security groups](/azure/virtual-network/network-security-groups-overview#security-rules), [Azure Firewall](/azure/firewall/service-tags), and user-defined routes. Use service tags in place of specific IP addresses when you create security rules and routes. For scenarios where Azure Virtual Network service tags cannot be used, the firewall requirements are given below.
+Azure Virtual Network service tags can be used to define network access controls on [network security groups](/azure/virtual-network/network-security-groups-overview#security-rules), [Azure Firewall](/azure/firewall/service-tags), and user-defined routes. Use service tags instead of specific IP addresses when you create security rules and routes. For scenarios where Azure Virtual Network service tags can't be used, the firewall requirements are given below.
 
 ### Firewall requirements
 
@@ -541,7 +543,7 @@ When using Logstash installed on a Docker image of Lite Ubuntu, the following wa
 java.lang.RuntimeException: getprotobyname_r failed
 ```
 
-To resolve it, use the following commands to install the *netbase* package within your Dockerfile:
+To resolve this error, install the *netbase* package in your Dockerfile:
 
 ```bash
 USER root
@@ -555,6 +557,7 @@ If your environment's event rate is low, increase the value of *plugin_flush_int
 ## Limitations
 
 - Ingestion into standard tables is limited only to [standard tables supported for custom logs ingestion](/azure/azure-monitor/logs/logs-ingestion-api-overview#supported-tables).
+
 - The columns of the input stream in the `streamDeclarations` property must start with a letter. If you start a column with other characters (for example `@` or `_`), the operation fails.
 - The `TimeGenerated` datetime field is required. You must include this field in the KQL transform.
 - For additional possible issues, review the [troubleshooting section](/azure/azure-monitor/logs/tutorial-logs-ingestion-code#troubleshooting) in the tutorial.
