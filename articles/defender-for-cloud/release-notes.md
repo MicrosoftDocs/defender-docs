@@ -32,14 +32,14 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| April 30, 2026 | GA | [General availability: Individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
+| April 30, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
 | April 30, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | April 30, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
-### General availability: Individual recommendations for Defender for Cloud in Azure portal and deprecation of legacy grouped recommendations
+### General availability of individual recommendations for Defender for Cloud in Azure portal and deprecation of legacy grouped recommendations
 
 April 30, 2026
 
@@ -85,18 +85,6 @@ Microsoft Defender for Cloud is now integrated into the Microsoft Defender porta
 > Cloud scopes is still in preview.
 
 This integration enables security teams to monitor, prioritize, and respond to risks across their entire environment from a single location.
-
-#### Individual recommendations for Defender for Cloud
-
-**Secure score impact:**
-
-- **Risk-based secure score (Defender portal)**: Individual recommendations now contribute to the score based on their specific risk context rather than as part of a grouped recommendation. The risk-based secure score is currently available in the Microsoft Defender portal only.
-
-- **Classic secure score (Azure portal)**: The classic secure score in the Azure portal is also affected by these individual recommendations. However, customers should not expect a material change in their overall score, as the individual recommendations replace their previously grouped equivalents and are designed to keep the score functionally stable.
-
-**Deprecation notice:**
-
-Classic (grouped) recommendation types are deprecated from the Azure portal and will be removed on **July 30, 2026**. These recommendations are currently tagged as **Set for deprecation**.
 
 For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
 
