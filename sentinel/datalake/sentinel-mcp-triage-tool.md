@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn about the different tools available in the triage collection
 author: poliveria
 ms.topic: how-to
-ms.date: 04/40/2026
+ms.date: 04/30/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
