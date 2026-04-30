@@ -4,7 +4,7 @@ description: Learn about the latest new features and announcement in Microsoft S
 author: guywi-ms
 ms.author: guywild
 ms.topic: concept-article
-ms.date: 04/10/2026
+ms.date: 05/01/2026
 #Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
 ms.custom:
   - build-2025
@@ -17,6 +17,13 @@ This article lists recent features added for Microsoft Sentinel, and new feature
 The listed features were released in the last six months. For information about earlier features delivered, see our [Tech Community blogs](https://techcommunity.microsoft.com/t5/azure-sentinel/bg-p/AzureSentinelBlog/label-name/What's%20New).
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
+
+## May 2026
+
+- [Reason over Microsoft Sentinel graphs with graph tool (Preview)](#reason-over-microsoft-sentinel-graphs-with-graph-tool-preview)
+
+### Reason over Microsoft Sentinel graphs with graph tool (Preview)
+The graph tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server provides visual graph-based exploration of relationships across identities, devices, threats, and signals to assess coverage, dependencies, and configuration gaps. For more information, see [Explore Microsoft Sentinel graphs with graph tool collection](datalake/sentinel-mcp-graph-tool.md). 
 
 ## April 2026
 
