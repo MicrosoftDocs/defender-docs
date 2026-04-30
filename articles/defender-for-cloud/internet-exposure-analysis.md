@@ -5,7 +5,7 @@ author: Elazark
 ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 01/14/2025
+ms.date: 04/20/2026
 ms.custom: template-concept
 #customer intent: As a user, I want to understand how Defender for Cloud detects and assesses internet exposure for my multicloud resources. This knowledge will help me identify and mitigate potential security risks effectively.
 ---
@@ -30,7 +30,7 @@ The following table lists the resources that Defender for Cloud assesses for int
 |--|--|
 | Virtual machines | Azure VM <br> Amazon Web Service (AWS) EC2 <br> Google Cloud Platform (GCP) compute instance |
 | Virtual machine clusters | Azure Virtual Machine Scale Set <br> GCP instance groups |
-| Databases (DB) | Azure SQL <br> Azure PostgreSQL <br> Azure MySQL <br> Azure SQL Managed Instance <br> Azure MariaDB <br> Azure Cosmos DB <br> Azure Synapse <br> AWS Relational Database Service (RDS) DB <br> GCP SQL admin instance |
+| Databases (DB) | Azure SQL <br> Azure PostgreSQL <br> Azure MySQL <br> Azure SQL Managed Instance <br> Azure Cosmos DB <br> Azure Synapse <br> AWS Relational Database Service (RDS) DB <br> GCP SQL admin instance |
 | Storage | Azure Storage <br> AWS S3 buckets <br> GCP storage buckets |
 | AI | Azure OpenAI Service <br> Azure AI Services <br> Azure Cognitive Search |
 | Containers | Azure Kubernetes Service (AKS) <br> AWS EKS <br> GCP GKE |
