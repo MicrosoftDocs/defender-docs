@@ -197,7 +197,7 @@ To set up an extension and view scan results in Azure DevOps:
 
 1. To view the results of the IaC scan, select **Pipelines**, and then select the pipeline you modified.
 
-1. See see more details, select a specific pipeline run.
+1. To see more details, select a specific pipeline run.
 
 ## View details and remediation information for applied IaC rules
 
