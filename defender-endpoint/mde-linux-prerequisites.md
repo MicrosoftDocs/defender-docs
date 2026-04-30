@@ -12,7 +12,7 @@ ms.collection:
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-ms.date: 04/28/2026
+ms.date: 04/30/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -110,12 +110,17 @@ The following Linux server distributions are supported:
 | Mariner | 2 | 2 |
 
 > [!NOTE]
-> Distributions and versions that aren't explicitly listed above, and custom operating systems, are unsupported (even if they're derived from the officially supported distributions).
+> Distributions and versions that aren't explicitly listed above are unsupported
 > Microsoft Defender for Endpoint is kernel-version agnostic for all other supported distributions and versions. The minimal requirement for the kernel version is `3.10.0-327` or later.
+> 
+> Microsoft Defender for Endpoint on Linux **can be installed and may function** on customized operating systems that meet minimal kernel requirements and are derived from known, standard, vendor‑provided Linux distributions that Microsoft supports. Customers are free to onboard and run Defender for Endpoint on such environments; Microsoft doesn't block onboarding or execution.
+> However, these customized environments aren't part of Microsoft's validated or maintained support baseline. As a result, they're treated as custom OS configurations from a support perspective.
+> Customers are expected to validate Defender for Endpoint within these custom environments and, if needed, reproduce issues on a supported, standard (unmodified) Linux distribution. If an issue can't be reproduced on a supported standard base distribution, Microsoft might not be able to proceed with further investigation or remediation.
+> For full support coverage and a predictable support experience, customers are recommended to run Defender for Endpoint on a supported, vendor-provided Linux distribution as outlined in the official prerequisites.
 
 > [!WARNING]
-> Running Defender for Endpoint on Linux alongside other fanotify-based security solutions is not supported and may lead to unpredictable behavior, including system hangs.
-> If any applications use fanotify in blocking mode, they will appear in the conflicting_applications field of the mdatp health command output.
+> Running Defender for Endpoint on Linux alongside other Fanotify-based security solutions isn't supported and may lead to unpredictable behavior, including system hangs.
+> If any applications use Fanotify in blocking mode, they'll appear in the conflicting_applications field of the mdatp health command output.
 > You can still safely take advantage of Defender for Endpoint on Linux by setting antivirus enforcement level to passive. See [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md).
 > **EXCEPTION:** The Linux `FAPolicyD` feature, which also uses Fanotify in blocking mode, is supported with Defender for Endpoint in active mode on RHEL and Fedora platforms, provided that mdatp health reports a healthy status. This exception is based on validated compatibility specific to these distributions.
 
@@ -123,7 +128,7 @@ The following Linux server distributions are supported:
 
 |Real-time protection and quick/full scans|Custom scans|
 |---|---|
-|`btrfs`|All filesystems that are supported for real-time protection and quick/full scans are also supported for custom scans. In addtion, the filesystems listed below are also supported for custom scans.|
+|`btrfs`|All filesystems that are supported for real-time protection and quick/full scans are also supported for custom scans. In addition, the filesystems listed below are also supported for custom scans.|
 |`ecryptfs`|`Efs`|
 |`ext2`|`S3fs`|
 |`ext3`|`Blobfuse`|
@@ -168,7 +173,7 @@ It's recommended to use Deployment Tool based deployment, as it simplifies the o
 - [Guidance for Defender for Endpoint on Linux Server with SAP](mde-linux-deployment-on-sap.md)
 
 > [!IMPORTANT]
-> On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+> On Linux, Microsoft Defender for Endpoint creates a mdatp user with random UID and GID values. If you want to control these values, create a mdatp user before installation using the `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
 If you experience any installation issues, self-troubleshooting resources are available. See the links in the [Related content section](#related-content).
 
