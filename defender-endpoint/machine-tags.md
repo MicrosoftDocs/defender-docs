@@ -1,6 +1,7 @@
----
-title: Create and manage device tags
-description: Use device tags to group devices to capture context and enable dynamic list creation as part of an incident
+﻿---
+title: Create and manage device tags and target devices
+description: Use device tags, device groups, and targeting to organize devices and apply security actions at scale in Microsoft Defender for Endpoint.
+keywords: device tags, device groups, target devices, manage tags, organize devices, device targeting, security actions, dynamic tags
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
@@ -8,52 +9,71 @@ ms.localizationpriority: medium
 ms.collection:
 - m365-security
 - tier2
-ms.topic: reference
+ms.topic: how-to
 ms.custom: api
 ms.subservice: reference
-ms.date: 02/27/2023
+search.appverid: met150
+ms.date: 02/25/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
 
-# Create and manage device tags
+# Create and manage device tags and target devices
 
-Add tags on devices to create a logical group affiliation. Device tags support proper mapping of the network, enabling you to attach different tags to capture context and to enable dynamic list creation as part of an incident. Tags can be used as a filter in the **Device inventory** view, or to group devices. For more information on device grouping, see [Create and manage device groups](machine-groups.md).
+Device targeting in Microsoft Defender for Endpoint follows two stages: first you **create tags** to label devices with business context, then you **form device groups** based on those tags to target security operations at scale — such as role-based access, custom data collection, automation rules, and attack surface reduction policies.
+
+## Prerequisites
+
+Before you create tags and target devices, review the following requirements.
+
+### Permissions
+
+- **Dynamic tags**: Requires appropriate permissions in [Asset Rule Management](/defender-xdr/configure-asset-rules).
+- **Manual tags**: Requires device-level permissions in the Defender portal.
+- **Automation rules**: Requires rule creation permissions.
+- **Device groups**: Requires Security Administrator role to create and manage groups.
+
+### Supported operating systems
+
+Device tagging is supported on:
+
+- Windows 11, Windows 10 (version 1709 or later), Windows 8.1, Windows 7 SP1
+- Windows Server (version 1803 or later), Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 SP1
+- macOS, Linux, iOS, Android
+
+### Performance notes
+
+- Each device can have multiple tags.
+- Dynamic tags update approximately every hour.
+- There might be some latency between the time a tag is added to a device and its availability in the devices list and device page.
+- Large numbers of tags don't significantly affect performance.
+- Custom data collection rules can target multiple tag combinations.
+
+For background on tags vs. groups, dynamic vs. manual tags, and targeting scenarios, see [Device targeting](devices-overview.md#device-targeting).
+
+## Create tags
+
+You can add tags to devices using the following methods. Each method is suited for different scenarios and device platforms.
+
+| Method | Platform | Steps |
+|--------|----------|-------|
+| **Portal** | All supported platforms | Manually add tags to individual devices or small groups. See [Add device tags using the portal](#add-device-tags-using-the-portal). |
+| **Dynamic rules** | All supported platforms | Create rules in the Defender portal that automatically assign and remove tags based on device properties. See [Asset rule management - Dynamic rules for devices](/defender-xdr/configure-asset-rules). |
+| **Registry key** | Windows | Set registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging\` with REG_SZ value `Group` containing the tag name (max 200 characters). Tags sync once daily; restart the device for immediate sync. To remove a tag, clear the value data instead of deleting the `Group` key. |
+| **Security settings management** | macOS, Linux | Create an Endpoint detection and response security policy. See [Manage endpoint security policies on MDE-onboarded devices](/mem/intune/protect/mde-security-integration) and [Manage endpoint security policies in Defender for Endpoint](manage-security-policies.md). |
+| **Configuration profile** | macOS, Linux | **macOS**: Create a `.plist` configuration profile and deploy it manually or through a management tool. See [Set preferences for MDE on macOS](mac-preferences.md) and [Custom settings for macOS in Intune](/mem/intune/configuration/custom-settings-macos). **Linux**: Create a `.json` configuration profile. See [Set preferences for MDE on Linux](linux-preferences.md). |
+| **Custom Intune profile** | Windows 10 or later | Create a device configuration profile with custom settings in Intune. Use OMA-URI `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/Group` with data type **String**. See [Create a profile with custom settings in Intune](/mem/intune/configuration/custom-settings-configure). |
+| **App configuration policy in Intune** | iOS, Android | Create an app configuration profile in Intune to define and apply tags for mobile devices. **For iOS**, see [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md). **For Android**, see [Configure Defender for Endpoint on Android features](android-configure.md). For more information, see [Tag mobile devices with Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-mobile-device-tagging-for-ios-and-android/ba-p/3897368). |
 
 > [!NOTE]
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
-You can add tags on devices using the following ways:
-
-- Using the portal
-- Using dynamic rules for device tagging
-- Setting a registry key value (Windows)
-- Using Defender for Endpoint security settings management (macOS / Linux)
-- Creating a configuration profile (macOS / Linux)
-- Creating a custom profile in Microsoft Intune (Windows 10 or later)
-- Using App configuration policy in Intune (iOS / Android)
-
-> [!NOTE]
-> There might be some latency between the time a tag is added to a device and its availability in the devices list and device page.
-
 To add device tags using API, see [Add or remove device tags API](api/add-or-remove-machine-tags.md).
 
-## Supported operating systems
-
-Device tagging is supported on the following operating systems:
-
- - Windows 11
- - Windows 10, version 1709 or later
- - Windows Server, version 1803 or later
- - Windows Server 2016
- - Windows Server 2012 R2
- - Windows Server 2008 R2 SP1
- - Windows 8.1
- - Windows 7 SP1
-
-## Add device tags using the portal
+### Add device tags using the portal
 
 1. Select the device that you want to manage tags on. You can select or search for a device from any of the following views:
 
@@ -67,101 +87,29 @@ Device tagging is supported on the following operating systems:
 
     :::image type="content" source="media/manage-tags-option.png" alt-text="Image of manage tags button" lightbox="media/manage-tags-option.png":::
 
-1. Type to find or create tags
+1. Type to find or create tags.
 
     :::image type="content" source="media/create-new-tag.png" alt-text="Adding tags on device1" lightbox="media/create-new-tag.png":::
 
-Tags are added to the device view and will also be reflected on the **Devices inventory** view. You can then use the **Tags** filter to see the relevant list of devices.
+Tags are added to the device view and are also reflected on the **Devices inventory** view. You can then use the **Tags** filter to see the relevant list of devices.
 
 > [!NOTE]
 > Filtering might not work on tag names that contain parenthesis or commas.
 >
-> When you create a new tag, a list of existing tags are displayed. The list only shows tags created through the portal. Existing tags created from client devices will not be displayed.
+> When you create a new tag, a list of existing tags is displayed. The list only shows tags created through the portal. Existing tags created from client devices aren't displayed.
 
 You can also delete tags from this view.
 
 :::image type="content" source="media/new-tag-label-display.png" alt-text="Adding tags on device2" lightbox="media/new-tag-label-display.png":::
 
-## Add device tags using dynamic rules for device tagging
+## Create device groups
 
-You can create and manage rules that automatically assign and remove tags from devices based on user-defined criteria directly in the Microsoft Defender portal. Please refer to following documents for details:
+After you tag devices, use device groups to control which security teams can access and manage specific sets of devices. Device groups use matching rules — often based on tags — to determine membership, and they enable role-based access control, automated remediation levels, and scoped security policies.
 
-- [Manage your devices with ease using dynamic rules for device tagging in Microsoft Defender](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/manage-your-devices-with-ease-using-dynamic-rules-for-device/ba-p/4024988)
-- [Asset rule management - Dynamic rules for devices](/defender-xdr/configure-asset-rules)
+For step-by-step instructions on creating, ranking, and managing device groups, see [Create and manage device groups](machine-groups.md).
 
-## Add device tags by setting a registry key value
+## Apply security actions
 
-> [!NOTE]
-> The maximum number of characters that can be set in a tag is 200.
+Once your devices are organized with tags and groups, you can target security operations at scale. Device groups and tags power capabilities including investigations and threat hunting, custom data collection, automation rules, role-based access, attack surface reduction rules, and Conditional Access policies.
 
-Devices with similar tags can be handy when you need to apply contextual action on a specific list of devices.
-
-Use the following registry key entry to add a tag on a device:
-
-- Registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging\`
-- Registry key value (REG_SZ): `Group`
-- Registry key data: `Name of the tag you want to set`
-
-> [!NOTE]
-> The device tag is part of the device information report that's generated once a day. As an alternative, you may choose to restart the endpoint that would transfer a new device information report.
->
-> If you need to remove a tag that was added using the above Registry key, clear the contents of the Registry key data instead of removing the 'Group' key.
-
-## Add device tags using the Defender for Endpoint security settings management
-
-> [!NOTE]
-> Applicable only on the following devices:
->
-> - macOS
-> - Linux
-
-You can use Defender for Endpoint security settings management to define and apply device tags for macOS and Linux. You can perform this task by creating Endpoint detection and response security policy. Please refer to following documentation for details.
-
-- [Manage endpoint security policies on devices onboarded to Microsoft Defender for Endpoint](/intune/intune-service/protect/mde-security-integration)
-- [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-security-policies.md)
-
-## Add device tags by creating a configuration profile
-
-> [!NOTE]
-> Applicable only on the following devices:
->
-> - macOS
-> - Linux
-
-You can use configuration profile to set device tag for macOS and Linux. Please refer to following documentation for details.
-
-- **For macOS**, create configuration profile (.plist file) and deploy it manually or through management tool including Intune. See the guidance in [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md). To deploy configuration profile with Intune, follow the guidance in [Use custom settings for macOS devices in Microsoft Intune](/intune/intune-service/configuration/custom-settings-macos).
-
-- **For Linux**, create configuration profile (.json file) and deploy it manually or through management tool. See the guidance in [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-
-## Add device tags by creating a custom profile in Microsoft Intune
-
-> [!NOTE]
-> Applicable only on the following devices:
->
-> - Windows 10
-> - Windows 11
-
-You can use Microsoft Intune to define and apply device tags. You can perform this task by creating a device configuration profile using custom settings in Intune. For more information, see [Create a profile with custom settings in Intune](/intune/intune-service/configuration/custom-settings-configure).
-
-- In the [Create the profile](/intune/intune-service/configuration/custom-settings-configure) procedure, for step 3, choose [Windows 10 and later](/intune/intune-service/configuration/custom-settings-windows-10).
-
-- In the [OMA-IRU settings](/intune/intune-service/configuration/custom-settings-windows-10) section, for **Data type**, choose **String**. For **OMA-URI**, type (or paste) `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/Group`.
-
-## Add device tags by creating app configuration policy in Microsoft Intune
-
-> [!NOTE]
-> Applicable only on the following devices:
->
-> - iOS
-> - Android
-
-You can use Microsoft Intune to define and apply tag for mobile devices. You can perform this task by creating an app configuration profile in Intune. For more information, please refer to following information.
-
-- [Tag mobile devices with Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-mobile-device-tagging-for-ios-and-android/ba-p/3897368)
-
-- **For iOS**, follow the guidance in [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md).
-- **For Android**, follow the guidance on [Configure Defender for Endpoint on Android features](android-configure.md).
-
-
-
+For the full list of security actions you can target to device groups, including scenarios and links, see [Security actions powered by targeting](devices-overview.md#security-actions-powered-by-targeting).
