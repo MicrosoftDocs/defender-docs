@@ -2,7 +2,6 @@
 title: Simulate a phishing attack with Attack simulation training
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -11,8 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
 description: Admins can learn how to simulate phishing attacks and train their users on phishing prevention using Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-search.appverid: met150
-ms.date: 10/23/2025
+ms.date: 04/23/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -361,6 +359,10 @@ Back on the **Training assignment** page, the selected trainings are now listed.
 - **Assign to**: For each training, select who gets the training by selecting from the following values:
   - **All users**
   - One or both of the values **Clicked payload** or **Compromised**.
+
+  > [!TIP]
+  > **Clicked payload** doesn't apply to every social engineering technique. For more information, see [Training assignment trigger behavior by technique](attack-simulation-training-insights.md#training-assignment-trigger-behavior-by-technique).
+
 - **Delete**: Select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** to remove the training from the simulation.
 
 :::image type="content" source="media/attack-sim-training-training-assignment.png" alt-text="The Training assignment page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-training-assignment.png":::

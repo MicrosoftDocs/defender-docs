@@ -58,7 +58,7 @@ Accounts with privileges in both Microsoft Entra ID and Active Directory can be 
 
 **Implementation**
 
-1. Review the list of exposed entities to identify which accounts have privileged access in both Entra ID and Active Directory.
+1. Review the list of exposed entities to identify which accounts have privileged access in both Microsoft Entra ID and Active Directory.
 
 1. Remediate the account by reducing privileges in one or both environments to enforce least privilege. Only retain dual privileges if necessary, and document justification.
 
@@ -191,13 +191,13 @@ Having non-sensitive accounts with **Admin SDHolder** (security descriptor holde
     :::image type="content" source="../media/secure-score/remove-suspicious-access-rights.png" alt-text="Screenshot of the Admin SDHolder security assessment." lightbox="../media/secure-score/remove-suspicious-access-rights.png":::
 
 
-1. Review the list of exposed entities to discover which of your non-sensitive accounts have the **Admin SDHolder** permission.
+1. Review the list of exposed entities to discover which of your nonsensitive accounts have the **Admin SDHolder** permission.
 
 1. Take appropriate action on those entities by removing their privileged access rights. For example:
 
     1. Use the **ADSI Edit** tool to connect to your domain controller.
     1. Browse to the **CN=System**> **CN=AdminSDHolder** container and open the **CN=AdminSDHolder** container properties.
-    1. Select the **Security** tab > **Advanced**, and remove any non-sensitive entities. These are the entities marked as exposed in the security assessment.
+    1. Select the **Security** tab > **Advanced**, and remove any nonsensitive entities. These are the entities marked as exposed in the security assessment.
 
     For more information, see [Active Directory Service Interfaces](/windows/win32/adsi/active-directory-service-interfaces-adsi) and [ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)) documentation
 
@@ -226,7 +226,7 @@ If the KRBTGT account's password is compromised, an attacker can use its hash to
 >  
 > We recommend resetting the password twice, waiting at least 10 hours between resets. This process invalidates  existing Kerberos tickets to help prevent Golden Ticket attacks.  
 >  
-> For the official and supported procedure, see [Reset the krbtgt password](https://learn.microsoft.com/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
+> For the official and supported procedure, see [Reset the krbtgt password](/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password).
 
 
 ## Change password for on-premises account with potentially leaked credentials (Preview)
@@ -318,25 +318,19 @@ It's crucial to carefully manage and restrict the membership of this group to en
 
 
 1. Review this list of exposed entities to discover which of your accounts have DCSync permissions and are also nondomain admins.
-
 1. Take appropriate action on those entities by removing their privileged access rights.
-
 To achieve the maximum score, remediate all exposed entities.
 
 You can access Active Directory Users and Computers by signing in to your domain controller.
 To remove DCSync permissions from a non-admin account:
 
 1. Open Active Directory Users and Computers.
-
 1. Turn on Advanced Features.
 This is required to display the Security tab on domain objects.
 
 1. Open Domain properties, select your domain name (for example, contoso.local), and then select Properties.
-
 1. Select the Security tab.
-
 1. Select the target user or group and then select the non-admin user or service account that shouldn't have these permissions.
-
 1. Uncheck replication permissions. Scroll through the "Permissions for [User]" list uncheck the following permissions if they're selected:
 
     - Replicating Directory Changes
@@ -351,23 +345,39 @@ This is required to display the Security tab on domain objects.
 
 This recommendation lists all privileged accounts that don't have the "not delegated" setting enabled, highlighting those potentially exposed to delegation-related risks. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, and so on. 
 
+- Domain Admins
+- Enterprise Admins
+- Service accounts with elevated privileges
+
 **User impact**
 
-If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. Setting the sensitive flag on privileged user accounts prevent users from gaining access to the account and manipulating system settings.   
-For device accounts, setting them to "not delegated" is important to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
+If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. 
+
+Enabling the setting **This account is sensitive and can't be delegated** doesn't affect the account’s ability to log in or its assigned permissions. The restriction applies only to delegation scenarios, such as constrained or unconstrained Kerberos delegation. 
+Privileged accounts such as Domain Admins or Enterprise Admins shouldn't be delegated, as this poses a significant security risk. Enabling this setting helps prevent Kerberos delegation attacks by ensuring these accounts can't be impersonated.
+
+**Security recommendation**
+
+We recommend that you enable this setting for:
+
+Domain Admins
+Enterprise Admins
+Service accounts with elevated privileges
+
+Avoid applying this setting to accounts that require delegation for legitimate business purposes unless the delegation model is redesigned.
 
 **Implementation**
 
-
 1. Review the list of exposed entities to discover which of your privileged accounts don’t have the configuration flag "this account is sensitive and can't be delegated."
-
 1. Take appropriate action on those accounts:
 
-- For user accounts: by setting the account's control flags to "this account is sensitive and can't be delegated." Under the Account tab, select the check box to this flag in the Account Options section. This prevents users from gaining access to the account and manipulating system settings.    
+- User accounts: 
+    - Go to the **Accounts** tab >**Account options**.
+    - Select **Account is sensitive and cannot be delegated.** This prevents users from gaining access to the account and manipulating system settings.
 
     :::image type="content" source="../media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png" alt-text="Screenshot of the user profile.":::
 
-- For device accounts:  
+- Device accounts:  
 The safest approach is to use a PowerShell script to configure the device to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
 
   ```powershell
@@ -598,7 +608,7 @@ Organizations that fail to secure their account attributes leave the door unlock
 
 Malicious actors, much like thieves, often look for the easiest and quietest way into any environment. Accounts configured with an unsecure SID History attribute are windows of opportunities for attackers and can expose risks.
 
-For example, a non-sensitive account in a domain can contain the Enterprise Admin SID in its SID History from another domain in the Active Directory forest, thus "elevating" access for the user account to an effective Domain Admin in all domains in the forest. If you have a forest trust without SID Filtering enabled (also called Quarantine), it's possible to inject a SID from another forest and it will be added to the user token when authenticated and used for access evaluations.
+For example, a nonsensitive account in a domain can contain the Enterprise Admin SID in its SID History from another domain in the Active Directory forest, thus "elevating" access for the user account to an effective Domain Admin in all domains in the forest. If you have a forest trust without SID Filtering enabled (also called Quarantine), it's possible to inject a SID from another forest and it will be added to the user token when authenticated and used for access evaluations.
 
 **Implementation**
 
@@ -646,7 +656,7 @@ For example, if the **PasswordNotRequired** attribute is enabled, an attacker ca
 
 | Recommended action | Remediation | Reason |
 | --- | --- | --- |
-| Remove Do not require Kerberos preauthentication| Remove this setting from account properties in Active Directory (AD) | Removing this setting requires a Kerberos pre-authentication for the account resulting in improved security. |
+| Remove Don't require Kerberos preauthentication| Remove this setting from account properties in Active Directory (AD) | Removing this setting requires a Kerberos pre-authentication for the account resulting in improved security. |
 | Remove Store password using reversible encryption | Remove this setting from account properties in AD | Removing this setting prevents easy decryption of the account's password. |
 | Remove Password not required | Remove this setting from account properties in AD | Removing this setting requires a password to be used with the account and helps prevent unauthorized access to resources. |
 | Remove Password stored with weak encryption | Reset the account password | Changing the account's password enables stronger encryption algorithms to be used for its protection. |

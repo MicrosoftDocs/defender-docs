@@ -1,4 +1,4 @@
-﻿---
+---
 title: Take response actions on a device in Microsoft Defender for Endpoint
 description: Take response actions on a device such as isolating devices, collecting an investigation package, managing tags, running an antivirus scan, and restricting app execution.
 ms.service: defender-endpoint
@@ -6,14 +6,12 @@ ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 12/31/2025
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Business
 ---
@@ -97,20 +95,20 @@ Or, use this alternate procedure:
 1. Select **Collect Investigation Package** from the response actions section of the device page.
 
    ![Image of collect investigation package](media/collect-investigation-package.png)
-
+   
 1. Add comments and then select **Confirm**.
 
    ![Image of confirm comment](media/comments-confirm.png)
-
+   
 1. Select **Action center** from the response actions section of the device page.
 
    ![Image of action center](media/action-center-selected.png)
-
+   
 1. Select **Package collection package available** to download the collection package.
 
    ![Image of download package](media/download-package.png)
-
-      > [!NOTE]
+   
+   > [!NOTE]
    > The collection of the investigation package might fail if a device has a low battery level or is on a metered connection.
 
 ### Investigation package contents for Windows devices
@@ -205,7 +203,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
 
 **Important points to keep in mind**:
 
-- In environments that use Proxy Auto Configuration (PAC) files or WPAD settings, devices might not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings aren't required to avoid this scenario.
+- In environments that use web proxies (including Proxy Auto Configuration (PAC), WPAD, or static/direct proxy configurations), devices might not be able to recover from network isolation. Use selective isolation in such cases. When using selective isolation, exclusion settings aren't required to avoid this scenario.
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. You can also use live response to run the action. For more information on live response, see [Investigate entities on devices using live response](live-response.md)
 - Full isolation is available for devices running Windows 11, Windows 10, version 1703 or later, Windows Server 2012 R2 and later, and Azure Stack HCI OS, version 23H2 and later.
 - Isolating devices from the network is supported when Defender is running in passive mode on all supported Windows operating systems, macOS and Linux supported versions.
@@ -384,6 +382,8 @@ Furthermore, after an identity is considered "contained", that user will be bloc
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-lateral-move-block.png" alt-text="Shows a user contain lateral movement block event" lightbox="/defender/media/defender-endpoint/user-contain-lateral-move-block.png":::
 
+To view the current status of the contain user action and other actions, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
+
 ### Undo contain user actions
 
 > [!TIP]
@@ -427,13 +427,15 @@ To enrich predictive shielding actions, we recommend you use the Microsoft Defen
 
 After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
+To view the current status of the Safeboot hardening action and other actions, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
+
 ## Consult a threat expert
 
 You can consult a Microsoft threat expert for more insights regarding a potentially compromised device or already compromised ones. Microsoft Threat Experts can be engaged directly from within the Microsoft Defender XDR for timely and accurate response. Experts provide insights not just regarding a potentially compromised device, but also to better understand complex threats, targeted attack notifications that you get, or if you need more information about the alerts, or a threat intelligence context that you see on your portal dashboard.
 
 See [Configure and manage Endpoint Attack Notifications](configure-microsoft-threat-experts.md) for details.
 
-## Check activity details in Action center
+## Check activity details and status
 
 The Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) provides information on actions that were taken on a device or file. You are able to view the following details:
 
@@ -445,6 +447,8 @@ The Action center ([https://security.microsoft.com/action-center](https://securi
 All other related details are also shown, for example, submission date/time, submitting user, and if the action succeeded or failed.
 
 :::image type="content" source="media/action-center-details.png" alt-text="The action center with information" lightbox="media/action-center-details.png":::
+
+The **Activities** tab in the **Incident** page shows the details and status of actions that were taken as part of the incident response. For more information, see [Track the action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview).
 
 ## See also
 

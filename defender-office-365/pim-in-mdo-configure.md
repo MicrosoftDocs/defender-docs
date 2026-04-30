@@ -1,15 +1,10 @@
 ---
 title: Use Azure Privileged Identity Management (PIM) in Microsoft Defender for Office 365 to limit admin access to cyber security tools.
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.date: 2/20/2024
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 56fee1c7-dc37-470e-9b09-33fff6d94617
 ms.collection:
   - m365-security

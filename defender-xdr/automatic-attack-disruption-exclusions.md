@@ -2,22 +2,15 @@
 title: Exclude assets from automated response in attack disruption
 description: Learn more about how to exclude identities and devices from being automatically contained from automatic attack disruption.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
-manager: orspodek
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
   - usx-security
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 05/12/2025
 appliesto:
 - Microsoft Defender XDR

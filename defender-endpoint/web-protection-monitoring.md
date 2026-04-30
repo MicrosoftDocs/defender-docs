@@ -1,12 +1,10 @@
-﻿---
+---
 title: Monitoring web browsing security in Microsoft Defender for Endpoint
 description: Use web protection in Microsoft Defender for Endpoint to monitor web browsing security
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2

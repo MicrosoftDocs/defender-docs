@@ -4,12 +4,8 @@ description: Learn about how Microsoft Defender for Office 365 operates in the M
 ms.date: 09/11/2024
 ms.author: chrisda
 author: chrisda
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-- MET150
-- MOE150
 ms.collection:
 - m365-security
 - tier2

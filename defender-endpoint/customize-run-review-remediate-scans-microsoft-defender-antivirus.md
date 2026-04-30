@@ -1,4 +1,4 @@
-﻿---
+---
 title: Run and customize scheduled and on-demand scans
 description: Customize and initiate Microsoft Defender Antivirus scans on endpoints across your network
 ms.service: defender-endpoint
@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

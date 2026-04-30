@@ -2,20 +2,13 @@
 title: Get email notifications for response actions
 description: Set up email notifications to get notified of manual and automated response actions in Microsoft Defender XDR.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
-manager: orspodek
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 01/17/2025
 appliesto:
 - Microsoft Defender XDR

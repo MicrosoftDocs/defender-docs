@@ -5,15 +5,13 @@ ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 ms.custom:
 ms.topic: concept-article
-ms.date: 03/12/2026
+ms.date: 04/07/2026
 ms.reviewer:
-search.appverid: met150
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
@@ -41,9 +39,7 @@ This article describes how existing roles and permissions in the available Micro
 This article contains tables describing how to map your existing individual RBAC role defintions to the new Microsoft Defender unified RBAC permissions for the following products:
 
 > [!IMPORTANT]
-> As of February 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint organizations. New organizations can't export roles and permissions from the original permissions model. Existing organizations with roles and permissions assigned or exported before February maintain their current roles and permissions configuration.
->
-> As of March 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender for Identity organizations. New organizations can't export roles and permissions from the original permissions model. Existing organizations with roles and permissions assigned or exported before March maintain their current roles and permissions configuration.
+> Starting 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint tenants and Microsoft Defender for Identity tenants. These tenants can't export roles and permissions from the old model. Defender for Endpoint or Defender for Identity tenants with roles and permissions assigned or exported prior to this date maintain their old roles and permissions configuration.
 
 Use the tables in the following sections to learn more about how your existing individual RBAC role definitions map to your new Microsoft Defender unified RBAC roles:
 
@@ -98,7 +94,7 @@ You configured Email & collaboration permissions in the Defender portal at <http
 |Security Reader|Role group|Security operations \ Security data \Security data basics (read) <br/> Security operations \ Raw data (Email & collaboration) \ Email & collaboration metadata (read) <br/> Security operations \ Security data \ Response (manage) <br/> Authorization and settings \ Security settings \ Core security settings (read) <br/> Authorization and settings \ System setting (read)|
 |Audit Logs|Role|Security operations \ Security data \ Security data basics (read)|
 |Manage Alerts|Role|Security operations \ Security data \ Security data basics (read) <br/> Security operations \ Security data \ Alerts (manage)|
-|Preview|Role|Security operations\ Security operations \ Raw data (Email & collaboration) \ Email & collaboration content (read)|
+|Preview|Role|Security operations\ Security operations \ Raw data (Email & collaboration) \ Email & collaboration content: All Emails (read)|
 |Quarantine|Role|Security operations \ Security data \ Email quarantine (manage)|
 |Role Management|Role|Authorization and settings \ Authorization (Read and manage)|
 |Search and Purge|Role|Security operations \ Security data \ Email advanced actions (manage)|
@@ -184,11 +180,13 @@ The following table lists the available uRBAC roles and their permissions.
 
 Use the following table to learn how your existing permissions for Microsoft Sentinel map to the new Microsoft Defender unified RBAC permissions:
 
-|Sentinel permission|Defender unified RBAC permission|
-|---|-----|
-|Sentinel Reader|Security operations \ Security data \ Security data basic (read)|
-|Sentinel Responder|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage) </br>Security operations \ Security data \ Response (manage)|
-|Sentinel Contributor|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage)  </br>Security operations \ Security data \ Response (manage) </br>Authorization and settings \ Detection tuning (manage)|
+|Sentinel role|URBAC role|Defender unified RBAC permission|
+|---|---|-----|
+|Sentinel Reader|Defender Unified RBAC Reader|Security operations \ Security data \ Security data basic (read)|
+|Sentinel Responder|Defender Unified RBAC Responder|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage) </br>Security operations \ Security data \ Response (manage)|
+|Sentinel Contributor|Defender Unified RBAC Contributor and Responder|Security operations \ Security data \ Security data basic (read) </br>Security operations \ Security data \ Alerts (manage)  </br>Security operations \ Security data \ Response (manage) </br>Authorization and settings \ Detection tuning (manage)|
+|N/A|Defender Unified RBAC Scoped Reader|Security operations \ Security data \ Security data basic (read) <br/>Applies only to role assignments with Sentinel Scope applied|
+|N/A|Defender Unified RBAC Data Manager|Data operations \ Data management \ Data (manage)|
 
 The following roles aren't available in unified RBAC and must be managed in the Azure portal: Microsoft Sentinel Playbook Operator, Automation Contributor, and Workbook Contributor.
 

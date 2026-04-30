@@ -2,7 +2,6 @@
 title: Login pages in Attack simulation training
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -10,7 +9,6 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create and manage login pages for simulated phishing attacks in Microsoft Defender for Office 365 Plan 2.
-search.appverid: met150
 ms.date: 06/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>

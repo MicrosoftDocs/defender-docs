@@ -13,14 +13,13 @@ ms.custom:
 - cx-ti
 - cx-ean
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - essentials-manage
 ms.topic: how-to
 search.appverid: met150
-ms.date: 04/02/2026
+ms.date: 04/30/2026
 ---
 
 # Collaborate with experts on demand
