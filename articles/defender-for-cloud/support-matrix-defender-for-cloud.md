@@ -80,7 +80,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | [Attack path](concept-attack-path.md) | GA | NA |GA | NA |
 | [AI security posture management](ai-security-posture.md) | GA | GA | | NA |
 | [Active user](active-user.md) | Public preview | NA | | NA |
-| Security recommendations |GA|GA|GA NA|
+| Security recommendations |GA|GA|GA|NA|
 | Asset inventory |GA|GA|GA|NA|
 | Secure score |GA|GA|GA|NA|
 | [Workbooks](custom-dashboards-azure-workbooks.md) |GA|GA|NA|GA|
