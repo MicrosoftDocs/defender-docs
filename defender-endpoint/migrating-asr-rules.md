@@ -251,4 +251,4 @@ This article helps you to map common rules to Microsoft Defender for Endpoint.
 
 - [Attack surface reduction FAQ](attack-surface-reduction-faq.yml)
 - [Configure attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md)
-- [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
+- [Test ASR rules](attack-surface-reduction-rules-deployment-test.md)

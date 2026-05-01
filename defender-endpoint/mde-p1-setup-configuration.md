@@ -142,8 +142,7 @@ To configure your next-generation protection in Intune, follow these steps:
 
 1. Select **Endpoint security** > **Antivirus**, and then select an existing policy. (If you don't have an existing policy, create a new policy.)
 
-1. Set or change your antivirus configuration settings. Need help? Refer to the following resources: <br/>
-
+1. Set or change your antivirus configuration settings. Need help? Refer to the following resources:
    - [Settings for Windows 10 Microsoft Defender Antivirus policy in Microsoft Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows)
    - [Configure Defender for Endpoint on iOS features](ios-configure-features.md)
 
@@ -151,11 +150,11 @@ To configure your next-generation protection in Intune, follow these steps:
 
 ## Configure your attack surface reduction capabilities
 
-Attack surface reduction is all about reducing the places and ways your organization is open to attack. Defender for Endpoint Plan 1 includes several features and capabilities to help you reduce your attack surfaces across your endpoints. These features and capabilities are listed in the following table: <br/><br/>
+Attack surface reduction is all about reducing the places and ways your organization is open to attack. Defender for Endpoint Plan 1 includes several features and capabilities to help you reduce your attack surfaces across your endpoints. These features and capabilities are listed in the following table:
 
 |Feature/capability|Description|
 |---|---|
-|[Attack surface reduction rules](#attack-surface-reduction-rules)|Configure attack surface reduction rules to constrain software-based risky behaviors and help keep your organization safe. Attack surface reduction rules target certain software behaviors, such as<br/>- Launching executable files and scripts that attempt to download or run files <br/>- Running obfuscated or otherwise suspicious scripts <br/>- Performing behaviors that apps don't usually initiate during normal day-to-day work <br/><br/>Such software behaviors are sometimes seen in legitimate applications. However, these behaviors are often considered risky because they're commonly abused by attackers through malware.|
+|[Attack surface reduction (ASR) rules](#attack-surface-reduction-asr-rules)|Configure ASR rules to constrain risky software behavior and help keep your organization safe. ASR rules target the following types of software behavior<br/>- Launching executable files and scripts that attempt to download or run files <br/>- Running obfuscated or otherwise suspicious scripts <br/>- Performing behaviors that apps don't usually initiate during normal day-to-day work <br/><br/>Such software behaviors are sometimes seen in legitimate applications. However, these behaviors are often considered risky because they're commonly abused by attackers through malware.|
 |[Ransomware mitigation](#ransomware-mitigation)|Set up ransomware mitigation by configuring controlled folder access, which helps protect your organization's valuable data from malicious apps and threats, such as ransomware.|
 |[Device control](#device-control)|Configure device control settings for your organization to allow or block removable devices (such as USB drives).|
 |[Network protection](#network-protection)|Set up network protection to prevent people in your organization from using applications that access dangerous domains or malicious content on the Internet.|
@@ -163,44 +162,13 @@ Attack surface reduction is all about reducing the places and ways your organiza
 |[Network firewall](#network-firewall)|Configure your network firewall with rules that determine which network traffic is permitted to come into or go out from your organization's devices.|
 |[Application control](#application-control)|Configure application control rules if you want to allow only trusted applications and processes to run on your Windows devices.|
 
-### Attack surface reduction rules
+<a name='attack-surface-reduction-rules'></a>
 
-Attack surface reduction rules are available on devices running Windows. We recommend using Intune, as shown in the following image:
+### Attack surface reduction (ASR) rules
 
-:::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="Screenshot of attack surface reduction rules in the Intune portal." lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
+Attack surface reduction (ASR) rules are available in Microsoft Defender Antivirus on Windows devices. For the available deployment methods, see [Deployment and configuration methods for ASR rules](attack-surface-reduction-rules-overview.md#deployment-and-configuration-methods-for-asr-rules).
 
-1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
-
-1. Choose **Endpoint security** > **Attack surface reduction** > **+ Create policy**.
-
-1. For **Platform**, select **Windows 10, Windows 11, and Windows Server**.
-
-1. For **Profile**, select **Attack surface reduction rules**, and then choose **Create**.
-
-1. On the **Basics** tab, specify a name and description for the policy, and then choose **Next**.
-
-1. On the **Configuration settings** tab, expand under **Defender**, configure your attack surface reduction (ASR) rules, and then choose **Next**. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
-
-   At a minimum, we recommend enabling the following three standard protection rules:
-
-   - [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
-   - [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
-   - [Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
-
-1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**.
-
-   To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
-
-1. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (To learn more about assignments, see [Assign user and device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).)
-
-1. On the **Review + create** tab, review the settings, and then choose **Create**.
-
-> [!TIP]
-> To learn more about attack surface reduction rules, see the following resources:
->
-> - [Use attack surface reduction rules to prevent malware infection](attack-surface-reduction-rules-overview.md)
-> - [View the list of attack surface reduction rules](attack-surface-reduction-rules-reference.md)
-> - [Attack surface reduction rules deployment Step 3: Implement attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
+Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** mode without testing. You should test all other rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 ### Ransomware mitigation
 

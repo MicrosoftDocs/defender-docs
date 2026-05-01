@@ -186,10 +186,10 @@ Exploit protection provides features that help protect devices from known malici
   Set-ProcessMitigation -PolicyFilePath ProcessMitigation.xml
   ```
 
-- **Block known malicious attack vectors with [attack surface reduction rules](attack-surface-reduction-rules-overview.md)**:
+- **Block known malicious attack vectors with [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)**:
 
    > [!IMPORTANT]
-   > Typically, you can enable standard protection ASR rules in **Block** or **Warn** mode without testing, but you should test other ASR rules in **Audit** before you enabled them. For more information, see [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md).
+   > Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
   ```powershell
   Add-MpPreference -AttackSurfaceReductionRules_Ids 56a863a9-875e-4185-98a7-b882c64b5ce5,9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2,e6db77e5-3df2-4cf1-b95a-636979351e5b -AttackSurfaceReductionRules_Actions Enabled,Enabled,Enabled

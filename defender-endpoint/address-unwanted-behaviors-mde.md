@@ -118,7 +118,7 @@ In this scenario, a third-party app that isn't a threat is detected and identifi
 
 In this scenario, a legitimate app is detected and identified as malicious by an [attack surface reduction (ASR) rule](attack-surface-reduction-rules-overview.md) in Microsoft Defender Antivirus. The ASR rule [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content) blocks the app any downloaded content whe the user tries to use the app.
 
-For the available methods to see ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity(attack-surface-reduction-rules-monitor.md).
+For the available methods to see ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
 
 **How to address**:
 

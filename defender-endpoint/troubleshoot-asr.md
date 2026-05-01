@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: chrisda
 ms.author: chrisda
-ms.date: 04/01/2026
+ms.date: 05/01/2026
 ms.reviewer:
 ms.custom: asr
 ms.subservice: asr
@@ -22,12 +22,12 @@ appliesto:
 
 # Troubleshoot attack surface reduction (ASR) rules
 
-Even after you carefully [plan](attack-surface-reduction-rules-deployment-plan.md), [test](attack-surface-reduction-rules-deployment-test.md) and [implement](attack-surface-reduction-rules-deployment-implement.md) attack surface reduction (ASR) rules on Windows devices in your organization, you still might run into issues. For example:
+Even after you carefully follow the [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md), you still might run into issues with ASR rules in Microsoft Defender Antivirus. For example:
 
 - An ASR rule blocks a file or process, or does some other action that it shouldn't (false positive).
 - An ASR rule doesn't work as described, or doesn't block a file or process that it should (false negative).
 
-This article describes the steps you can take yourself to troubleshoot the issues, including collecting data to open a support case with Microsoft if you are unable to fix the problem yourself.
+This article describes the steps you can take yourself to troubleshoot the issues, including collecting data to open a support case with Microsoft if you are unable to fix the problem yourself. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 ## Confirm ASR rule prerequisites
 
@@ -147,6 +147,5 @@ In the `MpSupportFiles.cab` file, the following files are most relevant:
 
 ## Related articles
 
-- [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)
 - [Configure attack surface reduction (ASR) rules and exceptions](attack-surface-reduction-rules-configure.md)
-- [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
+- [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md)

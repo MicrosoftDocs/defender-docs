@@ -193,8 +193,8 @@ sections:
       - question: |
           Where can I find more information about attack surface reduction rules?
         answer: |
-          - [Attack surface reduction rules overview](attack-surface-reduction-rules-overview.md)
-          - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
-          - [Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
-          - [Implement attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
-          - [Enable attack surface reduction rules](attack-surface-reduction-rules-configure.md)
+          - [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
+          - [Attack surface reduction (ASR)rules reference](attack-surface-reduction-rules-reference.md)
+          - [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
+          - [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md)
+          - [Configure attack surface reduction (ASR) rules](attack-surface-reduction-rules-configure.md)

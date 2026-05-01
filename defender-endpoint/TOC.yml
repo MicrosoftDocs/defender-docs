@@ -1006,8 +1006,6 @@
         href: /intune/intune-service/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
       - name: Increase compliance with the security baseline
         href: configure-machines-security-baseline.md
-      - name: Optimize ASR rules deployment and detections
-        href: configure-machines-asr.md
       - name: Built-in protection
         href: built-in-protection.md
 

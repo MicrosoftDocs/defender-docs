@@ -86,7 +86,7 @@ Each capability addresses a different part of the attack surface:
 
 Audit mode helps you evaluate the impact of attack surface reduction features on your environment without affecting productivity. The following capabilities support audit mode:
 
-- [ASR rules](attack-surface-reduction-rules-deployment-test.md#step-1-test-attack-surface-reduction-rules-using-audit)
+- [Attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md)
 - [Controlled folder access](enable-controlled-folders.md).
 - [Exploit protection](defender-endpoint/enable-exploit-protection.md)
 - [Network protection](enable-network-protection.md)
