@@ -24,7 +24,7 @@ appliesto:
 
 # Monitor attack surface reduction (ASR) rule activity
 
-A critical part of any deployment of attack surface reduction (ASR) rules deployment is monitoring the affect of rules on devices. This article describes the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
+A critical part of any deployment of attack surface reduction (ASR) rules is monitoring the effect of rules on devices. This article describes the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 ## ASR rules report
 
