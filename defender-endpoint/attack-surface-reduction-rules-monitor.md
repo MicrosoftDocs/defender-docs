@@ -86,7 +86,7 @@ A narrower scoped alternative to advanced hunting is the Defender for Endpoint d
 To open the device timeline of a device in the Microsoft Defender portal, complete the following steps:
 
 1. Open the **Device Inventory** page at <https://security.microsoft.com/machines>.
-1. On the appropriate tab of the **Device Inventory** page (for example, **All devices** or **Computers & mobile**) select a device by clicking on the link in the **Name** column value.
+1. On the appropriate tab of the **Device Inventory** page (for example, **All devices** or **Computers & mobile**), select a device by clicking on the link in the **Name** column value.
 1. In the details page that opens, select the **Timeline** tab.
 1. On the **Timeline** tab, select **Filter**. In the **Filter** flyout that opens, select **ASR events** from the **Event group** section, and then select **Apply**.
 
