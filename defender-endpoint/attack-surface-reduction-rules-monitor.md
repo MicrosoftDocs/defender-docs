@@ -24,7 +24,7 @@ appliesto:
 
 # Monitor attack surface reduction (ASR) rule activity
 
-A critical part of any deployment of attack surface reduction (ASR) rules is monitoring the effect of rules on devices. This article describes the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
+A critical part of any deployment of attack surface reduction (ASR) rules deployment is monitoring the affect of rules on devices. This article describes the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 ## ASR rules report
 
@@ -44,7 +44,7 @@ One of the most powerful features of [Microsoft Defender XDR](https://security.m
 
 Advanced hunting is a Kusto Query Language (KQL) threat-hunting tool in the Microsoft Defender portal that lets you explore up to 30 days of the captured (raw) data from devices. You can proactively inspect events to find interesting indicators and entities for both known and potential threats. The flexible access to data allows hunting for both known and potential threats.
 
-Through advanced hunting, you can extract ASR rule information, create reports, and get in-depth information on the context of a specific audit or block event from ASR rules.
+Through advanced hunting, it's possible to extract ASR rule information, create reports, and get in-depth information on the context of a specific audit or block event from ASR rules.
 
 ASR rule events are available in the `DeviceEvents` table on the **Advanced hunting** page of the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>.
 
@@ -83,10 +83,10 @@ For more information about hunting options, see: [Demystifying attack surface re
 
 A narrower scoped alternative to advanced hunting is the Defender for Endpoint device timeline. For more information, see [Microsoft Defender for Endpoint device timeline](device-timeline-event-flag.md).
 
-To open the device timeline of a device in the Microsoft Defender portal, complete the following steps:
+To open the device timeline of a device in the Microsoft Defender portal, do the following steps:
 
 1. Open the **Device Inventory** page at <https://security.microsoft.com/machines>.
-1. On the appropriate tab of the **Device Inventory** page (for example, **All devices** or **Computers & mobile**), select a device by clicking on the link in the **Name** column value.
+1. On the appropriate tab of the **Device Inventory** page (for example, **All devices** or **Computers & mobile**) select a device by clicking on the link in the **Name** column value.
 1. In the details page that opens, select the **Timeline** tab.
 1. On the **Timeline** tab, select **Filter**. In the **Filter** flyout that opens, select **ASR events** from the **Event group** section, and then select **Apply**.
 
