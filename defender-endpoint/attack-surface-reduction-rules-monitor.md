@@ -44,7 +44,7 @@ One of the most powerful features of [Microsoft Defender XDR](https://security.m
 
 Advanced hunting is a Kusto Query Language (KQL) threat-hunting tool in the Microsoft Defender portal that lets you explore up to 30 days of the captured (raw) data from devices. You can proactively inspect events to find interesting indicators and entities for both known and potential threats. The flexible access to data allows hunting for both known and potential threats.
 
-Through advanced hunting, it's possible to extract ASR rule information, create reports, and get in-depth information on the context of a specific audit or block event from ASR rules.
+Through advanced hunting, you can extract ASR rule information, create reports, and get in-depth information on the context of a specific audit or block event from ASR rules.
 
 ASR rule events are available in the `DeviceEvents` table on the **Advanced hunting** page of the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>.
 
