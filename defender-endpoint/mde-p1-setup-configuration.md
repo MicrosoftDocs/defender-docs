@@ -168,7 +168,7 @@ Attack surface reduction is all about reducing the places and ways your organiza
 
 Attack surface reduction (ASR) rules are available in Microsoft Defender Antivirus on Windows devices. For the available deployment methods, see [Deployment and configuration methods for ASR rules](attack-surface-reduction-rules-overview.md#deployment-and-configuration-methods-for-asr-rules).
 
-Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** mode without testing. You should test all other rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
+Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 ### Ransomware mitigation
 

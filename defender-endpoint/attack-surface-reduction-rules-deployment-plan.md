@@ -30,7 +30,7 @@ This first step in your attack surface reduction (ASR) rules deployment is to pl
 > :::image type="content" source="media/asr-rules-planning-steps.png" alt-text="The ASR rule planning steps." lightbox="media/asr-rules-planning-steps.png":::
 
 > [!TIP]
-> Typically, you can enable the three _standard protection rules_ without extensive testing. For more information, see [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules).
+> Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 ## Infrastructure requirements for the deployment guide
 

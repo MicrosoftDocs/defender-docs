@@ -306,7 +306,7 @@ It's important to take advantage of the included threat protection capabilities 
 
 ### Attack surface reduction rules
 
-Typically, you can configure the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in `Block` mode. You should test all other attack surfacer reduction (ASR) rules in `Audit` mode first. For more information, see the [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md).
+Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 ### Enable network protection
 

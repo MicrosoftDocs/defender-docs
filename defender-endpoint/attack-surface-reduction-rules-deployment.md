@@ -35,7 +35,7 @@ This guide helps you plan, test, implement, and manage your ASR rules deployment
 
 ## Important predeployment caveat
 
-There are three ASR rules that we classify as _standard protection rules_. Typically, you can enable these three rules without extensive testing, with minimal-to-no noticeable impact on users, and with great security benefit. For more information, see [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules).
+Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 ## Before you begin
 
