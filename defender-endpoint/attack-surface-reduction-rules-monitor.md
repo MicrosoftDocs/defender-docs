@@ -83,7 +83,7 @@ For more information about hunting options, see: [Demystifying attack surface re
 
 A narrower scoped alternative to advanced hunting is the Defender for Endpoint device timeline. For more information, see [Microsoft Defender for Endpoint device timeline](device-timeline-event-flag.md).
 
-To open the device timeline of a device in the Microsoft Defender portal, do the following steps:
+To open the device timeline of a device in the Microsoft Defender portal, complete the following steps:
 
 1. Open the **Device Inventory** page at <https://security.microsoft.com/machines>.
 1. On the appropriate tab of the **Device Inventory** page (for example, **All devices** or **Computers & mobile**) select a device by clicking on the link in the **Name** column value.
