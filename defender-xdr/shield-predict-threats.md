@@ -41,9 +41,6 @@ In a typical attack, defenders react after malicious activity is detected — bu
 
 This means security teams gain critical response time. Rather than racing to manually isolate every potentially affected asset, Defender autonomously narrows the attacker's options while analysts investigate.
 
-<!-- TODO: Confirm with PM (Aviv Sharon) whether "accelerated telemetry collection from at-risk systems" is accurate and documentable. If confirmed, add:
-"During an active attack, Defender also increases telemetry collection frequency from devices identified as at-risk, providing security teams with richer, more granular data to inform their investigation." -->
-
 ## How predictive shielding expands on automatic attack disruption
 
 The evolving threat landscape creates an imbalance: defenders must secure every asset, while attackers need only one opening. Traditional defenses are reactive, responding after malicious activity begins. This approach leaves defenders chasing attackers, who often act too quickly or subtly to detect in real time. While some attacker behaviors must be blocked outright, static prevention disrupts productivity and adds operational overhead.
