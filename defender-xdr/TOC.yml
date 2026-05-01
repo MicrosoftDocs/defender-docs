@@ -450,18 +450,16 @@
             href: auditing.md
           - name: Work with MSSPs
             href: defender-experts-managed-security-guide.md
-        - name: Frequently asked questions
-          items:
-          - name: General information
-            href: frequently-asked-questions.md
-          - name: Defender Experts for XDR Incident notifications
-            href: faq-incident-notifications-xdr.md
-          - name: Managed response
-            href: faq-managed-response.md
-          - name: Server and cloud workload coverage
-            href: faq-cloud-coverage-defender-experts.md
         - name: Additional information on Defender Experts for XDR
           items:
+          - name: Frequently asked questions
+            items:
+            - name: General information
+              href: frequently-asked-questions.md
+            - name: Managed response
+              href: faq-managed-response.md
+            - name: Server and cloud workload coverage
+              href: faq-cloud-coverage-defender-experts.md
           - name: Important considerations
             href: additional-information-xdr.md
           - name: How Defender Experts for XDR permissions work
