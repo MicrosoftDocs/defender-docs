@@ -2,8 +2,8 @@
 title: Unified identity security recommendations (Preview)
 description: Learn which identity sources and applications are covered by security recommendations in Microsoft Defender, including Active Directory, SaaS apps, and non-Microsoft identity providers.
 #customer intent: As a security admin, I want to understand which identity sources have security recommendations in Microsoft Defender so that I can assess my coverage and plan improvements.
-author: AbbyMSFT
 ms.author: abbyweisberg
+author: AbbyMSFT
 ms.reviewer: maelgami
 ms.date: 03/17/2026
 ms.topic: concept-article

@@ -1,8 +1,8 @@
 ---
 title: Manage Advanced Security Information Model (ASIM) parsers | Microsoft Docs
 description: This article explains how to manage Advanced Security Information Model (ASIM) parsers, add a customer parser, and replace a built-in parser.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
 ms.reviewer: ofshezaf
 ms.topic: how-to
 ms.date: 11/09/2021
@@ -10,7 +10,7 @@ ms.date: 11/09/2021
 
 #Customer intent: As a security analyst, I want to manage and customize ASIM parsers so that I can normalize and analyze security data from various sources effectively.
 
---- 
+---
 
 # Manage Advanced Security Information Model (ASIM) parsers
 

@@ -2,8 +2,8 @@
 title: include file
 description: include file
 services: lighthouse
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
 ms.service: azure-lighthouse
 ms.topic: include
 ms.date: 05/03/2024

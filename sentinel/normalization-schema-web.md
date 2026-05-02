@@ -3,8 +3,8 @@ title: The Advanced Security Information Model (ASIM) Web Session normalization 
 description: This article displays the Microsoft Sentinel Web Session normalization schema.
 services: sentinel
 cloud: na
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
 ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 11/17/2021

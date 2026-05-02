@@ -1,8 +1,8 @@
 ---
 title: Advanced Security Information Model (ASIM) known issues | Microsoft Docs
 description: This article outlines the Microsoft Sentinel Advanced Security Information Model (ASIM) known issues.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
 ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 08/02/2021

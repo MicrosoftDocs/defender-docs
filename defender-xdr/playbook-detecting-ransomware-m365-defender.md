@@ -2,8 +2,8 @@
 title:                     Detecting human-operated ransomware attacks with Microsoft Defender XDR
 description:               This article describes proactive detection of new or ongoing human-operated ransomware attacks with the Microsoft Defender portal
 search.appverid: MET150    
-author: poliveria
 ms.author: pauloliveria
+author: poliveria
 ms.reviewer: noriordan
 audience:                  ITPro
 ms.topic:                  article

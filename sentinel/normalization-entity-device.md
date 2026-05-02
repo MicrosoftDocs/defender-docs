@@ -1,8 +1,8 @@
 ---
 title: The Advanced Security Information Model (ASIM) Device Entity reference | Microsoft Docs
 description: This article displays the Microsoft Sentinel Device Entity schema.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
 ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 07/18/2025
