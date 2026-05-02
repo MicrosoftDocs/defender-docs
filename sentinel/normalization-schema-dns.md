@@ -2,9 +2,9 @@
 title: The Advanced Security Information Model (ASIM) DNS normalization schema reference | Microsoft Docs
 description: This article describes the Microsoft Sentinel DNS normalization schema.
 author: EdB-MSFT
+ms.author: edbaynash
 ms.topic: reference
 ms.date: 11/09/2021
-ms.author: edbaynash
 
 
 #Customer intent: As a security analyst, I want to understand the ASIM DNS normalization schema so that I can effectively analyze DNS events across different sources.

@@ -2,9 +2,9 @@
 title: The Advanced Security Information Model (ASIM) Authentication normalization schema reference | Microsoft Docs
 description: This article describes the Microsoft Sentinel Authentication normalization schema.
 author: EdB-MSFT
+ms.author: edbaynash
 ms.topic: reference
 ms.date: 11/09/2021
-ms.author: edbaynash
 
 
 #Customer intent: As a security analyst, I want to use the ASIM Authentication normalization schema so that I can standardize and analyze authentication events across multiple sources for improved threat detection.

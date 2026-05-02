@@ -4,9 +4,9 @@ description: This article displays the Microsoft Sentinel Web Session normalizat
 services: sentinel
 cloud: na
 author: EdB-MSFT
+ms.author: edbaynash
 ms.topic: reference
 ms.date: 11/17/2021
-ms.author: edbaynash
 
 
 

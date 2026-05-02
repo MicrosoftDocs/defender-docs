@@ -2,9 +2,9 @@
 title: Ingest time normalization | Microsoft Docs
 description: This article explains how Microsoft Sentinel normalizes data at ingest
 author: EdB-MSFT
+ms.author: edbaynash
 ms.topic: concept-article
 ms.date: 12/28/2022
-ms.author: edbaynash
 
 
 #Customer intent: As a security analyst, I want to understand the differences between query time and ingest time normalization so that I can optimize data processing and query performance in my security information and event management (SIEM) system.

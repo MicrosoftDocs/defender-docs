@@ -1,8 +1,8 @@
 ---
 title: SOC optimization reference
 description: Learn about the Microsoft Sentinel SOC optimization recommendations available to help you optimize your security operations.
-ms.author: monaberdugo
 author: mberdugo
+ms.author: monaberdugo
 ms.collection:
   - usx-security
 ms.topic: reference

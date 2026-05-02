@@ -2,9 +2,9 @@
 title: The Advanced Security Information Model (ASIM) Alert Events normalization schema reference | Microsoft Docs
 description: This article displays the Microsoft Sentinel Alert Events normalization schema.
 author: EdB-MSFT
+ms.author: edbaynash
 ms.topic: reference
 ms.date: 07/11/2024
-ms.author: edbaynash
 
 
 
