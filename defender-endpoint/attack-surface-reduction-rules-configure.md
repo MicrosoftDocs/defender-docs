@@ -21,7 +21,7 @@ ms.date: 04/15/2026
 
 # Configure attack surface reduction (ASR) rules and exclusions
 
-[Attack surface reduction rules](attack-surface-reduction-rules-overview.md) help prevent actions that malware often abuses to compromise devices and networks. This article describes how to enable and configure attack surface reduction rules.
+[Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes). This article describes how to enable and configure ASR rules.
 
 To manage ASR rules, we always recommend enterprise-level management solutions like Microsoft Intune or Microsoft Configuration Manager. ASR rule settings from Intune or Configuration Manager overwrite any conflicting settings from group policy or PowerShell on startup.
 

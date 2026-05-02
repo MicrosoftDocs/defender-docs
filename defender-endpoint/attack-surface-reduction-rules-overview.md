@@ -23,16 +23,16 @@ appliesto:
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
-Attack surface reduction (ASR) rules in Microsoft Defender Antivirus are a key component in reducing your organization's _attack surface_ (entry points that could give attackers access to your organization). For more information about attack surface reduction, see [Attack surface reduction in Microsoft Defender for Endpoint](attack-surface-reduction-overview.md).
+Your organization's _attack surface_ includes all the places where an attacker could gain access. For more information, see [Attack surface reduction in Microsoft Defender for Endpoint](attack-surface-reduction-overview.md).
 
-ASR rules target risky software behavior on Windows devices. For example:
+Attack surface reduction (ASR) rules in Microsoft Defender Antivirus target risky software behavior on Windows devices that attackers commonly exploit through malware. For example:
 
 - Launching executable files and scripts that attempt to download or run files.
 - Running obfuscated or otherwise untrusted scripts.
-- Creating child processes from other, potentially vulnerable processes.
+- Creating child processes from potentially vulnerable applications (for example, Office apps).
 - Injecting code into other processes.
 
-Although some legitimate apps might also do these actions, the actions are considered risky because attackers use malware that behaves the same way. ASR rules can constrain risky software behavior on Windows devices to help keep your organization safe.
+Although legitimate apps might also do these things, attackers commonly use malware that behaves the same way.
 
 See the following series of articles to plan, test, implement, and monitor ASR rules:
 

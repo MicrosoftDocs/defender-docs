@@ -22,7 +22,7 @@ appliesto:
 
 # Attack surface reduction (ASR) rules reference
 
-_Attack surfaces_ are the places where your organization is vulnerable to threats and attacks. Attack surface reduction rules (ASR rules) in Microsoft Defender for Endpoint enables you to reduce the attack surface of **Microsoft Windows devices**. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
+Attack surface reduction (ASR) rules target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes). For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 This article is a technical reference for ASR rules that provides the following information:
 

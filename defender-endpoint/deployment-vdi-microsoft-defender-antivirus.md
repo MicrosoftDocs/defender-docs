@@ -19,8 +19,8 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
-
 ---
+
 # Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 
 This article is designed for customers who are using Microsoft Defender Antivirus capabilities only. If you have Microsoft Defender for Endpoint (which includes Microsoft Defender Antivirus alongside other device protection capabilities), see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md).
@@ -63,18 +63,17 @@ In Windows 10, version 1903, Microsoft introduced the shared security intelligen
 
 ### PowerShell
 
-1. On each RDS or VDI device, use the following cmdlet to enable the feature: 
+1. On each RDS or VDI device, use the following cmdlet to enable the feature:
 
    `Set-MpPreference -SharedSignaturesPath \\<File Server shared location>\wdav-update`
-   
-1. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section in this article. Look for the *shared location* entry.) 
+
+1. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section in this article. Look for the *shared location* entry.)
 
 ## Download and unpackage the latest updates
 
 Now you can get started on downloading and installing new updates. This section contains a sample PowerShell script that you can use. This script is the easiest way to download new updates and get them ready for your VMs. You should then set the script to run at a certain time on the management machine by using a scheduled task. Or, if you're familiar with using PowerShell scripts in Azure, Intune, or Configuration Manager, you could use those scripts instead.
 
-```PowerShell
-
+```powershell
 $vdmpathbase = "$env:systemdrive\wdav-update\{00000000-0000-0000-0000-"
 $vdmpathtime = Get-Date -format "yMMddHHmmss"
 $vdmpath = $vdmpathbase + $vdmpathtime + '}'
@@ -85,7 +84,6 @@ New-Item -ItemType Directory -Force -Path $vdmpath | Out-Null
 Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64' -OutFile $vdmpackage
 
 Start-Process -FilePath $vdmpackage -WorkingDirectory $vdmpath -ArgumentList "/x"
-
 ```
 
 You can set a scheduled task to run once a day so that whenever the package is downloaded and unpacked then the VMs receive the new update. We suggest starting with once a day, but you should experiment with increasing or decreasing the frequency to understand the impact.
@@ -99,31 +97,31 @@ You can also set up your single server or machine to fetch the updates on behalf
 1. Use the following example to create a file share with the following share permissions.
 
    ```PowerShell
-   
+
    PS c:\> Get-SmbShareAccess -Name mdatp$
 
    Name   ScopeName AccountName AccessControlType AccessRight
    ----   --------- ----------- ----------------- -----------
    mdatp$ *         Everyone    Allow             Read
-   
+
    ```
 
    > [!NOTE]
    > An NTFS permission is added for **Authenticated Users:Read:**.
 
    For this example, the file share is `\\FileServer.fqdn\mdatp$\wdav-update`.
-   
+
 ### Set a scheduled task to run the PowerShell script
 
 1. On the management machine, open the **Start** menu and type `Task Scheduler`. From the results, select Task Scheduler and then select **Create task...** in the side panel.
 
-1. Specify the name as `Security intelligence unpacker`. 
+1. Specify the name as `Security intelligence unpacker`.
 
 1. On the **Trigger** tab, select **New...** > **Daily**, and select **OK**.
 
 1. On the **Actions** tab, select **New...**.
 
-1. Specify `PowerShell` in the **Program/Script** field. 
+1. Specify `PowerShell` in the **Program/Script** field.
 
 1. In the **Add arguments**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
 
@@ -186,6 +184,7 @@ It's important to take advantage of the included threat protection capabilities 
 
    > [!NOTE]
    > Sometimes, Microsoft Defender Antivirus notifications are sent to or persist across multiple sessions. To help avoid user confusion, you can lock down the Microsoft Defender Antivirus user interface.
+   >
    > Suppressing notifications prevents notifications from Microsoft Defender Antivirus from showing up when scans are done or remediation actions are taken. However, your security operations team sees the results of a scan if an attack is detected and stopped. Alerts, such as an initial access alert, are generated, and appear in the [Microsoft Defender portal](https://security.microsoft.com).
 
 ### MAPS
@@ -305,6 +304,8 @@ It's important to take advantage of the included threat protection capabilities 
    |`5` (Severe) |`2`|
 
 ### Attack surface reduction rules
+
+ASR rules target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes). For more information, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 

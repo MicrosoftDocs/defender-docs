@@ -21,7 +21,7 @@ appliesto:
 
 # Migrating from a non-Microsoft HIPS to attack surface reduction rules
 
-This article helps you to map common rules to Microsoft Defender for Endpoint.
+This article helps you map common rules to Microsoft Defender for Endpoint. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 ## Scenarios when migrating from a non-Microsoft HIPS product to attack surface reduction rules
 
@@ -251,4 +251,3 @@ This article helps you to map common rules to Microsoft Defender for Endpoint.
 
 - [Attack surface reduction FAQ](attack-surface-reduction-faq.yml)
 - [Configure attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md)
-- [Test ASR rules](attack-surface-reduction-rules-deployment-test.md)

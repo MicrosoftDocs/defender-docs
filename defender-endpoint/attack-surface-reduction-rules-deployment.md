@@ -24,7 +24,7 @@ appliesto:
 
 # Attack surface reduction (ASR) rules deployment guide
 
-Attack surface reduction (ASR) rules are a key component of reducing the attack surface of your organization. For an introduction to ASR rules and their requirements, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
+Attack surface reduction (ASR) rules target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes). For an introduction to ASR rules and their requirements, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 This guide helps you plan, test, implement, and manage your ASR rules deployment to effectively stop advanced threats like human-operated ransomware.
 

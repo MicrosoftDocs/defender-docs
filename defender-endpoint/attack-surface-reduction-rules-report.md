@@ -36,7 +36,7 @@ The report provides an easy-to-use interface that enables you to complete the fo
 - Add and manage exclusions.
 - Gather detailed information.
 
-For more information about ASR rules, see [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md).
+For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 ## Prerequisites
 

@@ -154,7 +154,7 @@ Attack surface reduction is all about reducing the places and ways your organiza
 
 |Feature/capability|Description|
 |---|---|
-|[Attack surface reduction (ASR) rules](#attack-surface-reduction-asr-rules)|Configure ASR rules to constrain risky software behavior and help keep your organization safe. ASR rules target the following types of software behavior<br/>- Launching executable files and scripts that attempt to download or run files <br/>- Running obfuscated or otherwise suspicious scripts <br/>- Performing behaviors that apps don't usually initiate during normal day-to-day work <br/><br/>Such software behaviors are sometimes seen in legitimate applications. However, these behaviors are often considered risky because they're commonly abused by attackers through malware.|
+|[Attack surface reduction (ASR) rules](#attack-surface-reduction-asr-rules)|ASR rules target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes).|
 |[Ransomware mitigation](#ransomware-mitigation)|Set up ransomware mitigation by configuring controlled folder access, which helps protect your organization's valuable data from malicious apps and threats, such as ransomware.|
 |[Device control](#device-control)|Configure device control settings for your organization to allow or block removable devices (such as USB drives).|
 |[Network protection](#network-protection)|Set up network protection to prevent people in your organization from using applications that access dangerous domains or malicious content on the Internet.|
