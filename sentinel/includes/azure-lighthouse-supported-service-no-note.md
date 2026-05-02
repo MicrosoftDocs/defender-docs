@@ -2,11 +2,11 @@
 title: include file
 description: include file
 services: lighthouse
-author: JnHs
+author: guywi-ms
+ms.author: guywild
 ms.service: azure-lighthouse
 ms.topic: include
 ms.date: 05/03/2024
-ms.author: jenhayes
 ms.custom: include file
 ---
 

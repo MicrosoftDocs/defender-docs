@@ -1,8 +1,8 @@
 ---
 title: Publish security information and event management (SIEM) solutions to Microsoft Sentinel
 description: This article guides you through the process of publishing solutions to Microsoft Sentinel.
-author: anilgodavarthy
-ms.author: angodavarthy
+author: mberdugo
+ms.author: monaberdugo
 ms.service: microsoft-sentinel
 ms.topic: how-to 
 ms.date: 10/08/2024

@@ -1,10 +1,10 @@
 ---
 title: The Advanced Security Information Model (ASIM) User Entity reference | Microsoft Docs
 description: This article displays the Microsoft Sentinel User Entity schema.
-author: oshezaf
+author: EdB-MSFT
 ms.topic: reference
 ms.date: 07/18/2025
-ms.author: ofshezaf
+ms.author: edbaynash
 
 
 

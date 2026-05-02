@@ -1,10 +1,10 @@
 ---
 title: Use Advanced Security Information Model (ASIM) parsers | Microsoft Docs
 description: This article explains how to use Kusto Query Language (KQL) functions as query-time parsers to implement the Advanced Security Information Model (ASIM)
-author: oshezaf
+author: EdB-MSFT
 ms.topic: concept-article
 ms.date: 11/11/2024
-ms.author: ofshezaf
+ms.author: edbaynash
 
 
 #Customer intent: As a security analyst, I want to use ASIM parsers in my queries so that I can view and analyze data in a normalized format for improved query performance and comprehensive security insights.

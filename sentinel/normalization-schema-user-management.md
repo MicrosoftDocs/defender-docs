@@ -1,10 +1,10 @@
 ---
 title: Microsoft Sentinel user management normalization schema reference | Microsoft Docs
 description: This article describes the Microsoft Sentinel user management normalization schema.
-author: oshezaf
+author: EdB-MSFT
 ms.topic: reference
 ms.date: 02/06/2022
-ms.author: ofshezaf
+ms.author: edbaynash
 
 
 #Customer intent: As a security analyst, I want to understand the User Management normalization schema so that I can effectively monitor and analyze user management activities within my organization.
