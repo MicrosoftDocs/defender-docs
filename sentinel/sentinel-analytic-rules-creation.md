@@ -3,6 +3,7 @@ title: Create Analytics Rules for Microsoft Sentinel Solutions
 description: This article guides you through the process of creating and publishing analytics rules to Microsoft Sentinel solutions.
 author: mberdugo
 ms.author: monaberdugo
+ms.reviewer: nonutkev
 ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.date: 1/27/2025

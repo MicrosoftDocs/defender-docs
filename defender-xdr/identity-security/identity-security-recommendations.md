@@ -4,6 +4,7 @@ description: Learn which identity sources and applications are covered by securi
 #customer intent: As a security admin, I want to understand which identity sources have security recommendations in Microsoft Defender so that I can assess my coverage and plan improvements.
 author: AbbyMSFT
 ms.author: abbyweisberg
+ms.reviewer: maelgami
 ms.date: 03/17/2026
 ms.topic: concept-article
 ms.service: defender-xdr

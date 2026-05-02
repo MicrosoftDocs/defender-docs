@@ -3,6 +3,7 @@ title: Microsoft Sentinel user management normalization schema reference | Micro
 description: This article describes the Microsoft Sentinel user management normalization schema.
 author: EdB-MSFT
 ms.author: edbaynash
+ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 02/06/2022
 

@@ -3,6 +3,7 @@ title: Advanced Security Information Model (ASIM) security content | Microsoft D
 description: This article outlines the Microsoft Sentinel security content that uses the Advanced Security Information Model (ASIM).
 author: EdB-MSFT
 ms.author: edbaynash
+ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 06/25/2025
 

@@ -3,6 +3,7 @@ title: Create Hunting Queries for Microsoft Sentinel Solutions
 description: This article guides you through the process of creating and publishing hunting queries to Microsoft Sentinel solutions.
 author: mberdugo
 ms.author: monaberdugo
+ms.reviewer: efratka
 ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.date: 2/06/2025

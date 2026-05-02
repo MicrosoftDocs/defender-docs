@@ -4,6 +4,7 @@ titleSuffix: Microsoft Sentinel
 description: This article explains how to manage and use workspace deployed Advanced Security Information Model (ASIM) parsers
 author: EdB-MSFT
 ms.author: edbaynash
+ms.reviewer: ofshezaf
 ms.topic: concept-article
 ms.date: 11/11/2024
 

@@ -3,6 +3,7 @@ title: The Advanced Security Information Model (ASIM) Process Event normalizatio
 description: This article describes the Microsoft Sentinel Process Event normalization schema.
 author: EdB-MSFT
 ms.author: edbaynash
+ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 11/09/2021
 

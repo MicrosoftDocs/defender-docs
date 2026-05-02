@@ -4,6 +4,7 @@ titleSuffix: Microsoft Sentinel
 description: This article displays the Microsoft Sentinel Application Entity schema.
 author: EdB-MSFT
 ms.author: edbaynash
+ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 12/29/2025
 

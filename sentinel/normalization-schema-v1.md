@@ -3,6 +3,7 @@ title: Microsoft Sentinel network normalization schema (Legacy version - Public 
 description: This article displays the Microsoft Sentinel data normalization schema.
 author: EdB-MSFT
 ms.author: edbaynash
+ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 11/09/2021
 

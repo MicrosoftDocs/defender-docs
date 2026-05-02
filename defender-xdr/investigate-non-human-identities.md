@@ -4,6 +4,7 @@ description: Learn about non-human identities in Microsoft Defender, including O
 #customer intent: As a security analyst using Microsoft Defender, I want to understand how to investigate non-human identities so that I can assess risk, understand permissions, and identify potential security issues with OAuth apps and service accounts.
 author: AbbyMSFT
 ms.author: abbyweisberg
+ms.reviewer: maelgami
 ms.date: 03/17/2026
 ms.topic: concept-article
 ms.service: microsoft-defender-for-identity

@@ -3,6 +3,7 @@ title: Modify content to use the Microsoft Sentinel Advanced Security Informatio
 description: This article explains how to convert Microsoft Sentinel content to use the Advanced Security Information Model (ASIM).
 author: EdB-MSFT
 ms.author: edbaynash
+ms.reviewer: ofshezaf
 ms.topic: how-to
 ms.date: 11/09/2021
 

@@ -3,6 +3,7 @@ title: Advanced Security Information Model (ASIM) schemas | Microsoft Docs
 description: This article explains Advanced Security Information Model (ASIM) schemas, and how they help. ASIM normalizes data from many different sources to a uniform presentation.
 author: EdB-MSFT
 ms.author: edbaynash
+ms.reviewer: ofshezaf
 ms.topic: article
 ms.date: 11/09/2021
 

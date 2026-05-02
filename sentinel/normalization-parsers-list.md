@@ -3,6 +3,7 @@ title: List of Microsoft Sentinel Advanced Security Information Model (ASIM) par
 description: This article lists Advanced Security Information Model (ASIM) parsers.
 author: EdB-MSFT
 ms.author: edbaynash
+ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 12/31/2024
 
