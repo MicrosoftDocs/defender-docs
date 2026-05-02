@@ -6,7 +6,7 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: amibarayev
 ms.localizationpriority: medium
-ms.date: 04/29/2026
+ms.date: 05/03/2026
 ms.topic: concept-article
 ms.custom: msecd-doc-authoring-1012
 #customer intent:As a security engineer, I want to configure which response actions are allowed on high-value assets I'm onboarding to reduce operational risk.
@@ -14,7 +14,7 @@ ms.custom: msecd-doc-authoring-1012
 
 # Restrict response actions on high-value assets (preview)
 
-This article provides an overview of the selective response actions capability in Microsoft Defender for Endpoint. Its target audience is security administrators and IT operations teams responsible for managing Microsoft Defender for Endpoint in environments that include Tier-0 systems and high-value assets (HVAs) such as domain controllers, ADFS servers, and other critical infrastructure.
+This article provides an overview of the Selective Response Actions capability in Microsoft Defender for Endpoint. Its target audience is security administrators and IT operations teams responsible for managing Microsoft Defender for Endpoint in environments that include Tier-0 systems and high-value assets (HVAs) such as domain controllers, ADFS servers, and other critical infrastructure.
 
 ## Overview
 
@@ -32,7 +32,7 @@ The Selective Response Actions capability addresses these needs by providing a m
 
 First, the feature must be enabled on the tenant. See [Enable selective response actions](#enabling-the-selective-response-actions-feature).
 
-Once the feature is enabled, you use the [Defender deployment tool (DDT)](defender-deployment-tool-windows.md) to create an onboarding package with restricted security operations settings. When you're configuring the package, you choose between full functionality (the default boarding mode, where all response actions are allowed on the onboarded device) and restricted functionality (where high-impact response actions can be disallowed). If you choose restricted functionality, you can then specify which actions are allowed on the device once it's onboarded.
+Once the feature is enabled, you use the [Defender deployment tool (DDT)](defender-deployment-tool-windows.md) to create an onboarding package with restricted security operations settings. When you're configuring the package, you choose between full functionality (the default onboarding mode, where all response actions are allowed on the onboarded device) and restricted functionality (where high-impact response actions can be disallowed). If you choose restricted functionality, you can then specify which actions are allowed on the device once it's onboarded.
 
 The following table describes high-impact response actions that you can allow or disallow.
 
