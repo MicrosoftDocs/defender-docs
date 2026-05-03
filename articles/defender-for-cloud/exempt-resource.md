@@ -48,7 +48,7 @@ To create exemptions, you need the following permissions:
 
 - **Owner** or **Security Admin** on the scope where you create the exemption.
 - To create a rule, you need permissions to edit policies in Azure Policy. [Learn more](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
-- You must have exemption permission on all initiative assignments at the target scope. If a recommendation is part of multiple initiatives, you must create the exemption with permissions across all of them. A missing permission on even one initiative can cause the exemption to fail.
+- You must have exemption permission on all initiative assignments at the target scope. If multiple initiatives contain a recommendation, you must create the exemption with permissions across all of them. A missing permission on even one initiative can cause the exemption to fail.
 
 You need the following RBAC actions:
 
@@ -72,7 +72,7 @@ You need the following RBAC actions:
 
 - To manage exemptions for specific resources, you need the required RBAC actions at the resource or resource group level. Subscription-scoped role assignments might not provide sufficient access to create or delete exemptions on individual resources. Verify that your role assignment covers the scope of the resource you want to exempt.
 
-- When you create an exemption at the management group level, ensure the *Windows Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on that management group. Grant this role the same way that you grant user permissions.
+- When you create an exemption at the management group level, ensure the *Microsoft Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on that management group. Grant this role the same way that you grant user permissions.
 
 *Limitations*:
 
@@ -123,10 +123,10 @@ To create an exemption rule:
 1. (Optional) set an expiration date.
 
 1. Select the category for the exemption:
-    - **Resolved through 3rd party (mitigated)** – if you use a third-party service that Defender for Cloud doesn't identify.
+    - **Resolved through third-party service (mitigated)** – if you use a non-Microsoft service for remediation that Defender for Cloud doesn't track.
  
     > [!NOTE]  
-    > When you exempt a recommendation as mitigated, you don't gain points toward your secure score. However, because Defender for Cloud doesn't remove points for the unhealthy resources, your score increases.
+    > When you exempt a resource as mitigated, it counts as healthy. You don't gain points for the remediation, but Defender for Cloud doesn't deduct points for leaving it unhealthy, so exempted resources don't lower your score.
 
     - **Risk accepted (waiver)** – if you decide to accept the risk of not mitigating this recommendation.
 
@@ -138,13 +138,13 @@ To create an exemption rule:
 
 ## After you create the exemption
 
-An exemption can take up to 24 hours to take effect. Defender for Cloud evaluates resources periodically, typically every 12-24 hours. After the exemption takes effect:
+An exemption can take up to 24 hours to take effect because Defender for Cloud evaluates resources every 12-24 hours. After the exemption takes effect:
 
 - The recommendation or resources don't affect your secure score.
 
 - If you exempt specific resources, Defender for Cloud lists them in the **Not applicable** tab of the recommendation details page.
 
-- If you exempt a recommendation, Defender for Cloud hides it by default on the **Recommendations** page. This behavior occurs because the default options of the **Recommendation status** filter on that page exclude **Not applicable** recommendations. The same behavior occurs if you exempt all recommendations in a security control.
+- If you exempt a recommendation, Defender for Cloud hides it by default on the **Recommendations** page. This happens because the default **Recommendation status** filter excludes **Not applicable** recommendations. The same behavior occurs if you exempt all recommendations in a security control.
 
 ### Understand how the exemption type affects the recommendation status
 
