@@ -213,6 +213,12 @@ For `<namespace>`, use:
 - `mdc` for standard AKS, EKS, and GKE clusters.
 - `kube-system` for AKS Automatic clusters.
 
+If the upgrade fails because of resource conflicts, add the following options to the upgrade command:
+
+```bash
+--server-side=true --resolve-conflicts
+```
+
 ## Related content
 
 - [Common questions about protecting containers](faq-defender-for-containers.yml)

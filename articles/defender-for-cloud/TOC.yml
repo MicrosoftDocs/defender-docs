@@ -177,13 +177,13 @@
               - name: Defender for Open-Source Relational Databases
                 items:
                 - name: Overview
-                  displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: defender-for-databases-introduction.md
                 - name: Enable on Azure
-                  displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-azure.md
                 - name: Enable on AWS (Preview)
-                  displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-aws.md
               - name: Defender for Azure Cosmos DB
                 items:
@@ -540,8 +540,8 @@
             - name: Transition from grouped to individual recommendations
               displayName: grouped, individual, recommendations, transition, legacy, dynamic, best practices
               href: transition-grouped-individual-recommendations.md
-            - name: Review resources exempted from recommendations
-              displayName: review, exemptions, exempted, resources, recommendation, exempt
+            - name: Review and manage recommendation exemptions
+              displayName: review, manage, exemptions, exempted, resources, recommendation, exempt, delete, secure score
               href: review-exemptions.md
             - name: Assign a recommendation to an active user
               displayName: assign, recommendation, user, owner
@@ -1019,6 +1019,8 @@
           href: github-advanced-security-overview.md
         - name: Deploy GitHub Advanced Security integration
           href: github-advanced-security-deploy.md
+        - name: Deploy GitHub Advanced Security integration (Sandbox project)
+          href: github-advanced-security-deploy-sandbox.md
     - name: Onboard
       items:
         - name: Connect Azure DevOps environments

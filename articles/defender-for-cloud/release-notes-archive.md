@@ -2375,7 +2375,7 @@ Microsoft Defender for Cloud now supports the latest [CIS Azure Security Foundat
 
 ### Change to the Log Analytics daily cap
 
-Azure monitor offers the capability to [set a daily cap](/azure/azure-monitor/logs/daily-cap) on the data that is ingested on your Log analytics workspaces. However, Defenders for Cloud security events are currently not supported in those exclusions.
+Azure monitor offers the capability to [set a daily cap](/azure/azure-monitor/logs/daily-cap) on the data that is ingested on your Log analytics workspaces. However, Defender for Cloud security events are currently not supported in those exclusions.
 
 The Log Analytics Daily Cap no longer excludes the following set of data types:
 
@@ -3116,7 +3116,7 @@ In a scenario where activity from a suspicious IP address is detected, one of th
 
 ### Alerts automatic export to Log Analytics workspace have been deprecated
 
-Defenders for Cloud security alerts are automatically exported to a default Log Analytics workspace on the resource level. This causes an indeterministic behavior and therefore we have deprecated this feature.
+Defender for Cloud security alerts are automatically exported to a default Log Analytics workspace on the resource level. This causes an indeterministic behavior and therefore we have deprecated this feature.
 
 Instead, you can export your security alerts to a dedicated Log Analytics workspace with [Continuous Export](continuous-export.md).
 
@@ -3743,7 +3743,7 @@ Learn more about [viewing vulnerabilities for running images](defender-for-conta
 
 Defender for Cloud now includes preview support for the [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) (AMA). AMA is intended to replace the legacy Log Analytics agent (also referred to as the Microsoft Monitoring Agent (MMA)), which is on a path to deprecation. AMA [provides many benefits](/azure/azure-monitor/agents/agents-overview#benefits) over legacy agents.
 
-In Defender for Cloud, when you [enable autoprovisioning for AMA](auto-deploy-azure-monitoring-agent.md), the agent is deployed on **existing and new** VMs and Azure Arc-enabled machines that are detected in your subscriptions. If Defenders for Cloud plans are enabled, AMA collects configuration information and event logs from Azure VMs and Azure Arc machines. The AMA integration is in preview, so we recommend using it in test environments, rather than in production environments.
+In Defender for Cloud, when you [enable autoprovisioning for AMA](auto-deploy-azure-monitoring-agent.md), the agent is deployed on **existing and new** VMs and Azure Arc-enabled machines that are detected in your subscriptions. If Defender for Cloud plans are enabled, AMA collects configuration information and event logs from Azure VMs and Azure Arc machines. The AMA integration is in preview, so we recommend using it in test environments, rather than in production environments.
 
 ### Deprecated VM alerts regarding suspicious activity related to a Kubernetes cluster
 

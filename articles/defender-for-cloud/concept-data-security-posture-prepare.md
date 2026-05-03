@@ -5,7 +5,7 @@ author: Elazark
 ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 03/31/2025
+ms.date: 04/20/2026
 ms.custom: references_regions
 #customer intent: As a security administrator, I want to understand the prerequisites for data security posture management so that I can set it up correctly.
 ---
@@ -152,7 +152,6 @@ Azure:
 - Azure MySQL Flexible Server
 - Azure PostgreSQL Single Server
 - Azure PostgreSQL Flexible Server
-- Azure MariaDB Single Server
 - Synapse Workspace
 
 AWS:
