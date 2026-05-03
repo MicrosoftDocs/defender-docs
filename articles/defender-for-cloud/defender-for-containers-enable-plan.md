@@ -112,7 +112,7 @@ Before you begin, make sure that:
       Enables agentless vulnerability assessment for container images in Amazon ECR. Images pushed to ECR are scanned automatically (typically within 24 hours).
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
 
- :::image type="content" source="./media/defender-for-containers-enable-plan/amazon-web-services-select-plans.png" alt-text="Screenshot of the Defender for Containers configuration pane for an AWS connector in Microsoft Defender for Cloud." lightbox="./media/defender-for-containers-enable-plan/amazon-web-services-select-plans.png":::
+   :::image type="content" source="./media/defender-for-containers-enable-plan/amazon-web-services-select-plans.png" alt-text="Screenshot of the Defender for Containers configuration pane for an AWS connector in Microsoft Defender for Cloud." lightbox="./media/defender-for-containers-enable-plan/amazon-web-services-select-plans.png":::
   
 1. Select **Save**.
 
