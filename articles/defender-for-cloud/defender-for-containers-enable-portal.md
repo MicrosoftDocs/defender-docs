@@ -39,9 +39,12 @@ Before you begin, make sure that:
 
     - **Agentless scanning for machines**  
       Performs agentless vulnerability and secret scanning on Kubernetes nodes.
+        - To exclude machines from agentless scanning, add the exclusion tag name and value.
     
     - **Defender sensor**  
       Deploys the Defender sensor to cluster nodes to collect runtime security telemetry used for threat detection.
+        - **Enable Defender Security Gating:** Adds an admission control layer that evaluates deployments against security policies before workloads run in the cluster.
+        - **Enable Defender Runtime Anti Malware:** Enables runtime malware detection for Kubernetes hosts and containers and can optionally block malicious file execution in real time.
     
     - **Azure Policy**  
       Deploys the Azure Policy for Kubernetes add-on to enable Kubernetes security posture assessments and related security recommendations.
@@ -51,6 +54,7 @@ Before you begin, make sure that:
     
     - **Registry access**  
       Enables agentless vulnerability assessment for container images stored in connected registries.
+        - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
 
 1. Select **Continue**.
 
