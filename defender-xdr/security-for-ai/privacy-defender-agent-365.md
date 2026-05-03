@@ -1,6 +1,6 @@
 ---
-title: Privacy in Microsoft Defender for Agent 365
-description: Learn how Microsoft Defender's AI security capabilities collect, store, and use customer data when delivered through Microsoft Agent 365.
+title: Data handling in Microsoft Defender as part of Agent 365
+description: Learn how Microsoft Defender handles customer data and supports your privacy requirements when delivered as part of Microsoft Agent 365.
 ms.service: defender-xdr
 ms.subservice: security-for-ai
 ms.topic: concept-article
@@ -13,7 +13,7 @@ ms.custom: msecd-doc-authoring-1012
 #customer intent: As a security or compliance admin, I want to understand how Microsoft Defender handles customer data in Agent 365 so that I can validate it against my organization's privacy requirements.
 ---
 
-# Privacy in Microsoft Defender for Agent 365
+# Data handling in Microsoft Defender as part of Agent 365
 
 Microsoft Defender provides a set of AI agent security capabilities in [Microsoft Agent 365](https://www.microsoft.com/microsoft-agent-365) - including agent discovery, posture assessment, threat detection, and real-time protection - to help protect agents from threats such as prompt-based attacks, unsafe tool usage, credential exposure, and data exfiltration. For more information, see the [Microsoft Defender for AI overview](./defender-security-for-ai.md).
 
@@ -35,7 +35,7 @@ To stop Defender from collecting this data, an administrator can disable these c
 
 ## Data storage location
 
-As part of Agent 365, Microsoft Defender operates in the following Azure regions:
+As part of Agent 365, Microsoft Defender stores data in these Azure regions:
 
 | Tenant location | Data storage location |
 |---|---|
