@@ -2,8 +2,8 @@
 title: Predictive shielding in Microsoft Defender
 description: Predictive shielding dynamically infers risk, anticipates attacker progression, and hardens your environment.
 ms.service: defender-xdr
-ms.author: lwainstein
-author: limwainstein
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
 ms.collection: 
   - m365-security
