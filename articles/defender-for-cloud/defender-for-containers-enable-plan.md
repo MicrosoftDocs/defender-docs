@@ -56,7 +56,7 @@ Before you begin, make sure that:
       Enables agentless vulnerability assessment for container images stored in connected registries.
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
 
-   :::image type="content" source="./media/defender-for-containers-enable/azure-defender-plans.png" alt-text="Screenshot of the Settings and monitoring page for the Containers plan in Microsoft Defender for Cloud, showing available Defender for Containers components." lightbox="./media/defender-for-containers-enable/azure-defender-plans.png":::
+   :::image type="content" source="./media/defender-for-containers-enable-plan/azure-defender-plans.png" alt-text="Screenshot of the Settings and monitoring page for the Containers plan in Microsoft Defender for Cloud, showing available Defender for Containers components." lightbox="./media/defender-for-containers-enable-plan/azure-defender-plans.png":::
 
 1. Select **Continue**.
 
@@ -112,7 +112,7 @@ Before you begin, make sure that:
       Enables agentless vulnerability assessment for container images in Amazon ECR. Images pushed to ECR are scanned automatically (typically within 24 hours).
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
 
- :::image type="content" source="./media/defender-for-containers-enable/amazon-web-services-select-plans.png" alt-text="Screenshot of the Defender for Containers configuration pane for an AWS connector in Microsoft Defender for Cloud." lightbox="./media/defender-for-containers-enable/amazon-web-services-select-plans.png":::
+ :::image type="content" source="./media/defender-for-containers-enable-plan/amazon-web-services-select-plans.png" alt-text="Screenshot of the Defender for Containers configuration pane for an AWS connector in Microsoft Defender for Cloud." lightbox="./media/defender-for-containers-enable-plan/amazon-web-services-select-plans.png":::
   
 1. Select **Save**.
 
@@ -120,7 +120,7 @@ Before you begin, make sure that:
 
 1. Regenerate and update the AWS CloudFormation template to apply the required permissions for the enabled components.
 
-   :::image type="content" source="./media/defender-for-containers-enable/amazon-web-services-configure-access.png" alt-text="Screenshot of the Configure access step for an AWS connector in Microsoft Defender for Cloud, showing the AWS CloudFormation deployment template." lightbox="./media/defender-for-containers-enable/amazon-web-services-configure-access.png":::
+   :::image type="content" source="./media/defender-for-containers-enable-plan/amazon-web-services-configure-access.png" alt-text="Screenshot of the Configure access step for an AWS connector in Microsoft Defender for Cloud, showing the AWS CloudFormation deployment template." lightbox="./media/defender-for-containers-enable-plan/amazon-web-services-configure-access.png":::
 1. Select **Next: Review and generate >**.
 
 1. Select **Update**.
@@ -176,7 +176,7 @@ Before you begin, make sure that:
       Enables agentless vulnerability assessment for container images stored in Google Container Registry (GCR) and Artifact Registry.
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
 
-   :::image type="content" source="./media/defender-for-containers-enable/google-cloud-platform-select-plans.png" alt-text="Screenshot of the Defender for Containers configuration pane for a GCP connector in Microsoft Defender for Cloud." lightbox="./media/defender-for-containers-enable/google-cloud-platform-select-plans.png":::
+   :::image type="content" source="./media/defender-for-containers-enable-plan/google-cloud-platform-select-plans.png" alt-text="Screenshot of the Defender for Containers configuration pane for a GCP connector in Microsoft Defender for Cloud." lightbox="./media/defender-for-containers-enable-plan/google-cloud-platform-select-plans.png":::
 
 1. Select **Save**.
 
@@ -184,7 +184,7 @@ Before you begin, make sure that:
 
 1. Regenerate and redeploy the onboarding script in your GCP project to apply the required permissions for the enabled components.
 
-   :::image type="content" source="./media/defender-for-containers-enable/google-cloud-platform-configure-access.png" alt-text="Screenshot of the Configure access step for a GCP connector in Microsoft Defender for Cloud, showing the GCP Cloud Shell deployment script." lightbox="./media/defender-for-containers-enable/google-cloud-platform-configure-access.png":::
+   :::image type="content" source="./media/defender-for-containers-enable-plan/google-cloud-platform-configure-access.png" alt-text="Screenshot of the Configure access step for a GCP connector in Microsoft Defender for Cloud, showing the GCP Cloud Shell deployment script." lightbox="./media/defender-for-containers-enable-plan/google-cloud-platform-configure-access.png":::
 
 1. Select **Next: Review and generate >**.
 
@@ -233,7 +233,7 @@ Before you begin, make sure that:
     - **Registry access**  
       Enables agentless vulnerability assessment for container images stored in connected registries.
 
-   :::image type="content" source="./media/defender-for-containers-enable/azure-defender-plans.png" alt-text="Screenshot of the Settings and monitoring page for the Containers plan in Microsoft Defender for Cloud, showing available Defender for Containers components." lightbox="./media/defender-for-containers-enable/azure-defender-plans.png":::
+   :::image type="content" source="./media/defender-for-containers-enable-plan/azure-defender-plans.png" alt-text="Screenshot of the Settings and monitoring page for the Containers plan in Microsoft Defender for Cloud, showing available Defender for Containers components." lightbox="./media/defender-for-containers-enable-plan/azure-defender-plans.png":::
    
 1. Select **Save**.
 

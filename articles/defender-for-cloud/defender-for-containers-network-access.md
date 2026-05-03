@@ -226,4 +226,4 @@ Defender for Containers requires Kubernetes audit logs for control plane threat 
 
 - Review the [Defender for Containers architecture](defender-for-containers-architecture.md)
 
-- [Enable Microsoft Defender for Containers](defender-for-containers-enable.md)
+- [Enable Microsoft Defender for Containers](defender-for-containers-enable-plan.md)

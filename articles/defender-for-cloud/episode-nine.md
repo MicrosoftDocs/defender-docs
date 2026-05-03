@@ -23,7 +23,7 @@ Maya explains the new workload protection capabilities related to containers whe
 
 ## Recommended resources
 
-Learn how to [Enable Microsoft Defender for Containers](defender-for-containers-enable.md).
+Learn how to [Enable Microsoft Defender for Containers](defender-for-containers-enable-plan.md).
 
 - Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS)
 

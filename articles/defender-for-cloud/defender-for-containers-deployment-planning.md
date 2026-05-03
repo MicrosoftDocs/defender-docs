@@ -63,7 +63,7 @@ After deployment, verify that Defender components are running correctly and addr
 
 ## Related content
 
-- [Enable Defender for Containers](defender-for-containers-enable.md)
+- [Enable Defender for Containers](defender-for-containers-enable-plan.md)
 
 - [Exclude clusters from automatic provisioning](defender-for-containers-exclude-cluster.md)
 

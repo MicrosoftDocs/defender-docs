@@ -15,7 +15,7 @@ You can exclude specific clusters from automatic sensor deployment if you want t
 
 ## Prerequisites
 
-- [Defender for Containers is enabled](defender-for-containers-enable.md) with automatic provisioning turned on on.
+- [Defender for Containers is enabled](defender-for-containers-enable-plan.md) with automatic provisioning turned on on.
 
 # [AKS](#tab/aks)
 
