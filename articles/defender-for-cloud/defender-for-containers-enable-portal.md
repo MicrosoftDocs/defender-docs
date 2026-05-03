@@ -19,6 +19,8 @@ Before you begin, make sure that:
 
 - You have an AKS cluster. See the [support matrix](support-matrix-defender-for-containers.md).
 
+- You reviewed the [Defender for Containers feature access patterns](defender-for-containers-feature-access-patterns.md).
+
 - You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 
 ## Enable the Defender for Containers plan
@@ -63,6 +65,8 @@ Before you begin, make sure that:
 - You have an [AWS project onboarded to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
 
 - You have one or more Amazon EKS clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
+
+- You reviewed the [Defender for Containers feature access patterns](defender-for-containers-feature-access-patterns.md).
 
 - You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 
@@ -120,7 +124,9 @@ Before you begin, make sure that:
 
 - You have a [GCP project onboarded to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
 
-- You have oe or more Google Kubernetes Engine (GKE) clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
+- You have one or more Google Kubernetes Engine (GKE) clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
+
+- You reviewed the [Defender for Containers feature access patterns](defender-for-containers-feature-access-patterns.md).
 
 - You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 
@@ -180,6 +186,8 @@ Before you begin, make sure that:
 - Your cluster is:
     - [Connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
     - Supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
+
+- You reviewed the [Defender for Containers feature access patterns](defender-for-containers-feature-access-patterns.md).
 
 - You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 

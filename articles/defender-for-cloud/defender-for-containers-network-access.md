@@ -5,7 +5,7 @@ ms.topic: reference
 author: Elazark
 ms.author: elkrieger
 ms.service: defender-for-cloud
-ms.date: 12/22/2025
+ms.date: 04/16/2026
 ---
 
 # Network access and permissions reference for Defender for Containers
@@ -14,16 +14,7 @@ This article describes the network connectivity and permission requirements for 
 
 The requirements in this article depend on the enabled features and the environment in which your container workloads run.
 
-## Connectivity patterns used by Defender for Containers
-
-Microsoft Defender for Containers establishes multiple connectivity paths to collect security signals and provide protection across your environment, including:
-
-- Connections to container registries to scan images for vulnerabilities and, in some cases, publish assessment results back to the registry.
-- Connections to Kubernetes API endpoints for cluster discovery, posture assessment, and risk analysis.
-- Runtime telemetry sent from Kubernetes worker nodes to the Defender for Cloud backend for threat detection.
-- Ingestion of Kubernetes audit logs from cloud-native logging services for control plane threat detection.
-
-Learn more about [connectivity and permission requirements by plan component](defender-for-containers-architecture.md).
+Learn more about [connectivity patterns and plan components](defender-for-containers-architecture.md).
 
 ## Microsoft Defender for Cloud to container registries
 
@@ -63,7 +54,7 @@ Microsoft Defender for Cloud connects to container registries to scan container 
   - `ecr-public:BatchDeleteImage`
 
 > [!NOTE]
-> The `MDCContainersImageAssessmentRole` permissions are used only when publishing vulnerability assessment results back to the registry. Microsoft Defender for Cloud doesn't modify customer container images.
+> The `MDCContainersImageAssessmentRole` permissions are used only to publish vulnerability assessment results back to the registry for gated deployment. Microsoft Defender for Cloud doesn't modify customer container images.
 
 ### Google Artifact Registry (GAR)
 
@@ -80,7 +71,8 @@ Microsoft Defender for Cloud connects to container registries to scan container 
   - `artifactregistry.repositories.uploadArtifacts`
   - `artifactregistry.repositories.deleteArtifacts`
 
-These permissions are used to support vulnerability assessment of container images and to optionally publish vulnerability assessment results back to the registry.
+> [!NOTE]
+> The `MDCWritingGarAssessmentsRole` permissions are used only to publish vulnerability assessment results back to the registry for gated deployment. Microsoft Defender for Cloud doesn't modify customer container images.
 
 ### JFrog Artifactory (SaaS)
 
@@ -88,10 +80,10 @@ These permissions are used to support vulnerability assessment of container imag
 - The JFrog Artifactory instance must be publicly accessible over the internet.
 
 **Permissions and configuration**
-- A dedicated group (for example, `mdc-group-{customerTenantId}`)
+- A dedicated group, such as `mdc-group-{customerTenantId}`
 - A permission target with read access to all repositories for the MDC group
 - An OpenID Connect (OIDC) provider integrated with Microsoft Entra ID
-- OIDC identity mappings that allow authentication using Entra-issued tokens
+- OIDC identity mappings that allow authentication by using Entra-issued tokens
 
 **API scopes used**
 - Group access: `/access/api/v1/scim/v2/Groups`
@@ -106,7 +98,7 @@ These permissions are used to support vulnerability assessment of container imag
 - Docker Hub must be publicly accessible over the internet.
 
 **Permissions**
-- Customer-provided access token with read access.
+- Customer-provided access token with read access
 
 ## Microsoft Defender for Cloud to Kubernetes clusters
 
@@ -115,7 +107,7 @@ Microsoft Defender for Cloud connects to Kubernetes API endpoints to discover cl
 ### Azure Kubernetes Service (AKS)
 
 **Network**
-- For private AKS clusters, Microsoft Defender for Containers accesses the Kubernetes API through Azure infrastructure. No additional public or restricted public endpoint configuration is required.
+- No additional public or restricted public endpoint configuration is required. Microsoft Defender for Containers accesses the Kubernetes API through Azure Trusted Access.
 
 **Permissions**
 - Managed identity created in the customer environment
@@ -126,7 +118,7 @@ Microsoft Defender for Cloud connects to Kubernetes API endpoints to discover cl
   - `Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings/delete`
 
 > [!NOTE]
-> For AKS, Defender for Cloud uses AKS Trusted Access. Defender for Cloud creates a managed identity and creates a trusted access role binding. After the cluster is discovered, Defender for Cloud creates a Kubernetes `ClusterRoleBinding` to the built-in AKS ClusterRole `aks:trustedaccessrole:defender-containers:microsoft-defender-operator`, which grants read permissions inside the cluster.
+> For AKS, Defender for Cloud uses AKS Trusted Access. Defender for Cloud creates a managed identity and a trusted access role binding. After the cluster is discovered, Defender for Cloud creates a Kubernetes `ClusterRoleBinding` to the built-in AKS ClusterRole `aks:trustedaccessrole:defender-containers:microsoft-defender-operator`, which grants read permissions inside the cluster.
 
 ### Amazon Elastic Kubernetes Service (EKS)
 
@@ -136,7 +128,7 @@ Microsoft Defender for Cloud connects to Kubernetes API endpoints to discover cl
   - `48.209.1.192/28`
 - For private API endpoints, a restricted public endpoint must be enabled with the IP ranges above.
 
-For private Amazon EKS clusters, the Kubernetes API server must expose a restricted public endpoint that allows access from the approved Microsoft Defender for Containers IP ranges listed above.
+For private EKS clusters, the Kubernetes API server must expose a restricted public endpoint that allows access from the approved Microsoft Defender for Containers IP ranges.
 
 **Permissions**
 - Role: **MDCContainersAgentlessDiscoveryK8sRole**
@@ -148,7 +140,7 @@ For private Amazon EKS clusters, the Kubernetes API server must expose a restric
   - `eks:ListAssociatedAccessPolicies`
 
 > [!NOTE]
-> `eks:UpdateClusterConfig` is used to apply required cluster configuration for Defender for Containers to access the Kubernetes API in supported scenarios (for example, enabling a restricted public API endpoint for private clusters).
+> `eks:UpdateClusterConfig` is used to apply required cluster configuration for supported scenarios, such as enabling a restricted public API endpoint for private clusters.
 
 ### Google Kubernetes Engine (GKE)
 
@@ -158,13 +150,23 @@ For private Amazon EKS clusters, the Kubernetes API server must expose a restric
   - `48.209.1.192/28`
 - For private API endpoints, a restricted public endpoint must be enabled with the IP ranges above.
 
-For private Google Kubernetes Engine (GKE) clusters, the Kubernetes API server must expose a restricted public endpoint that allows access from the approved Microsoft Defender for Containers IP ranges listed above.
+For private GKE clusters, the Kubernetes API server must expose a restricted public endpoint that allows access from the approved Microsoft Defender for Containers IP ranges.
 
 **Permissions**
 - Role: **MDCGkeClusterWriteRole**
   - `container.clusters.update`
-- Built-in role:
   - `container.viewer`
+
+- Role: **MDCGkeContainerResponseActionsRole**
+  - `container.pods.update`
+  - `container.pods.delete`
+  - `container.networkPolicies.create`
+  - `container.networkPolicies.update`
+  - `container.networkPolicies.delete`
+
+- Role: **MDCGkeContainerInventoryCollectionRole**
+  - `container.nodes.proxy`
+  - `container.secrets.list`
 
 ## Kubernetes clusters to Microsoft Defender for Cloud
 
@@ -173,7 +175,10 @@ Kubernetes clusters send runtime security data to Microsoft Defender for Cloud.
 **Outbound network requirements**
 - Protocol: HTTPS
 - Port: 443
-- Domain:
+- Domains:
+  - `*.ods.opinsights.azure.com`
+  - `*.oms.opinsights.azure.com`
+  - `login.microsoftonline.com`
   - `*.cloud.defender.microsoft.com`
 
 ### Kubernetes permissions created by the Defender sensor
