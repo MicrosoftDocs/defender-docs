@@ -187,4 +187,4 @@ To get full protection from Microsoft Defender for Containers, you need these co
 
 - [Network access and permissions reference for Defender for Containers](defender-for-containers-network-access.md).
 
-- [Enable Defender for Containers](defender-for-containers-enable-portal.md)
+- [Enable Defender for Containers](defender-for-containers-enable.md)

@@ -9,7 +9,7 @@ ms.date: 11/27/2025
 
 # Deploy Defender sensor and Azure Policy to clusters using Azure CLI
 
-This article explains how to deploy the Microsoft Defender for Containers sensor and Azure Policy for Kubernetes to clusters by using Azure CLI after [enabling the Defender for Containers plan in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md).
+This article explains how to deploy the Microsoft Defender for Containers sensor and Azure Policy for Kubernetes to clusters by using Azure CLI after [enabling the Defender for Containers plan in Microsoft Defender for Cloud](defender-for-containers-enable.md).
 
 For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender for Cloud uses Azure Arc-enabled Kubernetes to deploy the required extensions.
 
@@ -17,7 +17,7 @@ For clusters that aren’t running in Azure Kubernetes Service (AKS), Defender f
 
 ## Prerequisites
 
-- [Defender for Containers enabled on your Azure subscription](defender-for-containers-enable-portal.md?tab=aks).
+- [Defender for Containers enabled on your Azure subscription](defender-for-containers-enable.md?tab=aks).
 
 - Azure CLI version 2.40.0 or later. 
 
@@ -59,7 +59,7 @@ az aks enable-addons \
 
 ## Prerequisites
 
-- [Defender for Containers enabled on your AWS connector](defender-for-containers-enable-portal.md?tab=eks). 
+- [Defender for Containers enabled on your AWS connector](defender-for-containers-enable.md?tab=eks). 
 
 - Azure CLI version 2.40.0 or later.
 
@@ -105,7 +105,7 @@ az k8s-extension create \
 
 ## Prerequisites
 
-- [Defender for Containers enabled on your GCP connector](defender-for-containers-enable-portal.md?tab=gke). 
+- [Defender for Containers enabled on your GCP connector](defender-for-containers-enable.md?tab=gke). 
 
 - Azure CLI version 2.40.0 or later.
 
@@ -180,7 +180,7 @@ az k8s-extension create \
 
 ## Prerequisites
 
-- [Defender for Containers enabled on your Azure subscription](defender-for-containers-enable-portal.md?tab=aks).
+- [Defender for Containers enabled on your Azure subscription](defender-for-containers-enable.md?tab=aks).
 
 - Azure CLI version 2.40.0 or later.
 

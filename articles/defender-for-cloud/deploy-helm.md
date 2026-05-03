@@ -20,7 +20,7 @@ Defender for Containers supports multiple deployment models for deploying the se
 
 ## General prerequisites
 
-- [Enable Defender for Containers in the target subscription or security connector](defender-for-containers-enable-portal.md).
+- [Enable Defender for Containers in the target subscription or security connector](defender-for-containers-enable.md).
 
 - Ensure the following components of the Defender for Containers plan are enabled:
    - Defender sensor

@@ -115,7 +115,7 @@ Confirm that the **DESIRED**, **CURRENT**, and **READY** values match the number
 
 ## Related content
 
-- [Enable Defender for Containers](defender-for-containers-enable-portal.md)
+- [Enable Defender for Containers](defender-for-containers-enable.md)
 
 - [Deploy Defender sensor using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 

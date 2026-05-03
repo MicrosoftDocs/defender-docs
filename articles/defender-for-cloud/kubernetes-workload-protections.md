@@ -21,7 +21,7 @@ After Azure Policy for Kubernetes is deployed, Defender for Cloud generates data
 
 To begin, make sure that:
 
-- [Defender for Containers is enabled on your subscription](defender-for-containers-enable-portal.md).
+- [Defender for Containers is enabled on your subscription](defender-for-containers-enable.md).
 
 - You have added the [required FQDN/application rules for Azure policy](/azure/aks/outbound-rules-control-egress#azure-policy).
 
@@ -274,6 +274,6 @@ spec:
 
 ## Related content
 
-- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-portal.md)
+- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable.md)
 
 - [Deploy Defender for Containers components using Azure CLI](defender-for-containers-deploy-azure-cli.md)

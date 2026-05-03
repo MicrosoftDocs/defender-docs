@@ -232,7 +232,7 @@
             - name: Exclude clusters from automatic provisioning
               href: defender-for-containers-exclude-cluster.md
             - name: Enable Defender for Containers
-              href: defender-for-containers-enable-portal.md
+              href: defender-for-containers-enable.md
             - name: Deploy components manually
               items:
                 - name: Deploy using Azure CLI
