@@ -22,10 +22,7 @@ Use this integration to:
 
 - Accelerate fixes with AI-powered (Copilot) remediation.
 
-This overview explains how the integration works and helps you understand its core capabilities before deployment. The integration is currently in preview.
-
-> [!NOTE]
-> For the current preview release, native integration of GHAS with Defender for Cloud is supported only for container workloads.
+This overview explains how the integration works and helps you understand its core capabilities before deployment.
 
 ## Availability and prerequisites
 
