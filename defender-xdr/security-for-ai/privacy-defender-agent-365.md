@@ -45,7 +45,7 @@ Once created, the tenant can't be moved to a different location.
 
 ## Data retention
 
-As part of Agent 365, Microsoft Defender retains customer data for up to 30 days, during which time you can view it in the Microsoft Defender portal. Microsoft Defender retains agent inventory and data shared with [Microsoft Defender XDR](/defender-xdr/data-privacy) for up to 180 days.
+As part of Agent 365, Microsoft Defender retains customer data for up to 30 days, and you can view it in the Microsoft Defender portal during that time, except for agent inventory and data shared with [Microsoft Defender XDR](/defender-xdr/data-privacy), which Microsoft Defender retains for up to 180 days.
 
 Microsoft Defender deletes this customer data within 30 days of contract termination or expiration.
 
