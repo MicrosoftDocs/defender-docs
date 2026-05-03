@@ -17,13 +17,13 @@ ms.custom: msecd-doc-authoring-1012
 
 Microsoft Defender provides a set of AI agent security capabilities in [Microsoft Agent 365](https://www.microsoft.com/microsoft-agent-365) - including agent discovery, posture assessment, threat detection, and real-time protection - to help protect agents from threats such as prompt-based attacks, unsafe tool usage, credential exposure, and data exfiltration. For more information, see the [Microsoft Defender for AI overview](./defender-security-for-ai.md).
 
-This article describes how Microsoft Defender collects, stores, and uses data as part of its AI agent security capabilities.
+This article describes how Microsoft Defender collects, stores, and uses customer data for these AI agent security capabilities in Agent 365.
 
 For commitments that apply to all Agent 365 services, see [Data handling, data residency, and compliance in Agent 365 observability](/microsoft-agent-365/admin/data-residency-protection-compliance).
 
 ## Data collected
 
-Defender for Agent 365 collects:
+As part of Agent 365, Microsoft Defender collects:
 
 - **Observability trace payloads** submitted by agents during execution. Payloads might include session inputs and outputs, depending on how the developer instruments the agent.
 - **Agent configuration attributes** from the Agent 365 registry and, for local agents on devices, from Microsoft Defender for Endpoint. Examples: agent name, type, version, configured tools, connected models, and published locations.
@@ -35,7 +35,7 @@ To stop Defender from collecting this data, an administrator can disable these c
 
 ## Data storage location
 
-Defender for Agent 365 operates in the following Azure regions:
+As part of Agent 365, Microsoft Defender operates in the following Azure regions:
 
 | Tenant location | Data storage location |
 |---|---|
@@ -62,7 +62,7 @@ See the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystate
 
 ## Data sharing within Microsoft
 
-Defender for Agent 365 can share data, including customer data, with other Microsoft products the customer has licensed. These might include:
+As part of Agent 365, Microsoft Defender can share data, including customer data, with other Microsoft products the customer has licensed. These might include:
 
 - Microsoft Defender XDR
 - Microsoft Defender for Endpoint
