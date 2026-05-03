@@ -140,7 +140,7 @@ For private EKS clusters, the Kubernetes API server must expose a restricted pub
   - `eks:ListAssociatedAccessPolicies`
 
 > [!NOTE]
-> `eks:UpdateClusterConfig` is used to apply required cluster configuration for supported scenarios, such as enabling a restricted public API endpoint for private clusters.
+> `eks:UpdateClusterConfig` is used to add the Microsoft Defender for Containers static IP CIDR blocks to the EKS cluster public access CIDR allowlist (`ResourcesVpcConfig.PublicAccessCidrs`). It's also used to update the authentication mode from `CONFIG_MAP` to `API_AND_CONFIG_MAP`, which is required for access entry creation on older clusters. If this permission isn't granted, inventory collection fails for clusters with restricted public endpoint access because Defender for Containers can't connect to the Kubernetes API server. Inventory collection also fails for clusters that use `CONFIG_MAP`-only authentication because Defender for Containers can't create the required access entries. For clusters with an open public endpoint, this permission isn't required for connectivity, but Defender for Cloud still attempts the configuration update.
 
 ### Google Kubernetes Engine (GKE)
 
@@ -167,6 +167,9 @@ For private GKE clusters, the Kubernetes API server must expose a restricted pub
 - Role: **MDCGkeContainerInventoryCollectionRole**
   - `container.nodes.proxy`
   - `container.secrets.list`
+
+> [!NOTE]
+> `container.clusters.update` is used to add the Microsoft Defender for Containers static IP CIDR blocks to the GKE cluster Master Authorized Networks configuration. If this permission isn't granted, inventory collection fails for clusters that have Master Authorized Networks enabled because Defender for Containers can't connect to the Kubernetes API server. For clusters without Master Authorized Networks enabled, this permission isn't required for connectivity.
 
 ## Kubernetes clusters to Microsoft Defender for Cloud
 
