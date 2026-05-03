@@ -102,7 +102,7 @@ This version includes the following updates:
 
 - CVE updates
 - OT sensor operating system upgrade to Debian 12
-- For monthly release highlights, see [What's new in Microsoft Defender for IoT](/defender-for-iot/organizations/whats-new).
+- For monthly release highlights, see [What's new in Microsoft Defender for IoT](whats-new.md).
 
 ## Versions 25.2.x
 
