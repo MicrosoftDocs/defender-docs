@@ -39,7 +39,7 @@ Cloud features may be dependent on a specific sensor version. Such features are 
 | Version / Patch |  Release date | Scope     | Supported until |
 | ------- |  ------------ | ----------- | ------------------- |
 | **26.1** | | | |
-| 26.1.10 | 04/2026 | Minor |04/2027 |
+| 26.1.0 | 04/2026 | Major |03/2027 |
 | **25.2** | | | |
 | 25.2.2 | 02/2026 | Minor |01/2027 |
 | 25.2.1 | 12/2025 | Minor |11/2026 |
@@ -90,19 +90,18 @@ To understand whether a feature is supported in your sensor version, check the r
 
 ## Versions 26.1.x
 
-### Version 26.1.10
+### Version 26.1.0
 
-**Release date**: 04/23/2026
+**Release date**: 04/2026
 
-**Supported until**: 04/2027
+**Supported until**: 03/2027
 
-**Scope**: Minor
+**Scope**: Major
 
 This version includes the following updates:
 
 - CVE updates
 - OT sensor operating system upgrade to Debian 12
-- For monthly release highlights, see [What's new in Microsoft Defender for IoT](whats-new.md).
 
 ## Versions 25.2.x
 

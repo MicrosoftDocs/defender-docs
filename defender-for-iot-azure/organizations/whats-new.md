@@ -25,7 +25,7 @@ Features released earlier than nine months ago are described in the [What's new 
 
 |Service area  |Updates  |
 |---------|---------|
-| **OT networks** | Sensor version 26.1.10 is now available. This release includes CVE updates and an OT sensor operating system upgrade to Debian 12. See [release details and updates](release-notes.md#version-26110). |
+| **OT networks** | Sensor version 26.1.0 is now available. This release includes CVE updates and an OT sensor operating system upgrade to Debian 12. See [release details and updates](release-notes.md#version-2610). |
 
 ## February 2026
 
