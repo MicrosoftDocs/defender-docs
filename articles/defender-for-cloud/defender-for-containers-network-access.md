@@ -14,7 +14,7 @@ This article describes the network connectivity and permission requirements for 
 
 The requirements in this article depend on the enabled features and the environment in which your container workloads run.
 
-Learn more about [connectivity patterns and plan components](defender-for-containers-architecture.md).
+Learn more about [connectivity patterns](defender-for-containers-feature-access-patterns.md) and [plan components](defender-for-containers-architecture.md).
 
 ## Microsoft Defender for Cloud to container registries
 
