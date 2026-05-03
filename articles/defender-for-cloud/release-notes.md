@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 04/01/2026
+ms.date: 05/03/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -28,20 +28,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
-## April 2026
+## May 2026
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| April 30, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
-| April 30, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
-| April 30, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
-| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
-| April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
-| April 1, 2026 | Upcoming change | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
+| May 3, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
+| May 3, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
+| May 3, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
+| May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
 
 ### General availability of individual recommendations for Defender for Cloud in Azure portal and deprecation of legacy grouped recommendations
 
-April 30, 2026
+May 3, 2026
 
 Individual recommendations for Defender for Cloud that were previously represented as grouped recommendations are now generally available (GA) in Azure portal.
 
@@ -57,7 +55,7 @@ For more information see, [security recommendations](review-security-recommendat
 
 ### Daily score calculation enhancement for risk-based Cloud secure score
 
-April 30, 2026
+May 3, 2026
 
 We've improved how daily Cloud secure score values are calculated to more accurately reflect your posture and the impact of actions taken throughout the day.
 
@@ -69,7 +67,7 @@ For more information, see [Cloud secure score](secure-score-security-controls.md
 
 ### General availability of Defender for Cloud integration into the Defender portal
 
-April 30, 2026
+May 3, 2026
 
 Microsoft Defender for Cloud is now integrated into the Microsoft Defender portal, unifying cloud security posture management and threat protection in a single experience. This integration provides a centralized view across hybrid and multicloud environments, including Azure, AWS, and GCP.
 
@@ -87,6 +85,58 @@ Microsoft Defender for Cloud is now integrated into the Microsoft Defender porta
 This integration enables security teams to monitor, prioritize, and respond to risks across their entire environment from a single location.
 
 For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
+
+### General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration
+
+May 3, 2026
+
+The native integration between Microsoft Defender for Cloud and GitHub Advanced Security (GHAS) is now generally available. This integration connects runtime security signals from Defender for Cloud with code-level vulnerability management in GHAS, enabling developers and security teams to prioritize and remediate vulnerabilities based on actual production risk.
+
+**Key capabilities:**
+
+- **Runtime context in GitHub** - GHAS alerts are enriched with runtime risk factors from Defender for Cloud, including internet exposure, sensitive data access, and lateral movement potential.
+- **AI-powered remediation** - GitHub Copilot Autofix provides validated, ready-to-merge security fixes with multi-fix bundling for efficiency.
+- **Security campaigns** - Security teams can trigger targeted GitHub Security Campaigns from Defender for Cloud to mobilize developer teams on prioritized vulnerabilities.
+- **Bidirectional sync** - GitHub issue status and ownership changes sync to Defender for Cloud within minutes.
+
+**Prerequisites:**
+
+- Defender Cloud Security Posture Management (DCSPM) plan
+- GitHub account with connector configured in Defender for Cloud
+- GitHub Advanced Security license on connected repositories
+
+Learn more about [GitHub Advanced Security integration](github-advanced-security-overview.md) and how to [deploy the integration](github-advanced-security-deploy.md).
+
+## April 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| April 30, 2026 | GA | [Anti-malware detection and blocking is now generally available](#anti-malware-detection-and-blocking-is-now-generally-available) |
+| April 30, 2026 | GA | [DNS Detection for Kubernetes is now generally available](#dns-detection-for-kubernetes-is-now-generally-available) |
+| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
+| April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
+| April 1, 2026 | Update | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
+
+
+### Anti-malware detection and blocking is now generally available
+
+April 30, 2026
+
+Container runtime anti-malware detection and blocking is now generally available in Defender for Containers for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE).
+
+Anti-malware detection and blocking detects and blocks malware when a container runs an executable that the system identifies as malicious software. You can define anti-malware policies that set conditions for alerts and blocking to distinguish legitimate activity from potential threats.
+
+Learn more about [anti-malware detection and blocking](anti-malware.md).
+
+### DNS Detection for Kubernetes is now generally available
+
+April 30, 2026
+
+DNS Detection for Kubernetes is now generally available in Defender for Containers for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE).
+
+DNS Detection monitors DNS queries from containerized workloads to detect suspicious activity such as communication with malicious domains and DNS tunneling. The feature requires the Defender sensor deployed via Helm.
+
+Learn more about [DNS Detection availability in Defender for Containers](support-matrix-defender-for-containers.md#runtime-protection-features).
 
 ## General availability of Defender for Storage integration in Azure Portal Storage Center
 
@@ -588,7 +638,7 @@ Learn more about [Serverless protection](serverless-protection.md).
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|November 26, 2025 | Preview | [GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration](#github-advanced-security-ghas-and-microsoft-defender-for-cloud-native-integration)|
+|November 26, 2025 | Preview | [GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration](#github-advanced-security-ghas-and-microsoft-defender-for-cloud-native-integration-preview)|
 |November 26, 2025 | GA | [Kubernetes gated deployment (GA)](#kubernetes-gated-deployment-ga)|
 |November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
 |November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
@@ -606,11 +656,11 @@ Learn more about [Serverless protection](serverless-protection.md).
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
-### GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration
+### GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration (Preview)
 
 November 26, 2025
 
-Announcing the preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
+Microsoft Defender for Cloud announced the preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
 
 This integration helps organizations secure code to cloud and accelerate fixing security issues in their software portfolio. It uses agentic remediation from GitHub Advanced Security's security campaigns and autofix agent with Microsoft Defender for Cloud runtime context-based vulnerability prioritization. The result is fewer distractions, faster fixes, better collaboration, and secure code to cloud.
 
