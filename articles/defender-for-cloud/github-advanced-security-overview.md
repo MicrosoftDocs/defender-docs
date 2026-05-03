@@ -37,7 +37,7 @@ Confirm the following before you onboard:
 | Roles and permissions      | - Security Admin permissions  <br> - Security Admin on the Azure subscription (to view findings in Defender for  Cloud)  <br> - GitHub organization owner |
 | Cloud environments         | - Available in commercial clouds only (not in Azure  Government, Azure operated by 21Vianet, or other sovereign clouds) |
 
-## Personas & pain points
+## Personas and pain points
 
 :::image type="content" source="media/github-advanced-security-overview/personas.png" alt-text="Screenshot of personas and pain points for Cloud Security, AppSec, and Developer teams, with columns listing challenges and solutions." lightbox="media/github-advanced-security-overview/personas.png":::
 

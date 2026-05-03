@@ -38,12 +38,13 @@ To test the integration, use your own repositories or an [example sandbox projec
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Go to **Microsoft Defender for Cloud** > **DevOps security**.
-1. Enter your code repo name in the search bar (Example: **zava-webshop**). 
-1. Validate that it really belongs to org you're monitoring (Example: **zava-corporation** org)
-1. Review if there are any findings for the repo
+1. Enter your code repo name in the search bar (Example: **zava-webshop**).
+1. Validate that it really belongs to org you're monitoring (Example: **zava-corporation** org).
+1. Review if there are any findings for the repo.
 1. Ensure **Advanced security status** is **On**, indicating you have GitHub Advanced Security enabled on the monitored repo– > your onboarded repo.
 1. If your repo not found, refer to Microsoft Defender for Cloud documentation for trouble shooting and [GitHub connector onboarding](quickstart-onboard-github.md).
 1. Make sure that agentless scanning is turned on for your GitHub connector.
+
     :::image type="content" source="media/github-advanced-security-deploy/agentless-scan.png" alt-text="Screenshot of Plan Configuration in Defender CSPM with Agentless code scanning toggled on and all scanner options enabled." lightbox="media/github-advanced-security-deploy/agentless-scan.png":::
 
 ### Step 2: Validate that your environment is ready
@@ -138,22 +139,22 @@ From the recommendation view, you can explicitly generate a GitHub issue to trac
 
     :::image type="content" source="media/github-advanced-security-deploy/code-runtime-flow-diagram.png" alt-text="Screenshot of Remediation Insights showing code-to-runtime diagram with risk levels and Take Action menu open on the Runtime box." lightbox="media/github-advanced-security-deploy/code-runtime-flow-diagram.png":::
 
-1. On the **Remediation Insights** tab review, the affected **Runtime** box.
-1. **Validate whether a GitHub issue already exists**. If a GitHub issue already exists, a GitHub icon is displayed on the box. Hover over the icon to view issue details.
-1. If no issue exists and you have the required permissions, you can generate a new GitHub issue. Select **Take action**.
-1. Select the **Generate GitHub issue** option from the popup.
-1. If the issue was created successfully, you'll see a popup notification with a link to the issue. The issue is created in the code repository of origin.
+    1. On the **Remediation Insights** tab review, the affected **Runtime** box.
+    1. **Validate whether a GitHub issue already exists**. If a GitHub issue already exists, a GitHub icon is displayed on the box. Hover over the icon to view issue details.
+    1. If no issue exists and you have the required permissions, you can generate a new GitHub issue. Select **Take action**.
+    1. Select the **Generate GitHub issue** option from the popup.
+    1. If the issue was created successfully, you'll see a popup notification with a link to the issue. The issue is created in the code repository of origin.
 
-    :::image type="content" source="media/github-advanced-security-deploy/link-issue.png" alt-text="Screenshot of GitHub issues list showing open issues for dependencies with labels like Defender for Cloud and security." lightbox="media/github-advanced-security-deploy/link-issue.png":::
+        :::image type="content" source="media/github-advanced-security-deploy/link-issue.png" alt-text="Screenshot of GitHub issues list showing open issues for dependencies with labels like Defender for Cloud and security." lightbox="media/github-advanced-security-deploy/link-issue.png":::
 
-> [!NOTE]
-> If the **Generate GitHub** issue option isn't available, required GitHub or repository permissions might be missing. Contact your GitHub or repository administrator to request access.
+    > [!NOTE]
+    > If the **Generate GitHub** issue option isn't available, required GitHub or repository permissions might be missing. Contact your GitHub or repository administrator to request access.
 
-   :::image type="content" source="media/github-advanced-security-deploy/github-issue.png" alt-text="Screenshot of GitHub issues list showing open issues for dependencies with labels like Defender for Cloud and security." lightbox="media/github-advanced-security-deploy/github-issue.png":::
+    :::image type="content" source="media/github-advanced-security-deploy/github-issue.png" alt-text="Screenshot of GitHub issues list showing open issues for dependencies with labels like Defender for Cloud and security." lightbox="media/github-advanced-security-deploy/github-issue.png":::
 
-1. **Track ownership and status updates** - changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress from **Recommendations** view.
+    1. **Track ownership and status updates** - changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress from **Recommendations** view.
 
-    :::image type="content" source="media/github-advanced-security-deploy/recommendations-pane.png" alt-text="Screenshot of Microsoft Defender for Cloud Recommendations page showing high-risk issues with GitHub issue details popup." lightbox="media/github-advanced-security-deploy/recommendations-pane.png":::
+        :::image type="content" source="media/github-advanced-security-deploy/recommendations-pane.png" alt-text="Screenshot of Microsoft Defender for Cloud Recommendations page showing high-risk issues with GitHub issue details popup." lightbox="media/github-advanced-security-deploy/recommendations-pane.png":::
 
 ## Make agentic fixes
 
