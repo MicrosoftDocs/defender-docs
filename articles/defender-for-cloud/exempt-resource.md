@@ -144,7 +144,7 @@ An exemption can take up to 24 hours to take effect because Defender for Cloud e
 
 - If you exempt specific resources, Defender for Cloud lists them in the **Not applicable** tab of the recommendation details page.
 
-- If you exempt a recommendation, Defender for Cloud hides it by default on the **Recommendations** page. This happens because the default **Recommendation status** filter excludes **Not applicable** recommendations. The same behavior occurs if you exempt all recommendations in a security control.
+- If you exempt a recommendation, Defender for Cloud hides it by default on the **Recommendations** page. This behavior happens because the default **Recommendation status** filter excludes **Not applicable** recommendations. The same behavior occurs if you exempt all recommendations in a security control.
 
 ### Understand how the exemption type affects the recommendation status
 
