@@ -13,7 +13,7 @@ ms.date: 04/29/2026
 > [!IMPORTANT]
 > This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)] This premium Azure Policy capability is offered at no extra cost for customers with Microsoft Defender for Cloud's enhanced security features enabled. For other users, charges might apply in the future.
 
-When you investigate security recommendations in Microsoft Defender for Cloud, you review the list of affected resources. Occasionally, you find a resource that shouldn't be in the list, or you find a recommendation that appears in a scope where it doesn't belong. For example, a resource might be remediated by a process that Defender for Cloud doesn't track, or a recommendation might not apply to a specific subscription. Your organization might decide to accept the risks related to the specific resource or recommendation.
+When you investigate security recommendations in Microsoft Defender for Cloud, you review the list of affected resources. Occasionally, you find a resource that shouldn't be in the list, or you find a recommendation that appears in a scope where it doesn't belong. For example, Defender for Cloud might not track a remediation process, or a recommendation might not apply to a specific subscription. Your organization might decide to accept the risks related to the specific resource or recommendation.
 
 In such cases, create an exemption rule to:
 
@@ -31,7 +31,7 @@ For each scope, create an exemption rule to:
 
 ## Prerequisites
 
-Defender for Cloud exemptions rely on the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative. MCSB must be assigned on the subscription before you create exemptions.
+Defender for Cloud exemption relies on the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative. MCSB must be assigned on the subscription before you create exemptions.
 
 > [!IMPORTANT]
 > Without MCSB assigned:
@@ -60,7 +60,13 @@ You need the following RBAC actions:
 | `Microsoft.Authorization/policyAssignments/exempt/action` | Perform an exemption operation on a linked scope |
 
 > [!NOTE]
-> If any of these actions are missing, the **Exempt** button might be hidden. Custom roles have limited support for exemption operations. Only built-in roles can perform certain exemption-related actions. Use one of the following built-in roles to manage exemptions: **Security Admin** (recommended), **Owner**, **Contributor** at the subscription level, or **Resource Policy Contributor**.
+> If any of these actions are missing, the **Exempt** button might be hidden. Custom roles offer limited support for exemption operations.
+>
+> To manage exemptions, use one of the following built-in roles:
+> - **Security Admin** (recommended)
+> - **Owner**
+> - **Contributor** (at the subscription level)
+> - **Resource Policy Contributor**
 
 - Subscription-level permissions don't inherit upward to management groups. If the policy assignment is at the management group level, you need the role assigned at that level.
 
@@ -85,7 +91,12 @@ You need the following RBAC actions:
 - When you assign a new initiative that contains a recommendation with an existing exemption, the exemption doesn't carry over to the new initiative. Create a new exemption for the recommendation under the newly assigned initiative.
 
 > [!TIP]
-> If you run into issues after you create an exemption, see [Review and manage recommendation exemptions](review-exemptions.md) for guidance on [resolving unhealthy status](review-exemptions.md#resolve-an-exemption-that-doesnt-update-the-recommendation-status), [permission errors at management group level](review-exemptions.md#resolve-permission-errors-at-management-group-level), [missing exemptions in the portal](review-exemptions.md#find-exemptions-that-arent-visible-in-the-portal), [deleting exemptions](review-exemptions.md#delete-an-exemption), and [cleaning up duplicate exemptions](review-exemptions.md#resolve-duplicate-or-conflicting-exemptions).
+> If you run into issues after you create an exemption, see [Review and manage recommendation exemptions](review-exemptions.md) for guidance on:
+> - [Resolving unhealthy status](review-exemptions.md#resolve-an-exemption-that-doesnt-update-the-recommendation-status)
+> - [Permission errors at management group level](review-exemptions.md#resolve-permission-errors-at-management-group-level)
+> - [Missing exemptions in the portal](review-exemptions.md#find-exemptions-that-arent-visible-in-the-portal)
+> - [Deleting exemptions](review-exemptions.md#delete-an-exemption)
+> - [Cleaning up duplicate exemptions](review-exemptions.md#resolve-duplicate-or-conflicting-exemptions)
 
 ## Define an exemption
 
