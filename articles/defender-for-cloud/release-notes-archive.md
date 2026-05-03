@@ -1585,7 +1585,7 @@ April 15, 2024
 
 Runtime threat detection and agentless discovery for AWS and GCP in Defender for Containers are now generally available. In addition, there's a new authentication capability in AWS which simplifies provisioning.
 
-Learn more about [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) and how to [configure Defender for Containers components](defender-for-containers-enable-plan.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-eks#deploy-the-defender-sensor).
+Learn more about [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) and how to [configure Defender for Containers components](defender-for-containers-enable-plan.md).
 
 ### Update: Risk prioritization
 
@@ -3786,7 +3786,7 @@ The new security agent is a Kubernetes DaemonSet, based on eBPF technology and i
 
 The security agent enablement is available through autoprovisioning, recommendations flow, AKS RP or at scale using Azure Policy.
 
-You can [deploy the Defender agent](./defender-for-containers-enable-plan.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#deploy-the-defender-sensor) today on your AKS clusters.
+You can [deploy the Defender agent](./defender-for-containers-enable-plan.md) today on your AKS clusters.
 
 With this announcement, the runtime protection - threat detection (workload) is now also generally available.
 
@@ -3984,7 +3984,7 @@ Learn how [JIT protects your AWS EC2 instances](just-in-time-access-overview.md)
 
 ### Add and remove the Defender sensor for AKS clusters using the CLI
 
-The [Defender agent](defender-for-cloud-glossary.md#defender-sensor) is required for Defender for Containers to provide the runtime protections and collects signals from nodes. You can now use the Azure CLI to [add and remove the Defender agent](defender-for-containers-enable-plan.md?tabs=k8s-deploy-cli%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Ck8s-remove-cli&pivots=defender-for-container-aks#use-the-azure-cli-to-deploy-the-defender-sensor) for an AKS cluster.
+The [Defender agent](defender-for-cloud-glossary.md#defender-sensor) is required for Defender for Containers to provide the runtime protections and collects signals from nodes. You can now use the Azure CLI to [add and remove the Defender agent](defender-for-containers-deploy-azure-cli.md) for an AKS cluster.
 
 > [!NOTE]
 > This option is included in [Azure CLI 3.7 and above](/cli/azure/update-azure-cli).
