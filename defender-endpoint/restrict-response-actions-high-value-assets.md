@@ -1,5 +1,5 @@
 ---
-title: Limit security operations on critical assets in Microsoft Defender for Endpoint
+title: Selective response actions on critical assets in Microsoft Defender for Endpoint
 description: Learn how to onboard Tier-0 and high-value assets with restricted security operations in Microsoft Defender for Endpoint to reduce operational risk.
 ms.service: defender-endpoint
 ms.author: painbar
