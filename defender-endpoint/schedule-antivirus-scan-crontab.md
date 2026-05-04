@@ -102,7 +102,7 @@ sudo nano mdatp_cron_job.log
 
 ## Verify scan execution
 
-Linux doesn't provide a direct mechanism to confirm that a scheduled scan executed.
+Linux doesn't provide a direct way to confirm that a scheduled scan ran.
 
 Scheduled scans configured through crontab don't surface a status field or dedicated confirmation in Microsoft Defender for Endpoint on Linux.
 
@@ -123,37 +123,37 @@ Use this command to verify that scheduled scans ran at the expected date, time, 
 
 The output only covers the last seven scans. If you need to check whether both quick and full scans are running regularly, monitor it over time or script around it.
 
-Here are other ways to verify scan execution on Linux:
+You can also verify the scan ran by:
 
-1. Run and verify on-demand scans:
+**Running on-demand scans:**
 
-**Quick scan**
+- Quick scan
 
-```bash
-mdatp scan quick
-```
+    ```bash
+    mdatp scan quick
+    ```
  
-**Full scan**
+- Full scan
 
-```bash
- mdatp scan full
-```
+    ```bash
+     mdatp scan full
+    ```
  
-**Scan a specific path**
+- Scan a specific path
 
 ```bash
 mdatp scan custom --path /home/user/downloads
 ```
 
-1. Check scan results:
+**Checking scan results**
 
-**List all detected threats (confirms scan ran and found something)**
+- List all detected threats.
 
 ```bash
 mdatp threat list
 ```
  
-**Get details on a specific threat**
+- Get details on a specific threat.
 
 ```bash
 mdatp threat get --id [threat-id]
