@@ -142,7 +142,7 @@ Disable as follows:
 
 1. Select **Save**.
 
-## Next step
+## Related content
 
 - Events collected for File Integrity Monitoring are included in the data types eligible for the 500-MB benefit for Defender for Servers Plan 2 customers. [Learn more about the benefit](data-ingestion-benefit.md).
 - [Review changes](file-integrity-monitoring-review-changes.md) in File Integrity Monitoring.
