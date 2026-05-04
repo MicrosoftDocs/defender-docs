@@ -12,7 +12,7 @@ ms.date: 3/19/2026
 #customer intent: As a security administrator, I want to configure Microsoft Sentinel scoping to control access to data at the row level, so that I can ensure that users only have access to the data relevant to their role and responsibilities.
 ---
 
-# Configure Microsoft Sentinel scoping (row-level RBAC) (preview)
+# Configure Microsoft Sentinel scoping (row-level RBAC)
 
 Microsoft Sentinel scoping provides row-level role-based access control (RBAC), enabling granular, row-level access without requiring workspace separation. This capability allows multiple teams to operate securely within a shared Microsoft Sentinel environment while using consistent and reusable scope definitions across tables and experiences.
 
@@ -151,7 +151,7 @@ The following limitations apply:
 - **Transformation placement**: Transformations can only be added in the same subscription as the user's subscription.
 - **Maximum scopes**: You can create a maximum of 100 unique Sentinel scopes per tenant.
 - **Defender portal only**: Sentinel in the Azure portal (Ibiza) doesn't support scoping. Use the Defender portal instead.
-- **XDR tables not supported**: XDR tables aren't directly supported. If you extend retention of XDR tables into Log Analytics, you can tag, but only data with 30+ days retention, and not data between 0-30 days.
+- **XDR tables not supported**: XDR tables aren't supported. This includes extended retention of XDR tables into the lake.
 - **No automatic scope inheritance**: The Log Analytics tables `SecurityAlerts` and `SecurityIncidents` don't automatically inherit the scope from the raw data/tables from which they were generated. Therefore, scoped users can't access them by default. As a workaround you can do one of the following actions:
   - Use the XDR `AlertsInfo` and `AlertsEvidence` tables where scope is automatically inherited, or
   - Apply scope to these Log Analytics tables manually (this method is limited to the attributes in the table and might not be equivalent to inheritance of the data tables that generated these alerts).
