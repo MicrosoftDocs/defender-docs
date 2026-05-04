@@ -25,80 +25,13 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 - [Get started with Security Copilot](/security-copilot/get-started-security-copilot)
 - [Understand authentication in Security Copilot](/security-copilot/authentication)
 - [Prompting in Security Copilot](/security-copilot/prompting-security-copilot)
-- [Responsible AI FAQs](responsible-ai-copilot-defender.md)
+- [Application card for Microsoft Copilot in Microsoft Defender](application-card-copilot-defender.md)
 
 ## Microsoft Security Copilot integration in Microsoft Defender
 
-[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively.
-You can access Copilot in two ways:
+[Microsoft Security Copilot](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Copilot in Defender is available to users who have provisioned access to Security Copilot.
 
-- Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence.
-- Defender Chat experience (preview) is an open prompt chat assistant built into Microsoft Defender. It helps SOC analysts investigate threats, explore incidents, and answer security questions in plain language, without needing to navigate multiple screens or write complex queries.
-
-Both Copilot in Defender and the Defender Chat experiences operate using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Responsible AI FAQs](responsible-ai-copilot-defender.md).
-
-### [Defender Chat experience (preview)](#tab/defender-chat)
-
-## Get Started
-
-To open the Defender chat experience from anywhere in the Defender portal, select the **Copilot** button in the top navigation bar. The chat panel slides open on the right side of the screen and stays in context while you continue working. A welcome screen appears with a greeting and an input field ready for your first question.
-
-:::image type="content" source="./media/security-copilot-in-microsoft-365-defender/open-chat.png" alt-text="Screenshot of the Defender Chat welcome screen and the Copilot icon selected in the top right corner.":::
-
-To close the panel, select **Close** in the header or select the Copilot button again. Your conversation is preserved and you can reopen the panel and pick up where you left off.
-
-## Page Context Awareness
-
-Defender Chat responds based on the page you're currently viewing in the Defender portal and can answer questions based on that context.
-
-If you ask a question such as "Which users are involved in *this* incident?",  the chat understands which incident, alert, device, or entity you're referring to based on your current page without having to need to provide IDs or names.
-
-## Chat conversation capabilities
-
-### Interactive conversations
-
-The chat remembers the full context of your conversation, so you can ask follow-up questions naturally. For example, you can start with *Show me high-severity incidents from the past week*, then follow up with *Tell me more about the first one*, and the chat understands what you mean.
-
-### Step-by-Step Plans
-
-For complex or multi-step requests, the chat might first present a proposed plan outlining the steps it intends to take. You can Approve or Reject the plan before any actions are taken. This keeps you in control, especially for investigations that require multiple data lookups.
-
-For example: If you ask *Investigate incident 12345 and summarize the key findings*, the chat might propose the following plan:
-
-1. Retrieve incident details
-1. Fetch associated alerts
-1. Collect evidence and impacted entities
-1. Summarize findings
-
-Once approved, the chat executes each step and shows its progress in real time.
-
-### Clarifying Questions
-
-If your request is ambiguous, the chat might ask a clarifying question and offer quick-select options (up to four suggestions) to help you get to the right answer faster. Select an option or type your own response.
-
-### Conversation History
-
-Your conversations are saved automatically. Use the Conversations panel on the left side of the chat to:
-
-- Resume a previous conversation
-- Start a new session
-- Delete a conversation
-- Clear all conversations
-
-> [!NOTE]
->
-> - Conversations aren't synced across devices or shared with other users. The last ten conversations are stored locally in your browser.
-
-### Working with Responses
-
-Responses are formatted with structured tables, bullet points, and section headers for readability. You can:
-
-- Copy a response: Select the *copy* icon on any message to copy it to your clipboard
-- Export tables: Select *Export* on any table to export it to Excel for further analysis
-- Stop generation: Select *Stop* to interrupt a response that's is taking too long or heading in the wrong direction
-- Retry: If something goes wrong, select *Retry* to attempt the response again
-
-### [Copilot in Defender embedded skills](#tab/copilot-in-defender)
+Copilot in Defender operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Application card for Microsoft Copilot in Microsoft Defender](application-card-copilot-defender.md).
 
 ## Key features
 
