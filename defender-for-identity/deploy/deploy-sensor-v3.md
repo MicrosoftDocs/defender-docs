@@ -1,15 +1,16 @@
 ---
-title: Deploy the Defender for Identity sensor v3.x | Microsoft Defender for Identity
-description: This article describes the prerequisites and configuration steps for deploying the Microsoft Defender for Identity sensor version 3.x.
+title: Deploy the Defender for Identity sensor v3.x
+description: Learn the requirements and configuration steps to deploy the Defender for Identity sensor v3.x on domain controllers running Windows Server 2019 or later.
 ms.date: 05/04/2026
-ms.topic: install-set-up-deploy
+ms.topic: how-to
+ms.custom: msecd-doc-authoring-106
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
 ---
 
 # Deploy the Defender for Identity sensor v3.x
 
-This article describes the requirements for deploying the Defender for Identity sensor v3.x and the configuration steps to complete after activation.
+Deploy the Defender for Identity sensor v3.x on supported domain controllers. Complete the prerequisite checks before activation, then configure auditing and identity settings afterward.
 
 ## Before you activate
 
@@ -40,7 +41,7 @@ The v3.x sensor supports domain controllers, including domain controllers with t
 - Active Directory Certificate Services (AD CS)
 - Microsoft Entra Connect
 
-Use the [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) for standalone servers that run AD FS, AD CS, or Microsoft Entra Connect.
+Use the [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) for servers that aren't domain controllers and run AD FS, AD CS, or Microsoft Entra Connect.
 
 ### Licensing requirements
 
@@ -63,7 +64,7 @@ Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mob
 
 ### Networking requirements
 
-The Defender for Identity sensor utilizes the same URIs as Microsoft Defender for Endpoint. Please review the following documents for Defender for Endpoint, based on your systems connectivity, for a complete list of required service endpoints.
+The Defender for Identity sensor uses the same URIs as Microsoft Defender for Endpoint. Review the following documents for Defender for Endpoint, based on your system's connectivity, to find the complete list of required service endpoints.
 
 - [Microsoft Defender for Endpoint streamlined connectivity URLs](/defender-endpoint/streamlined-device-connectivity-urls-commercial?tabs=Windows)
 
@@ -88,7 +89,7 @@ Refer to the [Defender for Identity Capacity Planning documentation](/defender-f
 
 ### Test your prerequisites
 
-We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
+Run the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test whether your environment has the necessary prerequisites.
 
 The *Test-MdiReadiness.ps1* script is also available from Microsoft Defender XDR, on the **Identities > Tools** page (Preview).
 
@@ -128,7 +129,7 @@ Applying the **Unified Sensor RPC Audit** tag to a device improves security visi
 
 1. Add the **Unified Sensor RPC Audit** tag to the selected devices.
 
-    ![Screenshot that shows the config tag.](media/prerequisites-sensor-version-3/tag.png)
+    :::image type="content" source="media/prerequisites-sensor-version-3/tag.png" alt-text="Screenshot that shows the Unified Sensor RPC Audit tag applied to a device in Asset Rule Management." lightbox="media/prerequisites-sensor-version-3/tag.png":::
    
 1. Select **Next** to review and finish creating the rule, and then select **Submit**. The rule might take up to one hour to take effect.
 
@@ -136,7 +137,7 @@ Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
 
 ### Service account configuration
 
-The v3.x sensor uses the local system identity of the server for Active Directory and response actions. It does not support Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA). LocalSystem is the only supported identity for v3.x.
+The v3.x sensor uses the local system identity of the server for Active Directory and response actions. It doesn't support Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA). LocalSystem is the only supported identity for v3.x.
 
 If you're migrating from sensor v2.x and previously had a gMSA configured for [action accounts](manage-action-accounts.md), you must remove it. If gMSA remains enabled, response actions, including [attack disruption](/microsoft-365/security/defender/automatic-attack-disruption), won't work.
 

@@ -1,25 +1,26 @@
 ---
-title: Microsoft Defender for Identity Deployment Overview
-description: Learn how to deploy Microsoft Defender for Identity from the Microsoft Defender portal.
+title: Deploy Microsoft Defender for Identity sensors
+description: Learn how to deploy Microsoft Defender for Identity sensors on domain controllers and identity servers. Choose the right sensor version for your environment.
 ms.date: 05/04/2026
-ms.topic: how-to
+ms.topic: overview
+ms.custom: msecd-doc-authoring-106
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Identity deployment overview
 
-Defender for Identity uses sensors to collect signals from your on-premises identity infrastructure to detect threats. This article explains the Defender for Identity deployment process.
+Defender for Identity uses sensors to collect signals from your on-premises identity infrastructure to detect threats.
 
 Defender for Identity detects threats like privilege escalation or high-risk lateral movement, and reports on easily exploited identity issues like unconstrained Kerberos delegation for correction by the security team.
 
-We recommend installing Defender for Identity sensors on all domain controllers, including read-only domain controllers (RODCs). If you have AD FS, AD CS, or Microsoft Entra Connect servers in your environment that aren't domain controllers, install the v2.x sensor on each of those servers as well.
+Install Defender for Identity sensors on all domain controllers, including read-only domain controllers (RODCs). If you have AD FS, AD CS, or Microsoft Entra Connect servers in your environment that aren't domain controllers, install the v2.x sensor on each of those servers as well.
 
 ## Select your deployment method
 
 The sensor version you deploy depends on the server role and operating system. Use the following table to select the appropriate deployment for each server in your environment.
 
-:::image type="content" source="media/deploy-defender-identity/sensor-deployment-decision.png" alt-text="Diagram that shows the decision tree for choosing which sensor to deploy.":::
+:::image type="content" source="media/deploy-defender-identity/sensor-deployment-decision.png" alt-text="Decision tree diagram showing sensor version selection based on server role and operating system version.":::
 
 | Server configuration | Server Operating System | Recommended deployment |
 | --------- | --------- | --------- |

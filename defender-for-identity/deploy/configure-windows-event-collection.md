@@ -1,20 +1,21 @@
 ---
-title: Configure Windows event auditing | Microsoft Defender for Identity
-description: This article describes how to configure Defender for Identity to collect Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
+title: Configure Windows event auditing
+description: Configure Windows event auditing for Defender for Identity sensors. Learn automatic, manual, and PowerShell methods to enable required audit policies.
 ms.date: 05/04/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-106
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
 ---
 
 # Configure Windows event auditing
 
-Defender for Identity detection relies on specific Windows event logs parsed by the sensor from your domain controllers, AD FS servers, AD CS servers, and Microsoft Entra Connect servers. For the correct events to be audited and included in the Windows event log, these servers require accurate advanced audit policy settings.
+Configure Windows event auditing to enable Defender for Identity detections. The sensor parses specific Windows event logs from your domain controllers, AD FS servers, AD CS servers, and Microsoft Entra Connect servers. For the correct events to be audited and included in the Windows event log, these servers need the correct advanced audit policy settings.
 
 Configure auditing using one of these methods:
 
 - [Automatic configuration](#configure-defender-for-identity-to-collect-windows-events-automatically) for sensor v3.x on domain controllers (recommended)
-- [Manual configuration](#configure-windows-event-collection-manually) for sensor v2.x, standalone servers, or if you opted out of automatic auditing
+- [Manual configuration](#configure-windows-event-collection-manually) for sensor v2.x, servers that aren't domain controllers, or if you opted out of automatic auditing
 - [PowerShell configuration](#configure-windows-event-collection-using-powershell)
 - [Required Windows events](#required-windows-events) for all server types
 
@@ -49,9 +50,7 @@ When enabled, the sensor automatically:
 - Runs once every 24 hours.
 
 > [!NOTE]
-> Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers or to AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
-
-> [!NOTE]
+> - Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers or to AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
 > - If you don't turn on automatic Windows auditing, you **must** configure Windows event auditing either [manually](#configure-windows-event-collection-manually) or by using [PowerShell](#configure-windows-event-collection-using-powershell).
 > - GPO settings can conflict with local settings set by the sensor.
 
@@ -125,7 +124,7 @@ If you're working with a standalone Defender for Identity sensor, configure even
 - [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md). When you're forwarding syslog data to a standalone sensor, make sure not to forward *all* syslog data to your sensor.
 
 > [!IMPORTANT]
-> Defender for Identity standalone sensors don't support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
+> Defender for Identity standalone sensors don't support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, deploy the Defender for Identity sensor.
 
 For more information, see the product documentation for your SIEM system or your syslog server.
 
@@ -158,7 +157,7 @@ Before configuring Windows event collection manually, you can run a PowerShell s
 
 ## Configure Windows event collection manually
 
-This section includes instructions for manually configuring Windows event collection. Use these steps if you're deploying sensor v2.x, deploying on standalone AD FS/AD CS/Entra Connect servers, or if you opted out of automatic auditing for sensor v3.x.
+This section includes instructions for manually configuring Windows event collection. Use these steps if you're deploying sensor v2.x, deploying on AD FS, AD CS, or Entra Connect servers that aren't domain controllers, or if you opted out of automatic auditing for sensor v3.x.
 
 The following sections describe configuration for each server type:
 
@@ -212,7 +211,7 @@ This section describes how to modify your domain controller's Audit (Premium) Po
         | **DS Access** | **Audit Directory Service Access** | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
 
         > [!NOTE]
-        > <a name=failure>*</a> These subcategories don't support failure events. We recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
+        > <a name=failure>*</a> These subcategories don't support failure events. Add them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
 
     1. To configure **Audit Security Group Management**, under **Account Management**, select **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events.
 
