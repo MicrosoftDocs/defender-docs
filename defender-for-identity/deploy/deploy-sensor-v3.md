@@ -116,9 +116,6 @@ Defender for Identity relies on Windows event logs for many detections. For v3.x
 
 If automatic auditing isn't available or you opted out, [configure auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [use PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell).
 
-> [!NOTE]
-> **Known issue:** In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**. 
-
 ### Configure RPC auditing
 
 Applying the **Unified Sensor RPC Audit** tag to a device improves security visibility and unlocks more identity detections. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device Inventory for transparency and auditing capabilities.

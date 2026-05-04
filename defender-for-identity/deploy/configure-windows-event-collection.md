@@ -159,6 +159,9 @@ Before configuring Windows event collection manually, you can run a PowerShell s
 
 This section includes instructions for manually configuring Windows event collection. Use these steps if you're deploying sensor v2.x, deploying on AD FS, AD CS, or Entra Connect servers that aren't domain controllers, or if you opted out of automatic auditing for sensor v3.x.
 
+> [!NOTE]
+> **Known issue:** In some v3 sensor environments, health alerts about Windows event auditing might persist even when auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
+
 The following sections describe configuration for each server type:
 
 - [Configure auditing on a domain controller](#configure-auditing-on-a-domain-controller)
