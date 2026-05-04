@@ -39,7 +39,6 @@ The following table describes some of the main features the tool supports.
 | **Help** | A built-in help function displays all available command-line options. |
 | **Configuration files** | You can generate reusable configuration files that make bulk deployments more efficient and less error-prone. |
 | **Working without connectivity** | When connectivity is temporarily unavailable, offline onboarding and offboarding are possible. |
-| **Protections for high-value assets** | The [selective response actions capability (preview)](restrict-response-actions-high-value-assets.md) allows you to restrict high-impact security operations on high-value assets (HVAs) during onboarding to reduce operational risk on critical infrastructure. You configure these restrictions when [creating the onboarding package](#generate-and-download-a-new-onboarding-package). |
 | **Deployment key entry** | To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page. |
 | **Custom expiry** | Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
 | **Ability to view deployment packages** | You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
@@ -54,15 +53,9 @@ To view the complete command reference after [downloading the tool](#generate-an
 
 The Defender deployment tool supports the following operating systems: Windows 7 SP1, Windows Server 2008 R2 SP1, Windows Server 2012 R2, 2016, 2019, 2022, 2025, Windows 10 (version 1809 and newer), and all versions of Windows 11.
 
-> [!NOTE]
-> The selective response actions capability has different operating system requirements. If you're planning to use this capability, See [Restrict response actions on high-value assets: Supported operating systems](./restrict-response-actions-high-value-assets.md#prerequisites-and-supported-operating-systems).
-
 ## Prerequisites
 
 There are prerequisites that pertain to all supported Windows and Windows Server devices, as well as prerequisites that are specific to Windows 7 SP1 and Windows Server 2008 R2 SP1 devices.
-
-> [!NOTE]
-> If you plan to use the selective response actions feature to restrict high-impact security operations on high-value assets, see also the [prerequisites for that feature](./restrict-response-actions-high-value-assets.md#prerequisites-and-supported-operating-systems).
 
 ### General prerequisites
 
@@ -94,18 +87,9 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 ## Generate and download a new onboarding package
 
-The Defender deployment tool can generate two kinds of onboarding packages - a full functionality package that allows all supported response actions on devices onboarded with the package, and a restricted functionality package that can restrict certain high-impact response actions on onboarded devices. Before generating a new onboarding package, determine which mode is appropriate for your devices.
-
-*  Generate a full functionality package if you're onboarding standard devices.
-*  Generate a restricted functionality package if you're onboarding Tier-0 and high-value assets such as domain controllers, critical servers, and other sensitive devices, and you want to enforce stricter security boundaries. For more information about the selective response actions capability and the security operations modes, see [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md).
-
-Once you've determined which type of package you want to generate, select the relevant tab below for instructions on how to generate the package.
-
-# [Full functionality](#tab/full-functionality)
-
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
 
-1. In the Step 1 dropdown menu, choose **Windows (preview)**.
+1. In the Step 1 dropdown menu, choose **Windows**.
 
 1. Under **Deploy by downloading and applying packages or files**, select the **Onboard** button.
 
@@ -118,50 +102,7 @@ Once you've determined which type of package you want to generate, select the re
    * Provide a name for the package. Be sure to create a name that's unique and descriptive.
 
    * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
-
-   * Make sure **Full functionality** is selected.
-
-   * Select **Generate**.
-
-1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
-
-   :::image type="content" source="./media/defender-deployment-tool-windows/deployment-package-download-page.png" alt-text="Screenshot showing the key that is generated for the deployment tool package." lightbox="./media/defender-deployment-tool-windows/deployment-package-download-page.png":::
-
-   Copy the key and save it, as it will be needed with the deployment tool.
-
-   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
-
-# [Restricted functionality](#tab/restricted-functionality)
-
-1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
-
-1. In the Step 1 dropdown menu, choose **Windows (preview)**.
-
-1. Under **Deploy by downloading and applying packages or files**, select the **Onboard** button.
-
-   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package.png":::
-
-1. The **Generate Defender deployment tool with an access key** page appears.
-
-   :::image type="content" source="./media/defender-deployment-tool-windows/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/defender-deployment-tool-windows/configure-deployment-package.png":::
-
-   * Provide a name for the package. Be sure to create a name that's unique and descriptive.
-
-   * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
-
-   * Select **Restricted**.
-
-      A list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
-      
-      :::image type="content" source="./media/defender-deployment-tool-windows/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode options in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/security-operations-mode-menu.png":::
-
-      For more information about the security operations modes and the selective response actions capability, see [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md).
-
-      > [!NOTE]
-      > Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
-      > 
-      > Restricted mode with all response actions allowed **is not** equivalent to full functionality. When you onboard a device using a restricted package, running scripts is disabled by design, whereas onboarding with a full functionality package provides unrestricted access to all supported response actions and capabilities.
-
+   
    * When you're done configuring the package, select **Generate**.
 
 1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
@@ -171,8 +112,6 @@ Once you've determined which type of package you want to generate, select the re
    Copy the key and save it, as it will be needed with the deployment tool.
 
    After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
-
----
 
 > [!NOTE] 
 > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
@@ -442,3 +381,4 @@ To test if the installation succeeded successfully, do the following checks:
 ## Related content
 
 - [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)
+- [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md)

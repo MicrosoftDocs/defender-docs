@@ -73,12 +73,46 @@ Once enabled, the restricted mode option becomes available when creating Defende
 
 ## Generate an onboarding package with restricted security operations settings
 
-When creating an onboarding package using the Defender deployment tool, you can select the restricted functionality option to specify which response actions are allowed on the device once it's onboarded.
+1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
 
+1. In the Step 1 dropdown menu, choose **Windows (preview)**.
+
+1. Under **Deploy by downloading and applying packages or files**, select the **Onboard** button.
+
+   :::image type="content" source="./media/restrict-response-actions-high-value-assets/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/restrict-response-actions-high-value-assets/defender-deployment-tool-windows-download-package.png":::
+
+1. The **Generate Defender deployment tool with an access key** page appears.
+
+   :::image type="content" source="./media/restrict-response-actions-high-value-assets/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/restrict-response-actions-high-value-assets/configure-deployment-package.png":::
+
+   * Provide a name for the package. Be sure to create a name that's unique and descriptive.
+
+   * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
+
+   * Select **Restricted**.
+
+      A list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
+      
+      :::image type="content" source="./media/restrict-response-actions-high-value-assets/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode options in the Microsoft Defender portal." lightbox="./media/restrict-response-actions-high-value-assets/security-operations-mode-menu.png":::
+
+      > [!NOTE]
+      > Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
+      > 
+      > Restricted mode with all response actions allowed **is not** equivalent to full functionality. When you onboard a device using a restricted package, running scripts is disabled by design, whereas onboarding with a full functionality package provides unrestricted access to all supported response actions and capabilities.
+
+   * When you're done configuring the package, select **Generate**.
+
+1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
+
+   :::image type="content" source="./media/restrict-response-actions-high-value-assets/deployment-package-download-page.png" alt-text="Screenshot showing the key that is generated for the deployment tool package." lightbox="./media/restrict-response-actions-high-value-assets/deployment-package-download-page.png":::
+
+   Copy the key and save it, as it will be needed with the deployment tool.
+
+   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
 
 ## Onboard a device with restricted response actions
 
-asdf
+Once you've generated and downloaded a deployment package with the desired restricted security operations settings, use the package to onboard the device as described in [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md#deploy-defender-endpoint-security-on-devices).
 
 ## How to check the security operations status of onboarded devices
 
