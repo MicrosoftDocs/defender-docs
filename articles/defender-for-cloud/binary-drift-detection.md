@@ -25,8 +25,8 @@ Check out the availability of [binary drift and blocking](support-matrix-defende
 
 - Run the Defender for Container sensor.
 - **Binary drift blocking (Preview) only**:
-    - AKS: Helm provisioning with sensor version **0.10.1**.
-    - Multicloud: Helm provisioning with sensor version **0.10.1** or the ARC extension using `release train=preview`.
+  - AKS: Helm provisioning with sensor version **0.10.2**.
+  - Multicloud: Helm provisioning with sensor version **0.10.2** or the ARC extension using `release train=preview`.
 - [Enable the Defender for Container sensor](defender-for-containers-azure-enable-portal.md#configure-plan-components) on the subscriptions and connectors.
 - The following roles and permissions:
     - **To create and modify drift policies**: Security Admin or higher permissions on the tenant. 

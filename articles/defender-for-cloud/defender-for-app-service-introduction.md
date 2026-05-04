@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for App Service - the benefits and features
 description: Learn about the capabilities of Microsoft Defender for App Service and how to enable it on your subscription.
-ms.date: 05/13/2025
+ms.date: 04/19/2026
 ms.topic: overview
 ms.author: elkrieger
 author: Elazark
@@ -80,7 +80,7 @@ For a full list of the App Service alerts, see the [Reference table of alerts](a
 In this article, you learned about Microsoft Defender for App Service.
 
 > [!div class="nextstepaction"]
-> [Enable enhanced protections](enable-enhanced-security.md)
+> [Enable enhanced protections](connect-azure-subscription.md)
 
 For related material, see the following articles:
 

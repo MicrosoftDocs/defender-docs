@@ -4,7 +4,7 @@ description: Learn about the Azure cloud environments where Defender for Cloud c
 ms.topic: limits-and-quotas
 author: Elazark
 ms.author: elkrieger
-ms.date: 01/27/2026
+ms.date: 04/19/2026
 ---
 
 # Support matrices for Defender for Cloud
@@ -50,7 +50,7 @@ Defender for Cloud provides recommendations, security alerts, and vulnerability 
 
 \* These features are currently supported in preview.
 
-\*\* Microsoft Entra recommendations are available only for subscriptions with [enhanced security features enabled](enable-enhanced-security.md).
+\*\* Microsoft Entra recommendations are available only for subscriptions with [enhanced security features enabled](connect-azure-subscription.md).
 
 ## Cloud support
 
@@ -104,9 +104,9 @@ In the support table, **NA** indicates that the feature isn't available.
 | Governance |GA|GA|NA|
 | Sensitive data scanning (DSPM) |GA|GA|NA|
 | Agentless scanning for Kubernetes |GA|GA|NA|
-| Custom Recommendations (Preview) |Public Preview|NA|NA|
+| Custom Recommendations (Preview) | Preview|NA|NA|
 | Agentless containers vulnerability assessment |GA|GA|NA|
-| API security posture management (Preview) |Public Preview|NA|NA|
+| API security posture management (Preview) | Preview|NA|NA|
 |**DEFENDER FOR CLOUD PLANS** | | ||
 |[Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md)| GA | GA| NA|
 |[Defender for AI Services](ai-threat-protection.md) | GA | NA | NA |
@@ -133,6 +133,12 @@ In the support table, **NA** indicates that the feature isn't available.
 | [Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) | GA | NA | NA |
 | **DEFENDER FOR SERVERS FEATURES** | | | |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | GA | GA<sup>[2](#footnote2)</sup> |  NA |
+| [Serverless protection](serverless-protection.md) | Preview | NA | NA |
+| **AI SERVICES FEATURES** | | | |
+| [Suspicious prompt evidence](ai-onboarding.md#enable-suspicious-prompt-evidence) | GA | NA | NA | 
+| [Data security for AI interactions](ai-onboarding.md#enable-data-security-for-microsoft-foundry-with-microsoft-purview) | Preview | NA | NA |
+| [AI model security](ai-model-security.md) | Preview | NA | NA |
+| [Data and AI security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA |
 
 <sup><a name="footnote1"></a>1</sup>: Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection. <br>
 <sup><a name="footnote2"></a>2</sup>: GovCon Cloud Moderate (GCCM) doesn't support File Integrity Monitoring. <br>

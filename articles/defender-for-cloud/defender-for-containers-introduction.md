@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender for Containers, a cloud-native solut
 ms.topic: overview
 author: Elazark
 ms.author: elkrieger
-ms.date: 12/14/2025
+ms.date: 04/29/2026
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
 ---
 
@@ -46,7 +46,7 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 
 ### Sensor-based capabilities
 
-**Anti-malware** - Defender for Containers provides a sensor-based capability that detects and alerts you to malicious activities within containers. This helps in identifying and mitigating potential security threats proactively. For more information, see [Anti-malware protection (preview)](anti-malware.md).
+**Antimalware** - Defender for Containers provides a sensor-based capability that detects and alerts you to malicious activities within containers. This helps in identifying and mitigating potential security threats proactively. For more information, see [Antimalware protection](anti-malware.md).
 
 **Binary drift detection** - Defender for Containers provides a sensor-based capability that alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats. For more information, see [Binary drift protection](binary-drift-detection.md).
 
@@ -76,7 +76,9 @@ Defender for Containers provides real-time threat protection for [supported cont
 
 Threat protection is provided for Kubernetes at the cluster, node, and workload levels. Both sensor-based coverage that requires the [Defender sensor](defender-for-cloud-glossary.md#defender-sensor) and agentless coverage based on analysis of the Kubernetes audit logs are used to detect threats. Security alerts are only triggered for actions and deployments that occur after you enable Defender for Containers on your subscription.
 
-Examples of security events that Microsoft Defenders for Containers monitors include:
+### Runtime detection examples
+
+Examples of security events that Microsoft Defender for Containers monitors include:
 
 - Exposed Kubernetes dashboards
 - Creation of high privileged roles
@@ -89,6 +91,31 @@ Defender for Containers includes threat detection with over 60 Kubernetes-aware 
 Defender for Cloud monitors the attack surface of multicloud Kubernetes deployments based on the MITRE ATT&CK&reg; matrix for Containers, a framework developed by the [Center for Threat-Informed Defense](https://mitre-engenuity.org/cybersecurity/center-for-threat-informed-defense/) in close partnership with Microsoft.
 
 Defender for Cloud is [integrated with Microsoft Defender XDR](concept-integration-365.md). When Defender for Containers is enabled, security operators can use [Defender XDR to investigate and respond](/defender-xdr/investigate-respond-container-threats) to security issues in supported Kubernetes services.
+
+### Microsoft-maintained container images
+
+Defender for Containers deploys container images that are maintained and updated by Microsoft as part of the runtime protection components. These images are published to Microsoft Container Registry (MCR).
+
+Customers don't modify or patch these images directly. Microsoft maintains and updates them as part of the Defender for Containers release process.
+
+The following images are used by Defender for Containers runtime protection components:
+
+| Image | Purpose | MCR path |
+|---|---|---|
+| `security-publisher` | Publishes security findings collected from Kubernetes environments | `mcr.microsoft.com/azuredefender/stable/security-publisher` |
+| `low-level-collector` | Collects low-level runtime telemetry from Kubernetes nodes | `mcr.microsoft.com/azuredefender/stable/low-level-collector` |
+| `pod-collector` | Collects Kubernetes pod runtime data used for threat detection | `mcr.microsoft.com/azuredefender/stable/pod-collector` |
+| `anti-malware-collector` | Collects malware detection signals for container workloads | `mcr.microsoft.com/azuredefender/stable/anti-malware-collector` |
+| `old-file-cleaner` | Cleans up temporary and stale files as part of initialization workflows | `mcr.microsoft.com/azuredefender/stable/old-file-cleaner` |
+| `audit-logs-enabler` | Enables audit log collection for supported environments (for example, on-premises clusters) | `mcr.microsoft.com/azuredefender/stable/audit-logs-enabler` |
+| `defender-admission-controller` | Enforces runtime gating policies for Kubernetes workloads | `mcr.microsoft.com/mdc/prd/defender-admission-controller` |
+
+Updates are delivered through the deployment mechanism used by your environment. For example:
+
+- When deployed using the **AKS add-on**, updates are delivered through the AKS release lifecycle.
+- When deployed using **Helm**, updates are released within 30 days through updated chart versions.
+
+If you detect a vulnerability in a Microsoft-maintained Defender image, open an Azure support request and include the image name, tag, and CVE identifier.
 
 ## Learn more
 

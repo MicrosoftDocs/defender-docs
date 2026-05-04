@@ -2,7 +2,8 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 03/11/2026
+ms.custom: references_regions
+ms.date: 05/03/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -27,16 +28,207 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## May 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration
+
+May 3, 2026
+
+The native integration between Microsoft Defender for Cloud and GitHub Advanced Security (GHAS) is now generally available. This integration connects runtime security signals from Defender for Cloud with code-level vulnerability management in GHAS, enabling developers and security teams to prioritize and remediate vulnerabilities based on actual production risk.
+
+**Key capabilities:**
+
+- **Runtime context in GitHub** - GHAS alerts are enriched with runtime risk factors from Defender for Cloud, including internet exposure, sensitive data access, and lateral movement potential.
+- **AI-powered remediation** - GitHub Copilot Autofix provides validated, ready-to-merge security fixes with multi-fix bundling for efficiency.
+- **Security campaigns** - Security teams can trigger targeted GitHub Security Campaigns from Defender for Cloud to mobilize developer teams on prioritized vulnerabilities.
+- **Bidirectional sync** - GitHub issue status and ownership changes sync to Defender for Cloud within minutes.
+
+**Prerequisites:**
+
+- Defender Cloud Security Posture Management (DCSPM) plan
+- GitHub account with connector configured in Defender for Cloud
+- GitHub Advanced Security license on connected repositories
+
+Learn more about [GitHub Advanced Security integration](github-advanced-security-overview.md) and how to [deploy the integration](github-advanced-security-deploy.md).
+
+## April 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| April 30, 2026 | GA | [Anti-malware detection and blocking is now generally available](#anti-malware-detection-and-blocking-is-now-generally-available) |
+| April 30, 2026 | GA | [DNS Detection for Kubernetes is now generally available](#dns-detection-for-kubernetes-is-now-generally-available) |
+| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
+| April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
+| April 1, 2026 | Update | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
+
+
+### Anti-malware detection and blocking is now generally available
+
+April 30, 2026
+
+Container runtime anti-malware detection and blocking is now generally available in Defender for Containers for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE).
+
+Anti-malware detection and blocking detects and blocks malware when a container runs an executable that the system identifies as malicious software. You can define anti-malware policies that set conditions for alerts and blocking to distinguish legitimate activity from potential threats.
+
+Learn more about [anti-malware detection and blocking](anti-malware.md).
+
+### DNS Detection for Kubernetes is now generally available
+
+April 30, 2026
+
+DNS Detection for Kubernetes is now generally available in Defender for Containers for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE).
+
+DNS Detection monitors DNS queries from containerized workloads to detect suspicious activity such as communication with malicious domains and DNS tunneling. The feature requires the Defender sensor deployed via Helm.
+
+Learn more about [DNS Detection availability in Defender for Containers](support-matrix-defender-for-containers.md#runtime-protection-features).
+
+## General availability of Defender for Storage integration in Azure Portal Storage Center
+
+April 20, 2026
+
+This integration brings Defender for Storage insights directly into the native storage management experience. This approach makes it easier for customers to understand and improve their storage security posture at scale.
+
+Customers can now view Defender for Storage threat protection and security posture coverage directly in Storage Center, next to their storage resources.
+
+Storage Center provides a centralized, storage-native view of Defender for Storage protection status. This view helps customers quickly understand the following items:
+
+1. Which storage accounts are protected, partly protected, or not protected  
+1. Where malware scanning, activity monitoring, and sensitive data discovery are enabled  
+1. Where security gaps exist across Azure Blob Storage and Azure Files storage
+
+Learn more about [Azure storage](/azure/storage/blobs/storage-blobs-overview).
+
+### General availability of container security capabilities in Azure Government cloud
+
+April 1, 2026
+
+The service helps U.S. federal and government agencies, including the Department of Defense (DoD) and civilian agencies, secure Kubernetes workloads by providing cloud security posture management, vulnerability assessment, and runtime threat protection for containerized environments.
+
+The Defender for Containers plan in Azure Government cloud now aligns with the commercial cloud offering in feature coverage, including agentless Kubernetes discovery, comprehensive inventory, attack path analysis, enhanced risk hunting, vulnerability assessment, compliance and runtime protection capabilities.
+
+For more information about Microsoft Defender for Containers, see [Overview of Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction).
+
+For more information about feature and cloud availability, see [Containers support matrix in Defender for Cloud](/azure/defender-for-cloud/support-matrix-defender-for-containers).
+
+### Update to Defender for SQL servers on machines plan for Fairfax customers
+
+April 1, 2026
+
+The Defender for SQL Server on machines plan in Microsoft Defender for Cloud protects SQL Server instances hosted on Azure, AWS, GCP, and on-premises machines.
+
+To simplify onboarding and improve protection coverage, we're releasing an enhanced agent solution for Fairfax customers at the end of April. The new solution uses the existing SQL infrastructure, so you no longer need to deploy the Azure Monitor Agent (AMA).
+
+**Required customer actions:**
+
+- [Update Defender for SQL Servers on Machines plan configuration](update-sql-machine-configuration.md): If you enabled the Defender for SQL Server on machines plan before April 2026, follow these instructions to update your configuration.
+- [Verify SQL Server instances protection status](verify-machine-protection.md): With an estimated starting date of May 2026, you must verify the protection status of your SQL Server instances across your environments. Learn how to [troubleshoot deployment issues for Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md).
+
 ## March 2026
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| March 31, 2026 | GA | [Malware automated remediation in Defender for Storage](#automated-malware-remediation-in-defender-for-storage)|
+| March 31, 2026| Update | [Support for additional Azure regions for Defender for APIs and API security posture management with Defender CSPM](#support-for-additional-azure-regions-for-defender-for-apis-and-api-security-posture-management-with-defender-cspm) |
+| March 30, 2026 | Preview | [AI model security for Azure Machine Learning (Preview)](#ai-model-security-for-azure-machine-learning-preview) |
+| March 29, 2026 | Preview | [Expanded multicloud coverage for AWS and GCP (Preview)](#expanded-multicloud-coverage-for-aws-and-gcp-preview) |
+| March 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
 | March 12, 2026 | GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
 | March 11, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severitybased-risk-assignment-for-not-evaluated-recommendations) |
 | March 10, 2026| Preview |[Code to runtime enrichment for recommendations](#code-to-runtime-enrichment-for-recommendations-preview)|
 | March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage-preview) |
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
 | March 04, 2026 | Preview |[New individual recommendations format in Azure portal (Preview)](#new-individual-recommendations-format-in-azure-portal-preview)|
+
+
+### Automated malware remediation in Defender for Storage
+
+March 31, 2026
+
+Automated malware remediation in Defender for Storage is now generally available.
+
+Defender for Cloud now lets you automatically soft-delete malicious blobs detected during on-upload or on-demand malware scanning. Soft-deleted blobs are quarantined and can be recovered for further investigation.
+
+You can enable or disable automated malware remediation at the subscription or storage account level in Microsoft Defender for Cloud in the Azure portal or through the API.
+
+Learn how to use [built-in automated malware remediation for malicious blobs](defender-for-storage-configure-malware-scan.md#built-in-automated-malware-remediation-for-malicious-blobs).
+
+### Support for additional Azure regions for Defender for APIs and API security posture management with Defender CSPM
+
+March 31, 2026
+
+Microsoft Defender for APIs and API security posture management with Defender CSPM has expanded to provide its capabilities in the following Azure regions:
+- Sweden Central
+- Sweden South
+- Germany West Central
+- Germany North
+- Italy North
+- France Central
+- France South
+- Norway East
+- Norway West
+- Switzerland North
+- Switzerland West
+- Korea Central
+- Korea South
+- South Africa North
+- South Africa West
+
+Customers who have Azure API Management services in these regions can now use the capabilities offered by Microsoft Defender for APIs and API security posture management with Defender CSPM.
+API discovery and security posture capabilities in Defender CSPM for Azure Function Apps and Azure Logic Apps have also been expanded to these regions. This feature is still in Preview.
+
+Learn more about [Microsoft Defender for APIs](defender-for-apis-introduction.md) and [API security posture management with Defender CSPM](api-security-posture-overview.md).
+
+### AI model security for Azure Machine Learning (Preview)
+
+March 30, 2026
+
+Microsoft Defender for Cloud now offers AI model security in preview for Azure Machine Learning registries and workspaces. AI model security helps security teams discover and scan custom AI models for risks before deployment, and review findings in Defender for Cloud.
+ 
+By using AI model security, you can:
+- Discover AI models in Azure Machine Learning registries and workspaces.
+- Scan supported model artifacts for malware and unsafe operators. 
+- Review security findings and remediate surfaced issues in Defender for Cloud.
+- Perform CLI-based scanning for CI/CD integrations.
+ 
+Learn more about [AI model security](ai-model-security.md).
+
+### Expanded multicloud coverage for AWS and GCP (Preview)
+
+March 29, 2026
+
+Microsoft Defender for Cloud expands multicloud posture management with broader native coverage for AWS and GCP. This update adds discovery and posture assessment for additional resource types across compute, databases, storage, analytics, networking, identity, secrets, DevOps, and AI/ML services.
+
+**Asset inventory**: Newly supported AWS and GCP resources are now discovered and visible in the Asset inventory experience.
+
+**Security recommendations**: Approximately 150 new recommendations help identify misconfigurations and posture gaps across the newly supported resources. 
+
+**Regulatory compliance**: Existing compliance frameworks now include the new recommendations, providing more complete compliance assessments across multicloud environments.
+
+>[!Important]
+>
+> - Compliance results may change as new recommendations are evaluated. This reflects expanded coverage, not a regression in security posture.
+> - Secure score is not affected by recommendations in preview.
+> - In the Azure portal, only assets that have security issues detected on them are reflected.
+> - In the Defender portal, all discovered resources in customers' environments are reflected, even if there are no security issues detected on them.
+
+Learn more about [security recommendations](review-security-recommendations.md).
+  
+### File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines
+
+
+Due to a pipeline change in Microsoft Defender for Endpoint (MDE), File Integrity Monitoring now requires the **Defender for Servers Windows client (Microsoft Defender for Endpoint agent) version 10.8799 or above** for proper functionality on legacy Windows machines (downlevel clients).
+
+**Key details:**
+
+- **Affected systems**: Legacy Windows machines (Windows Server 2016, Windows Server 2012 R2, and other downlevel clients)
+- **Required version**: Defender for Servers Windows client (MDE agent) 10.8799 or later
+- **Impact**: FIM monitoring will not function properly on versions below the minimum requirement
+
+Learn more about [File Integrity Monitoring](file-integrity-monitoring-overview.md) and how to [enable File Integrity Monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
 
 ### Kubernetes gated deployment support for AKS Automatic (GA)
 
@@ -186,7 +378,7 @@ Learn more about [reviewing security recommendations](review-security-recommenda
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| February 22, 2026 | Preview | [Container runtime anti-malware detection and blocking (Preview)](#container-runtime-anti-malware-detection-and-blocking-preview) |
+| February 22, 2026 | Preview | [Container runtime anti-malware detection and blocking (Preview)](#container-runtime-anti-malware-detection-and-blocking-preview) 
 | February 22, 2026 | Update - Preview | [Binary drift now supports blocking (Preview)](#binary-drift-now-supports-blocking-preview) |
 | February 10, 2026| Preview | [Database-level recommendations experience for SQL Vulnerability Assessment findings (Preview)](#database-level-recommendations-experience-for-sql-vulnerability-assessment-preview) |
 | February 10, 2026| GA | [Scanning support for Minimus and Photon OS container images](#scanning-support-for-minimus-and-photon-os-container-images) |
@@ -393,7 +585,7 @@ Learn more about [Serverless protection](serverless-protection.md).
 
 |Date | Category | Update|
 | -------- | -------- | -------- |
-|November 26, 2025 | Preview | [GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration](#github-advanced-security-ghas-and-microsoft-defender-for-cloud-native-integration)|
+|November 26, 2025 | Preview | [GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration](#github-advanced-security-ghas-and-microsoft-defender-for-cloud-native-integration-preview)|
 |November 26, 2025 | GA | [Kubernetes gated deployment (GA)](#kubernetes-gated-deployment-ga)|
 |November 25, 2025 | Preview | [Defender for Cloud integration into the Defender portal](#defender-for-cloud-integration-into-the-defender-portal-preview)|
 |November 25, 2025 | Update | [Documentation updates](#documentation-updates) |
@@ -411,11 +603,11 @@ Learn more about [Serverless protection](serverless-protection.md).
 |November 3, 2025| GA | [General Availability release for Jfrog Artifactory and Docker Hub container registries support by Defender for Containers and Defender CSPM](#general-availability-of-jfrog-artifactory-and-docker-hub-container-registry-support)|
 |November 3, 2025| GA | [Additional compliance frameworks now generally available](#general-availability-of-compliance-frameworks)|
 
-### GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration
+### GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud Native integration (Preview)
 
 November 26, 2025
 
-Announcing the preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
+Microsoft Defender for Cloud announced the preview of the native integration between Microsoft Defender for Cloud (MDC) and GitHub Advanced Security (GHAS).
 
 This integration helps organizations secure code to cloud and accelerate fixing security issues in their software portfolio. It uses agentic remediation from GitHub Advanced Security's security campaigns and autofix agent with Microsoft Defender for Cloud runtime context-based vulnerability prioritization. The result is fewer distractions, faster fixes, better collaboration, and secure code to cloud. 
 

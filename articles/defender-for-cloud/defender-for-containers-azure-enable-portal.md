@@ -2,7 +2,7 @@
 title: Enable Defender for Containers on AKS via portal
 description: Learn how to enable Microsoft Defender for Containers on your Azure Kubernetes Service (AKS) clusters through the Azure portal, with options to enable all components or deploy specific components selectively.
 ms.topic: how-to
-ms.date: 11/27/2025
+ms.date: 03/16/2026
 ai-usage: ai-assisted
 ---
 

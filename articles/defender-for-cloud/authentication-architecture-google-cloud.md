@@ -1,7 +1,7 @@
 ---
 title: Authentication architecture for GCP connectors
 description: Learn how Microsoft Defender for Cloud authenticates to Google Cloud using federated identity, short-lived tokens, and workload identity federation.
-ms.topic: article
+ms.topic: concept-article
 author: Elazark
 ms.author: elkrieger
 ms.date: 02/11/2026

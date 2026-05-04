@@ -82,10 +82,10 @@
               href: quickstart-onboard-machines.md
     - name: Networking and connectivity
       items:
-      - name: Microsoft Security Private Link for Microsoft Defender for Cloud (Preview)
+      - name: Microsoft Security Private Link for Microsoft Defender for Cloud
         displayName: private endpoints, private link, security private link, networking, connectivity, VPN, ExpressRoute
         href: concept-private-links.md
-      - name: Configure private endpoints with Microsoft Security Private Link (Preview)
+      - name: Configure private endpoints with Microsoft Security Private Link
         href: configure-private-endpoints.md
     - name: Enable specific plans
       expanded: false
@@ -177,13 +177,13 @@
               - name: Defender for Open-Source Relational Databases
                 items:
                 - name: Overview
-                  displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: defender-for-databases-introduction.md
                 - name: Enable on Azure
-                  displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-azure.md
                 - name: Enable on AWS (Preview)
-                  displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-aws.md
               - name: Defender for Azure Cosmos DB
                 items:
@@ -403,7 +403,7 @@
           href: enable-permissions-management.md
         - name: Agentless machine scanning
           href: concept-agentless-data-collection.md
-        - name: Serverless protection
+        - name: Serverless protection (Preview)
           displayName: serverless, functions, web apps, aws lambda, inventory, misconfigurations, vulnerabilities, dependencies
           href: serverless-protection.md
     - name: Assess your security posture
@@ -485,6 +485,9 @@
             - name: Discover generative AI workloads
               displayName: AI, workloads, models, applications, apps, AI BOM
               href: identify-ai-workload-model.md
+            - name: Discover AI models
+              displayName: AI, models, generative, applications, apps
+              href: ai-model-security.md
             - name: Explore risks to pre-deployment generative AI artifacts
               displayName: AI, risks, generative, applications, apps
               href: explore-ai-risk.md
@@ -540,8 +543,8 @@
             - name: Transition from grouped to individual recommendations
               displayName: grouped, individual, recommendations, transition, legacy, dynamic, best practices
               href: transition-grouped-individual-recommendations.md
-            - name: Review resources exempted from recommendations
-              displayName: review, exemptions, exempted, resources, recommendation, exempt
+            - name: Review and manage recommendation exemptions
+              displayName: review, manage, exemptions, exempted, resources, recommendation, exempt, delete, secure score
               href: review-exemptions.md
             - name: Assign a recommendation to an active user
               displayName: assign, recommendation, user, owner
@@ -779,10 +782,10 @@
           - name: Overview
             displayName: k8s, containers, aks, nodes
             href: kubernetes-nodes-overview.md
-          - name: Kubernetes node vulnerability assessment
+          - name: Review and remediate VA findings for Kubernetes nodes
             displayName: k8s, containers, aks, node, vulnerability, assessment
             href: kubernetes-nodes-va.md
-          - name: Kubernetes node malware detection
+          - name: Review and remediate malware alerts for Kubernetes nodes
             displayName: k8s, containers, aks, node, malware
             href: kubernetes-nodes-malware.md
       - name: Image and runtime container vulnerability assessment
@@ -847,9 +850,10 @@
                 displayName: faq, frequently asked questions, gated deployment
                 href: faq-runtime-gated.md
       - name: Protect clusters with AKS Security Dashboard
-        displayName: k8s, containers
-        href: cluster-security-dashboard.md
-      - name: Investigate clusters with Cloud Security Explorer
+        items:
+          - name: Overview
+            href: cluster-security-dashboard.md
+      - name: Investigate Kubernetes vulnerabilities with Cloud Security Explorer
         displayName: k8s, containers
         href: cloud-security-explorer-kubernetes-clusters.md
       - name: Defender for container registries (deprecated)
@@ -1018,6 +1022,8 @@
           href: github-advanced-security-overview.md
         - name: Deploy GitHub Advanced Security integration
           href: github-advanced-security-deploy.md
+        - name: Deploy GitHub Advanced Security integration (Sandbox project)
+          href: github-advanced-security-deploy-sandbox.md
     - name: Onboard
       items:
         - name: Connect Azure DevOps environments

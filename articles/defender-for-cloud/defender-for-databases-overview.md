@@ -1,7 +1,7 @@
 ---
 title: Overview of Defender for Databases
-description: Discover the advantages and capabilities of Microsoft Defender for Databases, including support for PostgreSQL, MySQL, and MariaDB.
-ms.date: 05/13/2025
+description: Discover the advantages and capabilities of Microsoft Defender for Databases, including support for PostgreSQL and MySQL.
+ms.date: 04/20/2026
 ms.topic: overview
 ms.author: elkrieger
 author: Elazark
@@ -18,7 +18,7 @@ Defender for Databases includes four offerings that relate to database types:
 
 - [Microsoft Defender for SQL Servers on Machines](defender-for-sql-usage.md): Offers security for SQL servers running on virtual machines or physical servers. You can also [enable it on a Log Analytics workspace](enable-plan-workspace.md) for enhanced monitoring and threat detection.
 
-- [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md): Offers security for open-source relational databases such as PostgreSQL, MySQL, and MariaDB by providing continuous monitoring and threat detection.
+- [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md): Offers security for open-source relational databases such as PostgreSQL and MySQL by providing continuous monitoring and threat detection.
 
 - [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md): Offers security for Azure Cosmos DB by providing threat protection and real-time alerts to help safeguard your data.
 
@@ -30,7 +30,7 @@ Defender for Databases detects anomalous activities that indicate unusual and ha
 
 The solution supports a wide range of database types, including:
 
-- Azure database services for PostgreSQL, MySQL, and MariaDB.
+- Azure database services for PostgreSQL and MySQL.
 - Amazon Relational Database Service (RDS) instances for PostgreSQL, MySQL, and MariaDB.
 
 Defender for Databases simplifies the process of addressing threats without requiring users to be security experts or manage advanced security monitoring systems. The alerts that Defender for Databases generates are enriched with threat intelligence to provide a seamless security management experience.

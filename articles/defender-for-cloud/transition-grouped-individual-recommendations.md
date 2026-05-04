@@ -1,7 +1,7 @@
 ---
 title: Transition from grouped to individual recommendations in Defender for Cloud
 description: Learn about the transition from grouped to individual recommendations in Microsoft Defender for Cloud, including operational impacts and best practices.
-ms.topic: conceptual
+ms.topic: best-practice
 author: dlanger
 ms.author: dlanger
 ms.date: 02/17/2026
