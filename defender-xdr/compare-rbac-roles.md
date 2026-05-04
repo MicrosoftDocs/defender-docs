@@ -48,7 +48,7 @@ Use the tables in the following sections to learn more about how your existing i
 - [Microsoft Defender for Identity](#microsoft-defender-for-identity)
 - [Microsoft Defender for Cloud Apps](#microsoft-defender-for-cloud-apps)
 - [Microsoft Defender for Cloud](#microsoft-defender-for-cloud)
-- [Microsoft Sentinel (Preview)](#microsoft-sentinel-preview)
+- [Microsoft Sentinel](#microsoft-sentinel)
 - [Microsoft Entra Global roles access](#microsoft-entra-global-roles-access)
 
 <a name='microsoft-defender-for-endpoint-and-defender-vulnerability-management'></a>
@@ -174,9 +174,9 @@ The following table lists the available uRBAC roles and their permissions.
 > [!NOTE]
 > Roles can be combined for broader access, but always apply least-privilege principles. Some capabilities might require more permissions or feature enablement.
 
-<a name='microsoft-sentinel-preview'></a>
+<a name='microsoft-sentinel'></a>
 
-## Microsoft Sentinel (Preview)
+## Microsoft Sentinel
 
 Use the following table to learn how your existing permissions for Microsoft Sentinel map to the new Microsoft Defender unified RBAC permissions:
 

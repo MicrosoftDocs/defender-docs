@@ -488,7 +488,7 @@
           href: advanced-hunting-security-copilot-query-assistant.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
-        - name: Responsible AI application card
+        - name: Application card for Microsoft Copilot in Microsoft Defender
           href: application-card-copilot-defender.md
         - name: Security Copilot agents in Microsoft Defender
           items:
@@ -566,6 +566,8 @@
               href: manage-rbac.md
             - name: What's new
               href: whats-new-in-microsoft-defender-urbac.md
+            - name: Configure Microsoft Sentinel scoping (row-level RBAC)
+              href: /sentinel/scoping
             - name: Create custom roles
               href: create-custom-rbac-roles.md
             - name: Import roles
