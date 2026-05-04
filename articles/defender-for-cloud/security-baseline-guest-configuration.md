@@ -64,4 +64,5 @@ With the machine configuration extension enabled on machine, the machine can the
 
 ## Next step
 
-[Review](apply-security-baseline.md) OS misconfiguration recommendations.
+> [!div class="nextstepaction"]
+> [Review OS misconfiguration recommendations](apply-security-baseline.md)

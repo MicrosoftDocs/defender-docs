@@ -209,5 +209,5 @@ With Azure Resource Graph, you have the flexibility to retrieve and analyze any 
 
 ## Next step
 
-> [!div class="nextstep"]
+> [!div class="nextstepaction"]
 > [Add visualizations in Power BI](/power-bi/visuals/power-bi-report-add-visualizations-i?tabs=powerbi-desktop)
