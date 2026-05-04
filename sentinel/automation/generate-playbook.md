@@ -20,9 +20,6 @@ The SOAR playbook generator creates python based automation workflows coauthored
 
 This article describes how to generate playbooks by using AI, configure required integrations, and deploy your automation workflows.
 
-> [!IMPORTANT]
-> Generated Playbooks are currently in preview. This feature requires Security Copilot to be enabled in your tenant, though Security Compute Units (SCUs) aren't billed during the preview period.
-
 Playbook generation provides the following capabilities:
 
 - **Co-author with AI**: Build playbooks through natural language conversations with Cline, an AI coding agent hosted in a VS Code environment embedded in the Defender portal.
