@@ -2,8 +2,9 @@
 title: Investigate Identities
 description: Learn how to use the Identity page in Microsoft Defender. Investigate user identities, review alerts, analyze activity timelines, and assess security risks across linked accounts.
 #customer intent: As a security analyst using Microsoft Defender, I want to understand how to use the Identity page so that I can investigate potentially compromised identities, assess risk, and correlate alerts across linked user accounts.
-author: AbbyMSFT
 ms.author: abbyweisberg
+author: AbbyMSFT
+ms.reviewer: maelgami
 ms.date: 02/15/2026
 ms.topic: article
 ms.service: microsoft-defender

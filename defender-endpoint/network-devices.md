@@ -63,6 +63,7 @@ To select a device that performs the authenticated network scans:
 - To allow the scanner to be authenticated and work properly, add the following domains/URLs:
 
     - `*.security.microsoft.com`
+    - `*.mdiot.microsoft.com`
     - `login.microsoftonline.com`
     - `*.blob.core.windows.net/networkscannerstable/*`
 
