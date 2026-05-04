@@ -30,7 +30,7 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 - You must have a user with a [Security administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#available-roles) role. For more information, see [Microsoft Defender for Identity role groups](../role-groups.md).
 - We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
-## Connectivity requirements
+## Network requirements
 
 The Defender for Identity sensor must be able to communicate with the Defender for Identity cloud service, using one of the following methods:
 
@@ -40,7 +40,7 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 |ExpressRoute  | ExpressRoute can be configured to forward MDI sensor traffic over customer's express route. <br><br> To route network traffic destined to the Defender for Identity cloud servers use ExpressRoute Microsoft peering and add the Microsoft Defender for Identity (12076:5220) service BGP community to your route filter.    |  Requires ExpressRoute      |       [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)  |
 |Firewall, using the Defender for Identity Azure IP addresses  | Customers who don't have a proxy or ExpressRoute can configure their firewall with the IP addresses assigned to the MDI cloud service. This requires that the customer monitor the Azure IP address list for any changes in the IP addresses used by the MDI cloud service.  <br><br> If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag to add the relevant IP addresses.      |  Customer must monitor Azure IP assignments       |   [Virtual network service tags](/azure/virtual-network/service-tags-overview)      |
 
-## Sensor requirements and recommendations
+## Server requirements
 
 The following table summarizes the server requirements and recommendations for the Defender for Identity sensor.
 
@@ -98,7 +98,7 @@ If you're working with [multiple forests](multi-forest.md), make sure that the f
 > [!TIP]
 > By default, Defender for Identity sensors query the directory using LDAP on ports 389 and 3268. To switch to LDAPS on ports 636 and 3269, open a support case. For more information, see [Microsoft Defender for Identity support](../support.md).
 
-### Dynamic memory requirements
+### Memory requirements
 
 The following table describes memory requirements on the server used for the Defender for Identity sensor, depending on the type of virtualization you're using:
 

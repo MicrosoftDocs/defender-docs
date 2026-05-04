@@ -54,7 +54,7 @@ Deploying Defender for Identity requires one of the following Microsoft 365 lice
 
 Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mobility + Security E3. Purchase licenses in the Microsoft 365 portal or through Cloud Solution Partner (CSP) licensing. For more information, see [Licensing and privacy FAQs](/defender-for-identity/technical-faq#licensing-and-privacy).
 
-### Role and permissions requirements
+### Roles and permissions
 
 - To create your Defender for Identity workspace, you need a Microsoft Entra ID tenant.
 - You must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following [Unified RBAC](../role-groups.md#unified-role-based-access-control-rbac) permissions:
@@ -62,7 +62,7 @@ Both F5 licenses require Microsoft 365 F1/F3 or Office 365 F3 and Enterprise Mob
   - `System settings (Read and manage)`
   - `Security settings (All permissions)`
 
-### Networking requirements
+### Network requirements
 
 The Defender for Identity sensor uses the same URIs as Microsoft Defender for Endpoint. Review the following documents for Defender for Endpoint, based on your system's connectivity, to find the complete list of required service endpoints.
 
@@ -135,7 +135,7 @@ Applying the **Unified Sensor RPC Audit** tag to a device improves security visi
 
 Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
 
-### Service account configuration
+### Configure service accounts
 
 The v3.x sensor uses the local system identity of the server for Active Directory and response actions. It doesn't support Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA). LocalSystem is the only supported identity for v3.x.
 
