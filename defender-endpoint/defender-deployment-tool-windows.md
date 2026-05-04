@@ -26,7 +26,7 @@ Using the tool's user interface, administrators can double-click the tool and fo
 
 Watch this video for a quick overview of the Defender deployment tool:
 
-[!VIDEO https://next.frame.io/share/297b5be6-e3b0-4560-abc7-750622000ed2/view/7e92022c-6c7c-40d2-adeb-063bdd1e7509]
+[!VIDEO https://f.io/86LMfCtk]
 
 The following table describes some of the main features the tool supports.
 
