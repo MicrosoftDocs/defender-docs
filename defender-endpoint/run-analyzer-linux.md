@@ -528,7 +528,7 @@ The XMDE Client Analyzer can be run during a Live Response session either by usi
 
 If Microsoft Defender for Endpoint is already installed on the device, you can run the Client Analyzer directly from the agent installation without downloading or installing additional packages.
 
-- Create an `MDESupportToolBinary.sh` file and paste the following content into it.
+-  For Client Analyzer binary shipped with Microsoft Defender for Linux, create an `MDESupportToolBinary.sh` file and paste the following content into it.
 
    ```bash
    #! /usr/bin/bash
@@ -538,13 +538,14 @@ If Microsoft Defender for Endpoint is already installed on the device, you can r
 
    echo "Running MDESupportTool"
    ./MDESupportTool $@
-
-   Execute:
+   ```
+-  Execute:
+   ```bash
    run MDESupportToolBinary.sh -parameters "--bypass-disclaimer -d"
+   ```
 
-
-   MDESupportToolPython.sh
-
+-  For Client Analyzer Python shipped with Microsoft Defender for Linux, create an `MDESupportToolPython.sh` file and paste the following content into it.
+   ```bash
    #! /usr/bin/bash
 
    echo "cd /opt/microsoft/mdatp/tools/client_analyzer/python"
@@ -552,10 +553,10 @@ If Microsoft Defender for Endpoint is already installed on the device, you can r
 
    echo "Running MDESupportTool"
    ./mde_support_tool.sh $@
-
-   Execute:
+   ```
+-  Execute:
+   ```bash
    run MDESupportToolPython.sh -parameters "--bypass-disclaimer -d"
-
    ```
 
 ### Install the XMDE Client Analyzer
