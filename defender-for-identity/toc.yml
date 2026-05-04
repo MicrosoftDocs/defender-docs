@@ -142,13 +142,13 @@ items:
       href: security-posture-assessments/accounts.md
     - name: Cloud identities security posture assessments
       href: security-posture-assessments/cloud-identities.md
-- name: Detect threats and suspicious activity
+- name: Review detected threats
   items:
   - name: Security alerts overview
     href: alerts-overview.md
-  - name: Classic alerts reference
+  - name: Security alerts (classic format)
     href: alerts-mdi-classic.md
-  - name: Defender for Identity alerts in Defender format
+  - name: Security alerts (Defender format)
     href: alerts-xdr.md
   - name: View and manage security alerts
     href: understanding-security-alerts.md
