@@ -59,23 +59,13 @@ Learn more about [GitHub Advanced Security integration](github-advanced-security
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| April 30, 2026 | GA | [Anti-malware detection and blocking is now generally available](#anti-malware-detection-and-blocking-is-now-generally-available) |
 | April 30, 2026 | GA | [Defender for Containers runtime protection on EKS Bottlerocket is now generally available](#defender-for-containers-runtime-protection-on-eks-bottlerocket-is-now-generally-available) |
+| April 30, 2026 | GA | [Anti-malware detection and blocking is now generally available](#anti-malware-detection-and-blocking-is-now-generally-available) |
 | April 30, 2026 | GA | [DNS Detection for Kubernetes is now generally available](#dns-detection-for-kubernetes-is-now-generally-available) |
 | April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Update | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
-
-### Anti-malware detection and blocking is now generally available
-
-April 30, 2026
-
-Container runtime anti-malware detection and blocking is now generally available in Defender for Containers for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE).
-
-Anti-malware detection and blocking detects and blocks malware when a container runs an executable that the system identifies as malicious software. You can define anti-malware policies that set conditions for alerts and blocking to distinguish legitimate activity from potential threats.
-
-Learn more about [anti-malware detection and blocking](anti-malware.md).
 
 ### Defender for Containers runtime protection on EKS Bottlerocket is now generally available
 
@@ -88,6 +78,16 @@ Runtime protection detects suspicious behavior in containerized workloads and ge
 Bottlerocket support requires Helm-based sensor provisioning and Linux kernel version 5.4 or later.
 
 Learn more about [Defender for Containers runtime protection](support-matrix-defender-for-containers.md#runtime-protection-features).
+
+### Anti-malware detection and blocking is now generally available
+
+April 30, 2026
+
+Container runtime anti-malware detection and blocking is now generally available in Defender for Containers for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE).
+
+Anti-malware detection and blocking detects and blocks malware when a container runs an executable that the system identifies as malicious software. You can define anti-malware policies that set conditions for alerts and blocking to distinguish legitimate activity from potential threats.
+
+Learn more about [anti-malware detection and blocking](anti-malware.md).
 
 ### DNS Detection for Kubernetes is now generally available
 
