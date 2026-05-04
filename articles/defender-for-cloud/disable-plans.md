@@ -1,5 +1,5 @@
 ---
-title: Disable Defender for Cloud plans
+title: Disable Microsoft Defender for Cloud plans
 description: Learn how to disable Microsoft Defender for Cloud plans at subscription and resource levels across Azure, AWS, and GCP to prevent unexpected charges.
 ms.topic: how-to
 author: Elazark
@@ -16,7 +16,7 @@ Each of Defender for Cloud's plans has different pricing structures that can dep
 
 ## Disable plans on the subscription level
 
-When you disable a plan, Defender for Cloud stops showing the associated security features, recommendations, and alerts. The plan stops protecting any resources and environments. Defender for Cloud stops showing all associated recommendations and alerts.
+When you disable a plan, Defender for Cloud stops showing the associated security features, recommendations, and alerts. The plan stops protecting any resources and environments.
 
 If you created a resource to support a plan, such as a Log Analytics workspace or a Storage Account, delete it manually when it's no longer needed.
 
@@ -26,7 +26,7 @@ If you created a resource to support a plan, such as a Log Analytics workspace o
 
 1. Select the relevant Azure, Amazon Web Services (AWS), or Google Cloud Project (GCP) subscription.
 
-    :::image type="content" source="media/disable-plans/environment-settings-screen.png" alt-text="Screenshot of the environment settings page that shows where the link to the page is located." lightbox="media/disable-plans/environment-settings-screen.png":::
+    :::image type="content" source="media/disable-plans/environment-settings-screen.png" alt-text="Screenshot of the Environment settings page in Defender for Cloud showing Azure, AWS, and GCP subscription entries." lightbox="media/disable-plans/environment-settings-screen.png":::
 
 ### Disable plans by multicloud environment
 
@@ -40,9 +40,9 @@ To continue the disablement process, select the relevant multicloud environment.
     
     1. (Optional) To disable the Defender for Databases plan, use the pop-up to turn off all four Defender for Databases subplans.
         
-        :::image type="content" source="media/disable-plans/databases-disabled.png" alt-text="Screenshot that shows the individual databases plans toggled to off." lightbox="media/disable-plans/databases-disabled.png":::
-    
-    1. Select **Continue**.
+        :::image type="content" source="media/disable-plans/databases-disabled.png" alt-text="Screenshot that shows the four Defender for Databases subplans toggled to Off." lightbox="media/disable-plans/databases-disabled.png":::
+
+1. Select **Continue**.
         
 1. Select **Save**.
     
@@ -88,7 +88,7 @@ To continue the disablement process, select the relevant multicloud environment.
 
 1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on Google Cloud.
 
-    :::image type="content" source="media/disable-plans/disable-google-configuration.png" alt-text="Screenshot that shows the Google configure access screen." lightbox="media/disable-plans/disable-google-configuration.png":::
+    :::image type="content" source="media/disable-plans/disable-google-configuration.png" alt-text="Screenshot that shows the GCP configure access page with Cloud Shell and Terraform deployment options." lightbox="media/disable-plans/disable-google-configuration.png":::
 
 1. Select the check box to confirm you followed the instructions.
 
@@ -100,22 +100,26 @@ To continue the disablement process, select the relevant multicloud environment.
 
 Defender for Cloud stops monitoring and onboarding all your resources after you disable all plans in your environment.
 
-If you want to cancel your Microsoft Defender for Cloud subscription, you need to go through the subscription cancellation process in addition to disabling the plans.
+Disabling plans doesn't cancel your subscription. To cancel your subscription, use the Azure subscription cancellation process.
 
 ## Ensure plans are fully disabled
 
-Even if you turn off a Defender plan at the subscription level, you can still turn it back on for a specific resource, which can generate charges. To fully disable a plan for a specific resource, check the resource level configuration for that plan.
+Turning off a plan at the subscription level doesn't prevent it from being turned on for a specific resource, which can generate charges. To fully disable a plan for a specific resource, check the resource-level configuration for that plan.
 
 For security purposes, Defender for Cloud has multiple features that can re-enable themselves. Those mechanisms include:
 
 - Auto-provisioning (agents/extensions that get reinstalled)
 - Azure Policy assignments that redeploy Defender for Cloud components
 - Resource-level settings
-- Billing meters that reveal what’s actually charging
+
+> [!NOTE]
+> To confirm that charges have stopped, check your billing meters in Cost Management + Billing.
 
 ### [1. Disable auto-provisioning](#tab/disable-auto-provisioning)
 
 Auto-provisioning can silently reinstall Defender for Cloud's agents or extensions, even after you turn off plans. To prevent this problem, disable auto-provisioning in Defender for Cloud's settings. Find the plans that contain Endpoint protection and Guest Configuration agent, and disable them to make sure that the agents or extensions don't get reinstalled.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings** > **relevant subscription or resource**.
 
@@ -141,11 +145,11 @@ As a security measure, Defender for Cloud includes Azure Policy initiatives that
 
 1. Select **Assignments**.
 
-    :::image type="content" source="media/disable-plans/policy-assignments.png" alt-text="Screenshot that shows where the assignments for policy is located in Azure." lightbox="media/disable-plans/policy-assignments.png":::
+    :::image type="content" source="media/disable-plans/policy-assignments.png" alt-text="Screenshot that shows the Assignments page in Azure Policy." lightbox="media/disable-plans/policy-assignments.png":::
 
 1. Search policies starting with `Deploy Microsoft Defender for Endpoint...`.
 
-    :::image type="content" source="media/disable-plans/search-assignments.png" alt-text="Screenshot that shows the results of searching for the policy." lightbox="media/disable-plans/search-assignments.png":::
+    :::image type="content" source="media/disable-plans/search-assignments.png" alt-text="Screenshot that shows search results for policies beginning with 'Deploy Microsoft Defender for Endpoint'." lightbox="media/disable-plans/search-assignments.png":::
 
 1. Select each relevant policy assignment.
 
@@ -157,13 +161,15 @@ As a security measure, Defender for Cloud includes Azure Policy initiatives that
 
 You can enable Microsoft Defender for Cloud for individual resources, even if you turn off the subscription-level plan. To fully stop charges, check and disable Microsoft Defender for Cloud on each supported resource type.
 
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
 1. Open the specific Azure resource.
 
 1. Locate and select **Microsoft Defender for Cloud**.
 
 1. Turn Defender for Cloud to **Off**.
 
-1. Save.
+1. Select **Save**.
 
 ### Resource-specific instructions
 
@@ -199,7 +205,7 @@ The resource-level setting overrides the subscription setting. Charges stop for 
 
 ### [Virtual Machines](#tab/virtual-machines)
 
-If you still enable auto-provisioning or Azure Policy, agents might come back. This is why subscription-level cleanup still matters.
+If you still enable auto-provisioning or Azure Policy, agents might come back. This dependency is why subscription-level cleanup still matters.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -227,7 +233,7 @@ If you still enable auto-provisioning or Azure Policy, agents might come back. T
 
 1. Select **Configure**.
 
-    :::image type="content" source="media/disable-plans/configure.jpg" alt-text="Screenshot that shows where the configure button is located for your SQL." lightbox="media/disable-plans/configure.jpg":::
+    :::image type="content" source="media/disable-plans/configure.jpg" alt-text="Screenshot that shows where the Configure button is located on the SQL resource's Defender for Cloud page." lightbox="media/disable-plans/configure.jpg":::
 
 1. Toggle Microsoft Defender for SQL to **Off**.
 
@@ -270,7 +276,7 @@ Use billing as the source of truth to confirm that resource-level Defender is tr
     - `Defender for App Service`
     - `Defender for Storage`
     - `Defender for Servers`
-    - `Defender CSPM`
+    - `Defender CSPM` (Cloud Security Posture Management)
 
 If charges still appear, there's at least one resource with Defender still enabled, or a policy or auto-provisioning rule is re-enabling it.
 
