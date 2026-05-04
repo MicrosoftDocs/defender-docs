@@ -100,7 +100,17 @@ items:
     - name: Integrate Defender for Identity with PAM services
       href: integrate-microsoft-and-pam-services.md
 
-- name: Discover
+- name: Explore identities and accounts
+  items:
+  - name: View the identity inventory
+    href: identity-inventory.md
+  - name: Investigate a human identity
+    href: /defender-xdr/investigate-users?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+  - name: Investigate a non-human identity
+    href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+  - name: View service accounts
+    href: service-account-discovery.md
+- name: Discover risks and review security posture
   items:
   - name: View the identity security dashboard
     href: dashboard.md
@@ -126,13 +136,13 @@ items:
       href: security-posture-assessments/accounts.md
     - name: Cloud identities security posture assessments
       href: security-posture-assessments/cloud-identities.md
-- name: Detect
+- name: Review detected threats
   items:
   - name: Security alerts overview
     href: alerts-overview.md
-  - name: Classic alerts reference
+  - name: Security alerts (classic format)
     href: alerts-mdi-classic.md
-  - name: Defender for Identity alerts in Defender format
+  - name: Security alerts (Defender format)
     href: alerts-xdr.md
   - name: View and manage security alerts
     href: understanding-security-alerts.md
@@ -140,20 +150,10 @@ items:
     href: monitored-activities.md
   - name: Network Name Resolution (NNR)
     href: nnr-policy.md
-- name: Investigate
+- name: Respond to threats
   items:
-  - name: View the identity inventory
-    href: identity-inventory.md
-  - name: Investigate a human identity
-    href: /defender-xdr/investigate-users?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
-  - name: Investigate a non-human identity
-    href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
-  - name: View service accounts
-    href: service-account-discovery.md
   - name: Investigate security alerts
     href: investigate-security-alerts.md
-- name: Respond
-  items:
   - name: Remediation actions
     href: remediation-actions.md
 - name: Manage and configure
