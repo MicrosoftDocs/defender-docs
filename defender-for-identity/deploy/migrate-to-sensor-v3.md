@@ -26,7 +26,7 @@ To migrate, each server must be:
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
 - Have Microsoft Defender for Endpoint deployed.
 
-For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md).
+For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md).
 
 ## Start the migration
 
@@ -41,11 +41,11 @@ Servers that meet all prerequisites appear as **Ready for migration** on the **S
 
 ## Configure the v3.x sensor
 
-For optimal protection and monitoring, complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md), including:
+For optimal protection and monitoring, complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md), including:
 
-- [Configure RPC auditing](prerequisites-sensor-version-3.md#configure-rpc-auditing).
-- [Configure automatic Windows event auditing](prerequisites-sensor-version-3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend [enabling automatic Windows event auditing (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) for optimal configuration validation.
-- [Switch from gMSA to local system](prerequisites-sensor-version-3.md#recommended-configurations-for-optimal-performance). The v3.x sensor uses the local system identity. If you had a gMSA configured for the v2.x sensor, remove the gMSA configuration.
+- [Configure RPC auditing](deploy-sensor-v3.md#configure-rpc-auditing).
+- [Configure automatic Windows event auditing](deploy-sensor-v3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend [enabling automatic Windows event auditing (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) for optimal configuration validation.
+- [Switch from gMSA to local system](deploy-sensor-v3.md#service-account-configuration). The v3.x sensor uses the local system identity. If you had a gMSA configured for the v2.x sensor, remove the gMSA configuration.
 
 ## Clean up the v2.x sensor
 
@@ -56,7 +56,7 @@ The migration disables the v2.x sensor service, but the v2.x sensor software rem
 
 ## Related content
 
-- [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md)
+- [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md)
 - [Activate the Defender for Identity sensor v3.x](activate-sensor.md)
 - [Manage and update sensors](../sensor-settings.md)
 - [Remove the Microsoft Defender for Identity sensor](../uninstall-sensor.md)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
 ms.date: 04/14/2026
@@ -39,7 +39,7 @@ The [Automatic Windows event-auditing configuration for sensors v3.x](deploy/con
 
 Defender for Identity sensor v3.x now supports domain controllers that run Microsoft Entra Connect, including detections and identity security posture management (ISPM) recommendations.
 Detections and ISPM recommendations for additional identity roles, including AD FS and AD CS, will become available soon. 
-Domain controllers with Microsoft Entra Connect roles and v3.x of the sensor must run Windows Server 2019 or later and include at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea). For deployment details, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
+Domain controllers with Microsoft Entra Connect roles and v3.x of the sensor must run Windows Server 2019 or later and include at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea). For deployment details, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/deploy-sensor-v3.md).
 
 ### Migrate Defender for Identity sensors from v2.x to v3.x
 
@@ -145,7 +145,7 @@ To improve accuracy and better protect organizational identities, some security 
 
 ### Continued rollout of new health alert: Sensor v3.x RPC audit misconfigured
 
-The **Sensor v3.x RPC Audit Misconfigured** health alert is continuing to be rolled out gradually to customers.  The new health alert helps identify v3.x sensors where Enhanced RPC auditing configuration is either missing or incorrectly applied. Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections.  For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
+The **Sensor v3.x RPC Audit Misconfigured** health alert is continuing to be rolled out gradually to customers.  The new health alert helps identify v3.x sensors where Enhanced RPC auditing configuration is either missing or incorrectly applied. Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections.  For more information, see [Configure RPC on sensors v3.x](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
 
 ## February 2026
 
@@ -209,7 +209,7 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview) lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
-Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
+Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
 
 ### New Entra ID user roles to support remediation actions
 

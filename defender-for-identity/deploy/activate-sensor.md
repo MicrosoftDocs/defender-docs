@@ -12,7 +12,7 @@ For complete protection of your on-premises deployment, we recommend activating 
 
 ## Prerequisites
 
-See [Microsoft Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md) for all system requirements before proceeding with activating the sensor.
+See [Microsoft Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md) for all system requirements before proceeding with activating the sensor.
 
 ## The Activation page
 

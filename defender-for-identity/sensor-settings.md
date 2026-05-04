@@ -73,7 +73,7 @@ For a server to be eligible for migration, it must be:
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
 - Have Microsoft Defender for Endpoint deployed.
 
-For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](./deploy/prerequisites-sensor-version-3.md).
+For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](./deploy/deploy-sensor-v3.md).
 
 | State | Description |
 | --- | --- |
@@ -226,6 +226,6 @@ For more information, see [Configure endpoint proxy and internet connectivity se
 
 ## Next steps
 
-- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md) 
 - [Configure event forwarding](deploy/configure-event-forwarding.md)
 - [Defender for Identity community forum](<https://aka.ms/MDIcommunity>)

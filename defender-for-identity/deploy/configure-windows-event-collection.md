@@ -1,24 +1,137 @@
 ---
 title: Configure Windows event auditing | Microsoft Defender for Identity
 description: This article describes how to configure Defender for Identity to collect Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
-ms.date: 01/12/2026
+ms.date: 05/04/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ai-usage: ai-assisted
 ---
 
 # Configure Windows event auditing
 
-This article describes how to configure Windows event auditing.
+Defender for Identity detection relies on specific Windows event logs parsed by the sensor from your domain controllers, AD FS servers, AD CS servers, and Microsoft Entra Connect servers. For the correct events to be audited and included in the Windows event log, these servers require accurate advanced audit policy settings.
 
-Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that you properly configure the collection of Windows events.
+This page covers:
+
+- [Automatic configuration](#configure-defender-for-identity-to-collect-windows-events-automatically) for sensor v3.x on domain controllers (recommended)
+- [Manual configuration](#configure-windows-event-collection-manually) for sensor v2.x, standalone servers, or if you opted out of automatic auditing
+- [PowerShell configuration](#configure-windows-event-collection-using-powershell)
+- [Required events reference](#required-windows-events-reference) for all server types
 
 Defender for Identity generates health alerts when it detects incorrect Windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
 
 If you configure auditing properly, it has minimal effect on server performance.
 
-## Before you begin
+## Configure Defender for Identity to collect Windows events automatically
 
-Before you begin configuring Windows event collection, run a PowerShell script to check your current configuration and generate a report of any adjustments you need to make:
+If you're deploying sensor v3.x on domain controllers, use automatic Windows auditing. This is the recommended approach; it requires no manual configuration and handles all auditing settings for you.
+
+### Turn on automatic Windows auditing
+
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**.
+1. In the **General** section, select **Advanced features**.
+1. Turn on **Automatic Windows auditing configuration**.
+
+### What automatic auditing configures
+
+When enabled, the sensor automatically:
+
+- Checks current Windows event auditing configuration.
+- Identifies any gaps in the configuration.
+- Applies any necessary changes, including all of the steps in the manual configuration:
+    - **Directory services advanced auditing**: Adds audit entries to the domain root object's System Access Control List (SACL) to enable required directory service auditing.
+    - **NTLM auditing**: Uses standard Windows Registry APIs to configure the required NTLM auditing registry values.
+    - **Domain object auditing**: Modifies the SACL on the Configuration partition to capture changes to directory service configuration objects.
+    - **ADFS auditing**: Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
+    - **Windows audit policy**: Configures the local Windows audit policies using the Windows Local Security Authority (LSA) audit policy APIs.
+- Applies auditing settings directly to the local system policy of the domain controller.
+- Sends health alerts about the configuration state.
+- Runs once every 24 hours.
+
+> [!NOTE]
+> Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to standalone AD FS, AD CS, or Microsoft Entra Connect servers using sensor v2.x.
+
+> [!NOTE]
+> - If you don't turn on automatic Windows auditing, you **must** configure Windows event auditing either [manually](#configure-windows-event-collection-manually) or by using [PowerShell](#configure-windows-event-collection-using-powershell).
+> - GPO settings can conflict with local settings set by the sensor.
+
+## Required Windows events reference
+
+This section lists the Windows events that the Defender for Identity sensor requires. The specific events depend on the server type where the sensor is installed.
+
+### Required AD FS events
+
+The following events are required for AD FS servers:
+
+- 1202: The Federation Service validated a new credential
+- 1203: The Federation Service failed to validate a new credential
+- 4624: An account was successfully logged on
+- 4625: An account failed to log on
+
+For more information, see [Configure auditing on an AD FS server](#configure-auditing-on-an-ad-fs-server).
+
+### Required AD CS events
+
+The following events are required for AD CS servers:
+
+- 4870: Certificate Services revoked a certificate
+- 4882: The security permissions for Certificate Services changed
+- 4885: The audit filter for Certificate Services changed
+- 4887: Certificate Services approved a certificate request and issued a certificate
+- 4888: Certificate Services denied a certificate request
+- 4890: The certificate manager settings for Certificate Services changed
+- 4896: One or more rows have been deleted from the certificate database
+
+For more information, see [Configure auditing on an AD CS server](#configure-auditing-on-an-ad-cs-server).
+
+### Required Microsoft Entra Connect events
+
+The following event is required for Microsoft Entra Connect servers:
+
+- 4624: An account was successfully logged on
+
+For more information, see [Configure auditing on Microsoft Entra Connect](#configure-auditing-on-microsoft-entra-connect).
+
+### Other required Windows events
+
+The following general Windows events are required for all Defender for Identity sensors on domain controllers:
+
+- 4662: An operation was performed on an object
+- 4726: User Account Deleted
+- 4728: Member Added to Global Security Group
+- 4729: Member Removed from Global Security Group
+- 4730: Global Security Group Deleted
+- 4732: Member Added to Local Security Group
+- 4733: Member Removed from Local Security Group
+- 4741: Computer Account Added
+- 4743: Computer Account Deleted
+- 4753: Global Distribution Group Deleted
+- 4756: Member Added to Universal Security Group
+- 4757: Member Removed from Universal Security Group
+- 4758: Universal Security Group Deleted
+- 4763: Universal Distribution Group Deleted
+- 4776: Domain Controller Attempted to Validate Credentials for an Account (NTLM)
+- 5136: A directory service object was modified
+- 7045: New Service Installed
+- 8004: NTLM Authentication
+
+For more information, see [Configure NTLM auditing](#configure-ntlm-auditing) and [Configure domain object auditing](#configure-domain-object-auditing).
+
+### Event collection for standalone sensors
+
+If you're working with a standalone Defender for Identity sensor, configure event collection manually by using one of the following methods:
+
+- [Listen for security information and event management (SIEM) events on your Defender for Identity standalone sensor](configure-event-collection.md). Defender for Identity supports User Datagram Protocol (UDP) traffic from your SIEM system or your syslog server.
+- [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md). When you're forwarding syslog data to a standalone sensor, make sure not to forward *all* syslog data to your sensor.
+
+> [!IMPORTANT]
+> Defender for Identity standalone sensors don't support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.
+
+For more information, see the product documentation for your SIEM system or your syslog server.
+
+## Check your current configuration
+
+Before configuring Windows event collection manually, you can run a PowerShell script to check your current configuration and generate a report of any adjustments you need to make:
 
 1. Download the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).  
 1. Run the Defender for Identity `New-MDIConfigurationReport` PowerShell module to generate a report of your current Windows event auditing configuration.
@@ -43,38 +156,11 @@ Before you begin configuring Windows event collection, run a PowerShell script t
 
 1. Review the report and make any necessary adjustments before configuring Windows event collection.
 
-## Configure Defender for Identity to collect Windows events automatically
-
-> [!NOTE]
-> Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x.
-
-Automatic Windows auditing performs all configuration tasks automatically:
-
-- Checks current Windows event auditing configuration.
-- Identifies any gaps in the configuration.
-- The sensor applies any necessary changes, including all of the steps in the manual configuration:
-    - **Directory services advanced auditing**: Adds audit entries to the domain root object's System Access Control List (SACL) to enable required directory service auditing.
-    -  **NTLM auditing** - Uses standard Windows Registry APIs to configure the required NTLM auditing registry values.
-    -  **Domain object auditing** - Modifies the SACL on the Configuration partition to capture changes to directory service configuration objects.
-    - **ADFS auditing** - Adds audit entries to the object's System Access Control List (SACL) of the AD FS configuration container, to enable auditing of AD FS-related directory objects.
-    - **Windows audit policy** - Configures the local Windows audit policies using the Windows Local Security Authority (LSA) audit policy APIs.
-- Applies auditing settings directly to the local system policy of the domain controller.
-- Sends health alerts about the configuration state.
-- Runs once every 24 hours.
-
-> [!NOTE]
-> - If you don't turn on automatic Windows auditing, you **must** configure Windows event auditing either [manually](#configure-windows-event-collection-manually) or by using [PowerShell](#configure-windows-event-collection-using-powershell).
-> - GPO settings can conflict with local settings set by the sensor. 
-
-### Turn on automatic Windows auditing
-
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings**, and then **Identities**.
-1. In the **General** section, select **Advanced features**.
-1. Turn on **Automatic Windows auditing configuration**.
-
 ## Configure Windows event collection manually
 
-This section includes instructions for manually configuring Windows event collection in these cases:
+This section includes instructions for manually configuring Windows event collection. Use these steps if you're deploying sensor v2.x, deploying on standalone AD FS/AD CS/Entra Connect servers, or if you opted out of automatic auditing for sensor v3.x.
+
+The following sections describe configuration for each server type:
 
 - [Configure auditing on a domain controller](#configure-auditing-on-a-domain-controller)
 - [Configure auditing on an AD FS server](#configure-auditing-on-an-ad-fs-server)
@@ -421,6 +507,5 @@ Windows Registry Editor Version 5.00
 
 For more information, see:
 
-- [Event collection with Microsoft Defender for Identity](event-collection-overview.md)
 - [Windows security auditing](/windows/security/threat-protection/auditing/security-auditing-overview)
 - [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing)

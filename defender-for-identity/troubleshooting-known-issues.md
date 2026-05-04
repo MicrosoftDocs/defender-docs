@@ -488,7 +488,7 @@ In some v3 sensor environments, auditing health alerts might persist even when W
 
 ## Next steps
 
-- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md) 
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)

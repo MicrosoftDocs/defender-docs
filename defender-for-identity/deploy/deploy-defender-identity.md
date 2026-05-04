@@ -1,9 +1,10 @@
 ---
 title: Microsoft Defender for Identity Deployment Overview
 description: Learn how to deploy Microsoft Defender for Identity from the Microsoft Defender portal.
-ms.date: 01/28/2026
+ms.date: 05/04/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Identity deployment overview
@@ -16,15 +17,14 @@ We recommend installing Defender for Identity sensors on all domain controllers,
 
 ## Select your deployment method
 
-After you complete the steps to prepare your environment and assign roles and permissions for Defender for Identity, create a plan for onboarding.
 Identify your architecture and requirements, and then use the following table to select the appropriate deployment for the servers in your environment.
 
 :::image type="content" source="media/deploy-defender-identity/sensor-deployment-decision.png" alt-text="Diagram that shows the decision tree for choosing which sensor to deploy.":::
 
 | Server configuration | Server Operating System | Recommended deployment |
 | --------- | --------- | --------- |
-|Domain controller | Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea)|[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)|
-|Domain controller with AD FS, AD CS, or Microsoft Entra Connect identity roles   | Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea)|[Defender for Identity sensor v3.x](prerequisites-sensor-version-3.md)|
+|Domain controller | Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea)|[Defender for Identity sensor v3.x](deploy-sensor-v3.md)|
+|Domain controller with AD FS, AD CS, or Microsoft Entra Connect identity roles   | Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea)|[Defender for Identity sensor v3.x](deploy-sensor-v3.md)|
 |Domain controller | Windows Server 2016 or later| [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) |
 |[Active Directory Federation Services (AD FS)](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 |[Active Directory Certificate Services (AD CS)](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
@@ -37,7 +37,36 @@ Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 - Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
 - Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute).
 
+## Deployment steps for sensor v3.x
+
+Follow these steps to deploy the sensor v3.x on domain controllers running Windows Server 2019 or later:
+
+| Step | Action | Details |
+|------|--------|---------|
+| 1 | Verify prerequisites | [Server requirements, licensing, networking, and memory](deploy-sensor-v3.md#before-you-activate) |
+| 2 | Activate the sensor | [Activate from the Microsoft Defender portal](activate-sensor.md) |
+| 3 | Configure Windows event auditing | [Enable automatic auditing (recommended)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) |
+| 4 | Configure RPC auditing | [Apply the Unified Sensor RPC Audit tag](deploy-sensor-v3.md#configure-rpc-auditing) |
+| 5 | Remove gMSA (if migrating from v2) | [Switch to local system identity](deploy-sensor-v3.md#service-account-configuration) |
+| 6 | Validate deployment | [Confirm sensor health](test-sensor.md) |
+
+## Deployment steps for sensor v2.x
+
+Follow these steps to deploy the sensor v2.x on domain controllers, AD FS, AD CS, or Microsoft Entra Connect servers:
+
+| Step | Action | Details |
+|------|--------|---------|
+| 1 | Verify prerequisites | [Server requirements, licensing, networking, and ports](prerequisites-sensor-version-2.md) |
+| 2 | Plan capacity | [Run the sizing tool on domain controllers](capacity-planning.md) |
+| 3 | Configure connectivity | [Configure proxy or firewall settings](configure-proxy.md) |
+| 4 | Install the sensor | [Download and install the sensor package](install-sensor.md) |
+| 5 | Configure the sensor | [View and adjust sensor settings](configure-sensor-settings.md) |
+| 6 | Configure Windows event auditing | [Configure audit policies manually or with PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-manually) |
+| 7 | Configure Directory Service accounts | [Set up a DSA (recommended) or gMSA](directory-service-accounts.md) |
+| 8 | Configure for AD FS, AD CS, or Entra Connect (if applicable) | [Additional steps for identity role servers](active-directory-federation-services.md) |
+| 9 | Validate deployment | [Confirm sensor health](test-sensor.md) |
+
 ## Next steps
 
+- [Prepare your environment for sensor v3](deploy-sensor-v3.md)
 - [Prepare your environment for sensor v2](prerequisites-sensor-version-2.md)
-- [Prepare your environment for sensor v3](prerequisites-sensor-version-3.md)
