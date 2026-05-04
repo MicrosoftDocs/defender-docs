@@ -1,15 +1,18 @@
 ---
-title: Install a sensor | Microsoft Defender for Identity
-description: Learn how to download and install Microsoft Defender for Identity sensors on your domain controllers, AD FS servers, or AD CS servers.
+title: Install the sensor v2.x | Microsoft Defender for Identity
+description: Learn how to download and install the Microsoft Defender for Identity sensor v2.x on domain controllers, AD FS servers, AD CS servers, or Microsoft Entra Connect servers.
 ms.date: 05/04/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
 ---
 
-# Download and install a Microsoft Defender for Identity sensor
+# Download and install a Microsoft Defender for Identity sensor v2.x
 
-This article describes how to download and install a Microsoft Defender for Identity classic sensor, including a standalone sensor. We recommend installing the sensor from the Defender portal. 
+This article describes how to download and install the Defender for Identity sensor v2.x on domain controllers, or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. This article also covers standalone sensor installation.
+
+> [!TIP]
+> For domain controllers running Windows Server 2019 or later, deploy the [sensor v3.x](deploy-sensor-v3.md) instead. The v3.x sensor is activated from the Defender portal and doesn't require a downloaded installation package.
 
 We recommend alternate installation methods for these use cases:
 

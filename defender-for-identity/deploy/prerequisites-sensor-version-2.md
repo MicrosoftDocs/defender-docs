@@ -6,9 +6,15 @@ ms.topic: install-set-up-deploy
 ms.reviewer: rlitinsky
 ---
 
-# Microsoft Defender for Identity prerequisites
+# Microsoft Defender for Identity sensor v2.x prerequisites
 
-This article describes the requirements for installing the Microsoft Defender for Identity sensor v2.x.
+This article describes the requirements for installing the Microsoft Defender for Identity sensor v2.x. The v2.x sensor supports:
+
+- Domain controllers running Windows Server 2016 or later
+- AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers
+
+> [!TIP]
+> For domain controllers running Windows Server 2019 or later, we recommend deploying the [sensor v3.x](deploy-sensor-v3.md) instead.
 
 ## Licensing requirements
 

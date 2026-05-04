@@ -145,7 +145,7 @@ Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
 
 The v3.x sensor uses the local system identity of the server for Active Directory and response actions. It does not use Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA).
 
-If you're migrating from sensor v2.x and previously had a gMSA configured, you must remove it. If gMSA remains enabled, response actions won't work.
+If you're migrating from sensor v2.x and previously had a gMSA configured for [action accounts](manage-action-accounts.md), you must remove it. If gMSA remains enabled, response actions, including [attack disruption](/microsoft-365/security/defender/automatic-attack-disruption), won't work.
 
 > [!IMPORTANT]
 > In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.

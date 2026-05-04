@@ -27,6 +27,12 @@ items:
     items:
     - name: Deployment overview
       href: deploy/deploy-defender-identity.md
+    - name: Deploy the Defender for Identity sensor v3.x
+      items:
+        - name: Prerequisites and configuration
+          href: deploy/deploy-sensor-v3.md
+        - name: Activate the sensor
+          href: deploy/activate-sensor.md
     - name: Deploy the Defender for Identity sensor v2.x
       items:
         - name: Prerequisites
@@ -41,7 +47,7 @@ items:
           href: deploy/install-sensor.md
         - name: Configure the Defender for Identity sensor
           href: deploy/configure-sensor-settings.md
-        - name: Configure sensors for AD FS, AD CS, and Entra Connect
+        - name: Configure sensors for AD FS, AD CS, and Entra Connect (non-domain-controller servers)
           href: deploy/active-directory-federation-services.md
         - name: Configure a Directory Service account
           items:
@@ -65,12 +71,6 @@ items:
           - name: Listen for SIEM events
             href: deploy/configure-event-collection.md
             displayName: standalone
-    - name: Deploy the Defender for Identity sensor v3.x
-      items:
-        - name: Prerequisites and configuration
-          href: deploy/deploy-sensor-v3.md
-        - name: Activate the sensor
-          href: deploy/activate-sensor.md
     - name: Migrate from sensor v2 to sensor v3 (Preview)
       href: deploy/migrate-to-sensor-v3.md
     - name: Validate the sensor deployment

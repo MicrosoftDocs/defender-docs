@@ -20,7 +20,7 @@ You can migrate your Defender for Identity sensors from v2.x to v3.x directly fr
 
 To migrate, each server must be:
 
-- A domain controller, without additional identity roles running
+- A domain controller without additional identity roles (AD FS, AD CS, or Microsoft Entra Connect) running. Domain controllers with identity roles support v3.x for new deployments, but in-place migration isn't currently supported for these servers.
 - Running a Defender for Identity sensor v2.x.
 - Running Windows Server 2019 or later.
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
@@ -39,15 +39,17 @@ Servers that meet all prerequisites appear as **Ready for migration** on the **S
 > [!NOTE]
 > The migration typically takes up to 20 minutes. During this time, the v2.x sensor continues to run until the v3.x sensor is ready, so your server stays protected without interruption.
 
-## Configure the v3.x sensor
+## Post-migration steps
+
+### Configure the v3.x sensor
 
 For optimal protection and monitoring, complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md), including:
 
 - [Configure RPC auditing](deploy-sensor-v3.md#configure-rpc-auditing).
 - [Configure automatic Windows event auditing](deploy-sensor-v3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend [enabling automatic Windows event auditing (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) for optimal configuration validation.
-- [Switch from gMSA to local system](deploy-sensor-v3.md#service-account-configuration). The v3.x sensor uses the local system identity. If you had a gMSA configured for the v2.x sensor, remove the gMSA configuration.
+- [Switch from gMSA to local system](deploy-sensor-v3.md#service-account-configuration). The v3.x sensor uses the local system identity. If you had a gMSA configured for [action accounts](manage-action-accounts.md), you must remove it. If gMSA remains enabled, response actions, including attack disruption, won't work.
 
-## Clean up the v2.x sensor
+### Clean up the v2.x sensor
 
 The migration disables the v2.x sensor service, but the v2.x sensor software remains installed on the server. Complete the following cleanup steps to fully clean your server from the v2.x sensor files:
 
