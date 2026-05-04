@@ -180,6 +180,9 @@ This view provides investigation context by showing which policies apply to the 
 
 ## Identity Explorer tab (Preview)
 
+> [!NOTE]
+> The Identity Explorer tab requires a Microsoft Sentinel Data Lake license. If your organization doesn't have this license, the tab isn't visible on the Identity page.
+
 The **Identity Explorer** tab uses the [hunting graph](advanced-hunting-graph.md) to visualize identity attack paths and exposure scenarios as interactive graphs. The graph is pre-seeded with the current identity, so you can immediately see how the identity relates to other entities in your environment.
 
 Use the Identity Explorer to discover lateral movement paths, privilege escalation routes, and credential-access risks associated with the identity.

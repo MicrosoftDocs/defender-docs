@@ -27,7 +27,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### **Identity Explorer (Preview)**
 
-The Identity page now includes the **Identity Explorer** tab, which uses the [hunting graph](/defender-xdr/advanced-hunting-graph) to visualize identity attack paths and exposure scenarios as interactive graphs. Use predefined identity scenarios to discover lateral movement paths, privilege escalation routes, and credential-access risks. For more information, see [Investigate an identity](/defender-xdr/investigate-users#identity-explorer-tab-preview).
+The Identity page now includes the **Identity Explorer** tab for customers with a Microsoft Sentinel Data Lake license. This tab uses the [hunting graph](/defender-xdr/advanced-hunting-graph) to visualize identity attack paths and exposure scenarios as interactive graphs. Use predefined identity scenarios to discover lateral movement paths, privilege escalation routes, and credential-access risks. For more information, see [Investigate an identity](/defender-xdr/investigate-users#identity-explorer-tab-preview).
 
 ### **Custom account correlation rules (Preview)**
 
