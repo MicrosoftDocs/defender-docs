@@ -67,7 +67,7 @@ As part of Agent 365, Microsoft Defender shares data, including customer data, w
 - Microsoft Security Exposure Management
 - Microsoft Entra ID Protection
 
-For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
+For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments might occur, depending on the location of the service offering.
 
 ## Related content
 
