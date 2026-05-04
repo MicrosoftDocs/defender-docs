@@ -72,6 +72,8 @@
           href: security-for-ai/ai-agent-inventory.md
         - name: Detect, block, and investigate threats to AI agents
           href: security-for-ai/ai-agent-detection-protection.md
+        - name: Data privacy as part of Agent 365
+          href: security-for-ai/privacy-defender-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -564,6 +566,8 @@
               href: manage-rbac.md
             - name: What's new
               href: whats-new-in-microsoft-defender-urbac.md
+            - name: Configure Microsoft Sentinel scoping (row-level RBAC)
+              href: /sentinel/scoping
             - name: Create custom roles
               href: create-custom-rbac-roles.md
             - name: Import roles

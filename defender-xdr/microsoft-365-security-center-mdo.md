@@ -2,8 +2,8 @@
 title: Microsoft Defender for Office 365 in the Microsoft Defender portal
 description: Learn about how Microsoft Defender for Office 365 operates in the Microsoft Defender portal.
 ms.date: 09/11/2024
-ms.author: chrisda
-author: chrisda
+ms.author: guywild
+author: guywi-ms
 ms.topic: overview
 ms.localizationpriority: medium
 ms.collection:
