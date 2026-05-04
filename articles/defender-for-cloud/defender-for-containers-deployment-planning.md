@@ -67,7 +67,4 @@ After deployment, verify that Defender components are running correctly and addr
 
 - [Exclude clusters from automatic provisioning](defender-for-containers-exclude-cluster.md)
 
-- [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
-
-- [Install Defender for Containers sensor by using Helm](deploy-helm.md)
 

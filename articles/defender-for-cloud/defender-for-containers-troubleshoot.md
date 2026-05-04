@@ -16,7 +16,7 @@ This article provides troubleshooting guidance for common deployment and operati
 ### Common deployment issues
 
 - **Defender sensor installation fails**
-  - **Symptoms:** `kubectl get pods -n kube-system -l app=microsoft-defender` shows **Defender sensor** pods in `Pending`, `CrashLoopBackOff`, or `Error`.
+  - **Symptoms:** `kubectl get pods -n kube-system -l app=defender` shows **Defender sensor** pods in `Pending`, `CrashLoopBackOff`, or `Error`.
   - **Resolution:**
     - **Insufficient resources:** Check node capacity. Use `kubectl top nodes` to verify if nodes have enough CPU and memory to schedule the sensor.
     - **Network egress:** Verify your cluster firewall or NSG allows outbound traffic to the [required FQDNs](defender-for-containers-azure-overview.md#prerequisites). 
@@ -94,15 +94,16 @@ This article provides troubleshooting guidance for common deployment and operati
   - **Symptoms:** Pods fail to start with an image pull error.
   - **Resolution:**
     - **MCR Connectivity:** Verify nodes can reach `mcr.microsoft.com` to pull the **Defender sensor** image.
-    - **Namespace conflicts:** Ensure no other security solutions or admission controllers are interfering with the `kube-system` or `mdc` namespaces.
+    - **Namespace conflicts:** Ensure no other security solutions or admission controllers are interfering with the `mdc` namespace.
 
 ---
 
 ## Verification via alert simulation
 
-To verify that your Defender for Containers deployment is successfully sending alerts to Defender for Cloud, run the following command to trigger a harmless test alert:
+Use the [Kubernetes alerts simulation tool](containers-alerts.md#kubernetes-alerts-simulation-tool) to verify that Defender for Containers can generate alerts for your cluster and send them to Defender for Cloud.
 
-```bash
-kubectl run test-alert --image=nginx --rm -it --restart=Never -- sh -c "echo test > /etc/shadow"
-```
-Check the **Security alerts** page in the Azure portal. The alert should appear within 10-15 minutes.
+## Related content
+
+- [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md).
+
+- [Install Defender sensor using Helm](deploy-helm.md).

@@ -178,11 +178,7 @@ Kubernetes clusters send runtime security data to Microsoft Defender for Cloud.
 **Outbound network requirements**
 - Protocol: HTTPS
 - Port: 443
-- Domains:
-  - `*.ods.opinsights.azure.com`
-  - `*.oms.opinsights.azure.com`
-  - `login.microsoftonline.com`
-  - `*.cloud.defender.microsoft.com`
+- Domain: `*.cloud.defender.microsoft.com`
 
 ### Kubernetes permissions created by the Defender sensor
 

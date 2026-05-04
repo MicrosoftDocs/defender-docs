@@ -84,11 +84,7 @@ az k8s-extension create \
   --cluster-type connectedClusters \
   --cluster-name <cluster-name> \
   --resource-group <resource-group> \
-  --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
-
-Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
-For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
 
 ## Deploy the Azure Policy extension
 
@@ -159,11 +155,7 @@ az k8s-extension create \
   --cluster-type connectedClusters \
   --cluster-name <cluster-name> \
   --resource-group <resource-group> \
-  --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
-
-Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID. 
-For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
 
 ## Deploy the Azure Policy extension
 
@@ -205,11 +197,7 @@ az k8s-extension create \
   --cluster-type connectedClusters \
   --cluster-name <cluster-name> \
   --resource-group <resource-group> \
-  --configuration-settings logAnalyticsWorkspaceResourceID=<workspace-resource-id>
 ```
-
-Replace `<workspace-resource-id>` with the full Log Analytics workspace resource ID.  
-For example, `/subscriptions/<subscription-id>/resourceGroups/<workspace-rg>/providers/Microsoft.OperationalInsights/workspaces/<workspace-name>`.
 
 ## Deploy the Azure Policy extension
 
