@@ -112,11 +112,9 @@ Complete these configuration steps after the sensor is activated and running.
 
 ### Configure Windows event auditing
 
-Defender for Identity uses Windows event log entries to detect specific activities. For optimal protection and monitoring, make sure that collection of Windows events is properly configured.
+Defender for Identity relies on Windows event logs for many detections. For v3.x sensors on domain controllers, [enable automatic auditing](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically), which handles all auditing settings without manual configuration.
 
-**Recommended: Enable automatic auditing.** See [Configure Defender for Identity to collect Windows events automatically](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically).
-
-If you don't select automatic Windows auditing configuration, you must [configure Windows event auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell).
+If automatic auditing isn't available or you opted out, [configure auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [use PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell).
 
 > [!NOTE]
 > **Known issue:** In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**. 
