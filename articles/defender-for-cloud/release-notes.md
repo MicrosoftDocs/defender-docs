@@ -66,7 +66,6 @@ Learn more about [GitHub Advanced Security integration](github-advanced-security
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Update | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
-
 ### Defender for Containers runtime protection on EKS Bottlerocket is now generally available
 
 April 30, 2026
