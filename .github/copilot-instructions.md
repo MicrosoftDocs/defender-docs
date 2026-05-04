@@ -54,4 +54,12 @@ Below are instructions specific to this repository. These may be updated by repo
 
 <!--- Add additional repository level instructions below. Do NOT update this line or above. --->
 
+### Pull Requests
 
+When creating pull requests for this repository, always target the upstream repo:
+
+```
+gh pr create --repo MicrosoftDocs/defender-docs-pr --base main --head AbbyMSFT:<branch-name>
+```
+
+Do not create PRs on the fork (`AbbyMSFT/defender-docs-pr`) targeting the fork's own `main`.
