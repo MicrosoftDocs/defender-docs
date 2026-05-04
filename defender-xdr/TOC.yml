@@ -72,6 +72,8 @@
           href: security-for-ai/ai-agent-inventory.md
         - name: Detect, block, and investigate threats to AI agents
           href: security-for-ai/ai-agent-detection-protection.md
+        - name: Data privacy as part of Agent 365
+          href: security-for-ai/privacy-defender-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
