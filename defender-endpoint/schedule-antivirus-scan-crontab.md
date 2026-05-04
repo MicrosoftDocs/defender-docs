@@ -12,14 +12,13 @@ ms.collection:
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-ms.date: 03/24/2025
+ms.date: 05/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux
 
+# Schedule an antivirus scan using crontab with Microsoft Defender for Endpoint on Linux
 
 To run a scan for Linux, see [Supported commands](linux-resources.md#supported-commands).
 
@@ -43,15 +42,14 @@ To set the cron job, use the commands in this article.
 
 ### Backup crontab entries
 
+> [!TIP]
+> Do this step before you edit or remove entries.
+
 ```bash
 sudo crontab -l > /var/tmp/cron_backup_200919.dat
 ```
 
-> [!NOTE]
-> Where 200919 == YRMMDD
-
-> [!TIP]
-> Do this step before you edit or remove entries.
+Where 200919 = YYMMDD
 
 To edit the crontab and add a new job as a root user:
 
@@ -118,7 +116,6 @@ mdatp scan list
 - Scan Start Time - For example, Jan 05 2023 at 03:18:39 PM
 - Scan State - For example, Succeeded, Failed, or Cancelled
 
-
 Use this command to verify that scheduled scans ran at the expected date, time, and frequency. 
 
 The output only covers the last seven scans. If you need to check whether both quick and full scans are running regularly, monitor it over time or script around it.
@@ -132,33 +129,32 @@ You can also verify the scan ran by:
     ```bash
     mdatp scan quick
     ```
- 
+
 - Full scan
 
     ```bash
      mdatp scan full
     ```
- 
+
 - Scan a specific path
 
-```bash
-mdatp scan custom --path /home/user/downloads
-```
+  ```bash
+  mdatp scan custom --path /home/user/downloads
+  ```
 
 **Checking scan results**
 
 - List all detected threats.
 
-```bash
-mdatp threat list
-```
- 
+  ```bash
+  mdatp threat list
+  ```
+
 - Get details on a specific threat.
 
-```bash
-mdatp threat get --id [threat-id]
-```
-
+  ```bash
+  mdatp threat get --id [threat-id]
+  ```
 
 ## If you're using Ansible, Chef, Puppet, or SaltStack
 
@@ -171,8 +167,6 @@ cron - Manage cron.d and crontab entries
 ```
 
 For more information, see [Ansible documentation](https://docs.ansible.com/ansible/latest).
-
-
 
 ### To set crontabs in Chef
 
@@ -232,12 +226,12 @@ crontab -u username -l
 
 ### To back up crontab entries
 
+> [!TIP]
+> Do this step before you edit or remove entries.
+
 ```bash
 crontab -l > /var/tmp/cron_backup.dat
 ```
-
-> [!TIP]
-> Do this step before you edit or remove entries.
 
 ### To restore crontab entries
 
@@ -291,5 +285,3 @@ crontab -u username -r
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 - [Configure security settings and policies for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
-
-
