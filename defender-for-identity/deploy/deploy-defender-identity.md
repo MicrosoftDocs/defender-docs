@@ -46,12 +46,11 @@ Follow these steps to deploy the sensor v3.x on domain controllers running Windo
 
 | Step | Action | Details |
 |------|--------|---------|
-| 1 | Verify prerequisites | [Server requirements, licensing, networking, and memory](deploy-sensor-v3.md#before-you-activate) |
+| 1 | Verify prerequisites | [Server requirements, licensing, networking, memory, and service accounts](deploy-sensor-v3.md#before-you-activate) |
 | 2 | Activate the sensor | [Activate from the Microsoft Defender portal](activate-sensor.md) |
 | 3 | Configure Windows event auditing | [Enable automatic auditing (recommended)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically), or [configure manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) if automatic configuration isn't available |
 | 4 | Configure RPC auditing | [Apply the Unified Sensor RPC Audit tag](deploy-sensor-v3.md#configure-rpc-auditing) |
-| 5 | Remove gMSA (if migrating from v2) | [Switch to local system identity](deploy-sensor-v3.md#configure-service-accounts) |
-| 6 | Validate deployment | [Confirm sensor health](test-sensor.md) |
+| 5 | Validate deployment | [Confirm sensor health](test-sensor.md) |
 
 ## Deployment steps for sensor v2.x
 
