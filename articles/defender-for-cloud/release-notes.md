@@ -72,8 +72,6 @@ April 30, 2026
 
 Defender for Containers runtime protection now supports AWS Bottlerocket operating systems on Amazon Elastic Kubernetes Service (EKS) in general availability.
 
-Bottlerocket support requires Helm-based sensor provisioning and Linux kernel version 5.4 or later.
-
 Learn more about [Defender for Containers runtime protection](support-matrix-defender-for-containers.md#runtime-protection-features).
 
 ### Anti-malware detection and blocking is now generally available
