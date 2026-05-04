@@ -28,6 +28,35 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## May 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| May 4, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
+
+### Cloud security reporting in Microsoft Defender portal (Preview)
+
+May 4, 2026
+
+Microsoft Defender portal now includes integrated cloud security reporting capabilities, enabling you to create, customize, and share security insights across your organization.
+
+With cloud security reporting, you can:
+
+- View built-in reports such as **CNAPP Executive Summary** and **Cloud Posture** that provide predefined views of cloud security data
+- Customize existing reports by duplicating and modifying sections, cards, and layout to match your specific needs
+- Create custom reports from scratch by defining sections and selecting relevant cards
+- Export reports to PDF for sharing with stakeholders and leadership
+- Control report access using visibility settings (Private, Tenant-level access, or Public)
+- Filter and organize reports by type and visibility
+
+The **CNAPP Executive Summary** report provides a consolidated view of cloud-native application protection platform signals, including threat detection, secure score trends, vulnerability management, security recommendations, investigation & response activity, and regulatory compliance status.
+
+The **Cloud Posture** report offers a centralized view of your overall cloud security posture, helping you assess security risk, track progress over time, and prioritize remediation efforts across environments and workloads.
+
+To access cloud security reports, navigate to the **Reporting** page in the Microsoft Defender portal and select the **Cloud** tab.
+
+Learn more about [Cloud security reporting in Microsoft Defender portal](cloud-security-reporting.md).
+
 ## April 2026
 
 | Date | Category | Update |

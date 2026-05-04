@@ -2,16 +2,17 @@
 title: Cloud security reporting in Microsoft Defender portal (Preview)
 description: Learn how to create, customize, and export cloud security reports in Microsoft Defender portal, including built-in reports and custom report options.
 ms.topic: how-to
-ms.date: 04/27/2026
+ms.date: 05/04/2026
 ms.author: dlanger
 author: dlanger
+ai-usage: ai-assisted
 ---
 
 # Cloud security reporting in Microsoft Defender portal (Preview)
 
 Microsoft Defender portal provides integrated reporting capabilities for cloud security data, enabling you to create, customize, and share security insights across your organization.
 
-You can view built-in reports, create custom reports tailored to your needs, and export reports to PDF for sharing with stakeholders. These capabilities help you understand your cloud security posture and communicate security insights effectively.
+You can view built-in reports, create custom reports tailored to your needs, and export reports to PDF for sharing with stakeholders. These capabilities enable you to generate and manage reports based on Cloud security data and tailor them to your organization needs.
 
 ## Capabilities
 
@@ -68,15 +69,12 @@ To access cloud reporting:
 
 ## View built-in reports
 
-Microsoft Defender for Cloud includes **built-in reports** that provide predefined, out-of-the-box views of your cloud security posture. These reports help security teams and stakeholders quickly understand risk, coverage, and compliance across environments without requiring custom queries or workbooks.
-
-Built-in reports are designed for high-level visibility and decision-making and combine data from secure score, recommendations, vulnerabilities, alerts, and regulatory compliance.
+Microsoft Defender for Cloud includes **built-in reports** that provide predefined views of cloud security data. These reports help security teams and stakeholders quickly understand risk, coverage, and compliance across environments.
 
 **To view a built-in report:**
 
 1. From the **Reporting** page, select the **Cloud** tab.
 1. Select a report such as **CNAPP Executive Summary** or **Cloud Posture**.
-1. Review the report sections and cards to understand your security posture.
 
     :::image type="content" source="media/cloud-security-reporting/built-in-cloud-reports.png" alt-text="Screenshot of Microsoft Defender Reporting page, Cloud tab selected, showing built-in reports CNAPP Executive summary and Cloud posture." lightbox="media/cloud-security-reporting/built-in-cloud-reports.png":::
 
@@ -86,29 +84,17 @@ The **CNAPP Executive summary** report provides a consolidated, high-level summa
 
 #### Overview
 
-Provides a high-level snapshot of key security indicators, including:
-
-- **Threat detection** – The number and severity distribution of active security alerts.
-- **Cloud secure score** – An overall percentage score representing alignment with security best practices.
-- **Security coverage** – The number of assessed assets and how many are protected by enabled security plans.
+Provides a high-level snapshot of key security indicators across your cloud environment.
 
 :::image type="content" source="media/cloud-security-reporting/executive-summary-report.png" alt-text="Screenshot of CNAPP Executive summary showing threat detection, cloud secure score, and security coverage cards with view buttons." lightbox="media/cloud-security-reporting/executive-summary-report.png":::
 
 #### Secure score
 
-Shows how the cloud secure score changes over time, including:
-
-- Overall secure score trend.
-- Secure score breakdown by workload, helping identify areas with higher risk or slower improvement.
+Shows how the cloud secure score changes over time, with breakdowns that help identify areas with higher risk or slower improvement.
 
 #### Vulnerability management
 
-Provides insights into vulnerability exposure and remediation, including:
-
-- Vulnerabilities over time, grouped by severity.
-- Top detected cloud CVEs.
-- Top security recommendations related to vulnerabilities.
-- Visual insights showing vulnerability distribution across environments and resource types.
+Provides insights into vulnerability exposure and remediation across your cloud environments.
 
 #### Security recommendations
 
@@ -116,10 +102,7 @@ Displays detected security recommendations across the environment, highlighting 
 
 #### Investigation & response
 
-Summarizes detection and response activity, including:
-
-- Trends in security alerts by severity.
-- Alert response status, such as resolved, in progress, or dismissed alerts.
+Summarizes detection and response activity across your environment.
 
 #### Regulatory compliance
 
@@ -140,33 +123,17 @@ The **Cloud posture** report provides a centralized view of your overall cloud s
 
 #### Overview
 
-Summarizes the current security posture, including:
-
-- **Cloud secure score**, showing overall alignment with security best practices.
-- **New cloud secure score impact**, highlighting the potential score improvement from addressing outstanding recommendations.
-- **Defender CSPM plan coverage**, showing which environments are protected by Defender CSPM.
+Summarizes the current security posture, including the cloud secure score and Defender CSPM plan coverage across your environments.
 
 :::image type="content" source="media/cloud-security-reporting/cloud-posture-report.png" alt-text="Screenshot of Cloud posture report showing cloud secure score, Defender CSPM plan coverage, and security posture trends over time." lightbox="media/cloud-security-reporting/cloud-posture-report.png":::
 
 #### Security posture
 
-Shows how the cloud secure score evolves over time, helping you track improvement or regression in your security posture.
-
-The report also provides secure score breakdowns by:
-
-- **Environment**, such as subscriptions or accounts.
-- **Workload**, including compute, containers, databases, and networking.
-
-These views help identify environments or workload types with higher risk exposure.
+Shows how the cloud secure score evolves over time, with breakdowns by environment and workload to help identify areas with higher risk exposure.
 
 #### Recommendations
 
-Highlights actionable security recommendations and remediation status, including:
-
-- Most common recommendations by criticality.
-- Recommendations with the highest potential risk reduction.
-
-This section helps prioritize remediation efforts based on impact.
+Highlights actionable security recommendations and remediation status to help prioritize remediation efforts based on impact.
 
 #### Regulatory compliance
 
@@ -181,8 +148,6 @@ Use the **Cloud posture** report when you need to:
 - Prioritize remediation based on recommendation impact
 - Track compliance posture across regulatory frameworks
 
-For deeper analysis and custom reporting, you can export data to workbooks, Log Analytics, or external reporting tools.
-
 ## Create a custom report
 
 You can create custom reports to address specific reporting needs.
@@ -193,6 +158,7 @@ You can create custom reports to address specific reporting needs.
 1. Enter the report details:
    - **Name**: Provide a descriptive name
    - **Description**: Add context about the report purpose
+   - **Visibility**: Configure the visibility settings
 1. Add content to your report:
    - Create sections to organize information
    - Add cards to display specific data
@@ -258,9 +224,9 @@ Report visibility controls who can access each report in your organization.
 
 ### Visibility options
 
-- **Private**: Only you (the report creator) can view the report
-- **Tenant-level access**: Available to users with permissions to view tenant-level data
-- **Public**: Available to users with minimal permissions
+- **Private**: Only you can view this report.
+- **Tenant-level access**: Users who have permission to view data across the entire tenant can view this report.
+- **Public**: All users within your tenant can view this report.
 
 :::image type="content" source="media/cloud-security-reporting/report-visibility.png" alt-text="Screenshot of Microsoft Defender Experts Reports page with the Visible to filter set to Private and the Apply button highlighted." lightbox="media/cloud-security-reporting/report-visibility.png":::
 
@@ -272,15 +238,6 @@ Report visibility controls who can access each report in your organization.
 2. Select **Settings** or **Edit**.
 3. Change the visibility setting.
 4. Select **Save**.
-
-> [!NOTE]
-> Users can only see reports that match their permission levels. Users cannot expand visibility beyond their allowed levels.
-
-## Limitations
-
-- Visibility follows a one-way hierarchy: **Private → Tenant-level access → Public**
-- Once a report is set to a broader visibility level, it cannot be reverted to a more restricted level
-- To reduce visibility, duplicate the report and configure the desired visibility on the new copy
 
 ## Related content
 
