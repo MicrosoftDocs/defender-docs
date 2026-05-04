@@ -247,9 +247,9 @@ If autoprovisioning or an Azure Policy assignment is still active, agents might 
 
 ### [Servers](#tab/servers)
 
-At the resource level, you can enable or disable Defender for Servers plan 1. For plan 2, you can disable it for specific resources only when it's enabled at the subscription level.
+At the resource level, you can enable or disable Defender for Servers plan 1. For plan 2, you can disable it for specific resources only when plan 2 remains enabled at the subscription level.
 
-For example, you can enable Defender for Servers plan 2 at the subscription level and disable it for specific resources within the subscription. However, you can't enable plan 2 only on specific resources. If you're still being billed even after you disable the plan, use the [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) to see what is still covered.
+For example, you can enable Defender for Servers plan 2 at the subscription level and disable it for specific resources within the subscription. However, you can't enable plan 2 only on specific resources. If you're still being billed even after you disable the plan, use the [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) to see what resources remain covered.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
