@@ -69,7 +69,7 @@ To use the selective response actions capability, enable the feature in the Micr
 
 :::image type="content" source="./media/restrict-response-actions-high-value-assets/enable-selective-response-actions.png" alt-text="Screenshot of the Advanced features page showing Allow restricted operations during onboarding enabled." lightbox="./media/restrict-response-actions-high-value-assets/enable-selective-response-actions.png":::
 
-Once enabled, the restricted mode option becomes available when creating Defender deployment packages for Windows through the Defender deployment tool (DDT). You can then create deployment packages that specify which security operations to allow on the devices you're onboarding. See [Generate an onboarding package with restricted security operations settings](#generate-an-onboarding-package-with-restricted-security-operations-settings) for details. Once the deployment package has been generated, use it to [onboard the device](defender-deployment-tool-windows.md#deploy-defender-endpoint-security-on-devices).
+Once enabled, the restricted mode option becomes available when creating Defender deployment packages for Windows through the Defender deployment tool (DDT). You can then create deployment packages that specify which security operations to allow on the devices you're onboarding. See [Generate an onboarding package with restricted security operations settings](#generate-an-onboarding-package-with-restricted-security-operations-settings) for details. Once the deployment package has been generated, use it to [onboard the device](#onboard-a-device-with-restricted-response-actions).
 
 ## Generate an onboarding package with restricted security operations settings
 
