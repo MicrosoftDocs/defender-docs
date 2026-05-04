@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.subservice: onboard
-ms.date: 02/12/2026
+ms.date: 05/04/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -66,8 +66,6 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 - Access to the domain *definitionupdates.microsoft.com*. The tool is downloaded and updated from this domain. Since the files it downloads are hosted on a content distribution platform, there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services.
 
 - While the tool checks for connectivity against your specific tenant before proceeding, other connectivity requirements, such as access to the consolidated *\*.endpoint.security.microsoft.com/*\*, apply to (additional) functionality you might want to use with the product. See [Configure your network environment to ensure connectivity with the Defender for Endpoint service](./configure-environment.md).
-
-- The selective response actions feature must be enabled if you plan to use that feature to restrict high-impact security operations on high-value assets. See [Enabling the selective response actions feature](./restrict-response-actions-high-value-assets.md#enabling-the-selective-response-actions-feature).
 
 ### Additional prerequisites for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
