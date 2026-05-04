@@ -10,6 +10,9 @@ ms.reviewer: rlitinsky
 
 This article describes how Microsoft Defender for Identity uses Directory Service Accounts (DSAs).
 
+> [!NOTE]
+> Directory Service Accounts apply to the Defender for Identity sensor v2.x only. The sensor v3.x does not support DSA or gMSA configuration and uses LocalSystem exclusively. For more information, see [Defender for Identity sensor v3.x service account configuration](deploy-sensor-v3.md#service-account-configuration).
+
 >[!NOTE]
 >Regardless of the Directory Service Accounts configured, the sensor service operates under the LocalService identity, and the updater service operates under the LocalSystem identity.
 

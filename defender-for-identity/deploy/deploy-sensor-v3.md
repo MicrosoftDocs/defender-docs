@@ -132,18 +132,11 @@ Applying the **Unified Sensor RPC Audit** tag to a device improves security visi
    
 1. Select **Next** to review and finish creating the rule, and then select **Submit**. The rule might take up to one hour to take effect.
 
-#### Remove RPC auditing from a device
-
-To offboard a device from this configuration, delete the asset rule or modify the rule conditions so the device no longer matches.
-
-> [!NOTE]
-> It might take up to one hour for changes to be reflected in the portal.
-
 Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
 
 ### Service account configuration
 
-The v3.x sensor uses the local system identity of the server for Active Directory and response actions. It does not use Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA).
+The v3.x sensor uses the local system identity of the server for Active Directory and response actions. It does not support Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA). LocalSystem is the only supported identity for v3.x.
 
 If you're migrating from sensor v2.x and previously had a gMSA configured for [action accounts](manage-action-accounts.md), you must remove it. If gMSA remains enabled, response actions, including [attack disruption](/microsoft-365/security/defender/automatic-attack-disruption), won't work.
 

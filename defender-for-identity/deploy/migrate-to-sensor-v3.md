@@ -16,6 +16,8 @@ ai-usage: ai-assisted
 
 You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration automatically completes the switchover and maintains your server configurations and security monitoring, with no downtime or data duplication.
 
+Before migrating, review the [sensor version limitations](deploy-sensor-v3.md#sensor-version-limitations), including that v3.x doesn't support VPN integration or syslog notifications.
+
 ## Prerequisites
 
 To migrate, each server must be:

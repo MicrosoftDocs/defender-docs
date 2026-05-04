@@ -11,12 +11,12 @@ ai-usage: ai-assisted
 
 Defender for Identity detection relies on specific Windows event logs parsed by the sensor from your domain controllers, AD FS servers, AD CS servers, and Microsoft Entra Connect servers. For the correct events to be audited and included in the Windows event log, these servers require accurate advanced audit policy settings.
 
-This page covers:
+Configure auditing using one of these methods:
 
 - [Automatic configuration](#configure-defender-for-identity-to-collect-windows-events-automatically) for sensor v3.x on domain controllers (recommended)
 - [Manual configuration](#configure-windows-event-collection-manually) for sensor v2.x, standalone servers, or if you opted out of automatic auditing
 - [PowerShell configuration](#configure-windows-event-collection-using-powershell)
-- [Required events reference](#required-windows-events-reference) for all server types
+- [Required Windows events](#required-windows-events) for all server types
 
 Defender for Identity generates health alerts when it detects incorrect Windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
 
@@ -49,13 +49,13 @@ When enabled, the sensor automatically:
 - Runs once every 24 hours.
 
 > [!NOTE]
-> Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to standalone AD FS, AD CS, or Microsoft Entra Connect servers using sensor v2.x.
+> Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers or to AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
 
 > [!NOTE]
 > - If you don't turn on automatic Windows auditing, you **must** configure Windows event auditing either [manually](#configure-windows-event-collection-manually) or by using [PowerShell](#configure-windows-event-collection-using-powershell).
 > - GPO settings can conflict with local settings set by the sensor.
 
-## Required Windows events reference
+## Required Windows events
 
 This section lists the Windows events that the Defender for Identity sensor requires. The specific events depend on the server type where the sensor is installed.
 
