@@ -54,6 +54,10 @@ Below are instructions specific to this repository. These may be updated by repo
 
 <!--- Add additional repository level instructions below. Do NOT update this line or above. --->
 
+### Writing Style (Repository-Specific)
+
+- Never use phrases like "This article covers," "This article describes," or "This page explains" in article introductions. Lead with the action or topic directly.
+
 ### Pull Requests
 
 When creating pull requests for this repository, always target the upstream repo:
