@@ -49,5 +49,5 @@ The gated deployment agent requires read access to all of your Azure Container R
 
 ## Next step
 
-> [!div class="nextstep"]
+> [!div class="nextstepaction"]
 > [Troubleshoot gated deployment in Kubernetes](troubleshooting-runtime-gated.md)
