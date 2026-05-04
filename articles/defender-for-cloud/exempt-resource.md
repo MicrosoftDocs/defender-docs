@@ -162,5 +162,5 @@ If the recommendation still shows resources as unhealthy after 24 hours, see [Re
 
 ## Next step
 
-> [!div class="nextstep"]
+> [!div class="nextstepaction"]
 > [Review and manage recommendation exemptions](review-exemptions.md)

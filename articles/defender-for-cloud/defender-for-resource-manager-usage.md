@@ -65,5 +65,5 @@ To investigate security alerts from Defender for Resource Manager:
 
 ## Next step
 
-> [!div class="nextstep"]
+> [!div class="nextstepaction"]
 > [Overview of Microsoft Defender for Resource Manager](defender-for-resource-manager-introduction.md)

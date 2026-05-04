@@ -164,4 +164,5 @@ To exclude specific GKE clusters from automatic provisioning:
 
 ## Next step
 
-- [Verify deployment](defender-for-containers-gcp-verify.md)
+> [!div class="nextstepaction"]
+> [Verify deployment](defender-for-containers-gcp-verify.md)
