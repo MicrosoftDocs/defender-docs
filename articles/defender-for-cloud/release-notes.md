@@ -70,9 +70,9 @@ Learn more about [GitHub Advanced Security integration](github-advanced-security
 
 April 30, 2026
 
-Defender for Containers runtime protection is now generally available for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE). This release expands EKS coverage with general availability for Bottlerocket nodes.
+Defender for Containers runtime protection now supports AWS Bottlerocket operating systems on Amazon Elastic Kubernetes Service (EKS), expanding runtime threat detection coverage to Bottlerocket nodes alongside existing support for Amazon Linux 2 and other EKS operating systems. Runtime protection continues to be available across Azure Kubernetes Service (AKS), EKS, and Google Kubernetes Engine (GKE).
 
-Runtime protection detects suspicious behavior in containerized workloads and generates security alerts for investigation. This capability helps security teams identify threats consistently across AKS, EKS, and GKE environments.
+Runtime protection detects suspicious behavior in containerized workloads and generates security alerts for investigation. With Bottlerocket support, security teams can identify threats consistently across all EKS operating system options.
 
 Bottlerocket support requires Helm-based sensor provisioning and Linux kernel version 5.4 or later.
 
