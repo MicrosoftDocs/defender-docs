@@ -174,30 +174,9 @@ Typically, you can enable the [standard protection rules](attack-surface-reducti
 
 You get ransomware mitigation through [controlled folder access](controlled-folders.md#what-is-controlled-folder-access), which allows only trusted apps to access protected folders on your endpoints.
 
-We recommend using Intune to configure controlled folder access.
+To configure controlled folder access in Intune, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies). Use the **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications** settings in the policy.
 
-:::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="Screenshot of attack surface reduction policies in the Intune portal." lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
-
-1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
-
-1. Go to **Endpoint Security** > **Attack Surface Reduction**, and then choose **+ Create Policy**.
-
-1. For **Platform**, select **Windows 10, Windows 11, and Windows Server**, and for **Profile**, select **Attack surface reduction rules**. Then choose **Create**.
-
-1. On the **Basics** tab, name the policy and add a description. Select **Next**.
-
-1. On the **Configuration settings** tab, under **Defender** section, scroll down to the bottom. In the **Enable Controlled Folder Access** drop-down, select **Enabled**, and then choose **Next**.
-
-   You can optionally specify these other settings:
-
-      - Next to **Controlled Folder Access Protected Folders**, toggle the switch to **Configured**, and then add folders that need to be protected.
-      - Next to **Controlled Folder Access Allowed Applications**, toggle the switch to **Configured**, and then add apps that should have access to protected folders.
-
-1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
-
-1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
-
-1. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+For more information, see [Protect important folders with controlled folder access](controlled-folders.md).
 
 ### Device control
 

@@ -136,7 +136,7 @@ ASR rules require Microsoft Defender Antivirus as the primary anti-virus app on 
 
   To learn more about Windows licensing, see [Windows Licensing](https://www.microsoft.com/licensing/product-licensing/windows) and get the [Microsoft Volume Licensing Reference Guide](https://www.microsoft.com/download/details.aspx?id=11091).
 
-### Supported operating systems for ASR rules
+## Supported operating systems for ASR rules
 
 ASR rules are a Microsoft Defender Antivirus feature found on any edition of Windows that includes Microsoft Defender Antivirus (for example, Windows 11 Home). You can configure ASR rules locally on devices using PowerShell or Group Policy.
 

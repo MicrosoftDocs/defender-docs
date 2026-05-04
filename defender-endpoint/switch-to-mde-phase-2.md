@@ -120,7 +120,7 @@ This article describes how to configure your Defender for Endpoint capabilities 
     1. If you're planning to use Configuration Manager, set the toggle for **Manage Security settings using Configuration Manager** to **On**. (If you need help with this step, see [Coexistence with Microsoft Configuration Manager](/intune/intune-service/protect/mde-security-integration#co-existence-with-microsoft-endpoint-configuration-manager).)
     1. Scroll down and select **Save**.
 
-1. Configure your initial [attack surface reduction capabilities](attack-surface-reduction-overview.md). At a minimum, enable the standard protection rules that are listed in the following table right away:
+1. Configure your initial [attack surface reduction capabilities](attack-surface-reduction-overview.md). At a minimum, enable the [standard protection attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md#asr-rules) that are listed in the following table right away:
 
    |Standard protection rules|Configuration methods|
    |---|---|
