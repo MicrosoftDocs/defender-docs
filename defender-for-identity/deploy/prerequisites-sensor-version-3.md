@@ -16,7 +16,7 @@ Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
 - Doesn't support VPN integration.
 - Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
-- Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute?view=o365-worldwide).
+- Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute).
 
 ## Server requirements
 
@@ -26,6 +26,16 @@ Before activating the Defender for Identity sensor v3.x, make sure that the serv
 - Doesn't have a Defender for Identity sensor v2.x already deployed.
 - Is running Windows Server 2019 or later.
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
+
+### Supported server types
+
+The v3.x sensor supports domain controllers, including domain controllers with these identity roles:
+
+- Active Directory Federation Services (AD FS)
+- Active Directory Certificate Services (AD CS)
+- Microsoft Entra Connect
+
+Use the [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) for standalone servers that run AD FS, AD CS, or Microsoft Entra Connect.
 
 ## Licensing requirements
 
@@ -67,7 +77,7 @@ The following table describes memory requirements on the server used for the Def
 > [!IMPORTANT]
 > When running as a virtual machine, always allocate all memory to the virtual machine.
 
-Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30%, and memory usage to 1.5 GB. However, if Falcon Identity already uses substantial system resources, the domain controller might still experience performance strain.
+Version 3 of the sensor prevents the sensor from overusing CPU or memory by limiting CPU utilization at 30%, and memory usage to 1.5 GB. However, if any other service uses substantial system resources, the domain controller might still experience performance strain.
 
 Refer to the [Defender for Identity Capacity Planning documentation](/defender-for-identity/deploy/capacity-planning) to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor. 
 
@@ -105,9 +115,12 @@ Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
 
 Defender for Identity uses Windows event log entries to detect specific activities. This data is used in various detection scenarios and can be used in advanced hunting queries. For optimal protection and monitoring, make sure that collection of windows events is properly configured.
 
-See [Configure Defender for Identity to collect Windows events automatically (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically-preview).
+See [Configure Defender for Identity to collect Windows events automatically](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically).
 
-If you don't select automatic Windows auditing configuration, you must [configure Windows event auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell). 
+If you don't select automatic Windows auditing configuration, you must [configure Windows event auditing manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) or [using PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-using-powershell).
+
+> [!NOTE]
+> **Known issue:** In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**. 
 
 ## Recommended configurations for optimal performance
 

@@ -1,9 +1,8 @@
-﻿---
+---
 title: Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
 description: Learn how to onboard and offboard Windows devices using the Defender deployment tool.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: install-set-up-deploy
 author: paulinbar
 ms.author: painbar
@@ -13,8 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.subservice: onboard
-search.appverid: met150
-ms.date: 02/12/2026
+ms.date: 05/04/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -55,9 +53,6 @@ To view the complete command reference after [downloading the tool](#generate-an
 
 The Defender deployment tool supports the following operating systems: Windows 7 SP1, Windows Server 2008 R2 SP1, Windows Server 2012 R2, 2016, 2019, 2022, 2025, Windows 10 (version 1809 and newer), and all versions of Windows 11.
 
-> [!NOTE]
-> The Defender endpoint security solution that the deployment tool installs on Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is **in preview**, and is different than the one for newer versions of Windows and Windows Server. For more information, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
-
 ## Prerequisites
 
 There are prerequisites that pertain to all supported Windows and Windows Server devices, as well as prerequisites that are specific to Windows 7 SP1 and Windows Server 2008 R2 SP1 devices.
@@ -92,7 +87,7 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
 
-1. In the Step 1 dropdown menu, choose **Windows (preview)**.
+1. In the Step 1 dropdown menu, choose **Windows**.
 
 1. Under **Deploy by downloading and applying packages or files**, select the **Onboard** button.
 
@@ -384,3 +379,4 @@ To test if the installation succeeded successfully, do the following checks:
 ## Related content
 
 - [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)
+- [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr
 description: Learn how to troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux.
@@ -6,26 +6,24 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: troubleshooting-general
 ms.subservice: linux
-search.appverid: met150
-ms.date: 03/28/2025
+ms.date: 04/27/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux
 
 
 ## Run the connectivity test
 
-To test if Defender for Endpoint on Linux can communicate to the cloud with the current network settings, run a connectivity test from the command line:
+To test if Microsoft Defender for Endpoint on Linux can communicate with the cloud using the current network settings, run a connectivity test from the command line:
 
 ```bash
 mdatp connectivity test
@@ -50,9 +48,40 @@ Testing connection with https://uk-v20.events.data.microsoft.com/ping ... [OK]
 Testing connection with https://v20.events.data.microsoft.com/ping ... [OK]
 ```
 
-If the connectivity test fails, check if the device has Internet access. Also check to see if network connections are blocked by a proxy or firewall. For more information, see [Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services).
+If the connectivity test fails, check if the device has Internet access. Also check to see if a proxy or firewall blocks network connections. For more information, see [Verify that devices can connect to Defender for Endpoint cloud services](mde-linux-prerequisites.md#verify-if-devices-can-connect-to-defender-for-endpoint-cloud-services).
 
-Failures with curl error 35 or 60, indicate certificate pinning rejection. Check to see if the connection is under SSL or HTTPS inspection. If so, add Microsoft Defender for Endpoint to the allowlist.
+Check to see if the connection is under SSL or HTTPS inspection. If so, add Microsoft Defender for Endpoint to the allow list.
+
+Failures with curl error 35 or 60 typically indicate certificate pinning rejection caused by TLS/SSL inspection. For diagnostic steps and resolution, see [TLS/SSL inspection](#tlsssl-inspection). 
+
+
+## TLS/SSL inspection
+
+Microsoft Defender for Endpoint on Linux doesn't support TLS/SSL inspection.
+
+| Symptom or error                                            | What it indicates                          | Required action                                               |
+| ----------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------- |
+| `curl error 60`                                             | Certificate validation failure.             | TLS/SSL inspection is active. Configure a bypass.                 |
+| `CERTIFICATE_VERIFY_FAILED`                                 | Certificate chain has been replaced.        | TLS/SSL inspection is active. Configure a bypass.                 |
+| `HTTP 502 Bad Gateway`                                      | TLS session disrupted by proxy or firewall. | TLS/SSL inspection is active. Configure a bypass. |
+
+
+To verify whether TLS/SSL inspection is enabled, run the following commands:
+
+```bash
+curl -v https://winatp-gw-weu.microsoft.com 2>&1 | grep "issuer"
+curl -v https://packages.microsoft.com 2>&1 | grep "issuer"
+```
+
+Review the certificate issuer in the output. The issuer must be Microsoft, not your proxy certificate authority (CA). If it reflects your organization’s proxy or firewall certificate authority (CA), TLS/SSL inspection is active and breaking Microsoft Defender for Endpoint connectivity.
+
+Make sure to exempt all Microsoft Defender for Endpoint service domains from TLS/SSL inspection on your proxy or firewall. After you apply the changes, run:
+
+
+```bash
+sudo systemctl restart mdatp
+mdatp connectivity test
+```
 
 ## Troubleshooting steps for environments without proxy or with transparent proxy
 
@@ -72,9 +101,9 @@ OK https://cdn.x.cp.wd.microsoft.com/ping
 ## Troubleshooting steps for environments with static proxy
 
 > [!WARNING]
-> PAC, WPAD, and authenticated proxies are not supported. Ensure that only a static proxy or transparent proxy is being used.
+> PAC, WPAD, and authenticated proxies aren't supported. Ensure that you're using only a static proxy or transparent proxy.
 >
-> SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Defender for Endpoint on Linux to the relevant URLs without interception. Adding your interception certificate to the global store will not allow for interception.
+> For security reasons, SSL inspection and intercepting proxies aren't supported. Configure an exception for SSL inspection and your proxy server to directly pass through data from Defender for Endpoint on Linux to the relevant URLs without interception. Adding your interception certificate to the global store doesn't allow for interception.
 
 If a static proxy is required, add a proxy parameter to the above command, where `proxy_address:port` correspond to the proxy address and port:
 
@@ -82,7 +111,7 @@ If a static proxy is required, add a proxy parameter to the above command, where
 curl -x http://proxy_address:port -w ' %{url_effective}\n' 'https://x.cp.wd.microsoft.com/api/report' 'https://cdn.x.cp.wd.microsoft.com/ping'
 ```
 
-Ensure that you use the same proxy address and port as configured in the `/lib/system/system/mdatp.service` file. Check your proxy configuration if there are errors from the above commands.
+Use the same proxy address and port as configured in the `/lib/system/system/mdatp.service` file. Check your proxy configuration if you see errors from the preceding commands.
 
 To set the proxy for mdatp, use the following command:
 
@@ -90,7 +119,7 @@ To set the proxy for mdatp, use the following command:
 mdatp config proxy set --value http://address:port 
 ```
 
-Upon success, attempt another connectivity test from the command line:
+If the command succeeds, try another connectivity test from the command line:
 
 ```bash
 mdatp connectivity test

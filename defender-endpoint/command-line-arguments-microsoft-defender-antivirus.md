@@ -1,4 +1,4 @@
-﻿---
+---
 title: Use the command line to manage Microsoft Defender Antivirus
 description: Learn how to use MpCmdRun to run Microsoft Defender Antivirus scans and configure other options like next-generation protection.
 ms.service: defender-endpoint
@@ -7,7 +7,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: ksarens
-manager: bagol
 ms.date: 03/26/2026
 ms.subservice: ngp
 ms.topic: how-to
@@ -15,7 +14,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

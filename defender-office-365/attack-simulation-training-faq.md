@@ -1,15 +1,9 @@
 ---
 title: Attack simulation training deployment considerations and FAQ
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid:
 ms.collection:
 - m365-security

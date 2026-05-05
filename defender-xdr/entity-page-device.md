@@ -5,13 +5,11 @@ ms.service: defender-xdr
 ms.localizationpriority: medium
 ms.author: guywild
 author: guywi-ms
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - usx-security
 ms.topic: article
-search.appverid: met150
 ms.date: 03/27/2024
 appliesto:
     - Microsoft Defender XDR
@@ -58,6 +56,7 @@ The following tabs are displayed on the device entity page:
 - [Overview](#overview-tab)
 - [Incidents and alerts](#incidents-and-alerts-tab)
 - [Timeline](#timeline-tab)
+- [Configuration management](#configuration-management-tab)
 - [Security recommendations](#security-recommendations-tab)
 - [Inventories](#inventories-tab)
 - [Discovered vulnerabilities](#discovered-vulnerabilities-tab)
@@ -176,6 +175,29 @@ Select an event to view relevant details about that event. A flyout panel displa
 To further inspect the event and related events, you can quickly run an [advanced hunting](advanced-hunting-overview.md) query by selecting **Hunt for related events**. The query returns the selected event and the list of other events that occurred around the same time on the same endpoint.
 
 :::image type="content" source="/defender-xdr/media/entity-page-device/entity-device-event-details.png" alt-text="Screenshot of the event details panel.":::
+
+## *Configuration management* tab
+
+### Security policies
+
+The **Security policies** tab shows the endpoint security policies that are applied on the device. You see a list of policies, type, status, and last check-in time. Selecting the name of a policy takes you to the policy details page where you can see the policy settings status, applied devices, and assigned groups.
+
+:::image type="content" source="/defender-endpoint/media/mde-security-policies.png" alt-text="Screenshot showing the Security policies tab." lightbox="/defender-endpoint/media/mde-security-policies.png":::
+
+### Effective settings
+
+The **Effective settings** tab provides visibility into the actual value of each security setting and identifies the source that configured it. It lists setting names, policy types, effective values, the source of each effective value, and the last report time.
+
+Configuration sources can include tools like Microsoft Defender for Endpoint, Group Policy, Intune, or default settings. They can also be specific registry paths, such as the MDM or Group Policy hives. If the source is a registry location, the Configured By field shows as **Unknown** along with the registry path.
+
+Select a setting to open a side panel with more details. You see the current value, any other configuration attempts that didn’t take effect, and—for complex settings like ASR rules or AV exclusions—a breakdown of all configured rules, their sources, and any exclusions.
+
+> [!NOTE]
+> The presented settings are AV security settings, Attack Surface Reduction rules, and exclusions, for Windows platforms.
+
+:::image type="content" source="/defender-endpoint/media/mde-effective-settings.png" alt-text="Screenshot showing the Effective settings tab." lightbox="/defender-endpoint/media/mde-effective-settings.png":::
+
+:::image type="content" source="/defender-endpoint/media/mde-effective-settings-open.png" alt-text="Screenshot showing the opened Effective settings value tab." lightbox="/defender-endpoint/media/mde-effective-settings-open.png":::
 
 ## *Security recommendations* tab
 
@@ -319,9 +341,9 @@ Response actions offer shortcuts to analyze, investigate, and defend against thr
 :::image type="content" source="/defender-xdr/media/entity-page-device/entity-device-response-actions.png" alt-text="Screenshot of the Action bar for the device entity page in the Microsoft Defender portal.":::
 
 > [!IMPORTANT]
->
 > - [Response actions](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts) are only available if the device is enrolled in Microsoft Defender for Endpoint.
-> - Devices that are enrolled in Microsoft Defender for Endpoint may display different numbers of response actions, based on the device's OS and version number.
+- Devices that are enrolled in Microsoft Defender for Endpoint may display different numbers of response actions, based on the device's OS and version number.
+
 
 Response actions run along the top of a specific device page and include:
 

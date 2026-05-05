@@ -4,7 +4,6 @@ description: Lists details about Microsoft Defender for Endpoint attack surface 
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar, ericlaw
@@ -15,7 +14,6 @@ ms.collection:
 - tier2
 - mde-asr
 ms.date: 12/31/2025
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---

@@ -1,13 +1,10 @@
 ---
-title: Hunting graph in advanced hunting
-description: Learn about the hunting graph in Microsoft Defender and how to use it to rendering threat scenarios as interactive graphs
+title: Hunting graph in Microsoft Defender advanced hunting
+description: Learn how to use the hunting graph in Microsoft Defender XDR advanced hunting to visualize threat scenarios as interactive graphs and trace attack paths.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - m365initiative-m365-defender
@@ -16,17 +13,18 @@ ms.custom:
 - cx-ti
 - cx-ah
 - seo-marvel-apr2020
+- msecd-doc-authoring-1012
 ms.topic: overview
+#customer intent: As a security analyst, I want to use the hunting graph to visualize threat scenarios so that I can trace attack paths and assess security issues more intuitively.
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-search.appverid: met150
-ms.date: 03/31/2026
+ms.date: 05/04/2026
 
 ---
 # Hunt for threats using the hunting graph
 
-The **hunting graph** provides visualization capabilities in [advanced hunting](advanced-hunting-overview.md) by rendering threat scenarios as interactive graphs. This feature allows security operations center (SOC) analysts, threat hunters, and security researchers to conduct threat hunting and incident response more easily and intuitively, improving their efficiency and ability to assess possible security issues. 
+The **hunting graph** provides visualization capabilities in [advanced hunting](advanced-hunting-overview.md) by rendering threat scenarios as interactive graphs. Security operations center (SOC) analysts, threat hunters, and security researchers can use this feature to conduct threat hunting and incident response more intuitively, improving their efficiency in assessing possible security issues.
 
 Analysts often rely on [Kusto Query Language](/azure/kusto/query/) (KQL) queries to uncover relationships between entities. This approach can be both time-consuming and prone to oversights. The hunting graph makes exploration of security data simpler and faster by visualizing these relationships. You can trace paths and possible choke points, as well as surface insights and take various actions based on the results that tabular queries might miss. 
 
@@ -47,7 +45,7 @@ In the advanced hunting page, select the hunting graph icon ![Screenshot of the 
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-new.png" alt-text="Screenshot of the Create new Hunting graph option in the advanced hunting page." lightbox="./media/advanced-hunting-graph/hunting-graph-new.png":::
 
-A new hunting graph page appears as tab labeled **New hunt** in the advanced hunting page.
+A new hunting graph page appears as a tab labeled **New graph** in the advanced hunting page.
 
 ## Hunting graph features
 
@@ -87,12 +85,22 @@ The following table describes the predefined scenarios in the hunting graph, the
 | **Attack paths to critical Kubernetes clusters** | Provide a Kubernetes cluster with high criticality to view users, virtual machines, and containers that have access to it.<br><br>Use this scenario to assess, analyze and prioritize handling of attack paths leading to highly critical Kubernetes cluster. | Target Kubernetes cluster | Privilege escalation, Lateral movement |
 | **Access to Azure DevOps repositories** | Provide an Azure DevOps (ADO) repository name to view users that have read and/or write access to said repository.<br><br>Use this scenario to identify entities with access to ADO repositories, which often contain sensitive assets and therefore valuable targets for threat actors. This scenario gives you visibility and lets you plan your response in case of a breach. | Target ADO repository | Collection |
 | **Choke points to SQL data stores** | This scenario identifies the nodes that appear in the highest number of paths leading to SQL data stores. The scenario discovers paths in the graph where users have roles or permissions to access the SQL data stores.<br><br>Use this scenario to gain visibility to stores that might contain sensitive information, assess the impact in case of a breach, and prepare your mitigation and response. | (None) | Lateral movement, Collection |
+| **OAuth applications with privileged access** | Microsoft Entra synced hybrid accounts owning OAuth applications which might authenticate as a privileged service principal.<br><br>Use this scenario to uncover potential risk posing accounts if compromised. | (None) | Privilege escalation, Lateral movement |
+| **Paths to sensitive identities** | Non-privileged users paths to sensitive identities based on Active Directory permissions (DACL).<br><br>This scenario uncovers extremely stealth escalation paths not requiring device abuse. | (None) | Privilege escalation, Lateral movement |
+| **Service accounts with RDP to critical devices** | On-premises service accounts might hold unnecessary permissions, allowing connection via Remote Desktop Protocol (RDP) to critical devices. | (None) | Lateral movement |
+| **Kerberoast paths to critical assets** | Kerberoast-vulnerable accounts can be exposed to hidden escalation routes for attackers.<br><br>Use this scenario to discover accounts with potential attack paths leading to sensitive assets, mostly on-premises but also in the cloud. | (None) | Privilege escalation, Credential access |
+| **Least privilege access** | Microsoft Entra synced user accounts with privileged permissions to cloud resources.<br><br>Use this scenario to discover introduced vertical movement paths from on-premises to cloud. | (None) | Lateral movement, Collection |
+| **External users with cloud resource access** | Guest Microsoft Entra accounts defined with privileged permissions to cloud resources.<br><br>Use this scenario to uncover risk for a high-impact breach originating outside the tenant. | (None) | Lateral movement, Collection |
+| **Paths to domain compromise (DCSync)** | Non-privileged users with multi-step paths leading to high privileges over the domain, representing hidden and dangerous routes to full domain takeover. | (None) | Lateral movement, Privilege escalation, Credential access |
+| **Paths to domain admins** | Paths leading from non-privileged users to the Domain Admins security group.<br><br>Use this scenario to discover paths allowing an attacker to achieve full domain takeover. | (None) | Privilege escalation, Lateral movement |
+| **Exposed users with RDP to critical assets** | Non-privileged users exposed on multiple devices with multi-step paths leading to compromise of critical assets (devices and users).<br><br>Multiple exposure increases attacker likelihood and abuse potential. | (None) | Privilege escalation, Lateral movement, Credential access |
+| **AS-REP roast paths to critical assets** | AS-REP-vulnerable account paths leading to on-premises sensitive assets.<br><br>Use this scenario to reveal stealth routes through these accounts. | (None) | Privilege escalation, Credential access |
 
-Filter the scenarios according to MITRE technique they're associated with by selecting their corresponding buttons:
+Filter the scenarios according to the MITRE technique they're associated with by selecting their corresponding buttons:
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-select-scenario.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the available options." lightbox="./media/advanced-hunting-graph/hunting-graph-select-scenario.png":::
 
-For scenarios that require inputs, type or search and then select for them in the search boxes provided:
+For scenarios that require inputs, type or search for the required inputs in the search boxes provided, then select them:
 
 :::image type="content" source="./media/advanced-hunting-graph/hunting-graph-input.png" alt-text="Screenshot of the predefined scenarios side panel highlighting the required scenario inputs." lightbox="./media/advanced-hunting-graph/hunting-graph-input.png":::
 
@@ -108,7 +116,7 @@ By default, the predefined scenarios automatically apply certain filters, which 
 
 To remove filters, select the **Remove filter** icon ![Screenshot of the remove filter icon.](./media/advanced-hunting-graph/hunting-graph-remove-filter-icon.png) beside each filter or select **Clear all** to remove them all at once.
 
-To add a filter, select **Add filter** then the select any of the supported node or edge filters. The following table lists these supported operators and filters. Depending on your chosen scenario, some of these filters might not be available as options.  
+To add a filter, select **Add filter** then select any of the supported node or edge filters. The following table lists these supported operators and filters. Depending on your chosen scenario, some of these filters might not be available as options.
 
 | **Filter type** | **Operator** | **Filters** |
 |---|---|---|
@@ -123,6 +131,6 @@ To add a filter, select **Add filter** then the select any of the supported node
 
 After selecting a scenario and applying the necessary filters, select **Run scenario** to render the graph. Once the graph is rendered, you can then explore it further by selecting nodes and edges to view more information about entities and relationships, or expand or focus on certain entities.
 
-## See also
+## Related content
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender](advanced-hunting-overview.md)
 - [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](advanced-hunting-modes.md)

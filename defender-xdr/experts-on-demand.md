@@ -13,14 +13,13 @@ ms.custom:
 - cx-ti
 - cx-ean
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - essentials-manage
 ms.topic: how-to
 search.appverid: met150
-ms.date: 03/24/2026
+ms.date: 04/30/2026
 ---
 
 # Collaborate with experts on demand
@@ -44,16 +43,16 @@ Select **Ask Defender Experts** directly inside the Microsoft 365 security porta
 
 ## Required permissions for using Ask Defender Experts
 
-You need to select one of the following Microsoft Entra ID roles to view and submit inquiries to our Defender experts.
+To view and submit inquiries to Defender experts, select one of the following Microsoft Entra ID roles.
 
 |Microsoft Entra ID role|Permission level|
 |---|---|
-| Security Reader | Read inquiries |
-| Security Admin, Security Operator | Read and submit inquiries |
+| Global Reader | Read inquiries |
+| Security Admin, Security Operator, or Security Reader | Read and submit inquiries |
 
 To learn more about how Microsoft Entra ID roles map to Microsoft Defender unified RBAC permissions, see [Microsoft Entra Global roles access](compare-rbac-roles.md#microsoft-entra-global-roles-access).
 
-Microsoft Threat Experts customers using Ask Defender Experts capability will also be able to use the following permissions from [Microsoft Defender unified RBAC](../defender-xdr/custom-permissions-details.md).
+Microsoft Threat Experts customers using Ask Defender Experts can also use the following permissions from [Microsoft Defender unified RBAC](../defender-xdr/custom-permissions-details.md).
 
 |Microsoft Defender unified RBAC role|Permission level|
 |---|---|---|
@@ -62,7 +61,7 @@ Microsoft Threat Experts customers using Ask Defender Experts capability will al
 
 ## Where to submit inquiries to Ask Defender Experts
 
-The option to **Ask Defender Experts** is available in several places throughout the portal:
+You can find the **Ask Defender Experts** option in several places throughout the portal:
 
 - **Device page actions menu**:
 
@@ -84,13 +83,13 @@ The option to **Ask Defender Experts** is available in several places throughout
 
 ### In portal
 
-You can view responses to inquiries submitted to Ask Defender Experts from up to six months ago by navigating to **Reports** > **Defender Experts messages**. You can also ask follow-up questions or reply with more information to Defender Experts from this page.
+You can view responses to inquiries you submitted to Ask Defender Experts from up to six months ago by going to **Reports** > **Defender Experts messages**. You can also ask follow-up questions or reply with more information to Defender Experts from this page.
 
 :::image type="content" source="media/experts-on-demand/inportal-managed-response.png" alt-text="Screenshot of in-portal managed response." lightbox="media/experts-on-demand/inportal-managed-response.png":::
 
 ### Email
 
-If you included contact email addresses when submitting your inquiry, they'll receive an email notification when a response from Defender Experts is posted.
+If you include contact email addresses when you submit your inquiry, they receive an email notification when Defender Experts posts a response.
 
 :::image type="content" source="media/experts-on-demand/email-based-managed-response.png" alt-text="Screenshot of email based managed response." lightbox="media/experts-on-demand/email-based-managed-response.png":::
 
