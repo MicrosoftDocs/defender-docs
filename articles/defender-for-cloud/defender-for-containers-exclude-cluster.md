@@ -51,27 +51,8 @@ To exclude an AKS cluster from automatic Defender sensor deployment:
    - **Value**: `true`
 
    :::image type="content" source="media/defender-for-containers-exclude-cluster/exclude-cluster-from-automatic-defender-sensor-deployment.png" alt-text="Screenshot of the Tags page for a Kubernetes cluster showing the ms_defender_container_exclude_sensors tag set to true." lightbox="media/defender-for-containers-exclude-cluster/exclude-cluster-from-automatic-defender-sensor-deployment.png":::
-   
+
 1. Select **Apply**.
-
-# [AKS](#tab/aks)
-
-To exclude an AKS cluster from automatic Defender sensor deployment:
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. Go to **Kubernetes services**.
-
-1. Select the relevant AKS cluster.
-
-1. Select **Tags**.
-
-1. Add the following tag:
-
-   - **Name**: `ms_defender_container_exclude_sensors`
-   - **Value**: `true`
-
-1. Select **Save changes**.
 
 # [EKS](#tab/eks)
 
