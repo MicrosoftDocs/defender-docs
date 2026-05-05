@@ -24,10 +24,6 @@ By default attack paths are organized by risk level. The risk level is determine
 
 ::: zone pivot="defender-portal"
 
-> [!NOTE] 
-> This capability is currently in preview.   
-> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
-
 ::: zone-end
 
 ## Prerequisites

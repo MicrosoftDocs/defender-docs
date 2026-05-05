@@ -1,16 +1,16 @@
 ---
 title: Known limitations in the Defender portal
-description: Understand current limitations and known issues when using Microsoft Defender for Cloud in the Defender portal during the preview phase.
+description: Understand current limitations and known issues when using Microsoft Defender for Cloud in the Defender portal.
 author: dlanger
-ms.author: DebLanger
+ms.author: dlanger
 ms.topic: reference
-ms.date: 02/09/2026
+ms.date: 04/28/2026
 ms.service: defender-for-cloud
 ---
 
 # Known limitations in the Defender portal
 
-These are the known limitations during the preview release of Defender for Cloud in the Defender portal.
+These are the known limitations for Defender for Cloud in the Defender portal.
 
 > [!NOTE]
 > Enabling the Defender portal experience won't impact your experience in the Azure portal.
@@ -18,7 +18,7 @@ These are the known limitations during the preview release of Defender for Cloud
 ## General
 
 - The new cloud features in the Defender portal are currently only supported in public/commercial clouds.
-- Over time data available from the moment the tenant was selected to public preview enablement.
+- Over time data available from the moment the tenant was selected for feature enablement.
 - Deleted resources might still appear in the Azure portal because it currently reflects the last known state. We're actively working to align the Azure portal with the Defender portal and a fix is in progress to ensure deleted resources are no longer displayed.
 - Resources tied to subscriptions with Foundational CSPM (free tier) are currently not displayed.
 - Some resources sourced from Azure Policy might not appear in the new portal (including Defenders, Advanced Hunting, and MSEM) because they don't have Defender for Cloud security context. During the preview period, we only surface resources that contribute to the security insights.
@@ -27,11 +27,12 @@ These are the known limitations during the preview release of Defender for Cloud
 - Exposure Management experiences (recommendations, initiatives, attack path, etc.) aren't visible to users with MDI scoping. Until this issue is resolved, it's advisable, where feasible, to grant users full access to Exposure Management, including nonscoped MDI data.
 - This is currently not supported in Government clouds.
 - Identity‑scoped recommendations ignore domain/tenant and device‑group filters: Identity-based recommendations in the Identity Security initiative are scoped to identity objects rather than devices. As a result, domain or tenant filters may not fully exclude identities from other domains (such as acquired environments), and device‑group filters do not apply. These filters appear in the UI but are disabled for identity‑scoped views, and changing them does not affect results.
-## Opt-In
+
+## Opt-In (preview)
 
 Access and permissions are managed using cloud scopes instead of device groups.
 
-## Opt-Out
+## Opt-Out (preview)
 
 Restores your previous setup and permissions.
 
@@ -44,7 +45,9 @@ Restores your previous setup and permissions.
 - Cloud Secure Score history might show less than six months if tenant was recently onboarded.
 - The new Cloud Secure Score is only available in the Defender portal. The Azure portal continues to show the previous secure score model.
 
-## Cloud Scopes
+## Cloud scopes (preview)
+
+These are the known limitations during the preview release of cloud scopes in the Defender portal.
 
 Unified role-based access control operates in the Defender portal and uses a different role-based access control model from Azure. Permissions aren't transferred between portals; instead, security administrators must create separate Unified role-based access control permissions for their teams, independent of their Azure permissions.
 
