@@ -48,6 +48,8 @@ You can learn more by watching this video from the Defender for Cloud in the Fie
 
 **Antimalware** - Defender for Containers provides a sensor-based capability that detects and alerts you to malicious activities within containers. This helps in identifying and mitigating potential security threats proactively. For more information, see [Antimalware protection](anti-malware.md).
 
+**DNS detection** - Defender for Containers provides a sensor-based capability that detects suspicious DNS activity from container workloads to help identify network-based threats. For runtime protection availability by cloud, see [Runtime protection features](support-matrix-defender-for-containers.md#runtime-protection-features).
+
 **Binary drift detection** - Defender for Containers provides a sensor-based capability that alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats. For more information, see [Binary drift protection](binary-drift-detection.md).
 
 **Binary drift blocking** - Defender for Containers provides a sensor-based capability that blocks unauthorized external processes within containers. You can define drift policies to specify conditions under which processes should be blocked, helping you prevent potential security threats. For more information, see [Binary drift protection](binary-drift-detection.md).
