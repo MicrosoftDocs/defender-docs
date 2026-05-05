@@ -50,16 +50,66 @@ To exclude an AKS cluster from automatic Defender sensor deployment:
    - **Name**: `ms_defender_container_exclude_sensors`
    - **Value**: `true`
 
-1. Select **Save**.
+   :::image type="content" source="media/defender-for-containers-exclude-cluster/exclude-cluster-from-automatic-defender-sensor-deployment.png" alt-text="Screenshot of the Tags page for a Kubernetes cluster showing the ms_defender_container_exclude_sensors tag set to true." lightbox="media/defender-for-containers-exclude-cluster/exclude-cluster-from-automatic-defender-sensor-deployment.png":::
+   
+1. Select **Apply**.
 
-# [EKS and GKE](#tab/eks-gke)
+# [AKS](#tab/aks)
 
-To exclude an EKS or GKE cluster from automatic Defender sensor deployment, add the exclusion tag to the native cluster resource in AWS or Google Cloud.
+To exclude an AKS cluster from automatic Defender sensor deployment:
 
-Add the following tag:
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
-- **Name**: `ms_defender_container_exclude_sensors`
-- **Value**: `true`
+1. Go to **Kubernetes services**.
+
+1. Select the relevant AKS cluster.
+
+1. Select **Tags**.
+
+1. Add the following tag:
+
+   - **Name**: `ms_defender_container_exclude_sensors`
+   - **Value**: `true`
+
+1. Select **Save changes**.
+
+# [EKS](#tab/eks)
+
+To exclude an EKS cluster from automatic Defender sensor deployment:
+
+1. Sign in to the AWS Management Console.
+
+1. Go to **Amazon EKS**.
+
+1. Select the relevant EKS cluster.
+
+1. Select the **Tags** tab.
+
+1. Add the following tag:
+
+   - **Key**: `ms_defender_container_exclude_sensors`
+   - **Value**: `true`
+
+1. Select **Save changes**.
+
+# [GKE](#tab/gke)
+
+To exclude a GKE cluster from automatic Defender sensor deployment:
+
+1. Sign in to the Google Cloud console.
+
+1. Go to **Kubernetes Engine**.
+
+1. Select the relevant GKE cluster.
+
+1. In **Metadata**, select the edit icon next to **Labels**.
+
+1. Add the following label:
+
+   - **Key**: `ms_defender_container_exclude_sensors`
+   - **Value**: `true`
+
+1. Save your changes.
 
 ---
 
