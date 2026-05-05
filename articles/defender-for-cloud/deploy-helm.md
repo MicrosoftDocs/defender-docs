@@ -138,6 +138,10 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional paramete
 
 - Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
 
+- For EKS clusters that run AWS Bottlerocket nodes, Defender for Containers sensor support is available when you deploy the sensor by using Helm.
+
+- Ensure Bottlerocket nodes run Linux kernel version 5.4 or later.
+
 - Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get the security connector resource ID for the account your cluster belongs to.
 
     For example:

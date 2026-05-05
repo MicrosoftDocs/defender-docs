@@ -61,4 +61,5 @@ Before you begin, make sure that:
 
 ## Next step
 
-Learn how to use the [Cloud Security Explorer to investigate vulnerabilities in a cluster node](cloud-security-explorer-kubernetes-clusters.md#create-a-query-to-identify-vulnerabilities-in-cluster-nodes).
+> [!div class="nextstepaction"]
+> [Use Cloud Security Explorer to investigate vulnerabilities in a cluster node](cloud-security-explorer-kubernetes-clusters.md#create-a-query-to-identify-vulnerabilities-in-cluster-nodes)
