@@ -4,28 +4,40 @@ description: Learn how to exclude specific Kubernetes clusters from automatic De
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 03/18/2026
+ms.date: 05/05/2026
 ---
 
 # Exclude Kubernetes clusters from automatic Defender sensor deployment
 
 When automatic provisioning is enabled in the Defender for Containers plan, Microsoft Defender for Cloud deploys the Defender sensor to supported Kubernetes clusters.
 
-You can exclude specific clusters from automatic sensor deployment if you want to manage deployment for those clusters manually.
+To manage sensor deployment manually for specific clusters, add an exclusion tag to prevent automatic deployment.
+
+You can use exclusion tags on the following cluster types:
+
+- Azure Kubernetes Service (AKS)
+- Amazon Elastic Kubernetes Service (EKS)
+- Google Kubernetes Engine (GKE)
+
+> [!NOTE]
+> Exclusion tags aren't supported for Arc-enabled Kubernetes clusters in on-premises environments.
 
 ## Prerequisites
 
 - [Defender for Containers is enabled](defender-for-containers-enable-plan.md) with automatic provisioning turned on on.
 
-# [AKS](#tab/aks)
+## Exclude a cluster from automatic sensor deployment
 
-For Azure Kubernetes Service (AKS), apply the tag directly to the AKS resource.
+To exclude a cluster from automatic Defender sensor deployment:
+
+> [!IMPORTANT]
+> Add the exclusion tag before automatic provisioning deploys the Defender sensor. If the Defender sensor is already deployed, adding the tag doesn't remove the existing deployment.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 2. Go to **Kubernetes services**.
 
-3. Select your AKS cluster.
+1. Select the relevant AKS, EKS, or GKE cluster.
 
 4. Select **Tags**.
 
@@ -34,26 +46,6 @@ For Azure Kubernetes Service (AKS), apply the tag directly to the AKS resource.
    - **Value**: `true`
 
 6. Select **Save**.
-
-# [Arc-enabled Kubernetes](#tab/arc)
-
-For Amazon EKS, Google Kubernetes Engine (GKE), and other non-Azure clusters connected through Azure Arc, apply the tag to the Azure Arc-enabled Kubernetes resource.
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-2. Go to **Azure Arc** > **Kubernetes clusters**.
-
-3. Select your Arc-enabled Kubernetes cluster.
-
-4. Select **Tags**.
-
-5. Add the following tag:
-   - **Name**: `ms_defender_container_exclude_sensors`
-   - **Value**: `true`
-
-6. Select **Save**.
-
----
 
 ## Next steps
 

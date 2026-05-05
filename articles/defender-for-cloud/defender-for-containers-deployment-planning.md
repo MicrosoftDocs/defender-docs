@@ -33,7 +33,7 @@ Connect the Kubernetes environment to Microsoft Defender for Cloud. For Azure, n
 
 With automatic provisioning enabled, Microsoft Defender for Cloud installs the required cluster components after the Defender for Containers plan is enabled.
 
-For AKS clusters, deployment uses the **Defender AKS add-on**. For Arc-enabled clusters, deployment uses Azure Arc extensions.
+For AKS clusters, deployment uses the **Defender AKS add-on**. For GKE and EKS clusters, deployment uses Azure Arc extensions.
 
 You can customize automatic provisioning by excluding specific clusters using tags before enabling the Defender for Containers plan, and then deploying those clusters manually.
 
