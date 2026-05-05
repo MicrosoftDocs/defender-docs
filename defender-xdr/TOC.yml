@@ -72,6 +72,8 @@
           href: security-for-ai/ai-agent-inventory.md
         - name: Detect, block, and investigate threats to AI agents
           href: security-for-ai/ai-agent-detection-protection.md
+        - name: Data privacy as part of Agent 365
+          href: security-for-ai/privacy-defender-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -486,7 +488,7 @@
           href: advanced-hunting-security-copilot-query-assistant.md
         - name: Create incident reports
           href: security-copilot-m365d-create-incident-report.md
-        - name: Responsible AI application card
+        - name: Application card for Microsoft Copilot in Microsoft Defender
           href: application-card-copilot-defender.md
         - name: Security Copilot agents in Microsoft Defender
           items:
@@ -564,6 +566,8 @@
               href: manage-rbac.md
             - name: What's new
               href: whats-new-in-microsoft-defender-urbac.md
+            - name: Configure Microsoft Sentinel scoping (row-level RBAC)
+              href: scoping.md
             - name: Create custom roles
               href: create-custom-rbac-roles.md
             - name: Import roles
