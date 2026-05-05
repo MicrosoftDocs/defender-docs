@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/03/2026
+ms.date: 05/05/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,14 +32,14 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| May 3, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
-| May 3, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
-| May 3, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
+| May 05, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
+| May 05, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
+| May 05, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
 
 ### General availability of individual recommendations for Defender for Cloud in Azure portal and deprecation of legacy grouped recommendations
 
-May 3, 2026
+May 5, 2026
 
 Individual recommendations for Defender for Cloud that were previously represented as grouped recommendations are now generally available (GA) in Azure portal.
 
@@ -55,7 +55,7 @@ For more information see, [security recommendations](review-security-recommendat
 
 ### Daily score calculation enhancement for risk-based Cloud secure score
 
-May 3, 2026
+May 5, 2026
 
 We've improved how daily Cloud secure score values are calculated to more accurately reflect your posture and the impact of actions taken throughout the day.
 
@@ -67,7 +67,7 @@ For more information, see [Cloud secure score](secure-score-security-controls.md
 
 ### General availability of Defender for Cloud integration into the Defender portal
 
-May 3, 2026
+May 5, 2026
 
 Microsoft Defender for Cloud is now integrated into the Microsoft Defender portal, unifying cloud security posture management and threat protection in a single experience. This integration provides a centralized view across hybrid and multicloud environments, including Azure, AWS, and GCP.
 
