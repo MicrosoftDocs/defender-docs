@@ -20,6 +20,7 @@ We recommend alternate installation methods for these use cases:
 
 - If you're using a proxy, we recommend that you install the sensor and configure your proxy together [from the command line](#command-for-running-a-silent-installation-with-a-proxy-configuration). If you need to update your proxy settings later on, use PowerShell or the Azure CLI. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
 
+
 ## Prerequisites
 
 Before you start, make sure that you have:
@@ -66,9 +67,9 @@ Before you start, make sure that you have:
    > sensorpackage-fm.mdi.securitycenter.microsoft.us
    > sensorpackage-ff.mdi.securitycenter.microsoft.us
 
-## Install the classic sensor in the Defender portal
+## Install the v2.x sensor in the Defender portal
 
-Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server or Entra Connect server.
+Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server, or Microsoft Entra Connect server.
 
 1. Verify that the machine has connectivity to the relevant [Defender for Identity cloud service endpoints](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
