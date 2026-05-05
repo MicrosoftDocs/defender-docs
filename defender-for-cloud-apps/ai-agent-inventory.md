@@ -47,7 +47,7 @@ To enable the Copilot Studio AI agent inventory, follow these steps:
     1. Select **Microsoft Defender - Copilot Studio AI Agents**.
     1. Turn on **Enable Microsoft Defender - Copilot Studio AI Agents**.
 
-When Copilot Studio AI Agents are connected, a green indicator appears in the **AI Agents Inventory** section in the Microsoft Defender system settings. It can take up to 30 minutes for the initial connection status to update. Depending on the size and complexity of your environment, it might take longer to see the full deployment of the AI agent inventory. 
+When Copilot Studio AI Agents are connected, a green indicator appears in the **AI Agents Inventory** section in the Microsoft Defender system settings. It can take up to 30 minutes for the initial connection status to update. Depending on the size and complexity of your environment, it might take longer to see the full deployment of the AI agent inventory.
 
 ## Related articles
 
