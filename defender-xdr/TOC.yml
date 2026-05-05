@@ -567,7 +567,7 @@
             - name: What's new
               href: whats-new-in-microsoft-defender-urbac.md
             - name: Configure Microsoft Sentinel scoping (row-level RBAC)
-              href: ../sentinel/scoping
+              href: scoping.md
             - name: Create custom roles
               href: create-custom-rbac-roles.md
             - name: Import roles
