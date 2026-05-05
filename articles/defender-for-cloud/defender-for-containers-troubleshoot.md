@@ -31,10 +31,19 @@ This article provides troubleshooting guidance for common deployment and operati
 
 ### Vulnerability scan issues
 
-- **No scan results for images in ACR** 
-  - **Registry Access:** Confirm the **Registry access** toggle is set to **On** in your subscription's Containers plan settings.
-  - **Image push:** Vulnerability scans are triggered by a push to the registry. If no recent push has occurred, the scan may not be present.
-  - **Supported OS:** Verify the image uses a supported Linux or Windows distribution for scanning.
+- **Missing vulnerability findings for images in Azure Container Registry**
+  - **Symptoms:** Vulnerability findings don't appear for images stored in Azure Container Registry.
+  - **Resolution:**
+    - **Registry access:** Confirm that **Registry access** is enabled for Defender for Containers.
+    - **Image structure:** Verify that the image uses a valid and supported image structure.
+    - **Further investigation:** If Registry access is enabled and the image structure is valid, open a support case with the registry name, image name, image digest, and expected finding details.
+
+- **Missing vulnerability findings for images running on AKS clusters**
+  - **Symptoms:** Vulnerability findings don't appear for images that are currently running in AKS workloads.
+  - **Resolution:**
+    - **Required components:** Confirm that the required Defender for Containers components are enabled and healthy for the cluster.
+    - **Image scan availability:** Runtime vulnerability findings depend on available vulnerability scan results for the running image.
+    - **Further investigation:** If the required components are enabled and findings are still missing, open a support case with the cluster name, namespace, workload name, image name, and image digest.
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
@@ -67,11 +76,22 @@ This article provides troubleshooting guidance for common deployment and operati
   - **Service Account Email:** Confirm the Service Account email in the Azure portal matches the email generated in the GCP console.
   - **IAM Roles:** Ensure the Service Account has the `container.viewer` and `container.clusters.update` roles at the project level.
 
-### Registry Assessment
+### Registry assessment issues
 
-- **Missing findings in Artifact Registry**
-  - **Registry access:** Confirm this component is enabled in the GCP connector settings.
-  - **Audit log scoping:** Ensure GCP audit logging is configured for `SYSTEM`, `WORKLOAD`, and `API_SERVER`. Avoid enabling additional log types unless required by your organization to prevent unnecessary logging costs.
+- **Missing vulnerability findings in Artifact Registry**
+  - **Symptoms:** Vulnerability findings don't appear for images stored in Google Artifact Registry.
+  - **Resolution:**
+    - **Registry access:** Confirm that **Registry access** is enabled in the GCP connector settings.
+    - **Image structure:** Verify that the image uses a valid and supported image structure.
+    - **Further investigation:** If Registry access is enabled and the image structure is valid, open a support case with the registry name, image name, image digest, and expected finding details.
+
+- **Missing vulnerability findings for images running on GKE clusters**
+  - **Symptoms:** Vulnerability findings don't appear for images that are currently running in GKE workloads.
+  - **Resolution:**
+    - **Required components:** Confirm that the required Defender for Containers components are enabled and healthy for the cluster.
+    - **Audit log scoping:** Ensure GCP audit logging is configured for `SYSTEM`, `WORKLOAD`, and `API_SERVER`.
+    - **Image scan availability:** Runtime vulnerability findings depend on available vulnerability scan results for the running image.
+    - **Further investigation:** If the required components are enabled and findings are still missing, open a support case with the cluster name, namespace, workload name, image name, and image digest.
 
 # [Arc-enabled Kubernetes](#tab/arc)
 
