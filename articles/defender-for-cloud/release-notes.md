@@ -146,7 +146,7 @@ DNS Detection monitors DNS queries from containerized workloads to detect suspic
 
 Learn more about [DNS Detection availability in Defender for Containers](support-matrix-defender-for-containers.md#runtime-protection-features).
 
-## General availability of Defender for Storage integration in Azure Portal Storage Center
+### General availability of Defender for Storage integration in Azure Portal Storage Center
 
 April 20, 2026
 
