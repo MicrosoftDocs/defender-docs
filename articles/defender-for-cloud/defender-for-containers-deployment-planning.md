@@ -13,29 +13,35 @@ This guide helps you plan how to deploy Microsoft Defender for Containers across
 
 ## Onboard the environment
 
-Connect the Kubernetes environment to Microsoft Defender for Cloud. For Azure, no additional connector is required.
+Before Defender for Containers can deploy cluster components, the Kubernetes environment must be connected to Microsoft Defender for Cloud.
 
-- [Amazon Web Services (AWS)](quickstart-onboard-aws.md).
-
-- [Google Cloud Platform (GCP)](quickstart-onboard-gcp.md).
-
-- [Azure Arc-enabled Kubernetes clusters](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
+| Environment | Onboarding path |
+|------------|-----------------|
+| **AKS** | No additional connector is required. AKS clusters are native Azure resources. |
+| **EKS** | [Onboard AWS to Defender for Cloud](quickstart-onboard-aws.md). |
+| **GKE** | [Onboard GCP to Defender for Cloud](quickstart-onboard-gcp.md). |
+| **On-premises and other Arc-enabled Kubernetes clusters** | [Connect your existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster). |
 
 ## Deployment options
 
 | Deployment approach | Description |
 |--------|-------------|
-| **Automatic provisioning** | Components are deployed automatically after the Defender for Containers plan is enabled. |
-| **Manual deployment** | Automatic provisioning is turned off and components must be installed manually. |
-| **Mixed deployment** | Automatic provisioning is enabled, but specific clusters are excluded and deployed manually. |
+| **Automatic provisioning** | Supported components are deployed automatically after the Defender for Containers plan or relevant settings are enabled. |
+| **Manual deployment** | Automatic provisioning is turned off and supported components are installed manually. |
+| **Mixed deployment** | Automatic provisioning is enabled, but specific AKS, EKS, or GKE clusters are excluded and deployed manually. Mixed deployment isn't supported for on-premises or other Kubernetes clusters connected directly to Azure Arc. |
 
 ## Automatic provisioning
 
-With automatic provisioning enabled, Microsoft Defender for Cloud installs the required cluster components after the Defender for Containers plan is enabled.
+With automatic provisioning enabled, Microsoft Defender for Cloud installs the required cluster components after the Defender for Containers plan and the relevant settings are enabled.
 
-For AKS clusters, deployment uses the **Defender AKS add-on**. For GKE and EKS clusters, deployment uses Azure Arc extensions.
+For AKS clusters, deployment uses the **Defender AKS add-on**. For EKS and GKE clusters, deployment uses Azure Arc Kubernetes extensions on the Arc-enabled Kubernetes resources created through the AWS or GCP connector flow.
 
-You can customize automatic provisioning by excluding specific clusters using tags before enabling the Defender for Containers plan, and then deploying those clusters manually.
+For on-premises and other Kubernetes clusters connected directly to Azure Arc, the cluster must first be connected to Azure Arc. Deployment then uses the Azure Arc Kubernetes extension after the relevant Defender for Containers settings are enabled.
+
+You can customize automatic provisioning by excluding specific clusters using tags before enabling the Defender for Containers plan, and then deploying those clusters manually. 
+
+> [!NOTE]
+> Exclusion tags don't apply to on-premises or other Kubernetes clusters connected directly to Azure Arc.
 
 With automatic provisioning, the Defender sensor is installed after the cluster is discovered and can take several hours to complete.
 
@@ -43,7 +49,7 @@ Use manual deployment or exclude specific clusters from automatic provisioning a
 
 ## Manual deployment
 
-If automatic provisioning is disabled, no cluster components are deployed automatically. Components can be deployed manually.
+If automatic provisioning is disabled, cluster components aren't deployed automatically. You can deploy supported components manually.
 
 Manual deployment can also be used for clusters that are excluded from automatic provisioning.
 
