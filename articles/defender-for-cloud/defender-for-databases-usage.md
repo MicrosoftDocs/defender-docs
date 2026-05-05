@@ -76,7 +76,7 @@ Defender for Cloud sends email notifications when it detects anomalous database 
 > [!TIP]
 > For a detailed tutorial on how to handle your alerts, see [Manage and respond to alerts](tutorial-security-incident.md).
 
-## Next step
+## Related content
 
 - [Automate responses to Defender for Cloud triggers](workflow-automations.md)
 - [Stream alerts to a SIEM, SOAR, or ITSM solution](export-to-siem.md)
