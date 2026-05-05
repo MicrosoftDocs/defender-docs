@@ -34,79 +34,27 @@ Key detection categories include:
 - **Network scanning tools:** Identification of tools commonly used for malicious reconnaissance.
 - **Binary drift detection:** Detection of workload binaries that have drifted from the original container image. For more details, see [Binary drift detection](binary-drift-detection.md).
 
-
 ## Kubernetes alerts simulation tool
 
-Defender for Containers provides a Python-based CLI tool to simulate attack scenarios and verify that Kubernetes security alerts are generated.
+Defender for Containers provides an open-source, Python-based CLI tool that simulates Kubernetes attack scenarios and helps you verify that Kubernetes security alerts are generated.
+
+The simulation tool is maintained in the [Defender for Cloud Attack Simulation GitHub repository](https://github.com/microsoft/Defender-for-Cloud-Attack-Simulation). To review the latest prerequisites, installation steps, available scenarios, and expected alerts, see the repository README.
 
 > [!NOTE]
 > The simulation tool doesn't contain malicious code. Run it on a dedicated test cluster instead of a production cluster.
 
-### Prerequisites
+After you run the simulation, some alerts are generated in near real time. Others can take up to an hour to appear.
 
-Before you begin, make sure that:
-
-- You have administrator access to the target Kubernetes cluster.
-
-- Microsoft Defender for Containers is enabled for the target environment.
-
-- The Defender sensor is installed on the target cluster. To verify the sensor deployment for your environment, see [Verify Defender sensor deployment](defender-for-containers-verify.md#verify-defender-sensor-deployment).
-
-- Helm is installed on the machine where you plan to run the simulation.
-
-- Python 3.7 or later is installed on the machine where you plan to run the simulation.
-
-- Your `kubeconfig` file points to the target cluster.
-
-  For Azure Kubernetes Service (AKS), you can configure access by running:
-
-  ```azurecli
-  az aks get-credentials --name <cluster-name> --resource-group <resource-group>
-  ```
-
-### Simulate Kubernetes alerts
-
-To simulate Kubernetes alerts:
-
-1. Download the simulation script:
-
-   ```bash
-   curl -O https://raw.githubusercontent.com/microsoft/Defender-for-Cloud-Attack-Simulation/refs/heads/main/simulation.py
-   ```
-
-1. Run the simulation script:
-
-   ```bash
-   python simulation.py
-   ```
-   
-1. When prompted, select the attack scenario that you want to simulate, or select the option to run all scenarios.
-
-The following scenarios are available:
-
-| Scenario | Expected alerts |
-|---|---|
-| Reconnaissance | Possible Web Shell activity detected<br>Suspicious Kubernetes service account operation detected<br>Network scanning tool detected |
-| Lateral movement | Possible Web Shell activity detected<br>Access to cloud metadata service detected |
-| Secrets gathering | Possible Web Shell activity detected<br>Sensitive files access detected<br>Possible secret reconnaissance detected |
-| Crypto mining | Possible Web Shell activity detected<br>Kubernetes CPU optimization detected<br>Command within a container accessed `ld.so.preload`<br>Possible Crypto miners download detected<br>A drift binary detected executing in the container |
-| Web shell | Possible Web Shell activity detected |
-
-> [!NOTE]
-> Some alerts are generated in near real time. Others can take up to an hour to appear.
-
-> [!NOTE]
-> The simulation tool deploys test resources to the cluster. After you finish testing, remove those resources according to your organization's test environment procedures.
-
-### Review generated alerts
-
-To review the generated alerts:
+To review generated alerts:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
 
 1. Review alerts related to the simulated cluster and scenario.
+
+> [!NOTE]
+> The simulation tool deploys test resources to the cluster. After you finish testing, remove those resources according to your organization's test environment procedures.
 
 ## Related content
 
