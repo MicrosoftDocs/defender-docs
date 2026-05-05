@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Defender for Containers on AWS (EKS)
-description: Troubleshoot common issues when deploying or operating Microsoft Defender for Containers on Amazon Elastic Kubernetes Service (EKS).
+title: Troubleshoot Microsoft Defender for Containers
+description: Troubleshoot common deployment and post-deployment issues in Microsoft Defender for Containers across supported Kubernetes environments.
 author: Elazark
 ms.author: elkrieger
 ms.topic: troubleshooting
@@ -34,16 +34,15 @@ This article provides troubleshooting guidance for common deployment and operati
 - **Missing vulnerability findings for images in Azure Container Registry**
   - **Symptoms:** Vulnerability findings don't appear for images stored in Azure Container Registry.
   - **Resolution:**
-    - **Registry access:** Confirm that **Registry access** is enabled for Defender for Containers.
-    - **Image structure:** Verify that the image uses a valid and supported image structure.
-    - **Further investigation:** If Registry access is enabled and the image structure is valid, open a support case with the registry name, image name, image digest, and expected finding details.
+    - **Registry scanning:** Confirm that the relevant registry scanning capability is enabled for Defender for Containers. In the Azure portal, verify that **Registry access** is enabled for the relevant scope.
+    - **Further investigation:** If registry scanning is enabled and findings are still missing, open a support case with the registry name, image name, image digest, and expected finding details.
 
 - **Missing vulnerability findings for images running on AKS clusters**
   - **Symptoms:** Vulnerability findings don't appear for images that are currently running in AKS workloads.
   - **Resolution:**
-    - **Required components:** Confirm that the required Defender for Containers components are enabled and healthy for the cluster.
-    - **Image scan availability:** Runtime vulnerability findings depend on available vulnerability scan results for the running image.
-    - **Further investigation:** If the required components are enabled and findings are still missing, open a support case with the cluster name, namespace, workload name, image name, and image digest.
+    - **Vulnerability scanning:** Confirm that the relevant vulnerability scanning capability is enabled for Defender for Containers. Runtime vulnerability findings depend on available scan results for the running image, such as registry scan or disk scan results.
+    - **Pod inventory collection:** Confirm that pod inventory collection is enabled for the cluster. For AKS, pod inventory can be collected by the Defender sensor or by agentless collection, depending on the deployment configuration.
+    - **Further investigation:** If vulnerability scanning and pod inventory collection are enabled but findings are still missing, open a support case with the cluster name, namespace, workload name, image name, and image digest.
 
 # [Amazon Elastic Kubernetes Service (EKS)](#tab/eks)
 
@@ -81,17 +80,15 @@ This article provides troubleshooting guidance for common deployment and operati
 - **Missing vulnerability findings in Artifact Registry**
   - **Symptoms:** Vulnerability findings don't appear for images stored in Google Artifact Registry.
   - **Resolution:**
-    - **Registry access:** Confirm that **Registry access** is enabled in the GCP connector settings.
-    - **Image structure:** Verify that the image uses a valid and supported image structure.
-    - **Further investigation:** If Registry access is enabled and the image structure is valid, open a support case with the registry name, image name, image digest, and expected finding details.
+    - **Registry scanning:** Confirm that the relevant registry scanning capability is enabled for Defender for Containers. In the GCP connector settings, verify that **Registry access** is enabled.
+    - **Further investigation:** If registry scanning is enabled and findings are still missing, open a support case with the registry name, image name, image digest, and expected finding details.
 
 - **Missing vulnerability findings for images running on GKE clusters**
   - **Symptoms:** Vulnerability findings don't appear for images that are currently running in GKE workloads.
   - **Resolution:**
-    - **Required components:** Confirm that the required Defender for Containers components are enabled and healthy for the cluster.
-    - **Audit log scoping:** Ensure GCP audit logging is configured for `SYSTEM`, `WORKLOAD`, and `API_SERVER`.
-    - **Image scan availability:** Runtime vulnerability findings depend on available vulnerability scan results for the running image.
-    - **Further investigation:** If the required components are enabled and findings are still missing, open a support case with the cluster name, namespace, workload name, image name, and image digest.
+    - **Vulnerability scanning:** Confirm that the relevant vulnerability scanning capability is enabled for Defender for Containers. Runtime vulnerability findings depend on available scan results for the running image, such as registry scan or disk scan results.
+    - **Pod inventory collection:** Confirm that pod inventory collection is enabled for the cluster.
+    - **Further investigation:** If vulnerability scanning and pod inventory collection are enabled but findings are still missing, open a support case with the cluster name, namespace, workload name, image name, and image digest.
 
 # [Arc-enabled Kubernetes](#tab/arc)
 
