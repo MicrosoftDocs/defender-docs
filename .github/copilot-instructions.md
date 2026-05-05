@@ -57,6 +57,7 @@ Below are instructions specific to this repository. These may be updated by repo
 ### Writing Style (Repository-Specific)
 
 - Never use phrases like "This article covers," "This article describes," or "This page explains" in article introductions. Lead with the action or topic directly.
+- Never use the word "across" (use alternatives like "in," "on," "throughout," or "for").
 
 ### Pull Requests
 
