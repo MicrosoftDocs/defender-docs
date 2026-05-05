@@ -37,6 +37,11 @@ This article provides an overview of the Security Alert Triage Agent, how it wor
 > [!NOTE]
 > The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency in controlled evaluations. The agent is extended to triage a broader set of alerts in Microsoft Defender, starting with a subset of identity and cloud alerts. These expanded capabilities are currently in preview. The set of supported alerts is expected to grow over time.
 
+Watch this video to get an overview of the Security Alert Triage Agent:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=868ecb6a-6545-4703-b58e-d3130e0c2eaa]
+
+
 ## How the Security Alert Triage Agent works
 
 The Security Alert Triage Agent is a [Security Copilot agent](/copilot/security/agents-overview) in Microsoft Defender that classifies and triages alerts across supported workloads and alert types. The agent’s key capabilities include:
