@@ -1,13 +1,13 @@
 ---
 title: Plan your ASR rules deployment
-description: Provides guidance to plan your attack surface reduction rules deployment.
+description: Learn how to plan your attack surface reduction (ASR) rules deployment, including identifying business units, champions, apps, and deployment rings.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar, yongrhee
-ms.custom: asr
+ms.custom: asr, msecd-doc-authoring-1012
 ms.topic: article
 ms.collection:
 - m365-security
@@ -15,7 +15,9 @@ ms.collection:
 - highpri
 - tier1
 - mde-asr
-ms.date: 04/22/2026
+ms.date: 05/04/2026
+ai-usage: ai-assisted
+#customer intent: As an IT admin, I want to plan my ASR rules deployment so that I can roll out rules in a structured, low-disruption manner.
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -25,26 +27,26 @@ appliesto:
 
 This article is part of the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
-This first step in your attack surface reduction (ASR) rules deployment is to plan the deployment before testing or enabling rules. This article describes a sound planning methodology that you can adjust to meet your business needs.
+Before you test or enable attack surface reduction (ASR) rules, plan your deployment. This article describes a planning methodology that you can adjust to meet your business needs.
 
-> :::image type="content" source="media/asr-rules-planning-steps.png" alt-text="The ASR rule planning steps." lightbox="media/asr-rules-planning-steps.png":::
+> :::image type="content" source="media/asr-rules-planning-steps.png" alt-text="Diagram of the ASR rules planning steps: determine deployment rings, identify champions, inventory apps, and define team roles." lightbox="media/asr-rules-planning-steps.png":::
 
 > [!TIP]
 > Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 ## Infrastructure requirements for the deployment guide
 
-Although there are [multiple ways to enable ASR rules](attack-surface-reduction-rules-configure.md), this deployment guide is based on an infrastructure consisting of the following features:
+Although there are [multiple ways to enable ASR rules](attack-surface-reduction-rules-configure.md), this deployment guide is based on an infrastructure that uses:
 
 - Microsoft Entra ID
 - Microsoft Intune
 - Windows 10 and Windows 11 devices
 - Microsoft Defender for Endpoint E5 or Windows E5 licenses
 
-To take full advantage of ASR rules and reporting, we recommend using a Microsoft Defender XDR E5, Windows E5, or A5 license. Learn more at [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
+To take full advantage of ASR rules and reporting, use a Microsoft 365 E5, Windows E5, or Microsoft 365 A5 license. For more information, see [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
 > [!NOTE]
-> If you're transitioning from a non-Microsoft host intrusion prevention system (HIPS) to Microsoft Defender Antivirus and ASR rules, we recommend running the HIPS solution alongside ASR rules util you enable rules in **Block** mode during the [implementation phase](attack-surface-reduction-rules-deployment-implement.md). Contact the antivirus solution provider for exclusion recommendations.
+> If you're transitioning from a non-Microsoft host intrusion prevention system (HIPS) to Microsoft Defender Antivirus and ASR rules, run the HIPS solution alongside ASR rules until you enable rules in **Block** mode during the [implementation phase](attack-surface-reduction-rules-deployment-implement.md). Contact the antivirus solution provider for exclusion recommendations.
 
 ## Step 1: Identify business units
 
@@ -61,7 +63,7 @@ How you select the first business unit to receive ASR rules in the [testing phas
 Your business needs might clearly dictate one of the following choices:
 
 - Include multiple business units to get a broad sampling of software, shared folders, scripts, macros, and line of business apps that might be affected by ASR rules.
-- Limit the initial scope to a single business unit, work through all the issues in that business unit, the repeat the roll out to other business units individually.
+- Limit the initial scope to a single business unit, work through all the issues in that business unit, then repeat the rollout to other business units individually.
 
 ## Step 2: Identify ASR rule champions
 
@@ -94,11 +96,11 @@ Typical roles and responsibilities include:
 
 ## Step 5: Define ASR rule deployment rings
 
-For large enterprises, we recommend deploying ASR rules in _rings_. You define rings through the assessment of your business units, ASR rule champions, apps, and processes. After you successfully deploy ASR rules to the first ring, you can transition to the next ring into the testing phase, and so on. If you already defined rings for phased rollout of Windows updates, you can likely use those same rings to deploy ASR rules.
+For large enterprises, deploy ASR rules in _rings_. You define rings through the assessment of your business units, ASR rule champions, apps, and processes. After you successfully deploy ASR rules to the first ring, you can transition to the next ring into the testing phase, and so on. If you already defined rings for phased rollout of Windows updates, you can likely use those same rings to deploy ASR rules.
 
-For more information about rings, see: [Windows: Create a deployment plan](/windows/deployment/update/create-deployment-plan)
+For more information about rings, see [Windows: Create a deployment plan](/windows/deployment/update/create-deployment-plan).
 
-## See also
+## Related content
 
 - [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 - [Test your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-test.md)

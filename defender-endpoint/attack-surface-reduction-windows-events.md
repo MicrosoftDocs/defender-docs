@@ -1,6 +1,6 @@
 ---
 title: Attack surface reduction events in Windows Event Viewer
-description: Use Windows Event Viewer custom views to review events from attack surface reduction rules, controlled folder access, exploit protection, and network protection.
+description: Create custom views in Windows Event Viewer to review events from attack surface reduction rules, controlled folder access, exploit protection, and network protection.
 author: chrisda
 ms.author: chrisda
 ms.service: defender-endpoint
@@ -11,7 +11,7 @@ ms.collection:
   - tier2
   - mde-asr
 ms.custom: msecd-doc-authoring-1012
-ms.date: 04/22/2026
+ms.date: 05/04/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -24,7 +24,7 @@ appliesto:
 
 # Attack surface reduction events in Windows Event Viewer
 
-Reviewing events in Event Viewer is useful when you evaluate attack surface reduction features. For example, you can enable audit mode for features or settings, and then review what would happen if they were fully enabled. You can also view the effects of attack surface reduction feature when they're fully enabled.
+Reviewing events in Event Viewer is useful when you evaluate attack surface reduction features. For example, you can enable audit mode for features or settings, and then review what would happen if they were fully enabled. You can also view the effects of attack surface reduction features when they're fully enabled.
 
 This article describes how to use [Windows Event Viewer](/training/modules/manage-monitor-event-logs/) to view events from attack surface reduction (ASR) capabilities, including:
 
@@ -183,8 +183,8 @@ The custom view filters to show only the events related to that feature.
 ```xml
 <QueryList>
   <Query Id="0" Path="Microsoft-Windows-Windows Defender/Operational">
-   <Select Path="Microsoft-Windows-Windows Defender/Operational">*[System[(EventID=1121 or EventID=1122 or EventID=5007)]]</Select>
-   <Select Path="Microsoft-Windows-Windows Defender/WHC">*[System[(EventID=1121 or EventID=1122 or EventID=5007)]]</Select>
+   <Select Path="Microsoft-Windows-Windows Defender/Operational">*[System[(EventID=1121 or EventID=1122 or EventID=1129 or EventID=5007)]]</Select>
+   <Select Path="Microsoft-Windows-Windows Defender/WHC">*[System[(EventID=1121 or EventID=1122 or EventID=1129 or EventID=5007)]]</Select>
   </Query>
 </QueryList>
 ```
@@ -194,8 +194,8 @@ The custom view filters to show only the events related to that feature.
 ```xml
 <QueryList>
   <Query Id="0" Path="Microsoft-Windows-Windows Defender/Operational">
-   <Select Path="Microsoft-Windows-Windows Defender/Operational">*[System[(EventID=1123 or EventID=1124 or EventID=5007)]]</Select>
-   <Select Path="Microsoft-Windows-Windows Defender/WHC">*[System[(EventID=1123 or EventID=1124 or EventID=5007)]]</Select>
+   <Select Path="Microsoft-Windows-Windows Defender/Operational">*[System[(EventID=1123 or EventID=1124 or EventID=1127 or EventID=1128 or EventID=5007)]]</Select>
+   <Select Path="Microsoft-Windows-Windows Defender/WHC">*[System[(EventID=1123 or EventID=1124 or EventID=1127 or EventID=1128 or EventID=5007)]]</Select>
   </Query>
 </QueryList>
 ```

@@ -1,13 +1,13 @@
 ---
 title: ASR rules deployment guide
-description: Provides overview and prerequisite guidance about deploying Microsoft Defender for Endpoint attack surface reduction rules. Links to articles that show how to plan and ASR deployment, test ASR rules, configure ASR rules, and enable ASR rules.
+description: Plan, test, and deploy attack surface reduction (ASR) rules in Microsoft Defender for Endpoint to block risky software behavior and protect against advanced threats.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom: asr
+ms.custom: asr, msecd-doc-authoring-1012
 ms.topic: concept-article
 ms.collection:
  - m365-security
@@ -15,12 +15,15 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 04/22/2026
+ms.date: 05/04/2026
+ai-usage: ai-assisted
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ---
+
+#customer intent: As a security administrator, I want to plan and deploy ASR rules across my organization so that I can block advanced threats like human-operated ransomware.
 
 # Attack surface reduction (ASR) rules deployment guide
 
@@ -31,11 +34,11 @@ This guide helps you plan, test, implement, and manage your ASR rules deployment
 > [!IMPORTANT]
 > This guide provides images and examples to help you decide how to configure ASR rules. These images and examples might not reflect the best configuration options for your environment.
 
-:::image type="content" source="media/asr-rules-deployment-phases.png" alt-text="Plan Microsoft Defender for Endpoint attack surface reduction rules, test attack surface reduction rules, Enable attack surface reduction rules, maintain attack surface reduction rules." lightbox="media/asr-rules-deployment-phases.png":::
+:::image type="content" source="media/asr-rules-deployment-phases.png" alt-text="Diagram of the ASR rules deployment phases: plan, test, enable, and maintain." lightbox="media/asr-rules-deployment-phases.png":::
 
 ## Important predeployment caveat
 
-Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
+Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode.
 
 ## Before you begin
 
@@ -53,7 +56,7 @@ Use the following articles to plan, test, implement, and manage your ASR rules d
 1. [Enable ASR rules](attack-surface-reduction-rules-deployment-implement.md): Transition rules from **Audit** to **Block** mode, and expand to additional deployment rings.
 1. [Manage and monitor ASR rules](attack-surface-reduction-rules-deployment-operationalize.md): Monitor ongoing activity, manage false positives, and use advanced hunting.
 
-## See also
+## Related content
 
 - [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
 - [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)

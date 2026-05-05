@@ -3,27 +3,30 @@ title: Configure ASR rules and exclusions
 description: Enable attack surface reduction rules to protect your devices from attacks that use macros, scripts, and common injection techniques.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.subservice: asr
 ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1012
 appliesto:
 - Microsoft Defender for Endpoint Plan 1 and Plan 2
 - Microsoft Defender XDR
 - Microsoft Defender Antivirus
-ms.date: 04/15/2026
+ms.date: 05/04/2026
+ai-usage: ai-assisted
 ---
+
+#customer intent: As a security administrator, I want to configure attack surface reduction rules on devices so that I can block risky software behaviors that attackers exploit.
 
 # Configure attack surface reduction (ASR) rules and exclusions
 
 [Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes). This article describes how to enable and configure ASR rules.
 
-To manage ASR rules, we always recommend enterprise-level management solutions like Microsoft Intune or Microsoft Configuration Manager. ASR rule settings from Intune or Configuration Manager overwrite any conflicting settings from group policy or PowerShell on startup.
+For best results, use enterprise-level management solutions like Microsoft Intune or Microsoft Configuration Manager to manage ASR rules. ASR rule settings from Intune or Configuration Manager overwrite any conflicting settings from group policy or PowerShell on startup.
 
 ## Prerequisites
 
@@ -45,9 +48,9 @@ For more information, see [Requirements for ASR rules](attack-surface-reduction-
 
 ## Configure ASR rules in Microsoft Intune
 
-We recommend Microsoft Intune to configuring and distributing ASR rule policies to devices. Requires Microsoft Intune Plan 1 (included in subscriptions like Microsoft 365 E3 or available as a standalone add-on).
+Microsoft Intune is the recommended tool for configuring and distributing ASR rule policies to devices. Requires Microsoft Intune Plan 1 (included in subscriptions like Microsoft 365 E3 or available as a standalone add-on).
 
-In Intune, we recommend using endpoint security policies to deploy ASR rules, although other methods are also available in Intune as described in the following subsections.
+In Intune, endpoint security policies are the recommended method to deploy ASR rules, although other methods are also available in Intune as described in the following subsections.
 
 ### Configure ASR rules and exclusions in Intune using endpoint security policies
 
@@ -59,7 +62,7 @@ To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surfa
 - **Configuration settings**:
   - **Attack surface reduction**: Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
-    After you set the rule mode to **Audit**, **BYes. To block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
+    After you set the rule mode to **Audit**, **Block**, or **Warn**, an **ASR only per rule exclusions** section appears where you can specify exclusions that apply to that rule only.
 
   - **Attack surface reduction only exclusions**: Use this section to specify exclusions that apply to all ASR rules.
 
@@ -91,7 +94,7 @@ To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surfa
 
 ### Configure ASR rules in Intune using custom profiles with OMA-URIs and CSPs
 
-Although we recommend using device configuration policies, you can also configure ASR rules in Intune using custom profiles that contain Open Mobile Alliance – Uniform Resource (OMA-URI) profiles using a Windows [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider).
+Although endpoint security policies are recommended, you can also configure ASR rules in Intune using custom profiles that contain Open Mobile Alliance – Uniform Resource (OMA-URI) profiles using a Windows [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider).
 
 For general information about OMA-URIs in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune).
 
@@ -108,10 +111,10 @@ For general information about OMA-URIs in Intune, see [Deploy OMA-URIs to target
 
    Select **Create**.
 
-   :::image type="content" source="media/mem02-profile-attributes.png" alt-text="The rule profile attributes in the Microsoft Intune admin center portal." lightbox="media/mem02-profile-attributes.png":::
+   :::image type="content" source="media/mem02-profile-attributes.png" alt-text="Screenshot of the rule profile attributes in the Microsoft Intune admin center portal." lightbox="media/mem02-profile-attributes.png":::
 
 1. The custom template wizard opens. On the **Basics** tab, configure the following settings:
-   - **Name**: Enter a unique a name for the template.
+   - **Name**: Enter a unique name for the template.
    - **Description**: Enter an optional description.
 
    When you're finished on the **Basics** tab, select **Next**.
@@ -152,6 +155,7 @@ For general information about OMA-URIs in Intune, see [Deploy OMA-URIs to target
        d3e037e1-3eb8-44c8-a917-57927947596d=1
        5beb7efe-fd9a-4556-801d-275e5ffc04cc=0
        be9ba2d9-53ea-4cdc-84e5-9b1eeee46550=1
+       ```
 
      :::image type="content" source="media/mem05-add-row-oma-uri.png" alt-text="Screenshot of the Add row flyout of the Configuration Settings tab of the OMA URI configuration in the Microsoft Intune admin center." lightbox="media/mem05-add-row-oma-uri.png":::
 
@@ -181,7 +185,7 @@ For general information about OMA-URIs in Intune, see [Deploy OMA-URIs to target
 
 1. On the **Review + create** tab, review the settings. You can use **Previous** or select a tab to go back and make changes.
 
-   When you're ready to create the profile, select **Create** on the **Review + create** tab. and information you've selected and entered, and then select **Create**.
+   When you're ready to create the profile, select **Create** on the **Review + create** tab.
 
    :::image type="content" source="media/mem08-6-review-create.png" alt-text="Screenshot showing the Review and create tab in the Microsoft Intune admin center portal." lightbox="media/mem08-6-review-create.png":::
 
@@ -352,10 +356,12 @@ The paths or filenames with paths you specify are used as exclusions for all ASR
    2. **Exclusions from ASR rules**: Select **Show...**.
 
 1. In the **Exclusions from ASR rules** dialog that opens, configure the following settings:
-   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-overview.md#asr-rules).
-   - **Value**: Enter one of the following types of values:
+   - **Value name**: Enter the path or path and filename to exclude from all ASR rules.
+   - **Value**: Enter `0`.
+
+   The following types of value names are supported:
      - To exclude all files in a folder, enter the full folder path. For example, `C:\Data\Test`.
-     - To exclude a specific file in a specify folder (recommended), enter the path and filename. For example, `C:\Data\Test\test.exe`.
+     - To exclude a specific file in a specific folder (recommended), enter the path and filename. For example, `C:\Data\Test\test.exe`.
 
    Repeat this step as many times as necessary. When you're finished, select **OK**.
 
@@ -365,7 +371,7 @@ The paths or filenames with paths you specify are used as exclusions for all ASR
 
 ### Configure per-ASR rule exclusions in group policy
 
-The paths or filenames with paths you specify are used as exclusions for all ASR rules.
+The paths or filenames with paths you specify are used as exclusions for specific ASR rules.
 
 > [!NOTE]
 > If the **Apply a list of exclusions to specific attack surface reduction (ASR) rules** setting isn't available in your GPMC, you need version 24H2 or later of the [Administrative Templates files](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version) in your [Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
@@ -447,4 +453,4 @@ On the target device, use the following PowerShell command syntax in an elevated
 
 - [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)
 - [Evaluate attack surface reduction](attack-surface-reduction-rules-deployment-test.md)
-- [Attack surface reduction FAQ](attack-surface-reduction-rules-overview.md)
+- [Attack surface reduction FAQ](attack-surface-reduction-faq.yml)

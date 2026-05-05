@@ -1,6 +1,6 @@
 ---
-title: Attack surface reduction overview in Microsoft Defender for Endpoint
-description: Reduce your organization's attack surface with Microsoft Defender for Endpoint capabilities, including ASR rules, exploit protection, network protection, and controlled folder access.
+title: Attack surface reduction in Microsoft Defender for Endpoint
+description: Reduce your attack surface with Microsoft Defender for Endpoint capabilities like ASR rules, exploit protection, network protection, and controlled folder access.
 author: chrisda
 ms.author: chrisda
 ms.service: defender-endpoint
@@ -11,7 +11,7 @@ ms.collection:
   - tier2
   - mde-asr
 ms.custom: msecd-doc-authoring-1012
-ms.date: 04/17/2026
+ms.date: 05/04/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -50,18 +50,20 @@ Attack surface reduction in Defender for Endpoint includes the following capabil
 
 The availability of these features is summarized in the following table:
 
-|Feature|Windows│macOS│Linux│
+|Feature|Windows|macOS|Linux|
 |---|:---:|:---:|:---:|
-│ASR rules|Y|N|N|
-│Controlled folder access|Y|N|N|
-│Exploit protection│Y|N|N|
-│Network protection│Y|Y|Y<sup>\*</sup>|
-│Web protection│Y|Y|Y<sup>\*</sup>|
-|Web content filtering│Y|Y|Y|
-│Device control│Y|Y|N|
-│Firewall reporting│Y|N|N|
+|ASR rules|Y|N|N|
+|Controlled folder access|Y|N|N|
+|Exploit protection|Y|N|N|
+|Network protection|Y|Y|Y<sup>\*</sup>|
+|Web protection|Y|Y|Y<sup>\*</sup>|
+|Web content filtering|Y|Y|Y|
+|Device control|Y|Y|N|
+|Firewall reporting|Y|N|N|
 
 <sup>\*</sup> Currently in Preview.
+
+<!-- TODO: SME verification needed. Is network protection and web protection on Linux still in Preview? This callout may be outdated. -->
 
 ### Related Windows security features
 
@@ -87,13 +89,11 @@ Each capability addresses a different part of the attack surface:
 Audit mode helps you evaluate the impact of attack surface reduction features on your environment without affecting productivity. The following capabilities support audit mode:
 
 - [Attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md)
-- [Controlled folder access](enable-controlled-folders.md).
-- [Exploit protection](defender-endpoint/enable-exploit-protection.md)
+- [Controlled folder access](enable-controlled-folders.md)
+- [Exploit protection](enable-exploit-protection.md)
 - [Network protection](enable-network-protection.md)
 
 In audit mode, the features don't block apps, scripts, or connections. Instead, the Windows Event Log records events as if the features were active. You can review event logs and use advanced hunting in the Microsoft Defender portal to understand how each feature would affect your line-of-business applications. For more information about the data in Windows Event Viewer, see [View attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md).
-
-You can also use advanced hunting in the Microsoft Defender portal to understand how each feature would affect your line-of-business applications.
 
 ## Management tools
 

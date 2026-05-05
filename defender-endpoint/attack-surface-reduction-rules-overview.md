@@ -7,13 +7,15 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom: admindeeplinkDEFENDER
-ms.topic: how-to
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1012
+ms.topic: concept
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/22/2026
+ms.date: 05/04/2026
+ai-usage: ai-assisted
+#customer intent: As an IT admin, I want to understand attack surface reduction rules so I can protect Windows devices from common malware attack vectors.
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -57,10 +59,10 @@ See the following series of articles to plan, test, implement, and monitor ASR r
 
 ASR rules are grouped into the following categories:
 
-- **Standard protection rules** offer such great security benefits that we recommend enabling them in **Block** mode without the need for extensive testing. Typically, these rules have minimal or no noticeable effect on users, but there are exceptions:
+- **Standard protection rules** offer significant security benefits, so Microsoft recommends enabling them in **Block** mode without the need for extensive testing. Typically, these rules have minimal or no noticeable effect on users, but there are exceptions:
 
   - [Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription): If you use Microsoft Configuration Manager to manage devices, don't use other available deployment methods (for example, Group Policy or PowerShell) to activate this rule in **Block** or **Warn** mode on the device without extensive testing in **Audit** mode. The Configuration Manager client relies heavily on WMI.
-  - [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem): If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) (which we recommend, along with [Credential Guard](/windows/security/identity-protection/credential-guard)), this rule is redundant.
+  - [Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem): If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) (recommended, along with [Credential Guard](/windows/security/identity-protection/credential-guard)), this rule is redundant.
 
 - **Other ASR rules** provide important protection, but require testing in **Audit** mode before you activate them in **Block** or **Warn** mode as described in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
@@ -128,7 +130,7 @@ ASR rules require Microsoft Defender Antivirus as the primary anti-virus app on 
 
   Keeping Microsoft Defender Antivirus versions current helps reduce ASR rule false positives and improves Microsoft Defender Antivirus detection capabilities. For more information about the current versions and how to update the different Microsoft Defender Antivirus components, see [Microsoft Defender Antivirus platform support](microsoft-defender-antivirus-updates.md).
 
-- Although ASR rules don't require [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/office-365-e5), we recommend the security capabilities of E5 in equivalent subscriptions to take advantage of the following advanced management capabilities:
+- Although ASR rules don't require [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/office-365-e5), Microsoft recommends the security capabilities of E5 or equivalent subscriptions to take advantage of the following advanced management capabilities:
   - Monitoring, analytics, and workflows in Defender for Endpoint.
   - Reporting and configuration capabilities in the Microsoft Defender XDR portal.
 
@@ -162,11 +164,11 @@ An ASR rule can be in one of the following modes as described in the following t
 |---|:---:|---|
 |**Off** or <br/> **Disabled**|0|The ASR rule is explicitly disabled. <br/><br/> This value can cause conflicts when the same device is assigned the same ASR rule in different modes by different policies.|
 |**Block** or <br/> **Activated**|1|The ASR rule is enabled in **Block** mode.|
-|**Audit** or <br/> **Audit mode**|2|The ASR rule is enabled as if in **Block** mode, but without taking action. <br/><br/> Detections for ASR rules in **Audit** mode are available in the following locations: <ul><li>Event IDs 1122, 1125, 1132, and 1134 in [Windows Event Viewer](attack-surface-reduction-windows-events.md#browse-attack-surface-reduction-events-in-windows-event-viewer).</li><li>[Advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview): <br><code>DeviceEvent<br>&#124; where ActionType startswith "Asr"<br>&#124; where ActionType endswith "Audited"</code></li><li>The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md).</li></ul>|
+|**Audit** or <br/> **Audit mode**|2|The ASR rule is enabled as if in **Block** mode, but without taking action. <br/><br/> Detections for ASR rules in **Audit** mode are available in the following locations: <ul><li>Event IDs 1122, 1125, 1132, and 1134 in [Windows Event Viewer](attack-surface-reduction-windows-events.md#browse-attack-surface-reduction-events-in-windows-event-viewer).</li><li>[Advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview): <br><code>DeviceEvents<br>&#124; where ActionType startswith "Asr"<br>&#124; where ActionType endswith "Audited"</code></li><li>The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md).</li></ul>|
 |**Not configured**|5|The ASR rule isn't explicitly enabled. <br/><br/> This value is functionally equivalent to **Disabled** or **Off**, but without the potential for rule conflicts.|
 |**Warn** or <br/> **Warning**|6|The ASR rule is enabled as if in **Block** mode, but users can select **Unblock** in the warning notification pop-up to bypass the block for 24 hours. After 24 hours, the user needs to bypass the block again. <br/><br/> **Warn** mode is supported in Windows 10 version 1809 (November 2018) or later. ASR rules in **Warn** mode on unsupported versions of Windows are effectively in **Block** mode (bypass isn't available). <br/><br/> **Warn** mode isn't available in Microsoft Configuration Manager. <br/><br/> **Warn** mode has the following Microsoft Defender Antivirus version requirements: <ul><li>**Platform release**: 4.18.2008.9 (August 2020) or later.</li><li>**Engine release**: 1.1.17400.5 (August 2020) or later.</li></ul> <br/> The following ASR rules don't support **Warn** mode: <ul><li>[Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)</li><li>[Block Office applications from injecting code into other processes](attack-surface-reduction-rules-reference.md#block-office-applications-from-injecting-code-into-other-processes)</li></ul>|
 
-We recommend **Block** mode for the standard protection rules, and initial testing in **Audit** mode for other ASR rules before activating them in **Block** or **Warn** mode.
+Microsoft recommends **Block** mode for the standard protection rules, and initial testing in **Audit** mode for other ASR rules before activating them in **Block** or **Warn** mode.
 
 Many line-of-business applications are written with limited security concerns, and they might act in ways that seem similar to malware. By monitoring data from ASR rules in **Audit** mode and [adding exclusions](attack-surface-reduction-rules-deployment-test.md#add-exclusions) for required apps, you can deploy ASR rules without reducing productivity.
 
@@ -187,7 +189,7 @@ The following table summarizes the available methods. For detailed configuration
 |[Any MDM solution using the Policy CSP](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp)|Use the Windows [Policy configuration service provider (CSP)](/windows/client-management/mdm/policy-configuration-service-provider) with any MDM solution.|
 |[Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|Uses the Microsoft Defender Antivirus policy in the **Assets and compliance** workspace.|
 |[Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy)|Use Centralized Group Policy to configure and distribute ASR rules to domain-joined devices. Or you can configure Group Policy locally on individual devices.|
-|[PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell)|Configure ASR rules locally on individual devices. PowerShell support all ASR rules.|
+|[PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell)|Configure ASR rules locally on individual devices. PowerShell supports all ASR rules.|
 
 ## File and folder exclusions for ASR rules
 
@@ -265,6 +267,8 @@ Nonconflicting ASR rules don't result in errors. The first rule is applied, and 
 
 If a [mobile device management (MDM) solution](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp) and [Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-group-policy) apply different ASR rule settings to the same device, the Group Policy settings take precedence.
 
+<!-- TODO: SME verification needed. This claim contradicts the configure article (attack-surface-reduction-rules-configure.md) which states "ASR rule settings from Intune or Configuration Manager overwrite any conflicting settings from group policy or PowerShell on startup" (lines 29, 288, 396). The general MDAV configuration reference (configuration-management-reference-microsoft-defender-antivirus.md) supports GP-wins, but it's unclear if ASR rules behave differently. -->
+
 For information about how ASR rule setting conflicts are handled for the available deployment methods in Microsoft Intune, see [Devices managed by Intune](/intune/intune-service/protect/endpoint-security-asr-policy#devices-managed-by-intune).
 
 ## Notifications and alerts for ASR rules
@@ -275,15 +279,15 @@ When an ASR rule in **Block** or **Warn** mode is triggered on a device, a notif
 
 For specific details about notification and alert functionality, see [Alerts and notifications from ASR rule actions](attack-surface-reduction-rules-reference.md#alerts-and-notifications-from-asr-rule-actions).
 
-To view ASR alert activity in the Microsoft Defender portal and on devices in Windows Event Viewer, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md)
+To view ASR alert activity in the Microsoft Defender portal and on devices in Windows Event Viewer, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
 
 <a name='review-attack-surface-reduction-events-in-the-microsoft-365-defender-portal'></a>
 
 ## Monitor ASR rule activity
 
-For complete information, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md)
+For complete information, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
 
-## See also
+## Related content
 
 - [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 - [Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)

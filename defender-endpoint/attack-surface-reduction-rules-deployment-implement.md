@@ -1,13 +1,13 @@
 ---
 title: Enable your ASR rules deployment
-description: Provides guidance to implement your attack surface reduction rules deployment.
+description: Learn how to enable attack surface reduction (ASR) rules by transitioning from Audit to Block mode and expanding to additional deployment rings.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom: asr
+ms.custom: asr, msecd-doc-authoring-1012
 ms.topic: how-to
 ms.collection:
  - m365-security
@@ -15,8 +15,10 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 03/17/2026
+ms.date: 05/04/2026
 search.appverid: met150
+ai-usage: ai-assisted
+#customer intent: As an IT admin, I want to enable ASR rules in Block mode after testing in Audit mode so I can protect my organization from attack surface reduction threats.
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -26,9 +28,9 @@ appliesto:
 
 This article is part of the [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
-When you're implementing attack surface reduction (ASR) rules, move the first test ring into an enabled, functional state.
+After testing ASR rules in Audit mode, transition them to **Block** or **Warn** mode, starting with your first deployment ring.
 
-> :::image type="content" source="media/asr-rules-implementation-steps.png" alt-text="The procedure to implement attack surface reduction rules" lightbox="media/asr-rules-implementation-steps.png":::
+> :::image type="content" source="media/asr-rules-implementation-steps.png" alt-text="Diagram of the steps to implement ASR rules: transition from Audit to Block mode, then expand to additional rings." lightbox="media/asr-rules-implementation-steps.png":::
 
 ## Step 1: Transition ASR from Audit to Block
 
@@ -45,13 +47,13 @@ When you're implementing attack surface reduction (ASR) rules, move the first te
 
 ## Step 2: Expand deployment to ring n + 1
 
-When you're confident you correctly configured attack surface reduction rules for ring 1, you can widen the scope of your deployment to the next ring (ring n + 1).
+When you're confident you correctly configured ASR rules for ring 1, you can widen the scope of your deployment to the next ring (ring n + 1).
 
-In the following deployment process, steps 1 – 3 are essentially the same for each subsequent ring:
+The deployment process for each subsequent ring is:
 
 1. Enable ASR rules in **Audit** mode.
 
-1. Review [ASR rule activity](attack-surface-reduction-rules-monitor.md)
+1. Review [ASR rule activity](attack-surface-reduction-rules-monitor.md).
 
 1. [Create exclusions as necessary](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
@@ -59,13 +61,13 @@ In the following deployment process, steps 1 – 3 are essentially the same for 
 
 1. Set rules to **Block** mode.
 
-1. Review [ASR rule activity](attack-surface-reduction-rules-monitor.md)
+1. Review [ASR rule activity](attack-surface-reduction-rules-monitor.md).
 
 1. [Create exclusions as necessary](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
 1. Disable problematic rules or switch them back to **Audit** mode.
 
-## See also
+## Related content
 
 - [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 - [Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)

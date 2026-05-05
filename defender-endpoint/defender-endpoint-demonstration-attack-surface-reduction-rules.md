@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Endpoint attack surface reduction rules demonstrations
-description: See how attack surface reduction rules block various known threat types.
+description: Learn how to test and demonstrate attack surface reduction (ASR) rules in Microsoft Defender for Endpoint by using test files, scripts, and procedures.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
@@ -12,18 +12,23 @@ ms.collection:
 - demo
 ms.topic: how-to
 ms.subservice: asr
-ms.date: 04/03/2026
+ms.custom: msecd-doc-authoring-1012
+ms.date: 05/04/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
   - Microsoft 365 Apps
+
+#customer intent: As a security administrator, I want to test attack surface reduction rules so that I can verify that they work correctly before deploying them in my environment.
+
 ---
 
 # Attack surface reduction rules demonstrations
 
-This article provides test files, scripts, and procedures to demonstrate Attack surface reduction (ASR) rules in Microsoft Defender for Endpoint.
+This article provides test files, scripts, and procedures to demonstrate attack surface reduction (ASR) rules in Microsoft Defender for Endpoint.
 
 ASR rules target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes). For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
@@ -114,7 +119,7 @@ The following table associates the ASR rule names with the corresponding GUID va
    Set-ExecutionPolicy Unrestricted
    ```
 
-2. Download, extract, and run this [setup script](https://demo.wd.microsoft.com/Content/ASR_SetupScript.zip).
+1. Download, extract, and run this [setup script](https://demo.wd.microsoft.com/Content/ASR_SetupScript.zip).
 
    Or, you can do the following manual steps instead:
 
@@ -152,7 +157,7 @@ You should immediately see an "Action blocked" notification.
 ### Scenario 3: ASR rule blocks untrusted files from running from USB drives
 
 > [!TIP]
-> This ASR rule is available in Windows 10 1709 (October 2017) or later.
+> This ASR rule is available in Windows 10 version 1709 (October 2017) or later.
 
 1. Enable the **Block untrusted and unsigned processes that run from USB** ASR rule by running the following command in an elevated PowerShell window:
 
@@ -185,7 +190,7 @@ You should immediately see an "Action blocked" notification.
 
 Download, extract, and run this [clean-up script](https://demo.wd.microsoft.com/Content/ASR_CFA_CleanupScript.zip).
 
-Or, you run the following command in an elevated PowerShell window to disable all ASR rules:
+Or, you can run the following command in an elevated PowerShell window to disable all ASR rules:
 
 ```powershell
 Add-MpPreference -AttackSurfaceReductionRules_Ids 01443614-cd74-433a-b99e-2ecdc07bfc25,33ddedf1-c6e0-47cb-833e-de6133960387,3b576869-a4ec-4529-8536-b80a7769e899,56a863a9-875e-4185-98a7-b882c64b5ce5,5beb7efe-fd9a-4556-801d-275e5ffc04cc,75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84,92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b,9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2,a8f5898e-1dc8-49a9-9878-85004b8a61e6,b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4,be9ba2d9-53ea-4cdc-84e5-9b1eeee46550,c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb,c1db55ab-c21a-4637-bb3f-a12568109d35,d1e49aac-8f56-4280-b9ba-993a6d77406c,d3e037e1-3eb8-44c8-a917-57927947596d,d4f940ab-401b-4efc-aadc-ad5f3c50688a,e6db77e5-3df2-4cf1-b95a-636979351e5b,26190899-1602-49e8-8b27-eb1d0a1ce869,7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c -AttackSurfaceReductionRules_Actions Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled
@@ -193,10 +198,8 @@ Add-MpPreference -AttackSurfaceReductionRules_Ids 01443614-cd74-433a-b99e-2ecdc0
 
 Clean up **C:\Demo** encryption by running the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe).
 
-## See also
+## Related content
 
-[Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
-
-[Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
-
-[Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
+- [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
+- [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
+- [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)

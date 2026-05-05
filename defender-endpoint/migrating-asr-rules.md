@@ -1,22 +1,26 @@
 ---
 title: Migrating from non-Microsoft HIPS to attack surface reduction rules
-description: Describes how to approach a migration from a non-Microsoft Host Intrusion Prevention System (HIPS) solution into attack surface reduction rules.
+description: Learn how to map rules from a non-Microsoft Host Intrusion Prevention System (HIPS) solution to attack surface reduction rules in Microsoft Defender for Endpoint.
 ms.topic: upgrade-and-migration-article
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 author: chrisda
 ms.author: chrisda
-ms.custom: asr
+ms.custom: asr, msecd-doc-authoring-1012
 ms.subservice: asr
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/03/2026
+ms.date: 05/04/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+
+#customer intent: As a security administrator, I want to map my existing HIPS rules to attack surface reduction rules so that I can migrate to Microsoft Defender for Endpoint.
+
 ---
 
 # Migrating from a non-Microsoft HIPS to attack surface reduction rules
@@ -42,9 +46,9 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
   - ASR rules block attack techniques, not indicators of compromise (IOC).
   - Blocking a specific file extension isn't always useful, because it doesn't prevent a device from compromise. It only partially thwarts an attack until attackers create a new type of extension for the payload.
 - **Other recommended features**:
-  - We highly recommend enabling Microsoft Defender Antivirus, [cloud protection](cloud-protection-microsoft-defender-antivirus.md) and [behavioral blocking](client-behavioral-blocking.md).
-  - We recommend other prevention measures, such as the ASR rule [Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware) (`c1db55ab-c21a-4637-bb3f-a12568109d35`), which provides a greater level of protection against ransomware attacks.
-  - Microsoft Defender for Endpoint monitors many of these registry keys, such as Autostart Extension Points (ASEP) techniques, which trigger specific alerts. The registry keys used require a minimum of Local Admin or Trusted Installer privileges. We recommended using a locked-down environment with minimum administrative accounts or rights. You can enable other system configurations, including disabling the `SeDebugPrivilege` as part of our wider security recommendations.
+  - Microsoft highly recommends enabling Microsoft Defender Antivirus, [cloud protection](cloud-protection-microsoft-defender-antivirus.md) and [behavioral blocking](client-behavioral-blocking.md).
+  - Microsoft recommends other prevention measures, such as the ASR rule [Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware) (`c1db55ab-c21a-4637-bb3f-a12568109d35`), which provides a greater level of protection against ransomware attacks.
+  - Microsoft Defender for Endpoint monitors many of these registry keys, such as Autostart Extension Points (ASEP) techniques, which trigger specific alerts. The registry keys used require a minimum of Local Admin or Trusted Installer privileges. Microsoft recommends using a locked-down environment with minimum administrative accounts or rights. You can enable other system configurations, including disabling the `SeDebugPrivilege` as part of wider security recommendations.
 
 ### Block creation of specific registry keys
 
@@ -61,9 +65,9 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
   - ASR rules block attack techniques, not indicators of compromise (IOC).
   - Blocking a specific file extension isn't always useful, because it doesn't prevent a device from compromise. It only partially thwarts an attack until attackers create a new type of extension for the payload.
 - **Other recommended features**:
-  - We highly recommend enabling Microsoft Defender Antivirus, [cloud protection](cloud-protection-microsoft-defender-antivirus.md) and [behavioral blocking](client-behavioral-blocking.md).
-  - We recommend other prevention measures, including the ASR rule [Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware) (`c1db55ab-c21a-4637-bb3f-a12568109d35`), which provides a greater level of protection against ransomware attacks.
-  - Microsoft Defender for Endpoint monitors many of these registry keys, such as Autostart Extension Points (ASEP) techniques, which trigger specific alerts. The registry keys used require a minimum of Local Admin or Trusted Installer privileges. We recommended using a locked-down environment with minimum administrative accounts or rights. You can enable other system configurations, including disabling the `SeDebugPrivilege` as part of our wider security recommendations.
+  - Microsoft highly recommends enabling Microsoft Defender Antivirus, [cloud protection](cloud-protection-microsoft-defender-antivirus.md) and [behavioral blocking](client-behavioral-blocking.md).
+  - Microsoft recommends other prevention measures, including the ASR rule [Use advanced protection against ransomware](attack-surface-reduction-rules-reference.md#use-advanced-protection-against-ransomware) (`c1db55ab-c21a-4637-bb3f-a12568109d35`), which provides a greater level of protection against ransomware attacks.
+  - Microsoft Defender for Endpoint monitors many of these registry keys, such as Autostart Extension Points (ASEP) techniques, which trigger specific alerts. The registry keys used require a minimum of Local Admin or Trusted Installer privileges. Microsoft recommends using a locked-down environment with minimum administrative accounts or rights. You can enable other system configurations, including disabling the `SeDebugPrivilege` as part of wider security recommendations.
 
 ### Block untrusted programs from running from removable drives
 
@@ -73,9 +77,9 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
 - **Operation**: Process Execution
 - **Examples of Files/Folders, Registry Keys/Values, Processes, or Services**:
 - **Attack surface reduction rules**:
-  - Use the ASR rune named [Block untrusted and unsigned processes that run from USB](attack-surface-reduction-rules-reference.md#block-untrusted-and-unsigned-processes-that-run-from-usb) (`b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4`)
+  - Use the ASR rule named [Block untrusted and unsigned processes that run from USB](attack-surface-reduction-rules-reference.md#block-untrusted-and-unsigned-processes-that-run-from-usb) (`b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4`)
 - **Other recommended features**:
-  - Fore more information about controls for USB devices and other removable media using Defender for Endpoint, see [Device control in Microsoft Defender for Endpoint](device-control-overview.md).
+  - For more information about controls for USB devices and other removable media using Defender for Endpoint, see [Device control in Microsoft Defender for Endpoint](device-control-overview.md).
 
 ### Block Mshta from launching certain child processes
 
@@ -87,9 +91,9 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
   - `cmd.exe`
   - `powershell.exe`
   - `regsvr32.exe`
-- **Attack surface reduction rules**: There's no specific ASR rules to prevent child processes from mshta.exe. This type of control is available in [exploit protection](exploit-protection.md) or [application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
+- **Attack surface reduction rules**: There are no specific ASR rules to prevent child processes from mshta.exe. This type of control is available in [exploit protection](exploit-protection.md) or [Application Control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol).
 - **Other recommended features**:
-  - Enable application control to prevent mshta.exe from running at all. If your organization requires *mshta.exe* for line of business apps, configure a specific Windows Defender Exploit Protection rule, to prevent mshta.exe from launching child processes.
+  - Enable application control to prevent mshta.exe from running at all. If your organization requires *mshta.exe* for line of business apps, configure a specific exploit protection rule to prevent mshta.exe from launching child processes.
 
 ### Block Outlook from launching child processes
 
@@ -102,7 +106,9 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
 - **Attack surface reduction rules**:
   - The ASR rule [Block Office communication application from creating child processes](attack-surface-reduction-rules-reference.md#block-office-communication-application-from-creating-child-processes) (`26190899-1602-49e8-8b27-eb1d0a1ce869`) prevents Office communication apps (Outlook, Skype, and Teams) from launching child processes.
 - **Other recommended features**:
-  - We recommend enabling [PowerShell constrained language mode](https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/) to minimize the attack surface from PowerShell.
+  - Microsoft recommends enabling [PowerShell constrained language mode](https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/) to minimize the attack surface from PowerShell.
+
+<!-- TODO: Verify whether this rule covers Skype and Teams in addition to Outlook. The reference article only mentions Outlook specifically. -->
 
 ### Block Office apps from launching child processes
 
@@ -141,7 +147,8 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
   - `C:\Users*\Desktop**.exe`
   - `C:\Users*\Downloads**.exe`
   - `C:\Users\Public**.exe`
-- **Attack surface reduction rules**: N/A.
+- **Attack surface reduction rules**:
+  - The ASR rule [Block Office applications from creating executable content](attack-surface-reduction-rules-reference.md#block-office-applications-from-creating-executable-content) (`3b576869-a4ec-4529-8536-b80a7769e899`) prevents Office apps from saving malicious executable content to disk.
 
 ### Block Wscript from reading certain types of files
 
@@ -157,7 +164,7 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
     - [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content) (`d3e037e1-3eb8-44c8-a917-57927947596d`)
     - [Block execution of potentially obfuscated scripts](attack-surface-reduction-rules-reference.md#block-execution-of-potentially-obfuscated-scripts) (`5beb7efe-fd9a-4556-801d-275e5ffc04cc`)
 - **Other recommended features**:
-  - By default, the Windows Antimalware Scan Interface (AMSI) can inspect various scripts in real time (for example, PowerShell, Windows Script Host, JavaScript, VBScript, and more). For more information, see [Antimalware Scan Interface (AMSI)](/windows/win32/amsi/antimalware-scan-interface-portal).
+  - By default, the Antimalware Scan Interface (AMSI) can inspect various scripts in real time (for example, PowerShell, Windows Script Host, JavaScript, VBScript, and more). For more information, see [Antimalware Scan Interface (AMSI)](/windows/win32/amsi/antimalware-scan-interface-portal).
 
 ### Block launch of child processes
 
@@ -223,7 +230,7 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
 - **Attack surface reduction rules**:
   - Overall, ASR rules aren't designed to act as an application manager.
 - **Other recommended features**:
-  - To prevent users from launching specific processes or programs, we recommend using [Application Control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol).
+  - To prevent users from launching specific processes or programs, use [Application Control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol).
   - Although it isn't an application control mechanism, you can use Microsoft Defender for Endpoint indicators of compromise (IOCs) for [files](indicator-file.md) and [certificates](indicator-certificates.md) in incident response scenarios.
 
 ### Block unauthorized changes to Microsoft Defender Antivirus configurations
@@ -238,7 +245,7 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
   - and more
 - **Attack surface reduction rules**: ASR rules don't support these scenarios because they're included in Microsoft Defender for Endpoint built-in protection.
 - **Other recommended features**:
-  - [Tamper protection in Microsoft Defender for Endpoint](prevent-changes-to-security-settings-with-tamper-protection.md) prevents unauthorized changes to the registry keys associated with Microsoft Defender AntiVirus. For example:
+  - [Tamper protection in Microsoft Defender for Endpoint](prevent-changes-to-security-settings-with-tamper-protection.md) prevents unauthorized changes to the registry keys associated with Microsoft Defender Antivirus. For example:
   - DisableAntiVirus
   - DisableAntiSpyware
   - DisableRealtimeMonitoring
@@ -247,7 +254,7 @@ This article helps you map common rules to Microsoft Defender for Endpoint. For 
   - DisableIOAVProtection
   - and more
 
-## See also
+## Related content
 
 - [Attack surface reduction FAQ](attack-surface-reduction-faq.yml)
 - [Configure attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md)

@@ -1,6 +1,6 @@
 ---
 title: ASR rules report
-description: Admins can learn about the Attack surface reduction rules report in the Microsoft Defender portal, which includes information about ASR rule detections, configuration, and blocked threats.
+description: View ASR rule detections, device configuration status, and exclusion management in the Attack surface reduction rules report in the Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
@@ -8,14 +8,16 @@ audience: ITPro
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom: asr
+ms.custom: asr, msecd-doc-authoring-1012
 ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/07/2026
+ms.date: 05/04/2026
 search.appverid: met150
+ai-usage: ai-assisted
+#customer intent: As an IT admin, I want to understand the ASR rules report so I can monitor detections, review device configuration, and manage exclusions.
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -44,7 +46,7 @@ For more information about ASR rules, see [Attack surface reduction (ASR) rules 
 
 - Windows
 
-  To appear in the report, Windows Server 2012 R2 and Windows Server 2016 devices devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
+  To appear in the report, Windows Server 2012 R2 and Windows Server 2016 devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 ### Report access permissions
 
@@ -63,7 +65,7 @@ You need to be assigned permissions before you can do the procedures in this art
 
 ## The Attack surface reduction rules report page
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Reports** \> **Endpoints** section \> **Attack surface reduction rules**. Or, to go directly to the **Attack surface reduction rules** report page, use <https://security.microsoft.com/asr>
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Reports** \> **Endpoints** tab \> **Attack surface reduction rules**. Or, to go directly to the **Attack surface reduction rules** report page, use <https://security.microsoft.com/asr>.
 
 The following tabs are available on the **Attack surface reduction rules** report page:
 
@@ -87,7 +89,7 @@ By default, the ASR rule information on the page uses the following filters:
 
 - **Select rules**<sup>\*</sup>: The value **Any** is selected by default, but you can change the value based on the **Rules** filter value:
   - **Standard protection**: Select one or more standard protection rules in the drop down list.
-  - **All**:  Select one or more ASR rules (including standard protection rules) in the drop down list.
+  - **All**: Select one or more ASR rules (including standard protection rules) in the drop down list.
 
 You can use the following extra filters that aren't configured by default by selecting **Add filter**, and then selecting from the available options. After the filter is shown at the top of the tab, you can configure the selections for it:
 
@@ -119,7 +121,7 @@ The details table below the graph contains the following information:
 - **User**: The account responsible for the **Source app** opening the **Detected file** (for example, `SYSTEM` for the NT AUTHORITY\SYSTEM account).
 - **Publisher**: The company that published the app.
 
-Click on a column header to sort by that value.
+Select a column header to sort by that value.
 
 The :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box is available to search entries in the details table by device ID, file name, or process name.
 
@@ -184,7 +186,7 @@ When you select a detection event from the details table on the **Detections** t
 
 To go directly to the **Configuration** tab of the **Attack surface reduction rules** report page, use <https://security.microsoft.com/asr?viewid=configuration>.
 
-:::image type="content" source="media/attack-surface-reduction-rules-report-main-configuration-tab.png" alt-text="Screenshot showing the Configuration tab of the the Shows the ASR rules report main configuration tab" lightbox="media/attack-surface-reduction-rules-report-main-configuration-tab.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-main-configuration-tab.png" alt-text="Screenshot of the Configuration tab of the Attack surface reduction rules report page in the Microsoft Defender portal." lightbox="media/attack-surface-reduction-rules-report-main-configuration-tab.png":::
 
 The **Configuration** tab provides summary and per-device ASR rule configuration details.
 
@@ -212,9 +214,9 @@ The details table shows the following information for each affected device:
 - **Rules turned off**
 - **Rules not applicable**: For example, the [Block Webshell creation for Servers](attack-surface-reduction-rules-reference.md#block-webshell-creation-for-servers) rule on client workstations.
 - **Unknown**
-- **Device ID**: The unique SHA-1 has value identifier for the device in Microsoft Defender for Endpoint. For more information, see [Machine resource type](api/machine.md).
+- **Device ID**: The unique SHA-1 hash value identifier for the device in Microsoft Defender for Endpoint. For more information, see [Machine resource type](api/machine.md).
 
-Click on a column header to sort by that value.
+Select a column header to sort by that value.
 
 Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find a specific device in the details table by **Device** or **Device ID** value. Partial matches are supported.
 
@@ -257,7 +259,7 @@ The details table shows the following information:
 - **Detections**: The total number of detected events for the file. Individual devices can trigger multiple ASR rule events.
 - **Devices**: The number of devices where the detection occurred.
 
-Click on a column header to sort by that value.
+Select a column header to sort by that value.
 
 Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find entries by filename.
 
@@ -282,12 +284,11 @@ When you select one or more file entries from the details table on the **Add exc
 
 :::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-tab.png" alt-text="Screenshot showing the Add exclusions tab of the Attack surface reduction rules report page with file entries selected." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-tab.png":::
 
-## See also
+## Related content
 
 - [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 - [Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)
 - [Test your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-test.md)
 - [Enable attack surface reduction (ASR) rules](attack-surface-reduction-rules-deployment-implement.md)
 - [Manage and monitor your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-operationalize.md)
-- [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
 - [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)

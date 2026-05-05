@@ -6,18 +6,22 @@ ms.localizationpriority: medium
 audience: ITPro
 author: chrisda
 ms.author: chrisda
-ms.date: 05/01/2026
+ms.date: 05/04/2026
 ms.reviewer:
-ms.custom: asr
+ms.custom: asr, msecd-doc-authoring-1012
 ms.subservice: asr
 ms.topic: how-to
 ms.collection:
 - m365-security
 - tier3
 - mde-asr
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+
+#customer intent: As a security administrator, I want to troubleshoot attack surface reduction rules so that I can resolve false positives and false negatives on devices.
+
 ---
 
 # Troubleshoot attack surface reduction (ASR) rules
@@ -70,13 +74,13 @@ e6db77e5-3df2-4cf1-b95a-636979351e5b      1
 In this example, the [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules) are active in [different modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) on the device (2 = **Audit** mode, 1 = **Block** mode).
 
 > [!NOTE]
-> If you used [Group Policy to configure ASR rules](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-group-policy), verify there are no extra characters like quotation marks or spaces in the ASR rule GUID value.
+> If you used [Group Policy to configure ASR rules](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy), verify there are no extra characters like quotation marks or spaces in the ASR rule GUID value.
 
 <a name="use-audit-mode-to-test-the-rule"></a>
 
 <a name="querying-blocking-and-auditing-events"></a>
 
-## Switch misbehaving ASR rules to Block mode for testing
+## Switch misbehaving ASR rules to Audit mode for testing
 
 ASR rules in **Audit mode** don't block files or processes, but the actions that the rule would have taken in **Block** or **Warn** mode are recorded.
 
@@ -88,7 +92,7 @@ Whatever method you used to distribute ASR rules to devices, use that same metho
 > - You were testing another feature and forgot to set the ASR rule back into **Block** or **Warn** mode.
 > - An automated PowerShell script changed the rule mode.
 
-After you configure the rule in **Audit** mde, do the following steps:
+After you configure the rule in **Audit** mode, do the following steps:
 
 1. Do the action on the device that causes the issue. For example, open the file or run the process that isn't blocked but should be blocked (false negative).
 2. [Review the ASR rule activity](attack-surface-reduction-rules-monitor.md).
@@ -108,13 +112,13 @@ After you configure the rule in **Audit** mde, do the following steps:
 
 If the ASR rule still isn't working as expected, do one of the following steps:
 
-- For false positives, and the file or path as an exclusion to the ASR rule. For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
-- Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for network protection. With a Windows E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
-- When you report a problem involving ASR rules to Microsoft, you need to collect and submit diagnostic data to help troubleshoot issue the issue as described in the next section.
+- For false positives, add the file or path as an exclusion to the ASR rule. For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+- Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for ASR rules. With a Windows E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
+- When you report a problem involving ASR rules to Microsoft, you need to collect and submit diagnostic data to help troubleshoot the issue as described in the next section.
 
 <a name="collect-microsoft-defender-anti-malware-protection-diagnostic-data-for-file-submissions"></a>
 
-## Collect diagnostic data for for Microsoft support
+## Collect diagnostic data for Microsoft support
 
 <a name="using-the-mde-client-analyzer"></a>
 
@@ -141,11 +145,11 @@ To use `MpCmdRun.exe -GetFiles` to manually generate the diagnostic log files to
 
 In the `MpSupportFiles.cab` file, the following files are most relevant:
 
-- `MPOperationalEvents.txt`: Contains same level of information found in Event Viewer for the Windows Defender Operational log.
-- `MPRegistry.txt`: Analyze all the current Windows Defender configurations from when you generated the .cab file.
-- `MPLog.txt`: Verbose information about all the actions and operations of Windows Defender.
+- `MPOperationalEvents.txt`: Contains the same level of information found in Event Viewer for the Microsoft Defender Antivirus Operational log.
+- `MPRegistry.txt`: Analyze all the current Microsoft Defender Antivirus configurations from when you generated the .cab file.
+- `MPLog.txt`: Verbose information about all the actions and operations of Microsoft Defender Antivirus.
 
-## Related articles
+## Related content
 
 - [Configure attack surface reduction (ASR) rules and exceptions](attack-surface-reduction-rules-configure.md)
 - [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md)

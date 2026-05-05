@@ -1,6 +1,6 @@
 ---
 title: ASR rules reference
-description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
+description: Learn about each attack surface reduction (ASR) rule in Microsoft Defender for Endpoint, including OS support, deployment methods, alert behavior, and per-rule configuration details.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
@@ -8,14 +8,16 @@ audience: ITPro
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar, ericlaw
-ms.custom: asr
+ms.custom: asr, msecd-doc-authoring-1012
 ms.topic: reference
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/21/2026
+ms.date: 05/04/2026
 search.appverid: met150
+ai-usage: ai-assisted
+#customer intent: As an IT admin, I want detailed per-rule reference information for ASR rules so I can understand OS support, deployment methods, and alert behavior for each rule.
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
@@ -31,7 +33,7 @@ This article is a technical reference for ASR rules that provides the following 
 - [Alerts and notifications from ASR rule actions](#alerts-and-notifications-from-asr-rule-actions)
 - [ASR rule details](#asr-rule-details)
 
-[!Include[Prerelease information](../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 <a name='microsoft-defender-antivirus-exclusions-and-asr-rules'></a>
 
@@ -156,7 +158,7 @@ The following table describes the organization and local alerts that active ASR 
 - EDR alerts are generated only when the cloud protection level on the device is **High plus** or **Zero tolerance**.
 - User notification pop-ups are generated only when the cloud protection level on the device is **High**, **High plus**, or **Zero tolerance**.
 
-<a name='per-rule-descriptions></a>
+<a name='per-rule-descriptions'></a>
 
 ## ASR rule details
 
@@ -195,7 +197,7 @@ This ASR rule prevents apps from saving vulnerable signed drivers on the compute
 #### Block credential stealing from the Windows local security authority subsystem
 
 > [!NOTE]
-> If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) (which we recommend, along with [Credential Guard](/windows/security/identity-protection/credential-guard)):
+> If you enabled [Local Security Authority (LSA) protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) (recommended, along with [Credential Guard](/windows/security/identity-protection/credential-guard)):
 >
 > - This ASR rule isn't required.
 > - This ASR rule doesn't provide extra protection (the ASR rule and LSA protection work similarly).
@@ -222,7 +224,7 @@ If you can't enable LSA protection and/or Credential Guard, you can configure th
 > [!NOTE]
 >
 > - This ASR rule doesn't support **Warn** mode.
-> - This ASR rule produces a large volume of audit events, almost all of which are safe to ignore when the rule is enabled in **Block** mode. You can choose to skip the audit mode evaluation and proceed to block mode deployment. We recommend starting with a small set of devices and gradually expanding to cover the rest.
+> - This ASR rule produces a large volume of audit events, almost all of which are safe to ignore when the rule is enabled in **Block** mode. You can choose to skip the audit mode evaluation and proceed to block mode deployment. Microsoft recommends starting with a small set of devices and gradually expanding to cover the rest.
 > - This ASR rule suppresses alerts and user notification pop-ups for friendly processes and duplicate block actions.
 > - This ASR rule blocks **access to LSASS process memory**. It doesn't block processes from **running**. When this ASR rule blocks processes like `svchost.exe`, it means the process is blocked from accessing LSASS process memory. You can often safely ignore blocking of these processes by this ASR rule.
 > - Some apps enumerate all running processes and attempt to open them with exhaustive permissions. This ASR rule denies the app's open process actions and records the details to the Security log in Windows Event Viewer. This rule can generate numerous noise. If you have an app that simply enumerates LSASS, but has no real effect in functionality, there's no need to add it to the exclusion list. By itself, this event log entry doesn't necessarily indicate a malicious threat.
@@ -246,7 +248,7 @@ Fileless threats use various tactics to stay hidden, to avoid being seen in the 
 > [!NOTE]
 >
 > - This rule isn't supported when deployed via Microsoft Intune to Windows Server 2012 R2 or Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
-> - If you use Microsoft Configuration Manager, we recommend extensive testing of this ASR rule in **Audit** mode before you proceed to **Block** mode. The Configuration Manager client relies heavily on WMI.
+> - If you use Microsoft Configuration Manager, Microsoft recommends extensive testing of this ASR rule in **Audit** mode before you proceed to **Block** mode. The Configuration Manager client relies heavily on WMI.
 > - This rule has limited exclusion support. For details, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
 ### Other ASR rules
@@ -255,7 +257,7 @@ Fileless threats use various tactics to stay hidden, to avoid being seen in the 
 
 This ASR rule prevents attacks by blocking Adobe Reader from creating processes.
 
-Malware can download and launch payloads and break out of Adobe Reader through social engineering or exploits. By blocking Adobe Reader from generating child processes, malware attempting to use Adobe Reader as an attack vector are prevented from spreading.
+Malware can download and launch payloads and break out of Adobe Reader through social engineering or exploits. By blocking Adobe Reader from generating child processes, malware that attempts to use Adobe Reader as an attack vector is prevented from spreading.
 
 - **Microsoft Intune name**: `Block Adobe Reader from creating child processes`
 - **Microsoft Configuration Manager name**: n/a
@@ -348,7 +350,7 @@ Script obfuscation is a common technique that both malware authors and legitimat
 - **Advanced hunting action type**:
   - `AsrObfuscatedScriptAudited`
   - `AsrObfuscatedScriptBlocked`
-- **Dependencies**: Microsoft Defender Antivirus, Anti-malware Scan Interface (AMSI), Cloud Protection
+- **Dependencies**: Microsoft Defender Antivirus, Antimalware Scan Interface (AMSI), Cloud Protection
 
 > [!NOTE]
 >
@@ -516,7 +518,7 @@ This ASR rule blocks web shell script creation on Windows servers running Micros
 - **Microsoft Intune name**: `Block Webshell creation for Servers`
 - **Microsoft Configuration Manager name**: n/a
 - **GUID**: `a8f5898e-1dc8-49a9-9878-85004b8a61e6`
-- **Advanced hunting action type**:
+- **Advanced hunting action type**: n/a
 - **Dependencies**: Microsoft Defender Antivirus
 
 > [!NOTE]
@@ -547,7 +549,7 @@ Most organizations don't require Win32 API calls from VBA macros, even if they u
 > - This rule has limited exclusion support. For details, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 > - To use this ASR rule, you must [enable cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus).
 
-This ASR rule provides an extra layer of protection against ransomware.It uses both client and cloud heuristics to determine whether a file resembles ransomware. This rule doesn't block files that have one or more of the following characteristics:
+This ASR rule provides an extra layer of protection against ransomware. It uses both client and cloud heuristics to determine whether a file resembles ransomware. This rule doesn't block files that have one or more of the following characteristics:
 
 - The file is found to be unharmful in the Microsoft cloud.
 - The file is a valid signed file.
@@ -565,7 +567,7 @@ If blocks on benign, unknown files don't resolve in a timely manner, you can con
   - `AsrRansomwareBlocked`
 - **Dependencies**: Microsoft Defender Antivirus, Cloud Protection
 
-## See also
+## Related content
 
 - [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 - [Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)
@@ -573,6 +575,5 @@ If blocks on benign, unknown files don't resolve in a timely manner, you can con
 - [Enable attack surface reduction (ASR) rules](attack-surface-reduction-rules-deployment-implement.md)
 - [Manage and monitor your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-operationalize.md)
 - [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)
-- [Attack surface reduction (ASR) rules reference](attack-surface-reduction-rules-reference.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 - [Troubleshoot ASR rules](troubleshoot-asr.md)
