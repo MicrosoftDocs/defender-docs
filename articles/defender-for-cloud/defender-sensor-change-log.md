@@ -35,6 +35,20 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 ### Sensor v0.10 (deployed by Helm or Arc for K8s in Preview mode)
 
+**Sensor v0.10.5 — GA**
+
+- **Released:** May 2026
+
+- **What's included:**
+
+  - General Availability of runtime antimalware detection and blocking
+    
+  - General Availability of Bottlerocket OS support
+    
+  - Improved compatibility with Nexus Baremetal clusters
+    
+  - Upgraded Go and related dependencies to address security vulnerabilities and improve runtime stability
+    
 **Sensor v0.10.4 — Preview**
 
 - **Released:** April 2026
@@ -66,6 +80,18 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
     
 ### Sensor v0.9 (AKS 1.35 or by Helm)
 
+**Sensor v0.9.55— GA**
+
+- **Released:** May 2026
+
+- **What's included:**
+
+  - General Availability of Bottlerocket OS support
+    
+  - Improved compatibility with Nexus Baremetal clusters
+    
+  - Upgraded Go and related dependencies to address security vulnerabilities and improve runtime stability
+    
 **Sensor v0.9.53— Preview**
 
 - **Released:** April 2026
@@ -160,8 +186,18 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
   - Improved memory efficiency and reduced CPU consumption  
   - Bug fixes and security enhancements  
     
-### Sensor v0.8 (AKS versions 1.34 and below and Arc for K8s)
+### Sensor v0.8 (AKS versions 1.34 and below)
 
+**Sensor v0.8.51 — GA**
+
+- **Released:** May 2026
+
+- **What's included:**
+
+  - Improved compatibility with Nexus Baremetal clusters
+    
+  - Upgraded Go and related dependencies to address security vulnerabilities and improve runtime stability
+    
 **Sensor v0.8.50 — GA**
 
 - **Released:** April 2026

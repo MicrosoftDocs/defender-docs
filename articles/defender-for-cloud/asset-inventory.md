@@ -191,10 +191,6 @@ securityresources
 
 This article describes how to use the unified cloud asset inventory in Microsoft Defender for Cloud within the Microsoft Defender XDR portal to manage and monitor your multicloud infrastructure.
 
-> [!NOTE]
-> This capability is currently in preview.
-> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
-
 ## Overview
 
 The cloud asset inventory provides a unified, contextual view of cloud infrastructure across Azure, AWS, and GCP environments. It categorizes assets by workload, criticality, and coverage status while integrating health data, device actions, and risk signals into a single interface.
