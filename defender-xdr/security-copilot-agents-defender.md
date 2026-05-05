@@ -68,19 +68,19 @@ To discover and deploy agents in the Microsoft Defender portal:
 
 This section details the Microsoft Security Copilot agents that are available in the Microsoft Defender portal.
 
-### Phishing Triage Agent
+### Security Alert Triage Agent (Preview)
 
-The [Phishing Triage Agent](phishing-triage-agent.md) helps security operations analysts triage and classify user-submitted phishing incidents. The agent operates autonomously, provides a transparent rationale for its classification verdicts in natural language, and continuously learns and improves its accuracy based on feedback from analysts.
+The [Security Alert Triage Agent](security-alert-triage-agent.md) is an autonomous agent that helps security teams triage alerts at scale across multiple workloads. The agent applies AI-driven, dynamic reasoning across evidence to deliver clear verdicts for supported security workloads. This is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency. The agent has been extended to triage a broader set of alerts in Microsoft Defender, including email and collaboration alerts (generally available), and cloud and identity alerts (currently in preview). The agent operates autonomously, provides transparent rationale for its classification verdicts in natural language, and continuously learns and improves its accuracy based on feedback from analysts.
 
 | Attribute | Description |
 |---|---|
 | Identity | Operates in the context of the user you connect to the agent |
-| License | [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)|
-| Permissions | The agent requires these permissions to operate:<ul><li>Security data basics (read)<li>Alerts (manage)<li>Security Copilot (read)<li>Email & collaboration metadata (read)<li>Email & collaboration content (read)</ul> |
-| Plugins | The agent automatically activates these Security Copilot plugins:<ul><li>[Microsoft Defender XDR](security-copilot-in-microsoft-365-defender.md)<li>[Microsoft Threat Intelligence](/defender/threat-intelligence/security-copilot-and-defender-threat-intelligence)<li>[Phishing Triage Agent](phishing-triage-agent.md)|
-| Products | <ul><li>[Security Copilot](/copilot/security/get-started-security-copilot)<li>Microsoft Defender for Office 365 Plan 2</ul> | 
-| Role-based access | [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) Microsoft Entra role is required to set up and manage the agent<br><br>Users with the same permissions as the Phishing Triage Agent can view the agent's activity and results, and provide feedback on the agent's classification verdict. |
-| Trigger | Runs automatically when a new alert is detected, after a user reports an email. |
+| License | Depends on alert types:<ul><li>**Email and collaboration alerts:** [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)<li>**Cloud alerts:** [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) and [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-deployment-overview)<li>**Identity alerts:** [Entra ID P2 license](/entra/fundamentals/licensing), [Microsoft Defender for Identity](/defender-for-identity/what-is), and [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)</ul>|
+| Permissions | The agent requires these permissions to operate, depending on the alert types you want to triage:<ul><li>**All alert types:** Security Copilot (read), Security data basics (read), Alerts (manage)<li>**Email and collaboration alerts:** Email & collaboration metadata (read), Email & collaboration content (read)<li>**Cloud and identity alerts:** No additional permissions required beyond the base permissions</ul> |
+| Plugins | The agent automatically activates these Security Copilot plugins:<ul><li>[Microsoft Defender XDR](security-copilot-in-microsoft-365-defender.md)<li>[Microsoft Threat Intelligence](/defender/threat-intelligence/security-copilot-and-defender-threat-intelligence)<li>[Security Alert Triage Agent](security-alert-triage-agent.md)|
+| Products | <ul><li>[Security Copilot](/copilot/security/get-started-security-copilot)<li>Microsoft Defender for Office 365 Plan 2 (for email and collaboration alerts)<li>Microsoft Defender for Cloud (for cloud alerts)<li>Microsoft Defender for Identity and Microsoft Defender for Cloud Apps (for identity alerts)</ul> | 
+| Role-based access | [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) Microsoft Entra role is required to set up and manage the agent<br><br>Users with the same permissions as the Security Alert Triage Agent can view the agent's activity and results, and provide feedback on the agent's classification verdict. |
+| Trigger | Runs automatically when a new alert is detected for the configured alert types, including user-reported emails (for email and collaboration alerts), cloud security alerts (for cloud alerts), and identity alerts. |
 
 ### Threat Intelligence Briefing Agent
 

@@ -142,11 +142,6 @@ Users who interact with the Security Alert Triage Agent need these permissions:
 | **View agent results** | The same permissions as the agent (or higher), as described in [Security Alert Triage Agent required permissions](#security-alert-triage-agent-required-permissions). |
 | **View agent settings** | **Security Copilot (read)** and **Security data basics (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
 | **Manage agent settings** (set up, pause, remove the agent, and manage agent identity) | **Security Administrator** in **Microsoft Entra ID**. |
-
-These permissions apply to the agent feedback workflow:
-
-| User action | Required permissions |
-|------------|---------------------|
 | **Teach agent through feedback** | The same permissions as the agent (or higher), as described in [Security Alert Triage Agent required permissions](#security-alert-triage-agent-required-permissions). |
 | **View feedback page** | **Security Copilot (read)**, **Security data basics (read)**, and **Email & collaboration metadata (read)** under the **Security operations** permissions group in the Defender portal.<br><br>**OR**<br><br>**Security Administrator** in **Microsoft Entra ID**. |
 | **Reject feedback** | **Security Administrator** in **Microsoft Entra ID**. |
