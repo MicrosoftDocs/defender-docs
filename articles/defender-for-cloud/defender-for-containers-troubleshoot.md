@@ -56,6 +56,22 @@ This article provides troubleshooting guidance for common deployment and operati
   - **Kubernetes API access:** Ensure this component is toggled **On** in the AWS connector settings.
   - **IAM identity mapping:** Ensure the `aws-auth` ConfigMap has been updated to include the Defender for Cloud role, or that an **EKS Access Entry** has been created for the role.
 
+### Vulnerability scan issues
+
+- **Missing vulnerability findings for images in Amazon Elastic Container Registry**
+  - **Symptoms:** Vulnerability findings don't appear for images stored in Amazon Elastic Container Registry.
+  - **Resolution:**
+    - **Registry scanning:** Confirm that the relevant registry scanning capability is enabled for Defender for Containers. In the AWS connector settings, verify that **Registry access** is enabled.
+    - **Further investigation:** If registry scanning is enabled and findings are still missing, open a support case with the registry name, image name, image digest, and expected finding details.
+
+- **Missing vulnerability findings for images running on EKS clusters**
+  - **Symptoms:** Vulnerability findings don't appear for images that are currently running in EKS workloads.
+  - **Resolution:**
+    - **Vulnerability scanning:** Confirm that the relevant vulnerability scanning capability is enabled for Defender for Containers. Runtime vulnerability findings depend on available scan results for the running image, such as registry scan or disk scan results.
+    - **Pod inventory collection:** Confirm that pod inventory collection is enabled for the cluster. Pod inventory can be collected by the Defender sensor or by agentless collection, depending on the deployment configuration.
+    - **Connector and permissions:** Verify that the AWS connector and required cloud permissions are configured correctly.
+    - **Further investigation:** If vulnerability scanning, pod inventory collection, and connector permissions are configured but findings are still missing, open a support case with the cluster name, namespace, workload name, image name, and image digest.
+
 ### Runtime Alerts
 
 - **No control plane alerts generated**
@@ -87,7 +103,8 @@ This article provides troubleshooting guidance for common deployment and operati
   - **Symptoms:** Vulnerability findings don't appear for images that are currently running in GKE workloads.
   - **Resolution:**
     - **Vulnerability scanning:** Confirm that the relevant vulnerability scanning capability is enabled for Defender for Containers. Runtime vulnerability findings depend on available scan results for the running image, such as registry scan or disk scan results.
-    - **Pod inventory collection:** Confirm that pod inventory collection is enabled for the cluster.
+    - **Pod inventory collection:** Confirm that pod inventory collection is enabled for the cluster. Pod inventory can be collected by the Defender sensor or by agentless collection, depending on the deployment configuration.
+    - **Connector and permissions:** Verify that the GCP connector and required cloud permissions are configured correctly.
     - **Further investigation:** If vulnerability scanning and pod inventory collection are enabled but findings are still missing, open a support case with the cluster name, namespace, workload name, image name, and image digest.
 
 # [Arc-enabled Kubernetes](#tab/arc)
