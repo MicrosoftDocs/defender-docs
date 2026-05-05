@@ -95,7 +95,7 @@ The following roles are designated as Sensitive by Microsoft Defender for Identi
 - Read-only Administrator
 - Report Administrator
 
-### CyberArk
+### CyberArk Identity
 
 - Administration Role
 - Cloud Onboarding Admin
@@ -111,7 +111,7 @@ The following roles are designated as Sensitive by Microsoft Defender for Identi
 - Privilege Cloud Session Risk Managers
 - System Administrator
 
-### SailPoint
+### SailPoint Identity Security Cloud
 
 #### Entra Id Roles
 - Global Administrator
@@ -128,7 +128,7 @@ The following roles are designated as Sensitive by Microsoft Defender for Identi
 - Hybrid Identity Administrator
 - Cloud Application Administrator
 
-#### SailPoint Roles
+#### SailPoint Identity Security Cloud Roles
 
 - IdentityNow Administrator
 

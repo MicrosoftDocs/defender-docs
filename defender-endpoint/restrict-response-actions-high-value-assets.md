@@ -1,12 +1,12 @@
 ---
-title: Limit security operations on critical assets in Microsoft Defender for Endpoint
+title: Selective response actions on critical assets in Microsoft Defender for Endpoint
 description: Learn how to onboard Tier-0 and high-value assets with restricted security operations in Microsoft Defender for Endpoint to reduce operational risk.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.reviewer: amibarayev
 ms.localizationpriority: medium
-ms.date: 05/03/2026
+ms.date: 05/04/2026
 ms.topic: concept-article
 ms.custom: msecd-doc-authoring-1012
 #customer intent:As a security engineer, I want to configure which response actions are allowed on high-value assets I'm onboarding to reduce operational risk.
@@ -30,15 +30,15 @@ The Selective Response Actions capability addresses these needs by providing a m
 
 ### How does the feature work?
 
-First, the feature must be enabled on the tenant. See [Enable selective response actions](#enabling-the-selective-response-actions-feature).
+First, the feature must be enabled on the tenant. See [Enable selective response actions](#enable-the-selective-response-actions-feature).
 
-Once the feature is enabled, you use the [Defender deployment tool (DDT)](defender-deployment-tool-windows.md?tabs=restricted-functionality) to create an onboarding package with restricted security operations settings. When you're configuring the package, you choose between full functionality (the default onboarding mode, where all response actions are allowed on the onboarded device) and restricted functionality (where high-impact response actions can be disallowed). If you choose restricted functionality, you can then specify which actions are allowed on the device once it's onboarded.
+Once the feature is enabled, you use the Defender deployment tool (DDT) to create an onboarding package with restricted security operations settings. When you're configuring the package, you choose between full functionality (the default onboarding mode, where all response actions are allowed on the onboarded device) and restricted functionality (where high-impact response actions can be disallowed). If you choose restricted functionality, you can then specify which actions are allowed on the device once it's onboarded.
 
 The following table describes high-impact response actions that you can allow or disallow.
 
 [!INCLUDE [configurable-selective-response-actions](includes/configurable-selective-response-actions.md)]
 
-For detailed instructions on how to use the Defender deployment tool to create onboarding packages with restricted security operations settings, see [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md?tabs=restricted-functionality).
+See [Generate an onboarding package with restricted security operations settings](#generate-an-onboarding-package-with-restricted-security-operations-settings) for details about how to configure such a package.
 
 > [!NOTE]
 > Devices onboarded in restricted mode do not support Live Response script execution - this is disabled by design, even if Live Response is enabled. Restricted mode does not impact detection, alerting, or sensor coverage. All alerts, timelines, and threat detections continue to function as expected.
@@ -57,9 +57,9 @@ For detailed instructions on how to use the Defender deployment tool to create o
    | Windows 11 24H2 | [KB5062660](https://support.microsoft.com/topic/july-22-2025-kb5062660-os-build-26100-4770-preview-9c5bc200-52b6-4c1a-be70-80df6bbfe9c3) |
    | Windows 11 25H2 | All |
 
-- To use restricted mode, the feature switch **Allow restricted security operations during onboarding** must be enabled. See [Enabling the selective response actions feature](#enabling-the-selective-response-actions-feature).
+- To use restricted mode, the feature switch **Allow restricted security operations during onboarding** must be enabled. See [Enable the selective response actions feature](#enable-the-selective-response-actions-feature).
 
-## Enabling the selective response actions feature
+## Enable the selective response actions feature
 
 To use the selective response actions capability, enable the feature in the Microsoft Defender portal:
 
@@ -69,7 +69,50 @@ To use the selective response actions capability, enable the feature in the Micr
 
 :::image type="content" source="./media/restrict-response-actions-high-value-assets/enable-selective-response-actions.png" alt-text="Screenshot of the Advanced features page showing Allow restricted operations during onboarding enabled." lightbox="./media/restrict-response-actions-high-value-assets/enable-selective-response-actions.png":::
 
-Once enabled, the restricted mode option becomes available when creating Defender deployment packages for Windows through the [Defender deployment tool (DDT)](defender-deployment-tool-windows.md?tabs=restricted-functionality). You can then create deployment packages that specify which security operations to allow on the devices you're onboarding. Once the deployment package has been generated, use it to onboard the device.
+Once enabled, the restricted mode option becomes available when creating Defender deployment packages for Windows through the Defender deployment tool (DDT). You can then create deployment packages that specify which security operations to allow on the devices you're onboarding. See [Generate an onboarding package with restricted security operations settings](#generate-an-onboarding-package-with-restricted-security-operations-settings) for details. Once the deployment package has been generated, use it to [onboard the device](#onboard-a-device-with-restricted-response-actions).
+
+## Generate an onboarding package with restricted security operations settings
+
+1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
+
+1. In the Step 1 dropdown menu, choose **Windows**.
+
+1. Under **Deploy by downloading and applying packages or files**, select the **Onboard** button.
+
+   :::image type="content" source="./media/restrict-response-actions-high-value-assets/defender-deployment-tool-windows-download-package.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/restrict-response-actions-high-value-assets/defender-deployment-tool-windows-download-package.png":::
+
+1. The **Generate Defender deployment tool with an access key** page appears.
+
+   :::image type="content" source="./media/restrict-response-actions-high-value-assets/configure-deployment-package.png" alt-text="Screenshot showing the how to configure a new deployment package." lightbox="./media/restrict-response-actions-high-value-assets/configure-deployment-package.png":::
+
+   * Provide a name for the package. Be sure to create a name that's unique and descriptive.
+
+   * Set an expiration date for the package. You can set the expiration date for any time up to a year. It's recommended to make the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use.
+
+   * Select **Restricted**.
+
+      A list of high-impact security operations appears. Select the boxes next to the operations you want to allow on the onboarded device, and unselect the boxes next to the operations you want to disallow.
+      
+      :::image type="content" source="./media/restrict-response-actions-high-value-assets/security-operations-mode-menu.png" alt-text="Screenshot showing the security operations mode options in the Microsoft Defender portal." lightbox="./media/restrict-response-actions-high-value-assets/security-operations-mode-menu.png":::
+
+      > [!NOTE]
+      > Devices onboarded in restricted mode don't support the execution of Live Response scripts, even when **Live Response** is enabled in these settings. This restriction is enforced by design to ensure script-based actions remain blocked, maintaining a higher level of protection for sensitive assets.
+      > 
+      > Restricted mode with all response actions allowed **is not** equivalent to full functionality. When you onboard a device using a restricted package, running scripts is disabled by design, whereas onboarding with a full functionality package provides unrestricted access to all supported response actions and capabilities.
+
+   * When you're done configuring the package, select **Generate**.
+
+1. When the package is ready, you'll see a page that has the package access key and a download button, similar to the following image.
+
+   :::image type="content" source="./media/restrict-response-actions-high-value-assets/deployment-package-download-page.png" alt-text="Screenshot showing the key that is generated for the deployment tool package." lightbox="./media/restrict-response-actions-high-value-assets/deployment-package-download-page.png":::
+
+   Copy the key and save it, as it will be needed with the deployment tool.
+
+   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
+
+## Onboard a device with restricted response actions
+
+Once you've generated and downloaded a deployment package with the desired restricted security operations settings, use the package to onboard the device as described in [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md#deploy-defender-endpoint-security-on-devices).
 
 ## How to check the security operations status of onboarded devices
 
