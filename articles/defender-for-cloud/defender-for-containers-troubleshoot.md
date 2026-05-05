@@ -117,7 +117,7 @@ This article provides troubleshooting guidance for common deployment and operati
 
 ## Verification via alert simulation
 
-Use the [Kubernetes alerts simulation tool](containers-alerts.md#kubernetes-alerts-simulation-tool) to verify that Defender for Containers can generate alerts for your cluster and send them to Defender for Cloud.
+Use the [Kubernetes alerts simulation tool](alerts-containers.md#kubernetes-alerts-simulation-tool) to verify that Defender for Containers can generate alerts for your cluster and send them to Defender for Cloud.
 
 ## Related content
 
