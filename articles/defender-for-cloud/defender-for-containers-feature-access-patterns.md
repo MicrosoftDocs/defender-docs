@@ -28,7 +28,7 @@ Microsoft Defender for Containers uses multiple connectivity patterns to collect
 - **Kubernetes API access**: Connections from Microsoft Defender for Cloud to Kubernetes API endpoints for cluster discovery, posture assessment, and risk analysis.
 - **Sensor outbound connectivity**: Runtime telemetry sent from Kubernetes worker nodes to Microsoft Defender for Cloud for threat detection.
 - **Cloud-native audit log ingestion**: Ingestion of Kubernetes audit logs from cloud-native logging services for control plane threat detection.
-- **Cloud-provider access**: Connections from Microsoft Defender for Cloud to cloud-provider APIs for resource discovery, posture assessment, inventory, and risk analysis. (ask dor)
+- **Cloud-provider access**: Connections from Microsoft Defender for Cloud to cloud-provider APIs for resource discovery, posture assessment, inventory, and risk analysis.
 
 ## Vulnerability assessment features
 
@@ -63,8 +63,8 @@ The following table summarizes posture management features and their access patt
 |---|---|---|---|---|---|
 | Agentless discovery for Kubernetes | AKS, EKS, GKE | Kubernetes API access | Containers; CSPM | Cloud-provider access | Supported |
 | Comprehensive inventory capabilities | Registries: ACR, ECR, GAR, GCR, Docker Hub, JFrog Artifactory. Clusters: AKS, EKS, GKE | Kubernetes API access | Containers; CSPM | Kubernetes API access and cloud-provider access | Supported by enabling a restricted public API endpoint |
-| Attack path analysis | Registries: ACR, ECR, GAR, GCR, Docker Hub, JFrog Artifactory. Clusters: AKS, EKS, GKE | Kubernetes API access | Defender CSPM | Kubernetes API access and cloud-provider access | Inventory capabilities is a prerequisite |
-| Enhanced risk-hunting | Registries: ACR, ECR, GAR, GCR, Docker Hub, JFrog Artifactory. Clusters: AKS, EKS, GKE | Kubernetes API access | Containers; CSPM | Kubernetes API access and cloud-provider access | Inventory capabilities is a prerequisite |
+| Attack path analysis | Registries: ACR, ECR, GAR, GCR, Docker Hub, JFrog Artifactory. Clusters: AKS, EKS, GKE | Kubernetes API access | Defender CSPM | Kubernetes API access and cloud-provider access | Inventory capabilities are a prerequisite |
+| Enhanced risk-hunting | Registries: ACR, ECR, GAR, GCR, Docker Hub, JFrog Artifactory. Clusters: AKS, EKS, GKE | Kubernetes API access | Containers; CSPM | Kubernetes API access and cloud-provider access | Inventory capabilities are a prerequisite |
 | Control plane hardening | Registries: ACR. Clusters: AKS, EKS, GKE | Enabled with Containers plan | Free | Cloud-provider access | Supported |
 | Workload hardening | AKS, EKS, GKE | Azure Policy for Kubernetes | Free | Kubernetes API access | Supported by enabling a restricted public API endpoint |
 | CIS Kubernetes Service | AKS, EKS, GKE | Assigned as a security standard | Containers; CSPM | Kubernetes API access | Supported by enabling a restricted public API endpoint |

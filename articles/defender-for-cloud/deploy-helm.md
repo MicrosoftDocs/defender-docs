@@ -92,7 +92,7 @@ Depending on your deployment type, follow the relevant instructions to install t
   >-o tsv
   >```
 
-- Your environment may have policy assignments that can cause the generally available version of the Sensor to deploy. We recommend checking for and removing the conflicting policies before proceeding with the installation:
+- Your environment might have policy assignments that can cause the generally available version of the sensor to deploy. We recommend checking for and removing the conflicting policies before proceeding with the installation:
 
    The policy assignment ID is `64def556-fbad-4622-930e-72d1d5589bf5`. 
 
@@ -136,7 +136,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional paramete
 
 - Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) and [logged in](/cli/azure/reference-index?view=azure-cli-latest&preserve-view=true) to an account with resource group owner role for the security connector.
 
-- Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
+- Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to Defender for Cloud.
 
 - For EKS clusters that run AWS Bottlerocket nodes, Defender for Containers sensor support is available when you deploy the sensor by using Helm.
 
@@ -181,7 +181,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional paramete
     > [!NOTE]
     > This script might create a Log Analytics workspace in your Azure account.
     >
-    > This script tests for an Arc-managed deployment of the Defender for Containers sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
+    > This script tests for an Arc-managed deployment of the Defender for Containers sensor. If one exists, the script removes it prior to deploying the sensor by using Helm.
       
 ---
 

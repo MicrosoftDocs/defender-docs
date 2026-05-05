@@ -59,7 +59,7 @@ Defender for Containers components support outbound connectivity through configu
 
 When Defender for Cloud protects a cluster hosted in Azure Kubernetes Service, it collects Kubernetes audit log data natively through Azure infrastructure without requiring additional agents or configuration. To get the full protection offered by Microsoft Defender for Containers, you need these components:
 
-- **Defender sensor:** A lightweight DaemonSet deployed on AKS nodes that collects runtime telemetry (Kubernetes events, process, and network data) by using [eBPF technology](https://ebpf.io/). It sends the telemetry securely to Defender for Cloud for runtime threat protection. The sensor registers with a Log Analytics workspace and acts as a data pipeline. However, the audit log data isn't stored in the Log Analytics workspace. The Defender sensor is deployed as an AKS Security profile, natively integrated in AKS Resource Provider (RP).
+- **Defender sensor:** A lightweight DaemonSet deployed on AKS nodes that collects runtime telemetry (Kubernetes events, process, and network data) by using [eBPF technology](https://ebpf.io/). It sends the telemetry securely to Defender for Cloud for runtime threat protection. The sensor registers with a Log Analytics workspace and acts as a data pipeline. However, the audit log data isn't stored in the Log Analytics workspace. The Defender sensor is deployed as an AKS Security profile, natively integrated into AKS Resource Provider (RP).
 
 > [!NOTE]
 > When you configure the Defender sensor on an AKS cluster, it triggers a reconciliation process. This process happens as part of the Defender for Containers plan and is expected behavior.
@@ -80,8 +80,8 @@ When Defender for Cloud protects a cluster hosted in Azure Kubernetes Service, i
 | Pod name | Namespace | Kind | Short description | Capabilities | Resource limits | Egress required |
 |--|--|--|--|--|--|--|
 | microsoft-defender-collector-ds-* | kube-system | [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) | Collects runtime telemetry (Kubernetes events, process, and network data) from nodes by using eBPF technology and sends it securely to Defender for Cloud. | SYS_ADMIN, <br>SYS_RESOURCE, <br>SYS_PTRACE | memory: 296Mi<br> <br> cpu: 360m | No |
-| microsoft-defender-collector-misc-* | kube-system | [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) | Collects cluster-level inventory and security events that aren't bound to specific nodes. | N/A | memory: 64Mi <br> <br>Cpu: 60m | No |
-| microsoft-defender-publisher-ds-* | kube-system | [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) | Publishes collected telemetry to Microsoft Defender for Containers backend service for processing and analysis. | N/A | memory: 200Mi <br> <br> Cpu: 60m | Https 443 <br> <br> Learn more about the [outbound access prerequisites](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers) |
+| microsoft-defender-collector-misc-* | kube-system | [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) | Collects cluster-level inventory and security events that aren't bound to specific nodes. | N/A | memory: 64Mi <br> <br>CPU: 60m | No |
+| microsoft-defender-publisher-ds-* | kube-system | [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) | Publishes collected telemetry to Microsoft Defender for Containers backend service for processing and analysis. | N/A | memory: 200Mi <br> <br> CPU: 60m | Https 443 <br> <br> Learn more about the [outbound access prerequisites](/azure/aks/outbound-rules-control-egress#microsoft-defender-for-containers) |
 
 \* You can't configure resource limits. Learn more about [Kubernetes resources limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#resource-units-in-kubernetes).
 

@@ -24,7 +24,7 @@ You can use exclusion tags on the following cluster types:
 
 ## Prerequisites
 
-- [Defender for Containers is enabled](defender-for-containers-enable-plan.md) with automatic provisioning turned on on.
+- [Defender for Containers is enabled](defender-for-containers-enable-plan.md) with automatic provisioning turned on.
 
 ## Exclude a cluster from automatic sensor deployment
 
