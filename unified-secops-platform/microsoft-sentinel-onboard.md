@@ -44,7 +44,7 @@ The Microsoft Defender portal supports a single Microsoft Entra tenant and the c
 
 ### Microsoft Sentinel prerequisites
 
-To onboard and use Microsoft Sentinel in the Defender portal, you must have the following resources and access:
+To onboard and use Microsoft Sentinel in the Defender portal for a single workspace, you need the following resources and access:
 
 - A Log Analytics workspace that has Microsoft Sentinel enabled
 
