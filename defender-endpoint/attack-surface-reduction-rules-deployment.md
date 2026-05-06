@@ -52,7 +52,7 @@ Use the following articles to plan, test, implement, and manage your ASR rules d
 
 1. [Plan ASR rules deployment](attack-surface-reduction-rules-deployment-plan.md): Determine infrastructure requirements, select business units and champions, and define team roles.
 1. [Test ASR rules](attack-surface-reduction-rules-deployment-test.md): Configure rules in **Audit** mode, review reports, and add exclusions.
-1. [Enable ASR rules](attack-surface-reduction-rules-deployment-implement.md): Transition rules from **Audit** to **Block** mode, and expand to additional deployment rings.
+1. [Enable ASR rules](attack-surface-reduction-rules-deployment-implement.md): Transition rules from **Audit** to **Block** mode, and expand to other deployment rings.
 1. [Manage and monitor ASR rules](attack-surface-reduction-rules-deployment-operationalize.md): Monitor ongoing activity, manage false positives, and use advanced hunting.
 
 ## Related content

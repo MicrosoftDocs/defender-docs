@@ -38,14 +38,14 @@ As illustrated in the following diagram, begin your ASR rules deployment with ri
 
 ## Assess and evaluate rules before deployment
 
-In Defender for Endpoint Plan 2, [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) surfaces ASR rule–related security recommendations that can provide high-level impact indicators (for example, whether audit activity has been observed across devices).
+In Defender for Endpoint Plan 2, [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) surfaces ASR rule–related security recommendations that can provide high-level impact indicators (for example, whether audit activity was observed across devices).
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Exposure management** \> **Recommendations** (or directly to the **Security recommendations** page at <https://security.microsoft.com/exposure-recommendations>). On the **Security recommendations** page, select an ASR rule to open the details flyout, and then select the **Devices** tab. The **User impact** value shows the percentage of devices that can accept a new policy enabling the rule in block mode without adversely affecting productivity.
 
 :::image type="content" source="media/asrrecommendation.png" alt-text="Screenshot of the Devices tab of an ASR rule security recommendation showing user impact." lightbox="media/asrrecommendation.png":::
 
 > [!NOTE]
-> To accurately assess the potential effect of an ASR rule before enabling it in **Block** or **Warn** mode, you must review **Audit** mode telemetry and detailed reporting, such as the [Attack surface reduction rule report](attack-surface-reduction-rules-report.md) or [Advanced hunting data](attack-surface-reduction-rules-monitor.md#asr-rule-events-in-advanced-hunting).
+> To accurately assess the potential effect of an ASR rule before enabling it in **Block** or **Warn** mode, you must review **Audit** mode data and detailed reporting, such as the [Attack surface reduction rule report](attack-surface-reduction-rules-report.md) or [Advanced hunting data](attack-surface-reduction-rules-monitor.md#asr-rule-events-in-advanced-hunting).
 
 ## Step 1: Test all ASR rules in Audit mode
 

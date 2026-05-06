@@ -1,6 +1,6 @@
 ---
 title: Enable your ASR rules deployment
-description: Learn how to enable attack surface reduction (ASR) rules by transitioning from Audit to Block mode and expanding to additional deployment rings.
+description: Learn how to enable attack surface reduction (ASR) rules by transitioning from Audit to Block mode and expanding to other deployment rings.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium

@@ -52,7 +52,7 @@ To take full advantage of ASR rules and reporting, use a Microsoft 365 E5, Windo
 
 How you select the first business unit to receive ASR rules in the [testing phase](attack-surface-reduction-rules-deployment-test.md) depends on the following factors:
 
-- Size of the business unit (smaller is usually easier to manage)
+- Size of the business unit (smaller is easier to manage)
 - Availability of ASR rule champions
 - Distribution and usage of affected software. For example:
   - Software
@@ -62,7 +62,7 @@ How you select the first business unit to receive ASR rules in the [testing phas
 
 Your business needs might clearly dictate one of the following choices:
 
-- Include multiple business units to get a broad sampling of software, shared folders, scripts, macros, and line of business apps that might be affected by ASR rules.
+- Include multiple business units to get a broad sampling of software, shared folders, scripts, macros, and line of business apps that ASR rules might affect.
 - Limit the initial scope to a single business unit, work through all the issues in that business unit, then repeat the rollout to other business units individually.
 
 ## Step 2: Identify ASR rule champions
@@ -82,7 +82,7 @@ Take inventory of the approved apps in your organization. You can use tools like
 
 ## Step 4: Define reporting and response ASR rules team roles and responsibilities
 
-Clearly articulating roles and responsibilities of persons responsible for monitoring and communicating ASR rules status and activity is a core activity of attack surface reduction maintenance. Therefore, it's important to determine:
+Clearly articulate the roles and responsibilities for monitoring and communicating ASR rule status and activity. Therefore, it's important to determine:
 
 - Who's responsible for gathering reports.
 - How and with whom reports are shared.
