@@ -3,12 +3,12 @@ title: Install Defender for Containers sensor using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
-ms.date: 02/18/2026
+ms.date: 05/06/2026
 ms.author: elkrieger
 ai-usage: ai-assisted
 ---
 
-# Install Defender for Containers sensor by using Helm
+# Install Defender for Containers sensor using Helm
 
 This article describes how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters by using Helm. You learn about prerequisites, enabling Defender for Containers, and step-by-step deployment instructions for different environments.
 
@@ -20,26 +20,45 @@ Defender for Containers supports multiple deployment models for deploying the se
 
 ## General prerequisites
 
-Implement all prerequisite requirements for the Defender for Containers sensor as described in the [Defender sensor network requirements](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-aks%23network-requirements).
-
-- Enable Defender for Containers in the target subscription or security connector:
-    - Azure subscription: [Enable Defender for Containers on AKS via portal](defender-for-containers-azure-enable-portal.md)
-    - Amazon Web Services (AWS): [Enable Defender for Containers on AWS (EKS) via portal](defender-for-containers-aws-enable-portal.md)
-    - Google Cloud Project (GCP): [Enable Defender for Containers on GCP (GKE) via portal](defender-for-containers-gcp-enable-portal.md)
-    - Arc-enabled Kubernetes (ARC): [Enable Defender for Containers on Arc-enabled Kubernetes via portal](defender-for-containers-arc-enable-portal.md)
+- [Enable Defender for Containers in the target subscription or security connector](defender-for-containers-enable-plan.md).
 
 - Ensure the following components of the Defender for Containers plan are enabled:
    - Defender sensor
    - Security findings
    - Registry access
 
+## Network requirements
+
+The Defender for Containers sensor requires outbound connectivity to Microsoft Defender for Cloud. 
+
+### AKS clusters
+
+[!INCLUDE[defender-for-container-prerequisites-aks](includes/defender-for-containers-network-requirements-aks.md)]
+
+### EKS, GKE, and Arc-enabled Kubernetes clusters
+
+[!INCLUDE[defender-for-container-prerequisites-arc-eks-gke](includes/defender-for-containers-network-requirements-arc-eks-gke.md)]
+  
+#### Private GKE clusters
+
+Private GKE clusters must allow outbound HTTPS (TCP 443) access to Microsoft Defender for Cloud endpoints.
+
+If required, configure firewall rules to allow egress from cluster nodes:
+
+```bash
+gcloud compute firewall-rules create allow-azure-defender \
+    --allow tcp:443 \
+    --source-ranges <cluster-cidr> \
+    --target-tags <node-tags>
+```
+
 ## Install the sensors Helm chart
 
 Depending on your deployment type, follow the relevant instructions to install the Defender for Containers sensor by using Helm:
 
-### [AKS & AKS Automatic](#tab/aks)
+# [AKS & AKS Automatic](#tab/aks)
 
-#### Prerequisites
+### Prerequisites
 
 **AKS Automatic Only**: Run the following command for AKS Automatic:
 
@@ -73,7 +92,7 @@ Depending on your deployment type, follow the relevant instructions to install t
   >-o tsv
   >```
 
-- Your environment may have policy assignments that can cause the generally available version of the Sensor to deploy. We recommend checking for and removing the conflicting policies before proceeding with the installation:
+- Your environment might have policy assignments that can cause the generally available version of the sensor to deploy. We recommend checking for and removing the conflicting policies before proceeding with the installation:
 
    The policy assignment ID is `64def556-fbad-4622-930e-72d1d5589bf5`. 
 
@@ -86,7 +105,7 @@ Depending on your deployment type, follow the relevant instructions to install t
    ```
    This command removes resource group and subscription level policies for setting up the generally available (GA) version of Defender for Containers. It can affect clusters other than the one you're configuring.
 
-#### Installation
+### Installation
 
 Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/install_defender_sensor_aks.sh) script to install the Defender for Containers sensor and remove any existing deployment.
 
@@ -109,15 +128,15 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional paramete
 > [!NOTE]
 > This script sets a new `kubeconfig` context and might create a Log Analytics workspace in your Azure account.
 
-### [EKS and GKE](#tab/eks-and-gke)
+# [EKS and GKE](#tab/eks-and-gke)
 
-## Prerequisites
+### Prerequisites
 
 - Helm version 3.8 or later (the available version supports OCI)
 
 - Azure CLI must be [installed](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) and [logged in](/cli/azure/reference-index?view=azure-cli-latest&preserve-view=true) to an account with resource group owner role for the security connector.
 
-- Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to your Defender for Cloud.
+- Ensure the cluster account is connected to Microsoft Defender for Cloud. Learn how to [connect your AWS account](quickstart-onboard-aws.md) or [connect your GCP project](quickstart-onboard-gcp.md) to Defender for Cloud.
 
 - For EKS clusters that run AWS Bottlerocket nodes, Defender for Containers sensor support is available when you deploy the sensor by using Helm.
 
@@ -126,17 +145,17 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional paramete
 - Run the [az resource show](/cli/azure/resource#az-resource-show) CLI command to get the security connector resource ID for the account your cluster belongs to.
 
     For example:
-     ```bash
+     ```azurecli
         az resource show \
         --name <connector-name> \
         --resource-group <resource-group-name> \
         --resource-type "Microsoft.Security/securityConnectors" \
         --subscription <subscription-id> \
         --query id -o tsv
-    ```
+     ```
      In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
 
-## Installation
+### Installation
 
 1. Use the [install_defender_sensor_mc.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/install_defender_sensor_mc.sh) script to install the Defender for Containers sensor and remove any existing deployment.
 
@@ -162,7 +181,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional paramete
     > [!NOTE]
     > This script might create a Log Analytics workspace in your Azure account.
     >
-    > This script tests for an Arc-managed deployment of the Defender for Containers sensor. If one exists, the script removes it prior to deploying the sensor by using helm.
+    > This script tests for an Arc-managed deployment of the Defender for Containers sensor. If one exists, the script removes it prior to deploying the sensor by using Helm.
       
 ---
 
