@@ -14,12 +14,11 @@ The following table lists the service parameters and limits for the Microsoft Se
 | Category                                         | Parameter/limit                              |
 |--------------------------------------------------|----------------------------------------------|
 | Workspaces per tenant                             | 20 workspaces                |
-| Data ingestion per minute to a data collection endpoint    | 50 GB                              |
-| Default ingestion volume rate threshold in LALog Analytics workspaces | 6 GB/min uncompressed   |
-| Ingestion requests per minute to a data collection endpoint | 15,000                            |
 | Lake Retention (Asset data)                       | 12 years                                    |
 | Lake Retention (Aux)                              | 12 years                                    |
 | Maximum size for field values (Log Analytics)     | 32 KB (truncated above the limit)           |
 | Table setup latency during onboarding              | 90-120 minutes                             |
 | New table setup latency                            | 90-120 minutes                             |
 | Switching data between tiers latency               | 90-120 minutes                             |
+
+For information on Log Analytics workspace ingestion limits, see [Log Analytics workspaces, data collection volume and retention](/azure/azure-monitor/fundamentals/service-limits#logs-ingestion-api).
