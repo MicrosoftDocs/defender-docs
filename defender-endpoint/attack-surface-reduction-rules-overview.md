@@ -8,7 +8,7 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
 ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1012
-ms.topic: concept
+ms.topic: concept-article
 ms.collection:
 - m365-security
 - tier2
@@ -194,7 +194,7 @@ The following table summarizes the available methods. For detailed configuration
 ## File and folder exclusions for ASR rules
 
 > [!IMPORTANT]
-> Excluding files or folders can severely reduce ASR rule protection. Excluded files are allowed to run, and no reports or events about the file are recorded. If ASR rules detect files that shouldn't be detected, [use Audit mode to test the rule](attack-surface-reduction-rules-deployment-test.md#step-1-test-attack-surface-reduction-rules-using-audit).
+> Excluding files or folders can severely reduce ASR rule protection. Excluded files are allowed to run, and no reports or events about the file are recorded. If ASR rules detect files that shouldn't be detected, [use Audit mode to test the rule](attack-surface-reduction-rules-deployment-test.md#step-1-test-all-asr-rules-in-audit-mode).
 
 You can exclude specific **files** and **folders** from being evaluated by ASR rules. Even if an ASR rule determines the file or folder contains malicious behavior, it doesn't block the excluded files from running.
 

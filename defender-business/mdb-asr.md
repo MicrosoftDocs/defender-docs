@@ -4,7 +4,7 @@ description: Learn about attack surface reduction capabilities in Microsoft Defe
 author: chrisda
 ms.author: chrisda
 ms.date: 05/04/2026
-ms.topic: concept
+ms.topic: concept-article
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.collection:

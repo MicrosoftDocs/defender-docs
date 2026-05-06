@@ -146,10 +146,10 @@ Use `Set-MpPreference` or `Get-MpPreference` in the [Defender PowerShell Module]
 
 |Exclusion Type|Reference|
 |---|---|
-|Custom antivirus exclusion|See [exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
-|Attack Surface Reduction only exclusions|See [Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-microsoft-configuration-manager)|
-|Attack surface reduction rule per rule exclusion|Not supported|
-|Controlled Folder Access exclusions|See [Microsoft Configuration Manager](enable-controlled-folders.md#microsoft-configuration-manager)|
+|Custom antivirus exclusion|For more information, see [exclusion settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#exclusion-settings)|
+|Global exclusions for attack surface reduction (ASR) rules only|For more information, see [Configure ASR rules and global ASR rule exclusions in Microsoft Configuration Manager](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-global-asr-rule-exclusions-in-microsoft-configuration-manager)|
+|Per-ASR rule exclusion|Not supported|
+|Controlled Folder Access exclusions|For more information, see [Microsoft Configuration Manager](enable-controlled-folders.md#microsoft-configuration-manager)|
 |Automation folder exclusions|Not supported|
 
 ## Manage exclusions for Linux

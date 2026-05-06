@@ -13,13 +13,11 @@ ms.collection:
 ms.custom: msecd-doc-authoring-1012
 ms.date: 05/04/2026
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to understand the attack surface reduction capabilities in Microsoft Defender for Endpoint so that I can determine which features to enable to protect my organization.
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
-
-#customer intent: As a security administrator, I want to understand the attack surface reduction capabilities in Microsoft Defender for Endpoint so that I can determine which features to enable to protect my organization.
-
 ---
 
 # Attack surface reduction capabilities in Microsoft Defender for Endpoint

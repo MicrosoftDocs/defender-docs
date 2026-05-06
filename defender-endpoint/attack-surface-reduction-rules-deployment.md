@@ -17,13 +17,12 @@ ms.collection:
  - mde-asr
 ms.date: 05/04/2026
 ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to plan and deploy ASR rules across my organization so that I can block advanced threats like human-operated ransomware.
 search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ---
-
-#customer intent: As a security administrator, I want to plan and deploy ASR rules across my organization so that I can block advanced threats like human-operated ransomware.
 
 # Attack surface reduction (ASR) rules deployment guide
 

@@ -12,15 +12,14 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1012
+ms.date: 05/04/2026
+ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to configure attack surface reduction rules on devices so that I can block risky software behaviors that attackers exploit.
 appliesto:
 - Microsoft Defender for Endpoint Plan 1 and Plan 2
 - Microsoft Defender XDR
 - Microsoft Defender Antivirus
-ms.date: 05/04/2026
-ai-usage: ai-assisted
 ---
-
-#customer intent: As a security administrator, I want to configure attack surface reduction rules on devices so that I can block risky software behaviors that attackers exploit.
 
 # Configure attack surface reduction (ASR) rules and exclusions
 
