@@ -21,7 +21,7 @@ For example, a **DNS Reconnaissance** alert could be triggered by a security sca
 
 ## How to add detection exclusions
 
-> [NOTE!]
+> [!NOTE]
 > When replacing an existing exclusion with an alert tuning rule, identify the detection associated with the excluded entity and map it to the corresponding detector in alert tuning. After creating the tuning rule, verify that the detector appears under Alert tuning in the Microsoft Defender portal to ensure that the intended alert scope is preserved.
 
 
