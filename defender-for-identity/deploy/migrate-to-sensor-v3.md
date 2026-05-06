@@ -18,13 +18,13 @@ You can migrate your Defender for Identity sensors from v2.x to v3.x directly fr
 
 ## Prerequisites
 
-To migrate, each server must be:
+To migrate, each server must meet the following requirements:
 
-- A domain controller, without additional identity roles running
-- Running a Defender for Identity sensor v2.x.
-- Running Windows Server 2019 or later.
+- Domain controller without additional identity roles
+- Defender for Identity sensor v2.x (version 2.254.19112.470 or later)
+- Windows Server 2019 or later
+- Microsoft Defender for Endpoint deployed
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
-- Have Microsoft Defender for Endpoint deployed.
 
 For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md).
 

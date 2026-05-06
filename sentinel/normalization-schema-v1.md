@@ -1,10 +1,11 @@
 ---
 title: Microsoft Sentinel network normalization schema (Legacy version - Public preview)| Microsoft Docs
 description: This article displays the Microsoft Sentinel data normalization schema.
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 11/09/2021
-ms.author: ofshezaf
 
 
 #Customer intent: As a security analyst, I want to understand the Network normalization schema so that I can effectively analyze and unify network event data for better threat detection and response.

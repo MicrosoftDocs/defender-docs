@@ -251,7 +251,10 @@ See the following subsections for a description of the dictionary contents and p
 
 #### Enforcement level for Microsoft Defender Antivirus
 
-Specifies the enforcement preference of antivirus engine. There are three values for setting enforcement level:
+Specifies the enforcement preference of the antivirus engine. There are three values for setting enforcement level:
+
+> [!IMPORTANT]
+> Only one enforcement level can be configured at a time. You can configure either `passive` or `real-time` mode, but not both.
 
 - **Real-time** (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 
@@ -266,6 +269,12 @@ Specifies the enforcement preference of antivirus engine. There are three values
   - Security intelligence updates are on. Alerts are available in the security administrator's organization.
   - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true`.
   - [Endpoint detection and response (EDR)](overview-endpoint-detection-response.md) is on. The output of the `mdatp health` command on the device shows `engine not loaded` for the `engine_load_version` property. The engine is related to antivirus, not EDR.
+
+To verify whether real-time protection is enabled on the device, run:
+
+```bash
+mdatp health --field real_time_protection_enabled
+```
 
 > [!NOTE]
 >
