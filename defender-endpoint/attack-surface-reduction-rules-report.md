@@ -98,7 +98,7 @@ You can use the following extra filters that aren't configured by default by sel
 
 <sup>\*</sup> Selecting all available values or no values for this filter shows the same results.
 
-To remove a filter, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: **Clear**. To reset all filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Reset all**.
+To remove a filter, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: **Clear**. To reset all filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Reset all**.
 
 Below the filters and above the graph, the following information is shown:
 
@@ -123,9 +123,9 @@ The details table below the graph contains the following information:
 
 Select a column header to sort by that value.
 
-The :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box is available to search entries in the details table by device ID, file name, or process name.
+The :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box is available to search entries in the details table by device ID, file name, or process name.
 
-:::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **GroupBy** is available to group the information in the details table with the following options:
+:::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **GroupBy** is available to group the information in the details table with the following options:
 
 - **No grouping** (default)
 - **Detected file**
@@ -218,7 +218,7 @@ The details table shows the following information for each affected device:
 
 Select a column header to sort by that value.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find a specific device in the details table by **Device** or **Device ID** value. Partial matches are supported.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find a specific device in the details table by **Device** or **Device ID** value. Partial matches are supported.
 
 #### Device details
 
@@ -251,7 +251,7 @@ To go directly to the **Add exclusions** tab of the **Attack surface reduction r
 
 The **Add exclusions** tab lists file detections by ASR rules across all devices.
 
-**Filter \> Rules** or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Filter** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) only, but you can switch to **All** to show data for all ASR rules.
+**Filter \> Rules** or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Filter** allows you to filter the results on the page. By default, **Standard protection** is selected to show data for [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) only, but you can switch to **All** to show data for all ASR rules.
 
 The details table shows the following information:
 
@@ -261,7 +261,7 @@ The details table shows the following information:
 
 Select a column header to sort by that value.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find entries by filename.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find entries by filename.
 
 #### Summary & expected impact pane
 
