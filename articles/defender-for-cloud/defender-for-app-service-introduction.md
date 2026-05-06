@@ -4,7 +4,7 @@ description: Learn about the capabilities of Microsoft Defender for App Service 
 ms.date: 04/19/2026
 ms.topic: overview
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ms.custom: sfi-image-nochange
 ---
 
