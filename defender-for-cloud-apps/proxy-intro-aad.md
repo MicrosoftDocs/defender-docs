@@ -96,10 +96,6 @@ Although session controls are built to work with any browser on any major platfo
 
 Microsoft Edge users benefit from in-browser protection, without redirecting to a reverse proxy. For more information, see [In-browser protection with Microsoft Edge for Business (preview)](in-browser-protection.md).
 
-### Supported clients and limitations
-
-Conditional Access App Control session controls are enforced only for supported browser-based sessions.
-
 > [!IMPORTANT]  
 > The Microsoft Teams desktop application isn’t supported for Conditional Access App Control session controls.
 > Session controls, such as *Block download (preview)*, don’t apply to the Microsoft Teams desktop application. 
