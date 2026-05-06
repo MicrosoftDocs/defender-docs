@@ -324,11 +324,6 @@
       "source_path": "advanced-threat-analytics/working-with-suspicious-activities.md",
       "redirect_url": "/previous-versions/advanced-threat-analytics/working-with-suspicious-activities",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "defender-endpoint/configure-machines-asr.md",
-      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-monitor",
-      "redirect_document_id": true
     }
   ]
 }

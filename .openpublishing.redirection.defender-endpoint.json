@@ -216,6 +216,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "defender-endpoint/configure-machines-asr.md",
+      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-monitor",
+      "redirect_document_id": true
+    }
+    {
       "source_path": "defender-vulnerability-management/data-storage-privacy.md",
       "redirect_url": "/defender-endpoint/data-storage-privacy",
       "redirect_document_id": false
