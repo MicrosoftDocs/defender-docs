@@ -70,11 +70,11 @@ This section details the Microsoft Security Copilot agents that are available in
 
 ### Security Alert Triage Agent (Preview)
 
-The [Security Alert Triage Agent](security-alert-triage-agent.md) is an autonomous agent that helps security teams triage alerts at scale across multiple workloads. The agent applies AI-driven, dynamic reasoning across evidence to deliver clear verdicts for supported security workloads. This is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency. The agent has been extended to triage a broader set of alerts in Microsoft Defender, including email and collaboration alerts (generally available), and cloud and identity alerts (currently in preview). The agent operates autonomously, provides transparent rationale for its classification verdicts in natural language, and continuously learns and improves its accuracy based on feedback from analysts.
+The [Security Alert Triage Agent](security-alert-triage-agent.md) is an autonomous agent that helps security teams triage alerts at scale across multiple workloads. The agent applies AI-driven, dynamic reasoning to deliver clear verdicts for supported security workloads. This is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency. The agent can now triage a broader set of alerts in Microsoft Defender, including email and collaboration alerts (generally available), and cloud and identity alerts (preview). The agent operates autonomously, provides transparent rationale for its classification verdicts in natural language, and continuously learns and improves its accuracy based on feedback from analysts.
 
 | Attribute | Description |
 |---|---|
-| Identity | Operates in the context of the user you connect to the agent |
+| Identity | Create a new agent identity or connect to an existing user account |
 | License | Depends on alert types:<ul><li>**Email and collaboration alerts:** [Microsoft Defender for Office P2](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)<li>**Cloud alerts:** [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) and [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-deployment-overview)<li>**Identity alerts:** [Entra ID P2 license](/entra/fundamentals/licensing), [Microsoft Defender for Identity](/defender-for-identity/what-is), and [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)</ul>|
 | Permissions | The agent requires these permissions to operate, depending on the alert types you want to triage:<ul><li>**All alert types:** Security Copilot (read), Security data basics (read), Alerts (manage)<li>**Email and collaboration alerts:** Email & collaboration metadata (read), Email & collaboration content (read)<li>**Cloud and identity alerts:** No additional permissions required beyond the base permissions</ul> |
 | Plugins | The agent automatically activates these Security Copilot plugins:<ul><li>[Microsoft Defender XDR](security-copilot-in-microsoft-365-defender.md)<li>[Microsoft Threat Intelligence](/defender/threat-intelligence/security-copilot-and-defender-threat-intelligence)<li>[Security Alert Triage Agent](security-alert-triage-agent.md)|
@@ -88,7 +88,7 @@ The [Threat Intelligence Briefing Agent](threat-intel-briefing-agent-defender.md
 
 | Attribute | Description |
 |---|---|
-| Identity | Requires connection to an existing user account or creation of a new agent identity |
+| Identity | Create a new agent identity or connect to an existing user account |
 | License | **Not Applicable** |
 | Permissions | **Required permissions:**<ul><li>Microsoft Defender for Endpoint<li>Security Reader</ul>**Optional permissions:**<ul><li>Exposure Management (read)</ul> |
 | Products | [Security Copilot](/copilot/security/get-started-security-copilot) | 
