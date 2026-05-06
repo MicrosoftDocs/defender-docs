@@ -19,9 +19,11 @@ For example, a **DNS Reconnaissance** alert could be triggered by a security sca
 > 
 >- Among the most common domains with [Suspicious communication over DNS](other-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts, we observed the domains that were most frequently excluded from the alert. These domains are added to the exclusions list by default, but you have the option to remove them.
 
-When replacing an existing exclusion with an alert tuning rule, identify the detection associated with the excluded entity and map it to the corresponding detector in alert tuning. After creating the tuning rule, verify that the detector appears under Alert tuning in the Microsoft Defender portal to ensure that the intended alert scope is preserved.
 
 ## How to add detection exclusions
+
+> [NOTE!]
+> When replacing an existing exclusion with an alert tuning rule, identify the detection associated with the excluded entity and map it to the corresponding detector in alert tuning. After creating the tuning rule, verify that the detector appears under Alert tuning in the Microsoft Defender portal to ensure that the intended alert scope is preserved.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/)
 1.  Go to **System** > **Settings** and then **Identities**.
