@@ -49,6 +49,9 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Ex
 
 ## Step 1: Test all ASR rules in Audit mode
 
+> [!NOTE]
+> As previously described, you can typically enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing.
+
 Typically, enable all ASR rules in **Audit** mode at the same time so you can determine which rules are triggered by everyday business activities. Start with your ASR rule champions or devices in ring 1.
 
 ASR rules in **Audit** mode don't affect users. But the rules generate logged events that you can evaluate.
