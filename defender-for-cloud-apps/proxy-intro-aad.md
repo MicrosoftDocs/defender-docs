@@ -35,6 +35,8 @@ Conditional Access app control uses access policies and session policies to moni
 
 Each policy has conditions to define *who* (which user or group of users), *what* (which cloud apps), and *where* (which locations and networks) the policy is applied to. After you determine the conditions, route your users first to Defender for Cloud Apps. There, you can apply the access and session controls to help protect your data.
 
+Conditional Access policies are applied at the application level, not at the individual file level. As a result, you can't exclude specific files from the policy settings.
+
 Access and session policies include the following types of activities:
 
 |Activity |Description |
