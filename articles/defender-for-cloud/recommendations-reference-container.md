@@ -37,7 +37,7 @@ Microsoft Defender for Cloud performs vulnerability assessment for container ima
 
 ### Azure Arc-enabled Kubernetes clusters should have the Defender extension installed
 
-**Description**: Defender's extension for Azure Arc provides threat protection for your Arc-enabled Kubernetes clusters. The extension collects data from all control plane (master) nodes in the cluster and sends it to the [Microsoft Defender for Containers backend](defender-for-containers-enable.md?pivots=defender-for-container-arc&tabs=aks-deploy-portal) in the cloud for further analysis.
+**Description**: Defender's extension for Azure Arc provides threat protection for your Arc-enabled Kubernetes clusters. The extension collects data from all control plane (master) nodes in the cluster and sends it to the [Microsoft Defender for Containers backend](defender-for-containers-enable-plan.md?pivots=defender-for-container-arc&tabs=aks-deploy-portal) in the cloud for further analysis.
 (No related policy)
 
 **Severity**: High
@@ -355,7 +355,7 @@ When you enable Microsoft Defender for Containers and deploy Azure Arc to your E
 
 ### Data plane recommendations
 
-All the [Kubernetes data plane security recommendations](kubernetes-workload-protections.md#view-and-configure-the-bundle-of-recommendations) are supported for AWS after you [enable Azure Policy for Kubernetes](kubernetes-workload-protections.md#enable-kubernetes-data-plane-hardening).
+All the [Kubernetes data plane security recommendations](kubernetes-workload-protections.md#data-plane-hardening-recommendations) are supported for AWS after you [enable Azure Policy for Kubernetes](kubernetes-workload-protections.md#enable-azure-policy-for-kubernetes-by-remediating-recommendations).
 
 
 ## GCP container recommendations
@@ -465,7 +465,7 @@ Learn more about [Microsoft Defender for Cloud's security features for container
 
 ## Data plane recommendations
 
-All the [Kubernetes data plane security recommendations](kubernetes-workload-protections.md#view-and-configure-the-bundle-of-recommendations) are supported for GCP after you [enable Azure Policy for Kubernetes](kubernetes-workload-protections.md#enable-kubernetes-data-plane-hardening).
+All the [Kubernetes data plane security recommendations](kubernetes-workload-protections.md#data-plane-hardening-recommendations) are supported for GCP after you [enable Azure Policy for Kubernetes](kubernetes-workload-protections.md#enable-azure-policy-for-kubernetes-by-remediating-recommendations).
 
 ## External container registries recommendations
 

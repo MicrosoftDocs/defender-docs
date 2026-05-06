@@ -1,5 +1,5 @@
 ---
-title: Overview of Microsoft Defender for Containers
+title: Introduction to Microsoft Defender for Containers
 description: Learn about Microsoft Defender for Containers, a cloud-native solution that secures your containerized assets across multicloud and on-premises environments.
 ms.topic: overview
 author: Elazark
@@ -25,6 +25,18 @@ Defender for Containers helps you with five core domains of container security:
 - **Deployment & monitoring** - Monitors your Kubernetes clusters for missing sensors and provides frictionless at-scale deployment for sensor-based capabilities, support for standard Kubernetes monitoring tools, and management of unmonitored resources.
 
 You can learn more by watching this video from the Defender for Cloud in the Field video series: [Microsoft Defender for Containers](episode-three.md).
+
+Defender for Containers provides the following core capabilities:
+
+- [**Security posture management:**](#security-posture-management) Continuously monitors cloud APIs, Kubernetes APIs, and Kubernetes workloads to discover resources, detect misconfigurations, and surface security recommendations with mitigation guidance. Posture data is available through inventory views, recommendations, and [Security Explorer](how-to-manage-cloud-security-explorer.md) for risk investigation and hunting.
+
+- [**Vulnerability assessment:**](#vulnerability-assessment) Performs agentless vulnerability assessment of [container registry images, running containers, and supported Kubernetes nodes](support-matrix-defender-for-containers.md). Findings include remediation guidance, exploitability insights, and integration with the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk analysis.
+
+- [**Run-time threat protection:**](#run-time-protection-for-kubernetes-nodes-and-clusters) Detects suspicious activity in Kubernetes clusters, nodes, and workloads using Kubernetes-aware analytics and threat intelligence. Alerts are mapped to the MITRE ATT&CK® framework for Containers and can be investigated through [Microsoft Defender XDR](/defender-xdr/investigate-respond-container-threats).
+
+- **Software supply chain protection:** Helps reduce the risk of deploying vulnerable images by scanning container images and associating vulnerability assessment findings with images in the registry. These findings can be used by other Defender for Containers capabilities, such as gated deployments for Kubernetes.
+
+- **Deployment & monitoring:** Supports at-scale deployment and monitoring of Defender components, including visibility into Kubernetes clusters that are missing sensors or not fully protected.
 
 ## Security posture management
 
@@ -130,5 +142,10 @@ Learn more about Defender for Containers in the following blogs:
 
 In this overview, you learned about the core elements of container security in Microsoft Defender for Cloud. To enable the plan, see:
 
-- [Enable Defender for Containers](defender-for-containers-enable.md)
+- [Defender for Containers deployment overview](defender-for-containers-deployment-overview.md)
+
+- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-plan.md)
+
+- [Deploy Defender for Containers components using the Azure CLI](defender-for-containers-deploy-azure-cli.md)
+
 - Check out [common questions](faq-defender-for-containers.yml) about Defender for Containers.
