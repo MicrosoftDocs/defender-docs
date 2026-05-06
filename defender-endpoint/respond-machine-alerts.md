@@ -359,9 +359,9 @@ If a contained IP address is part of an incident, an indicator is present on the
 
 You can stop an IP address' containment at any time. To stop containment, select the **Contain IP** action in the **Action Center**. In the flyout, select **Undo**. This action restores the IP address’ connection to the network.
 
-## Contain user from the network
+## Contain user from the network - automatic attack disruption
 
-When an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks, specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device blocks incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify, and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
+As part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption) and [predictive shielding](/defender-xdr/shield-predict-threats), when an identity in your network might be compromised, you must prevent that identity from accessing the network and different endpoints. Defender for Endpoint can contain an identity, blocking it from access, and helping prevent attacks, specifically, ransomware. When an identity is contained, any supported Microsoft Defender for Endpoint onboarded device blocks incoming traffic in specific protocols related to attacks (deny network logons, RPC, SMB, RDP), terminate ongoing remote sessions and logoff existing RDP connections (terminating the session itself including all its related processes), while enabling legitimate traffic. This action can significantly help to reduce the impact of an attack. When an identity is contained, security operations analysts have extra time to locate, identify, and remediate the threat to the compromised identity. Once contained by automatic attack disruption, a user is automatically removed from containment in the next five days.
 
 ### Contain user important notes
 
@@ -414,7 +414,7 @@ In addition, you can expand the investigation by using advanced hunting. Look fo
 
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Shows advanced hunting for user contain events" lightbox="/defender/media/defender-endpoint/user-contain-advanced-hunting.png":::
 
-## Isolate device (automatic attack disruption)
+## Isolate device - automatic attack disruption (Preview)
 
 As part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption), Microsoft Defender for Endpoint can automatically isolate a device when Microsoft Defender determines with high confidence that the endpoint is compromised. Automatic isolation helps stop attacker activity and reduces the risk of further impact, such as data exfiltration and lateral movement.
 
@@ -427,43 +427,43 @@ When a device is isolated automatically:
 > [!NOTE]
 > Automatic device isolation applies only to devices that are onboarded and managed by Microsoft Defender for Endpoint. It primarily targets end-user workstations.
 
-### When automatic device isolation triggers
+### When automatic device isolation is applied
 
-Automatic device isolation targets scenarios where a compromised endpoint is being used as an active foothold—for example, maintaining persistence and communicating with command-and-control infrastructure. In these scenarios, rapid network isolation helps stop attacker control of the device and limits the ability to move laterally.
+Automatic device isolation targets scenarios where a compromised endpoint is used as an active foothold, for example, maintaining persistence and communicating with command-and-control infrastructure. In these scenarios, rapid network isolation helps stop attacker control of the device and limits the ability to move laterally.
 
 ### Safeguards and business impact
 
 Isolation might affect user productivity and device-dependent business processes, so automatic attack disruption applies it selectively with safeguards designed to balance security value with operational impact:
 
-- **Scoped action**—Isolation targets specific devices involved in the incident rather than broadly across the environment.
-- **Time-limited isolation**—Isolation is automatically undone after a defined time window. You can also release isolation earlier after completing investigation and remediation.
-- **Customer control**—Security operators can review the incident context and take follow-up actions, including releasing isolation when it's safe to do so.
+- **Scoped action**: Isolation targets specific devices involved in the incident rather than broadly across the environment.
+- **Time-limited isolation**: Isolation is automatically undone after a defined time window. You can also release isolation earlier after completing investigation and remediation.
+- **Customer control**: Security operators can review the incident context and take follow-up actions, including releasing isolation when it's safe to do so.
 
 > [!TIP]
 > If an automatically isolated device is business-critical, prioritize rapid validation and stakeholder coordination. Release isolation only after you confirm appropriate containment and remediation steps are in place. Consider using your organization's [exclusion and operational processes](/defender-xdr/automatic-attack-disruption-exclusions) to reduce the likelihood of isolating devices that can't tolerate interruption.
 
-### Confirm a device was isolated by automatic attack disruption
+### Confirm automatic device isolation
 
 1. Open the relevant incident generated by automatic attack disruption in the [Microsoft Defender portal](https://security.microsoft.com).
-2. Review the **Activity** tab or **Action center** to see which automated response actions were applied.
-3. Open the affected device page and confirm the device status shows that it's isolated.
+1. Review the **Activity** tab or **Action center** to see which automated response actions were applied.
+1. Open the affected device page and confirm that the device status shows that it's isolated.
 
 > [!NOTE]
-> If the isolation action shows as failed or pending, confirm the device is online and reporting to Defender for Endpoint. You can retry from the device action panel if available.
+> If the isolation action shows as failed or pending, confirm that the device is online and can report to Defender for Endpoint. You can retry from the device action panel if available.
 
 ### Release a device from automatic isolation
 
 You can release the device from containment at any time after you mitigate the risk and complete investigation:
 
 1. Select the device from the **Device inventory** or open the device page.
-2. Select **Release from isolation** from the action menu.
+1. Select **Release from isolation** from the action menu.
 
 For more information about releasing devices, see [Isolate devices from the network](#isolate-devices-from-the-network).
 
 > [!NOTE]
-> If isolation was removed unexpectedly, check whether a time-limited undo window applies in your environment and review the action history for the release event.
+> If isolation is removed unexpectedly, check whether a time-limited undo window applies in your environment and review the action history for the release event.
 
-## GPO hardening (Preview)
+## GPO hardening - predictive shielding (Preview)
 
 As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the GPO hardening action. Group Policy Object (GPO) hardening temporarily stops new GPO policies from being applied to devices identified as high risk. This action helps prevent potential compromise by limiting changes to critical configurations.
 
@@ -471,7 +471,7 @@ To enrich predictive shielding actions, we recommend you use the Microsoft Defen
 
 After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
-## Safeboot hardening (Preview)
+## Safeboot hardening - predictive shielding (Preview)
 
 As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the Safeboot hardening action. Safeboot hardening helps protect devices from being compromised by enforcing stricter boot settings on devices that are predicted to be at high risk of compromise.
 
