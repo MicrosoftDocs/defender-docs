@@ -117,6 +117,35 @@ IdentityDirectoryEvents
 
 The preceding query was adapted from a [Microsoft Defender for Identity - Attack Disruption query](https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Identity/MDI-AttackDisruption.md#microsoft-365-defender).
 
+### Hunt for automatic device isolation actions
+
+Device isolation actions taken by automatic attack disruption are recorded for traceability. You can query these events in advanced hunting to identify when a device was automatically isolated, correlate with the incident ID, and review the timeline of containment.
+
+Use the following query to find device isolation events triggered by automatic attack disruption:
+
+```kusto
+DeviceEvents
+| where ActionType == "IsolateDevice"
+| project Timestamp, DeviceId, DeviceName, ActionType, InitiatingProcessAccountName
+| order by Timestamp desc
+```
+
+To correlate device isolation with a specific incident, join with the `AlertEvidence` table:
+
+```kusto
+DeviceEvents
+| where ActionType == "IsolateDevice"
+| join kind=inner (
+    AlertEvidence
+    | where EntityType == "Machine"
+    ) on DeviceId
+| project Timestamp, DeviceName, AlertId, Title
+| order by Timestamp desc
+```
+
+> [!NOTE]
+> If you can't find the expected isolation event, verify the device is online and reporting to Defender for Endpoint. Also confirm your investigation method (for example, live response) is supported and that required endpoints are reachable in your network configuration.
+
 ## Related content
 
 - [Exclude assets from automated response actions](automatic-attack-disruption-exclusions.md)

@@ -30,6 +30,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
 |Feature |[Selective Response Actions](./restrict-response-actions-high-value-assets.md) |Preview |Selective Response Actions enables organizations to tailor high-impact security operations on devices during onboarding. It provides precise control over how response actions are applied on Tier-0 systems and other high-value assets, helping maintain operational stability while delivering strong protection. |
+|Feature |[Automatic device isolation (automatic attack disruption)](respond-machine-alerts.md#isolate-device-automatic-attack-disruption) |Preview |Microsoft Defender for Endpoint can now automatically isolate compromised devices as part of automatic attack disruption. Isolation blocks most network traffic while keeping the device connected to security services. The action is time-limited, scoped to the incident, and security operators can release isolation at any time. |
 
 ## April 2026
 
