@@ -5,65 +5,40 @@ ms.date: 03/09/2026
 ms.topic: overview
 ---
 
-# Overview of Defender for Cloud protection of Kubernetes nodes
+# Kubernetes node protection in Microsoft Defender for Cloud
 
-In addition to protecting the Kubernetes cluster control plane and workloads, Defender for Cloud also extends security and compliance over the Kubernetes nodes in the customer's Azure Kubernetes Service (AKS).
+Microsoft Defender for Cloud helps protect supported Azure Kubernetes Service (AKS) nodes by providing vulnerability assessment and malware detection for the virtual machines (VMs) that run your cluster workloads.
 
-## Protection for Kubernetes nodes
+These protections help you identify vulnerabilities and detect malware on the nodes that support your cluster.
 
-Kubernetes nodes are virtual machines (VMs) that the cloud provider’s Kubernetes service creates to run the cluster control plane and workloads.
+## Protections for Kubernetes nodes
 
-A cluster node pool, also called a node group, is a managed set of identical VM types and VM versions.
+Defender for Cloud provides the following protections for supported Kubernetes nodes:
 
-The Kubernetes service lets you configure a cluster, including the node pools.
+- [Vulnerability assessment](kubernetes-nodes-va.md) identifies known vulnerabilities on node software and surfaces recommendations to help you remediate them.
 
-Node pool configuration includes the node count and the VM type and VM version.
+- [Malware detection](kubernetes-nodes-malware.md) scans nodes for malware and generates security alerts when malware is detected.
 
-You set the node pool configuration based on application requirements. You manage each node pool as a single set. You configure and update all nodes together.
+For support details, view the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md).
 
-The customer upgrades the node pool VM version to improve node security, as indicated by Defender for Cloud recommendations.
+## How Kubernetes node protection works
 
-The support for protecting Kubernetes nodes is detailed in the [support matrix of containers in Defender for Cloud](support-matrix-defender-for-containers.md) in the Vulnerability assessments and Runtime threat protection sections of each cloud environment.
+Kubernetes node protection uses agentless, snapshot-based scanning of node pool disks.
 
-## Shared responsibility of Kubernetes nodes
+This capability relies on **Agentless scanning for machines**. When that feature is enabled in a supported plan, Defender for Cloud can scan supported Kubernetes nodes and surface findings in recommendations and alerts.
 
-The responsibility for maintaining the Kubernetes nodes is shared between the Kubernetes service and the customer.
+For more information about the underlying architecture, see [Agentless scanning architecture](concept-agentless-data-collection.md).
 
-- **The Kubernetes service** maintains and patches the OS and the software of its supported node VM images by providing upgraded versions.
-- **The customer** is responsible for initially configuring the Kubernetes node pools based on the requirements of the applications running in the cluster. The customer is also responsible for upgrading the node pool VM version as required to improve security, and support the applications running in the cluster.
+## Shared responsibility
 
-## Kubernetes node protections
+Responsibility for Kubernetes nodes is shared between the managed Kubernetes service and your organization.
 
-The following protections are provided for Kubernetes nodes:
+- The managed Kubernetes service provides supported node VM images and updated versions.
+- You configure node pools based on your workload requirements.
+- You are responsible for upgrading node pool VM versions to adopt newer images and improve your security posture.
 
-- [Vulnerability assessment](kubernetes-nodes-va.md) - Kubernetes node software is scanned for known vulnerabilities. Recommendations are generated for the customer to review and remediate.
+## Related content
 
-- [Malware detection](kubernetes-nodes-malware.md) - Kubernetes nodes are scanned for malware. A security alert is generated for the customer to review and remediate.
+- [Vulnerability assessment for Kubernetes nodes](kubernetes-nodes-va.md)
 
-The Kubernetes nodes protections are provided by taking snapshots of node pool disks for scanning. See the [Agentless scanning architecture description](./concept-agentless-data-collection.md) for details.
-
-## Enable agentless scanning for machines
-
-Protection for Kubernetes nodes is enabled by toggling on **Agentless scanning for machines** in the Defender for Containers, Defender Cloud Security Posture Management, or Defender for Servers P2 plan.
-
-To enable agentless scanning for machines in the Defender for Containers plan in the Azure portal:
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
- 
-1. Go to **Microsoft Defender for Cloud** > **Management** > **Environment settings**.
-
-1. (Optional) Select **Expand all**.
-
-   :::image type="content" source="media/kubernetes-nodes-overview/environment-settings-expand-all-button.png" alt-text="Screenshot of Environment settings page with the Expand All button indicated.":::
-
-1. Select the relevant subscription.
-
-1. Locate the Containers plan row and select **Settings**.
-
-   :::image type="content" source="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png" alt-text="Screenshot of selecting the settings option of Defender for Containers plan." lightbox="media/kubernetes-nodes-overview/settings-plans-containers-settings-select.png":::
-
-1. Toggle Agentless scanning for machines to **On**.
-
-   :::image type="content" source="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png" alt-text="Screenshot of turning on the agentless scanning for machines toggle." lightbox="media/kubernetes-nodes-overview/agentless-scanning-for-machines.png":::
-
-1. Select **Save**.
+- [Malware detection for Kubernetes nodes](kubernetes-nodes-malware.md)

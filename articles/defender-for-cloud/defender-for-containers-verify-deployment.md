@@ -1,0 +1,122 @@
+---
+title: Verify Defender for Containers deployment
+description: Learn how to verify that Microsoft Defender for Containers sensors and extensions are running correctly on Kubernetes clusters.
+ms.topic: how-to
+ms.author: elkrieger
+author: Elazark
+ms.date: 03/12/2026
+---
+
+# Verify Defender for Containers deployment
+
+After deploying Microsoft Defender for Containers components, verify that the sensor and related extensions are running correctly on your cluster.
+
+## Verify recommendation health
+
+If you deployed Defender components by remediating a security recommendation:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Locate the relevant recommendation.
+
+1. Confirm that the recommendation status changes to **Healthy**.
+
+## Verify Defender sensor deployment
+
+To verify that the Defender sensor is enabled:
+
+**For AKS clusters:**
+
+```azurecli
+az aks show \
+  --name <aks-cluster-name> \
+  --resource-group <resource-group> \
+  --query "securityProfile.defender.securityMonitoring.enabled"
+```
+
+The output should be `true`.
+
+**For Arc-enabled clusters and Helm:**
+
+```azurecli
+az k8s-extension list \
+  --cluster-name <cluster-name> \
+  --resource-group <resource-group> \
+  --cluster-type connectedClusters \
+  --subscription <subscription-id> \
+  --query "[?extensionType=='microsoft.azuredefender.kubernetes' && provisioningState=='Succeeded']"
+```
+
+The command should return a non-empty array if the extension was installed successfully.
+
+## Verify Azure Policy add-on on AKS
+
+To verify that the Azure Policy add-on is enabled:
+
+```azurecli
+az aks show \
+  --name <aks-cluster-name> \
+  --resource-group <resource-group> \
+  --query addonProfiles.azurepolicy
+```
+
+The output should show `enabled: true`.
+
+## Verify extension installation for Arc-enabled clusters
+
+For Amazon EKS, Google Kubernetes Engine (GKE), and Arc-enabled Kubernetes clusters, Defender components are installed as Azure Arc Kubernetes extensions.
+
+To verify extension installation:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Azure Arc** > **Kubernetes clusters**.
+
+1. Select your Arc-enabled Kubernetes cluster.
+
+1. In the cluster resource, select **Extensions**.
+
+1. Confirm that the following extensions show **Succeeded**:
+
+   - **Microsoft Defender for Containers**
+   - **Azure Policy for Kubernetes** (if enabled)
+
+You can also select the **Microsoft Defender for Containers** extension to view its status and configuration details.
+
+## Verify Defender sensor pods
+
+Verify that the Defender sensor pods are running in the cluster.
+
+**For AKS clusters:**
+
+```bash
+kubectl get pods -n kube-system -l app=defender
+```
+
+**For Arc-enabled clusters and Helm:**
+
+```bash
+kubectl get pods -n mdc -l app=defender-k8s-sensor
+```
+
+Confirm that the Defender sensor pods are in a `Running` state.
+
+## Verify the Defender DaemonSet (Arc-enabled clusters and Helm)
+
+You can also verify that the Defender DaemonSet is deployed correctly.
+
+```bash
+kubectl get ds -n mdc microsoft-defender-collectors-ds
+```
+
+Confirm that the **DESIRED**, **CURRENT**, and **READY** values match the number of cluster nodes.
+
+## Related content
+
+- [Enable Defender for Containers](defender-for-containers-enable-plan.md)
+
+- [Deploy Defender sensor using Azure CLI](defender-for-containers-deploy-azure-cli.md)
+
+- [Troubleshoot Defender for Containers](defender-for-containers-troubleshoot.md)

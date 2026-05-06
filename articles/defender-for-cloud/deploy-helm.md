@@ -3,9 +3,8 @@ title: Install Defender for Containers sensor using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
 author: Elazark
 ms.topic: how-to
-ms.date: 04/27/2026
+ms.date: 06/05/2026
 ms.author: elkrieger
-ai-usage: ai-assisted
 ---
 
 # Install Defender for Containers sensor by using Helm
