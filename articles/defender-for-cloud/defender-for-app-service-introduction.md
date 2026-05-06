@@ -103,4 +103,4 @@ For related material, see the following articles:
 
 - To export your alerts to Microsoft Sentinel, any partner SIEM, or any other external tool, follow the instructions in [Stream alerts to monitoring solutions](export-to-siem.md).
 - For a list of the Microsoft Defender for App Service alerts, see the [Reference table of alerts](alerts-azure-app-service.md).
-- For more information on App Service plans, see [App Service plans](https://azure.microsoft.com/pricing/details/app-service/plans/).
+- For more information on App Service plans, see [Azure App Service plans](/azure/app-service/overview-hosting-plans).
