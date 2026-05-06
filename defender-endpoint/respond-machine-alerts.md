@@ -58,6 +58,10 @@ Response actions run along the top of a specific device page and include:
 > [!IMPORTANT]
 > For information on availability and support for each response action, see the supported minimum operating system requirements for each feature.
 
+### Limiting high-impact response actions on high-value assets
+
+Some high-impact response actions can be restricted on high-value assets to prevent potential business disruption. For more information, see [Restrict response actions on high-value assets](./restrict-response-actions-high-value-assets.md).
+
 ## Manage tags
 
 Add or manage tags to create a logical group affiliation. Device tags support proper mapping of the network, enabling you to attach different tags to capture context and to enable dynamic list creation as part of an incident.
@@ -354,7 +358,6 @@ If a contained IP address is part of an incident, an indicator is present on the
 :::image type="content" source="/defender/media/defender-endpoint/contain-ip-evidence-small.png" alt-text="Highlighting a contained IP address in the Evidence and response tab of an incident." lightbox="/defender/media/defender-endpoint/contain-ip-evidence.png":::
 
 You can stop an IP address' containment at any time. To stop containment, select the **Contain IP** action in the **Action Center**. In the flyout, select **Undo**. This action restores the IP address’ connection to the network.
-
 
 ## Contain user from the network
 
