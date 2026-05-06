@@ -5,7 +5,7 @@ description: Learn how to use the Identity page in Microsoft Defender. Investiga
 ms.author: abbyweisberg
 author: AbbyMSFT
 ms.reviewer: maelgami
-ms.date: 02/15/2026
+ms.date: 04/30/2026
 ms.topic: article
 ms.service: microsoft-defender
 ---
@@ -41,7 +41,7 @@ From the **Overview** page, use the **Actions** menu to trigger [remediation act
 - Require the user to sign in again or force a password reset
 - View Microsoft Entra account settings, related governance, the user's owned files, or shared files
 
-:::image type="content" source="media/investigate-users/identity-actions.png" alt-text="Screenshot of the identity page with the identity actions menu showing.":::
+:::image type="content" source="media/investigate-users/identity-actions.png" alt-text="Screenshot of the identity page with the identity actions menu showing." lightbox="media/investigate-users/identity-actions.png":::
 
 ## Overview tab
 
@@ -78,7 +78,7 @@ Other details appear depending on enabled services and features. For example:
 
 The **Incidents and alerts** tab lists all alerts and incidents involving the identity within the supported retention window. See the incidents page or the alerts page for a detailed description of the specific item.
 
-:::image type="content" source="media/investigate-users/identity-incidents-and-alerts.png" alt-text="Screenshot of the Incidents and alerts tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/identity-incidents-and-alerts.png" alt-text="Screenshot of the Incidents and alerts tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-incidents-and-alerts.png":::
 
 ## Observed in organization tab
 
@@ -99,7 +99,7 @@ Each identity can include multiple related accounts from different identity prov
 
 Microsoft Defender uses internal correlation logic to determine the primary account.
 
-:::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/identity-observed-in-organization.png" alt-text="Screenshot of the Observed in organization tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-observed-in-organization.png":::
 
 ## Risk score tab (Preview)
 
@@ -121,7 +121,7 @@ The **Timeline** tab provides a chronological view of identity related activity 
 
 The timeline helps reconstruct sequences of activity and correlate events during investigations.
 
-:::image type="content" source="media/investigate-users/identity-timeline.png" alt-text="Screenshot of the Timeline tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/identity-timeline.png" alt-text="Screenshot of the Timeline tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-timeline.png":::
 
 ### Types of activities that appear in the timeline
 
@@ -167,7 +167,7 @@ The following information is displayed in the timeline:
 
 The **Security recommendations** tab displays identity related posture assessments identified through Identity Security Posture Management (ISPM). These recommendations highlight misconfigurations or risky settings across the identity’s accounts, and selecting a recommendation opens the details in Microsoft Secure Score for remediation guidance.
 
-:::image type="content" source="media/investigate-users/identity-posture-recommendations.png" alt-text="Screenshot of the Security recommendations tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/identity-posture-recommendations.png" alt-text="Screenshot of the Security recommendations tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/identity-posture-recommendations.png":::
 
 ## Attack paths tab
 
@@ -179,11 +179,45 @@ The **Policies** tab displays identity‑related security policies that are rele
 
 This view provides investigation context by showing which policies apply to the identity and how they influence access or risk evaluation. Policies are managed elsewhere; this tab helps analysts correlate policy enforcement with sign‑ins, alerts, and investigation findings.
 
+## Identity Explorer tab (Preview)
+
+> [!NOTE]
+> The Identity Explorer tab requires a Microsoft Sentinel Data Lake license.
+
+The **Identity Explorer** tab uses the [hunting graph](advanced-hunting-graph.md) to visualize identity attack paths and exposure scenarios as interactive graphs. The graph is pre-seeded with the current identity, so you can immediately see how the identity relates to other entities in your environment.
+
+Use the Identity Explorer to discover lateral movement paths, privilege escalation routes, and credential-access risks associated with the identity.
+
+:::image type="content" source="media/hunting-graph-identity/hunting-graph.png" alt-text="Screenshot of the Identity Explorer tab on the Identity page showing an entity relationship map with identity nodes and connections." lightbox="media/hunting-graph-identity/hunting-graph.png":::
+
+### Search with predefined scenarios
+
+Select **Search with predefined scenarios** to run identity-focused queries. Each scenario maps to one or more [MITRE ATT&CK](https://attack.mitre.org/) techniques and focuses on a specific type of identity risk.
+
+:::image type="content" source="media/hunting-graph-identity/hunting-graph-scenario.png" alt-text="Screenshot of the predefined identity scenarios panel in Identity Explorer." lightbox="media/hunting-graph-identity/hunting-graph-scenario.png":::
+
+The following table describes the predefined identity scenarios available in Identity Explorer.
+
+| Scenario | Description | MITRE Technique |
+|---|---|---|
+| **Synced Entra users with permissions on OAuth application, allowing authentication as privileged Service Principal** | OAuth applications acting as privileged service principals that can access resources without user interaction. | Privilege Escalation, Lateral Movement |
+| **Non-privileged users have a path leading to sensitive user/group (On-Prem/Cloud)** | Non-privileged users who have paths to sensitive identities, showing potential privilege escalation. | Privilege Escalation, Lateral Movement |
+| **Service accounts with RDP access to critical device** | Service accounts that can remotely access critical devices via RDP, creating persistent access risks if compromised. | Lateral Movement |
+| **Kerberoastable users with a path to a critical asset** | Kerberoastable users with attack paths to critical assets, allowing offline password attacks that can lead to privilege escalation. | Privilege Escalation, Credential Access |
+| **Synced Entra users with direct permissions to cloud resources** | Microsoft Entra users with hybrid permissions on multiple cloud resources, breaking security boundaries and violating least privilege. | Lateral Movement |
+| **External Entra users with direct permissions to cloud resources** | External identities with direct access to cloud resources, representing third-party risk and possible data exposure. | Lateral Movement |
+| **Non-privileged users with a path to own AD domain (DCSync)** | Non-privileged users with paths that enable full Active Directory domain compromise via DCSync. | Privilege Escalation, Credential Access |
+| **Non-privileged users that can reach Domain Admins group (<5 hops)** | Non-privileged users who can reach the Domain Admins group in fewer than five steps. | Privilege Escalation, Lateral Movement |
+| **ASREPRoastable users with a path to a critical asset** | AS-REP roastable accounts with paths to critical assets that can be attacked through offline password cracking. | Privilege Escalation, Credential Access |
+| **Non-privileged user account which is exposed on multiple devices have RDP login permissions to critical assets (On-Prem/Cloud)** | Non-privileged users exposed on multiple devices who can remotely access critical assets via RDP. | Credential Access |
+
+For more information about the hunting graph and its features, see [Hunt for threats using the hunting graph](advanced-hunting-graph.md).
+
 ## Microsoft Sentinel events tab
 
 When Microsoft Sentinel is connected to the Defender portal, this tab shows a Microsoft Sentinel timeline for the identity. The timeline includes alerts associated with the identity, including alerts also shown on the **Incidents and alerts** tab and alerts created by Microsoft Sentinel. It also shows bookmarked hunts that reference the identity, activity events from external data sources, and unusual behaviors identified by Microsoft Sentinel anomaly rules.
 
-:::image type="content" source="media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of the Microsoft Sentinel events tab on the Identity page in Microsoft Defender.":::
+:::image type="content" source="media/investigate-users/user-incident-sentinel-events.png" alt-text="Screenshot of the Microsoft Sentinel events tab on the Identity page in Microsoft Defender." lightbox="media/investigate-users/user-incident-sentinel-events.png":::
 
 ### Insights
 
@@ -224,7 +258,7 @@ Insights are based on the following data sources:
 
 To further explore any insight, select the link accompanying the insight. The link opens the **Advanced hunting** page with the query underlying the insight and its raw results. You can modify the query or drill down into the results to expand your investigation.
 
-:::image type="content" source="media/investigate-users/insights-advanced-hunting.png" alt-text="Screenshot of the Advanced hunting screen with insight query.":::
+:::image type="content" source="media/investigate-users/insights-advanced-hunting.png" alt-text="Screenshot of the Advanced hunting screen with insight query." lightbox="media/investigate-users/insights-advanced-hunting.png":::
 
 ## Next steps
 
