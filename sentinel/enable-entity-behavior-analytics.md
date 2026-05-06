@@ -45,7 +45,7 @@ To enable or disable this feature (these prerequisites aren't required to use th
   - **Contributor** at the resource group level or higher.
   - (Least privileged) **Microsoft Sentinel Contributor** at the workspace level or higher and **Log Analytics Contributor** at the resource group level or higher.
 
-- Your workspace must not have any Azure resource locks applied to it. [Learn more about Azure resource locking](../azure-resource-manager/management/lock-resources.md).
+- Your workspace must not have any Azure resource locks applied to it. [Learn more about Azure resource locking](/azure-resource-manager/management/lock-resources).
 
 > [!NOTE]
 >

@@ -18,10 +18,84 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
-## March 2026
+## May 2026
 
 - We introduced a new entry point and created a consolidated view for the UEBA Settings and the Behaviors Settings. You can now access the UEBA settings from the new UEBA tab in the Microsoft Sentinel settings page. For more information see [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab).
+
+## April 2026
+
+- [[Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts](#updated-call-to-action-update-automation-by-july-1-2026---account-name-is-now-consistently-the-upn-prefix-for-analytics-rule-alerts)
+- [Microsoft Sentinel data federation (Preview)](#microsoft-sentinel-data-federation-preview)
+- [Transform data with filter and split features (Preview)](#transform-data-with-filter-and-split-features-preview)
+- [Accelerate Microsoft Sentinel connector development with Visual Studio Code connector builder agent (Preview)](#accelerate-microsoft-sentinel-connector-development-with-visual-studio-code-connector-builder-agent-preview)
+- [Build custom security graphs (Preview)](#build-custom-graphs-preview)
+- [Entity analyzer is now generally available](#entity-analyzer-is-now-generally-available)
+- [AI-powered SIEM migration tool is now generally available](#ai-powered-siem-migration-tool-is-now-generally-available)
+- [Cost estimation tool for customers and partners (Preview)](#cost-estimation-tool-for-customers-and-partners-preview)
+- [Configure row-level access using Microsoft Sentinel scoping (Preview)](#configure-row-level-access-using-microsoft-sentinel-scoping-preview)
+
+### [Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts
+
+Microsoft Sentinel is updating how the account entity's **Account Name** value is populated for analytics rule alerts when the full UPN is mapped into Account Name. This change improves consistency for downstream automation rules and Logic Apps playbooks.
+
+This change might affect automation logic that filters on or compares the `AccountName` property (Logic Apps: `AccountName`), especially if it expects the full UPN.
+
+**What's changing**
+
+- When a full UPN (for example, `user@domain.com`) is mapped to Account Name in an analytics rule, Account Name will always be the UPN prefix only (`user`). Previously, it could sometimes be `user` and sometimes `user@domain.com`.
+- Additional UPN-related fields will be added to the account entity in the `SecurityAlert` table: `UserPrincipalName` (full UPN, for example  `user@domain.com`), `UPNSuffix`, and the UPN prefix.
+
+For example:
+- **Before**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` or `user@domain.com`  
+- **After**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` + `UPNSuffix`: `domain.com` 
+
+**What you need to do**
+
+Update any automation rules or logic apps that compare against the full UPN. Replace direct equality checks with separate comparisons for the UPN prefix and UPN suffix. We strongly recommend using **Contains** and **Starts with** operations instead of strict equality to maintain compatibility both before and after the change.
+
+For example, replace conditions such as `AccountName` **Equals** `user@domain.com` with logic like:
+- `AccountName` **Contains** `user` or **Starts with** `user`
+- `UPNSuffix` **Equals** `domain.com` / **Starts with** `domain.com` / **Contains** `domain.com`
+
+For more information, including before and after examples, read the blog article [Update: Changing the Account Name Entity Mapping in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/update-changing-the-account-name-entity-mapping-in-microsoft-sentinel/4489040).
+
+### Microsoft Sentinel data federation (Preview)
+Powered by Microsoft Fabric, Microsoft Sentinel data federation lets you analyze security data where it already lives, without copying or duplicating it. You can federate data from Microsoft Fabric, Azure Data Lake Storage, and Azure Databricks into Microsoft Sentinel data lake, then use familiar Microsoft Sentinel experiences like KQL, notebooks, and custom graphs across both federated and native data.
+
+For more information, see [Data federation overview in Microsoft Sentinel data lake](datalake/data-federation-overview.md).
+
+### Transform data with filter and split features (Preview)
+Native filtering and splitting in the Microsoft Defender portal helps you reduce noise before ingestion, control costs, and intelligently route data between analytics and data lake tiers so you can optimize what gets analyzed versus retained. For more information, see [Transform data using filter and split in Microsoft Sentinel](transformation-filter-split.md).
+
+### Accelerate Microsoft Sentinel connector development with Visual Studio Code connector builder agent (Preview)
+An AI-powered, low-code agent in Visual Studio Code helps you build Microsoft Sentinel connectors in minutes, bringing in new data sources faster and unlocking security outcomes sooner. For more information, see [Get started with custom connectors using AI agent in Microsoft Sentinel](create-custom-connector-builder-agent.md).
+
+### Build custom graphs (Preview)
+Build tailored security graphs across the Sentinel data lake and third-party data to uncover attack paths, blast radius, and hidden relationships. These graphs also serve as a foundation for advanced investigations and AI agents. For more information, see [Custom Graph overview](datalake/custom-graphs-overview.md).
+
+#### Graphs experience in the Microsoft Defender portal (Preview)
+After creating your custom graphs, you can access them in the graphs section of the Defender portal under **Microsoft Sentinel**. From there, you can run Graph Query Language (GQL) queries, view the graph schema, visualize the graph, view graph results in tabular format, and interactively traverse the graph to the next hop with a simple click.
+
+### Entity analyzer is now generally available
+
+[Entity analyzer](datalake/sentinel-mcp-data-exploration-tool.md#entity-analyzer) in the Microsoft Sentinel Model Context Protocol (MCP) [data exploration tool collection](datalake/sentinel-mcp-data-exploration-tool.md) lets you get out-of-the-box, explainable entity risk assessments for URLs and identities using threat intelligence, prevalence, and organizational context.
+
+> [!IMPORTANT]
+> Starting April 1, 2026, you're charged for the Security Compute Units (SCUs) required when using the entity analyzer. For more information, see: [Understand Microsoft Sentinel MCP server pricing, limits, and availability](datalake/sentinel-mcp-billing.md#microsoft-sentinel-entity-analyzer-tool).
+
+### AI-powered SIEM migration tool is now generally available
+Accelerate migrations to Microsoft Sentinel from Splunk and QRadar using an AI-assisted SIEM migration experience designed to reduce manual effort and speed time-to-value. For more information, see [Migrate to Microsoft Sentinel with the SIEM migration experience](siem-migration.md).
+
+### Cost estimation tool for customers and partners (Preview)
+A guided, meter-level Microsoft Sentinel cost estimator with three-year projections helps organizations model data growth, predict spend, and plan Microsoft Sentinel adoption with confidence. For more information, see [Microsoft Sentinel pricing](https://www.microsoft.com/security/pricing/microsoft-sentinel/cost-estimator). 
+
+### Configure row-level access using Microsoft Sentinel scoping (Preview)
+Microsoft Sentinel now supports scoping (row-level RBAC) to control access to specific subsets of Sentinel data without requiring workspace separation. Administrators can define logical scopes, tag data at ingestion time, and assign users or groups to scopes using Unified RBAC, enabling multiple teams to work securely within a shared Sentinel environment. Scoping is configured in the Microsoft Defender portal. For more information see [Configure Microsoft Sentinel scoping (row-level RBAC)](./scoping.md).
+
+## March 2026
+
 - [Call to action: update older Microsoft Sentinel content as code (Sentinel repositories) API versions before June 2026](#call-to-action-update-older-microsoft-sentinel-content-as-code-sentinel-repositories-api-versions-before-june-2026)
+- Microsoft Sentinel repositories are now generally available. For more information, see [Manage content as code with Microsoft Sentinel repositories](ci-cd-custom-content.md).
 
 ### Call to action: update older Microsoft Sentinel content as code (Sentinel repositories) API versions before June 2026
 
