@@ -32,11 +32,11 @@ These capabilities block risky software behaviors, prevent connections to malici
 
 Attack surface reduction in Defender for Endpoint includes the following capabilities:
 
-- **Attack surface reduction (ASR) rules in Windows** constrain risky software behaviors that attackers exploit, such as launching executables that attempt to download files, running obfuscated scripts, or performing actions that apps don't normally initiate during day-to-day work. For more information, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
+- **Attack surface reduction (ASR) rules** constrain risky software behaviors that attackers exploit, such as launching executables that attempt to download files, running obfuscated scripts, or performing actions that apps don't normally initiate during day-to-day work. For more information, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
-- **Controlled folder access in Windows** protects valuable data from malicious apps and threats like ransomware. It checks apps against a list of known, trusted apps and prevents untrusted apps from modifying files in protected folders. For more information, see [Protect important folders with controlled folder access](controlled-folders.md).
+- **Controlled folder access** protects valuable data from malicious apps and threats like ransomware. It checks apps against a list of known, trusted apps and prevents untrusted apps from modifying files in protected folders. For more information, see [Protect important folders with controlled folder access](controlled-folders.md).
 
-- **Exploit protection in Windows** applies exploit mitigation techniques to operating system processes and apps automatically. It builds on the protections that were available in the Enhanced Mitigation Experience Toolkit (EMET) and integrates with Defender for Endpoint for reporting and alerting. For more information, see [Protect devices from exploits](exploit-protection.md).
+- **Exploit protection** applies exploit mitigation techniques to operating system processes and apps automatically. It builds on the protections that were available in the Enhanced Mitigation Experience Toolkit (EMET) and integrates with Defender for Endpoint for reporting and alerting. For more information, see [Protect devices from exploits](exploit-protection.md).
 
 - **Network protection** prevents connections to malicious or suspicious domains and IP addresses. It extends Microsoft Defender SmartScreen protection to block all outbound HTTP(S) traffic that attempts to connect to low-reputation sources. For more information, see [Network protection](network-protection.md).
 
