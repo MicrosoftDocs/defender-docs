@@ -33,7 +33,7 @@ For more information, see [Microsoft Defender XDR for US Government customers](/
 
 |Feature  |Feature stage |Azure commercial  |Azure Government |Azure operated by 21Vianet   |
 |---------|---------|---------|---------|---------|
-|[Analytics rules health](monitor-analytics-rule-integrity.md) |Public preview |Yes |No |No |
+|[Analytics rules health](monitor-analytics-rule-integrity.md) |Public preview |Yes |Yes |No |
 |[MITRE ATT&CK dashboard](mitre-coverage.md)	|Public preview |Yes |Yes |Yes |
 |[NRT rules](near-real-time-rules.md) |GA |Yes |Yes |Yes |
 |[Recommendations](detection-tuning.md) |Public preview |Yes |Yes|No|
