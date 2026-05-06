@@ -10,9 +10,6 @@ description: Get started with app governance capabilities to govern your apps in
 
 This article describes how to turn on Microsoft Defender for Cloud Apps app governance.
 
-> [!NOTE]
-> By default, the Microsoft Defender for Cloud Apps instance in the US Government environments can't connect to resources in Azure commercial and is FedRAMP compliant. However, App Governance isn't FedRAMP certified. App Governance will only store and process data in secure locations within the United States and the data will only be accessible by approved Microsoft employees.
-
 ## Prerequisites
 
 Before you start, verify that you satisfy the following prerequisites:

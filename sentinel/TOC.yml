@@ -717,6 +717,9 @@
         - name: Create and manage notebook jobs
           href: datalake/notebook-jobs.md
           displayName: data lake
+        - name: Troubleshoot notebooks
+          href: datalake/notebooks-troubleshooting.md
+          displayName: data lake
         - name: Notebook examples for data lake exploration
           href: datalake/notebook-examples.md
     - name: Microsoft Sentinel data lake service limits
@@ -1006,8 +1009,6 @@
               href: /azure/role-based-access-control/built-in-roles
             - name: Microsoft Sentinel roles
               href: /azure/role-based-access-control/built-in-roles#security
-            - name: Configure Microsoft Sentinel scoping (row-level RBAC)
-              href: scoping.md
     - name: Advanced Security Information Model (ASIM)
       items:
         - name: ASIM content
