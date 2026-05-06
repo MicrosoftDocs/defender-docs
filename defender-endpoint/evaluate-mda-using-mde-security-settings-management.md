@@ -139,9 +139,9 @@ When the policy creation is complete, you're taken to the details page of the ne
 
 Select **Endpoint security policies** at the top of the page to return to the **Endpoint security policies** page where the new policy is listed with the **Policy type** value **Microsoft Defender Antivirus**.
 
-### Attack Surface Reduction rules
+### Attack surface reduction rules
 
-To enable Attack Surface Reduction (ASR) rules using the endpoint security policies, do the following steps:
+To enable attack surface reduction (ASR) rules using the endpoint security policies, do the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Endpoints** \> **Configuration management** \> **Endpoint security policies**. Or, to go directly to the **Endpoint security policies** page, use <https://security.microsoft.com/policy-inventory> Windows policies.
 1. On the **Endpoint security policies** page, verify the **Windows policies** tab is selected, and then select **Create new policy**
@@ -197,7 +197,7 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
 When the policy creation is complete, you're taken to the details page of the new policy.
 
-Select **Endpoint security policies** at the top of the page to return to the **Endpoint security policies** page where the new policy is listed with the **Policy type** value **Attack Surface Reduction Rules**.
+Select **Endpoint security policies** at the top of the page to return to the **Endpoint security policies** page where the new policy is listed with the **Policy type** value **Attack surface reduction rules**.
 
 #### Enable Tamper Protection
 
