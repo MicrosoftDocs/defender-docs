@@ -33,7 +33,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 ## Sensor versions available per release
 
-### Sensor v0.10 (deployed by Helm or Arc for K8s in Preview mode)
+### Sensor v0.10 (deployed by Helm or Arc for K8s)
 
 **Sensor v0.10.5 — GA**
 
@@ -80,7 +80,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
     
 ### Sensor v0.9 (AKS 1.35 or by Helm)
 
-**Sensor v0.9.55— GA**
+**Sensor v0.9.58— GA**
 
 - **Released:** May 2026
 
