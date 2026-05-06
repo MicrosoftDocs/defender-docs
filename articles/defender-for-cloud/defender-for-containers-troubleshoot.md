@@ -84,7 +84,7 @@ This article provides troubleshooting guidance for common deployment and operati
 ### Posture and Discovery
 
 - **GKE Autopilot limitations**
-  - > [!IMPORTANT]
+    > [!IMPORTANT]
     > On GKE Autopilot clusters, you cannot manually configure or override resource limits for the Defender sensor. The sensor is designed to request the minimum resources required by Autopilot's specialized scheduling automatically.
 
 - **Service Account errors**

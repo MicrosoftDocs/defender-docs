@@ -55,8 +55,9 @@ If Azure Policy for Kubernetes isn't deployed or was turned off in the Defender 
 
 ## Data plane hardening recommendations
 
-After you deploy Azure Policy for Kubernetes Defender for Cloud evaluates your cluster configuration and generates data plane hardening recommendations. This process can take up to 30 minutes.
+After you deploy Azure Policy for Kubernetes, Defender for Cloud evaluates your cluster configuration and generates data plane hardening recommendations. This process can take up to 30 minutes.
 
+>[!NOTE]
 > Microsoft components, such as the Defender sensor, are deployed in the `kube-system` namespace by default and aren't marked as noncompliant. Third-party components installed in other namespaces might be flagged. To exclude specific namespaces, configure Azure policy exclusions.
 
 The following table lists common data plane hardening recommendations:
@@ -102,7 +103,7 @@ To view data plane hardening recommendations for a specific cluster:
 
 1. Select the **Take action** tab to review remediation options.
 
-    :::image type="content" source="media/kubernetes-workload-protections/take-action-tab.png" alt-text="Use the Take action tab to view remediation steps for a recommendation." lightbox="media/kubernetes-workload-protections/take-action-tab.png":::
+    :::image type="content" source="media/kubernetes-workload-protections/take-action-tab.png" alt-text="Screenshot of the Take action tab, used to view remediation steps for a recommendation." lightbox="media/kubernetes-workload-protections/take-action-tab.png":::
 
 ## Configure policy parameters
 
@@ -126,11 +127,11 @@ To configure policy parameters:
 
 1. Select the relevant policy assignment's 3-dot menu and select **Manage effect and parameters**.
    
-   :::image type="content" source="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png" alt-text="Screenshot of selecting the 3-dot menu and then selecting Manage effect and aparameters." lightbox="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png":::
+   :::image type="content" source="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png" alt-text="Screenshot of selecting the 3-dot menu and then selecting Manage effect and parameters." lightbox="media/kubernetes-workload-protections/select-manage-effect-and-parameters.png":::
 
 1. Update the required parameter values.
    
-   :::image type="content" source="media/kubernetes-workload-protections/manage-effect-and-parameters.png" alt-text="Screenshot of the paraments panel." lightbox="media/kubernetes-workload-protections/manage-effect-and-parameters.png":::
+   :::image type="content" source="media/kubernetes-workload-protections/manage-effect-and-parameters.png" alt-text="Screenshot of the parameters panel." lightbox="media/kubernetes-workload-protections/manage-effect-and-parameters.png":::
 
 1. Select **Save**.
 

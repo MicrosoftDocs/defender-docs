@@ -29,10 +29,10 @@ Defender for Containers uses the [Defender sensor](defender-for-containers-intro
 
 Key detection categories include:
 
-- **Web shell activity:** Identifying behaviors that resemble web shell invocations on running containers.
-- **Crypto mining activity:** Heuristics detect CPU optimization, suspicious download activity, and known mining processes.
-- **Network scanning tools:** Identification of tools commonly used for malicious reconnaissance.
-- **Binary drift detection:** Detection of workload binaries that have drifted from the original container image. For more details, see [Binary drift detection](binary-drift-detection.md).
+- **Web shell activity:** Detects behaviors that resemble web shell invocations on running containers.
+- **Crypto mining activity:** Detects behavior associated with crypto mining, such as CPU optimization patterns, suspicious download activity, and known mining processes.
+- **Network scanning tools:** Detects tools commonly used for malicious reconnaissance.
+- **Binary drift detection:** Detects workload binaries that have drifted from the original container image. To learn more, see [Binary drift detection](binary-drift-detection.md).
 
 ## Kubernetes alerts simulation tool
 

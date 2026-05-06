@@ -191,7 +191,7 @@ The Defender sensor creates Kubernetes roles with the following permissions:
 | batch | jobs, cronjobs | get, list, watch |
 | networking.k8s.io | ingresses | get, list, watch |
 | apiextensions.k8s.io | customresourcedefinitions | get, list, watch, create, update, delete |
-| defender.microsoft.com | * | get, list, watch, create, update, delete |
+| defender.microsoft.com | All resources (`*`) | get, list, watch, create, update, delete |
 
 ## Cloud infrastructure to Microsoft Defender for Cloud (Kubernetes audit logs)
 

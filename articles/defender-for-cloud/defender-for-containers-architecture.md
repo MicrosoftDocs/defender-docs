@@ -99,9 +99,9 @@ When you enable the agentless discovery for Kubernetes extension, the following 
 - **Assign:** Defender for Cloud assigns a built-in role called **Kubernetes Agentless Operator** to that identity on subscription scope. The role contains the following permissions:
   - AKS read (Microsoft.ContainerService/managedClusters/read)
   - AKS Trusted Access with the following permissions:
-  - Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings/write
-  - Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings/read
-  - Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings/delete
+    - Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings/write
+    - Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings/read
+    - Microsoft.ContainerService/managedClusters/trustedAccessRoleBindings/delete
    Learn more about [AKS Trusted Access](/azure/aks/trusted-access-feature).
 - **Discover:** Using the system assigned identity, Defender for Cloud discovers the AKS clusters in your environment by making API calls to the API server of AKS.
 - **Bind:** After discovering an AKS cluster, Defender for Cloud performs an AKS bind operation by creating a `ClusterRoleBinding` between the created identity and the Kubernetes `ClusterRole` *aks:trustedaccessrole:defender-containers:microsoft-defender-operator*. The `ClusterRole` is visible through the API and gives Defender for Cloud data plane read permission inside the cluster.

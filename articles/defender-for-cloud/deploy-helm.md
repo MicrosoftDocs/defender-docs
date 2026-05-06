@@ -58,7 +58,7 @@ Depending on your deployment type, follow the relevant instructions to install t
 
 # [AKS & AKS Automatic](#tab/aks)
 
-#### Prerequisites
+### Prerequisites
 
 **AKS Automatic Only**: Run the following command for AKS Automatic:
 
@@ -105,7 +105,7 @@ Depending on your deployment type, follow the relevant instructions to install t
    ```
    This command removes resource group and subscription level policies for setting up the generally available (GA) version of Defender for Containers. It can affect clusters other than the one you're configuring.
 
-#### Installation
+### Installation
 
 Use the [install_defender_sensor_aks.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/install_defender_sensor_aks.sh) script to install the Defender for Containers sensor and remove any existing deployment.
 
@@ -130,7 +130,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional paramete
 
 # [EKS and GKE](#tab/eks-and-gke)
 
-## Prerequisites
+### Prerequisites
 
 - Helm version 3.8 or later (the available version supports OCI)
 
@@ -155,7 +155,7 @@ Replace the placeholder text `<CLUSTER_AZURE_RESOURCE_ID>` and optional paramete
      ```
      In this example, replace the placeholder text `<connector-name>`, `<resource-group-name>`, and `<subscription-id>` with your values.
 
-## Installation
+### Installation
 
 1. Use the [install_defender_sensor_mc.sh](https://github.com/microsoft/Microsoft-Defender-For-Containers/blob/main/scripts/install_defender_sensor_mc.sh) script to install the Defender for Containers sensor and remove any existing deployment.
 
