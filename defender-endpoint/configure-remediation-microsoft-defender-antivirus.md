@@ -8,7 +8,8 @@ author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.custom: nextgen
-ms.date: 10/20/2025
+ms.date: 04/28/2026
+ai-usage: ai-assisted
 ms.reviewer: yongrhee
 ms.collection: 
 - m365-security
@@ -18,10 +19,9 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
-
 ---
-# Configure remediation for Microsoft Defender Antivirus detections
 
+# Configure remediation for Microsoft Defender Antivirus detections
 
 When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remove threats that are detected. Remediation actions can include removing a file, sending it to quarantine, or allowing it to remain. This article includes information and links to resources about specifying what actions should be taken when threats are detected on devices. You can choose from several methods, such as:
 
@@ -47,27 +47,35 @@ Also see [About regular quick and full scans with Microsoft Defender Antivirus](
 
 ## Configure remediation options using Intune
 
-1. As a global or security administrator, go to the [Intune admin center](https://intune.microsoft.com/) and sign in.
+To configure remediation actions using a Microsoft Intune Endpoint Security **Antivirus policy** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-1. Under **Manage**, choose **Antivirus**.
+- **Policy type**: Attack surface reduction
+- **Platform**: Windows
+- **Profile**: Microsoft Defender Antivirus
+- **Configuration settings**: In the **Threat security default action** section, configure the available settings:
+  - **Remediation action for High severity threats**
+  - **Remediation action for Severe threats**
+  - **Remediation action for Low severity threats**
+  - **Remediation action for Moderate severity threats**
 
-1. Either create a new policy, or edit an existing policy using the following settings:
+  with an available action value:
 
-   - Platform: **Windows 10, Windows 11, and Windows Server**
-   - Profile: **Microsoft Defender Antivirus**
+  - **Not configured** (default)
+  - **Clean**
+  - **Quarantine**
+  - **Remove**
+  - **Allow**
+  - **User defined**
+  - **Block**
 
-1. For configuration settings, expand **Defender**, scroll down to **Allow On Access Protection**. and set it to **Allowed**.
-
-1. Under **Allow On Access Protection**, select a remediation action for each level:
-
-   - High severity threats
-   - Severe threats
-   - Moderate severity threats
-   - Low severity threats
-
-1. Specify the device groups that should receive this policy (such as **All Devices**).
-
-1. Review your settings, and then choose **Save**.
+  > [!WARNING]
+  > **Allow** doesn't remediate detected threats and suppresses ongoing detection events. Don't configure this action when [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled. Use **Allow** only in specialized environments (for example, industrial control systems or critical infrastructure) where:
+  >
+  > - Automatic remediation isn't practical for operations.
+  > - Other procedures exist to respond to detected threats.
+  > - Compensating security controls are deployed.
+  >
+  > Use standard remediation actions (Clean, Quarantine, Remove, or Block) in all other environments.
 
 For more information about antivirus policies in Intune, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
@@ -94,8 +102,8 @@ If you're using Configuration Manager, see the following articles:
    |Scan<br/>Turn on removal of items from scan history folder.|Specify how many days items should be kept in the scan history.|30 days|
    |Root<br/>Turn off routine remediation.|Specify whether Microsoft Defender Antivirus automatically remediates threats, or whether to prompt the user.|Disabled. Threats are remediated automatically.|
    |Quarantine<br/>Configure removal of items from Quarantine folder.|Specify how many days items should be kept in quarantine before being removed.|90 days|
-   |Threats<br/>Specify threat alert levels at which default action shouldn't be taken when detected.|Every threat that is detected by Microsoft Defender Antivirus is assigned a threat level (low, medium, high, or severe). You can use this setting to define how all threats for each of the threat levels should be remediated (quarantined, removed, or ignored). |Not applicable|
-   |Threats<br/>Specify threats upon which default action shouldn't be taken when detected.|Specify how specific threats (using their threat ID) should be remediated. You can specify whether the specific threat should be quarantined, removed, or ignored.|Not applicable|
+   |Threats \> Specify threats upon which default action shouldn't be taken when detected.|Specify how specific threats (using their threat ID) should be remediated. You can specify whether the specific threat should be quarantined, removed, or ignored.|Not applicable|
+   |Threats \> Specify threat alert levels at which default action shouldn't be taken when detected.|Every threat that is detected by Microsoft Defender Antivirus is assigned a threat level: <ul><li>`1`: Low</li><li>`2`: Medium</li><li>`4`: High</li><li>`5`: Severe</li></ul> Use this setting to specify how threats for each level are remediated. Valid values are: <ul><li>`2`: Quarantine</li><li>`3`: Remove</li><li>`6`: Ignore</li><li>`11`: None</li></ul> **Warning**: The actions Ignore (`6`) and None (`11`) don't remediate detected threats. Ignore (`6`) suppresses ongoing detection events, while None (`11`) continues to generate alerts and Protection History entries. Don't configure either action when [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled. Use these actions only in specialized environments (for example, industrial control systems or critical infrastructure) where Automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, or compensating security controls are deployed. Use standard remediation actions (Quarantine (`2`) or Remove (`3`)) in all other environments.|Not applicable|
 
 1. Select **OK**.
 
@@ -109,6 +117,3 @@ You can also use the [`Set-MpPreference` PowerShell cmdlet](/powershell/module/d
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
-
