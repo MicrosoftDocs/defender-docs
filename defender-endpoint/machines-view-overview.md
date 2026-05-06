@@ -1,4 +1,4 @@
-﻿---
+---
 title: Explore devices in the device inventory
 description: Learn how to view, customize, and manage devices in the Microsoft Defender for Endpoint device inventory.
 keywords: device inventory, explore devices, view devices, filter devices, device list, device management, device details
@@ -74,7 +74,7 @@ Customize how you view devices in the inventory by adding or removing columns, a
 
 Choose which columns to display in your device inventory view.
 
-1. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** at the top of the device inventory.
+1. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** at the top of the device inventory.
 1. Select or clear the checkboxes for columns you want to show or hide. The changes apply immediately.
 
 Default columns vary by tab.
