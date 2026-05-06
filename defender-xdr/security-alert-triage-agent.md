@@ -32,7 +32,9 @@ Security Operations Centers (SOCs) process large volumes of alerts across multip
 
 The Microsoft Security Copilot Security Alert Triage Agent is an autonomous agent embedded in Microsoft Defender that helps security teams triage alerts at scale. It applies AI-driven, dynamic reasoning across evidence to deliver clear verdicts for supported security workloads. By identifying which alerts represent real attacks and which are false positives, the agent enables analysts to focus on investigating real threats, with transparent, step-by-step reasoning to support every decision.
 
-This article provides an overview of the Security Alert Triage Agent, how it works, and its alert triage capabilities.
+This article provides an overview of the Security Alert Triage Agent, how it works, and its alert triage capabilities. Watch this video to see a quick demo:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=868ecb6a-6545-4703-b58e-d3130e0c2eaa]
 
 > [!NOTE]
 > The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency in controlled evaluations. The agent is extended to triage a broader set of alerts in Microsoft Defender, starting with a subset of identity and cloud alerts. These expanded capabilities are currently in preview. The set of supported alerts is expected to grow over time.

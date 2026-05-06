@@ -1,43 +1,36 @@
 ---
 title: SAP agentless data connector prerequisites checker
-ms.date: 03/13/2025
+ms.date: 04/28/2026
 ms.topic: include
+ai-usage: ai-assisted
 ---
 
 <!-- docutune:disable -->
 
-**To run the tool**:
+**To configure and deploy the tool**:
 
-1. Open the integration package, navigate to the artifacts tab, and select the **Prerequisite checker** iflow > **Configure**.
+1. Open the integration package, navigate to the **Artifacts** tab, and select the **Prerequisite checker** iflow > **Configure**.
 1. Set the target destination name for the remote function call (RFC) to the SAP system you want to check. For example, `A4H-100-Sentinel-RFC`.
 1. Deploy the iflow as you would otherwise for your SAP systems.
-1. Trigger the iflow from any REST client. For example, use the following sample PowerShell script, modifying the sample placeholder values for your environment:
+1. For best results run the checker for **24 hours** with **1min frequency** to catch any anomalies like rogue overnight batch jobs, or any unknown usage spikes.
 
-    ```powershell
-    $cpiEndpoint = "https://my-cpi-uri.it-cpi012-rt.cfapps.eu01-010.hana.ondemand.com" # CPI endpoint URL
-    $credentialsUrl = "https://my-uaa-uri.authentication.eu01.hana.ondemand.com/oauth/token" # SAP authorization server URL
-    $serviceKey = 'sb-12324cd-a1b2-5678-a1b2-1234cd5678ef!g9123|it-rt-my-cpi!h45678' # Process Integration Runtime Service client ID
-    $serviceSecret = '< client secret >' # Your Process Integration Runtime service secret (make sure to use single quotes)
+**To review the check status**:
 
-    $credentials = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("$serviceKey`:$serviceSecret"))
-    $headers = @{
-        "Authorization" = "Basic $credentials"
-        "Content-Type"  = "application/json"
-    }
-    $authResponse = Invoke-WebRequest -Uri $credentialsUrl"?grant_type=client_credentials" `
-        -Method Post `
-        -Headers $headers
-    $token = ($authResponse.Content | ConvertFrom-Json).access_token
-    $path = "/http/checkSAP"
-    $param = "?startTimeUTC=$((Get-Date).AddMinutes(-1).ToString("yyyy-MM-ddTHH:mm:ss"))&endTimeUTC=$((Get-Date).ToString("yyyy-MM-ddTHH:mm:ss"))"
-    $headers = @{
-        "Authorization"      = "Bearer $token"
-        "Content-Type"       = "application/json"
-    }
-    $response = Invoke-WebRequest -Uri "$cpiEndpoint$path$param" -Method Get -Headers $headers
-    Write-Host $response.RawContent
-    ```
+1. In SAP Cloud Integration, open **Monitor** > **Integrations** and locate the runs of the **Prerequisite checker** iflow as per your watch period (e.g. 24h). Confirm that the runs completed with status **Completed** (HTTP 200) and that the response payload doesn't contain warnings or errors. The scheduler may produce messages with state "Discarded" due to internal workings of SAP Cloud Integration. These messages can be ignored and contain text like "Message processing has been discarded because the triggering timer event was already handled by another process."
+1. Inspect the message processing log (MPL) **Attachments** and properties for the per-check results. Open the file attached to the MPL entry.
 
-Make sure that the prerequisites checker runs successfully (status code 200) with no warnings on the response output before connecting to Microsoft Sentinel.
+:::image type="content" source="../sap/media/preparing-sap/agentless-prerequisite-checker-status.png" alt-text="Screenshot placeholder of the Prerequisite checker iflow run status in SAP Cloud Integration Monitor." lightbox="../sap/media/preparing-sap/agentless-prerequisite-checker-status.png":::
 
-If any findings, consult the response details for guidance on remediation steps. Legacy SAP systems often require extra SAP notes. Furthermore, see the [troubleshooting section](../sap/sap-deploy-troubleshoot.md) for common issues and resolutions.
+Use the following table to interpret the results:
+
+| Status | What it means | Next step |
+|--------|---------------|-----------|
+| **Completed**, no warnings | All prerequisites are met. | Continue connecting your SAP system to Microsoft Sentinel. |
+| **Completed**, with warnings | Prerequisites are partially met. | Review the response details and remediate before connecting. |
+| **Failed** or non-200 status | The checker couldn't reach the target SAP system or hit a configuration error. | Verify the RFC destination and credentials, then redeploy and rerun the iflow. |
+
+If any findings remain, consult the response details for guidance on remediation steps. Legacy SAP systems often require extra SAP notes. Furthermore, see the [troubleshooting section](../sap/sap-deploy-troubleshoot.md) for common issues and resolutions.
+
+**After completion**:
+
+Undeploy the scheduled **Prerequisite checker** iflow once SAP system check was completed successfully. Repeat this sequence for every new SAP system that shall be onboarded.

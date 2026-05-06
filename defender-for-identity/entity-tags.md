@@ -76,6 +76,61 @@ In addition to these groups, Defender for Identity identifies the following high
 - DHCP Server
 - DNS Server
 - Microsoft Exchange Server
+- Replicating Directory Changes Permissions
+
+## Defender for Identity Integrations
+
+The following roles are designated as Sensitive by Microsoft Defender for Identity. Any entity assigned membership in these roles is automatically classified as sensitive.
+
+### Okta
+
+- Super Administrator
+- Application Administrator
+- Group Administrator
+- API Access Management Administrator
+- Group Membership Administrator
+- Help Desk Administrator
+- Mobile Administrator
+- Organization Administrator
+- Read-only Administrator
+- Report Administrator
+
+### CyberArk Identity
+
+- Administration Role
+- Cloud Onboarding Admin
+- Connector Management Admin
+- Flows Admin
+- Privilege Cloud Administrators
+- Privilege Cloud Administrators Basic
+- Privilege Cloud Administrators Lite
+- Privilege Cloud Safe Managers
+- Privilege Cloud Safe Managers Basic
+- Privilege Cloud Safe Managers Lite
+- Privilege Cloud Session Admin
+- Privilege Cloud Session Risk Managers
+- System Administrator
+
+### SailPoint Identity Security Cloud
+
+#### Entra Id Roles
+- Global Administrator
+- User Administrator
+- Authentication Administrator
+- Privileged Authentication Administrator
+- Helpdesk Administrator
+- Agent ID Administrator
+- Application Administrator
+- Directory Writers
+- Domain Name Administrator
+- Password Administrator
+- Privileged Role Administrator
+- Hybrid Identity Administrator
+- Cloud Application Administrator
+
+#### SailPoint Identity Security Cloud Roles
+
+- IdentityNow Administrator
 
 
 ## Related content

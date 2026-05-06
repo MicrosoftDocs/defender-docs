@@ -4,7 +4,7 @@ description: This article displays the Microsoft Sentinel entity types and their
 author: guywi-ms
 ms.author: guywild
 ms.topic: reference
-ms.date: 03/24/2025
+ms.date: 04/28/2026
 
 
 #Customer intent: As a security analyst, I want to understand the entity types and identifiers in Microsoft Sentinel so that I can effectively track and investigate alerts and incidents.
@@ -95,11 +95,11 @@ The following section contains a more in-depth look at the full schemas of each 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
 | **Type** | String | 'account' |
-| **Name** | String | The name of the account. This field should hold only the name without any domain added to it. |
+| **Name** | String | The name of the account. This field should hold only the User Principal Name (UPN) prefix without any domain added to it. <br>*Example:* For the UPN user@contoso.com, this field holds only `user`. |
 | ***FullName*** | -- | *Not part of schema, included for backward compatibility with old version of entity mapping.* |
 | **NTDomain** | String | The NETBIOS domain name as it appears in the alert format&mdash;domain\username. <br>*Examples:* Finance, NT AUTHORITY |
-| **DnsDomain** | String | The fully qualified domain DNS name. <br>*Examples:* finance.contoso.com |
-| **UPNSuffix** | String | The user principal name suffix for the account. In many cases the UPN Suffix is also the domain name. <br>*Examples:* contoso.com |
+| **DnsDomain** | String | The fully qualified domain DNS name. <br>*Example:* `finance.contoso.com` |
+| **UPNSuffix** | String | The user principal name suffix for the account. In many cases the UPN Suffix is also the domain name. <br>*Example:* `contoso.com` |
 | **Host** | Entity ([Host](#host)) | The host that contains the account, if it's a local account. |
 | **Sid** | String | The account's security identifier. |
 | **AadTenantId** | Guid? | The Microsoft Entra tenant ID, if known. |
@@ -111,6 +111,9 @@ The following section contains a more in-depth look at the full schemas of each 
 | **CloudAppAccountId** | String | The AccountID in alerts from the CloudApp provider. Refers to account IDs in third-party apps that are not supported in other Microsoft products. |
 | **IsAnonymized** | Bool? | Indicates whether the user name is anonymized. Optional. Default value: `false`. |
 | **Stream** | Stream | The source of discovery logs related to the specific account. Optional. |
+
+> [!IMPORTANT]
+> Starting **July 1, 2026**, the **Name** field will consistently hold only the UPN prefix for all accounts. Previously, it could sometimes hold the full UPN. If you have automation rules, playbooks, or queries that compare **Name** against a full UPN value (like `user@contoso.com`), update them to reconstruct the full value from **Name** + **UPNSuffix** (or the relevant domain field), or use other available data instead.
 
 #### Strong identifiers of an account entity
 
