@@ -21,7 +21,7 @@ This procedure provides a high-level example of how to create a Conditional Acce
 1. Under **Assignments**, select **Users or workload identities**.
    1. Under **Include**, select **All users**
    1. Under **Exclude**, select **Users and groups** and choose your organization's emergency access or break-glass accounts.
-1. Under **Target resources** > **Resources (formerly cloud apps)**, select the following options:
+1. Under **Target resources** > **All resources (formerly 'All cloud apps')**, select the following options:
    1. Under **Include**, choose **Select resources**.
    1. Select the client apps that you want to include in your policy.
 1. Under **Conditions**, select any conditions that you want to include in your policy.
