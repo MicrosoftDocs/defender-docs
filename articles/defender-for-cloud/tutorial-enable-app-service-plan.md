@@ -35,6 +35,8 @@ You can learn more about Defender for Cloud pricing on [the pricing page](https:
 
 - You must have an App Service plan that runs on one of the following: Standard, Premium v2, Premium v3, or Isolated (App Service Environment v1, v2, v3). Free, Shared, and Basic tier App Service plans aren't supported by Defender for App Service.
 
+  For more information on App Service plans and tiers, see [Azure App Service plans](/azure/app-service/overview-hosting-plans).
+
 - For billing details and guidance on unexpected charges, see [Billing FAQ for supported App Service plans](defender-for-app-service-introduction.md#billing-faq-for-supported-app-service-plans).
 
 ## Enable the Defender for App Service plan
