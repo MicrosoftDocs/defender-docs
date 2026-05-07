@@ -22,35 +22,38 @@ This article provides recommendations for managing detections and other content 
 
 ## Choose your capability
 
-The following table summarizes the recommended capability based on your customer type and needs.
+The following table summarizes the recommended capability based on your customer type and needs. There are three possible setups, see the table and explanations to choose the right fit.
 
 | Customer type | Scalable, structured change management | Simple UI, low complexity | Custom/external tooling or high automation |
 |---|---|---|---|
 | Single tenant | Content as code (Repos) | Portal | APIs / Terraform |
 | Multitenant | Content as code (Repos; best for scale) | Content distribution (via portal) | APIs / Terraform |
 
-### Content as code with repositories
+### 1. Content as code with repositories
 
-For most Microsoft Sentinel customers, content as code with repositories is the recommended approach. Repositories provide versioning, approvals, workflows, and rollbacks for managing detections. For multitenant customers, repositories provide a scalable way to manage your setup across multiple tenants.
+For most Microsoft Sentinel customers, we recommend leveraging content as code with repositories. Repositories come with all the right versioning, approvals, workflows, and rollbacks for managing detections. For multitenant customers, repositories provide a scalable way to manage your setup across multiple tenants.
 
 For more information, see [Deploy content as code from your repository](ci-cd.md).
 
 > [!NOTE]
 > Repositories are available only to Microsoft Sentinel customers.
 
-### Portal and content distribution
+### 2. Portal and content distribution
 
-If content as code is too complex for your needs, the portal and content distribution are helpful alternatives. The portal lets you create and manage detections directly. For multitenant customers, content distribution can help manage content across multiple workspaces or tenants. Content distribution is also a good alternative for XDR-only customers who don't use Microsoft Sentinel.
+If content as code is too complex, the portal and content distribution are helpful alternatives. The portal lets you create and manage detections directly. For multitenant customers, content distribution can help manage content across multiple workspaces or tenants.
 
-### APIs and Terraform
+> [!NOTE]
+> Repositories are also only available to Sentinel customers currently, making this a good alternative for XDR-only customers.
 
-If your setup depends on custom or external tools that require scale, APIs are the recommended solution. APIs are especially helpful for customers who don't use the portal at all and need more flexibility. For customers who use infrastructure as code, Terraform provides similar benefits with declarative configuration.
+### 3. APIs
+
+If you use external tools, custom pipelines, or other forms of managing content, APIs are the right solution — especially if you don't use the portal and need more flexibility.
 
 ## Capabilities feature coverage
 
 The following table shows the feature coverage for each capability.
 
-| Feature | Portal | Content distribution | Repositories | Content Hub | APIs | Terraform |
+| Capabilities (for content) | Portal | Content distribution | Repositories | Content Hub | APIs | Terraform |
 |---|---|---|---|---|---|---|
 | Create/edit | Yes | Yes | Yes | Yes | Yes | Yes |
 | Delete | Yes | Yes | Yes | Yes | Yes | Yes |
