@@ -188,7 +188,7 @@ You can configure the offline security intelligence updates feature in two ways:
 
 You can configure the following settings:
 
-- **Security intelligence Update time interval**. This is where you can configure the time interval at which offline security intelligence updates are triggered on endpoints. By default, this setting is not configured. When you enable this setting, it allows you to specify the time interval (in seconds) for how often the Linux endpoints should pull the security intelligence updates from the mirror server.
+- **Security intelligence Update time interval**. When you enable this setting, it allows you to specify the time interval (in seconds) for how often the Linux endpoints should pull the security intelligence updates from the mirror server. By default, this setting is not configured, and the update interval is taken from [Automatic security updates setting](#automatic-update), which has a default value of 8 hours (28800 seconds).
 
    :::image type="content" source="./media/linux-support-offline-security-intelligence-update/security-intelligence-update-time-interval.png" alt-text="Screenshot of the Security intelligence Update time interval setting.":::
  
