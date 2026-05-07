@@ -65,7 +65,10 @@ For more information, see [Before you begin using Defender Experts](before-you-b
 Defender Experts for Servers delivers managed security operations for your server workloads through a combination of automation and human expertise. The service includes the following capabilities:
 
 - **Managed detection and response:** Expert analysts manage your server-related incidents in the Microsoft Defender XDR incident queue, handle triage and investigation on your behalf, and partner with your team to take action or guide you through response. For details, see [Managed detection and response](managed-detection-and-response-xdr.md).
+
 - **Proactive threat hunting:** [Microsoft Defender Experts for Hunting - Servers](defender-experts-for-hunting.md) is built in to extend your team's threat hunting capabilities and prioritize significant threats targeting your servers.
+    > [!NOTE]
+    > Defender Experts for Hunting - Servers is also available as a standalone service offering. For more information, contact your Microsoft account representative.
 - **Ask Defender Experts:** Select [Ask Defender Experts](experts-on-demand.md) in the Microsoft Defender portal to get expert advice about threats your organization is facing.
 - **Live dashboards and reports:** Get a transparent view of operations on your behalf and noise-free, actionable insights into what matters for you, coupled with detailed analytics. For details, see [Defender Experts reports](reports-xdr.md).
 - **Third-party network signal enrichment:** Enrich your Defender Experts experience with third-party network signals from Palo Alto Networks, Fortinet, and Zscaler to gain a more comprehensive view of an attack's path. For details, see [Third-party network signal enrichment](third-party-enrichment-defender-experts.md).
@@ -74,9 +77,7 @@ Defender Experts for Servers delivers managed security operations for your serve
 
 Defender Experts for Servers covers **all** servers in your tenant that have [Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview) protection enabled in Defender for Cloud. This coverage includes multicloud servers across Azure, AWS, and GCP, provided that Defender for Endpoint is installed on the servers.
 
-All Defender for Servers Plan 1 and Plan 2 alerts (Detection Source = Microsoft Defender for Servers) are in scope. [DNS alerts](/azure/defender-for-cloud/alerts-dns) are excluded from coverage due to limited data available for investigation.
-
-<!-- TODO: Confirm whether scoped coverage (defender-experts-scoped-coverage.md) applies to standalone Defender Experts for Servers. -->
+All Defender for Servers Plan 1 and Plan 2 alerts are in scope. [DNS alerts](/azure/defender-for-cloud/alerts-dns) are excluded from coverage due to limited data available for investigation.
 
 
 
