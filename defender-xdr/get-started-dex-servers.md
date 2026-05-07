@@ -1,5 +1,5 @@
 ---
-title: Set up Microsoft Defender Experts for Servers
+title: Get started with Microsoft Defender Experts for Servers
 description: Learn how to set up Microsoft Defender Experts for Servers by selecting coverage, granting permissions, and configuring notifications in the Microsoft Defender portal.
 ms.service: defender-experts
 ms.subservice: dex-xdr
@@ -18,28 +18,28 @@ ms.custom:
 - cx-dex
 - msecd-doc-authoring-1012
 search.appverid: met150
-ms.date: 04/16/2026
+ms.date: 05/18/2026
 
 #customer intent: As a security administrator, I want to set up Defender Experts for Servers so that my organization's cloud server workloads are covered by Microsoft's managed detection and response service.
 
 ---
 
-# Set up Microsoft Defender Experts for Servers
+# Get started with Microsoft Defender Experts for cloud workloads
 
 **Applies to:**
 
 - [Microsoft Defender Experts for Servers](dex-servers-overview.md)
 
-After purchasing the Defender Experts for Servers service, set up cloud workload coverage in the Microsoft Defender portal. The setup process involves selecting your coverage options, onboarding your cloud resources, granting permissions to experts, configuring notification contacts, and preparing your environment so that Defender Experts can begin monitoring your server infrastructure.
+This article discusses how you can enable and set up the Defender Experts for Servers service in the Microsoft Defender portal. The setup process involves onboarding your cloud resources, granting permissions to experts, configuring notification contacts, and preparing your environment so that Defender Experts can begin monitoring your server infrastructure.
 
 ## Prerequisites
 
 Before you begin, make sure you have the following prerequisites:
 
-- A Defender Experts for Servers license. If you're interested in purchasing this service, complete the [Defender Experts customer interest form](https://aka.ms/IWantDefenderExperts).
 - [Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/defender-for-servers-overview) enabled in Microsoft Defender for Cloud
-- [Endpoint protection](/azure/defender-for-cloud/integration-defender-for-endpoint) turned on for Windows and Linux devices in Defender for Cloud
-- At least a **Security Administrator** role in the Microsoft Defender portal
+- Microsoft Entra ID Plan 2
+
+To onboard your cloud workloads, you need at least a **Security Administrator** role in the Microsoft Defender portal. Once they’re onboarded, you also need [Endpoint protection](/azure/defender-for-cloud/integration-defender-for-endpoint) turned on for Windows and Linux devices in Defender for Cloud to activate the Defender Experts service.
 
 ## Select the cloud resources to onboard
 
@@ -49,24 +49,13 @@ To select your coverage options:
 
 1. In the Microsoft Defender portal, go to **Settings** > **Defender Experts** > **Cloud workloads**.
 
-1. Under **Select coverage options**, select the coverage types you want to enable:
-
-   - **Defender Experts for Servers** - Covers all your servers in your tenant that have Defender for Servers protection enabled in Defender for Cloud.
-   - **Defender Experts for Containers** - Covers all your tenants that have Container protection enabled in Defender for Cloud.
-
-1. Under **Enable Microsoft Defender for Cloud protection**, review the coverage summary.
+1. Under **Select coverage options**, select **Defender Experts for Servers**.
 
 1. Select **Onboard cloud resources**. The **Turn on Defender Experts for Servers?** confirmation dialog appears, informing you that additional charges apply based on the number of hours your protected servers are running.
 
 1. Select **Continue**. Select **Continue** to proceed, or select **Cancel** to go back.
 
 1. After you confirm, a processing banner appears while your cloud resources get onboarded to the Defender Experts service. Once onboarding completes successfully, the Defender Experts onboarding wizard launches to guide you through configuring the service. 
-
-> [!NOTE]
-> You can exclude critical devices and users from remediation now or after completing the setup.
-
-> [!IMPORTANT]
-> If onboarding fails, you see an error notification. Retry the onboarding process. If the issue persists, contact a Security Administrator for help.
 
 ## Run the provisioning script
 
@@ -78,7 +67,7 @@ Run a provisioning script in your environment to set up the components that Defe
 
 To run the provisioning script:
 
-1. In the Defender Experts onboarding wizard, under **Provision required application**, copy and run the PowerShell script on a local device or in Azure Cloud Shell. The process can take up to 20 minutes.
+1. In the Defender Experts onboarding wizard, under **Provision required application**, download a copy of the PowerShell script and run it on a local device or in Azure Cloud Shell.
 1. After the process completes, select **Validate** to check the connector access and verify that the required components are provisioned successfully.
 
 ## Grant permissions to experts
@@ -108,26 +97,19 @@ Continue with the onboarding wizard to set up the following configurations:
 
 ## Turn off Defender Experts for Servers service
 
-If you need to disable the service, turn off Defender Experts for Servers from the Cloud workloads settings page.
-
-To turn off the service:
-
-1. In the Microsoft Defender portal, go to **Settings** > **Defender Experts** > **Cloud workloads**.
-
-1. Clear the **Defender experts for server** checkbox. A confirmation dialog appears, noting that Defender Experts no longer assist with incidents involving your cloud servers.
+If you need to disable the service, [contact your Service Delivery Expert](communicate-defender-experts-xdr.md). 
 
    > [!NOTE]
    > Charges continue until the service is fully turned off within 48 hours.
 
-1. Select **Continue** to confirm, or select **Cancel** to keep the service active.
 
 ## Related content
 
 - [Microsoft Defender Experts for Servers overview](dex-servers-overview.md)
 - [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Communicating with experts in the Microsoft Defender Experts for XDR service](communicate-defender-experts-xdr.md)
-- [Get real-time visibility with Defender Experts for XDR reports](reports-xdr.md)
+- [Communicating with experts in the Microsoft Defender Experts service](communicate-defender-experts-xdr.md)
+- [Get real-time visibility with Defender Experts reports](reports-xdr.md)
 - [Understanding Defender Experts coverage for servers and cloud workloads](faq-cloud-coverage-defender-experts.md)
-- [How Defender Experts for XDR permissions work](dex-xdr-permissions.md)
+- [How Defender Experts permissions work](dex-xdr-permissions.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
