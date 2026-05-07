@@ -40,7 +40,7 @@ Learn more about Defender for Cloud pricing on the [Defender for Cloud pricing p
 
   For more information on App Service plans and tiers, see [Azure App Service plans](/azure/app-service/overview-hosting-plans).
 
-- For billing details, note that Defender for App Service billing applies to supported plans only: Standard, Premium v2, Premium v3, and Isolated (App Service Environment v1, v2, v3). Billing is calculated according to the total compute instances in supported plans..
+- For billing details, note that Defender for App Service billing applies to supported plans only: Standard, Premium v2, Premium v3, and Isolated (App Service Environment v1, v2, v3). Billing is calculated according to the total compute instances in supported plans.
 
 ## Enable the Defender for App Service plan
 
