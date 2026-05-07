@@ -11,10 +11,10 @@ ms.date: 03/30/2025
 
 > [!IMPORTANT]
 > New public preview SQL vulnerability assessment unified API reference can be found under:
-> - [Sql Vulnerability Assessment Settings](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings?view=rest-defenderforcloud-composite-latest)
-> - [Sql Vulnerability Assessment Baseline Rules](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules?view=rest-defenderforcloud-composite-latest)
-> - [Sql Vulnerability Assessment Scan Results](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results?view=rest-defenderforcloud-composite-latest)
-> - [Sql Vulnerability Assessment Scans](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans?view=rest-defenderforcloud-composite-latest)
+> - [Sql Vulnerability Assessment Settings](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings)
+> - [Sql Vulnerability Assessment Baseline Rules](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules)
+> - [Sql Vulnerability Assessment Scan Results](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results)
+> - [Sql Vulnerability Assessment Scans](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans)
 > Examples below refer only to Azure SQL Databases (GA).
 
 This article lists the PowerShell commands that can be used with SQL vulnerability assessment express configuration.
