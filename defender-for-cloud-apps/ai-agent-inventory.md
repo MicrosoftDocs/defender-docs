@@ -25,9 +25,6 @@ To enable AI agent inventory and detection, you must:
  - A Microsoft Defender for Cloud Apps license 
  - You opt in to the [Microsoft Defender for Cloud preview features](https://security.microsoft.com/securitysettings/defender/preview_features) 
 
-- Have one of the following:
-  - A Microsoft Agent 365 license.
-  - Both a Microsoft Defender for Cloud Apps license and a Microsoft Copilot Studio license.
 
 ## Enable discovery of Copilot Studio AI agents
 
