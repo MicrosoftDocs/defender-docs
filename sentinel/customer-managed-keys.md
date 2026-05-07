@@ -3,7 +3,7 @@ title: Set up customer-managed keys in Microsoft Sentinel| Microsoft Docs
 description: Learn how to set up customer-managed key (CMK) in Microsoft Sentinel.
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 07/29/2025
+ms.date: 05/07/2026
 ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -23,12 +23,32 @@ This article provides background information and steps to configure a [customer-
 1. Configure a Log Analytics dedicated cluster with at least a 100 GB/day commitment tier. When multiple workspaces are linked to the same dedicated cluster, they share the same customer-managed key. Learn about [Log Analytics Dedicated Cluster Pricing](/azure/azure-monitor/logs/logs-dedicated-clusters#cluster-pricing-model).
 1. Configure CMK on the dedicated cluster and link your workspace to that cluster. Learn about the [CMK provisioning steps in Azure Monitor](/azure/azure-monitor/logs/customer-managed-keys?tabs=portal#customer-managed-key-provisioning-steps).
    
-## Considerations
+## Data protected by CMK
+
+Once CMK is enabled, the following data is protected:
+
+- Log Analytics tables in workspaces linked to the dedicated cluster
+- Certain Microsoft Sentinel resources stored in the linked workspaces:
+  - Analytics rules
+  - Threat intelligence
+  - Summary rules
+  - Watchlists
+
+> [!NOTE]
+> UEBA outputs data and insights into your Log Analytics workspace, which can be protected using customer-managed keys (CMK). However, UEBA processing also involves storage of derived data outside of your Log Analytics workspace, which currently can't be protected with CMK.
+
+All other data uses a Microsoft-managed key (MMK) instead and isn't protected by CMK. For example, this includes but is not limited to:
+
+- Operational data within Microsoft Sentinel such as alerts, incidents, and behaviors and the data included in them.
+- Data stored in products/services outside of Microsoft Sentinel, such as Security Copilot and Entra, or resources stored outside of the workspace such as workbooks, playbooks.
+
+If you have specific needs that require increased CMK coverage, contact your account team.
+
+## Onboarding considerations
 
 - Onboarding a CMK workspace to Microsoft Sentinel is supported only via REST API and the [Azure CLI](/cli/azure/sentinel/onboarding-state?view=azure-cli-latest#az-sentinel-onboarding-state-create), and not via the Azure portal. Azure Resource Manager templates (ARM templates) currently aren't supported for CMK onboarding.
 
-- In the following cases, ingested workspace data and logs are encrypted with CMK, while other Microsoft Sentinel data, including security content like analytics rules, but also alerts, incidents, and more, are encrypted with Microsoft-managed keys: 
-
+- In the following cases, only ingested data in Log Analytics tables are encrypted with CMK, while all other data is encrypted with Microsoft-managed keys: 
     - Enabling CMK on a workspace that's already onboarded to Microsoft Sentinel.
     - Enabling CMK on a cluster that contains Microsoft Sentinel-enabled workspaces.
     - Linking a Microsoft Sentinel-enabled, non-CMK workspace to a CMK-enabled cluster.
@@ -39,17 +59,16 @@ This article provides background information and steps to configure a [customer-
   - Setting a Sentinel-onboarded, CMK-enabled workspace as a non-CMK workspace by unlinking it from its CMK-enabled dedicated cluster.
   - Disabling CMK on a CMK-enabled Log Analytics dedicated cluster.
 
-- If you [onboard your Microsoft Sentinel-enabled workspace to the Defender portal](microsoft-sentinel-defender-portal.md), ingested workspace data/logs remain encrypted with CMK. Other data isn't encrypted with CMK and uses a Microsoft-managed key.
 
-- Microsoft Sentinel supports System Assigned Identities in CMK configuration. Therefore, the dedicated Log Analytics cluster's identity should be of **System Assigned** type. We recommend that you use the identity that's automatically assigned to the Log Analytics cluster when it's created.
+- Microsoft Sentinel supports System Assigned Identities in CMK configuration. Therefore, the dedicated Log Analytics cluster's identity should be a **System Assigned** identity. We recommend that you use the identity that's automatically assigned to the Log Analytics cluster when it's created.
 
-- Changing the customer-managed key to another key (with another URI) currently *isn't supported*. You should change the key by [rotating it](/azure/azure-monitor/logs/customer-managed-keys#key-rotation).
+- Changing the customer-managed key to another key (with another URI) currently *isn't supported*. Change the key by [rotating it](/azure/azure-monitor/logs/customer-managed-keys#key-rotation).
 
 - Before you make any CMK changes to a production workspace or to a Log Analytics cluster, contact the [Microsoft Sentinel Product Group](mailto:onboardrecoeng@microsoft.com).
 
 ## How CMK works 
 
-The Microsoft Sentinel solution uses a dedicated Log Analytics cluster for log collection and features. As part of the Microsoft Sentinel CMK configuration, you must configure the CMK settings on the related Log Analytics dedicated cluster. Data saved by Microsoft Sentinel in storage resources other than Log Analytics is also encrypted using the customer-managed key configured for the dedicated Log Analytics cluster.
+The Microsoft Sentinel solution uses a dedicated Log Analytics cluster for log collection and features. As part of the Microsoft Sentinel CMK configuration, you must configure the CMK settings on the related Log Analytics dedicated cluster. 
 
 For more information, see:
 - [Azure Monitor customer-managed keys (CMK)](/azure/azure-monitor/logs/customer-managed-keys).
@@ -62,7 +81,7 @@ For more information, see:
 ## Enable CMK 
 
 To provision CMK, follow these steps:
-1.  Make sure you have a Log Analytics workspace, and that it's linked to a dedicated cluster on which CMK is enabled. (See [Prerequisites](#prerequisites).)
+1.  Configure CMK on a log analytics workspace on a dedicated cluster. See [Prerequisites](#prerequisites).
 1.  Register to the Azure Cosmos DB Resource Provider.
 1.  Add an access policy to your Azure Key Vault instance.
 1.  Onboard the workspace to Microsoft Sentinel via the [Onboarding API](/rest/api/securityinsights/preview/sentinel-onboarding-states/create).
