@@ -19,7 +19,7 @@ Microsoft Sentinel uses [Azure role-based access control (Azure RBAC)](/azure/ro
 
 Before assigning roles, see [Steps to assign an Azure role](/azure/role-based-access-control/role-assignments-steps) for help determining who needs access, which role to choose, and what scope to apply.
 
-See step-by-step instructions to assign roles to users, groups, and services:
+Use the following step-by-step instructions to assign roles to users, groups, and services, based on your role type:
 - **Azure roles**: [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
 - **Microsoft Entra ID roles**: [Assign Microsoft Entra roles](/entra/identity/role-based-access-control/manage-roles-portal?tabs=admin-center)
 
