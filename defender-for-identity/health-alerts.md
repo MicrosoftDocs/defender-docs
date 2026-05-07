@@ -96,5 +96,5 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 ## See also
 
-- [Work with Defender for Identity's ITDR dashboard](dashboard.md)
+- [Work with Defender for Identity's Identity Security dashboard](dashboard.md)
 - [Defender for Identity community forum](https://aka.ms/MDIcommunity)

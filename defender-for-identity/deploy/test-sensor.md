@@ -1,41 +1,41 @@
 ---
-title: Validate the Microsoft Defender for Identity sensor deployment on domain controllers
-description: Learn about how to check that the Microsoft Defender for Identity sensors have been onboarded correctly.
-ms.date: 06/10/2025
+title: Validate sensor deployment on domain controllers
+description: Validate your Microsoft Defender for Identity sensor deployment by checking the Identity Security dashboard, entity pages, advanced hunting, and alert functionality.
+ms.date: 05/07/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: msecd-doc-authoring-106
+#customer intent: As an admin deploying Defender for Identity, I want to validate that my sensors are working correctly so that I can confirm my deployment is complete.
 ---
 
-# Validate the Defender for Identity sensor deployment on domain controllers 
+# Validate sensor deployment on domain controllers
 
 Use the following procedures to check that your sensors are working.
-Note that the first time you activate the sensor on your domain controller, it might take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations show within five minutes.
 
-## Check the ITDR dashboard
+> [!NOTE]
+> The first time you activate the sensor on your domain controller, it might take up to an hour for the sensor to show as **Running** on the **Sensors** page. Subsequent activations show within five minutes.
 
-1. In the Defender portal, select **Identities** > **Dashboard**, and review the details shown, checking for expected results from your environment.
+## Check the Identity Security dashboard
 
-For more information, see [Work with Defender for Identity's ITDR dashboard](../dashboard.md).
+1. In the Defender portal, select **Identities** > **Dashboard**, and review the details shown. Check for expected results from your environment. For more information, see [Identity Security dashboard](../dashboard.md).
 
-## Confirm entity page details
+## Confirm entity data in the Defender portal
 
-Confirm that entities, such as domain controllers, users, and groups, are populated as expected. 
-
-In the Defender portal, check for the following details:
+In the Defender portal, confirm that entities like domain controllers, users, and groups are populated as expected:
 
 - **Device entities**: Select **Assets > Devices**, and select the machine for your new sensor. Defender for Identity events are shown on the device timeline.
 
-- **User entities**: Select **Assets > Users** and check for users from a newly onboarded domain. Alternately, use the global search option to search for specific users. User details pages should include **Overview**, **Observed in organization**, and **Timeline** data.
+- **User entities**: Select **Assets > Users** and check for users from a newly onboarded domain. You can also use the global search to find specific users. User details pages should include **Overview**, **Observed in organization**, and **Timeline** data.
 
 - **Group entities**: Use the global search to find a user group, or pivot from a user or device details page where group details are shown. Check for details of group membership, view group users, and group timeline data.
 
-If no event data is found on the group timeline, you may need to create some manually. You can do this by, for example, adding and removing users from the group in Active Directory.
+If no event data is found on the group timeline, you might need to create some manually. You can do this by, for example, adding and removing users from the group in Active Directory.
 
 For more information, see [Investigate assets](../investigate-assets.md).
 
-## Test advanced hunting tables
+## Verify data in advanced hunting tables
 
-1. In the Defender portal's **Advanced hunting** page, use the following sample queries to check that data appears in relevant tables as expected for your environment:
+1. In the Defender portal's **Advanced hunting** page, run the following queries to verify that data appears in the expected tables:
 
     ```kusto
     IdentityDirectoryEvents
@@ -80,11 +80,15 @@ For more information, see [Microsoft Defender for Identity's security posture as
 
 ## Test alert functionality
 
-Test alert functionality by simulating risky activity in a test environment. For example:
+Simulate risky activity in a test environment to verify that alerts are triggered as expected. For example:
 
-- Tag an account as a honeytoken account, and then try signing in to the honeytoken account against the activated domain controller.
-- Create a suspicious service on your domain controller.
-- Run a remote command on your domain controller as an administrator signed in from your workstation.
+1. Tag an account as a honeytoken account, and then try signing in to the honeytoken account against the activated domain controller.
+
+1. Create a suspicious service on your domain controller.
+
+1. Run a remote command on your domain controller as an administrator signed in from your workstation.
+
+1. Verify that the expected alerts appear in the Defender portal.
 
 For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](../manage-security-alerts.md).
 

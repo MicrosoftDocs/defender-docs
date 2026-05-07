@@ -194,7 +194,7 @@ For more information, see:
 
 Incorporate the following into your SecOps processes:
 
-- [View the ITDR dashboard](/defender-for-identity/dashboard)
+- [View the Identity Security dashboard](/defender-for-identity/dashboard)
 - [View and manage Defender for Identity health issues](/defender-for-identity/health-alerts)
 
 ## Next step for the end-to-end deployment of Microsoft Defender XDR

@@ -8,10 +8,10 @@ ms.reviewer: rlitinsky
 
 # Plan capacity for Microsoft Defender for Identity deployment
 
-> [!IMPORTANT]
+> [!NOTE]
 > The capacity planning tool was designed for version 2.x of the sensor due to its resource-intensive network processes. Sensor v3.x does not require a sizing tool since it relies mainly on Windows events and event tracing, which significantly reduces resource requirements.
 
-This article describes how to use the Microsoft Defender for Identity sizing tool to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor.
+Use the Microsoft Defender for Identity sizing tool to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor v2.
 
 While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md).
 
