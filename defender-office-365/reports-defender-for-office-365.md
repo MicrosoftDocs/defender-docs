@@ -159,12 +159,14 @@ On the **Post delivery activities** page, the :::image type="icon" source="media
 >
 > This report is currently in Preview, isn't available in all organizations, and is subject to change.
 
-The **Protection & posture insights** report is an on-demand, tenant-specific report that helps you understand how effectively your organization is protected against threats targeting email and collaboration workloads. The report brings together protection effectiveness, security posture, and threat activity into a single, downloadable view. You can use it to assess risk, identify configuration gaps, and communicate security outcomes to stakeholders.
+The **Protection & posture insights** report is an on-demand, tenant-specific report. It helps you understand how effectively your organization is protected against threats that target email and collaboration workloads. The report brings together protection effectiveness, security posture, and threat activity into a single, downloadable view. You can use it to assess risk, identify configuration gaps, and communicate security outcomes to stakeholders.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Protection & posture insights**, and then select **Generate** to create the report. After the report is generated, the following actions are available:
 
 - **Download report**: Download the report as an HTML file.
-- **Open report**: Open the report in the Defender portal. The report is long, so you need to scroll to see all sections. **Print as PDF** is available to save or print the report.
+- **Open report**: Open the report in the Defender portal. The report is long, so scroll to view all sections, or use the navigation bar to jump directly to areas of interest within the report. **Print as PDF** is available to save or print the report.
+
+The report includes data from the previous 30 days, and you can generate a new version of the report once every 24 hours. If the report generation fails, you can retry after 60 minutes.
 
 :::image type="content" source="media/protection-posture-insights-report-widget-post-generate.png" alt-text="Screenshot of the Protection & posture insights report widget after report generation with Download report and Open report available." lightbox="media/protection-posture-insights-report-widget-post-generate.png":::
 
@@ -191,16 +193,16 @@ Use the report to:
 ### Report sections
 
 - **Executive Summary**: An overview of how many threats and unwanted messages were detected during the reporting period.
-- **Effectiveness**: Complete transparency into the threats that Defender for Office 365 blocked within email.
-- **Threat Landscape**: Broader attacker behaviors and techniques via threat intelligence articles.
-- **Threat Classification**: Threats detected with AI, attributing their intent and type using large language model (LLM) analysis.
+- **Effectiveness**: Full visibility into the threats that Defender for Office 365 blocked in email.
+- **Threat Landscape**: Broader attacker behaviors and techniques based on threat intelligence articles.
+- **Threat Classification**: Threats detected by AI that attributes intent and type by using large language model (LLM) analysis.
 - **Zero-Day Threats (Detonation)**: Threats detected through sandboxing, indicating exposure to advanced attacks and evasion techniques.
 - **Priority Accounts**: The top five users tagged as priority accounts that were targeted with phishing and malware.
 - **Policy Coverage**: Whether your policy configuration ensures all users benefit from key protections.
 - **Delivery Locations**: Where threats ultimately land, directly reflecting user exposure.
 - **Detection Trends**: How threat activity and detection volumes changed over the reporting period.
 - **Inbound Detection Technology**: Which detection layers are doing the work, helping assess defense-in-depth.
-- **Phish Threshold Policy Level**: Detection aggressiveness to outcomes and false-positive risk.
+- **Phish Threshold Policy Level**: How detection aggressiveness relates to outcomes and false-positive risk.
 - **Quarantine Statistics**: The percentage of quarantined email messages that were ultimately released (likely false positives) to help you further tune your protection.
 
 ### Frequently asked questions
