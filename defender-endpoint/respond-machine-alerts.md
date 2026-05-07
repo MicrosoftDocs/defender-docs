@@ -11,6 +11,7 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.subservice: edr
 appliesto:
   - Microsoft Defender for Business
@@ -279,20 +280,32 @@ When a device is being isolated, the following notification is displayed to info
 <a id="isolate-device-automatic-attack-disruption"></a>
 ## Isolate device - automatic attack disruption (Preview)
 
-As part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption), Microsoft Defender for Endpoint can automatically isolate a device when Microsoft Defender determines with high confidence that the endpoint is compromised. Automatic isolation helps stop attacker activity and reduces the risk of further impact, such as data exfiltration and lateral movement.
+When a device in your organization is suspected to be compromised, Microsoft Defender for Endpoint can automatically isolate the device as part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption). Automatic isolation helps reduce the risk of further impact on the organization, limit attacker lateral movement, and prevent impacts such as data exfiltration and ransomware propagation.
 
 When a device is isolated automatically:
 
-- Most network traffic to and from the device is blocked to reduce attacker communication and lateral spread.
-- The device remains connected to the Microsoft Defender for Endpoint service so that your security team can continue investigation and remediation.
-- The device remains powered on and available for investigation and remediation activities.
+- The compromised device is disconnected from the network, reducing the risk of further impact on the organization.
+- The device retains connectivity to the Microsoft Defender for Endpoint service, which continues to monitor the device.
 
 > [!NOTE]
-> Automatic device isolation applies only to devices that are onboarded and managed by Microsoft Defender for Endpoint. It primarily targets end-user workstations.
+> Automatic device isolation works only on end-user workstations that are onboarded and managed by Microsoft Defender for Endpoint.
+>
+> For selective isolation guidance, use the manual **Isolate devices from the network** action described in this article.
 
-### When automatic device isolation is applied
+### View automatic device isolation actions
 
-Automatic device isolation targets scenarios where a compromised endpoint is used as an active foothold, for example, maintaining persistence and communicating with command-and-control infrastructure. In these scenarios, rapid network isolation helps stop attacker control of the device and limits the ability to move laterally.
+After automatic isolation is applied, you can review the action and its status in the Defender portal:
+
+1. Open the relevant incident and review the **Activity** tab.
+1. Open the affected device page and confirm the device isolation status.
+1. Open **Action center** to review action history and current state.
+
+> [!NOTE]
+> Screenshot placeholders to add:
+>
+> - Incident **Activity** tab showing automatic isolation.
+> - Device page showing isolated status.
+> - **Action center** entry for automatic isolation.
 
 ### Safeguards and business impact
 
