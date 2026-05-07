@@ -13,12 +13,6 @@ ms.service: defender-for-cloud
 
 This quickstart shows how to use the unified SQL Vulnerability Assessment Representational State Transfer (REST) API to run end-to-end scans and baseline management for server-level Azure SQL resources.
 
-The script in this article supports these resource types:
-
-- Azure SQL Server (`Microsoft.Sql/servers`)
-- Azure SQL Managed Instance (`Microsoft.Sql/managedInstances`)
-- Azure Synapse workspace (`Microsoft.Synapse/workspaces`)
-
 In one interactive flow, you enable vulnerability assessment settings, discover databases, run scans, review findings, and optionally set baselines.
 
 ## Run a SQL vulnerability assessment scan
@@ -27,25 +21,25 @@ Scan all databases on your Azure SQL resource, review the results, and manage ba
 
 ### What the script does
 
-1. **Enables** SQL Vulnerability Assessment settings on the server (exits with error details on failure)
-2. **Discovers** all databases automatically (via Azure Resource Manager (ARM)) and adds `master`
-3. **Scans** each database, waits for completion, and displays results
-4. Prints a **scan summary table**
-5. **Baseline management** - interactively choose how to handle failed rules:
-   - **[A] All** - set baselines on all failed rules across all databases at once
-   - **[R] Review** - inspect each failed rule (severity, description, findings, remediation) and choose individually
-   - **[S] Skip** - leave baselines unchanged
-6. Displays a **final scan summary** reflecting any baselines applied
+- **Enables** SQL Vulnerability Assessment settings on the server (exits with error details on failure).
+- **Discovers** all databases automatically (via Azure Resource Manager (ARM)) and adds `master`.
+- **Scans** each database, waits for completion, and displays results.
+- Prints a **scan summary table**.
+- **Baseline management** - interactively choose how to handle failed rules:
+  - **[A] All** - set baselines on all failed rules across all databases at once.
+  - **[R] Review** - inspect each failed rule (severity, description, findings, remediation) and choose individually.
+  - **[S] Skip** - leave baselines unchanged.
+- Displays a **final scan summary** reflecting any baselines applied
 
 ### Prerequisites
 
-- **PowerShell 7+**
-- **Azure CLI** (`az`), authenticated by running `az login`
+- PowerShell 7+.
+- Azure CLI (`az`), authenticated by running `az login`.
 - A server-level resource ID (see [Supported Resources](#supported-resources))
-- **Azure RBAC roles** on the target resource:
-	- [**Reader**](/azure/role-based-access-control/built-in-roles/general#reader) to list databases and SQL pools through ARM
-	- [**SQL Security Manager**](/azure/role-based-access-control/built-in-roles/databases#sql-security-manager) to enable vulnerability assessment (VA) settings, initiate scans, read results, and manage baselines (`Microsoft.Security/sqlVulnerabilityAssessments/*`)
-- **SQL Managed Instance only:** The managed instance must have a [system-assigned managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) enabled
+- Azure RBAC roles on the target resource:
+  - [**Reader**](/azure/role-based-access-control/built-in-roles/general#reader) to list databases and SQL pools through ARM.
+  - [**SQL Security Manager**](/azure/role-based-access-control/built-in-roles/databases#sql-security-manager) to enable vulnerability assessment (VA) settings, initiate scans, read results, and manage baselines (`Microsoft.Security/sqlVulnerabilityAssessments/*`).
+- SQL Managed Instance only: The managed instance must have a [system-assigned managed identity](/azure/azure-sql/database/authentication-azure-ad-user-assigned-managed-identity) enabled.
 
 ### Supported resources
 
@@ -580,3 +574,7 @@ Step 1: Enable SQL Vulnerability Assessment
 | Synapse scan fails | Ensure the SQL pool is in a **resumed** (running) state |
 | Timeout on large databases | Increase `-ScanTimeoutSeconds` (e.g., `-ScanTimeoutSeconds 600`) |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Enable vulnerability assessments on Azure SQL databases with Express Configuration](/azure/defender-for-cloud/powershell-sample-vulnerability-assessment-azure-sql?branch=pr-en-us-2830&tabs=preview)
