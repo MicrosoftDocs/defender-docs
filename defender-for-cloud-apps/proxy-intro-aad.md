@@ -35,6 +35,8 @@ Conditional Access app control uses access policies and session policies to moni
 
 Each policy has conditions to define *who* (which user or group of users), *what* (which cloud apps), and *where* (which locations and networks) the policy is applied to. After you determine the conditions, route your users first to Defender for Cloud Apps. There, you can apply the access and session controls to help protect your data.
 
+Conditional Access policies are applied at the application level, not at the individual file level. As a result, you can't exclude specific files from the policy settings.
+
 Access and session policies include the following types of activities:
 
 |Activity |Description |
@@ -84,6 +86,8 @@ Defender for Cloud Apps identifies apps by using data from the cloud app catalog
 > You can't use installed apps that have *noninteractive* sign-in flows, such as the Authenticator app and other built-in apps, with access controls. Our recommendation in that case is to craft an access policy in the Microsoft Entra admin center in addition to Microsoft Defender for Cloud Apps access policies.
 
 ## Scope of support for session control
+
+Session controls apply only to web browser–based access and are enforced during interactive browser sessions.
 
 Although session controls are built to work with any browser on any major platform on any operating system, we support the latest versions of the following browsers:
 

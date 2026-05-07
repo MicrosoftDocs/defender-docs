@@ -1,12 +1,10 @@
-﻿---
+---
 title: Onboarding using Microsoft Intune
 description: Learn how to onboard to Microsoft Defender for Endpoint using Microsoft Intune.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -15,7 +13,6 @@ ms.collection:
   - tier1
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

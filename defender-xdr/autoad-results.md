@@ -1,16 +1,11 @@
 ---
 title: Details and results of an automatic attack disruption action
 description: View the results and key findings of automatic attack disruption in Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 10/21/2025
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -47,6 +42,32 @@ The Action center ([https://security.microsoft.com/action-center](https://securi
 
 You can release the contained assets, for example, enable a blocked user account or release a device from containment, from the action details pane. You can release the contained assets after you mitigate the risk and complete the investigation of an incident. For more information about the action center, see [Action center](m365d-action-center.md).
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+
+## Track the action status in the Activities tab (Preview)
+
+The **Activities** tab in the **Incident** page allows you to view details related to a specific incident, including the date and time the activity started, the triggering alert, and more. 
+
+The **Policy status** column (Preview) in the activities list provides a stateful list of actions and policies taken within incidents, which allows you to see the current status of all relevant actions and policies in your environment. This addresses the challenge of tracking ongoing and expired actions, especially in large environments with many incidents.
+
+To view all automatic attack disruption and predictive shielding actions taken as part of an incident:
+
+1. In the incident's **Activities** tab, add the following filters:
+    - Select **30 Days** > **Custom range**, and select the relevant timeframe for the actions you want to investigate.
+    - Select **Performed by** and select **AttackDisruption**. This filter also includes predictive shielding actions.
+    - Select **Activity status** and select **Completed**. This shows you the current policy status for actions that are completed, filtering out partial or in-progress actions.
+    - **Policy status**: Select **Active**, **Inactive**, and **No status** (all options except **Not applicable**).
+1. Review the listed activities. The **Policy status** column shows the current status of the policy for each activity. For example, a user was contained in the specified timeframe, but the policy is currently inactive. This means that the user is no longer contained.
+
+    :::image type="content" source="media/autoad-results/activities-tab-status.png" alt-text="Screenshot of the Activities tab showing policy status." lightbox="media/autoad-results/activities-tab-status.png":::
+
+The following policy statuses are available:
+
+- **Active**: The policy is currently active and enforced.
+- **Inactive**: The policy was previously applied but is no longer active. For example, a user was contained but has since been released.
+- **Not applicable**: The policy status doesn't apply to the action. For example, the policy status doesn't apply to an uncontain action, because uncontain actions are not policies but rather the reversal of a previous action.
+- **No status**: The policy status couldn't be retrieved for various reasons, for example, the action is still in progress and the final status is not yet determined.
+
+This view provides unique data on the activity and policy status in the selected timeframe. This data goes beyond Action center views, which provide a historical log of actions taken but do not reflect the current status of those actions.  
 
 ## Track the actions in advanced hunting
 

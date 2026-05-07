@@ -52,8 +52,6 @@ items:
             displayName: Directory Service Account, DSA
           - name: Configure a DSA with a gMSA
             href: deploy/create-directory-service-account-gmsa.md
-        - name: Configure remote calls to SAM
-          href: deploy/remote-calls-sam.md
         - name: Configure action accounts
           href: deploy/manage-action-accounts.md
         - name: Deploy a standalone sensor
@@ -75,6 +73,8 @@ items:
           href: deploy/prerequisites-sensor-version-3.md
         - name: Activate the Defender for Identity sensor
           href: deploy/activate-sensor.md
+    - name: Migrate from sensor v2 to sensor v3 (Preview)
+      href: deploy/migrate-to-sensor-v3.md
     - name: Validate the sensor deployment
       href: deploy/test-sensor.md
   - name: Configure event collection
@@ -85,20 +85,91 @@ items:
         href: deploy/configure-windows-event-collection.md
 - name: Integrate with identity services
   items:
+    - name: Microsoft Defender for Identity and CyberArk
+      items:
+        - name: Overview (Preview)
+          href: defender-for-identity-cyber-ark-overview.md
+        - name: Connect CyberArk to Microsoft Defender for Identity (Preview)
+          href: connect-cyber-ark.md
     - name: Microsoft Defender for Identity and Okta
       items:
       - name: Overview
         href: okta-defender-for-identity-overview.md
       - name: Connect Okta to Microsoft Defender for Identity (Preview)
         href: okta-integration.md
+    - name: Microsoft Defender for Identity and SailPoint 
+      items:
+      - name: Overview (Preview)
+        href: sail-point-overview.md
+      - name: Connect SailPoint to Microsoft Defender for Identity (Preview)
+        href: connect-sail-point.md
     - name: Integrate Defender for Identity with PAM services
       href: integrate-microsoft-and-pam-services.md
-- name: Manage
+
+- name: Discover
   items:
-  - name: Manage related identities and accounts
-    href: manage-related-identities-accounts.md
-  - name: View the ITDR dashboard
+  - name: View the identity security dashboard
     href: dashboard.md
+  - name: Identity security initiative (Preview)
+    href: identity-security-initiative.md
+  - name: Identity password protection
+    href: password-protection.md
+  - name: Active Directory domain security
+    href: investigate-domain.md
+  - name: Security posture assessments
+    items:
+    - name: Overview
+      href: security-assessment.md
+    - name: Hybrid security-posture assessments
+      href: security-posture-assessments/hybrid-security.md
+    - name: Identity infrastructure security posture assessments
+      href: security-posture-assessments/identity-infrastructure.md
+    - name: Certificates security posture assessments
+      href: security-posture-assessments/certificates.md
+    - name: Group policy security posture assessments
+      href: security-posture-assessments/group-policy.md
+    - name: Accounts security posture assessments
+      href: security-posture-assessments/accounts.md
+    - name: Cloud identities security posture assessments
+      href: security-posture-assessments/cloud-identities.md
+- name: Detect
+  items:
+  - name: Security alerts overview
+    href: alerts-overview.md
+  - name: Classic alerts reference
+    href: alerts-mdi-classic.md
+  - name: Defender for Identity alerts in Defender format
+    href: alerts-xdr.md
+  - name: View and manage security alerts
+    href: understanding-security-alerts.md
+  - name: Monitored activities reference
+    href: monitored-activities.md
+  - name: Network Name Resolution (NNR)
+    href: nnr-policy.md
+- name: Investigate
+  items:
+  - name: View the identity inventory
+    href: identity-inventory.md
+  - name: Investigate a human identity
+    href: /defender-xdr/investigate-users?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+  - name: Investigate a non-human identity
+    href: /defender-xdr/investigate-non-human-identities?toc=/defender-for-identity/toc.json&bc=/defender-for-identity/breadcrumb/toc.json
+  - name: View service accounts
+    href: service-account-discovery.md
+  - name: Investigate security alerts
+    href: investigate-security-alerts.md
+- name: Respond
+  items:
+  - name: Remediation actions
+    href: remediation-actions.md
+- name: Manage and configure
+  items:
+  - name: Manage your identities
+    items:
+    - name: Manage related identities and accounts
+      href: manage-related-identities-accounts.md
+    - name: Create custom account correlation rules
+      href: custom-account-correlation-rules.md
   - name: View and manage health issues
     href: health-alerts.md
   - name: Best practices for security testing
@@ -113,6 +184,8 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
+    - name: View and manage health issues
+      href: health-alerts.md
     - name: Configure scoped access
       href: configure-scoped-access.md
     - name: VPN integration
@@ -132,58 +205,6 @@ items:
       href: troubleshooting-known-issues.md
     - name: Troubleshoot using logs
       href: troubleshooting-using-logs.md
-- name: Investigate and respond
-  items:
-  - name: Assets
-    items:
-    - name: Identity inventory
-      href: identity-inventory.md
-    - name: Investigate assets
-      href: investigate-assets.md
-    - name: Service accounts
-      href: service-account-discovery.md
-  - name: Lateral movement paths
-    items:
-    - name: Understand and investigate lateral movement paths
-      href: understand-lateral-movement-paths.md
-  - name: Alerts
-    items:
-      - name: Alerts overview
-        href: alerts-overview.md
-      - name: Defender for Identity classic alerts
-        href: alerts-mdi-classic.md
-      - name: Defender for Identity XDR alerts
-        href: alerts-xdr.md
-      - name: View and manage security alerts
-        href: understanding-security-alerts.md
-      - name: Investigate security alerts
-        href: investigate-security-alerts.md
-      - name: Monitored activities
-        href: monitored-activities.md
-      - name: Understanding Network Name Resolution (NNR)
-        href: nnr-policy.md
-  - name: Remediation
-    items:
-    - name: Remediation actions
-      href: remediation-actions.md
-  - name: Security posture assessments
-    items:
-     - name: Identity security initiative (Preview)
-       href: identity-security-initiative.md
-     - name: Overview
-       href: security-assessment.md
-     - name: Hybrid security-posture assessments
-       href: security-posture-assessments/hybrid-security.md
-     - name: Identity infrastructure security posture assessments
-       href: security-posture-assessments/identity-infrastructure.md
-     - name: Certificates security posture assessments
-       href: security-posture-assessments/certificates.md
-     - name: Group policy security posture assessments
-       href: security-posture-assessments/group-policy.md
-     - name: Accounts security posture assessments
-       href: security-posture-assessments/accounts.md
-     - name: Cloud identities security posture assessments
-       href: security-posture-assessments/cloud-identities.md
 - name: Reference
   items:
   - name: Operations guide

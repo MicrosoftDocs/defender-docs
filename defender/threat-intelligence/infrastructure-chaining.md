@@ -1,10 +1,6 @@
 --- 
 title: 'Microsoft Defender Threat Intelligence (Defender TI): Infrastructure chaining'
 description: 'Learn about infrastructure chaining and how you can apply that process to perform threat infrastructure analysis using Microsoft Defender Threat Intelligence (Defender TI).'
-author: alexroland24
-ms.author: aroland
-manager: dolmont
-ms.service: threat-intelligence 
 ms.topic: concept-article
 ms.date: 09/12/2025
 ms.custom: 

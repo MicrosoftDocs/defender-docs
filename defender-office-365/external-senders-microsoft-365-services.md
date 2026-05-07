@@ -1,15 +1,9 @@
 ---
 title: Services for external organizations sending mail to Microsoft 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.assetid: 19fd3e0f-8dbf-4049-a810-2c8ee6cefd48
 ms.collection:
   - m365-security

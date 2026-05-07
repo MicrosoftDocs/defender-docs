@@ -4,9 +4,7 @@ description: Investigate macOS Defender agent health issues
 author: paulinbar
 ms.author: painbar
 ms.reviewer: lianx; joshbregman
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.service: defender-endpoint
 ms.subservice: macos
 ms.topic: troubleshooting-general
@@ -15,7 +13,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-search.appverid: met150
 ---
 
 # Troubleshoot agent health issues

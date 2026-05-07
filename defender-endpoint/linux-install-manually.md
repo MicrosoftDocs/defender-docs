@@ -6,29 +6,23 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
-ms.date: 11/03/2025
+appliesto:
+  - Microsoft Defender for Servers
+ms.date: 03/20/2026
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
 
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630&clcid=0x409&culture=&country=us)
-
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [Related content section](#related-content). 
 
+ > [!NOTE] 
+ > We highly recommend using the [Defender Deployment Tool deployment](./linux-install-with-defender-deployment-tool.md) method,  as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. Please refer to the documentation for more details.
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Manual deployment steps
@@ -55,7 +49,7 @@ A successful deployment requires the completion of all of the following tasks:
 Before you begin, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements for the current software version.
 
 > [!WARNING]
-> Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux) the existing Defender for Endpoint on Linux application, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the steps in this article.
+> Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](./linux-off-board-endpoints.md#uninstall-the-defender-application-from-a-linux-server) the existing Defender for Endpoint on Linux application, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the steps in this article.
 
 ## Configure the Linux software repository
 
@@ -70,8 +64,14 @@ In order to preview new features and provide early feedback, it's recommended th
 
 ### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
-1. Install `yum-utils` if it isn't installed yet:
+You can use either the `dnf` or the `yum` package manager to deploy Defender for Endpoint on Linux on RHEL and its variants. The instructions in the following sections include commands for both package managers; use just the relevant one.
 
+1. Install either `dnf-plugins-core` or `yum-utils` if the one you want to use isn't installed yet:
+
+   ```bash
+   sudo dnf install dnf-plugins-core
+   ```
+   or   
    ```bash
    sudo yum install yum-utils
    ```
@@ -101,22 +101,33 @@ In order to preview new features and provide early feedback, it's recommended th
 3. In the following commands, replace *[version]* and *[channel]* with the information you've identified:
 
    ```bash
+   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/[version]/[channel].repo
+   ```
+   or   
+   ```bash
    sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
    ```
-
    > [!TIP]
    > Use hostnamectl command to identify system related information including release *[version]*.
 
-   For example, if you're running CentOS 7 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
+   For example, if you're running CentOS 8 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
 
    ```bash
-   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
+   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/8/prod.repo
+   ```
+   or
+   ```bash
+   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/8/prod.repo
    ```
 
    Or if you wish to explore new features on selected devices, you might want to deploy Defender for Endpoint on Linux to *insiders-fast* channel:
 
    ```bash
-   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/insiders-fast.repo
+   sudo dnf config-manager --add-repo https://packages.microsoft.com/config/rhel/8/insiders-fast.repo
+   ```
+   or
+   ```bash
+   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/8/insiders-fast.repo
    ```
 
 4. Install the Microsoft GPG public key:
@@ -229,12 +240,6 @@ In order to preview new features and provide early feedback, it's recommended th
       curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
       sudo chmod o+r /usr/share/keyrings/microsoft-prod.gpg
       ```
-      
-   - For Debian 13 and later, run the following command.
-
-      ```bash
-      curl -sSL https://packages.microsoft.com/keys/microsoft-2025.asc | gpg --dearmor | sudo tee /usr/share/keyrings/microsoft-prod.gpg > /dev/null
-      ```
 
 7. Install the HTTPS driver if not already installed:
 
@@ -289,6 +294,10 @@ Use the commands in the following sections to install Defender for Endpoint on y
 ### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
 ```bash
+sudo dnf install mdatp
+```
+or
+```bash
 sudo yum install mdatp
 ```
 
@@ -297,7 +306,12 @@ sudo yum install mdatp
 
 ```bash
 # list all repositories
-yum repolist
+sudo dnf repolist
+```
+or
+```bash
+# list all repositories
+sudo yum repolist
 ```
 
 ```console
@@ -306,9 +320,12 @@ packages-microsoft-com-prod               packages-microsoft-com-prod        316
 packages-microsoft-com-prod-insiders-fast packages-microsoft-com-prod-ins      2
 ...
 ```
-
+For example to install the package from the production repository:
 ```bash
-# install the package from the production repository
+sudo dnf --enablerepo=packages-microsoft-com-prod install mdatp
+```
+or
+```bash
 sudo yum --enablerepo=packages-microsoft-com-prod install mdatp
 ```
 
@@ -507,9 +524,9 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
    1. Look at the alert details, machine timeline, and perform your typical investigation steps.
       
-## External package dependencies
+## Software requirements
 
-For information, see [Prerequisites for Microsoft Defender for Endpoint on Linux: External package dependency](./mde-linux-prerequisites.md#external-package-dependency).
+For information, see [Software requirements](./mde-linux-prerequisites.md#software-requirements).
 
 ## Troubleshoot installation issues
 
@@ -517,15 +534,15 @@ If you experience any installation issues, for self-troubleshooting, follow thes
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-1. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](linux-support-install.md).
 
-1. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If health of the device is `false`, see [Defender for Endpoint agent health issues](health-status.md).
 
-1. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](linux-support-perf.md).
 
-1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](linux-support-connectivity.md).
 
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](overview-client-analyzer.md).
 
 ## How to switch between channels
 
@@ -534,11 +551,19 @@ For example, to change channel from Insiders-Fast to Production, do the followin
 1. Uninstall the `Insiders-Fast channel` version of Defender for Endpoint on Linux.
 
    ```bash
+   sudo dnf remove mdatp
+   ```
+   or
+   ```bash
    sudo yum remove mdatp
    ```
 
 1. Disable the Defender for Endpoint on Linux Insiders-Fast channel
 
+   ```bash
+   sudo dnf config-manager --disable packages-microsoft-com-fast-prod
+   ```
+   or
    ```bash
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
@@ -550,13 +575,13 @@ For example, to change channel from Insiders-Fast to Production, do the followin
 To configure antivirus and EDR settings, see the following articles:
 
 - [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
-- [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
+- [Set preferences for Defender for Endpoint on Linux](linux-preferences.md) describes settings you can configure.
 
 ## Uninstall Defender for Endpoint on Linux
 
 For manual uninstallation, execute the following command for your Linux distribution.
 
-- `sudo yum remove mdatp` for RHEL and variants(CentOS and Oracle Linux).
+- `sudo dnf remove mdatp` or `sudo yum remove mdatp` (depending on your package manager) for RHEL and variants(CentOS and Oracle Linux).
 - `sudo zypper remove mdatp` for SLES and variants.
 - `sudo apt purge mdatp` for Ubuntu and Debian systems.
 - `sudo dnf remove mdatp` for Mariner
@@ -566,11 +591,13 @@ For manual uninstallation, execute the following command for your Linux distribu
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
 - Other deployment methods:
+   - [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
    - [Installer script based deployment](linux-installer-script.md) 
    - [Ansible based deployment](linux-install-with-ansible.md)
    - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
    - [Puppet based deployment](linux-install-with-puppet.md)
    - [Saltstack based deployment](linux-install-with-saltack.md)
+   - [Golden Image based deployment](./linux-deploy-defender-for-endpoint-using-golden-images.md)
    - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
    - [Install Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md)

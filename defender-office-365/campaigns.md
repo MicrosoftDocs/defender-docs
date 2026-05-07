@@ -1,16 +1,10 @@
 ---
 title: Campaigns in Microsoft Defender for Office 365 Plan
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer: mcostea
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: 
 ms.collection: 
   - m365-security

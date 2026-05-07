@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender Antivirus in the Windows Security app
 description: With Microsoft Defender Antivirus now included in the Windows Security app, you can review, compare, and perform common tasks.
 ms.service: defender-endpoint
@@ -8,12 +8,10 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
-search.appverid: met150
 ms.date: 04/09/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -62,7 +60,7 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 
 1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
 
-1. Select **Virus & threat protection updates**. The currently installed version is displayed along with some information about when it was downloaded. You can check your current against the latest version available for manual download, or review the change log for that version. See [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](/defender-endpoint/microsoft-defender-antivirus-updates/).
+1. Select **Virus & threat protection updates**. The currently installed version is displayed along with some information about when it was downloaded. You can check your current against the latest version available for manual download, or review the change log for that version. See [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](microsoft-defender-antivirus-updates.md).
 
 1. Select **Check for updates** to download new protection updates (if there are any).
 

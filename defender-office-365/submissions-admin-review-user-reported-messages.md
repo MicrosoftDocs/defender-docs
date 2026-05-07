@@ -1,11 +1,7 @@
 ---
 title: Admin review for user reported messages
-f1.keywords:
-- NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection:
@@ -14,7 +10,6 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to review messages that were reported by users and give them feedback.
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 4/26/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender Antivirus Device Health export device antivirus health reporting
 description: Presents methods to retrieve Microsoft Defender Antivirus device health details.
 ms.service: defender-endpoint
@@ -6,8 +6,6 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.date: 02/05/2026
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -15,7 +13,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
@@ -93,7 +90,7 @@ One of the following permissions is required to call this API. To learn more, in
 |Application|Machine.Read.All|'Read all machine profiles'|
 |Delegated (work or school account)|Machine.Read|'Read machine information'|
 
-If you need to call the API without a user (Service-to-Service), refer to the official documentation: [Create an app to access Microsoft Defender for Endpoint without a user](/defender-endpoint/api/exposed-apis-create-app-webapp?tabs=PowerShell#get-an-access-token).
+If you need to call the API without a user (Service-to-Service), refer to the official documentation: [Create an app to access Microsoft Defender for Endpoint without a user](exposed-apis-create-app-webapp.md#get-an-access-token).
 
 Use the script below to ensure the scope is correctly defined for the Device Health in Defender for Endpoint API.
 

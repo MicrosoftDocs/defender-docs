@@ -2,21 +2,14 @@
 title: Overview of Microsoft Defender XDR APIs
 description: Learn about the available APIs in Microsoft Defender XDR
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
 ms.date: 04/18/2025
 appliesto:

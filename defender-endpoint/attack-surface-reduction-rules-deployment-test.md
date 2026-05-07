@@ -1,14 +1,12 @@
-﻿---
+---
 title: Test attack surface reduction rules
 description: Learn how to test attack surface reduction rules in Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar
-manager: bagol
 ms.custom: asr
 ms.topic: how-to
 ms.collection:
@@ -17,8 +15,7 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 06/05/2025
-search.appverid: met150
+ms.date: 03/06/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -52,47 +49,16 @@ Begin the testing phase by turning on the attack surface reduction rules with th
 
 ### Configure attack surface reduction rules using Intune
 
-You can use Microsoft Intune Endpoint Security to configure custom attack surface reduction rules.
+To configure attack surface reduction rules using a Microsoft Intune Endpoint Security **Attack surface reduction** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- **Policy type**: Attack surface reduction
+- **Platform**: Windows 10, Windows 11, and Windows Server
+- **Profile**: Attack Surface Reduction Rules
+- **Configuration settings**: Set all rules to **Audit mode** to assess impact before enforcement
 
-1. Go to **Endpoint Security** > **Attack surface reduction**.
+For more information about attack surface reduction profiles available in Microsoft Intune, see [Manage attack surface reduction settings with Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy#attack-surface-reduction-profiles).
 
-1. Select **Create Policy**.
-
-1. In **Platform**, select **Windows 10, Windows 11, and Windows Server**, and in **Profile**, select **Attack surface reduction rules**.
-
-   > [!div class="mx-imgBorder"]
-   > :::image type="content" source="media/asr-mem-create-profile.png" alt-text="The profile creation page for ASR rules" lightbox="media/asr-mem-create-profile.png":::
-
-1. Select **Create**.
-
-1. In the **Basics** tab of the **Create profile** pane, in **Name** add a name for your policy. In **Description** add a description for your attack surface reduction rules policy.
-
-1. In the **Configuration settings** tab, under **Attack Surface Reduction Rules**, set all rules to **Audit mode**.
-
-   > [!div class="mx-imgBorder"]
-   > :::image type="content" source="media/asr-mem-configuration-settings.png" alt-text="The configuration of attack surface reduction rules to Audit mode" lightbox="media/asr-mem-configuration-settings.png":::
-
-   > [!NOTE]
-   > There are variations in some attack surface reduction rules mode listings; _Blocked_ and _Enabled_ provide the same functionality.
-
-1. [Optional] In the **Scope tags** pane, you can add tag information to specific devices. You can also use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the correct Intune objects. Learn more: [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/intune/intune-service/fundamentals/scope-tags).
-
-1. In the **Assignments** pane, you can deploy or assign the profile to your user or device groups. For more information, see [Assign device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment).
-
-   > [!NOTE]
-   > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
-
-1. Review your settings in the **Review + create** pane. Select **Create** to apply the rules.
-
-   > [!div class="mx-imgBorder"]
-   > :::image type="content" source="media/asr-mem-review-create.png" alt-text="The Create profile page" lightbox="media/asr-mem-review-create.png":::
-
-Your new attack surface reduction policy for attack surface reduction rules is listed in **Endpoint security | Attack surface reduction**.
-
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/asr-mem-my-asr-rules.png" alt-text=" The Attack surface reduction page" lightbox="media/asr-mem-my-asr-rules.png":::
+After your policy is created and assigned, return to this article to continue with [testing and validation](#step-2-understand-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-defender-portal).
 
 <a name='step-2-understand-the-asr-rules-reporting-page-in-the-microsoft-365-defender-portal'></a>
 
@@ -219,30 +185,9 @@ To configure specific rule exclusions, you have the choices of using the Defende
 
 #### Via Group Policy
 
-Use Group Policy to set the per-user ASR rule exclusions.
+For instructions, see [Configure ASR rules via group policy](enable-attack-surface-reduction.md#group-policy).
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
-
-1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
-
-1. In the **Group Policy Management Editor** go to **Computer configuration**.
-
-1. Select **Administrative templates**.
-
-1. Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard > Attack Surface Reduction**.
-
-1. Double-click **Apply a list of exclusions to specific attack surface reduction (ASR) rules**, and set the option to **Enabled**. 
-
-1. Then select **Show...**.
-
-1. Under **Value Name**, enter GUID for the ASR Rule.
-
-1. Under **Value**, enter the <drive_letter:\Path\ProcessName>. In order to add multiple processes, it's separated by a greater than sign (>). For example, `C:\Notepad.exe>c:\regedit.exe>C:\SomeFolder\test.exe`.
-   
-1. select **OK**. This setting allows the processes that are being blocked by the particular ASR Rule to continue running.
-
-> [!NOTE]
-> If policies aren't applying, review [Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings).
+If the GPO isn't applied to devices, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
 ### Use PowerShell as an alternative method to enable attack surface reduction rules
 
@@ -291,7 +236,7 @@ Event ID | Description
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 
-[Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
+[Troubleshoot attack surface reduction rules](troubleshoot-asr.md)
 
 
 

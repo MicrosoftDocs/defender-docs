@@ -1,15 +1,9 @@
 ---
 title: Outbound delivery pools
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: ac11edd9-2da3-462d-8ea3-bbf9dbc6f948
 ms.collection: 
   - m365-security
@@ -70,7 +64,6 @@ The forwarded or relayed message should meet one of the following criteria to av
 
 - The outbound sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 - SPF passes when the message comes to Microsoft 365.
-- DKIM on the sender domain passes when the message comes to Microsoft 365.
 
 In cases where we can authenticate the sender, we use Sender Rewriting Scheme (SRS) to help the recipient email system know that the forwarded message is from a trusted source. You can read more about how that works and what you can do to help make sure the sending domain passes authentication in [Sender Rewriting Scheme (SRS) in Office 365](/office365/troubleshoot/antispam/sender-rewriting-scheme).
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus features
 description: You can configure Microsoft Defender Antivirus features with Intune, Microsoft Configuration Manager, Group Policy, and PowerShell.
 ms.service: defender-endpoint
@@ -9,12 +9,10 @@ ms.author: chrisda
 ms.topic: install-set-up-deploy
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Migrate to Microsoft Defender for Endpoint - Onboard
 description: Move to Microsoft Defender for Endpoint. Onboard devices and then uninstall your non-Microsoft solution.
 ms.service: defender-endpoint
@@ -6,8 +6,6 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-migratetomdatp
@@ -19,7 +17,6 @@ ms.custom:
 ms.topic: how-to
 ms.date: 03/04/2025
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -68,7 +65,7 @@ Deployment methods vary, depending on operating system and preferred methods. Th
 |**Windows servers<br><br>Linux servers** | [Integration with Microsoft Defender for Cloud](azure-server-integration.md)
 |macOS|[Local script](mac-install-manually.md) <br> [Microsoft Intune](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobile Device Management](mac-install-with-other-mdm.md)|
 |Linux|[Local script](linux-install-manually.md) <br> [Puppet](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md) <br> [Chef](linux-deploy-defender-for-endpoint-with-chef.md)|
-|Android|[Microsoft Intune](android-intune.md)|
+|Android|<a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune</a>|
 |iOS|[Microsoft Intune](ios-install.md) <br> [Mobile Application Manager](ios-install-unmanaged.md) |
 
 > [!NOTE]
@@ -85,7 +82,7 @@ To verify that your onboarded devices are properly connected to Defender for End
 |---|---|
 |Windows 10 or later<br/><br/>Windows Server 2012 R2 and later <br/><br/><br/>Windows Server, version 1803, or later<br/><br/>|See [Run a detection test](run-detection-test.md).|
 |macOS (see [System requirements](microsoft-defender-endpoint-mac.md))| Download and use the DIY app at [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy). Also see [Run the connectivity test](troubleshoot-cloud-connect-mdemac.md#run-the-connectivity-test).|
-|Linux (see [System requirements](/defender-endpoint/mde-linux-prerequisites))|1. Run the following command, and look for a result of **1**: `mdatp health --field real_time_protection_enabled`.<br/><br/>2. Open a Terminal window, and run the following command: `curl -o ~/Downloads/eicar.com.txt https://www.eicar.org/download/eicar.com.txt`.<br/><br/>3. Run the following command to list any detected threats: `mdatp threat list`.<br/><br/>For more information, see [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).|
+|Linux (see [System requirements](mde-linux-prerequisites.md))|1. Run the following command, and look for a result of **1**: `mdatp health --field real_time_protection_enabled`.<br/><br/>2. Open a Terminal window, and run the following command: `curl -o ~/Downloads/eicar.com.txt https://www.eicar.org/download/eicar.com.txt`.<br/><br/>3. Run the following command to list any detected threats: `mdatp threat list`.<br/><br/>For more information, see [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).|
 
 ## Step 3: Confirm that Microsoft Defender Antivirus is in passive mode on your endpoints
 
@@ -120,7 +117,24 @@ To set Microsoft Defender Antivirus to passive mode on Windows Server 2019 and l
 
 ### Start Microsoft Defender Antivirus on Windows Server 2016
 
-If you're using Windows Server 2016, you might have to start Microsoft Defender Antivirus manually. You can perform this task by using the PowerShell cmdlet `mpcmdrun.exe -wdenable` on the device.
+If you're using Windows Server 2016, you might need to start Microsoft Defender Antivirus manually by doing the following steps:
+
+1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
+   1. Open the **Start** menu, and then type **cmd**.
+   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
+
+1. In the elevated Command Prompt, run the following commands:
+
+   > [!TIP]
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+
+   ```dos
+   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+   MpCmdRun.exe -WdEnable
+   ```
+
+1. Restart the device.
 
 ## Step 4: Get updates for Microsoft Defender Antivirus
 

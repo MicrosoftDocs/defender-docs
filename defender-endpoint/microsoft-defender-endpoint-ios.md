@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint on iOS
 ms.reviewer: 
 description: Describes how to install and use Microsoft Defender for Endpoint on iOS
@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
 ms.topic: how-to
 ms.subservice: ios
-search.appverid: met150
 ms.date: 06/10/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

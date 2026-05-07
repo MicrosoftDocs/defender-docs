@@ -1,11 +1,8 @@
 ---
 title: Take action on advanced hunting query results in Microsoft Defender XDR
 description: Quickly address threats and affected assets in your advanced hunting query results
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
@@ -35,10 +32,7 @@ You can quickly contain threats or address compromised assets that you find in [
 
 ## Required permissions
 
-To take action on devices through advanced hunting, you need a role in Microsoft Defender for Endpoint with [permissions to submit remediation actions on devices](/windows/security/threat-protection/microsoft-defender-atp/user-roles#permission-options). 
-
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+To take action on devices through advanced hunting, you need a role in Microsoft Defender for Endpoint with [permissions to submit remediation actions on devices](/windows/security/threat-protection/microsoft-defender-atp/user-roles#permission-options).
 
 If you can't take action, contact a Global Administrator about getting the following permission:
 
@@ -46,6 +40,9 @@ If you can't take action, contact a Global Administrator about getting the follo
 
 To take action on emails through advanced hunting, you need a role in Microsoft Defender for Office 365 to [search and purge emails](/defender-office-365/scc-permissions).
 
+- [Microsoft Defender XDR Unified role based access control (URBAC)](manage-rbac.md):
+  - Membership assigned with the **Security operations** \> **Security data** \> **Security data basic (read)** \> **Response (manage)** and **Email & collaboration advanced actions (manage)** URBAC permissions enable the **Take action** option in Advanced hunting and grants users the required permissions to perform remediation actions. 
+ 
 ## Take various actions on devices
 
 You can take the following actions on devices identified by the `DeviceId` column in your query results:

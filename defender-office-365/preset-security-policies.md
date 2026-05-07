@@ -1,11 +1,7 @@
 ---
 title: Preset security policies
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.assetid:
@@ -15,7 +11,6 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to apply Standard and Strict policy settings across the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 07/07/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

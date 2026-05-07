@@ -1,4 +1,4 @@
-﻿---
+---
 title: Privacy information - Microsoft Defender for Endpoint on iOS
 ms.reviewer:
 description: Describes privacy information for Microsoft Defender for Endpoint on iOS
@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
 ms.topic: install-set-up-deploy
 ms.subservice: ios
-search.appverid: met150
 ms.date: 07/15/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
