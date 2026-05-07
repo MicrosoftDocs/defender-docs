@@ -5,11 +5,10 @@ ms.topic: install-set-up-deploy
 ms.date: 05/06/2026
 author: ElazarK
 ms.author: elkrieger
-ms.custom: msecd-doc-authoring-1012
 #customer intent: As an Azure administrator, I want to enable Microsoft Defender for App Service so that I can detect threats targeting my web applications.
 ---
 
-# Enable Microsoft Defender for App Service to protect your web apps
+# Protect your applications with Microsoft Defender for App Service
 
 Microsoft Defender for App Service uses cloud scale to identify attacks that target applications running on [Azure App Service](https://azure.microsoft.com/services/app-service/). Requests to Azure applications pass through gateways that inspect and log traffic before routing it to your environment. This data helps identify exploits and attackers, and it helps learn new patterns.
 
@@ -18,10 +17,10 @@ When you enable Defender for App Service, you get these capabilities:
 - **Secure** - Defender for App Service assesses the resources covered by your App Service plan and generates security recommendations based on its findings. Use the detailed instructions in these recommendations to harden your App Service resources.
 
 - **Detect** - Defender for App Service detects many threats to your App Service resources by monitoring:
-  - the virtual machine (VM) instance in which your App Service is running, and its management interface
-  - the requests and responses sent to and from your App Service apps
-  - the underlying sandboxes and VMs
-  - App Service internal logs - available because of the visibility that Azure has as a cloud provider
+  - The virtual machine (VM) instance in which your App Service is running, and its management interface
+  - The requests and responses sent to and from your App Service apps.
+  - The underlying sandboxes and VMs.
+  - App Service internal logs - available because of the visibility that Azure has as a cloud provider.
 
 As a cloud-native solution, Defender for App Service can identify attack methods that apply to multiple targets. From a single host, it's hard to identify a distributed attack from a small subset of Internet Protocol (IP) addresses that crawl similar endpoints across multiple hosts.
 
