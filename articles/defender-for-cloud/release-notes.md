@@ -1,9 +1,9 @@
 ---
-title: What's new in Microsoft Defender for Cloud features
-description: What's new and updated in Microsoft Defender for Cloud features
+title: What's new in Defender for Cloud features
+description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/05/2026
+ms.date: 05/07/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -43,9 +43,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 May 7, 2026
 
-SQL Vulnerability Assessment (VA) Express Configuration is now available in public preview for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces. This extends the same one-click, Microsoft-managed experience already available for Azure SQL Database, at no additional cost.
+SQL Vulnerability Assessment (VA) Express Configuration—Microsoft-managed storage for vulnerability baselines and scan results—is now available in public preview for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces. This extends the same one-click experience already available for Azure SQL Database, at no additional cost.
 
-With this release, customers using Managed Instances or Synapse Workspaces can now enable SQL VA without configuring a customer-managed storage account. Express Configuration is the recommended enablement mode and provides the same security value as Classic Configuration, with a simplified setup experience.
+With this release, customers using Managed Instances or Synapse Workspaces can now enable SQL VA without configuring a customer-managed storage account. Express Configuration is the recommended enablement mode and provides the same security value as Classic Configuration (customer-managed storage), with a simplified setup experience.
 
 A new unified REST API provides a consistent management surface for SQL VA across Azure SQL Database, SQL Managed Instance, Synapse Workspaces and SQL on machines (Azure VM and Arc enabled SQL).
 
@@ -55,7 +55,7 @@ Learn more about [SQL vulnerability assessment overview](sql-azure-vulnerability
  
 May 6, 2026
  
-Defender for Containers sensor installation using Helm now uses direct Helm chart deployment instead of installation scripts. The updated flow includes environment-specific Helm commands for AKS, EKS, and GKE clusters.
+Defender for Containers sensor installation using Helm now uses direct Helm chart deployment instead of installation scripts. The updated flow includes environment-specific Helm commands for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) clusters.
  
 Learn more about [installing the Defender for Containers sensor by using Helm](deploy-helm.md).
 
@@ -63,17 +63,17 @@ Learn more about [installing the Defender for Containers sensor by using Helm](d
 
 May 5, 2026
 
-Individual recommendations for Defender for Cloud that were previously represented as grouped recommendations are now generally available (GA) in Azure portal.
+Individual recommendations for Defender for Cloud that were previously represented as grouped recommendations are now generally available (GA) in the Azure portal.
 
-**Azure portal secure score behavior**
+**Azure portal secure score behavior:**
 
-The classic secure score in the Azure portal is also affected by these individual recommendations. However, you should not expect a material change in their overall score, as the individual recommendations replace their previously grouped equivalents and are designed to keep the score functionally stable.
+The classic secure score in the Azure portal is also affected by these individual recommendations. However, you shouldn't expect a material change in the overall score, as the individual recommendations replace their previously grouped equivalents and are designed to keep the score functionally stable.
 
 **Deprecation notice: Legacy grouped recommendations**
 
-Grouped recommendation types are deprecated from the Azure portal and will be removed on **July 30, 2026**. These recommendations are currently tagged as **Set for deprecation**.
+Grouped recommendation types are deprecated from the Azure portal and will be removed on July 30, 2026. These recommendations are currently tagged as **Set for deprecation**.
 
-For more information see, [security recommendations](review-security-recommendations.md).
+For more information, see [security recommendations](review-security-recommendations.md).
 
 ### Daily score calculation enhancement for risk-based Cloud secure score
 
@@ -91,17 +91,17 @@ For more information, see [Cloud secure score](secure-score-security-controls.md
 
 May 5, 2026
 
-Microsoft Defender for Cloud is now integrated into the Microsoft Defender portal, unifying cloud security posture management and threat protection in a single experience. This integration provides a centralized view across hybrid and multicloud environments, including Azure, AWS, and GCP.
+Microsoft Defender for Cloud is now integrated into the Microsoft Defender portal, unifying cloud security posture management and threat protection in a single experience. This integration provides a centralized view across hybrid and multicloud environments, including Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
 **Key capabilities include:**
 
 - A unified cloud security dashboard with posture insights, risk-based prioritization, and progress tracking
 - A centralized cloud asset inventory with enriched risk, health, and coverage data
 - Integrated posture management through Microsoft Security Exposure Management (MSEM), including secure score, recommendations, attack paths, and vulnerabilities
-- A risk-based Cloud secure score for more accurate assessment and prioritization including improved daily secure score calculations - available only in the Defender portal
-- A new recommendation model with individual findings for improved prioritization and governance (These individual recommendations might impact risk‑based Cloud secure score calculations, as they now contribute to the score based on their granular, context‑aware findings, rather than as part of a grouped recommendation.)
+- A risk-based Cloud secure score for more accurate assessment and prioritization, including improved daily secure score calculations—available only in the Defender portal
+- A new recommendation model with individual findings for improved prioritization and governance (these individual recommendations might impact risk-based Cloud secure score calculations, as they now contribute to the score based on their granular, context-aware findings, rather than as part of a grouped recommendation)
 
-> [!Note]
+> [!NOTE]
 > Cloud scopes is still in preview.
 
 This integration enables security teams to monitor, prioritize, and respond to risks across their entire environment from a single location.
@@ -116,10 +116,10 @@ The native integration between Microsoft Defender for Cloud and GitHub Advanced 
 
 **Key capabilities:**
 
-- **Runtime context in GitHub** - GHAS alerts are enriched with runtime risk factors from Defender for Cloud, including internet exposure, sensitive data access, and lateral movement potential.
-- **AI-powered remediation** - GitHub Copilot Autofix provides validated, ready-to-merge security fixes with multi-fix bundling for efficiency.
-- **Security campaigns** - Security teams can trigger targeted GitHub Security Campaigns from Defender for Cloud to mobilize developer teams on prioritized vulnerabilities.
-- **Bidirectional sync** - GitHub issue status and ownership changes sync to Defender for Cloud within minutes.
+- **Runtime context in GitHub**: GHAS alerts are enriched with runtime risk factors from Defender for Cloud, including internet exposure, sensitive data access, and lateral movement potential.
+- **AI-powered remediation**: GitHub Copilot Autofix provides validated, ready-to-merge security fixes with multi-fix bundling for efficiency.
+- **Security campaigns**: Security teams can trigger targeted GitHub Security Campaigns from Defender for Cloud to mobilize developer teams on prioritized vulnerabilities.
+- **Bidirectional sync**: GitHub issue status and ownership changes sync to Defender for Cloud within minutes.
 
 **Prerequisites:**
 
