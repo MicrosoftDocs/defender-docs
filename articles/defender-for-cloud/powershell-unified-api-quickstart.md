@@ -11,7 +11,7 @@ ms.service: defender-for-cloud
 
 # Get started with unified SQL Vulnerability Assessment REST API
 
-The new unified SQL Vulnerability Assessment REST API provides a consistent management surface for SQL vulnerability assessments across:
+The new unified SQL Vulnerability Assessment Representational State Transfer (REST) API provides a consistent management surface for SQL vulnerability assessments across:
 
 - Azure SQL Database
 - Azure SQL Managed Instance
@@ -25,7 +25,7 @@ This quickstart helps you get started with the unified API to manage vulnerabili
 - Azure subscription
 - Azure PowerShell module installed (`Az.Accounts` and `Az.Sql`)
 - Appropriate permissions to manage SQL vulnerability assessment settings
-- SQL Vulnerability Assessment Express Configuration enabled on your SQL resources
+- SQL Vulnerability Assessment Express Configuration (Microsoft-managed storage for baselines and scan results) enabled on your SQL resources
 
 ## API Endpoints
 
@@ -40,11 +40,13 @@ The unified SQL Vulnerability Assessment API provides the following endpoints:
 
 ### Get vulnerability assessment settings
 
+To retrieve SQL vulnerability assessment settings for a resource:
+
 ```powershell
 # Connect to Azure
 Connect-AzAccount -Subscription "YourSubscriptionId"
 
-# Get VA settings for a SQL resource
+# Get vulnerability assessment (VA) settings for a SQL resource
 $resourceId = "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/sqlVulnerabilityAssessments/default"
 
 $settings = Invoke-AzRestMethod -Path $resourceId -Method GET
@@ -52,6 +54,8 @@ $settings.Content | ConvertFrom-Json | Format-List
 ```
 
 ### Run a manual scan
+
+To initiate a manual vulnerability assessment scan:
 
 ```powershell
 # Initiate a manual vulnerability assessment scan
@@ -62,6 +66,8 @@ $scan.Content | ConvertFrom-Json | Format-List
 ```
 
 ### Get scan results
+
+To retrieve the latest vulnerability assessment scan results:
 
 ```powershell
 # Retrieve the latest scan results
