@@ -17,12 +17,6 @@ items:
     href: us-govt-gcc-high.md
 - name: Deploy
   items:
-  - name: Plan and prepare
-    items:
-    - name: Roles and permissions
-      href: role-groups.md
-    - name: Capacity planning
-      href: deploy/capacity-planning.md
   - name: Deploy a sensor
     items:
     - name: Deployment overview
@@ -37,6 +31,8 @@ items:
       items:
         - name: Prerequisites
           href: deploy/prerequisites-sensor-version-2.md
+        - name: Capacity planning
+          href: deploy/capacity-planning.md
         - name: Multi-forest considerations
           href: deploy/multi-forest.md
         - name: Connect to the Defender for Identity service
@@ -71,12 +67,12 @@ items:
           - name: Listen for SIEM events
             href: deploy/configure-event-collection.md
             displayName: standalone
-    - name: Migrate from sensor v2 to sensor v3 (Preview)
-      href: deploy/migrate-to-sensor-v3.md
-    - name: Validate the sensor deployment
-      href: deploy/test-sensor.md
-  - name: Configure Windows event auditing
-    href: deploy/configure-windows-event-collection.md
+    - name: Configure Windows event auditing
+      href: deploy/configure-windows-event-collection.md
+  - name: Migrate from sensor v2 to sensor v3 (Preview)
+    href: deploy/migrate-to-sensor-v3.md
+  - name: Validate the sensor deployment
+    href: deploy/test-sensor.md
 - name: Integrate with identity services
   items:
     - name: Microsoft Defender for Identity and CyberArk
@@ -158,6 +154,8 @@ items:
     href: remediation-actions.md
 - name: Manage and configure
   items:
+  - name: Roles and permissions
+    href: role-groups.md
   - name: Manage your identities
     items:
     - name: Manage related identities and accounts

@@ -28,7 +28,7 @@ Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
 Make sure that the server on which you're activating the sensor:
 
-- Has Defender for Endpoint deployed. The Microsoft Defender Antivirus component can be in either active or passive mode.
+- Has Defender for Endpoint deployed on the server. The Microsoft Defender Antivirus component can be in either active or passive mode. Defender for Endpoint must be onboarded on the server where the sensor runs; endpoint-only deployment isn't sufficient.
 - Doesn't have a Defender for Identity sensor v2.x already deployed.
 - Is running Windows Server 2019 or later.
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.

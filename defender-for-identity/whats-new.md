@@ -222,7 +222,7 @@ For some [remediation actions](remediation-actions.md), Defender for Identity cr
 - Helpdesk Administrator
 - Security Operator
 
-### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
 
 Weâ€™re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones.
 This update might identify existing auditing configuration gaps that weren't previously detected.

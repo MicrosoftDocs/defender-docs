@@ -35,7 +35,7 @@ Defender for Identity supports mixed environments with both v3.x and v2.x sensor
 
 Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
-- Requires Defender for Endpoint.
+- Requires Defender for Endpoint deployed on the server. The endpoint deployment alone isn't a prerequisite; Defender for Endpoint must be onboarded on the server where the sensor runs.
 - Doesn't support VPN integration.
 - Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
 - Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute).
