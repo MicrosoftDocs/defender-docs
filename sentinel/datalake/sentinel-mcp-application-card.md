@@ -11,7 +11,7 @@ ms.topic: concept-article
 ms.custom:
 - msecd-doc-authoring-1012
 - responsible-ai-transparency
-ms.date: 04/29/2026
+ms.date: 05/07/2026
 ai-usage: ai-assisted
 
 #customer intent: As a security analyst or SOC engineer, I want to understand Microsoft Sentinel MCP server's capabilities, intended uses, and limitations so that I can deploy and use it responsibly in my security operations.
