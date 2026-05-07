@@ -87,7 +87,8 @@ To grant permissions:
 
 ## Finish the setup and prepare your environment
 
-Continue with the onboarding wizard to set up the following configurations:
+To finish the setup:
+1. Continue with the onboarding wizard to set up the following configurations:
    - [Notification contacts](get-started-xdr.md#tell-us-who-to-contact-for-important-matters)
    - [Microsoft Teams notifications](get-started-xdr.md#receive-managed-response-notifications-and-updates-in-microsoft-teams)
 
