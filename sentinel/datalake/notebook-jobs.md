@@ -7,7 +7,7 @@ ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to  
-ms.date: 03/26/2026
+ms.date: 04/29/2026
 
 # Customer intent: As a security engineer or data scientist, I want to explore and analyze security data in the Microsoft Sentinel data lake using Jupyter notebooks, so that I can gain insights and build advanced analytics solutions.
 ---
@@ -66,7 +66,7 @@ You can create a job in one of three ways:
 
     :::image type="content" source="./media/notebook-jobs/job-configuration.png" lightbox="./media/notebook-jobs/job-configuration.png" alt-text="A screenshot showing the job configuration page."  :::
 
-1. To view your jobs, select the Microsoft Sentinel shield icon in the left toolbar. Jobs are displayed on the **Jobs** panel.
+1. To view your jobs, select the Microsoft Sentinel ![the sentinel icon](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar. Jobs are displayed on the **Jobs** panel.
 
 1. Select a job to see the job details. 
 1. You can run the job immediately by selecting **Run now**, disable and enable the job schedule, or delete the job.
@@ -124,10 +124,31 @@ The page shows a list of jobs and their types. Select a notebook job to view its
 
 ## Service parameters and limits and troubleshooting
 
-For a list of service limits for the Microsoft Sentinel data lake, see [Microsoft Sentinel data lake service limits](notebooks.md#service-parameters-and-limits-for-vs-code-notebooks).  
-  
+### Column names
 
-For information on troubleshooting, see [Run notebooks on the Microsoft Sentinel data lake](notebooks.md#service-parameters-and-limits-for-vs-code-notebooks).
+The following rules apply to column names when using the save_as method to write data from a notebook to the Microsoft Sentinel data lake.
+
++ Column names must start with a letter.
+
++ The following standard columns aren't supported for export. The ingestion process overwrites these columns in the destination tier:
+
+    + TenantId
+    + _TimeReceived
+    + Type
+    + SourceSystem
+    + _ResourceId
+    + _SubscriptionId
+    + _ItemId
+    + _BilledSize
+    + _IsBillable
+    + _WorkspaceId
+
++ `TimeGenerated` is overwritten if it's older than two days. To preserve the original event time, write the source timestamp to a separate column.
+
+For a list of service limits for the Microsoft Sentinel data lake, see [Microsoft Sentinel data lake service limits](notebooks.md#service-parameters-and-limits-for-vs-code-notebooks).  
+
+### Troubleshooting
+For information on troubleshooting, see [Troubleshoot notebooks on the Microsoft Sentinel data lake](notebooks-troubleshooting.md).
 
 ## Related content
 

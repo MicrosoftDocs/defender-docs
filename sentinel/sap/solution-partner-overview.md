@@ -1,8 +1,9 @@
 ---
 title: Microsoft Sentinel solutions for SAP - Partner Add-ons
 description: Discover partners specializing in Microsoft Sentinel for SAP integration solutions, consulting, and managed services.
-author: MartinPankraz
-ms.author: mapankra
+ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: mapankra
 ms.topic: partner-tools
 ms.date: 07/10/2025
 appliesto:
