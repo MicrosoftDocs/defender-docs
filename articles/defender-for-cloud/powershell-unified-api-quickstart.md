@@ -31,10 +31,10 @@ This quickstart helps you get started with the unified API to manage vulnerabili
 
 The unified SQL Vulnerability Assessment API provides the following endpoints:
 
-- [Sql Vulnerability Assessment Settings](https://learn.microsoft.com/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings)
-- [Sql Vulnerability Assessment Baseline Rules](https://learn.microsoft.com/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules)
-- [Sql Vulnerability Assessment Scan Results](https://learn.microsoft.com/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results)
-- [Sql Vulnerability Assessment Scans](https://learn.microsoft.com/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans)
+- [Sql Vulnerability Assessment Settings](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings)
+- [Sql Vulnerability Assessment Baseline Rules](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules)
+- [Sql Vulnerability Assessment Scan Results](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results)
+- [Sql Vulnerability Assessment Scans](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans)
 
 ## Common Tasks
 
@@ -101,3 +101,4 @@ For complete examples and scripts, see:
 - [Enable vulnerability assessment](sql-azure-vulnerability-assessment-enable.md)
 - [Configure vulnerability findings](configure-vulnerability-findings-express.md)
 - [Troubleshoot SQL vulnerability assessment](troubleshoot-vulnerability-findings.md)
+
