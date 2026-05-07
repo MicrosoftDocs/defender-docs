@@ -2,8 +2,8 @@
 title: Microsoft Defender XDR in the Microsoft Defender portal
 description: Learn about Microsoft Defender XDR and how other services complement in the Microsoft Defender portal.
 ms.service: defender-xdr
-ms.author: painbar
-author: paulinbar
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.collection:
   - m365-security

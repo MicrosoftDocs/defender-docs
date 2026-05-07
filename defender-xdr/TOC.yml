@@ -72,6 +72,8 @@
           href: security-for-ai/ai-agent-inventory.md
         - name: Detect, block, and investigate threats to AI agents
           href: security-for-ai/ai-agent-detection-protection.md
+        - name: Data privacy as part of Agent 365
+          href: security-for-ai/privacy-defender-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -510,18 +512,16 @@
             href: auditing.md
           - name: Work with MSSPs
             href: defender-experts-managed-security-guide.md
-        - name: Frequently asked questions
-          items:
-          - name: General information
-            href: frequently-asked-questions.md
-          - name: Defender Experts for XDR Incident notifications
-            href: faq-incident-notifications-xdr.md
-          - name: Managed response
-            href: faq-managed-response.md
-          - name: Server and cloud workload coverage
-            href: faq-cloud-coverage-defender-experts.md
         - name: Additional information on Defender Experts for XDR
           items:
+          - name: Frequently asked questions
+            items:
+            - name: General information
+              href: frequently-asked-questions.md
+            - name: Managed response
+              href: faq-managed-response.md
+            - name: Server and cloud workload coverage
+              href: faq-cloud-coverage-defender-experts.md
           - name: Important considerations
             href: additional-information-xdr.md
           - name: How Defender Experts for XDR permissions work
@@ -572,6 +572,8 @@
               href: manage-rbac.md
             - name: What's new
               href: whats-new-in-microsoft-defender-urbac.md
+            - name: Configure Microsoft Sentinel scoping (row-level RBAC)
+              href: scoping.md
             - name: Create custom roles
               href: create-custom-rbac-roles.md
             - name: Import roles

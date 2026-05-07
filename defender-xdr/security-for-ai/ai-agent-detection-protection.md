@@ -18,9 +18,15 @@ Deployed AI agents operate autonomously, invoking tools, accessing data, and tak
 
 This article explains how Microsoft Defender detects, blocks, and enables security teams to investigate threats to AI agents managed through [Microsoft Agent 365](/microsoft-agent-365/overview), including the extended detection and protection capabilities available for supported agent platforms.
 
+> [!NOTE]
+> Some capabilities described in this article currently require onboarding through Microsoft Defender for Cloud Apps. This is a temporary configuration that will be part of the Agent 365 product experience. Starting July 1, 2026, your organization needs an [Agent 365 subscription](https://www.microsoft.com/en/microsoft-agent-365) to continue using agent protection and visibility capabilities.
+
 ## Block unsafe AI agent actions in real time
 
-Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Defender integrates directly with [Microsoft Agent 365’s Agent Tooling Gateway (ATG)](/microsoft-agent-365/tooling-servers-overview) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
+Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Defender integrates directly with [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
+
+> [!NOTE]
+> Real-time protection is available only for AI agents that use tools currently supported in Work IQ MCP. Agents that rely on unsupported tools or do not integrate with Work IQ MCP are outside the scope of this capability.
 
 Real-time protection focuses on high-confidence threats, including:
 
@@ -32,11 +38,9 @@ Real-time protection focuses on high-confidence threats, including:
 - Credential leakage through legitimate channels such as email or external APIs  
 
 > [!NOTE]
-> Microsoft Defender's real-time protection evaluates agent-initiated tool invocations at runtime. It doesn't inspect raw model prompts or responses outside the tool-execution path.
+> For agents built with Microsoft Copilot Studio, Microsoft Defender also provides real-time protection by evaluating model prompts and responses. This capability doesn't depend on Work IQ.
 
-When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate attempted behavior using familiar Defender workflows.
-
-Beyond the core real‑time protection capabilities available for all Microsoft Agent 365‑managed agents, you can enable an extended set of real‑time protection capabilities for agents built with Microsoft Copilot Studio.
+When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate blocked actions using familiar Defender workflows.
 
 ### Enable real-time protection
 
@@ -62,16 +66,19 @@ Microsoft Defender surfaces detections as near‑real‑time alerts in the Defen
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
-Near-real-time detections rely on AI agent audit logs, which also provide valuable context for [investigating incidents and threat hunting](#investigate-ai-agent-threats-and-hunt-for-risks-using-advanced-hunting). Microsoft Defender analyzes these audit logs to identify suspicious agent behavior and generate alerts.
+Near-real-time detections rely on Agent 365 observability data, which also provides valuable context for [investigating incidents and threat hunting](#investigate-ai-agent-threats-and-hunt-for-risks-using-advanced-hunting). Microsoft Defender analyzes this data to identify suspicious agent behavior and generate alerts.
 
-#### Enable near-real-time detections and advanced threat hunting
+> [!NOTE]
+> For agents built with Microsoft Copilot Studio and Microsoft Foundry, Microsoft Defender also supports detections based on evaluation of model prompts and responses. 
+
+### Enable near-real-time detections and advanced threat hunting
 
 To enable near-real-time alerts and threat hunting: 
 
-1. Enable the Microsoft 365 app connector to collect detailed audit logs for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
-1. Ensure that your AI agent emits audit logs to Microsoft 365. 
-    - Agents built with Microsoft Copilot Studio send audit logs to Microsoft 365 by default.
-    - For AI agents built on other platforms, integrate the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/) to emit audit logs to Microsoft 365.
+1. Enable the Microsoft 365 app connector to collect Agent 365 observability data for AI agent actions. For more information, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
+1. Ensure that your AI agent emits observability data to Microsoft 365. 
+    - Agents built with Microsoft Copilot Studio send observability data to Microsoft 365 by default.
+    - For AI agents built on other platforms, enable observability using the Microsoft Agent 365 SDK, as described in the [Agent 365 development lifecycle documentation](/microsoft-agent-365/developer/a365-dev-lifecycle#1-build-and-run-agent).
 
 ### Enable extended near-real-time detections for Microsoft Copilot Studio and Microsoft Foundry agents
 
@@ -84,7 +91,7 @@ To enable these extended capabilities:
 
 ## Investigate AI agent threats and hunt for risks using Advanced Hunting
 
-Microsoft Defender correlates AI agent alerts into incidents and surfaces the related context so security teams can quickly assess impact and prioritize response. Advanced Hunting then lets analysts query agent activity and audit logs by using Kusto Query Language (KQL) to investigate incidents and hunt for risks across their environment.
+Microsoft Defender correlates AI agent alerts into incidents and surfaces the related context so security teams can quickly assess impact and prioritize response. Advanced Hunting then lets analysts query Agent 365 observability data by using Kusto Query Language (KQL) to investigate incidents and hunt for risks across their environment.
 
 ### Investigate incidents and alerts
 
@@ -92,9 +99,9 @@ Microsoft Defender correlates AI agent alerts, including near‑real‑time dete
 
 Security analysts can use the incident graph and investigation experience to understand the full context of a potential attack, including relationships between involved entities and the blast radius of AI agent threats. For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview).
 
-### Correlate alerts and AI agent audit logs and hunt for risks using Advanced Hunting
+### Correlate alerts and Agent 365 observability data and hunt for risks using Advanced Hunting
 
-Advanced Hunting in Microsoft Defender enables security teams to query AI agent activity alongside other security data, including agent audit logs, by using Kusto Query Language (KQL). This supports proactive threat hunting, incident investigation, and root‑cause analysis across agents, applications, identities, and devices.
+Advanced Hunting in Microsoft Defender enables security teams to query Agent 365 observability data alongside other security data by using Kusto Query Language (KQL). This supports proactive threat hunting, incident investigation, and root‑cause analysis across agents, applications, identities, and devices.
 
 For example, use Advanced Hunting to:
 - Trace specific agent tool invocations and correlate them with related alerts or block events  
@@ -109,7 +116,7 @@ The following Advanced Hunting tables provide visibility into [AI agent configur
 | Table name | Description | Common use cases |
 |-----------|-------------|------------------|
 | [AlertInfo](/defender-xdr/advanced-hunting-alertinfo-table) | Contains alert metadata generated by Microsoft Defender, including alerts related to near-real-time detections and real-time protection block events. | Investigate AI agent alerts, understand alert context, and pivot into related incidents and entities. |
-| [CloudAppEvents](/defender-xdr/advanced-hunting-cloudappevents-table) | Contains Microsoft 365 audit logs for AI agent activity, including agent actions, tool invocations, and data access events. | Hunt for suspicious agent behavior, trace agent actions, and perform root-cause analysis using audit logs. |
+| [CloudAppEvents](/defender-xdr/advanced-hunting-cloudappevents-table) | Contains Agent 365 observability data for AI agent activity, including agent actions, tool invocations, and data access events. | Hunt for suspicious agent behavior, trace agent actions, and perform root-cause analysis using Agent 365 observability data. |
 | [AIAgentsInfo](/defender-xdr/advanced-hunting-aiagentsinfo-table) | Contains inventory and configuration details for AI agents, including agent identity, platform, ownership, and metadata. | Review agent posture, identify risky or misconfigured agents, and correlate agent identity with alerts and activity. |
 | [AlertEvidence](/defender-xdr/advanced-hunting-alertevidence-table) | Contains entities and artifacts associated with alerts, such as agents, users, tools, URLs, or resources. | Understand the scope of an alert and identify related entities involved in an AI agent incident. |
 
