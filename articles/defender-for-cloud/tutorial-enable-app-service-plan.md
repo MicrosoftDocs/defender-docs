@@ -2,7 +2,7 @@
 title: Protect your applications with Microsoft Defender for App Service
 description: Learn how to enable the Microsoft Defender for App Service plan on your Azure subscription to detect threats targeting your web apps and APIs.
 ms.topic: install-set-up-deploy
-ms.date: 05/06/2026
+ms.date: 05/07/2026
 author: ElazarK
 ms.author: elkrieger
 #customer intent: As an Azure administrator, I want to enable Microsoft Defender for App Service so that I can detect threats targeting my web applications.
@@ -40,7 +40,7 @@ Learn more about Defender for Cloud pricing on the [Defender for Cloud pricing p
 
   For more information on App Service plans and tiers, see [Azure App Service plans](/azure/app-service/overview-hosting-plans).
 
-- For billing details and guidance on unexpected charges, see [Billing FAQ for supported App Service plans](defender-for-app-service-introduction.md#billing-faq-for-supported-app-service-plans).
+- For billing details, note that Defender for App Service billing applies to supported plans only: Standard, Premium v2, Premium v3, and Isolated (App Service Environment v1, v2, v3). Billing is calculated according to the total compute instances in supported plans. For more information, see [Billing FAQ for supported App Service plans](defender-for-app-service-introduction.md#billing-faq-for-supported-app-service-plans).
 
 ## Enable the Defender for App Service plan
 

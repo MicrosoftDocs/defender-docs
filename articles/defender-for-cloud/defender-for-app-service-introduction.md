@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for App Service - the benefits and features
 description: Learn about the capabilities of Microsoft Defender for App Service and how to enable it on your subscription.
-ms.date: 04/19/2026
+ms.date: 05/07/2026
 ms.topic: overview
 ms.author: elkrieger
 author: ElazarK
@@ -29,21 +29,8 @@ To protect your Azure App Service plan with Microsoft Defender for App Service, 
 - Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). Billing is calculated according to the total compute instances in supported plans.
 - Check out Defender for App Service's [cloud availability](support-matrix-defender-for-cloud.md).
 
-## Billing FAQ for supported App Service plans
 
-### Which App Service plans are billed for Defender for App Service?
-
-Defender for App Service billing applies to supported plans: Standard, Premium v2, Premium v3, and Isolated (App Service Environment v1, v2, v3). Billing is calculated according to the total compute instances in supported plans.
-
-### What happens with Free, Shared, and Basic App Service plans?
-
-Free, Shared, and Basic plans aren't supported by Defender for App Service and aren't monitored or protected by this Defender plan.
-
-### What should I do if I see unexpected charges for unsupported plans?
-
-If you see Defender for App Service charges for unsupported plans, contact Microsoft support to investigate the billing and request a refund when applicable.
-
-## What are the benefits of Microsoft Defender for App Service?
+## Benefits of Microsoft Defender for App Service?
 
 Azure App Service is a fully managed platform for building and hosting your web apps and APIs. Since the platform is fully managed, you don't have to worry about the infrastructure. It provides management, monitoring, and operational insights to meet enterprise-grade performance, security, and compliance requirements. For more information, see [Azure App Service](https://azure.microsoft.com/services/app-service/).
 
