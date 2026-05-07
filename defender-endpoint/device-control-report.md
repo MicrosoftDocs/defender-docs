@@ -113,7 +113,7 @@ When you select an event, an **Event information** details flyout opens to show 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/devicecontrolreportfilter.png" alt-text="The Filter On Device Control Report page" lightbox="media/devicecontrolreportfilter.png":::
 
-To see real-time activity for this media across the organization, select :::image type="icon" source="media/m365-cc-sc-no-icon.png" border="false"::: **Open Advanced hunting** at the top of the flyout. This includes an embedded, predefined query.
+To see real-time activity for this media across the organization, select :::image type="icon" source="media/defender-portal-icon-no.png" border="false"::: **Open Advanced hunting** at the top of the flyout. This includes an embedded, predefined query.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/Devicecontrolreportquery.png" alt-text="The Query On Device Control Report page" lightbox="media/Devicecontrolreportquery.png":::
