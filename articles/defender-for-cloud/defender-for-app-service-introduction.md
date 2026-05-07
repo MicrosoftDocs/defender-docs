@@ -29,7 +29,6 @@ To protect your Azure App Service plan with Microsoft Defender for App Service, 
 - Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). Billing is calculated according to the total compute instances in supported plans.
 - Check out Defender for App Service's [cloud availability](support-matrix-defender-for-cloud.md).
 
-
 ## Benefits of Microsoft Defender for App Service?
 
 Azure App Service is a fully managed platform for building and hosting your web apps and APIs. Since the platform is fully managed, you don't have to worry about the infrastructure. It provides management, monitoring, and operational insights to meet enterprise-grade performance, security, and compliance requirements. For more information, see [Azure App Service](https://azure.microsoft.com/services/app-service/).
