@@ -44,29 +44,25 @@ Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
 Follow these steps to deploy the sensor v3.x on domain controllers running Windows Server 2019 or later, including domain controllers that also run AD FS, AD CS, or Microsoft Entra Connect roles:
 
-| Step | Action | Details |
-|------|--------|---------|
-| 1 | Verify prerequisites | [Server requirements, licensing, networking, memory, and service accounts](deploy-sensor-v3.md#before-you-activate) |
-| 2 | Activate the sensor | [Activate from the Microsoft Defender portal](activate-sensor.md) |
-| 3 | Configure Windows event auditing | [Enable automatic auditing (recommended)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically), or [configure manually](configure-windows-event-collection.md#configure-windows-event-collection-manually) if automatic configuration isn't available |
-| 4 | Configure RPC auditing | [Apply the Unified Sensor RPC Audit tag](deploy-sensor-v3.md#configure-rpc-auditing) |
-| 5 | Validate deployment | [Confirm sensor health](test-sensor.md) |
+1. [Verify prerequisites](deploy-sensor-v3.md#before-you-activate)
+1. [Activate the sensor](activate-sensor.md)
+1. [Configure Windows event auditing](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically)
+1. [Configure RPC auditing](deploy-sensor-v3.md#configure-rpc-auditing)
+1. [Validate deployment](test-sensor.md)
 
 ## Deployment steps for sensor v2.x
 
 Follow these steps to deploy the sensor v2.x on domain controllers running Windows Server 2016 or later, or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers:
 
-| Step | Action | Details |
-|------|--------|---------|
-| 1 | Verify prerequisites | [Server requirements, licensing, networking, and ports](prerequisites-sensor-version-2.md) |
-| 2 | Plan capacity | [Run the sizing tool on domain controllers](capacity-planning.md) |
-| 3 | Configure connectivity | [Configure proxy or firewall settings](configure-proxy.md) |
-| 4 | Install the sensor | [Download and install the sensor package](install-sensor.md) |
-| 5 | Configure the sensor | [View and adjust sensor settings](configure-sensor-settings.md) |
-| 6 | Configure Windows event auditing | [Configure audit policies manually or with PowerShell](configure-windows-event-collection.md#configure-windows-event-collection-manually) |
-| 7 | Configure Directory Service accounts | [Set up a DSA (recommended) or gMSA](directory-service-accounts.md) |
-| 8 | Configure for AD FS, AD CS, or Entra Connect (if applicable) | [Additional steps for non-domain-controller identity servers](active-directory-federation-services.md) |
-| 9 | Validate deployment | [Confirm sensor health](test-sensor.md) |
+1. [Verify prerequisites](prerequisites-sensor-version-2.md)
+1. [Plan capacity](capacity-planning.md)
+1. [Configure connectivity](configure-proxy.md)
+1. [Install the sensor](install-sensor.md)
+1. [Configure the sensor](configure-sensor-settings.md)
+1. [Configure Windows event auditing](configure-windows-event-collection.md#configure-windows-event-collection-manually)
+1. [Configure Directory Service accounts](directory-service-accounts.md)
+1. [Configure for AD FS, AD CS, or Entra Connect (if applicable)](active-directory-federation-services.md)
+1. [Validate deployment](test-sensor.md)
 
 ## Next steps
 
