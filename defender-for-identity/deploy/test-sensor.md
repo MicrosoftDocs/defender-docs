@@ -21,15 +21,13 @@ Use the following procedures to check that your sensors are working.
 
 ## Confirm entity data in the Defender portal
 
-In the Defender portal, confirm that entities like domain controllers, users, and groups are populated as expected:
+1. In the Defender portal, select **Assets > Devices**, and select the machine for your new sensor. Confirm that Defender for Identity events appear on the device timeline.
 
-- **Device entities**: Select **Assets > Devices**, and select the machine for your new sensor. Defender for Identity events are shown on the device timeline.
+1. Select **Assets > Users** and check for users from a newly onboarded domain. You can also use the global search to find specific users. Confirm that user details pages include **Overview**, **Observed in organization**, and **Timeline** data.
 
-- **User entities**: Select **Assets > Users** and check for users from a newly onboarded domain. You can also use the global search to find specific users. User details pages should include **Overview**, **Observed in organization**, and **Timeline** data.
+1. Use the global search to find a user group, or pivot from a user or device details page where group details are shown. Confirm group membership details, group users, and group timeline data.
 
-- **Group entities**: Use the global search to find a user group, or pivot from a user or device details page where group details are shown. Check for details of group membership, view group users, and group timeline data.
-
-If no event data is found on the group timeline, you might need to create some manually. You can do this by, for example, adding and removing users from the group in Active Directory.
+   If no event data is found on the group timeline, you might need to create some manually. For example, add and remove users from the group in Active Directory.
 
 For more information, see [Investigate assets](../investigate-assets.md).
 
