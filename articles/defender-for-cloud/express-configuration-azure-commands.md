@@ -5,7 +5,7 @@ ms.topic: sample
 ms.custom: devx-track-azurecli
 author: Elazark
 ms.author: elkrieger
-ms.date: 09/17/2024
+ms.date: 05/07/2026
 ---
 
 # Express configuration Azure Command Line Interface (CLI) commands reference

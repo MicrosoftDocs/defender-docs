@@ -4,7 +4,7 @@ description: In this article, you can review the Express configuration PowerShel
 ms.topic: sample
 author: Elazark
 ms.author: elkrieger
-ms.date: 03/30/2025
+ms.date: 05/07/2026
 ---
 
 # Express configuration PowerShell commands reference
