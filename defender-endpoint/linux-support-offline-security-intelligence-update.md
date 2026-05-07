@@ -186,17 +186,14 @@ You can configure the offline security intelligence updates feature in two ways:
 1. In the Defender portal, navigate to **Endpoints** > **Configuration management** > **Endpoint security policies**, and choose a Linux policy to edit, or create a new Linux policy.
 1. In the policy creation wizard, advance to the **Configuration settings** step. There you can find the configuration settings for the offline security intelligence updates feature.
 
-You can configure the following settings:
+You can configure the following settings. Use the Search box on the **Configuration settings** page for help finding them:
 
-- **Security intelligence Update time interval**. When you enable this setting, it allows you to specify the time interval (in seconds) for how often the Linux endpoints should pull the security intelligence updates from the mirror server. By default, this setting is not configured, and the update interval is taken from [Automatic security updates setting](#automatic-update), which has a default value of 8 hours (28800 seconds).
-
-   :::image type="content" source="./media/linux-support-offline-security-intelligence-update/security-intelligence-update-time-interval.png" alt-text="Screenshot of the Security intelligence Update time interval setting.":::
- 
-- **Enable offline security intelligence update**. This setting enables the offline security intelligence update feature on the Linux endpoints. When you enable this setting, two other settings become available.
-   - **Offline security intelligence update fallback to cloud**: This setting determines the behavior of Defender for Endpoint on Linux when the offline security intelligence update fails. If you set this to `True`, the endpoint will attempt to get the updates from the Microsoft cloud if it fails to get them from the mirror server. If you set this to `False`, the endpoint will not attempt to get updates from the Microsoft cloud if it fails to get them from the mirror server.
-   - **Offline security intelligence update URL or directory**: This setting is where you specify the URL or directory path of the mirror server that hosts the security intelligence updates. When you The URL should be in the format `http://<mirror_server_address>/linux/production/` (if using an HTTP/HTTPS server) or a directory path (if using a network share or local/remote mount point). See [Host the offline security intelligence updates on the mirror server](#host-the-offline-security-intelligence-updates-on-the-mirror-server) for more information.
-
-   :::image type="content" source="./media/linux-support-offline-security-intelligence-update/offline-security-intelligence-update-enable.png" alt-text="Screenshot of the Offline security intelligence update configuration settings.":::
+|Setting|Description|
+|---|---|
+|**Enable offline security intelligence update** |This setting enables the offline security intelligence update feature on the Linux endpoints. When you enable this setting, the following two settings become available.|
+|**Offline security intelligence update fallback to cloud** |This setting determines the behavior of Defender for Endpoint on Linux when the offline security intelligence update fails. If set to `True`, the endpoint will attempt to get the updates from the Microsoft cloud if it fails to get them from the mirror server. If set to `False`, the endpoint will not attempt to get updates from the Microsoft cloud if it fails to get them from the mirror server.|
+|**Offline security intelligence update URL or directory** |This setting specifies the URL or directory path of the mirror server that hosts the security intelligence updates. The URL should be in the format `http://<mirror_server_address>/linux/production/` (if using an HTTP/HTTPS server) or a directory path (if using a network share or local/remote mount point). See [Host the offline security intelligence updates on the mirror server](#host-the-offline-security-intelligence-updates-on-the-mirror-server) for more information.|
+|**Security intelligence Update time interval** | When set to configured, this setting allows you to specify (in seconds) how often the Linux endpoints pull the security intelligence updates from the mirror server. By default, this setting is not configured, in which case the update interval is taken from the [Automatic security updates setting](#automatic-update), which has a default value of 8 hours (28800 seconds).|
 
 # [Managed JSON](#tab/managed-json)
 
