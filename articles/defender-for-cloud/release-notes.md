@@ -32,11 +32,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| May 7, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration is now available for Azure SQL Managed Instance and Azure Synapse Analytics](#sql-vulnerability-assessment-express-configuration-now-available-for-managed-instance-and-synapse) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
 | May 5, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### SQL Vulnerability Assessment Express Configuration now available for Managed Instance and Synapse
+
+May 7, 2026
+
+SQL Vulnerability Assessment (VA) Express Configuration is now available in public preview for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces. This extends the same one-click, Microsoft-managed experience already available for Azure SQL Database, at no additional cost.
+
+With this release, customers using Managed Instances or Synapse Workspaces can now enable SQL VA without configuring a customer-managed storage account. Express Configuration is the recommended enablement mode and provides the same security value as Classic Configuration, with a simplified setup experience.
+
+A new unified REST API provides a consistent management surface for SQL VA across Azure SQL Database, SQL Managed Instance, Synapse Workspaces and SQL on machines (Azure VM and Arc enabled SQL).
+
+Learn more about [SQL vulnerability assessment overview](sql-azure-vulnerability-assessment-overview.md) and how to [enable vulnerability assessment](sql-azure-vulnerability-assessment-enable.md).
 
 ### Updated Helm installation for Defender for Containers sensor
  
@@ -120,12 +133,21 @@ Learn more about [GitHub Advanced Security integration](github-advanced-security
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| April 30, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration preview for Azure SQL Managed Instance and Azure Synapse Analytics](#sql-vulnerability-assessment-express-configuration-preview-announcement) |
 | April 30, 2026 | GA | [Defender for Containers runtime protection on EKS Bottlerocket is now generally available](#defender-for-containers-runtime-protection-on-eks-bottlerocket-is-now-generally-available) |
 | April 30, 2026 | GA | [Anti-malware detection and blocking is now generally available](#anti-malware-detection-and-blocking-is-now-generally-available) |
 | April 30, 2026 | GA | [DNS Detection for Kubernetes is now generally available](#dns-detection-for-kubernetes-is-now-generally-available) |
 | April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Update | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
+
+### SQL Vulnerability Assessment Express Configuration preview announcement
+
+April 30, 2026
+
+Preview announcement for SQL Vulnerability Assessment (VA) Express Configuration now available for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces.
+
+Learn more about [SQL vulnerability assessment overview](sql-azure-vulnerability-assessment-overview.md) and how to [enable vulnerability assessment](sql-azure-vulnerability-assessment-enable.md).
 
 ### Defender for Containers runtime protection on EKS Bottlerocket is now generally available
 

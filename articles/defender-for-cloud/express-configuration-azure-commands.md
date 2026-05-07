@@ -10,6 +10,14 @@ ms.date: 09/17/2024
 
 # Express configuration Azure Command Line Interface (CLI) commands reference
 
+> [!IMPORTANT]
+> New public preview SQL vulnerability assessment unified API reference can be found under:
+> - [Sql Vulnerability Assessment Settings](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings?view=rest-defenderforcloud-composite-latest)
+> - [Sql Vulnerability Assessment Baseline Rules](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules?view=rest-defenderforcloud-composite-latest)
+> - [Sql Vulnerability Assessment Scan Results](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results?view=rest-defenderforcloud-composite-latest)
+> - [Sql Vulnerability Assessment Scans](https://learn.microsoft.com/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans?view=rest-defenderforcloud-composite-latest)
+> Examples below refer only to Azure SQL Databases (GA).
+
 This article lists the Azure Command Line Interface (CLI) commands that can be used with SQL vulnerability assessment express configuration.
 
 The examples in this article should be run in PowerShell; they aren't for use "as is" with Bash.
