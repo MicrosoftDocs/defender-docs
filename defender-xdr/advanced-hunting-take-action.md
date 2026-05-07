@@ -22,7 +22,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/05/2026
+ms.date: 05/07/2026
 ---
 
 # Take action on advanced hunting query results
