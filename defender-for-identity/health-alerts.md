@@ -28,7 +28,7 @@ Defender for Identity supports the following types of health alerts:
 To access the page, follow these steps:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com)
-1.  Go to **Settings** > **Identities**. 
+1. Go to **Settings** > **Identities**. 
 1. Under **Deployment**, select **Health issues**.
 1. Filter issues by status, issue name, or severity to help you find the issue you're looking for.
 
