@@ -200,22 +200,13 @@ To re-enable connected apps:
 ## Troubleshoot missing activities after you connect an app
 
 If expected activities don't show after you connect an app, use the following checks to determine where the data should be available and whether additional configuration is required.
-
 **1. Confirm the connector is healthy**
-
 Verify that the app connector is connected successfully and that there are no configuration warnings or permission issues.
-
 **2. Check ingestion delay expectations**
-
 Some connectors have expected latency before activities appear. Validate whether the connector has a documented ingestion delay before treating missing activity as an issue.
- 
 **3. Confirm that the connector supports activity ingestion**
-
 Check whether the connector supports activity collection under the [Users and activities section](#users-and-activities).
-
-
 **4. Review connector-specific activity options**
-
 For connectors that support selectable activity types, confirm that the required options are enabled. For example, if you're investigating sign-in activity, verify that the connector is configured to collect the relevant sign-in data.
 
 **5. Verify scoped deployment settings**
