@@ -3,7 +3,7 @@ title: Get started with the unified SQL Vulnerability Assessment REST API
 description: Learn how to manage SQL vulnerability assessments across Azure SQL Database, SQL Managed Instance, Synapse Workspaces, and SQL on machines using the unified REST API.
 ms.topic: quickstart
 ms.custom: devx-track-azurepowershell
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.date: 05/07/2026
 ms.service: defender-for-cloud
