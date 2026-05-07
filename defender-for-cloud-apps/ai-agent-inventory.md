@@ -21,7 +21,7 @@ To enable AI agent inventory and detection, you must:
  - Have a Microsoft Agent 365 license
  - Opt in to the [Microsoft Defender XDR preview features](https://security.microsoft.com/securitysettings/defender/preview_features).
   
- Until July 1, 2026, you can access the AI agent inventory and detection with:
+ Until July 1, 2026, you can access the AI agent inventory and detection if you:
  - A Microsoft Defender for Cloud Apps license 
  - You opt in to the [Microsoft Defender for Cloud preview features](https://security.microsoft.com/securitysettings/defender/preview_features) 
 
