@@ -53,7 +53,7 @@ To select your coverage options:
 
 1. Select **Onboard cloud resources**. The **Turn on Defender Experts for Servers?** confirmation dialog appears, informing you that additional charges apply based on the number of hours your protected servers are running.
 
-1. Select **Continue**. Select **Continue** to proceed, or select **Cancel** to go back.
+1. Select **Continue** to proceed, or select **Cancel** to go back.
 
 1. After you confirm, a processing banner appears while your cloud resources get onboarded to the Defender Experts service. Once onboarding completes successfully, the Defender Experts onboarding wizard launches to guide you through configuring the service. 
 
