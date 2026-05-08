@@ -4,7 +4,7 @@ titleSuffix: Microsoft Security
 description: Learn how to set up and use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools to enable natural language queries and AI-powered security investigations 
 author: poliveria
 ms.topic: get-started
-ms.date: 04/17/2026
+ms.date: 05/07/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
@@ -14,9 +14,9 @@ ms.subservice: sentinel-platform
 
 # Get started with Microsoft Sentinel MCP server 
 
-This article shows you how to set up and use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools to enable natural language queries against your security data. Sentinel's support for MCP enables security teams to bring AI into their security operations by allowing AI models to access security data in a standard way. 
+This article shows you how to set up and use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools to enable natural language queries against your security data. Sentinel's support for MCP enables security teams to bring AI into their security operations by allowing AI models to access security data in a standard way. For more information on how AI is used within Microsoft Sentinel's unified MCP server, see [Application card: Microsoft Sentinel MCP server](sentinel-mcp-application-card.md).
 
-Sentinel's [collection](sentinel-mcp-tools-overview.md) of security tools works with multiple clients and automation platforms. You can use these tools to search for relevant tables and retrieve data, analyze entities, triage incidents, hunt for threats, and other tasks.
+Sentinel's [collection](sentinel-mcp-tools-overview.md) of security tools works with multiple clients and automation platforms. You can use these tools to search for relevant tables and retrieve data, analyze entities, triage incidents, hunt for threats, and other tasks. 
 
 ## Prerequisites
 
