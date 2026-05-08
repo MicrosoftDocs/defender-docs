@@ -54,7 +54,7 @@ The following table shows the supported parameters.
 | ---| ---| --- |
 | indicatorType|Enum|Type of the indicator. Possible values are: `FileSha1`, `FileSha256`, `IpAddress`, `DomainName`, and `Url`. <br/> **Required** |
 | indicatorValue|String|Identity of the [Indicator](api/ti-indicator.md) entity. <br/> **Required** |
-| action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: `Allowed`, `Audit`, `BlockAndRemediate`, `Warn`, and `Block`. <br/> **Required** |
+| action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: `Allowed`, `Audit`, `BlockAndRemediate`, `Warn`, `Block`, and `AlertAndBlock`. <br/> **Required** |
 | title|String|Indicator alert title.<br/> **Required** |
 | description|String| Description of the indicator.<br/> **Required** |
 | expirationTime|DateTimeOffset|The expiration time of the indicator in the following format `YYYY-MM-DDTHH:MM:SS.0Z`. The indicator gets deleted if the expiration time passes and whatever happens at the expiration time occurs at the seconds (SS) value. <br/>**Optional** |
@@ -63,7 +63,7 @@ The following table shows the supported parameters.
 | rbacGroups|String|Comma-separated list of RBAC groups the indicator would be applied to. <br/>**Optional** |
 | category|String|Category of the alert. Examples include: Execution and credential access. <br/>**Optional** |
 | mitretechniques|String|MITRE techniques code/id (comma separated). For more information, see [Enterprise tactics](https://attack.mitre.org/tactics/enterprise/). <br/> **Optional** <br/>It's recommended to add a value in category when a MITRE technique. |
-| GenerateAlert|String|Whether the alert should be generated. Possible Values are: `True` or `False`. <br/>**Optional** |
+| GenerateAlert|String|Whether the alert should be generated. Possible Values are: `True` or `False`. The API action `AlertAndBlock` is equivalent to setting `action` to `BlockAndRemediate` with `GenerateAlert=True` (rendered in the portal as "Block and remediate" with "Generate alert" ticked). <br/>**Optional** |
 
 > [!NOTE]
 > Classless Inter-Domain Routing (CIDR) notation for IP addresses is not supported. For more information, see [Microsoft Defender for Endpoint alert categories are now aligned with MITRE ATT&CK!](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-atp-alert-categories-are-now-aligned-with/ba-p/732748).
