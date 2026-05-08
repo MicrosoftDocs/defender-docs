@@ -23,7 +23,26 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
-### April 2026
+## May 2026
+
+### New Defender for Identity security alerts
+
+These new alerts were added to the Defender for Identity security alerts:
+
+**New alerts related to Entra ID**:
+
+- [Failed credential abuse attempt in Entra ID authentication](alerts-xdr.md#failed-credential-abuse-attempt-in-entra-id-authentication)
+- [Malicious sign in from a randomized user agent](alerts-xdr.md#malicious-sign-in-from-a-randomized-user-agent)
+- [Possible use of a stolen session cookie](alerts-xdr.md#possible-use-of-a-stolen-session-cookie)
+- [Stolen session cookie replay detected](alerts-xdr.md#stolen-session-cookie-replay-detected)
+- [Suspected Conditional Access bypass via non-compliant device](alerts-xdr.md#suspected-conditional-access-bypass-via-non-compliant-device)
+- [Suspicious addition of default third‑party MFA method to user account](alerts-xdr.md#suspicious-addition-of-default-thirdparty-mfa-method-to-user-account)
+
+## April 2026
+
+### **Identity Explorer (Preview)**
+
+The Identity page now includes the **Identity Explorer** tab for customers with a Microsoft Sentinel Data Lake license. This tab uses the [hunting graph](/defender-xdr/advanced-hunting-graph) to visualize identity attack paths and exposure scenarios as interactive graphs. Use predefined identity scenarios to discover lateral movement paths, privilege escalation routes, and credential-access risks. For more information, see [Investigate an identity](/defender-xdr/investigate-users#identity-explorer-tab-preview).
 
 ### **Custom account correlation rules (Preview)**
 
@@ -125,9 +144,9 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Suspicious Entra account enablement after disruption](alerts-xdr.md#suspicious-entra-account-enablement-after-disruption)
 - [Suspicious Intune device registration activity](alerts-xdr.md#suspicious-intune-device-registration-activity)
 - [Suspicious OS switch sign-in](alerts-xdr.md#suspicious-os-switch-sign-in)
-- [Suspicious shared client infrastructure activity](alerts-xdr.md#suspicious-shared-client-infrastructure-activity)
-- [Suspicious sign-in from unusual user agent and IP address using PowerShell](alerts-xdr.md#suspicious-sign-in-from-unusual-user-agent-and-ip-address-using-powershell)
-- [Suspicious sign-in from unusual user agent and IP address using device code flow](alerts-xdr.md#suspicious-sign-in-from-unusual-user-agent-and-ip-address-using-device-code-flow)
+- [User sign‑in from shared client infrastructure exhibiting anomalous activity](alerts-xdr.md#user-signin-from-shared-client-infrastructure-exhibiting-anomalous-activity)
+- [Suspicious sign-in from an unusual user agent and IP address using PowerShell](alerts-xdr.md#suspicious-sign-in-from-an-unusual-user-agent-and-ip-address-using-powershell)
+- [Suspicious sign-in from an unusual user agent and IP address using device code flow](alerts-xdr.md#suspicious-sign-in-from-an-unusual-user-agent-and-ip-address-using-device-code-flow)
 
 **New alerts related to Active Directory**:
 
@@ -210,6 +229,17 @@ These new alerts were added to the Defender for Identity security alerts:
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
 Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
+
+### New Entra ID user roles to support remediation actions
+
+For some [remediation actions](remediation-actions.md), Defender for Identity creates an enterprise application in Microsoft Entra ID. The Microsoft Defender for Identity enterprise application is created automatically in the tenant and is used only to execute remediation actions. When a user initiates an action from the Defender portal, the request is authorized based on the user’s Entra ID roles and executed by the Defender for Identity application, enforcing Entra ID role‑based access control (RBAC) and audit logging. These new Entra ID roles are supported:
+
+- User Administrator
+- Authentication Administrator
+- Privileged Authentication Administrator
+- Directory Writers
+- Helpdesk Administrator
+- Security Operator
 
 ### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
 

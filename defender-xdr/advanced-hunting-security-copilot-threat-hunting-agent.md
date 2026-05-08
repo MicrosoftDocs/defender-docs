@@ -30,6 +30,10 @@ The Microsoft Security Copilot Threat Hunting Agent is an AI-powered agent that 
 
 The Threat Hunting Agent goes beyond query generation by delivering a complete, conversational threat hunting experience. It not only generates queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower analysts of all levels to hunt threats faster, more accurately, and with greater confidence.
 
+Watch this video to get an overview of the Threat Hunting Agent:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=74ef2c98-5dc7-406b-9b30-25e158ced334]
+
 ## Key capabilities
 - **Natural language question to natural language answer.** Ask any data-related question in natural language (for example, *Which devices communicated with IPs in France in the last 24 hours?*) and receive direct conversational answers backed by KQL queries and tabular results. 
 

@@ -1,8 +1,9 @@
 ---
 title: Create Playbooks for Microsoft Sentinel Solutions
 description: This article guides you through the process of creating and publishing playbooks for Microsoft Sentinel solutions.
-author: anilgodavarthy
-ms.author: angodavarthy
+ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: sshuster
 ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.date: 1/23/2025

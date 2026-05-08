@@ -60,6 +60,7 @@ This section lists key Defender for Endpoint capabilities and provides links to 
 |[Endpoint detection and response](overview-endpoint-detection-response.md) |Detect, investigate, and respond to advanced threats. Includes [advanced hunting](/defender-xdr/advanced-hunting-overview) which provides a query-based threat-hunting tool that lets you proactively find breaches and create custom detections. |
 |[Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices) |Assess the security state of your network, identify unprotected systems, and take actions to improve your organization's security. |
 |[Next-generation protection](next-generation-protection.md) |Catch and block all types of emerging threats. |
+|[Predictive shielding](/defender-xdr/shield-predict-threats) (Preview) |Proactively anticipates attacker progression during an active attack and applies targeted hardening — such as GPO restrictions, Safeboot enforcement, and user containment — to at-risk assets before attackers reach them. Extends [automatic attack disruption](/defender-xdr/automatic-attack-disruption). |
 
 ## Privacy and compliance
 
