@@ -85,7 +85,7 @@ You can configure scheduled antivirus scans on Linux using one of the following 
 
 1. Configure your tenant to support security settings management.
 
-1. In the Defender portal, navigate to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**, and then select the Linux platform.
+1. In the Defender portal, navigate to **Settings** > **Endpoints** > **Configuration management** > **Enforcement scope**, and then select the Linux platform.
 
 1. Tag devices with the **MDE-Management** tag. Most devices enroll and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune](/intune/protect/mde-security-integration).
 
@@ -94,11 +94,11 @@ You can configure scheduled antivirus scans on Linux using one of the following 
    - This dynamic group automatically includes devices managed by Defender for Endpoint, eliminating the need for admins to manually create new policies. For more information, see [Create Microsoft Entra groups](/entra/fundamentals/how-to-manage-groups).
 
 1. Create an endpoint security policy.
-   1. In the Defender portal, go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new Policy**.
+   1. In the Defender portal, go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new policy**.
    1. For **Platform**, select **Linux**.
    1. Select the template **Microsoft Defender Antivirus** and then select **Create policy**.
    1. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
-   1. On the **Settings** page, go to the **Schedule Scan** section towards the end of the page and configure the settings you want to manage with this profile.
+   1. On the **Configuration settings** page, go to the **Schedule Scan** section towards the end of the page and configure the settings you want to manage with this profile.
    1. When you're done configuring settings, select **Next**.
    1. On the **Assignments** page, select the groups that receive this profile. Then select **Next**.
    1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
@@ -109,16 +109,17 @@ For more information, see [Manage endpoint security policies in Microsoft Defend
 
 In enterprise environments, antivirus scans can be scheduled through a configuration profile. Typically, you would use a configuration management tool like Puppet, Ansible, or another management console to push a file with the name `mdatp_managed.json` at the location `/etc/opt/microsoft/mdatp/managed`.
 
-If you already use `mdatp_managed.json` to configure other Microsoft Defender for Endpoint settings (for example, exclusions or antivirus preferences), do not replace your existing file. Scheduled scan settings should be added to your existing managed JSON, alongside your current configuration. For more information, see [Set preferences for Defender for Endpoint on Linux](preferences-setup-mde-linux.md).
+If you already use `mdatp_managed.json` to configure other Defender for Endpoint settings (for example, exclusions or antivirus preferences), do not replace your existing file. Scheduled scan settings should be added to your existing managed JSON, alongside your current configuration. For more information, see [Set preferences for Defender for Endpoint on Linux](preferences-setup-mde-linux.md).
 
 The following example configures:
-- A weekly full scan every Saturday at 3:00 AM
-- A daily quick scan every day at 3:00 AM
-- Scans run only when the device is idle
-- Reduced CPU impact using low-priority scheduling
-- Definition updates are checked before scanning
-- Exclusions are ignored during scans
-- Scan start times are randomized by up to 3 hours
+
+- A weekly full scan every Saturday at 3:00 AM.
+- A daily quick scan every day at 3:00 AM.
+- Scans run only when the device is idle.
+- Reduced CPU impact using low-priority scheduling.
+- Definition updates are checked before scanning.
+- Exclusions are ignored during scans.
+- Scan start times are randomized by up to 3 hours.
 
 ```json
 {
@@ -215,9 +216,9 @@ This command displays completed and ongoing scans.
 
 You can also verify scan activity directly from the Defender portal at the device level. It shows last full scan and last quick scan:
 
-1. Go to **Assets** > **Devices**
-1. Select the target Linux device
-1. In the **Overview** tab, locate the **Device health status** section
+1. Go to **Assets** > **Devices**.
+1. Select the target Linux device.
+1. In the **Overview** tab, locate the **Device health status** section.
 
 This helps confirm whether scheduled scans are running as expected on the device.
 
