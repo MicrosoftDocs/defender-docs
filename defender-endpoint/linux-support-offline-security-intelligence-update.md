@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 - mde-linux
 ms.topic: how-to
-ms.date: 05/07/2026
+ms.date: 05/08/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -176,24 +176,25 @@ Once the mirror server is set up, you need to propagate this URI to the Linux en
 
 ## Configure the endpoints
 
-You can configure the offline security intelligence updates feature in two ways: through the Defender or Intune portals, or by using the managed JSON configuration file.
+You can configure the offline security intelligence updates feature in two ways:
 
-- Configuration via the portals provides a user-friendly interface for managing and configuring the setting for a group of devices.
-- Configuration via the managed JSON file allows for more granular control and can be used for manual configuration or via 3rd party management tools like Chef, Ansible, and others.
+- Via **security settings management** in the Defender/Intune portal: Allows centralised management and configuration of the settings for a group of devices.
+- Via the **managed JSON file**: Allows for configuration of the settings manually or via third-party management tools like Chef, Ansible, and others.
 
 # [Portal](#tab/portal)
 
-1. In the Defender portal, navigate to **Endpoints** > **Configuration management** > **Endpoint security policies**, and choose a Linux policy to edit, or create a new Linux policy.
-1. In the policy creation wizard, advance to the **Configuration settings** step. There you can find the configuration settings for the offline security intelligence updates feature.
+1. In the Defender portal, navigate to **Endpoints** > **Configuration management** > **Endpoint security policies**, and choose **Create new policy**.
+1. In the policy creation wizard, select **Linux** as the platform, **Microsoft Defender Antivirus** as the template. and then select **Create policy**.
+1. Provide a name and description for the policy, then select **Next**.
 
-You can configure the following settings. Use the Search box on the **Configuration settings** page for help finding them:
+In the **Configuration settings** step, you can find the configuration settings for the offline security intelligence updates feature under the **Antivirus engine** and **Cloud delivered protection preferences** sections.
 
 |Setting|Description|
 |---|---|
-|**Enable offline security intelligence update** |This setting enables the offline security intelligence update feature on the Linux endpoints. When you enable this setting, the following two settings become available.|
-|**Offline security intelligence update fallback to cloud** |This setting determines the behavior of Defender for Endpoint on Linux when the offline security intelligence update fails. If set to `True`, the endpoint will attempt to get the updates from the Microsoft cloud if it fails to get them from the mirror server. If set to `False`, the endpoint will not attempt to get updates from the Microsoft cloud if it fails to get them from the mirror server.|
+|**Enable offline security intelligence update** |This setting enables the offline security intelligence update feature on the Linux endpoints. When you enable this setting, the following two settings become available. Make sure **Automated security intelligence updates** is also enabled.|
+|**Offline security intelligence update fallback to cloud** |If set to `True`, the endpoint will attempt to get signature updates from the Microsoft cloud if it fails to get them from the mirror server.|
 |**Offline security intelligence update URL or directory** |This setting specifies the URL or directory path of the mirror server that hosts the security intelligence updates. The URL should be in the format `http://<mirror_server_address>/linux/production/` (if using an HTTP/HTTPS server) or a directory path (if using a network share or local/remote mount point). See [Host the offline security intelligence updates on the mirror server](#host-the-offline-security-intelligence-updates-on-the-mirror-server) for more information.|
-|**Security intelligence Update time interval** | When set to configured, this setting allows you to specify (in seconds) how often the Linux endpoints pull the security intelligence updates from the mirror server. By default, this setting is not configured, in which case the update interval is taken from the [Automatic security updates setting](#automatic-update), which has a default value of 8 hours (28800 seconds).|
+|**Security intelligence Update time interval** | By default, the Linux endpoints pull signature updates from the mirror server every 8 hours (28800 seconds). Use this setting if you wish to specify a different interval. Specify the interval in seconds.|
 
 # [Managed JSON](#tab/managed-json)
 
@@ -223,7 +224,7 @@ Use the following sample `mdatp_managed.json` and update the parameters as per t
 | `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). See the previous section for information about how to specify this path.|
 | `offlineDefinitionUpdate`                 | `enabled`/`disabled`   | When set to `enabled`, the offline security intelligence update feature is enabled, and vice versa. |
 | `offlineDefinitionUpdateFallbackToCloud`  | `True`/`False`         | Determine Defender for Endpoint security intelligence update approach when offline mirror server fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when offline security intelligence update failed; else, vice versa. |
-| `offlineDefinitionUpdateVerifySig`        | `enabled`/`disabled`     | When set to `enabled`, downloaded definitions are verified on the endpoints; else, vice versa. This setting enabled by default starting from version 101.25092.0005, and is not configurable in the Defender portal. |
+| `offlineDefinitionUpdateVerifySig`        | `enabled`/`disabled`     | When set to `enabled`, downloaded definitions are verified on the endpoints; else, vice versa. **This setting is enabled by default starting from version 101.25092.0005, and therefore is not available for configuration in the Defender portal**. |
 
 ---
 
