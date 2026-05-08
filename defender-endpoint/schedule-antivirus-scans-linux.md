@@ -1,18 +1,20 @@
 ---
 title: Schedule antivirus scans on Linux
 description: Learn how to configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux using Security Settings Management or managed JSON configuration.
-ms.service: microsoft-365-security
+ms.service: defender-endpoint
 ms.mktglfocus: mdatp
-ms.author: siosulli
-author: siosulli
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
 ms.date: 05/07/2026
 ai-usage: ai-generated
 ---
 
-# Schedule antivirus scans on Linux
+# Schedule antivirus scans on Linux (preview)
 
-Scheduled antivirus scan configuration on Linux is currently available in public preview.
+This article describes how to configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux. It's intended for IT and security administrators who manage Linux devices and want to ensure continuous antivirus protection through centralized scan scheduling.
+
+## Overview
 
 Microsoft Defender for Endpoint on Linux supports scheduled antivirus scans to help maintain continuous protection across devices. Instead of relying on custom cron jobs, scheduled scans are centrally configured to ensure consistent scanning across environments.
 
@@ -24,23 +26,23 @@ You can configure scheduled scans using either managed configuration (managed JS
 
 Before configuring scheduled antivirus scans on Linux, ensure the following requirements are met:
 
-- Microsoft Defender for Endpoint is installed and onboarded on supported Linux distributions
+- Microsoft Defender for Endpoint is installed and onboarded on supported Linux distributions.
 - Devices are running minimum agent version 101.26032.0000 in the production ring
 - Devices are healthy and reporting correctly to the Microsoft Defender service
 
-Depending on your configuration method:
+Depending on your configuration method, the following prerequisites also need to be met:
 
 **MDATP Managed JSON Configuration:**
-- Ability to deploy configuration files to `/etc/opt/microsoft/mdatp/managed`
-- Required permissions to manage system configuration files
-- If you already use managed configuration for other antivirus settings, append to your existing configuration file instead of replacing it
+- You must be able to deploy configuration files to `/etc/opt/microsoft/mdatp/managed`
+- You must have the required permissions to manage system configuration files.
+- If you already use managed configuration for other antivirus settings, append to your existing configuration file instead of replacing it.
 
 **Microsoft Defender portal:**
-- Appropriate permissions to create and assign security policies
+- You must have appropriate permissions to create and assign security policies
 
 ## Scheduled antivirus scan types
 
-Microsoft Defender for Endpoint on Linux supports the following scan types for scheduled scans:
+Defender for Endpoint on Linux supports the following scan types for scheduled scans:
 
 - **Quick scans**: Quick scans focus on critical system locations where malware is most likely to be present, such as startup paths and system services. They complete faster and are recommended for frequent scheduling, such as daily or interval-based scans.
 - **Full scans**: Full scans examine all files and directories on the device. They provide more comprehensive coverage but can take longer to complete, depending on system size and workload. These are typically scheduled less frequently, such as weekly.
@@ -83,16 +85,16 @@ You can configure scheduled antivirus scans on Linux using one of the following 
 
 1. Configure your tenant to support security settings management.
 
-1. In the **Microsoft Defender portal**, navigate to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**, and then select the Linux platform.
+1. In the Defender portal, navigate to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**, and then select the Linux platform.
 
-1. Tag devices with the **MDE-Management** tag. Most devices enrol and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune](/intune/protect/mde-security-integration).
+1. Tag devices with the **MDE-Management** tag. Most devices enroll and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune](/intune/protect/mde-security-integration).
 
 1. Create a Microsoft Entra group.
    - Create a dynamic Microsoft Entra group based on the operating system type to ensure that all devices onboarded to Defender for Endpoint receive the appropriate policies.
    - This dynamic group automatically includes devices managed by Defender for Endpoint, eliminating the need for admins to manually create new policies. For more information, see [Create Microsoft Entra groups](/entra/fundamentals/how-to-manage-groups).
 
 1. Create an endpoint security policy.
-   1. In the **Microsoft Defender portal**, go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new Policy**.
+   1. In the Defender portal, go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new Policy**.
    1. For **Platform**, select **Linux**.
    1. Select the template **Microsoft Defender Antivirus** and then select **Create policy**.
    1. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
