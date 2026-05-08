@@ -55,6 +55,9 @@ In Intune, endpoint security policies are the recommended method to deploy ASR r
 
 To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surface reduction** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
+> [!IMPORTANT]
+> Microsoft Defender for Endpoint management supports device objects only. Targeting users isn't supported. Assign the policy to Microsoft Entra device groups, not user groups.
+
 - **Policy type**: Attack surface reduction
 - **Platform**: Windows
 - **Profile**: Attack Surface Reduction Rules
