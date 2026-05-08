@@ -22,6 +22,8 @@ The listed features were released in the last six months. For information about 
 
 - We introduced a new entry point and created a consolidated view for the UEBA Settings and the Behaviors Settings. You can now access the UEBA settings from the new UEBA tab in the Microsoft Sentinel settings page. For more information see [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab).
 
+- UEBA now supports five new GCP Audit Logs anomaly detections that identify unusual login behavior, privileged actions, resource deployments, secret/KMS key access, and infrastructure usage patterns. For more information, see [UEBA anomalies](anomalies-reference.md#ueba-anomalies).
+
 ## April 2026
 
 - [[Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts](#updated-call-to-action-update-automation-by-july-1-2026---account-name-is-now-consistently-the-upn-prefix-for-analytics-rule-alerts)
