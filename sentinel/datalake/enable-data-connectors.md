@@ -9,6 +9,7 @@ ms.topic: concept-article
 ms.date: 11/04/2025
 ms.author: monaberdugo  
 ms.collection: ms-security
+ai-usage: ai-assisted
 
 #Customer intent: As a Microsoft Sentinel user, I want to understand the ingestion of asset data and analysis of security-related data from various sources.
 ---
@@ -53,6 +54,31 @@ The following table describes the various asset data sources and their data conn
 
 > [!NOTE]
 > Certain data connectors, including but not limited to asset connectors, contribute to the construction of data risk graphs in Purview. If these graphs are active, disabling the associated connectors interrupts their generation. Connector descriptions indicate if they're involved in building data risk graphs.
+
+### Expand Azure Resource Graph connector coverage
+
+The Azure Resource Graph (ARG) connector ingests only the Azure resources that its managed identity can read. When you enable the connector, its managed identity is granted the **Reader** role only on the subscriptions where you have the **Owner** role. Most users don't have **Owner** access across every subscription in the tenant, so the connector often ingests a partial view of your Azure estate, which limits coverage.
+
+To expand coverage after the connector is enabled, have a user with tenant root or broader subscription privileges (for example, a Global Administrator who has elevated access at the tenant root, or a user with **User Access Administrator** or **Owner** at a higher scope) find the managed identity associated with the connector in the Azure portal, and assign the **Reader** role to the connector's managed identity at the broadest scope you want ingested:
+
+1. In the Azure portal, locate the managed identity that the ARG connector created. The identity's name is `msg-resources-` followed by an alphanumeric ID that depends on the version, for example `msg-resources-b05e`.
+1. Select a scope that covers the resources you want ingested:
+   - **Tenant root management group** to cover all subscriptions in the tenant.
+   - A specific **management group** to cover a subset of subscriptions.
+   - One or more individual **subscriptions**.
+
+   :::image type="content" source="./media/enable-data-connectors/arg-scope-management-group.png" alt-text="Screenshot of the Tenant Root Group overview page in the Azure portal." lightbox="./media/enable-data-connectors/arg-scope-management-group.png":::
+
+1. Select **Access control (IAM)**.
+1. Select **+ Add** > **Add role assignment**.
+
+   :::image type="content" source="./media/enable-data-connectors/arg-add-role-assignment.png" alt-text="Screenshot of the Access control (IAM) page with the Add role assignment menu item highlighted." lightbox="./media/enable-data-connectors/arg-add-role-assignment.png":::
+
+1. Assign the **Reader** role to the connector's managed identity. For step-by-step guidance, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) and, when assigning at the tenant root, [Elevate access to manage all Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin).
+
+   :::image type="content" source="./media/enable-data-connectors/arg-select-reader-role.png" alt-text="Screenshot of the Add role assignment page with the Reader role selected." lightbox="./media/enable-data-connectors/arg-select-reader-role.png":::
+
+After the assignment propagates, the next ingestion cycle picks up the additional resources. It can take up to 24 hours for the new data to appear in the lake.
 
 ## Prerequisites
 
