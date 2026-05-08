@@ -28,7 +28,8 @@ Learn more about [Preview features](/defender-xdr/preview).
 ## May 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
-|---------|------------|-------------|-------------||Feature |[Configure offline security intelligence update settings from the Defender and Intune portals](./linux-support-offline-security-intelligence-update.md#configure-the-endpoints) |Preview |You can now configure offline security intelligence update settings for Linux directly from the Defender and Intune portals. |
+|---------|------------|-------------|-------------|
+|Feature |[Configure offline security intelligence update settings from the Defender and Intune portals](./linux-support-offline-security-intelligence-update.md#configure-the-endpoints) |Preview |You can now configure offline security intelligence update settings for Linux directly from the Defender and Intune portals. |
 |Feature |[Selective Response Actions](./restrict-response-actions-high-value-assets.md) |Preview |Selective Response Actions enables organizations to tailor high-impact security operations on devices during onboarding. It provides precise control over how response actions are applied on Tier-0 systems and other high-value assets, helping maintain operational stability while delivering strong protection. |
 
 ## April 2026
