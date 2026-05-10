@@ -172,11 +172,11 @@ The SIEM migration tool doesn't explicitly install any connectors or enable dete
 
 Defender XDR native detections are built-in detection logic that generate alerts, which are then correlated into incidents. The SIEM migration tool maps Splunk and QRadar rules to these native detections. Matched Defender XDR native detections are in active status. This type of detection doesn't require Microsoft Sentinel data connectors to be installed, configured, and connected.
 
-:::image type="content" source="./media/siem-migration/defender-detections.png" alt-text="Screenshot of the list of matched Defender XDR native detections.":::
+:::image type="content" source="./media/siem-migration/defender-detections.png" alt-text="Screenshot of the list of matched Defender XDR native detections." lightbox="./media/siem-migration/defender-detections.png":::
 
 Select a matched Defender XDR rule to view full details. You won't see matching KQL because Defender XDR native detections use built-in detection logic.
 
-:::image type="content" source="./media/siem-migration/defender-matched-rules.png" alt-text="Screenshot of the details side panel for a Defender XDR native detection.":::
+:::image type="content" source="./media/siem-migration/defender-matched-rules.png" alt-text="Screenshot of the details side panel for a Defender XDR native detection." lightbox="./media/siem-migration/defender-matched-rules.png":::
 
 ---
 
