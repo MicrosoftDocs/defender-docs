@@ -18,9 +18,6 @@ appliesto:
 
 The SIEM migration tool analyzes Splunk and QRadar detections, including custom detections, and recommends best-fit Microsoft Sentinel detections and Defender XDR native detections. It also provides recommendations for data connectors, both Microsoft and third-party connectors available in Content Hub to enable the recommended detections. You can track migration by assigning the right status to each recommendation card.
 
-> [!NOTE]
-> The old migration tool is deprecated. This article describes the current SIEM migration experience.
-
 The SIEM Migration experience includes the following features:
 
 - The experience focuses on migrating Splunk and QRadar security monitoring to Microsoft Sentinel and mapping out-of-the-box (OOTB) analytics rules wherever possible.
