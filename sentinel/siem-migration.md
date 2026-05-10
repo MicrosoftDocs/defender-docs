@@ -138,16 +138,6 @@ After exporting the rules, do the following:
 
 ## Enable detection rules
 
-### [Defender XDR native detections](#tab/defender-xdr-native-detections)
-
-Defender XDR native detections are built-in detection logic that generate alerts, which are then correlated into incidents. The SIEM migration tool maps Splunk and QRadar rules to these native detections. Matched Defender XDR native detections are in active status. This type of detection doesn't require Microsoft Sentinel data connectors to be installed, configured, and connected.
-
-:::image type="content" source="./media/siem-migration/defender-detections.png" alt-text="Screenshot of the list of matched Defender XDR native detections.":::
-
-Select a matched Defender XDR rule to view full details. You won't see matching KQL because Defender XDR native detections use built-in detection logic.
-
-:::image type="content" source="./media/siem-migration/defender-matched-rules.png" alt-text="Screenshot of the details side panel for a Defender XDR native detection.":::
-
 ### [Microsoft Sentinel detection rules](#tab/sentinel-detection-rules)
 
 When you select a rule, the rules details side panel opens and you can view the rules template details.
@@ -177,6 +167,16 @@ When you select a rule, the rules details side panel opens and you can view the 
     :::image type="content" source="./media/siem-migration/enable-multiple-rules.png" alt-text="Screenshot of the list of rules in the detection tab with checkboxes next to them." lightbox="./media/siem-migration/enable-multiple-rules.png":::
 
 The SIEM migration tool doesn't explicitly install any connectors or enable detection rules.
+
+### [Defender XDR native detections](#tab/defender-xdr-native-detections)
+
+Defender XDR native detections are built-in detection logic that generate alerts, which are then correlated into incidents. The SIEM migration tool maps Splunk and QRadar rules to these native detections. Matched Defender XDR native detections are in active status. This type of detection doesn't require Microsoft Sentinel data connectors to be installed, configured, and connected.
+
+:::image type="content" source="./media/siem-migration/defender-detections.png" alt-text="Screenshot of the list of matched Defender XDR native detections.":::
+
+Select a matched Defender XDR rule to view full details. You won't see matching KQL because Defender XDR native detections use built-in detection logic.
+
+:::image type="content" source="./media/siem-migration/defender-matched-rules.png" alt-text="Screenshot of the details side panel for a Defender XDR native detection.":::
 
 ---
 
