@@ -47,17 +47,13 @@ If content as code is too complex, the portal and content distribution are helpf
 
 This is a good option for XDR-only customers who don't have access to repositories.
 
-For more information, see:
-
-- [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json)
+For more information, see [Content distribution in multitenant management](/unified-secops-platform/mto-distribution-profiles?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json).
 
 ### APIs
 
 If you use external tools, custom pipelines, or other forms of managing content, APIs are the right solution — especially if you don't use the portal and need more flexibility.
 
-For more information, see:
-
-- [Source control operations in the Microsoft Sentinel REST API](/rest/api/securityinsights/source-control)
+For more information, see [Microsoft Sentinel REST API](/rest/api/securityinsights/).
 
 ## Capabilities feature coverage
 
