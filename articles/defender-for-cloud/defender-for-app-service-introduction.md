@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for App Service - the benefits and features
 description: Learn about the capabilities of Microsoft Defender for App Service and how to enable it on your subscription.
-ms.date: 05/07/2026
+ms.date: 05/10/2026
 ms.topic: overview
 ms.author: elkrieger
 author: ElazarK
@@ -28,6 +28,13 @@ To protect your Azure App Service plan with Microsoft Defender for App Service, 
   
 - Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). Billing is calculated according to the total compute instances in supported plans.
 - Check out Defender for App Service's [cloud availability](support-matrix-defender-for-cloud.md).
+
+### App Service diagnostics for alert investigation
+
+To investigate security alerts triggered by Microsoft Defender for App Service, enable diagnostic settings on your App Service resource. Diagnostic logs capture HTTP traffic, application events, and platform-level activity that provide critical evidence when analyzing suspicious behavior. Without these logs, the data available for incident investigation might be limited.
+
+> [!IMPORTANT]
+> Enabling diagnostic settings can incur additional storage costs based on log volume and the destination you choose, such as a Log Analytics workspace or a Storage Account.
 
 ## Benefits of Microsoft Defender for App Service?
 
