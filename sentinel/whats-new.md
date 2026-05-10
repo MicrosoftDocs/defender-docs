@@ -20,9 +20,9 @@ The listed features were released in the last six months. For information about 
 
 ## May 2026
 
-- [User and Entity Behavior Analytics (UEBA) updates](#user-and-entity-behavior-analytics-ueba-updates)
+- [New UEBA settings experience and Okta V2 connector support](#new-ueba-settings-experience-and-okta-v2-connector-support)
 
-### User and Entity Behavior Analytics (UEBA) updates
+### New UEBA settings experience and Okta V2 connector support
 
 - We introduced a new entry point and created a consolidated view for the UEBA Settings and the Behaviors Settings. You can now access the UEBA settings from the new UEBA tab in the Microsoft Sentinel settings page. For more information, see [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab).
 
