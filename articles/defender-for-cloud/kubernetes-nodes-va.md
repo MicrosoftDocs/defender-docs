@@ -8,9 +8,9 @@ ms.custom: sfi-image-nochange
 
 # Review and remediate Kubernetes node vulnerabilities
 
-Defender for Cloud scans the [VMs that host Kubernetes nodes](./kubernetes-nodes-overview.md#protection-for-kubernetes-nodes) for vulnerabilities in the operating system and installed software. When vulnerabilities are detected, Defender for Cloud generates recommendations with detailed findings to help you review and remediate them.
+Defender for Cloud scans the [VMs that host Kubernetes nodes](./kubernetes-nodes-overview.md) for vulnerabilities in the operating system and installed software. When vulnerabilities are detected, Defender for Cloud generates recommendations with detailed findings to help you review and remediate them.
 
-Reviewing and remediating these vulnerabilities is part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility-of-kubernetes-nodes) for maintaining Kubernetes node security.
+Reviewing and remediating these vulnerabilities is part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility) for maintaining Kubernetes node security.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Before you begin, make sure that:
     - Defender for Servers P2
     - Defender CSPM
 
-- [Agentless scanning for machines](kubernetes-nodes-overview.md#enable-agentless-scanning-for-machines) is enabled.
+- Agentless scanning for machines is enabled.
 
 ## Review vulnerability findings for Kubernetes nodes
 
