@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 The Sensor for Microsoft Defender for Containers release notes provides a detailed version history of sensor updates. Each version includes new features, improvements, and fixes to enhance functionality. Use this changelog to stay informed about the latest updates and plan your deployments accordingly.
 
-For more information about deploying the sensor in Defender for Containers, see [Configure Microsoft Defender for Containers components](defender-for-containers-enable.md).
+For more information about deploying the sensor in Defender for Containers, see [Configure Microsoft Defender for Containers components](defender-for-containers-enable-plan.md).
 
 To see the version of the sensor run:
 
@@ -33,7 +33,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 ## Sensor versions available per release
 
-### Sensor v0.10 (deployed by Helm or Arc for K8s in Preview mode)
+### Sensor v0.10 (deployed by Helm or Arc for K8s)
 
 **Sensor v0.10.5 — GA**
 
@@ -80,7 +80,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
     
 ### Sensor v0.9 (AKS 1.35 or by Helm)
 
-**Sensor v0.9.55— GA**
+**Sensor v0.9.58— GA**
 
 - **Released:** May 2026
 
@@ -173,7 +173,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 - **What's included:**
   - Bug fixes and security enhancements   
   - Added support for new Defender endpoints (requires outbound access to `*.cloud-defender.microsoft.com`).  
-    Learn more in the [Defender for Containers setup guide](defender-for-containers-enable.md).
+    Learn more in the [Defender for Containers setup guide](defender-for-containers-enable-plan.md).
 
 **Sensor v0.9.17 – Preview**  
 - **Released:** June 2025  
@@ -259,7 +259,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
   - Bug fixes and security enhancements  
   - Gated deployment: Now globally available  
   - Added support for new Defender endpoints (requires outbound access to `*.cloud-defender.microsoft.com`).  
-    Learn more about network requirements in the [Defender for Containers setup guide](defender-for-containers-enable.md).
+    Learn more about network requirements in the [Defender for Containers setup guide](defender-for-containers-enable-plan.md).
 
 **Sensor v0.8.30 – GA**  
 - **Released:** August 2025  
