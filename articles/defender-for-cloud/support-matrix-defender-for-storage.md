@@ -24,7 +24,7 @@ This article lists the prerequisites and permissions required to [enable Microso
   | Activity Monitoring | Supported | Supported | Supported | Supported | Not supported | Supported | Supported |
   | Sensitive Data Discovery | Supported | Supported | Supported | Supported | Not supported | Supported | Not supported |
   | On-upload Malware Scanning | Supported only for blobs | Supported only for blobs | Not supported | Supported only for blobs | Supported only for blobs | Not supported | Not supported |
-  | On-demand Malware Scanning | Supported | Supported | Not supported | Supported | Supported | Supported | Not supported |
+  | On-demand Malware Scanning | Supported | Supported | Not supported | Supported | Supported | Not supported | Not supported |
   
 - Storage accounts that belong to a resource group with any of the following names aren't supported: `App_Browsers`, `App_Code`, `App_Data`, `App_GlobalResources`, `App_LocalResources`, `App_Themes`, `App_WebReferences`, `Bin`.
 
