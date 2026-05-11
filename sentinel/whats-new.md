@@ -20,9 +20,9 @@ The listed features were released in the last six months. For information about 
 
 ## May 2026
 
-- [New UEBA settings experience and Okta V2 connector support](#new-ueba-settings-experience-and-okta-v2-connector-support)
+- [UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections](#ueba-enhancements-new-settings-experience-okta-v2-support-and-more-gcp-anomaly-detections)
 
-### New UEBA settings experience and Okta V2 connector support
+### UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections
 
 - We introduced a new entry point and created a consolidated view for the UEBA Settings and the Behaviors Settings. You can now access the UEBA settings from the new UEBA tab in the Microsoft Sentinel settings page. For more information, see [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab).
 
