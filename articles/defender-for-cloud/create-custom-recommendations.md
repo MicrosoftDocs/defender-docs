@@ -3,6 +3,7 @@ title: Create custom security standards and recommendations
 description: Learn how to create custom security standards and recommendations for all clouds in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 05/11/2026
+zone_pivot_groups: defender-for-cloud-custom-recommendation-kql-scenarios
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
 ---
 
@@ -62,9 +63,9 @@ We recommend using the query editor to create a recommendation query.
 
 #### Query templates and examples
 
-The query editor includes built-in examples, but here's how to structure queries for real security scenarios. Each template below returns only unhealthy (non-compliant) resources—exactly what your custom recommendation needs to flag.
+The query editor includes built-in examples, and the templates in this section show how to structure common security checks. Each template returns only unhealthy (non-compliant) resources.
 
-##### VMs without required tags
+::: zone pivot="kql-vm-tags"
 
 Identify virtual machines missing mandatory governance tags, such as cost center or owner information.
 
@@ -79,9 +80,11 @@ Resources
 
 **Assessment logic:** Machines in query results lack required tags and are unhealthy. Machines not returned are compliant.
 
-##### Storage accounts without HTTPS-only
+::: zone-end
 
-Detect storage accounts that allow HTTP connections, creating potential data exposure.
+::: zone pivot="kql-storage-https"
+
+Detect storage accounts that allow HTTP connections, which creates potential data exposure.
 
 ```kql
 Resources
@@ -94,9 +97,11 @@ Resources
 
 **Assessment logic:** Accounts allowing HTTP traffic are non-compliant. Your recommendation enforces HTTPS-only.
 
-##### Network security groups with overly permissive rules
+::: zone-end
 
-Find NSGs containing inbound rules that allow traffic from any source on any port.
+::: zone pivot="kql-nsg-any-any"
+
+Find network security groups with inbound rules that allow traffic from any source on any port.
 
 ```kql
 Resources
@@ -113,7 +118,9 @@ Resources
 
 **Assessment logic:** NSGs containing overly permissive rules are unhealthy. Restricting source addresses and ports to known networks restores compliance.
 
-##### Key Vaults without soft-delete enabled
+::: zone-end
+
+::: zone pivot="kql-keyvault-soft-delete"
 
 Identify Key Vaults missing soft-delete protection, which prevents accidental or malicious deletion of secrets.
 
@@ -128,9 +135,11 @@ Resources
 
 **Assessment logic:** Vaults without soft-delete enabled are unhealthy. Enabling this setting restores compliance.
 
-##### App Services without HTTPS redirect
+::: zone-end
 
-Locate App Services that don't automatically redirect HTTP traffic to HTTPS, leaving user connections unencrypted.
+::: zone pivot="kql-appservice-https"
+
+Locate App Services that do not automatically redirect HTTP traffic to HTTPS, which leaves user connections unencrypted.
 
 ```kql
 Resources
@@ -143,15 +152,17 @@ Resources
 
 **Assessment logic:** Services without HTTPS-only enabled are non-compliant. Your recommendation prompts users to enable this protection.
 
-##### Database servers with public firewall rules
+::: zone-end
 
-Find SQL or PostgreSQL servers configured to accept connections from any IP address (0.0.0.0), exposing databases to the internet.
+::: zone pivot="kql-database-firewall"
+
+Find SQL or PostgreSQL servers configured to accept connections from any IP address (0.0.0.0), which exposes databases to the internet.
 
 ```kql
 Resources
 | where type in ("microsoft.sql/servers", "microsoft.dbforpostgresql/servers")
 | mv-expand rules = properties.firewallRules  // Expand array to check each firewall rule
-| where rules.properties.startIpAddress == "0.0.0.0" 
+| where rules.properties.startIpAddress == "0.0.0.0"
   and rules.properties.endIpAddress == "255.255.255.255"
 | project id, name, resourceGroup, rules.name
 ```
@@ -160,6 +171,8 @@ Resources
 
 **Assessment logic:** Servers with unrestricted firewall access are unhealthy. Restricting to known source IPs restores compliance.
 
+::: zone-end
+
 ### KQL output schema requirements
 
 Before you write your query, understand the required output schema—this is how Microsoft Defender for Cloud interprets your results and maps findings to resources.
@@ -167,7 +180,7 @@ Before you write your query, understand the required output schema—this is how
 **Required output columns:**
 
 | Column | Type | Purpose |
-|--------|------|----------|
+| --- | --- | --- |
 | `id` | String | Full ARM resourceId. Example: `/subscriptions/{subId}/resourceGroups/{rg}/providers/microsoft.storage/storageaccounts/{name}` |
 | `name` | String | Human-readable resource name displayed in findings |
 | `resourceGroup` | String | Resource group for organizing findings by location |
@@ -179,12 +192,14 @@ You can include additional columns relevant to your finding (such as `properties
 The `id` column must contain the complete ARM resourceId—nothing abbreviated or custom. Defender for Cloud uses this ID to reference the exact resource in the portal and link remediation actions.
 
 **Valid format:**
-```
+
+```text
 /subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/my-rg/providers/microsoft.storage/storageaccounts/mystorageacct
 ```
 
 **Invalid formats (won't work):**
-```
+
+```text
 mystorageacct
 storage-rg/mystorageacct
 /providers/microsoft.storage/storageaccounts/mystorageacct
