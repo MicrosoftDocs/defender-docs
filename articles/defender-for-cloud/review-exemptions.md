@@ -248,5 +248,5 @@ To keep track of how users exempt resources from recommendations, we created an 
 
 ## Next step
 
-> [!div class="nextstep"]
+> [!div class="nextstepaction"]
 > [Review security recommendations](review-security-recommendations.md)

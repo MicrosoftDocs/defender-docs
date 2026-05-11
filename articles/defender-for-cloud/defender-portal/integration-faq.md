@@ -2,17 +2,13 @@
 title: Integration FAQ for Defender portal
 description: Frequently asked questions about integrating and using Microsoft Defender for Cloud in the Defender portal, including migration, compatibility, and feature questions.
 author: dlanger
-ms.author: DebLanger
+ms.author: dlanger
 ms.topic: faq
-ms.date: 02/09/2026
+ms.date: 04/28/2026
 ms.service: defender-for-cloud
 ---
 
 # FAQ for Defender portal
-
-> [!NOTE]
-> This is currently in preview.
-> For details about current gaps and restrictions, see [Known limitations](known-limitations.md).
 
 This article answers frequently asked questions about using Microsoft Defender for Cloud in the Defender portal, including integration, migration, and compatibility topics.
 
@@ -179,7 +175,7 @@ You might need to extract the following types of identifiers from the Defender p
 1. Each initiative displays its name and identifier.
 1. Copy the initiative ID associated with the specific recommendation.
 
-### How do I find Environment IDs for Cloud Scopes?
+### How do I find Environment IDs for Cloud Scopes (preview)?
 
 1. Navigate to **Microsoft Defender portal** > **Assets** > **Cloud**.
 1. Check the scope filter dropdown - the environment filter lists all environment identifiers.

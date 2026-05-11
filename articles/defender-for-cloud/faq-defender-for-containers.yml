@@ -17,7 +17,7 @@ sections:
       - question: |
           What are the options to enable the new plan at scale?
         answer: |
-          You can use the Azure Policy `Configure Microsoft Defender for Containers to be enabled`, to enable Defender for Containers at scale. You can also see all of the options that are available to [enable Microsoft Defender for Containers](defender-for-containers-enable.md).
+          You can use the Azure Policy `Configure Microsoft Defender for Containers to be enabled`, to enable Defender for Containers at scale. You can also see all of the options that are available to [enable Microsoft Defender for Containers](defender-for-containers-enable-plan.md).
 
       - question: |
           Does Microsoft Defender for Containers support AKS clusters with virtual machines scale sets?
@@ -35,14 +35,9 @@ sections:
           No, AKS is a managed service, and manipulation of the IaaS resources isn't supported. The Log Analytics VM extension isn't needed and might result in extra charges.
 
       - question: |
-          How can I use my existing Log Analytics workspace?
-        answer: |
-          You can use your existing Log Analytics workspace by following the steps in the [Assign a custom workspace](defender-for-containers-enable.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#assign-a-custom-workspace) workspace section of this article.
-
-      - question: |
           Can I delete the default workspaces created by Defender for Cloud? 
         answer: |
-          We don't recommend deleting the default workspace. Defender for Containers uses the default workspaces to collect security data from your clusters. Defender for Containers are unable to collect data, and some security recommendations and alerts, will become unavailable if you delete the default workspace.
+          We don't recommend deleting the default workspace. Defender for Containers uses the default workspaces to collect security data from your clusters. Defender for Containers is unable to collect data, and some security recommendations and alerts will become unavailable if you delete the default workspace.
 
       - question: |
           I deleted my default workspace, how can I get it back?
@@ -61,7 +56,7 @@ sections:
 
           However, if your organization has a policy that requires a specific tag on your resources, it might cause the sensor installation to fail during the resource group or the default workspace creation stage. If it fails, you can either:
 
-          - [Assign a custom workspace](defender-for-containers-enable.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#assign-a-custom-workspace) and add any tag your organization requires.
+          - Assign a custom workspace and add any tag your organization requires.
 
               or 
 
@@ -202,7 +197,7 @@ sections:
                   - Destination: `0.0.0.0/0`; Target: Internet Gateway with the tag `name` and the value `defender-for-containers-va`
                   - Destination: `10.0.0.0/16`; Target: `local`
 
-          To get vulnerability assessments for running images, either enable [Agentless discovery for Kubernetes](defender-for-containers-enable.md#enablement-method-per-capability) or deploy the [Defender sensor](defender-for-containers-enable.md#enablement-method-per-capability) on your Kubernetes clusters.
+          To get vulnerability assessments for running images, either enable Agentless discovery for Kubernetes or deploy the Defender sensor on your Kubernetes clusters.
 
       - question: |
           What happened to Microsoft Defender for Kubernetes?
@@ -217,6 +212,6 @@ sections:
 
 additionalContent: |
 
-  ## Next steps
+  ## Related content
   
   [Learn about Defender for Containers](defender-for-containers-introduction.md)
