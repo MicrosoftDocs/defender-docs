@@ -77,9 +77,7 @@ This table lists the remediation actions supported by Defender for Identity and 
 To perform any of the [supported actions](#supported-actions), you need to:
 
 - **Configure the account that Microsoft Defender for Identity uses to perform actions.** By default, the Microsoft Defender for Identity sensor installed on a domain controller impersonates the **LocalSystem** account of the domain controller to perform Active Directory actions. For more information, see [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
-- **Sign in to the Microsoft Defender portal with the required permissions.** For Defender for Identity actions, you need a custom role with **Response (Manage)** permissions. For more information, see [Create custom roles with Microsoft Defender XDR Unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles). For details on the specific roles required for each action, see [Roles and permissions](#roles-and-permissions).
-
-## Apply a remediation action
+- **Sign in to the Microsoft Defender portal with the required permissions.** For Defender for Identity actions, you'll need a custom role with **Response (manage)** permissions. For more information, see [Create custom roles with Microsoft Defender unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles). For details on the specific roles required for each action, see [Roles and permissions](#roles-and-permissions).
 
 To apply a remediation action to an identity:
 
