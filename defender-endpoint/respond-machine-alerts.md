@@ -304,23 +304,22 @@ After automatic isolation is applied, you can review the action and its status i
 
         :::image type="content" source="/defender/media/defender-endpoint/view-automatic-device-isolation-action-center" alt-text="Screenshot showing how to view automatic device isolation in the Action Center.":::
 
-### Considerations
+### Safeguards and business impact
 
 Before deploying or responding to automatic device isolation, consider the following:
 
 - **Scoped action**: Isolation targets specific devices involved in the incident rather than broadly across the environment.
 - **Time-limited isolation**: Isolation is automatically undone after a defined time window. You can also release isolation earlier after completing investigation and remediation.
 - **Customer control**: Security operators can review the incident context and take follow-up actions, including releasing isolation when it's safe to do so.
-- **Selective isolation**: You can use exclusions to define which processes and destinations are allowed during isolation. This feature is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
 
-> [!NOTE]
-> There are two distinct types of exclusions relevant to automatic device isolation:
->
-> - **Selective isolation exclusions** ([Isolation exclusions](./isolation-exclusions.md)): Define which processes and network destinations remain accessible on an isolated device. Use these to preserve critical communications (for example, management tools or business applications) while the device is isolated.
-> - **Automatic attack disruption exclusions** ([Exclusion and operational processes](/defender-xdr/automatic-attack-disruption-exclusions)): Define which devices or entities are excluded from automatic disruption actions entirely. Use these to prevent business-critical devices from being isolated in the first place.
+#### Isolation exclusions and automatic attack disruption exclusions
 
-> [!TIP]
-> If an automatically isolated device is business-critical, prioritize rapid validation and stakeholder coordination. Release isolation only after you confirm appropriate containment and remediation steps are in place. Consider using [automatic attack disruption exclusions](/defender-xdr/automatic-attack-disruption-exclusions) to reduce the likelihood of isolating devices that can't tolerate interruption.
+There are two distinct types of exclusions relevant to automatic device isolation:
+
+- **Selective isolation exclusions** ([Isolation exclusions](./isolation-exclusions.md)): Define which processes and network destinations remain accessible on an isolated device. Use these to preserve critical communications (for example, management tools or business applications) while the device is isolated. This feature is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS.
+- **Automatic attack disruption exclusions** ([Exclusion and operational processes](/defender-xdr/automatic-attack-disruption-exclusions)): Define which devices or entities are excluded from automatic disruption actions entirely. Use these to prevent business-critical devices from being isolated in the first place.
+
+If an automatically isolated device is business-critical, prioritize rapid validation and stakeholder coordination. Release isolation only after you confirm appropriate containment and remediation steps are in place. Consider using [automatic attack disruption exclusions](/defender-xdr/automatic-attack-disruption-exclusions) to reduce the likelihood of isolating devices that can't tolerate interruption.
 
 ### Confirm automatic device isolation
 
