@@ -5,6 +5,7 @@ ms.service: defender-endpoint
 ms.mktglfocus: mdatp
 ms.author: painbar
 author: paulinbar
+ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 05/07/2026
 ai-usage: ai-generated
