@@ -2,7 +2,7 @@
 title: Create custom security standards and recommendations
 description: Learn how to create custom security standards and recommendations for all clouds in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 08/11/2024
+ms.date: 05/11/2026
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
 ---
 
@@ -59,6 +59,150 @@ We recommend using the query editor to create a recommendation query.
 
 1. Select **Run query** to test the query you created.
 1. When the query is ready, cut and paste it from the editor into the **Recommendations query** pane.
+
+#### Query templates and examples
+
+The query editor includes built-in examples, but here's how to structure queries for real security scenarios. Each template below returns only unhealthy (non-compliant) resources—exactly what your custom recommendation needs to flag.
+
+##### VMs without required tags
+
+Identify virtual machines missing mandatory governance tags, such as cost center or owner information.
+
+```kql
+Resources
+| where type == "microsoft.compute/virtualmachines"
+| where isnull(tags["CostCenter"]) or isnull(tags["Owner"])
+| project id, name, resourceGroup, tags
+```
+
+**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `tags`
+
+**Assessment logic:** Machines in query results lack required tags and are unhealthy. Machines not returned are compliant.
+
+##### Storage accounts without HTTPS-only
+
+Detect storage accounts that allow HTTP connections, creating potential data exposure.
+
+```kql
+Resources
+| where type == "microsoft.storage/storageaccounts"
+| where properties.supportsHttpsTrafficOnly != true
+| project id, name, resourceGroup, properties.supportsHttpsTrafficOnly
+```
+
+**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `supportsHttpsTrafficOnly`
+
+**Assessment logic:** Accounts allowing HTTP traffic are non-compliant. Your recommendation enforces HTTPS-only.
+
+##### Network security groups with overly permissive rules
+
+Find NSGs containing inbound rules that allow traffic from any source on any port.
+
+```kql
+Resources
+| where type == "microsoft.network/networksecuritygroups"
+| mv-expand rules = properties.securityRules  // Expand array to evaluate each rule
+| where rules.properties.access == "Allow"
+  and rules.properties.direction == "Inbound"
+  and rules.properties.sourceAddressPrefix == "*"
+  and rules.properties.destinationPortRange == "*"
+| project id, name, resourceGroup, rules.name
+```
+
+**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `rules.name`
+
+**Assessment logic:** NSGs containing overly permissive rules are unhealthy. Restricting source addresses and ports to known networks restores compliance.
+
+##### Key Vaults without soft-delete enabled
+
+Identify Key Vaults missing soft-delete protection, which prevents accidental or malicious deletion of secrets.
+
+```kql
+Resources
+| where type == "microsoft.keyvault/vaults"
+| where properties.enableSoftDelete != true or isnull(properties.enableSoftDelete)
+| project id, name, resourceGroup, properties.enableSoftDelete
+```
+
+**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `enableSoftDelete`
+
+**Assessment logic:** Vaults without soft-delete enabled are unhealthy. Enabling this setting restores compliance.
+
+##### App Services without HTTPS redirect
+
+Locate App Services that don't automatically redirect HTTP traffic to HTTPS, leaving user connections unencrypted.
+
+```kql
+Resources
+| where type == "microsoft.web/sites"
+| where properties.httpsOnly != true
+| project id, name, resourceGroup, properties.httpsOnly
+```
+
+**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `httpsOnly`
+
+**Assessment logic:** Services without HTTPS-only enabled are non-compliant. Your recommendation prompts users to enable this protection.
+
+##### Database servers with public firewall rules
+
+Find SQL or PostgreSQL servers configured to accept connections from any IP address (0.0.0.0), exposing databases to the internet.
+
+```kql
+Resources
+| where type in ("microsoft.sql/servers", "microsoft.dbforpostgresql/servers")
+| mv-expand rules = properties.firewallRules  // Expand array to check each firewall rule
+| where rules.properties.startIpAddress == "0.0.0.0" 
+  and rules.properties.endIpAddress == "255.255.255.255"
+| project id, name, resourceGroup, rules.name
+```
+
+**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `rules.name`
+
+**Assessment logic:** Servers with unrestricted firewall access are unhealthy. Restricting to known source IPs restores compliance.
+
+### KQL output schema requirements
+
+Before you write your query, understand the required output schema—this is how Microsoft Defender for Cloud interprets your results and maps findings to resources.
+
+**Required output columns:**
+
+| Column | Type | Purpose |
+|--------|------|----------|
+| `id` | String | Full ARM resourceId. Example: `/subscriptions/{subId}/resourceGroups/{rg}/providers/microsoft.storage/storageaccounts/{name}` |
+| `name` | String | Human-readable resource name displayed in findings |
+| `resourceGroup` | String | Resource group for organizing findings by location |
+
+You can include additional columns relevant to your finding (such as `properties.httpsOnly` or `tags`). Defender for Cloud displays these in the recommendation details.
+
+**ResourceId format guidance:**
+
+The `id` column must contain the complete ARM resourceId—nothing abbreviated or custom. Defender for Cloud uses this ID to reference the exact resource in the portal and link remediation actions.
+
+**Valid format:**
+```
+/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/my-rg/providers/microsoft.storage/storageaccounts/mystorageacct
+```
+
+**Invalid formats (won't work):**
+```
+mystorageacct
+storage-rg/mystorageacct
+/providers/microsoft.storage/storageaccounts/mystorageacct
+```
+
+**Assessment mapping:**
+
+Your query defines what "unhealthy" means. Resources that appear in results are unhealthy (non-compliant). Resources that don't appear are healthy (compliant). It's binary—no status column needed.
+
+> [!IMPORTANT]
+> **Return ONLY unhealthy resources.** Never return all resources with a status column. Defender for Cloud interprets every row as "this resource failed the check." Returning all resources would flag everything as unhealthy.
+
+**Common errors and fixes:**
+
+- **Missing `id` column:** Query fails silently. Always include `project id, ...` in your final output.
+- **Incomplete resourceId:** Verify the `id` column contains the full ARM path. In the portal, click a finding to confirm the URL matches your `id` value.
+- **Returning compliant resources:** If you forget the `where` filter, you'll return all resources as unhealthy. Always filter by condition (e.g., `where properties.httpsOnly != true`).
+- **Null properties on different subscriptions:** Test your query across subscriptions with varied configurations. A query working on one subscription might fail elsewhere if properties are null or missing. Use `isnull()` checks where appropriate.
 
 ## Use custom recommendations at scale
 
