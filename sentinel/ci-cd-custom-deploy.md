@@ -4,7 +4,7 @@ titleSuffix: Microsoft Sentinel
 description: This article describes how to customize repository deployments for the repositories feature in Microsoft Sentinel.
 author: mberdugo 
 ms.topic: how-to
-ms.date: 12/31/2024
+ms.date: 5/11/2026
 ms.author: monaberdugo 
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -15,7 +15,7 @@ ms.collection: usx-security
 
 ---
 
-# Customize repository deployments (Public Preview)
+# Customize repository deployments
 
 There are two primary ways to customize the deployment of your repository content to Microsoft Sentinel workspaces. Each method uses different files and syntax, so consider these examples to get you started.
 
@@ -26,7 +26,7 @@ There are two primary ways to customize the deployment of your repository conten
 
 > [!IMPORTANT]
 >
-> The Microsoft Sentinel **Repositories** feature is currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for more legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Microsoft Sentinel **Repositories** is generally available.
 
 
 ## Prerequisites
