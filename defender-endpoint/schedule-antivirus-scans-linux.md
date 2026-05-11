@@ -62,7 +62,7 @@ These scheduling options can be configured independently and combined. For examp
 
 The following table describes the available settings for configuring scheduled antivirus scans:
 
-| Category | Setting | Description | Possible values | Default |
+| Category |  |  |  |  |
 |----------|---------|-------------|-----------------|---------|
 | **Daily scan settings** | **Setting** | **Description** | **Possible values** | **Default** |
 |  | interval | Runs a quick scan every N hour (interval-based scheduling). | Integer (hours) 0 = disabled | 0 |
