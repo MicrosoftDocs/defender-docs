@@ -164,7 +164,7 @@ Administrators can automate onboarding to Defender for Endpoint for users in two
 
 Administrators can set up Microsoft Defender for Endpoint for silent deployment and activation. In this process, the administrator creates a deployment profile, and the user is notified of the installation. Defender for Endpoint is then automatically installed without requiring the user to open the app. Follow the steps in this article to configure zero-touch or silent deployment of Defender for Endpoint on enrolled iOS devices:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** \> **Configuration Profiles** \> **Create Profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** \> **Manage devices** \> **Configuration** \> **Policies** \> **Create** \> **New Policy**.
 
 1. Choose **Platform** as **iOS/iPadOS**, **Profile type** as **Templates** and **Template name** as **VPN**. Select **Create**.
 
@@ -178,7 +178,7 @@ Administrators can set up Microsoft Defender for Endpoint for silent deployment 
    - VPN identifier: `com.microsoft.scmx`
    - In the key-value pairs, enter the key `SilentOnboard` and set the value to `True`.
    - Type of Automatic VPN: `On-demand VPN`
-   - Select **Add** for **On Demand Rules**, and then select **I want to do the following: Establish VPN**, and then set **I want to restrict to: All domains**.
+   - Select **Add** for **On Demand Rules**, and then select **I want to do the following: Connect VPN**, and then set **I want to restrict to: All domains**.
 
    :::image type="content" source="media/ios-deploy-9.png" alt-text="The VPN profile Configuration page" lightbox="media/ios-deploy-9.png":::
 

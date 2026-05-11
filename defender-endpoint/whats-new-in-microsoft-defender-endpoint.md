@@ -29,6 +29,8 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Feature |[Custom data collection](custom-data-collection.md) |GA |Custom data collection is now generally available. This feature enables organizations to expand and customize telemetry collection beyond default configurations with rule-based filtering for specific events from endpoint devices. The maximum event limit per rule has been updated from 25,000 to 75,000 events per device within a 24-hour rolling window. |
+|Feature |[Configure offline security intelligence update settings for Linux from the Defender and Intune portals](./linux-support-offline-security-intelligence-update.md#configure-the-endpoints) |GA |You can now configure offline security intelligence update settings for Linux directly from the Defender and Intune portals. |
 |Feature |[Selective Response Actions](./restrict-response-actions-high-value-assets.md) |Preview |Selective Response Actions enables organizations to tailor high-impact security operations on devices during onboarding. It provides precise control over how response actions are applied on Tier-0 systems and other high-value assets, helping maintain operational stability while delivering strong protection. |
 
 ## April 2026

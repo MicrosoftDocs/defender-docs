@@ -25,6 +25,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## May 2026
 
+### Increased sensor capacity
+Defender for Identity now supports up to 1,000 sensors per workspace, increased from the previous limit of 350. To add more than 1,000 sensors, contact Defender for Identity support.
+
 ### New Defender for Identity security alerts
 
 These new alerts were added to the Defender for Identity security alerts:
