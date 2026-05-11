@@ -42,7 +42,7 @@ For more information, see [Deploy content as code from your repository](ci-cd.md
 ### Portal and content distribution
 
 If content as code is too complex, the portal and content distribution are helpful alternatives.
-- The portal lets you create and manage detections directly.
+- The portal lets you create and manage detections directly. You can also deploy out-of-the-box detections from the [content hub](/azure/sentinel/sentinel-solutions-deploy).
 - For multitenant customers, content distribution can help manage content across multiple workspaces or tenants.
 
 This is a good option for XDR-only customers who don't have access to repositories.
