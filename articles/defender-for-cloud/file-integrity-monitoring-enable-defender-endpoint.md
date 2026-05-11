@@ -144,7 +144,12 @@ Disable as follows:
 
 ## Considerations and limitations
 
-The current Linux sensor doesn't distinguish between *Create* actions and *Modify* actions - both are identified as *Modify* actions. As a result, when a new file is created, the event is logged as a *Modify* event rather than a *Create* event.
+The current Linux sensor doesn't distinguish between Create and Modify actions.
+It identifies both as Modify actions. As a result, when a new file is created, the event is logged as a Modify event rather than a Create event.
+
+> [!IMPORTANT]
++> On Linux, the sensor records both Create and Modify actions as Modify events.
++> When a new file is created, File Integrity Monitoring logs it as a Modify event instead of a Create event.
 
 ## Related content
 
