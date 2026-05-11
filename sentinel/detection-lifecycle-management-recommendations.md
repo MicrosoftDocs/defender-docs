@@ -77,7 +77,7 @@ The following table shows the content types supported by each capability.
 
 | Content type | Portal | Content distribution | Repositories | Content Hub | APIs | Terraform |
 |---|---|---|---|---|---|---|
-| Custom detection rules | Yes | Yes | Yes | No | Yes | No |
+| Custom detection rules | Yes | Yes | No | No | Yes | No |
 | Analytics rules | Yes | Yes | Yes | Yes | Yes | Yes |
 | Playbooks | Yes | Yes | Yes | Yes | Yes | Yes |
 | Workbooks | Yes | Yes | Yes | Yes | Yes | Yes |
@@ -90,7 +90,7 @@ The following table shows the content types supported by each capability.
 | Notebooks | Yes | No | No | No | Yes | No |
 | Endpoint security policies | Yes | Yes | No | No | No | No |
 | Defender settings | Yes | No | No | No | No | No |
-| URBAC roles | Yes | Yes | No | No | Yes | No |
+| URBAC roles | Yes | No | No | No | Yes | No |
 | Agents | Yes | No | No | No | No | No |
 | Unified connectors | Yes | No | No | No | No | No |
 
