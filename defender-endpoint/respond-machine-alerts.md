@@ -297,12 +297,12 @@ After automatic isolation is applied, you can review the action and its status i
 
 - Open the relevant incident and review the **Activities** tab.
 
-   :::image type="content" source="../defender/media/defender-endpoint/view-automatic-device-isolation-activities.png" alt-text="Screenshot showing how to view automatic device isolation in the Activities tab.":::
+   :::image type="content" source="../defender/media/defender-endpoint/view-automatic-device-isolation-activities.png" alt-text="Screenshot showing how to view automatic device isolation in the Activities tab." lightbox="media/defender-endpoint/view-automatic-device-isolation-activities.png":::
 
 - Open the affected device page and confirm the device isolation status.
 - Open **Action center** to review action history and current state.
 
-   :::image type="content" source="../defender/media/defender-endpoint/view-automatic-device-isolation-action.png" alt-text="Screenshot showing how to view automatic device isolation in the Action Center.":::
+   :::image type="content" source="../defender/media/defender-endpoint/view-automatic-device-isolation-action.png" alt-text="Screenshot showing how to view automatic device isolation in the Action Center." lightbox="media/defender-endpoint/view-automatic-device-isolation-action.png":::
 
 ### Safeguards and business impact
 
@@ -312,12 +312,12 @@ Before deploying or responding to automatic device isolation, consider the follo
 - **Time-limited isolation**: Isolation is automatically undone after a defined time window. You can also release isolation earlier after completing investigation and remediation.
 - **Customer control**: Security operators can review the incident context and take follow-up actions, including releasing isolation when it's safe to do so.
 
-#### Isolation exclusions and automatic attack disruption exclusions
+### Isolation exclusions and automatic attack disruption exclusions
 
 There are two distinct types of exclusions relevant to automatic device isolation:
 
-- **Selective isolation exclusions** ([Isolation exclusions](./isolation-exclusions.md)): Define which processes and network destinations remain accessible on an isolated device. Use these to preserve critical communications (for example, management tools or business applications) while the device is isolated. This feature is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS.
-- **Automatic attack disruption exclusions** ([Exclusion and operational processes](/defender-xdr/automatic-attack-disruption-exclusions)): Define which devices or entities are excluded from automatic disruption actions entirely. Use these to prevent business-critical devices from being isolated in the first place.
+- **[Selective isolation exclusions]**(isolation-exclusions.md): Define which processes and network destinations remain accessible on an isolated device. Use these to preserve critical communications (for example, management tools or business applications) while the device is isolated. This feature is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS.
+- **[Automatic attack disruption exclusions]**(/defender-xdr/automatic-attack-disruption-exclusions): Define which devices or entities are excluded from automatic disruption actions entirely. Use these to prevent business-critical devices from being isolated in the first place.
 
 If an automatically isolated device is business-critical, prioritize rapid validation and stakeholder coordination. Release isolation only after you confirm appropriate containment and remediation steps are in place. Consider using [automatic attack disruption exclusions](/defender-xdr/automatic-attack-disruption-exclusions) to reduce the likelihood of isolating devices that can't tolerate interruption.
 
@@ -327,10 +327,8 @@ If an automatically isolated device is business-critical, prioritize rapid valid
 1. Review the **Activity** tab or **Action center** to see which automated response actions were applied.
 1. Open the affected device page and confirm that the device status shows that it's isolated.
 
-> [!NOTE]
-> 
-> - If the isolation action shows as failed or pending, confirm that the device is online and can report to Defender for Endpoint. You can retry from the device action panel if available.
-> - If a device appears isolated but you can't collect investigation data, verify that your investigation method (for example, live response) is supported for that device and scenario. Also confirm required service endpoints are reachable in your network configuration. For more information, see [Investigate entities on devices using live response](live-response.md) and [Configure device connectivity and proxy settings in Microsoft Defender for Endpoint](configure-device-connectivity.md).
+    - If the isolation action shows as failed or pending, confirm that the device is online and can report to Defender for Endpoint. You can retry from the device action panel if available.
+    - If a device appears isolated but you can't collect investigation data, verify that your investigation method (for example, live response) is supported for that device and scenario. Also confirm required service endpoints are reachable in your network configuration. For more information, see [Investigate entities on devices using live response](live-response.md) and [Configure device connectivity and proxy settings in Microsoft Defender for Endpoint](configure-device-connectivity.md).
 
 ### Release a device from automatic isolation
 
