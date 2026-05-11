@@ -10,7 +10,7 @@ ms.collection:
   - tier2
 description: Admins can learn about bulk email detection, including the bulk complain level (BCL) values that are used in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 04/23/2026
+ms.date: 05/08/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -84,7 +84,10 @@ _Currently_, this feature has the following requirements:
 - An Exchange mail flow rule (also known as a transport rule) that adds a message header to all mail identified as bulk. The resulting **Bulk** tag is visible in supported versions of Outlook.
 - The **Bulk moves enabled** setting is turned on in anti-spam policies. Turning on this setting results in a **Promotions** folder in affected user mailboxes.
 
-If a user meets these requirements, bulk mail that would normally be delivered to the Inbox is delivered to the **Promotions** folder instead.
+> [!NOTE]
+> By default, this feature is inactive. An admin needs to both of the previous steps to enable the feature.
+
+If a user is affected by the mail flow rule and the anti-spam policy, bulk mail that would normally be delivered to the Inbox is delivered to the **Promotions** folder instead.
 
 To enable this feature, do the following steps:
 
@@ -161,4 +164,4 @@ The **Promotions** folder in user mailboxes has the following characteristics:
   - The bulk sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) of the organization.
 - If you turn off **Bulk moves enabled** in an existing anti-spam policy, the affected users still have a **Promotions** folder in their mailboxes, but bulk mail is no longer delivered to the **Promotions** folder. You can use Inbox rules with the **Marked with** \> **Bulk** condition as shown in the previous table to move bulk messages to the **Promotions** folder.
 - Microsoft 365 learns from user activity in the **Promotions** folder (moving messages in or out), and remembers the action for future messages.
-- Inbox rules that act on messages now identified as bulk take precedence, so those messages don't end up in the **Promotions** folder.
+- Existing user-defined Inbox rules that act on messages identified as bulk take precedence over **Promotions** folder placement by the **Bulk moves enabled** feature. User-defined rules are honored and not overridden.

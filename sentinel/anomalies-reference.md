@@ -163,7 +163,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | Attribute                        | Value                                                               |
 | -------------------------------- | ------------------------------------------------------------------- |
 | **Anomaly type:**                | UEBA                                                                |
-| **Data sources:**                | Okta Cloud Logs                                                     |
+| **Data sources:**                | Okta Cloud Logs (Okta_CL and OktaV2_CL)                            |
 | **MITRE ATT&CK tactics:**        | Persistence, Privilege Escalation                                   |
 | **MITRE ATT&CK techniques:**     | T1098 - Account Manipulation, T1556 - Modify Authentication Process |
 | **Activity:**                    | user.session.impersonation.grant<br>user.session.impersonation.initiate<br>user.session.start<br>app.oauth2.admin.consent.grant_success<br>app.oauth2.authorize.code_success<br>device.desktop_mfa.recovery_pin.generate<br>user.authentication.auth_via_mfa<br>user.mfa.attempt_bypass<br>user.mfa.factor.deactivate<br>user.mfa.factor.reset_all<br>user.mfa.factor.suspend<br>user.mfa.okta_verify |
@@ -335,7 +335,7 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | Attribute                        | Value                                                              |
 | -------------------------------- | ------------------------------------------------------------------ |
 | **Anomaly type:**                | UEBA                                                               |
-| **Data sources:**                | Okta Cloud Logs                                                    |
+| **Data sources:**                | Okta Cloud Logs (Okta_CL and OktaV2_CL)                           |
 | **MITRE ATT&CK tactics:**        | Persistence, Privilege Escalation                                  |
 | **MITRE ATT&CK techniques:**     | T1078 - Valid Accounts, T1556 - Modify Authentication Process      |
 | **Activity:**                    | app.oauth2.admin.consent.grant_success<br>app.oauth2.authorize.code_success<br>device.desktop_mfa.recovery_pin.generate<br>user.authentication.auth_via_mfa<br>user.mfa.attempt_bypass<br>user.mfa.factor.deactivate<br>user.mfa.factor.reset_all<br>user.mfa.factor.suspend<br>user.mfa.okta_verify |
