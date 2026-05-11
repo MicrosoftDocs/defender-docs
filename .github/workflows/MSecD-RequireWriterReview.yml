@@ -18,7 +18,10 @@ concurrency:
   # produced by pull_request_target runs, so cross-event cancellation can leave
   # the required check stuck at "cancelled" even though policy ran successfully.
   group: require-writer-review-${{ github.event.pull_request.number || github.event.issue.number }}-${{ github.event_name }}
-  cancel-in-progress: true
+  # Only cancel high-frequency issue_comment runs. pull_request_target events
+  # queue (at most 1 running + 1 pending per group), so supersession does not
+  # produce a misleading red "cancelled" check on the PR's visible head SHA.
+  cancel-in-progress: ${{ github.event_name == 'issue_comment' }}
 
 jobs:
   require-writer-review:
