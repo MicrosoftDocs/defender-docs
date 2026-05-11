@@ -57,11 +57,13 @@ The following table describes the various asset data sources and their data conn
 
 ### Expand Azure Resource Graph connector coverage
 
-The Azure Resource Graph (ARG) connector ingests only the Azure resources that its managed identity can read. When you enable the connector, its managed identity is granted the **Reader** role only on the subscriptions where you have the **Owner** role. Most users don't have **Owner** access across every subscription in the tenant, so the connector often ingests a partial view of your Azure estate, which limits coverage.
+The Azure Resource Graph connector ingests only the Azure resources that can be read by its managed identity. When you enable the connector, its managed identity is granted the **Reader** role only on the subscriptions where you have the **Owner** role. Most users don't have **Owner** access across every subscription in the tenant, so the connector often ingests a partial view of your Azure estate, which limits coverage.
 
-To expand coverage after the connector is enabled, have a user with tenant root or broader subscription privileges (for example, a Global Administrator who has elevated access at the tenant root, or a user with **User Access Administrator** or **Owner** at a higher scope) find the managed identity associated with the connector in the Azure portal, and assign the **Reader** role to the connector's managed identity at the broadest scope you want ingested:
+To expand coverage after the connector is enabled, a user with higher-level permissions must assign the **Reader** role to the connector's managed identity. This user should have tenant root privileges, be a Global Administrator with elevated tenant-level access, or have User Access Administrator or Owner permissions at a higher scope. The user must find the managed identity associated with the connector in the Azure portal and assign the Reader role at the broadest scope you want ingested. For example, assigning at the tenant root management group level allows the connector to read resources across all subscriptions in the tenant, while assigning at a specific management group or subscription level limits the scope accordingly.
 
-1. In the Azure portal, locate the managed identity that the ARG connector created. The identity's name is `msg-resources-` followed by an alphanumeric ID that depends on the version, for example `msg-resources-b05e`.
+Follow these steps to assign the Reader role to the Azure Resource Graph connector's managed identity:
+
+1. In the Azure portal, locate the managed identity that the connector created. The identity's name is `msg-resources-` followed by an alphanumeric ID that depends on the version, for example `msg-resources-b05e`.
 1. Select a scope that covers the resources you want ingested:
    - **Tenant root management group** to cover all subscriptions in the tenant.
    - A specific **management group** to cover a subset of subscriptions.
