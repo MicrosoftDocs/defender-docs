@@ -295,16 +295,14 @@ When a device is isolated automatically:
 
 After automatic isolation is applied, you can review the action and its status in the Defender portal:
 
-1. Open the relevant incident and review the **Activity** tab.
-1. Open the affected device page and confirm the device isolation status.
-1. Open **Action center** to review action history and current state.
+- Open the relevant incident and review the **Activities** tab.
 
-> [!NOTE]
-> Screenshot placeholders to add:
->
-> - Incident **Activity** tab showing automatic isolation.
-> - Device page showing isolated status.
-> - **Action center** entry for automatic isolation.
+    :::image type="content" source="/defender/media/defender-endpoint/view-automatic-device-isolation-activities" alt-text="Screenshot showing how to view automatic device isolation in the Activities tab.":::
+
+- Open the affected device page and confirm the device isolation status.
+- Open **Action center** to review action history and current state.
+
+        :::image type="content" source="/defender/media/defender-endpoint/view-automatic-device-isolation-action-center" alt-text="Screenshot showing how to view automatic device isolation in the Action Center.":::
 
 ### Considerations
 
@@ -487,6 +485,7 @@ In addition, you can expand the investigation by using advanced hunting. Look fo
 :::image type="content" source="/defender/media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Shows advanced hunting for user contain events" lightbox="/defender/media/defender-endpoint/user-contain-advanced-hunting.png":::
 
 <a id="gpo-hardening-preview"></a>
+
 ## GPO hardening - predictive shielding (Preview)
 
 As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the GPO hardening action. Group Policy Object (GPO) hardening temporarily stops new GPO policies from being applied to devices identified as high risk. This action helps prevent potential compromise by limiting changes to critical configurations.
@@ -496,6 +495,7 @@ To enrich predictive shielding actions, we recommend you use the Microsoft Defen
 After the action is applied, you can view the action impact in the incident graph, track the actions in the Action center, and investigate further using advanced hunting. For more information, see [Manage predictive shielding actions](/defender-xdr/shield-predict-threats-manage).
 
 <a id="safeboot-hardening-preview"></a>
+
 ## Safeboot hardening - predictive shielding (Preview)
 
 As part of the [predictive shielding](/defender-xdr/shield-predict-threats) (Preview) feature, Defender for Endpoint automatically applies the Safeboot hardening action. Safeboot hardening helps protect devices from being compromised by enforcing stricter boot settings on devices that are predicted to be at high risk of compromise.
