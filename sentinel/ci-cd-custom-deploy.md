@@ -24,11 +24,6 @@ There are two primary ways to customize the deployment of your repository conten
 | GitHub workflow<br>DevOps pipeline | Customize your connection's deployment trigger<br>Customize your deployment path<br>Smart deployments enablement|
 | Configuration files | Control the prioritized order of your content deployments<br>Choose to *exclude* specific content files from deployments<br>Scale deployments across different workspaces by mapping parameter files to specific content files|
 
-> [!IMPORTANT]
->
-> Microsoft Sentinel **Repositories** is generally available.
-
-
 ## Prerequisites
 
 In order to customize a repositories deployment, a repository connection must exist. For more information on creating the connection, see [Deploy custom content from your repository](ci-cd.md#prerequisites).
