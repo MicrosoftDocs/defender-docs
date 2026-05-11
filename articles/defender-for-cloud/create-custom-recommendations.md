@@ -1,16 +1,19 @@
 ---
-title: Create custom security standards and recommendations
+title: Create custom standards and recommendations
 description: Learn how to create custom security standards and recommendations for all clouds in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 05/11/2026
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
 ---
 
+<!-- markdownlint-disable-next-line MD025 -->
+# Create custom standards and recommendations
+
 [Security recommendations](security-policy-concept.md) in Microsoft Defender for Cloud help you to improve and harden your security posture. Recommendations are based on assessments against [security standards](security-policy-concept.md) defined for Azure subscriptions, AWS accounts, and GCP projects that have Defender for Cloud enabled.
 
 This article describes how to:
 
-- Create custom recommendations for all clouds (Azure, AWS, and GCP) with a KQL query.
+- Create custom recommendations for all clouds (Azure, AWS, and GCP) with a Kusto Query Language (KQL) query.
 - Assign custom recommendations to a custom security standard.
 
 ## Before you start
@@ -24,23 +27,30 @@ We recommend watching this episode of [Defender for Cloud in the field](https://
 
 ## Create a custom recommendation
 
-Create custom recommendations, including steps for remediation, severity, and the standards to which the recommendation should be assigned. You add recommendation logic with KQL. You can use a simple query editor with built-in query templated that you can tweak as needed, or you can write your KQL query from scratch.
+Create custom recommendations, including steps for remediation, severity, and the standards to which the recommendation should be assigned. You add recommendation logic with KQL. You can use a simple query editor with built-in query templates that you can tweak as needed, or you can write your KQL query from scratch.
 
-1. In the Defender for Cloud portal > **Environment settings**, select the relevant scope.
+To create a custom recommendation:
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings** > <relevant subscription>.
 
 1. Select **Security policies** > **+ Create** > **Custom recommendation**.
 
-1. In **Recommendation details**, fill in the recommendation details (for example: name, severity) and select the standards you want to apply the recommendation to.
+1. Fill in the recommendation details (for example: name, severity).
 
-    :::image type="content" source="./media/create-custom-recommendations/fill-info-recommendation.png" alt-text="Screenshot showing where to fill in description details of recommendation." lightbox="./media/create-custom-recommendations/fill-info-recommendation.png":::
+1. Select the relevant standards.
+
+    :::image type="content" source="./media/create-custom-recommendations/fill-info-recommendation.png" alt-text="Screenshot of Microsoft Defender for Cloud Recommendation details pane showing fields for name, severity, and assigned standards." lightbox="./media/create-custom-recommendations/fill-info-recommendation.png":::
 
 1. Select **Next**.
-1. In **Recommendation query**, write a KQL query, or select **Open query editor** to structure your query. If you want to use the query editor, follow the instructions below.
-1. After the query is ready, select **Next**.
+1. Enter a KQL query, or select **[Open query editor](#use-the-query-editor)**.
+1. Select **Next**.
 1. In **Standards**, select the custom standards to which you want to add the custom recommendation.
-1. and in **Review and create**, review the recommendations details.
+1. In **Review and create**, review the recommendation details.
+1. Select **Create**.
 
-    :::image type="content" source="./media/create-custom-recommendations/review-recommendation.png" alt-text="Screenshot showing where to review the recommendation details." lightbox="./media/create-custom-recommendations/review-recommendation.png":::
+    :::image type="content" source="./media/create-custom-recommendations/review-recommendation.png" alt-text="Screenshot of Microsoft Defender for Cloud Review and create page showing recommendation summary before submission." lightbox="./media/create-custom-recommendations/review-recommendation.png":::
 
 ### Use the query editor
 
@@ -48,19 +58,22 @@ We recommend using the query editor to create a recommendation query.
 
 - Using the editor helps you to build and test your query before you start using it.
 - Select **How to** to get help on structuring the query, and additional instructions and links.
-- The editor contains examples of built-in recommendations queries, that you can use to help build your own query. The data appears in the same structure as in the API.
+- The editor contains built-in recommendation query examples that you can use to help build your own query. The data appears in the same structure as in the API.
 
-1. in the query editor, select **New query** to create a query
+1. In the query editor, select **New query** to create a query.
 1. Use the example query template with its instructions, or select an example built-in recommendation query to get started.
 
-    :::image type="content" source="./media/create-custom-recommendations/query-editor.png" alt-text="Screenshot showing how to use the query editor." lightbox="./media/create-custom-recommendations/query-editor.png":::
+    :::image type="content" source="./media/create-custom-recommendations/query-editor.png" alt-text="Screenshot of query editor in Microsoft Defender for Cloud showing New query and Run query controls." lightbox="./media/create-custom-recommendations/query-editor.png":::
 
 1. Select **Run query** to test the query you created.
-1. When the query is ready, cut and paste it from the editor into the **Recommendations query** pane.
+1. When the query is ready, cut and paste it from the editor into the **Recommendation query** pane.
 
 #### Query templates and examples
 
 The query editor includes built-in examples, and the templates in this section show how to structure common security checks. Each template returns only unhealthy (non-compliant) resources.
+
+> [!NOTE]
+> The templates in this section use Azure resource types and Azure Resource Graph fields. For AWS and GCP resources, use the same unhealthy-only pattern and adapt fields to the resource schema returned in your environment.
 
 ### [VM tags](#tab/vm-tags)
 
@@ -73,7 +86,7 @@ Resources
 | project id, name, resourceGroup, tags
 ```
 
-**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `tags`
+**Output columns:** `id` (Azure Resource Manager (ARM) resource ID), `name`, `resourceGroup`, `tags`
 
 **Assessment logic:** Machines in query results lack required tags and are unhealthy. Machines not returned are compliant.
 
@@ -88,7 +101,7 @@ Resources
 | project id, name, resourceGroup, properties.supportsHttpsTrafficOnly
 ```
 
-**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `supportsHttpsTrafficOnly`
+**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `supportsHttpsTrafficOnly`
 
 **Assessment logic:** Accounts allowing HTTP traffic are non-compliant. Your recommendation enforces HTTPS-only.
 
@@ -102,29 +115,35 @@ Resources
 | mv-expand rules = properties.securityRules  // Expand array to evaluate each rule
 | where rules.properties.access == "Allow"
   and rules.properties.direction == "Inbound"
-  and rules.properties.sourceAddressPrefix == "*"
-  and rules.properties.destinationPortRange == "*"
+  and (
+    tostring(rules.properties.sourceAddressPrefix) == "*"
+    or tostring(rules.properties.sourceAddressPrefixes) has '"*"'
+  )
+  and (
+    tostring(rules.properties.destinationPortRange) == "*"
+    or tostring(rules.properties.destinationPortRanges) has '"*"'
+  )
 | project id, name, resourceGroup, rules.name
 ```
 
-**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `rules.name`
+**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `rules.name`
 
 **Assessment logic:** NSGs containing overly permissive rules are unhealthy. Restricting source addresses and ports to known networks restores compliance.
 
-### [Key Vault soft-delete](#tab/key-vault-soft-delete)
+### [Key Vault protection](#tab/key-vault-protection)
 
-Identify Key Vaults missing soft-delete protection, which prevents accidental or malicious deletion of secrets.
+Identify Key Vaults without purge protection enabled.
 
 ```kql
 Resources
 | where type == "microsoft.keyvault/vaults"
-| where properties.enableSoftDelete != true or isnull(properties.enableSoftDelete)
-| project id, name, resourceGroup, properties.enableSoftDelete
+| where properties.enablePurgeProtection != true or isnull(properties.enablePurgeProtection)
+| project id, name, resourceGroup, properties.enablePurgeProtection
 ```
 
-**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `enableSoftDelete`
+**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `enablePurgeProtection`
 
-**Assessment logic:** Vaults without soft-delete enabled are unhealthy. Enabling this setting restores compliance.
+**Assessment logic:** Vaults without purge protection are unhealthy. Enabling this setting restores compliance.
 
 ### [App Service HTTPS](#tab/app-service-https)
 
@@ -137,44 +156,53 @@ Resources
 | project id, name, resourceGroup, properties.httpsOnly
 ```
 
-**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `httpsOnly`
+**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `httpsOnly`
 
 **Assessment logic:** Services without HTTPS-only enabled are non-compliant. Your recommendation prompts users to enable this protection.
 
 ### [Database firewall](#tab/database-firewall)
 
-Find SQL or PostgreSQL servers configured to accept connections from any IP address (0.0.0.0), which exposes databases to the internet.
+Find SQL or PostgreSQL servers with firewall rules that allow connections from any IP address (0.0.0.0 to 255.255.255.255), which exposes databases to the internet.
 
 ```kql
 Resources
-| where type in ("microsoft.sql/servers", "microsoft.dbforpostgresql/servers")
-| mv-expand rules = properties.firewallRules  // Expand array to check each firewall rule
-| where rules.properties.startIpAddress == "0.0.0.0"
-  and rules.properties.endIpAddress == "255.255.255.255"
-| project id, name, resourceGroup, rules.name
+| where type in~ (
+    "microsoft.sql/servers/firewallrules",
+    "microsoft.dbforpostgresql/servers/firewallrules",
+    "microsoft.dbforpostgresql/flexibleservers/firewallrules"
+  )
+| where properties.startIpAddress == "0.0.0.0"
+  and properties.endIpAddress == "255.255.255.255"
+| extend serverId = tostring(split(id, "/firewallrules/")[0])
+| extend firewallRuleName = name
+| extend serverName = tostring(split(serverId, "/")[-1])
+| extend resourceGroup = extract(@"(?i)/resourceGroups/([^/]+)/", 1, serverId)
+| project id = serverId, name = serverName, resourceGroup, firewallRule = firewallRuleName
 ```
 
-**Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `rules.name`
+**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `firewallRule`
 
 **Assessment logic:** Servers with unrestricted firewall access are unhealthy. Restricting to known source IPs restores compliance.
 
+---
+
 ### KQL output schema requirements
 
-Before you write your query, understand the required output schema—this is how Microsoft Defender for Cloud interprets your results and maps findings to resources.
+Before you write your query, understand the required output schema. This is how Microsoft Defender for Cloud interprets your results and maps findings to resources.
 
-**Required output columns:**
+**Required and recommended output columns:**
 
 | Column | Type | Purpose |
 | --- | --- | --- |
-| `id` | String | Full ARM resourceId. Example: `/subscriptions/{subId}/resourceGroups/{rg}/providers/microsoft.storage/storageaccounts/{name}` |
-| `name` | String | Human-readable resource name displayed in findings |
-| `resourceGroup` | String | Resource group for organizing findings by location |
+| `id` | String (required) | Full ARM resource ID for Azure resources. Example: `/subscriptions/{subId}/resourceGroups/{rg}/providers/microsoft.storage/storageaccounts/{name}` |
+| `name` | String (recommended) | Human-readable resource name displayed in findings |
+| `resourceGroup` | String (optional) | Resource group for organizing findings by location. This value can be empty for non-Azure resources. |
 
 You can include additional columns relevant to your finding (such as `properties.httpsOnly` or `tags`). Defender for Cloud displays these in the recommendation details.
 
-**ResourceId format guidance:**
+**Resource ID format guidance:**
 
-The `id` column must contain the complete ARM resourceId—nothing abbreviated or custom. Defender for Cloud uses this ID to reference the exact resource in the portal and link remediation actions.
+The `id` column must contain the complete ARM resource ID; nothing abbreviated or custom. Defender for Cloud uses this ID to reference the exact resource in the portal and link remediation actions.
 
 **Valid format:**
 
@@ -200,7 +228,7 @@ Your query defines what "unhealthy" means. Resources that appear in results are 
 **Common errors and fixes:**
 
 - **Missing `id` column:** Query fails silently. Always include `project id, ...` in your final output.
-- **Incomplete resourceId:** Verify the `id` column contains the full ARM path. In the portal, click a finding to confirm the URL matches your `id` value.
+- **Incomplete resource ID:** Verify the `id` column contains the full ARM path. In the portal, click a finding to confirm the URL matches your `id` value.
 - **Returning compliant resources:** If you forget the `where` filter, you'll return all resources as unhealthy. Always filter by condition (e.g., `where properties.httpsOnly != true`).
 - **Null properties on different subscriptions:** Test your query across subscriptions with varied configurations. A query working on one subscription might fail elsewhere if properties are null or missing. Use `isnull()` checks where appropriate.
 
@@ -210,7 +238,7 @@ Creating custom recommendations through the Azure portal user interface is best 
 
 ### Automate via the API  
 
-If you prevalidated KQL queries and want to automate creating custom recommendations, you can use the Azure Defender for Cloud application programming interface (API). This method lets you deploy recommendations quickly, ensuring they're consistent and scalable across your cloud environments.  
+If you prevalidated KQL queries and want to automate creating custom recommendations, you can use the Microsoft Defender for Cloud API. This method lets you deploy recommendations quickly, ensuring they're consistent and scalable across your cloud environments.  
 
 - **Advantages**: You can automate and scale the deployment of custom recommendations.  
 - **When to use**: This method is ideal for large-scale implementations where you need to apply recommendations consistently across multiple environments.  
@@ -220,6 +248,8 @@ For more information about using the API to manage custom recommendations, see t
 ## Create a custom standard
 
 Custom recommendations can be assigned to one or more custom standards.
+
+To create a custom standard:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -241,7 +271,7 @@ For Azure subscriptions, you can create custom recommendations and standards, an
 
 ### Create a custom recommendation/standard (legacy)
 
-You can create custom recommendations and standards in Defender for cloud by creating policy definitions and initiatives in Azure Policy, and onboarding them in Defender for Cloud.
+You can create custom recommendations and standards in Defender for Cloud by creating policy definitions and initiatives in Azure Policy, and onboarding them in Defender for Cloud.
 
 Here's how you do that:
 
@@ -252,24 +282,25 @@ Here's how you do that:
 
 [Policy assignments](/azure/governance/policy/concepts/assignment-structure) are used by Azure Policy to assign Azure resources to a policy or initiative.
 
-To onboard an initiative to a custom security standard in Defender for you, you need to include `"ASC":"true"` in the request body as shown here. The `ASC` field onboards the initiative to Microsoft Defender for Cloud.
+To onboard an initiative to a custom security standard in Defender for Cloud, you need to include `"ASC":"true"` in the request body as shown here. The `ASC` field onboards the initiative to Microsoft Defender for Cloud.
 
 Here's an example of how to do that.
 
 #### Example to onboard a custom initiative
 
+```http
+PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policySetDefinitions/{policySetDefinitionName}?api-version=2021-06-01
+```
+
+Request body (JSON):
+
 ```json
-  PUT  
-  PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policySetDefinitions/{policySetDefinitionName}?api-version=2021-06-01
-
-  Request Body (JSON) 
-
-  {
+{
     "properties": {
       "displayName": "Cost Management",
       "description": "Policies to enforce low cost storage SKUs",
       "metadata": {
-        "category": "Cost Management"
+        "category": "Cost Management",
         "ASC":"true"
       },
       "parameters": {
@@ -315,9 +346,8 @@ Here's an example of how to do that.
 
 This example shows you how to remove an assignment:
 
-```json
-  DELETE   
-  https://management.azure.com/{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}?api-version=2018-05-01 
+```http
+DELETE https://management.azure.com/{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}?api-version=2018-05-01
 ```
 
 ### Enhance custom recommendations (legacy)
@@ -332,11 +362,14 @@ The two types of information you can add are:
 The metadata should be added to the policy definition for a policy that is part of the custom initiative. It should be in the 'securityCenter' property, as shown:
 
 ```json
- "metadata": {
-  "securityCenter": {
-    "RemediationDescription": "Custom description goes here",
-    "Severity": "High"
-    },
+{
+  "metadata": {
+    "securityCenter": {
+      "RemediationDescription": "Custom description goes here",
+      "Severity": "High"
+    }
+  }
+}
 ```
 
 Here's another example of a custom policy including the metadata/securityCenter property:
