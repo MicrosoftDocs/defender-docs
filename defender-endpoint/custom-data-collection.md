@@ -82,18 +82,7 @@ For detailed schema information, see [Advanced hunting schema tables](/defender-
 
 ## Prerequisites and requirements
 
-Before using custom data collection, ensure you meet the following requirements:
-
-| Requirement category | Details |
-|---------------------|---------|
-| **Licenses** | • Microsoft Defender for Endpoint Plan 2 license |
-| **Microsoft Sentinel workspace** | • Connected Microsoft Sentinel workspace for custom data storage and querying<br>• Must select workspace when creating custom data collection rules<br>• Currently limited to one Sentinel workspace per tenant for custom data collection |
-| **Device targeting** | • Dynamic tags configured in [Asset Rule Management](/defender-xdr/configure-asset-rules)<br>• Dynamic tags must be run at least once before use in custom collection rules<br>• Manual (static) tags are not supported for custom data collection |
-| **Operating systems** | • Windows 10 and 11 (minimum client version 10.8805)<br>  - Windows 10 requires enrollment in the Extended Security Updates (ESU) program<br>• Windows Server 2019 and later |
-| **Cost considerations** | • Custom data collection is included with Microsoft Defender for Endpoint P2 licensing<br>• **Data ingestion into Microsoft Sentinel incurs charges** based on your Sentinel billing arrangement<br>• Target collection carefully to specific device groups to control data volume and costs |
-| **Performance limits** | • Each rule can capture up to **25,000 events per device per 24-hour rolling window**<br>• When a device reaches the threshold, telemetry for that specific rule stops until the window resets<br>• Multiple rules can be active simultaneously, each with its own limit<br>• Rule deployment typically takes 20 minutes to 1 hour |
-
-See [Create custom data collection rules](create-custom-data-collection-rules.md#prerequisites) for complete prerequisites and setup instructions.
+For complete prerequisites and setup requirements, see [Create custom data collection rules](create-custom-data-collection-rules.md#prerequisites).
 
 ## Frequently asked questions
 
@@ -103,7 +92,7 @@ See [Create custom data collection rules](create-custom-data-collection-rules.md
 | **Is a Microsoft Sentinel workspace required?** | Yes, you need a connected Microsoft Sentinel workspace to create and use custom data collection rules. You must also select the workspace when creating rules. |
 | **Why are dynamic tags required?** | Dynamic tags ensure device targeting stays current as your environment changes. Manual tags don't update automatically, which could result in outdated collection targeting. Dynamic tags are also required for integration with Asset Rule Management. |
 | **How can I tell if a rule is active on a device?** | Query the relevant custom event table for the device to see collected events. For example:<br><br>`search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetworkEvents) "your_device_id"`<br>`\| where DeviceId == "your_device_id"`<br>`\| summarize count() by RuleName, RuleLastModificationTime, $table` |
-| **What happens when a device reaches the 25,000 event limit?** | Telemetry collection for that specific rule stops until the 24-hour rolling window resets. Other rules on the device continue to collect events. Refine your rule conditions to make them more specific and reduce event volume. |
+| **What happens when a device reaches the 75,000 event limit?** | Telemetry collection for that specific rule stops until the 24-hour rolling window resets. Other rules on the device continue to collect events. Refine your rule conditions to make them more specific and reduce event volume. |
 | **Can I use manual tags for custom data collection?** | No, only dynamic tags are supported. Dynamic tags automatically update as device properties change, ensuring collection targeting stays accurate. |
 | **How long does it take for a rule to deploy to devices?** | Rule deployment typically takes 20 minutes to 1 hour. Verify deployment by querying the custom event tables for data from targeted devices. |
 
