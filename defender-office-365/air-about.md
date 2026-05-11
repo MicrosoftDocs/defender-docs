@@ -95,7 +95,7 @@ You need to be assigned permissions to use AIR. You have the following options:
       and
     - Membership in an Email & collaboration role group with the **Search and Purge** role assigned as previously described.
 
-To use Automated Investigation and Response (AIR), you must have Microsoft Defender for Office 365 Plan 2 licenses (included with eligible subscriptions or available as an add‑on). 
+To use Automated Investigation and Response (AIR), you must have Microsoft Defender for Office 365 Plan 2 licenses (included with eligible subscriptions or available as an add‑on).
 
 ## Next steps
 
