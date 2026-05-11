@@ -289,7 +289,7 @@ When a device is isolated automatically:
 > [!NOTE]
 > Automatic device isolation works only on end-user workstations that are onboarded and managed by Microsoft Defender for Endpoint.
 >
-> For selective isolation guidance, use the manual **Isolate devices from the network** action described in this article.
+> To manually isolate a device, see [Isolate devices from the network](#isolate-devices-from-the-network).
 
 ### View automatic device isolation actions
 
