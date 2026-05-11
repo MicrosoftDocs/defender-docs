@@ -1,7 +1,7 @@
 ---
 title: Configure Windows event auditing | Microsoft Defender for Identity
 description: This article describes how to configure Defender for Identity to collect Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
-ms.date: 01/12/2026
+ms.date: 05/07/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ---
@@ -43,7 +43,7 @@ Before you begin configuring Windows event collection, run a PowerShell script t
 
 1. Review the report and make any necessary adjustments before configuring Windows event collection.
 
-## Configure Defender for Identity to collect Windows events automatically (Preview)
+## Configure Defender for Identity to collect Windows events automatically
 
 > [!NOTE]
 > Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x.
@@ -196,10 +196,22 @@ To configure domain object auditing:
 
     :::image type="content" source="../media/configure-windows-event-collection/select-everyone.png" alt-text="Screenshot of entering an object name of Everyone.":::
 
-1. Go back to **Auditing Entry**, and make the following selections:
+1. Go back to **Auditing Entry**. You need to create a separate auditing entry for **each** of the following object types:
+
+    - **Descendant User Objects**
+    - **Descendant Group Objects**
+    - **Descendant Computer Objects**
+    - **Descendant msDS-GroupManagedServiceAccount Objects**
+    - **Descendant msDS-ManagedServiceAccount Objects**
+    - **Descendant msDS-DelegatedManagedServiceAccount Objects** <sup>1</sup>
+
+    > [!IMPORTANT]
+    > Auditing must be configured for **all** of the listed object types, not just user objects. Configuring auditing for only one object type results in incomplete detection coverage.
+
+    For each object type, make the following selections:
 
     1. For **Type**, select **Success**.
-    1. For **Applies to**, select **Descendant User objects**.
+    1. For **Applies to**, select the object type from the list.
     1. Under **Permissions**, scroll down and select the **Clear all** button.
 
         :::image type="content" source="../media/clear-all.png" alt-text="Screenshot of the button for clearing all permissions.":::
@@ -212,16 +224,9 @@ To configure domain object auditing:
 
         Now, all relevant changes to directory services appear as 4,662 events when they're triggered.
 
-1. Repeat the steps in this procedure, but for **Applies to**, select the following object types <sup>1</sup>
-   - **Descendant Group Objects**
-   - **Descendant Computer Objects**
-   - **Descendant msDS-GroupManagedServiceAccount Objects**
-   - **Descendant msDS-ManagedServiceAccount Objects**
-   - **Descendant msDS-DelegatedManagedServiceAccount Objects** <sup>2</sup>
-
 > [!NOTE]
 >
-> - You can assign auditing permissions to **All descendant objects**, using only the object types detailed in the last step.
+> - You can assign auditing permissions to **All descendant objects**, using only the object types detailed in the previous step.
 > - The **msDS-DelegatedManagedServiceAccount** class is relevant only for domains running at least one Windows Server 2025 domain controller.
 
 

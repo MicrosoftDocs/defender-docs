@@ -90,6 +90,7 @@ The following category IDs are currently supported:
 | SAASDB_CATEGORY_ECOMMERCE | E-commerce |
 | SAASDB_CATEGORY_EDUCATION | Education |
 | SAASDB_CATEGORY_FORUMS | Forums |
+| SAASDB_CATEGORY_GENERATIVE_AI | Generative AI |
 | SAASDB_CATEGORY_HEALTH | Health |
 | SAASDB_CATEGORY_HOSTING_SERVICES | Hosting services |
 | SAASDB_CATEGORY_HUMAN_RESOURCE_MANAGEMENT | Human-resource management |
