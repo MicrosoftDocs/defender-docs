@@ -27,18 +27,18 @@ You can configure scheduled scans using either managed configuration (managed JS
 Before configuring scheduled antivirus scans on Linux, ensure the following requirements are met:
 
 - Microsoft Defender for Endpoint is installed and onboarded on supported Linux distributions.
-- Devices are running minimum agent version 101.26032.0000 in the production ring
+- Devices are running **minimum agent version 101.26032.0000** in the **production ring**.
 - Devices are healthy and reporting correctly to the Microsoft Defender service
 
 Depending on your configuration method, the following prerequisites also need to be met:
 
-**MDATP Managed JSON Configuration:**
-- You must be able to deploy configuration files to `/etc/opt/microsoft/mdatp/managed`
-- You must have the required permissions to manage system configuration files.
-- If you already use managed configuration for other antivirus settings, append to your existing configuration file instead of replacing it.
+- **MDATP Managed JSON Configuration:**
+   - You must be able to deploy configuration files to `/etc/opt/microsoft/mdatp/managed`
+   - You must have the required permissions to manage system configuration files.
+   - If you already use managed configuration for other antivirus settings, append to your existing configuration file instead of replacing it.
 
-**Microsoft Defender portal:**
-- You must have appropriate permissions to create and assign security policies
+- **Microsoft Defender portal:**
+   - You must have appropriate permissions to create and assign security policies
 
 ## Scheduled antivirus scan types
 
@@ -51,9 +51,9 @@ Defender for Endpoint on Linux supports the following scan types for scheduled s
 
 Scheduled scans can be configured using the following scheduling options:
 
-- **Hourly quick scans**: Run quick scans at periodic intervals (every N hours)
-- **Daily quick scans**: Run quick scans at a specific time each day
-- **Weekly scans**: Run a scan on a specified day and time, with the option to choose either a quick scan or a full scan
+- **Hourly quick scans**: Run quick scans at periodic intervals (every *N* hours).
+- **Daily quick scans**: Run quick scans at a specific time each day.
+- **Weekly scans**: Run a scan on a specified day and time, with the option to choose either a quick scan or a full scan.
 
 These scheduling options can be configured independently and combined. For example, you can run daily quick scans along with a weekly full scan.
 
@@ -63,19 +63,22 @@ The following table describes the available settings for configuring scheduled a
 
 | Category | Setting | Description | Possible values | Default |
 |----------|---------|-------------|-----------------|---------|
-| Daily scan settings | interval | Runs a quick scan every N hour (interval-based scheduling). | Integer (hours) 0 = disabled | 0 |
-| Daily scan settings | timeOfDay (daily) | Runs a quick scan once daily at a specific time. Value is in minutes from midnight (local time of the server) | 0–1440 (for example, 120 = 2:00 AM) | 0 |
-| Weekly scan settings | dayOfWeek | Specifies the day a scheduled scan runs. | 0–8 0 = disabled 1–7 = Sunday–Saturday 8 = every day | 0 |
-| Weekly scan settings | timeOfDay (weekly) | Specifies when the weekly scan runs. Value is in minutes from midnight (local time of the server) | 0–1440 | 120 (2:00 AM) |
-| Weekly scan settings | scanType | Specifies the scan type for weekly scans. | quick, full | quick |
-| Advanced settings (optional) | runScanWhenIdle | Delays the scan until the system is idle. | true, false | false |
-| Advanced settings (optional) | lowPriorityScheduledScan | Runs scans with reduced CPU priority. | true, false | false |
-| Advanced settings (optional) | checkForDefinitionsUpdate | Checks for the latest security intelligence updates before starting the scan. | true, false | false |
-| Advanced settings (optional) | randomizeScanStartTime | Randomizes scan start time within a defined window (in hours) to avoid simultaneous scans. | 0–23 | 0 |
-| Advanced settings (optional) | ignoreExclusions | Runs scans without honouring configured exclusions. | true, false | false |
+| Daily scan settings |  |  |  |  |
+|  | interval | Runs a quick scan every N hour (interval-based scheduling). | Integer (hours) 0 = disabled | 0 |
+|  | timeOfDay (daily) | Runs a quick scan once daily at a specific time. Value is in minutes from midnight (local time of the server) | 0–1440 (for example, 120 = 2:00 AM) | 0 |
+| Weekly scan settings |  |  |  |  |
+|  | dayOfWeek | Specifies the day a scheduled scan runs. | 0–8 0 = disabled 1–7 = Sunday–Saturday 8 = every day | 0 |
+|  | timeOfDay (weekly) | Specifies when the weekly scan runs. Value is in minutes from midnight (local time of the server) | 0–1440 | 120 (2:00 AM) |
+|  | scanType | Specifies the scan type for weekly scans. | quick, full | quick |
+| Advanced settings (optional) |  |  |  |  |
+|  | runScanWhenIdle | Delays the scan until the system is idle. | true, false | false |
+|  | lowPriorityScheduledScan | Runs scans with reduced CPU priority. | true, false | false |
+|  | checkForDefinitionsUpdate | Checks for the latest security intelligence updates before starting the scan. | true, false | false |
+|  | randomizeScanStartTime | Randomizes scan start time within a defined window (in hours) to avoid simultaneous scans. | 0–23 | 0 |
+|  | ignoreExclusions | Runs scans without honouring configured exclusions. | true, false | false |
 
 > [!NOTE]
-> Interval and timeOfDay (daily) are independent settings. If both are configured, they create separate quick scan schedules and can result in multiple scans per day.
+> `interval` and `timeOfDay` (daily) are independent settings. If both are configured, they create separate quick scan schedules and can result in multiple scans per day.
 
 ## Configure scheduled antivirus scans
 
@@ -123,23 +126,24 @@ The following example configures:
 
 ```json
 {
-  "antivirusEngine": {
-    "scheduledScan": {
-      "quickScan": {
-        "timeOfDay": 180
-      },
-      "weeklyScan": {
-        "dayOfWeek": 7,
-        "timeOfDay": 180,
-        "scanType": "full"
-      },
-      "runScanWhenIdle": true,
-      "lowPriorityScheduledScan": true,
-      "checkForDefinitionsUpdate": true,
-      "ignoreExclusions": true,
-      "randomizeScanStartTime": 3
-    }
-  }
+  "antivirusEngine": {
+    "scheduledScan": "enabled"
+  },
+  "scheduledScan": {
+    "weeklyConfiguration": {
+      "dayOfWeek": 7,
+      "scanType": "full",
+      "timeOfDay": 180
+    },
+    "dailyConfiguration": {
+      "timeOfDay": 180
+    },
+    "runScanWhenIdle": true,
+    "lowPriorityScheduledScan": true,
+    "checkForDefinitionsUpdate": true,
+    "ignoreExclusions": true,
+    "randomizeScanStartTime": 3
+  }
 }
 ```
 
