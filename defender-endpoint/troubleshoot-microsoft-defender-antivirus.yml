@@ -1313,7 +1313,7 @@ sections:
      - question: Event ID 2050
        answer: |
 
-         Symbolic name: `MALWAREPROTECTION_SAMPLE_SUBMITTED`
+         Symbolic name: `MALWAREPROTECTION_SAMPLESUBMISSION_UPLOADED`
 
          Message: The antimalware platform submitted a file for sample analysis.
 
