@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for App Service - the benefits and features
 description: Learn about the capabilities of Microsoft Defender for App Service and how to enable it on your subscription.
-ms.date: 05/10/2026
+ms.date: 05/11/2026
 ms.topic: overview
 ms.author: elkrieger
 author: ElazarK
@@ -16,17 +16,14 @@ Defender for Cloud is natively integrated with App Service, eliminating the need
 
 To protect your Azure App Service plan with Microsoft Defender for App Service, you need:
 
-- An App Service plan that runs on one of the following: Standard, Premium v2, Premium v3, or Isolated (App Service Environment v1, v2, v3).
-
-  > [!NOTE]
-  > Free, Shared, and Basic tier App Service plans aren't supported by Defender for App Service. These plans aren't monitored or protected by this Defender plan.
+- An App Service plan on any App Service tier.
 
 - Defender for Cloud's enhanced protections enabled on your subscription as described in [Enable enhanced security features](connect-azure-subscription.md).
 
   > [!TIP]
   > You can optionally enable individual Microsoft Defender plans, like Microsoft Defender for App Service.
   
-- Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). Billing is calculated according to the total compute instances in supported plans.
+- Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). Billing is calculated according to the total compute instances across all App Service plan tiers.
 - Check out Defender for App Service's [cloud availability](support-matrix-defender-for-cloud.md).
 
 ### App Service diagnostics for alert investigation

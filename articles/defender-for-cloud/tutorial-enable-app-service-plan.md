@@ -34,13 +34,11 @@ Learn more about Defender for Cloud pricing on the [Defender for Cloud pricing p
 
 - Enable [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- Use an App Service plan that runs on one of these tiers: Standard, Premium v2, Premium v3, or Isolated (App Service Environment v1, v2, or v3).
-
-- Free, Shared, and Basic App Service plans aren't supported by Defender for App Service.
+- Use an App Service plan on any App Service tier.
 
   For more information on App Service plans and tiers, see [Azure App Service plans](/azure/app-service/overview-hosting-plans).
 
-- For billing details, note that Defender for App Service billing applies to supported plans only: Standard, Premium v2, Premium v3, and Isolated (App Service Environment v1, v2, v3). Billing is calculated according to the total compute instances in supported plans.
+- For billing details, note that Defender for App Service billing applies across all App Service plan tiers. Billing is calculated according to the total compute instances across all App Service plan tiers.
 
 - For deep alert investigation, consider enabling diagnostic settings on your App Service resources so you can review HTTP traffic, application events, and platform activity during incidents. Consider your expected log volume and destination because these diagnostics can incur additional storage costs. For investigation guidance specific to Defender for App Service, see [App Service diagnostics for alert investigation](defender-for-app-service-introduction.md#app-service-diagnostics-for-alert-investigation). For setup steps and destination options, see [Enable diagnostic logging for apps in Azure App Service](/azure/app-service/troubleshoot-diagnostic-logs).
 
