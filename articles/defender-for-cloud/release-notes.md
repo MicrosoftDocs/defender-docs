@@ -32,11 +32,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
 | May 5, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
-| May 4, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
 
 ### Updated Helm installation for Defender for Containers sensor
@@ -98,7 +98,7 @@ For more information, see [Defender for Cloud in the Defender portal](defender-p
 
 ### Cloud security reporting in Microsoft Defender portal (Preview)
 
-May 4, 2026
+May 20, 2026
 
 Microsoft Defender portal now includes integrated cloud security reporting capabilities, enabling you to create, customize, and share security insights across your organization.
 
@@ -118,63 +118,6 @@ The **Cloud Posture** report offers a centralized view of your overall cloud sec
 To access cloud security reports, navigate to the **Reporting** page in the Microsoft Defender portal and select the **Cloud** tab.
 
 Learn more about [Cloud security reporting in Microsoft Defender portal](cloud-security-reporting.md).
-
-### Updated Helm installation for Defender for Containers sensor
- 
-May 6, 2026
- 
-Defender for Containers sensor installation using Helm now uses direct Helm chart deployment instead of installation scripts. The updated flow includes environment-specific Helm commands for AKS, EKS, and GKE clusters.
- 
-Learn more about [installing the Defender for Containers sensor by using Helm](deploy-helm.md).
-
-### General availability of individual recommendations for Defender for Cloud in Azure portal and deprecation of legacy grouped recommendations
-
-May 5, 2026
-
-Individual recommendations for Defender for Cloud that were previously represented as grouped recommendations are now generally available (GA) in Azure portal.
-
-**Azure portal secure score behavior**
-
-The classic secure score in the Azure portal is also affected by these individual recommendations. However, you should not expect a material change in their overall score, as the individual recommendations replace their previously grouped equivalents and are designed to keep the score functionally stable.
-
-**Deprecation notice: Legacy grouped recommendations**
-
-Grouped recommendation types are deprecated from the Azure portal and will be removed on **July 30, 2026**. These recommendations are currently tagged as **Set for deprecation**.
-
-For more information see, [security recommendations](review-security-recommendations.md).
-
-### Daily score calculation enhancement for risk-based Cloud secure score
-
-May 5, 2026
-
-We've improved how daily Cloud secure score values are calculated to more accurately reflect your posture and the impact of actions taken throughout the day.
-
-Daily scores represent end-of-day snapshots instead of averaged values over the course of the day, providing a more consistent and precise view of the score at each point in time. This helps you better understand score changes and correlate them with changes introduced during the day.
-
-Historical values have been recalculated to align with this definition, so you may notice slight differences when comparing trends across this period.
-
-For more information, see [Cloud secure score](secure-score-security-controls.md?pivots=defender-portal).
-
-### General availability of Defender for Cloud integration into the Defender portal
-
-May 5, 2026
-
-Microsoft Defender for Cloud is now integrated into the Microsoft Defender portal, unifying cloud security posture management and threat protection in a single experience. This integration provides a centralized view across hybrid and multicloud environments, including Azure, AWS, and GCP.
-
-**Key capabilities include:**
-
-- A unified cloud security dashboard with posture insights, risk-based prioritization, and progress tracking
-- A centralized cloud asset inventory with enriched risk, health, and coverage data
-- Integrated posture management through Microsoft Security Exposure Management (MSEM), including secure score, recommendations, attack paths, and vulnerabilities
-- A risk-based Cloud secure score for more accurate assessment and prioritization including improved daily secure score calculations - available only in the Defender portal
-- A new recommendation model with individual findings for improved prioritization and governance (These individual recommendations might impact risk‑based Cloud secure score calculations, as they now contribute to the score based on their granular, context‑aware findings, rather than as part of a grouped recommendation.)
-
-> [!Note]
-> Cloud scopes is still in preview.
-
-This integration enables security teams to monitor, prioritize, and respond to risks across their entire environment from a single location.
-
-For more information, see [Defender for Cloud in the Defender portal](defender-portal/defender-for-cloud-defender-portal.md)
 
 ### General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration
 
