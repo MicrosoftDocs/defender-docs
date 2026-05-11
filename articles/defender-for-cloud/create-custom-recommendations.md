@@ -61,7 +61,7 @@ We recommend using the query editor to create a recommendation query.
 - Select **How to** to get help on structuring the query, and additional instructions and links.
 - The editor contains built-in recommendation query examples that you can use to help build your own query. The data appears in the same structure as in the API.
 
-1. In the query editor, select **New query** to create a query.
+1. Select **New query**.
 1. Use the example query template with its instructions, or select an example built-in recommendation query to get started.
 
     :::image type="content" source="./media/create-custom-recommendations/query-editor.png" alt-text="Screenshot of query editor in Microsoft Defender for Cloud showing New query and Run query controls." lightbox="./media/create-custom-recommendations/query-editor.png":::
@@ -254,15 +254,13 @@ To create a custom standard:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
-
-1. Select the relevant scope.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings** > the relevant subscription.
 
 1. Select **Security policies** > **+ Create** > **Standard**.
 
-1. In **Recommendations**, select the recommendations that you want to add to the custom standard.
+1. Select the recommendations that you want to add to the custom standard.
 
-1. For Azure subscriptions, review the **Source** column as needed.
+1. (Optional) For Azure subscriptions, review the Source column.
 
     :::image type="content" source="media/custom-security-policies/select-recommendations.png" alt-text="Screenshot that shows the list of all of the recommendations that are available to select for the custom standard." lightbox="media/custom-security-policies/select-recommendations.png":::
 
@@ -350,7 +348,7 @@ Request body (JSON):
 This example shows you how to remove an assignment:
 
 ```http
-DELETE https://management.azure.com/{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}?api-version=2018-05-01
+DELETE https://management.azure.com/{subscription}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}?api-version=2018-05-01
 ```
 
 ### Enhance custom recommendations (legacy)
