@@ -25,7 +25,7 @@ The plan and prepare phase is typically performed by a SOC architect or related 
 | Step | Details |
 | --------- | ------- |
 | **1. Plan and prepare overview and prerequisites** | Review the [Azure tenant prerequisites](prerequisites.md). |
-| **2. Plan workspace architecture** | Design your Log Analytics workspace enabled for Microsoft Sentinel. Regardless of whether you'll be onboarding to the Microsoft Defender portal, you'll still need a Log Analytics workspace. <br><br>Consider parameters such as:<br>- Whether you'll use a single tenant or multiple tenants<br>- Any compliance requirements you have for data collection and storage<br>- How to control access to Microsoft Sentinel data<br><br>Review these articles:<br><br>1. [Design workspace architecture](/azure/azure-monitor/logs/workspace-design?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json)<br>3. [Review sample workspace designs](sample-workspace-designs.md)<br>4. [Prepare for multiple workspaces](prepare-multiple-workspaces.md) |
+| **2. Plan workspace architecture** | Design your Log Analytics workspace enabled for Microsoft Sentinel. Regardless of whether you'll be onboarding to the Microsoft Defender portal, you'll still need a Log Analytics workspace. <br><br>Consider parameters such as:<br>- Whether you'll use a single tenant or multiple tenants<br>- Any compliance requirements you have for data collection and storage<br>- How to control access to Microsoft Sentinel data<br><br>Review these articles:<br><br>1. [Design workspace architecture](/azure/azure-monitor/logs/workspace-design?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json)<br>2. [Review sample workspace designs](sample-workspace-designs.md)<br>3. [Prepare for multiple workspaces](prepare-multiple-workspaces.md) |
 | **3. [Prioritize data connectors](prioritize-data-connectors.md)** | Determine which data sources you need and the data size requirements to help you accurately project your deployment's budget and timeline.<br><br>You might determine this information during your business use case review, or by evaluating a current SIEM that you already have in place. If you already have a SIEM in place, analyze your data to understand which data sources provide the most value and should be ingested into Microsoft Sentinel. |
 | **4. [Plan roles and permissions](roles.md)** |Use Azure role based access control (RBAC) to create and assign roles within your security operations team to grant appropriate access to Microsoft Sentinel. The different roles give you fine-grained control over what Microsoft Sentinel users can see and do. Azure roles can be assigned in the workspace directly, or in a subscription or resource group that the workspace belongs to, which Microsoft Sentinel inherits. |
 | **5. [Plan costs](billing.md)** |Start planning your budget, considering cost implications for each planned scenario.<br><br>   Make sure that your budget covers the cost of data ingestion for both Microsoft Sentinel and Azure Log Analytics, any playbooks that will be deployed, and so on. |
@@ -60,17 +60,18 @@ The fine tune and review phase is typically performed by a SOC engineer or relat
 |&#x2705; **Check analytics rules against MITRE framework** |[Check your MITRE coverage in the Microsoft Sentinel MITRE page](mitre-coverage.md): View the detections already active in your workspace, and those available for you to configure, to understand your organization's security coverage, based on the tactics and techniques from the MITRE ATT&CK® framework. |
 |&#x2705; **Hunt for suspicious activity** |Make sure that your SOC has a process in place for [proactive threat hunting](hunts.md). Hunting is a process where security analysts seek out undetected threats and malicious behaviors. By creating a hypothesis, searching through data, and validating that hypothesis, they determine what to act on. Actions can include creating new detections, new threat intelligence, or spinning up a new incident. |
 
-## Related articles
+## Related content
 
 In this article, you reviewed the activities in each of the phases that help you deploy Microsoft Sentinel.
 
 Depending on which phase you're in, choose the appropriate next steps:
 
-- Plan and prepare - [Prerequisites to deploy Azure Sentinel](prerequisites.md)
-- Deploy - [Enable Microsoft Sentinel and initial features and content](enable-sentinel-features-content.md)
-- Fine tune and review - [Navigate and investigate incidents in Microsoft Sentinel](investigate-incidents.md)
+- Plan and prepare: [Prerequisites to deploy Azure Sentinel](prerequisites.md)
+- Deploy: [Enable Microsoft Sentinel and initial features and content](enable-sentinel-features-content.md)
+- Fine tune and review: [Navigate and investigate incidents in Microsoft Sentinel](investigate-incidents.md)
 
-When you're finished with your deployment of Microsoft Sentinel, continue to explore Microsoft Sentinel capabilities by reviewing tutorials that cover common tasks:  
+When you're finished with your deployment of Microsoft Sentinel, continue to explore Microsoft Sentinel capabilities by reviewing tutorials that cover common tasks:
+
 - [What is Microsoft Sentinel data lake?](datalake/sentinel-lake-overview.md)
 - [Forward Syslog data to a Log Analytics workspace with Microsoft Sentinel by using Azure Monitor Agent](forward-syslog-monitor-agent.md)
 - [Configure table-level retention](/azure/azure-monitor/logs/data-retention-configure?tabs=portal-3%2Cportal-1%2Cportal-2#configure-table-level-retention)
