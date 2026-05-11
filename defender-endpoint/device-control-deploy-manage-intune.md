@@ -1,14 +1,12 @@
-﻿---
+---
 title: Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune           
 description: Learn how to deploy and manage device control in Defender for Endpoint using Microsoft Intune
 author: limwainstein
 ms.author: lwainstein
-manager: bagol 
 ms.date: 12/18/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -16,8 +14,6 @@ ms.collection:
 ms.custom: 
 - partner-contribution
 ms.reviewer: joshbregman
-search.appverid: MET150
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -66,9 +62,9 @@ If you're using Intune to manage Defender for Endpoint settings, you can use it 
 
    When you'r finished on the **Configuration settings** tab, select **Next**.
 
-6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/mem/intune/fundamentals/scope-tags). When you're finished, select **Next**.
+6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing [scope tags](/intune/intune-service/fundamentals/scope-tags). When you're finished, select **Next**.
 
-7. On the **Assignments** tab, specify groups of users or devices to receive your policy. For more information, see [Assign policies in Intune](/mem/intune/configuration/device-profile-assign).
+7. On the **Assignments** tab, specify groups of users or devices to receive your policy. For more information, see [Assign policies in Intune](/intune/intune-service/configuration/device-profile-assign).
 
 8. On the **Review + create** tab, review your settings, and make any needed changes.
    When you're ready, select **Create** to create your device control policy.
@@ -97,7 +93,7 @@ You can add audit policies, and you can add Allow/Deny policies. We always recom
 ## Defining Settings with OMA-URI
 
 > [!IMPORTANT]
-> Using Intune OMA-URI to configure device control requires the *Device Configuration* workload to be managed by Intune, if the device is co-managed with Configuration Manager. For more information, see [How to switch Configuration Manager workloads to Intune](/mem/configmgr/comanage/how-to-switch-workloads).
+> Using Intune OMA-URI to configure device control requires the *Device Configuration* workload to be managed by Intune, if the device is co-managed with Configuration Manager. For more information, see [How to switch Configuration Manager workloads to Intune](/intune/configmgr/comanage/how-to-switch-workloads).
 
 In the following table, identify the setting you want to configure, and then use the information in the OMA-URI and data type & values columns. Settings are listed in alphabetical order.
 

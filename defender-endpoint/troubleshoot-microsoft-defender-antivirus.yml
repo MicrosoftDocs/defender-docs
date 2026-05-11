@@ -2,15 +2,15 @@
 metadata:
   title: Microsoft Defender Antivirus event IDs and error codes
   description: Look up the causes and solutions for Microsoft Defender Antivirus event IDs and errors.
-  author: batamig
-  ms.author: bagol
+  author: chrisda
+  ms.author: chrisda
   ms.reviewer: yongrhee
   ms.service: defender-endpoint
   ms.topic: troubleshooting
-  ms.date: 06/10/2025
+  ms.date: 05/11/2026
+  ai-usage: ai-assisted
   ms.localizationpriority: medium
   ms.custom: nextgen
-  manager: bagol
   ms.subservice: ngp
   ms.collection:
   - m365-security
@@ -554,6 +554,11 @@ sections:
 
              - Block: The resource was blocked from executing.
 
+           > [!WARNING]
+           > **Non-remediating threat actions:** The **Allow**, **No action**, and **None** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **None** continues to generate alerts and Protection History entries. These actions can't be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
+           >
+           > When `ThreatSeverityDefaultAction` is set to **None** and a threat is detected, Microsoft Defender Antivirus generates a 1116 event for detection telemetry. A following 1117 event with an **Allow** action indicates that the threat was detected but not remediated based on the configured security setting.
+
           - Action Status: Description of other actions
 
           - Error Code: Error code Result code associated with threat status. Standard HRESULT values.
@@ -655,6 +660,11 @@ sections:
 
              - Block: The resource was blocked from executing
 
+           > [!WARNING]
+           > **Non-remediating threat actions:** The **Allow**, **No action**, and **None** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **None** continues to generate alerts and Protection History entries. These actions can't be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
+           >
+           > When `ThreatSeverityDefaultAction` is set to **None** and a threat is detected, Microsoft Defender Antivirus generates a 1116 event for detection telemetry. A following 1117 event with an **Allow** action indicates that the threat was detected but not remediated based on the configured security setting.
+
           - Action Status: Description of additional actions
 
           - Error Code: Error code Result code associated with threat status. Standard HRESULT values.
@@ -729,6 +739,11 @@ sections:
              - No action: No action
 
              - Block: The resource was blocked from executing.
+
+           > [!WARNING]
+           > **Non-remediating threat actions:** The **Allow**, **No action**, and **None** actions don't remediate detected threats. **Allow** suppresses ongoing detection events, while **None** continues to generate alerts and Protection History entries. These actions can't be configured when tamper protection is enabled. Use these settings only in specialized environments (for example, industrial control systems or critical infrastructure) where automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, and compensating security controls are deployed. Use standard remediation actions (Clean, Quarantine, or Remove) in all other environments.
+           >
+           > When `ThreatSeverityDefaultAction` is set to **None** and a threat is detected, Microsoft Defender Antivirus generates a 1116 event for detection telemetry. A following 1117 event with an **Allow** action indicates that the threat was detected but not remediated based on the configured security setting.
 
           - Action Status: Description of other actions
 
@@ -1102,23 +1117,23 @@ sections:
 
          Symbolic name: `MALWAREPROTECTION_SIGNATURE_FASTPATH_UPDATED`
 
-         Message: The antimalware engine used the Dynamic Signature Service to get other definitions.
+         Message: Microsoft Defender Antivirus used cloud protection (cloud-delivered protection), previously referred to as Dynamic Signature Service, to retrieve additional security intelligence.
 
-         Description: Microsoft Defender Antivirus used Dynamic Signature Service to retrieve more signatures to help protect your machine.
+         Description: Microsoft Defender Antivirus used cloud protection (cloud-delivered protection), previously referred to as Dynamic Signature Service, to retrieve additional security intelligence to help protect your device.
 
-          - Current Signature Version: Current signature version
+          - Current Security Intelligence Version: Current security intelligence version
 
-          - Signature Type: Signature type. Examples: Antivirus, Antispyware, Antimalware, or Network Inspection System
+          - Security Intelligence Type: Security intelligence type. Examples: Antivirus, Antispyware, Antimalware, or Network Inspection System
 
           - Current Engine Version: Current engine version
 
-          - Dynamic Signature Type: Dynamic signature type. Examples: Version, Timestamp, No limit, or Duration
+          - Cloud Protection Intelligence Type. Examples: Version, Timestamp, No limit, or Duration
 
           - Persistence Path: Path
 
-          - Dynamic Signature Version: Version number
+          - Cloud Protection Intelligence Version: Version number
 
-          - Dynamic Signature Compilation Timestamp: Timestamp
+          - Cloud Protection Intelligence Compilation Timestamp: Timestamp
 
           - Persistence Limit Type: Persistence limit type. Examples: VDM version, Timestamp, or No limit
 
@@ -1135,7 +1150,7 @@ sections:
 
          When a dynamic signature is received by Defender for Endpoint, a 2010 event is reported. However, when the dynamic signature expires or is manually deleted, a 2011 event is reported. In some cases, when a new signature is delivered to Defender for Endpoint, sometimes hundreds of dynamic signatures expire at the same time, resulting in hundreds of 2011 events reported. The generation of so many 2011 events can cause a Security Information and Event Management (SIEM) server to become flooded.
 
-         To avoid this situtation, beginning with [platform version 4.18.2207.7](/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#august-2022-platform-41822077--engine-11196003), by default, Defender for Endpoint doesn't report 2011 events. Keep the following points in mind:
+         To avoid this situtation, beginning with [platform version 4.18.2207.7](msda-updates-previous-versions-technical-upgrade-support.md#august-2022-platform-41822077--engine-11196003), by default, Defender for Endpoint doesn't report 2011 events. Keep the following points in mind:
 
             - This new default behavior is controlled by the following registry entry: `HKLM\SOFTWARE\Microsoft\Windows Defender\Reporting\EnableDynamicSignatureDroppedEventReporting`
             - The default value for `EnableDynamicSignatureDroppedEventReporting` is `false`, which means 2011 events aren't reported. If it's set to `true`, 2011 events are reported.
@@ -1294,6 +1309,21 @@ sections:
          Message: The antimalware engine no longer supports this operating system, and is no longer protecting your system from malware.
 
          Description: The support for your operating system has expired. Microsoft Defender Antivirus is no longer supported on your operating system, has stopped functioning, and isn't protecting against malware threats.
+
+     - question: Event ID 2050
+       answer: |
+
+         Symbolic name: `MALWAREPROTECTION_SAMPLESUBMISSION_UPLOADED`
+
+         Message: The antimalware platform submitted a file for sample analysis.
+
+         Description: A file was submitted to the cloud for further analysis as part of the automatic sample submission feature.
+
+          - File Name: The full path of the file that was submitted for analysis.
+
+          - SHA-256 Hash: The SHA-256 hash of the submitted file.
+
+         User action: No action is required. This event is informational. The file was submitted based on the sample submission consent configuration. By default, Microsoft Defender Antivirus automatically sends files that don't contain personally identifiable information (PII). For more information about sample submission settings, see [Cloud protection and sample submission at Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
 
      - question: Event ID 3002
        answer: |
@@ -1556,7 +1586,7 @@ sections:
 
          Possible reason: This error indicates that the threat might no longer be present on the media, or malware might be stopping you from scanning your device.
 
-         Resolution: Run the [Microsoft Safety Scanner](/microsoft-365/security/intelligence/safety-scanner-download) then update your security software and try again.
+         Resolution: Run the [Microsoft Safety Scanner](safety-scanner-download.md) then update your security software and try again.
 
      - question: Error code 0x80508024
        answer: |

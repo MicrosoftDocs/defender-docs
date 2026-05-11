@@ -1,4 +1,4 @@
-﻿---
+---
 title: Advanced Hunting with PowerShell API Guide
 ms.reviewer:
 description: Use these code samples, querying several Microsoft Defender for Endpoint APIs.
@@ -6,8 +6,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -16,7 +14,6 @@ ms.topic: reference
 ms.date: 03/21/2025
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -65,13 +62,16 @@ Run the following command, using your information as follows:
 - `$appSecret`: Secret of your Microsoft Entra app.
 - `$suspiciousUrl`: The URL.
 
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
 ```powershell
 $tenantId = '00000000-0000-0000-0000-000000000000' # Paste your own tenant ID here
 $appId = '11111111-1111-1111-1111-111111111111' # Paste your own app ID here
 $appSecret = '22222222-2222-2222-2222-222222222222' # Paste your own app secret here
 $suspiciousUrl = 'www.suspiciousUrl.com' # Paste your own URL here
 
-$resourceAppIdUri = 'https://api.security.microsoft.com'
+$resourceAppIdUri = 'https://api.securitycenter.microsoft.com'
 $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
 $authBody = [Ordered] @{
     resource = "$resourceAppIdUri"

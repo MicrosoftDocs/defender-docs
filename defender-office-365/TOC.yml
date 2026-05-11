@@ -6,7 +6,7 @@
      items:
        - name: Microsoft Defender for Office 365 overview
          href: mdo-about.md
-       - name: Overview of default email protections for cloud mailboxes
+       - name: Overview of the built-in security features for all cloud mailboxes
          href: eop-about.md
        - name: What's new in Defender for Office 365
          href: defender-for-office-365-whats-new.md
@@ -161,7 +161,7 @@
              href: anti-spam-spam-vs-bulk-about.md
            - name: Spam confidence level (SCL)
              href: anti-spam-spam-confidence-level-scl-about.md
-           - name: Bulk complaint level (BCL)
+           - name: Bulk email detection and bulk complaint level (BCL)
              href: anti-spam-bulk-complaint-level-bcl-about.md
            - name: Bulk senders insight
              href: anti-spam-bulk-senders-insight.md
@@ -291,8 +291,6 @@
            href: attack-simulation-training-settings.md
          - name: Attack simulation training deployment considerations and FAQ
            href: attack-simulation-training-faq.md
-         - name: Microsoft Teams in Attack simulation training
-           href: attack-simulation-training-teams.md
        - name: Connectors for mail flow
          items:
          - name: Configure mail flow using connectors

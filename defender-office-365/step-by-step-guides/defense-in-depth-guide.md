@@ -6,7 +6,6 @@ f1.keywords:
   - NOCSH
 author: MSFTBen
 ms.author: benharri
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -15,7 +14,7 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 02/26/2026
 ---
 
 # Getting the best security value from Microsoft Defender for Office 365 when you have non-Microsoft email filtering
@@ -23,7 +22,7 @@ ms.date: 02/24/2025
 This guide is for you if:
 
 - You're licensed for Microsoft Defender for Office 365 and host your mailboxes in Office 365
-- You're also using a non-Microsoft for your email security
+- You're also using a non-Microsoft solution for your email security
 
 The following information details how to get the most out of your investment, broken down into easy to follow steps.
 
@@ -50,11 +49,11 @@ The following information details how to get the most out of your investment, br
 
 - When alerts fire in Microsoft Defender for Office 365, they're automatically correlated, and combined into Incidents to help reduce the alert fatigue on security staff. Automated Investigation and Response (AIR) triggers investigations to help remediate and contain threats.
 
-  **Read more, watch an overview video and get started here :** [Incident response with Microsoft Defender XDR](/defender-xdr/incidents-overview)
+  **Read more, watch an overview video and get started here:** [Incident response with Microsoft Defender XDR](/defender-xdr/incidents-overview)
 
 - Threat Analytics is our in-product, detailed threat intelligence solution from expert Microsoft security researchers. Threat Analytics contains detailed reports that are designed to get you up to speed on the latest threat groups, attack techniques, how to protect your organization with Indicators of Compromise (IOC) and much more.
 
-  **Read more, watch an overview video and get started here :** [Threat analytics in Microsoft Defender XDR](/defender-xdr/threat-analytics)
+  **Read more, watch an overview video and get started here:** [Threat analytics in Microsoft Defender XDR](/defender-xdr/threat-analytics)
 
 - Explorer can be used to hunt threats, visualize mail flow patterns, spot trends, and identify the affect of changes you make during tuning Defender for Office 365. You can also quickly delete messages from your organization with a few simple clicks.
 
@@ -89,6 +88,9 @@ The following information details how to get the most out of your investment, br
   **Read more here:** [Advanced delivery](../advanced-delivery-policy-configure.md)
 
 - You can configure user reported settings to allow users to report good or bad messages to Microsoft, to a designated reporting mailbox (to integrate with current security workflows) or both using the built-in **Report** button in [supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or using [supported non-Microsoft solutions](../submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). Admins can use the **User reported** tab on the **Submissions** page to triage false positives and false negative user reported messages.
+
+  > [!TIP]
+  > In [attack simulation training in Defender for Office 365 Plan 2](../attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
   **Read more here:** [User reported settings](../submissions-user-reported-messages-custom-mailbox.md) and [Report phishing and suspicious emails in Outlook for admins](../submissions-outlook-report-messages.md)
 

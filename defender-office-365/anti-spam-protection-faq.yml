@@ -6,7 +6,6 @@ metadata:
     - NOCSH
   author: chrisda
   ms.author: chrisda
-  manager: bagol
   audience: ITPro
   ms.article: faq
   ms.localizationpriority: medium
@@ -25,7 +24,7 @@ summary: |
   [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
   **Applies to**
-  - [Default email protections for cloud mailboxes](eop-about.md)
+  - [Built-in security features for all cloud mailboxes](eop-about.md)
   - [Microsoft Defender for Office 365 Plan 1 and Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
   - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 
@@ -52,7 +51,7 @@ sections:
             For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [Recommended anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
             > [!IMPORTANT]
-            > In hybrid environments where Exchange Online Protection (EOP) provides cloud protection of on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+            > In environments where the built-in security features for all cloud mailboxes protect on-premises Exchange mailboxes, you need to configure Exchange mail flow rules (also known as transport rules) in your on-premises Exchange organization to recognize the spam filtering verdicts from the cloud. For details, see [Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
             >
             > After you manually create the rule in Microsoft 365 to match the rule in on-premises Exchange, the rule replicates in hybrid environments.
 

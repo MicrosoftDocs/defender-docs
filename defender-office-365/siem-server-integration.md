@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: deniseb
 audience: ITPro
 ms.topic: how-to
 ms.date: 6/20/2023
@@ -20,7 +19,7 @@ description: Get an overview of Security Information and Event Management (SIEM)
 ms.service: defender-office-365
 search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -51,7 +50,7 @@ A SIEM server can receive data from a wide variety of Microsoft 365 services and
 |---|---|---|
 |[Microsoft Defender for Office 365](mdo-about.md)|Audit logs|[SIEM integration with Microsoft Defender for Office 365](siem-integration-with-office-365-ti.md)|
 |[Microsoft Defender for Endpoint](/windows/security/threat-protection/)|HTTPS endpoint hosted in Azure <p> REST API|[Pull alerts to your SIEM tools](/defender-endpoint/configure-siem)|
-|[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)|Log integration|[SIEM integration with Microsoft Defender for Cloud Apps](/cloud-app-security/siem)|
+|[Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)|Log integration|[SIEM integration with Microsoft Defender for Cloud Apps](/defender-cloud-apps/siem)|
 
 > [!TIP]
 > Take a look at [Microsoft Sentinel](/azure/sentinel/overview). Microsoft Sentinel comes with connectors for Microsoft solutions. These connectors are available "out of the box" and provide for real-time integration. You can use Microsoft Sentinel with your Microsoft Defender XDR solutions and Microsoft 365 services, including Office 365, Microsoft Entra ID, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and more.

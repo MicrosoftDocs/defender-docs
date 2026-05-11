@@ -2,22 +2,15 @@
 title: Investigate alerts in Microsoft Defender XDR
 description: Investigate alerts seen across devices, users, and mailboxes.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
 - m365-security
 - m365initiative-m365-defender
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid:
-- MOE150
-- met150
 ms.date: 01/23/2026
 appliesto: 
 - Microsoft Defender XDR
@@ -207,6 +200,7 @@ The **Manage alert** pane allows you to view or specify:
 - A comment on the alert.
 
 > [!NOTE]
+>
 > - In August 2022, previously supported alert determination values (`Apt` and `SecurityPersonnel`) were deprecated and are no longer available via the API.
 >
 > - One way of managing alerts it through the use of tags. The tagging capability for Microsoft Defender for Office 365 is currently in preview, rolling out incrementally.
@@ -233,20 +227,28 @@ The **Recommendations** tab provides next-step actions and advice for investigat
 
 ## Tune an alert
 
-As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. An analyst's time is valuable, wanting to focus only on high severity and high priority alerts. Meanwhile, analysts are also required to triage and resolve lower priority alerts, which tend to be a manual process.
 
-Alert tuning, previously known as *alert suppression*, provides the ability to tune and manage alerts in advance. This streamlines the alert queue and saves triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs and rule conditions are met.
+As a security operations center (SOC) analyst, one of the top issues is triaging the sheer number of alerts that are triggered daily. While wanting to focus only on high severity and high priority alerts, analysts are also required to triage and resolve lower priority alerts, which tend to be a manual process.
+Alert tuning (previously *alert suppression*) lets you hide or resolve alerts automatically when expected organizational behavior occurs and rule conditions are met. This streamlines your alert queue and saves triage time.
 
 Alert tuning rules support conditions based on *evidence types* such as files, processes, scheduled tasks, and other types of evidence that trigger alerts. After creating an alert tuning rule, apply it to the selected alert or any alert type that meets the defined conditions to tune the alert.
 
-Alert tuning as general availability captures alerts only from Defender for Endpoint. However, in preview, alert tuning is also extended to other Microsoft Defender XDR services, including Defender for Office 365, Defender for Identity, Defender for Cloud Apps, Microsoft Entra ID Protection (Microsoft Entra IP), and others if they are available on your platform and plan.
+Microsoft Defender XDR includes built-in alert tuning rules that help reduce reporting noise from common benign activity. These built-in rules suppress alerts without affecting other features like AIR investigations and email notifications. If the AIR investigation detects malicious or suspicious activity, the new alert is reactivated.
 
-Microsoft Defender XDR includes built-in alert tuning rules (currently in Preview) that help reduce reporting noise from common benign activity. These built-in rules suppress alerts without affecting other features like AIR investigations and email notifications. If the AIR investigation detects malicious or suspicious activity, the new alert is reactivated.
+You can also create your own custom alert tuning rules to perform one of the following actions when specific conditions are met:
 
-You can also create your own custom alert tuning rules to hide or resolve alerts automatically when specific conditions are met.
+- **Hide alert**: Suppresses the alert and prevents incident creation. Hidden alerts remain in *AlertInfo* and *AlertEvidence* tables.
+This action is only applicable for Defender for Endpoint alerts.
+- **Resolve alert**: Automatically resolves the alert and related incidents. Matching alerts and their associated incidents are triggered with resolved status.
+- **Set as behavior**: Converts matching signals into behaviors. They won’t appear in the alert queue or trigger incidents. Data remains in *BehaviorInfo* and *BehaviorEntities* tables for hunting. This action isn't supported for Defender for Cloud or Microsoft Defender for Office 365 alerts.
+
+> [!NOTE]
+> Alert tuning is available for Microsoft Defender XDR services, including Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID Protection.
+
+Microsoft Defender XDR also includes built-in alert tuning rules that suppress alerts from common benign activitywithout affecting Automated Investigation and Response (AIR) investigations and email notifications.
 
 > [!CAUTION]
-> We recommend using alert tuning with caution, for scenarios where known, internal business applications or security tests trigger an expected activity and you don't want to see the alerts.
+> Use alert tuning with caution, for scenarios where known, internal business applications or security tests trigger expected activity.
 
 ### Create rule conditions to tune alerts
 
@@ -272,7 +274,7 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 
    - To set multiple rule conditions, select **Add filter** and use **AND**, **OR**, and grouping options to define the relationships between the multiple evidence types that trigger the alert. Further evidence properties are automatically populated as a new subgroup, where you can define your condition values. Condition values aren't case sensitive, and some properties support wildcards.
 
-1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take, either **Hide alert** or **Resolve alert**.
+1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take. Choose from **Hide alert**, **Resolve alert**, or **Set as behavior**.
 
 1. Enter a meaningful name for your alert and a comment to describe the alert, and then select **Save**.
 
@@ -286,23 +288,23 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 
    :::image type="content" source="./media/investigate-alerts/tune-alert-pane-alert-details.png" alt-text="Screenshot of the Tune alert pane from the Alerts page.":::
 
-1. Configure the following details, and then select **Save**:
+1. In the **Alert types** area, select to apply the alert tuning rule only to alerts of the selected type, or any alert type based on the same conditions. If you select **Any alert type based on certain conditions**, also select the service sources where you want the rule to apply. Only services where you have permissions are shown in the list. For example:
 
-  1. In the **Alert types** area, select to apply the alert tuning rule only to alerts of the selected type, or any alert type based on the same conditions. If you select **Any alert type based on certain conditions**, also select the service sources where you want the rule to apply. Only services where you have permissions are shown in the list. For example:
+    :::image type="content" source="./media/investigate-alerts/alert-tuning-alert-details-service-sources.png" alt-text="Screenshot of the Service sources area showing in the Tune alert pane.":::
 
-      :::image type="content" source="./media/investigate-alerts/alert-tuning-alert-details-service-sources.png" alt-text="Screenshot of the Service sources area showing in the Tune alert pane.":::
+1. In the **Conditions** area, add a condition for the alert's triggers. For example, if you want to prevent an alert from being triggered when a specific file is created, define a condition for the **File:Custom** trigger, and define the file details:
 
-  1. In the **Conditions** area, add a condition for the alert's triggers. For example, if you want to prevent an alert from being triggered when a specific file is created, define a condition for the **File:Custom** trigger, and define the file details:
+    :::image type="content" source="./media/investigate-alerts/alert-tuning-alert-details-conditions.png" alt-text="Screenshot of the Conditions area in the Alert tuning pane.":::
 
-      :::image type="content" source="./media/investigate-alerts/alert-tuning-alert-details-conditions.png" alt-text="Screenshot of the Conditions area in the Alert tuning pane.":::
+     - Listed triggers differ, depending on the service sources you selected. Triggers are all indicators of compromise (IOCs), such as files, processes, scheduled tasks, and other evidence types that might trigger an alert, including AntiMalware Scan Interface (AMSI) scripts, Windows Management Instrumentation (WMI) events, or scheduled tasks.
 
-      - Listed triggers differ, depending on the service sources you selected. Triggers are all indicators of compromise (IOCs), such as files, processes, scheduled tasks, and other evidence types that might trigger an alert, including AntiMalware Scan Interface (AMSI) scripts, Windows Management Instrumentation (WMI) events, or scheduled tasks.
+     - To set multiple rule conditions, select **Add filter** and use **AND**, **OR**, and grouping options to define the relationships between the multiple evidence types that trigger the alert. Further evidence properties are automatically populated as a new subgroup, where you can define your condition values. Condition values aren't case sensitive, and some properties support wildcards.
 
-      - To set multiple rule conditions, select **Add filter** and use **AND**, **OR**, and grouping options to define the relationships between the multiple evidence types that trigger the alert. Further evidence properties are automatically populated as a new subgroup, where you can define your condition values. Condition values aren't case sensitive, and some properties support wildcards.
+1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take. Choose from **Hide alert**, **Resolve alert**, or **Set as behavior**.
 
-  1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take, either **Hide alert** or **Resolve alert**.
+1. Enter a meaningful name for your alert and a comment to describe the alert.
 
-  1. Enter a meaningful name for your alert and a comment to describe the alert.
+1. Select **Save**
 
 ---
 

@@ -1,11 +1,9 @@
-﻿---
+---
 title: Endpoint detection and response in block mode
 description: Learn about endpoint detection and response in block mode
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.reviewer: pahuijbr, kausd
-audience: ITPro
 ms.topic: article
 ms.service: defender-endpoint
 ms.subservice: edr
@@ -19,7 +17,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
@@ -62,7 +59,7 @@ Watch this video to learn why and how to turn on endpoint detection and response
 
 ## What happens when something is detected?
 
-When EDR in block mode is turned on, and a malicious artifact is detected, Defender for Endpoint remediates that artifact. Your security operations team sees the detection status as **Blocked** or **Prevented** in the [Action center](respond-machine-alerts.md#check-activity-details-in-action-center), listed as completed actions. The following image shows an instance of unwanted software that was detected and remediated through EDR in block mode:
+When EDR in block mode is turned on, and a malicious artifact is detected, Defender for Endpoint remediates that artifact. Your security operations team sees the detection status as **Blocked** or **Prevented** in the [Action center](respond-machine-alerts.md#check-activity-details-and-status), listed as completed actions. The following image shows an instance of unwanted software that was detected and remediated through EDR in block mode:
 
 :::image type="content" source="media/edr-in-block-mode-detection.png" alt-text="The detection by EDR in block mode" lightbox="media/edr-in-block-mode-detection.png":::
 
@@ -86,7 +83,7 @@ When EDR in block mode is turned on, and a malicious artifact is detected, Defen
 
 ### Intune
 
-To create a custom policy in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/deploy-oma-uris-to-target-csp-via-intune).
+To create a custom policy in Intune, see [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune).
 
 For more information on the Defender CSP used for EDR in block mode, see "Configuration/PassiveRemediation" under [Defender CSP](/windows/client-management/mdm/defender-csp).
 

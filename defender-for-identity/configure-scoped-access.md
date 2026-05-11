@@ -17,9 +17,9 @@ Before you begin, make sure you meet the following requirements:
 
 - Check that Microsoft Defender for Identity sensor installed. 
 - Confirm the [Identity workload for URBAC](/defender-xdr/activate-defender-rbac#activate-from-the-permissions-and-roles-page) is activated. 
-- Ensure you have the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference) or [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) role in Microsoft Entra ID to create and manage custom roles.
+- Ensure you have the [Security Administrator](/entra/identity/role-based-access-control/permissions-reference) role in Microsoft Entra ID to create and manage custom roles.
 
-- Make sure Authorization permissions are configured through [URBAC](/defender-xdr/manage-rbac) to manage roles without Global Administrator or Security Administrator privileges.
+- Make sure Authorization permissions are configured through [URBAC](/defender-xdr/manage-rbac) to manage roles without Security Administrator privileges.
 
 ### Configure scoping rules
 
@@ -40,7 +40,7 @@ To enable identity scoping, follow these steps:​
 1. Select Add assignments and add the Assignment name.
     1. Under **Assign users and groups**, enter the usernames or Microsoft Entra ID groups you want to assign to the role.
     1. Select Microsoft Defender for Identity as the data source.
-   1. Under **Scope**, select the user groups (AD domains or OU's) that will be scoped to the assignment. For an optimal experience, use the filter or search box.
+    1. Under **Scope**, select the user groups (AD domains or OU's) that will be scoped to the assignment. For an optimal experience, use the filter or search box.
    ![Screenshot showing how the user selects the user group to be scoped to the assignment.](media/configure-scoped-access/add-scope.png)
    
    ![Screenshot that shows how to create a custom scope.](media/configure-scoped-access/custom-scope.png)

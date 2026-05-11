@@ -1,14 +1,12 @@
-﻿---
+---
 title: Attack surface reduction rules reference
 description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar, ericlaw
-manager: bagol
 ms.custom: asr
 ms.topic: reference
 ms.collection: 
@@ -16,7 +14,6 @@ ms.collection:
 - tier2
 - mde-asr
 ms.date: 12/31/2025
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
@@ -122,13 +119,13 @@ The following table lists the supported operating systems for rules that are cur
 > [!NOTE]
 >
 > - For Windows Server 2012 R2 and Windows Server 2016, see [Onboard Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#onboard-windows-server-2016-and-windows-server-2012-r2).
-> - If you're using Configuration Manager, the minimum required version of Microsoft Endpoint Configuration Manager is version 2111.
+> - If you're using Configuration Manager, the minimum required version of Microsoft Configuration Manager is version 2111 (December 2021).
 
 ## ASR rules supported configuration management systems
 
 Links to information about configuration management system versions referenced in this table are listed below this table.
 
-|Rule name|Microsoft Intune|Microsoft Endpoint Configuration Manager|Group Policy<sup>[[1](#fn1)]</sup>|PowerShell<sup>[[1](#fn1)]</sup>|
+|Rule name|Microsoft Intune|Microsoft Configuration Manager|Group Policy<sup>[[1](#fn1)]</sup>|PowerShell<sup>[[1](#fn1)]</sup>|
 |---|:---:|:---:|:---:|:---:|
 |[Block abuse of exploited vulnerable signed drivers](#block-abuse-of-exploited-vulnerable-signed-drivers)|Y||Y|Y|
 |[Block Adobe Reader from creating child processes](#block-adobe-reader-from-creating-child-processes)|Y||Y|Y|
@@ -154,10 +151,10 @@ Links to information about configuration management system versions referenced i
 
 <sup>\*</sup> Currently, this ASR rule might not be available in the Intune Attack Surface Reduction policy configuration due to a known backend issue. But, the rule still exists and is available through other methods. For example, Microsoft Defender for Endpoint security settings management, Configuration Service Provider (CSP), [Add-MpPreference](/powershell/module/defender/add-mppreference), or existing Intune ASR policy configuration in rules created before the issue).
 
-- [Configuration Manager CB 1710](/configmgr/core/servers/manage/updates)
-- [Configuration Manager CB 1802](/configmgr/core/servers/manage/updates)
-- [Microsoft Configuration Manager CB 1710](/configmgr/core/servers/manage/updates)
-- [System Center Configuration Manager (SCCM) CB 1710](/configmgr/core/servers/manage/updates) <br/>_SCCM is now Microsoft Configuration Manager._
+- [Configuration Manager CB 1710](/intune/configmgr/core/servers/manage/updates)
+- [Configuration Manager CB 1802](/intune/configmgr/core/servers/manage/updates)
+- [Microsoft Configuration Manager CB 1710](/intune/configmgr/core/servers/manage/updates)
+- [System Center Configuration Manager (SCCM) CB 1710](/intune/configmgr/core/servers/manage/updates) <br/>_SCCM is now Microsoft Configuration Manager._
 
 ## Per ASR rule alert and notification details
 
@@ -508,14 +505,14 @@ Known issues: These applications and "Block Office applications from injecting c
 
 |Application name|For information|
 |---|---|
-|Avecto (BeyondTrust) Privilege Guard|[September-2024 (Platform: 4.18.24090.11 \|Engine 1.1.24090.11)](/defender-endpoint/microsoft-defender-antivirus-updates).|
+|Avecto (BeyondTrust) Privilege Guard|[September-2024 (Platform: 4.18.24090.11 \|Engine 1.1.24090.11)](microsoft-defender-antivirus-updates.md).|
 |Heimdal security|n/a|
 
 For technical support, contact the software publisher.
 
 ### Block Office communication application from creating child processes
 
-This rule prevents Outlook from creating child processes, while still allowing legitimate Outlook functions. This rule protects against social engineering attacks and prevents exploiting code from abusing vulnerabilities in Outlook. It also protects against [Outlook rules and forms exploits](https://blogs.technet.microsoft.com/office365security/defending-against-rules-and-forms-injection/) that attackers can use when a user's credentials are compromised.
+This rule prevents Outlook from creating child processes, while still allowing legitimate Outlook functions. This rule protects against social engineering attacks and prevents exploiting code from abusing vulnerabilities in Outlook. It also protects against [Outlook rules and forms exploits](/archive/blogs/office365security/defending-against-rules-and-forms-injection) that attackers can use when a user's credentials are compromised.
 
 Intune name: `Process creation from Office communication products (beta)`
 
@@ -558,7 +555,7 @@ Dependencies: Microsoft Defender Antivirus, RPC
 This rule blocks processes created through [PsExec](/sysinternals/downloads/psexec) and [WMI](/windows/win32/wmisdk/about-wmi) from running. Both PsExec and WMI can remotely execute code. There's a risk of malware abusing functionality of PsExec and WMI for command and control purposes, or to spread an infection throughout an organization's network.
 
 > [!WARNING]
-> Only use this rule if you're managing your devices with [Intune](/mem/intune) or another MDM solution. This rule is incompatible with management through [Microsoft Endpoint Configuration Manager](/configmgr) because this rule blocks WMI commands the Configuration Manager client uses to function correctly.
+> Only use this rule if you're managing your devices with [Intune](/intune) or another MDM solution. This rule is incompatible with management through [Microsoft Configuration Manager](/intune/configmgr) because this rule blocks WMI commands the Configuration Manager client uses to function correctly.
 
 Intune name: `Process creation from PSExec and WMI commands`
 
@@ -590,9 +587,6 @@ Advanced hunting action type:
 - `AsrSafeModeRebootWarnBypassed`
 
 Dependencies: Microsoft Defender Antivirus
-
-> [!NOTE]
-> Currently, Threat and Vulnerability Management doesn't recognize this rule, so the Attack Surface Reduction rule report shows it as "Not applicable."
 
 ### Block untrusted and unsigned processes that run from USB
 
@@ -634,9 +628,6 @@ Advanced hunting action type:
 
 Dependencies: Microsoft Defender Antivirus
 
-> [!NOTE]
-> Currently, Threat and Vulnerability Management doesn't recognize this rule, so the Attack Surface Reduction rule report shows it as "Not applicable."
-
 ### Block Webshell creation for Servers
 
 This rule blocks web shell script creation on Microsoft Server, Exchange Role. A web shell script is a crafted script that allows an attacker to control the compromised server. 
@@ -651,8 +642,6 @@ Dependencies: Microsoft Defender Antivirus
 
 > [!NOTE]
 > When you manage ASR rules using Microsoft Defender for Endpoint security settings management, you need to configure the **Block Webshell creation for Servers** setting as `Not Configured` in Group Policy or other local settings. If this rule is set to any other value (such as `Enabled` or `Disabled`), it could cause conflicts and prevent the policy from applying correctly through security settings management.
->
-> Currently, Threat and Vulnerability Management doesn't recognize this rule, so the Attack Surface Reduction rule report shows it as "Not applicable."
 
 ### Block Win32 API calls from Office macros
 
@@ -708,6 +697,4 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-- [Troubleshoot attack surface reduction rules](/defender-endpoint/troubleshoot-asr)
-
-
+- [Troubleshoot attack surface reduction rules](troubleshoot-asr.md)

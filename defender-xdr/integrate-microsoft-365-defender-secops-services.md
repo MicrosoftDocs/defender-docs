@@ -2,20 +2,13 @@
 title: Step 3. Plan for Microsoft Defender XDR integration with your SOC catalog of services
 description: The basics of integrating Microsoft Defender XDR into your security operations catalog of services.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - msftsolution-secops
   - tier3
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 05/09/2023
 ---
 

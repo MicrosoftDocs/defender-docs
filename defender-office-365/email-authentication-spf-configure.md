@@ -1,17 +1,11 @@
 ---
 title: Set up SPF identify valid email sources for your Microsoft 365 domain
-f1.keywords:
-  - CSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 09/17/2025
-audience: ITPro
 ms.topic: how-to
 
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 71373291-83d2-466f-86ea-fc61493743a6
 ms.collection:
   - m365-security
@@ -21,7 +15,7 @@ ms.custom:
 description: Learn how to update a Domain Name Service (DNS) record to use Sender Policy Framework (SPF) with your custom domain in Office 365.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As an IT administrator responsible for email deliverability and security, I want to understand how SPF works and how to configure it to protect my organization's email reputation.
@@ -78,7 +72,7 @@ v=spf1 <valid mail sources> <enforcement rule>
 Or:
 
 ```text
-v=spf1 [<ip4>|<ip6>:<PublicIPAddress1> <ip4>|<ip6>:<PublicIPAddress2>... <ip4>|<ip6>:<PublicIPAddressN>] [include:<DomainName1> include:<DomainName1>... include:<DomainNameN>] <-all | ~all>
+v=spf1 [<ip4>|<ip6>:<PublicIPAddress1> <ip4>|<ip6>:<PublicIPAddress2>... <ip4>|<ip6>:<PublicIPAddressN>] [include:<DomainName1> include:<DomainName2>... include:<DomainNameN>] <-all | ~all>
 ```
 
 For example:

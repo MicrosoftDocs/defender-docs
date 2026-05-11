@@ -17,12 +17,16 @@ Key points:
 - Private data is encrypted using AES-128 with a dedicated key per tenant.
 - Resolving usernames is done ad-hoc, per-username by deciphering a given encrypted username.
 - Anonymization capabilities aren't supported when using the "Defender for Cloud Apps Proxy" stream.
+- As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Cloud discovery data anonymization uses a separate data pipeline that isn't yet integrated with the [Identity inventory](/defender-for-identity/identity-inventory). Correlations defined in the Identity inventory don't affect anonymization. For a full list of affected features, see [Enable Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration).
 
 ## Prerequisites
 
 To resolve (deanonymize) usernames in Cloud Discovery data:
 
 - You must have the [Cloud Discovery global admin](manage-admins.md#built-in-admin-roles-in-defender-for-cloud-apps) role with anonymization permissions enabled during role assignment.
+
+> [!NOTE]
+> Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## How data anonymization works
 
@@ -90,7 +94,7 @@ To resolve (deanonymize) usernames in Cloud Discovery data:
 1. The action is audited in the portal's **Audit log**.
 
 > [!NOTE]
-> Starting October,2025 - **Resolve Anonymization** actions are no longer part of **Governance logs**. Instead, they will be audited in the **Activity log** only.
+> Starting October, 2025 - **Resolve Anonymization** actions are no longer part of **Governance logs**. Instead, they will be audited in the **Activity log** only.
 
 
 

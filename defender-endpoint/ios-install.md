@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune
 ms.reviewer:
 description: Describes how to deploy Microsoft Defender for Endpoint on iOS using an app.
@@ -6,25 +6,21 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
 ms.topic: install-set-up-deploy
 ms.subservice: ios
-search.appverid: met150
 ms.date: 03/28/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune
 
-
-This article describes deploying the Defender for Endpoint on iOS (using the Microsoft Defender app) with Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll iOS/iPadOS devices in Intune](/mem/intune/enrollment/ios-enroll).
+This article describes deploying the Defender for Endpoint on iOS (using the Microsoft Defender app) with Microsoft Intune Company Portal enrolled devices. For more information about Microsoft Intune device enrollment, see [Enroll iOS and iPadOS devices in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados).
 
 ## Before you begin
 
@@ -119,7 +115,7 @@ Configure supervised mode for the Microsoft Defender app through an App configur
 
 1. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 
-1. On the **Assignments** page, select the groups that receive this profile. For this scenario, it's best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
+1. On the **Assignments** page, select the groups that receive this profile. For this scenario, it's best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](/intune/intune-service/configuration/device-profile-assign).
 
    When deploying to user groups, users must sign in to their devices before the policy is applied.
 
@@ -168,7 +164,7 @@ Administrators can automate onboarding to Defender for Endpoint for users in two
 
 Administrators can set up Microsoft Defender for Endpoint for silent deployment and activation. In this process, the administrator creates a deployment profile, and the user is notified of the installation. Defender for Endpoint is then automatically installed without requiring the user to open the app. Follow the steps in this article to configure zero-touch or silent deployment of Defender for Endpoint on enrolled iOS devices:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** \> **Configuration Profiles** \> **Create Profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** \> **Manage devices** \> **Configuration** \> **Policies** \> **Create** \> **New Policy**.
 
 1. Choose **Platform** as **iOS/iPadOS**, **Profile type** as **Templates** and **Template name** as **VPN**. Select **Create**.
 
@@ -182,7 +178,7 @@ Administrators can set up Microsoft Defender for Endpoint for silent deployment 
    - VPN identifier: `com.microsoft.scmx`
    - In the key-value pairs, enter the key `SilentOnboard` and set the value to `True`.
    - Type of Automatic VPN: `On-demand VPN`
-   - Select **Add** for **On Demand Rules**, and then select **I want to do the following: Establish VPN**, and then set **I want to restrict to: All domains**.
+   - Select **Add** for **On Demand Rules**, and then select **I want to do the following: Connect VPN**, and then set **I want to restrict to: All domains**.
 
    :::image type="content" source="media/ios-deploy-9.png" alt-text="The VPN profile Configuration page" lightbox="media/ios-deploy-9.png":::
 
@@ -271,9 +267,9 @@ Microsoft Defender app can be deployed to iOS devices with Intune User Enrolled 
 
 ### Admin
 
-1. Set up User Enrollment Profile in Intune. Intune supports account driven Apple User Enrollment and Apple User Enrollment with Company Portal. Read more about the [comparison](/mem/intune/enrollment/ios-user-enrollment-supported-actions#apple-user-enrollment-methods) of the two methods and select one.
-   - [Set up user enrollment with Company Portal](/mem/intune/enrollment/apple-user-enrollment-with-company-portal)
-   - [Set up account driven user enrollment](/mem/intune/enrollment/apple-account-driven-user-enrollment)
+1. Set up User Enrollment Profile in Intune. Intune supports account driven Apple User Enrollment and Apple User Enrollment with Company Portal. Read more about the [comparison](/intune/intune-service/enrollment/ios-user-enrollment-supported-actions#apple-user-enrollment-methods) of the two methods and select one.
+   - [Set up user enrollment with Company Portal](/intune/intune-service/enrollment/apple-user-enrollment-with-company-portal)
+   - [Set up account driven user enrollment](/intune/intune-service/enrollment/apple-account-driven-user-enrollment)
 
 1. Set up SSO Plugin. Authenticator app with SSO extension is a prerequisite for user enrollment in an iOS device.
     - Create a Device configuration Profile in Intune. See [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin). 
@@ -303,7 +299,7 @@ The Microsoft Defender app is installed into the users' devices. Each user signs
 - Zero touch (silent) deployment and auto onboarding of VPN isn't supported with User Enrollment since Administrators can't push a device wide VPN profile with User Enrollment.
 - For vulnerability management of apps, only apps in the work profile are visible.
 - It can take up to 10 minutes for newly onboarded devices to become compliant if targeted by compliance policies.  
-- For more information, see [User Enrollment limitations and capabilities](/mem/intune/enrollment/ios-user-enrollment-supported-actions#limitations-and-capabilities-not-supported).
+- For more information, see [User Enrollment limitations and capabilities](/intune/intune-service/enrollment/ios-user-enrollment-supported-actions#limitations-and-capabilities-not-supported).
 
 ## Complete onboarding and check status
 
@@ -324,5 +320,3 @@ The Microsoft Defender app is installed into the users' devices. Each user signs
 
 - [Configure app protection policy to include Defender for Endpoint risk signals (MAM)](ios-install-unmanaged.md)
 - [Configure Defender for Endpoint on iOS features](ios-configure-features.md)
-
-

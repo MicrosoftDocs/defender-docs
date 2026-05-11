@@ -1,4 +1,4 @@
-﻿---
+---
 title: Enable and configure Microsoft Defender Antivirus always-on protection
 description: Enable and configure Microsoft Defender Antivirus real-time protection features such as behavior monitoring, heuristics, and machine learning.
 ms.service: defender-endpoint
@@ -9,13 +9,11 @@ ms.author: chrisda
 ms.reviewer: yongrhee
 ms.topic: how-to
 ms.date: 10/20/2025
-manager: bagol
 ms.custom: nextgen
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -40,7 +38,7 @@ Always-on protection consists of real-time protection, behavior monitoring, and 
 
 ## Manage antivirus settings with Microsoft Intune
 
-You can use Intune to configure antivirus policies, and then apply those policies across devices in your organization. Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices. Each antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender Antivirus for macOS and Windows devices, or for the user experience in the Windows Security app on Windows devices. For more information, see [Antivirus policy for endpoint security in Intune](/mem/intune/protect/endpoint-security-antivirus-policy).
+You can use Intune to configure antivirus policies, and then apply those policies across devices in your organization. Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices. Each antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender Antivirus for macOS and Windows devices, or for the user experience in the Windows Security app on Windows devices. For more information, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
 1. Go to the [Intune admin center](https://intune.microsoft.com/) and sign in.
 
@@ -50,15 +48,15 @@ You can use Intune to configure antivirus policies, and then apply those policie
 
    | Task | What to do |
    |---|---|
-   | Create a new policy for Windows devices | 1. In the **Create a profile** step, in the **Platform** list, select **Windows 10, Windows 11, and Windows Server**. For **Profile**, select **Microsoft Defender Antivirus**. Then choose **Create**.<br/><br/>2. On the **Basics** step, type a name and description for your policy, and then choose **Next**.<br/><br/>3. On the **Configuration settings** step, expand **Defender**, select the settings you want to use for your policy, and then choose **Next**. To get help with your settings, refer to [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx). <br/><br/>4. On the **Scope tags** step, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile, and then select **Next** to continue.<br/><br/>5. On the **Assignments** page, select the groups to receive this profile, and then select **Next**. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).<br/><br/>6. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.  |
-   | Create a new policy for macOS devices | 1. In the **Create a profile** step, in the **Platform** list, select **macOS**. For **Profile**, select **Antivirus**. Then choose **Create**.<br/><br/>2. On the **Basics** step, type a name and description for your policy, and then choose **Next**.<br/><br/>3. On the **Configuration settings** step, select the settings you want to use for your policy, and then choose **Next**. To get help with your settings, refer to [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).<br/><br/>4. On the **Scope tags** step, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile, and then select **Next** to continue.<br/><br/>5. On the **Assignments** page, select the groups to receive this profile, and then select **Next**. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).<br/><br/>6. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.  |
+   | Create a new policy for Windows devices | 1. In the **Create a profile** step, in the **Platform** list, select **Windows 10, Windows 11, and Windows Server**. For **Profile**, select **Microsoft Defender Antivirus**. Then choose **Create**.<br/><br/>2. On the **Basics** step, type a name and description for your policy, and then choose **Next**.<br/><br/>3. On the **Configuration settings** step, expand **Defender**, select the settings you want to use for your policy, and then choose **Next**. To get help with your settings, refer to [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx). <br/><br/>4. On the **Scope tags** step, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile, and then select **Next** to continue.<br/><br/>5. On the **Assignments** page, select the groups to receive this profile, and then select **Next**. For more information on assigning profiles, see [Assign user and device profiles](/intune/intune-service/configuration/device-profile-assign).<br/><br/>6. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.  |
+   | Create a new policy for macOS devices | 1. In the **Create a profile** step, in the **Platform** list, select **macOS**. For **Profile**, select **Antivirus**. Then choose **Create**.<br/><br/>2. On the **Basics** step, type a name and description for your policy, and then choose **Next**.<br/><br/>3. On the **Configuration settings** step, select the settings you want to use for your policy, and then choose **Next**. To get help with your settings, refer to [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).<br/><br/>4. On the **Scope tags** step, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile, and then select **Next** to continue.<br/><br/>5. On the **Assignments** page, select the groups to receive this profile, and then select **Next**. For more information on assigning profiles, see [Assign user and device profiles](/intune/intune-service/configuration/device-profile-assign).<br/><br/>6. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.  |
    | Edit an existing policy for Windows devices | 1. Select an antivirus policy for Windows devices. <br/><br/>2. Next to **Configuration settings**, choose **Edit**. <br/><br/>3. Expand **Defender**, and then edit settings for your policy. To get help with your settings, refer to [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx). <br/><br/>4. select **Review + save**, and then select **Save**.  |
    | Edit an existing policy for macOS devices | 1. Select an antivirus policy for macOS devices. <br/><br/>2. Select **Properties**, and then, next to **Configuration settings**, choose **Edit**. <br/><br/>3. Under **Microsoft Defender for Endpoint**, edit settings for your policy. To get help with your settings, refer to [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).<br/><br/>4. select **Review + save**, and then select **Save**.  |
 
 ## Are you using Group Policy?
 
 > [!IMPORTANT]
-> We recommend using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. With Intune, you can control where tamper protection is enabled (or disabled) through policies. You can also protect Microsoft Defender Antivirus exclusions. For more information, see [Protect Microsoft Defender Antivirus exclusions from tampering](prevent-changes-to-security-settings-with-tamper-protection.md#protect-microsoft-defender-antivirus-exclusions).
+> We recommend using [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) to manage Microsoft Defender Antivirus settings for your organization. With Intune, you can control where tamper protection is enabled (or disabled) through policies. You can also protect Microsoft Defender Antivirus exclusions. For more information, see [Protect Microsoft Defender Antivirus exclusions from tampering](prevent-changes-to-security-settings-with-tamper-protection.md#protect-microsoft-defender-antivirus-exclusions).
 
 You can use Group Policy to manage some Microsoft Defender Antivirus settings. If [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled in your organization, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. You can't turn off tamper protection by using Group Policy. 
 
@@ -137,7 +135,7 @@ For the most current settings, get the latest ADMX files in your central store. 
 If you're looking for antivirus-related information for other platforms, see:
 - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-- [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+- [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)

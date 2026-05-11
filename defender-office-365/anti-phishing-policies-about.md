@@ -1,11 +1,7 @@
 ---
 title: Anti-phishing policies in Microsoft 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.assetid: 5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578
@@ -14,12 +10,11 @@ ms.collection:
   - tier2
 ms.custom: 
   - seo-marvel-apr2020
-description: Admins can learn about the anti-phishing policies that are available in the default email protections for cloud mailboxes and in Microsoft Defender for Office 365.
+description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-search.appverid: met150
-ms.date: 01/25/2026
+ms.date: 04/14/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent:As a security administrator, I need clear, step‑by‑step guidance for configuring anti‑phishing policies—especially spoofing and impersonation protections—so I can protect users and minimize false positives.
@@ -160,8 +155,8 @@ The relationship between spoof intelligence and whether sender DMARC policies ar
 
 |&nbsp;|Honor DMARC policy On|Honor DMARC policy Off|
 |---|---|---|
-|**Spoof intelligence On**|Separate actions for implicit and explicit email authentication failures: <ul><li><u>Implicit failures</u>: Use the **If the message is detected as spoof by spoof intelligence** action in the anti-phishing policy.</li><li><u>Explicit failures</u>: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.</li></ul></li></ul>|The **If the message is detected as spoof by spoof intelligence** action in the anti-phishing policy is used for both implicit and explicit email authentication failures. Explicit email authentication failures ignore `p=quarantine`, `p=reject`, `p=none`, or other values in the DMARC policy.|
-|**Spoof intelligence Off**|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: The message isn't identified as spoofing by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.</li></ul>|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Messages are quarantined.</li><li>DMARC policy `p=reject`: Messages are quarantined.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.|
+|**Spoof intelligence On**|Separate actions for implicit and explicit email authentication failures: <ul><li><u>Implicit failures</u>: Use the **If the message is detected as spoof by spoof intelligence** action (**_AuthenticationFailAction_**) in the anti-phishing policy.</li><li><u>Explicit failures</u>: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.</li></ul></li></ul>|The **If the message is detected as spoof by spoof intelligence** action (**_AuthenticationFailAction_**) in the anti-phishing policy is used for both implicit and explicit email authentication failures. Explicit email authentication failures ignore `p=quarantine`, `p=reject`, `p=none`, or other values in the DMARC policy.|
+|**Spoof intelligence Off**|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`: Use the **If the message is detected as spoof and DMARC policy is set as p=quarantine** action in the anti-phishing policy.</li><li>DMARC policy `p=reject`: Use the **If the message is detected as spoof and DMARC policy is set as p=reject** action in the anti-phishing policy.</li><li>DMARC policy `p=none`: The message isn't identified as spoofing by Microsoft 365, but other protection features in the filtering stack are still able to act on the message.</li></ul>|Implicit email authentication checks aren't used. <br/><br/> Explicit email authentication failures: <ul><li>DMARC policy `p=quarantine`, `p=reject`: Use the **If the message is detected as spoof by spoof intelligence** action (**_AuthenticationFailAction_**) in the anti-phishing policy.</li><li>DMARC policy `p=none`: Microsoft 365 takes no action based on DMARC, but other protection features in the filtering stack are still able to act on the message.|
 
 > [!NOTE]
 > If the MX record for the Microsoft 365 domain points to a non-Microsoft service or device that sits in front of Microsoft 365, the **Honor DMARC policy** setting is applied only if [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) is enabled for the connector that receives inbound messages.

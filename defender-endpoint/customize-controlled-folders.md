@@ -1,20 +1,17 @@
-﻿---
+---
 title: Customize controlled folder access
 description: Add other folders that should be protected by controlled folder access, or allow apps that are incorrectly blocking changes to important files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
-manager: bagol
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -106,7 +103,7 @@ You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobil
 
 ### Use MDM CSPs to protect additional folders
 
-Use the [./Vendor/MSFT/Policy/Config/Defender/GuardedFoldersList](/windows/client-management/mdm/policy-csp-defender#defender-guardedfolderslist) configuration service provider (CSP) to allow apps to make changes to protected folders.
+Use the [./Device/Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessprotectedfolders) configuration service provider (CSP) to specify additional folders that should be protected by the Controlled folder access feature.
 
 ## Allow specific apps to make changes to controlled folders
 

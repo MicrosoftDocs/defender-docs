@@ -2,21 +2,14 @@
 title: Alert classification for suspicious IP address related to password spraying activity
 description: Investigate and review alerts related to suspicious IP address related to password spraying activity and take recommended actions to protect your network.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - met150
 ms.date: 04/18/2025
 appliesto:
   - Microsoft Defender XDR
@@ -45,7 +38,7 @@ This section contains step-by-step guidance to respond to the alert and take the
 
 Here's an example of a password spray alert in the alert queue:
 
-:::image type="content" source="media/alert-classification-suspicious-ip-password-spray/fig1-password-spray-alert.png" alt-text="Screenshot of Microsoft Defender 365 alert." lightbox="media/alert-classification-suspicious-ip-password-spray/fig1-password-spray-alert.png":::
+:::image type="content" source="media/alert-grading-playbook-password-spray/fig1-password-spray-alert.png" alt-text="Screenshot of Microsoft Defender 365 alert." lightbox="media/alert-grading-playbook-password-spray/fig1-password-spray-alert.png":::
 
 This means there's suspicious user activity originating from an IP address that might be associated with a brute-force or password spray attempt according to threat intelligence sources.
 
@@ -61,7 +54,7 @@ This means there's suspicious user activity originating from an IP address that 
 
   - **Are legacy protocols used?** Using protocols like POP3, IMAP, and SMTP might indicate an attempt to perform a password spray attack. Finding `Unknown(BAV2ROPC)` in the user agent (Device type) in the [Activity log](/defender-cloud-apps/activity-filters#ip-address-insights) indicates use of legacy protocols. You can refer to the example below when looking at the Activity log. This activity must be further correlated to other activities.
 
-    :::image type="content" source="media/alert-classification-suspicious-ip-password-spray/fig2-password-spray-alert.png" alt-text="Screenshot of Microsoft Defender 365 interface showing the Device type." lightbox="media/alert-classification-suspicious-ip-password-spray/fig2-password-spray-alert.png":::
+    :::image type="content" source="media/alert-grading-playbook-password-spray/fig2-password-spray-alert.png" alt-text="Screenshot of Microsoft Defender 365 interface showing the Device type." lightbox="media/alert-grading-playbook-password-spray/fig2-password-spray-alert.png":::
 
     _Figure 1. The Device type field shows `Unknown(BAV2ROPC)` user agent in Microsoft Defender XDR._
 

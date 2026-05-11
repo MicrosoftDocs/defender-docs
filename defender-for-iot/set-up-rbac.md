@@ -2,7 +2,7 @@
 title: Permissions needed for the site security feature of Microsoft Defender for IoT in the Defender portal
 description: This article describes the permissions required for the site security feature of Microsoft Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 07/23/2024
@@ -34,7 +34,7 @@ There are three ways to manage user access to the Defender portal, depending on 
 - [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac): Use Defender unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 - [Microsoft Defender for Endpoint XDR RBAC](/defender-endpoint/user-roles): Use Defender for Endpoint XDR role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
-The instructions and permission settings listed in this article apply to both Defender unified and Microsoft Defender for Endpoint XDR RBAC.
+The instructions and permission settings listed in this article apply to both Defender unified RBAC and Microsoft Defender for Endpoint XDR RBAC.
 
 ## Set up Defender unified RBAC roles for site security
 

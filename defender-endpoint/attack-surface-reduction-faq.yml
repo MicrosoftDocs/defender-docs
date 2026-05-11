@@ -6,10 +6,9 @@ metadata:
   ms.subservice: asr
   ms.localizationpriority: medium
   audience: ITPro
-  author: batamig
-  ms.author: bagol
+  author: chrisda
+  ms.author: chrisda
   ms.reviewer: sugamar 
-  manager: bagol
   ms.custom: asr
   ms.topic: faq
   ms.collection: 
@@ -53,7 +52,7 @@ sections:
       - question: |
           What are the currently supported attack surface reduction rules?
         answer: |
-          Attack surface reduction currently supports all of the rules below.
+          Attack surface reduction supports all of the rules below.
 
       - question: |
           What rules to enable? All, or can I turn on individual rules?
@@ -72,7 +71,7 @@ sections:
           - Most attack surface reduction rules exclusions are independent from Microsoft Defender Antivirus exclusions. However, Microsoft Defender Antivirus exclusions do apply to some attack surface reduction rules. See [Attack surface reduction rules reference - Microsoft Defender Antivirus exclusions and attack surface reduction rules](attack-surface-reduction-rules-reference.md#microsoft-defender-antivirus-exclusions-and-asr-rules).
           - Wildcards can't be used to define a drive letter.
           - If you want to exclude more than one folder, in a path, use multiple instances of ```\*\``` to indicate multiple nested folders (for example, ```c:\Folder\*\*\Test```)
-          - Microsoft Endpoint Configuration Manager supports wildcards (* or? ).
+          - Microsoft Configuration Manager supports wildcards (* or? ).
           - If you want to exclude a file that contains random characters (automated file generation), you can use the '?' symbol (for example, ```C:\Folder\fileversion?.docx```)
           - Attack surface reduction exclusions in Group Policy don't support quotes (the engine natively handles long path, spaces, etc., so there's no need to use quotes).
           - Attack surface reduction rules run under NT AUTHORITY\SYSTEM account, so environmental variables are limited to machine variables.
@@ -102,7 +101,7 @@ sections:
       - question: |
           What are the rules Microsoft recommends enabling?
         answer: |
-          We recommend enabling every possible rule. However, there are some cases where you shouldn't enable a rule. For example, we don't recommend enabling the Block process creations originating from PSExec and WMI commands rule, if you're using Microsoft Endpoint Configuration Manager (or, System Center Configuration Manager - SCCM) to manage your endpoints.
+          We recommend enabling every possible rule. However, there are some cases where you shouldn't enable a rule. For example, we don't recommend enabling the Block process creations originating from PSExec and WMI commands rule if you're using Microsoft Configuration Manager to manage your endpoints.
 
           We highly recommend you that you read each rule-specific information and/or warnings, which are available in our
           [public documentation](attack-surface-reduction.md).

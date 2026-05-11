@@ -10,12 +10,10 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 01/09/2025
 ms.reviewer: joshbregman
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 ---
 
 # Exclusions overview 
@@ -64,7 +62,7 @@ If you're getting alerts in the Microsoft Defender portal for tools or processes
 
 To learn more, see the following articles:
 
-- [Suppress alerts](manage-alerts.md#suppress-alerts)
+- [Suppress alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules)
 - [Tech Community Blog: Introducing the new alert suppression experience](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/introducing-the-new-alert-suppression-experience/ba-p/3562719) (for Defender for Endpoint)
 
 ## Types of exclusions
@@ -92,8 +90,8 @@ The following table summarizes types of custom exclusions that you can define. N
 |[Defender for Endpoint attack surface reduction exclusions](#attack-surface-reduction-exclusions) | Attack surface reduction rules|An attack surface reduction rule causes unexpected behavior. |
 |[Defender for Endpoint automation folder exclusions](#automation-folder-exclusions) | Automated investigation and response|Automated investigation and remediation take action on a file, extension, or directory that should be done manually.|
 |[Defender for Endpoint controlled folder access exclusions](#controlled-folder-access-exclusions) | Controlled folder access|Controlled folder access blocks an application from accessing a protected folder.|
-|[Defender for Endpoint File and Certificate Allow Indicators](/defender-endpoint/indicator-certificates)| Antivirus<br/>Attack surface reduction rules<br/>Controlled folder access |A file or process signed by a certificate is identified as malicious even through it's not.|
-|[Defender for Endpoint Domain/URL and IP address Indicators](/defender-endpoint/indicator-ip-domain) | Network Protection<br/>SmartScreen<br/>Web Content Filtering | SmartScreen reports a false positive. <br/><br/>You want to override a Web Content Filtering block on a specific site.|
+|[Defender for Endpoint File and Certificate Allow Indicators](indicator-certificates.md)| Antivirus<br/>Attack surface reduction rules<br/>Controlled folder access |A file or process signed by a certificate is identified as malicious even through it's not.|
+|[Defender for Endpoint Domain/URL and IP address Indicators](indicator-ip-domain.md) | Network Protection<br/>SmartScreen<br/>Web Content Filtering | SmartScreen reports a false positive. <br/><br/>You want to override a Web Content Filtering block on a specific site.|
 
 
 > [!NOTE]
@@ -121,9 +119,9 @@ For more information, see [Configure and validate exclusions for Microsoft Defen
 
 #### Exclusions on Windows
 
-Microsoft Defender Antivirus can be configured to exclude combinations of processes, files, and extensions from scheduled scans, on-demand scans, and real-time protection. See [Configure custom exclusions for Microsoft Defender Antivirus](/defender-endpoint/configure-exclusions-microsoft-defender-antivirus).
+Microsoft Defender Antivirus can be configured to exclude combinations of processes, files, and extensions from scheduled scans, on-demand scans, and real-time protection. See [Configure custom exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md).
 
-For more granular control that helps minimize protection gaps, consider using [Contextual file and process exclusions](/defender-endpoint/configure-contextual-file-folder-exclusions-microsoft-defender-antivirus).  
+For more granular control that helps minimize protection gaps, consider using [Contextual file and process exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md).  
 
 ### Antivirus preconfigured exclusions
 

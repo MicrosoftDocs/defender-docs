@@ -1,13 +1,10 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint Network protection demonstrations
 description: Shows how Network protection prevents employees from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2

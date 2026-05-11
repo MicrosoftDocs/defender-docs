@@ -1,17 +1,13 @@
 ---
 title: Visit the Microsoft Defender portal
 description: Your security center in Defender for Business is the Microsoft Defender portal. Learn how to navigate the portal, and see your next steps.
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: get-started
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 07/03/2024
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
@@ -44,7 +40,7 @@ Use the navigation bar on the left side of the screen to access your incidents, 
 |**Assets** \> **Devices**|Device inventory view, where you can view devices, such as computers and mobile devices that are enrolled in [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune). If no devices are onboarded yet, you can select **Onboard devices** to get started. For more information, see [Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md).|
 |**Endpoints** \> **Vulnerability management**|Access your [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. Provides a dashboard, recommendations, remediation activities, a software inventory, and a list of potential weaknesses within your company.|
 |**Endpoints** \> **Configuration management** \> **Device configuration**|Lists your security policies by operating system and by type. For more information about your security policies, see [View or edit policies in Defender for Business](mdb-view-edit-create-policies.md).|
-|**Email & collaboration** \> **Policies & rules**|This section isn't available in the standalone version of Defender for Business. <br/><br/> If your subscription includes Exchange Online mailboxes, Exchange Online Protection (EOP) for on-premises email environments, or Microsoft Defender for Office 365, this section is where you manage your threat policies and settings for email and collaboration services. For more information, see [Microsoft Defender for Office 365 overview](/defender-office-365/mdo-about). <br/><br/> Microsoft 365 Business Premium includes Exchange Online mailboxes and Defender for Office 365 Plan 1.|
+|**Email & collaboration** \> **Policies & rules**|This section isn't available in the standalone version of Defender for Business. <br/><br/> If your subscription includes the [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about) or Microsoft Defender for Office 365, this section is where you manage your threat policies and settings for email and collaboration services. [Learn more about Office 365 security](/defender-office-365/mdo-about). <br/><br/> Microsoft 365 Business Premium includes the built-in security features for all cloud mailboxes and Defender for Office 365 Plan 1.|
 |**Reports**|Available security reports. These reports enable you to see your security trends, view details about threat detections and alerts, and learn more about your company's vulnerable devices.|
 |**Health**|View your service health status and plan for upcoming changes. <ul><li>Select **Service health** to view the health status of the Microsoft 365 services that are included in your company's subscription.</li><li>Select **Message center** to learn about planned changes and what to expect.</li></ul>|
 |**Permissions**|Assign permissions to the people in your company: <ul><li>Manage security and view incidents and reports in the Microsoft Defender portal.</li><li>Set up and manage device groups to onboard devices and assign threat protection policies.</li></ul>|

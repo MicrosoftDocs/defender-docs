@@ -1,18 +1,15 @@
-﻿---
+---
 title: Manage Microsoft Defender for Endpoint suppression rules
 description: You might need to prevent alerts from appearing in the portal by using suppression rules. Learn how to manage your suppression rules in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 ms.date: 06/25/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -23,7 +20,7 @@ appliesto:
 
 
 
-There might be scenarios where you need to suppress alerts from appearing in the portal. You can create suppression rules for specific alerts that are known to be innocuous such as known tools or processes in your organization. For more information on how to suppress alerts, see [Suppress alerts](manage-alerts.md).
+There might be scenarios where you need to suppress alerts from appearing in the portal. You can create suppression rules for specific alerts that are known to be innocuous such as known tools or processes in your organization. For more information on how to suppress alerts, see [Suppress alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts).
 
 You can view a list of all the suppression rules and manage them in one place. You can also turn an alert suppression rule on or off.
 
@@ -47,7 +44,7 @@ You can view a list of all the suppression rules and manage them in one place. Y
 
 ## Related topics
 
-- [Manage alerts](manage-alerts.md)
+- [Manage alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 
 
 

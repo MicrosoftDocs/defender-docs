@@ -1,12 +1,10 @@
-﻿---
+---
 title: Security Operations Guide for Defender for Endpoint
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov
-manager: bagol
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/26/2025
-audience: ITPro
 ms.topic: concept-article
 author: limwainstein
 ms.author: lwainstein
@@ -18,7 +16,6 @@ ms.subservice: ngp
 ms.collection:
 - m365-security
 - tier2
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -138,16 +135,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 Review the following articles to understand recently released updates:
 
 - [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
-
-- [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on Mac](mac-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on Android](android-whatsnew.md)
+- [Microsoft Defender for Endpoint versions](microsoft-defender-endpoint-releases.md)
 
 ### Security administration team
 
@@ -181,7 +169,7 @@ These tasks are seen as maintenance for your security posture and are critical f
 
 - **Review alerts suppression**
 
-    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. See [Review alerts suppression](manage-alerts.md).
+    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. See [Review alerts suppression](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules).
 
 ## Troubleshooting
 

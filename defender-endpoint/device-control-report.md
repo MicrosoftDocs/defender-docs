@@ -1,4 +1,4 @@
-﻿---
+---
 title: View device control events and information in Microsoft Defender for Endpoint
 description: Monitor your organization's data security through device control reports.
 ms.service: defender-endpoint
@@ -7,15 +7,11 @@ ms.date: 06/25/2024
 ms.author: lwainstein
 author: limwainstein
 ms.topic: article
-manager: bagol
-ms.reviewer: joshbregman
-audience: ITPro
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -117,7 +113,7 @@ When you select an event, an **Event information** details flyout opens to show 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/devicecontrolreportfilter.png" alt-text="The Filter On Device Control Report page" lightbox="media/devicecontrolreportfilter.png":::
 
-To see real-time activity for this media across the organization, select :::image type="icon" source="media/m365-cc-sc-no-icon.png" border="false"::: **Open Advanced hunting** at the top of the flyout. This includes an embedded, predefined query.
+To see real-time activity for this media across the organization, select :::image type="icon" source="media/defender-portal-icon-no.png" border="false"::: **Open Advanced hunting** at the top of the flyout. This includes an embedded, predefined query.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/Devicecontrolreportquery.png" alt-text="The Query On Device Control Report page" lightbox="media/Devicecontrolreportquery.png":::
@@ -135,7 +131,6 @@ There might be a delay of up to six hours from the time a media connection occur
 > When you export data, such as a list of events, from the device control report to Excel, up to 500 events are exported. However, if your organization is using Microsoft Sentinel, you can integrate Defender for Endpoint with Sentinel so that all incidents and alerts are streamed. For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender).
 
 ---
-
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 05/08/2025
+ms.date: 02/04/2026
 ms.topic: troubleshooting
 ms.reviewer: rlitinsky
 ---
@@ -122,10 +122,10 @@ In the following example, the "DigiCert Global Root G2" certificate is for comme
 
 ```powershell
 # Certificate for commercial customers
-Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "df3c24f9bfd666761b268073fe06d1cc8d4f82a4"} | fl
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"} | fl
 
 # Certificate for US Government GCC High customers
-Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "a8985d3a65e5e5c4b2d7d66d40c6dd2fb19c5436"} | fl
+Get-ChildItem -Path "Cert:\LocalMachine\Root" | where { $_.Thumbprint -eq "BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11"} | fl
 ```
 
 Output for certificate for commercial customers certificate:
@@ -133,7 +133,7 @@ Output for certificate for commercial customers certificate:
 ```Output
 Subject      : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
 Issuer       : CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US
-Thumbprint   : DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
+Thumbprint   : AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 FriendlyName : DigiCert Global Root G2
 NotBefore    : 01/08/2013 15:00:00
 NotAfter     : 15/01/2038 14:00:00
@@ -145,7 +145,7 @@ Output for certificate for US Government GCC High customers:
 ```Output
 Subject      : CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
 Issuer       : CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
-Thumbprint   : A8985D3A65E5E5C4B2D7D66D40C6DD2FB19C5436
+Thumbprint   : BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11
 FriendlyName : DigiCert
 NotBefore    : 11/9/2006 4:00:00 PM
 NotAfter     : 11/9/2031 4:00:00 PM
@@ -199,13 +199,13 @@ For Windows Operating systems 2008R2 and 2012, the Defender for Identity sensor 
 
 Suggested possible workarounds:
 
-- If hyper threading is on, turn it off. This may reduce the number of logical cores enough to avoid needing to run in **Multiprocessor Group** mode.
+- If hyper threading is on, turn it off. This might reduce the number of logical cores enough to avoid needing to run in **Multiprocessor Group** mode.
 
-- If your machine has less than 64 logical cores and is running on an HP host, you may be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
+- If your machine has less than 64 logical cores and is running on an HP host, you might be able to change the **NUMA Group Size Optimization** BIOS setting from the default of **Clustered** to **Flat**.
 
 ## VMware virtual machine sensor issue
 
-If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware.
+If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware Guest OS NIC and [MDI Sensor requirements](deploy/prerequisites-sensor-version-2.md#sensor-requirements-and-recommendations).
 
 To resolve the issue:
 
@@ -343,7 +343,7 @@ If during the sensor installation you receive the following error: **ApplyIntern
 ``2021-01-19 03:45:00.0000 Error CommunicationWebClient+\<SendWithRetryAsync\>d__9`1``
 ApplyInternal failed two way SSL connection to service.
 The issue can be caused by a proxy with SSL inspection enabled.
-[_workspaceApplicationSensorApiEndpoint=Unspecified/contoso.atp.azure.com:443 Thumbprint=7C039DA47E81E51F3DA3DF3DA7B5E1899B5B4AD0]`
+[_workspaceApplicationSensorApiEndpoint=Unspecified/contoso.atp.azure.com:443 Thumbprint=CC33DD44EE55FF66AA77BB88CC99DD00EE11FF22]`
 
 **Cause:**
 
@@ -470,9 +470,9 @@ The issue can come up when a Defender for Identity workspace license expires and
 
 **Cause:**
 
-Updating Microsoft Entra Connect may cause the Entra Connect sensor to lose previously configured database permissions. To investigate, check the Microsoft Defender logs for relevant indicators. Refer to [Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs](troubleshooting-using-logs.md) for log locations and further details.
+Updating Microsoft Entra Connect might cause the Entra Connect sensor to lose previously configured database permissions. To investigate, check the Microsoft Defender logs for relevant indicators. Refer to [Troubleshooting Microsoft Defender for Identity sensor using the Defender for Identity logs](troubleshooting-using-logs.md) for log locations and further details.
 
-Sample logs that may indicate the issue:
+Sample logs that might indicate the issue:
 
 `GetEntraConnectGlobalSettingsAsync GetEntraConnectGlobalSettingsAsync failed. Exception - The EXECUTE permission was denied on the object 'mms_get_globalsettings', database Contoso', schema 'dbo'`
 
@@ -480,7 +480,11 @@ Sample logs that may indicate the issue:
 
 **Resolution:**
 
-If permissions need to be reconfigured, please follow the steps outlined in this [guide](deploy/active-directory-federation-services.md).
+If permissions need to be reconfigured, follow the steps outlined in this [guide](deploy/active-directory-federation-services.md).
+
+## Auditing health alerts persist on sensor v3
+
+In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
 
 ## Next steps
 

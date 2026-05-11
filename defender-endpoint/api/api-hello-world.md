@@ -1,4 +1,4 @@
-﻿---
+---
 title: Hello World for Microsoft Defender for Endpoint API
 ms.reviewer:
 description: Create a practice 'Hello world'-style API call to the Microsoft Defender for Endpoint API.
@@ -6,8 +6,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -15,7 +13,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 01/08/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -102,41 +99,41 @@ For the Application registration stage, you must have an appropriate role assign
 
 Done! You've successfully registered an application!
 
-### Step 2 - Get a token using the App and use this token to access the API.
+### Step 2 - Get a token using the App and use this token to access the API
 
-- Copy the following script to PowerShell ISE or to a text editor, and save it as `Get-Token.ps1`.
-- Running this script generates a token and saves it in the working folder under the name `Latest-token.txt`.
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
 
-   ```powershell
-   # That code gets the App Context Token and save it to a file named "Latest-token.txt" under the current directory
-   # Paste below your Tenant ID, App ID and App Secret (App key).
+Copy the following script to PowerShell ISE or to a text editor, and save it as `Get-Token.ps1`. Running this script generates a token and saves it in the working folder under the name `Latest-token.txt`.
 
-   $tenantId = '' ### Paste your tenant ID here
-   $appId = '' ### Paste your Application ID here
-   $appSecret = '' ### Paste your Application secret here
+```powershell
+# This code gets the application context token and saves it to a file named "Latest-token.txt" in the current directory.
 
-   $resourceAppIdUri = 'https://api.security.microsoft.com/'
-   $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
-   $authBody = [Ordered] @{
-       resource = "$resourceAppIdUri"
-       client_id = "$appId"
-       client_secret = "$appSecret"
-       grant_type = 'client_credentials'
-   }
-   $authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -ErrorAction Stop
-   $token = $authResponse.access_token
-   Out-File -FilePath "./Latest-token.txt" -InputObject $token
-   return $token
-   ```
+$tenantId = '' ### Paste your tenant ID here
+$appId = '' ### Paste your Application (client) ID here
+$appSecret = '' ### Paste your Application secret (App key) here to test, and then store it in a safe place!
 
-- Sanity Check:
-  - Run the script.
-  - In your browser go to: <https://jwt.ms/>.
-  - Copy the token (the content of the Latest-token.txt file).
-  - Paste in the top box.
-  - Look for the "roles" section. Find the _Alert.Read.All_ role.
+$resourceAppIdUri = 'https://api.securitycenter.microsoft.com/'
+$oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
+$authBody = [Ordered] @{
+  resource = "$resourceAppIdUri"
+  client_id = "$appId"
+  client_secret = "$appSecret"
+  grant_type = 'client_credentials'
+}
+$authResponse = Invoke-RestMethod -Method Post -Uri $oAuthUri -Body $authBody -ErrorAction Stop
+$token = $authResponse.access_token
+Out-File -FilePath "./Latest-token.txt" -InputObject $token
+return $token
+```
 
-  :::image type="content" source="../media/api-jwt-ms.png" alt-text="The Decoded Token pane for jwt.ms" lightbox="../media/api-jwt-ms.png":::
+#### Validate the token
+
+1. Run the script to generate the `Latest-token.txt` file.
+2. In a web browser, open <https://jwt.ms/>, and then copy the token (the contents of the `Latest-token.txt`) in the **Enter token below** box.
+3. On the **Decoded token** tab, find the **roles** section, and verify it contains **Alert.Read.All** permissions as shown in the following image:
+
+:::image type="content" source="../media/api-jwt-ms.png" alt-text="Screenshot of jwt.ms showing a copied token and the decoded token with the Roles section and the Alert.Read.All permission highlighted." lightbox="../media/api-jwt-ms.png":::
 
 ### Let's get the Alerts!
 
@@ -144,48 +141,48 @@ Done! You've successfully registered an application!
 - Save this script in the same folder you saved the previous script `Get-Token.ps1`.
 - The script creates two files (json and csv) with the data in the same folder as the scripts.
 
-  ```powershell
-  # Returns Alerts created in the past 48 hours.
+```powershell
+# Returns Alerts created in the past 48 hours.
 
-  $token = ./Get-Token.ps1       #run the script Get-Token.ps1  - make sure you are running this script from the same folder of Get-Token.ps1
+$token = ./Get-Token.ps1       #run the script Get-Token.ps1  - make sure you are running this script from the same folder of Get-Token.ps1
 
-  # Get Alert from the last 48 hours. Make sure you have alerts in that time frame.
-  $dateTime = (Get-Date).ToUniversalTime().AddHours(-48).ToString("o")
+# Get Alert from the last 48 hours. Make sure you have alerts in that time frame.
+$dateTime = (Get-Date).ToUniversalTime().AddHours(-48).ToString("o")
 
-  # The URL contains the type of query and the time filter we create above
-  # Read more about [other query options and filters](get-alerts.md).
-  $url = "https://api.security.microsoft.com/api/alerts?`$filter=alertCreationTime ge $dateTime"
+# The URL contains the type of query and the time filter we created previously.
+# Learn more about other query options and filters: https://learn.microsoft.com/defender-endpoint/api/get-alerts.
+$url = "https://api.security.microsoft.com/api/alerts?`$filter=alertCreationTime ge $dateTime"
 
-  # Set the WebRequest headers
-  $headers = @{
-      'Content-Type' = 'application/json'
-      Accept = 'application/json'
-      Authorization = "Bearer $token"
-  }
+# Set the WebRequest headers
+$headers = @{
+  'Content-Type' = 'application/json'
+  Accept = 'application/json'
+  Authorization = "Bearer $token"
+}
 
-  # Send the webrequest and get the results.
-  $response = Invoke-WebRequest -Method Get -Uri $url -Headers $headers -ErrorAction Stop
+# Send the web request and get the results.
+$response = Invoke-WebRequest -Method Get -Uri $url -Headers $headers -ErrorAction Stop
 
-  # Extract the alerts from the results.
-  $alerts =  ($response | ConvertFrom-Json).value | ConvertTo-Json
+# Extract the alerts from the results.
+$alerts =  ($response | ConvertFrom-Json).value | ConvertTo-Json
 
-  # Get string with the execution time. We concatenate that string to the output file to avoid overwrite the file
-  $dateTimeForFileName = Get-Date -Format o | foreach {$_ -replace ":", "."}
+# Get string with the execution time. We concatenate that string to the output file to avoid overwrite the file.
+$dateTimeForFileName = Get-Date -Format o | foreach {$_ -replace ":", "."}
 
-  # Save the result as json and as csv
-  $outputJsonPath = "./Latest Alerts $dateTimeForFileName.json"
-  $outputCsvPath = "./Latest Alerts $dateTimeForFileName.csv"
+# Save the result as json and as csv.
+$outputJsonPath = "./Latest Alerts $dateTimeForFileName.json"
+$outputCsvPath = "./Latest Alerts $dateTimeForFileName.csv"
 
-  Out-File -FilePath $outputJsonPath -InputObject $alerts
-  ($alerts | ConvertFrom-Json) | Export-CSV $outputCsvPath -NoTypeInformation
-  ```
+Out-File -FilePath $outputJsonPath -InputObject $alerts
+($alerts | ConvertFrom-Json) | Export-CSV $outputCsvPath -NoTypeInformation
+```
 
-You're all done! You have successfully:
+You're all done! You successfully:
 
-- Created and registered and application
-- Granted permission for that application to read alerts
-- Connected the API
-- Used a PowerShell script to return alerts created in the past 48 hours
+- Created and registered and application.
+- Granted permission for that application to read alerts.
+- Connected the API.
+- Used a PowerShell script to return alerts created in the past 48 hours.
 
 ## Related articles
 

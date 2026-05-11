@@ -1,16 +1,10 @@
 ---
 title: Use DMARC to validate email, setup steps
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.date: 05/07/2025
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 4a05898c-b8e4-4eab-bd70-ee912e349737
 ms.collection:
   - m365-security
@@ -18,7 +12,7 @@ ms.collection:
 description: Learn how to configure Domain-based Message Authentication, Reporting, and Conformance (DMARC) to validate messages sent from your organization.
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 #customer intent: As an IT or security administrator, I want stepwise guidance to create and roll out DMARC TXT records (and associated monitoring) so I can validate the From address domain, reduce spoofing, and safely tighten policy over time.
@@ -234,7 +228,7 @@ Your DMARC roll-out plan should use the following steps. Start with a domain or 
 
 ## DMARC for inbound mail into Microsoft 365
 
-- The following default email protection features in Microsoft 365 affect DMARC checks on incoming mail:
+- The following [built-in security features for all cloud mailboxes](eop-about.md) affect DMARC checks on incoming mail:
   - Whether [spoof intelligence](anti-phishing-policies-about.md#spoof-settings) is enabled or disabled in the anti-phishing policy that checked the message. Disabling spoof intelligence disables _implicit_ spoofing protection from [composite authentication](email-authentication-about.md#composite-authentication) checks only.
   - Whether the **Honor DMARC record policy when the message is detected as spoof** setting is enabled or disabled in the anti-phishing policy that checked the message, and the specified actions based on the DMARC policy of the source domain (`p=quarantine`, or `p=reject` in the DMARC TXT record).
 

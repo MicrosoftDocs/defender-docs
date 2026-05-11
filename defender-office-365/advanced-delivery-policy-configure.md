@@ -1,24 +1,18 @@
 ---
 title: Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier3
 ms.custom:
 description: Admins can learn how to use the advanced delivery policy in Microsoft 365 to identify messages that shouldn't be filtered in specific supported scenarios. For example, non-Microsoft phishing simulations and messages delivered to security operations (SecOps) mailboxes.
 ms.service: defender-office-365
-ms.date: 07/02/2025
+ms.date: 02/23/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -121,7 +115,7 @@ Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configur
 
 To configure a non-Microsoft phishing simulation, you need to provide the following information:
 
-- At least one **Domain**: The domain from the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender) that's used in the SMTP transmission of the message **or** a DKIM domain as specified by the phishing simulation vendor.
+- At least one **Domain**: The domain from the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender) that's used in the SMTP transmission of the message **or** a DKIM domain as specified by the phishing simulation vendor. For internationalized domain names (IDNA), use Punycode.
 - At least one **Sending IP**.
 - For **non-email** phishing simulations (for example, Microsoft Teams messages, Word documents, or Excel spreadsheets), you can optionally identify the **Simulation URLs to allow** that shouldn't be treated as real threats at time of click: the URLs aren't blocked or detonated, and no URL click alerts or resulting incidents are generated. The URLs are wrapped at time of click, but they aren't blocked.
 

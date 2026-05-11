@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: deniseb
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: low
@@ -20,7 +19,7 @@ description: Integrate your organization's SIEM server with Microsoft Defender f
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -52,7 +51,7 @@ The following table summarizes the values of **AuditLogRecordType** that are rel
 
 |Value|Member name|Description|
 |---|---|---|
-|28|ThreatIntelligence|Phishing and malware events from the default email protections for cloud mailboxes and from Microsoft Defender for Office 365.|
+|28|ThreatIntelligence|Phishing and malware events from [the built-in security features for all cloud mailboxes](eop-about.md) and from Microsoft Defender for Office 365.|
 |41|ThreatIntelligenceUrl|Safe Links time-of-click and block override events from Microsoft Defender for Office 365.|
 |47|ThreatIntelligenceAtpContent|Phishing and malware events for files in SharePoint, OneDrive, and Microsoft Teams, from Microsoft Defender for Office 365.|
 |64|AirInvestigation|Automated investigation and response events, such as investigation details and relevant artifacts, from Microsoft Defender for Office 365 Plan 2.|

@@ -1,15 +1,9 @@
 ---
 title: Reference Policies, practices, and guidelines
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: ff3f140b-b005-445f-bfe0-7bc3f328aaf0
 ms.collection: 
   - m365-security
@@ -18,7 +12,7 @@ description: Microsoft has developed various policies, procedures, and adopted s
 ms.service: defender-office-365
 ms.date: 6/22/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -68,7 +62,7 @@ Senders, ISP's, and other service providers should actively manage the reputatio
 
 ## Microsoft 365 limits
 
-Senders must adhere to Microsoft 365 limits listed in [Exchange Online Protection Limits](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
+Senders must adhere to Microsoft 365 limits listed in [Built-in security features limits](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-limits).
 
 ## Email delivery resources and organizations
 

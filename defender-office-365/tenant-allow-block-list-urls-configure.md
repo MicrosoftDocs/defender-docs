@@ -1,15 +1,9 @@
 ---
 title: Allow or block URLs using the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150manage-tenant-allows.md
 ms.collection:
   - m365-security
   - tier1
@@ -17,7 +11,7 @@ description: Admins can learn how to allow or block URLs in the Tenant Allow/Blo
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -411,8 +405,8 @@ Valid URL entries and their results are described in the following subsections.
   - `contoso.com/a`
   - `abc.xyz.contoso.com/a/b/c`
   - `payroll.contoso.com`
-  - `test.com/contoso.com`
-  - `test.com/q=contoso.com`
+  - `fabrikam.com.com/contoso.com`
+  - `fabirkam.com/q=contoso.com`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
@@ -421,8 +415,8 @@ Valid URL entries and their results are described in the following subsections.
   - `contoso.com/a`
   - `abc.xyz.contoso.com/a/b/c`
   - `payroll.contoso.com`
-  - `test.com/contoso.com`
-  - `test.com/q=contoso.com`
+  - `fabrikam.com/contoso.com`
+  - `fabrikam.com/q=contoso.com`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
@@ -442,7 +436,7 @@ Valid URL entries and their results are described in the following subsections.
 - **Allow not matched** and **Block not matched**:
   - `123contoso.com`
   - `contoso.com`
-  - `test.com/contoso.com`
+  - `fabrikam.com/contoso.com`
   - `www.contoso.com/abc`
 
 #### Scenario: Right wildcard at top of path
@@ -523,12 +517,12 @@ Valid URL entries and their results are described in the following subsections.
   - `xyz.abc.contoso.com`
   - `abc.xyz.contoso.com/a/b/c`
   - `contoso.com/b/a/c`
-  - `test.com/contoso.com`
+  - `fabrikam.com/contoso.com`
 
 - **Allow not matched** and **Block not matched**:
   - `123contoso.com`
   - `contoso.org`
-  - `test.com/q=contoso.com`
+  - `fabrikam.com/q=contoso.com`
 
 #### Scenario: IP address
 

@@ -1,17 +1,14 @@
 ---
-title: Link/Unlink an account to an identity
+title: Manually link an account to an identity
 description: This article explains how to link or unlink accounts to and from identities in Microsoft Defender for Identity, including legacy, orphaned, or unused accounts.
-ms.date: 01/07/2026
+ms.date: 04/15/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
 ms.reviewer: Almog Omrad
 #customer intent: As a SOC analyst, I want to view all accounts linked to an identity so that I can gain a complete and accurate understanding of the identity's footprint across the organization, validate accounts correlated are correct, and remove any unused, legacy, or orphaned accounts from the identity.
 ---
 
-# Manage related identities and accounts in Microsoft Defender for Identity (Preview)
-
-> [!NOTE]
-> The features described in this article are currently in Preview, aren't available in all organizations, and are subject to change.
+# Manage related identities and accounts in Microsoft Defender for Identity 
 
 In enterprise environments, identities are often fragmented. A single user might have multiple accounts across systems, including personal, privileged, legacy, cloud-based, or orphaned accounts. These accounts can cover on-premises Active Directory, Microsoft Entra ID, or non-Microsoft identity providers such as Okta and Ping.
 
@@ -39,6 +36,23 @@ For example:
 
 Use the procedures in this article to manually link accounts to identities, and to manually unlink unused, legacy, or orphaned accounts from identities in Defender for Identity.
 
+> [!NOTE]
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate from the Identity inventory. Manual and policy-based identity correlations defined in the Identity inventory don't currently affect the following Defender for Cloud Apps features:
+>
+> - Built-in detections
+> - UEBA (User and Entity Behavior Analytics)
+> - Scoped deployment
+> - Governance actions
+> - Defender for Cloud Apps policies
+> - Activity log
+> - Cloud discovery user enrichment and anonymization
+> - RBAC scoping
+>
+> These features continue to use the Cloud Application Accounts inventory.
+
+> [!TIP]
+> To automatically correlate accounts using naming conventions or employee IDs, see [Create custom account correlation rules](custom-account-correlation-rules.md).
+
 ## Prerequisites
 
 - You must have [Unified role-based access control (URBAC)](/defender-for-identity/role-groups) roles: Global Administrator or Security Data (Manage).
@@ -47,7 +61,7 @@ Use the procedures in this article to manually link accounts to identities, and 
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Identities**. Or, to go directly to the **Identity Inventory** page, use <https://security.microsoft.com/identity-inventory>.
 
-   :::image type="content" source="media/identity-inventory/inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal." lightbox="media/identity-inventory/inventory-page.png":::
+   :::image type="content" source="media/identity-inventory/identity-inventory-page.png" alt-text="Screenshot of the identity inventory page in the Microsoft Defender portal." lightbox="media/identity-inventory/identity-inventory-page.png":::
 
 1. On the **Identities** tab of the **Identity Inventory** page, select an identity from the list by clicking on the **Display name** value.
 
@@ -92,7 +106,6 @@ Use the procedures in this article to manually link accounts to identities, and 
 
 - The selected accounts are linked or unlinked immediately.
 - The system updates the identity context and refreshes the account list.
-- All actions are recorded in the [unified audit system](/purview/audit-solutions-overview), including the justification and the user who did the linking or unlinking.
 
 ## See also
 

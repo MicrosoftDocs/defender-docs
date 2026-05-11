@@ -4,7 +4,6 @@ f1.keywords:
 - NOCSH
 ms.author: dansimp
 author: dansimp
-manager: deniseb
 ms.date: 05/08/2025
 audience: ITPro
 ms.topic: article
@@ -19,7 +18,7 @@ ms.custom:
 description: Admins can learn how long Defender for Office 365 features retain data.
 search.appverid: met150
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
 ---
 

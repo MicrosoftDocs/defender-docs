@@ -2,19 +2,14 @@
 title: Set up the Standard or Strict preset security policies for Microsoft Defender for Office 365
 description: Step to set up preset security policies in Microsoft Defender for Office 365 so you have the security recommended by the product. Preset policies set a security profile of either *Standard* or *Strict*. Set these and Microsoft Defender for Office 365 will manage and maintain these security controls for you.
 ms.service: defender-office-365
-f1.keywords: 
- - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 12/30/2025
 ---
 
@@ -55,8 +50,8 @@ Once you've chosen between the Standard and Strict security preset policies for 
 1. Select **Threat policies**.
 1. Select **Preset Security Policies** underneath the **Templated policies** heading
 1. Select **Manage** underneath the Standard protection preset.
-1. Select **All Recipients** to apply default email protections for all cloud mailboxes in the organization, or select **Specific recipients** to manually add users, groups, or domains you want to apply the preset security policy to. Click the **Next** button.
-1. Select **All Recipients** to apply Defender for Office 365 Protection for all cloud mailboxes in the organization, or select **Specific recipients** to manually add users, groups, or domains you want to apply the preset security policy to. Click the **Next** button.
+1. Select **All Recipients** to apply [the built-in security features](../eop-about.md) to all recipients in the organization, or select **Specific recipients** to manually add users, groups, or domains you want to apply the preset security policy to. Click the **Next** button.
+1. Select **All Recipients** to apply Defender for Office 365 Protection for all recipients in the organization, or select **Specific recipients** to manually add users, groups, or domains you want to apply the preset security policy to. Click the **Next** button.
 1. On the **Impersonation Protection** section, add email addresses & domains to protect from impersonation attacks, then add any trusted senders and domains you don't want the impersonation protection to apply to, then press **Next**.
 1. Click on the **Confirm** button.
 1. Select the **Manage protection settings** link in the Strict protection preset.

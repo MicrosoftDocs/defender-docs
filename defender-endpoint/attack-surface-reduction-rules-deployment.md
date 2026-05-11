@@ -1,14 +1,12 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint attack surface reduction rules deployment overview
 description: Provides overview and prerequisite guidance about deploying Microsoft Defender for Endpoint attack surface reduction rules. Links to articles that show how to plan and ASR deployment, test ASR rules, configure ASR rules, and enable ASR rules.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar
-manager: bagol
 ms.custom: asr
 ms.topic: concept-article
 ms.collection:  
@@ -18,7 +16,6 @@ ms.collection:
  - tier1
  - mde-asr
 ms.date: 07/25/2024
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -192,9 +189,9 @@ Some rules don't work well if unsigned, internally developed application and scr
 
 [Create a deployment plan for Windows](/windows/deployment/update/create-deployment-plan)
 
-[Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/mem/intune/fundamentals/scope-tags)
+[Use role-based access control (RBAC) and scope tags for distributed IT in Intune](/intune/intune-service/fundamentals/scope-tags)
 
-[Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment)
+[Assign device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign#exclude-groups-from-a-profile-assignment)
 
 ### Management sites
 

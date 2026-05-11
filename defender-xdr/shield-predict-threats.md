@@ -2,22 +2,15 @@
 title: Predictive shielding in Microsoft Defender
 description: Predictive shielding dynamically infers risk, anticipates attacker progression, and hardens your environment.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
-ms.author: lwainstein
-author: limwainstein
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
   - usx-security
 ms.topic: concept-article
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender XDR
@@ -36,6 +29,18 @@ This article provides an overview of predictive shielding so that you can unders
 
 Learn [how predictive shielding works](#how-predictive-shielding-works) or how to [manage predictive shielding in Microsoft Defender](shield-predict-threats-manage.md).
 
+## Why predictive shielding matters
+
+In a typical attack, defenders react after malicious activity is detected — but attackers move fast. By the time a compromised device is identified, lateral movement or data exfiltration might already be underway. Predictive shielding shifts the balance by acting during an attack, before the attacker reaches their next target.
+
+**When predictive shielding becomes relevant:**
+
+- An active attack is detected in your environment (for example, a compromised device or credential).
+- Defender identifies other assets that are likely targets based on exposure data, attacker behavior patterns, and organizational topology.
+- Instead of waiting for the attacker to reach those assets, predictive shielding proactively applies targeted restrictions — such as containing at-risk user accounts, hardening GPO settings, or enforcing Safeboot — to cut off the attack path.
+
+This means security teams gain critical response time. Rather than racing to manually isolate every potentially affected asset, Defender autonomously narrows the attacker's options while analysts investigate.
+
 ## How predictive shielding expands on automatic attack disruption
 
 The evolving threat landscape creates an imbalance: defenders must secure every asset, while attackers need only one opening. Traditional defenses are reactive, responding after malicious activity begins. This approach leaves defenders chasing attackers, who often act too quickly or subtly to detect in real time. While some attacker behaviors must be blocked outright, static prevention disrupts productivity and adds operational overhead.
@@ -45,6 +50,8 @@ To address these challenges, predictive shielding enhances Defender's autonomous
 This proactive approach reduces the reactive chase, minimizes operational burden, maintains usability, and protects the environment before attackers can advance.
 
 While attack disruption identifies and contains compromised assets, predictive shielding anticipates potential attack progression and proactively restricts vulnerable assets or paths. For example, while automatic attack disruption isolates a compromised device, predictive shielding might proactively restrict access to sensitive data for at-risk devices.
+
+Because predictive shielding is part of the same autonomous protection stack, the confidence and AI model principles described for attack disruption also apply to predictive shielding. For more information, see [How Defender establishes confidence for automatic action](automatic-attack-disruption.md#how-defender-establishes-confidence-for-automatic-action) and [How attack disruption uses AI](automatic-attack-disruption.md#how-attack-disruption-uses-ai).
 
 ## How predictive shielding works
 
@@ -93,18 +100,21 @@ This dynamic understanding allows Defender to move beyond reactive responses, en
 
 Predictive shielding uses Defender for Endpoint-based actions. To use these actions, you need a Defender for Endpoint license.
 
-- [Safeboot hardening](/defender-endpoint/respond-machine-alerts#safeboot-hardening) - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
+- [Safeboot hardening](/defender-endpoint/respond-machine-alerts#safeboot-hardening) (Preview) - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
 
-- [GPO hardening](/defender-endpoint/respond-machine-alerts#gpo-hardening) - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
+- [GPO hardening](/defender-endpoint/respond-machine-alerts#gpo-hardening) (Preview) - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
 
 - [Proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity. Proactively restricts the activity of the users associated with those credentials.
 
     > [!NOTE]
     > While the contain user action is used both in attack disruption and predictive shielding, this action is applied differently in each context. In predictive shielding, the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. This action prevents new sessions rather than terminating existing ones.
+    > 
+    > This action is generally available, both when triggered by attack disruption and predictive shielding.
 
 ## Next steps
 
 - [Manage predictive shielding in Microsoft Defender](shield-predict-threats-manage.md) - Learn how to manage predictive shielding actions and investigate their impact in your environment.
 - [Automatic attack disruption in Microsoft Defender](automatic-attack-disruption.md) - Learn how automatic attack disruption works to identify and neutralize confirmed malicious activities.
+- [Microsoft Defender for Endpoint capabilities](/defender-endpoint/microsoft-defender-endpoint#defender-for-endpoint-capabilities) - See how predictive shielding fits within the full Defender for Endpoint protection stack.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
