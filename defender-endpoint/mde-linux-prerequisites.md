@@ -45,18 +45,37 @@ For detailed licensing information, see [Product Terms: Microsoft Defender for E
 
 ## Software requirements
 
-Linux server endpoints should have systemd (system manager) installed.
+- Linux server endpoints should have systemd (system manager) installed.
 
 > [!NOTE]
 > Linux distributions using system manager support both SystemV and Upstart.
 > The Microsoft Defender for Endpoint on Linux agent is independent from [Operation Management Suite (OMS) agent](/azure/azure-monitor/agents/azure-monitor-agent-overview#log-analytics-agent).
 > Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
 
-To use [device isolation functionality](./respond-machine-alerts.md#isolate-devices-from-the-network), the following must be enabled:
+- To use [device isolation functionality](./respond-machine-alerts.md#isolate-devices-from-the-network), the following must be enabled:
 
-- `iptables`
-- `ip6tables`
-- Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
+   - `iptables`
+   - `ip6tables`
+   - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
+
+
+> [!NOTE]
+> **Hostname**
+>
+> Defender for Endpoint reads the device host name from the kernel host name, which Linux distributions initialize from `/etc/hostname` at boot. Make sure
+`/etc/hostname` contains the correct host name before you install — it's used to identify the device in the Defender portal, so an empty or incorrect value reports the device under the wrong name.
+>
+> To display the host name that Defender for Endpoint will use, run:
+>
+> ```bash
+> hostname
+> ```
+>
+> If the value is empty or incorrect, set it before installing:
+>
+> ```bash
+> sudo hostnamectl set-hostname <your-host-name>
+> ```
 
 ## Network requirements
 
@@ -67,11 +86,9 @@ Linux server endpoints should be able to access the endpoints documented in:
 If necessary, [configure static proxy discovery](./linux-static-proxy-configuration.md).
 
 > [!WARNING]
-> PAC, WPAD, and authenticated proxies aren't supported.
-> Use only static or transparent proxies.
-> SSL inspection and intercepting proxies aren't supported for security reasons.
-> Configure an exception for SSL inspection and your proxy server to allow direct data pass-through from Defender for Endpoint on Linux to the relevant URLs without interception.
-> Adding your interception certificate to the global store doesn't enable interception.
+> PAC, WPAD, and authenticated proxies aren't supported. Use only static or transparent proxies.
+> SSL/TLS inspection and intercepting proxies aren't supported and **must be disabled** for Defender for Endpoint service URLs. They break the certificate chain that the agent relies on and prevent it from connecting to the cloud service.
+> Configure an exception so traffic from Defender for Endpoint on Linux to the relevant URLs passes through without interception. Adding your interception certificate to the global store doesn't enable interception.
 
 ### Verify if devices can connect to Defender for Endpoint cloud services
 
@@ -160,6 +177,13 @@ There are several methods and tools that you can use to deploy Microsoft Defende
 
 It's recommended to use Deployment Tool based deployment, as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. For more information, see [Deploy Microsoft Defender endpoint security to Linux devices using the Defender deployment tool (preview)](linux-install-with-defender-deployment-tool.md).
 
+Before you install, validate the prerequisites with the installer's built-in prerequisite-check mode. This runs the kernel, glibc, fanotify, disk, memory, supported-distro, and filesystem checks without installing anything:
+
+```bash
+curl -o mde_installer.sh "https://go.microsoft.com/fwlink/?linkid=2313015"
+chmod +x mde_installer.sh
+sudo ./mde_installer.sh --pre-req
+```
 - [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
 - [Installer script based deployment](linux-installer-script.md)
 - [Ansible based deployment](linux-install-with-ansible.md)
