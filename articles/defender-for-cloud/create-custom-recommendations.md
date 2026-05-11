@@ -33,7 +33,7 @@ To create a custom recommendation:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Go to **Microsoft Defender for Cloud** > **Environment settings** > <relevant subscription>.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings** > the relevant subscription.
 
 1. Select **Security policies** > **+ Create** > **Custom recommendation**.
 
@@ -46,8 +46,9 @@ To create a custom recommendation:
 1. Select **Next**.
 1. Enter a KQL query, or select **[Open query editor](#use-the-query-editor)**.
 1. Select **Next**.
-1. In **Standards**, select the custom standards to which you want to add the custom recommendation.
-1. In **Review and create**, review the recommendation details.
+1. Select the custom standards.
+1. Select **Review and create**.
+1. Review the recommendation details.
 1. Select **Create**.
 
     :::image type="content" source="./media/create-custom-recommendations/review-recommendation.png" alt-text="Screenshot of Microsoft Defender for Cloud Review and create page showing recommendation summary before submission." lightbox="./media/create-custom-recommendations/review-recommendation.png":::
@@ -253,13 +254,15 @@ To create a custom standard:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select the relevant scope.
 
 1. Select **Security policies** > **+ Create** > **Standard**.
 
-1. In **Recommendations**, select the recommendations that you want to add to the custom standard. For Azure subscriptions, you can see the source as well.
+1. In **Recommendations**, select the recommendations that you want to add to the custom standard.
+
+1. For Azure subscriptions, review the **Source** column as needed.
 
     :::image type="content" source="media/custom-security-policies/select-recommendations.png" alt-text="Screenshot that shows the list of all of the recommendations that are available to select for the custom standard." lightbox="media/custom-security-policies/select-recommendations.png":::
 
@@ -273,7 +276,7 @@ For Azure subscriptions, you can create custom recommendations and standards, an
 
 You can create custom recommendations and standards in Defender for Cloud by creating policy definitions and initiatives in Azure Policy, and onboarding them in Defender for Cloud.
 
-Here's how you do that:
+To create a custom recommendation or standard with Azure Policy (legacy):
 
 1. Create one or more policy definitions in the [Azure Policy portal](/azure/governance/policy/tutorials/create-custom-policy-definition), or [programmatically](/azure/governance/policy/how-to/programmatically-create).
 1. [Create a policy initiative](/azure/governance/policy/concepts/initiative-definition-structure) that contains the custom policy definitions.
@@ -284,7 +287,7 @@ Here's how you do that:
 
 To onboard an initiative to a custom security standard in Defender for Cloud, you need to include `"ASC":"true"` in the request body as shown here. The `ASC` field onboards the initiative to Microsoft Defender for Cloud.
 
-Here's an example of how to do that.
+To onboard a custom initiative:
 
 #### Example to onboard a custom initiative
 
