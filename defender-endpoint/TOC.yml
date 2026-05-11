@@ -584,6 +584,8 @@
       href: onboarding-endpoint-manager.md
     - name: Deploy Microsoft Defender for Endpoint prerelease builds on Android devices
       href: mobile-pretest-android.md   
+    - name: Allow Defender for Endpoint scripts with WDAC script enforcement
+      href: configure-wdac-script-enforcement-mde.md
 
   - name: Migration guides
     items:
@@ -743,8 +745,6 @@
             href: web-protection-response.md
         - name: Web content filtering
           href: web-content-filtering.md
-      - name: Allow Defender for Endpoint scripts with WDAC script enforcement
-        href: configure-wdac-script-enforcement-mde.md
 
     - name: Next-generation protection
       items:
