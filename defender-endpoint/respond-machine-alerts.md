@@ -297,12 +297,12 @@ After automatic isolation is applied, you can review the action and its status i
 
 - Open the relevant incident and review the **Activities** tab.
 
-   :::image type="content" source="../defender/media/defender-endpoint/view-automatic-device-isolation-activities.png" alt-text="Screenshot showing how to view automatic device isolation in the Activities tab." lightbox="../defender/media/defender-endpoint/view-automatic-device-isolation-activities.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/view-automatic-device-isolation-activities.png" alt-text="Screenshot showing how to view automatic device isolation in the Activities tab." lightbox="/defender/media/defender-endpoint/view-automatic-device-isolation-activities.png":::
 
 - Open the affected device page and confirm the device isolation status.
 - Open **Action center** to review action history and current state.
 
-   :::image type="content" source="../defender/media/defender-endpoint/view-automatic-device-isolation-action.png" alt-text="Screenshot showing how to view automatic device isolation in the Action Center." lightbox="../defender/media/defender-endpoint/view-automatic-device-isolation-action.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/view-automatic-device-isolation-action.png" alt-text="Screenshot showing how to view automatic device isolation in the Action Center." lightbox="/defender/media/defender-endpoint/view-automatic-device-isolation-action.png":::
 
 ### Safeguards and business impact
 
