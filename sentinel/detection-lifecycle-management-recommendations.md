@@ -26,8 +26,8 @@ The following table summarizes the recommended capability based on your customer
 
 | Customer type | Scalable, structured change management | Simple UI, low complexity | Custom/external tooling or high automation |
 |---|---|---|---|
-| Single tenant | [Content as code](#content-as-code-with-repositories) (repositories) | [Portal](#portal-and-content-distribution) | [APIs](#apis) / [Terraform](https://techcommunity.microsoft.com/blog/azureinfrastructureblog/cicd-implementation-for-azure-sentinel-using-terraform/4413220) |
-| Multitenant | [Content as code](#content-as-code-with-repositories) (repositories; best for scalability) | [Content distribution (via portal)](#portal-and-content-distribution) | [APIs](#apis) / [Terraform](https://techcommunity.microsoft.com/blog/azureinfrastructureblog/cicd-implementation-for-azure-sentinel-using-terraform/4413220) |
+| Single tenant | [Content as code (repositories)](#content-as-code-with-repositories) | [Portal](#portal-and-content-distribution) | [APIs](#apis) / [Terraform](https://techcommunity.microsoft.com/blog/azureinfrastructureblog/cicd-implementation-for-azure-sentinel-using-terraform/4413220) |
+| Multitenant | [Content as code (repositories; best for scalability)](#content-as-code-with-repositories) | [Content distribution (via portal)](#portal-and-content-distribution) | [APIs](#apis) / [Terraform](https://techcommunity.microsoft.com/blog/azureinfrastructureblog/cicd-implementation-for-azure-sentinel-using-terraform/4413220) |
 
 ### Content as code with repositories
 
