@@ -15,8 +15,7 @@ While domain controller performance may not be affected if the server doesn't ha
 The sizing tool measures the capacity needed for domain controllers only. There is no need to run it against servers that are only AD FS, AD CS, or Entra Connect (unless those servers also function as a domain controller), as the performance impact on these servers is extremely minimal to not existent.
 
 > [!TIP]
-> By default, Defender for Identity supports up to 350 sensors. To install more sensors, contact Defender for Identity support.
->
+> By default, Defender for Identity supports up to 1000 sensors. To install more sensors, contact Defender for Identity support.
 
 ## Prerequisites
 
