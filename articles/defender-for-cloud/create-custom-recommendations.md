@@ -3,11 +3,8 @@ title: Create custom security standards and recommendations
 description: Learn how to create custom security standards and recommendations for all clouds in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 05/11/2026
-zone_pivot_groups: defender-for-cloud-custom-recommendation-kql-scenarios
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
 ---
-
-# Create custom security standards and recommendations in Microsoft Defender for Cloud
 
 [Security recommendations](security-policy-concept.md) in Microsoft Defender for Cloud help you to improve and harden your security posture. Recommendations are based on assessments against [security standards](security-policy-concept.md) defined for Azure subscriptions, AWS accounts, and GCP projects that have Defender for Cloud enabled.
 
@@ -65,7 +62,7 @@ We recommend using the query editor to create a recommendation query.
 
 The query editor includes built-in examples, and the templates in this section show how to structure common security checks. Each template returns only unhealthy (non-compliant) resources.
 
-::: zone pivot="kql-vm-tags"
+### [VM tags](#tab/vm-tags)
 
 Identify virtual machines missing mandatory governance tags, such as cost center or owner information.
 
@@ -80,9 +77,7 @@ Resources
 
 **Assessment logic:** Machines in query results lack required tags and are unhealthy. Machines not returned are compliant.
 
-::: zone-end
-
-::: zone pivot="kql-storage-https"
+### [Storage HTTPS](#tab/storage-https)
 
 Detect storage accounts that allow HTTP connections, which creates potential data exposure.
 
@@ -97,9 +92,7 @@ Resources
 
 **Assessment logic:** Accounts allowing HTTP traffic are non-compliant. Your recommendation enforces HTTPS-only.
 
-::: zone-end
-
-::: zone pivot="kql-nsg-any-any"
+### [NSG Any/Any](#tab/nsg-any-any)
 
 Find network security groups with inbound rules that allow traffic from any source on any port.
 
@@ -118,9 +111,7 @@ Resources
 
 **Assessment logic:** NSGs containing overly permissive rules are unhealthy. Restricting source addresses and ports to known networks restores compliance.
 
-::: zone-end
-
-::: zone pivot="kql-keyvault-soft-delete"
+### [Key Vault soft-delete](#tab/key-vault-soft-delete)
 
 Identify Key Vaults missing soft-delete protection, which prevents accidental or malicious deletion of secrets.
 
@@ -135,9 +126,7 @@ Resources
 
 **Assessment logic:** Vaults without soft-delete enabled are unhealthy. Enabling this setting restores compliance.
 
-::: zone-end
-
-::: zone pivot="kql-appservice-https"
+### [App Service HTTPS](#tab/app-service-https)
 
 Locate App Services that do not automatically redirect HTTP traffic to HTTPS, which leaves user connections unencrypted.
 
@@ -152,9 +141,7 @@ Resources
 
 **Assessment logic:** Services without HTTPS-only enabled are non-compliant. Your recommendation prompts users to enable this protection.
 
-::: zone-end
-
-::: zone pivot="kql-database-firewall"
+### [Database firewall](#tab/database-firewall)
 
 Find SQL or PostgreSQL servers configured to accept connections from any IP address (0.0.0.0), which exposes databases to the internet.
 
@@ -170,8 +157,6 @@ Resources
 **Output columns:** `id` (ARM resourceId), `name`, `resourceGroup`, `rules.name`
 
 **Assessment logic:** Servers with unrestricted firewall access are unhealthy. Restricting to known source IPs restores compliance.
-
-::: zone-end
 
 ### KQL output schema requirements
 
