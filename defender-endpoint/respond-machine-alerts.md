@@ -217,7 +217,7 @@ Depending on the severity of the attack and the sensitivity of the device, you m
   - `ip6tables`
   - Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
 
-- Selective isolation is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
+- You can use exclusions to define which processes and destinations are allowed during isolation. This feature is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
 - When isolating a device, only certain processes and destinations are allowed. Therefore, devices that are behind a full VPN tunnel won't be able to reach the Microsoft Defender for Endpoint cloud service after the device is isolated. We recommend using a split-tunneling VPN for Microsoft Defender for Endpoint and Microsoft Defender Antivirus cloud-based protection-related traffic.
 - The feature supports VPN connection.
 - You must have at least the `Active remediation actions` role assigned. For more information, see [Create and manage roles](user-roles.md).
@@ -232,8 +232,6 @@ The device isolation feature disconnects the compromised device from the network
 > You can reconnect the device back to the network at any time. The button on the device page changes to say **Release from isolation**. At this stage, you can take the same steps as isolating the device.
 >
 > If a device is inactive or offline when an isolation action is submitted, Microsoft Defender for Endpoint retries enforcing the isolation for up to three days. If the device doesn't reconnect in that time, the isolation won't be retried, and administrators should reissue the isolation action after the device becomes active.
-
-
 
 Once you have selected **Isolate device** on the device page, type a comment and select **Confirm**. The Action center shows the scan information and the device timeline include a new event.
 
@@ -278,6 +276,7 @@ When a device is being isolated, the following notification is displayed to info
 > The notification isn't available on non-Windows platforms.
 
 <a id="isolate-device-automatic-attack-disruption"></a>
+
 ## Isolate device - automatic attack disruption (Preview)
 
 When a device in your organization is suspected to be compromised, Microsoft Defender for Endpoint can automatically isolate the device as part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption). Automatic isolation helps reduce the risk of further impact on the organization, limit attacker lateral movement, and prevent impacts such as data exfiltration and ransomware propagation.
@@ -307,16 +306,23 @@ After automatic isolation is applied, you can review the action and its status i
 > - Device page showing isolated status.
 > - **Action center** entry for automatic isolation.
 
-### Safeguards and business impact
+### Considerations
 
-Isolation might affect user productivity and device-dependent business processes, so automatic attack disruption applies it selectively with safeguards designed to balance security value with operational impact:
+Before deploying or responding to automatic device isolation, consider the following:
 
 - **Scoped action**: Isolation targets specific devices involved in the incident rather than broadly across the environment.
 - **Time-limited isolation**: Isolation is automatically undone after a defined time window. You can also release isolation earlier after completing investigation and remediation.
 - **Customer control**: Security operators can review the incident context and take follow-up actions, including releasing isolation when it's safe to do so.
+- **Selective isolation**: You can use exclusions to define which processes and destinations are allowed during isolation. This feature is available for devices running on Windows 11, Windows 10 version 1703 or later, Windows Server 2012 R2 and later, Azure Stack HCI OS, version 23H2 and later, and macOS. For more information about selective isolation, see [Isolation exclusions](./isolation-exclusions.md).
+
+> [!NOTE]
+> There are two distinct types of exclusions relevant to automatic device isolation:
+>
+> - **Selective isolation exclusions** ([Isolation exclusions](./isolation-exclusions.md)): Define which processes and network destinations remain accessible on an isolated device. Use these to preserve critical communications (for example, management tools or business applications) while the device is isolated.
+> - **Automatic attack disruption exclusions** ([Exclusion and operational processes](/defender-xdr/automatic-attack-disruption-exclusions)): Define which devices or entities are excluded from automatic disruption actions entirely. Use these to prevent business-critical devices from being isolated in the first place.
 
 > [!TIP]
-> If an automatically isolated device is business-critical, prioritize rapid validation and stakeholder coordination. Release isolation only after you confirm appropriate containment and remediation steps are in place. Consider using your organization's [exclusion and operational processes](/defender-xdr/automatic-attack-disruption-exclusions) to reduce the likelihood of isolating devices that can't tolerate interruption.
+> If an automatically isolated device is business-critical, prioritize rapid validation and stakeholder coordination. Release isolation only after you confirm appropriate containment and remediation steps are in place. Consider using [automatic attack disruption exclusions](/defender-xdr/automatic-attack-disruption-exclusions) to reduce the likelihood of isolating devices that can't tolerate interruption.
 
 ### Confirm automatic device isolation
 
