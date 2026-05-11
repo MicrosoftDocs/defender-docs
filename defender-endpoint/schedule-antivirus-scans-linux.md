@@ -63,7 +63,7 @@ The following table describes the available settings for configuring scheduled a
 
 | Category | Setting | Description | Possible values | Default |
 |----------|---------|-------------|-----------------|---------|
-| Daily scan settings |  |  |  |  |
+| **Daily scan settings** | **Setting** | **Description** | **Possible values** | **Default** |
 |  | interval | Runs a quick scan every N hour (interval-based scheduling). | Integer (hours) 0 = disabled | 0 |
 |  | timeOfDay (daily) | Runs a quick scan once daily at a specific time. Value is in minutes from midnight (local time of the server) | 0–1440 (for example, 120 = 2:00 AM) | 0 |
 | Weekly scan settings |  |  |  |  |
@@ -110,7 +110,7 @@ For more information, see [Manage endpoint security policies in Microsoft Defend
 
 ### Use mdatp managed JSON configuration
 
-In enterprise environments, antivirus scans can be scheduled through a configuration profile. Typically, you would use a configuration management tool like Puppet, Ansible, or another management console to push a file with the name `mdatp_managed.json` at the location `/etc/opt/microsoft/mdatp/managed`.
+In enterprise environments, antivirus scans can be scheduled through a configuration profile. Typically, you would use a configuration management tool such as Puppet, Ansible, or other management console to push a file with the name `mdatp_managed.json` to the location `/etc/opt/microsoft/mdatp/managed`.
 
 If you already use `mdatp_managed.json` to configure other Defender for Endpoint settings (for example, exclusions or antivirus preferences), do not replace your existing file. Scheduled scan settings should be added to your existing managed JSON, alongside your current configuration. For more information, see [Set preferences for Defender for Endpoint on Linux](preferences-setup-mde-linux.md).
 
