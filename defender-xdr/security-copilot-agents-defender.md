@@ -70,6 +70,9 @@ This section details the Microsoft Security Copilot agents that are available in
 
 ### Security Alert Triage Agent (Preview)
 
+> [!NOTE]
+> The Security Alert Triage Agent is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md) with extended capabilities to triage a broader set of alert types. The Security Alert Triage Agent is available only to customers who are part of the preview. If you aren't part of the preview, the Phishing Triage Agent continues to be available in Security Store.
+
 The [Security Alert Triage Agent](security-alert-triage-agent.md) is an autonomous agent that helps security teams triage alerts at scale across multiple workloads. The agent applies AI-driven, dynamic reasoning to deliver clear verdicts for supported security workloads. This is the same agent as the [Phishing Triage Agent](phishing-triage-agent.md), which has demonstrated measurable improvements in triage accuracy and efficiency. The agent can now triage a broader set of alerts in Microsoft Defender, including email and collaboration alerts (generally available), and cloud and identity alerts (preview). The agent operates autonomously, provides transparent rationale for its classification verdicts in natural language, and continuously learns and improves its accuracy based on feedback from analysts.
 
 | Attribute | Description |
