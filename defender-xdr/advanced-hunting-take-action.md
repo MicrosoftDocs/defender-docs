@@ -75,6 +75,8 @@ To take any of these actions, select one or more records in your query results a
 
 :::image type="content" source="media/advanced-hunting-take-action/take-action-multiple.png" alt-text="Screenshot of the take actions option in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-action/take-action-multiple.png":::
 
+<a name="take-various-actions-on-emails"></a>
+
 ## Take actions on emails
 
 Apart from device-focused remediation steps, you can also take actions on emails from your query results. Select the records you want to take action on, select **Take actions**, and then under **Choose actions**, select your choice from the following options:
