@@ -300,12 +300,22 @@ jobs:
             echo "Sign-off author '$USER' is authorized (cache hit)."
             exit 0
           fi
+          # Bot accounts (login ends with "[bot]") cannot be members of human
+          # approver teams. Skip the live lookup to avoid curl URL-globbing on
+          # the bracket characters (curl would exit 3 -> step failure).
+          case "$USER" in
+            *'[bot]')
+              echo "authorized=false" >> "$GITHUB_OUTPUT"
+              echo "Sign-off author '$USER' is a bot account; not authorized."
+              exit 0
+              ;;
+          esac
           # Live fallback: check team membership directly via API.
           if [ -s /tmp/auth-teams.txt ]; then
             while IFS= read -r team_ref || [ -n "$team_ref" ]; do
               org=$(echo "$team_ref" | cut -d'/' -f1)
               team=$(echo "$team_ref" | cut -d'/' -f2)
-              http_code=$(curl -s -o /dev/null -w "%{http_code}" \
+              http_code=$(curl -s --globoff -o /dev/null -w "%{http_code}" \
                 -H "Authorization: token $TOKEN" \
                 "https://api.github.com/orgs/${org}/teams/${team}/memberships/${USER}")
               if [ "$http_code" = "200" ]; then
@@ -330,11 +340,21 @@ jobs:
             echo "PR author '$USER' is authorized (cache hit)."
             exit 0
           fi
+          # Bot accounts (login ends with "[bot]") cannot be members of human
+          # approver teams. Skip the live lookup to avoid curl URL-globbing on
+          # the bracket characters (curl would exit 3 -> step failure).
+          case "$USER" in
+            *'[bot]')
+              echo "authorized=false" >> "$GITHUB_OUTPUT"
+              echo "PR author '$USER' is a bot account; not authorized."
+              exit 0
+              ;;
+          esac
           if [ -s /tmp/auth-teams.txt ]; then
             while IFS= read -r team_ref || [ -n "$team_ref" ]; do
               org=$(echo "$team_ref" | cut -d'/' -f1)
               team=$(echo "$team_ref" | cut -d'/' -f2)
-              http_code=$(curl -s -o /dev/null -w "%{http_code}" \
+              http_code=$(curl -s --globoff -o /dev/null -w "%{http_code}" \
                 -H "Authorization: token $TOKEN" \
                 "https://api.github.com/orgs/${org}/teams/${team}/memberships/${USER}")
               if [ "$http_code" = "200" ]; then
@@ -359,11 +379,21 @@ jobs:
             echo "Reopener '$USER' is authorized (cache hit)."
             exit 0
           fi
+          # Bot accounts (login ends with "[bot]") cannot be members of human
+          # approver teams. Skip the live lookup to avoid curl URL-globbing on
+          # the bracket characters (curl would exit 3 -> step failure).
+          case "$USER" in
+            *'[bot]')
+              echo "authorized=false" >> "$GITHUB_OUTPUT"
+              echo "Reopener '$USER' is a bot account; not authorized."
+              exit 0
+              ;;
+          esac
           if [ -s /tmp/auth-teams.txt ]; then
             while IFS= read -r team_ref || [ -n "$team_ref" ]; do
               org=$(echo "$team_ref" | cut -d'/' -f1)
               team=$(echo "$team_ref" | cut -d'/' -f2)
-              http_code=$(curl -s -o /dev/null -w "%{http_code}" \
+              http_code=$(curl -s --globoff -o /dev/null -w "%{http_code}" \
                 -H "Authorization: token $TOKEN" \
                 "https://api.github.com/orgs/${org}/teams/${team}/memberships/${USER}")
               if [ "$http_code" = "200" ]; then
