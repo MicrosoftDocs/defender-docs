@@ -49,7 +49,7 @@ The Identity page now includes the **Identity Explorer** tab for customers with 
 
 ### **Custom account correlation rules (Preview)**
 
- Custom account correlation rules let you link accounts that belong to the same identity, such as privileged accounts with unique naming conventions. You can correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN by defining rules based on UPN prefix, UPN suffix, or domain UPN. For more information, see [Create custom account correlation rules](custom-account-correlation-rules.md).
+ Custom account correlation rules let you link accounts that belong to the same identity, such as privileged accounts with unique naming conventions. You can correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN by defining rules based on UPN prefix, UPN suffix, domain UPN, or employee ID. For more information, see [Create custom account correlation rules](custom-account-correlation-rules.md).
 
 ### Automatic Windows event auditing configuration for sensors v3.x is now generally available
 
