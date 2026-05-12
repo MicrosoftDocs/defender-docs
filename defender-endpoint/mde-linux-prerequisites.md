@@ -180,7 +180,7 @@ It's recommended to use Deployment Tool based deployment, as it simplifies the o
 Before you install, validate the prerequisites with the installer's built-in prerequisite-check mode. This runs the kernel, glibc, fanotify, disk, memory, supported-distro, and filesystem checks without installing anything:
 
 ```bash
-curl -o mde_installer.sh "https://go.microsoft.com/fwlink/?linkid=2313015"
+curl -L -o mde_installer.sh "https://go.microsoft.com/fwlink/?linkid=2313015"
 chmod +x mde_installer.sh
 sudo ./mde_installer.sh --pre-req
 ```
