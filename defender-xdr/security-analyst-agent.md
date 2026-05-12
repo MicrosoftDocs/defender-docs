@@ -1,6 +1,6 @@
 ---
 title: Microsoft Security Copilot Security Analyst Agent
-description: using the Microsoft Security Copilot Security Copilot Security Analyst Agent in the Microsoft Defender portal.
+description: Identify, assess, and prioritize risks using the Microsoft Security Copilot Security Analyst Agent in the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.author: pauloliveria
 author: poliveria
@@ -19,7 +19,7 @@ appliesto:
 
 [!INCLUDE [Prerelease](includes/prerelease.md)]
 
-Security Analyst Agent in Defender helps security analysts quickly identify, assess and prioritize risks by providing:
+Security Analyst Agent in Defender helps security analysts quickly identify, assess, and prioritize risks by providing:
 
 - **Flexible Analysis:** Perform ready-to-use or custom analyses on security data. Get actionable and prioritized insights, recommendations, and reports to uncover top vulnerabilities and risks.
 
