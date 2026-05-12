@@ -4,7 +4,6 @@ description: Learn how to automate threat response in Microsoft Sentinel using p
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: sshuster
 ms.date: 05/27/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal

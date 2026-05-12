@@ -3,7 +3,6 @@ title: SAP security parameters monitored by the Microsoft Sentinel solution for 
 description: Learn about the security parameters in the SAP system that the Microsoft Sentinel solution for SAP applications monitors for suspicious configuration changes.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: reference
 ms.date: 09/15/2024
 appliesto:

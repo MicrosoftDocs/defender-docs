@@ -3,7 +3,6 @@ title: Generate playbooks using AI in Microsoft Sentinel
 description: Generate playbooks through natural language conversations directly in the Defender portal.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: sshuster
 ms.topic: how-to
 ms.date: 02/13/2026
 ms.service: microsoft-sentinel

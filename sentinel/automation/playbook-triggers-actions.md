@@ -4,7 +4,6 @@ description: Learn in greater depth how to give your playbooks access to the inf
 ms.topic: concept-article
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: sshuster
 ms.date: 08/21/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal

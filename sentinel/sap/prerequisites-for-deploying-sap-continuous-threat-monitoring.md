@@ -3,7 +3,6 @@ title: Prerequisites for deploying Microsoft Sentinel solution for SAP applicati
 description: This article lists the prerequisites required for deployment of the Microsoft Sentinel solution for SAP applications.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: reference
 ms.date: 09/30/2025
 appliesto:

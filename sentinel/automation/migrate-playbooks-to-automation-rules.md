@@ -4,7 +4,6 @@ description: This article explains how (and why) to take your existing playbooks
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: sshuster
 ms.date: 03/14/2024
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal

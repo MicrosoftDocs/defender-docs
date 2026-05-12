@@ -3,7 +3,6 @@ title: Azure Logic Apps for Microsoft Sentinel playbooks
 description: Learn about Azure Logic Apps concepts and how they work with Microsoft Sentinel playbooks.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: sshuster
 ms.topic: concept-article
 ms.date: 04/18/2024
 appliesto:

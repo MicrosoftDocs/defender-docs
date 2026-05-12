@@ -3,7 +3,6 @@ title: Microsoft Sentinel Solution for SAP BTP overview
 description: This article introduces the Microsoft Sentinel Solution for SAP BTP.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: concept-article
 ms.date: 08/08/2024
 

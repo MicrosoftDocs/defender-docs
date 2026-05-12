@@ -4,7 +4,6 @@ description: Learn how to give your playbooks access to Microsoft Sentinel and a
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: sshuster
 ms.date: 03/14/2024
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal

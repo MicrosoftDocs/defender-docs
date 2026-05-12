@@ -3,7 +3,6 @@ title: Check for SAP security controls with Microsoft Sentinel
 description: Learn about the SAP - Security Audit Controls workbook, used to monitor and track security control framework compliance across your SAP systems.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: concept-article
 ms.date: 07/04/2024
 appliesto:

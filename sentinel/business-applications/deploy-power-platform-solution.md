@@ -3,7 +3,6 @@ title: Connect Microsoft Power Platform and Microsoft Dynamics 365 Customer Enga
 description: Learn how to deploy the Microsoft Sentinel solution for Business Applications with Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement to Microsoft Sentinel
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: how-to
 ms.date: 11/14/2024
 

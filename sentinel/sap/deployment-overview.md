@@ -3,7 +3,6 @@ title: Deploy the Microsoft Sentinel solution for SAP applications
 description: Get an introduction to the process of deploying the Microsoft Sentinel solution for SAP applications.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: overview
 ms.date: 09/30/2025
 appliesto:

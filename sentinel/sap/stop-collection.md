@@ -4,7 +4,6 @@ titleSuffix: Microsoft Sentinel
 description: Learn about how to stop Microsoft Sentinel from collecting data from your SAP applications.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: how-to
 ms.date: 09/30/2025
 ai-usage: ai-assisted

@@ -4,7 +4,6 @@ description: Learn how to use Microsoft Sentinel playbooks and automation rules 
 ms.topic: concept-article
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: sshuster
 ms.date: 05/01/2024
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal

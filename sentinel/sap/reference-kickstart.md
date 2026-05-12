@@ -3,7 +3,6 @@ title: Kickstart deployment script reference for the Microsoft Sentinel for SAP 
 description: Description of command line options available with kickstart deployment script
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: reference
 ms.date: 09/15/2024
 appliesto:

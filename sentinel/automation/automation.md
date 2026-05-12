@@ -4,7 +4,6 @@ description: Learn about Microsoft Sentinel security orchestration, automation, 
 ms.topic: concept-article
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: sshuster
 ms.date: 07/16/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal

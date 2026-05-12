@@ -3,7 +3,6 @@ title: Containerized Agent to Agentless Connector migration guide
 description: Learn how to migrate from the containerized SAP agent to the agentless data connector for Microsoft Sentinel Solution for SAP applications.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: article
 ms.date: 10/23/2025
 appliesto:

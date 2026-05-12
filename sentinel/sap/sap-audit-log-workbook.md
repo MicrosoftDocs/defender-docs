@@ -3,7 +3,6 @@ title: Microsoft Sentinel solution for SAP applications - SAP -Security Audit lo
 description: Learn about the SAP - Security Audit log and Initial Access workbook, used to monitor and track data across your SAP systems.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: reference
 ms.date: 09/15/2024
 appliesto:

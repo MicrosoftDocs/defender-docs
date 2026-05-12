@@ -3,7 +3,6 @@ title: Security content reference for Microsoft Power Platform and Microsoft Dyn
 description: Learn about the built-in security content provided by the Microsoft Sentinel solution for Power Platform.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: article
 ms.date: 12/12/2025
 ms.custom: sfi-ga-nochange

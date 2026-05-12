@@ -3,7 +3,6 @@ title: Microsoft Sentinel solution for SAP applications data connector agent sys
 description: Learn about the settings available in Microsoft Sentinel for SAP applications data connector agent systemconfig.json file.
 ms.author: monaberdugo
 author: mberdugo
-ms.reviewer: mapankra
 ms.topic: reference
 ms.date: 09/15/2024
 appliesto:
