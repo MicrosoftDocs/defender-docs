@@ -1,8 +1,9 @@
 ---
 title: Microsoft Sentinel alert schema differences between standalone and XDR connectors
 description: Learn how alert schema, field mappings, and ingestion behavior differ between standalone connectors and the XDR connector in Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: idpelleg
 ms.topic: reference
 ms.date: 01/27/2026
 
