@@ -35,7 +35,7 @@ Users don't need Defender for Endpoint installed on their local devices to get S
 - Users are assigned licenses from a [required licensing plan](/entra/identity/users/licensing-service-plan-reference).
 
   Safe Documents is controlled by the **Office 365 SafeDocs** (or **SAFEDOCS** or **bf6f5520-59e3-4f82-974b-7dbbc4fd27c7**) service plan. This service plan is available in the following products:
-  
+
   - Microsoft 365 A5
   - Microsoft 365 E5
   - Microsoft 365 Government Community Cloud (GCC) G5

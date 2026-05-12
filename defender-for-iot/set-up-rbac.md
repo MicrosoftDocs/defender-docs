@@ -31,7 +31,7 @@ To make general changes to RBAC roles and permissions that relate to all other a
 There are three ways to manage user access to the Defender portal, depending on the type of tenent you're using. Each system has different named permissions that allow access for site security. The systems are:
 
 - [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
-- [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac): Use Microsoft Defender unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
+- [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac): Use Defender unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 - [Microsoft Defender for Endpoint XDR RBAC](/defender-endpoint/user-roles): Use Defender for Endpoint XDR role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
 The instructions and permission settings listed in this article apply to both Defender unified RBAC and Microsoft Defender for Endpoint XDR RBAC.
