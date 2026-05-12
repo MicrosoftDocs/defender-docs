@@ -6,7 +6,7 @@ ms.subservice: adv-hunting
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 ms.custom:
@@ -16,25 +16,21 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 04/02/2026
+ms.date: 05/08/2026
 ---
 
 # UrlClickEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
-
-
 The `UrlClickEvents` table in the advanced hunting schema contains information about [Safe Links](/defender-office-365/safe-links-about) clicks from email messages, Microsoft Teams, and Office 365 apps in supported desktop, mobile, and web apps.
 
 This advanced hunting table is populated by records from Microsoft Defender for Office 365. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Office 365 in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
-
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](advanced-hunting-schema-tables.md).
 
 | Column name | Data type | Description |
-|-------------|-----------|-------------|
+| --- | --- | --- |
 | `Timestamp` | `datetime` | The date and time when the user clicked on the link |
 | `Url` | `string` | The full URL that was clicked on by the user |
 | `ActionType` | `string` | Indicates whether the click was allowed or blocked by Safe Links or blocked due to a tenant policy, for instance, from Tenant Allow Block list|
@@ -44,14 +40,21 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `ThreatTypes` | `string` | Verdict at the time of click, which tells whether the URL led to malware, phish or other threats|
 | `DetectionMethods` | `string` | Detection technology that was used to identify the threat at the time of click|
 | `IPAddress` | `string` | Public IP address of the device from which the user clicked on the link|
-| `IsClickedThrough` | `bool` | Indicates whether the user was able to click through to the original URL (1) or not (0) on the Safe Links warning page using "Continue anyway" option|
+| `IsClickedThrough` | `bool` | Indicates whether the user was able to click through to the original URL (1) or not (0) on the Safe Links warning page using "Continue anyway" option |
 | `UrlChain` | `string` | For scenarios involving redirections, it includes URLs present in the redirection chain|
-| `ReportId` | `string` | The unique identifier for a click event. For clickthrough scenarios, report ID would have same value, and therefore it should be used to correlate a click event.|
+| `ReportId` | `string` | The unique identifier for a click event. For clickthrough scenarios, report ID would have same value, and therefore it should be used to correlate a click event |
+| `AppName` | `string` | The application's display name as exposed by the associated service principal |
+| `AppVersion` | `string` | Version of the client application where the click occurred |
+| `SourceId` | `string` | Unique identifier for the source of the click |
+| `TenantId` | `string` | The Log Analytics workspace ID |
+| `Type` | `string` | The name of the table |
+| `SourceSystem` | `string` | The type of agent the event was collected by. For example, `OpsManager` for Windows agent, either direct connect or Operations Manager, `Linux` for all Linux agents, or `Azure` for Azure Diagnostics |
+| `TimeGenerated` | `datetime` | The date and time when the user clicked on the link. The value is identical to `Timestamp` and intended for Microsoft Defender for Endpoints queries compatibility |
 
 > [!NOTE]
-> For clicks originating from email in Drafts and Sent items folders, email metadata is either not available or `NetworkMessageId` is assigned by default. In this case, `UrlClickEvents` can't be joined with `Email*` tables like `EmailEvents`, `EmailPostDeliveryEvents`, and others, using `NetworkMessageId`. 
+> For clicks originating from email in Drafts and Sent items folders, email metadata is either not available or `NetworkMessageId` is assigned by default. In this case, `UrlClickEvents` can't be joined with `Email*` tables like `EmailEvents`, `EmailPostDeliveryEvents`, and others, using `NetworkMessageId`.
 
-You can try this example query that uses the `UrlClickEvents` table to return a list of links where a user was allowed to proceed: 
+You can try this example query that uses the `UrlClickEvents` table to return a list of links where a user was allowed to proceed:
 
 ```kusto
 // Search for malicious links where user was allowed to proceed through
@@ -62,6 +65,7 @@ UrlClickEvents
 ```
 
 ## Related articles
+
 - [Supported Microsoft Defender XDR streaming event types in event streaming API](supported-event-types.md)
 - [Proactively hunt for threats](advanced-hunting-overview.md)
 - [Safe Links in Microsoft Defender for Office 365](/defender-office-365/safe-links-about)
