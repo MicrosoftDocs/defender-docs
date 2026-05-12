@@ -2,7 +2,7 @@
 title: Microsoft Defender for Identity XDR security alerts
 description: Learn about security alerts issued by Defender for Identity in the extended detection and response (XDR) format.
 ms.date: 05/05/2026
-ms.topic: conceptual
+ms.topic: article
 ms.reviewer: yossidahan
 ---
 
