@@ -68,6 +68,12 @@ To discover and deploy agents in the Microsoft Defender portal:
 
 This section details the Microsoft Security Copilot agents that are available in the Microsoft Defender portal.
 
+- [Security Alert Triage Agent (Preview)](#security-alert-triage-agent-preview)
+- [Threat Intelligence Briefing Agent](#threat-intelligence-briefing-agent)
+- [Threat Hunting Agent](#threat-hunting-agent)
+- [Security Analyst Agent](#security-analyst-agent)
+- [Dynamic Threat Detection Agent](#dynamic-threat-detection-agent)
+
 ### Security Alert Triage Agent (Preview)
 
 > [!NOTE]
