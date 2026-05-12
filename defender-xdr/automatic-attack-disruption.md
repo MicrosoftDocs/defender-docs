@@ -79,9 +79,9 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 
   Defender for Identity enables remediation actions for users from Active Directory, Microsoft Entra ID, and integrated identity providers. The Disable user action behaves differently depending on how the user is hosted in your environment.
 
-  - **When the user account is hosted in Active Directory**: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity sensor. [Automatic...soft Learn | Learn.Microsoft.com]
+  - **When the user account is hosted in Active Directory**: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity sensor.
   - **When the user account is hosted in Active Directory and is synced to Microsoft Entra ID**:
-Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account in Microsoft Entra ID. [Automatic...soft Learn | Learn.Microsoft.com]
+Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account in Microsoft Entra ID.
   - **When the user account is hosted in Microsoft Entra ID only (cloud‑native account)**:
 Defender for Identity executes the disable user action in Microsoft Entra ID by using a Microsoft‑managed enterprise application. This application validates the signed‑in user’s assigned roles and permissions through role‑based access control (RBAC) before the account is disabled.
 
