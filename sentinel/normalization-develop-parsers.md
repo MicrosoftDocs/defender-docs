@@ -3,7 +3,6 @@ title: Develop Microsoft Sentinel Advanced Security Information Model (ASIM) par
 description: This article explains how to develop, test, and deploy Microsoft Sentinel Advanced Security Information Model (ASIM) parsers.
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: ofshezaf
 ms.topic: how-to
 ms.date: 11/09/2021
 

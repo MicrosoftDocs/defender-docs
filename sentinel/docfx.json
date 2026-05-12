@@ -143,7 +143,8 @@
         "automation/**": "sshuster",
         "business-applications/**": "mapankra",
         "dynamics-365/**": "mapankra",
-        "soc-optimization/**": "yohasson"
+        "soc-optimization/**": "yohasson",
+        "normalization-*": "ofshezaf"
       }
     },
     "overwrite": [],
