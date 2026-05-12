@@ -1,8 +1,9 @@
 ---
 title: Microsoft Sentinel solution for SAP applications data connector agent update file reference
 description: Description of command line options available with update deployment script
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: mapankra
 ms.topic: reference
 ms.date: 07/03/2024
 appliesto:

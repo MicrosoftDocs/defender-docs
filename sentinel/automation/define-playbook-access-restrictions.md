@@ -2,9 +2,9 @@
 title: Define an access restriction policy for Standard-plan playbooks
 description: This article shows how to define an access restriction policy for Microsoft Sentinel Standard-plan playbooks, so that they can support private endpoints.
 ms.topic: how-to
-author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: Anat Gilenson
+author: mberdugo
+ms.reviewer: sshuster
 ms.date: 07/1/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal

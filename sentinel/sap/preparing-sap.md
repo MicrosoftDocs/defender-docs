@@ -2,8 +2,9 @@
 title: Configure your SAP system for the Microsoft Sentinel solution
 titleSuffix: Microsoft Sentinel
 description: Learn about extra preparations required in your SAP system to install the SAP data connector agent and connect Microsoft Sentinel to your SAP system.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: mapankra
 ms.topic: how-to
 ms.date: 12/02/2024
 appliesto:

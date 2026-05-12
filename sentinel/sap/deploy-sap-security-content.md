@@ -1,8 +1,9 @@
 ---
 title: Install a Microsoft Sentinel solution for SAP applications
 description: Learn how to install a Microsoft Sentinel solution for SAP applications from the content hub to your Log Analytics workspace enabled for Microsoft Sentinel.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: mapankra
 ms.topic: how-to
 ms.date: 09/30/2025
 appliesto:

@@ -1,8 +1,9 @@
 ---
 title: Microsoft Sentinel solution for SAP applications data connector agent systemconfig.ini file reference
 description: Learn about the settings available in Microsoft Sentinel for SAP applications data connector agent systemconfig.ini file.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: mapankra
 ms.topic: reference
 ms.date: 07/03/2024
 appliesto:
