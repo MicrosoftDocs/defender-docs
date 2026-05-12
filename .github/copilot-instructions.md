@@ -54,10 +54,6 @@ Below are instructions specific to this repository. These may be updated by repo
 
 <!--- Add additional repository level instructions below. Do NOT update this line or above. --->
 
-### Pull requests
-
-This is a fork of `MicrosoftDocs/defender-docs-pr`. When creating pull requests, always target the upstream repo (`MicrosoftDocs/defender-docs-pr`) by using `--repo MicrosoftDocs/defender-docs-pr`. Do not create PRs against this fork.
-
 ### Authoritative security content
 
 The `security-for-ai` folder contains the authoritative security content for this repository. All content elsewhere in the repo must align with the guidance, terminology, and recommendations in `security-for-ai`. When you notice inconsistencies or conflicts between other content and `security-for-ai`:
