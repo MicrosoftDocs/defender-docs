@@ -184,7 +184,7 @@ For more information, see [What are virtual machine scale sets?](/azure/virtual-
 
     - **Orchestration Mode**: Uniform
     - **Security Type**: standard
-    - **Image**: Ubuntu server 18.04 LTS – Gen1
+    - **Image**: Ubuntu Server LTS (24.04 or later)
     - **Size**: Standard_DS1_V2
     - **Authentication**: Based on your corporate standard
 

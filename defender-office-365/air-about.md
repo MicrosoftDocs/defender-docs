@@ -3,7 +3,7 @@ title: Automated investigation and response in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
 ms.topic: article
-ms.date: 01/30/2026
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 ms.collection:
 - m365-security
@@ -61,9 +61,9 @@ An alert is triggered, and a security playbook starts an automated investigation
 4. The SecOps team reviews the [investigation results and recommendations](air-view-investigation-results.md) in the investigation itself, the incident, or in the Action center, and [approves or rejects the remediation actions](air-review-approve-pending-completed-actions.md).
 
    > [!TIP]
-   > No remediation actions happen automatically. Remediation actions require manual approval by SecOps personnel. AIR capabilities save time by getting to the recommended remediation actions with all the details to make an informed decision.
+   > We expanded the auto-remediation capabilities in automated investigations and response (AIR) to fully automate the remediation of malicious similarity clusters. In 2025, we introduced auto-remediation for malicious URL and file clusters. Building on that foundation, this enhancement enables AIR to automatically approve all pending remediation actions it generates. This capability eliminates the need for manual intervention and streamlines the response process for SOC teams.
    >
-   > AIR also saves time by evaluating and automatically resolving alerts and incidents where no threats were found. This result is common in user submission scenarios. AIR closes the investigation if no threats were found or threats were found in messages that were already remediated. Typically
+   > AIR also saves time by evaluating and automatically resolving alerts and incidents where no threats were found. This result is common in user submission scenarios. AIR closes the investigation if no threats were found or threats were found in messages that were already remediated.
 
 5. As pending remediation actions are approved or rejected, the automated investigation completes.
 
@@ -87,7 +87,6 @@ You need to be assigned permissions to use AIR. You have the following options:
   - _Set up AIR features_: Membership in the **Organization Management** or **Security Administrator** role groups.
   - _Start an automated investigation_ or _Approve or reject recommended actions_:
     - Membership in the **Organization Management**, **Security Administrator**, **Security Operator**, **Security Reader**, or **Global Reader** role groups.
-      and
     - The **Search and Purge** role, which is assigned only to the **Data Investigator** or **Organization Management** role groups by default. Or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Give users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Set up AIR features_ Membership in the **Global Administrator** or **Security Administrator** roles.
@@ -96,7 +95,7 @@ You need to be assigned permissions to use AIR. You have the following options:
       and
     - Membership in an Email & collaboration role group with the **Search and Purge** role assigned as previously described.
 
-To use Automated Investigation and Response (AIR), you must have Microsoft Defender for Office 365 Plan 2 licenses (included with eligible subscriptions or available as an add‑on). 
+To use Automated Investigation and Response (AIR), you must have Microsoft Defender for Office 365 Plan 2 licenses (included with eligible subscriptions or available as an add‑on).
 
 ## Next steps
 

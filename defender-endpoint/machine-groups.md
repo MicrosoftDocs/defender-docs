@@ -51,6 +51,9 @@ As part of the process of creating a device group, you'll:
 > [!NOTE]
 > Device Groups in Defender for Business are managed differently. For more information, see [Device groups in Microsoft Defender for Business](/defender-business/mdb-create-edit-device-groups).
 
+> [!NOTE]
+> You can create up to 2,000 device groups per tenant.
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Endpoints** \> **Permissions** section \> **Device groups**. Or, to go directly to the device groups tab, use <https://security.microsoft.com/securitysettings/endpoints/machine_groups>.
 
 1. On the device groups tab, select **Add device group**.

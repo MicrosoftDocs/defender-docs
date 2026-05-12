@@ -39,7 +39,6 @@ Before you create a rule, decide which correlation type fits your scenario. The 
 | **Root UPN Prefix** | Correlates accounts with matching prefixes before the '@' symbol. | `user@acme.com` and `adm_user@acme.com` share the prefix `user`. |
 | **Root UPN Suffix** | Correlates accounts with matching suffixes after the '@' symbol. | `user@acme.com` and `user_svc@acme.com` share the suffix `@acme.com`. |
 | **Domain UPN** | Correlates accounts across different domains with the same username. | `user@acme.com` and `user@contoso.com`. |
-| **Employee ID** | Correlates accounts that share the same employee ID. | Two accounts with the same employee ID value are linked to one identity. |
 
 ## Add a correlation rule
 
