@@ -8,8 +8,7 @@ ms.reviewer: noriordan
 audience:                  ITPro
 ms.topic:                  article
 ms.date:                   05/30/2022 
-ms.service:                microsoft-365-security
-ms.subservice:             m365d
+ms.service: defender-xdr
 ms.localizationpriority:   medium
 ms.collection: 
   - msftsolution-secops
