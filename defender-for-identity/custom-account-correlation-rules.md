@@ -46,8 +46,8 @@ Before you create a rule, decide which correlation type fits your scenario. The 
 1. Select **Account Correlation Rules**.
 1. Select **Add Rule**.
 1. In the wizard, enter a **Rule Name** (up to 50 characters). You can use letters, numbers, and the following special characters: `. - _ ! # ^ ~`.
-1. Select the **Correlation Type** (Root UPN Prefix, Root UPN Suffix, Domain UPN, or Employee ID).
-1. Enter the required values for the selected correlation type, such as prefixes, suffixes, domains, or employee IDs.
+1. Select the **Correlation Type** (Root UPN Prefix, Root UPN Suffix, or Domain UPN).
+1. Enter the required values for the selected correlation type, such as prefixes, suffixes, or domains.
 1. Review the summary, which includes the rule name, correlation type, and selected values.
 1. Select **Submit** to create the rule. Correlation rule changes take effect within 12 hours.
 
