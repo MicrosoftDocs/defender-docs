@@ -33,6 +33,7 @@ Defender for Identity now supports up to 1,000 sensors per workspace, increased 
 These new alerts were added to the Defender for Identity security alerts:
 
 **New alerts related to Entra ID**:
+- [Guest user account promoted to member](alerts-xdr.md#guest-user-account-promoted-to-member)
 
 - [Failed credential abuse attempt in Entra ID authentication](alerts-xdr.md#failed-credential-abuse-attempt-in-entra-id-authentication)
 - [Malicious sign in from a randomized user agent](alerts-xdr.md#malicious-sign-in-from-a-randomized-user-agent)
