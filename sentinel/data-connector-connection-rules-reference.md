@@ -3,10 +3,11 @@ title: RestApiPoller data connector reference for the Codeless Connector Framewo
 titleSuffix: Microsoft Sentinel
 description: This article provides reference JSON fields and properties to create the RestApiPoller data connector type and its data connection rules for the Codeless Connector Framework.
 services: sentinel
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: reference
 ms.date: 9/30/2024
-ms.author: edbaynash
 
 #Customer intent: As a security engineer, I want to reference paging, authentication, and payload options to create and configure RestApiPoller data connectors by using the Codeless Connector Framework. By using RestApiPoller data connectors, I can integrate a specific data source into Microsoft Sentinel without writing custom code.
 

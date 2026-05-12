@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot CEF and Syslog via AMA connectors in Microsoft Sentinel
 description: Learn how to troubleshoot issues with CEF and Syslog data collection using the Azure Monitor Agent (AMA) in Microsoft Sentinel.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: troubleshooting
 ms.date: 01/12/2026
 
