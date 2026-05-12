@@ -53,7 +53,7 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 You need to be assigned permissions before you can run Advanced Hunting queries. You have the following options:
 
 - [Microsoft Defender XDR Unified role based access control (URBAC)](manage-rbac.md):
-  - **Read-only Advanced Hunting access (Email & Collaboration tables)**: Membership assigned with the **Security operations** > **Security data** > **Security data basic (read)** URBAC permission. This permission provides access to:
+  - **Read-only Advanced Hunting access (Email & Collaboration tables)**: Membership assigned with the **Security operations** > **Raw data** > **Email & collaboration metadata (read)** URBAC permission. This permission provides access to:
     - **EmailEvents**
     - **EmailUrlInfo**
     - **EmailAttachmentInfo**
