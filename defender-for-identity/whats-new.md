@@ -25,6 +25,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## May 2026
 
+### Increased sensor capacity
+Defender for Identity now supports up to 1,000 sensors per workspace, increased from the previous limit of 350. To add more than 1,000 sensors, contact Defender for Identity support.
+
 ### New Defender for Identity security alerts
 
 These new alerts were added to the Defender for Identity security alerts:
@@ -39,6 +42,10 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Suspicious addition of default third‑party MFA method to user account](alerts-xdr.md#suspicious-addition-of-default-thirdparty-mfa-method-to-user-account)
 
 ## April 2026
+
+### **Identity Explorer (Preview)**
+
+The Identity page now includes the **Identity Explorer** tab for customers with a Microsoft Sentinel Data Lake license. This tab uses the [hunting graph](/defender-xdr/advanced-hunting-graph) to visualize identity attack paths and exposure scenarios as interactive graphs. Use predefined identity scenarios to discover lateral movement paths, privilege escalation routes, and credential-access risks. For more information, see [Investigate an identity](/defender-xdr/investigate-users#identity-explorer-tab-preview).
 
 ### **Custom account correlation rules (Preview)**
 

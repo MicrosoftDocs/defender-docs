@@ -72,7 +72,7 @@ Defender for Business includes the features of Defender for Endpoint Plan 1, som
 |Microsoft Threat Experts|||✔|
 |Monthly security summary reporting|✔||✔|
 |Next-generation protection|✔|✔|✔|
-|Server support|<sup>\*</sup>|<sup>\*</sup|<sup>\*</sup|
+|Server support|<sup>\*</sup>|<sup>\*</sup>|<sup>\*</sup>|
 |Simplified firewall and antivirus configuration for Windows|✔|||
 |Threat analytics|✔ <br/> (optimized)||✔|
 |Vulnerability management (core capabilities)|✔||✔|
