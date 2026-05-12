@@ -1,14 +1,16 @@
 ---
 title: Microsoft Security Copilot Security Analyst Agent
-description: Identify, assess, and prioritize risks using the Microsoft Security Copilot Security Analyst Agent in the Microsoft Defender portal.
+description: Learn how Microsoft Security Copilot Security Analyst Agent can identify, assess, and prioritize risks in the Microsoft Defender portal.
 ms.service: defender-xdr
+ms.subservice: adv-hunting
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - tier1
-ms.topic: article
+  - security-copilot
+ms.topic: how-to
 ms.date: 05/12/2026
 appliesto: 
 - Microsoft Defender XDR
@@ -17,7 +19,7 @@ appliesto:
 
 # Microsoft Security Copilot Security Analyst Agent
 
-[!INCLUDE [Prerelease](includes/prerelease.md)]
+[!INCLUDE [Prerelease](../includes/prerelease.md)]
 
 Security Analyst Agent in Defender helps security analysts quickly identify, assess, and prioritize risks by providing:
 
@@ -99,7 +101,7 @@ You can run the Security Analyst agent directly in Defender without completing s
 
 1. For first-time setup, locate the agent in the **Ready for setup** section, and select **Set up**. If the agent is already configured for at least one user, search for "Security Analyst Agent" under "Agents in Use" section and click "Go to agent". 
 
-    :::image type="content" source="media/security-analysis-agent-go-to-agent.png" alt-text="Image of Security Analyst Agent - Go to agent":::
+    :::image type="content" source="./media/security-analyst-agent/security-analysis-agent-go-to-agent.png" alt-text="Image of Security Analyst Agent - Go to agent":::
 
 1. Provide your preferred data sources details to configure the agent:
 
@@ -115,17 +117,17 @@ You can run the Security Analyst agent directly in Defender without completing s
       2. Fill in the following field: **Log Analytics Workspace Name**.
       3. Leave the **Sentinel Data Lake Workspace Name** field blank and save your settings.
 
-        :::image type="content" source="media/security-analysis-agent-chat-setup-agent.png" alt-text="Image of Security Analyst Agent - Set up agent chat":::
+        :::image type="content" source="./media/security-analyst-agent/security-analysis-agent-chat-setup-agent.png" alt-text="Image of Security Analyst Agent - Set up agent chat":::
     
 
 
 1. Select **Chat with agent** at the top to interact with the agent.
     
-    :::image type="content" source="media/security-analysis-agent-chat-with-agent.png" alt-text="Image of Security Analyst Agent - chat with agent button":::
+    :::image type="content" source="./media/security-analyst-agent/security-analysis-agent-chat-with-agent.png" alt-text="Image of Security Analyst Agent - chat with agent button":::
     
     You can to start a new chat for a new analysis, view and access historical chats, and view agent setting details from any agent session.
 
-    :::image type="content" source="media/security-analysis-agent-chat-new.png" alt-text="Image of Security Analyst Agent - new chat session":::
+    :::image type="content" source="./media/security-analyst-agent/security-analysis-agent-chat-new.png" alt-text="Image of Security Analyst Agent - new chat session":::
     
 
 
@@ -135,7 +137,7 @@ You can run the Security Analyst agent directly in Defender without completing s
 
 1. Open Copilot, and then select **Security Analyst Agent**.
 
-    :::image type="content" source="media/security-analyst-agent-select.png" alt-text="Screenshot of selecting Security Analyst Agent in Microsoft Defender Advanced hunting.":::
+    :::image type="content" source="./media/security-analyst-agent/security-analyst-agent-select.png" alt-text="Screenshot of selecting Security Analyst Agent in Microsoft Defender Advanced hunting.":::
 
 1. Enter your security analysis prompt in natural language, or select one of the suggested prompts.
 
@@ -147,7 +149,7 @@ You can run the Security Analyst agent directly in Defender without completing s
 
     In the following example, the agent summarizes its findings along with evidence and also provides contextual recommendations on next steps, either deeper investigation or containment. The response also contains a list of suggested next prompts that the user may ask to continue to interaction.
 
-    :::image type="content" source="media/security-analyst-agent-sample-response.png" alt-text="Screenshot of sample response from the Security Analyst agent.":::
+    :::image type="content" source="./media/security-analyst-agent/security-analyst-agent-sample-response.png" alt-text="Screenshot of sample response from the Security Analyst agent.":::
 
 1. Continue with follow-up prompts in the same session, or start a new session for a separate investigation.
 
@@ -156,7 +158,7 @@ You can run the Security Analyst agent directly in Defender without completing s
 
 1. If you ran a KQL query and are looking to analyze the results to understand security risks, select the **Analyze with copilot** below the results tab of the query. The agent reasons on the generated results and presents a summary of prioritized insights needing urgent attention.
 
-    :::image type="content" source="media/security-analyst-agent-sample-analyze.png" alt-text="Screenshot showing the Analyze with Copilot action in Advanced hunting query results.":::
+    :::image type="content" source="./media/security-analyst-agent/security-analyst-agent-sample-analyze.png" alt-text="Screenshot showing the Analyze with Copilot action in Advanced hunting query results.":::
 
 1. Use the feedback buttons on the response to share whether the output was helpful.
 
