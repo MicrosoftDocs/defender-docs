@@ -12,7 +12,7 @@ ms.collection:
 - magic-ai-copilot 
 ms.topic: concept-article
 ms.update-cycle: 180-days
-ms.date: 01/08/2026
+ms.date: 05/12/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -133,6 +133,19 @@ When running the Threat Intelligence Briefing Agent with an [agent identity](thr
 The [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence.
 
 :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png" alt-text="Screenshot of the Copilot pane in advanced hunting with the answer highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png":::
+
+### Security Analyst Agent
+
+The [Security Analyst Agent](/copilot/security/security-analyst-agent) helps security analysts quickly identify, assess, and prioritize risks by performing ready-to-use or custom analyses on security data. The agent provides actionable and prioritized insights, recommendations, and reports to uncover top vulnerabilities and risks. It supports data from Microsoft Defender XDR, Sentinel Log Analytics, or Sentinel Data Lake, and can perform complex analysis tasks such as anomaly detection, clustering, risk scoring, and forecasting without requiring code or queries.
+
+| Attribute | Description |
+|---|---|
+| Identity | Tied to your user identity; each user configures the agent independently |
+| License | **Not Applicable** |
+| Permissions | Read access to Microsoft Defender XDR, Microsoft Sentinel Log Analytics Workspace, or Microsoft Sentinel Data Lake, depending on the data source you choose |
+| Products | <ul><li>[Security Copilot](/copilot/security/get-started-security-copilot)<li>Microsoft Defender XDR (optional data source)<li>Microsoft Sentinel (optional data source)</ul> |
+| Role-based access | Users with read access to the selected data sources can configure and use the agent. |
+| Trigger | Runs on demand when you enter a security analysis prompt in the agent chat or select **Analyze with copilot** from advanced hunting query results |
 
 ### Dynamic Threat Detection Agent
 
