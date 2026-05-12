@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 05/04/2026
+ms.date: 05/07/2026
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -31,6 +31,7 @@ You can also get product updates and important notifications through the [messag
 
 ## May 2026
 
+- In advanced hunting, the **Take action** wizard now lets customers allow or block top-level domains and files attachment hashes in emails based on query results. [Learn more](advanced-hunting-take-action.md#take-various-actions-on-emails).
 - The [hunting graph](advanced-hunting-graph.md) in advanced hunting now includes new identity-focused predefined scenarios. These scenarios help you discover attack paths, privilege escalation routes, and credential access risks across on-premises and cloud environments, including Kerberoast and AS-REP roast paths, domain compromise routes, OAuth application risks, and external user access to cloud resources.
 
 ## April 2026

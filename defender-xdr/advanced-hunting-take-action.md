@@ -6,17 +6,20 @@ ms.subservice: adv-hunting
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
+manager: orspodek
+audience: ITPro
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
-- cx-ti
-- cx-ah
+  - sfi-ga-nochange
+  - cx-ti
+  - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 11/10/2025
+ms.date: 05/07/2026
 ---
 
 # Take action on advanced hunting query results
@@ -25,10 +28,7 @@ ms.date: 11/10/2025
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-You can quickly contain threats or address compromised assets that you find in [advanced hunting](advanced-hunting-overview.md) using powerful and comprehensive action options. With these options, you can:
-
-- Take various actions on devices
-- Quarantine files
+You can quickly contain threats or address compromised assets that you find in [advanced hunting](advanced-hunting-overview.md) by using powerful and comprehensive action options. By using these options, you can take various actions on devices and emails, as well as quarantine files.
 
 ## Required permissions
 
@@ -47,20 +47,20 @@ To take action on emails through advanced hunting, you need a role in Microsoft 
 
 You can take the following actions on devices identified by the `DeviceId` column in your query results:
 
-- Isolate affected devices to contain an infection or prevent attacks from moving laterally
-- Collect investigation package to obtain more forensic information
-- Run an antivirus scan to find and remove threats using the latest security intelligence updates
-- Initiate an automated investigation to check and remediate threats on the device and possibly other affected devices
-- Restrict app execution to only Microsoft-signed executable files, preventing subsequent threat activity through malware or other untrusted executables
+- Isolate affected devices to contain an infection or prevent attacks from moving laterally.
+- Collect an investigation package to obtain more forensic information.
+- Run an antivirus scan to find and remove threats by using the latest security intelligence updates.
+- Initiate an automated investigation to check and remediate threats on the device and possibly other affected devices.
+- Restrict app execution to only Microsoft-signed executable files, preventing subsequent threat activity through malware or other untrusted executables.
 
-To learn more about how these response actions are performed through Microsoft Defender for Endpoint, [read about response actions on devices](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts).
+To learn more about how Microsoft Defender for Endpoint performs these response actions, [read about response actions on devices](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts).
 
-### Quarantine files
+## Quarantine files
 
-You can deploy the *quarantine* action on files so that they're automatically quarantined when encountered. When selecting this action, you can choose between the following columns to identify which files in your query results to quarantine:
+You can deploy the *quarantine* action on files so that the files are automatically quarantined when encountered. When selecting this action, you can choose between the following columns to identify which files in your query results to quarantine:
 
-- `SHA1`: In most advanced hunting tables, this column refers to the SHA-1 of the file that's affected by the recorded action. For example, if a file was copied, this affected file would be the copied file.
-- `InitiatingProcessSHA1`: In most advanced hunting tables, this column refers to the file responsible for initiating the recorded action. For example, if a child process was launched, this initiator file would be part of the parent process.
+- `SHA1`: In most advanced hunting tables, this column refers to the SHA-1 of the file that's affected by the recorded action. For example, if a file was copied, this affected file is the copied file.
+- `InitiatingProcessSHA1`: In most advanced hunting tables, this column refers to the file responsible for initiating the recorded action. For example, if a child process was launched, this initiator file is part of the parent process.
 - `SHA256`: This column is the SHA-256 equivalent of the file identified by the `SHA1` column.
 - `InitiatingProcessSHA256`: This column is the SHA-256 equivalent of the file identified by the `InitiatingProcessSHA1` column.
 
@@ -75,21 +75,21 @@ To take any of the described actions, select one or more records in your query r
 
 ## Take various actions on emails
 
-Apart from device-focused remediation steps, you can also take some actions on emails from your query results. Select the records you want to take action on, select **Take actions**, then under **Choose actions**, select your choice from the following:
+Apart from device-focused remediation steps, you can also take some actions on emails from your query results. Select the records you want to take action on, select **Take actions**, and then under **Choose actions**, select your choice from the following options:
 
-- `Move to mailbox folder` - select this action to move the email messages to Junk, Inbox, or Deleted items folder
+- `Move to mailbox folder` - select this action to move the email messages to Junk, Inbox, or Deleted items folder.
 
      Note that you can move email results consisting of quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
 
    :::image type="content" source="media/advanced-hunting-take-action/advanced-hunting-quarantine-results.png" alt-text="Screenshot of the Inbox option under take actions pane in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-action/advanced-hunting-quarantine-results.png":::
 
-- `Delete email` - select this action to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**)
+- `Delete email` - select this action to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**).
 
    Selecting **Soft delete** also automatically soft deletes the messages from the sender's Sent Items folder if the sender is in the organization.
 
    :::image type="content" source="media/advanced-hunting-take-action/soft-delete-sender-copy.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-action/soft-delete-sender-copy.png":::
 
-   Automatic soft-deletion of the sender's copy is available for results using the `EmailEvents` and `EmailPostDeliveryEvents` tables but not the `UrlClickEvents` table. Furthermore, the result should contain the columns `EmailDirection` and `SenderFromAddress` columns for this action option to show up in the Take actions wizard. Sender's copy clean-up applies to intra-organization emails and outbound emails, ensuring that only the sender's copy is soft-deleted for these email messages. Inbound messages are out of scope.
+   Automatic soft-deletion of the sender's copy is available for results using the [`EmailEvents`](advanced-hunting-emailevents-table.md) and [`EmailPostDeliveryEvents`](advanced-hunting-emailpostdeliveryevents-table.md) tables but not the [`UrlClickEvents`](advanced-hunting-urlclickevents-table.md) table. Furthermore, the result should contain the `EmailDirection` and `SenderFromAddress` columns for this action option to show up in the **Take actions** wizard. Sender's copy clean-up applies to intra-organization emails and outbound emails, ensuring that only the sender's copy is soft-deleted for these email messages. Inbound messages are out of scope.
 
    See the following query as reference:
 
@@ -99,15 +99,18 @@ Apart from device-focused remediation steps, you can also take some actions on e
    | project NetworkMessageId,RecipientEmailAddress, EmailDirection, SenderFromAddress, LatestDeliveryAction,LatestDeliveryLocation
    ```
 
-- `Submit to Microsoft` - select this action to submit false positives or false negative emails to Microsoft. As part of the submission, you can also add URLs, senders, and their domains to the Tenant Allow/Block List to immediately resolve the issue while Microsoft evaluates the submission.
+- `Submit to Microsoft` - select this action to submit false positive or false negative emails to Microsoft.
 
-  URL entries in the Tenant Allow/Block List are supported only if the query result has the `Url` column by joining with `EmailUrlInfo` table on `NetworkMessageId`.
+  As part of the submission, you can also add URLs and URL domains, sender domains, and file attachments to the Tenant Allow/Block List to immediately resolve the issue while Microsoft evaluates the submission.
+
+    > [!IMPORTANT]
+    > To block a URL or URL domain, join the [`EmailUrlInfo`](advanced-hunting-emailurlinfo-table.md) table with `NetworkMessageId` to get the required details. To block an attachment (file), join the [`EmailAttachmentInfo`](advanced-hunting-emailattachmentinfo-table.md) table with `NetworkMessageId` to get the file's hash.
 
   **Submit to Microsoft** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
 
   :::image type="content" source="media/advanced-hunting-take-action/advanced-hunting-take-actions-submit-to-microsoft.png" alt-text="Screenshot of Choose actions page of the Take actions wizard with Submit to Microsoft selected and the Selected entities to block details flyout." lightbox="media/advanced-hunting-take-action/advanced-hunting-take-actions-submit-to-microsoft.png":::
 
-- `Initiate automated investigation` - select this action to trigger [Automated investigation](/defender-office-365/air-about) on email, sender, recipient or contact recipients.
+- `Initiate automated investigation` - select this action to trigger [Automated investigation](/defender-office-365/air-about) on email, sender, recipient, or contact recipients.
 
   **Initiate automated investigation** might be disabled if mandatory columns are missing. To resolve this issue, select **Show empty columns** before you select **Take actions**.
 
@@ -117,14 +120,14 @@ You can also provide a remediation name and a short description of the action ta
 
 :::image type="content" source="media/advanced-hunting-take-action/choose-email-actions-entities.png" alt-text="take actions wizard showing choose actions for entities" lightbox="media/advanced-hunting-take-action/choose-email-actions-entities.png":::
 
-These email actions are applicable to [custom detections](custom-detections-overview.md) as well.
+These email actions also apply to [custom detections](custom-detections-overview.md).
 
 ## Review actions taken
 
-Each action is individually recorded in the [action center](m365d-action-center.md) under **Action center** > **History** ([security.microsoft.com/action-center/history](https://security.microsoft.com/action-center/history)). Go to the action center to check the status of each action.
+The [action center](m365d-action-center.md) under **Action center** > **History** ([security.microsoft.com/action-center/history](https://security.microsoft.com/action-center/history)) records each action individually. To check the status of each action, go to the action center.
 
 > [!NOTE]
-> Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
+> Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats by using more data sources. To move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR, see [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## Related articles
 
