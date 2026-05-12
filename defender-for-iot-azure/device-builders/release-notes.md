@@ -87,11 +87,11 @@ For more information, see [Firmware analysis for device builders](overview-firmw
 
 When upgrading the micro agent from version 4.2.* to 4.6.2, you would first need to remove the package and then reinstall it. For more information, see [Upgrade the Microsoft Defender for IoT micro agent](upgrade-micro-agent.md).
 
-- **Peripheral collector**: Addition of a new collector that detects physical plugins of devices. For more information, see [Micro agent event collection - Peripheral events](concept-event-aggregation.md).
+- **Peripheral collector**: Addition of a new collector that detects physical plugins of devices. For more information, see [Micro agent event collection - Peripheral events](concept-event-aggregation.md#peripheral-events-event-based-collector).
 
-- **File system collector**: Addition of a new collector that monitors specified file systems. For more information, see [Micro agent event collection - File system events](concept-event-aggregation.md).
+- **File system collector**: Addition of a new collector that monitors specified file systems. For more information, see [Micro agent event collection - File system events](concept-event-aggregation.md#file-system-events-event-based-collector).
 
-- **Statistics collector**: Addition of a new collector that reports for each collection cycle, data regarding the different collectors in the agent. For more information, see [Micro agent event collection - Statistics events](concept-event-aggregation.md).
+- **Statistics collector**: Addition of a new collector that reports for each collection cycle, data regarding the different collectors in the agent. For more information, see [Micro agent event collection - Statistics events](concept-event-aggregation.md#statistics-data-trigger-based-collector).
 
 - **System information collector**: System information collector now collects the agent type (Edge/Standalone) and version. For more information, see [Micro agent event collection - System information events](concept-event-aggregation.md).
 
@@ -105,14 +105,13 @@ When upgrading the micro agent from version 4.2.* to 4.6.2, you would first need
 
 - **AMQP protocol over web socket protocol support**: Now supporting AMQP over web socket protocol that can be added after installing your micro agent. For more information, see [Add AMQP over websocket protocol support](tutorial-standalone-agent-binary-installation.md#add-amqp-protocol-support).
 
-- **SBoM collector bug fix**: Now supporting collection of all packages instead of first ingested 500. For more information, see [Micro agent event collection - SBoM events](concept-event-aggregation.md).
+- **SBoM collector bug fix**: Now supporting collection of all packages instead of first ingested 500. For more information, see [Micro agent event collection - SBoM events](concept-event-aggregation.md#sbom-trigger-based-collector).
 
 - **Debian 10 ARM 64 buster support**: Now supporting Debian 10 ARM 64 devices. For more information, see [Agent portfolio overview and OS support](concept-agent-portfolio-overview-os-support.md).
 
 - **22.04 Ubuntu support**: Now supporting Ubuntu 22.04 devices. For more information, see [Agent portfolio overview and OS support](concept-agent-portfolio-overview-os-support.md).
 
-
-## Next steps
+## Related content
 
 - [Onboard to Defender for IoT](quickstart-onboard-iot-hub.md)
 - [Upgrade the Microsoft Defender for IoT micro agent](upgrade-micro-agent.md)
