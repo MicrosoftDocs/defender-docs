@@ -1,8 +1,9 @@
 ---
-title: What's new in Microsoft Defender for IoT
+title: What's New in Microsoft Defender for IoT
 description: This article describes new features available in Microsoft Defender for IoT, including both OT and Enterprise IoT networks, and both on-premises and in the Azure portal.
 ms.topic: whats-new
-ms.date: 09/21/2025
+ms.date: 05/03/2026
+ai-usage: ai-assisted
 ms.custom:
   - enterprise-iot
   - sfi-image-nochange
@@ -19,6 +20,12 @@ Features released earlier than nine months ago are described in the [What's new 
 >
 
 [!INCLUDE [defender-iot-defender-reference](../includes/defender-for-iot-defender-reference.md)]
+
+## April 2026
+
+|Service area  |Updates  |
+|---------|---------|
+| **OT networks** | Sensor version 26.1.0 is now available. This release includes CVE updates and an OT sensor operating system upgrade to Debian 12. See [release details and updates](release-notes.md#version-2610). |
 
 ## February 2026
 
@@ -101,4 +108,4 @@ The legacy on-premises management console isn't available for download after **J
 
 ## Next steps
 
-[Getting started with Defender for IoT](getting-started.md)
+[Start a Microsoft Defender for IoT trial](getting-started.md)
