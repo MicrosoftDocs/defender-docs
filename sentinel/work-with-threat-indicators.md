@@ -168,13 +168,13 @@ For more information on how threat intel is updated, see [View your threat intel
 
 This procedure describes how to view your threat intelligence with queries, regardless of the source feed or method you used to ingest them.
 
-Threat indicators are stored in the Microsoft Sentinel `ThreatIntelligenceIndicator` table. This table is the basis for threat intelligence queries performed by other Microsoft Sentinel features, such as **Analytics**, **Hunting**, and **Workbooks**.
+Threat indicators are stored in the Microsoft Sentinel `ThreatIntelIndicators` table. This table is the basis for threat intelligence queries performed by other Microsoft Sentinel features, such as **Analytics**, **Hunting**, and **Workbooks**.
 
 #### [Defender portal](#tab/defender-portal)
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Investigation & response** > **Hunting** > **Advanced hunting**.
 
-1. The `ThreatIntelligenceIndicator` table is located under the **Microsoft Sentinel** group.
+1. The `ThreatIntelIndicators` table is located under the **Microsoft Sentinel** group.
 
 :::image type="content" source="./media/work-with-threat-indicators/table-results-advanced-hunting.png" alt-text="Screenshot of add watchlist option on watchlist page." lightbox="./media/work-with-threat-indicators/table-results-advanced-hunting.png":::
 
@@ -186,7 +186,7 @@ Threat indicators are stored in the Microsoft Sentinel `ThreatIntelligenceIndica
 
 Your results should look similar to the sample threat indicator shown here.
 
-:::image type="content" source="media/work-with-threat-indicators/table-results.png" alt-text="Screenshot that shows sample ThreatIntelligenceIndicator table results with the details expanded." lightbox="media/work-with-threat-indicators/table-results.png":::
+:::image type="content" source="media/work-with-threat-indicators/table-results.png" alt-text="Screenshot that shows sample ThreatIntelIndicators table results with the details expanded." lightbox="media/work-with-threat-indicators/table-results.png":::
 
 ---
 
@@ -204,7 +204,7 @@ Here's how to find the threat intelligence workbook provided in Microsoft Sentin
 
  1. Under the **Threat management** section of the Microsoft Sentinel menu, select **Workbooks**.
 
- 1. Find the workbook titled **Threat Intelligence**. Verify that you have data in the `ThreatIntelligenceIndicator` table.
+ 1. Find the workbook titled **Threat Intelligence**. Verify that you have data in the `ThreatIntelIndicators` table.
 
      :::image type="content" source="media/work-with-threat-indicators/threat-intel-verify-data.png" alt-text="Screenshot that shows verifying that you have data.":::
 

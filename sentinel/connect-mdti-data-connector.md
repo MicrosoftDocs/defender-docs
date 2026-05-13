@@ -64,7 +64,7 @@ For more information about how to manage the solution components, see [Discover 
 
 At this point, the ingested intelligence is now available for use in the `TI map...` analytics rules. For more information, see [Use threat indicators in analytics rules](use-threat-indicators-in-analytics-rules.md). 
 
-Find the new intelligence in the management interface or directly in **Logs** by querying the `ThreatIntelligenceIndicator` table. For more information, see [Work with threat intelligence](work-with-threat-indicators.md).
+Find the new intelligence in the management interface or directly in **Logs** by querying the `ThreatIntelIndicators` table. For more information, see [Work with threat intelligence](work-with-threat-indicators.md).
 
 ## Related content
 
