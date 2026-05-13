@@ -208,7 +208,7 @@ An invite-only early access program provided an additional evaluation mechanism,
 
 - **Red teaming and adversarial testing:** Before release, Microsoft conducted extensive red teaming to identify failure modes and conditions under which the application could generate outputs outside its intended scope. Dedicated teams simulated adversarial inputs, jailbreak attempts, and edge-case scenarios to assess the application's resilience and inform the design of safety controls.
 
-- **Human-in-the-loop design:** Copilot in Defender keeps humans at the center of all workflows. All generated outputs, including summaries, recommendations, classifications, and code, are presented to analysts for review before any action is taken. This design ensures that human judgment is the final decision point for all security operations activities.
+- **Transparency and explainability:** Copilot in Defender provides transparent documentation of its outputs, reasoning, and actions within the customer environment. For each task, including agent-driven actions, Copilot surfaces explanations and supporting context, enabling customer analysts to review, understand, and maintain oversight of security operations activities.
 
 - **Content filtering and safety systems:** A multi-layered safety system is designed to mitigate harmful content generation and prevent misuse. This includes harmful content annotation, content classifiers, and built-in safeguards that screen both inputs and outputs for off-topic, harmful, or otherwise inappropriate content.
 
