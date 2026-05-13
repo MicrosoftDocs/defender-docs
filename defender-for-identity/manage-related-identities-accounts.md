@@ -51,7 +51,7 @@ Use the procedures in this article to manually link accounts to identities, and 
 > These features continue to use the Cloud Application Accounts inventory.
 
 > [!TIP]
-> To automatically correlate accounts using naming conventions, see [Create custom account correlation rules](custom-account-correlation-rules.md).
+> To automatically correlate accounts using naming conventions or employee IDs, see [Create custom account correlation rules](custom-account-correlation-rules.md).
 
 ## Prerequisites
 

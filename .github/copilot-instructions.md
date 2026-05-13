@@ -59,6 +59,7 @@ Below are instructions specific to this repository. These may be updated by repo
 - Never use phrases like "This article covers," "This article describes," or "This page explains" in article introductions. Lead with the action or topic directly.
 - Never use the word "across" (use alternatives like "in," "on," "throughout," or "for").
 
+
 ### Authoritative security content
 
 The `security-for-ai` folder contains the authoritative security content for this repository. All content elsewhere in the repo must align with the guidance, terminology, and recommendations in `security-for-ai`. When you notice inconsistencies or conflicts between other content and `security-for-ai`:
