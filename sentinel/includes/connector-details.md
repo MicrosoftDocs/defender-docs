@@ -5243,6 +5243,7 @@ The [Okta Single Sign-On (SSO)](https://www.okta.com/products/single-sign-on/) c
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
 |`Okta_CL`|No|No|
+|`OktaV2_CL`|No|No|
 
 **Data collection rule support:** Not currently supported
 

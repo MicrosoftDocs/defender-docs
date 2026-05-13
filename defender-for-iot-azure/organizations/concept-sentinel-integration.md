@@ -106,6 +106,7 @@ Instead
 Microsoft Sentinel creates alerts based on your current analytics rules and the alert logs listed in the **SecurityAlert** table. If you don't have any active analytics rules for Defender for IoT, Microsoft Sentinel considers each alert log as an *event*.
 
 To view alerts in Microsoft Sentinel, run the following query on the**SecurityAlert** table:
+
 ```kql
 SecurityAlert
 | where ProviderName == 'ASI Scheduled Alerts' or ProviderName =='CustomAlertRule'
@@ -122,11 +123,12 @@ After you've installed the Microsoft Defender for IoT solution and deployed the 
 Microsoft Sentinel creates incidents based on your analytics rules. You might have several alerts grouped in the same incident, or you might have analytics rules configured to *not* create incidents for specific alert types.
 
 To view incidents in Microsoft Sentinel, run the following query:
+
 ```kql
 SecurityIncident
 ```
 
-## Next steps
+## Related content
 
 For more information, see:
 

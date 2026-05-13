@@ -28,7 +28,7 @@ To detect cross-forest activities, Defender for Identity sensors query domain co
 
 - Defender for Identity sensors can be installed on domain controllers in all forests, even forests with no trust.
 
-- [Add additional credentials](create-directory-service-account-gmsa.md#configure-a-directory-service-account-in-microsoft-defender-xdr) on the **Directory services accounts** page to support any untrusted forests in your environment.
+- [Add additional credentials](create-directory-service-account-gmsa.md#configure-a-directory-service-account-in-microsoft-defender-portal) on the **Directory services accounts** page to support any untrusted forests in your environment.
 
   - Only one credential is required to support all forests with a two-way trust.
 
