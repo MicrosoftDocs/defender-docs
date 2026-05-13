@@ -49,7 +49,7 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 You can access Copilot in two ways:
 
 - Security Copilot is embedded in the Microsoft Defender portal to help provide security teams with enhanced capabilities to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence.
-- Defender Chat experience (preview) is an open prompt chat assistant built into Microsoft Defender. It helps SOC analysts investigate threats, explore incidents, and answer security questions in plain language, without needing to navigate multiple screens or write complex queries. This preview isn't yet available in Australia or New Zealand.
+- Defender Chat experience (preview) is an open prompt chat assistant built into Microsoft Defender. It helps SOC analysts investigate threats, explore incidents, and answer security questions in plain language, without needing to navigate multiple screens or write complex queries.
 
 Copilot in Defender operates using [Microsoft's AI principles](https://www.microsoft.com/ai/responsible-ai). For more information, see the [Application card for Microsoft Copilot in Microsoft Defender](application-card-copilot-defender.md).
 
