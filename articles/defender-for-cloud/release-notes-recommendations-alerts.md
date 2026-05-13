@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 03/29/2026
+ms.date: 05/13/2026
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -48,6 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
+| May 13, 2026 | Alert | Deprecated | The following alert is now deprecated:<br/> *(Preview) Suspicious sensitive data mentioned by your Azure AI resource (AI.Azure_SensitiveDataAnomaly)*. |
 | April 30, 2026 | Recommendation | Deprecation | Grouped recommendation types are deprecated from the Azure portal and will be removed on **July 30, 2026**. These recommendations are currently tagged as **Set for deprecation**.|
 | April 14, 2026 | Recommendation | Preview | The following recommendations are now available in preview for Azure Database for PostgreSQL Flexible Servers as part of Defender CSPM:<br/>* Private endpoint should be configured for Azure Database for PostgreSQL Servers <br/>* 'Allow access to Azure services' should be disabled for PostgreSQL Servers |
 | April 13, 2026 | Recommendation | Deprecation | Following the announcement from March 4, 2026, the following grouped container vulnerability recommendations are now depracated:<br/>**Container recommendations:**<br/>\* [Preview] Containers running in Azure should have vulnerability findings resolved<br/>\* [Preview] Containers running in AWS should have vulnerability findings resolved<br/>\* [Preview] Containers running in GCP should have vulnerability findings resolved<br/>**Container image recommendations:**<br/>\* [Preview] Container images in Azure registry should have vulnerability findings resolved<br/>\* [Preview] Container images in AWS registry should have vulnerability findings resolved<br/>\* [Preview] Container images in GCP registry should have vulnerability findings resolved<br/><br/>These grouped recommendations are being replaced by individual recommendations that provide more granular visibility, better prioritization, and improved governance. Learn more in [Deprecation of preview of container and container images vulnerability recommendations](release-notes.md#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations). |
