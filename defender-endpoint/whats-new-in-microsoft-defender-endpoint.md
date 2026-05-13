@@ -25,6 +25,12 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
+## June 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Feature |[Local AI coding agent discovery](/defender-xdr/security-for-ai/ai-agent-inventory#discover-local-ai-coding-agents-on-endpoints-preview) |Preview |Microsoft Defender for Endpoint automatically discovers supported AI coding agents running locally on onboarded Windows 11 devices. Discovered agents appear in the AI agent inventory, exposure map, and Advanced Hunting in the Microsoft Defender portal, giving security teams visibility into AI coding agent presence across endpoints.|
+
 ## May 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
