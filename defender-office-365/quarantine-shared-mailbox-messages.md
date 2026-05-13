@@ -11,7 +11,7 @@ ms.collection:
   - tier1
 description: Users can learn how to view and act on quarantined messages that were sent to shared mailboxes that they have permissions to.
 ms.service: defender-office-365
-ms.date: 7/24/2023
+ms.date: 05/13/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -31,7 +31,7 @@ Now, automapping is no longer required for users to manage quarantined messages 
 - If the following statements are all true:
   - An admin has configured [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy) to allow quarantine notifications (formerly known as end-user spam notifications).
   - The user has access to quarantine notifications of the shared mailbox.
-  - The user has Full Access permissions to the shared mailbox (directly or via a security group).
+  - The user has Full Access permissions to the shared mailbox (assigned directly or through a cloud-only security group).
 
   The user can select **Review** in the notification to go to quarantine in the Microsoft Defender portal. This method only allows access to quarantined messages that were sent to the shared mailbox. Users can't manage their own quarantine messages in this context.
 
@@ -49,7 +49,7 @@ Now, automapping is no longer required for users to manage quarantined messages 
 
 - Regarding quarantine operations for shared mailboxes, if you use nested security groups to grant access to a shared mailbox, we recommend no more than two levels of nested groups. For example, Group A is a member of Group B, which is a member of Group C. To assign permissions to a shared mailbox, don't add the user to Group A, and then assign Group C to the shared mailbox.
 
-- Access to quarantined items for shared mailboxes in on-premises environments is currently not supported (directly or by using security groups).
+- Users can manage quarantined messages sent to a shared mailbox when Full Access permission is assigned directly or through a cloud-only security group. Currently, quarantine management for shared mailboxes isn't supported with on-premises AD synchronized groups. Users receive a "Not authorized" error when access is granted through an on-premises Active Directory group that's synced to the cloud. Confirm that the user has access using one of the supported methods.
 
 - As of July 2022, users with primary SMTP addresses that are different from their user principal names (UPNs) should be able to access quarantined messages for the shared mailbox.
 
