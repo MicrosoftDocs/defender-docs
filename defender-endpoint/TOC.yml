@@ -653,6 +653,11 @@
     - name: Tamper resiliency
       href: tamper-resiliency.md
 
+    - name: Protect AI agents
+      items:
+      - name: AI agent protection overview
+        href: protect-ai-agents-overview.md
+
     - name: Attack surface reduction
       items:
       - name: Attack surface reduction overview
