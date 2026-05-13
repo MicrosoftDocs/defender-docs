@@ -1,6 +1,6 @@
 ---
-title: AI agent protection overview for endpoints
-description: Learn how Microsoft Defender for Endpoint helps discover and protect AI coding agents running on endpoint devices, and how it integrates with Microsoft Defender XDR AI security capabilities.
+title: AI coding agent discovery on endpoints overview
+description: Learn how Microsoft Defender for Endpoint discovers AI coding agents on devices and integrates with Defender XDR AI security capabilities.
 author: lwainstein
 ms.author: lwainstein
 ms.service: defender-endpoint
@@ -15,15 +15,15 @@ appliesto:
 
 ---
 
-# AI agent protection overview for endpoints
+# AI coding agent discovery on endpoints overview
 
-AI coding agents run locally on endpoint devices, where they can access code repositories, invoke tools, and interact with cloud services. Microsoft Defender for Endpoint extends endpoint protection to these agents by automatically discovering supported AI coding agents and surfacing them as security assets in the Microsoft Defender portal.
+AI coding agent discovery is a Microsoft Defender for Endpoint capability that automatically detects supported AI coding agents running locally on endpoint devices and surfaces them as security assets in the Microsoft Defender portal.
 
-Endpoint-based AI agent discovery is part of a broader set of AI security capabilities in Microsoft Defender. While Defender for Endpoint focuses on discovering local agents on devices, Microsoft Defender XDR provides the full lifecycle of AI agent security, including posture management, threat detection, runtime protection, and investigation.
+Endpoint-based AI agent discovery is part of a broader set of AI security capabilities in Microsoft Defender. While Defender for Endpoint focuses on discovering local agents on devices, Microsoft Defender XDR provides full lifecycle AI agent security, including posture management, threat detection, runtime protection, and investigation.
 
 ## How endpoint AI agent discovery works
 
-Microsoft Defender for Endpoint detects supported AI coding agents running on onboarded devices. No extra configuration, scripts, or agent deployment is required. When Defender Antivirus identifies a supported AI coding agent on a device, the agent appears automatically in the Defender portal as a discoverable asset.
+Microsoft Defender for Endpoint detects supported AI coding agents running on onboarded devices. No extra configuration or deployment is needed. When Defender Antivirus identifies a supported AI coding agent on a device, the agent appears automatically in the Defender portal as a discoverable asset.
 
 Discovered agents are visible in:
 
@@ -41,7 +41,7 @@ Endpoint AI agent discovery supports the following platforms:
 - **Windows 11** &mdash; Supported
 - **macOS** &mdash; Planned for a future release
 
-Devices must be onboarded to Microsoft Defender for Endpoint, and Microsoft Defender Antivirus must be the primary antivirus solution. Only commercial cloud environments are supported.
+Devices must be onboarded to Microsoft Defender for Endpoint, and Microsoft Defender Antivirus must be the primary antivirus solution. This feature is available in commercial cloud environments only.
 
 For the full list of supported AI coding agents, see [Supported AI coding agents](/defender-xdr/security-for-ai/ai-agent-inventory#supported-ai-coding-agents).
 
