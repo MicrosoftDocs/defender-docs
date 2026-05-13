@@ -49,7 +49,7 @@ Now, automapping is no longer required for users to manage quarantined messages 
 
 - Regarding quarantine operations for shared mailboxes, if you use nested security groups to grant access to a shared mailbox, we recommend no more than two levels of nested groups. For example, Group A is a member of Group B, which is a member of Group C. To assign permissions to a shared mailbox, don't add the user to Group A, and then assign Group C to the shared mailbox.
 
-- Users can manage quarantined messages sent to a shared mailbox when Full Access permission is assigned directly or through a cloud-only security group. Users receive a "Not authorized" error when access is granted through an on-premises Active Directory group that's synced to the cloud. Quarantine management for shared mailboxes isn't supported with on-premises AD synchronized groups. Confirm that the user has access using one of the supported methods.
+- Users can manage quarantined messages sent to a shared mailbox when Full Access permission is assigned directly or through a cloud-only security group. Currently, quarantine management for shared mailboxes isn't supported with on-premises AD synchronized groups. Users receive a "Not authorized" error when access is granted through an on-premises Active Directory group that's synced to the cloud. Confirm that the user has access using one of the supported methods.
 
 - As of July 2022, users with primary SMTP addresses that are different from their user principal names (UPNs) should be able to access quarantined messages for the shared mailbox.
 

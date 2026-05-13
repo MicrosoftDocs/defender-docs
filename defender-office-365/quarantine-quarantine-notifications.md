@@ -45,14 +45,14 @@ Admins can also use the global settings in quarantine policies to customize quar
 
 For instructions, see [Configure global quarantine notification settings](quarantine-policies.md#configure-global-quarantine-notification-settings-in-the-microsoft-defender-portal).
 
-For shared mailboxes, quarantine notifications are supported only for users who are granted FullAccess permission to the shared mailbox (assigned directly or through a cloud-only security group). Users receive a "Not authorized" error when FullAccess is granted through an on-premises Active Directory group that's synced to the cloud. For more information, see [Use the EAC to edit shared mailbox delegation](/Exchange/collaboration-exo/shared-mailboxes#use-the-eac-to-edit-shared-mailbox-delegation).
+For shared mailboxes, quarantine notifications are supported only for users who are granted FullAccess permission to the shared mailbox (assigned directly or through a cloud-only security group). For more information, see [Use the EAC to edit shared mailbox delegation](/Exchange/collaboration-exo/shared-mailboxes#use-the-eac-to-edit-shared-mailbox-delegation).
 
 > [!NOTE]
-> By default, messages that are quarantined as high confidence phishing by anti-spam policies, malware by anti-malware policies or Safe Attachments, or by mail flow rules (also known as transport rules) are available only to admins. For more information, see the table at [Find and release quarantined messages as a user](quarantine-end-user.md).
 >
-> Quarantine notifications for messages sent to distribution groups or mail-enabled security groups are sent to all group members.
->
-> Quarantine notifications for messages sent to Microsoft 365 Groups are sent to all group members only if the **Send copies of group conversations and events to group members** setting is turned on.
+> - Currently, quarantine management for shared mailboxes isn't supported with on-premises AD synchronized groups.
+> - By default, messages that are quarantined as high confidence phishing by anti-spam policies, malware by anti-malware policies or Safe Attachments, or by mail flow rules (also known as transport rules) are available only to admins. For more information, see the table at [Find and release quarantined messages as a user](quarantine-end-user.md).
+> - Quarantine notifications for messages sent to distribution groups or mail-enabled security groups are sent to all group members.
+> - Quarantine notifications for messages sent to Microsoft 365 Groups are sent to all group members only if the **Send copies of group conversations and events to group members** setting is turned on.
 
 When users receive a quarantine notification, the following information is available for each quarantined message:
 
