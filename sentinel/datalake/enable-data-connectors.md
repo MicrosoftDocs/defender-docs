@@ -6,7 +6,7 @@ author: mberdugo
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: concept-article
-ms.date: 11/04/2025
+ms.date: 05/13/2026
 ms.author: monaberdugo  
 ms.collection: ms-security
 ai-usage: ai-assisted
