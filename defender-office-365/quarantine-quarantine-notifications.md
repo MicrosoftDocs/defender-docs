@@ -50,6 +50,7 @@ For shared mailboxes, quarantine notifications are supported only for users who 
 > [!NOTE]
 >
 > - Currently, quarantine management for shared mailboxes isn't supported with on-premises AD synchronized groups.
+> - **Block sender** isn't available for quarantined messages sent to shared mailboxes.
 > - By default, messages that are quarantined as high confidence phishing by anti-spam policies, malware by anti-malware policies or Safe Attachments, or by mail flow rules (also known as transport rules) are available only to admins. For more information, see the table at [Find and release quarantined messages as a user](quarantine-end-user.md).
 > - Quarantine notifications for messages sent to distribution groups or mail-enabled security groups are sent to all group members.
 > - Quarantine notifications for messages sent to Microsoft 365 Groups are sent to all group members only if the **Send copies of group conversations and events to group members** setting is turned on.
