@@ -12,7 +12,7 @@ ms.collection:
 - magic-ai-copilot 
 ms.topic: article
 ms.update-cycle: 180-days
-ms.date: 01/08/2026
+ms.date: 05/08/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1012
 appliesto:
