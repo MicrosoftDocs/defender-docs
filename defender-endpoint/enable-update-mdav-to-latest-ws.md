@@ -7,7 +7,7 @@ author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
 ms.date: 05/01/2025
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
@@ -52,11 +52,7 @@ If Microsoft Defender Antivirus features and installation files were previously 
 
 On Windows Server 2016 you might need to use the `-WdEnable` option on the MpCmdRun command-line tool to re-enable Microsoft Defender Antivirus.
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-
-1. In the elevated Command Prompt, run the following commands:
+1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
    > [!TIP]
    > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
@@ -82,7 +78,7 @@ In case the Defender feature was uninstalled/removed, you can add it back.
    Dism /Online /Enable-Feature /FeatureName:Windows-Defender
 
    Dism /Online /Enable-Feature /FeatureName:Windows-Defender-Gui
-   
+
    # Windows Server 1803 or Windows Server 2019 or later
    Dism /Online /Enable-Feature /FeatureName:Windows-Defender
    ```
