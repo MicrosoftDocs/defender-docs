@@ -17,7 +17,7 @@ appliesto:
 
 # Discover local AI agents
 
-Microsoft Defender for Endpoint automatically discovers supported AI coding agents running locally on onboarded Windows 11 devices. Discovered agents appear as assets in the Defender portal's AI agent inventory, where you can view agent details, explore device and identity relationships using the exposure map, and investigate agent presence using Advanced Hunting.
+Microsoft Defender for Endpoint automatically discovers supported AI coding agents running locally on onboarded Windows 11 devices. Discovered agents appear as assets in the Defender portal's AI agent inventory, where you can view agent details, explore device and identity relationships using the exposure map, and investigate agent presence using advanced hunting.
 
 > [!NOTE]
 > Local AI coding agent discovery provides **discovery and investigation capabilities only**. It doesn't include security posture assessment, governance controls, or alerts for endpoint agents at this time.
