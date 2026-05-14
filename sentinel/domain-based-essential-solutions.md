@@ -1,10 +1,11 @@
 ---
 title: ASIM-based domain solutions - Essentials for Microsoft Sentinel
 description: Learn about the Microsoft essential solutions for Microsoft Sentinel that span across different ASIM schemas like networks, DNS, and web sessions.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: concept-article
 ms.date: 03/01/2024
-ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
