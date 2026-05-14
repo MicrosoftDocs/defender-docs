@@ -28,7 +28,7 @@ Defender for Endpoint automatically detects supported AI coding agents running l
 - **Exposure map** &mdash; Visual relationships between AI agents, devices, identities, and cloud resources to help assess potential impact.
 - **Advanced Hunting** &mdash; Query agent discovery data using Kusto Query Language (KQL) to investigate agent presence across your environment.
 
-For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents.md).
+For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents).
 
 ## Broader AI security capabilities
 
@@ -42,6 +42,6 @@ For details on these capabilities and how to leverage them, see [Protect AI asse
 
 ## Related content
 
-- [Discover local AI agents](/defender-endpoint/discover-local-ai-agents.md)
+- [Discover local AI agents](/defender-endpoint/discover-local-ai-agents)
 - [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory)
 - [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](/defender-xdr/security-for-ai/defender-security-for-ai)

@@ -77,6 +77,6 @@ Local AI coding agent discovery is one layer of a comprehensive AI security appr
 
 ## Related content
 
-- [Protect AI agents](/defender-endpoint/protect-ai-agents-overview.md)
+- [Protect AI agents](/defender-endpoint/protect-ai-agents-overview)
 - [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory)
 - [Detect, block, and investigate threats to AI agents using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-detection-protection)

@@ -21,7 +21,7 @@ After you onboard to [Microsoft Agent 365](/microsoft-agent-365/overview), you c
 
 Microsoft Defender also provides a dedicated AI agent inventory experience in the Defender portal for agent discovery and posture management, including agent details, posture insights, risk factors, and security recommendations, where supported. This inventory is currently available for agents built with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, and GCP Vertex AI. To use the inventory, you need to enable the required features.
 
-This article explains how to discover AI agents, assess their security posture, and use the AI agent inventory in the Microsoft Defender portal. For information on discovering local AI coding agents on Windows 11 devices, see [Discover local AI agents in Microsoft Defender for Endpoint](/defender-endpoint/discover-local-ai-agents.md).
+This article explains how to discover AI agents, assess their security posture, and use the AI agent inventory in the Microsoft Defender portal. For information on discovering local AI coding agents on Windows 11 devices, see [Discover local AI agents in Microsoft Defender for Endpoint](/defender-endpoint/discover-local-ai-agents).
 
 ## View all Agent 365-managed agents and configuration details using Advanced Hunting
 
