@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/07/2026
+ms.date: 05/17/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,7 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| May 12, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration is now available for Azure SQL Managed Instance and Azure Synapse Analytics](#sql-vulnerability-assessment-express-configuration-now-available-for-managed-instance-and-synapse) |
+| May 17, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration is now available for Azure SQL Managed Instance and Azure Synapse Analytics](#sql-vulnerability-assessment-express-configuration-now-available-for-managed-instance-and-synapse) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
 | May 5, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
@@ -41,11 +41,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### SQL Vulnerability Assessment Express Configuration now available for Managed Instance and Synapse
 
-May 12, 2026
+May 17, 2026
 
-SQL Vulnerability Assessment (VA) Express Configuration—Microsoft-managed storage for vulnerability baselines and scan results—is now available in public preview for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces. This extends the same one-click experience already available for Azure SQL Database, at no additional cost.
+SQL Vulnerability Assessment (VA) Express Configuration is now available in preview for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces. This Microsoft-managed storage tool for vulnerability baselines and scan results extends the same one-click experience already available for Azure SQL Database at no additional cost.
 
-With this release, customers using Managed Instances or Synapse Workspaces can now enable SQL VA without configuring a customer-managed storage account. Express Configuration is the recommended enablement mode and provides the same security value as Classic Configuration (customer-managed storage), with a simplified setup experience.
+With this release, customers using SQL Managed Instances or Synapse Workspaces can now enable SQL VA without configuring a customer-managed storage account. Express Configuration is the recommended enablement mode and provides the same security value as Classic Configuration (customer-managed storage), with a simplified setup experience.
 
 A new unified REST API provides a consistent management surface for SQL VA across Azure SQL Database, SQL Managed Instance, Synapse Workspaces and SQL on machines (Azure VM and Arc enabled SQL).
 
@@ -98,7 +98,7 @@ Microsoft Defender for Cloud is now integrated into the Microsoft Defender porta
 - A unified cloud security dashboard with posture insights, risk-based prioritization, and progress tracking
 - A centralized cloud asset inventory with enriched risk, health, and coverage data
 - Integrated posture management through Microsoft Security Exposure Management (MSEM), including secure score, recommendations, attack paths, and vulnerabilities
-- A risk-based Cloud secure score for more accurate assessment and prioritization, including improved daily secure score calculations—available only in the Defender portal
+- A risk-based Cloud secure score for more accurate assessment and prioritization, including improved daily secure score calculations. Available only in the Defender portal
 - A new recommendation model with individual findings for improved prioritization and governance (these individual recommendations might impact risk-based Cloud secure score calculations, as they now contribute to the score based on their granular, context-aware findings, rather than as part of a grouped recommendation)
 
 > [!NOTE]
