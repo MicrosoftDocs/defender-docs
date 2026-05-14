@@ -69,16 +69,16 @@ Follow these steps to assign the Reader role to the Azure Resource Graph connect
    - A specific **management group** to cover a subset of subscriptions.
    - One or more individual **subscriptions**.
 
-   :::image type="content" source="./media/enable-data-connectors/arg-scope-management-group.png" alt-text="Screenshot of the Tenant Root Group overview page in the Azure portal." lightbox="./media/enable-data-connectors/arg-scope-management-group.png":::
+   :::image type="content" source="./media/enable-data-connectors/azure-resource-graph-scope-management-group.png" alt-text="Screenshot of the Tenant Root Group overview page in the Azure portal." lightbox="./media/enable-data-connectors/azure-resource-graph-scope-management-group.png":::
 
 1. Select **Access control (IAM)**.
 1. Select **+ Add** > **Add role assignment**.
 
-   :::image type="content" source="./media/enable-data-connectors/arg-add-role-assignment.png" alt-text="Screenshot of the Access control (IAM) page with the Add role assignment menu item highlighted." lightbox="./media/enable-data-connectors/arg-add-role-assignment.png":::
+   :::image type="content" source="./media/enable-data-connectors/azure-resource-graph-add-role-assignment.png" alt-text="Screenshot of the Access control (IAM) page with the Add role assignment menu item highlighted." lightbox="./media/enable-data-connectors/azure-resource-graph-add-role-assignment.png":::
 
 1. Assign the **Reader** role to the connector's managed identity. For step-by-step guidance, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) and, when assigning at the tenant root, [Elevate access to manage all Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin).
 
-   :::image type="content" source="./media/enable-data-connectors/arg-select-reader-role.png" alt-text="Screenshot of the Add role assignment page with the Reader role selected." lightbox="./media/enable-data-connectors/arg-select-reader-role.png":::
+   :::image type="content" source="./media/enable-data-connectors/azure-resource-graph-select-reader-role.png" alt-text="Screenshot of the Add role assignment page with the Reader role selected." lightbox="./media/enable-data-connectors/azure-resource-graph-select-reader-role.png":::
 
 After the assignment propagates, the next ingestion cycle picks up the additional resources. It can take up to 24 hours for the new data to appear in the lake.
 
