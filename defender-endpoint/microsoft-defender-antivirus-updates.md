@@ -93,11 +93,7 @@ To install the latest security intelligence and antivirus engine updates, you ca
 - [File server](manage-protection-updates-microsoft-defender-antivirus.md)
 - Windows Security app: See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md).
 - [MpCmdRun command-line utility](configure-network-connections-microsoft-defender-antivirus.md):
-  1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-     1. Open the **Start** menu, and then type **cmd**.
-     2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-
-  1. In the elevated Command Prompt, run the following command:
+  1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following command:
 
      > [!TIP]
      > This command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
