@@ -23,14 +23,8 @@ Detecting malware that starts early in the boot cycle was a challenge before Win
 
 ## Supported operating systems
 
-- Windows 11
-- Windows 10
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
+- Windows 8 or later
+- Windows Server 2012 or later
 
 ## ELAM detection logging
 
