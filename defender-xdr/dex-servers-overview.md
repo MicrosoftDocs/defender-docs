@@ -38,7 +38,7 @@ ms.date: 05/18/2026
 
 **Microsoft Defender Experts for Servers** is a managed extended detection and response service that provides expert-driven coverage for on-premises and multicloud servers protected by [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). It combines automation and Microsoft's security analyst expertise to help you detect and respond to threats targeting your server infrastructure across Microsoft Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
-Defender Experts for Servers augments your SOC with threat intelligence and dedicated analyst support to help you:
+Defender Experts for Servers augments your security operation center (SOC) with threat intelligence and dedicated analyst support to help you:
 
 - **Focus on incidents that matter.** Experts prioritize incidents and alerts related to your server workloads, reduce alert fatigue, and drive SOC efficiency for your team.
 - **Manage response your way.** Experts provide actionable, step-by-step guidance to respond to incidents, with the option to act on your behalf.

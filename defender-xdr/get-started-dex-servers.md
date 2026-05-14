@@ -56,8 +56,6 @@ To select your coverage options:
 
 1. In the Microsoft Defender portal, go to **Settings** > **Defender Experts** > **Cloud workloads**.
 
-   :::image type="content" source="media/get-started-dex-servers/defender-experts-servers-settings.png" alt-text="Screenshot of the Defender Experts settings page in the Defender portal, with the Cloud workloads option higlighted." lightbox="media/get-started-dex-servers/defender-experts-servers-settings.png":::
-
 1. Under supported cloud coverage options, select **Defender Experts for Servers**.
 
     :::image type="content" source="media/get-started-dex-servers/defender-experts-servers-select.png" alt-text="Screenshot of the Defender Experts settings page in the Defender portal, with the Defender Experts for Servers option higlighted." lightbox="media/get-started-dex-servers/defender-experts-servers-select.png":::  
@@ -68,13 +66,16 @@ To select your coverage options:
 
 ## Run the provisioning script
 
-To start your managed cloud security service, first set up the components that Defender Experts needs to securely access your environment. Download and run a signed PowerShell script on any managed device by using PowerShell 7 or in Azure Cloud Shell.
+To start your managed cloud security service, first set up the components that Defender Experts needs to securely access your environment. Download and run a signed PowerShell script on any managed device by using PowerShell 7 or in Azure Cloud Shell. This script provisions and registers the necessary first-party applications Defender Experts relies on to securely access and manage your environment.
 
 > [!NOTE]
 > To perform this onboarding step, ensure you're assigned _at least_ an **Application Admin** role.
 
 To run the provisioning script:
 1. In the Defender Experts onboarding wizard, under **Service set up**, download a copy of the signed PowerShell script and run it on a local device by using PowerShell 7 or in Azure Cloud Shell.  
+
+    :::image type="content" source="media/get-started-dex-servers/defender-experts-servers-script.png" alt-text="Screenshot of Defender Experts onboarding wizard showing Run provisioning script step with Download script and Validate buttons." lightbox="media/get-started-dex-servers/defender-experts-servers-script.png":::
+
 1. After you run the script, it might take some time to process. Don't close the wizard while the script processes. You can select **Validate** to check connector access and verify that the required components are provisioned.
 
 
@@ -90,6 +91,8 @@ Grant experts one or both of the following permissions:
 To grant permissions:
 
 1. In the onboarding wizard, under **Permissions**, choose one or more access levels to grant to the experts.
+
+    :::image type="content" source="media/get-started-dex-servers/defender-experts-servers-permissions.png" alt-text="Screenshot of Defender Experts onboarding Permission step with Investigate incidents and Respond directly to active threats options." lightbox="media/get-started-dex-servers/defender-experts-servers-permissions.png":::
 
 1. Select **Next** to continue. 
 

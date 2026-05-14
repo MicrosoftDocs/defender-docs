@@ -520,8 +520,6 @@
               href: frequently-asked-questions.md
             - name: Managed response
               href: faq-managed-response.md
-            - name: Server and cloud workload coverage
-              href: faq-cloud-coverage-defender-experts.md
           - name: Important considerations
             href: additional-information-xdr.md
           - name: How Defender Experts for XDR permissions work
@@ -534,6 +532,8 @@
           href: dex-servers-overview.md
         - name: Get started with Defender Experts for Servers
           href: get-started-dex-servers.md
+        - name: Frequently asked questions
+          href: faq-cloud-coverage-defender-experts.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
