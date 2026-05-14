@@ -655,8 +655,10 @@
 
     - name: Protect AI agents
       items:
-      - name: AI coding agent discovery overview
+      - name: Overview
         href: protect-ai-agents-overview.md
+      - name: Discover local AI agents
+        href: discover-local-ai-agents.md
 
     - name: Attack surface reduction
       items:
