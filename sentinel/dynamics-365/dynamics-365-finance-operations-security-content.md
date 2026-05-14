@@ -1,8 +1,8 @@
 ---
 title: Security content reference for Dynamics 365 Finance and Operations
 description: Learn about the built-in security content provided by the Microsoft Sentinel solution for Dynamics 365 Finance and Operations.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
 ms.topic: reference
 ms.date: 11/14/2024
 

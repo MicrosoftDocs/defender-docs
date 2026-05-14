@@ -1,8 +1,9 @@
 ---
 title: Connect Azure Virtual Desktop to Microsoft Sentinel | Microsoft Docs
 description: Learn to connect your Azure Virtual Desktop data to Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: how-to
 ms.date: 01/09/2023
 

@@ -1,8 +1,9 @@
 ---
 title: Enrich entities with geolocation data in Microsoft Sentinel using REST API
 description: This article describes how you can enrich entities in Microsoft Sentinel with geolocation data via REST API.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: reference
 ms.date: 01/09/2023
 
