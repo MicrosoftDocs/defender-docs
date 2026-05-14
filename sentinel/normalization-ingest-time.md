@@ -3,7 +3,6 @@ title: Ingest time normalization | Microsoft Docs
 description: This article explains how Microsoft Sentinel normalizes data at ingest
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: ofshezaf
 ms.topic: concept-article
 ms.date: 12/28/2022
 
