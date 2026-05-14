@@ -1,7 +1,7 @@
 ﻿---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 04/14/2026
+ms.date: 05/14/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -98,6 +98,7 @@ When you validate upgrades or troubleshoot, the last two numbers in the version 
 
 |Version number|Updates|
 |---|---|
+|2.255.19243.47944|This sensor update includes bug fixes.|
 |2.255.19201.14651|This sensor update includes bug fixes.|
 
 ### Migrate Defender for Identity sensors from v2.x to v3.x
