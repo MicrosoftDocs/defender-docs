@@ -1,8 +1,9 @@
 ---
 title: Graph Query Language (GQL) reference for Microsoft Sentinel graph (Preview)
 description: Learn the fundamental concepts, functions, and operators of Graph Query Language (GQL) for querying graph data in Microsoft Sentinel graph.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: manojraheja
 ms.date: 03/23/2026
 ms.topic: reference
 ms.service: microsoft-sentinel

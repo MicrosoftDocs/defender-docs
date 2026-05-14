@@ -1,8 +1,9 @@
 ---
 title: Customize activities on Microsoft Sentinel entity timelines | Microsoft Docs
 description: Add customized activities to those Microsoft Sentinel tracks and displays on the timeline of entity pages
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 10/16/2024
 appliesto:

@@ -5,7 +5,6 @@ services: sentinel
 cloud: na
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 11/17/2021
 

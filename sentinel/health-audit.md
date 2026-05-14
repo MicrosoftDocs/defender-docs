@@ -1,8 +1,9 @@
 ---
 title: Auditing and health monitoring in Microsoft Sentinel 
 description: Learn about the Microsoft Sentinel health and audit feature, which monitors service health drifts and user actions.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: concept-article
 ms.date: 08/24/2025
 
