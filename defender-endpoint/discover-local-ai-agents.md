@@ -19,6 +19,8 @@ appliesto:
 
 Microsoft Defender for Endpoint automatically discovers supported AI coding agents running locally on onboarded Windows 11 devices. Discovered agents appear as assets in the Defender portal's AI agent inventory, where you can view agent details, explore device and identity relationships using the exposure map, and investigate agent presence using advanced hunting.
 
+Local AI coding agent discovery on endpoints is one component of Microsoft Defender's comprehensive AI security approach. For details on broader capabilities such as discovery of cloud and platform agents, security posture assessment, threat detection, and runtime protection across your organization, see [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory).
+
 > [!NOTE]
 > Local AI coding agent discovery provides **discovery and investigation capabilities only**. It doesn't include security posture assessment, governance controls, or alerts for endpoint agents at this time.
 
@@ -53,20 +55,22 @@ The following local AI coding agents are discovered on endpoints:
 
 ## View local AI coding agents in the inventory
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
-1. In the left navigation pane, select **Assets** > **AI Agents**.
-1. Select **Local AI Agents (Preview)** to see a filtered list of AI coding agents discovered on endpoint devices.
+- To view a list of all local AI coding agents discovered on endpoints:
 
-For more information on using the AI agent inventory, see [Discover and manage security posture of supported AI agents using the AI agent inventory UI](/defender-xdr/security-for-ai/ai-agent-inventory#discover-and-manage-security-posture-of-supported-ai-agents-using-the-ai-agent-inventory-ui).
+    1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
+    1. In the left navigation pane, select **Assets** > **AI Agents**.
+    1. Select **Local AI Agents (Preview)** to see a filtered list of AI coding agents discovered on endpoint devices.
 
-## View agent details
+- To view a specific agent's details:
 
-1. From the **Local AI Agents** list, select an agent to open the **Agent entity page**.
-1. Review the agent details, including:
+    1. From the **Local AI Agents** list, select an agent to open the **Agent entity page**.
+    1. Review the agent details, including:
 
-    - Associated device
-    - Operating system and machine context
-    - Discovery timestamp
+        - Associated device
+        - Operating system and machine context
+        - Discovery timestamp
+
+    For more information on using the AI agent inventory, see [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory).
 
 ## Query local AI coding agents using advanced hunting
 
@@ -74,7 +78,7 @@ For more information on using the AI agent inventory, see [Discover and manage s
 
 Use the `ExposureGraphEdges` and `ExposureGraphNodes` tables in [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to query for local AI coding agents discovered on endpoint devices.
 
-#### Get an inventory of AI agents across endpoints
+### Get an inventory of AI agents across endpoints
 
 This query lists all discovered AI coding agents and the devices they run on:
 
@@ -88,7 +92,7 @@ ExposureGraphEdges
 | sort by DeviceCount desc
 ```
 
-#### Map AI agents to users
+### Map AI agents to users
 
 This query maps AI coding agents to the users associated with the devices they run on:
 
@@ -104,7 +108,3 @@ ExposureGraphEdges
     | project User = SourceNodeName, DeviceId = TargetNodeId
 ) on DeviceId
 ```
-
-## Explore broader AI agent security capabilities
-
-Local AI coding agent discovery is one layer of a comprehensive AI security approach in Microsoft Defender. For information on broader AI agent security capabilities—including discovery of cloud and platform agents, security posture management, threat detection, and runtime protection—see [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory).
