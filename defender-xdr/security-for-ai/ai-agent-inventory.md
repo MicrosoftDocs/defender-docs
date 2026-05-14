@@ -63,6 +63,8 @@ To view all of your Agent 365-managed agents and their configuration details:
 
 The AI agent inventory page in the Defender portal provides a centralized view of all agents you build with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, and GCP Vertex AI, along with their key attributes and security status.
 
+This view also allows you to view local AI coding agents discovered on Windows 11 devices through Microsoft Defender for Endpoint. For more information, see [Discover local AI agents in Microsoft Defender for Endpoint](/defender-endpoint/discover-local-ai-agents).
+
 For Microsoft Foundry agents, Microsoft Defender also surfaces security posture recommendations. For a complete list of AI security posture recommendations that can apply to Microsoft Foundry workloads, see [AI security recommendations](/azure/defender-for-cloud/recommendations-reference-ai#azure-recommendations).
 
 1. Enable the required features for AI agent inventory:
@@ -89,109 +91,6 @@ For Microsoft Foundry agents, Microsoft Defender also surfaces security posture 
 
     - Select **Go hunt** to run [Advanced Hunting](/defender-xdr/advanced-hunting-overview) queries.
     - Select **View on map** to see the agent's location and related attack paths.
-
-
-## Discover local AI coding agents on endpoints (Preview)
-
-Microsoft Defender for Endpoint automatically discovers supported AI coding agents running locally on onboarded endpoint devices. Discovered agents appear as assets in the Defender portal's AI agent inventory, where you can view agent details, explore device and identity relationships using the exposure map, and investigate agent presence using Advanced Hunting.
-
-> [!NOTE]
-> Local AI coding agent discovery provides **discovery and investigation capabilities only**. It doesn't include security posture assessment, governance controls, alerts, or runtime protection for endpoint agents at this time.
-
-### Prerequisites
-
-Before you can discover local AI coding agents on endpoints, make sure the following requirements are met:
-
-- Devices run **Windows 11**. macOS support is planned for a future release.
-- Devices are [onboarded to Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
-- **Microsoft Defender Antivirus** is the primary antivirus solution on the device.
-- Your environment is in the **commercial cloud**. Sovereign and national clouds aren't supported.
-
-No additional deployment, configuration, or scripts are required beyond device onboarding. Agent discovery begins automatically after your tenant is enabled.
-
-### Supported AI coding agents
-
-The following local AI coding agents are discovered on endpoints:
-
-| Agent | Type |
-|---|---|
-| Claude Code | CLI and Desktop |
-| Codex | CLI |
-| Cursor | Desktop |
-| GitHub Copilot CLI | CLI |
-| ChatGPT Desktop | Desktop |
-| Gemini CLI | CLI |
-| Ollama Desktop | Desktop |
-| Poe Desktop | Desktop |
-
-The following VS Code extensions are also discovered:
-
-- Claude Code
-- Cline
-- Gemini
-- GitHub Copilot
-- Roo Code
-
-### View local AI coding agents in the inventory
-
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
-1. In the left navigation pane, select **Assets** > **AI Agents**.
-1. Select **Local AI Agents (Preview)** to see a filtered list of AI coding agents discovered on endpoint devices.
-
-### View agent details
-
-1. From the **Local AI Agents** list, select an agent to open the **Agent entity page**.
-1. Review the agent details, including:
-
-    - Associated device
-    - Operating system and machine context
-    - Discovery timestamp
-
-### Explore the exposure map
-
-From the agent entity page, select the related **Device** entity, and then select **Map** to view relationships across:
-
-- Devices
-- Identities
-- Cloud resources
-- Other connected assets
-
-Use the exposure map to understand the potential blast radius and prioritize investigation for devices where AI coding agents are present.
-
-### Hunt for local AI agents using Advanced Hunting
-
-Use the `ExposureGraphEdges` and `ExposureGraphNodes` tables in [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to query for local AI coding agents discovered on endpoint devices.
-
-#### Get an inventory of AI agents across endpoints
-
-This query lists all discovered AI coding agents and the devices they run on:
-
-```kusto
-ExposureGraphEdges
-| where SourceNodeLabel == "endpointAiAgent"
-| where EdgeLabel =~ "runs on"
-| summarize Devices = make_set(TargetNodeName),
-            DeviceCount = dcount(TargetNodeName)
-    by AIAgent = SourceNodeName
-| sort by DeviceCount desc
-```
-
-#### Map AI agents to users
-
-This query maps AI coding agents to the users associated with the devices they run on:
-
-```kusto
-let accessEdges = dynamic(["contains", "has credentials of", "has permissions to",
-                           "has role on", "can authenticate as", "can authenticate to"]);
-ExposureGraphEdges
-| where SourceNodeLabel == "endpointAiAgent"
-| project AIAgent = SourceNodeName, DeviceId = TargetNodeId
-| join kind=inner (
-    ExposureGraphEdges
-    | where EdgeLabel in (accessEdges)
-    | project User = SourceNodeName, DeviceId = TargetNodeId
-) on DeviceId
-```
 
 ## Next steps
 
