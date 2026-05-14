@@ -1,3 +1,6 @@
+## May 2026
+
+- (Preview) [Automatic attack disruption](automatic-attack-disruption.md) can now isolate compromised devices from the network when high-confidence incident analysis indicates the device is being used as an active foothold. Isolation blocks attacker communication and lateral movement while keeping the device connected to security services. The action is time-limited, scoped to devices involved in the incident, and can be released by security operators at any time. [Learn more](/defender-endpoint/respond-machine-alerts#isolate-device-automatic-attack-disruption)
 ---
 title: What's new in Microsoft Defender XDR
 description: Lists the new features and functionality in Microsoft Defender XDR

@@ -1,3 +1,4 @@
+|Feature |[Automatic device isolation (automatic attack disruption)](respond-machine-alerts.md#isolate-device-automatic-attack-disruption) |Preview |Microsoft Defender for Endpoint can now automatically isolate compromised devices as part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption). Isolation blocks most network traffic while keeping the device connected to security services. The action is time-limited, scoped to the incident, and security operators can release isolation at any time. |
 ---
 title: New features in Microsoft Defender for Endpoint
 description: This article describes new features available in Microsoft Defender for Endpoint, including both Windows and cross-platform updates.
