@@ -57,7 +57,9 @@ To view all of your Agent 365-managed agents and their configuration details:
     > [!IMPORTANT]
     > The `AIAgentsInfo` table stores multiple snapshots of each agent over time. Use `arg_max(Timestamp, *)` to get the latest state of each agent. For more information about the arg_max() aggregation function, see [arg_max() function](/kusto/query/arg-max-aggregation-function).
 
-    For more information about Advanced Hunting, see [Proactively hunt for threats with Advanced Hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
+    You can query local AI coding agents discovered through Microsoft Defender for Endpoint by filtering the `AIAgentsInfo` table for `RegistrySource == "Endpoint"`. For more information, see [Discover local AI agents in Microsoft Defender for Endpoint](/defender-endpoint/discover-local-ai-agents).
+
+    For more information about advanced hunting, see [Proactively hunt for threats with Advanced Hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
 ## Discover and manage security posture of supported AI agents using the AI agent inventory UI
 

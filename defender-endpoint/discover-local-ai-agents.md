@@ -68,8 +68,43 @@ For more information on using the AI agent inventory, see [Discover and manage s
     - Operating system and machine context
     - Discovery timestamp
 
+## Query local AI coding agents using advanced hunting
+
+### Hunt for local AI agents using Advanced Hunting
+
+Use the `ExposureGraphEdges` and `ExposureGraphNodes` tables in [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to query for local AI coding agents discovered on endpoint devices.
+
+#### Get an inventory of AI agents across endpoints
+
+This query lists all discovered AI coding agents and the devices they run on:
+
+```kusto
+ExposureGraphEdges
+| where SourceNodeLabel == "endpointAiAgent"
+| where EdgeLabel =~ "runs on"
+| summarize Devices = make_set(TargetNodeName),
+            DeviceCount = dcount(TargetNodeName)
+    by AIAgent = SourceNodeName
+| sort by DeviceCount desc
+```
+
+#### Map AI agents to users
+
+This query maps AI coding agents to the users associated with the devices they run on:
+
+```kusto
+let accessEdges = dynamic(["contains", "has credentials of", "has permissions to",
+                           "has role on", "can authenticate as", "can authenticate to"]);
+ExposureGraphEdges
+| where SourceNodeLabel == "endpointAiAgent"
+| project AIAgent = SourceNodeName, DeviceId = TargetNodeId
+| join kind=inner (
+    ExposureGraphEdges
+    | where EdgeLabel in (accessEdges)
+    | project User = SourceNodeName, DeviceId = TargetNodeId
+) on DeviceId
+```
+
 ## Explore broader AI agent security capabilities
 
 Local AI coding agent discovery is one layer of a comprehensive AI security approach in Microsoft Defender. For information on broader AI agent security capabilities—including discovery of cloud and platform agents, security posture management, threat detection, and runtime protection—see [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory).
-
-
