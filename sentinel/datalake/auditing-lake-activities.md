@@ -5,6 +5,7 @@ ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: amyhari
 ms.topic: how-to
 ms.date: 09/29/2025
 

@@ -1,8 +1,9 @@
 ---
 title: Import and export Microsoft Sentinel automation rules | Microsoft Docs
 description: Export and import automation rules to and from ARM templates to aid deployment
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 08/07/2024
 appliesto:

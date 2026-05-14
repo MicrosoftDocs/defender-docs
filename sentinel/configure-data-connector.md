@@ -1,10 +1,11 @@
 ---
 title: Connect data sources to Microsoft Sentinel by using data connectors
 description: Learn how to connect data sources to Microsoft Sentinel using data connectors for improved threat detection.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: how-to
 ms.date: 07/09/2025
-ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal

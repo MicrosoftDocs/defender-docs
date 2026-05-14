@@ -1,8 +1,9 @@
 ---
 title: Deploy and monitor Azure Key Vault honeytokens with Microsoft Sentinel
 description: Plant Azure Key Vault honeytoken keys and secrets, and monitor them with Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 01/09/2023
 
