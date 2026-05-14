@@ -1,8 +1,9 @@
 ---
 title: Create scheduled analytics rules in Microsoft Sentinel | Microsoft Docs
 description: This article explains how to view and create scheduled analytics rules in Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 12/29/2025
 appliesto:

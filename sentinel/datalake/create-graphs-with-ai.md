@@ -2,12 +2,13 @@
 title: AI-assisted custom graph authoring in Microsoft Sentinel (preview)
 titleSuffix: Microsoft Security  
 description: Use AI assistance in Visual Studio Code to create, modify, and query custom security graphs using Jupyter notebooks and GitHub Copilot.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: sourinpaul
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
 ms.date: 03/23/2026
-ms.author: edbaynash  
 ms.collection: ms-security  
 
 #customer intent: As a security engineer, I want to use AI assistance to create and modify custom security graphs so that I can efficiently model and analyze complex security relationships.
