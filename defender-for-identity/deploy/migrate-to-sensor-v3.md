@@ -93,22 +93,26 @@ If a server shows a **Migration failed** status, use the following steps to trou
 
 If a server shows **Not ready for migration**, use the MDE Client Analyzer and the following table to identify which eligibility condition is failing:
 
-| Eligibility condition | MDE Client Analyzer field / validation | How to verify manually |
-|---|---|---|
-| MDE Sense service is running | **MsSense Service Status** shows **Running** | Run `sc query sense` and confirm the service state is **RUNNING**. |
-| MDE onboarding policy exists | **OnboardedInfo** section shows a valid onboarding state | Check that the registry key `HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status` exists and contains a valid `OnboardingState` value of `1`. |
-| Device has a registered MDE device ID | **DeviceId** field contains a valid GUID | Check the registry value `SenseMachineId` under `HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection`. A valid GUID must be present. |
-| MDI v2 sensor updater service is running | Not covered by MDE Client Analyzer | Run `sc query AATPSensorUpdater` and confirm the service state is **RUNNING**. |
-| Defender for Identity sensor version is 2.254 or later | Not covered by MDE Client Analyzer | Check the installed sensor version in **Programs and Features** or query the `AATPSensor` service file version. |
-| Windows Server cumulative update (March 2026 or later) is installed | **OS Build** shows build 20348.4893 or later | Run `winver` or `[System.Environment]::OSVersion` to confirm the OS build number. |
+| Eligibility condition | How to verify with MDE Client Analyzer | How to verify manually | Resolution if failing |
+|---|---|---|---|
+| Defender for Endpoint sensor is running | **Sense service Status** shows **Running** | Run `sc query sense` and confirm the service state is **RUNNING**. | Start the `MsSense` service on the server. Verify MDE onboarding is complete. |
+| Defender for Endpoint onboarding policy exists | Check `RegOnboardingInfoPolicy.Json` in the results ZIP. If empty, the policy key is missing. The connectivity log also shows *"OnboardingInfo could not be found in the registry"* if missing. | Check that the registry key `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\OnboardingInfo` exists and contains a valid value. | Re-onboard the server to Microsoft Defender for Endpoint. Devices onboarded only via Azure Security Center (ASM) might be missing this policy key. |
+| Device has a registered MDE device ID | **Device ID** field contains a valid GUID | Check the registry value `SenseMachineId` under `HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection`. A valid GUID must be present. | Verify MDE onboarding completed successfully. Re-onboard if `SenseMachineId` is empty. |
+| MDI v2 sensor updater service is running | Not covered by MDE Client Analyzer | Run `sc query AATPSensorUpdater` and confirm the service state is **RUNNING**. | Start the `AATPSensorUpdater` service. If the service fails to start, reinstall the v2.x sensor. |
+| Defender for Identity sensor version is 2.254 or later | Not covered by MDE Client Analyzer | Check the installed sensor version in **Programs and Features** or query the `AATPSensor` service file version. | Update the MDI v2 sensor to version 2.254.19112.470 or later. Ensure delayed updates aren't blocking the update. |
+| Defender for Endpoint sensor version is 10.8735 or later | **Sense version** field shows the installed version. A warning appears if the version is below the recommended minimum. | Check the file version of `MsSense.exe` under `%ProgramFiles%\Windows Defender Advanced Threat Protection\`. | Update the Defender for Endpoint sensor to the latest version. |
+| Windows Server 2019 or later with March 2026 cumulative update | **Device Operating System** and **OS Build** fields. Build must be 20348.4893 or later. | Run `winver` to confirm the OS version and build number. | Upgrade the operating system to Windows Server 2019 or later and install the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update. |
+| Domain controller without additional identity roles | Not covered by MDE Client Analyzer | Verify the server is a pure domain controller and doesn't run AD FS, AD CS, or Entra Connect alongside the DC role. | Migration is only supported on pure domain controllers. Use the v2.x sensor for servers with additional roles. |
 
 #### Registry keys for manual verification
 
 Use the following registry paths to manually verify MDE prerequisites:
 
-- **Onboarding state**: `HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status\OnboardingState` (expected value: `1`)
+- **Onboarding policy**: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\OnboardingInfo` (must exist and contain a valid blob)
 - **MDE device ID**: `HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\SenseMachineId` (expected value: a valid GUID)
-- **Org ID**: `HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status\OrgId` (expected value: your tenant's organization ID)
+
+> [!NOTE]
+> The registry path `HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\OnboardedInfo` (without *Policies*) is the active onboarding info and is **not** used for migration eligibility. Make sure the **Policies** path exists.
 
 ### Migration timeout
 
@@ -169,21 +173,14 @@ If you experience issues after auto-commit:
 
 ### Common failure scenarios
 
-The following table lists known failure scenarios, symptoms, and resolutions:
+The following table lists known runtime failure scenarios that can occur during or after migration:
 
 | Scenario | Symptom | Resolution |
 |---|---|---|
-| MDE Sense service not running | Server shows **Not ready for migration** | Start the `MsSense` service on the server. Verify MDE onboarding is complete. |
-| MDI v2 sensor updater not running | Server shows **Not ready for migration** | Start the `AATPSensorUpdater` service. Verify the sensor isn't in a disabled state. |
-| Missing MDE onboarding registry key | Server shows **Not ready for migration** | Re-onboard the server to Microsoft Defender for Endpoint. |
-| No MDE device ID registered | Server shows **Not ready for migration** | Verify MDE onboarding completed successfully. Re-onboard if `SenseMachineId` is empty. |
-| Sensor version too old | Server shows **Not ready for migration** | Update the MDI v2 sensor to version 2.254.19112.470 or later. Ensure delayed updates aren't blocking the update. |
-| Windows cumulative update missing | Server shows **Not ready for migration** | Install the March 2026 or later cumulative update on the server. |
 | Network timeout during migration | Status changes to **Migration failed** after ~2 hours | Verify outbound connectivity on port 443 to required service URLs. Check proxy and firewall rules. Retry migration. |
 | TLS 1.2 not enabled | Status changes to **Migration failed** | Enable TLS 1.2 on the server. Disable older TLS versions if required by policy. Retry migration. |
 | FQDN mismatch between MDI and MDE | Status changes to **Migration failed** | Resolve device identity conflicts in the Microsoft Defender portal. See [FQDN or device ID mismatch](#fqdn-or-device-id-mismatch). |
 | Group Policy blocks new services | Status changes to **Migration failed** or timeout | Update Group Policy to allow the v3.x sensor service to be created and started on the domain controller. |
-| Server has additional identity roles | Server shows **Not ready for migration** | Migration is only supported on pure domain controllers. Servers running AD FS, AD CS, or Entra Connect alongside the DC role aren't eligible. |
 
 ## Clean up the v2.x sensor
 
