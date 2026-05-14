@@ -1,8 +1,9 @@
 ---
 title: Set up your Amazon Web Services (AWS) environment to collect AWS logs to Microsoft Sentinel
 description: Set up your Amazon Web Services environment to send AWS logs to Microsoft Sentinel using one of the Microsoft Sentinel AWS connectors.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 05/28/2025
 
