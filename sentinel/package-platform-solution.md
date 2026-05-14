@@ -2,9 +2,9 @@
 title: Package and publish a Microsoft Sentinel platform solution
 description: Learn how to package the components of a Microsoft Sentinel platform solution and publish the package in the Microsoft Security Store.
 ms.topic: how-to
-author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: angodavarthy
+author: mberdugo
+ms.reviewer: tbeerthuis
 ms.date: 09/19/2025
 ---
 

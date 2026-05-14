@@ -1,6 +1,7 @@
 ---
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: include
 ms.date: 04/13/2026    
 # This file is auto-generated. Do not edit manually. Changes will be overwritten.
@@ -364,6 +365,7 @@ ms.date: 04/13/2026
 |OCI_LogsV2_CL|[Oracle Cloud Infrastructure (via Codeless Connector Framework)](/azure/sentinel/data-connectors-reference#oracle-cloud-infrastructure-via-codeless-connector-framework)|Yes|Yes|
 |[OfficeActivity](/azure/azure-monitor/reference/tables/OfficeActivity)|[Microsoft 365 (formerly, Office 365)](/azure/sentinel/data-connectors-reference#microsoft-365-formerly-office-365)|Yes|Yes|
 |Okta_CL|[Okta Single Sign-On (using Azure Functions)](/azure/sentinel/data-connectors-reference#okta-single-sign-on-using-azure-functions)|No|No|
+|OktaV2_CL|[Okta Single Sign-On (using Azure Functions)](/azure/sentinel/data-connectors-reference#okta-single-sign-on-using-azure-functions)|No|No|
 |OktaSSO|[Okta Single Sign-On](/azure/sentinel/data-connectors-reference#okta-single-sign-on)|No|No|
 |Onapsis_Defend_CL|[Onapsis Defend: Integrate Unmatched SAP Threat Detection & Intel with Microsoft Sentinel](/azure/sentinel/data-connectors-reference#onapsis-defend-integrate-unmatched-sap-threat-detection--intel-with-microsoft-sentinel)|Yes|Yes|
 |OneLoginEventsV2_CL|[OneLogin IAM Platform (via Codeless Connector Framework)](/azure/sentinel/data-connectors-reference#onelogin-iam-platform-via-codeless-connector-framework)|Yes|Yes|

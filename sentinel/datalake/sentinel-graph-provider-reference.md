@@ -1,8 +1,9 @@
 ---
 title: Microsoft Sentinel graph provider reference
 description: Reference documentation for the Microsoft Sentinel Graph Builder API for building and querying security graphs.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: zeinam
 ms.topic: reference
 ms.date: 03/23/2026
 ms.service: microsoft-sentinel
