@@ -1,8 +1,8 @@
 ---
 title: Connect your SAP system to Microsoft Sentinel | Microsoft Sentinel
 description: This article describes how to connect your SAP system to Microsoft Sentinel by deploying the container that that hosts the SAP data connector agent.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
 ms.topic: how-to
 ms.date: 09/30/2025
 appliesto:

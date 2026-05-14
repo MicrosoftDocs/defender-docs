@@ -2,12 +2,13 @@
 title: Which Logs to Ingest directly into the Microsoft Sentinel data lake
 titleSuffix: Microsoft Security
 description: Learn which log sources to ingest into the Microsoft Sentinel data lake tier versus the analytics tier based on detection, hunting, and cost needs.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: juliango
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: concept-article
 ms.date: 04/23/2026
-ms.author: edbaynash
 ms.collection: ms-security
 ms.custom: msecd-doc-authoring-1012
 ai-usage: ai-assisted

@@ -1,8 +1,9 @@
 ---
 title: Connect Microsoft Sentinel to Amazon Web Services to ingest AWS EKS logs
 description: Use the Amazon Web Services (AWS) S3-based Elastic Kubernetes Service (EKS) connector to ingest AWS EKS audit logs, collected in AWS S3 buckets, to Microsoft Sentinel.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: how-to
 ms.date: 04/15/2026
 appliesto:
