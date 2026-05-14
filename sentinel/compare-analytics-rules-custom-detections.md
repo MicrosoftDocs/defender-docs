@@ -2,11 +2,12 @@
 title: Compare Microsoft Sentinel analytics rules and Microsoft Defender custom detections
 titleSuffix: Microsoft Security  
 description: Compare the different features supported by Microsoft Sentinel analytics rules and Microsoft Defender custom detections. 
+ms.author: pauloliveria  
 author: poliveria 
+ms.reviewer: nonutkev
 ms.service: microsoft-sentinel  
 ms.topic: product-comparison
 ms.date: 10/27/2025
-ms.author: pauloliveria  
 
 ms.collection: ms-security
 

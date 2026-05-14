@@ -2,8 +2,9 @@
 title:  Create jobs in the Microsoft Sentinel data lake
 titleSuffix: Microsoft Security  
 description: Use the Defender portal's Data lake exploration KQL queries to create and schedule jobs to promote data to the analytics tier.
-author: EdB-MSFT  
 ms.author: edbaynash  
+author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to

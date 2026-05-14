@@ -1,10 +1,11 @@
 ---
 title: View aggregated data from the Overview | Microsoft Sentinel
 description: Learn how to quickly view and monitor what's happening across your environment by using Microsoft Sentinel.
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 10/16/2024
-ms.author: guywild
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal

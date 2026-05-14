@@ -1,10 +1,11 @@
 ---
 title: Enable Microsoft Sentinel SIEM and initial features and content
 description: As the first step of your deployment, you enable Microsoft Sentinel, and then enable the health and audit feature, solutions, and content.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: abhiag
 ms.topic: how-to
 ms.date: 06/18/2024
-ms.author: edbaynash
 
 
 #Customer intent: As a security operations analyst, I want to enable and configure Microsoft Sentinel and its key features so that I can monitor and secure my organization's environment effectively.
