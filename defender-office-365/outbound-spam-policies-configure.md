@@ -111,14 +111,14 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
    - **Restriction placed on users who reach the message limit**: Select an action from the dropdown list when any of the limits in the **Protection settings** section are exceeded.
 
-     For all actions, the senders specified in the **User restricted from sending email** alert policy (and in the now redundant **Notify these users and groups if a sender is blocked due to sending outbound spam** setting on this page) receive email notifications.
+     For all actions, the recipients specified in the **User restricted from sending email** alert policy (and in the now redundant **Notify these users and groups if a sender is blocked due to sending outbound spam** setting on this page) receive email notifications.
 
      - **Restrict the user from sending mail until the following day**: This value is the default. Email notifications are sent, and the user is unable to send any more messages until the following day, based on UTC time.
        - The alert policy named **User restricted from sending email** notifies admins (via email and on the **Incidents & alerts** \> **View alerts** page).
        - Any recipients specified in the **Notify specific people if a sender is blocked due to sending outbound spam** setting in the policy are also notified.
        - The user is unable to send any more messages until the following day, based on UTC time.
      - **Restrict the user from sending mail**: Email notifications are sent, the user is added to **Restricted users** <https://security.microsoft.com/restrictedusers> in the Microsoft Defender portal, and the user can't send email until they're removed from **Restricted users** by an admin. After an admin removes the user from the list, the user won't be restricted again for that day. For instructions, see [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md).
-     - **No action, alert only**: Email notifications are sent.
+     - **No action, alert only**: The alert policy named **Email sending limit exceeded** notifies admins (via email and on the **Incidents & alerts** \> **View alerts** page).
 
    - **Forwarding rules** section: The setting in this section controls automatic email forwarding by **Exchange Online mailboxes** to external recipients. For more information, see [Control automatic external email forwarding](outbound-spam-policies-external-email-forwarding.md).
 
