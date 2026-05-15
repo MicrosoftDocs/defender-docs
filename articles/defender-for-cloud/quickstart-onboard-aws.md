@@ -28,7 +28,7 @@ Learn more about [how authentication is established between Microsoft Entra ID a
 
 Before you connect your AWS account, make sure you have:
 
-- A Microsoft Azure subscription. If you don't have one, [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- A Microsoft Azure subscription. If you don't have one, [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - [Microsoft Defender for Cloud enabled](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on that subscription.
 
