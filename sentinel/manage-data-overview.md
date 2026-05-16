@@ -1,9 +1,9 @@
 ---
 title: Manage data tiers and retention in Microsoft Sentinel
 description: Manage log data in Microsoft Sentinel and with Microsoft Defender XDR services in the Microsoft Defender portal to optimize security operations and cost efficiency.
-ms.reviewer: dzatakovi
 ms.author: guywild
 author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 03/12/2026
 # Customer intent: As a Microsoft Defender Portal administrator or subscription owner, I want to configure log table tiers and data retention settings to optimize security operations needs and cost efficiency.

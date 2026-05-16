@@ -2,10 +2,11 @@
 title: Onboarding to Microsoft Sentinel data lake and graph
 titleSuffix: Microsoft Security  
 description: This article describes how to onboard to the Microsoft Sentinel data lake and graph
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: abhiag
 ms.topic: how-to  
 ms.date: 11/13/2025
-ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
   

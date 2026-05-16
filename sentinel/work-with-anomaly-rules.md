@@ -1,8 +1,9 @@
 ---
 title: Work with anomaly detection analytics rules in Microsoft Sentinel
 description: This article explains how to view, create, manage, assess, and fine-tune anomaly detection analytics rules in Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 10/16/2024
 appliesto:

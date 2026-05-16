@@ -10,7 +10,7 @@ ms.custom: nextgen
 ms.date: 04/11/2025
 ms.reviewer: yongrhee
 ms.subservice: ngp
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
@@ -121,26 +121,22 @@ Some rules might block behavior you find acceptable in your organization. In the
 
 In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Advanced features** > **Tamper Protection** > **On**.
 
-For more information, see [How do I configure or manage tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). 
+For more information, see [How do I configure or manage tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md).
 
 #### Check the Cloud Protection network connectivity
 
 It's important to verify that Cloud Protection network connectivity is working during your penetration testing.
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
+In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-1. In the elevated Command Prompt, run the following commands:
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-   > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   ```dos
-   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
-
-   MpCmdRun.exe -ValidateMapsConnection
-   ```
+MpCmdRun.exe -ValidateMapsConnection
+```
 
 For more information, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
