@@ -16,7 +16,7 @@ Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for
 
 - Learn more about [investigating risks with the cloud security explorer and attack paths](concept-attack-path.md).
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - Enable [Defender for Cloud on your Azure subscription](connect-azure-subscription.md).
 

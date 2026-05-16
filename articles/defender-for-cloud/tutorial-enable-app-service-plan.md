@@ -30,7 +30,7 @@ Learn more about Defender for Cloud pricing on the [Defender for Cloud pricing p
 
 ## Prerequisites
 
-- Use an Azure subscription. If you don't have one, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- Use an Azure subscription. If you don't have one, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - Enable [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
