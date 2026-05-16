@@ -44,7 +44,7 @@ To release a user account or a device from containment, select the contained ass
 
 ### Review the attack disruption summary card
 
-When automatic attack disruption takes action during an incident, a dedicated summary card appears on the incident page. The summary card gives you a fast overview of the disruption actions taken.
+When automatic attack disruption takes action during an incident, a dedicated summary card appears on the incident page. The summary card gives you a fast overview of the disruption actions taken. It also displays historical data related to disruption in the context of the incident, meaning the data is aggregated from the first alert of the incident until present time.
 
 To review the summary card:
 
@@ -66,49 +66,51 @@ You can release the contained assets, for example, enable a blocked user account
 
 ## Track the action status in the Activities tab (Preview)
 
-The **Activities** tab in the **Incident** page allows you to view details related to a specific incident, including the date and time the activity started, the triggering alert, and more. 
+The **Activities** tab in the **Incident** page shows details related to a specific incident, including the date and time the activity started, the triggering alert, and more. 
 
-The **Policy status** column (Preview) in the activities list provides a stateful list of actions and policies taken within incidents, which allows you to see the current status of all relevant actions and policies in your environment. This addresses the challenge of tracking ongoing and expired actions, especially in large environments with many incidents.
+The **Policy status** column (Preview) in the activities list provides a stateful list of actions and policies taken within incidents. You can see the current status of all relevant actions and policies in your environment. This feature addresses the challenge of tracking ongoing and expired actions, especially in large environments with many incidents.
 
 To view all automatic attack disruption and predictive shielding actions taken as part of an incident:
 
 1. In the incident's **Activities** tab, add the following filters:
     - Select **30 Days** > **Custom range**, and select the relevant timeframe for the actions you want to investigate.
     - Select **Performed by** and select **AttackDisruption**. This filter also includes predictive shielding actions.
-    - Select **Activity status** and select **Completed**. This shows you the current policy status for actions that are completed, filtering out partial or in-progress actions.
+    - Select **Activity status** and select **Completed**. This status shows you the current policy status for actions that are completed, filtering out partial or in-progress actions.
     - **Policy status**: Select **Active**, **Inactive**, and **No status** (all options except **Not applicable**).
-1. Review the listed activities. The **Policy status** column shows the current status of the policy for each activity. For example, a user was contained in the specified timeframe, but the policy is currently inactive. This means that the user is no longer contained.
+1. Review the listed activities. The **Policy status** column shows the current status of the policy for each activity. For example, a user was contained in the specified timeframe, but the policy is currently inactive. This status means that the user is no longer contained.
 
     :::image type="content" source="media/autoad-results/activities-tab-status.png" alt-text="Screenshot of the Activities tab in Microsoft Defender XDR showing the policy status column with active and inactive statuses for attack disruption actions." lightbox="media/autoad-results/activities-tab-status.png":::
 
 > [!TIP]
-> [Predictive shielding](shield-predict-threats.md) actions also appear when you filter by **AttackDisruption** in the **Performed by** filter. While attack disruption responds to an active attack by containing compromised assets, predictive shielding anticipates potential attack progression and applies protective measures preemptively. For more information, see [Manage predictive shielding in Microsoft Defender](shield-predict-threats-manage.md).
+> [Predictive shielding](shield-predict-threats.md) actions also appear when you filter by **AttackDisruption** in the **Performed by** filter. While attack disruption responds to an active attack by containing compromised assets, predictive shielding anticipates potential attack progression and applies protective measures preemptively. For a list of supported predictive shielding actions and more information on managing them, see the following articles:
+> - [Predictive shielding actions](shield-predict-threats.md#predictive-shielding-actions)
+> - [Manage predictive shielding in Microsoft Defender](shield-predict-threats-manage.md)
 
 The following policy statuses are available:
 
 - **Active**: The policy is currently active and enforced.
-- **Inactive**: The policy was previously applied but is no longer active. For example, a user was contained but has since been released.
-- **Not applicable**: The policy status doesn't apply to the action. For example, the policy status doesn't apply to an uncontain action, because uncontain actions are not policies but rather the reversal of a previous action.
-- **No status**: The policy status couldn't be retrieved for various reasons, for example, the action is still in progress and the final status is not yet determined.
+- **Inactive**: The policy was previously applied but is no longer active. For example, a user was contained but is now released.
+- **Not applicable**: The policy status doesn't apply to the action. For example, the policy status doesn't apply to an uncontain action, because uncontain actions aren't policies but rather the reversal of a previous action.
+- **No status**: The policy status couldn't be retrieved for various reasons. For example, the action is still in progress and the final status isn't yet determined.
 
 This view provides unique data on the activity and policy status in the selected timeframe. This data goes beyond Action center views, which log past actions but don't reflect current status.
 
 ## Track the actions in advanced hunting
 
-You can use specific queries in [advanced hunting](advanced-hunting-overview.md) to track device containment, user containment, and user account disable actions.
+Use specific queries in [advanced hunting](advanced-hunting-overview.md) to track device containment, user containment, and user account disable actions.
 
 ### Containment-related events in advanced hunting
 
 Containment in Microsoft Defender for Endpoint prevents further threat actor activity by blocking communication from contained entities. In advanced hunting, the [DeviceEvents table](advanced-hunting-deviceevents-table.md) logs **block actions that result from containment**, not the initial containment action itself:
 
-- **Device-derived block actions** - These events indicate activity (such as network communication) that was *blocked because the device was contained*:
+- **Device-derived block actions** - These events indicate activity (such as network communication) that was *blocked because the device was contained*.
 
   ```Kusto
   DeviceEvents
   | where ActionType contains "ContainedDevice"
   ```
 
-- **User-derived block actions** - These events indicate activity (such as sign-in or resource access attempts) that was *blocked because the user was contained*:
+- **User-derived block actions** - These events indicate activity (such as sign-in or resource access attempts) that was *blocked because the user was contained*.
 
   ```Kusto
   DeviceEvents
