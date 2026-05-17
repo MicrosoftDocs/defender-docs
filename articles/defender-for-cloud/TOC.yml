@@ -854,6 +854,8 @@
         items:  
         - name: Manage with PowerShell
           items:
+          - name: Get started with the unified SQL Vulnerability Assessment REST API
+            href: powershell-unified-api-quickstart.md
           - name: Enable vulnerability assessments on Azure SQL databases with the express configuration
             href: powershell-sample-vulnerability-assessment-azure-sql.md
           - name: Set up baselines for vulnerability assessments on Azure SQL databases
