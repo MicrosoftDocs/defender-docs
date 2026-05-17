@@ -1,15 +1,16 @@
 ---
 title: Suppress alerts from Microsoft Defender for Cloud
-description: This article explains how to use Microsoft Defender for Cloud's suppression rules to hide unwanted security alerts, such as false positives.
+description: Learn how to create alert suppression rules in Microsoft Defender for Cloud to automatically dismiss false positives and reduce alert noise.
 ms.date: 01/29/2026
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1012
+#customer intent: As a security admin, I want to suppress false positive security alerts so that I can focus on genuine threats.
 ---
 # Suppress alerts from Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud generates security alerts when it detects threats in your environment. These alerts can sometimes include false positives or other unwanted alerts. You can automatically suppress any false positives or unwanted alerts by using alert suppression rules.
+Microsoft Defender for Cloud generates security alerts when it detects threats in your environment. These alerts can include false positives or other unwanted results. You can automatically suppress false positives or unwanted alerts by using alert suppression rules.
 
 When an alert matches the conditions of an active suppression rule, the alert status is automatically changed to **Dismissed**. The alert still appears in the security alerts list with a Dismissed status, but it no longer triggers notifications or appears in active alert views.
 
@@ -28,7 +29,7 @@ You can apply suppression rules to management groups or to subscriptions.
 - To suppress alerts for a management group, use [Azure Policy](/azure/governance/policy/overview).
 - To suppress alerts for subscriptions, use the Azure portal or the [REST API](#create-and-manage-suppression-rules-with-the-api).
 
-The rule can suppress only alert types that triggered on a subscription or management group before the rule was created.
+A suppression rule applies only to alert types that have already been triggered at least once.
 
 To create a suppression rule for a specific alert in the Azure portal:
 
@@ -53,7 +54,7 @@ To create a suppression rule for a specific alert in the Azure portal:
     - **Subscription** - The subscription where you want to create the rule.
     - (Optional) **Entities** - The resources that the rule applies to. You can specify a single resource, multiple resources, or resources that contain a partial resource ID. If you don't specify any resources, the rule applies to all resources in the subscription.
     - **Rule name** - A name for the rule. Rule names must begin with a letter or a number, be between 2 and 50 characters, and contain no symbols other than dashes (-) or underscores (_).
-    - **State** - Enabled or disabled.
+    - **State** - Whether the rule is enabled or disabled.
     - **Reason** - Select one of the built-in reasons or 'other' to specify your own reason in the comment.
     - (Optional) **Expiration date** - An end date and time for the rule. If you don't set an expiration date, the rule runs indefinitely.
 
@@ -63,7 +64,7 @@ To create a suppression rule for a specific alert in the Azure portal:
 
 The rule is created and listed in the **Suppression rules** page.
 
-## Edit a suppression rule
+## Edit or delete a suppression rule
 
 To edit a rule that you created from the suppression rules page:
 
@@ -91,7 +92,7 @@ To delete a rule, use the same three dots menu and select **Remove**.
 
 You can create, view, or delete alert suppression rules by using the Defender for Cloud REST API.
 
-Create a suppression rule for an alert that the API already triggered. Use the [Alerts REST API](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true) to retrieve the alert that you want to suppress. Then, use the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) to create a suppression rule by using the retrieved alert information.
+Create a suppression rule for an alert that the API already triggered. First, use the [Alerts REST API](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true) to retrieve the alert you want to suppress. Then, use the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) to create a suppression rule with the retrieved alert information.
 
 The relevant methods for suppression rules in the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) are:
 
@@ -115,4 +116,4 @@ For details and usage examples, see the [Alerts suppression rules REST API refer
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Security alerts generated by Defender for Cloud](alerts-reference.md).
+> [Review security alerts generated by Defender for Cloud](alerts-reference.md)
