@@ -30,7 +30,7 @@ Before you can discover local AI coding agents on endpoints, make sure the follo
 
 - Devices run **Windows 11**. macOS support is planned for a future release.
 - Devices are [onboarded to Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
-- **Microsoft Defender Antivirus** is the primary antivirus solution on the device.
+- **Defender Antivirus** is the primary antivirus solution on the device.
 - Your environment is in the **commercial cloud**. Sovereign and national clouds aren't supported.
 
 No additional deployment, configuration, or scripts are required beyond device onboarding. Agent discovery begins automatically after your tenant is enabled.
@@ -52,6 +52,19 @@ The following local AI coding agents are discovered on endpoints:
 | Ollama Desktop | Desktop |
 | Poe Desktop | Desktop |
 | Roo Code | VS Code extension |
+
+### Supported agents for runtime protection
+
+If you've configured runtime protection on your endpoints, the following table lists which protection methods are available for each agent:
+
+| Agent | Agent hooks protection | Network inspection protection |
+|---|---|---|
+| Claude Code | ✔ | ✔ |
+| GitHub Copilot CLI | ✔ | ✔ |
+| OpenAI Codex | ✔ | — |
+| OpenClaw | — | ✔ |
+
+For more information on configuring runtime protection, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection).
 
 ## View local AI coding agents in the inventory
 

@@ -42,17 +42,6 @@ Real-time protection focuses on high-confidence threats, including:
 
 When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate blocked actions using familiar Defender workflows.
 
-### Protect local AI coding agents on endpoints
-
-In addition to cloud-based real-time protection through Work IQ MCP, Microsoft Defender Antivirus (MDAV) provides runtime protection for AI coding agents running locally on Windows endpoints. MDAV intercepts events in the agent's execution loop — such as user prompts, pre-tool calls, and post-tool responses — and scans them for cross-prompt injection attacks and sensitive data leakage.
-
-MDAV supports two protection approaches:
-
-- **Agent hooks** — Integrates with agent frameworks (Claude Code, GitHub Copilot CLI, OpenAI Codex) that expose lifecycle hooks to scan application-layer messages.
-- **Network inspection** — Intercepts network traffic between agents and LLM endpoints at the network layer, providing coverage for agents that don't support hooks.
-
-Both approaches can be configured in audit or block mode, and all detections generate alerts in Microsoft Defender XDR. For setup instructions, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection).
-
 ### Enable real-time protection
 
 To enable real-time protection for your AI agents: 
@@ -68,6 +57,42 @@ To enable real-time protection for your AI agents:
 
     For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).
 
+## Protect local AI coding agents on endpoints
+
+Microsoft Defender provides runtime protection for AI coding agents running locally on Windows endpoints. Defender Antivirus intercepts events in the agent's execution loop, such as user prompts, pre-tool calls, and post-tool responses, and then scans them for cross-prompt injection attacks and sensitive data leakage.
+
+Defender Antivirus supports two protection approaches:
+
+- **Agent hooks protection** — Integrates with agent frameworks that support hooks to scan application-layer messages.
+- **Network inspection protection** — Intercepts network-layer traffic between agents and LLM endpoints, providing coverage for agents that don't support hooks.
+
+You can configure both approaches in audit or block mode, and all detections generate alerts in Microsoft Defender. For setup instructions and decision guidance, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection).
+
+### How agent hooks protection works
+
+Agent hooks protection works at the application layer by subscribing to lifecycle events that the agent framework exposes. When an AI coding agent supports hooks, Defender Antivirus registers as a hook consumer and receives event payloads at key points in the agentic loop:
+
+- **User prompt** — The prompt that a user submits to the agent.
+- **Pre-tool call** — The agent's request to invoke a tool, before execution.
+- **Post-tool response** — The tool's response, after execution completes.
+
+Defender Antivirus sends these payloads to Microsoft Defender for scanning using signature matching and machine learning models. If Microsoft Purview integration is configured, payloads are also evaluated for data protection policy violations.
+
+Agent hooks protection requires that the AI coding agent natively supports a hooks framework. The following agents support hooks:
+
+- [Claude Code](https://code.claude.com/docs/en/hooks)
+- [GitHub Copilot CLI](https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-agent-mode-in-vs-code/using-copilot-coding-agent)
+- [OpenAI Codex](https://developers.openai.com/codex/hooks)
+
+### How network inspection protection works
+
+Network inspection protection works at the network layer by intercepting traffic between the AI coding agent and LLM endpoints. This approach doesn't require the agent to support hooks — it inspects traffic from any agent that communicates over the network.
+
+When enabled, Defender Antivirus uses a kernel-level network redirector to route outbound connections through a local inspection proxy. The proxy performs TLS inspection using Windows-native cryptographic APIs (SSPI/SChannel) and parses the underlying HTTP traffic. It then extracts prompt and response content and sends it through a scan pipeline that includes pattern-based scanning and machine learning inference.
+
+Network inspection protection provides broader coverage than hooks because it can protect agents that don't have a hooks framework. However, it's a more intrusive approach that involves TLS inspection of agent traffic.
+
+Network inspection doesn't support agents that use certificate pinning or HTTP/3. If your organization uses agents with these restrictions, use agent hooks protection if available for those agents.
 
 ## Detect AI agent threats in near-real-time
 
