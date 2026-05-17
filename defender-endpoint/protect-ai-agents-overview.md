@@ -30,6 +30,25 @@ Defender for Endpoint automatically detects supported AI coding agents running l
 
 For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents).
 
+## AI agent runtime protection
+
+Beyond discovery, Defender for Endpoint provides runtime protection for AI coding agents through Microsoft Defender Antivirus (MDAV). When enabled, MDAV intercepts events in the agent's execution loop — such as user prompts, pre-tool calls, and post-tool responses — and scans them for cross-prompt injection attacks (XPIA) and sensitive data leakage.
+
+MDAV uses two protection approaches:
+
+- **Agent hooks protection** — Subscribes to lifecycle events exposed by agent frameworks that support hooks. Supported agents include Claude Code, GitHub Copilot CLI, and OpenAI Codex.
+- **Network inspection protection** — Intercepts network traffic between agents and large language model (LLM) endpoints at the network layer. This approach covers agents that don't support hooks, such as OpenClaw.
+
+You can configure each approach independently in one of three modes:
+
+| Mode | Behavior |
+|---|---|
+| **Enabled** (Block) | Scans agent activity and blocks detected threats. Users see a notification in the agent UI and a toast message. |
+| **AuditMode** | Scans agent activity and generates alerts in Microsoft Defender XDR, but doesn't block the agent. |
+| **Disabled** | Turns off the protection. |
+
+For step-by-step configuration instructions, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection).
+
 ## Broader AI security capabilities
 
 Microsoft Defender for Endpoint's discovery capabilities are part of a comprehensive AI security approach. Microsoft Defender XDR provides other capabilities across your organization's AI ecosystem:

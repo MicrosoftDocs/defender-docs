@@ -42,6 +42,17 @@ Real-time protection focuses on high-confidence threats, including:
 
 When Microsoft Defender blocks an action, it generates a detailed alert that explains what was blocked, why the action was considered risky, and which agent, user, and tool were involved. This ensures security teams can investigate blocked actions using familiar Defender workflows.
 
+### Protect local AI coding agents on endpoints
+
+In addition to cloud-based real-time protection through Work IQ MCP, Microsoft Defender Antivirus (MDAV) provides runtime protection for AI coding agents running locally on Windows endpoints. MDAV intercepts events in the agent's execution loop — such as user prompts, pre-tool calls, and post-tool responses — and scans them for cross-prompt injection attacks and sensitive data leakage.
+
+MDAV supports two protection approaches:
+
+- **Agent hooks** — Integrates with agent frameworks (Claude Code, GitHub Copilot CLI, OpenAI Codex) that expose lifecycle hooks to scan application-layer messages.
+- **Network inspection** — Intercepts network traffic between agents and LLM endpoints at the network layer, providing coverage for agents that don't support hooks.
+
+Both approaches can be configured in audit or block mode, and all detections generate alerts in Microsoft Defender XDR. For setup instructions, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection).
+
 ### Enable real-time protection
 
 To enable real-time protection for your AI agents: 
