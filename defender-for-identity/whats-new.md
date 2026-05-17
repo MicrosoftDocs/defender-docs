@@ -1,7 +1,7 @@
-﻿---
+---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 04/14/2026
+ms.date: 05/13/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -24,6 +24,10 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## May 2026
+
+### Extended RPC auditing capabilities (Preview)
+
+Defender for Identity now supports extended RPC auditing capabilities for advanced identity detections. To enable these capabilities, apply the new **Extended Sensor Audit** tag to your devices and install the latest cumulative update. A new health alert, **Sensor v3.x Extended RPC Audit Misconfigured (Preview)**, notifies you when the tag is missing or incorrectly applied. For more information, see [Configure RPC on sensors v3.x](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
 
 ### Increased sensor capacity
 Defender for Identity now supports up to 1,000 sensors per workspace, increased from the previous limit of 350. To add more than 1,000 sensors, contact Defender for Identity support.
@@ -62,7 +66,7 @@ The [Automatic Windows event-auditing configuration for sensors v3.x](deploy/con
 
 Defender for Identity sensor v3.x now supports domain controllers that run Microsoft Entra Connect, including detections and identity security posture management (ISPM) recommendations.
 Detections and ISPM recommendations for additional identity roles, including AD FS and AD CS, will become available soon. 
-Domain controllers with Microsoft Entra Connect roles and v3.x of the sensor must run Windows Server 2019 or later and include at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea). For deployment details, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md).
+Domain controllers with Microsoft Entra Connect roles and v3.x of the sensor must run Windows Server 2019 or later and include at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea). For deployment details, see [Defender for Identity deployment overview](deploy/deploy-defender-identity.md) and [Sensor v3.x prerequisites](deploy/deploy-sensor-v3.md).
 
 ### Migrate Defender for Identity sensors from v2.x to v3.x
 
@@ -168,7 +172,7 @@ To improve accuracy and better protect organizational identities, some security 
 
 ### Continued rollout of new health alert: Sensor v3.x RPC audit misconfigured
 
-The **Sensor v3.x RPC Audit Misconfigured** health alert is continuing to be rolled out gradually to customers.  The new health alert helps identify v3.x sensors where Enhanced RPC auditing configuration is either missing or incorrectly applied. Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections.  For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
+The **Sensor v3.x RPC Audit Misconfigured** health alert is continuing to be rolled out gradually to customers.  The new health alert helps identify v3.x sensors where Enhanced RPC auditing configuration is either missing or incorrectly applied. Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections.  For more information, see [Configure RPC on sensors v3.x](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
 
 ## February 2026
 
@@ -232,7 +236,7 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Microsoft Entra ID privileged user accounts that are also privileged in Active Directory (Preview)](security-posture-assessments/accounts.md#microsoft-entra-id-privileged-user-accounts-that-are-also-privileged-in-active-directory-preview) lists Microsoft Entra ID privileged user accounts that also have privileged roles in Active Directory.
 
 ### New Health Alert: Sensor v3.x RPC Audit Misconfigured
-Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/prerequisites-sensor-version-3.md#configure-rpc-auditing).
+Enhanced RPC auditing is required for some Microsoft Defender for Identity advanced identity detections. A new health alert helps identify v3.x sensors where this configuration is either missing or incorrectly applied. The alert is being rolled out gradually to customers. For more information, see [Configure RPC on sensors v3.x](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
 
 ### New Entra ID user roles to support remediation actions
 
@@ -245,7 +249,7 @@ For some [remediation actions](remediation-actions.md), Defender for Identity cr
 - Helpdesk Administrator
 - Security Operator
 
-### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x (Preview)
+### Automatic Windows event auditing configuration for Defender for Identity sensors v3.x
 
 Weâ€™re gradually rolling out automatic Windows event-auditing configuration for sensors v3.x, along with related health alerts. Automatic Windows event-auditing streamlines deployment by automatically applying the required auditing settings to new sensors and correcting misconfigurations on existing ones.
 This update might identify existing auditing configuration gaps that weren't previously detected.

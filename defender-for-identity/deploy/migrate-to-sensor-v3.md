@@ -16,6 +16,8 @@ ai-usage: ai-assisted
 
 You can migrate your Defender for Identity sensors from v2.x to v3.x directly from the Microsoft Defender portal. The migration automatically completes the switchover and maintains your server configurations and security monitoring, with no downtime or data duplication.
 
+Before migrating, review the [sensor version limitations](deploy-sensor-v3.md#sensor-version-limitations), including that v3.x doesn't support VPN integration or syslog notifications.
+
 ## Prerequisites
 
 To migrate, each server must meet the following requirements:
@@ -26,7 +28,7 @@ To migrate, each server must meet the following requirements:
 - Microsoft Defender for Endpoint deployed
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
 
-For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md).
+For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md).
 
 ### Backend eligibility checks
 
@@ -68,13 +70,15 @@ The **Migration state** column on the **Sensors** page shows the current status 
 > [!IMPORTANT]
 > If a migration doesn't complete within 2 hours, the system automatically reverts the server to the v2.x sensor. The server returns to the **Ready for migration** state and you can retry the migration after addressing any underlying issues.
 
-## Configure the v3.x sensor
+## Post-migration steps
 
-For optimal protection and monitoring, complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md), including:
+### Configure the v3.x sensor
 
-- [Configure RPC auditing](prerequisites-sensor-version-3.md#configure-rpc-auditing).
-- [Configure automatic Windows event auditing](prerequisites-sensor-version-3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend [enabling automatic Windows event auditing (Preview)](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) for optimal configuration validation.
-- [Switch from gMSA to local system](prerequisites-sensor-version-3.md#recommended-configurations-for-optimal-performance). The v3.x sensor uses the local system identity. If you had a gMSA configured for the v2.x sensor, remove the gMSA configuration.
+For optimal protection and monitoring, complete the configuration steps described in [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md), including:
+
+- [Configure RPC auditing](deploy-sensor-v3.md#configure-rpc-auditing).
+- [Configure automatic Windows event auditing](deploy-sensor-v3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend [enabling automatic Windows event auditing](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) for optimal configuration validation.
+- [Switch from gMSA to local system](deploy-sensor-v3.md#service-account-requirements). The v3.x sensor uses the local system identity. If you had a gMSA configured for [action accounts](manage-action-accounts.md), you must remove it. If gMSA remains enabled, response actions, including attack disruption, won't work.
 
 > [!NOTE]
 > After a successful migration, the v3.x sensor enters a 1-week observation period. During this period, you can roll back to the v2.x sensor if needed. After the observation period ends, the migration is automatically committed and becomes irreversible. Once committed, the server permanently runs the v3.x sensor and rollback is no longer possible.
@@ -182,7 +186,7 @@ The following table lists known runtime failure scenarios that can occur during 
 | FQDN mismatch between MDI and MDE | Status changes to **Migration failed** | Resolve device identity conflicts in the Microsoft Defender portal. See [FQDN or device ID mismatch](#fqdn-or-device-id-mismatch). |
 | Group Policy blocks new services | Status changes to **Migration failed** or timeout | Update Group Policy to allow the v3.x sensor service to be created and started on the domain controller. |
 
-## Clean up the v2.x sensor
+### Clean up the v2.x sensor
 
 The migration disables the v2.x sensor service, but the v2.x sensor software remains installed on the server. Complete the following cleanup steps to fully clean your server from the v2.x sensor files:
 
@@ -191,7 +195,7 @@ The migration disables the v2.x sensor service, but the v2.x sensor software rem
 
 ## Related content
 
-- [Defender for Identity sensor v3.x prerequisites](prerequisites-sensor-version-3.md)
+- [Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md)
 - [Activate the Defender for Identity sensor v3.x](activate-sensor.md)
 - [Manage and update sensors](../sensor-settings.md)
 - [Remove the Microsoft Defender for Identity sensor](../uninstall-sensor.md)
