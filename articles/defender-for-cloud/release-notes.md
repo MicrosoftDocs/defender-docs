@@ -32,18 +32,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| May 17, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration is now available for Azure SQL Managed Instance and Azure Synapse Analytics](#sql-vulnerability-assessment-express-configuration-now-available-for-managed-instance-and-synapse) |
+| May 17, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (Preview)](#sql-vulnerability-assessment-express-configuration-now-available-for-azure-sql-managed-instance-and-synapse-preview) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
 | May 5, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
 
-### SQL Vulnerability Assessment Express Configuration now available for Managed Instance and Synapse
+### SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (PReview)
 
 May 17, 2026
 
-SQL Vulnerability Assessment (VA) Express Configuration is now available in preview for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces. This Microsoft-managed storage tool for vulnerability baselines and scan results extends the same one-click experience already available for Azure SQL Database at no additional cost.
+SQL Vulnerability Assessment (VA) Express Configuration is now available in preview for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces. This Microsoft-managed storage tool for vulnerability baselines and scan results extends the same experience already available for Azure SQL Database at no extra cost.
 
 With this release, customers using Azure SQL Managed Instances or Synapse Workspaces can now enable SQL VA without configuring a customer-managed storage account. Express Configuration is the recommended enablement mode and provides the same security value as Classic Configuration (customer-managed storage), with a simplified setup experience.
 
@@ -227,7 +227,7 @@ To simplify onboarding and improve protection coverage, we're releasing an enhan
 | March 29, 2026 | Preview | [Expanded multicloud coverage for AWS and GCP (Preview)](#expanded-multicloud-coverage-for-aws-and-gcp-preview) |
 | March 22, 2026| Update | [File Integrity Monitoring requires MDE agent version 10.8799+ for legacy Windows machines](#file-integrity-monitoring-requires-mde-agent-version-108799-for-legacy-windows-machines) |
 | March 12, 2026 | GA | [Kubernetes gated deployment support for AKS Automatic (GA)](#kubernetes-gated-deployment-support-for-aks-automatic-ga) |
-| March 11, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severitybased-risk-assignment-for-not-evaluated-recommendations) |
+| March 11, 2026 | GA| [Severity‑based risk assignment for "Not evaluated" recommendations](#severity-based-risk-assignment-for-not-evaluated-recommendations) |
 | March 10, 2026| Preview |[Code to runtime enrichment for recommendations](#code-to-runtime-enrichment-for-recommendations-preview)|
 | March 10, 2026 | Preview | [On-demand malware scanning of Azure Files in Microsoft Defender for Storage](#on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage-preview) |
 | March 04, 2026 | Deprecation | [Deprecation of preview of container and container images vulnerability recommendations](#deprecation-of-preview-of-container-and-container-images-vulnerability-recommendations) |
