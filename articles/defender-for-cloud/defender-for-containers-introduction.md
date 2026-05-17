@@ -2,7 +2,7 @@
 title: Introduction to Microsoft Defender for Containers
 description: Learn about Microsoft Defender for Containers, a cloud-native solution that secures your containerized assets across multicloud and on-premises environments.
 ms.topic: overview
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.date: 04/29/2026
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
@@ -95,8 +95,11 @@ Threat protection is provided for Kubernetes at the cluster, node, and workload 
 Examples of security events that Microsoft Defender for Containers monitors include:
 
 - Exposed Kubernetes dashboards
+- Exposed Kubernetes service detected (when a Kubernetes Service of type `LoadBalancer` is created or updated and publicly exposes workloads)
 - Creation of high privileged roles
 - Creation of sensitive mounts
+
+Prioritize exposure alerts when internet-facing access is unintended or when the exposed service has weak or missing authentication.
 
 For more information about alerts detected by Defender for Containers, including an alert simulation tool, see [alerts for Kubernetes clusters](alerts-containers.md).
 

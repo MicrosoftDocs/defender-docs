@@ -1,6 +1,8 @@
 ---
 title: Agentless container posture in Defender CSPM
 description: Learn how agentless container posture offers discovery, visibility, and vulnerability assessment for containers without installing a sensor on your machines.
+author: ElazarK
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 03/31/2025
@@ -23,6 +25,7 @@ Agentless container posture provides the following capabilities:
 - **[Attack path analysis](concept-attack-path.md)** - Contextual risk assessment exposes exploitable paths that attackers might use to breach your environment and are reported as attack paths to help prioritize posture issues that matter most in your environment.
 - **[Enhanced risk-hunting](how-to-manage-cloud-security-explorer.md)** - Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md).
 - **Control plane hardening** - Defender for Cloud continuously assesses the configurations of your clusters and compares them with the initiatives applied to your subscriptions. When it finds misconfigurations, Defender for Cloud generates security recommendations that are available on Defender for Cloud's Recommendations page. The recommendations let you investigate and remediate issues. For details on the recommendations included with this capability, check out the [container recommendations](recommendations-reference-container.md) of the type **control plane**.
+- **Exposure and service misconfiguration signals** - Posture signals help identify Kubernetes networking misconfigurations, including service and ingress configurations that can unintentionally expose workloads to the internet. This context helps teams prioritize higher-risk findings, especially where public exposure combines with weak or missing authentication. For related alert context, see [alerts for Kubernetes clusters](alerts-containers.md).
 - **Critical Asset protection** - enables security administrators to automatically tag "crown" jewels" resources that are most critical to their organizations, allowing Defender for Cloud to provide them with the highest level of protection and prioritize security issues on those assets above anything else.
 
 ## Next steps

@@ -6,12 +6,14 @@ ms.custom: linux-related-content
 ms.date: 04/16/2026
 ai-usage: ai-assisted
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ---
 
 # Alerts for AI services
 
 This article lists the security alerts you might get for AI from Microsoft Defender for Cloud and any Microsoft Defender plans you enabled. The alerts shown in your environment depend on the resources and services you're protecting, and your customized configuration. 
+
+Some AI workload risk signals can also come from infrastructure protection plans, such as Defender for Containers, when AI applications run on Kubernetes.
 
 [Learn how to respond to these alerts](manage-respond-alerts.md).
 
@@ -24,6 +26,14 @@ This article lists the security alerts you might get for AI from Microsoft Defen
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 ## Alerts for AI applications
+
+### Exposed Kubernetes service detected (AI applications on Kubernetes)
+
+**Alert name**: Exposed Kubernetes service detected
+
+**Description**: This alert indicates that a Kubernetes Service of type `LoadBalancer` was created or updated in a way that can publicly expose workloads. For AI applications that run on Kubernetes, this exposure can increase risk, especially when externally reachable endpoints rely on weak authentication or missing authentication controls.
+
+**Severity**: Medium
 
 ### Detected credential theft attempts on an Azure AI model deployment
 

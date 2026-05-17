@@ -1,7 +1,7 @@
 ---
 title: Container security architecture
 description: Learn about the architecture of Microsoft Defender for Containers for the Azure, AWS, GCP, and on-premises container platform
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.topic: concept-article
 ms.date: 02/16/2026
@@ -46,6 +46,8 @@ Microsoft Defender for Cloud connects to cloud provider APIs to discover resourc
 ### Kubernetes audit logs sent from cloud infrastructure
 
 Cloud infrastructure sends Kubernetes audit logs to Microsoft Defender for Cloud for control plane threat detection and security analysis. The method used to collect and send audit logs depends on the cloud provider and environment in which the Kubernetes clusters run.
+
+This architecture also enables detection of exposure-related events, such as **Exposed Kubernetes service detected**, when a Kubernetes Service of type `LoadBalancer` is created or updated and publicly exposes workloads. These signals are typically prioritized when internet exposure is unintended or when authentication controls are weak or missing.
 
 ### Proxy and private connectivity support
 
@@ -186,5 +188,6 @@ To get full protection from Microsoft Defender for Containers, you need these co
 ## Related content
 
 - [Network access and permissions reference for Defender for Containers](defender-for-containers-network-access.md).
+- [Alert reference in Microsoft Defender for Cloud](alerts-reference.md).
 
 - [Enable Defender for Containers](defender-for-containers-enable-plan.md)

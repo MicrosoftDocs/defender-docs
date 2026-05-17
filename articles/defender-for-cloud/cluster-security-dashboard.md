@@ -1,6 +1,7 @@
 ---
 title: Review security findings in the AKS security dashboard
 description: Learn how to review and investigate alerts, vulnerabilities, misconfigurations, and compliance findings in the AKS security dashboard in Microsoft Defender for Cloud.
+author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
 ms.date: 04/05/2026
@@ -28,6 +29,8 @@ To use the AKS Security dashboard, ensure you have:
 ## Security alerts
 
 Security alerts indicate suspicious activity or potential threats detected in the cluster.
+
+For example, the **Exposed Kubernetes service detected** alert is raised when a Kubernetes Service of type `LoadBalancer` is created or updated and publicly exposes workloads. Prioritize this alert when exposure is unintended, or when internet-facing services have weak or missing authentication.
 
 Alerts are prioritized by severity to help you identify which issues to investigate first:
 
@@ -103,6 +106,8 @@ Misconfigurations identify security configuration issues in Kubernetes resources
 
 Findings are based on Azure Policy and Kubernetes configuration assessments.
 
+Review these findings with network exposure in mind, including Kubernetes Service types and ingress configurations that can unintentionally expose workloads to the internet.
+
 Each finding includes remediation guidance. Some findings support automated remediation through **Quick Fix** or policy enforcement.
 
 ### Review and remediate misconfigurations
@@ -120,6 +125,7 @@ Each finding includes remediation guidance. Some findings support automated reme
 In the details pane:
 
 - Review the description and remediation steps.
+- Review Kubernetes Service types and ingress exposure settings to reduce unintended internet-facing access.
 - For cluster-level misconfigurations, select **Quick Fix** when available.
 - For workload issues, apply the recommended Azure Policy to prevent recurrence.
 - Assign an owner to track remediation (requires Defender CSPM).
