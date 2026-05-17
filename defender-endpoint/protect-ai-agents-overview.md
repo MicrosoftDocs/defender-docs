@@ -39,6 +39,25 @@ Defender Antivirus uses two protection approaches:
 - **Agent hooks protection**: Subscribes to lifecycle events exposed by agent frameworks that support hooks. Supported agents include Claude Code, GitHub Copilot CLI, and OpenAI Codex.
 - **Network inspection protection**: Intercepts network traffic between agents and large language model (LLM) endpoints at the network layer. This approach covers agents that don't support hooks, such as OpenClaw.
 
+### How agent hooks protection works
+
+Agent hooks protection works at the application layer by subscribing to lifecycle events that the agent framework exposes. When an agent supports hooks, Defender Antivirus receives payloads at key stages in the agent loop:
+
+- **User prompt**: The prompt submitted to the agent.
+- **Pre-tool call**: The tool invocation request before execution.
+- **Post-tool response**: The tool response after execution completes.
+
+Defender Antivirus scans these payloads for cross-prompt injection attempts and sensitive data leakage before risky actions are allowed to continue.
+
+### How network inspection protection works
+
+Network inspection protection works at the network layer by inspecting traffic between the AI coding agent and LLM endpoints. This approach doesn't require the agent to support hooks, so it extends protection to additional agents that communicate over the network.
+
+When enabled, Defender Antivirus routes relevant outbound traffic through local inspection so prompt and response content can be evaluated for the same runtime threats.
+
+> [!NOTE]
+> Network inspection protection doesn't support agents that use certificate pinning or HTTP/3.
+
 These are two parallel protection methods that work independently. Agent hooks protection is the more typical approach for supporting popular AI coding agents, while network inspection protection expands coverage to additional agents. For guidance on which method to use for your agents, see [How to decide which method to use](/defender-endpoint/configure-ai-agent-runtime-protection#how-to-decide-which-method-to-use).
 
 You can configure each approach independently in one of three modes:
@@ -48,6 +67,31 @@ You can configure each approach independently in one of three modes:
 | **Enabled** (Block) | Scans agent activity and blocks detected threats. Users see a notification in the agent UI and a toast message. |
 | **AuditMode** | Scans agent activity and generates alerts in Microsoft Defender XDR, but doesn't block the agent. |
 | **Disabled** | Turns off the protection. |
+
+### Enforcement methods and outcome
+
+This section describes how Defender Antivirus enforces runtime protection settings and how different modes affect your organization. Choose your enforcement mode based on your organization's security posture and tolerance for blocking agent actions.
+
+| Setting | Method | Enforcement mode | Outcome |
+|---------|--------|------------------|---------|
+| **Agent hooks protection** | Application-layer scanning | Enabled (Block) | Defender Antivirus blocks the agent action. The user sees a notification in the agent UI and a Windows toast message. An alert is sent to Microsoft Defender XDR. |
+| **Agent hooks protection** | Application-layer scanning | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender XDR for security team review. |
+| **Network inspection protection** | Network-layer interception | Enabled (Block) | Defender Antivirus blocks the agent action. An alert is sent to Microsoft Defender XDR. |
+| **Network inspection protection** | Network-layer interception | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender XDR for security team review. |
+
+#### Enforcement, response and investigation considerations
+
+When a threat is detected by either protection method, the alert appears in the Microsoft Defender portal as part of the device timeline and is correlated into incidents. Your security team can investigate these alerts using familiar workflows in Microsoft Defender XDR, such as reviewing the device timeline, examining related alerts and entities, and taking response actions.
+
+As a security administrator, here's what you need to know about how these protections work:
+
+- **Single-path enforcement prevents duplicate scanning**: When you enable both agent hooks protection and network inspection protection, Defender Antivirus uses intelligent single-path enforcement. Hooks handle the supported agents, and network inspection protects other agents. This approach avoids redundant scanning and keeps performance overhead minimal.
+- **Multiple protection layers work together**: Runtime protection works alongside your existing security controls. Both settings are protected by [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection), which prevents unauthorized changes. If you've configured Microsoft Purview data loss prevention (DLP) policies, they act as an additional layer by evaluating payloads for sensitive data independently.
+- **You control the enforcement mode**: Start with **AuditMode** to monitor threats and understand what your agents are doing without blocking them. This lets you see what would be blocked before enabling Block mode. After your security team reviews the alerts, you can switch to **Block** mode for production enforcement.
+- **Detections focus on realistic threats**: Runtime protection detects meaningful threats to AI agents:
+  - **Cross-prompt injection attacks (XPIA)**: Attempts to manipulate agents through injected instructions.
+  - **Sensitive data leakage**: Agent actions that attempt to access or expose sensitive information.
+- **Investigation is built into your workflow**: When threats are detected, alerts appear in the Microsoft Defender portal as part of the device timeline and are correlated into incidents. Your security team uses the same investigation workflows they're familiar with for other endpoint detections.
 
 For step-by-step configuration instructions, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection).
 

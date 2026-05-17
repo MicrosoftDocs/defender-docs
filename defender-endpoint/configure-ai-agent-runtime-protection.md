@@ -20,14 +20,9 @@ appliesto:
 
 Microsoft Defender Antivirus provides runtime protection for AI coding agents running on Windows endpoints. When enabled, Defender Antivirus intercepts events in the agent's execution loop — such as user prompts, pre-tool calls, and post-tool responses — and scans them for cross-prompt injection attacks (XPIA) and sensitive data leakage. Depending on how you configure it, Defender Antivirus can audit or block threats and send alerts to Microsoft Defender XDR.
 
-Defender Antivirus uses two approaches to protect AI coding agents:
+Defender Antivirus provides two runtime protection approaches for AI coding agents: agent hooks protection and network inspection protection.
 
-- **Agent hooks protection** — Integrates with agent frameworks that support hooks to scan application-layer messages exchanged between the agent, tools, and models.
-- **Network inspection protection** — Intercepts network-layer traffic between the agent and large language model (LLM) endpoints, scanning HTTP/HTTPS API calls for threats.
-
-Both approaches detect the same threat categories and generate alerts in Microsoft Defender XDR. You can enable one or both depending on the agents your organization uses.
-
-For an overview of how each method works, see [Protect local AI coding agents on endpoints](/defender-xdr/security-for-ai/ai-agent-detection-protection#protect-local-ai-coding-agents-on-endpoints).
+For an overview of how each method works, see [AI agent runtime protection](protect-ai-agents-overview.md#ai-agent-runtime-protection).
 
 ## Prerequisites
 
@@ -45,11 +40,11 @@ Before you configure runtime protection, make sure the following requirements ar
 > [!NOTE]
 > Network inspection protection works with any agent that communicates over the network. However, network inspection doesn't support agents that use certificate pinning or HTTP/3. If your organization uses agents with these restrictions, use agent hooks protection if available for those agents.
 
-## How to decide which method to use
+## Decide which method to use
 
 Agent hooks protection is the recommended starting point for most organizations because it provides protection for popular AI coding agents (Claude Code, GitHub Copilot CLI, and OpenAI Codex) with lower performance overhead. If your organization uses agents that don't support hooks, or needs broader coverage for additional agents, you can also enable network inspection protection.
 
-The following table compares both approaches to help you choose:
+The following table compares both approaches to help you choose. For general information on how each method works, see [AI agent runtime protection](protect-ai-agents-overview.md#ai-agent-runtime-protection).
 
 | Aspect | Agent hooks protection | Network inspection protection |
 |--------|------------------------|-------------------------------|
@@ -129,27 +124,4 @@ To deploy AI agent runtime protection settings across your organization using In
 
 ## Enforcement methods and outcome
 
-This section describes how Defender Antivirus enforces runtime protection settings and how different modes affect your organization. Choose your enforcement mode based on your organization's security posture and tolerance for blocking agent actions.
-
-| Setting | Method | Enforcement mode | Outcome |
-|---------|--------|------------------|---------|
-| **Agent hooks protection** | Application-layer scanning | Enabled (Block) | Defender Antivirus blocks the agent action. The user sees a notification in the agent UI and a Windows toast message. An alert is sent to Microsoft Defender XDR. |
-| **Agent hooks protection** | Application-layer scanning | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender XDR for security team review. |
-| **Network inspection protection** | Network-layer interception | Enabled (Block) | Defender Antivirus blocks the agent action. An alert is sent to Microsoft Defender XDR. |
-| **Network inspection protection** | Network-layer interception | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender XDR for security team review. |
-
-## Admin guidance: What you should know about enforcement and response
-
-As a security administrator, here's what you need to know about how these protections work:
-
-- **Single-path enforcement prevents duplicate scanning** — When you enable both agent hooks protection and network inspection protection, Defender Antivirus uses intelligent single-path enforcement. Hooks handle the supported agents, and network inspection protects other agents. This approach avoids redundant scanning and keeps performance overhead minimal.
-
-- **Multiple protection layers work together** — Runtime protection works alongside your existing security controls. Both settings are protected by [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection), which prevents unauthorized changes. If you've configured Microsoft Purview data loss prevention (DLP) policies, they act as an additional layer by evaluating payloads for sensitive data independently.
-
-- **You control the enforcement mode** — Start with **AuditMode** to monitor threats and understand what your agents are doing without blocking them. This lets you see what would be blocked before enabling Block mode. After your security team reviews the alerts, you can switch to **Block** mode for production enforcement.
-
-- **Detections focus on realistic threats** — Runtime protection detects meaningful threats to AI agents:
-  - **Cross-prompt injection attacks (XPIA)** — Attempts to manipulate agents through injected instructions
-  - **Sensitive data leakage** — Agent actions that attempt to access or expose sensitive information
-
-- **Investigation is built into your workflow** — When threats are detected, alerts appear in the Microsoft Defender portal as part of the device timeline and are correlated into incidents. Your security team uses the same investigation workflows they're familiar with for other endpoint detections.
+For enforcement details, outcomes, and admin considerations, see [Enforcement methods and outcome](/defender-endpoint/protect-ai-agents-overview#enforcement-methods-and-outcome) and [Enforcement, response and investigation considerations](/defender-endpoint/protect-ai-agents-overview#enforcement-response-and-investigation-considerations).
