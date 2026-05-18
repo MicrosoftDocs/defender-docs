@@ -1,13 +1,14 @@
 ---
-title: Create custom standards and recommendations
-description: Learn how to create custom security standards and recommendations for all clouds in Microsoft Defender for Cloud.
+title: Create custom standards and recommendations in Microsoft Defender for Cloud
+description: Learn how to create custom security standards and recommendations in Microsoft Defender for Cloud across Azure, AWS, and GCP with KQL queries and Azure Policy.
+author: ElazarK
+ms.author: ElazarK
 ms.topic: how-to
 ms.date: 05/11/2026
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
 ---
 
-<!-- markdownlint-disable-next-line MD025 -->
-# Create custom standards and recommendations
+# Create custom standards and recommendations in Microsoft Defender for Cloud
 
 [Security recommendations](security-policy-concept.md) in Microsoft Defender for Cloud help you to improve and harden your security posture. Recommendations are based on assessments against [security standards](security-policy-concept.md) defined for Azure subscriptions, AWS accounts, and GCP projects that have Defender for Cloud enabled.
 
@@ -74,116 +75,103 @@ We recommend using the query editor to create a recommendation query.
 The query editor includes built-in examples, and the templates in this section show how to structure common security checks. Each template returns only unhealthy (non-compliant) resources.
 
 > [!NOTE]
-> The templates in this section use Azure resource types and Azure Resource Graph fields. For AWS and GCP resources, use the same unhealthy-only pattern and adapt fields to the resource schema returned in your environment.
+> The templates in this section use Azure resource types. For AWS and GCP resources, change `Environment == 'Azure'` to `Environment == 'AWS'` or `Environment == 'GCP'` and update `Identifiers.Type` to match the resource type in your environment.
 
 ### [VM tags](#tab/vm-tags)
 
 Identify virtual machines missing mandatory governance tags, such as cost center or owner information.
 
 ```kql
-Resources
-| where type == "microsoft.compute/virtualmachines"
-| where isnull(tags["CostCenter"]) or isnull(tags["Owner"])
-| project id, name, resourceGroup, tags
+RawEntityMetadata
+| where Environment == 'Azure' and Identifiers.Type =~ 'Microsoft.Compute/virtualMachines'
+| extend condition = (isnull(Record.tags["CostCenter"]) or isnull(Record.tags["Owner"]))
+| extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
+| project Id, Name, Environment, Identifiers, AdditionalData, Record, HealthStatus
 ```
 
-**Output columns:** `id` (Azure Resource Manager (ARM) resource ID), `name`, `resourceGroup`, `tags`
+**Output columns:** `Id`, `Name`, `Environment`, `Identifiers`, `AdditionalData`, `Record`, `HealthStatus`
 
-**Assessment logic:** Machines in query results lack required tags and are unhealthy. Machines not returned are compliant.
+**Assessment logic:** Machines missing required tags have `HealthStatus` set to `UNHEALTHY` and appear as non-compliant findings. Machines with both tags set have `HealthStatus` set to `HEALTHY`.
 
 ### [Storage HTTPS](#tab/storage-https)
 
 Detect storage accounts that allow HTTP connections, which creates potential data exposure.
 
 ```kql
-Resources
-| where type == "microsoft.storage/storageaccounts"
-| where properties.supportsHttpsTrafficOnly != true
-| project id, name, resourceGroup, properties.supportsHttpsTrafficOnly
+RawEntityMetadata
+| where Environment == 'Azure' and Identifiers.Type =~ 'Microsoft.Storage/storageAccounts'
+| extend condition = (Record.properties.supportsHttpsTrafficOnly != true)
+| extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
+| project Id, Name, Environment, Identifiers, AdditionalData, Record, HealthStatus
 ```
 
-**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `supportsHttpsTrafficOnly`
+**Output columns:** `Id`, `Name`, `Environment`, `Identifiers`, `AdditionalData`, `Record`, `HealthStatus`
 
-**Assessment logic:** Accounts allowing HTTP traffic are non-compliant. Your recommendation enforces HTTPS-only.
+**Assessment logic:** Accounts allowing HTTP traffic have `HealthStatus` set to `UNHEALTHY`. Your recommendation enforces HTTPS-only.
 
 ### [NSG Any/Any](#tab/nsg-any-any)
 
-Find network security groups with inbound rules that allow traffic from any source on any port.
+Find network security groups with security rules that allow traffic from any source on any port.
 
 ```kql
-Resources
-| where type == "microsoft.network/networksecuritygroups"
-| mv-expand rules = properties.securityRules  // Expand array to evaluate each rule
-| where rules.properties.access == "Allow"
-  and rules.properties.direction == "Inbound"
-  and (
-    tostring(rules.properties.sourceAddressPrefix) == "*"
-    or tostring(rules.properties.sourceAddressPrefixes) has '"*"'
-  )
-  and (
-    tostring(rules.properties.destinationPortRange) == "*"
-    or tostring(rules.properties.destinationPortRanges) has '"*"'
-  )
-| project id, name, resourceGroup, rules.name
+RawEntityMetadata
+| where Environment == 'Azure' and Identifiers.Type =~ 'Microsoft.Network/networkSecurityGroups'
+| extend condition = (tostring(Record.properties.securityRules) has '"*"')
+| extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
+| project Id, Name, Environment, Identifiers, AdditionalData, Record, HealthStatus
 ```
 
-**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `rules.name`
+**Output columns:** `Id`, `Name`, `Environment`, `Identifiers`, `AdditionalData`, `Record`, `HealthStatus`
 
-**Assessment logic:** NSGs containing overly permissive rules are unhealthy. Restricting source addresses and ports to known networks restores compliance.
+**Assessment logic:** NSGs containing overly permissive rules have `HealthStatus` set to `UNHEALTHY`. Restricting source addresses and ports to known networks restores compliance.
 
 ### [Key Vault protection](#tab/key-vault-protection)
 
 Identify Key Vaults without purge protection enabled.
 
 ```kql
-Resources
-| where type == "microsoft.keyvault/vaults"
-| where properties.enablePurgeProtection != true or isnull(properties.enablePurgeProtection)
-| project id, name, resourceGroup, properties.enablePurgeProtection
+RawEntityMetadata
+| where Environment == 'Azure' and Identifiers.Type =~ 'Microsoft.KeyVault/vaults'
+| extend condition = (Record.properties.enablePurgeProtection != true or isnull(Record.properties.enablePurgeProtection))
+| extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
+| project Id, Name, Environment, Identifiers, AdditionalData, Record, HealthStatus
 ```
 
-**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `enablePurgeProtection`
+**Output columns:** `Id`, `Name`, `Environment`, `Identifiers`, `AdditionalData`, `Record`, `HealthStatus`
 
-**Assessment logic:** Vaults without purge protection are unhealthy. Enabling this setting restores compliance.
+**Assessment logic:** Vaults without purge protection have `HealthStatus` set to `UNHEALTHY`. Enabling this setting restores compliance.
 
 ### [App Service HTTPS](#tab/app-service-https)
 
 Locate App Services that do not automatically redirect HTTP traffic to HTTPS, which leaves user connections unencrypted.
 
 ```kql
-Resources
-| where type == "microsoft.web/sites"
-| where properties.httpsOnly != true
-| project id, name, resourceGroup, properties.httpsOnly
+RawEntityMetadata
+| where Environment == 'Azure' and Identifiers.Type =~ 'Microsoft.Web/sites'
+| extend condition = (Record.properties.httpsOnly != true)
+| extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
+| project Id, Name, Environment, Identifiers, AdditionalData, Record, HealthStatus
 ```
 
-**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `httpsOnly`
+**Output columns:** `Id`, `Name`, `Environment`, `Identifiers`, `AdditionalData`, `Record`, `HealthStatus`
 
-**Assessment logic:** Services without HTTPS-only enabled are non-compliant. Your recommendation prompts users to enable this protection.
+**Assessment logic:** Services without HTTPS-only enabled have `HealthStatus` set to `UNHEALTHY`. Your recommendation prompts users to enable this protection.
 
 ### [Database firewall](#tab/database-firewall)
 
-Find SQL or PostgreSQL servers with firewall rules that allow connections from any IP address (0.0.0.0 to 255.255.255.255), which exposes databases to the internet.
+Identify Azure SQL servers with public network access enabled or unconfigured, which allows connections from outside your private network.
 
 ```kql
-Resources
-| where type in~ (
-    "microsoft.sql/servers/firewallrules",
-    "microsoft.dbforpostgresql/servers/firewallrules",
-    "microsoft.dbforpostgresql/flexibleservers/firewallrules"
-  )
-| where properties.startIpAddress == "0.0.0.0"
-  and properties.endIpAddress == "255.255.255.255"
-| extend serverId = tostring(split(id, "/firewallrules/")[0])
-| extend firewallRuleName = name
-| extend serverName = tostring(split(serverId, "/")[-1])
-| extend resourceGroup = extract(@"(?i)/resourceGroups/([^/]+)/", 1, serverId)
-| project id = serverId, name = serverName, resourceGroup, firewallRule = firewallRuleName
+RawEntityMetadata
+| where Environment == 'Azure' and Identifiers.Type =~ 'Microsoft.Sql/servers'
+| extend condition = (isnull(Record.properties.publicNetworkAccess) or Record.properties.publicNetworkAccess != 'Disabled')
+| extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
+| project Id, Name, Environment, Identifiers, AdditionalData, Record, HealthStatus
 ```
 
-**Output columns:** `id` (ARM resource ID), `name`, `resourceGroup`, `firewallRule`
+**Output columns:** `Id`, `Name`, `Environment`, `Identifiers`, `AdditionalData`, `Record`, `HealthStatus`
 
-**Assessment logic:** Servers with unrestricted firewall access are unhealthy. Restricting to known source IPs restores compliance.
+**Assessment logic:** Servers with public network access enabled or unconfigured have `HealthStatus` set to `UNHEALTHY`. Restricting public network access restores compliance.
 
 ---
 
@@ -191,47 +179,41 @@ Resources
 
 Before you write your query, understand the required output schema. This is how Microsoft Defender for Cloud interprets your results and maps findings to resources.
 
-**Required and recommended output columns:**
+**Required output columns:**
 
 | Column | Type | Purpose |
 | --- | --- | --- |
-| `id` | String (required) | Full ARM resource ID for Azure resources. Example: `/subscriptions/{subId}/resourceGroups/{rg}/providers/microsoft.storage/storageaccounts/{name}` |
-| `name` | String (recommended) | Human-readable resource name displayed in findings |
-| `resourceGroup` | String (optional) | Resource group for organizing findings by location. This value can be empty for non-Azure resources. |
+| `Id` | String (required) | Resource identifier used by Defender for Cloud to reference the resource. |
+| `Name` | String (required) | Human-readable resource name displayed in findings. |
+| `Environment` | String (required) | Cloud environment: `Azure`, `AWS`, or `GCP`. |
+| `Identifiers` | Dynamic (required) | Resource type and identifiers passed through from the source record. |
+| `AdditionalData` | Dynamic (required) | Supplementary resource metadata passed through from the source record. |
+| `Record` | Dynamic (required) | Full resource record containing all properties. |
+| `HealthStatus` | String (required) | Assessment result: `UNHEALTHY` (non-compliant) or `HEALTHY` (compliant). |
 
-You can include additional columns relevant to your finding (such as `properties.httpsOnly` or `tags`). Defender for Cloud displays these in the recommendation details.
-
-**Resource ID format guidance:**
-
-The `id` column must contain the complete ARM resource ID; nothing abbreviated or custom. Defender for Cloud uses this ID to reference the exact resource in the portal and link remediation actions.
-
-**Valid format:**
-
-```text
-/subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/my-rg/providers/microsoft.storage/storageaccounts/mystorageacct
-```
-
-**Invalid formats (won't work):**
-
-```text
-mystorageacct
-storage-rg/mystorageacct
-/providers/microsoft.storage/storageaccounts/mystorageacct
-```
+Always end your query with: `| project Id, Name, Environment, Identifiers, AdditionalData, Record, HealthStatus`
 
 **Assessment mapping:**
 
-Your query defines what "unhealthy" means. Resources that appear in results are unhealthy (non-compliant). Resources that don't appear are healthy (compliant). It's binary—no status column needed.
+Every query must set a `HealthStatus` value for each resource. Use the `iff()` function to evaluate your condition and assign the status:
+
+```kql
+| extend condition = (your condition here)
+| extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
+```
+
+Resources where `HealthStatus` is `UNHEALTHY` appear as non-compliant findings in Defender for Cloud. Resources where `HealthStatus` is `HEALTHY` are compliant and don't appear in findings.
 
 > [!IMPORTANT]
-> **Return ONLY unhealthy resources.** Never return all resources with a status column. Defender for Cloud interprets every row as "this resource failed the check." Returning all resources would flag everything as unhealthy.
+> Always set `HealthStatus` to either `'UNHEALTHY'` or `'HEALTHY'`. Return all resources in scope — Defender for Cloud uses the `HealthStatus` column to determine compliance. Omitting resources from the result set is treated as no data, not as healthy.
 
 **Common errors and fixes:**
 
-- **Missing `id` column:** Query fails silently. Always include `project id, ...` in your final output.
-- **Incomplete resource ID:** Verify the `id` column contains the full ARM path. In the portal, click a finding to confirm the URL matches your `id` value.
-- **Returning compliant resources:** If you forget the `where` filter, you'll return all resources as unhealthy. Always filter by condition (e.g., `where properties.httpsOnly != true`).
-- **Null properties on different subscriptions:** Test your query across subscriptions with varied configurations. A query working on one subscription might fail elsewhere if properties are null or missing. Use `isnull()` checks where appropriate.
+- **Missing required columns:** If any of the seven required columns are missing, the query fails. Always end with `| project Id, Name, Environment, Identifiers, AdditionalData, Record, HealthStatus`.
+- **Wrong `HealthStatus` values:** Only `'UNHEALTHY'` and `'HEALTHY'` are valid values (case-sensitive). Other values or null cause parsing errors.
+- **Incorrect property paths:** Properties are accessed via `Record.properties.*`, not directly. For example, use `Record.properties.httpsOnly`, not `properties.httpsOnly`.
+- **Resource type case sensitivity:** Use `=~` (case-insensitive match) for `Identifiers.Type` comparisons. For example, `Identifiers.Type =~ 'Microsoft.Storage/storageAccounts'`.
+- **Null properties across subscriptions:** Test your query across subscriptions with varied configurations. Use `isnull()` checks where properties may be absent.
 
 ## Use custom recommendations at scale
 
@@ -429,5 +411,4 @@ You can use the following links to learn more about Kusto queries:
 
 - [KQL Quick Reference](/azure/data-explorer/kql-quick-reference)
 - [Kusto Query Language (KQL) overview](/azure/data-explorer/kusto/query/)
-- [Must Learn KQL Part 1: Tools and Resources](https://rodtrent.substack.com/p/must-learn-kql-part-1-tools-and-resources)
 - [What are security policies, initiatives, and recommendations?](security-policy-concept.md)
