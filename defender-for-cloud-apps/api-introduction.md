@@ -3,6 +3,7 @@ title: REST API
 description: This article describes how to interact with Defender for Cloud Apps over HTTPS.
 ms.date: 01/29/2023
 ms.topic: reference
+ms.custom: sfi-image-nochange
 ---
 # Defender for Cloud Apps REST API
 

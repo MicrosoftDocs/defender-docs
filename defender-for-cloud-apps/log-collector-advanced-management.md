@@ -4,6 +4,9 @@ description: This article provides information about advanced management tasks f
 ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom:
+  - sfi-image-nochange
+  - sfi-ropc-nochange
 ---
 # Advanced log collector management
 

@@ -3,6 +3,7 @@ title: Overview of exposure insights and secure score in Microsoft Security Expo
 description: Learn how to get exposure insights into your corporate attack surface with Microsoft Security Exposure Management.
 ms.topic: overview
 ms.date: 07/30/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Overview - Exposure insights

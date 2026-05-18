@@ -3,6 +3,7 @@ title: Investigate alerts in Microsoft Defender for Identity
 description: Learn how to investigate and respond to security alerts issued by Microsoft Defender for Identity
 ms.date: 05/08/2025
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Investigate alerts in Microsoft Defender for Identity

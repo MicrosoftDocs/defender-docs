@@ -14,6 +14,7 @@ ms.custom:
   - sfi-ga-nochange
   - cx-ti
   - cx-ah
+  - sfi-image-nochange
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal

@@ -4,6 +4,7 @@ description: Learn how about connecting your GitHub Enterprise app to Defender f
 ms.date: 01/07/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ms.custom: sfi-image-nochange
 ---
 
 # How Defender for Cloud Apps helps protect your GitHub Enterprise environment

@@ -5,6 +5,7 @@ ms.date: 01/16/2024
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity admin, I want to verify that the server I'm using for my sensor can connect successfully to the Defender for Identity cloud service so that I can continue on with deploying confidently.
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange
 ---
 
 # Test Microsoft Defender for Identity connectivity

@@ -4,6 +4,7 @@ ms.date: 08/18/2025
 ms.topic: how-to
 description: Get started learning about predefined app policies.
 ms.reviewer: anandd512
+ms.custom: sfi-image-nochange
 ---
 
 # Predefined app policies

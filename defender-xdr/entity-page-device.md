@@ -14,6 +14,7 @@ ms.date: 03/27/2024
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 <!-- redirected from device-profile.md -->

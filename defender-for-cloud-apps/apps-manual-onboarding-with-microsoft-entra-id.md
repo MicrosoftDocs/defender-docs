@@ -10,6 +10,7 @@ ms.author:   damalkaw # Microsoft alias
 ms.service:  defender-for-cloud-apps
 ms.topic:   how-to
 ms.date:     07/23/2024
+ms.custom: sfi-image-nochange
 ---
 
 # Manual Onboarding of Apps using Microsoft Entra ID

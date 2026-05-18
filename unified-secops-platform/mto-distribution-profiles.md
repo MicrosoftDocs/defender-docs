@@ -12,6 +12,7 @@ ms.date: 1/14/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # Content distribution in multitenant management

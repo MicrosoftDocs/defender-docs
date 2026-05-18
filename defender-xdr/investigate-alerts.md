@@ -9,7 +9,9 @@ ms.collection:
 - m365-security
 - m365initiative-m365-defender
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.topic: how-to
 ms.date: 01/23/2026
 appliesto: 

@@ -13,6 +13,7 @@ ms.date: 03/03/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # Investigate incidents in the Microsoft Defender portal

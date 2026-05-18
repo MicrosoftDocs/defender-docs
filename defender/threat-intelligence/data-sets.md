@@ -3,10 +3,11 @@ title: Microsoft Defender Threat Intelligence (Defender TI) data sets
 description: Learn about data sets in Microsoft Defender Threat Intelligence (Defender TI).
 ms.topic: concept-article
 ms.date: 09/12/2025
-ms.custom: 
-- template-concept
-- cx-ti
-- cx-mdti
+ms.custom:
+  - template-concept
+  - cx-ti
+  - cx-mdti
+  - sfi-image-nochange
 ---
 
 # Data sets

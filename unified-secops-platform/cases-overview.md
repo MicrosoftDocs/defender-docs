@@ -9,6 +9,7 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 
 # customer intent: As a business decision maker for a security operations center, I want to learn about the case management tools available in the Microsoft Defender portal so I can unify security tickets and increase visibility across hybrid, multitenant, and multicloud environments, and disrupt attacks on identities, endpoints, email, cloud apps, and data in real time.
 ---

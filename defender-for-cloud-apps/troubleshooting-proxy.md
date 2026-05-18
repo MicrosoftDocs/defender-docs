@@ -3,6 +3,7 @@ title: Troubleshoot access and session controls for admins | Microsoft Defender 
 description: This article describes how to troubleshoot common access and session control issues experienced by admins with Microsoft Defender for Cloud Apps.
 ms.date: 06/18/2024
 ms.topic: troubleshooting
+ms.custom: sfi-image-nochange
 ---
 
 # Troubleshooting access and session controls for admin users

@@ -3,6 +3,7 @@ title: Deploy conditional access app control for any web app using AD FS
 description: This article provides information about how to deploy the Microsoft Defender for Cloud Apps conditional access app control for any web app using AD FS as the identity provider.
 ms.date: 05/15/2024
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Deploy conditional access app control for any web app using Active Directory Federation Services (AD FS) as the identity provider (IdP)
 

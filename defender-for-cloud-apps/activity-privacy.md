@@ -3,6 +3,7 @@ title: Configure activity monitoring to protect user privacy
 description: This article provides information about how to configure your activity monitoring to comply with your user privacy policy.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Configure activity monitoring to protect user privacy
 

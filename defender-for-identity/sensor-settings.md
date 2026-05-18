@@ -4,7 +4,9 @@ description: Learn how to view, manage, and update Microsoft Defender for Identi
 ms.date: 03/18/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: msecd-doc-authoring-106
+ms.custom:
+  - msecd-doc-authoring-106
+  - sfi-image-nochange
 ai-usage: ai-assisted
 
 #customer intent: As a security admin, I want to manage and monitor my Defender for Identity sensors so that I can keep them healthy, up to date, and properly configured.

@@ -3,6 +3,7 @@ title: What's new archive
 description: This article lists Microsoft Defender for Identity release notes for versions and features released over 6 months ago.
 ms.date: 02/08/2026
 ms.topic: reference
+ms.custom: sfi-image-nochange
 ---
 
 # What's new archive for Microsoft Defender for Identity

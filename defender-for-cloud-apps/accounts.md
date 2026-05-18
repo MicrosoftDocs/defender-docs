@@ -5,7 +5,9 @@ description: Learn how to investigate accounts from connected apps in Microsoft 
 ms.date: 01/29/2023
 ms.topic: how-to
 ms.reviewer: gayasalomon
-ms.custom: msecd-doc-authoring-106
+ms.custom:
+  - msecd-doc-authoring-106
+  - sfi-image-nochange
 ---
 # Investigate accounts from connected apps
 

@@ -4,6 +4,7 @@ description: Learn how to use Microsoft Defender for Cloud Apps to investigate M
 ms.date: 06/02/2024
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 
 # Investigate apps discovered by Microsoft Defender for Endpoint

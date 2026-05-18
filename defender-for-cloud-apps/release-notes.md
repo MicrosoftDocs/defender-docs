@@ -3,6 +3,9 @@ title: What's new | Microsoft Defender for Cloud Apps
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
 ms.date: 01/05/2026
 ms.topic: overview
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ---
 
 # What's new in Microsoft Defender for Cloud Apps

@@ -5,6 +5,7 @@ ms.date: 05/04/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
+ms.custom: sfi-ropc-nochange
 ---
 
 # Download and install a Microsoft Defender for Identity sensor v2.x

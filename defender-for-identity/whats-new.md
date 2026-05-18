@@ -5,6 +5,7 @@ ms.date: 05/13/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
+ms.custom: sfi-image-nochange
 ---
 
 # What's new in Microsoft Defender for Identity

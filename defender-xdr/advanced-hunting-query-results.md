@@ -10,8 +10,9 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-- cx-ti
-- cx-ah
+  - cx-ti
+  - cx-ah
+  - sfi-image-nochange
 ms.topic: how-to
 ms.date: 03/06/2026
 appliesto:

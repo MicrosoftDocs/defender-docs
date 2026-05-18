@@ -5,7 +5,9 @@ ms.date: 05/13/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-106
+ms.custom:
+  - msecd-doc-authoring-106
+  - sfi-image-nochange
 #Customer intent: As an IT admin, I want to understand and resolve Defender for Identity health issues so that my identity threat detection stays fully operational.
 ---
 

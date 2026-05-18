@@ -4,6 +4,7 @@ ms.date: 09/08/2025
 ms.topic: how-to
 description: Manage your app governance policies.
 ms.reviewer: shragar456
+ms.custom: sfi-image-nochange
 ---
 
 # Manage app policies

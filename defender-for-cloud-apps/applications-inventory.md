@@ -4,6 +4,7 @@ ms.date: 03/20/2025
 ms.topic: overview
 ms.reviewer: anandd512
 description: The new Applications page located under Assets in the Microsoft Defender portal provides a centralized location for users to view and manage SaaS and SaaS connected OAuth apps information across their environment, ensuring optimal visibility and a comprehensive experience
+ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to discover, monitor, and manage all SaaS and OAuth connected apps in my organization so that I can ensure security and compliance.
 ---
 # Applications inventory 

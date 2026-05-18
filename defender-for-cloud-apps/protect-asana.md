@@ -4,6 +4,7 @@ description: Learn how about connecting your Asana app to Defender for Cloud App
 ms.date: 01/04/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ms.custom: sfi-image-nochange
 ---
 
 # How Defender for Cloud Apps helps protect your Asana environment

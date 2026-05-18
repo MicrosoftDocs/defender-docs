@@ -4,6 +4,7 @@ description: This article describes the process configuring automatic log upload
 ms.date: 01/29/2023
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 # Configure automatic log upload using Docker in Azure
 

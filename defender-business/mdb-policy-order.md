@@ -12,6 +12,7 @@ ms.collection:
 - SMB
 - m365-security
 - tier1
+ms.custom: sfi-image-nochange
 ---
 
 # Understand policy order in Microsoft Defender for Business

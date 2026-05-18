@@ -4,6 +4,7 @@ description: This article describes how to uninstall the Microsoft Defender for 
 ms.date: 07/07/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange
 ---
 
 # Remove the Microsoft Defender for Identity sensor

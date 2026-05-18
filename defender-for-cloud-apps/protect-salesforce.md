@@ -4,6 +4,7 @@ description: Learn how about connecting your Salesforce app to Defender for Clou
 ms.date: 01/05/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ms.custom: sfi-image-nochange
 ---
 
 # How Defender for Cloud Apps helps protect your Salesforce environment

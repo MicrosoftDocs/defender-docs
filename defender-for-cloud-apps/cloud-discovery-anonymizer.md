@@ -4,6 +4,9 @@ description: This article provides information about how to protect user privacy
 ms.date: 01/29/2023
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom:
+  - sfi-ga-blocked
+  - sfi-image-nochange
 ---
 # Cloud discovery data anonymization
 

@@ -13,6 +13,7 @@ ms.collection:
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud Apps
+ms.custom: sfi-image-nochange
 ---
 
 # Microsoft Defender for Cloud Apps in the Microsoft Defender portal

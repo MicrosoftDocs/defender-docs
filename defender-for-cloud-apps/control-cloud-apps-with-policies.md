@@ -3,6 +3,7 @@ title: Control cloud apps with policies
 description: This article provides information on how policies are used and set up to control cloud app use.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Control cloud apps with policies
 

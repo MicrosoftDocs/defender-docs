@@ -4,6 +4,7 @@ description: This article describes the procedure for governing your discovered 
 ms.date: 09/30/2025
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 
 # Govern discovered apps

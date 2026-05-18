@@ -4,6 +4,7 @@ description: Learn about working with Microsoft Defender for Identity scoped rol
 ms.date: 05/25/2025
 ms.topic: how-to
 ms. reviewer: 'LiorShapiraa'
+ms.custom: sfi-image-nochange
 ---
 
 # Configure scoped access for Microsoft Defender for Identity

@@ -4,6 +4,7 @@ ms.date: 08/12/2025
 ms.topic: how-to
 ms.reviewr: shragar
 description: Get started with app governance visibility and insights in Microsoft Defender XDR for Microsoft Defender for Cloud Apps.
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with visibility and insights

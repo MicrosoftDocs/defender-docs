@@ -11,9 +11,10 @@ ms.collection:
   - tier1
   - essentials-manage
 ms.topic: concept-article
-ms.custom: 
-- cx-ti
-- cx-dex
+ms.custom:
+  - cx-ti
+  - cx-dex
+  - sfi-image-nochange
 ms.date: 10/31/2025
 ---
 

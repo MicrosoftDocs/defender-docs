@@ -5,6 +5,7 @@ ms.date: 11/02/2025
 ms.topic: how-to
 ms.service: defender-for-cloud-apps
 ms.reviewer: gayasalomon
+ms.custom: sfi-image-nochange
 #customer-intent: As a security administrator, I want my Copilot Studio AI agents to be protected against suspicious or harmful actions so that I can reduce security risks to my organization.
 ---
 

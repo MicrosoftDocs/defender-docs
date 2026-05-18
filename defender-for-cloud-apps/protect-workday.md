@@ -4,6 +4,7 @@ description: Learn how about connecting your Workday app to Defender for Cloud A
 ms.date: 08/18/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
+ms.custom: sfi-image-nochange
 ---
 # How Defender for Cloud Apps helps protect your Workday environment
 

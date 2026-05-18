@@ -16,6 +16,7 @@ ms.custom:
   - cx-ti
   - cx-ah
   - msecd-doc-authoring-1012
+  - sfi-image-nochange
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal

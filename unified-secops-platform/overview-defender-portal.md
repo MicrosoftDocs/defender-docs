@@ -9,6 +9,7 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 
 # customer intent: As a security operations center leader, I want to learn about the services and features available in the Defender portal to help me determine whether they meet my organization's requirements.
 ---

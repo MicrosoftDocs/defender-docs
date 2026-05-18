@@ -17,6 +17,7 @@ search.appverid:
 - MOE150
 - MET150
 ms.date: 03/07/2026
+ms.custom: sfi-ga-nochange
 ---
 
 # Microsoft Secure Score

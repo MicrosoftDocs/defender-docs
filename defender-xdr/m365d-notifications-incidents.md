@@ -12,6 +12,7 @@ ms.topic: how-to
 ms.date: 01/17/2025
 appliesto:
 - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange
 ---
 
 # Get incident notifications by email

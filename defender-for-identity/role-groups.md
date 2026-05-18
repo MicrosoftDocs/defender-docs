@@ -4,6 +4,7 @@ description: Learn about working with Microsoft Defender for Identity role group
 ms.date: 01/15/2024
 ms.topic: article
 ms.reviewer: LiorShapiraa
+ms.custom: sfi-ga-nochange
 ---
 
 # Microsoft Defender for Identity role groups

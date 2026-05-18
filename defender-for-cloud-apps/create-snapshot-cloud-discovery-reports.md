@@ -4,6 +4,7 @@ description: This article provides information about how to upload logs manually
 ms.date: 10/20/2025
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 # Create snapshot cloud discovery reports
 

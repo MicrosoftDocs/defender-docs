@@ -4,6 +4,7 @@ description: This article provides information on policy templates included in M
 ms.date: 11/16/2025
 ms.topic: how-to
 ms.reviewer: MayaAbelson
+ms.custom: sfi-image-nochange
 
 ---
 

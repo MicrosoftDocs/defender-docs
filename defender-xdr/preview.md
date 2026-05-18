@@ -22,6 +22,7 @@ appliesto:
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Identity
   - Microsoft Defender for Cloud Apps
+ms.custom: sfi-ga-nochange
 ---
 
 # Microsoft Defender XDR preview features

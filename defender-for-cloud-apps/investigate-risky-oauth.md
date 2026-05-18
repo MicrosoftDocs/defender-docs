@@ -3,6 +3,7 @@ title: Investigate and remediate risky OAuth apps | Microsoft Defender for Cloud
 description: This tutorial provides information on how to investigate and remediate risky OAuth apps in Defender for Cloud Apps.
 ms.date: 01/23/2024
 ms.topic: tutorial
+ms.custom: sfi-image-nochange
 ---
 # Investigate and remediate risky OAuth apps
 

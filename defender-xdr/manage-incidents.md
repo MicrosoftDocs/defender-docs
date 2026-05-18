@@ -10,7 +10,9 @@ ms.collection:
   - usx-security
   - tier1
   - sentinel-only
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 ms.topic: how-to
 ms.date: 11/18/2024
 appliesto: 

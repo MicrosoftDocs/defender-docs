@@ -4,6 +4,7 @@ description: This article provides a list of activities, filters, and match para
 ms.date: 06/24/2025
 ms.topic: how-to
 ms.reviewer: gayasalomon
+ms.custom: sfi-image-nochange
 ---
 
 # Investigate activities

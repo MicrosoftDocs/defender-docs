@@ -13,6 +13,7 @@ ms.date: 01/14/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange
 
 #customer intent: As a SOC analyst, I want to learn how to use the audit log to search for Microsoft Defender XDR activities to help with investigation.
 ---

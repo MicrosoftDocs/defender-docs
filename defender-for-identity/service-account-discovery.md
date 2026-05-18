@@ -3,6 +3,7 @@ title: Service Account Discovery
 description: The Service Accounts page provides a centralized location for customers to view and manage identity information across their environment, ensuring optimal visibility and a comprehensive experience.
 ms.topic: article
 ms.date: 03/25/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Investigate and protect Service Accounts

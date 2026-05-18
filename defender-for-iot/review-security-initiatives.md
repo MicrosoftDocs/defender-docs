@@ -7,6 +7,7 @@ ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 11/17/2024
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Review security initiatives

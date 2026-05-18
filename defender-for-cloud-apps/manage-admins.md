@@ -4,6 +4,9 @@ description: This article provides instructions for setting access to Defender f
 ms.date: 12/21/2023
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart
+ms.custom:
+  - sfi-ga-blocked
+  - sfi-image-nochange
 ---
 # Configure admin access
 

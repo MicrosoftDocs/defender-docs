@@ -4,6 +4,7 @@ description: Learn how to work with the Identity Security dashboard in Microsoft
 ms.date: 03/17/2026
 ms.topic: how-to
 ms.reviewer: maelgami 
+ms.custom: sfi-ga-blocked
 ---
 
 # The Identity Security dashboard (Preview)

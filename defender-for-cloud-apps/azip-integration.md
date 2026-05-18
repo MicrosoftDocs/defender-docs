@@ -4,6 +4,7 @@ description: This article provides information about how to use sensitivity labe
 ms.date: 10/26/2023
 ms.topic: how-to
 ms.reviewer: MayaAbelson
+ms.custom: sfi-image-nochange
 ---
 # Integrate with Microsoft Purview for information protection
 

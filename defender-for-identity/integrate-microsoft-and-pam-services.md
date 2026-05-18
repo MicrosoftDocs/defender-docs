@@ -5,6 +5,7 @@ ms.date: 03/30/2025
 ms.topic: concept-article
 #customerIntent: As a SOC engineer, I want to understand how to integrate Microsoft Defender for Identity with my PAM (Privilege Access Management) system to manage privileged access and detect threats.
 description: Learn how to integrate Microsoft Defender for Identity with your Privileged Access Management (PAM) services.
+ms.custom: sfi-image-nochange
 ---
 
 # Integrate Defender for Identity with PAM services

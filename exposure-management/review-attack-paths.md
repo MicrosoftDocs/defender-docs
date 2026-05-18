@@ -3,6 +3,7 @@ title: Review attack paths in Microsoft Security Exposure Management
 description: Learn how to review and explore attack paths in Microsoft Security Exposure Management.
 ms.topic: overview
 ms.date: 05/14/2026
+ms.custom: sfi-image-nochange
 
 ---
 

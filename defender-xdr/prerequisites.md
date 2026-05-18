@@ -12,6 +12,7 @@ ms.topic: install-set-up-deploy
 ms.date: 04/03/2025
 appliesto:
 - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange
 ---
 
 # Microsoft Defender XDR prerequisites

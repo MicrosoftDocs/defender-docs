@@ -9,7 +9,10 @@ author: AbbyMSFT
 ms.author: abbyweisberg
 ms.service: microsoft-defender-for-identity
 ms.topic: article
-ms.custom: msecd-doc-authoring-106
+ms.custom:
+  - msecd-doc-authoring-106
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ms.date: 04/15/2026
 ms.reviewer: maelgami 
 appliesto: 

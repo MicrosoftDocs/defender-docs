@@ -3,7 +3,9 @@ title: Configure Windows event auditing
 description: Configure Windows event auditing for Defender for Identity sensors. Learn automatic, manual, and PowerShell methods to enable required audit policies.
 ms.date: 05/07/2026
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-106
+ms.custom:
+  - msecd-doc-authoring-106
+  - sfi-image-nochange
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
 ---

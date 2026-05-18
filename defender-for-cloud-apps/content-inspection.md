@@ -4,6 +4,7 @@ description: This article describes the process Defender for Cloud Apps follows 
 ms.date: 06/26/2025
 ms.topic: how-to
 ms.reviewer: MayaAbelson
+ms.custom: sfi-ga-blocked
 ---
 # DLP content inspection in Microsoft Defender for Cloud Apps
 

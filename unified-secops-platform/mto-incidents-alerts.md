@@ -13,6 +13,7 @@ ms.date: 03/20/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # View and manage incidents and alerts in Microsoft Defender multitenant management

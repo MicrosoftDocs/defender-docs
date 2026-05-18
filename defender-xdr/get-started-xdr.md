@@ -11,9 +11,10 @@ ms.collection:
   - tier1
   - essentials-get-started
 ms.topic: get-started
-ms.custom: 
-- cx-ti
-- cx-dex
+ms.custom:
+  - cx-ti
+  - cx-dex
+  - sfi-ga-nochange
 ms.date: 02/27/2026
 ---
 

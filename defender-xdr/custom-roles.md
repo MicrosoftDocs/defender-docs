@@ -20,6 +20,7 @@ appliesto:
 - Microsoft Defender XDR
 - Microsoft Security Exposure Management (preview)
 - Microsoft Sentinel
+ms.custom: sfi-ga-nochange
 ---
 # Custom roles in role-based access control for Microsoft Defender portal services
 

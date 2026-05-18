@@ -13,6 +13,7 @@ ms.topic: concept-article
 ms.date: 05/08/2024
 appliesto:
   - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange
 ---
 
 # Manage access to Microsoft Defender XDR with Microsoft Entra global roles

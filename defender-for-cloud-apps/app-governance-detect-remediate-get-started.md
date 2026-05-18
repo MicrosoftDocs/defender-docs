@@ -4,6 +4,7 @@ ms.date: 08/31/2025
 ms.topic: overview
 description: Get started with app governance threat detection and remediation in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ms.reviewer: shragar456
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with app threat detection and remediation

@@ -4,6 +4,7 @@ description: Lists of all the current criticality levels for classifications in 
 ms.topic: reference
 ms.service: exposure-management
 ms.date: 04/16/2026
+ms.custom: sfi-ga-nochange
 ---
 
 # Predefined classifications - Microsoft Security Research
