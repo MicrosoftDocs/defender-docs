@@ -1,8 +1,9 @@
 ---
 title: Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel
 description: Create behavioral baselines for entities (users, hostnames, IP addresses) and use them to detect anomalous behavior and identify zero-day advanced persistent threats (APT).
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: mshechter
 ms.topic: concept-article
 ms.date: 12/15/2025
 appliesto:

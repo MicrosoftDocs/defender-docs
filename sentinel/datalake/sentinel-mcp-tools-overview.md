@@ -2,10 +2,11 @@
 title: What is Microsoft Sentinel MCP server's tool collection?
 titleSuffix: Microsoft Security  
 description: Learn about the different MCP collection of tools in Microsoft Sentinel 
+ms.author: pauloliveria
 author: poliveria
+ms.reviewer: macasgra
 ms.topic: article
 ms.date: 12/01/2025
-ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 

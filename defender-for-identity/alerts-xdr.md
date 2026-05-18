@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity XDR security alerts
 description: Learn about security alerts issued by Defender for Identity in the extended detection and response (XDR) format.
-ms.date: 05/05/2026
+ms.date: 05/12/2026
 ms.topic: conceptual
 ms.reviewer: yossidahan
 ---
@@ -213,6 +213,7 @@ The following alerts indicate that a malicious actor might be attempting to main
 
 | Security alert name | Severity | MITRE Technique | Detector ID |
 |---|---|---|---|
+|<a name="guest-user-account-promoted-to-member"></a><details><summary>Guest user account promoted to member</summary><br>**Description**:<br><br>A guest (external) user account was promoted to a member (internal) account. Guest accounts typically have restricted access, while member accounts are treated as internal users and may inherit broader permissions, access to resources, and eligibility for privileged roles. This can also be abused by adversaries to escalate privileges, bypass external access restrictions, or establish persistence within the tenant.</details> | Medium | [T1098](https://attack.mitre.org/techniques/T1098) | xdr_GuestToMemberPromotion |
 |<a name="oauth-app-created-a-user"></a><details><summary>OAuth app created a user</summary><br>**Description**:<br><br>A new user account was created by an OAuth application. An attacker might have compromised this application for persistence in the organization.</details> | Medium | [T1136.003](https://attack.mitre.org/techniques/T1136/003) | xdr_OAuthAppCreatedAUser |
 |<a name="okta-privileged-api-token-created"></a><details><summary>Okta privileged API token created</summary><br>**Description**:<br><br>{ActorAliasName} created an API token. If stolen, it can grant the attacker access with the user's permission.</details> | High | [T1078.004](https://attack.mitre.org/techniques/T1078/004) | xdr_OktaPrivilegedApiTokenCreated |
 |<a name="okta-privileged-api-token-updated"></a><details><summary>Okta privileged API token updated</summary><br>**Description**:<br><br>{ActorAliasName} updated a Privileged API token Configuration to be more promiscuous. If stolen, it can grant the attacker access with the user's permission.</details> | High | [T1078.004](https://attack.mitre.org/techniques/T1078/004) | xdr_OktaPrivilegedApiTokenUpdated |

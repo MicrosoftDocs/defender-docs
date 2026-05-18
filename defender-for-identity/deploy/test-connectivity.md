@@ -72,4 +72,4 @@ For more information, see the [MDI PowerShell documentation](/powershell/module/
 
 
 > [!div class="step-by-step"]
-> [Download the Microsoft Defender for Identity sensor »](download-sensor.md)
+> [Download and install the Microsoft Defender for Identity sensor](install-sensor.md)
