@@ -4,6 +4,7 @@ description: include file
 services: lighthouse
 ms.author: guywild
 author: guywi-ms
+ms.reviewer: noak
 ms.service: azure-lighthouse
 ms.topic: include
 ms.date: 05/03/2024

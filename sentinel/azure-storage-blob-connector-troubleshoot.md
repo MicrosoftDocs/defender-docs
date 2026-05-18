@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot Azure Storage Blob connector issues - Microsoft Sentinel
 description: Troubleshoot Azure Storage Blob connector issues in Microsoft Sentinel.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: troubleshooting
 ms.date: 02/19/2026
 ms.service: microsoft-sentinel

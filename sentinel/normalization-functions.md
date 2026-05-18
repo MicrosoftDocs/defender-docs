@@ -3,7 +3,6 @@ title: Advanced Security Information Model (ASIM) helper functions | Microsoft D
 description: This article outlines the Microsoft Sentinel Advanced Security Information Model (ASIM) helper functions.
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 06/07/2021
 
