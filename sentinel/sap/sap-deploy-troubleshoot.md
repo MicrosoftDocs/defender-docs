@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot the Microsoft Sentinel solution for SAP applications data connector agent
 description: Learn how to troubleshoot specific issues that might occur in your Microsoft Sentinel solution for SAP applications data connector agent deployment.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
 ms.topic: troubleshooting
 ms.date: 09/30/2025
 appliesto:
@@ -10,6 +10,7 @@ appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 zone_pivot_groups: sentinel-sap-connection
+ai-usage: ai-assisted
 
 #Customer intent: As an SAP BASIS team member, I want to troubleshoot issues with my Microsoft Sentinel for SAP applications data connector agent so that I can ensure accurate and timely data ingestion and monitoring.
 
@@ -70,6 +71,33 @@ If you see sudden spikes in message volumes and processing times on SAP Cloud In
 1. Use the [filter capabilities](deploy-data-connector-agent-container.md?tabs=managed-identity&pivots=connection-agentless#customize-data-connector-behavior-optional) of the Sentinel package on SAP Cloud Integration to apply filtering on log read. The parameter max-rows are pre-populated to protect the integration flow from message flooding by design.
 
 Note that log filters on NetWeaver impact what is written to the audit log on the source while a filter on SAP Cloud Integration only chooses not to read the problematic entries.
+
+## Timeouts during connector registration or log polling
+
+The Microsoft Sentinel agentless poller enforces two timeouts when calling the SAP Cloud Integration **Data Collector** iflow. Exceeding either limit causes incomplete ingestion or repeated retries.
+
+### Initial connect (45-second limit) – partial data and failed connector registration
+
+When you connect a new SAP system in Microsoft Sentinel, the initial handshake to the Data Collector iflow must complete within **45 seconds**. If the SAP integration takes longer to respond, the connector ingests partial data and the connector registration fails.
+
+To remediate:
+
+1. Run the [Prerequisite checker](preparing-sap.md#run-the-prerequisite-checker) iflow and review its runtime measurements to identify the slow downstream call (RFC destination, audit log read, user master read).
+1. Tune the SAP integration downstream of SAP Cloud Integration to bring the response time below 45 seconds. Common levers include audit log filter settings ([SM19/RSAU best practices](https://community.sap.com/t5/application-development-and-automation-blog-posts/analysis-and-recommended-settings-of-the-security-audit-log-sm19-rsau/ba-p/13297094)), data connector parameter overrides such as `max-rows` and `offset-in-seconds` (see [Customize data connector behavior](deploy-data-connector-agent-container.md?tabs=managed-identity&pivots=connection-agentless#customize-data-connector-behavior-optional)), and SAP Cloud Connector / RFC sizing.
+1. If the response time still can't be reduced, switch to the **SAP CPI–internal scheduler** approach by deploying the **Data Collector Scheduler** iflow from the [Microsoft Sentinel for SAP community repository](https://github.com/Azure-Samples/Sentinel-For-SAP-Community). With the scheduler iflow, Microsoft Sentinel doesn't poll or register the connector; it only receives data pushed by SAP Cloud Integration. This approach trades real-time threat protection for higher tolerance to long-running SAP responses.
+
+For an end-to-end discussion of the tradeoffs, see the blog post [Run agentless SAP connector cost-efficiently](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/run-agentless-sap-connector-cost-efficiently/4464781).
+
+### Long-running iflow (180-second limit) – PROCESSING/ABANDONED states and retry snowball
+
+For ongoing log polling, the Data Collector iflow must complete a single message within **180 seconds**. When the iflow exceeds this limit, you typically see message processing log states such as **PROCESSING** or **ABANDONED** in SAP Cloud Integration. Because the Microsoft Sentinel poller doesn't receive a successful response, it retries the **same time slice** repeatedly, which can snowball into overlapping long-running iflow runs and further slow down the SAP system.
+
+To recover and prevent recurrence:
+
+1. Delete the connector from Microsoft Sentinel and wait for the scheduled Sentinel requests to calm down. This breaks the retry snowball.
+1. Run the [Prerequisite checker](preparing-sap.md#run-the-prerequisite-checker) iflow to identify the root cause of the slow audit log read response times on SAP (for example, missing indexes, oversized audit log, expensive user master reads on legacy releases).
+1. Apply the relevant remediation — audit log filter tuning ([SM19/RSAU best practices](https://community.sap.com/t5/application-development-and-automation-blog-posts/analysis-and-recommended-settings-of-the-security-audit-log-sm19-rsau/ba-p/13297094)) and Data Collector parameter overrides such as `max-rows` and `offset-in-seconds` (see [Customize data connector behavior](deploy-data-connector-agent-container.md?tabs=managed-identity&pivots=connection-agentless#customize-data-connector-behavior-optional)) — before reconnecting the data connector in Microsoft Sentinel.
+1. If response times still can't be reduced below the 180-second limit, deploy the **Data Collector Scheduler** iflow from the [Microsoft Sentinel for SAP community repository](https://github.com/Azure-Samples/Sentinel-For-SAP-Community). Switching to the SAP CPI–internal scheduler compromises real-time threat protection but avoids the retry pattern enforced by the Microsoft Sentinel poller.
 
 :::zone-end
 

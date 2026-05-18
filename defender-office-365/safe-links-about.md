@@ -5,7 +5,7 @@ ms.author: chrisda
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 02/10/2026
+ms.date: 05/08/2026
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -231,6 +231,9 @@ These settings apply to Safe Links in email, Teams, and Office apps:
 - **Track user clicks**: Turn on or turn off storing Safe Links click data for URLs clicked. We recommend that you leave this setting selected (on).
 
   In Safe Links for Office apps, this setting applies to the desktop versions Word, Excel, PowerPoint, and Visio.
+
+  > [!TIP]
+  > In [advanced hunting](/defender-xdr/advanced-hunting-urlclickevents-table), click events on URLs wrapped by Safe Links have the `AppName` value `Mail` in the `UrlClickEvents` table.
 
   If you select this setting, the following settings are available:
 

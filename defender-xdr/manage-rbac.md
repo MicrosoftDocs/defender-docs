@@ -10,8 +10,9 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: overview
-ms.date: 03/12/2026
-ms.reviewer: 
+ms.date: 04/12/2026
+ms.reviewer: Tomas Beerthuis
+
 #customer intent: As a security administrator, I want to manage permissions and access to Microsoft Defender portal experiences using unified role-based access control (RBAC).
 ---
 
@@ -29,16 +30,14 @@ ms.reviewer:
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [Microsoft Security Exposure Management](/security-exposure-management/)
 - [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
-- [Microsoft Sentinel (Preview)](/azure/sentinel/sentinel-overview)
+- [Microsoft Sentinel](/azure/sentinel/sentinel-overview)
 
 Microsoft Defender XDR provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
 
 The Microsoft Defender unified role-based access control (RBAC) model provides a single permissions management experience that provides one central location for administrators to control user permissions across different security solutions.
 
 > [!IMPORTANT]
-> Starting February 16, 2025, the Microsoft Defender unified RBAC model will be the default permissions model for new Microsoft Defender Endpoint tenants. These new tenants won't have the capability to export roles and permissions from the current model. Defender for Endpoint tenants with roles and permissions assigned or exported prior to this date will maintain their current roles and permissions configuration.
->
-> Starting March 2, 2025, new Microsoft Defender for Identity tenants will also have the Unified RBAC model as their default permissions model. They won't be able to export roles and permissions from the current model. Existing Defender for Identity tenants will maintain their current roles and permissions configuration.
+> Starting 2025, the Microsoft Defender unified RBAC model is the default permissions model for new Microsoft Defender Endpoint tenants and Microsoft Defender for Identity tenants. These tenants can't export roles and permissions from the old model. Defender for Endpoint or Defender for Identity tenants with roles and permissions assigned or exported prior to this date maintain their old roles and permissions configuration.
 
 <a name='whats-supported-by-the-microsoft-365-defender-unified-rbac-model'></a>
 
@@ -56,7 +55,7 @@ Centralized permissions management is supported for the following services:
 |**Microsoft Defender for Cloud**|Support access management for all Defender for Cloud data that is available in Microsoft Defender portal.|
 |**Microsoft Security Exposure Management**|Full support for all Exposure Management data and actions, including Microsoft Secure Score data.|
 |**Microsoft Defender for Cloud Apps (Preview)**|**Note:** Once Unified RBAC is activated, some built-in scoped roles will no longer be supported. For more information, see [Map Microsoft Defender for Cloud Apps permissions to the Microsoft Defender unified RBAC permissions](compare-rbac-roles.md#microsoft-defender-for-cloud-apps).|
-|**Microsoft Sentinel** (Preview)| Supports unified access management for all Microsoft Sentinel workspaces onboarded to the Defender portal.<br><br> Sentinel experiences in the Defender portal continue to respect ARM roles and permissions in addition to URBAC. Therefore, users with more permissions in ARM than in URBAC may see more data in the Sentinel pages in the Defender portal than configured in their URBAC permissions. <br><br>Supports permission management for the Microsoft Sentinel data lake default workspace, when Microsoft Sentinel is onboarded to both the Defender portal and the Microsoft Sentinel data lake. <br><br>Microsoft Sentinel users with built-in Azure RBAC roles for their workspaces receive parallel permissions in the Microsoft Sentinel data lake experiences, such as the lake explorer and notebooks. For more information, see [Roles and permissions for the Microsoft Sentinel data lake (Preview)](/azure/sentinel/roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake-preview). <br><br>To see which roles are supported, check the [unified RBAC roles mapping](compare-rbac-roles.md#microsoft-sentinel-preview).|
+|**Microsoft Sentinel** | Supports unified access management for all Microsoft Sentinel workspaces onboarded to the Defender portal. Sentinel role assignments made in Unified RBAC sync with Azure RBAC and are visible there. However, unified RBAC becomes the source of permissions once enabled. <br><br>When activating Sentinel in Unified RBAC, the *User Access Administrator* role is assigned to the MTP Unified RBAC app within the enabled workspace.<br><br>Assigning permissions to a service principal or to a GDAP user group in Microsoft Sentinel isn't supported in unified RBAC. If you need either capability, keep using Azure RBAC for Microsoft Sentinel. For more information, see [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md).<br><br> Sentinel experiences in the Defender portal continue to respect ARM roles and permissions in addition to URBAC. Therefore, users with more permissions in ARM than in URBAC may see more data in the Sentinel pages in the Defender portal than configured in their URBAC permissions. <br><br>Supports permission management for the Microsoft Sentinel data lake default workspace, when Microsoft Sentinel is onboarded to both the Defender portal and the Microsoft Sentinel data lake. <br><br>Microsoft Sentinel users with built-in Azure RBAC roles for their workspaces receive parallel permissions in the Microsoft Sentinel data lake experiences, such as the lake explorer and notebooks. For more information, see [Roles and permissions for the Microsoft Sentinel data lake](/azure/sentinel/roles#roles-and-permissions-for-the-microsoft-sentinel-data-lake). <br><br>To see which roles are supported, check the [unified RBAC roles mapping](compare-rbac-roles.md#microsoft-sentinel).|
 
 > [!NOTE]
 > Scenarios and experiences controlled by Compliance permissions are managed in the Microsoft Purview portal. Specifically, Data Loss Prevention (DLP) and Insider Risk Management experiences accessible from the Defender portal are governed by Microsoft Purview RBAC, not Microsoft Defender unified RBAC. To manage permissions for these experiences, see [Permissions in the Microsoft Purview portal](/purview/purview-permissions).

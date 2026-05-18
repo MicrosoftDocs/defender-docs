@@ -1,6 +1,7 @@
 ---
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: include
 ms.date: 04/13/2026
 
@@ -5243,6 +5244,7 @@ The [Okta Single Sign-On (SSO)](https://www.okta.com/products/single-sign-on/) c
 |Table|DCR support|Lake-only ingestion|
 |---|---|---|
 |`Okta_CL`|No|No|
+|`OktaV2_CL`|No|No|
 
 **Data collection rule support:** Not currently supported
 

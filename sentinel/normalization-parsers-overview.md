@@ -1,15 +1,16 @@
 ---
 title: Microsoft Sentinel Advanced Security Information Model (ASIM) parsers overview | Microsoft Docs
 description: This article provides an overview of Advanced Security Information Model (ASIM) parsers and a link to more detailed ASIM parsers documents.
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: concept-article
 ms.date: 11/09/2021
-ms.author: ofshezaf
+
 
 
 #Customer intent: As a security analyst, I want to use ASIM parsers to normalize and query security data so that I can efficiently analyze and correlate information from various sources.
 
---- 
+---
 
 # The Advanced Security Information Model (ASIM) parsers
 

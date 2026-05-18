@@ -1,8 +1,9 @@
 ---
 title: Transition Your Microsoft Sentinel Environment to the Defender Portal
 description: Move Microsoft Sentinel operations from the Azure portal to the Microsoft Defender portal.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: soulisabag
 ms.topic: how-to #Required; leave this attribute/value as-is
 ms.date: 03/17/2026
 ms.collection: usx-security
