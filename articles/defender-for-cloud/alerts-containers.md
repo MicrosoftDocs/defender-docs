@@ -22,7 +22,7 @@ The Kubernetes control plane manages and orchestrates all resources within the c
 Examples of suspicious control plane operations include:
 
 - **Privileged container deployments:** Monitoring for unauthorized deployments or excessive use of privileges that could lead to host-system breaches.
-- **Risky service exposures:** Identifying services unintentionally exposed to the public Internet or lacking proper access controls. This includes the **Exposed Kubernetes service detected** alert when a Kubernetes Service of type `LoadBalancer` is created or updated in a way that publicly exposes workloads.
+- **Risky service exposures:** Identifying services unintentionally exposed to the public Internet or lacking proper access controls.
 - **Suspicious service account activities:** Detecting unusual patterns such as excessive resource requests or unauthorized API calls.
 
 When workloads are publicly exposed, the potential impact can increase if authentication is weak or missing.
