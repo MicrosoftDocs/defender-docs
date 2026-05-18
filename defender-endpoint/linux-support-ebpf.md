@@ -1,4 +1,4 @@
-﻿---
+---
 title: Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux
 description: eBPF-based sensor deployment in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
@@ -6,15 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
 ms.date: 12/02/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -244,7 +241,7 @@ Following are some common reasons for placing exclusions for AuditD:
 
 - Contact support: Reach out to Microsoft to apply the exclusions from the backend.
 
-- Global Exclusions: In the updated versions of Defender for Endpoint on Linux, exclusions can be managed with global exclusions. Global exclusions apply to both antivirus and EDR and can be configured through the managed json currently. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-exclusions).
+- Global Exclusions: In the updated versions of Defender for Endpoint on Linux, exclusions can be managed with global exclusions. Global exclusions apply to both antivirus and EDR and can be configured through the managed json currently. For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md).
 
 **5. What Should I Do in Case There Are Issues?**
 

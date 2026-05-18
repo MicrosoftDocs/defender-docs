@@ -1,4 +1,4 @@
-﻿---
+---
 title: Set up authenticated network scans in Microsoft Defender for Endpoint
 description: Set up authenticated network scans to discover network devices in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
@@ -6,14 +6,11 @@ ms.subservice: onboard
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid: met150
 ms.date: 01/12/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -66,6 +63,7 @@ To select a device that performs the authenticated network scans:
 - To allow the scanner to be authenticated and work properly, add the following domains/URLs:
 
     - `*.security.microsoft.com`
+    - `*.mdiot.microsoft.com`
     - `login.microsoftonline.com`
     - `*.blob.core.windows.net/networkscannerstable/*`
 

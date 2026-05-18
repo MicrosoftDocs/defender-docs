@@ -54,4 +54,25 @@ Below are instructions specific to this repository. These may be updated by repo
 
 <!--- Add additional repository level instructions below. Do NOT update this line or above. --->
 
+### Writing Style (Repository-Specific)
 
+- Never use phrases like "This article covers," "This article describes," or "This page explains" in article introductions. Lead with the action or topic directly.
+- Never use the word "across" (use alternatives like "in," "on," "throughout," or "for").
+
+
+### Authoritative security content
+
+The `security-for-ai` folder contains the authoritative security content for this repository. All content elsewhere in the repo must align with the guidance, terminology, and recommendations in `security-for-ai`. When you notice inconsistencies or conflicts between other content and `security-for-ai`:
+
+1. Open a GitHub issue describing the misalignment and assign it to @guywi-ms.
+1. If working in a PR, leave a review comment @-mentioning @guywi-ms about the inconsistency.
+
+### Pull Requests
+
+When creating pull requests for this repository, always target the upstream repo:
+
+```
+gh pr create --repo MicrosoftDocs/defender-docs-pr --base main --head AbbyMSFT:<branch-name>
+```
+
+Do not create PRs on the fork (`AbbyMSFT/defender-docs-pr`) targeting the fork's own `main`.

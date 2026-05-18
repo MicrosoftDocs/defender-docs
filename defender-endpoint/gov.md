@@ -1,15 +1,12 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint for US Government customers
 description: Learn about the Microsoft Defender for Endpoint for US Government customers requirements and capabilities available
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.reviewer: jesquive
 ms.localizationpriority: medium
 ms.date: 01/05/2026
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -28,7 +25,7 @@ Microsoft Defender for Endpoint for US Government customers, built in the Azure 
 This offering is available to GCC, GCC High, and DoD customers and is based on the same prevention, detection, investigation, and remediation as the commercial version. However, there are some differences in the availability of capabilities for this offering.
 
 > [!NOTE]
-> If you're a GCC customer using Defender for Endpoint in Commercial, see the [Defender for Endpoint documentation](/defender-endpoint/).
+> If you're a GCC customer using Defender for Endpoint in Commercial, see the [Defender for Endpoint documentation](microsoft-defender-endpoint.md).
 
 ## Licensing requirements
 

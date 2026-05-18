@@ -25,7 +25,7 @@ After the Defender for Identity sensor is installed, do the following to view an
           - Sensor name
           - Sensor domain membership
           - Sensor version number
-          - Whether updates should be [delayed](../sensor-settings.md#delayed-sensor-update)
+          - Whether updates should be [delayed](../sensor-settings.md#delayed-update-for-sensor-v2x)
           - Sensor service status
        :::column-end:::
        :::column:::
@@ -120,4 +120,4 @@ Now that you've configured the initial configuration steps, you can configure mo
 ## Next step
 
 > [!div class="step-by-step"]
-> [Event collection with Microsoft Defender for Identity »](event-collection-overview.md)
+> [Configure audit policies for Windows event logs](configure-windows-event-collection.md)

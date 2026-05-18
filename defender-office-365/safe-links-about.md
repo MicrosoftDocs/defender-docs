@@ -1,15 +1,11 @@
 ---
 title: Complete Safe Links overview for Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 02/10/2026
+ms.date: 05/08/2026
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -17,13 +13,6 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
-search.appverid:
-  - MET150
-  - MOE150
-  - ZVO160
-  - ZXL160
-  - ZPP160
-  - ZWD160
 ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Learn about Safe Links protection in Defender for Office 365 to protect an organization from phishing and other attacks that use malicious URLs. Discover Teams Safe Links, and see graphics of Safe Links messages.
 ms.service: defender-office-365
@@ -242,6 +231,9 @@ These settings apply to Safe Links in email, Teams, and Office apps:
 - **Track user clicks**: Turn on or turn off storing Safe Links click data for URLs clicked. We recommend that you leave this setting selected (on).
 
   In Safe Links for Office apps, this setting applies to the desktop versions Word, Excel, PowerPoint, and Visio.
+
+  > [!TIP]
+  > In [advanced hunting](/defender-xdr/advanced-hunting-urlclickevents-table), click events on URLs wrapped by Safe Links have the `AppName` value `Mail` in the `UrlClickEvents` table.
 
   If you select this setting, the following settings are available:
 

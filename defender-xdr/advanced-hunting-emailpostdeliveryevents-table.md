@@ -1,16 +1,11 @@
 ---
 title: EmailPostDeliveryEvents table in the advanced hunting schema
 description: Learn about post-delivery actions taken on Microsoft 365 emails in the EmailPostDeliveryEvents table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

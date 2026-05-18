@@ -1,20 +1,16 @@
 ---
 title: Microsoft Sentinel situational awareness workbooks multitenant management
 description: Learn about multitenant management for Microsoft Sentinel situational awareness workbooks in the Microsoft Defender portal.
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.author: monaberdugo
 author: mberdugo
-ms.localizationpriority: medium
-reviewer: Tomas Beerthuis
-audience: 
+ms.author: monaberdugo
+ms.reviewer: tbeerthuis
 ms.collection: 
 - m365-security
 - highpri
 - tier1
 - usx-security
 ms.topic: how-to
-ms.date: 09/16/2025
+ms.date: 03/16/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -24,7 +20,7 @@ appliesto:
 #customer intent: As a security administrator, I want to manage workbooks across multiple tenants to ensure consistent monitoring and reporting.
 ---
 
-# Workbooks in multitenant management (preview)
+# Workbooks in multitenant management
 
 The Workbooks feature in Microsoft Sentinel enables users to manage and view workbooks across multiple tenants from a single page in the multitenant Organization portal. ​This feature allows users to access an out-of-the-box multitenant workbook, Situational Awareness, which provides insights into tenant health, trends, and metrics. ​This document walks you through the steps to access and use this feature effectively. 
 

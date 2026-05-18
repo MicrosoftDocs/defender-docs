@@ -2,20 +2,13 @@
 title: Setup guides for Microsoft Defender XDR 
 description: Learn how to deploy and configure Microsoft Defender XDR by using online setup guides 
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier3
 ms.topic: install-set-up-deploy
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 04/25/2025
 appliesto:
   - Microsoft Defender XDR

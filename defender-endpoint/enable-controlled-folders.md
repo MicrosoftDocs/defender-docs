@@ -1,20 +1,17 @@
-﻿---
+---
 title: Enable controlled folder access
 description: Learn how to protect your important files by enabling Controlled folder access.
 ms.service: defender-endpoint
 ms.topic: how-to
 ms.localizationpriority: medium
-audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: sugamar; moeghasemi
-manager: bagol
 ms.subservice: asr
 ms.collection: 
 - m365-security
 - tier3
 - mde-asr
-search.appverid: met150
 ms.date: 03/10/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -87,7 +84,7 @@ For more information about Microsoft Configuration Manager and Controlled Folder
 
 ## Group Policy
 
-1. On your Group Policy management device, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx). Right-click the Group Policy Object you want to configure and select **Edit**.
+1. On your Group Policy management device, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console). Right-click the Group Policy Object you want to configure and select **Edit**.
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
 
