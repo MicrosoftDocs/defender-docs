@@ -79,32 +79,23 @@ The following table compares the agent hooks and network inspection protection a
 
 See the [enforcement, response and investigation considerations](#enforcement-response-and-investigation-considerations) to learn how Defender Antivirus enforces these protections and what happens when a threat is detected.
 
-## Protection modes
+## Protection modes and enforcement outcomes
 
-Agent runtime protection can be configured in three modes. The mode you choose determines how Defender Antivirus responds when it detects a threat in agent activity.
+Agent runtime protection can be configured in three modes. The mode you choose determines how Defender Antivirus enforces protection and what users and security teams see when a threat is detected.
 
-| Mode | Behavior |
-|---|---|
-| **Enabled** (Block) | Scans agent activity and blocks detected threats. Users see a notification in the agent UI and a toast message. |
-| **AuditMode** | Scans agent activity and generates alerts in Microsoft Defender, but doesn't block the agent. |
-| **Disabled** | Turns off the protection. |
-
-## Enforcement methods and outcome
-
-Defender Antivirus enforces runtime protection settings based on the configured protection mode. Choose your enforcement mode based on your organization's security posture and tolerance for blocking agent actions.
-
-| Setting | Method | Enforcement mode | Outcome |
-|---------|--------|------------------|---------|
-| **Agent hooks protection** | Application-layer scanning | Enabled (Block) | Defender Antivirus blocks the agent action. The user sees a notification in the agent UI and a Windows toast message. An alert is sent to Microsoft Defender. |
-| **Agent hooks protection** | Application-layer scanning | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender for security team review. |
-| **Network inspection protection** | Network-layer interception | Enabled (Block) | Defender Antivirus blocks the agent action. An alert is sent to Microsoft Defender. |
-| **Network inspection protection** | Network-layer interception | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender for security team review. |
+| Protection mode | Protection method | Enforcement and outcome |
+|---|---|---|
+| **Enabled** (Block) | Agent hooks protection | Defender Antivirus scans agent events and blocks detected threats. Users see a notification in the agent UI and a Windows toast message. An alert is sent to Microsoft Defender. |
+| **Enabled** (Block) | Network inspection protection | Defender Antivirus inspects agent network traffic and blocks detected threats. An alert is sent to Microsoft Defender. |
+| **AuditMode** | Agent hooks protection | Defender Antivirus scans agent events and allows the action to proceed. An alert is sent to Microsoft Defender for security team review. |
+| **AuditMode** | Network inspection protection | Defender Antivirus inspects agent network traffic and allows the action to proceed. An alert is sent to Microsoft Defender for security team review. |
+| **Disabled** | Agent hooks protection or network inspection protection | Defender Antivirus doesn't scan runtime activity for the disabled method. No runtime protection blocking or alerting occurs for that method. |
 
 ### Enforcement, response and investigation considerations
 
-When a threat is detected by either protection method, the alert appears in the Microsoft Defender portal as part of the device timeline and is correlated into incidents. Your security team can investigate these alerts using familiar workflows in Microsoft Defender XDR, such as reviewing the device timeline, examining related alerts and entities, and taking response actions.
+When either protection method detects a threat, Microsoft Defender surfaces an alert on the device timeline and correlates related alerts into incidents. Security teams can investigate these detections using Microsoft Defender XDR workflows, including timeline review, alert and entity correlation, and response actions.
 
-As a security administrator, here's what you need to know about how these protections work:
+The following considerations describe how enforcement, response, and investigation work for AI agent runtime protection:
 
 - **Single-path enforcement prevents duplicate scanning**: When you enable both agent hooks protection and network inspection protection, Defender Antivirus uses intelligent single-path enforcement. Hooks handle the supported agents, and network inspection protects other agents. This approach avoids redundant scanning and keeps performance overhead minimal.
 - **Multiple protection layers work together**: Runtime protection works alongside your existing security controls. Both settings are protected by [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection), which prevents unauthorized changes. If you've configured Microsoft Purview data loss prevention (DLP) policies, they act as an additional layer by evaluating payloads for sensitive data independently.

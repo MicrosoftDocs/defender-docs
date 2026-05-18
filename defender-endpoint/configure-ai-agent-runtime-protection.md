@@ -76,7 +76,7 @@ To enable agent hooks protection on a single device (for testing or validation):
     Set-MpPreference -EnableAiAgentProtection <mode>
     ```
 
-1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes](protect-ai-agents-overview.md#protection-modes).
+1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](protect-ai-agents-overview.md#protection-modes-and-enforcement-outcomes).
 
 1. To verify the current setting, run:
 
@@ -95,7 +95,7 @@ To enable network inspection protection on a single device (for testing or valid
     Set-MpPreference -EnableAiAgentLoopInspection <mode>
     ```
 
-1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes](protect-ai-agents-overview.md#protection-modes).
+1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](protect-ai-agents-overview.md#protection-modes-and-enforcement-outcomes).
 
 1. To verify the current setting, run:
 
@@ -124,15 +124,13 @@ The PowerShell commands in the previous sections configure a single device and a
 
 1. Use Intune to deploy the script to target devices. For detailed steps, see [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
 
-## Review runtime protection detections and outcomes
+## Review and investigate runtime protection detections and outcomes
 
-When Defender Antivirus detects a threat based on your runtime protection settings, it generates an alert in Defender and takes action based on the configured mode (Block, AuditMode, or Disabled).
+When Defender Antivirus detects a threat based on your runtime protection settings, it generates an alert in Microsoft Defender and takes action based on the configured mode (Block, AuditMode, or Disabled). Detection details appear across a specific agent's UI, Windows notifications on the device, and the Microsoft Defender portal.
 
-For more information, see [Enforcement methods and outcome](/defender-endpoint/protect-ai-agents-overview#enforcement-methods-and-outcome) and [Enforcement, response and investigation considerations](/defender-endpoint/protect-ai-agents-overview#enforcement-response-and-investigation-considerations).
+For more information on mode behavior and enforcement outcomes, see [Protection modes and enforcement outcomes](/defender-endpoint/protect-ai-agents-overview#protection-modes-and-enforcement-outcomes) and [Enforcement, response and investigation considerations](/defender-endpoint/protect-ai-agents-overview#enforcement-response-and-investigation-considerations).
 
-## View and investigate runtime protection details
-
-When runtime protection detects a threat, details appear across a specific agent's UI, Windows notifications on the device, and the Microsoft Defender portal. Use the following tasks to review what happened and investigate the detection.
+Use the following tasks to review what happened and investigate the detection.
 
 ### View the block message in the agent UI (end-user experience)
 
