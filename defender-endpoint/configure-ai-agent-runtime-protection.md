@@ -108,56 +108,58 @@ The PowerShell commands in the previous sections configure a single device and a
 
 1. Use Intune to deploy the script to target devices. For detailed steps, see [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
 
-## Enforcement methods and outcome
+## Review runtime protection detections and outcomes
 
-For enforcement details, outcomes, and admin considerations, see [Enforcement methods and outcome](/defender-endpoint/protect-ai-agents-overview#enforcement-methods-and-outcome) and [Enforcement, response and investigation considerations](/defender-endpoint/protect-ai-agents-overview#enforcement-response-and-investigation-considerations).
+When Defender Antivirus detects a threat based on your runtime protection settings, it generates an alert in Microsoft Defender XDR and takes action based on the configured mode (Block, AuditMode, or Disabled).
+
+For more information, see [Enforcement methods and outcome](/defender-endpoint/protect-ai-agents-overview#enforcement-methods-and-outcome) and [Enforcement, response and investigation considerations](/defender-endpoint/protect-ai-agents-overview#enforcement-response-and-investigation-considerations).
 
 ## View and investigate runtime protection details
 
-When runtime protection detects a threat, details appear across the agent UI, Windows notifications, Windows Security, and the Microsoft Defender portal. Use the following tasks to review what happened and investigate the detection.
+When runtime protection detects a threat, details appear across a specific agent's UI, Windows notifications on the device, and the Microsoft Defender portal. Use the following tasks to review what happened and investigate the detection.
 
-### Task 1: View the block message in the agent UI
+### View the block message in the agent UI (end-user experience)
 
-When Defender Antivirus blocks an agent action in **Block** mode, the agent displays a block message directly in the terminal. In the following example, Defender blocked an agent that attempted to read a file containing a prompt injection payload.
+When Defender Antivirus blocks an agent action in **Block** mode, the agent displays a block message directly in the terminal. In the following example, Defender blocks an agent that attempts to read a file containing a prompt injection payload.
 
 :::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-block-agent-ui.png" alt-text="Screenshot of Claude Code terminal showing a Defender block message after the agent attempted to read a malicious file." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-block-agent-ui.png":::
 
-Review the following details in the block message:
+Users can review the following details in the block message:
 
 - The action Defender blocked.
-- The reason the action was blocked.
+- The reason Defender blocked the action.
 - Confirmation that the blocked action didn't run.
 
-### Task 2: View the Windows toast notification
+### View the Windows toast notification (end-user experience)
 
 In addition to the in-agent message, Windows displays a toast notification to alert the user. This notification appears regardless of whether the agent terminal is in focus.
 
 :::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-block-toast.png" alt-text="Screenshot of a Windows toast notification from Microsoft Defender showing that an AI agent action was blocked." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-block-toast.png":::
 
-Review the following details in the toast notification:
+Users can review the following details in the toast notification:
 
 - The detection and block status.
 - The Defender source for the notification.
 - The time of the detection.
 
-### Task 3: View Protection history in Windows Security
+### View protection history in Windows Security (end-user experience)
 
 Users can review past detections in **Windows Security** > **Virus & threat protection** > **Protection history**. Each runtime protection detection appears as a separate entry.
 
 :::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-list.png" alt-text="Screenshot of Windows Security Protection History showing a list of runtime protection detections for AI agents." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-list.png":::
 
-Select an entry to view details including the threat name, severity, and which agent triggered the detection.
+Users can select an entry to view details including the threat name, severity, and which agent triggered the detection.
 
 :::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-detail.png" alt-text="Screenshot of Protection History detail view showing threat information for a blocked AI agent action." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-detail.png":::
 
-Review the following details in Protection history:
+Users can review the following details in the protection history:
 
 - The threat name and severity.
 - The affected file, process, or content.
 - The agent associated with the detection.
 - The detection timestamp and remediation status.
 
-### Task 4: View the device timeline, alerts, and incidents in the Defender portal
+### View the device timeline, alerts, and incidents in the Defender portal (security operations/administrator experience)
 
 For security operations teams, runtime protection events appear in the Microsoft Defender portal. Each detection generates an alert that appears on the device timeline.
 
@@ -167,7 +169,7 @@ Select the alert to view detailed information including the detection type, affe
 
 :::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-portal-alert-detail.png" alt-text="Screenshot of the Defender portal alert details for an AI agent runtime protection detection." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-portal-alert-detail.png":::
 
-When multiple related detections occur, Defender XDR correlates them into a single incident for streamlined investigation.
+When multiple related detections occur, Defender correlates them into a single incident for detailed investigation.
 
 :::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-portal-incident.png" alt-text="Screenshot of the Defender portal incident view showing correlated AI agent runtime protection alerts." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-portal-incident.png":::
 
