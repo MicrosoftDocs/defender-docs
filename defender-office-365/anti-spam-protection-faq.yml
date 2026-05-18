@@ -88,6 +88,18 @@ sections:
           Changes might take up to 1 hour to take effect after you save them.
 
       - question: |
+          If I modify a distribution group that is used to scope an anti-spam policy, how long does it take for the changes to take effect for added or removed group members?
+        answer: |
+          This delay is not caused by policy update latency itself, but rather by group membership expansion and caching latency. Anti-spam (and other threat) policy rule objects rely on the same Rules Engine used by Exchange Transport Rules, and therefore inherit the same group membership evaluation behavior.
+          
+          Two latencies apply when group membership changes:
+          
+          -	It can take up to 2 hours for group modifications to sync from Microsoft Entra to Exchange Online.
+          -	It can take up to an additional 3 hours for the cached group membership in the transport rules engine to refresh.
+         
+          While most group membership changes are reflected within 2 hours, in worst-case scenarios the combined latency can be up to 5 hours. If a policy change needs to take effect quickly for a specific user, it is recommended to scope the policy to individuals rather than to a group. 
+
+      - question: |
           Is bulk email filtering automatically enabled?
         answer: |
           Yes. For more information about bulk email, see [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md) and [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).
