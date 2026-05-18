@@ -39,7 +39,7 @@ Defender Antivirus uses two protection approaches:
 - **Agent hooks protection**: Subscribes to lifecycle events exposed by agent frameworks that support hooks. Supported agents include Claude Code, GitHub Copilot CLI, and OpenAI Codex.
 - **Network inspection protection**: Intercepts network traffic between agents and large language model (LLM) endpoints at the network layer. This approach covers agents that don't support hooks, such as OpenClaw.
 
-These are two parallel protection methods that work independently. Agent hooks protection is the more typical approach for supporting popular AI coding agents, while network inspection protection expands coverage to additional agents. For guidance on which method to use for your agents, see [How to decide which method to use](/defender-endpoint/configure-ai-agent-runtime-protection#how-to-decide-which-method-to-use).
+These are two parallel protection methods that work independently. Agent hooks protection is the more typical approach for supporting popular AI coding agents, while network inspection protection expands coverage to additional agents. For guidance on which method to use for your agents, see [Decide which method to use](/defender-endpoint/configure-ai-agent-runtime-protection#decide-which-method-to-use).
 
 ### How agent hooks protection works
 
@@ -77,7 +77,7 @@ The following table compares the agent hooks and network inspection protection a
 | **Data Protection Policy integration** | Supported (Microsoft Purview DLP) | Limited |
 | **Recommended for** | Organizations with Claude Code, GitHub Copilot CLI, or OpenAI Codex | Agents without hooks support or broad coverage needed |
 
-See the [enforcement, response and investigation considerations](configure-ai-agent-runtime-protection.md#enforcement-response-and-investigation-considerations) to learn how Defender Antivirus enforces these protections and what happens when a threat is detected.
+See the [enforcement, response and investigation considerations](#enforcement-response-and-investigation-considerations) to learn how Defender Antivirus enforces these protections and what happens when a threat is detected.
 
 ## Protection modes
 
@@ -115,6 +115,22 @@ As a security administrator, here's what you need to know about how these protec
 - **Investigation is built into your workflow**: When threats are detected, alerts appear in the Microsoft Defender portal as part of the device timeline and are correlated into incidents. Your security team uses the same investigation workflows they're familiar with for other endpoint detections. For more information, see [View and investigate alerts in Microsoft Defender for Endpoint](/defender-endpoint/investigate-alerts).
 
 For step-by-step configuration instructions, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection).
+
+## Supported agents
+
+The following table lists the AI coding agents that Defender for Endpoint supports for runtime protection, the protection method used for each agent, and links to the agent's hooks documentation (where applicable).
+
+| Agent | Protection method | Hooks documentation |
+|-------|-------------------|---------------------|
+| [Claude Code](https://code.claude.com/) | Agent hooks | [Claude Code hooks](https://code.claude.com/docs/en/hooks) |
+| [GitHub Copilot CLI](https://docs.github.com/en/copilot) | Agent hooks | [GitHub Copilot coding agent](https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-agent-mode-in-vs-code/using-copilot-coding-agent) |
+| [OpenAI Codex](https://openai.com/index/codex/) | Agent hooks | [Codex hooks](https://developers.openai.com/codex/hooks) |
+| [OpenClaw](https://github.com/nickclaw/openclaw) | Network inspection | N/A |
+
+> [!NOTE]
+> Network inspection protection can also protect other agents that communicate over the network, even if they aren't listed here. However, network inspection doesn't support agents that use certificate pinning or HTTP/3.
+
+For guidance on choosing a protection method, see [Decide which method to use](/defender-endpoint/configure-ai-agent-runtime-protection#decide-which-method-to-use).
 
 ## Broader AI security capabilities
 

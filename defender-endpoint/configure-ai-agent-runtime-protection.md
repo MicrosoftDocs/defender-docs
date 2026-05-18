@@ -32,22 +32,38 @@ Before you configure runtime protection, make sure the following requirements ar
 
 - The device runs Windows and is onboarded to Microsoft Defender for Endpoint.
 - Defender Antivirus is in active mode (not passive mode). Runtime protection settings aren't enforced when Defender Antivirus runs in passive mode.
-- One or more [supported AI coding agents](#supported-agents) are installed on the device.
-- For network inspection protection, the device requires a Microsoft Defender for Endpoint Plan 2 license.
-- For agent hooks protection, the AI coding agent must natively support a hooks framework. The following agents support hooks:
-  - [Claude Code](https://code.claude.com/docs/en/hooks)
-  - [GitHub Copilot CLI](https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-agent-mode-in-vs-code/using-copilot-coding-agent)
-  - [OpenAI Codex](https://developers.openai.com/codex/hooks)
+- One or more [supported AI coding agents](protect-ai-agents-overview.md#supported-agents) are installed on the device.
+- For network inspection protection, the device requires a Microsoft Defender for Endpoint Plan 2 license. <!-- TODO: Verify exact license tier required for network inspection with engineering team -->
+- For agent hooks protection, the AI coding agent must natively support a hooks framework. See [Supported agents](protect-ai-agents-overview.md#supported-agents) for the full list.
 
 > [!NOTE]
 > Network inspection protection works with any agent that communicates over the network. However, network inspection doesn't support agents that use certificate pinning or HTTP/3. If your organization uses agents with these restrictions, use agent hooks protection if available for those agents.
 
-## Decide on your protection method and configuration
+## Decide which method to use
 
-- You can use either agent hooks protection or network inspection protection, or both together for layered protection. To choose which runtime protection method to use in your environment, see this [comparison of agent hooks protection and network inspection protection](protect-ai-agents-overview.md#protection-approaches-comparison).
-- You can configure each method on individual devices for testing and validation, or deploy settings across your organization using Intune.
-    - To configure settings on a single device, see [Configure agent hooks protection](#configure-agent-hooks-protection) and [Configure network inspection protection](#configure-network-inspection-protection).
-    - To deploy settings across your organization, see [Deploy settings across your organization with Intune](#deploy-settings-across-your-organization-with-intune).
+You can use agent hooks protection, network inspection protection, or both together for layered coverage. The following table compares both approaches to help you choose:
+
+| Aspect | Agent hooks protection | Network inspection protection |
+|--------|------------------------|-------------------------------|
+| **Coverage** | Agents with hooks support | Any agent with network connectivity |
+| **Supported agents** | Claude Code, GitHub Copilot CLI, OpenAI Codex | All agents (except those with cert pinning or HTTP/3) |
+| **Detection method** | Application-layer message scanning | Network-layer traffic interception |
+| **Scope** | Prompts, tool calls, tool responses | LLM API traffic between agent and model |
+| **Overhead** | Lower (application-layer only) | Higher (TLS inspection required) |
+| **Compatibility issues** | None | Doesn't support certificate pinning or HTTP/3 |
+| **Microsoft Purview DLP integration** | Supported | Limited |
+| **Recommended for** | Organizations using Claude Code, GitHub Copilot CLI, or OpenAI Codex | Agents without hooks support, or when broad coverage is needed |
+
+**Recommendation:** Enable agent hooks protection for supported agents. If you also need to protect agents that don't support hooks, enable network inspection protection alongside it. When both methods are enabled, Defender Antivirus uses single-path enforcement — hooks handle supported agents, and network inspection protects the rest — so there's no duplicate scanning.
+
+For a full list of supported agents and which method applies to each, see [Supported agents](protect-ai-agents-overview.md#supported-agents).
+
+### Configuration options
+
+You can configure each method on individual devices for testing and validation, or deploy settings across your organization using Intune:
+
+- To configure settings on a single device, see [Configure agent hooks protection](#configure-agent-hooks-protection) and [Configure network inspection protection](#configure-network-inspection-protection).
+- To deploy settings across your organization, see [Deploy settings at scale with Intune](#deploy-settings-at-scale-with-intune).
 
 ## Configure agent hooks protection
 
@@ -136,7 +152,7 @@ Users can review the following details in the block message:
 
 In addition to the in-agent message, Windows displays a toast notification to alert the user. This notification appears regardless of whether the agent terminal is in focus.
 
-Her's an example of a Windows toast notification that appears when an agent action is blocked by Defender Antivirus:
+Here's an example of a Windows toast notification that appears when an agent action is blocked by Defender Antivirus:
 
 :::image type="content" source="media/ai-runtime-protection-block-toast.png" alt-text="Screenshot of a Windows toast notification from Microsoft Defender showing that an AI agent action was blocked." width="600":::
 
