@@ -18,11 +18,13 @@ appliesto:
 
 # Set up AI agent runtime protection with Microsoft Defender Antivirus
 
-Microsoft Defender Antivirus provides runtime protection for AI coding agents running on Windows endpoints. When enabled, Defender Antivirus intercepts events in the agent's execution loop — such as user prompts, pre-tool calls, and post-tool responses — and scans them for cross-prompt injection attacks (XPIA) and sensitive data leakage. Depending on how you configure it, Defender Antivirus can audit or block threats and send alerts to Microsoft Defender XDR.
+Microsoft Defender Antivirus provides runtime protection for AI coding agents on Windows endpoints. It scans key events in the agent loop to detect cross-prompt injection attacks (XPIA) and sensitive data leakage, then audits or blocks threats and sends alerts to Microsoft Defender XDR based on your configuration.
 
-Defender Antivirus provides two runtime protection approaches for AI coding agents: agent hooks protection and network inspection protection.
+Defender Antivirus supports two runtime protection approaches: agent hooks protection and network inspection protection.
 
-For an overview of how each method works, see [AI agent runtime protection](protect-ai-agents-overview.md#ai-agent-runtime-protection).
+In this article, you learn how to choose a protection method, configure runtime protection settings, deploy settings with Intune, and investigate detections.
+
+For an overview of how each method works, see [AI agent runtime protection overview](protect-ai-agents-overview.md#ai-agent-runtime-protection).
 
 ## Prerequisites
 
@@ -55,13 +57,7 @@ To enable agent hooks protection on a device:
     Set-MpPreference -EnableAiAgentProtection <mode>
     ```
 
-1. Replace `<mode>` with one of the following values:
-
-    | Value | Behavior |
-    |---|---|
-    | `Enabled` | Scans agent events and blocks detected threats. The user sees a notification in the agent UI and a toast message. |
-    | `AuditMode` | Scans agent events and generates alerts, but doesn't block the agent. |
-    | `Disabled` | Turns off agent hooks protection. |
+1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes](protect-ai-agents-overview.md#protection-modes).
 
 1. To verify the current setting, run:
 
@@ -80,13 +76,7 @@ To enable network inspection protection on a device:
     Set-MpPreference -EnableAiAgentLoopInspection <mode>
     ```
 
-1. Replace `<mode>` with one of the following values:
-
-    | Value | Behavior |
-    |---|---|
-    | `Enabled` | Inspects agent network traffic and blocks detected threats. |
-    | `AuditMode` | Inspects agent network traffic and generates alerts, but doesn't block the agent. |
-    | `Disabled` | Turns off network inspection protection. |
+1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes](protect-ai-agents-overview.md#protection-modes).
 
 1. To verify the current setting, run:
 
