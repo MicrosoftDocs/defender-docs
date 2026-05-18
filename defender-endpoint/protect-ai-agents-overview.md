@@ -60,7 +60,7 @@ When enabled, Defender Antivirus routes relevant outbound traffic through local 
 > [!NOTE]
 > Network inspection protection doesn't support agents that use certificate pinning or HTTP/3.
 
-## Protection approaches comparison
+### Protection approaches comparison
 
 Agent hooks protection applies to agents that support hooks (such as Claude Code, GitHub Copilot CLI, and OpenAI Codex), while network inspection protection covers other agents, like OpenClaw. When both methods are enabled, Defender Antivirus uses single-path enforcement to avoid duplicate scanning, with hooks handling supported agents and network inspection protecting the remaining agents.
 
@@ -79,7 +79,7 @@ The following table compares the agent hooks and network inspection protection a
 
 See the [enforcement, response and investigation considerations](#enforcement-response-and-investigation-considerations) to learn how Defender Antivirus enforces these protections and what happens when a threat is detected.
 
-## Protection modes and enforcement outcomes
+### Protection modes and enforcement outcomes
 
 Agent runtime protection can be configured in three modes. The mode you choose determines how Defender Antivirus enforces protection and what users and security teams see when a threat is detected.
 
@@ -91,7 +91,7 @@ Agent runtime protection can be configured in three modes. The mode you choose d
 | **AuditMode** | Network inspection protection | Defender Antivirus inspects agent network traffic and allows the action to proceed. An alert is sent to Microsoft Defender for security team review. |
 | **Disabled** | Agent hooks protection or network inspection protection | Defender Antivirus doesn't scan runtime activity for the disabled method. No runtime protection blocking or alerting occurs for that method. |
 
-### Enforcement, response and investigation considerations
+#### Enforcement, response and investigation considerations
 
 When either protection method detects a threat, Microsoft Defender surfaces an alert on the device timeline and correlates related alerts into incidents. Security teams can investigate these detections using Microsoft Defender XDR workflows, including timeline review, alert and entity correlation, and response actions.
 
@@ -107,7 +107,7 @@ The following considerations describe how enforcement, response, and investigati
 
 For step-by-step configuration instructions, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](configure-ai-agent-runtime-protection.md).
 
-## Supported agents
+### Supported agents
 
 The following table lists the AI coding agents that Defender for Endpoint supports for runtime protection, the protection method used for each agent, and links to the agent's hooks documentation (where applicable).
 
