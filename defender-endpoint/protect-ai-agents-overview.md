@@ -39,6 +39,8 @@ Defender Antivirus uses two protection approaches:
 - **Agent hooks protection**: Subscribes to lifecycle events exposed by agent frameworks that support hooks. Supported agents include Claude Code, GitHub Copilot CLI, and OpenAI Codex.
 - **Network inspection protection**: Intercepts network traffic between agents and large language model (LLM) endpoints at the network layer. This approach covers agents that don't support hooks, such as OpenClaw.
 
+These are two parallel protection methods that work independently. Agent hooks protection is the more typical approach for supporting popular AI coding agents, while network inspection protection expands coverage to additional agents. For guidance on which method to use for your agents, see [How to decide which method to use](/defender-endpoint/configure-ai-agent-runtime-protection#how-to-decide-which-method-to-use).
+
 ### How agent hooks protection works
 
 Agent hooks protection works at the application layer by subscribing to lifecycle events that the agent framework exposes. When an agent supports hooks, Defender Antivirus receives payloads at key stages in the agent loop:
@@ -58,7 +60,26 @@ When enabled, Defender Antivirus routes relevant outbound traffic through local 
 > [!NOTE]
 > Network inspection protection doesn't support agents that use certificate pinning or HTTP/3.
 
-These are two parallel protection methods that work independently. Agent hooks protection is the more typical approach for supporting popular AI coding agents, while network inspection protection expands coverage to additional agents. For guidance on which method to use for your agents, see [How to decide which method to use](/defender-endpoint/configure-ai-agent-runtime-protection#how-to-decide-which-method-to-use).
+## Protection approaches comparison
+
+Agent hooks protection applies to agents that support hooks (such as Claude Code, GitHub Copilot CLI, and OpenAI Codex), while network inspection protection covers other agents, like OpenClaw. When both methods are enabled, Defender Antivirus uses single-path enforcement to avoid duplicate scanning, with hooks handling supported agents and network inspection protecting the remaining agents.
+
+The following table compares the agent hooks and network inspection protection approaches. 
+
+| Aspect | Agent hooks protection | Network inspection protection |
+|--------|------------------------|-------------------------------|
+| **Coverage** | Agents with hooks support framework | Any agent with network connectivity |
+| **Supported agents** | Claude Code, GitHub Copilot CLI, OpenAI Codex | All agents (except those with cert pinning or HTTP/3) |
+| **Detection method** | Application-layer message scanning | Network-layer traffic interception |
+| **Scope** | Prompts, tool calls, tool responses | LLM API traffic between agent and model |
+| **Overhead** | Lower (application-layer only) | Higher (TLS inspection required) |
+| **Compatibility issues** | None | Doesn't support certificate pinning or HTTP/3 |
+| **Data Protection Policy integration** | Supported (Microsoft Purview DLP) | Limited |
+| **Recommended for** | Organizations with Claude Code, GitHub Copilot CLI, or OpenAI Codex | Agents without hooks support or broad coverage needed |
+
+See the [enforcement, response and investigation considerations](configure-ai-agent-runtime-protection.md#enforcement-response-and-investigation-considerations) to learn how Defender Antivirus enforces these protections and what happens when a threat is detected.
+
+### Protection modes
 
 You can configure each approach independently in one of three modes:
 
@@ -70,7 +91,7 @@ You can configure each approach independently in one of three modes:
 
 ### Enforcement methods and outcome
 
-This section describes how Defender Antivirus enforces runtime protection settings and how different modes affect your organization. Choose your enforcement mode based on your organization's security posture and tolerance for blocking agent actions.
+Defender Antivirus enforces runtime protection settings based on the configured protection mode. Choose your enforcement mode based on your organization's security posture and tolerance for blocking agent actions.
 
 | Setting | Method | Enforcement mode | Outcome |
 |---------|--------|------------------|---------|
@@ -91,13 +112,13 @@ As a security administrator, here's what you need to know about how these protec
 - **Detections focus on realistic threats**: Runtime protection detects meaningful threats to AI agents:
   - **Cross-prompt injection attacks (XPIA)**: Attempts to manipulate agents through injected instructions.
   - **Sensitive data leakage**: Agent actions that attempt to access or expose sensitive information.
-- **Investigation is built into your workflow**: When threats are detected, alerts appear in the Microsoft Defender portal as part of the device timeline and are correlated into incidents. Your security team uses the same investigation workflows they're familiar with for other endpoint detections.
+- **Investigation is built into your workflow**: When threats are detected, alerts appear in the Microsoft Defender portal as part of the device timeline and are correlated into incidents. Your security team uses the same investigation workflows they're familiar with for other endpoint detections. For more information, see [View and investigate alerts in Microsoft Defender for Endpoint](/defender-endpoint/investigate-alerts).
 
 For step-by-step configuration instructions, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection).
 
 ## Broader AI security capabilities
 
-Microsoft Defender for Endpoint's discovery capabilities are part of a comprehensive AI security approach. Microsoft Defender XDR provides other capabilities across your organization's AI ecosystem:
+Microsoft Defender for Endpoint's discovery capabilities are part of a comprehensive AI security approach. Microsoft Defender provides other capabilities across your organization's AI ecosystem:
 
 - **Discover cloud and platform agents**: Find agents built with Microsoft Copilot Studio, Microsoft Foundry, Amazon Web Services (AWS) Bedrock, and Google Cloud Platform (GCP) Vertex AI.
 - **Assess security posture**: Evaluate agent configurations, identify risks, and get prioritized recommendations.

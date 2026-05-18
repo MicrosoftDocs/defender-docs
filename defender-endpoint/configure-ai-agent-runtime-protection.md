@@ -42,22 +42,7 @@ Before you configure runtime protection, make sure the following requirements ar
 
 ## Decide which method to use
 
-Agent hooks protection is the recommended starting point for most organizations because it provides protection for popular AI coding agents (Claude Code, GitHub Copilot CLI, and OpenAI Codex) with lower performance overhead. If your organization uses agents that don't support hooks, or needs broader coverage for additional agents, you can also enable network inspection protection.
-
-The following table compares both approaches to help you choose. For general information on how each method works, see [AI agent runtime protection](protect-ai-agents-overview.md#ai-agent-runtime-protection).
-
-| Aspect | Agent hooks protection | Network inspection protection |
-|--------|------------------------|-------------------------------|
-| **Coverage** | Agents with hooks support framework | Any agent with network connectivity |
-| **Supported agents** | Claude Code, GitHub Copilot CLI, OpenAI Codex | All agents (except those with cert pinning or HTTP/3) |
-| **Detection method** | Application-layer message scanning | Network-layer traffic interception |
-| **Scope** | Prompts, tool calls, tool responses | LLM API traffic between agent and model |
-| **Overhead** | Lower (application-layer only) | Higher (TLS inspection required) |
-| **Compatibility issues** | None | Doesn't support certificate pinning or HTTP/3 |
-| **Data Protection Policy integration** | Supported (Microsoft Purview DLP) | Limited |
-| **Recommended for** | Organizations with Claude Code, GitHub Copilot CLI, or OpenAI Codex | Agents without hooks support or broad coverage needed |
-
-**Configuration approach:** Enable agent hooks protection for supported agents. If you need to protect additional agents not covered by hooks, also enable network inspection protection. When both methods are enabled, Defender Antivirus uses single-path enforcement to avoid duplicate scanning—hooks will handle supported agents, and network inspection will protect other agents.
+To choose which runtime protection method to use in your environment, see this [comparison of agent hooks protection and network inspection protection](protect-ai-agents-overview.md#protection-approaches-comparison).
 
 ## Configure agent hooks protection
 
