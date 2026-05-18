@@ -125,3 +125,47 @@ To deploy AI agent runtime protection settings across your organization using In
 ## Enforcement methods and outcome
 
 For enforcement details, outcomes, and admin considerations, see [Enforcement methods and outcome](/defender-endpoint/protect-ai-agents-overview#enforcement-methods-and-outcome) and [Enforcement, response and investigation considerations](/defender-endpoint/protect-ai-agents-overview#enforcement-response-and-investigation-considerations).
+
+## View and investigate runtime protection details
+
+When runtime protection detects a threat, it surfaces through multiple layers — the agent UI, Windows notifications, Windows Security, and the Microsoft Defender portal. This section shows where to find detection details at each layer.
+
+### Agent block message
+
+When Defender Antivirus blocks an agent action in **Block** mode, the agent displays a block message directly in the terminal. In the following example, Defender blocked an agent that attempted to read a file containing a prompt injection payload.
+
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-block-agent-ui.png" alt-text="Screenshot of Claude Code terminal showing a Defender block message after the agent attempted to read a malicious file." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-block-agent-ui.png":::
+
+The block message tells the user which action was blocked and why. The agent can't proceed with the blocked action.
+
+### Windows toast notification
+
+In addition to the in-agent message, Windows displays a toast notification to alert the user. This notification appears regardless of whether the agent terminal is in focus.
+
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-block-toast.png" alt-text="Screenshot of a Windows toast notification from Microsoft Defender showing that an AI agent action was blocked." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-block-toast.png":::
+
+### Protection history in Windows Security
+
+Users can review past detections in **Windows Security** > **Virus & threat protection** > **Protection history**. Each runtime protection detection appears as a separate entry.
+
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-list.png" alt-text="Screenshot of Windows Security Protection History showing a list of runtime protection detections for AI agents." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-list.png":::
+
+Select an entry to view details including the threat name, severity, and which agent triggered the detection.
+
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-detail.png" alt-text="Screenshot of Protection History detail view showing threat information for a blocked AI agent action." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-detail.png":::
+
+### Device timeline and alerts in the Defender portal
+
+For security operations teams, runtime protection events appear in the Microsoft Defender portal. Each detection generates an alert that appears on the device timeline.
+
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-portal-timeline.png" alt-text="Screenshot of the Defender portal device timeline showing an AI agent runtime protection alert." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-portal-timeline.png":::
+
+Select the alert to view detailed information including the detection type, affected agent, and recommended actions.
+
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-portal-alert-detail.png" alt-text="Screenshot of the Defender portal alert details for an AI agent runtime protection detection." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-portal-alert-detail.png":::
+
+When multiple related detections occur, Defender XDR correlates them into a single incident for streamlined investigation.
+
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-portal-incident.png" alt-text="Screenshot of the Defender portal incident view showing correlated AI agent runtime protection alerts." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-portal-incident.png":::
+
+For more information on investigating alerts and incidents in the Defender portal, see [Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts) and [Investigate incidents in Microsoft Defender XDR](/defender-xdr/investigate-incidents).
