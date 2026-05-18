@@ -1,7 +1,7 @@
 ---
 title: Suppress alerts from Microsoft Defender for Cloud
 description: Learn how to create alert suppression rules in Microsoft Defender for Cloud to automatically dismiss false positives and reduce alert noise.
-ms.date: 01/29/2026
+ms.date: 05/18/2026
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
