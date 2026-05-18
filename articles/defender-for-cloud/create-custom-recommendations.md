@@ -2,9 +2,9 @@
 title: Create custom standards and recommendations in Microsoft Defender for Cloud
 description: Learn how to create custom security standards and recommendations in Microsoft Defender for Cloud across Azure, AWS, and GCP with KQL queries and Azure Policy.
 author: ElazarK
-ms.author: ElazarK
+ms.author: elkrieger
 ms.topic: how-to
-ms.date: 05/11/2026
+ms.date: 05/18/2026
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
 ---
 
@@ -36,17 +36,26 @@ To create a custom recommendation:
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings** > the relevant subscription.
 
-1. Select **Security policies** > **+ Create** > **Custom recommendation**.
+1. Select **Security policies** > **+ Create custom recommendation**.
 
-1. Fill in the recommendation details (for example: name, severity).
+    :::image type="content" source="media/create-custom-recommendations/create-custom-recommendation.png" alt-text="Screenshot that shows where the Create custom recommendation button is located." lightbox="media/create-custom-recommendations/create-custom-recommendation.png":::
+
+1. Enter the details: Required: Name, Scope, Severity, and Security issue. Optional: Description, Remediation.
+
+1. Select **Next**
+
+1. Enter a KQL query, or select **[Open query editor](#use-the-query-editor)**.
+
+    :::image type="content" source="media/create-custom-recommendations/open-query-editor.png" alt-text="Screenshot that shows where the Open query editor button is located." lightbox="media/create-custom-recommendations/open-query-editor.png":::
+
+1. Select **Next**.
 
 1. Select the relevant standards.
 
     :::image type="content" source="./media/create-custom-recommendations/fill-info-recommendation.png" alt-text="Screenshot of Microsoft Defender for Cloud Recommendation details pane showing fields for name, severity, and assigned standards." lightbox="./media/create-custom-recommendations/fill-info-recommendation.png":::
 
 1. Select **Next**.
-1. Enter a KQL query, or select **[Open query editor](#use-the-query-editor)**.
-1. Select **Next**.
+
 1. Select the custom standards.
 1. Select **Review and create**.
 1. Review the recommendation details.
@@ -56,19 +65,21 @@ To create a custom recommendation:
 
 ### Use the query editor
 
-We recommend using the query editor to create a recommendation query.
+We recommend using the query editor to create a recommendation query. You can also use the provided [query templates and examples](#query-templates-and-examples) to view sample queires and learn how to build your own.
 
 - Using the editor helps you to build and test your query before you start using it.
 - Select **How to** to get help on structuring the query, and additional instructions and links.
 - The editor contains built-in recommendation query examples that you can use to help build your own query. The data appears in the same structure as in the API.
 
 1. Select **New query**.
-1. Use the example query template with its instructions, or select an example built-in recommendation query to get started.
 
-    :::image type="content" source="./media/create-custom-recommendations/query-editor.png" alt-text="Screenshot of query editor in Microsoft Defender for Cloud showing New query and Run query controls." lightbox="./media/create-custom-recommendations/query-editor.png":::
+    :::image type="content" source="media/create-custom-recommendations/new-query.png" alt-text="Screenshot that shows where the New query vbutton is located." lightbox="media/create-custom-recommendations/new-query.png":::
+
+1. Use the example query template with its instructions, or select an example built-in recommendation query from the lower part of the page, to get started.
 
 1. Select **Run query** to test the query you created.
 1. When the query is ready, cut and paste it from the editor into the **Recommendation query** pane.
+1. Continue with step 7 from the [Create a custom recommendation section](#create-a-custom-recommendation).
 
 #### Query templates and examples
 
