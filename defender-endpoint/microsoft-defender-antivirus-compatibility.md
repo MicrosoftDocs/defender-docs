@@ -12,12 +12,10 @@ ms.custom:
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr, dmcwee, yongrhee
-manager: bagol
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -49,8 +47,6 @@ If you're using non-Microsoft antivirus/antimalware software, you might be able 
 ## Antivirus protection without Defender for Endpoint
 
 This section describes what happens when you use Microsoft Defender Antivirus alongside non-Microsoft antivirus/antimalware products on endpoints that aren't onboarded to Defender for Endpoint. 
-
-In general, Microsoft Defender Antivirus doesn't run in passive mode on devices that aren't onboarded to Defender for Endpoint.
 
 The following table summarizes what to expect:
 
@@ -93,6 +89,7 @@ The following table summarizes the state of Microsoft Defender Antivirus in seve
 | Microsoft Defender Antivirus | Yes | Active mode | N/A  |
 | Microsoft Defender Antivirus | No | Active mode | On, Evaluation, or Off |
 | A non-Microsoft antivirus/antimalware solution | Yes | Passive mode (automatically) | Evaluation or On|
+| A non-Microsoft antivirus/antimalware solution | No | Passive mode | Evaluation or On|
 | A non-Microsoft antivirus/antimalware solution | No | Disabled (automatically) | N/A or Off|
 
 > [!NOTE]
@@ -134,7 +131,7 @@ In order for Microsoft Defender Antivirus to run in passive mode, endpoints must
 
 - Microsoft Defender Antivirus must be installed.
 
-- Another non-Microsoft antivirus/antimalware product must be installed and used as the primary antivirus solution. ([Add Microsoft Defender for Endpoint to your exclusion list for your existing solution](/defender-endpoint/switch-to-mde-phase-2)). 
+- Another non-Microsoft antivirus/antimalware product must be installed and used as the primary antivirus solution. ([Add Microsoft Defender for Endpoint to your exclusion list for your existing solution](switch-to-mde-phase-2.md)). 
 
 - Endpoints must be onboarded to Defender for Endpoint.
 

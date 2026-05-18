@@ -1,18 +1,12 @@
 ---
 title: Create allowlists
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 ms.localizationpriority: medium
-search.appverid:
-  - MET150s
 ms.assetid: 9721b46d-cbea-4121-be51-542395e6fd21
 ms.custom:
   - seo-marvel-apr2020

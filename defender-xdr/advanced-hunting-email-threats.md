@@ -1,16 +1,11 @@
 ---
 title: Advanced hunting example for Microsoft Defender for Office 365
 description: Get started searching for email threats using advanced hunting
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

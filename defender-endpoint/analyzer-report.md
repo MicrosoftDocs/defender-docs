@@ -2,19 +2,14 @@
 title: Understand the client analyzer HTML report
 description: Learn how to analyze the Microsoft Defender for Endpoint Client Analyzer HTML report
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: concept-article
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 03/27/2025
 appliesto:
     - Microsoft Defender for Endpoint Plan 1
@@ -29,7 +24,7 @@ Use the following example to understand the report.
 
 ## Example output
 
-In this example, the [Defender for Endpoint Client Analyzer](/defender-endpoint/overview-client-analyzer) produced information about a device that was onboarded to an expired Org ID and failed to reach a required Defender for Endpoint URL:
+In this example, the [Defender for Endpoint Client Analyzer](overview-client-analyzer.md) produced information about a device that was onboarded to an expired Org ID and failed to reach a required Defender for Endpoint URL:
 
 :::image type="content" source="media/147cbcf0f7b6f0ff65d200bf3e4674cb.png" alt-text="The MDE Client Analyzer Results page" lightbox="media/147cbcf0f7b6f0ff65d200bf3e4674cb.png":::
 

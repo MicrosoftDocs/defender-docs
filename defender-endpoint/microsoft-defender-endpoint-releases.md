@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 09/03/2025
+ms.date: 04/08/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -17,13 +17,10 @@ This article describes releases of Microsoft Defender for Endpoint across Window
 
 To learn about Microsoft Defender for Endpoint features that aren't version-specific, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
+> [!NOTE]
+> Microsoft Defender for Endpoint requires that you update your list of allowed URLs from time to time. To review recent changes in the list of allowed URLs, see [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](streamlined-device-connectivity-urls-commercial.md#change-log)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-## Who should read this article
-
-This page is intended primarily for customers with a Microsoft Defender for Endpoint license who regularly deploy, maintain, or validate Defender for Endpoint across their organization. These customers can use this page to find supported releases, component updates, and platform requirements as part of installing and operating Defender for Endpoint in their environments.
-
-For more information on Defender for Endpoint plans and licenses, see the [Microsoft 365 licensing guidance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 ## All supported releases by date
 
@@ -31,47 +28,58 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Linux  |101.26032.0000  |April 2026 |- Release version: 30.126032.0000.0<br>- Engine version: 1.1.26010.1004<br>- Signature version: 1.445.617.0 |[Release details and updates](#linux--april-2026--101260320000) |
+|macOS |101.26032.0016  |April 2026 |- Release version: 20.126032.16.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260320016) |
+|macOS |4.18.25040.1  |April 2026 |- Release version: 4.18.25040.1<br>- Engine version: 1.1.25030.1<br>- Signature version: 1.421.40.0 |[Release details and updates](#macos--april-2026--418250401) |
+|macOS |101.26022.0020  |April 2026|- Release version: 20.126022.20.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220020) |
+|macOS |101.26022.0018  |April 2026 |- Release version: 20.126022.18.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260220018) |
+|Android |1.0.8805.0103  |April 2026 |- Build: 1.0.8805.0103<br>- Released: April 7, 2025 |[Release details and updates](#android--april-2026--platform-1088050103) |
+|Windows Antivirus |Platform 4.18.26030.3011 / Engine 1.1.26030.3008 |March 2026 |- Platform: 4.18.26030.3011<br>- Engine: 1.1.26030.3008<br>- Security intelligence: 1.449.16.0 |[Release details and updates](#windows-antivirus--march-2026--platform-418260303011--engine-11260303008) |
+|Linux  |101.26021.0002  |March 2026 |- Release version: 30.126021.0002.0<br>- Engine version: 1.1.26010.1003<br>- Signature version: 1.445.553.0 |[Release details and updates](#linux--march-2026--101260210002) |
+|macOS |101.26012.0017  |March 2026 |- Release version: 20.126012.17.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120017) |
+|macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
+|Linux  |101.26012.0007  |March 2026 |- Release version: 30.126012.0007.0<br>- Engine version: 1.1.25110.3002<br>- Signature version: 1.443.508.0 |[Release details and updates](#linux--march-2026--101260120007) |
+|Windows Antivirus |Platform 4.18.26020.6 / Engine 1.1.26020.3 |February 2026 |- Platform: 4.18.26020.6<br>- Engine: 1.1.26020.3<br>- Security intelligence: 1.447.2.0 |[Release details and updates](#windows-antivirus--february-2026--platform-418260206--engine-11260203) |
 |macOS |101.26012.0012  |February 2026 |- Release version: 20.126012.12.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101260120012) |
-|macOS |101.25122.0008  |February 2026 |- Release version: 20.125122.8.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101251220008) |
+|macOS |101.25122.0008  |February 2026 |- Release version: 20.125122.8.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--platform-101251220008) |
 |Linux  |101.25122.0004  |February 2026 |- Release version: 30.125122.0004.0<br>- Engine version: 1.1.25110.3002<br>- Signature version: 1.443.508.0 |[Release details and updates](#linux--february-2026--101251220004) |
-|macOS |101.25122.0007  |January 2026 |- Release version: 20.125122.7.0<br>- Engine version: 1.1.25100.3000<br>- Signature version: 1.443.820.0 |[Release details and updates](#macos--january-2026--101251220007) |
-|macOS  |101.25122.0006  |January 2026 |- Release version: 20.125122.6.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--january-2026--101251220006) |
+|macOS |101.25122.0007  |January 2026 |- Release version: 20.125122.7.0<br>- Engine version: 1.1.25100.3000<br>- Signature version: 1.443.820.0 |[Release details and updates](#macos--january-2026--platform-101251220007) |
+|macOS  |101.25122.0006  |January 2026 |- Release version: 20.125122.6.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--january-2026--platform-101251220006) |
 |Windows Antivirus |Platform 4.18.26010.5 / Engine 1.1.26010.1 |January 2026 |- Platform: 4.18.26010.5<br>- Engine: 1.1.26010.1<br>- Security intelligence: 1.443.820.0 |[Release details and updates](#windows-antivirus--january-2026--platform-418260105--engine-11260101) |
-|Linux  |101.25102.0005  |January 2026 |- Release version: 30.125102.0005.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--january-2026--101251020005) |
-|Linux  |101.25092.0005  |December 2025 |- Release version: 30.125092.0005.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--101250920005) |
-|Linux  |101.25092.0002  |December 2025 |- Release version: 30.125092.0002.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--101250920002) |
-|Android |1.0.8412.0101  |December 2025 |- Build: 1.0.8412.0101<br>- Released: December 15, 2025 |[Release details and updates](#android--december-2025--1084120101) |
-|Android |1.0.8321.0101  |December 2025 |- Build: 1.0.8321.0101<br>- Released: December 2, 2025 |[Release details and updates](#android--december-2025--1083210101) |
-|macOS  |101.25102.0019  |December 2025 |- Release version: 20.125102.19.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--december-2025--101251020019) |
-|Linux  |101.25102.0003  |November 2025 |- Release version: 30.125102.0003.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--november-2025--101251020003) |
-|Windows Antivirus |4.18.25110.6  |November 2025 |- Platform: 4.18.25110.6<br>- Engine: 1.1.25110.1<br>- Security intelligence: 1.443.6.0 |[Release details and updates](#windows-antivirus--november-2025--platform-418251106--engine-11251101) |
-|iOS |1.1.70290103 |November 2025 |- Build: 1.1.70290103<br>- Released: November 6, 2025 |[Release details and updates](#ios--november-2025--1170290103) |
-|Android |1.0.8315.0101  |November 2025 |- Build: 1.0.8315.0101<br>- Released: November 17, 2025 |[Release details and updates](#android--november-2025--1083150101) |
-|Android |1.0.8303.0101  |November 2025 |- Build: 1.0.8303.0101<br>- Released: November 4, 2025 |[Release details and updates](#android--november-2025--1083030101) |
-|macOS  |101.25102.0016  |November 2025 |- Release version: 20.125102.16.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--november-2025--101251020016) |
-|iOS |1.1.70230101  |October 2025 |- Build: 1.1.70230101<br>- Released: October 26, 2025 |[Release details and updates](#ios--october-2025--1170230101-1169250104) |
-|iOS |1.1.69250104  |October 2025 |- Build: 1.1.69250104<br>- Released: October 7, 2025 |[Release details and updates](#ios--october-2025--1170230101-1169250104) |
-|Android |1.0.8217.0101  |October 2025 |- Build: 1.0.8217.0101<br>- Released: October 28, 2025 |[Release details and updates](#android--october-2025--1082170101) |
-|Android |1.0.8201.0101  |October 2025 |- Build: 1.0.8201.0101<br>- Released: October 2, 2025 |[Release details and updates](#android--october-2025--1082010101) |
-|macOS  |101.25082.0006  |October 2025 |- Release version: 20.125082.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.437.276.0 |[Release details and updates](#macos--october-2025--101250820006) |
-|Linux  |101.25092.0001  |October 2025 |- Release version: 30.125092.0001.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.558.0 |[Release details and updates](#linux--october-2025--101250920001) |
-|Windows Antivirus |4.18.25100.9008  |October 2025 |- Platform: 4.18.25100.9008<br>- Engine: 1.1.25100.9002<br>- Security intelligence: 1.441.131.0 |[Release details and updates](#windows-antivirus--october-2025--platform-418251009008--engine-11251009002) |
-|iOS |1.1.68200103  |September 2025 |- Build: 1.1.68200103<br>- Released: September 4, 2025 |[Release details and updates](#ios--september-2025--1168200103) |
-|Android |1.0.8102.0101  |September 2025 |- Build: 1.0.8102.0101<br>- Released: September 4, 2025 |[Release details and updates](#android--september-2025--1081020101) |
-|Linux  |101.25082.0003  |September 2025 |- Release version: 30.125082.0003.0<br>- Engine version: 1.1.25070.4000<br>- Signature version: 1.435.242.0 |[Release details and updates](#linux--september-2025--101250820003-build-1) |
-|Linux  |101.25072.0003  |September 2025 |- Release version: 30.125072.0003.0<br>- Engine version: 1.1.25060.4000<br>- Signature version: 1.431.4.0 |[Release details and updates](#linux--september-2025--101250720003-build-2) |
-|macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429.309.0 |[Release details and updates](#macos--september-2025--101250720011) |
-|iOS |1.1.68140102  |August 2025 |- Build: 1.1.68140102<br>- Released: August 19, 2025 |[Release details and updates](#ios--august-2025--1168140102) |
-|Android |1.0.8018.0103  |August 2025 |- Build: 1.0.8018.0103<br>- Released: August 19, 2025 |[Release details and updates](#android--august-2025--1080180103) |
-|Linux  |101.25062.0003  |August 2025 |- Release version: 30.125062.0003.0<br>- Engine version: 1.1.25040.4000<br>- Signature version: 1.429.442.0 |[Release details and updates](#linux--august-2025--101250620003) |
-|iOS |1.1.67040101  |July 2025 |- Build: 1.1.67040101<br>- Released: July 8, 2025 |[Release details and updates](#ios--july-2025--1167040101) |
-|Android |1.0.7901.0101  |July 2025 |- Build: 1.0.7901.0101<br>- Released: July 10, 2025 |[Release details and updates](#android--july-2025--1079010101) |
-|Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--108797258571000) |
-|Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--108760276171006) |
+|Linux  |101.25102.0005  |January 2026 |- Release version: 30.125102.0005.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--january-2026--platform-101251020005) |
+|Linux  |101.25092.0005  |December 2025 |- Release version: 30.125092.0005.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--platform-101250920005) |
+|Linux  |101.25092.0002  |December 2025 |- Release version: 30.125092.0002.0<br>- Engine version: 1.1.25090.4000<br>- Signature version: 1.437.18.0 |[Release details and updates](#linux--december-2025--platform-101250920002) |
+|Android |1.0.8412.0101  |December 2025 |- Build: 1.0.8412.0101<br>- Released: December 15, 2025 |[Release details and updates](#android--december-2025--platform-1084120101) |
+|Android |1.0.8321.0101  |December 2025 |- Build: 1.0.8321.0101<br>- Released: December 2, 2025 |[Release details and updates](#android--december-2025--platform-1083210101) |
+|macOS  |101.25102.0019  |December 2025 |- Release version: 20.125102.19.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--december-2025--platform-101251020019) |
+|Linux  |101.25102.0003  |November 2025 |- Release version: 30.125102.0003.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.338.0 |[Release details and updates](#linux--november-2025--platform-101251020003) |
+|iOS |1.1.70290103 |November 2025 |- Build: 1.1.70290103<br>- Released: November 6, 2025 |[Release details and updates](#ios--november-2025--platform-1170290103) |
+|Android |1.0.8315.0101  |November 2025 |- Build: 1.0.8315.0101<br>- Released: November 17, 2025 |[Release details and updates](#android--november-2025--platform-1083150101) |
+|Android |1.0.8303.0101  |November 2025 |- Build: 1.0.8303.0101<br>- Released: November 4, 2025 |[Release details and updates](#android--november-2025--platform-1083030101) |
+|macOS  |101.25102.0016  |November 2025 |- Release version: 20.125102.16.0<br>- Engine version: 1.1.25090.2000<br>- Signature version: 1.435.600.0 |[Release details and updates](#macos--november-2025--platform-101251020016) |
+|iOS |1.1.70230101  |October 2025 |- Build: 1.1.70230101<br>- Released: October 26, 2025 |[Release details and updates](#ios--october-2025--platform-1170230101-1169250104) |
+|iOS |1.1.69250104  |October 2025 |- Build: 1.1.69250104<br>- Released: October 7, 2025 |[Release details and updates](#ios--october-2025--platform-1170230101-1169250104) |
+|Android |1.0.8217.0101  |October 2025 |- Build: 1.0.8217.0101<br>- Released: October 28, 2025 |[Release details and updates](#android--october-2025--platform-1082170101) |
+|Android |1.0.8201.0101  |October 2025 |- Build: 1.0.8201.0101<br>- Released: October 2, 2025 |[Release details and updates](#android--october-2025--platform-1082010101) |
+|macOS  |101.25082.0006  |October 2025 |- Release version: 20.125082.6.0<br>- Engine version: 1.1.25070.3000<br>- Signature version: 1.437.276.0 |[Release details and updates](#macos--october-2025--platform-101250820006) |
+|Linux  |101.25092.0001  |October 2025 |- Release version: 30.125092.0001.0<br>- Engine version: 1.1.25090.6000<br>- Signature version: 1.439.558.0 |[Release details and updates](#linux--october-2025--platform-101250920001) |
+|iOS |1.1.68200103  |September 2025 |- Build: 1.1.68200103<br>- Released: September 4, 2025 |[Release details and updates](#ios--september-2025--platform-1168200103) |
+|Android |1.0.8102.0101  |September 2025 |- Build: 1.0.8102.0101<br>- Released: September 4, 2025 |[Release details and updates](#android--september-2025--platform-1081020101) |
+|Linux  |101.25082.0003  |September 2025 |- Release version: 30.125082.0003.0<br>- Engine version: 1.1.25070.4000<br>- Signature version: 1.435.242.0 |[Release details and updates](#linux--september-2025--platform-101250820003-build-1) |
+|Linux  |101.25072.0003  |September 2025 |- Release version: 30.125072.0003.0<br>- Engine version: 1.1.25060.4000<br>- Signature version: 1.431.4.0 |[Release details and updates](#linux--september-2025--platform-101250720003-build-2) |
+|macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429.309.0 |[Release details and updates](#macos--september-2025--platform-101250720011) |
+|iOS |1.1.68140102  |August 2025 |- Build: 1.1.68140102<br>- Released: August 19, 2025 |[Release details and updates](#ios--august-2025--platform-1168140102) |
+|Android |1.0.8018.0103  |August 2025 |- Build: 1.0.8018.0103<br>- Released: August 19, 2025 |[Release details and updates](#android--august-2025--platform-1080180103) |
+|Linux  |101.25062.0003  |August 2025 |- Release version: 30.125062.0003.0<br>- Engine version: 1.1.25040.4000<br>- Signature version: 1.429.442.0 |[Release details and updates](#linux--august-2025--platform-101250620003) |
+|iOS |1.1.67040101  |July 2025 |- Build: 1.1.67040101<br>- Released: July 8, 2025 |[Release details and updates](#ios--july-2025--platform-1167040101) |
+|Android |1.0.7901.0101  |July 2025 |- Build: 1.0.7901.0101<br>- Released: July 10, 2025 |[Release details and updates](#android--july-2025--platform-1079010101) |
+|Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--platform-108797258571000) |
+|Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--platform-108760276171006) |
+
 
 ## Windows releases
 
-This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles: 
+This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
 
 - [Windows 11 release information](/windows/release-health/windows11-release-information)
 - [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)
@@ -79,7 +87,7 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 - [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
 - [Windows Server 2025 updates](https://support.microsoft.com/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7)
 
-### Windows | May 2025 | 10.8797.25857.1000
+### Windows | May 2025 | Platform: 10.8797.25857.1000
 
 #### Release details
 
@@ -99,7 +107,7 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 | Network Detection & Response (NDR) | Enhanced data telemetry for better insights. |
 | SOC experience | Faster, more complete data collection and detection; improved offline environment handling. |
 
-### Windows | July 2024 | 10.8760.27617.1006
+### Windows | July 2024 | Platform: 10.8760.27617.1006
 
 #### Release details
 
@@ -129,13 +137,100 @@ To get latest features, configure your device for the Beta channel (formerly Ins
 
 For known issues, see [macOS known issues](#macos-known-issues).
 
-### macOS | February-2026 | 101.26012.0012
+### macOS | April-2026 | 101.26032.0016
 
 #### Versions
 
 | Release version | Engine version | Signature version |
 |-----------------|----------------|-------------------|
-| 20.126012.12.0  | 1.1.25100.4000 | 1.439.74.0        |
+| 20.126032.16.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Bug and performance fixes |
+
+### macOS | April-2026 | 4.18.25040.1
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 4.18.25040.1    | 1.1.25030.1    | 1.421.40.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| Root detection | Native root detection for Microsoft Defender is now GA. |
+| General      | Performance improvement and bug fixes. |
+
+### macOS | April-2026 | 101.26022.0020
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126022.20.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+| ------------ | -------------- |
+| General      | Resolved a performance regression that caused degraded responsiveness and stability under high load conditions. |
+
+### macOS | April-2026 | 101.26022.0018
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126022.18.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+| ------------ | -------------- |
+| General      | [packaging] macOS >= 14 supported only |
+| General      | CVE-2025-68664/5 LangGrinch (langchain vulnerability) |
+| General      | Bug and performance fixes |
+
+### macOS | March-2026 | 101.26012.0017
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126012.17.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Bug fixes      |
+
+### macOS | March-2026 | 101.26012.0015
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126012.15.0  | 1.1.25100.4000 | 1.439.74.0        |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Fixed an epsext crash that could cause a black screen on some Macs. |
+
+### macOS | February-2026 | 101.26012.0012
+
+#### Versions
+
+| Platform version | Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|-------------------|
+|101.26012.0012 | 20.126012.12.0  | 1.1.25100.4000 | 1.439.74.0        |
 
 #### Enhancements and features
 
@@ -144,39 +239,40 @@ For known issues, see [macOS known issues](#macos-known-issues).
 | General      | CVE‑2025‑68664/5 LangGrinch (langchain vulnerability) |
 | General      | Mitigation for a possible EDLP performance issue related to MDM profile behavior |
 | General      | Device Control - policy conditional on secure digital card details |
+| Documentation | Replaced endpoint URL for Microsoft CDN with a reference to the Microsoft AutoUpdate (MAU) product documentation. For more information, see [Using Custom channel and ManifestServer to control updates](/microsoft-365-apps/mac/mau-configure-organization-specific-updates). For the full list of required URLs, see [Standard connectivity URLs](standard-device-connectivity-urls-commercial.md). |
 | General      | Bug and performance fixes |
 
-### macOS | February 2026 | 101.25122.0008
+### macOS | February 2026 | Platform: 101.25122.0008
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125122.8.0 |1.1.25100.4000 |1.439.74.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25122.0008 |20.125122.8.0 |1.1.25100.4000 |1.439.74.0 |
 
 #### Enhancements and features
 
 Bug and performance fixes
 
-### macOS | January 2026 | 101.25122.0007
+### macOS | January 2026 | Platform: 101.25122.0007
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125122.7.0 |1.1.25100.4000 |1.439.74.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25122.0007 |20.125122.7.0 |1.1.25100.4000 |1.439.74.0 |
 
 #### Enhancements and features
 
 Bug and performance fixes
 
-### macOS | January 2026 | 101.25122.0006
+### macOS | January 2026 | Platform: 101.25122.0006
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125122.6.0 |1.1.25100.4000 |1.439.74.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25122.0006 |20.125122.6.0 |1.1.25100.4000 |1.439.74.0 |
 
 #### Enhancements and features
 
@@ -184,13 +280,13 @@ Bug and performance fixes
 |--------------|---------------|
 | General | Bug and performance fixes. |
 
-### macOS | December 2025 | 101.25102.0019
+### macOS | December 2025 | Platform: 101.25102.0019
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125102.19.0 |1.1.25090.2000 |1.435.600.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25102.0019 |20.125102.19.0 |1.1.25090.2000 |1.435.600.0 |
 
 #### Enhancements and features
 
@@ -198,13 +294,13 @@ Bug and performance fixes
 |--------------|---------------|
 | Vulnerability Management | [CVE-2025-55182 (React2Shell)](https://www.microsoft.com/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/?msockid=30fe85b32a9c6d12269c90ef2e9c6f88) - Microsoft Defender Vulnerability Management (MDVM) can now surface devices that this vulnerability may affect. |
 
-### macOS | November 2025 | 101.25102.0016
+### macOS | November 2025 | Platform: 101.25102.0016
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125102.16.0 |1.1.25090.2000 |1.435.600.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25102.0016 |20.125102.16.0 |1.1.25090.2000 |1.435.600.0 |
 
 #### Enhancements and features
 
@@ -212,13 +308,13 @@ Bug and performance fixes
 |--------------|---------------|
 | General | Bug and performance fixes. |
 
-### macOS | October 2025 | 101.25082.0006
+### macOS | October 2025 | Platform: 101.25082.0006
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125082.6.0 |1.1.25070.3000 |1.437.276.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25082.0006 |20.125082.6.0 |1.1.25070.3000 |1.437.276.0 |
 
 #### Enhancements and features
 
@@ -226,13 +322,13 @@ Bug and performance fixes
 |--------------|---------------|
 | General | Bug and performance fixes. |
 
-### macOS | September 2025 | 101.25072.0011
+### macOS | September 2025 | Platform: 101.25072.0011
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|20.125072.11.0 |1.1.25060.3000 |1.429.309.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25072.0011 |20.125072.11.0 |1.1.25060.3000 |1.429.309.0 |
 
 #### Enhancements and features
 
@@ -245,6 +341,10 @@ Bug and performance fixes
 
 ### macOS known issues
 
+- Microsoft Defender for Endpoint might experience issues on macOS (Build 101.26012.0015, Production ring). Affected devices may exhibit performance degradation, repeated Defender process crashes, and devices not waking from sleep. To resolve this issue, deploy one of the following updates:
+   - Hotfix (Production): Update to version 101.26012.0017.
+   - Insider Fast (2602): Update to version 101.26022.0015.
+
 - In version 2506 (101.25062.0005), attempts to upgrade Microsoft Defender for Endpoint on macOS consistently failed.  Other versions of Defender are not impacted. To overcome this issue, there is a supported workaround for supported macOS versions and beta versions of macOS 26.  The instructions for the workaround can be found [here](https://github.com/microsoft/mdatp-xplat/tree/master/macos/upgrade_from_2506_helper).
 
 - Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-14-release-notes) with the latest OS update. The issue impacts Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting the ability of Defender for Endpoint to function properly.
@@ -253,7 +353,7 @@ Bug and performance fixes
 
 - In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. Upgrade to macOS Sequoia version 15.1 or newer.
 
-- On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.  
+- On macOS Sequoia (Version 15.0 - 15.1.1), users might encounter prompts about incoming network connections from applications when the native firewall is active.
 
    ![Screenshot showing prompts about incoming network connections.](media/mac-whatsnew/image.png)
   
@@ -272,33 +372,82 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 >
 > - Continue to use Defender for Endpoint on Linux build `101.24072.0000` with Auditd. This build continues to be supported for several months, so you have time to plan and execute your migration to eBPF.
 > - If you are on versions later than `101.24072.0000`, Defender for Endpoint on Linux relies on `netlink` as a backup supplementary event provider. If a fallback occurs, all operations continue to flow seamlessly.
-> - Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf).
+> - Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md).
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
-### Linux | February 2026 | 101.25122.0004
+### Linux | April 2026 | 101.26032.0000
 
 #### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
-|30.125122.0004.0 |1.1.25110.3002 |1.443.508.0 |
+|30.126032.0000.0 |1.1.26010.1004 |1.445.617.0 |
+
+#### Enhancements and features
+
+|Feature area | Update summary |
+|--------------|---------------|
+|Visibility |Expanded visibility into Linux kernel module (.ko) file activity - including creation, rename, and deletion.|
+|Configuration|Offline security intelligence updates now run at most once per configured update interval, reducing redundant downloads during service restarts while leaving cloud‑based updates unchanged.|
+|Bug Fix|Resolved an SELinux policy cleanup issue affecting upgrades on some RHEL‑based Linux systems. Upgrading to version 101.26032.0000 ensures safe removal of legacy SELinux modules while preserving customer‑defined policies.|
+
+### Linux | March 24, 2026 | Update: post-release fix
+ 
+Fixed an issue in the January 2026 release, where real-time scanning of the /dev/watchdog device could trigger unexpected system reboots on systems with hardware watchdog enabled. For more information, see [Linux | January 2026 | Platform: 101.25102.0005](#linux--january-2026--platform-101251020005).
+
+### Linux | March 2026 | 101.26021.0002
+
+#### Release details
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.126021.0002.0 |1.1.26010.1003 |1.445.553.0 |
 
 #### Enhancements and features
 
 | Feature area | Update summary |
 |--------------|---------------|
-| Network configuration | The following URLs must be allowed to enable Defender on Linux endpoints to receive internal configurations from the cloud:<br/><br/>For commercial customers:<br/>`https://config.edge.skype.com/config/v1` (default)<br/>**Note**: The "skype" string in this URL is a legacy artifact, unrelated to Skype, and retained solely for backward compatibility.<br/><br/>For DoD customers:<br/>`https://config.ecs.dod.teams.microsoft.us/config/v1`<br/><br/>For GCC High customers:<br/>`https://config.ecs.gov.teams.microsoft.us/config/v1`<br/><br/>For GCC Mod customers:<br/>`https://gccmod.ecs.office.com/config/v1`<br/><br/>For all the URLs that Linux server endpoints should be able to access, see:<br/>- [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](./streamlined-device-connectivity-urls-commercial.md) (commercial customers)<br/>- [Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments](./streamlined-device-connectivity-urls-gov.md) (US Government customers).|
-| Identity | Username information is now preserved for login events including nonexistent users. |
-| Diagnostics | Improved validation logic for log file permissions to provide more accurate `mdatp health` status reporting. |
+| Performance and stability | Improved agent performance and stability under sustained, high‑throughput workloads. |
 
-### Linux | January 2026 | 101.25102.0005
+### Linux | March 2026 | 101.26012.0007
 
 #### Release details
 
 | Release version | Engine version | Signature version |
 | -------- | -------- |-------- |
-|30.125102.0005.0 |1.1.25090.6000 |1.439.338.0 |
+|30.126012.0007.0 |1.1.25110.3002 |1.443.508.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Vulnerability detection | Strengthened Linux security coverage for Python workloads by improving vulnerability detection across system, user, and virtual environments, expanding coverage for CVE‑2025‑68664/5 LangGrinch (langchain vulnerability).|
+| General | Bug and performance fixes. <br> Real-time protection statistics collection is now disabled by default as a performance optimization; enable it on-demand when needed for diagnostics with `mdatp config real-time-protection-statistics --value enabled`.  |
+
+### Linux | February 2026 | 101.25122.0004
+
+#### Release details
+
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25122.0004 |20.125122.0004 |1.1.25110.3002 |1.443.508.0 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| Network configuration | The following URLs must be allowed to enable Defender on Linux endpoints to receive internal configurations from the cloud:<br/><br/>For commercial customers:<br/>`https://config.edge.skype.com/config/v1` (default)<br/>**Note**: The "skype" string in this URL is a legacy artifact, unrelated to Skype, and retained solely for backward compatibility.<br/><br/>For DoD customers:<br/>`https://config.ecs.dod.teams.microsoft.us/config/v1`<br/><br/>For GCC High customers:<br/>`https://config.ecs.gov.teams.microsoft.us/config/v1`<br/><br/>For GCC Mod customers:<br/>`https://gccmod.ecs.office.com/config/v1`<br/><br/>**Note**:<br/>- The URLs you need to allow are based on the type of tenant (you don't need to allow all these URLs).<br/>- URLs that include `skype`/`teams`/`office` are shared URLs and aren't related to actual usage of these products.<br/><br/>For all the URLs that Linux server endpoints should be able to access, see:<br/>- [Microsoft Defender for Endpoint streamlined connectivity URLs - commercial](./streamlined-device-connectivity-urls-commercial.md) (commercial customers)<br/>- [Microsoft Defender for Endpoint streamlined connectivity URLs - US government environments](./streamlined-device-connectivity-urls-gov.md) (US Government customers).|
+| Identity | Username information is now preserved for login events including nonexistent users. |
+| Diagnostics | Improved validation logic for log file permissions to provide more accurate `mdatp health` status reporting. |
+
+### Linux | January 2026 | Platform: 101.25102.0005
+
+#### Release details
+
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25102.0005 |30.125102.0005.0 |1.1.25090.6000 |1.439.338.0 |
 
 #### Enhancements and features
 
@@ -307,14 +456,15 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Vulnerability detection | Enhanced vulnerability detection for React components through improved telemetry. This feature includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more comprehensive security coverage for React-based applications. |
 | Agent optimization | Agent process handling is now streamlined by removing the dependency on telemetryd_v2, enabling more efficient and consistent telemetry collection. This change applies to builds 101.24062.0001 and later, with no impact on functionality, data collection, or customer configurations. All features remain intact, and no customer action is required. |
 | Platform support | Added support for Debian 13. |
+| Critical fix | Fixed an issue where scanning of /dev/watchdog could trigger unexpected system reboots on Linux systems with watchdog enabled.|
 
-### Linux | December 2025 | 101.25092.0005
+### Linux | December 2025 | Platform: 101.25092.0005
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125092.0005.0 |1.1.25090.4000 |1.437.18.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25092.0005 |30.125092.0005.0 |1.1.25090.4000 |1.437.18.0 |
 
 #### Enhancements and features
 
@@ -322,13 +472,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |--------------|---------------|
 | Vulnerability detection | Enhanced vulnerability detection for vulnerable React components through deeper component analysis and enhanced telemetry. This includes support for identifying [(CVE-2025-55182)](https://github.com/advisories/GHSA-fv66-9v8q-g76r), providing more complete security coverage for React-based applications. |
 
-### Linux | December 2025 | 101.25092.0002
+### Linux | December 2025 | Platform: 101.25092.0002
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125092.0002.0 |1.1.25090.4000 |1.437.18.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25092.0002 |30.125092.0002.0 |1.1.25090.4000 |1.437.18.0 |
 
 #### Enhancements and features
 
@@ -336,13 +486,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 |--------------|---------------|
 | Critical fix | Includes critical fix related to machine identifier ensuring every endpoint is accurately identified as a unique device. |
 
-### Linux | November 2025 | 101.25102.0003
+### Linux | November 2025 | Platform: 101.25102.0003
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125102.0003.0 |1.1.25090.6000 |1.439.338.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25102.0003 |30.125102.0003.0 |1.1.25090.6000 |1.439.338.0 |
 
 #### Enhancements and features
 
@@ -352,13 +502,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Library updates | Libcurl library is upgraded to version 8.16.0 |
 | Engine updates | The default engine version is now updated to 1.1.25090.6000, and the default signature version is now updated to 1.439.338.0. |
 
-### Linux | October 2025 | 101.25092.0001
+### Linux | October 2025 | Platform: 101.25092.0001
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125092.0001.0 |1.1.25090.6000 |1.439.558.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25092.0001 |30.125092.0001.0 |1.1.25090.6000 |1.439.558.0 |
 
 #### Enhancements and features
 
@@ -368,13 +518,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Engine resiliency | Enhanced engine resiliency through automatic error recovery, preventing excessive logging and minimizing downtime to improve overall reliability. |
 | General | Other quality and stability fixes. |
 
-### Linux | September 2025 | 101.25082.0003 (Build 1)
+### Linux | September 2025 | Platform: 101.25082.0003 (Build 1)
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125082.0003.0 |1.1.25070.4000 |1.435.242.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25082.0003 |30.125082.0003.0 |1.1.25070.4000 |1.435.242.0 |
 
 #### Enhancements and features
 
@@ -384,13 +534,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Diagnostics | Client Analyzer is now bundled directly within the MDE package, eliminating the need for separate downloads. Both the binary and Python versions are included by default and can be found at /opt/microsoft/mdatp/tools/client_analyzer/. |
 | General | Other quality and stability fixes. |
 
-### Linux | September 2025 | 101.25072.0003 (Build 2)
+### Linux | September 2025 | Platform: 101.25072.0003 (Build 2)
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125072.0003.0 |1.1.25060.4000 |1.431.4.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25072.0003 |30.125072.0003.0 |1.1.25060.4000 |1.431.4.0 |
 
 #### Enhancements and features
 
@@ -399,13 +549,13 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 | Device management | Fixed issue to generate unique machine identifiers for each onboarded deviceâ€”especially useful when deploying Microsoft Defender via Golden image. |
 | General | Other stability enhancements and bug fixes. |
 
-### Linux | August 2025 | 101.25062.0003
+### Linux | August 2025 | Platform: 101.25062.0003
 
 #### Release details
 
-| Release version | Engine version | Signature version |
-| -------- | -------- |-------- |
-|30.125062.0003.0 |1.1.25040.4000 |1.429.442.0 |
+| Platform version | Release version | Engine version | Signature version |
+| -------- | -------- |-------- |-------- |
+|101.25062.0003 |30.125062.0003.0 |1.1.25040.4000 |1.429.442.0 |
 
 #### Enhancements and features
 
@@ -421,11 +571,25 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
-### Android | December 2025 | 1.0.8412.0101
+### Android | April 2026 | Platform: 1.0.8805.0103
 
 #### Release details
 
-| Build | Release Date |
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.8805.0103 |April 7, 2025 |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|---------------|
+| General | Performance improvement and bug fixes. |
+
+### Android | December 2025 | Platform: 1.0.8412.0101
+
+#### Release details
+
+| Platform version| Release Date |
 | -------- | -------- |
 |1.0.8412.0101 |December 15, 2025 |
 
@@ -435,11 +599,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 |--------------|---------------|
 | General | Performance improvement and bug fixes. |
 
-### Android | December 2025 | 1.0.8321.0101
+### Android | December 2025 | Platform: 1.0.8321.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version| Release Date |
 | -------- | -------- |
 |1.0.8321.0101 |December 2, 2025 |
 
@@ -450,11 +614,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Root detection | Native root detection for Microsoft Defender is now GA. |
 | General | Performance improvement and bug fixes. |
 
-### Android | November 2025 | 1.0.8315.0101
+### Android | November 2025 | Platform: 1.0.8315.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version| Release Date |
 | -------- | -------- |
 |1.0.8315.0101 |November 17, 2025 |
 
@@ -465,11 +629,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Root detection | Native root detection for Microsoft Defender is now in preview. |
 | General | Performance improvement and bug fixes. |
 
-### Android | November 2025 | 1.0.8303.0101
+### Android | November 2025 | Platform: 1.0.8303.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8303.0101 |November 4, 2025 |
 
@@ -481,11 +645,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Telemetry | Telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
 | Configuration | Fixed the bug where feedback sending wasn't disabled in Defender app despite 'Control Feedback Sending' key being disabled (set as 0) in Intune app configuration. |
 
-### Android | October 2025 | 1.0.8217.0101
+### Android | October 2025 | Platform: 1.0.8217.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8217.0101 |October 28, 2025 |
 
@@ -495,11 +659,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 |--------------|---------------|
 | User interface | Refreshed the Defender app with a new icon. |
 
-### Android | October 2025 | 1.0.8201.0101
+### Android | October 2025 | Platform: 1.0.8201.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8201.0101 |October 2, 2025 |
 
@@ -511,11 +675,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Global Secure Access | Kerberos SSO support on Android (GA): Kerberos SSO experience for users on Android devices with Global Secure Access is now supported. Users need to install and configure a third-party SSO client. |
 | General | Performance Improvement and bug fixes. |
 
-### Android | September 2025 | 1.0.8102.0101
+### Android | September 2025 | Platform: 1.0.8102.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8102.0101 |September 4, 2025 |
 
@@ -526,11 +690,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 | Authentication | Resolved the sign-in loop issue for shared device mode. Now, if a user attempts to sign in on a shared device that doesn't support Defender for Endpoint on mobile, the user is redirected back to the sign-in page. |
 | Accessibility | Other accessibility bug fixes and performance improvements. |
 
-### Android | August 2025 | 1.0.8018.0103
+### Android | August 2025 | Platform: 1.0.8018.0103
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.8018.0103 |August 19, 2025 |
 
@@ -540,11 +704,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 |--------------|---------------|
 | General | Performance improvements and bug fixes. |
 
-### Android | July 2025 | 1.0.7901.0101
+### Android | July 2025 | Platform: 1.0.7901.0101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 | -------- | -------- |
 |1.0.7901.0101 |July 10, 2025 |
 
@@ -558,11 +722,11 @@ See the full list of [Android UX improvements](android-new-ux.md).
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
-### iOS | November 2025 | 1.1.70290103
+### iOS | November 2025 | Platform: 1.1.70290103
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.70290103 | November 6, 2025 |
 
@@ -572,11 +736,11 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 |--------------|---------------|
 | User feedback & Telemetry | An improved user feedback experience: See [Key Changes - November 2025](./ios-new-ux.md#key-changes---november-2025) for details. Added Landscape mode UI support for the Defender app. Added telemetry features to improve app performance monitoring and detect specific scenarios, such as entering landscape mode or invalid authentication attempts. |
 
-### iOS | October 2025 | 1.1.70230101, 1.1.69250104
+### iOS | October 2025 | Platform: 1.1.70230101, 1.1.69250104
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.70230101 | October 26, 2025 |
 | 1.1.69250104 | October 7, 2025 |
@@ -588,11 +752,11 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 | Compliance & UX | Simplified return to compliance experience in iOS/iPadOS. See the [Blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/simplifying-compliance-remediation-with-microsoft-intune-and-defender-on-iosipad/4465293) for more information. Refreshed the Defender app with a new icon. |
 | Kerberos SSO & Performance | Global Secure Access Kerberos SSO support on iOS (Preview): Kerberos SSO experience for users on iOS devices with Global Secure Access is now supported. On iOS, to create and deploy profile. See [Single sign-on app extension](/intune/intune-service/configuration/ios-device-features-settings). Performance Improvement and Bug fixes. |
 
-### iOS | September 2025 | 1.1.68200103
+### iOS | September 2025 | Platform: 1.1.68200103
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.68200103 | September 4, 2025 |
 
@@ -602,11 +766,11 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 |--------------|---------------|
 | Secure Web Gateway | [Global Secure Access Internet Profile Support for iOS](/entra/global-secure-access/how-to-install-ios-client) (Preview) - Enables organizations to protect access to internet and SaaS apps with an identity-based Secure Web Gateway, blocking threats, unsafe content, and malicious traffic from the iPhone and iPads. |
 
-### iOS | August 2025 | 1.1.68140102
+### iOS | August 2025 | Platform: 1.1.68140102
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.68140102 | August 19, 2025 |
 
@@ -616,11 +780,11 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 |--------------|---------------|
 | Notifications & Performance | Fixed push notification bug to ensure heartbeat signals are sent reliably. Performance improvements and bug fixes. |
 
-### iOS | July 2025 | 1.1.67040101
+### iOS | July 2025 | Platform: 1.1.67040101
 
 #### Release details
 
-| Build | Release Date |
+| Platform version | Release Date |
 |--------|--------------|
 | 1.1.67040101 | July 8, 2025 |
 
@@ -628,11 +792,60 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 | Feature area | Update summary |
 |--------------|---------------|
-| UX | UX Improvement. For more information, see [iOS UX Experience](/defender-endpoint/ios-new-ux). |
+| UX | UX Improvement. For more information, see [iOS UX Experience](ios-new-ux.md). |
 
 ## Microsoft Defender Antivirus releases
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
+
+### Windows Antivirus | March 2026 | Platform 4.18.26030.3011 | Engine 1.1.26030.3008
+
+#### Release details
+
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.26030.3011 | April 14, 2026 |
+| Engine | 1.1.26030.3008 | April 8, 2026 |
+| Security intelligence<sup>1</sup> | 1.449.16.0 | April 14, 2026 |
+| Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+
+#### Enhancements and features
+
+- Fixed a bug where Antimalware Scan Interface (AMSI) scan calls weren't passing exclusions in the scan configuration, causing unnecessary scans on excluded content.
+- Fixed deadlocks in the platform that occur during remote procedure calls (RPC).
+- Fixed a bug where Microsoft Protection Antimalware (MPAM) packages downloaded for direct update from Microsoft Malware Protection Center (MMPC) aren't cleaned up when the update fails, leading to unnecessary disk usage over time.
+- Improved quick scan error handling logic to avoid scan interruptions due to corrupted user registry hive.
+- Fixed tamper protection exclusions not activating after transitioning existing devices from co-management to full Intune management.
+- Fixed Network Inspection Service (NisSrv) ESP reputation mode checks to avoid blocks during service shutdown, which impact Remote Desktop Protocol (RDP) sessions.
+- Fixed the Defender Core Service display name in the Windows Services console.
+- Fixed NisSrv self-healing when the service crosses memory thresholds.
+- Improved encrypted PDF scanning.
+- Fixed `Get-MpPerformanceReport` JSON parsing failures.
+
+### Windows Antivirus | February 2026 | Platform 4.18.26020.6 | Engine 1.1.26020.3
+
+#### Release details
+
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.26020.6 | March 25, 2026 |
+| Engine | 1.1.26020.3 | March 25, 2026 |
+| Security intelligence<sup>1</sup> | 1.447.2.0 | March 25, 2026 |
+| Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+
+#### Enhancements and features
+
+- Improved the **network protection** feature to promptly release closed connections and reduce unnecessary memory usage.
+- Fixed an issue where the `Get-MpComputerStatus` PowerShell cmdlet could fail after updates due to a configuration mismatch.
+- Improved performance for **Network Response Intelligence (NRI)** by reducing CPU usage during high-volume asynchronous message processing.
+- Added support for **AMSI path exclusions for Exchange Server** so configured path exclusions are now correctly evaluated during AMSI scanning for Exchange workloads.
+- Improved policy refresh behavior for **device control** by updating default policy and Azure AD refresh intervals to reduce retry frequency.
 
 ### Windows Antivirus | January 2026 | Platform 4.18.26010.5 | Engine 1.1.26010.1
 
@@ -657,54 +870,3 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 - Fixed regression in the registry service path for the Core service.
 - Improved detection in OLEstream objects.
 - Fixed race condition during service initialization to read Tamper protection status.
-
-### Windows Antivirus | November 2025 | Platform 4.18.25110.6 | Engine 1.1.25110.1
-
-#### Release details
-
-| Component | Version | Date |
-| -------- | -------- | -------- |
-| Platform | 4.18.25110.6 | December 17, 2025 |
-| Engine | 1.1.25110.1 | December 11, 2025 |
-| Security intelligence<sup>1</sup> | 1.443.6.0 | December 17, 2025 |
-| Support phase | Security and Critical Updates | - |
-
-<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
-[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
-
-#### Enhancements and features
-
-| Feature area | Update summary |
-|--------------|---------------|
-| Performance | Performance improvements when querying WMI due to Behavior Monitor detections. |
-| PowerShell compatibility | Fixed potential hang in PowerShell on Server 2016 due to Defender Filter Driver. |
-| Application compatibility | Resolved an application compatibility issue due to a loopback with SMB1 enabled. |
-| Attack Surface Reduction | Fixed issue with ASR path exclusion requiring extra "\" characters to function appropriately. |
-| Network Inspection | Resolved high I/O issue with NisSrv.exe due to high volume of network logging events. |
-| Threat enumeration | Fixed error in threat enumeration causing repeated failure notifications every 15 minutes in SCCM. |
-| Drive mapping | Improved drive mapping enumeration for devices with many drives, which resulted in false positive detections for ASR rules. |
-| Service stability | Fixed a crash with Defender related to long scan times causing the service to hang in Windows Server 2019. |
-
-### Windows Antivirus | October 2025 | Platform 4.18.25100.9008 | Engine 1.1.25100.9002
-
-#### Release details
-
-| Component | Version | Date |
-| -------- | -------- | -------- |
-| Platform | 4.18.25100.9008 | November 17, 2025 |
-| Engine | 1.1.25100.9002 | November 6, 2025 |
-| Security intelligence<sup>1</sup> | 1.441.131.0 | November 17, 2025 |
-| Support phase | Security and Critical Updates | - |
-
-<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
-[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
-
-#### Enhancements and features
-
-| Feature area | Update summary |
-|--------------|---------------|
-| Network Inspection Service | Fixed Network Inspection Service stability issue: The service now correctly restarts when memory usage exceeds the threshold, which prevents the service from getting stuck in a faulty or pending state. |
-| Anti-malware Service | Reduced startup delay for Anti-malware Service: Improved Defender service startup time by removing its dependency on Core Service startup. This change improves overall system startup performance. |
-| x86 compatibility | Fixed crash in Defender settings on x86 devices: Corrected an issue that caused the system to crash when applying Defender configuration settings on 32-bit machines. |
-| Service startup | Fixed Defender startup issue: The platform no longer crashes when processing invalid Attack Surface Reduction rule exclusions. |
-| System resources | Reduced system resource usage: Defender no longer generates excessive Data Loss Prevention (DLP) logs that caused high disk activity, improving overall performance and stability. |

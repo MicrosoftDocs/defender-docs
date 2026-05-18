@@ -1,4 +1,4 @@
-﻿---
+---
 title: Schedule antivirus scans using Group Policy
 description: Use Group Policy to set up antivirus scans
 ms.service: defender-endpoint
@@ -8,14 +8,12 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.reviewer: pauhijbr, ksarens
-manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -69,10 +67,10 @@ For more information, see the [Manage when protection updates should be download
 | Scan | Specify the time of day to run a scheduled scan| Specify the number of minutes after midnight to run a scan (for example, enter 60 for 1 AM).| 2 AM. |
 
 > [!TIP]
-> Our recommendation for scheduled scans is to configure **quick** scan together with always-on [real-time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) and [cloud protection](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus), as this combination provides strong coverage against malware that starts with the system and kernel-level malware.
+> Our recommendation for scheduled scans is to configure **quick** scan together with always-on [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) and [cloud protection](enable-cloud-protection-microsoft-defender-antivirus.md), as this combination provides strong coverage against malware that starts with the system and kernel-level malware.
 
 > [!WARNING]
-> Generally, there's no need to schedule a full scan, and most users won't need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](/defender-endpoint/schedule-antivirus-scans)).
+> Generally, there's no need to schedule a full scan, and most users won't need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](schedule-antivirus-scans.md)).
 
 ## Group Policy settings for general scheduling scans
 
@@ -123,17 +121,17 @@ For more information, see the [Manage when protection updates should be download
 
 ## See also
 
-[Troubleshoot Microsoft Defender Antivirus scan issues](/defender-endpoint/troubleshoot-mdav-scan-issues)
+[Troubleshoot Microsoft Defender Antivirus scan issues](troubleshoot-mdav-scan-issues.md)
 
-[Performance analyzer for Microsoft Defender Antivirus](/defender-endpoint/tune-performance-defender-antivirus)
+[Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
-[Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](/defender-endpoint/use-powershell-cmdlets-microsoft-defender-antivirus)
+[Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md)
 
 [Set the PowerShell cmdlet to configure and manage Microsoft Defender Antivirus](/powershell/module/defender/set-mppreference)
 
 [Defender Antivirus specific PowerShell functions](/powershell/module/defender)
 
-[Troubleshoot Microsoft Defender Antivirus settings](/defender-endpoint/troubleshoot-settings)
+[Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

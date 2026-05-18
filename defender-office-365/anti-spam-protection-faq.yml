@@ -1,12 +1,11 @@
 ### YamlMime:FAQ
 metadata:
-  ms.date: 06/20/2023
+  ms.date: 05/12/2026
   title: Anti-spam protection FAQ
   f1.keywords:
     - NOCSH
   author: chrisda
   ms.author: chrisda
-  manager: bagol
   audience: ITPro
   ms.article: faq
   ms.localizationpriority: medium
@@ -61,10 +60,10 @@ sections:
       - question: |
           What's a zero-day spam variant and how is it handled by the service?
         answer: |
-          A zero-day spam variant is a first generation, previously unknown variant of spam that's never been captured or analyzed, so our anti-spam filters don't yet have any information available for detecting it. After a zero-day spam sample is captured and analyzed by our spam analysts, if it meets the spam classification criteria, our anti-spam filters are updated to detect it, and it's no longer considered "zero-day."
+          A zero-day spam variant is a first generation, previously unknown variant of spam that's never been captured or analyzed, so our anti-spam filters can't yet detect it. After a zero-day spam sample is captured and analyzed by our spam analysts, if it meets the spam classification criteria, our anti-spam filters are updated to detect it, and it's no longer considered "zero-day."
 
           > [!NOTE]
-          > If you receive a message that might be a zero-day spam variant, in order to help us improve the service, submit the message to Microsoft using one of the methods described in [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
+          > If you receive a message that might be a zero-day spam variant, to help us improve the service, submit the message to Microsoft using one of the methods described in [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
 
       - question: |
           Do I need to configure the service to provide anti-spam protection?
@@ -75,7 +74,7 @@ sections:
 
           - Add users to the Standard and Strict preset security policies.
           - Edit the default spam filtering settings in the default anti-spam policy.
-          - Create anti-spam policies that are applied to specified users, groups, or domains in your organization.
+          - Create anti-spam policies that apply to specified users, groups, or domains in your organization.
 
           For more information, see the following articles:
 
@@ -86,7 +85,7 @@ sections:
       - question: |
           If I change an anti-spam policy, how long does it take for the changes to take effect?
         answer: |
-          It might take up to 1 hour after you save the changes for those changes to take effect.
+          Changes might take up to 1 hour to take effect after you save them.
 
       - question: |
           Is bulk email filtering automatically enabled?
@@ -98,7 +97,7 @@ sections:
         answer: |
           Yes, the service has a URL filter that checks for URLs within messages. If URLs associated with known spam or malicious content are detected, the message is marked as spam.
 
-          Customers with Microsoft Defender XDR for Office 365 licenses also get Safe Links protection. For more information, see [Safe Links in Microsoft Defender for Office 365](safe-links-about.md).
+          Customers with Microsoft Defender for Office 365 licenses also get Safe Links protection. For more information, see [Safe Links in Microsoft Defender for Office 365](safe-links-about.md).
 
       - question: |
           How can Microsoft 365 customers send false positive (bad) and false negative (good) messages to Microsoft?
@@ -118,7 +117,7 @@ sections:
       - question: |
           Someone sent me a message and I can't find it. I suspect that it may have been detected as spam. Is there a tool that I can use to find out?
         answer: |
-          Yes, the message trace tool enables you to follow email messages as they pass through the service, in order to find out what happened to them. For more information about how to use the message trace tool to find out why a message was marked as spam, see [Was a message marked as spam?](/exchange/monitoring/trace-an-email-message/message-trace-faq#was-a-message-marked-as-spam)
+          Yes, the message trace tool enables you to follow email messages as they pass through the service, to find out what happened to them. For more information about how to use the message trace tool to find out why a message was marked as spam, see [Was a message marked as spam?](/exchange/monitoring/trace-an-email-message/message-trace-faq#was-a-message-marked-as-spam).
 
       - question: |
           Does the service throttle (rate limit) my mail if users send outbound spam?
@@ -148,13 +147,13 @@ sections:
       - question: |
           What are the best practices for outbound mail that help to ensure my mail is delivered?
         answer: |
-          The guidelines at [External senders - Troubleshoot email sent to Microsoft 365](external-senders-mail-flow-troubleshooting.md#best-practices-for-bulk-emailing-to-microsoft-365-users) and following guidelines are best practices for sending outbound email messages:
+          The guidelines at [External senders - Troubleshoot email sent to Microsoft 365](external-senders-mail-flow-troubleshooting.md#best-practices-for-bulk-emailing-to-microsoft-365-users) and the following guidelines are best practices for sending outbound email messages:
 
           - **The source email domain should resolve in DNS**: For example, if the sender is user@fabrikam, the domain fabrikam resolves to the IP address 192.168.43.10.
 
             If a sending domain has no A-record and no MX record in DNS, the service routes the message through its higher risk delivery pool, regardless of the message content. For more information about the high risk delivery pool, see [High-risk delivery pool for outbound messages](outbound-spam-high-risk-delivery-pool-about.md).
 
-          - **The source email server should have a reverse DNS (PTR) entry**: For example, if the email source IP address is 192.168.43.10, the reverse DNS entry would be `43-10.any.icann.org`.`
+          - **The source email server should have a reverse DNS (PTR) entry**: For example, if the email source IP address is 192.168.43.10, the reverse DNS entry would be `43-10.any.icann.org`.
 
           - **The HELO/EHLO and MAIL FROM commands should be consistent, present, and use a domain name rather than an IP address**: The HELO/EHLO command should be configured to match the reverse DNS of the sending IP address. This setting helps ensure that the domain remains the same across the various parts of the message headers.
 
@@ -166,7 +165,7 @@ sections:
 
           - **Domain owners should have accurate information in the WHOIS database**: This configuration identifies the owners of the domain and how to contact them by entering the stable parent company, point of contact, and name servers.
 
-          - **Format outbound bounce messages**: When messages generate non-delivery reports (also known NDRs or bounce messages), senders should follow the format of a bounce as specified in [RFC 3464](https://www.ietf.org/rfc/rfc3464.txt).
+          - **Format outbound bounce messages**: When messages generate non-delivery reports (also known as NDRs or bounce messages), senders should follow the format of a bounce as specified in [RFC 3464](https://www.ietf.org/rfc/rfc3464.txt).
 
           - **Remove bounced email addresses for non-existent users**: If you receive an NDR indicating that an email address is no longer in use, remove the non-existent email alias from your list. Email addresses change over time, and people sometimes discard them.
 
@@ -177,6 +176,164 @@ sections:
         answer: |
           If you use a non-Microsoft protection service or device to scan email before it's delivered to Microsoft 365, you can use a mail flow rule (also known as a transport rule) to bypass most spam filtering for incoming messages. For instructions, see [Use mail flow rules to set the spam confidence level (SCL) in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl). Scanning for malware and high confidence phishing messages can't be skipped.
 
-          If you use a non-Microsoft protection service or device to scan email before it's delivered to Microsoft 365, you should also enable Enhanced Filtering for Connectors (also known as *skip listing*) so detection, reporting, and investigation features in Microsoft 365 are able to correctly identify messages sources. For more information, see [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+          If you use a non-Microsoft protection service or device to scan email before it's delivered to Microsoft 365, you should also enable Enhanced Filtering for Connectors (also known as *skip listing*) so detection, reporting, and investigation features in Microsoft 365 are able to correctly identify message sources. For more information, see [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
 
           If you need to bypass spam filtering for SecOps mailboxes or phishing simulations, don't use mail flow rules. For more information, see [Configure the delivery of non-Microsoft phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
+
+      - question: |
+          Why was my legitimate email flagged as spam?
+        answer: |
+          Legitimate email can be incorrectly flagged as spam (a *false positive*) for several reasons. The following table describes the most common causes and what to do about them:
+
+          |Cause|Details|Resolution|
+          |---|---|---|
+          |**Email authentication failure**|The message failed SPF, DKIM, or DMARC checks, which caused composite authentication (`compauth`) to fail. Microsoft 365 treats unauthenticated messages with higher suspicion.|Verify that [SPF](email-authentication-spf-configure.md), [DKIM](email-authentication-dkim-configure.md), and [DMARC](email-authentication-dmarc-configure.md) are correctly configured for the sending domain.|
+          |**Sender reputation**|The sending IP address or domain has a poor reputation due to historical spam complaints, blocklist entries, or low sending volume.|Check whether the sending IP is on any non-Microsoft blocklists. Verify the sender's IP has a valid reverse DNS (PTR) record. If the sender is external, ask them to check their reputation at [Microsoft SNDS](https://sendersupport.olc.protection.outlook.com/snds/).|
+          |**Message content triggers**|The message body, subject, or attachments contain characteristics associated with spam. For example: <ul><li>Excessive links</li><li>URL shorteners</li><li>Form tags</li><li>Embedded scripts</li><li>Image-only content</li></ul>|Review the message content. Check if any [Advanced Spam Filter (ASF) settings](anti-spam-policies-asf-settings-about.md) are enabled in the applicable anti-spam policy that could flag the content. For example: <ul><li>**Empty messages**</li><li>**Embed tags in HTML**</li><li>**JavaScript or VBScript in HTML**</li></ul>|
+          |**Bulk complaint level (BCL) threshold**|The message was classified as **bulk** because the sender's BCL met or exceeded the threshold configured in the anti-spam policy. Bulk mail (also known as *gray mail*) includes newsletters, promotions, and marketing email that the user previously opted into.|Bulk mail isn't the same as spam. See [How to fix bulk email going to the Junk Email folder?](#how-to-fix-bulk-email-going-to-the-junk-email-folder-) in this article.|
+          |**User or organization overrides**|An Exchange mail flow rule (transport rule), anti-spam policy, or Outlook Blocked Senders list is configured to treat the sender or domain as spam.|<ul><li>Review mail flow rules on the **Rules** page in the Exchange admin center at <https://admin.exchange.microsoft.com/#/transportrules>.</li><li>Check the applicable anti-spam policy for blocked senders/domains.</li><li>Ask the user to check their **Blocked Senders** list in Outlook.</li></ul>|
+          |**Non-Microsoft filtering interference**|A non-Microsoft email security service routes messages to Microsoft 365, but the original source IP information is lost. Microsoft 365 evaluates the intermediary's IP address instead of the true source, which can cause SPF and authentication failures.|Configure [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) (also known as *skip listing*) on the inbound connector to preserve the original source IP.|
+
+          ### How to investigate a false positive
+
+          1. **Examine the message headers**: Look at the `X-Forefront-Antispam-Report` header for the spam confidence level (SCL), bulk complaint level (BCL), and the filtering verdict. Check the `Authentication-Results` header for SPF, DKIM, and DMARC results.
+
+             For more information about interpreting anti-spam headers, see [Anti-spam message headers](message-headers-eop-mdo.md).
+
+          1. **Use Message trace**: In the [Exchange admin center](https://admin.exchange.microsoft.com), go to **Mail flow** > **Message trace** to track the message and see which filtering rule or policy flagged it.
+
+          1. **Check Threat Explorer or Real-time detections** (requires Microsoft Defender for Office 365): Use [Threat Explorer](threat-explorer-real-time-detections-about.md) to find the message and review the detection technology, delivery action, and override details.
+
+          1. **Submit the message to Microsoft**: Report the false positive to Microsoft for analysis. For more information, see [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md).
+
+          ### How to prevent future false positives
+
+          > [!CAUTION]
+          > Allowlists create a high risk of attackers successfully delivering malicious email that would otherwise be filtered. Use allow entries carefully and only when necessary. Messages identified as malware or high confidence phishing are always filtered, regardless of allow list entries.
+
+          Use the following methods (in order of preference) to prevent legitimate email from being flagged:
+
+          1. **Fix the root cause**: If the false positive is caused by authentication failures, fix the SPF, DKIM, or DMARC configuration. If it's caused by content, work with the sender to adjust the message content.
+
+          1. **Report the false positive**: Use the **Submissions** page in the [Microsoft Defender portal](https://security.microsoft.com) to submit the message to Microsoft. If appropriate, Microsoft creates an allow entry in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). For more information, see [Report good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft).
+
+          1. **Create a Tenant Allow/Block List entry**: Temporarily allow the sender, domain, or URL while Microsoft reviews the submission. For more information, see [Tenant Allow/Block List](tenant-allow-block-list-about.md).
+
+          1. **Use mail flow rules** (with caution): Create a mail flow rule to set the SCL to -1 for messages from the specific sender, but only if you're confident the sender is legitimate. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+
+          For a complete step-by-step guide, see [How to handle legitimate emails getting blocked (false positives)](step-by-step-guides/how-to-handle-false-positives-in-microsoft-defender-for-office-365.md).
+
+      - question: |
+          What's the difference between spam and high-confidence spam?
+        answer: |
+          Microsoft 365 spam filtering assigns a [spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md) to every inbound message. Messages with SCL 5 or 6 are classified as **Spam**, while messages with SCL 7, 8, or 9 are classified as **High confidence spam**. For a complete breakdown of SCL values and their default actions, see [Spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md).
+
+          ### Key differences
+
+          ||Spam (SCL 5-6)|High confidence spam (SCL 7-9)|
+          |---|---|---|
+          |**Confidence level**|Moderate probability of being spam.|High probability of being spam.|
+          |**Default action (default policy)**|Move to Junk Email folder.|Move to Junk Email folder.|
+          |**Default action (Standard preset policy)**|Move to Junk Email folder.|Quarantine.|
+          |**Default action (Strict preset policy)**|Quarantine.|Quarantine.|
+          |**User overrides**|Users can retrieve from Junk Email and add to Safe Senders.|Users can retrieve from Junk Email (default policy) or request release from quarantine (preset policies).|
+          |**Admin configurable**|Yes. The action is configurable in anti-spam policies.|Yes. The action is configurable in anti-spam policies.|
+          |**Common triggers**|Promotional content patterns, suspicious links, low sender reputation.|Known spam signatures, phishing-like characteristics, embedded scripts, ASF rule matches (for example, empty messages, form tags, JavaScript in HTML).|
+
+          The action for both **Spam** and **High confidence spam** verdicts is configurable in anti-spam policies. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md) and [Recommended anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
+
+      - question: |
+          How to fix bulk email going to the Junk Email folder?
+        answer: |
+          Bulk email (also known as *gray mail*) includes newsletters, marketing messages, and promotions that users opted in to receive. Unlike spam, bulk email is typically from legitimate senders, but the volume and content characteristics can resemble spam.
+
+          Microsoft 365 assigns a [bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md) to each inbound message. The BCL value ranges from 0 (unlikely bulk) to 9 (most likely bulk). For the full BCL value breakdown, see [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md).
+
+          If the BCL of a message meets or exceeds the **bulk email threshold** set in the applicable anti-spam policy, the message is treated as **Bulk** and the configured action is applied (by default, move to Junk Email folder).
+
+          ### Step 1: Identify the BCL threshold and message BCL
+          1. **Find the current BCL threshold**: Check the **Bulk email threshold** value in the applicable anti-spam policy. For the default BCL thresholds in each policy type, see [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md). For instructions on viewing the threshold, see [Open the bulk senders insight in the Microsoft Defender portal](anti-spam-bulk-senders-insight.md#open-the-bulk-senders-insight-in-the-microsoft-defender-portal).
+
+          1. **Find the message's BCL value**: Examine the message headers and look for the `X-Microsoft-Antispam` header. The `BCL:` value indicates the bulk complaint level assigned to the message. For example:
+
+             ```text
+             X-Microsoft-Antispam: BCL:5;
+             ```
+
+          ### Step 2: Choose a fix
+
+          Based on your situation, use one or more of the following methods:
+
+          #### Option A: Adjust the BCL threshold (recommended for organization-wide tuning)
+
+          If too many legitimate bulk messages are going to the Junk Email folder, **raise the BCL threshold** in the applicable anti-spam policy. A higher value means fewer messages are classified as bulk. You can also use the [bulk senders insight](anti-spam-bulk-senders-insight.md) to simulate the effect of threshold changes before you apply them. For more information, see [How to tune bulk email](anti-spam-spam-vs-bulk-about.md#how-to-tune-bulk-email) and [Configure anti-spam policies](anti-spam-policies-configure.md).
+
+          > [!NOTE]
+          > Settings in the [Standard or Strict preset security policies](preset-security-policies.md) override custom anti-spam policy settings for recipients included in those policies.
+
+          #### Option B: Change the bulk email action
+
+          By default, messages that meet the bulk threshold are moved to the Junk Email folder. You can change this action to **No action** if you want bulk email delivered to the Inbox. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md).
+
+          - **Microsoft Defender portal**: In the anti-spam policy \> **Actions** \> set the **Bulk complaint level (BCL) met or exceeded** action to **No action** or another preferred action.
+          - **PowerShell**:
+
+            ```powershell
+            Set-HostedContentFilterPolicy -Identity "<Policy Name>" -BulkSpamAction NoAction
+            ```
+
+          #### Option C: Allow specific bulk senders
+
+          If the issue is limited to a specific sender:
+
+          1. **Organization-level: Report the message as not junk**: Use the **Submissions** page in the Microsoft Defender portal at <https://security.microsoft.com/reportsubmission> to report the message as a false positive. During submission, you can also create an allow entry for the sender in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). For more information, see [Report good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft).
+
+          1. **User-level: Add to Safe Senders**: The user can add the sender to their **Safe Senders** list in Outlook or Outlook on the web. Messages from Safe Senders aren't delivered to the Junk Email folder. For more information, see [Use Junk Email Filters to control which messages you see](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077).
+
+             Admins can use PowerShell to add senders to the Safe Senders list in cloud mailboxes. For more information, see [Configure the safelist collection on a mailbox](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).
+
+             > [!CAUTION]
+             > Don't add domains to Safe Senders lists. Attackers could then successfully deliver email from those domains that would otherwise be filtered.
+
+          #### Option D: Use the Promotions folder (Preview)
+
+          If available in your organization, you can route bulk email that falls *below* the BCL threshold to a dedicated **Promotions** folder instead of the Inbox.
+
+          For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](anti-spam-bulk-complaint-level-bcl-about.md#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
+
+          #### Option E: Use the Bulk senders insight
+
+          Use the **Bulk senders insight** in the Microsoft Defender portal to identify the top bulk senders delivering mail to your organization. This insight helps you identify which senders to allow, block, or tune thresholds for.
+
+          For more information, see [Bulk senders insight](anti-spam-bulk-senders-insight.md).
+
+          ### Diagnostic workflow
+
+          Use the following workflow to diagnose and fix bulk email routing issues:
+
+          ```text
+          Is the email going to Junk Email folder?
+          │
+          ├─ Yes → Check message headers for BCL value
+          │        │
+          │        ├─ BCL ≥ threshold → Message classified as Bulk
+          │        │   │
+          │        │   ├─ Raise BCL threshold in anti-spam policy (Option A)
+          │        │   ├─ Change Bulk action to No action (Option B)
+          │        │   └─ Allow specific sender (Option C)
+          │        │
+          │        └─ BCL < threshold → Not a bulk issue; check SCL value
+          │            │
+          │            ├─ SCL 5-6 → Classified as Spam (see "Why was my legitimate email flagged as spam?")
+          │            └─ SCL 7-9 → Classified as High confidence spam
+          │
+          └─ No → Email is delivering correctly
+          ```
+
+          ### Related bulk email resources
+
+          - [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md)
+          - [Bulk complaint level (BCL) values](anti-spam-bulk-complaint-level-bcl-about.md)
+          - [Tune bulk email filtering](anti-spam-spam-vs-bulk-about.md#how-to-tune-bulk-email)
+          - [Bulk senders insight](anti-spam-bulk-senders-insight.md)
+          - [Configure anti-spam policies](anti-spam-policies-configure.md)

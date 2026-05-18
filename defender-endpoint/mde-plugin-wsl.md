@@ -1,9 +1,8 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 description: Learn how to set up and use the Defender for Endpoint plug-in for Windows Subsystem for Linux.
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.reviewer: gokulgiju, priyankagill, kvitta, pahuijbr
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -14,9 +13,7 @@ ms.collection:
 - tier2
 ms.custom:
 - partner-contribution
-audience: ITPro
 ms.date: 10/27/2025
-search.appverid: MET150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
@@ -222,9 +219,8 @@ In the Advanced Hunting schema, under the `DeviceInfo` table, there's a new attr
 ```kusto
 //Get all WSL device ids for the current organization/tenant 
 let wsl_endpoints = DeviceInfo  
-| where OSPlatform == "Linux" and isempty(HostDeviceId) != true
+| where OSPlatform == "Linux" and isnotempty(HostDeviceId)
 | distinct DeviceId; 
-
 wsl_endpoints
 ```
 
@@ -233,7 +229,7 @@ wsl_endpoints
 ```kusto
 //Get WSL device ids and their corresponding host device ids 
 DeviceInfo  
-| where OSPlatform == "Linux" and isempty(HostDeviceId) != true
+| where OSPlatform == "Linux" and isnotempty(HostDeviceId)
 | distinct WSLDeviceId=DeviceId, HostDeviceId
 ```
 
@@ -242,9 +238,8 @@ DeviceInfo
 ```kusto
 //Get a list of WSL device ids where curl or wget was run
 let wsl_endpoints = DeviceInfo  
-| where OSPlatform == "Linux" and isempty(HostDeviceId) != true
+| where OSPlatform == "Linux" and isnotempty(HostDeviceId)
 | distinct DeviceId; 
-
 DeviceProcessEvents   
 | where FileName == "curl" or FileName == "wget" 
 | where DeviceId in (wsl_endpoints) 

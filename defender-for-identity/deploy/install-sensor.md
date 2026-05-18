@@ -1,14 +1,18 @@
 ---
-title: Install a sensor | Microsoft Defender for Identity
-description: Learn how to install Microsoft Defender for Identity sensors on your domain controllers, AD FS servers, or AD CS servers.
-ms.date: 06/21/2023
+title: Install the sensor v2.x | Microsoft Defender for Identity
+description: Learn how to download and install the Microsoft Defender for Identity sensor v2.x on domain controllers, AD FS servers, AD CS servers, or Microsoft Entra Connect servers.
+ms.date: 05/04/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ai-usage: ai-assisted
 ---
 
-# Install a Microsoft Defender for Identity sensor
+# Download and install a Microsoft Defender for Identity sensor v2.x
 
-This article describes how to install a Microsoft Defender for Identity classic sensor, including a standalone sensor. We recommend installing the sensor from the Defender portal. 
+Download and install the Defender for Identity sensor v2.x on domain controllers, or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. Standalone sensor installation is also covered below.
+
+> [!TIP]
+> For domain controllers running Windows Server 2019 or later, deploy the [sensor v3.x](deploy-sensor-v3.md) instead. The v3.x sensor is activated from the Defender portal and doesn't require a downloaded installation package.
 
 We recommend alternate installation methods for these use cases:
 
@@ -16,11 +20,10 @@ We recommend alternate installation methods for these use cases:
 
 - If you're using a proxy, we recommend that you install the sensor and configure your proxy together [from the command line](#command-for-running-a-silent-installation-with-a-proxy-configuration). If you need to update your proxy settings later on, use PowerShell or the Azure CLI. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
 
+
 ## Prerequisites
 
 Before you start, make sure that you have:
-
-- A downloaded copy of your [Defender for Identity sensor setup package](download-sensor.md) and the access key.
 
 - Microsoft .NET Framework 4.7 or later installed on the machine. If Microsoft .NET Framework 4.7 or later isn't installed, the Defender for Identity sensor setup package installs it. Installation from the setup package might require a restart of the server.
 
@@ -32,9 +35,41 @@ Before you start, make sure that you have:
 
 - Trusted root certificates on your machine. If your trusted root CA-signed certificates are missing, [you might receive a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error).
 
-## Install the classic sensor in the Defender portal
+## Download the sensor package
 
-Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server or Entra Connect server.
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **System > Settings** > **Identities**.
+
+1. Select the **Sensors** tab, which displays all of your Defender for Identity sensors. For example:
+
+    :::image type="content" source="../media/download-sensor/sensor-page.png" alt-text="Screenshot that shows where to find the sensors page in the Microsoft Defender portal.":::
+
+1. Select **Add sensor**. In the Add a new sensor pane, select **Continue with classic sensor**, and save the installation package locally. The downloaded zip file includes the following files:
+
+    - The Defender for Identity sensor installer
+
+    - The configuration setting file with the required information to connect to the Defender for Identity cloud service
+
+    - [Npcap OEM version 1.0](https://npcap.com/), automatically installed during the sensor installation
+
+     :::image type="content" source="../media/download-sensor/continue-with-classic-sensor.png" alt-text="Screenshot that shows how to install the classic sensor.":::
+
+1. In the **Add a new sensor** pane, copy the **Access key** value and save it to a secured location. This access key is a one-time password for use when deploying the sensor, after which communication is performed using certificates for authentication and TLS encryption.
+
+    > [!TIP]
+    > We recommend regenerating the access key using the **Regenerate key** button regularly. It won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
+
+1. Copy the downloaded installation package to the dedicated server or domain controller where you're installing the Defender for Identity sensor.
+
+   > [!Note]
+   > To download the installation package behind a firewall or proxy server, make sure you allow network traffic to the following FQDNs through TCP/443.
+   > 
+   > sensorpackage-prd.mdi.securitycenter.microsoft.com
+   > sensorpackage-fm.mdi.securitycenter.microsoft.us
+   > sensorpackage-ff.mdi.securitycenter.microsoft.us
+
+## Install the v2.x sensor in the Defender portal
+
+Perform the following steps on the domain controller, Active Directory Federation Services (AD FS) server, Active Directory Certificate Services (AD CS) server, or Microsoft Entra Connect server.
 
 1. Verify that the machine has connectivity to the relevant [Defender for Identity cloud service endpoints](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
@@ -66,7 +101,7 @@ Perform the following steps on the domain controller, Active Directory Federatio
 1. On the **Configure the sensor** page, enter the following information for the setup package:
 
     - **Installation path**: The location where the Defender for Identity sensor is installed. By default, the path is `%programfiles%\Azure Advanced Threat Protection sensor`. Leave the default value.
-    - **Access key**: Retrieved from the Microsoft Defender portal in a [previous step](download-sensor.md).
+    - **Access key**: Retrieved from the Microsoft Defender portal in a [previous step](#download-the-sensor-package).
 
     ![Screenshot of the wizard page for Defender for Identity sensor configuration.](../media/sensor-install-config.png)
 
@@ -106,7 +141,7 @@ Make the Defender for Identity sensor package dependent on the deployment of the
 
 ### Commands for running a silent installation
 
-Use the following commands to perform a fully silent installation of the Defender for Identity sensor, by using the access key that you copied in a [previous step](download-sensor.md).
+Use the following commands to perform a fully silent installation of the Defender for Identity sensor, by using the access key that you copied in a [previous step](#download-the-sensor-package).
 
 #### cmd.exe syntax
 
@@ -138,7 +173,7 @@ Use the following commands to perform a fully silent installation of the Defende
 |`InstallationPath`|`InstallationPath=""`|No|Sets the path for the installation of Defender for Identity sensor binaries. Default path: `%programfiles%\Azure Advanced Threat Protection Sensor`. |
 |`AccessKey`|`AccessKey="\*\*"`|Yes|Sets the access key that's used to register the Defender for Identity sensor with the Defender for Identity workspace.|
 |`AccessKeyFile`|`AccessKeyFile=""`|No|Sets the workspace access key from the provided text file path.|
-|`DelayedUpdate`|`DelayedUpdate=true`|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. For more information, see [Delayed sensor update](../sensor-settings.md#delayed-sensor-update).|
+|`DelayedUpdate`|`DelayedUpdate=true`|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. For more information, see [Delayed sensor update](../sensor-settings.md#delayed-update-for-sensor-v2x).|
 |`LogsPath`|`LogsPath=""`|No|Sets the path for the Defender for Identity sensor logs. Default path: `%programfiles%\Azure Advanced Threat Protection Sensor`.|
 
 #### Examples

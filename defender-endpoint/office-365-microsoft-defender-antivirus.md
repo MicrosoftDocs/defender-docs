@@ -3,7 +3,6 @@ title: Better together - Microsoft Defender Antivirus and Office 365 (including 
 description: Office 365, which includes OneDrive, goes together wonderfully with Microsoft Defender Antivirus. Read this article to learn more.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: article
 author: chrisda
 ms.author: chrisda
@@ -11,12 +10,10 @@ ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
 ms.reviewer: yonghree 
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
 - Microsoft Defender for Endpoint Plan 1

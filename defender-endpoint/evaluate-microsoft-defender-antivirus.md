@@ -1,4 +1,4 @@
-﻿---
+---
 title: Evaluate Microsoft Defender Antivirus
 description: Businesses of all sizes can use this guide to evaluate and test the protection offered by Microsoft Defender Antivirus in Windows.
 ms.service: defender-endpoint
@@ -7,7 +7,6 @@ ms.topic: article
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-manager: bagol
 ms.custom: nextgen
 ms.date: 10/20/2025
 ms.subservice: ngp
@@ -15,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -62,17 +60,17 @@ You can also download a PowerShell that will enable all the settings described i
 
 ## Related articles
 
-- Evaluate Microsoft Defender Antivirus using [Microsoft Defender Endpoint Security Settings Management (Endpoint security policies) ](/defender-endpoint/evaluate-mda-using-mde-security-settings-management)
+- Evaluate Microsoft Defender Antivirus using [Microsoft Defender Endpoint Security Settings Management (Endpoint security policies) ](evaluate-mda-using-mde-security-settings-management.md)
 
-- Evaluate Microsoft Defender Antivirus using [Group Policy](/defender-endpoint/evaluate-mdav-using-gp)
+- Evaluate Microsoft Defender Antivirus using [Group Policy](evaluate-mdav-using-gp.md)
 
-- Evaluate Microsoft Defender Antivirus using [Powershell](/defender-endpoint/microsoft-defender-antivirus-using-powershell)
+- Evaluate Microsoft Defender Antivirus using [Powershell](microsoft-defender-antivirus-using-powershell.md)
 
-- [Advanced technologies](/defender-endpoint/adv-tech-of-mdav) at the core of Microsoft Defender Antivirus
+- [Advanced technologies](adv-tech-of-mdav.md) at the core of Microsoft Defender Antivirus
 
-- [Microsoft Defender Antivirus compatibility with other security products](/defender-endpoint/microsoft-defender-antivirus-compatibility)
+- [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
 
-- [Microsoft Defender Antivirus and non-Microsoft antivirus solutions without Defender for Endpoint](/defender-endpoint/defender-antivirus-compatibility-without-mde)
+- [Microsoft Defender Antivirus and non-Microsoft antivirus solutions without Defender for Endpoint](defender-antivirus-compatibility-without-mde.md)
 
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 

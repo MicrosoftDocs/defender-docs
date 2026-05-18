@@ -1,11 +1,8 @@
 ---
 title: Overview of Microsoft Defender for Endpoint Plan 1
 description: Get an overview of Defender for Endpoint Plan 1. Learn about the features and capabilities included in this endpoint protection subscription.
-search.appverid: MET150 
 author: paulinbar
 ms.author: painbar
-manager: bagol 
-audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -14,7 +11,6 @@ ms.date: 05/02/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
 ms.reviewer: shlomiakirav
-f1.keywords: NOCSH
 ms.collection: 
 - m365-security
 - tier1
@@ -40,7 +36,7 @@ Use this guide to:
 - [Get started using the Microsoft Defender portal, where you can view incidents and alerts, manage devices, and use reports about detected threats](mde-plan1-getting-started.md)
 - [Get an overview of maintenance and operations](preferences-setup.md)
 
-For minimum requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint requirements](/defender-endpoint/minimum-requirements).
+For minimum requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint requirements](minimum-requirements.md).
 
 ## Defender for Endpoint Plan 1 capabilities
 
