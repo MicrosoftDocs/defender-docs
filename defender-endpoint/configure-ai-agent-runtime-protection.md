@@ -122,7 +122,9 @@ When runtime protection detects a threat, details appear across a specific agent
 
 When Defender Antivirus blocks an agent action in **Block** mode, the agent displays a block message directly in the terminal. In the following example, Defender blocks an agent that attempts to read a file containing a prompt injection payload.
 
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-block-agent-ui.png" alt-text="Screenshot of Claude Code terminal showing a Defender block message after the agent attempted to read a malicious file." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-block-agent-ui.png":::
+Here's an example of a flagged prompt injection payload in a file that an agent might attempt to read:
+
+:::image type="content" source="media/configure-ai-runtime-flagged-prompt-injection-agent-ui.png" alt-text="Screenshot of Claude Code terminal showing a Defender block message after the agent attempted to read a malicious file.":::
 
 Users can review the following details in the block message:
 
@@ -134,7 +136,13 @@ Users can review the following details in the block message:
 
 In addition to the in-agent message, Windows displays a toast notification to alert the user. This notification appears regardless of whether the agent terminal is in focus.
 
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-block-toast.png" alt-text="Screenshot of a Windows toast notification from Microsoft Defender showing that an AI agent action was blocked." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-block-toast.png":::
+Her's an example of a Windows toast notification that appears when an agent action is blocked by Defender Antivirus:
+
+:::image type="content" source="media/ai-runtime-protection-block-toast.png" alt-text="Screenshot of a Windows toast notification from Microsoft Defender showing that an AI agent action was blocked.":::
+
+Here's an example of a Windows toast notification that shows an interaction that was blocked due to sensitive information sharing:
+
+:::image type="content" source="media/ai-runtime-block-sensitive-information-toast.png" alt-text="Screenshot of a Windows toast notification from Microsoft Defender showing that an AI agent action was blocked due to sensitive information sharing.":::
 
 Users can review the following details in the toast notification:
 
@@ -142,15 +150,19 @@ Users can review the following details in the toast notification:
 - The Defender source for the notification.
 - The time of the detection.
 
-### View protection history in Windows Security (end-user experience)
+### View current threats and protection history in Windows Security (end-user experience)
 
-Users can review past detections in **Windows Security** > **Virus & threat protection** > **Protection history**. Each runtime protection detection appears as a separate entry.
+Users can review current threats under **Windows Security** > **Virus & threat protection**, and protected threats under the **Protection history**.
 
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-list.png" alt-text="Screenshot of Windows Security Protection History showing a list of runtime protection detections for AI agents." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-list.png":::
+Here's an example of a prompt injection attack detected as a current threat:
+
+:::image type="content" source="media/ai-runtime-current-threats.png" alt-text="Screenshot of the current threats in Windows Security showing that a threat injection attempt was detected.":::
+
+Here's an example of the same prompt injection attack, listed in the protection history after Defender has blocked the threat:
+
+:::image type="content" source="media/ai-runtime-protection-history.png" alt-text="Screenshot of the protection history in Windows Security showing that a threat injection attempt was blocked and the file was quarantined.":::
 
 Users can select an entry to view details including the threat name, severity, and which agent triggered the detection.
-
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-detail.png" alt-text="Screenshot of Protection History detail view showing threat information for a blocked AI agent action." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-protection-history-detail.png":::
 
 Users can review the following details in the protection history:
 
@@ -163,15 +175,13 @@ Users can review the following details in the protection history:
 
 For security operations teams, runtime protection events appear in the Microsoft Defender portal. Each detection generates an alert that appears on the device timeline.
 
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-portal-timeline.png" alt-text="Screenshot of the Defender portal device timeline showing an AI agent runtime protection alert." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-portal-timeline.png":::
+:::image type="content" source="media/ai-runtime-portal-timeline.png" alt-text="Screenshot of the device timeline in the Microsoft Defender portal showing runtime protection events.":::
 
 Select the alert to view detailed information including the detection type, affected agent, and recommended actions.
 
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-portal-alert-detail.png" alt-text="Screenshot of the Defender portal alert details for an AI agent runtime protection detection." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-portal-alert-detail.png":::
+:::image type="content" source="media/ai-runtime-event-details.png" alt-text="Screenshot of the event details in the Microsoft Defender portal.":::
 
 When multiple related detections occur, Defender correlates them into a single incident for detailed investigation.
-
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-portal-incident.png" alt-text="Screenshot of the Defender portal incident view showing correlated AI agent runtime protection alerts." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-portal-incident.png":::
 
 Review the following details in the Defender portal:
 
