@@ -48,7 +48,7 @@ To choose which runtime protection method to use in your environment, see this [
 
 ## Configure agent hooks protection
 
-To enable agent hooks protection on a device:
+To enable agent hooks protection on a single device (for testing or validation):
 
 1. Open an elevated PowerShell session.
 1. Run the following command:
@@ -67,7 +67,7 @@ To enable agent hooks protection on a device:
 
 ## Configure network inspection protection
 
-To enable network inspection protection on a device:
+To enable network inspection protection on a single device (for testing or validation):
 
 1. Open an elevated PowerShell session.
 1. Run the following command:
@@ -84,16 +84,24 @@ To enable network inspection protection on a device:
     Get-MpPreference | Select-Object EnableAiAgentLoopInspection
     ```
 
-## Deploy settings with Intune
+## Deploy settings at scale with Intune
 
-To deploy AI agent runtime protection settings across your organization using Intune:
+The PowerShell commands in the previous sections configure a single device and are useful for testing and validation. To deploy the same settings across your organization, use Intune to run a PowerShell script on target device groups.
 
-1. Create a PowerShell script with the Defender Antivirus settings you want to deploy. For example:
+1. Create a PowerShell script that includes the commands for the protection methods you chose. For example:
 
-    ```powershell
-    Set-MpPreference -EnableAiAgentProtection Enabled
-    Set-MpPreference -EnableAiAgentLoopInspection Enabled
-    ```
+    - To enable agent hooks protection only:
+
+        ```powershell
+        Set-MpPreference -EnableAiAgentProtection Enabled
+        ```
+
+    - To enable both agent hooks and network inspection protection:
+
+        ```powershell
+        Set-MpPreference -EnableAiAgentProtection Enabled
+        Set-MpPreference -EnableAiAgentLoopInspection Enabled
+        ```
 
 1. Use Intune to deploy the script to target devices. For detailed steps, see [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
 
