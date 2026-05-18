@@ -1,5 +1,5 @@
 ---
-title: IP address asset filters
+title: IP Address Asset Filters
 titleSuffix: Defender EASM IP address asset filters 
 description: This article outlines the filter functionality available in Microsoft Defender External Attack Surface Management for IP address assets specifically, including operators and applicable field values.
 author: danielledennis
@@ -9,10 +9,9 @@ ms.date: 12/14/2022
 ms.topic: how-to
 ---
 
-# IP address asset filters 
+# IP address asset filters
 
 These filters specifically apply to IP address assets. Use these filters when searching for a specific subset of IPs.  
-
 
 ## Defined value filters  
 
@@ -26,8 +25,7 @@ The following filters provide a drop-down list of options to select. The availab
 |     Is Name Server Record  |   Indicates that the host powers a name server.                                                                         |   true / false               |                           |
 |     Port Last Seen         |   Indicates the time frame in which a port was last observed on the host.                                               |   7 days, 14 days, 30 days   |   `Equals` `In`             |
 
-
-## Free form filters  
+## Freeform filters  
 
 The following filters require that the user manually enters the value with which they want to search.  This list is organized by the number of applicable operators for each filter, then alphabetically.  
 
@@ -56,9 +54,7 @@ The following filters require that the user manually enters the value with which
 |     Web Component Name & Version    |   A list of any detected web component names and associated versions that have been observed on the asset.                                                                                               |   Netscaler Gateway 12.1, jQuery 3.4.1                                                               |                                                                                                                                                                                                                                                     |
 |     Web Component Version           |   The version number associated to any web component detected on the asset.                                                                                                                              |   12.1, 3.4.1                                                                                        |                                                                                                                                                                                                                                                     |
 
+## Related content
 
-
-## Next steps 
-[Understanding asset details](understanding-asset-details.md)
-
-[Inventory filters](inventory-filters.md) 
+- [Understand asset details](understanding-asset-details.md)
+- [Inventory filters](inventory-filters.md)
