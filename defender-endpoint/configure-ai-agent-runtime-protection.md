@@ -42,9 +42,12 @@ Before you configure runtime protection, make sure the following requirements ar
 > [!NOTE]
 > Network inspection protection works with any agent that communicates over the network. However, network inspection doesn't support agents that use certificate pinning or HTTP/3. If your organization uses agents with these restrictions, use agent hooks protection if available for those agents.
 
-## Decide which method to use
+## Decide on your protection method and configuration
 
-To choose which runtime protection method to use in your environment, see this [comparison of agent hooks protection and network inspection protection](protect-ai-agents-overview.md#protection-approaches-comparison).
+- You can use either agent hooks protection or network inspection protection, or both together for layered protection. To choose which runtime protection method to use in your environment, see this [comparison of agent hooks protection and network inspection protection](protect-ai-agents-overview.md#protection-approaches-comparison).
+- You can configure each method on individual devices for testing and validation, or deploy settings across your organization using Intune.
+    - To configure settings on a single device, see [Configure agent hooks protection](#configure-agent-hooks-protection) and [Configure network inspection protection](#configure-network-inspection-protection).
+    - To deploy settings across your organization, see [Deploy settings across your organization with Intune](#deploy-settings-across-your-organization-with-intune).
 
 ## Configure agent hooks protection
 
@@ -84,7 +87,7 @@ To enable network inspection protection on a single device (for testing or valid
     Get-MpPreference | Select-Object EnableAiAgentLoopInspection
     ```
 
-## Deploy settings at scale with Intune
+## Deploy settings across your organization with Intune
 
 The PowerShell commands in the previous sections configure a single device and are useful for testing and validation. To deploy the same settings across your organization, use Intune to run a PowerShell script on target device groups.
 
