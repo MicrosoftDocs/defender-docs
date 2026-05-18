@@ -81,6 +81,7 @@ Plan features are summarized in the table.
 | [Defender for DNS alerts](defender-for-dns-introduction.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | [Threat detection (Azure network layer)](alerts-azure-network-layer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [OS system updates](enable-periodic-system-updates.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP and on-premises <br><br> Only applicable to machines onboarded with Azure ARC. [Learn more](enable-periodic-system-updates.md). |
+| OS baseline misconfigurations based on [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) recommendations <sup>[2](#footnote2)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP. <br><br> Only applicable to machines onboarded with Azure ARC. |
 | [Defender for Vulnerability Management premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities) <sup>[3](#footnote3)</sup> | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
 | [Malware scanning (agentless)](agentless-malware-scanning.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
 | [Machine secrets scanning (agentless)](concept-agentless-data-collection.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, and GCP |
