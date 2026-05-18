@@ -38,25 +38,25 @@ To create a custom recommendation:
 
 1. Select **Security policies** > **+ Create custom recommendation**.
 
-    :::image type="content" source="media/create-custom-recommendations/create-custom-recommendation.png" alt-text="Screenshot that shows where the Create custom recommendation button is located." lightbox="media/create-custom-recommendations/create-custom-recommendation.png":::
+    :::image type="content" source="media/create-custom-recommendations/create-custom-recommendation.png" alt-text="Screenshot of Microsoft Defender for Cloud Security policies page with the Create custom recommendation action highlighted." lightbox="media/create-custom-recommendations/create-custom-recommendation.png":::
 
 1. Enter the details: Required: Name, Scope, Severity, and Security issue. Optional: Description, Remediation.
 
-1. Select **Next**
+1. Select **Next**.
 
 1. Enter a KQL query, or select **[Open query editor](#use-the-query-editor)**.
 
-    :::image type="content" source="media/create-custom-recommendations/open-query-editor.png" alt-text="Screenshot that shows where the Open query editor button is located." lightbox="media/create-custom-recommendations/open-query-editor.png":::
+    :::image type="content" source="media/create-custom-recommendations/open-query-editor.png" alt-text="Screenshot of the custom recommendation flow with the Open query editor action used to launch the KQL editor." lightbox="media/create-custom-recommendations/open-query-editor.png":::
 
 1. Select **Next**.
 
-1. Select the relevant standards.
+1. Select the relevant standards for the recommendation.
 
     :::image type="content" source="./media/create-custom-recommendations/fill-info-recommendation.png" alt-text="Screenshot of Microsoft Defender for Cloud Recommendation details pane showing fields for name, severity, and assigned standards." lightbox="./media/create-custom-recommendations/fill-info-recommendation.png":::
 
 1. Select **Next**.
 
-1. Select the custom standards.
+1. Select the custom standards to assign.
 1. Select **Review and create**.
 1. Review the recommendation details.
 1. Select **Create**.
@@ -65,7 +65,7 @@ To create a custom recommendation:
 
 ### Use the query editor
 
-We recommend using the query editor to create a recommendation query. You can also use the provided [query templates and examples](#query-templates-and-examples) to view sample queires and learn how to build your own.
+We recommend using the query editor to create a recommendation query. You can also use the provided [query templates and examples](#query-templates-and-examples) to view sample queries and learn how to build your own.
 
 - Using the editor helps you to build and test your query before you start using it.
 - Select **How to** to get help on structuring the query, and additional instructions and links.
@@ -73,7 +73,7 @@ We recommend using the query editor to create a recommendation query. You can al
 
 1. Select **New query**.
 
-    :::image type="content" source="media/create-custom-recommendations/new-query.png" alt-text="Screenshot that shows where the New query vbutton is located." lightbox="media/create-custom-recommendations/new-query.png":::
+    :::image type="content" source="media/create-custom-recommendations/new-query.png" alt-text="Screenshot of the query editor with New query selected to start writing a recommendation query." lightbox="media/create-custom-recommendations/new-query.png":::
 
 1. Use the example query template with its instructions, or select an example built-in recommendation query from the lower part of the page, to get started.
 
@@ -83,7 +83,7 @@ We recommend using the query editor to create a recommendation query. You can al
 
 #### Query templates and examples
 
-The query editor includes built-in examples, and the templates in this section show how to structure common security checks. Each template returns only unhealthy (non-compliant) resources.
+The query editor includes built-in examples, and the templates in this section show how to structure common security checks. Each template returns resources in scope and marks non-compliant resources as `UNHEALTHY`.
 
 > [!NOTE]
 > The templates in this section use Azure resource types. For AWS and GCP resources, change `Environment == 'Azure'` to `Environment == 'AWS'` or `Environment == 'GCP'` and update `Identifiers.Type` to match the resource type in your environment.
@@ -122,7 +122,7 @@ RawEntityMetadata
 
 ### [NSG Any/Any](#tab/nsg-any-any)
 
-Find network security groups with security rules that allow traffic from any source on any port.
+Find network security groups whose rules contain wildcard source or port patterns that can indicate overly permissive access.
 
 ```kql
 RawEntityMetadata
@@ -134,7 +134,7 @@ RawEntityMetadata
 
 **Output columns:** `Id`, `Name`, `Environment`, `Identifiers`, `AdditionalData`, `Record`, `HealthStatus`
 
-**Assessment logic:** NSGs containing overly permissive rules have `HealthStatus` set to `UNHEALTHY`. Restricting source addresses and ports to known networks restores compliance.
+**Assessment logic:** NSGs where the rules payload contains wildcard source or port patterns have `HealthStatus` set to `UNHEALTHY`. Review these rules and restrict source addresses and ports to known networks.
 
 ### [Key Vault protection](#tab/key-vault-protection)
 
@@ -216,7 +216,7 @@ Every query must set a `HealthStatus` value for each resource. Use the `iff()` f
 Resources where `HealthStatus` is `UNHEALTHY` appear as non-compliant findings in Defender for Cloud. Resources where `HealthStatus` is `HEALTHY` are compliant and don't appear in findings.
 
 > [!IMPORTANT]
-> Always set `HealthStatus` to either `'UNHEALTHY'` or `'HEALTHY'`. Return all resources in scope — Defender for Cloud uses the `HealthStatus` column to determine compliance. Omitting resources from the result set is treated as no data, not as healthy.
+> Always set `HealthStatus` to either `'UNHEALTHY'` or `'HEALTHY'`. Return all resources in scope. Defender for Cloud uses the `HealthStatus` column to determine compliance. Omitting resources from the result set is treated as no data, not as healthy.
 
 **Common errors and fixes:**
 
