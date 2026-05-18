@@ -1,10 +1,11 @@
 ---
 title: Send Microsoft Entra ID data to Microsoft Sentinel
 description: Learn how to collect data from Microsoft Entra ID, and stream Microsoft Entra sign-in, audit, and provisioning logs into Microsoft Sentinel.
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 07/09/2025
-ms.author: guywild
 
 
 #Customer intent: As a security engineer, I want to stream Microsoft Entra logs into Microsoft Sentinel so that analysts can monitor and analyze sign-in activities, audit logs, and provisioning logs for enhanced security and threat detection.

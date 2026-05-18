@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 12/31/2024
 ms.author: monaberdugo
 author: mberdugo
+ms.reviewer: efratka
 ms.collection: usx-security
 
 #Customer intent: As a security analyst, I want to use advanced threat hunting tools and queries so that I can proactively identify and mitigate security threats across my organization's data sources.

@@ -1,8 +1,9 @@
 ---
 title: Connect Microsoft Sentinel to Amazon Web Services to ingest AWS WAF logs
 description: Use the Amazon Web Services (AWS) S3-based Web Application Firewall (WAF) connector to ingest AWS WAF logs, collected in AWS S3 buckets, to Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: how-to
 ms.date: 04/06/2025
 appliesto:

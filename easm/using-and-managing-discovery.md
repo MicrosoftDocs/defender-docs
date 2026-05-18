@@ -1,5 +1,5 @@
 ---
-title: Use and manage discovery
+title: Use and Manage Discovery
 description: Learn how to use Microsoft Defender External Attack Surface Management to discover and manage your organization's internet-exposed attack surface.
 author: danielledennis
 ms.author: dandennis
@@ -27,7 +27,6 @@ When you first access your Defender EASM instance, select **Getting Started** in
 
 ![Screenshot that shows a preconfigured attack surface selection screen.](media/discovery-1.png)
 
-
 At this point, the discovery runs in the background. If you selected a preconfigured attack surface from the list of available organizations, you're redirected to the dashboard overview screen where you can view insights into your organization's infrastructure in Preview mode.
 
 Review these dashboard insights to become familiar with your attack surface as you wait for more assets to be discovered and populated in your inventory. For more information on how to derive insights from these dashboards, see [Understand dashboards](understanding-dashboards.md).
@@ -54,25 +53,22 @@ Custom discoveries are organized into discovery groups. They're independent seed
 
 3. Name your new discovery group and add a description. The **Recurring Frequency** field allows you to schedule discovery runs for this group by scanning for new assets related to the designated seeds on a continuous basis. The default recurrence selection is **Weekly**. We recommend this cadence to ensure that your organization's assets are routinely monitored and updated.
 
-   For a single, one-time discovery run, select **Never**. We recommend that you keep the **Weekly** default cadence as discovery is designed to continuously discover new assets that are related to your known infrastructure.  You can edit the recurrence frequency later by selecting the "Edit" option from any Discovery group details page. 
+   For a single, one-time discovery run, select **Never**. We recommend that you keep the **Weekly** default cadence as discovery is designed to continuously discover new assets that are related to your known infrastructure.  You can edit the recurrence frequency later by selecting the "Edit" option from any Discovery group details page.
 
 4. Select **Next: Seeds**.
 
     ![Screenshot that shows the first page of the discovery group setup.](media/discovery-4.png)
 
-
 5. Select the seeds that you want to use for this discovery group. Seeds are known assets that belong to your organization. The Defender EASM platform scans these entities and maps their connections to other online infrastructure to create your attack surface. Since Defender EASM is intended to monitor your attack surface from an external perspective, private IP addresses cannot be included as discovery seeds. 
 
     ![Screenshot that shows the seed selection page of the discovery group setup.](media/discovery-5.png)
 
-
     The **Quick Start** option lets you search for your organization in a list of prepopulated attack surfaces. You can quickly create a discovery group based on the known assets that belong to your organization.
-   
+
     ![Screenshot that shows the prebaked attack surface selection page output in a seed list.](media/discovery-6.png)
 
     ![Screenshot that shows the prebaked attack surface selection page.](media/discovery-7.png)
 
-    
     Alternatively, you can manually input your seeds. Defender EASM accepts organization names, domains, IP blocks, hosts, email contacts, ASNs, and Whois organizations as seed values.
 
    You can also specify entities to exclude from asset discovery to ensure they aren't added to your inventory if detected. For example, exclusions are useful for organizations that have subsidiaries that will likely be connected to their central infrastructure, but don't belong to their organization.
@@ -82,7 +78,6 @@ Custom discoveries are organized into discovery groups. They're independent seed
 6. Review your group information and seed list and select **Create & Run**.
 
     ![Screenshot that shows the Review + Create screen.](media/discovery-8.png)
-
 
     You're taken back to the main Discovery page that displays your discovery groups. After your discovery run is finished, you see new assets added to your approved inventory.
 
@@ -96,12 +91,11 @@ Select any discovery group to view more information, edit the group, or kickstar
 
 ### Run history
 
-The discovery group details page contains the run history for the group. This section displays key information about each discovery run that was performed on the specific group of seeds. The **Status** column indicates whether the run is **In Progress**, **Complete**, or **Failed**. This section also includes **started** and **completed** timestamps and a count of all new assets added to your inventory after that particular discovery run. This count includes all assets brought into inventory, regardless of state or billable status. 
+The discovery group details page contains the run history for the group. This section displays key information about each discovery run that was performed on the specific group of seeds. The **Status** column indicates whether the run is **In Progress**, **Complete**, or **Failed**. This section also includes **started** and **completed** timestamps and a count of all new assets added to your inventory after that particular discovery run. This count includes all assets brought into inventory, regardless of state or billable status.
 
 Run history is organized by the seed assets that were scanned during the discovery run. To see a list of the applicable seeds, select **Details**. A pane opens on the right of your screen that lists all the seeds and exclusions by kind and name.
 
  ![Screenshot that shows the run history for the discovery group screen.](media/discovery-10.png)
-
 
 ### View seeds and exclusions
 
@@ -123,7 +117,7 @@ Similarly, you can select the **Exclusions** tab to see a list of entities that 
 
 The **Type** field displays the category of the excluded entity. The source name is the value that was input in the appropriate type box when you created the discovery group. The final column shows a list of discovery groups where this exclusion is present. Each value is clickable and takes you to the details page for that discovery group.
 
-## Next steps
+## Related content
 
 - [Discover your attack surface](discovering-your-attack-surface.md)
 - [Understand asset details](understanding-asset-details.md)
