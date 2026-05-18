@@ -1,10 +1,10 @@
 ---
 title: Overview - AI security posture management
 description: Learn how AI security posture management in Microsoft Defender for Cloud discovers AI assets, prioritizes risk, and guides remediation across multicloud environments.
-ms.date: 12/02/2025
+ms.date: 05/18/2026
 ms.topic: concept-article
-ms.author: elkrieger
 author: ElazarK
+ms.author: elkrieger
 #customer intent: As a cloud security professional, I want to understand how to secure my generative AI resources using Defender for Cloud's AI security posture management capabilities.
 ---
 

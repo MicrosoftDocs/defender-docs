@@ -4,7 +4,7 @@ description: Learn how to review and investigate alerts, vulnerabilities, miscon
 author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 04/05/2026
+ms.date: 05/18/2026
 ms.service: defender-for-cloud
 ---
 
@@ -40,6 +40,8 @@ Alerts are prioritized by severity to help you identify which issues to investig
 - **Informational** Provides context and might be relevant when correlated with other alerts.
 
 ### Investigate a security alert
+
+To investigate a security alert:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -80,6 +82,8 @@ For supported configurations, see the [support matrix for Defender for Container
 
 ### Review vulnerability findings
 
+To review vulnerability findings:
+
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Kubernetes services** > **Clusters**.
@@ -112,6 +116,8 @@ Each finding includes remediation guidance. Some findings support automated reme
 
 ### Review and remediate misconfigurations
 
+To review and remediate misconfigurations:
+
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Kubernetes services** > **Clusters**.
@@ -139,6 +145,8 @@ The compliance section shows the cluster’s status against regulatory standards
 It lists controls that the cluster doesn't meet and provides recommendations to help you remediate them.
 
 ### Assess compliance
+
+To assess compliance:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 

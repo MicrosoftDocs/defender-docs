@@ -5,7 +5,7 @@ author: ElazarK
 ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 03/31/2025
+ms.date: 05/18/2026
 ms.custom: template-concept
 ---
 
@@ -20,7 +20,7 @@ Agentless container posture provides easy and seamless visibility into your Kube
 Agentless container posture provides the following capabilities:
 
 - **Agentless discovery for Kubernetes** - provides zero footprint, API-based discovery of your Kubernetes clusters, their configurations, and deployments.
-- **[Comprehensive inventory capabilities](how-to-manage-cloud-security-explorer.md#build-a-query)** - enables you to explore Kubernetes resources: clusters, workloads, networking, node pools, container registries, container image software, K8s configuration, and security insights through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query) to easily monitor and manage your assets.
+- **[Comprehensive inventory capabilities](how-to-manage-cloud-security-explorer.md#build-a-query)** - enables you to explore Kubernetes resources: clusters, workloads, networking, node pools, container registries, container image software, Kubernetes (K8s) configuration, and security insights through [security explorer](how-to-manage-cloud-security-explorer.md#build-a-query) to easily monitor and manage your assets.
 - **[Agentless vulnerability assessment](agentless-vulnerability-assessment-azure.md)** - provides vulnerability assessment for Kubernetes node pools, container images, including recommendations for registry and runtime, near real-time scans of new images, daily refresh of results, exploitability insights, and more. Vulnerability information is added to the security graph for contextual risk assessment and calculation of attack paths, and hunting capabilities.
 - **[Attack path analysis](concept-attack-path.md)** - Contextual risk assessment exposes exploitable paths that attackers might use to breach your environment and are reported as attack paths to help prioritize posture issues that matter most in your environment.
 - **[Enhanced risk-hunting](how-to-manage-cloud-security-explorer.md)** - Enables security admins to actively hunt for posture issues in their containerized assets through queries (built-in and custom) and [security insights](attack-path-reference.md#insights) in the [security explorer](how-to-manage-cloud-security-explorer.md).

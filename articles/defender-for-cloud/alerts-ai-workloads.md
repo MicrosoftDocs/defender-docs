@@ -3,10 +3,10 @@ title: Alerts for AI services
 description: This article lists the security alerts for AI services visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 04/16/2026
+ms.date: 05/18/2026
 ai-usage: ai-assisted
-ms.author: elkrieger
 author: ElazarK
+ms.author: elkrieger
 ---
 
 # Alerts for AI services
@@ -39,7 +39,7 @@ Some AI workload risk signals can also come from infrastructure protection plans
 
 (AI.Azure_CredentialTheftAttempt)
 
-**Description**: The credential theft alert is designed to notify the SOC when credentials are detected within GenAI model responses to a user prompt, indicating a potential breach. This alert is crucial for detecting cases of credential leak or theft, which are unique to generative AI and can have severe consequences if successful.
+**Description**: The credential theft alert is designed to notify the security operations center (SOC) when credentials are detected within GenAI model responses to a user prompt, indicating a potential breach. This alert is crucial for detecting cases of credential leak or theft, which are unique to generative AI and can have severe consequences if successful.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Credential Access, Lateral Movement, Exfiltration
 

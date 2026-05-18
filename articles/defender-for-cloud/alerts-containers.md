@@ -5,11 +5,11 @@ ms.topic: reference
 ms.custom: linux-related-content
 ms.date: 05/18/2026
 ai-usage: ai-assisted
-ms.author: elkrieger
 author: ElazarK
+ms.author: elkrieger
 ---
 
-# Alerts for Kubernetes Clusters
+# Kubernetes alerts in Defender for Containers
 
 Microsoft Defender for Containers generates security alerts for Kubernetes clusters and workloads by monitoring both the control plane and the runtime environment. To validate alert generation, you can use the Kubernetes alerts simulation tool to trigger representative alerts.
 
