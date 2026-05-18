@@ -17,7 +17,7 @@ Through the use Defender for Cloud's cloud security explorer, security teams can
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - You must [enable the Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md).
 

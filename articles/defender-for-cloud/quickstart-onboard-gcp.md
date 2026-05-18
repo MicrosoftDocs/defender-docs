@@ -26,7 +26,7 @@ Learn more about [authentication architecture for GCP connectors](authentication
 
 Before you connect your GCP project, make sure you have:
 
-- A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/).
+- A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free one](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) enabled on your Azure subscription.
 

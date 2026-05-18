@@ -177,13 +177,13 @@
               - name: Defender for Open-Source Relational Databases
                 items:
                 - name: Overview
-                  displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: defender-for-databases-introduction.md
                 - name: Enable on Azure
-                  displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-azure.md
                 - name: Enable on AWS (Preview)
-                  displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-aws.md
               - name: Defender for Azure Cosmos DB
                 items:
@@ -217,68 +217,34 @@
             - name: Support matrices for Containers
               displayName: Containers, features availability, environment information
               href: support-matrix-defender-for-containers.md
-            - name: Defender for Containers permissions for EKS and GKE
+            - name: Deployment overview
+              href: defender-for-containers-deployment-overview.md
+            - name: Deployment planning
+              href: defender-for-containers-deployment-planning.md
+            - name: Architecture overview
+              href: defender-for-containers-architecture.md
+            - name: Container security access patterns by feature
+              href: defender-for-containers-feature-access-patterns.md
+            - name: Network access and permissions
+              href: defender-for-containers-network-access.md            
+            - name: Cloud IAM permissions for AWS and GCP
               href: containers-permissions.md
-            - name: Deploy Defender for Containers
+            - name: Exclude clusters from automatic sensor deployment
+              href: defender-for-containers-exclude-cluster.md
+            - name: Enable Defender for Containers
+              href: defender-for-containers-enable-plan.md
+            - name: Deploy components manually
               items:
-                - name: Defender for Containers deployment overview
-                  href: defender-for-containers-deployment-overview.md
-                - name: Azure (AKS)
-                  items:
-                    - name: Overview
-                      href: defender-for-containers-azure-overview.md
-                    - name: Enable via portal
-                      href: defender-for-containers-azure-enable-portal.md
-                    - name: Enable programmatically
-                      href: defender-for-containers-azure-enable-programmatically.md
-                    - name: Verify deployment
-                      href: defender-for-containers-azure-verify.md
-                    - name: Configure
-                      href: defender-for-containers-azure-configure.md
-                    - name: Remove
-                      href: defender-for-containers-azure-remove.md
-                - name: AWS (EKS)
-                  items:
-                    - name: Overview
-                      href: defender-for-containers-aws-overview.md
-                    - name: Enable via portal
-                      href: defender-for-containers-aws-enable-portal.md
-                    - name: Enable programmatically
-                      href: defender-for-containers-aws-enable-programmatically.md
-                    - name: Verify deployment
-                      href: defender-for-containers-aws-verify.md
-                    - name: Configure
-                      href: defender-for-containers-aws-configure.md
-                    - name: Remove
-                      href: defender-for-containers-aws-remove.md
-                - name: GCP (GKE)
-                  items:
-                    - name: Overview
-                      href: defender-for-containers-gcp-overview.md
-                    - name: Enable via portal
-                      href: defender-for-containers-gcp-enable-portal.md
-                    - name: Enable programmatically
-                      href: defender-for-containers-gcp-enable-programmatically.md
-                    - name: Verify deployment
-                      href: defender-for-containers-gcp-verify.md
-                    - name: Configure
-                      href: defender-for-containers-gcp-configure.md
-                    - name: Remove
-                      href: defender-for-containers-gcp-remove.md
-                - name: Arc-enabled Kubernetes (Preview)
-                  items:
-                    - name: Overview
-                      href: defender-for-containers-arc-overview.md
-                    - name: Enable via portal
-                      href: defender-for-containers-arc-enable-portal.md
-                    - name: Enable programmatically
-                      href: defender-for-containers-arc-enable-programmatically.md
-                    - name: Verify deployment
-                      href: defender-for-containers-arc-verify.md
-                    - name: Remove
-                      href: defender-for-containers-arc-remove.md
-                - name: Configure sensor deployed with Helm
+                - name: Deploy using Azure CLI
+                  href: defender-for-containers-deploy-azure-cli.md
+                - name: Deploy using Helm (advanced)
                   href: deploy-helm.md
+            - name: Verify deployment
+              href: defender-for-containers-verify-deployment.md
+            - name: Troubleshoot Defender for Containers
+              href: defender-for-containers-troubleshoot.md
+            - name: Disable Defender for Containers
+              href: defender-for-containers-remove.md                 
         - name: Protect key vaults with Defender for Key Vault
           displayName: enable, key, vault, key vault
           href: tutorial-enable-key-vault-plan.md
@@ -381,6 +347,9 @@
         - name: Check the status of your free trial
           displayName: free, trial, status
           href: free-trial.md
+    - name: Disable plans
+      displayName: disable, plans, turn off
+      href: disable-plans.md
 
 - name: Posture management
   items:
@@ -540,8 +509,8 @@
             - name: Transition from grouped to individual recommendations
               displayName: grouped, individual, recommendations, transition, legacy, dynamic, best practices
               href: transition-grouped-individual-recommendations.md
-            - name: Review resources exempted from recommendations
-              displayName: review, exemptions, exempted, resources, recommendation, exempt
+            - name: Review and manage recommendation exemptions
+              displayName: review, manage, exemptions, exempted, resources, recommendation, exempt, delete, secure score
               href: review-exemptions.md
             - name: Assign a recommendation to an active user
               displayName: assign, recommendation, user, owner
@@ -761,7 +730,7 @@
             href: enable-just-in-time-access.md
   - name: Defender for Containers
     items:
-      - name: Overview
+      - name: Introduction
         displayName: kubernetes, aks, acr, registries, k8s, arc, hybrid, on-premises,
           azure arc, multicloud, Hardening, Vulnerability assessment, Run-time
           protection
@@ -885,6 +854,8 @@
         items:  
         - name: Manage with PowerShell
           items:
+          - name: Get started with the unified SQL Vulnerability Assessment REST API
+            href: powershell-unified-api-quickstart.md
           - name: Enable vulnerability assessments on Azure SQL databases with the express configuration
             href: powershell-sample-vulnerability-assessment-azure-sql.md
           - name: Set up baselines for vulnerability assessments on Azure SQL databases
@@ -1019,6 +990,8 @@
           href: github-advanced-security-overview.md
         - name: Deploy GitHub Advanced Security integration
           href: github-advanced-security-deploy.md
+        - name: Deploy GitHub Advanced Security integration (Sandbox project)
+          href: github-advanced-security-deploy-sandbox.md
     - name: Onboard
       items:
         - name: Connect Azure DevOps environments

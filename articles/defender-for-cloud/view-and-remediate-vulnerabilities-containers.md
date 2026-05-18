@@ -47,4 +47,5 @@ For information on how to remediate the vulnerabilities, see [Remediate recommen
 
 ## Next step
 
-- Learn how to [view and remediate vulnerabilities for registry images](view-and-remediate-vulnerability-assessment-findings.md).
+> [!div class="nextstepaction"]
+> [View and remediate vulnerabilities for registry images](view-and-remediate-vulnerability-assessment-findings.md)

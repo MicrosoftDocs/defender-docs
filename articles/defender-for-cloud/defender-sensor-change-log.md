@@ -3,7 +3,7 @@ title: Defender Sensor for Defender for Containers Changelog
 description: Learn about the version history and updates for the Defender sensor in Microsoft Defender for Containers.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/17/2026
+ms.date: 04/29/2026
 ai-usage: ai-assisted
 ---
 
@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 The Sensor for Microsoft Defender for Containers release notes provides a detailed version history of sensor updates. Each version includes new features, improvements, and fixes to enhance functionality. Use this changelog to stay informed about the latest updates and plan your deployments accordingly.
 
-For more information about deploying the sensor in Defender for Containers, see [Configure Microsoft Defender for Containers components](defender-for-containers-enable.md).
+For more information about deploying the sensor in Defender for Containers, see [Configure Microsoft Defender for Containers components](defender-for-containers-enable-plan.md).
 
 To see the version of the sensor run:
 
@@ -33,7 +33,29 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 ## Sensor versions available per release
 
-### Sensor v0.10 (deployed by Helm or Arc for K8s in Preview mode)
+### Sensor v0.10 (deployed by Helm or Arc for K8s)
+
+**Sensor v0.10.5 — GA**
+
+- **Released:** May 2026
+
+- **What's included:**
+
+  - General Availability of runtime antimalware detection and blocking
+    
+  - General Availability of Bottlerocket OS support
+    
+  - Improved compatibility with Nexus Baremetal clusters
+    
+  - Upgraded Go and related dependencies to address security vulnerabilities and improve runtime stability
+    
+**Sensor v0.10.4 — Preview**
+
+- **Released:** April 2026
+ 
+- **What's included:**
+
+  - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
 
 **Sensor v0.10.3 — Preview**
 
@@ -52,11 +74,31 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 - **What's included:**
 
-  - Defender for containers runtime anti-malware. Learn more about [anti-malware detection and blocking](anti-malware.md).
+  - Defender for containers runtime antimalware. Learn more about [antimalware detection and blocking](anti-malware.md).
     
   - Binary drift blocking 
     
-### Sensor v0.9 (deployed by Helm or Arc for K8s in Preview mode)
+### Sensor v0.9 (AKS 1.35 or by Helm)
+
+**Sensor v0.9.58— GA**
+
+- **Released:** May 2026
+
+- **What's included:**
+
+  - General Availability of Bottlerocket OS support
+    
+  - Improved compatibility with Nexus Baremetal clusters
+    
+  - Upgraded Go and related dependencies to address security vulnerabilities and improve runtime stability
+    
+**Sensor v0.9.53— Preview**
+
+- **Released:** April 2026
+ 
+- **What's included:**
+
+  - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
 
 **Sensor v0.9.52— Preview**
 
@@ -102,15 +144,13 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
         
       - Various configuration and path fixes to ensure reliable log collection and prevent duplicate data. 
             
-
-
 **Sensor v0.9.50 – Preview**
 
 - **Released:** February 2026
-
 - **What's included:**
 
-  - Performance Improvements 
+  - Performance improvements
+    
     
 **Sensor v0.9.49 – Preview**
 
@@ -133,7 +173,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 - **What's included:**
   - Bug fixes and security enhancements   
   - Added support for new Defender endpoints (requires outbound access to `*.cloud-defender.microsoft.com`).  
-    Learn more in the [Defender for Containers setup guide](defender-for-containers-enable.md).
+    Learn more in the [Defender for Containers setup guide](defender-for-containers-enable-plan.md).
 
 **Sensor v0.9.17 – Preview**  
 - **Released:** June 2025  
@@ -146,7 +186,25 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
   - Improved memory efficiency and reduced CPU consumption  
   - Bug fixes and security enhancements  
     
-### Sensor v0.8 (relevant to all AKS supported versions and Arc for K8s)
+### Sensor v0.8 (AKS versions 1.34 and below)
+
+**Sensor v0.8.51 — GA**
+
+- **Released:** May 2026
+
+- **What's included:**
+
+  - Improved compatibility with Nexus Baremetal clusters
+    
+  - Upgraded Go and related dependencies to address security vulnerabilities and improve runtime stability
+    
+**Sensor v0.8.50 — GA**
+
+- **Released:** April 2026
+ 
+- **What's included:**
+
+  - Upgraded Go and related dependencies and libraries to address security vulnerabilities and improve runtime stability
 
 **Sensor v0.8.49 — GA**
 
@@ -201,11 +259,12 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
   - Bug fixes and security enhancements  
   - Gated deployment: Now globally available  
   - Added support for new Defender endpoints (requires outbound access to `*.cloud-defender.microsoft.com`).  
-    Learn more about network requirements in the [Defender for Containers setup guide](defender-for-containers-enable.md).
+    Learn more about network requirements in the [Defender for Containers setup guide](defender-for-containers-enable-plan.md).
 
 **Sensor v0.8.30 – GA**  
 - **Released:** August 2025  
 - **What's included:**
+
   - Better memory efficiency and reduced CPU consumption  
   - Bug fixes and security enhancements  
     

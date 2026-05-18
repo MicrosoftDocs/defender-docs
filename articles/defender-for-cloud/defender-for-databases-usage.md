@@ -1,7 +1,7 @@
 ---
 title: Respond to Defender open-source database alerts
 description: Configure Microsoft Defender for open-source relational databases to detect potential security threats.
-ms.date: 07/31/2025
+ms.date: 04/20/2026
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
@@ -15,7 +15,6 @@ Microsoft Defender for Cloud detects anomalous activities indicating unusual and
 
 - [Azure Database for PostgreSQL](/azure/postgresql/)
 - [Azure Database for MySQL](/azure/mysql/)
-- [Azure Database for MariaDB](/azure/mariadb/)
 
 
 And for RDS instances on AWS (Preview):
@@ -37,7 +36,7 @@ Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - You must [enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
@@ -77,7 +76,7 @@ Defender for Cloud sends email notifications when it detects anomalous database 
 > [!TIP]
 > For a detailed tutorial on how to handle your alerts, see [Manage and respond to alerts](tutorial-security-incident.md).
 
-## Next step
+## Related content
 
 - [Automate responses to Defender for Cloud triggers](workflow-automations.md)
 - [Stream alerts to a SIEM, SOAR, or ITSM solution](export-to-siem.md)

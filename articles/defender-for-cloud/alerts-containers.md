@@ -1,88 +1,67 @@
 ---
-title: Alerts for Kubernetes Clusters
-description: This article lists the security alerts for containers and Kubernetes clusters visible in Microsoft Defender for Cloud.
+title: Kubernetes alerts in Defender for Containers
+description: Learn about Kubernetes alert detection in Microsoft Defender for Containers and how to simulate Kubernetes alerts.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 06/03/2024
+ms.date: 05/18/2026
 ai-usage: ai-assisted
 ---
 
 # Alerts for Kubernetes Clusters
 
-Defender for Containers provides enhanced alert capabilities for threats to the Kubernetes control plane and workload runtime. Microsoft Defender for Endpoint (MDE) and Microsoft Defender Threat Intelligence also detect threats relevant to Kubernetes containers, and combined with the Defender sensor, give enriched context for comprehensive and actionable alerts to safeguard your Kubernetes environment.
+Microsoft Defender for Containers generates security alerts for Kubernetes clusters and workloads by monitoring both the control plane and the runtime environment. To validate alert generation, you can use the Kubernetes alerts simulation tool to trigger representative alerts.
+
+The alerts available in an environment depend on the Kubernetes distribution (AKS, EKS, GKE, or Arc-enabled), the installed components, and the specific activities being monitored.
 
 ## Control plane detection
 
-In Kubernetes, the control plane manages and orchestrates all the resources within the cluster. Defender for Containers identifies potential threats in the control plane that can compromise the security and integrity of the entire cluster by monitoring the activities of the Kubernetes API server. Critical events are captured that indicate potential security threats, such as suspicious operations by service accounts or exposure of services.
+The Kubernetes control plane manages and orchestrates all resources within the cluster. Defender for Containers monitors Kubernetes API server activity to identify suspicious operations that might affect cluster security.
 
-Examples of suspicious operations captured by Defender for Containers include:
+Examples of suspicious control plane operations include:
 
-* **Privileged container deployments** can be a security risk as they grant containers elevated privileges within the host system. Privileged containers are monitored for unauthorized deployments, excessive use of privileges, and potential misconfigurations that could lead to security breaches.
-* **Risky service exposures to the public Internet** can expose the Kubernetes cluster to potential attacks. The cluster is monitored for services that are unintentionally exposed, misconfigured with overly permissive access controls, or lacking proper security measures.
-* **Suspicious service account activities** can indicate unauthorized access or malicious behavior within the cluster. The cluster is monitored for unusual patterns such as excessive resource requests, unauthorized API calls, or access to sensitive data.
+- **Privileged container deployments:** Monitoring for unauthorized deployments or excessive use of privileges that could lead to host-system breaches.
+- **Risky service exposures:** Identifying services unintentionally exposed to the public Internet or lacking proper access controls.
+- **Suspicious service account activities:** Detecting unusual patterns such as excessive resource requests or unauthorized API calls.
 
 ## Workload runtime detection
 
-Defender for Containers uses the [Defender sensor](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) to monitor the Kubernetes workload runtime activity to detect suspicious operations, including workload process creation events.
+Defender for Containers uses the [Defender sensor](defender-for-containers-introduction.md#run-time-protection-for-kubernetes-nodes-and-clusters) to monitor workload runtime activity and detect suspicious process creation or network behavior.
 
-Examples of suspicious workload runtime activity include:
+Key detection categories include:
 
-* **Web shell activity** - Defender for Containers monitors the activity on the running containers to identify behaviors that resemble web shell invocations.
-* **Crypto mining activity** - Defender for Containers uses several heuristics to identify crypto mining activity on the running containers, including suspicious download activity, CPU optimization, suspicious process execution, and more.
-* **Network scanning tools** – Defender for Containers identifies usage of scanning tools that have been used for malicious activities.
-* **Binary drift detection** - Defender for Cloud identifies execution of workload binaries that have drifted from the original container image. For more information, read about [Binary drift detection](binary-drift-detection.md).
+- **Web shell activity:** Detects behaviors that resemble web shell invocations on running containers.
+- **Crypto mining activity:** Detects behavior associated with crypto mining, such as CPU optimization patterns, suspicious download activity, and known mining processes.
+- **Network scanning tools:** Detects tools commonly used for malicious reconnaissance.
+- **Binary drift detection:** Detects workload binaries that have drifted from the original container image. To learn more, see [Binary drift detection](binary-drift-detection.md).
 
 ## Kubernetes alerts simulation tool
 
-Defender for Containers provides a tool to simulate various attack scenarios within your Kubernetes environment, causing alerts to be generated. The simulation tool deploys two pods in a target cluster: *attacker* and *victim*. During the simulation, the attacker "attacks" the victim using real-world techniques.
+Defender for Containers provides an open-source, Python-based CLI tool that simulates Kubernetes attack scenarios and helps you verify that Kubernetes security alerts are generated.
 
-> [!Note]
-> Although the simulation tool doesn't run any malicious components, it's recommended to run it on a dedicated cluster without production workloads.
+The simulation tool is maintained in the [Defender for Cloud Attack Simulation GitHub repository](https://github.com/microsoft/Defender-for-Cloud-Attack-Simulation). To review the latest prerequisites, installation steps, available scenarios, and expected alerts, see the repository README.
 
-The simulation tool runs using a Python-based CLI that deploys Helm charts in the target cluster.
+> [!NOTE]
+> The simulation tool doesn't contain malicious code. Run it on a dedicated test cluster instead of a production cluster.
 
-### Install the simulation tool
+After you run the simulation, some alerts are generated in near real time. Others can take up to an hour to appear.
 
-1. Prerequisites:
+To review generated alerts:
 
-   * A user with admin permissions over the target cluster.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
-   * Defender for Containers is enabled and the Defender sensor is also installed. You can check that the Defender sensor is installed by running:
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
 
-        `kubectl get ds microsoft-defender-collector-ds -n kube-system`
+1. Review alerts related to the simulated cluster and scenario.
 
-   * A Helm client is installed on your local machine.
+> [!NOTE]
+> The simulation tool deploys test resources to the cluster. After you finish testing, remove those resources according to your organization's test environment procedures.
 
-   * Python version 3.7 or above is installed on your local machine.
+## Related content
 
-1. Point `kubeconfig` to the target cluster. For Azure Kubernetes Service, you can run:
-    
-    `az aks get-credentials --name [cluster-name] --resource-group [resource-group]`
+- [Validate alerts in Microsoft Defender for Cloud](alert-validation.md)
 
-1. Download the simulation tool with the following command:  
-    
-    `curl -O https://raw.githubusercontent.com/microsoft/Defender-for-Cloud-Attack-Simulation/refs/heads/main/simulation.py`
+- [Overview of Microsoft Defender for Containers](defender-for-containers-introduction.md)
 
-### Run the simulation tool
-
-1. Run the simulation script with the following command:
-    `python simulation.py`
-
-1. Choose a simulated attack scenario or choose to simulate all of the attack scenarios at once. The available simulated attack scenarios are:
-    
-| Scenario | Expected alerts |
-|--|--|
-| **Reconnaissance** | Possible Web Shell activity detected <br/> Suspicious Kubernetes service account operation detected <br/> Network scanning tool detected  |
-| **Lateral Movement** | Possible Web Shell activity detected <br/> Access to cloud metadata service detected  |
-| **Secrets Gathering** | Possible Web Shell activity detected <br/> Sensitive files access detected <br/> Possible secret reconnaissance detected  |
-| **Crypto mining** | Possible Web Shell activity detected <br/> Kubernetes CPU optimization detected <br/> Command within a container accessed `ld.so.preload` <br/> Possible Crypto miners download detected <br/> A drift binary detected executing in the container |
-| **Web shell** | Possible Web Shell activity detected|
-
-> [!Note]
-> While some alerts are triggered in near real-time, others may take up to an hour.
-
-## Next steps
-
-- [Security alerts in Microsoft Defender for Cloud](alerts-overview.md)
 - [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md)
+
 - [Continuously export Defender for Cloud data](continuous-export.md)

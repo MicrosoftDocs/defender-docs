@@ -497,7 +497,7 @@ For more information about Defender for Cloud Regulatory Compliance offering, [L
 
 January 30, 2025
 
-We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#preview-container-images-in-azure-registry-should-have-vulnerability-findings-resolved), [AWS](recommendations-reference-container.md#preview-container-images-in-aws-registry-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#preview-container-images-in-gcp-registry-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
+We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#azure-registry-container-images-should-have-vulnerabilities-resolved-powered-by-microsoft-defender-vulnerability-management), [AWS](recommendations-reference-container.md#aws-registry-container-images-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#gcp-registry-container-images-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
 
 **What's Changing?**
 
@@ -1585,7 +1585,7 @@ April 15, 2024
 
 Runtime threat detection and agentless discovery for AWS and GCP in Defender for Containers are now generally available. In addition, there's a new authentication capability in AWS which simplifies provisioning.
 
-Learn more about [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) and how to [configure Defender for Containers components](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-eks#deploy-the-defender-sensor).
+Learn more about [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) and how to [configure Defender for Containers components](defender-for-containers-enable-plan.md).
 
 ### Update: Risk prioritization
 
@@ -2375,7 +2375,7 @@ Microsoft Defender for Cloud now supports the latest [CIS Azure Security Foundat
 
 ### Change to the Log Analytics daily cap
 
-Azure monitor offers the capability to [set a daily cap](/azure/azure-monitor/logs/daily-cap) on the data that is ingested on your Log analytics workspaces. However, Defenders for Cloud security events are currently not supported in those exclusions.
+Azure monitor offers the capability to [set a daily cap](/azure/azure-monitor/logs/daily-cap) on the data that is ingested on your Log analytics workspaces. However, Defender for Cloud security events are currently not supported in those exclusions.
 
 The Log Analytics Daily Cap no longer excludes the following set of data types:
 
@@ -3116,7 +3116,7 @@ In a scenario where activity from a suspicious IP address is detected, one of th
 
 ### Alerts automatic export to Log Analytics workspace have been deprecated
 
-Defenders for Cloud security alerts are automatically exported to a default Log Analytics workspace on the resource level. This causes an indeterministic behavior and therefore we have deprecated this feature.
+Defender for Cloud security alerts are automatically exported to a default Log Analytics workspace on the resource level. This causes an indeterministic behavior and therefore we have deprecated this feature.
 
 Instead, you can export your security alerts to a dedicated Log Analytics workspace with [Continuous Export](continuous-export.md).
 
@@ -3743,7 +3743,7 @@ Learn more about [viewing vulnerabilities for running images](defender-for-conta
 
 Defender for Cloud now includes preview support for the [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) (AMA). AMA is intended to replace the legacy Log Analytics agent (also referred to as the Microsoft Monitoring Agent (MMA)), which is on a path to deprecation. AMA [provides many benefits](/azure/azure-monitor/agents/agents-overview#benefits) over legacy agents.
 
-In Defender for Cloud, when you [enable autoprovisioning for AMA](auto-deploy-azure-monitoring-agent.md), the agent is deployed on **existing and new** VMs and Azure Arc-enabled machines that are detected in your subscriptions. If Defenders for Cloud plans are enabled, AMA collects configuration information and event logs from Azure VMs and Azure Arc machines. The AMA integration is in preview, so we recommend using it in test environments, rather than in production environments.
+In Defender for Cloud, when you [enable autoprovisioning for AMA](auto-deploy-azure-monitoring-agent.md), the agent is deployed on **existing and new** VMs and Azure Arc-enabled machines that are detected in your subscriptions. If Defender for Cloud plans are enabled, AMA collects configuration information and event logs from Azure VMs and Azure Arc machines. The AMA integration is in preview, so we recommend using it in test environments, rather than in production environments.
 
 ### Deprecated VM alerts regarding suspicious activity related to a Kubernetes cluster
 
@@ -3786,7 +3786,7 @@ The new security agent is a Kubernetes DaemonSet, based on eBPF technology and i
 
 The security agent enablement is available through autoprovisioning, recommendations flow, AKS RP or at scale using Azure Policy.
 
-You can [deploy the Defender agent](./defender-for-containers-enable.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#deploy-the-defender-sensor) today on your AKS clusters.
+You can [deploy the Defender agent](./defender-for-containers-enable-plan.md) today on your AKS clusters.
 
 With this announcement, the runtime protection - threat detection (workload) is now also generally available.
 
@@ -3984,7 +3984,7 @@ Learn how [JIT protects your AWS EC2 instances](just-in-time-access-overview.md)
 
 ### Add and remove the Defender sensor for AKS clusters using the CLI
 
-The [Defender agent](defender-for-cloud-glossary.md#defender-sensor) is required for Defender for Containers to provide the runtime protections and collects signals from nodes. You can now use the Azure CLI to [add and remove the Defender agent](defender-for-containers-enable.md?tabs=k8s-deploy-cli%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Ck8s-remove-cli&pivots=defender-for-container-aks#use-the-azure-cli-to-deploy-the-defender-sensor) for an AKS cluster.
+The [Defender agent](defender-for-cloud-glossary.md#defender-sensor) is required for Defender for Containers to provide the runtime protections and collects signals from nodes. You can now use the Azure CLI to [add and remove the Defender agent](defender-for-containers-deploy-azure-cli.md) for an AKS cluster.
 
 > [!NOTE]
 > This option is included in [Azure CLI 3.7 and above](/cli/azure/update-azure-cli).
@@ -4224,7 +4224,7 @@ Updates in February include:
 
 Defender for Containers previously only protected Kubernetes workloads running in Azure Kubernetes Service. We've now extended the protective coverage to include Azure Arc-enabled Kubernetes clusters.
 
-Learn how to [set up your Kubernetes workload protection](kubernetes-workload-protections.md#set-up-your-workload-protection) for AKS and Azure Arc enabled Kubernetes clusters.
+Learn how to [set up your Kubernetes workload protection](kubernetes-workload-protections.md) for AKS and Azure Arc enabled Kubernetes clusters.
 
 ### Native CSPM for GCP and threat protection for GCP compute instances
 
@@ -4439,7 +4439,7 @@ The new plan is free for the month of December 2021. For the potential changes t
 For more information, see:
 
 - [Overview of Microsoft Defender for Containers](defender-for-containers-introduction.md)
-- [Enable Microsoft Defender for Containers](defender-for-containers-enable.md)
+- [Enable Microsoft Defender for Containers](defender-for-containers-enable-plan.md)
 - [Introducing Microsoft Defender for Containers - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/introducing-microsoft-defender-for-containers/ba-p/2952317)
 - [Microsoft Defender for Containers | Defender for Cloud in the Field #3 - YouTube](https://www.youtube.com/watch?v=KeH0a3enLJ0&t=201s)
 
