@@ -9,7 +9,7 @@ zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to configure cloud scopes and unified RBAC to manage access and permissions across my cloud environments.
 ---
 
-# Manage cloud scopes and unified role-based access control
+# Manage cloud scopes and unified role-based access control (preview)
 
 ::: zone pivot="defender-portal"
 

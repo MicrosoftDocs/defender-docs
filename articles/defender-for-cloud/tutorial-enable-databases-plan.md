@@ -2,7 +2,7 @@
 title: Protect your databases with Defender for Databases
 description: Learn how to enable the Databases plan on your Azure subscription for Microsoft Defender for Cloud to enhance your database security.
 ms.topic: how-to
-ms.date: 09/28/2025
+ms.date: 04/20/2026
 #customer intent: As a database administrator, I want to enable Defender for Databases so that I can enhance the security of my databases.
 ---
 
@@ -16,7 +16,7 @@ Defender for Databases includes four offerings that relate to database types:
 
 - [Microsoft Defender for SQL Servers on Machines](defender-for-sql-usage.md): Offers security for SQL servers running on virtual machines or physical servers. You can also [enable it on a Log Analytics workspace](enable-plan-workspace.md) for enhanced monitoring and threat detection.
 
-- [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md): Offers security for open-source relational databases such as PostgreSQL, MySQL, and MariaDB by providing continuous monitoring and threat detection.
+- [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md): Offers security for open-source relational databases such as PostgreSQL and MySQL by providing continuous monitoring and threat detection.
 
 - [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md): Offers security for Azure Cosmos DB by providing threat protection and real-time alerts to help safeguard your data.
 
@@ -26,7 +26,7 @@ These four database protection plans are priced separately. Find more info about
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 

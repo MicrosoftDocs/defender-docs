@@ -5,7 +5,7 @@ ms.author: elkrieger
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 06/10/2025
+ms.date: 04/30/2026
 ms.custom: references_regions
 #customer intent: As a security professional, I want to learn how agentless code scanning in Microsoft Defender for Cloud can help identify vulnerabilities in my code and IaC configurations.
 ---
@@ -73,7 +73,7 @@ Agentless code scanning uses various open-source tools to find vulnerabilities a
 | **[Bandit](https://github.com/PyCQA/bandit)**            |Python                                                       | [Apache 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE)  |
 | **[ESLint](https://github.com/eslint/eslint)**            |JavaScript, TypeScript, JSX, TSX                             | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE)         |
 | **[Trivy](https://www.github.com/aquasecurity/trivy/)**|Dependency and OS package vulnerability scanning from repository manifests and lockfiles (filesystem mode) |[Apache 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE)|
-| **[Syft](https://github.com/anchore/syft/)**|Alpine (apk), Bitnami packages, C (conan), C++ (conan), Dart (pubs), Debian (dpkg), Dotnet (deps.json), Objective-C (cocoapods), Elixir (mix), Erlang (rebar3), Go (go.mod, Go binaries), GitHub (workflows, actions), Haskell (cabel, stack), Java (jar, ear, war, par, sar, nar, rar, native-image), JavaScript (npm, yarn), Jenkins Plugins (jpi, hpi), Linux kernel archives (vmlinz), Linux kernel modules (ko), Nix (outputs in /nix/store), PHP (composer, PECL, Pear), Python (wheel, egg, poetry, requirements.txt, uv), Red Hat (rpm), Ruby (gem), Rust (cargo.lock, auditable binary), Swift (cocoapods, swift-package-manager), Wordpress plugins, Terraform providers (.terraform.lock.hcl) | [Apache 2.0](https://github.com/anchore/syft/blob/main/LICENSE)|
+| **[Syft](https://github.com/anchore/syft/)**|Alpine (apk), Bitnami packages, C (conan), C++ (conan), Dart (pubs), Debian (dpkg), Dotnet (deps.json), Objective-C (cocoapods), Elixir (mix), Erlang (rebar3), Go (go.mod, Go binaries), GitHub (workflows, actions), Haskell (cabal, stack), Java (jar, ear, war, par, sar, nar, rar, native-image), JavaScript (npm, yarn), Jenkins Plugins (jpi, hpi), Linux kernel archives (vmlinuz), Linux kernel modules (ko), Nix (outputs in /nix/store), PHP (composer, PECL, Pear), Python (wheel, egg, poetry, requirements.txt, uv), Red Hat (rpm), Ruby (gem), Rust (cargo.lock, auditable binary), Swift (cocoapods, swift-package-manager), Wordpress plugins, Terraform providers (.terraform.lock.hcl) | [Apache 2.0](https://github.com/anchore/syft/blob/main/LICENSE)|
 
 
 These tools support a wide range of languages and infrastructure-as-code (IaC) frameworks, ensuring thorough security analysis across your codebase.

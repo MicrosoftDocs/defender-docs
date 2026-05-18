@@ -24,10 +24,6 @@ By default attack paths are organized by risk level. The risk level is determine
 
 ::: zone pivot="defender-portal"
 
-> [!NOTE] 
-> This capability is currently in preview.   
-> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
-
 ::: zone-end
 
 ## Prerequisites
@@ -43,7 +39,7 @@ By default attack paths are organized by risk level. The risk level is determine
 
 - You must [enable agentless container posture extension](tutorial-enable-cspm-plan.md) in Defender CSPM
     or
-- You can [enable Defender for Containers](defender-for-containers-enable.md), and install the relevant agents in order to view attack paths that are related to containers. This also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query) containers data plane workloads in security explorer.
+- You can [enable Defender for Containers](defender-for-containers-enable-plan.md), and install the relevant agents in order to view attack paths that are related to containers. This also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query) containers data plane workloads in security explorer.
 
 - **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 

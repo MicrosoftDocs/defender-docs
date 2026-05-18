@@ -20,7 +20,7 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 > - If you use a previous version of File Integrity Monitoring with the Log Analytics agent (Microsoft Monitoring agent (MMA)) or the Azure Monitor agent (AMA), you can [migrate to the new File Integrity Monitoring experience](migrate-file-integrity-monitoring.md).
 > - File Integrity Monitoring powered by Microsoft Defender for Endpoint requires a minimum agent version. [Update the agent](#verify-defender-for-endpoint-client-version) as needed.
 >   - **Windows (legacy machines/downlevel clients)**: Defender for Servers Windows client (MDE agent) version 10.8799 or later.
->   - **Linux**: 30.124082 or later.
+>   - **Linux**: 30.124082 or later. For known Linux sensor behavior limitations, see [Considerations and limitations](#considerations-and-limitations).
 
 ## Prerequisites
 
@@ -142,7 +142,12 @@ Disable as follows:
 
 1. Select **Save**.
 
-## Next step
+## Considerations and limitations
+
+The current Linux sensor doesn't distinguish between Create and Modify actions.
+It identifies both as Modify actions. As a result, when a new file is created, the event is logged as a Modify event rather than a Create event.
+
+## Related content
 
 - Events collected for File Integrity Monitoring are included in the data types eligible for the 500-MB benefit for Defender for Servers Plan 2 customers. [Learn more about the benefit](data-ingestion-benefit.md).
 - [Review changes](file-integrity-monitoring-review-changes.md) in File Integrity Monitoring.

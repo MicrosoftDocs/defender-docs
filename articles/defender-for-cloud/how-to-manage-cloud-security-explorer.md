@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Build queries with cloud security explorer
 
-Defenders for Cloud's contextual security capabilities help security teams reduce the risk of significant breaches. Defender for Cloud uses environmental context to assess security issues, identify the biggest risks, and distinguish them from less risky issues. The cloud security explorer uses snapshot publishing, a method of publishing data at regular intervals known as snapshots. Snapshots ensure that the workload configuration data is refreshed daily, keeping it fresh and accurate.
+Defender for Cloud's contextual security capabilities help security teams reduce the risk of significant breaches. Defender for Cloud uses environmental context to assess security issues, identify the biggest risks, and distinguish them from less risky issues. The cloud security explorer uses snapshot publishing, a method of publishing data at regular intervals known as snapshots. Snapshots ensure that the workload configuration data is refreshed daily, keeping it fresh and accurate.
 
 Use the cloud security explorer to identify security risks in your cloud environment. Run graph-based queries on the cloud security graph, Defender for Cloud's context engine. Prioritize your security team's concerns while considering your organization's specific context and conventions.
 
