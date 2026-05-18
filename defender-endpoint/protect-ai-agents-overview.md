@@ -30,7 +30,7 @@ Defender for Endpoint automatically detects supported AI coding agents running l
 
 For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents).
 
-## AI agent runtime protection
+## AI coding agent runtime protection
 
 Beyond discovery, Defender for Endpoint provides runtime protection for AI coding agents with Microsoft Defender Antivirus. When enabled, Defender Antivirus intercepts events in the agent's execution loop, such as user prompts, pre-tool calls, and post-tool responses, and scans them for cross-prompt injection attacks (XPIA) and sensitive data leakage.
 
@@ -79,9 +79,9 @@ The following table compares the agent hooks and network inspection protection a
 
 See the [enforcement, response and investigation considerations](configure-ai-agent-runtime-protection.md#enforcement-response-and-investigation-considerations) to learn how Defender Antivirus enforces these protections and what happens when a threat is detected.
 
-### Protection modes
+## Protection modes
 
-You can configure each approach independently in one of three modes:
+Agent runtime protection can be configured in three modes. The mode you choose determines how Defender Antivirus responds when it detects a threat in agent activity.
 
 | Mode | Behavior |
 |---|---|
@@ -89,7 +89,7 @@ You can configure each approach independently in one of three modes:
 | **AuditMode** | Scans agent activity and generates alerts in Microsoft Defender XDR, but doesn't block the agent. |
 | **Disabled** | Turns off the protection. |
 
-### Enforcement methods and outcome
+## Enforcement methods and outcome
 
 Defender Antivirus enforces runtime protection settings based on the configured protection mode. Choose your enforcement mode based on your organization's security posture and tolerance for blocking agent actions.
 
@@ -100,7 +100,7 @@ Defender Antivirus enforces runtime protection settings based on the configured 
 | **Network inspection protection** | Network-layer interception | Enabled (Block) | Defender Antivirus blocks the agent action. An alert is sent to Microsoft Defender XDR. |
 | **Network inspection protection** | Network-layer interception | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender XDR for security team review. |
 
-#### Enforcement, response and investigation considerations
+### Enforcement, response and investigation considerations
 
 When a threat is detected by either protection method, the alert appears in the Microsoft Defender portal as part of the device timeline and is correlated into incidents. Your security team can investigate these alerts using familiar workflows in Microsoft Defender XDR, such as reviewing the device timeline, examining related alerts and entities, and taking response actions.
 
@@ -109,7 +109,7 @@ As a security administrator, here's what you need to know about how these protec
 - **Single-path enforcement prevents duplicate scanning**: When you enable both agent hooks protection and network inspection protection, Defender Antivirus uses intelligent single-path enforcement. Hooks handle the supported agents, and network inspection protects other agents. This approach avoids redundant scanning and keeps performance overhead minimal.
 - **Multiple protection layers work together**: Runtime protection works alongside your existing security controls. Both settings are protected by [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection), which prevents unauthorized changes. If you've configured Microsoft Purview data loss prevention (DLP) policies, they act as an additional layer by evaluating payloads for sensitive data independently.
 - **You control the enforcement mode**: Start with **AuditMode** to monitor threats and understand what your agents are doing without blocking them. This lets you see what would be blocked before enabling Block mode. After your security team reviews the alerts, you can switch to **Block** mode for production enforcement.
-- **Detections focus on realistic threats**: Runtime protection detects meaningful threats to AI agents:
+- **Detections focus on realistic threats**: Runtime protection detects meaningful threats to AI coding agents:
   - **Cross-prompt injection attacks (XPIA)**: Attempts to manipulate agents through injected instructions.
   - **Sensitive data leakage**: Agent actions that attempt to access or expose sensitive information.
 - **Investigation is built into your workflow**: When threats are detected, alerts appear in the Microsoft Defender portal as part of the device timeline and are correlated into incidents. Your security team uses the same investigation workflows they're familiar with for other endpoint detections. For more information, see [View and investigate alerts in Microsoft Defender for Endpoint](/defender-endpoint/investigate-alerts).
