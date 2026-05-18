@@ -8,6 +8,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
 description: "Admins can configure where user reported messages go for analysis: to an internal reporting mailbox, to Microsoft, or both. Other settings complete the reporting experience for users when they report good messages, spam, or phishing messages from Outlook."
 ms.service: defender-office-365
 ms.date: 02/26/2026

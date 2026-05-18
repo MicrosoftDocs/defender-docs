@@ -13,6 +13,7 @@ ms.date: 06/25/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 
 ---
 # Manage automation file uploads

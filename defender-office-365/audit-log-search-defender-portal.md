@@ -8,8 +8,9 @@ ms.collection:
   - tier2
 ms.localizationpriority: medium
 ms.assetid:
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can use the Audit page in the Microsoft Defender portal to search the unified audit log for user and admin actions in the organization.
 ms.service: defender-office-365
 ms.date: 10/9/2023

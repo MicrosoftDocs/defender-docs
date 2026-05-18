@@ -10,6 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can learn how to view, create, modify, and delete outbound spam policies in Microsoft 365.
 ms.service: defender-office-365
 ms.date: 12/17/2025

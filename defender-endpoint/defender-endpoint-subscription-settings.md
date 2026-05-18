@@ -12,6 +12,7 @@ ms.reviewer: shlomiakirav, efratka
 ms.collection: 
 - M365-security-compliance
 - m365initiative-defender-endpoint
+ms.custom: sfi-ga-nochange
 ---
 
 # Manage Microsoft Defender for Endpoint subscription settings across client devices

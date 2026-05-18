@@ -9,7 +9,9 @@ ms.collection:
   - m365-security
   - tier2
 description: Learn about how to define Safe Attachments policies to protect your organization from malicious files in email.
-ms.custom: seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ms.date: 06/17/2025
 appliesto:

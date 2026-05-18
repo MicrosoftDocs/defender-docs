@@ -15,6 +15,7 @@ ms.date: 05/19/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Configure Microsoft Defender for Endpoint on iOS features

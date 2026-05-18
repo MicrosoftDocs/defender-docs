@@ -11,7 +11,9 @@ ms.collection:
 - must-keep
 ms.topic: reference
 ms.subservice: reference
-ms.custom: api
+ms.custom:
+  - api
+  - sfi-ga-nochange
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint

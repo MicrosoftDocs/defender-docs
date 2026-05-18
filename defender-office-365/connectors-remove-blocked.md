@@ -9,6 +9,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to remove connectors from the Restricted entities page in the Microsoft Defender portal. Connectors are added to the Restricted entities page after signs of compromise.
 ms.service: defender-office-365
 ms.date: 6/14/2023

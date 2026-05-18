@@ -9,7 +9,9 @@ ms.localizationpriority: high
 ms.collection:
 - m365-security
 - tier1
-ms.custom: intro-overview
+ms.custom:
+  - intro-overview
+  - sfi-image-nochange
 ms.topic: install-set-up-deploy
 ms.subservice: ngp
 ms.date: 10/20/2025

@@ -10,7 +10,8 @@ ms.collection:
   - tier2
 description: Admins can learn how to find and use the Defender for Office 365 reports that are available in the Microsoft Defender portal.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-image-nochange
 ms.service: defender-office-365
 ms.date: 4/27/2026
 appliesto:

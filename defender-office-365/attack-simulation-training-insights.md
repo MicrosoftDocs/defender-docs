@@ -9,6 +9,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - sfi-image-nochange
 description: Admins can learn how Attack simulation training in the Microsoft Defender portal affects users and can gain insights from simulation and training outcomes.
 ms.date: 04/23/2026
 appliesto:

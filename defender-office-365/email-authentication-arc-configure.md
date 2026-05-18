@@ -9,6 +9,8 @@ ms.collection:
   - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
+  - sfi-image-nochange
 description: Authenticated Received Chain (ARC) is an email authentication method that tries to preserve authentication results across devices and any message modification that occurs between the sender and recipient.
 ms.service: defender-office-365
 ms.date: 02/11/2026

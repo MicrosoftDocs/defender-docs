@@ -12,6 +12,8 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
+  - sfi-image-nochange
 description: Learn how Microsoft 365 uses DomainKeys Identified Mail (DKIM) to sign outbound mail, and how to configure DKIM signing of outbound mail using custom domains.
 ms.service: defender-office-365
 appliesto:

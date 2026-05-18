@@ -13,6 +13,7 @@ ms.collection:
 - mde-ios
 ms.topic: reference
 ms.subservice: ios
+ms.custom: sfi-image-nochange
 ---
 
 # User Experiences in Microsoft Defender for Endpoint on iOS

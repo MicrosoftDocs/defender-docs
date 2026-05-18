@@ -8,6 +8,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-image-nochange
 description: SecOps personnel can learn how to use the Incidents queue in Microsoft Defender XDR to manage incidents in Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 12/23/2025

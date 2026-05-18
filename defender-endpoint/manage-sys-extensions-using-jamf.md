@@ -13,6 +13,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 ms.date: 03/26/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Manage system extensions using Jamf

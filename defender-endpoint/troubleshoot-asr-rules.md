@@ -6,9 +6,10 @@ ms.localizationpriority: medium
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yongrhee
-ms.custom: 
-- mde-asr
-- admindeeplinkDEFENDER
+ms.custom:
+  - mde-asr
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 ms.topic: troubleshooting-general
 ms.subservice: asr
 ms.collection: 

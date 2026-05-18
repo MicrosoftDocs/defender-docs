@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
+ms.custom: sfi-image-nochange
 ---
 
 # Data collection for advanced troubleshooting on Windows

@@ -13,6 +13,7 @@ ms.date: 05/28/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 
 ---
 # Manage endpoint security policies in Microsoft Defender for Endpoint

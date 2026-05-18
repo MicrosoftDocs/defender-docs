@@ -7,7 +7,9 @@ ms.localizationpriority: medium
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: sugamar
-ms.custom: asr
+ms.custom:
+  - asr
+  - sfi-image-nochange
 ms.topic: how-to
 ms.collection:
  - m365-security

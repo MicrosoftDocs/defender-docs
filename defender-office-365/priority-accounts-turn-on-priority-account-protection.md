@@ -9,6 +9,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to turn on priority account protection in Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
 appliesto:

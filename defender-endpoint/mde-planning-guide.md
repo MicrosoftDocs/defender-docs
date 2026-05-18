@@ -12,7 +12,9 @@ ms.collection:
   - highpri
   - tier1
   - essentials-get-started
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.topic: get-started
 ms.subservice: onboard
 ms.date: 06/19/2025

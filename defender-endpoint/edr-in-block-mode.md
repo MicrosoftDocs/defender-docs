@@ -9,9 +9,10 @@ ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
 ms.custom:
-- next-gen
-- mde-edr
-- admindeeplinkDEFENDER
+  - next-gen
+  - mde-edr
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.date: 10/20/2025
 ms.collection: 
 - m365-security

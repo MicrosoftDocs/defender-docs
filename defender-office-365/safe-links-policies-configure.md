@@ -9,6 +9,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to view, create, modify, and delete Safe Links policies in Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 05/08/2026

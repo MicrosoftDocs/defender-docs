@@ -15,6 +15,7 @@ ms.date: 04/12/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 ---
 
 # Troubleshooting issues on Microsoft Defender for Endpoint on Android

@@ -15,6 +15,9 @@ ms.subservice: ngp
 ms.reviewer: mkaminska, yongrhee
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 
 ---
 # Device health, Microsoft Defender Antivirus health report

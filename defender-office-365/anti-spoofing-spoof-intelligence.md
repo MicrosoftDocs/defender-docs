@@ -10,6 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can learn about the spoof intelligence insight in Microsoft 365.
 ms.service: defender-office-365
 ms.date: 07/03/2025

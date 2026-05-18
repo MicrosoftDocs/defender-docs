@@ -9,8 +9,9 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins use the impersonation insight in Microsoft Defender for Office 365 to view information about the senders and sender domains that are detected as impersonation attempts over the last week by anti-phishing policies.
-ms.custom: 
-- seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ms.date: 11/2/2023
 appliesto:

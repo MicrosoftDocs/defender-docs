@@ -9,6 +9,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to create, modify, and delete the anti-phishing policies for all cloud mailboxes.
 ms.service: defender-office-365
 ms.date: 04/08/2025

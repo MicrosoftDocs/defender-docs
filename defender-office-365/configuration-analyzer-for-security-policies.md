@@ -10,6 +10,8 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 description: Admins can learn how to use the configuration analyzer to find and fix threat policies that are less secure than Standard protection and Strict protections in preset security policies.
 ms.service: defender-office-365
 ms.date: 1/29/2024

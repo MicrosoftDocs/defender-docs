@@ -12,7 +12,9 @@ ms.collection:
 - must-keep
 ms.topic: reference
 ms.subservice: reference
-ms.custom: api
+ms.custom:
+  - api
+  - sfi-image-nochange
 ms.date: 01/08/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

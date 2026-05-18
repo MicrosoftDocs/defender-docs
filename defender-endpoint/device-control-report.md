@@ -15,6 +15,7 @@ ms.collection:
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 
 ---
 # View device control events and information in Microsoft Defender for Endpoint

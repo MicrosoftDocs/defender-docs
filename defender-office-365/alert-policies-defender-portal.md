@@ -8,8 +8,9 @@ ms.collection:
   - tier2
 ms.localizationpriority: medium
 ms.assetid:
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can use the Alert policy page in the Microsoft Defender portal to view and create alert policies to trigger alerts when the specified actions occur.
 ms.service: defender-office-365
 ms.date: 05/29/2025

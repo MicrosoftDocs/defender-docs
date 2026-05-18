@@ -8,6 +8,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to review messages that were reported by users and give them feedback.
 ms.service: defender-office-365
 ms.date: 4/26/2024

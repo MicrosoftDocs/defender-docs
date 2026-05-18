@@ -12,7 +12,8 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom:
-- partner-contribution
+  - partner-contribution
+  - sfi-image-nochange
 ms.reviewer: joshbregman
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

@@ -15,6 +15,7 @@ ms.collection:
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 
 ---
 # Set up and configure Microsoft Defender for Endpoint Plan 1

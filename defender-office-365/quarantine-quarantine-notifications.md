@@ -10,6 +10,7 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-image-nochange
 description: Learn about quarantine notifications in Microsoft 365, including how users can review, release, request release, and block senders for quarantined messages.
 #customer intent: As a Microsoft 365 admin, I want to understand quarantine notifications so that I can configure them for users and shared mailboxes.
 ms.service: defender-office-365

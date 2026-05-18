@@ -7,7 +7,9 @@ ms.date: 10/20/2025
 author: paulinbar
 ms.author: painbar
 ms.reviewer: sugamar 
-ms.custom: asr
+ms.custom:
+  - asr
+  - sfi-image-nochange
 ms.subservice: asr
 ms.topic: how-to
 ms.collection: 

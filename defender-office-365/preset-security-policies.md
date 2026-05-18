@@ -9,6 +9,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to apply Standard and Strict policy settings across the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365
 ms.service: defender-office-365
 ms.date: 07/07/2025

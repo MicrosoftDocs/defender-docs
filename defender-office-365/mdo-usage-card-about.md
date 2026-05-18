@@ -15,6 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom:
+  - sfi-ga-nochange
 description: Learn about your organization's active usage of Microsoft Defender for Office 365 licenses versus the actual number of licenses purchased.
 ms.service: defender-office-365
 ms.date: 1/17/2024

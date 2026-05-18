@@ -8,6 +8,7 @@ ms.assetid: 316544cb-db1d-4c25-a5b9-c73bbcf53047
 ms.collection:
   - m365-security
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to view, create, modify, and delete anti-spam policies in Microsoft 365.
 ms.service: defender-office-365
 ms.date: 03/30/2026

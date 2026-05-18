@@ -15,6 +15,7 @@ ms.reviewer: mkaminska
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
+ms.custom: sfi-ga-nochange
 ---
 
 # Device health, Sensor health & OS report

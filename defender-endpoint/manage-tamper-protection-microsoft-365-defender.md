@@ -8,9 +8,10 @@ ms.date: 10/20/2025
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
-ms.custom: 
-- nextgen
-- admindeeplinkDEFENDER
+ms.custom:
+  - nextgen
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.subservice: ngp
 ms.collection: 
 - m365-security

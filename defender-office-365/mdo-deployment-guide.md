@@ -9,6 +9,7 @@ ms.collection:
   - tier1
   - essentials-get-started
 ms.custom:
+  - sfi-ga-nochange
 description: Learn how to get started with the initial deployment and configuration of Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 02/06/2026

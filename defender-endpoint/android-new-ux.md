@@ -13,6 +13,7 @@ ms.collection:
 ms.topic: reference
 ms.subservice: android
 ms.date: 11/06/2025
+ms.custom: sfi-image-nochange
 ---
 
 # User experiences in Microsoft Defender for Endpoint on Android

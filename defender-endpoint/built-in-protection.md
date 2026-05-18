@@ -12,7 +12,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.custom: 
+ms.custom:
+  - sfi-ga-nochange
 ms.reviewer: joshbregman
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

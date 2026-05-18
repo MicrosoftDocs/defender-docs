@@ -14,6 +14,7 @@ ms.subservice: edr
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 ---
 
 # Take response actions on a file

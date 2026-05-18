@@ -8,6 +8,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
 description: "Admins can configure whether users can report malicious messages or calls in Microsoft Teams."
 ms.service: defender-office-365
 ms.date: 04/02/2026

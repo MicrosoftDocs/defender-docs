@@ -8,6 +8,7 @@ ms.collection:
     - m365-security
     - tier2
 ms.custom:
+  - sfi-image-nochange
 ms.date: 06/09/2023
 description: Learn how to speed up the process of detecting and addressing compromised user accounts with automated investigation and response capabilities in Microsoft Defender for Office 365 Plan 2.
 ms.service: defender-office-365

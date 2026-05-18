@@ -8,6 +8,7 @@ ms.collection:
   - m365-security
   - tier3
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to use the advanced delivery policy in Microsoft 365 to identify messages that shouldn't be filtered in specific supported scenarios. For example, non-Microsoft phishing simulations and messages delivered to security operations (SecOps) mailboxes.
 ms.service: defender-office-365
 ms.date: 02/23/2026

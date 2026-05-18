@@ -8,7 +8,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 ms.topic: install-set-up-deploy
 ms.date: 11/17/2025
 ms.subservice: onboard

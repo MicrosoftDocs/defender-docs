@@ -8,7 +8,8 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier1
-ms.custom: 
+ms.custom:
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ROBOTS:
 ms.date: 04/18/2025

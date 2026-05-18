@@ -14,6 +14,7 @@ ms.date: 11/30/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Microsoft Defender XDR time zone settings

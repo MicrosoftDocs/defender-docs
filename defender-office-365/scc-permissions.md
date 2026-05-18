@@ -11,7 +11,8 @@ ms.collection:
 ms.localizationpriority: medium
 description: Admins can learn about the roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ms.date: 03/27/2026
 ---

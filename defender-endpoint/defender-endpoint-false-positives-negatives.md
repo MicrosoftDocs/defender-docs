@@ -16,9 +16,10 @@ ms.collection:
 - tier1
 ms.topic: solution-overview
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
-ms.custom: 
-- FPFN
-- admindeeplinkDEFENDER
+ms.custom:
+  - FPFN
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

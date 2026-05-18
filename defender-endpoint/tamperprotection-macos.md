@@ -15,6 +15,9 @@ ms.date: 03/24/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 
 ---
 # Protect macOS security settings with tamper protection

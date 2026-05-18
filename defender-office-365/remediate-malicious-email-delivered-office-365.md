@@ -12,6 +12,7 @@ ms.service: defender-office-365
 ms.date: 09/16/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ms.custom: sfi-image-nochange
 ---
 
 # Remediate malicious email delivered in Office 365

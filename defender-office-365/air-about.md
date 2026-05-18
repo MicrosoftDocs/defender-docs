@@ -10,9 +10,10 @@ ms.collection:
 - tier2
 description: Learn how automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2 helps your security team identify and remediate threats efficiently.
 ms.custom:
-- air
-- seo-marvel-mar2020
-- msecd-doc-authoring-1012
+  - air
+  - seo-marvel-mar2020
+  - msecd-doc-authoring-1012
+  - sfi-ga-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
