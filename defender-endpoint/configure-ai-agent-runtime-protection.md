@@ -18,7 +18,7 @@ appliesto:
 
 # Set up AI agent runtime protection with Microsoft Defender Antivirus
 
-Microsoft Defender Antivirus provides runtime protection for AI coding agents on Windows endpoints. It scans key events in the agent loop to detect cross-prompt injection attacks (XPIA) and sensitive data leakage, then audits or blocks threats and sends alerts to Microsoft Defender XDR based on your configuration.
+Microsoft Defender Antivirus provides runtime protection for AI coding agents on Windows endpoints. It scans key events in the agent loop to detect cross-prompt injection attacks (XPIA) and sensitive data leakage, then audits or blocks threats and sends alerts to Microsoft Defender based on your configuration.
 
 Defender Antivirus supports two runtime protection approaches: agent hooks protection and network inspection protection.
 
@@ -110,7 +110,7 @@ The PowerShell commands in the previous sections configure a single device and a
 
 ## Review runtime protection detections and outcomes
 
-When Defender Antivirus detects a threat based on your runtime protection settings, it generates an alert in Microsoft Defender XDR and takes action based on the configured mode (Block, AuditMode, or Disabled).
+When Defender Antivirus detects a threat based on your runtime protection settings, it generates an alert in Defender and takes action based on the configured mode (Block, AuditMode, or Disabled).
 
 For more information, see [Enforcement methods and outcome](/defender-endpoint/protect-ai-agents-overview#enforcement-methods-and-outcome) and [Enforcement, response and investigation considerations](/defender-endpoint/protect-ai-agents-overview#enforcement-response-and-investigation-considerations).
 
@@ -179,4 +179,4 @@ Review the following details in the Defender portal:
 - Alert details, including detection type, affected agent, and recommended actions.
 - Incident correlation across related alerts and entities.
 
-For more information on investigating alerts and incidents in the Defender portal, see [Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts) and [Investigate incidents in Microsoft Defender XDR](/defender-xdr/investigate-incidents).
+For more information on investigating alerts and incidents in the Defender portal, see [Investigate alerts in Microsoft Defender](/defender-xdr/investigate-alerts) and [Investigate incidents in Microsoft Defender](/defender-xdr/investigate-incidents).

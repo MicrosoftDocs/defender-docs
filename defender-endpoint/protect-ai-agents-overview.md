@@ -86,7 +86,7 @@ Agent runtime protection can be configured in three modes. The mode you choose d
 | Mode | Behavior |
 |---|---|
 | **Enabled** (Block) | Scans agent activity and blocks detected threats. Users see a notification in the agent UI and a toast message. |
-| **AuditMode** | Scans agent activity and generates alerts in Microsoft Defender XDR, but doesn't block the agent. |
+| **AuditMode** | Scans agent activity and generates alerts in Microsoft Defender, but doesn't block the agent. |
 | **Disabled** | Turns off the protection. |
 
 ## Enforcement methods and outcome
@@ -95,10 +95,10 @@ Defender Antivirus enforces runtime protection settings based on the configured 
 
 | Setting | Method | Enforcement mode | Outcome |
 |---------|--------|------------------|---------|
-| **Agent hooks protection** | Application-layer scanning | Enabled (Block) | Defender Antivirus blocks the agent action. The user sees a notification in the agent UI and a Windows toast message. An alert is sent to Microsoft Defender XDR. |
-| **Agent hooks protection** | Application-layer scanning | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender XDR for security team review. |
-| **Network inspection protection** | Network-layer interception | Enabled (Block) | Defender Antivirus blocks the agent action. An alert is sent to Microsoft Defender XDR. |
-| **Network inspection protection** | Network-layer interception | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender XDR for security team review. |
+| **Agent hooks protection** | Application-layer scanning | Enabled (Block) | Defender Antivirus blocks the agent action. The user sees a notification in the agent UI and a Windows toast message. An alert is sent to Microsoft Defender. |
+| **Agent hooks protection** | Application-layer scanning | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender for security team review. |
+| **Network inspection protection** | Network-layer interception | Enabled (Block) | Defender Antivirus blocks the agent action. An alert is sent to Microsoft Defender. |
+| **Network inspection protection** | Network-layer interception | AuditMode | Defender Antivirus allows the action to proceed. An alert is sent to Microsoft Defender for security team review. |
 
 ### Enforcement, response and investigation considerations
 
