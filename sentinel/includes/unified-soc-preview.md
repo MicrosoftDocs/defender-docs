@@ -2,10 +2,11 @@
 title: General Microsoft Sentinel Azure portal retirement announcement, with extra formatting.
 description: Provides an include file for the general Microsoft Sentinel Azure portal retirement announcement, with extra formatting.
 services: microsoft-sentinel
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: soulisabag
 ms.topic: "include"
 ms.date: 01/28/2026
-ms.author: guywild
 ms.custom: "include file"
 ---
 

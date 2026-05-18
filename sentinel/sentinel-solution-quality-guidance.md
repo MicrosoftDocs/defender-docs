@@ -1,9 +1,9 @@
 ---
 title: Sentinel solution quality guidelines
 description: This article guides you through the process of publishing high quality solutions for Microsoft Sentinel.
-author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: angodavarthy
+author: mberdugo
+ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: best-practice
 ms.date: 09/18/2025

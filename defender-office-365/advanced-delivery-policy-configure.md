@@ -126,7 +126,7 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 > [!NOTE]
 >
 > - Currently, IPv6 addresses are supported only in PowerShell. To use PowerShell to configure non-Microsoft phishing simulations in the advanced delivery policy, see the [Use PowerShell to configure non-Microsoft phishing simulations](#use-powershell-to-configure-non-microsoft-phishing-simulations) section later in this article.
->   
+>
 > - Enhanced Filtering for Connectors doesn't work for non-Microsoft phishing simulations in the following in-and-out email routing scenario:
 >
 >   Internet \> Microsoft 365 \> on-premises environment or non-Microsoft security service \> back to Microsoft 365
