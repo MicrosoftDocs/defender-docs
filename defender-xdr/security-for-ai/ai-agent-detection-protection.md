@@ -68,9 +68,9 @@ Defender Antivirus supports two protection approaches:
 
 Agent hooks protection and network inspection protection differ primarily by where inspection occurs: hooks scans application-layer lifecycle events for agents that support hooks, while network inspection scans network-layer traffic to extend coverage to agents that don't support hooks.
 
-You can configure both approaches in audit or block mode, and all detections generate alerts in Microsoft Defender. For setup instructions and method-selection guidance, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](../../defender-endpoint/configure-ai-agent-runtime-protection.md) and [Decide which method to use](../../defender-endpoint/configure-ai-agent-runtime-protection.md#decide-which-method-to-use).
+You can configure both approaches in audit or block mode, and all detections generate alerts in Microsoft Defender. For setup instructions and method-selection guidance, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection) and [Decide which method to use](/defender-endpoint/configure-ai-agent-runtime-protection#decide-which-method-to-use).
 
-For the end-to-end Microsoft Defender for Endpoint overview of endpoint agent discovery and runtime protection, see [Discover and protect AI coding agents with Microsoft Defender for Endpoint](../../defender-endpoint/protect-ai-agents-overview.md).
+For the end-to-end Microsoft Defender for Endpoint overview of endpoint agent discovery and runtime protection, see [Discover and protect AI coding agents with Microsoft Defender for Endpoint](/defender-endpoint/protect-ai-agents-overview).
 
 ## Detect AI agent threats in near-real-time
 

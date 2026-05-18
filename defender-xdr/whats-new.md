@@ -31,7 +31,7 @@ You can also get product updates and important notifications through the [messag
 
 ## June 2026
 
-- (Preview) As part of the [Defender AI agents experience](/defender-xdr/security-for-ai/defender-security-for-ai), local AI coding agent discovery on endpoints is now available in public preview. Microsoft Defender for Endpoint automatically discovers supported AI coding agents running locally on onboarded Windows 11 devices and surfaces them as assets in the AI agent inventory, exposure map, and advanced hunting. For more information, see [Discover local AI agents](../defender-endpoint/discover-local-ai-agents.md).
+- (Preview) As part of the [Defender AI agents experience](/defender-xdr/security-for-ai/defender-security-for-ai), local AI coding agent discovery on endpoints is now available in public preview. Microsoft Defender for Endpoint automatically discovers supported AI coding agents running locally on onboarded Windows 11 devices and surfaces them as assets in the AI agent inventory, exposure map, and advanced hunting. For more information, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents).
 
 ## May 2026
 

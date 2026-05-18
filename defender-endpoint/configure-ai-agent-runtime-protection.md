@@ -193,8 +193,6 @@ For security operations teams, runtime protection events appear in the Microsoft
 
 Select the alert to view detailed information including the detection type, affected agent, and recommended actions.
 
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-event-details.png" alt-text="Screenshot of the event details in the Microsoft Defender portal.":::
-
 When multiple related detections occur, Defender correlates them into a single incident for detailed investigation.
 
 Review the following details in the Defender portal:
