@@ -44,16 +44,16 @@ When Microsoft Defender blocks an action, it generates a detailed alert that exp
 
 ### Enable real-time protection
 
-To enable real-time protection for your AI agents: 
+To enable real-time protection for your AI agents:
 
 1. Open the [Microsoft Defender portal](https://security.microsoft.com/)
 1. Select **System** > **Settings** > **Security for AI agents**.  This opens the [Security for AI agents settings page](https://security.microsoft.com/securitysettings/security_for_ai).
 1. Make sure that **Security for AI agents** is toggled on.
-1. Make sure that **Agent 365** is connected under **AI real-time protection & investigation**. 
+1. Make sure that **Agent 365** is connected under **AI real-time protection & investigation**.
 
     :::image type="content" source="media/ai-agent-detection-protection/enable-ai-real-time-protection.png" alt-text="Screenshot of Security for AI agents settings showing toggled on switch and connected status for Agent 365 and Copilot Studio." lightbox="media/ai-agent-detection-protection/enable-ai-real-time-protection.png":::
 
-1. To enable the extended real-time protection capabilities for Microsoft Copilot Studio agents, make sure that **Copilot Studio** is connected under **AI real-time protection & investigation**. 
+1. To enable the extended real-time protection capabilities for Microsoft Copilot Studio agents, make sure that **Copilot Studio** is connected under **AI real-time protection & investigation**.
 
     For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).
 
@@ -68,9 +68,9 @@ Defender Antivirus supports two protection approaches:
 
 Agent hooks protection and network inspection protection differ primarily by where inspection occurs: hooks scans application-layer lifecycle events for agents that support hooks, while network inspection scans network-layer traffic to extend coverage to agents that don't support hooks.
 
-You can configure both approaches in audit or block mode, and all detections generate alerts in Microsoft Defender. For setup instructions and method-selection guidance, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection) and [Decide which method to use](/defender-endpoint/configure-ai-agent-runtime-protection#decide-which-method-to-use).
+You can configure both approaches in audit or block mode, and all detections generate alerts in Microsoft Defender. For setup instructions and method-selection guidance, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](../../defender-endpoint/configure-ai-agent-runtime-protection.md) and [Decide which method to use](../../defender-endpoint/configure-ai-agent-runtime-protection.md#decide-which-method-to-use).
 
-For the end-to-end Microsoft Defender for Endpoint overview of endpoint agent discovery and runtime protection, see [Discover and protect AI coding agents with Microsoft Defender for Endpoint](/defender-endpoint/protect-ai-agents-overview).
+For the end-to-end Microsoft Defender for Endpoint overview of endpoint agent discovery and runtime protection, see [Discover and protect AI coding agents with Microsoft Defender for Endpoint](../../defender-endpoint/protect-ai-agents-overview.md).
 
 ## Detect AI agent threats in near-real-time
 
@@ -83,7 +83,7 @@ For more information, see [Incidents and alerts in the Microsoft Defender portal
 Near-real-time detections rely on Agent 365 observability data, which also provides valuable context for [investigating incidents and threat hunting](#investigate-ai-agent-threats-and-hunt-for-risks-using-advanced-hunting). Microsoft Defender analyzes this data to identify suspicious agent behavior and generate alerts.
 
 > [!NOTE]
-> For agents built with Microsoft Copilot Studio and Microsoft Foundry, Microsoft Defender also supports detections based on evaluation of model prompts and responses. 
+> For agents built with Microsoft Copilot Studio and Microsoft Foundry, Microsoft Defender also supports detections based on evaluation of model prompts and responses.
 
 ### Enable near-real-time detections and advanced threat hunting
 

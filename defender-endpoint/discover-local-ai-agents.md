@@ -64,7 +64,7 @@ If you've configured runtime protection on your endpoints, the following table l
 | OpenAI Codex | ✔ | — |
 | OpenClaw | — | ✔ |
 
-For more information on configuring runtime protection, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection).
+For more information on configuring runtime protection, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](configure-ai-agent-runtime-protection.md).
 
 ## View local AI coding agents in the inventory
 
