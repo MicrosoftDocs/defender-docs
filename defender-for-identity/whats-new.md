@@ -46,7 +46,7 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Suspected Conditional Access bypass via non-compliant device](alerts-xdr.md#suspected-conditional-access-bypass-via-non-compliant-device)
 - [Suspicious addition of default third‑party MFA method to user account](alerts-xdr.md#suspicious-addition-of-default-thirdparty-mfa-method-to-user-account)
 
-### Known limitation: Windows Server 2025 sensor v3.x migration not supported
+### Known limitation: Migration of domain controllers with Windows Server 2025 from sensor v2.x to sensor v3.x is not supported
 
 Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Continue using the v2.x sensor on Windows Server 2025 domain controllers should until support for migration to v3.x is available.
 
