@@ -155,6 +155,8 @@
              href: anti-spam-protection-about.md
            - name: Configure anti-spam policies
              href: anti-spam-policies-configure.md
+           - name: Troubleshoot anti-spam policy issues
+             href: anti-spam-policies-troubleshooting.md
            - name: Advanced Spam Filter (ASF) settings
              href: anti-spam-policies-asf-settings-about.md
            - name: What's the difference between junk email and bulk email?
