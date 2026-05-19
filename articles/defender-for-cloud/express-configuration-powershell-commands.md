@@ -2,12 +2,20 @@
 title: Express configuration PowerShell commands reference
 description: In this article, you can review the Express configuration PowerShell commands reference and copy example scripts to use in your environments.
 ms.topic: sample
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 03/30/2025
+ms.date: 05/07/2026
 ---
 
 # Express configuration PowerShell commands reference
+
+> [!IMPORTANT]
+> New public preview SQL vulnerability assessment unified API reference can be found under:
+> - [Sql Vulnerability Assessment Settings](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings)
+> - [Sql Vulnerability Assessment Baseline Rules](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules)
+> - [Sql Vulnerability Assessment Scan Results](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results)
+> - [Sql Vulnerability Assessment Scans](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans)
+> Examples below refer only to Azure SQL Databases (GA).
 
 This article lists the PowerShell commands that can be used with SQL vulnerability assessment express configuration.
 

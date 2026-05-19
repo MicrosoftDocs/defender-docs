@@ -7,7 +7,8 @@
     - name: What is Microsoft Defender for Cloud?
       displayName: Defender for cloud, servers, storage, sql, containers, app service,
         key vault, resource manager, dns, open-source relational databases,
-        Azure cosmos db, db, Azure, defender
+        Azure cosmos db, db, Azure, defender, Defender Experts, managed XDR,
+        managed detection and response
       href: defender-for-cloud-introduction.md
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
@@ -619,6 +620,9 @@
     displayName: hybrid, arc, Defender for Servers
     items:
     - name: Overview
+      displayName: Defender for Servers overview, Defender Experts for Servers,
+        managed XDR, managed detection and response, proactive threat hunting,
+        Ask Defender Experts
       href: defender-for-servers-overview.md
     - name: Common questions
       href: faq-defender-for-servers.yml
@@ -854,6 +858,8 @@
         items:  
         - name: Manage with PowerShell
           items:
+          - name: Get started with the unified SQL Vulnerability Assessment REST API
+            href: powershell-unified-api-quickstart.md
           - name: Enable vulnerability assessments on Azure SQL databases with the express configuration
             href: powershell-sample-vulnerability-assessment-azure-sql.md
           - name: Set up baselines for vulnerability assessments on Azure SQL databases
