@@ -20,7 +20,7 @@ appliesto:
 
 Microsoft Defender for Endpoint helps you discover and investigate AI coding agents running on your organization's devices. Microsoft Defender for Endpoint automatically detects and surfaces supported agents in the Microsoft Defender portal, which gives you visibility into AI-related assets and lets you assess their presence across your environment.
 
-## AI agent discovery on endpoints
+## AI coding agent discovery on endpoints
 
 Defender for Endpoint automatically detects supported AI coding agents running locally on onboarded Windows 11 devices. When Microsoft Defender Antivirus identifies a supported AI coding agent, the agent is displayed as a discoverable asset in the Defender portal with full visibility into:
 
@@ -59,25 +59,6 @@ When enabled, Defender Antivirus routes relevant outbound traffic through local 
 
 > [!NOTE]
 > Network inspection protection doesn't support agents that use certificate pinning or HTTP/3.
-
-### Protection approaches comparison
-
-Agent hooks protection applies to agents that support hooks (such as Claude Code, GitHub Copilot CLI, and OpenAI Codex), while network inspection protection covers other agents, like OpenClaw. When both methods are enabled, Defender Antivirus uses single-path enforcement to avoid duplicate scanning, with hooks handling supported agents and network inspection protecting the remaining agents.
-
-The following table compares the agent hooks and network inspection protection approaches. 
-
-| Aspect | Agent hooks protection | Network inspection protection |
-|--------|------------------------|-------------------------------|
-| **Coverage** | Agents with hooks support framework | Any agent with network connectivity |
-| **Supported agents** | Claude Code, GitHub Copilot CLI, OpenAI Codex | All agents (except those with cert pinning or HTTP/3) |
-| **Detection method** | Application-layer message scanning | Network-layer traffic interception |
-| **Scope** | Prompts, tool calls, tool responses | LLM API traffic between agent and model |
-| **Overhead** | Lower (application-layer only) | Higher (TLS inspection required) |
-| **Compatibility issues** | None | Doesn't support certificate pinning or HTTP/3 |
-| **Data Protection Policy integration** | Supported (Microsoft Purview DLP) | Limited |
-| **Recommended for** | Organizations with Claude Code, GitHub Copilot CLI, or OpenAI Codex | Agents without hooks support or broad coverage needed |
-
-See the [enforcement, response and investigation considerations](#enforcement-response-and-investigation-considerations) to learn how Defender Antivirus enforces these protections and what happens when a threat is detected.
 
 ### Protection modes and enforcement outcomes
 

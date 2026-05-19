@@ -53,19 +53,6 @@ The following local AI coding agents are discovered on endpoints:
 | Poe Desktop | Desktop |
 | Roo Code | VS Code extension |
 
-### Supported agents for runtime protection
-
-If you've configured runtime protection on your endpoints, the following table lists which protection methods are available for each agent:
-
-| Agent | Agent hooks protection | Network inspection protection |
-|---|---|---|
-| Claude Code | ✔ | ✔ |
-| GitHub Copilot CLI | ✔ | ✔ |
-| OpenAI Codex | ✔ | — |
-| OpenClaw | — | ✔ |
-
-For more information on configuring runtime protection, see [Set up AI agent runtime protection with Microsoft Defender Antivirus](configure-ai-agent-runtime-protection.md).
-
 ## View local AI coding agents in the inventory
 
 - To view a list of all local AI coding agents discovered on endpoints:
