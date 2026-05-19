@@ -28,6 +28,24 @@ Defender for Endpoint automatically detects supported AI coding agents running l
 - **Exposure map**: Visual relationships between AI coding agents, devices, identities, and cloud resources to help assess potential impact.
 - **Advanced hunting**: Query agent discovery data using Kusto Query Language (KQL) to investigate agent presence across your environment.
 
+### Supported AI coding agents
+
+The following local AI coding agents are discovered on endpoints:
+
+| Agent | Supported type |
+| --- | --- |
+| ChatGPT Desktop | Desktop |
+| Claude Code | CLI, Desktop, and VS Code extension |
+| Cline | VS Code extension |
+| Codex | CLI |
+| Cursor | Desktop |
+| Gemini | VS Code extension |
+| Gemini CLI | CLI |
+| GitHub Copilot | CLI and VS Code extension |
+| Ollama Desktop | Desktop |
+| Poe Desktop | Desktop |
+| Roo Code | VS Code extension |
+
 For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).
 
 ## AI coding agent runtime protection

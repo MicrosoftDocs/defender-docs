@@ -35,24 +35,6 @@ Before you can discover local AI coding agents on endpoints, make sure the follo
 
 No additional deployment, configuration, or scripts are required beyond device onboarding. Agent discovery begins automatically after your tenant is enabled.
 
-## Supported AI coding agents
-
-The following local AI coding agents are discovered on endpoints:
-
-| Agent | Supported type |
-|---|---|
-| ChatGPT Desktop | Desktop |
-| Claude Code | CLI, Desktop, and VS Code extension |
-| Cline | VS Code extension |
-| Codex | CLI |
-| Cursor | Desktop |
-| Gemini | VS Code extension |
-| Gemini CLI | CLI |
-| GitHub Copilot | CLI and VS Code extension |
-| Ollama Desktop | Desktop |
-| Poe Desktop | Desktop |
-| Roo Code | VS Code extension |
-
 ## View local AI coding agents in the inventory
 
 - To view a list of all local AI coding agents discovered on endpoints:
