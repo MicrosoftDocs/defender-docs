@@ -490,14 +490,6 @@ In some v3 sensor environments, auditing health alerts might persist even when W
 
 Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Windows Server 2025 domain controllers should continue using the v2.x sensor until full v3.x support is available.
 
-### Cause
-
-A servicing branch change affected the update delivery path for Windows Server 2025. The sensor v3.x components required for migration haven't been backported to this platform yet.
-
-### Resolution
-
-No action is required. The v2.x sensor continues to protect Windows Server 2025 domain controllers. This page will be updated when full v3.x support becomes available.
-
 ## Next steps
 
 - [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md) 
