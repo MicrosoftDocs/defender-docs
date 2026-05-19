@@ -1,8 +1,9 @@
 ---
 title: Custom graphs in Microsoft Sentinel-Overview (preview)
 description: An overview of custom graphs in Microsoft Sentinel 
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: sourinpaul
 ms.date: 03/23/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel

@@ -205,7 +205,7 @@ Suggested possible workarounds:
 
 ## VMware virtual machine sensor issue
 
-If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware Guest OS NIC and [MDI Sensor requirements](deploy/prerequisites-sensor-version-2.md#sensor-requirements-and-recommendations).
+If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware Guest OS NIC and [MDI Sensor requirements](deploy/prerequisites-sensor-version-2.md#server-requirements).
 
 To resolve the issue:
 
@@ -488,7 +488,7 @@ In some v3 sensor environments, auditing health alerts might persist even when W
 
 ## Next steps
 
-- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md) 
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)

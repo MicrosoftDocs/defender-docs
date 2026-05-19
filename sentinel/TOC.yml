@@ -14,8 +14,6 @@
       href: prerequisites.md
     - name: Workspace architecture
       items:
-        - name: Review sample workspace designs
-          href: sample-workspace-designs.md
         - name: Prepare for multiple workspaces
           href: prepare-multiple-workspaces.md
         - name: Sample workspace architecture
@@ -605,7 +603,7 @@
     - name: Microsoft Sentinel data lake overview
       href: datalake/sentinel-lake-overview.md
       displayName: data lake
-    - name: Direct ingestion into the data lak e
+    - name: Direct ingestion into the data lake
       href: datalake/sentinel-lake-log-ingestion-guidance.md
       displayName: data lake
     - name: Data federation in the Microsoft Sentinel data lake
@@ -974,10 +972,6 @@
       href: sentinel-solutions-post-publish-tracking.md
     - name: Packaging and publishing a Sentinel platform solution
       href: package-platform-solution.md
-    - name: Sentinel SIEM solution lifecycle post publish
-      href: publish-sentinel-solutions.md
-    - name: Solution lifecycle post publish
-      href: sentinel-solutions-post-publish-tracking.md
     - name: Managing Platform Solutions
       href: manage-platform-solutions.md
     - name: Troubleshoot solutions in Microsoft Sentinel
