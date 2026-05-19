@@ -1,9 +1,10 @@
 ---
 title: Review security findings in the AKS security dashboard
 description: Learn how to review and investigate alerts, vulnerabilities, misconfigurations, and compliance findings in the AKS security dashboard in Microsoft Defender for Cloud.
+author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 04/05/2026
+ms.date: 05/18/2026
 ms.service: defender-for-cloud
 ---
 
@@ -29,6 +30,8 @@ To use the AKS Security dashboard, ensure you have:
 
 Security alerts indicate suspicious activity or potential threats detected in the cluster.
 
+For example, the **Exposed Kubernetes service detected** alert is raised when a Kubernetes Service of type `LoadBalancer` is created or updated and publicly exposes workloads. Prioritize this alert when exposure is unintended, or when internet-facing services have weak or missing authentication.
+
 Alerts are prioritized by severity to help you identify which issues to investigate first:
 
 - **High** High probability that the resource is compromised. Investigate immediately.
@@ -37,6 +40,8 @@ Alerts are prioritized by severity to help you identify which issues to investig
 - **Informational** Provides context and might be relevant when correlated with other alerts.
 
 ### Investigate a security alert
+
+To investigate a security alert:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -77,6 +82,8 @@ For supported configurations, see the [support matrix for Defender for Container
 
 ### Review vulnerability findings
 
+To review vulnerability findings:
+
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Kubernetes services** > **Clusters**.
@@ -103,9 +110,13 @@ Misconfigurations identify security configuration issues in Kubernetes resources
 
 Findings are based on Azure Policy and Kubernetes configuration assessments.
 
+Review these findings with network exposure in mind, including Kubernetes Service types and ingress configurations that can unintentionally expose workloads to the internet.
+
 Each finding includes remediation guidance. Some findings support automated remediation through **Quick Fix** or policy enforcement.
 
 ### Review and remediate misconfigurations
+
+To review and remediate misconfigurations:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -120,6 +131,7 @@ Each finding includes remediation guidance. Some findings support automated reme
 In the details pane:
 
 - Review the description and remediation steps.
+- Review Kubernetes Service types and ingress exposure settings to reduce unintended internet-facing access.
 - For cluster-level misconfigurations, select **Quick Fix** when available.
 - For workload issues, apply the recommended Azure Policy to prevent recurrence.
 - Assign an owner to track remediation (requires Defender CSPM).
@@ -133,6 +145,8 @@ The compliance section shows the cluster’s status against regulatory standards
 It lists controls that the cluster doesn't meet and provides recommendations to help you remediate them.
 
 ### Assess compliance
+
+To assess compliance:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 

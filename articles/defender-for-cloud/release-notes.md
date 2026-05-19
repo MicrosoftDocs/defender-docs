@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/17/2026
+ms.date: 05/18/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -33,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | May 19, 2026| GA | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
+| May 18, 2026 | GA | [Microsoft Defender Experts for Servers as a managed XDR option](#microsoft-defender-experts-for-servers-as-a-managed-xdr-option) |
 | May 17, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (Preview)](#sql-vulnerability-assessment-express-configuration-now-available-for-azure-sql-managed-instance-and-synapse-preview) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
 | May 5, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
@@ -48,6 +49,16 @@ Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defen
 As additional image types are being scanned, your bill might increase. The rollout of this change will occur gradually over several weeks and requires no user action.
 
 For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+
+### Microsoft Defender Experts for Servers as a managed XDR option
+
+May 18, 2026
+
+Defender for Cloud is now partnered with Microsoft Defender Experts, as a managed extended detection and response (XDR) service for server workloads.
+
+Microsoft analysts and automation work together to detect, prioritize, and respond to threats on machines protected by Defender for Servers Plan 1 or Plan 2 across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises environments. Defender Experts for Servers is sold separately and includes Defender Experts for Hunting and Ask Defender Experts.
+
+Learn more about [Microsoft Defender Experts for Servers](defender-for-servers-overview.md#managed-detection-and-response-with-defender-experts-for-servers).
 
 ### SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (Preview)
 
@@ -150,14 +161,6 @@ Learn more about [GitHub Advanced Security integration](github-advanced-security
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Update | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
-### SQL Vulnerability Assessment Express Configuration preview announcement
-
-April 30, 2026
-
-Preview announcement for SQL Vulnerability Assessment (VA) Express Configuration now available for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces.
-
-Learn more about [SQL vulnerability assessment overview](sql-azure-vulnerability-assessment-overview.md) and how to [enable vulnerability assessment](sql-azure-vulnerability-assessment-enable.md).
-
 ### Defender for Containers runtime protection on EKS Bottlerocket is now generally available
 
 April 30, 2026
@@ -185,6 +188,7 @@ DNS Detection for Kubernetes is now generally available in Defender for Containe
 DNS Detection monitors DNS queries from containerized workloads to detect suspicious activity such as communication with malicious domains and DNS tunneling. The feature requires the Defender sensor deployed via Helm.
 
 Learn more about [DNS Detection availability in Defender for Containers](support-matrix-defender-for-containers.md#runtime-protection-features).
+
 
 ### General availability of Defender for Storage integration in Azure portal Storage Center
 

@@ -5,9 +5,11 @@ ms.topic: reference
 ms.custom: linux-related-content
 ms.date: 05/18/2026
 ai-usage: ai-assisted
+author: ElazarK
+ms.author: elkrieger
 ---
 
-# Alerts for Kubernetes Clusters
+# Kubernetes alerts in Defender for Containers
 
 Microsoft Defender for Containers generates security alerts for Kubernetes clusters and workloads by monitoring both the control plane and the runtime environment. To validate alert generation, you can use the Kubernetes alerts simulation tool to trigger representative alerts.
 
@@ -22,6 +24,8 @@ Examples of suspicious control plane operations include:
 - **Privileged container deployments:** Monitoring for unauthorized deployments or excessive use of privileges that could lead to host-system breaches.
 - **Risky service exposures:** Identifying services unintentionally exposed to the public Internet or lacking proper access controls.
 - **Suspicious service account activities:** Detecting unusual patterns such as excessive resource requests or unauthorized API calls.
+
+When workloads are publicly exposed, the potential impact can increase if authentication is weak or missing.
 
 ## Workload runtime detection
 
