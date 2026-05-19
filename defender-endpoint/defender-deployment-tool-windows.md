@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.subservice: onboard
-ms.date: 05/04/2026
+ms.date: 05/19/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -375,6 +375,49 @@ To test if the installation succeeded successfully, do the following checks:
 1. For detailed log collection for Defender Antivirus, including settings and other information, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
 1. You can use the [client analyzer tool](run-analyzer-windows.md) to collect logs and perform connectivity troubleshooting on Windows.
+
+## Exit codes
+
+When you run the tool as part of a large-scale deployment, for example through a software distribution solution, you can monitor exit codes to help monitor outcomes. The following exit might be generated:
+
+| Error code | Meaning |
+|---|---|
+| 0 | Sequence completed successfully |
+| 1 | Another instance is already running |
+| 2 | Device is already onboarded: no action required |
+| 3 | Offboarding is only available for onboarded devices |
+| 5 | A new version of this tool is available |
+| 6 | Tool updated to the latest version |
+| 10 | A reboot is required to continue: the tool will resume automatically unless the NoResumeAfterReboot parameter was specified |
+| 11 | Failed to verify signature |
+| 12 | Failed to apply process mitigation policy |
+| 20 | File not found |
+| 30 | Required resource files are missing |
+| 40 | Please run the tool with administrative permissions |
+| 50 | Unsupported operating system |
+| 70 | Configuration file error detected |
+| 80 | Quality telemetry failed |
+| 90 | Prerequisite check(s) failed |
+| 100 | Manifest file is corrupted |
+| 200 | Onboarding failed: sensor initialization error |
+| 201 | Onboarding file missing or not specified |
+| 210 | Failed to reload the Defender Antivirus engine |
+| 300 | Offboarding failed |
+| 301 | Offboarding file missing or not specified |
+| 302 | Invalid offboarding file |
+| 400 | Download failed: unable to retrieve required component |
+| 500 | Installation failed: unable to install required components |
+| 600 | Update failed: Unable to apply update package |
+| 610 | Unsupported update file |
+| 700 | System preparation failed |
+| 710 | Failed to enable the Defender Antivirus feature |
+| 720 | Failed to uninstall SCEP |
+| 730 | Failed to download and apply the latest manual signature for sovereign cloud. |
+| 740 | Failed to configure ADL registry settings for sovereign cloud. |
+| 900 | Failed to uninstall Defender components |
+| 920 | Failed to remove the requested MMA workspace |
+| 930 | Invalid MMA workspace ID |
+| 1000 | An unspecified error occurred |
 
 ## Related content
 
