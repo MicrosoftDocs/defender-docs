@@ -378,7 +378,7 @@ To test if the installation succeeded successfully, do the following checks:
 
 ## Exit codes
 
-When you run the tool as part of a large-scale deployment, for example through a software distribution solution, you can monitor exit codes to help monitor outcomes. The following exit might be generated:
+When you run the tool as part of a large-scale deployment, for example through a software distribution solution, you can monitor exit codes to help monitor outcomes. The following exit codes might be generated:
 
 | Error code | Meaning |
 |---|---|
