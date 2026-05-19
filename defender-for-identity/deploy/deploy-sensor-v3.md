@@ -24,6 +24,7 @@ Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 - Doesn't support [syslog notifications](../notifications.md#configure-syslog-notifications).
 - Has limitations working with Azure ExpressRoute. For more information, see [Azure ExpressRoute for Microsoft 365](/microsoft-365/enterprise/azure-expressroute).
 - Doesn't support the migration of domain controllers running Windows Server 2025 to sensor v3.x.
+- Doesn't support the migration of domain controllers running Windows Server 2025 to sensor v3.x.
 
 ### Server requirements
 
