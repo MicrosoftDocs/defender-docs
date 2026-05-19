@@ -11,7 +11,7 @@ ms.collection:
   - tier1
   - security-copilot
 ms.topic: how-to
-ms.date: 05/12/2026
+ms.date: 05/19/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -62,7 +62,7 @@ The agent currently supports three data sources:
 |-------------|-------------|
 | **Defender XDR** (default) | Microsoft Defender XDR telemetry |
 | **Sentinel Log Analytics** | Microsoft Sentinel Log Analytics Workspace |
-| **Sentinel Data Lake** | Microsoft Sentinel Data Lake |
+| **Sentinel Data Lake** (mandatory step for Sentinel Data Lake only) | Microsoft Sentinel Data Lake |
 
 There are two methods for specifying the data source:
 
