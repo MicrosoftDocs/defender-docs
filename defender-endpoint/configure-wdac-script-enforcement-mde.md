@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-asr
 ms.custom: msecd-doc-authoring-1012
-ms.date: 05/11/2026
+ms.date: 05/19/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1 and Plan 2
 - Microsoft Defender XDR
@@ -58,7 +58,7 @@ Microsoft Defender for Endpoint uses built-in PowerShell scripts for several cap
 
 - [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Device discovery](device-discovery.md)
-- [Security configuration management](manage-security-policies.md)
+- [Security configuration management](/intune/device-security/microsoft-defender/security-settings-management#microsoft-defender-for-endpoint-and-powershell)
 
 To allow these scripts to run in **FullLanguage** mode when WDAC script enforcement is enabled, add the following **Signer**, **Publisher**, and **TBS** configuration to your WDAC policy under the `<Signers>` section:
 
@@ -75,7 +75,7 @@ To allow these scripts to run in **FullLanguage** mode when WDAC script enforcem
 > [!NOTE]
 > This signer configuration is intended only for built-in Microsoft Defender for Endpoint script content.
 
-The following sample XML file shows a WDAC policy with the MDE signer included:
+The following sample XML file shows a WDAC policy with the MDE signer included. The lines marked with `<!-- MDE addition -->` comments are the entries you need to add to your existing WDAC policy:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -121,10 +121,12 @@ The following sample XML file shows a WDAC policy with the MDE signer included:
     <FileAttrib ID="ID_FILEATTRIB_REFRESH_POLICY" FriendlyName="RefreshPolicy.exe FileAttribute" FileName="RefreshPolicy.exe" MinimumFileVersion="10.0.19042.0" />
   </FileRules>
   <Signers>
+    <!-- MDE addition: Start - Add this signer block -->
     <Signer Name="Microsoft Code Signing PCA 2011" ID="ID_SIGNER_S_0">
       <CertRoot Type="TBS" Value="F6F717A43AD9ABDDC8CEFDDE1C505462535E7D1307E630F9544A2D14FE8BF26E" />
       <CertPublisher Value="Microsoft Windows Defender Advanced Threat Protection" />
     </Signer>
+    <!-- MDE addition: End -->
     <Signer Name="Microsoft Product Root 2010 Windows EKU" ID="ID_SIGNER_WINDOWS_PRODUCTION">
       <CertRoot Type="Wellknown" Value="06" />
       <CertEKU ID="ID_EKU_WINDOWS" />
@@ -273,7 +275,7 @@ The following sample XML file shows a WDAC policy with the MDE signer included:
     <SigningScenario ID="ID_SIGNINGSCENARIO_UMCI" FriendlyName="User Mode Signing Scenario" Value="12">
       <ProductSigners>
         <AllowedSigners>
-          <AllowedSigner SignerId="ID_SIGNER_S_0" />
+          <AllowedSigner SignerId="ID_SIGNER_S_0" /> <!-- MDE addition -->
           <AllowedSigner SignerId="ID_SIGNER_WINDOWS_PRODUCTION_USER" />
           <AllowedSigner SignerId="ID_SIGNER_ELAM_PRODUCTION_USER" />
           <AllowedSigner SignerId="ID_SIGNER_HAL_PRODUCTION_USER" />
@@ -301,7 +303,7 @@ The following sample XML file shows a WDAC policy with the MDE signer included:
   </SigningScenarios>
   <UpdatePolicySigners />
   <CiSigners>
-    <CiSigner SignerId="ID_SIGNER_S_0" />
+    <CiSigner SignerId="ID_SIGNER_S_0" /> <!-- MDE addition -->
     <CiSigner SignerId="ID_SIGNER_STORE" />
   </CiSigners>
   <HvciOptions>0</HvciOptions>
@@ -348,7 +350,24 @@ Use one of the following methods to add a Publisher allow rule:
 >
 > `C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\DataCollection`
 >
-> The PsExec tool is required to start a command shell with SYSTEM account context to access this protected folder.
+> The [PsExec](/sysinternals/downloads/psexec) tool is required to start a command shell with SYSTEM account context to access this protected folder. To access the folder:
+>
+> 1. [Download PsExec](/sysinternals/downloads/psexec) from Sysinternals and extract it to a folder in your system PATH (for example, `C:\Tools`).
+> 1. Open an elevated command prompt. Select **Start**, type **cmd**, right-click **Command Prompt**, and select **Run as administrator**.
+> 1. Start a SYSTEM-level command shell:
+>
+>    ```console
+>    PsExec.exe -s cmd.exe
+>    ```
+>
+> 1. In the SYSTEM shell, navigate to the DataCollection folder:
+>
+>    ```console
+>    cd "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\DataCollection"
+>    dir *.ps1
+>    ```
+>
+> 1. Use any of the listed `.ps1` files as input when creating the Publisher allow rule.
 
 ### Step 3: Re-sign and deploy the policy
 
@@ -400,6 +419,6 @@ To finish the path-based rule setup:
 - [App Control Policy Wizard](/windows/security/application-security/application-control/app-control-for-business/design/appcontrol-wizard)
 - [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Device discovery](device-discovery.md)
-- [Security configuration management](manage-security-policies.md)
+- [Security configuration management](/intune/device-security/microsoft-defender/security-settings-management#microsoft-defender-for-endpoint-and-powershell)
 - [AMSI integration with Microsoft Defender Antivirus](amsi-on-mdav.md)
 - [Understand and use attack surface reduction](overview-attack-surface-reduction.md)
