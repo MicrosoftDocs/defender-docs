@@ -24,8 +24,8 @@ Microsoft Defender for Endpoint helps you discover and investigate AI coding age
 
 Defender for Endpoint automatically detects supported AI coding agents running locally on onboarded Windows 11 devices. When Microsoft Defender Antivirus identifies a supported AI coding agent, the agent is displayed as a discoverable asset in the Defender portal with full visibility into:
 
-- **AI agent inventory**: A centralized view of all discovered local AI coding agents with device associations and discovery metadata.
-- **Exposure map**: Visual relationships between AI agents, devices, identities, and cloud resources to help assess potential impact.
+- **AI coding agent inventory**: A centralized view of all discovered local AI coding agents with device associations and discovery metadata.
+- **Exposure map**: Visual relationships between AI coding agents, devices, identities, and cloud resources to help assess potential impact.
 - **Advanced hunting**: Query agent discovery data using Kusto Query Language (KQL) to investigate agent presence across your environment.
 
 For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).

@@ -41,7 +41,9 @@ Before you configure runtime protection, make sure the following requirements ar
 
 ## Decide which method to use
 
-You can use agent hooks protection, network inspection protection, or both together for layered coverage. The following table compares both approaches to help you choose:
+You can use agent hooks protection, network inspection protection, or both together for layered coverage. The following table compares both approaches to help you choose.
+
+As a best practice, enable agent hooks protection for supported agents. If you also need to protect agents that don't support hooks, enable network inspection protection alongside it. When both methods are enabled, Defender Antivirus uses single-path enforcement, where hooks handle supported agents, and network inspection protects the rest, with no need for duplicate scanning.
 
 | Aspect | Agent hooks protection | Network inspection protection |
 | --- | --- | --- |
@@ -53,8 +55,6 @@ You can use agent hooks protection, network inspection protection, or both toget
 | **Compatibility issues** | None | Doesn't support certificate pinning or HTTP/3 |
 | **Microsoft Purview DLP integration** | Supported | Limited |
 | **Recommended for** | Organizations using Claude Code, GitHub Copilot CLI, or OpenAI Codex | Agents without hooks support, or when broad coverage is needed |
-
-**Recommendation:** Enable agent hooks protection for supported agents. If you also need to protect agents that don't support hooks, enable network inspection protection alongside it. When both methods are enabled, Defender Antivirus uses single-path enforcement — hooks handle supported agents, and network inspection protects the rest — so there's no duplicate scanning.
 
 For a full list of supported agents and which method applies to each, see [Supported agents](protect-ai-agents-overview.md#supported-agents).
 
