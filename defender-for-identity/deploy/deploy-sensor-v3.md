@@ -34,7 +34,7 @@ Make sure that the server on which you're activating the sensor:
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
 
 > [!IMPORTANT]
-> Migrating domain controllers running Windows Server 2025 to sensor v3.x isn’t currently supported. Windows Server 2025 domain controllers should continue using the v2.x sensor. Full v3.x support is planned for July 2026.
+> Migrating domain controllers running Windows Server 2025 to sensor v3.x isn’t currently supported. Windows Server 2025 domain controllers should continue using the v2.x sensor.
 
 #### Supported server types
 
