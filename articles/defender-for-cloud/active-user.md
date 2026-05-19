@@ -1,6 +1,6 @@
 ---
-title: Assign a Recommendation to an Active User
-author: Elazark
+title: Assign a recommendation to an active user
+author: ElazarK
 ms.author: elkrieger
 description: Learn how to assign recommendations to active users in Defender for Cloud to enhance security and streamline remediation processes.
 ms.topic: how-to
@@ -28,6 +28,8 @@ Security administrators can directly assign the recommendation to the most appro
 - [Review cloud availability](support-matrix-defender-for-cloud.md).
 
 ## Assign a recommendation to an active user
+
+To assign a recommendation to an active user:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -68,3 +70,4 @@ If you set an email notification, the active user receives an email with recomme
 ## Related content
 
 - [Remediate recommendations](implement-security-recommendations.md)
+- [Review cloud availability](support-matrix-defender-for-cloud.md)
