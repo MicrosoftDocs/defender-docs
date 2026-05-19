@@ -446,11 +446,13 @@ The following table lists the customizable parameters for the SAP agentless data
 
 | Parameter | Description | Allowed values | Default value |
 |-----------|-------------|----------------|---------------|
-| **collect-audit-logs** | Determines whether Audit Log data is ingested or not. | **true**: Ingested, **false**: Not ingested | **true** |
-| **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not. | **true**: Ingested, **false**: Not ingested | **true** |
-| **collect-user-master-data-users** | Determines whether User Details data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested, **false**: Not ingested | **true** |
-| **collect-user-master-data-roles** | Determines whether Role Authorization data is ingested or not. This parameter is also controlled by **collect-user-master-data**. | **true**: Ingested, **false**: Not ingested | **true** |
-| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data population, including users and roles. | Integer, between **1**-**14** | **7** |
+| **changedocs-object-classes** | List of object classes that are ingested from Change Docs logs. | Comma separated list of object classes | `BANK, CLEARING, IBAN, IDENTITY, KERBEROS, OA2_CLIENT, PCA_BLOCK, PCA_MASTER, PFCG, SECM, SU_USOBT_C, SECURITY_POLICY, STATUS, SU22_USOBT, SU22_USOBX, SUSR_PROF, SU_USOBX_C, USER_CUA` |
+| **collect-audit-logs** | Determines whether Audit Log data is ingested or not to the table `ABAPAuditLog`. | **true**: Ingested<br>**false**: Not ingested | **true** |
+| **collect-changedocs-logs** | Determines whether Change Docs logs are ingested or not into the table `ABAPChangeDocsLog`. | **true**: Ingested<br>**false**: Not ingested | **true** |
+| **force-audit-log-to-read-from-all-clients** | Determines whether the Audit Log is read from all clients. | **true**: Read from all clients<br>**false**: Not read from all clients | **false** |
+| **ingestion-cycle-days** | Time, in days, given to ingest the full User Master data, including all roles and users. This parameter doesn't affect the ingestion of changes to User Master data. | Integer, between **1**-**14** | **1** |
+| **collect-user-master-data-users** | Determines whether User Details data is ingested or not to the tables `ABAPUserDetails`. | **true**: Ingested, **false**: Not ingested | **true** |
+| **collect-user-master-data-roles** | Determines whether Role Authorization data is ingested or not to the tables `ABAPAuthorizationDetails`. | **true**: Ingested, **false**: Not ingested | **true** |
 | **offset-in-seconds** | Determines the offset, in seconds, for both the start and end times of a data collection window. Use this parameter to delay data collection by the configured number of seconds. | Integer, between **1**-**600** | **60** |
 
 #### Audit Log parameters
