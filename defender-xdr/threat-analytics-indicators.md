@@ -2,15 +2,11 @@
 title: Access indicators in threat analytics in Microsoft Defender (preview)
 ms.reviewer: 
 description: Learn about the indicators section of each threat analytics report and how to get access to it
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-- NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1

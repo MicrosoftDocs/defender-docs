@@ -8,7 +8,10 @@ ms.reviewer: rlitinsky
 
 # Configure sensors for AD FS, AD CS, and Microsoft Entra Connect
 
-Install Defender for Identity sensors on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers to help protect them from on-premise and cloud attacks. This article describes the installation steps.
+Install and configure the Defender for Identity sensor v2.x on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers that aren't domain controllers.
+
+> [!TIP]
+> If your AD FS, AD CS, or Microsoft Entra Connect role runs on a domain controller with Windows Server 2019 or later, deploy the [sensor v3.x](deploy-sensor-v3.md) instead. This article applies only to servers that aren't domain controllers.
 
 These considerations apply:
 
@@ -30,17 +33,17 @@ If you're working with AD FS, AD CS, or Microsoft Entra Connect servers, make su
 
 - AD FS:
 
-  - [Required AD FS events](event-collection-overview.md#required-ad-fs-events)
-  - [Configure auditing on AD FS](configure-windows-event-collection.md#configure-auditing-on-ad-fs)
+  - [Required AD FS events](configure-windows-event-collection.md#required-ad-fs-events)
+  - [Configure auditing on an AD FS server](configure-windows-event-collection.md#configure-auditing-on-an-ad-fs-server)
 
 - AD CS:
 
-  - [Required AD CS events](event-collection-overview.md#required-ad-cs-events)
-  - [Configure auditing on AD CS](configure-windows-event-collection.md#configure-auditing-on-ad-cs)
+  - [Required AD CS events](configure-windows-event-collection.md#required-ad-cs-events)
+  - [Configure auditing on an AD CS server](configure-windows-event-collection.md#configure-auditing-on-an-ad-cs-server)
 
 - Microsoft Entra Connect:
 
-  - [Required Microsoft Entra Connect events](event-collection-overview.md#required-microsoft-entra-connect-events)
+  - [Required Microsoft Entra Connect events](configure-windows-event-collection.md#required-microsoft-entra-connect-events)
   - [Configure auditing on Microsoft Entra Connect](configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect)
 
 ## Configure read permissions for the AD FS database
@@ -108,9 +111,9 @@ $SQLConnection.Close()
 ## Configure permissions for the Microsoft Entra Connect (ADSync) database
 
 > [!NOTE]
-> This section is applicable only if the Entra Connect database is hosted on an external SQL server instance.
+> This section is applicable only if the Microsoft Entra Connect database is hosted on an external SQL server instance.
 >
-> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that aren't present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
 
 Sensors running on Microsoft Entra Connect servers need to have access to the ADSync database, and have execute permissions for the relevant stored procedures. If you have more than one Microsoft Entra Connect server, make sure to run this across all of them. 
 

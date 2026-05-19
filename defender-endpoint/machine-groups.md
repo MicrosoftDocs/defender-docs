@@ -1,17 +1,15 @@
-﻿---
+---
 title: Create and manage device groups in Microsoft Defender for Endpoint
 description: Create device groups and set automated remediation levels on them by confirming the rules that apply on the group
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 12/18/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -52,6 +50,9 @@ As part of the process of creating a device group, you'll:
 
 > [!NOTE]
 > Device Groups in Defender for Business are managed differently. For more information, see [Device groups in Microsoft Defender for Business](/defender-business/mdb-create-edit-device-groups).
+
+> [!NOTE]
+> You can create up to 2,000 device groups per tenant.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Endpoints** \> **Permissions** section \> **Device groups**. Or, to go directly to the device groups tab, use <https://security.microsoft.com/securitysettings/endpoints/machine_groups>.
 

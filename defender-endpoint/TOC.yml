@@ -1,3 +1,4 @@
+
 - name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
@@ -92,51 +93,54 @@
       - name: URL reputation demonstrations
         href: defender-endpoint-demonstration-smartscreen-url-reputation.md
  
-  - name: Operationalize Microsoft Defender for Endpoint
+  - name: Deployment, onboarding, and configuration
     items:
-      - name: Deploy Defender for Endpoint
-        items:
-        - name: Overview
-          href: mde-planning-guide.md
-        - name: Step 1 - Prepare for deployment
-          href: production-deployment.md
-        - name: Step 2 - Assign roles and permissions
-          href: prepare-deployment.md
-        - name: Step 3 - Identify your architecture and select a deployment method
-          href: deployment-strategy.md
-        - name: Step 4 - Onboard devices to Defender for Endpoint
-          href: onboarding.md
-        - name: Step 5 - Configure Defender for Endpoint capabilities
-          href: onboard-configure.md
+    - name: Plan your deployment
+      items:
+      - name: Overview
+        href: mde-planning-guide.md
+      - name: Step 1 - Prepare for deployment
+        href: production-deployment.md
+      - name: Step 2 - Assign roles and permissions
+        href: prepare-deployment.md
+      - name: Step 3 - Identify your architecture and select a deployment method
+        href: deployment-strategy.md
+      - name: Step 4 - Onboard devices to Defender for Endpoint
+        href: onboarding.md
+      - name: Step 5 - Configure Defender for Endpoint capabilities
+        href: onboard-configure.md
 
-      - name: Onboard and configure devices
+    - name: Onboard and configure devices
+      items:
+      - name: Configure service connections
         items:
-        - name: Configure service connections
-          items:
-            - name: Step 1 - Configure your network environment 
-              href: configure-environment.md
-            - name: Step 2 - Configure device proxy and Internet settings
-              href: configure-proxy-internet.md
-            - name: Step 3 - Verify client connectivity to service URLs
-              href: verify-connectivity.md            
-        - name: Configure streamlined connectivity
-          items:
-            - name: Onboard devices using streamlined method
-              href: configure-device-connectivity.md
-            - name: Migrate devices to streamlined method
-              href: migrate-devices-streamlined.md        
-        - name: Enable access to service URLs
-          items:
-          - name: Streamlined device connectivity URLs (commercial)
-            href: streamlined-device-connectivity-urls-commercial.md
-          - name: Streamlined device connectivity URLs (US government)
-            href: streamlined-device-connectivity-urls-gov.md                                                           
-          - name: Standard device connectivity URLs
-            items: 
-            - name: Standard device connectivity URLs (commercial)
-              href: standard-device-connectivity-urls-commercial.md
-            - name: Standard device connectivity URLs (US government)
-              href: standard-device-connectivity-urls-gov.md
+        - name: Step 1 - Configure your network environment 
+          href: configure-environment.md
+        - name: Step 2 - Configure device proxy and Internet settings
+          href: configure-proxy-internet.md
+        - name: Step 3 - Verify client connectivity to service URLs
+          href: verify-connectivity.md            
+      - name: Configure streamlined connectivity
+        items:
+        - name: Onboard devices using streamlined method
+          href: configure-device-connectivity.md
+        - name: Migrate devices to streamlined method
+          href: migrate-devices-streamlined.md        
+      - name: Enable access to service URLs
+        items:
+        - name: Streamlined device connectivity URLs (commercial)
+          href: streamlined-device-connectivity-urls-commercial.md
+        - name: Streamlined device connectivity URLs (US government)
+          href: streamlined-device-connectivity-urls-gov.md                                                           
+        - name: Standard device connectivity URLs
+          items: 
+          - name: Standard device connectivity URLs (commercial)
+            href: standard-device-connectivity-urls-commercial.md
+          - name: Standard device connectivity URLs (US government)
+            href: standard-device-connectivity-urls-gov.md 
+
+      - name: Defender for Endpoint on Windows
+        items:                                                               
         - name: Onboard client devices
           items:
           - name: Onboard Windows devices using the Defender deployment tool
@@ -181,185 +185,187 @@
           - name: Use custom detection rules to protect SAPXPG
             href: mde-sap-custom-detection-rules.md
 
-        - name: Defender for Endpoint on macOS
+      - name: Defender for Endpoint on macOS
+        items:
+        - name: Deploy Defender for Endpoint on macOS
           items:
-          - name: Deploy Defender for Endpoint on macOS
+          - name: Microsoft Defender for Endpoint Prerequisites on macOS
+            href: microsoft-defender-endpoint-mac-prerequisites.md
+          - name: Deployment with Microsoft Intune
+            href: mac-install-with-intune.md
+          - name: JAMF Pro-based deployment
             items:
-            - name: Microsoft Defender for Endpoint Prerequisites on macOS
-              href: microsoft-defender-endpoint-mac-prerequisites.md
-            - name: Deployment with Microsoft Intune
-              href: mac-install-with-intune.md
-            - name: JAMF Pro-based deployment
+            - name: Deploying Microsoft Defender for Endpoint on macOS using Jamf Pro
+              href: mac-install-with-jamf.md
+            - name: Log in to Jamf Pro
+              href: mac-install-jamfpro-login.md
+            - name: Set up device groups
+              href: mac-jamfpro-device-groups.md
+            - name: Set up policies
+              href: mac-jamfpro-policies.md
+            - name: Enroll devices
+              href: mac-jamfpro-enroll-devices.md        
+          - name: Deployment with other Mobile Device Management (MDM) systems
+            href: mac-install-with-other-mdm.md
+          - name: Manual deployment
+            href: mac-install-manually.md
+        - name: Configure Defender for Endpoint on macOS
+          items:
+            - name: Configure and validate exclusions on Mac
+              href: mac-exclusions.md
+            - name: Set preferences on Mac
+              href: mac-preferences.md 
+            - name: Detect and block potentially unwanted applications on Mac
+              href: mac-pua.md
+            - name: Protect macOS security settings using tamper protection
+              href: tamperprotection-macos.md
+            - name: Configure offline security intelligence updates on Mac
+              href: mac-support-offline-security-intelligence-update.md
+            - name: Device control
               items:
-              - name: Deploying Microsoft Defender for Endpoint on macOS using Jamf Pro
-                href: mac-install-with-jamf.md
-              - name: Log in to Jamf Pro
-                href: mac-install-jamfpro-login.md
-              - name: Set up device groups
-                href: mac-jamfpro-device-groups.md
-              - name: Set up policies
-                href: mac-jamfpro-policies.md
-              - name: Enroll devices
-                href: mac-jamfpro-enroll-devices.md        
-            - name: Deployment with other Mobile Device Management (MDM) systems
-              href: mac-install-with-other-mdm.md
+              - name: Device control overview on Mac
+                href: mac-device-control-overview.md
+              - name: JAMF examples
+                href: mac-device-control-jamf.md
+              - name: Intune examples
+                href: mac-device-control-intune.md
+              - name: macOS Device Control frequently asked questions (FAQ)
+                href: mac-device-control-faq.md
+            - name: Schedule scans on Mac
+              href: mac-schedule-scan.md
+        - name: Update Defender for Endpoint on macOS
+          href: mac-updates.md
+        - name: Privacy for Microsoft Defender for Endpoint on macOS
+          href: mac-privacy.md
+        - name: Resources for Microsoft Defender for Endpoint on macOS
+          href: mac-resources.md
+        - name: Troubleshoot Microsoft Defender for Endpoint on macOS
+          items:
+          - name: Troubleshoot agent health issues
+            href: mac-health-status.md
+          - name: Troubleshooting mode on macOS
+            href: mac-troubleshoot-mode.md
+          - name: Troubleshoot macOS installation issues
+            href: mac-support-install.md
+          - name: Troubleshoot macOS configuration
+            href: mac-support-configuration.md
+          - name: Troubleshoot macOS performance issues overview
+            href: mac-support-perf-overview.md
+            displayName: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
+          - name: Troubleshoot performance issues
+            href: mac-support-perf.md
+          - name: Troubleshoot cloud connectivity
+            href: troubleshoot-cloud-connect-mdemac.md
+          - name: Troubleshoot license issues
+            href: mac-support-license.md
+          - name: Troubleshoot system extention issues
+            href: mac-support-sys-ext.md
+            items:
+            - name: Intune
+              href: manage-profiles-approve-sys-extensions-intune.md
+            - name: JamF
+              href: manage-sys-extensions-using-jamf.md
             - name: Manual deployment
-              href: mac-install-manually.md
-          - name: Configure Defender for Endpoint on macOS
-            items:
-              - name: Configure and validate exclusions on Mac
-                href: mac-exclusions.md
-              - name: Set preferences on Mac
-                href: mac-preferences.md 
-              - name: Detect and block potentially unwanted applications on Mac
-                href: mac-pua.md
-              - name: Protect macOS security settings using tamper protection
-                href: tamperprotection-macos.md
-              - name: Configure offline security intelligence updates on Mac
-                href: mac-support-offline-security-intelligence-update.md
-              - name: Device control
-                items:
-                - name: Device control overview on Mac
-                  href: mac-device-control-overview.md
-                - name: JAMF examples
-                  href: mac-device-control-jamf.md
-                - name: Intune examples
-                  href: mac-device-control-intune.md
-                - name: macOS Device Control frequently asked questions (FAQ)
-                  href: mac-device-control-faq.md
-              - name: Schedule scans on Mac
-                href: mac-schedule-scan.md
-          - name: Update Defender for Endpoint on macOS
-            href: mac-updates.md
-          - name: Privacy for Microsoft Defender for Endpoint on macOS
-            href: mac-privacy.md
-          - name: Resources for Microsoft Defender for Endpoint on macOS
-            href: mac-resources.md
-          - name: Troubleshoot Microsoft Defender for Endpoint on macOS
-            items:
-            - name: Troubleshoot agent health issues
-              href: mac-health-status.md
-            - name: Troubleshooting mode on macOS
-              href: mac-troubleshoot-mode.md
-            - name: Troubleshoot macOS installation issues
-              href: mac-support-install.md
-            - name: Troubleshoot macOS configuration
-              href: mac-support-configuration.md
-            - name: Troubleshoot macOS performance issues overview
-              href: mac-support-perf-overview.md
-              displayName: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
-            - name: Troubleshoot performance issues
-              href: mac-support-perf.md
-            - name: Troubleshoot cloud connectivity
-              href: troubleshoot-cloud-connect-mdemac.md
-            - name: Troubleshoot license issues
-              href: mac-support-license.md
-            - name: Troubleshoot system extention issues
-              href: mac-support-sys-ext.md
-              items:
-              - name: Intune
-                href: manage-profiles-approve-sys-extensions-intune.md
-              - name: JamF
-                href: manage-sys-extensions-using-jamf.md
-              - name: Manual deployment
-                href: manage-sys-extensions-manual-deployment.md
+              href: manage-sys-extensions-manual-deployment.md
            
-        - name: Defender for Endpoint on Linux
+      - name: Defender for Endpoint on Linux
+        items:
+        - name: Deploy Defender for Endpoint on Linux
           items:
-          - name: Deploy Defender for Endpoint on Linux
+          - name: Prerequisites
+            href: mde-linux-prerequisites.md
+          - name: Choose a deployment method                       
             items:
-            - name: Prerequisites
-              href: mde-linux-prerequisites.md
-            - name: Choose a deployment method                       
-              items:
-              - name: Enabling deployment to a custom location
-                href: linux-custom-location-installation.md
-              - name: Deployment tool based deployment
-                href: linux-install-with-defender-deployment-tool.md
-              - name: Installer script based deployment
-                href: linux-installer-script.md
-              - name: Ansible based deployment
-                href: linux-install-with-ansible.md
-              - name: Chef based deployment
-                href: linux-deploy-defender-for-endpoint-with-chef.md
-              - name: Puppet based deployment
-                href: linux-install-with-puppet.md
-              - name: Saltstack based deployment
-                href: linux-install-with-saltack.md
-              - name: Manual deployment
-                href: linux-install-manually.md
-              - name: Golden image based deployment
-                href: linux-deploy-defender-for-endpoint-using-golden-images.md
-              - name: Direct onboarding with Defender for Cloud
-                href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
-              - name: Deployment guidance for Defender for Endpoint on Linux for SAP
-                href: mde-linux-deployment-on-sap.md
-          - name: Configure Defender for Endpoint on Linux
+            - name: Enabling deployment to a custom location
+              href: linux-custom-location-installation.md
+            - name: Deployment tool based deployment
+              href: linux-install-with-defender-deployment-tool.md
+            - name: Installer script based deployment
+              href: linux-installer-script.md
+            - name: Ansible based deployment
+              href: linux-install-with-ansible.md
+            - name: Chef based deployment
+              href: linux-deploy-defender-for-endpoint-with-chef.md
+            - name: Puppet based deployment
+              href: linux-install-with-puppet.md
+            - name: Saltstack based deployment
+              href: linux-install-with-saltack.md
+            - name: Manual deployment
+              href: linux-install-manually.md
+            - name: Golden image based deployment
+              href: linux-deploy-defender-for-endpoint-using-golden-images.md
+            - name: Direct onboarding with Defender for Cloud
+              href: /azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+            - name: Deployment guidance for Defender for Endpoint on Linux for SAP
+              href: mde-linux-deployment-on-sap.md
+        - name: Configure Defender for Endpoint on Linux
+          items:
+          - name: Configure security policies and settings
+            href: linux-preferences.md
+          - name: Static proxy configuration
+            href: linux-static-proxy-configuration.md
+          - name: Configure antivirus scans
             items:
-            - name: Configure security policies and settings
-              href: linux-preferences.md
-            - name: Static proxy configuration
-              href: linux-static-proxy-configuration.md
-            - name: Configure antivirus scans
-              items:
-              - name: Configure Microsoft Defender Antivirus scans on Linux
-                href: schedule-anti-virus-scans-linux.md
-              - name: Schedule antivirus scans using Anacron
-                href: schedule-antivirus-scan-anacron.md
-              - name: Schedule antivirus scans using Crontab
-                href: schedule-antivirus-scan-crontab.md
-            - name: Network protection for Linux
-              href: network-protection-linux.md
-            - name: Configure and validate exclusions on Linux
-              href: linux-exclusions.md
-            - name: Configure eBPF-based sensor
-              href: linux-support-ebpf.md 
-            - name: Detect and block Potentially Unwanted Applications
-              href: linux-pua.md
-            - name: Configure Offline Security Intelligence Update
-              href: linux-support-offline-security-intelligence-update.md
+            - name: Configure Microsoft Defender Antivirus scans on Linux
+              href: schedule-anti-virus-scans-linux.md
+            - name: Schedule antivirus scans using Anacron
+              href: schedule-antivirus-scan-anacron.md
+            - name: Schedule antivirus scans using Crontab
+              href: schedule-antivirus-scan-crontab.md
+          - name: Network protection for Linux
+            href: network-protection-linux.md
+          - name: Configure and validate exclusions on Linux
+            href: linux-exclusions.md
+          - name: Configure eBPF-based sensor
+            href: linux-support-ebpf.md 
+          - name: Detect and block Potentially Unwanted Applications
+            href: linux-pua.md
+          - name: Configure Offline Security Intelligence Update
+            href: linux-support-offline-security-intelligence-update.md
+        - name: Update Defender for Endpoint on Linux
+          items: 
           - name: Update Defender for Endpoint on Linux
-            items: 
-            - name: Update Defender for Endpoint on Linux
-              href: linux-updates.md
-            - name: Schedule an update for Defender for Endpoint on Linux
-              href: linux-update-mde-linux.md
-          - name: Privacy for Defender for Endpoint on Linux
-            href: linux-privacy.md
-          - name: Additional resources for Defender for Endpoint on Linux
-            href: linux-resources.md
-        - name: Mobile Threat Defense
-          items:
-            - name: Mobile Threat Defense overview
-              href: mtd.md
-            - name: Deploy
-              items:
-              - name: Deployment on Android with Microsoft Intune
-                href: android-intune.md
-              - name: Deployment on iOS via Microsoft Intune
-                href: ios-install.md
-              - name: Deployment on iOS with Mobile Application Manager
-                href: ios-install-unmanaged.md
-            - name: Configure Mobile Threat Defense
-              items:
-              - name: User experiences in Defender for Endpoint on Android
-                href: android-new-ux.md
-              - name: User experiences in Defender for Endpoint on iOS
-                href: ios-new-ux.md
-              - name: Mobile device resources for Defender for Endpoint 
-                href: mobile-resources-defender-endpoint.md
-              - name: Configure Defender for Endpoint on Android features
-                href: android-configure.md
-              - name: Configure Defender for Endpoint on Android risk signals using app protection policy
-                href: android-configure-mam.md
-              - name: Privacy for Defender for Endpoint on Android
-                href: android-privacy.md
-              - name: Configure Defender for Endpoint on iOS features
-                href: ios-configure-features.md
-              - name: Privacy for Defender for Endpoint on iOS
-                href: ios-privacy.md
-        - name: Run a detection test on a newly onboarded Microsoft Defender for Endpoint
-          href: run-detection-test.md
+            href: linux-updates.md
+          - name: Schedule an update for Defender for Endpoint on Linux
+            href: linux-update-mde-linux.md
+        - name: Offboard Defender for Endpoint on Linux
+          href: linux-off-board-endpoints.md
+        - name: Privacy for Defender for Endpoint on Linux
+          href: linux-privacy.md
+        - name: Additional resources for Defender for Endpoint on Linux
+          href: linux-resources.md
+      - name: Defender for Endpoint on Android and iOS
+        items:
+          - name: Mobile Threat Defense overview
+            href: mtd.md
+          - name: Deploy
+            items:
+            - name: Deployment on Android with Microsoft Intune
+              href: /intune/intune-service/protect/microsoft-defender-deploy-android?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
+            - name: Deployment on iOS via Microsoft Intune
+              href: ios-install.md
+            - name: Deployment on iOS with Mobile Application Manager
+              href: ios-install-unmanaged.md
+          - name: Configure Mobile Threat Defense
+            items:
+            - name: User experiences in Defender for Endpoint on Android
+              href: android-new-ux.md
+            - name: User experiences in Defender for Endpoint on iOS
+              href: ios-new-ux.md
+            - name: Mobile device resources for Defender for Endpoint 
+              href: mobile-resources-defender-endpoint.md
+            - name: Configure Defender for Endpoint on Android features
+              href: android-configure.md
+            - name: Configure Defender for Endpoint on Android risk signals using app protection policy
+              href: android-configure-mam.md
+            - name: Privacy for Defender for Endpoint on Android
+              href: android-privacy.md
+            - name: Configure Defender for Endpoint on iOS features
+              href: ios-configure-features.md
+            - name: Privacy for Defender for Endpoint on iOS
+              href: ios-privacy.md
+      - name: Run a detection test on a newly onboarded Microsoft Defender for Endpoint
+        href: run-detection-test.md
 
       - name: Configure portal settings
         items:
@@ -438,8 +444,6 @@
           - name: Safe deployment practices
             href: mde-sdp-strategy.md
 
-      - name: Defender for Endpoint Security Operations Guide 
-        href: mde-sec-ops-guide.md
       - name: Troubleshoot
         items:
         - name: Troubleshoot antivirus scan issues
@@ -560,7 +564,10 @@
             href: troubleshoot-asr.md
           - name: Migrate to Attack surface reduction rules
             href: migrating-asr-rules.md
-    
+
+  - name: Defender for Endpoint Security Operations Guide 
+    href: mde-sec-ops-guide.md    
+
   - name: How to guides
     items:
     - name: Integration with Microsoft Defender for Cloud
@@ -615,32 +622,33 @@
       - name: Manage device discovery
         href: configure-device-discovery.md
       - name: Review and assess devices
-        href: assess-devices.md        
+        href: assess-devices.md       
 
       - name: Configure network authenticated scans
         href: network-devices.md
       - name: Troubleshoot
         href: troubleshoot-device-discovery-network-scans.md
     - name: Devices
-      items:      
-      - name: Device inventory
+      items:
+      - name: Overview
+        displayName: devices, device inventory
+        href: devices-overview.md
+      - name: Explore devices in the device inventory
+        displayName: device inventory
         href: machines-view-overview.md
-      - name: Exclude devices
-        href: exclude-devices.md
-      - name: Identify transient devices
-        href: transient-device-tagging.md
+      - name: Manage device scope and relevance
+        displayName: exclude devices, transient devices
+        href: manage-device-scope-relevance.md
+      - name: Manage device tags and target devices
+        displayName: target devices
+        href: machine-tags.md
       - name: Collect custom device data
         items:
         - name: Overview
+          displayName: custom data collection, telemetry, threat hunting
           href: custom-data-collection.md
         - name: Create custom data collection rules
           href: create-custom-data-collection-rules.md
-      - name: Internet facing devices
-        href: internet-facing-devices.md
-      - name: Device timeline
-        href: device-timeline-event-flag.md
-      - name: Manage device groups and tags
-        href: machine-tags.md
 
     - name: Tamper resiliency
       href: tamper-resiliency.md
@@ -887,7 +895,7 @@
           href: use-powershell-cmdlets-microsoft-defender-antivirus.md
         - name: Use Windows Management Instrumentation (WMI) to manage Microsoft Defender Antivirus
           href: use-wmi-microsoft-defender-antivirus.md
-        - name: Use the mpcmdrun.exe tool to manage Microsoft Defender Antivirus
+        - name: Use the MpCmdRun command-line tool to manage Microsoft Defender Antivirus
           href: command-line-arguments-microsoft-defender-antivirus.md
         - name: Configure the notifications that appear on endpoints
           href: configure-notifications-microsoft-defender-antivirus.md
@@ -1033,6 +1041,7 @@
         - name: Investigate files
           href: investigate-files.md
         - name: Investigate devices
+          displayName: device timeline, event flags, internet-facing devices
           href: investigate-machines.md
         - name: Investigate an IP address
           href: investigate-ip.md
@@ -1075,7 +1084,9 @@
           - name: Consult a threat expert
             href: respond-machine-alerts.md#consult-a-threat-expert
           - name: Check activity details in Action center
-            href: respond-machine-alerts.md#check-activity-details-in-action-center
+            href: respond-machine-alerts.md#check-activity-details-and-status
+          - name: Restrict response actions on high-value assets
+            href: restrict-response-actions-high-value-assets.md
 
         - name: Take response actions on a file
           items:

@@ -1,15 +1,11 @@
 ---
 title: DeviceLogonEvents table in the advanced hunting schema
 description: Learn about authentication or sign-in events in the DeviceLogonEvents table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

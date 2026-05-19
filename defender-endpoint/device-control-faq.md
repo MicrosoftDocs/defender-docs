@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint Device Control frequently asked questions
 description: Answers frequently asked questions about device control in Defender for Endpoint
 ms.service: defender-endpoint
@@ -6,7 +6,6 @@ ms.subservice: asr
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -15,7 +14,6 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: faq
 ms.date: 01/05/2026
 ms.reviewer: tewchen, joshbregman
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -53,11 +51,7 @@ Get-AuthenticodeSignature C:\Windows\System32\wbem\WmiPrvSE.exe
 
 ![Screenshot showing results of Get-AuthenticodeSignature cmdlet.](https://user-images.githubusercontent.com/81826151/202582101-5470dd54-ef32-4448-80c9-ba23a721dc70.png)
 
-If the policy still isn't working, contact support, and share your support cab. To get that file, open Command Prompt as an administrator, and then use the following command:
-
-```dos
-"%programfiles%\Windows Defender\MpCmdRun.exe" -GetFiles
-```
+If the policy still isn't working, generate the `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab` file, and then contact support. For instructions, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
 ## Why is there no configuration UX for some policy groups?
 
@@ -131,8 +125,6 @@ You can use Group Policy and Intune to manage device control, but for one machin
 
 Yes, for Windows and Mac.
 
-To set up device control on Windows, use [attack surface reduction rules in Defender for Business](/defender-business/mdb-asr). You'll need [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune). The standalone version of Defender for Business does not include Intune, but it can be added on. [Microsoft 365 Business Premium](/microsoft-365/business-premium) does include Intune. See [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](device-control-overview.md).
+To set up device control on Windows, use [attack surface reduction](/defender-business/mdb-asr). You need [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune). The standalone version of Defender for Business doesn't include Intune, but it can be added on. [Microsoft 365 Business Premium](/microsoft-365/business-premium) includes Intune. See [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](device-control-overview.md).
 
 To set up device control on Mac, use Intune or Jamf. See [Device Control for macOS](mac-device-control-overview.md).
-
-

@@ -1,15 +1,11 @@
 ---
 title: Create custom detection rules in Microsoft Defender XDR
 description: Learn how to create custom detections rules based on advanced hunting queries.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - m365initiative-m365-defender
@@ -23,7 +19,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 03/11/2026
+ms.date: 04/16/2026
 ---
 
 # Create custom detection rules
@@ -53,18 +49,18 @@ Likewise, since the `IdentityLogonEvents` table holds authentication activity in
 > To manage custom detections, Security Operators must have the Manage Security Settings permission in Microsoft Defender for Endpoint if RBAC is turned on.
 
 ### Microsoft Sentinel
-To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
+
+To manage custom detections on Microsoft Sentinel data, you need to be assigned the **Microsoft Sentinel Contributor** role or higher. Users with this [Azure role](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) can manage Microsoft Sentinel SIEM workspace data, including alerts and detections. You can assign this role on a specific primary workspace, Azure resource group, or an entire subscription.
 
 ### Manage required permissions
-
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To manage required permissions, a Global Administrator can:
 
 - Assign the Security Administrator or Security Operator role in [Microsoft 365 admin center](https://admin.microsoft.com/) under **Roles** > **Security Administrator**.
-
 - Check RBAC settings for Microsoft Defender for Endpoint in [Microsoft Defender XDR](https://security.microsoft.com/) under **Settings** > **Permissions** > **Roles**. Select the corresponding role to assign the **manage security settings** permission.
+
+> [!IMPORTANT]
+> Use roles with the fewest permissions to help improve security for your organization. Global Administrator is a highly privileged role. Limit its use to emergency scenarios when you can't use an existing role.
 
 > [!NOTE]
 > A user also needs the appropriate permissions for the devices in the [device scope](#5-set-the-rule-scope) of a custom detection rule that they're creating or editing. A user can't edit a custom detection rule that is scoped to run on all devices if the user doesn't have permissions for all devices. 
@@ -72,6 +68,7 @@ To manage required permissions, a Global Administrator can:
 ## Create a custom detection rule
 
 To create a custom detection rule, follow these steps:
+
 1. [Prepare the query](#1-prepare-the-query)
 1. [Create new rule and provide alert details](#2-create-new-rule-and-provide-alert-details)
 1. [Define alert enrichment details](#3-define-alert-enrichment-details)
@@ -138,12 +135,19 @@ DeviceEvents
 > [!TIP]
 > For better query performance, set a time filter that matches your intended run frequency for the rule. Since the least frequent run is _every 24 hours_, filtering for the past day covers all new data.
 
+#### Custom column for Microsoft Sentinel scoping
+
+If you configured [Microsoft Sentinel scoping](/azure/sentinel/scoping), the `SentinelScope_CF` custom field is available for use in queries and detection rules to reference scope in your analytics.
+
+When you create custom detections and analytics rules, you must project the `SentinelScope_CF` column in your queries to make the triggered alerts visible to scoped analysts. If you don't project this column, alerts are unscoped and hidden from scoped users.
+
 ### 2. Create new rule and provide alert details
 
 In the query editor, select **Create detection rule** and specify the following alert details:
 
 - **Detection name** - Name of the detection rule; make it unique.
 - **Frequency** - Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency).
+- **Lookback** - The time period covered by the query when the custom detection targets data from Microsoft Sentinel only. [See more guidance in the lookback section](#lookback). 
 - **Alert title** - Title displayed with alerts triggered by the rule; make it unique and use plaintext. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
@@ -155,12 +159,12 @@ In the query editor, select **Create detection rule** and specify the following 
 
 #### Rule frequency
 
-When you save a new rule, it runs and checks for matches from the past 30 days of data. The rule then runs again at fixed intervals, applying a lookback period based on the frequency you choose:
+When you save a new rule, it runs and checks for matches from the past 30 days of data. The rule then runs again at fixed intervals, applying a [lookback period](#lookback) based on the frequency you choose:
 
-- **Every 24 hours** - Runs every 24 hours, checking data from the past 30 days.
-- **Every 12 hours** - Runs every 12 hours, checking data from the past 48 hours.
-- **Every 3 hours** - Runs every 3 hours, checking data from the past 12 hours.
-- **Every hour** - Runs hourly, checking data from the past 4 hours.
+- **Every 24 hours**
+- **Every 12 hours**
+- **Every 3 hours**
+- **Every hour**
 - **Continuous (NRT)** - Runs continuously, checking data from events as they're collected and processed in near real-time (NRT). For more information, see [Continuous (NRT) frequency](custom-detection-rules.md#continuous-nrt-frequency).
 - **Custom** - Runs according to the frequency you selected. This option is available if the rule is based only on data that is ingested to Microsoft Sentinel. For more information, see [Custom frequency for Microsoft Sentinel data](#custom-frequency-for-microsoft-sentinel-data).
 
@@ -169,10 +173,6 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 
 When you edit a rule, the next run time scheduled according to the frequency you set applies the changes. The rule frequency is based on the event timestamp and not the ingestion time. Small delays might occur in specific runs, so the configured frequency isn't 100% accurate.
 
->[!IMPORTANT]
-> Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because of this condition, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
->
-> When the lookback period is longer than the frequency, duplicate events might occur. However, custom detections [group and deduplicate them automatically](#how-custom-detections-handle-duplicate-alerts) to reduce alert noise and fatigue.
 
 ##### Continuous (NRT) frequency
 
@@ -204,7 +204,7 @@ Near real-time detections support the following tables:
 
 |Microsoft Defender XDR| Microsoft Sentinel|
 |----------------------|-------------------|
-|<ul><li>`AlertEvidence`<li>`CloudAppEvents`<li>`DeviceEvents`<li>`DeviceFileCertificateInfo`<li>`DeviceFileEvents`<li>`DeviceImageLoadEvents`<li>`DeviceLogonEvents`<li>`DeviceNetworkEvents`<li>`DeviceNetworkInfo`<li>`DeviceInfo`<li>`DeviceProcessEvents`<li>`DeviceRegistryEvents`<li>`EmailAttachmentInfo`<li>`EmailEvents` (except `LatestDeliveryLocation` and `LatestDeliveryAction` columns)<li>`EmailPostDeliveryEvents`<li>`EmailUrlInfo`<li>`IdentityDirectoryEvents`<li>`IdentityLogonEvents`<li>`IdentityQueryEvents`<li>`UrlClickEvents`</ul>| <ul><li>`ABAPAuditLog_CL`<li>`AuditLogs`<li>`AWSCloudTrail`<li>`AWSGuardDuty`<li>`AzureActivity`<li>`Cisco_Umbrella_dns_CL`<li>`Cisco_Umbrella_proxy_CL`<li>`CommonSecurityLog`<li>`GCPAuditLogs`<li>`MicrosoftGraphActivityLogs`<li>`MicrosoftGraphActivityLogs`<li>`OfficeActivity`<li>`OfficeActivity`<li>`Okta_CL`<li>`OktaV2_CL`<li>`ProofpointPOD`<li>`ProofPointTAPClicksPermitted_CL`<li>`ProofPointTAPMessagesDelivered_CL`<li>`SecurityAlert`<li>`SecurityEvent`<li>`SigninLogs`</ul> 
+|<ul><li>`AlertEvidence`<li>`CloudAppEvents`<li>`DeviceEvents`<li>`DeviceFileCertificateInfo`<li>`DeviceFileEvents`<li>`DeviceImageLoadEvents`<li>`DeviceLogonEvents`<li>`DeviceNetworkEvents`<li>`DeviceNetworkInfo`<li>`DeviceInfo`<li>`DeviceProcessEvents`<li>`DeviceRegistryEvents`<li>`EmailAttachmentInfo`<li>`EmailEvents` (except `LatestDeliveryLocation` and `LatestDeliveryAction` columns)<li>`EmailPostDeliveryEvents`<li>`EmailUrlInfo`<li>`IdentityDirectoryEvents`<li>`IdentityLogonEvents`<li>`IdentityQueryEvents`<li>`UrlClickEvents`</ul>| <ul><li>`ABAPAuditLog_C`<li>`ABAPChangeDocsLog_CL`<li>`AuditLogs`<li>`AWSCloudTrail`<li>`AWSGuardDuty`<li>`AzureActivity`<li>`CommonSecurityLog`<li>`GCPAuditLogs`<li>`MicrosoftGraphActivityLogs`<li>`OfficeActivity`<li>`Okta_CL`<li>`OktaV2_CL`<li>`ProofpointPOD`<li>`ProofPointTAPClicksPermitted_CL`<li>`ProofPointTAPMessagesDelivered_CL`<li>`SecurityAlert`<li>`SecurityEvent`<li>`SigninLogs`</ul> 
 
 > [!NOTE]
 > Only generally available columns support **Continuous (NRT)** frequency.
@@ -213,16 +213,35 @@ Near real-time detections support the following tables:
 
 Microsoft Sentinel customers who onboard to Microsoft Defender can select **Custom** frequency when the rule is based only on data that Microsoft Sentinel ingests. 
 
-When you select this frequency option, the **Run query every input** component appears. Type the desired frequency for the rule and use the dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. When you select a frequency, the lookback period is determined automatically by using the following logic: 
-1.	For detections set to run more frequently than once a day, the lookback is four times the frequency. For example, if the frequency is 20 minutes, the lookback is 80 minutes.  
-1.	For detections set to run once a day or less frequently, the lookback is 30 days. For example, if set to run every three days, the lookback is 30 days.  
+When you select this frequency option, the **Run query every input** component appears. Type the desired frequency for the rule and use the dropdown to select the units: minutes, hours, or days. The supported range is any value from 5 minutes to 14 days. 
 
 :::image type="content" source="media/custom-detection-rules/ah-custom-frequency.png" alt-text="Screenshot that shows the Custom frequency option in the Custom detections setup guide." lightbox="media/custom-detection-rules/ah-custom-frequency.png":::
 
 > [!IMPORTANT]
->When you select a custom frequency, Defender fetches your data from Microsoft Sentinel. This means that: 
+>When you select a custom frequency, Defender fetches your data from Microsoft Sentinel. This condition means that: 
 >1.	You must have data available in Microsoft Sentinel.
 >1.	Defender XDR data doesn't support scoping, since Microsoft Sentinel doesn't support scoping.
+
+#### Lookback
+
+The lookback period of your custom detections can range from five minutes to 30 days, depending on the target data and frequency of your query.
+
+If your custom detections include Defender XDR data, a fixed lookback period is applied depending on the rule frequency that you choose:
+- For detections set to run **every 24 hours**, the lookback period is **30 days**.
+- For detections set to run **every 12 hours**, the lookback period is **48 hours**.
+- For detections set to run **every three hours**, the lookback period is **12 hours**.
+- For detections set to run **hourly**, the lookback period is **four hours**.
+
+If your custom detections target Microsoft Sentinel data only, you can customize the lookback period depending on the rule frequency that you set: 
+- For detections set to run in frequencies **higher (more frequent) than one hour**, the lookback period is limited to **less than 48 hours**. 
+- For detections set to run in frequencies **higher than one day**, the lookback can be set **up to 14 days**. 
+- For detections set to run in frequencies of **one day or less**, the lookback can be set **up to 30 days**.  
+
+> [!IMPORTANT]
+> Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because of this condition, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
+> 
+> When the lookback period is longer than the frequency, duplicate events might occur. However, custom detections [group and deduplicate them automatically](#how-custom-detections-handle-duplicate-alerts) to reduce alert noise and fatigue.
+
 
 ### 3. Define alert enrichment details 
 You can enrich alerts by providing and defining more details. When you enrich alerts, you can:
@@ -287,7 +306,7 @@ The expanded **Entity mapping** section has two sections where you can select en
     - Azure resource 
     - Amazon Web Services resource 
     - Google Cloud Platform resource 
-- **Related evidence** – Add nonassets that appear in the selected events. The supported entity types are: 
+- **Related evidence** – Add nonassets that appear in the selected events. The supported entity types are: 
     - Process 
     - File 
     - Registry value 
@@ -380,7 +399,7 @@ After reviewing the rule, select **Create** to save it. The custom detection rul
 
 #### How custom detections handle duplicate alerts
 
-An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection rule fires twice on an event that contains the same entities, custom details, and dynamic details, it creates one alert for both events. If the detection rule recognizes that the events are identical, it logs one of the events on the created alert and takes care of the duplicates. Duplicates can occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
+An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection rule runs twice on an event that contains the same entities, custom details, and dynamic details, it creates one alert for both events. If the detection rule recognizes that the events are identical, it logs one of the events on the created alert and takes care of the duplicates. Duplicates can occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
 
 ## See also
 

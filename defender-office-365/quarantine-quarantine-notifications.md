@@ -1,25 +1,19 @@
 ---
 title: Quarantine notifications in Microsoft 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MED150
-  - MET150
 ms.assetid: 56de4ed5-b0aa-4195-9f46-033d7cc086bc
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
   - seo-marvel-apr2020
-description: Admins can learn about notifications for quarantined messages in Microsoft 365.
+description: Learn about quarantine notifications in Microsoft 365, including how users can review, release, request release, and block senders for quarantined messages.
+#customer intent: As a Microsoft 365 admin, I want to understand quarantine notifications so that I can configure them for users and shared mailboxes.
 ms.service: defender-office-365
-ms.date: 07/08/2025
+ms.date: 05/13/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -35,7 +29,7 @@ In all organizations with cloud mailboxes, quarantine holds potentially dangerou
 > [!NOTE]
 > In Microsoft 365 operated by 21Vianet in China, quarantine isn't currently available in the Microsoft Defender portal. Quarantine is available only in the classic Exchange admin center (classic EAC).
 
-For [supported protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), _quarantine policies_ define what users are allowed to do to quarantined messages based on why the message was quarantined. Default quarantine policies enforce the historical capabilities for the security feature that quarantined the message as described in the table [in this article](quarantine-end-user.md). Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Create quarantine policies](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
+For [supported protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), _quarantine policies_ define what users are allowed to do to quarantined messages based on why the message was quarantined. Default quarantine policies enforce the historical capabilities for the security feature that quarantined the message as described in the table at [Find and release quarantined messages as a user](quarantine-end-user.md). Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Create quarantine policies](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
 
 Quarantine notifications aren't turned on in the default quarantine notifications named AdminOnlyAccessPolicy or DefaultFullAccessPolicy. Quarantine notifications are turned on in the following default quarantine policies:
 
@@ -52,14 +46,14 @@ Admins can also use the global settings in quarantine policies to customize quar
 
 For instructions, see [Configure global quarantine notification settings](quarantine-policies.md#configure-global-quarantine-notification-settings-in-the-microsoft-defender-portal).
 
-For shared mailboxes, quarantine notifications are supported only for users who are granted FullAccess permission to the mailbox. For more information, see [Use the EAC to edit shared mailbox delegation](/Exchange/collaboration-exo/shared-mailboxes#use-the-eac-to-edit-shared-mailbox-delegation).
+For shared mailboxes, quarantine notifications are supported only for users who are granted FullAccess permission to the shared mailbox (assigned directly or through a cloud-only security group). For more information, see [Use the EAC to edit shared mailbox delegation](/Exchange/collaboration-exo/shared-mailboxes#use-the-eac-to-edit-shared-mailbox-delegation).
 
 > [!NOTE]
-> By default, messages that are quarantined as high confidence phishing by anti-spam policies, malware by anti-malware policies or Safe Attachments, or by mail flow rules (also known as transport rules) are available only to admins. For more information, see the table at [Find and release quarantined messages as a user](quarantine-end-user.md).
 >
-> Quarantine notifications for messages sent to distribution groups or mail-enabled security groups are sent to all group members.
->
-> Quarantine notifications for messages sent to Microsoft 365 Groups are sent to all group members only if the **Send copies of group conversations and events to group members** setting is turned on.
+> - Currently, quarantine management for shared mailboxes isn't supported with on-premises AD synchronized groups.
+> - By default, messages that are quarantined as high confidence phishing by anti-spam policies, malware by anti-malware policies or Safe Attachments, or by mail flow rules (also known as transport rules) are available only to admins. For more information, see the table at [Find and release quarantined messages as a user](quarantine-end-user.md).
+> - Quarantine notifications for messages sent to distribution groups or mail-enabled security groups are sent to all group members.
+> - Quarantine notifications for messages sent to Microsoft 365 Groups are sent to all group members only if the **Send copies of group conversations and events to group members** setting is turned on.
 
 When users receive a quarantine notification, the following information is available for each quarantined message:
 
@@ -67,7 +61,7 @@ When users receive a quarantine notification, the following information is avail
 - **Subject**: The Subject line of the quarantined message.
 - **Date**: The date/time that the message was quarantined in UTC.
 
-The actions that are available for messages in the quarantine notification depends on why the message was quarantined and the permissions in the associated quarantine policy. For more information, see [Quarantine policy permission details](quarantine-policies.md#quarantine-policy-permission-details).
+The actions that are available for messages in the quarantine notification depend on why the message was quarantined and the permissions in the associated quarantine policy. For more information, see [Quarantine policy permission details](quarantine-policies.md#quarantine-policy-permission-details).
 
 - **Review message**: Available for all messages in quarantine notifications.
 
@@ -103,4 +97,4 @@ The actions that are available for messages in the quarantine notification depen
   > [!TIP]
   > The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine. To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
 
-:::image type="content" source="media/quarantine-notification.png" alt-text="A sample quarantine notification." lightbox="media/quarantine-notification.png":::
+:::image type="content" source="media/quarantine-notification.png" alt-text="Screenshot of a sample quarantine notification." lightbox="media/quarantine-notification.png":::

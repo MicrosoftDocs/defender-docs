@@ -82,9 +82,7 @@ Use the following steps to migrate to Defender for Identity:
 
 1. Install the Defender for Identity Sensor on all domain controllers:
 
-    1. [Download the Defender for Identity sensor files](download-sensor.md) and retrieve the access key.
-
-    1. [Install Defender for Identity sensors on your domain controllers](install-sensor.md).
+    1. [Download and install the Defender for Identity sensor](deploy/install-sensor.md) on your domain controllers.
 
 1. [Configure the your Defender for Identity sensor](configure-sensor-settings.md).
 

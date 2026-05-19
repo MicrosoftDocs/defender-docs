@@ -1,12 +1,11 @@
 ---
-title: How Microsoft Defender Experts for XDR permissions work
+title: How Microsoft Defender Experts permissions work
 ms.reviewer:
 description: Configuring permissions in customer's XDR tenants
 ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -14,18 +13,17 @@ ms.topic: concept-article
 ms.custom: 
 - cx-ti
 - cx-dex
-search.appverid: met150
 ms.date: 08/01/2025
 ---
 
-# How Microsoft Defender Experts for XDR permissions work
+# How Microsoft Defender Experts permissions work
 
 **Applies to:**
 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsoft Defender Experts for Servers
+- [Microsoft Defender Experts for Servers](dex-servers-overview.md)
 
-For Microsoft Defender Experts for XDR incident investigations, when our experts need access to your tenants, we follow the just-in-time and least privilege principles to provide the right level of access at the right time. To deliver on these requirements, we built the Microsoft Defender Experts permissions platform using the following capabilities in Microsoft Entra ID:
+For Microsoft Defender Experts incident investigations, when our experts need access to your tenants, we follow the just-in-time and least privilege principles to provide the right level of access at the right time. To deliver on these requirements, we built the Microsoft Defender Experts permissions platform using the following capabilities in Microsoft Entra ID:
 
 - **Granular delegated admin privileges (GDAP)**: As part of onboarding, we provision the Microsoft Experts tenant as a service provider on your tenant to use the GDAP capability and get the right access level to our experts. The roles granted to our experts are configured using [cross-tenant role assignment](/azure/active-directory/external-identities/cross-tenant-access-overview) to ensure that they only have permissions that you have explicitly granted to them.
 - **Microsoft Entra cross-tenant access policies**: To enforce restrictions on our experts' access to your tenant, we need to establish a cross-tenant trust between our experts and your tenant. To enable this trust, we configure a cross-tenant access policy in your tenant as part of onboarding. These cross-tenant access policies are created with read-only permissions to avoid any disruption.
@@ -34,10 +32,7 @@ For Microsoft Defender Experts for XDR incident investigations, when our experts
 
 ## Configuring permissions in customer tenants
 
-> [!IMPORTANT]
-> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-
-Once you select the permissions you'd like to grant to our experts, we create the following policies in your tenant using the Security Administrator or Global Administrator context:
+Once you select the permissions you'd like to grant to our experts, we create the following policies in your tenant using the Security Administrator or higher role:
 
 - **Configure Microsoft Experts as a service provider** – This setting lets our experts access the tenant environment as external collaborators without requiring you to create accounts for them.
 - **Configure role assignments for our experts** – This setting controls the roles our experts are allowed in the tenant. You select the appropriate roles during the onboarding process
@@ -48,6 +43,6 @@ These policies are configured during the onboarding process and require the rele
 
 ### See also
 
-[Important considerations for Microsoft Defender Experts for XDR](additional-information-xdr.md)
+[Important considerations for Microsoft Defender Experts](additional-information-xdr.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
