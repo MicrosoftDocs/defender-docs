@@ -33,6 +33,9 @@ Make sure that the server on which you're activating the sensor:
 - Is running Windows Server 2019 or later.
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
 
+> [!NOTE]
+> Defender for Identity sensors on Windows Server 2025 are temporarily running an older version and may not include the latest detection improvements. An automatic update is planned for July 2026. No action is required.
+
 #### Supported server types
 
 The v3.x sensor supports domain controllers, including domain controllers with these identity roles:

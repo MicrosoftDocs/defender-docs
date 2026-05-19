@@ -46,6 +46,12 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Suspected Conditional Access bypass via non-compliant device](alerts-xdr.md#suspected-conditional-access-bypass-via-non-compliant-device)
 - [Suspicious addition of default third‑party MFA method to user account](alerts-xdr.md#suspicious-addition-of-default-thirdparty-mfa-method-to-user-account)
 
+### Known issue: Windows Server 2025 sensors running an older version
+
+Defender for Identity sensors (v3.x) on Windows Server 2025 are currently running an older sensor version and don't include the latest detection and feature improvements. This issue will be resolved automatically with an upcoming update planned for July 2026. No action is required from customers.
+
+For more information, see [Windows Server 2025 sensors running an older version](troubleshooting-known-issues.md#windows-server-2025-sensors-running-an-older-version).
+
 ## April 2026
 
 ### **Identity Explorer (Preview)**

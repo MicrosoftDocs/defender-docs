@@ -486,6 +486,18 @@ If permissions need to be reconfigured, follow the steps outlined in this [guide
 
 In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
 
+## Windows Server 2025 sensors running an older version
+
+Defender for Identity sensors (v3.x) installed on Windows Server 2025 are currently running an older sensor version and don't include the latest detection and feature improvements available on other operating systems.
+
+### Impact
+
+Sensors on Windows Server 2025 are missing some newer detection capabilities. Your environment remains protected, and no security vulnerabilities are introduced by this issue.
+
+### Resolution
+
+An automatic update is planned for July 2026. Once available, sensors on Windows Server 2025 will update automatically — no action is needed from your side.
+
 ## Next steps
 
 - [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md) 
