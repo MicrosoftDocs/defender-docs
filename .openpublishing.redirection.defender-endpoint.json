@@ -282,7 +282,7 @@
     },
     {
       "source_path": "defender-endpoint/defender-compatibility.md",
-      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint#defender-for-endpoint-capabilities",
+      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint-windows#antivirus-solution-compatibility",
       "redirect_document_id": false
     },
     {
