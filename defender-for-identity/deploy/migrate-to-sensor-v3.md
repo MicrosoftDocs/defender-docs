@@ -31,7 +31,7 @@ For the full list of v3.x requirements, see [Defender for Identity sensor v3.x p
 
 ## Known limitations
 
-- **Windows Server 2025 domain controllers:** Windows Server 2025 domain controllers don't yet have full detection coverage after migration. Until this limitation is resolved, keep Windows Server 2025 domain controllers on sensor v2.x.
+- **Windows Server 2025 domain controllers:** Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported.
 
 ## Start the migration
 
