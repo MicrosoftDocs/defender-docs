@@ -1,8 +1,9 @@
 ---
 title: Get started with custom connectors using AI agent in Microsoft Sentinel
 description: Custom Data connectors using AI agent in Microsoft Sentinel Visual Studio Code extension
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: feature-availability
 ms.date:  03/27/2026
 

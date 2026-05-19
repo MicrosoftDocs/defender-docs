@@ -1,5 +1,5 @@
 ---
-title: Securing IoT devices | Microsoft Defender for IoT
+title: Secure IoT devices | Microsoft Defender for IoT
 description: Learn how integrating Microsoft Defender for Endpoint and Microsoft Defender for IoT's security content enhances your IoT network security.
 ms.topic: concept-article
 ms.date: 09/13/2023
@@ -7,7 +7,7 @@ ms.custom: enterprise-iot
 #CustomerIntent: As a Defender for IoT customer, I want to understand how I can secure my enterprise IoT devices with Microsoft Defender for IoT so that I can protect my organization from IoT threats.
 ---
 
-# Securing IoT devices in the enterprise
+# Secure IoT devices in the enterprise
 
 The number of IoT devices continues to grow exponentially across enterprise networks, such as printers, Voice over Internet Protocol (VoIP) devices, smart TVs, and conferencing systems scattered around many office buildings. 
 
@@ -104,6 +104,6 @@ For more information, see:
 - [Manage your device inventory from the Azure portal](how-to-manage-device-inventory-for-organizations.md)
 - [Proactively hunt with advanced hunting in Microsoft 365 Defender](/microsoft-365/security/defender/advanced-hunting-overview)
 
-## Next steps
+## Next step
 
 Start securing your Enterprise IoT network resources with by [onboarding to Defender for IoT from Microsoft Defender XDR](eiot-defender-for-endpoint.md).

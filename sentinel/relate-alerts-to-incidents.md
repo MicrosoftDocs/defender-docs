@@ -1,8 +1,9 @@
 ---
 title: Relate alerts to incidents in Microsoft Sentinel in the Azure portal
 description: This article shows you how to relate alerts to your incidents in Microsoft Sentinel in the Azure portal.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: idpelleg
 ms.topic: how-to
 ms.date: 01/17/2023
 appliesto:

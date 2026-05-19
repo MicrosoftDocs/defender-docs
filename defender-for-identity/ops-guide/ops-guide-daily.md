@@ -10,15 +10,15 @@ ms.reviewer: martin77s
 
 This article reviews the Microsoft Defender for Identity activities we recommend for your team on a daily basis.
 
-## Review the ITDR dashboard
+## Review the Identity Security dashboard
 
 **Where**: In Microsoft Defender XDR, under select **Identities** > **Dashboard**.
 
 **Persona**: SOC analysts, security administrators, identity, and access management administrators
 
-Use Defender for Identity's **Dashboard** page to view critical insights and real-time data about identity threat detection and response (ITDR). On a daily basis, we recommend that you focus on the **Top insights**, **Identity related incidents**, and **Entra ID users at risk** widgets.
+Use Defender for Identity's **Dashboard** page to view critical insights and real-time data about identity security. On a daily basis, we recommend that you focus on the **Top insights**, **Identity related incidents**, and **Entra ID users at risk** widgets.
 
-For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md).
+For more information, see [Work with Defender for Identity's Identity Security dashboard (Preview)](../dashboard.md).
 
 ## Triage incidents by priority
 

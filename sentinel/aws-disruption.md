@@ -1,9 +1,9 @@
 ---
 title: Enable Attack Disruption Actions on AWS with Microsoft Sentinel
 description: Enable Attack Disruption Actions on AWS with Microsoft Sentinel
-author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: Christos Ventouris
+author: mberdugo
+ms.reviewer: eyalhaik
 ms.date: 01/13/2026
 ms.topic: how-to
 ---
