@@ -15,14 +15,13 @@ ms.collection:
 ms.custom:
 description: Learn how to create and assign quarantine policies to control what users can do to quarantined messages and configure quarantine notifications.
 ms.service: defender-office-365
-ms.date: 07/08/2025
+ms.date: 05/19/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an admin, I want to create and configure quarantine policies so that I can control what users are allowed to do with quarantined messages and whether they receive quarantine notifications.
 ---
-
-[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]: # (customer intent: As an admin, I want to create and configure quarantine policies so that I can control what users are allowed to do with quarantined messages and whether they receive quarantine notifications.)
 
 # Configure quarantine policies in cloud organizations
 
