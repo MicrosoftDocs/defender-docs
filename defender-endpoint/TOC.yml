@@ -7,24 +7,16 @@
     href: zero-trust-with-microsoft-defender-endpoint.md
   - name: Overview
     items:
-    - name: What is Microsoft Defender for Endpoint?
-      items: 
       - name: Defender for Endpoint
         href: microsoft-defender-endpoint.md
-      - name: Defender for Endpoint on macOS
-        href: microsoft-defender-endpoint-mac.md
+      - name: Defender for Endpoint on Windows
+        href: microsoft-defender-endpoint-windows.md
       - name: Defender for Endpoint on Linux
         href: microsoft-defender-endpoint-linux.md
-      - name: Defender for Endpoint on Android
-        href: microsoft-defender-endpoint-android.md
-      - name: Defender for Endpoint on iOS
-        href: microsoft-defender-endpoint-ios.md
+      - name: Defender for Endpoint on macOS
+        href: microsoft-defender-endpoint-mac.md
       - name: Defender for Endpoint for US Government customers
         href: gov.md
-      - name: Supported Defender for Endpoint capabilities by platform
-        href: supported-capabilities-by-platform.md
-      - name: Antivirus solution compatibility with Defender for Endpoint
-        href: defender-compatibility.md
       - name: Defender for Endpoint Plan 1
         items:
         - name: Overview of Defender for Endpoint Plan 1
@@ -32,7 +24,7 @@
         - name: Setup and configuration
           href: mde-p1-setup-configuration.md
         - name: Get started
-          href: mde-plan1-getting-started.md        
+          href: mde-plan1-getting-started.md
     - name: What's new
       items:
         - name: New features
