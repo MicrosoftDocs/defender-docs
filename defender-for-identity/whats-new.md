@@ -48,7 +48,7 @@ These new alerts were added to the Defender for Identity security alerts:
 
 ### Known limitation: Windows Server 2025 sensor v3.x migration not supported
 
-Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Windows Server 2025 domain controllers should continue using the v2.x sensor until full v3.x support is available in July 2026.
+Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Windows Server 2025 domain controllers should continue using the v2.x sensor.
 
 For more information, see [Windows Server 2025 sensor v3.x migration not supported](troubleshooting-known-issues.md#windows-server-2025-sensor-v3x-migration-not-supported).
 
