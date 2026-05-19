@@ -4,7 +4,7 @@ description: Learn how to connect Power BI to Microsoft Defender for Cloud to ga
 ms.author: elkrieger
 author: ElazarK
 ms.topic: how-to
-ms.date: 2026-05-19
+ms.date: 05/19/2026
 ai-usage: ai-assisted
 ms.custom: sfi-image-nochange
 #customer intent: As a user, I want to learn how to connect Power BI to Microsoft Defender for Cloud so that I can gain enhanced value from the data collected by Defender for Cloud.

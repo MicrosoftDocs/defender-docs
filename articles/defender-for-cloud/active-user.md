@@ -4,7 +4,7 @@ author: ElazarK
 ms.author: elkrieger
 description: Learn how to assign recommendations to active users in Defender for Cloud to enhance security and streamline remediation processes.
 ms.topic: how-to
-ms.date: 2026-05-19
+ms.date: 05/19/2026
 #customer intent: As a security administrator, I want to assign recommendations to Active Users in Defender for Cloud to enhance security and streamline remediation processes.
 ---
 
