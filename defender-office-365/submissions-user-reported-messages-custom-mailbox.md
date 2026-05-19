@@ -326,26 +326,22 @@ To correctly identify why the original messages were reported, messages sent to 
 
 The [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) in Microsoft Defender autonomously triages and classifies user-reported phishing emails. The agent works with non-Microsoft reporting tools when configured correctly.
 
-##### Requirements
+- **Requirements**:
+  - **Microsoft Defender for Office 365 Plan 2**
+  - **Security Copilot**: Provisioned capacity in Security Compute Units (SCUs). For more information, see [Get started with Security Copilot](/copilot/security/get-started-security-copilot).
+  - **Message delivery**: The reported message must be delivered to an Exchange Online mailbox in the same organization.
+  - **User reported settings**: Select **Use a non-Microsoft add-in button**, specify the reporting mailbox, and set **Send reported items to** \> **Microsoft and my reporting mailbox**.
+  - **Reporting mailbox on the SecOps allow list**: Configure the reporting mailbox as a SecOps mailbox so reports aren't filtered. For instructions, see [Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
+  - **Message submission format**: The non-Microsoft tool must submit the original email as an uncompressed .EML or .MSG attachment with required headers preserved (including `X-Ms-Exchange-Organization-Network-Message-Id`). The Subject line must use the expected format (`3|` or `Phishing:` prefix). For details, see [Message submission format for non-Microsoft reporting tools](#message-submission-format-for-non-microsoft-reporting-tools).
+  - **Alert policy enabled**: The **Email reported by user as malware or phish** alert policy must be turned on. For more information, see [Alert policies in the Microsoft Defender portal](/defender-xdr/alert-policies).
+  - **Alert tuning**: Disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that resolve this alert. For more information, see [Tune an alert](/defender-xdr/investigate-alerts#tune-an-alert).
 
-- **Security Copilot**: Provisioned capacity in Security Compute Units (SCUs). For more information, see [Get started with Security Copilot](/copilot/security/get-started-security-copilot).
-- **Microsoft Defender for Office 365 Plan 2**: Deployed in the organization.
-- **Message delivery**: The reported message must be delivered to an Exchange Online mailbox in the same tenant.
-- **User reported settings**: Select **Use a non-Microsoft add-in button**, specify the reporting mailbox, and set **Send reported items to** \> **Microsoft and my reporting mailbox**.
-- **Reporting mailbox on the SecOps allow list**: Configure the reporting mailbox as a SecOps mailbox so reports aren't filtered. For instructions, see [Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
-- **Message submission format**: The non-Microsoft tool must submit the original email as an uncompressed .EML (message/rfc822) or .MSG attachment with required headers preserved (including `X-Ms-Exchange-Organization-Network-Message-Id`). The Subject line must use the expected format (`3|` or `Phishing:` prefix). For details, see [Message submission format for non-Microsoft reporting tools](#message-submission-format-for-non-microsoft-reporting-tools).
-- **Alert policy enabled**: The **Email reported by user as malware or phish** alert policy must be turned on. For more information, see [Alert policies in the Microsoft Defender portal](/defender-xdr/alert-policies).
-- **Alert tuning**: Disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that resolve this alert. For more information, see [Tune an alert](/defender-xdr/investigate-alerts#tune-an-alert).
+- **Avoid common configuration mistakes**:
+  - **Dual reporting buttons**: Don't run both the Microsoft and non-Microsoft reporting buttons simultaneously. Duplicate submissions create noise.
+  - **Inline forwarding**: Don't forward the original message to the reporting mailbox. Forwarding strips required headers. The original message must be attached as .EML or .MSG.
+  - **Incorrect submitter attribution**: The submission must come from the user who received the email, not a service account.
 
-##### Avoid common configuration mistakes
-
-- **Dual reporting buttons**: Don't run both the Microsoft and non-Microsoft reporting buttons simultaneously. Duplicate submissions create noise.
-- **Inline forwarding**: Don't forward the original message to the reporting mailbox. Forwarding strips required headers. The original message must be attached as .EML or .MSG.
-- **Incorrect submitter attribution**: The submission must come from the user who received the email, not a service account.
-
-##### Validate the configuration
-
-Submit a test report from the non-Microsoft tool. If the report appears in the Defender portal at **Email & collaboration** \> **Submissions** \> **User reported** (<https://security.microsoft.com/reportsubmission?viewid=user>) with full headers and a `Phishing:` or `3|` Subject line prefix, the Phishing Triage Agent can triage it.
+- **Validate the configuration**: Submit a test report from the non-Microsoft tool. If the report appears in the Defender portal at **Email & collaboration** \> **Submissions** \> **User reported** (<https://security.microsoft.com/reportsubmission?viewid=user>) with full headers and a `Phishing:` or `3|` Subject line prefix, the Phishing Triage Agent can triage it.
 
 For more information about setting up and using the Phishing Triage Agent, see [Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender](/defender-xdr/phishing-triage-agent).
 
