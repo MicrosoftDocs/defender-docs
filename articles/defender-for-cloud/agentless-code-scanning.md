@@ -4,8 +4,8 @@ description: Discover how agentless code scanning in Microsoft Defender for Clou
 ms.author: elkrieger
 author: ElazarK
 ms.service: defender-for-cloud
-ms.topic: conceptual
-ms.date: 04/30/2026
+ms.topic: how-to
+ms.date: 2026-05-19
 ms.custom: references_regions
 #customer intent: As a security professional, I want to learn how agentless code scanning in Microsoft Defender for Cloud can help identify vulnerabilities in my code and IaC configurations.
 ---
@@ -240,8 +240,7 @@ Syft (SBOM) currently has the following limitations:
 - Timeout is set to 15 minutes for the SBOM tool to run.
 - Disabling agentless code scanning doesn't delete the SBOM recommendations.
 
-## Related content
+## Next steps
 
-- [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
-
-- [Connect Azure DevOps environments to Defender for Cloud](quickstart-onboard-devops.md)
+> [!div class="nextstepaction"]
+> [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)

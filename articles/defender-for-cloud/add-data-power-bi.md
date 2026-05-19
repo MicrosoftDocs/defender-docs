@@ -3,8 +3,8 @@ title: Add Defender for Cloud data to Power BI
 description: Learn how to connect Power BI to Microsoft Defender for Cloud to gain enhanced value from the data collected by Defender for Cloud.
 ms.author: elkrieger
 author: ElazarK
-ms.topic: conceptual
-ms.date: 01/14/2025
+ms.topic: how-to
+ms.date: 2026-05-19
 ai-usage: ai-assisted
 ms.custom: sfi-image-nochange
 #customer intent: As a user, I want to learn how to connect Power BI to Microsoft Defender for Cloud so that I can gain enhanced value from the data collected by Defender for Cloud.
@@ -207,9 +207,7 @@ The queries provided on this page are examples that provide results. Azure Resou
 
 1. Select **Load**.
 
-## Next step
-
-With Azure Resource Graph, you can retrieve and analyze data from Defender for Cloud and build visualizations that support security posture monitoring.
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Add visualizations in Power BI](/power-bi/visuals/power-bi-report-add-visualizations-i?tabs=powerbi-desktop)

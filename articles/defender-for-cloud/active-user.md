@@ -4,7 +4,7 @@ author: ElazarK
 ms.author: elkrieger
 description: Learn how to assign recommendations to active users in Defender for Cloud to enhance security and streamline remediation processes.
 ms.topic: how-to
-ms.date: 05/06/2025
+ms.date: 2026-05-19
 #customer intent: As a security administrator, I want to assign recommendations to Active Users in Defender for Cloud to enhance security and streamline remediation processes.
 ---
 
@@ -67,7 +67,8 @@ To assign a recommendation to an active user:
 
 If you set an email notification, the active user receives an email with recommendation details and a link to the recommendation in Defender for Cloud.
 
-## Related content
+## Next steps
 
-- [Remediate recommendations](implement-security-recommendations.md)
-- [Review cloud availability](support-matrix-defender-for-cloud.md)
+> [!div class="nextstepaction"]
+> [Remediate recommendations](implement-security-recommendations.md)
+
