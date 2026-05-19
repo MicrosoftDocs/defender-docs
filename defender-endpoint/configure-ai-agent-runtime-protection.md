@@ -22,6 +22,8 @@ Microsoft Defender Antivirus provides runtime protection for AI coding agents on
 
 Defender Antivirus supports two runtime protection approaches: agent hooks protection and network inspection protection.
 
+Discovery visibility and runtime protection alerting are currently presented in separate workflows. A discovered local AI coding agent device in inventory doesn't necessarily appear in the same investigation view context as a runtime protection block alert.
+
 In this article, you learn how to choose a protection method, configure runtime protection settings, deploy settings with Intune, and investigate detections.
 
 For an overview of how each method works, see [AI agent runtime protection overview](protect-ai-agents-overview.md#ai-coding-agent-runtime-protection).

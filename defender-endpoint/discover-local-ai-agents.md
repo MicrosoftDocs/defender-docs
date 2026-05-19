@@ -24,6 +24,8 @@ Local AI coding agent discovery on endpoints is one component of Microsoft Defen
 > [!NOTE]
 > Local AI coding agent discovery provides **discovery and investigation capabilities only**. It doesn't include security posture assessment, governance controls, or alerts for endpoint agents at this time.
 
+Discovery and runtime protection are currently shown in separate experiences. As a result, a discovered local AI coding agent device in inventory doesn't necessarily map to a runtime protection block alert view in the same workflow.
+
 ## Prerequisites
 
 Before you can discover local AI coding agents on endpoints, make sure the following requirements are met:

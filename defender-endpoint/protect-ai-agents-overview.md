@@ -59,6 +59,8 @@ Defender Antivirus uses two protection approaches:
 
 These are two parallel protection methods that work independently. Agent hooks protection is the more typical approach for supporting popular AI coding agents, while network inspection protection expands coverage to additional agents. For guidance on which method to use for your agents, see [Decide which method to use](configure-ai-agent-runtime-protection.md#decide-which-method-to-use).
 
+Discovery visibility and runtime protection alerting are currently presented in separate workflows. A discovered local AI coding agent device in inventory doesn't necessarily appear in the same investigation view context as a runtime protection block alert.
+
 ### How agent hooks protection works
 
 Agent hooks protection works at the application layer by subscribing to lifecycle events that the agent framework exposes. When an agent supports hooks, Defender Antivirus receives payloads at key stages in the agent loop:
