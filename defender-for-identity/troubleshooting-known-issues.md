@@ -496,7 +496,7 @@ A servicing branch change affected the update delivery path for Windows Server 2
 
 ### Resolution
 
-Full sensor v3.x support for Windows Server 2025 is planned for July 2026. Until then, the v2.x sensor continues to protect Windows Server 2025 domain controllers with no action required.
+No action is required. The v2.x sensor continues to protect Windows Server 2025 domain controllers. This page will be updated when full v3.x support becomes available.
 
 ## Next steps
 
