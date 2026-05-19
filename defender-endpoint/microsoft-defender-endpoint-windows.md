@@ -11,7 +11,6 @@ ms.collection:
 - tier3
 - mde-windows
 ms.topic: overview
-ms.subservice: windows
 search.appverid: met150
 ms.date: 05/19/2026
 appliesto:
@@ -139,7 +138,7 @@ For optimal protection, configure [security intelligence updates](microsoft-defe
 
 - [Review the minimum requirements for Defender for Endpoint](minimum-requirements.md)
 - [Onboard devices and configure capabilities](onboard-configure.md)
-- [Configure Defender for Endpoint security settings](security-config-management.md)
+- [Configure Defender for Endpoint security settings](/intune/intune-service/protect/mde-security-integration)
 
 ## See also
 

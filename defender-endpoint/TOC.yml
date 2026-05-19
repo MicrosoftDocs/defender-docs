@@ -25,15 +25,15 @@
           href: mde-p1-setup-configuration.md
         - name: Get started
           href: mde-plan1-getting-started.md
-    - name: What's new
-      items:
-        - name: New features
-          href: whats-new-in-microsoft-defender-endpoint.md
-          displayName: What's new in Microsoft Defender for Endpoint
-        - name: Release notes
-          href: microsoft-defender-endpoint-releases.md
-    - name: Trial user guide - Defender for Endpoint
-      href: defender-endpoint-trial-user-guide.md
+      - name: What's new
+        items:
+          - name: New features
+            href: whats-new-in-microsoft-defender-endpoint.md
+            displayName: What's new in Microsoft Defender for Endpoint
+          - name: Release notes
+            href: microsoft-defender-endpoint-releases.md
+      - name: Trial user guide - Defender for Endpoint
+        href: defender-endpoint-trial-user-guide.md
     - name: Pilot and deploy Defender for Endpoint
       href: /defender-xdr/pilot-deploy-defender-endpoint?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
 
