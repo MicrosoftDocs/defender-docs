@@ -34,7 +34,7 @@ Microsoft Defender for Endpoint on Windows delivers preventative protection, pos
 | Enterprise-grade scale, performance, and reliability | Microsoft Defender for Endpoint on Windows ensures stable and durable performance with a lightweight behavioral sensor built into the operating system. <br/><br/> Defender for Endpoint integrates seamlessly with the broader Microsoft Defender suite, offering extensibility through [API integration](api/apis-intro.md), SIEM connectors, [Power BI support](api/api-power-bi.md), and role-based access control (RBAC). |
 
 > [!TIP]
-> For a detailed comparison of supported features for all Defender for Endpoint platforms (Windows, macOS, and Linux), see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md).
+> For a detailed comparison of supported features for all Defender for Endpoint platforms (Windows, macOS, and Linux), see [Defender for Endpoint capabilities](microsoft-defender-endpoint.md#defender-for-endpoint-capabilities).
 
 ## Core security features
 
@@ -143,6 +143,6 @@ For optimal protection, configure [security intelligence updates](microsoft-defe
 
 ## See also
 
-- [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md)
+- [Defender for Endpoint capabilities](microsoft-defender-endpoint.md#defender-for-endpoint-capabilities)
 - [Microsoft Defender Antivirus and Defender for Endpoint compatibility](microsoft-defender-antivirus-compatibility.md)
 - [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md)

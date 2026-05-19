@@ -50,7 +50,7 @@ The following table describes capabilities in Defender for Endpoint on macOS:
 | **Enterprise-grade performance and reliability** | Microsoft Defender for Endpoint on macOS is built on [system extensions](mac-support-sys-ext.md), fully aligned with Apple's security architecture for long-term stability and compatibility. The sensor is optimized for macOS workloads, with native support for both Intel and Apple Silicon (Mx) processors. <br/><br/> Defender for Endpoint integrates seamlessly with the broader Microsoft Defender suite, offering extensibility through [API integration](api/apis-intro.md), SIEM connectors, [Power BI support](api/api-power-bi.md), and role-based access control (RBAC). |
 
 > [!TIP]
-> For a detailed comparison of supported features for all Defender for Endpoint platforms (Windows, macOS, and Linux), see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md).
+> For a detailed comparison of supported features for all Defender for Endpoint platforms (Windows, macOS, and Linux), see [Defender for Endpoint capabilities](microsoft-defender-endpoint.md#defender-for-endpoint-capabilities).
 
 ## Next steps
 

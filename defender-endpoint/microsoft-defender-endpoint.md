@@ -44,7 +44,7 @@ Defender for Endpoint supports the following operating systems:
 * Android
 * iOS
 
-For detailed system requirements and supported versions, see [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md). To view a list of capabilities and the operating systems that support them, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md).
+For detailed system requirements and supported versions, see [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
 ## Licensing
 
@@ -60,7 +60,7 @@ For full plan comparison and pricing, see [Microsoft Defender for Endpoint plans
 
 ## Defender for Endpoint capabilities
 
-Defender for Endpoint provides a comprehensive set of capabilities, including [endpoint detection and response](overview-endpoint-detection-response.md), [automated investigation and remediation](automated-investigations.md), [next-generation protection](next-generation-protection.md), [attack surface reduction](overview-attack-surface-reduction.md), [vulnerability management](/defender-vulnerability-management/defender-vulnerability-management), [Endpoint Attack Notifications](endpoint-attack-notifications.md), and [APIs](api/management-apis.md) for integration with your existing workflows. For a detailed list of capabilities and the operating systems that support them, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md).
+Defender for Endpoint provides a comprehensive set of capabilities, including [endpoint detection and response](overview-endpoint-detection-response.md), [automated investigation and remediation](automated-investigations.md), [next-generation protection](next-generation-protection.md), [attack surface reduction](overview-attack-surface-reduction.md), [vulnerability management](/defender-vulnerability-management/defender-vulnerability-management), [Endpoint Attack Notifications](endpoint-attack-notifications.md), and [APIs](api/management-apis.md) for integration with your existing workflows.
 
 For guidance on planning and rolling out Defender for Endpoint in your environment, see [Plan your Defender for Endpoint deployment](mde-planning-guide.md). To learn about new and upcoming capabilities, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md). To turn on preview features in your environment, see [Preview features in Microsoft Defender XDR](/defender-xdr/preview).
 
