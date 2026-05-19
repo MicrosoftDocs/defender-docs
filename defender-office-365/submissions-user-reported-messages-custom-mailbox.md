@@ -335,7 +335,7 @@ The [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) in Microsoft De
 - **Reporting mailbox on the SecOps allow list**: Configure the reporting mailbox as a SecOps mailbox so reports aren't filtered. For instructions, see [Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 - **Message submission format**: The non-Microsoft tool must submit the original email as an uncompressed .EML (message/rfc822) or .MSG attachment with required headers preserved (including `X-Ms-Exchange-Organization-Network-Message-Id`). The Subject line must use the expected format (`3|` or `Phishing:` prefix). For details, see [Message submission format for non-Microsoft reporting tools](#message-submission-format-for-non-microsoft-reporting-tools).
 - **Alert policy enabled**: The **Email reported by user as malware or phish** alert policy must be turned on. For more information, see [Alert policies in the Microsoft Defender portal](/defender-xdr/alert-policies).
-- **Alert tuning**: Disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that suppress this alert. For more information, see [Tune an alert](/defender-xdr/investigate-alerts#tune-an-alert).
+- **Alert tuning**: Disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that resolve this alert. For more information, see [Tune an alert](/defender-xdr/investigate-alerts#tune-an-alert).
 
 ##### Avoid common configuration mistakes
 
