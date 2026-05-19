@@ -490,13 +490,17 @@ In some v3 sensor environments, auditing health alerts might persist even when W
 
 Defender for Identity sensors (v3.x) installed on Windows Server 2025 are currently running an older sensor version and don't include the latest detection and feature improvements available on other operating systems.
 
+### Cause
+
+A servicing change affected the update delivery path for Windows Server 2025. Updates that were delivered to other operating systems were not applied to Windows Server 2025.
+
 ### Impact
 
 Sensors on Windows Server 2025 are missing some newer detection capabilities. Your environment remains protected, and no security vulnerabilities are introduced by this issue.
 
 ### Resolution
 
-An automatic update is planned for July 2026. Once available, sensors on Windows Server 2025 will update automatically — no action is needed from your side.
+An automatic update is planned for July 2026. Once available, sensors on Windows Server 2025 will update automatically — no action is required.
 
 ## Next steps
 
