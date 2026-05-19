@@ -70,8 +70,8 @@ Do the following procedures to approve the required system extensions using the 
         1. Select **+ Edit instance** in the empty entry row.
         2. In the **Configure instance** flyout that opens, configure the following settings:
            - **Allowed System Extension Types**: Enter the following values, one per box:
-             - `Network`
-             - `EndpointSecurity`
+             - `NetworkExtension`
+             - `EndpointSecurityExtension`
            - **Team identifier**: Enter `UBF8T346G9`.
         3. Select **Save** on the **Configure instance** flyout.
 

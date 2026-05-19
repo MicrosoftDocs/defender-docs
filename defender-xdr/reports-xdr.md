@@ -1,5 +1,5 @@
 ---
-title: Defender experts for XDR report 
+title: Microsoft Defender Experts report 
 ms.reviewer:
 description: Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of our expert analysts.
 ms.service: defender-experts-for-xdr
@@ -18,20 +18,20 @@ ms.custom:
 ms.date: 10/31/2025
 ---
 
-# Get real-time visibility with Defender Experts for XDR reports
+# Get real-time visibility with Defender Experts reports
 
 **Applies to:**
 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsoft Defender Experts for Servers
+- [Microsoft Defender Experts for Servers](dex-servers-overview.md)
 
-For Defender Experts for XDR reports instructions, check out this short video.
+For Defender Experts reports instructions, check out this short video.
 
 > [!VIDEO https://www.youtube.com/embed/Ymm6g_Eis34]
 
-Microsoft Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your Security Delivery Expert (SDX) also uses the report to provide you with more context regarding the service during a monthly business review.
+The Microsoft Defender Experts service includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your Security Delivery Expert (SDX) also uses the report to provide you with more context regarding the service during a monthly business review.
 
-:::image type="content" source="media/defender-xdr-report.png" alt-text="Screenshot of the Report overview tab in Defender Experts for XDR report." lightbox="media/defender-xdr-report.png":::
+:::image type="content" source="media/defender-xdr-report.png" alt-text="Screenshot of the Report overview tab in Defender Experts report." lightbox="media/defender-xdr-report.png":::
 
 The report is designed to provide more insights about the incidents our experts investigated and resolved in your environment in real time or during a specific period. To view the report in your Microsoft Defender portal, go to **Reports**, select **Defender Experts** > **XDR report**. It's divided into two sections:
 -	[Report overview](#report-overview-quickly-understand-the-investigated-incidents)
@@ -85,18 +85,18 @@ This section also displays a table with a list of incident titles and their corr
  
 The **Trends** tab of the report provides you with the monthly volume of investigated and resolved incidents for the last six months, visualized according to the incidents' severity, MITRE tactic, and threat type. The trends section gives you insight into how Defender Experts are tangibly improving your security operations by showing important operational metrics on a month-over-month basis.
 
-:::image type="content" source="media/reports-xdr/xdr-report-trends.png" alt-text="Screenshot of the Trends tab in Defender Experts for XDR report." lightbox="media/reports-xdr/xdr-report-trends.png":::
+:::image type="content" source="media/reports-xdr/xdr-report-trends.png" alt-text="Screenshot of the Trends tab in Defender Experts report." lightbox="media/reports-xdr/xdr-report-trends.png":::
 
 The visualizations are respectively displayed in the **Incidents by severity**, **Incidents by MITRE tactic**, and **Incidents by classification** sections. For each section, you can filter data according to the different incident types (true positive, false positive, and informational) by selecting their corresponding options in the **Select incident type** dropdown box. The **Incidents by severity** and **Incidents by MITRE tactic** sections also have the **View selected incidents** button, which you can select to get a filtered view of the incident queue based on the selections you made in each of these sections.
 
 The **Trends** tab also has the **Managed response task completion and efficiency** widget, which shows the monthly volume of managed response tasks your team completed each month, along with the median time it took your team to complete those tasks. This widget helps identify any spikes in your team's response efficacy and efficiency, which is increasingly important as attackers continue to decrease the time between initial access and lateral movement. 
 
-:::image type="content" source="media/reports-xdr/xdr-report-manage-response-task.png" alt-text="Screenshot of the Managed response task completion and efficiency widget in Defender Experts for XDR report." lightbox="media/reports-xdr/xdr-report-manage-response-task.png":::
+:::image type="content" source="media/reports-xdr/xdr-report-manage-response-task.png" alt-text="Screenshot of the Managed response task completion and efficiency widget in Defender Experts report." lightbox="media/reports-xdr/xdr-report-manage-response-task.png":::
 
 ## See also
 
 - [Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
 - [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Communicating with experts in the Microsoft Defender Experts for XDR service](communicate-defender-experts-xdr.md)
+- [Communicating with experts in the Microsoft Defender Experts service](communicate-defender-experts-xdr.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
