@@ -79,7 +79,7 @@ Use the information in the following table to troubleshoot non-delivery reports 
 |Symptom|Likely cause|Detailed guidance|
 |---|---|---|
 |NDR with error code `550 5.7.23`|The SPF record for the sending domain is missing or misconfigured, causing the destination server to reject the message.|[Fix NDR error "550 5.7.23"](/troubleshoot/exchange/email-delivery/ndr/fix-error-code-5-7-23-in-exchange-online)|
-|NDR with error code `5.7.367`|Forwarded or relayed messages from Microsoft 365 are rejected because DKIM/SPF fails after relay through a non-Microsoft gateway.|[Fix error code 5.7.367 in Exchange Online](/troubleshoot/exchange/email-delivery/ndr/forwarded-email-5-7-367)|
+|NDR with error code `5.7.367`|Forwarded or relayed messages from Microsoft 365 are rejected because DKIM/SPF fails after relay through a non-Microsoft gateway.|[Fix error code 5.7.367 in Exchange Online](/troubleshoot/exchange/email-delivery/ndr/forwarded-message-rejected-5-7-367-ndr)|
 |NDR with error code `550 5.7.1`|The message was rejected as unauthorized. Common causes include an incomplete SPF record, incorrect connector configuration, or the destination server's security policies.|[Fix NDR error "550 5.7.1"](/troubleshoot/exchange/email-delivery/ndr/fix-error-code-550-5-7-1-in-exchange-online)|
 
 ## Detailed troubleshooting by protocol
