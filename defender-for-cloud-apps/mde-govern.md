@@ -79,7 +79,7 @@ Use the following steps to configure a custom help/support URL pointing to a com
 
 ## Disable informational alerts for unsanctioned app access (Preview)
 
-By default, when users access an unsanctioned app, Defender for Cloud Apps generates an informational alert. If your organization prefers to suppress these alerts, you can disable them using the **Generate alert for blocked app access** toggle.
+By default, when users access an unsanctioned app, Defender for Cloud Apps generates an informational alert. To reduce alert noise and improve SOC focus in Microsoft Defender XDR, you can turn off these alerts using the **Generate alert for blocked app access** toggle.
 
 1. In the Microsoft Defender portal, select **Settings** > **Cloud Apps** > **Cloud Discovery** > **Microsoft Defender for Endpoint**.
 1. Locate the **Generate alert for blocked app access** toggle.
@@ -87,12 +87,10 @@ By default, when users access an unsanctioned app, Defender for Cloud Apps gener
 
 When the toggle is off:
 
-- Alerts triggered by unsanctioned or blocked app access are no longer generated.
+- Defender for Cloud Apps stops generating alerts for unsanctioned or blocked app access.
 - Existing alerts aren't retroactively removed.
 - Other Cloud Discovery or Defender alerts remain unaffected.
 - Blocking enforcement continues to work as expected.
-
-This option helps reduce alert noise and improve SOC focus in Microsoft Defender XDR.
 
 ## Block apps for specific device groups
 
