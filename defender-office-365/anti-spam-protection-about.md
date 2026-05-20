@@ -63,7 +63,7 @@ To configure the default anti-spam policy, and to create, modify, and remove cus
 
 ## Anti-spam policies
 
-Anti-spam policies control the configurable settings for spam filtering. The important settings in anti-spam policies are described in the following subsections.
+Anti-spam policies control the configurable settings for spam filtering. The important settings in anti-spam policies are described in the following subsections. For troubleshooting information, see [Troubleshoot common anti-spam policy issues](anti-spam-policies-troubleshooting.md).
 
 > [!TIP]
 > The anti-spam policy settings in the default policy and in the Standard and Strict preset security policies are described in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
