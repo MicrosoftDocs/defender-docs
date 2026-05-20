@@ -58,9 +58,9 @@ To use playbook generator, you need the following permissions:
 > [!NOTE]
 > Permissions might take up to two hours to take effect after assignment.
 
-### Recommended: Configure a dedicated Security Copilot workspace
+### Required: Configure a dedicated Security Copilot workspace
 
-If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's set in geo **US** or **Europe**, or allowing cross-region evaluation, we recommended you [create one](/copilot/security/manage-workspaces#create-a-workspace).
+If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's set in geo **US** or **Europe**, or allowing cross-region evaluation, you need to [create one](/copilot/security/manage-workspaces#create-a-workspace).
 
 1. In the **Create a new workspace** dialog:
 
