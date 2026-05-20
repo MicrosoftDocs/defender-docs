@@ -11,7 +11,7 @@ author: Elazark
 # Enable Defender for open-source relational databases on Amazon Web Services (AWS) (Preview)
 
 > [!IMPORTANT]
-> Starting June 1, 2026, Microsoft Defender for Open-Source Relational Databases for AWS RDS will transition to General Availability and begin billing with usage reflected in your July 2026 Azure bill. You'll continue to receive database threat protection and sensitive data discovery capabilities for supported AWS RDS databases. No action is required if you want to keep the protection enabled. To opt out before charges begin, follow the opt-out instructions in the [Disable the plan](#disable-the-plan) section below.
+> On June 1, 2026, Microsoft Defender for Open-Source Relational Databases for AWS RDS transitions to General Availability, and billing starts with usage reflected in your July 2026 Azure bill. You continue to receive database threat protection and sensitive data discovery capabilities for supported AWS RDS databases. No action is required if you want to keep the protection enabled. To opt out before charges begin, follow the instructions in [Disable the plan](#disable-the-plan).
 
 The Defender for open-source relational databases plan in Microsoft Defender for Cloud helps you detect and investigate unusual activity in your AWS RDS databases. This plan supports the following database instance types:
 
@@ -80,7 +80,7 @@ Defender for Cloud then automatically [updates the relevant parameter and option
 
 ### Required permissions for DefenderForCloud-DataThreatProtectionDB role
 
-The following permissions are required for the role that’s created or updated when you download the CloudFormation template and update the AWS stack. These permissions allow Defender for Cloud to manage auditing configuration and collect database activity logs from your AWS RDS instances.
+The following permissions are required for the role that is created or updated when you download the CloudFormation template and update the AWS stack. These permissions allow Defender for Cloud to configure auditing and collect database activity logs from your AWS RDS instances.
 
 | Permission | Description |
 | -- | -- |
@@ -135,7 +135,7 @@ If the option doesn’t exist, add it; if it exists, expand the values as needed
 
 > [!NOTE]
 >
-> - If a parameter group already exists, it's updated accordingly.
+> - If a parameter group already exists, Defender for Cloud updates it.
 >
 > - `MARIADB_AUDIT_PLUGIN` is supported in MariaDB 10.2 and later, MySQL 8.0.25 and later, and all MySQL 5.7 versions.
 >
@@ -159,7 +159,7 @@ To disable Defender for open-source relational databases on AWS RDS:
 
 ## Related content
 
-- [What's supported in Sensitive Data Discovery](concept-data-security-posture-prepare.md#whats-supported)
+- [What is supported in sensitive data discovery](concept-data-security-posture-prepare.md#whats-supported)
 - [Discovering sensitive data on AWS RDS instances](concept-data-security-posture-prepare.md#discover-and-scan-aws-rds-instances)
 
 ## Next step
