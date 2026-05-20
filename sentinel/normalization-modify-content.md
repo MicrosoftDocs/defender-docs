@@ -106,8 +106,6 @@ See more information on the following items used in the preceding examples, in t
 
 ## Related content
 
-For more information, see:
-
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
