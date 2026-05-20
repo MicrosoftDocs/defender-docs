@@ -45,7 +45,7 @@ You also must meet the following requirements:
 
 ### Required roles and permissions
 
-To use playbook generator, you need the following permissions in [Microsoft Defender unified RBAC](/defender-xdr/custom-permissions-details):
+To use playbook generator, you need the following permissions in [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/custom-permissions-details):
 
 - **To author automation rules**:
   - **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Defender.
