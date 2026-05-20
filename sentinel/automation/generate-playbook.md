@@ -4,7 +4,7 @@ description: Generate playbooks through natural language conversations directly 
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 02/13/2026
+ms.date: 05/20/2026
 ms.service: microsoft-sentinel
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
