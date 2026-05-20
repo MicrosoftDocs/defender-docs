@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
 | May 19, 2026| GA | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
 | May 18, 2026 | GA | [Microsoft Defender Experts for Servers as a managed XDR option](#microsoft-defender-experts-for-servers-as-a-managed-xdr-option) |
 | May 17, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (Preview)](#sql-vulnerability-assessment-express-configuration-now-available-for-azure-sql-managed-instance-and-synapse-preview) |
@@ -40,6 +41,29 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### Cloud security reporting in Microsoft Defender portal (Preview)
+
+May 20, 2026
+
+Microsoft Defender portal now includes integrated cloud security reporting capabilities, enabling you to create, customize, and share security insights across your organization.
+
+With cloud security reporting, you can:
+
+- View built-in reports such as **CNAPP Executive Summary** and **Cloud Posture** that provide predefined views of cloud security data
+- Customize existing reports by duplicating and modifying sections, cards, and layout to match your specific needs
+- Create custom reports from scratch by defining sections and selecting relevant cards
+- Export reports to PDF for sharing with stakeholders and leadership
+- Control report access using visibility settings (Private, Tenant-level access, or Public)
+- Filter and organize reports by type and visibility
+
+The **CNAPP Executive Summary** report provides a consolidated view of cloud-native application protection platform signals, including threat detection, secure score trends, vulnerability management, security recommendations, investigation & response activity, and regulatory compliance status.
+
+The **Cloud Posture** report offers a centralized view of your overall cloud security posture, helping you assess security risk, track progress over time, and prioritize remediation efforts across environments and workloads.
+
+To access cloud security reports, navigate to the **Reporting** page in the Microsoft Defender portal and select the **Cloud** tab.
+
+Learn more about [Cloud security reporting in Microsoft Defender portal](cloud-security-reporting.md).
 
 ### Scanning support for Docker Hardened container images
 
