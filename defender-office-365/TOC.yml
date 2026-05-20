@@ -58,6 +58,8 @@
          href: email-authentication-dmarc-configure.md
        - name: Configure trusted ARC sealers
          href: email-authentication-arc-configure.md
+       - name: Troubleshoot email authentication
+         href: email-authentication-troubleshoot.md
      - name: Step 2 - Configure threat policies
        items:
        - name: Preset security policies
