@@ -19,7 +19,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 04/16/2026
+ms.date: 05/19/2026
 ---
 
 # Create custom detection rules
@@ -67,7 +67,12 @@ To manage required permissions, a Global Administrator can:
 
 ## Create a custom detection rule
 
-To create a custom detection rule, follow these steps:
+You can create a custom detection rule from either of the following entry points:
+
+- **From Advanced hunting** — Go to **Advanced hunting**, prepare and run your query, then select **Create detection rule**. This approach lets you validate your query results before creating the rule.
+- **From the custom detections list** — Go to **Custom detection rules** and select **+ Create detection rule**. This approach opens the rule wizard directly, where you can write or paste a query and configure all rule settings in one place.
+
+Regardless of which entry point you use, follow these steps to configure the rule:
 
 1. [Prepare the query](#1-prepare-the-query)
 1. [Create new rule and provide alert details](#2-create-new-rule-and-provide-alert-details)
@@ -78,7 +83,7 @@ To create a custom detection rule, follow these steps:
 
 ### 1. Prepare the query
 
-In the Microsoft Defender portal, go to **Advanced hunting** and select an existing query or create a new query. When you use a new query, run the query to identify errors and understand possible results.
+In the Microsoft Defender portal, go to **Advanced hunting** and select an existing query or create a new query. When you use a new query, run the query to identify errors and understand possible results. If you started from the custom detections list by selecting **+ Create detection rule**, you can write or paste your query directly in the rule wizard.
 
 > [!IMPORTANT]
 > To prevent the service from returning too many alerts, each rule can generate only 150 alerts each time it runs. Before creating a rule, tweak your query to avoid alerting for normal, day-to-day activity.
