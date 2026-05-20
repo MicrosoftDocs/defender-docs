@@ -171,7 +171,7 @@ Fields in this table are common to all ASIM schemas. Any guidelines specified in
 | <a name="eventsessionid"></a>**EventSessionId** | Optional | String | The unique ID of the event session. |
 | <a name="eventsessionname"></a>**EventSessionName** | Optional | String | The name of the event session. |
 | <a name="eventtype"></a>**EventType** | Optional | String | The type of the event. |
-| **EventOriginalType** | Optional | String | The original type of the event as reported by the source. |
+| <a name="eventoriginaltype"></a>**EventOriginalType** | Optional | String | The original type of the event as reported by the source. |
 | <a name="eventrequestid"></a>**EventRequestId** | Optional | String | The unique ID of the event request. |
 | <a name="eventrequesttemperature"></a>**EventRequestTemperature** | Optional | double | The temperature parameter of the event request. |
 | <a name="eventrequesttopp"></a>**EventRequestTopP** | Optional | double | The top-p parameter of the event request. |
@@ -188,12 +188,11 @@ Fields in this table are common to all ASIM schemas. Any guidelines specified in
 | <a name="eventfinishreasons"></a>**EventFinishReasons** | Optional | dynamic | The reasons the event finished. |
 | <a name="eventoutputtype"></a>**EventOutputType** | Optional | String | The type of the event output. |
 
+
 ## Related content
 
-For more information, see:
-
-- Watch the [ASIM Webinar](https://www.youtube.com/watch?v=WoGD-JeC7ng) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjDY1cro08Fk3KUj-?e=murYHG)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [ASIM Webinar - Introduction to ASIM and the normalization schema](https://www.youtube.com/watch?v=WoGD-JeC7ng) 

@@ -188,9 +188,7 @@ These are the changes in version 0.1.2 of the schema:
 These are the changes in version 0.1.3 of the schema:
 - Added inspection fields.
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Normalization in Microsoft Sentinel](normalization.md)
 - [Microsoft Sentinel authentication normalization schema reference](normalization-schema-authentication.md)
