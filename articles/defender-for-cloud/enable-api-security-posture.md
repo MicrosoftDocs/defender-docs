@@ -123,7 +123,7 @@ Check out the [APIs section](recommendations-reference-api.md) in the Defender f
 
 ## Explore API risks and remediate with attack path analysis
 
-The [cloud security explorer](concept-attack-path.md#what-is-cloud-security-explorer) helps you identify potential security risks in your cloud environment by querying the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph).  
+The [cloud security explorer](concept-attack-path.md#what-is-cloud-security-explorer) helps you identify potential security risks in your cloud environment by querying the [cloud security graph](concept-attack-path.md#what-is-the-cloud-security-graph).  
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).  
 

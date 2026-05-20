@@ -30,7 +30,7 @@ Defender for Containers provides the following core capabilities:
 
 - [**Security posture management:**](#security-posture-management) Continuously monitors cloud APIs, Kubernetes APIs, and Kubernetes workloads to discover resources, detect misconfigurations, and surface security recommendations with mitigation guidance. Posture data is available through inventory views, recommendations, and [Security Explorer](how-to-manage-cloud-security-explorer.md) for risk investigation and hunting.
 
-- [**Vulnerability assessment:**](#vulnerability-assessment) Performs agentless vulnerability assessment of [container registry images, running containers, and supported Kubernetes nodes](support-matrix-defender-for-containers.md). Findings include remediation guidance, exploitability insights, and integration with the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk analysis.
+- [**Vulnerability assessment:**](#vulnerability-assessment) Performs agentless vulnerability assessment of [container registry images, running containers, and supported Kubernetes nodes](support-matrix-defender-for-containers.md). Findings include remediation guidance, exploitability insights, and integration with the [cloud security graph](concept-attack-path.md#what-is-the-cloud-security-graph) for contextual risk analysis.
 
 - [**Run-time threat protection:**](#run-time-protection-for-kubernetes-nodes-and-clusters) Detects suspicious activity in Kubernetes clusters, nodes, and workloads using Kubernetes-aware analytics and threat intelligence. Alerts are mapped to the MITRE ATT&CK® framework for Containers and can be investigated through [Microsoft Defender XDR](/defender-xdr/investigate-respond-container-threats).
 
@@ -80,7 +80,7 @@ Defender for Containers scans the cluster node OS and application software, cont
 
 Now for [public preview in the AKS environment](agentless-vulnerability-assessment-azure.md#how-vulnerability-assessment-for-images-and-containers-works), Defender for Containers also performs a daily scan of all running containers to provide an updated vulnerability assessment, agnostic to the container's image registry.
 
-Vulnerability information powered by Microsoft Defender Vulnerability Management is added to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk, calculation of attack paths, and hunting capabilities.
+Vulnerability information powered by Microsoft Defender Vulnerability Management is added to the [cloud security graph](concept-attack-path.md#what-is-the-cloud-security-graph) for contextual risk, calculation of attack paths, and hunting capabilities.
 
 Learn more about [vulnerability assessments for Defender for Containers supported environments](agentless-vulnerability-assessment-azure.md), including [vulnerability assessment for cluster nodes](kubernetes-nodes-va.md).
 
