@@ -1,18 +1,18 @@
 ---
 title: Configure agentless code scanning (Preview)
-description: Discover how agentless code scanning in Microsoft Defender for Cloud identifies vulnerabilities in code and IaC configurations.
+description: Learn how to configure agentless code scanning in Microsoft Defender for Cloud to detect code and dependency risks across Azure DevOps and GitHub repositories.
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 04/30/2026
+ms.date: 05/19/2026
 ms.custom: references_regions
 #customer intent: As a security professional, I want to learn how agentless code scanning in Microsoft Defender for Cloud can help identify vulnerabilities in my code and IaC configurations.
 ---
 
 # Configure agentless code scanning (Preview)
 
-Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in Azure DevOps and GitHub. Agentless code scanning automatically scans code, open-source dependencies, and infrastructure-as-code (IaC) to identify vulnerabilities and misconfigurations without requiring any changes to your build or deployment pipelines. This approach simplifies setup and maintenance with a single Azure DevOps or GitHub connector, and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks smoothly without interrupting development workflows.
+Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in Azure DevOps and GitHub. It automatically scans code, open-source dependencies, and infrastructure-as-code (IaC) to identify vulnerabilities and misconfigurations. You don't need to change build or deployment pipelines. This approach simplifies setup and maintenance with a single Azure DevOps or GitHub connector and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks without interrupting development workflows.
 
 You can customize which scanners to run and define exactly which organizations, projects, or repositories to include or exclude from scanning.
 
@@ -22,7 +22,7 @@ You can customize which scanners to run and define exactly which organizations, 
   - [Security recommendations to prioritize and fix code vulnerabilities](defender-for-devops-introduction.md#manage-your-devops-environments-in-defender-for-cloud)
   - [Security recommendations to prioritize and fix Infrastructure-as-Code (IaC) misconfigurations](iac-vulnerabilities.md)
     
-  - Cloud Security Explorer queries to locate repositories including dependencies resulting from an SBOM.
+  - Cloud Security Explorer queries to locate repositories, including dependencies resulting from a software bill of materials (SBOM).
     
 - [Supported cloud availability](support-matrix-defender-for-cloud.md).
 
@@ -51,14 +51,14 @@ Some of the key benefits of agentless code scanning in Microsoft Defender for Cl
 - **Flexible coverage and control:** Choose which scanners run and what gets scanned. You can cover everything by default or customize settings to include or exclude specific organizations, projects, or repositories. This allows you to match security coverage to your risk profile and operational needs, without extra complexity.
 - **Software Bill of Materials (SBOM) creation**: Automatically generating an SBOM on every scan gives teams a precise, queryable inventory of dependencies and versions across their repositories, without additional workflow changes. This enables rapid impact analysis, faster response to newly disclosed vulnerabilities, and confident decision-making when assessing exposure to specific packages or versions.
 
-## Risks detection capabilities
+## Risk detection capabilities
 
 Agentless code scanning improves security by delivering targeted, actionable recommendations across application code, infrastructure-as-code (IaC) templates, and third-party dependencies. This is in addition to the cloud security posture management security recommendations provided through the connector. Key detection capabilities include:
 
 - **Code vulnerabilities**: Find common coding errors, unsafe coding practices, and known vulnerabilities in multiple programming languages.
 - **Infrastructure-as-Code misconfigurations**: Detect security misconfigurations in IaC templates that could lead to insecure deployments. 
 - **Dependency vulnerabilities**: Identify known vulnerabilities in open-source packages and OS packages discovered in repositories. 
-- **Software Bill of Materials (SBOM)**: Automatically generate a comprehensive, queryable inventory of dependencies and their versions for each repository,
+- **Software Bill of Materials (SBOM)**: Automatically generate a comprehensive, queryable inventory of dependencies and their versions for each repository.
 
 Creating the connector enhances security by providing foundational cloud security posture management recommendations for repositories, pipelines, and service connections.
 
@@ -66,14 +66,14 @@ Creating the connector enhances security by providing foundational cloud securit
 
 Agentless code scanning uses various open-source tools to find vulnerabilities and misconfigurations in code and Infrastructure-as-Code (IaC) templates:
 
-| **Tool**              |**Supported IaC/Languages**                                  | **License** |
-| --------------------- | ------------------------------------------------------------ | ----------- |
-| **[Template Analyzer](https://github.com/Azure/template-analyzer)** |ARM IaC templates, Bicep IaC templates                       | [MIT](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt)         |
-| **[Checkov](https://github.com/bridgecrewio/checkov)**           |Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | [Apache 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE)  |
-| **[Bandit](https://github.com/PyCQA/bandit)**            |Python                                                       | [Apache 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE)  |
-| **[ESLint](https://github.com/eslint/eslint)**            |JavaScript, TypeScript, JSX, TSX                             | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE)         |
-| **[Trivy](https://www.github.com/aquasecurity/trivy/)**|Dependency and OS package vulnerability scanning from repository manifests and lockfiles (filesystem mode) |[Apache 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE)|
-| **[Syft](https://github.com/anchore/syft/)**|Alpine (apk), Bitnami packages, C (conan), C++ (conan), Dart (pubs), Debian (dpkg), Dotnet (deps.json), Objective-C (cocoapods), Elixir (mix), Erlang (rebar3), Go (go.mod, Go binaries), GitHub (workflows, actions), Haskell (cabal, stack), Java (jar, ear, war, par, sar, nar, rar, native-image), JavaScript (npm, yarn), Jenkins Plugins (jpi, hpi), Linux kernel archives (vmlinuz), Linux kernel modules (ko), Nix (outputs in /nix/store), PHP (composer, PECL, Pear), Python (wheel, egg, poetry, requirements.txt, uv), Red Hat (rpm), Ruby (gem), Rust (cargo.lock, auditable binary), Swift (cocoapods, swift-package-manager), Wordpress plugins, Terraform providers (.terraform.lock.hcl) | [Apache 2.0](https://github.com/anchore/syft/blob/main/LICENSE)|
+| **Tool** | **Supported IaC/Languages** | **License** |
+| --- | --- | --- |
+| **[Template Analyzer](https://github.com/Azure/template-analyzer)** | ARM IaC templates, Bicep IaC templates | [MIT](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt) |
+| **[Checkov](https://github.com/bridgecrewio/checkov)** | Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | [Apache 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE) |
+| **[Bandit](https://github.com/PyCQA/bandit)** | Python | [Apache 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE) |
+| **[ESLint](https://github.com/eslint/eslint)** | JavaScript, TypeScript, JSX, TSX | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE) |
+| **[Trivy](https://www.github.com/aquasecurity/trivy/)** | Dependency and OS package vulnerability scanning from repository manifests and lockfiles (filesystem mode) | [Apache 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE) |
+| **[Syft](https://github.com/anchore/syft/)** | Alpine (apk), Bitnami packages, C (conan), C++ (conan), Dart (pubs), Debian (dpkg), Dotnet (deps.json), Objective-C (cocoapods), Elixir (mix), Erlang (rebar3), Go (go.mod, Go binaries), GitHub (workflows, actions), Haskell (cabal, stack), Java (jar, ear, war, par, sar, nar, rar, native-image), JavaScript (npm, yarn), Jenkins Plugins (jpi, hpi), Linux kernel archives (vmlinuz), Linux kernel modules (ko), Nix (outputs in /nix/store), PHP (composer, PECL, Pear), Python (wheel, egg, poetry, requirements.txt, uv), Red Hat (rpm), Ruby (gem), Rust (cargo.lock, auditable binary), Swift (cocoapods, swift-package-manager), Wordpress plugins, Terraform providers (.terraform.lock.hcl) | [Apache 2.0](https://github.com/anchore/syft/blob/main/LICENSE) |
 
 
 These tools support a wide range of languages and infrastructure-as-code (IaC) frameworks, ensuring thorough security analysis across your codebase.
@@ -94,32 +94,32 @@ These tools support a wide range of languages and infrastructure-as-code (IaC) f
 
 #### Infrastructure-as-Code (IaC) platforms and configurations
 
-| **IaC   Platform**       | **Supported   file types**                 | **Notes**                                                    |
-| ------------------------ | ------------------------------------------ | ------------------------------------------------------------ |
-| **Terraform**            | `.tf`, `.tfvars`                           | Supports Terraform IaC templates in HCL2 language,  including variable files in `.tfvars`. |
-| **Terraform Plan**       | JSON files                                 | Includes JSON files representing planned configurations,  used for analysis and scanning. |
-| **AWS CloudFormation**   | JSON, YAML files                           | Supports AWS CloudFormation templates for defining AWS  resources. |
-| **Kubernetes**           | YAML, JSON files                           | Supports Kubernetes manifest files for defining  configurations in clusters. |
-| **Helm**                 | Helm chart directory structure, YAML files | Follows Helm’s standard chart structure; supports Helm v3  chart files. |
-| **Docker**               | Files named Dockerfile                     | Supports Dockerfiles for container configurations.           |
-| **Azure ARM Templates**  | JSON files                                 | Supports Azure Resource Manager (ARM) IaC templates in  JSON format. |
-| **Azure Bicep**          | `.bicep` files                               | Supports Bicep IaC templates, a domain-specific language (DSL) for ARM. |
-| **AWS SAM**              | YAML files                                 | Supports AWS Serverless Application Model (SAM) templates  for serverless resources. |
-| **Kustomize**            | YAML files                                 | Supports configuration files for Kubernetes customization  (Kustomize). |
-| **Serverless Framework** | YAML files                                 | Supports templates for the Serverless framework in  defining serverless architectures. |
-| **OpenAPI**              | YAML, JSON files                           | Supports OpenAPI specification files for defining RESTful  APIs. |
+| **IaC Platform** | **Supported file types** | **Notes** |
+| --- | --- | --- |
+| **Terraform** | `.tf`, `.tfvars` | Supports Terraform IaC templates in HCL2 language, including variable files in `.tfvars`. |
+| **Terraform Plan** | JSON files | Includes JSON files representing planned configurations, used for analysis and scanning. |
+| **AWS CloudFormation** | JSON, YAML files | Supports AWS CloudFormation templates for defining AWS resources. |
+| **Kubernetes** | YAML, JSON files | Supports Kubernetes manifest files for defining configurations in clusters. |
+| **Helm** | Helm chart directory structure, YAML files | Follows Helm's standard chart structure and supports Helm v3 chart files. |
+| **Docker** | Files named Dockerfile | Supports Dockerfiles for container configurations. |
+| **Azure ARM Templates** | JSON files | Supports Azure Resource Manager (ARM) IaC templates in JSON format. |
+| **Azure Bicep** | `.bicep` files | Supports Bicep IaC templates, a domain-specific language (DSL) for ARM. |
+| **AWS SAM** | YAML files | Supports AWS Serverless Application Model (SAM) templates for serverless resources. |
+| **Kustomize** | YAML files | Supports configuration files for Kubernetes customization (Kustomize). |
+| **Serverless Framework** | YAML files | Supports templates for the Serverless framework in defining serverless architectures. |
+| **OpenAPI** | YAML, JSON files | Supports OpenAPI specification files for defining RESTful APIs. |
 
 ## Enable agentless code scanning on your Azure DevOps and GitHub organizations
 
 You can connect both Azure DevOps and GitHub organizations to Defender for Cloud to enable agentless code scanning. Follow the steps in [Connect your Azure DevOps organizations](quickstart-onboard-devops.md#connect-your-azure-devops-organization) or [Connect your GitHub organizations](quickstart-onboard-github.md#connect-your-github-environment) to get started. 
 
-:::image type="content" source="media/agentless-code-scanning/agentless-code-scanning-setup.gif" alt-text="GIF image showing the setup process for enabling agentless code scanning" lightbox="media/agentless-code-scanning/agentless-code-scanning-setup.gif":::
+:::image type="content" source="media/agentless-code-scanning/agentless-code-scanning-setup.gif" alt-text="Diagram showing an animated walkthrough of the Defender for Cloud connector setup that enables agentless code scanning for Azure DevOps and GitHub." lightbox="media/agentless-code-scanning/agentless-code-scanning-setup.gif":::
 
 ### Customize scanner coverage and scope
 
 For both GitHub and Azure DevOps, you can control which scanners run and specify exactly which repositories are included or excluded from agentless scanning.
 
-:::image type="content" source="media/agentless-code-scanning/custom-settings-agentless-scanning.png" alt-text="Screenshot showing the custom settings of agentless code scanning." lightbox="media/agentless-code-scanning/custom-settings-agentless-scanning.png":::
+:::image type="content" source="media/agentless-code-scanning/custom-settings-agentless-scanning.png" alt-text="Screenshot of agentless code scanning settings that shows scanner toggles and custom scope options for organizations, projects, and repositories." lightbox="media/agentless-code-scanning/custom-settings-agentless-scanning.png":::
 
 - **Select scanners:** Turn each code and infrastructure-as-code (IaC) scanner on or off based on your needs.
 
@@ -171,6 +171,8 @@ After the scans finish, you can access security findings within Microsoft Defend
 
 ### Access findings
 
+To access findings:
+
 1. Navigate to the [Security recommendations](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/5) tab in Microsoft Defender for Cloud.
 
 1. Review recommendations for both Azure DevOps and GitHub repositories, such as:
@@ -192,15 +194,15 @@ After the scans finish, you can access security findings within Microsoft Defend
 
 Agentless code scanning and in-pipeline scanning using the Microsoft Security DevOps extension both offer security scanning within Azure DevOps and GitHub. They serve different needs but complement each other. The following table highlights the main differences to help you choose the option that best suits your security and development needs.
 
-| **Aspect**                     | **Agentless code scanning**                                | **In-pipeline scanning**                                   |  
-| ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |  
-| **Use case fit**               | Offers broad coverage with minimal disruption to developers  | Provides detailed, pipeline-integrated scans with customizable controls |  
-| **Scan scope and coverage**    | Focuses on Infrastructure-as-Code (IaC), code vulnerabilities, and open-source dependency vulnerabilities on a scheduled basis (daily) | Offers extensive coverage, including binaries and container images, triggered on each pipeline run |  
-| **Setup and configuration**    | Requires no further setup after creating the connector    | Requires manual installation and configuration in each CI/CD pipeline |  
-| **Pipeline integration**       | Runs independently of (CI/CD) pipelines without modifying workflows | Integrates within the CI/CD pipeline, requiring configuration in each pipeline |  
-| **Scanner customization**      | Allows you to select which scanners run             | Allows customization with specific scanners, categories, languages, sensitivity levels, and non-Microsoft tools |  
-| **Results and feedback**       | Provides access to findings within Defender for Cloud        | Offers near real-time feedback within the CI/CD pipeline, with results also visible in Defender for Cloud |  
-| **Break and fail criteria**    | Can't break builds                                          | Can be configured to break builds based on the severity of security findings |
+| **Aspect** | **Agentless code scanning** | **In-pipeline scanning** |
+| --- | --- | --- |
+| **Use case fit** | Offers broad coverage with minimal disruption to developers | Provides detailed, pipeline-integrated scans with customizable controls |
+| **Scan scope and coverage** | Focuses on Infrastructure-as-Code (IaC), code vulnerabilities, and open-source dependency vulnerabilities on a scheduled basis (daily) | Offers extensive coverage, including binaries and container images, triggered on each pipeline run |
+| **Setup and configuration** | Requires no further setup after creating the connector | Requires manual installation and configuration in each CI/CD pipeline |
+| **Pipeline integration** | Runs independently of CI/CD pipelines without modifying workflows | Integrates within the CI/CD pipeline, requiring configuration in each pipeline |
+| **Scanner customization** | Allows you to select which scanners run | Allows customization with specific scanners, categories, languages, sensitivity levels, and non-Microsoft tools |
+| **Results and feedback** | Provides access to findings within Defender for Cloud | Offers near real-time feedback within the CI/CD pipeline, with results also visible in Defender for Cloud |
+| **Break and fail criteria** | Can't break builds | Can be configured to break builds based on the severity of security findings |
 
 ### Scalability and performance impact
 
@@ -229,17 +231,16 @@ During the **public preview** phase, the following limitations apply:
 
 Syft (SBOM) currently has the following limitations:
 
-- SBOMs can't be download, the results of Syft can be used to [query specific packages](/azure/defender-for-cloud/query-software-bill-of-materials) and the repositories that use them.
+- SBOMs can't be downloaded. You can use Syft results to [query specific packages](/azure/defender-for-cloud/query-software-bill-of-materials) and the repositories that use them.
 
-- Repository needs a lock file otherwise only direct dependencies will be found
+- A repository needs a lock file. Otherwise, only direct dependencies are found.
 - The SBOM size limitation is restricted to 1MB. If there are a lot of packages identified, our ingestion into the Cloud Map will fail.
-- SBOM enablement is not configurable or downloadable. An SBOM will be generated on every Agentless scan.
+- SBOM enablement isn't configurable or downloadable. An SBOM is generated on every agentless scan.
 
 - Timeout is set to 15 minutes for the SBOM tool to run.
-- Disabling Agentless doesn't delete the SBOM recommendations.
+- Disabling agentless code scanning doesn't delete the SBOM recommendations.
 
-## Related content
+## Next steps
 
-- [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
-
-- [Connect Azure DevOps environments to Defender for Cloud](quickstart-onboard-devops.md)
+> [!div class="nextstepaction"]
+> [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
