@@ -10,6 +10,9 @@ author: Elazark
 
 # Enable Defender for open-source relational databases on Amazon Web Services (AWS) (Preview)
 
+> [!IMPORTANT]
+> Starting June 1, 2026, Microsoft Defender for Open-Source Relational Databases for AWS RDS will transition to General Availability and begin billing with usage reflected in your July 2026 Azure bill. You'll continue to receive database threat protection and sensitive data discovery capabilities for supported AWS RDS databases. No action is required if you want to keep the protection enabled. To opt out before charges begin, follow the opt-out instructions in the [Disable the plan](#disable-the-plan) section below.
+
 The Defender for open-source relational databases plan in Microsoft Defender for Cloud helps you detect and investigate unusual activity in your AWS RDS databases. This plan supports the following database instance types:
 
 - Aurora PostgreSQL
@@ -135,6 +138,22 @@ If the option doesn’t exist, add it; if it exists, expand the values as needed
 > - `MARIADB_AUDIT_PLUGIN` is supported in MariaDB 10.2 and higher, MySQL 8.0.25 and higher 8.0 versions, and All MySQL 5.7 versions.
 >
 > - Changes that Defender for Cloud makes to the `MARIADB_AUDIT_PLUGIN` for MySQL instances are applied during the next maintenance window. For more information, see [MARIADB_AUDIT_PLUGIN for MySQL instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.AuditPlugin.html#Appendix.MySQL.Options.AuditPlugin.Add).
+
+## Disable the plan
+
+To disable Defender for open-source relational databases on AWS RDS:
+
+1. Sign in to [the Azure portal](https://portal.azure.com).
+
+1. Search for and select **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select the relevant AWS account.
+
+1. Locate the Databases plan and select **Settings**.
+
+1. Toggle open-source relational databases to **Off**.
+
+1. Select **Save**.
 
 ## Related content
 

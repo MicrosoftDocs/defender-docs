@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| May 20, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases (AWS RDS) will reach General Availability on June 1, 2026](#microsoft-defender-for-open-source-relational-databases-aws-rds-will-reach-general-availability-on-june-1-2026) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
 | May 19, 2026| GA | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
 | May 18, 2026 | GA | [Microsoft Defender Experts for Servers as a managed XDR option](#microsoft-defender-experts-for-servers-as-a-managed-xdr-option) |
@@ -41,6 +42,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### Microsoft Defender for Open-Source Relational Databases (AWS RDS) will reach General Availability on June 1, 2026
+
+May 20, 2026
+
+Microsoft Defender for Open-Source Relational Databases will be generally available for AWS Relational Database Service (RDS) instances on June 1, 2026, transitioning from public preview to production support.
+
+Starting June 1, 2026, the plan will begin billing on AWS RDS instances with usage reflected in your July 2026 Azure bill. You'll continue to receive database threat protection and sensitive data discovery capabilities for supported open-source relational databases including PostgreSQL, MySQL, and MariaDB on AWS RDS. No action is required to maintain protection—you can disable the plan through Defender for Cloud environment settings before June 1, 2026 to prevent future charges. To opt-out and avoid being billed, you need to [disable Open-Source Relational Databases on the relevant AWS account](enable-defender-for-databases-aws.md#disable-the-plan).
+
+Learn more about [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) and how to [manage database protection plans](enable-defender-for-databases-aws.md).
 
 ### Cloud security reporting in Microsoft Defender portal (Preview)
 
