@@ -45,15 +45,14 @@ You also must meet the following requirements:
 
 ### Required roles and permissions
 
-To use playbook generator, you need the following permissions:
+To use playbook generator, you need the following permissions in [Microsoft Defender unified RBAC](/defender-xdr/custom-permissions-details):
 
-- **To author Automation Rules**: You need the **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Azure. See [Microsoft Entra built-in roles](/azure/sentinel/roles#built-in-azure-roles-for-microsoft-sentinel)
+- **To author automation rules**:
+  - **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Defender.
 
-- **To use the playbook generator**: You need the following permissions in Microsoft Defender unified RBAC:
+- **To use the playbook generator**:
   - **Authorization and settings: Detection tuning (manage)**
   - **Security operations: Security Copilot (read)**
-
-  For more information, see [Microsoft Defender unified RBAC custom permissions](/defender-xdr/custom-permissions-details).
 
 > [!NOTE]
 > Permissions might take up to two hours to take effect after assignment.
