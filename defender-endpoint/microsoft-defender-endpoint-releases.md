@@ -571,6 +571,21 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
+### Android | May 2026 | Platform: 1.0.8913.0101
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.8913.0101|May 18, 2026|
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|Feature Enhancements|Android malware scanning now covers system apps, along with the existing support for installed apps.|
+|General|Performance improvements and general bug fixes.  |
+
 ### Android | April 2026 | Platform: 1.0.8805.0103
 
 #### Release details
@@ -721,6 +736,22 @@ See the full list of [Android UX improvements](android-new-ux.md).
 ## iOS releases
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
+
+### iOS | May 2026 | Platform Version: 1.1.77130101
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.77130101| May 15, 2026 |
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|Fixes|Fixed unexpected hang in Control Filter.|
+|Improvements|Performance improvements and general bug fixes.|
+|Telemetry|Enhanced telemetry for onboarding events.|
 
 ### iOS | November 2025 | Platform: 1.1.70290103
 

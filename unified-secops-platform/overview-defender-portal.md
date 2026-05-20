@@ -194,7 +194,7 @@ In the **Identities** section of the Defender portal, monitor user and account h
 
 Feature | Details
 --- | ---
-**ITDR dashboard** | On the [Identity threat detection and response (ITDR) dashboard](/defender-for-identity/dashboard), get insights and real-time data about the security state of users and accounts.<br/><br/> The dashboard includes information about Defender for Identity deployment, information about highly privileged identities, and information about identity-related incidents.<br/><br/> If there's a problem with a Defender for Identity workspace, it's raised on the [Health issues page](/defender-for-identity/health-alerts).
+**Identity Security dashboard** | On the [Identity Security dashboard](/defender-for-identity/dashboard), get insights and real-time data about the security state of users and accounts.<br/><br/> The dashboard includes information about Defender for Identity deployment, information about highly privileged identities, and information about identity-related incidents.<br/><br/> If there's a problem with a Defender for Identity workspace, it's raised on the [Health issues page](/defender-for-identity/health-alerts).
 **Health issues** | Any Defender for Identity global or sensor-based health issues are displayed on this page.
 **Tools** | Access common tools to help you manage Defender for Identity.
 

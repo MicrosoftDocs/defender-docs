@@ -1,7 +1,7 @@
 ---
 title: Communicating with Microsoft Defender Experts
 ms.reviewer:
-description: Defender Experts for XDR has multiple channels to discuss incidents, managed response, and service support.
+description: The Defender Experts service has multiple channels to discuss incidents, managed response, and service support.
 ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
@@ -17,14 +17,14 @@ ms.custom:
 ms.date: 03/16/2026
 ---
 
-# Communicating with experts in the Microsoft Defender Experts for XDR service
+# Communicating with experts in the Microsoft Defender Experts service
 
 **Applies to:**
 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsoft Defender Experts for Servers
+- [Microsoft Defender Experts for Servers](dex-servers-overview.md)
 
-Microsoft Defender Experts for XDR provides you with multiple channels of communication to discuss incidents with our experts, ask them questions on demand, or get service readiness or operations support from your Security Delivery Experts (SDXs), if included in your service.
+The Microsoft Defender Experts service provides you with multiple channels of communication to discuss incidents with our experts, ask them questions on demand, or get service readiness or operations support from your Security Delivery Experts (SDXs), if included in your service.
 
 ## Incident and managed response notifications
 
@@ -64,7 +64,7 @@ Once you turn on chat on Teams, a new team named **Defender Experts team** is cr
 
 ### Email
 
-The Defender Experts for XDR service typically sends automated emails whenever a managed response with completed or pending actions is published in the Microsoft Defender portal, or when it needs to remind you about incidents awaiting your action.
+The Defender Experts service typically sends automated emails whenever a managed response with completed or pending actions is published in the Microsoft Defender portal, or when it needs to remind you about incidents awaiting your action.
 
 However, our experts can also send emails to your identified notification contacts directly during any of the following situations:
 
@@ -88,7 +88,7 @@ While the previous scenarios involve the experts initiating communication with y
 The Security Delivery Expert (SDX) is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
 
 > [!NOTE]
-> Security Delivery Experts are included if your Defender Experts for XDR service is licensed for 500 or more seats.
+> Security Delivery Experts are included if your Defender Experts service is licensed for 500 or more seats.
 
 The SDX provides the following services:
 
@@ -105,6 +105,6 @@ The SDX engages with your identified **service review contacts**. [Learn more ab
 
 - [Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
 - [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Get real-time visibility with Defender Experts for XDR reports](reports-xdr.md)
+- [Get real-time visibility with Defender Experts reports](reports-xdr.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
