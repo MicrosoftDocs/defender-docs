@@ -44,15 +44,15 @@ You also must meet the following requirements:
 - **Recommended Data sharing preferences**: In Security Copilot, enable the first slider, *Allow Microsoft to capture data from Security Copilot to validate product performance using human review*, in Customer Data Sharing preferences. For more information, see [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
 
 ### Required roles and permissions
-
-To use playbook generator, you need the following permissions in [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/custom-permissions-details):
-
+ 
+You need the following permissions in [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/custom-permissions-details):
+ 
+- **To use the playbook generator**:
+  - Authorization and settings: **Detection tuning (manage)**
+  - Security operations: **Security Copilot (read)**
+ 
 - **To author automation rules**:
   - **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Defender.
-
-- **To use the playbook generator**:
-  - **Authorization and settings: Detection tuning (manage)**
-  - **Security operations: Security Copilot (read)**
 
 > [!NOTE]
 > Permissions might take up to two hours to take effect after assignment.
