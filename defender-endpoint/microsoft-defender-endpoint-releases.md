@@ -28,8 +28,8 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
-|iOS|1.1.77130101|May 2026|- Build: 1.1.77130101<br>- Release: May 15, 2026|[Release details and updates](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#ios--may-2026--platform-version-1177130101)|
-|Android |1.0.8913.0101|May 2026|- Build: 1.0.8913.0101<br>- Released: May 18, 2026|[Release details and updates](https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint-releases#android--may-2026--platform-1089130101)|
+|iOS|1.1.77130101|May 2026|- Build: 1.1.77130101<br>- Release: May 15, 2026|[Release details and updates](#ios--may-2026--platform-version-1177130101)|
+|Android |1.0.8913.0101|May 2026|- Build: 1.0.8913.0101<br>- Released: May 18, 2026|[Release details and updates](#android--may-2026--platform-1089130101)|
 |Linux  |101.26032.0000  |April 2026 |- Release version: 30.126032.0000.0<br>- Engine version: 1.1.26010.1004<br>- Signature version: 1.445.617.0 |[Release details and updates](#linux--april-2026--101260320000) |
 |macOS |101.26032.0016  |April 2026 |- Release version: 20.126032.16.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260320016) |
 |macOS |4.18.25040.1  |April 2026 |- Release version: 4.18.25040.1<br>- Engine version: 1.1.25030.1<br>- Signature version: 1.421.40.0 |[Release details and updates](#macos--april-2026--418250401) |
