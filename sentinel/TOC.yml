@@ -514,6 +514,8 @@
               href: create-tasks-automation-rule.md
             - name: Export and import automation rules
               href: import-export-automation-rules.md
+            - name: SOAR integrations
+              href: automation/soar-integrations.md
         - name: Playbooks
           items:
             - name: Overview
