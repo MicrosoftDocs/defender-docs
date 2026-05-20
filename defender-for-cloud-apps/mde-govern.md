@@ -1,7 +1,7 @@
 ---
 title: Govern discovered apps using Microsoft Defender for Endpoint
 description: This article describes how to govern Microsoft Defender for Endpoint discovered apps.
-ms.date: 07/22/2024
+ms.date: 05/20/2026
 ms.topic: how-to
 ms.reviewer: Mravela
 ---
@@ -76,6 +76,16 @@ Use the following steps to configure a custom help/support URL pointing to a com
 1. Under **User warnings** > **Notification URL for blocked apps**, enter your URL. For example:
 
     [ ![Screenshot showing configuration of adding custom URL for blocked apps.](media/mde-govern/mda-custom-block-url-config.png) ](media/mde-govern/mda-custom-block-url-config.png#lightbox)
+
+## Disable informational alerts upon unsanctioned app access (Preview)
+
+By default, when users access an unsanctioned app, Defender for Cloud Apps generates an informational alert. If your organization prefers to suppress these alerts, you can disable them using the **Generate alert for blocked app access** toggle.
+
+1. In the Microsoft Defender portal, select **Settings** > **Cloud Apps** > **Cloud Discovery** > **Microsoft Defender for Endpoint**.
+1. Locate the **Generate alert for blocked app access** toggle.
+1. Turn off the toggle to disable informational alerts for blocked app access.
+
+When the toggle is off, no informational alerts are generated when users attempt to access unsanctioned apps. Blocking enforcement continues to work as expected.
 
 ## Block apps for specific device groups
 
