@@ -23,7 +23,7 @@ For news about earlier releases, see [Archive of past updates for Microsoft Defe
 
 ### Disable informational alerts for unsanctioned app access (Preview)
 
-You can now disable informational alerts generated when users access unsanctioned apps. A new **Generate alert for blocked app access** toggle in the Microsoft Defender for Endpoint settings lets you suppress these alerts while keeping blocking enforcement active. For more information, see [Disable informational alerts upon unsanctioned app access](mde-govern.md#disable-informational-alerts-upon-unsanctioned-app-access-preview).
+You can now disable informational alerts generated when users access unsanctioned apps. A new **Generate alert for blocked app access** toggle in the Microsoft Defender for Endpoint settings lets you suppress these alerts while keeping blocking enforcement active. For more information, see [Disable informational alerts for unsanctioned app access](mde-govern.md#disable-informational-alerts-for-unsanctioned-app-access-preview).
 
 ## March 2026
 

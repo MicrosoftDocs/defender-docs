@@ -77,7 +77,7 @@ Use the following steps to configure a custom help/support URL pointing to a com
 
     [ ![Screenshot showing configuration of adding custom URL for blocked apps.](media/mde-govern/mda-custom-block-url-config.png) ](media/mde-govern/mda-custom-block-url-config.png#lightbox)
 
-## Disable informational alerts upon unsanctioned app access (Preview)
+## Disable informational alerts for unsanctioned app access (Preview)
 
 By default, when users access an unsanctioned app, Defender for Cloud Apps generates an informational alert. If your organization prefers to suppress these alerts, you can disable them using the **Generate alert for blocked app access** toggle.
 
