@@ -488,7 +488,7 @@ In some v3 sensor environments, auditing health alerts might persist even when W
 
 ## Windows Server 2025 sensor v3.x migration not supported
 
-Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Continue using the v2.x sensor on Windows Server 2025 domain controllers should until support for migration to v3.x is available.
+Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Continue using the v2.x sensor on Windows Server 2025 domain controllers until support for migration to v3.x is available.
 
 
 
