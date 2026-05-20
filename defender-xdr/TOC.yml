@@ -159,7 +159,13 @@
         - name: View details and results
           href: autoad-results.md
         - name: Exclude assets from automated responses
-          href: automatic-attack-disruption-exclusions.md  
+          href: automatic-attack-disruption-exclusions.md
+        - name: External disruptions
+          items:
+          - name: Enable attack disruption actions in Okta (preview)
+            href: okta-attack-disruption.md
+          - name: Enable attack disruption actions on AWS (preview)
+            href: /azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
       - name: Predictive shielding
         items:
         - name: Overview
@@ -581,7 +587,7 @@
             - name: Create custom roles
               href: create-custom-rbac-roles.md
             - name: Import roles
-              href: Import-rbac-roles.md
+              href: import-rbac-roles.md
             - name: Activate Defender unified RBAC
               href: activate-defender-rbac.md
             - name: Edit, delete and export roles
