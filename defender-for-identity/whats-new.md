@@ -46,6 +46,12 @@ These new alerts were added to the Defender for Identity security alerts:
 - [Suspected Conditional Access bypass via non-compliant device](alerts-xdr.md#suspected-conditional-access-bypass-via-non-compliant-device)
 - [Suspicious addition of default third‑party MFA method to user account](alerts-xdr.md#suspicious-addition-of-default-thirdparty-mfa-method-to-user-account)
 
+### Known limitation: Migration of domain controllers with Windows Server 2025 from sensor v2.x to sensor v3.x is not supported
+
+Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Continue using the v2.x sensor on Windows Server 2025 domain controllers should until support for migration to v3.x is available.
+
+For more information, see [Known Issues for migrating sensors](troubleshooting-known-issues.md#windows-server-2025-sensor-v3x-migration-not-supported).
+
 ## April 2026
 
 ### **Identity Explorer (Preview)**
@@ -54,7 +60,7 @@ The Identity page now includes the **Identity Explorer** tab for customers with 
 
 ### **Custom account correlation rules (Preview)**
 
- Custom account correlation rules let you link accounts that belong to the same identity, such as privileged accounts with unique naming conventions. You can correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN by defining rules based on UPN prefix, UPN suffix, domain UPN, or employee ID. For more information, see [Create custom account correlation rules](custom-account-correlation-rules.md).
+ Custom account correlation rules let you link accounts that belong to the same identity, such as privileged accounts with unique naming conventions. You can correlate accounts that don't share strong identifiers such as account ID, SID, object ID, or UPN by defining rules based on UPN prefix, UPN suffix, or domain UPN. For more information, see [Create custom account correlation rules](custom-account-correlation-rules.md).
 
 ### Automatic Windows event auditing configuration for sensors v3.x is now generally available
 
