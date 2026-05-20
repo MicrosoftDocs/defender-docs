@@ -82,7 +82,8 @@ Policy engine alerts describe detected deviations from learned baseline behavior
 The policy engine alerts table contains the **Aggregated** item to indicate that multiple alerts of this type can be grouped together and listed only once in the Alerts page to reduce alert fatigue. For more information, see [aggregated alerts](alerts.md#aggregating-alert-violations).
 
 > [!NOTE]
-> Some predefined policy-violation alerts share the same internal detection engine as customer-configured custom alert rules. As a result, these predefined alerts are published to Azure under the common alert type **Unauthorized Operation was detected by a User Defined Rule**. The Azure portal's alerts grid and preview pane display this generic title — this doesn't mean a custom rule was configured on your sensor. To see the alert-specific title (for example, **Illegal Beckhoff AMS Command**), open the full alert details page and refer to the **User defined title** field. Each alert also carries a unique Alert ID (UUID) that you can use to locate the corresponding alert on the sensor for deeper inspection.
+> To identify the specific alert, open the full alert details page and review all alert details, including the **User defined title** field and the Alert ID (UUID). Use the Alert ID to locate the corresponding alert on the sensor for deeper inspection.
+> This step is required because some predefined policy-violation alerts share the same internal detection engine as customer-configured custom alert rules. As a result, these predefined alerts are published to Azure under the common alert type **Unauthorized Operation was detected by a User Defined Rule**. The Azure portal's alerts grid and preview pane display this generic title. This generic title doesn't mean a custom rule was configured on your sensor.
 
 | Title  | Description | Severity | Category | MITRE ATT&CK <br> Tactics and techniques | Learnable | Aggregated violations |
 |--|--|--|--|--|--|--|
