@@ -47,9 +47,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 May 20, 2026
 
-Microsoft Defender for Open-Source Relational Databases will be generally available for AWS Relational Database Service (RDS) instances on June 1, 2026, transitioning from public preview to production support.
+Microsoft Defender for Open-Source Relational Databases will be generally available for AWS Relational Database Service (RDS) instances on June 1, 2026. This release transitions the service from preview to production support.
 
-Starting June 1, 2026, the plan will begin billing on AWS RDS instances with usage reflected in your July 2026 Azure bill. You'll continue to receive database threat protection and sensitive data discovery capabilities for supported open-source relational databases including PostgreSQL, MySQL, and MariaDB on AWS RDS. No action is required to maintain protection—you can disable the plan through Defender for Cloud environment settings before June 1, 2026 to prevent future charges. To opt-out and avoid being billed, you need to [disable Open-Source Relational Databases on the relevant AWS account](enable-defender-for-databases-aws.md#disable-the-plan).
+Starting June 1, 2026, the plan will begin billing for AWS RDS instances, and usage will appear on your July 2026 Azure bill. You'll continue to receive database threat protection and sensitive data discovery for supported open-source relational databases, including PostgreSQL, MySQL, and MariaDB on AWS RDS.
+
+No action is required to maintain protection. To opt out and avoid future charges, [disable Open-Source Relational Databases on the relevant AWS account](enable-defender-for-databases-aws.md#disable-the-plan) before June 1, 2026.
 
 Learn more about [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) and how to [manage database protection plans](enable-defender-for-databases-aws.md).
 
@@ -613,7 +615,7 @@ Learn more about [permissions management in Defender for Cloud](permissions-mana
 
 February 2, 2026
 
-Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in public preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems.
+Microsoft Defender for Cloud now includes threat protection for AI agents built with Foundry, available in preview as part of the Defender for AI Services plan. This new capability delivers advanced security from development through runtime, addressing high-impact, actionable threats aligned with OWASP guidance for LLM and agentic AI systems.
 
 This release further expands Defender's AI threat protection coverage, helping organizations secure a broader range of AI platforms.
 
