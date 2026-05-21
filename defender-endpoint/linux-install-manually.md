@@ -408,8 +408,6 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
 
 3. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
 
-   :::image type="content" source="media/portal-onboarding-linux.png" alt-text="Downloading an onboarding package in the Microsoft Defender portal":::
-
 4. From a command prompt, verify that you have the file, and extract the contents of the archive:
 
    ```bash
