@@ -1,5 +1,5 @@
 ---
-title: IP block asset filters
+title: IP Block Asset Filters
 titleSuffix: Defender EASM IP block asset filters 
 description: This article outlines the filter functionality available in Microsoft Defender External Attack Surface Management for IP block assets specifically, including operators and applicable field values.
 author: danielledennis
@@ -9,10 +9,9 @@ ms.date: 12/14/2022
 ms.topic: how-to
 ---
 
-# IP block asset filters 
+# IP block asset filters
 
 These filters specifically apply to IP block assets. Use these filters when searching for a specific subset of IP blocks.  
-
 
 ## Defined value filters
 
@@ -23,10 +22,7 @@ The following filters provide a drop-down list of options to select. The availab
 |     IPv4           |   Indicates that the host resolves to a 32-bit number notated in four octets (example: 192.168.92.73).                      |   true / false    |   `Equals` `Not Equals`      |
 |     IPv6           |   Indicates that the host resolves to an IP comprised of 128-bit hexadecimal digits noted in 4-digit groups.   |   true / false    |                           |
 
-
- 
-
-## Free form filters  
+## Freeform filters  
 
 The following filters require that the user manually enters the value with which they want to search.  This list is organized according to the number of applicable operators for each filter, then alphabetically.  
 
@@ -46,9 +42,7 @@ The following filters require that the user manually enters the value with which
 |     Whois Technical Name           |   The name of the listed technical contact.                                                                                                                                                              |   John Smith          |                                                                                                                                                                                             |
 |     Whois Technical Organization   |   The organization associated to the listed technical contact.                                                                                                                                           |   Contoso Ltd.        |                                                                                                                                                                                             |
 
+## Related content
 
-
-## Next steps 
-[Understanding asset details](understanding-asset-details.md)
-
-[Inventory filters](inventory-filters.md) 
+- [Understanding asset details](understanding-asset-details.md)
+- [Inventory filters](inventory-filters.md)

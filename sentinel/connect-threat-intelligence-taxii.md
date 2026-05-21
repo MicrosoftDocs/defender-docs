@@ -2,10 +2,11 @@
 title: Connect to STIX/TAXII threat intelligence feeds
 titleSuffix: Microsoft Sentinel
 description: Learn how to connect Microsoft Sentinel to industry-standard threat intelligence feeds to import threat indicators.
+ms.author: pauloliveria 
 author: poliveria  
+ms.reviewer: yoninave
 ms.topic: how-to
 ms.date: 1/20/2025
-ms.author: pauloliveria 
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal

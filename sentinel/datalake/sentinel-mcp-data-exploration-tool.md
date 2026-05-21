@@ -3,6 +3,7 @@ title: Data exploration tool collection in Microsoft Sentinel MCP server
 titleSuffix: Microsoft Security  
 description: Learn how to search tables, run KQL queries, analyze entities, and explore graphs by using the data exploration tools in the Microsoft Sentinel MCP server.
 author: poliveria
+ms.reviewer: macasgra
 ms.topic: how-to
 ms.date: 05/21/2026
 ms.author: pauloliveria
@@ -69,9 +70,124 @@ This tool discovers data lake tables relevant to a given natural language input 
 
 #### Supported tables
 
-This tool supports Azure Monitor Log Analytics. For a full list of tables, see [Azure Monitor Log Analytics log tables organized by category](/azure/azure-monitor/reference/tables-category).
+This tool supports nearly all known standard and partner content hub tables out of the box, including [Azure Monitor Log Analytics tables organized by category](/azure/azure-monitor/reference/tables-category) and most [Microsoft Sentinel tables and associated connectors](../sentinel-tables-connectors-reference.md).
 
-It also supports most of the Microsoft Sentinel tables listed in [Microsoft Sentinel tables and associated connectors](../sentinel-tables-connectors-reference.md). The following tables aren't supported:
+<details>
+<summary>Expand to see the full list of supported third-party tables</summary>
+
+| Provider | Supported tables |
+|----------|----------|
+| Abnormal Security | `ABNORMAL_CASES_CL`, `ABNORMAL_THREAT_MESSAGES_CL` |
+| ADO (Azure DevOps) | `ADOAuditLogs_CL` |
+| AIShield | `AIShield_CL` |
+| AliCloud | `AliCloud_CL` |
+| Amazon Web Services (AWS) | `AWSCloudFront_AccessLog_CL`, `AWSCloudTrail`, `AWSCloudWatch`, `AWSGuardDuty`, `AWSNetworkFirewallAlert`, `AWSNetworkFirewallFlow`, `AWSNetworkFirewallTls`, `AWSRoute53Resolver`, `AWSS3ServerAccess`, `AWSSecurityHubFindings`, `AWSVPCFlow`, `AWSWAF` |
+| Anvilogic | `Anvilogic_Alerts_CL` |
+| Apache | `ApacheHTTPServer_CL` |
+| ARGOS | `ARGOS_CL` |
+| Armis | `Armis_Activities_CL`, `Armis_Alerts_CL`, `Armis_Devices_CL` |
+| Atlassian | `atlassian_beacon_alerts_CL` |
+| Auth0 | `Auth0AM_CL` |
+| Better Mobile | `BetterMTDAppLog_CL`, `BetterMTDDeviceLog_CL`, `BetterMTDIncidentLog_CL`, `BetterMTDNetflowLog_CL` |
+| Bitglass | `BitglassLogs_CL` |
+| BitSight | `BitsightAlerts_data_CL`, `BitsightBreaches_data_CL`, `BitsightCompany_details_CL`, `BitsightCompany_rating_details_CL`, `BitsightDiligence_historical_statistics_CL`, `BitsightDiligence_statistics_CL`, `BitsightFindings_data_CL`, `BitsightFindings_summary_CL`, `BitsightGraph_data_CL`, `BitsightIndustrial_statistics_CL`, `BitsightObservation_statistics_CL` |
+| Box | `BoxEvents_CL`, `BoxEventsV2_CL` |
+| Carbon Black | `CarbonBlackAuditLogs_CL`, `CarbonBlackEvents_CL`, `CarbonBlackNotifications_CL` |
+| CBS | `CBSLog_Azure_1_CL` |
+| Cisco | `Cisco_Umbrella_audit_CL`, `Cisco_Umbrella_cloudfirewall_CL`, `Cisco_Umbrella_dlp_CL`, `Cisco_Umbrella_dns_CL`, `Cisco_Umbrella_fileevent_CL`, `Cisco_Umbrella_firewall_CL`, `Cisco_Umbrella_intrusion_CL`, `Cisco_Umbrella_ip_CL`, `Cisco_Umbrella_ravpnlogs_CL`, `Cisco_Umbrella_ztaflow_CL`, `Cisco_Umbrella_ztna_CL`, `CiscoETD_CL`, `CiscoSDWANNetflow_CL`, `CiscoSecureEndpointAuditLogsV2_CL`, `CiscoSecureEndpointEventsV2_CL` |
+| Cloudflare | `Cloudflare_CL`, `CloudflareV2_CL` |
+| Cognni | `CognniIncidents_CL` |
+| Cohesity | `Cohesity_CL` |
+| Commvault | `CommvaultSecurityIQ_CL` |
+| Contrast Security | `ContrastADR_CL`, `ContrastADRIncident_CL` |
+| Cribl | `CriblInternal_CL` |
+| CrowdStrike | `CrowdStrike_Additional_Events_CL`, `CrowdStrikeAlerts`, `CrowdStrikeDetections`, `CrowdStrikeHosts`, `CrowdStrikeIncidents`, `CrowdStrikeVulnerabilities` |
+| CyberArk | `CyberArk_AuditEvents_CL` |
+| Cyberpion | `CyberpionActionItems_CL` |
+| Cyfirma | `CyfirmaASCertificatesAlerts_CL`, `CyfirmaASCloudWeaknessAlerts_CL`, `CyfirmaASConfigurationAlerts_CL`, `CyfirmaASDomainIPReputationAlerts_CL`, `CyfirmaASDomainIPVulnerabilityAlerts_CL`, `CyfirmaASOpenPortsAlerts_CL`, `CyfirmaBIDomainITAssetAlerts_CL`, `CyfirmaBIExecutivePeopleAlerts_CL`, `CyfirmaBIMaliciousMobileAppsAlerts_CL`, `CyfirmaBIProductSolutionAlerts_CL`, `CyfirmaBISocialHandlersAlerts_CL`, `CyfirmaCampaigns_CL`, `CyfirmaCompromisedAccounts_CL`, `CyfirmaDBWMDarkWebAlerts_CL`, `CyfirmaDBWMPhishingAlerts_CL`, `CyfirmaDBWMRansomwareAlerts_CL`, `CyfirmaIndicators_CL`, `CyfirmaMalware_CL`, `CyfirmaSPEConfidentialFilesAlerts_CL`, `CyfirmaSPEPIIAndCIIAlerts_CL`, `CyfirmaSPESocialThreatAlerts_CL`, `CyfirmaSPESourceCodeAlerts_CL`, `CyfirmaThreatActors_CL`, `CyfirmaVulnerabilities_CL` |
+| Cymru Scout | `Cymru_Scout_Account_Usage_Data_CL`, `Cymru_Scout_Domain_Data_CL`, `Cymru_Scout_IP_Data_Communications_CL`, `Cymru_Scout_IP_Data_Details_CL`, `Cymru_Scout_IP_Data_Fingerprints_CL`, `Cymru_Scout_IP_Data_Foundation_CL`, `Cymru_Scout_IP_Data_OpenPorts_CL`, `Cymru_Scout_IP_Data_PDNS_CL`, `Cymru_Scout_IP_Data_Summary_Certs_CL`, `Cymru_Scout_IP_Data_Summary_Details_CL`, `Cymru_Scout_IP_Data_Summary_Fingerprints_CL`, `Cymru_Scout_IP_Data_Summary_OpenPorts_CL`, `Cymru_Scout_IP_Data_Summary_PDNS_CL`, `Cymru_Scout_IP_Data_x509_CL` |
+| Cynerio | `CynerioEvent_CL` |
+| Darktrace | `darktrace_model_alerts_CL` |
+| Databricks | `DatabricksAccounts`, `DatabricksApps`, `DatabricksBrickStoreHttpGateway`, `DatabricksBudgetPolicyCentral`, `DatabricksCapsule8Dataplane`, `DatabricksClamAVScan`, `DatabricksCloudStorageMetadata`, `DatabricksClusterLibraries`, `DatabricksClusterPolicies`, `DatabricksClusters`, `DatabricksDashboards`, `DatabricksDatabricksSQL`, `DatabricksDataMonitoring`, `DatabricksDataRooms`, `DatabricksDBFS`, `DatabricksDeltaPipelines`, `DatabricksFeatureStore`, `DatabricksFiles`, `DatabricksFilesystem`, `DatabricksGenie`, `DatabricksGitCredentials`, `DatabricksGlobalInitScripts`, `DatabricksGroups`, `DatabricksIAMRole`, `DatabricksIngestion`, `DatabricksInstancePools`, `DatabricksJobs`, `DatabricksLakeviewConfig`, `DatabricksLineageTracking`, `DatabricksMarketplaceConsumer`, `DatabricksMarketplaceProvider`, `DatabricksMLflowAcledArtifact`, `DatabricksMLflowExperiment`, `DatabricksModelRegistry`, `DatabricksNotebook`, `DatabricksOnlineTables`, `DatabricksPartnerHub`, `DatabricksPredictiveOptimization`, `DatabricksRBAC`, `DatabricksRemoteHistoryService`, `DatabricksRepos`, `DatabricksRFA`, `DatabricksSecrets`, `DatabricksServerlessRealTimeInference`, `DatabricksSQL`, `DatabricksSQLPermissions`, `DatabricksSSH`, `DatabricksTables`, `DatabricksUnityCatalog`, `DatabricksVectorSearch`, `DatabricksWebhookNotifications`, `DatabricksWebTerminal`, `DatabricksWorkspace`, `DatabricksWorkspaceFiles` |
+| Dataminr | `DataminrPulse_Alerts_CL` |
+| Digital Shadows | `DigitalShadows_CL` |
+| Doppel | `DoppelTable_CL` |
+| Dragos | `DragosAlerts_CL` |
+| ESI (Exchange Security Insights) | `ESIExchangeConfig_CL`, `ESIExchangeOnlineConfig_CL` |
+| Exchange | `ExchangeHttpProxy_CL`, `MessageTrackingLog_CL` |
+| ExtraHop | `ExtraHop_Detections_CL` |
+| F5 | `F5Telemetry_ASM_CL`, `F5Telemetry_LTM_CL`, `F5Telemetry_system_CL` |
+| Feedly | `feedly_indicators_CL` |
+| Forescout | `FncEventsDetections_CL`, `FncEventsObservation_CL`, `FncEventsSuricata_CL`, `ForescoutHostProperties_CL` |
+| Forcepoint | `ForcepointDLPEvents_CL` |
+| Gigamon | `Gigamon_CL` |
+| GitHub | `githubscanaudit_CL` |
+| Google | `GCPApigee`, `GCPAuditLogs`, `GCPCDN`, `GCPCloudRun`, `GCPCloudSQL`, `GCPComputeEngine`, `GCPDNS`, `GCPFirewallLogs`, `GCPIAM`, `GCPIDS`, `GCPLoadBalancer`, `GCPMonitoring`, `GCPNAT`, `GCPNATAudit`, `GCPResourceManager`, `GCPVPCFlow`, `GKEAPIServer`, `GKEApplication`, `GKEAudit`, `GKEControllerManager`, `GKEHPADecision`, `GKEScheduler`, `GoogleCloudSCC`, `GoogleWorkspaceReports` |
+| HackerView | `HackerViewLog_Azure_1_CL` |
+| Illumio | `Illumio_Auditable_Events_CL`, `IlumioInsights` |
+| Imperva | `ImpervaWAFCloud_CL` |
+| Infoblox | `dossier_atp_CL`, `dossier_atp_threat_CL`, `dossier_dns_CL`, `dossier_geo_CL`, `dossier_infoblox_web_cat_CL`, `dossier_inforank_CL`, `dossier_malware_analysis_v3_CL`, `dossier_nameserver_CL`, `dossier_nameserver_matches_CL`, `dossier_ptr_CL`, `dossier_rpz_feeds_CL`, `dossier_rpz_feeds_records_CL`, `dossier_threat_actor_CL`, `dossier_tld_risk_CL`, `dossier_whois_CL`, `Infoblox_Failed_Indicators_CL`, `InfobloxInsight_CL` |
+| InfoSec | `InfoSecAnalytics_CL` |
+| Jamf Protect | `jamfprotectalerts_CL`, `jamfprotecttelemetryv2_CL`, `jamfprotectunifiedlogs_CL` |
+| Jira | `Jira_Audit_CL`, `Jira_Audit_v2_CL` |
+| Juniper | `JuniperIDP_CL` |
+| Keeper Security | `KeeperSecurityEventNewLogs_CL` |
+| LastPass | `LastPassNativePoller_CL` |
+| MailGuard 365 | `MailGuard365_Threats_CL` |
+| MailRisk | `MailRiskEmails_CL` |
+| MarkLogic | `MarkLogicAudit_CL` |
+| MDBA | `MDBALogTable_CL` |
+| Meraki | `meraki_CL` |
+| Mimecast | `MimecastAudit_CL`, `MimecastDLP_CL`, `MimecastSIEM_CL`, `MimecastTTPAttachment_CL`, `MimecastTTPImpersonation_CL`, `MimecastTTPUrl_CL` |
+| MongoDB | `MongoDBAudit_CL` |
+| MuleSoft | `MuleSoft_Cloudhub_CL` |
+| NCProtect | `NCProtectUAL_CL` |
+| Netskope | `alertscompromisedcredentialdata_CL`, `alertsctepdata_CL`, `alertsdlpdata_CL`, `alertsmalsitedata_CL`, `alertsmalwaredata_CL`, `alertspolicydata_CL`, `alertsquarantinedata_CL`, `alertsremediationdata_CL`, `alertssecurityassessmentdata_CL`, `alertsubadata_CL`, `Audits_Data_CL`, `Detections_Data_CL`, `Entities_Data_CL`, `Entity_Scoring_Data_CL`, `eventsapplicationdata_CL`, `eventsauditdata_CL`, `eventsconnectiondata_CL`, `eventsincidentdata_CL`, `eventsnetworkdata_CL`, `eventspagedata_CL`, `Lockdown_Data_CL`, `net_assets_CL`, `Netskope_WebTx_metrics_CL`, `NetskopeAlerts_CL`, `NetskopeWebtxData_CL`, `NetskopeWebtxErrors_CL`, `web_assets_CL` |
+| Nginx | `NGINX_CL`, `NginxUpstreamUpdateLogs` |
+| NordPass | `NordPassEventLogs_CL` |
+| OCI (Oracle Cloud Infrastructure) | `OCI_LogsV2_CL` |
+| Okta | `Okta_CL`, `OktaSystemLogs` |
+| 1Password | `OnePasswordEventLogs_CL` |
+| OneLogin | `OneLoginEventsV2_CL`, `OneLoginUsersV2_CL` |
+| Oracle | `OracleCloudDatabase` |
+| Orca | `OrcaAlerts_CL` |
+| Palo Alto Networks | `CortexXDR_Incidents_CL`, `PaloAltoCortexXDR_Incidents_CL`, `PaloAltoPrismaCloudAlertV2_CL` |
+| Perimeter 81 | `Perimeter81_CL` |
+| PostgreSQL | `PostgreSQL_CL` |
+| Prancer | `prancer_CL` |
+| Proofpoint | `ProofPointTAPClicksPermittedV2_CL`, `ProofPointTAPMessagesDeliveredV2_CL` |
+| Qualys | `QualysHostDetectionV3_CL`, `QualysKB_CL` |
+| Rapid7 Nexpose/InsightVM | `NexposeInsightVMCloud_assets_CL`, `NexposeInsightVMCloud_vulnerabilities_CL` |
+| Rubrik | `Rubrik_Anomaly_Data_CL`, `Rubrik_Events_Data_CL`, `Rubrik_Ransomware_Data_CL`, `Rubrik_ThreatHunt_Data_CL` |
+| SailPoint | `SailPointIDN_Events_CL`, `SailPointIDN_Triggers_CL` |
+| Salesforce | `SalesforceServiceCloudV2_CL` |
+| SAP | `SAPBTPAuditLog_CL`, `SAPETDAlerts_CL`, `SAPETDInvestigations_CL` |
+| SecurityBridge | `SecurityBridgeLogs_CL` |
+| SentinelOne | `SentinelOne_CL`, `SentinelOneActivities_CL`, `SentinelOneAgents_CL`, `SentinelOneAlerts_CL`, `SentinelOneGroups_CL`, `SentinelOneThreats_CL` |
+| Snowflake | `SnowflakeLoad_CL`, `SnowflakeLogin_CL`, `SnowflakeMaterializedView_CL`, `SnowflakeQuery_CL`, `SnowflakeRoleGrant_CL`, `SnowflakeRoles_CL`, `SnowflakeTables_CL`, `SnowflakeTableStorageMetrics_CL`, `SnowflakeUserGrant_CL`, `SnowflakeUsers_CL` |
+| Sonrai | `Sonrai_Tickets_CL` |
+| Sophos | `SophosCloudOptix_CL`, `SophosEP_CL`, `SophosEPEvents_CL` |
+| Squid Proxy | `SquidProxy_CL` |
+| Symantec | `SymantecICDx_CL` |
+| Talon | `Talon_CL` |
+| Tenable | `Tenable_VM_Asset_CL`, `Tenable_VM_Compliance_CL`, `Tenable_VM_Vuln_CL`, `Tenable_WAS_Vuln_CL` |
+| TheHive | `TheHive_CL` |
+| Theom | `TheomAlerts_CL` |
+| Tomcat | `Tomcat_CL` |
+| Trend Micro | `TrendMicro_XDR_OAT_CL`, `TrendMicro_XDR_RCA_Result_CL`, `TrendMicro_XDR_RCA_Task_CL`, `TrendMicro_XDR_WORKBENCH_CL` |
+| Varonis | `VaronisAlerts_CL` |
+| Vectra | `VectraStream_CL` |
+| Veeam | `VeeamAuthorizationEvents_CL`, `VeeamCovewareFindings_CL`, `VeeamMalwareEvents_CL`, `VeeamOneTriggeredAlarms_CL`, `VeeamSecurityComplianceAnalyzer_CL`, `VeeamSessions_CL` |
+| WatchGuard | `WsSecurityEvents_CL` |
+| Workplace from Meta | `Workplace_Facebook_CL` |
+| ZeroFox | `ZeroFox_CTI_advanced_dark_web_CL`, `ZeroFox_CTI_botnet_CL`, `ZeroFox_CTI_breaches_CL`, `ZeroFox_CTI_C2_CL`, `ZeroFox_CTI_compromised_credentials_CL`, `ZeroFox_CTI_credit_cards_CL`, `ZeroFox_CTI_dark_web_CL`, `ZeroFox_CTI_discord_CL`, `ZeroFox_CTI_disruption_CL`, `ZeroFox_CTI_email_addresses_CL`, `ZeroFox_CTI_exploits_CL`, `ZeroFox_CTI_irc_CL`, `ZeroFox_CTI_malware_CL`, `ZeroFox_CTI_national_ids_CL`, `ZeroFox_CTI_phishing_CL`, `ZeroFox_CTI_phone_numbers_CL`, `ZeroFox_CTI_ransomware_CL`, `ZeroFox_CTI_telegram_CL`, `ZeroFox_CTI_threat_actors_CL`, `ZeroFox_CTI_vulnerabilities_CL`, `ZeroFoxAlertPoller_CL` |
+| Zoom | `Zoom_CL` |
+| Zscaler | `ZNSegmentAudit_CL`, `ZPA_CL` |
+| Other | `Failed_Range_To_Ingest_CL`, `FinanceOperationsActivity_CL`, `fluentbit_CL`, `IntegrationTable_CL`, `IntegrationTableIncidents_CL` |
+
+</details>
+
+The following Microsoft Sentinel tables aren't supported:
 
 |Unsupported Microsoft Sentinel tables| |
 |----------|----------|

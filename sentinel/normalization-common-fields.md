@@ -1,10 +1,10 @@
 ---
 title: The Advanced Security Information Model (ASIM) common schema fields reference | Microsoft Docs
 description: This article describes the Advanced Information Security (ASIM) common schema fields
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: reference
 ms.date: 11/17/2021
-ms.author: ofshezaf
 
 
 

@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 07/23/2025
+ms.date: 05/20/2026
 ms.collection:
 - m365-security
 - tier1
@@ -24,6 +24,24 @@ appliesto:
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### January-2026 (Platform: 4.18.26010.5 | Engine: 1.1.26010.1)
+
+- Security intelligence update version: **1.445.6.0**
+- Release date:  **February 3, 2026 (Engine) / February 9, 2026 (Platform)**
+- Platform: **4.18.26010.5**
+- Engine: **1.1.26010.1**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Performance**: Improved performance for Control Folder Access (CFA) when protected folders don't include network folders.
+- **Diagnostics**: Fixed proxy issue in the MdeNpDiag utility in the MDEClientAnalyzer support tool.
+- **Engine stability**: Fixed an issue where syntax errors for contextual exclusions could lead to an engine crash.
+- **Policy management**: Fixed policy incompatibility that prevented unblocking engine updates.
+- **Service configuration**: Fixed regression in the registry service path for the Core service.
+- **Detection**: Improved detection in OLEstream objects.
+- **Tamper protection**: Fixed race condition during service initialization to read Tamper protection status.
 
 ### November-2025 (Platform: 4.18.25110.6 | Engine: 1.1.25110.1)
 

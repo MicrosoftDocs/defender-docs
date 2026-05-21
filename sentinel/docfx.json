@@ -137,7 +137,16 @@
       "ms.subservice": "sentinel-siem",
       "search.appverid": "met150"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.reviewer": {
+        "sap/**": "mapankra",
+        "automation/**": "sshuster",
+        "business-applications/**": "mapankra",
+        "dynamics-365/**": "mapankra",
+        "soc-optimization/**": "yohasson",
+        "normalization-*": "ofshezaf"
+      }
+    },
     "overwrite": [],
     "externalReference": [],
     "template": []

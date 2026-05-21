@@ -2,8 +2,9 @@
 title: Plan costs and understand pricing and billing
 titleSuffix: Microsoft Sentinel
 description: Learn how to plan your Microsoft Sentinel costs, and understand pricing and billing using the pricing calculator and other methods.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: daniha
 ms.topic: concept-article
 ms.date: 04/01/2026
 ms.collection: usx-security
@@ -71,11 +72,12 @@ The data lake tier incurs charges based on usage of various data lake capabiliti
 - **Data lake ingestion** is charged per GB for all data ingested into tables with retention set to data lake tier only. Data lake ingestion charges don't apply when data is ingested into tables with retention set to include both analytic and data lake tiers.
 - **Data processing** is charged per GB for data ingested into tables with retention set to data lake tier only. It supports transformations like redaction, splitting, filtering, and normalization. Data processing charges don't apply when data is ingested into tables with retention set to include both analytic and data lake tiers.
 - **Data lake storage** charges are applied per GB per month for any data that remains in the data lake tier after the analytic tier retention period ends. Charges are based on a simple and uniform data compression rate of 6:1. For example, if you retain 600 GB of raw data, it's billed as 100 GB of compressed data.
-- **Data lake query** charges apply per compute hour used when using within notebook sessions, running notebook jobs, or building nodes and edges for custom graphs. Compute hours are calculated by multiplying the number of cores in the pool selected for the notebook with the amount of time a session was active or a job was running. Data lake notebook sessions and jobs are available in pools of 12, 32, and 80 vCores.
+- **Data lake query** charges apply per GB of uncompressed data scanned using Kusto Query Language (KQL) queries or KQL jobs.
+- **Advanced data insights** charges apply per compute hour used when using within notebook sessions, running notebook jobs, or building nodes and edges for custom graphs. Compute hours are calculated by multiplying the number of cores in the pool selected for the notebook with the amount of time a session was active or a job was running. Data lake notebook sessions and jobs are available in pools of 12, 32, and 80 vCores.
 
 Once onboarded, usage from Microsoft Sentinel workspaces begins to be billed through the previously described meters rather than existing long-term retention (formerly known as Archive), search, or auxiliary logs ingestion meters.
 
-### Microsoft Sentinel graph 
+### Microsoft Sentinel graph
 
 #### Embedded graphs in Defender and Purview portals  
 
@@ -83,35 +85,35 @@ Hunting graph and blast radius visualizations in the Microsoft Defender portal, 
 
 Accessing Defender and Purview graphs through the MCP graph tool collection results in additional charges.
 
-#### Custom graphs 
+#### Custom graphs
 
-Sentinel custom graph billing is consumption based, with graph operations charged per compute hour. To learn more about the Microsoft Sentinel custom graphs, see [Custom graphs](/azure/sentinel/datalake/custom-graphs-overview). 
+Sentinel custom graph billing is consumption based, with graph operations charged per compute hour. To learn more about the Microsoft Sentinel custom graphs, see [Custom graphs](/azure/sentinel/datalake/custom-graphs-overview).
 
-The following custom graph operations are billed per compute hour under the graph meter: 
+The following custom graph operations are billed per compute hour under the graph meter:
 
 - Creating a graph using notebooks in Visual Studio Code.  
 
-- Querying a graph using notebooks in Visual Studio Code. 
+- Querying a graph using notebooks in Visual Studio Code.
 
-- Querying a graph using Sentinel graphs experiences via Defender portal. 
+- Querying a graph using Sentinel graphs experiences via Defender portal.
 
-- Querying a graph using Graph Query APIs. 
+- Querying a graph using Graph Query APIs.
 
-- Querying a graph using Sentinel MCP graph tool collection. 
+- Querying a graph using Sentinel MCP graph tool collection.
 
 #### Graph charges  
 
-Graph charges are calculated as core hours times execution time multiplied by the number of vCores in the selected SKU times the Sentinel graph meter price. There's a single graph SKU option, which uses 49 vCores for graph build operations and 6 vCores for graph queries, with a minimum query execution time of one minute. 
+Graph charges are calculated as core hours times execution time multiplied by the number of vCores in the selected SKU times the Sentinel graph meter price. There's a single graph SKU option, which uses 49 vCores for graph build operations and 6 vCores for graph queries, with a minimum query execution time of one minute.
 
-For example, when you run a Notebook job for one hour and use graph APIs to build a graph that takes five minutes, the graph cost is calculated as: 
+For example, when you run a Notebook job for one hour and use graph APIs to build a graph that takes five minutes, the graph cost is calculated as:
 
 `cost = 49 × (Price per vCore hour) × (5/60)`
 
-Similarly, if your graph queries take one minute to complete, the cost is determined as: 
+Similarly, if your graph queries take one minute to complete, the cost is determined as:
 
 `cost = 6 × (Price per vCore hour) × (1/60)`
 
-Any notebook/Spark compute and Data lake storage consumed for data transformations to build node and edges for the graph is billed independently per existing Sentinel data lake meters (Data lake storage and Advanced Data Insights). 
+Any notebook/Spark compute and Data lake storage consumed for data transformations to build node and edges for the graph is billed independently per existing Sentinel data lake meters (Data lake storage and Advanced Data Insights).
 
 #### Sentinel Model Context Protocol (MCP) server
 
@@ -131,13 +133,13 @@ Customers are charged for the Security Compute Units (SCUs) used for AI reasonin
 
 Existing Security Copilot entitlements apply. Any usage that exceeds your Microsoft 365 E5 entitlement incurs additional charges. SCU overages are billed only when usage exceeds your provisioned amount, and customers are charged only for the SCUs consumed. For more information, see [Sentinel MCP billing](/azure/sentinel/datalake/sentinel-mcp-billing) and [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot) for SCUs information.  
 
-In addition, when using entity analyzer, customers are charged for the KQL queries executed against the Microsoft Sentinel data lake. 
+In addition, when using entity analyzer, customers are charged for the KQL queries executed against the Microsoft Sentinel data lake.
 
 ##### Microsoft Sentinel MCP triage tool  
 
-To learn more about the triage tool, see [Triage tool collection](/azure/sentinel/datalake/sentinel-mcp-triage-tool). 
+To learn more about the triage tool, see [Triage tool collection](/azure/sentinel/datalake/sentinel-mcp-triage-tool).
 
-Installing, configuring, and using the triage tool carries no cost, provided you're onboarded to the required products and services. You can get access to triage at no additional charge when Microsoft Defender, Microsoft Defender for Endpoint, or Microsoft Sentinel is set up in the Microsoft Defender portal. 
+Installing, configuring, and using the triage tool carries no cost, provided you're onboarded to the required products and services. You can get access to triage at no additional charge when Microsoft Defender, Microsoft Defender for Endpoint, or Microsoft Sentinel is set up in the Microsoft Defender portal.
 
 ##### Microsoft Sentinel MCP graph tool  
 To learn more about the graph tool, see [Graph tools](/azure/sentinel/datalake/sentinel-mcp-data-exploration-tool#graph-tools-preview). 
@@ -157,10 +159,12 @@ The costs shown in the following image are for example purposes only. They're no
 Microsoft Sentinel and Log Analytics charges might appear on your Azure bill as separate line items based on your selected pricing plan. Simplified pricing tiers are represented as a single `sentinel` line item for the pricing tier. Ingestion and analysis are billed on a daily basis. If your workspace exceeds its Commitment tier usage allocation in any given day, the Azure bill shows one line item for the Commitment tier with its associated fixed cost, and a separate line item for the cost beyond the Commitment tier, billed at the same effective Commitment tier rate.
 
 # [Simplified](#tab/simplified)
+
 The following tabs show how Microsoft Sentinel costs appear in the **Service name** and **Meter** columns of your Azure bill depending on your simplified pricing tier.
 
 # [Classic](#tab/classic)
-The following tabs show how Microsoft Sentinel and Log Analytics costs appear in the **Service name** and **Meter** columns of your Azure bill depending on your classic pricing tier. 
+
+The following tabs show how Microsoft Sentinel and Log Analytics costs appear in the **Service name** and **Meter** columns of your Azure bill depending on your classic pricing tier.
 
 ---
 
@@ -194,7 +198,6 @@ If you're billed at the simplified pay-as-you-go rate, this table shows how Micr
 | Basic logs data analysis| `Sentinel` |**Basic Logs Analysis**|
 | Auxiliary logs data analysis | `Sentinel` | **Auxiliary Logs Analysis** |
 
-
 # [Pay-as-you-go](#tab/pay-as-you-go/classic)
 
 If you're billed at classic pay-as-you-go rate, this table shows how Microsoft Sentinel and Log Analytics costs appear in the **Service name** and **Meter** columns of your Azure bill.
@@ -208,7 +211,6 @@ If you're billed at classic pay-as-you-go rate, this table shows how Microsoft S
 | Auxiliary logs data analysis | `Sentinel` | **Classic Auxiliary Logs Analysis** |
 | Auxiliary logs data ingestion | `Azure Monitor` | **Basic Auxiliary Data Ingestion** |
 
-
 # [Free data meters](#tab/free-data-meters/simplified)
 
 This table shows how Microsoft Sentinel and Log Analytics no charge costs appear in the **Service name** and **Meter** columns of your Azure bill for free data services when billing is at a simplified pricing tier. For more information, see [View Data Allocation Benefits](/azure/azure-monitor/cost-usage#view-data-allocation-benefits).
@@ -217,7 +219,6 @@ This table shows how Microsoft Sentinel and Log Analytics no charge costs appear
 |--|--|--|
 | Microsoft Sentinel Free Trial – Sentinel Analysis | `Sentinel` | **Free trial Analysis** |
 | Microsoft Defender XDR Benefit – Data Analysis | `Sentinel` | **Free Benefit - M365 Defender Analysis** |
-
 
 # [Free data meters](#tab/free-data-meters/classic)
 
@@ -304,7 +305,6 @@ The following table lists the data sources in Microsoft Sentinel and Log Analyti
 | **Microsoft Defender for Identity**   | SecurityAlert (AATP)                    |
 | **Microsoft Defender for Cloud Apps** | SecurityAlert (MCAS) |
 | **Microsoft Defender for Office 365 (Preview)** | SecurityAlert (OATP) |
-
 
 <a id="audithealthnote">*<sup>1</sup>*</a> *For more information, see [Auditing and health monitoring for Microsoft Sentinel](health-audit.md).*
 
