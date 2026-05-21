@@ -45,110 +45,28 @@ Microsoft Defender for Endpoint on Linux helps organizations prevent, detect, in
 >   - Oracle Linux
 > - For a detailed comparison of supported features for all Defender for Endpoint platforms (Windows, macOS, and Linux), see [Defender for Endpoint capabilities](microsoft-defender-endpoint.md#defender-for-endpoint-capabilities).
 
-## Server licenses
+## Deployment, configuration, and operations
 
-To onboard servers to Defender for Endpoint, you need server licenses. You can choose from the following options:
+For detailed guidance on licensing, prerequisites, deployment methods, policy configuration, software updates, device health reporting, response actions, and performance considerations for Defender for Endpoint on Linux, see the following resources:
 
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender for Endpoint for servers
-- [Microsoft Defender for Business servers](/defender-business/get-defender-business?tabs=findpartner#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses only)
-
-For more information about licensing requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint licensing information](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-defender-for-endpoint).
-
-For detailed licensing information, see [Product Terms: Microsoft Defender for Endpoint](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDefenderforEndpoint/EAEAS) and work with your account team to learn more about the terms and conditions.
-
-<!---If/when we add a page about server licensing, let's add that link here.--->
-
-## Deploy and configure policies for Defender for Endpoint on Linux
-
-There are several methods and tools that you can use to deploy Microsoft Defender for Endpoint on Linux. Make sure to meet the [prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md).
-
-> [!NOTE]
-> We recommend using [Deployment Tool based deployment](/defender-endpoint/linux-install-with-defender-deployment-tool). Deployment Tool based deployment simplifies the onboarding process, reduces manual tasks, and supports new installations, upgrades, and uninstalls.
-
-- [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
-- [Installer script based deployment](linux-installer-script.md)
-- [Ansible based deployment](linux-install-with-ansible.md)
-- [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
-- [Puppet based deployment](linux-install-with-puppet.md)
-- [SaltStack based deployment](linux-install-with-saltack.md)
-- [Golden Image based deployment](linux-deploy-defender-for-endpoint-using-golden-images.md)
-- [Deployment to a custom location](linux-custom-location-installation.md)
-- [Manual deployment](linux-install-manually.md)
-- [Direct onboarding with Defender for Cloud](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint)
-- [Deployment guidance for Defender for Endpoint on Linux Server with SAP](mde-linux-deployment-on-sap.md)
-
-> [!IMPORTANT]
-> On Linux, Microsoft Defender for Endpoint creates an mdatp user with random UID and GID values. If you want to control these values, create an mdatp user before installation using the /usr/sbin/nologin shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
-
-If you experience any installation issues, self-troubleshooting resources are available in the [See also](#see-also) section.
-
-### Configure policies for Defender for Endpoint on Linux
-
-To configure Defender for Endpoint on Linux, choose from the following options:
-
-- <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Enroll in Defender for Endpoint security settings management</a> and use the Microsoft Defender portal to configure and manage your policies.
-- [Set up a configuration profile that uses a JSON file](linux-preferences.md).
-
-For more information, see [Configure security settings and policies for Defender for Endpoint on Linux](linux-preferences.md).
-
-## Software updates
-
-Microsoft publishes software updates for Defender for Endpoint on Linux to improve performance, improve security, and deliver new features. Software updates are released on a monthly basis, following testing, and verification. Occasionally, it can take more than 30 days between releases. For more information, see [What's new in Defender for Endpoint on Linux](linux-whatsnew.md).
-
-Each version of Defender for Endpoint on Linux is set to expire automatically after nine months. We recommend using current versions so you get available enhancements and fixes. For more information, see [How to deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md).
-
-## Device health reporting
-
-The Device Health report provides information about the antivirus status of Linux servers. For example:
-
-- Antivirus mode.
-- Scan results.
-- Platform version.
-- Antivirus engine version.
-- Security intelligence version.
-
-You can access this information through the portal or via API. For more information, see the following articles:
-
-- [Device health reporting in Microsoft Defender for Endpoint](device-health-microsoft-defender-antivirus-health.md)
-- [Export device antivirus health details API methods and properties](api/device-health-api-methods-properties.md)
-
-## Response actions and live response
-
-Your security operations team can remotely connect to a device and execute various response actions. For example:
-
-- Run an antivirus scan.
-- Isolate the device.
-- Collect investigation packages.
-
-Your team can also use live response for a remote shell connection to perform in-depth investigative work. For more information, see the following articles:
-
-- [Take response actions on a device](respond-machine-alerts.md)
-- [Investigate entities on devices using live response](live-response.md)
+- [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) covers server licensing requirements and all supported deployment methods, including the recommended Deployment Tool, Ansible, Puppet, Chef, SaltStack, and manual options.
+- [Configure Defender for Endpoint on Linux](linux-preferences.md) and [Security settings management in Microsoft Defender for Endpoint](/intune/device-security/microsoft-defender/security-settings-management) describe how to set up and manage security policies.
+- [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md) and [Deploy updates for Defender for Endpoint on Linux](linux-updates.md) provide information about software updates and version management.
+- [Device health reporting](device-health-microsoft-defender-antivirus-health.md) explains how to monitor antivirus status, scan results, and platform versions for your Linux servers.
+- [Take response actions on a device](respond-machine-alerts.md) covers remote response actions and live response capabilities on Linux devices.
+- [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md) helps you address performance issues with high I/O workloads from applications like Jenkins, Jira, OracleDB, and Postgres.
 
 ## Privacy
 
 Microsoft is committed to providing the information and controls you need to choose how your data is collected and used in Defender for Endpoint on Linux.
 
-For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](linux-privacy.md).
-
-## Common applications that Defender for Endpoint impacts
-
-High I/O workloads from certain applications can experience performance issues when Defender for Endpoint is installed. Such applications for developer scenarios include Jenkins and Jira, and database workloads like OracleDB and Postgres.
-
-If you see performance degradation, consider setting exclusions for trusted applications. For more information, see the following articles:
-
-- [Configure and validate exclusions for Defender for Endpoint on Linux](linux-exclusions.md)
-- [Review common Exclusion Mistakes for Microsoft Defender Antivirus](common-exclusion-mistakes-microsoft-defender-antivirus.md)
-
-If you're using non-Microsoft applications, also see their documentation regarding antivirus exclusions.
+For more information, see [Privacy for Microsoft Defender for Endpoint on Linux](linux-privacy.md).
 
 ## Next steps
 
 - [Review the prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 - [Deploy Defender for Endpoint on Linux](linux-installer-script.md)
 - [Configure Defender for Endpoint on Linux](linux-preferences.md)
-- [Deploy updates for Defender for Endpoint on Linux](linux-updates.md)
 
 ## See also
 
