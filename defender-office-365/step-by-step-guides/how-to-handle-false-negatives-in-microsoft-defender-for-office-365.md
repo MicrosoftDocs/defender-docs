@@ -10,7 +10,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 12/08/2025
+ms.date: 05/21/2026
 ---
 
 # How to handle malicious emails that are delivered to recipients (false negatives) using Microsoft Defender for Office 365
@@ -30,6 +30,10 @@ Defender for Office 365 can help admins understand *why* malicious emails were d
 1. Ask end users to report the email as **Phishing** or **Junk** using the [built-in **Report** button in supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 2. End users can also add senders to their **[Blocked Senders List](https://support.microsoft.com/office/block-or-unblock-senders-in-outlook-9bf812d4-6995-4d19-901a-76d6e26939b0#picktab=classic_outlook)** in Outlook to prevent emails from this sender from being delivered to their inbox.
 3. Admins can triage the user reported messages from [User reported tab on the Submissions page](../submissions-admin.md#view-user-reported-messages-to-microsoft).
+
+   > [!TIP]
+   > In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails, reducing manual investigation work for security teams.
+
 4. From those reported messages, admins can **submit to** [Microsoft for analysis](../submissions-admin-review-user-reported-messages.md#notify-users-from-within-the-portal) to learn why that email was allowed in the first place.
 5. If needed, while submitting to Microsoft for analysis, admins can [create a block entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses) to mitigate the problem.
 6. Once the results for submissions are available, read the verdict to understand why emails were allowed, and how your organization setup could be improved to prevent similar issues from happening in the future.
@@ -38,6 +42,10 @@ Defender for Office 365 can help admins understand *why* malicious emails were d
 
 1. Ask end users to report the email as **phishing** using the [built-in **Report** button in supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 2. Admins can triage the user reported messages from the [User reported tab on the Submissions page](../submissions-admin.md#view-user-reported-messages-to-microsoft).
+
+   > [!TIP]
+   > In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails, reducing manual investigation work for security teams.
+
 3. From those reported messages admins can **submit to** [Microsoft for analysis](../submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) and learn why that email was allowed in the first place.
 4. If needed, while submitting to Microsoft for analysis, admins can [create a block entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses) to mitigate the problem.
 5. Once the results for submissions are available, read the verdict to understand why emails were allowed, and how your organization setup could be improved to prevent similar issues from happening in the future.
