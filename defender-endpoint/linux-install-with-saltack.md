@@ -12,7 +12,7 @@ ms.collection:
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-ms.date: 08/11/2025
+ms.date: 05/21/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -47,24 +47,7 @@ Here are a few important points:
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-1. In Microsoft Defender portal, go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
-
-1. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
-
-1. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
-
-   :::image type="content" source="media/portal-onboarding-linux-2.png" alt-text="The Download onboarding package option":::
-
-1. On the SaltStack Master, extract the contents of the archive to the SaltStack Server's folder (typically `/srv/salt`):
-
-   ```bash
-   unzip WindowsDefenderATPOnboardingPackage.zip -d /srv/salt/mde
-   ```
-
-   ```console
-   Archive:  WindowsDefenderATPOnboardingPackage.zip
-   inflating: /srv/salt/mde/mdatp_onboard.json
-   ```
+[!INCLUDE [linux-get-deployment-package-third-party-tools](includes/linux-get-deployment-package-third-party-tools.md)]
 
 ## Create Saltstack state files
 
