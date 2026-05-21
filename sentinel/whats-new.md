@@ -23,7 +23,7 @@ The listed features were released in the last six months. For information about 
 - [Reason over Microsoft Sentinel graphs with graph tool (Preview)](#reason-over-microsoft-sentinel-graphs-with-graph-tool-preview)
 
 ### Reason over Microsoft Sentinel graphs with graph tool (Preview)
-The graph tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server provides visual graph-based exploration of relationships across identities, devices, threats, and signals to assess coverage, dependencies, and configuration gaps. For more information, see [Explore Microsoft Sentinel graphs with graph tool collection](datalake/sentinel-mcp-graph-tool.md). 
+The graph tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server provides visual graph-based exploration of relationships across identities, devices, threats, and signals to assess coverage, dependencies, and configuration gaps. For more information, see [Explore Microsoft Sentinel graphs with graph tools](datalake/sentinel-mcp-data-exploration-tool.md#graph-tools-preview). 
 
 ## April 2026
 

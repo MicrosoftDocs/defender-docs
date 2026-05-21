@@ -39,7 +39,6 @@ The following table lists the available collections you can use:
 | [Data exploration](sentinel-mcp-data-exploration-tool.md) | Explore security data in Microsoft Sentinel data lake by searching for relevant tables, querying the lake, and analyzing entities | `https://sentinel.microsoft.com/mcp/data-exploration`|
 | [Security Copilot agent creation](sentinel-mcp-agent-creation-tool.md) | Create Microsoft Security Copilot agents for complex workflows |`https://sentinel.microsoft.com/mcp/security-copilot-agent-creation`|
 | [Triage](sentinel-mcp-triage-tool.md) | Triage incidents rapidly and hunt over your own data easily | `https://sentinel.microsoft.com/mcp/triage`|
-| [Graph](sentinel-mcp-graph-tool.md) | Reason over multiple Microsoft Sentinel graphs, including exposure, hunting, and data risk graphs | `https://sentinel.microsoft.com/mcp/graph`|
 
 
 ## Create your own custom MCP tool

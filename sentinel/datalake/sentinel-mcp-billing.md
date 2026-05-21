@@ -36,7 +36,7 @@ You can use the [triage tool collection](sentinel-mcp-triage-tool.md) at no extr
 
 ### Graph tool
 
-Installing and configuring the [graph tool collection](sentinel-mcp-graph-tool.md) carries no cost. However, you invoke the graph meter when you start using the tools to query a Microsoft Sentinel graph. For more information, see:  [Plan costs and understand Microsoft Sentinel pricing and billing](../billing.md#graph-charges).
+Installing and configuring the [graph tool collection](sentinel-mcp-data-exploration-tool.md#graph-tools-preview) carries no cost. However, you invoke the graph meter when you start using the tools to query a Microsoft Sentinel graph. For more information, see:  [Plan costs and understand Microsoft Sentinel pricing and billing](../billing.md#graph-charges).
 
 ## Quotas and limits
 

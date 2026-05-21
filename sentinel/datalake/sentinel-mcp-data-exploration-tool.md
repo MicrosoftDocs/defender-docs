@@ -1,15 +1,17 @@
 ---
 title: Data exploration tool collection in Microsoft Sentinel MCP server
 titleSuffix: Microsoft Security  
-description: Learn about the different tools available in the Data exploration collection in Microsoft Sentinel 
+description: Learn how to search tables, run KQL queries, analyze entities, and explore graphs by using the data exploration tools in the Microsoft Sentinel MCP server.
 author: poliveria
 ms.topic: how-to
-ms.date: 04/14/2026
+ms.date: 05/21/2026
 ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ms.custom: msecd-doc-authoring-1012
+ai-usage: ai-assisted
 
-#customer intent: As a security analyst, I want to know the different tools available to explore security data in Microsoft Sentinel data lake
+#customer intent: As a security analyst, I want to know the different tools available to explore security data in Microsoft Sentinel data lake so that I can investigate threats and make data-driven decisions.
 ---
 
 # Explore Microsoft Sentinel data lake with data exploration collection
@@ -17,12 +19,13 @@ ms.subservice: sentinel-platform
 > [!IMPORTANT]
 > Some information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-The data exploration tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you search for relevant tables and retrieve data from Microsoft Sentinel's data lake by using natural language. 
+The data exploration tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you search for relevant tables and retrieve data from Microsoft Sentinel's data lake by using natural language. It also includes graph tools that let you reason over multiple Microsoft Sentinel graphs, including exposure, hunting, and data risk graphs.
 
 ## Prerequisites
 
 To access the data exploration tool collection, you need the following prerequisites:
-- [Microsoft Sentinel data lake](sentinel-lake-onboarding.md)
+- [Microsoft Sentinel data lake and graph](sentinel-lake-onboarding.md)
+- Microsoft Sentinel data lake onboarded to Defender portal (required for graph tools)
 - Any of the supported AI-powered code editors and agent-building platforms:
     - [Microsoft Security Copilot](sentinel-mcp-use-tool-security-copilot.md#add-a-microsoft-sentinel-tool-collection)
     - [Microsoft Copilot Studio](sentinel-mcp-use-tool-copilot-studio.md#add-a-microsoft-sentinel-tool-collection)
@@ -35,6 +38,8 @@ To access the data exploration tool collection, you need the following prerequis
 > - Security Operator
 > - Security Reader
 
+To access the graph data in Defender portal, at least [read-only access](/security-exposure-management/prerequisites) in Microsoft Security Exposure Management is required.
+
 ## Add the data exploration collection
 
 To add the data exploration collection, first set up Microsoft Sentinel's unified MCP server interface. Follow the step-by-step instructions for compatible [AI-powered code editors and agent-building platforms](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools).
@@ -45,6 +50,14 @@ https://sentinel.microsoft.com/mcp/data-exploration
 ```
 
 ## Tools in the data exploration collection
+
+The data exploration collection includes the following tools:
+
+- [Semantic search on table catalog](#semantic-search-on-table-catalog-search_tables) — Discover relevant data lake tables and their schemas.
+- [Execute KQL query](#execute-kql-kusto-query-language-query-on-microsoft-sentinel-data-lake-query_lake) — Run KQL queries against a Microsoft Sentinel data lake workspace.
+- [List workspaces](#list-workspaces-list_sentinel_workspaces) — List all available Microsoft Sentinel data lake workspaces.
+- [Entity analyzer](#entity-analyzer) — Analyze users and URLs with AI-driven risk verdicts and insights.
+- [Graph tools (preview)](#graph-tools-preview) — Reason over exposure, hunting, and data risk graphs.
 
 ### Semantic search on table catalog (`search_tables`)
 This tool discovers data lake tables relevant to a given natural language input and returns schema definitions to support query authoring. Use this tool to discover tables, understand a schema, or build valid Kusto Query Language (KQL) queries for a Microsoft Sentinel workspace. You can also use it to explore unfamiliar data sources or identify relevant tables for a specific investigative or analytical task. 
@@ -63,7 +76,8 @@ It also supports most of the Microsoft Sentinel tables listed in [Microsoft Sent
 |Unsupported Microsoft Sentinel tables| |
 |----------|----------|
 |<ul><li>`AliCloudActionTrailLogs_CL`<li>`argsentdc_CL`<li>`Audit_CL`<li>`Auth0Logs_CL`<li>`Awareness_Performance_Details_CL`<li>`Awareness_SafeScore_Details_CL`<li>`Awareness_User_Data_CL`<li>`Awareness_Watchlist_Details_CL`<li>`CarbonBlack_Alerts_CL`<li>`Cisco_Umbrella_proxy_CL`<li>`Cloud_Integrated_CL`<li>`CloudGuard_SecurityEvents_CL`<li>`ConfluenceAuditLogs_CL`<li>`CortexXpanseAlerts_CL`<li>`CyberSixgill_Alerts_CL`<li>`DruvaSecurityEvents_CL`<li>`DynatraceAttacks_CL`<li>`DynatraceAuditLogs_CL`<li>`DynatraceProblems_CL`<li>`DynatraceSecurityProblems_CL`<li>`ErmesBrowserSecurityEvents_CL`<li>`FireworkV2_CL`<li>`Garrison_ULTRARemoteLogs_CL`<li>`GCPLoadBalancerLogs_CL`<li>`GitHubAuditLogsV2_CL`<li>`Health_Data_CL`<li>`Illumio_Flow_Events_CL`<li>`IllumioInsightsSummary_CL`<li>`iocsent_CL`<li>`Island_Admin_CL`<li>`Island_User_CL`<li>`JBossEvent_CL`<li>`LookoutMtdV2_CL`</ul> |<ul><li>`ObsidianActivity_CL`<li>`ObsidianThreat_CL`<li>`Onapsis_Defend_CL`<li>`OneTrustMetadataV3_CL`<li>`OracleWebLogicServer_CL`<li>`PaloAltoCortexXDR_Alerts_CL`<li>`PaloAltoCortexXDR_Audit_Agent_CL`<li>`PaloAltoCortexXDR_Audit_Management_CL`<li>`PaloAltoCortexXDR_Endpoints_CL`<li>`Phosphorus_CL`<li>`PingOne_AuditActivitiesV2_CL`<li>`PrismaCloudCompute_CL`<li>`ProofpointPODMailLog_CL`<li>`ProofpointPODMessage_CL`<li>`ProofPointTAPClicksBlockedV2_CL`<li>`ProofPointTAPMessagesBlockedV2_CL`<li>`RSAIDPlus_AdminLogs_CL`<li>`SAPLogServ_CL`<li>`Seg_Cg_CL`<li>`Seg_Dlp_CL`<li>`SeraphicWebSecurity_CL`<li>`SlackAuditV2_CL`<li>`Tenable_WAS_Asset_CL`<li>`TransmitSecurityActivity_CL`<li>`Ttp_Attachment_CL`<li>`Ttp_Impersonation_CL`<li>`Ttp_Url_CL`<li>`Ubiquiti_CL`<li>`ValenceAlert_CL`<li>`vcenter_CL`<li>`ZimperiumThreatLog_CL`<li>`ZNSegmentAuditNativePoller_CL`</ul>|
-### Execute KQL (Kusto Query Language) query on Microsoft Sentinel data lake (`query_lake`)
+
+### Execute KQL(Kusto Query Language) query on Microsoft Sentinel data lake (`query_lake`)
 This tool runs a single KQL query against a specified Microsoft Sentinel data lake workspace and returns the raw result set. It's designed for focused investigative or analytical retrieval and not bulk export. Use this tool to advance an investigation or analytical workflow and retrieve a security event, alert, asset, identity, device, or enrichment data. You can also use it alongside the `search_tables` tool to identify relevant table schemas and build valid KQL queries.
 
 | Parameters | Required? | Description | 
@@ -80,7 +94,7 @@ This tool lists all Microsoft Sentinel data lake workspace name and ID pairs ava
 
 These tools use AI to analyze your organization's data in the Microsoft Sentinel data lake. They provide a verdict and detailed insights on URLs, domains, and user entities. They help eliminate the need for manual data collection and complex integrations typically required for enriching and investigating entities.
 
-For example, `analyze_user_entity` reasons over the user's authentication patterns, behavioral anomalies, activity within your organization, and more to provide a verdict and analysis. Meanwhile, `analyze_url_entity` reasons over threat intelligence from Microsoft, your custom threat intelligence in Microsoft Sentinel threat intelligence platform (TIP), click, email, or connection activity on the URL within your organization, and presence in Microsoft Sentinel watchlists, among others to similarly provide a verdict and analysis.
+For example, `analyze_user_entity` reasons over the user's authentication patterns, behavioral anomalies, activity within your organization, and more to provide a verdict and analysis. The `analyze_url_entity` tool reasons over Microsoft threat intelligence, your custom threat intelligence in Microsoft Sentinel threat intelligence platform (TIP), and URL activity within your organization. It also checks Microsoft Sentinel watchlists to provide a verdict and analysis.
 
 Entity analysis tools might require a few minutes to generate results, so there are tools to start analysis for each entity and another one that polls for the analysis results.
 
@@ -111,7 +125,7 @@ These tools return an identifier value that you can provide to the retrieve anal
 
 While this tool automatically polls for a few minutes until results are ready, its internal timeout might not be sufficient for long analysis operations. You might need to run it multiple times to get results.
 
->[!NOTE]
+> [!NOTE]
 > It might be beneficial to include a prompt such as `render the results as returned exactly from the tool`, which helps ensure that the response from the analyzer is provided without additional processing by the MCP client.
 
 #### Additional information
@@ -125,11 +139,11 @@ While this tool automatically polls for a few minutes until results are ready, i
 
     If you don't have any of these required tables, `analyze_user_entity` generates an error message that lists the tables you didn't onboard, along with links to their corresponding onboarding documentation.
 
-- `analyze_user_entity` works best when the following tables are also present in the data lake, but continues to work and assess risk, even if the said tables are unavailable:
+- `analyze_user_entity` works best when the following tables are also present in the data lake, but continues to work and assess risk, even if these tables are unavailable:
     - [AADNonInteractiveUserSignInLogs](../connect-azure-active-directory.md)
     - [BehaviorAnalytics](../enable-entity-behavior-analytics.md)
     
-- `analyze_url_entity` works best when the following tables are present in the data lake, but continues to work and assess risk, even if the said tables are unavailable:
+- `analyze_url_entity` works best when the following tables are present in the data lake, but continues to work and assess risk, even if these tables are unavailable:
     - [EmailUrlInfo](../connect-microsoft-365-defender.md)
     - [UrlClickEvents](../connect-microsoft-365-defender.md)
     - [ThreatIntelIndicators](../work-with-threat-indicators.md)
@@ -140,6 +154,72 @@ While this tool automatically polls for a few minutes until results are ready, i
 
 - Running multiple instances of the entity analyzer at the same time can increase latency for each run. To prevent timeouts and avoid hitting the entity analyzer's [preview thresholds](sentinel-mcp-billing.md#microsoft-sentinel-entity-analyzer-tool-1), start by running a maximum of five analyses at once and then adjust it as needed based on how often the logic app is triggered in your organization. 
 
+### Graph tools (preview)
+
+> [!IMPORTANT]
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
+The graph tools let you reason over multiple Microsoft Sentinel graphs, including exposure, hunting, and data risk graphs. By using these tools, you can gather insights and make data-driven decisions while querying in natural language.
+
+#### Blast radius finder (`graph_find_blastradius`) 
+
+This tool evaluates the blast radius of a node by exploring propagation paths towards an organization's critical assets. It details the paths that start at the entity you provide, evaluates the risk, and specifies recommendations to reduce it.
+
+| Parameters | Required? | Description | 
+|----------|----------|----------|
+| `sourceName`| Yes |This parameter takes in keywords to search for relevant information matching an entity in the graph. It can be a node or a group of nodes. |
+
+#### Connection and path discovery (`graph_find_walkable_paths`) 
+This tool enumerates the connections between any given pairs of sources and targets. It analyzes the nature of the connections and then decides whether it can be traversed for lateral movement. 
+
+| Parameters | Required? | Description | 
+|----------|----------|----------|
+| `sourceName`  | Yes |This parameter takes in keywords to match an entity within the graph for the path starting point.|
+|`targetName`  |Yes |This parameter takes in keywords to match an entity within the graph for the path target. |
+
+#### Exposure perimeter analyzer (`graph_exposure_perimeter`) 
+This tool lists the incoming connections from other entities to the specified entity. It helps you determine the risk that the entity faces. The tool might return prioritized recommendations based on the results. 
+
+| Parameters | Required? | Description | 
+|----------|----------|----------|
+| `targetName` | Yes |This parameter takes in keywords to identify and match an entity in the graph; the node's name. |
+| `minPathLength` | No |This parameter takes in the minimum number of hops in a path. |
+| `maxPathLength` | No |This parameter takes in the maximum number of hops in a path. |
+| `resultsCountLimit` | No |This parameter takes in the maximum number of paths to return. |
+
+#### Path between two entities (`graph_find_connected_nodes`) 
+
+This tool lists traversable paths between two entities that match a criteria or characteristic that describes those entities. 
+
+| Parameters | Required? | Description | 
+|----------|----------|----------|
+| `sourceNodeLabel` | Yes |This parameter takes in a valid source label to filter on. For supported labels, use the `graph_get_context` tool. |
+| `sourceNodeProperties` | No |This parameter takes in a list of valid properties for the starting point entity, separated by commas. For supported properties, use the `graph_get_context` tool. |
+| `targetNodeLabel` | Yes |This parameter takes in a valid target label to filter on. For supported labels, use the `graph_get_context` tool. |
+| `targetNodeProperties` | No |This parameter takes in a list of valid properties for the ending point entity, separated by commas. For supported properties, use the `graph_get_context` tool. |
+| `resultsCountLimit` | No |This parameter takes in the maximum number of results to return. |
+
+#### Nodes match (`graph_find_nodes`)
+
+This tool finds and matches entities that the graph represents as nodes based on given criteria or characteristics. It returns a list of nodes that match the defined criteria.
+
+| Parameters | Required? | Description | 
+|----------|----------|----------|
+| `validNodeLabel` | Yes |This parameter takes in a node label to match. For supported labels, use the `graph_get_context` tool. |
+| `validNodeProperties` | No |This parameter takes in a list of properties to match, separated by commas. For supported properties, use the `graph_get_context` tool. |
+| `resultsLimit` | No |This parameter takes in the maximum number of results to return. |
+
+#### General information and context for graph (`graph_get_context`)
+
+This tool provides context for the parameters and serves as a reference to help you understand which tools, functionalities, or parameters you can use. Use it as a helper to get the graph context so you can better use the other graph MCP tools in the collection. 
+
+#### Additional information for graph tools
+
+- To scope results to graph only, add `in my graph` to prompts. 
+- Querying for identities doesn't support user principal names (UPNs).  
+- When you specify the type of the entity, use it before the name. 
+- Installing and configuring the graph tool collection carries no cost. However, you invoke the graph meter when you start using the tools to query a Microsoft Sentinel graph. For more information, see:  [Plan costs and understand Microsoft Sentinel pricing and billing](../billing.md#graph-charges).
+
 ## Sample prompts
 
 The following sample prompts demonstrate what you can do with the data exploration collection:
@@ -149,11 +229,14 @@ The following sample prompts demonstrate what you can do with the data explorati
 - Help me understand if the user <user object ID\> is compromised.
 - Investigate users with a password spray alert in the last seven days and tell me if any of them are compromised.
 - Find all the URL IOCs from <threat analytics report\> and analyze them to tell me everything Microsoft knows about them.
+- What is the blast radius of node _X_ if compromised?
+- List all paths from user _X_ to critical assets.
+- What is the exposure perimeter of my critical SQL servers?
 
 
 ## How Microsoft Sentinel MCP tools work alongside your agent
 
-Let's take a deeper look into how an agent answers a prompt by dynamically orchestrating over the tools.
+The following example shows how an agent answers a prompt by dynamically orchestrating over the tools.
 
 **Sample prompt:** `Find the top three users that are at risk and explain why they're at risk.` 
 
@@ -182,7 +265,7 @@ Let's take a deeper look into how an agent answers a prompt by dynamically orche
 
 - The agent corrects the KQL query by itself and successfully retrieves data from Microsoft Sentinel data lake, finding the risky users.
 
-     :::image type="content" source="media/sentinel-mcp/mcp-tool-run-correct-kql.png" alt-text="Screenshot of the agent attempting running a corrected KQL query." lightbox="media/sentinel-mcp/mcp-tool-run-correct-kql.png"::: 
+     :::image type="content" source="media/sentinel-mcp/mcp-tool-run-correct-kql.png" alt-text="Screenshot of the agent running a corrected KQL query successfully." lightbox="media/sentinel-mcp/mcp-tool-run-correct-kql.png"::: 
 
 - The agent runs one more query to get detailed information about the risky users to provide better context on why they're at risk.
 
