@@ -1,8 +1,9 @@
 ---
 title: Create Summary Rules for Microsoft Sentinel Solutions
 description: This article guides you through the process of creating and publishing summary rules to Microsoft Sentinel solutions.
-author: anilgodavarthy
-ms.author: angodavarthy
+ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.date: 7/04/2025

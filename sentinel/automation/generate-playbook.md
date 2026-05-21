@@ -1,9 +1,8 @@
 ---
 title: Generate playbooks using AI in Microsoft Sentinel
 description: Generate playbooks through natural language conversations directly in the Defender portal.
-author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: Shiran Shuster Zur
+author: mberdugo
 ms.topic: how-to
 ms.date: 02/13/2026
 ms.service: microsoft-sentinel
@@ -19,9 +18,6 @@ ms.collection: usx-security
 The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded VS Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
 
 This article describes how to generate playbooks by using AI, configure required integrations, and deploy your automation workflows.
-
-> [!IMPORTANT]
-> Generated Playbooks are currently in preview. This feature requires Security Copilot to be enabled in your tenant, though Security Compute Units (SCUs) aren't billed during the preview period.
 
 Playbook generation provides the following capabilities:
 

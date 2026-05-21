@@ -1,8 +1,9 @@
 ---
 title: Tutorial - Detect threats by using analytics rules in Microsoft Sentinel
 description: In this tutorial, learn how to use analytics rules in Microsoft Sentinel to detect exploits of the Apache Log4j vulnerability in any of your susceptible systems. Take advantage of the alert enrichment capabilities to surface as much information as possible for your investigation.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: tutorial
 ms.date: 06/21/2023
 

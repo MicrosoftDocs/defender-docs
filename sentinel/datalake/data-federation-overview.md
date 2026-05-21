@@ -2,12 +2,13 @@
 title: Data federation overview in Microsoft Sentinel data lake
 titleSuffix: Microsoft Security
 description: Learn how data federation in Microsoft Sentinel data lake enables seamless querying of external data sources including Azure Databricks, ADLS Gen 2, and Microsoft Fabric.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: sourinpaul
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: concept-article
 ms.date: 03/29/2026
-ms.author: edbaynash
 ms.collection: ms-security
 
 #Customer intent: As a security analyst or administrator, I want to understand data federation capabilities in Microsoft Sentinel data lake so that I can query external data sources alongside my security data.

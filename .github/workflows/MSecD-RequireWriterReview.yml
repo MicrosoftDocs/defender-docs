@@ -13,11 +13,27 @@ on:
       - edited
 
 concurrency:
-  group: require-writer-review-${{ github.event.pull_request.number || github.event.issue.number }}
-  cancel-in-progress: true
+  # Separate groups per event type so that issue_comment runs do not cancel
+  # pull_request_target runs (and vice versa). The required check_run is only
+  # produced by pull_request_target runs, so cross-event cancellation can leave
+  # the required check stuck at "cancelled" even though policy ran successfully.
+  group: require-writer-review-${{ github.event.pull_request.number || github.event.issue.number }}-${{ github.event_name }}
+  # Only cancel high-frequency issue_comment runs. pull_request_target events
+  # queue (at most 1 running + 1 pending per group), so supersession does not
+  # produce a misleading red "cancelled" check on the PR's visible head SHA.
+  cancel-in-progress: ${{ github.event_name == 'issue_comment' }}
 
 jobs:
   require-writer-review:
-    if: github.repository_owner == 'MicrosoftDocs' || github.repository_owner == 'microsoftgraph'
+    # Skip noise from unrelated label events. Only react to labeled events when
+    # the label is one this workflow actually gates on. All other event types
+    # (opened, synchronize, reopened, issue_comment) always proceed.
+    if: >-
+      (github.repository_owner == 'MicrosoftDocs' || github.repository_owner == 'microsoftgraph')
+      && (
+        github.event.action != 'labeled'
+        || github.event.label.name == 'qualifies-for-auto-merge'
+        || github.event.label.name == 'blocked-qualifies-for-auto-merge'
+      )
     uses: MicrosoftDocs/defender-docs/.github/workflows/MSecD-Shared-RequireWriterReview.yml@workflows-test
     secrets: inherit

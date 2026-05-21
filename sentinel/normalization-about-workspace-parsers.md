@@ -2,15 +2,15 @@
 title: Advanced Security Information Model (ASIM) workspace deployed parsers
 titleSuffix: Microsoft Sentinel
 description: This article explains how to manage and use workspace deployed Advanced Security Information Model (ASIM) parsers
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: concept-article
 ms.date: 11/11/2024
-ms.author: ofshezaf
 
 
 #Customer intent: As a security analyst, I want to use ASIM parsers in my queries so that I can view and analyze data in a normalized format for improved query performance and comprehensive security insights.
 
---- 
+---
 
 # Advanced Security Information Model (ASIM) workspace deployed parsers
 
