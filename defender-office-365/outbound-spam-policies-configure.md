@@ -498,6 +498,8 @@ For detailed syntax and parameter information, see [Remove-HostedOutboundSpamFil
 
 ## Related content
 
+[Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
+
 [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md)
 
 [High-risk delivery pool for outbound messages](outbound-spam-high-risk-delivery-pool-about.md)

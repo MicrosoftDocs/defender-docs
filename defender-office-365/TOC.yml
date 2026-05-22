@@ -58,6 +58,8 @@
          href: email-authentication-dmarc-configure.md
        - name: Configure trusted ARC sealers
          href: email-authentication-arc-configure.md
+       - name: Troubleshoot email authentication
+         href: email-authentication-troubleshoot.md
      - name: Step 2 - Configure threat policies
        items:
        - name: Preset security policies
@@ -227,6 +229,8 @@
              href: outbound-spam-high-risk-delivery-pool-about.md
            - name: Restore restricted users
              href: outbound-spam-restore-restricted-users.md
+           - name: Troubleshoot outbound sending limits
+             href: outbound-spam-sending-limits-troubleshoot.md
          - name: Connection filtering in cloud organizations
            items:
            - name: Configure the connection filtering policy

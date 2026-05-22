@@ -110,6 +110,10 @@ Use these steps when messages are delivered but land in the wrong folder.
 #### Admin actions
 
 1. Triage user-reported messages from [the User reported tab on the Submissions page](../submissions-admin.md#view-user-reported-messages-to-microsoft).
+
+   > [!TIP]
+   > In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails, reducing manual investigation work for security teams.
+
 1. [Submit the messages to Microsoft for analysis](../submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) to understand why the email was blocked.
 1. If needed, while submitting to Microsoft for analysis, [create an allow entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-domains-and-email-addresses) to mitigate the problem.
 1. After the submission results are available, read the verdict on the **Submissions** page to understand why the emails were blocked. Use the results to improve your organization's configuration and _prevent_ similar false positives in the future.

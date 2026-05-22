@@ -187,6 +187,8 @@ You use contoso.com for email in Microsoft 365. You plan on sending mail from th
 
 ## Troubleshooting SPF TXT records
 
+For a quick-reference table of SPF errors, causes, and fixes, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).
+
 - **One SPF record per domain or subdomain**: Multiple SPF TXT records for the same domain or subdomain cause a DNS lookup loop that makes SPF fail, so use only one SPF record per domain or subdomain.
 
 - **Time to live (TTL)**: We recommended a minimum TTL value of 3600 seconds (one hour) on SPF TXT records to avoid DNS lookup timeouts.
@@ -211,3 +213,5 @@ As described in [How SPF, DKIM, and DMARC work together to authenticate email me
 - [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md)
 
 For mail coming _into_ Microsoft 365, you might also need to configure trusted ARC sealers if you use services that modify messages in transit before delivery to your organization. For more information, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
+
+To diagnose and fix email authentication failures, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).
