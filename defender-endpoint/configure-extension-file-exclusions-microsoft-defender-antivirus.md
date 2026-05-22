@@ -29,8 +29,8 @@ You can define exclusions for Microsoft Defender Antivirus that apply to [schedu
 
 > [!IMPORTANT]
 >
-> - Microsoft Defender Antivirus exclusions apply to some Microsoft Defender for Endpoint capabilities (for example, [attack surface reduction (ASR) rules](attack-surface-reduction.md)). Some Microsoft Defender Antivirus exclusions apply to some ASR rules. For more information, see [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md).
-> - Excluded files can still trigger Endpoint Detection and Response (EDR) alerts and other detections. To exclude files broadly, add them to Microsoft Defender for Endpoint [custom indicators](indicators-overview.md).
+> - Microsoft Defender Antivirus exclusions apply to some [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md). For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+> - Files that you exclude using the methods described in this article can still trigger Endpoint Detection and Response (EDR) alerts and other detections. To exclude files broadly, add them to the Microsoft Defender for Endpoint [custom indicators](indicators-overview.md).
 > - Microsoft Defender Antivirus gets information from **system** environment variables, not **user** environment variables. Therefore, environment variables like `%USERPROFILE%` are likely interpreted differently than you expect. For more information, see the [System environment variables](#system-environment-variables) section in this article.
 
 ## Prerequisites

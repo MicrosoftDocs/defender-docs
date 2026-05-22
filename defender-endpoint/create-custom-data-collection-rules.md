@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Defender for Endpoint
 ---
 
-# Create and manage custom data collection rules in Microsoft Defender for Endpoint (Preview)
+# Create and manage custom data collection rules in Microsoft Defender for Endpoint
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
