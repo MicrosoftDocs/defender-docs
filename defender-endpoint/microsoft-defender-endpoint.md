@@ -38,10 +38,10 @@ Defender for Endpoint also [integrates](threat-protection-integration.md) with t
 
 Microsoft Defender for Endpoint supports the following operating systems: Windows, macOS, Linux, Android, and iOS. For detailed information about capabilities on each platform, see the following articles.
 
-- [Defender for Endpoint on Windows](microsoft-defender-endpoint-windows.md)
-- [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-- [Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
-- [Android and iOS](mtd.md)
+- [Microsoft Defender for Endpoint on Windows](microsoft-defender-endpoint-windows.md)
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint on Android and iOS](mtd.md)
 
 For detailed system requirements and supported versions, see [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
@@ -65,11 +65,7 @@ For guidance on planning and rolling out Defender for Endpoint in your environme
 
 For a step-by-step workflow for piloting and deploying Defender for Endpoint in a production environment, including onboarding endpoints and verifying pilot groups, see [Pilot and deploy Defender for Endpoint](/defender-xdr/pilot-deploy-defender-endpoint).
 
-For platform-specific capabilities, see the [Windows](microsoft-defender-endpoint-windows.md), [Linux](microsoft-defender-endpoint-linux.md), [macOS](microsoft-defender-endpoint-mac.md), and [mobile threat defense](mtd.md) documentation.
-
-### Mobile threat defense
-
-Microsoft Defender for Endpoint extends protection to iOS and Android devices through mobile threat defense (MTD) capabilities. For more information about supported features on mobile platforms, see [Microsoft Defender for Endpoint on mobile devices](mtd.md).
+For platform-specific capabilities, see the [Windows](microsoft-defender-endpoint-windows.md), [Linux](microsoft-defender-endpoint-linux.md), [macOS](microsoft-defender-endpoint-mac.md), and [Android and iOS mobile threat defense](mtd.md) documentation.
 
 ### APIs and integrations
 

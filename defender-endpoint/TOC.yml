@@ -33,10 +33,6 @@
             href: microsoft-defender-endpoint-releases.md
       - name: Trial user guide - Defender for Endpoint
         href: defender-endpoint-trial-user-guide.md
-      - name: Pilot and deploy Defender for Endpoint
-        href: /defender-xdr/pilot-deploy-defender-endpoint?toc=/defender-endpoint/TOC.json&bc=/defender-endpoint/breadcrumb/toc.json
-      - name: Preview features
-        href: /defender-xdr/preview
       - name: Data storage and privacy
         href: data-storage-privacy.md
 
