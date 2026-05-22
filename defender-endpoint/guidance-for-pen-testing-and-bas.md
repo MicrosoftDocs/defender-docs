@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 ---
 
 # Guidance for penetration testing and breach-and-attack-simulation scenarios with Microsoft Defender for Endpoint
@@ -56,7 +55,7 @@ It's common for penetration testers to disable features of Microsoft Defender An
 
 - [Protection from potentially unwanted apps](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) (PUA) is enabled.
 
-- [Attack surface reduction rules](overview-attack-surface-reduction.md)  (ASR rules) are set to block mode.
+- [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)  (ASR rules) are set to block mode.
 
 - [Network Protection](enable-network-protection.md) is set to block mode.
 
@@ -88,7 +87,7 @@ It's important to get the settings correct. To resolve misconfiguration issues, 
 
 | Operating system | What to do |
 |--|--|
-| Windows |1. On the device, open Command Prompt as an administrator. <br/>2. Run the following command: [MpCmdRun.exe -getfiles](collect-diagnostic-data.md). <br/><br/>You can also [collect the investigation package](respond-machine-alerts.md#collect-investigation-package-from-devices) in the Microsoft Defender portal. |
+| Windows |1. On the device, open Command Prompt as an administrator. <br/>2. Run the following command: [MpCmdRun.exe -GetFiles](collect-diagnostic-data.md). <br/><br/>You can also [collect the investigation package](respond-machine-alerts.md#collect-investigation-package-from-devices) in the Microsoft Defender portal. |
 | Mac |1. On the device, open Terminal (shell session). <br/>2. Run the following command: `mdatp log level set--level debug`. <br/>3. Run the following command: `sudo mdatp diagnostic create`. <br/><br/>For more information, see [Resources for Microsoft Defender for Endpoint on Mac](mac-resources.md). |
 | Linux |1. On the device, open Terminal (shell session). <br/>2. Run the following command: `mdatp log level set--level debug`. <br/>`sudo mdatp diagnostic create`. <br/><br/>For more information, see [Microsoft Defender for Endpoint on Linux resources](linux-resources.md). |
 

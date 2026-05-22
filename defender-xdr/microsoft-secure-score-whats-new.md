@@ -5,8 +5,8 @@ ms.localizationpriority: medium
 f1.keywords:
   - NOCSH
 ms.service: defender-xdr
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -231,11 +231,11 @@ We've integrated Microsoft Secure Score into Microsoft 365 Lighthouse. This inte
 
 <a name='microsoft-secure-score-permissions-integration-with-microsoft-365-defender-unified-role-based-access-control-rbac-is-now-in-public-preview'></a>
 
-### Microsoft Secure Score permissions integration with Microsoft Defender XDR Unified role-based access control (RBAC) is now in Public Preview
+### Microsoft Secure Score permissions integration with Microsoft Defender unified role-based access control (RBAC) is now in Public Preview
 
-Previously, only Microsoft Entra global roles (such as Global Administrators) could access Microsoft Secure Score. Now, you can control access and grant granular permissions for the Microsoft Secure Score experience as part of the Microsoft Defender XDR Unified RBAC model.
+Previously, only Microsoft Entra global roles could access Microsoft Secure Score. Now, you can control access and grant granular permissions for the Microsoft Secure Score experience as part of the Microsoft Defender XDR Unified RBAC model.
 
-You can add the new permission and choose the data sources the user has access to by selecting the **Security posture** permissions group when creating the role. For more information, see [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md). Users see Secure Score data for the data sources they have permissions to.
+You can add the new permission and choose the data sources the user has access to by selecting the **Security posture** permissions group when creating the role. For more information, see [Create custom roles with Microsoft Defender unified RBAC](create-custom-rbac-roles.md). Users see Secure Score data for the data sources they have permissions to.
 
 A new data source **Secure Score – Additional data source** is also available. Users with permissions to this data source have access to additional data within the Secure score dashboard. For more information on additional data sources, see [Products included in Secure Score](./microsoft-secure-score.md#products-included-in-secure-score).
 

@@ -16,7 +16,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -48,8 +47,6 @@ If you're using non-Microsoft antivirus/antimalware software, you might be able 
 ## Antivirus protection without Defender for Endpoint
 
 This section describes what happens when you use Microsoft Defender Antivirus alongside non-Microsoft antivirus/antimalware products on endpoints that aren't onboarded to Defender for Endpoint. 
-
-In general, Microsoft Defender Antivirus doesn't run in passive mode on devices that aren't onboarded to Defender for Endpoint.
 
 The following table summarizes what to expect:
 
@@ -92,6 +89,7 @@ The following table summarizes the state of Microsoft Defender Antivirus in seve
 | Microsoft Defender Antivirus | Yes | Active mode | N/A  |
 | Microsoft Defender Antivirus | No | Active mode | On, Evaluation, or Off |
 | A non-Microsoft antivirus/antimalware solution | Yes | Passive mode (automatically) | Evaluation or On|
+| A non-Microsoft antivirus/antimalware solution | No | Passive mode | Evaluation or On|
 | A non-Microsoft antivirus/antimalware solution | No | Disabled (automatically) | N/A or Off|
 
 > [!NOTE]
@@ -164,7 +162,7 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 | [Real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) | Yes | [See note 1](#notes-about-protection-states) | No |
 | [Cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) | Yes | No  | No |
 | [Network protection](network-protection.md)  | Yes | No | No |
-| [Attack surface reduction rules](attack-surface-reduction.md)  | Yes | No | No  |
+| [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)  | Yes | No | No  |
 | [File scanning and detection information](review-scan-results-microsoft-defender-antivirus.md) | Yes | Yes <br/>[See note 2](#notes-about-protection-states) | No |
 | [Threat remediation](configure-remediation-microsoft-defender-antivirus.md) | Yes |[See note 3](#notes-about-protection-states) | No |
 | [Security intelligence updates](microsoft-defender-antivirus-updates.md) | Yes | Yes <br/>[See note 4](#notes-about-protection-states) | No |

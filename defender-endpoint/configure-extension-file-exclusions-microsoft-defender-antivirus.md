@@ -1,10 +1,10 @@
-﻿---
+---
 title: Configure and validate exclusions based on extension, name, or location
 description: Exclude files from Microsoft Defender Antivirus scans based on their file extension, file name, or location.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 02/20/2026
+ms.date: 03/23/2026
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -30,8 +29,8 @@ You can define exclusions for Microsoft Defender Antivirus that apply to [schedu
 
 > [!IMPORTANT]
 >
-> - Microsoft Defender Antivirus exclusions apply to some Microsoft Defender for Endpoint capabilities (for example, [attack surface reduction (ASR) rules](attack-surface-reduction.md)). Some Microsoft Defender Antivirus exclusions apply to some ASR rules. For more information, see [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md).
-> - Excluded files can still trigger Endpoint Detection and Response (EDR) alerts and other detections. To exclude files broadly, add them to Microsoft Defender for Endpoint [custom indicators](indicators-overview.md).
+> - Microsoft Defender Antivirus exclusions apply to some [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md). For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+> - Files that you exclude using the methods described in this article can still trigger Endpoint Detection and Response (EDR) alerts and other detections. To exclude files broadly, add them to the Microsoft Defender for Endpoint [custom indicators](indicators-overview.md).
 > - Microsoft Defender Antivirus gets information from **system** environment variables, not **user** environment variables. Therefore, environment variables like `%USERPROFILE%` are likely interpreted differently than you expect. For more information, see the [System environment variables](#system-environment-variables) section in this article.
 
 ## Prerequisites
@@ -146,7 +145,7 @@ Use the following cmdlets in the [Defender module](/powershell/module/defender/)
   > If you already created a list of exclusions using the **Set-MpPreference** or **Add-MpPreference** cmdlets, the next use of **Set-MpPreference** _overwrites_ the existing list of exclusions with the entries you specify.
 
 - [Add-MpPreference](/powershell/module/defender/add-mppreference): Add entries to the existing list of exclusions.
-- [Remove-MpPreference](/powershell/module/defender/add-mppreference): Remove entries from the existing list of exclusions.
+- [Remove-MpPreference](/powershell/module/defender/remove-mppreference): Remove entries from the existing list of exclusions.
 
 Use the following parameters on those cmdlets:
 
@@ -303,8 +302,11 @@ You can retrieve the items in the exclusion list by using one of the following m
 
 You can use the [MpCmdRun.exe command-line tool](./command-line-arguments-microsoft-defender-antivirus.md) in Microsoft Defender Antivirus version 4.18.2111-5.0 or later (December 2021) to verify whether specific folder paths or file and folder paths are excluded from scanning by running the following commands in an elevated command prompt (a Command Prompt window you opened by selecting **Run as administrator**):
 
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+
 ```dos
-for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n') do if not defined _done cd "%ProgramData%\Microsoft\Windows Defender\Platform\%d"
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
 MpCmdRun.exe -CheckExclusion -Path <PathAndFile or Path>
 ```
@@ -328,9 +330,10 @@ For example, the command `MpCmdRun.exe -CheckExclusion -Path C:\Data\Test` retur
 Run the following commands in an elevated PowerShell window:
 
 ```PowerShell
-(Get-MpPreference).ExclusionExtension
-
-(Get-MpPreference).ExclusionPath
+$p=Get-MpPreference; @(
+  $p.ExclusionExtension | ForEach-Object {[pscustomobject]@{Type='ExclusionExtension'; Value=$_}}
+  $p.ExclusionPath      | ForEach-Object {[pscustomobject]@{Type='ExclusionPath';      Value=$_}}
+)
 ```
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).

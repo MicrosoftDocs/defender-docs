@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint data storage and privacy
 description: Learn about how Microsoft Defender for Endpoint handles privacy and data that it collects.
 keywords: Microsoft Defender for Endpoint, data storage and privacy, storage, privacy, licensing, geolocation, data retention, data
@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -14,7 +13,6 @@ ms.collection:
 - essentials-security
 - essentials-compliance
 ms.topic: concept-article
-search.appverid: met150
 ms.date: 01/21/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -119,7 +117,7 @@ The following table describes how Defender Vulnerability Management retains and 
 
 |Retention scenario|Description|Learn more|
 |---|---|---|
-|Inactive devices|A device can be listed as inactive for several reasons:<br>- The device wasn't used for more than seven days.<br>- The device was reinstalled or renamed. The previous device entity remains and is marked as **Inactive**.<br>- The device was offboarded from Defender for Endpoint. After seven days, the health state of the device changes to **Inactive**.<br>- The device didn't send signals to Microsoft Defender for Endpoint for more than seven days. <br><br>Defender Vulnerability Management continues to display the last vulnerability snapshot for **up to 30 days** from the time the device stopped reporting. **After 30 days**, the device is marked as **Inactive** and associated vulnerabilities are no longer shown in the Defender portal. <br><br>Defender for Endpoint retains data on inactive devices for up to 180 days for compliance and forensics. |- [Inactive devices in Microsoft Defender for Endpoint](fix-unhealthy-sensors.md#inactive-devices) <br/>- [Exclude devices](exclude-devices.md)|
+|Inactive devices|A device can be listed as inactive for several reasons:<br>- The device wasn't used for more than seven days.<br>- The device was reinstalled or renamed. The previous device entity remains and is marked as **Inactive**.<br>- The device was offboarded from Defender for Endpoint. After seven days, the health state of the device changes to **Inactive**.<br>- The device didn't send signals to Microsoft Defender for Endpoint for more than seven days. <br><br>Defender Vulnerability Management continues to display the last vulnerability snapshot for **up to 30 days** from the time the device stopped reporting. **After 30 days**, the device is marked as **Inactive** and associated vulnerabilities are no longer shown in the Defender portal. <br><br>Defender for Endpoint retains data on inactive devices for up to 180 days for compliance and forensics. |- [Inactive devices in Microsoft Defender for Endpoint](fix-unhealthy-sensors.md#inactive-devices) <br/>- [Exclude devices](manage-device-scope-relevance.md#exclude-devices)|
 |Uninstalled or inactive software|If specific software on an **active** device stops sending signals **for 30 consecutive days**, Defender Vulnerability Management assumes the software was removed or is inactive. Defender Vulnerability Management automatically stops flagging software vulnerabilities for the software on the device in the Defender portal.|[Software inventory](/defender-vulnerability-management/tvm-software-inventory)|
 
 > [!NOTE]

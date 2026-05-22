@@ -1,15 +1,9 @@
 ---
 title: Anti-spam protection
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: 6a601501-a6a8-4559-b2e7-56b59c96a586
 ms.collection: 
   - m365-security
@@ -69,7 +63,7 @@ To configure the default anti-spam policy, and to create, modify, and remove cus
 
 ## Anti-spam policies
 
-Anti-spam policies control the configurable settings for spam filtering. The important settings in anti-spam policies are described in the following subsections.
+Anti-spam policies control the configurable settings for spam filtering. The important settings in anti-spam policies are described in the following subsections. For troubleshooting information, see [Troubleshoot common anti-spam policy issues](anti-spam-policies-troubleshooting.md).
 
 > [!TIP]
 > The anti-spam policy settings in the default policy and in the Standard and Strict preset security policies are described in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
@@ -150,6 +144,8 @@ These settings aren't configured in the default anti-spam policy by default, or 
   ⁴ If the spam filtering verdict quarantines messages by default (**Quarantine message** is already selected when you get to the page), the default quarantine policy name is shown in the **Select quarantine policy** box. If you _change_ the action of a spam filtering verdict to **Quarantine message**, the **Select quarantine policy** box is blank by default. A blank value means the default quarantine policy for that verdict is used. When you later view or edit the anti-spam policy settings, the quarantine policy name is shown. For more information about the quarantine policies that are used by default for spam filter verdicts, see [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
   ⁵ Recipients can't release messages quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the quarantine policy allows recipients to release messages, they can only _request_ the release of messages quarantined as high confidence phishing.
+
+- **Bulk moves enabled** (currently in Preview): Slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On** to tag all bulk mail as **Bulk** in supported versions of Outlook, and to deliver bulk mail below the **Bulk email threshold** value to the **Promotions** folder in the mailbox. For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](anti-spam-bulk-complaint-level-bcl-about.md#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
 
 - **Intra-Organizational messages to take action on**: Controls whether spam filtering and the corresponding verdict actions are applied to internal messages (messages sent between users within the organization). The specified action for the spam filter verdict is taken on messages sent between internal users. The available values are:
   - **Default**: The default value. This value is the same as selecting **High confidence phishing messages**.

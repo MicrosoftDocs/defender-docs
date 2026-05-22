@@ -1,12 +1,10 @@
 ---
 title: Stream Microsoft Defender XDR events to Azure Event Hubs
 description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to your Event Hubs.
-search.appverid: met150
 ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -15,7 +13,7 @@ ms.topic: how-to
 ms.date: 09/24/2024
 ---
 
-# Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure Event Hub
+# Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure event hub
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -29,43 +27,40 @@ ms.date: 09/24/2024
 
 ## Prerequisites
 
-Prior to configuring Microsoft Defender XDR to stream data to Event Hubs, ensure the following prerequisites are fulfilled:
+Before you configure Microsoft Defender XDR to stream data to Event Hubs, ensure the following prerequisites are fulfilled:
 
 1. Create an Event Hubs (for information, see [Set up Event Hubs](configure-event-hub.md#set-up-event-hubs)).
 
-2. Creating an Event Hubs Namespace (for information, see [Set up Event Hubs namespace](configure-event-hub.md#set-up-event-hubs-namespace)).
+1. Creating an Event Hubs Namespace (for information, see [Set up Event Hubs namespace](configure-event-hub.md#set-up-event-hubs-namespace)).
 
-3. Add permissions to the entity who has the privileges of a **Contributor** so that this entity can export data to the Event Hubs. For more information on adding permissions, see [Add permissions](configure-event-hub.md#add-permissions)
+1. Add permissions to the entity who has the privileges of a **Contributor** so that this entity can export data to the Event Hubs. For more information on adding permissions, see [Add permissions](configure-event-hub.md#add-permissions)
 
 > [!NOTE]
 > The Streaming API can be integrated either via Event Hubs or Azure Storage Account.
 
 ## Enable raw data streaming
 
-1. Log on to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> as a ***Security Administrator*** at a minimum.
+1. Sign in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> as a ***Security Administrator*** or higher.
 
-  >[!IMPORTANT]
-  >Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+1. Go to the [Streaming API settings page](https://sip.security.microsoft.com/settings/mtp_settings/raw_data_export).
 
-2. Go to the [Streaming API settings page](https://sip.security.microsoft.com/settings/mtp_settings/raw_data_export).
+1. Select **Add**.
 
-3. Click on **Add**.
+1. Choose a name for your new settings.
 
-4. Choose a name for your new settings.
+1. Choose **Forward events to Azure Event Hub**.
 
-5. Choose **Forward events to Azure Event Hub**.
+1. You can select if you want to export the event data to a single Event Hub, or to export each event table to a different Event Hubs in your Event Hubs namespace.
 
-6. You can select if you want to export the event data to a single Event Hub, or to export each event table to a different Event Hubs in your Event Hubs namespace.
+1. To export the event data to a single Event Hub, enter your **event hub name** and your **event hub Namespace resource ID**.
 
-7. To export the event data to a single Event Hub, enter your **Event Hub name** and your **Event Hub Namespace resource ID**.
-
-   To get your **Event Hub Namespace resource ID**, go to your Azure Event Hubs namespace page on [Azure](https://ms.portal.azure.com/) > **Properties** tab > copy the text under **Resource ID**:
+   To get your **event hub Namespace resource ID**, go to your Azure Event Hubs namespace page on [Azure](https://ms.portal.azure.com/) > **Properties** tab > copy the text under **Resource ID**:
 
    :::image type="content" source="media/streaming-api-event-hub/event-hub-resource-id.png" alt-text="An Event Hub resource ID" lightbox="media/streaming-api-event-hub/event-hub-resource-id.png":::
 
-8. Go to the [Supported Microsoft Defender XDR event types in event streaming API](supported-event-types.md) to review the support status of event types in the Microsoft 365 Streaming API.
+1. Go to the [Supported Microsoft Defender XDR event types in event streaming API](supported-event-types.md) to review the support status of event types in the Microsoft 365 Streaming API.
 
-9. Choose the events you want to stream and click **Save**.
+1. Choose the events you want to stream and select **Save**.
 
 ## The schema of the events in Azure Event Hub
 
@@ -85,17 +80,17 @@ Prior to configuring Microsoft Defender XDR to stream data to Event Hubs, ensure
 
 - Each Event Hubs message in Azure Event Hubs contains list of records.
 
-- Each record contains the event name, the time Microsoft Defender XDR received the event, the tenant it belongs (you'll only get events from your tenant), and the event in JSON format in a property called "**properties**".
+- Each record contains the event name, the time Microsoft Defender XDR received the event, the tenant it belongs (you only get events from your tenant), and the event in JSON format in a property called "**properties**".
 
 - For more information about the schema of Microsoft Defender XDR events, see [Advanced Hunting overview](advanced-hunting-overview.md).
 
-- In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here every event will be decorated with this column as well.
+- In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here, every event is decorated with this column as well.
 
 ## Data types mapping
 
 To get the data types for event properties, do the following steps:
 
-1. Log on to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
+1. Sign in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
 
 2. Run the following query to get the data types mapping for each event:
 
@@ -131,7 +126,7 @@ To check the different Event Hub limits, review [Azure Event Hubs quota and limi
 You can monitor the resources created by the streaming API using **Azure Monitor**. 
 For more information, see [Log Analytics workspace data export in Azure Monitor](/azure/azure-monitor/logs/logs-data-export). 
 
-## Related topics
+## Related articles
 
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 

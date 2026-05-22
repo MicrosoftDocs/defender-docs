@@ -6,14 +6,12 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Servers
 ms.date: 03/20/2026
@@ -23,6 +21,8 @@ ms.date: 03/20/2026
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using various tools and methods. This article describes how to deploy Defender for Endpoint on Linux manually. To use another method, refer to the [Related content section](#related-content). 
 
+ > [!NOTE] 
+ > We highly recommend using the [Defender Deployment Tool deployment](./linux-install-with-defender-deployment-tool.md) method,  as it simplifies the onboarding process, reduces manual tasks, and supports a wide range of deployment scenarios, including new installations, upgrades, and uninstalls. Please refer to the documentation for more details.
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Manual deployment steps
@@ -49,7 +49,7 @@ A successful deployment requires the completion of all of the following tasks:
 Before you begin, see [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md) for a description of prerequisites and system requirements for the current software version.
 
 > [!WARNING]
-> Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux) the existing Defender for Endpoint on Linux application, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the steps in this article.
+> Upgrading your operating system to a new major version after the product installation requires the product to be reinstalled. You need to [Uninstall](./linux-off-board-endpoints.md#uninstall-the-defender-application-from-a-linux-server) the existing Defender for Endpoint on Linux application, upgrade the operating system, and then reconfigure Defender for Endpoint on Linux following the steps in this article.
 
 ## Configure the Linux software repository
 
@@ -402,13 +402,11 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
 > [!IMPORTANT]
 > If you miss this step, any command executed shows a warning message indicating that the product is unlicensed. Also the `mdatp health` command returns a value of `false`.
 
-1. In the Microsoft Defender portal, go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+1. In the Microsoft Defender portal, go to **System** > **Settings** > **Endpoints** > **Device management** > **Onboarding**.
 
 2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Local Script** as the deployment method.
 
 3. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
-
-   :::image type="content" source="media/portal-onboarding-linux.png" alt-text="Downloading an onboarding package in the Microsoft Defender portal":::
 
 4. From a command prompt, verify that you have the file, and extract the contents of the archive:
 
@@ -591,11 +589,13 @@ For manual uninstallation, execute the following command for your Linux distribu
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
 - Other deployment methods:
+   - [Deployment tool based deployment (Recommended)](./linux-install-with-defender-deployment-tool.md)
    - [Installer script based deployment](linux-installer-script.md) 
    - [Ansible based deployment](linux-install-with-ansible.md)
    - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
    - [Puppet based deployment](linux-install-with-puppet.md)
    - [Saltstack based deployment](linux-install-with-saltack.md)
+   - [Golden Image based deployment](./linux-deploy-defender-for-endpoint-using-golden-images.md)
    - [Connect your non-Azure machines to Defender for Cloud with Defender for Endpoint](/azure/defender-for-cloud/onboard-machines-with-defender-for-endpoint) (direct onboarding using Defender for Cloud)
    - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
    - [Install Defender for Endpoint on Linux to a custom location](linux-custom-location-installation.md)

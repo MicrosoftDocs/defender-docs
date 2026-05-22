@@ -14,9 +14,6 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-search.appverid: met150
-audience: ITPro
-f1.keywords: NOCSH
 ---
 
 # Run the client analyzer on macOS

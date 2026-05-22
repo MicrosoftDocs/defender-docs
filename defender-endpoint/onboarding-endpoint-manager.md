@@ -1,11 +1,10 @@
-﻿---
+---
 title: Onboarding using Microsoft Intune
 description: Learn how to onboard to Microsoft Defender for Endpoint using Microsoft Intune.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -14,7 +13,6 @@ ms.collection:
   - tier1
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -221,7 +219,7 @@ Then, you continue by creating several different types of endpoint security poli
     > [!NOTE]
     > We will be configuring all of the Attack surface reduction rules to Audit.
     >
-    > For more information, see [Attack surface reduction rules](attack-surface-reduction.md).
+    > For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-overview.md).
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/dd0c00efe615a64a4a368f54257777d0.png" alt-text="The Microsoft Intune admin center21" lightbox="media/dd0c00efe615a64a4a368f54257777d0.png":::

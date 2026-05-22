@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create indicators based on certificates
 ms.reviewer:
 description: Create indicators based on certificates that define the detection, prevention, and exclusion of entities.
@@ -6,14 +6,12 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
 ms.topic: how-to
 ms.subservice: asr
-search.appverid: met150
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -26,7 +24,7 @@ appliesto:
 
 You can create indicators for certificates. Some common use cases include:
 
-- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
+- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction-rules-overview.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
 - Blocking the use of a specific signed application across your organization. By creating an indicator to block the certificate of the application, Microsoft Defender Antivirus prevents file executions (block and remediate), and automated investigation and remediation behaves the same.
 
 ## Before you begin

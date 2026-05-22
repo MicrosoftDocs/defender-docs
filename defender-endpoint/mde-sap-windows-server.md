@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Microsoft Defender Endpoint on Windows Server with SAP"
 description: Understand how Microsoft Defender for Endpoint with EDR and other advanced security capabilities interacts with SAP applications.
 author: paulinbar
@@ -12,9 +12,6 @@ ms.collection:
 ms.custom:
 - partner-contribution
 ms.reviewer: cgardin
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -60,7 +57,7 @@ Microsoft and other security software vendors track threats and provide trend in
 
 SAP provides basic documentation for conventional file scan antivirus solutions. Conventional file scan antivirus solutions compare file signatures against a database of known threats. When an infected file is identified, the antivirus software typically alerts and quarantines the file. The mechanisms and behavior of file scan antivirus solutions are reasonably well known and are predictable; therefore, SAP support can provide a basic level of support for SAP applications interacting with file scan antivirus software.
 
-File-based threats are only one possible vector for malicious software. Fileless malware and malware that lives off the land, highly polymorphic threats that mutate faster than traditional solutions can keep up with, and human-operated attacks that adapt to what adversaries find on compromised devices. Traditional antivirus security solutions aren't sufficient to stop such attacks. Artificial intelligence (AI) and device learning (ML) backed capabilities, such as behavioral blocking and containment are required. Security software such as Defender for Endpoint has advanced threat protection features to mitigate modern threats.
+File-based threats are only one possible vector for malicious software. Fileless malware and malware that lives off the land, highly polymorphic threats that mutate faster than traditional solutions can keep up with, and human-operated attacks that adapt to what adversaries find on compromised devices. Traditional antivirus security solutions aren't sufficient to stop such attacks. Artificial intelligence (AI) and machine learning (ML) backed capabilities, such as behavioral blocking and containment are required. Security software such as Defender for Endpoint has advanced threat protection features to mitigate modern threats.
 
 Defender for Endpoint is continuously monitoring operating system calls, such as file read, file write, create socket, and other process level operations. The Defender for Endpoint EDR sensor acquires opportunistic locks on local NTFS files systems and is, therefore, unlikely to impact applications. Opportunistic locks aren't possible on remote network file systems. In rare cases, a lock could cause general nonspecific errors, such as *Access Denied* in SAP applications.
 
@@ -171,62 +168,52 @@ Here's a list of what to check:
    > [!NOTE]
    > The term *Defender* is sometimes used to refer to an entire suite of products and solutions. See [What is Microsoft Defender XDR?](/defender-xdr/microsoft-365-defender). In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint.
 
-1. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt, and run the following PowerShell commands:
+1. **Check the status of Microsoft Defender Antivirus**
 
-   **[Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true)**, as follows:
+   - **[Get-MpPreference](/powershell/module/defender/get-mppreference)**: Run the following PowerShell command:
+
+     ```powershell
+     Get-MpPreference | Select-Object -Property DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting 
+     ```
+
+     Expected output:
+
+     ```output
+   
+     DisableCpuThrottleOnIdleScans                 : True
+     DisableRealtimeMonitoring                     : False
+     DisableScanningMappedNetworkDrivesForFullScan : True
+     DisableScanningNetworkFiles                   : False
+     ExclusionPath                                 : <<configured exclusions show here>>
+     MAPSReporting                                 : 2
+     ```
+
+   - **[Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true)**: Run the following PowerShell command:
+
+     ```powershell
+     Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled    
+     ```
+
+     Expected output:
+
+     ```output
+     AMRunningMode             : Normal
+     AntivirusEnabled          : True
+     BehaviorMonitorEnabled    : True
+     IsTamperProtected         : True
+     OnAccessProtectionEnabled : True
+     RealTimeProtectionEnabled : True
+      ```
+
+1. **Check the status of EDR**: Run the following PowerShell command Open Command Prompt, and then run the following command:
 
    ```powershell
-   
-   Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting 
-
+   Get-Service -Name sense | Format-List *
    ```
 
-   Expected output for `Get-MpComputerStatus`:
+   The output should resemble the following example:
 
    ```output
-   
-   DisableCpuThrottleOnIdleScans                 : True
-   DisableRealtimeMonitoring                     : False
-   DisableScanningMappedNetworkDrivesForFullScan : True
-   DisableScanningNetworkFiles                   : False
-   ExclusionPath                                 :   <<configured exclusions will show here>>
-   MAPSReporting                                 : 2
-   
-   ```
-
-   **[Get-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)**, as follows:
-
-   ```powershell
-   
-   Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled    
-   
-   ```
-
-   Expected output for `Get-MpPreference`:
-
-   ```output
-
-   AMRunningMode             : Normal
-   AntivirusEnabled          : True
-   BehaviorMonitorEnabled    : True
-   IsTamperProtected         : True
-   OnAccessProtectionEnabled : True
-   RealTimeProtectionEnabled : True
-   
-   ```
-
-1. **Check the status of EDR**. Open Command Prompt, and then run the following command:
-
-   ```command
-
-   PS C:\Windows\System32> Get-Service -Name sense | FL *
-   
-   ```
-
-   You should see output that resembles the following code snippet:
-
-   ```output
-
    Name        : sense
    RequiredServices  : {}
    CanPauseAndContinue : False
@@ -243,7 +230,6 @@ Here's a list of what to check:
    StartType      : Automatic
    Site        :
    Container      :
-   
    ```
 
    The values you want to see are `Status: Running` and `StartType: Automatic`. For more information, see [Review events and errors using Event Viewer](event-error-codes.md).
@@ -271,55 +257,61 @@ Here's a list of what to check:
 1. **Open a support case** if you need help. See [Contact Microsoft Defender for Endpoint support](contact-support.md).
 
 1. **If you're using production SAP VMs with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction), keep in mind that Defender for Cloud deploys the Defender for Endpoint extension to all VMs**. If a VM isn't onboarded to Defender for Endpoint, it could be used as an attack vector. If you need more time to test Defender for Endpoint before deploying to your production environment, [contact support](contact-support.md).
+
 ## Useful Commands: Microsoft Defender for Endpoint with SAP on Windows Server
 
 This section includes commands to confirm or configure Defender for Endpoint settings by using PowerShell and Command Prompt:
 
 ### Update Microsoft Defender Antivirus definitions manually
 
-Use Windows Update, or run the following command:
+Use one of the following methods:
 
-```powershell
+- Windows Update
 
-PS C:\Program Files\Windows Defender> .\MpCmdRun.exe -SignatureUpdate
+- [MpCmdRun command-line utility](configure-network-connections-microsoft-defender-antivirus.md):
 
-```
+  In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-You should see an output that resembles the following code snippet:
+  > [!TIP]
+  > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-```output
+  ```dos
+  (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-Signature update started . . .
-Service Version: 4.18.23050.9
-Engine Version: 1.1.23060.1005
-AntiSpyware Signature Version: 1.393.925.0
-Antivirus Signature Version: 1.393.925.0
-Signature update finished.
-PS C:\Program Files\Windows Defender>
+  MpCmdRun.exe -SignatureUpdate
+  ```
 
-```
+  You should see output that looks like this:
 
-Another option is to use this command:
+  ```console
+  UpdateLogging: UpdateSessionGuid: 5A694F08-0962-4358-A370-95419D0A2EAE
+  Signature update started . . .
 
-```powershell
+  Service Version: 4.18.26010.5
+  Engine Version: 1.1.26010.1
+  AntiSpyware Signature Version: 1.445.727.0
+  AntiVirus Signature Version: 1.445.727.0
+  Signature update finished.
+  ```
 
-PS C:\Program Files\Windows Defender> Update-MpSignature
+- [Update-MpSignature](/powershell/module/defender/update-mpsignature):
 
-```
+  1. Open an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**). For example:
+     1. Open the **Start** menu, and then type **powershell**.
+     2. Right-click on the **PowerShell 7 (x64)** or **Windows PowerShell** result, and then select **Run as administrator**.
 
-For more information about these commands, see the following resources:
+  1. In the elevated PowerShell session, run the following command:
 
-- [MpCmdRun.exe](command-line-arguments-microsoft-defender-antivirus.md)
-- [Update-MpSignature](/powershell/module/defender/update-mpsignature?view=windowsserver2022-ps&preserve-view=true)
+     ```powershell
+     Update-MpSignature
+     ```
 
 ### Determine whether EDR in block mode is turned on
 
 [EDR in block mode](edr-in-block-mode.md) provides added protection from malicious artifacts when Microsoft Defender Antivirus isn't the primary antivirus product and is running in passive mode. You can determine whether EDR in block mode is enabled by running the following command:
 
 ```powershell
-
 Get-MPComputerStatus|select AMRunningMode
-
 ```
 
 There are two modes: *Normal* and *Passive Mode*. We used `AMRunningMode = Normal` when testing SAP systems.

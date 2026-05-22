@@ -1,20 +1,16 @@
-﻿---
+---
 title: Manage the gradual rollout process for Microsoft Defender updates
 description: Learn about the gradual update process and controls.
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
 ms.author: painbar
 author: paulinbar
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 03/14/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -31,7 +27,7 @@ Capabilities are provided through several components:
 
 - [Endpoint Detection & Response](overview-endpoint-detection-response.md)
 - [Next-generation protection](microsoft-defender-antivirus-windows.md) with [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md)
-- [Attack Surface Reduction](overview-attack-surface-reduction.md)
+- [Attack Surface Reduction](attack-surface-reduction-overview.md)
 
 Updates are released monthly using a gradual release process. This process helps to enable early failure detection to identify issues as they occur and address them quickly before a larger rollout.
 

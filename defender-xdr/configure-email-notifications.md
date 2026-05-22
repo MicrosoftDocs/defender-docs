@@ -5,12 +5,10 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-search.appverid: met150
 ms.date: 01/17/2025
 appliesto:
 - Microsoft Defender XDR
@@ -28,7 +26,8 @@ You can configure Microsoft Defender XDR to send email notifications to specifie
 If you're using [Defender for Business](/defender-business/mdb-overview), you can set up email notifications for specific users (not roles or groups).
 
 > [!NOTE]
-> - Only users with 'Manage security settings' permissions can configure email notifications. If you've chosen to use basic permissions management, users with Security Administrator or Global Administrator roles can configure email notifications.
+>
+> - Only users with **Manage security settings** permissions or higher roles can configure email notifications. If you've chosen to use basic permissions management, users with Security Administrator higher roles can configure email notifications.
 > - Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 You can set the alert severity levels that trigger notifications. You can also add or remove recipients of the email notification. New recipients get notified about alerts triggered after they're added. For more information about alerts, see [View and organize the Alerts queue](/defender-endpoint/alerts-queue).

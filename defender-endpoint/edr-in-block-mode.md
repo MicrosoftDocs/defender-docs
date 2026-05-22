@@ -1,10 +1,9 @@
-﻿---
+---
 title: Endpoint detection and response in block mode
 description: Learn about endpoint detection and response in block mode
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: pahuijbr, kausd
-audience: ITPro
 ms.topic: article
 ms.service: defender-endpoint
 ms.subservice: edr
@@ -14,18 +13,16 @@ ms.custom:
 - mde-edr
 - admindeeplinkDEFENDER
 ms.date: 10/20/2025
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
-
 ---
-# Endpoint detection and response in block mode
 
+# Endpoint detection and response in block mode
 
 This article describes EDR in block mode, which helps protect devices that are running a non-Microsoft antivirus solution (with Microsoft Defender Antivirus in passive mode).
 
@@ -41,15 +38,14 @@ This article describes EDR in block mode, which helps protect devices that are r
 
 > [!IMPORTANT]
 > EDR in block mode cannot provide all available protection when Microsoft Defender Antivirus real-time protection is in passive mode. Some capabilities that depend on Microsoft Defender Antivirus to be the active antivirus solution will not work, such as the following examples:
+>
 > - Real-time protection, including on-access scanning, is not available when Microsoft Defender Antivirus is in passive mode. To learn more about real-time protection policy settings, see **[Enable and configure Microsoft Defender Antivirus always-on protection](configure-real-time-protection-microsoft-defender-antivirus.md)**.
-> - Features like **[network protection](network-protection.md)** and **[attack surface reduction rules](attack-surface-reduction.md)** and indicators (file hash, ip address, URL, and certificates) are only available when Microsoft Defender Antivirus is running in active mode.
+> - Features like **[network protection](network-protection.md)** and **[attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)** and indicators (file hash, ip address, URL, and certificates) are only available when Microsoft Defender Antivirus is running in Active mode.
 > It is expected that your non-Microsoft antivirus solution includes these capabilities.
-   
-
 
 EDR in block mode works behind the scenes to remediate malicious artifacts that were detected by EDR capabilities. Such artifacts might have been missed by the primary, non-Microsoft antivirus product. EDR in block mode allows Microsoft Defender Antivirus to take actions on post-breach, behavioral EDR detections.
 
-EDR in block mode is integrated with [threat & vulnerability management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. Your organization's security team gets a [security recommendation](api/ti-indicator.md) to turn EDR in block mode on if it isn't already enabled. 
+EDR in block mode is integrated with [threat & vulnerability management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. Your organization's security team gets a [security recommendation](api/ti-indicator.md) to turn EDR in block mode on if it isn't already enabled.
 
 :::image type="content" source="media/edrblockmode-TVMrecommendation.png" alt-text="The recommendation to turn on EDR in block mode" lightbox="media/edrblockmode-TVMrecommendation.png":::
 
@@ -61,17 +57,17 @@ Watch this video to learn why and how to turn on endpoint detection and response
 
 ## What happens when something is detected?
 
-When EDR in block mode is turned on, and a malicious artifact is detected, Defender for Endpoint remediates that artifact. Your security operations team sees the detection status as **Blocked** or **Prevented** in the [Action center](respond-machine-alerts.md#check-activity-details-in-action-center), listed as completed actions. The following image shows an instance of unwanted software that was detected and remediated through EDR in block mode:
+When EDR in block mode is turned on, and a malicious artifact is detected, Defender for Endpoint remediates that artifact. Your security operations team sees the detection status as **Blocked** or **Prevented** in the [Action center](respond-machine-alerts.md#check-activity-details-and-status), listed as completed actions. The following image shows an instance of unwanted software that was detected and remediated through EDR in block mode:
 
 :::image type="content" source="media/edr-in-block-mode-detection.png" alt-text="The detection by EDR in block mode" lightbox="media/edr-in-block-mode-detection.png":::
 
 ## Enable EDR in block mode
 
 > [!IMPORTANT]
-> - Make sure the [requirements](#requirements-for-edr-in-block-mode) are met before turning on EDR in block mode.   
+> - Make sure the [requirements](#requirements-for-edr-in-block-mode) are met before turning on EDR in block mode.
 > - Defender for Endpoint Plan 2 licenses are required.
 > - Beginning with [platform version 4.18.2202.X](microsoft-defender-antivirus-updates.md), you can set EDR in block mode to target specific device groups using Intune CSPs. You can continue to set EDR in block mode tenant-wide in the [Microsoft Defender portal](https://security.microsoft.com).
-> - EDR in block mode is primarily recommended for devices that are running Microsoft Defender Antivirus in passive mode (a non-Microsoft antivirus solution is installed and active on the device). 
+> - EDR in block mode is primarily recommended for devices that are running Microsoft Defender Antivirus in passive mode (a non-Microsoft antivirus solution is installed and active on the device).
 
 <a name='microsoft-365-defender'></a>
 
@@ -103,7 +99,7 @@ You can use Group Policy to enable EDR in block mode.
 
 1. Double-click **Enable EDR in block mode** and set the option to **Enabled**.
 
-1. Select **OK**. 
+1. Select **OK**.
 
 ## Requirements for EDR in block mode
 
@@ -121,7 +117,7 @@ The following table lists requirements for EDR in block mode:
 
 > [!IMPORTANT]
 > To get the best protection value, make sure your antivirus solution is configured to receive regular updates and essential features, and that your [exclusions are configured](configure-exclusions-microsoft-defender-antivirus.md). EDR in block mode respects exclusions that are defined for Microsoft Defender Antivirus, but not [indicators](indicators-overview.md) that are defined for Microsoft Defender for Endpoint.
-> 
+>
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 
