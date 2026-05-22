@@ -107,7 +107,7 @@ Centralized management capabilities via the Defender portal help organizations c
 
 | Capability | Description |
 |---|---|
-| **Security settings configuration** | Centrally manage antivirus settings via the [Defender](linux-preferences.md) or [Intune](/intune/device-security/microsoft-defender/security-settings-management) portal and enforce consistent configurations in Linux environments, including [exclusions](linux-exclusions.md). |
+| **[Security settings configuration](/defender-endpoint/linux-preferences)** | Centrally manage antivirus settings via the [Defender](linux-preferences.md) or [Intune](/intune/device-security/microsoft-defender/security-settings-management) portal and enforce consistent configurations in Linux environments, including [exclusions](linux-exclusions.md). |
 | **Software updates** | **[Platform updates](linux-updates.md)** - Monthly updates provide security enhancements and new features. Each release expires after nine months; staying within the latest three versions is recommended. <br/><br/> **Automatic security intelligence updates** - Keeps protection up to date with the latest threat intelligence and security definitions. <br/><br/> **Offline security intelligence updates** - Supports updating security intelligence in environments without internet connectivity. |
 | **Device health monitoring** | Provides visibility into antivirus posture, scan results, platform, engine, and intelligence versions via the portal and APIs. |
 
@@ -118,7 +118,7 @@ Microsoft Defender integrates with existing security tools and workflows through
 | Capability | Description |
 |---|---|
 | **[Management and automation APIs](api/management-apis.md)** | Automate workflows and integrate Defender for Endpoint into your existing processes. |
-| **Partner integrations** | Integrate with Microsoft and non-Microsoft security solutions. |
+| **[Partner integrations](/defender-endpoint/partner-integration)** | Integrate with Microsoft and non-Microsoft security solutions. |
 
 ## Related content
 
@@ -127,10 +127,4 @@ Microsoft Defender integrates with existing security tools and workflows through
 - [Configure Defender for Endpoint security settings](linux-preferences.md)
 - [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md)
 - [Device health reporting in Microsoft Defender for Endpoint](device-health-microsoft-defender-antivirus-health.md)
-- [Deploy Defender for Endpoint on Linux](linux-installer-script.md)
-- [Privacy for Microsoft Defender for Endpoint on Linux](linux-privacy.md)
-- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
-- [Investigate agent health issues](health-status.md)
-- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
-- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
-- [Linux Resources](linux-resources.md)
+
