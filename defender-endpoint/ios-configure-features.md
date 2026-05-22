@@ -149,7 +149,7 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
    |Key| Default (true - enable, false - disable)|Description|
    |---|---|---|
    |`DefenderOpenNetworkDetection`|2| 1 - Audit; 0 - Disable; 2 - Enable (default). This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, events are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
-   |`DefenderEndUserTrustFlowEnable`| false | true - enable; false - disable. This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks.|
+   |`DefenderEndUserTrustFlowEnable`| false | true - enable; false - disable. This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure networks.|
    |`DefenderNetworkProtectionAutoRemediation`| true |true - enable; false - disable. This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not the device timeline events. So, this is not applicable to open Wi-Fi detection.|
    |`DefenderNetworkProtectionPrivacy`| true |true - enable; false - disable. This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
    
