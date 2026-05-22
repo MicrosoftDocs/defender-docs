@@ -11,7 +11,7 @@ ms.collection:
 - mde-ios
 ms.topic: how-to
 ms.subservice: ios
-ms.date: 05/19/2025
+ms.date: 05/22/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -121,7 +121,7 @@ To set up network protection using MDM configuration for enrolled devices, follo
    | Key | Value Type | Default (true-enable, false-disable) | Description |
    | --- | --- | --- | --- |
    | `DefenderOpenNetworkDetection` | Integer | 2 | 1 - Audit; 0 - Disable; 2 - Enable (default). This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In audit mode, events are sent only to the Microsoft Defender portal with no end-user experience. For end-user experience, set it to `Enable`.|
-   | `DefenderEndUserTrustFlowEnable` | String | false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks. |
+   | `DefenderEndUserTrustFlowEnable` | String | false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure networks. |
    | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable; false - disable. This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not device timeline events. So, this is not applicable to open Wi-Fi detection.|
    | `DefenderNetworkProtectionPrivacy` | String | true | true - enable; false - disable. This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious Wi-Fi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
    

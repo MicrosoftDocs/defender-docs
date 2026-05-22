@@ -4,7 +4,7 @@ description: Describes how to configure Microsoft Defender for Endpoint on Andro
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
-ms.reviewer: denishdonga
+ms.reviewer: mchakraborty
 ms.localizationpriority: medium
 ms.collection:
 - m365-security
@@ -12,7 +12,7 @@ ms.collection:
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-ms.date: 12/17/2025
+ms.date: 05/22/2026
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
@@ -77,25 +77,14 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
 
 1. For other configurations related to Network protection, add the following keys and appropriate corresponding value.
 
-   | Configuration Key| Description|
-   |---|---|
-   |Trusted CA certificate list for Network Protection|Security admins manage this setting to establish trust for root CA and self-signed certificates.|
-   |Enable Network protection in Microsoft Defender|1 - Enable (default), 0- Disable. This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
-   |Enable Network Protection Privacy|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable privacy in network protection.|
-   |Enable Users to Trust Networks and Certificates|1 - Enable, 0 - Disable (default). Security admins manage this setting to enable or disable the end user's in-app experience to trust and untrust unsecure and suspicious networks and malicious certificates.|
-   |Automatic Remediation of Network Protection Alerts|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable the remediation alerts that are sent when a user performs remediation activities, such as switching to a safer Wi-Fi access point or deleting suspicious certificates detected by Defender. This setting applies exclusively to alerts and does not impact device timeline events. As a result, it will not affect open Wi-Fi networks or self-signed certificates.|
-   |Manage Network Protection detection for Open Networks|2- Enable (default), 1- Audit mode, 0 - Disable. Security admins manage this setting to enable, audit, or disable open network detection, respectively. In 'Audit' mode, events are sent only to the ATP portal with no end user experience. For end user experience, the config should be set to 'Enable' mode.|
-   |Manage Network protection Detection for Certificates|2- Enable, 1- Audit mode, 0 - Disable (default).  In Audit mode, events are sent to SOC admins, but no end-user notifications are displayed to the user when Defender detects a bad certificate. Admins can, however, enable full feature functionality by setting 2 as the value. When the feature is enabled with the value of 2, end-user notifications are sent to the user when Defender detects a bad certificate, and events are also sent to the SOC Admin. |
-   
-1. Add the required groups to which the policy has to be applied. Review and create the policy.
-
    | Configuration Key | Description|
    |---|---|
+   |Trusted CA certificate list for Network Protection|Security admins manage this setting to establish trust for root CA and self-signed certificates.|
    |Enable Network protection in Microsoft Defender|1: Enable (default)<br/> 0: Disable<br/><br/> This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
    |Enable Network Protection Privacy|1: Enable (default) <br/> 0: Disable <br/><br/> Security admins manage this setting to enable or disable privacy in network protection.|
-   |Enable Users to Trust Networks and Certificates|1: Enable <br/>0: Disable (default) <br/><br/> This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks and malicious certificates.|
+   |Enable Users to Trust Networks and Certificates|1: Enable <br/>0: Disable (default) <br/><br/> This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure networks and certificates.|
    |Automatic Remediation of Network Protection Alerts|1: Enable (default) <br/> 0: Disable <br/><br/> This setting is used by IT admins to enable or disable the remediation alerts that are sent when a user does remediation activities. For example, the user switches to a safer Wi-Fi access point or deletes suspicious certificates that were detected by Defender. This setting only applies to alerts and does not affect device timeline events. As such, it does not apply to the detection of open Wi-Fi networks or self-signed certificates |
-   | Open network detection | 2:  Enable (default)<br/> 1: Audit Mode <br/> 0: Disable <br/><br/>Security admins manage this setting to enable or disable open network detection. |
+   |Manage Network Protection detection for Open Networks| 2:  Enable (default)<br/> 1: Audit Mode <br/> 0: Disable <br/><br/>Security admins manage this setting to enable or disable open network detection. |
    |Manage Network protection Detection for Certificates|2: Enable <br/> 1: Audit mode<br/> 0: Disable (default)<br/><br/>In audit mode, events are sent to SOC admins, but no end user notifications are shown when Defender detects a bad certificate. Admins can enable full feature functionality by setting the value 2. When the value is 2, end user notifications are sent to users and events are sent to SOC admins when Defender detects a bad certificate.|
    
 1. Add the required groups to which the policy has to be applied. Review and create the policy.

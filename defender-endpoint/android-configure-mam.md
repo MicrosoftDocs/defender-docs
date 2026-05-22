@@ -11,7 +11,7 @@ ms.collection:
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-ms.date: 01/31/2026
+ms.date: 005/22/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -176,7 +176,7 @@ Web protection helps to secure devices against web threats and protect users fro
    |`DefenderAllowlistedCACertificates`| String | None | None-Disable; This setting is used by IT admins to establish trust for root CA and self-signed certificates.|
    |`DefenderCertificateDetection`|Integer| 0 |2-Enable, 1 - Audit mode, 0 - Disable; When this feature is enabled with value as 2, end user notifications are sent to the user when Defender detects a bad certificate. Alerts are also sent to SOC Admins. In audit mode (1), notification alerts are sent to SOC admins, but no end user notifications are displayed to the user when Defender detects a bad certificate. Admins can disable this detection with 0 as the value and enable full feature functionality by setting 2 as the value.  |
    | `DefenderOpenNetworkDetection` | Integer | 2 |2-Enable, 1 - Audit mode, 0 - Disable; This setting is used by IT Admins to enable or disable open network detection. If switched to audit mode with value 1, notification alert is sent to SOC admin, but no end user notification is displayed to the user when defender detects an open network. If it's enabled with value 2, then end user notification is displayed and also alerts to SOC admins is sent.|
-   | `DefenderEndUserTrustFlowEnable` | Integer | 0 | 1 - Enable, 0 - Disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks. |
+   | `DefenderEndUserTrustFlowEnable` | Integer | 0 | 1 - Enable, 0 - Disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure networks. |
    | `DefenderNetworkProtectionAutoRemediation` | Integer | 1 | 1 - Enable, 0 - Disable; This setting is used by IT admins to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points or deleting suspicious certificates detected by Defender. |
    | `DefenderNetworkProtectionPrivacy` | Integer | 1 | 1 - Enable, 0 - Disable; This setting is used by IT admins to enable or disable privacy in network protection. If privacy is disabled with value 0, then user consent is shown to share the malicious wifi or certs data. If its in enabled state with value 1, then no user consent is shown and no app data is collected.|
 
