@@ -50,7 +50,7 @@ Attackers use various tampering techniques to disable Microsoft Defender for End
 |--- |---| ---|
 | [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) | Windows | - Terminating/suspending processes<br/>- Stopping/pausing/suspending services<br/>- Modifying registry settings including exclusions<br/>- Manipulating/hijacking DLLs<br/>- Manipulation/modification of the file system<br/>- Agent integrity |
 | [Tamper protection](tamperprotection-macos.md) | Mac | - Terminating/suspending processes<br/>- Manipulation/modification of the file system<br/>- Agent integrity|
-| [Attack surface reduction rules](attack-surface-reduction.md) | Windows | Kernel drivers (see [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers))|
+| [Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) | Windows | Kernel drivers (see [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers-device))|
 | [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide) (WDAC) | Windows | Kernel drivers (see [Microsoft vulnerable driver block list](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules))|
 
 
@@ -72,12 +72,11 @@ For devices that don't meet those requirements, this list of drivers can be bloc
 
 See [Vulnerable Driver block list XML](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules#microsoft-vulnerable-driver-blocklist).
 
-
 ### Faster updates - Block exploited vulnerable and signed drivers ASR rule
 
-This list of drivers blocked by the exploited and vulnerable drivers get updated more frequently than the recommended drivers block list. ASR rules can run in audit mode first to ensure that there's no impact before applying the rule in block mode.
+This list of drivers blocked by the exploited and vulnerable drivers get updated more frequently than the recommended drivers block list. You can run the ASR rule in **Audit** mode to gather information before you run the rule in **Block** mode.
 
-See [Block abuse of exploited vulnerable signed drivers rule](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers).
+For more information, see [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers).
 
 ### Block other drivers - Windows Defender Application Control (WDAC)
 
@@ -125,9 +124,6 @@ When tampering is detected, an alert is raised. Some of the alert titles for tam
 - Tampering with Microsoft Defender for Endpoint sensor settings
 - Tampering with the Microsoft Defender for Endpoint sensor
 
-If the [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) attack surface reduction rule is triggered, the event is viewable in the [ASR Report](attack-surface-reduction-rules-report.md) and in [Advanced Hunting](attack-surface-reduction-rules-deployment-operationalize.md#asr-rules-advanced-hunting)
+If the [Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) attack surface reduction rule is triggered, the event is viewable in the [ASR Report](attack-surface-reduction-rules-report.md) and in [Advanced Hunting](attack-surface-reduction-rules-monitor.md#asr-rule-events-in-advanced-hunting).
 
 If [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) (WDAC) is enabled, the [block and audit activity can be seen in Advanced Hunting](/windows/security/threat-protection/windows-defender-application-control/querying-application-control-events-centrally-using-advanced-hunting).
-
-
-

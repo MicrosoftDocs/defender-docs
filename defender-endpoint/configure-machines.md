@@ -80,7 +80,4 @@ If you have been assigned other roles, ensure you have the necessary permissions
 |:---|:---
 |[Get devices onboarded to Defender for Endpoint](configure-machines-onboarding.md)|Track onboarding status of Intune-managed devices and onboard more devices through Intune. |
 |[Increase compliance to the Defender for Endpoint security baseline](configure-machines-security-baseline.md)|Track baseline compliance and noncompliance. Deploy the security baseline to more Intune-managed devices. |
-| [Optimize ASR rule deployment and detections](configure-machines-asr.md)|Review rule deployment and tweak detections using impact analysis tools in the [Microsoft Defender portal](https://security.microsoft.com). |
-
-
-
+|[Monitor ASR rule activity](attack-surface-reduction-rules-monitor.md)|Monitor ASR rule events using advanced hunting and the ASR rules report in the [Microsoft Defender portal](https://security.microsoft.com).|
