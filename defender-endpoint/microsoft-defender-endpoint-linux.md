@@ -25,9 +25,9 @@ appliesto:
 
 Microsoft Defender for Endpoint on Linux protects Linux server workloads in on-premises, cloud, and hybrid environments. It helps you prevent, detect, investigate, and respond to advanced threats with unified visibility through the Microsoft Defender portal.
 
-Defender uses a lightweight eBPF-based sensor architecture without kernel modules, providing protection with minimal overhead and zero workload disruption on resource-constrained systems.
+Defender uses a lightweight [eBPF-based](linux-support-ebpf.md) sensor architecture without kernel modules, providing protection with minimal overhead and zero workload disruption on resource-constrained systems.
 
-As Linux threats evolve beyond traditional malware into fileless and in-memory attacks, Defender combines next-generation antivirus protection, AI-driven endpoint detection and response (EDR), behavioral analytics, and Microsoft threat intelligence to detect and disrupt attacker techniques. These techniques include ransomware, memory injection, lateral movement, and advanced persistence threats.
+As Linux threats evolve beyond traditional malware into fileless and in-memory attacks, Defender combines [next-generation antivirus protection](next-generation-protection.md), AI-driven [endpoint detection and response](overview-endpoint-detection-response.md) (EDR), behavioral analytics, and Microsoft threat intelligence to detect and disrupt attacker techniques. These techniques include ransomware, memory injection, lateral movement, and advanced persistence threats.
 
 With broad Linux distribution support and deep integration with the Microsoft Defender ecosystem, you can standardize security operations, gain end-to-end visibility, and accelerate threat response through a unified platform.
 
@@ -39,7 +39,7 @@ The following table describes the core security capabilities offered by Microsof
 |---|---|
 | **Next-generation protection** | Provides real-time prevention against malware and emerging threats by analyzing execution patterns and blocking malicious activity. |
 | **Endpoint detection and response (EDR)** | Delivers deep visibility into endpoint activity and enables rapid investigation and response to advanced attacks. |
-| **Vulnerability management** | Identifies security gaps and prioritizes remediation actions to continuously reduce risk exposure. |
+| **[Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)** | Identifies security gaps and prioritizes remediation actions to continuously reduce risk exposure. |
 | **Streamlined management and operations** | Simplifies onboarding, configuration, monitoring, and management of Defender in large Linux environments. |
 | **Seamless integration and extensibility** | Extends visibility and response through seamless connectivity with security tools, APIs, and the broader Defender platform. |
 
@@ -53,7 +53,7 @@ Protect Linux endpoints from malware and advanced threats using real-time, behav
 | **Behavioral monitoring** | Monitors process behavior in real time to detect and block malicious activity based on execution patterns and intent. |
 | **Passive mode** | Provides antivirus protection in a passive state without automatic remediation while preserving full EDR visibility. Allows coexistence with other third-party antivirus solutions. |
 | **Cloud-delivered protection** | Uses machine learning and threat intelligence to detect emerging threats quickly. |
-| **Scheduled and on-demand scans** | Provides flexibility to perform quick, full, or custom scans on endpoints based on operational requirements. |
+| **[Scheduled and on-demand scans](schedule-anti-virus-scans-linux.md)** | Provides flexibility to perform quick, full, or custom scans on endpoints based on operational requirements. |
 
 ### Endpoint detection and response (EDR)
 
@@ -65,10 +65,10 @@ Detect, investigate, and respond to sophisticated attacks powered by AI-driven a
 | **MITRE ATT&CK-aligned detections** | Maps detections to attacker techniques for better investigation. |
 | **Alert correlation** | Groups related alerts into incidents for streamlined investigation. |
 | **Device timeline** | Provides a detailed view of activity on the endpoint. |
-| **Advanced hunting** | Enables proactive threat hunting using query-based analysis. |
-| **Live Response** | Allows remote investigation, script execution, and remediation such as file deletion, process termination, and evidence collection. |
+| **[Advanced hunting](/defender-xdr/advanced-hunting-overview)** | Enables proactive threat hunting using query-based analysis. |
+| **[Live Response](live-response.md)** | Allows remote investigation, script execution, and remediation such as file deletion, process termination, and evidence collection. |
 | **Block file using file indicators** | Blocks or allows files on endpoints using custom indicators, helping prevent known malicious files from execution. |
-| **Device isolation** | Helps contain compromised devices from lateral movement. |
+| **[Device isolation](respond-machine-alerts.md)** | Helps contain compromised devices from lateral movement. |
 | **Investigation package collection** | Collects forensic data for deeper analysis. |
 | **Remote scanning** | Initiates antivirus scans to identify and remediate threats. |
 
@@ -79,8 +79,8 @@ Continuously assess vulnerabilities, misconfigurations, and security posture to 
 | Capability | Description |
 |---|---|
 | **Vulnerability assessment** | Identifies software vulnerabilities and misconfigurations on devices. |
-| **Security recommendations** | Provides actionable guidance to reduce endpoint risk. |
-| **Remediation tracking** | Tracks remediation activities and exposure reduction. |
+| **[Security recommendations](/defender-vulnerability-management/tvm-security-recommendation)** | Provides actionable guidance to reduce endpoint risk. |
+| **[Remediation tracking](/defender-vulnerability-management/tvm-remediation)** | Tracks remediation activities and exposure reduction. |
 | **Secure Score integration** | Assesses security posture and provides actions to improve overall security. |
 
 ## Streamlined management and operations
@@ -107,17 +107,17 @@ Centralized management capabilities via the Defender portal help organizations c
 
 | Capability | Description |
 |---|---|
-| **Security settings configuration** | Centrally manage antivirus settings via the Defender or Intune portal and enforce consistent configurations in Linux environments, including exclusions. |
-| **Software updates** | **Platform updates** - Monthly updates provide security enhancements and new features. Each release expires after nine months; staying within the latest three versions is recommended. <br/><br/> **Automatic security intelligence updates** - Keeps protection up to date with the latest threat intelligence and security definitions. <br/><br/> **Offline security intelligence updates** - Supports updating security intelligence in environments without internet connectivity. |
+| **Security settings configuration** | Centrally manage antivirus settings via the [Defender](linux-preferences.md) or [Intune](/intune/device-security/microsoft-defender/security-settings-management) portal and enforce consistent configurations in Linux environments, including [exclusions](linux-exclusions.md). |
+| **Software updates** | **[Platform updates](linux-updates.md)** - Monthly updates provide security enhancements and new features. Each release expires after nine months; staying within the latest three versions is recommended. <br/><br/> **Automatic security intelligence updates** - Keeps protection up to date with the latest threat intelligence and security definitions. <br/><br/> **Offline security intelligence updates** - Supports updating security intelligence in environments without internet connectivity. |
 | **Device health monitoring** | Provides visibility into antivirus posture, scan results, platform, engine, and intelligence versions via the portal and APIs. |
 
 ## Seamless integration and extensibility
 
-Microsoft Defender integrates with existing security tools and workflows through cloud-level capabilities that apply to all onboarded platforms. It enables integration via APIs, Power BI, and SIEM/SOAR solutions for centralized monitoring and automated response, while extending into Microsoft Defender XDR and third-party ecosystems to deliver unified visibility and coordinated security operations.
+Microsoft Defender integrates with existing security tools and workflows through cloud-level capabilities that apply to all onboarded platforms. It enables integration via [APIs](api/apis-intro.md), [Power BI](api/api-power-bi.md), and SIEM/SOAR solutions for centralized monitoring and automated response, while extending into Microsoft Defender XDR and third-party ecosystems to deliver unified visibility and coordinated security operations.
 
 | Capability | Description |
 |---|---|
-| **Management and automation APIs** | Automate workflows and integrate Defender for Endpoint into your existing processes. |
+| **[Management and automation APIs](api/management-apis.md)** | Automate workflows and integrate Defender for Endpoint into your existing processes. |
 | **Partner integrations** | Integrate with Microsoft and non-Microsoft security solutions. |
 
 ## Related content
@@ -127,3 +127,10 @@ Microsoft Defender integrates with existing security tools and workflows through
 - [Configure Defender for Endpoint security settings](linux-preferences.md)
 - [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md)
 - [Device health reporting in Microsoft Defender for Endpoint](device-health-microsoft-defender-antivirus-health.md)
+- [Deploy Defender for Endpoint on Linux](linux-installer-script.md)
+- [Privacy for Microsoft Defender for Endpoint on Linux](linux-privacy.md)
+- [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on Linux](linux-support-connectivity.md)
+- [Investigate agent health issues](health-status.md)
+- [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md)
+- [Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux](linux-support-perf.md)
+- [Linux Resources](linux-resources.md)
