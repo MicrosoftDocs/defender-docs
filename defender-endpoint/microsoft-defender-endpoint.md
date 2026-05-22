@@ -16,6 +16,8 @@ ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Endpoint for servers
+  - Microsoft Defender for Business servers
 ---
 
 # Microsoft Defender for Endpoint overview
@@ -47,11 +49,14 @@ For detailed system requirements and supported versions, see [Minimum requiremen
 
 ## Licensing
 
-Defender for Endpoint is available in three plans:
+To onboard Defender for Endpoint, you need a license. Choose from the following options:
 
-* **Microsoft Defender for Business** - An endpoint security solution designed for small and medium-sized businesses (up to 300 users).
-* **Defender for Endpoint Plan 1** - Provides core endpoint protection capabilities, including next-generation antivirus, attack surface reduction, and centralized management.
-* **Defender for Endpoint Plan 2** - A comprehensive endpoint protection solution that includes advanced capabilities such as endpoint detection and response, automated investigation, and vulnerability management.
+- **Microsoft Defender for Business** - An endpoint security solution designed for small and medium-sized businesses (up to 300 users).
+- **Defender for Endpoint Plan 1** - Provides core endpoint protection capabilities, including next-generation antivirus, attack surface reduction, and centralized management.
+- **Defender for Endpoint Plan 2** - A comprehensive endpoint protection solution that includes advanced capabilities such as endpoint detection and response, automated investigation, and vulnerability management.
+- **Microsoft Defender for Servers Plan 1 or Plan 2** - To onboard servers to Defender for Endpoint.
+- **Microsoft Defender for Endpoint for servers** - To onboard servers to Defender for Endpoint.
+- **[Microsoft Defender for Business servers](/defender-business/get-defender-business?tabs=findpartner#how-to-get-microsoft-defender-for-business-servers)** - For small and medium-sized businesses only.
 
 Microsoft 365 E5 and Microsoft 365 E5 Security include Defender for Endpoint. To onboard servers, you need server licenses. For more information, see the licensing section in [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md#licensing-requirements).
 

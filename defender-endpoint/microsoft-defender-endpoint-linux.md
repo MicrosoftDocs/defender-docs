@@ -15,8 +15,9 @@ ms.subservice: linux
 search.appverid: met150
 ms.date: 05/18/2026
 appliesto:
-  - Microsoft Defender for Endpoint Plan 1
-  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Servers Plan 1 or Plan 2
+  - Microsoft Defender for Endpoint for servers
+  - Microsoft Defender for Business servers
 ---
 
 # Microsoft Defender for Endpoint on Linux

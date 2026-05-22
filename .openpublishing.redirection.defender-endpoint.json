@@ -312,12 +312,12 @@
     },
     {
       "source_path": "defender-endpoint/microsoft-defender-endpoint-ios.md",
-      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint#mobile-threat-defense",
+      "redirect_url": "//defender-endpoint/mtd",
       "redirect_document_id": false
     },
     {
       "source_path": "defender-endpoint/microsoft-defender-endpoint-android.md",
-      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint#mobile-threat-defense",
+      "redirect_url": "/defender-endpoint/mtd",
       "redirect_document_id": false
     }
   ]
