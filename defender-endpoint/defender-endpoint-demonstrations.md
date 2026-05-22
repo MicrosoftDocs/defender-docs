@@ -17,14 +17,13 @@ appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
-
 ---
-# Microsoft Defender for Endpoint - demonstration scenarios
 
+# Microsoft Defender for Endpoint - demonstration scenarios
 
 Demonstration scenarios help you learn about the capabilities of Microsoft Defender for Endpoint on Windows, Mac, and Linux. Demonstration scenarios are provided for the following Microsoft Defender for Endpoint protection areas:
 
-- Attack surface protection (**ASR**)
+- Attack surface reduction protection (**ASR**)
 - Next Generation Protection (**NGP**)
 - Endpoint detection and response (**EDR**)
 
@@ -57,11 +56,8 @@ The following table lists the available demonstrations alphabetically, with thei
 
 ## See also
 
-[Attack surface protection overview](overview-attack-surface-reduction.md)
-[Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
+[Attack surface protection overview](attack-surface-reduction-overview.md)
+[Attack surface reduction (ASR) rules deployment overview](attack-surface-reduction-rules-deployment.md)
 [Next Generation Protection overview](next-generation-protection.md)
 [Endpoint detection and response overview](overview-endpoint-detection-response.md)
 [Microsoft Defender for Endpoint security blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bg-p/MicrosoftDefenderATPBlog)
-
-
-

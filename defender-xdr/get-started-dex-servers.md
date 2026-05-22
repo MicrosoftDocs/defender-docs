@@ -34,7 +34,7 @@ Set up Defender Experts for Servers in the Microsoft Defender portal by onboardi
 
 ## Review pricing information
 
-For Defender Experts for Servers pricing, review the [Microsoft Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also contact your Microsoft representative for more information.
+Defender Experts for Servers uses **pay-as-you-go consumption meter**. For more information on pricing, review the [Microsoft Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) or contact your Microsoft representative.
 
 ## Prerequisites
 

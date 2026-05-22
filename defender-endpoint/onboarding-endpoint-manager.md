@@ -219,7 +219,7 @@ Then, you continue by creating several different types of endpoint security poli
     > [!NOTE]
     > We will be configuring all of the Attack surface reduction rules to Audit.
     >
-    > For more information, see [Attack surface reduction rules](attack-surface-reduction.md).
+    > For more information, see [Attack surface reduction rules](attack-surface-reduction-rules-overview.md).
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/dd0c00efe615a64a4a368f54257777d0.png" alt-text="The Microsoft Intune admin center21" lightbox="media/dd0c00efe615a64a4a368f54257777d0.png":::
