@@ -119,7 +119,7 @@ After you onboard your cloud workloads, take note of the following information:
 - **Billing:** Billing starts when you finish onboarding.
   - View your bill in **Microsoft Cost Management**. For more information, see [What is Microsoft Cost Management](/azure/cost-management-billing/costs/overview-cost-management).
   - At the end of your billing cycle, look for **Microsoft Defender Experts for Servers costs**. 
-- **Endpoint protection:** The Microsoft Defender for Endpoint extension is automatically installed on all supported machines connected to Microsoft Defender for Cloud. Ensure that automatic provisioning of the Defender for Endpoint sensor is enabled.
+- **Endpoint protection:** The Microsoft Defender for Endpoint extension is automatically installed on all supported devices connected to Microsoft Defender for Cloud. Ensure that automatic provisioning of the Defender for Endpoint sensor is enabled.
 
 ## Turn off Defender Experts for Servers service
 

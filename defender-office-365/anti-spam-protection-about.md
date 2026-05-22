@@ -12,7 +12,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the anti-spam settings and filters that help prevent spam in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 07/03/2025
+ms.date: 05/22/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -72,7 +72,7 @@ Anti-spam policies control the configurable settings for spam filtering. The imp
 
 Recipient filters use conditions and exceptions to identify the internal recipients that the policy applies to. At least one condition is required in custom policies. Conditions and exceptions aren't available in the default policy (the default policy applies to all recipients). You can use the following recipient filters for conditions and exceptions:
 
-- **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
+- **Users**: One or more mailboxes, or mail users in the organization.
 - **Groups**:
   - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
   - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
