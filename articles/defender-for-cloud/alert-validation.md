@@ -140,6 +140,8 @@ To validate Azure Key Vault threat detection, complete the prerequisites and the
 
 - [Create a key vault by using the Azure portal](../key-vault/general/quick-create-portal.md).
 
+### Validation steps
+
 To validate Azure Key Vault threat detection:
 
 1. After creating the Key Vault and the secret, go to a VM that has internet access and [download the TOR Browser](https://www.torproject.org/download/).
