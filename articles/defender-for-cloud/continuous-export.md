@@ -10,9 +10,9 @@ ms.date: 05/24/2026
 
 # Set up continuous export in the Azure portal
 
-Microsoft Defender for Cloud generates detailed security alerts and recommendations. To analyze this data, you can export it to Log Analytics in Azure Monitor, to Azure Event Hubs, or to another Security Information and Event Management (SIEM), Security Orchestration Automated Response (SOAR), or IT classic [deployment model solution](export-to-siem.md). You can stream alerts and recommendations as they're generated, or you can define a schedule that sends periodic snapshots of new data.
+Microsoft Defender for Cloud generates security alerts and recommendations. You can export this data to Log Analytics in Azure Monitor, to Azure Event Hubs, or to another Security Information and Event Management (SIEM), Security Orchestration Automated Response (SOAR), or IT classic [deployment model solution](export-to-siem.md). You can stream data as it's generated, or you can send scheduled snapshots of new data.
 
-This article describes how to set up continuous export to a Log Analytics workspace or to an event hub in Azure.
+This article explains how to set up continuous export to a Log Analytics workspace or an event hub in Azure.
 
 > [!TIP]
 > Defender for Cloud also offers a one-time, manual export to a comma-separated values (CSV) file. Learn how to [download a CSV file](export-alerts-to-csv.md).
@@ -37,7 +37,7 @@ Required roles and permissions:
 
 ## Set up continuous export in the Azure portal
 
-You can set up continuous export on the Microsoft Defender for Cloud pages in the Azure portal, by using the REST API, or at scale by using provided Azure Policy templates.
+You can set up continuous export in the Microsoft Defender for Cloud pages in the Azure portal, by using the REST API, or at scale by using Azure Policy templates.
 
 **To set up a continuous export to Log Analytics or Azure Event Hubs by using the Azure portal**:
 
@@ -49,9 +49,9 @@ You can set up continuous export on the Microsoft Defender for Cloud pages in th
 
     :::image type="content" source="./media/continuous-export/continuous-export-options-page.png" alt-text="Screenshot that shows the export options in Microsoft Defender for Cloud." lightbox="./media/continuous-export/continuous-export-options-page.png":::
 
-    The export options appear. There's a tab for each available export target, either event hub or Log Analytics workspace.
+    Export options appear. There's a tab for each target: Event Hubs or Log Analytics workspace.
 
-1. Select the data type you'd like to export, and choose from the filters on each type (for example, export only high-severity alerts).
+1. Select the data type that you want to export, and then choose filters for that type. For example, you can export only high-severity alerts.
 
 1. Select the export frequency:
 

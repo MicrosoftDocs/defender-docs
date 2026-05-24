@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Connect ServiceNow ITSM to Defender for Cloud
 
-Microsoft Defender for Cloud's integration with ServiceNow's IT Service Management (ITSM) module, allows customers to connect their Defender for Cloud accounts to ServiceNow. ServiceNow is a powerful workflow automation and enterprise solution that helps organizations streamline and automate routine tasks, improving operational efficiencies and increasing productivity. By integrating ServiceNow with Defender for Cloud, customers can prioritize the remediation of recommendations that affect their business. This integration allows you to create and view ServiceNow tickets linked to recommendations directly from Defender for Cloud, which facilitates efficient incident management.
+Microsoft Defender for Cloud integrates with ServiceNow IT Service Management (ITSM). This integration lets you connect your Defender for Cloud account to ServiceNow. You can use ServiceNow workflows to manage recommendations and prioritize remediation work. You can also create and view ServiceNow tickets for recommendations directly from Defender for Cloud.
 
 ## Prerequisites
 
@@ -19,9 +19,9 @@ Microsoft Defender for Cloud's integration with ServiceNow's IT Service Manageme
 
 - Enable Defender Cloud Security Posture Management (CSPM) on your Azure subscription. For setup steps, see [Enable Defender CSPM](tutorial-enable-cspm-plan.md).
 
-- To create the integration, you must have the Security Admin, Contributor, or Owner role.
+- To create the integration, you must have one of these roles: Security Admin, Contributor, or Owner.
 
-- To create ServiceNow tickets for recommendations on AWS or GCP resources, the ServiceNow integration must be configured at the connector level. An integration configured only at the Azure subscription level doesn’t apply to non-Azure resources.
+- To create ServiceNow tickets for recommendations on Amazon Web Services (AWS) or Google Cloud Platform (GCP) resources, configure the ServiceNow integration at the connector level. An integration that is scoped only to an Azure subscription doesn't apply to non-Azure resources.
 
 ## Connect a ServiceNow account to Defender for Cloud
 
@@ -39,7 +39,8 @@ To connect a ServiceNow account to a Defender for Cloud account:
 
    :::image type="content" border="true" source="./media/connect-servicenow/add-servicenow.png" alt-text="Screenshot that shows where the add integration button is and the ServiceNow option." lightbox="media/connect-servicenow/add-servicenow.png":::
 
-1. Enter a name, select the scope, and then enter the instance URL, User name, Password, Client ID, and client secret from the application registry that you created in the ServiceNow portal.
+1. Enter a name and select the scope.
+1. Enter the instance URL, User name, Password, Client ID, and client secret from the application registry that you created in the ServiceNow portal.
 
 1. Select **Next**.
 
@@ -49,7 +50,7 @@ To connect a ServiceNow account to a Defender for Cloud account:
 
 1. Select **Save**.
 
-A notice appears after successful creation of integration.
+After you save the integration, a success notice appears.
 
 ## Next step
 
