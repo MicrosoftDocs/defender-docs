@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 05/13/2026
+ms.date: 05/24/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -24,6 +24,10 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## May 2026
+
+### Sensor v3.x supports all identity roles on domain controllers
+
+Defender for Identity sensor v3.x now supports domain controllers running all identity roles, including Microsoft Entra Connect, AD FS, and AD CS identity roles. For deployment details, see [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md).
 
 ### Extended RPC auditing capabilities (Preview)
 
@@ -345,17 +349,6 @@ The new security posture assessment lists users whose valid credentials were lea
 In addition to the GA release of scoping by Active Directory domains a few months ago, you can now scope by **Organizational Units (OUs)*- as part of XDR user role-based access control (URBAC). This enhancement provides even more granular control over which entities and resources are included in security analysis.
 
 For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
-
-## October 2025
-
-We're excited to announce that the Microsoft Defender for Identity sensor v3.x is now generally available (GA).
-The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
-
-### Microsoft Defender for Identity sensor version updates
-
-|Version number|Updates|
-|---|---|
-|2.249|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers other security enhancements and performance improvements.|
 
 ## Next steps
 
