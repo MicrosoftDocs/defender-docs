@@ -126,6 +126,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "defender-endpoint/schedule-anti-virus-scans-liux.md",
+      "redirect_url": "/defender-endpoint/configure-anti-virus-scans-linux",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "defender-endpoint/comprehensive-guidance-on-linux-deployment.md",
       "redirect_url": "/defender-endpoint/linux-installer-script",
       "redirect_document_id": true

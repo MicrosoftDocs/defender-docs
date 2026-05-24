@@ -7,7 +7,7 @@ ms.author: painbar
 author: paulinbar
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 05/07/2026
+ms.date: 05/25/2026
 ai-usage: ai-generated
 ---
 
@@ -62,21 +62,18 @@ These scheduling options can be configured independently and combined. For examp
 
 The following table describes the available settings for configuring scheduled antivirus scans:
 
-| Category |  |  |  |  |
-|----------|---------|-------------|-----------------|---------|
-| **Daily scan settings** | **Setting** | **Description** | **Possible values** | **Default** |
-|  | interval | Runs a quick scan every N hour (interval-based scheduling). | Integer (hours) 0 = disabled | 0 |
-|  | timeOfDay (daily) | Runs a quick scan once daily at a specific time. Value is in minutes from midnight (local time of the server) | 0–1440 (for example, 120 = 2:00 AM) | 0 |
-| Weekly scan settings |  |  |  |  |
-|  | dayOfWeek | Specifies the day a scheduled scan runs. | 0–8 0 = disabled 1–7 = Sunday–Saturday 8 = every day | 0 |
-|  | timeOfDay (weekly) | Specifies when the weekly scan runs. Value is in minutes from midnight (local time of the server) | 0–1440 | 120 (2:00 AM) |
-|  | scanType | Specifies the scan type for weekly scans. | quick, full | quick |
-| Advanced settings (optional) |  |  |  |  |
-|  | runScanWhenIdle | Delays the scan until the system is idle. | true, false | false |
-|  | lowPriorityScheduledScan | Runs scans with reduced CPU priority. | true, false | false |
-|  | checkForDefinitionsUpdate | Checks for the latest security intelligence updates before starting the scan. | true, false | false |
-|  | randomizeScanStartTime | Randomizes scan start time within a defined window (in hours) to avoid simultaneous scans. | 0–23 | 0 |
-|  | ignoreExclusions | Runs scans without honouring configured exclusions. | true, false | false |
+| Category                     | Setting                   | Description                                                                                                   | Possible values                                      | Default       |
+|------------------------------|---------------------------|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------|---------------|
+| Daily scan settings          | interval                  | Runs a quick scan every N hour (interval-based scheduling).                                                   | Integer (hours) 0 = disabled                         | 0             |
+| Daily scan settings          | timeOfDay (daily)         | Runs a quick scan once daily at a specific time. Value is in minutes from midnight (local time of the server) | 0–1440 (for example, 120 = 2:00 AM)                  | 0             |
+| Weekly scan settings         | dayOfWeek                 | Specifies the day a scheduled scan runs.                                                                      | 0–8 0 = disabled 1–7 = Sunday–Saturday 8 = every day | 0             |
+| Weekly scan settings         | timeOfDay (weekly)        | Specifies when the weekly scan runs. Value is in minutes from midnight (local time of the server)             | 0–1440                                               | 120 (2:00 AM) |
+| Weekly scan settings         | scanType                  | Specifies the scan type for weekly scans.                                                                     | quick, full                                          | quick         |
+| Advanced settings (optional) | runScanWhenIdle           | Delays the scan until the system is idle.                                                                     | true, false                                          | false         |
+| Advanced settings (optional) | lowPriorityScheduledScan  | Runs scans with reduced CPU priority.                                                                         | true, false                                          | false         |
+| Advanced settings (optional) | checkForDefinitionsUpdate | Checks for the latest security intelligence updates before starting the scan.                                 | true, false                                          | false         |
+| Advanced settings (optional) | randomizeScanStartTime    | Randomizes scan start time within a defined window (in hours) to avoid simultaneous scans.                    | 0–23                                                 | 0             |
+| Advanced settings (optional) | ignoreExclusions          | Runs scans without honouring configured exclusions.                                                           | true, false                                          | false         |
 
 > [!NOTE]
 > `interval` and `timeOfDay` (daily) are independent settings. If both are configured, they create separate quick scan schedules and can result in multiple scans per day.
@@ -89,7 +86,7 @@ You can configure scheduled antivirus scans on Linux using one of the following 
 
 1. Configure your tenant to support security settings management.
 
-1. In the Defender portal, navigate to **Settings** > **Endpoints** > **Configuration management** > **Enforcement scope**, and then select the Linux platform.
+1. In the Defender portal, navigate to **System** > **Settings** > **Endpoints** > **Configuration management** > **Enforcement scope**, and then select the Linux platform.
 
 1. Tag devices with the **MDE-Management** tag. Most devices enroll and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune](/intune/protect/mde-security-integration).
 
@@ -102,12 +99,14 @@ You can configure scheduled antivirus scans on Linux using one of the following 
    1. For **Platform**, select **Linux**.
    1. Select the template **Microsoft Defender Antivirus** and then select **Create policy**.
    1. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
-   1. On the **Configuration settings** page, go to the **Schedule Scan** section towards the end of the page and configure the settings you want to manage with this profile.
+   1. On the **Configuration settings** page, go to the **Schedule Scan** section towards the end of the page and configure the [settings](#scheduled-scan-settings) you want to manage with this profile.
    1. When you're done configuring settings, select **Next**.
    1. On the **Assignments** page, select the groups that receive this profile. Then select **Next**.
    1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-endpoint-security-policies.md).
+   For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-endpoint-security-policies.md).
+
+   :::image type="content" source="media/schedule-antivirus-scans-linux/schedule-antivirus-scans-linux.png" alt-text="Screenshot of Endpoint security policies option.":::
 
 ### Use mdatp managed JSON configuration
 
