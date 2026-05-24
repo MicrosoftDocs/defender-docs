@@ -4,22 +4,22 @@ description: Learn how to set up continuous export of Microsoft Defender for Clo
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 07/15/2025
+ms.date: 05/24/2026
 #customer intent: As a security analyst, I want to learn how to set up continuous export of alerts and recommendations with Azure Policy so that I can analyze the data in Log Analytics or Azure Event Hubs.
 ---
 
 # Set up continuous export with Azure Policy
 
-Continuous export of Microsoft Defender for Cloud security alerts and recommendations can help you analyze the data in Log Analytics or Azure Event Hubs. You can set up continuous export in Defender for Cloud at scale, by using provided Azure Policy templates.
+Continuous export of Microsoft Defender for Cloud alerts and recommendations helps you analyze security data in Log Analytics or Azure Event Hubs. You can configure continuous export at scale by using Azure Policy templates.
 
 > [!TIP]
-> Defender for Cloud also offers the option to do a onetime, manual export to a comma-separated values (CSV) file. Learn how to [download a CSV file](export-alerts-to-csv.md).
+> Defender for Cloud also supports one-time manual export to a comma-separated values (CSV) file. For instructions, see [Export alerts to CSV](export-alerts-to-csv.md).
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- You need a Microsoft Azure subscription. If you don't have one, you can sign up at the [Azure free subscription page](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
+- You must enable Microsoft Defender for Cloud on your Azure subscription. For setup instructions, see [Enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription).
 
 Required roles and permissions:
 - Security Admin or Owner for the resource group
@@ -30,13 +30,13 @@ Required roles and permissions:
     - If it *has the SecurityCenterFree solution*, you must have a minimum of Read permissions for the workspace solution: `Microsoft.OperationsManagement/solutions/read`.
     - If it *doesn't have the SecurityCenterFree solution*, you must have write permissions for the workspace solution: `Microsoft.OperationsManagement/solutions/action`.
     
-    Learn more about [Azure Monitor and Log Analytics workspace solutions](/previous-versions/azure/azure-monitor/insights/solutions).
+    For more information about workspace solutions, see [Azure Monitor and Log Analytics workspace solutions](/previous-versions/azure/azure-monitor/insights/solutions).
 
 ## Set up continuous export at scale with Azure Policy
 
-Automating your organization's monitoring and incident response processes can help you reduce the time it takes to investigate and mitigate security incidents.
+Automating monitoring and incident response can reduce investigation and mitigation time.
 
-To deploy your continuous export configurations across your organization, use the provided Azure Policy `DeployIfNotExist` policies to create and configure continuous export procedures.
+To deploy continuous export configurations across your organization, use the provided Azure Policy `DeployIfNotExist` policies.
 
 To implement these policies:
 
@@ -51,17 +51,17 @@ To implement these policies:
 
     :::image type="content" source="./media/continuous-export-azure-policy/export-policy-assign.png" alt-text="Screenshot that shows assigning the Azure Policy." lightbox="media/continuous-export-azure-policy/export-policy-assign.png":::
 
-1. Select each tab and set the parameters to meet your requirements:
+1. Select each tab and set parameters based on your requirements:
 
-    1. On the **Basics** tab, set the scope for the policy. To use centralized management, assign the policy to the management group that contains the subscriptions that use the continuous export configuration.
+    1. On the Basics tab, set the policy scope. For centralized management, assign the policy to the management group that contains the subscriptions that use this continuous export configuration.
+    1. On the Parameters tab, set the resource group name, location, and Event Hubs details.
+    1. (Optional) On the Remediation tab, create a remediation task to apply this assignment to existing subscriptions.
 
-    1. On the **Parameters** tab, set the resource group name, location, and Event Hubs details.
-
-    1. Optionally, to apply this assignment to existing subscriptions, select the **Remediation** tab, and then select the option to create a remediation task.
-
-1. Review the summary page, and then select **Create**.
+1. Review the summary page.
+1. Select **Create**.
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Setup continuous export to an event hub behind a firewall](continuous-export-event-hub-firewall.md)
+
