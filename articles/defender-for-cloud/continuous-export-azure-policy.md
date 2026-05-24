@@ -57,7 +57,8 @@ To implement these policies:
     2. On the **Parameters** tab, set the resource group name, location, and Event Hubs details.
     3. Optionally, on the **Remediation** tab, create a remediation task to apply this assignment to existing subscriptions.
 
-1. Review the summary page, and then select **Create**.
+1. Review the summary page.
+1. Select **Create**.
 
 ## Next step
 
