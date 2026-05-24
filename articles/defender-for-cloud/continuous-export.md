@@ -4,7 +4,7 @@ description: Learn how to set up continuous export of Microsoft Defender for Clo
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 07/14/2025
+ms.date: 05/24/2026
 #customer intent: As a security analyst, I want to learn how to set up continuous export of alerts and recommendations in Microsoft Defender for Cloud so that I can analyze the data in Log Analytics or Azure Event Hubs.
 ---
 
@@ -92,3 +92,4 @@ To see related content:
 - Review the [Azure Monitor documentation](/azure/azure-monitor/).
 - Learn how to [export data types schemas](https://aka.ms/ASCAutomationSchemas).
 - Check out [common questions](faq-general.yml) about continuous export.
+

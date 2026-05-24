@@ -4,7 +4,7 @@ description: Learn how to connect ServiceNow with Microsoft Defender for Cloud t
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 10/13/2024
+ms.date: 05/24/2026
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to connect my ServiceNow account with Microsoft Defender for Cloud so that I can protect my Azure, hybrid, and multicloud machines.
 ---
@@ -55,3 +55,4 @@ A notice appears after successful creation of integration.
 
 > [!div class="nextstepaction"]
 > [Create a ticket in Defender for Cloud](create-ticket-servicenow.md)
+

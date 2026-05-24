@@ -1,7 +1,7 @@
 ---
 title: Map container images from code to runtime
 description: Learn how to map your container images from code to cloud.
-ms.date: 03/10/2026
+ms.date: 05/24/2026
 author: dlanger
 ms.author: dlanger
 ms.topic: how-to
@@ -88,3 +88,4 @@ After building a container image in an Azure DevOps CI/CD pipeline and pushing i
 
 - Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
 - Learn more about [Code to runtime for recommendations](code-to-runtime-mapping.md)
+
