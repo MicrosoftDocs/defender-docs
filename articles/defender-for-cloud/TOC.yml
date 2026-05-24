@@ -7,7 +7,8 @@
     - name: What is Microsoft Defender for Cloud?
       displayName: Defender for cloud, servers, storage, sql, containers, app service,
         key vault, resource manager, dns, open-source relational databases,
-        Azure cosmos db, db, Azure, defender
+        Azure cosmos db, db, Azure, defender, Defender Experts, managed XDR,
+        managed detection and response
       href: defender-for-cloud-introduction.md
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
@@ -619,6 +620,9 @@
     displayName: hybrid, arc, Defender for Servers
     items:
     - name: Overview
+      displayName: Defender for Servers overview, Defender Experts for Servers,
+        managed XDR, managed detection and response, proactive threat hunting,
+        Ask Defender Experts
       href: defender-for-servers-overview.md
     - name: Common questions
       href: faq-defender-for-servers.yml
@@ -784,7 +788,7 @@
             href: transition-to-defender-vulnerability-management.md
           - name: Common questions 
             href: common-questions-microsoft-defender-vulnerability-management.md
-      - name: Antimalware
+      - name: Container runtime antimalware detection and blocking
         displayName: antimalware, containers,
         href: anti-malware.md
       - name: Binary drift detection and blocking
@@ -1061,7 +1065,7 @@
         - name: Disable vulnerability findings
           displayName: qualys, rapid7, va
           href: disable-vulnerability-findings.md
-        - name: Remediate OS misconfigurations (Cloud Security Benchmark)
+        - name: Review and remediate OS misconfigurations in Microsoft Defender for Cloud
           displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
           href: apply-security-baseline.md
         - name: Remediate system updates
@@ -1230,6 +1234,9 @@
       href: alerts-schemas.md
     - name: Generate threat intelligence reports
       href: threat-intelligence-reports.md
+    - name: Cloud security reporting (Preview)
+      displayName: reporting, reports, cloud security, CNAPP, export, PDF, dashboard, visibility
+      href: cloud-security-reporting.md
     - name: Validate alert configuration
       href: alert-validation.md
     - name: Investigate resource health

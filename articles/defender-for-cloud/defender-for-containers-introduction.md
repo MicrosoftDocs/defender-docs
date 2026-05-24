@@ -2,13 +2,13 @@
 title: Introduction to Microsoft Defender for Containers
 description: Learn about Microsoft Defender for Containers, a cloud-native solution that secures your containerized assets across multicloud and on-premises environments.
 ms.topic: overview
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 04/29/2026
+ms.date: 05/18/2026
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
 ---
 
-# Container protection in Defender for Cloud
+# Introduction to Microsoft Defender for Containers
 
 Microsoft Defender for Containers is a cloud-native solution that enhances, monitors, and maintains the security of your containerized assets. These assets include Kubernetes clusters, nodes, workloads, registries, images, and more. It protects applications across multicloud and on-premises environments.
 
@@ -30,7 +30,7 @@ Defender for Containers provides the following core capabilities:
 
 - [**Security posture management:**](#security-posture-management) Continuously monitors cloud APIs, Kubernetes APIs, and Kubernetes workloads to discover resources, detect misconfigurations, and surface security recommendations with mitigation guidance. Posture data is available through inventory views, recommendations, and [Security Explorer](how-to-manage-cloud-security-explorer.md) for risk investigation and hunting.
 
-- [**Vulnerability assessment:**](#vulnerability-assessment) Performs agentless vulnerability assessment of [container registry images, running containers, and supported Kubernetes nodes](support-matrix-defender-for-containers.md). Findings include remediation guidance, exploitability insights, and integration with the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk analysis.
+- [**Vulnerability assessment:**](#vulnerability-assessment) Performs agentless vulnerability assessment of [container registry images, running containers, and supported Kubernetes nodes](support-matrix-defender-for-containers.md). Findings include remediation guidance, exploitability insights, and integration with the [cloud security graph](concept-attack-path.md#what-is-the-cloud-security-graph) for contextual risk analysis.
 
 - [**Run-time threat protection:**](#run-time-protection-for-kubernetes-nodes-and-clusters) Detects suspicious activity in Kubernetes clusters, nodes, and workloads using Kubernetes-aware analytics and threat intelligence. Alerts are mapped to the MITRE ATT&CK® framework for Containers and can be investigated through [Microsoft Defender XDR](/defender-xdr/investigate-respond-container-threats).
 
@@ -80,7 +80,7 @@ Defender for Containers scans the cluster node OS and application software, cont
 
 Now for [public preview in the AKS environment](agentless-vulnerability-assessment-azure.md#how-vulnerability-assessment-for-images-and-containers-works), Defender for Containers also performs a daily scan of all running containers to provide an updated vulnerability assessment, agnostic to the container's image registry.
 
-Vulnerability information powered by Microsoft Defender Vulnerability Management is added to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk, calculation of attack paths, and hunting capabilities.
+Vulnerability information powered by Microsoft Defender Vulnerability Management is added to the [cloud security graph](concept-attack-path.md#what-is-the-cloud-security-graph) for contextual risk, calculation of attack paths, and hunting capabilities.
 
 Learn more about [vulnerability assessments for Defender for Containers supported environments](agentless-vulnerability-assessment-azure.md), including [vulnerability assessment for cluster nodes](kubernetes-nodes-va.md).
 
@@ -95,8 +95,11 @@ Threat protection is provided for Kubernetes at the cluster, node, and workload 
 Examples of security events that Microsoft Defender for Containers monitors include:
 
 - Exposed Kubernetes dashboards
+- Exposed Kubernetes service detected (when a Kubernetes Service of type `LoadBalancer` is created or updated and publicly exposes workloads)
 - Creation of high privileged roles
 - Creation of sensitive mounts
+
+Prioritize exposure alerts when internet-facing access is unintended or when the exposed service has weak or missing authentication.
 
 For more information about alerts detected by Defender for Containers, including an alert simulation tool, see [alerts for Kubernetes clusters](alerts-containers.md).
 

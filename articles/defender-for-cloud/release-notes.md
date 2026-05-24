@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/17/2026
+ms.date: 05/18/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,12 +32,57 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
+| May 19, 2026| GA | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
+| May 18, 2026 | GA | [Microsoft Defender Experts for Servers as a managed XDR option](#microsoft-defender-experts-for-servers-as-a-managed-xdr-option) |
 | May 17, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (Preview)](#sql-vulnerability-assessment-express-configuration-now-available-for-azure-sql-managed-instance-and-synapse-preview) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
 | May 5, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### Cloud security reporting in Microsoft Defender portal (Preview)
+
+May 20, 2026
+
+Microsoft Defender portal now includes integrated cloud security reporting capabilities, enabling you to create, customize, and share security insights across your organization.
+
+With cloud security reporting, you can:
+
+- View built-in reports such as **CNAPP Executive Summary** and **Cloud Posture** that provide predefined views of cloud security data
+- Customize existing reports by duplicating and modifying sections, cards, and layout to match your specific needs
+- Create custom reports from scratch by defining sections and selecting relevant cards
+- Export reports to PDF for sharing with stakeholders and leadership
+- Control report access using visibility settings (Private, Tenant-level access, or Public)
+- Filter and organize reports by type and visibility
+
+The **CNAPP Executive Summary** report provides a consolidated view of cloud-native application protection platform signals, including threat detection, secure score trends, vulnerability management, security recommendations, investigation & response activity, and regulatory compliance status.
+
+The **Cloud Posture** report offers a centralized view of your overall cloud security posture, helping you assess security risk, track progress over time, and prioritize remediation efforts across environments and workloads.
+
+To access cloud security reports, navigate to the **Reporting** page in the Microsoft Defender portal and select the **Cloud** tab.
+
+Learn more about [Cloud security reporting in Microsoft Defender portal](cloud-security-reporting.md).
+
+### Scanning support for Docker Hardened container images
+
+May 19, 2026
+
+Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defender Vulnerability Management, is extending its scanning coverage to Docker Hardened container images, and identify vulnerabilities in Docker Images to validate that they're shipping the most secure builds possible. 
+As additional image types are being scanned, your bill might increase. The rollout of this change will occur gradually over several weeks and requires no user action.
+
+For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+
+### Microsoft Defender Experts for Servers as a managed XDR option
+
+May 18, 2026
+
+Defender for Cloud is now partnered with Microsoft Defender Experts, as a managed extended detection and response (XDR) service for server workloads.
+
+Microsoft analysts and automation work together to detect, prioritize, and respond to threats on machines protected by Defender for Servers Plan 1 or Plan 2 across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises environments. Defender Experts for Servers is sold separately and includes Defender Experts for Hunting and Ask Defender Experts.
+
+Learn more about [Microsoft Defender Experts for Servers](defender-for-servers-overview.md#managed-detection-and-response-with-defender-experts-for-servers).
 
 ### SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (Preview)
 
@@ -140,14 +185,6 @@ Learn more about [GitHub Advanced Security integration](github-advanced-security
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Update | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
-### SQL Vulnerability Assessment Express Configuration preview announcement
-
-April 30, 2026
-
-Preview announcement for SQL Vulnerability Assessment (VA) Express Configuration now available for Azure SQL Managed Instance and Azure Synapse Analytics Workspaces.
-
-Learn more about [SQL vulnerability assessment overview](sql-azure-vulnerability-assessment-overview.md) and how to [enable vulnerability assessment](sql-azure-vulnerability-assessment-enable.md).
-
 ### Defender for Containers runtime protection on EKS Bottlerocket is now generally available
 
 April 30, 2026
@@ -175,6 +212,7 @@ DNS Detection for Kubernetes is now generally available in Defender for Containe
 DNS Detection monitors DNS queries from containerized workloads to detect suspicious activity such as communication with malicious domains and DNS tunneling. The feature requires the Defender sensor deployed via Helm.
 
 Learn more about [DNS Detection availability in Defender for Containers](support-matrix-defender-for-containers.md#runtime-protection-features).
+
 
 ### General availability of Defender for Storage integration in Azure portal Storage Center
 
