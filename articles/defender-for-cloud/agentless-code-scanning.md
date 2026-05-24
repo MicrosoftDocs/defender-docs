@@ -5,7 +5,7 @@ ms.author: elkrieger
 author: ElazarK
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/19/2026
+ms.date: 05/24/2026
 ms.custom: references_regions
 #customer intent: As a security professional, I want to learn how agentless code scanning in Microsoft Defender for Cloud can help identify vulnerabilities in my code and IaC configurations.
 ---
@@ -17,6 +17,8 @@ Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable
 You can customize which scanners to run and define exactly which organizations, projects, or repositories to include or exclude from scanning.
 
 ## Prerequisites
+
+Before you enable agentless code scanning, make sure you meet the following requirements:
 
 - **Supported use cases**:
   - [Security recommendations to prioritize and fix code vulnerabilities](defender-for-devops-introduction.md#manage-your-devops-environments-in-defender-for-cloud)
@@ -41,7 +43,7 @@ You can customize which scanners to run and define exactly which organizations, 
 
 ## Key benefits
 
-Some of the key benefits of agentless code scanning in Microsoft Defender for Cloud are:
+Agentless code scanning in Microsoft Defender for Cloud provides the following benefits:
 
 - **Proactive risk management**: Identify risks early in the development process. This enables secure coding practices and reduces vulnerabilities before they reach production.  
 - **Effortless onboarding**: Set up quickly with minimal configuration and without pipeline changes.  
@@ -64,7 +66,7 @@ Creating the connector enhances security by providing foundational cloud securit
 
 ## Scanning tools
 
-Agentless code scanning uses various open-source tools to find vulnerabilities and misconfigurations in code and Infrastructure-as-Code (IaC) templates:
+Agentless code scanning uses open-source tools to find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates:
 
 | **Tool** | **Supported IaC/Languages** | **License** |
 | --- | --- | --- |
@@ -82,17 +84,23 @@ These tools support a wide range of languages and infrastructure-as-code (IaC) f
 
 #### Version control systems
 
+Agentless code scanning supports the following version control systems:
+
 - **Azure DevOps**: Full support for repositories connected via the Azure DevOps connector.
 
 - **GitHub**: Full support for repositories connected via the GitHub connector.
 
 #### Programming languages
 
+Agentless code scanning supports the following programming languages and dependency ecosystems:
+
 - **Static code analysis**: Python; JavaScript/TypeScript.
 
 - **Dependency ecosystems (via Trivy)**: Node.js (npm, yarn), Python (pip, Pipenv, Poetry), Java (Maven, Gradle), .NET (NuGet), Go modules, Ruby (RubyGems), PHP (Composer), Rust (Cargo), and other supported languages and package ecosystems via manifests and lockfiles.
 
 #### Infrastructure-as-Code (IaC) platforms and configurations
+
+The following table lists the IaC platforms and file types supported by agentless code scanning:
 
 | **IaC Platform** | **Supported file types** | **Notes** |
 | --- | --- | --- |
@@ -111,7 +119,11 @@ These tools support a wide range of languages and infrastructure-as-code (IaC) f
 
 ## Enable agentless code scanning on your Azure DevOps and GitHub organizations
 
-You can connect both Azure DevOps and GitHub organizations to Defender for Cloud to enable agentless code scanning. Follow the steps in [Connect your Azure DevOps organizations](quickstart-onboard-devops.md#connect-your-azure-devops-organization) or [Connect your GitHub organizations](quickstart-onboard-github.md#connect-your-github-environment) to get started. 
+You can connect both Azure DevOps and GitHub organizations to Defender for Cloud to enable agentless code scanning.
+To set up the connection, use one of these guides:
+
+- [Connect your Azure DevOps organizations](quickstart-onboard-devops.md#connect-your-azure-devops-organization)
+- [Connect your GitHub organizations](quickstart-onboard-github.md#connect-your-github-environment)
 
 :::image type="content" source="media/agentless-code-scanning/agentless-code-scanning-setup.gif" alt-text="Diagram showing an animated walkthrough of the Defender for Cloud connector setup that enables agentless code scanning for Azure DevOps and GitHub." lightbox="media/agentless-code-scanning/agentless-code-scanning-setup.gif":::
 
@@ -135,7 +147,7 @@ For both GitHub and Azure DevOps, you can control which scanners run and specify
 
     Autodiscovery isn't available in inclusion mode, because only the listed repositories are scanned.
 
-    This allows you to match scanning to your security needs, keep coverage up to date as your environment grows, and avoid unnecessary scans or unscanned areas.
+    These scope configuration options let you match scanning to your security needs, keep coverage up to date as your environment grows, and avoid unnecessary scans or gaps.
 
 ## How agentless code scanning works
 
@@ -151,13 +163,15 @@ Once you enable the agentless code scanning feature within a connector, the scan
 
 1. **Code retrieval**: It securely retrieves the latest code from the default (main) branch of each repository for analysis, initially after connector setup and then daily.
 
-1. **Analysis**: The system uses a set of built-in scanning tools managed and updated within Microsoft Defender for Cloud to find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates. It also creates an SBOM to allow for queryable package management.
+1. **Analysis**: The system uses built-in scanning tools that Microsoft Defender for Cloud manages and updates. These tools find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates. The system also creates an SBOM to support package queries.
 
 1. **Findings processing**: It processes scan findings through Defender for Cloud’s backend to create actionable security recommendations.
 
-1. **Results delivery**: The system shows findings as [security recommendations](recommendations-reference-devops.md) in Defender for Cloud, allowing security teams to review and address issues.
+1. **Results delivery**: The system shows findings in Defender for Cloud as security recommendations. For details, see [DevOps security recommendations reference](recommendations-reference-devops.md).
 
 ### Scan frequency and duration
+
+Agentless code scanning uses the following schedule:
 
 - **Scan frequency**:
     - The security posture of repositories, pipelines, and service connections is assessed when you create the connector and then every eight hours.
@@ -173,7 +187,7 @@ After the scans finish, you can access security findings within Microsoft Defend
 
 To access findings:
 
-1. Navigate to the [Security recommendations](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/5) tab in Microsoft Defender for Cloud.
+1. In Microsoft Defender for Cloud, go to the Security recommendations tab: [Open Security recommendations](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/5).
 
 1. Review recommendations for both Azure DevOps and GitHub repositories, such as:
     - [Repositories should have code scanning findings resolved](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsWithRulesBlade/assessmentKey/99232bb2-9b21-4bbb-8e3c-763673b9923d/showSecurityCenterCommandBar~/false) - Indicates vulnerabilities found in code repositories.
@@ -184,7 +198,7 @@ To access findings:
    
    - [Repositories should have dependency vulnerability scanning findings resolved](recommendations-reference-devops.md#azure-devops-repositories-should-have-dependency-vulnerability-scanning-findings-resolved) - Indicates vulnerable open-source packages detected in repositories.
    
-1. For the full range of recommendations supported for both platforms, see: [Azure DevOps and GitHub security recommendations](recommendations-reference-devops.md).
+1. For the full range of recommendations supported for both platforms, see [Azure DevOps and GitHub security recommendations](recommendations-reference-devops.md).
 
    Recommendations include items such as requiring multi-reviewer approvals, restricting secret access, and enforcing best practices for both Azure DevOps and GitHub environments.
 
@@ -192,7 +206,9 @@ To access findings:
 
 ## Difference between agentless code scanning and in-pipeline scanning
 
-Agentless code scanning and in-pipeline scanning using the Microsoft Security DevOps extension both offer security scanning within Azure DevOps and GitHub. They serve different needs but complement each other. The following table highlights the main differences to help you choose the option that best suits your security and development needs.
+### Agentless vs. in-pipeline scanning
+
+Agentless code scanning and in-pipeline scanning with the Microsoft Security DevOps extension both provide security scanning in Azure DevOps and GitHub. They serve different needs and can complement each other. The following table summarizes the main differences so you can choose the option that best fits your environment.
 
 | **Aspect** | **Agentless code scanning** | **In-pipeline scanning** |
 | --- | --- | --- |
@@ -210,12 +226,12 @@ Agentless code scanning avoids creating resources in the subscription and doesn'
 
 ## Data security, compliance, and access control for agentless code scanning
 
-Microsoft Defender for Cloud’s agentless code scanning service ensures secure and compliant handling of your code by implementing strict data security and privacy measures:  
+Microsoft Defender for Cloud's agentless code scanning service helps protect your code with data security and privacy controls:
 
 - **Data encryption and access control**: The system encrypts all data in transit using industry-standard protocols. Only authorized Defender for Cloud services can access your code.  
-- **Data residency and retention**: Scans occur in the same geo as your Azure DevOps and GitHub connectors (US or EU) to comply with data protection laws. The system processes code only during scanning and securely deletes it afterward, with no long-term storage.  
-- **Access to repositories**: The service generates a secure access token for Azure DevOps and GitHub to perform scans. This token enables retrieval of necessary metadata and code without creating resources in your subscription. Only Defender for Cloud components have access, protecting data integrity.  
-- **Compliance support**: The service aligns with regulatory and security standards for data handling and privacy, ensuring secure processing and scanning of customer code in compliance with regional data protection requirements.  
+- **Data residency and retention**: Scans run in the same geo as your Azure DevOps and GitHub connectors (US or EU) to support data protection requirements. The system processes code during scanning and then securely deletes it. It doesn't keep long-term code storage.
+- **Access to repositories**: The service generates a secure access token for Azure DevOps and GitHub to run scans. This token lets the service retrieve required metadata and code without creating resources in your subscription. Only Defender for Cloud components can use this access.
+- **Compliance support**: The service aligns with regulatory and security standards for data handling and privacy to support secure, regional processing of customer code.
 
 These measures ensure a secure, compliant, and efficient code scanning process, maintaining your data’s privacy and integrity.
 
@@ -224,14 +240,14 @@ These measures ensure a secure, compliant, and efficient code scanning process, 
 During the **public preview** phase, the following limitations apply:  
 
 - **No binary scanning**: Only code (SAST) and IaC scanning tools are executed.  
-- **Scan frequency**: It scans repositories upon enablement, and then daily.  
-- **Repository size**: It limits scanning to repositories under 1 GB.
+- **Scan frequency**: Agentless code scanning scans repositories when you enable the feature and then once per day.
+- **Repository size**: Agentless code scanning supports repositories under 1 GB.
 - **Branch coverage**: Scans cover only the default branch (usually `main`).  
 - **Tool customization**: You can't customize scanning tools.
 
 Syft (SBOM) currently has the following limitations:
 
-- SBOMs can't be downloaded. You can use Syft results to [query specific packages](/azure/defender-for-cloud/query-software-bill-of-materials) and the repositories that use them.
+- SBOMs can't be downloaded. You can query Syft results to find specific packages and the repositories that use them. For guidance, see [Query software bill of materials](/azure/defender-for-cloud/query-software-bill-of-materials).
 
 - A repository needs a lock file. Otherwise, only direct dependencies are found.
 - The SBOM size limitation is restricted to 1MB. If there are a lot of packages identified, our ingestion into the Cloud Map will fail.
