@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/18/2026
+ms.date: 05/24/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,7 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| May 20, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases (AWS RDS) will reach General Availability on June 1, 2026](#microsoft-defender-for-open-source-relational-databases-aws-rds-will-reach-general-availability-on-june-1-2026) |
+| May 24, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Availability](#microsoft-defender-for-open-source-relational-databases-on-aws-rds-will-become-generally-availabile) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
 | May 19, 2026| GA | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
 | May 18, 2026 | GA | [Microsoft Defender Experts for Servers as a managed XDR option](#microsoft-defender-experts-for-servers-as-a-managed-xdr-option) |
@@ -43,15 +43,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
 
-### Microsoft Defender for Open-Source Relational Databases (AWS RDS) will reach General Availability on June 1, 2026
+### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Availabile
 
-May 20, 2026
+May 24, 2026
 
-Microsoft Defender for Open-Source Relational Databases will be generally available for AWS Relational Database Service (RDS) instances on June 1, 2026. This release transitions the service from preview to production support.
+Microsoft Defender for Open-Source Relational Databases will be generally available for Amazon Web Services Relational Database Service (AWS RDS) instances on **June 1, 2026**.
 
-Starting June 1, 2026, the plan will begin billing for AWS RDS instances, and usage will appear on your July 2026 Azure bill. You continue to receive database threat protection and sensitive data discovery for supported open-source relational databases, including PostgreSQL, MySQL, and MariaDB on AWS RDS.
+Starting June 1, 2026, the plan will begin billing for AWS RDS instances that are already onboarded to the preview of the feature. Usage will start to appear on your July 2026 bill. You continue to receive database threat protection and sensitive data discovery for supported open-source relational databases, including Aurora PostgreSQL/MySQL, PostgreSQL, MySQL, and MariaDB on AWS RDS.
 
-No action is required to maintain protection. To opt out and avoid future charges, [disable Open-Source Relational Databases on the relevant AWS account](enable-defender-for-databases-aws.md#disable-the-plan) before June 1, 2026.
+No action is required to maintain protection. To **opt out** and avoid future charges, [disable Open-Source Relational Databases on the relevant AWS account](enable-defender-for-databases-aws.md#disable-the-plan) before June 1, 2026.
 
 Learn more about [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) and how to [manage database protection plans](enable-defender-for-databases-aws.md).
 
