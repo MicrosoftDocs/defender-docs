@@ -23,7 +23,7 @@ Before setting up continuous export with the REST API, make sure you meet the fo
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-### Required roles and permissions
+Required roles and permissions:
 
 - Security Admin or Owner for the resource group
 - Write permissions for the target resource.
