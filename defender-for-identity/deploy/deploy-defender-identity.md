@@ -26,7 +26,7 @@ The sensor version you deploy depends on the server role and operating system. U
 | --------- | --------- | --------- |
 |Domain controller | Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea)|[Defender for Identity sensor v3.x](deploy-sensor-v3.md)|
 |Domain controller with AD FS, AD CS, or Microsoft Entra Connect identity roles   | Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea)|[Defender for Identity sensor v3.x](deploy-sensor-v3.md)|
-|Domain controller | Windows Server 2016 or later| [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) |
+|Domain controller | Windows Server 2016 or earlier| [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) |
 |[AD FS server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 |[AD CS server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 |[Microsoft Entra Connect server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
