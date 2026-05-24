@@ -1,7 +1,7 @@
 ---
 title: What's new archive
 description: This article lists Microsoft Defender for Identity release notes for versions and features released over 6 months ago.
-ms.date: 02/08/2026
+ms.date: 05/24/2026
 ms.topic: reference
 ---
 
@@ -15,6 +15,17 @@ For information about the latest versions and features, see [What's new in Micro
 > Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or AD FS servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
+
+## October 2025
+
+We're excited to announce that the Microsoft Defender for Identity sensor v3.x is now generally available (GA).
+The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number|Updates|
+|---|---|
+|2.249|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers other security enhancements and performance improvements.|
 
 ## September 2025
 
