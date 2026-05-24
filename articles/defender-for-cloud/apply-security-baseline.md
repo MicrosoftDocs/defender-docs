@@ -1,17 +1,17 @@
 ---
-title: Review OS misconfiguration recommendations in Microsoft Defender for Cloud
+title: Review and remediate OS misconfigurations in Microsoft Defender for Cloud
 description: Learn how Microsoft Defender for Cloud uses the guest configuration to compare machine OS settings with baselines in Microsoft Cloud Security Benchmark.
 ms.topic: how-to
 ms.author: elkrieger
-author: Elazark
-ms.date: 02/19/2025
+author: ElazarK
+ms.date: 05/24/2026
 ---
 
-# Remediate OS misconfigurations
+# Review and remediate OS misconfigurations in Microsoft Defender for Cloud
 
 Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is machine hardening.
 
-Defender for Cloud assesses operating system settings against compute security baselines provided by the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). Machine information is gathered for assessment using the Azure Policy machine configuration extension (formerly known as the guest configuration) on the machine. [Learn more](operating-system-misconfiguration.md)
+Defender for Cloud assesses operating system settings against compute security baselines provided by the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). Machine information is gathered for assessment by using the Azure Policy machine configuration extension (formerly known as guest configuration) on the machine. For more information, see [Operating system misconfigurations in Defender for Cloud](operating-system-misconfiguration.md).
 
 This article describes how to review recommendations made by the assessment.
 
@@ -26,6 +26,8 @@ This feature previously used the Log Analytics agent (also known as the Microsof
 
 ## Review and remediate OS baseline recommendations
 
+To review and remediate OS baseline recommendations:
+
 1. In Defender for Cloud, open the **Recommendations** page.
 1. Select the relevant recommendation.
     - For **Windows** machines, [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8c3d9ad0-3639-4686-9cd2-2b2ab2609bda).
@@ -33,7 +35,7 @@ This feature previously used the Log Analytics agent (also known as the Microsof
 
         :::image type="content" source="media/apply-security-baseline/recommendations-baseline.png" alt-text="The two recommendations for comparing the OS configuration of machines with the relevant Azure security baseline." lightbox="media/apply-security-baseline/recommendations-baseline.png":::
 
-1. On the recommendation details page you can see the affected resources, and specific security findings. [Remediate](implement-security-recommendations.md) the recommendation.
+1. On the recommendation details page, review the affected resources and specific security findings. To complete the fix, see [Remediate security recommendations](implement-security-recommendations.md).
 
 ## Query recommendations
 
@@ -70,3 +72,4 @@ Here are two sample queries you can use:
 ## Next steps
 
 Learn more about [Azure Resource Graph's query language](/azure/governance/resource-graph/concepts/query-language?branch=main).
+
