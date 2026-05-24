@@ -1,8 +1,9 @@
 ---
 title: Configure the Security Events connector for anomalous RDP login detection
 description: Learn how to configure the Security Events or Windows Security Events connector for anomalous RDP login detection.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: how-to
 ms.date: 02/24/2023
 

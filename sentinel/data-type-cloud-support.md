@@ -1,10 +1,11 @@
 ---
 title: Support for Microsoft Sentinel connector data types in different clouds
 description: This article describes the types of clouds that affect data streaming from the different connectors that Microsoft Sentinel supports.  
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: ofshezaf
 ms.topic: concept-article
 ms.date: 06/09/2024
-ms.author: guywild
 
 
 #Customer intent: As a security analyst, I want to understand the data type support for Microsoft Sentinel across different cloud environments so that I can ensure comprehensive threat detection and response.

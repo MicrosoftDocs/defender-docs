@@ -2,10 +2,11 @@
 title: Agent creation tool collection in Microsoft Sentinel MCP server
 titleSuffix: Microsoft Security  
 description: Learn about the different tools available in the Agent creation collection in Microsoft Sentinel 
+ms.author: pauloliveria
 author: poliveria
+ms.reviewer: macasgra
 ms.topic: how-to
 ms.date: 01/30/2026
-ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 

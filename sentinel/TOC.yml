@@ -14,8 +14,6 @@
       href: prerequisites.md
     - name: Workspace architecture
       items:
-        - name: Review sample workspace designs
-          href: sample-workspace-designs.md
         - name: Prepare for multiple workspaces
           href: prepare-multiple-workspaces.md
         - name: Sample workspace architecture
@@ -80,16 +78,21 @@
     - name: Microsoft Sentinel SIEM experience in Defender portal
       href: microsoft-sentinel-defender-portal.md
     - name: SIEM best practices in Microsoft Sentinel
-      href: best-practices.md
       items:
-        - name: Overview
-          href: sentinel-solutions.md
-          displayName: SIEM solutions, content hub
-        - name: Deploy out-of-the-box content
-          href: sentinel-solutions-deploy.md
-          displayName: content hub
-        - name: Delete out-of-the-box content
-          href: sentinel-solutions-delete.md
+        - name: SIEM best practices overview
+          href: best-practices.md
+        - name: Detection lifecycle management recommendations
+          href: detection-lifecycle-management-recommendations.md
+        - name: Manage out-of-box content
+          items:
+            - name: Overview
+              href: sentinel-solutions.md
+              displayName: SIEM solutions, content hub
+            - name: Deploy out-of-the-box content
+              href: sentinel-solutions-deploy.md
+              displayName: content hub
+            - name: Delete out-of-the-box content
+              href: sentinel-solutions-delete.md
         - name: Manage solution deprecation lifecycle
           href: sentinel-solution-deprecation.md
         - name: SIEM solution catalog
@@ -600,7 +603,7 @@
     - name: Microsoft Sentinel data lake overview
       href: datalake/sentinel-lake-overview.md
       displayName: data lake
-    - name: Direct ingestion into the data lak e
+    - name: Direct ingestion into the data lake
       href: datalake/sentinel-lake-log-ingestion-guidance.md
       displayName: data lake
     - name: Data federation in the Microsoft Sentinel data lake
@@ -969,10 +972,6 @@
       href: sentinel-solutions-post-publish-tracking.md
     - name: Packaging and publishing a Sentinel platform solution
       href: package-platform-solution.md
-    - name: Sentinel SIEM solution lifecycle post publish
-      href: publish-sentinel-solutions.md
-    - name: Solution lifecycle post publish
-      href: sentinel-solutions-post-publish-tracking.md
     - name: Managing Platform Solutions
       href: manage-platform-solutions.md
     - name: Troubleshoot solutions in Microsoft Sentinel
@@ -1033,6 +1032,8 @@
               href: normalization-entity-application.md
         - name: ASIM schemas
           items:
+            - name: ASIM agent event schema
+              href: normalization-schema-agent.md
             - name: ASIM alert event schema
               href: normalization-schema-alert.md
             - name: ASIM audit event schema

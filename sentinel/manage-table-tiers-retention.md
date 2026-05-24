@@ -1,9 +1,9 @@
 ---
 title: Configure table settings in Microsoft Sentinel
 description: Configure Microsoft Sentinel and Defender XDR table settings in Microsoft Defender Portal to optimize security operations and cost efficiency.
-ms.reviewer: dzatakovi
 ms.author: guywild
 author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 11/05/2025
 # Customer intent: As an IT administrator or subscription owner, I want to manage Microsoft Sentinel and Defender XDR table tiers and retention settings in Microsoft Defender Portal to optimize security operations needs and cost efficiency.

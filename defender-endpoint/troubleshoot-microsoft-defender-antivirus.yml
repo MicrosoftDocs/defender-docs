@@ -7,7 +7,7 @@ metadata:
   ms.reviewer: yongrhee
   ms.service: defender-endpoint
   ms.topic: troubleshooting
-  ms.date: 05/05/2026
+  ms.date: 05/11/2026
   ai-usage: ai-assisted
   ms.localizationpriority: medium
   ms.custom: nextgen
@@ -1309,6 +1309,21 @@ sections:
          Message: The antimalware engine no longer supports this operating system, and is no longer protecting your system from malware.
 
          Description: The support for your operating system has expired. Microsoft Defender Antivirus is no longer supported on your operating system, has stopped functioning, and isn't protecting against malware threats.
+
+     - question: Event ID 2050
+       answer: |
+
+         Symbolic name: `MALWAREPROTECTION_SAMPLESUBMISSION_UPLOADED`
+
+         Message: The antimalware platform submitted a file for sample analysis.
+
+         Description: A file was submitted to the cloud for further analysis as part of the automatic sample submission feature.
+
+          - File Name: The full path of the file that was submitted for analysis.
+
+          - SHA-256 Hash: The SHA-256 hash of the submitted file.
+
+         User action: No action is required. This event is informational. The file was submitted based on the sample submission consent configuration. By default, Microsoft Defender Antivirus automatically sends files that don't contain personally identifiable information (PII). For more information about sample submission settings, see [Cloud protection and sample submission at Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
 
      - question: Event ID 3002
        answer: |

@@ -2,7 +2,7 @@
 title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 04/16/2026
+ms.date: 05/18/2026
 
 ---
 
@@ -19,6 +19,18 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 > Get notified when this page is updated by copying and pasting the following URL into your feed reader:
 >
 > `https://aka.ms/msem/rss`
+
+## May 2026
+
+### New predefined classification
+
+The following predefined **Device** classification rule was added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| Senior Executive User Workstation | Devices in frequent use by users classified as senior executives. This rule logic relies on the predefined critical identity classifications whose names start with "Senior Executive". |
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
 
 ## April 2026
 
