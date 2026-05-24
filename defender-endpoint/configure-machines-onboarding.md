@@ -56,4 +56,4 @@ To configure this connection and deploy onboarding policies, see <a href="/intun
 
 - [Ensure your devices are configured properly](configure-machines.md)
 - [Increase compliance to the Defender for Endpoint security baseline](configure-machines-security-baseline.md)
-- [Optimize ASR rule deployment and detections](configure-machines-asr.md)
+- [Monitor ASR rule activity](attack-surface-reduction-rules-monitor.md)
