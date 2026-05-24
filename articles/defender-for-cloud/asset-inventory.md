@@ -97,7 +97,7 @@ You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in t
 
 1. To view the current selected filter options as a query in Resource Graph Explorer, select **Open query**.
 
-    ![Screenshot of Azure Resource Graph Explorer showing the Defender for Cloud inventory query and filtered results.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
+    :::image type="content" source="media/asset-inventory/inventory-query-in-resource-graph-explorer.png" alt-text="Screenshot of Azure Resource Graph Explorer showing the Defender for Cloud inventory query and filtered results." lightbox="media/asset-inventory/inventory-query-in-resource-graph-explorer.png":::
 
 1. If you defined some filters and left the page open, Defender for Cloud doesn't update the results automatically. Any changes to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
 
@@ -106,7 +106,7 @@ You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in t
 1. To save filtered inventory in CSV form, select **Download CSV report**.
 1. To save a query in Resource Graph Explorer, select **Open a query**. When you're ready to save a query, select **Save as** and in **Save query**, specific a query name and description, and whether the query is private or shared.
 
-    ![Screenshot of Azure Resource Graph Explorer showing the Defender for Cloud inventory query and filtered results.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
+    :::image type="content" source="media/asset-inventory/inventory-query-in-resource-graph-explorer.png" alt-text="Screenshot of Azure Resource Graph Explorer showing the Defender for Cloud inventory query and filtered results." lightbox="media/asset-inventory/inventory-query-in-resource-graph-explorer.png":::
 
 Changes made to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
 

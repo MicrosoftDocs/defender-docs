@@ -788,7 +788,7 @@
             href: transition-to-defender-vulnerability-management.md
           - name: Common questions 
             href: common-questions-microsoft-defender-vulnerability-management.md
-      - name: Antimalware
+      - name: Container runtime antimalware detection and blocking
         displayName: antimalware, containers,
         href: anti-malware.md
       - name: Binary drift detection and blocking
@@ -1065,7 +1065,7 @@
         - name: Disable vulnerability findings
           displayName: qualys, rapid7, va
           href: disable-vulnerability-findings.md
-        - name: Remediate OS misconfigurations (Cloud Security Benchmark)
+        - name: Review and remediate OS misconfigurations in Microsoft Defender for Cloud
           displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
           href: apply-security-baseline.md
         - name: Remediate system updates
