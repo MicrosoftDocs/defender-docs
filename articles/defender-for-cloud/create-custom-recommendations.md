@@ -83,7 +83,7 @@ We recommend using the query editor to create a recommendation query. You can al
 
 #### Query templates and examples
 
-The query editor includes built-in examples, and the templates in this section show how to structure common security checks. Each template returns resources in scope and marks non-compliant resources as `UNHEALTHY`.
+The query editor includes built-in examples, and the templates in this section show how to structure common security checks. Each template returns resources in scope and marks non-compliant resources as `UNHEALTHY`. In this template pattern, edit only the `condition` expression and keep the `HealthStatus` line unchanged.
 
 > [!NOTE]
 > The templates in this section use Azure resource types. For AWS and GCP resources, change `Environment == 'Azure'` to `Environment == 'AWS'` or `Environment == 'GCP'` and update `Identifiers.Type` to match the resource type in your environment.
@@ -210,6 +210,12 @@ Every query must set a `HealthStatus` value for each resource. Use the `iff()` f
 
 ```kql
 | extend condition = (your condition here)
+| extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
+```
+
+In this pattern, edit only the `condition` expression. Keep the `HealthStatus` line unchanged:
+
+```kql
 | extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
 ```
 
