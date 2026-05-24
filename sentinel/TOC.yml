@@ -1034,6 +1034,8 @@
               href: normalization-entity-application.md
         - name: ASIM schemas
           items:
+            - name: ASIM agent event schema
+              href: normalization-schema-agent.md
             - name: ASIM alert event schema
               href: normalization-schema-alert.md
             - name: ASIM audit event schema
