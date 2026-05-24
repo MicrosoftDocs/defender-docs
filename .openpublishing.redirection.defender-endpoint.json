@@ -312,7 +312,7 @@
     },
     {
       "source_path": "defender-endpoint/microsoft-defender-endpoint-ios.md",
-      "redirect_url": "//defender-endpoint/mtd",
+      "redirect_url": "/defender-endpoint/mtd",
       "redirect_document_id": false
     },
     {
