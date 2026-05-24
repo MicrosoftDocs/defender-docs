@@ -53,9 +53,9 @@ To implement these policies:
 
 1. Select each tab and set parameters based on your requirements:
 
-    1. On the **Basics** tab, set the policy scope. For centralized management, assign the policy to the management group that contains the subscriptions that use this continuous export configuration.
-    2. On the **Parameters** tab, set the resource group name, location, and Event Hubs details.
-    3. Optionally, on the **Remediation** tab, create a remediation task to apply this assignment to existing subscriptions.
+    1. On the Basics tab, set the policy scope. For centralized management, assign the policy to the management group that contains the subscriptions that use this continuous export configuration.
+    1. On the Parameters tab, set the resource group name, location, and Event Hubs details.
+    1. (Optional) On the Remediation tab, create a remediation task to apply this assignment to existing subscriptions.
 
 1. Review the summary page.
 1. Select **Create**.
