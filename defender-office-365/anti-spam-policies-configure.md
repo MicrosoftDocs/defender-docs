@@ -10,7 +10,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete anti-spam policies in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 05/19/2026
+ms.date: 05/22/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -74,7 +74,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in [Exc
    When you're finished on the **Name your policy** page, select **Next**.
 
 4. On the **Users, groups, and domains** page, identify the internal recipients that the policy applies to (recipient conditions):
-   - **Users**: The specified mailboxes, mail users, mail contacts, or mail enabled public folders.
+   - **Users**: The specified mailboxes, mail users, or mail enabled public folders.
    - **Groups**:
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
      - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
