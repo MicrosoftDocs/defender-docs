@@ -1,10 +1,10 @@
 ---
 title: Cloud asset inventory
 description: Learn about the cloud asset inventory in Microsoft Defender for Cloud and Security Exposure Management
-ms.date: 04/19/2026
+ms.date: 05/24/2026
 ms.topic: how-to
-ms.author: dlanger
-author: dlanger
+ms.author: elkrieger
+author: ElazarK
 zone_pivot_groups: defender-portal-experience
 ---
 # Cloud asset inventory
@@ -51,7 +51,7 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
 1. In **Value**, select the apps to filter on.
 
 - **Total resources**: The total number of resources connected to Defender for Cloud.
-- **Unhealthy resources**: Resources with active security recommendations that you can implement. [Learn more about implementing security recommendations](review-security-recommendations.md).
+- **Unhealthy resources**: Resources with active security recommendations that you can implement. For remediation guidance, see [Review security recommendations](review-security-recommendations.md).
 - **Resource count by environment**: The number of resources in each environment.
 - **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
 
@@ -97,7 +97,7 @@ You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in t
 
 1. To view the current selected filter options as a query in Resource Graph Explorer, select **Open query**.
 
-    ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
+    ![Screenshot of Azure Resource Graph Explorer showing the Defender for Cloud inventory query and filtered results.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
 
 1. If you defined some filters and left the page open, Defender for Cloud doesn't update the results automatically. Any changes to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
 
@@ -106,7 +106,7 @@ You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in t
 1. To save filtered inventory in CSV form, select **Download CSV report**.
 1. To save a query in Resource Graph Explorer, select **Open a query**. When you're ready to save a query, select **Save as** and in **Save query**, specific a query name and description, and whether the query is private or shared.
 
-    ![Inventory query in ARG.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
+    ![Screenshot of Azure Resource Graph Explorer showing the Defender for Cloud inventory query and filtered results.](./media/asset-inventory/inventory-query-in-resource-graph-explorer.png)
 
 Changes made to resources won't affect the displayed results unless you manually reload the page or select **Refresh**.
 
@@ -433,3 +433,4 @@ Some assets may appear outside defined cloud scopes:
 - [Manage security recommendations](review-security-recommendations.md?pivots=defender-portal)
 
 ::: zone-end
+
