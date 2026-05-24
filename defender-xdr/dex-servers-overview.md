@@ -31,7 +31,7 @@ ms.date: 05/18/2026
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
 > [!IMPORTANT]
-> Microsoft Defender Experts for Servers is sold separately from other Microsoft Defender XDR products. If you're interested in purchasing Defender Experts for Servers, contact your Microsoft account representative. [Learn more about Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+> Microsoft Defender Experts for Servers is sold separately from other Microsoft Defender XDR products and uses **pay-as-you-go consumption meter**. If you're interested in purchasing Defender Experts for Servers, contact your Microsoft account representative. [Learn more about Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 > [!NOTE]
 > Any incident response services offered by Defender Experts ares offered under the Defender Experts Service Terms.

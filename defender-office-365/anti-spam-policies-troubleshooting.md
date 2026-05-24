@@ -7,10 +7,10 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom:
-description: Diagnose and resolve common anti-spam policy issues including policy precedence conflicts, SCL override behavior, and false positives caused by Advanced Spam Filter (ASF) settings.
+ms.custom: msecd-doc-authoring-1012
+description: Diagnose and resolve anti-spam policy issues including policy precedence conflicts, SCL override behavior, and false positives from ASF settings in Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 05/19/2026
+ms.date: 05/21/2026
 ai-usage: ai-assisted
 #customer intent: As an admin, I want to troubleshoot anti-spam policy issues so that I can resolve policy precedence conflicts, unexpected SCL overrides, and ASF false positives.
 appliesto:
@@ -23,11 +23,15 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Administrators can use the information in this article to diagnose and resolve the most common issues related to anti-spam policy configuration, including policy precedence conflicts, unexpected SCL overrides, and false positives caused by Advanced Spam Filter (ASF) settings.
+Use the following information to diagnose and resolve common anti-spam policy issues:
+
+- Policy precedence conflicts.
+- Unexpected SCL overrides.
+- False positives from Advanced Spam Filter (ASF) settings.
 
 ## Policy precedence issues
 
-Anti-spam policies are evaluated in a specific order. Only the **first matching policy** (highest priority) applies to a recipient. Understanding this order is critical when multiple policies exist. Anti-spam policies are processed in the following order:
+Anti-spam policies are evaluated in a specific order. Only the **first matching policy** (highest priority) applies to a recipient. This order matters when multiple policies exist. Anti-spam policies are processed in the following order:
 
 |Priority|Policy|Notes|
 |---|---|---|
@@ -96,9 +100,9 @@ Reorder the policies so the more specific policy has a **higher priority** (lowe
 
 ## SCL override behavior
 
-The spam confidence level (SCL) determines how messages are classified. Certain mechanisms can override the SCL value assigned by spam filtering, which affects whether messages are delivered to the Inbox, delivered to the Junk Email folder, or quarantined. For SCL values and their default actions, see [Spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md).
+The spam confidence level (SCL) determines how messages are classified and acted on. Certain mechanisms can override the SCL value that spam filtering assigns, which affects whether messages go to the Inbox, the Junk Email folder, or quarantine. For SCL values and their default actions, see [Spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md).
 
-The following mechanisms can override the SCL value assigned by spam filtering. Understanding their behavior and limitations is essential for troubleshooting:
+The following mechanisms can override the SCL value that spam filtering assigns. Their behavior and limitations affect troubleshooting:
 
 |Override mechanism|SCL effect|Limitations|Details|
 |---|---|---|---|
@@ -122,7 +126,7 @@ The following mechanisms can override the SCL value assigned by spam filtering. 
 
 **Symptom**: Users receive spam or phishing messages in their Inbox instead of Junk Email or quarantine.
 
-**Likely cause**: A mail flow rule sets SCL to -1 for too broad a scope (for example, all messages from a specific domain or IP range, or all messages routed through a connector).
+**Likely cause**: A mail flow rule sets SCL to -1 for too broad a scope. For example, all messages from a specific domain or IP range, or all messages routed through a connector.
 
 **How to diagnose**:
 
@@ -139,26 +143,241 @@ The following mechanisms can override the SCL value assigned by spam filtering. 
 
 **Symptom**: You added a sender to the allowed senders list in the anti-spam policy, but messages from that sender are still being filtered.
 
-**Likely cause**: The user is covered by a preset security policy that overrides the custom anti-spam policy settings. Or, the message is being caught by malware or high confidence phishing filtering, which can't be overridden by allow lists.
+**Likely cause**: A preset security policy covers the user and overrides the custom anti-spam policy settings. Or, malware or high confidence phishing filtering is catching the message, and allow lists can't override those verdicts.
 
 **How to diagnose**:
 
 1. Check [message headers](message-headers-eop-mdo.md) for the `X-Forefront-Antispam-Report` header and look for the `SFV` (spam filtering verdict) value:
    - `SFV:SKA` = Message was allowed (skipped filtering due to an allow list entry).
    - `SFV:SPM` = Message was marked as spam (allow list wasn't applied).
-1. Check if the message was caught by malware or phishing filtering, not spam filtering.
+1. Check if malware or phishing filtering caught the message instead of spam filtering.
 
 **Resolution**:
 
 - If the user is in a preset security policy, allowed sender/domain lists in custom policies are ignored. Use the [Tenant Allow/Block List](tenant-allow-block-list-about.md) instead.
 - If the message is flagged for malware or high confidence phishing, [report it as a false positive](submissions-admin.md) via **Submissions** in the Microsoft Defender portal at <https://security.microsoft.com/reportsubmission>.
 
+## Determine which component set the SCL
+
+When you troubleshoot unexpected spam filtering behavior, identify **which component** assigned the SCL value to the message. Multiple components in the Exchange Online filtering pipeline can set or override the SCL: spam filtering, mail flow rules, connection filtering, allowed/blocked sender lists, and Advanced Spam Filter (ASF) settings.
+
+The following steps show how to use message X-headers to trace the SCL source.
+
+### Step 1: Get the message headers
+
+To analyze how the SCL was set, you need the full internet message headers of the affected message:
+
+- **Outlook (desktop)**: Open the message \> select **File** > **Properties**. The headers appear in the **Internet headers** box.
+- **Outlook on the web**: Open the message \> select **...** (More actions) \> **View** \> **View message details**.
+- **Admin (Message trace)**: On the **Message trace** page in the Exchange admin center at <https://admin.exchange.microsoft.com/#/messagetrace>, find the message and view the header details.
+
+> [!TIP]
+> Copy and paste the full headers into the [Message Header Analyzer](https://mha.azurewebsites.net/) tool to parse them into a readable format.
+
+### Step 2: Locate the key X-headers
+
+The following X-headers contain the information you need to trace the SCL source:
+
+|Header|Purpose|
+|---|---|
+|`X-Forefront-Antispam-Report`|Contains the SCL value, spam filtering verdict (SFV), IP verdict (IPV), threat category (CAT), and other filtering decisions.|
+|`X-Microsoft-Antispam`|Contains the bulk complaint level (BCL) and other diagnostic fields.|
+|`X-MS-Exchange-Organization-SCL`|Contains the final SCL value stamped on the message.|
+|`X-CustomSpam`|Present only when an ASF setting flagged the message. Identifies which ASF rule triggered.|
+|`Authentication-Results`|Contains SPF, DKIM, DMARC, and composite authentication (compauth) results.|
+
+For full details on all header fields, see [Anti-spam message headers in cloud organizations](message-headers-eop-mdo.md).
+
+### Step 3: Read the Spam Filtering Verdict
+
+The **SFV** (Spam Filtering Verdict) field in the `X-Forefront-Antispam-Report` header is the primary indicator of which component determined the message's fate:
+
+|SFV value|Component that set the SCL|Meaning|
+|---|---|---|
+|`SFV:SPM`|**Spam filtering (content filter)**|Spam filtering marked the message as spam based on content analysis.|
+|`SFV:NSPM`|**Spam filtering (content filter)**|Spam filtering determined the message wasn't spam.|
+|`SFV:SKN`|**Mail flow rule (transport rule)**|The SCL was set to -1 (bypass spam filtering) **before** spam filtering processed the message.|
+|`SFV:SKS`|**Mail flow rule (transport rule)**|The SCL was set to 5–9 **before** spam filtering processed the message.|
+|`SFV:SKI`|**IP Allow/Block List (connection filtering)**|The message skipped spam filtering because the source IP was in the IP Allow List.|
+|`SFV:SKA`|**Anti-spam policy allowed sender/domain list**|The message skipped spam filtering because the sender or domain is in the allowed senders/domains list.|
+|`SFV:SKB`|**Anti-spam policy blocked sender/domain list**|The message was marked as spam because the sender or domain is in the blocked senders/domains list.|
+|`SFV:SFE`|**User Safe Senders list**|Filtering was skipped because the sender is in the recipient's Outlook Safe Senders list.|
+|`SFV:BLK`|**User Blocked Senders list**|The message was blocked because the sender is in the recipient's Outlook Blocked Senders list.|
+|`SFV:SKQ`|**Quarantine release**|The message was released from quarantine and delivered to the intended recipients.|
+
+### Step 4: Check the IPV field for connection-level decisions
+
+The **IPV** (IP Verdict) field indicates whether the connection filter made a decision about the source IP:
+
+|IPV value|Meaning|
+|---|---|
+|`IPV:CAL`|The source IP address is in the **IP Allow List** in the connection filter policy. Spam filtering was skipped.|
+|`IPV:NLI`|The IP address wasn't found on any IP reputation list. No connection-level override occurred.|
+
+If you see `IPV:CAL` with `SCL:-1`, the **connection filter** (IP Allow List) is the component that bypassed spam filtering.
+
+### Step 5: Check for ASF overrides
+
+If an ASF setting flagged the message, a separate `X-CustomSpam` header is added that identifies which ASF rule triggered. For example:
+
+```text
+X-CustomSpam: Web bug
+```
+
+For the complete list of ASF settings, `X-CustomSpam` values, and their SCL effects, see [Advanced Spam Filter (ASF) settings in anti-spam policies](anti-spam-policies-asf-settings-about.md).
+
+> [!NOTE]
+> ASF adds the `X-CustomSpam` header **after** mail flow rules process the message. You can't use mail flow rules to identify or act on messages that ASF flags.
+
+### Step 6: Check for mail flow rule involvement
+
+If `SFV:SKN` or `SFV:SKS` appears in the header, a **mail flow rule** set the SCL before spam filtering processed the message.
+
+To identify which mail flow rule is responsible:
+
+1. On the **Rules** page in the Exchange admin center at <https://admin.exchange.microsoft.com/#/transportrules>, look for rules with the action **Set the spam confidence level (SCL)**.
+1. Cross-reference the rule conditions with the affected message.
+
+Alternatively, use **Message trace** in the EAC. The detailed message trace output shows an `AGENTINFO` event that identifies which rule fired.
+
+#### PowerShell: Find all SCL-setting mail flow rules
+
+```powershell
+# Connect to Exchange Online PowerShell
+Connect-ExchangeOnline
+
+# List all mail flow rules that set the SCL
+Get-TransportRule | Where-Object {$_.SetSCL -ne $null} |
+    Format-Table Name, State, Priority, SetSCL, @{N='Conditions';E={$_.Conditions | Out-String}} -AutoSize -Wrap
+```
+
+### Decision tree: Trace the SCL source
+
+Use the following workflow to systematically identify which component set the SCL. Start by reading the `X-Forefront-Antispam-Report` header:
+
+1. **Check the SFV value**:
+   - `SFV:SKN`: Mail flow rule set SCL to -1 (bypassed filtering).
+   - `SFV:SKS`: Mail flow rule set SCL to 5-9 (pre-marked as spam).
+   - `SFV:SKI`: Connection filter (IP Allow List) bypassed filtering. Confirm that `IPV:CAL` is also present.
+   - `SFV:SKA`: Anti-spam policy allowed sender/domain list.
+   - `SFV:SKB`: Anti-spam policy blocked sender/domain list.
+   - `SFV:SFE`: User's Safe Senders list.
+   - `SFV:BLK`: User's Blocked Senders list.
+   - `SFV:SPM`: Content filter marked as Spam. Check the `CAT` value for threat type and the `X-CustomSpam` header for ASF triggers.
+   - `SFV:NSPM`: Content filter marked as Not Spam.
+
+1. **Check the X-CustomSpam header** (if present): An ASF setting triggered. Identify which setting and disable it if the message is a false positive.
+
+1. **Check Authentication-Results (compauth)**:
+   - `compauth=fail reason=000`: DMARC explicit failure (might set SCL 7+).
+   - `compauth=fail reason=001`: Implicit authentication failure (spoof intelligence).
+
+1. **Check the SCL value**:
+   - `SCL:-1`: Filtering was bypassed (source identified in the SFV value).
+   - `SCL:0-1`: Not spam (content filter or override).
+   - `SCL:5-6`: Spam (content filter, ASF, or mail flow rule).
+   - `SCL:7-9`: High confidence spam (content filter, ASF, DMARC, or analyst).
+
+### Real-world header examples
+
+The following examples show how to interpret message headers to identify which component set the SCL.
+
+- **SCL set by spam filtering**:
+
+  ```text
+  X-Forefront-Antispam-Report: CIP:198.51.100.50;CTRY:US;LANG:en;
+    SCL:5;SFV:SPM;IPV:NLI;SRV:;H:mail.example.com;PTR:mail.example.com;
+    CAT:SPM;SFTY:;DIR:INB;
+  X-MS-Exchange-Organization-SCL: 5
+  ```
+
+  The content filter marked the message as **Spam** (SFV:SPM, CAT:SPM, SCL:5). No override occurred (IPV:NLI). The spam filtering engine assigned the SCL.
+
+- **SCL set by a mail flow rule**:
+
+  ```text
+  X-Forefront-Antispam-Report: CIP:203.0.113.10;CTRY:GB;LANG:en;
+    SCL:-1;SFV:SKN;IPV:NLI;SRV:;H:partner-mail.contoso.com;
+    CAT:NONE;DIR:INB;
+  X-MS-Exchange-Organization-SCL: -1
+  ```
+
+  A mail flow rule set SCL to -1 **before** spam filtering (SFV:SKN). The message bypassed spam filtering entirely. Check your transport rules for the matching condition.
+
+- **SCL set by IP Allow List**:
+
+  ```text
+  X-Forefront-Antispam-Report: CIP:192.0.2.25;CTRY:DE;LANG:de;
+    SCL:-1;SFV:SKI;IPV:CAL;SRV:;H:smtp.partner.de;
+    CAT:NONE;DIR:INB;
+  X-MS-Exchange-Organization-SCL: -1
+  ```
+
+  The source IP (192.0.2.25) is in the IP Allow List (SFV:SKI, IPV:CAL). Connection filtering bypassed spam filtering and set SCL to -1.
+
+- **SCL set by ASF setting**:
+
+  ```text
+  X-Forefront-Antispam-Report: CIP:198.51.100.99;CTRY:US;LANG:en;
+    SCL:9;SFV:SPM;IPV:NLI;SRV:;H:bulk.sender.com;
+    CAT:HSPM;DIR:INB;
+  X-CustomSpam: Web bug
+  X-MS-Exchange-Organization-SCL: 9
+  ```
+
+  The message matched the **Web bugs in HTML** ASF setting (X-CustomSpam: Web bug), which set SCL to 9 (High confidence spam). The message probably contains a 1×1 tracking pixel. If the message is a legitimate newsletter, disable the `MarkAsSpamWebBugsInHtml` ASF setting.
+
+- **SCL set by DMARC failure**:
+
+  ```text
+  X-Forefront-Antispam-Report: CIP:198.51.100.77;CTRY:US;LANG:en;
+    SCL:7;SFV:SPM;IPV:NLI;SRV:;CAT:SPOOF;DIR:INB;
+  Authentication-Results: spf=fail (sender IP is 198.51.100.77)
+    smtp.mailfrom=example.com; dkim=none;
+    dmarc=fail action=quarantine header.from=example.com;
+    compauth=fail reason=000
+  X-MS-Exchange-Organization-SCL: 7
+  ```
+
+  The message failed DMARC (compauth=fail reason=000), the sender's DMARC policy specified quarantine, and the SCL was elevated to 7 (CAT:SPOOF). Anti-spoofing/DMARC enforcement set this value, not the content filter.
+
+- **SCL overridden by user Safe Senders**:
+
+  ```text
+  X-Forefront-Antispam-Report: CIP:203.0.113.55;CTRY:IN;LANG:en;
+    SCL:-1;SFV:SFE;IPV:NLI;SRV:;CAT:NONE;DIR:INB;
+  X-MS-Exchange-Organization-SCL: -1
+  ```
+
+  The sender is in the recipient's Safe Senders list (SFV:SFE). Spam filtering was skipped and SCL was set to -1. To verify, check the user's junk email configuration:
+
+  ```powershell
+  Get-MailboxJunkEmailConfiguration -Identity "user@contoso.com" |
+      Select-Object TrustedSendersAndDomains
+  ```
+
+### SCL source identification quick reference
+
+|Header evidence|SCL source component|Admin action|
+|---|---|---|
+|`SFV:SPM` or `SFV:NSPM`, no `X-CustomSpam`|**Content filter** (spam filtering engine)|Review anti-spam policy actions; submit false positives.|
+|`SFV:SPM` + `X-CustomSpam:` header present|**ASF setting**|Identify and disable the problematic ASF setting.|
+|`SFV:SKN` (SCL -1) or `SFV:SKS` (SCL 5–9)|**Mail flow rule** (transport rule)|Review `Get-TransportRule` for SCL-setting rules.|
+|`SFV:SKI` + `IPV:CAL`|**Connection filter** (IP Allow List)|Review `Get-HostedConnectionFilterPolicy`.|
+|`SFV:SKA`|**Anti-spam policy** (allowed sender/domain list)|Review allowed senders in anti-spam policy.|
+|`SFV:SKB`|**Anti-spam policy** (blocked sender/domain list)|Review blocked senders in anti-spam policy.|
+|`SFV:SFE`|**User Safe Senders** (Outlook)|Check `Get-MailboxJunkEmailConfiguration`.|
+|`SFV:BLK`|**User Blocked Senders** (Outlook)|Check `Get-MailboxJunkEmailConfiguration`.|
+|`compauth=fail reason=000` + `CAT:SPOOF`|**DMARC/anti-spoofing**|Review sender's DMARC policy; check ARC configuration.|
+|`CAT:HPHSH`|**High confidence phishing detection**|Allow lists can't override this verdict.|
+|`SRV:BULK` + BCL value in `X-Microsoft-Antispam`|**Bulk email detection** (BCL threshold)|Adjust BCL threshold in anti-spam policy.|
+
 ## ASF settings that cause false positives
 
 [Advanced Spam Filter (ASF) settings](anti-spam-policies-asf-settings-about.md) mark messages as spam based on specific message properties. While these settings target characteristics commonly found in spam, they can cause **false positives** when legitimate messages contain the same properties.
 
 > [!NOTE]
-> Enabling one or more ASF settings is an **aggressive** approach to spam filtering. You can't report messages that are flagged by ASF settings as false positives to Microsoft. ASF settings are being deprecated, and the features are being incorporated into other parts of the filtering stack.
+> Enabling one or more ASF settings is an **aggressive** approach to spam filtering. You can't report messages that ASF settings flag as false positives to Microsoft. Microsoft is deprecating ASF settings and incorporating the features into other parts of the filtering stack.
 
 The following tables identify ASF settings that commonly cause false positives and provide guidance on when to disable them.
 
@@ -168,9 +387,7 @@ These settings **increase the SCL** of matching messages, giving them a higher c
 
 |ASF setting|PowerShell parameter|Why it causes false positives|Recommendation|
 |---|---|---|---|
-|**SPF record: hard fail**|`MarkAsSpamSpfRecordHardFail`|Flags messages where SPF returns a hard fail. Legitimate senders with misconfigured SPF records or forwarded messages trigger this setting.|**Turn off** unless you verified all legitimate senders have correct SPF records. Use DMARC enforcement instead.|
-|**Sender ID filtering: hard fail**|`MarkAsSpamFromAddressAuthFail`|Flags messages that fail Sender ID checks. Sender ID is a deprecated protocol that many legitimate senders don't support. Test mode isn't available for this setting.|**Turn off**. Sender ID is obsolete. Use SPF/DKIM/DMARC instead.|
-|**NDR backscatter**|`MarkAsSpamNdrBackscatter`|Flags nondelivery reports (NDRs) that appear to be backscatter (NDRs for messages the user didn't send). Can flag legitimate bounce messages.|**Turn off** unless you experience significant backscatter. Legitimate NDRs from valid mail systems can be incorrectly flagged.|
+|**Image links to remote websites**|`IncreaseScoreWithImageLinks`|Flags messages containing `<Img>` HTML tag links to remote sites. Some legitimate HTML emails include remote images.|**Turn off** if you receive legitimate emails with remote image links.|
 |**Numeric IP address in URL**|`MarkAsSpamNumericIpLink`|Flags messages containing URLs with numeric IP addresses (for example, `http://192.168.1.1/`). Some legitimate internal systems or partner applications use IP-based URLs.|**Turn off** if you have legitimate senders that use IP-based URLs.|
 |**URL redirect to other port**|`MarkAsSpamUrlRedirectsToOtherPort`|Flags messages containing URLs that redirect to TCP ports other than 80 (HTTP), 8080 (alternate HTTP), or 443 (HTTPS). Some legitimate web applications use nonstandard ports.|**Turn off** if legitimate messages contain links to nonstandard ports.|
 |**Links to .biz or .info websites**|`MarkAsSpamBizOrInfoUrls`|Flags messages containing `.biz` or `.info` URLs. Many legitimate businesses use these TLDs.|**Turn off** if you communicate with legitimate senders that use `.biz` or `.info` domains.|
@@ -189,6 +406,14 @@ These settings set the SCL to **9** (High confidence spam), which is a more aggr
 |**Web bugs in HTML**|`MarkAsSpamWebBugsInHtml`|Flags messages containing tracking pixels (1×1 images). Nearly all modern marketing emails and newsletters contain tracking pixels.|**Turn off**. This setting causes a **very high rate of false positives** because tracking pixels are standard in legitimate marketing email.|
 |**Object tags in HTML**|`MarkAsSpamObjectTagsInHtml`|Flags messages with `<object>` HTML tags. Rare in legitimate email.|Can typically leave **on** unless you receive specific false positives.|
 |**Sensitive words**|`MarkAsSpamSensitiveWordList`|Flags messages containing words from Microsoft's sensitive word list. Can flag legitimate HR, medical, or financial communications.|**Turn off** if you experience false positives in business communications involving medical, financial, or HR-related content.|
+|**SPF record: hard fail**|`MarkAsSpamSpfRecordHardFail`|Flags messages where SPF returns a hard fail. Legitimate senders with misconfigured SPF records or forwarded messages trigger this setting. Test mode isn't available for this setting.|**Turn off** unless you verified all legitimate senders have correct SPF records. Use DMARC enforcement instead.|
+
+The following Mark as spam settings set the SCL to **6** (Spam) instead of 9:
+
+|ASF setting|PowerShell parameter|Why it causes false positives|Recommendation|
+|---|---|---|---|
+|**Sender ID filtering: hard fail**|`MarkAsSpamFromAddressAuthFail`|Flags messages that fail Sender ID checks. Sender ID is a deprecated protocol that many legitimate senders don't support. Test mode isn't available for this setting.|**Turn off**. Sender ID is obsolete. Use SPF/DKIM/DMARC instead.|
+|**NDR backscatter**|`MarkAsSpamNdrBackscatter`|Flags nondelivery reports (NDRs) that appear to be backscatter (NDRs for messages the user didn't send). Can flag legitimate bounce messages. Test mode isn't available for this setting.|**Turn off** unless you experience significant backscatter. Legitimate NDRs from valid mail systems can be incorrectly flagged.|
 
 ### How to identify ASF-caused false positives
 
@@ -201,29 +426,18 @@ You can disable ASF settings in the Microsoft Defender portal or in Exchange Onl
 > [!TIP]
 > Use **Test mode** (available for most Increase spam score and Mark as spam settings) before you enable ASF settings in production. In Test mode, the ASF setting adds the corresponding `X-CustomSpam` X-header to the message but takes no action. This approach lets you identify affected messages by using message trace or header analysis before committing to the setting.
 >
-> Test mode **isn't available** for the following ASF settings: **Sender ID filtering: hard fail** (`MarkAsSpamFromAddressAuthFail`) and **NDR backscatter** (`MarkAsSpamNdrBackscatter`).
+> Test mode **isn't available** for the following ASF settings: **SPF record: hard fail** (`MarkAsSpamSpfRecordHardFail`), **Sender ID filtering: hard fail** (`MarkAsSpamFromAddressAuthFail`), and **NDR backscatter** (`MarkAsSpamNdrBackscatter`).
 
 ## Troubleshooting workflow
 
 Use the following workflow to diagnose anti-spam policy issues:
 
-1. **Identify which policy applied**: Check [message headers](message-headers-eop-mdo.md) for the `X-Forefront-Antispam-Report` header and look at the `SFV` value:
-   - `SFV:SKN` = Skipped filtering (mail flow rule or other reason)
-   - `SFV:SKI` = Skipped filtering (IP Allow List)
-   - `SFV:SKA` = Skipped filtering (allowed sender/domain)
-   - `SFV:SPM` = Marked as Spam
-   - `SFV:SFE` = Filtering skipped (Safe Senders)
-   - `SFV:BLK` = Blocked sender
+1. **Identify which component set the SCL**: Use message headers to determine whether spam filtering, a mail flow rule, connection filtering, or another component assigned the SCL value. For detailed steps, see [Determine which component set the SCL](#determine-which-component-set-the-scl).
 
 1. **Check for policy precedence issues**:
    - Is the user in a Strict/Standard preset? The preset wins.
    - Do multiple custom policies match? The lowest priority number wins.
    - No custom policy matches? The default policy applies.
-
-1. **Check for SCL overrides**:
-   - Is there a mail flow rule setting SCL? Review the rule conditions.
-   - Is the sender on an IP Allow List? Review connection filter settings.
-   - Is the sender in an allowed list? Review the anti-spam policy.
 
 1. **Check for ASF false positives**:
    - Look for an `X-CustomSpam` header in the message headers. The header value identifies which ASF setting triggered.
@@ -260,5 +474,7 @@ Get-HostedContentFilterPolicy | Format-Table Identity, AllowedSenders, AllowedSe
 - [Spam confidence level (SCL)](anti-spam-spam-confidence-level-scl-about.md)
 - [Use mail flow rules to set the SCL](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl)
 - [Anti-spam message headers](message-headers-eop-mdo.md)
+- [Message Header Analyzer tool](https://mha.azurewebsites.net/)
+- [Message trace in the EAC](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac)
 - [How to handle legitimate emails getting blocked (false positives)](step-by-step-guides/how-to-handle-false-positives-in-microsoft-defender-for-office-365.md)
 - [Report messages and files to Microsoft](submissions-report-messages-files-to-microsoft.md)
