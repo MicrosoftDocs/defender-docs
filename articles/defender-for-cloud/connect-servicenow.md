@@ -15,9 +15,9 @@ Microsoft Defender for Cloud's integration with ServiceNow's IT Service Manageme
 
 ## Prerequisites
 
-- Have an [application registry in ServiceNow](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
+- Have an application registry configured in ServiceNow. For setup steps, see [How to create a ServiceNow API key and secret](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
 
-- Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
+- Enable Defender Cloud Security Posture Management (CSPM) on your Azure subscription. For setup steps, see [Enable Defender CSPM](tutorial-enable-cspm-plan.md).
 
 - To create the integration, you must have the Security Admin, Contributor, or Owner role.
 
@@ -27,7 +27,7 @@ Microsoft Defender for Cloud's integration with ServiceNow's IT Service Manageme
 
 To connect a ServiceNow account to a Defender for Cloud account:
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com/).
 
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 
@@ -39,7 +39,7 @@ To connect a ServiceNow account to a Defender for Cloud account:
 
    :::image type="content" border="true" source="./media/connect-servicenow/add-servicenow.png" alt-text="Screenshot that shows where the add integration button is and the ServiceNow option." lightbox="media/connect-servicenow/add-servicenow.png":::
 
-1. Enter a name, select the scope, enter the instance URL, User name, Password, Client ID, and client secret that you [created for the application registry](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector) in the ServiceNow portal.
+1. Enter a name, select the scope, and then enter the instance URL, User name, Password, Client ID, and client secret from the application registry that you created in the ServiceNow portal.
 
 1. Select **Next**.
 

@@ -68,9 +68,9 @@ Attestation-based mapping uses **cryptographically verifiable provenance metadat
 
 ## Verify your code to runtime mapping (Azure portal)
 
-After building a container image in an Azure DevOps CI/CD pipeline and pushing it to a registry, see the mapping by using the [Cloud Security Explorer](how-to-manage-cloud-security-explorer.md):
+After building a container image in an Azure DevOps CI/CD pipeline and pushing it to a registry, use [Cloud Security Explorer](how-to-manage-cloud-security-explorer.md) to view the mapping:
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com/).
 
 1. Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer**. It can take a maximum of 4 hours for the container image mapping to appear in the Cloud Security Explorer.
 
@@ -86,6 +86,6 @@ After building a container image in an Azure DevOps CI/CD pipeline and pushing i
 
 ## Next steps
 
-- Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
-- Learn more about [Code to runtime for recommendations](code-to-runtime-mapping.md)
+- For more information, see [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
+- For more information, see [Code to runtime for recommendations](code-to-runtime-mapping.md).
 

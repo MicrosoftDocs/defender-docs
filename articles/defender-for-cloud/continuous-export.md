@@ -10,12 +10,12 @@ ms.date: 05/24/2026
 
 # Set up continuous export in the Azure portal
 
-Microsoft Defender for Cloud generates detailed security alerts and recommendations. To analyze the information that's in these alerts and recommendations, you can export them to Log Analytics in Azure Monitor, to Azure Event Hubs, or to another Security Information and Event Management (SIEM), Security Orchestration Automated Response (SOAR), or IT classic [deployment model solution](export-to-siem.md). You can stream the alerts and recommendations as they're generated or define a schedule to send periodic snapshots of all new data.
+Microsoft Defender for Cloud generates detailed security alerts and recommendations. To analyze this data, you can export it to Log Analytics in Azure Monitor, to Azure Event Hubs, or to another Security Information and Event Management (SIEM), Security Orchestration Automated Response (SOAR), or IT classic [deployment model solution](export-to-siem.md). You can stream alerts and recommendations as they're generated, or you can define a schedule that sends periodic snapshots of new data.
 
 This article describes how to set up continuous export to a Log Analytics workspace or to an event hub in Azure.
 
 > [!TIP]
-> Defender for Cloud also offers the option to do a onetime, manual export to a comma-separated values (CSV) file. Learn how to [download a CSV file](export-alerts-to-csv.md).
+> Defender for Cloud also offers a one-time, manual export to a comma-separated values (CSV) file. Learn how to [download a CSV file](export-alerts-to-csv.md).
 
 ## Prerequisites
 
