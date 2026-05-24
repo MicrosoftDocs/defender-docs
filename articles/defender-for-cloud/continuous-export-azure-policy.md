@@ -4,7 +4,7 @@ description: Learn how to set up continuous export of Microsoft Defender for Clo
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 07/15/2025
+ms.date: 05/24/2026
 #customer intent: As a security analyst, I want to learn how to set up continuous export of alerts and recommendations with Azure Policy so that I can analyze the data in Log Analytics or Azure Event Hubs.
 ---
 
@@ -65,3 +65,4 @@ To implement these policies:
 
 > [!div class="nextstepaction"]
 > [Setup continuous export to an event hub behind a firewall](continuous-export-event-hub-firewall.md)
+

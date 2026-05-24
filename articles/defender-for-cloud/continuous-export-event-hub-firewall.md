@@ -4,7 +4,7 @@ description: Learn how to set up continuous export of Microsoft Defender for Clo
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 05/24/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security analyst, I want to learn how to set up continuous export of alerts and recommendations to an event hub behind a firewall so that I can analyze the data in Log Analytics or Azure Event Hubs.
 ---
@@ -61,3 +61,4 @@ To add the relevant role assignment to the destination event hub:
 
 > [!div class="nextstepaction"]
 > [View exported data in Azure Monitor](continuous-export-view-data.md)
+
