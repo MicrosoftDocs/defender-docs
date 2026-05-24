@@ -12,9 +12,11 @@ ms.custom: sfi-image-nochange
 
 # Add Defender for Cloud data to Power BI
 
-By connecting Microsoft Defender for Cloud's data with Microsoft Power BI, you can easily monitor and analyze your security metrics. The integration allows you to visualize security insights and quickly identify potential threats and vulnerabilities. This article guides you through the steps to connect Defender for Cloud data to Power BI, helping you transform complex security information into clear, actionable insights.
+Connect Microsoft Defender for Cloud data to Microsoft Power BI to monitor and analyze your security metrics. This integration helps you visualize security insights and identify potential threats and vulnerabilities quickly. This article explains how to connect Defender for Cloud data to Power BI so you can turn complex security information into clear, actionable insights.
 
 ## Prerequisites
+
+Before you connect Defender for Cloud data to Power BI, make sure you complete the following prerequisites:
 
 - [Download and install Power BI Desktop](https://www.microsoft.com/power-platform/products/power-bi/desktop).
 
@@ -40,9 +42,11 @@ To connect Power BI to Azure Resource Graph:
 
 To query Defender for Cloud data into Power BI:
 
+### Run Defender for Cloud queries
+
 Once Power BI Desktop is connected to Azure Resource Graph, you can use Azure Resource Graph to query various data sources from Defender for Cloud into Power BI.
 
-The queries provided on this page are examples that provide results. Azure Resource Graph allows you to query a wide range of data that you can create and customize to return results that suit your specific requirements.
+The queries on this page are examples that return sample results. Azure Resource Graph supports many data queries, and you can customize them to meet your requirements.
 
 1. Copy and paste one of the provided queries into the query editor in Power BI Desktop.
 
