@@ -1,7 +1,7 @@
 ---
 title: Enable Defender for open-source relational databases on Amazon Web Services (AWS) (Preview)
 description: Learn how to enable Microsoft Defender for open-source relational databases to detect potential security threats on AWS environments.
-ms.date: 06/30/2025
+ms.date: 05/24/2026
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
@@ -13,7 +13,7 @@ author: Elazark
 > [!IMPORTANT]
 > On June 1, 2026, Microsoft Defender for Open-Source Relational Databases for AWS RDS transitions to General Availability, and billing starts with usage reflected in your July 2026 Azure bill. You continue to receive database threat protection and sensitive data discovery capabilities for supported AWS RDS databases. No action is required if you want to keep the protection enabled. To opt out before charges begin, follow the instructions in [Disable the plan](#disable-the-plan).
 
-The Defender for open-source relational databases plan in Microsoft Defender for Cloud helps you detect and investigate unusual activity in your AWS RDS databases. This plan supports the following database instance types:
+The Defender for open-source relational databases plan in Microsoft Defender for Cloud helps you detect and investigate unusual activity in your AWS RDS databases. This preview supports the following database instance types:
 
 - Aurora PostgreSQL
 - Aurora MySQL

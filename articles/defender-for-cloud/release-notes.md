@@ -51,7 +51,9 @@ Microsoft Defender for Open-Source Relational Databases will be generally availa
 
 Starting June 1, 2026, the plan will begin billing for AWS RDS instances that are already onboarded to the preview of the feature. Usage will start to appear on your July 2026 bill. You continue to receive database threat protection and sensitive data discovery for supported open-source relational databases, including Aurora PostgreSQL/MySQL, PostgreSQL, MySQL, and MariaDB on AWS RDS.
 
-No action is required to maintain protection. To **opt out** and avoid future charges, [disable Open-Source Relational Databases on the relevant AWS account](enable-defender-for-databases-aws.md#disable-the-plan) before June 1, 2026.
+No action is required to maintain protection. 
+
+To **opt out** and avoid future charges, [disable Open-Source Relational Databases on the relevant AWS account](enable-defender-for-databases-aws.md#disable-the-plan) before June 1, 2026.
 
 Learn more about [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) and how to [manage database protection plans](enable-defender-for-databases-aws.md).
 
