@@ -11,21 +11,25 @@ ms.custom: sfi-image-nochange
 
 # Set up continuous export to an event hub behind a firewall
 
-In a situation where an event hub is behind a firewall, you can enable continuous export as a trusted service so that you can send data to the event hub.
+Microsoft Defender for Cloud supports continuous export of alerts and recommendations to Azure Event Hubs. If your event hub is behind a firewall, you can allow Defender for Cloud as a trusted service so export can continue. This article explains how to configure that trusted-service access.
 
 ## Prerequisites
 
-- [Set up continuous export in the Azure portal](continuous-export.md) or [set up continuous export with Azure Policy](continuous-export-azure-policy.md) or [set up continuous export with REST API](continuous-export-rest-api.md).
+Before you enable trusted-service access, configure continuous export by using one of these methods:
 
-## Set up continuous export to the eventhub
+- [Set up continuous export in the Azure portal](continuous-export.md).
+- [Set up continuous export with Azure Policy](continuous-export-azure-policy.md).
+- [Set up continuous export with REST API](continuous-export-rest-api.md).
 
-You can enable continuous export as a trusted service so that you can send data to an event hub that has Azure Firewall enabled.
+## Set up continuous export to the event hub
+
+Enable continuous export as a trusted service to send data to an event hub protected by Azure Firewall.
 
 **To grant access to continuous export as a trusted service**:
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com).
 
-1. Go to **Microsoft Defender for Cloud** > **Environmental settings**.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select the relevant resource.
 
@@ -35,11 +39,11 @@ You can enable continuous export as a trusted service so that you can send data 
 
     :::image type="content" source="media/continuous-export-event-hub-firewall/export-as-trusted.png" alt-text="Screenshot that shows where the checkbox is located to select export as trusted service." lightbox="media/continuous-export-event-hub-firewall/export-as-trusted.png":::
 
-## Add the relevant role assignment to the destination event hub.
+## Add the relevant role assignment to the destination event hub
 
-To add the relevant role assignment to the destination event hub:
+To add the relevant role assignment to the event hub configured as your continuous export destination:
 
-1. Go to the selected event hub.
+1. Go to the event hub that you configured as the continuous export destination.
 
 1. In the resource menu, select **Access control (IAM)** > **Add role assignment**.
 
