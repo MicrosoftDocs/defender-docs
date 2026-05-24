@@ -4,7 +4,7 @@ description: Learn how to connect Endor Labs with Microsoft Defender for Cloud t
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 11/20/2024
+ms.date: 05/24/2026
 ai-usage: ai-assisted
 ms.custom: sfi-image-nochange
 #customer intent: As a user, I want to learn how to connect my ServiceNow account with Microsoft Defender for Cloud so that I can enhance the existing vulnerability analysis security capabilities that are provided by Defender for Cloud for comprehensive code to runtime visibility of critical vulnerabilities.
@@ -72,3 +72,4 @@ A notice appears after the integration is successfully created. Defender for Clo
 ## Related content
 
 - [FAQ about the Endor Labs integration](faq-endor-labs.yml)
+

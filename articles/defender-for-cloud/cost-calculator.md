@@ -2,7 +2,7 @@
 title: Estimate costs with the Defender for Cloud cost calculator
 description: Discover how to use the Microsoft Defender for Cloud Cost Calculator to estimate your cloud security expenses. 
 ms.topic: how-to
-ms.date: 03/19/2025
+ms.date: 05/24/2026
 ai-usage: ai-assisted
 #customer intent: Customers will use this document to learn how to effectively estimate and manage their Microsoft Defender for Cloud costs. They will understand how to access and use the cost calculator, configure different plans and environments, add assets, and can adjust their cost estimates to optimize their cloud security expenses.
 ---
@@ -325,3 +325,4 @@ Try the new cost calculator and see its benefits. Access the tool and start defi
 
 - [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/)
 - [Optimize Microsoft Defender for Cloud costs with a prepurchase plan](prepurchase-plan.md)
+

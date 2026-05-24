@@ -4,7 +4,7 @@ description: Learn how to view the data you exported with continuous export in A
 author: Elazark
 ms.author: Elkrieger
 ms.topic: how-to
-ms.date: 12/22/2025
+ms.date: 05/24/2026
 #customer intent: As a security analyst, I want to be able to view the exported data in Azure Monitor so that I can analyze and respond to security alerts and recommendations effectively.
 ---
 
@@ -92,3 +92,4 @@ After you save the rule, Defender for Cloud alerts or recommendations appear in 
 
 > [!div class="nextstepaction"]
 > [Download a CSV report](export-alerts-to-csv.md)
+

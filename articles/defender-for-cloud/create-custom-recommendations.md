@@ -2,7 +2,7 @@
 title: Create custom security standards and recommendations
 description: Learn how to create custom security standards and recommendations for all clouds in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 08/11/2024
+ms.date: 05/24/2026
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
 ---
 
@@ -253,3 +253,4 @@ You can use the following links to learn more about Kusto queries:
 - [Kusto Query Language (KQL) overview](/azure/data-explorer/kusto/query/)
 - [Must Learn KQL Part 1: Tools and Resources](https://rodtrent.substack.com/p/must-learn-kql-part-1-tools-and-resources)
 - [What are security policies, initiatives, and recommendations?](security-policy-concept.md)
+

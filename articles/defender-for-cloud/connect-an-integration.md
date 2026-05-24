@@ -5,7 +5,7 @@ author: Elazark
 ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 11/03/2024
+ms.date: 05/24/2026
 #customer intent: As a cloud administrator, I want to connect partner integrations so that I can enhance security and gain insights.
 ---
 
@@ -46,3 +46,4 @@ For the full list of available integrations, see the [overview of partner integr
 1. Select **Save**.
 
 The integration is now connected to Defender for Cloud and appears in the list of connected integrations.
+
