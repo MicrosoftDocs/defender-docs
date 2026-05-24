@@ -23,6 +23,7 @@ Schema references outline the fields that comprise each schema. ASIM currently d
 
 | Schema | Schema Name for Tests | Version | Status |
 | ------ | --------------------- | ------- | ------ |
+| [Agent Event](normalization-schema-agent.md) | `AgentEvent` | 0.1.0 | GA |
 | [Alert Event](normalization-schema-alert.md) | `AlertEvent` | 0.1 | GA |
 | [Audit Event](normalization-schema-audit.md) | `AuditEvent` | 0.1.2 | GA |
 | [Authentication Event](normalization-schema-authentication.md) | `Authentication` | 0.1.4 | GA |
@@ -179,12 +180,9 @@ Based on these entities, [Windows event 4624](/windows/security/threat-protectio
 |**Hostname**     |     Computer    |     Alias    |         |
 
 
-## Next steps
+## Related content
 
-This article provides an overview of normalization in Microsoft Sentinel and ASIM.
-
-For more information, see:
-- Watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) 

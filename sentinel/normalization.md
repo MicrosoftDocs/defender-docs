@@ -125,13 +125,9 @@ To start using ASIM:
 
 - Enable your custom data to use built-in analytics by [writing parsers](normalization-develop-parsers.md) for your custom sources and [adding](normalization-manage-parsers.md) them to the relevant source agnostic parser.
 
-## <a name="next-steps"></a>Related content
+## Related content
 
-This article provides an overview of normalization in Microsoft Sentinel and ASIM.
-
-For more information, see:
-
-- Watch the [ASIM Webinar](https://www.youtube.com/watch?v=WoGD-JeC7ng) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjDY1cro08Fk3KUj-?e=murYHG)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Azure Sentinel Webinar: The Information Model-Understanding Normalization in Azure Sentinel](https://www.youtube.com/watch?v=WoGD-JeC7ng)
