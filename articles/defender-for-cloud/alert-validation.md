@@ -26,6 +26,8 @@ To receive all the alerts, your machines and the connected Log Analytics workspa
 
 If you're using the new preview alerts experience as described in [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md), you can create sample alerts from the security alerts page in the Azure portal.
 
+## Create sample alerts
+
 Use sample alerts to:
 
 - Evaluate the value and capabilities of your Microsoft Defender plans.
@@ -132,10 +134,15 @@ To validate threat detection for Microsoft Defender for Storage, follow these st
 
 ## Validate Azure Key Vault Threat Detection
 
-To validate Azure Key Vault threat detection, follow these steps:
+To validate Azure Key Vault threat detection, complete the prerequisites and then follow these steps:
 
-1. If you don't have a Key Vault yet, see [Create a key vault by using the Azure portal](../key-vault/general/quick-create-portal.md).
-1. After creating the Key Vault and the secret, go to a VM that has internet access and [download the TOR Browser](https://www.torproject.org/download/).
+### Prerequisites
+
+- If you don't have a Key Vault yet, see [Create a key vault by using the Azure portal](../key-vault/general/quick-create-portal.md).
+- Go to a VM that has internet access and [download the TOR Browser](https://www.torproject.org/download/).
+
+To validate Azure Key Vault threat detection:
+
 1. Install the TOR Browser on your VM.
 1. After the installation, open your regular browser, sign in to the Azure portal, and access the Key Vault page. Select the highlighted URL and copy the address.
 1. Open TOR and paste this URL (you need to authenticate again to access the Azure portal).
