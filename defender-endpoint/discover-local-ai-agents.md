@@ -16,7 +16,7 @@ appliesto:
 
 # Discover local AI agents
 
-Microsoft Defender for Endpoint automatically discovers supported AI coding agents and MCP servers running locally on onboarded devices and surfaces them in the AI agent inventory. This article is part of the broader [AI coding agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md) experience.
+Microsoft Defender for Endpoint automatically discovers supported AI coding agents and MCP servers running locally on onboarded devices and surfaces them in the AI agent inventory. To learn more about local AI coding agent discovery, see [AI coding agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md).
 
 In this article, you learn how to view discovered agents in the inventory, explore their relationships with devices and identities, and investigate agent presence using advanced hunting.
 
@@ -30,10 +30,10 @@ Before you can discover local AI coding agents on endpoints, make sure the follo
 - Devices run on:
   - Windows 10 or Windows 11, Windows Server 2019 or newer, or Windows 11 virtual desktop environments
   - macOS devices<!-- TODO: Add specific macOS versions when Spencer provides them -->
-- Your organization has a **Microsoft Defender for Endpoint Plan 2** license.
+- Your organization has a Microsoft Defender for Endpoint Plan 2 license.
 - Devices are [onboarded to Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
-- **Defender Antivirus** is the primary antivirus solution on the device.
-- Your environment is in the **commercial cloud**. Sovereign and national clouds aren't supported.
+- Defender Antivirus is the primary antivirus solution on the device.
+- Your environment is in the commercial cloud. Sovereign and national clouds aren't supported.
 
 No additional deployment, configuration, or scripts are required beyond device onboarding. Agent discovery begins automatically after your tenant is enabled.
 
