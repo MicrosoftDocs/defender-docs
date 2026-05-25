@@ -1,19 +1,23 @@
 ---
 title: Enable data security posture management for Azure datastores
-description: Learn how to enable data security posture management in Defender for Cloud
-author: Elazark
+description: Learn how to enable data security posture management in Microsoft Defender for Cloud for Azure and AWS resources.
+author: ElazarK
 ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 06/30/2025
+ms.date: 05/25/2026
 ms.custom: template-how-to-pattern
 ---
 
-# Enable data security posture management
+# Enable data security posture management for Azure datastores
 
-This article describes how to enable data security posture management in Microsoft Defender for Cloud.
+This article explains how to enable data security posture management in Microsoft Defender for Cloud.
+Data security posture management helps you discover and classify sensitive data, identify risks, and prioritize remediation.
+Before you begin, review the prerequisites in this article.
 
 ## Before you start
+
+Review the following prerequisites before you enable data security posture management:
 
 - Before you enable data security posture management, [review support and prerequisites](concept-data-security-posture-prepare.md).
 - When you enable Defender CSPM or Defender for Storage plans, the sensitive data discovery extension is automatically enabled. You can disable this setting if you don't want to use data security posture management, but we recommend that you use the feature to get the most value from Defender for Cloud.
@@ -36,15 +40,20 @@ Follow these steps to enable data security posture management. Don't forget to r
 
 ### Before you start in AWS
 
+Complete the following checks before you enable data security posture management for Amazon Web Services (AWS):
+
 - Don't forget to: [review the requirements](concept-data-security-posture-prepare.md#discovery) for AWS discovery, and [required permissions](concept-data-security-posture-prepare.md#whats-supported).
 - Check that there's no policy that blocks the connection to your Amazon S3 buckets.
-- For RDS instances: cross-account KMS encryption is supported, but additional policies on KMS access might prevent access.
+- For Amazon Relational Database Service (RDS) instances, cross-account AWS Key Management Service (KMS) encryption is supported, but additional KMS access policies might prevent access.
 
 ### Enable for AWS resources
 
-#### S3 buckets and RDS instances
+#### Configure S3 buckets and RDS instances
 
-1. Enable data security posture as described above
+To enable scanning for S3 buckets and RDS instances:
+
+1. In Defender for Cloud, go to **Environment settings** and select your AWS connector.
+1. Turn on Defender CSPM with **Sensitive data discovery**.
 1. Proceed with the instructions to download the CloudFormation template and to run it in AWS.
 
 Automatic discovery of S3 buckets in the AWS account starts automatically.
@@ -70,10 +79,16 @@ If the enable process didn't work because of a blocked policy, check the followi
 
 ## Enable data-aware monitoring in Defender for Storage
 
-Sensitive data threat detection is enabled by default when the sensitive data discovery component is enabled in the Defender for Storage plan. [Learn more](defender-for-storage-data-sensitivity.md).
+Sensitive data threat detection is enabled by default when the sensitive data discovery component is enabled in the Defender for Storage plan. For details, see [Sensitive data threat detection in Defender for Storage](defender-for-storage-data-sensitivity.md).
 
 Only Azure Storage resources will be scanned if the Defender CSPM plan is turned off.
 
-## Next steps
+### Additional notes
 
-[Review the security risks in your data](data-security-review-risks.md)
+If you turn off Defender CSPM, only Azure Storage resources are scanned.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Review security risks in your data](data-security-review-risks.md)
+
