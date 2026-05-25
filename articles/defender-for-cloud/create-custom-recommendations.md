@@ -4,13 +4,13 @@ description: Learn how to create custom security standards and recommendations i
 author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 05/18/2026
+ms.date: 05/24/2026
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
 ---
 
 # Create custom standards and recommendations in Microsoft Defender for Cloud
 
-[Security recommendations](security-policy-concept.md) in Microsoft Defender for Cloud help you to improve and harden your security posture. Recommendations are based on assessments against [security standards](security-policy-concept.md) defined for Azure subscriptions, AWS accounts, and GCP projects that have Defender for Cloud enabled.
+[Security recommendations](security-policy-concept.md) in Microsoft Defender for Cloud help you improve and harden your security posture. Recommendations are based on assessments against [security standards](security-policy-concept.md) defined for Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects that have Defender for Cloud enabled.
 
 This article describes how to:
 
@@ -21,10 +21,10 @@ This article describes how to:
 
 - You need Owner permissions on the subscription to create a new security standard.
 - You need Security Admin permissions to create custom recommendations.
-- To create custom recommendations based on KQL, you must have the [Defender CSPM plan](concept-cloud-security-posture-management.md) enabled. All customers can create custom recommendations based on Azure Policy.
+- To create custom recommendations based on Kusto Query Language (KQL), you must have the [Defender Cloud Security Posture Management (CSPM) plan](concept-cloud-security-posture-management.md) enabled. All customers can create custom recommendations based on Azure Policy.
 - [Review support in Azure clouds](support-matrix-defender-for-cloud.md) for custom recommendations.
 
-We recommend watching this episode of [Defender for Cloud in the field](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/creating-custom-recommendations-amp-standards-for-aws-gcp/ba-p/3810248) to learn more about the feature, and dig into creating KQL queries.
+We recommend watching this episode of [Defender for Cloud in the field](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/creating-custom-recommendations-amp-standards-for-aws-gcp/ba-p/3810248) to learn more about custom recommendations and how to write KQL queries.
 
 ## Create a custom recommendation
 
@@ -234,16 +234,16 @@ Resources where `HealthStatus` is `UNHEALTHY` appear as non-compliant findings i
 
 ## Use custom recommendations at scale
 
-Creating custom recommendations through the Azure portal user interface is best for most users. The interface provides a convenient Kusto Query Language (KQL) editor and built-in validation tools. However, automating the creation of recommendations with a programmatic approach can be helpful. This method is especially useful when you need to deploy recommendations across many environments or subscriptions.  
+Creating custom recommendations in the Azure portal is best for most users. The interface provides a convenient KQL editor and built-in validation tools. A programmatic approach can also be useful when you need to deploy recommendations across many environments or subscriptions.
 
-### Automate via the API  
+### Automate via the API
 
 If you prevalidated KQL queries and want to automate creating custom recommendations, you can use the Microsoft Defender for Cloud API. This method lets you deploy recommendations quickly, ensuring they're consistent and scalable across your cloud environments.  
 
-- **Advantages**: You can automate and scale the deployment of custom recommendations.  
-- **When to use**: This method is ideal for large-scale implementations where you need to apply recommendations consistently across multiple environments.  
+- **Advantages**: You can automate and scale the deployment of custom recommendations.
+- **When to use**: This method is ideal for large-scale implementations where you need to apply recommendations consistently across multiple environments.
 
-For more information about using the API to manage custom recommendations, see the [API documentation](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true).
+For more information about using the API to manage custom recommendations, see the [Defender for Cloud Composite API reference](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
 ## Create a custom standard
 
@@ -261,7 +261,7 @@ To create a custom standard:
 
 1. (Optional) For Azure subscriptions, review the Source column.
 
-    :::image type="content" source="media/custom-security-policies/select-recommendations.png" alt-text="Screenshot that shows the list of all of the recommendations that are available to select for the custom standard." lightbox="media/custom-security-policies/select-recommendations.png":::
+    :::image type="content" source="media/custom-security-policies/select-recommendations.png" alt-text="Custom standard creation page in Microsoft Defender for Cloud, showing the list of available recommendations for selection." lightbox="media/custom-security-policies/select-recommendations.png":::
 
 1. Select **Create**.
 
@@ -269,7 +269,7 @@ To create a custom standard:
 
 For Azure subscriptions, you can create custom recommendations and standards, and enhance them, using Azure Policy. This is a legacy feature, and we recommend using the new custom recommendations feature.
 
-### Create a custom recommendation/standard (legacy)
+### Create a custom recommendation and standard (legacy)
 
 You can create custom recommendations and standards in Defender for Cloud by creating policy definitions and initiatives in Azure Policy, and onboarding them in Defender for Cloud.
 
@@ -420,9 +420,9 @@ Here's another example of a custom policy including the metadata/securityCenter 
 }
   ```
 
-For another example for using the securityCenter property, see [this section of the REST API documentation](/rest/api/defenderforcloud-composite/assessments-metadata/create-in-subscription?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#examples).
+For another securityCenter property example, see [REST API examples for assessments metadata](/rest/api/defenderforcloud-composite/assessments-metadata/create-in-subscription?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true#examples).
 
-## Related content
+## Next steps
 
 You can use the following links to learn more about Kusto queries:
 
