@@ -135,13 +135,13 @@ To help with this, refer to the video below, followed by key guidance on how to 
 
 **Microsoft Defender Antivirus diagnostic data (MpSupport.cab)**
 
-1.  On the device, open Terminal (shell session).
+1. On the device, open Terminal (shell session).
 
-2.  Run the following command: [mdatp log level set\--level debug]{.mark}.
+1. Run the following command: [mdatp log level set\--level debug]{.mark}.
 
-3.  And re-run the scenarios.
+1. And re-run the scenarios.
 
-4.  Run the following command to collect the logs: [sudo mdatp diagnostic create.]{.mark}
+1. Run the following command to collect the logs: [sudo mdatp diagnostic create.]{.mark}
 
 For more information, see [Microsoft Defender for Endpoint on Linux resources](https://learn.microsoft.com/en-us/defender-endpoint/linux-resources)
 
@@ -168,7 +168,7 @@ It\'s crucial to report to Microsoft as soon as possible. The advanced hunting t
 | MDSI portal | The MDSI portal is a service provided by Microsoft Defender Security Intelligence. It allows users to submit files for malware analysis. Microsoft Defender security researchers analyse these files to determine if they’re threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions. |
 | Microsoft Defender portal | If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal. |
 
-1.  Submit the data you gathered during steps 1-2 by using either the MDSI portal or the Microsoft Defender portal.
+1. Submit the data you gathered during steps 1-2 by using either the MDSI portal or the Microsoft Defender portal.
 
     - **MDSI portal**: Go to the [MDSI portal](https://www.microsoft.com/en-us/wdsi), and then select **Submit files**. Follow the guidance on the page.
 
@@ -176,10 +176,10 @@ It\'s crucial to report to Microsoft as soon as possible. The advanced hunting t
 
 <!-- -->
 
-1.  After you upload the files, note the Submission ID for your sample submission (for example, 7c6c214b-17d4-4703-860b-7f1e9da03f7f).
+1. After you upload the files, note the Submission ID for your sample submission (for example, 7c6c214b-17d4-4703-860b-7f1e9da03f7f).
 
-2.  Wait for an update. After Microsoft receives the submission, Microsoft Defender research teams analyse the data to assess detection behaviour and protection coverage. If gaps or issues are identified, appropriate actions may be taken to improve detection and prevention capabilities.
+1. Wait for an update. After Microsoft receives the submission, Microsoft Defender research teams analyse the data to assess detection behaviour and protection coverage. If gaps or issues are identified, appropriate actions may be taken to improve detection and prevention capabilities.
 
-3.  Use the Submission ID to track the status of your submission.
+1. Use the Submission ID to track the status of your submission.
 
-4.  If you have questions, [contact support](https://learn.microsoft.com/en-us/defender-endpoint/contact-support).
+1. If you have questions, [contact support](https://learn.microsoft.com/en-us/defender-endpoint/contact-support).
