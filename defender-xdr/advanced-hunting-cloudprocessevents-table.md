@@ -16,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 05/20/2025
+ms.date: 05/30/2026
 ---
 
 # CloudProcessEvents (Preview)
@@ -59,8 +59,12 @@ For information on other tables in the advanced hunting schema, see the [advance
 | `ProcessCurrentWorkingDirectory` | `string` | Current working directory of the running process | 	 
 | `AccountName` | `string` | User name of the account | 	 
 | `LogonId` | `long` | Identifier for a logon session. This identifier is unique on the same pod or container between restarts.	| 	 
-| `InitiatingProcessId` | `string` | Process ID (PID) of the process that initiated the event | 	 
-| `AdditionalFields` | `string` | Additional information about the event in JSON array format | 	 
+| `InitiatingProcessId` | `string` | Process ID (PID) of the process that initiated the event | 
+| `ImageDigest` | `string` | The container's image digest |
+| `AgentId` | `string` | The unique identifier of the agent, which is the sensor instance on a node  |
+| `Region` | `string` | The geographical region where the cluster is located |
+| `HostName` | `string` | The node's hostname |	 
+| `AdditionalFields` | `string` | Additional information about the event in JSON array format |
 
 
 ## Sample queries
