@@ -19,6 +19,9 @@ appliesto:
 
 Microsoft Defender for Endpoint provides runtime protection for AI coding agents with Microsoft Defender Antivirus. When enabled, Defender Antivirus intercepts events in the agent's execution loop, such as user prompts, pre-tool calls, and post-tool responses, and scans them for cross-prompt injection attacks (XPIA) and sensitive data leakage.
 
+> [!TIP]
+> Runtime protection complements Defender for Endpoint's **discovery capabilities**, which automatically detect AI coding agents and MCP servers across your devices. For details, see [AI coding agent discovery](protect-ai-agents-overview.md).
+
 Defender Antivirus uses two protection approaches:
 
 - **Agent hooks protection**: Subscribes to lifecycle events exposed by agent frameworks that support hooks. Supported agents include Claude Code, GitHub Copilot CLI, and OpenAI Codex.
@@ -93,9 +96,6 @@ The following table lists the AI coding agents that Defender for Endpoint suppor
 > Network inspection protection can also protect other agents that communicate over the network, even if they aren't listed here. However, network inspection doesn't support agents that use certificate pinning or HTTP/3.
 
 For guidance on choosing a protection method, see [Decide which method to use](configure-ai-agent-runtime-protection.md#decide-which-method-to-use).
-
-> [!TIP]
-> Runtime protection complements Defender for Endpoint's **discovery capabilities**, which automatically detect AI coding agents and MCP servers across your devices. For details, see [AI coding agent discovery](protect-ai-agents-overview.md).
 
 ## Next steps
 
