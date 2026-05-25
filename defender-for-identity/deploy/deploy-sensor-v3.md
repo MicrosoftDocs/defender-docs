@@ -95,7 +95,7 @@ Refer to the [Defender for Identity Capacity Planning documentation](/defender-f
 The Defender for Identity sensor interacts with Active Directory in two ways:
 
 - **Reading AD data** (querying objects, tracking changes, resolving entities). In v2.x, this uses a Directory Service Account (DSA). In v3.x, LocalSystem handles this automatically.
-- **Performing response actions** (disabling accounts, resetting passwords). In v2.x, this uses an action account. In v3.x, LocalSystem handles this automatically.
+- **Performing remediation actions** (disabling accounts, resetting passwords). In v2.x, this uses an action account. In v3.x, LocalSystem handles this automatically.
 
 The v3.x sensor uses the local system identity of the server for both purposes. It doesn't use Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA). LocalSystem is the only supported identity for v3.x.
 

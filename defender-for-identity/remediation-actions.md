@@ -23,7 +23,7 @@ Remediation actions are initiated by a user in the Microsoft Defender portal and
 After authorization, the action is executed by the identity system that manages the affected account:
 
 - **Active Directory**
-  Actions are executed by the Microsoft Defender for Identity sensor on the domain controller. Only sensors installed on domain controllers perform response actions; sensors on AD FS, AD CS, or Microsoft Entra Connect servers don't perform response actions. The sensor uses the domain controller's local system account to perform the action.
+  Actions are executed by the Microsoft Defender for Identity sensor on the domain controller. Only sensors installed on domain controllers perform remediation actions; sensors on AD FS, AD CS, or Microsoft Entra Connect servers don't perform remediation actions. The sensor uses the domain controller's local system account to perform the action.
 
   > [!IMPORTANT]
   > Make sure the **Automatically use the sensor's local system account** option is selected. This is required for sensor v3.x and recommended for all environments, including mixed (v2.x and v3.x) deployments. To verify, in the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Microsoft Defender for Identity** > **Manage action accounts**.
