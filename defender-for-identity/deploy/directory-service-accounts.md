@@ -11,7 +11,7 @@ ms.reviewer: rlitinsky
 Defender for Identity uses Directory Service Accounts (DSAs) to read data from Active Directory, such as querying objects, tracking changes, and resolving entities. This is separate from the [action account](manage-action-accounts.md), which performs remediation actions like disabling users or resetting passwords.
 
 > [!NOTE]
-> Directory Service Accounts apply to the Defender for Identity sensor v2.x only. The sensor v3.x does not support DSA or gMSA configuration and uses LocalSystem exclusively. For more information, see [Defender for Identity sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
+> Directory Service Accounts apply to the Defender for Identity sensor v2.x only. The sensor v3.x doesn't use DSA or gMSA configuration and uses LocalSystem exclusively. For more information, see [Defender for Identity sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
 
 >[!NOTE]
 >Regardless of the Directory Service Accounts configured, the sensor service operates under the LocalService identity, and the updater service operates under the LocalSystem identity.
