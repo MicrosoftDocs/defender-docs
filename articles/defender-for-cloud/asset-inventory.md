@@ -48,13 +48,13 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
 :::image type="content" source="media/asset-inventory/asset-inventory-features.png" alt-text="Screenshot that shows the main features of the asset inventory page in Microsoft Defender for Cloud." lightbox="media/asset-inventory/asset-inventory-features.png":::
 
 1. Select **Installed application**
+
 1. In **Value**, select the apps to filter on.
 
-- **Total resources**: The total number of resources connected to Defender for Cloud.
-- **Unhealthy resources**: Resources with active security recommendations that you can implement. For remediation guidance, see [Review security recommendations](review-security-recommendations.md).
-- **Resource count by environment**: The number of resources in each environment.
-- **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
-
+    - **Total resources**: The total number of resources connected to Defender for Cloud.
+    - **Unhealthy resources**: Resources with active security recommendations that you can implement. For remediation guidance, see [Review security recommendations](review-security-recommendations.md).
+    - **Resource count by environment**: The number of resources in each environment.
+    - **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
 1. Resources connected to Defender for Cloud and running those apps are displayed. Blank options show machines where Defender for Servers/Defender for Endpoint isn't available.
 
 ## Filter the inventory

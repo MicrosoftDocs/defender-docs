@@ -56,10 +56,10 @@ To connect your Endor Labs account to Defender for Cloud:
 
 1. Select **Add integration** > **Endor Labs**.
 
-  :::image type="content" border="true" source="./media/connect-endor-labs/add-endor-labs.png" alt-text="Add integration menu showing Endor Labs as a selectable integration." lightbox="media/connect-endor-labs/add-endor-labs.png":::
+    :::image type="content" border="true" source="./media/connect-endor-labs/add-endor-labs.png" alt-text="Add integration menu showing Endor Labs as a selectable integration." lightbox="media/connect-endor-labs/add-endor-labs.png":::
 
-  > [!NOTE]
-  > The option to add the Endor Labs integration isn't available if you don't have the appropriate permissions, or if you already have an existing connector to Endor Labs.
+    > [!NOTE]
+    > The option to add the Endor Labs integration isn't available if you don't have the appropriate permissions, or if you already have an existing connector to Endor Labs.
 
 1. Enter the Endor Labs **Namespace**, **API key ID**, and **API secret**.
 

@@ -44,7 +44,7 @@ On the first page of the calculator, select **Add Assets** to start adding asset
 
 1. Choose the plans. The calculator estimates the cost based on your selections and any existing discounts.
 
-:::image type="content" source="media/cost-calculator/assign-onboarded-assets.png" alt-text="Onboarded environments list with selectable subscriptions and plans for cost calculation." lightbox="media/cost-calculator/assign-onboarded-assets.png":::
+    :::image type="content" source="media/cost-calculator/assign-onboarded-assets.png" alt-text="Onboarded environments list with selectable subscriptions and plans for cost calculation." lightbox="media/cost-calculator/assign-onboarded-assets.png":::
 
 ### Add assets with a script  
 
