@@ -26,14 +26,6 @@ When you connect an AWS account, Microsoft Defender for Cloud authenticates to A
 
 Learn more about [how authentication is established between Microsoft Entra ID and AWS](concept-authentication-architecture-aws.md), including the IAM roles and trust relationships created during onboarding.
 
-## Before you deploy (review)
-
-Before you deploy the AWS connector, decide how you want to manage the deployment.
-
-You can deploy the connector by using Terraform or AWS CloudFormation. Use Terraform if your organization manages AWS onboarding through infrastructure as code. Use AWS CloudFormation if you want to deploy by using AWS-native templates.
-
-For CloudFormation deployments, use a stack for a single AWS account. Use a StackSet to deploy across multiple AWS accounts or organizational units.
-
 ## Prerequisites
 
 Before you connect your AWS account, make sure you have:
@@ -46,7 +38,7 @@ Before you connect your AWS account, make sure you have:
 
 - Contributor level permission for the relevant Azure subscription.
 
-- If CIEM is enabled as part of Defender for CSPM the user enabling the connector will also need [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management#before-you-start) for your tenant.   -> fix wording
+- To enable CIEM as part of Defender CSPM, you need the required [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md#before-you-start) for the tenant.
 
 Additional requirements apply when enabling specific Defender plans. Review the [native connector plan requirements](#native-connector-plan-requirements).
 
@@ -120,9 +112,9 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 ## Connect your AWS account
 
 > [!IMPORTANT]
-> Use only the management account for onboarding. Delegated accounts aren't supported. 
+> For management account onboarding, use only the AWS management account. Delegated administrator accounts aren't supported.
 
-To connect your AWS to Defender for Cloud by using a native connector: (fix wording if needed)
+To connect your AWS environment to Defender for Cloud by using a native connector:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -134,23 +126,24 @@ To connect your AWS to Defender for Cloud by using a native connector: (fix word
 
 1. Enter a **Name** for your connector.
 
-1. For the **Onboard** field: (fix wording here and in the bullets if needed)
-    - Select **Management account** to create a connector to a management account. Auto provisioning mechanism will create connectors for each member account discovered under the specified management account and newly created accounts, enabling Defender for Cloud to operate. 
-    - Select **Single account** to create a connector to a single account. 
+1. For **Onboard**, select the account type:
 
-1. Select the regions in which the customer has resources that should be protected by Defender for Cloud is rolled out .. add: All regions are selected by default.
+    - **Management account**: Creates a connector for the AWS management account. Auto provisioning creates connectors for discovered member accounts and newly created accounts under the management account.
+    - **Single account**: Creates a connector for a single AWS account.
+
+1. Select the AWS regions that contain resources you want Defender for Cloud to protect. All regions are selected by default.
 
 1. Select the **Subscription** in which the security connector will be created.
 
-1. Select the **resource group** in which the security connector will be created.
+1. Select the **Resource group** in which the security connector will be created.
 
-1. Select the **Location** where the security connector will be created. 
+1. Select the **Location** where the security connector will be created.
 
-1. Select an Interval to scan the AWS environment every 4, 6, 12, or 24 hours. Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. 
+1. Select an interval to scan the AWS environment every 4, 6, 12, or 24 hours. Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations.
 
-1. Enter your AWS account ID 
+1. Enter your AWS account ID.
 
-1. **Management account only:** If needed, enter accounts ID to exclude, separated by commas (“,”).
+1. **Management account only:** If needed, enter AWS account IDs to exclude, separated by commas.
 
     :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-details.png" alt-text="Screenshot that shows the tab for entering account details for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-details.png":::
 
@@ -175,31 +168,35 @@ To connect your AWS to Defender for Cloud by using a native connector: (fix word
     - **Default access**: Grants permissions required for current and future capabilities.
     - **Least privilege access**: Grants only the permissions required today. You might receive notifications if additional access is needed later.
 
-1. Select a deployment method: 
+1. Select a deployment method:
 
     - **AWS CloudFormation**
-    - **Terraform**.
+    - **Terraform**
 
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot showing deployment method configuration." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
 
    > [!NOTE]
-   > When you onboard a management account, Defender for Cloud uses AWS CloudFormation StackSets and automatically creates connectors for member accounts. Auto provisioning is enabled for newly discovered accounts.
+   > For management account onboarding with AWS CloudFormation, Defender for Cloud uses StackSets to create connectors for member accounts. Auto provisioning is enabled for newly discovered accounts.
 
    > [!NOTE]
    > If you select **Management account**, the tab for onboarding by using Terraform isn't visible in the UI. Terraform onboarding is still supported. For guidance, see [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/onboarding-your-aws-gcp-environment-to-microsoft-defender-for/ba-p/3798664).
 
-1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies on AWS. 
-   For a **management account**:
+1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies in AWS.
+
+    For a **management account**:
+
     - If you onboard by using Terraform, review [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform](https://techcommunity.microsoft.com/blog/microsoftdefendercloudblog/onboarding-your-awsgcp-environment-to-microsoft-defender-for-cloud-with-terrafor/3798664).
     - If you onboard by using AWS CloudFormation, follow the on-screen instructions to complete the required dependencies in AWS. For management account onboarding, run the CloudFormation template both as a stack and as a StackSet. Connectors are created for member accounts up to 24 hours after onboarding.
-   
-   For a **single account**:
-     - If you onboard by using AWS CloudFormation, deploy the generated CloudFormation template as a stack.
-     - If you onboard by using Terraform, follow the on-screen instructions to deploy the required resources from your Terraform environment.
 
-   When you deploy the CloudFormation template, choose one of the following template options:
-     - **Amazon S3 URL**: Upload the downloaded CloudFormation template to your own S3 bucket with your own security configurations. Provide the S3 URL in the AWS deployment wizard.
-     - **Upload a template file**: AWS automatically creates an S3 bucket to store the template. This configuration might trigger the `S3 buckets should require requests to use Secure Socket Layer` recommendation. You can fix it by applying the following bucket policy:
+    For a **single account**:
+
+    - If you onboard by using AWS CloudFormation, deploy the generated CloudFormation template as a stack.
+    - If you onboard by using Terraform, follow the on-screen instructions to deploy the required resources from your Terraform environment.
+
+    When you deploy the CloudFormation template, choose one of the following template options:
+
+    - **Amazon S3 URL**: Upload the downloaded CloudFormation template to your own S3 bucket with your own security configurations. Provide the S3 URL in the AWS deployment wizard.
+    - **Upload a template file**: AWS automatically creates an S3 bucket to store the template. This configuration might trigger the `S3 buckets should require requests to use Secure Socket Layer` recommendation. You can fix it by applying the following bucket policy:
 
         ```json
         {
@@ -224,6 +221,7 @@ To connect your AWS to Defender for Cloud by using a native connector: (fix word
           ]
         }
         ```
+
     > [!NOTE]
     > When you run the CloudFormation StackSet for an AWS management account, you might encounter the following error message:
     >
@@ -239,7 +237,7 @@ To connect your AWS to Defender for Cloud by using a native connector: (fix word
 
 Defender for Cloud starts scanning your AWS resources. Security recommendations appear within a few hours. After onboarding, you can monitor AWS posture, alerts, and resource inventory in Defender for Cloud.
 
-## Update the AWS connector
+## Update the CloudFormation template
 
 Update the CloudFormation template deployed in your AWS account in the following cases:
 
