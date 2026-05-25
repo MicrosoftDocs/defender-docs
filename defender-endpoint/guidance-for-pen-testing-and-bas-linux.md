@@ -50,45 +50,28 @@ It's common for penetration testers to use just the default mode or enable only 
 
 You can enable all of the above settings by creating the managed JSON configuration profile (\'mdatp_managed.json\') on the path [/etc/opt/microsoft/mdatp/managed]{.mark}. Copy the following content to \'*mdatp_managed.json\'*. Path can differ if you are using a custom path for installation. Refer:
 
+```json
 {
-
-\"antivirusEngine\":{
-
-\"enforcementLevel\": \"real_time\",
-
-\"behaviorMonitoring\": \"enabled\",
-
-\"scanFileModifyPermissions\": true,
-
-\"scanNetworkSocketEvent\": true
-
-},
-
-\"cloudService\":{
-
-\"enabled\": true
-
-},
-
-\"features\":{
-
-\"remediateInfectedFile\": \"enabled\",
-
-\"enableAntivirusEngineCache\": \"enabled\",
-
-\"supplementarySensorConfigurations\":{
-
-\"enableFilePermissionEvents\": \"enabled\",
-
-\"enableRawSocketEvent\": \"enabled\",
-
-\"sendLowfiEvents\": \"enabled\"
-
+    "antivirusEngine": {
+        "enforcementLevel": "real_time",
+        "behaviorMonitoring": "enabled",
+        "scanFileModifyPermissions": true,
+        "scanNetworkSocketEvent": true
+    },
+    "cloudService": {
+        "enabled": true
+    },
+    "features": {
+        "remediateInfectedFile": "enabled",
+        "enableAntivirusEngineCache": "enabled",
+        "supplementarySensorConfigurations": {
+            "enableFilePermissionEvents": "enabled",
+            "enableRawSocketEvent": "enabled",
+            "sendLowfiEvents": "enabled"
+        }
+    }
 }
-
-}
-
-}
+```
 
 - For details refer: [Configure security settings in Microsoft Defender for Endpoint on Linux - Microsoft Defender for Endpoint \| Microsoft Learn](https://learn.microsoft.com/en-us/defender-endpoint/linux-preferences)
 
