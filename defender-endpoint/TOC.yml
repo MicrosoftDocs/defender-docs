@@ -57,6 +57,8 @@
       items:
       - name: Guidance for pen testing and BAS scenarios
         href: guidance-for-pen-testing-and-bas.md
+      - name: Guidance for pen testing and BAS scenarios on Linux
+        href: guidance-for-pen-testing-and-bas-linux.md
       - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
       - name: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management
