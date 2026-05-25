@@ -3,8 +3,8 @@ title: Enable Defender for Containers in Microsoft Defender for Cloud
 description: Learn how to enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud for Azure subscriptions, AWS connectors, and GCP connectors.
 ms.topic: how-to
 ms.author: elkrieger
-author: Elazark
-ms.date: 01/19/2026
+author: ElazarK
+ms.date: 05/25/2026
 ---
 
 # Enable Defender for Containers in Microsoft Defender for Cloud
@@ -250,6 +250,23 @@ Before you begin, make sure that:
 1. Verify that **Containers** is set to **On**.
 
 1. Select **Settings** next to Containers and confirm the required components are enabled.
+
+## Enable posture for serverless containers (Preview)
+
+To enable posture for serverless containers, you need Defender Cloud Security Posture Management (CSPM) enabled and supported workloads, such as Azure Container Apps (ACA), Azure Container Instances (ACI), or Amazon Web Services (AWS) - ECS Fargate.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+1. Select the relevant subscription or multicloud connector.
+1. Verify that **Defender CSPM** is set to **On**.
+1. Select **Settings** in the **Defender CSPM** plan row.
+1. Set **Serverless Containers** to **On**.
+1. Select **Continue**.
+1. Select **Save**.
+1. Allow up to 24 hours for the first scan results to appear.
+
+> [!NOTE]
+> If you use AWS - ECS Fargate resources, confirm your AWS connector sync health. It can take less than 24 hours for newly synced resources to appear in posture views.
 
 ## Related content
 
