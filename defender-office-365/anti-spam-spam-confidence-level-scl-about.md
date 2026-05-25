@@ -12,7 +12,8 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the spam confidence level (SCL) that applied to messages in Microsoft 365 by anti-spam filtering.
 ms.service: defender-office-365
-ms.date: 07/03/2025
+ms.date: 05/21/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -41,7 +42,7 @@ The following table describes what the SCL values mean and the default action ta
 > - DMARC failures.
 > - [Mail flow rules (also known as transport rules)](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
-For more information about actions you can take on messages based on the spam filtering verdict, see [Configure anti-spam policies](anti-spam-policies-configure.md).
+For more information about actions you can take on messages based on the spam filtering verdict, see [Configure anti-spam policies](anti-spam-policies-configure.md). For troubleshooting information about SCL overrides, see [SCL override behavior](anti-spam-policies-troubleshooting.md#scl-override-behavior). To identify which component set the SCL on a specific message, see [Determine which component set the SCL](anti-spam-policies-troubleshooting.md#determine-which-component-set-the-scl).
 
 Similar to the SCL, the bulk complaint level (BCL) identifies bad bulk email (also known as _gray mail_). A higher BCL value indicates the message is more likely to exhibit undesirable spam-like behavior. You configure the BCL threshold in anti-spam policies. For more information, see [Configure anti-spam policies](anti-spam-policies-configure.md), [Bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md), and [What's the difference between junk email and bulk email?](anti-spam-spam-vs-bulk-about.md).
 

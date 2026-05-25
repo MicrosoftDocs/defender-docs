@@ -160,3 +160,5 @@ This diagram demonstrates the result _with_ a trusted ARC sealer:
 Check your ARC Headers with Message Header Analyzer at <https://mha.azurewebsites.net>.
 
 Review the [SPF](email-authentication-spf-configure.md), [DKIM](email-authentication-dkim-configure.md), [DMARC](email-authentication-dmarc-configure.md), configuration procedures.
+
+To diagnose and fix email authentication failures, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).
