@@ -659,6 +659,8 @@
         href: protect-ai-agents-overview.md
       - name: Discover local AI agents
         href: discover-local-ai-agents.md
+      - name: Runtime protection overview
+        href: ai-agent-runtime-protection-overview.md
       - name: Set up AI agent runtime protection
         href: configure-ai-agent-runtime-protection.md
 

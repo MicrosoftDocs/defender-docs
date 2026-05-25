@@ -1,6 +1,6 @@
 ---
 title: Discover local AI agents
-description: Learn how to discover, view, and investigate AI coding agents running locally on Windows 11 devices using Microsoft Defender for Endpoint.
+description: Learn how to discover, view, and investigate AI coding agents running locally on Windows and macOS devices using Microsoft Defender for Endpoint.
 author: lwainstein
 ms.author: lwainstein
 ms.service: defender-endpoint
@@ -8,29 +8,27 @@ ms.topic: overview
 ms.date: 05/14/2026
 ai-usage: ai-assisted
 appliesto:
-  - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
-#customer intent: As a security administrator, I want to discover and monitor AI coding agents running on my organization's Windows 11 devices so that I can manage AI-related security risks on endpoints.
+#customer intent: As a security administrator, I want to discover and monitor AI coding agents running on my organization's devices so that I can manage AI-related security risks on endpoints.
 
 ---
 
 # Discover local AI agents
 
-Microsoft Defender for Endpoint automatically discovers supported AI coding agents running locally on onboarded Windows 11 devices. Discovered agents appear as assets in the Defender portal's AI agent inventory, where you can view agent details, explore device and identity relationships using the exposure map, and investigate agent presence using advanced hunting.
+Microsoft Defender for Endpoint automatically discovers supported AI coding agents and MCP servers running locally on onboarded Windows devices. Discovered agents appear as assets in the Microsoft Defender and Agent 365 portals' AI agent inventory, where you can view agent details, explore device and identity relationships using the exposure map, and investigate agent presence using advanced hunting.
 
 Local AI coding agent discovery on endpoints is one component of Microsoft Defender's comprehensive AI security approach. For details on broader capabilities such as discovery of cloud and platform agents, security posture assessment, threat detection, and runtime protection across your organization, see [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory).
 
 > [!NOTE]
 > Local AI coding agent discovery provides **discovery and investigation capabilities only**. It doesn't include security posture assessment, governance controls, or alerts for endpoint agents at this time.
 
-Discovery and runtime protection are currently shown in separate experiences. As a result, a discovered local AI coding agent device in inventory doesn't necessarily map to a runtime protection block alert view in the same workflow.
-
 ## Prerequisites
 
 Before you can discover local AI coding agents on endpoints, make sure the following requirements are met:
 
-- Devices run **Windows 11**. macOS support is planned for a future release.
+- Devices run **Windows 10 or Windows 11**, **Windows Server 2019 or newer**, or **Windows 11 virtual desktop environments**. macOS support is available in public preview<!-- TODO: Add specific macOS versions when Spencer provides them -->.
+- Your organization has a **Microsoft Defender for Endpoint Plan 2** license.
 - Devices are [onboarded to Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
 - **Defender Antivirus** is the primary antivirus solution on the device.
 - Your environment is in the **commercial cloud**. Sovereign and national clouds aren't supported.
@@ -44,6 +42,7 @@ No additional deployment, configuration, or scripts are required beyond device o
     1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
     1. In the left navigation pane, select **Assets** > **AI Agents**.
     1. Select **Local AI Agents (Preview)** to see a filtered list of AI coding agents discovered on endpoint devices.
+    <!-- TODO: Spencer comment #8 - Confirm with Moran/Michal if "Local AI Agents" is the final page name -->
 
 - To view a specific agent's details:
 
@@ -61,6 +60,9 @@ No additional deployment, configuration, or scripts are required beyond device o
 ### Hunt for local AI agents using Advanced Hunting
 
 Use the `ExposureGraphEdges` and `ExposureGraphNodes` tables in [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to query for local AI coding agents discovered on endpoint devices.
+
+<!-- TODO: Spencer comment #9 - Confirm with Anastasia whether local AI agents discovery data in EKG lands in AIAgentsInfo table, AgentInfo table, or ExposureGraphEdges. Adjust queries if needed. -->
+<!-- TODO: Spencer comment #10 - Consider adding more advanced hunting queries (e.g., agents on devices of users with broad access, agents with paths to critical/sensitive assets). These could also go in the security posture section. -->
 
 ### Get an inventory of AI agents across endpoints
 

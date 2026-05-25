@@ -29,8 +29,8 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
-|Feature |[Local AI coding agent discovery](/defender-xdr/security-for-ai/ai-agent-inventory#discover-local-ai-coding-agents-on-endpoints-preview) |Preview |Microsoft Defender for Endpoint now automatically discovers supported AI coding agents running locally on onboarded Windows 11 devices. Discovered agents appear in the AI agent inventory, exposure map, and advanced hunting in the Microsoft Defender portal, giving security teams visibility into AI coding agent presence across endpoints.|
-|Feature |[AI coding agent runtime protection](configure-ai-agent-runtime-protection.md) |Preview |Microsoft Defender for Endpoint now supports runtime protection for supported local AI coding agents on Windows endpoints through Defender Antivirus. Security teams can configure audit or block modes to help detect and prevent prompt injection and sensitive data leakage during local AI coding agent execution.|
+|Feature |[Local AI coding agent discovery](/defender-xdr/security-for-ai/ai-agent-inventory#discover-local-ai-coding-agents-on-endpoints-preview) |Preview |Microsoft Defender for Endpoint now automatically discovers supported AI coding agents running locally on onboarded Windows 10, Windows 11, Windows Server 2019+, and macOS devices. Discovered agents appear in the AI agent inventory, exposure map, and advanced hunting in the Microsoft Defender portal, giving security teams visibility into AI coding agent presence across endpoints.|
+|Feature |[AI coding agent runtime protection](configure-ai-agent-runtime-protection.md) |Preview |Microsoft Defender for Endpoint now supports runtime protection for supported local AI coding agents on Windows 10, Windows 11, Windows Server 2019+, and macOS endpoints through Defender Antivirus. Security teams can configure audit or block modes to help detect and prevent prompt injection and sensitive data leakage during local AI coding agent execution.|
 
 ## May 2026
 

@@ -26,17 +26,17 @@ Discovery visibility and runtime protection alerting are currently presented in 
 
 In this article, you learn how to choose a protection method, configure runtime protection settings, deploy settings with Intune, and investigate detections.
 
-For an overview of how each method works, see [AI agent runtime protection overview](protect-ai-agents-overview.md#ai-coding-agent-runtime-protection).
+For an overview of how each method works, see [AI coding agent runtime protection overview](ai-agent-runtime-protection-overview.md).
 
 ## Prerequisites
 
 Before you configure runtime protection, make sure the following requirements are met:
 
-- The device runs Windows and is onboarded to Microsoft Defender for Endpoint.
+- The device runs **Windows 10 or Windows 11**, **Windows Server 2019 or newer**, or **Windows 11 virtual desktop environments**, and is onboarded to Microsoft Defender for Endpoint. macOS support is available in public preview<!-- TODO: Add specific macOS versions when Spencer provides them -->.
 - Defender Antivirus is in active mode (not passive mode). Runtime protection settings aren't enforced when Defender Antivirus runs in passive mode.
-- One or more [supported AI coding agents](protect-ai-agents-overview.md#supported-agents) are installed on the device.
+- One or more [supported AI coding agents](ai-agent-runtime-protection-overview.md#supported-agents) are installed on the device.
 - For network inspection protection, the device requires a Microsoft Defender for Endpoint Plan 2 license. <!-- TODO: Verify exact license tier required for network inspection with engineering team -->
-- For agent hooks protection, the AI coding agent must natively support a hooks framework. See [Supported agents](protect-ai-agents-overview.md#supported-agents) for the full list.
+- For agent hooks protection, the AI coding agent must natively support a hooks framework. See [Supported agents](ai-agent-runtime-protection-overview.md#supported-agents) for the full list.
 
 > [!NOTE]
 > Network inspection protection works with any agent that communicates over the network. However, network inspection doesn't support agents that use certificate pinning or HTTP/3. If your organization uses agents with these restrictions, use agent hooks protection if available for those agents.
@@ -58,7 +58,7 @@ As a best practice, enable agent hooks protection for supported agents. If you a
 | **Microsoft Purview DLP integration** | Supported | Limited |
 | **Recommended for** | Organizations using Claude Code, GitHub Copilot CLI, or OpenAI Codex | Agents without hooks support, or when broad coverage is needed |
 
-For a full list of supported agents and which method applies to each, see [Supported agents](protect-ai-agents-overview.md#supported-agents).
+For a full list of supported agents and which method applies to each, see [Supported agents](ai-agent-runtime-protection-overview.md#supported-agents).
 
 ### Configuration options
 
