@@ -259,3 +259,7 @@ Use `randomizeScanStartTime` to randomize the scan start within a defined window
 **What happens if the server is offline?**
 
 Scheduled scans do not run at the scheduled time while the device is asleep. Instead, scheduled scans run when the device resumes from sleep mode. If the device is turned off, the scan runs at the next scheduled scan time.
+
+## Related content
+
+- [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md)
