@@ -78,7 +78,7 @@ To enable agent hooks protection on a single device (for testing or validation):
     Set-MpPreference -EnableAiAgentProtection <mode>
     ```
 
-1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](protect-ai-agents-overview.md#protection-modes-and-enforcement-outcomes).
+1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](ai-agent-runtime-protection-overview.md#protection-modes-and-enforcement-outcomes).
 
 1. To verify the current setting, run:
 
@@ -97,7 +97,7 @@ To enable network inspection protection on a single device (for testing or valid
     Set-MpPreference -EnableAiAgentLoopInspection <mode>
     ```
 
-1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](protect-ai-agents-overview.md#protection-modes-and-enforcement-outcomes).
+1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled` depending on how you want Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](ai-agent-runtime-protection-overview.md#protection-modes-and-enforcement-outcomes).
 
 1. To verify the current setting, run:
 
@@ -130,7 +130,7 @@ The PowerShell commands in the previous sections configure a single device and a
 
 When Defender Antivirus detects a threat based on your runtime protection settings, it generates an alert in Microsoft Defender and takes action based on the configured mode (Block, AuditMode, or Disabled). Detection details appear across a specific agent's UI, Windows notifications on the device, and the Microsoft Defender portal.
 
-For more information on mode behavior and enforcement outcomes, see [Protection modes and enforcement outcomes](protect-ai-agents-overview.md#protection-modes-and-enforcement-outcomes) and [Enforcement, response and investigation considerations](protect-ai-agents-overview.md#enforcement-response-and-investigation-considerations).
+For more information on mode behavior and enforcement outcomes, see [Protection modes and enforcement outcomes](ai-agent-runtime-protection-overview.md#protection-modes-and-enforcement-outcomes) and [Enforcement, response and investigation considerations](ai-agent-runtime-protection-overview.md#enforcement-response-and-investigation-considerations).
 
 Use the following tasks to review what happened and investigate the detection.
 
