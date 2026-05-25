@@ -27,23 +27,24 @@ Defender for Endpoint automatically detects supported AI coding agents and MCP s
 - **Exposure map**: Visual relationships between AI coding agents, devices, identities, and cloud resources to help assess potential impact.
 - **Advanced hunting**: Query agent discovery data using Kusto Query Language (KQL) to investigate agent presence across your environment.
 
-### Supported AI coding agents
+### Supported AI coding agents and MCP servers
 
-The following local AI coding agents are discovered on endpoints:
+The following local AI coding agents and MCP servers are discovered on endpoints:
 
-| Agent | Supported type |
+| Asset | Supported type |
 | --- | --- |
-| ChatGPT Desktop | Desktop |
-| Claude Code | CLI, Desktop, and VS Code extension |
-| Cline | VS Code extension |
-| Codex | CLI |
-| Cursor | Desktop |
-| Gemini | VS Code extension |
-| Gemini CLI | CLI |
-| GitHub Copilot | CLI and VS Code extension |
-| Ollama Desktop | Desktop |
-| Poe Desktop | Desktop |
-| Roo Code | VS Code extension |
+| ChatGPT Desktop | AI agent - Desktop |
+| Claude Code | AI agent - CLI, Desktop, and VS Code extension |
+| Cline | AI agent - VS Code extension |
+| Codex | AI agent - CLI |
+| Cursor | AI agent - Desktop |
+| Gemini | AI agent - VS Code extension |
+| Gemini CLI | AI agent - CLI |
+| GitHub Copilot | AI agent - CLI and VS Code extension |
+| Ollama Desktop | AI agent - Desktop |
+| Poe Desktop | AI agent - Desktop |
+| Roo Code | AI agent - VS Code extension |
+| MCP servers | MCP server<!-- TODO: Confirm supported types with Spencer --> |
 
 <!-- TODO: Spencer noted that support between Windows and Mac may differ. Also MCP servers are discovered on Mac and Windows - confirm how to represent MCPs in this table. See: Spencer comment #17 -->
 
