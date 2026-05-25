@@ -47,7 +47,7 @@ To troubleshoot DomainKeys Identified Mail (DKIM) errors, use the information in
 |`dkim=fail` (signature verification failed)|The DKIM public key in DNS doesn't match the private key used to sign the message, or the selector record is missing.|[Set up DKIM to sign mail from your domain](email-authentication-dkim-configure.md)|
 |`dkim=fail` (body hash didn't verify)|The message body was modified after signing (for example, by a mailing list, transport rule, or intermediary service).|[Configure trusted Authenticated Received Chain (ARC) sealers](email-authentication-arc-configure.md)|
 |DKIM key lookup times out|The DKIM TXT record is too large or the authoritative DNS server is slow to respond, causing lookup timeouts.|[Set up DKIM to sign mail from your domain](email-authentication-dkim-configure.md)|
-|DKIM toggle doesn't work in the Defender portal|The required Canonical Name (CNAME) records aren't created at the domain registrar, or DNS propagation isn't complete.|[Configure DKIM signing of outbound messages](email-authentication-dkim-configure.md#configure-dkim-signing-of-outbound-messages-in-microsoft-365)|
+|DKIM toggle doesn't work in the Defender portal|The required Canonical Name (CNAME) records aren't created at the domain registrar, or DNS propagation isn't complete.|[Troubleshoot DKIM DNS configuration](email-authentication-dkim-configure.md#troubleshoot-dkim-dns-configuration)|
 
 ### DMARC failures
 
@@ -102,7 +102,7 @@ For complete setup and troubleshooting instructions, see [Set up SPF to identify
 
 DKIM uses a cryptographic signature in the message header to verify the message wasn't tampered with in transit. Common issues include:
 
-- **CNAME records not published**: After you enable DKIM in the Defender portal, create two CNAME records at your domain registrar.
+- **CNAME records not published**: After you enable DKIM in the Defender portal, create two CNAME records at your domain registrar. For common mistakes and provider-specific examples, see [Troubleshoot DKIM DNS configuration](email-authentication-dkim-configure.md#troubleshoot-dkim-dns-configuration).
 - **Body hash failure after modification**: Intermediary services (for example, mailing lists or transport rules) that modify the message body after DKIM signing cause DKIM failure. Consider configuring the intermediary as a [trusted ARC sealer](email-authentication-arc-configure.md).
 - **Key rotation**: Rotate DKIM signing keys regularly. Use the `Rotate-DkimSigningConfig` cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 

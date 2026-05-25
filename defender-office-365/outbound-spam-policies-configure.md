@@ -12,7 +12,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: View, create, modify, and delete outbound spam policies in Microsoft Defender for Office 365 and Exchange Online PowerShell.
 ms.service: defender-office-365
-ms.date: 12/17/2025
+ms.date: 05/22/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -66,7 +66,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
    When you're finished on the **Name your policy page**, select **Next**.
 
 4. On the **Users, groups, and domains** page, identify the internal senders that the policy applies to (sender conditions):
-   - **Users**: The specified mailboxes, mail users, or mail contacts.
+   - **Users**: The specified mailboxes, or mail users.
    - **Groups**:
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
      - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
@@ -497,6 +497,8 @@ Remove-HostedOutboundSpamFilterRule -Identity "Marketing Department"
 For detailed syntax and parameter information, see [Remove-HostedOutboundSpamFilterRule](/powershell/module/exchangepowershell/remove-hostedoutboundspamfilterrule).
 
 ## Related content
+
+[Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 
 [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md)
 

@@ -220,7 +220,6 @@
           href: microsoft-365-defender-sentinel-integration.md
         - name: Integrate Microsoft Defender for Cloud
           href: ingest-defender-for-cloud-incidents.md
-
     - name: Integrate threat intelligence
       items:
         - name: Overview
@@ -514,6 +513,8 @@
               href: create-tasks-automation-rule.md
             - name: Export and import automation rules
               href: import-export-automation-rules.md
+            - name: Automated integrations
+              href: automation/integrations.md
         - name: Playbooks
           items:
             - name: Overview
@@ -1032,6 +1033,8 @@
               href: normalization-entity-application.md
         - name: ASIM schemas
           items:
+            - name: ASIM agent event schema
+              href: normalization-schema-agent.md
             - name: ASIM alert event schema
               href: normalization-schema-alert.md
             - name: ASIM audit event schema

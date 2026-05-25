@@ -199,11 +199,11 @@ For more information, see [Configure and manage Microsoft Defender Antivirus wit
 
 An exclusion is an entity, such as a file or URL, that you specify as an exception to remediation actions. The excluded entity can still get detected, but no remediation actions are taken on that entity. That is, the detected file or process isn't stopped, sent to quarantine, removed, or otherwise changed by Microsoft Defender for Endpoint.
 
-To define exclusions across Microsoft Defender for Endpoint, perform the following tasks:
+To define exclusions across Microsoft Defender for Endpoint, do the following tasks:
 
 - [Create "allow" indicators for Microsoft Defender for Endpoint](#indicators-for-defender-for-endpoint)
 - [Define exclusions for Microsoft Defender Antivirus](#exclusions-for-microsoft-defender-antivirus)
-- For Attack Surface Reduction Rule exclusions [Configure attack surface reduction per-rule exclusions](attack-surface-reduction-rules-deployment-test.md#configure-attack-surface-reduction-per-rule-exclusions) or you can leverage [ASR rule only exclusions](enable-attack-surface-reduction.md#exclude-files-and-folders-from-attack-surface-reduction-rules)
+- For attack surface reduction (ASR) rules, configure [global ASR rule exclusions or per-ASR rule exclusions](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
 > [!NOTE]
 > Microsoft Defender Antivirus exclusions apply only to antivirus protection, not across other Microsoft Defender for Endpoint capabilities. To exclude files broadly, use [custom indicators](indicators-overview.md) for Microsoft Defender for Endpoint and exclusions for Microsoft Defender Antivirus.
