@@ -97,12 +97,12 @@ The Defender for Identity sensor interacts with Active Directory in two ways:
 - **Reading AD data** (querying objects, tracking changes, resolving entities). In v2.x, this uses a Directory Service Account (DSA). In v3.x, LocalSystem handles this automatically.
 - **Performing response actions** (disabling accounts, resetting passwords). In v2.x, this uses an action account. In v3.x, LocalSystem handles this automatically.
 
-The v3.x sensor uses the local system identity of the server for both purposes. It doesn't support Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA). LocalSystem is the only supported identity for v3.x.
+The v3.x sensor uses the local system identity of the server for both purposes. It doesn't use Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA). LocalSystem is the only supported identity for v3.x.
 
-If you're migrating from sensor v2.x and previously had a gMSA configured for [action accounts](manage-action-accounts.md), you must remove it. If gMSA remains enabled, response actions, including [attack disruption](/microsoft-365/security/defender/automatic-attack-disruption), won't work.
+If you're migrating from sensor v2.x and previously had a gMSA configured for [action accounts](manage-action-accounts.md), select **Automatically use the sensor's local system account** in the Microsoft Defender portal (**Settings** > **Identities** > **Microsoft Defender for Identity** > **Manage action accounts**). Any gMSA accounts configured for v2.x sensors are ignored by v3.x sensors.
 
 > [!IMPORTANT]
-> In environments that use both v2 and v3 sensors, use local system accounts for all of your sensors.
+> In environments that use both v2.x and v3.x sensors, select **Automatically use the sensor's local system account** for all sensors. The v3.x sensors use the local system account regardless of gMSA configuration.
 
 ### Test your prerequisites
 
