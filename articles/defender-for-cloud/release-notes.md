@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/18/2026
+ms.date: 06/01/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -27,6 +27,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 4. In Category, specify whether the item is GA, Preview, Update, Deprecation, Upcoming update, Upcoming deprecation.-->
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
+
+## June 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### Serverless protection for Azure and AWS is now generally available
+
+June 1, 2026
+
+Serverless protection for Azure and Amazon Web Services (AWS) is now generally available in Defender for Cloud.
+
+This capability helps you discover serverless resources and assess them for misconfigurations, vulnerabilities, and insecure dependencies across Azure Web Apps, Azure Functions, and AWS Lambda.
+
+Learn more about [What is Serverless protection?](serverless-protection.md), [Serverless protection recommendations](recommendations-reference-serverless-protection.md), and [cloud support availability](support-matrix-defender-for-cloud.md#cloud-support).
 
 ## May 2026
 

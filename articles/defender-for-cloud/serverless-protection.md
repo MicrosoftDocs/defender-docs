@@ -1,12 +1,14 @@
 ---
-title: What is Serverless protection (Preview)
+author: ElazarK
+ms.author: elkrieger
+title: What is Serverless protection?
 description: Learn about Serverless protection in Microsoft Defender for Cloud and how it helps secure your serverless resources.
 ms.topic: overview
-ms.date: 04/13/2026
+ms.date: 05/25/2026
 #customer intent: As a reader, I want to understand what Serverless protection is in Microsoft Defender for Cloud.
 ---
 
-# Serverless protection (Preview)
+# What is Serverless protection?
 
 Microsoft Defender for Cloud, as a Cloud-Native Application Protection Platform (CNAPP), delivers comprehensive visibility, security, and posture management for serverless workloads across multicloud environments. It extends coverage to Azure Web Apps, Azure Functions, and Amazon Web Service (AWS) Lambda, ensuring these resources are fully protected.
 

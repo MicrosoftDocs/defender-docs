@@ -2,9 +2,9 @@
 title: Interoperability with Azure services, Azure clouds, and client operating systems
 description: Learn about the Azure cloud environments where Defender for Cloud can be used, the Azure services that Defender for Cloud protects, and the client operating systems that Defender for Cloud supports.
 ms.topic: limits-and-quotas
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 04/19/2026
+ms.date: 05/25/2026
 ---
 
 # Support matrices for Defender for Cloud
@@ -133,7 +133,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | [Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) | GA | NA | NA | NA |
 | **DEFENDER FOR SERVERS FEATURES** | | | | |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | GA | GA<sup>[2](#footnote2)</sup> | NA |  NA |
-| [Serverless protection](serverless-protection.md) | Preview | NA | NA | NA |
+| [Serverless protection](serverless-protection.md) | GA | NA | NA | NA |
 | **AI SERVICES FEATURES** | | | | |
 | [Suspicious prompt evidence](ai-onboarding.md#enable-suspicious-prompt-evidence) | GA | NA | NA | NA | 
 | [Data security for AI interactions](ai-onboarding.md#enable-data-security-for-microsoft-foundry-with-microsoft-purview) | Preview | NA | NA | NA |
