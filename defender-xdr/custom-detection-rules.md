@@ -1,6 +1,7 @@
 ---
 title: Create custom detection rules in Microsoft Defender XDR
-description: Learn how to create custom detections rules based on advanced hunting queries.
+description: Learn how to create custom detection rules based on advanced hunting queries to proactively monitor events and take automated response actions.
+search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -20,17 +21,19 @@ appliesto:
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
 ms.date: 05/19/2026
+ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to create custom detection rules so that I can proactively monitor for threats and automate response actions using advanced hunting queries.
 ---
 
-# Create custom detection rules
+# Create custom detection rules in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Custom detection rules are rules you design and tweak by using [advanced hunting](advanced-hunting-overview.md) queries. By using these rules, you can proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
+Custom detection rules are [advanced hunting](advanced-hunting-overview.md) queries you design and tweak to proactively monitor various events and system states, including suspected breach activity and misconfigured endpoints. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
 
 ## Required permissions for managing custom detections
 
-To manage custom detections, you need roles that let you manage the data that these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender XDR and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender XDR and Sentinel roles. For more information, see the following sections.
+To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender XDR and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender XDR and Sentinel roles. For more information, see the following sections.
 
 ### Microsoft Defender XDR
 To manage custom detections on Microsoft Defender XDR data, you need to be assigned one of these roles:
@@ -94,12 +97,12 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 To create a custom detection rule by using Defender XDR data, the query must return the following columns:
 1. `Timestamp` or `TimeGenerated` - This column sets the timestamp for generated alerts. The query shouldn't manipulate this column and should return it exactly as it appears in the raw event.
    
-3. **For detections based on XDR tables**, a column or combination of columns that uniquely identify the event in these tables:
-      - For Microsoft Defender for Endpoint tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
-      - For Alert* tables, `Timestamp` must appear in the event
-      - For Observation* tables, `Timestamp` and `ObservationId` must appear in the same event
-      - For all others, `Timestamp` and `ReportId` must appear in the same event
-4. A column that contains a strong identifier for an impacted asset. To map an impacted asset automatically in the wizard, project one of the following columns that contain a strong identifier for an impacted asset:
+1. **For detections based on XDR tables**, a column or combination of columns that uniquely identify the event in these tables:
+   - For Microsoft Defender for Endpoint tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
+   - For Alert* tables, `Timestamp` must appear in the event
+   - For Observation* tables, `Timestamp` and `ObservationId` must appear in the same event
+   - For all others, `Timestamp` and `ReportId` must appear in the same event
+1. A column that contains a strong identifier for an impacted asset. To map an impacted asset automatically in the wizard, project one of the following columns that contain a strong identifier for an impacted asset:
       - `DeviceId`
       - `DeviceName`
       - `RemoteDeviceName`
@@ -115,10 +118,7 @@ To create a custom detection rule by using Defender XDR data, the query must ret
       - `InitiatingProcessAccountUpn`
       - `InitiatingProcessAccountObjectId`
 
-> [!NOTE]
-> Support for more entities will be added as new tables are added to the [advanced hunting schema](advanced-hunting-schema-tables.md).
-
-
+Support for more entities is added as new tables are added to the [advanced hunting schema](advanced-hunting-schema-tables.md).
 
 Simple queries, such as those that don't use the `project` or `summarize` operator to customize or aggregate results, typically return these common columns.
 
@@ -177,7 +177,6 @@ When you save a new rule, it runs and checks for matches from the past 30 days o
 > Match the time filters in your query with the lookback period. Results outside of the lookback period are ignored.
 
 When you edit a rule, the next run time scheduled according to the frequency you set applies the changes. The rule frequency is based on the event timestamp and not the ingestion time. Small delays might occur in specific runs, so the configured frequency isn't 100% accurate.
-
 
 ##### Continuous (NRT) frequency
 
@@ -373,7 +372,6 @@ For more information on user actions, see [Remediation actions in Microsoft Defe
 - If the custom detection yields email messages, you can select **Move to mailbox folder** to move the email to a selected folder (any of **Junk**, **Inbox**, or **Deleted items** folders). Specifically, you can move email results from quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
 
    :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
-    :::image type="content" source="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png" alt-text="Screenshot of the Inbox option under custom detections in the Microsoft Defender portal." lightbox="media/custom-detection-rules/advanced-hunting-custom-quarantine-results.png":::
 
 - Alternatively, you can select **Delete email** and then choose to either move the emails to Deleted Items (**Soft delete**) or delete the selected emails permanently (**Hard delete**).
 
@@ -406,7 +404,7 @@ After reviewing the rule, select **Create** to save it. The custom detection rul
 
 An important consideration when creating and reviewing custom detection rules is alert noise and fatigue. Custom detections group and deduplicate events into a single alert. If a custom detection rule runs twice on an event that contains the same entities, custom details, and dynamic details, it creates one alert for both events. If the detection rule recognizes that the events are identical, it logs one of the events on the created alert and takes care of the duplicates. Duplicates can occur when the lookback period is longer than the frequency. If the events are different, the custom detection logs both events on the alert.
 
-## See also
+## Related content
 
 - [Custom detections overview](custom-detections-overview.md)
 - [Manage custom detections](custom-detection-manage.md)
