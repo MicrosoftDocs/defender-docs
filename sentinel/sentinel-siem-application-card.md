@@ -2,14 +2,21 @@
 title: Application card for Microsoft Sentinel SIEM
 titleSuffix: Microsoft Security
 description: Learn about the capabilities, intended uses, limitations, and responsible AI practices for Microsoft Sentinel SIEM's AI-driven features.
+f1.keywords:
+- NOCSH
 author: guywi-ms
 ms.author: guywild
+ms.localizationpriority: medium
+audience: ITPro
 ms.reviewer: mschechter
 ms.topic: concept-article
 ms.date: 05/18/2026
 ms.service: microsoft-sentinel
 ms.custom: responsible-ai-transparency
-ms.collection: msec-ai-copilot
+ms.collection: 
+- m365-security
+- tier1
+- msec-ai-copilot
 ai-usage: ai-assisted
 
 #customer intent: As a security analyst, I want to understand the responsible AI application card for Microsoft Sentinel SIEM
@@ -17,15 +24,13 @@ ai-usage: ai-assisted
 
 # Application card: Microsoft Sentinel SIEM
 
-## What is an Application Card?
+## What is an application card?
 
 Microsoft's application and platform cards are intended to help you understand how our AI technology works, the choices application owners can make that influence application performance and behavior, and the importance of considering the whole application, including the technology, the people, and the environment. Application cards are created for AI applications and platform cards are created for AI platform services. These resources can support the development or deployment of your own applications and can be shared with users or stakeholders impacted by them.
 
-As part of its commitment to responsible AI, Microsoft adheres to six core principles: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. These principles are embedded in the Responsible AI Standard, which guides teams in designing, building, and testing AI applications. Application and platform cards play a key role in operationalizing these principles by offering transparency around capabilities, intended uses, and limitations.
+As part of its commitment to responsible AI, Microsoft adheres to six core principles: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. These principles are embedded in the Responsible AI Standard, which guides teams in designing, building, and testing AI applications. Application and platform cards play a key role in operationalizing these principles by offering transparency around capabilities, intended uses, and limitations. For further insight, readers are encouraged to explore Microsoft's [Responsible AI Transparency Report](https://www.microsoft.com/ai/responsible-ai) and [Code of Conduct](https://www.microsoft.com/legal/terms-of-use), which outline how enterprise customers and individuals can engage with AI responsibly.
 
-For further insight, readers are encouraged to explore Microsoft's [Responsible AI Transparency Report](https://www.microsoft.com/ai/responsible-ai) and [Code of Conduct](https://www.microsoft.com/legal/terms-of-use), which outline how enterprise customers and individuals can engage with AI responsibly.
-
-## 1. Overview
+## Overview
 
 Microsoft Sentinel is a cloud-native Security Information and Event Management (SIEM) solution and unified security platform for agentic defense, where automation and AI assist analysts while humans remain responsible for decisions and actions. It delivers scalable, cost-efficient security in multicloud and multiplatform environments. By combining AI capabilities, automation, and threat intelligence, Microsoft Sentinel supports threat detection, investigation, response, and proactive hunting, empowering security analysts to anticipate and stop attacks faster and with greater precision. Microsoft Sentinel's architecture and intelligent analytics allow it to make sense of massive volumes of security data and orchestrate appropriate responses, while keeping customer analysts at the center of all critical decisions.
 
@@ -33,17 +38,17 @@ This application card provides transparency into Microsoft Sentinel SIEM's AI-dr
 
 For more information, see [What is Microsoft Sentinel?](overview.md) and [Microsoft Sentinel in the Microsoft Defender portal](microsoft-sentinel-defender-portal.md).
 
-## 2. Key terms
+## Key terms
 
 The following table defines key terms relevant to Microsoft Sentinel's AI-enhanced features.
 
-| Term | Description |
-|------|-------------|
-| Behavior | A structured record of activity produced by the Microsoft Sentinel UEBA (User and Entity Behavior Analytics) behaviors layer. A behavior captures a series of related security events consolidated into a single narrative (for example, "User X accessed 25 resources in 10 minutes") with additional context like the involved entities and relevant MITRE ATT&CK tactic labels. |
-| Playbook | An automated workflow in Microsoft Sentinel that performs a sequence of actions (such as alert triage or incident response tasks). Traditional Sentinel playbooks are built using Azure Logic Apps, whereas playbooks generated by the AI-assisted Playbook Generator are provided as code-based (Python) scripts running in a managed environment within Microsoft Sentinel. |
-| Security orchestration | The coordination of multiple automated tasks and responses in security systems. In Microsoft Sentinel, orchestration refers to combining various actions (for example, sending an alert, quarantining a device, and notifying a team) into a coherent, automated playbook that can be triggered by security incidents or alerts. |
+|Term  |Description  |
+|---------|---------|
+|**Behavior**|A structured record of activity produced by the Microsoft Sentinel UEBA (User and Entity Behavior Analytics) behaviors layer. A behavior captures a series of related security events consolidated into a single narrative (for example, "User X accessed 25 resources in 10 minutes") with additional context like the involved entities and relevant MITRE ATT&CK tactic labels.|
+|**Playbook**|An automated workflow in Microsoft Sentinel that performs a sequence of actions (such as alert triage or incident response tasks). Traditional Sentinel playbooks are built using Azure Logic Apps, whereas playbooks generated by the AI-assisted Playbook Generator are provided as code-based (Python) scripts running in a managed environment within Microsoft Sentinel.|
+|**Security orchestration**|The coordination of multiple automated tasks and responses in security systems. In Microsoft Sentinel, orchestration refers to combining various actions (for example, sending an alert, quarantining a device, and notifying a team) into a coherent, automated playbook that can be triggered by security incidents or alerts.|
 
-## 3. Key features or capabilities
+## Key features or capabilities
 
 The key features and capabilities outlined here describe what Microsoft Sentinel SIEM is designed to do and how it performs in supported tasks.
 
@@ -51,7 +56,7 @@ The key features and capabilities outlined here describe what Microsoft Sentinel
 
 - **SOAR Playbook Generator:** An AI-assisted playbook authoring feature that uses a large language model (LLM) to create automation workflows from natural-language descriptions. Security teams can interact with an embedded AI coding assistant in the Microsoft Defender portal, providing a plain English description of a security process they want to automate. The system then generates a Python-based Sentinel playbook implementing that workflow, complete with documentation and a visual flow diagram. For instance, an analyst might describe, "If an incident is high severity, gather host information and notify the on-call engineer," and the Playbook Generator produces a script to perform exactly those steps. The generated playbook is integrated into Sentinel's automation library, where it can be reviewed, tested on sample incidents, and then activated by the user to run on actual alerts or incidents. By enabling code-free automation development, this feature accelerates the creation of custom response playbooks and broadens the range of team members who can contribute to security automation.
 
-## 4. Intended uses
+## Intended uses
 
 Microsoft Sentinel SIEM can be used in multiple scenarios in a variety of industries. Some examples of use cases include:
 
@@ -61,15 +66,15 @@ Microsoft Sentinel SIEM can be used in multiple scenarios in a variety of indust
 
 In all cases, these AI features act as assistive tools. Human expertise and decision-making remain essential: analysts interpret the behaviors and decide how to respond, and engineers review and approve each automatically generated playbook before it's used in production.
 
-## 5. Models and training data
+## Models and training data
 
 Microsoft Sentinel SIEM leverages a variety of AI models to power the experience that users see. Some examples include [Azure OpenAI Service models](https://aka.ms/aoa-transparency). To learn more about the data used to train the foundation models behind Microsoft Sentinel SIEM, refer to the linked model cards to find the relevant data cards.
 
 - **UEBA behaviors layer:** This layer operates with a set of predefined logic and heuristics rather than a continuously learning model. Microsoft's security experts analyzed diverse security logs (for example, Windows events, Microsoft Entra ID sign-in logs, AWS CloudTrail) and crafted rules that identify patterns of interest. These rules define how raw events are stitched together into a behavior and what contextual information to add. Rule creation and validation occur during development and testing; behavior rules are static in production and do not learn from or adapt to customer data. Because it's rule-driven, the behaviors layer doesn't train on individual customer data or adapt itself per tenant. Instead, it applies the same curated logic to all data it processes. The development process included testing on sample datasets to ensure the rules are robust and yield meaningful results. No customer-specific model training occurs—new events are simply matched against the existing patterns.
 
-- **SOAR Playbook Generator:** This feature uses a large language model (LLM) provided through Azure OpenAI Service—specifically, a variant of OpenAI's GPT model—to interpret natural language and produce code. This is a foundation model pretrained on broad internet text and code (with knowledge up to its training cutoff date) and not fine-tuned on Microsoft Sentinel or any customer data. When a user describes a playbook, Microsoft Sentinel's system assembles a structured prompt for the LLM that includes relevant instructions and context. The LLM then generates Python code and documentation to implement the described logic. No data from the user's prompt or the generated code is used to train the base model. Microsoft might collect usage telemetry and anonymized quality signals (for example, success/failure indicators), depending on customer data‑sharing settings. All AI processing occurs within Microsoft's controlled cloud environment, meaning customer data remains secure and is handled pursuant to Microsoft's data handling commitments.
+- **SOAR Playbook Generator:** This feature uses a large language model (LLM) provided through Azure OpenAI Service—specifically, a variant of OpenAI's GPT model—to interpret natural language and produce code. This is a foundation model pretrained on broad internet text and code (with knowledge up to its training cutoff date) and not fine-tuned on Microsoft Sentinel or any customer data. When a user describes a playbook, Microsoft Sentinel's system assembles a structured prompt for the LLM that includes relevant instructions and context. The LLM then generates Python code and documentation to implement the described logic. No data from the user's prompt or the generated code is used to train the base model. Microsoft might collect usage telemetry and anonymized quality signals (for example, success/failure indicators), depending on customer data‑sharing settings. AI processing for these features occurs within Microsoft’s cloud environment, and customer data is handled pursuant to Microsoft’s data handling commitments.
 
-## 6. Performance
+## Performance
 
 Each AI feature is designed to perform reliably and to improve the efficiency of security operations:
 
@@ -79,7 +84,7 @@ Each AI feature is designed to perform reliably and to improve the efficiency of
 
 **Localization considerations:** Currently, these AI features are optimized for English. The behaviors layer produces English-language descriptions. The Playbook Generator also expects instructions in English for optimal results. Non-English logs can still generate behavior objects (the structure and context tags would appear, but the textual summary might not capture details as clearly). Microsoft might extend language support in the future, but as of now using the features in English ensures the best performance.
 
-## 7. Limitations
+## Limitations
 
 Understanding Microsoft Sentinel SIEM's limitations is crucial to determine if it's used within safe and effective boundaries. While we encourage customers to leverage Microsoft Sentinel SIEM in their innovative solutions or applications, it's important to note that Microsoft Sentinel SIEM wasn't designed for every possible scenario. We encourage users to refer to either the [Microsoft Enterprise AI Services Code of Conduct](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftAzure) (for organizations) or the [Code of Conduct section in the Microsoft Services Agreement](https://www.microsoft.com/servicesagreement) (for individuals) as well as the following considerations when choosing a use case:
 
@@ -87,11 +92,11 @@ Understanding Microsoft Sentinel SIEM's limitations is crucial to determine if i
 
 - **SOAR Playbook Generator:** This feature, while powerful, has boundaries. It currently generates playbooks only in Python, focusing on incident-driven triggers. If you need a playbook integrated with a trigger outside of Microsoft Sentinel's incident automation (such as a manually initiated run or a scheduled job), those scenarios aren't directly covered yet by the generated playbooks—you would have to adapt them or use standard Azure Logic Apps for those cases. Furthermore, the quality of the initial code output depends on the clarity and detail of the user's description. If a natural-language input is ambiguous or extremely complex, the system might produce a playbook that requires further tweaking or might indicate it can't fulfill the request. Essentially, the Playbook Generator excels at standard or moderately complex workflows, but edge-case or highly specialized logic might need additional manual refinement. Another limitation: no direct output is returned when these playbooks run; they perform actions without generating a result payload for the UI, by design, to keep the focus on action automation rather than data retrieval.
 
-## 8. Evaluations
+## Evaluations
 
-Performance and safety evaluations assess whether AI applications are operating reliably and securely by examining factors like groundedness, relevance, and coherence while identifying the risks of generating harmful content. The following evaluations were conducted with safety components already in place, which are also described in [9. Safety components and mitigations](#9-safety-components-and-mitigations).
+Performance and safety evaluations assess whether AI applications are operating reliably and securely by examining factors like groundedness, relevance, and coherence while identifying the risks of generating harmful content. The following evaluations were conducted with safety components already in place, which are also described in [Safety components and mitigations](#safety-components-and-mitigations).
 
-### 8.1 Performance and quality evaluations
+### Performance and quality evaluations
 
 Performance evaluations for AI applications are essential to improving their reliability in real-world applications. Metrics like groundedness, relevance, and coherence help assess the accuracy and consistency of AI-generated outputs, so that they are factually supported in grounded content scenarios, contextually appropriate, and logically structured. For Microsoft Sentinel SIEM, we conducted performance evaluations for the following metrics, which are available through Microsoft Foundry:
 
@@ -100,7 +105,7 @@ Performance evaluations for AI applications are essential to improving their rel
 - Fluency
 - Similarity
 
-#### 8.1a Performance and quality evaluation methods
+### Performance and quality evaluation methods
 
 For the UEBA behaviors layer, Microsoft tested it extensively with real and synthetic log data to ensure that the generated behaviors accurately represent underlying events and add value to security analysis. Evaluations focused on confirming that behaviors meet criteria such as:
 
@@ -112,7 +117,7 @@ Scenarios from known attack techniques were run through the system, and security
 
 For the SOAR Playbook Generator, evaluation involved scenario testing with a broad set of automation tasks. Microsoft's security and engineering teams created sample requests for various use cases (like malware containment, phishing response, log enrichment tasks) and reviewed the generated playbooks for correctness, readability, and safety. They ensured that the code is coherent, follows best practices, and matches the requested logic. They also tested the playbooks end-to-end in lab environments to verify they perform as expected (for example, does a "quarantine device" playbook actually isolate a machine when triggered by a test incident? Does a "notify team" playbook send the right information to the right channel?). These quality checks helped calibrate the system to produce reliable automations under typical usage patterns.
 
-### 8.2 Risk and safety evaluations
+### Risk and safety evaluations
 
 Evaluating potential risks associated with AI-generated content is essential for safeguarding against content risks with varying degrees of severity. This includes evaluating an AI application's predisposition towards generating harmful content or testing vulnerabilities to jailbreak attacks. For Microsoft Sentinel SIEM, we conducted risk and safety evaluations for the following metrics available through Microsoft Foundry:
 
@@ -123,7 +128,7 @@ Evaluating potential risks associated with AI-generated content is essential for
 - Direct jailbreak
 - Ungrounded attributes
 
-#### 8.2a Risk and safety evaluation methods
+### Risk and safety evaluation methods
 
 Microsoft examined potential risks and unintended behaviors of these AI features and implemented safeguards accordingly:
 
@@ -142,11 +147,11 @@ No evidence of disparate impact or demographic bias is present for these feature
 
 Our evaluation data is custom-built to assess AI application performance in key areas of safety and quality, simulating real-world scenarios and risks. We begin by identifying relevant evaluation aspects of concern based on multi-disciplinary research and expert input. These concerns are translated into targeted evaluation objectives and guide formulation of evaluation metrics. For safety, we create adversarial prompts to elicit undesirable or edge-case responses, which are then scored using AI-assisted annotators trained to assess alignment with Microsoft's safety standards. For quality, we craft rubric-based prompts relevant to scenarios including evaluating retrieval-augmented generation (RAG) applications and agents. Datasets are curated from diverse sources including synthetic and public datasets to simulate real-world user scenarios. Using the curated datasets, both evaluations undergo iterative refinement and human alignment to improve metric efficacy and reliability. This methodology forms the foundation of repeatable, rigorous assessments that reflect how customers use evaluations to build better and safer AI.
 
-### 8.3 Custom evaluations
+### Custom evaluations
 
 There were no per-customer customizations of the underlying models. However, Microsoft continuously monitors feature usage and feedback at a macro level, performing ongoing evaluations. For example, if multiple customers report that a certain behavior pattern is missing or mislabeled, Microsoft's engineers might refine the rules and deploy an updated logic set. Similarly, if the playbook generator is observed (via opt-in telemetry) to consistently struggle with a particular type of request, the team might adjust the LLM prompt or add new guidance to improve outputs. These improvements are rolled out to all users in service updates, ensuring that evaluation and learning are part of the lifecycle but without any custom model per individual tenant.
 
-## 9. Safety components and mitigations
+## Safety components and mitigations
 
 Microsoft has implemented several measures to ensure these AI features remain safe, reliable, and under user control:
 
@@ -160,7 +165,7 @@ Microsoft has implemented several measures to ensure these AI features remain sa
 
 - **Testing and iteration support:** Microsoft provides avenues within the tools themselves to help users adopt them safely. For example, the Playbook Generator interface allows users to run the new playbook on a sample alert (typically a sanitized incident) to see what actions it would take, verifying outcomes before deployment. The behaviors layer outputs can be compared against known sequences of events to confirm they align with expectations. Microsoft's documentation encourages such testing and outlines best practices for validating AI outputs (such as performing dry runs or starting in a lab environment). This approach helps organizations integrate the AI features gradually and with confidence.
 
-## 10. Best practices for deploying and adopting Microsoft Sentinel's AI capabilities
+## Best practices for deploying and adopting Microsoft Sentinel's AI capabilities
 
 Responsible AI is a shared commitment between Microsoft and its customers. While Microsoft builds AI applications with safety, fairness, and transparency at the core, customers play a critical role in deploying and using these technologies responsibly within their own contexts. To support this partnership, we offer the following best practices for deployers and end users to help customers implement responsible AI effectively.
 
@@ -192,7 +197,7 @@ Deployers should:
 
 - **Test in controlled environments before broad adoption:** Enable the behaviors layer and test with representative data before relying on it for production security operations. Validate that behavior outputs meet your organization's accuracy and performance standards, and that detection rules based on behaviors produce expected results.
 
-## 11. Learn more about Microsoft Sentinel SIEM
+## Learn more about Microsoft Sentinel SIEM
 
 For additional guidance or to learn more about the responsible use of Microsoft Sentinel SIEM, we recommend reviewing the following documentation:
 
