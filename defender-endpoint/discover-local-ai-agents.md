@@ -16,9 +16,9 @@ appliesto:
 
 # Discover local AI agents
 
-Microsoft Defender for Endpoint automatically discovers supported AI coding agents and MCP servers running locally on onboarded devices. Discovered agents appear as assets in the Microsoft Defender and Agent 365 portals' AI agent inventory, where you can view agent details, explore device and identity relationships using the exposure map, and investigate agent presence using advanced hunting.
+Microsoft Defender for Endpoint automatically discovers supported AI coding agents and MCP servers running locally on onboarded devices and surfaces them in the AI agent inventory. This article is part of the broader [AI coding agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md) experience.
 
-Local AI coding agent discovery on endpoints is one component of Microsoft Defender's comprehensive AI security approach. For details on broader capabilities such as discovery of cloud and platform agents, security posture assessment, threat detection, and runtime protection across your organization, see [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory).
+In this article, you learn how to view discovered agents in the inventory, explore their relationships with devices and identities, and investigate agent presence using advanced hunting.
 
 > [!NOTE]
 > Local AI coding agent discovery provides **discovery and investigation capabilities only**. It doesn't include security posture assessment, governance controls, or alerts for endpoint agents at this time.

@@ -17,9 +17,6 @@ appliesto:
 
 # AI coding agent discovery with Microsoft Defender for Endpoint
 
-> [!TIP]
-> Beyond discovery, Defender for Endpoint also provides **runtime protection** for AI coding agents — including agent hooks support for Claude Code, GitHub Copilot CLI, and OpenAI Codex, and network inspection for OpenClaw. For details, see [AI coding agent runtime protection](ai-agent-runtime-protection-overview.md).
-
 Microsoft Defender for Endpoint helps you discover and investigate AI coding agents and MCP servers running on your organization's devices. Microsoft Defender for Endpoint automatically detects and surfaces supported agents in the Microsoft Defender and Agent 365 portals, which gives you visibility into AI-related assets and lets you assess their presence across your environment.
 
 ## AI coding agent discovery on endpoints
@@ -54,6 +51,9 @@ The following local AI coding agents and MCP servers are discovered on endpoints
 For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).
 
 For information on runtime protection for AI coding agents, see [AI coding agent runtime protection overview](ai-agent-runtime-protection-overview.md).
+
+> [!TIP]
+> Beyond discovery, Defender for Endpoint also provides **runtime protection** for AI coding agents — including agent hooks support for Claude Code, GitHub Copilot CLI, and OpenAI Codex, and network inspection for OpenClaw. For details, see [AI coding agent runtime protection](ai-agent-runtime-protection-overview.md).
 
 ## Broader AI security capabilities
 
