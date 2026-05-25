@@ -88,7 +88,7 @@ You can configure scheduled antivirus scans on Linux using one of the following 
 
 1. In the Defender portal, navigate to **System** > **Settings** > **Endpoints** > **Configuration management** > **Enforcement scope**, and then select the Linux platform.
 
-1. Tag devices with the **MDE-Management** tag. Most devices enroll and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune](/intune/protect/mde-security-integration).
+1. Tag devices with the **MDE-Management** tag. Most devices enroll and receive the policy within minutes, although some might take up to 24 hours. For more information, see [Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune](/intune/device-security/microsoft-defender/security-settings-management).
 
 1. Create a Microsoft Entra group.
    - Create a dynamic Microsoft Entra group based on the operating system type to ensure that all devices onboarded to Defender for Endpoint receive the appropriate policies.
@@ -104,7 +104,7 @@ You can configure scheduled antivirus scans on Linux using one of the following 
    1. On the **Assignments** page, select the groups that receive this profile. Then select **Next**.
    1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-   For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-endpoint-security-policies.md).
+   For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](./manage-security-policies.md).
 
    :::image type="content" source="media/schedule-antivirus-scans-linux/schedule-antivirus-scans-linux.png" alt-text="Screenshot of Endpoint security policies option.":::
 
@@ -112,7 +112,7 @@ You can configure scheduled antivirus scans on Linux using one of the following 
 
 In enterprise environments, antivirus scans can be scheduled through a configuration profile. Typically, you would use a configuration management tool such as Puppet, Ansible, or other management console to push a file with the name `mdatp_managed.json` to the location `/etc/opt/microsoft/mdatp/managed`.
 
-If you already use `mdatp_managed.json` to configure other Defender for Endpoint settings (for example, exclusions or antivirus preferences), do not replace your existing file. Scheduled scan settings should be added to your existing managed JSON, alongside your current configuration. For more information, see [Set preferences for Defender for Endpoint on Linux](preferences-setup-mde-linux.md).
+If you already use `mdatp_managed.json` to configure other Defender for Endpoint settings (for example, exclusions or antivirus preferences), do not replace your existing file. Scheduled scan settings should be added to your existing managed JSON, alongside your current configuration. For more information, see [Configure security settings in Microsoft Defender for Endpoint on Linux](linux-preferences.md).
 
 The following example configures:
 
