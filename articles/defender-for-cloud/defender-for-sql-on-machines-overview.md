@@ -1,19 +1,21 @@
 ---
-title: Overview of the Defender for SQL on Machines plan in Microsoft Defender for Cloud
-description: Learn about the Defender for SQL Servers on Machines plan in Microsoft Defender for Cloud
+title: Microsoft Defender for SQL Servers on Machines overview
+description: Protect infrastructure as a service (IaaS) SQL servers across Azure, multicloud, and on-premises environments with vulnerability assessment and threat protection.
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 07/15/2025
+ms.date: 05/25/2026
 ---
 
-# Overview - Defender for SQL Servers on Machines
+# Microsoft Defender for SQL Servers on Machines overview
 
-The Defender for SQL on Machines plan in Microsoft Defender for Cloud protects your IaaS SQL Servers hosted on VMs in Azure, multiclouds, and on-premises machines.
+## Microsoft Defender for SQL Servers on Machines plan
 
--To use the plan, on-premises SQL servers must be onboarded to Defender for Cloud as Azure Arc VMs. Learn more about [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview) and [SQL Server on Virtual Machines](https://azure.microsoft.com/services/virtual-machines/sql-server/).
+The Defender for SQL on Machines plan in Microsoft Defender for Cloud protects your infrastructure as a service (IaaS) SQL Servers hosted on virtual machines (VMs) in Azure, multicloud, and on-premises environments.
 
-- For multicloud SQL Server machines, [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) must be connected to Defender for cloud.
+- To use the plan, onboard on-premises SQL servers to Defender for Cloud as Azure Arc VMs. Learn more about [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview) and [SQL Server on Virtual Machines](https://azure.microsoft.com/services/virtual-machines/sql-server/).
+
+- For multicloud SQL Server machines, connect Defender for Cloud by using the [AWS onboarding quickstart](quickstart-onboard-aws.md) and [GCP onboarding quickstart](quickstart-onboard-gcp.md).
 
 Defender for SQL Servers on Machines identifies and mitigates potential database vulnerabilities, and detects anomalous activities that could indicate threats to your databases.
 
@@ -23,3 +25,4 @@ Defender for SQL Servers on Machines identifies and mitigates potential database
 ## Next steps
 
 [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md)
+
