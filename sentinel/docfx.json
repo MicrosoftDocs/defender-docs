@@ -167,7 +167,8 @@
         "exclude": [
           "sentinel/includes/connector-details.md",
           "sentinel/includes/deprecated-connectors.md",
-          "sentinel/data-connectors-reference.md"
+          "sentinel/data-connectors-reference.md",
+          "defender-docs-pr/sentinel/includes/sentinel-tables-connectors.md"
         ]
       }
     }
