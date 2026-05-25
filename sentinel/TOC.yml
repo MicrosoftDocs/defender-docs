@@ -1122,6 +1122,8 @@
           href: upload-indicators-api.md
 - name: Responsible AI
   items:
+    - name: Application card for Microsoft Sentinel SIEM
+      href: sentinel-siem-application-card.md
     - name: Responsible AI FAQ for UEBA behaviors layer
       href: entity-behaviors-layer-rai-faqs.md
     - name: Responsible AI FAQ for Microsoft Sentinel MCP
