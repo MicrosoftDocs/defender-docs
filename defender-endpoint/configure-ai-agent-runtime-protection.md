@@ -32,8 +32,8 @@ For an overview of how each method works, see [AI coding agent runtime protectio
 Before you configure runtime protection, make sure the following requirements are met:
 
 - The device is onboarded to Microsoft Defender for Endpoint and runs on:
-  - **Windows 10 or Windows 11**, **Windows Server 2019 or newer**, or **Windows 11 virtual desktop environments**
-  - **macOS**<!-- TODO: Add specific macOS versions when Spencer provides them -->
+  - Windows 10 or Windows 11, Windows Server 2019 or newer, or Windows 11 virtual desktop environments
+  - macOS devices<!-- TODO: Add specific macOS versions when Spencer provides them -->
 - Defender Antivirus is in active mode (not passive mode). Runtime protection settings aren't enforced when Defender Antivirus runs in passive mode.
 - One or more [supported AI coding agents](ai-agent-runtime-protection-overview.md#supported-agents) are installed on the device.
 - For network inspection protection, the device requires a Microsoft Defender for Endpoint Plan 2 license. <!-- TODO: Verify exact license tier required for network inspection with engineering team -->
