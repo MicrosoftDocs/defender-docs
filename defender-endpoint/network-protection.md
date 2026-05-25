@@ -89,7 +89,7 @@ Network protection also requires Microsoft Defender Antivirus with real-time pro
 
 ## Why network protection is important
 
-Network protection is a part of the [attack surface reduction](overview-attack-surface-reduction.md) group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block connections to domains and IP addresses. By default, network protection guards your computers from known malicious domains using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in the Microsoft Edge browser. The network protection functionality can be extended to:
+Network protection is a part of the [attack surface reduction](attack-surface-reduction-overview.md) group of solutions in Microsoft Defender for Endpoint. Network protection enables the network layer to block connections to domains and IP addresses. By default, network protection guards your computers from known malicious domains using the SmartScreen feed, which blocks malicious URLs in a manner similar to SmartScreen in the Microsoft Edge browser. The network protection functionality can be extended to:
 
 - Block IP/URL addresses from your own threat intelligence ([indicators](indicator-ip-domain.md))
 - Block unsanctioned services from [Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)
@@ -195,7 +195,7 @@ When a user visits a website whose url has a bad reputation, a toast notificatio
 
 :::image type="content" source="media/network-protection-phishing-blocked.png" alt-text="Shows a network protection known phishing content blocked notification." lightbox="media/network-protection-phishing-blocked.png":::
 
-Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) shown for a blocked connection with your organization's details and contact information.
+Your security operations team can [customize the notification](attack-surface-reduction-rules-overview.md#notifications-and-alerts-for-asr-rules) shown for a blocked connection with your organization's details and contact information.
 
 ## SmartScreen Unblock
 
@@ -216,7 +216,7 @@ Network protection is enabled per device, which is typically done using your man
 > [!NOTE]
 > Microsoft Defender Antivirus must be in active mode to enable network protection.
 
-You can enable network protection in `audit` mode or `block` mode. If you want to evaluate the impact of enabling network protection before actually blocking IP addresses or URLs, you can enable network protection in [audit mode](overview-attack-surface-reduction.md). Audit mode logs whenever end users connect to an address or site that would otherwise be blocked by network protection. To enforce blocking of custom indicators or Web content filtering categories, network protection must be in `block` mode.
+You can enable network protection in `audit` mode or `block` mode. If you want to evaluate the impact of enabling network protection before actually blocking IP addresses or URLs, you can enable network protection in [audit mode](attack-surface-reduction-overview.md#audit-mode). Audit mode logs whenever end users connect to an address or site that would otherwise be blocked by network protection. To enforce blocking of custom indicators or Web content filtering categories, network protection must be in `block` mode.
 
 For information about network protection for Linux and macOS see the following articles: 
 
@@ -306,13 +306,13 @@ Network protection works best with [Microsoft Defender for Endpoint](microsoft-d
 
 ## Review network protection events in the Microsoft Defender portal
 
-Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](/defender-xdr/advanced-hunting-overview). If you're using [audit mode](overview-attack-surface-reduction.md), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
+Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](/defender-xdr/advanced-hunting-overview). If you're using [audit mode](attack-surface-reduction-overview.md#audit-mode), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
 
 ## Review network protection events in Windows Event Viewer
 
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
-1. [Create an XML query](overview-attack-surface-reduction.md#copy-the-xml-directly).
+1. [Create an XML query](attack-surface-reduction-windows-events.md#copy-the-xml-directly).
 1. Select **OK**.
 
    This procedure creates a custom view that filters to only show the following events related to network protection:

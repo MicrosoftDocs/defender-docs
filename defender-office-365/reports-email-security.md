@@ -8,7 +8,7 @@ ms.assetid: 3a137e28-1174-42d5-99af-f18868b43e86
 ms.collection:
   - m365-security
   - tier2
-description: "Admins can learn how to find and use the email security reports that are available in the Microsoft Defender portal. This article helps answer the question, 'What is the Threat protection status report in Microsoft 365'"
+description: Admins can find and use email security reports available in the Microsoft Defender portal, including the Threat protection status report.
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
@@ -23,13 +23,15 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all Microsoft 365 organizations, a variety of reports are available to help you see how email security features are protecting your organization. If you have the [necessary permissions](#what-permissions-are-needed-to-view-these-reports), you can view and download these reports as described in this article.
+This article describes how to view and download email security reports in the Microsoft Defender portal to monitor the effectiveness of email protection features in your organization.
+
+All Microsoft 365 organizations have reports that show how email security features protect your organization. If you have the [necessary permissions](#what-permissions-are-needed-to-view-these-reports), you can view and download these reports as described in this article.
 
 The reports are available in the Microsoft Defender portal at <https://security.microsoft.com> on the **Email & collaboration reports** page at **Reports** \> **Email & collaboration** \> **Email & collaboration reports**. Or, to go directly to the **Email & collaboration reports** page, use <https://security.microsoft.com/emailandcollabreport>.
 
 Summary information for each report is available on the page. Identify the report you want to view, and then select **View details** for that report.
 
-The rest of this article describes the reports that are exclusive to Defender for Office 365.
+The rest of this article describes the email security reports that are available in all Microsoft 365 organizations with Exchange Online mailboxes.
 
 > [!NOTE]
 >
@@ -60,7 +62,7 @@ Reports replaced, moved, or deprecated are described in the following table.
 
 The **Compromised users** report shows the number of user accounts marked as **Suspicious** or **Restricted** within the last 7 days. Accounts in either of these states are problematic or even compromised. With frequent use, you can use the report to spot spikes, and even trends, in suspicious or restricted accounts. For more information about compromised users, see [Responding to a compromised email account](responding-to-a-compromised-email-account.md).
 
-:::image type="content" source="media/compromised-users-report-widget.png" alt-text="The Compromised users widget on the Email & collaboration reports page." lightbox="media/compromised-users-report-widget.png":::
+:::image type="content" source="media/compromised-users-report-widget.png" alt-text="Screenshot of the Compromised users widget on the Email & collaboration reports page." lightbox="media/compromised-users-report-widget.png":::
 
 The aggregate view shows data for the last 90 days and the detail view shows data for the last 30 days.
 
@@ -418,9 +420,9 @@ The report provides the count of email messages with malicious content. For exam
 You can use the information in this report to identify trends or determine whether your organizational policies need adjustment.
 
 > [!TIP]
-> If a message is sent to five recipients, we count it as five different messages, not one message.
+> If a message is sent to five recipients, it's counted as five different messages, not one message.
 
-On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Submissions**, and then select **View details**. Or, to go directly to the report, use one of the following URLS:
+On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Threat protection status**, and then select **View details**. Or, to go directly to the report, use one of the following URLS:
 
 - **Microsoft 365 organizations without Defender for Office 365**: <https://security.microsoft.com/reports/TPSAggregateReport>
 - **Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription)**: <https://security.microsoft.com/reports/TPSAggregateReportATP>
@@ -583,7 +585,6 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   If the **Detection** value **Bulk** isn't selected, the slider is grayed-out and bulk detections aren't included in the report.
 
 - **Priority account protection**: **Yes** and **No**. For more information, see [Configure and review priority account protection in Microsoft Defender for Office 365](priority-accounts-turn-on-priority-account-protection.md).
-- **Direction**: **All** or enter **Inbound**, **Outbound**, and **Intra-org**.
 - **Direction**: Leave the value **All** or remove it, double-click in the empty box, and then select **Inbound**, **Outbound**, or **Intra-org**.
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 - **Domain**: Leave the value **All** or remove it, double-click in the empty box, and then select an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
@@ -635,7 +636,7 @@ In the details table below the chart, the following information is available:
 - **Sender**
 - **Recipients**
 - **Detection technology**: The same detection technology values from the chart.
-- **Delivery Status**
+- **Delivery status**
 - **Sender IP**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
@@ -1047,7 +1048,7 @@ On the **Top malware** page, the :::image type="icon" source="media/m365-cc-sc-c
 
 ## Top senders and recipients report
 
-The **Top senders and recipients** report is available in all organizations with cloud mailboxes and in Microsoft 365 organizations with Defender for Microsoft 365 (included or in an add-on subscription). However, the reports contain different data. For example, organizations without Defender for Office 365 can view information about top malware, spam, and phishing (spoofing) recipients, but not information about malware detected by [Safe Attachments](safe-attachments-about.md) or phishing detected by [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+The **Top senders and recipients** report is available in all organizations with cloud mailboxes and in Microsoft 365 organizations with Defender for Office 365 (included or in an add-on subscription). However, the reports contain different data. For example, organizations without Defender for Office 365 can view information about top malware, spam, and phishing (spoofing) recipients, but not information about malware detected by [Safe Attachments](safe-attachments-about.md) or phishing detected by [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
 The **Top senders and recipients** report shows the top 20 message senders in the organization, and the top 20 recipients for messages detected by Microsoft 365 protection features. By default, the report shows data for the last week, but data is available for the last 90 days.
 
@@ -1134,8 +1135,6 @@ For more information, see [View user reported messages to Microsoft](submissions
 :::image type="content" source="media/user-reported-messages-report.png" alt-text="The user-reported messages report." lightbox="media/user-reported-messages-report.png":::
 
 On the report page, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** action is available.
-
-:::image type="content" source="media/user-reported-messages-report.png" alt-text="The user-reported messages report." lightbox="media/user-reported-messages-report.png":::
 
 ## What permissions are needed to view these reports?
 
@@ -1347,7 +1346,7 @@ Use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="f
 
 In the **Save as** dialog that opens, you see the default name of the .csv file and the download location (the local Downloads folder by default), but you can change those values and then select **Save** to download the report.
 
-## Related articles
+## Related content
 
 [Anti-spam protection](anti-spam-protection-about.md)
 

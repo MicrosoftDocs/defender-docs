@@ -14,8 +14,6 @@
       href: prerequisites.md
     - name: Workspace architecture
       items:
-        - name: Review sample workspace designs
-          href: sample-workspace-designs.md
         - name: Prepare for multiple workspaces
           href: prepare-multiple-workspaces.md
         - name: Sample workspace architecture
@@ -222,7 +220,6 @@
           href: microsoft-365-defender-sentinel-integration.md
         - name: Integrate Microsoft Defender for Cloud
           href: ingest-defender-for-cloud-incidents.md
-
     - name: Integrate threat intelligence
       items:
         - name: Overview
@@ -516,6 +513,8 @@
               href: create-tasks-automation-rule.md
             - name: Export and import automation rules
               href: import-export-automation-rules.md
+            - name: Automated integrations
+              href: automation/integrations.md
         - name: Playbooks
           items:
             - name: Overview
@@ -605,7 +604,7 @@
     - name: Microsoft Sentinel data lake overview
       href: datalake/sentinel-lake-overview.md
       displayName: data lake
-    - name: Direct ingestion into the data lak e
+    - name: Direct ingestion into the data lake
       href: datalake/sentinel-lake-log-ingestion-guidance.md
       displayName: data lake
     - name: Data federation in the Microsoft Sentinel data lake
@@ -974,10 +973,6 @@
       href: sentinel-solutions-post-publish-tracking.md
     - name: Packaging and publishing a Sentinel platform solution
       href: package-platform-solution.md
-    - name: Sentinel SIEM solution lifecycle post publish
-      href: publish-sentinel-solutions.md
-    - name: Solution lifecycle post publish
-      href: sentinel-solutions-post-publish-tracking.md
     - name: Managing Platform Solutions
       href: manage-platform-solutions.md
     - name: Troubleshoot solutions in Microsoft Sentinel
@@ -1038,6 +1033,8 @@
               href: normalization-entity-application.md
         - name: ASIM schemas
           items:
+            - name: ASIM agent event schema
+              href: normalization-schema-agent.md
             - name: ASIM alert event schema
               href: normalization-schema-alert.md
             - name: ASIM audit event schema

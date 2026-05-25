@@ -51,10 +51,6 @@ The following workflow describes the high level steps in developing a custom ASI
 
 This article guides you through the process's development, testing, and deployment steps.
 
-> [!TIP]
-> Also watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the related [slide deck](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM). For more information, see [Next steps](#next-steps).
->
-
 ### Collect sample logs
 
 To build effective ASIM parsers, you need a representative set of logs, which in most case will require setting up the source system and connecting it to Microsoft Sentinel. If you do not have the source device available, cloud pay-as-you-go services let you deploy many devices for development and testing.
@@ -526,9 +522,8 @@ To submit your test results, use the following steps:
 - Include both files in your PR in the folder `/Parsers/ASim<schema>/Tests`.
 
 
-## Next steps
+## Related content    
 
-This article discusses developing ASIM parsers.
 
 Learn more about ASIM parsers:
 
@@ -539,7 +534,7 @@ Learn more about ASIM parsers:
 
 Learn more about the ASIM in general: 
 
-- Watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) 

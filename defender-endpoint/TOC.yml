@@ -8,7 +8,7 @@
   - name: Overview
     items:
     - name: What is Microsoft Defender for Endpoint?
-      items: 
+      items:
       - name: Defender for Endpoint
         href: microsoft-defender-endpoint.md
       - name: Defender for Endpoint on macOS
@@ -32,7 +32,7 @@
         - name: Setup and configuration
           href: mde-p1-setup-configuration.md
         - name: Get started
-          href: mde-plan1-getting-started.md        
+          href: mde-plan1-getting-started.md
     - name: What's new
       items:
         - name: New features
@@ -61,8 +61,8 @@
         href: microsoft-defender-antivirus-using-powershell.md
       - name: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management
         href: evaluate-mda-using-mde-security-settings-management.md
-      - name: Evaluate Microsoft Defender Antivirus using Group Policy 
-        href: evaluate-mdav-using-gp.md  
+      - name: Evaluate Microsoft Defender Antivirus using Group Policy
+        href: evaluate-mdav-using-gp.md
     - name: Demonstration scenarios
       href: defender-endpoint-demonstrations.md
       items:
@@ -70,7 +70,7 @@
         href: mde-demonstration-amsi.md
       - name: Antimalware validation demonstration
         href: validate-antimalware.md
-      - name: Attack surface reduction rules demonstration
+      - name: ASR rules demonstration
         href: defender-endpoint-demonstration-attack-surface-reduction-rules.md
       - name: App reputation demonstration
         href: defender-endpoint-demonstration-app-reputation.md
@@ -92,7 +92,7 @@
         href: defender-endpoint-demonstration-potentially-unwanted-applications.md
       - name: URL reputation demonstrations
         href: defender-endpoint-demonstration-smartscreen-url-reputation.md
- 
+
   - name: Deployment, onboarding, and configuration
     items:
     - name: Plan your deployment
@@ -114,33 +114,33 @@
       items:
       - name: Configure service connections
         items:
-        - name: Step 1 - Configure your network environment 
+        - name: Step 1 - Configure your network environment
           href: configure-environment.md
         - name: Step 2 - Configure device proxy and Internet settings
           href: configure-proxy-internet.md
         - name: Step 3 - Verify client connectivity to service URLs
-          href: verify-connectivity.md            
+          href: verify-connectivity.md
       - name: Configure streamlined connectivity
         items:
         - name: Onboard devices using streamlined method
           href: configure-device-connectivity.md
         - name: Migrate devices to streamlined method
-          href: migrate-devices-streamlined.md        
+          href: migrate-devices-streamlined.md
       - name: Enable access to service URLs
         items:
         - name: Streamlined device connectivity URLs (commercial)
           href: streamlined-device-connectivity-urls-commercial.md
         - name: Streamlined device connectivity URLs (US government)
-          href: streamlined-device-connectivity-urls-gov.md                                                           
+          href: streamlined-device-connectivity-urls-gov.md
         - name: Standard device connectivity URLs
-          items: 
+          items:
           - name: Standard device connectivity URLs (commercial)
             href: standard-device-connectivity-urls-commercial.md
           - name: Standard device connectivity URLs (US government)
-            href: standard-device-connectivity-urls-gov.md 
+            href: standard-device-connectivity-urls-gov.md
 
       - name: Defender for Endpoint on Windows
-        items:                                                               
+        items:
         - name: Onboard client devices
           items:
           - name: Onboard Windows devices using the Defender deployment tool
@@ -204,7 +204,7 @@
             - name: Set up policies
               href: mac-jamfpro-policies.md
             - name: Enroll devices
-              href: mac-jamfpro-enroll-devices.md        
+              href: mac-jamfpro-enroll-devices.md
           - name: Deployment with other Mobile Device Management (MDM) systems
             href: mac-install-with-other-mdm.md
           - name: Manual deployment
@@ -214,7 +214,7 @@
             - name: Configure and validate exclusions on Mac
               href: mac-exclusions.md
             - name: Set preferences on Mac
-              href: mac-preferences.md 
+              href: mac-preferences.md
             - name: Detect and block potentially unwanted applications on Mac
               href: mac-pua.md
             - name: Protect macOS security settings using tamper protection
@@ -267,14 +267,14 @@
               href: manage-sys-extensions-using-jamf.md
             - name: Manual deployment
               href: manage-sys-extensions-manual-deployment.md
-           
+
       - name: Defender for Endpoint on Linux
         items:
         - name: Deploy Defender for Endpoint on Linux
           items:
           - name: Prerequisites
             href: mde-linux-prerequisites.md
-          - name: Choose a deployment method                       
+          - name: Choose a deployment method
             items:
             - name: Enabling deployment to a custom location
               href: linux-custom-location-installation.md
@@ -317,13 +317,13 @@
           - name: Configure and validate exclusions on Linux
             href: linux-exclusions.md
           - name: Configure eBPF-based sensor
-            href: linux-support-ebpf.md 
+            href: linux-support-ebpf.md
           - name: Detect and block Potentially Unwanted Applications
             href: linux-pua.md
           - name: Configure Offline Security Intelligence Update
             href: linux-support-offline-security-intelligence-update.md
         - name: Update Defender for Endpoint on Linux
-          items: 
+          items:
           - name: Update Defender for Endpoint on Linux
             href: linux-updates.md
           - name: Schedule an update for Defender for Endpoint on Linux
@@ -352,7 +352,7 @@
               href: android-new-ux.md
             - name: User experiences in Defender for Endpoint on iOS
               href: ios-new-ux.md
-            - name: Mobile device resources for Defender for Endpoint 
+            - name: Mobile device resources for Defender for Endpoint
               href: mobile-resources-defender-endpoint.md
             - name: Configure Defender for Endpoint on Android features
               href: android-configure.md
@@ -435,7 +435,7 @@
         - name: Configure time zone settings
           href: time-settings.md
 
-      - name: Safeguard and manage your environment 
+      - name: Safeguard and manage your environment
         items:
           - name: Managing exclusions reference
             href: managing-exclusions.md
@@ -529,7 +529,7 @@
           - name: Run the client analyzer on macOS
             href: run-analyzer-macos.md
           - name: Diagnose issues with Client Analyzer
-            href: use-client-analyzer.md        
+            href: use-client-analyzer.md
           - name: Data collection for advanced troubleshooting on Windows
             href: data-collection-analyzer.md
           - name: Understand the analyzer HTML report
@@ -552,21 +552,21 @@
         - name: Troubleshoot Microsoft Defender Antivirus settings
           href: troubleshoot-settings.md
         - name: Troubleshoot Microsoft Defender Antivirus Security intelligence not getting updated
-          href: troubleshoot-security-intelligence-not-updated.md 
+          href: troubleshoot-security-intelligence-not-updated.md
         - name: Troubleshooting Security Intelligence Updates from Microsoft Update source
           href: security-intelligence-update-tshoot.md
           displayName: Troubleshooting Security Intelligence Updates from Microsoft Update source
         - name: Troubleshoot attack surface reduction issues
           items:
-          - name: Network protection
+          - name: Troubleshoot network protection
             href: troubleshoot-np.md
-          - name: Attack surface reduction rules
+          - name: Troubleshoot ASR rules
             href: troubleshoot-asr.md
-          - name: Migrate to Attack surface reduction rules
+          - name: Migrate to ASR rules
             href: migrating-asr-rules.md
 
-  - name: Defender for Endpoint Security Operations Guide 
-    href: mde-sec-ops-guide.md    
+  - name: Defender for Endpoint Security Operations Guide
+    href: mde-sec-ops-guide.md
 
   - name: How to guides
     items:
@@ -583,7 +583,7 @@
     - name: Onboarding using Microsoft Intune
       href: onboarding-endpoint-manager.md
     - name: Deploy Microsoft Defender for Endpoint prerelease builds on Android devices
-      href: mobile-pretest-android.md   
+      href: mobile-pretest-android.md
 
   - name: Migration guides
     items:
@@ -616,13 +616,13 @@
     - name: Detect vulnerabilities
       href: /defender-vulnerability-management
     - name: Discover devices
-      items:      
+      items:
       - name: Overview
         href: device-discovery.md
       - name: Manage device discovery
         href: configure-device-discovery.md
       - name: Review and assess devices
-        href: assess-devices.md       
+        href: assess-devices.md
 
       - name: Configure network authenticated scans
         href: network-devices.md
@@ -673,31 +673,35 @@
     - name: Attack surface reduction
       items:
       - name: Attack surface reduction overview
-        href: overview-attack-surface-reduction.md
-      - name: Attack surface reduction rules
-        items:
-        - name: Learn about ASR rules
-          href: attack-surface-reduction.md
-        - name: Attack surface reduction rules deployment guide
-          items:
-          - name: Attack surface reduction rules deployment overview
-            href: attack-surface-reduction-rules-deployment.md
-          - name: Plan attack surface reduction rules deployment
-            href: attack-surface-reduction-rules-deployment-plan.md
-          - name: Test attack surface reduction rules
-            href: attack-surface-reduction-rules-deployment-test.md
-          - name: Enable attack surface reduction rules
-            href: attack-surface-reduction-rules-deployment-implement.md
-          - name: Operationalize attack surface reduction rules
-            href: attack-surface-reduction-rules-deployment-operationalize.md
-        - name: Attack surface reduction rules reference
-          href: attack-surface-reduction-rules-reference.md
-        - name: Troubleshoot attack surface reduction rules
-          href: troubleshoot-asr-rules.md
-        - name: Enable ASR rules alternate configuration methods
-          href: enable-attack-surface-reduction.md
+        href: attack-surface-reduction-overview.md
+      - name: Attack surface reduction Windows events
+        href: attack-surface-reduction-windows-events.md
       - name: Attack surface reduction FAQ
         href: attack-surface-reduction-faq.yml
+      - name: ASR rules
+        items:
+        - name: About ASR rules
+          href: attack-surface-reduction-rules-overview.md
+        - name: ASR rules deployment guide
+          items:
+          - name: ASR rules deployment guide
+            href: attack-surface-reduction-rules-deployment.md
+          - name: Plan your ASR rules deployment
+            href: attack-surface-reduction-rules-deployment-plan.md
+          - name: Test your ASR rules deployment
+            href: attack-surface-reduction-rules-deployment-test.md
+          - name: Enable your ASR rules deployment
+            href: attack-surface-reduction-rules-deployment-implement.md
+          - name: Manage and monitor your ASR rules deployment
+            href: attack-surface-reduction-rules-deployment-operationalize.md
+        - name: Configure ASR rules and exclusions
+          href: attack-surface-reduction-rules-configure.md
+        - name: Monitor ASR rule activity
+          href: attack-surface-reduction-rules-monitor.md
+        - name: ASR rules report
+          href: attack-surface-reduction-rules-report.md
+        - name: ASR rules reference
+          href: attack-surface-reduction-rules-reference.md
       - name: Controlled folder access
         items:
         - name: Protect folders
@@ -965,7 +969,7 @@
         items:
         - name: Microsoft Defender Core service overview
           href: microsoft-defender-core-service-overview.md
-        - name: Microsoft Defender Core service configurations and experimentation 
+        - name: Microsoft Defender Core service configurations and experimentation
           href: microsoft-defender-core-service-configurations-and-experimentation.md
         - name: Collect diagnostic data of Microsoft Defender Antivirus
           href: collect-diagnostic-data.md
@@ -974,7 +978,7 @@
         items:
         - name: Troubleshoot performance issues related to real-time protection
           href: troubleshoot-performance-issues.md
-          items: 
+          items:
           - name: Performance analyzer for Microsoft Defender Antivirus
             href: tune-performance-defender-antivirus.md
           - name: Performance analyzer reference
@@ -1006,7 +1010,7 @@
         href: sandbox-mdav.md
       - name: Early Launch Antimalware (ELAM) and Microsoft Defender Antivirus
         href: elam-on-mdav.md
-        
+
     - name: Address false positives/negatives in Microsoft Defender for Endpoint
       href: defender-endpoint-false-positives-negatives.md
 
@@ -1019,8 +1023,6 @@
         href: /intune/intune-service/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
       - name: Increase compliance with the security baseline
         href: configure-machines-security-baseline.md
-      - name: Optimize attack surface reduction rule deployment and detections
-        href: configure-machines-asr.md
       - name: Built-in protection
         href: built-in-protection.md
 
@@ -1136,7 +1138,7 @@
           href: live-response-command-examples.md
 
       - name: Use sensitivity labels to prioritize incident response
-        href: information-protection-investigation.md    
+        href: information-protection-investigation.md
 
     - name: Threat analytics
       items:
@@ -1186,12 +1188,12 @@
           href: web-protection-monitoring.md
         - name: Device control reports
           href: device-control-report.md
-        - name: Attack surface reduction rules report
-          href: attack-surface-reduction-rules-report.md                                                    
+        - name: ASR rules report
+          href: attack-surface-reduction-rules-report.md
         - name: Aggregated reports
           href: aggregated-reporting.md
         - name: Create custom reports using Power BI
-          href: api/api-power-bi.md                         
+          href: api/api-power-bi.md
     - name: Configure integration with other Microsoft solutions
       items:
       - name: Configure Conditional Access
@@ -1593,7 +1595,7 @@
       - name: Microsoft Defender for Cloud Apps integration overview
         href: microsoft-cloud-app-security-integration.md
     - name: Microsoft Security Resources
-      items: 
+      items:
         - name: Threat actor naming
           href: /unified-secops-platform/microsoft-threat-actor-naming
 
@@ -1611,9 +1613,9 @@
           href: /unified-secops-platform/virus-initiative-criteria
 
         - name: Software developer FAQ
-          href: /defender-xdr/developer-faq        
+          href: /defender-xdr/developer-faq
     - name: Malware information
-      items: 
+      items:
        - name: Understanding malware
          href: malware/understanding-malware.md
        - name: Coinminers
@@ -1644,8 +1646,8 @@
          href: malware/worms-malware.md
     - name: Understand threat intelligence concepts
       href: threat-indicator-concepts.md
-    - name: Release notes archive      
-      items: 
+    - name: Release notes archive
+      items:
       - name: What's new archive
         href: whats-new-mde-archive.md
       - name: Release notes archive
