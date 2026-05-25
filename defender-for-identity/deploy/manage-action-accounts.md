@@ -10,7 +10,7 @@ ms.topic: how-to
 Defender for Identity allows you to take [remediation actions](../remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so. This is separate from the [Directory Service Account](directory-service-accounts.md), which is for reading AD data.
 
 > [!IMPORTANT]
-> This configuration applies to the Defender for Identity sensor v2.x only. The sensor v3.x always uses the domain controller's local system account for response actions. If all your sensors are v3.x, no action account configuration is needed.
+> This configuration applies to the Defender for Identity sensor v2.x on domain controllers only. Response actions aren't performed by sensors on AD FS, AD CS, or Microsoft Entra Connect servers that aren't domain controllers. The sensor v3.x always uses the domain controller's local system account for response actions. If all your sensors are v3.x, no action account configuration is needed.
 
 By default, the Microsoft Defender for Identity sensor impersonates the `LocalSystem` account of the domain controller and performs the actions, including [attack disrupting scenarios from Microsoft Defender XDR](/microsoft-365/security/defender/automatic-attack-disruption).
 
