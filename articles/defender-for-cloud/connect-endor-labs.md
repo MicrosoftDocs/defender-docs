@@ -52,7 +52,7 @@ To connect your Endor Labs account to Defender for Cloud:
 
 1. Select **Integrations**.
 
-    :::image type="content" border="true" source="./media/connect-endor-labs/integrations.png" alt-text="Microsoft Defender for Cloud Environment settings page with Integrations selected.":::
+    :::image type="content" border="true" source="./media/connect-endor-labs/integrations.png" alt-text="Microsoft Defender for Cloud Environment settings page with Integrations selected." lightbox="./media/connect-endor-labs/integrations.png":::
 
 1. Select **Add integration** > **Endor Labs**.
 
