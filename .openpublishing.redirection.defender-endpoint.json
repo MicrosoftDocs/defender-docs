@@ -126,7 +126,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "defender-endpoint/schedule-anti-virus-scans-liux.md",
+      "source_path": "defender-endpoint/schedule-anti-virus-scans-linux.md",
       "redirect_url": "/defender-endpoint/configure-anti-virus-scans-linux",
       "redirect_document_id": true
     },
