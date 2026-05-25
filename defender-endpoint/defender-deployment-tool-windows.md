@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.subservice: onboard
-ms.date: 05/19/2026
+ms.date: 05/26/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
