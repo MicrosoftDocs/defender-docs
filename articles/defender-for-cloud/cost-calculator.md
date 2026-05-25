@@ -1,31 +1,33 @@
 ---
-title: Estimate costs with the Defender for Cloud cost calculator
+title: Estimate costs with the Microsoft Defender for Cloud cost calculator
 description: Discover how to use the Microsoft Defender for Cloud Cost Calculator to estimate your cloud security expenses. 
+author: ElazarK
+ms.author: elkrieger
 ms.topic: how-to
-ms.date: 03/19/2025
+ms.date: 05/24/2026
 ai-usage: ai-assisted
 #customer intent: Customers will use this document to learn how to effectively estimate and manage their Microsoft Defender for Cloud costs. They will understand how to access and use the cost calculator, configure different plans and environments, add assets, and can adjust their cost estimates to optimize their cloud security expenses.
 ---
 
 # Estimate costs with the Microsoft Defender for Cloud cost calculator  
   
-The Microsoft Defender for Cloud cost calculator is a helpful tool for estimating the potential costs associated with your cloud security needs. It allows you to configure different plans and environments, providing a detailed cost breakdown, including applicable discounts.  
+The Microsoft Defender for Cloud cost calculator helps you estimate potential costs for your cloud security needs. You can configure plans and environments and get a detailed cost breakdown, including applicable discounts.  
   
 ## Access the cost calculator
   
-  To use the Defender for Cloud Cost Calculator, go to the **Environment Settings** section of Microsoft Defender for Cloud. Select the **Cost Calculator** button located in the upper section of the interface.
+To use the Defender for Cloud cost calculator, open the [Microsoft Defender for Cloud Environment settings](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/EnvironmentSettings). Then select **Cost Calculator**.
 
-:::image type="content" source="media/cost-calculator/select-cost-calculator.png" alt-text="Screenshot of cost calculator button in Environment Settings." lightbox="media/cost-calculator/select-cost-calculator.png":::
+:::image type="content" source="media/cost-calculator/select-cost-calculator.png" alt-text="Environment settings page with Cost Calculator selected in Microsoft Defender for Cloud." lightbox="media/cost-calculator/select-cost-calculator.png":::
   
 ## Configure Defender for Cloud plans and environments
   
-On the first page of the calculator, select the **Add Assets** button to start adding assets to your cost calculation. You have three methods to add assets:  
+On the first page of the calculator, select **Add Assets** to start adding assets to your cost calculation. You can add assets in three ways:  
   
 - [Add assets from onboarded environments](#add-assets-from-onboarded-environments): **Recommended** - Add assets from environments already onboarded to Defender for Cloud. This method covers all plans for Azure and works faster than the script option.
-- [Add assets with a script](#add-assets-with-a-script): Download and execute a script to automatically add existing assets. Recommended for environments (like AWS or GCP projects) that aren't yet onboarded to Azure.
+- [Add assets with a script](#add-assets-with-a-script): Download and execute a script to automatically add existing assets. Recommended for environments such as Amazon Web Services (AWS) or Google Cloud Platform (GCP) projects that aren't yet onboarded to Azure.
 - [Add custom assets](#assign-custom-assets): Add assets manually without using automation.  
 
-:::image type="content" source="media/cost-calculator/add-assets-cost-calculator.png" alt-text="Screenshot of how to add assets in cost calculator." lightbox="media/cost-calculator/add-assets-cost-calculator.png":::
+:::image type="content" source="media/cost-calculator/add-assets-cost-calculator.png" alt-text="Cost Calculator Add Assets page showing options to add onboarded, script-based, or custom assets." lightbox="media/cost-calculator/add-assets-cost-calculator.png":::
 
 > [!NOTE]
 > The cost calculator doesn't consider reservation plans for Defender for Cloud.
@@ -35,35 +37,35 @@ On the first page of the calculator, select the **Add Assets** button to start a
 > [!TIP]
 > This method is recommended for Azure environments because it covers all plans and provides faster results than using scripts.
 
-1. Select from the list of Azure environments already onboarded to Defender for Cloud to include in the cost calculation.
+1. In **Azure environments**, select the onboarded environment that you want to include in the cost calculation.
 
     > [!NOTE]
     > The calculator discovers resources for which you have permissions.
 
 1. Choose the plans. The calculator estimates the cost based on your selections and any existing discounts.
 
-:::image type="content" source="media/cost-calculator/assign-onboarded-assets.png" alt-text="Screenshot of how to assign onboarded assets." lightbox="media/cost-calculator/assign-onboarded-assets.png":::
+    :::image type="content" source="media/cost-calculator/assign-onboarded-assets.png" alt-text="Onboarded environments list with selectable subscriptions and plans for cost calculation." lightbox="media/cost-calculator/assign-onboarded-assets.png":::
 
 ### Add assets with a script  
 
 > [!NOTE]
 > This method is recommended for environments that aren't yet onboarded to Azure, such as AWS or GCP projects.
 
-1. Choose the environment type (Azure, AWS, or GCP) and copy the script to a new *.ps1 file.  
+1. In **Environment type**, choose Azure, AWS, or GCP, and then copy the script to a new *.ps1 file.  
 
     > [!NOTE]
     > The script only collects information that the user running it has access to.
 
 1. Run the script in your PowerShell 7.X environment by using a privileged user account. The script collects information about your billable assets and creates a CSV file. It gathers information in two steps. First, it collects the current number of billable assets that usually stay constant. Second, it collects information about billable assets that can change a lot during the month. For these assets, it checks usage over the last 30 days to evaluate the cost. You can stop the script after the first step, which takes a few seconds. Or you can continue to collect the last 30 days of usage for dynamic assets, which might take longer for large accounts.
 1. Upload this CSV file into the wizard where you downloaded the script.  
-1. Select the desired Defender for Cloud plans. The calculator estimates costs based on your selection and any existing discounts.
+1. Select **Defender for Cloud plans**. The calculator estimates costs based on your selection and any existing discounts.
 
 > [!NOTE]
 >
 > - Reservation plans for Defender for Cloud aren't considered.
-> - For Defender for APIs: When calculating the cost based on the number of API calls in the last 30 days, we automatically select the best Defender for APIs plan for you. If there are no API calls in the last 30 days, we automatically disable the plan for calculation purposes.
+> - For Defender for APIs: When calculating the cost based on the number of application programming interface (API) calls in the last 30 days, we automatically select the best Defender for APIs plan for you. If there are no API calls in the last 30 days, we automatically disable the plan for calculation purposes.
 
-:::image type="content" source="media/cost-calculator/add-assets-with-script.png" alt-text="Screenshot of how to add assets with a script." lightbox="media/cost-calculator/add-assets-with-script.png":::
+:::image type="content" source="media/cost-calculator/add-assets-with-script.png" alt-text="Script upload step in Cost Calculator with CSV upload control and plan selection." lightbox="media/cost-calculator/add-assets-with-script.png":::
 
 #### Required permissions for scripts
 
@@ -73,7 +75,7 @@ This section provides an overview of the permissions required to run the scripts
 
 To run this script successfully for each subscription, the account you use needs permissions that allow it to:
 
-- **Discover and list resources** (including virtual machines, storage accounts, APIM services, Cosmos DB accounts, and other resources).
+- **Discover and list resources** (including virtual machines, storage accounts, Azure API Management (APIM) services, Azure Cosmos DB accounts, and other resources).
 
 - **Query Resource Graph** (via Search-AzGraph).
 - **Read Metrics** (via Get-AzMetric and the Azure Monitor/Insights APIs).
@@ -112,7 +114,7 @@ The AWS script supports two discovery flows:
 
 ###### Single account discovery
 
-For single account discovery, the following overview describes the permissions your AWS identity (user or role) needs to run this script successfully. The script enumerates resources (EC2, RDS, EKS, S3, and others) and fetches metadata for those resources. It doesn't create, modify, or delete resources, so **read-only** access is sufficient in most cases.
+For single account discovery, the following overview describes the permissions your AWS identity (user or role) needs to run this script successfully. The script enumerates resources (Amazon Elastic Compute Cloud (EC2), Amazon Relational Database Service (RDS), Amazon Elastic Kubernetes Service (EKS), Amazon Simple Storage Service (S3), and others) and fetches metadata for those resources. It doesn't create, modify, or delete resources, so **read-only** access is sufficient in most cases.
 
 **AWS managed policy: ReadOnlyAccess or ViewOnlyAccess**:
 
@@ -142,8 +144,8 @@ If you need a more granular approach with a **custom** IAM policy, the following
   - autoscaling:DescribeAutoScalingGroups
 - **S3**
   - s3:ListAllMyBuckets
-- **STS**
-  - sts:GetCallerIdentity (to retrieve the AWS Account ID)
+- **AWS Security Token Service (STS)**
+  - sts:GetCallerIdentity (to retrieve the AWS account ID)
 
 Additionally, if you need to list other resources not shown in the script or if you plan to expand the script's capabilities, ensure you grant the appropriate Describe*, List*, and Get* actions as needed.
 
@@ -186,7 +188,7 @@ This permission set ensures the script can discover resources and fetch the rele
 
 ##### GCP
 
-The following overview describes the permissions your GCP user or service account needs to run this script successfully. You can use the script to discover resources in a single project or across multiple projects, depending on your selection. To estimate costs for multiple projects, make sure your account has the required permissions in each project you want to include. The script lists and describes resources such as VM instances, Cloud SQL databases, GKE clusters, and GCS buckets in all selected projects.
+The following overview describes the permissions your GCP user or service account needs to run this script successfully. You can use the script to discover resources in a single project or across multiple projects, depending on your selection. To estimate costs for multiple projects, make sure your account has the required permissions in each project you want to include. The script lists and describes resources such as VM instances, Cloud SQL databases, Google Kubernetes Engine (GKE) clusters, and Google Cloud Storage (GCS) buckets in all selected projects.
 
 ###### Recommended built-in role: Project Viewer
 
@@ -239,26 +241,26 @@ This read-level access lets you enumerate resource counts and gather metadata wi
 
 ### Assign onboarded assets  
 
-1. Select from the list of Azure environments already onboarded to Defender for Cloud to include in the cost calculation.
+1. In **Azure environments**, select the onboarded environment that you want to include in the cost calculation.
 
     > [!NOTE]
     > The calculator discovers resources for which you have permissions.
 
 1. Choose the plans. The calculator estimates the cost based on your selections and any existing discounts.
 
-:::image type="content" source="media/cost-calculator/assign-onboarded-assets.png" alt-text="Screenshot of how to assign onboarded assets." lightbox="media/cost-calculator/assign-onboarded-assets.png":::
+:::image type="content" source="media/cost-calculator/assign-onboarded-assets.png" alt-text="Onboarded environments list with selectable subscriptions and plans for cost calculation." lightbox="media/cost-calculator/assign-onboarded-assets.png":::
   
 ### Assign custom assets  
 
 1. Choose a name for the custom environment.
 1. Specify the plans and the number of billable assets for each plan.
-1. Select the types of assets you want to include in the cost calculation.  
+1. Select **Asset types** that you want to include in the cost calculation.  
 1. The calculator estimates costs based on your inputs and any existing discounts.
 
 > [!NOTE]
 > The calculator doesn't consider reservation plans for Defender for Cloud.
 
-:::image type="content" source="media/cost-calculator/add-custom-environment.png" alt-text="Screenshot of how to add a custom environment." lightbox="media/cost-calculator/add-custom-environment.png":::
+:::image type="content" source="media/cost-calculator/add-custom-environment.png" alt-text="Custom environment form with environment name, plan configuration, and asset type selection." lightbox="media/cost-calculator/add-custom-environment.png":::
   
 ## Adjust your report
   
@@ -299,7 +301,7 @@ The calculator provides an estimate based on the information available when the 
   
 ### What are the billable units?  
   
-The cost of plans is based on the units they protect. Each plan charges for a different unit type, which you can find on the [Microsoft Defender for Cloud Environment settings page](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/EnvironmentSettings).  
+The cost of plans is based on the units they protect. Each plan charges for a different unit type. You can find unit details on the [Microsoft Defender for Cloud Environment settings page](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/EnvironmentSettings).  
   
 ### Can I adjust the estimates manually?  
   
@@ -319,9 +321,10 @@ Our support team is ready to assist you with any questions or concerns you might
   
 ### How can I try the cost calculator?  
   
-Try the new cost calculator and see its benefits. Access the tool and start defining the scope of your protection needs. To use the Defender for Cloud Cost Calculator, go to [the Microsoft Defender for Cloud Environment settings](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/EnvironmentSettings) and select the **Cost Calculator** button.  
+Try the cost calculator to define the scope of your protection needs. To use it, open [Microsoft Defender for Cloud Environment settings](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/EnvironmentSettings) and select **Cost Calculator**.  
   
 ## Related content
 
 - [Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/)
 - [Optimize Microsoft Defender for Cloud costs with a prepurchase plan](prepurchase-plan.md)
+
