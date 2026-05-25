@@ -51,7 +51,7 @@ To onboard down-level Windows client endpoints to Defender for Endpoint, you can
 
 ## Use the Defender deployment tool to deploy Defender endpoint security
 
-A Microsoft Defender for endpoint security solution (preview) is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The solution provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the solution's currently supported functionality.
+A Microsoft Defender for endpoint security solution is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The solution provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the solution's currently supported functionality.
 
 | Feature | Functionality |
 |---------|---------------|
@@ -66,7 +66,7 @@ A Microsoft Defender for endpoint security solution (preview) is available for l
 | Attack Disruption: contain device/IP | Automated attack disruption to shut down attacks leveraging lateral movement. |
 | (Automatic) updates | Regular updates for anti-malware and detection components. |
 
-The solution can be downloaded and installed using the [Defender deployment tool](./defender-deployment-tool-windows.md), a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it, see [Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)](./defender-deployment-tool-windows.md).
+The solution can be downloaded and installed using the [Defender deployment tool](./defender-deployment-tool-windows.md), a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it, see [Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool](./defender-deployment-tool-windows.md).
 
 ## Install and configure Microsoft Monitoring Agent (MMA)
 

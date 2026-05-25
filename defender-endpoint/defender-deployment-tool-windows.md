@@ -1,5 +1,5 @@
 ---
-title: Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
+title: Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool
 description: Learn how to onboard and offboard Windows devices using the Defender deployment tool.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
+# Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool
 
 The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for [all Windows versions supported by the Defender endpoint security solution](./minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint). The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations, while providing onboarding visibility, customizability, and guardrails.
 
@@ -81,7 +81,7 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 - On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must also be installed.
 
 > [!NOTE]
-> For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender endpoint security solution that will be installed is currently in public preview. For more information about Defender endpoint security for Windows 7 SP1 and Windows Server 2008 R2 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
+> For more information about Defender endpoint security for Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
 
 ## Generate and download a new onboarding package
 

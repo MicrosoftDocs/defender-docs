@@ -58,7 +58,7 @@ Devices on your network must be running one of the operating systems listed in t
 
 - [Windows Enterprise multi-session](/azure/virtual-desktop/windows-multisession-faq)
 
-- Windows 7 SP1 Pro, Enterprise, provided that you onboard using the [Defender deployment tool (preview)](./defender-deployment-tool-windows.md).
+- Windows 7 SP1 Pro, Enterprise, provided that you onboard using the [Defender deployment tool](./defender-deployment-tool-windows.md).
 
 - Windows Server
   - Windows Server 2012 R2 and later (including Core installation type)
