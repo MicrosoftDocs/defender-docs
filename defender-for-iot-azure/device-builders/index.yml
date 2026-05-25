@@ -23,8 +23,6 @@ landingContent:
         links:
           - text: What is Microsoft Defender for IoT for device builders?
             url: overview.md
-          - text: Agent-based solution for device builders architecture
-            url: architecture-agent-based.md
   - title: Get started
     linkLists:
       - linkListType: quickstart

@@ -81,4 +81,4 @@ When you review assets, we recommend that you start with assets labeled **Requir
 
 - [Deploy the Defender EASM Azure resource](deploying-the-defender-easm-azure-resource.md)
 - [Use and manage discovery](using-and-managing-discovery.md)
-- [Understanding asset details](understanding-asset-details.md)
+- [Understand asset details](understanding-asset-details.md)

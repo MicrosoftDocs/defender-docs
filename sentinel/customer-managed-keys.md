@@ -1,10 +1,11 @@
 ---
 title: Set up customer-managed keys in Microsoft Sentinel| Microsoft Docs
 description: Learn how to set up customer-managed key (CMK) in Microsoft Sentinel.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: amyhari
 ms.topic: how-to
 ms.date: 05/07/2026
-ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal

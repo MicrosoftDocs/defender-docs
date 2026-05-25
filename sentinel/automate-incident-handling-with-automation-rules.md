@@ -1,8 +1,9 @@
 ---
 title: Automate threat response in Microsoft Sentinel with automation rules | Microsoft Docs
 description: This article explains what Microsoft Sentinel automation rules are, and how to use them to implement your Security Orchestration, Automation and Response (SOAR) operations. Automation rules increase your SOC's effectiveness and save you time and resources.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: sshuster
 ms.topic: concept-article
 ms.date: 10/16/2024
 appliesto:
@@ -185,19 +186,19 @@ Currently the only condition that can be configured for the alert creation trigg
 
 Actions can be defined to run when the conditions (see above) are met. You can define many actions in a rule, and you can choose the order in which they run (see below). The following actions can be defined using automation rules, without the need for the [advanced functionality of a playbook](automate-responses-with-playbooks.md):
 
-- Adding a task to an incident – you can create a [checklist of tasks for analysts to follow](incident-tasks.md) throughout the processes of triage, investigation, and remediation of the incident, to ensure that no critical steps are missed.
+- Adding a task to an incident: You can create a [checklist of tasks for analysts to follow](incident-tasks.md) throughout the processes of triage, investigation, and remediation of the incident, to ensure that no critical steps are missed.
 
 - Changing the status of an incident, keeping your workflow up to date.
 
-  - When changing to “closed,” specifying the [closing reason](investigate-cases.md#close-an-incident) and adding a comment. This helps you keep track of your performance and effectiveness, and fine-tune to reduce [false positives](false-positives.md).
+  - When changing to "closed," specifying the [closing reason](investigate-cases.md#close-an-incident) and adding a comment. This helps you keep track of your performance and effectiveness, and fine-tune to reduce [false positives](false-positives.md).
 
-- Changing the severity of an incident – you can reevaluate and reprioritize based on the presence, absence, values, or attributes of entities involved in the incident.
+- Changing the severity of an incident: You can reevaluate and reprioritize based on the presence, absence, values, or attributes of entities involved in the incident.
 
-- Assigning an incident to an owner – this helps you direct types of incidents to the personnel best suited to deal with them, or to the most available personnel.
+- Assigning an incident to an owner: This helps you direct types of incidents to the personnel best suited to deal with them, or to the most available personnel.
 
-- Adding a tag to an incident – this is useful for classifying incidents by subject, by attacker, or by any other common denominator.
+- Adding a tag to an incident: This is useful for classifying incidents by subject, by attacker, or by any other common denominator.
 
-Also, you can define an action to [**run a playbook**](tutorial-respond-threats-playbook.md), in order to take more complex response actions, including any that involve external systems. The playbooks available to be used in an automation rule depend on the [**trigger**](automate-responses-with-playbooks.md#azure-logic-apps-basic-concepts) on which the playbooks *and* the automation rule are based: Only incident-trigger playbooks can be run from incident-trigger automation rules, and only alert-trigger playbooks can be run from alert-trigger automation rules. You can define multiple actions that call playbooks, or combinations of playbooks and other actions.  Actions are executed in the order in which they are listed in the rule.
+Also, you can define an action to [**run a playbook**](tutorial-respond-threats-playbook.md), in order to take more complex response actions, including any that involve external systems. The playbooks available to be used in an automation rule depend on the [**trigger**](automate-responses-with-playbooks.md#extra-permissions-required-for-microsoft-sentinel-to-run-playbooks) on which the playbooks *and* the automation rule are based: Only incident-trigger playbooks can be run from incident-trigger automation rules, and only alert-trigger playbooks can be run from alert-trigger automation rules. You can define multiple actions that call playbooks, or combinations of playbooks and other actions.  Actions are executed in the order in which they are listed in the rule.
 
 Playbooks using [either version of Azure Logic Apps (Standard or Consumption)](automate-responses-with-playbooks.md#logic-app-types) are available to run from automation rules.
 
@@ -260,7 +261,7 @@ You can now have near-complete control over the order of execution of actions an
 
 ### Assign one playbook to multiple analytics rules at once
 
-If you have a task you want to automate on all your analytics rules – say, the creation of a support ticket in an external ticketing system – you can apply a single playbook to any or all of your analytics rules – including any future rules – in one shot. This makes simple but repetitive maintenance and housekeeping tasks a lot less of a chore.
+If you have a task you want to automate on all your analytics rules—say, the creation of a support ticket in an external ticketing system—you can apply a single playbook to any or all of your analytics rules (including any future rules) in one shot. This makes simple but repetitive maintenance and housekeeping tasks a lot less of a chore.
 
 ### Automatic assignment of incidents
 
@@ -280,7 +281,7 @@ You can automatically add free-text tags to incidents to group or classify them 
 
 ## Use cases added by update trigger
 
-Now that changes made to incidents can trigger automation rules, more scenarios are open to automation. 
+Now that changes made to incidents can trigger automation rules, more scenarios are open to automation.
 
 ### Extend automation when incident evolves
 
@@ -322,11 +323,11 @@ Therefore, if your Microsoft Sentinel deployment uses a multitenant architecture
 
 In the specific case of a Managed Security Service Provider (MSSP), where a service provider tenant manages a Microsoft Sentinel workspace in a customer tenant, there are two particular scenarios that warrant your attention:
 
-- **An automation rule created in the customer tenant is configured to run a playbook located in the service provider tenant.** 
+- **An automation rule created in the customer tenant is configured to run a playbook located in the service provider tenant.**
 
     This approach is normally used to protect intellectual property in the playbook. Nothing special is required for this scenario to work. When defining a playbook action in your automation rule, and you get to the stage where you grant Microsoft Sentinel permissions on the relevant resource group where the playbook is located (using the **Manage playbook permissions** panel), you can see the resource groups belonging to the service provider tenant among those you can choose from. [See the whole process outlined here](tutorial-respond-threats-playbook.md#respond-to-incidents).
 
-- **An automation rule created in the customer workspace (while signed into the service provider tenant) is configured to run a playbook located in the customer tenant**.
+- **An automation rule created in the customer workspace (while signed into the service provider tenant) is configured to run a playbook located in the customer tenant.**
 
     This configuration is used when there is no need to protect intellectual property. For this scenario to work, permissions to execute the playbook need to be granted to Microsoft Sentinel in ***both tenants***. In the customer tenant, you grant them in the **Manage playbook permissions** panel, just like in the scenario above. To grant the relevant permissions in the service provider tenant, you need to add an additional Azure Lighthouse delegation that grants access rights to the **Azure Security Insights** app, with the **Microsoft Sentinel Automation Contributor** role, on the resource group where the playbook resides.
 

@@ -20,9 +20,20 @@ The listed features were released in the last six months. For information about 
 
 ## May 2026
 
-- We introduced a new entry point and created a consolidated view for the UEBA Settings and the Behaviors Settings. You can now access the UEBA settings from the new UEBA tab in the Microsoft Sentinel settings page. For more information see [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab).
+- [Generate playbooks using AI in Microsoft Sentinel is now generally available (GA)](#generate-playbooks-using-ai-in-microsoft-sentinel-is-now-generally-available-ga)
+- [UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections](#ueba-enhancements-new-settings-experience-okta-v2-support-and-more-gcp-anomaly-detections)
+
+### Generate playbooks using AI in Microsoft Sentinel is now generally available (GA)
+
+You can now [generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md). The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
+
+### UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections
+
+- We introduced a new entry point and created a consolidated view for the UEBA Settings and the Behaviors Settings. You can now access the UEBA settings from the new UEBA tab in the Microsoft Sentinel settings page. For more information, see [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab).
 
 - UEBA Okta anomalies now support the OktaV2_CL table alongside the existing Okta_CL table. This extends the existing Anomalous Activity and Anomalous MFA Failures detections to customers using the newer Okta connector format—no new anomaly types are introduced. For more information, see [UEBA reference](ueba-reference.md).
+
+- UEBA now supports five new GCP Audit Logs anomaly detections that identify unusual login behavior, privileged actions, resource deployments, secret/KMS key access, and infrastructure usage patterns. For more information, see [UEBA anomalies](anomalies-reference.md#ueba-anomalies).
 
 ## April 2026
 
@@ -183,7 +194,7 @@ To help SOC teams get value from behaviors from day one, Microsoft Sentinel now 
 
 For more information about the workbook, see the [Microsoft Sentinel Behaviors Workbook blog post](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/introducing-the-microsoft-sentinel-ueba-behaviors-workbook/4448398).
 
-### Generate playbooks using AI in Microsoft Sentinel (preview)
+### Generate playbooks using AI in Microsoft Sentinel (Preview)
 
 You can now [generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md). The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
 

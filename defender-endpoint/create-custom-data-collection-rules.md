@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Defender for Endpoint
 ---
 
-# Create and manage custom data collection rules in Microsoft Defender for Endpoint (Preview)
+# Create and manage custom data collection rules in Microsoft Defender for Endpoint
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
@@ -32,16 +32,17 @@ Ensure you have:
 | Requirement | Details |
 |-------------|---------|
 | **License** | Microsoft Defender for Endpoint Plan 2 |
-| **Microsoft Sentinel workspace** | Connected Microsoft Sentinel workspace (required for custom data storage) |
-| **Dynamic tags** | Configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) and run at least once |
+| **Microsoft Sentinel workspace** | Connected Microsoft Sentinel workspace (required for custom data storage and querying); currently limited to one Sentinel workspace per tenant for custom data collection |
+| **Dynamic tags** | Configured in [Asset Rule Management](/defender-xdr/configure-asset-rules) and run at least once; manual (static) tags aren't supported |
 | **Supported operating systems** | • Windows 10 and 11 (minimum client version 10.8805; Windows 10 requires ESU enrollment)<br>• Windows Server 2019 and later |
+| **Cost considerations** | Custom data collection is included with Defender for Endpoint Plan 2; data ingestion into Microsoft Sentinel incurs charges based on your Sentinel billing |
 
 > [!IMPORTANT]
 > Even if you have a connected Microsoft Sentinel workspace, you must select the workspace when creating custom data collection rules.
 
 ### Performance and limits
 
-- Each rule can capture up to **25,000 events per device per 24-hour rolling window**
+- Each rule can capture up to **75,000 events per device per 24-hour rolling window**
 - When a device reaches the threshold, telemetry for that rule stops until the window resets
 - Rule deployment typically takes 20 minutes to 1 hour
 - Custom collection operates alongside default configuration without interference
@@ -54,14 +55,8 @@ Consider these security implications before creating rules:
 |---------------|---------|----------------|
 | **Rule scope impact** | Overly broad rules generate large data volumes, increasing costs and making analysis difficult | Balance specificity with coverage by iterating and refining rules based on initial results |
 | **Too narrow rules** | May miss important security events | Test with pilot groups and monitor for gaps in coverage |
-| **Performance considerations** | Each device has a 25,000 event per rule per day limit | Use multiple focused rules rather than one overly broad rule; target rules carefully to devices where monitoring is essential |
+| **Performance considerations** | Each device has a 75,000 event per rule per day limit | Use multiple focused rules rather than one overly broad rule; target rules carefully to devices where monitoring is essential |
 | **Testing strategy** | Deploying rules without testing can lead to unexpected costs or missed events | 1. Start with a small pilot group (5-10 devices)<br>2. Monitor data volume and event quality for 24-48 hours<br>3. Refine conditions based on results<br>4. Gradually expand to larger device groups<br>5. Review cost and performance metrics regularly |
-
-### Data costs
-
-- Custom data collection is included with Microsoft Defender for Endpoint P2
-- **Data ingestion into Microsoft Sentinel incurs charges** based on your Sentinel billing
-- Target collection to specific device groups to control costs
 
 ### Create rules
 
@@ -126,7 +121,7 @@ search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetwork
 |-------|---------------|----------|
 | No events collected | Rule not yet deployed | Wait up to 1 hour for deployment; check rule status in the portal |
 | No events collected | Device not targeted correctly | Verify dynamic tag is applied to device and tag rule has run in Asset Rule Management |
-| Events stopped collecting | 25,000 event limit reached | Review rule conditions to make them more specific; wait for 24-hour window to reset |
+| Events stopped collecting | 75,000 event limit reached | Review rule conditions to make them more specific; wait for 24-hour window to reset |
 | Unexpected devices collecting data | Dynamic tag applied broadly | Review tag rules in Asset Rule Management; refine targeting criteria |
 | Rule not visible on device | Device doesn't meet OS requirements | Check client version and OS version meet minimum requirements (Windows 10/11 version 10.8805+, Windows Server 2019+) |
 | Custom collection not initializing | EDR exclusions may prevent collection | Check for EDR exclusions on target paths or processes; device reboots may be required if custom collection isn't initializing |
@@ -135,7 +130,7 @@ search in (DeviceCustomFileEvents, DeviceCustomScriptEvents, DeviceCustomNetwork
 ### Monitor rule performance
 
 - **Check event volume**: Query custom event tables to see how many events each rule is collecting
-- **Review collection status**: Monitor whether devices are approaching the 25,000 event per rule per day limit
+- **Review collection status**: Monitor whether devices are approaching the 75,000 event per rule per day limit
 - **Validate targeting**: Ensure rules are deploying to the correct devices based on your dynamic tags
 
 ### Collect all events for testing
@@ -151,7 +146,7 @@ To collect all events from a specific table (for testing or comprehensive monito
 4. Target to a small pilot group first due to high data volume
 
 > [!WARNING]
-> Collecting all events generates very large data volumes and can quickly reach the 25,000 event per device limit. Use comprehensive collection only for testing or specific investigative purposes on a small number of devices.
+> Collecting all events generates very large data volumes and can quickly reach the 75,000 event per device limit. Use comprehensive collection only for testing or specific investigative purposes on a small number of devices.
 
 ## Manage rules
 
