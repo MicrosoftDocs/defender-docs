@@ -10,7 +10,7 @@ ms.reviewer: martin77s
 
 This article describes the required message syntax when configuring a Defender for Identity standalone sensor to listen for supported SIEM event types. Listening for SIEM events is one method for enhancing your detection abilities with extra Windows events that aren't available from the domain controller network.
 
-For more information, see [Windows event collection overview](event-collection-overview.md).
+For more information, see [Configure Windows event auditing](configure-windows-event-collection.md).
 
 > [!IMPORTANT]
 > Defender for Identity standalone sensors don't support the collection of Event Tracing for Windows (ETW) log entries that provide the data for multiple detections. For full coverage of your environment, we recommend deploying the Defender for Identity sensor.

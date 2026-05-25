@@ -105,16 +105,15 @@ If you plan to manage your machines using a management tool, you can onboard dev
 
 For more information, see [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md).
 
-> [!WARNING]
-> If you plan to use [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md), note that the rule "[Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)" should not be used, because that rule is incompatible with management through Microsoft Configuration Manager. The rule blocks WMI commands that the Configuration Manager client uses to function correctly.
-
-> [!TIP]
+> [!NOTE]
+> If you plan to use [Attack surface reduction (ASR) rules](attack-surface-reduction-rules-reference.md), don't use the [Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands) rule. The Configuration Manager client relies heavily on WMI.
+>
 > After onboarding the device, you can choose to run a detection test to verify that the device is properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Microsoft Defender for Endpoint device](run-detection-test.md).
 
 #### Tagging your machines when building your golden image
 
 As part of your onboarding, you may want to consider setting a machine tag to differentiate AVD machines more easily in the Microsoft Security Center. For more information, see
-[Add device tags by setting a registry key value](machine-tags.md#add-device-tags-by-setting-a-registry-key-value).
+[Add device tags by setting a registry key value](machine-tags.md#create-tags).
 
 #### Other recommended configuration settings
 

@@ -11,7 +11,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete Safe Links policies in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 05/09/2025
+ms.date: 05/22/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -83,7 +83,7 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
    When you're finished on the **Name your policy** page, select **Next**.
 
 4. On the **Users and domains** page, identify the internal recipients that the policy applies to (recipient conditions):
-   - **Users**: The specified mailboxes, mail users, or mail contacts.
+   - **Users**: The specified mailboxes, or mail users.
    - **Groups**:
      - Members of the specified distribution groups (including non-mail-enabled security groups within distribution groups) or mail-enabled security groups (dynamic distribution groups aren't supported).
      - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
@@ -168,6 +168,9 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
      - **Track user clicks**: Leave this option selected to enable the tracking user clicks on URLs. If you select this option, the following options are available:
        - **Let users click through to the original URL**: Clear this option to block users from clicking through to the original URL in [warning pages](safe-links-about.md#warning-pages-from-safe-links).
        - **Display the organization branding on notification and warning pages**: For more information about customized branding, see [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme).
+
+     > [!TIP]
+     > In [advanced hunting](/defender-xdr/advanced-hunting-urlclickevents-table), click events on URLs wrapped by Safe Links have the `AppName` value `Mail` in the `UrlClickEvents` table.
 
    For detailed information about these settings, see:
 

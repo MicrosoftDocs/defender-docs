@@ -10,7 +10,7 @@ ms.collection:
 ms.custom: seo-marvel-apr2020
 description: "Admins can learn how to use the Submissions page in the Microsoft Defender portal to submit messages, URLs, and email attachments to Microsoft for analysis. Reasons for submission include: legitimate messages that were blocked, suspicious messages that were allowed, suspected phishing email, spam, malware, and other potentially harmful messages."
 ms.service: defender-office-365
-ms.date: 10/27/2025
+ms.date: 04/29/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -244,6 +244,9 @@ After a few moments, the block entry is available on the **Files** tab on the **
 After a few moments, the block entry is available on the **URL** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=Url>.
 
 ### Report good email to Microsoft
+
+> [!NOTE]
+> Submitting a message as "should not have been blocked" doesn't automatically override impersonation protections in your tenant. For recurring legitimate senders flagged by [domain or user impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), update the **Trusted senders and domains** section in the [anti-phishing policy](anti-phishing-policies-mdo-configure.md#use-the-microsoft-defender-portal-to-modify-anti-phishing-policies) that detected the message, or create an allow entry in the [Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
 1. In the Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
@@ -978,11 +981,11 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Sender**<sup>\*</sup>
 - **Reported reason**<sup>\*</sup>
 - **Result**<sup>\*</sup>: Contains the following information for reported messages based on the [user reported settings](submissions-user-reported-messages-custom-mailbox.md):
-  - **Send the reported messages to** \> **Microsoft and my reporting mailbox** or **Microsoft only**: Values derived from the following analysis:
+  - **Send reported items to** \> **Microsoft and my reporting mailbox** or **Microsoft only**: Values derived from the following analysis:
     - **Policy hits**: Information about any policies or overrides that may have allowed or blocked the incoming messages, including overrides to our filtering verdicts. The result should be available within several minutes. Otherwise, detonation and feedback from graders could take up to one day.
     - **Payload reputation/detonation**: Up-to-date examination of any URLs and files in the message.
     - **Grader analysis**: Review done by human graders in order to confirm whether or not messages are malicious.
-  - **Send the reported messages to** \> **My reporting mailbox only**: The value is always **Not submitted to Microsoft**, because the messages weren't analyzed by Microsoft.
+  - **Send reported items to** \> **My reporting mailbox only**: The value is always **Not submitted to Microsoft**, because the messages weren't analyzed by Microsoft.
 - **Message reported ID**
 - **Network Message ID**
 - **Teams message ID**
@@ -1019,7 +1022,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Reported from**: The values **Microsoft** and **Third party**.
 - **Phish simulation**: The values **Yes** and **No**.
 - **Converted to admin submission**: The values **Yes** and **No**.
-- **Message type**: The available values are:
+- **Submission type**: The available values are:
   - **Email**
   - **Teams message** (Defender for Office 365 Plan 2 only; currently in Preview).
 - **Tags**: **All** or select one or more user tags (including Priority account) that are assigned to users. For more information about user tags, see [User tags in Microsoft Defender for Office 365](user-tags-about.md).

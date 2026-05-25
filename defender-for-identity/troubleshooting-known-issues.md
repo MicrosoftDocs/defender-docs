@@ -205,7 +205,7 @@ Suggested possible workarounds:
 
 ## VMware virtual machine sensor issue
 
-If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware Guest OS NIC and [MDI Sensor requirements](deploy/prerequisites-sensor-version-2.md#sensor-requirements-and-recommendations).
+If you have a Defender for Identity sensor on VMware virtual machines, you might receive one or both of the following health alerts **Some network traffic is not being analyzed** and **Network configuration mismatch for sensors running on VMware**. This can happen because of a configuration mismatch in VMware Guest OS NIC and [MDI Sensor requirements](deploy/prerequisites-sensor-version-2.md#server-requirements).
 
 To resolve the issue:
 
@@ -482,9 +482,19 @@ Sample logs that might indicate the issue:
 
 If permissions need to be reconfigured, follow the steps outlined in this [guide](deploy/active-directory-federation-services.md).
 
+## Auditing health alerts persist on sensor v3
+
+In some v3 sensor environments, auditing health alerts might persist even when Windows auditing is correctly configured. This primarily occurs with manual auditing configuration, such as using Group Policy or PowerShell. The sensor remains healthy and detections aren't affected. To resolve, enable **Automatic Windows auditing configuration** in the Defender for Identity portal under **Settings** > **Advanced features**.
+
+## Windows Server 2025 sensor v3.x migration not supported
+
+Migrating domain controllers running Windows Server 2025 to sensor v3.x isn't currently supported. Continue using the v2.x sensor on Windows Server 2025 domain controllers until support for migration to v3.x is available.
+
+
+
 ## Next steps
 
-- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md) 
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)
 - [Configure event collection](deploy/configure-event-collection.md)
 - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)

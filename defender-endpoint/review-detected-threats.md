@@ -46,7 +46,7 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
 ## Manage threat detections in Microsoft Intune
 
-You can manage threat detections for any devices that are [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enroll) using the following steps:
+You can manage threat detections for any devices that are [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment) using the following steps:
 
 1. Go to the Microsoft Intune admin center at [intune.microsoft.com](https://intune.microsoft.com) and sign-in.
 
@@ -110,21 +110,18 @@ Use the Advanced Hunting query that is mentioned [here](#i-see-a-different-numbe
 
 [Cloud Protection](configure-network-connections-microsoft-defender-antivirus.md) isn't allowed through your firewall or proxy.
 
-Do the following steps to verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
+Do the following procedure to verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-2. In the elevated Command Prompt, run the following commands:
+In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-   > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-   ```dos
-   (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-   MpCmdRun.exe -ValidateMapsConnection
-   ```
+MpCmdRun.exe -ValidateMapsConnection
+```
 
 For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
