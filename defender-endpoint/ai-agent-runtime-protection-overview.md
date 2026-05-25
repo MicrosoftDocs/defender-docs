@@ -17,6 +17,9 @@ appliesto:
 
 # AI coding agent runtime protection with Microsoft Defender for Endpoint
 
+> [!TIP]
+> Runtime protection complements Defender for Endpoint's **discovery capabilities**, which automatically detect AI coding agents and MCP servers across your devices. For details, see [AI coding agent discovery](protect-ai-agents-overview.md).
+
 Microsoft Defender for Endpoint provides runtime protection for AI coding agents with Microsoft Defender Antivirus. When enabled, Defender Antivirus intercepts events in the agent's execution loop, such as user prompts, pre-tool calls, and post-tool responses, and scans them for cross-prompt injection attacks (XPIA) and sensitive data leakage.
 
 Defender Antivirus uses two protection approaches:
