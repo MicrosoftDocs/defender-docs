@@ -92,7 +92,12 @@ Refer to the [Defender for Identity Capacity Planning documentation](/defender-f
 
 ### Service account requirements
 
-The v3.x sensor uses the local system identity of the server for Active Directory and response actions. It doesn't support Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA). LocalSystem is the only supported identity for v3.x.
+The Defender for Identity sensor interacts with Active Directory in two ways:
+
+- **Reading AD data** (querying objects, tracking changes, resolving entities). In v2.x, this uses a Directory Service Account (DSA). In v3.x, LocalSystem handles this automatically.
+- **Performing response actions** (disabling accounts, resetting passwords). In v2.x, this uses an action account. In v3.x, LocalSystem handles this automatically.
+
+The v3.x sensor uses the local system identity of the server for both purposes. It doesn't support Directory Service Accounts (DSA) or group Managed Service Accounts (gMSA). LocalSystem is the only supported identity for v3.x.
 
 If you're migrating from sensor v2.x and previously had a gMSA configured for [action accounts](manage-action-accounts.md), you must remove it. If gMSA remains enabled, response actions, including [attack disruption](/microsoft-365/security/defender/automatic-attack-disruption), won't work.
 

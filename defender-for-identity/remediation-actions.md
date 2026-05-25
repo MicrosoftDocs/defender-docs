@@ -23,7 +23,7 @@ Remediation actions are initiated by a user in the Microsoft Defender portal and
 After authorization, the action is executed by the identity system that manages the affected account:
 
 - **Active Directory**
-  Actions are executed by the Microsoft Defender for Identity sensor on the domain controller. The sensor impersonates the **LocalSystem** account to perform the action.
+  Actions are executed by the Microsoft Defender for Identity sensor on the domain controller. The sensor uses the domain controller's local system account to perform the action. For sensor v2.x, you can optionally configure a dedicated gMSA action account instead. For more information, see [Manage action accounts](deploy/manage-action-accounts.md).
 
 - **Microsoft Entra ID**
   Microsoft Defender for Identity creates and uses a Microsoft‑managed enterprise application to execute remediation actions in Entra ID.  
@@ -76,7 +76,7 @@ This table lists the remediation actions supported by Defender for Identity and 
 
 To perform any of the [supported actions](#supported-actions), you need to:
 
-- **Configure the account that Microsoft Defender for Identity uses to perform actions.** By default, the Microsoft Defender for Identity sensor installed on a domain controller impersonates the **LocalSystem** account of the domain controller to perform Active Directory actions. For more information, see [Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md).
+- **Configure the account that Microsoft Defender for Identity uses to perform actions.** By default, the sensor uses the domain controller's local system account to perform Active Directory actions. This is the only supported option for sensor v3.x. If you use sensor v2.x and need a dedicated action account, see [Manage action accounts](deploy/manage-action-accounts.md). In mixed environments (v2.x and v3.x), use the local system account for all sensors.
 - **Sign in to the Microsoft Defender portal with the required permissions.** For Defender for Identity actions, you'll need a custom role with **Response (manage)** permissions. For more information, see [Create custom roles with Microsoft Defender unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles). For details on the specific roles required for each action, see [Roles and permissions](#roles-and-permissions).
 
 To apply a remediation action to an identity:

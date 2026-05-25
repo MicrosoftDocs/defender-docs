@@ -8,7 +8,7 @@ ms.reviewer: rlitinsky
 
 # Directory Service Accounts for Microsoft Defender for Identity
 
-Defender for Identity uses Directory Service Accounts (DSAs) to connect to Active Directory.
+Defender for Identity uses Directory Service Accounts (DSAs) to read data from Active Directory, such as querying objects, tracking changes, and resolving entities. This is separate from the [action account](manage-action-accounts.md), which performs remediation actions like disabling users or resetting passwords.
 
 > [!NOTE]
 > Directory Service Accounts apply to the Defender for Identity sensor v2.x only. The sensor v3.x does not support DSA or gMSA configuration and uses LocalSystem exclusively. For more information, see [Defender for Identity sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
