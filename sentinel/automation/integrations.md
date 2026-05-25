@@ -1,6 +1,6 @@
 ---
-title: SOAR integrations in Microsoft Sentinel
-description: Learn how out-of-the-box SOAR integrations help you connect Microsoft Sentinel to first-party and third-party services for automated security response.
+title: Automation integrations in Microsoft Sentinel
+description: Learn how out-of-the-box automation integrations help you connect Microsoft Sentinel to first-party and third-party services for automated security response.
 ms.topic: concept-article
 ms.author: monaberdugo
 author: mberdugo
@@ -13,15 +13,15 @@ ai-usage: ai-assisted
 
 ---
 
-# SOAR integrations in Microsoft Sentinel
+# Automation integrations in Microsoft Sentinel
 
-SOAR integrations introduce a centralized catalog of prebuilt integrations for Microsoft and third-party apps, so you can select a provider, configure it with simple authentication, and use it in your playbooks without custom setup.
+Automation integrations introduce a centralized catalog of prebuilt integrations for Microsoft and third-party apps, so you can select a provider, configure it with simple authentication, and use it in your playbooks without custom setup.
 
-SOAR integrations reduce manual setup work for SOC engineers, SOAR administrators, and advanced security analysts who build or maintain automated response workflows.
+Automation integrations reduce manual setup work for SOC engineers, automation administrators, and advanced security analysts who build or maintain automated response workflows.
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
-## How SOAR integrations work
+## How automation integrations work
 
 Microsoft Sentinel playbooks are based on workflows built in [Azure Logic Apps](/azure/logic-apps/logic-apps-overview). A playbook can use connectors and integrations to interact with other services during an automated workflow.
 
