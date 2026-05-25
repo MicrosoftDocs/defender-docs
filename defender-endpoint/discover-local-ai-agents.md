@@ -27,7 +27,9 @@ Local AI coding agent discovery on endpoints is one component of Microsoft Defen
 
 Before you can discover local AI coding agents on endpoints, make sure the following requirements are met:
 
-- Devices run **Windows 10 or Windows 11**, **Windows Server 2019 or newer**, or **Windows 11 virtual desktop environments**. macOS support is available in public preview<!-- TODO: Add specific macOS versions when Spencer provides them -->.
+- Devices run on:
+  - **Windows 10 or Windows 11**, **Windows Server 2019 or newer**, or **Windows 11 virtual desktop environments**
+  - **macOS**<!-- TODO: Add specific macOS versions when Spencer provides them -->
 - Your organization has a **Microsoft Defender for Endpoint Plan 2** license.
 - Devices are [onboarded to Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
 - **Defender Antivirus** is the primary antivirus solution on the device.
