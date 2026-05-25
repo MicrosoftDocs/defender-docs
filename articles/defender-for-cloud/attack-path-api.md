@@ -2,17 +2,17 @@
 title: Retrieve attack path data with API
 description: Learn how to Retrieve attack path data with APIs in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ms.topic: how-to
-ms.date: 08/11/2025
+ms.date: 05/25/2026
 #customer intent: As a developer, I want to learn how to retrieve attack path data with APIs in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ---
 
 # Retrieve attack path data with API
 
-You can consume attack path data programmatically by querying Azure Resource Graph (ARG) API. API responses contain only externally-driven, exploitable attack paths that focus on real threats rather than broad scenarios.
+You can consume attack path data programmatically by querying the Azure Resource Graph (ARG) application programming interface (API). The API returns externally driven, exploitable attack paths that focus on real threats.
 
-Learn [how to query ARG API](/rest/api/azureresourcegraph/resourcegraph(2020-04-01-preview)/resources/resources?source=recommendations&tabs=HTTP).
+To query the ARG API, see [Azure Resource Graph API query documentation](/rest/api/azureresourcegraph/resourcegraph(2020-04-01-preview)/resources/resources?source=recommendations&tabs=HTTP).
 
 ## Consume attack path data programmatically using API
 
@@ -69,3 +69,4 @@ The following table lists the data fields returned from the API response:
 
 > [!div class="nextstepaction"]
 > [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
+

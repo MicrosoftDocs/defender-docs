@@ -1,27 +1,33 @@
 ---
 title: Explore and investigate Defender for SQL security alerts
-description: Learn how to explore and investigate Defender for SQL security alerts in Microsoft Defender for Cloud.
+description: View and investigate SQL security alerts through the Alerts page, affected machine security pages, workload protections dashboard, or alert email links.
 ms.topic: how-to
 ms.author: elkrieger
-author: Elazark
-ms.date: 07/08/2024
+author: ElazarK
+ms.date: 05/25/2026
 ---
 
 # Explore and investigate Defender for SQL security alerts
+
+## View and investigate SQL alerts
+
+This article explains how to access and review security alerts from Microsoft Defender for SQL. When Defender for SQL detects suspicious database activity or potential vulnerabilities, it generates alerts that require investigation.
 
 There are several ways to view Microsoft Defender for SQL alerts in Microsoft Defender for Cloud:
 
 - The **Alerts** page.
 
-- The machine's security page.
+- The affected machine's security page.
 
-- The [workload protections dashboard](workload-protections-dashboard.md).
+- The [workload protections dashboard](workload-protections-dashboard.md), which shows security coverage across resources.
 
 - Through the direct link provided in the alert's email.
 
 ## How to view alerts
 
-1. Sign in to the [Azure portal](https://portal.azure.com).
+To view security alerts in Microsoft Defender for Cloud, follow these steps:
+
+1. Go to the [Azure portal](https://portal.azure.com) and sign in.
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
@@ -29,13 +35,13 @@ There are several ways to view Microsoft Defender for SQL alerts in Microsoft De
 
 1. Select an alert.
 
-Alerts are designed to be self-contained, with detailed remediation steps and investigation information in each one. You can investigate further by using other Microsoft Defender for Cloud and Microsoft Sentinel capabilities for a broader view:
+Alerts are self-contained and include detailed remediation steps and investigation guidance. For broader investigation, use related Microsoft Defender for Cloud and Microsoft Sentinel capabilities:
 
-- Enable SQL Server's auditing feature for further investigations. If you're a Microsoft Sentinel user, you can upload the SQL auditing logs from the Windows Security Log events to Sentinel and enjoy a rich investigation experience. [Learn more about SQL Server Auditing](/sql/relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification?preserve-view=true&view=sql-server-ver15).
+- Enable SQL Server auditing for deeper investigations. If you use Microsoft Sentinel, you can upload SQL auditing logs from Windows Security Log events to Sentinel for richer investigation. For details, see [SQL Server auditing](/sql/relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification?preserve-view=true&view=sql-server-ver15).
 
 - To improve your security posture, use Defender for Cloud's recommendations for the host machine indicated in each alert to reduce the risks of future attacks.
   
-[Learn more about managing and responding to alerts](manage-respond-alerts.md).
+For details, see [Manage and respond to security alerts](manage-respond-alerts.md).
 
 ## Related content
 
@@ -43,4 +49,5 @@ For related information, see these resources:
 
 - [Security alerts for SQL Database and Azure Synapse Analytics](alerts-sql-database-and-azure-synapse-analytics.md)
 - [Set up email notifications for security alerts](configure-email-notifications.md)
-- [Learn more about Microsoft Sentinel](/azure/sentinel/)
+- [Microsoft Sentinel documentation](/azure/sentinel/)
+

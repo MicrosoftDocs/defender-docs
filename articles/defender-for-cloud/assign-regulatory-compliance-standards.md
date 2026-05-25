@@ -1,19 +1,19 @@
 ---
 title: Assign regulatory compliance standards in Microsoft Defender for Cloud
 description: Learn how to assign regulatory compliance standards in Microsoft Defender for Cloud.
-ms.date: 12/25/2025
+ms.date: 05/25/2026
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ms.topic: how-to
 ---
 
 # Assign regulatory compliance standards in Defender for Cloud
 
-In Defender for Cloud, regulatory compliance standards are implemented using Azure Policy initiatives and evaluated through the Regulatory compliance dashboard.
+In Microsoft Defender for Cloud, regulatory compliance standards use Azure Policy initiatives. Defender for Cloud evaluates these standards in the Regulatory compliance dashboard.
 
 You can assign regulatory compliance standards to specific scopes such as Azure subscriptions, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects.
 
-Defender for Cloud continually assesses the scoped environment against the standards. Based on these assessments, it shows whether in-scope resources are compliant or noncompliant with the standard and provides remediation recommendations.
+Defender for Cloud continually assesses the selected scope against each standard. It then shows whether resources are compliant or noncompliant and provides remediation recommendations.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Defender for Cloud continually assesses the scoped environment against the stand
 
 ## Assign a standard
 
-If you assign a regulatory standard but don't have any relevant assessed resources in that standard, the standard doesn't appear on your regulatory compliance dashboard.
+If you assign a regulatory standard but have no relevant assessed resources, the standard doesn't appear on your regulatory compliance dashboard.
 
 1.  Sign in to the [Azure portal](https://portal.azure.com/).
 1.  Navigate to **Microsoft Defender for Cloud** > **Regulatory compliance**. For each standard, you can see the applied subscription.
@@ -50,3 +50,4 @@ If you assign a regulatory standard but don't have any relevant assessed resourc
 -   [Create custom standards for Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) projects.](create-custom-recommendations.md)
 -   [Improve regulatory compliance.](regulatory-compliance-dashboard.md)
 -   [Regulatory compliance in Defender for Cloud.](concept-regulatory-compliance.md)
+
