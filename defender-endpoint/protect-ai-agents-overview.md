@@ -1,5 +1,5 @@
 ---
-title: Discover AI coding agents with Microsoft Defender for Endpoint
+title: AI coding agent discovery with Microsoft Defender for Endpoint
 description: Learn how Microsoft Defender for Endpoint discovers AI agents and MCP servers on your devices through automatic inventory and investigation capabilities.
 author: lwainstein
 ms.author: lwainstein
@@ -15,7 +15,7 @@ appliesto:
 
 ---
 
-# Discover AI coding agents with Microsoft Defender for Endpoint
+# AI coding agent discovery with Microsoft Defender for Endpoint
 
 Microsoft Defender for Endpoint helps you discover and investigate AI coding agents and MCP servers running on your organization's devices. Microsoft Defender for Endpoint automatically detects and surfaces supported agents in the Microsoft Defender and Agent 365 portals, which gives you visibility into AI-related assets and lets you assess their presence across your environment.
 

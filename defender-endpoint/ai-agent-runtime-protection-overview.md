@@ -1,5 +1,5 @@
 ---
-title: AI coding agent runtime protection overview - Microsoft Defender
+title: AI coding agent runtime protection with Microsoft Defender for Endpoint
 description: Learn how Microsoft Defender for Endpoint provides runtime protection for AI coding agents, detecting and blocking prompt injection attacks and sensitive data leakage.
 author: lwainstein
 ms.author: lwainstein
@@ -10,13 +10,12 @@ ms.date: 05/14/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
-  - Microsoft Defender for Endpoint Plan 2
 
 #customer intent: As a security administrator, I want to understand how Defender for Endpoint runtime protection works for AI coding agents so that I can protect my organization from prompt injection attacks and data leakage.
 
 ---
 
-# AI coding agent runtime protection overview
+# AI coding agent runtime protection with Microsoft Defender for Endpoint
 
 Microsoft Defender for Endpoint provides runtime protection for AI coding agents with Microsoft Defender Antivirus. When enabled, Defender Antivirus intercepts events in the agent's execution loop, such as user prompts, pre-tool calls, and post-tool responses, and scans them for cross-prompt injection attacks (XPIA) and sensitive data leakage.
 

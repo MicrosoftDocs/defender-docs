@@ -10,7 +10,6 @@ ms.date: 05/17/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
-  - Microsoft Defender for Endpoint Plan 2
 
 #customer intent: As a security administrator, I want to configure runtime protection for AI coding agents on my organization's endpoints so that I can detect and block prompt injection attacks and sensitive data leakage in real time.
 

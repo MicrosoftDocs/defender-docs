@@ -655,14 +655,20 @@
 
     - name: Protect AI agents
       items:
-      - name: Overview
-        href: protect-ai-agents-overview.md
       - name: Discover local AI agents
-        href: discover-local-ai-agents.md
-      - name: Runtime protection overview
-        href: ai-agent-runtime-protection-overview.md
-      - name: Set up AI agent runtime protection
-        href: configure-ai-agent-runtime-protection.md
+        items:
+        - name: Overview
+          href: protect-ai-agents-overview.md
+          displayName: AI agent discovery overview
+        - name: Discover local AI agents
+          href: discover-local-ai-agents.md
+      - name: Protect local AI agents at runtime
+        items:
+        - name: Overview
+          href: ai-agent-runtime-protection-overview.md
+          displayName: AI agent runtime protection overview
+        - name: Set up AI agent runtime protection
+          href: configure-ai-agent-runtime-protection.md
 
     - name: Attack surface reduction
       items:
