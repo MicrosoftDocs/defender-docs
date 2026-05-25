@@ -39,11 +39,11 @@ The following table describes some of the main features the tool supports.
 | **Help** | A built-in help function displays all available command-line options. |
 | **Configuration files** | You can generate reusable configuration files that make bulk deployments more efficient and less error-prone. |
 | **Working without connectivity** | When connectivity is temporarily unavailable, offline onboarding and offboarding are possible. |
-| **Deployment key entry** | To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page. |
-| **Custom expiry** | Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
-| **Ability to view deployment packages** | You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
+| **Deployment key entry** (preview) | To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page. |
+| **Custom expiry** (preview)| Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
+| **Ability to view deployment packages** (preview)| You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
 
-When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and asks you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **Settings** > **Endpoints** > **Onboarding**. It handles the installation of most prerequisite updates and the latest Defender components, and connects the device to the Defender services. If needed, the tool asks you to reboot the device to finish installation after you sign in again.
+When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and asks you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **System** > **Settings** > **Endpoints** > **Onboarding**. It handles the installation of most prerequisite updates and the latest Defender components, and connects the device to the Defender services. If needed, the tool asks you to reboot the device to finish installation after you sign in again.
 
 For more [advanced and large-scale deployments](#advanced-and-large-scale-deployments), the tool offers functionality to perform additional and orchestrated steps through command-line parameters or a configuration file.
 
@@ -51,7 +51,13 @@ To view the complete command reference after [downloading the tool](#generate-an
 
 ## Supported operating systems
 
-The Defender deployment tool supports the following operating systems: Windows 7 SP1, Windows Server 2008 R2 SP1, Windows Server 2012 R2, 2016, 2019, 2022, 2025, Windows 10 (version 1809 and newer), and all versions of Windows 11.
+The Defender deployment tool supports the following operating systems:
+
+- Windows 7 SP1
+- Windows Server 2008 R2 SP1
+- Windows Server 2012 R2, 2016, 2019, 2022, 2025
+- Windows 10 (version 1809 and newer)
+- Windows 11 (all versions)
 
 ## Prerequisites
 
