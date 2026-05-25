@@ -59,16 +59,23 @@ To enable real-time protection for your AI agents:
 
 ## Protect local AI coding agents on endpoints
 
-Microsoft Defender extends consistent threat detection, prevention, and investigation capabilities to local AI coding agents on Windows endpoints through Microsoft Defender Antivirus. This gives security teams consistent visibility and response workflows across cloud and endpoint AI agent activity.
+Microsoft Defender extends consistent threat detection, prevention, and investigation capabilities to local AI coding agents on Windows and macOS endpoints through Microsoft Defender Antivirus. This gives security teams consistent visibility and response workflows across cloud and endpoint AI agent activity.
 
 Runtime protection uses two methods:
 
 - **Agent hooks protection** for agents that support hooks.
 - **Network inspection protection** for broader agent coverage.
 
+Supported platforms for local AI coding agent runtime protection:
+
+- Windows 10 and Windows 11
+- Windows Server 2019 and newer
+- Windows 11 virtual desktop environments
+- macOS (public preview)<!-- TODO: Spencer to provide specific macOS versions. Spencer comment #21 - Confirm with Eitan if runtime protection has OS version restrictions -->
+
 For more information, see:
 
-- [AI coding agent runtime protection](/defender-endpoint/configure-ai-agent-runtime-protection)
+- [AI coding agent runtime protection overview](/defender-endpoint/ai-agent-runtime-protection-overview)
 - [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection)
 
 ## Detect AI agent threats in near-real-time
