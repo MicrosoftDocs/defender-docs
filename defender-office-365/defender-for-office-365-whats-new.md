@@ -5,7 +5,7 @@ keywords: what's new in Microsoft Defender for Office 365, ga, generally availab
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-ms.date: 04/02/2026
+ms.date: 05/26/2026
 ms.collection:
   - m365-security
   - tier1
@@ -34,6 +34,16 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
+
+## April 2026
+
+- **Promotions folder for bulk email (preview)**: You can configure anti-spam policies to deliver bulk mail below the BCL threshold to the **Promotions** folder in supported versions of Outlook. For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](anti-spam-bulk-complaint-level-bcl-about.md#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
+
+- **Security Copilot email summary on the Email entity page**: If you have a [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) subscription, you can generate an AI summary of email entity data directly from the [Email entity page](mdo-email-entity-page.md) by selecting the **Copilot** action.
+
+- **Remove users from Teams chats is generally available**: The ability to [remove internal users from Teams chats](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel) in the Teams message entity panel is now generally available.
+
+- **New RBAC permission for email content associated with alerts**: A new granular Unified RBAC permission **Email & collaboration content: Emails associated with alerts (read)** allows analysts to preview or download email messages associated with specific security alerts. For more information, see [Email entity page actions](mdo-email-entity-page.md#actions-on-the-email-entity-page).
 
 ## March 2026
 
