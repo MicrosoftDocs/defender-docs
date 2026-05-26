@@ -1,9 +1,9 @@
 ---
 title: Test the Defender for Storage data security features
 description: Learn how to test the malware scanning, sensitive data threat detection, and activity monitoring features provided by Defender for Storage.
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 07/15/2025
+ms.date: 05/26/2026
 ms.topic: how-to
 ms.custom: sfi-image-nochange
 #customer intent: As a user, I want to learn how to test the Defender for Storage data security features so that I can validate its capabilities and ensure the security of my storage accounts.
@@ -11,7 +11,7 @@ ms.custom: sfi-image-nochange
 
 # Test the Defender for Storage data security features
 
-After you [enable Microsoft Defender for Storage](tutorial-enable-storage-plan.md), you can test the service and run a proof of concept. This helps you familiarize yourself with its features and validate that its advanced security capabilities effectively protect your storage accounts by generating real security alerts. This guide walks you through testing various aspects of the security coverage offered by Defender for Storage.
+After you [enable Microsoft Defender for Storage](tutorial-enable-storage-plan.md), you can test the service and run a proof of concept. This process helps you learn the features and validate protection by generating real security alerts. This guide walks you through key security coverage scenarios for Defender for Storage.
 
 There are three main components to test:
 
@@ -47,11 +47,11 @@ Follow these steps to test malware scanning after enabling the feature:
 
 ### Upload an EICAR test file to simulate malware upload
 
-To simulate a malware upload using an EICAR test file, follow these steps:
+To simulate a malware upload, follow these steps by using an EICAR test file (a standardized harmless file that antimalware software treats as malware):
 
 1. Prepare for the EICAR test file:
 
-    1. To avoid causing damage, use an EICAR test file instead of real malware. Standardized anti-malware software treats EICAR test files as malware.
+    1. To avoid causing damage, use an EICAR test file instead of real malware.
 
     1. Exclude an empty folder to prevent your endpoint antivirus protection from deleting the file. For Microsoft Defender for Endpoint (MDE) users, refer to [add an exclusion to Windows Security](https://support.microsoft.com/windows/add-an-exclusion-to-windows-security-811816c0-4dfd-af4a-47e4-c301afe13b26#ID0EBF=Windows_11).
 
@@ -165,7 +165,7 @@ To test the activity monitoring feature by simulating access from a Tor exit nod
 
 1. Upload any file to the **test-container-tor**.
 
-1. Generate a SAS (shared access signatures) token:
+1. Generate a shared access signature (SAS) token:
 
     1. Right-click on the uploaded file and select **Generate SAS**.
 
@@ -200,5 +200,5 @@ In this article, you learned how to test data protection and threat detection in
 Learn more about:
 
 - [Threat response](defender-for-storage-threats-alerts.md)
-- [Customizing data sensitivity settings](defender-for-storage-data-sensitivity.md)8
+- [Customizing data sensitivity settings](defender-for-storage-data-sensitivity.md)
 - [Threat detection and alerts](defender-for-storage-threats-alerts.md)
