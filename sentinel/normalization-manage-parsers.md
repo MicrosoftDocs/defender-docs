@@ -1,15 +1,15 @@
 ---
 title: Manage Advanced Security Information Model (ASIM) parsers | Microsoft Docs
 description: This article explains how to manage Advanced Security Information Model (ASIM) parsers, add a customer parser, and replace a built-in parser.
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: how-to
 ms.date: 11/09/2021
-ms.author: ofshezaf
 
 
 #Customer intent: As a security analyst, I want to manage and customize ASIM parsers so that I can normalize and analyze security data from various sources effectively.
 
---- 
+---
 
 # Manage Advanced Security Information Model (ASIM) parsers
 
@@ -125,9 +125,7 @@ Some parsers require you to update the list of sources that are relevant to the 
 
 If your system does not have the `Sources_by_SourceType` watchlist deployed, deploy the watchlist to your Microsoft Sentinel workspace from the Microsoft Sentinel [GitHub](https://aka.ms/DeployASimWatchlists) repository.
 
-## <a name="next-steps"></a>Next steps
-
-This article discusses managing the Advanced Security Information Model (ASIM) parsers.
+## Related content
 
 Learn more about ASIM parsers:
 
@@ -138,7 +136,7 @@ Learn more about ASIM parsers:
 
 Learn more about the ASIM in general: 
 
-- Watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) 

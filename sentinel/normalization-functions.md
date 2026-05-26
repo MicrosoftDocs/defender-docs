@@ -1,10 +1,10 @@
 ---
 title: Advanced Security Information Model (ASIM) helper functions | Microsoft Docs
 description: This article outlines the Microsoft Sentinel Advanced Security Information Model (ASIM) helper functions.
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: reference
 ms.date: 06/07/2021
-ms.author: ofshezaf
 
 
 #Customer intent: As a security analyst, I want to use ASIM helper functions to translate and enrich numeric codes in my data queries so that I can improve the readability and accuracy of my security event analysis.
@@ -118,15 +118,11 @@ Identity enrichment functions help enrich your data with user information from t
 | **_ASIM_Enrich_IdentityInfo** | Input table, field name parameters | Enriched table | Enriches your result set with user information from the [IdentityInfo table](ueba-reference.md#identityinfo-table). Use the parameters to specify which field to use for matching: `AadIdField`, `TenantIdField`, `SidField`, `UpnField`, or `EmailField`. |
 
 
-## <a name="next-steps"></a>Next steps
+## Related content
 
-This article discusses the Advanced Security Information Model (ASIM) help functions.
-
-For more information, see:
-
-- Watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-about-parsers.md)
 - [Using the Advanced Security Information Model (ASIM)](normalization-about-parsers.md)
 - [Modifying Microsoft Sentinel content to use the Advanced Security Information Model (ASIM) parsers](normalization-modify-content.md)
+- [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k)

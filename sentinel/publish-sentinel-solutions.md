@@ -1,8 +1,9 @@
 ---
 title: Publish security information and event management (SIEM) solutions to Microsoft Sentinel
 description: This article guides you through the process of publishing solutions to Microsoft Sentinel.
-author: anilgodavarthy
-ms.author: angodavarthy
+ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to 
 ms.date: 10/08/2024
@@ -30,7 +31,9 @@ This article walks you through the process of publishing your solutions to Micro
 Once you successfully sign up for the commercial marketplace account, a unique Publisher ID is generated and you get access to the authoring and publishing experience in partner center. Using partner center, you can create, certify, and publish your solutions for Microsoft customers. 
 
 ## Create offer in Microsoft Partner Center
+
 Complete the following steps to create the offer and configure the top-level attributes for your solution in Partner Center. Once created, the offer ID and offer type can't be changed. If you would like to make any corrections, you must delete and recreate the offer. To delete an offer, you can navigate to the **Offer overview** tab and select on **Delete offer**. This action isn't reversible.
+
 1. Sign in to [Microsoft Partner Center](https://partner.microsoft.com/) with your account.
 1. Select **Marketplace offers**.
 
@@ -47,13 +50,14 @@ Complete the following steps to create the offer and configure the top-level att
    |**Offer ID**| The offer ID should be the same as offer ID mentioned in the SolutionMetadata.json file in your solution folder in GitHub at */Azure/Azure-Sentinel/blob/\<Your Branch\>/Solutions/\<Your Solution\>/SolutionMetadata.json*. We recommend using the naming convention for offer ID as *azure-sentinel-solution-\<your-solution-name\>*. For example, *azure-sentinel-solution-ciscoumbrella*. Use only lowercase, alphanumeric characters, dashes, or underscores. ID can't end with "-preview" and can't be modified after selecting **Create**. <br/><br/> Offer ID: Max length is 50 characters.|
    |**Offer alias**| This name isn't used in the marketplace listing and is solely for reference within Partner Center.|
    |**Publisher**|Select the publisher ID that you want to use to publish your Microsoft Sentinel solution. The publisher selected can't be modified after creation of the offer.|
-    
+
    > [!NOTE]
    > To make any changes to the Offer ID, Offer type, or publisher ID, you must delete the offer and recreate it. To delete an offer, you can navigate to the "Offer overview" tab and select on "Delete offer." This action isn't reversible.
 
    :::image type="content" source="media/publish-sentinel-solutions/partner-center-new-azure-application.png" alt-text="Screenshot of offer ID and offer name configuration."  lightbox="media/publish-sentinel-solutions/partner-center-new-azure-application.png" :::   
 
 ## Offer setup
+
 Complete the following steps to configure the properties under the **Offer setup** tab in Partner Center. This screen shows the selections made during initial offer creation. You can change the offer alias from this page (if needed). 
 
    |Field| Description|
@@ -64,6 +68,7 @@ Complete the following steps to configure the properties under the **Offer setup
    |**Customer Leads**| You can provide connection details to the CRM system where you would receive customer leads. [Learn more about configuring customer leads](/partner-center/marketplace-offers/partner-center-portal/commercial-marketplace-get-customer-leads#connect-to-your-crm-system). This step is optional and can be done after your solution is public.|
 
 ## Offer properties
+
 Complete the following steps to configure the properties under the **Properties** tab in Microsoft Partner Center. 
 
 |Field| Description|
@@ -75,6 +80,7 @@ Complete the following steps to configure the properties under the **Properties*
    :::image type="content" source="media/publish-sentinel-solutions/partner-center-offer-properties.png" alt-text="Screenshot of offer properties tab in partner center."  lightbox="media/publish-sentinel-solutions/partner-center-offer-properties.png" :::  
 
 ## Offer listing
+
 Complete the following steps to configure the properties under the **Offer listing** tab in Microsoft Partner Center. The parameters that you set in this tab define how customers can find your solution and what information they see for your solution. 
 
 |Field| Description|
@@ -88,16 +94,19 @@ Complete the following steps to configure the properties under the **Offer listi
 |**Product information links**| By clicking on "Add a link", you can add one or more links that are relevant for your solution. You can add a link to your company page, product details page etc. We strongly recommend that you include a link for customers to learn more about Microsoft Sentinel (text - Microsoft Sentinel, URL - https://aka.ms/azuresentinel).|
 |**Contact information** | (1) **Support contact:** Contact info for Microsoft partners to use when customers open support tickets. **Name**, **Email**, **Phone**, and **Support website for Azure Global customers** are required. This information isn't listed in the marketplace. (2) **Engineering contact -** Contact info for Microsoft to use when there are issues with your offer including certification issues. This information isn't listed in the marketplace. **Name**, **Email**, and **Phone** are required. (3) **Cloud solution provider program contact –** In addition to publishing your offers through commercial marketplace online stores, you can also sell through the Cloud Solution Provider (CSP) program to reach millions of qualified Microsoft customers that the program serves. If you would like to share your solution through the CSP program, you need to provide the contact details that CSP partners can use for support and business issues. This info is only shown to CSP partners. You can learn more about the CSP program here.|
 |**Marketplace media**| (1) **Logos:** Upload a logo for your company/product. (2) **Screenshots:** Add relevant screenshots of the solution (ex- workbooks) to highlight the usefulness of the solution. Appropriate screenshots enable customers to understand the solution value better. (3) **Videos:** Add relevant screenshots of the solution. For instance, you can provide a quick overview of the solution and its benefits or have video on how customers can install the solution and get started.|
-    
+
 ## Preview audience
+
 Add at least one Azure Subscription ID. You can enter your own subscription ID or your customer subscription IDs for whom you would like to enable preview access to your solution. Once you select "Go Live" for this offer, this list is ignored, and your solution would be visible to all customers.
 
 Previews provide an opportunity to test and validate your solution in a real environment before the solution becomes publicly available to all customers.
- 
+
 ## Technical configuration
+
 Skip this section and move on to **Plan overview**.
 
 ## Plan overview
+
 A plan defines an offer's scope and limits, and the associated pricing when applicable. For example, depending on the offer type, you can select regional markets and choose whether a plan is visible to the public or only to a private audience. For Microsoft Sentinel solution, only one plan is required. Select on the "Create new plan" and enter a plan ID and name. The plan ID should be unique in this offer and would be visible to customers in the product URL in Azure Marketplace (once published). Enter the following details:
 
 |Field| Description|
@@ -108,12 +117,15 @@ A plan defines an offer's scope and limits, and the associated pricing when appl
 |**Technical configuration**| (1) **Version:** Enter the version number of the package you're uploading. The version number should be the same as the latest approved package version in GitHub. Package path in GitHub - */Azure/Azure-Sentinel/tree/\<Your branch\>/\<Your solution\>/Package* (2) **Package File (zip):** Upload the matching package zip file with the same version number you entered for version. **Note:** Make sure that you always upload the latest approved version.|
 
 ## Co-sell with Microsoft
+
 No changes required; you can ignore this section.
 
 ## Resell through CSPs
+
 You can opt whether you want to expand the reach of your solution by offering it through Microsoft’s Cloud Solution Providers (CSP) program. Here you can use from three options which define which of the CSP partners can resell your solution. You can choose any partner, specific list of partners, or you can choose to opt out.
 
 ## Review and publish
+
 After you enter all the details, select on each of the tabs to review your offer for errors/omissions. When you're ready, select on the **Review and publish** from any of the tabs. The review page shows the status of your submission for each of the tabs (Complete, Incomplete). The **Publish** button is enabled only if all the required details are filled out,  that is, status shows as **Complete** for all tabs. For the pages with status as **Incomplete**, select on the page link to fill out the missing details and select **Review and publish** again.
 
 In this screenshot, only the **Offer setup**, **Properties**, and **Technical Configuration** tabs are fully filled out and the rest have missing details.
@@ -123,5 +135,5 @@ In this screenshot, only the **Offer setup**, **Properties**, and **Technical Co
 Once you fill out all the details and publish the solution, your solution goes through a series of checks before it goes live in Azure Marketplace and Microsoft Sentinel content hub.
 
 ## Next steps
-> [!div class="nextstepaction"]
-> [What happens after you publish your solution?](sentinel-solutions-post-publish-tracking.md)
+
+[What happens after you publish your solution?](sentinel-solutions-post-publish-tracking.md)

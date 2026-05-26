@@ -1,15 +1,15 @@
 ---
 title: Use Advanced Security Information Model (ASIM) parsers | Microsoft Docs
 description: This article explains how to use Kusto Query Language (KQL) functions as query-time parsers to implement the Advanced Security Information Model (ASIM)
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: concept-article
 ms.date: 11/11/2024
-ms.author: ofshezaf
 
 
 #Customer intent: As a security analyst, I want to use ASIM parsers in my queries so that I can view and analyze data in a normalized format for improved query performance and comprehensive security insights.
 
---- 
+---
 
 # Using the Advanced Security Information Model (ASIM)
 
@@ -39,6 +39,7 @@ The following table lists the available unifying parsers:
 
 | Schema | Unifying parser | 
 | ------ | ------------------------- |
+| Agent Event | _Im_AgentEvent |
 | Alert Event | _Im_AlertEvent |
 | Asset Entity | _Im_AssetEntity |
 | Audit Event | _Im_AuditEvent |
@@ -70,8 +71,6 @@ To ensure efficiency, parsers maintain only normalized fields. Fields that aren'
 The [parsers list](normalization-parsers-list.md) article notes parsers that support the *pack* parameter. 
 
 ## Related content
-
-For more information, see:
 
 - [ASIM parsers overview](normalization-parsers-overview.md)
 - [Manage ASIM parsers](normalization-manage-parsers.md)

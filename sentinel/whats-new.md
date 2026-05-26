@@ -18,8 +18,26 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
+## May 2026
+
+- [Generate playbooks using AI in Microsoft Sentinel is now generally available (GA)](#generate-playbooks-using-ai-in-microsoft-sentinel-is-now-generally-available-ga)
+- [UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections](#ueba-enhancements-new-settings-experience-okta-v2-support-and-more-gcp-anomaly-detections)
+
+### Generate playbooks using AI in Microsoft Sentinel is now generally available (GA)
+
+You can now [generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md). The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
+
+### UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections
+
+- We introduced a new entry point and created a consolidated view for the UEBA Settings and the Behaviors Settings. You can now access the UEBA settings from the new UEBA tab in the Microsoft Sentinel settings page. For more information, see [Enable User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel](enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab).
+
+- UEBA Okta anomalies now support the OktaV2_CL table alongside the existing Okta_CL table. This extends the existing Anomalous Activity and Anomalous MFA Failures detections to customers using the newer Okta connector format—no new anomaly types are introduced. For more information, see [UEBA reference](ueba-reference.md).
+
+- UEBA now supports five new GCP Audit Logs anomaly detections that identify unusual login behavior, privileged actions, resource deployments, secret/KMS key access, and infrastructure usage patterns. For more information, see [UEBA anomalies](anomalies-reference.md#ueba-anomalies).
+
 ## April 2026
 
+- [[Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts](#updated-call-to-action-update-automation-by-july-1-2026---account-name-is-now-consistently-the-upn-prefix-for-analytics-rule-alerts)
 - [Microsoft Sentinel data federation (Preview)](#microsoft-sentinel-data-federation-preview)
 - [Transform data with filter and split features (Preview)](#transform-data-with-filter-and-split-features-preview)
 - [Accelerate Microsoft Sentinel connector development with Visual Studio Code connector builder agent (Preview)](#accelerate-microsoft-sentinel-connector-development-with-visual-studio-code-connector-builder-agent-preview)
@@ -28,6 +46,31 @@ The listed features were released in the last six months. For information about 
 - [AI-powered SIEM migration tool is now generally available](#ai-powered-siem-migration-tool-is-now-generally-available)
 - [Cost estimation tool for customers and partners (Preview)](#cost-estimation-tool-for-customers-and-partners-preview)
 - [Configure row-level access using Microsoft Sentinel scoping (Preview)](#configure-row-level-access-using-microsoft-sentinel-scoping-preview)
+
+### [Updated] Call to action: update automation by July 1, 2026 - Account Name is now consistently the UPN prefix for analytics rule alerts
+
+Microsoft Sentinel is updating how the account entity's **Account Name** value is populated for analytics rule alerts when the full UPN is mapped into Account Name. This change improves consistency for downstream automation rules and Logic Apps playbooks.
+
+This change might affect automation logic that filters on or compares the `AccountName` property (Logic Apps: `AccountName`), especially if it expects the full UPN.
+
+**What's changing**
+
+- When a full UPN (for example, `user@domain.com`) is mapped to Account Name in an analytics rule, Account Name will always be the UPN prefix only (`user`). Previously, it could sometimes be `user` and sometimes `user@domain.com`.
+- Additional UPN-related fields will be added to the account entity in the `SecurityAlert` table: `UserPrincipalName` (full UPN, for example  `user@domain.com`), `UPNSuffix`, and the UPN prefix.
+
+For example:
+- **Before**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` or `user@domain.com`  
+- **After**: Analytics: `user@domain.com` -> Automation rule Account Name: `user` + `UPNSuffix`: `domain.com` 
+
+**What you need to do**
+
+Update any automation rules or logic apps that compare against the full UPN. Replace direct equality checks with separate comparisons for the UPN prefix and UPN suffix. We strongly recommend using **Contains** and **Starts with** operations instead of strict equality to maintain compatibility both before and after the change.
+
+For example, replace conditions such as `AccountName` **Equals** `user@domain.com` with logic like:
+- `AccountName` **Contains** `user` or **Starts with** `user`
+- `UPNSuffix` **Equals** `domain.com` / **Starts with** `domain.com` / **Contains** `domain.com`
+
+For more information, including before and after examples, read the blog article [Update: Changing the Account Name Entity Mapping in Microsoft Sentinel](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/update-changing-the-account-name-entity-mapping-in-microsoft-sentinel/4489040).
 
 ### Microsoft Sentinel data federation (Preview)
 Powered by Microsoft Fabric, Microsoft Sentinel data federation lets you analyze security data where it already lives, without copying or duplicating it. You can federate data from Microsoft Fabric, Azure Data Lake Storage, and Azure Databricks into Microsoft Sentinel data lake, then use familiar Microsoft Sentinel experiences like KQL, notebooks, and custom graphs across both federated and native data.
@@ -151,7 +194,7 @@ To help SOC teams get value from behaviors from day one, Microsoft Sentinel now 
 
 For more information about the workbook, see the [Microsoft Sentinel Behaviors Workbook blog post](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/introducing-the-microsoft-sentinel-ueba-behaviors-workbook/4448398).
 
-### Generate playbooks using AI in Microsoft Sentinel (preview)
+### Generate playbooks using AI in Microsoft Sentinel (Preview)
 
 You can now [generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md). The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
 

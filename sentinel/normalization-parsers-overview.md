@@ -1,15 +1,16 @@
 ---
 title: Microsoft Sentinel Advanced Security Information Model (ASIM) parsers overview | Microsoft Docs
 description: This article provides an overview of Advanced Security Information Model (ASIM) parsers and a link to more detailed ASIM parsers documents.
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: concept-article
 ms.date: 11/09/2021
-ms.author: ofshezaf
+
 
 
 #Customer intent: As a security analyst, I want to use ASIM parsers to normalize and query security data so that I can efficiently analyze and correlate information from various sources.
 
---- 
+---
 
 # The Advanced Security Information Model (ASIM) parsers
 
@@ -39,7 +40,7 @@ The unifying parser name is `_Im_<schema>` where `<schema>` stands for the speci
 >[!TIP]
 > The parser hierarchy adds a layer to support customization. For more information, see [Managing ASIM parsers](normalization-develop-parsers.md).
 
-## <a name="next-steps"></a>Next steps
+## Related content
 
 Learn more about ASIM parsers:
 
@@ -51,7 +52,7 @@ Learn more about ASIM parsers:
 
 For more about ASIM, in general, see: 
 
-- Watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) 

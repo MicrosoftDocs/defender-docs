@@ -1,8 +1,9 @@
 ---
 title: What is Microsoft Sentinel?
 description: Learn about Microsoft Sentinel, an AI-first, cloud-native security information and event management (SIEM) and security platform that consolidates and analyzes security data at scale, empowers security operations teams with proactive, AI-enhanced defense capabilities, and provides unified tools for detecting, investigating, and responding to threats across hybrid and multicloud environments.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: efratka
 ms.topic: overview
 ms.service: microsoft-sentinel
 ms.date: 09/14/2025

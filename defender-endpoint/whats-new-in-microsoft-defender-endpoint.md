@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 04/08/2026
+ms.date: 05/20/2026
 ms.collection:
 - m365-security
 - tier1
@@ -25,13 +25,28 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
+## May 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Feature |[Enhanced exposure score in Defender Vulnerability Management](/defender-vulnerability-management/tvm-exposure-score#transition-to-the-new-exposure-score-preview) |Preview |The new exposure score model in Defender Vulnerability Management is now available in preview. This model improves risk prioritization and recommendation impact accuracy by incorporating exploit prediction data (EPSS) and asset context factors such as internet-facing status and criticality. For more information, see [Exposure score in Defender Vulnerability Management](/defender-vulnerability-management/tvm-exposure-score) and [Security recommendations](/defender-vulnerability-management/tvm-security-recommendation). |
+|Feature |[Schedule antivirus scans on Linux](schedule-antivirus-scans-linux.md) |Preview |You can now configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux. Scheduled scans support daily quick scans, interval-based quick scans, and weekly full scans, with options for low-priority execution, idle-time scheduling, and randomized start times. Configure scans using managed JSON, the Microsoft Defender portal, or the mdatp CLI. |
+|Feature |[Automatic device isolation (automatic attack disruption)](respond-machine-alerts.md#isolate-device-automatic-attack-disruption) |Preview |Microsoft Defender for Endpoint can now automatically isolate compromised devices as part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption). Isolation blocks most network traffic while keeping the device connected to security services. The action is time-limited, scoped to the incident, and security operators can release isolation at any time. |
+|Feature |[Custom data collection](custom-data-collection.md) |GA |Custom data collection is now generally available. This feature enables organizations to expand and customize telemetry collection beyond default configurations with rule-based filtering for specific events from endpoint devices. The maximum event limit per rule has been updated from 25,000 to 75,000 events per device within a 24-hour rolling window. |
+|Feature |[Configure offline security intelligence update settings for Linux from the Defender and Intune portals](./linux-support-offline-security-intelligence-update.md#configure-the-endpoints) |GA |You can now configure offline security intelligence update settings for Linux directly from the Defender and Intune portals. |
+|Feature |[Selective Response Actions](./restrict-response-actions-high-value-assets.md) |Preview |Selective Response Actions enables organizations to tailor high-impact security operations on devices during onboarding. It provides precise control over how response actions are applied on Tier-0 systems and other high-value assets, helping maintain operational stability while delivering strong protection. |
+|Release - Windows|Windows Defender Antivirus: Platform 4.18.26040.7 / Engine 1.1.26040.8 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--april-2026--platform-418260407--engine-11260408). |
+
 ## April 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Feature |New Microsoft Secure Score recommendation |Preview |Microsoft Secure Score now includes the **Ensure devices are updated to Secure Boot 2023 certificates and boot manager**, which helps identify devices that haven't yet transitioned to the new Secure Boot 2023 certificates required ahead of the June 2026 expiration.<br><br>Devices that remain on older Secure Boot certificates may become unable to receive new security protections for the early boot process as the certificates approach expiration in June 2026.<br><br>This recommendation provides centralized visibility into deployment status across the environment, which enables organizations to identify exposure, prioritize remediation, and track rollout progress at scale. To learn more about the recommendation, see [Assess Secure Boot status with Microsoft Defender (blog)](https://aka.ms/secureboot-mde). |
+|Feature |[View action status in the Activities tab (Preview)](/defender-xdr/autoad-results#track-the-action-status-in-the-activities-tab-preview) |Preview |You can now view the current status of automatic attack disruption and predictive shielding actions related to a specific incident. You view this data in the **Activities** tab of the incident page. The data applies to the [Contain user](respond-machine-alerts.md#contain-user-from-the-network), [GPO hardening](respond-machine-alerts.md#gpo-hardening-preview), [Safeboot hardening](respond-machine-alerts.md#safeboot-hardening-preview) response actions. |
 |Release - Linux |Build 101.26032.0000 |GA |Release version 30.126032.0000.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--april-2026--101260320000). |
 |Release - macOS |Build 101.26032.0016 |GA |Release version 20.126032.16.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260320016).|
-|Release - Windows |Windows Defender Antivirus: Platform 4.18.26030.3011 / Engine 1.1.26030.3008 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--march-2026--platform-418260303011--engine-11260303008). |
+|Release - macOS |Build 4.18.25040.1 |GA |Release version 4.18.25040.1 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--418250401).|
+|Release - Windows|Windows Defender Antivirus: Platform 4.18.26030.3011 / Engine 1.1.26030.3008 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--march-2026--platform-418260303011--engine-11260303008). |
 |Release - macOS |Build 101.26022.0020 |GA |Release version 20.126022.20.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220020). |
 |Release - macOS |Build 101.26022.0018 |GA |Release version 20.126022.18.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--april-2026--101260220018).|
 |Release - Android |Build 1.0.8805.0103 |GA |Build 1.0.8805.0103 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--april-2026--platform-1088050103). |
@@ -64,7 +79,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 |Feature |Enhanced Defender deployment tool for Windows | Preview |The new version of the tool streamlines onboarding and enhances security by:<br/>- Bundling the onboarding package directly into the tool's executable.<br/>- Generating a key during deployment package creation that is required for running the tool.<br/>- Enabling users to configure an expiry date for the package to reduce the risk of unauthorized use.<br/><br/>In addition, a new Deployment packages page in the Defender portal facilitates management of downloaded packages by providing centralized visibility into all the packages and their current status. |
 |Release - macOS |Build 101.25122.0008 |GA |Release version 20.125122.8.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--february-2026--platform-101251220008). |
 |Release - Linux |Build 101.25122.0004 |GA |Release version 30.125122.0004.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--february-2026--101251220004). |
-|Release - Windows | Windows Defender Antivirus: Platform 4.18.26010.5 / Engine 1.1.26010.1 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--january-2026--platform-418260105--engine-11260101). |
+|Release - Windows | Windows Defender Antivirus: Platform 4.18.26010.5 / Engine 1.1.26010.1 |GA |See [enhancements and features for this release](msda-updates-previous-versions-technical-upgrade-support.md#january-2026-platform-418260105--engine-11260101). |
 
 ## January 2026
 

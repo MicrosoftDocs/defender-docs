@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "defender-endpoint/troubleshoot-asr-rules.md",
+      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-monitor",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-endpoint/mde-security-settings-management.md",
       "redirect_url": "/intune/intune-service/protect/mde-security-integration",
       "redirect_document_id": false
@@ -9,17 +14,17 @@
       "source_path": "defender-endpoint/threat-analytics-analyst-reports.md",
       "redirect_url": "/defender-xdr/threat-analytics-analyst-reports",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "defender-endpoint/threat-analytics.md",
       "redirect_url": "/defender-xdr/threat-analytics",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "defender-endpoint/configure-microsoft-threat-experts.md",
       "redirect_url": "/defender-xdr/defender-experts-for-hunting",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "defender-endpoint/microsoft-defender-antivirus-using-mde-security-set-mngmnt.md",
       "redirect_url": "/defender-endpoint/evaluate-mdav-using-gp",
@@ -82,7 +87,7 @@
     },
     {
       "source_path": "defender-endpoint/techniques-device-timeline.md",
-      "redirect_url": "/defender-endpoint/device-timeline-event-flag#techniques-in-the-device-timeline",
+      "redirect_url": "/defender-endpoint/investigate-machines#mitre-attck-techniques-in-the-device-timeline",
       "redirect_document_id": true
     },
     {
@@ -118,6 +123,11 @@
     {
       "source_path": "defender-endpoint/schedule-antivirus-scan-in-mde.md",
       "redirect_url": "/defender-endpoint/schedule-antivirus-scan-anacron",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/schedule-anti-virus-scans-linux.md",
+      "redirect_url": "/defender-endpoint/configure-anti-virus-scans-linux",
       "redirect_document_id": true
     },
     {
@@ -169,7 +179,7 @@
       "source_path": "defender-endpoint/mde-linux-arm.md",
       "redirect_url": "/defender-endpoint/microsoft-defender-endpoint-linux",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "defender-endpoint/contact-support.md",
       "redirect_url": "/defender-xdr/contact-defender-support",
@@ -179,7 +189,7 @@
       "source_path": "defender-endpoint/install-defender-endpoint-linux.md",
       "redirect_url": "/defender-endpoint/mde-linux-prerequisites",
       "redirect_document_id": false
-    },  
+    },
     {
       "source_path": "defender-endpoint/api/user.md",
       "redirect_url": "/defender-endpoint/api/get-user-related-alerts",
@@ -192,8 +202,28 @@
     },
     {
       "source_path": "defender-endpoint/manage-alerts.md",
-      "redirect_url": "/defender-xdr/investigate-alerts#manage-alerts",
+      "redirect_url": "/defender-endpoint/respond-machine-alerts",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/attack-surface-reduction.md",
+      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/overview-attack-surface-reduction.md",
+      "redirect_url": "/defender-endpoint/attack-surface-reduction-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/enable-attack-surface-reduction.md",
+      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/configure-machines-asr.md",
+      "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-monitor",
+      "redirect_document_id": true
     },
     {
       "source_path": "defender-vulnerability-management/data-storage-privacy.md",
@@ -203,6 +233,26 @@
     {
       "source_path": "defender-vulnerability-management/retention-logic-mdvm.md",
       "redirect_url": "/defender-endpoint/data-storage-privacy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/exclude-devices.md",
+      "redirect_url": "/defender-endpoint/manage-device-scope-relevance#exclude-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/transient-device-tagging.md",
+      "redirect_url": "/defender-endpoint/manage-device-scope-relevance#view-and-manage-transient-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/internet-facing-devices.md",
+      "redirect_url": "/defender-endpoint/investigate-machines#investigate-internet-facing-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/device-timeline-event-flag.md",
+      "redirect_url": "/defender-endpoint/investigate-machines#investigate-device-timeline",
       "redirect_document_id": false
     },
     {
@@ -229,7 +279,7 @@
       "source_path": "defender-endpoint/mac-whatsnew.md",
       "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "defender-endpoint/ios-whatsnew.md",
       "redirect_url": "/defender-endpoint/whats-new-in-microsoft-defender-endpoint",
@@ -248,6 +298,11 @@
     {
       "source_path": "defender-endpoint/android-intune.md",
       "redirect_url": "/intune/intune-service/protect/microsoft-defender-deploy-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/targeting-devices.md",
+      "redirect_url": "/defender-endpoint/machine-tags",
       "redirect_document_id": false
     }
   ]

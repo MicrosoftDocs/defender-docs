@@ -1,8 +1,9 @@
 ---
 title: Create Summary Rules for Microsoft Sentinel Solutions
 description: This article guides you through the process of creating and publishing summary rules to Microsoft Sentinel solutions.
-author: anilgodavarthy
-ms.author: angodavarthy
+ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.date: 7/04/2025
@@ -25,6 +26,7 @@ To ensure both the ISV and the end-user get the most out of summary rules, here 
 - **Leverage analytic rules on summary results:** Encourage or include an analytic rule that triggers on the summary table if the intent is to alert (for example, provide a ready-to-enable rule that looks at the summary table for anomalies or IoC hits). As shown earlier, the workflow is usually Summary Rule -> writes to table -> Analytic Rule -> creates incident. By packaging both, you give the user a turnkey solution. Make sure the analytic rule’s schedule/look-back aligns with how the summary is produced (for example, if summary runs daily, the alert rule might run daily shortly after, or hourly checking the last day’s summary).
 
 ## How to create summary rules
+
 Summary rules in Microsoft Sentinel solutions follow the YAML format. For an example of summary rule, see [Sample summary rule in GitHub](https://github.com/Azure/Azure-Sentinel/blob/master/Summary%20rules/Network/FortinetFortigateNetworkSessionIPSummary.yaml)
 
 The following sections provide a detailed walkthrough of various attributes of a summary rule.
@@ -39,9 +41,9 @@ This field is mandatory.
 
 The `displayName` attribute provides a brief label that summarizes the rule. Make sure the label is clear and concise to help users understand the purpose of the summary rule. This attribute:
 
-* Uses sentence-case capitalization.
-* Doesn't end in a period.
-* Has a maximum length of 50 characters (whenever possible).
+- Uses sentence-case capitalization.
+- Doesn't end in a period.
+- Has a maximum length of 50 characters (whenever possible).
 
 This field is mandatory.
 
@@ -49,11 +51,11 @@ This field is mandatory.
 
 The `description` attribute provides a detailed description of the summary rule. The description includes information about the rule, frequency, and other relevant details that can help customers know more about the summarization logic and its impact. This attribute:
 
-* Uses sentence case capitalization.
-* Is different from and more descriptive than the name field.
-* Has a maximum length of 255 characters.
-* Is five sentences or less.
-* Doesn't provide a technical explanation for the query language.
+- Uses sentence case capitalization.
+- Is different from and more descriptive than the name field.
+- Has a maximum length of 255 characters.
+- Is five sentences or less.
+- Doesn't provide a technical explanation for the query language.
 
 This field is mandatory.
 
@@ -75,9 +77,9 @@ The `query` attribute defines the summarization logic. We recommend that you wri
 
 Limit the query to 10,000 characters. If the query section exceeds this limit, consider reducing the number of characters. A static list of items used for comparison within the query body can cause you to go over the limit. We recommend that you move these lists to one of the following options:
 
-* A [watchlist function](/azure/sentinel/watchlists)
-* A [custom JSON/CSV](https://github.com/Azure/Azure-Sentinel/blob/master/Detections/MultipleDataSources/ExchangeServerVulnerabilitiesMarch2021IoCs.yaml)
-* A [custom function](https://techcommunity.microsoft.com/t5/azure-sentinel/using-kql-functions-to-speed-up-analysis-in-azure-sentinel/ba-p/712381)
+- A [watchlist function](/azure/sentinel/watchlists)
+- A [custom JSON/CSV](https://github.com/Azure/Azure-Sentinel/blob/master/Detections/MultipleDataSources/ExchangeServerVulnerabilitiesMarch2021IoCs.yaml)
+- A [custom function](https://techcommunity.microsoft.com/t5/azure-sentinel/using-kql-functions-to-speed-up-analysis-in-azure-sentinel/ba-p/712381)
 
 Each line in the query body must have at least one space at the beginning, but two spaces are standard to support readability.
 
@@ -89,9 +91,13 @@ This field is mandatory.
 
 The `binSize` attribute represents the frequency at which the query runs in minutes. Only nonzero positive integer values are allowed. Ex- 60 indicates that the query runs every 1 hour.
 
-
 ### Version
 
 When a customer creates a new summary from the template, the template `version` is saved. If a new template version is published, customers are notified in the UX. Versions follow the format `a`, `b`, and `c`, in which `a` is the major version, `b` is the minor version, and `c` is the patch. The version field is the last line of the template.
 
 This field is mandatory.
+
+## Limitations
+
++ **First excution**: The first execution of your summary rule is deayed by a number of hours. Subsequet executions run as configured
++ **Cross-workspace references**: References to tables accoss workspaces are not supported in summary rules.

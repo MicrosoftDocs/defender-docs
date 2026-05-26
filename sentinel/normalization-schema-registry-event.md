@@ -1,10 +1,10 @@
 ---
 title: The Advanced Security Information Model (ASIM) Registry Event normalization schema reference | Microsoft Docs
 description: This article describes the Microsoft Sentinel Registry Event normalization schema.
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: reference
 ms.date: 11/09/2021
-ms.author: ofshezaf
 
 
 #Customer intent: As a security analyst, I want to use the Registry Event normalization schema so that I can standardize and analyze Windows Registry activity across different monitoring systems.
@@ -188,9 +188,7 @@ These are the changes in version 0.1.2 of the schema:
 These are the changes in version 0.1.3 of the schema:
 - Added inspection fields.
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Normalization in Microsoft Sentinel](normalization.md)
 - [Microsoft Sentinel authentication normalization schema reference](normalization-schema-authentication.md)

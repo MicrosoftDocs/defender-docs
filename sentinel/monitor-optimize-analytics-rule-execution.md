@@ -1,8 +1,9 @@
 ---
 title: Monitor and optimize the execution of your Microsoft Sentinel scheduled analytics rules
 description: Use Microsoft Sentinel's execution management tools, rule insights and manual rerun, to test and manage your scheduled analytics rules' execution.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: feature-guide
 ms.date: 06/19/2023
 

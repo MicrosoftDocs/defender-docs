@@ -1,10 +1,10 @@
 ---
 title: Modify content to use the Microsoft Sentinel Advanced Security Information Model (ASIM) | Microsoft Docs
 description: This article explains how to convert Microsoft Sentinel content to use the Advanced Security Information Model (ASIM).
-author: oshezaf
+ms.author: edbaynash
+author: EdB-MSFT
 ms.topic: how-to
 ms.date: 11/09/2021
-ms.author: ofshezaf
 
 
 #Customer intent: As a security analyst, I want to modify custom analytics rules to use the Advanced Security Information Model (ASIM) so that I can leverage normalized data for more efficient and consistent threat detection.
@@ -21,9 +21,6 @@ This article explains how to convert existing Microsoft Sentinel analytics rules
 
 To understand how normalized content fits within the ASIM architecture, refer to the [ASIM architecture diagram](normalization.md#asim-components).
 
-> [!TIP]
-> Also watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM). For more information, see [Next steps](#next-steps).
->
 
 ## Modify custom content to use normalization
 
@@ -107,14 +104,10 @@ See more information on the following items used in the preceding examples, in t
 
 [!INCLUDE [kusto-reference-general-no-alert](includes/kusto-reference-general-no-alert.md)]
 
-## <a name="next-steps"></a>Next steps
+## Related content
 
-This article discusses the Advanced Security Information Model (ASIM) content.
-
-For more information, see:
-
-- Watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k)
