@@ -3,7 +3,7 @@ title: Troubleshoot email authentication in Microsoft 365
 description: Troubleshoot SPF, DKIM, and DMARC email authentication failures in Exchange Online and Microsoft 365 with quick-reference tables and detailed guidance.
 author: chrisda
 ms.author: chrisda
-ms.date: 05/20/2026
+ms.date: 05/26/2026
 ms.topic: troubleshooting
 ms.service: defender-office-365
 ms.localizationpriority: high
@@ -118,6 +118,182 @@ DMARC builds on SPF and DKIM to verify domain alignment with the From address. C
 
 For complete setup instructions, see [Set up DMARC to validate the From address domain](email-authentication-dmarc-configure.md).
 
+## Combined failure scenarios
+
+When multiple email authentication protocols fail simultaneously, troubleshooting requires a systematic approach. Use the following scenarios to diagnose and resolve combined failures.
+
+### SPF and DKIM both fail
+
+**Example header**:
+
+```text
+Authentication-Results: spf=fail smtp.mailfrom=contoso.com;
+ dkim=fail header.d=contoso.com; dmarc=fail action=quarantine;
+ compauth=fail reason=000
+```
+
+**Analysis**: Both SPF and DKIM authentication failed, so DMARC can't pass (DMARC needs at least one aligned pass). The message is likely quarantined or rejected.
+
+**Troubleshooting steps**:
+
+1. Identify the sending IP address in the [message headers](https://support.microsoft.com/office/cd039382-dc6e-4264-ac74-c048563d212c) or by using `Get-MessageTrace`.
+1. Verify that the sending IP is included in the domain's SPF record.
+1. Verify that DKIM signing is enabled and the DKIM DNS CNAME records exist.
+1. Check whether an email gateway is modifying messages (which breaks DKIM) or sending from an IP that isn't in the SPF record.
+
+**Fix priority**:
+
+1. Fix SPF first (DNS change only; fastest fix). See [Set up SPF](email-authentication-spf-configure.md).
+1. Fix DKIM second (might need Microsoft 365 and DNS changes). See [Set up DKIM](email-authentication-dkim-configure.md).
+1. Verify DMARC alignment. See [Set up DMARC](email-authentication-dmarc-configure.md).
+1. If a gateway is involved, implement [ARC](email-authentication-arc-configure.md).
+
+### SPF passes but DMARC fails due to alignment
+
+**Example header**:
+
+```text
+Authentication-Results: spf=pass smtp.mailfrom=service.contoso.com;
+ dkim=fail header.d=contoso.com;
+ dmarc=fail (SPF not aligned);
+ compauth=fail reason=001
+```
+
+**Analysis**: SPF passes but the SPF domain doesn't align with the From address domain. DKIM also fails. DMARC needs at least one aligned pass, so it fails.
+
+**Common cause**: Forwarding or relay scenario where the envelope sender domain differs from the From address domain.
+
+**Fix**: Enable [DKIM signing](email-authentication-dkim-configure.md) for the From address domain. DKIM alignment provides the aligned pass that DMARC needs.
+
+[Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
+
+```powershell
+Set-DkimSigningConfig -Identity contoso.com -Enabled $true
+```
+
+### Gateway or relay modifying messages
+
+**Example header**:
+
+```text
+Authentication-Results: spf=pass smtp.mailfrom=gateway.fabrikam.com;
+ dkim=fail (body hash did not verify) header.d=contoso.com;
+ dmarc=fail (no aligned pass)
+```
+
+**Analysis**: The message passed through a gateway or security service that modified the message body (for example, by adding a disclaimer or scan notice). The modification invalidated the DKIM signature. SPF passes for the gateway domain but doesn't align with the From domain.
+
+**Fix options (in priority order)**:
+
+1. **Configure ARC on the gateway** (recommended): ARC preserves authentication results through message modification. See [Configure trusted ARC sealers](email-authentication-arc-configure.md).
+1. **Configure the gateway to DKIM-sign after modification**: The gateway adds its own valid DKIM signature with your domain after any content changes.
+1. **Add the gateway to Enhanced Filtering for Connectors**: Preserves the original sending IP for authentication evaluation. See [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+
+### Forwarding breaks authentication
+
+**Example header**:
+
+```text
+Authentication-Results: spf=fail (sender IP is 10.0.1.x)
+ smtp.mailfrom=woodgrovebank.com;
+ dkim=pass header.d=woodgrovebank.com;
+ dmarc=fail (SPF failed, DKIM not aligned)
+```
+
+**Analysis**: A forwarded message fails SPF because the forwarding server's IP isn't in the original sender's SPF record. DKIM might pass if the message wasn't modified, but alignment with the From domain might still fail.
+
+**Fix**: Configure [trusted ARC sealers](email-authentication-arc-configure.md). Microsoft 365 already trusts ARC seals from major providers (for example, Google and Yahoo). If authentication still fails after ARC is in place, review your anti-phishing policy settings.
+
+## Common real-world scenarios
+
+### Send on behalf of in Outlook
+
+**What the user sees**:
+
+```text
+From: user@contoso.com on behalf of user@contoso.com
+```
+
+**Root cause**: SPF `softfail` or `fail` because the sending IP isn't authorized in the [SPF record](email-authentication-spf-configure.md).
+
+**Fix**: Add the sending IP or service include to the SPF record:
+
+```text
+v=spf1 ip4:<sending-IP> include:spf.protection.outlook.com ~all
+```
+
+### Marketing automation fails DMARC
+
+**Example header**:
+
+```text
+Authentication-Results: spf=pass smtp.mailfrom=northwindtraders.com;
+ dkim=pass header.d=northwindtraders.com;
+ dmarc=fail (no aligned pass) header.from=contoso.com
+```
+
+**Root cause**: The marketing service (for example, Marketo or HubSpot) sends from its own infrastructure. SPF and DKIM both pass for the service domain, but neither aligns with the From address domain (`contoso.com`).
+
+**Fix options**:
+
+1. **Configure the service to [DKIM-sign with your domain](email-authentication-dkim-configure.md)** (preferred).
+1. **Add the service's SPF include to your domain's SPF record** (provides aligned SPF pass).
+1. **Use a subdomain for marketing mail** (for example, `marketing.contoso.com`):
+   - Configure SPF and DKIM for the subdomain at the service.
+   - Set relaxed alignment in your DMARC record: `aspf=r; adkim=r`.
+   - Add a subdomain policy to DMARC: `v=DMARC1; p=quarantine; sp=none; rua=mailto:dmarc@contoso.com`.
+
+### Cloud email security gateway breaks authentication
+
+**Example header**:
+
+```text
+Authentication-Results: spf=pass smtp.mailfrom=tailspintoys.com;
+ dkim=fail (body hash did not verify) header.d=contoso.com;
+ dmarc=fail
+```
+
+**Root cause**: A non-Microsoft email security service (for example, Proofpoint or Mimecast) modifies the message, which breaks DKIM. The gateway's SPF passes for its own domain but doesn't align with the From domain.
+
+**Fix options (in priority order)**:
+
+1. **Configure the gateway for ARC** (recommended; requires gateway support).
+1. **Configure Enhanced Filtering for Connectors** to skip the gateway's IP in authentication evaluation. See [Enhanced Filtering for Connectors](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+1. **Configure the gateway to preserve or re-sign DKIM** after processing.
+
+### Partner domain emails quarantined despite valid authentication
+
+**Example header**:
+
+```text
+Authentication-Results: spf=pass smtp.mailfrom=wingtiptoys.com;
+ dkim=pass header.d=wingtiptoys.com;
+ dmarc=pass header.from=wingtiptoys.com;
+ compauth=fail reason=001
+```
+
+**Root cause**: All standard authentication passes, but Microsoft's [composite authentication](email-authentication-about.md#composite-authentication) still fails. [Spoof intelligence](anti-spoofing-spoof-intelligence.md) is likely flagging the partner domain due to cross-tenant trust issues.
+
+**Fix**: Add the partner domain to the spoof allow list by using the Tenant Allow/Block List. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and run the following command:
+
+```powershell
+New-TenantAllowBlockListSpoofItems -SpoofedUser "*@wingtiptoys.com" -SendingInfrastructure wingtiptoys.com -SpoofType External -Action Allow
+```
+
+## Decision matrix
+
+Use the following table to quickly identify the required action based on the authentication state:
+
+|Authentication state|SPF|DKIM|DMARC|Required action|
+|---|---|---|---|---|
+|All pass|pass|pass|pass|No action needed.|
+|SPF only fails|fail|pass|pass|Fix the SPF record. Add the sending IP or include.|
+|DKIM only fails|pass|fail|pass|Enable DKIM and add DNS records.|
+|DMARC fails (alignment)|pass|pass|fail|Fix domain alignment (SPF or DKIM domain must match From domain).|
+|SPF + DKIM fail|fail|fail|fail|Fix both SPF and DKIM urgently.|
+|No authentication|none|none|none|Set up all three protocols.|
+|Gateway issue|varies|fail|fail|Implement ARC or fix gateway configuration.|
+
 ## Diagnostic tools
 
 Use the following tools to diagnose email authentication issues:
@@ -136,7 +312,7 @@ To diagnose authentication failures, examine the `Authentication-Results` header
 ### Example header
 
 ```text
-Authentication-Results: spf=fail (sender IP is 203.0.113.50)
+Authentication-Results: spf=fail (sender IP is 192.168.50.50)
  smtp.mailfrom=contoso.com; dkim=pass (signature was verified)
  header.d=contoso.com; dmarc=fail action=quarantine
  header.from=contoso.com; compauth=fail reason=000
@@ -146,7 +322,7 @@ Authentication-Results: spf=fail (sender IP is 203.0.113.50)
 
 |Field|Possible values|Meaning|
 |---|---|---|
-|`spf`|`pass`, `fail`, `softfail`, `none`, `temperror`, `permerror`|Whether SPF validation passed for the sending IP.|
+|`spf`|`pass`, `fail`, `softfail`, `neutral`, `none`, `temperror`, `permerror`|Whether SPF validation passed for the sending IP.|
 |`dkim`|`pass`, `fail`, `none`|Whether DKIM signature verification succeeded.|
 |`dmarc`|`pass`, `fail`, `bestguesspass`, `none`|Whether DMARC validation passed (requires SPF or DKIM pass with alignment).|
 |`compauth`|`pass`, `fail`, `softpass`, `none`|Whether the message passed Microsoft's composite authentication check (combines SPF, DKIM, and other signals).|
