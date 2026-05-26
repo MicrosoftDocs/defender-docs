@@ -1,16 +1,17 @@
 ---
 title: Install the Defender for Cloud CLI
 description: Learn how to download and install the Defender for Cloud CLI on Windows, macOS, and Linux.
-author: Elazar
+author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 01/08/2026
-# customer intent: As a developer or security engineer, I want to install the Defender for Cloud CLI so I can run security scans locally and in CI/CD pipelines.
+ms.date: 05/25/2026
+#customer intent: As a developer or security engineer, I want to install the Defender for Cloud CLI so that I can run security scans locally and in CI/CD pipelines.
 ---
 
 # Install the Defender for Cloud CLI
 
-This article explains how to download and install the Defender for Cloud CLI on supported operating systems.
+This article explains how to download and install the Defender for Cloud command-line interface (CLI) on supported operating systems.
+You can use the CLI to run scans and automate security workflows.
 
 ## Download the CLI
 
@@ -30,7 +31,7 @@ The Defender for Cloud CLI is distributed as a standalone executable. Download t
 
 On Linux and macOS, you must grant the downloaded binary permission to run.
 
-From the directory that contains the downloaded file, run:
+Grant execution permission to the Defender binary so it can run on your system:
 
 ```bash
 chmod +x defender
@@ -45,13 +46,15 @@ Adding the CLI to your system PATH lets you run the `defender` command from any 
 
 ### Linux and macOS
 
-Move the binary to a directory that’s already included in your PATH, such as `/usr/local/bin`:
+Move the Defender binary to `/usr/local/bin`, which is a standard location in your PATH. This lets you run the command from any directory:
 
 ```bash
 sudo mv defender /usr/local/bin/defender
 ```
 
 ### Windows
+
+To add the Defender CLI directory to your Windows PATH, complete the following steps:
 
 1. Create a folder. 
    For example, `C:\tools\defender`
@@ -62,18 +65,19 @@ sudo mv defender /usr/local/bin/defender
 
 1. Select **Environment Variables**, then edit the **Path** variable under **System variables**.
 
-5. Add the path to the folder you created. 
+1. Add the path to the folder you created.
    For example, `C:\tools\defender`
 
 1. Save your changes.
 
 ## Verify the installation
 
-Open a new terminal or command prompt window and run:
+Verify that Defender is installed and available in your PATH by checking the version:
 
 ```bash
 defender --version
 ```
+
 If the CLI is installed correctly, the command returns the current version.
 
 ## Next steps
@@ -83,3 +87,4 @@ If the CLI is installed correctly, the command returns the current version.
 - Review the [CLI command reference](/azure/defender-for-cloud/defender-cli-syntax)
 
 - [Integrate the CLI into CI/CD pipelines](/azure/defender-for-cloud/ci-cd-pipeline-scanning-with-defender-cli)
+
