@@ -1,14 +1,20 @@
 ---
 title: Review and remediate Kubernetes node vulnerabilities
 description: Learn how to review and remediate vulnerability findings for Kubernetes nodes in Microsoft Defender for Cloud.
-ms.date: 04/09/2026
+ms.date: 05/26/2026
 ms.topic: how-to
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Review and remediate Kubernetes node vulnerabilities
 
 Defender for Cloud scans the [VMs that host Kubernetes nodes](./kubernetes-nodes-overview.md) for vulnerabilities in the operating system and installed software. When vulnerabilities are detected, Defender for Cloud generates recommendations with detailed findings to help you review and remediate them.
+
+Defender for Cloud provides two types of recommendations for Kubernetes node vulnerabilities:
+
+- **AKS nodes should have vulnerability findings resolved** – Surfaces vulnerabilities on node VMs, including OS and software packages. Remediation involves updating the node image or upgrading the Kubernetes version.
+- **Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods (Preview)** – Identifies vulnerabilities in AKS-managed system pods and maps each CVE to the minimum AKS version that fixes it. This provides a fully actionable remediation path by guiding you to upgrade your AKS cluster.
 
 Reviewing and remediating these vulnerabilities is part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility) for maintaining Kubernetes node security.
 
@@ -58,6 +64,20 @@ Before you begin, make sure that:
 1. Select **Update image** to apply the latest patched node pool VM image, or **Upgrade Kubernetes** to move the cluster to a newer Kubernetes version.
 
    :::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the overview details of the Kubernetes node pool for updating its image." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
+
+## Remediate AKS system pod vulnerabilities by upgrading AKS (Preview)
+
+The **Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods** recommendation provides an actionable path to remediate vulnerabilities found in AKS-managed system pods. AKS enriches each CVE finding with the minimum AKS version that resolves it, so you know exactly which version to upgrade to.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Search for and select the `Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods` recommendation.
+
+1. Review the list of CVEs, including severity, CVSS score, and the minimum AKS version that fixes each vulnerability.
+
+1. Select **Fix** and follow the guidance to upgrade your AKS cluster to the recommended version.
 
 ## Next step
 

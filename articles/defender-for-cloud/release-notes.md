@@ -3,7 +3,7 @@ title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/05/2026
+ms.date: 05/26/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,11 +32,30 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| May 26, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
 | May 5, 2026 | GA | [General availability of individual recommendations for Defender for Cloud in Azure portal and Deprecation of legacy grouped recommendations](#general-availability-of-individual-recommendations-for-defender-for-cloud-in-azure-portal-and-deprecation-of-legacy-grouped-recommendations) |
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)
+
+May 26, 2026
+
+Defender for Cloud now provides a new, actionable recommendation—**Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods (Preview)**—that helps you remediate vulnerabilities in AKS-managed system pods.
+
+Unlike the previous recommendation, this new recommendation:
+
+- Identifies the specific AKS version upgrade that resolves each detected CVE.
+- Applies only to system pods managed by AKS, not customer workloads.
+- Lists associated CVEs with severity and CVSS scores.
+- Specifies the minimum AKS version that fixes each vulnerability.
+- Provides a clear remediation path by guiding you to upgrade your AKS cluster.
+
+This replaces the previous non-actionable recommendation with a resolvable remediation path, helping teams focus on vulnerabilities they can directly remediate while maintaining clear visibility into cluster exposure.
+
+For more information, see [Review and remediate Kubernetes node vulnerabilities](kubernetes-nodes-va.md).
 
 ### Updated Helm installation for Defender for Containers sensor
  
