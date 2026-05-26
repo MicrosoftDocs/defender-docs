@@ -132,4 +132,3 @@ Defender for Cloud displays these findings under the *Azure DevOps repositories 
 - [Create your first Azure DevOps pipeline](/azure/devops/pipelines/create-first-pipeline)
 - [DevOps security in Defender for Cloud](defender-for-devops-introduction.md)
 - [Connect your Azure DevOps environment to Defender for Cloud](quickstart-onboard-devops.md)
-

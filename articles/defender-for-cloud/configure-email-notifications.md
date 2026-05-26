@@ -96,4 +96,3 @@ URI: `https://management.azure.com/subscriptions/<SubscriptionId>/providers/Micr
 - [Identify and remediate attack paths](how-to-manage-attack-path.md): Learn how to investigate and reduce attack-path risk.
 - [Investigate risk with security explorer and attack paths](concept-attack-path.md): Learn how security explorer maps attack paths and exposure.
 - [Workflow automation in Defender for Cloud](workflow-automations.md): Automate alert response with custom notification logic.
-

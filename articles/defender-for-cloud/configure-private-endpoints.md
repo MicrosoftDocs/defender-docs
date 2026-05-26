@@ -151,4 +151,3 @@ The FQDN should resolve to a private IP address under `privatelink.cloud.defende
 ## Related content
 
 - [Microsoft Security Private Link for Microsoft Defender for Cloud](concept-private-links.md)
-
