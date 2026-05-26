@@ -18,16 +18,13 @@ Microsoft Defender for Cloud detects anomalous activities indicating unusual and
 
 For Amazon Web Services (AWS) Relational Database Service (RDS) instances (Preview):
 
-
 - Aurora PostgreSQL
 - Aurora MySQL
 - PostgreSQL
 - MySQL
 - MariaDB
 
-
 To get alerts from the Microsoft Defender plan, first [enable Defender for open-source relational databases on Azure](enable-defender-for-databases-azure.md) or [enable Defender for open-source relational databases on AWS](enable-defender-for-databases-aws.md).
-
 
 Learn more about this Microsoft Defender plan in [Overview of Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
 

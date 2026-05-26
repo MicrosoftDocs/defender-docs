@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.author: elkrieger
 author: ElazarK
 zone_pivot_groups: defender-portal-experience
+#customer intent: As a security administrator, I want to use cloud asset inventory so that I can review the security posture of connected resources across my multicloud environment.
 ---
 # Cloud asset inventory
 
@@ -51,12 +52,10 @@ To review software inventory details:
 
 1. Select **Installed application**.
 1. In **Value**, select the apps to filter on.
-
-- **Total resources**: The total number of resources connected to Defender for Cloud.
-- **Unhealthy resources**: Resources with active security recommendations that you can implement. For remediation guidance, see [Review security recommendations](review-security-recommendations.md).
-- **Resource count by environment**: The number of resources in each environment.
-- **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
-
+    - **Total resources**: The total number of resources connected to Defender for Cloud.
+    - **Unhealthy resources**: Resources with active security recommendations that you can implement. For remediation guidance, see [Review security recommendations](review-security-recommendations.md).
+    - **Resource count by environment**: The number of resources in each environment.
+    - **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
 1. Resources connected to Defender for Cloud that run those apps are displayed. Blank options show machines where Defender for Servers or Defender for Endpoint isn't available.
 
 ## Filter the inventory
