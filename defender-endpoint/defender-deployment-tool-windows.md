@@ -89,7 +89,11 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 > [!NOTE]
 > For more information about Defender endpoint security for Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
 
-## Generate and download a new onboarding package
+## Download the tool
+
+If preview features are enabled on your tenant, select the **Generate and download a new onboarding package (preview)** tab to see how to generate and download a new onboarding package. If preview features aren't enabled, select the **Download the tool (GA)** tab and follow the instructions for downloading the tool and required .onboarding file.
+
+## [Generate and download a new onboarding package (preview)](#tab/preview-experience)
 
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
 
@@ -120,15 +124,32 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 > [!NOTE] 
 > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
 
+## [Download the tool (GA)](#tab/ga-experience)
+
+1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
+
+1. In the Step 1 dropdown menu, choose **Windows (preview)**.
+
+1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This downloads the Defender executable and the onboarding file package.
+
+   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png":::
+
+   > [!NOTE] 
+   > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
+
+---
+
 ## Deploy Defender endpoint security on devices
 
 The Defender deployment tool can be used interactively or non-interactively.
 
 ### Interactive use
 
-The tool supports two interactive experiences that are suitable for deployment to one or a limited number of devices - a "double-click" quick single-machine onboarding experience without any changes to default behavior, and a manual command-line experience that provides more flexibility.
+The tool supports two interactive experiences that are suitable for deployment to one or a limited number of devices - a "double-click" quick single-machine onboarding experience without any changes to default behavior, and a manual command-line experience that provides more flexibility. Select the relevant tab for instructions on how to deploy the Defender enpoint security solution to your device. 
 
-To use the quick "double-click" default installation:
+To use the quick "double-click" default installation, select the relevant tab.
+
+### [Deploy using the preview experience](#tab/preview-experience)
 
 1. Double-click the executable to launch it.
 
@@ -143,6 +164,12 @@ To use the quick "double-click" default installation:
 1. Wait until installation is complete, and then select **OK**. No device reboot is required.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/process-complete.png" alt-text="Screenshot showing the message indicating that onboarding is complete.":::
+
+### [Deploy using the GA experience](#tab/ga-experience)
+
+Make sure the tool executable and the onboarding file are in the same directory. Then, double-click the executable to launch it. The tool will automatically detect the onboarding file and begin the onboarding process. Follow the instructions in the user interface to complete onboarding.
+
+---
 
 ### Non-interactive use
 
