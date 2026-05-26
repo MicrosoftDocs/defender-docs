@@ -2,6 +2,7 @@
 title: Use the data ingestion benefit in Microsoft Defender for Cloud
 description: Defender for Servers Plan 2 includes 500 MB of free daily data ingestion per node to Log Analytics. Learn how the benefit is calculated and applied.
 ms.topic: how-to
+#customer intent: As a security admin, I want to understand how the data ingestion benefit is applied so that I can estimate eligible Log Analytics coverage and avoid unexpected charges.
 ms.author: elkrieger
 author: ElazarK
 ms.date: 05/25/2026
@@ -27,14 +28,13 @@ When Defender for Servers Plan 2 is enabled on a Log Analytics workspace, the 50
 > - **Microsoft Sentinel classic meters**: Applies to Log Analytics ingestion only.
 > - **Microsoft Sentinel simplified (unified) meters**: The benefit applies to Sentinel ingestion.
 
-
 ## Prerequisites
 
 To use the 500 MB/day data-ingestion benefit, make sure:
 
 - Azure Monitor Agent (AMA) is installed on every machine in a subscription that has Defender for Servers Plan 2 enabled.
 
-- Defender for Servers Plan 2 is enabled on each Log Analytics workspace where these machines report.  
+- Defender for Servers Plan 2 is enabled on each Log Analytics workspace where these machines report.
 
 > [!NOTE]
 > If a machine reports to more than one workspace, Defender for Cloud applies the 500 MB/day benefit to only one workspace.
@@ -80,4 +80,3 @@ To get the 500 MB/day data ingestion benefit, enable Defender for Servers Plan 2
 ## Related content
 
 - [Use Data Collection Rules to customize how Defender for Servers data is ingested](data-collection-rule.md)
-

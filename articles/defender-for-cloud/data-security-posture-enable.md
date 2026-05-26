@@ -7,6 +7,7 @@ ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/25/2026
 ms.custom: template-how-to-pattern
+#customer intent: As a security professional, I want to enable data security posture management so that I can discover sensitive data and prioritize remediation across supported datastores.
 ---
 
 # Enable data security posture management for Azure datastores
