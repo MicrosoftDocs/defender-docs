@@ -1,17 +1,17 @@
 ---
-title: Create a ticket in Defender for Cloud 
+title: Create a ticket in Defender for Cloud
 description: Learn how to create a ticket in Defender for Cloud that connects and synchronizes with your ServiceNow account.
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 08/20/2024
+ms.date: 05/26/2026
 ai-usage: ai-assisted
-#customer intent: As a user, I want to learn how to Create a ticket in Defender for Cloud for my ServiceNow account.
+#customer intent: As a security administrator, I want to create ServiceNow tickets from Defender for Cloud recommendations so that owners can track and remediate issues efficiently.
 ---
 
 # Create a ticket in Defender for Cloud
 
-The integration between Defender for Cloud with ServiceNow's IT Service Management (ITSM) module, allows Defender for Cloud customers to create tickets in Defender for Cloud that connect to a ServiceNow account. ServiceNow tickets are then linked directly to recommendations in Defender for Cloud. When a ticket is connected to a recommendation, the two platforms can facilitate efficient incident management and resolution.
+The integration between Defender for Cloud and ServiceNow's IT Service Management (ITSM) module lets you create tickets in Defender for Cloud that connect to a ServiceNow account. ServiceNow tickets are linked directly to recommendations in Defender for Cloud to support efficient incident management and resolution.
 
 ## Prerequisites
 
@@ -30,13 +30,13 @@ Security admins can create and assign tickets directly from the Defender for Clo
 
 1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Select a recommendation you want to create a ServiceNow ticket for, and assign an owner to.
+1. Select the recommendation that you want to create a ServiceNow ticket for, and assign an owner.
 
 1. Select **View recommendation for all resources**.
 
-1. Expand the Affected resources section.
+1. Expand the **Affected resources** section.
 
-1. Select the resource from the unhealthy resources and select **Assign owner**.
+1. In **Unhealthy resources**, select the relevant resource, and then select **Assign owner**.
 
    :::image type="content" border="true" source="./media/create-ticket-servicenow/create-assignment.png" alt-text="Screenshot of how to create an assignment." lightbox="media/create-ticket-servicenow/create-assignment.png":::
 
@@ -68,12 +68,13 @@ Security admins can create and assign tickets directly from the Defender for Clo
 
 1. Select **Create**.
 
-After the assignment is created, the Ticket ID assigned to this affected resource will appear next to the resource in the recommendation. The Ticket ID represents the ticket created in the ServiceNow portal. You can select the Ticket ID to navigate to the newly created incident in the ServiceNow portal.
+After the assignment is created, the ticket ID appears next to the resource in the recommendation. This ID represents the ticket in ServiceNow. Select the ticket ID to open the newly created incident in the ServiceNow portal.
 
 > [!NOTE]
-> When the integration is deleted, all of the assignments will be deleted. Deletion can take up to 24 hrs.
+> When the integration is deleted, all assignments are deleted. Deletion can take up to 24 hours.
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Assign an owner to a recommendation or severity level](create-governance-rule-servicenow.md)
+

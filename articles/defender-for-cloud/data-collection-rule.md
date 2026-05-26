@@ -3,14 +3,14 @@ title: Use a Custom Data Collection Rule for Defender for Servers ingestion
 description: Learn how to use Data Collection Rules (DCRs) to customize how Defender for Servers security events are collected and ingested.
 ms.topic: how-to
 ms.author: elkrieger
-author: elazark
-ms.date: 12/15/2025
+author: ElazarK
+ms.date: 05/26/2026
 #customer intent: As a security administrator, I want to control which Windows Security events are ingested for Defender for Servers so that I can reduce ingestion volume and costs.
 ---
 
 # Use a custom Data Collection Rule (DCR) for Defender for Servers ingestion
 
-You can use a custom Data Collection Rule (DCR) to control which Windows Security events are sent to Log Analytics for Defender for Servers. This can help reduce ingestion volume by filtering out events you don’t need.
+You can use a custom Data Collection Rule (DCR) to control which Windows Security events are sent to Log Analytics for Defender for Servers. This approach helps reduce ingestion volume by filtering out events that you don't need.
 
 With a custom DCR, you can:
 
@@ -28,7 +28,7 @@ Before you create a custom DCR, make sure:
 
 ## Create a DCR
 
-1. Sign into the [Azure portal](https://portal.azure.com).
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to ▸ **Monitor** ▸ **Settings** ▸ **Data Collection Rules** ▸ **+ Create**.
 
@@ -55,7 +55,7 @@ Before you create a custom DCR, make sure:
 1. For **Data source type**, select **Windows Event Logs** and choose **Basic** or **Custom**:        
     - **Basic:**
         - Under **Security**, select **Audit success** and/or **Audit failure** to send Windows Security events to the `SecurityEvent` table. 
-        - If needed select **Application** or **System** event logs to collect additional events. These events are sent to the `Event` table and are billed as regular ingestion. They aren’t covered by the Defender for Servers ingestion benefit.
+        - If needed, select **Application** or **System** event logs to collect additional events. These events are sent to the `Event` table and billed as regular ingestion. They aren't covered by the Defender for Servers ingestion benefit.
     - **Custom**:
         - Enter an XPath query under **Use XPath queries to filter event logs and limit data collection**. 
           For example, `Security!*[System[(EventID=4624 or EventID=4625 or EventID=4688)]]`
@@ -125,4 +125,5 @@ For large environments, you can use Azure Policy to automatically create and ass
 ## Related content
 
 - [Use the data ingestion benefit in Microsoft Defender for Cloud](data-ingestion-benefit.md)
+
 

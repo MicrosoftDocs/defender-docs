@@ -3,15 +3,15 @@ title: Enable Microsoft Defender for SQL Servers on Machines
 description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on-premises, and in hybrid and multicloud environments with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
-author: Elazark
-ms.date: 09/21/2025
-#customer intent: As a security administrator, I want to enable Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
+author: ElazarK
+ms.date: 05/26/2026
+#customer intent: As a security administrator, I want to enable Defender for SQL Servers on Machines so that I can protect SQL instances across Azure, on-premises, and multicloud environments.
 ---
 
 # Enable Defender for SQL Servers on Machines
 
 > [!IMPORTANT]
-> This article applies to commercial clouds. If you're using Government clouds, see the [Enable Defender for SQL servers on Machines government](defender-for-sql-usage-gov.md) article.
+> This article applies to commercial clouds. If you're using government clouds, see [Enable Defender for SQL Servers on Machines in government clouds](defender-for-sql-usage-gov.md).
 
 The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans in Microsoft Defender for Cloud. Use Defender for SQL Servers on Machines to protect SQL virtual machines (VM) and Azure Arc SQL Server instances.
 
@@ -24,8 +24,8 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 - **SQL Server instance permissions**: SQL Server service accounts must be a member of the **sysadmin** fixed server role on each SQL Server instance, which is the default setting. Learn more about the [SQL Server service account requirement](/sql/sql-server/azure-arc/configure-least-privilege?view=sql-server-ver16). 
 
-- **Supported Resources**: 
-    - [SQL virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview?view=azuresql), and [Azure Arc SQL Server instances](/sql/sql-server/azure-arc/overview?view=sql-server-ver16) are supported.
+- **Supported resources**:
+    - [SQL virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview?view=azuresql) and [Azure Arc SQL Server instances](/sql/sql-server/azure-arc/overview?view=sql-server-ver16) are supported.
     - On-premises machines must be [onboarded to Arc and registered as Azure Arc SQL Server instances](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 **Communication**: Allow outbound HTTPS traffic on Transmission Control Protocol (TCP) port 443 using Transport Layer Security (TLS) to `*.<region>.arcdataservices.com` URL. Learn more about [URL requirements](/azure/azure-arc/servers/network-requirements#urls?tabs=azure-cloud).
@@ -115,7 +115,7 @@ To enable the plan on specific machines, you need to [disable the plan on the su
 ## Verify that your machines are protected
 
 > [!IMPORTANT]
->Don't skip this step, as it's important to verify your deployment is protected.
+> Don't skip this step. Verifying this deployment confirms your machines are protected.
 
 Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, you should [verify that all machines are protected](verify-machine-protection.md).
 
@@ -124,3 +124,4 @@ Depending on your environment, it can take a few hours to discover and protect S
 - [Verify that all machines are protected](verify-machine-protection.md)
 - [Troubleshoot Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md)
 - [Disable Defender for SQL Servers on Machines](disable-sql-on-machines.md)
+

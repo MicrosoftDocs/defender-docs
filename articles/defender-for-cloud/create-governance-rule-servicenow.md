@@ -1,17 +1,17 @@
 ---
 title: Create automatic tickets with governance rules
 description: Learn how to create a governance rule in Defender for Cloud that connects recommendations or severity levels to a specific owner.
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 10/13/2024
+ms.date: 05/26/2026
 ai-usage: ai-assisted
-#customer intent: As a user, I want to learn how to create automatic tickets using governance rules in Defender for Cloud that automatically assigns an owner to specific recommendation or a recommendation with a severity level in Defender for Cloud to my ServiceNow account.
+#customer intent: As a security administrator, I want to create ServiceNow tickets automatically from Defender for Cloud governance rules so that recommendation owners can start remediation faster.
 ---
 
 # Create automatic tickets with governance rules
 
-The integration of ServiceNow's IT Service Management (ITSM) module and Defender for Cloud allow you to create governance rules that automatically open tickets in ServiceNow for specific recommendations or severity levels. ServiceNow tickets can be created, viewed, and linked to recommendations directly from Defender for Cloud, enabling seamless collaboration between the two platforms and facilitating efficient incident management.
+The integration between ServiceNow's IT Service Management (ITSM) module and Defender for Cloud lets you create governance rules that automatically open tickets in ServiceNow for specific recommendations or severity levels. You can create, view, and link ServiceNow tickets directly from Defender for Cloud to improve collaboration and incident management.
 
 ## Prerequisites
 
@@ -38,11 +38,11 @@ You can create a rule to automatically assign an owner to a recommendation in De
 
 1. Enter a rule name and select a scope.
 
-1. Select **ServiceNow** In the Type field.
+1. In the **Type** field, select **ServiceNow**.
 
 1. Enter a priority.
 
-1. Select and integration instance.
+1. Select an integration instance.
 
 1. Select a ServiceNow ticket type.
 
@@ -66,3 +66,4 @@ You can create a rule to automatically assign an owner to a recommendation in De
 
 > [!div class="nextstepaction"]
 > [Common questions about cloud security posture management (CSPM)](faq-cspm.yml).
+
