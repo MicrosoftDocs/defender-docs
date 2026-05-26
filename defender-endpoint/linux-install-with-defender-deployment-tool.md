@@ -107,7 +107,7 @@ The deployment tool enforces the following set of prerequisites checks, which if
    | Downgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --downgrade --mdatp 101.24082.0004` |
    | Uninstall Defender | `sudo ./defender_deployment_tool.sh --remove` For more information, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md) |
    | Only onboard if Defender is already installed | `sudo ./defender_deployment_tool.sh --only-onboard` |
-   | <a name="ddt-offboard-switch-linux"></a>Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: Before using the --offboard option, you must first download the latest offboarding file from the Defender portal at System > Settings > Endpoints > Offboarding). For other methods of offboarding, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md).* |
+   | <a name="ddt-offboard-switch-linux"></a>Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: Before using the --offboard option, you must first download the latest offboarding script from the Defender portal at System > Settings > Endpoints > Offboarding). For other methods of offboarding, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md).* |
 
 ## Verify deployment status
 
