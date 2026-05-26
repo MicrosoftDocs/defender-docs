@@ -39,6 +39,7 @@ The following table lists the available unifying parsers:
 
 | Schema | Unifying parser | 
 | ------ | ------------------------- |
+| Agent Event | _Im_AgentEvent |
 | Alert Event | _Im_AlertEvent |
 | Asset Entity | _Im_AssetEntity |
 | Audit Event | _Im_AuditEvent |
@@ -70,8 +71,6 @@ To ensure efficiency, parsers maintain only normalized fields. Fields that aren'
 The [parsers list](normalization-parsers-list.md) article notes parsers that support the *pack* parameter. 
 
 ## Related content
-
-For more information, see:
 
 - [ASIM parsers overview](normalization-parsers-overview.md)
 - [Manage ASIM parsers](normalization-manage-parsers.md)

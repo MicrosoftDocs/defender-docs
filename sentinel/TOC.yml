@@ -220,7 +220,6 @@
           href: microsoft-365-defender-sentinel-integration.md
         - name: Integrate Microsoft Defender for Cloud
           href: ingest-defender-for-cloud-incidents.md
-
     - name: Integrate threat intelligence
       items:
         - name: Overview
@@ -514,6 +513,8 @@
               href: create-tasks-automation-rule.md
             - name: Export and import automation rules
               href: import-export-automation-rules.md
+            - name: Automated integrations
+              href: automation/integrations.md
         - name: Playbooks
           items:
             - name: Overview
@@ -1032,6 +1033,8 @@
               href: normalization-entity-application.md
         - name: ASIM schemas
           items:
+            - name: ASIM agent event schema
+              href: normalization-schema-agent.md
             - name: ASIM alert event schema
               href: normalization-schema-alert.md
             - name: ASIM audit event schema
@@ -1122,9 +1125,9 @@
           href: upload-indicators-api.md
 - name: Responsible AI
   items:
-    - name: Responsible AI FAQ for UEBA behaviors layer
-      href: entity-behaviors-layer-rai-faqs.md
-    - name: Responsible AI FAQ for Microsoft Sentinel MCP
+    - name: Application card for Microsoft Sentinel SIEM
+      href: sentinel-siem-application-card.md
+    - name: Application card for Microsoft Sentinel MCP
       href: datalake/sentinel-mcp-responsible-ai-faq.md
 - name: Microsoft Sentinel blog
   href: https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/bg-p/MicrosoftSentinelBlog
