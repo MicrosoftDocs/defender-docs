@@ -63,7 +63,7 @@ Sign into your server and run one of the following commands:
 
     Where:
     
-    - `https://contososensorapi.atp.azure.com` is an example of your sensor URL, where *contososensor* is the name of your workspace.
+    - `https://contososensorapi.atp.azure.com` is an example of your sensor URL, where *contoso* is the name of your workspace.
     - `https://myproxy.contoso.com:8080` is an example of your proxy URL
 
 For more information, see the [MDI PowerShell documentation](/powershell/module/defenderforidentity/test-mdisensorapiconnection).
@@ -72,4 +72,4 @@ For more information, see the [MDI PowerShell documentation](/powershell/module/
 
 
 > [!div class="step-by-step"]
-> [Download the Microsoft Defender for Identity sensor »](download-sensor.md)
+> [Download and install the Microsoft Defender for Identity sensor](install-sensor.md)

@@ -3,9 +3,9 @@ title: Microsoft Defender for Endpoint tech community
 description: Microsoft Defender XDR tech community engagement.
 ms.date: 07/21/2023
 ms.reviewer: 
-manager: dansimp
-ms.author: dansimp
-author: dansimp
+manager: orspodek
+ms.author: guywild
+author: guywi-ms
 ms.service: microsoft-365-security
 ms.topic: include
 ---

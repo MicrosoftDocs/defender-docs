@@ -1,14 +1,11 @@
-﻿---
+---
 title: Onboard non-persistent virtual desktop infrastructure (VDI) devices
 description: Deploy the configuration package on virtual desktop infrastructure (VDI) device so that they're onboarded to Microsoft Defender for Endpoint service.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.reviewer: pahuijbr; yonghree
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -29,7 +26,7 @@ Virtual desktop infrastructure (VDI) is an IT infrastructure concept that lets e
 Like any other system in an IT environment, VDI devices should have an endpoint detection and response (EDR) and antivirus solution to protect against advanced threats and attacks.
 
 > [!NOTE]
-> **Persistent VDI's** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information, see [Onboarding Windows client](onboard-client.md).
+> **Persistent VDIs** - Onboarding a persistent VDI machine into Microsoft Defender for Endpoint is handled the same way you would onboard a physical machine, such as a desktop or laptop. Group policy, Microsoft Configuration Manager, and other methods can be used to onboard a persistent machine. In the Microsoft Defender portal, (https://security.microsoft.com) under onboarding, select your preferred onboarding method, and follow the instructions for that type. For more information, see [Onboarding Windows client](onboard-client.md).
 
 [!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
@@ -145,11 +142,21 @@ The following registry is relevant only when the aim is to achieve a single entr
 
 With the ability to easily deploy updates to VMs running in VDIs, we've shortened this guide to focus on how you can get updates on your machines quickly and easily. You no longer need to create and seal golden images on a periodic basis, as updates are expanded into their component bits on the host server and then downloaded directly to the VM when it's turned on.
 
-If you have onboarded the primary image of your VDI environment (SENSE service is running), then you must offboard and clear some data before putting the image back into production.
+If you have onboarded the primary image of your VDI environment (SENSE service is running), then you must offboard and clear local Microsoft Defender for Endpoint registration data before putting the image back into production.
+
+> [!NOTE]
+> To [update virtual desktop infrastructure (VDI) images](#updating-virtual-desktop-infrastructure-vdi-images-persistent-or-non-persistent), you need administrator permissions on the device, and the the [PsExec](/sysinternals/downloads/psexec) tool.
+
+To update VDI images:
 
 1. [Offboard the machine](offboard-machines.md).
+1. Ensure that the PsExec tool is available in the command‑prompt path.  
 
-1. Ensure the sensor is stopped by running the following command in a CMD window:
+    The PsExec tool is required to start a command shell under the SYSTEM account, which is necessary to access and modify the registry paths referenced below.
+
+1. Open an elevated command prompt.  
+1. Select **Start**, type **cmd**, right‑click **Command Prompt**, and select **Run as administrator**.
+1. To ensure that the sensor isn't running, type the following command in the command prompt window:
 
    ```console
 
@@ -157,17 +164,25 @@ If you have onboarded the primary image of your VDI environment (SENSE service i
 
    ```
 
-1. Run the following commands in a CMD window::
+1. To reset local Defender for Endpoint registration data, start a **SYSTEM‑level** command shell:
 
    ```console
 
+   PsExec.exe -s cmd.exe
    del "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Cyber\*.*" /f /s /q
    REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v senseGuid /f
+   REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v senseId /f
+   REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v 2567E824-34AB-4A74-90E9-BC0F8BDFAA4A /f
    REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v 7DC0B629-D7F6-4DB3-9BF7-64D5AAF50F1A /f
+   REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v C9D38BBB-E9DD-4B27-8E6F-7DE97E68DAB9 /f
    REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection\48A68F11-7A16-4180-B32C-7F974C7BD783" /f
    exit
 
    ```
+
+> [!NOTE]
+> Some of the registry deletion commands may return a "The system was unable to find the specified registry key or value" message.  
+> This message is triggered when the corresponding registry path doesn't exist. This is expected behavior and can be safely ignored.
 
 ### Are you using a third party for VDIs?
 
@@ -183,7 +198,7 @@ After onboarding devices to the service, it's important to take advantage of the
 
 ### Next generation protection configuration
 
-The configuration settings in this link are recommended: [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus).
+The configuration settings in this link are recommended: [Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](deployment-vdi-microsoft-defender-antivirus.md).
 
 ## Related articles
 

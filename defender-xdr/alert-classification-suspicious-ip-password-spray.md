@@ -2,21 +2,14 @@
 title: Alert classification for suspicious IP address related to password spraying activity
 description: Investigate and review alerts related to suspicious IP address related to password spraying activity and take recommended actions to protect your network.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - met150
 ms.date: 04/18/2025
 appliesto:
   - Microsoft Defender XDR

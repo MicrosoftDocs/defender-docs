@@ -1,18 +1,9 @@
 ---
 title: Zero-hour auto purge in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MED150
-  - MBS150
-  - MET150
 ms.assetid: 96deb75f-64e8-4c10-b570-84c99c674e15
 ms.collection:
   - m365-security
@@ -54,7 +45,7 @@ Watch this short video to learn how ZAP in Microsoft Defender for Office 365 aut
 For _read or unread messages_ found to contain malware after delivery, ZAP quarantines the message that contains the malware attachment. By default, only admins can view and manage quarantined malware messages. But, admins can create and use _quarantine policies_ to define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 > [!NOTE]
-> Users can't release their own messages quarantined as malware, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+> Recipients can't release messages quarantined as malware, regardless of how the quarantine policy is configured. If the quarantine policy allows recipients to release messages, they can only _request_ the release of messages quarantined as malware.
 
 ZAP for malware is enabled by default in anti-malware policies. For more information, see [Configure anti-malware policies](anti-malware-policies-configure.md).
 
@@ -80,7 +71,7 @@ For more information about configuring spam filtering verdicts, see [Configure a
 For _read or unread messages_ that are identified as _high confidence phishing_ after delivery, ZAP quarantines the message. By default, only admins can view and manage quarantined high confidence phishing messages. But, admins can create and use _quarantine policies_ to define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 > [!NOTE]
-> Users can't release their own messages quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+> Recipients can't release messages quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the quarantine policy allows recipients to release messages, they can only _request_ the release of messages quarantined as high confidence phishing.
 
 ZAP for high confidence phishing is enabled by default. For more information, see [Secure by Default in Office 365](secure-by-default.md).
 
@@ -208,7 +199,7 @@ For malware and high confidence phishing verdicts, there are few scenarios where
 - [Non-Microsoft phishing simulation URLs specified in the Advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-non-microsoft-phishing-simulations-in-the-advanced-delivery-policy) (high confidence phishing).
 - [SecOps mailboxes specified in the Advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy) (malware and high confidence phishing).
 - The MX record for your Microsoft 365 domain points to another service or device, and you use a mail flow rule to [bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl) (high confidence phishing).
-- [Admin submissions of false positives to Microsoft](submissions-admin.md#report-good-email-to-microsoft). By default, allow entries for domains and email addresses, files, and URLs exist for 30 days (malware and high confidence phishing).
+- [Admin submissions of false positives to Microsoft](submissions-admin.md#report-good-email-to-microsoft). By default, allow entries for domains and email addresses, files, and URLs exist for 45 days after the last used date (malware and high confidence phishing).
 
 It's important for you to carefully consider the implications of bypassing filtering, as it could compromise the security posture of your organization.
 

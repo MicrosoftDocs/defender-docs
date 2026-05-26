@@ -1,19 +1,16 @@
-﻿---
+---
 title: Use network protection to help prevent Linux connections to bad sites
 description: Protect your network by preventing Linux users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.subservice: linux
 ms.topic: overview
 ms.collection: 
 - m365-security
 - tier2
 - mde-linux
-search.appverid: met150
 ms.date: 03/31/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -22,22 +19,18 @@ appliesto:
 ---
 # Network protection for Linux (preview)
 
-
-
-> [!IMPORTANT]
-> Some information relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## Overview
 
-Microsoft is bringing Network Protection functionality to Linux.
-
-Network protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that may host:
+Network protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that might host:
 
 - phishing scams
 - exploits
 - other malicious content on the Internet
 
 Network protection expands the scope of Microsoft Defender [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP(s) traffic that attempts to connect to low-reputation sources. The blocks on outbound HTTP(s) traffic are based on the domain or hostname.
+
+> [!IMPORTANT]
+> The network protection feature requires Microsoft Defender for Endpoint Linux client version: 101.78.13 or later, **and is supported only on the insiders slow or insiders fast channels**. It isn't supported on the production channel.
 
 ## Web content filtering for Linux
 
@@ -49,13 +42,13 @@ You can use web content filtering for testing with network protection for Linux.
 - Currently, the block/warn end-user experience isn't available.
 
 > [!NOTE]
-> Most server installations of Linux lack a graphical user interface and web browser. To evaluate the effectiveness of web threat protection with Linux, we recommend testing on a non-production server with a graphical user interface and web browser.
+> Most server installations of Linux lack a graphical user interface and web browser. To evaluate the effectiveness of web threat protection with Linux, we recommend testing on a nonproduction server with a graphical user interface and web browser.
 
 ### Prerequisites
 
 - Licensing: You must have a paid or trial subscription of Defender for Endpoint tenant. 
 - Prerequisites: [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
-- **Microsoft Defender for Endpoint Linux client version**: 101.78.13 or later on Insiders-Slow or insiders-Fast channel.
+- Microsoft Defender for Endpoint Linux client version 101.78.13 or later **on the insiders slow or insiders fast channels**.
     
 > [!IMPORTANT]
 > In order to evaluate network protection for Linux, send an email to `xplatpreviewsupport@microsoft.com` with your Org ID. We'll enable the feature on your tenant per request basis. Network Protection feature is available in preview only for AMD64 based Linux servers. 
@@ -147,7 +140,7 @@ Also, make sure that in **Microsoft Defender** \> **Settings** \> **Endpoints** 
 
    > [!NOTE]
    > If you're removing a policy or changing device groups at the same time, this might cause a delay in policy deployment.
-   > Pro tip: You can deploy a policy without selecting any category on a device group. This action will create an audit only policy, to help you understand user behavior before creating a block policy.
+   > Pro tip: You can deploy a policy without selecting any category on a device group. This action creates an audit only policy, to help you understand user behavior before creating a block policy.
    >
    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
@@ -208,6 +201,12 @@ Within 10-15 minutes, these domains will be listed in Microsoft Defender XDR und
 
 :::image type="content" source="media/network-protection-macos-mcas-cloud-app-security.png" alt-text="Shows network protection mcas cloud app security." lightbox="media/network-protection-macos-mcas-cloud-app-security.png":::
 
+## Troubleshooting
+
+If network protection doesn't start, or shows "unsupported release ring", it means the device is using the production channel, which isn't supported for network protection. Network protection on Linux requires that the device be on the insider slow or insider fast channel.
+
+To resolve this issue, move the device to one of the insider channels. Alternatively, disable network protection on devices that must remain on the production channel.
+
 ## See also
 
 - [Protect your network](network-protection.md)
@@ -216,6 +215,3 @@ Within 10-15 minutes, these domains will be listed in Microsoft Defender XDR und
 - [Create indicators](indicators-overview.md)
 - [Web content filtering](web-content-filtering.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
-
-
-

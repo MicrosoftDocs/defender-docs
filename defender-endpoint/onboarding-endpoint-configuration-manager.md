@@ -1,12 +1,10 @@
-﻿---
+---
 title: Onboarding using Microsoft Configuration Manager
 description: Learn how to onboard to Microsoft Defender for Endpoint using Microsoft Configuration Manager
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -16,15 +14,13 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
-# Onboarding using Microsoft Configuration Manager
 
+# Onboarding using Microsoft Configuration Manager
 
 This article acts as an example onboarding method.
 
@@ -212,7 +208,7 @@ Microsoft Defender Antivirus is a built-in anti-malware solution that provides n
     [Quick scan versus full scan and custom scan](/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus#quick-scan-versus-full-scan-and-custom-scan)
 
     For more information, see [Windows Security configuration framework](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-configuration-framework).
-  
+
     :::image type="content" source="media/cd7daeb392ad5a36f2d3a15d650f1e96.png" alt-text="The next-generation protection pane2" lightbox="media/cd7daeb392ad5a36f2d3a15d650f1e96.png":::
 
     :::image type="content" source="media/36c7c2ed737f2f4b54918a4f20791d4b.png" alt-text="The next-generation protection pane3" lightbox="media/36c7c2ed737f2f4b54918a4f20791d4b.png":::
@@ -241,7 +237,7 @@ After completing this task, you now have successfully configured Microsoft Defen
 
 ### Attack surface reduction
 
-The attack surface reduction pillar of Defender for Endpoint includes the feature set that is available under Exploit Guard. Attack surface reduction rules, Controlled Folder Access, Network Protection, and Exploit Protection.
+The attack surface reduction pillar of Defender for Endpoint includes the feature set that is available under Exploit Guard. Attack surface reduction (ASR) rules, Controlled Folder Access, Network Protection, and Exploit Protection.
 
 All these features provide a test mode and a block mode. In test mode, there's no end-user impact. All it does is collect other telemetry and make it available in the Microsoft Defender portal. The goal with a deployment is to step-by-step move security controls into block mode.
 
@@ -293,7 +289,7 @@ Below are more steps to verify whether attack surface reduction rules are correc
 
    :::image type="content" source="media/24bfb16ed561cbb468bd8ce51130ca9d.png" alt-text="The attack surface reduction rules reports2" lightbox="media/24bfb16ed561cbb468bd8ce51130ca9d.png":::
 
-See [Optimize attack surface reduction rule deployment and detections](configure-machines-asr.md) for more details.
+See [Monitor ASR rule activity](attack-surface-reduction-rules-monitor.md) for more details.
 
 #### Set Network Protection rules in test mode
 

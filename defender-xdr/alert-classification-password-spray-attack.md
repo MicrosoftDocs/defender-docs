@@ -2,21 +2,14 @@
 title: Alert classification for password spray attacks
 description: Alert classification guide for password spray attacks coming to review the alerts and take recommended actions to remediate the attack and protect your network.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - met150
 ms.date: 04/18/2025
 appliesto:
   - Microsoft Defender XDR

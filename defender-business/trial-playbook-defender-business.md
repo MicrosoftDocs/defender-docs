@@ -1,11 +1,7 @@
 ---
 title: "Microsoft Defender for Business trial user guide"
-f1.keywords:
-- NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: how-to
 ms.collection:
 - m365-security
@@ -14,9 +10,6 @@ ms.collection:
 ms.localizationpriority: high
 ms.date: 09/11/2025
 ms.service: defender-business
-search.appverid:
-- MOE150
-- MET150
 description: "Make the most of your Defender for Business trial with this guide. Get set up quickly and get started using your new security capabilities."
 ms.custom: trial-playbook
 ---

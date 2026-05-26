@@ -1,11 +1,7 @@
 ---
 title: Configure anti-phishing policies in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.assetid:
@@ -15,8 +11,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to create, modify, and delete the advanced anti-phishing policies that are available in organizations with Microsoft Defender for Office 365.
 ms.service: defender-office-365
-search.appverid: met150
-ms.date: 04/08/2025
+ms.date: 05/22/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -78,7 +73,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
    When you're finished on the **Policy name** page, select **Next**.
 
 4. On the **Users, groups, and domains** page, identify the internal recipients that the policy applies to (recipient conditions):
-   - **Users**: The specified mailboxes, mail users, or mail contacts.
+   - **Users**: The specified mailboxes, or mail users.
    - **Groups**:
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
      - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).

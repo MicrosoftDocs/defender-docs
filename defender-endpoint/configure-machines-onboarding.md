@@ -1,77 +1,59 @@
-﻿---
+---
 title: Get devices onboarded to Microsoft Defender for Endpoint
 description: Track onboarding of Intune-managed devices to Microsoft Defender for Endpoint and increase onboarding rate.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
-ms.date: 03/24/2025
+ms.date: 03/10/2026
+ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Get devices onboarded to Microsoft Defender for Endpoint
 
+Each onboarded device adds an additional endpoint detection and response (EDR) sensor and increases visibility over breach activity in your network. Onboarding also ensures that a device can be checked for vulnerable components, for security configuration issues, and can receive critical remediation actions during attacks.
 
-Each onboarded device adds an additional endpoint detection and response (EDR) sensor and increases visibility over breach activity in your network. Onboarding also ensures that a device can be checked for vulnerable components as well security configuration issues and can receive critical remediation actions during attacks.
+Defender for Endpoint supports [multiple onboarding methods](deployment-strategy.md#step-2-select-your-deployment-method). For cloud-native and Intune-managed environments, [Microsoft Intune is the recommended approach](deployment-strategy.md#step-1-identify-your-architecture).
 
-Before you can track and manage onboarding of devices:
+Before you begin, review the following prerequisites in the Intune documentation:
 
-- [Enroll your devices to Intune management](configure-machines.md#enroll-devices-to-intune-management)
-- [Ensure you have the necessary permissions](configure-machines.md#obtain-required-permissions)
+- [Review licensing and platform requirements](/intune/intune-service/protect/microsoft-defender-with-intune#prerequisites) for the Intune-Defender integration, including supported platforms and enrollment requirements
+- [Ensure you have the necessary permissions](/intune/intune-service/protect/microsoft-defender-integrate#connect-microsoft-defender-for-endpoint-to-intune). The required roles are Endpoint Security Manager in Intune and Security Administrator in Microsoft Entra ID.
 
-Watch this video to learn how to easily onboard clients with Microsoft Defender for Endpoint.
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60]
+<!--- Placeholder > Removing this outdated video. Seeking possible replacement.
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60] --->
 
 ## Discover and track unprotected devices
 
-The **Onboarding** card provides a high-level overview of your onboarding rate by comparing the number of Windows devices that have actually onboarded to Defender for Endpoint against the total number of Intune-managed Windows devices.
+To see how many of your Intune-managed devices are onboarded, open the [Microsoft Defender portal](https://security.microsoft.com) and go to **Endpoints** \> **Configuration management** \> **Dashboard**. Or, to go directly to the **Device configuration management** page, use <https://security.microsoft.com/configuration_management>.
 
-:::image type="content" source="media/secconmgmt-onboarding-card.png" alt-text="The Device configuration management Onboarding card" lightbox="media/secconmgmt-onboarding-card.png":::
+On the **Device configuration management** page, the **Onboarded devices** card gives you a high-level view of your onboarding rate, comparing the number of Windows devices that are onboarded to Defender for Endpoint against the total number of Intune-managed Windows devices.
+
+:::image type="content" source="media/secconmgmt-onboarding-card.png" alt-text="Screenshot of the Onboarded devices card from the Device configuration management page in the Microsoft Defender portal." lightbox="media/secconmgmt-onboarding-card.png":::
 
 *Card showing onboarded devices compared to the total number of Intune-managed Windows devices*
 
 > [!NOTE]
 > If you used Configuration Manager, the onboarding script, or other onboarding methods that don't use Intune profiles, you might encounter data discrepancies. To resolve these discrepancies, create a corresponding Intune configuration profile for Defender for Endpoint onboarding and assign that profile to your devices.
 
-## Onboard more devices with Intune profiles
+<a name="onboard-more-devices-with-intune-profiles"></a>
 
-Defender for Endpoint provides several convenient options for [onboarding Windows devices](onboarding.md). For Intune-managed devices, however, you can leverage Intune profiles to conveniently deploy the Defender for Endpoint sensor to select devices, effectively onboarding these devices to the service.
+## Onboard more devices with Intune policies
 
-From the **Onboarding** card, select **Onboard more devices** to create and assign a profile on Intune. The link takes you to the device compliance page on Intune, which provides a similar overview of your onboarding state.
+Selecting **Onboard more devices** on the card opens the **Microsoft Defender for Endpoint** connector page in the [Microsoft Intune admin center](https://intune.microsoft.com) (**Endpoint security** \> **Microsoft Defender for Endpoint**). This page controls the service-to-service connection between Intune and Defender for Endpoint, and determines which device platforms participate in the integration. Deploying policies to onboard devices is a separate step done elsewhere in Intune.
 
-:::image type="content" source="media/secconmgmt-onboarding-1deviceconfprofile.png" alt-text="The Microsoft Defender for Endpoint device compliance page on Intune device management" lightbox="media/secconmgmt-onboarding-1deviceconfprofile.png":::
+To configure this connection and deploy onboarding policies, see <a href="/intune/intune-service/protect/microsoft-defender-integrate" target="_blank">Configure Microsoft Defender for Endpoint with Intune and onboard devices</a> (opens in a new tab in the Intune documentation).
 
-*Microsoft Defender for Endpoint device compliance page on Intune device management*
-
-> [!TIP]
-> Alternatively, you can navigate to the Defender for Endpoint onboarding compliance page in the [Microsoft Azure portal](https://portal.azure.com/) from **All services > Intune > Device compliance > Microsoft Defender ATP**.
-
-> [!NOTE]
-> If you want to view the most up-to-date device data, click on **List of devices without ATP sensor**.
-
-From the device compliance page, create a configuration profile specifically for the deployment of the Defender for Endpoint sensor and assign that profile to the devices you want to onboard. To do this, you can either:
-
-- Select **Create a device configuration profile to configure ATP sensor** to start with a predefined device configuration profile.
-- Create the device configuration profile from scratch.
-
-For more information, [read about using Intune device configuration profiles to onboard devices to Defender for Endpoint](/mem/intune/protect/advanced-threat-protection#onboard-devices).
-
-
-
-## Related topics
+## Related articles
 
 - [Ensure your devices are configured properly](configure-machines.md)
 - [Increase compliance to the Defender for Endpoint security baseline](configure-machines-security-baseline.md)
-- [Optimize ASR rule deployment and detections](configure-machines-asr.md)
-
-
+- [Monitor ASR rule activity](attack-surface-reduction-rules-monitor.md)

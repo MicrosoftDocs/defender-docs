@@ -1,16 +1,9 @@
 ---
 title: Anti-spam protection
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: 6a601501-a6a8-4559-b2e7-56b59c96a586
 ms.collection: 
   - m365-security
@@ -19,7 +12,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the anti-spam settings and filters that help prevent spam in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 07/03/2025
+ms.date: 05/22/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -70,7 +63,7 @@ To configure the default anti-spam policy, and to create, modify, and remove cus
 
 ## Anti-spam policies
 
-Anti-spam policies control the configurable settings for spam filtering. The important settings in anti-spam policies are described in the following subsections.
+Anti-spam policies control the configurable settings for spam filtering. The important settings in anti-spam policies are described in the following subsections. For troubleshooting information, see [Troubleshoot common anti-spam policy issues](anti-spam-policies-troubleshooting.md).
 
 > [!TIP]
 > The anti-spam policy settings in the default policy and in the Standard and Strict preset security policies are described in [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
@@ -79,7 +72,7 @@ Anti-spam policies control the configurable settings for spam filtering. The imp
 
 Recipient filters use conditions and exceptions to identify the internal recipients that the policy applies to. At least one condition is required in custom policies. Conditions and exceptions aren't available in the default policy (the default policy applies to all recipients). You can use the following recipient filters for conditions and exceptions:
 
-- **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
+- **Users**: One or more mailboxes, or mail users in the organization.
 - **Groups**:
   - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
   - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
@@ -150,7 +143,9 @@ These settings aren't configured in the default anti-spam policy by default, or 
 
   ⁴ If the spam filtering verdict quarantines messages by default (**Quarantine message** is already selected when you get to the page), the default quarantine policy name is shown in the **Select quarantine policy** box. If you _change_ the action of a spam filtering verdict to **Quarantine message**, the **Select quarantine policy** box is blank by default. A blank value means the default quarantine policy for that verdict is used. When you later view or edit the anti-spam policy settings, the quarantine policy name is shown. For more information about the quarantine policies that are used by default for spam filter verdicts, see [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
-  ⁵ Users can't release their own messages that were quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+  ⁵ Recipients can't release messages quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the quarantine policy allows recipients to release messages, they can only _request_ the release of messages quarantined as high confidence phishing.
+
+- **Bulk moves enabled** (currently in Preview): Slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On** to tag all bulk mail as **Bulk** in supported versions of Outlook, and to deliver bulk mail below the **Bulk email threshold** value to the **Promotions** folder in the mailbox. For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](anti-spam-bulk-complaint-level-bcl-about.md#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
 
 - **Intra-Organizational messages to take action on**: Controls whether spam filtering and the corresponding verdict actions are applied to internal messages (messages sent between users within the organization). The specified action for the spam filter verdict is taken on messages sent between internal users. The available values are:
   - **Default**: The default value. This value is the same as selecting **High confidence phishing messages**.

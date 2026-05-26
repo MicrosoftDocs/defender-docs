@@ -1,11 +1,7 @@
 ---
 title: Overview of critical asset management in Microsoft Security Exposure Management
 description: Learn about critical asset management in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 07/30/2025
 ---
 

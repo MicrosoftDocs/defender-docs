@@ -1,22 +1,16 @@
 ---
 title: Configure spam filter policies
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 316544cb-db1d-4c25-a5b9-c73bbcf53047
 ms.collection:
   - m365-security
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete anti-spam policies in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 07/02/2025
+ms.date: 05/22/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -80,7 +74,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in [Exc
    When you're finished on the **Name your policy** page, select **Next**.
 
 4. On the **Users, groups, and domains** page, identify the internal recipients that the policy applies to (recipient conditions):
-   - **Users**: The specified mailboxes, mail users, mail contacts, or mail enabled public folders.
+   - **Users**: The specified mailboxes, mail users, or mail enabled public folders.
    - **Groups**:
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
      - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
@@ -145,7 +139,9 @@ You can configure anti-spam policies in the Microsoft Defender portal or in [Exc
      >
      > For **High confidence phishing**, the **Move message to Junk Email folder** action is effectively deprecated. Although you might be able to select the **Move message to Junk Email folder** action, high confidence phishing messages are always quarantined (equivalent to selecting **Quarantine message**).
      >
-     > Users can't release their own messages that were quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the policy is configured for users to release these quarantined messages, users are instead allowed to _request_ the release of these quarantined messages.
+     > Recipients can't release messages quarantined as high confidence phishing, regardless of how the quarantine policy is configured. If the quarantine policy allows recipients to release messages, they can only _request_ the release of messages quarantined as high confidence phishing.
+
+   - **Bulk moves enabled** (currently in Preview): Slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On** to tag all bulk mail as **Bulk** in supported versions of Outlook, and to deliver bulk mail below the **Bulk email threshold** value to the **Promotions** folder in the mailbox. For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](anti-spam-bulk-complaint-level-bcl-about.md#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
 
    - **Intra-Organizational messages to take action on**: Controls whether spam filtering and the corresponding verdict actions are applied to internal messages (messages sent between users within the organization). The available values are:
      - **Default**: The default value. This value is the same as selecting **High confidence phishing messages**.
@@ -590,6 +586,10 @@ Remove-HostedContentFilterRule -Identity "Marketing Department"
 ```
 
 For detailed syntax and parameter information, see [Remove-HostedContentFilterRule](/powershell/module/exchangepowershell/remove-hostedcontentfilterrule).
+
+## Troubleshoot anti-spam policy issues
+
+If you encounter issues with anti-spam policy configuration, such as policy precedence conflicts, unexpected SCL overrides, or false positives caused by ASF settings, see [Troubleshoot common anti-spam policy issues](anti-spam-policies-troubleshooting.md).
 
 ## How do you know these procedures worked?
 

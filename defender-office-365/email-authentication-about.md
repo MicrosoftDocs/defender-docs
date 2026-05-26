@@ -1,14 +1,8 @@
 ---
 title: Email authentication
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
-search.appverid:
-  - MET150
 ms.assetid:
 ms.collection:
   - m365-security
@@ -17,7 +11,7 @@ ms.custom: TopSMBIssues
 ms.localizationpriority: high
 description: Admins can learn how email authentication (SPF, DKIM, DMARC) works and how Microsoft 365 uses traditional email authentication and composite email authentication to allow and block spoofed messages.
 ms.service: defender-office-365
-ms.date: 07/07/2025
+ms.date: 05/20/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -46,6 +40,8 @@ To configure email authentication for mail **sent from** Microsoft 365 organizat
 - [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md)
 
 To prevent email authentication failures due to services that modify **inbound** mail sent to your Microsoft 365 organization, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
+
+To diagnose and fix email authentication failures, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).
 
 The rest of this article explains:
 

@@ -1,16 +1,11 @@
 ---
 title: Build queries using guided mode in Microsoft Defender advanced hunting
 description: Learn how to build queries in guided mode by combining different available filters and conditions.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2

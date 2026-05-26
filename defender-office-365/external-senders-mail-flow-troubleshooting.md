@@ -1,15 +1,9 @@
 ---
 title: Troubleshooting mail sent to Microsoft 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: troubleshooting
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: f4caa4e1-e414-4b21-8822-31c08064c059
 ms.collection: 
   - m365-security

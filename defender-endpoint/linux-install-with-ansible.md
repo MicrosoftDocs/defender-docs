@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deploy Microsoft Defender for Endpoint on Linux with Ansible
 ms.reviewer: gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Ansible.
@@ -6,16 +6,13 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
-ms.date: 08/11/2025
+ms.date: 05/21/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -79,24 +76,7 @@ Download the onboarding package from Microsoft Defender portal.
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
-
-1. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
-
-1. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
-
-   :::image type="content" source="media/portal-onboarding-linux-2.png" alt-text="The Download onboarding package option":::
-
-1. From a command prompt, verify that you have the file. Extract the contents of the archive:
-
-   ```bash
-   unzip WindowsDefenderATPOnboardingPackage.zip
-   ```
-
-   ```console
-   Archive:  WindowsDefenderATPOnboardingPackage.zip
-   inflating: mdatp_onboard.json
-   ```
+[!INCLUDE [linux-get-deployment-package-third-party-tools](includes/linux-get-deployment-package-third-party-tools.md)]
 
 ## Deploy Defender for Endpoint using mde_installer.sh with Ansible
 
@@ -218,7 +198,7 @@ ansible-playbook -i  /etc/ansible/hosts /etc/ansible/playbooks/install_mdatp.yml
 
 ### How to uninstall Microsoft Defender for Endpoint on Linux servers
 
-First, create an uninstallation YAML file (for example: /etc/ansible/playbooks/uninstall_mdatp.yml) which uses `mde_installer.sh`. You can also download the file directly from [GitHub](/defender-endpoint/linux-support-events)
+First, create an uninstallation YAML file (for example: /etc/ansible/playbooks/uninstall_mdatp.yml) which uses `mde_installer.sh`. You can also download the file directly from [GitHub](linux-support-events.md)
 
 ```bash
 - name: Uninstall MDE
@@ -442,20 +422,20 @@ If you experience any installation issues, for self-troubleshooting, follow thes
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-1. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](linux-support-install.md).
 
-1. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If health of the device is `false`, see [Defender for Endpoint agent health issues](health-status.md).
 
-1. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](linux-support-perf.md).
 
-1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](linux-support-connectivity.md).
 
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](overview-client-analyzer.md).
 
 ## How to configure policies for Microsoft Defender on Linux
 
-- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
-- [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
+- [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
+- [Set preferences for Defender for Endpoint on Linux](linux-preferences.md) describes settings you can configure.
  
 ## Operating system upgrades
 
@@ -469,7 +449,7 @@ When upgrading your operating system to a new major version, you must first unin
    - [Add and remove APT repositories](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_repository_module.html)
    - [Manage apt-packages](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html)
 
-- [Linux support: Missing event issues](/defender-endpoint/linux-support-events)
+- [Linux support: Missing event issues](linux-support-events.md)
 
 - [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 

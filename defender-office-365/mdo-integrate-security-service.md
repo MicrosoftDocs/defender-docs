@@ -1,22 +1,15 @@
 ---
 title: Integrate non-Microsoft security services with Microsoft 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.collection: 
   - tier1
 ms.custom:
 description: Learn about the considerations for integrating non-Microsoft security services with the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 07/07/2025
+ms.date: 02/06/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -96,3 +89,6 @@ Defender for Office 365 has [user reported settings](submissions-user-reported-m
 Knowing that non-Microsoft security services might include their own tools and processes for reporting false positives and false negatives (including user education/awareness efforts), Defender for Office 365 supports submissions from [non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). This support helps streamline reporting [false positives and false negatives to Microsoft](submissions-admin.md), and empowers your SecOps team to take advantage of Microsoft Defender XDR [incident management](/defender-xdr/incidents-overview) and [automated investigations and response (AIR)](air-about.md).
 
 For more information, see [Options for non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools).
+
+> [!TIP]
+> In [attack simulation training in Defender for Office 365 Plan 2](attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.

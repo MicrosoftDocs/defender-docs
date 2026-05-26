@@ -1,11 +1,8 @@
 ---
 title: Overview of Microsoft Defender for Endpoint Plan 1
 description: Get an overview of Defender for Endpoint Plan 1. Learn about the features and capabilities included in this endpoint protection subscription.
-search.appverid: MET150 
 author: paulinbar
 ms.author: painbar
-manager: bagol 
-audience: ITPro
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -14,7 +11,6 @@ ms.date: 05/02/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
 ms.reviewer: shlomiakirav
-f1.keywords: NOCSH
 ms.collection: 
 - m365-security
 - tier1
@@ -40,7 +36,7 @@ Use this guide to:
 - [Get started using the Microsoft Defender portal, where you can view incidents and alerts, manage devices, and use reports about detected threats](mde-plan1-getting-started.md)
 - [Get an overview of maintenance and operations](preferences-setup.md)
 
-For minimum requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint requirements](/defender-endpoint/minimum-requirements).
+For minimum requirements for Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint requirements](minimum-requirements.md).
 
 ## Defender for Endpoint Plan 1 capabilities
 
@@ -75,14 +71,14 @@ Manual response actions are actions that your security team can take when threat
 
 To learn more, see the following articles:
 
-- [Take response actions on devices](respond-machine-alerts.md) 
+- [Take response actions on devices](respond-machine-alerts.md)
 - [Take response actions on files](respond-file-alerts.md)
 
 ## Attack surface reduction
 
 Your organization's attack surfaces are all the places where you're vulnerable to cyberattacks. With Defender for Endpoint Plan 1, you can reduce your attack surfaces by protecting the devices and applications that your organization uses. The attack surface reduction capabilities that are included in Defender for Endpoint Plan 1 are described in the following sections.
 
-- [Attack surface reduction rules](#attack-surface-reduction-rules)
+- [Attack surface reduction (ASR) rules](#attack-surface-reduction-rules)
 - [Ransomware mitigation](#ransomware-mitigation)
 - [Device control](#device-control)
 - [Web protection](#web-protection)
@@ -90,19 +86,13 @@ Your organization's attack surfaces are all the places where you're vulnerable t
 - [Network firewall](#network-firewall)
 - [Application control](#application-control)
 
-To learn more about attack surface reduction capabilities in Defender for Endpoint, see [Overview of attack surface reduction](overview-attack-surface-reduction.md).
+To learn more about attack surface reduction capabilities in Defender for Endpoint, see [Overview of attack surface reduction](attack-surface-reduction-overview.md).
 
 ### Attack surface reduction rules
 
-Attack surface reduction rules target certain software behaviors that are considered risky. Such behaviors include:
+Attack surface reduction (ASR) rules target risky software behavior, because software used by attackers exhibit similar behavior.
 
-- Launching executable files and scripts that attempt to download or run other files
-- Running obfuscated or otherwise suspicious scripts
-- Initiating behaviors that apps don't usually initiate during normal work
-
-Legitimate business applications can exhibit such software behaviors; however, these behaviors are often considered risky because they are commonly abused by attackers through malware. Attack surface reduction rules can constrain risky behaviors and help keep your organization safe.
-
-To learn more, see [Use attack surface reduction rules to prevent malware infection](attack-surface-reduction.md).
+To learn more, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
 ### Ransomware mitigation
 

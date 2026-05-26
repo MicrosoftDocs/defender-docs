@@ -2,16 +2,11 @@
 title: Remediate malicious email that was delivered in Office 365
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.topic: concept-article
 ms.collection:
 - m365-security
 - tier1
-audience: admin
-f1.keywords:
-  - NOCSH
 ms.localizationpriority: medium
-search.appverid: MET150
 description: Threat remediation
 ms.service: defender-office-365
 ms.date: 09/16/2025

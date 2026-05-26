@@ -1,19 +1,16 @@
-﻿---
+---
 title: Onboard previous versions of Windows on Microsoft Defender for Endpoint
 description: Onboard supported previous versions of Windows devices so that they can send sensor data to the Microsoft Defender for Endpoint sensor
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
 ms.reviewer: pahuijbr
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 11/17/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

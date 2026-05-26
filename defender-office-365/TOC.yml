@@ -58,6 +58,8 @@
          href: email-authentication-dmarc-configure.md
        - name: Configure trusted ARC sealers
          href: email-authentication-arc-configure.md
+       - name: Troubleshoot email authentication
+         href: email-authentication-troubleshoot.md
      - name: Step 2 - Configure threat policies
        items:
        - name: Preset security policies
@@ -155,13 +157,15 @@
              href: anti-spam-protection-about.md
            - name: Configure anti-spam policies
              href: anti-spam-policies-configure.md
+           - name: Troubleshoot anti-spam policy issues
+             href: anti-spam-policies-troubleshooting.md
            - name: Advanced Spam Filter (ASF) settings
              href: anti-spam-policies-asf-settings-about.md
            - name: What's the difference between junk email and bulk email?
              href: anti-spam-spam-vs-bulk-about.md
            - name: Spam confidence level (SCL)
              href: anti-spam-spam-confidence-level-scl-about.md
-           - name: Bulk complaint level (BCL)
+           - name: Bulk email detection and bulk complaint level (BCL)
              href: anti-spam-bulk-complaint-level-bcl-about.md
            - name: Bulk senders insight
              href: anti-spam-bulk-senders-insight.md
@@ -225,6 +229,8 @@
              href: outbound-spam-high-risk-delivery-pool-about.md
            - name: Restore restricted users
              href: outbound-spam-restore-restricted-users.md
+           - name: Troubleshoot outbound sending limits
+             href: outbound-spam-sending-limits-troubleshoot.md
          - name: Connection filtering in cloud organizations
            items:
            - name: Configure the connection filtering policy
@@ -291,8 +297,6 @@
            href: attack-simulation-training-settings.md
          - name: Attack simulation training deployment considerations and FAQ
            href: attack-simulation-training-faq.md
-         - name: Microsoft Teams in Attack simulation training
-           href: attack-simulation-training-teams.md
        - name: Connectors for mail flow
          items:
          - name: Configure mail flow using connectors

@@ -1,21 +1,18 @@
-﻿---
+---
 title: Why you should use Microsoft Defender Antivirus together with Microsoft Defender for Endpoint
 description: For best results, use Microsoft Defender Antivirus together with your other Microsoft offerings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: concept-article
 author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -43,7 +40,7 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 |2|Threat analytics and your score for devices|Microsoft Defender Antivirus collects underlying system data used by [threat analytics](threat-analytics.md) and [Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices). This provides your organization's security team with more meaningful information, such as recommendations and opportunities to improve your organization's security posture.|
 |3|Performance|Microsoft Defender for Endpoint is designed to work with Microsoft Defender Antivirus, so you get better performance when you use these offerings together. [Evaluate Microsoft Defender Antivirus](evaluate-microsoft-defender-antivirus.md) and [Microsoft Defender for Endpoint](evaluate-mde.md).|
 |4|Details about blocked malware|More details and actions for blocked malware are available with Microsoft Defender Antivirus and Microsoft Defender for Endpoint. [Understand malware & other threats](malware/understanding-malware.md).|
-|5|Attack surface reduction|Your organization's security team can reduce your vulnerabilities (attack surfaces), giving  attackers fewer ways to perform attacks. Attack surface reduction uses cloud protection for a number of rules. [Get an overview of attack surface reduction](overview-attack-surface-reduction.md).|
+|5|Attack surface reduction|Your organization's security team can reduce your vulnerabilities (attack surfaces), giving  attackers fewer ways to perform attacks. Attack surface reduction uses cloud protection for a number of rules. [Get an overview of attack surface reduction](attack-surface-reduction-overview.md).|
 |6|Network protection|Your organization's security team can protect your network by blocking specific URLs and IP addresses. [Protect your network](network-protection.md).|
 |7|Indicators, such as file, IP address, URL, and/or certificate allow or block indicators |Your organization's security team can import threat intel, which blocks known Indicators of Compromise (IoC's) [Get an overview of Indicator of compromise (IoC)](indicators-overview.md).|
 |8|File blocking|Your organization's security team can block specific files. [Stop and quarantine files in your network](respond-file-alerts.md#stop-and-quarantine-files-in-your-network).|
@@ -51,13 +48,13 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 |10|File recovery via OneDrive|If you are using Microsoft Defender Antivirus together with [Office 365](/Office365/Enterprise), and your device is attacked by ransomware, your files are protected and recoverable. [OneDrive Files Restore and Windows Defender take ransomware protection one step further](https://techcommunity.microsoft.com/t5/Microsoft-OneDrive-Blog/OneDrive-Files-Restore-and-Windows-Defender-takes-ransomware/ba-p/188001).|
 |11|Controlled folder access |Your organization's security team can reduce malware from encrypting end-users data by preventing unknown applications or services being able to write to protected folders. [Get an overview of controlled folder access](enable-controlled-folders.md).|
 |12|Geographic data|Compliant with ISO 270001 and data retention, geographic data is provided according to your organization's selected geographic sovereignty. See [Compliance offerings: ISO/IEC 27001:2013 Information Security Management Standards](/microsoft-365/compliance/offering-iso-27001).|
-|13|Technical support|By using Microsoft Defender for Endpoint together with Microsoft Defender Antivirus, you have one company to call for technical support. [Troubleshoot service issues](troubleshoot-mdatp.md)and [review event logs and error codes with Microsoft Defender Antivirus](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).|
+|13|Technical support|By using Microsoft Defender for Endpoint together with Microsoft Defender Antivirus, you have one company to call for technical support. [Troubleshoot service issues](troubleshoot-mdatp.md)and [review event logs and error codes with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml).|
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

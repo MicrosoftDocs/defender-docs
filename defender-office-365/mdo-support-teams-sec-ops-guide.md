@@ -1,22 +1,15 @@
 ---
 title: Security Operations Guide for Teams protection
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
-ms.collection: 
+ms.collection:
   - m365-security
   - tier1
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Teams protection in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 09/11/2025
+ms.date: 04/02/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -31,23 +24,30 @@ Another important step is to ensure SecOps team members have the appropriate per
 
 <!--- We need links to what permissions, or can we just say Security Administrator --->
 
-## Integrate user reported Teams messages into SecOps incident response
+<a name="integrate-user-reported-teams-messages-into-secops-incident-response"></a>
 
-When users report Teams messages as potentially malicious or non malicious, the reported messages are sent to Microsoft and/or the reporting mailbox as defined by the [user reported settings in Defender for Office 365](submissions-user-reported-messages-custom-mailbox.md).
+## Integrate user reported Teams items into SecOps incident response
 
-The **Teams message reported by user as security risk** and **Teams message reported by user as not security risk** alerts are automatically generated and correlated to Defender XDR Incidents for malicious and non malicious user report respectively.
+When users report Teams messages or calls as malicious or non malicious, the reported items are sent to Microsoft and/or the reporting mailbox as defined by the [user reported settings in Defender for Office 365](submissions-user-reported-messages-custom-mailbox.md).
+
+The following alerts are automatically generated and correlated to Defender XDR Incidents for malicious and non malicious user reported items in Teams:
+
+- **Teams message reported by user as security risk**
+- **Teams message message by user as not security risk**
+- **Teams call reported by user as a security risk**
+- **Teams call reported by user as a not security risk**
+
+> [!TIP]
+> Currently, these alerts don't generate automated investigation and response (AIR) investigations.
 
 We strongly recommend that SecOps team members start triage and investigation from the [Defender XDR incidents queue in the Microsoft Defender portal](/defender-office-365/mdo-sec-ops-manage-incidents-and-alerts) or SIEM/SOAR integration.
 
-> [!TIP]
-> Currently, **Teams message reported by user as security risk** and **Teams message reported by user as not security risk** alerts don't generate automated investigation and response (AIR) investigations.
-
-SecOps team members can review submitted Teams message details in the following locations in the Defender portal:
+SecOps team members can review submitted Teams message or call details in the following locations in the Defender portal:
 
 - The **View submission** action in the Defender XDR incident.
 - The **User reported** tab of the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>:
   - Admins can submit user reported Teams messages to Microsoft for analysis from the **User reported** tab. Entries on the **Teams messages** tab are the result of manually submitting user reported Teams message to Microsoft ([converting the user submission to an admin submission](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis)).
-  - Admins can use **Mark and notify** on reported Teams messages to send response email to users who reported messages.
+  - Admins can use **Mark and notify** on reported Teams items to send response email to users who reported them.
 
 SecOps team members can also use block entries in the Tenant Allow/Block List to block the following indicators of compromise:
 
@@ -71,8 +71,8 @@ SecOps team members can triage and respond to false positive Teams messages (goo
 
 SecOps team members can also use allow entries in the Tenant Allow/Block List to allow the misclassified indicators:
 
-- URLs misidentified by Defender for Office 365. URL allows entries are enforced at time of click in Teams when [Teams integration in Safe Links policies is turned on](mdo-support-teams-quick-configure.md#step-2-verify-safe-links-integration-for-microsoft-teams).
-- Files by using the SHA256 hash value.
+- URLs misidentified by Defender for Office 365 via the [URL tab on the Submissions page](submissions-admin.md#report-good-urls-to-microsoft). URL allows entries are enforced at time of click in Teams when [Teams integration in Safe Links policies is turned on](mdo-support-teams-quick-configure.md#step-2-verify-safe-links-integration-for-microsoft-teams).
+- Files by using the SHA256 hash value from the [Email attachments tab on the Submissions page](submissions-admin.md#report-good-email-attachments-to-microsoft)
 
 > [!TIP]
 > Teams messages released from quarantine are available to senders and recipients in the original location in Teams chats and channel posts.

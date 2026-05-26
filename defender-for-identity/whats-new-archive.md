@@ -1,7 +1,7 @@
 ---
 title: What's new archive
 description: This article lists Microsoft Defender for Identity release notes for versions and features released over 6 months ago.
-ms.date: 05/15/2023
+ms.date: 05/24/2026
 ms.topic: reference
 ---
 
@@ -15,6 +15,826 @@ For information about the latest versions and features, see [What's new in Micro
 > Starting June 15 2022, Microsoft will no longer support the Defender for Identity sensor on devices running Windows Server 2008 R2. We recommend that you identify any remaining Domain Controllers (DCs) or AD FS servers that are still running Windows Server 2008 R2 as an operating system and make plans to update them to a supported operating system.
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
+
+## October 2025
+
+We're excited to announce that the Microsoft Defender for Identity sensor v3.x is now generally available (GA).
+The [Microsoft Defender for Identity sensor v3.x](/defender-for-identity/deploy/activate-sensor) provides enhanced coverage, improved performance across your environment and offering easier deployment and management for domain controllers.
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number|Updates|
+|---|---|
+|2.249|The improved event log query method now captures a broader range of unique events at scale. As a result, you might notice an increase in captured activities. This update also delivers other security enhancements and performance improvements.|
+
+## September 2025
+
+### Defender for Identity alerts transitioned to the unified Defender alerting experience
+
+As part of the ongoing transition to a unified alerting experience across Microsoft Defender products, the following alerts were converted from the Microsoft Defender for Identity classic format to the unified Defender alerting format. Keep in mind that all alerts are based on detections from Defender for Identity sensors.
+
+|Classic Alert Title|External ID|XDR Alert Name|Detector ID|
+|---|---|---|---|
+|Active Directory attributes Reconnaissance using LDAP|2210|[LDAP reconnaissance attributes in Active Directory](alerts-xdr.md)|xdr_LdapSensitiveAttributeReconnaissance|
+|User and IP address reconnaissance|2012|[Suspicious Server Message Block (SMB) enumeration from untrusted host](alerts-xdr.md#suspicious-server-message-block-smb-enumeration-from-untrusted-host)|xdr_SmbSessionEnumeration|
+|Account enumeration reconnaissance|2003|[Suspected account enumeration (Kerberos, NTLM, AD FS)](alerts-xdr.md#suspected-account-enumeration-kerberos-ntlm-ad-fs)|xdr_SuspectedAccountEnumeration|
+|Suspected brute-force attack (LDAP)|2004|[Suspected brute-force attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-brute-force-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
+|||[Suspected password spray attack on Lightweight Directory Access Protocol (LDAP) authentication](alerts-xdr.md#suspected-password-spray-attack-on-lightweight-directory-access-protocol-ldap-authentication)|xdr_LdapBindBruteforce|
+|Suspicious network connection over Encrypting File System Remote Protocol|2416|[Suspicious network connection over Encrypting File System Remote Protocol](alerts-xdr.md#suspicious-network-connection-over-encrypting-file-system-remote-protocol)|xdr_SuspiciousConnectionOverEFSRPC|
+
+### Additional security value in the Defender for Identity sensor v3.x
+
+Apply the **Unified sensor RPC audit*- tag to your Defender for Identity sensor v3.x in the **Asset rule management*- page for enhanced protection. Learn more [here](/defender-for-identity/deploy/deploy-sensor-v3).
+
+### Identity posture recommendations view on the identity page (preview)
+
+A new tab on the Identity profile page contains all active identity-related identity security posture assessments (ISPMs). This page consolidates all identity-specific security posture assessments into a single contextual view, helping security teams quickly spot weaknesses and take targeted actions.
+For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
+
+### New Regional Availability: United Arab Emirates
+
+Defender for Identity data centers are now also deployed in the United Arab Emirates, North, and Central regions. For the most current list of regional deployments, see [Defender for Identity data locations](/defender-for-identity/privacy-compliance/#data-location).
+
+### New API support for the Defender for Identity sensor v3.x (Preview)
+
+We're excited to announce the availability of a new Graph-based API for managing the Defender for Identity sensor v3.x server actions.
+This capability is currently in preview and available in API Beta version.
+
+This API allows customers to:
+
+- Monitor the status of servers deployed with the Defender for Identity sensor v3.x.
+- Enable or disable the automatic activation of eligible servers.
+- Activate or deactivate the sensor on eligible server.
+
+For more information, see [Managing the Defender for Identity sensor v3.x actions using Graph API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true).
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number|Updates|
+|---|---|
+|2.249|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+
+### Updates to multiple detections to reduce noise and improve alert accuracy
+
+Several Defender for Identity detections are being updated to reduce noise and improve accuracy, making alerts more reliable and actionable. As the rollout continues, you might see a decrease in the number of alerts raised.
+
+The improvements will gradually take effect across the following detections:
+
+- Suspicious communication over DNS
+- Suspected Netlogon privilege elevation attempt (CVE-2020-1472)
+- Honeytoken authentication activity
+- Remote code execution attempt over DNS
+- Suspicious password reset by Microsoft Entra Connect account
+- Data exfiltration over SMB
+- Suspected skeleton key attack (encryption downgrade)
+- Suspicious modification of Resource Based Constrained Delegation by a machine account
+- Remote code execution attempt
+
+### Unified connectors is now available for Okta single sign-on connectors (Preview)
+
+Microsoft Defender for Identity supports the [Unified connectors](/azure/sentinel/unified-connector) experience, starting with the Okta single sign-on connector. The unified connector enables Defender for Identity to collect Okta system logs once and share them across supported Microsoft security products, reducing API usage and improving connector efficiency.
+
+For more information, see: [Connect Okta to Microsoft Defender for Identity (Preview)](okta-integration.md)
+
+## August 2025
+
+### Microsoft Entra ID risk level is now available in near real time in Microsoft Defender for Identity (Preview)
+
+Microsoft Entra ID risk level is now available on the Identity Inventory assets page, the identity details page, and in the IdentityInfo table in Advanced Hunting, and includes the Microsoft Entra ID risk score. SOC analysts can use this data to correlate risky users with sensitive or highly privileged users, create custom detections based on current or historical user risk, and improve investigation context.
+
+Previously, Defender for Identity tenants received Microsoft Entra ID risk level in the IdentityInfo table through user and entity behavior analytics (UEBA). With this update, the Microsoft Entra ID risk level is now updated in near real time through Microsoft Defender for Identity.
+
+For UEBA tenants without a Microsoft Defender for Identity license, synchronization of Microsoft Entra ID risk level to the IdentityInfo table remains unchanged.
+
+### New security assessment: Remove inactive service accounts
+
+Microsoft Defender for Identity now includes a new security assessment that helps you identify and remove inactive service accounts in your organization. This assessment lists Active Directory service accounts that were inactive for the past 90 days, to help you mitigate security risks associated with unused accounts.
+
+For more information, see: Security Assessment: [Remove Inactive Service Accounts (Preview)](/defender-for-identity/remove-inactive-service-account).
+
+### New Graph based API for response actions (preview)
+
+We're excited to announce a new Graph-based API for initiating and managing remediation actions in Microsoft Defender for Identity.
+
+This capability is currently in preview and available in API Beta version.
+
+For more information, see [Managing response actions through Graph API](/graph/api/resources/security-identityaccounts?view=graph-rest-beta&preserve-view=true).
+
+### Identity scoping is now generally available (GA)
+
+Identity scoping is now generally available across all environments. Organizations can now define and refine the scope of MDI monitoring and gain granular control over which entities and resources are included in security analysis.
+
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
+### New security posture assessment: Remove discoverable passwords in Active Directory account attributes (Preview)
+
+The new security posture assessment highlights unsecured Active Directory attributes that contain passwords or credential clues and recommends steps to remove them, helping reduce the risk of identity compromise.
+
+For more information, see: [Security Assessment: Remove discoverable passwords in Active Directory account attributes (Preview)](/defender-for-identity/security-posture-assessments/accounts#remove-discoverable-passwords-in-active-directory-account-attributes-preview)
+
+### Microsoft Defender for Identity sensor version updates
+
+|Version number|Updates|
+|---|---|
+|2.247|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+|2.246|Includes bug fixes and stability improvements for the Microsoft Defender for Identity sensor.|
+
+### Detection update: Suspected Brute Force attack (Kerberos, NTLM)
+
+Improved detection logic to include scenarios where accounts were locked during attacks. As a result, the number of triggered alerts might increase.
+
+## July 2025
+
+### Expanded coverage in ITDR deployment health widget
+
+The Identity Threat Detection and Response (ITDR) deployment health widget now provides visibility into the deployment status of additional server types. Previously, it only reflected the status for Active Directory domain controllers. With this update, the widget also includes deployment status for ADFS, ADCS, and Microsoft Entra Connect servers - making it easier to track and ensure full sensor coverage across all supported identity infrastructure.
+
+### Time limit added to Recommended test mode
+
+Recommended test mode configuration on the [Adjust alert thresholds page](/defender-for-identity/advanced-settings), now requires you to set an expiration time (up to 60 days) when enabling it. The end time is shown next to the toggle while test mode is active. For customers who have already enabled Recommended test mode, a 60-day expiration is automatically applied.
+
+### Identity scoping is now available in Governance environments
+
+Scoping is now supported in government (GOV) environments. Organizations can now define and refine the scope of MDI monitoring and gain granular control over which entities and resources are included in security analysis.
+
+For more information, see [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
+### New security posture assessments for unmonitored identity servers
+
+Microsoft Defender for Identity three new security posture assessments detect when Microsoft Entra Connect, Active Directory Federation Services (ADFS), or Active Directory Certificate Services (ADCS) servers are present in your environment but aren't monitored.
+
+Use these assessments to improve monitoring coverage and strengthen your hybrid identity security posture.
+
+For more information, see:
+
+- [Security Assessment: Unmonitored ADCS servers](/defender-for-identity/security-posture-assessments/identity-infrastructure#unmonitored-adcs-servers)
+
+- [Security Assessment: Unmonitored ADFS servers](/defender-for-identity/security-posture-assessments/identity-infrastructure#unmonitored-adfs-servers)
+
+- [Security Assessment: Unmonitored Microsoft Entra Connect servers](/defender-for-identity/security-posture-assessments/identity-infrastructure#unmonitored-microsoft-entra-connect-servers)
+
+## June 2025
+
+### Scoped access by Active Directory domain now supported (Preview)
+
+MDI scoping is now available as part of XDR User Role-Based Access Control (URBAC). Organizations can now define and refine the scope of MDI monitoring, providing granular control over which entities and resources are included in security analysis.
+
+Scoping by Active Directory domains helps:
+
+- Optimize performance: Focus monitoring on critical assets and reduce noise from nonessential data.
+
+- Enhance visibility control: Tailor MDI coverage to specific domains and user groups.
+
+- Support operational boundaries: Align access for SOC analysts, identity administrators, and regional teams.
+
+For more information, see: [Configure scoped access for Microsoft Defender for Identity](configure-scoped-access.md).
+
+### Okta integration is now available in Microsoft Defender for Identity
+
+Microsoft Defender for Identity now supports integration with Okta, enabling detection of identity-based threats across cloud and on-premises environments. This integration helps identify suspicious sign-ins, risky role assignments, and potential privilege misuse within your Okta environment.
+
+For prerequisites and configuration steps, see [Integrate Okta with Microsoft Defender for Identity](okta-integration.md).
+
+### Service account classification rules now available
+
+You can now create custom classification rules to identify service accounts based on your organization's specific criteria. This complements automatic discovery, enabling more accurate identification of service accounts.
+For more information, see [Service account discovery](service-account-discovery.md).
+
+### Defender For Identity PowerShell module updates (version 1.0.0.4)
+
+New Features and Improvements:
+
+- Added remote domain functionality.
+- Added SensorType parameter to Test-MDISensorApiConnection to inform endpoint URL.
+- Added ability to Get/Set/Test the Deleted Objects container permissions.
+- Added auditing for Delegated Managed Service Accounts (dMSA) in the DomainObjectAuditing configuration.
+
+Bug Fixes:
+
+- Fixed audit verification checks for non-English operating systems.
+- Fixed DomainObjectAuditing identity redundant parameter bug.
+- Fixed Domain Controller detection logic to confirm AD Web Services is running on the server.
+- Fixed issue with Test-MDIDSA not parsing Deleted Object permissions.
+- Other reliability fixes.
+
+## May 2025
+
+### Improved Visibility into Defender for Identity New Sensor Eligibility in the Activation page
+
+The Activation Page now displays all servers from your device inventory, including those not currently eligible for the new Defender for Identity sensor. This enhancement increases transparency into sensor eligibility, helping you identify noneligible servers and take action to update and onboard them for enhanced identity protection.
+
+### Local administrators collection (using SAM-R queries) feature is disabled
+
+The remote collection of local administrators group members from endpoints using SAM-R queries in Microsoft Defender for Identity will be disabled by mid-May 2025. This data is currently used to build potential lateral movement path maps, which will no longer be updated after this change. An alternative method is being explored. The change occurs automatically by the specified date, and no administrative action is required.
+
+### New Health Issue
+
+New [health issue](health-alerts.md) for cases where sensors running on VMware have network configuration mismatch.
+
+## April 2025
+
+### Privileged Identity Tag Now Visible in Defender for Identity Inventory
+
+Identities listed in the [Identity inventory](identity-inventory.md) in Microsoft Defender portal now include a **Privileged account** tag for accounts managed by a **Privileged Identity Management (PIM)** service.
+Privileged accounts are prime targets for attackers. Tagging them in the inventory helps you quickly identify high-risk or high-value accounts, prioritize investigation and mitigation efforts, and streamline incident response workflows.
+
+Learn more about [Privileged Identity Management.](/entra/id-governance/privileged-identity-management/pim-configure)
+
+### New Defender for Identity and PAM Integration
+
+Microsoft Defender for Identity now supports integration with industry-leading Privileged Access Management (PAM) platforms to enhance detection and response for privileged identities.
+
+**Supported PAM vendors**:
+
+- CyberArk
+- Delinea
+- BeyondTrust
+
+For more information, see: [Integrations Defender for Identity and PAM services.](Integrate-microsoft-and-pam-services.md)
+
+## March 2025
+
+### New Service Account Discovery page
+
+Microsoft Defender for Identity now includes a Service Account Discovery capability, offering you  centralized visibility into service accounts across your Active Directory environment.
+
+This update provides:
+
+- Automatic identification of Group Managed Service Accounts, Managed Service Accounts, and user accounts operating as service accounts.
+
+- A centralized Service Accounts inventory, displaying key attributes like account type, authentication type, unique connections, last sign in, service class and criticality.
+
+- A Service Account details page, including an overview, a timeline of activities, alerts, and a new connections tab.
+
+For more information, see: [Investigate and protect Service Accounts | Microsoft Defender for Identity](service-account-discovery.md).
+
+### Enhanced Identity Inventory
+
+The Identities page under *Assets* was updated to provide better visibility and management of identities across your environment.
+The updated Identities Inventory page now includes the following tabs:
+
+- Identities: A consolidated view of identities across Active Directory, Microsoft Entra ID. This Identities tab highlights key details, including identity types, and user's information.
+
+- Cloud application accounts: Displays a list of cloud application accounts, including those from application connectors and non-Microsoft sources (original available in the previous version based on Microsoft Defender for Cloud Apps).
+
+For more information, see [Identity inventory details](/defender-for-identity/identity-inventory).
+
+### New LDAP query events added to the IdentityQueryEvents table in Advanced Hunting
+
+New LDAP query events were added to the `IdentityQueryEvents` table in Advanced Hunting to provide more visibility into additional LDAP search queries running in the customer environment.
+
+## February 2025
+
+### DefenderForIdentity PowerShell module updates (version 1.0.0.3)
+
+New Features and Improvements:
+
+- Support for getting, testing, and setting the Active Directory Recycle Bin in Get/Set/Test MDI Configuration.
+- Support for getting, testing, and setting the proxy configuration on new MDI sensor.
+- The Active Directory Certificate Services registry value for audit filtering now properly sets the type.
+- New-MDIConfigurationReport now shows the name of the tested GPO and supports Server and Identity arguments.
+
+Bug Fixes:
+
+- Improved reliability for DeletedObjects container permissions on non-English operating systems.
+- Fixed extraneous output for KDS root key creation.
+- Other reliability fixes.
+
+### New attack paths tab on the Identity profile page
+
+This tab provides visibility into potential attack paths leading to a critical identity or involving it within the path, helping assess security risks. For more information, see [Overview of attack path within Exposure Management.](/security-exposure-management/work-attack-paths-overview)
+
+Additional identity page enhancements:
+
+- New side panel with more information for each entry on the user timeline.
+
+- Filtering capabilities on the Devices tab under Observed in organization.
+
+### Updating 'Protect and manage local admin passwords with Microsoft LAPS' posture recommendation
+
+This update aligns the security posture assessment within Secure Score with the latest version of [Windows LAPS](/windows-server/identity/laps/laps-overview), ensuring it reflects current security best practices for managing local administrator passwords.
+
+### New and updated events in the Advanced hunting IdentityDirectoryEvents table
+
+We have added and updated the following events in the `IdentityDirectoryEvents` table in Advanced Hunting:
+
+- User Account control flag has been changed
+- Security group creation in Active directory
+- Failed attempt to change an account password
+- Successful account password change
+- Account primary group ID has been changed
+
+Additionally, the **built-in schema reference** for Advanced Hunting in Microsoft Defender XDR has been updated to include detailed information on all supported event types (**`ActionType`** values) in identity-related tables, ensuring complete visibility into available events. For more information, see [Advanced hunting schema details](/defender-xdr/advanced-hunting-schema-tables).
+
+## January 2025
+
+### New Identity guide tour
+
+Explore key MDI features with the new **Identities Tour** in the Microsoft 365 portal. Navigate Incidents, Hunting, and Settings to enhance identity security and threat investigation.
+
+## December 2024
+
+### New security posture assessment: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)
+
+Defender for Identity has added the new **Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)** recommendation in Microsoft Secure Score.
+
+This recommendation directly addresses the recently published [CVE-2024-49019](https://msrc.microsoft.com/update-guide/en-US/advisory/CVE-2024-49019), which highlights security risks associated with vulnerable AD CS configurations. This security posture assessment lists all vulnerable certificate templates found in customer environments due to unpatched AD CS servers.
+
+The new recommendation is added to other AD CS-related recommendations. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that pose risks to the entire organization, together with related detections.
+
+For more information, see:
+
+- [Security assessment: Prevent Certificate Enrollment with arbitrary Application Policies (ESC15)](https://go.microsoft.com/fwlink/?linkid=2296922)
+- [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
+
+## October 2024
+
+### MDI is expanding coverage to 10 new Identity posture recommendations (preview)
+
+The new Identity security posture assessments (ISPMs) can help customers monitor misconfiguration by watching for weak spots and reduce the risk of potential attack on on-premises infrastructure.
+These new identity recommendations, as part of Microsoft Secure Score, are new security posture reports related to Active Directory infrastructure and Group policy Objects:
+
+- [Accounts with nondefault Primary Group ID](/defender-for-identity/accounts-with-non-default-pgid)
+- [Change Domain Controller computer account old password](/defender-for-identity/domain-controller-account-password-change)
+- [GPO assigns unprivileged identities to local groups with elevated privileges](/defender-for-identity/gpo-assigns-unprivileged-identities)
+- [GPO can be modified by unprivileged accounts](/defender-for-identity/modified-unprivileged-accounts-gpo)
+- [Reversible passwords found in GPOs](/defender-for-identity/reversible-passwords-group-policy)
+- [Built-in Active Directory Guest account is enabled](/defender-for-identity/built-in-active-directory-guest-account-is-enabled)
+- [Unsafe permissions on the DnsAdmins group](/defender-for-identity/unsafe-permissions-dns-admins-group)
+- [Ensure that all privileged accounts have the configuration flag "this account is sensitive and can't be delegated"](/defender-for-identity/ensure-privileged-accounts-with-sensitive-flag)
+- [Change password of krbtgt account](/defender-for-identity/change-password-krbtgt-account)
+- [Change password of built-in domain Administrator account](/defender-for-identity/change-password-domain-administrator-account)
+
+Additionally, we updated the existing recommendation of "Modify unsecure Kerberos delegations to prevent impersonation" to include indication of Kerberos Constrained Delegation with Protocol Transition to a privileged service.
+
+## August 2024
+
+### New Microsoft Entra Connect sensor
+
+As part of our ongoing effort to enhance Microsoft Defender for Identity coverage in hybrid identity environments, we have introduced a new sensor for Microsoft Entra Connect servers. Additionally, we've released new hybrid security detections and new identity posture recommendations specifically for Microsoft Entra Connect, helping customers stay protected and mitigate potential risks.
+
+**New Microsoft Entra Connect Identity posture recommendations:**
+
+- **Rotate password for Microsoft Entra Connect connector account**
+  - A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment, we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information, select [Rotate password for Microsoft Entra Connect connector account](../defender-for-identity/security-posture-assessments/hybrid-security.md#rotate-password-for-microsoft-entra-connect-ad-ds-connector-account).
+- **Remove unnecessary replication permissions for Microsoft Entra Connect Account**
+  - By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't required). If Password Hash Sync isn't configured, it's important to remove unnecessary permissions to reduce the potential attack surface. For more information, see [Remove replication permissions for Microsoft Entra account](/defender-for-identity/security-posture-assessments/hybrid-security#remove-unnecessary-replication-permissions-for-microsoft-entra-connect-ad-ds-connector-account).
+- **Change password for Microsoft Entra seamless SSO account configuration**
+  - This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information, see: [Change password for Microsoft Entra seamless SSO account configuration](/defender-for-identity/security-posture-assessments/hybrid-security#change-password-for-microsoft-entra-seamless-sso-account).
+
+**New Microsoft Entra Connect detections:**
+
+- **Suspicious Interactive Logon to the Microsoft Entra Connect Server**
+  - Direct logins to Microsoft Entra Connect servers are highly unusual and potentially malicious. Attackers often target these servers to steal credentials for broader network access. Microsoft Defender for Identity can now detect abnormal logins to Microsoft Entra Connect servers, helping you identify and respond to these potential threats faster. It's applicable when the Microsoft Entra Connect server is a standalone server and not operating as a Domain Controller.
+- **User Password Reset by Microsoft Entra Connect Account**
+  - The Microsoft Entra Connect connector account often holds high privileges, including the ability to reset user's passwords. Microsoft Defender for Identity now has visibility into those actions and detects any usage of those permissions that were identified as malicious and non-legitimate. This alert is triggered only if the [password writeback feature](/entra/identity/authentication/concept-sspr-writeback) is disabled.
+- **Suspicious writeback by Microsoft Entra Connect on a sensitive user**
+  - While Microsoft Entra Connect already prevents writeback for users in privileged groups, Microsoft Defender for Identity expands this protection by identifying additional types of sensitive accounts. This enhanced detection helps prevent unauthorized password resets on critical accounts, which can be a crucial step in advanced attacks targeting both cloud and on-premises environments.
+
+**Additional improvements and capabilities:**
+
+- New activity of any **failed password reset on a sensitive account** available in the 'IdentityDirectoryEvents' table in Advanced Hunting. This can help customers track failed password reset events and create custom detection based on this data.
+- Enhanced accuracy for the **DC sync attack** detection.
+- New [health issue](health-alerts.md) for cases where the sensor is unable to retrieve the configuration from the Microsoft Entra Connect service.
+- Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Microsoft Entra Connect servers.
+
+[Learn more about the new sensor](deploy/active-directory-federation-services.md).
+
+### Updated DefenderForIdentity PowerShell module
+
+The DefenderForIdentity PowerShell module has been updated, incorporating new functionality and addressing several bug fixes. Key improvements include:
+
+- **New `New-MDIDSA` Cmdlet**: Simplifies creation of service accounts, with a default setting for Group Managed Service Accounts (gMSA) and an option to create standard accounts.
+- **Automatic PDCe Detection**: Improves Group Policy Object (GPO) creation reliability by automatically targeting the Primary Domain Controller Emulator (PDCe) for most Active Directory operations.
+- **Manual Domain Controller Targeting**: New Server parameter for `Get/Set/Test-MDIConfiguration` cmdlets, allowing you to specify a domain controller for targeting instead of the PDCe.
+
+For more information, see:
+
+- [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+- [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
+
+## July 2024
+
+Six new detections are now in preview:
+
+- **Possible NetSync attack**
+  - NetSync is a module in Mimikatz, a post-exploitation tool, that requests the password hash of a target device's password by pretending to be a domain controller. An attacker might be performing malicious activities inside the network using this feature to gain access to the organization's resources.
+- **Possible takeover of a Microsoft Entra seamless SSO account**
+  - A Microsoft Entra seamless SSO (single sign-on) account object, AZUREADSSOACC, was modified suspiciously. An attacker might be moving laterally from the on-premises environment to the cloud.
+- **Suspicious LDAP query**
+  - A suspicious Lightweight Directory Access Protocol (LDAP) query associated with a known attack tool was detected. An attacker might be performing reconnaissance for later steps.
+- **Suspicious SPN was added to a user**
+  - A suspicious service principal name (SPN) was added to a sensitive user. An attacker might be attempting to gain elevated access for lateral movement within the organization
+- **Suspicious creation of ESXi group**
+  - A suspicious VMware ESXi group was created in the domain. This might indicate that an attacker is trying to get more permissions for later steps in an attack.
+- **Suspicious ADFS authentication**
+  - A domain-joined account signed in using Active Directory Federation Services (ADFS) from a suspicious IP address. An attacker might have stolen a user's credentials and is using it to move laterally in the organization.
+
+### Defender for Identity release 2.238
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## June 2024
+
+### Easily Go Hunt For user Information From the ITDR Dashboard
+
+The Shield Widget provides a quick overview of the number of users in hybrid, cloud, and on-premises environments. This feature now includes direct links to the Advanced Hunting platform, offering detailed user information at your fingertips.
+
+### ITDR Deployment Health Widget now includes Microsoft Entra Conditional Access and Microsoft Entra Private Access
+
+Now you can view the license availability for Microsoft Entra Workload Conditional Access, Microsoft Entra User Conditional Access, and Microsoft Entra Private Access.
+
+### Defender for Identity release 2.237
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## May 2024
+
+### Defender for Identity release 2.236
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.235
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## April 2024
+
+### Easily detect CVE-2024-21427 Windows Kerberos Security Feature Bypass Vulnerability
+
+To help customers better identify and detect attempts to bypass security protocols according to [this vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21427), we added a new activity within Advanced Hunting that monitors Kerberos AS authentication.
+
+With this data, customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity.
+
+Access Microsoft Defender portal -> Hunting -> Advanced Hunting.
+
+Now, you can copy our recommended query as provided below, and select on "Create detection rule". Our provided query also tracks failed sign in attempts, which might generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
+
+```kusto
+IdentityLogonEvents
+| where Application == "Active Directory"
+| where Protocol == "Kerberos"
+| where LogonType in("Resource access", "Failed logon")
+| extend Error =  AdditionalFields["Error"]
+| extend KerberosType = AdditionalFields['KerberosType']
+| where KerberosType == "KerberosAs"
+| extend Spns = AdditionalFields["Spns"]
+| extend DestinationDC = AdditionalFields["TO.DEVICE"]
+| where  Spns !contains "krbtgt" and Spns !contains "kadmin"
+| project Timestamp, ActionType, LogonType, AccountUpn, AccountSid, IPAddress, DeviceName, KerberosType, Spns, Error, DestinationDC, DestinationIPAddress, ReportId
+```
+
+### Defender for Identity release 2.234
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.233
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## March 2024
+
+### New read-only permissions for viewing Defender for Identity settings
+
+Now you can configure Defender for Identity users with read-only permissions to view Defender for Identity settings.
+
+For more information, see [Required permissions Defender for Identity in Microsoft Defender XDR](role-groups.md#required-permissions-defender-for-identity-in-microsoft-defender-xdr).
+
+### New Graph based API for viewing and managing Health issues
+
+Now you can view and manage Microsoft Defender for Identity health issues through the Graph API.
+
+For more information, see [Managing Health issues through Graph API](/graph/api/resources/security-healthissue?view=graph-rest-beta&preserve-view=true).
+
+### Defender for Identity release 2.232
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.231
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## February 2024
+
+### Defender for Identity release 2.230
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### New security posture assessment for insecure AD CS IIS endpoint configuration
+
+Defender for Identity added the new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recommendation in Microsoft Secure Score.
+
+Active Directory Certificate Services (AD CS) supports certificate enrollment through various methods and protocols, including enrollment via HTTP using the Certificate Enrollment Service (CES) or the Web Enrollment interface (Certsrv). Insecure configurations of the CES or Certsrv IIS endpoints might create vulnerabilities to relay attacks (ESC8).
+
+The new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recommendation is added to other AD CS-related recommendations recently released. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that pose risks to the entire organization, together with related detections.
+
+For more information, see:
+
+- [Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)](/defender-for-identity/security-posture-assessments/certificates#edit-insecure-adcs-certificate-enrollment-iis-endpoints-esc8)
+- [Security posture assessments for AD CS sensors](#security-posture-assessments-for-ad-cs-sensors-preview)
+- [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
+
+### Defender for Identity release 2.229
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Enhanced user experience for adjusting alert thresholds (Preview)
+
+The Defender for Identity **Advanced Settings** page is now renamed to **Adjust alert thresholds** and provides a refreshed experience with enhanced flexibility for adjusting alert thresholds.
+
+:::image type="content" source="media/whats-new/adjust-alert-thresholds.png" alt-text="Screenshot of the new Adjust alert thresholds page." lightbox="media/whats-new/adjust-alert-thresholds.png":::
+
+Changes include:
+
+- We removed the previous **Remove learning period** option, and added a new **Recommended test mode** option. Select **Recommended test mode** to set all threshold levels to **Low**, increasing the number of alerts, and sets all other threshold levels to read-only.
+
+- The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
+
+  The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+
+  |Sensitivity level (previous name)|Threshold level (new name)|
+  |---|---|
+  |**Normal**|**High**|
+  |**Medium**|**Medium**|
+  |**High**|**Low**|
+
+If you had specific values defined on the **Advanced Settings** page, we transferred them to the new **Adjust alert thresholds** page as follows:
+
+|Advanced settings page configuration|New Adjust alert thresholds page configuration|
+|---|---|
+|**Remove learning period** toggled on|**Recommended test mode** toggled off. <br/><br/> Alert threshold configuration settings remain the same.|
+|**Remove learning period** toggled off|**Recommended test mode** toggled off. <br/><br/> Alert threshold configuration settings are all reset to their default values, with a **High** threshold level.|
+
+Alerts are always triggered immediately if the **Recommended test mode** option is selected, or if a threshold level is set to **Medium** or **Low**, regardless of whether the alert's learning period already completed.
+
+For more information, see [Adjust alert thresholds](advanced-settings.md).
+
+### Device details pages now include device descriptions (Preview)
+
+Microsoft Defender XDR now includes device descriptions on device details panes and device details pages. The descriptions are populated from the device's Active Directory [Description](/windows/win32/adschema/a-description) attribute.
+
+For example, on the device details side pane:
+
+:::image type="content" source="media/whats-new/device-description.png" alt-text="Screenshot of the new Device description field on a device details pane." lightbox="media/whats-new/device-description.png":::
+
+For more information, see [Investigation steps for suspicious devices](investigate-assets.md#investigation-steps-for-suspicious-devices).
+
+### Defender for Identity release 2.228
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new alerts:
+
+- [Account Enumeration reconnaissance (LDAP) (external ID 2437)](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-ldap-external-id-2437-preview) (Preview)
+- [Directory Services Restore Mode Password Change (external ID 2438)](other-alerts.md#directory-services-restore-mode-password-change-external-id-2438) (Preview)
+
+## January 2024
+
+### Defender for Identity release 2.227
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Timeline tab added for group entities
+
+Now you can view Active Directory group entity-related activities and alerts from the last 180 days in Microsoft Defender XDR, such as group membership changes, LDAP queries and so on.
+
+To access the group timeline page, select **Open timeline** on the group details pane.
+
+For example:
+
+:::image type="content" source="media/whats-new/group-timeline.png" alt-text="Screenshot of the Open timeline button on a group entity details pane." lightbox="media/whats-new/group-timeline.png":::
+
+For more information, see [Investigation steps for suspicious groups](investigate-assets.md#investigation-steps-for-suspicious-groups).
+
+### Configure and validate your Defender for Identity environment via PowerShell
+
+Defender for Identity now supports the new *DefenderForIdentity* PowerShell module, which is designed to help you configure and validate your environment for working with Microsoft Defender for Identity.
+
+Using the PowerShell commands to avoid misconfigurations and save time and avoiding unnecessary load on your system.
+
+We added the following procedures to the Defender for Identity documentation to help you use the new PowerShell commands:
+
+- [Change proxy configuration using PowerShell](configure-proxy.md#change-proxy-configuration-using-powershell)
+- [Configure, get, and test audit policies using PowerShell](configure-windows-event-collection.md#configure-get-and-test-audit-policies-using-powershell)
+- [Generate a report with current configurations via PowerShell](configure-windows-event-collection.md#generate-a-report-with-current-configurations-via-powershell)
+- [Test your DSA permissions and delegations via PowerShell](directory-service-accounts.md#test-your-dsa-permissions-and-delegations-via-powershell)
+- [Test service connectivity using PowerShell](deploy/test-connectivity.md#test-service-connectivity-using-powershell)
+
+For more information, see:
+
+- [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+- [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
+
+### Defender for Identity release 2.226
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.225
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## December 2023
+
+> [!NOTE]
+> If you're seeing a decreased number of *Remote code execution attempt* alerts, see our updated [September announcements](#september-2023), which include an [update to the Defender for Identity detection logic](#decreased-number-of-alerts-for-remote-code-execution-attempts). Defender for Identity continues to record the remote code execution activities as before.
+
+### New Identities area and dashboard in Microsoft Defender XDR  (Preview)
+
+Defender for Identity customers now have a new **Identities** area in Microsoft Defender XDR for information about identity security with Defender for Identity.
+
+In Microsoft Defender XDR, select **Identities** to see any of the following new pages:
+
+- **Dashboard**: This page shows graphs and widgets to help you monitor identity threat detection and response activities. For example:
+
+   :::image type="content" source="media/dashboard/dashboard.gif" alt-text="An animated GIF showing a sample ITDR Dashboard page.":::
+
+   For more information, see [Work with Defender for Identity's ITDR dashboard](dashboard.md).
+
+- **Health issues**: This page is moved from the **Settings > Identities** area, and lists any current health issues for your general Defender for Identity deployment and specific sensors. For more information, see [Microsoft Defender for Identity sensor health issues](health-alerts.md).
+
+- **Tools**: This page contains links to helpful information and resources when working with Defender for Identity. On this page, find links to documentation, specifically on the [capacity planning tool](capacity-planning.md), and the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
+
+### Defender for Identity release 2.224
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Security posture assessments for AD CS sensors (Preview)
+
+Defenders for Identity's security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations.
+
+Recommended actions now include the following new security posture assessments, specifically for certificate templates and certificate authorities.
+
+- **Certificate templates recommended actions**:
+  - [Prevent users to request a certificate valid for arbitrary users based on the certificate template (ESC1)](/defender-for-identity/security-posture-assessments/certificates#prevent-users-to-request-a-certificate-valid-for-arbitrary-users-based-on-the-certificate-template-esc1--preview)
+  - [Edit overly permissive certificate template with privileged EKU (Any purpose EKU or No EKU) (ESC2)](/defender-for-identity/security-posture-assessments/certificates#edit-overly-permissive-certificate-template-with-privileged-eku-any-purpose-eku-or-no-eku-esc2)
+  - [Misconfigured enrollment agent certificate template (ESC3)](/defender-for-identity/security-posture-assessments/certificates#edit-misconfigured-enrollment-agent-certificate-template-esc3)
+  - [Edit misconfigured certificate templates ACL (ESC4)](/defender-for-identity/security-posture-assessments/certificates#edit-misconfigured-certificate-templates-acl-esc4)
+  - [Edit misconfigured certificate templates owner (ESC4)](/defender-for-identity/security-posture-assessments/certificates#edit-misconfigured-certificate-templates-owner-esc4)
+
+- **Certificate authority recommended actions**:
+  - [Edit vulnerable Certificate Authority setting (ESC6)](/defender-for-identity/security-posture-assessments/certificates#security-assessment-edit-vulnerable-ca-setting)
+  - [Edit misconfigured Certificate Authority ACL (ESC7)](/defender-for-identity/security-posture-assessments/certificates#security-assessment-edit-misconfigured-ca-acl)
+  - [Enforce encryption for RPC certificate enrollment interface (ESC11)](/defender-for-identity/security-posture-assessments/certificates#security-assessment-enforce-encryption-rpc)
+
+The new assessments are available in Microsoft Secure Score, surfacing security issues, and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
+
+For example:
+
+:::image type="content" source="media/secure-score/adcs-new-reports.png" alt-text="Screenshot of the new AD CS security posture assessments.":::
+
+For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
+
+> [!NOTE]
+> While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who have installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+
+### Defender for Identity release 2.223
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.222
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.221
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## November 2023
+
+### Defender for Identity release 2.220
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.219
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Identity timeline includes more than 30 days of data (Preview)
+
+Defender for Identity is gradually rolling out extended data retentions on identity details to more than 30 days.
+
+The identity details page **Timeline** tab, which includes activities from Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Defender for Endpoint, currently includes a minimum of 150 days and is growing. There might be some variation in data retention rates over the next few weeks.
+
+To view activities and alerts on the identity timeline within a specific time frame, select the default **30 Days** and then select **Custom range**. Filtered data from more than 30 days ago is shown for a maximum of seven days at a time.
+
+For example:
+
+:::image type="content" source="media/whats-new/custom-time-frame.png" alt-text="Screenshot of the custom time frame options." lightbox="media/whats-new/custom-time-frame.png":::
+
+For more information, see [Investigate assets](investigate-assets.md) and [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users).
+
+### Defender for Identity release 2.218
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## October 2023
+
+### Defender for Identity release 2.217
+
+This version includes the following improvements:
+
+- **Summary report**: The summary report is updated to include two new columns in the *Health issues* tab:
+  - Details: Additional information on the issue, such as a list of impacted objects or specific sensors on which the issue occurs.
+  - Recommendations: A list of recommended actions that can be taken to resolve the issue, or how to investigate the issue further.
+
+    For more information, see [Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)](reports.md).
+
+- **Health issues**: The 'Remove learning period' toggle was automatically switched off for this tenant's health issue.
+
+This version also includes bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.216
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## September 2023
+
+### Decreased number of alerts for Remote Code Execution Attempts
+
+To better align Defender for Identity and Microsoft Defender for Endpoint alerts, we updated the detection logic for the Defender for Identity [Remote code execution attempt](other-alerts.md#remote-code-execution-attempt-external-id-2019) detections.
+
+While this change results in a decreased number of *Remote code execution attempt* alerts, Defender for Identity continues to record the remote code execution activities. Customers can continue to build their own [advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-overview) and create [custom detection policies](/microsoft-365/security/defender/custom-detection-rules).
+
+### Alert sensitivity settings and learning period enhancements
+
+Some Defenders for Identity alerts wait for a *learning period* before alerts are triggered, while building a profile of patterns to use when distinguishing between legitimate and suspicious activities.
+
+Defender for Identity now provides the following enhancements for the learning period experience:
+
+- Administrators can now use the **Remove learning period** setting to configure the sensitivity used for specific alerts. Define the sensitivity as *Normal* to configure the **Remove learning period** setting as *Off* for the selected type of alert.
+
+- After you deploy a new sensor in a new Defender for Identity workspace, the **Remove learning period** setting is automatically turned *On* for 30 days. When 30 days are complete, the **Remove learning period** setting is automatically turned *Off,* and alert sensitivity levels are returned to their default functionality.
+
+   To have Defender for Identity use standard learning period functionality, where alerts aren't generated until the learning period is done, configure the **Remove learning periods** setting to *Off*.
+
+If you previously updated the **Remove learning period** setting, your setting remains as you'd configured it.
+
+For more information, see [Advanced settings](advanced-settings.md).
+
+> [!NOTE]
+> The **Advanced Settings** page originally listed the *Account enumeration reconnaissance* alert under the **Remove learning period** options as configurable for sensitivity settings. This alert was removed from the list and replaced with the *Security principal reconnaissance (LDAP)* alert. This user interface bug was fixed in November 2023.
+
+### Defender for Identity release 2.215
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity reports moved to the main Reports area
+
+Now you can access Defender for Identity reports from Microsoft Defender XDR's main **Reports** area instead of the **Settings** area. For example:
+
+:::image type="content" source="media/whats-new/reports-main-area.png" alt-text="Screenshot of the Defender for Identity report access from the main Reports area.":::
+
+For more information, see [Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)](reports.md).
+
+### Go hunt button for groups in Microsoft Defender XDR
+
+Defender for Identity added the **Go hunt** button for groups in Microsoft Defender XDR. Users can use the **Go hunt** button to query for group-related activities and alerts during an investigation.
+
+For example:
+
+:::image type="content" source="media/whats-new/go-hunt-groups.png" alt-text="Screenshot of the new Go hunt button on a group details pane.":::
+
+For more information, see [Quickly hunt for entity or event information with go hunt](/microsoft-365/security/defender/advanced-hunting-go-hunt).
+
+### Defender for Identity release 2.214
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Performance enhancements
+
+Defender for Identity made internal improvements for latency, stability, and performance when transferring real-time events from Defender for Identity services to Microsoft Defender XDR. Customers should expect no delays in Defender for Identity data appearing in Microsoft Defender XDR, such as alerts or activities for advanced hunting.
+
+For more information, see:
+
+- [Security alerts in Microsoft Defender for Identity](alerts-overview.md)
+- [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
+- [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview)
+
+## August 2023
+
+### Defender for Identity release 2.213
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.212
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.211
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### New sensor type for Active Directory Certificate Services (AD CS)
+
+Defender for Identity now supports the new **ADCS** sensor type for a dedicated server with Active Directory Certificate Services (AD CS) configured.
+
+You see the new sensor type identified in the **Settings > Identities > Sensors** page in Microsoft Defender XDR. For more information, see [Manage and update Microsoft Defender for Identity sensors](sensor-settings.md#sensor-details).
+
+Together with the new sensor type, Defender for Identity also now provides related AD CS alerts and Secure Score reports. To view the new alerts and Secure Score reports, make sure that the required events are being collected and logged on your server. For more information, see [Configure auditing for Active Directory Certificate Services (AD CS) events](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs).
+
+AD CS is a Windows Server role that issues and manages public key infrastructure (PKI) certificates in secure communication and authentication protocols. For more information, see [What is Active Directory Certificate Services?](/windows-server/identity/ad-cs/active-directory-certificate-services-overview)
+
+### Defender for Identity release 2.210
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ## July 2023
 
@@ -131,7 +951,7 @@ Released May 15, 2023
 
 - New health alert for verifying that ADFS Container Auditing is configured correctly. For more information, see [Microsoft Defender for Identity sensor health alerts](health-alerts.md).
 
-- The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed. For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md).
+- The Microsoft Defender 365 **Identity** page includes UI updates for the lateral movement path experience. No functionality was changed.
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -152,7 +972,7 @@ In Microsoft Defender XDR, create rule conditions based on evidence types, and t
 Released April 23, 2023
 
 - New health alert for verifying that Directory Services Configuration Container Auditing is configured correctly, as described in the [health alerts page](health-alerts.md).
-- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region. For the most current list of regional deployment, see [Defender for Identity components](architecture.md#defender-for-identity-components).
+- New workspaces for AD tenants mapped to New Zealand are created in the Australia East region.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## March 2023
@@ -167,7 +987,7 @@ Released March 27, 2023
 
 - We removed the prerequisite of configuring a Directory Services account for the sensors to start. For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
-- We no longer require logging 1644 events. If you have this registry setting enabled, you can remove it. For more information, see  [Event ID 1644](configure-windows-event-collection.md#legacy-configurations).
+- We no longer require logging 1,644 events. If you have this registry setting enabled, you can remove it. For more information, see  [Event ID 1644](configure-windows-event-collection.md#legacy-configurations).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -181,7 +1001,7 @@ Released March 16, 2023
 
 Released March 5, 2023
 
-- Some exclusions for the **Honeytoken was queried via SAM-R** alert weren't functioning properly. In these instances, alerts were being triggered even for excluded entities. This error has now been fixed.
+- Some exclusions for the **Honeytoken was queried via SAM-R** alert weren't functioning properly. In these instances, alerts were being triggered even for excluded entities. This error is now fixed.
 
 - **Updated NTLM protocol name for the Identity Advanced Hunting tables**: The old protocol name `Ntlm` is now listed as the new protocol name `NTLM` in Advanced Hunting Identity tables: IdentityLogonEvents, IdentityQueryEvents, IdentityDirectoryEvents.
 If you're currently using the `Ntlm` protocol in case-sensitive format from the Identity event tables, you should change it to `NTLM`.
@@ -216,7 +1036,7 @@ Released February 15, 2023
   You can also exclude specific users from the automated response actions. For more information, see [Configure Defender for Identity automated response exclusions](automated-response-exclusions.md).
 - **Remove learning period**: The alerts generated by Defender for Identity are based on various factors such as profiling, deterministic detection, machine learning, and behavioral algorithms that it has learned about your network. The full learning process for Defender for Identity can take up to 30 days per domain controller. However, there might be instances where you would like to receive alerts even before the full learning process has been completed. For example, when you install a new sensor on a domain controller or when you're evaluating the product, you might want to get alerts immediately. In such cases, you can turn off the learning period for the affected alerts by enabling the **Remove learning period** feature. For more information, see [Advanced settings](advanced-settings.md).
 
-- **New way of sending alerts to M365D**: A year ago, we announced that all of [Microsoft Defender for Identity experiences are available in the Microsoft Defender portal](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/all-microsoft-defender-for-identity-features-now-available-in/ba-p/3130037).  Our primary alert pipeline is now gradually switching from *Defender for Identity > Defender for Cloud Apps > Microsoft Defender XDR* to *Defender for Identity > Microsoft Defender XDR*. This integration means that status updates in Defender for Cloud Apps **will not be** reflected in Microsoft Defender XDR and vice versa. This change should significantly reduce the time it takes for alerts to appear in the Microsoft Defender portal. As part of this migration, all Defender for Identity policies will no longer be available in the Defender for Cloud Apps portal as of March 5. As always, we recommend using the Microsoft Defender portal for all Defender for Identity experiences.
+- **New way of sending alerts to M365D**: A year ago, we announced that all of [Microsoft Defender for Identity experiences are available in the Microsoft Defender portal](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/all-microsoft-defender-for-identity-features-now-available-in/ba-p/3130037). Our primary alert pipeline is now gradually switching from *Defender for Identity > Defender for Cloud Apps > Microsoft Defender XDR* to *Defender for Identity > Microsoft Defender XDR*. This integration means that status updates in Defender for Cloud Apps **will not be** reflected in Microsoft Defender XDR and vice versa. This change should significantly reduce the time it takes for alerts to appear in the Microsoft Defender portal. As part of this migration, all Defender for Identity policies will no longer be available in the Defender for Cloud Apps portal as of March 5. As always, we recommend using the Microsoft Defender portal for all Defender for Identity experiences.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -236,7 +1056,7 @@ Released January 10, 2023
 
 - New health alert for verifying that the sensor’s power settings are configured for optimal performance, as described in the [health alerts page](health-alerts.md).
 
-- We've added [MITRE ATT&CK](https://attack.mitre.org/) information to the IdentityLogonEvents, IdentityDirectoryEvents and IdentityQueryEvents tables in Microsoft Defender XDR Advanced Hunting.  In the **AdditionalFields** column, you can find details about the Attack Techniques and the Tactic (Category) associated with some of our logical activities.
+- We've added [MITRE ATT&CK](https://attack.mitre.org/) information to the IdentityLogonEvents, IdentityDirectoryEvents, and IdentityQueryEvents tables in Microsoft Defender XDR Advanced Hunting. In the **AdditionalFields** column, you can find details about the Attack Techniques and the Tactic (Category) associated with some of our logical activities.
 
 - Since all major Microsoft Defender for Identity features are now available in the Microsoft Defender portal, the portal redirection setting is automatically enabled for each tenant starting January 31, 2023. For more information, see [Redirecting accounts from Microsoft Defender for Identity to Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-mdi-redirection#what-to-expect).
 
@@ -258,7 +1078,7 @@ Released November 10, 2022
 
 - New health alert for verifying that Directory Services Advanced Auditing is configured correctly, as described in the [health alerts page](health-alerts.md).
 
-- Some of the changes introduced in [Defender for Identity release 2.191](#defender-for-identity-release-2191) regarding honeytoken alerts were not enabled properly. Those issues have been resolved now.
+- Some of the changes introduced in [Defender for Identity release 2.191](#defender-for-identity-release-2191) regarding honeytoken alerts weren't enabled properly. Those issues have been resolved now.
 
 - From the end of November, manual integration with Microsoft Defender for Endpoint is no longer supported. However, we highly recommend using the Microsoft Defender portal (<https://security.microsoft.com>) which has the integration built in.
 
@@ -293,7 +1113,7 @@ Released October 23, 2022
 Released September 19, 2022
 
 - **More activities to trigger honeytoken alerts**  
-Microsoft Defender for Identity offers the ability to define honeytoken accounts, which are used as traps for malicious actors. Any authentication associated with these honeytoken accounts (normally dormant), triggers a honeytoken activity (external ID 2014) alert. New for this version, any LDAP or SAMR query against these honeytoken accounts will trigger an alert. In addition, if event 5136 is audited, an alert will be triggered when one of the attributes of the honeytoken was changed or if the group membership of the honeytoken was changed.
+Microsoft Defender for Identity offers the ability to define honeytoken accounts, which are used as traps for malicious actors. Any authentication associated with these honeytoken accounts (normally dormant), triggers a honeytoken activity (external ID 2014) alert. New for this version, any LDAP, or SAMR query against these honeytoken accounts will trigger an alert. In addition, if event 5136 is audited, an alert is triggered when one of the attributes of the honeytoken was changed or if the group membership of the honeytoken was changed.
 
  For more information, see [Configure Windows Event collection](configure-windows-event-collection.md).
 
@@ -350,7 +1170,7 @@ Released July 18, 2022
   - Disable User – which disables the user on the Active Directory level
   - Suspend User – which disables the user on the Microsoft Entra ID level
 
-  We understand that the time it takes to sync from Active Directory to Microsoft Entra ID can be crucial, so now you can choose to disable users in one after the other, to remove the dependency on the sync itself. Note that a user disabled only in Microsoft Entra ID will be overwritten by Active Directory, if the user is still active there.
+  We understand that the time it takes to sync from Active Directory to Microsoft Entra ID can be crucial, so now you can choose to disable users in one after the other, to remove the dependency on the sync itself. If a user is disabled only in Microsoft Entra ID, it will be overwritten by Active Directory if the user is still active there.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -374,7 +1194,7 @@ Microsoft Defender for Identity continuously monitors your environment to identi
 Released June 20, 2022 (updated July 4, 2022)
 
 - New security alert: Suspected DFSCoerce attack using Distributed File System Protocol  
-In response to the publishing of a recent attack tool that leverages a flow in the DFS protocol, Microsoft Defender for Identity will trigger a security alert whenever an attacker is using this attack method. To learn more about this attack, [read the blog post](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/how-microsoft-defender-for-identity-protects-against-dfscoerce/ba-p/3562912).
+In response to the publishing of a recent attack tool that uses a flow in the DFS protocol, Microsoft Defender for Identity will trigger a security alert whenever an attacker is using this attack method. To learn more about this attack, [read the blog post](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/how-microsoft-defender-for-identity-protects-against-dfscoerce/ba-p/3562912).
 
 ### Defender for Identity release 2.183
 
@@ -386,7 +1206,7 @@ Released June 20, 2022
 
 Released June 4, 2022
 
-- A new **About** page for Defender for Identity is available. You can find it in the [Microsoft Defender portal](https://security.microsoft.com), under **Settings** -> **Identities** -> **About**. It provides several important details about your Defender for Identity instance, including the instance name, version, ID and the geolocation of your instance. This information can be helpful when troubleshooting issues and opening support tickets.
+- A new **About** page for Defender for Identity is available. You can find it in the [Microsoft Defender portal](https://security.microsoft.com), under **Settings** -> **Identities** -> **About**. It provides several important details about your Defender for Identity instance, including the instance name, version, ID, and the geolocation of your instance. This information can be helpful when troubleshooting issues and opening support tickets.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## May 2022
@@ -412,7 +1232,7 @@ In response to the publishing of a recent CVE, Microsoft Defender for Identity w
 
 - In version 2.177, we released additional LDAP activities that can be covered by Defender for Identity. However, we found a bug that causes the events not to be presented and ingested in the Defender for Identity portal. This has been fixed in this release. From version 2.180 onward, when you enable event ID 1644 you don't just get visibility into LDAP activities over Active Directory Web Services, but also other LDAP activities will include  the user who performed the LDAP activity on the source computer. This applies for security alerts and logical activities that are based on LDAP events.
 
-- As a response to the recent KrbRelayUp exploitation, we've released a silent detector to help us evaluate our response to this exploitation. The silent detector will allow us to evaluate the effectiveness of the detection, and gather information based on events we're collecting. If this detection will be shown to be in high quality, we'll release a new security alert in the next version.
+- As a response to the recent KrbRelayUp exploitation, we've released a silent detector to help us evaluate our response to this exploitation. The silent detector allows us to evaluate the effectiveness of the detection, and gather information based on events we're collecting. If this detection will be shown to be in high quality, we'll release a new security alert in the next version.
 
 - We've renamed **Remote code execution over DNS** to **Remote code execution attempt over DNS**, as it better reflects the logic behind these security alerts.
 
@@ -447,7 +1267,7 @@ Released March 27, 2022
 
 Released March 16, 2022
 
-- Beginning with this version, when installing the sensor from a new package, the sensor's version under **Add/Remove Programs** will appear with the full version number (for example, 2.176.x.y), as opposed to the static 2.0.0.0 that was previously shown. It will continue to show that version (the one installed through the package) even though the version will be updated through the automatic updates from the Defender for Identity cloud services. The real version can be seen in the [sensor settings page](https://security.microsoft.com/settings/identities?tabid=sensor) in the portal, in the executable path or in the file version.
+- Beginning with this version, when installing the sensor from a new package, the sensor's version under **Add/Remove Programs** appear with the full version number (for example, 2.176.x.y), as opposed to the static 2.0.0.0 that was previously shown. It continues to show that version (the one installed through the package) even though the version will be updated through the automatic updates from the Defender for Identity cloud services. The real version can be seen in the [sensor settings page](https://security.microsoft.com/settings/identities?tabid=sensor) in the portal, in the executable path or in the file version.
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -463,7 +1283,7 @@ Released March 6, 2022
 
 Released February 20, 2022
 
-- We've added the **shost** FQDN of the account involved in the alert to the message sent to the SIEM.  For more information, see [Microsoft Defender for Identity SIEM log reference](cef-format-sa.md).
+- We've added the **shost** FQDN of the account involved in the alert to the message sent to the SIEM. For more information, see [Microsoft Defender for Identity SIEM log reference](cef-format-sa.md).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -602,7 +1422,7 @@ Released August 1, 2021
 
 Released July 25, 2021
 
-- Starting from this version, we are adding the Npcap driver executable to the sensor installation package. For more information, see [WinPcap and Npcap drivers](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers).
+- Starting from this version, we're adding the Npcap driver executable to the sensor installation package. For more information, see [WinPcap and Npcap drivers](/defender-for-identity/technical-faq#winpcap-and-npcap-drivers).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Defender for Identity release 2.155
@@ -659,7 +1479,7 @@ Released May 31, 2021
 
 Released May 23, 2021
 
-- If you [configure and collect](configure-windows-event-collection.md) event ID 4662, Defender for Identity will report which user made the [Update Sequence Number (USN)](/powershell/module/activedirectory/get-adreplicationuptodatenessvectortable#description) change to various Active Directory object properties. For example, if an account password is changed, and event 4662 is enabled, the event will record who changed the password.
+- If you [configure and collect](configure-windows-event-collection.md) event ID 4662, Defender for Identity will report which user made the [Update Sequence Number (USN)](/powershell/module/activedirectory/get-adreplicationuptodatenessvectortable#description) change to various Active Directory object properties. For example, if an account password is changed, and event 4662 is enabled, the event records who changed the password.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Defender for Identity release 2.147
@@ -697,7 +1517,7 @@ Released April 12, 2021
 
 Released March 14, 2021
 
-- We've added Windows Event 4741 to detect *computer accounts added to Active Directory* activities. [Configure the new event](configure-windows-event-collection.md) to be collected by Defender for Identity. Once configured, collected events will be available to view in the activity log as well as the Microsoft Defender XDR Advanced Hunting.
+- We've added Windows Event 4741 to detect *computer accounts added to Active Directory* activities. [Configure the new event](configure-windows-event-collection.md) to be collected by Defender for Identity. Once configured, collected events are available to view in the activity log and the Microsoft Defender XDR Advanced Hunting.
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Defender for Identity release 2.142
@@ -809,7 +1629,7 @@ Released October 18, 2020
 Released September 27, 2020
 
 - **Modified email notifications configuration**  
-We are removing the **Mail notification** toggles for turning on email notifications. To receive email notifications, simply add an address. For more information, see [Set notifications](notifications.md).
+We're removing the **Mail notification** toggles for turning on email notifications. To receive email notifications, simply add an address. For more information, see [Set notifications](notifications.md).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Azure ATP release 2.127
@@ -881,7 +1701,7 @@ Released July 26, 2020
 Released July 5, 2020
 
 - **Feature enhancement: New *Excluded domain controllers* tab in Excel report**  
-To improve the accuracy of our domain controller coverage calculation, we will be excluding domain controllers with external trusts from the calculation toward achieving 100% coverage. Excluded domain controllers will be surfaced in the new *excluded domain controllers* tab in the domain coverage Excel report download. For information about downloading the report, see [Domain controller status](/defender-for-identity/sensor-settings#domain-controller-status).
+To improve the accuracy of our domain controller coverage calculation, we'll be excluding domain controllers with external trusts from the calculation toward achieving 100% coverage. Excluded domain controllers are surfaced in the new *excluded domain controllers* tab in the domain coverage Excel report download. For information about downloading the report, see [Domain controller status](/defender-for-identity/sensor-settings#domain-controller-status).
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## June 2020
@@ -898,14 +1718,14 @@ Azure ATP security assessments now include the following new assessments:
     This assessment Azure ATP continuously monitors your environment to identify accounts with attribute values that expose a security risk, and reports on these accounts to assist you in protecting your environment. For more information, see [Security assessment: Unsecure account attributes](/defender-for-identity/security-assessment-unsecure-account-attributes).
 
 - **Updated sensitivity definition**  
-We are expanding our sensitivity definition for on-premises accounts to include entities that are allowed to use Active Directory replication.
+We're expanding our sensitivity definition for on-premises accounts to include entities that are allowed to use Active Directory replication.
 
 ### Azure ATP release 2.117
 
 Released June 14, 2020
 
 - **Feature enhancement: Additional activity details available**  
-We've extended the device information we send to Defender for Cloud Apps including device names, IP addresses, account UPNs and used port. For more information about our integration with Defender for Cloud Apps, see [Using Azure ATP with Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity).
+We've extended the device information we send to Defender for Cloud Apps including device names, IP addresses, account UPNs, and used port. For more information about our integration with Defender for Cloud Apps, see [Using Azure ATP with Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity).
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -950,7 +1770,7 @@ Brute Force attack is used by attackers to gain a foothold into your organizatio
 
 ### Azure ATP release 2.112
 
-Released Mar 15, 2020
+Released March 15, 2020
 
 - **New Azure ATP instances automatically integrate with Microsoft Defender for Cloud Apps**  
 When creating an Azure ATP instance (formerly instance), the integration with Microsoft Defender for Cloud Apps is enabled by default. For more information about the integration, see [Using Azure ATP with Microsoft Defender for Cloud Apps](/defender-for-identity/deploy-defender-identity).
@@ -967,11 +1787,11 @@ The following activity monitors are now available:
 Starting from this version, Azure ATP now provides information for resource access activities showing whether the resource is trusted for unconstrained delegation. This resource configuration is unsecure and poses a risk that malicious actors can force the application to their advantage. For more information about the risk, see [Security assessment: Unsecure Kerberos delegation](/defender-for-identity/security-assessment-unconstrained-kerberos).
 
 - **Suspected SMB packet manipulation (CVE-2020-0796 exploitation) - (preview)**  
-Azure ATP's [Suspected SMB packet manipulation](lateral-movement-alerts.md) security alert is now in public preview. In this detection, an Azure ATP security alert is triggered when SMBv3 packet suspected of exploiting the [CVE-2020-0796](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-0796) security vulnerability are made against a domain controller in the network.
+Azure ATP's [Suspected SMB packet manipulation](lateral-movement-alerts.md) security alert is now in public preview. In this detection, an Azure ATP security alert is triggered when SMBv3 packets are suspected of exploiting the [CVE-2020-0796](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-0796) security vulnerability are made against a domain controller in the network.
 
 ### Azure ATP release 2.111
 
-Released Mar 1, 2020
+Released March 1, 2020
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -979,21 +1799,21 @@ Released Mar 1, 2020
 
 ### Azure ATP release 2.110
 
-Released Feb 23, 2020
+Released February 23, 2020
 
 - **New security assessment: Unmonitored domain controllers**  
 Azure ATP security assessments now include a report on unmonitored domain controllers, servers without a sensor, to help you in managing full coverage of your environment. For more information, see [Unmonitored domain controllers](/defender-for-identity/security-assessment-unmonitored-domain-controller).
 
 ### Azure ATP release 2.109
 
-Released Feb 16, 2020
+Released February 16, 2020
 
 - **Feature enhancement: Sensitive entities**  
 Starting from this version (2.109), machines identified as Certificate Authority, DHCP, or DNS Servers by Azure ATP are now automatically tagged as **Sensitive**.
 
 ### Azure ATP release 2.108
 
-Released Feb 9, 2020
+Released February 9, 2020
 
 - **New feature: Support for group Managed Service Accounts**  
 Azure ATP now supports using group Managed Service Accounts (gMSA) for improved security when connecting Azure ATP sensors to your Microsoft Entra forests. For more information about using gMSA with Azure ATP sensors, see [Connect to your Active Directory Forest](/defender-for-identity/directory-service-accounts#prerequisites).
@@ -1006,7 +1826,7 @@ We've updated our domain controller coverage report logic to include additional 
 
 ### Azure ATP release 2.107
 
-Released Feb 3, 2020
+Released February 3, 2020
 
 - **New monitored activity: SID history change**  
 SID history change is now a monitored and filterable activity. Learn more about which [activities Azure ATP monitors](monitored-activities.md), and how to [filter and search monitored activities](/defender-for-identity/monitored-activities) in the portal.
@@ -1015,19 +1835,19 @@ SID history change is now a monitored and filterable activity. Learn more about 
 Once an alert is closed or suppressed in the Azure ATP portal, if the same activity is detected again within a short period of time, a new alert is opened. Previously, under the same conditions, the alert was reopened.
 
 - **TLS 1.2 required for portal access and sensors**  
-TLS 1.2 is now required to use Azure ATP sensors and the cloud service. Access to the Azure ATP portal will no longer be possible using browsers that do not support TLS 1.2.
+TLS 1.2 is now required to use Azure ATP sensors and the cloud service. Access to the Azure ATP portal will no longer be possible using browsers that don't support TLS 1.2.
 
 ## January 2020
 
 ### Azure ATP release 2.106
 
-Released Jan 19, 2020
+Released January 19, 2020
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Azure ATP release 2.105
 
-Released Jan 12, 2020
+Released January 12, 2020
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1035,10 +1855,10 @@ Released Jan 12, 2020
 
 ### Azure ATP release 2.104
 
-Released Dec 23, 2019
+Released December 23, 2019
 
 - **Sensor version expirations eliminated**  
-Azure ATP sensor deployment and sensor installation packages no longer expire after a number of versions and now only update themselves once. The result of this feature is that previously downloaded sensor installation packages can now be installed even if they are older than our max number of lapsed versions.
+Azure ATP sensor deployment and sensor installation packages no longer expire after a number of versions and now only update themselves once. The result of this feature is that previously downloaded sensor installation packages can now be installed even if they're older than our max number of lapsed versions.
 
 - **Confirm compromise**  
 You can now confirm compromise of specific Microsoft 365 users and set their risk level to **high**. This workflow allows your security operations teams another response capability to reduce their security incidents Time-To-Resolve thresholds. Learn more about [how to confirm compromise](/cloud-app-security/tutorial-ueba?branch=pr-en-us-1204#phase-4-protect-your-organization) using Azure ATP and Defender for Cloud Apps.
@@ -1050,13 +1870,13 @@ On Azure ATP portal pages where a new experience is available in the Defender fo
 
 ### Azure ATP release 2.103
 
-Released Dec 15, 2019
+Released December 15, 2019
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Azure ATP release 2.102
 
-Released Dec 8, 2019
+Released December 8, 2019
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1064,13 +1884,13 @@ Released Dec 8, 2019
 
 ### Azure ATP release 2.101
 
-Released Nov 24, 2019
+Released November 24, 2019
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
 ### Azure ATP release 2.100
 
-Released Nov 17, 2019
+Released November 17, 2019
 
 - Version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1107,7 +1927,7 @@ Released October 6, 2019
 Released September 22, 2019
 
 - **Enriched NTLM authentication data using Windows Event 8004**  
-Azure ATP sensors are now able to automatically read and enrich the NTLM authentications activities with your accessed server data when NTLM auditing is enabled, and Windows Event 8004 is turned on. Azure ATP parses Windows Event 8004 for NTLM authentications in order to enrich the NTLM authentication data used for Azure ATP threat analysis and alerts. This enhanced capability provides resource access activity over NTLM data as well as enriched failed logon activities including the destination computer which the user attempted but failed to access.
+Azure ATP sensors are now able to automatically read and enrich the NTLM authentications activities with your accessed server data when NTLM auditing is enabled, and Windows Event 8004 is turned on. Azure ATP parses Windows Event 8004 for NTLM authentications in order to enrich the NTLM authentication data used for Azure ATP threat analysis and alerts. This enhanced capability provides resource access activity over NTLM data and enriched failed logon activities including the destination computer, which the user attempted but failed to access.
 
   Learn more about NTLM authentication activities [using Windows Event 8004](configure-windows-event-collection.md#configure-ntlm-auditing).
 
@@ -1188,10 +2008,10 @@ Incoming Syslog connections for Azure ATP standalone sensors are now fully autom
 Released July 14, 2019
 
 - **New security alert: Suspected NTLM authentication tampering (external ID 2039)**  
-Azure ATP's new [Suspected NTLM authentication tampering](lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when use of "man-in-the-middle" attack is suspected of successfully bypassing NTLM Message Integrity Check (MIC), a security vulnerability detailed in Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). These types of attacks attempt to downgrade NTLM security features and successfully authenticate, with the ultimate goal of making successful lateral movements.
+Azure ATP's new [Suspected NTLM authentication tampering](lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when use of "man-in-the-middle" attack is suspected of successfully bypassing NTLM Message Integrity Check (MIC), a security vulnerability detailed in Microsoft [CVE-2019-1040](https://msrc.microsoft.com/update-guide/advisory/CVE-2019-1040). These types of attacks attempt to downgrade NTLM security features and successfully authenticate, with the ultimate goal of making successful lateral movements.
 
 - **Feature enhancement: Enriched device operating system identification**  
-Until now, Azure ATP provided entity device operating system information based on the available attribute in Active Directory. Previously, if operating system information was unavailable in Active Directory, the information was also unavailable on Azure ATP entity pages. Starting from this version, Azure ATP now provides this information for devices where Active Directory doesn't have the information, or are not registered in Active Directory, by using enriched device operating system identification methods.
+Until now, Azure ATP provided entity device operating system information based on the available attribute in Active Directory. Previously, if operating system information was unavailable in Active Directory, the information was also unavailable on Azure ATP entity pages. Starting from this version, Azure ATP now provides this information for devices where Active Directory doesn't have the information, or aren't registered in Active Directory, by using enriched device operating system identification methods.
 
     The addition of enriched device operating system identification data helps identify unregistered and non-Windows devices, while simultaneously aiding in your investigation process. For learn more about Network Name Resolution in Azure ATP, see [Understanding Network Name Resolution (NNR)](nnr-policy.md).  
 
@@ -1220,7 +2040,7 @@ Azure ATP instances are now supported in the Azure UK data center. To learn more
 The **Suspicious additions to sensitive groups** alert was previously named the **Suspicious modifications to sensitive groups** alert. The external ID of the alert (ID 2024) remains the same. The descriptive name change more accurately reflects the purpose of alerting on additions to your **sensitive** groups. The enhanced alert also features new evidence and improved descriptions. For more information, see [Suspicious additions to sensitive groups](domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024).  
 
 - **New documentation feature: Guide for moving from Advanced Threat Analytics to Azure ATP**  
-This new article includes prerequisites, planning guidance, as well as configuration and verification steps for moving from ATA to Azure ATP service. For more information, see [Move from ATA to Azure ATP](migrate-from-ata-overview.md).
+This new article includes prerequisites, planning guidance, and configuration and verification steps for moving from ATA to Azure ATP service. For more information, see [Move from ATA to Azure ATP](migrate-from-ata-overview.md).
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1292,7 +2112,7 @@ Manual Sensitive tagging for Exchange Servers
     2. Under **Detection**, select **Entity tags**, then select **Sensitive**.
     3. Select **Exchange Servers** and then add the entity you wish to tag.
 
-    After tagging a computer as an Exchange Server, it will be tagged as Sensitive and display that it was tagged as an Exchange Server.  The Sensitive tag will appear in the computer's entity profile, and the computer will be considered in all detections that are based on Sensitive accounts and Lateral Movement Paths.
+    After tagging a computer as an Exchange Server, it will be tagged as Sensitive and display that it was tagged as an Exchange Server. The Sensitive tag appears in the computer's entity profile, and the computer will be considered in all detections that are based on Sensitive accounts and Lateral Movement Paths.
 
 - This version also includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1317,7 +2137,7 @@ Released April 28, 2019
 - **Feature enhancement: Sensitive entities**  
 Starting from this version (2.75), machines identified as Exchange Servers by Azure ATP are now automatically tagged as **Sensitive**.  
 
-    Entities that are automatically tagged as **Sensitive** because they function as Exchange Servers list this classification as the reason they are tagged.
+    Entities that are automatically tagged as **Sensitive** because they function as Exchange Servers list this classification as the reason they're tagged.
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
@@ -1356,7 +2176,7 @@ Health alerts were added for confidence levels associated with Azure ATP securit
     See [What is Network Name Resolution](nnr-policy.md) to learn more about how Azure ATP uses NNR and why it's important for alert accuracy.
 
 - **Server support: Support added for Server 2019 with use of KB4487044**  
-Support added for use of Windows Server 2019, with a patch level of KB4487044. Use of Server 2019 without the patch is not supported, and is blocked starting from this update.
+Support added for use of Windows Server 2019, with a patch level of KB4487044. Use of Server 2019 without the patch isn't supported, and is blocked starting from this update.
 
 - **Feature enhancement: User-based alert exclusion**  
 Extended alert exclusion options now allow for excluding specific users from specific alerts. Exclusions can help avoid situations where use or configuration of certain types of internal software repeatedly triggered benign security alerts.
@@ -1416,7 +2236,7 @@ To explain the power of Azure ATP in detecting the real threats to your working 
 Released February 24, 2019
 
 - **New security alert: Security principal reconnaissance (LDAP) – (preview)**  
-Azure ATP's [Security principal reconnaissance (LDAP) - preview](reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when security principal reconnaissance is used by attackers to gain critical information about the domain environment. This information helps attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain.
+Azure ATP's [Security principal reconnaissance (LDAP) - preview](reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when security principal reconnaissance is used by attackers to gain critical information about the domain environment. This information helps attackers map the domain structure, and identify privileged accounts for use in later steps in their attack kill chain.
 
     Lightweight Directory Access Protocol (LDAP) is one the most popular methods used for both legitimate and malicious purposes to query Active Directory. LDAP focused security principal reconnaissance is commonly used as the first phase of a Kerberoasting attack. Kerberoasting attacks are used to get a target list of Security Principal Names (SPNs), which attackers then attempt to get Ticket Granting Server (TGS) tickets for.
 
@@ -1443,7 +2263,7 @@ Learn more about [Suspected DCSync attack (replication of directory services)](d
 Released February 10, 2019
 
 - **New security alert: Suspected NTLM relay attack (Exchange account) – (preview)**  
-Azure ATP's [Suspected NTLM relay attack (Exchange account) - preview](lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when use of Exchange account credentials from a suspicious source is identified. These types of attacks attempt to leverage NTLM relay techniques to gain domain controller exchange privileges and are known as **ExchangePriv**. Learn more about the **ExchangePriv** technique from the [ADV190007 advisory](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) first published January 31, 2019, and the [Azure ATP alert response](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+Azure ATP's [Suspected NTLM relay attack (Exchange account) - preview](lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) security alert is now in public preview. In this detection, an Azure ATP security alert is triggered when use of Exchange account credentials from a suspicious source is identified. These types of attacks attempt to use NTLM relay techniques to gain domain controller exchange privileges and are known as **ExchangePriv**. Learn more about the **ExchangePriv** technique from the [ADV190007 advisory](https://msrc.microsoft.com/update-guide/advisory/ADV190007) first published January 31, 2019, and the [Azure ATP alert response](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **General availability: Remote code execution over DNS**  
 This alert is now in GA (general availability). For more information and alert features, see the [Remote code execution over DNS alert description page](lateral-movement-alerts.md#remote-code-execution-attempt-over-dns-external-id-2036).
@@ -1507,7 +2327,7 @@ In response to customer feedback regarding Azure ATP usage with domain controlle
 Released January 20, 2019
 
 - **New security alert: Remote code execution over DNS – (preview)**  
-Azure ATP's [Remote code execution over DNS](lateral-movement-alerts.md#remote-code-execution-attempt-over-dns-external-id-2036) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) are made against a domain controller in the network.
+Azure ATP's [Remote code execution over DNS](lateral-movement-alerts.md#remote-code-execution-attempt-over-dns-external-id-2036) security alert is now in public preview.    In this detection, an Azure ATP security alert is triggered when DNS queries suspected of exploiting security vulnerability [CVE-2018-8626](https://msrc.microsoft.com/update-guide/advisory/CVE-2018-8626) are made against a domain controller in the network.
 
 - **Feature Enhancement: 72 hour delayed sensor update**  
 Changed option to delay sensor updates on selected sensors to 72 hours (instead of the previous 24-hour delay) after each release update of Azure ATP. See [Azure ATP sensor update](/defender-for-identity/sensor-settings) for configuration instructions.
@@ -1522,7 +2342,7 @@ Released January 13, 2019
 Azure ATP's [Data exfiltration over SMB](exfiltration-alerts.md) security alert is now in public preview. Attackers with domain admin rights can compromise the KRBTGT account. Using the KRBTGT account, attackers can create a Kerberos ticket granting ticket (TGT) that provide authorization to any resource.
 
 - **Feature Enhancement: Remote code execution attempt** security alert  
-A new alert description and additional evidence were added to help make the alert easier to understand, and provide better investigation workflows.
+A new alert description and extra evidence were added to help make the alert easier to understand, and provide better investigation workflows.
 
 - **Feature Enhancement: DNS query logical activities**  
 Additional query types were added to [Azure ATP monitored activities](monitored-activities.md) including: **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**.
@@ -1616,13 +2436,13 @@ Two additional features are added to enhance Azure ATP Lateral Movement Path (LM
 
   See [Azure ATP Lateral Movement Paths](/defender-for-identity/understand-lateral-movement-paths) to learn more about how to use and investigate with enhanced LMPs.
 
-- **Documentation enhancements: Lateral Movement Paths, Security Alert names**  
+- **Documentation enhancements: Lateral Movement Paths and Security Alert names** 
 Additions and updates were made to Azure ATP articles describing Lateral Movement Path descriptions and features, name mapping was added for all instances of old security alert names to new names and externalIds.
   - See [Azure ATP Lateral Movement Paths](/defender-for-identity/understand-lateral-movement-paths), [Investigate  Lateral Movement Paths](/defender-for-identity/understand-lateral-movement-paths), and [Security Alert Guide](/defender-for-identity/alerts-overview) to learn more.
 
 - This version includes improvements and bug fixes for internal sensor infrastructure.
 
-For details of each Defender for Identity release prior to (and including) release 2.55, see the [Defender for Identity release reference](/defender-for-identity/whats-new).
+For details of each Defender for Identity release before (and including) release 2.55, see the [Defender for Identity release reference](/defender-for-identity/whats-new).
 
 ## Next steps
 

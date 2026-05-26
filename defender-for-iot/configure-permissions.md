@@ -2,7 +2,7 @@
 title: Configure the permissions needed for Microsoft Defender for IoT in the Defender portal
 description: This article describes how to configure the permissions required for Microsoft Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 07/23/2024
@@ -29,17 +29,17 @@ This article shows you how to make general changes to RBAC roles and permissions
 There are two ways to manage user access to the Defender portal, depending on the type of tenent you're using. Each system has different named permissions that allow access for Defender for IoT. The two systems are:
 
 - [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
-- [Microsoft Defender XDR Unified RBAC](/defender-xdr/custom-roles): Use Microsoft Defender XDR Unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
+- [Microsoft Defender unified RBAC](/defender-xdr/custom-roles): Use Microsoft Defender unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
-The instructions and permission settings listed in this article apply to Defender XDR Unified RBAC.
+The instructions and permission settings listed in this article apply to Defender unified RBAC.
 
 ### RBAC for version 1 or 2 only
 
-Depending on your tenant, you might have access to RBAC version 1 or 2 instead of Defender XDR Unified RBAC. Assign RBAC permissions and roles, based on the [summary table](#summary-of-roles-and-permissions-for-all-defender-for-iot-features), to give users access to general Defender for IoT features. However, follow the instructions listed here [for RBAC version 1](/defender-endpoint/prepare-deployment), or here [for RBAC version 2](/defender-endpoint/user-roles#permission-options).
+Depending on your tenant, you might have access to RBAC version 1 or 2 instead of Defender unified RBAC. Assign RBAC permissions and roles, based on the [summary table](#summary-of-roles-and-permissions-for-all-defender-for-iot-features), to give users access to general Defender for IoT features. However, follow the instructions listed here [for RBAC version 1](/defender-endpoint/prepare-deployment), or here [for RBAC version 2](/defender-endpoint/user-roles#permission-options).
 
 If you're using the Defender portal for the first time, you need to set up all of your roles and permissions. For more information, see [manage portal access using role-based access control](/defender-xdr/manage-rbac).
 
-## Defender XDR Unified RBAC roles for features in Defender for IoT
+## Defender unified RBAC roles for features in Defender for IoT
 
 Assign RBAC permissions and roles, based on the [summary table](#summary-of-roles-and-permissions-for-all-defender-for-iot-features), to give users access to general Defender for IoT features:
 
@@ -81,7 +81,7 @@ Assign RBAC permissions and roles, based on the [summary table](#summary-of-role
 
 To assign roles and permissions for other Microsoft Defender for Endpoint features, such as alerts, incidents and inventory, see [assign roles and permissions for Defender for Endpoint](/defender-endpoint/prepare-deployment).
 
-For more information, see [map Defender XDR Unified RBAC permissions](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access).
+For more information, see [map Defender unified RBAC permissions](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access).
 
 ## Next steps
 

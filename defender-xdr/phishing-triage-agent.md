@@ -1,23 +1,17 @@
 ---
-title: Security Copilot Phishing Triage Agent in Microsoft Defender
+title: Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender
 description: Learn about the Security Copilot Phishing Triage Agent, including requirements for setup and providing feedback to the agent.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - security-copilot
 - magic-ai-copilot 
 ms.topic: how-to
-search.appverid:
-- MOE150
-- MET150
-ms.date: 08/07/2025
+ms.date: 02/22/2026
 ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
@@ -29,6 +23,9 @@ appliesto:
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+> [!NOTE]
+> The Phishing Triage Agent is the same agent as the [Security Alert Triage Agent](security-alert-triage-agent.md), which is extended to triage a broader set of alerts in Microsoft Defender, starting with a subset of identity and cloud alerts. These expanded capabilities are currently in preview. The set of supported alerts is expected to grow over time.
+
 Phishing is one of the most common entry points for cyberattacks and a persistent operational burden for security operations center (SOC) teams. Analysts face a continuous stream of user‑reported suspicious emails that require careful review and triage. At scale, this volume slows response, consumes analyst time, and increases the risk of genuine threats being missed.
 
 The Phishing Triage Agent in Microsoft Defender is an AI agent that helps security teams scale the triage and classification of user‑reported phishing emails, reducing repetitive investigation work and accelerating response.
@@ -36,6 +33,10 @@ The Phishing Triage Agent in Microsoft Defender is an AI agent that helps securi
 The Phishing Triage Agent uses large language model (LLM)–based analysis to assess reported emails, determine intent, and classify each submission as a real threat or a false positive. Rather than relying on static rules or predefined inputs, the agent applies contextual reasoning to evaluate submissions dynamically and at scale.
 
 By filtering out false alarms, the agent enables analysts to focus on confirmed threats and higher‑impact investigations - improving efficiency, accelerating detection, and strengthening the organization’s overall security posture.
+
+Watch this video for a demonstration of the Phishing Triage Agent:
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=eefb1eeb-473d-4d02-a0c7-c9c5363d51c2]
 
 ## How the agent works
 
@@ -62,6 +63,8 @@ To run the Phishing Triage Agent in your environment, you need:
 |Products|- Security Copilot and provisioned capacity in Security Compute Units (SCU). See [Get started with Security Copilot](/copilot/security/get-started-security-copilot) or check whether you're entitled to SCUs as part of the [Microsoft Security Copilot inclusion model](/copilot/security/security-copilot-inclusion)</br> - Microsoft Defender for Office 365 Plan 2 deployed |
 |Microsoft Defender required features|- Unified role-based access control (URBAC) enabled for Defender for Office 365. See [Activate URBAC settings](#activate-urbac-settings) for more information. </br> - Enable **Monitor reported messages in Outlook** in **User reported settings**. See [User reported settings](#configure-user-reported-settings) for more information </br> - The alert policy **Email reported by user as malware or phish** must be turned on. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information|
 | Plugins | The Phishing Triage Agent automatically activates these Security Copilot plugins: <br>- Microsoft Defender XDR<br>- Microsoft Threat Intelligence<br>- Phishing Triage Agent |
+| Alert-tuning rules | The Phishing Triage Agent doesn't triage alerts that are resolved by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that resolve this alert.|
+
 ### Activate URBAC settings
 
 Activate the Defender for Office 365 workload in the Microsoft Defender XDR settings:
@@ -80,12 +83,12 @@ For more information, see [Use the Microsoft Defender portal to configure user r
 
 If you’re using a third-party email reporting tool, review [Options for third-party reporting tools](/defender-office-365/submissions-user-reported-messages-custom-mailbox) and view your vendor’s options to integrate reported messages with Microsoft Defender XDR.
 
-### Add alert policy
+### Enable alert policy
 
 The Phishing Triage Agent addresses phishing incidents that include alerts with the type **Email reported by user as malware or phish**. Ensure that you have the corresponding alert policy enabled. See [Alert policies in the Microsoft Defender portal](alert-policies.md) for more information.
 
 > [!IMPORTANT]
-> The Phishing Triage Agent doesn't classify alerts that you suppress by using [suppression rules](/defender-endpoint/manage-suppression-rules).
+> The Phishing Triage Agent doesn't triage alerts resolved by [alert tuning](investigate-alerts.md#tune-an-alert). Make sure to disable the **Auto-Resolve - Email reported by user as malware or phish** built-in alert tuning rule and any custom tuning rules that resolve this alert.
 
 ## Permissions required
 
@@ -234,7 +237,7 @@ The Phishing Triage Agent continuously improves its decision-making based on fee
 
 To provide feedback and teach the agent, follow these steps:
 
-1. In the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under the Guided Response triage section.
+1. In the incident page, look for the Phishing Triage Agent card in the Copilot or Tasks side panel under the Guided Response Triage section.
 1. Review the agent’s classification and reasoning displayed in the card’s title and content. If the decision doesn’t align with your organization’s classification criteria, select **Change classification**. Alternatively, you can update the classification by selecting the specific alert from the **Alerts** tab, then choosing **Manage alert**.
 
    :::image type="content" source="media/phishing-triage-agent/change-classification.png" alt-text="Screenshot highlighting the Change classification option in the Phishing Triage Agent card" lightbox="media/phishing-triage-agent/change-classification.png":::
@@ -249,7 +252,7 @@ To provide feedback and teach the agent, follow these steps:
    > You can only provide feedback to the agent once per alert, and it can only be used to teach the agent how to classify phishing alerts, specifically by selecting either True Positive (phishing) or False Positive (not malicious).
    > Always review your feedback and verify the AI-generated response before saving the lesson.
 
-1. If the result meets your expectations, you can choose to insert the lesson into the agent’s memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent’s memory if applicable. All feedback recorded for audit purposes, and lessons added to the agent’s memory, can be later reviewed in the [feedback management page](#view-and-manage-feedback-to-the-agent).
+1. If the result meets your expectations, you can choose to insert the lesson into the agent's memory to influence its future decisions. Select **Save** to save the lesson and store it as a lesson in the agent's memory if applicable. All feedback is recorded for audit purposes, and lessons added to the agent's memory can be reviewed later in the [feedback management page](#view-and-manage-feedback-to-the-agent).
 
 The agent utilizes stored feedback to triage and classify similar alerts in the future. When a relevant alert that matches the feedback characteristics is received, the agent applies this feedback to determine its classification, incorporating it as supporting evidence in its decision-making process.
 
@@ -290,7 +293,7 @@ Here are examples of failures you might encounter when writing feedback to the a
 > [!NOTE]
 > You can choose not to resolve feedback failures. You can leave your feedback and select **Save** without checking the box for teaching the agent. The feedback won’t be saved to the agent’s memory and will only be documented on the feedback management page for your future tracking classification changes.
 
-Once the agent is taught and equipped with organizational knowledge, it begins to refine its decision-making capabilities. This interactive teaching process ensures that the agent evolves continuously, delivering increasingly precise classifications and responses over time. By integrating feedback loops, the system adapts dynamically to the changing landscape of organizational priorities and incident patterns.
+When applicable feedback is approved and stored, the agent can apply it when triaging similar alerts in the future.
 
 ## Monitor and manage the Phishing Triage Agent
 

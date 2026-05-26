@@ -1,8 +1,8 @@
 ---
-manager: dansimp
+manager: orspodek
 ms.date: 09/21/2020
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.service: microsoft-365-security
 ms.subservice: mdo
 ms.topic: include

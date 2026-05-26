@@ -7,8 +7,6 @@ f1.keywords:
   - NOCSH
 ms.author: monaberdugo
 author: mberdugo
-ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - usx-security

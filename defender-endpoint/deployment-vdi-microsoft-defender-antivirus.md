@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
@@ -8,7 +8,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: jesquive
-manager: bagol
 ms.subservice: ngp
 ms.service: defender-endpoint
 ms.collection:
@@ -16,13 +15,12 @@ ms.collection:
 - tier2
 - ContentEngagementFY23
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
-
 ---
+
 # Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 
 This article is designed for customers who are using Microsoft Defender Antivirus capabilities only. If you have Microsoft Defender for Endpoint (which includes Microsoft Defender Antivirus alongside other device protection capabilities), see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md).
@@ -65,18 +63,17 @@ In Windows 10, version 1903, Microsoft introduced the shared security intelligen
 
 ### PowerShell
 
-1. On each RDS or VDI device, use the following cmdlet to enable the feature: 
+1. On each RDS or VDI device, use the following cmdlet to enable the feature:
 
    `Set-MpPreference -SharedSignaturesPath \\<File Server shared location>\wdav-update`
-   
-1. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section in this article. Look for the *shared location* entry.) 
+
+1. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section in this article. Look for the *shared location* entry.)
 
 ## Download and unpackage the latest updates
 
 Now you can get started on downloading and installing new updates. This section contains a sample PowerShell script that you can use. This script is the easiest way to download new updates and get them ready for your VMs. You should then set the script to run at a certain time on the management machine by using a scheduled task. Or, if you're familiar with using PowerShell scripts in Azure, Intune, or Configuration Manager, you could use those scripts instead.
 
-```PowerShell
-
+```powershell
 $vdmpathbase = "$env:systemdrive\wdav-update\{00000000-0000-0000-0000-"
 $vdmpathtime = Get-Date -format "yMMddHHmmss"
 $vdmpath = $vdmpathbase + $vdmpathtime + '}'
@@ -87,7 +84,6 @@ New-Item -ItemType Directory -Force -Path $vdmpath | Out-Null
 Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64' -OutFile $vdmpackage
 
 Start-Process -FilePath $vdmpackage -WorkingDirectory $vdmpath -ArgumentList "/x"
-
 ```
 
 You can set a scheduled task to run once a day so that whenever the package is downloaded and unpacked then the VMs receive the new update. We suggest starting with once a day, but you should experiment with increasing or decreasing the frequency to understand the impact.
@@ -101,31 +97,31 @@ You can also set up your single server or machine to fetch the updates on behalf
 1. Use the following example to create a file share with the following share permissions.
 
    ```PowerShell
-   
+
    PS c:\> Get-SmbShareAccess -Name mdatp$
 
    Name   ScopeName AccountName AccessControlType AccessRight
    ----   --------- ----------- ----------------- -----------
    mdatp$ *         Everyone    Allow             Read
-   
+
    ```
 
    > [!NOTE]
    > An NTFS permission is added for **Authenticated Users:Read:**.
 
    For this example, the file share is `\\FileServer.fqdn\mdatp$\wdav-update`.
-   
+
 ### Set a scheduled task to run the PowerShell script
 
 1. On the management machine, open the **Start** menu and type `Task Scheduler`. From the results, select Task Scheduler and then select **Create task...** in the side panel.
 
-1. Specify the name as `Security intelligence unpacker`. 
+1. Specify the name as `Security intelligence unpacker`.
 
 1. On the **Trigger** tab, select **New...** > **Daily**, and select **OK**.
 
 1. On the **Actions** tab, select **New...**.
 
-1. Specify `PowerShell` in the **Program/Script** field. 
+1. Specify `PowerShell` in the **Program/Script** field.
 
 1. In the **Add arguments**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
 
@@ -148,7 +144,7 @@ If you would prefer to do everything manually, here's what to do to replicate th
    > [!NOTE]
    > We set the script so that the last 12 digits of the GUID are the year, month, day, and time when the file was downloaded so that a new folder is created each time. You can change this so that the file is downloaded to the same folder each time.
 
-1. Download a security intelligence package from [https://www.microsoft.com/wdsi/definitions](https://www.microsoft.com/wdsi/definitions)  into the GUID folder. The file should be named `mpam-fe.exe`.
+1. Download a security intelligence package from [https://www.microsoft.com/wdsi/defenderupdates](https://www.microsoft.com/wdsi/defenderupdates)  into the GUID folder. The file should be named `mpam-fe.exe`.
 
 1. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example, `mpam-fe.exe /X`.
 
@@ -168,6 +164,9 @@ It's important to take advantage of the included threat protection capabilities 
 
 - Configure local administrator merge behavior for lists: `Disabled`
 
+> [!NOTE]
+> Setting this policy to **Disabled** prevents locally defined exclusions and lists from being merged with centrally managed policies. Only centrally managed policies (for example, Group Policy) are applied.
+
 - Control whether or not exclusions are visible to Local Admins: `Enabled`
 
 - Turn off routine remediation: `Disabled`
@@ -185,6 +184,7 @@ It's important to take advantage of the included threat protection capabilities 
 
    > [!NOTE]
    > Sometimes, Microsoft Defender Antivirus notifications are sent to or persist across multiple sessions. To help avoid user confusion, you can lock down the Microsoft Defender Antivirus user interface.
+   >
    > Suppressing notifications prevents notifications from Microsoft Defender Antivirus from showing up when scans are done or remediation actions are taken. However, your security operations team sees the results of a scan if an attack is detected and stopped. Alerts, such as an initial access alert, are generated, and appear in the [Microsoft Defender portal](https://security.microsoft.com).
 
 ### MAPS
@@ -232,7 +232,7 @@ It's important to take advantage of the included threat protection capabilities 
 
 - Turn on catch-up full scan (Disable catch-up full scan): `Not configured`
 
-- Turn on catch-up quick scan (Disable catchup quick scan): `Not configured`
+- Turn on catch-up quick scan (Disable catch-up quick scan): `Not configured`
 
    > [!NOTE]
    > If you want to harden, you could change "Turn on catch-up quick scan" to `Enabled`, which helps when VMs are offline, and have missed two or more consecutive scheduled scans. But since it's running a scheduled scan, it uses additional CPU.
@@ -305,7 +305,9 @@ It's important to take advantage of the included threat protection capabilities 
 
 ### Attack surface reduction rules
 
-Configure all available rules to `Audit`.
+ASR rules target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes). For more information, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
+
+Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 ### Enable network protection
 
@@ -342,12 +344,11 @@ If you think you need to add exclusions, see [Manage exclusions for Microsoft De
 
 ## Next step
 
-If you're also deploying [endpoint detection and response](overview-endpoint-detection-response.md) (EDR) to your Windows-based VDI VMs, see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](/defender-endpoint/configure-endpoints-vdi).
+If you're also deploying [endpoint detection and response](overview-endpoint-detection-response.md) (EDR) to your Windows-based VDI VMs, see [Onboard non-persistent virtual desktop infrastructure (VDI) devices in Microsoft Defender XDR](configure-endpoints-vdi.md).
 
 ## See also
 
 - [Tech Community Blog: Configuring Microsoft Defender Antivirus for non-persistent VDI machines](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/configuring-microsoft-defender-antivirus-for-non-persistent-vdi/ba-p/1489633)
-- [TechNet forums on Remote Desktop Services and VDI](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverTS)
 - [SignatureDownloadCustomTask PowerShell script](https://www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4)
 
 If you're looking for information about Defender for Endpoint on non-Windows platforms, see the following resources:
@@ -356,6 +357,3 @@ If you're looking for information about Defender for Endpoint on non-Windows pla
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
-

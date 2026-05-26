@@ -1,12 +1,10 @@
-﻿---
+---
 title: Security Operations Guide for Defender for Endpoint
 ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov
-manager: bagol
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 03/26/2025
-audience: ITPro
 ms.topic: concept-article
 author: limwainstein
 ms.author: lwainstein
@@ -18,15 +16,12 @@ ms.subservice: ngp
 ms.collection:
 - m365-security
 - tier2
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Microsoft Defender for Endpoint Security Operations Guide
-
-
 
 This article gives an overview of the requirements and tasks for successfully operating Microsoft Defender for Endpoint in your organization. These tasks help your security operations center (SOC) effectively detect and respond to Microsoft Defender for Endpoint detected security threats.
 
@@ -35,23 +30,28 @@ This article also describes daily, weekly, monthly, and ad-hoc tasks your securi
 > [!NOTE]
 > These are recommended steps; check them against your own policies and environment to make sure they are fit for purpose.
 
-## Prerequisites:
+## Prerequisites
 
 The Microsoft Defender Endpoint should be set up to support your regular security operations process. Although not covered in this document, the following articles provide configuration and setup information:
 
 - [**Configure general Defender for Endpoint settings**](preferences-setup.md)
+  - General
+  - Permissions
+  - Rules
+  - Device management
+  - Configure Microsoft Defender Security Center time zone settings
 
-   - General
-   - Permissions
-   - Rules
-   - Device management
-   - Configure Microsoft Defender Security Center time zone settings
+- **Set up Microsoft Defender XDR incident notifications**
 
-- **Set up Microsoft Defender XDR incident notifications** <p> To get email notifications on defined Microsoft Defender XDR incidents, it's recommended that you configure email notifications. See [Incident notifications by email](/defender-xdr/incidents-overview#incident-notifications-by-email).
+  To get email notifications on defined Microsoft Defender XDR incidents, we recommend that you configure email notifications. For more information, see [Incident notifications by email](/defender-xdr/incidents-overview#incident-notifications-by-email).
 
-- **Connect to SIEM (Sentinel)** <p> If you have existing security information and event management (SIEM) tools, you can integrate them with Microsoft Defender XDR. See [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender) and [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
+- **Connect to SIEM (Sentinel)**
 
-- **Review data discovery configuration** <p> Review the Microsoft Defender for Endpoint device discovery configuration to ensure it's configured as required. See [Device discovery overview](device-discovery.md).
+  If you have existing security information and event management (SIEM) tools, you can integrate them with Microsoft Defender XDR. For more information, see [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender) and [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
+
+- **Review data discovery configuration**
+
+  Review the Microsoft Defender for Endpoint device discovery configuration to ensure it's configured as required. For more information, see [Device discovery overview](device-discovery.md).
 
 ## Daily activities
 
@@ -59,7 +59,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 
 - **Review actions**
 
-    In the action center, review the actions that have been taken in your environment, both automated and manual. This information helps you validate that automated investigation and response (AIR) is performing as expected and identify any manual actions that need to be reviewed. See [Visit the Action center to see remediation actions](auto-investigation-action-center.md).
+    In the action center, review the actions that have been taken in your environment, both automated and manual. This information helps you validate that automated investigation and response (AIR) is performing as expected and identify any manual actions that need to be reviewed. For more information, see [Visit the Action center to see remediation actions](auto-investigation-action-center.md).
 
 ### Security operations team
 
@@ -67,32 +67,32 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 
     When Microsoft Defender for Endpoint identifies Indicators of compromise (IOCs) or Indicators of attack (IOAs) and generates an alert, the alert is included in an incident and displayed in the **Incidents** queue in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
 
-    Review these incidents to respond to any Microsoft Defender for Endpoint alerts and resolve once the incident has been remediated. See [Incident notifications by email](/defender-xdr/incidents-overview#incident-notifications-by-email) and [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md).
+    Review these incidents to respond to any Microsoft Defender for Endpoint alerts and resolve once the incident has been remediated. For more information, see [Incident notifications by email](/defender-xdr/incidents-overview#incident-notifications-by-email) and [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md).
 
 - **Manage false positive and false negative detections**
 
-    Review the incident queue, identify false positive and false negative detections and submit them for review. This helps you effectively manage alerts in your environment and make your alerts more efficient. See [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
+    Review the incident queue, identify false positive and false negative detections and submit them for review. This helps you effectively manage alerts in your environment and make your alerts more efficient. For more information, see [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
 
 - **Review threat analytics high-impact threats**
 
     Review threat analytics to identify any campaigns that are impacting your environment.
-    The "High-impact threats" table lists the threats that have had the highest impact to the organization. This section ranks threats by the number of devices that have active alerts. See [Track and respond to emerging threats through threat analytics](threat-analytics.md#view-the-threat-analytics-dashboard).
+    The "High-impact threats" table lists the threats that have had the highest impact to the organization. This section ranks threats by the number of devices that have active alerts. For more information, see [Track and respond to emerging threats through threat analytics](threat-analytics.md#view-the-threat-analytics-dashboard).
 
 ### Security administration team
 
 - **Review health reports**
 
-    Review health reports to identify any device health trends that need to be addressed.  The device health reports cover Microsoft Defender for Endpoint AV signature, platform health, and EDR health. See [Device health reports in Microsoft Defender for Endpoint](device-health-reports.md).
+    Review health reports to identify any device health trends that need to be addressed.  The device health reports cover Microsoft Defender for Endpoint AV signature, platform health, and EDR health. For more information, see [Device health reports in Microsoft Defender for Endpoint](device-health-reports.md).
 
 - **Check Endpoint detection and response (EDR) sensor health**
 
     EDR health is maintaining the connection to the EDR service to make sure that Defender for Endpoint is receiving the required signals to alert and identify vulnerabilities.
 
-    Review unhealthy devices. See [Device health, Sensor health & OS report](device-health-sensor-health-os.md).
+    Review unhealthy devices. For more information, see [Device health, Sensor health & OS report](device-health-sensor-health-os.md).
 
 - **Check Microsoft Defender Antivirus health**
 
-    Viewing the status of Microsoft Defender Antivirus updates is critical for the best performance of Defender for Endpoint in your environment and up-to-date detections. The device health page shows current status for platform, intelligence, and engine version. See the [Device health, Microsoft Defender Antivirus health report](device-health-microsoft-defender-antivirus-health.md).
+    Viewing the status of Microsoft Defender Antivirus updates is critical for the best performance of Defender for Endpoint in your environment and up-to-date detections. The device health page shows current status for platform, intelligence, and engine version. For more information, see the [Device health, Microsoft Defender Antivirus health report](device-health-microsoft-defender-antivirus-health.md).
 
 ## Weekly activities
 
@@ -104,31 +104,31 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 
     Review the Message center messages to understand any upcoming changes that impact your environment.
 
-    You can access this in the Microsoft 365 admin center under the Health tab. See [How to check Microsoft 365 service health](/Microsoft-365//enterprise/view-service-health).
+    You can access this in the Microsoft 365 admin center under the Health tab. For more information, see [How to check Microsoft 365 service health](/Microsoft-365//enterprise/view-service-health).
 
 ### Security operations team
 
 - **Review threat reporting**
 
-    Review health reports to identify any device threat trends that need to be addressed. See [Threat protection report](threat-protection-reports.md).
+    Review health reports to identify any device threat trends that need to be addressed. For more information, see [Threat protection report](threat-protection-reports.md).
 
 - **Review threat analytics**
 
-    Review threat analytics to identify any campaigns that affect your environment. See [Track and respond to emerging threats through threat analytics](threat-analytics.md).
+    Review threat analytics to identify any campaigns that affect your environment. For more information, see [Track and respond to emerging threats through threat analytics](threat-analytics.md).
 
 ### Security administration team
 
 - **Review threat and vulnerability (TVM) status**
 
-    Review TVM to identify any new vulnerabilities and recommendations that require action. See [Vulnerability management dashboard.](/defender-vulnerability-management/tvm-dashboard-insights)
+    Review TVM to identify any new vulnerabilities and recommendations that require action. For more information, see [Vulnerability management dashboard.](/defender-vulnerability-management/tvm-dashboard-insights)
 
 - **Review attack surface reduction reporting**
 
-    Review ASR reports to identify any files that affect your environment. See [Attack surface reduction rules report](attack-surface-reduction-rules-report.md).
+    Review ASR reports to identify any files that affect your environment. For more information, see [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md).
 
 - **Review web protection events**
 
-    Review the web defense report to identify any IP addresses or URLs that are blocked. See [Web protection](web-protection-overview.md).
+    Review the web defense report to identify any IP addresses or URLs that are blocked. For more information, see [Web protection](web-protection-overview.md).
 
 
 ## Monthly activities
@@ -138,16 +138,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 Review the following articles to understand recently released updates:
 
 - [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
-
-- [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on Mac](mac-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
-
-- [What's new in Microsoft Defender for Endpoint on Android](android-whatsnew.md)
+- [Microsoft Defender for Endpoint versions](microsoft-defender-endpoint-releases.md)
 
 ### Security administration team
 
@@ -156,7 +147,7 @@ Review the following articles to understand recently released updates:
     If any devices are excluded from Defender for Endpoint policies, review and determine whether the device still needs to be excluded from the policy.
 
     > [!NOTE]
-    > Review the troubleshooting mode for troubleshooting. See [Get started with troubleshooting mode in Microsoft Defender for Endpoint](enable-troubleshooting-mode.md).
+    > Review the troubleshooting mode for troubleshooting. For more information, see [Get started with troubleshooting mode in Microsoft Defender for Endpoint](enable-troubleshooting-mode.md).
 
 ## Periodically
 
@@ -173,15 +164,15 @@ These tasks are seen as maintenance for your security posture and are critical f
 
 - **Review automation levels**
 
-    Review automation levels in automated investigation and remediation capabilities. See [Automation levels in automated investigation and remediation](automation-levels.md).
+    Review automation levels in automated investigation and remediation capabilities. For more information, see [Automation levels in automated investigation and remediation](automation-levels.md).
 
 - **Review custom detections**
 
-    Periodically review whether the custom detections that have been created are still valid and effective. See [Review custom detection](/defender-xdr/custom-detection-rules).
+    Periodically review whether the custom detections that have been created are still valid and effective. For more information, see [Review custom detection](/defender-xdr/custom-detection-rules).
 
 - **Review alerts suppression**
 
-    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. See [Review alerts suppression](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules).
+    Periodically review any alert suppression rules that have been created to confirm they're still required and valid. For more information, see [Review alerts suppression](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#built-in-alert-tuning-rules).
 
 ## Troubleshooting
 
@@ -193,6 +184,3 @@ The following articles provide guidance to troubleshoot and fix errors that you 
 - [Collect support logs using LiveAnalyzer](troubleshoot-collect-support-log.md)
 - [Troubleshoot attack surface reduction issues](troubleshoot-asr.md)
 - [Troubleshoot onboarding issues](troubleshoot-onboarding.md)
-
-
-

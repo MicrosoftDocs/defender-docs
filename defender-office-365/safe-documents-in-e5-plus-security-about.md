@@ -2,16 +2,12 @@
 title: Safe Documents in Microsoft 365 A5/E5/G5 or Microsoft Defender Suite
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer:
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.custom:
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done
-search.appverid:
-  - MET150
 ms.assetid:
 ms.collection:
   - m365-security
@@ -39,7 +35,7 @@ Users don't need Defender for Endpoint installed on their local devices to get S
 - Users are assigned licenses from a [required licensing plan](/entra/identity/users/licensing-service-plan-reference).
 
   Safe Documents is controlled by the **Office 365 SafeDocs** (or **SAFEDOCS** or **bf6f5520-59e3-4f82-974b-7dbbc4fd27c7**) service plan. This service plan is available in the following products:
-  
+
   - Microsoft 365 A5
   - Microsoft 365 E5
   - Microsoft 365 Government Community Cloud (GCC) G5
