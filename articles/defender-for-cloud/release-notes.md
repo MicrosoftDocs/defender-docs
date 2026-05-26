@@ -59,6 +59,8 @@ The new recommendations assess individual containers rather than entire clusters
 - No runtime agent required — uses agentless architecture.
 - Includes scale controls for high-volume environments.
 
+Learn more about [container security recommendations](recommendations-reference-container.md).
+
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
 May 24, 2026
