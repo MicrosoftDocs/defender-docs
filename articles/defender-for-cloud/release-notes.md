@@ -60,6 +60,8 @@ This feature detects OS-level vulnerabilities in Kubernetes node VMs across EKS 
 
 Requires AWS or GCP onboarded into Defender for Cloud with agentless scanning enabled.
 
+Learn more about [Kubernetes node vulnerability assessment](kubernetes-nodes-va.md).
+
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
 May 24, 2026
