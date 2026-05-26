@@ -47,7 +47,7 @@ When the [interactive](#interactive-use), double-click experience is used, the t
 
 For more [advanced and large-scale deployments](#advanced-and-large-scale-deployments), the tool offers functionality to perform additional and orchestrated steps through command-line parameters or a configuration file.
 
-To view the complete command reference after [downloading the tool](#generate-and-download-a-new-onboarding-package), run: `DefenderDT.exe -?`.
+To view the complete command reference after downloading the tool, run: `DefenderDT.exe -?`.
 
 ## Supported operating systems
 
@@ -128,7 +128,7 @@ If preview features are enabled on your tenant, select the **Generate and downlo
 
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
 
-1. In the Step 1 dropdown menu, choose **Windows (preview)**.
+1. In the Step 1 dropdown menu, choose **Windows**.
 
 1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This downloads the Defender executable and the onboarding file package.
 
@@ -149,7 +149,7 @@ The tool supports two interactive experiences that are suitable for deployment t
 
 To use the quick "double-click" default installation, select the relevant tab.
 
-### [Deploy using the preview experience](#tab/preview-experience)
+### [If preview features are enabled](#tab/preview-experience)
 
 1. Double-click the executable to launch it.
 
@@ -165,7 +165,7 @@ To use the quick "double-click" default installation, select the relevant tab.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/process-complete.png" alt-text="Screenshot showing the message indicating that onboarding is complete.":::
 
-### [Deploy using the GA experience](#tab/ga-experience)
+### [If preview features aren't enabled](#tab/ga-experience)
 
 Make sure the tool executable and the onboarding file are in the same directory. Then, double-click the executable to launch it. The tool will automatically detect the onboarding file and begin the onboarding process. Follow the instructions in the user interface to complete onboarding.
 
