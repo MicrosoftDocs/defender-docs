@@ -1,5 +1,5 @@
 ---
-title: Host asset filters
+title: Host Asset Filters
 titleSuffix: Defender EASM host asset filters 
 description: This article outlines the filter functionality available in Microsoft Defender External Attack Surface Management for host assets specifically, including operators and applicable field values.
 author: danielledennis
@@ -9,7 +9,7 @@ ms.date: 12/14/2022
 ms.topic: how-to
 ---
 
-# Host asset filters 
+# Host asset filters
 
 These filters specifically apply to host assets. Use these filters when searching for a specific subset of host assets.  
 
@@ -28,11 +28,9 @@ The following filters provide a drop-down list of options to select. The availab
 |     Port Last Seen         |   Indicates the time frame in which a port was last observed on the host.                                               |   7 days, 14 days, 30 days                                                                   |   `Equals` `In`                      |
 |     Domain Expiration      |   The registration expiry date range for the domain.                                                                    |   Expired, Expires in 30 days, Expires in 60 days, Expires in 90 days, Expires in > 90 days  |   `Equals` `Not Equals` `In` `Not In`  |
 
-
-
 ## Free form filters  
 
-The following filters require that the user manually enters the value with which they want to search.  This list is organized according to the number of applicable operators for each filter, then alphabetically. Note that many values are case-sensitive. 
+The following filters require that the user manually enters the value with which they want to search.  This list is organized according to the number of applicable operators for each filter, then alphabetically. Note that many values are case-sensitive.
 
 |       Filter name                   |     Description                                                                                                                                                                                          |     Value format example                                                                           |     Applicable operators                                                                                                                                                                                                                                    |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -78,9 +76,7 @@ The following filters require that the user manually enters the value with which
 |     Whois Technical Name            |   The name of the listed technical contact.                                                                                                                                                              |   John Smith                                                                                       |                                                                                                                                                                                                                                                             |
 |     Whois Technical Organization    |   The organization associated to the listed technical contact.                                                                                                                                           |   Contoso Ltd.                                                                                     |                                                                                                                                                                                                                                                             |
 
+## Related content
 
-## Next steps
-
-[Understanding asset details](understanding-asset-details.md)
-
-[Inventory filters](inventory-filters.md) 
+- [Understand asset details](understanding-asset-details.md)
+- [Inventory filters](inventory-filters.md)

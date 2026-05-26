@@ -1,5 +1,5 @@
 ---
-title:       Defender EASM data connections 
+title:       Defender EASM Data Connections 
 description: "The data connector sends Defender EASM asset data to Log Analytics and Azure Data Explorer. You can export Defender EASM data to either tool."
 author: danielledennis # GitHub alias
 ms.author: dandennis  # Microsoft alias
@@ -14,11 +14,12 @@ ms.date:     03/20/2023
 This article discusses the data connections feature in Microsoft Defender External Attack Surface Management (Defender EASM).
 
 ## Overview
+
 Defender EASM now offers data connections to help you seamlessly integrate your attack surface data into other Microsoft solutions to supplement existing workflows with new insights. You must get data from Defender EASM into the other security tools you use for remediation purposes to make the best use of your attack surface data.
 
 The data connector sends Defender EASM asset data to two different platforms: Log Analytics and Azure Data Explorer. You need to export Defender EASM data to either tool. Data connections are subject to the pricing model for each respective platform.
 
-[Log Analytics](/azure/sentinel/overview) provides security information and event management and security orchestration, automation, and response capabilities. Defender EASM asset or insights information can be used in Log Analytics to enrich existing workflows with other security data. This information can supplement firewall and configuration information, threat intelligence, and compliance data to provide visibility into your external-facing infrastructure on the open internet. 
+[Log Analytics](/azure/sentinel/overview) provides security information and event management and security orchestration, automation, and response capabilities. Defender EASM asset or insights information can be used in Log Analytics to enrich existing workflows with other security data. This information can supplement firewall and configuration information, threat intelligence, and compliance data to provide visibility into your external-facing infrastructure on the open internet.
 
 You can:
 
@@ -48,15 +49,17 @@ This option doesn't provide any predetermined insights about the assets. Instead
 This section presents general information on configuration.
 
 ### Access data connections
+
 On the leftmost pane in your Defender EASM resource pane, under **Manage**, select **Data Connections**. This page displays the data connectors for both Log Analytics and Azure Data Explorer. It lists any current connections and provides the option to add, edit, or remove connections.
 
 ![Screenshot that shows the Data connections page.](media/data-connections/data-connector-1.png)
 
 ### Connection prerequisites
+
 To successfully create a data connection, you must first ensure that you've completed the required steps to grant Defender EASM permission to the tool of your choice. This process enables the application to ingest your exported data. It also provides the authentication credentials needed to configure the connection.
 
-> [!NOTE] 
-> Defender EASM data connections do not support private links or networks. 
+> [!NOTE]
+> Defender EASM data connections do not support private links or networks.
 
 ## Configure Log Analytics permissions
 
@@ -73,11 +76,10 @@ To successfully create a data connection, you must first ensure that you've comp
 >
 > All new Log Analytics Data Connectors will use the **Logs Ingestion API**, which requires additional permission configurations as outlined below.
 
+### Configure resource group role assignments
 
-### Configure Resource Group Role Assignments
-
-1. On the leftmost pane, select **Overview** and navigate to the **Resource group** under **Essentials** on the main pane. 
-1. Open the Resource group that contains the Log Analytics workspace.
+1. On the leftmost pane, select **Overview** and navigate to the **Resource group** under **Essentials** on the main pane.
+1. Open the resource group that contains the Log Analytics workspace.
 1. On the leftmost pane, select **Access control (IAM)**.
 1. Search and select the **Reader** role.
 1. Search and select the **EASM API** as the member for the role assignment. 
@@ -85,17 +87,17 @@ To successfully create a data connection, you must first ensure that you've comp
 1. Be sure the Assignment type is **Permanent** and then click **Review + assign**.
 1. Repeat this and add the **Monitoring Contributor**, **Log Analytics Contributor**, and the **Monitoring Metrics Publisher** roles for the **EASM API** app.
 
-> [!NOTE] 
+> [!NOTE]
 > The role assignments for the **EASM API** may take a few minutes to be assigned after. After configuring the assignments, please wait for a few minutes to create a new data connection.
 
-### Configure Subscription Resource Providers
+### Configure subscription resource providers
 
-1. Open the Subscription that contains the Resource Group and Log Analytics workspace.
+1. Open the subscription that contains the Resource Group and Log Analytics workspace.
 1. On the leftmost pane, under **Settings** select **Resource Providers**.
 1. Search for **microsoft.insights** and register the provider.
     ![Screenshot that shows Resource providers, specifically microsoft.insights.](media/data-connections/register-resource-provider.png)
 
-> [!NOTE] 
+> [!NOTE]
 > Using the new Log Analytics API, the Defender EASM resource and Log Analytics workspace that will ingest your Defender EASM data **must be in the same tenant**.
 
 Use of this data connection is subject to the pricing structure of Log Analytics. For more information, see [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/).
@@ -126,6 +128,7 @@ Ensure that the Defender EASM API service principal has access to the correct ro
 1. Your database is now ready to connect to Defender EASM. You need the cluster name, database name, and region when you configure your data connection.
 
 ## Add a data connection
+
 You can connect your Defender EASM data to either Log Analytics or Azure Data Explorer. To do so, select **Add connection** for the appropriate tool from the **Data Connections** page.
 
 A configuration pane opens on the right side of the **Data Connections** page. The following fields are required for each respective tool.
@@ -142,7 +145,6 @@ A configuration pane opens on the right side of the **Data Connections** page. T
 > [!NOTE]
 > All new data connections will use the Log Analytics API and **will not** use an API key.
 
-
 ### Azure Data Explorer
 
 - **Name**: Enter a name for this data connection.
@@ -157,6 +159,7 @@ A configuration pane opens on the right side of the **Data Connections** page. T
    After all fields are configured, select **Add** to create the data connection. At this point, the **Data Connections** page displays a banner that indicates the resource was successfully created. In 30 minutes, data begins to populate. After connections are created, they're listed under the applicable tool on the main **Data Connections** page.
 
 ## Edit or delete a data connection
+
 You can edit or delete a data connection. For example, you might notice that a connection is listed as **Disconnected**. In this case, you need to reenter the configuration details to fix the issue.
 
 To edit or delete a data connection:
@@ -178,6 +181,3 @@ To edit or delete a data connection:
    - **Reconnect**: Attempts to validate the data connection without any changes to the configuration. This option is best if you validated the authentication credentials used for the data connection.
    - **Edit**: Allows you to change the configuration for the data connection.
    - **Delete**: Deletes the data connection.
-
-
-

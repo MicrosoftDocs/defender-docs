@@ -2,11 +2,12 @@
 title: Compare Microsoft Sentinel analytics rules and Microsoft Defender custom detections
 titleSuffix: Microsoft Security  
 description: Compare the different features supported by Microsoft Sentinel analytics rules and Microsoft Defender custom detections. 
+ms.author: pauloliveria  
 author: poliveria 
+ms.reviewer: nonutkev
 ms.service: microsoft-sentinel  
 ms.topic: product-comparison
-ms.date: 10/27/2025
-ms.author: pauloliveria  
+ms.date: 05/19/2026
 
 ms.collection: ms-security
 
@@ -24,16 +25,17 @@ This article lists and compares the different features supported by Microsoft Se
 | **Feature** | **Capability** | **Analytics rules** | **Custom detections** |
 |---|---|---|---|
 | **Alert enrichment** | Flexible entity mapping over Sentinel data | Supported | Supported |
+| | Reflect custom detections in [MITRE ATT&CK page](/azure/sentinel/mitre-coverage?tabs=defender-portal) | Supported | Planned |
 | | Link multiple MITRE tactics | Supported | Planned |
 | | Support full list of MITRE techniques and subtechniques | Supported | Planned |
 | | Enrich alerts with custom details | Supported | Supported |
 | | Define alert title and description dynamically - Integrate query results in runtime | Supported | Supported |
 | | Define all alerts properties dynamically - Integrate query results in runtime | Supported | Planned |
 | **Rule frequency** | Support flexible and high frequency for Sentinel data | Supported | Supported |
-| | Near-real-time (NRT) rules on Sentinel data | Supported | Planned |
+| | Near-real-time (NRT) rules on Sentinel data | Supported | [Supported](/defender-xdr/custom-detection-rules#queries-you-can-run-continuously) |
 | | NRT streaming technology - Test events as they stream, not sensitive to ingestion delays | Not supported. Analytics NRT rules test events after they're ingested. | Supported |
 | | Determine rule's first run | Supported | Not supported |
-| **Rule lookback** | Lookback support | Lookback is flexible:<ul><li>Up to 48 hours for frequency higher than one hour<li>Up to 14 days for frequency of one hour and less</ul> | Lookback is statically determined by the frequency: Equals four times the frequency or 30 days for a frequency of 24 hours or less.<br><br>**Parity with analytics rules is planned** |
+| **Rule lookback** | Lookback support | Lookback is flexible:<ul><li>Up to 48 hours for frequency higher than one hour<li>Up to 14 days for frequency of one hour and less</ul> | [In public preview](/defender-xdr/custom-detection-rules#lookback). Parity with analytics rules on Sentinel data. |
 | **Rule data** | Defender XDR data | Not supported | Supported |
 | | Sentinel analytics tier | Supported | Supported |
 | **Automated actions** | Native Defender XDR remediation actions | Not supported | Supported |

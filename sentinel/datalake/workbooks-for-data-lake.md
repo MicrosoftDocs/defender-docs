@@ -2,12 +2,13 @@
 title: Workbooks for Microsoft Sentinel Data Lake
 titleSuffix: Microsoft Security  
 description: Learn how to create and use Microsoft Sentinel workbooks with data from the Microsoft Sentinel data lake to visualize and monitor security data.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel  
 ms.topic: how-to
 ms.subservice: sentinel-platform
 ms.date: 03/11/2026
-ms.author: edbaynash  
 
 ms.collection: ms-security  
 ---  
