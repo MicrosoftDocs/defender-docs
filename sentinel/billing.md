@@ -115,6 +115,8 @@ Similarly, if your graph queries take one minute to complete, the cost is determ
 
 Any notebook/Spark compute and Data lake storage consumed for data transformations to build node and edges for the graph is billed independently per existing Sentinel data lake meters (Data lake storage and Advanced Data Insights).
 
+In addition, you can now monitor usage for custom graphs by using [Microsoft Sentinel cost management in the Microsoft Defender portal](billing-monitor-costs.md#microsoft-sentinel-cost-management-in-the-microsoft-defender-portal).
+
 #### Sentinel Model Context Protocol (MCP) server
 
 Sentinel MCP server is an interface layer that exposes Sentinel platform capabilities to AI agents. There's no extra cost for using the MCP server itself. MCP tools use underlying Sentinel platform services, such as data lake queries or graph operations, which are billed based on their respective meters. In addition, certain tools, such as entity analyzer, may consume [Security Compute Units (SCUs)](/copilot/security/manage-usage) when AI reasoning execution is required. Customers are charged only for the underlying platform services and compute they consume.
