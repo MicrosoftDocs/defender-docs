@@ -93,4 +93,3 @@ To create a query that finds vulnerabilities in cluster nodes:
 1. In the **Result details** pane, select the **Virtual machine scale set** icon to view vulnerabilities.
 
     :::image type="content" source="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png" alt-text="Screenshot shows results of Cloud Security Explorer query to retrieve vulnerabilities in cluster nodes." lightbox="./media/cloud-security-explorer-kubernetes-clusters/security-cloud-explorer-kubernetes-nodes-results-details.png":::
-

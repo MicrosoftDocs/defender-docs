@@ -372,4 +372,3 @@ For end-to-end cloud scopes and unified RBAC administration, use the Defender po
 > **Important:** Users will require two separate permissions: their existing Azure RBAC permissions as well as an additional uRBAC role. In addition to the existing Azure RBAC permissions, you must provide users with a new uRBAC role in order to grant them access to the new portal.
 
 ::: zone-end
-

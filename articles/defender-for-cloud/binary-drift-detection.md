@@ -164,4 +164,3 @@ The effectiveness of binary drift detection and blocking relies on your active e
 ## Related content
 
 - [Overview of Container security in Microsoft Defender for Containers](defender-for-containers-introduction.md)
-

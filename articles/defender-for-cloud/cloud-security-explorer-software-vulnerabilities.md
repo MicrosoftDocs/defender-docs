@@ -62,4 +62,3 @@ To create a query that finds software vulnerabilities in container images:
 1. View the details of the installed software in the Insights section.
 
     :::image type="content" source="./media/cloud-security-explorer-software-vulnerabilities/security-explorer-containers-query-result-details-insights.png" alt-text="Screenshot shows Cloud Security Explorer query result details and insight results from the selected containers image." lightbox="./media/cloud-security-explorer-software-vulnerabilities/security-explorer-containers-query-result-details-insights.png":::
-
