@@ -14,7 +14,9 @@ This article describes how to customize data sensitivity settings in Microsoft D
 
 Data sensitivity settings are used to identify and focus on managing the critical sensitive data in your organization.
 
-- You can select sensitive information types and sensitivity labels from the Microsoft Purview compliance portal in Defender for Cloud.
+In this article, Defender cloud security posture management (Defender CSPM) refers to the Defender CSPM plan in Microsoft Defender for Cloud.
+
+- You can select sensitive information types and sensitivity labels from the Microsoft Purview portal in Defender for Cloud.
     - By default, Defender for Cloud uses [built-in sensitive information types](/microsoft-365/compliance/sensitive-information-type-learn-about) from Microsoft Purview.
     - Some information types and labels are enabled by default.
     - Sensitive data discovery supports a subset of those built-in types. See the [reference list of supported sensitive information types](sensitive-info-types.md), including defaults.
@@ -34,20 +36,20 @@ Changes in sensitivity settings take effect the next time that resources are dis
 
 ## Import custom sensitivity info types/labels
 
-Custom sensitivity info types and sensitivity labels are automatically imported into Defender for Cloud. If you have the Enterprise Mobility and Security E5/A5/G5 license, you do not need to manually provide consent in the Microsoft 365 Defender portal. For licensing details, see [Microsoft Purview sensitivity labeling licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description#microsoft-purview-information-protection-sensitivity-labeling).
+Custom sensitivity info types and sensitivity labels are automatically imported into Defender for Cloud. If you have the Enterprise Mobility and Security E5/A5/G5 license, you don't need to manually provide consent in the Microsoft Defender XDR portal. For licensing details, see [Microsoft Purview sensitivity labeling licensing](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description#microsoft-purview-information-protection-sensitivity-labeling).
 
 Defender for Cloud only imports sensitivity labels with automatic labeling rules. Defender for Cloud ignores the "location" section in the automatic labeling rule and applies the label to all resource types and locations.
 
 ## Customize sensitive data categories/types
 
-To customize data sensitivity settings that appear in Defender for Cloud, review the [prerequisites for customizing data sensitivity settings](concept-data-security-posture-prepare.md#configure-data-sensitivity-settings), and then do the following.
+To customize data sensitivity settings in Defender for Cloud, review the [prerequisites for customizing data sensitivity settings](concept-data-security-posture-prepare.md#configure-data-sensitivity-settings). Then do the following.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 1. Select **Data sensitivity**.
 1. Select the info type category that you want to customize:
     - The **Finance**, **PII**, and **Credentials** categories contain the default info type data that are typically sought out by attackers.
-    - The **Custom** category contains custom info types from your Microsoft Purview compliance portal configuration.
+    - The **Custom** category contains custom info types from your Microsoft Purview portal configuration.
     - The **Other** category contains all of the rest of the built-in available info types.
 1. Select the info types that you want to be marked as sensitive.
 1. Select **Apply** and **Save**.
@@ -79,7 +81,7 @@ You can set a threshold to determine the minimum sensitivity level for a label t
 > - Any resources with this minimum label or higher are presumed to contain sensitive data.
 > - For example, if you select **Confidential** as minimum, then **Highly Confidential** is also considered sensitive. **General**, **Public**, and **Non-Business** aren't.
 > - You can't select a sub label in the threshold. However, you can see the sublabel as the affected label on resources in attack path/Cloud Security Explorer, if the parent label is part of the threshold (part of the sensitive labels selected).
-> - The same settings will apply to any supported resource (object storage and databases).
+> - The same settings apply to any supported resource (object storage and databases).
 
 ## Next step
 

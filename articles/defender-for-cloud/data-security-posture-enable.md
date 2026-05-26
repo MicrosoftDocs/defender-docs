@@ -82,11 +82,8 @@ If the enable process didn't work because of a blocked policy, check the followi
 
 Sensitive data threat detection is enabled by default when the sensitive data discovery component is enabled in the Defender for Storage plan. For details, see [Sensitive data threat detection in Defender for Storage](defender-for-storage-data-sensitivity.md).
 
-Only Azure Storage resources will be scanned if the Defender CSPM plan is turned off.
-
-### Additional notes
-
-If you turn off Defender CSPM, only Azure Storage resources are scanned.
+> [!NOTE]
+> If you turn off Defender CSPM, only Azure Storage resources are scanned.
 
 ## Next step
 
