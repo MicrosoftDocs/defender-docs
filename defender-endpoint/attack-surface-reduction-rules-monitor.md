@@ -4,8 +4,8 @@ description: Learn how to monitor attack surface reduction (ASR) rule events usi
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.reviewer: sugamar, yongrhee
 ms.custom: asr, msecd-doc-authoring-1012
 ms.topic: how-to
