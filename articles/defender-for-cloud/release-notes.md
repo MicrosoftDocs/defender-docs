@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/24/2026
+ms.date: 05/26/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| May 26, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | May 24, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available](#microsoft-defender-for-open-source-relational-databases-on-aws-rds-will-become-generally-available) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
 | May 19, 2026| GA | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
@@ -42,6 +43,21 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### Container-level misconfiguration recommendations for Kubernetes (Preview)
+
+May 26, 2026
+
+Defender for Cloud now introduces agentless, container-level Kubernetes Security Posture Management (KSPM) misconfiguration recommendations, replacing the previous cluster-level findings with more granular, actionable insights integrated into Defender CSPM.
+
+The new recommendations assess individual containers rather than entire clusters, covering areas such as CPU/memory limits, trusted registries, privilege escalation, sensitive host namespaces, read-only root filesystem, HTTPS-only access, automounting API credentials, Linux capabilities, privileged containers, and running as root.
+
+**Key details:**
+
+- Container-level and cluster-level recommendations may coexist temporarily during the transition period. Cluster-level recommendations will be deprecated at GA.
+- The following cluster-level recommendations are set for deprecation: HostPath volume mount restrictions, allowed ports enforcement, host networking/ports restrictions, CAP_SYS_ADMIN capability restrictions, and AppArmor profile restrictions.
+- No runtime agent required — uses agentless architecture.
+- Includes scale controls for high-volume environments.
 
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
