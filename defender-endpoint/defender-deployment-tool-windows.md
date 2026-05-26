@@ -121,9 +121,6 @@ If preview features are enabled on your tenant, select the **Generate and downlo
 
    After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
 
-> [!NOTE] 
-> For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
-
 ## [Download the tool (GA)](#tab/ga-experience)
 
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
@@ -134,10 +131,10 @@ If preview features are enabled on your tenant, select the **Generate and downlo
 
    :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png":::
 
-   > [!NOTE] 
-   > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
-
 ---
+
+   > [!NOTE] 
+   > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
 
 ## Deploy Defender endpoint security on devices
 
