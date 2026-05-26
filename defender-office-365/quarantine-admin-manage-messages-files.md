@@ -2,13 +2,8 @@
 title: Manage quarantined messages and files as an admin
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MED150
-  - MET150
 ms.assetid: 065cc2cf-2f3a-47fd-a434-2a20b8f51d0c
 ms.collection:
   - m365-security
@@ -17,7 +12,8 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 04/01/2026
+ms.date: 05/19/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -60,6 +56,7 @@ Watch this short video to learn how to manage quarantined messages as an admin.
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
     - _Take action on quarantined messages for all users_: **Security operations / Security data / Email & collaboration quarantine (manage)**.
     - _Read-only access to quarantined messages for all users_: **Security operations / Security data / Security data basics (read)**.
+    - _Preview and download quarantined messages for all users_: **Security operations/Raw data (email & collaboration)/Email and Collaboration content: Quarantine Emails (read)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
     - _Take action on quarantined messages for all users_: Membership in the **Quarantine Administrator**, **Security Administrator**, or **Organization Management** role groups.
       - _Submit messages from quarantine to Microsoft_: Membership in the **Security Administrator** role groups.
@@ -121,7 +118,7 @@ You can sort the entries by clicking on an available column header. Select :::im
   - **Message sender is blocked by administrator settings**
 
   > [!TIP]
-  > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+  > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides. For more information, see [Limits for junk email settings](configure-junk-email-settings-on-exo-mailboxes.md#limits-for-junk-email-settings).
 
 - **Released by**<sup>\*</sup>
 - **Message ID**
@@ -326,6 +323,9 @@ When you're finished on the **Release email to recipient inboxes** flyout, selec
 
 Back on the **Email** tab, the **Release status** value of the message is **Released**.
 
+> [!NOTE]
+> Releasing a message from quarantine re-delivers it to the recipient's mailbox rather than restoring it in place. As a result, the message appears in Outlook with the re-delivery time as the delivery timestamp instead of the original delivery time. The original send date is preserved in the message headers.
+
 #### Approve or deny release requests from users for quarantined email
 
 Users can request the release of email messages if the quarantine policy used **Allow recipients to request a message to be released from quarantine** (`PermissionToRequestRelease` permission) instead of **Allow recipients to release a message from quarantine** (`PermissionToRelease` permission) when the message was quarantined. For more information, see [Create quarantine policies in the Microsoft Defender portal](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
@@ -364,12 +364,9 @@ After you select the message, use either of the following methods to remove it:
 - **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete from quarantine**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete from quarantine**.
 
-In the **Delete (n) messages from quarantine** flyout that opens, use one of the following methods to delete the message:
+In the **Delete (n) messages from quarantine** flyout that opens, select **Permanently delete the message from quarantine** and then select **Delete**. The deleted message isn't recoverable.
 
-- Select **Permanently delete the message from quarantine** and then select **Delete**: The message is permanently deleted and isn't recoverable.
-- Select **Delete** only: The message is deleted, but is potentially recoverable.
-
-After you select **Delete** on the **Delete (n) messages from quarantine** flyout, you return to the **Email** tab where the message is no longer listed.
+Back on the **Email** tab, the deleted message is no longer listed.
 
 #### Preview email from quarantine
 

@@ -1,16 +1,11 @@
 ---
 title: Remove blocked users from the Restricted entities page
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 f1_keywords:
   - 'ms.exch.eac.ActionCenter.Restricted.Users.RestrictedUsers'
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 712cfcc1-31e8-4e51-8561-b64258a8f1e5
 ms.collection:
   - m365-security
@@ -151,5 +146,6 @@ For detailed syntax and parameter information, see [Remove-BlockedSenderAddress]
 
 ## More information
 
+- [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 - [Responding to a compromised email account](responding-to-a-compromised-email-account.md)
 - [Remove blocked connectors from the Restricted entities page](connectors-remove-blocked.md)

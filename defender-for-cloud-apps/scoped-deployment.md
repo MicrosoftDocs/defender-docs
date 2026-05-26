@@ -12,6 +12,9 @@ Microsoft Defender for Cloud Apps enables you to scope your deployment. Scoping 
 > [!NOTE]
 > Scoped deployment **doesn't** reduce the number of files, OAuth applications, or user accounts that are scanned. It only reduces the number of **user activities** based on the selected user group.
 
+> [!NOTE]
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Scoped deployment uses a separate data pipeline that isn't yet integrated with the [Identity inventory](/defender-for-identity/identity-inventory). Correlations defined in the Identity inventory don't affect scoped deployment. For a full list of affected features, see [Enable Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration).
+
 ## Include or exclude user groups
 
 You might not want to use Microsoft Defender for Cloud Apps for all the users in your organization. Scoping is especially useful when you want to limit your deployment because of license restrictions. You might also need to limit because of compliance regulations requiring you not monitor users from certain countries/regions. For example, use scoped deployment to only monitor US-based employees. Alternatively, you can avoid showing any activities for your users based in Germany.
@@ -80,7 +83,7 @@ The following user activities are monitored:
 
 After you configure scoped deployment, check for new events in the **Activity log** or the **CloudAppEvents** table.
 
-If no new events appear, or events from excluded accounts appear, the scoped user accounts might not be correctly correlated with the application’s account identifiers.This can occur when one application uses a UPN as the account ID and another application uses a different account ID format or a non‑UPN value.
+If no new events appear, or events from excluded accounts appear, the scoped user accounts might not be correctly correlated with the application’s account identifiers. This can occur when one application uses a UPN as the account ID and another application uses a different account ID format or a non‑UPN value.
 To resolve this issue, create an additional scoped deployment group that matches the account identifiers used by the affected application.
 
 

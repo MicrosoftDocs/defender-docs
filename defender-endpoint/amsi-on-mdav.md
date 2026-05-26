@@ -4,7 +4,7 @@ description: Describes fileless malware and how Microsoft Defender Antivirus use
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-ms.date: 10/20/2025
+ms.date: 05/11/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -16,9 +16,6 @@ ms.subservice: ngp
 ms.custom: 
 - QuickDraft
 - partner-contribution
-search.appverid: MET150
-f1.keywords:
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -101,8 +98,8 @@ integration.
 
 ## More resources to protect against fileless attacks
 
-- [Windows Defender Application Control and AppLocker](/windows/security/application-security/application-control/windows-defender-application-control/wdac-and-applocker-overview). Enforces strong code Integrity policies and to allow only trusted applications to run. In the context of fileless malware, WDAC locks down PowerShell to Constrained Language Mode, which limits the extended language features that can lead to unverifiable code execution, such as direct .NET scripting, invocation of Win32 APIs via the Add-Type cmdlet, and interaction with COM objects. This essentially mitigates PowerShell-based reflective DLL injection attacks.
+- [Windows Defender Application Control and AppLocker](/windows/security/application-security/application-control/windows-defender-application-control/wdac-and-applocker-overview). Enforces strong code Integrity policies and to allow only trusted applications to run. In the context of fileless malware, WDAC locks down PowerShell to Constrained Language Mode, which limits the extended language features that can lead to unverifiable code execution, such as direct .NET scripting, invocation of Win32 APIs via the Add-Type cmdlet, and interaction with COM objects. This essentially mitigates PowerShell-based reflective DLL injection attacks. If WDAC script enforcement is enabled and you need Defender for Endpoint PowerShell scripts to run in FullLanguage mode, see [Allow Defender for Endpoint scripts with WDAC script enforcement](configure-wdac-script-enforcement-mde.md).
 
-- [Attack surface reduction](overview-attack-surface-reduction.md) helps admins protect against common attack vectors.
+- [Attack surface reduction](attack-surface-reduction-overview.md) helps admins protect against common attack vectors.
 
 - [Enable virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity). Mitigates kernel-memory exploits  through Hypervisor Code Integrity (HVCI), which makes it difficult to inject malicious code using kernel-mode software vulnerabilities.

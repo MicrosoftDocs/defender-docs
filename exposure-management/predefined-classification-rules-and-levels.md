@@ -3,7 +3,7 @@ title: Criticality Levels for Classifications
 description: Lists of all the current criticality levels for classifications in Microsoft Security Exposure Management.
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 03/25/2026
+ms.date: 05/18/2026
 ---
 
 # Predefined classifications - Microsoft Security Research
@@ -53,6 +53,7 @@ Current asset types are:
 | Devices with Sensitive Information (Azure Storage Account Key) | Device | High | Devices that have accessed documents containing Azure Storage Account Keys, which are identified as sensitive data. These devices are automatically classified as High criticality when interacting with sensitive content and revert to their baseline classification after 5 consecutive days without accessing the sensitive file. Learn more [here](/purview/sit-defn-azure-storage-account-key).|
 | Database Server | Device | Medium | Critical database servers in production that hold sensitive data and important information essential for the organization to function. These servers are at high risk of cyber threats and require top-level security measures to prevent unauthorized access.|
 | Global Administrator Workstation | Device | High | Devices frequently used by users having the Global Administrator role. Device might contain sensitive information related to all aspects of Microsoft Entra and other services. Compromise could result in a Microsoft Entra identity breach, enabling unauthorized control over tenant‑wide administrative capabilities, privileged roles, and sensitive organizational data. These devices are at high risk of cyber threats and require top-level security measures to prevent unauthorized access. **Note**: This rule logic relies on the predefined critical identity classification “Global Administrator”.|
+| Senior Executive User Workstation | Device | High | Devices in frequent use by users classified as senior executives. These devices are at high risk of cyber threats and require top-level security measures to prevent unauthorized access. **Note**: This rule logic relies on the predefined critical identity classifications whose names start with "Senior Executive".|
 
 ##### Identity
 
@@ -137,3 +138,4 @@ Current asset types are:
 | Premium tier Azure Kubernetes Service cluster        | Cloud resource | High                      | This rule applies to Azure Kubernetes Service clusters with premium tier cluster management. Premium tiers are recommended for running production or mission-critical workloads that need high availability and reliability. |
 | Azure Kubernetes Service cluster with multiple nodes | Cloud resource | High                      | This rule applies to Azure Kubernetes Service clusters with a large number of nodes. This often indicates that the cluster is used for critical workloads, such as production workloads. |
 | Azure Arc Kubernetes cluster with multiple nodes                | Cloud Resource | High                      | This rule applies to Azure Arc Kubernetes clusters with a large number of nodes. This often indicates that the cluster is used for critical workloads, such as production workloads. |
+| APIs with Sensitive Data | Cloud Resource | Medium | This rule applies to APIs that contain sensitive data. This often indicates that the API is used for critical production workloads, and might require additional monitoring and protection. |

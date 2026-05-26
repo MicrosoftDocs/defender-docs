@@ -1,9 +1,8 @@
-﻿---
+---
 title: Evaluate controlled folder access
 description: See how controlled folder access can help protect files from malicious apps.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
 ms.topic: article
 author: limwainstein
 ms.author: lwainstein
@@ -13,7 +12,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -78,7 +76,7 @@ See [Protect important folders with controlled folder access](controlled-folders
 
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Evaluate Microsoft Defender for Endpoint](evaluate-mde.md)
-- [Use audit mode](overview-attack-surface-reduction.md)
+- [Use audit mode](attack-surface-reduction-overview.md#audit-mode)
 
 
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Collect diagnostic data of Microsoft Defender Antivirus
 description: Use MpCmdRun to collect diagnostic log files to help troubleshoot Microsoft Defender Antivirus.
 ms.service: defender-endpoint
@@ -14,7 +14,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -35,11 +34,7 @@ This article describes how to collect diagnostic data to send to Microsoft suppo
 
 On at least two devices that are experiencing the same issue, use the following procedures to generate the diagnostic log files:
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-
-1. In the elevated Command Prompt, do one of the following steps:
+1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), do one of the following steps:
 
    - **Save the diagnostics log files on the local device**: Run the following commands:
 

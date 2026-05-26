@@ -1,14 +1,9 @@
 ---
 title: Bulk senders insight
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid:
 ms.collection: 
   - m365-security

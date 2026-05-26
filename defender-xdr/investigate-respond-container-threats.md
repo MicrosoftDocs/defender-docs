@@ -2,19 +2,13 @@
 title: Investigate and respond to container threats in the Microsoft Defender portal
 description: Investigate and respond to container attacks and threats with cloud investigation and response actions in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 11/18/2025
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>

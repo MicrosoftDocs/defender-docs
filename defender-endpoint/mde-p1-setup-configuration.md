@@ -1,17 +1,16 @@
-﻿---
+---
 title: Set up and configure Microsoft Defender for Endpoint Plan 1
-description: Learn how to set up and configure Defender for Endpoint Plan 1. Review the requirements, plan your rollout, and set up your environment. 
-search.appverid: MET150 
+description: Learn how to set up and configure Defender for Endpoint Plan 1. Review the requirements, plan your rollout, and set up your environment.
 author: paulinbar
 ms.author: painbar
+manager: bagol
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.date: 03/04/2025
 ms.reviewer: yonghree, pahuijbr
-f1.keywords: NOCSH
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 appliesto:
@@ -21,8 +20,7 @@ appliesto:
 ---
 # Set up and configure Microsoft Defender for Endpoint Plan 1
 
-
-This article describes how to set up and configure Defender for Endpoint Plan 1. Whether you have assistance or are doing it yourself, you can use this article as a guide throughout your deployment.  
+This article describes how to set up and configure Defender for Endpoint Plan 1. Whether you have assistance or are doing it yourself, you can use this article as a guide throughout your deployment.
 
 ## The setup and configuration process
 
@@ -30,50 +28,49 @@ This article describes how to set up and configure Defender for Endpoint Plan 1.
 
 The general setup and configuration process for Defender for Endpoint Plan 1 is as follows: <br/><br/>
 
-
-| Number  | Step  | Description  |
+|Number|Step|Description|
 |:---------:|:---------|:---------|
-| 1 | [Review the requirements](#review-the-requirements)  | Lists licensing, browser, operating system, and datacenter requirements   |
-| 2 | [Plan your deployment](#plan-your-deployment) | Lists several deployment methods to consider and includes links to more resources to help you decide which method to use  |
-| 3 | [Set up your tenant environment](#set-up-your-tenant-environment) | Lists tasks for setting up your tenant environment |
-| 4 | [Assign roles and permissions](#assign-roles-and-permissions) | Lists roles and permissions to consider for your security team <br/><br/>**TIP**: As soon as roles and permissions are assigned, your security team can get started using the Microsoft Defender portal. To learn more, see [Getting started](mde-plan1-getting-started.md). |
-| 5 | [Onboard to Defender for Endpoint](#onboard-to-defender-for-endpoint) | Lists several methods by operating system to onboard to Defender for Endpoint Plan 1 and includes links to more detailed information for each method  |
-| 6 | [Configure next-generation protection](#configure-next-generation-protection) | Describes how to configure your next-generation protection settings in Microsoft Intune  |
-| 7 | [Configure your attack surface reduction capabilities](#configure-your-attack-surface-reduction-capabilities)        | Lists the types of attack surface reduction capabilities you can configure and includes procedures with links to more resources  |
- 
+|1|[Review the requirements](#review-the-requirements)|Lists licensing, browser, operating system, and datacenter requirements|
+|2|[Plan your deployment](#plan-your-deployment)|Lists several deployment methods to consider and includes links to more resources to help you decide which method to use|
+|3|[Set up your tenant environment](#set-up-your-tenant-environment)|Lists tasks for setting up your tenant environment|
+|4|[Assign roles and permissions](#assign-roles-and-permissions)|Lists roles and permissions to consider for your security team <br/><br/>**TIP**: As soon as roles and permissions are assigned, your security team can get started using the Microsoft Defender portal. To learn more, see [Getting started](mde-plan1-getting-started.md).|
+|5|[Onboard to Defender for Endpoint](#onboard-to-defender-for-endpoint)|Lists several methods by operating system to onboard to Defender for Endpoint Plan 1 and includes links to more detailed information for each method|
+|6|[Configure next-generation protection](#configure-next-generation-protection)|Describes how to configure your next-generation protection settings in Microsoft Intune|
+|7|[Configure your attack surface reduction capabilities](#configure-your-attack-surface-reduction-capabilities)|Lists the types of attack surface reduction capabilities you can configure and includes procedures with links to more resources|
+
 ## Review the requirements
 
 The following table lists the basic requirements for Defender for Endpoint Plan 1:<br/><br/>
 
-| Requirement | Description |
-|:---|:---|
-| Licensing requirements | Defender for Endpoint Plan 1 (standalone, or as part of Microsoft 365 E3, A3, or G3) |
-| Browser requirements | Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome |
-| Operating systems (client) | Windows 11<br/>Windows 10, version 1709, or later<br/>[macOS](microsoft-defender-endpoint-mac.md)<br/>[iOS](microsoft-defender-endpoint-ios.md) <br/>[Android OS](microsoft-defender-endpoint-android.md) |
-| Operating systems (server) | Windows Server 2025 <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/> Azure Stack HCI OS, version 23H2 and later <br/>[Linux](microsoft-defender-endpoint-linux.md)   |
-| Datacenter | One of the following datacenter locations: <br/>- European Union <br/>- United Kingdom <br/>- United States |
+|Requirement|Description|
+|---|---|
+|Licensing requirements|Defender for Endpoint Plan 1 (standalone, or as part of Microsoft 365 E3, A3, or G3)|
+|Browser requirements|Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome|
+|Operating systems (client)|Windows 11<br/>Windows 10, version 1709, or later<br/>[macOS](microsoft-defender-endpoint-mac.md)<br/>[iOS](microsoft-defender-endpoint-ios.md) <br/>[Android OS](microsoft-defender-endpoint-android.md)|
+|Operating systems (server)|Windows Server 2025 <br/>Windows Server 2022<br/>Windows Server 2019<br/>Windows Server version 1803 and later<br/>Windows Server 2016 and 2012 R2 are supported when using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2)<br/> Azure Stack HCI OS, version 23H2 and later <br/>[Linux](microsoft-defender-endpoint-linux.md)|
+|Datacenter|One of the following datacenter locations: <br/>- European Union <br/>- United Kingdom <br/>- United States|
 
 > [!NOTE]
 > The standalone version of Defender for Endpoint Plan 1 doesn't include server licenses. To onboard servers, you'll require an additional license, such as:
-> 
+>
 > - Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)) offering.
 > - Microsoft Defender for Endpoint Server
 > - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses)
-> 
+>
 > To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md)
 
 ## Plan your deployment
 
 When you plan your deployment, you can choose from several different architectures and deployment methods. Every organization is unique, so you have several options to consider, as listed in the following table: <br/><br/>
 
-| Method | Description |
-|:---|:---|
-| [Intune](/intune/intune-service/fundamentals/what-is-intune)  | Use Intune to manage endpoints in a cloud native environment |
-| [Intune](/intune/intune-service/fundamentals/what-is-intune) and [Configuration Manager](/intune/configmgr/core/understand/introduction)  | Use Intune and Configuration Manager to manage endpoints and workloads that span an on-premises and cloud environment |
-| [Configuration Manager](/intune/configmgr/core/understand/introduction) | Use Configuration Manager to protect on-premises endpoints with the cloud-based power of Defender for Endpoint |
-| Local script downloaded from the Microsoft Defender portal | Use local scripts on endpoints to run a pilot or onboard just a few devices |
+|Method|Description|
+|---|---|
+|[Intune](/intune/intune-service/fundamentals/what-is-intune)|Use Intune to manage endpoints in a cloud native environment|
+|[Intune](/intune/intune-service/fundamentals/what-is-intune) and [Configuration Manager](/intune/configmgr/core/understand/introduction)|Use Intune and Configuration Manager to manage endpoints and workloads that span an on-premises and cloud environment|
+|[Configuration Manager](/intune/configmgr/core/understand/introduction)|Use Configuration Manager to protect on-premises endpoints with the cloud-based power of Defender for Endpoint|
+|Local script downloaded from the Microsoft Defender portal|Use local scripts on endpoints to run a pilot or onboard just a few devices|
 
-To learn more about your deployment options, see [Plan your Defender for Endpoint deployment](deployment-strategy.md). And, download the following poster: 
+To learn more about your deployment options, see [Plan your Defender for Endpoint deployment](deployment-strategy.md). And, download the following poster:
 
 [:::image type="content" source="/defender/media/defender-endpoint/mde-deployment-strategy.png" alt-text="Screenshot of deployment strategy poster thumbnail.":::](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)
 
@@ -89,15 +86,15 @@ Setting up your tenant environment includes tasks, such as:
 - Verifying your licenses
 - Configuring your tenant
 - Configuring your proxy settings (only if necessary)
-- Making sure sensors are working correctly and reporting data to Defender for Endpoint 
+- Making sure sensors are working correctly and reporting data to Defender for Endpoint
 
 These tasks are included in the setup phase for Defender for Endpoint. See [Set up Defender for Endpoint](production-deployment.md).
 
 ## Assign roles and permissions
 
-In order to access the Microsoft Defender portal, configure settings for Defender for Endpoint, or perform tasks, such as taking response actions on detected threats, appropriate permissions must be assigned. Defender for Endpoint uses [built-in roles within Microsoft Entra ID](/azure/active-directory/roles/permissions-reference). 
+In order to access the Microsoft Defender portal, configure settings for Defender for Endpoint, or perform tasks, such as taking response actions on detected threats, appropriate permissions must be assigned. Defender for Endpoint uses [built-in roles within Microsoft Entra ID](/azure/active-directory/roles/permissions-reference).
 
-Microsoft recommends assigning users only the level of permission they need to perform their tasks. You can assign permissions by using basic permissions management, or by using [role-based access control](rbac.md) (RBAC). 
+Microsoft recommends assigning users only the level of permission they need to perform their tasks. You can assign permissions by using basic permissions management, or by using [role-based access control](rbac.md) (RBAC).
 
 - With basic permissions management, Global Administrators and Security Administrators have full access, whereas Security Readers have read-only access.
 - With RBAC, you can set more granular permissions through more roles. For example, you can have Security Readers, Security Operators, Security Administrators, Endpoint Administrators, and more.
@@ -108,16 +105,16 @@ Microsoft recommends assigning users only the level of permission they need to p
 
 The following table describes key roles to consider for Defender for Endpoint in your organization: <br/><br/>
 
-| Role | Description |
-|:---|:---|
-| Global Administrators <br/><br/> *As a best practice, limit the number of Global Administrators.* | Global Administrators can perform all kinds of tasks. The person who signed up your company for Microsoft 365 or for Microsoft Defender for Endpoint Plan 1 is a Global Administrator by default. <br/><br/> Global Administrators are able to access/change settings across all Microsoft 365 portals, such as: <br/>- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com))  |
-| Security Administrators | Security Administrators can perform Security Operator tasks plus the following tasks: <br/>- Monitor security-related policies <br/>- Manage security threats and alerts <br/>- View reports |
-| Security Operator | Security Operators can perform Security Reader tasks plus the following tasks: <br/>- View information about detected threats <br/>- Investigate and respond to detected threats  |
-| Security Reader | Security Readers can perform the following tasks: <br/>- View security-related policies across Microsoft 365 services <br/>- View security threats and alerts <br/>- View reports  |
+|Role|Description|
+|---|---|
+|Global Administrators <br/><br/> *As a best practice, limit the number of Global Administrators.*|Global Administrators can perform all kinds of tasks. The person who signed up your company for Microsoft 365 or for Microsoft Defender for Endpoint Plan 1 is a Global Administrator by default. <br/><br/> Global Administrators are able to access/change settings across all Microsoft 365 portals, such as: <br/>- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com))|
+|Security Administrators|Security Administrators can perform Security Operator tasks plus the following tasks: <br/>- Monitor security-related policies <br/>- Manage security threats and alerts <br/>- View reports|
+|Security Operator|Security Operators can perform Security Reader tasks plus the following tasks: <br/>- View information about detected threats <br/>- Investigate and respond to detected threats|
+|Security Reader|Security Readers can perform the following tasks: <br/>- View security-related policies across Microsoft 365 services <br/>- View security threats and alerts <br/>- View reports|
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
-> 
+>
 > To learn more about roles in Microsoft Entra ID, see [Assign administrator and non-administrator roles to users with Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal). And, more information about roles for Defender for Endpoint, see [Role-based access control](prepare-deployment.md#role-based-access-control).
 
 ## Onboard to Defender for Endpoint
@@ -128,16 +125,15 @@ When you're ready to onboard your organization's endpoints, you can choose from 
 |---|---|
 |**Windows**|[Local script (up to 10 devices)](configure-endpoints-script.md) <br>  [Group Policy](configure-endpoints-gp.md) <br>  [Microsoft Intune/ Mobile Device Manager](configure-endpoints-mdm.md) <br>   [Microsoft Configuration Manager](configure-endpoints-sccm.md) <br> [VDI scripts](configure-endpoints-vdi.md)|
 |**macOS**|[Local script](mac-install-manually.md) <br> [Microsoft Intune](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobile Device Management](mac-install-with-other-mdm.md)|
-|**Android**|[Microsoft Intune](android-intune.md)|
+|**Android**|<a href="/intune/intune-service/protect/microsoft-defender-deploy-android" target="_blank" rel="noopener noreferrer">Microsoft Intune</a>|
 |**iOS**|[Microsoft Intune](ios-install.md) <br> [Mobile Application Manager](ios-install-unmanaged.md) |
-
 
 Then, proceed to configure your next-generation protection and attack surface reduction capabilities.
 
 ## Configure next-generation protection
 
 We recommend using [Intune](/mem) to manage your organization's devices and security settings, as shown in the following image:
- 
+
 :::image type="content" source="/defender/media/mde-p1/endpoint-policies.png" alt-text="Screenshot of endpoint security policies in the Intune portal." lightbox="/defender/media/mde-p1/endpoint-policies.png":::
 
 To configure your next-generation protection in Intune, follow these steps:
@@ -146,8 +142,7 @@ To configure your next-generation protection in Intune, follow these steps:
 
 1. Select **Endpoint security** > **Antivirus**, and then select an existing policy. (If you don't have an existing policy, create a new policy.)
 
-1. Set or change your antivirus configuration settings. Need help? Refer to the following resources: <br/>
-
+1. Set or change your antivirus configuration settings. Need help? Refer to the following resources:
    - [Settings for Windows 10 Microsoft Defender Antivirus policy in Microsoft Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows)
    - [Configure Defender for Endpoint on iOS features](ios-configure-features.md)
 
@@ -155,84 +150,33 @@ To configure your next-generation protection in Intune, follow these steps:
 
 ## Configure your attack surface reduction capabilities
 
-Attack surface reduction is all about reducing the places and ways your organization is open to attack. Defender for Endpoint Plan 1 includes several features and capabilities to help you reduce your attack surfaces across your endpoints. These features and capabilities are listed in the following table: <br/><br/>
+Attack surface reduction is all about reducing the places and ways your organization is open to attack. Defender for Endpoint Plan 1 includes several features and capabilities to help you reduce your attack surfaces across your endpoints. These features and capabilities are listed in the following table:
 
-| Feature/capability | Description |
-|:---|:---|
-| [Attack surface reduction rules](#attack-surface-reduction-rules) | Configure attack surface reduction rules to constrain software-based risky behaviors and help keep your organization safe. Attack surface reduction rules target certain software behaviors, such as<br/>- Launching executable files and scripts that attempt to download or run files <br/>- Running obfuscated or otherwise suspicious scripts <br/>- Performing behaviors that apps don't usually initiate during normal day-to-day work <br/><br/>Such software behaviors are sometimes seen in legitimate applications. However, these behaviors are often considered risky because they're commonly abused by attackers through malware.  |
-| [Ransomware mitigation](#ransomware-mitigation) | Set up ransomware mitigation by configuring controlled folder access, which helps protect your organization's valuable data from malicious apps and threats, such as ransomware. | 
-| [Device control](#device-control) | Configure device control settings for your organization to allow or block removable devices (such as USB drives). | 
-| [Network protection](#network-protection) | Set up network protection to prevent people in your organization from using applications that access dangerous domains or malicious content on the Internet. |
-| [Web protection](#web-protection) | Set up web threat protection to protect your organization's devices from phishing sites, exploit sites, and other untrusted or low-reputation sites. Set up web content filtering to track and regulate access to websites based on their content categories (such as Leisure, High bandwidth, Adult content, or Legal liability). |
-| [Network firewall](#network-firewall) | Configure your network firewall with rules that determine which network traffic is permitted to come into or go out from your organization's devices. |
-| [Application control](#application-control)  | Configure application control rules if you want to allow only trusted applications and processes to run on your Windows devices.    |
+|Feature/capability|Description|
+|---|---|
+|[Attack surface reduction (ASR) rules](#attack-surface-reduction-asr-rules)|ASR rules target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes).|
+|[Ransomware mitigation](#ransomware-mitigation)|Set up ransomware mitigation by configuring controlled folder access, which helps protect your organization's valuable data from malicious apps and threats, such as ransomware.|
+|[Device control](#device-control)|Configure device control settings for your organization to allow or block removable devices (such as USB drives).|
+|[Network protection](#network-protection)|Set up network protection to prevent people in your organization from using applications that access dangerous domains or malicious content on the Internet.|
+|[Web protection](#web-protection)|Set up web threat protection to protect your organization's devices from phishing sites, exploit sites, and other untrusted or low-reputation sites. Set up web content filtering to track and regulate access to websites based on their content categories (such as Leisure, High bandwidth, Adult content, or Legal liability).|
+|[Network firewall](#network-firewall)|Configure your network firewall with rules that determine which network traffic is permitted to come into or go out from your organization's devices.|
+|[Application control](#application-control)|Configure application control rules if you want to allow only trusted applications and processes to run on your Windows devices.|
 
-### Attack surface reduction rules
+<a name='attack-surface-reduction-rules'></a>
 
-Attack surface reduction rules are available on devices running Windows. We recommend using Intune, as shown in the following image:
+### Attack surface reduction (ASR) rules
 
-:::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="Screenshot of attack surface reduction rules in the Intune portal." lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
+Attack surface reduction (ASR) rules are available in Microsoft Defender Antivirus on Windows devices. For the available deployment methods, see [Deployment and configuration methods for ASR rules](attack-surface-reduction-rules-overview.md#deployment-and-configuration-methods-for-asr-rules).
 
-1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
-
-1. Choose **Endpoint security** > **Attack surface reduction** > **+ Create policy**.
-
-1. For **Platform**, select **Windows 10, Windows 11, and Windows Server**.
-
-1. For **Profile**, select **Attack surface reduction rules**, and then choose **Create**.
-
-1. On the **Basics** tab, specify a name and description for the policy, and then choose **Next**.
-
-1. On the **Configuration settings** tab, expand under **Defender**, configure your attack surface reduction rules, and then choose **Next**. For more information about attack surface reduction rules, see [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md).
-
-   At a minimum, we recommend enabling the following three standard protection rules:
-
-   - [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
-   - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
-   - [Block persistence through Windows Management Instrumentation (WMI) event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
-
-1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
-   
-   To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
-
-1. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (To learn more about assignments, see [Assign user and device profiles in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).)
-
-1. On the **Review + create** tab, review the settings, and then choose **Create**.
-
-> [!TIP]
-> To learn more about attack surface reduction rules, see the following resources:
-> - [Use attack surface reduction rules to prevent malware infection](attack-surface-reduction.md)
-> - [View the list of attack surface reduction rules](attack-surface-reduction-rules-reference.md)
-> - [Attack surface reduction rules deployment Step 3: Implement attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
+Typically, you can enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing. You should test other ASR rules in **Audit** mode before you switch them to **Block** or **Warn** mode. For more information, see the [ASR rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
 ### Ransomware mitigation
 
-You get ransomware mitigation through [controlled folder access](controlled-folders.md#what-is-controlled-folder-access), which allows only trusted apps to access protected folders on your endpoints. 
+You get ransomware mitigation through [controlled folder access](controlled-folders.md#what-is-controlled-folder-access), which allows only trusted apps to access protected folders on your endpoints.
 
-We recommend using Intune to configure controlled folder access.
+To configure controlled folder access in Intune, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies). Use the **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications** settings in the policy.
 
-:::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="Screenshot of attack surface reduction policies in the Intune portal." lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
-
-1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
-
-1. Go to **Endpoint Security** > **Attack Surface Reduction**, and then choose **+ Create Policy**. 
-
-1. For **Platform**, select **Windows 10, Windows 11, and Windows Server**, and for **Profile**, select **Attack surface reduction rules**. Then choose **Create**. 
-
-1. On the **Basics** tab, name the policy and add a description. Select **Next**. 
-
-1. On the **Configuration settings** tab, under **Defender** section, scroll down to the bottom. In the **Enable Controlled Folder Access** drop-down, select **Enabled**, and then choose **Next**. 
-
-   You can optionally specify these other settings:
-
-      - Next to **Controlled Folder Access Protected Folders**, toggle the switch to **Configured**, and then add folders that need to be protected.
-      - Next to **Controlled Folder Access Allowed Applications**, toggle the switch to **Configured**, and then add apps that should have access to protected folders.
-
-1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
-
-1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
-
-1. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+For more information, see [Protect important folders with controlled folder access](controlled-folders.md).
 
 ### Device control
 
@@ -240,24 +184,24 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 
 :::image type="content" source="/defender/media/mde-p1/mem-admintemplates.png" alt-text="Screenshot of Intune administrative templates." lightbox="/defender/media/mde-p1/mem-admintemplates.png":::
 
-1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
+1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
 
 1. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
 
-1. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**. 
+1. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**.
 
-1. Under **Template name**, select **Administrative Templates**, and then choose **Create**. 
+1. Under **Template name**, select **Administrative Templates**, and then choose **Create**.
 
-1. On the **Basics** tab, name the policy and add a description. Select **Next**. 
+1. On the **Basics** tab, name the policy and add a description. Select **Next**.
 
 1. On the **Configuration settings** tab, select **All Settings**. Then in the search box, type `Removable` to see all the settings that pertain to removable devices.
 
-1. Select an item in the list, such as **All Removable Storage classes, Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**. 
+1. Select an item in the list, such as **All Removable Storage classes, Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**.
 
 1. Repeat step 6 for each setting that you want to configure. Then choose **Next**.
 
-1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
-   
+1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**.
+
 1. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
 
 1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
@@ -273,15 +217,15 @@ With network protection, you can help protect your organization against dangerou
 
 :::image type="content" source="/defender/media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Screenshot of endpoint protection profile in the Intune portal." lightbox="/defender/media/mde-p1/mem-endpointprotectionprofile.png":::
 
-1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
+1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
 
 1. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
 
-1. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**. 
+1. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**.
 
-1. Under **Template name**, select **Endpoint protection**, and then choose **Create**. 
+1. Under **Template name**, select **Endpoint protection**, and then choose **Create**.
 
-1. On the **Basics** tab, name the policy and add a description. Select **Next**. 
+1. On the **Basics** tab, name the policy and add a description. Select **Next**.
 
 1. On the **Configuration settings** tab, expand **Microsoft Defender Exploit Guard**, and then expand **Network filtering**.
 
@@ -291,11 +235,11 @@ With network protection, you can help protect your organization against dangerou
 
 1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
 
-1. On the **Applicability Rules** tab, set up a rule. The profile you're configuring is applied only to devices that meet the combined criteria you specify. 
+1. On the **Applicability Rules** tab, set up a rule. The profile you're configuring is applied only to devices that meet the combined criteria you specify.
 
     a. For example, you might choose to assign the policy to endpoints that are running a certain OS edition only.
 
-    a. Then choose **Next**. 
+    a. Then choose **Next**.
 
 1. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
@@ -309,24 +253,24 @@ With web protection, you can protect your organization's devices from web threat
 #### Configure web threat protection
 
 1. Go to the [Intune admin center](https://intune.microsoft.com), and sign in.
- 
+
 1. Choose **Endpoint security** > **Attack surface reduction**, and then choose **+ Create policy**.
 
-1. Select a platform, such as **Windows 10 and later**, select the **Web protection** profile, and then choose **Create**. 
+1. Select a platform, such as **Windows 10 and later**, select the **Web protection** profile, and then choose **Create**.
 
 1. On the **Basics** tab, specify a name and description, and then choose **Next**.
 
 1. On the **Configuration settings** tab, expand **Web Protection**, specify the settings in the following table, and then choose **Next**. <br/><br/>
 
-   | Setting | Recommendation |
-   |:---|:---|
-   | **Enable network protection** | Set to **Enabled**. Prevents users from visiting malicious sites or domains. <br/><br/>Alternately, you can set network protection to **Audit mode** to see how it works in your environment. In audit mode, network protection doesn't prevent users from visiting sites or domains, but it does track detections as events. |
-   | **Require SmartScreen for Microsoft Edge Legacy** | Set to **Yes**. Helps protect users from potential phishing scams and malicious software. |
-   | **Block malicious site access** | Set to **Yes**. Prevents users from bypassing warnings about potentially malicious sites. |
-   | **Block unverified file download** | Set to **Yes**. Prevents users from bypassing the warnings and downloading unverified files. |
+   |Setting|Recommendation|
+   |---|---|
+   |**Enable network protection**|Set to **Enabled**. Prevents users from visiting malicious sites or domains. <br/><br/>Alternately, you can set network protection to **Audit mode** to see how it works in your environment. In audit mode, network protection doesn't prevent users from visiting sites or domains, but it does track detections as events.|
+   |**Require SmartScreen for Microsoft Edge Legacy**|Set to **Yes**. Helps protect users from potential phishing scams and malicious software.|
+   |**Block malicious site access**|Set to **Yes**. Prevents users from bypassing warnings about potentially malicious sites.|
+   |**Block unverified file download**|Set to **Yes**. Prevents users from bypassing the warnings and downloading unverified files.|
 
-1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
-   
+1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**.
+
 1. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
 
 1. On the **Assignments** tab, specify the users and devices to receive the web protection policy, and then choose **Next**.
@@ -357,39 +301,19 @@ With web protection, you can protect your organization's devices from web threat
 
 ### Network firewall
 
-Network firewall helps reduce the risk of network security threats. Your security team can set rules that determine which traffic is permitted to flow to or from your organization's devices. We recommend using Intune to configure your network firewall. 
+Network firewall helps reduce the risk of network security threats. Your security team can set rules that determine which traffic is permitted to flow to or from your organization's devices. We recommend using Microsoft Intune to configure your network firewall.
 
-::: ![image](https://github.com/MicrosoftDocs/defender-docs/assets/40171398/b80a84b9-fcb2-4c6e-9763-cb7aeb71153a) alt-text="Screenshot of Firewall policy in the Intune portal."::: 
+To configure network firewall using a Microsoft Intune Endpoint Security **Firewall** policy, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-To configure basic firewall settings, follow these steps:
+- **Policy type**: Firewall
+- **Platform**: Windows
+- **Profile**: Windows Firewall
+- **Configuration settings**: Set each of the following settings to **True (Default)**:
+  - **Enable Domain Network Firewall**
+  - **Enable Private Network Firewall**
+  - **Enable Public Network Firewall**
 
-1. Go to the [Intune admin center](https://intune.microsoft.com), and sign in.
-
-1. Choose **Endpoint security** > **Firewall**, and then choose **+ Create Policy**.
-
-1. Select a platform, such as **Windows 10, Windows 11, and Windows Server**, select the **Microsoft Firewall** profile, and then choose **Create**. 
-
-1. On the **Basics** tab, specify a name and description, and then choose **Next**.
-
-1. Expand **Firewall**, and then scroll down to the bottom of the list.
-
-1. Set each of the following settings to **True**:
-
-   - **Enable Domain Network Firewall** 
-   - **Enable Private Network Firewall**
-   - **Enable Public Network Firewall**
-   
-   Review the list of settings under each of domain networks, private networks, and public networks. You can leave them set to **Not configured**, or change them to suit your organization's needs.
-
-   Then choose **Next**.
-
-1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
-   
- To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
-
-1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
-
-1. On the **Review + create** tab, review your policy settings, and then choose **Create**.
+For more information about network firewall profiles available in Microsoft Intune, see [Firewall policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-firewall-policy).
 
 > [!TIP]
 > Firewall settings are detailed and can seem complex. Refer to [Best practices for configuring Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
@@ -408,9 +332,6 @@ To help with planning your WDAC deployment, see the following resources:
 
 ## Next steps
 
-Now that you've finished the setup and configuration process, your next step is to get started using Defender for Endpoint. 
+Now that you've finished the setup and configuration process, your next step is to get started using Defender for Endpoint.
 
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
-
-
-

@@ -6,7 +6,6 @@ ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -14,7 +13,6 @@ ms.topic: article
 ms.custom: 
 - cx-ti
 - cx-dex
-search.appverid: met150
 ms.date: 08/01/2025
 ---
 
@@ -55,7 +53,7 @@ Currently, the service doesn't offer support to rename these predefined groups, 
 The following section lists down questions that you or your SOC team might have regarding scoped coverage:
 
 1. **What aspects of the XDR service remain consistent with Defender Experts scoped coverage?**
-   - This service doesn't change our pricing structure. You still pay for Defender Experts service based on [E5](before-you-begin-xdr.md#prerequisites-and-licensing) and Microsoft Defender for Endpoint for Servers for your desired user base.
+   - This service doesn't change our pricing structure. You still pay for Defender Experts service based on [E5](before-you-begin-xdr.md#licensing-and-service-onboarding-prerequisites) and Microsoft Defender for Endpoint for Servers for your desired user base.
    - This service doesn't scope according to individual Microsoft Defender products and services (such as Microsoft Defender for Endpoint, Microsoft Defender for Office 365, or Microsoft Defender for Cloud). That is, the minimum baseline for scoped coverage is still the E5 license.
    - There's no change in permissions for analysts in Defender Experts for XDR. Defender Experts analysts will still have access to your entire tenant and not just the scoped assets.
 

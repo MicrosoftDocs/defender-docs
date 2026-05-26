@@ -1,15 +1,9 @@
 ---
 title: Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier1
@@ -44,7 +38,7 @@ This article contains the quick steps to turn on and configure Defender for Offi
 - For more information about licensing requirements, see [Licensing terms](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#licensing-terms).
 
 - Teams integration deployment is part of the overall deployment process of Defender for Office 365. For more information, see [Pilot and deploy Defender for Office 365](/defender-xdr/pilot-deploy-defender-office-365?toc=%2Fdefender-office-365%2FTOC.json&bc=%2Fdefender-office-365%2Fbreadcrumb%2Ftoc.json).
-  
+
 - Users are also protected with near real-time warnings for known bad links in Microsoft Teams messages, which is on by default. For more information, see [Microsoft Defender for Office 365 support for Microsoft Teams](mdo-support-teams-about.md).
 
 ## Step 1: Verify Safe Attachments integration for Microsoft Teams

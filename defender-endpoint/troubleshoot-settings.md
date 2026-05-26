@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot Microsoft Defender Antivirus settings
 description: Find out where settings for Microsoft Defender Antivirus are coming from.
 author: chrisda
@@ -11,9 +11,6 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
 ms.custom: partner-contribution
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
 - Microsoft Defender for Business
   - Microsoft Defender for Individuals
@@ -69,7 +66,7 @@ When policies and settings are configured in multiple tools, in general, here's 
 1. PowerShell ([Set-MpPreference](/powershell/module/defender/set-mppreference)), [MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md), or [Windows Management Instrumentation](use-wmi-microsoft-defender-antivirus.md) (WMI).
 
 > [!WARNING]
-> [MDMWinsOverGP](/windows/client-management/mdm/policy-csp-controlpolicyconflict) is a Policy CSP setting that doesn't apply for all settings, such as [attack surface reduction rules](attack-surface-reduction-rules-reference.md) (ASR rules) in Windows 10.
+> [MDMWinsOverGP](/windows/client-management/mdm/policy-csp-controlpolicyconflict) is a Policy CSP setting that doesn't apply for all settings, such as [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) in Windows 10.
 
 ## Step 2: Determine where Microsoft Defender Antivirus settings are configured
 

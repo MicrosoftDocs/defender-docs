@@ -1,23 +1,17 @@
 ---
 title: Try and evaluate Defender for Office 365
 description: Learn how to evaluate and try the capabilities of Microsoft Defender for Office 365 without affecting your existing mail flow.
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier1
 ms.custom: 
 ms.service: defender-office-365
 ROBOTS:
-ms.date: 04/18/2025
+ms.date: 05/22/2026
 ---
 
 # Try Microsoft Defender for Office 365
@@ -177,7 +171,7 @@ Remember, when you evaluate or try Defender for Office 365 in audit mode, specia
 
    - **All users**: The default and recommended option.
    - **Specific users**: If you select this option, you need to select the internal recipients that the evaluation applies to:
-     - **Users**: The specified mailboxes, mail users, or mail contacts.
+     - **Users**: The specified mailboxes, or mail users.
      - **Groups**:
        - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
        - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
@@ -255,7 +249,7 @@ Remember, when you try Defender for Office 365 in **blocking mode**, the Standar
 
    - **All users**: The default and recommended option.
    - **Select users**: If you select this option, you need to select the internal recipients that the trial applies to:
-     - **Users**: The specified mailboxes, mail users, or mail contacts.
+     - **Users**: The specified mailboxes, or mail users.
      - **Groups**:
        - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
        - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).

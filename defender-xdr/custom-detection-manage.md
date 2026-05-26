@@ -1,15 +1,11 @@
 ---
 title: Manage custom detection rules in Microsoft Defender XDR
 description: Learn how to manage custom detections rules based on advanced hunting queries.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - m365initiative-m365-defender
@@ -21,14 +17,14 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 05/07/2025
+ms.date: 05/19/2026
 ---
 
 # Manage existing custom detection rules
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-You can view the list of existing custom detection rules, check their previous runs, and review the alerts that were triggered. You can also run a rule on demand and modify it.
+You can view the list of existing custom detection rules, check their previous runs, and review the alerts that were triggered. You can also run a rule on demand, modify it, or create a new custom detection rule directly from the list.
 
 > [!TIP]
 > Alerts raised by custom detections are available over alerts and incident APIs. For more information, see [Supported Microsoft Defender XDR APIs](api-supported.md).
@@ -40,6 +36,8 @@ For users who have onboarded a Microsoft Sentinel workspace to the unified Micro
 To view your existing custom detection rules and analytics rules, navigate to **Hunting** > **Custom detection rules**. 
 
 :::image type="content" source="media/custom-detection-manage/unified-custom-det-list-tb.png" alt-text="Screenshot of the Custom detection rules page in the Microsoft Defender portal." lightbox="media/custom-detection-manage/unified-custom-det-list.png":::
+
+To create a new custom detection rule directly from this page, select **+ Create detection rule**. This option opens the custom detection rule wizard where you can define the query, alert details, and response actions. For more information, see [Create custom detection rules](custom-detection-rules.md).
 
 You can filter for any column by going to **Add filter**, selecting the columns you want to filter for, and selecting **Add**. For each of the chosen columns, select the corresponding pill beside **Filters:**, select the columns, then **Apply**.
 
@@ -64,11 +62,11 @@ You can also take the following actions on the rule from this page:
 
 - **Open detection rule page** - opens the detection rule page to view triggered alerts and review actions (for custom detection rules only)
 - **Run** - runs the rule immediately; this also resets the interval for the next run (for custom detection rules only)
-- **Edit** - allows you to modify the rule without changing the query
-- **Modify query** - allows you to edit the query in advanced hunting
+- **Edit** - opens the rule wizard where you can modify the rule settings and the query
+- **Modify query** - opens the query directly in advanced hunting for editing
 - **Turn on** / **Turn off** - allows you to enable the rule or stop it from running
 - **Delete** - allows you to turn off the rule and remove it
-- **Exclude from correlation** - allows you to exclude an analytics rule from correlation. This action is in preview and is for analytics rules only. See [Exclude analytics rules from correlation in Microsoft Defender XDR (preview)](exclude-analytics-rules-correlation.md) for more information.
+- **Include or exclude from correlation** - allows you to include or exclude an analytics rule from correlation. See [Manage analytics rule correlation settings in Microsoft Defender XDR](exclude-analytics-rules-correlation.md) for more information.
 
 #### View and manage triggered alerts 
 

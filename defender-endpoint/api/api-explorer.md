@@ -1,4 +1,4 @@
-﻿---
+---
 title: API Explorer in Microsoft Defender for Endpoint
 ms.reviewer:
 description: Use the API Explorer to construct and do API queries, test, and send requests for any available API
@@ -6,7 +6,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -14,7 +13,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 12/18/2020
 appliesto:
   - Microsoft Defender for Endpoint

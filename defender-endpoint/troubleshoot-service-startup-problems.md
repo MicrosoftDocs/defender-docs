@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot Microsoft Defender Antivirus service startup problems
 description: Learn how to troubleshoot Microsoft Defender Antivirus service startup problems.
 author: chrisda
@@ -11,9 +11,6 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
 ms.custom: partner-contribution
-search.appverid: MET150
-f1.keywords: NOCSH
-audience: ITPro
 appliesto:
   - Microsoft Defender for Business
   - Microsoft Defender for Individuals
@@ -30,17 +27,17 @@ Within **Security Providers**, you can see the following result.
 
 **Microsoft Defender Antivirus is turned off**.
 
-:::image type="content" source="media/security-providers.png" alt-text="Screenshot of security providers.":::  
+:::image type="content" source="media/security-providers.png" alt-text="Screenshot of security providers.":::
 
 The following screenshot displays the message: **Threat service has stopped. Restart it now.**
 
-:::image type="content" source="media/virus-threat-protection-2.png" alt-text="Screenshot of threat service has stopped.":::  
+:::image type="content" source="media/virus-threat-protection-2.png" alt-text="Screenshot of threat service has stopped.":::
 
 The following screenshot displays the message: **Unexpected error. Sorry, we ran into a problem. Please try again.**
 
 Select **Close**.
 
-:::image type="content" source="media/unexpected-error.png" alt-text="Screenshot of unexpected error." lightbox="media/unexpected-error.png":::  
+:::image type="content" source="media/unexpected-error.png" alt-text="Screenshot of unexpected error." lightbox="media/unexpected-error.png":::
 
 ## Events
 
@@ -86,64 +83,43 @@ To resolve the issue, do the following steps:
    |Microsoft Defender Antivirus Service|WinDefend|Automatic|Running|If stopped, check steps 3, 6, 7.|
    |wscsvc|Security Center|Automatic|Running||
 
-2. Download and run the [Microsoft Safety Scanner](safety-scanner-download.md) to rule out any malware.
+1. Download and run the [Microsoft Safety Scanner](safety-scanner-download.md) to rule out any malware.
 
-3. If you're using Microsoft Defender Antivirus as your primary antivirus, make sure to uninstall non-Microsoft antivirus software.
+1. If you're using Microsoft Defender Antivirus as your primary antivirus, make sure to uninstall non-Microsoft antivirus software.
 
-4. Remove the **Security Intelligence** and **engine**:
-   1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-      1. Open the **Start** menu, and then type **cmd**.
-      2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-
-   1. In the elevated Command Prompt, run the following commands.
+1. Remove the Security Intelligence and engine and reset the platform:
+   1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following command:
 
       > [!TIP]
-      > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
+      > This command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
 
       ```dos
       (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+      ```
 
+   1. Remove the **Security Intelligence** and **engine**:
+
+      ```dos
       MpCmdRun.exe -RemoveDefinitions -All
       ```
 
+   1. Reset the **Platform**:
+
+       ```dos
+       MpCmdRun.exe -ResetPlatform
+       ```
+
    For more information, see [Manage the sources for Microsoft Defender Antivirus protection updates](manage-protection-updates-microsoft-defender-antivirus.md).
 
-5. Backup Microsoft Defender Antivirus policies.
-   1. Open an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**). For example:
-      1. Open the **Start** menu, and then type **powershell**.
-      2. Right-click on the **PowerShell 7 (x64)** or **Windows PowerShell** result, and then select **Run as administrator**.
+1. Backup Microsoft Defender Antivirus policies.
 
-   1. In the elevated PowerShell session, run the following command:
+    In an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**), run the following command:
 
     ```powershell
     New-Item -Path "C:\DefenderTemp" -ItemType Directory; Invoke-Command {reg export 'HKLM\SOFTWARE\Policies\Microsoft\Windows Defender' C:\DefenderTemp\_DefenderAVBackup.reg}
     ```
 
-6. "Reset" Microsoft Defender Antivirus. Microsoft Defender Antivirus is built into Windows 10 and Windows 11, so you can't remove it.
-
-   Run the following commands in an elevated Windows Command Prompt:
-
-   - **Windows 10 or later**:
-
-     1. &nbsp;
-
-        ```dos
-        DISM /Online /Cleanup-Image /RestoreHealth
-        ```
-
-        or
-
-        ```dos
-         DISM /Online /Cleanup-Image /RestoreHealth /Source:<SourcePath> /LimitAccess
-        ```
-
-     2. &nbsp;
-
-        ```dos
-        sfc /scannow
-        ```
-
-7. Delete any policies that are set for Microsoft Defender Antivirus.
+1. Delete any policies that are set for Microsoft Defender Antivirus.
 
     Run the following command in an elevated PowerShell session:
 
@@ -153,7 +129,17 @@ To resolve the issue, do the following steps:
 
     For more information, see: [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
-8. Update Security Intelligence.
+1. Re-enable Microsoft Defender Antivirus.
+
+    Run the following commands in an elevated Command Prompt:
+
+    ```dos
+    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+    MpCmdRun.exe" -WdEnable
+    ```
+
+1. Update Security Intelligence.
 
    Run the following commands in an elevated Command Prompt:
 
@@ -163,8 +149,8 @@ To resolve the issue, do the following steps:
    MpCmdRun.exe -SignatureUpdate -MMPC
    ```
 
-9. Verify **Tamper Protection** is enabled.
+1. Verify **Tamper Protection** is enabled.
 
     :::image type="content" source="media/tamper-protection.png" alt-text="Screenshot of Tamper Protection is enabled.":::
 
-10. Run **Microsoft Update**.
+1. Run **Microsoft Update**.

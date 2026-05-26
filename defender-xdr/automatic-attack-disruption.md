@@ -2,12 +2,9 @@
 title: Automatic attack disruption in Microsoft Defender
 description: Automatically contain assets controlled by attackers by using automatic attack disruption in Microsoft Defender.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
@@ -15,9 +12,6 @@ ms.collection:
   - usx-security
 ms.topic: concept-article
 ai-usage: ai-assisted
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 06/22/2025
 appliesto:
   - Microsoft Defender XDR
@@ -41,7 +35,6 @@ This article provides an overview of automated attack disruption and includes li
 Automatic attack disruption is designed to contain attacks in progress, limit the impact on an organization's assets, and provide more time for security teams to remediate the attack fully. Attack disruption uses the full breadth of our extended detection and response (XDR) signals, taking the entire attack into account to act at the incident level. This capability is unlike known protection methods such as prevention and blocking based on a single indicator of compromise.
 
 While many XDR and security orchestration, automation, and response (SOAR) platforms allow you to create your automatic response actions, automatic attack disruption is built in and uses insights from Microsoft security researchers and advanced AI models to counteract the complexities of advanced attacks. Automatic attack disruption considers the entire context of signals from different sources to determine compromised assets.
-
 
 Automatic attack disruption operates in three key stages:
 
@@ -79,16 +72,25 @@ Model and detector quality is maintained through continuous engineering and vali
 
 Automatic attack disruption uses Microsoft-based XDR response actions. Examples of these actions are:
 
-- [Device contain](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) - based on Microsoft Defender for Endpoint's capability, this action is an automatic containment of a suspicious device to block any incoming/outgoing communication with the said device. 
+- [Device contain](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) - based on Microsoft Defender for Endpoint's capability, this action is an automatic containment of a suspicious device to block any incoming/outgoing communication with the said device.
   - In addition, Defender for Endpoint automatically contains malicious IP addresses associated with undiscovered/not onboarded devices to block any lateral movement and encryption activity to other Defender for Endpoint-onboarded/discovered devices. It does this through its **[Contain IP](/defender-endpoint/respond-machine-alerts#contain-ip-addresses-of-undiscovered-devices)** (Preview) policy. Moreover, [compromised critical assets' IP addresses are also automatically contained](/defender-endpoint/respond-machine-alerts#containing-critical-assets) with specific blocking mechanisms to stop the spread of an attack while avoiding productivity loss.
 
-- [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity's capability, this action is an automatic suspension of a compromised account to prevent additional damage like lateral movement, malicious mailbox use, or malware execution. The disable user action behaves differently depending on how the user is hosted in your environment.
-  - When the user account is hosted in Active Directory: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity agent.
-  - When the user account is hosted in Active Directory and is synced on Microsoft Entra ID:  Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account on the Microsoft Entra ID synced account.
-  - When the user account is hosted in the Microsoft Entra ID only (cloud native account): attack disruption disables the user account on the Microsoft Entra ID synced account.
+- [Isolate device (Preview)](/defender-endpoint/respond-machine-alerts#isolate-device-automatic-attack-disruption) - based on Microsoft Defender for Endpoint's capability, this action automatically isolates a compromised device from the network when the incident analysis indicates with high confidence that the device is being used as an active foothold. Most network traffic is blocked while the device remains connected to required security services for investigation and remediation. Isolation is time-limited and scoped only to devices involved in the incident. Security operators can release isolation at any time after completing investigation.
+
+- [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity’s capability, this action is an automatic suspension of a compromised account to prevent additional damage, such as lateral movement, malicious mailbox use, or malware execution.
+
+  Defender for Identity enables remediation actions for users from Active Directory, Microsoft Entra ID, and integrated identity providers. The Disable user action behaves differently depending on how the user is hosted in your environment.
+
+  - **When the user account is hosted in Active Directory**: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity sensor.
+  - **When the user account is hosted in Active Directory and is synced to Microsoft Entra ID**:
+Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account in Microsoft Entra ID.
+  - **When the user account is hosted in Microsoft Entra ID only (cloud‑native account)**:
+Defender for Identity executes the disable user action in Microsoft Entra ID by using a Microsoft‑managed enterprise application. This application validates the signed‑in user’s assigned roles and permissions through role‑based access control (RBAC) before the account is disabled.
+
+  The enterprise application is named `Microsoft Defender for Identity` and uses application ID `60ca1954‑583c‑4d1f‑86de‑39d835f3e452`. In older tenants, this application might appear as `Radius Aad Syncer`.
 
   > [!NOTE]
-  > Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity. 
+  > Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity.
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
 
@@ -113,10 +115,11 @@ The Microsoft Defender user experience now includes additional visual cues to en
 
 2. On the incident page:
 
-    - A tag titled *Attack Disruption*
-    - A yellow banner at the top of the page that highlights the automatic action taken
-   - The current asset status is shown in the incident graph if an action is done on an asset, for example, account disabled or device contained
-      
+- A tag titled *Attack Disruption*
+- A yellow banner at the top of the page that highlights the automatic action taken
+- The current asset status is shown in the incident graph if an action is done on an asset, for example, account disabled or device contained
+- The **Policy status** column (Preview) in the **Activities** tab shows the current status of all actions and policies relevant to the incident. Filter by **Provider: Attack disruption** and **Policy status: Active, Inactive, No status** to view disruption policy statuses.
+
 3. Via API:
 
     An **(attack disruption)** string is added to the end of the titles of incidents with high confidence likely to be automatically disrupted. For example:

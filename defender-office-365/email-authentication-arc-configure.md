@@ -1,14 +1,9 @@
 ---
 title: Configure trusted ARC sealers
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier2
@@ -165,3 +160,5 @@ This diagram demonstrates the result _with_ a trusted ARC sealer:
 Check your ARC Headers with Message Header Analyzer at <https://mha.azurewebsites.net>.
 
 Review the [SPF](email-authentication-spf-configure.md), [DKIM](email-authentication-dkim-configure.md), [DMARC](email-authentication-dmarc-configure.md), configuration procedures.
+
+To diagnose and fix email authentication failures, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).

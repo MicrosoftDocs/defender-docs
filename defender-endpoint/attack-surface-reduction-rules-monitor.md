@@ -1,22 +1,23 @@
 ---
 title: Monitor ASR rule activity
-description: Describes how to use advanced hunting and the device timeline to monitor attack surface reduction (ASR) rule events.
+description: Learn how to monitor attack surface reduction (ASR) rule events using advanced hunting, the device timeline, and Windows Event Viewer in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.reviewer: sugamar, yongrhee
-ms.custom: asr
-ms.topic: article
+ms.custom: asr, msecd-doc-authoring-1012
+ms.topic: how-to
 ms.collection:
 - m365-security
 - m365solution-asr-rules
 - highpri
 - tier1
 - mde-asr
-ms.date: 04/22/2026
+ms.date: 05/04/2026
 ai-usage: ai-assisted
+#customer intent: As an IT admin, I want to monitor ASR rule events so I can identify false positives and maintain effective threat protection.
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
@@ -40,11 +41,11 @@ For complete information, see [Attack surface reduction rules report in the Micr
 > [!NOTE]
 > This feature requires Microsoft Defender for Endpoint Plan 2.
 
-One of the most powerful features of [Microsoft Defender XDR](https://security.microsoft.com) is advanced hunting. If you're not familiar with advanced hunting, see: [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
+One of the most powerful features of [Microsoft Defender XDR](https://security.microsoft.com) is advanced hunting. If you're not familiar with advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
-Advanced hunting is a Kusto Query Language (KQL) threat-hunting tool in the Microsoft Defender portal that lets you explore up to 30 days of the captured (raw) data from devices. You can proactively inspect events to find interesting indicators and entities for both known and potential threats. The flexible access to data allows hunting for both known and potential threats.
+Advanced hunting is a Kusto Query Language (KQL) threat-hunting tool in the Microsoft Defender portal that lets you explore up to 30 days of the captured (raw) data from devices. You can proactively inspect events to find interesting indicators and entities for both known and potential threats.
 
-Through advanced hunting, you can extract ASR rule information, create reports, and get in-depth information on the context of a specific audit or block event from ASR rules.
+Through advanced hunting, you can extract ASR rule information, create reports, and get detailed context on a specific audit or block event from ASR rules.
 
 ASR rule events are available in the `DeviceEvents` table on the **Advanced hunting** page of the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>.
 
@@ -70,9 +71,9 @@ DeviceEvents
 | project DeviceName, FileName, FolderPath, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
 ```
 
-The true benefit of advanced hunting is that you can shape the queries to your liking. You can pinpoint something on an individual machine, or you can extract insights from your entire environment.
+Advanced hunting lets you customize queries to target individual devices or extract insights from your entire environment.
 
-For more information about hunting options, see: [Demystifying attack surface reduction rules - Part 3](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-3/ba-p/1360968).
+For more information about hunting options, see [Demystifying attack surface reduction rules - Part 3](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-3/ba-p/1360968).
 
 <a name="microsoft-defender-for-endpoint-machine-timeline"></a>
 
@@ -81,12 +82,12 @@ For more information about hunting options, see: [Demystifying attack surface re
 > [!NOTE]
 > This feature requires Microsoft Defender for Endpoint Plan 2 or Microsoft Defender for Business.
 
-A narrower scoped alternative to advanced hunting is the Defender for Endpoint device timeline. For more information, see [Microsoft Defender for Endpoint device timeline](device-timeline-event-flag.md).
+A narrower scoped alternative to advanced hunting is the Defender for Endpoint device timeline. For more information, see [Microsoft Defender for Endpoint device timeline](investigate-machines.md#investigate-device-timeline).
 
 To open the device timeline of a device in the Microsoft Defender portal, complete the following steps:
 
 1. Open the **Device Inventory** page at <https://security.microsoft.com/machines>.
-1. On the appropriate tab of the **Device Inventory** page (for example, **All devices** or **Computers & mobile**), select a device by clicking on the link in the **Name** column value.
+1. On the appropriate tab of the **Device Inventory** page (for example, **All devices** or **Computers & mobile**), select a device by selecting the device name link.
 1. In the details page that opens, select the **Timeline** tab.
 1. On the **Timeline** tab, select **Filter**. In the **Filter** flyout that opens, select **ASR events** from the **Event group** section, and then select **Apply**.
 
@@ -104,7 +105,7 @@ For complete information, see [Attack surface reduction events in Windows Event 
 
 To troubleshoot ASR rules, see [Troubleshoot attack surface reduction rules](troubleshoot-asr.md).
 
-## See also
+## Related content
 
 - [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md)
 - [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md)

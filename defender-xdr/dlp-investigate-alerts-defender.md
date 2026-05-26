@@ -1,20 +1,13 @@
 ---
 title: Investigate data loss alerts with Microsoft Defender XDR
 description: Investigate data loss in Microsoft Defender XDR.
-f1.keywords:
-  - NOCSH
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
-manager: orspodek
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - met150
 ms.date: 05/23/2025
 appliesto: 
 - Microsoft Defender XDR

@@ -6,7 +6,6 @@ ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -15,7 +14,6 @@ ms.topic: get-started
 ms.custom: 
 - cx-ti
 - cx-dex
-search.appverid: met150
 ms.date: 02/27/2026
 ---
 
@@ -24,7 +22,6 @@ ms.date: 02/27/2026
 **Applies to:**
 
 - [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- Microsoft Defender Experts for Servers
 
 For onboarding instructions, watch this short video:
 
@@ -126,10 +123,10 @@ Similar to the other excluded device or user groups, you instead get remediation
 
 ## Tell us who to contact for important matters
 
-Defender Experts for XDR lets you determine the individuals or groups within your organization that need to be notified if there are critical incidents, service updates, occasional queries, and other recommendations:
+The Defender Experts service lets you determine the individuals or groups within your organization that need to be notified if there are critical incidents, service updates, occasional queries, and other recommendations:
 
 - **Incident notification contacts** – These contacts are persons or teams that we can notify for managed response actions or any communication that requires immediate response. Given the urgent nature of the communications, we recommended that these contacts are always available.
-- **Service review contacts** – These contacts are persons or teams that will be engaged with for service updates and, if your service includes a service delivery manager, service briefings.
+- **Service review contacts** – These contacts are persons or teams that will be engaged with for service updates and, if your service includes a Security Delivery Expert, service briefings.
 
 When you add these contacts, the individuals or groups receive an email notifying them that they were added as a contact for incident notification or service review purposes.
 
@@ -190,31 +187,31 @@ The readiness assessment has two parts:
 
 - **Actions needed** – This section shows the number of actions or security settings that you need to complete, are in progress, or are completed. The table at the bottom part of the page lists these actions.
 
-  The list outlines the required steps you need to take before initiating the service. Prioritize the actions that have the **Complete now** status to get the Defender Experts for XDR service started sooner.
+  The list outlines the required steps you need to take before initiating the service. Prioritize the actions that have the **Complete now** status to get the Defender Experts service started sooner.
 
   > [!NOTE]
   > It can take up to 24 hours to get the latest status of your security settings.
 
-- **Protected assets** – This section shows the current number of protected devices and identities versus the ones that you still need to protect to get the Defender Experts for XDR service started.
+- **Protected assets** – This section shows the current number of protected devices and identities versus the ones that you still need to protect to get the Defender Experts service started.
 
   The figures are based on your Defender for Endpoint and Defender for Identity licenses. To achieve these target number of protected assets, [onboard more devices](/defender-endpoint/onboarding) to Defender for Endpoint or [install more Defender for Identity sensors](/defender-for-identity/install-sensor).
 
 > [!IMPORTANT]
-> Defender Experts for XDR reviews your readiness assessment periodically, especially if there are any changes to your environment, such as the addition of new devices and identities. Regularly monitor and run the readiness assessment beyond the initial onboarding to ensure that your environment has a strong security posture to reduce risk.
+> The Defender Experts service reviews your readiness assessment periodically, especially if there are any changes to your environment, such as the addition of new devices and identities. Regularly monitor and run the readiness assessment beyond the initial onboarding to ensure that your environment has a strong security posture to reduce risk.
 
-After you complete all the required tasks and meet the onboarding targets in your readiness assessment, the monitoring phase of your Defender Experts for XDR service starts. For a few days, our experts start monitoring your environment closely to identify latent threats, sources of risk, and normal activity. As we get better understanding of your critical assets, we can streamline the service and fine-tune our responses.
+After you complete all the required tasks and meet the onboarding targets in your readiness assessment, the monitoring phase of your Defender Experts service starts. For a few days, our experts start monitoring your environment closely to identify latent threats, sources of risk, and normal activity. As we get better understanding of your critical assets, we can streamline the service and fine-tune our responses.
 
 Once our experts begin to perform comprehensive response work on your behalf, you'll start receiving [notifications about incidents](managed-detection-and-response-xdr.md#incident-updates) that require remediation steps and targeted recommendations on critical incidents. You can also [chat with our experts](communicate-defender-experts-xdr.md) or your Security Delivery Experts (SDXs) regarding important queries and regular business and security posture reviews. Additionally you can also [view real-time reports](reports-xdr.md) on the number of incidents we've investigated and resolved on your behalf.
 
 ### Next step
 
 - [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Get real-time visibility with Defender Experts for XDR reports](reports-xdr.md)
-- [Communicating with experts in the Microsoft Defender Experts for XDR service](communicate-defender-experts-xdr.md)
+- [Get real-time visibility with Defender Experts reports](reports-xdr.md)
+- [Communicating with experts in the Microsoft Defender Experts service](communicate-defender-experts-xdr.md)
 
 ### See also
 
-- [General information on Defender Experts for XDR service](frequently-asked-questions.md)
-- [How Microsoft Defender Experts for XDR permissions work](dex-xdr-permissions.md)
+- [General information on Defender Experts service](frequently-asked-questions.md)
+- [How Microsoft Defender Experts permissions work](dex-xdr-permissions.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

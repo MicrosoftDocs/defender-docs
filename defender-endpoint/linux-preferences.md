@@ -7,14 +7,12 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.date: 03/17/2026
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -27,7 +25,7 @@ Microsoft Defender for Endpoint on Linux includes antivirus, anti-malware protec
 |Settings|Description|
 |---|---|
 |1. Configure static proxy discovery.|Configuring a static proxy helps ensure telemetry is submitted and helps avoid network timeouts. Perform this task during and after your Defender for Endpoint installation. <br/><br/> For more information, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md).|
-|2. Configure your antivirus scans.|You can schedule automatic antivirus scans by using either Anacron or Crontab. <br/><br/> For more information, see the following articles: <ul><li>[Use Anacron to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-anacron.md)</li><li>[Use Crontab to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-crontab.md)</li></ul>|
+|2. Configure your antivirus scans.|You can schedule automatic antivirus scans using built-in scheduled scan settings, or by using Anacron or Crontab. <br/><br/> For more information, see the following articles: <ul><li>[Schedule antivirus scans on Linux (preview)](schedule-antivirus-scans-linux.md)</li><li>[Use Anacron to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-anacron.md)</li><li>[Use Crontab to schedule an antivirus scan in Microsoft Defender for Endpoint on Linux](schedule-antivirus-scan-crontab.md)</li></ul>|
 |3. Configure your security settings and policies.|You can use the Microsoft Defender portal (Defender for Endpoint Security Settings Management) or a configuration profile (`.json` file) to configure Defender for Endpoint on Linux. Or, you can use command line to configure certain settings. <br/><br/> For more information, see the following articles: <ul><li>[Defender for Endpoint Security Settings Management](#defender-for-endpoint-security-settings-management)</li><li> [Configuration profile](#configuration-profile)</li><li>[Command line](linux-resources.md#configure-from-the-command-line)</li></ul>|
 |4. Configure and validate exclusions (as appropriate)|You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux. Global exclusions apply to real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR), thus stopping all associated antivirus detections, EDR alerts, and visibility for the excluded item. <br/><br/> For more information, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions.md).|
 |5. Configure the eBPF-based sensor.|The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint on Linux is automatically enabled for all customers by default for agent versions `101.23082.0006` and later. It provides supplementary event data for Linux operating systems and helps reduce the possibility of conflicts between applications. <br/><br/> For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md).|
@@ -155,7 +153,23 @@ The following configuration profile contains entries for all settings described 
       "scanNetworkSocketEvent":false,
       "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
       "offlineDefinitionUpdateFallbackToCloud":false,
-      "offlineDefinitionUpdate":"disabled"
+      "offlineDefinitionUpdate":"disabled",
+      "scheduledScan": "enabled"
+   },
+   "scheduledScan":{
+      "weeklyConfiguration":{
+         "dayOfWeek": 7,
+         "scanType": "full",
+         "timeOfDay": 180
+      },
+      "dailyConfiguration":{
+         "timeOfDay": 180
+      },
+      "runScanWhenIdle": true,
+      "lowPriorityScheduledScan": true,
+      "checkForDefinitionsUpdate": true,
+      "ignoreExclusions": false,
+      "randomizeScanStartTime": 3
    },
    "cloudService":{
       "enabled":true,
@@ -253,7 +267,10 @@ See the following subsections for a description of the dictionary contents and p
 
 #### Enforcement level for Microsoft Defender Antivirus
 
-Specifies the enforcement preference of antivirus engine. There are three values for setting enforcement level:
+Specifies the enforcement preference of the antivirus engine. There are three values for setting enforcement level:
+
+> [!IMPORTANT]
+> Only one enforcement level can be configured at a time. You can configure either `passive` or `real-time` mode, but not both.
 
 - **Real-time** (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 
@@ -269,11 +286,17 @@ Specifies the enforcement preference of antivirus engine. There are three values
   - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true`.
   - [Endpoint detection and response (EDR)](overview-endpoint-detection-response.md) is on. The output of the `mdatp health` command on the device shows `engine not loaded` for the `engine_load_version` property. The engine is related to antivirus, not EDR.
 
+To verify whether real-time protection is enabled on the device, run:
+
+```bash
+mdatp health --field real_time_protection_enabled
+```
+
 > [!NOTE]
 >
 > - Available in Defender for Endpoint version `101.10.72` or later.
 > - In version `101.23062.0001` or later, the default value is `passive`. In previous versions, the default was `real_time`.
-> - We also recommended using [scheduled scans](schedule-antivirus-scan-crontab.md) as per requirement.
+> - We also recommended using [scheduled scans](schedule-antivirus-scans-linux.md) as per requirement.
 
 #### Enable or disable behavior monitoring (if RTP is enabled)
 
@@ -796,6 +819,155 @@ Specifies whether Defender for Endpoint scans network socket events. For example
 
 > [!NOTE]
 > Available in Defender for Endpoint version `101.23062.0010` or later.
+
+### Scheduled scan preferences (preview)
+
+The `scheduledScan` section of the configuration profile configures built-in scheduled antivirus scans. To enable scheduled scans, set `antivirusEngine.scheduledScan` to `"enabled"`.
+
+> [!NOTE]
+> Available in Defender for Endpoint version `101.26032.0000` or later.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`scheduledScan`|
+|**Data type**|Dictionary (nested preference)|
+
+See the following subsections for a description of the dictionary contents.
+
+For the full details on scheduled scan configuration, including how to use Security Settings Management policies and the command line, see [Schedule antivirus scans on Linux (preview)](schedule-antivirus-scans-linux.md).
+
+#### Enable scheduled scans
+
+Specifies whether scheduled scans are enabled.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`antivirusEngine.scheduledScan`|
+|**Data type**|String|
+|**Possible values**|`disabled` (default) <br/>`enabled`|
+
+#### Weekly scan configuration
+
+Configures a weekly scan with a specific day, time, and scan type.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`weeklyConfiguration`|
+|**Data type**|Dictionary (nested preference)|
+
+##### Day of the week
+
+Specifies the day the weekly scan runs.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`dayOfWeek`|
+|**Data type**|Integer|
+|**Possible values**|`0` (disabled, default) <br/>`1`–`7` (Sunday–Saturday) <br/>`8` (every day)|
+
+##### Scan type (weekly)
+
+Specifies the scan type for weekly scans.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`scanType`|
+|**Data type**|String|
+|**Possible values**|`quick` (default) <br/>`full`|
+
+##### Time of day (weekly)
+
+Specifies when the weekly scan runs. The value is in minutes from midnight (local time).
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`timeOfDay`|
+|**Data type**|Integer|
+|**Possible values**|`0`–`1440`. Default: `120` (2:00 AM)|
+
+#### Daily scan configuration
+
+Configures a daily quick scan at a specific time each day.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`dailyConfiguration`|
+|**Data type**|Dictionary (nested preference)|
+
+##### Time of day (daily)
+
+Specifies when the daily quick scan runs. The value is in minutes from midnight (local time).
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`timeOfDay`|
+|**Data type**|Integer|
+|**Possible values**|`0`–`1440`. Default: `0`|
+
+##### Interval
+
+Runs a quick scan every N hours (interval-based scheduling).
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`interval`|
+|**Data type**|Integer|
+|**Possible values**|Integer (hours). `0` = disabled (default)|
+
+> [!NOTE]
+> `interval` and `timeOfDay` (daily) are independent settings. If both are configured, they create separate quick scan schedules and can result in multiple scans per day.
+
+#### Advanced scheduled scan settings
+
+##### Run scan when idle
+
+Delays the scan until the system is idle.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`runScanWhenIdle`|
+|**Data type**|Boolean|
+|**Possible values**|`false` (default) <br/>`true`|
+
+##### Low priority scheduled scan
+
+Runs scans with reduced CPU priority.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`lowPriorityScheduledScan`|
+|**Data type**|Boolean|
+|**Possible values**|`false` (default) <br/>`true`|
+
+##### Check for definitions update
+
+Checks for the latest security intelligence updates before starting the scan.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`checkForDefinitionsUpdate`|
+|**Data type**|Boolean|
+|**Possible values**|`false` (default) <br/>`true`|
+
+##### Ignore exclusions
+
+Runs scans without honoring configured exclusions.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`ignoreExclusions`|
+|**Data type**|Boolean|
+|**Possible values**|`false` (default) <br/>`true`|
+
+##### Randomize scan start time
+
+Randomizes the scan start time within a defined window (in hours) to avoid simultaneous scans on multiple devices.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|`randomizeScanStartTime`|
+|**Data type**|Integer|
+|**Possible values**|`0`–`23`. Default: `0` (no randomization)|
 
 ### Cloud-delivered protection preferences
 

@@ -1,26 +1,24 @@
-﻿---
+---
 title: Onboard Windows Servers to Microsoft Defender for Endpoint via Group Policy
 description: Use Group Policy to deploy the configuration package on Windows devices so that they're onboarded to the service.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: install-set-up-deploy
 ms.date: 11/17/2025
 ms.subservice: onboard
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ---
 
-# Onboard Windows devices using Group Policy 
+# Onboard Windows devices using Group Policy
 
 [!INCLUDE [Microsoft Defender deployment tool preview](./includes/defender-deployment-tool-preview.md)]
 
@@ -144,12 +142,12 @@ All policies are located under `Computer Configuration\Policies\Administrative T
 These settings configure periodic scans of the endpoint. We recommend performing a weekly quick scan, performance permitting.
 
 |Policy|Setting|
-|---|---
-|Check for the latest virus and spyware security intelligence before running a scheduled scan |Enabled|
+|---|---|
+|Check for the latest virus and spyware security intelligence before running a scheduled scan|Enabled|
 
 **Policy location:** `\Windows Components\Microsoft Defender Antivirus\Microsoft Defender Exploit Guard\Attack Surface Reduction`
 
-Get the current list of attack surface reduction rules GUIDs from [Attack surface reduction rules deployment Step 3: Implement ASR rules](attack-surface-reduction-rules-deployment-implement.md). For additional, per rules details, see [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
+Get the list of attack surface reduction (ASR) rule GUIDs from [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules). For additional details about each ASR rule, see [ASR rule details](attack-surface-reduction-rules-reference.md#asr-rule-details).
 
 1. Open the **Configure Attack Surface Reduction** policy.
 
@@ -181,7 +179,7 @@ For security reasons, the package used to Offboard devices will expire 7 days af
    1. In the navigation pane, select **System** > **Settings** > **Endpoints** > **Device management** > **Offboarding**.
 
    1. Select the operating system.
-    
+
    1. In the **Deployment method** field, select **Group policy**.
 
    1. Click **Download package** and save the .zip file.
@@ -253,7 +251,7 @@ Browse to **Computer Configuration** \> **Policies** \> **Administrative Templat
 1. Browse to **Computer Configuration** \> **Policies** \> **Administrative Templates** \> **Windows Components** \> **Windows Defender SmartScreen** \> **Explorer**.
 
    :::image type="content" source="media/config-windows-def-smartscr-explorer.png" alt-text="Configure windows defender smart screen explorer" lightbox="media/config-windows-def-smartscr-explorer.png":::
- 
+
 2. Browse to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Windows Defender SmartScreen** > **Microsoft Edge**.
 
    :::image type="content" source="media/configure-windows-defender-smartscreen.png" alt-text="Configure windows defender smart screen on Microsoft Edge" lightbox="media/configure-windows-defender-smartscreen.png":::
@@ -280,7 +278,7 @@ Browse to **Computer Configuration** \> **Policies** \> **Administrative Templat
 
 > [!NOTE]
 > The **Send all samples** option will provide the most analysis of binaries/scripts/docs which increases security posture.
-The **Send safe samples** option limits the type of binaries/scripts/docs being analyzed, and decreases security posture. 
+The **Send safe samples** option limits the type of binaries/scripts/docs being analyzed, and decreases security posture.
 
 For more information, see [Turn on cloud protection in Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md), and [Cloud protection and sample submission in Microsoft Defender Antivirus.](cloud-protection-microsoft-antivirus-sample-submission.md)
 

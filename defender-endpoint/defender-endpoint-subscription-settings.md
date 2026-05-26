@@ -1,17 +1,14 @@
 ---
 title: Manage your Microsoft Defender for Endpoint subscription settings across client devices
 description: Learn about your options for managing your Defender for Endpoint subscription settings. Choose Plan 1, Plan 2, or mixed mode.
-search.appverid: MET150  
 author: limwainstein
 ms.author: lwainstein
-audience: ITPro
 ms.topic: overview
 ms.date: 03/05/2025
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: shlomiakirav, efratka
-f1.keywords: NOCSH  
 ms.collection: 
 - M365-security-compliance
 - m365initiative-defender-endpoint
@@ -63,7 +60,7 @@ To set your tenant to mixed mode and tag devices, follow the guidance on this ta
 
    | Method | Details |
    |:---|:---|
-   | Tag devices manually | To tag devices manually, create a tag called `License MDE P1` and apply it to devices. To get help with this step, see [Create and manage device tags](machine-tags.md).<br/><br/>Note that devices that are tagged with the `License MDE P1` tag using the [registry key method](machine-tags.md#add-device-tags-by-setting-a-registry-key-value) will not receive downgraded functionality. If you want to tag devices by using the registry key method, use a dynamic rule instead of manual tagging.  |
+   | Tag devices manually | To tag devices manually, create a tag called `License MDE P1` and apply it to devices. To get help with this step, see [Create and manage device tags](machine-tags.md).<br/><br/>Note that devices that are tagged with the `License MDE P1` tag using the [registry key method](machine-tags.md#create-tags) will not receive downgraded functionality. If you want to tag devices by using the registry key method, use a dynamic rule instead of manual tagging.  |
    | Tag devices automatically by using a dynamic rule | *Dynamic rule functionality is new for mixed-license scenarios! It allows you to apply a dynamic and granular level of control over how you manage devices*. <br/><br/>To use a dynamic rule, you specify a set of criteria based on device name, domain, operating system platform, and/or device tags. Devices that meet the specified criteria will receive the Defender for Endpoint Plan 1 or Plan 2 capabilities according to your rule. <br/><br/>As you define your criteria, you can use the following condition operators: <br/>- `Equals` / `Not equals`<br/>- `Starts with`<br/>- `Contains` / `Does not contain` <br/><br/>For **Device name**, you can use freeform text.<br/><br/>For **Domain**, select from a list of domains.<br/><br/>For **OS platform**, select from a list of operating systems.<br/><br/>For **Tag**, use the freeform text option. Type the tag value that corresponds to the devices that should receive either Defender for Endpoint Plan 1 or Plan 2 capabilities. See the example in [More details about device tagging](#more-details-about-device-tagging). |
  
    Device tags are visible in the **Device inventory** view and in the [Defender for Endpoint APIs](/defender-vulnerability-management/tvm-supported-os).
@@ -86,9 +83,9 @@ For example, suppose that you want to use a tag called `VIP` for all the devices
 1. Create a device tag called `VIP`, and apply it to all the devices that should receive Defender for Endpoint Plan 2 capabilities. Use one of the following methods to create your device tag:
 
    - [Add device tags using the portal](machine-tags.md#add-device-tags-using-the-portal).
-   - [Add device tags by setting a registry key value](machine-tags.md#add-device-tags-by-setting-a-registry-key-value).
+   - [Add device tags by setting a registry key value](machine-tags.md#create-tags).
    - [Add or remove machine tags by using the Defender for Endpoint API](api/add-or-remove-machine-tags.md).
-   - [Add device tags by creating a custom profile in Microsoft Intune](machine-tags.md#add-device-tags-by-creating-a-custom-profile-in-microsoft-intune).
+   - [Add device tags by creating a custom profile in Microsoft Intune](machine-tags.md#create-tags).
 
 1. Set up a dynamic rule using the condition operator `Tag Does not contain VIP`. In this case, all devices that do not have the `VIP` tag will receive the `License MDE P1` tag and Defender for Endpoint Plan 1 capabilities. 
 

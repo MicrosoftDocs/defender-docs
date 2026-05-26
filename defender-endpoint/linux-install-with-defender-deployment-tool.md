@@ -6,14 +6,12 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
 ms.date: 02/26/2026
 appliesto:
   - Microsoft Defender for Business
@@ -107,9 +105,9 @@ The deployment tool enforces the following set of prerequisites checks, which if
    | Deploy a specific agent version | `sudo ./defender_deployment_tool.sh --mdatp 101.25042.0003 --channel prod` |
    | Upgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --upgrade --mdatp 101.24082.0004` |
    | Downgrade to a specific agent version | `sudo ./defender_deployment_tool.sh --downgrade --mdatp 101.24082.0004` |
-   | Uninstall Defender | `sudo ./defender_deployment_tool.sh --remove` |
+   | Uninstall Defender | `sudo ./defender_deployment_tool.sh --remove` For more information, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md) |
    | Only onboard if Defender is already installed | `sudo ./defender_deployment_tool.sh --only-onboard` |
-   | Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: The latest offboarding file can be downloaded from the Microsoft Defender portal)* |
+   | <a name="ddt-offboard-switch-linux"></a>Offboard Defender | `sudo ./defender_deployment_tool.sh --offboard MicrosoftDefenderATPOffboardingLinuxServer.py`<br>*(Note: Before using the --offboard option, you must first download the latest offboarding script from the Defender portal at System > Settings > Endpoints > Offboarding). For other methods of offboarding, see [Offboard or uninstall Microsoft Defender for Endpoint on Linux](linux-off-board-endpoints.md).* |
 
 ## Verify deployment status
 

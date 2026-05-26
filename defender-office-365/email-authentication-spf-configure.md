@@ -1,16 +1,11 @@
 ---
 title: Set up SPF identify valid email sources for your Microsoft 365 domain
-f1.keywords:
-  - CSH
 author: chrisda
 ms.author: chrisda
 ms.date: 09/17/2025
-audience: ITPro
 ms.topic: how-to
 
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 71373291-83d2-466f-86ea-fc61493743a6
 ms.collection:
   - m365-security
@@ -77,7 +72,7 @@ v=spf1 <valid mail sources> <enforcement rule>
 Or:
 
 ```text
-v=spf1 [<ip4>|<ip6>:<PublicIPAddress1> <ip4>|<ip6>:<PublicIPAddress2>... <ip4>|<ip6>:<PublicIPAddressN>] [include:<DomainName1> include:<DomainName1>... include:<DomainNameN>] <-all | ~all>
+v=spf1 [<ip4>|<ip6>:<PublicIPAddress1> <ip4>|<ip6>:<PublicIPAddress2>... <ip4>|<ip6>:<PublicIPAddressN>] [include:<DomainName1> include:<DomainName2>... include:<DomainNameN>] <-all | ~all>
 ```
 
 For example:
@@ -192,6 +187,8 @@ You use contoso.com for email in Microsoft 365. You plan on sending mail from th
 
 ## Troubleshooting SPF TXT records
 
+For a quick-reference table of SPF errors, causes, and fixes, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).
+
 - **One SPF record per domain or subdomain**: Multiple SPF TXT records for the same domain or subdomain cause a DNS lookup loop that makes SPF fail, so use only one SPF record per domain or subdomain.
 
 - **Time to live (TTL)**: We recommended a minimum TTL value of 3600 seconds (one hour) on SPF TXT records to avoid DNS lookup timeouts.
@@ -216,3 +213,5 @@ As described in [How SPF, DKIM, and DMARC work together to authenticate email me
 - [Set up DMARC to validate the From address domain for cloud senders](email-authentication-dmarc-configure.md)
 
 For mail coming _into_ Microsoft 365, you might also need to configure trusted ARC sealers if you use services that modify messages in transit before delivery to your organization. For more information, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
+
+To diagnose and fix email authentication failures, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).
