@@ -1,16 +1,17 @@
 ---
-title: How to validate alerts
+title: Validate alerts in Microsoft Defender for Cloud
 description: Learn how to validate security alerts in Microsoft Defender for Cloud to ensure your system is properly configured and can effectively monitor threats.
 ms.topic: how-to
 ms.custom: linux-related-content
-ms.date: 05/24/2026
+#customer intent: As a security admin, I want to validate Microsoft Defender for Cloud alerts so that I can confirm detections and response workflows are working as expected.
+ms.date: 05/25/2026
 ms.author: elkrieger
 author: ElazarK
 ---
 
 # Validate alerts in Microsoft Defender for Cloud
 
-This article explains how to validate that your system is properly configured for Microsoft Defender for Cloud alerts, ensuring you can effectively monitor and respond to security threats.
+This article explains how to validate that your system is configured for Microsoft Defender for Cloud alerts so that you can monitor and respond to threats.
 
 ## What are security alerts?
 
@@ -57,7 +58,7 @@ After a few minutes, the alerts appear on the security alerts page. They also ap
 
 Before you begin, make sure that Microsoft Defender for Endpoint runs with Real-Time protection enabled. To verify this setting, see [Configure real-time protection in Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus).
 
-After the Microsoft Defender for Endpoint agent is installed on your machine as part of Defender for Servers integration, follow these steps from the machine where you want to simulate the attacked resource.
+After the Microsoft Defender for Endpoint agent is installed on your machine as part of Defender for Servers integration, follow these steps on the machine where you want to simulate the attacked resource.
 
 Open an elevated command-line prompt on the device and run the script:
 
@@ -106,7 +107,7 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
 
 ## Simulate alerts for Storage ATP (Advanced Threat Protection)
 
-To validate threat detection for Microsoft Defender for Storage, follow these steps:
+To validate threat detection for Microsoft Defender for Storage, complete the following steps:
 
 1. Navigate to a storage account that has Azure Defender for Storage enabled.
 1. Select the **Containers** tab in the sidebar.
@@ -121,7 +122,7 @@ To validate threat detection for Microsoft Defender for Storage, follow these st
 1. Right-select the uploaded file and select **Generate SAS**.
 1. Select the Generated SAS token and URL button (no need to change any options).
 1. Copy the generated SAS URL.
-1. Open the [Tor browser download page](https://www.torproject.org/download/) and install Tor browser.
+1. Open the [Tor browser download page](https://www.torproject.org/download/) and install the Tor browser.
 1. In the Tor browser, navigate to the SAS URL. You should now see and can download the file that was uploaded.
 
 ## Test AppServices alerts
@@ -159,4 +160,5 @@ This article introduced you to the alerts validation process. Now that you're fa
 - [Validating Azure Key Vault threat detection in Microsoft Defender for Cloud](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/validating-azure-key-vault-threat-detection-in-microsoft/ba-p/1220336)
 - [Managing and responding to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md) - Learn how to manage alerts and respond to security incidents in Defender for Cloud.
 - [Understanding security alerts in Microsoft Defender for Cloud](./alerts-overview.md)
+
 
