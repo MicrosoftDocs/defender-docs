@@ -167,7 +167,11 @@ To use the quick "double-click" default installation, select the relevant tab.
 
 ### [If preview features aren't enabled](#tab/ga-experience)
 
-Make sure the tool executable and the onboarding file are in the same directory. Then, double-click the executable to launch it. The tool will automatically detect the onboarding file and begin the onboarding process. Follow the instructions in the user interface to complete onboarding.
+1. Make sure the tool executable and the onboarding file are in the same directory.
+
+1. Double-click the executable to launch it. The tool will automatically detect the onboarding file and begin the onboarding process.
+
+1. Follow the instructions in the user interface to complete onboarding.
 
 ---
 
