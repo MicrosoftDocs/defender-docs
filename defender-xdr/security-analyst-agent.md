@@ -11,7 +11,7 @@ ms.collection:
   - tier1
   - security-copilot
 ms.topic: how-to
-ms.date: 05/19/2026
+ms.date: 05/26/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -107,7 +107,7 @@ You can run the Security Analyst agent directly in Defender without completing s
 
     - **Defender XDR**: Leave all fields blank and specify `Use Defender XDR` at the end of your instruction.
     
-    - **Sentinel Data Lake**:
+    - **Sentinel Data Lake** (mandatory):
       1. Enter `SentinelDataLake` in the **DataSource** field.
       2. Enter your workspace name in the **Sentinel Data Lake Workspace Name** field.
       3. Leave the remaining fields empty. 
