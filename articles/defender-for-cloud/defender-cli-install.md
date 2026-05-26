@@ -5,7 +5,7 @@ author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/25/2026
-# customer intent: As a developer or security engineer, I want to install the Defender for Cloud CLI so I can run security scans locally and in CI/CD pipelines.
+#customer intent: As a developer or security engineer, I want to install the Defender for Cloud CLI so that I can run security scans locally and in CI/CD pipelines.
 ---
 
 # Install the Defender for Cloud CLI
@@ -65,7 +65,7 @@ To add the Defender CLI directory to your Windows PATH, complete the following s
 
 1. Select **Environment Variables**, then edit the **Path** variable under **System variables**.
 
-5. Add the path to the folder you created. 
+1. Add the path to the folder you created.
    For example, `C:\tools\defender`
 
 1. Save your changes.
@@ -77,6 +77,7 @@ Verify that Defender is installed and available in your PATH by checking the ver
 ```bash
 defender --version
 ```
+
 If the CLI is installed correctly, the command returns the current version.
 
 ## Next steps

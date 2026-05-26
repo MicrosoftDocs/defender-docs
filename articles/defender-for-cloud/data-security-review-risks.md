@@ -7,9 +7,11 @@ ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/25/2026
 ms.custom: template-how-to-pattern
-
+#customer intent: As a security professional, I want to explore sensitive data risks so that I can prioritize remediation across attack paths, alerts, and cloud security insights.
 ---
 # Explore risks to sensitive data
+
+This article explains how to investigate sensitive data risks in attack paths, Cloud Security Explorer, and related alerts in Microsoft Defender for Cloud.
 
 ## Explore and review sensitive data risks
 
