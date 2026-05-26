@@ -145,7 +145,7 @@ The Defender deployment tool can be used interactively or non-interactively.
 
 ### Interactive use
 
-The tool supports two interactive experiences that are suitable for deployment to one or a limited number of devices - a "double-click" quick single-machine onboarding experience without any changes to default behavior, and a manual command-line experience that provides more flexibility. Select the relevant tab for instructions on how to deploy the Defender enpoint security solution to your device. 
+The tool supports two interactive experiences that are suitable for deployment to one or a limited number of devices - a "double-click" quick single-machine onboarding experience without any changes to default behavior, and a manual command-line experience that provides more flexibility.
 
 To use the quick "double-click" default installation, select the relevant tab.
 
