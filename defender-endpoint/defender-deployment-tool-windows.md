@@ -7,7 +7,7 @@ ms.topic: install-set-up-deploy
 author: paulinbar
 ms.author: painbar
 ms.custom: nextgen
-ms.reviewer: pahuijbr
+ms.reviewer: pahuijbr, sihamilt
 ms.collection: 
 - m365-security
 - tier3
