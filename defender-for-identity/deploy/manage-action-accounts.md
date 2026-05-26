@@ -19,7 +19,7 @@ If you need to change this behavior, set up a dedicated gMSA and scope the permi
 > [!WARNING]
 > The sensor v3.x does not use gMSA action accounts. It always uses the domain controller's local system account for remediation actions.
 >
-> In environments with both v2.x and v3.x sensors, select **Automatically use the sensor's local system account**. The v3.x sensors use the local system account regardless of gMSA configuration. The v3.x sensors don't use gMSA accounts configured for v2.x sensors.
+> If any of your sensors are v3.x, select **Automatically use the sensor's local system account**. The v3.x sensors use the local system account regardless of gMSA configuration. The v3.x sensors don't use gMSA accounts configured for v2.x sensors.
 >
 > For more information, see [Sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
 

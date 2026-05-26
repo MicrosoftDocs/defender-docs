@@ -11,7 +11,7 @@ ms.reviewer: rlitinsky
 Create and configure a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for the sensor v2.x to use when reading Active Directory data (querying objects, tracking changes, resolving entities). This is separate from the [action account](manage-action-accounts.md) used to perform remediation actions like disabling users or resetting passwords.
 
 > [!IMPORTANT]
-> This configuration applies to the sensor v2.x only. The sensor v3.x uses LocalSystem for all AD interactions and doesn't require a Directory Service Account. If all your sensors are v3.x, skip this page.
+> This configuration applies to the sensor v2.x only. The sensor v3.x uses LocalSystem for all AD interactions and doesn't require a gMSA or any other Directory Service Account. If all your sensors are v3.x, skip this page.
 
 ## Prerequisites
 

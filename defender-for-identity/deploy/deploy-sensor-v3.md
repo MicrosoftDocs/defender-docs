@@ -102,7 +102,7 @@ The v3.x sensor uses the local system identity of the server for both purposes. 
 If you're migrating from sensor v2.x and previously had a gMSA configured for [action accounts](manage-action-accounts.md), select **Automatically use the sensor's local system account** in the Microsoft Defender portal (**Settings** > **Identities** > **Microsoft Defender for Identity** > **Manage action accounts**). The v3.x sensors don't use gMSA accounts configured for v2.x sensors.
 
 > [!IMPORTANT]
-> In environments that use both v2.x and v3.x sensors, select **Automatically use the sensor's local system account** for all sensors. The v3.x sensors use the local system account regardless of gMSA configuration.
+> If any of your sensors are v3.x, select **Automatically use the sensor's local system account** for all sensors. The v3.x sensors use the local system account regardless of gMSA configuration.
 
 ### Test your prerequisites
 
