@@ -191,7 +191,7 @@
                 - name: Defender for Azure Cosmos DB
                   displayName: Cosmos, DB, Cosmos DB
                   href: concept-defender-for-cosmos.md
-                - name: Deploy Defender for Azure Cosmos DB
+                - name: Enable Microsoft Defender for Azure Cosmos DB
                   displayName: Cosmos, DB, Cosmos DB
                   href: defender-for-databases-enable-cosmos-protections.md
         - name: Defender for Storage
@@ -443,7 +443,7 @@
             - name: Attack path analysis and enhanced risk-hunting for containers
               displayName: attack paths, paths, security explorer, test
               href: how-to-test-attack-path-and-security-explorer-with-vulnerable-container-image.md
-            - name: Configure a Docker Hub external container registry
+            - name: Onboard Docker Hub registries to Microsoft Defender for Containers
               href: defender-for-containers-enable-external-registry-for-docker-hub.md
         - name: AI Security Posture Management
           items:
