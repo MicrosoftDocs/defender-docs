@@ -501,9 +501,9 @@
           href: tutorial-enrich-ip-information.md
         - name: Extract incident entities with non-native actions
           href: tutorial-extract-incident-entities.md
-        - name: Automation rules
         - name: Automation integrations
           href: automation/integrations.md
+        - name: Automation rules
           items:
             - name: Automation rules
               href: automate-incident-handling-with-automation-rules.md
@@ -515,8 +515,6 @@
               href: create-tasks-automation-rule.md
             - name: Export and import automation rules
               href: import-export-automation-rules.md
-            - name: Automated integrations
-              href: automation/integrations.md
         - name: Playbooks
           items:
             - name: Overview
