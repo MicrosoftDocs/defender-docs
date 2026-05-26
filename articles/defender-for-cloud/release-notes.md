@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/24/2026
+ms.date: 05/26/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| May 26, 2026 | Preview | [Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)](#vulnerability-assessment-extended-to-runtime-discovered-container-images-on-eks-and-gke-preview) |
 | May 24, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available](#microsoft-defender-for-open-source-relational-databases-on-aws-rds-will-become-generally-available) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
 | May 19, 2026| GA | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
@@ -42,6 +43,14 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)
+
+May 26, 2026
+
+Defender for Cloud now extends vulnerability assessment to runtime-discovered container images on Amazon Elastic Kubernetes Service (EKS) and Google Kubernetes Engine (GKE). Previously, vulnerability assessment covered registry-based images. With this update, images discovered at runtime that weren't previously scanned from a registry are now also assessed, providing additional findings and increased visibility into running workloads.
+
+This capability delivers a unified vulnerability assessment experience across Azure, AWS, and GCP, using the same recommendation model and workflows. To use this feature, you must have AWS or GCP onboarded into Defender for Cloud.
 
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
