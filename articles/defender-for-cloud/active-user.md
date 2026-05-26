@@ -1,10 +1,10 @@
 ---
-title: Assign a Recommendation to an Active User
-author: Elazark
+title: Assign a recommendation to an active user
+author: ElazarK
 ms.author: elkrieger
 description: Learn how to assign recommendations to active users in Defender for Cloud to enhance security and streamline remediation processes.
 ms.topic: how-to
-ms.date: 05/06/2025
+ms.date: 05/24/2026
 #customer intent: As a security administrator, I want to assign recommendations to Active Users in Defender for Cloud to enhance security and streamline remediation processes.
 ---
 
@@ -18,6 +18,8 @@ Security administrators can directly assign the recommendation to the most appro
 
 ## Prerequisites
 
+Before you assign recommendations to active users, make sure you meet the following requirements:
+
 - [Enable the Defender for Cloud Security Posture Management (Defender CSPM) plan](tutorial-enable-cspm-plan.md).
 
 - Make sure you have one of the following roles and permissions:
@@ -27,7 +29,9 @@ Security administrators can directly assign the recommendation to the most appro
 
 - [Review cloud availability](support-matrix-defender-for-cloud.md).
 
-## Assign a recommendation to an active user
+## Assign a recommendation
+
+To assign a recommendation to an active user:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -39,7 +43,7 @@ Security administrators can directly assign the recommendation to the most appro
 
 1. Select a recommendation that has a suggested owner.
 
-1. In the **Recommendation owner and set due date** section, Defender for Cloud suggests the top active user on the affected resource.
+1. In the **Recommendation owner and set due date** section, Defender for Cloud suggests the top active user for the affected resource.
 
     :::image type="content" source="media/active-user/suggested-user.png" alt-text="Screenshot that shows the top suggested active user on the resource." lightbox="media/active-user/suggested-user.png":::
 
@@ -63,8 +67,10 @@ Security administrators can directly assign the recommendation to the most appro
 
 1. Select **Create**.
 
-If you set an email notification, the active user receives an email with recommendation details and a link to the recommendation in Defender for Cloud.
+If you set an email notification, the active user receives an email with recommendation details and a link to that recommendation in Defender for Cloud.
 
-## Related content
+## Next steps
 
-- [Remediate recommendations](implement-security-recommendations.md)
+> [!div class="nextstepaction"]
+> [Remediate recommendations](implement-security-recommendations.md)
+
