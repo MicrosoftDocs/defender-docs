@@ -4,7 +4,6 @@ description: Learn how to review and remediate vulnerability findings for Kubern
 ms.date: 05/26/2026
 ms.topic: how-to
 ms.custom: sfi-image-nochange
-ai-usage: ai-assisted
 ---
 
 # Review and remediate Kubernetes node vulnerabilities
