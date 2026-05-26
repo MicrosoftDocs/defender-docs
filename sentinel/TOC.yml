@@ -502,6 +502,8 @@
         - name: Extract incident entities with non-native actions
           href: tutorial-extract-incident-entities.md
         - name: Automation rules
+        - name: Automation integrations
+          href: automation/integrations.md
           items:
             - name: Automation rules
               href: automate-incident-handling-with-automation-rules.md
