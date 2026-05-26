@@ -93,6 +93,16 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 If preview features are enabled on your tenant, select the **Generate and download a new onboarding package (preview)** tab to see how to generate and download a new onboarding package. If preview features aren't enabled, select the **Download the tool (GA)** tab and follow the instructions for downloading the tool and required .onboarding file.
 
+## [Download the tool (GA)](#tab/ga-experience)
+
+1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
+
+1. In the Step 1 dropdown menu, choose **Windows**.
+
+1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This downloads the Defender executable and the onboarding file package.
+
+   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png":::
+
 ## [Generate and download a new onboarding package (preview)](#tab/preview-experience)
 
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
@@ -120,17 +130,6 @@ If preview features are enabled on your tenant, select the **Generate and downlo
    Copy the key and save it, as it will be needed with the deployment tool.
 
    After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
-
-## [Download the tool (GA)](#tab/ga-experience)
-
-1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
-
-1. In the Step 1 dropdown menu, choose **Windows**.
-
-1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This downloads the Defender executable and the onboarding file package.
-
-   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png":::
-
 ---
 
    > [!NOTE] 
@@ -145,6 +144,14 @@ The Defender deployment tool can be used interactively or non-interactively.
 The tool supports two interactive experiences that are suitable for deployment to one or a limited number of devices - a "double-click" quick single-machine onboarding experience without any changes to default behavior, and a manual command-line experience that provides more flexibility.
 
 To use the quick "double-click" default installation, select the relevant tab.
+
+### [If preview features aren't enabled](#tab/ga-experience)
+
+1. Make sure the tool executable and the onboarding file are in the same directory.
+
+1. Double-click the executable to launch it. The tool will automatically detect the onboarding file and begin the onboarding process.
+
+1. Follow the instructions in the user interface to complete onboarding.
 
 ### [If preview features are enabled](#tab/preview-experience)
 
@@ -161,15 +168,6 @@ To use the quick "double-click" default installation, select the relevant tab.
 1. Wait until installation is complete, and then select **OK**. No device reboot is required.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/process-complete.png" alt-text="Screenshot showing the message indicating that onboarding is complete.":::
-
-### [If preview features aren't enabled](#tab/ga-experience)
-
-1. Make sure the tool executable and the onboarding file are in the same directory.
-
-1. Double-click the executable to launch it. The tool will automatically detect the onboarding file and begin the onboarding process.
-
-1. Follow the instructions in the user interface to complete onboarding.
-
 ---
 
 ### Non-interactive use
