@@ -10,6 +10,8 @@ author: ElazarK
 
 # Respond to Defender for Resource Manager alerts
 
+Use this article to investigate and mitigate security alerts from Microsoft Defender for Resource Manager. It helps you validate suspicious activity and take immediate containment steps for affected accounts, subscriptions, and virtual machines.
+
 ## Investigate and respond to alerts
 
 Investigate and respond to alerts from Microsoft Defender for Resource Manager by using the guidance in this document. Defender for Resource Manager protects all connected resources. Verify the situation around every alert, even if you're familiar with the application or user that triggered it.
@@ -51,21 +53,21 @@ To investigate security alerts from Defender for Resource Manager:
 To contain the threat and prevent further damage, perform these steps immediately:
 
 1. Remediate compromised user accounts:
-    1. Delete accounts that you don't recognize because a threat actor might have created them.
-    1. For accounts you recognize, change their authentication credentials.
-    1. Review all user activities in Azure Activity logs and identify suspicious actions.
+    - Delete accounts that you don't recognize because a threat actor might have created them.
+    - For accounts you recognize, change their authentication credentials.
+    - Review all user activities in Azure Activity logs and identify suspicious actions.
 
 1. Remediate compromised subscriptions:
-    1. Remove unfamiliar runbooks from any compromised automation accounts.
-    1. Review IAM permissions for the subscription and remove permissions for unfamiliar user accounts.
-    1. Review all Azure resources in the subscription and delete any unfamiliar resources.
-    1. Review and investigate security alerts for the subscription in Microsoft Defender for Cloud.
-    1. Use Azure Activity logs to review all activities in the subscription and identify suspicious actions.
+    - Remove unfamiliar runbooks from any compromised automation accounts.
+    - Review IAM permissions for the subscription and remove permissions for unfamiliar user accounts.
+    - Review all Azure resources in the subscription and delete any unfamiliar resources.
+    - Review and investigate security alerts for the subscription in Microsoft Defender for Cloud.
+    - Use Azure Activity logs to review all activities in the subscription and identify suspicious actions.
 
 1. Remediate compromised virtual machines:
-    1. Change passwords for all users.
-    1. Run a full antimalware scan on each machine.
-    1. Reimage machines from a verified malware-free source.
+    - Change passwords for all users.
+    - Run a full antimalware scan on each machine.
+    - Reimage machines from a verified malware-free source.
 
 ## Next step
 

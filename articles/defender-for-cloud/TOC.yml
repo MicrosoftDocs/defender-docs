@@ -386,6 +386,8 @@
           href: secure-score-security-controls.md
         - name: Regulatory compliance standards
           href: concept-regulatory-compliance-standards.md
+        - name: Assign regulatory compliance standards
+          href: assign-regulatory-compliance-standards.md
         - name: Microsoft Cloud Security Benchmark (MCSB)
           displayName: mcsb, azure, security, benchmark 
           href: concept-regulatory-compliance.md

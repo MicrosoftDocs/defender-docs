@@ -10,6 +10,8 @@ ms.date: 05/25/2026
 
 # Explore and investigate Defender for SQL security alerts
 
+Use this article to review Microsoft Defender for SQL alerts and investigate suspicious activity across affected resources. The guidance helps you open alerts quickly and follow through with deeper investigation when needed.
+
 ## View and investigate SQL alerts
 
 This article explains how to access and review security alerts from Microsoft Defender for SQL. When Defender for SQL detects suspicious database activity or potential vulnerabilities, it generates alerts that require investigation.

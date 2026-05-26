@@ -68,5 +68,5 @@ The following table lists the data fields returned from the API response:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
+> [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md)
 
