@@ -77,4 +77,3 @@ After the assignment is created, the ticket ID appears next to the resource in t
 
 > [!div class="nextstepaction"]
 > [Assign an owner to a recommendation or severity level](create-governance-rule-servicenow.md)
-

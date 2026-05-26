@@ -125,5 +125,3 @@ For large environments, you can use Azure Policy to automatically create and ass
 ## Related content
 
 - [Use the data ingestion benefit in Microsoft Defender for Cloud](data-ingestion-benefit.md)
-
-

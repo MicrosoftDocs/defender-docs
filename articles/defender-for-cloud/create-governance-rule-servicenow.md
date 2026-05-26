@@ -66,4 +66,3 @@ You can create a rule to automatically assign an owner to a recommendation in De
 
 > [!div class="nextstepaction"]
 > [Common questions about cloud security posture management (CSPM)](faq-cspm.yml).
-
