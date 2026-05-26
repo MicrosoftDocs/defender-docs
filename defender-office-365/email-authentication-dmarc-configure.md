@@ -249,6 +249,8 @@ Your DMARC roll-out plan should use the following steps. Start with a domain or 
 
 ## DMARC troubleshooting
 
+For a quick-reference table of DMARC errors, causes, and fixes, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).
+
 This section helps you diagnose and resolve common DMARC failures, understand how Microsoft 365 acts on different DMARC policies, and interpret DMARC aggregate and forensic reports.
 
 :::image type="content" source="media/Tp_DMARCTroublehoot.png" alt-text="Diagram of the DMARC troubleshooting process" lightbox="media/Tp_DMARCTroublehoot.png":::
@@ -311,20 +313,17 @@ Authentication-Results: spf=pass (sender IP is 198.51.100.10)
 |DKIM alignment|`header.d=`|`adatum.com`|❌ No (different org domain)|
 |DMARC result|`dmarc=`|`fail`|Both checks failed|
 
-**Step 3**: Determine the fix:
+**Step 3**: Determine the fix by answering the following questions:
 
-```text
-Is SPF alignment fixable?
-├─ Can you change MAIL FROM to your domain? → Configure at service
-│  (for example, bounces.contoso.com instead of bounces.adatum.com)
-│
-└─ No → Use DKIM alignment instead
-   ├─ Can service sign with your domain (d=contoso.com)? → Configure custom DKIM
-   └─ No → Consider subdomain strategy:
-      - Send from sub.contoso.com
-      - Publish separate DMARC for that subdomain
-      - Have service sign DKIM with d=sub.contoso.com
-```
+1. Can you change the MAIL FROM address to your domain (for example, bounces.contoso.com instead of bounces.adatum.com)?
+   - **Yes**: Configure the MAIL FROM change at the service to fix SPF alignment.
+   - **No**: Use DKIM alignment instead (go to step 2).
+1. Can the service sign with your domain (d=contoso.com)?
+   - **Yes**: Configure custom DKIM signing at the service.
+   - **No**: Consider a subdomain strategy:
+     - Send from a subdomain (for example, sub.contoso.com).
+     - Publish a separate DMARC record for that subdomain.
+     - Have the service sign DKIM with d=sub.contoso.com.
 
 #### Check alignment for recent messages in PowerShell
 
@@ -541,40 +540,30 @@ Without this record, receivers don't deliver DMARC reports to the external addre
 
 ### DMARC diagnostic workflow
 
-```text
-Message received with dmarc=fail
-│
-├─ Step 1: Identify the From domain
-│  └─ header.from= in Authentication-Results
-│
-├─ Step 2: Check SPF alignment
-│  ├─ smtp.mailfrom= domain matches header.from= domain?
-│  │  ├─ YES (same org domain with aspf=r) → SPF aligned ✓
-│  │  └─ NO → SPF alignment fails
-│  └─ Did SPF pass at all? (spf=pass vs spf=fail)
-│     └─ If spf=fail → Fix SPF first (add sender to SPF record)
-│
-├─ Step 3: Check DKIM alignment
-│  ├─ header.d= in DKIM-Signature matches header.from= domain?
-│  │  ├─ YES (same org domain with adkim=r) → DKIM aligned ✓
-│  │  └─ NO → DKIM alignment fails
-│  └─ Did DKIM pass at all? (dkim=pass vs dkim=fail)
-│     └─ If dkim=fail → Fix DKIM (publish key, verify signing)
-│
-├─ Step 4: If BOTH alignments fail → DMARC fails
-│  └─ Resolution options:
-│     ├─ Fix SPF alignment: Change MAIL FROM to your domain
-│     ├─ Fix DKIM alignment: Sign with d=contoso.com
-│     ├─ Use subdomain: Send from sub.domain.com with own DMARC
-│     └─ If forwarding: Configure ARC trusted sealer
-│
-└─ Step 5: Check policy action
-   ├─ p=none → No effect on delivery (monitor only)
-   ├─ p=quarantine → Message goes to Junk (if Honor DMARC = On)
-   └─ p=reject → Message rejected (if Honor DMARC = On)
-       └─ If legitimate mail rejected → Use ARC, allow list, or
-          fix authentication at source
-```
+Use the following steps to diagnose a message with `dmarc=fail`:
+
+1. **Identify the From domain**: Find the `header.from=` value in the **Authentication-Results** header.
+
+1. **Check SPF alignment**: Does the `smtp.mailfrom=` domain match the `header.from=` domain?
+   - **Yes** (same organizational domain with `aspf=r`): SPF is aligned.
+   - **No**: SPF alignment fails.
+   - Did SPF pass at all (`spf=pass` vs `spf=fail`)? If `spf=fail`, fix SPF first by adding the sender to the SPF record.
+
+1. **Check DKIM alignment**: Does the `header.d=` value in the DKIM-Signature match the `header.from=` domain?
+   - **Yes** (same organizational domain with `adkim=r`): DKIM is aligned.
+   - **No**: DKIM alignment fails.
+   - Did DKIM pass at all (`dkim=pass` vs `dkim=fail`)? If `dkim=fail`, fix DKIM by publishing the key and verifying signing.
+
+1. **If both alignments fail, DMARC fails**. Resolution options:
+   - Fix SPF alignment: Change the MAIL FROM address to your domain.
+   - Fix DKIM alignment: Sign with `d=contoso.com`.
+   - Use a subdomain: Send from sub.domain.com with its own DMARC record.
+   - If the message is forwarded: Configure a trusted ARC sealer.
+
+1. **Check the policy action**:
+   - `p=none`: No effect on delivery (monitor only).
+   - `p=quarantine`: The message goes to Junk Email (if **Honor DMARC policy** is turned on).
+   - `p=reject`: The message is rejected (if **Honor DMARC policy** is turned on). If legitimate mail is rejected, use ARC, an allow list, or fix authentication at the source.
 
 ### Useful PowerShell commands for DMARC troubleshooting
 
@@ -614,3 +603,5 @@ Get-AntiPhishPolicy -Identity "Office365 AntiPhish Default" |
 ## Next steps
 
 For mail coming _into_ Microsoft 365, you might also need to configure trusted ARC sealers if you use services that modify messages in transit before delivery to your organization. For more information, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
+
+To diagnose and fix email authentication failures, see [Troubleshoot email authentication in Microsoft 365](email-authentication-troubleshoot.md).

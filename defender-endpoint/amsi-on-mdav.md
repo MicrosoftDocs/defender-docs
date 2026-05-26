@@ -100,6 +100,6 @@ integration.
 
 - [Windows Defender Application Control and AppLocker](/windows/security/application-security/application-control/windows-defender-application-control/wdac-and-applocker-overview). Enforces strong code Integrity policies and to allow only trusted applications to run. In the context of fileless malware, WDAC locks down PowerShell to Constrained Language Mode, which limits the extended language features that can lead to unverifiable code execution, such as direct .NET scripting, invocation of Win32 APIs via the Add-Type cmdlet, and interaction with COM objects. This essentially mitigates PowerShell-based reflective DLL injection attacks. If WDAC script enforcement is enabled and you need Defender for Endpoint PowerShell scripts to run in FullLanguage mode, see [Allow Defender for Endpoint scripts with WDAC script enforcement](configure-wdac-script-enforcement-mde.md).
 
-- [Attack surface reduction](overview-attack-surface-reduction.md) helps admins protect against common attack vectors.
+- [Attack surface reduction](attack-surface-reduction-overview.md) helps admins protect against common attack vectors.
 
 - [Enable virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity). Mitigates kernel-memory exploits  through Hypervisor Code Integrity (HVCI), which makes it difficult to inject malicious code using kernel-mode software vulnerabilities.

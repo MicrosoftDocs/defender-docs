@@ -55,7 +55,7 @@ It's common for penetration testers to disable features of Microsoft Defender An
 
 - [Protection from potentially unwanted apps](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) (PUA) is enabled.
 
-- [Attack surface reduction rules](overview-attack-surface-reduction.md)  (ASR rules) are set to block mode.
+- [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)  (ASR rules) are set to block mode.
 
 - [Network Protection](enable-network-protection.md) is set to block mode.
 
