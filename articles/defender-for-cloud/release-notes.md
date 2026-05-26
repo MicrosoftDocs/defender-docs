@@ -55,7 +55,7 @@ Unlike the previous recommendation, this new recommendation:
 
 This replaces the previous non-actionable recommendation with a resolvable remediation path, helping teams focus on vulnerabilities they can directly remediate while maintaining clear visibility into cluster exposure.
 
-For more information, see [Review and remediate Kubernetes node vulnerabilities](kubernetes-nodes-va.md).
+Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md).
 
 ### Updated Helm installation for Defender for Containers sensor
  
