@@ -1,9 +1,11 @@
 ---
 title: Validate your Microsoft Defender for APIs alerts
-description: Validate your Microsoft Defender for APIs alerts and ensure the security of your APIs with full lifecycle protection, detection, and response coverage.
+description: Walk through triggering a test alert in Defender for APIs to validate detection capabilities by simulating suspicious user-agent activity.
+author: ElazarK
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 08/13/2024
+ms.date: 05/25/2026
 ms.custom: references_regions, sfi-image-nochange
 #customer intent: As a user, I want to learn how to validate my Microsoft Defender for APIs alerts so that I can ensure the security of my APIs.
 ---
@@ -16,17 +18,19 @@ This page walks you through the steps to trigger an alert for one of your API en
 
 ## Prerequisites
 
-- [Create a new Azure API Management service instance in the Azure portal](/azure/api-management/get-started-create-service-instance)
+Before you begin, ensure that you've completed the following prerequisites:
+
+- Create a service instance by following [Create a new Azure API Management service instance in the Azure portal](/azure/api-management/get-started-create-service-instance).
 
 - Check the [support and prerequisites for Defender for APIs deployment](defender-for-apis-prepare.md)
 
-- [Import and publish your first API](/azure/api-management/import-and-publish)
+- Import and publish your API by using [Import and publish your first API](/azure/api-management/import-and-publish).
 
-- [Onboard Defender for APIs](defender-for-apis-deploy.md)
+- Deploy the feature by using [Onboard Defender for APIs](defender-for-apis-deploy.md).
 
 ## Simulate an alert
 
-It's important to validate that Defender for APIs is working as expected. To validate the API, you can simulate an alert by sending a request to your API endpoint with a suspicious user agent.
+It's important to validate that Defender for APIs is working as expected. To validate that Defender for APIs is monitoring your API correctly, simulate an alert by sending a request to your endpoint with a suspicious user agent.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -58,10 +62,13 @@ It's important to validate that Defender for APIs is working as expected. To val
 
     :::image type="content" source="media/defender-for-apis-validation/200-ok.png" alt-text="Screenshot that shows the result 200 OK.":::
 
-After some time, Defenders APIs will trigger an alert with detailed information about the simulated suspicious user agent activity.
+## Expected results
+
+After some time, Defender for APIs triggers an alert with detailed information about the simulated suspicious user-agent activity.
 
 ## Next step
 
 
 > [!div class="nextstepaction"]
 > [Investigate API findings, recommendations, and alerts](defender-for-apis-posture.md)
+
