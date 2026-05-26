@@ -4,7 +4,7 @@ description: Review support requirements for container capabilities in Microsoft
 ms.topic: limits-and-quotas
 author: Elazark
 ms.author: elkrieger
-ms.date: 04/27/2026
+ms.date: 05/26/2026
 ms.custom: references_regions
 ---
 
@@ -48,6 +48,7 @@ The following table lists the features provided by Defender for Containers for t
 |--|--|--|--|--|--|--|--|
 | Container registry VA | Vulnerability assessments for images in container registries | ACR, ECR, GAR, GCR, Docker Hub, JFrog Artifactory | GA | GA | Requires **Registry access** | **Defender for Containers** or **Defender CSPM** | AWS |
 | Runtime container VA - Registry scan based | VA of containers running images from supported registries | ACR, ECR, GAR, GCR, Docker Hub, JFrog Artifactory | GA | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | AWS |
+| Runtime Node VA | Kubernetes node vulnerability assessment | EKS nodes | Preview | - | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender CSPM** | AWS |
 
 ### [GCP](#tab/gcpva)
 
@@ -55,6 +56,7 @@ The following table lists the features provided by Defender for Containers for t
 |--|--|--|--|--|--|--|--|
 | Container registry VA | Vulnerability assessments for images in container registries | ACR, ECR, GAR, GCR, Docker Hub, JFrog Artifactory | GA | GA | Requires **Registry access** | **Defender for Containers** or **Defender CSPM** | GCP |
 | Runtime container VA - Registry scan based | VA of containers running images from supported registries | ACR, ECR, GAR, GCR, Docker Hub, JFrog Artifactory | GA | - | Requires **Agentless scanning for machines** and either **K8S API access** or **Defender sensor** | **Defender for Containers** or **Defender CSPM**  | GCP |
+| Runtime Node VA | Kubernetes node vulnerability assessment | GKE nodes | Preview | - | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender CSPM** | GCP |
 
 ### [Arc Connected clusters](#tab/arcva)
 

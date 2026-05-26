@@ -1,14 +1,17 @@
 ---
 title: Review and remediate Kubernetes node vulnerabilities
 description: Learn how to review and remediate vulnerability findings for Kubernetes nodes in Microsoft Defender for Cloud.
-ms.date: 04/09/2026
+ms.date: 05/26/2026
 ms.topic: how-to
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Review and remediate Kubernetes node vulnerabilities
 
 Defender for Cloud scans the [VMs that host Kubernetes nodes](./kubernetes-nodes-overview.md) for vulnerabilities in the operating system and installed software. When vulnerabilities are detected, Defender for Cloud generates recommendations with detailed findings to help you review and remediate them.
+
+This capability is supported on Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE). EKS and GKE support is currently in preview.
 
 Reviewing and remediating these vulnerabilities is part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility) for maintaining Kubernetes node security.
 
@@ -16,7 +19,7 @@ Reviewing and remediating these vulnerabilities is part of the [shared responsib
 
 Before you begin, make sure that:
 
-- You have an Azure subscription. If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
+- You have an active Azure, AWS, or GCP subscription.
 
 - [Microsoft Defender for Cloud is enabled on your subscription](connect-azure-subscription.md) with one of the following plans enabled:
     - Defender for Containers
@@ -25,13 +28,18 @@ Before you begin, make sure that:
 
 - Agentless scanning for machines is enabled.
 
+- For EKS or GKE nodes, your AWS or GCP environment must be [connected to Defender for Cloud](quickstart-onboard-aws.md).
+
 ## Review vulnerability findings for Kubernetes nodes
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
  
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Search for and select the `AKS nodes should have vulnerability findings resolved` recommendation.
+1. Search for and select the relevant recommendation for your environment:
+   - **AKS**: `AKS nodes should have vulnerability findings resolved`
+   - **EKS**: `EKS nodes should have vulnerability findings resolved` (Preview)
+   - **GKE**: `GKE nodes should have vulnerability findings resolved` (Preview)
 
 1. Review the recommendation details, including affected node pools and clusters.
 
@@ -49,7 +57,7 @@ Before you begin, make sure that:
  
 1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Search for and select the `AKS nodes should have vulnerability findings resolved` recommendation.
+1. Search for and select the recommendation for your environment (see recommendation names above).
 
 1. Select **Fix**.
 

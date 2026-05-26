@@ -1,13 +1,14 @@
 ---
 title: Overview of Kubernetes Nodes Protection
 description: Learn about Defender for Containers vulnerability assessment and malware detection for Kubernetes nodes.
-ms.date: 03/09/2026
+ms.date: 05/26/2026
 ms.topic: overview
+ai-usage: ai-assisted
 ---
 
 # Kubernetes node protection in Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud helps protect supported Azure Kubernetes Service (AKS) nodes by providing vulnerability assessment and malware detection for the virtual machines (VMs) that run your cluster workloads.
+Microsoft Defender for Cloud helps protect supported Kubernetes nodes across Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) by providing vulnerability assessment and malware detection for the virtual machines (VMs) that run your cluster workloads.
 
 These protections help you identify vulnerabilities and detect malware on the nodes that support your cluster.
 
@@ -36,6 +37,9 @@ Responsibility for Kubernetes nodes is shared between the managed Kubernetes ser
 - The managed Kubernetes service provides supported node VM images and updated versions.
 - You configure node pools based on your workload requirements.
 - You are responsible for upgrading node pool VM versions to adopt newer images and improve your security posture.
+
+> [!NOTE]
+> Karpenter-managed nodes on EKS aren't supported in this release.
 
 ## Related content
 
