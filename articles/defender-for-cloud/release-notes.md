@@ -52,6 +52,8 @@ Defender for Cloud now extends vulnerability assessment to runtime-discovered co
 
 This capability delivers a unified vulnerability assessment experience across Azure, AWS, and GCP, using the same recommendation model and workflows. To use this feature, you must have AWS or GCP onboarded into Defender for Cloud.
 
+Learn more about [vulnerability assessment for containers](view-and-remediate-vulnerabilities-containers.md).
+
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
 May 24, 2026
