@@ -1,5 +1,5 @@
 ---
-title: Responding to Defender for Resource Manager alerts
+title: Respond to Defender for Resource Manager alerts
 description: Investigate and remediate security alerts from Defender for Resource Manager. Covers connected Azure resources, subscriptions, and user activity.
 ms.date: 05/25/2026
 ms.topic: how-to

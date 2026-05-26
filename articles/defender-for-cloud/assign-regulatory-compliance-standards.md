@@ -5,9 +5,10 @@ ms.date: 05/25/2026
 ms.author: elkrieger
 author: ElazarK
 ms.topic: how-to
+#customer intent: As a security administrator, I want to assign regulatory compliance standards in Microsoft Defender for Cloud so that I can evaluate compliance across selected scopes.
 ---
 
-# Assign regulatory compliance standards in Defender for Cloud
+# Assign regulatory compliance standards in Microsoft Defender for Cloud
 
 In Microsoft Defender for Cloud, regulatory compliance standards use Azure Policy initiatives. Defender for Cloud evaluates these standards in the Regulatory compliance dashboard.
 

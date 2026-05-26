@@ -5,9 +5,12 @@ ms.date: 05/25/2026
 ms.topic: how-to
 ms.author: elkrieger
 author: ElazarK
+#customer intent: As a security administrator, I want to respond to Microsoft Defender for DNS alerts so that I can investigate suspicious DNS activity and contain potential compromises.
 ---
 
 # Respond to Microsoft Defender for DNS alerts
+
+Use this article to investigate suspicious DNS activity, confirm whether it is expected, and mitigate potentially compromised resources.
 
 ## Investigate and respond to DNS alerts
 
