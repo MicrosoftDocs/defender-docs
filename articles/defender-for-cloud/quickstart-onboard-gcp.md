@@ -1,9 +1,9 @@
 ---
 title: Connect your GCP project
-description: Defend your GCP resources by using Microsoft Defender for Cloud. Protect your workloads and enhance your cloud security with our comprehensive solution.
+description: Connect your GCP project or organization to Microsoft Defender for Cloud to protect workloads and assess your security posture.
 ms.topic: install-set-up-deploy
-ms.author: Elkrieger
-author: Elazark
+author: ElazarK
+ms.author: elkrieger
 ms.date: 01/13/2026
 ms.custom: sfi-image-nochange
 ---
@@ -60,64 +60,71 @@ Learn more about the [Google Cloud resource hierarchy](https://cloud.google.com/
  
 1. Search for and select **Microsoft Defender for Cloud**.
  
-1. Go to **Environment settings** > **Add environment** > **Google Cloud Platform**.
+1. Go to **Defender for Cloud** > **Environment settings**.
 
-    :::image type="content" source="media/quickstart-onboard-gcp/connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/connector.png":::
+1. Select **Add environment** > **Google Cloud Platform**.
 
-1. Enter the following information:
-    - Connector name.
-    - Select either **Organization** or **Single project**.
-    - Subscription.
-    - Resource group.
-    - Location.
-    - Scan interval: 4, 6, 12, or 24.
-    - (Organization only) Organization ID.
-    - (Optional - Organization only) Exclude project numbers.
-    - (Optional - Organization only) Exclude folder IDs.
-    - (Single project only) GCP project number.
-    - (Single project only) GCP project ID.
+    :::image type="content" so
+    urce="media/quickstart-onboard-gcp/connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/connector.png":::
+
+1. Select the **Subscription** in which the security connector will be created.
+
+1. Select the **Resource group** in which the security connector will be created.
+
+1. Select the **Location** where the security connector will be created.
+
+1. Select an interval to scan the GCP environment every 4, 6, 12, or 24 hours. Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations.
 
     > [!NOTE]
-    > Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations. The following table shows the fixed scan intervals for each excluded data collector:
+    > The following data collectors use a fixed scan interval:
     >
     > | Data collector name | Scan interval |
     > |--|--|
     > | ComputeInstance <br> ArtifactRegistryRepositoryPolicy <br> ArtifactRegistryImage <br> ContainerCluster <br> ComputeInstanceGroup <br> ComputeZonalInstanceGroupInstance <br> ComputeRegionalInstanceGroupManager <br> ComputeZonalInstanceGroupManager <br> ComputeGlobalInstanceTemplate | 1 hour |
+
+1. **Organization only:** Enter the GCP organization ID.
+
+1. **Organization only:** If needed, enter project numbers to exclude.
+
+1. **Organization only:** If needed, enter folder IDs to exclude.
+
+1. **Single project only:** Enter the GCP project number.
+
+1. **Single project only:** Enter the GCP project ID.
 
 1. Select **Next: Select plans**.
 
     > [!NOTE]
     > As the Log Analytics agent (also known as MMA) retired in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features and security capabilities that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
-1. Toggle plans to **On** or **Off** depending on your needs.
+1. Choose the Defender plans you want to enable.
+
+   > [!NOTE]
+   > Each plan might incur charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
 
     :::image type="content" source="media/quickstart-onboard-gcp/select-plans.png" alt-text="Screenshot that shows toggles turned on for all plans." lightbox="media/quickstart-onboard-gcp/select-plans.png":::
 
 1. Select **Next: Configure access**.
 
-1. Select permission type, **Default access** or **Least privilege access**.
+1. Select the permissions type:
 
-1. Follow the on screen instructions to configure access between Defender for Cloud and your GCP project.
+    - **Default access**: Grants permissions required for current and future capabilities.
+    - **Least privilege access**: Grants only the permissions required today. You might receive notifications if additional access is needed later.
+
+1. Follow the on-screen instructions to configure access between Defender for Cloud and your GCP environment.
 
     :::image type="content" source="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png" alt-text="Screenshot that shows deployment options and instructions for configuring access." lightbox="media/quickstart-onboard-gcp/add-gcp-project-configure-access.png":::
 
-In this step, you can find the GCloud script that needs to be run on the GCP project that is going to onboarded. The GCloud script is generated based on the plans you selected to onboard.
+    The generated `gcloud` script is based on the scope and Defender plans you selected. Run the script in the GCP environment you're onboarding.
 
-The GCloud script creates all of the required resources on your GCP environment so that Defender for Cloud can operate and provide the following security values:
-
-- Workload identity pool
-- Workload identity provider (per plan)
-- Service accounts
-- Project level policy bindings (service account has access only to the specific project)
-
-1. Select **Next: Review and generate**.
- 
-1. Review the information for accuracy.
-
-   :::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate-big.png":::
+    The script creates the required resources in your GCP environment, including:
+    - Workload identity pool
+    - Workload identity provider (per plan)
+    - Service accounts
+    - Project level policy bindings (service account has access only to the specific project)
 
     > [!NOTE]
-    > The following APIs must be enabled on the project where you run the onboarding script to discover your GCP resources and allow the authentication process to occur:
+    > The following APIs must be enabled on the project where you run the onboarding script:
     >
     > - `iam.googleapis.com`
     > - `sts.googleapis.com`
@@ -125,13 +132,19 @@ The GCloud script creates all of the required resources on your GCP environment 
     > - `iamcredentials.googleapis.com`
     > - `compute.googleapis.com`
     >
-    > When you onboard at the organization level, enable these APIs on the management project, even though you use them to access resources across all projects within your organization.
+    > When you onboard at the organization level, enable these APIs on the management project.
     >
-    > If you don't enable these APIs, you can enable them during the onboarding process by running the GCP Cloud Shell script.
+    > If these APIs aren't enabled, you can enable them during onboarding by running the GCP Cloud Shell script.
+
+1. Select **Next: Review and generate**.
+ 
+1. Review the connector details.
+
+   :::image type="content" source="media/quickstart-onboard-gcp/review-and-generate.png" alt-text="Screenshot of the review and generate screen with all of your selections listed." lightbox="media/quickstart-onboard-gcp/review-and-generate-big.png":::
 
 1. Select **Create**.
 
-After you create the connector, a scan starts on your GCP environment. New recommendations appear in Defender for Cloud after up to six hours. If you enabled autoprovisioning, Azure Arc and any enabled extensions are installed automatically for each newly detected resource.
+Defender for Cloud starts scanning your GCP resources. Security recommendations appear within a few hours. If you enabled autoprovisioning, Azure Arc and any enabled extensions are installed automatically for each newly detected resource.
 
 ## Validate connector health
 
