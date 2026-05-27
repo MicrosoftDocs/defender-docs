@@ -15,7 +15,8 @@ ms.custom:
 - cx-ti
 - cx-ta
 - seo-marvel-apr2020
-ms.date: 11/03/2025
+ms.date: 05/26/2026
+ai-usage: ai-assisted
 ---
 
 # Understand the analyst report in threat analytics in Microsoft Defender 
@@ -40,6 +41,7 @@ A threat analytics report can be classified under one of the following categorie
 - **Technique** – Provides information about a specific technique used by threat actors—for example, malicious use of PowerShell or credential harvesting in business email compromise (BEC)—and how Microsoft protects its customers by detecting activity associated with the technique.
 - **Tool** – Provides information about a specific custom or open-source tool that's often associated with a threat actor. This report discusses the tool's capabilities, the goals the threat actor using it might be trying to accomplish, and how Microsoft protects its customers by detecting activity associated with it.
 - **Vulnerability** – Provides information about a specific Common Vulnerabilities and Exposures (CVE) ID or group of similar CVEs affecting a product. A vulnerability report typically discusses noteworthy vulnerabilities, such as those being used by threat actors and notable attack campaigns. It covers one or more of the following types of information: type of vulnerability, impacted services, zero-day or in-the-wild exploitation, severity score and potential impact, and Microsoft's coverage.
+- **OSINT** (preview) – Provides curated threat intelligence derived from publicly available open-source intelligence (OSINT) sources such as security research blogs, vulnerability disclosures, and trusted OSINT feeds. Each OSINT article typically includes a concise summary of the original report, a reference link to the original source, automatically extracted indicators of compromise (IOCs), mapped MITRE ATT&CK tactics and techniques, and Microsoft-specific analysis or recommended actions when available. OSINT articles appear in the same threat analytics experience as Microsoft first-party intelligence, but some environment-specific tabs—such as **Related incidents**, **Impacted assets**, **Endpoints exposure**, and **Recommended actions**—might not yet contain data.
 
 
 ## Scan the analyst report
