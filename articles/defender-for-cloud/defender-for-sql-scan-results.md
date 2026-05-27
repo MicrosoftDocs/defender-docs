@@ -91,7 +91,7 @@ Use this method to query findings directly in Resource Graph Explorer when you n
 
 1. Select **Download as CSV**.
 
-    :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Resource Graph Explorer page with Run query and Download as CSV controls highlighted." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
+    :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Screenshot of Resource Graph Explorer page with Run query and Download as CSV controls highlighted." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
 
 This query is editable. You can customize it for a specific resource, a set of findings, or a finding status.
 
@@ -111,13 +111,13 @@ Use this method to query vulnerability findings for a specific SQL database from
 
 1. Select **Open Query**.
 
-    :::image type="content" source="media/defender-for-sql-scan-results/open-query.png" alt-text="SQL database recommendation page with the Open query button selected." lightbox="media/defender-for-sql-scan-results/open-query.png":::
+    :::image type="content" source="media/defender-for-sql-scan-results/open-query.png" alt-text="Screenshot of SQL database recommendation page with the Open query button selected." lightbox="media/defender-for-sql-scan-results/open-query.png":::
 
 1. Select **Run query**.
 
 1. Select **Download as CSV**.
 
-    :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Resource Graph Explorer page with Run query and Download as CSV controls highlighted." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
+    :::image type="content" source="media/defender-for-sql-scan-results/run-and-download.png" alt-text="Screenshot of Resource Graph Explorer page with Run query and Download as CSV controls highlighted." lightbox="media/defender-for-sql-scan-results/run-and-download.png":::
 
 This query is editable. You can customize it for a specific resource, a set of findings, or a finding status.
 
