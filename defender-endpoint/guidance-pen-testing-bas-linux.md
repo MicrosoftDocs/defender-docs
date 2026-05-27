@@ -1,5 +1,5 @@
 ---
-title: Configure Defender for Endpoint on Linux for pen testing and BAS
+title: Guidance for configuring Defender for Endpoint on Linux for pen testing and BAS
 description: Learn how to configure Microsoft Defender for Endpoint on Linux for penetration testing and breach and attack simulation (BAS), review evaluation results, and submit possible false negatives.
 author: paulinbar
 ms.author: painbar
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 #customer intent: As a penetration tester, I want to configure Defender for Endpoint on Linux with full protection so that my evaluation results reflect true detection capabilities.
 ---
 
-# Configure Microsoft Defender for Endpoint on Linux for penetration testing and BAS
+# Guidance for configuring Microsoft Defender for Endpoint on Linux for penetration testing and BAS
 
 Common challenges and potential misconfigurations can arise during penetration testing or when using breach and attack simulation (BAS) tools on Linux, which often lead to poor evaluation outcomes.
 
