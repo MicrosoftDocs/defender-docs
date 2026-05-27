@@ -1,5 +1,5 @@
 ---
-title: Discover local AI agents (preview)
+title: Discover local AI agents (Preview)
 description: Learn how to discover, view, and investigate local AI agents on Windows and macOS devices by using Microsoft Defender.
 author: lwainstein
 ms.author: lwainstein
@@ -12,11 +12,16 @@ appliesto:
 #customer intent: As a security administrator, I want to discover and monitor local AI agents on my organization's devices so that I can manage AI-related security risks on endpoints.
 ---
 
-# Discover local AI agents (preview)
+# Discover local AI agents (Preview)
+
+[!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 Microsoft Defender automatically discovers supported local AI agents and MCP servers configured on onboarded devices and surfaces them in the AI agent inventory. To learn more about local AI agent discovery, see [Local AI agent discovery with Microsoft Defender](protect-ai-agents-overview.md).
 
 In this article, you learn how to view discovered agents in the inventory, explore their relationships with devices and identities, and investigate agent presence by using advanced hunting.
+
+> [!NOTE]
+> Local AI agent discovery provides discovery and investigation capabilities only. It doesn't include security posture assessment or alerts for endpoint agents at this time.
 
 ## Prerequisites
 
@@ -67,12 +72,15 @@ No additional deployment, configuration, or scripts are required beyond device o
 
 ### Hunt for local AI agents using Advanced Hunting
 
-The tables in this section represent the security graph for local AI agents, including entities and relationships. For schema details, see [ExposureGraphNodes](/defender-xdr/advanced-hunting-exposuregraphnodes-table) and [ExposureGraphEdges](/defender-xdr/advanced-hunting-exposuregraphedges-table).
+The [ExposureGraphNodes](/defender-xdr/advanced-hunting-exposuregraphnodes-table) and [ExposureGraphEdges](/defender-xdr/advanced-hunting-exposuregraphedges-table) tables represent the security graph for local AI agents, including entities and relationships.
 
 The tables you use to query local AI agents depend on your licensing:
 
 - **Plan 2 customers**: Use the `ExposureGraphEdges` and `ExposureGraphNodes` tables in [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to query for local AI agents discovered on endpoint devices.
 - **Agent 365 customers**: Use the `AgentInfo` table in [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to query for local AI agents alongside other Agent 365-managed agents. <!-- TODO: Confirm data flow status with Eitan -->
+
+> [!NOTE]
+> In the following queries, you can either use the `ExposureGraphEdges` table as listed to query the device associated with the AI agent, or `ExposureGraphNodes` to query the actual agent.
 
 ### Get an inventory of AI agents across endpoints
 
