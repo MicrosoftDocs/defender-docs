@@ -1,5 +1,5 @@
 ---
-title: Configure Microsoft Defender for Endpoint on Linux for Pen Testing and BAS
+title: Configure Defender for Endpoint on Linux for pen testing and BAS
 description: Learn how to configure Microsoft Defender for Endpoint on Linux for penetration testing and breach and attack simulation (BAS), review evaluation results, and submit possible false negatives.
 author: paulinbar
 ms.author: painbar
@@ -38,7 +38,7 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
 
 ## Detailed guidance
 
-It's common for penetration testers to use just the default mode or enable only limited settings of Microsoft Defender on Linux while executing their attack. For accurate BAS and penetration testing results, Microsoft Defender for Endpoint on Linux must run with the full protection stack enabled. Evaluation results are unsatisfactory when only limited default settings are active. To avoid incomplete signal coverage, ensure the following components are enabled before testing:
+It's common for penetration testers to use just the default mode or enable only limited settings of Microsoft Defender for Endpoint on Linux while executing their attack. For accurate BAS and penetration testing results, Microsoft Defender for Endpoint on Linux must run with the full protection stack enabled. Evaluation results are unsatisfactory when only limited default settings are active. To avoid incomplete signal coverage, ensure the following components are enabled before testing:
 
 - **Real-time protection (RTP)**: Ensures malicious activity is detected and remediated in real time.
 
@@ -50,7 +50,7 @@ It's common for penetration testers to use just the default mode or enable only 
 
 - **Additional antivirus and sensor capabilities**: These settings enable deeper inspection of file, process, and network activity, along with extended telemetry collection from the system. Together, they improve detection depth, increase visibility into attack techniques, and reduce the chances of missed signals during BAS and penetration testing by capturing more system-level events and enforcing stronger scanning behavior.
 
-Enable all of these settings by creating the managed JSON configuration profile (`mdatp_managed.json`) on the path `/etc/opt/microsoft/mdatp/managed`. Copy the following content to `mdatp_managed.json`. The path can differ if you use a custom path for installation. For more information, see [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
+Enable all of the protection settings listed above by creating the managed JSON configuration profile (`mdatp_managed.json`) on the path `/etc/opt/microsoft/mdatp/managed`. Copy the following content to `mdatp_managed.json`. The path can differ if you use a custom path for installation. For more information, see [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
 
 ```json
 {
@@ -97,7 +97,7 @@ To get the most current and comprehensive assessment of Defender's detection and
 
 ## Keep Defender up to date
 
-Running an older Linux Defender version means the agent continues to operate and receive security intelligence updates. However, you don't receive the latest features, bug fixes, and optimizations from Microsoft. An outdated agent puts your environment at greater risk for new threats and operational issues, because the agent won't be improved with the latest capabilities.
+Running an older Defender for Endpoint on Linux version means the agent continues to operate and receive security intelligence updates. However, you don't receive the latest features, bug fixes, and optimizations from Microsoft. An outdated agent puts your environment at greater risk for new threats and operational issues, because the agent won't be improved with the latest capabilities.
 
 To maintain the highest level of security, support, and reliability, upgrade to the latest agent version as soon as possible. For upgrade guidance, see the following articles:
 
@@ -127,7 +127,7 @@ In some environments, exclusions added for performance tuning or legacy workload
 
 After running BAS or penetration testing scenarios, correctly interpret the results in the Microsoft Defender portal to understand both detection coverage and attacker behavior.
 
-To help with interpretation, refer to the following video and key guidance on how to analyze results.
+To help with interpretation, review the key guidance on how to analyze results.
 
 <!-- TODO: Replace with valid video embed or remove. The original reference (Linux evals final.mp4) uses an invalid format for Microsoft Learn. -->
 
@@ -159,11 +159,11 @@ Ensure you have the following information ready:
 
 - **Device ID**. In the [Microsoft Defender portal](https://security.microsoft.com/), open the device page.
 
-- Binary names.
+- **Binary names**.
 
-- Start and end of when testing was done in HH:MM:SS UTC format.
+- **Testing timeframe**. Start and end times in HH:MM:SS UTC format.
 
-- Provide the steps to reproduce the issue and a sample of the payload if possible.
+- **Reproduction steps**. Provide the steps to reproduce the issue and a sample of the payload if possible.
 
 ### Step 3: Submit data to Microsoft as soon as possible
 
@@ -180,7 +180,7 @@ Submit the data you gathered in Steps 1 and 2 by using either the MDSI portal or
 
 1. **The Microsoft Defender portal**: See [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
-1. After you upload the files, note the Submission ID for your sample submission (for example, 7c6c214b-17d4-4703-860b-7f1e9da03f7f).
+1. After you upload the files, note the Submission ID for your sample submission (for example, aaaa0000-bb11-2222-33cc-444444dddddd).
 
 1. Wait for an update. After Microsoft receives the submission, Microsoft Defender research teams analyze the data to assess detection behavior and protection coverage. If gaps or issues are identified, appropriate actions might be taken to improve detection and prevention capabilities.
 
