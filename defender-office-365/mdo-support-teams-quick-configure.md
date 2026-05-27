@@ -95,7 +95,7 @@ For complete instructions, see [Configure ZAP for Teams protection in Defender f
 
 ## Step 4: Defender for Office 365: Configure user reported settings for Microsoft Teams
 
-For complete instructions, see [User reported message settings in Microsoft Teams](submissions-teams.md).
+For complete instructions, see [User reported settings in Microsoft Teams](submissions-teams.md).
 
 1. In the Teams admin center, go to the **Settings & policies** page at <https://admin.teams.microsoft.com/one-policy/settings>.
 
