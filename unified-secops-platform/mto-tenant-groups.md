@@ -64,9 +64,13 @@ The first time you open the page, you see **My private group**, which contains a
 1. In the top-left corner of the multitenant portal, select **Open multitenant management**.
 1. Select the tenant group you want to view.
 
+   :::image type="content" source="media/mto-tenant-groups/multitenant-view-settings.png" alt-text="Screenshot of the Multi-tenant view settings page in the Microsoft Defender portal, with the Open multitenant management icon highlighted in the top-right corner." lightbox="media/mto-tenant-groups/multitenant-view-settings.png":::
+
 After you switch groups, browse the different views in the multitenant portal and confirm that the data shown comes only from the tenants in the selected group.
 
 If someone edits a tenant group (by adding or removing tenants) while you have a view open for that group, the portal shows a notification that a change was detected. Refresh the view to load data for the updated set of tenants.
+
+:::image type="content" source="media/mto-tenant-groups/group-changes-detected.png" alt-text="Screenshot of the Group changes detected dialog with Refresh and reload and Cancel buttons.":::
 
 ## Edit a tenant group
 
