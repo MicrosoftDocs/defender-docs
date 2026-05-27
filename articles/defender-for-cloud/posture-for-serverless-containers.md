@@ -92,3 +92,4 @@ In preview, posture for serverless containers has the following limitations:
 - [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-plan.md)
 - [Defender for Containers support matrix](support-matrix-defender-for-containers.md)
 - [Remediate security recommendations in Microsoft Defender for Cloud](implement-security-recommendations.md)
+- [Serverless containers security recommendations](recommendations-reference-serverless-containers.md)
