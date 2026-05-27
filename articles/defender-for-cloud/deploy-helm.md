@@ -1,10 +1,10 @@
 ---
 title: Install Defender for Containers sensor using Helm
 description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
-author: Elazark
-ms.topic: how-to
-ms.date: 06/05/2026
+author: ElazarK
 ms.author: elkrieger
+ms.topic: how-to
+ms.date: 05/27/2026
 ---
 
 # Install Defender for Containers sensor by using Helm
@@ -141,7 +141,7 @@ helm install defender-k8s oci://mcr.microsoft.com/azuredefender/microsoft-defend
 
 ## Verify the installation
 
-Verify that the installation succeeded by using the namespace you used during installation.
+Verify the installation by using the same namespace you used to install the chart.
 
 # [Standard AKS, EKS, and GKE](#tab/standard)
 
@@ -157,7 +157,7 @@ helm list --namespace kube-system
 
 ---
 
-The installation is successful if the `STATUS` field displays `deployed`.
+The installation succeeded if the `STATUS` field shows `deployed`.
 
 ## Configure security rules for gated deployment
 
