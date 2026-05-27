@@ -23,6 +23,7 @@ appliesto:
 # Microsoft Defender for Endpoint overview
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help organizations prevent, detect, investigate, and respond to advanced threats on their endpoints. These endpoints include laptops, phones, tablets, PCs, access points, routers, and firewalls.
+<!-- TODO: Starting June 2, update the endpoints list to include "agents" after Project Raven release. -->
 
 As the endpoint security pillar of [Microsoft Defender](/defender-xdr/), Defender for Endpoint feeds endpoint signals into the unified Defender portal. The portal correlates these signals with alerts from identity, email, and cloud workloads to form complete incident views. Your security team can trace an attack from a phishing email to a compromised endpoint to lateral movement - all in one place.
 
@@ -60,11 +61,14 @@ To onboard Defender for Endpoint, you need a license. Choose from the following 
 
 Microsoft 365 E5 and Microsoft 365 E5 Security include Defender for Endpoint. To onboard servers, you need server licenses. For more information, see the licensing section in [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md#licensing-requirements).
 
+> [!TIP]
+> The more Microsoft Defender workloads you deploy (identity, email, cloud apps, and endpoints), the stronger your overall protection becomes. Each workload contributes signals that enrich detection, correlation, and automated response in the unified Defender portal.
+
 For full plan comparison and pricing, see [Microsoft Defender for Endpoint plans and pricing](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint#Licensing).
 
 ## Defender for Endpoint capabilities
 
-Defender for Endpoint provides a comprehensive set of capabilities, including [endpoint detection and response](overview-endpoint-detection-response.md), [automated investigation and remediation](automated-investigations.md), [next-generation protection](next-generation-protection.md), [attack surface reduction](overview-attack-surface-reduction.md), [vulnerability management](/defender-vulnerability-management/defender-vulnerability-management), [Endpoint Attack Notifications](endpoint-attack-notifications.md), and [APIs](api/management-apis.md) for integration with your existing workflows.
+Defender for Endpoint provides a comprehensive set of capabilities, including [endpoint detection and response](overview-endpoint-detection-response.md), [autonomous protection](/defender-xdr/automatic-attack-disruption) with [automatic attack disruption](/defender-xdr/automatic-attack-disruption) and [predictive protection](/defender-endpoint/predictive-protection), [next-generation protection](next-generation-protection.md) with ransomware prevention, [attack surface reduction](overview-attack-surface-reduction.md), [vulnerability management](/defender-vulnerability-management/defender-vulnerability-management), [Endpoint Attack Notifications](endpoint-attack-notifications.md), and [APIs](api/management-apis.md) for integration with your existing workflows.
 
 For guidance on planning and rolling out Defender for Endpoint in your environment, see [Plan your Defender for Endpoint deployment](mde-planning-guide.md). To learn about new and upcoming capabilities, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md). To turn on preview features in your environment, see [Preview features in Microsoft Defender XDR](/defender-xdr/preview).
 

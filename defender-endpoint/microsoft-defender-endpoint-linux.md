@@ -27,7 +27,7 @@ Microsoft Defender for Endpoint on Linux protects Linux server workloads in on-p
 
 Defender uses a lightweight [eBPF-based](linux-support-ebpf.md) sensor architecture without kernel modules, providing protection with minimal overhead and zero workload disruption on resource-constrained systems.
 
-As Linux threats evolve beyond traditional malware into fileless and in-memory attacks, Defender combines [next-generation antivirus protection](next-generation-protection.md), AI-driven [endpoint detection and response](overview-endpoint-detection-response.md) (EDR), behavioral analytics, and Microsoft threat intelligence to detect and disrupt attacker techniques. These techniques include ransomware, memory injection, lateral movement, and advanced persistence threats.
+As Linux threats evolve beyond traditional malware into fileless and in-memory attacks, Defender combines [next-generation antivirus protection](next-generation-protection.md), AI-driven [endpoint detection and response](overview-endpoint-detection-response.md) (EDR), behavioral analytics, and Microsoft Threat Intelligence to detect and disrupt attacker techniques. These techniques include ransomware, memory injection, lateral movement, and advanced persistence threats.
 
 With broad Linux distribution support and deep integration with the Microsoft Defender ecosystem, you can standardize security operations, gain end-to-end visibility, and accelerate threat response through a unified platform.
 
@@ -57,7 +57,7 @@ Protect Linux endpoints from malware and advanced threats using real-time, behav
 
 ### Endpoint detection and response (EDR)
 
-Detect, investigate, and respond to sophisticated attacks powered by AI-driven analytics, behavioral detections, and Microsoft global threat intelligence.
+Detect, investigate, and respond to sophisticated attacks powered by AI-driven analytics, behavioral detections, and Microsoft Threat Intelligence.
 
 | Feature | Description |
 |---|---|
