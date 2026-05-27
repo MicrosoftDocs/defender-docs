@@ -36,11 +36,11 @@ Security admins can create and assign tickets directly from the Defender for Clo
 
 1. Expand the Affected resources section.
 
-1. Select the resource from the unhealthy resources and select **Assign owner**.
+1. In Unhealthy resources, select the relevant resource, and then select **Assign owner**.
 
    :::image type="content" border="true" source="./media/create-ticket-servicenow/create-assignment.png" alt-text="Screenshot of how to create an assignment." lightbox="media/create-ticket-servicenow/create-assignment.png":::
 
-1. In the Type field, select **ServiceNow**
+1. In the Type field, select **ServiceNow**.
 
     :::image type="content" source="media/create-ticket-servicenow/type-servicenow.png" alt-text="Screenshot that shows the create assignment window and the type field where you select ServiceNow.":::
 
