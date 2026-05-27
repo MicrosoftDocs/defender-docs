@@ -16,20 +16,22 @@ appliesto:
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-Microsoft Defender helps you discover and investigate local AI agents and MCP servers configured on your organization's devices. Microsoft Defender automatically detects and surfaces a closed list of known supported agents in the Microsoft Defender and Agent 365 portals, which gives you visibility into AI-related assets and lets you assess their presence across your environment.
+Microsoft Defender helps you discover and investigate local AI agents and MCP servers configured on your organization's devices. Microsoft Defender automatically detects and surfaces supported agents in the Microsoft Defender and Agent 365 portals, which gives you visibility into AI-related assets and lets you assess their presence across your environment.
+
+This article explains how local AI agent discovery works, lists supported agents and MCP server configurations, and describes how to view discovered agents in the Microsoft Defender portal.
 
 > [!TIP]
-> Defender also provides **runtime protection** for local AI agents. When enabled, it monitors activity in the agentic loop and blocks inline when malicious instructions are identified. For more information, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
+> Defender also provides **runtime protection** for local AI agents. When enabled, it monitors activity in the agentic loop and blocks malicious instructions before the agent can act on them. For more information, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
 
 ## Local AI agent discovery on endpoints
 
-Microsoft Defender automatically detects a closed list of known supported local AI agents and MCP server configurations on onboarded devices. When Microsoft Defender Antivirus identifies a supported local AI agent, the agent is displayed as a discoverable asset in the Microsoft Defender portal with visibility into:
+Microsoft Defender automatically detects supported local AI agents and MCP server configurations on onboarded devices. When Microsoft Defender Antivirus identifies a supported local AI agent, the agent is displayed as a discoverable asset in the Microsoft Defender portal with visibility into:
 
 - **Local AI agent inventory**: A centralized view of discovered local AI agents with device associations and discovery metadata.
 - **Exposure map**: Visual relationships between local AI agents, devices, identities, and cloud resources to help assess potential impact.
-- **Advanced hunting**: Query agent discovery data by using Kusto Query Language (KQL) to investigate local AI agents and the resources they can access based on the permissions of the user running them.
+- **Advanced hunting**: Hunting for discovery data using Kusto Query Language (KQL) to investigate local AI agents and the resources they can access based on the permissions of the user running them.
 
-### Supported local AI agents and MCP servers
+### Supported local AI agents and MCP server configurations
 
 Defender defines an agent as a combination of user, device, and agent type. For example, if Claude Code runs in 15 different project folders on the same device for the same user, it appears as a single agent entry in the inventory.
 
@@ -53,7 +55,6 @@ Microsoft Defender's discovery capabilities are part of a comprehensive AI secur
 
 - **Discover cloud and platform agents**: Find agents built with Microsoft Copilot Studio, Microsoft Foundry, Amazon Web Services (AWS) Bedrock, and Google Cloud Platform (GCP) Vertex AI.
 - **Assess security posture**: Evaluate agent configurations, identify risks, get prioritized recommendations, and surface attack paths to Microsoft Foundry and Microsoft Copilot Studio (MCS).
-- **Runtime protection**: Monitor activity in the agentic loop and block prompt injection attacks inline. For more information, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
 - **Detect and investigate threats**: Correlate alerts and investigate suspicious agent behavior across your security infrastructure.
 
 For details on these capabilities and how to apply them, see [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](/defender-xdr/security-for-ai/defender-security-for-ai).
