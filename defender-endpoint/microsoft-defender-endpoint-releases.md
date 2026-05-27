@@ -28,6 +28,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Linux  |101.26042.0003  |May 2026 |- Release version: 30.126042.0003.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates]() |
 |iOS|1.1.77130101|May 2026|- Build: 1.1.77130101<br>- Release: May 15, 2026|[Release details and updates](#ios--may-2026--platform-version-1177130101)|
 |Android |1.0.8913.0101|May 2026|- Build: 1.0.8913.0101<br>- Released: May 18, 2026|[Release details and updates](#android--may-2026--platform-1089130101)|
 |Linux  |101.26032.0000  |April 2026 |- Release version: 30.126032.0000.0<br>- Engine version: 1.1.26010.1004<br>- Signature version: 1.445.617.0 |[Release details and updates](#linux--april-2026--101260320000) |
@@ -378,6 +379,22 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 > - Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md).
 >
 > If you have any concerns or need assistance during this transition, contact support.
+
+### Linux | May 2026 | 101.26042.0003
+
+#### Release details
+
+| Release version | Engine version | Signature version |
+| -------- | -------- |-------- |
+|30.126042.0003.0 |1.1.26040.3001 |1.449.136.0 |
+
+#### Enhancements and features
+
+|Feature area | Update summary |
+|--------------|---------------|
+|Visibility |Better user attribution in security events: File, process, and other security events now include the original login user’s ID, even when actions are performed via sudo or under root. This information is exposed in Advanced Hunting, making it easier to trace elevated actions back to the actual user’s session for improved insider threat detection and investigations.|
+|Performance|Faster threat remediation: Malware is now quarantined and cleaned up more quickly, improving response time when threats are detected.|
+|Stability|This release includes stability improvements that reduce the likelihood of rare crashes or interruptions, helping ensure the Defender agent runs more reliably with continuous protection.|
 
 ### Linux | April 2026 | 101.26032.0000
 
