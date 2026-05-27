@@ -370,12 +370,12 @@
           href: enable-permissions-management.md
         - name: Agentless machine scanning
           href: concept-agentless-data-collection.md
-        - name: Serverless protection (Preview)
-          displayName: serverless, functions, web apps, aws lambda, inventory, misconfigurations, vulnerabilities, dependencies
-          href: serverless-protection.md
         - name: Posture for Serverless Containers (Preview)
           displayName: serverless containers, ACA, ACI, AWS - ECS Fargate, posture, inventory, recommendations, attack path
           href: posture-for-serverless-containers.md
+        - name: Serverless protection (Preview)
+          displayName: serverless, functions, web apps, aws lambda, inventory, misconfigurations, vulnerabilities, dependencies
+          href: serverless-protection.md
     - name: Assess your security posture
       items:
         - name: Cloud overview dashboard

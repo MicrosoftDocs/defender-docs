@@ -1,31 +1,31 @@
 ---
 title: Posture for Serverless Containers (Preview)
-description: Learn how serverless containers posture in Microsoft Defender for Cloud provides inventory, recommendations, and attack path visibility for serverless workloads.
+description: Learn how Defender CSPM in Microsoft Defender for Cloud provides inventory, recommendations, and attack path visibility for serverless containers.
 ms.topic: concept-article
 #customer intent: ["As a cloud security administrator, I want to understand posture for serverless containers in Microsoft Defender for Cloud so that I can prioritize risk across supported serverless workloads."]
-ms.date: 05/25/2026
+ms.date: 05/27/2026
 author: ElazarK
 ms.author: elkrieger
 ---
 
 # Posture for Serverless Containers (Preview)
 
-Posture for Serverless Containers in Microsoft Defender for Cloud helps you assess and prioritize risk in serverless container environments where host-level agents are not available.
+Posture for Serverless Containers in Microsoft Defender for Cloud helps you assess and prioritize risk in serverless container environments where host-level agents aren't available.
 
-In Microsoft Defender for Cloud, this capability extends Defender Cloud Security Posture Management (CSPM) into serverless container resources and surfaces findings in the same posture experiences you already use, including inventory, recommendations, and attack path analysis. In Defender for Containers, it adds posture context for supported serverless container platforms so your team can find exposure faster, understand likely impact, and focus remediation work on the highest-risk issues first.
+In Defender CSPM, this capability extends posture coverage to supported serverless container resources and surfaces findings in the same experiences you already use, including inventory, recommendations, and attack path analysis. It helps your team find exposed workloads, understand broader risk, and focus remediation on the issues that matter most.
 
 > [!NOTE]
 > In preview, posture for serverless containers supports:
 >
 > - Azure Container Apps (ACA)
 > - Azure Container Instances (ACI)
-> - Amazon Web Services (AWS) - ECS Fargate
+> - AWS - Amazon Elastic Container Service (ECS) Fargate
 
 ## What is posture for serverless containers?
 
-Posture for Serverless Containers extends Defender Cloud Security Posture Management (CSPM) capabilities to serverless container abstractions. It gives you a unified view of inventory, misconfiguration findings, vulnerability assessment findings, and attack path context for supported workloads.
+Posture for Serverless Containers extends Defender Cloud Security Posture Management (CSPM) capabilities to serverless container platforms. It gives you a unified view of discovered resources, misconfiguration findings, vulnerability assessment findings, and attack path context for supported workloads.
 
-This capability is posture-focused in preview and is designed for environments where host-level runtime sensors are not available.
+This capability is posture-focused in preview. It is designed for serverless container environments where runtime and host telemetry are limited by the platform abstraction.
 
 ## Requirements and availability
 
@@ -41,7 +41,6 @@ To use posture for serverless containers:
 For cloud and platform availability details, see:
 
 - [Defender for Cloud support matrix](support-matrix-defender-for-cloud.md#cloud-support)
-- [Defender for Containers support matrix](support-matrix-defender-for-containers.md)
 
 ## Key capabilities
 
@@ -53,9 +52,9 @@ Posture for Serverless Containers provides these capabilities in preview:
 
 ## How posture for serverless containers works
 
-When you enable the serverless containers component in Defender CSPM settings, Defender for Cloud begins evaluating supported serverless container resources. Initial coverage can take up to 24 hours.
+When you enable the Serverless Containers component in Defender CSPM settings, Defender for Cloud begins evaluating supported serverless container resources. Initial coverage can take up to 24 hours.
 
-For enablement steps, see [Enable posture for serverless containers (Preview)](defender-for-containers-enable-plan.md#enable-posture-for-serverless-containers-preview).
+For enablement steps, see [Protect resources with Defender CSPM](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
 
 ### Inventory
 
@@ -89,7 +88,6 @@ In preview, posture for serverless containers has the following limitations:
 
 ## Related content
 
-- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-plan.md)
-- [Defender for Containers support matrix](support-matrix-defender-for-containers.md)
+- [Protect resources with Defender CSPM](tutorial-enable-cspm-plan.md)
 - [Remediate security recommendations in Microsoft Defender for Cloud](implement-security-recommendations.md)
 - [Serverless containers security recommendations](recommendations-reference-serverless-containers.md)
