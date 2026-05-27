@@ -1,19 +1,19 @@
 ---
 title: Detecting endpoint detection and response solutions
 description: Learn about detection for endpoint detection and response solutions in Microsoft Defender for Cloud
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 02/19/2025
+ms.date: 05/27/2026
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how Microsoft Defender for Cloud can help me to protect enterprise endpoints, improve endpoint posture, and respond to security threats.
 ---
 
 # Endpoint detection and response solution detection
 
-Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities to improve security posture for supported machines. Defender for Cloud:
+Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities for supported machines. Defender for Cloud:
 
-- Detects whether machines are connected to a supported EDR solution.
+- Detects whether a machine connects to a supported EDR solution.
 - [Integrates natively with Microsoft Defender for Endpoint as an EDR solution](integration-defender-for-endpoint.md).
 
 ## Check for an EDR solution
@@ -24,9 +24,9 @@ Agentless scanning for EDR solution settings is available when Defender for Clou
 
 Based on EDR solution findings, Defender for Cloud provides the following recommendations to help you identify and remediate machines that don't have an EDR solution running. EDR solution recommendations are as follows:
 
-- `EDR solution should be installed on Virtual Machines`
-- `EDR solution should be installed on EC2s`
-- `EDR solution should be installed on Virtual Machines (GCP)`
+- `EDR solution should be installed on virtual machines`
+- `EDR solution should be installed on EC2 instances`
+- `EDR solution should be installed on virtual machines in GCP`
 
 ## Supported EDR solutions
 
