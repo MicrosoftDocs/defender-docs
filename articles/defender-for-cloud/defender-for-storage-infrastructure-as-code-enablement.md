@@ -1,11 +1,9 @@
 ---
-title: Enable Defender for Storage by using infrastructure as code
-description: Use ARM templates, Bicep, or Terraform to automate Defender for Storage deployment at subscription and storage account levels.
-ms.date: 05/26/2026
-author: ElazarK
-ms.author: elkrieger
+title: Enable Defender for Storage by Using Infrastructure as Code
+description: Learn how to enable and configure Microsoft Defender for Storage by using infrastructure as code (IaC) templates.
+ms.date: 07/01/2025
 ms.topic: how-to
-#customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage by using infrastructure as code (IaC) templates so that I can help protect all storage accounts.
+#customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage by using IaC templates so that I can help protect all storage accounts.
 ---
 
 # Enable Defender for Storage by using infrastructure as code
@@ -17,7 +15,7 @@ Use this article to enable and configure Microsoft Defender for Storage by using
 We recommend that you enable Microsoft Defender for Storage on the subscription level. Doing so helps ensure that all storage accounts currently in the subscription are protected. Protection for storage accounts that you create after enabling Defender for Storage on the subscription level starts up to 24 hours after creation.
 
 > [!TIP]
-> You can always override subscription-level settings by configuring specific storage accounts with custom settings. See [Override Defender for Storage subscription-level settings](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings).
+> You can always [configure specific storage accounts](advanced-configurations-for-malware-scanning.md#override-defender-for-storage-subscription-level-settings) with custom settings that differ from the settings configured at the subscription level. That is, you can override subscription-level settings.
 
 ## [Enable on a subscription](#tab/enable-subscription/)
 
@@ -51,13 +49,13 @@ By customizing this code, you can:
 - **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Remove the corresponding extension block from the Terraform code.
 - **Disable the entire Defender for Storage plan**: Set the `tier` property value to `"Free"`, and remove the `subPlan` and `extension` properties.
 
-To learn more about the `azurerm_security_center_subscription_pricing` resource, refer to the [azurerm_security_center_subscription_pricing Terraform documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing). For comprehensive details on the Terraform provider for Azure, see the [Terraform AzureRM documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
+To learn more about the `azurerm_security_center_subscription_pricing` resource, refer to the [its Terraform documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/security_center_subscription_pricing). You can also find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
 
 ### Bicep template
 
-To enable and configure Defender for Storage at the subscription level by using Bicep (see [Bicep overview](/azure/azure-resource-manager/bicep/overview?tabs=bicep)), make sure your target scope is set to `subscription` (see [Deploy Bicep to subscription](/azure/azure-resource-manager/bicep/deploy-to-subscription?tabs=azure-cli#scope-to-subscription)). Add the following code to your Bicep template:
+To enable and configure Defender for Storage at the subscription level by using [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep), make sure your [target scope is set to `subscription`](/azure/azure-resource-manager/bicep/deploy-to-subscription?tabs=azure-cli#scope-to-subscription). Add the following code to your Bicep template:
 
-```bicep
+```terraform
 targetScope = 'subscription'
 
 resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
@@ -89,7 +87,7 @@ By customizing this code, you can:
 - **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Change the `isEnabled` value to `False` under `SensitiveDataDiscovery`.
 - **Disable the entire Defender for Storage plan**: Set the `pricingTier` property value to `Free`, and remove the `subPlan` and `extensions` properties.
 
-For Bicep template details, see [Microsoft.Security pricing documentation](/azure/templates/microsoft.security/pricings?pivots=deployment-language-bicep&source=docs).
+Learn more about the Bicep template in the [Microsoft.Security pricing documentation](/azure/templates/microsoft.security/pricings?pivots=deployment-language-bicep&source=docs).
 
 ### Azure Resource Manager template
 
@@ -127,13 +125,13 @@ By customizing this code, you can:
 - **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Change the `isEnabled` value to `False` under `SensitiveDataDiscovery`.
 - **Disable the entire Defender for Storage plan**: Set the `pricingTier` property value to `Free`, and remove the `subPlan` and `extension` properties.
 
-For ARM template details, see [Microsoft.Security pricing documentation](/azure/templates/microsoft.security/pricings?pivots=deployment-language-arm-template&source=docs).
+Learn more about the ARM template in the [Microsoft.Security pricing documentation](/azure/templates/microsoft.security/pricings?pivots=deployment-language-arm-template&source=docs).
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
 ### Terraform template
 
-To enable and configure Defender for Storage at the storage account level by using Terraform, import the AzAPI provider (see [AzAPI provider documentation](https://registry.terraform.io/providers/Azure/azapi/latest/docs)) and use the following code snippet:
+To enable and configure Defender for Storage at the storage account level by using Terraform, import the [AzAPI provider](https://registry.terraform.io/providers/Azure/azapi/latest/docs) and use the following code snippet:
 
 ```terraform
 resource "azurerm_storage_account" "example" { ... }
@@ -189,13 +187,13 @@ By customizing this code, you can:
 
   If you want to disable the Defender for Storage plan for the storage account under subscriptions with Defender for Storage enabled at the subscription level, you can change the value of `overrideSubscriptionLevelSettings` to `True`. If you want to keep some features enabled, you can modify the properties accordingly.
 
-For further customization and control over your storage account security settings, see [Microsoft.Security/defenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true). For comprehensive details on the Terraform provider for Azure, see [Terraform AzureRM documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
+For further customization and control over your storage account's security settings, see the [Microsoft.Security/defenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true). You can also find comprehensive details on the Terraform provider for Azure in the [Terraform AzureRM documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).
 
 ### Bicep template
 
 To enable and configure Defender for Storage at the storage account level by using Bicep, add the following code to your Bicep template:
 
-```bicep
+```terraform
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' ...
 
 resource defenderForStorageSettings 'Microsoft.Security/DefenderForStorageSettings@2022-12-01-preview' = {
@@ -224,13 +222,13 @@ By customizing this code, you can:
 - **Turn off the on-upload malware scanning or sensitive-data threat detection feature**: Change the `isEnabled` value to `False` in the section for the `malwareScanning` or `sensitiveDataDiscovery` property.
 - **Disable the entire Defender for Storage plan**: Set the `isEnabled` property value to `False`, and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
 
-For more information, see [Microsoft.Security/DefenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).
+For more information, see the [Microsoft.Security/DefenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).
 
 ### ARM template
 
 To enable and configure Defender for Storage at the storage account level by using an Azure Resource Manager template (ARM template), add this JSON snippet to the `resources` section of your ARM template:
 
-```json
+```terraform
 {
     "type": "Microsoft.Security/DefenderForStorageSettings",
     "apiVersion": "2022-12-01-preview",
@@ -269,8 +267,7 @@ By customizing this code, you can:
 >
 > [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).
 
-## Next step
+## Related content
 
 > [!div class="nextstepaction"]
 > [Review Microsoft.Security/DefenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true)
-

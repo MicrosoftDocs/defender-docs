@@ -1,8 +1,8 @@
 ---
 title: Migrate from Defender for Storage (classic)
 description: Learn about how to migrate from Defender for Storage (classic) to the new Defender for Storage plan to take advantage of its enhanced capabilities and pricing.
-ms.date: 05/26/2026
-author: ElazarK
+ms.date: 04/19/2026
+author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
 ---
@@ -24,7 +24,7 @@ On March 28, 2023, we introduced the new Defender for Storage plan. This plan of
 - **Predictable, per-storage account pricing**: A more foreseeable and flexible pricing structure for better control over coverage.
 - **Granular controls at the resource level**: Enable at the subscription or resource level and exclude specific storage accounts from protected subscriptions, providing more granular control over your security coverage.
 
-The new pricing plan charges based on the number of storage accounts you protect, simplifying calculations and allowing for easy scaling as your needs change. For detailed pricing information, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
+The new pricing plan charges based on the number of storage accounts you protect, simplifying calculations and allowing for easy scaling as your needs change. For detailed pricing information, see [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
 To take advantage of these features, we recommend moving to the new Defender for Storage plan by February 5, 2025.
 
@@ -33,22 +33,19 @@ To take advantage of these features, we recommend moving to the new Defender for
 
 ## Important changes in Defender for Storage (classic)
 
-Defender for Storage (classic) offers two pricing structures: per-transaction and per-storage account.
+Defender for Storage (Classic) offers two pricing structures: per-transaction and per-storage account. 
 
 ### Impact on the Defender for Storage (classic) per-transaction plan
 
-> [!IMPORTANT]
-> Once you switch to the new plan, you can't revert to the Defender for Storage (classic) per-transaction or per-storage account plans at either the subscription or storage account level.
+The classic per-transaction plan will no longer be available for new storage accounts and subscriptions. Existing accounts will retain the plan without future features and updates, so we encourage you to move to the new plan for the enhanced features and simplified pricing. If your subscription or storage account already has the classic per-transaction plan enabled, it will remain active, but enabling this plan at the resource level will only be possible for these existing subscriptions.
 
-The classic per-transaction plan will no longer be available for new storage accounts and subscriptions. Existing accounts retain the plan without future features and updates, so we recommend moving to the new plan for enhanced features and simpler pricing. If your subscription or storage account already has the classic per-transaction plan enabled, it remains active. Enabling this plan at the resource level is only possible for these existing subscriptions.
-
-If you have policies that enforce the classic per-transaction plan without specifying the per-transaction subplan, existing subscriptions retain their current plan while new subscriptions default to the new plan. If you specify the per-transaction subplan, that assignment fails for new subscriptions.
+If you have policies that enforce the classic per-transaction plan without specifying the per-transaction subplan, existing subscriptions will retain their current plan, while new subscriptions will default to the new plan. However, if you specify the per-transaction subplan, it will fail for new subscriptions. Once you switch to the new plan, you can no longer revert to the Defender for Storage (classic) per-transaction or per-storage account plans at either the subscription or storage account level.
 
 ## Identify active Defender for Storage plans
 
-We provide three options to find your Defender for Storage plan enablement and configuration:
+We provide three options to find out your Defender for Storage plans enablement and configuration:
 
-- **KQL (Kusto Query Language) query in Resource Graph Explorer**: Use this query in the Azure portal's [Resource Graph Explorer](https://ms.portal.azure.com/#view/HubsExtension/ArgQueryBlade) to view which plans are enabled at the subscription level:
+- **KQL query in Resource Graph Explorer**: Use this KQL query in the Azure portal's [Resource Graph Explorer](https://ms.portal.azure.com/#view/HubsExtension/ArgQueryBlade) to view which plans are enabled at the subscription level:
 
     ```kusto
     // DF-Storage Plans
@@ -70,7 +67,7 @@ We provide three options to find your Defender for Storage plan enablement and c
     | project properties, tenantId, subscriptionId, IsInTrialPeriod, IsEnabled, DefenderForStoragePlan, MalwareScanningEnabled, MalwareScanningCapping, SensitiveDataDiscoveryEnabled
     ```
 
-- **Detailed analysis with PowerShell script**: For a detailed investigation, including subscription-level and resource-level information with add-on configuration, run the [Defender for Storage configuration analysis script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Powershell%20scripts/Analyze%20Defender%20For%20Storage%20Configuration/Analyze-DefenderForStorageConfig.ps1).
+- **Detailed analysis with PowerShell script**: For a more detailed investigation, including information at both the subscription and resource levels (with add-ons configuration), run [this PowerShell script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Powershell%20scripts/Analyze%20Defender%20For%20Storage%20Configuration/Analyze-DefenderForStorageConfig.ps1).
 - **Workbook for subscription-level coverage details**: Use the provided workbook to see which plans are enabled at the subscription level and their configuration details. To access the workbook, see [Microsoft Defender for Storage - Price Estimation Dashboard](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Microsoft%20Defender%20for%20Storage%20Price%20Estimation).
 
 ## Migration methods
@@ -117,6 +114,8 @@ Get-AzPolicyAssignment -Scope "/subscriptions/{subscriptionId}"
 ```
 
 ## Next step
+
+In this article, you learned about migrating to the new Microsoft Defender for Storage plan.
 
 > [!div class="nextstepaction"]
 > [Enable Defender for Storage](connect-azure-subscription.md)
