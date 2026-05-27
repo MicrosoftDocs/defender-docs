@@ -1,12 +1,17 @@
 ---
 title: How to consume and export scan results
 description: Access vulnerability assessment findings in Azure Resource Graph and use multiple methods to query, view, and export scan results for reporting and remediation.
+author: ElazarK
+ms.author: elkrieger
 ms.topic: how-to
-ms.date: 05/25/2026
+ms.date: 05/27/2026
 ms.custom: sfi-image-nochange
+#customer intent: As a user, I want to query and export SQL vulnerability scan results so I can investigate findings and report on remediation progress.
 ---
 
-# How to consume and export scan results
+# How to consume and export scan results in Microsoft Defender for Cloud
+
+Use this article to query vulnerability assessment findings and export SQL scan results for investigation, reporting, and remediation workflows.
 
 ## Query and export vulnerability assessment scan results
 
@@ -30,11 +35,11 @@ Use this method to query findings from Defender for Cloud and export results for
 
     - For Azure SQL databases - `SQL databases should have vulnerability findings resolved`.
 
-    - For SQL on machines - `SQL servers on machines should have vulnerability findings resolved`.
+    - For SQL servers on machines - `SQL servers on machines should have vulnerability findings resolved`.
 
 1. Select **Open Query**.
 
-1. Select either
+1. Select either:
 
     - **Query returning affected resources** - Returns a list of the resources that are currently affected (recommendation status per resource).
     - **Query returning security findings** -  Returns a list of all security findings (findings and subassessments aggregated per applicable resources).
@@ -116,7 +121,7 @@ Use this method to query vulnerability findings for a specific SQL database from
 
 This query is editable. You can customize it for a specific resource, a set of findings, or a finding status.
 
-## Automate email notifications with LogicApps
+## Automate email notifications with Logic Apps
 
 Azure Logic Apps is a low-code and no-code cloud service that automates workflows and integrates data and services across cloud and on-premises systems. You can use Logic Apps to automate reports for vulnerability assessment findings across supported SQL versions and send weekly report summaries for scanned servers. You can also customize schedules, such as daily, weekly, or monthly, and report scopes, such as database, server, or resource group.
 
@@ -138,11 +143,12 @@ Sample email SQL VM:
 
 You can use [workflow automations](workflow-automations.md) to trigger actions based on changes to the recommendation's status.
 
-You can also use the [Vulnerability Assessments workbook](defender-for-sql-on-machines-vulnerability-assessment.md#view-vulnerabilities-in-graphical-interactive-reports) to view an interactive report of your findings. The data from the workbook can be exported, and a copy of the workbook can be customized and stored. Learn how to [create rich, interactive reports of Defender for Cloud data](custom-dashboards-azure-workbooks.md)
+You can also use the [Vulnerability Assessments workbook](defender-for-sql-on-machines-vulnerability-assessment.md#view-vulnerabilities-in-graphical-interactive-reports) to view an interactive report of your findings. The data from the workbook can be exported, and a copy of the workbook can be customized and stored. Learn how to [create rich, interactive reports of Defender for Cloud data](custom-dashboards-azure-workbooks.md).
 
 You can also enable [Continuous export](continuous-export.md) to stream alerts and recommendations as they're generated or to define a schedule to send periodic snapshots of all of the new data.
 
-## Next steps
+## Next step
 
-[Enable Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)
+> [!div class="nextstepaction"]
+> [Enable Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)
 
