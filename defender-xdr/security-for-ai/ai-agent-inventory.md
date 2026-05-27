@@ -17,7 +17,10 @@ appliesto:
 
 # Discover AI agents and assess security posture using Microsoft Defender (Preview)
 
-After you onboard to [Microsoft Agent 365](/microsoft-agent-365/overview), you can discover all of the AI agents in your organization, including local AI coding agents, and view their configuration details using Advanced Hunting in the Microsoft Defender portal.
+After you onboard to [Microsoft Agent 365](/microsoft-agent-365/overview), you can discover AI agents in your organization, including local AI agents, and view their configuration details using Advanced Hunting in the Microsoft Defender portal.
+
+> [!NOTE]
+> Local AI agent discovery on endpoints doesn't require Agent 365 onboarding. It works automatically for devices onboarded to Microsoft Defender for Endpoint. Agent 365 onboarding is required for all other discovery and protection capabilities described in this article. For more information, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents).
 
 Microsoft Defender also provides a dedicated AI agent inventory experience in the Defender portal for agent discovery and posture management, including agent details, posture insights, risk factors, and security recommendations, where supported. This inventory is currently available for agents built with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, GCP Vertex AI, and [local AI coding agents](/defender-endpoint/protect-ai-agents-overview) discovered on endpoints. To use the inventory, you need to enable the required features.
 
@@ -33,7 +36,7 @@ The [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) in A
 > [!NOTE]
 > The `AIAgentsInfo` table provides an extended set of properties for Copilot Studio agents.
 
-To view all of your Agent 365-managed agents and their configuration details:
+To view your Agent 365-managed agents and their configuration details:
 
 1. Open the [Microsoft Defender portal](https://security.microsoft.com/)
 1. Select **Investigation & response** > **Hunting** > **Advanced hunting**.
@@ -50,7 +53,7 @@ To view all of your Agent 365-managed agents and their configuration details:
     | where AgentStatus != "Deleted"
     ```
 
-    The results show you all of the AI agents in your organization that are registered with Microsoft Agent 365, along with their configuration settings. 
+    The results show you the AI agents in your organization that are registered with Microsoft Agent 365, along with their configuration settings. 
 
     :::image type="content" source="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png" alt-text="Screenshot of Advanced Hunting in Microsoft Defender showing a KQL query editor, Run query button, and agent results table." lightbox="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png":::
 
