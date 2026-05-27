@@ -17,10 +17,10 @@ The integration between ServiceNow's IT Service Management (ITSM) module and Def
 
 - Have an [application registry in ServiceNow](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
 
-- Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
+- Enable [Defender for Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 
 - The following roles are required:
-  - To create an assignment:  Admin permissions to ServiceNow.
+  - To create an assignment, you need admin permissions in ServiceNow.
 
 ## Assign an owner with a governance rule
 

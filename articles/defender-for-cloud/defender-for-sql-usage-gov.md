@@ -1,5 +1,5 @@
 ---
-title: Enable Microsoft Defender for SQL Servers on Machines government
+title: Enable Defender for SQL Servers on Machines in government clouds
 description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on government clouds with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
@@ -8,7 +8,7 @@ ms.date: 05/26/2026
 #customer intent: As a security administrator in a government cloud, I want to enable Defender for SQL Servers on Machines so that I can protect SQL instances and validate secure onboarding requirements.
 ---
 
-# Enable Defender for SQL Servers on Machines government
+# Enable Defender for SQL Servers on Machines in government clouds
 
 > [!IMPORTANT]
 > This article applies to government clouds. If you're using commercial clouds, see [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md).
@@ -69,4 +69,12 @@ Select a Log Analytics workspace to work with the Defender for SQL on Machines p
 
 ## Verify that your machines are protected
 
-Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, [verify that all machines are protected](verify-machine-protection-gov.md). Don't skip this step, because verification confirms that your deployment is protected.
+> [!IMPORTANT]
+> Don't skip this step. Verification confirms that your deployment is protected.
+
+Depending on your environment, it can take a few hours to discover and protect SQL instances.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Verify that all machines are protected](verify-machine-protection-gov.md)

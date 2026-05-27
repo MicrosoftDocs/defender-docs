@@ -1,14 +1,14 @@
 ---
-title: Enable Defender for Storage by Using Infrastructure as Code
+title: Enable Defender for Storage by using infrastructure as code
 description: Use ARM templates, Bicep, or Terraform to automate Defender for Storage deployment at subscription and storage account levels.
 ms.date: 05/26/2026
 author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-#customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage by using IaC templates so that I can help protect all storage accounts.
+#customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage by using infrastructure as code (IaC) templates so that I can help protect all storage accounts.
 ---
 
-# Enable and configure Defender for Storage by using IaC templates
+# Enable Defender for Storage by using infrastructure as code
 
 ## Enable Defender for Storage by using infrastructure as code
 
@@ -55,7 +55,7 @@ To learn more about the `azurerm_security_center_subscription_pricing` resource,
 
 To enable and configure Defender for Storage at the subscription level by using Bicep (see [Bicep overview](/azure/azure-resource-manager/bicep/overview?tabs=bicep)), make sure your target scope is set to `subscription` (see [Deploy Bicep to subscription](/azure/azure-resource-manager/bicep/deploy-to-subscription?tabs=azure-cli#scope-to-subscription)). Add the following code to your Bicep template:
 
-```terraform
+```bicep
 targetScope = 'subscription'
 
 resource StorageAccounts 'Microsoft.Security/pricings@2023-01-01' = {
@@ -193,7 +193,7 @@ For further customization and control over your storage account security setting
 
 To enable and configure Defender for Storage at the storage account level by using Bicep, add the following code to your Bicep template:
 
-```terraform
+```bicep
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' ...
 
 resource defenderForStorageSettings 'Microsoft.Security/DefenderForStorageSettings@2022-12-01-preview' = {
@@ -228,7 +228,7 @@ For more information, see [Microsoft.Security/DefenderForStorageSettings API doc
 
 To enable and configure Defender for Storage at the storage account level by using an Azure Resource Manager template (ARM template), add this JSON snippet to the `resources` section of your ARM template:
 
-```terraform
+```json
 {
     "type": "Microsoft.Security/DefenderForStorageSettings",
     "apiVersion": "2022-12-01-preview",

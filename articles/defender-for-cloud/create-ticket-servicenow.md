@@ -17,10 +17,10 @@ The integration between Defender for Cloud and ServiceNow's IT Service Managemen
 
 - Have an [application registry in ServiceNow](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
 
-- Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
+- Enable [Defender for Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 
 - The following roles are required:
-  - To create an assignment:  Admin permissions to ServiceNow.
+   - To create an assignment, you need admin permissions in ServiceNow.
 
 ## Create a new ticket based on a recommendation to ServiceNow
 
@@ -40,7 +40,7 @@ Security admins can create and assign tickets directly from the Defender for Clo
 
    :::image type="content" border="true" source="./media/create-ticket-servicenow/create-assignment.png" alt-text="Screenshot of how to create an assignment." lightbox="media/create-ticket-servicenow/create-assignment.png":::
 
-1. In the Type field, select **ServiceNow**
+1. In the **Type** field, select **ServiceNow**.
 
     :::image type="content" source="media/create-ticket-servicenow/type-servicenow.png" alt-text="Screenshot that shows the create assignment window and the type field where you select ServiceNow.":::
 

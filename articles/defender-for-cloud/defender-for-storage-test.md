@@ -43,7 +43,7 @@ Follow these steps to test malware scanning after enabling the feature:
 :::image type="content" source="media/defender-for-storage-test/testing-malware.png" alt-text="Screenshot showing how to upload a file to test the Malware Scan." lightbox="media/defender-for-storage-test/testing-malware.png":::
 
 > [!NOTE]
-> Index tags aren't supported for ADLS Gen. To test and validate your protection for premium block blobs, look at the generated security alert.
+> Index tags aren't supported for Azure Data Lake Storage Gen2 (ADLS Gen2). To test and validate your protection for premium block blobs, look at the generated security alert.
 
 ### Upload an EICAR test file to simulate malware upload
 

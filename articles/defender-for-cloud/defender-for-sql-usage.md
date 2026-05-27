@@ -52,7 +52,7 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 ### Enable the plan on an Azure subscription
 
-To enable the Defender for SQL servers on machines plan, you need to enable the Defender for Databases plan on your subscription. The Defender for SQL servers on machines plan is included in the Defender for Databases plan.
+To enable the Defender for SQL Servers on Machines plan, you need to enable the Defender for Databases plan on your subscription. The Defender for SQL Servers on Machines plan is included in the Defender for Databases plan.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -72,7 +72,7 @@ To enable the Defender for SQL servers on machines plan, you need to enable the 
 
 ### Enable the plan on an Amazon Web Services (AWS) or Google Cloud Platform (GCP) subscription
 
-To enable the Defender for SQL servers on machines plan, you need to enable the Defender for Databases plan on your subscription. The Defender for SQL servers on machines plan is included in the Defender for Databases plan.
+To enable the Defender for SQL Servers on Machines plan, you need to enable the Defender for Databases plan on your subscription. The Defender for SQL Servers on Machines plan is included in the Defender for Databases plan.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -108,7 +108,7 @@ To enable the plan on specific machines, you need to [disable the plan on the su
 
     :::image type="content" source="media/defender-for-sql-usage/select-defender-for-cloud.png" alt-text="Screenshot that shows where to locate Defender for Cloud under the security section." lightbox="media/defender-for-sql-usage/select-defender-for-cloud.png":::
 
-1. Select **Enable Microsoft Defender for SQL servers on Machines**.
+1. Select **Enable Microsoft Defender for SQL Servers on Machines**.
 
     :::image type="content" source="media/defender-for-sql-usage/enable-resource-level.png" alt-text="Screenshot that shows where to enable Defender for SQL servers on machines." lightbox="media/defender-for-sql-usage/enable-resource-level.png":::
 
@@ -117,9 +117,9 @@ To enable the plan on specific machines, you need to [disable the plan on the su
 > [!IMPORTANT]
 > Don't skip this step. Verifying this deployment confirms your machines are protected.
 
-Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, you should [verify that all machines are protected](verify-machine-protection.md).
+Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, [verify that all machines are protected](verify-machine-protection.md).
 
-## Related content
+## Next steps
 
 - [Verify that all machines are protected](verify-machine-protection.md)
 - [Troubleshoot Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md)

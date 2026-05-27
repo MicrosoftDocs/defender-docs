@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ---
 
-# Enable Microsoft Defender for Storage (classic)
+# Enable and configure Microsoft Defender for Storage (classic)
 
 This article explains how to enable and configure Microsoft Defender for Storage (classic) on your subscriptions by using PowerShell, the REST API, and Azure Resource Manager (ARM) templates.
 
@@ -342,7 +342,7 @@ Learn more about the [`az security pricing create`](/cli/azure/security/pricing#
 
 #### REST API
 
-To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing using the Microsoft Defender for Cloud REST API, create a PUT request with this endpoint and body:
+To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing by using the Microsoft Defender for Cloud REST API, create a PUT request with this endpoint and body:
 
 ```http
 PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/StorageAccounts?api-version=2022-03-01

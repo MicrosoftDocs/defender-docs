@@ -1,5 +1,5 @@
 ---
-title: Use a Custom Data Collection Rule for Defender for Servers ingestion
+title: Use a custom Data Collection Rule for Defender for Servers ingestion
 description: Learn how to use Data Collection Rules (DCRs) to customize how Defender for Servers security events are collected and ingested.
 ms.topic: how-to
 ms.author: elkrieger
@@ -8,7 +8,7 @@ ms.date: 05/26/2026
 #customer intent: As a security administrator, I want to control which Windows Security events are ingested for Defender for Servers so that I can reduce ingestion volume and costs.
 ---
 
-# Use a custom Data Collection Rule (DCR) for Defender for Servers ingestion
+# Use a custom Data Collection Rule for Defender for Servers ingestion
 
 You can use a custom Data Collection Rule (DCR) to control which Windows Security events are sent to Log Analytics for Defender for Servers. This approach helps reduce ingestion volume by filtering out events that you don't need.
 
@@ -74,7 +74,7 @@ Before you create a custom DCR, make sure:
 
 1. Select at least one Log Analytics workspace in the same region as the DCR.
 
-1.  Select **Save**.
+1. Select **Save**.
 
 1. Select **Next : Tags >** and add any tags you need for resource organization or cost management.
 
@@ -122,6 +122,7 @@ The following example shows a DCR configuration that collects selected Windows S
 
 For large environments, you can use Azure Policy to automatically create and assign Data Collection Rules (DCRs) for security events across multiple subscriptions by using the [Deploy AMA DCR for Security Events collection](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Policy/Deploy%20AMA%20DCR%20for%20Security%20Events%20collection) initiative.
 
-## Related content
+## Next step
 
-- [Use the data ingestion benefit in Microsoft Defender for Cloud](data-ingestion-benefit.md)
+> [!div class="nextstepaction"]
+> [Use the data ingestion benefit in Microsoft Defender for Cloud](data-ingestion-benefit.md)

@@ -7,7 +7,7 @@ ms.author: elkrieger
 ms.topic: how-to
 ---
 
-# Move to the new Defender for Storage plan
+# Migrate from Defender for Storage (classic)
 
 This article explains why you should migrate from Defender for Storage (classic) and how to prepare for migration.
 
@@ -31,7 +31,7 @@ To take advantage of these features, we recommend moving to the new Defender for
 
 ## Important changes in Defender for Storage (classic)
 
-Defender for Storage (Classic) offers two pricing structures: per-transaction and per-storage account. 
+Defender for Storage (classic) offers two pricing structures: per-transaction and per-storage account.
 
 ### Impact on the Defender for Storage (classic) per-transaction plan
 
