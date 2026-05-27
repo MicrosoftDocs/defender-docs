@@ -1,40 +1,38 @@
-
 - name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
   items:
   - name: Overview
     items:
-
-      - name: Defender for Endpoint
-        href: microsoft-defender-endpoint.md
-      - name: Defender for Endpoint on Windows
-        href: microsoft-defender-endpoint-windows.md
-      - name: Defender for Endpoint on Linux
-        href: microsoft-defender-endpoint-linux.md
-      - name: Defender for Endpoint on macOS
-        href: microsoft-defender-endpoint-mac.md
-      - name: Defender for Endpoint for US Government customers
-        href: gov.md
-      - name: Defender for Endpoint Plan 1
-        items:
-        - name: Overview of Defender for Endpoint Plan 1
-          href: defender-endpoint-plan-1.md
-        - name: Setup and configuration
-          href: mde-p1-setup-configuration.md
-        - name: Get started
-          href: mde-plan1-getting-started.md
-      - name: What's new
-        items:
-          - name: New features
-            href: whats-new-in-microsoft-defender-endpoint.md
-            displayName: What's new in Microsoft Defender for Endpoint
-          - name: Release notes
-            href: microsoft-defender-endpoint-releases.md
-      - name: Trial user guide - Defender for Endpoint
-        href: defender-endpoint-trial-user-guide.md
-      - name: Data storage and privacy
-        href: data-storage-privacy.md
+    - name: Defender for Endpoint
+      href: microsoft-defender-endpoint.md
+    - name: Defender for Endpoint on Windows
+      href: microsoft-defender-endpoint-windows.md
+    - name: Defender for Endpoint on Linux
+      href: microsoft-defender-endpoint-linux.md
+    - name: Defender for Endpoint on macOS
+      href: microsoft-defender-endpoint-mac.md
+    - name: Defender for Endpoint for US Government customers
+      href: gov.md
+    - name: Defender for Endpoint Plan 1
+      items:
+      - name: Overview of Defender for Endpoint Plan 1
+        href: defender-endpoint-plan-1.md
+      - name: Setup and configuration
+        href: mde-p1-setup-configuration.md
+      - name: Get started
+        href: mde-plan1-getting-started.md
+    - name: What's new
+      items:
+      - name: New features
+        href: whats-new-in-microsoft-defender-endpoint.md
+        displayName: What's new in Microsoft Defender for Endpoint
+      - name: Release notes
+        href: microsoft-defender-endpoint-releases.md
+    - name: Trial user guide - Defender for Endpoint
+      href: defender-endpoint-trial-user-guide.md
+    - name: Data storage and privacy
+      href: data-storage-privacy.md
 
   - name: Microsoft Defender for Endpoint demonstrations and evaluation
     items:
