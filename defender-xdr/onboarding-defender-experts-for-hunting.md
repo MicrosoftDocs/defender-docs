@@ -14,7 +14,8 @@ ms.topic: how-to
 ms.custom: 
 - cx-ti
 - cx-ean
-ms.date: 02/17/2026
+ai-usage: ai-assisted
+ms.date: 05/27/2026
 ---
 
 # Start using Microsoft Defender Experts for Hunting
@@ -71,6 +72,7 @@ You can receive Defender Experts Notifications from Defender Experts through the
 - OData alerting [API](/defender-endpoint/api/get-alerts) and [REST API](/defender-endpoint/configure-siem)
 - [DeviceAlertEvents](advanced-hunting-migrate-from-mde.md#map-devicealertevents-table) table in Advanced hunting
 - Your email if you [configure an email notifications rule](onboarding-defender-experts-for-hunting.md#set-up-defender-experts-email-notifications)
+- Your Microsoft Teams if you [set up Defender Experts Teams notifications](#set-up-defender-experts-teams-notifications)
 
 ### Filter to view just the Defender Experts Notifications
 
@@ -105,6 +107,35 @@ A sample Defender Experts Notification appears in your **Incidents** page with t
 1. Under **Recently generated Defender Experts Notification**, select a link from the list to view its corresponding generated sample notification. The most recent sample appears at the top of the list. Selecting a link redirects you to the **Incidents** page.
 
     :::image type="content" source="./media/onboarding-defender-experts-for-hunting/sample-den-links-dexh.png" alt-text="Screenshot of Sample DEN links." lightbox="./media/onboarding-defender-experts-for-hunting/sample-den-links-dexh.png":::
+
+### Set up Defender Experts Teams notifications
+
+You can use Microsoft Teams, in addition to email, to receive Defender Experts Notifications (DENs).
+
+> [!IMPORTANT]
+> To set up Teams notifications, you must have a **Security Administrator** role or higher, and a Microsoft Teams license.
+
+When Teams notifications are enabled:
+
+- A dedicated Defender Experts team and a **Hunting notifications** channel are automatically created.
+- Notifications are posted directly into the channel.
+- Incident updates appear as replies in the same thread.
+- Each notification includes the incident title, incident ID, and a direct link to the Defender portal.
+
+> [!NOTE]
+> Teams notifications are a one-way notification experience. Defender Experts have access to messages in the channel but don't monitor or respond to messages posted there. To communicate with Defender Experts, use **Ask Defender Experts** in the Defender portal.
+
+**To set up Teams notifications:**
+
+1. In the Microsoft Defender portal, go to **Settings** > **Defender Experts**.
+1. Select **Teams**.
+1. Turn on **Notify me on Teams**.
+1. Select **Save**.
+
+After setup, the system creates the Defender Experts team and the **Hunting notifications** channel, and provides a link to open the Teams channel. A welcome message appears in Teams confirming the setup is complete.
+
+> [!TIP]
+> If the setup fails, see [Configuring the Microsoft Defender Experts app in Teams](teams-restrictions-dexapp.md) for troubleshooting guidance.
 
 ### Next step
 

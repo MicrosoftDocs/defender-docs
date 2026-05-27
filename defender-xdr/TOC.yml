@@ -491,7 +491,9 @@
           - name: Work with MSSPs
             href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
-          items: 
+          items:
+          - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+            href: teams-restrictions-dexapp.md
           - name: General information
             href: faq-defender-experts-hunting.md
           - name: Server and cloud workload coverage
