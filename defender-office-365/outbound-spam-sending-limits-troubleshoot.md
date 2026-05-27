@@ -170,4 +170,4 @@ To prevent future blocks, take the following actions:
 - [High-risk delivery pool for outbound messages](outbound-spam-high-risk-delivery-pool-about.md)
 - [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 - [Troubleshoot email from external senders to Microsoft 365](external-senders-mail-flow-troubleshooting.md)
-- [Anti-spam protection FAQ](anti-spam-protection-faq.md)
+- [Anti-spam protection FAQ](anti-spam-protection-faq.yml)
