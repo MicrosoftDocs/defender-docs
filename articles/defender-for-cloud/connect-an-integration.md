@@ -1,19 +1,19 @@
 ---
 title: Connect an integration
 description: Learn how to connect partner integrations into Microsoft Defender for Cloud to enhance security and gain insights for your multicloud environment.
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 11/03/2024
+ms.date: 05/24/2026
 #customer intent: As a cloud administrator, I want to connect partner integrations so that I can enhance security and gain insights.
 ---
 
 # Connect an integration
 
-Microsoft Defender for Cloud can connect with various partner integrations. The specific integration you choose, allows Defender for Cloud to either receive or share important information to help secure your multicloud environment.
+Microsoft Defender for Cloud connects with partner integrations. Your selected integration lets Defender for Cloud receive or share information that helps secure your multicloud environment.
 
-For the full list of available integrations, see the [overview of partner integrations](partner-integrations.md).
+For the full list of available integrations, see [Overview of partner integrations](partner-integrations.md).
 
 ## Prerequisites
 
@@ -27,22 +27,30 @@ For the full list of available integrations, see the [overview of partner integr
 
 ## Connect the integration
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
+To connect a partner integration:
+
+1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com/).
 
 1. Navigate to **Microsoft Defender for Cloud** > **Environment settings**.
 
 1. Select **Integrations**.
 
-    :::image type="content" border="true" source="./media/connect-an-integration/integrations.png" alt-text="Screenshot of environment settings page that shows where to select the partner integration option.":::
+    :::image type="content" border="true" source="./media/connect-an-integration/integrations.png" alt-text="Microsoft Defender for Cloud Environment settings page with the Integrations tab selected.":::
 
 1. Select **+ Add integration**.
 
-    :::image type="content" source="media/connect-an-integration/add-integration.png" alt-text="Screenshot that shows where the Add Integration button is located." lightbox="media/connect-an-integration/add-integration.png":::
+    :::image type="content" source="media/connect-an-integration/add-integration.png" alt-text="Integrations page showing the + Add integration button above the connector list." lightbox="media/connect-an-integration/add-integration.png":::
 
-1. Select the relevant partner integration.
+1. Select **the relevant partner integration**.
 
 1. Enter the required information for the integration.
 
 1. Select **Save**.
 
-The integration is now connected to Defender for Cloud and appears in the list of connected integrations.
+The integration now appears in the list of connected integrations.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Connect Endor Labs to Defender for Cloud](connect-endor-labs.md)
+
