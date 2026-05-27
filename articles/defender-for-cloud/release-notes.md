@@ -109,6 +109,8 @@ To access cloud security reports, navigate to the **Reporting** page in the Micr
 
 Learn more about [Cloud security reporting in Microsoft Defender portal](cloud-security-reporting.md).
 
+<a name="scanning-support-for-docker-hardened-container-images"></a>
+
 ### Scanning support for Docker Hardened container images
 
 May 19, 2026
