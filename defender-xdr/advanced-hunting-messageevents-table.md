@@ -16,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 11/18/2025
+ms.date: 05/25/2026
 ---
 
 # MessageEvents
@@ -27,6 +27,9 @@ The `MessageEvents` table in the [advanced hunting](advanced-hunting-overview.md
 
 This advanced hunting table is populated by records from Microsoft Defender for Office 365. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Office 365 in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
+
+> [!NOTE]
+> This table surfaces metadata for all messages from external conversations, along with metadata from internal conversation messages that contain URLs.
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
