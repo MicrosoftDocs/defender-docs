@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 05/24/2026
+ms.date: 05/26/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -28,10 +28,6 @@ For updates about versions and features released six months ago or earlier, see 
 ### Sensor v3.x supports all identity roles on domain controllers
 
 Defender for Identity sensor v3.x now supports domain controllers running all identity roles, including Microsoft Entra Connect, AD FS, and AD CS identity roles. For deployment details, see [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md).
-
-### Extended RPC auditing capabilities (Preview)
-
-Defender for Identity now supports extended RPC auditing capabilities for advanced identity detections. To enable these capabilities, apply the new **Extended Sensor Audit** tag to your devices and install the latest cumulative update. A new health alert, **Sensor v3.x Extended RPC Audit Misconfigured (Preview)**, notifies you when the tag is missing or incorrectly applied. For more information, see [Configure RPC on sensors v3.x](deploy/deploy-sensor-v3.md#configure-rpc-auditing).
 
 ### Increased sensor capacity
 Defender for Identity now supports up to 1,000 sensors per workspace, increased from the previous limit of 350. To add more than 1,000 sensors, contact Defender for Identity support.
