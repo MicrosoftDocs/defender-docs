@@ -115,7 +115,7 @@ Resource bottlenecks can impact detection accuracy and evaluation results. Befor
 
 - **Memory:** 2 GB of RAM minimum. For high-performance workloads, more memory might be needed.
 
-- Verify system requirements using official prerequisites: [Microsoft Defender for Endpoint on Linux system prerequisites](/defender-endpoint/linux-prerequisites)
+- Verify system requirements using official prerequisites: [Microsoft Defender for Endpoint on Linux system prerequisites](/defender-endpoint/mde-linux-prerequisites)
 
 ## Review your exclusions
 
