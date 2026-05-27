@@ -11,7 +11,7 @@ ms.collection:
 - tier2
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-ms.date: 11/17/2025
+ms.date: 05/27/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -20,34 +20,21 @@ appliesto:
 
 # Onboard previous versions of Windows
 
-Defender for Endpoint extends support to include down-level operating systems, providing advanced attack detection and investigation capabilities on supported Windows versions.
+Microsoft Defender for Endpoint supports down-level operating systems, providing advanced attack detection and investigation capabilities on supported Windows versions.
 
-To onboard down-level Windows client endpoints to Defender for Endpoint, you can:
+To onboard down-level Windows client endpoints to the Defender for endpoint security solution:
 
-- [Use the Defender deployment tool to deploy Defender endpoint security](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)
+- [Use the Defender deployment tool](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security) if the down-level Windows client is running one of the following operating systems:
+   - Windows 7 SP1 Pro
+   - Windows 7 SP1 Enterprise
+   - Windows Server 2008 R2 SP1
 
-   or
+   The Defender deployment tool will install the appropriate Defender endpoint security solution. For more information about this solution, see [Use the Defender deployment tool to deploy Defender endpoint security](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
 
-- [Install and configure Microsoft Monitoring Agent (MMA)](#install-and-configure-microsoft-monitoring-agent-mma) and [Configure and update System Center Endpoint Protection (SCEP) clients](#configure-and-update-system-center-endpoint-protection-clients)
+- [Install and configure Microsoft Monitoring Agent (MMA)](#install-and-configure-microsoft-monitoring-agent-mma) and [Configure and update System Center Endpoint Protection (SCEP) clients](#configure-and-update-system-center-endpoint-protection-clients) if your down-level Windows client is running Windows 8.1 or Windows 8.1 Pro.
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that it's properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint endpoint](run-detection-test.md).
-
-## Supported operating systems
-
-**Defender endpoint security solution**
-
-- Windows 7 SP1 Pro
-- Windows 7 SP1 Enterprise
-- Windows Server 2008 R2 SP1
-
-**MMA/SCEP**
-
-- Windows 7 SP1 Pro
-- Windows 7 SP1 Enterprise
-- Windows 8.1 Pro
-- Windows 8.1
-- Windows Server 2008 R2 SP1
 
 ## Use the Defender deployment tool to deploy Defender endpoint security
 
@@ -69,6 +56,8 @@ A Microsoft Defender for endpoint security solution is available for legacy Wind
 The solution can be downloaded and installed using the [Defender deployment tool](./defender-deployment-tool-windows.md), a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it, see [Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool](./defender-deployment-tool-windows.md).
 
 ## Install and configure Microsoft Monitoring Agent (MMA)
+
+It's recommended to onboard down-level Windows clients via MMA and SCEP **only if** the client is running Windows 8.1 or 8.1 Pro. For all other Windows operating systems, use the [Defender deployment tool].
 
 ### Before you begin
 
@@ -140,24 +129,6 @@ If your servers need to use a proxy to communicate with Defender for Endpoint, u
 If a proxy or firewall is in use, ensure that servers can access all of the Microsoft Defender for Endpoint service URLs directly and without SSL interception. For more information, see [enable access to Microsoft Defender for Endpoint service URLs](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). Use of SSL interception prevents the system from communicating with the Defender for Endpoint service.
 
 Once completed, you should see onboarded Windows servers in the portal within an hour.
-
-## Onboard Windows servers through Microsoft Defender for Cloud
-
-1. In the Microsoft Defender XDR navigation pane, select **Settings** > **Endpoints** > **Device management** > **Onboarding**.
-
-1. Select **Windows Server 2008 R2 SP1** as the operating system.
-
-1. Select **Onboard Servers in Microsoft Defender for Cloud**.
-
-1. Follow the onboarding instructions in [Microsoft Defender for Endpoint with Microsoft Defender for Cloud](/azure/security-center/security-center-wdatp) and If you're using Azure ARC, follow the onboarding instructions in [Enabling the Microsoft Defender for Endpoint integration](/azure/security-center/security-center-wdatp#enabling-the-microsoft-defender-for-endpoint-integration).
-
-After completing the onboarding steps, you'll need to [Configure and update System Center Endpoint Protection clients](#configure-and-update-system-center-endpoint-protection-clients).
-
-> [!NOTE]
->
-> - For onboarding via Microsoft Defender for servers to work as expected, the server must have an appropriate workspace and key configured within the Microsoft Monitoring Agent (MMA) settings.
-> - Once configured, the appropriate cloud management pack is deployed on the machine and the sensor process (MsSenseS.exe) will be deployed and started.
-> - This is also required if the server is configured to use an OMS Gateway server as proxy.
 
 ## Verify onboarding
 
