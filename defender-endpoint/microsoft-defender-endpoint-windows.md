@@ -32,7 +32,7 @@ Microsoft Defender for Endpoint on Windows provides preventative protection, pos
 | **Streamlined management and operations** | Defender for Endpoint on Windows integrates with your existing management tools, including [Microsoft Intune](/mem/intune/protect/advanced-threat-protection) and [Group Policy](configure-endpoints-gp.md). <br/><br/> [Security settings management](/intune/intune-service/protect/mde-security-integration) lets you manage security policies directly from the Microsoft Defender portal. <br/><br/> Defender for Endpoint provides a comprehensive set of [management APIs](api/management-apis.md) for programmatic access to device management, vulnerability management, and threat intelligence. [Partner integrations](partner-integration.md) enable integration with Microsoft and non-Microsoft security solutions. |
 | **Seamless integration and extensibility** | Microsoft Defender for Endpoint on Windows ensures stable and durable performance with a lightweight behavioral sensor built into the operating system. <br/><br/> Defender for Endpoint integrates seamlessly with the broader Microsoft Defender suite, offering extensibility through [API integration](api/apis-intro.md), SIEM connectors, [Power BI support](api/api-power-bi.md), and role-based access control (RBAC). |
 | **Automated investigation and response** | [Automated investigation and response (AIR)](automated-investigations.md) automatically investigates alerts and remediates threats, reducing the burden on security teams. <!-- Note: AIR may be deprecated in a future release. Monitor announcements for updates. --> <br/><br/> [Device isolation](respond-machine-alerts.md#isolate-devices-from-the-network) isolates compromised devices to prevent lateral movement. |
-| **Autonomous protection** | [Automatic attack disruption](/defender-xdr/automatic-attack-disruption) identifies and contains active attacks in real time by automatically isolating compromised devices and disabling compromised user accounts, stopping lateral movement before human intervention is needed. [Predictive protection](/defender-endpoint/predictive-protection) uses AI to anticipate threats and proactively shield high-value assets before an attack reaches them. |
+| **Autonomous protection** | [Automatic attack disruption](/defender-xdr/automatic-attack-disruption) identifies and contains active attacks in real time by automatically isolating compromised devices and disabling compromised user accounts, stopping lateral movement before human intervention is needed. [Predictive shielding](/defender-xdr/shield-predict-threats) uses AI to anticipate threats and proactively shield high-value assets before an attack reaches them. |
 | **Device and network discovery** | [Endpoint and network device discovery](device-discovery.md) discovers unmanaged endpoints, network devices, and IoT devices on the corporate network, helping you maintain visibility and protection. |
 
 > [!TIP]
@@ -93,12 +93,13 @@ These capabilities help you detect, investigate, and respond to advanced threats
 
 ## Automated investigation and response
 
+<!-- Note: AIR may be deprecated in a future release. Monitor announcements for updates. -->
+
 | Feature | Description |
 |---|---|
 | [Automated investigation and response (AIR)](automated-investigations.md) | Automatically investigates alerts and remediates threats. |
-<!-- Note: AIR may be deprecated in a future release. Monitor announcements for updates. -->
 | [Automatic attack disruption](/defender-xdr/automatic-attack-disruption) | Identifies and contains active attacks in real time by automatically isolating compromised devices and disabling compromised user accounts, stopping lateral movement without requiring human intervention. |
-| [Predictive protection](/defender-endpoint/predictive-protection) | Uses AI to anticipate threats and proactively shield high-value assets before an attack reaches them. |
+| [Predictive shielding](/defender-xdr/shield-predict-threats) | Uses AI to anticipate threats and proactively shield high-value assets before an attack reaches them. |
 | [Device isolation](respond-machine-alerts.md#isolate-devices-from-the-network) | Isolates compromised devices to prevent lateral movement. Device isolation is also triggered automatically by [attack disruption](/defender-xdr/automatic-attack-disruption) when an active attack is detected, containing threats at machine speed. |
 
 ## Investigation and response actions
