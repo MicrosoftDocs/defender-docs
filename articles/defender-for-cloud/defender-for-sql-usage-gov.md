@@ -1,17 +1,17 @@
 ---
-title: Enable Defender for SQL Servers on Machines in government clouds
+title: Enable Microsoft Defender for SQL Servers on Machines government
 description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on government clouds with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
-author: ElazarK
-ms.date: 05/26/2026
-#customer intent: As a security administrator in a government cloud, I want to enable Defender for SQL Servers on Machines so that I can protect SQL instances and validate secure onboarding requirements.
+author: Elazark
+ms.date: 04/23/2025
+#customer intent: As a security administrator, I want to enable Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
 ---
 
-# Enable Defender for SQL Servers on Machines in government clouds
+# Enable Defender for SQL Servers on Machines government
 
 > [!IMPORTANT]
-> This article applies to government clouds. If you're using commercial clouds, see [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md).
+> This article applies to government clouds. If you're using commercial clouds, see the [Enable Defender for SQL servers on Machines](defender-for-sql-usage.md) article.
 
 The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans in Microsoft Defender for Cloud. Use Defender for SQL Servers on Machines to protect SQL Server databases hosted on Azure VMs and Azure Arc-enabled VMs.
 
@@ -19,7 +19,7 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 | Requirement | Details |
 |-------------|---------|
-| **Permissions** | To deploy the plan on a subscription, including Azure Policy, you need **Subscription Owner** permissions. <br> <br> The Windows user on the SQL VM must have the **sysadmin** role on the database. |
+| **Permissions** | To deploy the plan on a subscription including Azure Policy, you need **Subscription Owner** permissions. <br> <br> The Windows user on the SQL VM must have the **Sysadmin** role on the database. |
 | **Multicloud machines** | Multicloud machines (AWS and GCP) must be onboarded as Azure Arc-enabled VMs. They can be automatically onboarded as Azure Arc machines when onboarded with the connector. <br> [Onboard your AWS connector](quickstart-onboard-aws.md) and automatically provision Azure Arc. <br> [Onboard your GCP connector](quickstart-onboard-gcp.md) and automatically provision Azure Arc. |
 | **On-premises machines** | On-premises machines must be onboarded as Azure Arc-enabled VMs. [Onboard on-premises machines and install Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). |
 | **Azure Arc** | Review Azure Arc deployment requirements <br> - [Plan and deploy Azure Arc-enabled servers](/azure/azure-arc/servers/plan-at-scale-deployment) <br> - [Connected Machine agent prerequisites](/azure/azure-arc/servers/prerequisites) <br> - [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements) <br> - [Roles specific to SQL Server enabled by Azure Arc](/sql/relational-databases/security/authentication-access/server-level-roles#roles-specific-to-sql-server-enabled-by-azure-arc) |
@@ -69,14 +69,4 @@ Select a Log Analytics workspace to work with the Defender for SQL on Machines p
 
 ## Verify that your machines are protected
 
-> [!IMPORTANT]
-> Don't skip this step. Verification confirms that your deployment is protected.
-
-Depending on your environment, it can take a few hours to discover and protect SQL instances.
-
-As a required final step, [verify that all machines are protected](verify-machine-protection-gov.md). Verification confirms that the deployment completed and that your SQL instances are protected.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Verify that all machines are protected](verify-machine-protection-gov.md)
+Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, you should [verify that all machines are protected](verify-machine-protection-gov.md). Don't skip this step, as it's important to verify your deployment is protected.

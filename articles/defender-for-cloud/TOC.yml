@@ -160,7 +160,7 @@
                   href: disable-sql-on-machines.md
                 - name: Government clouds
                   items:
-                  - name: Enable Defender for SQL Servers on Machines in government clouds
+                  - name: Enable Defender for SQL Servers on Machines government
                     displayName: hybrid, arc, Azure Defender
                     href: defender-for-sql-usage-gov.md
                   - name: Enable Defender for SQL servers on machines at scale
@@ -205,7 +205,7 @@
               items:
                 - name: Enable with the Azure policy (recommended)
                   href: defender-for-storage-policy-enablement.md
-                - name: Enable Defender for Storage by using infrastructure as code
+                - name: Enable with Infrastructure as Code
                   href: defender-for-storage-infrastructure-as-code-enablement.md
                 - name: Enable with REST API
                   href: defender-for-storage-rest-api-enablement.md
@@ -933,7 +933,7 @@
             href: defender-for-storage-classic.md
           - name: Enable and configure Defender for Storage (classic)
             href: defender-for-storage-classic-enable.md
-          - name: Migrate from Defender for Storage (classic)
+          - name: Migrating to the new plan
             href: defender-for-storage-classic-migrate.md
           - name: Common questions about Defender for Storage (classic)
             displayName: storage, common questions, defender for storage, storage, faq,

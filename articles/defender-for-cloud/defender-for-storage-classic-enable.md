@@ -1,17 +1,17 @@
 ---
 title: Enable and configure Microsoft Defender for Storage (classic)
 description: Learn how to enable and configure Microsoft Defender for Storage (classic) to protect your storage accounts from potential security threats.
-ms.date: 05/26/2026
-author: ElazarK
+ms.date: 03/20/2025
+author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
 #customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage (classic) so that I can protect my storage accounts from threats.
 ms.custom: devx-track-azurepowershell, devx-track-azurecli
 ---
 
-# Enable and configure Microsoft Defender for Storage (classic)
+# Enable Microsoft Defender for Storage (classic)
 
-This article explains how to enable and configure Microsoft Defender for Storage (classic) on your subscriptions by using PowerShell, the REST API, and Azure Resource Manager (ARM) templates.
+This article explains how to enable and configure Microsoft Defender for Storage (classic) on your subscriptions using various templates such as PowerShell, REST API, and others.
 
 > [!NOTE]
 > Defender for Storage (classic) is unavailable for new subscriptions as of February 5, 2025.
@@ -33,8 +33,6 @@ Learn more about the [benefits, features, and limitations of Defender for Storag
 
 ## Availability
 
-The following table shows availability details for Microsoft Defender for Storage (classic).
-
 |Aspect|Details|
 |----|:----|
 |Release state:|General availability (GA)|
@@ -52,9 +50,9 @@ You can configure Microsoft Defender for Storage with per-transaction pricing on
 
 #### ARM template
 
-To enable Microsoft Defender for Storage for a specific storage account with per-transaction pricing by using an ARM template, use the [Azure Quickstart template for Defender for Storage](https://azure.microsoft.com/resources/templates/storage-advanced-threat-protection-create/).
+To enable Microsoft Defender for Storage for a specific storage account with per-transaction pricing using an ARM template, use [the prepared Azure template](https://azure.microsoft.com/resources/templates/storage-advanced-threat-protection-create/).
 
-To disable Defender for Storage on a specific storage account:
+If you want to disable Defender for Storage on the account:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Navigate to your storage account.
@@ -110,7 +108,7 @@ az security atp storage update \
 --is-enabled false
 ```
 
-[az security atp storage command reference](/cli/azure/security/atp/storage#az-security-atp-storage-update).
+Learn more about the [az security atp storage](/cli/azure/security/atp/storage#az-security-atp-storage-update) command.
 
 ## Exclude a storage account from a protected subscription in the per-transaction plan
 
@@ -130,8 +128,6 @@ Exclusion of storage accounts from protected subscriptions requires you to:
 
 ### Exclude an Azure Storage account protection on a subscription with per-transaction pricing
 
-When Defender for Storage is enabled at the subscription level with per-transaction pricing, you can exclude specific storage accounts from protection by using one of the following methods.
-
 To exclude an Azure Storage account from Microsoft Defender for Storage (classic), you can use:
 
 - [PowerShell](#use-powershell-to-exclude-an-azure-storage-account)
@@ -139,9 +135,7 @@ To exclude an Azure Storage account from Microsoft Defender for Storage (classic
 
 #### Use PowerShell to exclude an Azure Storage account
 
-To exclude a storage account by using PowerShell:
-
-1. If you don't have the Azure Az PowerShell module installed, install it by following the [Azure PowerShell installation guide](/powershell/azure/install-azure-powershell).
+1. If you don't have the Azure Az PowerShell module installed, install it using [the instructions from the Azure PowerShell documentation](/powershell/azure/install-azure-powershell).
 
 1. Using an authenticated account, connect to Azure with the ``Connect-AzAccount`` cmdlet, as explained in [Sign in with Azure PowerShell](/powershell/azure/authenticate-azureps).
 
@@ -159,13 +153,11 @@ To exclude a storage account by using PowerShell:
     Disable-AzSecurityAdvancedThreatProtection -ResourceId <resourceId>
     ```
 
-    [Disable-AzSecurityAdvancedThreatProtection cmdlet reference](/powershell/module/az.security/disable-azsecurityadvancedthreatprotection).
+    [Learn more about this cmdlet](/powershell/module/az.security/disable-azsecurityadvancedthreatprotection).
 
 #### Use Azure CLI to exclude an Azure Storage account
 
-To exclude a storage account by using Azure CLI:
-
-1. If you don't have Azure CLI installed, install it by following the [Azure CLI installation guide](/cli/azure/install-azure-cli).
+1. If you don't have Azure CLI installed, install it using [the instructions from the Azure CLI documentation](/cli/azure/install-azure-cli).
 
 1. Using an authenticated account, connect to Azure with the ``login`` command as explained in [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli) and enter your account credentials when prompted:
 
@@ -190,13 +182,13 @@ To exclude a storage account by using Azure CLI:
     az security atp storage update --resource-group MyResourceGroup  --storage-account MyStorageAccount --is-enabled false
     ```
 
-    [az security atp storage command reference](/cli/azure/security/atp/storage).
+    [Learn more about this command](/cli/azure/security/atp/storage).
 
 ### Exclude an Azure Databricks Storage account
 
 #### Exclude an active Databricks workspace
 
-Microsoft Defender for Storage can exclude specific active Databricks workspace storage accounts when Defender for Storage (classic) is already enabled on a subscription.
+Microsoft Defender for Storage can exclude specific active Databricks workspace storage accounts, when the plan is already enabled on a subscription.
 
 **To exclude an active Databricks workspace**:
 
@@ -212,7 +204,7 @@ Microsoft Defender for Storage can exclude specific active Databricks workspace 
 
     :::image type="content" source="media/defender-for-storage-exclude/storage-off.png" alt-text="Screenshot showing how to switch the Defender for Storage plan to off.":::
 
-1. Re-enable Defender for Storage (classic) by using one of the supported methods: PowerShell, Azure CLI, or an ARM template. You can't enable Defender for Storage (classic) from the Azure portal.
+1. Re-enable Defender for Storage (classic) using one of the supported methods (you can’t enable Defender for Storage classic from the Azure portal).
 
 The tags are inherited by the Storage account of the Databricks workspace and prevent Defender for Storage from turning on.
 
@@ -225,7 +217,7 @@ When you create a new Databricks workspace, you have the ability to add a tag th
 
 **To prevent auto-enabling on a new Databricks workspace storage account**:
 
-1. Follow the [Azure Databricks workspace quickstart](/azure/databricks/scenarios/quickstart-create-Databricks-workspace-portal?tabs=azure-portal) to create a new Azure Databricks workspace.
+1. Follow [these steps](/azure/databricks/scenarios/quickstart-create-Databricks-workspace-portal?tabs=azure-portal) to create a new Azure Databricks workspace.
 
 1. In the Tags tab, enter a tag named `AzDefenderPlanAutoEnable`.
 
@@ -240,8 +232,6 @@ The Microsoft Defender for Storage account inherits the tag of the Databricks wo
 ## Disable Microsoft Defender for Storage (classic)
 
 ### Disable per-transaction pricing for a subscription
-
-You can disable per-transaction pricing at the subscription level by using one of the following methods.
 
 - [Terraform template](#terraform-template)
 - [Bicep template](#bicep-template)
@@ -342,7 +332,7 @@ Learn more about the [`az security pricing create`](/cli/azure/security/pricing#
 
 #### REST API
 
-To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing by using the Microsoft Defender for Cloud REST API, create a PUT request with this endpoint and body:
+To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing using the Microsoft Defender for Cloud REST API, create a PUT request with this endpoint and body:
 
 ```http
 PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Security/pricings/StorageAccounts?api-version=2022-03-01
