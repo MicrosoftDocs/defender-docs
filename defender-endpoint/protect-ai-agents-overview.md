@@ -54,7 +54,7 @@ For information on runtime protection for local AI agents, see [Runtime protecti
 Microsoft Defender's discovery capabilities are part of a comprehensive AI security approach. Microsoft Defender provides other capabilities across your organization's AI ecosystem:
 
 - **Discover cloud and platform agents**: Find agents built with Microsoft Copilot Studio, Microsoft Foundry, Amazon Web Services (AWS) Bedrock, and Google Cloud Platform (GCP) Vertex AI.
-- **Assess security posture**: Evaluate agent configurations, identify risks, get prioritized recommendations, and surface attack paths to Microsoft Foundry and Microsoft Copilot Studio (MCS).
+- **Assess local AI agent security posture**: Evaluate agent configurations, identify risks, get prioritized recommendations, and surface attack paths to Microsoft Foundry and Microsoft Copilot Studio (MCS).
 - **Detect and investigate threats**: Correlate alerts and investigate suspicious agent behavior across your security infrastructure.
 
 For details on these capabilities and how to apply them, see [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](/defender-xdr/security-for-ai/defender-security-for-ai).
