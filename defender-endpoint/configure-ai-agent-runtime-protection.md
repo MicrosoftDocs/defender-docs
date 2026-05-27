@@ -1,5 +1,5 @@
 ---
-title: Set up AI agent runtime protection - Microsoft Defender
+title: Set up AI agent runtime protection with Microsoft Defender for Endpoint
 description: Learn how to configure Microsoft Defender to protect local AI agents from prompt injection attacks on Windows endpoints.
 author: lwainstein
 ms.author: lwainstein
@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to configure runtime protection for local AI agents on my organization's endpoints so that I can detect and block prompt injection attacks in real time.
 ---
 
-# Set up AI agent runtime protection with Microsoft Defender Antivirus
+# Set up AI agent runtime protection with Microsoft Defender for Endpoint
 
 Microsoft Defender provides runtime protection for local AI agents on Windows endpoints. It monitors the agentic loop to detect prompt injection attacks, then audits or blocks threats based on your configuration.
 
@@ -18,7 +18,7 @@ Microsoft Defender supports two runtime protection approaches: agent hooks and n
 
 In this article, you learn how to choose a protection method, configure runtime protection settings, deploy settings with Intune, and investigate detections.
 
-For an overview of how each method works, see [Runtime protection for local AI agents with Microsoft Defender](ai-agent-runtime-protection-overview.md).
+For an overview of how each method works, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ Before you configure runtime protection, make sure the following requirements ar
 
 You can use agent hooks protection, network inspection protection, or both together for layered coverage. The following table compares both approaches to help you choose.
 
-As a best practice, enable agent hooks protection for supported agents. If you also need to protect agents that don't support hooks, enable network inspection protection alongside it. When both methods are enabled, Microsoft Defender Antivirus uses single-path enforcement, where hooks handle supported agents and network inspection protects the rest, with no need for duplicate scanning.
+As a best practice, enable agent hooks protection for supported agents. If you also need to protect agents that don't support hooks, enable network inspection protection alongside it.
 
 | Aspect | Agent hooks protection | Network inspection protection |
 | --- | --- | --- |
@@ -77,7 +77,7 @@ To enable agent hooks protection on a single device (for testing or validation):
 
     ```
 
-1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled`, depending on how you want Microsoft Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](ai-agent-runtime-protection-overview.md#protection-modes-and-enforcement-outcomes).
+1. Replace `<mode>` with either `Enabled` or `Audit`, depending on how you want Microsoft Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](ai-agent-runtime-protection-overview.md#protection-modes-and-enforcement-outcomes).
 
 1. To verify the current setting, run:
 
@@ -101,7 +101,7 @@ To enable network inspection protection on a single device (for testing or valid
 
     ```
 
-1. Replace `<mode>` with either `Enabled`, `AuditMode`, or `Disabled`, depending on how you want Microsoft Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](ai-agent-runtime-protection-overview.md#protection-modes-and-enforcement-outcomes).
+1. Replace `<mode>` with either `Enabled` or `Audit`, depending on how you want Microsoft Defender Antivirus to handle detected threats. For details on each mode, see [Protection modes and enforcement outcomes](ai-agent-runtime-protection-overview.md#protection-modes-and-enforcement-outcomes).
 
 1. To verify the current setting, run:
 
@@ -139,7 +139,7 @@ The PowerShell commands in the previous sections configure a single device and a
 
 ## Review and investigate runtime protection detections and outcomes
 
-When Microsoft Defender Antivirus detects a threat based on your runtime protection settings, it generates an alert in Microsoft Defender and takes action based on the configured mode (**Enabled**, **AuditMode**, or **Disabled**). Detection details appear across a specific agent's UI, Windows notifications on the device, and the Microsoft Defender portal.
+When Microsoft Defender Antivirus detects a threat based on your runtime protection settings, it generates an alert in Microsoft Defender and takes action based on the configured mode (**Enabled** or **Audit**). Detection details appear across a specific agent's UI, Windows notifications on the device, and the Microsoft Defender portal.
 
 For more information on mode behavior and enforcement outcomes, see [Protection modes and enforcement outcomes](ai-agent-runtime-protection-overview.md#protection-modes-and-enforcement-outcomes) and [Enforcement, response, and investigation considerations](ai-agent-runtime-protection-overview.md#enforcement-response-and-investigation-considerations).
 

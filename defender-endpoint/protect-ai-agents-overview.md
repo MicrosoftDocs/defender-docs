@@ -1,5 +1,5 @@
 ---
-title: Local AI agent discovery with Microsoft Defender (Preview)
+title: Local AI agent discovery with Microsoft Defender for Endpoint (Preview)
 description: Learn how Microsoft Defender discovers local AI agents and MCP servers configured on your devices through inventory and investigation capabilities.
 author: lwainstein
 ms.author: lwainstein
@@ -12,14 +12,14 @@ appliesto:
 #customer intent: As a security administrator, I want to understand how Microsoft Defender provides visibility into local AI agents on my organization's devices.
 ---
 
-# Local AI agent discovery with Microsoft Defender (Preview)
+# Local AI agent discovery with Microsoft Defender for Endpoint (Preview)
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
 Microsoft Defender helps you discover and investigate local AI agents and MCP servers configured on your organization's devices. Microsoft Defender automatically detects and surfaces a closed list of known supported agents in the Microsoft Defender and Agent 365 portals, which gives you visibility into AI-related assets and lets you assess their presence across your environment.
 
 > [!TIP]
-> Defender also provides **runtime protection** for local AI agents. When enabled, it monitors activity in the agentic loop and blocks inline when malicious instructions are identified. For more information, see [Runtime protection for local AI agents with Microsoft Defender](ai-agent-runtime-protection-overview.md).
+> Defender also provides **runtime protection** for local AI agents. When enabled, it monitors activity in the agentic loop and blocks inline when malicious instructions are identified. For more information, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
 
 ## Local AI agent discovery on endpoints
 
@@ -45,7 +45,7 @@ Microsoft Defender discovers supported local AI agent families across agentic ID
 
 For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).
 
-For information on runtime protection for local AI agents, see [Runtime protection for local AI agents with Microsoft Defender](ai-agent-runtime-protection-overview.md).
+For information on runtime protection for local AI agents, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
 
 ## Broader AI security capabilities
 
@@ -53,7 +53,7 @@ Microsoft Defender's discovery capabilities are part of a comprehensive AI secur
 
 - **Discover cloud and platform agents**: Find agents built with Microsoft Copilot Studio, Microsoft Foundry, Amazon Web Services (AWS) Bedrock, and Google Cloud Platform (GCP) Vertex AI.
 - **Assess security posture**: Evaluate agent configurations, identify risks, get prioritized recommendations, and surface attack paths to Microsoft Foundry and Microsoft Copilot Studio (MCS).
-- **Runtime protection**: Monitor activity in the agentic loop and block prompt injection attacks inline. For more information, see [Runtime protection for local AI agents with Microsoft Defender](ai-agent-runtime-protection-overview.md).
+- **Runtime protection**: Monitor activity in the agentic loop and block prompt injection attacks inline. For more information, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
 - **Detect and investigate threats**: Correlate alerts and investigate suspicious agent behavior across your security infrastructure.
 
 For details on these capabilities and how to apply them, see [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](/defender-xdr/security-for-ai/defender-security-for-ai).

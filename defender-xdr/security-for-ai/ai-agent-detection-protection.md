@@ -88,7 +88,7 @@ Runtime protection uses two methods:
 
 - **Agent hooks** (also known as **event scanning**) for agents that support hooks.
 
-- **Network inspection** for broader coverage when hooks aren't available.
+- **Network inspection** for broader coverage when event scanning isn't available.
 
 Supported platforms for local AI agent runtime protection:
 
@@ -98,9 +98,9 @@ Supported platforms for local AI agent runtime protection:
 
 For more information, see:
 
-- [Runtime protection for local AI agents with Microsoft Defender](/defender-endpoint/ai-agent-runtime-protection-overview)
+- [Runtime protection for local AI agents with Microsoft Defender for Endpoint](/defender-endpoint/ai-agent-runtime-protection-overview)
 
-- [Set up AI agent runtime protection with Microsoft Defender Antivirus](/defender-endpoint/configure-ai-agent-runtime-protection)
+- [Set up AI agent runtime protection with Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection)
 
 ## Detect AI agent threats in near-real-time
 
