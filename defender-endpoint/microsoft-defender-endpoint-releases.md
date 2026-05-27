@@ -28,7 +28,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
-|Linux  |101.26042.0003  |May 2026 |- Release version: 30.126042.0003.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |Release details and updates |
+|Linux  |101.26042.0003  |May 2026 |- Release version: 30.126042.0003.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates]((#linux--may-2026--101260420003) |
 |iOS|1.1.77130101|May 2026|- Build: 1.1.77130101<br>- Release: May 15, 2026|[Release details and updates](#ios--may-2026--platform-version-1177130101)|
 |Android |1.0.8913.0101|May 2026|- Build: 1.0.8913.0101<br>- Released: May 18, 2026|[Release details and updates](#android--may-2026--platform-1089130101)|
 |Linux  |101.26032.0000  |April 2026 |- Release version: 30.126032.0000.0<br>- Engine version: 1.1.26010.1004<br>- Signature version: 1.445.617.0 |[Release details and updates](#linux--april-2026--101260320000) |
