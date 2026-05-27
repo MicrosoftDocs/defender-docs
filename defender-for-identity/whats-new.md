@@ -42,6 +42,7 @@ These new alerts were added to the Defender for Identity security alerts:
 
 **New alerts related to Entra ID**:
 - [Guest user account promoted to member](alerts-xdr.md#guest-user-account-promoted-to-member)
+- [User was created and assigned to Global Administrator role](alerts-xdr.md#user-was-created-and-assigned-to-global-administrator-role)
 
 - [Failed credential abuse attempt in Entra ID authentication](alerts-xdr.md#failed-credential-abuse-attempt-in-entra-id-authentication)
 - [Malicious sign in from a randomized user agent](alerts-xdr.md#malicious-sign-in-from-a-randomized-user-agent)
