@@ -18,19 +18,18 @@ The recommendations that appear in your environment are based on the resources t
 
 To learn about actions that you can take in response to these recommendations, see [Remediate recommendations in Defender for Cloud](implement-security-recommendations.md).
 
-These recommendations cover Azure Container Apps, Azure Container Instances, and AWS - ECS Fargate workloads.
+These recommendations cover Azure Container Apps, Azure Container Instances, and AWS - Amazon Elastic Container Service (ECS) Fargate workloads. They also include Identity and Access Management (IAM) permissions guidance.
 
 > [!TIP]
-> If a recommendation description says *No related policy*, usually it's because that recommendation is dependent on a different recommendation.
+> If a recommendation description says *No related policy*, it usually depends on another recommendation that has the policy.
 >
-> For example, the recommendation *Endpoint protection health failures should be remediated* relies on the recommendation that checks whether an endpoint protection solution is installed (*Endpoint protection solution should be installed*). The underlying recommendation *does* have a policy.
-> Limiting policies to only foundational recommendations simplifies policy management.
+> Defender for Cloud maps policy links to foundational recommendations. This approach helps keep policy management simpler.
 
 ## Serverless containers recommendations
 
 ### Authentication should be enabled on Azure Container Apps
 
-**Description**: Defender for Cloud identified Azure Container Apps with ingress enabled where platform-managed authentication is not configured. Enabling authentication ensures that only authorized users and services can access application endpoints.
+**Description**: Defender for Cloud identified Azure Container Apps with ingress enabled where platform-managed authentication isn't configured. Enabling authentication ensures that only authorized users and services can access application endpoints.
 (No related policy)
 
 **Severity**: Not specified
@@ -72,7 +71,7 @@ These recommendations cover Azure Container Apps, Azure Container Instances, and
 
 ### ECS Fargate tasks should not run containers with elevated privileges
 
-**Description**: Defender for Cloud detected ECS Fargate task definitions where containers run as the root user or request additional Linux capabilities. Running containers with elevated privileges increases the risk of unauthorized file access and privilege escalation.
+**Description**: Defender for Cloud detected ECS Fargate task definitions where containers run as the root user or request extra Linux capabilities. Running containers with elevated privileges increases the risk of unauthorized file access and privilege escalation.
 (No related policy)
 
 **Severity**: Not specified
@@ -93,7 +92,7 @@ These recommendations cover Azure Container Apps, Azure Container Instances, and
 
 ### Logging should be configured for ECS Exec on ECS clusters
 
-**Description**: Defender for Cloud identified that an ECS cluster associated with services using ECS Exec does not have audit logging properly configured. Without explicit logging, command activity might go unrecorded, posing a risk of undetected unauthorized access.
+**Description**: Defender for Cloud identified that an ECS cluster associated with services using ECS Exec doesn't have audit logging properly configured. Without explicit logging, command activity might go unrecorded, posing a risk of undetected unauthorized access.
 (No related policy)
 
 **Severity**: Not specified
