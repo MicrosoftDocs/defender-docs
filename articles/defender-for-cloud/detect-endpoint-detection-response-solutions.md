@@ -13,14 +13,14 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities for supported machines. Defender for Cloud:
 
-- Detects whether machines connect to a supported EDR solution.
+- Detects whether a machine connects to a supported EDR solution.
 - [Integrates natively with Microsoft Defender for Endpoint as an EDR solution](integration-defender-for-endpoint.md).
 
 ## Check for an EDR solution
 
-Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to check whether Azure VMs and AWS/GCP machines are connected to an EDR solution.
+Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to check whether Azure VMs and AWS/GCP machines use a supported EDR solution.
 
-Agentless scanning for EDR solution settings is available when Defender for Cloud runs in your Azure subscription and either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) or the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md) is enabled.
+Agentless EDR scanning is available when Defender for Cloud runs in your Azure subscription and either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) or the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md) is enabled.
 
 Based on EDR findings, Defender for Cloud provides these recommendations to help you identify and remediate machines without an EDR solution:
 

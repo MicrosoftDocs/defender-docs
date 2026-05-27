@@ -10,7 +10,7 @@ ms.date: 05/27/2026
 
 # Delegate recommendations with Microsoft Security Copilot
 
-Microsoft Defender for Cloud integrates with Microsoft Security Copilot to help you delegate recommendations from the Recommendations page with natural language prompts. You can assign a recommendation to another person or team.
+Microsoft Defender for Cloud integrates with Microsoft Security Copilot so you can delegate recommendations from the Recommendations page with natural language prompts. You can assign a recommendation to another person or team.
 
 Delegation can improve your security posture because the right people handle the risks and vulnerabilities in your environment.
 
