@@ -2,9 +2,9 @@
 title: Containers support matrix in Defender for Cloud
 description: Review support requirements for container capabilities in Microsoft Defender for Cloud.
 ms.topic: limits-and-quotas
-author: ElazarK
+author: Elazark
 ms.author: elkrieger
-ms.date: 05/25/2026
+ms.date: 04/27/2026
 ms.custom: references_regions
 ---
 
