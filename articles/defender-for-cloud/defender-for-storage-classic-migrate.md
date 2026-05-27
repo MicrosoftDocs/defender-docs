@@ -11,6 +11,8 @@ ms.topic: how-to
 
 This article explains why you should migrate from Defender for Storage (classic) and how to prepare for migration.
 
+It also explains what changes when you move to the new plan, how to identify your current plan configuration, and which migration methods to use at scale. Use this guidance to reduce migration risk and keep storage coverage consistent during the transition.
+
 ## Why migrate to the new Defender for Storage plan
 
 On March 28, 2023, we introduced the new Defender for Storage plan. This plan offers several benefits not available in the Defender for Storage (classic) per-transaction or per-storage account pricing plans, such as:

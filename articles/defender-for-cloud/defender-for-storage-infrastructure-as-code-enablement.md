@@ -10,6 +10,8 @@ ms.topic: how-to
 
 # Enable Defender for Storage by using infrastructure as code
 
+Use this article to enable and configure Microsoft Defender for Storage by using Terraform, Bicep, or Azure Resource Manager templates at either the subscription level or the storage account level.
+
 ## Enable Defender for Storage by using infrastructure as code
 
 We recommend that you enable Microsoft Defender for Storage on the subscription level. Doing so helps ensure that all storage accounts currently in the subscription are protected. Protection for storage accounts that you create after enabling Defender for Storage on the subscription level starts up to 24 hours after creation.
@@ -271,3 +273,4 @@ By customizing this code, you can:
 
 > [!div class="nextstepaction"]
 > [Review Microsoft.Security/DefenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true)
+
