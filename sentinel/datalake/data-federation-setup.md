@@ -2,12 +2,13 @@
 title: Set up federated data connectors in Microsoft Sentinel data lake
 titleSuffix: Microsoft Security
 description: Learn how to configure federated data connectors for Azure Databricks, ADLS Gen 2, and Microsoft Fabric in Microsoft Sentinel data lake.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: amyhari
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
 ms.date: 03/29/2026
-ms.author: edbaynash
 ms.collection: ms-security
 
 #Customer intent: As a security administrator, I want to set up federated data connectors so that I can query external data sources from the Microsoft Sentinel data lake.

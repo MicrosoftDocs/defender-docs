@@ -1,8 +1,9 @@
 ---
 title: Onboard your Azure Stack Hub virtual machines to Microsoft Sentinel | Microsoft Docs
 description: This article shows you how to provision the Azure Monitor, Update, and Configuration Management virtual machine extension on Azure Stack Hub virtual machines and start monitoring them with Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 11/09/2021
 

@@ -1,9 +1,8 @@
 ---
 title: Update the Microsoft Sentinel for SAP applications data connector agent
-ms.reviewer: monaberdugo
-description: This article shows you how to update an already existing SAP data connector to its latest version.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
+description: This article shows you how to update an already existing SAP data connector to its latest version.
 ms.topic: how-to
 ms.date: 09/30/2025
 appliesto:

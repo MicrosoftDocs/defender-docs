@@ -23,6 +23,9 @@ appliesto:
 
 [Network protection](network-protection.md) helps to prevent users from using any application to access dangerous domains that might host phishing scams, exploits, and other malicious content on the internet. You can [audit network protection](evaluate-network-protection.md) in a test environment to view which apps would be blocked before enabling network protection.
 
+   > [!IMPORTANT]
+   > On Windows Server, Network Protection is an opt-in capability. Before any policy from Defender, Intune, or SCCM can enable it, the operating system must explicitly allow the feature using the **AllowNetworkProtectionOnWinServer** setting. Without this prerequisite, the Defender agent ignores any Network Protection configuration, even if it is successfully deployed, resulting in the feature appearing as not applied.
+
 [Learn more about network filtering configuration options.](/intune/intune-service/protect/endpoint-protection-windows-10#network-filtering)
 
 ## Prerequisites

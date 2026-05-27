@@ -3,7 +3,6 @@ title: Set up the Azure Storage connector to stream logs to Microsoft Sentinel
 description: Learn how to set up the Azure Storage Blob connector to ingest logs from Azure Storage into Microsoft Sentinel using the Codeless Connector Framework.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.reviewer: edbaynash
 ms.date: 02/08/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel

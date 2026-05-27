@@ -1,12 +1,11 @@
 ---
 title: Unified Connectors Platform for Microsoft Sentinel
 description: Learn about the Unified Connectors Platform that simplifies connector management across Microsoft security products including Microsoft Sentinel, Defender for Cloud, and Defender for Identity.
+ms.author: monaberdugo
 author: mberdugo
 contributors:
 ms.topic: concept-article
 ms.date: 08/10/2025
-ms.author: monaberdugo
-ms.reviewer: Oded Weber
 ms.custom: references_regions
 
 #customer intent: As a Microsoft Defender for Identity user, I want to understand how unified connectors work so I can manage my integration connections more efficiently.

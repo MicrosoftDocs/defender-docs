@@ -2,11 +2,11 @@
 title: Work with STIX objects and indicators to enhance threat intelligence and threat hunting in Microsoft Sentinel (Preview)
 titleSuffix: Microsoft Sentinel
 description: This article provides examples of how to incorporate STIX objects into queries to enhance threat hunting.
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: yoninave
 ms.topic: how-to
 ms.date: 08/07/2025
-ms.author: guywild
-ms.reviewer: alsheheb
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal

@@ -120,4 +120,4 @@ Now that you've configured the initial configuration steps, you can configure mo
 ## Next step
 
 > [!div class="step-by-step"]
-> [Event collection with Microsoft Defender for Identity »](event-collection-overview.md)
+> [Configure audit policies for Windows event logs](configure-windows-event-collection.md)

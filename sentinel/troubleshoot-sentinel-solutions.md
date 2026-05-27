@@ -6,6 +6,7 @@ ms.service: microsoft-sentinel
 ms.date: 09/17/2025
 ms.author: guywild
 author: guywi-ms
+ms.reviewer: noak
 #CustomerIntent: As a security engineer, I want to quickly diagnose Microsoft Sentinel solution ingestion, analytics, packaging, and MCP tool issues and know what to collect before opening a support case.
 ---
 

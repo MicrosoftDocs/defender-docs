@@ -1,5 +1,5 @@
 ---
-title: Discovering your attack surface
+title: Discover Your Attack Surface
 description: Microsoft has preemptively configured the attack surfaces of many organizations, mapping their initial attack surface by discovering infrastructure that’s connected to known assets.
 author: danielledennis
 ms.author: dandennis
@@ -9,13 +9,13 @@ ms.topic: tutorial
 ms.custom: sfi-image-nochange
 ---
 
-# Discovering your attack surface
+# Discover your attack surface
 
 ## Prerequisites
 
 Before completing this tutorial, see the [What is discovery?](what-is-discovery.md) and [Using and managing discovery](using-and-managing-discovery.md) articles to understand key concepts mentioned in this article.
 
-## Accessing your automated attack surface
+## Access your automated attack surface
 
 Microsoft has preemptively configured the attack surfaces of many organizations, mapping their initial attack surface by discovering infrastructure connected to known assets. We recommend that all users search for their organization’s attack surface before creating a custom attack surface and running other discoveries. This process enables users to quickly access their inventory as Defender EASM refreshes the data, adding more assets and recent context to your Attack Surface.
 
@@ -29,13 +29,15 @@ At this point, the discovery runs in the background. If you selected a preconfig
 
 If you notice any missing assets or have other entities to manage that may not be discovered through infrastructure clearly linked to your organization, you can elect to run customized discoveries to detect these outlier assets.
 
-## Customizing discovery
+## Customize discovery
+
 Custom discoveries are ideal for organizations that require deeper visibility into infrastructure that may not be immediately linked to their primary seed assets. By submitting a larger list of known assets to operate as discovery seeds, the discovery engine returns a wider pool of assets. Custom discovery can also help organizations find disparate infrastructure that may relate to independent business units and acquired companies.
 
 ## Discovery groups
+
 Custom discoveries are organized into Discovery Groups. They're independent seed clusters that comprise a single discovery run and operate on their own recurrence schedules. Users can elect to organize their Discovery Groups to delineate assets in whatever way best benefits their company and workflows. Common options include organizing by responsible team/business unit, brands, or subsidiaries.
 
-## Creating a discovery group
+## Create a discovery group
 
 1. Select the **Discovery** panel under the **Manage** section in the left-hand navigation column.
 
@@ -58,7 +60,6 @@ Custom discoveries are organized into Discovery Groups. They're independent seed
     The **Quick Start** option lets you search for your organization in a list of prepopulated Attack Surfaces. You can quickly create a Discovery Group based on the known assets belonging to your organization. 
 
      ![Screenshot of pre-baked attack surface selection page, then output in seed list](media/tutorial-6.png)
-    
 
     Alternatively, users can manually input their seeds. Defender EASM accepts domains, IP blocks, hosts, email contacts, ASNs, and WhoIs organizations as seed values. You can also specify entities to exclude from asset discovery to ensure they aren't added to your inventory if detected. For example, this is useful for organizations that have subsidiaries that will likely be connected to their central infrastructure, but don't belong to your organization.
 
@@ -70,7 +71,7 @@ Custom discoveries are organized into Discovery Groups. They're independent seed
 
 You're then taken back to the main Discovery page that displays your Discovery Groups. Once your discovery run is complete, you can see new assets added to your Approved Inventory.
 
-## Next steps
-- [Understanding asset details](understanding-asset-details.md)
-- [Understanding dashboards](understanding-dashboards.md)
+## Related content
 
+- [Understand asset details](understanding-asset-details.md)
+- [Understand dashboards](understanding-dashboards.md)

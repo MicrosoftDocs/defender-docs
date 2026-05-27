@@ -33,7 +33,7 @@ The high risk delivery pool is a separate IP address pool for outbound email tha
 
 The possibility that IP addresses in the high-risk delivery pool are placed on IP blocklists remains, but this behavior is by design. Delivery to the intended recipients isn't guaranteed, because many email organizations don't accept messages from the high risk delivery pool.
 
-For more information, see [Control outbound spam](outbound-spam-protection-about.md).
+For more information, see [Control outbound spam](outbound-spam-protection-about.md) and [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md).
 
 > [!NOTE]
 > Messages where the source email domain has no A record and no MX record defined in public DNS are always routed through the high-risk delivery pool, regardless of their spam or sending limit disposition.

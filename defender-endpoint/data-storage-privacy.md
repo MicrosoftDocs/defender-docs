@@ -13,7 +13,7 @@ ms.collection:
 - essentials-security
 - essentials-compliance
 ms.topic: concept-article
-ms.date: 01/21/2026
+ms.date: 05/27/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -107,7 +107,9 @@ Defender for Endpoint (including Defender Vulnerability Management) shares data,
 - Microsoft Tunnel for Mobile Application Management - Android
 - Microsoft Defender for Cloud
 - Microsoft Defender for Identity
-- Microsoft Security Exposure Management (public preview)
+- Microsoft Security Exposure Management
+- Intune
+- Agent 365
 
 ## Data visibility for Defender Vulnerability Management
 
