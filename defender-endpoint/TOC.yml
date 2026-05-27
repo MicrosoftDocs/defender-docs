@@ -52,9 +52,10 @@
 
   - name: Microsoft Defender for Endpoint demonstrations and evaluation
     items:
-    - name: Evaluate Microsoft Defender Antivirus
-      href: evaluate-microsoft-defender-antivirus.md
+    - name: Evaluate Microsoft Defender
       items:
+      - name: Evaluate Microsoft Defender Antivirus
+        href: evaluate-microsoft-defender-antivirus.md
       - name: Guidance for pen testing and BAS scenarios
         href: guidance-for-pen-testing-and-bas.md
       - name: Guidance for pen testing and BAS scenarios on Linux
