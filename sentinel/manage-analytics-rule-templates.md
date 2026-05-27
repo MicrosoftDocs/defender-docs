@@ -1,8 +1,9 @@
 ---
 title: Manage template versions for your scheduled analytics rules in Microsoft Sentinel
 description: Learn how to manage the relationship between your scheduled analytics rule templates and the rules created from those templates. Merge updates to the templates into your rules, and revert changes in your rules back to the original template.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 11/09/2021
 ms.custom: sfi-image-nochange

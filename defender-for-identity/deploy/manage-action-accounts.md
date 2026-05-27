@@ -13,6 +13,9 @@ By default, the Microsoft Defender for Identity sensor impersonates the `LocalSy
 
 If you need to change this behavior, set up a dedicated gMSA and scope the permissions that you need. For example:
 
+> [!WARNING]
+> The Defender for Identity sensor v3.x does not support gMSA action accounts. If you're using or migrating to sensor v3.x, you must use the default `LocalSystem` account. If a gMSA is configured, response actions, including [attack disruption](/microsoft-365/security/defender/automatic-attack-disruption), won't work. For more information, see [Defender for Identity sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
+
 :::image type="content" source="../media/management-accounts.png" alt-text="Screenshot of the Manage action accounts tab." lightbox="../media/management-accounts.png":::
 
 > [!NOTE]

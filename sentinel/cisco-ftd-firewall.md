@@ -1,10 +1,11 @@
 ---
 title: Collect data from Cisco firewall devices running ASA
 description: "Use Microsoft Sentinel connectors to collect logs from Cisco firewall devices in Adaptive Security Appliance (ASA) and Common Event Format (CEF) formats."
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: noak
 ms.date: 03/24/2025
 ms.service: microsoft-sentinel
-ms.author: guywild
 ms.topic: how-to
 ms.collection: sentinel-data-connector
 ---

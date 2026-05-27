@@ -1,8 +1,9 @@
 ---
 title: Manage multiple tenants in Microsoft Sentinel as a Managed Security Service Provider | Microsoft Docs
 description: How to onboard and manage multiple tenants in Microsoft Sentinel as a Managed Security Service Provider (MSSP) using Azure Lighthouse.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: yobasha
 ms.topic: how-to
 ms.date: 11/11/2024
 

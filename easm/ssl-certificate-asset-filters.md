@@ -1,5 +1,5 @@
 ---
-title: SSL certificate asset filters
+title: SSL Certificate Asset Filters
 titleSuffix: Defender EASM SSL certificate asset filters 
 description: This article outlines the filter functionality available in Microsoft Defender External Attack Surface Management for SSL certificate assets specifically, including operators and applicable field values.
 author: danielledennis
@@ -9,14 +9,13 @@ ms.date: 12/14/2022
 ms.topic: how-to
 ---
 
-# SSL certificate asset filters 
+# SSL certificate asset filters
 
-These filters specifically apply to SSL certificate assets. Use these filters when searching for a specific cert, or select group of certs.  
+These filters specifically apply to SSL certificate assets. Use these filters when searching for a specific cert, or select group of certs.
 
+## Defined value filters
 
-## Defined value filters  
-
-The following filters provide a drop-down list of options to select. The available values are pre-defined. 
+The following filters provide a drop-down list of options to select. The available values are predefined.
 
 
 |       Filter name    |     Description                                                                                        |     Value format                                                                             |     Applicable operators                            |
@@ -25,7 +24,7 @@ The following filters provide a drop-down list of options to select. The availab
 |     Cert Expiration  |   The date when a certificate will expire.                                                             |   Expired, Expires in 30 days, Expires in 60 days, Expires in 90 days, Expires in > 90 days  |   `Equals` `Not Equals` `In` `Not In`                    |
 |     Cert Validation  |   Indicates the method used to validate the cert, which is indicative of itss trustworthiness.         |   Domain, Organization, Extended                                                             |   `Equals` `Not Equals` `In` `Not In` `Empty` `Not Empty`  |
 
-## Free form filters
+## Freeform filters
 
 The following filters require that the user manually enters the value with which they want to search. This list is organized by the number of applicable operators for each filter, then alphabetically. 
 
@@ -45,7 +44,7 @@ The following filters require that the user manually enters the value with which
 |     Cert Subject Organization         |   The organization linked to the subject of the SSL certificate.                                           |   Contoso Ltd.                          |                                                                                                                                                                                                                                                     |
 |     Cert Subject Organizational Unit  |   Indicates the department within a subject organization that is responsible for the certificate.          |   Compliance                            |                                                                                                                                                                                                                                                     |
 
-## Next steps 
-[Understanding asset details](understanding-asset-details.md)
+## Related content
 
-[Inventory filters](inventory-filters.md) 
+- [Understanding asset details](understanding-asset-details.md)
+- [Inventory filters](inventory-filters.md)

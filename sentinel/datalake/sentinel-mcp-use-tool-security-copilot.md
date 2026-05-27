@@ -2,10 +2,11 @@
 title: Use a Microsoft Sentinel MCP tool in Microsoft Security Copilot
 titleSuffix: Microsoft Security  
 description: Learn how to add Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Security Copilot
+ms.author: pauloliveria
 author: poliveria
+ms.reviewer: macasgra
 ms.topic: how-to
 ms.date: 09/30/2025
-ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 

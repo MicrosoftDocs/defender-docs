@@ -2,8 +2,9 @@
 title: Create New Watchlists
 titleSuffix: Microsoft Sentinel
 description: Learn how to create a watchlist in Microsoft Sentinel to build allowlists or blocklists, enrich event data, and investigate threats.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 04/29/2026
 appliesto:

@@ -73,6 +73,7 @@ Use the following resources outside of Microsoft 365 to send bulk email:
 
 ## Related content
 
+- [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 - [Troubleshoot email delivery issues with error codes (NDR)](/troubleshoot/exchange/email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online)
 - [External sender delivery troubleshooting](external-senders-mail-flow-troubleshooting.md)
 - [Common non-delivery report (NDR) codes explanation](/troubleshoot/exchange/email-delivery/ndr/non-delivery-reports-in-exchange-online)

@@ -51,11 +51,7 @@ The following screenshot shows the error **Signature Update failed**.
 1. If Microsoft Defender Antivirus is the primary antivirus and the services are running, follow these steps:
    1. Verify you can manually update Security Intelligence manually by downloading and installing updates from <https://www.microsoft.com/wdsi/defenderupdates>.
    1. If manual updates work, try updating through the Microsoft Malware Protection Center (MMPC).
-      1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-         1. Open the **Start** menu, and then type **cmd**.
-         2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-
-      1. In the elevated Command Prompt, run the following commands.
+      1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands.
 
          > [!TIP]
          > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
