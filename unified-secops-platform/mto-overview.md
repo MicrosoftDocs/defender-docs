@@ -85,3 +85,4 @@ Mutitenant management supports multitenant single workspaces. This means that yo
 ## Next steps
 
 - [Set up Microsoft Defender multitenant management](mto-requirements.md)
+- [Create and manage tenant groups](mto-tenant-groups.md)
