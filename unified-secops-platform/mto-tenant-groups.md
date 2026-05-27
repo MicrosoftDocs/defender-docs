@@ -25,7 +25,7 @@ Tenant groups in Microsoft Defender multitenant management let you organize the 
 
 ## Permissions
 
-To access tenant groups, you need one of the following sets of permissions.
+To access tenant groups, you need the following permissions.
 
 **Microsoft Entra ID roles**
 
