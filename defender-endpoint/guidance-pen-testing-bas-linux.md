@@ -27,7 +27,7 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
 
 - **Using a consistent process to submit potential false negatives** for investigation and signal improvement.
 
-## In this article
+## Table of contents
 
 - [Challenges and solutions at a glance](#challenges-and-solutions-at-a-glance)
 - [Detailed guidance](#detailed-guidance)
