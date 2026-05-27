@@ -3,7 +3,7 @@ title: Migrate from sensor v2.x to sensor v3.x (Preview)
 description: Learn how to migrate from the Defender for Identity sensor v2.x to the sensor v3.x with no downtime using the Sensors page in the Microsoft Defender portal.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 05/19/2026
+ms.date: 05/27/2026
 ms.topic: how-to
 ms.service: microsoft-defender-for-identity
 ms.custom: msecd-doc-authoring-106
@@ -62,7 +62,8 @@ For optimal protection and monitoring, complete the configuration steps describe
 
 - [Configure RPC auditing](deploy-sensor-v3.md#configure-rpc-auditing).
 - [Configure automatic Windows event auditing](deploy-sensor-v3.md#configure-windows-event-auditing). Existing auditing configurations from the v2.x sensor are preserved and converted for v3.x, but we recommend [enabling automatic Windows event auditing](configure-windows-event-collection.md#configure-defender-for-identity-to-collect-windows-events-automatically) for optimal configuration validation.
-- [Switch from gMSA to local system](deploy-sensor-v3.md#service-account-requirements). The v3.x sensor uses the local system identity. If you had a gMSA configured for [action accounts](manage-action-accounts.md), you must remove it. If gMSA remains enabled, response actions, including attack disruption, won't work.
+- [Switch action accounts from gMSA to local system](deploy-sensor-v3.md#service-account-requirements). The v3.x sensor uses the local system identity for response actions. If you had a gMSA configured for [action accounts](manage-action-accounts.md), select **Automatically use the sensor's local system account** in the Microsoft Defender portal. If gMSA remains enabled for action accounts, response actions (including attack disruption) won't work.
+- [Update DSA gMSA permissions for mixed-mode environments](deploy-sensor-v3.md#mixed-mode-environments-v2-and-v3-sensors). If your workspace still has a Directory Service Account (DSA) configured for v2 sensors, v3 domain controllers must be in the DSA gMSA's `PrincipalsAllowedToRetrieveManagedPassword` group. Otherwise, Defender for Identity raises a **Directory services user credentials are incorrect** health alert on those domain controllers.
 
 ## Troubleshoot "Not ready for migration" status
 

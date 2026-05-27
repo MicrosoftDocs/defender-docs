@@ -1,7 +1,7 @@
 ---
 title: Deploy the Defender for Identity sensor v3.x
 description: Learn the requirements and configuration steps to deploy the Defender for Identity sensor v3.x on domain controllers running Windows Server 2019 or later.
-ms.date: 05/26/2026
+ms.date: 05/27/2026
 ms.topic: how-to
 ms.custom: msecd-doc-authoring-106
 ms.reviewer: rlitinsky
@@ -103,6 +103,17 @@ If you're migrating from sensor v2.x and previously had a gMSA configured for [a
 
 > [!IMPORTANT]
 > If any of your sensors are v3.x, select **Automatically use the sensor's local system account** for all sensors. The v3.x sensors use the local system account regardless of gMSA configuration.
+
+#### Mixed-mode environments (v2 and v3 sensors)
+
+If your workspace still has a Directory Service Account (DSA) configured because v2 sensors on AD FS, AD CS, or Entra Connect servers still require it, Defender for Identity validates those DSA credentials on every domain controller in the workspace, including domain controllers running the v3 sensor.
+
+If the DSA is a gMSA and the v3 domain controller isn't in the `PrincipalsAllowedToRetrieveManagedPassword` group for that gMSA, the credential validation fails and the **Directory services user credentials are incorrect** health alert fires on that domain controller. This alert isn't a false positive; it reflects a real workspace-level credential check.
+
+To resolve this alert in a mixed-mode environment:
+
+- Add each v3 domain controller's computer account to the `PrincipalsAllowedToRetrieveManagedPassword` group of the DSA gMSA. After updating group membership, run `klist purge` on the domain controller and wait for the next validation cycle.
+- Alternatively, remove the workspace-level DSA only after all sensors are fully migrated to v3 and no v2 sensors require it.
 
 ### Test your prerequisites
 
