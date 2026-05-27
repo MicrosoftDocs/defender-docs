@@ -2,24 +2,24 @@
 title: Binary drift detection and blocking
 description: Learn how binary drift detecting and blocking can help you detect unauthorized external processes within containers.
 ms.topic: how-to
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 02/22/2026
+ms.date: 05/26/2026
 #customer intent: As a user, I want to understand how binary drift detection and blocking can help me detect unauthorized external processes within containers.
 ---
 
 # Binary drift detection and blocking
 
-Binary drift happens when a container runs an executable that didn't come from the original image. This drift can be intentional and legitimate, or it can indicate an attack. Since container images should be immutable, you should evaluate any processes that start from binaries not included in the original image as suspicious activity and block them to prevent potential security threats.
+Binary drift happens when a container runs an executable that didn't come from the original image. This drift can be intentional and legitimate, or it can indicate an attack. Container images should be immutable, so treat processes that start from binaries outside the original image as suspicious activity.
 
-The binary drift detection feature alerts you when there's a difference between the workload that comes from the image and the workload running in the container. It alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats.
+Binary drift detection alerts you when the running container workload differs from the image workload. It detects unauthorized external processes in containers and raises alerts for potential threats. You can define drift policies to control alert conditions and distinguish legitimate activity from suspicious behavior.
 
-Binary drift blocking blocks the execution of unauthorized external processes within containers. When enabled, this feature enforces the policies you define, ensuring that only approved processes can run. This proactive approach helps maintain the integrity of your containerized applications and reduces the risk of security breaches.
+Binary drift blocking prevents unauthorized external processes from running in containers. When enabled, it enforces your policies so only approved processes run. This approach helps maintain application integrity and reduces security risk.
 
-Check out the availability of [binary drift and blocking](support-matrix-defender-for-containers.md#runtime-protection-features).
+Review [binary drift and blocking availability](support-matrix-defender-for-containers.md#runtime-protection-features).
 
 > [!NOTE]
-> Binary drift blocking is currently in preview
+> Binary drift blocking is currently in preview.
 
 ## Prerequisites
 
