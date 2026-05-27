@@ -1,8 +1,9 @@
 ---
 title: Turn on auditing and health monitoring in Microsoft Sentinel
 description: Monitor supported data connectors by using the SentinelHealth data table.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 08/24/2025
 appliesto:

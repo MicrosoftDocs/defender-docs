@@ -1,8 +1,9 @@
 ---
 title: Map data fields to Microsoft Sentinel entities | Microsoft Docs
 description: Map data fields in tables to Microsoft Sentinel entities in analytics rules, for better incident information
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 04/26/2022
 ms.collection: usx-security

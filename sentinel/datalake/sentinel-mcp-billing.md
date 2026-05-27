@@ -2,10 +2,11 @@
 title: Microsoft Sentinel MCP server pricing, limits, and availability
 titleSuffix: Microsoft Security  
 description: Learn about the pricing, limits, and availability of using the different MCP collection of tools in Microsoft Sentinel 
+ms.author: pauloliveria
 author: poliveria
+ms.reviewer: macasgra
 ms.topic: concept-article
 ms.date: 04/02/2026
-ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.custom: references_regions

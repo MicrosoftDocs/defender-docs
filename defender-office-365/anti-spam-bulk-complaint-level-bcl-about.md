@@ -85,7 +85,7 @@ _Currently_, this feature has the following requirements:
 - The **Bulk moves enabled** setting is turned on in anti-spam policies. Turning on this setting results in a **Promotions** folder in affected user mailboxes.
 
 > [!NOTE]
-> By default, this feature is inactive. An admin needs to both of the previous steps to enable the feature.
+> By default, this feature is inactive. An admin needs to complete both of the previous steps to enable the feature.
 
 If a user is affected by the mail flow rule and the anti-spam policy, bulk mail that would normally be delivered to the Inbox is delivered to the **Promotions** folder instead.
 

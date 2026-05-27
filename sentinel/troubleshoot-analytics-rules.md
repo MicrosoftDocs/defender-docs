@@ -1,8 +1,9 @@
 ---
 title: Troubleshooting analytics rules in Microsoft Sentinel
 description: Learn how to deal with certain known issues that can affect analytics rules, and understand the meaning of AUTO DISABLED.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: troubleshooting-general
 ms.custom: devx-track-arm-template
 ms.date: 03/26/2024

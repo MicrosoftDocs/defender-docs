@@ -162,7 +162,7 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 | [Real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) | Yes | [See note 1](#notes-about-protection-states) | No |
 | [Cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) | Yes | No  | No |
 | [Network protection](network-protection.md)  | Yes | No | No |
-| [Attack surface reduction rules](attack-surface-reduction.md)  | Yes | No | No  |
+| [Attack surface reduction rules](attack-surface-reduction-rules-overview.md)  | Yes | No | No  |
 | [File scanning and detection information](review-scan-results-microsoft-defender-antivirus.md) | Yes | Yes <br/>[See note 2](#notes-about-protection-states) | No |
 | [Threat remediation](configure-remediation-microsoft-defender-antivirus.md) | Yes |[See note 3](#notes-about-protection-states) | No |
 | [Security intelligence updates](microsoft-defender-antivirus-updates.md) | Yes | Yes <br/>[See note 4](#notes-about-protection-states) | No |

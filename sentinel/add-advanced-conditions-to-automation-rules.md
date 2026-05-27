@@ -2,8 +2,9 @@
 title: Add advanced conditions to Microsoft Sentinel automation rules
 description: This article explains how to add complex, advanced "Or" conditions to automation rules in Microsoft Sentinel, for more effective triage of incidents.
 ms.topic: how-to
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
+ms.reviewer: sshuster
 ms.date: 10/16/2024
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal

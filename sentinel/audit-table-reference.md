@@ -1,8 +1,9 @@
 ---
 title: Microsoft Sentinel audit tables reference
 description: Learn about the fields in the SentinelAudit tables, used for audit monitoring and analysis.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: reference
 ms.date: 01/17/2023
 ms.service: microsoft-sentinel

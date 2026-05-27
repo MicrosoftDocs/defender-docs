@@ -67,13 +67,13 @@ The migration state column shows if the sensor is eligible for [migration from v
 
 For a server to be eligible for migration, it must be:
 
-- A domain controller, without additional identity roles running
+- A domain controller without additional identity roles (AD FS, AD CS, or Microsoft Entra Connect) running. Domain controllers with identity roles support v3.x for new deployments, but in-place migration isn't currently supported for these servers.
 - Running a Defender for Identity sensor v2.x.
 - Running Windows Server 2019 or later.
 - Includes the [March 2026 or later](https://support.microsoft.com/en-us/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea) cumulative update.
 - Have Microsoft Defender for Endpoint deployed.
 
-For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](./deploy/prerequisites-sensor-version-3.md).
+For the full list of v3.x requirements, see [Defender for Identity sensor v3.x prerequisites](./deploy/deploy-sensor-v3.md).
 
 | State | Description |
 | --- | --- |
@@ -216,6 +216,17 @@ To update the Defender for Identity sensor silently:
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
+## Remove RPC auditing from a device
+
+If you configured RPC auditing for a v3.x sensor using the **Unified Sensor RPC Audit** tag, you can remove it by deleting the asset rule or modifying the rule conditions so the device no longer matches.
+
+To manage asset rules, in the [Microsoft Defender portal](https://security.microsoft.com), go to **System > Settings > Microsoft Defender XDR > Asset Rule Management**.
+
+> [!NOTE]
+> It might take up to one hour for changes to be reflected in the portal.
+
+Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
+
 ## Configure proxy settings
 
 We recommend that you configure initial proxy settings during silent installation [using command line switches](deploy/install-sensor.md#perform-a-defender-for-identity-silent-installation). If you need to update your proxy settings later on, use either the [CLI](deploy/configure-proxy.md#change-proxy-configuration-using-the-cli) or [PowerShell](deploy/configure-proxy.md#change-proxy-configuration-using-powershell).
@@ -226,6 +237,6 @@ For more information, see [Configure endpoint proxy and internet connectivity se
 
 ## Next steps
 
-- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/prerequisites-sensor-version-3.md) 
+- [Defender for Identity sensor v2.x prerequisites](deploy/prerequisites-sensor-version-2.md) and [Defender for Identity sensor v3.x prerequisites](deploy/deploy-sensor-v3.md) 
 - [Configure event forwarding](deploy/configure-event-forwarding.md)
 - [Defender for Identity community forum](<https://aka.ms/MDIcommunity>)

@@ -2,11 +2,12 @@
 title: Troubleshoot KQL queries for the data lake
 titleSuffix: Microsoft Security   
 description:  Troubleshoot KQL queries for the Microsoft Sentinel data lake.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.author: edbaynash  
 ms.date: 08/27/2025
 ms.collection: ms-security  
 

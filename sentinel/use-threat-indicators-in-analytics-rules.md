@@ -2,10 +2,11 @@
 title: Use threat indicators in analytics rules
 titleSuffix: Microsoft Sentinel
 description: This article explains how to generate alerts and incidents with threat intelligence indicators in Microsoft Sentinel.
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: yoninave
 ms.topic: how-to
 ms.date: 3/14/2024
-ms.author: guywild
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal

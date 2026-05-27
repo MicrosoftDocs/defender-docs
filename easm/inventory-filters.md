@@ -1,5 +1,5 @@
 ---
-title: Inventory filters overview
+title: Inventory Filters Overview
 titleSuffix: Defender EASM inventory filters overview
 description: This article outlines the filter functionality available in Defender EASM to help you find specific subsets of inventory assets based on selected parameters.
 author: danielledennis
@@ -127,7 +127,7 @@ The following filters require you to manually enter the value you want to use fo
 
 1. When your inventory list shows the unapproved assets you were searching for, you can modify the assets. For more information on how to update assets, see [Modifying inventory assets](labeling-inventory-assets.md).
 
-## Next steps
+## Related content
 
 - [Understand asset details](understanding-asset-details.md)
 - [ASN asset filters](asn-asset-filters.md)

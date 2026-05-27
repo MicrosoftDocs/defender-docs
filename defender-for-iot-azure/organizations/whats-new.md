@@ -1,5 +1,5 @@
 ---
-title: What's new in Microsoft Defender for IoT
+title: What's New in Microsoft Defender for IoT
 description: This article describes new features available in Microsoft Defender for IoT, including both OT and Enterprise IoT networks, and both on-premises and in the Azure portal.
 ms.topic: whats-new
 ms.date: 05/03/2026
@@ -108,4 +108,4 @@ The legacy on-premises management console isn't available for download after **J
 
 ## Next steps
 
-[Getting started with Defender for IoT](getting-started.md)
+[Start a Microsoft Defender for IoT trial](getting-started.md)

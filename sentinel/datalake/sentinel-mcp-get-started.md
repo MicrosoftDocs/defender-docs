@@ -2,10 +2,11 @@
 title: Get started with Microsoft Sentinel MCP server
 titleSuffix: Microsoft Security  
 description: Learn how to set up and use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools to enable natural language queries and AI-powered security investigations 
+ms.author: pauloliveria
 author: poliveria
+ms.reviewer: macasgra
 ms.topic: get-started
 ms.date: 05/07/2026
-ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 

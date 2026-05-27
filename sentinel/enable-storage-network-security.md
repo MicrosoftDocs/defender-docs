@@ -1,9 +1,9 @@
 ---
 title: Enable Network Security for Azure Storage blob connectors
 description: Learn how to enable network security for Azure Storage connector resources. Follow step-by-step instructions to secure your storage accounts with Network Security Perimeters.
-author: EdB-MSFT
 ms.author: edbaynash
-ms.reviewer: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.date: 02/08/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel

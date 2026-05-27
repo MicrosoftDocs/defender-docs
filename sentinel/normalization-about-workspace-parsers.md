@@ -4,7 +4,6 @@ titleSuffix: Microsoft Sentinel
 description: This article explains how to manage and use workspace deployed Advanced Security Information Model (ASIM) parsers
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: ofshezaf
 ms.topic: concept-article
 ms.date: 11/11/2024
 
@@ -108,8 +107,6 @@ For example, the following code shows a DNS filtering unifying parser, having re
 ```
 
 ## Related content
-
-For more information, see:
 
 - [ASIM parsers overview](normalization-parsers-overview.md)
 - [Manage ASIM parsers](normalization-manage-parsers.md)

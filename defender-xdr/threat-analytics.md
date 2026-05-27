@@ -16,7 +16,8 @@ ms.custom:
 - cx-ti
 - cx-ta
 - seo-marvel-apr2020
-ms.date: 12/18/2025
+ms.date: 05/26/2026
+ai-usage: ai-assisted
 ---
 
 # Threat analytics in Microsoft Defender
@@ -36,6 +37,8 @@ Threat analytics is an in-product threat intelligence solution from expert Micro
 - Critical vulnerabilities
 - Common attack surfaces
 - Prevalent malware
+
+In addition to Microsoft first-party intelligence, threat analytics also surfaces open-source intelligence (OSINT) articles—curated threat reports derived from publicly available sources—giving security teams a unified view of both Microsoft and external threat intelligence in a single experience.
 
 You can access threat analytics from the upper left-hand side of Microsoft Defender portal's navigation bar, or from a dedicated dashboard card that shows the top threats to your organization, both in terms of known impact and your exposure.
 
@@ -96,7 +99,7 @@ You can filter the threat report list and view the most relevant reports accordi
   - Activity group
   - Vulnerability
 
-- **Category**—assists you in viewing the most relevant reports according to a specific report type. For example, the **Actor** category includes all threat actor profiles. [Learn more about the different analyst report types](threat-analytics-analyst-reports.md#know-the-different-analyst-report-types)
+- **Category**—assists you in viewing the most relevant reports according to a specific report type. For example, the **Actor** category includes all threat actor profiles, and the **OSINT** category surfaces open-source intelligence articles from external sources. [Learn more about the different analyst report types](threat-analytics-analyst-reports.md#know-the-different-analyst-report-types)
 
 
 These filters assist you in efficiently reviewing the threat report list. For example, you can view all threat reports related to the ransomware category, or threat reports that involve vulnerabilities.

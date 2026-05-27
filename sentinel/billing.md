@@ -2,8 +2,9 @@
 title: Plan costs and understand pricing and billing
 titleSuffix: Microsoft Sentinel
 description: Learn how to plan your Microsoft Sentinel costs, and understand pricing and billing using the pricing calculator and other methods.
-author: EdB-MSFT
 ms.author: edbaynash
+author: EdB-MSFT
+ms.reviewer: daniha
 ms.topic: concept-article
 ms.date: 04/01/2026
 ms.collection: usx-security
@@ -113,6 +114,8 @@ Similarly, if your graph queries take one minute to complete, the cost is determ
 `cost = 6 × (Price per vCore hour) × (1/60)`
 
 Any notebook/Spark compute and Data lake storage consumed for data transformations to build node and edges for the graph is billed independently per existing Sentinel data lake meters (Data lake storage and Advanced Data Insights).
+
+You can monitor usage for custom graphs by using [Microsoft Sentinel cost management in the Microsoft Defender portal](billing-monitor-costs.md#microsoft-sentinel-cost-management-in-the-microsoft-defender-portal).
 
 #### Sentinel Model Context Protocol (MCP) server
 
