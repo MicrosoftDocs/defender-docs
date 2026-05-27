@@ -4,7 +4,7 @@ description: Learn how to configure Microsoft Defender for Endpoint on Linux for
 author: paulinbar
 ms.author: painbar
 ms.reviewer: rutujadange
-ms.date: 05/25/2026
+ms.date: 05/27/2026
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.localizationpriority: medium
@@ -125,11 +125,7 @@ In some environments, exclusions added for performance tuning or legacy workload
 
 ## Interpret evaluation results
 
-After running BAS or penetration testing scenarios, correctly interpret the results in the Microsoft Defender portal to understand both detection coverage and attacker behavior.
-
-To help with interpretation, review the key guidance on how to analyze results.
-
-<!-- TODO: Replace with valid video embed or remove. The original reference (Linux evals final.mp4) uses an invalid format for Microsoft Learn. -->
+After running BAS or penetration testing scenarios, correctly interpret the results in the Microsoft Defender portal by reviewing alerts, incidents, and the Device timeline, enabling clear understanding of detected threats and attack behaviors.
 
 ## Submit possible false negatives for investigation
 
