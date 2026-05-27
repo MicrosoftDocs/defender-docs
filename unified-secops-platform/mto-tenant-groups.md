@@ -23,6 +23,10 @@ Tenant groups in Microsoft Defender multitenant management let you organize the 
 > [!NOTE]
 > The previous use of *tenant groups* for content distribution is now called [distribution profiles](mto-distribution-profiles.md). The name *tenant groups* now refers to the groups of tenants you create to switch the multitenant view, as described in this article.
 
+## Prerequisites
+
+Before you can create tenant groups, onboard your tenants to the Microsoft Defender multitenant portal. Only tenants that are already onboarded appear when you create or edit a tenant group. For more information, see [Set up Microsoft Defender multitenant management](mto-requirements.md) and [Manage tenants with Microsoft Defender multitenant management](mto-tenants.md).
+
 ## Permissions
 
 To access tenant groups, you need the following permissions.
