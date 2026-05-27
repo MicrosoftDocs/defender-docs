@@ -27,6 +27,21 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
 
 - **Using a consistent process to submit potential false negatives** for investigation and signal improvement.
 
+## In this article
+
+- [Challenges and solutions at a glance](#challenges-and-solutions-at-a-glance)
+- [Detailed guidance](#detailed-guidance)
+  - [Enable Full Protection Settings](#enable-full-protection-settings)
+  - [Enable new protection capabilities currently in preview](#enable-new-protection-capabilities-currently-in-preview)
+  - [Keep Defender up to date](#keep-defender-up-to-date)
+  - [Ensure your environment meets recommended system requirements](#ensure-your-environment-meets-recommended-system-requirements)
+- [Review your exclusions](#review-your-exclusions)
+- [Interpret evaluation results](#interpret-evaluation-results)
+- [Submit possible false negatives for investigation](#submit-possible-false-negatives-for-investigation)
+  - [Step 1: Gather the Microsoft Defender for Endpoint diagnostic logs](#step-1-gather-the-microsoft-defender-for-endpoint-diagnostic-logs)
+  - [Step 2: Gather information](#step-2-gather-information)
+  - [Step 3: Submit data to Microsoft as soon as possible](#step-3-submit-data-to-microsoft-as-soon-as-possible)
+
 ## Challenges and solutions at a glance
 
 | Challenge | Impact | Recommendation |
@@ -37,6 +52,10 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
 | Not meeting minimum system requirements | High CPU or latency during tests | Ensure the minimum system requirements are met. |
 
 ## Detailed guidance
+
+For accurate BAS and penetration testing results, Microsoft Defender for Endpoint on Linux should run with the full protection stack enabled, the latest platform updates applied, and adequate system resources available. See the following sections for guidance regarding each requirement.
+
+### Enable Full Protection Settings
 
 It's common for penetration testers to use just the default mode or enable only limited settings of Microsoft Defender for Endpoint on Linux while executing their attack. For accurate BAS and penetration testing results, Microsoft Defender for Endpoint on Linux must run with the full protection stack enabled. Evaluation results are unsatisfactory when only limited default settings are active. To avoid incomplete signal coverage, ensure the following components are enabled before testing:
 
@@ -87,7 +106,7 @@ After deploying the configuration file, verify device health:
 > [!NOTE]
 > Evaluation guidance enables additional advanced antivirus and sensor capabilities to maximize detection coverage and visibility. These settings can increase resource usage. For best results, use them in adequately sized environments. Low-resource environments might experience performance degradation or reduced evaluation accuracy.
 
-## Enable new protection capabilities currently in preview
+### Enable new protection capabilities currently in preview
 
 To get the most current and comprehensive assessment of Defender's detection and prevention depth, enable new protection capabilities that might be in preview. These capabilities incorporate protections for emerging threats and evolving attack techniques, ensuring that BAS and penetration-test exercises reflect Defender's latest security advancements. To get **early access to new protection capabilities currently in preview**:
 
@@ -95,7 +114,7 @@ To get the most current and comprehensive assessment of Defender's detection and
 
 - Ensure prerequisites: System prerequisites, latest platform, engine, and signature updates applied.
 
-## Keep Defender up to date
+### Keep Defender up to date
 
 Running an older Defender for Endpoint on Linux version means the agent continues to operate and receive security intelligence updates. However, you don't receive the latest features, bug fixes, and optimizations from Microsoft. An outdated agent puts your environment at greater risk for new threats and operational issues, because the agent won't be improved with the latest capabilities.
 
@@ -105,7 +124,7 @@ To maintain the highest level of security, support, and reliability, upgrade to 
 
 - [Update Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-update-mde-linux)
 
-## Recommended system requirements
+### Ensure your environment meets recommended system requirements
 
 Resource bottlenecks can impact detection accuracy and evaluation results. Before running BAS or penetration tests, ensure your environment meets the following recommended system requirements for best results.
 
