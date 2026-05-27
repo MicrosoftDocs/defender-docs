@@ -31,11 +31,9 @@ To access tenant groups, you need one of the following sets of permissions.
 
 - Security Administrator
 - Security Operator
-- Global Administrator
 
 **Product-specific RBAC (for example, Microsoft Defender for Endpoint or Microsoft Defender for Identity)**
 
-- Global Administrator
 - Security Administrator
 - Custom RBAC roles that grant visibility across products
 
