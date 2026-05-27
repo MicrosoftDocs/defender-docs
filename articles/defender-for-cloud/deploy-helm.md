@@ -5,6 +5,7 @@ author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/27/2026
+#customer intent: As a security administrator, I want to install Defender for Containers sensor by using Helm so that I can control deployment and upgrade timing across my clusters.
 ---
 
 # Install Defender for Containers sensor by using Helm

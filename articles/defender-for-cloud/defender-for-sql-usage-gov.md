@@ -74,6 +74,8 @@ Select a Log Analytics workspace to work with the Defender for SQL on Machines p
 
 Depending on your environment, it can take a few hours to discover and protect SQL instances.
 
+As a required final step, [verify that all machines are protected](verify-machine-protection-gov.md). Verification confirms that the deployment completed and that your SQL instances are protected.
+
 ## Next step
 
 > [!div class="nextstepaction"]

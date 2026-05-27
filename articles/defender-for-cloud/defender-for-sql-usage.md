@@ -119,8 +119,12 @@ To enable the plan on specific machines, you need to [disable the plan on the su
 
 Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, [verify that all machines are protected](verify-machine-protection.md).
 
-## Next steps
+## Next step
 
-- [Verify that all machines are protected](verify-machine-protection.md)
+> [!div class="nextstepaction"]
+> [Verify that all machines are protected](verify-machine-protection.md)
+
+## Related content
+
 - [Troubleshoot Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md)
 - [Disable Defender for SQL Servers on Machines](disable-sql-on-machines.md)

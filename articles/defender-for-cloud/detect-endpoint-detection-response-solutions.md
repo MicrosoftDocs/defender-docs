@@ -18,11 +18,11 @@ Microsoft Defender for Cloud includes endpoint detection and response (EDR) capa
 
 ## Check for an EDR solution
 
-Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to check whether Azure VMs and AWS/GCP machines use a supported EDR solution.
+Defender for Cloud uses [agentless scanning](concept-agentless-data-collection.md) to assess whether Azure VMs and AWS/GCP machines are connected to an EDR solution.
 
-Agentless EDR scanning is available when Defender for Cloud runs in your Azure subscription and either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) or the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md) is enabled.
+Agentless scanning for EDR solution settings is available when Defender for Cloud is running in your Azure subscription and either [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) or the [Defender Cloud Security Posture Management (CSPM) plan](tutorial-enable-cspm-plan.md) is enabled.
 
-Based on EDR findings, Defender for Cloud provides these recommendations to help you identify and remediate machines without an EDR solution:
+Based on EDR solution findings, Defender for Cloud provides the following recommendations to help you identify and remediate machines that don't have an EDR solution running. EDR solution recommendations are as follows:
 
 - `EDR solution should be installed on virtual machines`
 - `EDR solution should be installed on EC2 instances`
