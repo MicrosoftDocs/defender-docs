@@ -31,7 +31,7 @@ User reported settings and the reporting mailbox work with the following message
 Delivering user reported messages to a reporting mailbox instead of directly to Microsoft allows admins to selectively and manually submit messages to Microsoft from the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. For more information, see [Admin submission](submissions-admin.md).
 
 > [!NOTE]
-> For information about user reported message settings in Microsoft Teams in Defender for Office 365 Plan 2, see [User reported message settings in Microsoft Teams](submissions-teams.md).
+> For information about user reported message settings in Microsoft Teams in Defender for Office 365 Plan 1 or Plan 2, see [User reported settings in Microsoft Teams](submissions-teams.md).
 
 ## Configuration requirements for the reporting mailbox
 
