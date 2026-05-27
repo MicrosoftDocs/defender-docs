@@ -33,18 +33,20 @@ To access tenant groups, you need the following permissions.
 
 **Microsoft Entra ID roles**
 
-- Security Administrator
-- Security Operator
+- [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
+- [Security Operator](/entra/identity/role-based-access-control/permissions-reference#security-operator)
 
 **Product-specific RBAC (for example, Microsoft Defender for Endpoint or Microsoft Defender for Identity)**
 
-- Security Administrator
-- Custom RBAC roles that grant visibility across products
+- [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
+- Custom RBAC roles that grant visibility across products. See [Custom roles for role-based access control](/defender-xdr/custom-roles).
 
-**Unified role-based access control (URBAC)**
+**[Unified role-based access control (URBAC)](/defender-xdr/manage-rbac)**
 
 - *Security / read* to view tenant groups
 - *Security / manage* to create tenant groups
+
+For more information about URBAC permissions in the multitenant portal, see [Manage unified role-based access control (URBAC) for multitenant management](mto-urbac.md).
 
 Users only see the tenants they have permission to see through B2B or [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction), even when a tenant group contains more tenants than the user can access.
 
