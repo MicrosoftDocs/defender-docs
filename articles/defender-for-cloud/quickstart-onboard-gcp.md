@@ -146,6 +146,19 @@ Learn more about the [Google Cloud resource hierarchy](https://cloud.google.com/
 
 Defender for Cloud starts scanning your GCP resources. Security recommendations appear within a few hours. If you enabled autoprovisioning, Azure Arc and any enabled extensions are installed automatically for each newly detected resource.
 
+## Update GCP connector configuration
+
+Update the GCP connector configuration when the permissions or resources required by Defender for Cloud change.
+
+Update the configuration in the following cases:
+
+- You enabled a new Defender plan, such as Defender CSPM, Defender for Databases, or Defender for Containers.
+- You modified plan configuration, such as enabling auto provisioning or changing the selected scope.
+- Microsoft released an updated onboarding script, such as a version that supports new features, fixes bugs, or updates permissions.
+- You experience connector health issues related to missing permissions or missing GCP resources.
+
+To update the configuration, return to the GCP connector in Defender for Cloud, generate the latest `gcloud` script for your selected scope and plans, and rerun the script in the GCP environment you're onboarding.
+
 ## Validate connector health
 
 To confirm that your GCP connector is operating correctly:
