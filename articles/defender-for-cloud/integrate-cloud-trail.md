@@ -4,7 +4,8 @@ description: Learn how to enable and validate AWS CloudTrail management event in
 author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 12/09/2025
+ms.date: 05/28/2026
+#customer intent: As a cloud security administrator, I want to integrate AWS CloudTrail logs with Microsoft Defender for Cloud so that I can improve identity and permission risk visibility.
 ---
 
 # Integrate AWS CloudTrail logs (Preview)
@@ -21,7 +22,7 @@ CloudTrail ingestion is available for single AWS accounts and AWS Organizations 
 
 Before enabling CloudTrail ingestion, ensure that your AWS account has:
 
-- [Defender CSPM plan enabled](tutorial-enable-cspm-plan.md) on the Azure subscription.
+- Defender CSPM plan enabled on the Azure subscription. See [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md).
 
 - Permission to access AWS CloudTrail.
 
@@ -29,16 +30,18 @@ Before enabling CloudTrail ingestion, ensure that your AWS account has:
 
 - Access to the Amazon SQS queue notifications associated with that bucket.
 
-- Access to [AWS KMS keys](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/encrypting-cloudtrail-log-files-with-aws-kms.html) if CloudTrail logs are encrypted.
+- Access to AWS KMS keys if CloudTrail logs are encrypted. See [Encrypting CloudTrail log files with AWS KMS](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/encrypting-cloudtrail-log-files-with-aws-kms.html).
 
 - Permissions to create or modify CloudTrail trails and required resources if provisioning a new trail.
 
-- CloudTrail configured to log [management events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html).
+- CloudTrail configured to log management events. See [Logging management events with CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html).
 
 > [!NOTE]
-> **Microsoft Sentinel users:** If you already stream AWS CloudTrail logs to Microsoft Sentinel, enabling CloudTrail ingestion in Defender for Cloud may require updates to your Sentinel configuration. Review the updated workflow to avoid ingestion conflicts by following [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
+> **Microsoft Sentinel users:** If you already stream AWS CloudTrail logs to Microsoft Sentinel, enabling CloudTrail ingestion in Defender for Cloud may require updates to your Sentinel configuration. Review the CloudTrail ingestion workflow to avoid ingestion conflicts by following [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
 ## Configure CloudTrail ingestion
+
+To enable CloudTrail ingestion for your AWS connector, perform the following steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -56,14 +59,14 @@ Before enabling CloudTrail ingestion, ensure that your AWS account has:
 
     - Select **Manually provide trail details** to use an existing CloudTrail trail.
         1. Provide the Amazon S3 bucket ARN and SQS queue ARN associated with the existing trail.
-        1. If prompted, deploy or update the CloudFormation stack.
+        1. If prompted, deploy or update the CloudFormation stack provided by Defender for Cloud.
 
         > [!NOTE]
         > When you select an existing trail, Defender for Cloud performs a one-time collection of up to 90 days of historical CloudTrail management events.
         > If CloudTrail ingestion is disabled, the historical data collected during this process is removed. Re-enabling CloudTrail ingestion triggers a new historical data collection.
 
     - Select **Create a new AWS CloudTrail** to provision a new trail.
-        1. Deploy the CloudFormation or Terraform template when prompted.
+        1. Deploy the CloudFormation or Terraform template provided by Defender for Cloud when prompted.
         1. After the deployment completes, locate the SQS queue ARN in the AWS console.
         1. Return to Defender for Cloud and enter the SQS ARN in the **SQS ARN** field.
         
@@ -91,3 +94,9 @@ To confirm CloudTrail telemetry is flowing into Defender for Cloud:
 - Review Defender for Cloud recommendations and identity insights after setup.
 
 Signals may take time to appear depending on CloudTrail delivery frequency and event volume.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md)
+
