@@ -92,8 +92,6 @@ There are various ways you might choose to modify the Azure Policy definition:
 
 ## Next step
 
-Now that you onboarded an entire management group, enable the enhanced security features.
-
 > [!div class="nextstepaction"]
 > [Enable enhanced protections](connect-azure-subscription.md)
 
