@@ -17,7 +17,7 @@ appliesto:
 
 # Discover AI agents and assess security posture using Microsoft Defender (Preview)
 
-After you onboard to [Microsoft Agent 365](/microsoft-agent-365/overview), you can discover all of the AI agents in your organization and view their configuration details using Advanced Hunting in the Microsoft Defender portal.
+You can discover all of the AI agents in your organization and view their configuration details using Advanced Hunting in the Microsoft Defender portal.
 
 Microsoft Defender also provides a dedicated AI agent inventory experience in the Defender portal for agent discovery and posture management, including agent details, posture insights, risk factors, and security recommendations, where supported. This inventory is currently available for agents built with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, and GCP Vertex AI. To use the inventory, you need to enable the required features.
 
@@ -25,7 +25,8 @@ This article explains how to discover AI agents, assess their security posture, 
 
 ## Prerequisites
 
-To access the `AIAgentsInfo` table and the Agent entity in Microsoft Defender XDR, you must [enable preview features](../preview.md) in the Microsoft Defender portal.
+- [Onboard to Microsoft Agent 365](/microsoft-agent-365/overview).
+- To access the `AIAgentsInfo` table and the Agent entity in Microsoft Defender XDR, [enable preview features](../preview.md) in the Microsoft Defender portal.
 
 ## View all Agent 365-managed agents and configuration details using Advanced Hunting
 
