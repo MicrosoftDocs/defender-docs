@@ -1,10 +1,11 @@
 ---
-title: Overview of improving operating system baseline configurations in Microsoft Defender for Cloud
-description: Learn how to improve operating system baseline configurations in Microsoft Defender for Cloud
+title: Operating system misconfigurations
+description: Apply security recommendations to harden operating system baseline configurations with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
-author: Elazark
-ms.date: 03/10/2025
+author: ElazarK
+ms.date: 05/28/2026
+#customer intent: As a security administrator, I want to review and remediate operating system baseline misconfigurations so I can reduce risk across my environment.
 ---
 
 # Operating system misconfigurations
@@ -17,7 +18,7 @@ Defender for Cloud assesses and enforces best-practice security configurations u
 
 MCSB includes compute security baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
 
-Operating system recommendations based on these MCSB compute security baselines aren't included as part of Defender for Cloud's [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-plans)
+Operating system recommendations based on these MCSB compute security baselines aren't included as part of Defender for Cloud's [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-plans).
 
 - The recommendations are available when Defender for Servers Plan 2 is enabled.
 - When Defender for Servers Plan 2 is enabled, relevant Azure policies are enabled on the subscription:
@@ -42,10 +43,10 @@ The machine configuration extension is installed as follows:
 
 ### What's not included
 
-Additional features provided by the extension machine outside Defender for Cloud aren't included, and are subject to Azure Policy machine configuration pricing.
+Additional features provided by the machine configuration extension outside Defender for Cloud aren't included and are subject to Azure Policy machine configuration pricing.
 
 - For example, [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition).
-- [Review details](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1) on the Azure Policy machine configuration pricing page.
+- Review [Azure Policy machine configuration pricing details](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1).
 
 ## Assessment (Defender Vulnerability Management)
 
@@ -74,4 +75,6 @@ To review recommendations made by security baseline assessments, search for the 
 ## Next steps
 
 - [Install the Azure Policy machine configuration](security-baseline-guest-configuration.md).
-- [Remediate](apply-security-baseline.md) OS baseline misconfigurations.
+- Remediate OS baseline misconfigurations by using [Apply security baseline remediations](apply-security-baseline.md).
+
+
