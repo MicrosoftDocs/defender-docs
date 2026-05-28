@@ -1,6 +1,6 @@
 ---
-title: Integrate partner integrations
-description: Learn how to integrate partner integrations in to Microsoft Defender for Cloud.
+title: Connect partner integrations in Microsoft Defender for Cloud
+description: Connect third-party partner solutions to Microsoft Defender for Cloud to enhance detection, simplify deployment, and extend multicloud protection.
 author: Elazark
 ms.author: elkrieger
 ms.service: defender-for-cloud
@@ -9,7 +9,7 @@ ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
 ---
 
-# Integrate partner integrations
+# Connect partner integrations in Microsoft Defender for Cloud
 
 Microsoft Defender for Cloud integrates with both Microsoft services and partner solutions. By integrating partner integrations into your environment, you can enhance your security posture and add extra layers of protection to your resources and multicloud environments.
 
@@ -19,13 +19,15 @@ You can review the [list of available integrations](partner-integrations.md).
 
 ## Prerequisites
 
+Before you begin, ensure you have the following:
+
 - You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 ## Create the partner application
 
-Depending on which integration you want to enable, after you finish these steps, you might need to follow other steps to complete the integration on the partners' side.
+Depending on which integration you want to enable, after you finish the following steps, you might need to complete additional steps on the partner side.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -57,7 +59,7 @@ Once you create the application, you need to create a client secret.
 
 1. Select **Add**.
 
-## Grant permissions
+## Grant subscription permissions to the application
 
 Once you create the client secret, you need to grant permissions to the application.
 
@@ -86,5 +88,4 @@ Once you create the client secret, you need to grant permissions to the applicat
 1. Follow the steps again to add the **Reader** role.
 
 Repeat these steps for any other relevant subscriptions.
-
 
