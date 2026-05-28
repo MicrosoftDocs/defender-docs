@@ -1,16 +1,16 @@
 ---
 title: Install Defender for Containers sensor using Helm
-description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
+description: Install the Defender for Containers sensor on AKS, EKS, and GKE clusters by using Helm, including prerequisites, deployment steps, and upgrade guidance.
 author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 05/27/2026
+ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to install Defender for Containers sensor by using Helm so that I can control deployment and upgrade timing across my clusters.
 ---
 
-# Install Defender for Containers sensor by using Helm
+# Install Defender for Containers sensor using Helm
 
-This article describes how to install and configure the Microsoft Defender for Containers sensor on AKS, EKS, and GKE clusters by using Helm.
+To control deployment and upgrade timing across your Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), and Google Kubernetes Engine (GKE) clusters, install and configure the Microsoft Defender for Containers sensor by using Helm.
 
 Defender for Containers supports multiple sensor deployment models, including automatic provisioning and Helm-based installation. Helm-based deployment gives you more control over versioning and upgrade timing, but you manage some of the operational work. When you use Helm-based deployment, consider:
 
@@ -20,27 +20,27 @@ Defender for Containers supports multiple sensor deployment models, including au
 
 ## Prerequisites
 
-Before you install the sensor by using Helm, make sure that:
+Before you install the sensor by using Helm, complete the following prerequisites:
 
-- You implement all prerequisite requirements for the Defender for Containers sensor as described in the [Defender sensor network requirements](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-aks%23network-requirements).
+- Implement all prerequisite requirements for the Defender for Containers sensor as described in the [Defender sensor network requirements](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-aks%23network-requirements).
 
-- Defender for Containers is enabled in the target subscription or security connector:
+- Enable Defender for Containers in the target subscription or security connector:
 
   - Azure subscription: [Enable Defender for Containers on AKS via portal](defender-for-containers-azure-enable-portal.md)
   - Amazon Web Services (AWS): [Enable Defender for Containers on AWS (EKS) via portal](defender-for-containers-aws-enable-portal.md)
   - Google Cloud Project (GCP): [Enable Defender for Containers on GCP (GKE) via portal](defender-for-containers-gcp-enable-portal.md)
   - Arc-enabled Kubernetes: [Enable Defender for Containers on Arc-enabled Kubernetes via portal](defender-for-containers-arc-enable-portal.md)
 
-- The following components of the Defender for Containers plan are enabled:
+- Enable the following components of the Defender for Containers plan:
 
   - Defender sensor
   - Kubernetes API access
 
-- **For AWS and GCP environments:** make sure the **Auto provision Defender's sensor for Azure Arc** toggle is disabled.
+- **For Amazon Web Services (AWS) and Google Cloud Platform (GCP) environments:** disable the **Auto provision Defender's sensor for Azure Arc** toggle.
 
     If you want to keep automatic provisioning enabled for other Arc-enabled clusters in the AWS account or GCP project, apply the `ms_defender_e2e_discovery_exclude=true` tag to clusters where you intend to deploy the sensor by using Helm.
 
-- Your environment doesn't have conflicting policy assignments that can deploy the generally available sensor version.
+- Ensure your environment doesn't have conflicting policy assignments that can deploy the generally available sensor version.
 
   Review policy assignments that use the following policy definition ID, and remove any conflicting assignments:
 
@@ -168,7 +168,7 @@ The installation succeeded if the `STATUS` field shows `deployed`.
 > [!IMPORTANT]
 > When you create rules, the selected subscription might show as `not supported for Gated deployment`. This status occurs because you installed the Defender for Containers components by using Helm rather than through the dashboard's automatic installation.
 
-Define security rules to control what you can deploy into your Kubernetes clusters. These rules help you block or audit container images based on security criteria, such as images with too many vulnerabilities.
+Define security rules to control what you can deploy into your Kubernetes clusters. These rules can block or audit container images that don't meet your security criteria.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -185,7 +185,7 @@ Define security rules to control what you can deploy into your Kubernetes cluste
 > [!IMPORTANT]
 > If you install the sensor by using Helm, don't use existing Defender for Cloud recommendations to install the Defender profile or Arc extension for the same cluster. Remediating these recommendations can create a conflicting deployment.
 
-Depending on your deployment type, the following recommendations might still appear in Defender for Cloud:
+Depending on your deployment type, the following recommendations might still appear in Defender for Cloud. Review them to confirm they refer to automatic deployment flows, then ignore them for clusters where you deployed with Helm.
 
 - **Azure**: [Azure Kubernetes Service clusters should have Defender profile enabled - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/56a83a6e-c417-42ec-b567-1e6fcb3d09a9/showSecurityCenterCommandBar~/false)
 
@@ -207,6 +207,10 @@ helm upgrade defender-k8s \
     --namespace <namespace> \
     --reuse-values
 ```
+
+Replace `<namespace>` with the namespace you used during installation.
+
+The `--reuse-values` parameter keeps your existing custom values during the upgrade.
 
 For `<namespace>`, use:
 
