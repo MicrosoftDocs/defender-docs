@@ -87,7 +87,7 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 - On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must also be installed.
 
 > [!NOTE]
-> For more information about Defender endpoint security for Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
+> For more information about Defender endpoint security for Windows 7 SP1, Windows Server 2008 R2, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
 
 ## Download the tool
 
