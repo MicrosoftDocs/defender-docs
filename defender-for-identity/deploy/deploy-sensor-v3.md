@@ -104,16 +104,11 @@ If you're migrating from sensor v2.x and previously had a gMSA configured for [a
 > [!IMPORTANT]
 > If any of your sensors are v3.x, select **Automatically use the sensor's local system account** for all sensors. The v3.x sensors use the local system account regardless of gMSA configuration.
 
-#### Mixed-mode environments (v2 and v3 sensors)
+#### DSA health alerts in mixed-mode environments (v2 and v3 sensors)
 
-If your workspace still has a Directory Service Account (DSA) configured because v2 sensors on AD FS, AD CS, or Entra Connect servers still require it, Defender for Identity validates those DSA credentials on every domain controller in the workspace, including domain controllers running the v3 sensor.
+If your workspace still has a Directory Service Account (DSA) configured because v2 sensors on AD FS, AD CS, or Entra Connect servers still require it, the **Directory services user credentials are incorrect** health alert continues to fire on all sensors in the workspace, including v3 sensors. This behavior is by design. The health alert validates DSA credentials at the workspace level for all sensors as long as the DSA exists, regardless of whether individual sensors use the DSA for auditing or response actions.
 
-If the DSA is a gMSA and the v3 domain controller isn't in the `PrincipalsAllowedToRetrieveManagedPassword` group for that gMSA, the credential validation fails and the **Directory services user credentials are incorrect** health alert fires on that domain controller. This alert isn't a false positive; it reflects a real workspace-level credential check.
-
-To resolve this alert in a mixed-mode environment:
-
-- Add each v3 domain controller's computer account to the `PrincipalsAllowedToRetrieveManagedPassword` group of the DSA gMSA. After updating group membership, run `klist purge` on the domain controller and wait for the next validation cycle.
-- Alternatively, remove the workspace-level DSA only after all sensors are fully migrated to v3 and no v2 sensors require it.
+V3 sensors ignore the DSA for auditing and response actions, but they're still included in workspace-level credential validation. To stop receiving this health alert on v3 sensors, remove the workspace-level DSA after all sensors are fully migrated to v3 and no v2 sensors require it.
 
 ### Test your prerequisites
 
