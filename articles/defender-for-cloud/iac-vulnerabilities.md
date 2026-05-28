@@ -225,4 +225,3 @@ To get more information:
 - Learn how to [connect your GitHub repository](quickstart-onboard-github.md) to Defender for Cloud.
 - Learn how to [connect your Azure DevOps project](quickstart-onboard-devops.md) to Defender for Cloud.
 
-

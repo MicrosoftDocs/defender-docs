@@ -74,4 +74,3 @@ To create sample IaC mapping tags in your code repositories:
 
 - Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
 
-

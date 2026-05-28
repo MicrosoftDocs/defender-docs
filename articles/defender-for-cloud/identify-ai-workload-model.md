@@ -51,4 +51,3 @@ The cloud security explorer can be used to identify generative AI workloads and 
 > [!div class="nextstepaction"]
 > [Explore risks to pre-deployment generative AI artifacts](explore-ai-risk.md)
 
-
