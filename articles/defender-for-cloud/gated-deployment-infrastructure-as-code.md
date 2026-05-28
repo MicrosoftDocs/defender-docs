@@ -17,7 +17,7 @@ The gated deployment agent requires read access to all of your Azure Container R
 ## Prerequisites
 
 - An Azure subscription with Microsoft Defender for Cloud enabled.
-- You must [enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md) with the defender sensor and registry access extensions turned on.
+- You must [enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md) with the Defender sensor and registry access extensions turned on.
 - On your Azure Kubernetes Service (AKS) cluster, enable:
     - [An OpenID Connect (OIDC) issuer](/azure/aks/use-oidc-issuer#create-an-aks-cluster-with-the-oidc-issuer). 
     - [An Azure Workload Identity](/azure/aks/workload-identity-deploy-cluster?tabs=new-cluster).
