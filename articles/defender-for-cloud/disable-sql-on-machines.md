@@ -26,7 +26,7 @@ Disabling the plan means Defender for Cloud no longer provides SQL alerts and re
 
 ## Disable Defender for SQL Servers on Machines
 
-When you disable this plan, Defender for Cloud stops applying SQL protections for the selected scope.
+To disable Defender for SQL Servers on Machines, follow these steps:
 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
@@ -47,13 +47,11 @@ When you disable this plan, Defender for Cloud stops applying SQL protections fo
 
 ## Disable Defender for SQL Servers on Machines at the resource level
 
-You can disable this plan at the resource level for an individual SQL Server instance or SQL virtual machine.
+To disable this plan at the resource level for an individual SQL Server instance or SQL virtual machine, follow these steps:
 
 1. In the Azure portal, search for and select:
-    - **Azure Arc** > **Data services** > **SQL Server instances**.
-    <br> 
-    or
-    - **SQL virtual machines**.
+    - **Azure Arc** > **Data services** > **SQL Server instances**
+    - **SQL virtual machines**
 
 1. Select the relevant SQL Server instance.
 
@@ -63,9 +61,11 @@ You can disable this plan at the resource level for an individual SQL Server ins
 
 1. Select the **Defender for SQL (IaaS and Arc)** extension.
 
-   | Extension | Publisher | Type |
-   |---|---|---|
-   | Defender for SQL (IaaS and Arc) | Microsoft.Azure.AzureDefenderForSQL | AdvancedThreatProtection.Windows |
+    Confirm that the extension details match the following values:
+
+    - Extension: Defender for SQL (IaaS and Arc)
+    - Publisher: Microsoft.Azure.AzureDefenderForSQL
+    - Type: AdvancedThreatProtection.Windows
 
 1. Select **Uninstall**.
 

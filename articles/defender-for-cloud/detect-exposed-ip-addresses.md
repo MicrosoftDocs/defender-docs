@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 This article shows you how to find internet-exposed IP addresses in Microsoft Defender for Cloud. You learn how to use cloud security explorer and attack path analysis to find and prioritize risk.
 
-Microsoft Defender for Cloud integrates with Defender External Attack Surface Management (Defender EASM). This integration provides recommendations and attack path visualizations that help reduce risk.
+Microsoft Defender for Cloud integrates with Defender External Attack Surface Management (Defender EASM). In cloud security explorer, this capability appears as Defender EASM (DEASM) findings. This integration provides recommendations and attack path visualizations that help reduce risk.
 
 ## Prerequisites
 
