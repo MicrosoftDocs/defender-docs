@@ -108,3 +108,4 @@ To continue onboarding new scope or configuring monitoring rules, manually work 
 > [Review changes](file-integrity-monitoring-review-changes.md) in file integrity monitoring.
 
 
+
