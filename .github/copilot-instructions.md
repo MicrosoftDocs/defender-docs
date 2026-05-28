@@ -58,6 +58,7 @@ Below are instructions specific to this repository. These may be updated by repo
 
 - Never use phrases like "This article covers," "This article describes," or "This page explains" in article introductions. Lead with the action or topic directly.
 - Never use the word "across" (use alternatives like "in," "on," "throughout," or "for").
+- Never use internal engineering jargon in customer-facing content. For example, avoid terms like "fire" (for alerts), "mixed-mode," or "mixed-environment." Instead, use plain, descriptive language (for example, "the alert appears," "credentials are validated," "environments with both v2 and v3 sensors").
 
 
 ### Authoritative security content
@@ -76,3 +77,12 @@ gh pr create --repo MicrosoftDocs/defender-docs-pr --base main --head AbbyMSFT:<
 ```
 
 Do not create PRs on the fork (`AbbyMSFT/defender-docs-pr`) targeting the fork's own `main`.
+
+### Branch Workflow
+
+Before starting work on any branch, always fetch and rebase on upstream main (or ask if you should) to ensure the branch is up to date:
+
+```
+git fetch https://github.com/MicrosoftDocs/defender-docs-pr.git main
+git rebase FETCH_HEAD
+```
