@@ -178,6 +178,9 @@
                 - name: Enable on AWS (Preview)
                   displayName: PG, PostgreSQL, MySQL, MariaDB, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-aws.md
+                - name: Verify AWS protection
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB, RDS, Aurora, AWS
+                  href: verify-protection-open-source-relational-databases-aws.md                 
               - name: Defender for Azure Cosmos DB
                 items:
                 - name: Defender for Azure Cosmos DB

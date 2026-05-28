@@ -124,7 +124,7 @@ Use the following tables to review the reason and required action.
 
 ### Open-source relational database protection errors
 
-| Unhealthy reason | Description | Action |
+| Unhealthy reason | Description | Recommended action |
 |---|---|---|
 | **Defender for open-source relational databases isn't authorized** | Defender for open-source relational databases isn't authorized because the onboarding configuration is incomplete. This can happen if the role's web identity configuration is missing the required service identity, the OpenID Connect (OIDC) provider is missing, or an explicit deny or missing permission is blocking the required action. | Rerun the AWS CloudFormation template for the connector and follow the [AWS onboarding troubleshooting guide](quickstart-onboard-aws.md?tabs=Defender-for-SQL) to complete onboarding. |
 | **Defender for open-source relational databases isn't authorized because a service control policy has an explicit deny** | Defender for open-source relational databases isn't authorized because an AWS service control policy (SCP) has an explicit deny. | Review the SCP applied to the AWS account. For steps, see [Review service control policies](#review-service-control-policies). |
@@ -140,7 +140,7 @@ Use the following tables to review the reason and required action.
 
 Sensitive data discovery for Amazon RDS is also available through Defender CSPM.
 
-| Unhealthy reason | Description | Action |
+| Unhealthy reason | Description | Recommended action |
 |---|---|---|
 | **RDS Data Sensitivity Scan isn't authorized** | The onboarding configuration is incomplete or misconfigured. This can happen if the role's web identity configuration is missing the required service identity, an identity-based policy has an explicit deny, the OpenID Connect (OIDC) provider is missing or misconfigured, required permissions are missing, or a permissions boundary prevents the service from performing the required actions. | Rerun the AWS CloudFormation template for the connector and follow the [AWS onboarding troubleshooting guide](quickstart-onboard-aws.md?tabs=Defender-for-SQL) to complete onboarding. |
 | **RDS Data Sensitivity Scan isn't authorized because a service control policy has an explicit deny** | RDS Data Sensitivity Scan isn't authorized because an AWS service control policy (SCP) has an explicit deny. | Review the SCP applied to the AWS account. For steps, see [Review service control policies](#review-service-control-policies). |
