@@ -16,7 +16,9 @@ appliesto:
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-Microsoft Defender helps you discover and investigate local AI agents and MCP servers configured on your organization's devices. Microsoft Defender automatically detects and surfaces supported agents in the Microsoft Defender and Agent 365 portals, which gives you visibility into AI-related assets and lets you assess their presence across your environment.
+Local AI agents run with user-level permissions and can access files, tools, and services on the devices where they operate. Without visibility into which agents are running and what they can reach, security teams can't assess exposure, enforce governance, or respond to agent-related incidents.
+
+Microsoft Defender automatically discovers supported local AI agents and MCP server configurations on onboarded devices, then surfaces them in the Microsoft Defender portal. This gives security teams a centralized view of AI agent presence across the organization.
 
 This article explains how local AI agent discovery works, lists supported agents and MCP server configurations, and describes how to view discovered agents in the Microsoft Defender portal.
 
@@ -35,15 +37,13 @@ Microsoft Defender automatically detects supported local AI agents and MCP serve
 
 Defender defines an agent as a combination of user, device, and agent type. For example, if Claude Code runs in 15 different project folders on the same device for the same user, it appears as a single agent entry in the inventory.
 
-Microsoft Defender discovers supported local AI agent families across agentic IDEs, CLI agents, VS Code extensions, and desktop assistants. It also discovers MCP server configurations associated with supported agents, including local and remote MCP server configurations.
+Microsoft Defender discovers the following local AI agent families on Windows endpoints. It also discovers MCP server configurations associated with supported agents, including local and remote MCP server configurations.
 
-<!-- TODO: Get the confirmed full list from Eitan/Spencer. The list below is representative but Eitan noted it's not complete (21 agent types total). Also confirm how to represent MCPs. Spencer comment #17 -->
-
+- **CLI agents**: Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, OpenCode
+- **Desktop apps**: ChatGPT Desktop, Claude Desktop, Codex Desktop, Ollama Desktop, Poe Desktop
 - **Agentic IDEs**: Cursor
-- **CLI agents**: Claude Code CLI, GitHub Copilot CLI, Codex CLI, Gemini CLI
-- **VS Code extensions**: Claude Code, Cline, Gemini, GitHub Copilot, Roo Code
-- **Desktop assistants**: ChatGPT Desktop, Ollama Desktop, Poe Desktop, OpenClaw
-- **MCP servers**: Local and remote MCP server configurations
+- **VS Code extensions**: Cline, Claude Code, Codex, Gemini Code Assist, GitHub Copilot, Roo Code
+- **Other**: Clawpilot, Claw/Nanobot, OpenClaw
 
 For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).
 
@@ -54,7 +54,6 @@ For information on runtime protection for local AI agents, see [Runtime protecti
 Microsoft Defender's discovery capabilities are part of a comprehensive AI security approach. Microsoft Defender provides other capabilities across your organization's AI ecosystem:
 
 - **Discover cloud and platform agents**: Find agents built with Microsoft Copilot Studio, Microsoft Foundry, Amazon Web Services (AWS) Bedrock, and Google Cloud Platform (GCP) Vertex AI.
-- **Assess local AI agent security posture**: Evaluate agent configurations, identify risks, get prioritized recommendations, and surface attack paths to Microsoft Foundry and Microsoft Copilot Studio (MCS).
 - **Detect and investigate threats**: Correlate alerts and investigate suspicious agent behavior across your security infrastructure.
 
 For details on these capabilities and how to apply them, see [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](/defender-xdr/security-for-ai/defender-security-for-ai).

@@ -7,28 +7,38 @@ ms.service: defender-endpoint
 ms.topic: how-to
 ms.date: 05/27/2026
 ai-usage: ai-assisted
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 #customer intent: As a security administrator, I want to configure runtime protection for local AI agents on my organization's endpoints so that I can detect and block prompt injection attacks in real time.
 ---
 
 # Set up AI agent runtime protection with Microsoft Defender for Endpoint
 
-Microsoft Defender provides runtime protection for local AI agents on Windows endpoints. It monitors the agentic loop to detect prompt injection attacks, then audits or blocks threats inline in realtime on the device based on your configuration.
+Local AI agents can read files, invoke tools, and execute commands on user workstations — making them targets for prompt injection attacks. Runtime protection helps you detect and block these attacks at the device level before agents can act on malicious instructions.
 
-This article explains how to configure runtime protection settings, deploy them with Intune, and investigate detections.
+This article explains how to enable runtime protection, deploy it across your organization, and investigate detections.
 
 For an overview of how runtime protection works, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
+
+## Recommended deployment approach
+
+Microsoft recommends the following phased rollout:
+
+1. **Test**: [Enable runtime protection](#enable-runtime-protection) in **Audit** mode on a small set of devices where supported agents are actively used.
+1. **Review**: Monitor alerts in the Microsoft Defender portal for 1-2 weeks. Identify any false positives and adjust expectations.
+1. **Deploy**: [Roll out across your organization](#deploy-settings-across-your-organization-with-intune) in Audit mode to additional device groups.
+1. **Enforce**: After validating that alerts are accurate and actionable, switch to **Block** mode on device groups where you want active enforcement.
 
 ## Prerequisites
 
 Before you configure runtime protection, make sure the following requirements are met:
 
-- The device is onboarded to [Microsoft Defender](/defender-endpoint/onboard-configure) and runs on Windows.
-
+- The device is onboarded to [Microsoft Defender](/defender-endpoint/onboard-configure) and runs on a supported Windows version with Microsoft Defender Antivirus platform version <!-- TODO: Confirm platform version number with engineering --> or later.
 - Microsoft Defender Antivirus is running in active mode.
 - One or more [supported local AI agents](ai-agent-runtime-protection-overview.md#supported-agents) are installed on the device.
 - The local AI agent must natively support a hooks framework. See [Supported agents](ai-agent-runtime-protection-overview.md#supported-agents) for the full list.
 
-## Configure runtime protection
+## Enable runtime protection
 
 To enable runtime protection on a single device (for testing or validation):
 
@@ -54,6 +64,8 @@ To enable runtime protection on a single device (for testing or validation):
 
 ## Deploy settings across your organization with Intune
 
+After validating runtime protection on test devices, use Intune to deploy settings at scale across your organization. You deploy the same PowerShell command as a script to target device groups, setting the runtime protection mode (Audit or Block) for all devices in scope.
+
 > [!NOTE]
 > Native Intune policy support for AI agent runtime protection is planned for a future update. In the meantime, deploy settings by using PowerShell scripts in Intune.
 
@@ -77,6 +89,8 @@ Microsoft recommends the following phased rollout:
 1. **Enforce**: After validating that alerts are accurate and actionable, switch to **Block** mode on device groups where you want active enforcement.
 
 ## Review and investigate detections
+
+After enabling runtime protection, review alerts to validate detection accuracy and tune your configuration before broadening enforcement. This step is critical during the Audit phase — it helps you understand what agents are encountering and whether detections represent real threats.
 
 When Microsoft Defender Antivirus detects a threat based on your runtime protection settings, it generates an alert in Microsoft Defender and takes action based on the configured mode (**Block** or **Audit**). Detection details appear across the agent's UI, Windows notifications, and the Microsoft Defender portal.
 

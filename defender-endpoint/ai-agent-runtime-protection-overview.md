@@ -25,14 +25,6 @@ This article explains what runtime protection stops, how it works, and how to in
 > [!TIP]
 > Runtime protection complements Microsoft Defender's **discovery capabilities**, which automatically detect supported local AI agents and MCP server configurations across your devices. For more information, see [Local AI agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md).
 
-## Prerequisites
-
-Before you can use runtime protection for local AI agents:
-
-- The device runs on Windows and is onboarded to [Microsoft Defender](/defender-endpoint/onboard-configure).
-- Microsoft Defender Antivirus is running in active mode.
-- A [supported local AI agent](#supported-agents) is installed on the device.
-
 ## What runtime protection detects
 
 Runtime protection focuses on high-confidence threats to local AI agents:
@@ -56,6 +48,20 @@ Defender scans these payloads for prompt injection attacks before risky actions 
 
 For more information on agent hooks, see [Claude Code hooks](https://code.claude.com/docs/en/hooks) and [Codex hooks](https://developers.openai.com/codex/hooks).
 
+## What happens when you enable runtime protection
+
+When you enable runtime protection on a device:
+
+1. Defender registers as a hook subscriber with supported agents on the device.
+1. As the agent runs, Defender receives payloads at each lifecycle event (prompt, pre-tool call, post-tool response).
+1. Defender scans each payload for prompt injection and malicious instructions.
+1. If a threat is detected:
+   - In **Block** mode: Defender blocks the action and notifies the user in the agent UI and via Windows toast notification.
+   - In **Audit** mode: Defender allows the action to continue and logs the detection.
+1. An alert appears in the Microsoft Defender portal on the device timeline, correlated into incidents for investigation.
+
+For configuration steps, see [Enable runtime protection](configure-ai-agent-runtime-protection.md#enable-runtime-protection).
+
 ## Protection modes
 
 Runtime protection can be set to **Enabled** (Block) or **Audit**.
@@ -65,7 +71,7 @@ Runtime protection can be set to **Enabled** (Block) or **Audit**.
 | **Enabled** (Block) | Defender Antivirus scans runtime activity and blocks detected threats. Users might see a notification in the agent UI or a Windows toast notification, and an alert is sent to Microsoft Defender. |
 | **Audit** | Defender Antivirus scans runtime activity and allows the action to continue. An alert is sent to Microsoft Defender for security team review. |
 
-Start with **Audit** to monitor threats and understand what your agents are doing without blocking them. After your security team reviews the alerts, switch to **Enabled** for production enforcement.
+Microsoft recommends beginning in Audit mode to observe detections and validate accuracy before switching to Block for active enforcement. For configuration steps, see [Enable runtime protection](configure-ai-agent-runtime-protection.md#enable-runtime-protection).
 
 Runtime protection works alongside your existing security controls. The setting is protected by [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection), which prevents unauthorized changes. If [Microsoft Purview data loss prevention (DLP)](/purview/dlp-learn-about-dlp) policies are active on the same device, Purview independently evaluates payloads for sensitive data.
 
@@ -80,9 +86,6 @@ For step-by-step configuration instructions, see [Set up AI agent runtime protec
 ## Supported agents
 
 The following table lists the local AI agents that Microsoft Defender supports for runtime protection and links to each agent's hooks documentation.
-
-> [!NOTE]
-> Runtime protection is available for the agents listed below. For the full list of agents supported for discovery, see [Discover local AI agents](discover-local-ai-agents.md).
 
 | Agent | Hooks documentation |
 |-------|---------------------|

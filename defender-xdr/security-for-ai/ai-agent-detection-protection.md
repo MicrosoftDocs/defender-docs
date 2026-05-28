@@ -77,7 +77,7 @@ To enable real-time protection for your AI agents:
 
     For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).
 
-## Protect supported local AI agents on Windows endpoints (preview)
+## Protect supported local AI agents on Windows endpoints (Preview)
 
 Microsoft Defender extends runtime protection to supported local AI agents running on Windows endpoints. These agents can read files, invoke tools, call services, and act on user workstations, so security teams need protection that catches risky activity before it executes.
 

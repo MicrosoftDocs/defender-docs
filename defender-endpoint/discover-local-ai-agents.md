@@ -27,11 +27,7 @@ In this article, you learn how to view discovered agents in the inventory, explo
 
 Before you can discover local AI agents on endpoints, make sure the following requirements are met:
 
-- Devices run on:
-
-  - Windows 10 version 1809 or later
-
-  - Windows 11
+- Devices run on a supported Windows version with Microsoft Defender Antivirus platform version <!-- TODO: Confirm platform version number with engineering --> or later.
 
 - Your organization has the applicable Plan 2 license.
 - Devices are [onboarded to Microsoft Defender](/defender-endpoint/onboard-configure).
@@ -70,7 +66,7 @@ No additional deployment, configuration, or scripts are required beyond device o
 
 ## Query local AI agents using advanced hunting
 
-### Hunt for local AI agents using Advanced Hunting
+Use advanced hunting to proactively investigate local AI agent presence, understand which users and resources agents can reach, and identify high-risk configurations. These queries help you assess exposure, trace access paths to sensitive assets, and prioritize security response.
 
 The [ExposureGraphNodes](/defender-xdr/advanced-hunting-exposuregraphnodes-table) and [ExposureGraphEdges](/defender-xdr/advanced-hunting-exposuregraphedges-table) tables represent the security graph for local AI agents, including entities and relationships.
 
@@ -129,10 +125,6 @@ ExposureGraphEdges
 | sort by Device asc
 
 ```
-
-## Assess AI agent security posture
-
-Use the following queries to assess the security posture of local AI agents across your environment by examining the scope of user access and exposure to critical assets.
 
 ### Find AI agents on devices of users with broad access
 
