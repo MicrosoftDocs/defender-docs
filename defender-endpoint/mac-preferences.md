@@ -637,6 +637,61 @@ Used in combination with other parameters to identify the process.
 |**Data type**|Array of strings|
 |**Comments**| If specified, process argument must match those arguments exactly, case-sensitive |
 
+### Feature flags
+
+The *features* section of the configuration profile is used to enable or disable specific features of Microsoft Defender for Endpoint.
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.wdav`|
+|**Key**|features|
+|**Data type**|Dictionary (nested preference)|
+|**Comments**|See the following sections for a description of the dictionary contents.|
+
+#### Enable / disable performance profiles
+
+Specify whether the performance profiles feature is enabled on the device.
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.wdav`|
+|**Key**|performanceProfiles|
+|**Data type**|String|
+|**Possible values**|enabled <p> disabled (default)|
+
+### Performance profiles
+
+The *performanceProfiles* section of the configuration profile is used to specify which performance profiles are applied and how they merge with locally defined settings.
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.wdav`|
+|**Key**|performanceProfiles|
+|**Data type**|Dictionary (nested preference)|
+|**Comments**|See the following sections for a description of the dictionary contents.|
+
+#### Merge policy for performance profiles
+
+Specify the merge policy for performance profiles. This can be a combination of administrator-defined and user-defined profiles (`merge`), or only administrator-defined profiles (`admin_only`).
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.wdav`|
+|**Key**|merge_policy|
+|**Data type**|String|
+|**Possible values**|merge (default) <p> admin_only|
+
+#### Profiles
+
+Specify the list of performance profiles to apply.
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.wdav`|
+|**Key**|profiles|
+|**Data type**|Array of strings|
+|**Comments**|Specify the names of the performance profiles to enable.|
+
 ## Recommended configuration profile
 
 To get started, we recommend the following configuration for your enterprise to take advantage of all protection features that Microsoft Defender for Endpoint provides.
