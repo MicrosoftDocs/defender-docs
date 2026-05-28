@@ -1,5 +1,5 @@
 ---
-title: Determine business needs
+title: Planning multicloud security determining business needs guidance
 description: Learn about determining business needs to meet business goals in multicloud environment with Microsoft Defender for Cloud.
 ms.topic: how-to
 author: Elazark

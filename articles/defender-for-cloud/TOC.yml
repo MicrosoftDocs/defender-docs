@@ -713,7 +713,7 @@
             href: test-agentless-malware-scanning.md
       - name: OS misconfigurations
         items:
-         - name: Operating system misconfigurations
+         - name: Overview
            href: operating-system-misconfiguration.md
          - name: Deploy the Azure machine configuration extension
            href: security-baseline-guest-configuration.md
