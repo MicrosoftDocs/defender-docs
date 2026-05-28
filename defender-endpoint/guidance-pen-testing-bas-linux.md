@@ -136,7 +136,7 @@ Resource bottlenecks can impact detection accuracy and evaluation results. Befor
 
 - Verify system requirements using official prerequisites: [Microsoft Defender for Endpoint on Linux system prerequisites](/defender-endpoint/mde-linux-prerequisites)
 
-## Review your exclusions
+### Review your exclusions
 
 Before starting penetration testing, BAS, or product evaluations, review any existing exclusions configured in Microsoft Defender.
 
