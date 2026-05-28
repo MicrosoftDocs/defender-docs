@@ -2,7 +2,7 @@
 title: Alerts and incidents in Microsoft Defender XDR for Microsoft Defender for Cloud
 description: Learn about the benefits of receiving Microsoft Defender for Cloud's alerts in Microsoft Defender XDR 
 ms.topic: concept-article
-ms.date: 03/25/2025
+ms.date: 01/28/2026
 ai-usage: ai-assisted
 #customer intent: As a security professional, I want to understand the benefits of integrating Microsoft Defender for Cloud alerts with Microsoft Defender XDR.
 ---
@@ -31,7 +31,7 @@ Incidents and alerts are now part of [Microsoft Defender XDR's public API](/micr
 > [!NOTE]
 > Permissions to view Defender for Cloud alerts and correlations are automatic for the entire tenant. Viewing specific subscriptions isn't supported. Use the **alert subscription ID** filter to view Defender for Cloud alerts associated with a specific Defender for Cloud subscription in the alert and incident queues. Learn more about [filters](/defender-xdr/incident-queue#filters).
 
-The integration is available only by applying the appropriate [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac) role for Defender for Cloud. To view Defender for Cloud alerts and correlations without Defender XDR Unified RBAC, you must be a Global Administrator or Security Administrator in Azure Active Directory.
+The integration is available only by applying the appropriate [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac) role for Defender for Cloud. To view Defender for Cloud alerts and correlations without Defender XDR Unified RBAC, you must be a Global Administrator or Security Administrator in Microsoft Entra ID.
 
 ## Investigation experience in Microsoft Defender XDR
 
@@ -40,7 +40,7 @@ The following table describes the detection and investigation experience in Micr
 | Area | Description |
 |--|--|
 | Incidents | All Defender for Cloud incidents are integrated to Microsoft Defender XDR. <br> - Searching for cloud resource assets in the [incident queue](/microsoft-365/security/defender/incident-queue) is supported. <br> - The [attack story](/microsoft-365/security/defender/investigate-incidents#attack-story) graph shows cloud resource. <br> - The [assets tab](/microsoft-365/security/defender/investigate-incidents#assets) in an incident page shows the cloud resource. <br> - Each virtual machine has its own entity page containing all related alerts and activity. <br> <br> There are no duplications of incidents from other Defender workloads. |
-| Alerts  | All Defender for Cloud alerts, including multicloud, internal and external providers' alerts, are integrated to Microsoft Defender XDR. Defenders for Cloud alerts show on the Microsoft Defender XDR [alert queue](/microsoft-365/security/defender-endpoint/alerts-queue-endpoint-detection-response). <br>Microsoft Defender XDR<br> The `cloud resource` asset shows up in the Asset tab of an alert. Resources are clearly identified as an Azure, Amazon, or a Google Cloud resource. <br> <br> Defender for Cloud alerts are automatically be associated with a tenant. <br> <br> There are no duplications of alerts from other Defender workloads.|
+| Alerts  | All Defender for Cloud alerts, including multicloud, internal and external providers' alerts, are integrated to Microsoft Defender XDR. Defender for Cloud alerts show on the Microsoft Defender XDR [alert queue](/microsoft-365/security/defender-endpoint/alerts-queue-endpoint-detection-response). <br>Microsoft Defender XDR<br> The `cloud resource` asset shows up in the Asset tab of an alert. Resources are clearly identified as an Azure, Amazon, or a Google Cloud resource. <br> <br> Defender for Cloud alerts are automatically associated with a tenant. <br> <br> There are no duplications of alerts from other Defender workloads.|
 | Alert and incident correlation | Alerts and incidents are automatically correlated, providing robust context to security operations teams to understand the complete attack story in their cloud environment. |
 | Threat detection | Accurate matching of virtual entities to device entities to ensure precision and effective threat detection. |
 | Unified API | Defender for Cloud alerts and incidents are now included in [Microsoft Defender XDR's public API](/microsoft-365/security/defender/api-overview), allowing customers to export their security alerts data into other systems using one API. |
@@ -92,13 +92,7 @@ Microsoft Sentinel customers who are [integrating Microsoft Defender XDR inciden
 
     If necessary, [use automation rules](/azure/sentinel/create-manage-use-automation-rules) to close noisy incidents, or use the [built-in tuning capabilities in the Defender portal](/defender-xdr/investigate-alerts#tune-an-alert) to suppress certain alerts.
 
-If you integrated your Microsoft Defender XDR incidents into Microsoft Sentinel and want to keep the subscription-based settings and avoid tenant-based syncing, opt out of syncing incidents and alerts from Microsoft Defender XDR:
-
-1. In the Microsoft Defender portal, go to **Settings > Microsoft Defender XDR**.
-
-1. In **Alert service settings**, look for Microsoft Defender for Cloud alerts.
-
-1. Select **No alerts** to turn off all Defender for Cloud alerts. Selecting this option stops the ingestion of new Defender for Cloud alerts to Microsoft Defender XDR. Alerts previously ingested remain in an alert or incident page.
+If you integrated your Microsoft Defender XDR incidents into Microsoft Sentinel and want to keep the subscription-based settings and avoid tenant-based syncing, opt out of syncing incidents and alerts from Microsoft Defender XDR.
 
 For more information, see:
 

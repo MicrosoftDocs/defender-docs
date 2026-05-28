@@ -4,14 +4,14 @@ description: Learn how to drive remediation of security recommendations by using
 services: defender-for-cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/18/2025
+ms.date: 05/28/2026
 ---
 
 # Drive recommendation remediation by using governance rules
 
 Security teams are responsible for improving their organization's security posture, but team members might not always follow through to implement security recommendations. Security teams can set governance rules to help drive accountability and create a service-level agreement (SLA) around the remediation process.
 
-For an in-depth discussion around why governance rules are helpful, watch [this episode](episode-fifteen.md) of the *Defender for Cloud in the field* video series.
+For an in-depth discussion about why governance rules are helpful, watch [this episode](episode-fifteen.md) of the *Defender for Cloud in the field* video series.
 
 ## Governance rules
 
@@ -81,6 +81,9 @@ Conflicting rules are applied in scope order. For example, rules on a management
    - **By severity**: The rule assigns the owner and due date to any recommendation in the subscription that has no owner or due date and that matches the specified severity levels.
    - **By risk level**: The rule assigns an owner and due date to any recommendations that match the specified risk levels.
    - **By recommendation category**: The rule assigns an owner and due date to any recommendations that match the specified recommendation category.
+     >[!NOTE]  
+     >The recommendations category to implement governance rules is for use with the new individual recommendation format.
+     >:::image type="content" source="media/governance-rules/recommendation-categories.png" alt-text="Screenshot of the list of recommendation categories." lightbox="media/governance-rules/recommendation-categories.png":::
    - **By specific recommendations**: Select the specific built-in or custom recommendations that the rule applies to.
 
    To apply the rule to already-generated recommendations, you can rerun the rule using the UI or API.
@@ -149,6 +152,8 @@ From the Governance report, you can drill down into recommendations by the follo
 - Grace period
 - Cloud
 
-## Related content
+## Next step
 
-- [Implement security recommendations](implement-security-recommendations.md)
+> [!div class="nextstepaction"]
+> [Implement security recommendations](implement-security-recommendations.md)
+

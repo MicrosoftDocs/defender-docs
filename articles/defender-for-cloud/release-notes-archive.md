@@ -4,7 +4,7 @@ description: A description of what's new and changed in Microsoft Defender for C
 author: Elazark
 ms.author: elkrieger
 ms.topic: reference
-ms.date: 12/23/2025
+ms.date: 04/19/2026
 ms.custom: sfi-ga-nochange, sfi-image-nochange
 ---
 
@@ -497,7 +497,7 @@ For more information about Defender for Cloud Regulatory Compliance offering, [L
 
 January 30, 2025
 
-We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#preview-container-images-in-azure-registry-should-have-vulnerability-findings-resolved), [AWS](recommendations-reference-container.md#preview-container-images-in-aws-registry-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#preview-container-images-in-gcp-registry-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
+We are updating one of the scan criteria for registry images in the preview recommendation for registry images across all clouds and external registries ([Azure](recommendations-reference-container.md#azure-registry-container-images-should-have-vulnerabilities-resolved-powered-by-microsoft-defender-vulnerability-management), [AWS](recommendations-reference-container.md#aws-registry-container-images-should-have-vulnerability-findings-resolved), [GCP](recommendations-reference-container.md#gcp-registry-container-images-should-have-vulnerability-findings-resolved), [Docker](recommendations-reference-container.md#preview-container-images-in-docker-hub-registry-should-have-vulnerability-findings-resolved), [JFrog](recommendations-reference-container.md#preview-container-images-in-jfrog-artifactory-registry-should-have-vulnerability-findings-resolved)).
 
 **What's Changing?**
 
@@ -1585,7 +1585,7 @@ April 15, 2024
 
 Runtime threat detection and agentless discovery for AWS and GCP in Defender for Containers are now generally available. In addition, there's a new authentication capability in AWS which simplifies provisioning.
 
-Learn more about [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) and how to [configure Defender for Containers components](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-eks#deploy-the-defender-sensor).
+Learn more about [containers support matrix in Defender for Cloud](support-matrix-defender-for-containers.md) and how to [configure Defender for Containers components](defender-for-containers-enable-plan.md).
 
 ### Update: Risk prioritization
 
@@ -1885,9 +1885,9 @@ Learn more about [agentless malware scanning](agentless-malware-scanning.md) for
 
 January 15, 2024
 
-We're announcing the general availability (GA) of the integration between Defender for Cloud and Microsoft Defender XDR (formerly Microsoft 365 Defender).
+We're announcing the general availability (GA) of the integration between Defender for Cloud and Microsoft Defender XDR (formerly Office 365 Defender).
 
-The integration brings competitive cloud protection capabilities into the Security Operations Center (SOC) day-to-day. With Microsoft Defender for Cloud and the Defender XDR integration, SOC teams can discover attacks that combine detections from multiple pillars, including Cloud, Endpoint, Identity, Office 365, and more.
+The integration brings competitive cloud protection capabilities into the Security Operations Center (SOC) day-to-day. With Microsoft Defender for Cloud and the Defender XDR integration, SOC teams can discover attacks that combine detections from multiple pillars, including Cloud, Endpoint, Identity, Microsoft 365, and more.
 
 Learn more about [alerts and incidents in Microsoft Defender XDR](concept-integration-365.md).
 
@@ -2172,7 +2172,7 @@ November 15, 2023
 
 Businesses can protect their cloud resources and devices with the new integration between Microsoft Defender for Cloud and Microsoft Defender XDR. This integration connects the dots between cloud resources, devices, and identities, which previously required multiple experiences.
 
-The integration also brings competitive cloud protection capabilities into the Security Operations Center (SOC) day-to-day. With Microsoft Defender XDR, SOC teams can easily discover attacks that combine detections from multiple pillars, including Cloud, Endpoint, Identity, Office 365, and more.
+The integration also brings competitive cloud protection capabilities into the Security Operations Center (SOC) day-to-day. With Microsoft Defender XDR, SOC teams can easily discover attacks that combine detections from multiple pillars, including Cloud, Endpoint, Identity, Microsoft 365, and more.
 
 Some of the key benefits include:
 
@@ -2375,7 +2375,7 @@ Microsoft Defender for Cloud now supports the latest [CIS Azure Security Foundat
 
 ### Change to the Log Analytics daily cap
 
-Azure monitor offers the capability to [set a daily cap](/azure/azure-monitor/logs/daily-cap) on the data that is ingested on your Log analytics workspaces. However, Defenders for Cloud security events are currently not supported in those exclusions.
+Azure monitor offers the capability to [set a daily cap](/azure/azure-monitor/logs/daily-cap) on the data that is ingested on your Log analytics workspaces. However, Defender for Cloud security events are currently not supported in those exclusions.
 
 The Log Analytics Daily Cap no longer excludes the following set of data types:
 
@@ -2794,7 +2794,7 @@ Express configuration for vulnerability assessments in Defender for SQL is now G
 
 Check out this [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-sql-vulnerability-assessment-updates/ba-p/3837732) to learn more about express configuration.
 
-You can learn the differences between [express and classic configuration](sql-azure-vulnerability-assessment-overview.md#what-are-the-express-and-classic-configurations).
+You can learn the differences between [express and classic configuration](sql-azure-vulnerability-assessment-overview.md#configuration-models).
 
 ### More scopes added to existing Azure DevOps Connectors
 
@@ -2870,7 +2870,7 @@ You can learn more about the [permissions used to scan AWS instances](faq-permis
 1. Select **Click to download the CloudFormation template**.
 1. Navigate to your AWS environment and apply the updated template.
 
-Learn more about [agentless scanning](concept-agentless-data-collection.md) and [enabling agentless scanning in AWS](enable-vulnerability-assessment-agentless.md#agentless-vulnerability-assessment-on-aws).
+Learn more about [agentless scanning](concept-agentless-data-collection.md) and [enabling agentless scanning in AWS](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-aws).
 
 ### Revised JIT (Just-In-Time) rule naming conventions in Defender for Cloud
 
@@ -2962,7 +2962,7 @@ Microsoft Defender Vulnerability Management is now enabled as the default, built
 
 If a subscription has a VA solution enabled on any of its VMs, no changes are made and Microsoft Defender Vulnerability Management won't be enabled by default on the remaining VMs in that subscription. You can choose to [enable a VA solution](deploy-vulnerability-assessment-defender-vulnerability-management.md) on the remaining VMs on your subscriptions.
 
-Learn how to [Find vulnerabilities and collect software inventory with agentless scanning (Preview)](enable-vulnerability-assessment-agentless.md).
+Learn how to [Find vulnerabilities and collect software inventory with agentless scanning (Preview)](enable-agentless-scanning-vms.md).
 
 ### Download a CSV report of your cloud security explorer query results (Preview)
 
@@ -3014,7 +3014,7 @@ If you require any assistance updating permissions, you can [create an Azure sup
 You can also learn more about [Defender for DevOps](defender-for-devops-introduction.md).
 If a subscription has a VA solution enabled on any of its VMs, no changes are made and Microsoft Defender Vulnerability Management won't be enabled by default on the remaining VMs in that subscription. You can choose to [enable a VA solution](deploy-vulnerability-assessment-defender-vulnerability-management.md) on the remaining VMs on your subscriptions.
 
-Learn how to [Find vulnerabilities and collect software inventory with agentless scanning (Preview)](enable-vulnerability-assessment-agentless.md).
+Learn how to [Find vulnerabilities and collect software inventory with agentless scanning (Preview)](enable-agentless-scanning-vms.md).
 
 ### Defender for DevOps Pull Request annotations in Azure DevOps repositories now includes Infrastructure as Code misconfigurations
 
@@ -3038,7 +3038,7 @@ Updates in April include:
 - [Three alerts in the Defender for Resource Manager plan have been deprecated](#three-alerts-in-the-defender-for-resource-manager-plan-have-been-deprecated)
 - [Alerts automatic export to Log Analytics workspace have been deprecated](#alerts-automatic-export-to-log-analytics-workspace-have-been-deprecated)
 - [Deprecation and improvement of selected alerts for Windows and Linux Servers](#deprecation-and-improvement-of-selected-alerts-for-windows-and-linux-servers)
-- [New Azure Active Directory authentication-related recommendations for Azure Data Services](#new-azure-active-directory-authentication-related-recommendations-for-azure-data-services)
+- [New Microsoft Entra authentication-related recommendations for Azure Data Services](#new-microsoft-entra-authentication-related-recommendations-for-azure-data-services)
 - [Two recommendations related to missing Operating System (OS) updates were released to GA](#two-recommendations-related-to-missing-operating-system-os-updates-were-released-to-ga)
 - [Defender for APIs (Preview)](#defender-for-apis-preview)
 
@@ -3116,7 +3116,7 @@ In a scenario where activity from a suspicious IP address is detected, one of th
 
 ### Alerts automatic export to Log Analytics workspace have been deprecated
 
-Defenders for Cloud security alerts are automatically exported to a default Log Analytics workspace on the resource level. This causes an indeterministic behavior and therefore we have deprecated this feature.
+Defender for Cloud security alerts are automatically exported to a default Log Analytics workspace on the resource level. This causes an indeterministic behavior and therefore we have deprecated this feature.
 
 Instead, you can export your security alerts to a dedicated Log Analytics workspace with [Continuous Export](continuous-export.md).
 
@@ -3138,16 +3138,16 @@ You can also view the [full list of alerts](alerts-reference.md) that are set to
 
 Read the [Microsoft Defender for Cloud blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-security-alerts-improvements/ba-p/3714175).
 
-### New Azure Active Directory authentication-related recommendations for Azure Data Services
+### New Microsoft Entra authentication-related recommendations for Azure Data Services
 
-We have added four new Azure Active Directory authentication recommendations for Azure Data Services.
+We have added four new Microsoft Entra authentication recommendations for Azure Data Services.
 
 | Recommendation Name | Recommendation Description | Policy |
 |--|--|--|
-| Azure SQL Managed Instance authentication mode should be Azure Active Directory Only | Disabling local authentication methods and allowing only Azure Active Directory Authentication improves security by ensuring that Azure SQL Managed Instances can exclusively be accessed by Azure Active Directory identities. | [Azure SQL Managed Instance should have Azure Active Directory Only Authentication enabled](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f78215662-041e-49ed-a9dd-5385911b3a1f) |
-| Azure Synapse Workspace authentication mode should be Azure Active Directory Only | Azure Active Directory only authentication methods improves security by ensuring that Synapse Workspaces exclusively require Azure AD identities for authentication. [Learn more](https://aka.ms/Synapse). | [Synapse Workspaces should use only Azure Active Directory identities for authentication](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2158ddbe-fefa-408e-b43f-d4faef8ff3b8) |
-| Azure Database for MySQL should have an Azure Active Directory administrator provisioned | Provision an Azure AD administrator for your Azure Database for MySQL to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [An Azure Active Directory administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e) |
-| Azure Database for PostgreSQL should have an Azure Active Directory administrator provisioned | Provision an Azure AD administrator for your Azure Database for PostgreSQL to enable Azure AD authentication. Azure AD authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [An Azure Active Directory administrator should be provisioned for PostgreSQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4) |
+| Azure SQL Managed Instance authentication mode should be Microsoft Entra ID Only | Disabling local authentication methods and allowing only Microsoft Entra authentication improves security by ensuring that Azure SQL Managed Instances can exclusively be accessed by Microsoft Entra ID identities. | [Azure SQL Managed Instance should have Microsoft Entra ID Only Authentication enabled](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f78215662-041e-49ed-a9dd-5385911b3a1f) |
+| Azure Synapse Workspace authentication mode should be Microsoft Entra ID Only | Microsoft Entra ID only authentication methods improves security by ensuring that Synapse Workspaces exclusively require Microsoft Entra ID identities for authentication. [Learn more](https://aka.ms/Synapse). | [Synapse Workspaces should use only Microsoft Entra ID identities for authentication](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f2158ddbe-fefa-408e-b43f-d4faef8ff3b8) |
+| Azure Database for MySQL should have a Microsoft Entra administrator provisioned | Provision a Microsoft Entra administrator for your Azure Database for MySQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [A Microsoft Entra administrator should be provisioned for MySQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f146412e9-005c-472b-9e48-c87b72ac229e) |
+| Azure Database for PostgreSQL should have a Microsoft Entra administrator provisioned | Provision a Microsoft Entra administrator for your Azure Database for PostgreSQL to enable Microsoft Entra authentication. Microsoft Entra authentication enables simplified permission management and centralized identity management of database users and other Microsoft services | [A Microsoft Entra administrator should be provisioned for PostgreSQL servers](https://portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fb4dec045-250a-48c2-b5cc-e0c4eec8b5b4) |
 
 ### Two recommendations related to missing Operating System (OS) updates were released to GA
 
@@ -3287,7 +3287,7 @@ We've added a new recommendation for Azure SQL Servers, `Azure SQL Server authen
 
 The recommendation is based on the existing policy [`Azure SQL Database should have Azure Active Directory Only Authentication enabled`](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fabda6d70-9778-44e7-84a8-06713e6db027)
 
-This recommendation disables local authentication methods and allows only Azure Active Directory Authentication, which improves security by ensuring that Azure SQL Databases can exclusively be accessed by Azure Active Directory identities.
+This recommendation disables local authentication methods and allows only Microsoft Entra authentication, which improves security by ensuring that Azure SQL Databases can exclusively be accessed by Microsoft Entra ID identities.
 
 Learn how to [create servers with Azure AD-only authentication enabled in Azure SQL](/azure/azure-sql/database/authentication-azure-ad-only-authentication-create-server).
 
@@ -3523,7 +3523,7 @@ With agentless scanning for VMs, you get wide visibility on installed software a
 Agentless vulnerability scanning is available in both Defender Cloud Security Posture Management (CSPM) and in [Defender for Servers P2](defender-for-servers-introduction.md), with native support for AWS and Azure VMs.
 
 - Learn more about [agentless scanning](concept-agentless-data-collection.md).
-- Find out how to enable [agentless vulnerability assessment](enable-vulnerability-assessment-agentless.md).
+- Find out how to enable [agentless vulnerability assessment](enable-agentless-scanning-vms.md).
 
 ### Defender for DevOps (Preview)
 
@@ -3743,7 +3743,7 @@ Learn more about [viewing vulnerabilities for running images](defender-for-conta
 
 Defender for Cloud now includes preview support for the [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) (AMA). AMA is intended to replace the legacy Log Analytics agent (also referred to as the Microsoft Monitoring Agent (MMA)), which is on a path to deprecation. AMA [provides many benefits](/azure/azure-monitor/agents/agents-overview#benefits) over legacy agents.
 
-In Defender for Cloud, when you [enable autoprovisioning for AMA](auto-deploy-azure-monitoring-agent.md), the agent is deployed on **existing and new** VMs and Azure Arc-enabled machines that are detected in your subscriptions. If Defenders for Cloud plans are enabled, AMA collects configuration information and event logs from Azure VMs and Azure Arc machines. The AMA integration is in preview, so we recommend using it in test environments, rather than in production environments.
+In Defender for Cloud, when you [enable autoprovisioning for AMA](auto-deploy-azure-monitoring-agent.md), the agent is deployed on **existing and new** VMs and Azure Arc-enabled machines that are detected in your subscriptions. If Defender for Cloud plans are enabled, AMA collects configuration information and event logs from Azure VMs and Azure Arc machines. The AMA integration is in preview, so we recommend using it in test environments, rather than in production environments.
 
 ### Deprecated VM alerts regarding suspicious activity related to a Kubernetes cluster
 
@@ -3786,7 +3786,7 @@ The new security agent is a Kubernetes DaemonSet, based on eBPF technology and i
 
 The security agent enablement is available through autoprovisioning, recommendations flow, AKS RP or at scale using Azure Policy.
 
-You can [deploy the Defender agent](./defender-for-containers-enable.md?pivots=defender-for-container-aks&tabs=aks-deploy-portal%2ck8s-deploy-asc%2ck8s-verify-asc%2ck8s-remove-arc%2caks-removeprofile-api#deploy-the-defender-sensor) today on your AKS clusters.
+You can [deploy the Defender agent](./defender-for-containers-enable-plan.md) today on your AKS clusters.
 
 With this announcement, the runtime protection - threat detection (workload) is now also generally available.
 
@@ -3875,7 +3875,7 @@ Learn more about [Microsoft Defender for Azure Cosmos DB](concept-defender-for-c
 
 With the addition of support for Azure Cosmos DB, Defender for Cloud now provides one of the most comprehensive workload protection offerings for cloud-based databases. Security teams and database owners can now have a centralized experience to manage their database security of their environments.
 
-Learn how to [enable protections](enable-enhanced-security.md) for your databases.
+Learn how to [enable protections](connect-azure-subscription.md) for your databases.
 
 ### General availability (GA) of Defender for SQL on machines for AWS and GCP environments
 
@@ -3984,7 +3984,7 @@ Learn how [JIT protects your AWS EC2 instances](just-in-time-access-overview.md)
 
 ### Add and remove the Defender sensor for AKS clusters using the CLI
 
-The [Defender agent](defender-for-cloud-glossary.md#defender-sensor) is required for Defender for Containers to provide the runtime protections and collects signals from nodes. You can now use the Azure CLI to [add and remove the Defender agent](defender-for-containers-enable.md?tabs=k8s-deploy-cli%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Ck8s-remove-cli&pivots=defender-for-container-aks#use-the-azure-cli-to-deploy-the-defender-sensor) for an AKS cluster.
+The [Defender agent](defender-for-cloud-glossary.md#defender-sensor) is required for Defender for Containers to provide the runtime protections and collects signals from nodes. You can now use the Azure CLI to [add and remove the Defender agent](defender-for-containers-deploy-azure-cli.md) for an AKS cluster.
 
 > [!NOTE]
 > This option is included in [Azure CLI 3.7 and above](/cli/azure/update-azure-cli).
@@ -4224,7 +4224,7 @@ Updates in February include:
 
 Defender for Containers previously only protected Kubernetes workloads running in Azure Kubernetes Service. We've now extended the protective coverage to include Azure Arc-enabled Kubernetes clusters.
 
-Learn how to [set up your Kubernetes workload protection](kubernetes-workload-protections.md#set-up-your-workload-protection) for AKS and Azure Arc enabled Kubernetes clusters.
+Learn how to [set up your Kubernetes workload protection](kubernetes-workload-protections.md) for AKS and Azure Arc enabled Kubernetes clusters.
 
 ### Native CSPM for GCP and threat protection for GCP compute instances
 
@@ -4439,7 +4439,7 @@ The new plan is free for the month of December 2021. For the potential changes t
 For more information, see:
 
 - [Overview of Microsoft Defender for Containers](defender-for-containers-introduction.md)
-- [Enable Microsoft Defender for Containers](defender-for-containers-enable.md)
+- [Enable Microsoft Defender for Containers](defender-for-containers-enable-plan.md)
 - [Introducing Microsoft Defender for Containers - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/introducing-microsoft-defender-for-containers/ba-p/2952317)
 - [Microsoft Defender for Containers | Defender for Cloud in the Field #3 - YouTube](https://www.youtube.com/watch?v=KeH0a3enLJ0&t=201s)
 
@@ -4889,7 +4889,7 @@ We've added two **preview** recommendations to deploy and maintain the endpoint 
 |[Endpoint protection health issues should be resolved on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/37a3689a-818e-4a0e-82ac-b1392b9bb000) |Resolve endpoint protection health issues on your virtual machines to protect them from latest threats and vulnerabilities. Azure Security Center supported endpoint protection solutions are documented [here](./supported-machines-endpoint-solutions-clouds-servers.md?tabs=features-windows). Endpoint protection assessment is documented [here](endpoint-protection-recommendations-technical.md).<br />(Related policy: [Monitor missing Endpoint Protection in Azure Security Center](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2faf6cd1bd-1635-48cb-bde7-5b15693900b9)) |Medium |
 
 > [!NOTE]
-> The recommendations show their freshness interval as 8 hours, but there are some scenarios in which this might take significantly longer. For example, when an on premises machine is deleted, it takes 24 hours for Security Center to identify the deletion. After that, the assessment will take up to 8 hours to return the information. In that specific situation therefore, it might take 32 hours for the machine to be removed from the list of affected resources.
+> The recommendations show their freshness interval as 8 hours, but there are some scenarios in which this might take significantly longer. For example, when an on-premises machine is deleted, it takes 24 hours for Security Center to identify the deletion. After that, the assessment will take up to 8 hours to return the information. In that specific situation therefore, it might take 32 hours for the machine to be removed from the list of affected resources.
 >
 > :::image type="content" source="media/release-notes/freshness-interval.png" alt-text="Freshness interval indicator for these two new Security Center recommendations":::
 
@@ -5456,7 +5456,7 @@ We've added four new recommendations to Security Center to make the most of this
   - **Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity**
 
 - When the extension is installed and running, it will begin auditing your machines and you'll be prompted to harden settings such as configuration of the operating system and environment settings. These two recommendations will prompt you to harden your Windows and Linux machines as described:
-  - **Windows Defender Exploit Guard should be enabled on your machines**
+  - **Microsoft Defender Exploit Guard should be enabled on your machines**
   - **Authentication to Linux machines should require SSH keys**
 
 Learn more in [Understand Azure Policy's Guest Configuration](/azure/governance/machine-configuration/overview).
@@ -5490,7 +5490,7 @@ The eleven Azure Defender alerts listed below have been deprecated.
     | ARM_MicroBurstDomainInfo | PREVIEW - MicroBurst toolkit "Get-AzureDomainInfo" function run detected |
     | ARM_MicroBurstRunbook    | PREVIEW - MicroBurst toolkit "Get-AzurePasswords" function run detected  |
 
-- These nine alerts relate to an Azure Active Directory Identity Protection connector (IPC) that has already been deprecated:
+- These nine alerts relate to a Microsoft Entra Identity Protection connector (IPC) that has already been deprecated:
 
     | AlertType           | AlertDisplayName              |
     |---------------------|-------------------------------|
@@ -5501,11 +5501,11 @@ The eleven Azure Defender alerts listed below have been deprecated.
     | MaliciousIP         | Malicious IP address          |
     | LeakedCredentials   | Leaked credentials            |
     | PasswordSpray       | Password Spray                |
-    | LeakedCredentials   | Azure AD threat intelligence  |
-    | AADAI               | Azure AD AI                   |
+    | LeakedCredentials   | Microsoft Entra ID threat intelligence  |
+    | AADAI               | Microsoft Entra ID AI                   |
 
     > [!TIP]
-    > These nine IPC alerts were never Security Center alerts. They're part of the Azure Active Directory Identity Protection connector (IPC) that was sending them to Security Center. For the last two years, the only customers who've been seeing those alerts are organizations who configured the export (from the connector to ASC) in 2019 or earlier. Azure Active Directory IPC has continued to show them in its own alerts systems and they've continued to be available in Microsoft Sentinel. The only change is that they're no longer appearing in Security Center.
+    > These nine IPC alerts were never Security Center alerts. They're part of the Microsoft Entra Identity Protection connector (IPC) that was sending them to Security Center. For the last two years, the only customers who've been seeing those alerts are organizations who configured the export (from the connector to ASC) in 2019 or earlier. Microsoft Entra ID IPC has continued to show them in its own alerts systems and they've continued to be available in Microsoft Sentinel. The only change is that they're no longer appearing in Security Center.
 
 ### Two recommendations from "Apply system updates" security control were deprecated
 
@@ -5988,7 +5988,7 @@ Learn more about [Azure Defender for SQL](defender-for-sql-introduction.md).
 
 ### Global Administrators can now grant themselves tenant-level permissions
 
-A user with the Azure Active Directory role of **Global Administrator** might have tenant-wide responsibilities, but lack the Azure permissions to view that organization-wide information in Azure Security Center.
+A user with the Microsoft Entra ID role of **Global Administrator** might have tenant-wide responsibilities, but lack the Azure permissions to view that organization-wide information in Azure Security Center.
 
 To assign yourself tenant-level permissions, follow the instructions in [Grant tenant-wide permissions to yourself](tenant-wide-permissions-management.md#grant-tenant-wide-permissions-to-yourself).
 
@@ -6567,7 +6567,7 @@ The details page for recommendations now includes a freshness interval indicator
 Updates in August include:
 
 - [Asset inventory - powerful new view of the security posture of your assets](#asset-inventory---powerful-new-view-of-the-security-posture-of-your-assets)
-- [Added support for Azure Active Directory security defaults (for multifactor authentication)](#added-support-for-azure-active-directory-security-defaults-for-multifactor-authentication)
+- [Added support for Microsoft Entra ID security defaults (for multifactor authentication)](#added-support-for-microsoft-entra-id-security-defaults-for-multifactor-authentication)
 - [Service principals recommendation added](#service-principals-recommendation-added)
 - [Vulnerability assessment on VMs - recommendations and policies consolidated](#vulnerability-assessment-on-vms---recommendations-and-policies-consolidated)
 - [New AKS security policies added to ASC_default initiative](#new-aks-security-policies-added-to-asc_default-initiative)
@@ -6582,13 +6582,13 @@ You can use the view and its filters to explore your security posture data and t
 
 Learn more about [asset inventory](asset-inventory.md).
 
-### Added support for Azure Active Directory security defaults (for multifactor authentication)
+### Added support for Microsoft Entra ID security defaults (for multifactor authentication)
 
 Security Center has added full support for [security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults), Microsoft's free identity security protections.
 
 Security defaults provide preconfigured identity security settings to defend your organization from common identity-related attacks. Security defaults already protecting more than 5 million tenants overall; 50,000 tenants are also protected by Security Center.
 
-Security Center now provides a security recommendation whenever it identifies an Azure subscription without security defaults enabled. Until now, Security Center recommended enabling multifactor authentication using conditional access, which is part of the Azure Active Directory (AD) premium license. For customers using Azure AD free, we now recommend enabling security defaults.
+Security Center now provides a security recommendation whenever it identifies an Azure subscription without security defaults enabled. Until now, Security Center recommended enabling multifactor authentication using conditional access, which is part of the Microsoft Entra ID premium license. For customers using Microsoft Entra ID free, we now recommend enabling security defaults.
 
 Our goal is to encourage more customers to secure their cloud environments with MFA, and mitigate one of the highest risks that is also the most impactful to your [secure score](secure-score-security-controls.md).
 
@@ -6600,7 +6600,7 @@ A new recommendation was added to recommend that Security Center customers using
 
 The recommendation, **Service principals should be used to protect your subscriptions instead of Management Certificates** advises you to use Service Principals or Azure Resource Manager to more securely manage your subscriptions.
 
-Learn more about [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object).
+Learn more about [Application and service principal objects in Microsoft Entra ID](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object).
 
 ### Vulnerability assessment on VMs - recommendations and policies consolidated
 
@@ -6929,9 +6929,9 @@ The two new recommendations added to the control are:
 
 - **Guest configuration extension should be installed on Windows virtual machines (Preview)** - Using [Azure Policy Guest Configuration](/azure/governance/machine-configuration/overview) provides visibility inside virtual machines to server and application settings (Windows only).
 
-- **Windows Defender Exploit Guard should be enabled on your machines (Preview)** - Windows Defender Exploit Guard leverages the Azure Policy Guest Configuration agent. Exploit Guard has four components that are designed to lock down devices against a wide variety of attack vectors and block behaviors commonly used in malware attacks while enabling enterprises to balance their security risk and productivity requirements  (Windows only).
+- **Microsoft Defender Exploit Guard should be enabled on your machines (Preview)** - Microsoft Defender Exploit Guard leverages the Azure Policy Guest Configuration agent. Exploit Guard has four components that are designed to lock down devices against a wide variety of attack vectors and block behaviors commonly used in malware attacks while enabling enterprises to balance their security risk and productivity requirements  (Windows only).
 
-Learn more about Windows Defender Exploit Guard in [Create and deploy an Exploit Guard policy](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
+Learn more about Microsoft Defender Exploit Guard in [Create and deploy an Exploit Guard policy](/mem/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
 
 Learn more about security controls in [Enhanced secure score (preview)](secure-score-security-controls.md).
 

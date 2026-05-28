@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Resource Manager - Benefits and Features
 description: Learn about the benefits and features of Microsoft Defender for Resource Manager to protect your Azure resources from potential threats.
-ms.date: 08/20/2025
+ms.date: 04/19/2026
 ms.topic: overview
 #customer intent: As a security operations team, I want to learn about the benefits and features of Microsoft Defender for Resource Manager so that I can protect the resource management layer of my Azure resources.
 ---
@@ -38,7 +38,7 @@ A full list of the alerts provided by Microsoft Defender for Resource Manager is
 In this article, you learned about Microsoft Defender for Resource Manager.
 
 > [!div class="nextstepaction"]
-> [Enable enhanced protections](enable-enhanced-security.md)
+> [Enable enhanced protections](connect-azure-subscription.md)
 
 For related material, see the following article:
 

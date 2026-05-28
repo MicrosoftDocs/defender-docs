@@ -45,6 +45,9 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 - **Supported operating systems**- Windows Server 2012 R2 and later versions.
 
+> [!NOTE]
+> Azure Arc SQL Server instances with the Arc proxy feature enabled are **not** currently supported. Arc proxy is an optional connectivity feature for Azure Arc-enabled servers.
+
 ## Enable the plan
 
 ### Enable the plan on an Azure subscription
@@ -116,8 +119,11 @@ To enable the plan on specific machines, you need to [disable the plan on the su
 
 Depending on your environment, it can take a few hours to discover and protect SQL instances. As a final step, you should [verify that all machines are protected](verify-machine-protection.md).
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Verify that all machines are protected](verify-machine-protection.md)
 ## Related content
 
-- [Verify that all machines are protected](verify-machine-protection.md)
 - [Troubleshoot Defender for SQL on machines configuration](troubleshoot-sql-machines-guide.md)
 - [Disable Defender for SQL Servers on Machines](disable-sql-on-machines.md)

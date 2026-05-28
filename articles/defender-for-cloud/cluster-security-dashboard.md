@@ -1,181 +1,168 @@
 ---
-title: Azure Kubernetes Service (AKS) Security Dashboard
-description: Explain the views and actions in the AKS security Dashboard to enable and protect an individual cluster with Defender for Containers.
+title: Review security findings in the AKS security dashboard
+description: Learn how to review and investigate alerts, vulnerabilities, misconfigurations, and compliance findings in the AKS security dashboard in Microsoft Defender for Cloud.
+author: ElazarK
 ms.author: elkrieger
-ms.topic: concept-article
-ms.date: 08/17/2025
-CustomerIntent: As the person responsible for the security of a cluster, I want know what views and actions the cluster security dashboard provides, so I can remediate security issues in the cluster.
+ms.topic: how-to
+ms.date: 05/18/2026
+ms.service: defender-for-cloud
 ---
 
-# Azure Kubernetes Service (AKS) Security Dashboard
+# Review security findings in the AKS security dashboard
 
-The AKS security dashboard gives visibility and automated remediation for security issues. It lets platform engineering teams secure their Kubernetes environment more easily and effectively.
+The AKS security dashboard shows security findings for an Azure Kubernetes Service (AKS) cluster in Microsoft Defender for Cloud.
 
-Consolidating security and operational data within the AKS portal gives engineers a unified view of their Kubernetes environment. This view helps detect and fix security issues efficiently, with minimal workflow disruption. It lowers the risk of missed security issues and speeds up remediation.
-
-The AKS Security Dashboard lets you:
-
-- Review, investigate, and get guided remediation for runtime threat detection alerts, vulnerability assessment, security misconfigurations, and deviation from compliance standards.
-
-- Enable the Defender for Containers plan and configure settings for the specific AKS cluster.
-
-- Assign an owner and track progress on a security issue. This feature works when Defender Cloud Security Posture Management (Defender CSPM) is turned on for the subscription.
+It includes alerts, vulnerabilities, misconfigurations, and compliance results to help you identify and prioritize issues.
 
 ## Prerequisites
 
-The AKS Security Dashboard shows security issues for a cluster if at least one of the following plans is enabled:
+To use the AKS Security dashboard, ensure you have:
 
-- [Defender for Containers](tutorial-enable-containers-azure.md) on the subscription or the [individual cluster](#plan-enablement).
-- [Defender CSPM](tutorial-enable-cspm-plan.md) on the subscription.
+- A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-## Using the AKS Security Dashboard
+- [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) enabled with one of the following plans:
+  - [Defender for Containers](tutorial-enable-containers-azure.md)
+  - [Defender CSPM](tutorial-enable-cspm-plan.md)
 
-Access the AKS Security Dashboard from an AKS cluster resource pane by selecting **Microsoft Defender for Cloud** in the menu list.
+## Review security findings
 
-### Understand the dashboard sections
+## Security alerts
 
-#### Security findings
+Security alerts indicate suspicious activity or potential threats detected in the cluster.
 
-The top findings bar shows the security status of the cluster. For each findings type, it shows the number of the highest severity or risk issues. Use the top findings to decide whether to check the different tabs for further investigation.
+For example, the **Exposed Kubernetes service detected** alert is raised when a Kubernetes Service of type `LoadBalancer` is created or updated and publicly exposes workloads. Prioritize this alert when exposure is unintended, or when internet-facing services have weak or missing authentication.
 
-:::image type="content" source="media/cluster-security-dashboard/security-findings-summary-bar.png" alt-text="Screenshot of the security findings summary bar." lightbox="media/cluster-security-dashboard/security-findings-summary-bar.png":::
+Alerts are prioritized by severity to help you identify which issues to investigate first:
 
-### Security alerts tab
+- **High** High probability that the resource is compromised. Investigate immediately.
+- **Medium** Indicates suspicious activity that might represent a compromise.
+- **Low** Might indicate a benign or blocked activity.
+- **Informational** Provides context and might be relevant when correlated with other alerts.
 
-Security alerts are notifications from Defender for Cloud about suspicious activity or active potential threats in your environment. The service prioritizes the alerts by risk.
+### Investigate a security alert
 
-When you select an alert, you open a panel that provides more information about the detection that triggered the alert. The panel also suggests actions you can take to resolve the issue.
+To investigate a security alert:
 
-#### Alerts severity
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-- **High** There's a high probability that your resource is compromised. You should investigate immediately. Defender for Cloud has high confidence in both the malicious intent and the findings it uses to issue the alert.
+1. Go to **Kubernetes services** > **Clusters**.
 
-- **Medium** The alert probably indicates suspicious activity and might show that a resource is compromised. The confidence in the analytic or finding is medium. The confidence of the malicious intent is medium to high. These alerts usually come from machine learning or anomaly based detections.
+1. Select the relevant AKS cluster.
 
-- **Low** This alert might be a benign positive or a blocked attack.
+1. Select **Microsoft Defender for Cloud**.
 
-- **Informational** An incident typically includes several alerts. Some alerts might appear on their own to be only informational, but in the context of the other alerts, they might warrant a closer look.
+1. In the **Security alerts** tab, select an alert to open the details pane.
 
-#### Investigate an alert
+In the details pane:
 
-1. Review the alert description and recommended steps for response in the alert right panel.
+- Review the alert details and recommended remediation steps.
+- Use related entities to identify affected resources.
+- Select **Open logs** to investigate activity within the relevant timeframe.
+- Create a suppression rule if the alert isn't relevant for your organization.
+- Configure security rules for supported alert types.
 
-1. Use the additional details and related entities to identify the compromised workload.
+After you mitigate the issue, update the alert status.
 
-1. Select **Open logs** to investigate the logs in the relevant timeframe.
+:::image type="content" source="media/cluster-security-dashboard/alerts-tab-security-findings.png" alt-text="Screenshot of the Security alerts tab showing alert details." lightbox="media/cluster-security-dashboard/alerts-tab-security-findings.png":::
 
-1. Create a suppression rule to suppress future alerts with similar characteristics if the alert isn't relevant for your organization. [Learn more](/azure/defender-for-cloud/alerts-suppression-rules) about suppression rules.
+## Vulnerability assessment
 
-1. Configure security rules for the cluster to control some of the alert types. [Learn more](/azure/defender-for-cloud/binary-drift-detection) on how to configure drift policies.
+The vulnerability assessment section shows vulnerabilities for running container images and Kubernetes node pools. 
 
-1. Change the alert status once you mitigate an alert for future reference or filtering. You need the security admin role to change the alert status.
+Findings are prioritized by severity. When Defender CSPM is enabled, prioritization also considers contextual risk signals.
 
-> [!NOTE]
-> Defender for Cloud also streams alerts directly to [Microsoft XDR](https://www.microsoft.com/security/business/solutions/extended-detection-response-xdr).
+Each finding includes affected packages, associated CVEs, and the fixed version to remediate the issue.
 
-**[Learn more](/azure/defender-for-cloud/alerts-overview)** about security alerts in Defender for Cloud.
+Vulnerabilities can include:
 
-:::image type="content" source="media/cluster-security-dashboard/alerts-tab-security-findings.png" alt-text="Screenshot of the AKS Security Dashboard Alerts tab showing a list of security alerts with columns for severity, title, activity start time, last updated time, and status." lightbox="media/cluster-security-dashboard/alerts-tab-security-findings.png":::
+- **OS packages** (Linux and Windows)  
+- **Language-specific packages** (Linux)
 
-### Vulnerability assessment tab
+For supported configurations, see the [support matrix for Defender for Containers](/azure/defender-for-cloud/support-matrix-defender-for-containers).
 
-The AKS security dashboard shows software vulnerability scan results for running containers and the cluster's node pools. It generates a prioritized list of vulnerable components. This list is ranked by a dynamic engine that assesses the risks in your environment (available with Defender CSPM plan enabled) and considers the potential for exploitation.
+### Review vulnerability findings
 
-The scanning of container images includes the following types of packages:
+To review vulnerability findings:
 
-- **OS packages:** Scans for vulnerabilities in packages that the OS package manager installs in both Linux and Windows OS. See the [full list of the supported OS and their versions](/azure/defender-for-cloud/support-matrix-defender-for-containers).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-- **Language-specific packages (Linux only):** Supports scanning for language-specific packages and files, along with their dependencies, that are installed or copied without using the OS package manager. See the [complete list of supported languages](/azure/defender-for-cloud/support-matrix-defender-for-containers).
+1. Go to **Kubernetes services** > **Clusters**.
 
-#### Review vulnerability assessment findings
+1. Select the relevant AKS cluster.
 
-1. Select the vulnerable component in the vulnerabilities tab to open the details panel.
+1. Select **Microsoft Defender for Cloud**.
 
-1. Use the general details to identify the relevant component and ownership for fix.
+1. In the **Vulnerabilities** tab, select a component to open the details pane.
 
-1. Review the list of CVEs, use the package name and the fixed version information to identify to which package version the package should be upgraded to remediate the issue.
+In the details pane:
 
-1. Use the assigned owner (available with the Defender CSPM plan), to assign an owner for the fix, and notify them by e-mail or with a ticket in service now.
+- Review affected packages and associated CVEs.
+- Identify the fixed version for the vulnerable package.
+- Update the container image or dependency to remediate the issue.
 
-[Learn more](/azure/defender-for-cloud/agentless-vulnerability-assessment-azure?tabs=azure-new%2Cazure-old) about vulnerability assessment in Defender for Cloud.
+If expected vulnerabilities don't appear, verify that the image, package type, and environment are supported. See the [support matrix for Defender for Containers](/azure/defender-for-cloud/support-matrix-defender-for-containers).
 
-:::image type="content" source="media/cluster-security-dashboard/vulnerabilities-assessment-tab.png" alt-text=" Screenshot of the Vulnerabilities tab showing vulnerable components list with severity levels, CVE counts, affected packages, and risk assessment scores." lightbox="media/cluster-security-dashboard/vulnerabilities-assessment-tab.png":::
+:::image type="content" source="media/cluster-security-dashboard/vulnerabilities-assessment-tab.png" alt-text="Screenshot of the Vulnerabilities tab showing vulnerable components and severity." lightbox="media/cluster-security-dashboard/vulnerabilities-assessment-tab.png":::
 
-### Misconfigurations tab
+## Misconfigurations
 
-Microsoft Defender for Cloud continuously monitors Azure and AKS APIs, along with Kubernetes workloads. It identifies configurations within the cluster or its running containers that could affect the cluster's security posture and expose the cluster to risk. Defender also offers guidelines and automatic fixes to address these issues.
+Misconfigurations identify security configuration issues in Kubernetes resources, cluster settings, and running workloads.
 
-#### Review misconfiguration assessment findings
+Findings are based on Azure Policy and Kubernetes configuration assessments.
 
-1. Select the misconfigured component in the misconfiguration tab to open the details panel.
+Review these findings with network exposure in mind, including Kubernetes Service types and ingress configurations that can unintentionally expose workloads to the internet.
 
-1. Review the description and remediation steps.
+Each finding includes remediation guidance. Some findings support automated remediation through **Quick Fix** or policy enforcement.
 
-1. For cluster level misconfigurations, use the **Quick Fix** button to start remediation flow.
+### Review and remediate misconfigurations
 
-1. For containers misconfigurations, it's recommended to deploy policy to prevent future faulty deployments. Use the link to a relevant built-in “Azure Policy” policy.
+To review and remediate misconfigurations:
 
-1. Use the assigned owner (available with the Defender CSPM plan), to assign an owner for the fix, and notify them by e-mail or with a ticket in service now.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-[Learn more](/azure/defender-for-cloud/kubernetes-workload-protections) about how to remediate security misconfigurations with Defender for Cloud.
+1. Go to **Kubernetes services** > **Clusters**.
+
+1. Select the relevant AKS cluster.
+
+1. Select **Microsoft Defender for Cloud**.
+
+1. In the **Misconfigurations** tab, select a finding to open the details pane.
+
+In the details pane:
+
+- Review the description and remediation steps.
+- Review Kubernetes Service types and ingress exposure settings to reduce unintended internet-facing access.
+- For cluster-level misconfigurations, select **Quick Fix** when available.
+- For workload issues, apply the recommended Azure Policy to prevent recurrence.
+- Assign an owner to track remediation (requires Defender CSPM).
 
 :::image type="content" source="media/cluster-security-dashboard/misconfigurations-assessment-tab.png" alt-text="Screenshot of the Misconfigurations tab displaying security configuration issues." lightbox="media/cluster-security-dashboard/misconfigurations-assessment-tab.png":::
 
-### Compliance tab
+## Compliance
 
-Defender for Cloud continuously assesses your environment against selected regulatory standards and benchmarks. It provides a clear view of your compliance status, highlights unmet requirements, and offers recommendations to help you improve your cloud security posture.
+The compliance section shows the cluster’s status against regulatory standards and benchmarks.
 
-#### How to use the compliance tab
+It lists controls that the cluster doesn't meet and provides recommendations to help you remediate them.
 
-1. Configure the required compliance standard you need to adhere to. You configure the standard at the subscription level. Follow the link for configuration from the compliance tab or the dashboard settings.
+### Assess compliance
 
-1. Once the relevant standards are selected, use the compliance tab summary to understand which standard you comply with and which requires additional steps to comply with.
+To assess compliance:
 
-1. The compliance tab grid shows only recommendations for controls the cluster or its components aren't complying with.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Use the filters to filter the recommendations grid according to your needs.
+1. Go to **Kubernetes services** > **Clusters**.
 
-1. Select each recommendation to open the details panel.
+1. Select the relevant AKS cluster.
 
-1. Follow the remediation steps in the side panel to comply with the relevant control.
+1. Select **Microsoft Defender for Cloud**.
 
-[Learn more](/azure/defender-for-cloud/concept-regulatory-compliance-standards)about regulatory compliance in Defender for Cloud.
+1. In the **Compliance** tab, review failing controls.
 
-[Learn more about how to configure regulatory compliance standards](/azure/defender-for-cloud/update-regulatory-compliance-packages)
+1. Select a control to open the details pane.
+
+In the details pane:
+
+- Review the recommendation and remediation steps.
+- Apply the required changes to meet the control.
 
 :::image type="content" source="media/cluster-security-dashboard/compliance-standards-tab.png" alt-text="Screenshot of the Compliance tab showing regulatory compliance assessment results." lightbox="media/cluster-security-dashboard/compliance-standards-tab.png":::
-
-### Bulk actions
-
-You can select multiple recommendations or alerts by using the checkboxes beside each recommendation. Then, select **Assign owner** for recommendations or **Change Status** for alerts in the dashboard toolbar.
-
-### Export security findings
-
-Select **Download CSV report** to download the cluster security findings as a CSV file. You can also use the [Defender for Cloud REST API](/rest/api/defenderforcloud-composite/assessments) to retrieve security findings.
-
-### Setting
-
-#### Plan enablement
-
-Enable Microsoft Defender for Cloud containers protection (Defender for Containers) for a single AKS cluster or at the subscription level to protect all clusters in that subscription. Use the settings panel from the dashboard toolbar to enable the plan.
-
-> [!NOTE]
->
-> - When you enable Defender for Containers at the subscription level, you can only change plan settings at the subscription level.
->
-> - By enabling other Microsoft Defender for Cloud plans, you can scan all your cloud assets to identify cross-resource attack paths, more accurately identify risk, and provide alerts and full visibility into cross-resource security incidents. [Learn more.](/azure/defender-for-cloud/defender-for-cloud-introduction)
-
-#### Plan configurations
-
-- **Defender Sensor** – Deploys the Defender for Containers agent on the cluster. This sensor is required for runtime threat protection and gated deployment capabilities.
-
-- **Kubernetes API access** – Required for vulnerability assessment, misconfigurations, compliance assessment, and runtime threat protection.
-
-- **Registry access** – Required for vulnerability assessment and gated deployment capabilities.
-
-- **Azure policy** - Deploys an agent on the cluster to generate recommendations for hardening the cluster data plane.
-
-> [!NOTE]
-> If you configure settings at the subscription level, they override any settings configured at the cluster level.
-
-Set the Defender for Containers plan for the cluster or the subscription by using [REST API commands](/rest/api/defenderforcloud-composite/pricings/update).

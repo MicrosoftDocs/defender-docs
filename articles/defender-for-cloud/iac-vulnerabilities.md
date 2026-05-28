@@ -1,7 +1,7 @@
 ---
 title: Scan for misconfigurations in Infrastructure as Code
 description: Learn how to use Microsoft Security DevOps scanning with Microsoft Defender for Cloud to find misconfigurations in Infrastructure as Code (IaC).
-ms.date: 05/19/2025
+ms.date: 05/28/2026
 ms.topic: how-to
 #customer intent: As a developer, I want to learn how to use Microsoft Security DevOps scanning with Microsoft Defender for Cloud to find misconfigurations in Infrastructure as Code (IaC) in a connected GitHub repository or Azure DevOps project.
 ---
@@ -197,17 +197,17 @@ To set up an extension and view scan results in Azure DevOps:
 
 1. To view the results of the IaC scan, select **Pipelines**, and then select the pipeline you modified.
 
-1. See see more details, select a specific pipeline run.
+1. To see more details, select a specific pipeline run.
 
 ## View details and remediation information for applied IaC rules
 
 The IaC scanning tools that are included with Microsoft Security DevOps are [Template Analyzer](https://github.com/Azure/template-analyzer) ([PSRule](https://aka.ms/ps-rule-azure) is included in Template Analyzer), [Checkov](https://www.checkov.io/) and [Terrascan](https://github.com/tenable/terrascan).
 
-Template Analyzer runs rules on Azure Resource Manager templates (ARM templates) and Bicep templates. For more information, see the [Template Analyzer rules and remediation details](https://github.com/Azure/template-analyzer/blob/main/docs/built-in-rules.md#built-in-rules).
+Template Analyzer runs rules on Azure Resource Manager templates (ARM templates) and Bicep templates. See the [Template Analyzer rules and remediation details](https://github.com/Azure/template-analyzer/blob/main/docs/built-in-rules.md#built-in-rules).
 
-Terrascan runs rules on ARM templates and templates for CloudFormation, Docker, Helm, Kubernetes, Kustomize, and Terraform. For more information, see the [Terrascan rules](https://runterrascan.io/docs/policies/).
+Terrascan runs rules on ARM templates and templates for CloudFormation, Docker, Helm, Kubernetes, Kustomize, and Terraform. See the [Terrascan rules](https://runterrascan.io/docs/policies/).
 
-Chekov runs rules on ARM templates and templates for CloudFormation, Docker, Helm, Kubernetes, Kustomize, and Terraform. For more information, see the [Checkov rules](https://www.checkov.io/5.Policy%20Index/all.html).
+Chekov runs rules on ARM templates and templates for CloudFormation, Docker, Helm, Kubernetes, Kustomize, and Terraform. See the [Checkov rules](https://www.checkov.io/5.Policy%20Index/all.html).
 
 To learn more about the IaC scanning tools that are included with Microsoft Security DevOps, see:
 
@@ -224,3 +224,4 @@ To get more information:
 - Learn more about [DevOps security](defender-for-devops-introduction.md).
 - Learn how to [connect your GitHub repository](quickstart-onboard-github.md) to Defender for Cloud.
 - Learn how to [connect your Azure DevOps project](quickstart-onboard-devops.md) to Defender for Cloud.
+

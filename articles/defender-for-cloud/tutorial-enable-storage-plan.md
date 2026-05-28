@@ -51,8 +51,19 @@ We recommend that you enable Defender for Storage via a policy. This method faci
 ## View your current coverage
 
 Defender for Cloud provides access to [workbooks](custom-dashboards-azure-workbooks.md) through [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview). Workbooks are customizable reports that provide insights into your security posture.
-
 The [coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook) helps you understand your current coverage by showing which plans are enabled on your subscriptions and resources.
+
+In addition, you can view Defender for Storage threat protection and posture coverage directly in Storage Center, alongside your storage resources.
+
+Storage Center gives you a centralized, storage-native view of Defender for Storage protection status. This view helps you quickly understand:
+
+- Which storage accounts are protected, partially protected, or not protected
+- Where malware scanning, activity monitoring, and sensitive data discovery are enabled
+- Where security gaps exist across Azure Blob Storage and Azure Files storage
+
+You can drill down from high-level insights to service-level and resource-level views, and seamlessly deep‑link into Defender for Cloud to take action and remediate gaps.
+
+Learn more about [Azure storage](/azure/storage/blobs/storage-blobs-overview).
 
 ## Related content
 

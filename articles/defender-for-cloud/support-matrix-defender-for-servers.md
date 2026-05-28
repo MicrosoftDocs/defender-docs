@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: elazark
 ms.author: elkrieger
-ms.date: 12/22/2025
+ms.date: 05/10/2026
 ---
 
 # Defender for Servers support
@@ -66,7 +66,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 
 | **Feature** | **Azure VMs**<br/> **[Virtual Machine Scale Sets (Flexible orchestration)](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)**<sup>[1](#windows-footnote1)</sup> | **Azure Arc-enabled servers** (including Azure VMware solution)| **Defender for Servers required** |
 |--|:-:|:-:|:-:|
-| [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔</br> Available on: Windows Server 2025, 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Windows 10/11 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq) | ✔ | Yes |
+| [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔</br> Available on: Windows Server 2025, 2022, 2019, 2016, 2012 R2, 2008 R2 SP1 | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ | Yes |
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ | Yes |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |

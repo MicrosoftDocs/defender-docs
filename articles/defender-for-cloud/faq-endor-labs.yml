@@ -29,7 +29,7 @@ sections:
       - question: |
           How do I configure Endor Labs for GitHub Workflows?
         answer: |
-          Customers can integrate with GitHub Workflows using the Endor Labs Action. Workflow scans help teams focus on the most actionable results, optimizing their time. These scans can be triggered from automated GitHub Workflows to identify new vulnerabilities compared to the baseline of the target branch. [Refer to Endor Lab's documentation for assistance with setting up the Endor Labs Action](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-github-actions/).
+          Customers can integrate with GitHub Workflows using the Endor Labs Action. Workflow scans help teams focus on the most actionable results, optimizing their time. These scans can be triggered from automated GitHub Workflows to identify new vulnerabilities compared to the baseline of the target branch. [Refer to Endor Lab's documentation for assistance with setting up the Endor Labs Action](https://docs.endorlabs.com/setup-deployment/ci-cd/scan-with-github-actions).
 
       - question: |
           How do I configure Endor Labs for Azure DevOps environments?
@@ -39,7 +39,7 @@ sections:
       - question: |
           How do I configure Endor Labs for GitLab environments?
         answer: |
-          Endor Labs can scan during GitLab CI pipeline runs after code is built to check for vulnerabilities. Refer to [Endor Labs documentation for assistance with setting up the GitLab CI Pipelines integration](https://docs.endorlabs.com/scan-with-endorlabs/integrating-into-ci/scan-with-gitlab/)
+          Endor Labs can scan during GitLab CI pipeline runs after code is built to check for vulnerabilities. Refer to [Endor Labs documentation for assistance with setting up the GitLab CI Pipelines integration](https://docs.endorlabs.com/setup-deployment/ci-cd/scan-with-gitlab)
 
       - question: |
           How do I view results from Endor Labs scans?

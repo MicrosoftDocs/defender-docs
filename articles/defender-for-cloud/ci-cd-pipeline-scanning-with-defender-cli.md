@@ -21,7 +21,7 @@ Microsoft Defender for Cloud Command‑Line Interface (Defender for Cloud CLI) l
 
 ## Prerequisites
 
-* An Azure Subscription with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account).
+* An Azure Subscription with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 * Defender CSPM enabled.
 * One of the following CI/CD pipeline tools: Azure Pipelines, GitHub Actions, Jenkins, BitBucket Pipelines, GitLab, Google Cloud Build, Bamboo, CircleCI, Travis CI, TeamCity, Oracle DevOps services, or AWS CodeBuild.
 * Windows or Linux/WSL terminal for local desktop scans.
