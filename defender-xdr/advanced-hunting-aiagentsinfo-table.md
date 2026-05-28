@@ -26,6 +26,9 @@ ms.date: 04/15/2026
 > [!IMPORTANT]
 > Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
+> [!IMPORTANT]
+> To access the `AIAgentsInfo` table and the Agent entity in Microsoft Defender XDR, you must enable preview features in the Microsoft Defender portal. For more information, see [Preview features in Microsoft Defender XDR](preview.md).
+
 The `AIAgentsInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about AI agents and their associated entities. Use this reference to construct queries that return information from this table.
 
 Microsoft Defender populates this table through connectors in Microsoft Defender for Cloud Apps Power Plaform and Microsoft Agent 365. If your organization doesn't deploy these services, queries that use the table don't work or return any results. For more information, see:

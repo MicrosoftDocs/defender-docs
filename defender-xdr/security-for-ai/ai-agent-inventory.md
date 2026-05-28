@@ -23,6 +23,10 @@ Microsoft Defender also provides a dedicated AI agent inventory experience in th
 
 This article explains how to discover AI agents, assess their security posture, and use the AI agent inventory in the Microsoft Defender portal.
 
+## Prerequisites
+
+To access the `AIAgentsInfo` table and the Agent entity in Microsoft Defender XDR, you must [enable preview features](../preview.md) in the Microsoft Defender portal.
+
 ## View all Agent 365-managed agents and configuration details using Advanced Hunting
 
 The [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) in Advanced Hunting provides a complete inventory of your Agent 365 agents along with their security-relevant properties. This table enables you to:
