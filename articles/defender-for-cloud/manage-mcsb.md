@@ -2,9 +2,8 @@
 title: Manage MCSB in Microsoft Defender for Cloud
 description: Learn how to manage the  MCSB standard in Microsoft Defender for Cloud
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 05/20/2025
 ms.custom: sfi-image-nochange
-#customer intent: As a security administrator, I want to manage Microsoft Cloud Security Benchmark recommendations in Defender for Cloud so that I can enforce and tune policy behavior across scopes.
 ---
 
 # Manage MCSB recommendations in Defender for Cloud
@@ -97,14 +96,12 @@ Potential conflicts can arise when you have multiple assignments of standards wi
 
 All assignments on the scope will be aligned with the new setting, resolving the conflict.
 
-## Learn more
+## Next steps
+
+This page explained security policies. For related information, see the following pages:
 
 - [Learn how to set policies using PowerShell](/azure/governance/policy/assign-policy-powershell)
 - [Learn how to edit a security policy in Azure Policy](/azure/governance/policy/tutorials/create-and-manage)
-- [Learn how to set a policy across subscriptions or on management groups using Azure Policy](/azure/governance/policy/overview)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Enable Defender for Cloud on all subscriptions in a management group](onboard-management-group.md)
+- [Learn how to set a policy across subscriptions or on Management groups using Azure Policy](/azure/governance/policy/overview)
+- [Learn how to enable Defender for Cloud on all subscriptions in a management group](onboard-management-group.md)
 
