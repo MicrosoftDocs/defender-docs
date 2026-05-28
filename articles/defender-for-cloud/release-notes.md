@@ -28,6 +28,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## June 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| June 1, 2026 | Preview | [Kubernetes Misconfiguration Enforcement in Defender for Containers (Preview)](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-preview) |
+
+### Kubernetes Misconfiguration Enforcement in Defender for Containers (Preview)
+
+June 1, 2026
+
+Kubernetes Misconfiguration Enforcement is now available in public preview in Microsoft Defender for Containers. This feature extends Kubernetes security from audit to audit or block mode at deployment time, preventing risky Kubernetes deployments before they reach production.
+
+Kubernetes Misconfiguration Enforcement evaluates Kubernetes resource configurations at admission time and enforces Microsoft Defender security best practice rules, complementing existing post-deployment monitoring with proactive enforcement. After you enable the feature, a default security rule is automatically created in Audit mode. You can configure rules to use Block mode to actively prevent non-compliant deployments.
+
+This feature is available only in commercial clouds. It isn't available in national or sovereign clouds, including US Government, China Government, and other sovereign regions.
+
+For more information, see [Enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md).
+
 ## May 2026
 
 | Date | Category | Update |
@@ -44,7 +62,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
 
-### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage 
+### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage
 
 May 26, 2026
 
