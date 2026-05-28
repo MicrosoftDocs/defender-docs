@@ -1,6 +1,6 @@
 ---
-title: Review machine changes with file integrity monitoring in Microsoft Defender for Cloud 
-description: Learn how to review machine changes with file integrity monitoring in Microsoft Defender for Cloud 
+title: Review changes in file integrity monitoring
+description: Learn how to review changes in file integrity monitoring in Microsoft Defender for Cloud.
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
@@ -70,5 +70,5 @@ The file integrity monitoring data resides within the Azure Log Analytics worksp
     | order by Computer, RegistryKey  
     ```
 
-1. The reports can be exported to CSV for archival purposes and  channeled to a Power BI report for further analysis.
+1. You can export the reports to CSV for archival purposes or send them to Power BI for further analysis.
 

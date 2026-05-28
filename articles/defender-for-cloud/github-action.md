@@ -34,7 +34,7 @@ Microsoft Security DevOps uses the following Open Source tools:
 
 ## Configure the Microsoft Security DevOps GitHub action
 
-**To setup GitHub action**:
+To set up the GitHub action:
 
 1. Sign in to [GitHub](https://www.github.com).
 
@@ -46,7 +46,7 @@ Microsoft Security DevOps uses the following Open Source tools:
 
 1. Select **New workflow**.
 
-1. On the Get started with GitHub Actions page, select **set up a workflow yourself**
+1. On the Get started with GitHub Actions page, select **set up a workflow yourself**.
 
     :::image type="content" source="media/msdo-github-action/new-workflow.png" alt-text="Screenshot showing where to select the new workflow button.":::
 
@@ -121,7 +121,7 @@ Microsoft Security DevOps uses the following Open Source tools:
 
    :::image type="content" source="media/msdo-github-action/verify-actions.png" alt-text="Screenshot showing you where to navigate to, to see that your new action is running." lightbox="media/msdo-github-action/verify-actions.png":::
 
-## View Scan Results
+## View scan results
 
 **To view your scan results**:
 
@@ -133,9 +133,9 @@ Microsoft Security DevOps uses the following Open Source tools:
 
 ## Learn more
 
-- Learn about GitHub actions for Azure. See [GitHub actions for Azure](/azure/developer/github/github-actions).
+- Learn about GitHub actions for Azure in [GitHub actions for Azure](/azure/developer/github/github-actions).
 
-- Learn how to deploy apps from GitHub to Azure. See [deploy apps from GitHub to Azure](/azure/developer/github/deploy-to-azure).
+- Learn how to deploy apps from GitHub to Azure in [Deploy apps from GitHub to Azure](/azure/developer/github/deploy-to-azure).
 
 ## Next steps
 

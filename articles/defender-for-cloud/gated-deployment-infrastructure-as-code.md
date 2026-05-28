@@ -18,7 +18,7 @@ The gated deployment agent requires read access to all of your Azure Container R
 
 - An Azure subscription with Microsoft Defender for Cloud enabled.
 - You must [enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md) with the defender sensor and registry access extensions turned on.
-- You must enable on your Azure Kubernetes Service (AKS) cluster: 
+- On your Azure Kubernetes Service (AKS) cluster, enable:
     - [An OpenID Connect (OIDC) issuer](/azure/aks/use-oidc-issuer#create-an-aks-cluster-with-the-oidc-issuer). 
     - [An Azure Workload Identity](/azure/aks/workload-identity-deploy-cluster?tabs=new-cluster).
 
@@ -43,7 +43,7 @@ The gated deployment agent requires read access to all of your Azure Container R
 
 1. Under the [securityGating section of the managed cluster API configuration](https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#resource-format-1), set the [MSI’s objectId in the identities parameter](https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#managedclustersecurityprofiledefendersecuritygating-1) under the security gating section of the managed cluster API configuration. 
 
-    :::image type="content" source="media/gated-deployment-infrastructure-as-code/identities.png" alt-text="Screenshot that shows the section of the securityGating section of the managed cluster API configuration, where the code is located." lightbox="media/gated-deployment-infrastructure-as-code/identities.png":::
+    :::image type="content" source="media/gated-deployment-infrastructure-as-code/identities.png" alt-text="Screenshot of the managed cluster API configuration showing the identities parameter in the security gating section." lightbox="media/gated-deployment-infrastructure-as-code/identities.png":::
 
     This ensures the gated deployment agent can use the MSI at runtime.
 
