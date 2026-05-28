@@ -44,8 +44,6 @@ The cloud security explorer can be used to identify generative AI workloads and 
 
 1. Select a node to review the findings.
 
-    :::image type="content" source="media/identify-ai-workload-model/more-resource-details.png" alt-text="Screenshot of the results with a different resource selected and its results are displayed." lightbox="media/identify-ai-workload-model/more-resource-details.png":::
-
     The findings show the deployed models that are running on your resources and specific model metadata regarding those deployments.
 
 ## Next step
