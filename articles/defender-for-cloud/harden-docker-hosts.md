@@ -4,7 +4,7 @@ description: How to protect your Docker hosts and verify they're compliant with 
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 02/19/2025
+ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
 ---
 # Review Docker host hardening recommendations
@@ -52,3 +52,4 @@ When vulnerabilities are found, they're grouped inside a single recommendation.
 ## Next steps
 
 Learn more about [container security in Defender for Cloud](defender-for-containers-introduction.md).
+

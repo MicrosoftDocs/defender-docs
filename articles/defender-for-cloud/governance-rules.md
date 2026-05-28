@@ -4,14 +4,14 @@ description: Learn how to drive remediation of security recommendations by using
 services: defender-for-cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 03/04/2026
+ms.date: 05/28/2026
 ---
 
 # Drive recommendation remediation by using governance rules
 
 Security teams are responsible for improving their organization's security posture, but team members might not always follow through to implement security recommendations. Security teams can set governance rules to help drive accountability and create a service-level agreement (SLA) around the remediation process.
 
-For an in-depth discussion around why governance rules are helpful, watch [this episode](episode-fifteen.md) of the *Defender for Cloud in the field* video series.
+For an in-depth discussion around why governance rules are helpful, watch this episode ([this episode](episode-fifteen.md)) of the *Defender for Cloud in the field* video series.
 
 ## Governance rules
 
@@ -155,3 +155,5 @@ From the Governance report, you can drill down into recommendations by the follo
 ## Related content
 
 - [Implement security recommendations](implement-security-recommendations.md)
+
+

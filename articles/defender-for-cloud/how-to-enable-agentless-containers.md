@@ -3,7 +3,7 @@ title: How-to enable agentless container posture
 description: Learn how to onboard agentless containers
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 04/19/2026
+ms.date: 05/28/2026
 ---
 
 # Onboard agentless container posture in Defender CSPM

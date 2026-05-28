@@ -1,7 +1,7 @@
 ---
 title: Deploy GitHub Advanced Security Integration with Microsoft Defender for Cloud
 description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-runtime security.
-ms.date: 04/30/2026
+ms.date: 05/28/2026
 ms.topic: how-to
 ms.author: dlanger
 author: dlanger
@@ -84,7 +84,7 @@ Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer** and perform
 > [!NOTE]
 > This step is required only if risk factors aren't already configured in your environment. If you already use risk factors, you can verify their configuration under Settings > Resource criticality.
 
-Successful validation ensures that subsequent steps, such as recommendations, campaigns, and GitHub issue generation, produce meaningful results.
+Successful validation ensures that next steps, such as recommendations, campaigns, and GitHub issue generation, produce meaningful results.
 
 > [!NOTE]
 > After you classify your resource as critical, it can take up to 12 hours for Defender for Cloud to send the data to GitHub.  [**Learn more**](https://docs.github.com/en/code-security/securing-your-organization/understanding-your-organizations-exposure-to-vulnerabilities/alerts-in-production-code).
@@ -119,7 +119,7 @@ Use running Containers VA recommendations code-to-runtime functionality and corr
 
     :::image type="content" source="media/github-advanced-security-deploy/findings.png" alt-text="Screenshot of Defender for Cloud Findings tab showing CVE-2024-21409 alerts, fix status, CVSS scores, and GitHub alert details popup." lightbox="media/github-advanced-security-deploy/findings.png":::
 
-Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub, you must have access permissions to the relevant GitHub repository. If you don’t have access permissions, you can always copy the link for subsequent usage or contact your GitHub administrator.)
+Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub, you must have access permissions to the relevant GitHub repository. If you don’t have access permissions, you can always copy the link for next usage or contact your GitHub administrator.)
 
 If there's an alert enrichment, there's a matched Dependabot alert that is already known to engineering. If the status is **Active**, no one has fixed it yet, and the issue needs to be prioritized for a fix.
 
@@ -131,7 +131,7 @@ What’s next? How would I know who is the relevant team for the fix? How would 
 
 To close the loop between security and engineering teams, you can create a GitHub issue that prioritizes the security issues that the engineering team should focus on. This prioritization can include passing findings that GHAS didn't pick up but that Defender for Cloud detected for CVE IDs that aren't part of direct dependencies. These findings can include vulnerabilities in the base image, operating system, or software like NGINX.
 
-The GitHub issue is automatically generated on the code repo of origin, with all the CVE IDs found in the scope of the recommendation, including other runtime and container SDLC related contexts that can help facilitate the fix and testing.
+The GitHub issue is automatically generated on the code repo of origin, with all the CVE IDs found in the scope of the recommendation, including other runtime and container SDLC related contexts that can help help the fix and testing.
 
 From the recommendation view, you can explicitly generate a GitHub issue to track remediation work.
 
@@ -171,3 +171,4 @@ On the GitHub side, if you have a GitHub Copilot license, you can resolve the is
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
 - [Quickstart: Connect your GitHub environment to Microsoft Defender for Cloud](quickstart-onboard-github.md)
 - [Configure agentless code scanning (preview)](agentless-code-scanning.md)
+
