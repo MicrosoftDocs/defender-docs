@@ -2,9 +2,9 @@
 title: Azure Storage Blob data connector reference for the Codeless Connector Framework
 titleSuffix: Microsoft Sentinel
 description: This article provides reference JSON fields and properties for creating the Azure Storage Blob data connector type and its data connection rules as part of the Codeless Connector Framework.
-author: EdB-MSFT
 ms.author: edbaynash
-ms.reviewer: edbaynash
+author: EdB-MSFT
+ms.reviewer: krishsa
 ms.topic: reference
 ms.date: 02/19/2026
 ms.service: microsoft-sentinel

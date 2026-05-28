@@ -1,8 +1,9 @@
 ---
 title: Microsoft Sentinel entity types reference | Microsoft Docs
 description: This article displays the Microsoft Sentinel entity types and their identifiers, and lists strong and weak identifiers for each.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: reference
 ms.date: 04/28/2026
 

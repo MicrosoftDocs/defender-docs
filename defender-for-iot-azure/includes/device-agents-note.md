@@ -10,5 +10,5 @@ ms.custom: include file
 ---
 
 > [!NOTE]
-> Defender for IoT plans to retire the micro agent on August 1, 2025. 
+> Defender for IoT plans to retire the micro agent on June 1, 2027.
 >

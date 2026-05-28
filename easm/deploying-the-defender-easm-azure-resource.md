@@ -1,5 +1,5 @@
 ---
-title: Create a Defender EASM Azure resource
+title: Create a Defender EASM Azure Resource
 description: This article explains how to create a Microsoft Defender External Attack Surface Management (Defender EASM) Azure resource by using the Azure portal.
 author: danielledennis
 ms.author: dandennis
@@ -11,7 +11,7 @@ ms.custom: references_regions
 
 # Create a Defender EASM Azure resource
 
-This article explains how to create a Microsoft Defender External Attack Surface Management (Defender EASM) Azure resource by using the Azure portal. Users can begin their usage of Defender EASM with a 30-day free trial. Once the trial is nearing expiration, you will be notified via banners and push notifications. 
+This article explains how to create a Microsoft Defender External Attack Surface Management (Defender EASM) Azure resource by using the Azure portal. Users can begin their usage of Defender EASM with a 30-day free trial. Once the trial is nearing expiration, you will be notified via banners and push notifications.
 
 Creating the Defender EASM Azure resource involves two steps:
 
@@ -40,20 +40,20 @@ Before you create a Defender EASM resource group, become familiar with how to ac
    - **Subscription**: Select an Azure subscription.
    - **Resource group**: Give the resource group a name.
    - **Region**: Specify an Azure location. This location is where the resource group stores metadata about the resource. For compliance reasons, you might want to specify where that metadata is stored. In general, we recommend that you specify a location where most of your resources will be. Using the same location can simplify your template. The following regions are supported:
-      -  southcentralus
-      -  eastus
-      -  australiaeast
-      -  westus3 
-      -  swedencentral
-      -  eastasia
-      -  japaneast
-      -  westeurope
-      -  northeurope
-      -  switzerlandnorth
-      -  canadacentral
-      -  centralus
-      -  norwayeast
-      -  francecentral
+      - southcentralus
+      - eastus
+      - australiaeast
+      - westus3
+      - swedencentral
+      - eastasia
+      - japaneast
+      - westeurope
+      - northeurope
+      - switzerlandnorth
+      - canadacentral
+      - centralus
+      - norwayeast
+      - francecentral
 
     ![Screenshot that shows the Create a resource group Basics tab.](media/quickstart-3.png)
 
@@ -88,7 +88,7 @@ After you create a resource group, you can create Defender EASM resources in the
 
 1. Select **Refresh** to see the status of the resource creation. Now you can go to the resource to get started.
 
-## Next steps
+## Related content
 
 - [Use and manage discovery](using-and-managing-discovery.md)
 - [Understand dashboards](understanding-dashboards.md)

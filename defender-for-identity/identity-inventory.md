@@ -134,7 +134,7 @@ These statistics highlight non-human identities that might need prioritization. 
 
 | Name | Description |
 | --------- | --------- |
-| Risky | The number of non-human identities with a high risk score. Risk scores are based on factors described in the [Risk score tab of the identity](/defender-xdr/investigate-non-human-identities#risk-score). |
+| Risky | The number of non-human identities with a high risk score. Risk scores are based on factors described in the [Risk score tab of the identity](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app). |
 | Highly privileged | The number of non-human identities with high-privilege permissions, such as admin consent or broad application permissions. |
 | Overprivileged | The number of non-human identities with more permissions than they use. |
 | Unused | The number of non-human identities with no recent sign-in activity. |

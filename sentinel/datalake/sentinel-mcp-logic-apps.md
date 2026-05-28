@@ -2,10 +2,11 @@
 title: Build Azure Logic Apps with Microsoft Sentinel MCP tools
 titleSuffix: Microsoft Security  
 description: Learn how to set up an Azure Logic App using Microsoft Sentinel's collection of Model Context Protocol (MCP) tools  
+ms.author: pauloliveria
 author: poliveria
+ms.reviewer: macasgra
 ms.topic: how-to
 ms.date: 02/16/2026
-ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 

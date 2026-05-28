@@ -1,9 +1,9 @@
 ---
 title: 'Guide to build and publish Microsoft Sentinel solutions'
 description: This article walks you through the entire lifecycle of how to build and publish solutions to Microsoft Sentinel.
-author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: angodavarthy
+author: mberdugo
+ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.date: 09/16/2025

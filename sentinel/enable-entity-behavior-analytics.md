@@ -1,8 +1,9 @@
 ---
 title: Enable entity behavior analytics to detect advanced threats
 description: Enable User and Entity Behavior Analytics in Microsoft Sentinel, and configure data sources
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: mshechter
 ms.topic: how-to
 ms.date: 10/16/2024
 appliesto:

@@ -1,8 +1,9 @@
 ---
 title: Investigate Microsoft Sentinel incidents in depth in the Azure portal
 description: This article takes you through all the panels and options available on the incident details page in the Azure portal, helping you navigate and investigate your incidents more quickly, effectively, and efficiently, and reducing your mean time to resolve (MTTR).
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: idpelleg
 ms.topic: how-to
 ms.date: 12/22/2024
 appliesto:

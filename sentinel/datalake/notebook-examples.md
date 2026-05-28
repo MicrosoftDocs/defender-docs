@@ -2,10 +2,11 @@
 title: Notebook examples for querying the Microsoft Sentinel data lake
 titleSuffix: Microsoft Security  
 description: This article provides sample code snippets for querying the Microsoft Sentinel data lake using Jupyter notebooks, demonstrating how to access and analyze security data.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.topic: how-to  
 ms.date: 08/27/2025
-ms.author: edbaynash  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 

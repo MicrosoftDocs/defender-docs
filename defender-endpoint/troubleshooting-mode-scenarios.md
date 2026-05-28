@@ -109,7 +109,7 @@ Attack surface reduction isn't allowing Microsoft Office plugin to work properly
 
 1. After disabling the ASR Rule, confirm that the Microsoft Office plugin now works.
 
-For more information, see [Overview of attack surface reduction](overview-attack-surface-reduction.md). 
+For more information, see [Overview of attack surface reduction](attack-surface-reduction-overview.md). 
 
 ## Scenario 5: Domain blocked by Network Protection
 

@@ -5,7 +5,7 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: kellycrider
 ms.topic: overview
-ms.date: 11/17/2024
+ms.date: 05/21/2026
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -17,6 +17,9 @@ appliesto:
 In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet), when a user reports a message as phishing, an investigation is automatically created in [automated investigation and response (AIR)](air-about.md). Admins can configure the user reported message settings to send an email notification to the user who reported the message based on the verdict from AIR. This notification is also known as _automatic feedback response_. For more information, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 This article explains how to enable and customize automatic feedback response for specific AIR verdicts, how the notification email messages are sent, and what the notifications look like.
+
+> [!TIP]
+> In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) complements AIR by autonomously triaging and classifying user-reported phishing emails before investigation begins, reducing manual workload for security teams.
 
 ## What do you need to know before you begin?
 

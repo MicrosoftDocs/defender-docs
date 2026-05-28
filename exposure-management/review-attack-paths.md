@@ -2,7 +2,7 @@
 title: Review attack paths in Microsoft Security Exposure Management
 description: Learn how to review and explore attack paths in Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 10/15/2025
+ms.date: 05/14/2026
 
 ---
 
@@ -69,6 +69,9 @@ Select **Group** to group by **Attack path name**, **Entry point**,**Entry point
 1. Sort recommendations by heading or select a specific recommendation, to open the recommendation screen.
 
 1. Review recommendation details, and then select **Manage** to remediate the recommendation in the correct workload interface.
+
+>[!NOTE]
+>For on-premises attack paths, you might occasionally see an attack path highlighted without a directly associated recommendation in the same view. In these scenarios, the attack paths are still generated based on observed risk signals, while device-related vulnerabilities and security recommendations remain available under the Devices Experience for the specific device involved in the attack path.
 
 ## View an attack path asset in the exposure map
 

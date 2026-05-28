@@ -36,7 +36,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 <table>
 <tr>
 <td><a href="/defender-vulnerability-management/defender-vulnerability-management"><center><img src="media/logo-mdvm.png" alt="Vulnerability Management"> <br><b> Core Defender Vulnerability Management</b></center></a></td>
-<td><a href="overview-attack-surface-reduction.md"><center><img src="media/asr-icon.png" alt="Attack surface reduction"><br><b>Attack surface reduction</b></center></a></td>
+<td><a href="attack-surface-reduction-overview.md"><center><img src="media/asr-icon.png" alt="Attack surface reduction"><br><b>Attack surface reduction</b></center></a></td>
 <td><center><a href="next-generation-protection.md"><img src="media/ngp-icon.png" alt="Next-generation protection"><br> <b>Next-generation protection</b></a></center></td>
 <td><center><a href="overview-endpoint-detection-response.md"><img src="media/edr-icon.png" alt="Endpoint detection and response"><br> <b>Endpoint detection and response</b></a></center></td>
 <td><center><a href="automated-investigations.md"><img src="media/air-icon.png" alt="Automated investigation and remediation"><br> <b>Automated investigation and remediation</b></a></center></td>

@@ -1,6 +1,6 @@
 ---
 title: Advanced hunting query best practices in Microsoft Defender XDR
-description: Learn how to construct fast, efficient, and error-free threat hunting queries with advanced hunting
+description: Learn how to construct fast, efficient, and error-free threat hunting queries with advanced hunting in Microsoft Defender XDR. Optimize performance and avoid errors.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -12,11 +12,12 @@ ms.collection:
 ms.custom: 
 - cx-ti
 - cx-ah
+- msecd-doc-authoring-1012
 ms.topic: best-practice
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 03/28/2025
+ms.date: 05/18/2026
 ---
 
 # Advanced hunting query best practices
@@ -29,7 +30,7 @@ Get results faster and avoid timeouts while running complex queries by optimizin
 - [Optimize the `join` operator](#optimize-the-join-operator) - in this article
 - [Optimize the `summarize` operator](#optimize-the-summarize-operator) - in this article
 - [Query scenarios](#query-scenarios) - in this article
-- [Kusto query best practices](/azure/kusto/query/best-practices) - includes several scenarios for making your query  more efficient
+- [Kusto query best practices](/azure/kusto/query/best-practices) - includes several scenarios for making your query more efficient
 - [Optimize log queries in Azure Monitor](/azure/azure-monitor/logs/query-optimization#early-filtering-of-records-prior-to-using-high-cpu-functions) - contains additional guidance for query optimization
 - [Optimizing KQL queries](https://www.youtube.com/watch?v=ceYvRuPp5D8) (video) - most common ways to improve your query
 
@@ -39,7 +40,7 @@ Depending on its size, each tenant has access to a set amount of CPU resources a
 
 After running your query, you can see the execution time and its resource usage (Low, Medium, High). High indicates that the query took more resources to run and could be improved to return results more efficiently.
 
-:::image type="content" source="media/advanced-hunting-best-practices/resource-usage.png" alt-text="The query details under **Results** tab in the Microsoft Defender portal" lightbox="media/advanced-hunting-best-practices/resource-usage.png":::
+:::image type="content" source="media/advanced-hunting-best-practices/resource-usage.png" alt-text="Screenshot of query details under the Results tab in the Microsoft Defender portal showing execution time and resource usage." lightbox="media/advanced-hunting-best-practices/resource-usage.png":::
 
 Customers who run multiple queries regularly should track consumption and apply the optimization guidance in this article to minimize disruption resulting from exceeding quotas or usage parameters.
 
@@ -58,7 +59,8 @@ Customers who run multiple queries regularly should track consumption and apply 
      ```
 
 - **Has beats contains**—To avoid searching substrings within words unnecessarily, use the `has` operator instead of `contains`. [Learn about string operators](/azure/data-explorer/kusto/query/datatypes-string-operators)
-- **Look in specific columns**—Look in a specific column rather than running full text searches across all columns. Don't use `*` to check all columns.
+- **Scope your search**—Avoid running unscoped `search` or `union` queries, as they span all tables in the schema and could exceed query size limits in environments with many tables. Use `search in` to specify the tables you want to search. For example, instead of `search "email"`, use `search in (EmailEvents, EmailAttachmentInfo, IdentityInfo) "email"`.
+- **Look in specific columns**—Look in a specific column rather than running full text searches. Don't use `*` to check all columns.
 - **Case-sensitive for speed**—Case-sensitive searches are more specific and generally more performant. Names of case-sensitive [string operators](/azure/data-explorer/kusto/query/datatypes-string-operators), such as `has_cs` and `contains_cs`, generally end with `_cs`. You can also use the case-sensitive equals operator `==` instead of `=~`.
 - **Parse, don't extract**—Whenever possible, use the [parse operator](/azure/data-explorer/kusto/query/parseoperator) or a parsing function like [parse_json()](/azure/data-explorer/kusto/query/parsejsonfunction). Avoid the `matches regex` string operator or the [extract() function](/azure/data-explorer/kusto/query/extractfunction), both of which use regular expression. Reserve the use of regular expression for more complex scenarios. [Read more about parsing functions](#parse-strings)
 - **Filter tables not expressions**—Don't filter on a calculated column if you can filter on a table column.

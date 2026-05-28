@@ -1,11 +1,10 @@
 ---
 title: Generate playbooks using AI in Microsoft Sentinel
 description: Generate playbooks through natural language conversations directly in the Defender portal.
-author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: Shiran Shuster Zur
+author: mberdugo
 ms.topic: how-to
-ms.date: 02/13/2026
+ms.date: 05/20/2026
 ms.service: microsoft-sentinel
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -14,7 +13,7 @@ ms.collection: usx-security
 
 ---
 
-# Generate playbooks using AI in Microsoft Sentinel (preview)
+# Generate playbooks using AI in Microsoft Sentinel
 
 The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded VS Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
 
@@ -45,19 +44,22 @@ You also must meet the following requirements:
 - **Recommended Data sharing preferences**: In Security Copilot, enable the first slider, *Allow Microsoft to capture data from Security Copilot to validate product performance using human review*, in Customer Data Sharing preferences. For more information, see [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
 
 ### Required roles and permissions
-
-To use playbook generator, you need the following permissions:
-
-- **To author Automation Rules**: You need the **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Azure. See [Microsoft Entra built-in roles](/azure/sentinel/roles#built-in-azure-roles-for-microsoft-sentinel)
-
-- **To use the playbook generator**: You need the **Detection tuning** role in Microsoft Entra in Azure. See [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
+ 
+You need the following permissions in [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/custom-permissions-details):
+ 
+- **To use the playbook generator**:
+  - Authorization and settings: **Detection tuning (manage)**
+  - Security operations: **Security Copilot (read)**
+ 
+- **To author automation rules**:
+  - **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Defender.
 
 > [!NOTE]
 > Permissions might take up to two hours to take effect after assignment.
 
-### Recommended: Configure a dedicated Security Copilot workspace
+### Required: Configure a dedicated Security Copilot workspace
 
-If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's set in geo **US** or **Europe**, or allowing cross-region evaluation, we recommended you [create one](/copilot/security/manage-workspaces#create-a-workspace).
+If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's set in geo **US** or **Europe**, or allowing cross-region evaluation, you need to [create one](/copilot/security/manage-workspaces#create-a-workspace).
 
 1. In the **Create a new workspace** dialog:
 

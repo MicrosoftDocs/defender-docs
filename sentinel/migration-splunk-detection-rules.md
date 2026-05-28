@@ -2,8 +2,9 @@
 title: Migrate Splunk detection rules to Microsoft Sentinel
 titleSuffix: Microsoft Sentinel
 description: Learn how to identify, compare, and migrate your Splunk detection rules to Microsoft Sentinel built-in rules.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: soulisabag
 ms.topic: how-to
 ms.date: 09/23/2024
 
