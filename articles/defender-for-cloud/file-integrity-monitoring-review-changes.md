@@ -72,3 +72,8 @@ The file integrity monitoring data resides within the Azure Log Analytics worksp
 
 1. You can export the reports to CSV for archival purposes or send them to Power BI for further analysis.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Enable file integrity monitoring with Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md)
+

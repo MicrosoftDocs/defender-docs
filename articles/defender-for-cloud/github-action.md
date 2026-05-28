@@ -137,10 +137,11 @@ To set up the GitHub action:
 
 - Learn how to deploy apps from GitHub to Azure in [Deploy apps from GitHub to Azure](/azure/developer/github/deploy-to-azure).
 
-## Next steps
+- Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
 
-Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
+## Next step
 
-Learn how to [connect your GitHub Organizations](quickstart-onboard-github.md) to Defender for Cloud.
+> [!div class="nextstepaction"]
+> [Connect your GitHub Organizations to Defender for Cloud](quickstart-onboard-github.md)
 
 

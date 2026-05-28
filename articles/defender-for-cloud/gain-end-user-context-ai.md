@@ -18,7 +18,7 @@ Together, Microsoft Defender for Cloud and Azure AI let you add parameters to Az
 
 ## Prerequisites
 
-- Read up on [Overview - AI threat protection](ai-threat-protection.md).
+- Read up on [AI threat protection](ai-threat-protection.md).
 
 - [Enable threat protection for AI services](ai-onboarding.md) on an AI application, with Azure OpenAI underlying model, directly through the Azure OpenAI Service. Note, this feature is currently not supported when applying models consumed through the [Azure AI model inference API](/azure/ai-studio/ai-services/model-inference).
 
