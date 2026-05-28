@@ -1,10 +1,10 @@
 ---
 title: Install Defender for Containers sensor using Helm
-description: Learn how to install the Microsoft Defender for Containers sensor on Kubernetes clusters using Helm.
+description: Install the Defender for Containers sensor on AKS, EKS, and GKE clusters by using Helm, including prerequisites, deployment steps, and upgrade guidance.
 author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 05/27/2026
+ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to install Defender for Containers sensor by using Helm so that I can control deployment and upgrade timing across my clusters.
 ---
 
@@ -168,7 +168,7 @@ The installation succeeded if the `STATUS` field shows `deployed`.
 > [!IMPORTANT]
 > When you create rules, the selected subscription might show as `not supported for Gated deployment`. This status occurs because you installed the Defender for Containers components by using Helm rather than through the dashboard's automatic installation.
 
-Define security rules to control what you can deploy into your Kubernetes clusters. These rules help you block or audit container images based on security criteria, such as images with too many vulnerabilities.
+Define security rules to control what you can deploy into your Kubernetes clusters. These rules can block or audit container images that don't meet your security criteria.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -185,7 +185,7 @@ Define security rules to control what you can deploy into your Kubernetes cluste
 > [!IMPORTANT]
 > If you install the sensor by using Helm, don't use existing Defender for Cloud recommendations to install the Defender profile or Arc extension for the same cluster. Remediating these recommendations can create a conflicting deployment.
 
-Depending on your deployment type, the following recommendations might still appear in Defender for Cloud:
+Depending on your deployment type, the following recommendations might still appear in Defender for Cloud. Review them to confirm they refer to automatic deployment flows, then ignore them for clusters where you deployed with Helm.
 
 - **Azure**: [Azure Kubernetes Service clusters should have Defender profile enabled - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/56a83a6e-c417-42ec-b567-1e6fcb3d09a9/showSecurityCenterCommandBar~/false)
 
@@ -207,6 +207,10 @@ helm upgrade defender-k8s \
     --namespace <namespace> \
     --reuse-values
 ```
+
+Replace `<namespace>` with the namespace you used during installation.
+
+The `--reuse-values` parameter keeps your existing custom values during the upgrade.
 
 For `<namespace>`, use:
 

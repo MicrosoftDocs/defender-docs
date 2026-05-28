@@ -4,17 +4,19 @@ author: ElazarK
 ms.author: elkrieger
 description: Learn how to delegate recommendations with Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
-ms.date: 05/27/2026
+ms.date: 05/28/2026
 #customer intent: As a security professional, I want to understand how to use Copilot to delegate recommendations in Defender for Cloud so that I can improve my security posture.
 ---
 
 # Delegate recommendations with Microsoft Security Copilot
 
-Microsoft Defender for Cloud integrates with Microsoft Security Copilot so you can delegate recommendations from the Recommendations page with natural language prompts. You can assign a recommendation to another person or team.
+Use this article to delegate recommendations from Microsoft Defender for Cloud by using Microsoft Security Copilot prompts. You can assign a recommendation to another person or team.
 
 Delegation can improve your security posture because the right people handle the risks and vulnerabilities in your environment.
 
 ## Prerequisites
+
+Before you delegate recommendations, make sure you have the following requirements in place:
 
 - [Enable Defender for Cloud on your environment](connect-azure-subscription.md).
 
@@ -48,3 +50,4 @@ After you delegate the recommendation, monitor remediation progress on the Recom
 
 > [!div class="nextstepaction"]
 > [Remediate code with Microsoft Security Copilot](remediate-code-with-copilot.md)
+
