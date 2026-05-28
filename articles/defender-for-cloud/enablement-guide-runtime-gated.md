@@ -6,7 +6,6 @@ author: Elazark
 ms.author: elkrieger
 ms.date: 06/01/2026
 ms.topic: concept-article
-ai-usage: ai-assisted
 ---
 
 # Enable gated deployment in Defender for Containers
