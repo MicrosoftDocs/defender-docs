@@ -49,7 +49,7 @@ To disable Defender for SQL Servers on Machines, follow these steps:
 
 To disable this plan at the resource level for an individual SQL Server instance or SQL virtual machine, follow these steps:
 
-1. In the Azure portal, search for and select:
+1. In the Azure portal, choose one of the following options:
     - **Azure Arc** > **Data services** > **SQL Server instances**
     - **SQL virtual machines**
 
