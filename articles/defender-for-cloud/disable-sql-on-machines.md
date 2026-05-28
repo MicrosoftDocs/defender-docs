@@ -2,7 +2,7 @@
 title: Disable Defender for SQL Servers on Machines
 description: Learn how to disable Defender for SQL Servers on Machines in Microsoft Defender for Cloud to manage your security posture effectively.
 ms.topic: how-to
-ms.date: 06/30/2025
+ms.date: 05/28/2026
 author: Elazark
 ms.author: elkrieger
 #customer intent: As a security administrator, I want to disable Defender for SQL Servers on Machines in Defender for Cloud to manage my security posture effectively.
@@ -10,9 +10,9 @@ ms.author: elkrieger
 
 # Disable Defender for SQL Servers on Machines
 
-This article describes how to disable Defender for SQL Servers on Machines in Microsoft Defender for Cloud. This feature allows you to manage your security posture effectively by disabling the Defender for SQL Servers on Machines plan on your virtual machines (VMs) and SQL servers.
+This article explains how to disable Defender for SQL Servers on Machines in Microsoft Defender for Cloud.
 
-The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans in Microsoft Defender for Cloud. It protects SQL Server databases hosted on Azure VMs and Azure Arc-enabled VMs. If you disable this plan, Defender for Cloud does not provide security alerts and recommendations for SQL Server instances running on these machines.
+The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans. It protects SQL Server databases hosted on Azure VMs and Azure Arc-enabled VMs. If you disable this plan, Defender for Cloud no longer provides SQL alerts and recommendations for those machines.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 ## Disable Defender for SQL Servers on Machines
 
-Once you disable Defender for SQL Servers on Machines, the Defender for SQL Servers on Machines plan will no longer be applied to your virtual machines and SQL servers. This means that the security features and protections provided by this plan will be disabled.
+When you disable this plan, Defender for Cloud stops applying SQL machine protections for the selected scope.
 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
@@ -61,3 +61,4 @@ Once you disable Defender for SQL Servers on Machines, the Defender for SQL Serv
         - Type: AdvancedThreatProtection.Windows
 
 1. Select **Uninstall**.
+
