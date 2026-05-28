@@ -113,7 +113,7 @@ Configure exemptions during rule creation. They apply to audit and deny rules.
 ### Step 6: Finalize and save
 
 1.  Review the rule configuration.
-1.  To save and activate the rule, select **Add Rule**.
+1.  Select **Add Rule** to save and activate the rule.
 
 ## Deny mode configuration
 
@@ -168,7 +168,7 @@ Kubernetes Misconfiguration Enforcement extends Kubernetes security by evaluatin
 
 After you enable the feature, a default security rule is automatically created in Audit mode. You can configure rules to use Block mode to actively prevent non-compliant deployments.
 
-### Prerequisites for Misconfiguration Enforcement
+### Prerequisites for misconfiguration enforcement
 
 | **Requirement** | **Details** |
 |-----------------|-------------|
@@ -177,7 +177,7 @@ After you enable the feature, a default security rule is automatically created i
 | AKS policies | Kubernetes cluster must have AKS policies enabled. They're enabled by default. |
 | Permissions | Create or change rules with Subscription Owner or Security Admin role. View rules with Security Reader or higher. |
 
-### Configure Misconfiguration Enforcement rules
+### Configure misconfiguration enforcement rules
 
 1. Go to **Microsoft Defender for Cloud** > **Environment Settings**.
 1. Select the relevant subscription, AWS account, or GCP project.
@@ -193,9 +193,9 @@ After you enable the feature, a default security rule is automatically created i
 > [!NOTE]
 > Selecting **Block** mode can introduce a short delay during deployments because of real-time policy enforcement.
 
-### Built-in Misconfiguration rules
+### Built-in misconfiguration rules
 
-Misconfiguration Enforcement includes built-in rules based on Microsoft Defender security best practices. Rules cover areas such as:
+Misconfiguration Enforcement includes built-in rules based on Microsoft Defender security best practices. These rules cover areas such as:
 
 - Container resource limits (CPU and memory)
 - Privilege and capability management
