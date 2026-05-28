@@ -64,3 +64,4 @@ This page explained the security incident capabilities of Defender for Cloud. Fo
 - [Security alerts in Defender for Cloud](alerts-overview.md)
 - [Manage and respond to security alerts](manage-respond-alerts.md)
 
+

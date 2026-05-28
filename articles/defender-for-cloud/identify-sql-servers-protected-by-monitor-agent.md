@@ -53,3 +53,4 @@ You can identify SQL servers onboarded to the Defender for SQL Server on Machine
 - [Verify SQL machine protection](verify-machine-protection.md)
 - [Troubleshoot Defender for SQL on Machines configuration](troubleshoot-sql-machines-guide.md)
 
+
