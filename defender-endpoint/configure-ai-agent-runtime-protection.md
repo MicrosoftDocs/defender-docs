@@ -61,11 +61,9 @@ The PowerShell command in the previous section configures a single device and is
 
 1. Create a PowerShell script that includes the following command:
 
-        ```powershell
-
-        Set-MpPreference -AiAgentProtection Block
-
-        ```
+    ```powershell
+    Set-MpPreference -AiAgentProtection Block
+    ```
 
 1. Use Intune to deploy the script to target devices. For detailed steps, see [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
 
