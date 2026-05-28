@@ -2,7 +2,7 @@
 title: Identify SQL Servers protected by Microsoft Monitoring Agent
 description: Learn how to identify SQL servers protected by the Microsoft Monitoring Agent (MMA) in your environment without having Azure Arc installed
 ms.topic: how-to
-ms.date: 02/26/2026
+ms.date: 05/28/2026
 ms.author: Elkrieger
 author: ElazarK
 # customer intent: As a user, I want to learn how to identify SQL servers that are protected by Microsoft Monitoring Agent (MMA) in my environment so that I can assess their security posture.
@@ -52,3 +52,4 @@ You can identify SQL servers onboarded to the Defender for SQL Server on Machine
 - [Enable Defender for SQL Servers on Machines](defender-for-sql-usage.md)
 - [Verify SQL machine protection](verify-machine-protection.md)
 - [Troubleshoot Defender for SQL on Machines configuration](troubleshoot-sql-machines-guide.md)
+

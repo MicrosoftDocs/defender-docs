@@ -4,7 +4,7 @@ description: This document helps you to use Microsoft Defender for Cloud to mana
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 05/19/2025
+ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
 ---
 # Manage security incidents in Microsoft Defender for Cloud
@@ -63,3 +63,4 @@ This page explained the security incident capabilities of Defender for Cloud. Fo
 
 - [Security alerts in Defender for Cloud](alerts-overview.md)
 - [Manage and respond to security alerts](manage-respond-alerts.md)
+

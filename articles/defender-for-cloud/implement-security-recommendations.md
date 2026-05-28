@@ -4,7 +4,7 @@ description: Improve the security posture of your environments by remediating se
 ms.topic: how-to
 ms.author: elkrieger
 author: ElazarK
-ms.date: 05/19/2025
+ms.date: 05/28/2026
 ai-usage: ai-assisted
 #customer intent: As a security professional, I want to understand how to remediate security recommendations in Microsoft Defender for Cloud so that I can improve my security posture.
 ---
@@ -15,7 +15,7 @@ When you use Microsoft Defender for Cloud to help protect your resources and wor
 
 This article describes how to remediate security recommendations in your Defender for Cloud deployment.
 
-Before you attempt to remediate a recommendation, you should review it in detail. Learn how to [review security recommendations](review-security-recommendations.md).
+Before you attempt to remediate a recommendation, you should review it in detail. Learn how to review security recommendations. See [review security recommendations](review-security-recommendations.md).
 
 ## <a name = "remediate-recommendations"></a> Remediate a recommendation
 
@@ -66,3 +66,5 @@ To remediate the recommendation, copy and run the script.
 ## Related content
 
 - [Governance rules in your remediation processes](governance-rules.md)
+
+

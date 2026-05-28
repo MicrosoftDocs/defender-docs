@@ -5,7 +5,7 @@ author: Elazark
 ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/20/2025
+ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
 ---
 
@@ -86,3 +86,4 @@ Once you create the client secret, you need to grant permissions to the applicat
 1. Follow the steps again to add the **Reader** role.
 
 Repeat these steps for any other relevant subscriptions.
+

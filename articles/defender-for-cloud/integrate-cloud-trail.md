@@ -4,7 +4,7 @@ description: Learn how to enable and validate AWS CloudTrail management event in
 author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 12/09/2025
+ms.date: 05/28/2026
 ---
 
 # Integrate AWS CloudTrail logs (Preview)
