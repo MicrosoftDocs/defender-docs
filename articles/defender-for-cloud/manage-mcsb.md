@@ -81,8 +81,6 @@ In the recommendation details page, the **Additional parameters** column indicat
 
 1. Select **Save**.
 
-    :::image type="content" source="./media/manage-mcsb/additional-parameters.png" alt-text="Screenshot showing how to configure additional parameters on the manage effect and parameters screen." lightbox="./media/manage-mcsb/additional-parameters.png":::
-
 If you want to revert changes, select **Reset to default** to restore the default value for the recommendation.
 
 ## Identify potential conflicts
@@ -106,3 +104,4 @@ This page explained security policies. For related information, see the followin
 - [Learn how to edit a security policy in Azure Policy](/azure/governance/policy/tutorials/create-and-manage)
 - [Learn how to set a policy across subscriptions or on Management groups using Azure Policy](/azure/governance/policy/overview)
 - [Learn how to enable Defender for Cloud on all subscriptions in a management group](onboard-management-group.md)
+
