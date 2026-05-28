@@ -66,19 +66,19 @@ You can only enforce a recommendation from the recommendation details page.
 
 The setting takes effect immediately, but recommendations will update based on their freshness interval (up to 12 hours).
 
-## Modify more parameters
+## Modify additional parameters
 
-You might want to configure more parameters for some recommendations. For example, diagnostic logging recommendations have a default retention period of one day. You can change that default value.
+You might want to configure additional parameters for some recommendations. For example, diagnostic logging recommendations have a default retention period of one day. You can change that default value.
 
-In the recommendation details page, the **more parameters** column indicates whether a recommendation has associated more parameters.
+In the recommendation details page, the **Additional parameters** column indicates whether a recommendation has associated additional parameters.
 
 - **Default** – the recommendation is running with default configuration
 - **Configured** – the recommendation’s configuration is modified from its default values
-- **None** – the recommendation doesn't require any more configuration
+- **None** – the recommendation doesn't require any additional configuration
 
 1. Next to the MCSB recommendation, select the ellipses menu, select **Manage effect and parameters**.
 
-1. In **more parameters**, configure the available parameters with new values.
+1. In **Additional parameters**, configure the available parameters with new values.
 
 1. Select **Save**.
 
@@ -92,7 +92,7 @@ Potential conflicts can arise when you have multiple assignments of standards wi
 
     :::image type="content" source="./media/manage-mcsb/effect-conflict.png" alt-text="Screenshot showing how to manage assignment of standards with different values." lightbox="./media/manage-mcsb/effect-conflict.png":::
 
-1. To identify conflicts in more parameters, in **Add**, select **more parameters conflict** > **Has conflict** to identify any conflicts.
+1. To identify conflicts in additional parameters, in **Add**, select **Additional parameters conflict** > **Has conflict** to identify any conflicts.
 1. If conflicts are found, in **Recommendation settings**, select the required value, and save.
 
 All assignments on the scope will be aligned with the new setting, resolving the conflict.
