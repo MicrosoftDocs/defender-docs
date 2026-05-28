@@ -4,7 +4,7 @@ description: Learn how to use Microsoft Defender for Cloud's set of Kubernetes d
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 03/23/2026
+ms.date: 05/28/2026
 ---
 
 # Configure Kubernetes data plane hardening in Defender for Cloud
@@ -278,3 +278,4 @@ spec:
 - [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-plan.md)
 
 - [Deploy Defender for Containers components using Azure CLI](defender-for-containers-deploy-azure-cli.md)
+
