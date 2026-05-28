@@ -4,7 +4,7 @@ description: Learn about automating connector deployment when planning multiclou
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 05/28/2026
 ---
 
 # Automate connector deployment
@@ -27,4 +27,6 @@ Review the [Security Connectors - REST API](/rest/api/defenderforcloud-composite
 
 ## Next steps
 
-In this article, you've learned that as an alternative to creating connectors in the Defender for Cloud portal, you can create them programmatically by using the Defender for Cloud REST API. For more information, see [other resources](plan-multicloud-security-other-resources.md#).
+In this article, you've learned that as an alternative to creating connectors in the Defender for Cloud portal, you can create them programmatically by using the Defender for Cloud REST API. For more information, see other resources ([other resources](plan-multicloud-security-other-resources.md#)).
+
+

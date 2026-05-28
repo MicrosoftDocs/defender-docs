@@ -4,7 +4,7 @@ description: Learn how to improve operating system baseline configurations in Mi
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 03/10/2025
+ms.date: 05/28/2026
 ---
 
 # Operating system misconfigurations
@@ -42,7 +42,7 @@ The machine configuration extension is installed as follows:
 
 ### What's not included
 
-Additional features provided by the extension machine outside Defender for Cloud aren't included, and are subject to Azure Policy machine configuration pricing.
+more features provided by the extension machine outside Defender for Cloud aren't included, and are subject to Azure Policy machine configuration pricing.
 
 - For example, [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition).
 - [Review details](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1) on the Azure Policy machine configuration pricing page.
@@ -75,3 +75,5 @@ To review recommendations made by security baseline assessments, search for the 
 
 - [Install the Azure Policy machine configuration](security-baseline-guest-configuration.md).
 - [Remediate](apply-security-baseline.md) OS baseline misconfigurations.
+
+

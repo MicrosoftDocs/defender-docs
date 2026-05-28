@@ -4,7 +4,7 @@ description: Learn about defining broad requirements for business needs and owne
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 05/28/2026
 ---
 
 # Define an adoption strategy
@@ -33,3 +33,4 @@ Think about your broad requirements:
 ## Next steps
 
 In this article, you've learned how to determine your adoption strategy when designing a multicloud security solution. Continue with the next step to [determine data residency requirements](plan-multicloud-security-determine-data-residency-requirements.md).
+
