@@ -83,11 +83,7 @@ Microsoft Defender extends runtime protection to supported local AI agents runni
 
 Runtime protection helps reduce the risk that an attacker-controlled prompt, malicious tool response, or unsafe agent action manipulates a local agent into doing something harmful. Defender inspects covered agent activity in the agent loop, including user prompts, pre-tool calls, and post-tool responses, then audits or blocks based on policy.
 
-Runtime protection supports two inspection methods:
-
-- **Event-based inspection**: Uses provider-supported hooks exposed by supported agents to inspect lifecycle events such as user prompts, pre-tool calls, and post-tool responses at the application layer. This is the preferred method when available because it gives Defender precise context before risky actions continue.
-
-- **Network inspection**: Extends protection to agents that don't expose supported hooks by inspecting agent traffic to LLM endpoints across the full agentic loop, including prompts, tool calls, and tool responses. This broadens runtime protection coverage beyond agents with native hook support.
+Runtime protection uses event-based inspection through provider-supported hooks exposed by supported agents to inspect lifecycle events such as user prompts, pre-tool calls, and post-tool responses at the application layer. This gives Defender precise context before risky actions continue.
 
 Microsoft recommends starting with a small test deployment, then rolling out in audit mode to review detections, and finally moving selected device groups to block mode. When Defender blocks or audits runtime activity, alerts appear in Microsoft Defender to support investigation and incident correlation.
 

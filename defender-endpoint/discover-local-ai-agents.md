@@ -1,6 +1,6 @@
 ---
 title: Discover local AI agents with Microsoft Defender for Endpoint (Preview)
-description: Learn how to discover, view, and investigate local AI agents on Windows and macOS devices by using Microsoft Defender.
+description: Learn how to discover, view, and investigate local AI agents on Windows devices by using Microsoft Defender.
 author: lwainstein
 ms.author: lwainstein
 ms.service: defender-endpoint
@@ -32,8 +32,6 @@ Before you can discover local AI agents on endpoints, make sure the following re
   - Windows 10 version 1809 or later
 
   - Windows 11
-
-  - macOS
 
 - Your organization has the applicable Plan 2 license.
 - Devices are [onboarded to Microsoft Defender](/defender-endpoint/onboard-configure).
