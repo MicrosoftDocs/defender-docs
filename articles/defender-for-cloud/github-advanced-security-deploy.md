@@ -1,16 +1,16 @@
 ---
-title: Deploy GitHub Advanced Security Integration with Microsoft Defender for Cloud
-description: Use this step-by-step guide to set up GitHub Advanced Security integration with Microsoft Defender for Cloud for code-to-runtime security.
-ms.date: 04/30/2026
+title: Deploy GitHub Advanced Security integration
+description: Use this step-by-step guide to integrate GitHub Advanced Security with Microsoft Defender for Cloud for code-to-runtime security.
+ms.date: 05/28/2026
 ms.topic: how-to
 ms.author: dlanger
 author: dlanger
 #customer intent: As a security administrator, I want to deploy and configure GitHub Advanced Security integration with Microsoft Defender for Cloud to protect applications from code to production.
 ---
 
-# Set up GitHub Advanced Security native integration with Microsoft Defender for Cloud
+# Deploy GitHub Advanced Security integration
 
-This guide provides setup steps and other actions to help you integrate GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud with a use case that  helps you validate the integration end to end. This integration helps maximize Microsoft's cloud-native application security by correlating runtime risks and context with the originated code for faster AI-powered remediation.
+This guide provides setup steps and other actions to help you integrate GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud, then validate the integration end to end. The integration helps maximize Microsoft's cloud-native application security by correlating runtime risks and context with the originating code for faster AI-powered remediation.
 
 By following this guide, you:
 
@@ -39,10 +39,10 @@ To test the integration, use your own repositories or an [example sandbox projec
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Go to **Microsoft Defender for Cloud** > **DevOps security**.
 1. Enter your code repo name in the search bar (Example: **zava-webshop**).
-1. Validate that it really belongs to org you're monitoring (Example: **zava-corporation** org).
+1. Validate that it belongs to the organization you're monitoring, for example, the **zava-corporation** organization.
 1. Review if there are any findings for the repo.
-1. Ensure **Advanced security status** is **On**, indicating you have GitHub Advanced Security enabled on the monitored repo– > your onboarded repo.
-1. If your repo not found, refer to Microsoft Defender for Cloud documentation for trouble shooting and [GitHub connector onboarding](quickstart-onboard-github.md).
+1. Ensure **Advanced security status** is **On**. This indicates that GitHub Advanced Security is enabled on the monitored repository.
+1. If your repository isn't found, refer to Microsoft Defender for Cloud documentation for troubleshooting and [GitHub connector onboarding](quickstart-onboard-github.md).
 1. Make sure that agentless scanning is turned on for your GitHub connector.
 
     :::image type="content" source="media/github-advanced-security-deploy/agentless-scan.png" alt-text="Screenshot of Plan Configuration in Defender CSPM with Agentless code scanning toggled on and all scanner options enabled." lightbox="media/github-advanced-security-deploy/agentless-scan.png":::
@@ -84,7 +84,7 @@ Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer** and perform
 > [!NOTE]
 > This step is required only if risk factors aren't already configured in your environment. If you already use risk factors, you can verify their configuration under Settings > Resource criticality.
 
-Successful validation ensures that subsequent steps, such as recommendations, campaigns, and GitHub issue generation, produce meaningful results.
+Successful validation ensures that next steps, such as recommendations, campaigns, and GitHub issue generation, produce meaningful results.
 
 > [!NOTE]
 > After you classify your resource as critical, it can take up to 12 hours for Defender for Cloud to send the data to GitHub.  [**Learn more**](https://docs.github.com/en/code-security/securing-your-organization/understanding-your-organizations-exposure-to-vulnerabilities/alerts-in-production-code).
@@ -95,7 +95,7 @@ To create a scanning campaign, you must work at the GitHub organization level. T
 
 1. In GitHub, go to the GitHub organization that you used for the setup testing.
 1. Select **Security** > **Campaigns** > **Create campaign** > **From code scanning filters**.
-1. This campaign help prioritize GHAS findings that belong to code that is truly deployed and running.
+1. This campaign helps prioritize GHAS findings that belong to code that is truly deployed and running.
 1. Select **Runtime Risks** filters for the campaign.
 
     :::image type="content" source="media/github-advanced-security-deploy/select-filters.png" alt-text="Screenshot of GitHub code scanning campaign creation with a filter bar, Filter button, and a tooltip about filtering by artifact metadata."lightbox="media/github-advanced-security-deploy/select-filters.png":::
@@ -113,13 +113,11 @@ Use running Containers VA recommendations code-to-runtime functionality and corr
 1. Search for the name of the container that you created from your code repo.
 1. Open one of the **Update software** recommendations; the recommendation name begins with Update
 1. Select the **Associated CVEs** tab
-   Security alerts appear as part of the recommendation evaluation flow.
-   These alerts provide indications about GitHub Advanced security findings that already known to  the engineering.
-   Note that some CVE IDs have a View on GitHub link in the Related GitHub Alerts column.
+    Security alerts appear as part of the recommendation evaluation flow. These alerts provide indications about GitHub Advanced Security findings that are already known to engineering. Note that some CVE IDs have a View on GitHub link in the Related GitHub Alerts column.
 
     :::image type="content" source="media/github-advanced-security-deploy/findings.png" alt-text="Screenshot of Defender for Cloud Findings tab showing CVE-2024-21409 alerts, fix status, CVSS scores, and GitHub alert details popup." lightbox="media/github-advanced-security-deploy/findings.png":::
 
-Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub, you must have access permissions to the relevant GitHub repository. If you don’t have access permissions, you can always copy the link for subsequent usage or contact your GitHub administrator.)
+Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub, you must have access permissions to the relevant GitHub repository. If you don’t have access permissions, you can always copy the link for next usage or contact your GitHub administrator.)
 
 If there's an alert enrichment, there's a matched Dependabot alert that is already known to engineering. If the status is **Active**, no one has fixed it yet, and the issue needs to be prioritized for a fix.
 
@@ -131,7 +129,7 @@ What’s next? How would I know who is the relevant team for the fix? How would 
 
 To close the loop between security and engineering teams, you can create a GitHub issue that prioritizes the security issues that the engineering team should focus on. This prioritization can include passing findings that GHAS didn't pick up but that Defender for Cloud detected for CVE IDs that aren't part of direct dependencies. These findings can include vulnerabilities in the base image, operating system, or software like NGINX.
 
-The GitHub issue is automatically generated on the code repo of origin, with all the CVE IDs found in the scope of the recommendation, including other runtime and container SDLC related contexts that can help facilitate the fix and testing.
+The GitHub issue is automatically generated in the source code repository with all the CVE IDs found in the scope of the recommendation, including other runtime and container SDLC-related contexts that can help with the fix and testing.
 
 From the recommendation view, you can explicitly generate a GitHub issue to track remediation work.
 
@@ -139,7 +137,7 @@ From the recommendation view, you can explicitly generate a GitHub issue to trac
 
     :::image type="content" source="media/github-advanced-security-deploy/code-runtime-flow-diagram.png" alt-text="Screenshot of Remediation Insights showing code-to-runtime diagram with risk levels and Take Action menu open on the Runtime box." lightbox="media/github-advanced-security-deploy/code-runtime-flow-diagram.png":::
 
-    1. On the **Remediation Insights** tab review, the affected **Runtime** box.
+    1. On the **Remediation Insights** tab, review the affected **Runtime** box.
     1. **Validate whether a GitHub issue already exists**. If a GitHub issue already exists, a GitHub icon is displayed on the box. Hover over the icon to view issue details.
     1. If no issue exists and you have the required permissions, you can generate a new GitHub issue. Select **Take action**.
     1. Select the **Generate GitHub issue** option from the popup.
@@ -150,9 +148,9 @@ From the recommendation view, you can explicitly generate a GitHub issue to trac
     > [!NOTE]
     > If the **Generate GitHub** issue option isn't available, required GitHub or repository permissions might be missing. Contact your GitHub or repository administrator to request access.
 
-    :::image type="content" source="media/github-advanced-security-deploy/github-issue.png" alt-text="Screenshot of GitHub issues list showing open issues for dependencies with labels like Defender for Cloud and security." lightbox="media/github-advanced-security-deploy/github-issue.png":::
+    :::image type="content" source="media/github-advanced-security-deploy/github-issue.png" alt-text="Screenshot showing a generated GitHub issue for an open dependency with Defender for Cloud and security labels." lightbox="media/github-advanced-security-deploy/github-issue.png":::
 
-    1. **Track ownership and status updates** - changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress from **Recommendations** view.
+    1. **Track ownership and status updates** - changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress from the **Recommendations** view.
 
         :::image type="content" source="media/github-advanced-security-deploy/recommendations-pane.png" alt-text="Screenshot of Microsoft Defender for Cloud Recommendations page showing high-risk issues with GitHub issue details popup." lightbox="media/github-advanced-security-deploy/recommendations-pane.png":::
 
@@ -171,3 +169,4 @@ On the GitHub side, if you have a GitHub Copilot license, you can resolve the is
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
 - [Quickstart: Connect your GitHub environment to Microsoft Defender for Cloud](quickstart-onboard-github.md)
 - [Configure agentless code scanning (preview)](agentless-code-scanning.md)
+
