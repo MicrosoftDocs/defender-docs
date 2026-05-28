@@ -132,9 +132,6 @@ If preview features are enabled on your tenant, select the **Generate and downlo
    After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
 ---
 
-   > [!NOTE] 
-   > For offboarding, select **Offboarding** in the **Device management** section, choose **Windows** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
-
 ## Deploy Defender endpoint security on devices
 
 The Defender deployment tool can be used interactively or non-interactively.
@@ -334,6 +331,50 @@ The following steps show how to create a scheduled task to run the tool using Gr
 1. Select **OK** and close any open GPMC windows.
 
 1. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link and select **OK**.
+
+## Offboard a device
+
+To offboard a device using the Defender deployment tool, download the offboarding package from the portal, transfer it to the target device, and run the offboarding command.
+
+### Download the offboarding package
+
+1. In the Microsoft Defender portal (security.microsoft.com), go to **Settings** > **Endpoints** > **Offboarding**.
+
+1. Under **Select operating system**, choose **Windows (Preview)**.
+
+1. Under **Defender deployment tool (preview)**, select **Download package** to retrieve the offboarding script.
+
+   <!-- TODO: Add screenshot of the Offboarding page showing the Download package button -->
+
+### Run the offboarding command
+
+1. Copy the .zip file to the target machine and extract it to access the `.offboarding` script.
+
+1. Open Command Prompt as Administrator and navigate to the extracted folder.
+
+1. Run the following command:
+
+   ```dos
+   <PackageExecutable>.exe -offboard -file:<PathToOffboardingFile>
+   ```
+
+   For example:
+
+   ```dos
+   C:\Packages>Disable_Live_Response.exe -offboard -file:WindowsDefenderATP_valid_until_2025-11-12.offboarding
+   ```
+
+   <!-- TODO: Add screenshot of the offboarding command running in Command Prompt -->
+
+1. When prompted `Are you sure you want to offboard? Yes(Y)/No(N)?`, type **Y** to proceed.
+
+1. Wait for the process to complete. A successful offboarding displays the following message:
+
+   ```console
+   Microsoft Defender deployment tool completed, exit code: 0 [Success]
+   ```
+
+   <!-- TODO: Add screenshot of the successful offboarding completion message -->
 
 ## Considerations and limitations
 
