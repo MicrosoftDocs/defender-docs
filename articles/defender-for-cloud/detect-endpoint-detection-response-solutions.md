@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how Microsoft Defender for Cloud can help me to protect enterprise endpoints, improve endpoint posture, and respond to security threats.
 ---
 
-# Endpoint detection and response solution detection
+# Detecting endpoint detection and response solutions
 
 This article explains how to check whether machines are connected to a supported endpoint detection and response (EDR) solution in Microsoft Defender for Cloud.
 
