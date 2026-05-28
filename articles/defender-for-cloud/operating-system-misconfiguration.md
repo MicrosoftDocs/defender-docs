@@ -1,5 +1,5 @@
 ---
-title: Overview of improving operating system baseline configurations in Microsoft Defender for Cloud
+title: Operating system misconfigurations
 description: Apply security recommendations to harden operating system baseline configurations with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
