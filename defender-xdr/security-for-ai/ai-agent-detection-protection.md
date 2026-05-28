@@ -23,7 +23,8 @@ This article explains how Microsoft Defender detects, blocks, and enables securi
 
 ## Prerequisites
 
-To access the `AIAgentsInfo` table and the Agent entity in Microsoft Defender, you must [enable preview features](../preview.md) in the Microsoft Defender portal.
+- [Onboard to Microsoft Agent 365](/microsoft-agent-365/overview).
+- To access the `AIAgentsInfo` table and the Agent entity in Microsoft Defender XDR, [enable preview features](../preview.md) in the Microsoft Defender portal.
 
 ## Block unsafe AI agent actions in real time
 
