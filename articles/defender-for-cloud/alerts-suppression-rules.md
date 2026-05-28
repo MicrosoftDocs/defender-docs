@@ -8,6 +8,7 @@ author: ElazarK
 ms.custom: sfi-image-nochange, msecd-doc-authoring-1012
 #customer intent: As a security admin, I want to suppress false positive security alerts so that I can focus on genuine threats.
 ---
+
 # Suppress alerts from Microsoft Defender for Cloud
 
 Microsoft Defender for Cloud generates security alerts when it detects threats in your environment. Some alerts can be false positives or otherwise unwanted. You can suppress those alerts automatically by using suppression rules.
