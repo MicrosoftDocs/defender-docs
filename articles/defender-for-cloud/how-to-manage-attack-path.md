@@ -37,9 +37,8 @@ By default attack paths are organized by risk level. The risk level is determine
 
 **To view attack paths that are related to containers**:
 
-- You must [enable agentless container posture extension](tutorial-enable-cspm-plan.md) in Defender CSPM
-    or
-- You can [enable Defender for Containers](defender-for-containers-enable-plan.md), and install the relevant agents To view attack paths that are related to containers. This also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query) containers data plane workloads in security explorer.
+- You must [enable agentless container posture extension](tutorial-enable-cspm-plan.md) in Defender CSPM.
+- Or you can [enable Defender for Containers](defender-for-containers-enable-plan.md) and install the relevant agents to view attack paths related to containers. This also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query) container data plane workloads in security explorer.
 
 - **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 
@@ -182,7 +181,7 @@ Attack path analysis grants you the ability to see all recommendations by attack
 The remediation path contains two types of recommendation:
 
 - **Recommendations** - Recommendations that mitigate the attack path.
-- **more recommendations** - Recommendations that reduce the exploitation risks, but don't mitigate the attack path.
+- **Additional recommendations** - Recommendations that reduce exploitation risks, but don't mitigate the attack path.
 
 ::: zone pivot="azure-portal"
 
@@ -198,7 +197,7 @@ The remediation path contains two types of recommendation:
 
     :::image type="content" source="media/how-to-manage-attack-path/bulk-recommendations.png" alt-text="Screenshot that shows where to select on the screen to see the attack paths full list of recommendations." lightbox="media/how-to-manage-attack-path/bulk-recommendations.png":::
 
-1. Expand **more recommendations**.
+1. Expand **Additional recommendations**.
 
 1. Select a recommendation.
 
@@ -223,7 +222,7 @@ Once an attack path is resolved, it can take up to 24 hours for an attack path t
     > [!NOTE]
     > The Defender portal provides enhanced tracking of remediation progress and can correlate remediation activities with broader security operations and incident management workflows.
 
-1. Expand **more recommendations**.
+1. Expand **Additional recommendations**.
 
 1. Select a recommendation.
 
@@ -239,7 +238,7 @@ Once an attack path is resolved, it can take up to 24 hours for an attack path t
 
 ## Enhanced exposure management capabilities
 
-The Defender portal provides more capabilities for attack path analysis through its integrated Exposure Management framework:
+The Defender portal provides additional capabilities for attack path analysis through its integrated Exposure Management framework:
 
 - **Unified incident correlation**: Attack paths are automatically correlated with security incidents across your Microsoft security ecosystem.
 - **Cross-product insights**: Attack path data is integrated with findings from Microsoft Defender for Endpoint, Microsoft Sentinel, and other Microsoft security solutions.
@@ -255,7 +254,7 @@ Learn more about [attack paths](concept-attack-path.md) in Defender for Cloud.
 
 ---
 
-## Next Step
+## Next step
 
 > [!div class="nextstepaction"]
 > [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).

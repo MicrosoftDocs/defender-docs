@@ -11,7 +11,7 @@ ms.date: 05/28/2026
 
 Security teams are responsible for improving their organization's security posture, but team members might not always follow through to implement security recommendations. Security teams can set governance rules to help drive accountability and create a service-level agreement (SLA) around the remediation process.
 
-For an in-depth discussion around why governance rules are helpful, watch this episode ([this episode](episode-fifteen.md)) of the *Defender for Cloud in the field* video series.
+For an in-depth discussion about why governance rules are helpful, watch [this episode](episode-fifteen.md) of the *Defender for Cloud in the field* video series.
 
 ## Governance rules
 

@@ -1,12 +1,12 @@
 ---
-title: How-to enable agentless container posture 
-description: Learn how to onboard agentless containers
+title: Onboard agentless containers for CSPM
+description: Learn how to onboard agentless containers in Defender CSPM.
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/28/2026
 ---
 
-# Onboard agentless container posture in Defender CSPM
+# Onboard agentless containers for CSPM
 
 Enable agentless container posture in Defender CSPM to gain visibility into Kubernetes clusters and container images without deploying agents.
 
