@@ -79,15 +79,6 @@ The PowerShell command in the previous section configures a single device and is
 
 1. Use Intune to deploy the script to target devices. For detailed steps, see [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
 
-## Recommended deployment approach
-
-Microsoft recommends the following phased rollout:
-
-1. **Test group**: Enable runtime protection in **Audit** mode on a small set of devices where supported agents are actively used.
-1. **Review**: Monitor alerts in the Microsoft Defender portal for 1-2 weeks. Identify any false positives and adjust expectations.
-1. **Expand**: Roll out Audit mode to additional device groups across your organization.
-1. **Enforce**: After validating that alerts are accurate and actionable, switch to **Block** mode on device groups where you want active enforcement.
-
 ## Review and investigate detections
 
 After enabling runtime protection, review alerts to validate detection accuracy and tune your configuration before broadening enforcement. This step is critical during the Audit phase — it helps you understand what agents are encountering and whether detections represent real threats.
