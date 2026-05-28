@@ -7,7 +7,6 @@ author: mberdugo
 ms.reviewer: yohasson
 ms.topic: how-to
 ms.date: 05/4/2026
-ms.author: monaberdugo
 ai-usage: ai-assisted
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
