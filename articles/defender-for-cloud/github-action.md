@@ -7,16 +7,16 @@ ms.topic: how-to
 
 # Configure the Microsoft Security DevOps GitHub action
 
-Microsoft Security DevOps is a command line application that integrates static analysis tools into the development lifecycle. Security DevOps installs, configures, and runs the latest versions of static analysis tools such as, SDL, security and compliance tools. Security DevOps is data-driven with portable configurations that enable deterministic execution across multiple environments.
+Microsoft Security DevOps is a command line application that integrates static analysis tools into the development lifecycle. Security DevOps installs, configures, and runs the latest versions of static analysis tools such as SDL, security, and compliance tools. Security DevOps is data-driven with portable configurations that enable deterministic execution across multiple environments.
 
 Microsoft Security DevOps uses the following Open Source tools:
 
 | Name | Language | License |
 |--|--|--|
-| [AntiMalware](https://www.microsoft.com/windows/comprehensive-security) | AntiMalware protection in Windows from Microsoft Defender for Endpoint, that scans for malware and breaks the build if malware has been found. This tool scans by default on windows-latest agent. | Not Open Source |
+| [AntiMalware](https://www.microsoft.com/windows/comprehensive-security) | Anti-malware protection in Windows from Microsoft Defender for Endpoint that scans for malware and breaks the build if malware is found. This tool scans by default on windows-latest agent. | Not Open Source |
 | [Bandit](https://github.com/PyCQA/bandit) | Python | [Apache License 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE) |
 | [BinSkim](https://github.com/Microsoft/binskim) | Binary--Windows, ELF | [MIT License](https://github.com/microsoft/binskim/blob/main/LICENSE) |
-| [Checkov](https://github.com/bridgecrewio/checkov) | Terraform, Terraform plan, CloudFormation, AWS SAM, Kubernetes, Helm charts, Kustomize, Dockerfile, Serverless, Bicep, OpenAPI, ARM | [Apache License 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE) |
+| [Checkov](https://github.com/bridgecrewio/checkov) | Terraform, Terraform plan, CloudFormation, Amazon Web Services (AWS) SAM, Kubernetes, Helm charts, Kustomize, Dockerfile, Serverless, Bicep, OpenAPI, ARM | [Apache License 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE) |
 | [ESlint](https://github.com/eslint/eslint) | JavaScript | [MIT License](https://github.com/eslint/eslint/blob/main/LICENSE) |
 | [Template Analyzer](https://github.com/Azure/template-analyzer) | ARM Template, Bicep | [MIT License](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt) |
 | [Terrascan](https://github.com/accurics/terrascan) | Terraform (HCL2), Kubernetes (JSON/YAML), Helm v3, Kustomize, Dockerfiles, CloudFormation | [Apache License 2.0](https://github.com/accurics/terrascan/blob/master/LICENSE) |
@@ -24,13 +24,13 @@ Microsoft Security DevOps uses the following Open Source tools:
 
 ## Prerequisites
 
-- An Azure subscription If you don’t have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
+- An Azure subscription. If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 - [Connect your GitHub repositories](quickstart-onboard-github.md).
 
 - Open the [Microsoft Security DevOps GitHub action](https://github.com/marketplace/actions/security-devops-action) in a new window.
 
-- Ensure that [Workflow permissions are set to Read and Write](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-permissions-of-the-github_token-for-your-repository) on the GitHub repository. This includes setting "id-token: write" permissions in the GitHub Workflow for federation with Defender for Cloud.
+- Ensure that [Workflow permissions are set to Read and Write](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#setting-the-permissions-of-the-github_token-for-your-repository) on the GitHub repository. This includes setting the "ID-token: write" permission in the GitHub workflow for federation with Defender for Cloud.
 
 ## Configure the Microsoft Security DevOps GitHub action
 
@@ -129,7 +129,7 @@ To set up the GitHub action:
 
 1. Navigate to Defender for Cloud > DevOps Security.
 
-1. From the DevOps security blade, you should begin seeing the same MSDO security results developers see in their CI logs within minutes for the associated repository. Customers with GitHub Advanced Security will see the findings ingested from these tools as well.
+1. From the DevOps security blade, you can see the same Microsoft Security DevOps (MSDO) security results that developers see in their CI logs within minutes for the associated repository. Customers with GitHub Advanced Security also see the findings ingested from these tools.
 
 ## Learn more
 
