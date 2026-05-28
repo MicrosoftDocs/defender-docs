@@ -112,3 +112,5 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
 - [View and remediate vulnerability assessment findings for registry images](view-and-remediate-vulnerability-assessment-findings.md)
 
 - [View and remediate vulnerabilities for images running on AKS clusters](view-and-remediate-vulnerabilities-for-images.md)
+
+

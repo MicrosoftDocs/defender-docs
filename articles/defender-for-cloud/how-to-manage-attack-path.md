@@ -37,8 +37,9 @@ By default attack paths are organized by risk level. The risk level is determine
 
 **To view attack paths that are related to containers**:
 
-- You must [enable agentless container posture extension](tutorial-enable-cspm-plan.md) in Defender CSPM.
-- Or you can [enable Defender for Containers](defender-for-containers-enable-plan.md) and install the relevant agents to view attack paths related to containers. This also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query) container data plane workloads in security explorer.
+- Complete one of the following options:
+    - [Enable agentless container posture extension](tutorial-enable-cspm-plan.md) in Defender CSPM.
+    - [Enable Defender for Containers](defender-for-containers-enable-plan.md) and install the relevant agents to view attack paths related to containers. This option also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query) container data plane workloads in security explorer.
 
 - **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 
@@ -109,7 +110,7 @@ The attack path page shows you an overview of all of your attack paths. You can 
    - **Risk level**: Filter by High, Medium, or Low risk attack paths
    - **Asset type**: Focus on specific resource types
    - **Remediation status**: View resolved, in-progress, or pending attack paths
-   - **Time frame**: Filter by specific time periods (e.g., last 30 days)
+    - **Time frame**: Filter by specific time periods (for example, last 30 days)
 
 1. Select an attack path to view the Attack Path Map, a graph-based view highlighting:
    - **Vulnerable nodes**: Resources with security issues
@@ -257,6 +258,5 @@ Learn more about [attack paths](concept-attack-path.md) in Defender for Cloud.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
-
+> [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md)
 

@@ -49,7 +49,8 @@ The Defender for Servers plan in Microsoft Defender for Cloud identifies unmanag
 
 1. When you're sure the command is appropriate and ready for your host, select **Run**.
 
-## Next steps
+## Next step
 
-Learn more about [container security in Defender for Cloud](defender-for-containers-introduction.md).
+> [!div class="nextstepaction"]
+> [Learn about container security in Defender for Cloud](defender-for-containers-introduction.md)
 

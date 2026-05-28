@@ -152,8 +152,8 @@ From the Governance report, you can drill down into recommendations by the follo
 - Grace period
 - Cloud
 
-## Related content
+## Next step
 
-- [Implement security recommendations](implement-security-recommendations.md)
-
+> [!div class="nextstepaction"]
+> [Implement security recommendations](implement-security-recommendations.md)
 
