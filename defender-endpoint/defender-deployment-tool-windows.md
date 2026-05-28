@@ -86,9 +86,6 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 - On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must also be installed.
 
-> [!NOTE]
-> For more information about Defender endpoint security for Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
-
 ## Download the tool
 
 If preview features are enabled on your tenant, select the **Generate and download a new onboarding package (preview)** tab to see how to generate and download a new onboarding package. If preview features aren't enabled, select the **Download the tool (GA)** tab and follow the instructions for downloading the tool and required .onboarding file.
@@ -490,5 +487,4 @@ When you run the tool as part of a large-scale deployment, for example through a
 
 ## Related content
 
-- [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)
 - [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md)
