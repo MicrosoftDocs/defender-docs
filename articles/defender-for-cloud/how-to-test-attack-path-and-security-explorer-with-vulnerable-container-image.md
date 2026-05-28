@@ -3,7 +3,7 @@ title: Attack path analysis and enhanced risk-hunting for containers
 description: Learn how to test attack paths and perform enhanced risk-hunting for containers with cloud security explorer in Microsoft Defender for Cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 03/02/2026
+ms.date: 05/28/2026
 ---
 
 # Attack path analysis and enhanced risk-hunting for containers
@@ -55,7 +55,7 @@ This article shows how to test attack path analysis by deploying a mock vulnerab
     az aks get-credentials  --subscription <cluster-suid> --resource-group <your-rg> --name <your-cluster-name>    
     ```
 
-1. Install the [ngnix ingress Controller](https://docs.nginx.com/nginx-ingress-controller/installation/installing-nic/installation-with-helm/) :
+1. Install the ngnix ingress Controller ([ngnix ingress Controller](https://docs.nginx.com/nginx-ingress-controller/installation/installing-nic/installation-with-helm/)) :
 
     ```azurecli
     helm install ingress-controller oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.0.1
@@ -134,7 +134,7 @@ This article shows how to test attack path analysis by deploying a mock vulnerab
     kubectl get nodes
     ```
 
-1. Install the [ngnix ingress Controller](https://docs.nginx.com/nginx-ingress-controller/installation/installing-nic/installation-with-helm/) :
+1. Install the ngnix ingress Controller ([ngnix ingress Controller](https://docs.nginx.com/nginx-ingress-controller/installation/installing-nic/installation-with-helm/)) :
 
     ```awscli
     helm install ingress-controller oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.0.1
@@ -214,7 +214,7 @@ After deploying the mock scenario, you can view the generated attack path in **M
 
 1. Locate the attack path related to the deployed resources.
 
-Learn how to [identify and remediate attack paths](how-to-manage-attack-path.md).
+Learn how to identify and remediate attack paths. See [identify and remediate attack paths](how-to-manage-attack-path.md).
 
 ## Investigate container risks with Cloud Security Explorer
 
@@ -229,3 +229,5 @@ You can build queries in one of the following ways:
 - [Use built-in query templates](how-to-manage-cloud-security-explorer.md#query-templates)
 
 - [Create custom queries](how-to-manage-cloud-security-explorer.md#build-a-query)
+
+

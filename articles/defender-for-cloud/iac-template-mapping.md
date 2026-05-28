@@ -1,14 +1,14 @@
 ---
 title: Map Infrastructure as Code templates from code to cloud
 description: Learn how to map your Infrastructure as Code (IaC) templates to your cloud resources.
-ms.date: 05/18/2025
+ms.date: 05/28/2026
 ms.topic: how-to
 ms.custom: ignite-2023
 ---
 
 # Map Infrastructure as Code templates to cloud resources
 
-Mapping Infrastructure as Code (IaC) templates to cloud resources helps you ensure consistent, secure, and auditable infrastructure provisioning. It supports rapid response to security threats and a security-by-design approach. You can use mapping to discover misconfigurations in runtime resources. Then, remediate at the template level to help ensure no drift and to facilitate deployment via CI/CD methodology.
+Mapping Infrastructure as Code (IaC) templates to cloud resources helps you ensure consistent, secure, and auditable infrastructure provisioning. It supports rapid response to security threats and a security-by-design approach. You can use mapping to discover misconfigurations in runtime resources. Then, remediate at the template level to help ensure no drift and to help deployment via CI/CD methodology.
 
 ## Prerequisites
 
@@ -73,3 +73,5 @@ To create sample IaC mapping tags in your code repositories:
 ## Related content
 
 - Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
+
+
