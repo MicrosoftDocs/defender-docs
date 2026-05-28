@@ -35,13 +35,13 @@ The gated deployment agent requires read access to all of your Azure Container R
 
 1. [Assign the AcrPull role (or equivalent read role)](/azure/container-registry/container-registry-rbac-built-in-roles-overview?tabs=registries-configured-with-rbac-registry-abac-repository-permissions) to the MSI on all ACRs the cluster uses.
 
-1. [Add a Federated Identity Credential (FIC) to the MSI](/graph/api/resources/federatedidentitycredentials-overview?view=graph-rest-1.0) that allows the gated deployment agent to authenticate by using AKS Workload Identity, with the following FIC parameters:
+1. [Add a Federated Identity Credential (FIC) to the MSI](/graph/api/resources/federatedidentitycredentials-overview?view=graph-rest-1.0&preserve-view=true) that allows the gated deployment agent to authenticate by using AKS Workload Identity, with the following FIC parameters:
 
     - **Issuer**: The AKS OIDC issuer URL
     - **Subject**: The service account used by the gated deployment agent `system:serviceaccount:kube-system:defender-admission-controller-serviceaccount`.
     - **Audience**: api://AzureADTokenExchange
 
-1. Under the [securityGating section of the managed cluster API configuration](https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#resource-format-1), set the [MSI’s objectId in the identities parameter](https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#managedclustersecurityprofiledefendersecuritygating-1) under the security gating section of the managed cluster API configuration. 
+1. Under the [securityGating section of the managed cluster API configuration](/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#resource-format-1), set the [MSI's objectId in the identities parameter](/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#managedclustersecurityprofiledefendersecuritygating-1) under the security gating section of the managed cluster API configuration.
 
     :::image type="content" source="media/gated-deployment-infrastructure-as-code/identities.png" alt-text="Screenshot of the managed cluster API configuration showing the identities parameter in the security gating section." lightbox="media/gated-deployment-infrastructure-as-code/identities.png":::
 
