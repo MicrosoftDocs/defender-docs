@@ -183,7 +183,7 @@
                 - name: Enable on Azure
                   displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-azure.md
-                - name: Enable on AWS (Preview)
+                - name: Enable on AWS
                   displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-aws.md
                 - name: Verify AWS protection
