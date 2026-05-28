@@ -21,8 +21,6 @@ ms.service: defender-for-cloud
 > To identify documentation specific for the Defender Portal, look for the portal entry point at the top of the article. This pivot indicates whether the content applies to the Defender portal or the Azure portal.
 > 
 > Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
-> 
-> Review the [known limitations](defender-portal/known-limitations.md) article to understand current gaps during the preview phase.
 
 This article provides a comprehensive comparison of Microsoft Defender for Cloud features and capabilities between the Azure portal and Defender portal experiences. Understanding these differences helps you choose the right experience for your security operations and take advantage of enhanced capabilities available in the Defender portal.
 

@@ -2,14 +2,14 @@
 title: Manage cloud scopes and unified role-based access control in Microsoft Defender for Cloud
 description: Learn how to configure cloud scopes and unified role-based access control for granular permissions management across your cloud environments.
 ms.topic: how-to
-ms.date: 10/16/2025
-ms.author: dlanger
-author: dlanger
+ms.date: 05/26/2026
+ms.author: elkrieger
+author: ElazarK
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to configure cloud scopes and unified RBAC to manage access and permissions across my cloud environments.
 ---
 
-# Manage cloud scopes and unified role-based access control
+# Manage cloud scopes and unified role-based access control (preview)
 
 ::: zone pivot="defender-portal"
 
@@ -17,7 +17,7 @@ zone_pivot_groups: defender-portal-experience
 > This capability is currently in preview.   
 > For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
 
-Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources (Azure, AWS, GCP, and connected DevOps/registry sources) into meaningful groupings and apply least‑privilege access consistently. They provide:
+Cloud scopes and unified role-based access control (unified RBAC) in the Microsoft Defender portal let you segment multicloud resources into meaningful groups and apply least-privilege access consistently. Supported resources include Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and connected DevOps and registry sources. They provide:
 - Centralized, product-wide security permissions management
 - Granular scoping across heterogeneous cloud environments
 - Persistent filtering across inventory, posture, vulnerabilities, and exposure management
@@ -45,7 +45,7 @@ Cloud scopes and unified role-based access control (unified RBAC) in the Microso
 
 ## What are cloud scopes?
 
-Cloud scopes are tenant-level logical groupings of heterogeneous cloud environment primitives (Azure subscriptions, AWS accounts, GCP projects, DevOps organizations, container registries, artifact repositories, and more). Instead of mirroring just one provider’s native hierarchy, a cloud scope lets you assemble only the environments that matter for a specific operational or business purpose—then use that grouping consistently for:
+Cloud scopes are tenant-level logical groupings of cloud environment primitives, such as Azure subscriptions, AWS accounts, GCP projects, DevOps organizations, container registries, and artifact repositories. Instead of mirroring one provider's native hierarchy, a cloud scope lets you assemble only the environments that matter for a specific operational or business purpose. You can then use that grouping consistently for:
 
 - Permission (unified RBAC) assignment
 - Data filtering across inventory, posture, vulnerabilities, initiatives, attack paths, and map
@@ -53,10 +53,10 @@ Cloud scopes are tenant-level logical groupings of heterogeneous cloud environme
 
 Key properties:
 
-- Multicloud & multi–data source: A single scope can mix Azure + AWS + GCP + DevOps/org registry sources.
-- Nonhierarchical & flexible: Membership is an explicit list; it doesn’t inherit from Azure management groups or AWS organizations.
-- Many‑to‑many: An environment can belong to multiple scopes; a scope can contain unlimited environments.
-- Manual membership control: Newly connected environments aren’t auto-added—preventing accidental privilege expansion.
+- Multicloud and multi-data source: A single scope can mix Azure, AWS, GCP, and DevOps or registry sources.
+- Nonhierarchical and flexible: Membership is an explicit list. It doesn't inherit from Azure management groups or AWS organizations.
+- Many-to-many: An environment can belong to multiple scopes, and a scope can contain unlimited environments.
+- Manual membership control: Newly connected environments aren't auto-added. This behavior helps prevent accidental privilege expansion.
 - Consistent filter surface: Once selected, a scope persists as you navigate supported Defender portal experiences.
 
 How scopes differ from device groups:
@@ -76,14 +76,14 @@ Common design patterns for creating scopes:
 
 Relationship to unified RBAC:
 
-- Unified RBAC roles reference one or more scopes (or “All”).
+- Unified RBAC roles reference one or more scopes (or "All").
 - A user’s effective cloud data visibility and permitted actions are the union of all scopes tied to their assigned roles.
 - Scope changes (adding or removing environments) immediately alter access for users relying on that scope.
 - Least privilege: Granularity allows narrowing powerful permissions (for example, response or manage) to only the intended environments.
 
 Planning guidance:
 
-- Start coarse (major org / region boundaries).
+- Start with coarse boundaries, such as major organizational or regional boundaries.
 - Validate operational ownership and review cadence.
 - Introduce finer scopes only when risk, confidentiality, or compliance requires it.
 - Document purpose and owner for each scope to support lifecycle and audit.

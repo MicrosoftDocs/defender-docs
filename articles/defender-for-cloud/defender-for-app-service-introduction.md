@@ -1,10 +1,10 @@
 ---
 title: Microsoft Defender for App Service - the benefits and features
 description: Learn about the capabilities of Microsoft Defender for App Service and how to enable it on your subscription.
-ms.date: 04/19/2026
+ms.date: 05/14/2026
 ms.topic: overview
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ms.custom: sfi-image-nochange
 ---
 
@@ -16,17 +16,24 @@ Defender for Cloud is natively integrated with App Service, eliminating the need
 
 To protect your Azure App Service plan with Microsoft Defender for App Service, you need:
 
-- A supported App Service plan associated with dedicated machines.
+- An App Service plan on any App Service tier.
 
 - Defender for Cloud's enhanced protections enabled on your subscription as described in [Enable enhanced security features](connect-azure-subscription.md).
 
   > [!TIP]
   > You can optionally enable individual Microsoft Defender plans, like Microsoft Defender for App Service.
   
-- Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). Billing is calculated according to the total compute instances in every plan.
+- Microsoft Defender for App Service is billed as shown on the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md). Billing is calculated according to the total compute instances across all App Service plan tiers.
 - Check out Defender for App Service's [cloud availability](support-matrix-defender-for-cloud.md).
 
-## What are the benefits of Microsoft Defender for App Service?
+### App Service diagnostics for alert investigation
+
+To investigate security alerts triggered by Microsoft Defender for App Service, enable diagnostic settings on your App Service resource. Diagnostic logs capture HTTP traffic, application events, and platform-level activity that provide critical evidence when analyzing suspicious behavior. Without these logs, the data available for incident investigation might be limited.
+
+> [!IMPORTANT]
+> Enabling diagnostic settings can incur additional storage costs based on log volume and the destination you choose, such as a Log Analytics workspace or a Storage Account.
+
+## Benefits of Microsoft Defender for App Service?
 
 Azure App Service is a fully managed platform for building and hosting your web apps and APIs. Since the platform is fully managed, you don't have to worry about the infrastructure. It provides management, monitoring, and operational insights to meet enterprise-grade performance, security, and compliance requirements. For more information, see [Azure App Service](https://azure.microsoft.com/services/app-service/).
 
@@ -50,7 +57,7 @@ The log data and the infrastructure together can tell the story: from a new atta
 
 ### Threats by MITRE ATT&CK tactics
 
-Defender for Cloud monitors for many threats to your App Service resources. The alerts cover almost the complete list of MITRE ATT&CK tactics from preattack to command and control.
+Defender for Cloud monitors for many threats to your App Service resources. The alerts cover almost the complete list of MITRE ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) tactics from preattack to command and control.
 
 - **Pre-attack threats** - Defender for Cloud can detect the execution of multiple types of vulnerability scanners that attackers frequently use to probe applications for weaknesses.
 
@@ -86,4 +93,4 @@ For related material, see the following articles:
 
 - To export your alerts to Microsoft Sentinel, any partner SIEM, or any other external tool, follow the instructions in [Stream alerts to monitoring solutions](export-to-siem.md).
 - For a list of the Microsoft Defender for App Service alerts, see the [Reference table of alerts](alerts-azure-app-service.md).
-- For more information on App Service plans, see [App Service plans](https://azure.microsoft.com/pricing/details/app-service/plans/).
+- For more information on App Service plans, see [Azure App Service plans](/azure/app-service/overview-hosting-plans).

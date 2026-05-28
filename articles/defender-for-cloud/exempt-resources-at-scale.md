@@ -74,5 +74,5 @@ To view or manage existing exemptions, return to the **Exemptions** page in the 
 
 ## Next step
 
-> [!div class="nextstep"]
+> [!div class="nextstepaction"]
 > [Remediate recommendations](implement-security-recommendations.md)  

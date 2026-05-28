@@ -2,7 +2,7 @@
 title: Microsoft Defender for Cloud Overview
 description: Secure your Azure, hybrid, and multicloud resources with Microsoft Defender for Cloud. This cloud-native application protection platform (CNAPP) includes two key capabilities, cloud security posture management (CSPM) and cloud workload protection platform (CWPP). It helps protect your environments across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises systems.
 ms.topic: overview
-ms.date: 04/19/2026
+ms.date: 04/23/2026
 ms.author: elkrieger
 author: Elazark
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
@@ -22,8 +22,6 @@ author: Elazark
 > To identify documentation specific for the Defender Portal, look for the portal entry point at the top of the article. This pivot indicates whether the content applies to the Defender portal or the Azure portal.
 > 
 > Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
-> 
-> Review the [known limitations](defender-portal/known-limitations.md) article to understand current gaps during the preview phase.
 
 Microsoft Defender for Cloud is a [Cloud Native Application Protection Platform (CNAPP)](#cloud-native-application-protection-platform-cnapp), which is a unified solution that combines multiple cloud security tools to protect applications across their entire lifecycle. The solution provides a comprehensive view of your security posture across your cloud and on-premises resources. It also helps you secure multicloud and hybrid environments and integrates security into DevOps workflows. It has three core components:
 
@@ -44,7 +42,7 @@ In addition to its core CNAPP capabilities, Defender for Cloud delivers [AI secu
 
 ## Cloud Native Application Protection Platform (CNAPP)
 
-:::image type="content" source="media/defender-for-cloud-introduction/defender-plans.png" alt-text="Conceptual image of CNAPP and how the Defenders for Cloud's plans protect all of your resources in their environments." lightbox="media/defender-for-cloud-introduction/defender-plans.png":::
+:::image type="content" source="media/defender-for-cloud-introduction/defender-plans.png" alt-text="Conceptual image of CNAPP and how the Defender for Cloud plans protect all of your resources in their environments." lightbox="media/defender-for-cloud-introduction/defender-plans.png":::
 
 After you enable the [Defender for Cloud solution](connect-azure-subscription.md) on your Azure subscription, the system collects security data from your multicloud and DevOps environments. Defender for Cloud uses the data to provide insights, recommendations, and actions that help you protect your cloud workloads and resources. You can increase your cloud workloads protection and coverage by enabling additional plans that are listed in the following section.
 
@@ -67,7 +65,7 @@ You can also check out the E-book ["From plan to deployment: Implementing a Clou
 
 ## Cloud security posture management (CSPM)
 
-The security of your cloud and on-premises resources depends on proper configuration and deployment. Defenders for Cloud recommendations help you secure your environment.
+The security of your cloud and on-premises resources depends on proper configuration and deployment. Defender for Cloud recommendations help you secure your environment.
 
 Defender for Cloud includes free Foundational CSPM capabilities. Enable advanced CSPM capabilities by using the Defender CSPM plan.
 
@@ -125,6 +123,10 @@ Microsoft Defender for Cloud provides AI security posture management and AI thre
 | AI threat protection | Uses advanced threat detection techniques to identify and respond to threats targeting your generative AI workloads. | [AI threat protection](ai-threat-protection.md) |
 
 Defender for Cloud also includes a Data and AI security dashboard. This dashboard gives you a central place to monitor and manage your data and AI resources, track risks, and check protection status.
+
+## Managed detection and response for servers
+
+Microsoft Defender Experts for Servers is a managed detection and response service that adds Microsoft analyst expertise to your Defender for Servers deployment. Microsoft analysts and automation work together to detect, investigate, and respond to threats on Windows and Linux servers across Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP), and on-premises environments. Defender Experts for Servers is sold separately from Defender for Servers Plan 1 and Plan 2, and you opt in when you want Microsoft to operate detection and response on your behalf. To learn more, see [Microsoft Defender Experts for Servers](/defender-xdr/dex-servers-overview).
 
 ## Learn More
 

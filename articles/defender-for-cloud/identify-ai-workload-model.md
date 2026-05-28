@@ -2,7 +2,7 @@
 title: Discover generative AI workloads
 description: Learn how to use the cloud security explorer to determine which AI workloads and models are running in your environment.
 ms.topic: how-to
-ms.date: 05/19/2025
+ms.date: 05/28/2026
 # customer intent: As a user, I want to learn how to identify AI workloads and models in my environment so that I can assess their security posture.
 ---
 
@@ -16,7 +16,7 @@ The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender
 
 - Learn more about [investigating risks with the cloud security explorer and attack paths](concept-attack-path.md).
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - Enable [Defender for Cloud on your Azure subscription](connect-azure-subscription.md).
 
@@ -44,11 +44,10 @@ The cloud security explorer can be used to identify generative AI workloads and 
 
 1. Select a node to review the findings.
 
-    :::image type="content" source="media/identify-ai-workload-model/additional-resource-details.png" alt-text="Screenshot of the results with a different resource selected and its results are displayed." lightbox="media/identify-ai-workload-model/additional-resource-details.png":::
-
     The findings show the deployed models that are running on your resources and specific model metadata regarding those deployments.
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Explore risks to pre-deployment generative AI artifacts](explore-ai-risk.md)
+

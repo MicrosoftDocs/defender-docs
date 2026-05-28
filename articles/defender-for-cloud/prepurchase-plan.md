@@ -4,7 +4,7 @@ description: Learn how you can optimize Microsoft Defender for Cloud costs with 
 ms.topic: how-to
 ms.reviewer: liuyizhu
 ms.service: defender-for-cloud
-ms.date: 05/18/2025
+ms.date: 04/20/2026
 ---
 
 # Optimize Microsoft Defender for Cloud costs with a pre-purchase plan
@@ -42,7 +42,6 @@ The Microsoft Defender for Cloud prepurchase discount applies to usage from the 
 - Microsoft Defender for DNS
 - Microsoft Defender for Resource Manager
 - Microsoft Defender for PostgreSQL
-- Microsoft Defender for MariaDB
 - Microsoft Defender for Azure Cosmos DB
 - Microsoft Defender for Containers
 - Microsoft Defender CSPM

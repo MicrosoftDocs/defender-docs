@@ -15,7 +15,7 @@ Threat protection for AI services in Microsoft Defender for Cloud protects Micro
 
 - Read the [Overview - AI threat protection](ai-threat-protection.md).
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - [Enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
@@ -37,7 +37,7 @@ Threat protection for AI services in Microsoft Defender for Cloud protects Micro
 
 ## Enable the components of the plan
 
-With the AI services threat protection plan enabled, you can control whether the different components of teh plan are enabled. This includes:
+With the AI services threat protection plan enabled, you can control whether the different components of the plan are enabled. This includes:
 
 - **[Suspicious prompt evidence](#enable-suspicious-prompt-evidence)**: receive alerts for suspicious portions of user prompts and model responses to help analyze AI-related security alerts, with sensitive data automatically redacted. These prompt snippets appear in the Defender portal as part of each alert’s evidence.
 
@@ -49,7 +49,7 @@ With the AI services threat protection plan enabled, you can control whether the
 
 With the AI services threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or agents. Enabling user prompt evidence helps you triage, classify alerts and your user's intentions.
 
-User prompt evidence consists of prompts and model responses. Both are considered your data. Evidence is available through the Azure portal, Defender portal, and any attached partners integrations.
+User prompt evidence consists of prompts and model responses. Both are considered your data. Evidence is available through the Azure portal, Defender portal, and any attached partner integrations.
 
 If User prompt evidence is disabled, Microsoft Defender for Cloud continues analyzing prompts and responses for threat detection, but the prompt content is masked in alerts.
 

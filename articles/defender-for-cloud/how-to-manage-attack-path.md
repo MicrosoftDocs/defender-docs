@@ -4,7 +4,7 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to identify and remediate attack paths in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.topic: how-to
-ms.date: 04/19/2026
+ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to identify and remediate attack paths in Microsoft Defender for Cloud so that I can enhance the security of my environment.
@@ -24,10 +24,6 @@ By default attack paths are organized by risk level. The risk level is determine
 
 ::: zone pivot="defender-portal"
 
-> [!NOTE] 
-> This capability is currently in preview.   
-> For details about current gaps and restrictions, see [Known limitations](defender-portal/known-limitations.md).
-
 ::: zone-end
 
 ## Prerequisites
@@ -41,9 +37,9 @@ By default attack paths are organized by risk level. The risk level is determine
 
 **To view attack paths that are related to containers**:
 
-- You must [enable agentless container posture extension](tutorial-enable-cspm-plan.md) in Defender CSPM
-    or
-- You can [enable Defender for Containers](defender-for-containers-enable.md), and install the relevant agents in order to view attack paths that are related to containers. This also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query) containers data plane workloads in security explorer.
+- Complete one of the following options:
+    - [Enable agentless container posture extension](tutorial-enable-cspm-plan.md) in Defender CSPM.
+    - [Enable Defender for Containers](defender-for-containers-enable-plan.md) and install the relevant agents to view attack paths related to containers. This option also gives you the ability to [query](how-to-manage-cloud-security-explorer.md#build-a-query) container data plane workloads in security explorer.
 
 - **Required roles and permissions**: Security Reader, Security Admin, Reader, Contributor, or Owner.
 
@@ -114,7 +110,7 @@ The attack path page shows you an overview of all of your attack paths. You can 
    - **Risk level**: Filter by High, Medium, or Low risk attack paths
    - **Asset type**: Focus on specific resource types
    - **Remediation status**: View resolved, in-progress, or pending attack paths
-   - **Time frame**: Filter by specific time periods (e.g., last 30 days)
+    - **Time frame**: Filter by specific time periods (for example, last 30 days)
 
 1. Select an attack path to view the Attack Path Map, a graph-based view highlighting:
    - **Vulnerable nodes**: Resources with security issues
@@ -186,7 +182,7 @@ Attack path analysis grants you the ability to see all recommendations by attack
 The remediation path contains two types of recommendation:
 
 - **Recommendations** - Recommendations that mitigate the attack path.
-- **Additional recommendations** - Recommendations that reduce the exploitation risks, but don't mitigate the attack path.
+- **Additional recommendations** - Recommendations that reduce exploitation risks, but don't mitigate the attack path.
 
 ::: zone pivot="azure-portal"
 
@@ -259,7 +255,8 @@ Learn more about [attack paths](concept-attack-path.md) in Defender for Cloud.
 
 ---
 
-## Next Step
+## Next step
 
 > [!div class="nextstepaction"]
-> [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
+> [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md)
+

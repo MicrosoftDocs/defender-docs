@@ -1,29 +1,39 @@
 ---
-title: How to onboard Docker Hub container registries
-description: How to onboard Docker Hub container registries to Defender for Containers
+title: Onboard Docker Hub registries to Microsoft Defender for Containers
+description: Connect your Docker Hub organization to Defender for Containers for vulnerability scanning by creating a dedicated user account and access token.
+author: ElazarK
+ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 09/25/2024
+ms.date: 05/25/2026
 ms.custom: sfi-image-nochange
+#customer intent: As a security administrator, I want to connect my Docker Hub registries to Microsoft Defender for Containers so that I can assess image vulnerabilities in Docker Hub.
 ---
 
-# How to onboard your Docker Hub container registries to Defender for Cloud Security Posture Management
+# Onboard Docker Hub registries to Microsoft Defender for Containers
 
-Microsoft Defender for Containers connects to your organization's Docker Hub container registries using Defender for Cloud Security Posture Management to assess vulnerabilities in your Docker Hub container images.
+Microsoft Defender for Containers connects to your Docker Hub organization to assess vulnerabilities in container images.
 
-To enable Defender for Containers to connect to your Docker Hub containers registry, you need to:
+To connect Docker Hub to Defender for Containers, you need to:
 
-- Create in your Docker Hub organization account a dedicated user with access to all of the organization's container registries.
+- Create a dedicated user in your Docker Hub organization with access to all organization registries.
 - Generate an access token for the Docker Hub dedicated user.
 - Supply the Docker Hub dedicated user name and access token when configuring the Defender for Cloud Docker Hub connector.
 
+## Before you begin
+
+Make sure you have these prerequisites:
+
+- You own a Docker Hub organization account and have permissions to create and manage users at the organization scope.
+- You created a dedicated user with your organization email account (for example, `mdc_user@contoso.com`) for Defender for Cloud connectivity only.
+
 ## Create a user in Docker Hub
 
-1. Before starting, verify that you:
-   - Own an organization Docker Hub account and have the appropriate permissions for creation and management of a Docker Hub user on the organization scope.
-   - Have already a dedicated user with your organization's email account (for example `mdc_user@contoso.com`), to be used only for Defender for Cloud connectivity.
+To create a user in Docker Hub:
 
-2. Invite the dedicated user via email to access all repositories in your organization as an "Editor".
+1. Verify that you can create and manage users in your Docker Hub organization.
+
+1. Invite the dedicated user via email to access all repositories in your organization as an "Editor".
 
     :::image type="content" source="media/defender-for-containers-enable-external-registry-for-docker-hub/docker-hub-invite-member.png" alt-text="Screenshot of select an invite member." lightbox="media/defender-for-containers-enable-external-registry-for-docker-hub/docker-hub-invite-member.png":::
 
@@ -32,12 +42,18 @@ To enable Defender for Containers to connect to your Docker Hub containers regis
     > [!NOTE]
     > While the Editor privilege allows a user to modify Docker Hub registries, the access token created will allow Defender for Cloud read-only access.
 
-3. An email is sent to the dedicated user with a link to verify the email address. Select the verify link in the email and complete the process of creating a Docker Hub dedicated user.
+1. An email is sent to the dedicated user with a link to verify the email address. Select the verify link in the email and complete the process of creating a Docker Hub dedicated user.
 
 ## Create an access token for the dedicated Docker Hub user
 
-Sign in to Docker Hub as the dedicated user and generate an access token with "Read-Only" permissions. The access token is used to enable the Defender for Cloud to securely connect to your organization's Docker Hub account. Save this access token and the Docker Hub user name to [configure the Defender for Cloud Docker Hub connector](agentless-vulnerability-assessment-docker-hub.md#onboard-the-docker-hub-environment).
+To create an access token for the dedicated Docker Hub user:
+
+1. Sign in to Docker Hub as the dedicated user.
+1. Generate an access token with **Read-Only** permissions.
+1. Save the access token and the Docker Hub user name for later use.
+1. Continue with [configure the Defender for Cloud Docker Hub connector](agentless-vulnerability-assessment-docker-hub.md#onboard-the-docker-hub-environment).
 
 :::image type="content" source="media/defender-for-containers-enable-external-registry-for-docker-hub/docker-hub-create-access-token.png" alt-text="Screenshot of create an access token." lightbox="media/defender-for-containers-enable-external-registry-for-docker-hub/docker-hub-create-access-token.png":::
 
 :::image type="content" source="media/defender-for-containers-enable-external-registry-for-docker-hub/docker-hub-access-token-text.png" alt-text="Screenshot of view an access token." lightbox="media/defender-for-containers-enable-external-registry-for-docker-hub/docker-hub-access-token-text.png":::
+

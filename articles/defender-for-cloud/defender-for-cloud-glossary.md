@@ -81,7 +81,7 @@ Change access control list, Microsoft Windows native command-line utility often 
 
 ### **Cloud security graph**
 
-The cloud security graph is a graph-based context engine that exists within Defender for Cloud. The cloud security graph collects data from your multicloud environment and other data sources. See [What is the cloud security graph?](concept-attack-path.md#what-is-cloud-security-graph).
+The cloud security graph is a graph-based context engine that exists within Defender for Cloud. The cloud security graph collects data from your multicloud environment and other data sources. See [What is the cloud security graph?](concept-attack-path.md#what-is-the-cloud-security-graph).
 
 ### **CORS**
 

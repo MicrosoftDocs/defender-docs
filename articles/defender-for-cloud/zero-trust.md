@@ -38,7 +38,7 @@ Here's how these stages map to Defender for Cloud.
 |Employ hardening mechanisms | Least privilege access is a Zero Trust principle. Defender for Cloud can help you to harden VMs and network settings using this principle with features such as:<br>[Just-in-time (JIT) VM access](just-in-time-access-overview.md). |
 |Set up threat protection  | Defender for Cloud is a cloud workload protection platform (CWPP), providing advanced, intelligent protection of Azure and hybrid resources and workloads. [Learn more](defender-for-cloud-introduction.md). |
 |Automatically block risky behavior | Many of the hardening recommendations in Defender for Cloud offer a *deny* option, to prevent the creation of resources that don't satisfy defined hardening criteria. [Learn more](./prevent-misconfigurations.md).  |
-|Automatically flag suspicious behavior | Defenders for Cloud security alerts are triggered by threat detections. Defender for Cloud prioritizes and lists alerts, with information to help you investigate. It also provides detailed steps to help you remediate attacks. Review a [full list of security alerts](alerts-reference.md).|
+|Automatically flag suspicious behavior | Defender for Cloud security alerts are triggered by threat detections. Defender for Cloud prioritizes and lists alerts, with information to help you investigate. It also provides detailed steps to help you remediate attacks. Review a [full list of security alerts](alerts-reference.md).|
 
 ### Apply Zero Trust to hybrid and multicloud scenarios
 

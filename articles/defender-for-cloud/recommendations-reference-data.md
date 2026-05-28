@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud data security r
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 04/15/2026
+ms.date: 04/20/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -360,15 +360,6 @@ This configuration enforces that SSL is always enabled for accessing your databa
 
 **Severity**: High
 
-### Geo-redundant backup should be enabled for Azure Database for MariaDB
-
-**Description**: Azure Database for MariaDB allows you to choose the redundancy option for your database server.
-It can be set to a geo-redundant backup storage in which the data is not only stored within the region in which your server is hosted, but is also replicated to a paired region to provide recovery options in case of a region failure.
-Configuring geo-redundant storage for backup is only allowed when creating a server.
-(Related policy: [Geo-redundant backup should be enabled for Azure Database for MariaDB](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0ec47710-77ff-4a3d-9181-6aa50af424d0)).
-
-**Severity**: Low
-
 ### Geo-redundant backup should be enabled for Azure Database for MySQL
 
 **Description**: Azure Database for MySQL allows you to choose the redundancy option for your database server.
@@ -503,14 +494,6 @@ Learn more in [Introduction to Microsoft Defender for Storage](defender-for-stor
 
 **Severity**: Medium
 
-### Private endpoint should be enabled for MariaDB servers
-
-**Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure Database for MariaDB.
-Configure a private endpoint connection to enable access to traffic coming only from known networks and prevent access from all other IP addresses, including within Azure.
-(Related policy: [Private endpoint should be enabled for MariaDB servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0a1302fb-a631-4106-9753-f3d494733990)).
-
-**Severity**: Medium
-
 ### Private endpoint should be enabled for MySQL servers
 
 **Description**: Private endpoint connections enforce secure communication by enabling private connectivity to Azure Database for MySQL.
@@ -538,13 +521,6 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Description**: This policy audits any Cognitive Services account in your environment with public network access enabled. Public network access should be disabled so that only connections from private endpoints are allowed.
 (Related policy: [Public network access should be disabled for Cognitive Services accounts](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0725b4dd-7e76-479c-a735-68e7ee23d5ca)).
-
-**Severity**: Medium
-
-### Public network access should be disabled for MariaDB servers
-
-**Description**: Disable the public network access property to improve security and ensure your Azure Database for MariaDB can only be accessed from a private endpoint. This configuration strictly disables access from any public address space outside of Azure IP range, and denies all logins that match IP or virtual network-based firewall rules.
-(Related policy: [Public network access should be disabled for MariaDB servers](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2ffdccbe47-f3e3-4213-ad5d-ea459b2fa077)).
 
 **Severity**: Medium
 
@@ -670,6 +646,142 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Low
 
+
+### Geo-redundant backups should be enabled for PostgreSQL Servers
+
+**Description**: **What is geo-redundant backup?** Geo-redundant backup replicates server backups to a paired Azure region, providing resilience against regional failures.
+
+**Why is it a security concern?** If geo-redundant backups are disabled, a regional outage could result in data loss and extended downtime, impacting availability and compliance.
+
+**How could attackers exploit it or how could it lead to data breaches?** While not directly exploitable, lack of geo-redundancy increases the impact of disasters or targeted attacks on a single region.
+
+**Severity**: Low
+
+### require_secure_transport should be set to **on** for Azure Database for PostgreSQL servers
+
+**Description**: **What is require_secure_transport?** require_secure_transport is a server-level parameter that enforces the use of SSL/TLS for all client connections to PostgreSQL. When set to on, clients must connect using encrypted channels.
+
+**Why is it a security concern?** If this setting is disabled (off), clients may connect over unencrypted channels, exposing sensitive data such as credentials, queries, and results to interception or manipulation.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker on the network could perform a man-in-the-middle attack, intercepting or altering data exchanged between the client and server if encryption is not enforced.
+
+**Severity**: High
+
+### Private endpoint should be configured for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is a private endpoint?** A private endpoint in Azure allows resources to be accessed securely over a private IP address within a virtual network. For Azure Database for PostgreSQL servers, configuring a private endpoint ensures that database traffic does not traverse the public internet.
+
+**Why is it a security concern?** Without a private endpoint, the server may be exposed to public network access, increasing the risk of unauthorized access, data interception, and denial-of-service attacks.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker could scan public IP ranges to discover exposed servers and attempt brute-force or exploit-based attacks. Public exposure also increases the risk of data exfiltration via compromised clients.
+
+**Severity**: High
+
+### 'Allow access to Azure services' should be disabled for PostgreSQL Servers
+
+**Description**: 
+
+**What is 'Allow access to Azure services'?** This setting creates a firewall rule that permits all Azure services to connect to the PostgreSQL server. While convenient, it introduces significant risk by allowing connections from any Azure subscription.
+
+**Why is it a security concern?** Enabling this setting bypasses network isolation controls, potentially exposing the database to unauthorized access from external Azure tenants.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker operating from another Azure subscription could attempt brute-force attacks or exploit vulnerabilities if this rule is enabled.
+
+**Severity**: High
+
+### Public IP access should be disabled for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is public network access?** Public network access allows clients to connect to the PostgreSQL server over the internet using its public IP address. While convenient, it introduces significant risk by exposing the server to external attacks.
+
+**Why is it a security concern?** If public access is enabled, attackers can scan IP ranges and attempt brute-force or exploit-based attacks against the server.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker could gain unauthorized access or disrupt service availability by exploiting vulnerabilities exposed through public endpoints.
+
+**Severity**: Medium
+
+### pgaudit.log_level should be set to “log” for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is pgaudit.log_level?** pgaudit.log_level is a configuration parameter that determines the PostgreSQL log level used for audit messages generated by the pgaudit extension. Valid values include log, notice, warning, and info.
+
+**Why is it a security concern?** If pgaudit.log_level is set to a level other than log, audit messages may be suppressed or redirected, reducing visibility into critical database activity. This can hinder detection of suspicious behavior and delay incident response.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker could perform unauthorized actions that go unlogged if the audit level is set too low or too high, bypassing monitoring systems and forensic tools.
+
+**Note:** This recommendation is relevant only if the pgaudit extension is installed. The pgaudit extension must be installed per database, but the pgaudit.log_level setting is configured at the server level.
+
+**Severity**: Medium
+
+### pgaudit.log should include role, ddl, and misc for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is pgaudit.log?** pgaudit.log is a configuration parameter that defines which classes of statements are logged by the pgaudit extension. Common classes include READ, WRITE, ROLE, DDL, and MISC.
+
+**Why is it a security concern?** If ROLE, DDL, and MISC are not included in pgaudit.log, critical operations such as privilege changes, schema modifications, and session-level commands may go unlogged. This reduces visibility into potentially malicious or unauthorized activity.
+
+**How could attackers exploit it or how could it lead to data breaches?** An attacker could escalate privileges, alter database structure, or execute session-level commands without detection if these classes are excluded from audit logging.
+
+**Note:** This recommendation is relevant only if the pgaudit extension is installed. The pgaudit extension must be installed per database, but the pgaudit.log setting is configured at the server level.
+
+**Severity**: High
+
+### pgaudit.log_statement_once should be set to “on” for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is pgaudit.log_statement_once?** pgaudit.log_statement_once is a configuration parameter that controls whether audit logs include repeated statements more than once per session. When set to on, only the first occurrence of a repeated statement is logged.
+
+**Why is it a security concern?** If this setting is disabled (off), repeated statements may flood the audit logs, making it harder to identify meaningful activity and increasing storage and processing overhead.
+
+**How could attackers exploit it or how could it lead to data breaches?** While not directly exploitable, excessive logging can obscure malicious activity in a flood of benign entries, delaying detection and response.
+
+**Note:** This recommendation is relevant only if the pgaudit extension is installed. The pgaudit extension must be installed per database, but the pgaudit.log_statement_once setting is configured at the server level.
+
+**Severity**: Medium
+
+### pgaudit.log_statement should be set to “on” for Azure Database for PostgreSQL Servers
+
+**Description**: 
+
+**What is pgaudit.log_statement?** pgaudit.log_statement is a configuration parameter that controls whether the full SQL statement text is included in audit logs generated by the pgaudit extension. When set to on, it ensures that each logged action includes the exact command executed.
+
+**Why is it a security concern?** If pgaudit.log_statement is not set to on, audit logs may lack the actual SQL statements, making it difficult to understand what actions were performed. This reduces the effectiveness of monitoring and incident response.
+
+**How could attackers exploit it or how could it lead to data breaches?** Without full statement logging, malicious or unauthorized queries may be recorded only as generic actions, obscuring the true intent and impact of the activity.
+
+**Note:** This recommendation is relevant only if the pgaudit extension is installed. The pgaudit extension must be installed per database, but the pgaudit.log_statement setting is configured at the server level.
+
+**Severity**: Medium
+
+### logfiles.retention_days should be greater than 3 for PostgreSQL Servers
+
+**Description**: 
+
+**What is logfiles.retention_days?** This parameter defines how many days PostgreSQL server logs are retained. The default is 3 days, which may be insufficient for compliance or investigation needs.
+
+**Why is it a security concern?** If logs are purged too quickly, security teams may not have enough historical data to detect patterns, investigate incidents, or meet regulatory requirements.
+
+**How could attackers exploit it or how could it lead to data breaches?** Attackers could rely on short retention periods to cover their tracks, knowing that evidence will be deleted quickly.
+
+**Severity**: Medium
+
+### connection_throttle should be set to “on” for PostgreSQL Servers
+
+**Description**: 
+
+**What is connection_throttle?** connection_throttle is a PostgreSQL configuration parameter that controls whether connection throttling is enabled. When set to on, the server can limit excessive connection attempts, reducing risk from brute-force or DoS attacks.
+
+**Why is it a security concern?** If disabled (off), attackers can flood the server with connection attempts, potentially exhausting resources and causing downtime.
+
+**How could attackers exploit it or how could it lead to data breaches?** Attackers could launch a DoS attack by opening thousands of connections, impacting availability and possibly creating conditions for privilege escalation during recovery.
+
+**Severity**: Medium
 
 ## AWS data recommendations
 
@@ -1922,52 +2034,6 @@ Even with key owner precautions, keys can be easily leaked by less than optimum 
 ### Storage buckets used as a log sink should not be publicly accessible
 
 **Description**: This recommendation evaluates the IAM policy of a bucket for the principals allUsers or allAuthenticatedUsers, which grant public access.
-
-**Severity**: High
-
-### Geo-redundant backups should be enabled for PostgreSQL Servers
-
-**Description**:   
-__What is geo-redundant backup?__ Geo-redundant backup replicates server backups to a paired Azure region, providing resilience against regional failures.
-
-__Why is it a security concern?__ If geo-redundant backups are disabled, a regional outage could result in data loss and extended downtime, impacting availability and compliance.
-
-__How could attackers exploit it or how could it lead to data breaches?__ While not directly exploitable, lack of geo-redundancy increases the impact of disasters or targeted attacks on a single region.
-
-**Severity**: Low
-
-### require_secure_transport should be set to **on** for Azure Database for PostgreSQL servers
-
-**Description**:   
-__What is require_secure_transport?__ require_secure_transport is a server-level parameter that enforces the use of SSL/TLS for all client connections to PostgreSQL. When set to on, clients must connect using encrypted channels.
-
-__Why is it a security concern?__ If this setting is disabled (off), clients may connect over unencrypted channels, exposing sensitive data such as credentials, queries, and results to interception or manipulation.
-
-__How could attackers exploit it or how could it lead to data breaches?__ An attacker on the network could perform a man-in-the-middle attack, intercepting or altering data exchanged between the client and server if encryption is not enforced.
-
-**Severity**: High
-
-### Private endpoint should be configured for Azure Database for PostgreSQL Servers
-
-**Description**: 
-
-__What is a private endpoint?__ A private endpoint in Azure allows resources to be accessed securely over a private IP address within a virtual network. For Azure Database for PostgreSQL servers, configuring a private endpoint ensures that database traffic does not traverse the public internet.
-
-__Why is it a security concern?__ Without a private endpoint, the server may be exposed to public network access, increasing the risk of unauthorized access, data interception, and denial-of-service attacks.
-
-__How could attackers exploit it or how could it lead to data breaches?__ An attacker could scan public IP ranges to discover exposed servers and attempt brute-force or exploit-based attacks. Public exposure also increases the risk of data exfiltration via compromised clients.
-
-**Severity**: High
-
-### 'Allow access to Azure services' should be disabled for PostgreSQL Servers
-
-**Description**: 
-
-__What is 'Allow access to Azure services'?__ This setting creates a firewall rule that permits all Azure services to connect to the PostgreSQL server. While convenient, it introduces significant risk by allowing connections from any Azure subscription.
-
-__Why is it a security concern?__ Enabling this setting bypasses network isolation controls, potentially exposing the database to unauthorized access from external Azure tenants.
-
-__How could attackers exploit it or how could it lead to data breaches?__ An attacker operating from another Azure subscription could attempt brute-force attacks or exploit vulnerabilities if this rule is enabled.
 
 **Severity**: High
 

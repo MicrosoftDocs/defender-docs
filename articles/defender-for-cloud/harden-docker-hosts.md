@@ -4,7 +4,7 @@ description: How to protect your Docker hosts and verify they're compliant with 
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 02/19/2025
+ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
 ---
 # Review Docker host hardening recommendations
@@ -12,8 +12,8 @@ ms.custom: sfi-image-nochange
 The Defender for Servers plan in Microsoft Defender for Cloud identifies unmanaged containers hosted on IaaS Linux VMs, or other Linux machines running Docker containers. Defender for Servers continuously assesses the configuration of these Docker hosts, and compares them with the [Center for Internet Security (CIS) Docker Benchmark](https://www.cisecurity.org/benchmark/docker/).
 
 - Defender for Cloud includes the entire ruleset of the CIS Docker Benchmark and alerts you if your containers don't satisfy any of the controls.
-- When it finds misconfigurations, Defender for Servers generates security recommendations to address findings.-
-When vulnerabilities are found, they're grouped inside a single recommendation.
+- When it finds misconfigurations, Defender for Servers generates security recommendations to address findings.
+- When vulnerabilities are found, they're grouped inside a single recommendation.
 
 ## Prerequisites
 
@@ -49,6 +49,8 @@ When vulnerabilities are found, they're grouped inside a single recommendation.
 
 1. When you're sure the command is appropriate and ready for your host, select **Run**.
 
-## Next steps
+## Next step
 
-Learn more about [container security in Defender for Cloud](defender-for-containers-introduction.md).
+> [!div class="nextstepaction"]
+> [Learn about container security in Defender for Cloud](defender-for-containers-introduction.md)
+

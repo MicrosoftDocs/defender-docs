@@ -3,12 +3,20 @@ title: Express configuration Azure Command Line Interface (CLI) commands referen
 description: In this article, you can review the Express configuration Azure Command Line Interface (CLI) commands reference and copy example scripts to use in your environments.
 ms.topic: sample
 ms.custom: devx-track-azurecli
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 09/17/2024
+ms.date: 05/07/2026
 ---
 
 # Express configuration Azure Command Line Interface (CLI) commands reference
+
+> [!IMPORTANT]
+> New public preview SQL vulnerability assessment unified API reference can be found under:
+> - [Sql Vulnerability Assessment Settings](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings)
+> - [Sql Vulnerability Assessment Baseline Rules](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules)
+> - [Sql Vulnerability Assessment Scan Results](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results)
+> - [Sql Vulnerability Assessment Scans](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans)
+> Examples below refer only to Azure SQL Databases (GA).
 
 This article lists the Azure Command Line Interface (CLI) commands that can be used with SQL vulnerability assessment express configuration.
 

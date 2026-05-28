@@ -1,10 +1,10 @@
 ---
 title: Code to runtime for recommendations
 description: Learn how to use code to runtime visibility to trace security issues from runtime back to source code and fix them at the origin to prevent recurrence.
-ms.date: 03/10/2026
+ms.date: 04/23/2026
 ms.topic: how-to
 ms.author: dlanger
-author: DebLanger
+author: dlanger
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to trace runtime security issues back to their source code origin and understand the blast radius to fix issues effectively at the source.
 ---
@@ -15,7 +15,7 @@ Modern cloud applications move through stages that might include source code, pi
 
 Code to runtime gives you end-to-end visibility across the software development lifecycle (SDLC). This feature helps you find the origin of an issue, assess its blast radius, and fix the issue at the source.
 
-Before continueing, take a look at the [prerequisites](container-image-mapping.md).
+Before continuing, take a look at the [prerequisites](container-image-mapping.md).
 
 ## Where you see code to runtime
 
@@ -58,7 +58,7 @@ For any recommendation supported by code to runtime, Defender correlates data ac
 - Fixing only at runtime can cause the issue to reappear during the next deployment.
 - Fixing at the source prevents recurring regressions.
 - Understanding impact helps you plan rollouts and coordinate work.
-- Helps you identify the owner for the fix
+- Helps you identify the owner for the fix.
 
 ## Walk the SDLC chain from runtime back to source
 
@@ -160,7 +160,7 @@ This streamlined collaboration between security and engineering reduces repeated
 
 ## Related content
 
-- [What is GitHub Advanced Security integration with Microsoft Defender for Cloud (preview)?](github-advanced-security-overview.md)
+- [What is GitHub Advanced Security integration with Microsoft Defender for Cloud?](github-advanced-security-overview.md)
 - [Deploy GitHub Advanced Security integration with Microsoft Defender for Cloud](github-advanced-security-deploy.md)
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)
 - [Container image mapping](container-image-mapping.md)

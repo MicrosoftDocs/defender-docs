@@ -299,4 +299,5 @@ You can gain insights into VM activities using log search. To view the logs:
 
 ## Next step
 
--   [Understand just-in-time VM access management](just-in-time-access-overview.md)
+> [!div class="nextstepaction"]
+> [Understand just-in-time VM access management](just-in-time-access-overview.md)

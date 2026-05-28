@@ -142,7 +142,7 @@ Defender for Servers assigns tags to your Azure Arc GCP resources to manage the 
 
 - **Auto provision Defender's sensor for Azure Arc** and **Auto provision Azure Policy extension for Azure Arc**: Enabled by default. You can install Azure Arc-enabled Kubernetes and its extensions on your GKE clusters in three ways:
   - Enable Defender for Containers autoprovisioning at the project level, as explained in the instructions in this section. Use this method.
-  - Use Defender for Cloud recommendations for per-cluster installation. They appear on the Defender for Cloud recommendations page. [Learn how to deploy the solution to specific clusters](defender-for-containers-enable.md?tabs=defender-for-container-gke#deploy-the-solution-to-specific-clusters).
+  - Use Defender for Cloud recommendations for per-cluster installation. They appear on the Defender for Cloud recommendations page. [Learn how to deploy the solution to specific clusters](cluster-security-dashboard.md).
   - Manually install [Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
 - The [K8S API access](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) feature provides API-based discovery of your Kubernetes clusters. To enable, set the **K8S API access** toggle to **On**.
