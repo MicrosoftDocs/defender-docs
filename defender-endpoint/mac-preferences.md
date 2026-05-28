@@ -990,6 +990,21 @@ The following templates contain entries for all settings described in this docum
         <key>userInitiatedFeedback</key>
         <string>enabled</string>
     </dict>
+    <key>features</key>
+    <dict>
+        <key>performanceProfiles</key>
+        <string>enabled</string>
+    </dict>
+    <key>performanceProfiles</key>
+    <dict>
+        <key>merge_policy</key>
+        <string>merge</string>
+        <key>profiles</key>
+        <array>
+            <string>profile1</string>
+            <string>profile2</string>
+        </array>
+    </dict>
 </dict>
 </plist>
 ```
@@ -1181,6 +1196,21 @@ The following templates contain entries for all settings described in this docum
                     <false/>
                     <key>userInitiatedFeedback</key>
                     <string>enabled</string>
+                </dict>
+                <key>features</key>
+                <dict>
+                    <key>performanceProfiles</key>
+                    <string>enabled</string>
+                </dict>
+                <key>performanceProfiles</key>
+                <dict>
+                    <key>merge_policy</key>
+                    <string>merge</string>
+                    <key>profiles</key>
+                    <array>
+                        <string>profile1</string>
+                        <string>profile2</string>
+                    </array>
                 </dict>
             </dict>
         </array>
