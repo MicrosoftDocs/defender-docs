@@ -2,7 +2,7 @@
 title: Build queries with cloud security explorer
 description: Learn how to build queries with cloud security explorer in Microsoft Defender for Cloud to proactively identify security risks in your cloud environment.
 ms.topic: how-to
-ms.date: 03/31/2025
+ms.date: 05/28/2026
 ms.author: elkrieger
 author: elazark
 ai-usage: ai-assisted
@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Build queries with cloud security explorer
 
-Defenders for Cloud's contextual security capabilities help security teams reduce the risk of significant breaches. Defender for Cloud uses environmental context to assess security issues, identify the biggest risks, and distinguish them from less risky issues. The cloud security explorer uses snapshot publishing, a method of publishing data at regular intervals known as snapshots. Snapshots ensure that the workload configuration data is refreshed daily, keeping it fresh and accurate.
+Defender for Cloud's contextual security capabilities help security teams reduce the risk of significant breaches. Defender for Cloud uses environmental context to assess security issues, identify the biggest risks, and distinguish them from less risky issues. The cloud security explorer uses snapshot publishing, a method of publishing data at regular intervals known as snapshots. Snapshots ensure that the workload configuration data is refreshed daily, keeping it fresh and accurate.
 
 Use the cloud security explorer to identify security risks in your cloud environment. Run graph-based queries on the cloud security graph, Defender for Cloud's context engine. Prioritize your security team's concerns while considering your organization's specific context and conventions.
 
@@ -20,8 +20,8 @@ Use the cloud security explorer to query security issues and environment context
 
 ## Prerequisites
 
-- You must [enable Defender Cloud Security Posture Management (CSPM)](enable-enhanced-security.md)
-  - You must [enable agentless scanning](enable-vulnerability-assessment-agentless.md).
+- You must [enable Defender Cloud Security Posture Management (CSPM)](connect-azure-subscription.md)
+  - You must [enable agentless scanning](enable-agentless-scanning-vms.md).
   
   For agentless container posture, you must enable the following extensions:
   - [K8S API access](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan)
@@ -95,3 +95,4 @@ Use the query link to share a query with others. After creating a query, select 
 
 > [!div class="nextstepaction"]
 > [Learn about the cloud security graph, attack path analysis, and the cloud security explorer](concept-attack-path.md)
+

@@ -33,9 +33,9 @@ This article lists all sensitive information types supported by Microsoft Defend
 | [Austria social security number](/purview/sit-defn-austria-social-security-number) | YES |
 | [Austria tax identification number](/purview/sit-defn-austria-tax-identification-number) | YES |
 | [Austria value added tax](/purview/sit-defn-austria-value-added-tax) | YES |
-| [Azure AD client access token](/purview/sit-defn-azure-ad-client-access-token) | YES |
-| [Azure AD client secret](/purview/sit-defn-azure-ad-client-secret) | YES |
-| [Azure AD User Credentials](/purview/sit-defn-azure-ad-user-credentials) | YES |
+| [Microsoft Entra ID client access token](/purview/sit-defn-azure-ad-client-access-token) | YES |
+| [Microsoft Entra ID client secret](/purview/sit-defn-azure-ad-client-secret) | YES |
+| [Microsoft Entra user Credentials](/purview/sit-defn-azure-ad-user-credentials) | YES |
 | [Azure App Service deployment password](/purview/sit-defn-azure-app-service-deployment-password) | YES |
 | [Azure Batch shared access key](/purview/sit-defn-azure-batch-shared-access-key) | YES |
 | [Azure Bot Framework secret key](/purview/sit-defn-azure-bot-framework-secret-key) | YES |

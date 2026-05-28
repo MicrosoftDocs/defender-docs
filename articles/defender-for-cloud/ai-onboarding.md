@@ -2,28 +2,26 @@
 title: Enable threat protection for AI services
 description: Learn how to enable threat protection for AI services on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 05/20/2025
+ms.date: 04/01/2026
 ms.author: elkrieger
 author: Elazark
 ---
 
 # Enable threat protection for AI services
 
-Threat protection for AI services in Microsoft Defender for Cloud protects AI services on an Azure subscription by providing insights to threats that might affect your generative AI applications.
+Threat protection for AI services in Microsoft Defender for Cloud protects Microsoft Foundry workloads on an Azure subscription by providing insights to threats that might affect your generative AI applications and agents.
 
 ## Prerequisites
 
 - Read the [Overview - AI threat protection](ai-threat-protection.md).
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial/).
+- You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - [Enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- We recommend not opting out of prompt-based triggered alerts for [Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter). Opting out and removing that capability can affect Defender for Cloud's ability to monitor and detect such attacks.
+- Required permissions: To enable the plan, you need **Owner** or **Contributor** level.
 
 ## Enable threat protection for AI services
-
-Enable threat protection for AI services.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -37,11 +35,23 @@ Enable threat protection for AI services.
 
     :::image type="content" source="media/ai-onboarding/enable-ai-workloads-plan.png" alt-text="Screenshot that shows you how to toggle threat protection for AI services to on." lightbox="media/ai-onboarding/enable-ai-workloads-plan.png":::
 
-## Enable user prompt evidence
+## Enable the components of the plan
 
-With the AI services threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or resources. Enabling user prompt evidence helps you triage, classify alerts and your user's intentions.
+With the AI services threat protection plan enabled, you can control whether the different components of the plan are enabled. This includes:
 
-User prompt evidence consists of prompts and model responses. Both are considered your data. Evidence is available through the Azure portal, Defender portal, and any attached partners integrations.
+- **[Suspicious prompt evidence](#enable-suspicious-prompt-evidence)**: receive alerts for suspicious portions of user prompts and model responses to help analyze AI-related security alerts, with sensitive data automatically redacted. These prompt snippets appear in the Defender portal as part of each alert’s evidence.
+
+- **[Data security for AI interactions](#enable-data-security-for-microsoft-foundry-with-microsoft-purview)**: allows Microsoft Purview to access and analyze prompts, responses, and related metadata to provide data security and compliance capabilities such as SIT classification, auditing, insider risk, communication compliance, and eDiscovery. It is a paid Purview feature and is not included in the Defender for AI Services plan.
+
+- **[AI model security](#enable-ai-model-security)**: AI model scanning gives you a clear, unified view of all your models registered in Azure Machine Learning Registries. It helps teams stay ahead of security risks by automatically checking for issues like serialization vulnerabilities, malware, and missing scans. By surfacing misconfigurations and integrating seamlessly with Defender for Cloud and developer workflows, it ensures your AI models are continuously protected and ready for production.
+
+### Enable suspicious prompt evidence
+
+With the AI services threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or agents. Enabling user prompt evidence helps you triage, classify alerts and your user's intentions.
+
+User prompt evidence consists of prompts and model responses. Both are considered your data. Evidence is available through the Azure portal, Defender portal, and any attached partner integrations.
+
+If User prompt evidence is disabled, Microsoft Defender for Cloud continues analyzing prompts and responses for threat detection, but the prompt content is masked in alerts.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -61,14 +71,14 @@ User prompt evidence consists of prompts and model responses. Both are considere
 
 1. Select **Continue**.
 
-### **Enable Data Security for Azure AI with Microsoft Purview**
+### Enable Data Security for Microsoft Foundry with Microsoft Purview
 
 > [!NOTE]
 > This feature requires a Microsoft Purview license, which isn't included with Microsoft Defender for Cloud's Defender for AI Services plan.
 >
 > To get started with Microsoft Purview DSPM for AI, see [Set up Microsoft Purview DSPM for AI](/purview/ai-microsoft-purview).
 
-Enable Microsoft Purview to access, process, and store prompt and response data—including associated metadata—from Azure AI Services. This integration supports key data security and compliance scenarios such as:
+Enable Microsoft Purview to access, process, and store prompt and response data—including associated metadata—from Microsoft Foundry. This integration supports key data security and compliance scenarios such as:
 
 - Sensitive information type (SIT) classification
 
@@ -87,7 +97,10 @@ Enable Microsoft Purview to access, process, and store prompt and response data�
 This capability helps your organization manage and monitor AI-generated data in alignment with enterprise policies and regulatory requirements.
 
 > [!NOTE]
-> Data Security Policies for Azure AI Services interactions are supported only for API calls that use Microsoft Entra ID authentication with a user-context token, or for API calls that explicitly include user context. To learn more, see [Gain end-user context for Azure AI API calls](gain-end-user-context-ai.md). For all other authentication scenarios, user interactions captured in Purview show up only in Purview Audit and DSPM for AI Activity Explorer. 
+> Microsoft Purview integration does **not** include data or context from Foundry agents. Support for Foundry agent integration is not available at this time and will be communicated in future updates if planned.
+
+> [!NOTE]
+> Data Security Policies for Microsoft Foundry interactions are supported only for API calls that use Microsoft Entra ID authentication with a user-context token, or for API calls that explicitly include user context. To learn more, see [Gain end-user context for Azure AI API calls](gain-end-user-context-ai.md). For all other authentication scenarios, user interactions captured in Purview show up only in Purview Audit and DSPM for AI Activity Explorer. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -105,7 +118,7 @@ This capability helps your organization manage and monitor AI-generated data i
 
 1. Select **Continue**.
 
-### **Troubleshooting**
+#### **Troubleshooting**
 If you don't see user interactions for Entra ID authenticated users in Microsoft Purview Activity Explorer after turning on the toggle, follow these steps to troubleshoot:
  
 Run the following commands in Azure PowerShell
@@ -127,9 +140,34 @@ Run the following commands in Azure PowerShell
     ```PowerShell
     New-AzADServicePrincipal -ApplicationId "9ec59623-ce40-4dc8-a635-ed0275b5d58a"
     ```  
-   
+
+### Enable AI model security
+
+AI model security in Defender for Cloud, provides organizations proactive protection for Machine Learning (ML) models. The service scans models for security risks, such as embedded malware, unsafe operators, and exposed secrets, before models reach production.
+
+By integrating directly with Azure Machine Learning workspaces, registries, and continuous integration and continuous delivery (CI/CD) pipelines, Ai model security provides security teams visibility into the safety and compliance status of AI models that exist in their environments.
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Search for and select **Microsoft Defender for Cloud**.
+
+1. In the Defender for Cloud menu, select **Environment settings**.
+
+1. Select the relevant Azure subscription.
+
+1. Locate AI services and select **Settings**.
+
+1. Toggle AI model security to **On**.
+
+    :::image type="content" source="media/ai-onboarding/model-security.png" alt-text="Screenshot that shows where the toggle for AI model security is located." lightbox="media/ai-onboarding/model-security.png":::
+
+1. Select **Continue**.
+
+Learn more about [AI model security](ai-model-security.md).
+
 ## Related content
 
 - [Add user and application context to AI alerts](gain-end-user-context-ai.md)
 - [Explore AI alerts](alerts-ai-workloads.md)
 - [Manage and respond to the security alerts](manage-respond-alerts.md)
+

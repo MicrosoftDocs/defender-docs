@@ -4,7 +4,7 @@ description: Learn about tracking file change with file integrity monitoring in 
 author: Elazark
 ms.author: elkrieger
 ms.topic: concept-article
-ms.date: 08/12/2025
+ms.date: 03/22/2026
 ---
 
 # File integrity monitoring
@@ -34,9 +34,19 @@ File integrity monitoring uses the Microsoft Defender for Endpoint agent and age
 - Collected file integrity monitoring data is part of the [500-MB benefit included in Defender for Servers Plan 2](data-ingestion-benefit.md).
 - File integrity monitoring gives information about file and resource changes. It includes the source of the change, account details, indication of who made the changes, and information about the initiating process.
 
-### Migrate to the new version
+## Version requirements
 
-File integrity monitoring previously used the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) or the Azure Monitor agent (AMA) to collect data. If you're using file integrity monitoring with one of these legacy methods, you can [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) to use Defender for Endpoint.
+To ensure proper file integrity monitoring functionality, machines must run the **Defender for Servers Windows client (Microsoft Defender for Endpoint agent) version 10.8799 or above**. This requirement is especially important for:
+
+- Legacy Windows machines (downlevel clients)
+- Environments transitioning from MMA or AMA-based FIM
+
+> [!IMPORTANT]
+> Due to a pipeline change in Microsoft Defender for Endpoint, users with existing FIM deployments on legacy Windows machines must update their MDE agent to version 10.8799 or above to continue receiving file integrity monitoring data.
+
+### Migrate legacy AMA/MMA clients to MDE-based file integrity monitoring
+
+If you're currently using file integrity monitoring with legacy agent-based methods (Log Analytics agent/Microsoft Monitoring Agent (MMA) or Azure Monitor Agent (AMA)), you need to migrate to the MDE-based (Microsoft Defender for Endpoint) approach. This migration ensures continued functionality and access to enhanced capabilities. Learn how to [migrate file integrity monitoring](migrate-file-integrity-monitoring.md) from legacy AMA/MMA clients to the MDE-based solution.
 
 ## Configure file integrity monitoring
 

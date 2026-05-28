@@ -2,7 +2,7 @@
 title: Protecting secrets in Microsoft Defender for Cloud
 description: Learn how to protect secrets with Microsoft Defender for Server's agentless secrets scanning.
 ms.topic: overview
-ms.date: 02/19/2025
+ms.date: 04/20/2026
 ---
 
 
@@ -63,8 +63,7 @@ Insecure SSH private keys<br/>Supports RSA algorithm for PuTTy files.<br/>PKCS#8
 Plaintext Azure SQL connection strings support SQL PAAS.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext Azure database for PostgreSQL.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext Azure database for MySQL.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
-Plaintext Azure database for MariaDB.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
-Plaintext Azure Cosmos DB, including PostgreSQL, MySQL and MariaDB.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
+Plaintext Azure Cosmos DB, including PostgreSQL and MySQL.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext AWS RDS connection string supports SQL PAAS:<br/>Plaintext Amazon Aurora with Postgres and MySQL flavors.<br/>Plaintext Amazon custom RDS with Oracle and SQL Server flavors.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext Azure storage account connection strings|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext Azure storage account connection strings.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
@@ -72,12 +71,12 @@ Plaintext Azure storage account SAS tokens.|Yes |Yes | Inventory, cloud security
 Plaintext AWS access keys.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext AWS S3 presigned URL. |Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext Google storage signed URL. |Yes |Yes | Inventory, cloud security explorer.
-Plaintext Azure AD Client Secret. |Yes |Yes | Inventory, cloud security explorer.
+Plaintext Microsoft Entra ID Client Secret. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure DevOps Personal Access Token. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext GitHub Personal Access Token.|Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure App Configuration Access Key. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure Cognitive Service Key.|Yes |Yes | Inventory, cloud security explorer.
-Plaintext Azure AD User Credentials. |Yes |Yes | Inventory, cloud security explorer.
+Plaintext Microsoft Entra user Credentials. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure Container Registry Access Key. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure App Service Deployment Password. |Yes |Yes | Inventory, cloud security explorer.
 Plaintext Azure Databricks Personal Access Token. |Yes |Yes | Inventory, cloud security explorer.

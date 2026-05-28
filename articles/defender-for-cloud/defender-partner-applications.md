@@ -21,7 +21,7 @@ The security scan results from partner applications are available within Defende
 
 ## Prerequisites
 
-This feature requires a DevOps connector in Defender for Cloud. See [how to onboard onboard DevOps environments](devops-support.md).
+This feature requires a DevOps connector in Defender for Cloud. See [how to onboard DevOps environments](devops-support.md).
 
 | Aspect | Details |
 |--|--|

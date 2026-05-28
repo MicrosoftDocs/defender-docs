@@ -2,7 +2,7 @@
 title: What is Cloud Security Posture Management (CSPM)
 description: Learn more about Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud and how it helps improve your security posture.
 ms.topic: concept-article
-ms.date: 12/10/2025
+ms.date: 04/20/2026
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ---
 
@@ -93,7 +93,7 @@ Defender for Cloud supports integrations with partner systems for incident manag
 |---|---|---|
 | Compute | Virtual machines, VM scale sets, classic VMs | Deallocated VMs, Databricks VMs |
 | Storage | Storage accounts | Accounts without blob containers or file shares |
-| Databases | SQL servers, PostgreSQL/MySQL/MariaDB servers, Synapse workspaces | – |
+| Databases | SQL servers, PostgreSQL/MySQL servers, Synapse workspaces | – |
 
 ### AWS
 

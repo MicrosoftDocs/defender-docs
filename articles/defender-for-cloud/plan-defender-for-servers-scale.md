@@ -4,7 +4,7 @@ description: Scale protection of Azure, AWS, GCP, and on-premises servers by usi
 ms.topic: concept-article
 ms.author: elkrieger
 author: Elazark
-ms.date: 02/19/2025
+ms.date: 04/19/2026
 ---
 # Scale a Defender for Servers deployment
 
@@ -64,7 +64,7 @@ You can use a policy definition to enable Defender for Servers at scale:
 
 Begin a deployment for your scenario:
 
-- [Enable a Defender for Servers plan](enable-enhanced-security.md)
+- [Enable a Defender for Servers plan](connect-azure-subscription.md)
 - [Connect an on-premises machine to Azure](quickstart-onboard-aws.md)
 - [Connect an AWS account to Defender for Cloud](quickstart-onboard-aws.md)
 - [Connect a GCP project to Defender for Cloud](quickstart-onboard-gcp.md)

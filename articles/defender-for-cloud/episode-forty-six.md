@@ -13,7 +13,7 @@ ms.date: 10/05/2025
 
 - [01:47](/shows/mdc-in-the-field/devops-security#time=01m54s) - What role does DevOps Security play in a CNAPP solution?
 - [04:40](/shows/mdc-in-the-field/devops-security#time=04m40s) - What's new in Defender for Cloud DevOps Security GA?
-- [07:08](/shows/mdc-in-the-field/devops-security#time=07m08s) - How Defenders for Cloud DevOps Security capabilities help customers to identify risk across devops state?
+- [07:08](/shows/mdc-in-the-field/devops-security#time=07m08s) - How Defender for Cloud DevOps Security capabilities help customers to identify risk across devops state?
 - [09:38](/shows/mdc-in-the-field/devops-security#time=09m38s) - Code to cloud contextualization
 - [13:44](/shows/mdc-in-the-field/devops-security#time=13m44s) - Demonstration
 

@@ -4,16 +4,17 @@ description: Comprehensive overview of Microsoft Defender for Cloud in the Defen
 author: dlanger
 ms.author: dlanger
 ms.topic: overview
-ms.date: 11/10/2025
+ms.date: 04/28/2026
 ms.service: defender-for-cloud
 ---
 
-# Defender for Cloud in Defender portal (preview)
+# Defender for Cloud in Defender portal
 
 > [!IMPORTANT]
 > Microsoft Defender for Cloud is expanding to the Defender portal to provide a unified security experience across cloud and code environments. As part of this expansion, some features are now available in the Microsoft Defender Portal, and additional capabilities will be added to the Defender portal over time.
 > 
 > This change is designed to:
+>
 > - Unlock new cloud and posture management experiences.
 > - Provide deep integration with other Microsoft security services.
 > - Empower security teams with streamlined workflows by bringing all tools together in one portal.
@@ -21,8 +22,6 @@ ms.service: defender-for-cloud
 > To identify documentation specific for the Defender Portal, look for the portal entry point at the top of the article. This pivot indicates whether the content applies to the Defender portal or the Azure portal.
 > 
 > Our documentation will be continuously updated to reflect these changes, so check back regularly for the latest guidance and feature availability.
-> 
-> Review the [known limitations](known-limitations.md) article to understand current gaps during the preview phase.
 
 This article provides a comprehensive overview of Microsoft Defender for Cloud's integration with the Defender portal, covering key features, benefits, and capabilities available in this unified security experience.
 
@@ -81,15 +80,16 @@ The Microsoft Defender portal delivers a unified security operations experience 
 
 ### How to get started?
 
-During the preview phase, Defender for Cloud customers with at any paid plan can access the consumption experiences in the Defender portal. 
+Defender for Cloud customers with at any paid plan can access the consumption experiences in the Defender portal.
 
-- To enable the preview, follow the steps outlined in [Enable preview features in the Defender portal](enable-preview-features.md)
+To get started, go to **Defender portal** → **Cloud security** → **Overview**, and select **Prepare my tenant**.
 
-- Read the [known limitations](known-limitations.md) 
+>[!Note]
+> Data may take up to 24 hours to appear.
+
+- Read the [known limitations](known-limitations.md)
 
 - Read the [FAQ](integration-faq.md)  
-
-Once enabled, open Defender for Cloud by choosing **Cloud infrastructure** in the left menu or from within the Defender portal's cloud-integrated experiences. 
 
 ## Next steps
 

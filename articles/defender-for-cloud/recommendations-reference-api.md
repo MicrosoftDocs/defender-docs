@@ -47,15 +47,27 @@ To learn about actions that you can take in response to these recommendations, s
 
 ### Unused API endpoints should be disabled and removed from Function Apps (Preview)
 
-**Description & related policy**: 	API endpoints that haven't received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these HTTP-triggered endpoints from Azure Function Apps.
+**Description & related policy**: API endpoints that haven't received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these HTTP-triggered endpoints from Azure Function Apps.
 
 **Severity**: Low
 
 ### Unused API endpoints should be disabled and removed from Logic Apps (Preview)
 
-**Description & related policy**: 	API endpoints that haven't received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these endpoints from Azure Logic Apps.
+**Description & related policy**: API endpoints that haven't received traffic for 30 days are considered unused and pose a potential security risk. These endpoints may have been left active accidentally when they should have been deprecated. Often, unused API endpoints lack the latest security updates, making them vulnerable. To prevent potential security breaches, we recommend disabling and removing these endpoints from Azure Logic Apps.
 
 **Severity**: Low
+
+### Authentication should be enabled on API endpoints hosted in Function Apps (Preview)
+
+**Description & related policy**: API endpoints published within Azure Function Apps should enforce authentication to help minimize security risk. This is crucial to prevent unauthorized access and potential data breaches. Without proper authentication, sensitive data could be exposed, compromising the security of the system.
+
+**Severity**: High
+
+### Authentication should be enabled on API endpoints hosted in Logic Apps (Preview)
+
+**Description & related policy**: API endpoints published within Azure Logic Apps should enforce authentication to help minimize security risk. This is crucial to prevent unauthorized access and potential data breaches. Without proper authentication, sensitive data could be exposed, compromising the security of the system.
+
+**Severity**: High
 
 ## API management recommendations
 

@@ -5,83 +5,159 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
 author: Elazark
-ms.date: 07/14/2025
+ms.date: 05/18/2026
 ---
 
 # Exempt resources from recommendations
 
-When you investigate security recommendations in Microsoft Defender for Cloud, you usually review the list of affected resources. Occasionally, a resource is listed that you feel shouldn't be included. Or a recommendation shows in a scope where you feel it doesn't belong. For example, a resource might be remediated by a process not tracked by Defender for Cloud, or a recommendation might be inappropriate for a specific subscription. Or perhaps your organization decided to accept the risks related to the specific resource or recommendation.
+When you investigate security recommendations in Microsoft Defender for Cloud, you review the list of affected resources. Occasionally, you find a resource that shouldn't be in the list, or you find a recommendation that appears in a scope where it doesn't belong. For example, Defender for Cloud might not track a remediation process, or a recommendation might not apply to a specific subscription. Your organization might decide to accept the risks related to the specific resource or recommendation.
 
-In such cases, you can create an exemption to:
+In such cases, create an exemption rule to:
 
-- **Exempt a resource** to ensure it isn't listed with the unhealthy resources in the future, and doesn't affect your secure score. The resource will be listed as not applicable and the reason will be shown as "exempted" with the specific justification you select.
+- **Exempt a resource** to remove it from the list of unhealthy resources and from secure score impact. Defender for Cloud lists the resource as **Not applicable** and shows the reason as **Exempted** with the justification that you select.
 
-- **Exempt a subscription or management group** to ensure that the recommendation doesn't affect your secure score and won't be shown for the subscription or management group in the future. This relates to existing resources and any you create in the future. The recommendation is marked with the specific justification you select for the scope that you selected.
+- **Exempt a subscription or management group** to prevent the recommendation from affecting your secure score or appearing for that scope. The exemption applies to existing resources and to resources that you create later. Defender for Cloud marks the recommendation with the justification that you select for that scope.
 
-For the scope you need, you can create an exemption rule to:
+For each scope, create an exemption rule to:
 
-- Mark a specific **recommendation** as "mitigated" or "risk accepted" for one or more subscriptions, or for an entire management group.
-- Mark **one or more resources** as "mitigated" or "risk accepted" for a specific recommendation.
+- Mark a specific **recommendation** as **Mitigated** or **Risk accepted** for one or more subscriptions, or for a management group.
 
-## Before you start
+- Mark **one or more resources** as **Mitigated** or **Risk accepted** for a specific recommendation.
 
-This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)] This is a premium Azure Policy capability offered at no extra cost for customers with Microsoft Defender for Cloud's enhanced security features enabled. For other users, charges might apply in the future.
+[!INCLUDE [exempt-resource](./includes/exempt-resource.md)]
 
-- You need the following permissions to make exemptions:
-  - **Owner** or **Security Admin** to create an exemption.
-    - To create a rule, you need permissions to edit policies in Azure Policy. [Learn more](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
+## Prerequisites
 
-- You can create exemptions for recommendations included in Defender for Cloud's default [Microsoft cloud security benchmark](/security/benchmark/azure/introduction) standard, or any of the supplied regulatory standards.
+Defender for Cloud exemption relies on the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative. MCSB must be assigned on the subscription before you create exemptions.
+
+> [!IMPORTANT]
+> Without MCSB assigned:
 >
+> - Some portal features might not work as expected.
+> - Resources might not appear in compliance views.
+> - Exemption options might occasionally be unavailable.
+
+You can create exemptions for recommendations that belong to the default MCSB initiative or to other built-in regulatory standards. Some recommendations in MCSB don't support exemptions. You can find a list of these recommendations in [the exemptions FAQ](faq-general.yml).
+
+*Permissions*:
+
+To create exemptions, you need the following permissions:
+
+- **Owner** or **Security Admin** on the scope where you create the exemption.
+- To create a rule, you need permissions to edit policies in Azure Policy. [Learn more](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
+- You must have exemption permission on all initiative assignments at the target scope. If multiple initiatives contain a recommendation, you must create the exemption with permissions across all of them. A missing permission on even one initiative can cause the exemption to fail.
+
+You need the following RBAC actions:
+
+| Action | Description |
+|--------|-------------|
+| `Microsoft.Authorization/policyExemptions/write` | Create an exemption |
+| `Microsoft.Authorization/policyExemptions/delete` | Delete an exemption |
+| `Microsoft.Authorization/policyExemptions/read` | View an exemption |
+| `Microsoft.Authorization/policyAssignments/exempt/action` | Perform an exemption operation on a linked scope |
+
 > [!NOTE]
-> The Defender for Cloud exemption relies on Microsoft Cloud Security Benchmark (MCSB) initiative to evaluate and retrieve resources compliance state on the Defender for Cloud portal. If the MCSB is missing, the portal will partially work and some resources might not appear.
+> If any of these actions are missing, the **Exempt** button might be hidden. Custom roles offer limited support for exemption operations.
+>
+> To manage exemptions, use one of the following built-in roles:
+> - **Security Admin** (recommended)
+> - **Owner**
+> - **Contributor** (at the subscription level)
+> - **Resource Policy Contributor**
 
-- Some recommendations included in Microsoft cloud security benchmark don't support exemptions, a list of those recommendations can be found [here](faq-general.yml)
+- Subscription-level permissions don't inherit upward to management groups. If the policy assignment is at the management group level, you need the role assigned at that level.
 
-- Recommendations included in multiple policy initiatives must [all be exempted](faq-general.yml)
+- To manage exemptions for specific resources, you need the required RBAC actions at the resource or resource group level. Subscription-scoped role assignments might not provide sufficient access to create or delete exemptions on individual resources. Verify that your role assignment covers the scope of the resource you want to exempt.
 
-- Custom recommendations can't be exempted.
-- If a recommendation is disabled, all of its subrecommendations are exempted.
-- In addition to working in the portal, you can create exemptions using the Azure Policy API. Learn more [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
+- When you create an exemption at the management group level, ensure the *Microsoft Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on that management group. Grant this role the same way that you grant user permissions.
 
-- When exempting at the management group level, ensure the *Windows Azure Security Resource Provider* has the necessary permissions by assigning it the **Reader** role on the management group. This is done the same way as granting user permissions.
+*Limitations*:
+
+- You don't create exemptions for custom recommendations.
+
+- Preview recommendations might not support exemptions. Check whether the recommendation shows a **Preview** tag.
+
+- Some recommendations in MCSB don't support exemptions. You can find a list of these recommendations in [the exemptions FAQ](faq-general.yml).
+
+- If you disable a recommendation, you also exempt all of its subrecommendations.
+
+- KQL-based recommendations use standard assignments and don't use Azure Policy exemption events in the Activity Logs. To determine whether a recommendation is KQL-based or policy-based, open the recommendation in the portal and check the **Assessment key** field. KQL-based recommendations show a standard assessment key format and don't have an associated Azure Policy definition link. Policy-based recommendations display a direct link to the underlying policy definition.
+
+- When you create an exemption from the Defender for Cloud portal, Defender for Cloud identifies all initiatives that contain the recommendation and creates the exemption across all of them automatically. If you create the exemption through the Azure Policy API instead, you must create a separate exemption for each initiative manually. For more information, see [the exemptions FAQ](faq-general.yml).
+
+- When you assign a new initiative that contains a recommendation with an existing exemption, the exemption doesn't carry over to the new initiative. Create a new exemption for the recommendation under the newly assigned initiative.
+
+> [!TIP]
+> If you run into issues after you create an exemption, see [Review and manage recommendation exemptions](review-exemptions.md) for guidance on:
+> - [Resolving unhealthy status](review-exemptions.md#resolve-an-exemption-that-doesnt-update-the-recommendation-status)
+> - [Permission errors at management group level](review-exemptions.md#resolve-permission-errors-at-management-group-level)
+> - [Missing exemptions in the portal](review-exemptions.md#find-exemptions-that-arent-visible-in-the-portal)
+> - [Deleting exemptions](review-exemptions.md#delete-an-exemption)
+> - [Cleaning up duplicate exemptions](review-exemptions.md#resolve-duplicate-or-conflicting-exemptions)
 
 ## Define an exemption
 
+We recommend creating exemptions in the Defender for Cloud portal. Exemptions created through the Azure Policy API might not fully integrate with Defender for Cloud and can cause unexpected results, such as exemptions that don't propagate correctly across all relevant initiatives. If you need to use the API, see [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
+
 To create an exemption rule:
 
-1. In the Defender for Cloud portal, open the **Recommendations** page, and select the recommendation you want to exempt.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. In **Take action**, select **Exempt**.
+1. Go to **Defender for Cloud** > **Recommendations**.
+
+1. Select a recommendation.
+
+1. Select **Exempt**.
 
     :::image type="content" source="media/exempt-resource/exempting-recommendation.png" alt-text="Create an exemption rule for a recommendation to be exempted from a subscription or management group." lightbox="media/exempt-resource/exempting-recommendation.png":::
 
-1. In the **Exempt** pane:
-    1. Select the scope for the exemption.
-        - If you select a management group, the recommendation is exempted from all subscriptions within that group
-        - If you're creating this rule to exempt one or more resources from the recommendation, choose "Selected resources" and select the relevant ones from the list
+1. Select the scope for the exemption.
+    - If you select a management group, Defender for Cloud exempts the recommendation from all subscriptions in that group.
+    - If you create this rule to exempt one or more resources from the recommendation, choose **Selected resources** and select the relevant resources from the list.
 
-    1. Enter a name for the exemption rule.
-    1. Optionally, set an expiration date.
-    1. Select the category for the exemption:
-        - **Resolved through 3rd party (mitigated)** – if you're using a third-party service that Defender for Cloud hasn't identified.
+1. Enter a name.
 
-            > [!NOTE]
-            > When you exempt a recommendation as mitigated, you aren't given points towards your secure score. But because points aren't *removed* for the unhealthy resources, the result is that your score will increase.
+1. (Optional) set an expiration date.
 
-        - **Risk accepted (waiver)** – if you decided to accept the risk of not mitigating this recommendation
+1. Select the category for the exemption:
+    - **Resolved through third-party service (mitigated)** – if you use a non-Microsoft service for remediation that Defender for Cloud doesn't track.
+ 
+    > [!NOTE]  
+    > When you exempt a resource as mitigated, it counts as healthy. You don't gain points for the remediation, but Defender for Cloud doesn't deduct points for leaving it unhealthy, so exempted resources don't lower your score.
+
+    - **Risk accepted (waiver)** – if you decide to accept the risk of not mitigating this recommendation.
+
     1. Enter a description.
+    
     1. Select **Create**.
+    
     :::image type="content" source="media/exempt-resource/defining-recommendation-exemption.png" alt-text="Steps to create an exemption rule to exempt a recommendation from your subscription or management group."  lightbox="media/exempt-resource/defining-recommendation-exemption.png":::
 
-## After creating the exemption
+## After you create the exemption
 
-After creating the exemption, it can take up to 24 hours to take effect. After it takes effect:
+An exemption can take up to 24 hours to take effect because Defender for Cloud evaluates resources every 12-24 hours. After the exemption takes effect:
 
-- The recommendation or resources won't impact your secure score.
-- If you exempted specific resources, they're listed in the **Not applicable** tab of the recommendation details page.
-- If you exempted a recommendation, it's hidden by default on Defender for Cloud's recommendations page. This is because the default options of the **Recommendation status** filter on that page are to exclude **Not applicable** recommendations. The same is true if you exempt all recommendations in a security control.
+- The recommendation or resources don't affect your secure score.
 
-## Next steps
+- If you exempt specific resources, Defender for Cloud lists them in the **Not applicable** tab of the recommendation details page.
 
-[Review exempted resources](review-exemptions.md) in Defender for Cloud.
+- If you exempt a recommendation, Defender for Cloud hides it by default on the **Recommendations** page. This behavior happens because the default **Recommendation status** filter excludes **Not applicable** recommendations. The same behavior occurs if you exempt all recommendations in a security control.
+
+### Understand how the exemption type affects the recommendation status
+
+The exemption type that you select determines how the exemption affects the recommendation and secure score:
+
+- **Mitigated** exemptions: Exempt resources count as healthy. Secure score increases.
+- **Waiver** exemptions: Exempt resources are excluded from the secure score calculation. Resources don't count toward secure score but might still appear in recommendations.
+
+> [!NOTE]
+> Preview recommendations have no impact on secure score regardless of exemption status.
+
+### Verify that the exemption is working
+
+If the recommendation still shows resources as unhealthy after 24 hours, see [Resolve an exemption that doesn't update the recommendation status](review-exemptions.md#resolve-an-exemption-that-doesnt-update-the-recommendation-status) for detailed steps.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Review and manage recommendation exemptions](review-exemptions.md)

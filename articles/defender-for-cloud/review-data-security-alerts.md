@@ -8,7 +8,7 @@ ms.date: 02/10/2025
 
 # Review data security alerts
 
-Microsoft Defenders for Cloud's data security alerts provide insights into potential threats and vulnerabilities in your data environments. The alerts help you quickly identify and respond to security issues, enabling you to take proactive measures to mitigate risks.
+Microsoft Defender for Cloud's data security alerts provide insights into potential threats and vulnerabilities in your data environments. The alerts help you quickly identify and respond to security issues, enabling you to take proactive measures to mitigate risks.
 
 ## Prerequisites
 
