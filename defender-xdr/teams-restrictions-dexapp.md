@@ -3,8 +3,7 @@ title: Configuring Microsoft Defender Experts app in Teams
 ms.reviewer: pauloliveria
 description: "Microsoft Defender Experts Teams troubleshooting: Resolve app installation, permission, and channel availability problems quickly."
 #customer intent: As an IT admin, I want to troubleshoot issues with the Microsoft Defender Experts app in Teams so that my organization can use its security features without interruption.
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
