@@ -148,7 +148,7 @@ From the recommendation view, you can explicitly generate a GitHub issue to trac
     > [!NOTE]
     > If the **Generate GitHub** issue option isn't available, required GitHub or repository permissions might be missing. Contact your GitHub or repository administrator to request access.
 
-    :::image type="content" source="media/github-advanced-security-deploy/github-issue.png" alt-text="Screenshot of GitHub issues list showing open issues for dependencies with labels like Defender for Cloud and security." lightbox="media/github-advanced-security-deploy/github-issue.png":::
+    :::image type="content" source="media/github-advanced-security-deploy/github-issue.png" alt-text="Screenshot showing a generated GitHub issue for an open dependency with Defender for Cloud and security labels." lightbox="media/github-advanced-security-deploy/github-issue.png":::
 
     1. **Track ownership and status updates** - changes to issue status or assignment made in GitHub are reflected in Microsoft Defender for Cloud, allowing you to track ownership and remediation progress from the **Recommendations** view.
 
