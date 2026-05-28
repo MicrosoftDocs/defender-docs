@@ -64,8 +64,7 @@ Learn more about the [Google Cloud resource hierarchy](https://cloud.google.com/
 
 1. Select **Add environment** > **Google Cloud Platform**.
 
-    :::image type="content" so
-    urce="media/quickstart-onboard-gcp/connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/connector.png":::
+    :::image type="content" source="media/quickstart-onboard-gcp/connector.png" alt-text="Screenshot that shows where the GCP connector option is located." lightbox="media/quickstart-onboard-gcp/connector.png":::
 
 1. Select the **Subscription** in which the security connector will be created.
 
