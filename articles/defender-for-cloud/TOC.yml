@@ -782,7 +782,7 @@
             href: view-and-remediate-vulnerability-assessment-findings-secure-score.md
           - name: Remediate vulnerabilities for running images (secure score)
             href: view-and-remediate-vulnerabilities-for-images-secure-score.md
-          - name: Disable vulnerability findings (Secure score)
+          - name: Disable vulnerability findings (secure score)
             href: disable-vulnerability-findings-containers-secure-score.md
           - name: REST API (secure score)
             href: subassessment-rest-api.md
