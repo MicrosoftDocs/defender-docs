@@ -1,7 +1,7 @@
 ---
 title: Technical onboarding guide for Bright Security (preview)
 description: Learn how to use Bright Security with Microsoft Defender for Cloud to enhance your application security testing.
-ms.date: 07/15/2025
+ms.date: 05/28/2026
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
@@ -40,7 +40,7 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
 ### For GitHub environments
 
 > [!NOTE]
-> For more information on how to configure Bright Security for GitHub Actions along with links to sample GitHub Action workflows, see [GitHub Actions](https://docs.brightsec.com/docs/github-actions). This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you don't have GitHub Code Scanning enabled, follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
+> For more information on how to configure Bright Security for GitHub Actions along with links to sample GitHub Action workflows, see [GitHub Actions](https://docs.brightsec.com/docs/github-actions). This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you don't have GitHub Code Scanning enabled, follow the more steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
 
 Install the Bright Security plugin within your CI/CD pipeline by completing the following step:
 
@@ -85,7 +85,7 @@ If you don't have GitHub Code Scanning for your environment and wish to integrat
           existingFilename: bright.sarif
  ```
 
-Next, add an additional permission to the workflow, setting [**id-token** to **write**](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings).
+Next, add an more permission to the workflow, setting [**id-token** to **write**](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings).
 
 After running the workflow, it might take up to 30 minutes for the results to show in Defender for Cloud.
 
@@ -123,3 +123,5 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 ## Related content
 
 [Microsoft Defender for APIs overview](defender-for-apis-introduction.md)
+
+

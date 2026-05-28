@@ -4,7 +4,7 @@ description: Learn how to migrate File Integrity Monitor (FIM) from previous ver
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 05/15/2025
+ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to migrate FIM so that I can use the latest features and improvements.
 ---
 
@@ -18,7 +18,7 @@ The previous version of file integrity monitoring used the Log Analytics agent (
 
 - You must enable Defender for Servers Plan 2 to use file integrity monitoring.
 - Migration is relevant if file integrity monitoring is currently enabled using MMA or AMA.
-- Machines protected by Defender for Servers Plan 2 must run the Microsoft Defender for Endpoint agent. To check agent status on machines in your environment, [use this workbook](https://aka.ms/DfServersDashboard) to do that.
+- Machines protected by Defender for Servers Plan 2 must run the Microsoft Defender for Endpoint agent. To check agent status on machines in your environment, use this workbook ([use this workbook](https://aka.ms/DfServersDashboard)) to do that.
 
 ## Migrate from MMA
 
@@ -106,3 +106,5 @@ To continue onboarding new scope or configuring monitoring rules, manually work 
 
 > [!div class="nextstepaction"]
 > [Review changes](file-integrity-monitoring-review-changes.md) in file integrity monitoring.
+
+

@@ -1,7 +1,7 @@
 ---
 title: Technical onboarding guide for StackHawk (preview)
 description: Learn how to use StackHawk with Microsoft Defender for Cloud to enhance your application security testing.
-ms.date: 07/15/2025
+ms.date: 05/28/2026
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
@@ -36,7 +36,7 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
 ### For GitHub Actions CI/CD environments
 >
 > [!NOTE]
-> This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you don't have GitHub Code Scanning enabled, follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
+> This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you don't have GitHub Code Scanning enabled, follow the more steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
 
 1. To use the [StackHawk HawkScan Action](https://github.com/marketplace/actions/stackhawk-hawkscan-action), make sure you're logged into [GitHub](https://github.com/login), and have a [StackHawk account](http://auth.stackhawk.com/signup).
 1. From GitHub, you can use a GitHub repository with a defined GitHub Actions workflow process already in place, or create a new workflow. We scan this GitHub repository for API vulnerabilities as part of the GitHub Actions workflow.
@@ -59,7 +59,7 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
             SARIF_ARTIFACT: true
    ```
 
-    This starts HawkScan on the runner pointed at the app.host defined in the *stackhawk.yml*. Be sure to include `with.env.SARIF_ARTIFACT: true` to get the SARIF output from the scan. The HawkScan action has more documented configuration inputs. You can see an example of the action in use [here](https://github.com/kaakaww/javaspringvulny/blob/main/.github/workflows/hawkscan.yml#L21-L32).
+    This starts HawkScan on the runner pointed at the app.host defined in the *stackhawk.yml*. Be sure to include `with.env.SARIF_ARTIFACT: true` to get the SARIF output from the scan. The HawkScan action has more documented configuration inputs. You can see an example of the action in use here (here ([here](https://github.com/kaakaww/javaspringvulny/blob/main/.github/workflows/hawkscan.yml#L21-L32))).
 
 1. You can also follow these steps to add *stackhawk/hawkscan-action* to a new workflow action:
 
@@ -95,7 +95,7 @@ If you don't have GitHub Code Scanning for your environment and wish to integrat
           existingFilename: stackhawk.sarif
  ```
 
-Next, add an additional permission to the workflow, setting [**id-token** to **write**](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings).
+Next, add an more permission to the workflow, setting [**id-token** to **write**](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings).
 
 After running the workflow, it might take up to 30 minutes for the results to show in Defender for Cloud.
 
@@ -139,7 +139,7 @@ After running the workflow, it might take up to 30 minutes for the results to sh
       SARIF_ARTIFACT: true
    ```
 
-   This installs HawkScan on the runner pointed at the app.host defined in *stackhawk.yml*. Be sure to include `env.SARIF_ARTIFACT: true` on the task specification to get the SARIF output from the scan. The HawkScan action has more documented configuration inputs. You can see an example of the action in use [here](https://github.com/kaakaww/javaspringvulny/blob/main/azure-pipelines.yml).
+   This installs HawkScan on the runner pointed at the app.host defined in *stackhawk.yml*. Be sure to include `env.SARIF_ARTIFACT: true` on the task specification to get the SARIF output from the scan. The HawkScan action has more documented configuration inputs. You can see an example of the action in use here (here ([here](https://github.com/kaakaww/javaspringvulny/blob/main/azure-pipelines.yml))).
 
 1. Install the [HawkScan](https://marketplace.visualstudio.com/items?itemName=StackHawk.stackhawk-extensions) extension on your Azure DevOps organization.
 
@@ -172,3 +172,5 @@ StackHawk is licensed based on the number of code contributors that are provisio
 ## Related content
 
 [Microsoft Defender for APIs overview](defender-for-apis-introduction.md)
+
+

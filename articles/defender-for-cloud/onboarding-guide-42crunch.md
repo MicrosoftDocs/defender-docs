@@ -1,7 +1,7 @@
 ---
 title: Technical onboarding guide for 42Crunch (preview)
 description: Learn how to use 42Crunch with Microsoft Defender.
-ms.date: 07/15/2025
+ms.date: 05/28/2026
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
@@ -59,7 +59,7 @@ To create a new default workflow:
 1. Copy the full sample workflow and paste it in the workflow editor.
 
    > [!NOTE]
-   > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you don't have GitHub Code Scanning enabled, ensure the **upload-to-code-scanning** option is set to **false**, and follow the additional steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
+   > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. In case you don't have GitHub Code Scanning enabled, ensure the **upload-to-code-scanning** option is set to **false**, and follow the more steps below in the section [Enabling Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
 
    :::image type="content" source="media/onboarding-guide-42crunch/workflow-editor.png" alt-text="Screenshot showing GitHub workflow editor." lightbox="media/onboarding-guide-42crunch/workflow-editor.png":::
 
@@ -94,7 +94,7 @@ If you don't have GitHub Code Scanning for your environment and wish to integrat
           existingFilename: 42Crunch_AuditReport_${{ github.run_id }}.SARIF
  ```
 
-Next, add an additional permission to the workflow, setting [**id-token** to **write**](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings).
+Next, add an more permission to the workflow, setting [**id-token** to **write**](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect#adding-permissions-settings).
 
 After running the workflow, it might take up to 30 minutes for the results to show in Defender for Cloud.
 
@@ -211,3 +211,5 @@ Purchases of 42Crunch made through the Azure commercial marketplace count toward
 ## Next steps
 
 [Microsoft Defender for APIs overview](defender-for-apis-introduction.md)
+
+
