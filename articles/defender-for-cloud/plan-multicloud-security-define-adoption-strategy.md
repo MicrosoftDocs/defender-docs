@@ -1,5 +1,5 @@
 ---
-title: Define an adoption strategy
+title: Planning multicloud security defining adoption strategy lifecycle strategy guidance
 description: Define ownership models, business requirements, and lifecycle planning for multicloud security with Microsoft Defender for Cloud.
 ms.topic: how-to
 author: ElazarK
