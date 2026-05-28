@@ -336,17 +336,17 @@ The following steps show how to create a scheduled task to run the tool using Gr
 
 To offboard a device using the Defender deployment tool, download the offboarding package from the portal, transfer it to the target device, and run the offboarding command.
 
-### Download the offboarding package
+### Step 1: Download the offboarding package
 
-1. In the Microsoft Defender portal (security.microsoft.com), go to **Settings** > **Endpoints** > **Offboarding**.
+1. In the [Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Endpoints** > **Device management** > **Offboarding**.
 
-1. Under **Select operating system**, choose **Windows (Preview)**.
+1. Under **Select operating system**, choose **Windows**.
 
-1. Under **Defender deployment tool (preview)**, select **Download package** to retrieve the offboarding script.
+1. Under **Defender deployment tool**, select **Download package** to download the .zip file that contains the offboarding script.
 
-   <!-- TODO: Add screenshot of the Offboarding page showing the Download package button -->
+   :::image type="content" source="media/defender-deployment-tool-windows/defender-deployment-tool-windows-offboard.png" alt-text="Screenshot of the Offboarding page showing the Download package button" lightbox="media/defender-deployment-tool-windows/defender-deployment-tool-windows-offboard.png":::
 
-### Run the offboarding command
+### Step 2: Run the offboarding command
 
 1. Copy the .zip file to the target machine and extract it to access the `.offboarding` script.
 
@@ -364,8 +364,6 @@ To offboard a device using the Defender deployment tool, download the offboardin
    C:\Packages>Disable_Live_Response.exe -offboard -file:WindowsDefenderATP_valid_until_2025-11-12.offboarding
    ```
 
-   <!-- TODO: Add screenshot of the offboarding command running in Command Prompt -->
-
 1. When prompted `Are you sure you want to offboard? Yes(Y)/No(N)?`, type **Y** to proceed.
 
 1. Wait for the process to complete. A successful offboarding displays the following message:
@@ -373,8 +371,6 @@ To offboard a device using the Defender deployment tool, download the offboardin
    ```console
    Microsoft Defender deployment tool completed, exit code: 0 [Success]
    ```
-
-   <!-- TODO: Add screenshot of the successful offboarding completion message -->
 
 ## Considerations and limitations
 
