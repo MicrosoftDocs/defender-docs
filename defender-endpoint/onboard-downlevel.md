@@ -20,33 +20,44 @@ appliesto:
 
 # Onboard previous versions of Windows
 
-Microsoft Defender for Endpoint supports the following down-level operating systems:
+Microsoft Defender for Endpoint supports down-level operating systems, providing advanced attack detection and investigation capabilities on supported Windows versions.
 
-- Windows 7 SP1 Pro
-- Windows 7 SP1 Enterprise
-- Windows Server 2008 R2 SP1
-- Windows 8.1
-- Windows 8.1 Pro
+To onboard down-level Windows client endpoints to the Defender for endpoint security solution:
 
-To onboard these devices, see the relevant section:
+- [Use the Defender deployment tool](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security) if the down-level Windows client is running one of the following operating systems:
+   - Windows 7 SP1 Pro
+   - Windows 7 SP1 Enterprise
+   - Windows Server 2008 R2 SP1
 
-- [Onboard Windows 7 SP1 and Windows Server 2008 R2 SP1](#onboard-windows-7-sp1-and-windows-server-2008-r2-sp1)
-- [Onboard Windows 8.1](#onboard-windows-81)
+   The Defender deployment tool will install the appropriate Defender endpoint security solution. For more information about this solution, see [Use the Defender deployment tool to deploy Defender endpoint security](#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
+
+- [Install and configure Microsoft Monitoring Agent (MMA)](#install-and-configure-microsoft-monitoring-agent-mma) and [Configure and update System Center Endpoint Protection (SCEP) clients](#configure-and-update-system-center-endpoint-protection-clients) if your down-level Windows client is running Windows 8.1 or Windows 8.1 Pro.
 
 > [!TIP]
 > After onboarding the device, you can choose to run a detection test to verify that it's properly onboarded to the service. For more information, see [Run a detection test on a newly onboarded Defender for Endpoint endpoint](run-detection-test.md).
 
-## Onboard Windows 7 SP1 and Windows Server 2008 R2 SP1
+## Use the Defender deployment tool to deploy Defender endpoint security
 
-Use the Defender deployment tool to onboard Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The tool handles prerequisites, automates migrations from older solutions, and installs the Defender endpoint security solution on these devices.
+A Microsoft Defender for endpoint security solution is available for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices. The solution provides advanced protection capabilities and improved functionality for those devices compared to other solutions. The following table outlines the solution's currently supported functionality.
 
-For instructions, see [Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool](./defender-deployment-tool-windows.md).
+| Feature | Functionality |
+|---------|---------------|
+| Advanced Hunting | Hunt across events with Kusto Query Language |
+| Antivirus in Passive Mode | Allows for coexistence with non-Microsoft anti-malware solutions. |
+| Custom file indicators | Allow, block, quarantine files based on hash or certificate information |
+| Device and file response capabilities | Isolate device, block and get files, collect investigation packages, run antivirus scan<br><br>Note: other response capabilities aren't supported |
+| Next-generation protection | Defender Antivirus with real-time behavior monitoring, cloud-delivered, and definition-based malware blocking and remediation. Scheduled and manually triggered scans.<br><br>Note: Network Protection, Attack Surface Reduction Rules, Controlled Folder Access, and related functionality including IP and URL indicators aren't supported. |
+| Operating system and software vulnerability assessments | Defender Vulnerability Management provides insights into vulnerabilities for Windows and installed software.<br><br>Note: The following functionality isn't available for Windows 7 SP1 and Windows Server 2008 R2:<br>- Security configuration assessment<br>- "Pending reboot" experience<br>- Premium capabilities: security baseline assessment, browser extensions, certificate and application blocking |
+| Security Settings Management | Policy enforcement for Defender Antivirus capabilities. Note that only settings for available features will take effect. |
+| Sense detection sensor | Rich detection events for use in device timeline, hunting, and to generate alerts based on indicators of compromise and attack. |
+| Attack Disruption: contain device/IP | Automated attack disruption to shut down attacks leveraging lateral movement. |
+| (Automatic) updates | Regular updates for anti-malware and detection components. |
 
-## Onboard Windows 8.1
+The solution can be downloaded and installed using the [Defender deployment tool](./defender-deployment-tool-windows.md), a lightweight, self-updating application that streamlines onboarding for all Windows versions supported by Defender for Endpoint. The deployment tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations. For information about the tool and how to use it, see [Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool](./defender-deployment-tool-windows.md).
 
-To onboard Windows 8.1 or Windows 8.1 Pro devices, install and configure Microsoft Monitoring Agent (MMA) and System Center Endpoint Protection (SCEP).
+## Install and configure Microsoft Monitoring Agent (MMA)
 
-### Install and configure Microsoft Monitoring Agent (MMA)
+It's recommended to onboard down-level Windows clients via MMA and SCEP **only if** the client is running Windows 8.1 or 8.1 Pro. For all other Windows operating systems, use the [Defender deployment tool].
 
 ### Before you begin
 
@@ -55,6 +66,11 @@ Review the following details to verify minimum system requirements:
 - Install the [February 2018 monthly update rollup](https://support.microsoft.com/help/4074598/windows-7-update-kb4074598) - Direct download link from the Windows Update catalog is available [here](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4074598)
 
 - Install the [March 12, 2019 (or later) Servicing stack update](https://support.microsoft.com/topic/servicing-stack-update-for-windows-7-sp1-and-windows-server-2008-r2-sp1-march-12-2019-b4dc0cff-d4f2-a408-0cb1-cb8e918feeba) - Direct download link from the Windows Update catalog is available [here](https://www.catalog.update.microsoft.com/search.aspx?q=4490628)
+
+- Install the [SHA-2 code signing support update](https://support.microsoft.com/topic/sha-2-code-signing-support-update-for-windows-server-2008-r2-windows-7-and-windows-server-2008-september-23-2019-84a8aad5-d8d9-2d5c-6d78-34f9aa5f8339) - Direct download link from the Windows Update catalog is available [here](https://www.catalog.update.microsoft.com/search.aspx?q=kb4474419)
+
+  > [!NOTE]
+  > Only applicable for Windows Server 2008 R2, Windows 7 SP1 Enterprise, and Windows 7 SP1 Pro.
 
 - Install the [Update for customer experience and diagnostic telemetry](https://support.microsoft.com/help/3080149/update-for-customer-experience-and-diagnostic-telemetry)
 
@@ -92,7 +108,7 @@ Review the following details to verify minimum system requirements:
 
 Once completed, you should see onboarded endpoints in the portal within an hour.
 
-### Configure and update System Center Endpoint Protection clients
+## Configure and update System Center Endpoint Protection clients
 
 Defender for Endpoint integrates with System Center Endpoint Protection to provide visibility to malware detections and to stop propagation of an attack in your organization by banning potentially malicious files or suspected malware.
 
@@ -102,7 +118,7 @@ The following steps are required to enable this integration:
 - Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
 - Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md) 
 
-### Configure proxy and Internet connectivity settings
+## Configure proxy and Internet connectivity settings
 
 If your servers need to use a proxy to communicate with Defender for Endpoint, use one of the following methods to configure the MMA to use the proxy server:
 
@@ -114,7 +130,7 @@ If a proxy or firewall is in use, ensure that servers can access all of the Micr
 
 Once completed, you should see onboarded Windows servers in the portal within an hour.
 
-### Verify onboarding
+## Verify onboarding
 
 Verify that Microsoft Defender Antivirus and Microsoft Defender for Endpoint are running.
 
@@ -136,13 +152,13 @@ Verify that Microsoft Defender Antivirus and Microsoft Defender for Endpoint are
 
 If you encounter issues with onboarding, see [Troubleshoot onboarding](troubleshoot-onboarding.md).
 
-### Run a detection test
+## Run a detection test
 
 Follow the steps in [Run a detection test on a newly onboarded device](run-detection-test.md) to verify that the server is reporting to Defender for the Endpoint service.
 
-### Onboarding endpoints with no management solution
+## Onboarding endpoints with no management solution
 
-#### Using Group Policy
+### Using Group Policy
 
 **Step 1: Download the corresponding update for your endpoint.**
 
@@ -191,7 +207,7 @@ c:\windows\MMA\setup.exe /qn NOAPM=1 ADD_OPINSIGHTS_WORKSPACE=1 OPINSIGHTS_WORKS
 )
 ```
 
-#### Group Policy Configuration
+### Group Policy Configuration
 
 Create a new group policy specifically for onboarding devices such as "Microsoft Defender for Endpoint Onboarding".
 
@@ -249,7 +265,7 @@ For Windows Server 2008 R2 SP1, ensure that you fulfill the following requiremen
 
 Check the KBs are present before onboarding Windows Server 2008 R2. This process allows you to onboard all the servers if you don't have Configuration Manager managing Servers.
 
-### Offboard endpoints
+## Offboard endpoints
 
 You have two options to offboard Windows endpoints from the service:
 
@@ -259,19 +275,19 @@ You have two options to offboard Windows endpoints from the service:
 > [!NOTE]
 > Offboarding causes the Windows endpoint to stop sending sensor data to the portal but data from the endpoint, including reference to any alerts it has had will be retained for up to six months.
 
-#### Uninstall the MMA agent
+### Uninstall the MMA agent
 
 To offboard the Windows endpoint, you can uninstall the MMA agent or detach it from reporting to your Defender for Endpoint workspace. After offboarding the agent, the endpoint will no longer send sensor data to Defender for Endpoint.
 For more information, see [To disable an agent](/azure/log-analytics/log-analytics-windows-agents#to-disable-an-agent).
 
-#### Remove the Defender for Endpoint workspace configuration
+### Remove the Defender for Endpoint workspace configuration
 
 You can use either of the following methods:
 
 - Remove the Defender for Endpoint workspace configuration from the MMA agent
 - Run a PowerShell command to remove the configuration
 
-##### Remove the Defender for Endpoint workspace configuration from the MMA agent
+#### Remove the Defender for Endpoint workspace configuration from the MMA agent
 
 1. In the **Microsoft Monitoring Agent Properties**, select the **Azure Log Analytics (OMS)** tab.
 
@@ -279,7 +295,7 @@ You can use either of the following methods:
 
     :::image type="content" source="media/atp-mma.png" alt-text="Screenshot of the Workspaces pane." lightbox="media/atp-mma.png":::
 
-##### Run a PowerShell command to remove the configuration
+#### Run a PowerShell command to remove the configuration
 
 1. Get your Workspace ID:
 
@@ -297,5 +313,3 @@ You can use either of the following methods:
     # Reload the configuration and apply changes
     $AgentCfg.ReloadConfiguration()
     ```
-
-
