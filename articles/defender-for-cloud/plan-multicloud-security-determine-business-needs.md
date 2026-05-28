@@ -52,3 +52,4 @@ The diagram below shows the Defender for Cloud architecture. Defender for Cloud 
 In this article, you've learned how to determine your business needs when designing a multicloud security solution. Continue with the next step to [determine an adoption strategy](plan-multicloud-security-define-adoption-strategy.md).
 
 
+

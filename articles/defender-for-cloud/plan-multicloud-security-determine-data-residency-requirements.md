@@ -68,3 +68,4 @@ When it comes to the actual AWS and GCP resources that are protected by Defender
 
 In this article, you have learned how to determine your data residency requirements when designing a multicloud security solution. Continue with the next step to [determine compliance requirements](plan-multicloud-security-determine-compliance-requirements.md).
 
+

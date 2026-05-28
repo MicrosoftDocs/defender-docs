@@ -36,3 +36,4 @@ Additionally, you can also create your own custom standards and assessments for 
 In this article, you've learned how to determine your compliance requirements when designing a multicloud security solution. Continue with the next step to [determine ownership requirements](plan-multicloud-security-determine-ownership-requirements.md).
 
 
+

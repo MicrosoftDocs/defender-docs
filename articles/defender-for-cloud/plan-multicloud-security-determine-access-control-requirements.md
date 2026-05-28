@@ -36,3 +36,4 @@ With clear answers available, you can figure out your Defender for Cloud access 
 
 In this article, you've learned how to determine access control requirements needs when designing a multicloud security solution. Continue with the next step to [determine multicloud dependencies](plan-multicloud-security-determine-multicloud-dependencies.md).
 
+

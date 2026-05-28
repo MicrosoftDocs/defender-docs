@@ -124,3 +124,4 @@ To receive the full benefits of Defender for SQL on your multicloud workload, yo
 In this article, you have learned how to determine multicloud dependencies when designing a multicloud security solution. Continue with the next step to [automate connector deployment](plan-multicloud-security-automate-connector-deployment.md).
 
 
+
