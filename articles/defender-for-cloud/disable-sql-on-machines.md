@@ -69,3 +69,8 @@ To disable this plan at the resource level for an individual SQL Server instance
 
 1. Select **Uninstall**.
 
+## Next steps
+
+- [Update Defender for SQL Servers on Machines plan configuration](update-sql-machine-configuration.md)
+- [Troubleshoot SQL machine protection configuration](troubleshoot-sql-machines-guide.md)
+
