@@ -4,7 +4,7 @@ description: Learn about determining data residency requirements when planning m
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 05/28/2026
 ---
 
 # Determine plan and agents requirements
@@ -67,3 +67,4 @@ When it comes to the actual AWS and GCP resources that are protected by Defender
 ## Next steps
 
 In this article, you have learned how to determine your data residency requirements when designing a multicloud security solution. Continue with the next step to [determine compliance requirements](plan-multicloud-security-determine-compliance-requirements.md).
+

@@ -4,7 +4,7 @@ description: Learn about determining access control requirements to meet busines
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 05/28/2026
 ---
 
 # Determine access control requirements
@@ -35,3 +35,4 @@ With clear answers available, you can figure out your Defender for Cloud access 
 ## Next steps
 
 In this article, you've learned how to determine access control requirements needs when designing a multicloud security solution. Continue with the next step to [determine multicloud dependencies](plan-multicloud-security-determine-multicloud-dependencies.md).
+

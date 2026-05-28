@@ -4,7 +4,7 @@ description: Learn about determining business needs to meet business goals in mu
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 05/28/2026
 ---
 
 # Determine business needs
@@ -42,7 +42,7 @@ Defender for Cloud provides a single management point for protecting Azure, on-p
 The diagram below shows the Defender for Cloud architecture. Defender for Cloud can:
 
 - Provide unified visibility and recommendations across multicloud environments. There’s no need to switch between different portals to see the status of your resources.
-- Compare your resource configuration against industry standards, regulations, and benchmarks. [Learn more](./assign-regulatory-compliance-standards.md) about standards.
+- Compare your resource configuration against industry standards, regulations, and benchmarks. Learn more ([Learn more](./assign-regulatory-compliance-standards.md)) about standards.
 - Help security analysts to triage alerts based on threats/suspicious activities. Workload protection capabilities can be applied to critical workloads for threat detection and advanced defenses.
 
 :::image type="content" source="media/planning-multicloud-security/architecture.png" alt-text="Diagram that shows multicloud architecture." lightbox="media/planning-multicloud-security/architecture.png":::
@@ -50,3 +50,5 @@ The diagram below shows the Defender for Cloud architecture. Defender for Cloud 
 ## Next steps
 
 In this article, you've learned how to determine your business needs when designing a multicloud security solution. Continue with the next step to [determine an adoption strategy](plan-multicloud-security-define-adoption-strategy.md).
+
+

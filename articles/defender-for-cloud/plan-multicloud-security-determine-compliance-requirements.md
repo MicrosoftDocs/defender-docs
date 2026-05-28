@@ -4,7 +4,7 @@ description: Learn about determining compliance requirements in multicloud envir
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 05/28/2026
 ---
 
 # Determine compliance requirements
@@ -29,8 +29,10 @@ Defender for Cloud continually assesses the configuration of your resources agai
 
 After you enable enhanced security features, you can add other compliance standards to the dashboard. Regulatory compliance is available when you enable at least one Defender plan on the subscription in which the multicloud connector is located, or on the connector.
 
-Additionally, you can also create your own custom standards and assessments for [AWS](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/custom-assessments-and-standards-in-microsoft-defender-for-cloud/ba-p/3066575) and [GCP](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/custom-assessments-and-standards-in-microsoft-defender-for-cloud/ba-p/3251252) to align to your organizational requirements.
+Additionally, you can also create your own custom standards and assessments for AWS ([AWS](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/custom-assessments-and-standards-in-microsoft-defender-for-cloud/ba-p/3066575)) and GCP ([GCP](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/custom-assessments-and-standards-in-microsoft-defender-for-cloud/ba-p/3251252)) to align to your organizational requirements.
 
 ## Next steps
 
 In this article, you've learned how to determine your compliance requirements when designing a multicloud security solution. Continue with the next step to [determine ownership requirements](plan-multicloud-security-determine-ownership-requirements.md).
+
+
