@@ -35,6 +35,11 @@ Based on EDR solution findings, Defender for Cloud provides the following recomm
 The following table lists the EDR solutions supported by Defender for Cloud:
 
 |**Solution** | **Supported platform**|
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Enable Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
 |--- | ---|
 |Microsoft Defender for Endpoint | Windows|
 |Microsoft Defender for Endpoint | Linux|
