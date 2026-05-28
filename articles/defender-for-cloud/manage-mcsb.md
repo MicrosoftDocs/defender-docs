@@ -81,8 +81,6 @@ In the recommendation details page, the **more parameters** column indicates whe
 
 1. Select **Save**.
 
-    :::image type="content" source="./media/manage-mcsb/more-parameters.png" alt-text="Screenshot showing how to configure more parameters on the manage effect and parameters screen." lightbox="./media/manage-mcsb/more-parameters.png":::
-
 If you want to revert changes, select **Reset to default** to restore the default value for the recommendation.
 
 ## Identify potential conflicts
