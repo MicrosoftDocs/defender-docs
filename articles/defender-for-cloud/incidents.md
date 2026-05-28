@@ -1,23 +1,24 @@
 ---
 title: Manage security incidents
-description: This document helps you to use Microsoft Defender for Cloud to manage security incidents.
+description: Triage and investigate security incidents with correlated alerts and analytics in Microsoft Defender for Cloud to understand attack campaigns and affected resources.
 ms.topic: how-to
 ms.author: elkrieger
 author: Elazark
-ms.date: 05/19/2025
+ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
+#customer intent: As a security analyst, I want to manage and investigate security incidents in Microsoft Defender for Cloud so that I can understand attack campaigns and respond effectively.
 ---
 # Manage security incidents in Microsoft Defender for Cloud
 
 Triaging and investigating security alerts can be time consuming for even the most skilled security analysts. For many, it's hard to know where to begin.
 
-Defender for Cloud uses [analytics](./alerts-overview.md) to connect the information between distinct [security alerts](manage-respond-alerts.md). Using these connections, Defender for Cloud can provide a single view of an attack campaign and its related alerts to help you understand the attacker's actions and the affected resources.
+Defender for Cloud uses analytics to connect information between distinct security alerts. For alert details, see [Security alerts in Defender for Cloud](./alerts-overview.md) and [Manage and respond to security alerts](manage-respond-alerts.md). Using these connections, Defender for Cloud provides a single view of an attack campaign and its related alerts to help you understand attacker actions and affected resources.
 
 This page provides an overview of incidents in Defender for Cloud.
 
 ## What is a security incident?
 
-In Defender for Cloud, a security incident is an aggregation of all alerts for a resource that align with [kill chain](alerts-reference.md#mitre-attck-tactics) patterns. Incidents appear in the [Security alerts](manage-respond-alerts.md) page. Select an incident to view the related alerts and get more information.
+In Defender for Cloud, a security incident is an aggregation of all alerts for a resource that align with kill chain patterns. For tactics details, see [MITRE ATT&CK tactics](alerts-reference.md#mitre-attck-tactics). Incidents appear in the Security alerts page. Select an incident to view related alerts and get more information.
 
 ## Manage security incidents
 
@@ -57,9 +58,12 @@ In Defender for Cloud, a security incident is an aggregation of all alerts for a
 
 1. To remediate the threats in the incident, follow the remediation steps provided with each alert.
 
-## Next steps
-
-This page explained the security incident capabilities of Defender for Cloud. For related information, see the following pages:
+## Learn more
 
 - [Security alerts in Defender for Cloud](alerts-overview.md)
-- [Manage and respond to security alerts](manage-respond-alerts.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Manage and respond to security alerts](manage-respond-alerts.md)
+
