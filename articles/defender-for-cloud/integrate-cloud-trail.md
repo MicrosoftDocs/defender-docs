@@ -5,6 +5,7 @@ author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/28/2026
+#customer intent: As a cloud security administrator, I want to integrate AWS CloudTrail logs with Microsoft Defender for Cloud so that I can improve identity and permission risk visibility.
 ---
 
 # Integrate AWS CloudTrail logs (Preview)
@@ -93,4 +94,9 @@ To confirm CloudTrail telemetry is flowing into Defender for Cloud:
 - Review Defender for Cloud recommendations and identity insights after setup.
 
 Signals may take time to appear depending on CloudTrail delivery frequency and event volume.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md)
 

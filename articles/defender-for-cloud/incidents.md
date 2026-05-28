@@ -6,6 +6,7 @@ ms.author: elkrieger
 author: Elazark
 ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
+#customer intent: As a security analyst, I want to manage and investigate security incidents in Microsoft Defender for Cloud so that I can understand attack campaigns and respond effectively.
 ---
 # Manage security incidents in Microsoft Defender for Cloud
 
@@ -57,10 +58,12 @@ In Defender for Cloud, a security incident is an aggregation of all alerts for a
 
 1. To remediate the threats in the incident, follow the remediation steps provided with each alert.
 
-## Next steps
-
-This page explained the security incident capabilities of Defender for Cloud. For related information, see the following pages:
+## Learn more
 
 - [Security alerts in Defender for Cloud](alerts-overview.md)
-- [Manage and respond to security alerts](manage-respond-alerts.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Manage and respond to security alerts](manage-respond-alerts.md)
 

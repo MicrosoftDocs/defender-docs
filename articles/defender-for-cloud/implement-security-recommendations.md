@@ -63,7 +63,8 @@ Security admins can also fix issues at scale with automatic script generation in
 
 To remediate the recommendation, copy and run the script.
 
-## Related content
+## Next step
 
-- [Governance rules in your remediation processes](governance-rules.md)
+> [!div class="nextstepaction"]
+> [Use governance rules in your remediation processes](governance-rules.md)
 

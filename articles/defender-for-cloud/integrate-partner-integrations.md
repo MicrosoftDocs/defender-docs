@@ -7,6 +7,7 @@ ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
+#customer intent: As a security administrator, I want to connect partner integrations in Microsoft Defender for Cloud so that I can extend detection and protection across my environment.
 ---
 
 # Connect partner integrations in Microsoft Defender for Cloud
@@ -88,4 +89,9 @@ Once you create the client secret, you need to grant permissions to the applicat
 1. Follow the steps again to add the **Reader** role.
 
 Repeat these steps for any other relevant subscriptions.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Review available partner integrations](partner-integrations.md)
 
