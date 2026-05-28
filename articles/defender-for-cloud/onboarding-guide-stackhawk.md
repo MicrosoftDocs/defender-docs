@@ -2,9 +2,10 @@
 title: Technical onboarding guide for StackHawk (preview)
 description: Learn how to use StackHawk with Microsoft Defender for Cloud to enhance your application security testing.
 ms.date: 05/28/2026
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
+#customer intent: As an API security engineer, I want to onboard StackHawk with Defender for Cloud so that API security findings are integrated into centralized security operations.
 ---
 
 # StackHawk technical onboarding guide
@@ -169,9 +170,8 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 
 StackHawk is licensed based on the number of code contributors that are provisioned on the platform. For custom pricing, EULA, or a private contract, contact <marketplace-orders@stackhawk.com>.
 
-## Related content
+## Next step
 
-[Microsoft Defender for APIs overview](defender-for-apis-introduction.md)
-
-
+> [!div class="nextstepaction"]
+> [Review Microsoft Defender for APIs overview](defender-for-apis-introduction.md)
 

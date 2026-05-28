@@ -2,9 +2,10 @@
 title: Technical onboarding guide for Bright Security (preview)
 description: Learn how to use Bright Security with Microsoft Defender for Cloud to enhance your application security testing.
 ms.date: 05/28/2026
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
+#customer intent: As an API security engineer, I want to onboard Bright Security with Defender for Cloud so that API security test findings are unified in Defender recommendations.
 ---
 
 # Bright Security technical onboarding guide
@@ -120,9 +121,8 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 
 :::image type="content" source="media/onboarding-guide-42crunch/azure-devops-recommendation.png" alt-text="Screenshot of Azure DevOps repositories should have API security testing findings resolved recommendation." lightbox="media/onboarding-guide-42crunch/azure-devops-recommendation.png":::
 
-## Related content
+## Next step
 
-[Microsoft Defender for APIs overview](defender-for-apis-introduction.md)
-
-
+> [!div class="nextstepaction"]
+> [Review Microsoft Defender for APIs overview](defender-for-apis-introduction.md)
 
