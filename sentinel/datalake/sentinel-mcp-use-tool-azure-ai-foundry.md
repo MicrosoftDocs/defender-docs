@@ -2,10 +2,11 @@
 title: Use a Microsoft Sentinel MCP tool in Microsoft Foundry 
 titleSuffix: Microsoft Security  
 description: Learn how to use Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Foundry 
+ms.author: pauloliveria
 author: poliveria
+ms.reviewer: macasgra
 ms.topic: how-to
 ms.date: 04/27/2026
-ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 

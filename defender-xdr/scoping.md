@@ -6,7 +6,7 @@ ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 author: mberdugo
 ms.author: monaberdugo
-ms.reviewer: Tomas Beerthuis
+ms.reviewer: tbeerthuis
 ms.date: 3/19/2026
 
 #customer intent: As a security administrator, I want to configure Microsoft Sentinel scoping to control access to data at the row level, so that I can ensure that users only have access to the data relevant to their role and responsibilities.

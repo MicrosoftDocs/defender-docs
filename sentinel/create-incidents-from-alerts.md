@@ -1,8 +1,9 @@
 ---
 title: Create incidents from alerts in Microsoft Sentinel | Microsoft Docs
 description: Learn how to create incidents from alerts in Microsoft Sentinel.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: idpelleg
 ms.topic: how-to
 ms.date: 10/16/2024
 ms.custom:

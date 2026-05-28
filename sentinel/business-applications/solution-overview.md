@@ -1,8 +1,8 @@
 ---
 title: Microsoft Sentinel Solution for MS Business Apps
 description: Learn about the Microsoft Sentinel solution for MS Business Apps, including Microsoft Power Platform, Microsoft Dynamics 365 Customer Engagement, and Microsoft Dynamics 365 Finance and Operations.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
 ms.service: microsoft-sentinel
 ms.topic: overview #Don't change
 ms.date: 11/13/2024

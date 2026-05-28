@@ -24,7 +24,7 @@ appliesto:
 
 You can create indicators for certificates. Some common use cases include:
 
-- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
+- Scenarios when you need to deploy blocking technologies, such as [attack surface reduction rules](attack-surface-reduction-rules-overview.md) but need to allow behaviors from signed applications by adding the certificate in the allowlist.
 - Blocking the use of a specific signed application across your organization. By creating an indicator to block the certificate of the application, Microsoft Defender Antivirus prevents file executions (block and remediate), and automated investigation and remediation behaves the same.
 
 ## Before you begin

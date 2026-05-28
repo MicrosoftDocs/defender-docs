@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot the Microsoft Sentinel solution for SAP applications data connector agent
 description: Learn how to troubleshoot specific issues that might occur in your Microsoft Sentinel solution for SAP applications data connector agent deployment.
-author: mberdugo
 ms.author: monaberdugo
+author: mberdugo
 ms.topic: troubleshooting
 ms.date: 09/30/2025
 appliesto:

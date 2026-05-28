@@ -1,8 +1,9 @@
 ---
 title: What is Microsoft Sentinel SIEM?
 description: Learn about Microsoft Sentinel, a scalable, cloud-native SIEM and SOAR that uses AI, analytics, and automation for threat detection, investigation, and response.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: overview
 ms.service: microsoft-sentinel
 ms.date: 01/28/2026

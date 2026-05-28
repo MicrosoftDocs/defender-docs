@@ -2,10 +2,11 @@
 title: Triage tool collection in Microsoft Sentinel MCP server
 titleSuffix: Microsoft Security  
 description: Learn about the different tools available in the triage collection
+ms.author: pauloliveria
 author: poliveria
+ms.reviewer: macasgra
 ms.topic: how-to
 ms.date: 04/30/2026
-ms.author: pauloliveria
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 

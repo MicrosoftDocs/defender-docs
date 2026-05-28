@@ -2,12 +2,13 @@
 title: Use federated data sources in Microsoft Sentinel
 titleSuffix: Microsoft Security
 description: Learn how to view, query, and work with federated data sources in Microsoft Sentinel data lake using the portal, KQL queries, and Jupyter notebooks.
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: amyhari
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
 ms.date: 03/29/2026
-ms.author: edbaynash
 ms.collection: ms-security
 
 #Customer intent: As a security analyst, I want to use federated data sources so that I can query external data alongside my Sentinel security data for comprehensive investigations.

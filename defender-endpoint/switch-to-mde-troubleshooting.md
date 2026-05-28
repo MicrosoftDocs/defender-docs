@@ -85,11 +85,7 @@ If Microsoft Defender Antivirus is stuck in passive mode, set it to active mode 
 If you're using a non-Microsoft antivirus/antimalware solution on Windows Server 2016, your existing solution might have required you to disable or uninstall Microsoft Defender Antivirus.
 
 - **Disabled**: Use the `-WdEnable` option on the MpCmdRun command-line tool to enable Microsoft Defender Antivirus on Windows Server 2016:
-  1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-     1. Open the **Start** menu, and then type **cmd**.
-     2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-
-  1. In the elevated Command Prompt, run the following commands:
+  1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
      > [!TIP]
      > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.

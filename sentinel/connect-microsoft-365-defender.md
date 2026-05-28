@@ -1,8 +1,9 @@
 ---
 title: Stream data from Microsoft Defender XDR to Microsoft Sentinel in the Azure portal
 description: Learn how to ingest incidents, alerts, and raw event data from Microsoft Defender XDR into Microsoft Sentinel in the Azure portal.
-author: guywi-ms
 ms.author: guywild
+author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 12/24/2025
 appliesto:

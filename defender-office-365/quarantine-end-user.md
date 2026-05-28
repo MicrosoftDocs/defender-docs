@@ -13,7 +13,7 @@ ms.custom:
 description: Users can learn how to view and manage quarantined email messages in Microsoft 365 that were meant to be delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 04/27/2026
+ms.date: 05/19/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -301,12 +301,9 @@ After you select the message, use either of the following methods to remove it:
 - **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete messages**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete from quarantine**.
 
-In the **Delete (n) messages from quarantine** flyout that opens, use one of the following methods to delete the message:
+In the **Delete (n) messages from quarantine** flyout that opens, select **Permanently delete the message from quarantine** and then select **Delete**. The deleted message isn't recoverable.
 
-- Select **Permanently delete the message from quarantine** and then select **Delete**: The message is permanently deleted and isn't recoverable.
-- Select **Delete** only: The message is deleted, but is potentially recoverable.
-
-After you select **Delete** on the **Delete (n) messages from quarantine** flyout, you return to the **Email** tab where the message is no longer listed.
+Back on the **Email** tab, the deleted message is no longer listed.
 
 > [!TIP]
 > Admins can find out who deleted a quarantined message by searching the admin audit log. For instructions, see [Find who deleted a quarantined message](quarantine-admin-manage-messages-files.md#find-who-deleted-a-quarantined-message).
