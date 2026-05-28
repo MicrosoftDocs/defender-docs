@@ -2,7 +2,7 @@
 title: Gain end-user context for AI alerts
 description: Learn how to enhance AI security by adding user context for alerts with Microsoft Defender for Cloud threat protection.
 ms.topic: how-to
-ms.date: 05/19/2025
+ms.date: 05/28/2026
 #Customer intent: I want to learn how to enhance the security of my AI services by adding end-user context for AI alerts with Microsoft Defender for Cloud threat protection for AI services.
 ---
 
@@ -14,7 +14,7 @@ In most cases, scenarios applying AI services are built as part of an applicatio
 
 Defender for Cloud, together with Azure AI, enables adding parameters to your Azure AI API calls to propagate critical end-user, or application context to Defender for Cloud's AI alerts. This, in turn, leads to more effective triaging and results. For example, when adding end-user IP or identity, you can block that user or correlate incidents and alerts by that user. When adding application context, you can prioritize or determine whether suspicious behavior could be considered standard for that application in the organization.
 
-:::image type="content" source="media/gain-end-user-context-ai/after-code.png" alt-text="Screenshot of the Defender XDR portal that shows all of the additional benefits gained by adding the code." lightbox="media/gain-end-user-context-ai/after-code.png":::
+:::image type="content" source="media/gain-end-user-context-ai/after-code.png" alt-text="Screenshot of the Defender XDR portal that shows all of the more benefits gained by adding the code." lightbox="media/gain-end-user-context-ai/after-code.png":::
 
 ## Prerequisites
 
@@ -51,9 +51,9 @@ This feature is currently not supported when applying models deployed through th
 | Source | Version support | Code Example | Comments |
 |----|----| ----| ----|
 |Azure OpenAI REST API|[2025-01-01 version](/azure/ai-services/openai/reference-preview)|-|-|
-|Azure .NET SDK| [v2.2.0-beta.1 (2025-02-07) or higher](https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.OpenAI_2.2.0-beta.1/sdk/openai/Azure.AI.OpenAI/CHANGELOG.md)|[GitHub code example](https://github.com/Azure-Samples/signalr-ai-streaming/blob/main/src/AIStreaming/MsDefenderExtension.cs)|-|
-|Azure Python SDK|[v1.61.1 or higher](https://github.com/openai/openai-python/releases/tag/v1.61.1)|[GitHub code example](https://github.com/microsoft/sample-app-aoai-chatGPT/blob/main/backend/security/ms_defender_utils.py)|The support is provided by appending to "extra_body" object|
-|Azure JS/Node SDK|[v4.83.0 or higher](https://github.com/openai/openai-node/releases/tag/v4.83.0)|[GitHub code example](https://github.com/Azure-Samples/openai-secure-ui-js/blob/main/packages/api/src/functions/security/ms-defender-utils.ts)|The support is provided by appending to "extra_body" object|
+|Azure .NET SDK| [v2.2.0-beta.1 (2025-02-07) or higher](https://github.com/Azure/azure-sdk-for-net/blob/Azure.AI.OpenAI_2.2.0-beta.1/sdk/openai/Azure.AI.OpenAI/CHANGELOG.md)|GitHub code example (GitHub code example (GitHub code example ([GitHub code example](https://github.com/Azure-Samples/signalr-ai-streaming/blob/main/src/AIStreaming/MsDefenderExtension.cs))))|-|
+|Azure Python SDK|[v1.61.1 or higher](https://github.com/openai/openai-python/releases/tag/v1.61.1)|GitHub code example (GitHub code example (GitHub code example ([GitHub code example](https://github.com/microsoft/sample-app-aoai-chatGPT/blob/main/backend/security/ms_defender_utils.py))))|The support is provided by appending to "extra_body" object|
+|Azure JS/Node SDK|[v4.83.0 or higher](https://github.com/openai/openai-node/releases/tag/v4.83.0)|GitHub code example (GitHub code example (GitHub code example ([GitHub code example](https://github.com/Azure-Samples/openai-secure-ui-js/blob/main/packages/api/src/functions/security/ms-defender-utils.ts))))|The support is provided by appending to "extra_body" object|
 |Azure Go SDK|[v0.7.2 or higher ](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/ai/azopenai@v0.7.2#UserSecurityContext)|-|-|
 
 
@@ -62,3 +62,5 @@ This feature is currently not supported when applying models deployed through th
 
 > [!div class="nextstepaction"]
 > [Overview - AI threat protection](ai-threat-protection.md)
+
+

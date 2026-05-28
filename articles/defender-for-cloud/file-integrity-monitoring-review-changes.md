@@ -4,7 +4,7 @@ description: Learn how to review machine changes with file integrity monitoring 
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 07/14/2025
+ms.date: 05/28/2026
 ---
 
 # Review changes in file integrity monitoring
@@ -71,3 +71,4 @@ The file integrity monitoring data resides within the Azure Log Analytics worksp
     ```
 
 1. The reports can be exported to CSV for archival purposes and  channeled to a Power BI report for further analysis.
+

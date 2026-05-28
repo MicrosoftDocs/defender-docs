@@ -4,7 +4,7 @@ description: Learn how to deploy gated deployment infrastructure as code for man
 #customer intent: As a Kubernetes administrator, I want to deploy gated deployment infrastructure as code so that I can automate the setup and ensure consistent configuration across environments.
 author: Elazark
 ms.author: elkrieger
-ms.date: 02/16/2026
+ms.date: 05/28/2026
 ms.topic: how-to
 ---
 
@@ -51,3 +51,4 @@ The gated deployment agent requires read access to all of your Azure Container R
 
 > [!div class="nextstepaction"]
 > [Troubleshoot gated deployment in Kubernetes](troubleshooting-runtime-gated.md)
+
