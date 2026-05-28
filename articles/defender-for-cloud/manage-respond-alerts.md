@@ -8,6 +8,7 @@ ms.topic: how-to
 ms.custom:
   - sfi-image-nochange
   - ge-structured-content-pilot
+#customer intent: As a security analyst, I want to manage and respond to security alerts in Defender for Cloud so that I can triage threats and take remediation actions quickly.
 ---
 
 # Manage and respond to security alerts
@@ -146,8 +147,13 @@ Results for both the agent-based and agentless scanner appear on the Security al
 > [!NOTE]
 > Remediating one of these alerts will not remediate the other alert until the next scan is completed.
 
-## Related content
+## Learn more
 
--   [Configure alert suppression rules](alerts-suppression-rules.md)
--   [Automate responses to Defender for Cloud triggers](workflow-automations.md)
--   [Security alerts - a reference guide](alerts-reference.md)
+- [Configure alert suppression rules](alerts-suppression-rules.md)
+- [Security alerts - a reference guide](alerts-reference.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Automate responses to Defender for Cloud triggers](workflow-automations.md)
+
