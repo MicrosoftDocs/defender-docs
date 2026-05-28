@@ -4,18 +4,20 @@ description: Learn how to detect exposed IP addresses with cloud security explor
 ms.topic: how-to
 ms.date: 05/28/2026
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ai-usage: ai-assisted
 #customer intent: As a security professional, I want to learn how to detect exposed IP addresses with cloud security explorer in Microsoft Defender for Cloud so that I can proactively identify security risks in my cloud environment and improve my security posture.
 ---
 
 # Detect internet exposed IP addresses
 
-Microsoft Defender for Cloud integrates with Defender External Attack Surface Management (Defender EASM) to help you find internet-exposed IP addresses. This integration provides recommendations and attack path visualizations that help reduce risk.
+This article shows you how to find internet-exposed IP addresses in Microsoft Defender for Cloud. You learn how to use cloud security explorer and attack path analysis to find and prioritize risk.
 
-You can use cloud security explorer to build queries and hunt for exposure risks. You can also use attack path analysis to understand how an attacker could reach critical assets.
+Microsoft Defender for Cloud integrates with Defender External Attack Surface Management (Defender EASM). This integration provides recommendations and attack path visualizations that help reduce risk.
 
 ## Prerequisites
+
+Before you begin, make sure that you meet the following requirements:
 
 - You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
@@ -67,7 +69,7 @@ Use cloud security explorer to build queries, such as outside-in scans, that det
 
 ## Detect exposed IP addresses with attack path analysis
 
-Using the attack path analysis, you can view a visualization of the attack paths that an attacker could use to reach your critical assets.
+Use attack path analysis to view paths that an attacker could use to reach critical assets.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
