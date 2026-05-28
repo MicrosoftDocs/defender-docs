@@ -4,7 +4,7 @@ description: Learn how to configure Microsoft Defender for Endpoint on Linux for
 author: paulinbar
 ms.author: painbar
 ms.reviewer: rutujadange
-ms.date: 05/27/2026
+ms.date: 05/28/2026
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.localizationpriority: medium
@@ -35,7 +35,7 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
   - [Enable new protection capabilities currently in preview](#enable-new-protection-capabilities-currently-in-preview)
   - [Keep Defender up to date](#keep-defender-up-to-date)
   - [Ensure your environment meets recommended system requirements](#ensure-your-environment-meets-recommended-system-requirements)
-- [Review your exclusions](#review-your-exclusions)
+  - [Review your exclusions](#review-your-exclusions)
 - [Interpret evaluation results](#interpret-evaluation-results)
 - [Submit possible false negatives for investigation](#submit-possible-false-negatives-for-investigation)
   - [Step 1: Gather the Microsoft Defender for Endpoint diagnostic logs](#step-1-gather-the-microsoft-defender-for-endpoint-diagnostic-logs)
