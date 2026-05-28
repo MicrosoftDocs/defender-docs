@@ -67,7 +67,9 @@ Integration into Microsoft browsers is controlled by the browser's SmartScreen s
 
 ### Network Protection requirements
 
-URL/IP allow and block requires that the Microsoft Defender for Endpoint component _Network Protection_ is enabled in **block mode**. For more information on Network Protection and configuration instructions, see [Enable network protection](enable-network-protection.md).
+Network allow and block indicators in Microsoft browsers are controlled by the browser's SmartScreen setting. 
+
+For other browsers and applications, network allow and block indicators require that the Microsoft Defender for Endpoint component _Network Protection_ is enabled in **block mode**. For more information on Network Protection and configuration instructions, see [Enable network protection](enable-network-protection.md).
 
 ### Custom network indicators requirements
 

@@ -5,7 +5,7 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: daniha
 ms.custom: subject-cost-optimization
-ms.topic: conceptual
+ms.topic: article
 ms.date: 06/14/2025
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
