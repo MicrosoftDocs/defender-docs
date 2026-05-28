@@ -28,6 +28,28 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## June 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| June 1, 2026 | GA | [General availability of Microsoft Defender for Open-Source Relational Databases on AWS RDS](#general-availability-of-microsoft-defender-for-open-source-relational-databases-on-aws-rds) |
+
+### General availability of Microsoft Defender for Open-Source Relational Databases on AWS RDS
+
+June 1, 2026
+
+Microsoft Defender for Open-Source Relational Databases is now generally available for Amazon Web Services Relational Database Service (AWS RDS) instances.
+
+As of June 1, 2026, the plan bills for AWS RDS instances that were previously onboarded to the preview version of the feature. Usage starts to appear on your July 2026 bill.
+
+You continue to receive database threat protection and sensitive data discovery for supported open-source relational databases, including Aurora PostgreSQL, Aurora MySQL, PostgreSQL, MySQL, and MariaDB on AWS RDS.
+
+No action is required to maintain protection if you onboarded Open-Source Relational Databases on AWS RDS during the preview. The feature automatically transitioned to general availability.
+
+To opt out and avoid future charges, disable Open-Source Relational Databases on the relevant AWS account.
+
+Learn more about [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) and how to [manage database protection plans](enable-defender-for-databases-aws.md).
+
 ## May 2026
 
 | Date | Category | Update |
@@ -44,17 +66,17 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
 
-### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage 
+### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage
 
 May 26, 2026
 
-On-demand malware scanning for Azure Files in Microsoft Defender for Storage is now in publicly available. This feature extends the existing on-demand malware scan feature and lets you scan entire Azure Storage accounts that contain blobs and files.
+On-demand malware scanning of Azure Files in Microsoft Defender for Storage is now generally available.
 
-You can start scans in the Azure portal UI or with the Representational State Transfer (REST) application programming interface (API). You can also automate scans with Azure Logic Apps, Azure Automation playbooks, and PowerShell scripts.
+This feature extends on-demand malware scanning so you can scan Azure Storage accounts that contain blobs and files.
 
-This feature uses Microsoft Defender Antivirus and applies the latest malware definitions for each scan. It also shows an upfront cost estimate in the Azure portal before you start a scan.
+You can start scans in the Azure portal or by using the REST API. You can also automate scans by using Azure Logic Apps, Azure Automation runbooks, and PowerShell scripts.
 
-For more information, see [On-demand malware scanning](/azure/defender-for-cloud/on-demand-malware-scanning).
+Learn more about [on-demand malware scanning](on-demand-malware-scanning.md).
 
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
