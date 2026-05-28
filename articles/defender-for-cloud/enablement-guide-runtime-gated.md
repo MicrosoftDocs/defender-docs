@@ -1,16 +1,17 @@
 ---
 title: Enable Gated Deployment for Kubernetes Clusters
-description: Learn how to configure Gated Deployment in Microsoft Defender for Containers to enforce container image security policies for Kubernetes clusters.
+description: Learn how to configure Gated Deployment and Kubernetes Misconfiguration Enforcement in Microsoft Defender for Containers to enforce security policies during deployments.
 #customer intent: As a Kubernetes administrator, I want to configure Gated Deployment in Defender for Containers so that I can enforce container image security policies during deployments.
 author: Elazark
 ms.author: elkrieger
-ms.date: 10/29/2025
+ms.date: 06/01/2026
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Enable gated deployment in Defender for Containers
 
-This article shows how to enable and configure gated deployment for Kubernetes clusters with Microsoft Defender for Containers.
+This article shows how to enable and configure gated deployment for Kubernetes clusters with Microsoft Defender for Containers. It also covers Kubernetes Misconfiguration Enforcement (Preview), which extends Kubernetes security by evaluating resource configurations at deployment time.
 
 Gated deployment enforces container image security policies during deployment by using vulnerability scan results from supported registries - Azure Container Registry (ACR), Amazon Elastic Container Registry (ECR), and Google Artifact Registry. It works with the Kubernetes admission controller to evaluate images before the cluster admits them.
 
@@ -158,6 +159,52 @@ To investigate a specific admission event, select it from the list. A details pa
     - Select **Security Rules** in the **Microsoft Defender for Cloud Environment Settings** pane.
     - Select **Vulnerability Assessment** to view a list of defined security rules.
     - Select a security rule and then select **Delete**.
+
+## Kubernetes Misconfiguration Enforcement (Preview)
+
+> [!IMPORTANT]
+> Kubernetes Misconfiguration Enforcement is currently in public preview. This feature is available only in commercial clouds. It isn't available in national or sovereign clouds, including US Government, China Government, and other sovereign regions.
+
+Kubernetes Misconfiguration Enforcement extends Kubernetes security by evaluating resource configurations at admission time and enforcing Microsoft Defender security best practice rules. It complements existing post-deployment monitoring with proactive enforcement at the point of deployment.
+
+After you enable the feature, a default security rule is automatically created in Audit mode. You can configure rules to use Block mode to actively prevent non-compliant deployments.
+
+### Prerequisites for Misconfiguration Enforcement
+
+| **Requirement** | **Details** |
+|-----------------|-------------|
+| Defender plan | Enable Defender for Containers. |
+| Kubernetes cluster | Cluster must be running in a commercial cloud (AKS, EKS, or GKE). |
+| AKS policies | Kubernetes cluster must have AKS policies enabled. They're enabled by default. |
+| Permissions | Create or change rules with Subscription Owner or Security Admin role. View rules with Security Reader or higher. |
+
+### Configure Misconfiguration Enforcement rules
+
+1. Go to **Microsoft Defender for Cloud** > **Environment Settings**.
+1. Select the relevant subscription, AWS account, or GCP project.
+1. Select the **Security Rules** tile.
+1. Select the **Misconfiguration** tab to view available policies.
+1. To create a new policy, select **Create new policy**.
+1. Configure the policy:
+    - **Policy name**: Enter a unique name.
+    - **Action**: Choose **Audit** to monitor violations, or **Block** to deny non-compliant deployments.
+1. Under the rules list, enable or disable individual rules and configure parameters for rules that support customization.
+1. Select **Save** to activate the policy.
+
+> [!NOTE]
+> Selecting **Block** mode can introduce a short delay during deployments because of real-time policy enforcement.
+
+### Built-in Misconfiguration rules
+
+Misconfiguration Enforcement includes built-in rules based on Microsoft Defender security best practices. Rules cover areas such as:
+
+- Container resource limits (CPU and memory)
+- Privilege and capability management
+- Host namespace isolation
+- Network security (HTTPS enforcement for Ingress resources)
+- Runtime security (read-only root filesystem)
+
+You can enable or disable individual rules within a policy and configure parameters for rules that support customization.
 
 ## Related content
 
