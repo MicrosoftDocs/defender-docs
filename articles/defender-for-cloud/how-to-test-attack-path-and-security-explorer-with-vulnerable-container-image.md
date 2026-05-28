@@ -3,7 +3,7 @@ title: Attack path analysis and enhanced risk-hunting for containers
 description: Learn how to test attack paths and perform enhanced risk-hunting for containers with cloud security explorer in Microsoft Defender for Cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 03/02/2026
+ms.date: 05/28/2026
 ---
 
 # Attack path analysis and enhanced risk-hunting for containers
@@ -229,3 +229,4 @@ You can build queries in one of the following ways:
 - [Use built-in query templates](how-to-manage-cloud-security-explorer.md#query-templates)
 
 - [Create custom queries](how-to-manage-cloud-security-explorer.md#build-a-query)
+
