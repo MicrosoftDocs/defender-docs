@@ -1,7 +1,7 @@
 ---
 title: Compliance - Microsoft Defender for IoT
 description: Learn about compliance resources for Microsoft Defender for IoT.
-ms.topic: conceptual
+ms.topic: article
 ms.date: 04/14/2023
 ---
 

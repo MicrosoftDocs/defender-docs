@@ -156,7 +156,7 @@ If you want to restrict response actions on a device that's already onboarded to
 
 ## Related resources
 
-- [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool (preview)](defender-deployment-tool-windows.md?tabs=restricted-functionality)
+- [Deploy Microsoft Defender for Endpoint to Windows devices using the Defender deployment tool](defender-deployment-tool-windows.md?tabs=restricted-functionality)
 - [Troubleshoot Defender deployment tool issues](defender-deployment-tool-windows.md#troubleshooting)
 - [Onboard devices to Microsoft Defender for Endpoint](onboard-configure.md)
 - [Take response actions on a device](respond-machine-alerts.md)
