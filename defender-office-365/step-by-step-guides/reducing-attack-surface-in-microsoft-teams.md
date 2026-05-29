@@ -45,7 +45,7 @@ If licensed for Microsoft Defender for Office 365 (free 90-day evaluation availa
 7. Press **Edit protection settings**.
 8. Ensure **Safe Links checks a list of known, malicious links when users click links in Microsoft Teams** is checked.
 9. Press **Save**.
-10. In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can decide whether users can report malicious messages in Microsoft Teams. Learn more here. [User reported message settings in Microsoft Teams](../submissions-teams.md)
+10. In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2, or Microsoft Defender XDR, admins can decide whether users can report malicious messages in Microsoft Teams. For more information, see [User reported settings in Microsoft Teams](../submissions-teams.md).
 
 ## Restricting channel email messages to approved domains
 

@@ -12,6 +12,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ai-usage: ai-assisted
+#customer intent: As an IT administrator, I want to diagnose and fix SPF, DKIM, and DMARC authentication failures in Microsoft 365 so legitimate email isn't incorrectly quarantined, rejected, or delivered to Junk Email.
 ---
 
 # Troubleshoot email authentication in Microsoft 365
