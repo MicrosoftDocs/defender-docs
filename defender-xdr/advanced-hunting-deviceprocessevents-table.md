@@ -105,6 +105,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `InitiatingProcessUniqueId` | `string` | Unique identifier of the initiating process; this is equal to the Process Start Key in Windows devices |
 | `LogonID`<br> (inside AdditionalFields/InitiatingProcessPosixEffectiveUser)|`long` |A unique identifier for the user initiating the event, enabling attribution of file activity to the originating interactive user across privilege escalation and session transitions|
 
+
 ## Related topics
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
