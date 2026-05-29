@@ -57,7 +57,7 @@ The solution can be downloaded and installed using the [Defender deployment tool
 
 ## Install and configure Microsoft Monitoring Agent (MMA)
 
-It's recommended to onboard down-level Windows clients via MMA and SCEP **only if** the client is running Windows 8.1 or 8.1 Pro. For all other Windows operating systems, use the [Defender deployment tool].
+It's recommended to onboard down-level Windows clients via MMA and SCEP **only if** the client is running Windows 8.1 or 8.1 Pro. For all other Windows operating systems, use the [Defender deployment tool](./defender-deployment-tool-windows.md).
 
 ### Before you begin
 
