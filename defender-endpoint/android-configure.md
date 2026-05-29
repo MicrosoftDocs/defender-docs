@@ -12,7 +12,7 @@ ms.collection:
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-ms.date: 05/22/2026
+ms.date: 05/28/2026
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
