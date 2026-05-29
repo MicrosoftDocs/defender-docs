@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/20/2026
+ms.date: 05/28/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -392,8 +392,8 @@ For detailed information on Microsoft security updates, see the [Microsoft Secur
 
 |Feature area | Update summary |
 |--------------|---------------|
-|Visibility |Better user attribution in security events: [File](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicefileevents-table), [process](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table), and [network](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table) security events now include the original login user’s ID, even when actions are performed via sudo or under root. This information is exposed in Advanced Hunting, making it easier to trace elevated actions back to the actual user’s session for improved insider threat detection and investigations.|
-|Configuration|• Offline security intelligence updates (GA): Customers can now configure offline security intelligence updates for Linux using Security Settings Management policies in the Defender portal. Refer: [Configure Offline SIU updates](/defender-endpoint/linux-support-offline-security-intelligence-update?tabs=portal) <br>• Scheduled antivirus scans (Public Preview): Customers can centrally schedule antivirus scans on Linux using managed JSON and policy settings through the Defender portal. Refer: [Schedule AV scans](/defender-endpoint/schedule-antivirus-scans-linux) |
+|Visibility |Better user attribution in security events: [File](/defender-xdr/advanced-hunting-devicefileevents-table), [process](/defender-xdr/advanced-hunting-deviceprocessevents-table), and [network](/defender-xdr/advanced-hunting-devicenetworkevents-table) security events now include the original login user's ID, even when actions are performed via sudo or under root. This information is exposed in Advanced Hunting, making it easier to trace elevated actions back to the actual user's session for improved insider threat detection and investigations.|
+|Configuration|- Offline security intelligence updates (GA): Customers can now configure offline security intelligence updates for Linux using Security Settings Management policies in the Defender portal. For more information, see [Configure Offline SIU updates](/defender-endpoint/linux-support-offline-security-intelligence-update?tabs=portal)<br>- Scheduled antivirus scans (Public Preview): Customers can centrally schedule antivirus scans on Linux using managed JSON and policy settings through the Defender portal. For more information, see [Schedule AV scans](/defender-endpoint/schedule-antivirus-scans-linux) |
 |Performance|Faster threat remediation: Malware is now quarantined and cleaned up more quickly, improving response time when threats are detected.|
 |Stability|This release includes stability improvements that reduce the likelihood of rare crashes or interruptions, helping ensure the Defender agent runs more reliably with continuous protection.|
 
