@@ -87,9 +87,6 @@ SecOps team members can proactively hunt for potentially malicious Teams message
 
 - On the **Advanced hunting** page in the Defender portal at <https://security.microsoft.com/v2/advanced-hunting>. The following hunting tables are available for Teams-related threats:
 
-  > [!NOTE]
-  > The hunting tables are currently in Preview.
-
   - [MessageEvents](/defender-xdr/advanced-hunting-messageevents-table): Contains raw data about every internal and external Teams message that included a URL. Sender address, Sender display name, Sender type, and more are available in this table.
   - [MessagePostDeliveryEvents](/defender-xdr/advanced-hunting-messagepostdeliveryevents-table): Contains raw data about ZAP events on Teams messages.
   - [MessageUrlInfo](/defender-xdr/advanced-hunting-messageurlinfo-table): Contains raw data about URLs in Teams messages.
