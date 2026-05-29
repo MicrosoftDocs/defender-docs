@@ -133,12 +133,10 @@ The currently supported list of vendors and products used in the [EventVendor](#
 If you're developing a parser for a vendor or product not listed here, contact the [Microsoft Sentinel](mailto:azuresentinel@microsoft.com) team to allocate new allowed vendor and product designators. 
 
 
-## Next steps
+## Related content
 
-For more information, see:
-
-- Watch the [ASIM Webinar](https://www.youtube.com/watch?v=WoGD-JeC7ng) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjDY1cro08Fk3KUj-?e=murYHG)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [ASIM Webinar: The Information Mode - Understanding Normalization in Azure Sentinel](https://www.youtube.com/watch?v=WoGD-JeC7ng)

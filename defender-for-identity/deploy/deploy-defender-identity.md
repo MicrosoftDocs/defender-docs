@@ -26,12 +26,15 @@ The sensor version you deploy depends on the server role and operating system. U
 | --------- | --------- | --------- |
 |Domain controller | Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea)|[Defender for Identity sensor v3.x](deploy-sensor-v3.md)|
 |Domain controller with AD FS, AD CS, or Microsoft Entra Connect identity roles   | Windows Server 2019 or later with at least the [March 2026 Cumulative Update](https://support.microsoft.com/topic/march-10-2026-kb5078766-os-build-20348-4893-fa3ee26a-0877-47d7-a4b2-9dd632ea8cea)|[Defender for Identity sensor v3.x](deploy-sensor-v3.md)|
-|Domain controller | Windows Server 2016 or later| [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) |
+|Domain controller | Windows Server 2016 or earlier| [Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md) |
 |[AD FS server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 |[AD CS server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 |[Microsoft Entra Connect server that isn't a domain controller](active-directory-federation-services.md)|Windows Server 2016 or later|[Defender for Identity sensor v2.x](prerequisites-sensor-version-2.md)|
 
 Defender for Identity supports mixed environments with both v3.x and v2.x sensors. For example, you might deploy v3.x on domain controllers running Windows Server 2019 or later, and v2.x on older domain controllers or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. Both sensor versions work together and report to the same Defender for Identity workspace.
+
+> [!IMPORTANT]
+> If any of your sensors are v3.x, select **Automatically use the sensor's local system account** for all sensors. The v3.x sensors don't use gMSA accounts configured for v2.x sensors; they always use the local system account. For more information, see [Sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
 
 Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
@@ -52,7 +55,7 @@ Follow these steps to deploy the sensor v3.x on domain controllers running Windo
 
 ## Deployment steps for sensor v2.x
 
-Follow these steps to deploy the sensor v2.x on domain controllers running Windows Server 2016 or later, or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers:
+Follow these steps to deploy the sensor v2.x on domain controllers running Windows Server 2016 or earlier, or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers:
 
 1. [Verify prerequisites](prerequisites-sensor-version-2.md)
 1. [Plan capacity](capacity-planning.md)

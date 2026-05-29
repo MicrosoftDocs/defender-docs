@@ -243,6 +243,10 @@ Parsers that don't have a value under `Uses pack parameter` don't have the `Addi
 
 ## <a name="next-steps"></a>Next steps
 
+
+
+## Related content
+
 Learn more about ASIM parsers:
 
 - [Use ASIM parsers](normalization-about-parsers.md)
@@ -251,7 +255,7 @@ Learn more about ASIM parsers:
 
 Learn more about ASIM: 
 
-- Watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) 

@@ -2,7 +2,7 @@
 title: How to use DKIM for email in your custom domain
 author: chrisda
 ms.author: chrisda
-ms.date: 01/30/2026
+ms.date: 05/22/2026
 ms.topic: how-to
 
 ms.localizationpriority: high
@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-#customer intent: As an IT administrator responsible for Microsoft 365 email delivery and security, I want step‑by‑step instructions to configure, verify, rotate, and troubleshoot DKIM for custom domains so I can prevent spoofing and ensure reliable message authentication.
+#customer intent: As an IT administrator responsible for Microsoft 365 email delivery and security, I want step-by-step instructions to configure, verify, rotate, and troubleshoot DKIM for custom domains so I can prevent spoofing and ensure reliable message authentication.
 ---
 
 # Set up DKIM to sign mail from your cloud domain
@@ -44,7 +44,7 @@ Important facts about DKIM:
 - The domain that's used to DKIM sign the message isn't required to match the domain in the MAIL FROM or From addresses in the message. For more information about these addresses, see [Why internet email needs authentication](email-authentication-about.md#why-internet-email-needs-authentication).
 - A message can have multiple DKIM signatures by different domains. In fact, many hosted email services sign the message using the service domain, and then sign the message again using the customer domain after the customer configures DKIM signing for the domain.
 
-Before we get started, here's what you need to know about DKIM in Microsoft 365 based on your email domain:
+Before you get started, here's what you need to know about DKIM in Microsoft 365 based on your email domain:
 
 - **If you use only the Microsoft Online Email Routing Address (MOERA) domain for email (for example, contoso.onmicrosoft.com)**: You don't need to do anything. Outbound messages from senders in the contoso.onmicrosoft.com domain are automatically DKIM signed by the contoso.onmicrosoft.com domain.
 
@@ -115,7 +115,7 @@ Points to address or value: selector2-<CustomDomainWithDashes>._domainkey.<Initi
     Points to address or value: selector2-contoso-com._domainkey.contoso.onmicrosoft.com
     ```
 
-  - **The old and new and old formats can't coexist for the same selector**. To retrieve the correct DKIM CNAME values for a domain, including the assigned \<DynamicPartitionCharacter\> value, replace contoso.com with the domain value, and then run the following command in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
+  - **The old and new formats can't coexist for the same selector**. To retrieve the correct DKIM CNAME values for a domain, including the assigned \<DynamicPartitionCharacter\> value, replace contoso.com with the domain value, and then run the following command in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
     ```powershell
     Get-DkimSigningConfig -Identity contoso.com | Format-List Name,Enabled,Status,Selector1CNAME,Selector2CNAME
@@ -325,7 +325,7 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 
 5. After a while, return to Exchange Online PowerShell, replace \<Domain\> with the domain you configured, and run the following command:
 
-   ```powerShell
+   ```powershell
    Set-DkimSigningConfig -Identity \<Domain\> -Enabled $true [-BodyCanonicalization <Relaxed | Simple>] [-HeaderCanonicalization <Relaxed | Simple>]
    ```
 
@@ -338,13 +338,13 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 
    For example:
 
-   ```powerShell
+   ```powershell
    Set-DkimSigningConfig -Identity contoso.com -Enabled $true
    ```
 
    Or
 
-   ```powerShell
+   ```powershell
    Set-DkimSigningConfig -Identity contoso.onmicrosoft.com -Enabled $true
    ```
 
@@ -602,6 +602,262 @@ In this example, the following steps are required:
 
    **From**: `sender@marketing.contoso.com`<br>
    **d=**: marketing.contoso.com
+
+## Troubleshoot DKIM DNS configuration
+
+The following sections describe common mistakes that prevent DKIM from working and how to fix them.
+
+### Wrong CNAME hostname format
+
+- **Symptom**: The DKIM toggle doesn't enable in the Defender portal. Status remains **CnameMissing**.
+- **What went wrong**: The CNAME hostname was entered with the full domain appended (for example, `selector1._domainkey.contoso.com.contoso.com`) or without the `_domainkey` prefix.
+- **Fix**: The **hostname** (also called "Name" or "Record name") should contain only the subdomain part. Most DNS providers automatically append your domain zone.
+
+  **Correct**: `selector1._domainkey`
+
+  **Incorrect** (hostname includes the domain, which results in a double-domain): `selector1._domainkey.contoso.com` (if your DNS zone is already contoso.com)
+
+> [!TIP]
+> Some DNS providers (like GoDaddy) automatically append the domain zone to the value you enter. If your domain zone is `contoso.com` and you enter `selector1._domainkey.contoso.com`, the actual record becomes `selector1._domainkey.contoso.com.contoso.com`. Enter only `selector1._domainkey` in the hostname field.
+
+### Missing selector2 CNAME record
+
+- **Symptom**: DKIM signing enables successfully, but key rotation fails later. Or the Defender portal shows a warning about an incomplete configuration.
+- **What went wrong**: Only `selector1._domainkey` was created. The `selector2._domainkey` CNAME record is missing.
+- **Why it matters**: Microsoft 365 requires **both** selector CNAME records. `selector2` is used during key rotation. Without it, you can't rotate DKIM keys.
+- **Fix**: Create both CNAME records:
+
+  ```text
+  selector1._domainkey     selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft
+  selector2._domainkey     selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft
+  ```
+
+> [!IMPORTANT]
+> Always create **both** CNAME records, even though only one selector is active at any given time. The inactive selector is needed for seamless key rotation.
+
+### TXT record instead of a CNAME record
+
+- **Symptom**: DKIM status remains **CnameMissing** even though you added a DNS record. DNS lookups for `selector1._domainkey.contoso.com` return a TXT record.
+- **What went wrong**: A TXT record containing the DKIM public key was created directly, instead of a CNAME record pointing to Microsoft's DKIM infrastructure.
+- **Why it matters**: Microsoft 365 manages the DKIM keys and handles key rotation automatically. The CNAME record delegates key management to Microsoft. A TXT record requires you to manually manage keys and rotation, which isn't supported for Microsoft 365.
+- **Fix**: Delete the TXT record and create a **CNAME** record instead:
+
+  |Record type|Hostname|Points to|
+  |---|---|---|
+  |**CNAME** (correct)|`selector1._domainkey`|`selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`|
+  |**TXT** (incorrect, not supported)|`selector1._domainkey`|`v=DKIM1; k=rsa; p=MIGfMA0GCS...`|
+
+> [!NOTE]
+> Other non-Microsoft email systems might use TXT records for DKIM. For Microsoft 365, **always use CNAME records** that point to the Microsoft DKIM infrastructure.
+
+### TTL set too low
+
+- **Symptom**: DKIM verification intermittently fails on the receiving side with `dkim=temperror` or `dkim=fail` (key lookup timeout).
+- **What went wrong**: The TTL (Time to Live) on the DKIM CNAME records is set too low (for example, 60 or 300 seconds), causing frequent DNS lookups that might time out.
+- **Recommended TTL**: **3600 seconds** (1 hour) minimum.
+- **Fix**: Update the TTL on both DKIM CNAME records to at least 3600:
+
+  ```text
+  selector1._domainkey  3600  CNAME  selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft
+  selector2._domainkey  3600  CNAME  selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft
+  ```
+
+### Domain mismatch in CNAME target value
+
+- **Symptom**: DKIM status shows **CnameMissing** or DKIM signing fails. The `Get-DkimSigningConfig` output shows different values than what's in DNS.
+- **What went wrong**: The CNAME target value doesn't match what Microsoft 365 generated. Common errors include incorrect domain replacement (dots vs. dashes), wrong initial domain prefix, or missing the dynamic partition character.
+- **Key rules for the CNAME target**:
+  - Dots (`.`) in your domain are replaced with **dashes** (`-`).
+  - The initial domain prefix is your \*.onmicrosoft.com prefix (without `.onmicrosoft.com`).
+  - A dynamic character is assigned by Microsoft.
+- **Fix**: Always use the exact CNAME values from the Defender portal or PowerShell. Don't construct them manually:
+
+  ```powershell
+  Get-DkimSigningConfig -Identity contoso.com | Format-List Selector1CNAME, Selector2CNAME
+  ```
+
+  **Example**: For the domain `sub.contoso.com` with initial domain `contoso.onmicrosoft.com`:
+
+  |Component|Correct value|Common mistake|
+  |---|---|---|
+  |Domain with dashes|`sub-contoso-com`|`sub.contoso.com` (kept dots)|
+  |Initial domain prefix|`contoso`|`contoso.onmicrosoft.com` (included suffix)|
+  |Full CNAME target|`selector1-sub-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`|`selector1-sub.contoso.com._domainkey.contoso.onmicrosoft.com`|
+
+### Trailing dot missing or extra in CNAME target
+
+- **Symptom**: DNS provider shows the record as created, but Microsoft 365 can't detect it.
+- **What went wrong**: Some DNS providers require a trailing dot (`.`) at the end of the CNAME target to indicate a fully qualified domain name (FQDN). Others add it automatically, and adding it manually creates a double-dot.
+- **Fix**: Check your DNS provider's requirements. See [DNS provider-specific CNAME examples](#dns-provider-specific-cname-examples).
+
+### Common DKIM DNS mistakes at a glance
+
+|Mistake|Symptom|Fix|
+|---|---|---|
+|Hostname includes full domain|Status: CnameMissing|Enter only `selector1._domainkey` (no domain suffix)|
+|Missing selector2|Key rotation fails|Create both CNAME records|
+|TXT record instead of CNAME|Status: CnameMissing|Delete TXT, create CNAME|
+|TTL too low|Intermittent `dkim=temperror`|Set TTL to at least 3600 seconds|
+|Wrong domain format in target|Status: CnameMissing|Use exact values from `Get-DkimSigningConfig`|
+|Trailing dot issue|Record exists but not detected|Follow DNS provider-specific formatting|
+
+### Verify DNS propagation
+
+Use `nslookup` or `dig` to confirm the CNAME records resolve correctly.
+
+**Windows (nslookup)**:
+
+```cmd
+nslookup -type=CNAME selector1._domainkey.contoso.com
+nslookup -type=CNAME selector2._domainkey.contoso.com
+```
+
+**Expected output** (successful):
+
+```text
+selector1._domainkey.contoso.com  canonical name = selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft
+```
+
+**macOS/Linux (dig)**:
+
+```bash
+dig CNAME selector1._domainkey.contoso.com +short
+dig CNAME selector2._domainkey.contoso.com +short
+```
+
+> [!NOTE]
+> DNS propagation can take a few minutes to 48 hours depending on your DNS provider and TTL settings. If the records don't resolve immediately, wait and try again.
+
+### DKIM still not working after verification
+
+If you completed all verification steps and DKIM still isn't working, use the following table to identify the issue:
+
+|Issue|Possible cause|Resolution|
+|---|---|---|
+|Status stays CnameMissing after 48 hours|DNS records are incorrect or in the wrong zone.|Double-check the values by using `Get-DkimSigningConfig` output. Verify records are in the correct DNS zone for the domain.|
+|DKIM passes but DMARC still fails|DKIM domain alignment issue: the `d=` domain in the DKIM signature doesn't match the From address domain.|Ensure DKIM is configured for the exact domain used in the From address (including subdomains).|
+|DKIM fails after message forwarding|Message body or headers were modified by an intermediary.|Configure the intermediary as a [trusted ARC sealer](email-authentication-arc-configure.md).|
+|DKIM toggle immediately goes back to Disabled|CNAME records are detected but keys can't be generated (rare).|Contact [Microsoft Support](/microsoft-365/admin/get-help-support) with the output of `Get-DkimSigningConfig -Identity contoso.com`.|
+|DKIM works for one domain but not another|The second domain has its own DNS zone and needs its own CNAME records.|Each domain or subdomain that sends email needs its own pair of DKIM CNAME records.|
+
+## DNS provider-specific CNAME examples
+
+The following examples show how to create the DKIM CNAME records at popular DNS providers. In all examples, the custom domain is **contoso.com** and the initial domain is **contoso.onmicrosoft.com**.
+
+> [!IMPORTANT]
+> The CNAME target values in the following examples are **examples only**. Your actual values include a dynamic partition character assigned by Microsoft. Always get your exact values from:
+>
+> - The Defender portal: **DKIM** page \> domain details \> **Publish CNAMEs** section.
+> - PowerShell: `Get-DkimSigningConfig -Identity contoso.com | Format-List Selector1CNAME, Selector2CNAME`
+
+### GoDaddy
+
+1. Sign in to [GoDaddy DNS Management](https://dcc.godaddy.com/manage/dns).
+1. Select your domain (**contoso.com**).
+1. Select **Add Record**.
+
+|Field|Record 1|Record 2|
+|---|---|---|
+|**Type**|CNAME|CNAME|
+|**Name**|`selector1._domainkey`|`selector2._domainkey`|
+|**Value**|`selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`|`selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`|
+|**TTL**|1 Hour|1 Hour|
+
+> [!NOTE]
+> GoDaddy automatically appends your domain zone to the **Name** field. Don't include `.contoso.com` in the Name. Enter only `selector1._domainkey`.
+
+### Cloudflare
+
+1. Sign in to the [Cloudflare dashboard](https://dash.cloudflare.com).
+1. Select your domain (**contoso.com**) \> **DNS** \> **Records**.
+1. Select **Add record**.
+
+|Field|Record 1|Record 2|
+|---|---|---|
+|**Type**|CNAME|CNAME|
+|**Name**|`selector1._domainkey`|`selector2._domainkey`|
+|**Target**|`selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`|`selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`|
+|**Proxy status**|**DNS only** (gray cloud, proxy OFF)|**DNS only** (gray cloud, proxy OFF)|
+|**TTL**|Auto (or 1 hour)|Auto (or 1 hour)|
+
+> [!CAUTION]
+> **Disable the Cloudflare proxy (orange cloud) for DKIM CNAME records.** DKIM CNAME records must resolve directly to the Microsoft DKIM infrastructure. If the proxy is enabled, DNS lookups return Cloudflare's IP addresses instead of the CNAME target, and DKIM verification fails. Set the proxy status to **DNS only** (gray cloud icon).
+
+### Amazon Route 53
+
+1. Sign in to the [AWS Management Console](https://console.aws.amazon.com/route53/).
+1. Go to **Hosted zones** \> select **contoso.com**.
+1. Select **Create record**.
+
+|Field|Record 1|Record 2|
+|---|---|---|
+|**Record name**|`selector1._domainkey`|`selector2._domainkey`|
+|**Record type**|CNAME|CNAME|
+|**Value**|`selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft.`|`selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft.`|
+|**TTL**|3600|3600|
+|**Routing policy**|Simple routing|Simple routing|
+
+> [!NOTE]
+> Route 53 requires a **trailing dot** (`.`) at the end of the CNAME target value to indicate a fully qualified domain name. If you omit the trailing dot, Route 53 appends the hosted zone name to the target, which creates an incorrect value.
+
+### Azure DNS
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Go to **DNS zones** \> select **contoso.com**.
+1. Select **+ Record set**.
+
+|Field|Record 1|Record 2|
+|---|---|---|
+|**Name**|`selector1._domainkey`|`selector2._domainkey`|
+|**Type**|CNAME|CNAME|
+|**Alias**|`selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`|`selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft`|
+|**TTL**|1 hour|1 hour|
+|**TTL unit**|Hours|Hours|
+
+> [!NOTE]
+> Azure DNS doesn't require a trailing dot for CNAME targets. The portal handles FQDN formatting automatically. Don't add a trailing dot in the Azure portal.
+
+#### Azure DNS via CLI
+
+```azurecli
+# Create selector1 CNAME
+az network dns record-set cname set-record \
+  --resource-group MyDNSResourceGroup \
+  --zone-name contoso.com \
+  --record-set-name "selector1._domainkey" \
+  --cname "selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft"
+
+# Create selector2 CNAME
+az network dns record-set cname set-record \
+  --resource-group MyDNSResourceGroup \
+  --zone-name contoso.com \
+  --record-set-name "selector2._domainkey" \
+  --cname "selector2-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft"
+
+# Set TTL to 3600 seconds
+az network dns record-set cname update \
+  --resource-group MyDNSResourceGroup \
+  --zone-name contoso.com \
+  --name "selector1._domainkey" \
+  --set ttl=3600
+
+az network dns record-set cname update \
+  --resource-group MyDNSResourceGroup \
+  --zone-name contoso.com \
+  --name "selector2._domainkey" \
+  --set ttl=3600
+```
+
+### DNS provider requirements summary
+
+|Provider|Trailing dot needed?|Auto-appends domain?|Proxy/CDN notes|
+|---|---|---|---|
+|**GoDaddy**|No|Yes (auto-appends zone)|N/A|
+|**Cloudflare**|No|Yes (auto-appends zone)|**Must disable proxy** (DNS only / gray cloud)|
+|**Route 53**|**Yes** (required)|No|N/A|
+|**Azure DNS**|No (portal handles it)|Yes (auto-appends zone)|N/A|
+|**Namecheap**|No|Yes (auto-appends zone)|N/A|
+|**Google Domains / Cloud DNS**|No|Yes (auto-appends zone)|N/A|
 
 ## Next steps
 

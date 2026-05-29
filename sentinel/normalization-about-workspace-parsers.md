@@ -108,8 +108,6 @@ For example, the following code shows a DNS filtering unifying parser, having re
 
 ## Related content
 
-For more information, see:
-
 - [ASIM parsers overview](normalization-parsers-overview.md)
 - [Manage ASIM parsers](normalization-manage-parsers.md)
 - [Develop custom ASIM parsers](normalization-develop-parsers.md)

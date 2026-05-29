@@ -20,7 +20,12 @@ The listed features were released in the last six months. For information about 
 
 ## May 2026
 
+- [Generate playbooks using AI in Microsoft Sentinel is now generally available (GA)](#generate-playbooks-using-ai-in-microsoft-sentinel-is-now-generally-available-ga)
 - [UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections](#ueba-enhancements-new-settings-experience-okta-v2-support-and-more-gcp-anomaly-detections)
+
+### Generate playbooks using AI in Microsoft Sentinel is now generally available (GA)
+
+You can now [generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md). The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
 
 ### UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections
 
@@ -189,7 +194,7 @@ To help SOC teams get value from behaviors from day one, Microsoft Sentinel now 
 
 For more information about the workbook, see the [Microsoft Sentinel Behaviors Workbook blog post](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/introducing-the-microsoft-sentinel-ueba-behaviors-workbook/4448398).
 
-### Generate playbooks using AI in Microsoft Sentinel (preview)
+### Generate playbooks using AI in Microsoft Sentinel (Preview)
 
 You can now [generate playbooks using AI in Microsoft Sentinel](./automation/generate-playbook.md). The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. For more information, see [the Playbook Generation blog post](https://aka.ms/PlaybookGenBlog).
 
