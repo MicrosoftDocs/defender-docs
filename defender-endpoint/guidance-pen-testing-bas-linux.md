@@ -30,7 +30,7 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
 ## Table of contents
 
 - [Challenges and solutions at a glance](#challenges-and-solutions-at-a-glance)
-- [Detailed guidance](#detailed-guidance)
+- [Configure Defender for accurate evaluation](#configure-defender-for-accurate-evaluation)
   - [Enable Full Protection Settings](#enable-full-protection-settings)
   - [Enable new protection capabilities currently in preview](#enable-new-protection-capabilities-currently-in-preview)
   - [Keep Defender up to date](#keep-defender-up-to-date)
