@@ -50,9 +50,6 @@ The following settings are available on the **Automation settings** page:
 
   - **Similar URLs:** When the automated investigation recognizes a malicious URL, it creates a cluster around the malicious URL. The cluster groups all messages that contain the URL into the cluster. Selecting this setting opts the organization in to automated remediation for these malicious URL clusters.
 
-    > [!TIP]
-    > Follow the roadmap to stay informed on when more message clusters are available for automated remediation.
-
   - **Multiple similar attributes**: Messages that share various attributes, such as subject or sender IP address. The automated investigation creates queries (clusters) of email using various attributes from the original email: sender values (IP address, sender domain) and contents (subject, cluster ID) to find email that might be related. he following similarity clusters that are created:
     - BodyFingerprintBin1/SenderIp
     - BodyFingerprintBin1/P2SenderDomain

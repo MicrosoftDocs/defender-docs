@@ -207,7 +207,7 @@ It's important for you to carefully consider the implications of bypassing filte
 
 There are no special licensing requirements for ZAP for malware, spam, and phishing. ZAP works on all mailboxes hosted in Exchange Online. ZAP doesn't work in on-premises mailboxes that are protected by Microsoft 365.
 
-ZAP for Teams protection requires Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 licenses.
+ZAP for Teams protection requires Microsoft Defender for Office 365 Plan 1 or Plan 2 licenses.
 
 ### Does ZAP work on messages in other folders in the mailbox (for example, messages moved by Inbox rules)?
 
