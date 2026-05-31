@@ -13,7 +13,7 @@ The following service parameters and limits apply when writing queries in the Mi
 > [!NOTE]
 > All limits in this table apply **per tenant**. There's no per-user limit. Interactive KQL queries and [asynchronous KQL queries](#service-parameters-and-limits-for-kql-async-queries) share the same rate-limit and concurrency counters.
 
-When either the rate limit or the concurrency limit is exceeded, the request is **rejected** (not queued). The concurrency counter decrements as soon as a running query finishes, and the rate-limit counter resets every minute.
+When either the rate limit or the concurrency limit is exceeded, the request is **rejected** and not queued. The concurrency counter decrements as soon as a running query finishes, and the rate-limit counter resets every minute.
 
 | Category                       | Parameter/limit                                                                                                                                                                |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
