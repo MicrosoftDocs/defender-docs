@@ -7,7 +7,7 @@ env:
   TEST_USER: '' # Set to a GitHub username to override the event-derived user for testing
 
 jobs:
-  policy:
+  gate:
     runs-on: ubuntu-latest
     permissions:
       contents: read
