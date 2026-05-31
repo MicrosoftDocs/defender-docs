@@ -69,11 +69,7 @@ Each Defender plan has specific setup requirements.
 
 Learn more about [monitoring components](monitoring-components.md).
 
-<<<<<<< HEAD
-### [Defender for open-source databases](#tab/Defender-for-open-source-databases-)
-=======
-### [Defender for open-source databases (Preview)](#tab/Defender-for-open-source-databases-preview)
->>>>>>> d4d727352f6d09711b0928768fb8eb78c167f4ce
+### [Defender for open-source databases](#tab/Defender-for-open-source-databases)
 
 - An active Azure subscription with [Defender for Cloud enabled](get-started.md#enable-defender-for-cloud-on-your-azure-subscription).  
 - A connected account in Azure or AWS.  
