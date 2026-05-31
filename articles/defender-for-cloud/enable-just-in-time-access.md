@@ -1,7 +1,7 @@
 ---
 title: Enable just-in-time access
 description: Learn how just-in-time VM access (JIT) in Microsoft Defender for Cloud helps you control access to your Azure virtual machines.
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 ms.date: 02/19/2025
 ms.topic: how-to
@@ -138,7 +138,7 @@ When a VM has JIT enabled, you have to request access to connect to it. You can 
 You can enable JIT on a VM from the Azure virtual machines pages of the Azure portal.
 
 > [!TIP]
-> If a VM already has JIT enabled, the VM configuration page shows that JIT is enabled. You can use the link to open the JIT VM access page in Defender for Cloud to view and change the settings.
+> If a VM already has JIT enabled, the VM configuration page shows that JIT is enabled. Use the **Just-in-time VM access** link on that page to open Defender for Cloud and review or change settings.
 
 1.  From the [Azure portal](https://portal.azure.com), search for and select **Virtual machines**.
 

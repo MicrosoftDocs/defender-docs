@@ -3,8 +3,9 @@ title: Exempt resources at scale
 description: Learn how to create exemptions for how policies are applied to resources in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ms.date: 02/05/2026
+#customer intent: As a security administrator, I want to create exemptions at scale so I can manage recommendation scope consistently.
 ---
 
 # Exempt resources at scale
@@ -17,7 +18,7 @@ For example, Defender for Cloud might not track the process that remediates a re
 
 - Prevent a recommendation from affecting the secure score or appearing again by excluding a subscription or management group.
 
-- Prevent a recommendation or resource from being listed as unhealthy. Apply the rule to the required scope and mark the item as "mitigated" or "risk accepted".
+- Prevent a recommendation or resource from being listed as unhealthy. Apply the exemption to the required scope and mark the item as "mitigated" or "risk accepted".
 
 [!INCLUDE [exempt-resource](./includes/exempt-resource.md)]
 
@@ -44,25 +45,19 @@ To tailor your security posture, create exemptions for recommendations that aren
 
 1. Select a management group, subscription, or resource (per subscription).
 
-1. Select a category, <br>
+1. Select a category:
 
-    1. **Mitigated (resolved through a third-party service)** 
-     
-        Or, 
-
-    1. **Waiver (risk accepted)**.
+    - **Mitigated (resolved through a third-party service)**
+    - **Waiver (risk accepted)**
 
 1. (Optional) Select an expiry date.
 
 1. Select **Next**.
 
-1. Select either: <br>
+1. Select one of the following options:
 
-    1. **Selected recommendations** and the specific recommendations to exempt.
-    
-        Or,
-
-    1. **Recommendation category** and the  category to exempt.
+    - **Selected recommendations** and the specific recommendations to exempt.
+    - **Recommendation category** and the category to exempt.
 
 1. Select **Next**.
 

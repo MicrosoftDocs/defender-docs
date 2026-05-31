@@ -8,9 +8,11 @@ ms.date: 02/10/2025
 
 # Review data security alerts
 
-Microsoft Defender for Cloud's data security alerts provide insights into potential threats and vulnerabilities in your data environments. The alerts help you quickly identify and respond to security issues, enabling you to take proactive measures to mitigate risks.
+This article explains how to review and triage data security alerts in Microsoft Defender for Cloud. Use these alerts to identify threats and take remediation actions faster.
 
 ## Prerequisites
+
+Before you review data security alerts, make sure these components are enabled:
 
 - Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md).
 - Enable [sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
@@ -19,7 +21,7 @@ Microsoft Defender for Cloud's data security alerts provide insights into potent
 
 ## View data security alerts
 
-Data security alerts in Defender for Cloud help you identify potential threats and vulnerabilities in your data environments. Review alerts to understand security issues and take necessary actions to mitigate risks.
+Data security alerts in Defender for Cloud help you identify threats and vulnerabilities in your data environments.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
