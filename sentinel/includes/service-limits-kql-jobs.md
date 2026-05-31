@@ -13,7 +13,7 @@ The following table lists the service parameters and limits for KQL jobs in the 
 > [!NOTE]
 > All limits in this table apply **per tenant**. There's no per-user limit. KQL jobs have their own concurrency quota and don't share counters with KQL queries.
 
-When the concurrent-job-execution limit is exceeded, the request is **rejected** (not queued). The counter decrements as soon as a running job finishes.
+When the concurrent-job-execution limit is exceeded, the request is **rejected** and not queued. The counter decrements as soon as a running job finishes.
 
 | Category                            | Parameter/limit     |
 |-------------------------------------|---------------------|
