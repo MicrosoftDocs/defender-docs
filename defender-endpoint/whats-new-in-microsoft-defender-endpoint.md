@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/27/2026
+ms.date: 05/31/2026
 ms.collection:
 - m365-security
 - tier1
@@ -24,6 +24,12 @@ This article describes Microsoft Defender for Endpoint features that are in prev
 For recent releases of Microsoft Defender for Endpoint, including build numbers, improvements, and fixes, see [Microsoft Defender for Endpoint release notes](microsoft-defender-endpoint-releases.md).
 
 Learn more about [Preview features](/defender-xdr/preview).
+
+## June 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Feature |New Microsoft Secure Score recommendation |Preview |Microsoft Secure Score now includes **Reduce unnecessary inbound internet exposure on internet-facing devices**, which helps identify devices that are accessible from the public internet and may represent unnecessary attack surface.<br><br>Internet-facing devices are primary entry points for attackers and automated scanners, making them prime targets for credential brute-forcing, exploitation of unpatched vulnerabilities, and initial access for ransomware and hands-on-keyboard intrusions.<br><br>This recommendation provides centralized visibility into internet-facing devices across the environment, enabling organizations to validate whether exposure is expected, prioritize remediation for unintended exposure, and reduce external attack surface at scale. To learn more, see [Investigate internet-facing devices](investigate-machines.md#investigate-internet-facing-devices). |
 
 ## May 2026
 
