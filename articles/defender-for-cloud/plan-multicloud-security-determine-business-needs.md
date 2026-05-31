@@ -2,9 +2,9 @@
 title: Planning multicloud security determining business needs guidance
 description: Learn about determining business needs to meet business goals in multicloud environment with Microsoft Defender for Cloud.
 ms.topic: how-to
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 05/31/2026
 ---
 
 # Determine business needs
@@ -13,11 +13,12 @@ This article is part of a series to provide guidance as you design a cloud secur
 
 ## Goal
 
-Identify how Defender for Cloud’s multicloud capabilities can help your organization to meet its business goals and protect AWS/GCP resources.
+Identify how Defender for Cloud multicloud capabilities can help your organization meet business goals and protect Amazon Web Services (AWS) and Google Cloud Platform (GCP) resources.
 
 ## Get started
 
-The first step in designing a multicloud security solution is to determine your business needs. Every company, even if in the same industry, has different requirements. Best practices can provide general guidance, but specific requirements are determined by your unique business needs.
+The first step in designing a multicloud security solution is to determine your business needs. Every company, even in the same industry, has different requirements. Best practices provide general guidance, but your unique business needs define your specific requirements.
+
 As you start defining requirements, answer these questions:
 
 - Does your company need to assess and strengthen the security configuration of its cloud resources?
@@ -42,11 +43,12 @@ Defender for Cloud provides a single management point for protecting Azure, on-p
 The diagram below shows the Defender for Cloud architecture. Defender for Cloud can:
 
 - Provide unified visibility and recommendations across multicloud environments. There’s no need to switch between different portals to see the status of your resources.
-- Compare your resource configuration against industry standards, regulations, and benchmarks. [Learn more](./assign-regulatory-compliance-standards.md) about standards.
+- Compare your resource configuration against industry standards, regulations, and benchmarks. For details, see [Assign regulatory compliance standards](./assign-regulatory-compliance-standards.md).
 - Help security analysts to triage alerts based on threats/suspicious activities. Workload protection capabilities can be applied to critical workloads for threat detection and advanced defenses.
 
 :::image type="content" source="media/planning-multicloud-security/architecture.png" alt-text="Diagram that shows multicloud architecture." lightbox="media/planning-multicloud-security/architecture.png":::
 
-## Next steps
+## Next step
 
-In this article, you've learned how to determine your business needs when designing a multicloud security solution. Continue with the next step to [determine an adoption strategy](plan-multicloud-security-define-adoption-strategy.md).
+> [!div class="nextstepaction"]
+> [Determine an adoption strategy](plan-multicloud-security-define-adoption-strategy.md)
