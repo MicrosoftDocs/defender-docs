@@ -40,14 +40,6 @@ June 04, 2026
 
 Defender for Cloud now provides a new, actionable recommendation, **Upgrade Azure Kubernetes Service (preview)** that helps you remediate vulnerabilities in AKS-managed system pods.
 
-Unlike the previous recommendation, this new recommendation:
-
-- Identifies the specific AKS version upgrade that resolves each detected CVE.
-- Applies only to system pods managed by AKS, not customer workloads.
-- Lists associated CVEs with severity and CVSS scores.
-- Specifies the minimum AKS version that fixes each vulnerability.
-- Provides a clear remediation path by guiding you to upgrade your AKS cluster.
-
 This replaces the previous non-actionable recommendation with a resolvable remediation path, helping teams focus on vulnerabilities they can directly remediate while maintaining clear visibility into cluster exposure.
 
 Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md).
