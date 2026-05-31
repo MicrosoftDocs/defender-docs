@@ -63,7 +63,7 @@ Before you begin, make sure that:
 
 ## Remediate AKS system pod vulnerabilities by upgrading AKS (Preview)
 
-The **Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods** recommendation provides an actionable path to remediate vulnerabilities found in AKS-managed system pods. AKS enriches each CVE finding with the minimum AKS version that resolves it, so you know exactly which version to upgrade to.
+The **Upgrade Azure Kubernetes Service** recommendation provides an actionable path to remediate vulnerabilities found in AKS-managed system pods. AKS enriches each CVE finding with the minimum AKS version that resolves it, so you know exactly which version to upgrade to.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
