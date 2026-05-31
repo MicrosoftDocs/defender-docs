@@ -35,7 +35,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 26, 2026 | GA | [General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage](#general-availability-of-on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage) |
 | May 24, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available](#microsoft-defender-for-open-source-relational-databases-on-aws-rds-will-become-generally-available) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
-| May 19, 2026| Preview | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images-preview) |
+| May 19, 2026| Preview | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
 | May 18, 2026 | GA | [Microsoft Defender Experts for Servers as a managed XDR option](#microsoft-defender-experts-for-servers-as-a-managed-xdr-option) |
 | May 17, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (Preview)](#sql-vulnerability-assessment-express-configuration-now-available-for-azure-sql-managed-instance-and-synapse-preview) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
