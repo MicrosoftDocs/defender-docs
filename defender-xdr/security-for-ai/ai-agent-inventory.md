@@ -26,7 +26,7 @@ This article explains how to discover AI agents, assess their security posture, 
 ## Prerequisites
 
 - [Onboard to Microsoft Agent 365](/microsoft-agent-365/overview).
-- To access the `AIAgentsInfo` table and the Agent entity in Microsoft Defender XDR, [enable preview features](../preview.md) in the Microsoft Defender portal.
+- [Enable preview features](../preview.md) in the Microsoft Defender portal to access the `AIAgentsInfo` table in Advanced Hunting and get AI agent-related evidence in alerts.
 
 ## View all Agent 365-managed agents and configuration details using Advanced Hunting
 
