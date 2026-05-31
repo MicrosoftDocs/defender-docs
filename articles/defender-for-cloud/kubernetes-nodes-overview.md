@@ -37,9 +37,6 @@ Responsibility for Kubernetes nodes is shared between the managed Kubernetes ser
 - You configure node pools based on your workload requirements.
 - You are responsible for upgrading node pool VM versions to adopt newer images and improve your security posture.
 
-> [!NOTE]
-> Karpenter-managed nodes on EKS aren't supported in this release.
-
 ## Related content
 
 - [Vulnerability assessment for Kubernetes nodes](kubernetes-nodes-va.md)
