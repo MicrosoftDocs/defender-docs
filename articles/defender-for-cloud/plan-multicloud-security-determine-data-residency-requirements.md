@@ -1,5 +1,5 @@
 ---
-title: Planning multicloud security determine data residency requirements GDPR agent considerations guidance
+title: Planning multicloud security determine data residency requirements and agent considerations guidance
 description: Learn about determining data residency requirements when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
 author: ElazarK
@@ -19,7 +19,7 @@ Identify data residency requirements for your multicloud deployment and understa
 
 When you protect assets across clouds, identify which plans to enable for your required protection and whether each plan requires agent components.
 
-As part of this analysis, identify regional and legal requirements, including General Data Protection Regulation (GDPR) obligations for data handling.
+As part of this analysis, identify regional and legal requirements for data handling.
 
 ## Agent considerations for data residency
 
@@ -56,7 +56,7 @@ Defender for Containers has both sensor-based and agentless components.
   - The extension registers as a web hook to Kubernetes admission control and makes it possible to apply at-scale enforcement, safeguarding your clusters in a centralized, consistent manner.
 
 > [!IMPORTANT]
-> Kubernetes audit log data collection uses the Amazon EKS or GCP logging service in the source cloud. Confirm regional storage and transfer behavior to meet GDPR and internal residency requirements.
+> Kubernetes audit log data collection uses the Amazon EKS or GCP logging service in the source cloud. Confirm regional storage and transfer behavior to meet your organization's privacy and internal residency requirements.
 
 ## Defender for Databases plan
 
