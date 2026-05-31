@@ -1,5 +1,5 @@
 ---
-title: Exempt resources from recommendation in Microsoft Defender for Cloud
+title: Exempt resources from recommendations
 description: Create exemption rules to remove resources or recommendations from secure score impact in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.custom: ignite-2023

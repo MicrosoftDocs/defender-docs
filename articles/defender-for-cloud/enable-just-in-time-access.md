@@ -7,6 +7,7 @@ ms.date: 02/19/2025
 ms.topic: how-to
 ms.custom:
   - ge-structured-content-pilot
+#customer intent: As a security administrator, I want to enable just-in-time access for VMs so I can reduce exposure to unauthorized network access.
 ---
 
 # Enable just-in-time access
