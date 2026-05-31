@@ -1,18 +1,22 @@
 ---
 title: Disable Defender for SQL Servers on Machines
-description: Learn how to disable Defender for SQL Servers on Machines in Microsoft Defender for Cloud to manage your security posture effectively.
+description: Disable the Defender for SQL Servers on Machines plan to stop SQL alerts and recommendations for selected scopes in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 06/30/2025
-author: Elazark
+ms.date: 05/28/2026
+author: ElazarK
 ms.author: elkrieger
 #customer intent: As a security administrator, I want to disable Defender for SQL Servers on Machines in Defender for Cloud to manage my security posture effectively.
 ---
 
 # Disable Defender for SQL Servers on Machines
 
-This article describes how to disable Defender for SQL Servers on Machines in Microsoft Defender for Cloud. This feature allows you to manage your security posture effectively by disabling the Defender for SQL Servers on Machines plan on your virtual machines (VMs) and SQL servers.
+Use this article to disable Defender for SQL Servers on Machines in Microsoft Defender for Cloud.
 
-The Defender for SQL Servers on Machines plan is one of the Defender for Databases plans in Microsoft Defender for Cloud. It protects SQL Server databases hosted on Azure VMs and Azure Arc-enabled VMs. If you disable this plan, Defender for Cloud does not provide security alerts and recommendations for SQL Server instances running on these machines.
+The Defender for SQL Servers on Machines plan is part of Defender for Databases. It protects SQL Server databases hosted on Azure virtual machines (VMs) and Azure Arc-enabled VMs.
+
+## What happens when you disable this plan
+
+Disabling the plan means Defender for Cloud no longer provides SQL alerts and recommendations for the selected machines.
 
 ## Prerequisites
 
@@ -22,7 +26,7 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 ## Disable Defender for SQL Servers on Machines
 
-Once you disable Defender for SQL Servers on Machines, the Defender for SQL Servers on Machines plan will no longer be applied to your virtual machines and SQL servers. This means that the security features and protections provided by this plan will be disabled.
+To disable Defender for SQL Servers on Machines, follow these steps:
 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
@@ -43,11 +47,11 @@ Once you disable Defender for SQL Servers on Machines, the Defender for SQL Serv
 
 ## Disable Defender for SQL Servers on Machines at the resource level
 
-1. In the Azure portal, search for and select:
-    - **Azure Arc** > **Data services** > **SQL Server instances**.
-    <br> 
-    or
-    - **SQL virtual machines**.
+To disable this plan at the resource level for an individual SQL Server instance or SQL virtual machine, follow these steps:
+
+1. In the Azure portal, choose one of the following options:
+    - **Azure Arc** > **Data services** > **SQL Server instances**
+    - **SQL virtual machines**
 
 1. Select the relevant SQL Server instance.
 
@@ -55,9 +59,18 @@ Once you disable Defender for SQL Servers on Machines, the Defender for SQL Serv
 
     :::image type="content" source="media/disable-sql-on-machines/extension-application.png" alt-text="Screenshot that shows where to locate Defender for Cloud under the security section." lightbox="media/disable-sql-on-machines/extension-application.png":::
 
-1. Select the following extension(s):
-    - **Defender for SQL (IaaS and Arc)**
-        - Publisher: Microsoft.Azure.AzureDefenderForSQL
-        - Type: AdvancedThreatProtection.Windows
+1. Select the **Defender for SQL (IaaS and Arc)** extension.
+
+    Confirm that the extension details match the following values:
+
+    - Extension: Defender for SQL (IaaS and Arc)
+    - Publisher: Microsoft.Azure.AzureDefenderForSQL
+    - Type: AdvancedThreatProtection.Windows
 
 1. Select **Uninstall**.
+
+## Next steps
+
+- [Update Defender for SQL Servers on Machines plan configuration](update-sql-machine-configuration.md)
+- [Troubleshoot SQL machine protection configuration](troubleshoot-sql-machines-guide.md)
+
