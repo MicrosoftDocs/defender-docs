@@ -5,6 +5,7 @@ ms.service: defender-for-cloud
 ms.custom: build-2023, sfi-image-nochange
 ms.topic: how-to
 ms.date: 02/12/2026
+#customer intent: As a security administrator, I want to review and remediate container vulnerability findings based on runtime risk so I can prioritize the highest-impact fixes.
 ---
 
 # View and remediate vulnerabilities for containers running on Kubernetes clusters (risk-based)
