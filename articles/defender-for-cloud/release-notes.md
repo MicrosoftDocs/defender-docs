@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/26/2026
+ms.date: 06/01/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,11 +32,11 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| June 04, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
+| June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 
 ### Container-level misconfiguration recommendations for Kubernetes (Preview)
 
-June 4, 2026
+June 1, 2026
 
 Defender for Cloud now introduces agentless, container-level Kubernetes Security Posture Management (KSPM) misconfiguration recommendations, replacing the previous cluster-level findings with more granular, actionable insights integrated into Defender CSPM.
 
