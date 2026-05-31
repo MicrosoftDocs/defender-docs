@@ -4,7 +4,8 @@ description: Learn how to use Microsoft Defender for Cloud's set of Kubernetes d
 ms.topic: how-to
 author: Elazark
 ms.author: elkrieger
-ms.date: 03/23/2026
+ms.date: 05/28/2026
+#customer intent: As a security administrator, I want to configure Kubernetes data plane hardening in Defender for Cloud so that I can enforce secure workload policies across clusters.
 ---
 
 # Configure Kubernetes data plane hardening in Defender for Cloud
@@ -273,8 +274,12 @@ spec:
     targetPort: 9001
 ```
 
-## Related content
-
-- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-plan.md)
+## Learn more
 
 - [Deploy Defender for Containers components using Azure CLI](defender-for-containers-deploy-azure-cli.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-plan.md)
+
