@@ -71,3 +71,5 @@ The following table summarizes posture management features and their access patt
 
 ## Next step
 
+> [!div class="nextstepaction"]
+> [Network access and permissions reference for Defender for Containers](defender-for-containers-network-access.md)

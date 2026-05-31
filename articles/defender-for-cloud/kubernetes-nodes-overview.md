@@ -19,7 +19,7 @@ Defender for Cloud provides the following protections for supported Kubernetes n
 
 - [Vulnerability assessment](kubernetes-nodes-va.md) identifies known vulnerabilities on node software and surfaces recommendations to help you remediate them.
 
-- [Malware detection](kubernetes-nodes-malware.md) scans nodes for malware and generates security alerts when malware is detected. Malware detection is available in preview for EKS and GKE nodes.
+- [Malware detection](kubernetes-nodes-malware.md) scans nodes for malware and generates security alerts when malware is detected.
 
 For support details, view the [support matrix for Defender for Containers](support-matrix-defender-for-containers.md).
 

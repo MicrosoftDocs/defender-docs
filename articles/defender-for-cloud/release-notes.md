@@ -54,7 +54,7 @@ Private clusters now support the Defender sensor for gated deployment, binary dr
 
 This update extends Defender for Containers coverage to private cluster scenarios where you use the sensor-based features for container protection.
 
-For more information, see [access patterns and private cluster support for Defender for Containers features](defender-for-containers-feature-access-patterns.md), [Enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md), [Binary drift detection and blocking](binary-drift-detection.md), and [Container runtime antimalware detection and blocking](anti-malware.md).
+For more information, see [access patterns and private cluster support for Defender for Containers features](defender-for-containers-feature-access-patterns.md).
 
 ### Malware detection for EKS and GKE nodes (Preview)
 
