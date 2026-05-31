@@ -290,7 +290,7 @@ Privileged containers have all of the root capabilities of a host machine. They 
 
 **Type**: [Preview] Upgrade Azure Kubernetes Service
 
-**Description**: Defender for Cloud scans AKS-managed system pods for known vulnerabilities (CVEs). When vulnerabilities are detected, this recommendation identifies the minimum AKS version upgrade that resolves each CVE, giving you a clear and actionable remediation path. This recommendation applies to system pods managed by AKS, not customer workloads. For each CVE, the recommendation lists severity, CVSS score, and the minimum AKS version that includes the fix.
+**Description**: Defender for Cloud scans AKS-managed system pods for known vulnerabilities (CVEs). When vulnerabilities are detected, this recommendation identifies the minimum AKS version upgrade that resolves each CVE, giving you a clear and actionable remediation path. This recommendation applies to system pods managed by AKS, not customer workloads. For each CVE, the recommendation lists CVSS score, and the minimum AKS version that includes the fix.
 (No related policy)
 
 **Severity**: High
