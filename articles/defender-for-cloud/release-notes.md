@@ -28,11 +28,33 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## June 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| June 4, 2026 | Preview | [Kubernetes node vulnerability assessment extended to EKS and GKE (Preview)](#kubernetes-node-vulnerability-assessment-extended-to-eks-and-gke-preview) |
+
+### Kubernetes node vulnerability assessment extended to EKS and GKE (Preview)
+
+June 4, 2026
+
+Defender for Cloud now extends Kubernetes node (host) vulnerability assessment to Amazon Elastic Kubernetes Service (EKS) and Google Kubernetes Engine (GKE), bringing parity with the existing Azure Kubernetes Service (AKS) capability.
+
+This feature detects OS-level vulnerabilities in Kubernetes node VMs across EKS and GKE environments. When vulnerabilities are detected, Defender for Cloud surfaces an "Upgrade Kubernetes nodes" recommendation that identifies affected node pools and guides you to upgrade to a patched Kubernetes or node version. As additional image types are being scanned, your bill might increase. 
+
+**Key details:**
+
+- Covers Kubernetes host nodes (OS/infrastructure layer), not container workloads.
+- Provides consistent visibility and unified remediation guidance across Azure, AWS, and GCP.
+
+Requires AWS or GCP onboarded into Defender for Cloud with agentless scanning enabled.
+
+Learn more about [Kubernetes node vulnerability assessment](kubernetes-nodes-va.md).
+
 ## May 2026
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| May 26, 2026 | Preview | [Kubernetes node vulnerability assessment extended to EKS and GKE (Preview)](#kubernetes-node-vulnerability-assessment-extended-to-eks-and-gke-preview) |
 | May 24, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available](#microsoft-defender-for-open-source-relational-databases-on-aws-rds-will-become-generally-available) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
 | May 19, 2026| GA | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
@@ -43,24 +65,6 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
-
-### Kubernetes node vulnerability assessment extended to EKS and GKE (Preview)
-
-May 26, 2026
-
-Defender for Cloud now extends Kubernetes node (host) vulnerability assessment to Amazon Elastic Kubernetes Service (EKS) and Google Kubernetes Engine (GKE), bringing parity with the existing Azure Kubernetes Service (AKS) capability.
-
-This feature detects OS-level vulnerabilities in Kubernetes node VMs across EKS and GKE environments. When vulnerabilities are detected, Defender for Cloud surfaces an "Upgrade Kubernetes nodes" recommendation that identifies affected node pools and guides you to upgrade to a patched Kubernetes or node version.
-
-**Key details:**
-
-- Covers Kubernetes host nodes (OS/infrastructure layer), not container workloads.
-- Provides consistent visibility and unified remediation guidance across Azure, AWS, and GCP.
-- Karpenter-managed nodes aren't supported in this release.
-
-Requires AWS or GCP onboarded into Defender for Cloud with agentless scanning enabled.
-
-Learn more about [Kubernetes node vulnerability assessment](kubernetes-nodes-va.md).
 
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
