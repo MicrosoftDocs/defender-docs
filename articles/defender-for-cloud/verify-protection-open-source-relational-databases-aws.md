@@ -78,8 +78,8 @@ Defender for Cloud protection applies only to supported database engines and con
 | PostgreSQL | Yes |
 | MySQL | Yes |
 | MariaDB | Yes |
-| Aurora PostgreSQL | Yes, cluster-level monitoring |
-| Aurora MySQL | Yes, cluster-level monitoring |
+| Aurora PostgreSQL | Yes, each cluster instance is protected independently |
+| Aurora MySQL | Yes, each cluster instance is protected independently |
 | Oracle | No |
 | SQL Server | No |
 
@@ -88,33 +88,11 @@ Defender for Cloud protection applies only to supported database engines and con
 | Configuration | Supported | Notes |
 |---|---|---|
 | Single-AZ | Yes | Standard deployment. |
-| Multi-AZ failover | Yes | The primary instance is monitored. |
 | Multi-AZ readable standbys | No | Not supported. |
 | Read replicas | Partial | Read replicas are monitored as independent instances. |
 | Stopped instances | No | Stopped instances are skipped until they're started. |
 
 If the database engine, region, or configuration isn't supported, Defender for Cloud protection doesn't apply to that resource.
-
-## Verify recommendations
-
-Defender for Cloud surfaces protection status through security recommendations.
-
-1. In Defender for Cloud, go to **Recommendations**.
-
-1. Search for **The status of open-source relational databases on AWS RDS should be protected**.
-
-1. Open the recommendation.
-
-1. Review the affected resources and their status.
-
-If the recommendation doesn't appear, verify that:
-
-- The Databases plan is enabled for the Azure subscription associated with the AWS connector. The plan must be enabled at the subscription level, not only in the connector configuration.
-- The AWS connector is healthy.
-- The resource is supported.
-- Enough time passed for discovery and recommendation refresh.
-
-After configuration changes, allow up to one hour for the recommendation status to refresh.
 
 ## Review resource-level protection status
 
@@ -147,8 +125,6 @@ Sensitive data discovery for Amazon RDS is also available through Defender CSPM.
 | **STS isn't turned on in this region** | RDS Data Sensitivity Scan is failing because AWS Security Token Service (STS) isn't turned on in the selected region. | Turn on AWS STS in the required region by using the IAM console:<br>1. Sign in to the AWS Management Console.<br>2. Go to **IAM**.<br>3. In the navigation pane, select **Account settings**.<br>4. Locate **Security Token Service (STS) regions**.<br>5. Find the relevant region and verify its status.<br>6. If STS is turned off, select the region and turn it on.<br>7. Retry Defender onboarding or scan.<br><br>Learn more about [activating and deactivating AWS STS in a region](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html#sts-regions-activate-deactivate). |
 | **This region isn't supported for RDS Data Sensitivity Scan** | RDS Data Sensitivity Scan isn't currently deployed in the region where this resource is located. | Review the [list of supported regions](quickstart-onboard-aws.md?tabs=Defender-for-open-source-databases-Preview). If the region is listed as supported and the issue persists, contact Microsoft support. |
 
-After you resolve a resource-level issue, allow up to one hour for the recommendation status to refresh.
-
 ## Common verification results
 
 ### The plan is enabled, but the resource shows as not applicable or has no data
@@ -160,9 +136,3 @@ Verify that the resource uses a supported engine, configuration, and region. The
 Verify that all required AWS regions are selected in the connector configuration. Then verify that AWS STS is active in each affected region.
 
 If you recently added regions to the connector, redeploy the AWS CloudFormation template and allow time for discovery.
-
-### The resource is discovered, but the recommendation doesn't appear
-
-Verify that the Databases plan is enabled for the Azure subscription associated with the AWS connector. The plan must be enabled at the subscription level, not only in the connector configuration.
-
-Then allow up to one hour for the recommendation status to refresh.
