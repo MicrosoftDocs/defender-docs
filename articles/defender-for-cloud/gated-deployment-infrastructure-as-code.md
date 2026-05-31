@@ -4,7 +4,7 @@ description: Learn how to deploy gated deployment infrastructure as code for man
 #customer intent: As a Kubernetes administrator, I want to deploy gated deployment infrastructure as code so that I can automate the setup and ensure consistent configuration across environments.
 author: Elazark
 ms.author: elkrieger
-ms.date: 02/16/2026
+ms.date: 05/28/2026
 ms.topic: how-to
 ---
 
@@ -17,8 +17,8 @@ The gated deployment agent requires read access to all of your Azure Container R
 ## Prerequisites
 
 - An Azure subscription with Microsoft Defender for Cloud enabled.
-- You must [enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md) with the defender sensor and registry access extensions turned on.
-- You must enable on your Azure Kubernetes Service (AKS) cluster: 
+- You must [enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md) with the Defender sensor and registry access extensions turned on.
+- On your Azure Kubernetes Service (AKS) cluster, enable:
     - [An OpenID Connect (OIDC) issuer](/azure/aks/use-oidc-issuer#create-an-aks-cluster-with-the-oidc-issuer). 
     - [An Azure Workload Identity](/azure/aks/workload-identity-deploy-cluster?tabs=new-cluster).
 
@@ -35,15 +35,15 @@ The gated deployment agent requires read access to all of your Azure Container R
 
 1. [Assign the AcrPull role (or equivalent read role)](/azure/container-registry/container-registry-rbac-built-in-roles-overview?tabs=registries-configured-with-rbac-registry-abac-repository-permissions) to the MSI on all ACRs the cluster uses.
 
-1. [Add a Federated Identity Credential (FIC) to the MSI](/graph/api/resources/federatedidentitycredentials-overview?view=graph-rest-1.0) that allows the gated deployment agent to authenticate by using AKS Workload Identity, with the following FIC parameters:
+1. [Add a Federated Identity Credential (FIC) to the MSI](/graph/api/resources/federatedidentitycredentials-overview?view=graph-rest-1.0&preserve-view=true) that allows the gated deployment agent to authenticate by using AKS Workload Identity, with the following FIC parameters:
 
     - **Issuer**: The AKS OIDC issuer URL
     - **Subject**: The service account used by the gated deployment agent `system:serviceaccount:kube-system:defender-admission-controller-serviceaccount`.
     - **Audience**: api://AzureADTokenExchange
 
-1. Under the [securityGating section of the managed cluster API configuration](https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#resource-format-1), set the [MSI’s objectId in the identities parameter](https://learn.microsoft.com/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#managedclustersecurityprofiledefendersecuritygating-1) under the security gating section of the managed cluster API configuration. 
+1. Under the [securityGating section of the managed cluster API configuration](/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#resource-format-1), set the [MSI's objectId in the identities parameter](/azure/templates/microsoft.containerservice/managedclusters?pivots=deployment-language-arm-template#managedclustersecurityprofiledefendersecuritygating-1) under the security gating section of the managed cluster API configuration.
 
-    :::image type="content" source="media/gated-deployment-infrastructure-as-code/identities.png" alt-text="Screenshot that shows the section of the securityGating section of the managed cluster API configuration, where the code is located." lightbox="media/gated-deployment-infrastructure-as-code/identities.png":::
+    :::image type="content" source="media/gated-deployment-infrastructure-as-code/identities.png" alt-text="Screenshot of the managed cluster API configuration showing the identities parameter in the security gating section." lightbox="media/gated-deployment-infrastructure-as-code/identities.png":::
 
     This ensures the gated deployment agent can use the MSI at runtime.
 
@@ -51,3 +51,4 @@ The gated deployment agent requires read access to all of your Azure Container R
 
 > [!div class="nextstepaction"]
 > [Troubleshoot gated deployment in Kubernetes](troubleshooting-runtime-gated.md)
+

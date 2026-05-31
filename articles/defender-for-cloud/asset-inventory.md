@@ -1,17 +1,18 @@
 ---
 title: Cloud asset inventory
 description: Learn about the cloud asset inventory in Microsoft Defender for Cloud and Security Exposure Management
-ms.date: 05/24/2026
+ms.date: 05/25/2026
 ms.topic: how-to
 ms.author: elkrieger
 author: ElazarK
 zone_pivot_groups: defender-portal-experience
+#customer intent: As a security administrator, I want to use cloud asset inventory so that I can review the security posture of connected resources across my multicloud environment.
 ---
 # Cloud asset inventory
 
-The asset inventory page of Microsoft Defender for Cloud shows the [security posture](concept-cloud-security-posture-management.md) of the resources you connected to Defender for Cloud. It offers a unified, contextual view of cloud infrastructure across Azure, AWS, and GCP. It categorizes assets by workload, criticality, and coverage status, while integrating health data, device actions, and risk signals into a single interface.  Defender for Cloud periodically analyzes the security state of resources connected to your subscriptions to identify potential security issues and provides you with active recommendations. Active recommendations are recommendations that can be resolved to improve your security posture.
+The asset inventory page of Microsoft Defender for Cloud shows the [security posture](concept-cloud-security-posture-management.md) of your connected resources. It gives you one view of cloud infrastructure across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP). It groups assets by workload, criticality, and coverage status. It also combines health data, device actions, and risk signals in one place.
 
-Defender for Cloud periodically analyzes the security state of resources connected to it. When resources have active [security recommendations](security-policy-concept.md) or [security alerts](alerts-overview.md) associated with it, they appear in the inventory.
+Defender for Cloud periodically analyzes the security state of connected resources. When resources have active [security recommendations](security-policy-concept.md) or [security alerts](alerts-overview.md), they appear in the inventory.
 
 ::: zone pivot="azure-portal"
 
@@ -47,15 +48,15 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
 
 :::image type="content" source="media/asset-inventory/asset-inventory-features.png" alt-text="Screenshot that shows the main features of the asset inventory page in Microsoft Defender for Cloud." lightbox="media/asset-inventory/asset-inventory-features.png":::
 
-1. Select **Installed application**
+To review software inventory details:
 
+1. Select **Installed application**.
 1. In **Value**, select the apps to filter on.
-
     - **Total resources**: The total number of resources connected to Defender for Cloud.
     - **Unhealthy resources**: Resources with active security recommendations that you can implement. For remediation guidance, see [Review security recommendations](review-security-recommendations.md).
     - **Resource count by environment**: The number of resources in each environment.
     - **Unregistered subscriptions**: Any subscription in the selected scope that hasn't yet been connected to Microsoft Defender for Cloud.
-1. Resources connected to Defender for Cloud and running those apps are displayed. Blank options show machines where Defender for Servers/Defender for Endpoint isn't available.
+1. Resources connected to Defender for Cloud that run those apps are displayed. Blank options show machines where Defender for Servers or Defender for Endpoint isn't available.
 
 ## Filter the inventory
 
@@ -76,6 +77,8 @@ ARG is designed to provide efficient resource exploration with the ability to qu
 You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in the asset inventory to quickly produce deep insights by cross-referencing Defender for Cloud data with other resource properties.
 
 ## How to use asset inventory
+
+To work with filters and query options in asset inventory:
 
 1. From Defender for Cloud's sidebar, select **Inventory**.
 
@@ -103,8 +106,10 @@ You can use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) in t
 
 ## Export the inventory
 
+To export filtered inventory data:
+
 1. To save filtered inventory in CSV form, select **Download CSV report**.
-1. To save a query in Resource Graph Explorer, select **Open a query**. When you're ready to save a query, select **Save as** and in **Save query**, specific a query name and description, and whether the query is private or shared.
+1. To save a query in Resource Graph Explorer, select **Open a query**. When you're ready to save a query, select **Save as**. In **Save query**, specify a query name, description, and whether the query is private or shared.
 
     :::image type="content" source="media/asset-inventory/inventory-query-in-resource-graph-explorer.png" alt-text="Screenshot of Azure Resource Graph Explorer showing the generated inventory query from selected Defender for Cloud inventory filters." lightbox="media/asset-inventory/inventory-query-in-resource-graph-explorer.png":::
 
@@ -120,9 +125,11 @@ To access the software inventory, you need one of the following plans:
 
 ### Examples using Azure Resource Graph Explorer to access and explore software inventory data
 
+To query software inventory data in Azure Resource Graph Explorer:
+
 1. Open **Azure Resource Graph Explorer**.
 
-    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot shows how to launch Azure Resource Graph Explorer** recommendation page." :::
+    :::image type="content" source="./media/multi-factor-authentication-enforcement/opening-resource-graph-explorer.png" alt-text="Screenshot of the Azure portal showing how to open Azure Resource Graph Explorer from search results." :::
 
 1. Select the following subscription scope: **securityresources/softwareinventories**
 
@@ -160,7 +167,7 @@ securityresources
 
 To combine a software product with another security recommendation:
 
-(In this example – machines having MySQL installed and exposed management ports)
+(In this example: machines that have MySQL installed and exposed management ports.)
 
 ```kusto
 securityresources
@@ -193,7 +200,7 @@ This article describes how to use the unified cloud asset inventory in Microsoft
 
 ## Overview
 
-The cloud asset inventory provides a unified, contextual view of cloud infrastructure across Azure, AWS, and GCP environments. It categorizes assets by workload, criticality, and coverage status while integrating health data, device actions, and risk signals into a single interface.
+The cloud asset inventory gives you one view of cloud infrastructure across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP). It groups assets by workload, criticality, and coverage status. It also combines health data, device actions, and risk signals in one interface.
 
 :::image type="content" source="media/asset-inventory/cloud-infrastructure.png" alt-text="Screenshot of cloud asset inventory in the Defender portal." lightbox="media/asset-inventory/cloud-infrastructure.png":::
 
@@ -201,10 +208,10 @@ The cloud asset inventory provides a unified, contextual view of cloud infrastru
 
 ### Unified multicloud visibility
 
-- **Comprehensive coverage**: View all cloud assets across Azure, AWS, GCP, and other supported platforms
-- **Consistent interface**: Single pane of glass for multicloud asset management
-- **Real-time synchronization**: Up-to-date asset information across all connected cloud environments
-- **Cross-platform relationships**: Understand dependencies and connections between assets across different cloud providers
+- **Comprehensive coverage**: View assets across Azure, AWS, GCP, and other supported platforms.
+- **Consistent interface**: Use one interface to manage multicloud assets.
+- **Real-time synchronization**: See current asset data from connected cloud environments.
+- **Cross-platform relationships**: Review dependencies across cloud providers.
 
 ### Workload-specific insights
 
@@ -213,18 +220,18 @@ The inventory is organized by workload types, each providing tailored visibility
 - **Virtual Machines**: Compute instances across cloud providers with security posture and vulnerability data
 - **Data Resources**: Databases, storage accounts, and data services with compliance and exposure insights
 - **Containers**: Kubernetes clusters, container instances, and container registries with security scanning results
-- **AI/ML Services**: Artificial intelligence and machine learning resources with governance and security context
-- **APIs**: REST APIs, serverless functions, and integration services with exposure analysis
-- **DevOps Resources**: CI/CD pipelines, repositories, and development tools with security insights
+- **AI and ML services**: Artificial intelligence (AI) and machine learning (ML) resources with governance and security context.
+- **APIs**: Representational State Transfer (REST) application programming interfaces (APIs), serverless functions, and integration services with exposure analysis.
+- **DevOps resources**: Continuous integration and continuous deployment (CI/CD) pipelines, repositories, and development tools with security insights.
 - **Identity Resources**: Service accounts, managed identities, and access control components
 - **Serverless**: Functions, logic apps, and event-driven compute resources
 
 ### Advanced filtering and scoping
 
-- **Persistent scoping**: Leverage cloud scopes for consistent filtering across experiences
-- **Multi-dimensional filtering**: Filter by environment, workload, risk level, compliance status, and more
-- **Search capabilities**: Quick asset discovery through comprehensive search functionality
-- **Saved views**: Create and maintain custom filtered views for different operational needs
+- **Persistent scoping**: Use cloud scopes for consistent filtering across experiences.
+- **Multi-dimensional filtering**: Filter by environment, workload, risk level, and compliance status.
+- **Search capabilities**: Find assets quickly with built-in search.
+- **Saved views**: Save filtered views for repeated operational tasks.
 
 ## Asset categorization and metadata
 
@@ -259,6 +266,8 @@ Integrated risk indicators provide comprehensive asset context:
 
 ### Accessing the cloud inventory
 
+To open the cloud inventory in the Microsoft Defender portal:
+
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com)
 1. Select **Assets** > **Cloud** from the main navigation
 1. Use workload-specific tabs for focused views:
@@ -274,18 +283,18 @@ Integrated risk indicators provide comprehensive asset context:
 
 ### Using filters effectively
 
-- **Environment filtering**: Select specific cloud providers (Azure, AWS, GCP) or view all environments
-- **Scope filtering**: Apply cloud scopes for organizational boundary management
-- **Risk-based filtering**: Focus on high-risk or exposed assets requiring immediate attention
-- **Workload filtering**: Narrow results to specific types of cloud resources
-- **Status filtering**: Filter by protection status, compliance state, or health indicators
+- **Environment filtering**: Select specific cloud providers or view all environments.
+- **Scope filtering**: Apply cloud scopes to match organizational boundaries.
+- **Risk-based filtering**: Focus on high-risk or exposed assets.
+- **Workload filtering**: Narrow results to specific cloud resource types.
+- **Status filtering**: Filter by protection status, compliance state, or health indicators.
 
 ### Search and discovery
 
-- **Text search**: Find assets by name, resource ID, or metadata attributes
-- **Tag-based search**: Locate assets using cloud provider tags and labels
-- **Advanced queries**: Use complex filter combinations for precise asset discovery
-- **Export capabilities**: Export filtered results for reporting and analysis
+- **Text search**: Find assets by name, resource ID, or metadata.
+- **Tag-based search**: Locate assets by cloud provider tags and labels.
+- **Advanced queries**: Combine filters for precise asset discovery.
+- **Export capabilities**: Export filtered results for reporting and analysis.
 
 ## Asset details and insights
 
@@ -293,29 +302,29 @@ Integrated risk indicators provide comprehensive asset context:
 
 Each asset provides detailed information including:
 
-- **Basic metadata**: Resource names, IDs, locations, and creation timestamps
-- **Configuration details**: Current settings, policies, and applied configurations
-- **Security posture**: Compliance status, vulnerability assessments, and security recommendations
-- **Risk assessment**: Exposure analysis, threat intelligence, and risk scoring
-- **Relationships**: Dependencies, connections, and related resources across the environment
+- **Basic metadata**: Resource names, IDs, locations, and creation times.
+- **Configuration details**: Current settings, policies, and applied configurations.
+- **Security posture**: Compliance status, vulnerability assessments, and security recommendations.
+- **Risk assessment**: Exposure analysis, threat intelligence, and risk scores.
+- **Relationships**: Dependencies, connections, and related resources.
 
 ### Security recommendations integration
 
 Assets link directly to relevant security recommendations:
 
-- **Configuration improvements**: Misconfigurations and hardening opportunities
-- **Vulnerability remediation**: Patch management and security updates
-- **Access control**: Identity and permissions optimization
-- **Network security**: Firewall rules, network segmentation, and exposure reduction
+- **Configuration improvements**: Fix misconfigurations and improve hardening.
+- **Vulnerability remediation**: Prioritize patching and security updates.
+- **Access control**: Improve identity and permissions settings.
+- **Network security**: Improve firewall rules, segmentation, and exposure controls.
 
 ### Incident response workflows
 
 The inventory supports security operations through:
 
-- **Alert correlation**: Link security alerts to specific assets for faster investigation
-- **Response actions**: Direct access to remediation workflows and response capabilities
-- **Forensics support**: Detailed asset context for incident investigation and analysis
-- **Automation integration**: API access for security orchestration and automated response
+- **Alert correlation**: Link alerts to specific assets for faster investigation.
+- **Response actions**: Open remediation workflows directly from asset context.
+- **Forensics support**: Use detailed asset context during incident analysis.
+- **Automation integration**: Use API access for orchestration and automated response.
 
 ## Integration with Exposure Management
 
@@ -323,81 +332,81 @@ The inventory supports security operations through:
 
 Assets in the inventory integrate with attack path analysis:
 
-- **Path participation**: See which attack paths include specific assets
-- **Choke point identification**: Highlight assets that are critical convergence points
-- **Target classification**: Identify assets that are common attack targets
-- **Entry point analysis**: Understand which assets provide initial access opportunities
+- **Path participation**: See which attack paths include specific assets.
+- **Choke point identification**: Highlight assets that are key convergence points.
+- **Target classification**: Identify common attack targets.
+- **Entry point analysis**: Identify assets that can provide initial access paths.
 
 ### Critical asset management
 
 The inventory supports critical asset workflows:
 
-- **Automatic classification**: Assets can be automatically classified as critical based on predefined rules
-- **Manual designation**: Security teams can manually designate assets as critical
-- **Criticality inheritance**: Asset relationships can influence criticality classifications
-- **Protection prioritization**: Critical assets receive enhanced monitoring and protection
+- **Automatic classification**: Assets can be marked critical by predefined rules.
+- **Manual designation**: Security teams can manually mark assets as critical.
+- **Criticality inheritance**: Asset relationships can affect criticality classifications.
+- **Protection prioritization**: Critical assets get enhanced monitoring and protection.
 
 ### Vulnerability management integration
 
 Cloud assets connect seamlessly with vulnerability management:
 
-- **Unified vulnerability view**: See both cloud and endpoint vulnerabilities in consolidated dashboards
-- **Risk-based prioritization**: Vulnerabilities are prioritized based on asset context and business impact
-- **Remediation tracking**: Monitor vulnerability remediation progress across cloud environments
-- **Compliance reporting**: Generate vulnerability reports that include cloud and endpoint data
+- **Unified vulnerability view**: See cloud and endpoint vulnerabilities in one dashboard.
+- **Risk-based prioritization**: Prioritize vulnerabilities by asset context and business impact.
+- **Remediation tracking**: Track remediation progress across cloud environments.
+- **Compliance reporting**: Generate reports that include cloud and endpoint data.
 
 ## Reporting and analytics
 
 ### Built-in reporting
 
-- **Coverage reports**: Assess Defender for Cloud deployment across your cloud estate
-- **Risk assessments**: Comprehensive risk analysis across multicloud environments  
-- **Compliance dashboards**: Track regulatory compliance status across all cloud assets
-- **Trend analysis**: Monitor changes in security posture over time
+- **Coverage reports**: Assess Defender for Cloud deployment across your cloud estate.
+- **Risk assessments**: Review risk across multicloud environments.
+- **Compliance dashboards**: Track regulatory compliance status across cloud assets.
+- **Trend analysis**: Monitor security posture changes over time.
 
 ### Custom analytics
 
-- **Advanced hunting**: Query cloud asset data using KQL for custom analysis
-- **API access**: Programmatic access to inventory data for custom reporting and integration
-- **Export capabilities**: Export asset data in various formats for external analysis
-- **Dashboard integration**: Create custom dashboards using cloud asset inventory data
+- **Advanced hunting**: Query cloud asset data by using Kusto Query Language (KQL).
+- **API access**: Access inventory data programmatically for custom reports and integrations.
+- **Export capabilities**: Export asset data in multiple formats for external analysis.
+- **Dashboard integration**: Build custom dashboards by using cloud asset inventory data.
 
 ## Limitations and considerations
 
 ### Current limitations
 
-- **Real-time updates**: Some asset changes may have slight delays before appearing in inventory
-- **Historical data**: Limited historical asset information during initial rollout period
+- **Real-time updates**: Some asset changes can take time to appear in inventory.
+- **Historical data**: Historical asset data can be limited during early rollout.
 
 ### Performance considerations
 
-- **Large environments**: Filtering and scoping help manage performance in environments with thousands of assets
-- **Refresh rates**: Asset data is refreshed periodically; real-time data may require direct cloud provider console access
-- **Network dependencies**: Inventory functionality requires reliable connectivity to cloud provider APIs
+- **Large environments**: Filtering and scoping improve performance in environments with many assets.
+- **Refresh rates**: Asset data refreshes periodically. For real-time checks, use the cloud provider console.
+- **Network dependencies**: Inventory features require reliable connectivity to cloud provider application programming interfaces (APIs).
 
 ### Scoping limitations
 
 Some assets may appear outside defined cloud scopes:
 
-- **Cross-scope dependencies**: Assets with relationships spanning multiple scopes
-- **Floating assets**: Certain asset types that don't support fine-grained scoping
-- **Inherited permissions**: Assets that inherit permissions from parent resources outside the scope
+- **Cross-scope dependencies**: Assets with relationships that span multiple scopes.
+- **Floating assets**: Some asset types don't support fine-grained scoping.
+- **Inherited permissions**: Assets that inherit permissions from parent resources outside the scope.
 
 ## Best practices
 
 ### Inventory management
 
-- **Regular reviews**: Periodically review asset inventory for accuracy and completeness
-- **Tagging strategy**: Implement consistent tagging across cloud environments for better organization
-- **Scope configuration**: Set up appropriate cloud scopes to match organizational structure
-- **Filter optimization**: Create and save useful filter combinations for efficient daily operations
+- **Regular reviews**: Review inventory regularly for accuracy and completeness.
+- **Tagging strategy**: Use consistent tags across cloud environments for better organization.
+- **Scope configuration**: Configure cloud scopes to match your organization.
+- **Filter optimization**: Save useful filter combinations for daily tasks.
 
 ### Security operations
 
-- **Critical asset focus**: Prioritize monitoring and protection of business-critical assets
-- **Risk-based approach**: Use risk indicators to guide security attention and resource allocation
-- **Integration workflows**: Leverage inventory data in incident response and vulnerability management processes
-- **Automation opportunities**: Identify repetitive tasks that can be automated using inventory APIs
+- **Critical asset focus**: Prioritize monitoring and protection for business-critical assets.
+- **Risk-based approach**: Use risk indicators to guide security focus and resource allocation.
+- **Integration workflows**: Use inventory data in incident response and vulnerability workflows.
+- **Automation opportunities**: Identify repetitive tasks to automate by using inventory APIs.
 
 ## Review the inventory
 
@@ -433,4 +442,5 @@ Some assets may appear outside defined cloud scopes:
 - [Manage security recommendations](review-security-recommendations.md?pivots=defender-portal)
 
 ::: zone-end
+
 

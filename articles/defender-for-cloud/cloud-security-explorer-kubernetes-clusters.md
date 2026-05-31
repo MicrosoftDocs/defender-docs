@@ -2,10 +2,10 @@
 title: Build Cloud Security Explorer queries to identify vulnerabilities in Kubernetes clusters
 description: Learn how to build queries with Cloud Security Explorer in Microsoft Defender for Cloud to investigate vulnerabilities in Kubernetes clusters.
 ms.topic: how-to
-ms.date: 03/02/2026
 ms.author: elkrieger
-author: Elazark
-# Customer Intent: As a security professional, I want to learn how to build queries with Cloud Security Explorer in Microsoft Defender for Cloud to show vulnerabilities in Kubernetes clusters.
+author: ElazarK
+ms.date: 05/26/2026
+#customer intent: As a security professional, I want to build Cloud Security Explorer queries in Microsoft Defender for Cloud to identify vulnerabilities in Kubernetes clusters.
 ---
 
 # Build Cloud Security Explorer queries to identify vulnerabilities in Kubernetes clusters
@@ -15,6 +15,8 @@ Use Cloud Security Explorer to identify vulnerabilities in your Kubernetes clust
 For an introduction to Cloud Security Explorer queries, see [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md).
 
 ## Create a query to identify software vulnerabilities in container images
+
+To create a query that finds software vulnerabilities in container images:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -26,7 +28,7 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 1. Select **+**.
 
-1. **Select condition**.
+1. Select **Select condition**.
 
 1. In **Application**, select **Has installed software**.
 
@@ -42,6 +44,8 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 ## Create a query to identify vulnerabilities in cluster nodes
 
+To create a query that finds vulnerabilities in cluster nodes:
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer**.
@@ -54,7 +58,7 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 1. Select **+**.
 
-1. **Select condition**.
+1. Select **Select condition**.
 
 1. In **Application**, select **Maintains**.
 
@@ -64,7 +68,7 @@ For an introduction to Cloud Security Explorer queries, see [Build queries with 
 
 1. Select **+**.
 
-1. **Select condition**.
+1. Select **Select condition**.
 
 1. Select **Maintains**.
 

@@ -56,10 +56,10 @@ Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kub
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| May 26, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
+| May 26, 2026 | GA | [General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage](#general-availability-of-on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage) |
 | May 24, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available](#microsoft-defender-for-open-source-relational-databases-on-aws-rds-will-become-generally-available) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
-| May 19, 2026| GA | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
+| May 19, 2026| Preview | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images) |
 | May 18, 2026 | GA | [Microsoft Defender Experts for Servers as a managed XDR option](#microsoft-defender-experts-for-servers-as-a-managed-xdr-option) |
 | May 17, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (Preview)](#sql-vulnerability-assessment-express-configuration-now-available-for-azure-sql-managed-instance-and-synapse-preview) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
@@ -67,6 +67,18 @@ Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kub
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage 
+
+May 26, 2026
+
+On-demand malware scanning for Azure Files in Microsoft Defender for Storage is now in publicly available. This feature extends the existing on-demand malware scan feature and lets you scan entire Azure Storage accounts that contain blobs and files.
+
+You can start scans in the Azure portal UI or with the Representational State Transfer (REST) application programming interface (API). You can also automate scans with Azure Logic Apps, Azure Automation playbooks, and PowerShell scripts.
+
+This feature uses Microsoft Defender Antivirus and applies the latest malware definitions for each scan. It also shows an upfront cost estimate in the Azure portal before you start a scan.
+
+For more information, see [On-demand malware scanning](/azure/defender-for-cloud/on-demand-malware-scanning).
 
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
@@ -105,7 +117,7 @@ To access cloud security reports, navigate to the **Reporting** page in the Micr
 
 Learn more about [Cloud security reporting in Microsoft Defender portal](cloud-security-reporting.md).
 
-### Scanning support for Docker Hardened container images
+### Scanning support for Docker Hardened container images (preview)
 
 May 19, 2026
 
