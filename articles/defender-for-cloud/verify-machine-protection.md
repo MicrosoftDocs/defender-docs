@@ -1,8 +1,8 @@
 ---
 title: Verify SQL machine protection
-description: Verify that SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected. Ensure that all security measures are properly implemented.
+description: Verify SQL Server protection on Azure VMs, Azure Arc machines, and multicloud resources with Defender for SQL Servers on Machines.
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ms.topic: how-to
 ms.date: 04/27/2025
 #customer intent: As a customer, I want to verify that my SQL VMs are protected with the Defender for SQL Servers on Machines plan as expected.
@@ -13,7 +13,7 @@ ms.date: 04/27/2025
 > [!IMPORTANT]
 > This article applies to commercial clouds. If you're using Government clouds, see the [Verify SQL machine protection government](verify-machine-protection-gov.md) article.
 
-After enabling protection for SQL Servers installed on Virtual Machines (VM), on-premises machines, and multicloud resources with the Defender for SQL Servers on Machines plan, verify that your SQL servers are protected as expected.
+After you enable Defender for SQL Servers on Machines, use this article to verify coverage for SQL Servers on Azure VMs, on-premises machines, and multicloud resources.
 
 ## Verify protection on an entire Azure subscription
 
@@ -46,8 +46,6 @@ You can also verify the protection status of a single SQL server VM or Azure Arc
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Depending on the resources in your environment, search for and select either:
     - **SQL virtual machines**
-    <br> 
-    or
     - **SQL Server - Azure Arc**
 
 1. Locate and select the relevant resource.
