@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 05/26/2026
+ms.date: 06/01/2026
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -48,7 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
-| June 04, 2026 | Recommendation | Preview | [Upgrade Azure Kubernetes Service](recommendations-reference-container.md#upgrade-azure-kubernetes-service-to-remove-vulnerabilities-from-aks-system-pods-preview) |
+| June 01, 2026 | Recommendation | Preview | [Upgrade Azure Kubernetes Service Version](recommendations-reference-container.md#upgrade-azure-kubernetes-service-to-remove-vulnerabilities-from-aks-system-pods-preview) |
 | May 13, 2026 | Alert | Deprecated | The following alert is now deprecated:<br/> *(Preview) Suspicious sensitive data mentioned by your Azure AI resource (AI.Azure_SensitiveDataAnomaly)*. |
 | May 12, 2026 | Recommendation | Preview | The following recommendations are now available in preview for Azure Database for PostgreSQL Flexible Servers as part of Defender CSPM:<br/>* connection_throttle should be set to “on” for PostgreSQL Servers <br/>* logfiles.retention_days should be greater than 3 for PostgreSQL Servers <br/>* pgaudit.log_statement should be set to “on” for Azure Database for PostgreSQL Servers <br/>* pgaudit.log_statement_once should be set to “on” for Azure Database for PostgreSQL Servers <br/>* pgaudit.log should include role, ddl, and misc for Azure Database for PostgreSQL Servers <br/>* pgaudit.log_level should be set to “log” for Azure Database for PostgreSQL Servers <br/>* Public IP access should be disabled for Azure Database for PostgreSQL Servers |
 | April 30, 2026 | Recommendation | Deprecation | Grouped recommendation types are deprecated from the Azure portal and will be removed on **July 30, 2026**. These recommendations are currently tagged as **Set for deprecation**.|
