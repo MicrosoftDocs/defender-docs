@@ -1,30 +1,35 @@
 ---
-title: Planning multicloud security automating connector deployment
-description: Learn about automating connector deployment when planning multicloud deployment with Microsoft Defender for Cloud.
+title: Automate connector deployment
+description: Automate cloud connector deployment for multicloud environments with Microsoft Defender for Cloud.
 ms.topic: how-to
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 05/28/2026
+#customer intent: As a cloud security architect, I want to automate connector deployment so I can onboard multicloud environments consistently at scale.
 ---
 
 # Automate connector deployment
 
 This article is part of a series to guide you in designing a solution for cloud security posture management (CSPM) and cloud workload protection platform (CWPP) across multicloud resources with Microsoft Defender for Cloud.
+It explains how to create AWS and GCP connectors programmatically so you can standardize deployment workflows.
 
-## Goal
+## Connector deployment automation goals
 
 Connect AWS accounts and/or GCP projects programmatically.
 
-## Get started
+## Set up automated connector deployment
 
-As an alternative to creating connectors in the Defender for Cloud portal, you can create them programmatically by using the Defender for Cloud REST API.
-Review the [Security Connectors - REST API](/rest/api/defenderforcloud-composite/security-connectors?view=rest-defenderforcloud-composite-latest&preserve-view=true).
+You can connect AWS accounts and GCP projects to Microsoft Defender for Cloud programmatically by using the Defender for Cloud REST API.
+Review the [Security Connectors REST API](/rest/api/defenderforcloud-composite/security-connectors?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 :::image type="content" source="media/planning-multicloud-security/security-connectors.png" alt-text="screenshot that shows a table of security connector operations." lightbox="media/planning-multicloud-security/security-connectors.png":::
 
-- When you use REST API to create the connector, you also need the CloudFormation template, or Cloud Shell script, depending on the environment that you’re onboarding to Defender for Cloud.
-- The easiest way to get this script is to download it from the Defender for Cloud portal.
-- The template/script changes depending on the plans you’re enabling.
+- When you use the REST API to create a connector, you also need the CloudFormation template or Cloud Shell script, depending on the environment you're onboarding.
+- The easiest way to get the template or script is to download it from the Defender for Cloud portal.
+- The template or script changes depending on which Defender for Cloud protection plans you're enabling.
 
-## Next steps
+## Next step
 
-In this article, you've learned that as an alternative to creating connectors in the Defender for Cloud portal, you can create them programmatically by using the Defender for Cloud REST API. For more information, see [other resources](plan-multicloud-security-other-resources.md#).
+> [!div class="nextstepaction"]
+> [Review additional multicloud security resources](plan-multicloud-security-other-resources.md#)
+
+
