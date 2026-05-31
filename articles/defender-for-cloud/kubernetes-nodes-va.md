@@ -61,9 +61,9 @@ Before you begin, make sure that:
 
    :::image type="content" source="media/kubernetes-nodes-va/node-pool-overview.png" alt-text="Screenshot showing the overview details of the Kubernetes node pool for updating its image." lightbox="media/kubernetes-nodes-va/node-pool-overview.png":::
 
-## Remediate AKS system vulnerabilities by upgrading AKS (Preview)
+## Remediate AKS system pod vulnerabilities by upgrading AKS (Preview)
 
-The **Upgrade Azure Kubernetes Service** recommendation provides an actionable path to remediate vulnerabilities found in AKS-managed system. AKS enriches each CVE finding with the minimum AKS version that resolves it, so you know exactly which version to upgrade to.
+The **Upgrade Azure Kubernetes Service** recommendation provides an actionable path to remediate vulnerabilities found in AKS-managed system pod. AKS enriches each CVE finding with the minimum AKS version that resolves it, so you know exactly which version to upgrade to.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
