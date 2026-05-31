@@ -10,8 +10,6 @@ ms.custom: sfi-image-nochange
 
 Defender for Cloud scans the [VMs that host Kubernetes nodes](./kubernetes-nodes-overview.md) for vulnerabilities in the operating system and installed software. When vulnerabilities are detected, Defender for Cloud generates recommendations with detailed findings to help you review and remediate them.
 
-Defender for Cloud provides two types of recommendations for Kubernetes node vulnerabilities:
-
 Reviewing and remediating these vulnerabilities is part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility) for maintaining Kubernetes node security.
 
 ## Prerequisites
