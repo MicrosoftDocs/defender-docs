@@ -12,9 +12,6 @@ Defender for Cloud scans the [VMs that host Kubernetes nodes](./kubernetes-nodes
 
 Defender for Cloud provides two types of recommendations for Kubernetes node vulnerabilities:
 
-- **AKS nodes should have vulnerability findings resolved** – Surfaces vulnerabilities on node VMs, including OS and software packages. Remediation involves updating the node image or upgrading the Kubernetes version.
-- **Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods (Preview)** – Identifies vulnerabilities in AKS-managed system pods and maps each CVE to the minimum AKS version that fixes it. This provides a fully actionable remediation path by guiding you to upgrade your AKS cluster.
-
 Reviewing and remediating these vulnerabilities is part of the [shared responsibility](./kubernetes-nodes-overview.md#shared-responsibility) for maintaining Kubernetes node security.
 
 ## Prerequisites
