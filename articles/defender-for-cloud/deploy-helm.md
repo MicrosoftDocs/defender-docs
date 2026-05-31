@@ -90,6 +90,7 @@ If your AKS cluster already has an existing Defender for Containers deployment, 
 
 ```bash
 kubectl delete crd/policies.defender.microsoft.com || true
+kubectl delete crd/policytemplates.defender.microsoft.com || true
 kubectl delete crd/runtimepolicies.defender.microsoft.com || true
 kubectl delete crd/securityartifactpolicies.defender.microsoft.com || true
 kubectl delete ClusterRole defender-admission-controller-cluster-role || true
