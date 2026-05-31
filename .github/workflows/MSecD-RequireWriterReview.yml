@@ -1,4 +1,4 @@
-name: Require Writer Review
+name: Approver Review
 
 permissions:
   pull-requests: write
@@ -24,7 +24,7 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'issue_comment' }}
 
 jobs:
-  require-writer-review:
+  policy:
     # Skip noise from unrelated label events. Only react to labeled events when
     # the label is one this workflow actually gates on. All other event types
     # (opened, synchronize, reopened, issue_comment) always proceed.
