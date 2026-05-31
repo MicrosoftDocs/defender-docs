@@ -1,4 +1,4 @@
-name: Require Writer Review
+name: Approver Review
 
 on:
   workflow_call:
@@ -7,7 +7,7 @@ env:
   TEST_USER: '' # Set to a GitHub username to override the event-derived user for testing
 
 jobs:
-  enforce-policy:
+  policy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
