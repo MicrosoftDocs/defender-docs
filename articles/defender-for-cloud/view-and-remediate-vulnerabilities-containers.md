@@ -4,14 +4,16 @@ description: Learn how to view and remediate runtime threat findings for contain
 ms.service: defender-for-cloud
 ms.custom: build-2023, sfi-image-nochange
 ms.topic: how-to
-ms.date: 02/12/2026
+author: ElazarK
+ms.author: elkrieger
+ms.date: 05/31/2026
 #customer intent: As a security administrator, I want to review and remediate container vulnerability findings based on runtime risk so I can prioritize the highest-impact fixes.
 ---
 
 # View and remediate vulnerabilities for containers running on Kubernetes clusters (risk-based)
 
 > [!NOTE]
-> This article describes the new risk-based approach to vulnerability management in Microsoft Defender for Cloud. If you're using the Defender for Cloud Security Posture Management (CSPM) plan, use this method. To use the classic secure score approach, see [View and remediate vulnerabilities for images running on your Kubernetes clusters (Secure Score)](view-and-remediate-vulnerabilities-for-images-secure-score.md).
+> This article describes the new risk-based approach to vulnerability management in Microsoft Defender for Cloud. If you're using the Defender cloud security posture management (Defender CSPM) plan, use this method. To use the classic secure score approach, see [View and remediate vulnerabilities for images running on your Kubernetes clusters (Secure Score)](view-and-remediate-vulnerabilities-for-images-secure-score.md).
 
 Defender for Cloud helps you prioritize remediation for vulnerabilities in containers running on your Kubernetes clusters. It uses contextual risk analysis across your cloud environment. In this article, you review the [Containers running in Azure should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e9acaf48-d2cf-45a3-a6e7-3caa2ef769e0) recommendation. For other supported environments, see [Vulnerability assessments in supported environments](agentless-vulnerability-assessment-azure.md).
 
@@ -22,6 +24,8 @@ Defender for Cloud presents the findings and related information as recommendati
 Details include additional containers affected by that vulnerability, information on the software version that contributes to resolving the vulnerability, and links to external resources to help with patching the vulnerability.
 
 ## View vulnerabilities for a container
+
+To view vulnerabilities for a container:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Go to **Microsoft Defender for Cloud > Recommendations**. 

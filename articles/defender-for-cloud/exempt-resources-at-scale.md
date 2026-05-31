@@ -4,7 +4,7 @@ description: Learn how to create exemptions for how policies are applied to reso
 ms.topic: how-to
 ms.author: elkrieger
 author: ElazarK
-ms.date: 02/05/2026
+ms.date: 05/31/2026
 #customer intent: As a security administrator, I want to create exemptions at scale so I can manage recommendation scope consistently.
 ---
 
@@ -22,10 +22,11 @@ For example, Defender for Cloud might not track the process that remediates a re
 
 [!INCLUDE [exempt-resource](./includes/exempt-resource.md)]
 
-
 ## Create exemptions at scale
 
 To tailor your security posture, create exemptions for recommendations that aren't applicable or are already mitigated. 
+
+To create exemptions at scale:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -37,7 +38,7 @@ To tailor your security posture, create exemptions for recommendations that aren
 
 1. Select **+ Create**.
 
-1. Enter an Exemption name, and (Optional) a description.
+1. Enter an exemption name and, optionally, a description.
 
     :::image type="content" source="media/exempt-resources-at-scale/create-exemption.png" alt-text="Screenshot that shows the exemption creation screen." lightbox="media/exempt-resources-at-scale/create-exemption.png":::
 

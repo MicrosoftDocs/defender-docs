@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
 author: ElazarK
-ms.date: 05/18/2026
+ms.date: 05/31/2026
 #customer intent: As a security administrator, I want to exempt resources and recommendations when appropriate so I can keep secure score signals accurate.
 ---
 
@@ -29,7 +29,7 @@ For each scope, create an exemption rule to:
 
 ## Prerequisites
 
-Defender for Cloud exemption relies on the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative. MCSB must be assigned on the subscription before you create exemptions.
+Defender for Cloud exemptions rely on the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative. MCSB must be assigned on the subscription before you create exemptions.
 
 > [!IMPORTANT]
 > Without MCSB assigned:
@@ -51,7 +51,7 @@ To create exemptions, you need the following permissions:
 You need the following RBAC actions:
 
 | Action | Description |
-|--------|-------------|
+| ------ | ----------- |
 | `Microsoft.Authorization/policyExemptions/write` | Create an exemption |
 | `Microsoft.Authorization/policyExemptions/delete` | Delete an exemption |
 | `Microsoft.Authorization/policyExemptions/read` | View an exemption |
@@ -77,8 +77,6 @@ You need the following RBAC actions:
 - You don't create exemptions for custom recommendations.
 
 - Preview recommendations might not support exemptions. Check whether the recommendation shows a **Preview** tag.
-
-- Some recommendations in MCSB don't support exemptions. You can find a list of these recommendations in [the exemptions FAQ](faq-general.yml).
 
 - If you disable a recommendation, you also exempt all of its subrecommendations.
 
@@ -118,7 +116,7 @@ To create an exemption rule:
 
 1. Enter a name.
 
-1. (Optional) set an expiration date.
+1. (Optional) Set an expiration date.
 
 1. Select the category for the exemption:
     - **Resolved through third-party service (mitigated)** – if you use a non-Microsoft service for remediation that Defender for Cloud doesn't track.
