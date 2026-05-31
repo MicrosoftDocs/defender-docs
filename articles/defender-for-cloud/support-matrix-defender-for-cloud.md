@@ -133,7 +133,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | [Defender for Azure Cosmos DB](concept-defender-for-cosmos.md) | GA | NA | NA | NA |
 | **DEFENDER FOR SERVERS FEATURES** | | | | |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | GA | GA<sup>[2](#footnote2)</sup> | NA |  NA |
-| [Serverless protection](serverless-protection.md) [4](#footnote4)</sup> | GA | NA | NA | NA |
+| [Serverless protection](serverless-protection.md) <sup>[4](#footnote4)</sup> | GA | NA | NA | NA |
 | **AI SERVICES FEATURES** | | | | |
 | [Suspicious prompt evidence](ai-onboarding.md#enable-suspicious-prompt-evidence) | GA | NA | NA | NA | 
 | [Data security for AI interactions](ai-onboarding.md#enable-data-security-for-microsoft-foundry-with-microsoft-purview) | Preview | NA | NA | NA |
@@ -142,7 +142,7 @@ In the support table, **NA** indicates that the feature isn't available.
 
 <sup><a name="footnote1"></a>1</sup>: Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection. <br>
 <sup><a name="footnote2"></a>2</sup>: GovCon Cloud Moderate (GCCM) doesn't support File Integrity Monitoring. <br>
-<sup><a name="footnote3"></a>3</sup>: All Microsoft Defender for Cloud features will be officially retired in the Azure in China region on August 18, 2026. Learn more about the [retirement of Microsoft Defender for Cloud in Azure operated by 21Vianet](https://azure.microsoft.com/updates/?id=498749).
+<sup><a name="footnote3"></a>3</sup>: All Microsoft Defender for Cloud features will be officially retired in the Azure in China region on August 18, 2026. Learn more about the [retirement of Microsoft Defender for Cloud in Azure operated by 21Vianet](https://azure.microsoft.com/updates/?id=498749). <br>
 <sup><a name="footnote4"></a>4</sup>: Vulnerability assessment is not supported for private network.
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
