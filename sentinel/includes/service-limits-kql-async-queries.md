@@ -14,7 +14,7 @@ The following table lists the service parameters and limits for KQL async querie
 > [!NOTE]
 > All limits in this table apply **per tenant**. There's no per-user limit. Asynchronous KQL queries share the same rate-limit and concurrency counters as [interactive KQL queries](#service-parameters-and-limits-for-kql-queries-in-the-lake-tier); KQL jobs have their own separate quota.
 
-When either the rate limit or the concurrency limit is exceeded, the request is **rejected** (not queued). The concurrency counter decrements as soon as a running query finishes, and the rate-limit counter resets every minute.
+When either the rate limit or the concurrency limit is exceeded, the request is **rejected** and not queued. The concurrency counter decrements as soon as a running query finishes, and the rate-limit counter resets every minute.
 
 | Category                                       | Parameter/limit                                          |
 |------------------------------------------------|----------------------------------------------------------|
