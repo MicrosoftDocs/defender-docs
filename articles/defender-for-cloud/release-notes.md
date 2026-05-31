@@ -32,17 +32,17 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| June 04, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
+| June 01, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 
 ### New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)
 
 June 04, 2026
 
-Defender for Cloud now provides a new, actionable recommendation, **Upgrade Azure Kubernetes Service (preview)** that helps you remediate vulnerabilities in AKS-managed system pods.
+Defender for Cloud now provides a new, actionable recommendation, **Upgrade Azure Kubernetes Service Version (preview)** that helps you remediate vulnerabilities in AKS-managed system pods.
 
 This replaces the previous non-actionable recommendation with a resolvable remediation path, helping teams focus on vulnerabilities they can directly remediate while maintaining clear visibility into cluster exposure.
 
-Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md).
+Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md) and [security recommendations for containers](recommendations-reference-container.md).
 
 ## May 2026
 
