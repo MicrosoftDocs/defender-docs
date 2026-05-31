@@ -32,6 +32,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| May 31,2026 | Preview | |
+| May 31,2026 | Preview | |
 | May 26, 2026 | GA | [General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage](#general-availability-of-on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage) |
 | May 24, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available](#microsoft-defender-for-open-source-relational-databases-on-aws-rds-will-become-generally-available) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
