@@ -119,6 +119,7 @@ To receive the full benefits of Defender for SQL on your multicloud workload, yo
 - **[Azure Monitor agent (AMA)](/azure/azure-monitor/agents/agents-overview)**: Collects security-related configuration information and event logs from machines.
 - **Automatic SQL Server discovery and registration**: Supports automatic discovery and registration of SQL Servers.
 
-## Next steps
+## Next step
 
-In this article, you learned how to determine multicloud dependencies when designing a multicloud security solution. Continue to the next step to [automate connector deployment](plan-multicloud-security-automate-connector-deployment.md).
+> [!div class="nextstepaction"]
+> [Automate connector deployment](plan-multicloud-security-automate-connector-deployment.md)

@@ -30,6 +30,7 @@ After you enable enhanced security features, you can add other compliance standa
 
 Additionally, you can create custom standards and assessments to align with your organizational requirements. For guidance, see [Custom standards and assessments for AWS](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/custom-assessments-and-standards-in-microsoft-defender-for-cloud/ba-p/3066575) and [Custom standards and assessments for GCP](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/custom-assessments-and-standards-in-microsoft-defender-for-cloud/ba-p/3251252).
 
-## Next steps
+## Next step
 
-In this article, you learned how to determine your compliance requirements when designing a multicloud security solution. Continue to the next step to [determine ownership requirements](plan-multicloud-security-determine-ownership-requirements.md).
+> [!div class="nextstepaction"]
+> [Determine ownership requirements](plan-multicloud-security-determine-ownership-requirements.md)

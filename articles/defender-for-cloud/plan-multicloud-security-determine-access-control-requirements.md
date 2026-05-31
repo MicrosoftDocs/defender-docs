@@ -32,6 +32,7 @@ With clear answers available, you can figure out your Defender for Cloud access 
 - Defender for Cloud multicloud capabilities support IAM permission inheritance.
 - User permissions at the resource group level where the AWS and GCP connectors reside are inherited automatically for multicloud recommendations and security alerts.
 
-## Next steps
+## Next step
 
-In this article, you learned how to determine access control requirements when you design a multicloud security solution. Continue to the next step to [determine multicloud dependencies](plan-multicloud-security-determine-multicloud-dependencies.md).
+> [!div class="nextstepaction"]
+> [Determine multicloud dependencies](plan-multicloud-security-determine-multicloud-dependencies.md)

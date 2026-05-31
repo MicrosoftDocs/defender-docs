@@ -69,6 +69,7 @@ For the [Defender for Databases plan](./quickstart-enable-database-protections.m
 
 When it comes to the actual AWS and GCP resources that are protected by Defender for Cloud, their location is set directly from the AWS and GCP clouds.
 
-## Next steps
+## Next step
 
-In this article, you learned how to determine data residency requirements when designing a multicloud security solution. Continue to the next step to [determine compliance requirements](plan-multicloud-security-determine-compliance-requirements.md).
+> [!div class="nextstepaction"]
+> [Determine compliance requirements](plan-multicloud-security-determine-compliance-requirements.md)
