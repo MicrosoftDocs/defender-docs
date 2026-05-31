@@ -21,6 +21,11 @@ This article explains how Microsoft Defender detects, blocks, and enables securi
 > [!NOTE]
 > Some capabilities described in this article currently require onboarding through Microsoft Defender for Cloud Apps. This is a temporary configuration that will be part of the Agent 365 product experience. Starting July 1, 2026, your organization needs an [Agent 365 subscription](https://www.microsoft.com/en/microsoft-agent-365) to continue using agent protection and visibility capabilities.
 
+## Prerequisites
+
+- [Onboard to Microsoft Agent 365](/microsoft-agent-365/overview).
+- To access the `AIAgentsInfo` table and the Agent entity in Microsoft Defender XDR, [enable preview features](../preview.md) in the Microsoft Defender portal.
+
 ## Block unsafe AI agent actions in real time
 
 Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Defender integrates directly with [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
