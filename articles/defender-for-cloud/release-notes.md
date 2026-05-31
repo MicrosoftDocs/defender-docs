@@ -28,6 +28,30 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## June 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| June 04, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
+
+### New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)
+
+June 04, 2026
+
+Defender for Cloud now provides a new, actionable recommendation, **Upgrade Azure Kubernetes Service (preview)** that helps you remediate vulnerabilities in AKS-managed system pods.
+
+Unlike the previous recommendation, this new recommendation:
+
+- Identifies the specific AKS version upgrade that resolves each detected CVE.
+- Applies only to system pods managed by AKS, not customer workloads.
+- Lists associated CVEs with severity and CVSS scores.
+- Specifies the minimum AKS version that fixes each vulnerability.
+- Provides a clear remediation path by guiding you to upgrade your AKS cluster.
+
+This replaces the previous non-actionable recommendation with a resolvable remediation path, helping teams focus on vulnerabilities they can directly remediate while maintaining clear visibility into cluster exposure.
+
+Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md).
+
 ## May 2026
 
 | Date | Category | Update |
@@ -43,24 +67,6 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
-
-### New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)
-
-May 26, 2026
-
-Defender for Cloud now provides a new, actionable recommendation—**Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods (Preview)**—that helps you remediate vulnerabilities in AKS-managed system pods.
-
-Unlike the previous recommendation, this new recommendation:
-
-- Identifies the specific AKS version upgrade that resolves each detected CVE.
-- Applies only to system pods managed by AKS, not customer workloads.
-- Lists associated CVEs with severity and CVSS scores.
-- Specifies the minimum AKS version that fixes each vulnerability.
-- Provides a clear remediation path by guiding you to upgrade your AKS cluster.
-
-This replaces the previous non-actionable recommendation with a resolvable remediation path, helping teams focus on vulnerabilities they can directly remediate while maintaining clear visibility into cluster exposure.
-
-Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md).
 
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
