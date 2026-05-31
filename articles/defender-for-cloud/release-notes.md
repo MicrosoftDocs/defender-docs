@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/24/2026
+ms.date: 05/31/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,8 +32,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| May 31,2026 | Preview | |
-| May 31,2026 | Preview | |
+| May 31, 2026 | Preview | [Private clusters protection for gated deployment, binary drift detection, and malware detection](#private-clusters-protection-for-gated-deployment-binary-drift-detection-and-malware-detection-preview) |
+| May 31, 2026 | Preview | [Malware detection for EKS and GKE nodes](#malware-detection-for-eks-and-gke-nodes-preview) |
 | May 26, 2026 | GA | [General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage](#general-availability-of-on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage) |
 | May 24, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available](#microsoft-defender-for-open-source-relational-databases-on-aws-rds-will-become-generally-available) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
@@ -45,6 +45,26 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | May 5, 2026 | GA | [Daily score calculation enhancement for risk-based Cloud secure score](#daily-score-calculation-enhancement-for-risk-based-cloud-secure-score) |
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
+
+### Private clusters protection for gated deployment, binary drift detection, and malware detection (Preview)
+
+May 31, 2026
+
+Private clusters now support the Defender sensor for gated deployment, binary drift detection, and malware detection in preview.
+
+This update extends Defender for Containers coverage to private cluster scenarios where you use the sensor-based features for container protection.
+
+For more information, see [access patterns and private cluster support for Defender for Containers features](defender-for-containers-feature-access-patterns.md), [Enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md), [Binary drift detection and blocking](binary-drift-detection.md), and [Container runtime antimalware detection and blocking](anti-malware.md).
+
+### Malware detection for EKS and GKE nodes (Preview)
+
+May 31, 2026
+
+Malware detection is now in preview for Amazon Elastic Kubernetes Service (EKS) nodes and Google Kubernetes Engine (GKE) nodes.
+
+This update expands Kubernetes node malware coverage beyond Azure Kubernetes Service (AKS) so you can detect malware in more multicloud environments.
+
+For more information, see [Kubernetes nodes overview](kubernetes-nodes-overview.md) and [Review and remediate malware alerts for Kubernetes nodes](kubernetes-nodes-malware.md).
 
 ### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage 
 

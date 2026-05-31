@@ -53,7 +53,7 @@ The following table summarizes runtime protection features and their access patt
 | DNS detection | AKS, EKS, GKE | Defender sensor installed by using Helm | Containers | Sensor outbound connectivity | Requires outbound HTTPS access |
 | Advanced hunting in XDR | AKS, EKS, GKE | Defender sensor | Containers | Sensor outbound connectivity | Requires outbound HTTPS access |
 | Response actions in XDR | AKS, EKS, GKE | Defender sensor and Kubernetes API access | Containers | Kubernetes API access | Supported by enabling a restricted public API endpoint |
-| Malware detection | AKS nodes | Agentless scanning for machines | Containers; Servers P2 | Kubernetes API access and sensor outbound connectivity | Supported by enabling a restricted public API endpoint or by using Defender Sensor private clusters version (Preview). Requires outbound HTTPS access. |
+| Malware detection | AKS, EKS (Preview), GKE (Preview) nodes | Agentless scanning for machines | Containers; Servers P2 | Kubernetes API access and sensor outbound connectivity | Supported by enabling a restricted public API endpoint or by using Defender Sensor private clusters version (Preview). Requires outbound HTTPS access. |
 
 ## Posture management features
 
