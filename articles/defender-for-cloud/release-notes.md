@@ -33,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | June 1, 2026 | Preview | [Posture for Serverless Containers (Preview)](#posture-for-serverless-containers-preview) |
+| June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
 
 ### Posture for Serverless Containers (Preview)
 
@@ -43,6 +44,16 @@ Microsoft Defender for Cloud now includes Posture for Serverless Containers in p
 This capability adds inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Web Services (AWS) - ECS Fargate.
 
 Learn more about [Posture for Serverless Containers (Preview)](posture-for-serverless-containers.md).
+
+### Serverless protection for Azure and AWS is now generally available
+
+June 1, 2026
+
+Serverless protection for Azure and Amazon Web Services (AWS) is now generally available in Defender for Cloud.
+
+This capability helps you discover serverless resources and assess them for misconfigurations, vulnerabilities, and insecure dependencies across Azure Web Apps, Azure Functions, and AWS Lambda.
+
+Learn more about [What is Serverless protection?](serverless-protection.md), [Serverless protection recommendations](recommendations-reference-serverless-protection.md), and [cloud support availability](support-matrix-defender-for-cloud.md#cloud-support).
 
 ## May 2026
 
@@ -249,7 +260,7 @@ Learn more about [GitHub Advanced Security integration](github-advanced-security
 | April 30, 2026 | GA | [Defender for Containers runtime protection on EKS Bottlerocket is now generally available](#defender-for-containers-runtime-protection-on-eks-bottlerocket-is-now-generally-available) |
 | April 30, 2026 | GA | [Anti-malware detection and blocking is now generally available](#anti-malware-detection-and-blocking-is-now-generally-available) |
 | April 30, 2026 | GA | [DNS Detection for Kubernetes is now generally available](#dns-detection-for-kubernetes-is-now-generally-available) |
-| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
+| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Update | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
