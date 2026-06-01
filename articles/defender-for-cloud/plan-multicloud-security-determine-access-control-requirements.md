@@ -2,9 +2,9 @@
 title: Planning multicloud security determine access control requirements guidance
 description: Learn about determining access control requirements to meet business goals in multicloud environment with Microsoft Defender for Cloud.
 ms.topic: how-to
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 05/31/2026
 ---
 
 # Determine access control requirements
@@ -13,25 +13,26 @@ This article is part of a series to provide guidance as you design a cloud secur
 
 ## Goal
 
-Figure out what permissions and access controls you need on your multicloud deployment.
+Determine the permissions and access controls you need in your multicloud deployment.
 
 ## Get started
 
-As part of your multicloud solution design you should review access requirements for multicloud resources that will be available to users. As you plan, answer the following questions, take notes, and be clear about the reasons for the answer.
+As part of your multicloud solution design, review access requirements for multicloud resources that users can access. As you plan, answer the following questions, take notes, and document why each answer matters.
 
 - Who should have access to recommendations and alerts for multicloud resources?
 - Are your multicloud resources and environments owned by different teams? If so, does each team need the same level of access?
-- Do you need to limit access to specific resources for specific users and groups? If so, how can you limit access for Azure, AWS, and GCP resources?
-- Does your organization need identity and access management (IAM permissions) to be inherited to the resource group level?
+- Do you need to limit access to specific resources for specific users and groups? If so, how can you limit access for Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP) resources?
+- Does your organization need identity and access management (IAM) permissions to be inherited at the resource group level?
 - Do you need to determine any IAM requirements for people who:
-  - Implement JIT attack surface reduction VMs and AWS EC2?  
-  - Security operations?
+  - Implement just-in-time (JIT) virtual machine (VM) access controls for Azure VMs and Amazon Elastic Compute Cloud (Amazon EC2) instances?
+  - Perform security operations?
 
 With clear answers available, you can figure out your Defender for Cloud access requirements. Other things to consider:
 
-- Defender for Cloud multicloud capabilities support inheritance of IAM permissions.
-- Whatever permissions the user has for the resource group level where the AWS/GCP connectors reside, are inherited automatically for multicloud recommendations and security alerts.
+- Defender for Cloud multicloud capabilities support IAM permission inheritance.
+- User permissions at the resource group level where the AWS and GCP connectors reside are inherited automatically for multicloud recommendations and security alerts.
 
-## Next steps
+## Next step
 
-In this article, you've learned how to determine access control requirements needs when designing a multicloud security solution. Continue with the next step to [determine multicloud dependencies](plan-multicloud-security-determine-multicloud-dependencies.md).
+> [!div class="nextstepaction"]
+> [Determine multicloud dependencies](plan-multicloud-security-determine-multicloud-dependencies.md)
