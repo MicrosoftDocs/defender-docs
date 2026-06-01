@@ -22,7 +22,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with cloud mailboxes, zero-hour auto purge (ZAP) retroactively detects and neutralizes malicious phishing, spam, or malware messages that were delivered to cloud mailboxes. ZAP doesn't work in on-premises mailboxes protected by Microsoft 365.
+In all organizations with cloud mailboxes, zero-hour auto purge (ZAP) retroactively detects and neutralizes malicious phishing, spam, or malware messages that were delivered to cloud mailboxes. ZAP doesn't work in on-premises mailboxes protected by Microsoft 365. ZAP also acts on messages in the Deleted Items folder, using the same per-verdict actions configured in your anti-spam, anti-phishing, and anti-malware policies.
 
 > [!NOTE]
 > ZAP is also able to retroactively detect existing malicious chat messages in Microsoft Teams.
