@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud container secur
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 05/26/2026
+ms.date: 06/01/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
