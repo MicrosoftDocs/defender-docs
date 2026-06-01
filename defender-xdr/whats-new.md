@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 05/24/2026
+ms.date: 06/01/2026
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -28,6 +28,13 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Purview](/purview/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## June 2026
+
+- (GA) The following advanced hunting schema tables are now generally available:
+    - The [`CloudAuditEvents`](advanced-hunting-cloudauditevents-table.md) table contains information about cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud.
+    - The [`CloudDnsEvents`](advanced-hunting-clouddnsevents-table.md) table contains information about DNS activity events from cloud infrastructure environments.
+    - The [`CloudProcessEvents`](advanced-hunting-cloudprocessevents-table.md) table contains information about process events in multicloud hosted environments such as Azure Kubernetes Service, Amazon Elastic Kubernetes Service, and Google Kubernetes Engine as protected by the organization's Microsoft Defender for Cloud.
 
 ## May 2026
 
