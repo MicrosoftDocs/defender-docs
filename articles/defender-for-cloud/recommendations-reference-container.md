@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud container secur
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/29/2026
+ms.date: 06/01/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -288,7 +288,14 @@ Privileged containers have all of the root capabilities of a host machine. They 
 
 **Severity**: Medium
 
-**Type**: Kubernetes data plane
+**Type**: [Preview] Upgrade Azure Kubernetes Service Version
+
+**Description**: Defender for Cloud scans AKS-managed system pods for known vulnerabilities (CVEs). When vulnerabilities are detected, this recommendation identifies the minimum AKS version upgrade that resolves each CVE, giving you a clear and actionable remediation path. This recommendation applies to system pods managed by AKS, not customer workloads. For each CVE, the recommendation lists CVSS score, and the minimum AKS version that includes the fix.
+(No related policy)
+
+**Severity**: High
+
+**Type**: Vulnerability Assessment
 
 ### Usage of host networking and ports should be restricted
 

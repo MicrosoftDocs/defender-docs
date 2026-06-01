@@ -48,6 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
+| June 1, 2026 | Recommendation | Preview | [Upgrade Azure Kubernetes Service Version](recommendations-reference-container.md#upgrade-azure-kubernetes-service-to-remove-vulnerabilities-from-aks-system-pods-preview) |
 | June 1, 2026 | Recommendation | GA | [Code Signing should be enabled on Lambda](recommendations-reference-serverless-protection.md#code-signing-should-be-enabled-on-lambda) |
 | June 1, 2026 | Recommendation | GA | [Security mechanism should be used on lambda function API Gateway](recommendations-reference-serverless-protection.md#security-mechanism-should-be-used-on-lambda-function-api-gateway) |
 | June 1, 2026 | Recommendation | GA | [Authentication should be enabled on Lambda Function URLs](recommendations-reference-serverless-protection.md#authentication-should-be-enabled-on-lambda-function-urls) |
