@@ -64,10 +64,10 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Email Authentication Settings** in the **Rules** section \> **ARC** . Or, to go directly to the **Email authentication settings** page, use <https://security.microsoft.com/authentication>.
 
-2. On the **Email authentication settings** page, verify that the **ARC** tab is selected, and then select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**.
+2. On the **Email authentication settings** page, verify that the **ARC** tab is selected, and then select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**.
 
    > [!TIP]
-   > If **Trusted sealers** are already listed on the **ARC** tab, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+   > If **Trusted sealers** are already listed on the **ARC** tab, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 
 3. In the **Add trusted ARC sealers** flyout that opens, enter the trusted signing domain in the box (for example, fabrikam.com).
 
@@ -76,7 +76,7 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
    - [View internet message headers in Outlook](https://support.microsoft.com/office/cd039382-dc6e-4264-ac74-c048563d212c).
    - Use the Message Header Analyzer at <https://mha.azurewebsites.net>.
 
-   Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+   Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
    When you're finished in the **Add trusted ARC sealers** flyout, select **Save**.
 

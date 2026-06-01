@@ -120,8 +120,8 @@ For more information about Advanced hunting, see [Proactively hunt for threats w
 
 The following methods are available to revert automated remediation actions and restore messages to mailboxes:
 
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** on the message in Threat Explorer or Advanced Hunting. For information about the **Take action** wizard, see [The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
-- The **Move to Inbox** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Move to Junk** actions in the cluster property details flyout on **History** tab of the Action center as shown in the following screenshot:
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** on the message in Threat Explorer or Advanced Hunting. For information about the **Take action** wizard, see [The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+- The **Move to Inbox** or :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: \> **Move to Junk** actions in the cluster property details flyout on **History** tab of the Action center as shown in the following screenshot:
 
   :::image type="content" source="media/auto-air-mdo-action-center-cluster-details.png" alt-text="Screenshot of the details flyout of an automatically remediated email cluster showing the available Move to Inbox action to undo the automated remediation action and restore messages to mailboxes." lightbox="media/auto-air-mdo-action-center-cluster-details.png":::
 
