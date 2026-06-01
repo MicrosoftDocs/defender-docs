@@ -239,7 +239,7 @@
                 - name: Deploy using Azure CLI
                   href: defender-for-containers-deploy-azure-cli.md
                 - name: Enable private cluster support (Preview)
-                  href: defender-for-containers-private-clusters-preview.md
+                  href: defender-for-containers-private-clusters.md
                 - name: Deploy using Helm (advanced)
                   href: deploy-helm.md
             - name: Verify deployment

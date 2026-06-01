@@ -10,7 +10,7 @@ ms.date: 06/01/2026
 
 # Enable private cluster support for Defender for Containers (Preview)
 
-This article explains how to enable Microsoft Defender for Containers support for private clusters by using the current public preview installation paths.
+Private clusters isolate Kubernetes environments from the internet and require deployment paths that work with restricted connectivity. Defender for Containers extends threat detection and security visibility to these environments, so you can keep protection coverage while preserving private cluster network boundaries.
 
 ## Prerequisites
 
