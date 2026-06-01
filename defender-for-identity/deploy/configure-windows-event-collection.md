@@ -243,7 +243,9 @@ When a Defender for Identity sensor parses Windows event 8004, it enriches Defen
 
 To configure NTLM auditing:
 
-1. Open **Group Policy Management**, and go to **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
+1. Open **Group Policy Management** and Expand **Domain Controllers Organizational Units**, right-click **Default Domain Controllers Policy**, and then select **Edit**.
+
+1.  Go to **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
 
 1. Configure the specified security policies as follows:
 
