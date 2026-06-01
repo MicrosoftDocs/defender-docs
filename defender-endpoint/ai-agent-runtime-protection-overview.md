@@ -47,15 +47,11 @@ For more information on agent hooks, see [Claude Code hooks](https://code.claude
 
 ## What happens when you enable runtime protection
 
-When you enable runtime protection on a device:
+Once enabled on a device, Defender inspects supported agents at their hook points as users work — without changing how they run the agent. What happens following a detection depends on the configured mode:
 
-1. Defender registers as a hook subscriber with supported agents on the device.
-1. As the agent runs, Defender receives payloads at each lifecycle event (prompt, pre-tool call, post-tool response).
-1. Defender scans each payload for prompt injection and malicious instructions.
-1. If a threat is detected:
-   - In **Block** mode: Defender blocks the action and notifies the user in the agent UI and via Windows toast notification.
-   - In **Audit** mode: Defender allows the action to continue and logs the detection.
-1. An alert appears in the Microsoft Defender portal on the device timeline, correlated into incidents for investigation.
+- **Block:** Defender blocks the action and notifies the user both in the agent UI and through a Windows toast notification. The detection is recorded in Defender protection history on the device, and a security alert is sent to Microsoft Defender, correlated into incidents for the SOC to investigate.
+- **Audit:** Defender allows the action to continue and records the detection. A security alert is still raised in Microsoft Defender for investigation.
+- **Disabled:** Runtime protection is off. Defender does not inspect agent activity, and agents run without prompt injection detection or blocking.
 
 For configuration steps, see [Enable runtime protection](configure-ai-agent-runtime-protection.md#enable-runtime-protection).
 
@@ -67,10 +63,6 @@ Runtime protection can be set to **Enabled** (Block) or **Audit**.
 |---|---|
 | **Enabled** (Block) | Defender scans runtime activity and blocks detected threats. Users might see a notification in the agent UI or a Windows toast notification, and an alert is sent to Microsoft Defender. |
 | **Audit** | Defender scans runtime activity and allows the action to continue. An alert is sent to Microsoft Defender for security team review. |
-
-Microsoft recommends beginning in Audit mode to observe detections and validate accuracy before switching to Block for active enforcement. For configuration steps, see [Enable runtime protection](configure-ai-agent-runtime-protection.md#enable-runtime-protection).
-
-Runtime protection works alongside your existing security controls. The setting is protected by [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection), which prevents unauthorized changes. If [Microsoft Purview data loss prevention (DLP)](/purview/dlp-learn-about-dlp) policies are active on the same device, Purview independently evaluates payloads for sensitive data.
 
 ## Investigation
 
