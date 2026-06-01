@@ -134,7 +134,10 @@ If automatic auditing isn't available or you opted out, [configure auditing manu
 
 To improve security visibility and unlock more identity detections, apply the **Unified Sensor RPC Audit** tag to your devices. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device Inventory for transparency and auditing.
 
-Minimum supported sensor version: 3.0.4. Devices running earlier sensor versions are not supported for this feature and will not generate the associated RPC auditing health alert.
+#### Prerequisites
+
+- Devices must run Defender for Identity sensor version 3.0.4 or later. 
+  Devices running earlier versions don’t support this feature and won’t generate RPC auditing health alerts.
 
 To apply the tag:
 
