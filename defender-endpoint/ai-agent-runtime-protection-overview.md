@@ -38,7 +38,7 @@ For example, if a file read by the agent contains hidden instructions like "igno
 
 Runtime protection uses agent event scanning — an industry-standard method (agent hooks) where security tools subscribe to lifecycle events in an AI agent's execution flow. Agent frameworks such as Claude Code and Codex expose hook points where Defender can inspect and act on agent activity.
 
-When an agent supports hooks, Defender Antivirus receives payloads at key stages in the agentic loop:
+When an agent supports hooks, Defender receives payloads at key stages in the agentic loop:
 
 - **User prompt**: The prompt submitted to the agent.
 - **Pre-tool call**: The tool invocation request before execution.
@@ -68,8 +68,8 @@ Runtime protection can be set to **Enabled** (Block) or **Audit**.
 
 | Mode | What it means |
 |---|---|
-| **Enabled** (Block) | Defender Antivirus scans runtime activity and blocks detected threats. Users might see a notification in the agent UI or a Windows toast notification, and an alert is sent to Microsoft Defender. |
-| **Audit** | Defender Antivirus scans runtime activity and allows the action to continue. An alert is sent to Microsoft Defender for security team review. |
+| **Enabled** (Block) | Defender scans runtime activity and blocks detected threats. Users might see a notification in the agent UI or a Windows toast notification, and an alert is sent to Microsoft Defender. |
+| **Audit** | Defender scans runtime activity and allows the action to continue. An alert is sent to Microsoft Defender for security team review. |
 
 Microsoft recommends beginning in Audit mode to observe detections and validate accuracy before switching to Block for active enforcement. For configuration steps, see [Enable runtime protection](configure-ai-agent-runtime-protection.md#enable-runtime-protection).
 
