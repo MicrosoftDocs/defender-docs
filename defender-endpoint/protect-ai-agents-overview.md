@@ -33,6 +33,10 @@ Microsoft Defender automatically detects supported local AI agents and MCP serve
 - **Exposure map**: Visual relationships between local AI agents, devices, identities, and the resources those identities can access, to help assess potential impact.
 - **Advanced hunting**: Hunting for discovery data using Kusto Query Language (KQL) to investigate local AI agents and the resources they can access based on the permissions of the user running them.
 
+The following screenshot shows the local AI agents inventory in the Microsoft Defender portal, where discovered agents are listed with their associated devices, users, and discovery metadata:
+
+:::image type="content" source="media/protect-ai-agents-overview/discovery-overview.png" alt-text="Screenshot showing the local AI agents inventory in the Microsoft Defender portal with discovered agents listed." lightbox="media/protect-ai-agents-overview/discovery-overview.png":::
+
 ### Supported local AI agents and MCP server configurations
 
 Defender defines an agent as a combination of user, device, and agent type. For example, if Claude Code runs in 15 different project folders on the same device for the same user, it appears as a single agent entry in the inventory.

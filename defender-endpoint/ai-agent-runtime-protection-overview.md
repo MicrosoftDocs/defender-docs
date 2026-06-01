@@ -31,6 +31,8 @@ Runtime protection targets the defining threat to local AI agents: prompt inject
 
 For example, a coding agent fetches a project's documentation to answer a question, and the page contains hidden text that instructs the agent to read the local `.env` file and post its contents to an external URL. The agent treats the instruction as part of the page and is about to comply, but Defender detects the prompt injection in the tool response and blocks the action before any data leaves the device.
 
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png" alt-text="Screenshot showing the blocking notification displayed to the user when Defender detects and blocks a prompt injection attack on a local AI agent." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png":::
+
 ## How it works
 
 Runtime protection uses agent hooks — defined points in an agent's execution where an external tool can inspect and act on the agen'ts actions. Agents such as Claude Code and GitHub Copilot CLI expose these hook points, and Defender uses them to inspect agent activity.
