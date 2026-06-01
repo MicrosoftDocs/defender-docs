@@ -54,13 +54,11 @@ You don't need additional deployment, configuration, or scripts beyond the devic
 
     1. Review the agent details, including:
 
-        - Agent type and version
-
-        - Configured MCP servers
-
+        - Agent name, version, and related process
         - Associated device and user
-
-        - Discovery timestamp
+        - First seen and last updated timestamps
+        - Integrity level, auto-approve status, and trust indicator
+        - Configured MCP servers, when detected
 
     For more information on using the AI agent inventory, see [Discover AI agents and assess security posture using Microsoft Defender](/defender-xdr/security-for-ai/ai-agent-inventory).
 
@@ -78,19 +76,13 @@ The [ExposureGraphNodes](/defender-xdr/advanced-hunting-exposuregraphnodes-table
 This query lists all discovered local AI agents and the devices they run on:
 
 ```kusto
-
 ExposureGraphEdges
-
 | where SourceNodeLabel == "endpointAiAgent"
 | where EdgeLabel =~ "runs on"
 | summarize Devices = make_set(TargetNodeName),
-
             DeviceCount = dcount(TargetNodeName)
-
     by AIAgent = SourceNodeName
-
 | sort by DeviceCount desc
-
 ```
 
 ### Map AI agents to users
@@ -98,32 +90,20 @@ ExposureGraphEdges
 This query maps local AI agents to the users with credentials on the devices they run on:
 
 ```kusto
-
 let accessEdges = dynamic(["contains", "has credentials of", "has permissions to",
-
                            "has role on", "can authenticate as", "can authenticate to"]);
-
 ExposureGraphEdges
-
 | where SourceNodeLabel == "endpointAiAgent"
 | project AIAgent = SourceNodeName, DeviceId = TargetNodeId, Device = TargetNodeName
 | join kind=inner (
-
     ExposureGraphEdges
-
     | where EdgeLabel in (accessEdges)
-
     | where TargetNodeLabel in ("device", "ec2.instance", "microsoft.compute/virtualmachines")
-
     | project UserId = SourceNodeId, User = SourceNodeName,
-
               UserType = SourceNodeLabel, DeviceId = TargetNodeId
-
 ) on DeviceId
-
 | summarize AIAgents = make_set(AIAgent) by Device, User, UserType
 | sort by Device asc
-
 ```
 
 ### Find AI agents on devices of users with broad access
@@ -131,68 +111,38 @@ ExposureGraphEdges
 This query identifies which users on local AI agent devices have permissions to the most resources, helping you prioritize risk based on scope of access:
 
 ```kusto
-
 let accessEdges = dynamic(["contains", "has credentials of", "has permissions to",
-
                            "has role on", "can authenticate as", "can authenticate to",
-
                            "member of", "can impersonate as"]);
-
 let biEdges =
-
     ExposureGraphEdges
-
     | where EdgeLabel in (accessEdges)
-
     | project src = SourceNodeId, tgt = TargetNodeId,
-
               srcName = SourceNodeName, tgtName = TargetNodeName, edge = EdgeLabel
-
     | union (
-
         ExposureGraphEdges
-
         | where EdgeLabel in (accessEdges)
-
         | project src = TargetNodeId, tgt = SourceNodeId,
-
                   srcName = TargetNodeName, tgtName = SourceNodeName, edge = EdgeLabel
-
     );
-
 let userAccess =
-
     ExposureGraphEdges
-
     | where SourceNodeLabel == "user"
-
     | where EdgeLabel in ("has permissions to", "has role on")
-
     | summarize 
-
         ResourceCount = dcount(TargetNodeId),
-
         ResourceTypes = make_set(TargetNodeLabel)
-
         by UserId = SourceNodeId, User = SourceNodeName;
-
 ExposureGraphEdges
-
 | where SourceNodeLabel == "endpointAiAgent"
 | project AIAgent = SourceNodeName, n1 = TargetNodeId, Device = TargetNodeName
 | join kind=inner (
-
     biEdges | project n1 = src, UserId = tgt, User = tgtName
-
 ) on n1
-
 | join kind=inner userAccess on UserId
 | summarize AIAgents = make_set(AIAgent) by Device, User, ResourceCount,
-
     tostring(ResourceTypes)
-
 | sort by ResourceCount desc
-
 ```
 
 ### Find AI agents with paths to critical or sensitive assets
@@ -200,97 +150,51 @@ ExposureGraphEdges
 This query traces access paths from local AI agents through the exposure graph to resources marked as critical or containing sensitive data:
 
 ```kusto
-
 let accessEdges = dynamic(["contains", "has credentials of", "has permissions to",
-
                            "has role on", "can authenticate as", "can authenticate to",
-
                            "member of", "can impersonate as"]);
-
 let biEdges =
-
     ExposureGraphEdges
-
     | where EdgeLabel in (accessEdges)
-
     | project src = SourceNodeId, tgt = TargetNodeId,
-
               srcName = SourceNodeName, tgtName = TargetNodeName, edge = EdgeLabel
-
     | union (
-
         ExposureGraphEdges
-
         | where EdgeLabel in (accessEdges)
-
         | project src = TargetNodeId, tgt = SourceNodeId,
-
                   srcName = TargetNodeName, tgtName = SourceNodeName, edge = EdgeLabel
-
     );
-
 let sensitiveAssets =
-
     ExposureGraphNodes
-
     | extend CriticalityLevel = toint(NodeProperties.rawData.criticalityLevel.criticalityLevel)
-
     | extend HasSensitiveData = iff(isnotempty(NodeProperties.rawData.containsSensitiveData),
-
         "Yes", "No")
-
     | extend CriticalityReason = tostring(NodeProperties.rawData.criticalityLevel.ruleNames)
-
     | where CriticalityLevel > 0 or HasSensitiveData == "Yes"
-
     | extend Criticality = case(
-
         CriticalityLevel == 1, "Critical",
-
         CriticalityLevel == 2, "High",
-
         CriticalityLevel == 3, "Medium",
-
         CriticalityLevel == 4, "Low",
-
         "Sensitive Data"
-
     )
-
     | project AssetId = NodeId, AssetName = NodeName, AssetType = NodeLabel,
-
               Criticality, HasSensitiveData, CriticalityReason;
-
 ExposureGraphEdges
-
 | where SourceNodeLabel == "endpointAiAgent"
 | project AIAgent = SourceNodeName, n1 = TargetNodeId, Device = TargetNodeName
 | join kind=inner (
-
     biEdges | project n1 = src, n2 = tgt, Hop1 = tgtName, Via1 = edge
-
 ) on n1
-
 | join kind=inner (
-
     biEdges | project n2 = src, n3 = tgt, Via2 = edge
-
 ) on n2
-
 | join kind=inner (
-
     sensitiveAssets | project n3 = AssetId, AssetName, AssetType,
-
                              Criticality, HasSensitiveData, CriticalityReason
-
 ) on n3
-
 | summarize ExposedVia = make_set(Hop1) by
-
     AIAgent, Device, AssetName, AssetType,
-
     Criticality, HasSensitiveData, CriticalityReason
-
 | sort by Criticality asc, HasSensitiveData desc
-
 ```
