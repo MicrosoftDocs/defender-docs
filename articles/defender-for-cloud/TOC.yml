@@ -183,9 +183,12 @@
                 - name: Enable on Azure
                   displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-azure.md
-                - name: Enable on AWS (Preview)
+                - name: Enable on AWS
                   displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-aws.md
+                - name: Verify AWS protection
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB, RDS, Aurora, AWS
+                  href: verify-protection-open-source-relational-databases-aws.md                 
               - name: Defender for Azure Cosmos DB
                 items:
                 - name: Defender for Azure Cosmos DB
@@ -238,6 +241,8 @@
               items:
                 - name: Deploy using Azure CLI
                   href: defender-for-containers-deploy-azure-cli.md
+                - name: Deploy to private clusters (Preview)
+                  href: defender-for-containers-private-clusters.md
                 - name: Deploy using Helm (advanced)
                   href: deploy-helm.md
             - name: Verify deployment

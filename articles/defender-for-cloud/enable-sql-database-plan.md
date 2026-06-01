@@ -3,6 +3,8 @@ title: Deploy Defender for Azure SQL Databases
 description: Learn how to enable Defender for Azure SQL Databases as part of the Databases plan on your Azure subscription to enhance your database security.
 ms.topic: how-to
 ms.date: 01/26/2025
+author: ElazarK
+ms.author: elkrieger
 #customer intent: As a database administrator, I want to enable Defender for Azure SQL Databases so that I can enhance the security of my databases.
 ---
 
@@ -12,11 +14,13 @@ Defender for Azure SQL Databases in Microsoft Defender for Cloud lets you protec
 
 ## Prerequisites
 
-- You need a Microsoft Azure subscription. If you don't have an Azure subscription, [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+Before you enable Defender for Azure SQL Databases, make sure you have the following prerequisites:
+
+- You need a Microsoft Azure subscription. If you don't have one, [sign up for a free Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- You must connect a [non-Azure machines](quickstart-onboard-machines.md), [Amazon Web Service (AWS) account](quickstart-onboard-aws.md), or [Google Cloud Platform (GCP)](quickstart-onboard-gcp.md).
+- You must connect [non-Azure machines](quickstart-onboard-machines.md), an [Amazon Web Services (AWS) account](quickstart-onboard-aws.md), or a [Google Cloud Platform (GCP) project](quickstart-onboard-gcp.md).
 
 - You must [enable the Defender for Databases plan](tutorial-enable-databases-plan.md) on your Defender for Cloud subscription.
 
@@ -44,6 +48,7 @@ Enabling the Defender for Azure SQL Databases plan activates protection for all 
 
 1. Select **Save**.
 
- ## Related content
+## Next step
 
-- [Enable Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)
+> [!div class="nextstepaction"]
+> [Enable Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)

@@ -32,9 +32,26 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| June 1, 2026 | GA | [General availability of Microsoft Defender for Open-Source Relational Databases on AWS RDS](#general-availability-of-microsoft-defender-for-open-source-relational-databases-on-aws-rds) |
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### General availability of Microsoft Defender for Open-Source Relational Databases on AWS RDS
+
+June 1, 2026
+
+Microsoft Defender for Open-Source Relational Databases is now generally available for Amazon Web Services Relational Database Service (AWS RDS) instances.
+
+As of June 1, 2026, the plan bills for AWS RDS instances that were previously onboarded to the preview version of the feature. Usage starts to appear on your July 2026 bill.
+
+You continue to receive database threat protection and sensitive data discovery for supported open-source relational databases, including Aurora PostgreSQL, Aurora MySQL, PostgreSQL, MySQL, and MariaDB on AWS RDS.
+
+No action is required to maintain protection if you onboarded Open-Source Relational Databases on AWS RDS during the preview. The feature automatically transitioned to general availability.
+
+To opt out and avoid future charges, disable Open-Source Relational Databases on the relevant AWS account.
+
+Learn more about [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) and how to [manage database protection plans](enable-defender-for-databases-aws.md).
 
 ### Container-level misconfiguration recommendations for Kubernetes (Preview)
 
@@ -99,7 +116,9 @@ Private clusters now support the Defender sensor for gated deployment, binary dr
 
 This update extends Defender for Containers coverage to private cluster scenarios where you use the sensor-based features for container protection.
 
-For more information, see [access patterns and private cluster support for Defender for Containers features](defender-for-containers-feature-access-patterns.md).
+For private cluster installation instructions for the preview path, see [Deploy Defender for Containers to private clusters (Preview)](defender-for-containers-private-clusters.md).
+
+For feature-level support details, see [access patterns and private cluster support for Defender for Containers features](defender-for-containers-feature-access-patterns.md).
 
 ### Malware detection for EKS and GKE nodes (Preview)
 
@@ -111,17 +130,17 @@ This update expands Kubernetes node malware coverage beyond Azure Kubernetes Ser
 
 For more information, see [Kubernetes nodes overview](kubernetes-nodes-overview.md) and [Review and remediate malware alerts for Kubernetes nodes](kubernetes-nodes-malware.md).
 
-### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage 
+### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage
 
 May 26, 2026
 
-On-demand malware scanning for Azure Files in Microsoft Defender for Storage is now in publicly available. This feature extends the existing on-demand malware scan feature and lets you scan entire Azure Storage accounts that contain blobs and files.
+On-demand malware scanning of Azure Files in Microsoft Defender for Storage is now generally available.
 
-You can start scans in the Azure portal UI or with the Representational State Transfer (REST) application programming interface (API). You can also automate scans with Azure Logic Apps, Azure Automation playbooks, and PowerShell scripts.
+This feature extends on-demand malware scanning so you can scan Azure Storage accounts that contain blobs and files.
 
-This feature uses Microsoft Defender Antivirus and applies the latest malware definitions for each scan. It also shows an upfront cost estimate in the Azure portal before you start a scan.
+You can start scans in the Azure portal or by using the REST API. You can also automate scans by using Azure Logic Apps, Azure Automation runbooks, and PowerShell scripts.
 
-For more information, see [On-demand malware scanning](/azure/defender-for-cloud/on-demand-malware-scanning).
+Learn more about [on-demand malware scanning](on-demand-malware-scanning.md).
 
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 
