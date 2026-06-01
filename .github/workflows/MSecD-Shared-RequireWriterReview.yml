@@ -57,8 +57,16 @@ jobs:
           VERSION="3.0.0"
           echo "Require Writer Review Workflow Version: $VERSION"
 
-          PR_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+          PR_RESPONSE=$(curl -sS -w "\n%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER")
+          PR_HTTP_CODE=$(echo "$PR_RESPONSE" | tail -n1)
+          PR_DATA=$(echo "$PR_RESPONSE" | sed '$d')
+
+          if [ "$PR_HTTP_CODE" != "200" ]; then
+            echo "::error::Failed to fetch PR state for #$PR_NUMBER (HTTP $PR_HTTP_CODE)."
+            [ -n "$PR_DATA" ] && echo "$PR_DATA"
+            exit 1
+          fi
 
           PR_STATE=$(echo "$PR_DATA" | jq -r '.state')
           PR_MERGED=$(echo "$PR_DATA" | jq -r '.merged')
@@ -88,8 +96,16 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           echo "Checking last PRMerger command..."
-          COMMENTS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+          COMMENTS_RESPONSE=$(curl -sS -w "\n%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
+          COMMENTS_HTTP_CODE=$(echo "$COMMENTS_RESPONSE" | tail -n1)
+          COMMENTS=$(echo "$COMMENTS_RESPONSE" | sed '$d')
+
+          if [ "$COMMENTS_HTTP_CODE" != "200" ]; then
+            echo "::error::Failed to fetch issue comments for PR #$PR_NUMBER (HTTP $COMMENTS_HTTP_CODE)."
+            [ -n "$COMMENTS" ] && echo "$COMMENTS"
+            exit 1
+          fi
 
           LAST_ENTRY=$(echo "$COMMENTS" | jq -r --arg signoff_cmd "${SIGN_OFF_COMMAND}" '
             [
