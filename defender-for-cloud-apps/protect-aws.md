@@ -4,6 +4,7 @@ description: Learn how about connecting your Amazon Web Services (AWS) environme
 ms.date: 11/24/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ms.custom: sfi-image-nochange
 ---
 
 # How Defender for Cloud Apps helps protect your Amazon Web Services (AWS) environment
