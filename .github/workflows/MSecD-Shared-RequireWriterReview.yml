@@ -206,16 +206,25 @@ jobs:
             local attempt=1
             local max_attempts=3
             local delay=1
-            local response http_code
+            local response http_code body headers_file rate_remaining
 
             while :; do
-              response=$(curl -sS -w "\n%{http_code}" \
+              headers_file=$(mktemp)
+              response=$(curl -sS -D "$headers_file" -w "\n%{http_code}" \
                 -H "Authorization: token $TOKEN" \
                 "$url")
               http_code=$(echo "$response" | tail -n1)
+              body=$(echo "$response" | sed '$d')
+              rate_remaining=$(awk 'BEGIN{IGNORECASE=1} /^x-ratelimit-remaining:/ {gsub(/\r/,"",$2); print $2}' "$headers_file" | tail -n1)
+              rm -f "$headers_file"
+
+              if [ -n "$rate_remaining" ] && [ "$rate_remaining" -lt 10 ]; then
+                echo "::warning::Low GitHub rate limit headroom during team resolution: $rate_remaining remaining."
+              fi
 
               if [ "$http_code" = "200" ] || [ "$attempt" -ge "$max_attempts" ] || [ "$http_code" = "404" ]; then
-                echo "$response"
+                echo "$body"
+                echo "$http_code"
                 return
               fi
 
@@ -340,12 +349,19 @@ jobs:
             local attempt=1
             local max_attempts=3
             local delay=1
-            local http_code
+            local http_code headers_file rate_remaining
 
             while :; do
-              http_code=$(curl -sS --globoff -o /dev/null -w "%{http_code}" \
+              headers_file=$(mktemp)
+              http_code=$(curl -sS --globoff -D "$headers_file" -o /dev/null -w "%{http_code}" \
                 -H "Authorization: token $TOKEN" \
                 "https://api.github.com/orgs/${org}/teams/${team}/memberships/${user}")
+              rate_remaining=$(awk 'BEGIN{IGNORECASE=1} /^x-ratelimit-remaining:/ {gsub(/\r/,"",$2); print $2}' "$headers_file" | tail -n1)
+              rm -f "$headers_file"
+
+              if [ -n "$rate_remaining" ] && [ "$rate_remaining" -lt 10 ]; then
+                echo "::warning::Low GitHub rate limit headroom during membership lookup: $rate_remaining remaining."
+              fi
 
               if [ "$http_code" = "200" ] || [ "$http_code" = "404" ] || [ "$attempt" -ge "$max_attempts" ]; then
                 echo "$http_code"
