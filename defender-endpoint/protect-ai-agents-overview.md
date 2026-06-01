@@ -20,6 +20,8 @@ Local AI agents run with user-level permissions and can access files, tools, and
 
 Microsoft Defender automatically discovers supported local AI agents and MCP server configurations on onboarded devices, then surfaces them in the Microsoft Defender portal. This gives security teams a centralized view of AI agent presence across the organization.
 
+:::image type="content" source="media/protect-ai-agents-overview/discovery-overview.png" alt-text="Screenshot showing the local AI agents inventory in the Microsoft Defender portal with discovered agents listed." lightbox="media/protect-ai-agents-overview/discovery-overview.png":::
+
 This article explains how local AI agent discovery works, lists supported agents and MCP server configurations, and describes how to view discovered agents in the Microsoft Defender portal.
 
 > [!TIP]
@@ -32,10 +34,6 @@ Microsoft Defender automatically detects supported local AI agents and MCP serve
 - **Local AI agent inventory**: A centralized view of discovered local AI agents with device and user associations and discovery metadata.
 - **Exposure map**: Visual relationships between local AI agents, devices, identities, and the resources those identities can access, to help assess potential impact.
 - **Advanced hunting**: Hunting for discovery data using Kusto Query Language (KQL) to investigate local AI agents and the resources they can access based on the permissions of the user running them.
-
-The following screenshot shows the local AI agents inventory in the Microsoft Defender portal, where discovered agents are listed with their associated devices, users, and discovery metadata:
-
-:::image type="content" source="media/protect-ai-agents-overview/discovery-overview.png" alt-text="Screenshot showing the local AI agents inventory in the Microsoft Defender portal with discovered agents listed." lightbox="media/protect-ai-agents-overview/discovery-overview.png":::
 
 ### Supported local AI agents and MCP server configurations
 

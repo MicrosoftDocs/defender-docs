@@ -20,6 +20,8 @@ Local AI agents — coding assistants, CLI tools, desktop AI apps, and autonomou
 
 When configured to block, Defender stops the agent's action on the device and notifies the user — both in the agent UI and through a Windows toast notification — explaining why it blocked the action. In both block and audit modes, Defender triggers a security alert with the full context, and the alert is then correlated into incidents for the SOC to investigate.
 
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png" alt-text="Screenshot showing the blocking notification displayed to the user when Defender detects and blocks a prompt injection attack on a local AI agent." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png":::
+
 This article explains what runtime protection stops, how it works, and how to investigate detections.
 
 > [!TIP]
@@ -30,8 +32,6 @@ This article explains what runtime protection stops, how it works, and how to in
 Runtime protection targets the defining threat to local AI agents: prompt injection — malicious instructions hidden inside otherwise-legitimate content that an agent reads and then acts on. Defender inspects the three points where content enters or leaves the agent's reasoning — the user's prompt, the tool calls the agent is about to make, and the responses those tools return — so it catches injection regardless of where the content originated, whether a file, a web page, a repository, or a tool's output.
 
 For example, a coding agent fetches a project's documentation to answer a question, and the page contains hidden text that instructs the agent to read the local `.env` file and post its contents to an external URL. The agent treats the instruction as part of the page and is about to comply, but Defender detects the prompt injection in the tool response and blocks the action before any data leaves the device.
-
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png" alt-text="Screenshot showing the blocking notification displayed to the user when Defender detects and blocks a prompt injection attack on a local AI agent." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png":::
 
 ## How it works
 

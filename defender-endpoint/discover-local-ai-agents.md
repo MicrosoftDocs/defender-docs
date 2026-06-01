@@ -44,14 +44,12 @@ You don't need additional deployment, configuration, or scripts beyond the devic
     1. In the left navigation pane, select **Assets** > **AI Agents**.
 
     1. Select **Local agents (Preview)** to see a filtered list of local AI agents discovered on endpoint devices.
-
-        :::image type="content" source="media/protect-ai-agents-overview/discovery-overview.png" alt-text="Screenshot showing the local AI agents inventory in the Microsoft Defender portal with discovered agents listed." lightbox="media/protect-ai-agents-overview/discovery-overview.png":::
-
-    <!-- TODO: Spencer comment #8 - Confirm with Moran/Michal if "Local agents" is the final page name -->
-
+    
 - To view a specific agent's details:
 
     1. From the **Local agents** list, select an agent to open the **Agent entity page**.
+    
+        :::image type="content" source="media/protect-ai-agents-overview/discovery-overview.png" alt-text="Screenshot showing the local AI agents inventory in the Microsoft Defender portal with discovered agents listed." lightbox="media/protect-ai-agents-overview/discovery-overview.png":::
 
     1. Review the agent details, including:
 
