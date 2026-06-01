@@ -181,7 +181,7 @@ Web protection helps to secure devices against web threats and protect users fro
    | `DefenderNetworkProtectionPrivacy` | Integer | 1 | 0 - Disable<br>1 - Enable<br><br>This setting is used by IT admins to enable or disable privacy in network protection. If privacy is disabled with value 0, then user consent is shown to share the malicious wifi or certs data. If its in enabled state with value 1, then no user consent is shown and no app data is collected.|
 
    > [!NOTE]
-   > The ability of end-users to trust and untrust suspicious networks (granted via the `DefenderEndUserTrustFlowEnable` setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. During the rollout period the following behavior will apply:
+   > The ability of end-users to trust and untrust suspicious networks (granted via the `DefenderEndUserTrustFlowEnable` setting) is being deprecated. Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. The new behavior will be as follows:
    > - End users will no longer be able to mark suspicious networks as trusted.
    > - Any previously trusted suspicious networks will automatically be treated as untrusted.
    > - Users will receive in-app notifications when connecting to such networks.

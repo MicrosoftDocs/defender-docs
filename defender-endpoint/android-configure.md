@@ -88,7 +88,7 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
    |Manage Network protection Detection for Certificates|2: Enable <br/> 1: Audit mode<br/> 0: Disable (default)<br/><br/>In audit mode, events are sent to SOC admins, but no end user notifications are shown when Defender detects a bad certificate. Admins can enable full feature functionality by setting the value 2. When the value is 2, end user notifications are sent to users and events are sent to SOC admins when Defender detects a bad certificate.|
 
    > [!NOTE]
-   > The ability of end-users to trust and untrust suspicious networks (granted via the Enable Users to Trust Networks and Certificates setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. During the rollout period the following behavior will apply:
+   > The ability of end-users to trust and untrust suspicious networks (granted via the Enable Users to Trust Networks and Certificates setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. The new behavior will be as follows:
    > - End users will no longer be able to mark suspicious networks as trusted.
    > - Any previously trusted suspicious networks will automatically be treated as untrusted.
    > - Users will receive in-app notifications when connecting to such networks.

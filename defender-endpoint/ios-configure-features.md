@@ -126,7 +126,7 @@ To set up network protection using MDM configuration for enrolled devices, follo
    | `DefenderNetworkProtectionPrivacy` | String | true | true - enable<br>false - disable<br><br>This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious Wi-Fi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
 
    > [!NOTE]
-   > The ability of end-users to trust and untrust suspicious networks (granted via the `DefenderEndUserTrustFlowEnable` setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. During the rollout period the following behavior will apply:
+   > The ability of end-users to trust and untrust suspicious networks (granted via the `DefenderEndUserTrustFlowEnable` setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. The new behavior will be as follows:
    > - End users will no longer be able to mark suspicious networks as trusted.
    > - Any previously trusted suspicious networks will automatically be treated as untrusted.
    > - Users will receive in-app notifications when connecting to such networks.
@@ -160,7 +160,7 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
    |`DefenderNetworkProtectionPrivacy`| true |true - enable<br>false - disable<br><br>This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
 
    > [!NOTE]
-   > The ability of end-users to trust and untrust suspicious networks (granted via the `DefenderEndUserTrustFlowEnable` setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. During the rollout period the following behavior will apply:
+   > The ability of end-users to trust and untrust suspicious networks (granted via the `DefenderEndUserTrustFlowEnable` setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. The new behavior will be as follows:
    > - End users will no longer be able to mark suspicious networks as trusted.
    > - Any previously trusted suspicious networks will automatically be treated as untrusted.
    > - Users will receive in-app notifications when connecting to such networks.
