@@ -18,7 +18,7 @@ ms.collection: ms-security
 #  Manage KQL jobs in the Microsoft Sentinel data lake 
  
 
-A KQL job is a one-time or scheduled task that runs a KQL (Kusto Query Language) query against the data in the data lake tier to promote the results to the analytics tier. Jobs can be created in the **KQL queries** editor, or the **Jobs** page under **Microsoft Sentinel** > **Data lake exploration**  in the Microsoft Defender portal for. For more information, see [KQL jobs](kql-jobs.md). 
+A KQL job is a one-time or scheduled task that runs a KQL (Kusto Query Language) query against the data in the data lake tier to promote the results to the analytics tier. KQL jobs can be created in the **KQL queries** editor, or the **Jobs** page under **Microsoft Sentinel** > **Data lake exploration**  in the Microsoft Defender portal for. For more information, see [KQL jobs](kql-jobs.md). 
 
 The **Jobs** page also lists notebook jobs and graph jobs that run against the data lake, so you can monitor every scheduled job from one place. Notebook jobs are created from the notebook authoring experience (see [Notebook jobs](notebook-jobs.md)). Graph jobs are scheduled runs of a custom Microsoft Security Exposure Management graph and are created from the VS Code or notebook custom-graph authoring experience (see [Custom graphs overview](custom-graphs-overview.md) and the [Graph jobs](#graph-jobs) section below). Notebook jobs and graph jobs are **view-only** from this page.
 
