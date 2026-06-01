@@ -247,7 +247,7 @@ Learn more about [GitHub Advanced Security integration](github-advanced-security
 | April 30, 2026 | GA | [Defender for Containers runtime protection on EKS Bottlerocket is now generally available](#defender-for-containers-runtime-protection-on-eks-bottlerocket-is-now-generally-available) |
 | April 30, 2026 | GA | [Anti-malware detection and blocking is now generally available](#anti-malware-detection-and-blocking-is-now-generally-available) |
 | April 30, 2026 | GA | [DNS Detection for Kubernetes is now generally available](#dns-detection-for-kubernetes-is-now-generally-available) |
-| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure Portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
+| April 20, 2026 | GA | [General availability of Defender for Storage integration in Azure portal Storage Center](#general-availability-of-defender-for-storage-integration-in-azure-portal-storage-center) |
 | April 1, 2026 | GA | [General availability of container security capabilities in Azure Government cloud](#general-availability-of-container-security-capabilities-in-azure-government-cloud) |
 | April 1, 2026 | Update | [Update to Defender for SQL servers on machines plan for Fairfax customers](#update-to-defender-for-sql-servers-on-machines-plan-for-fairfax-customers) |
 
