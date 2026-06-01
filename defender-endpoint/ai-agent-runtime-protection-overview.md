@@ -55,15 +55,6 @@ Once enabled on a device, Defender inspects supported agents at their hook point
 
 For configuration steps, see [Enable runtime protection](configure-ai-agent-runtime-protection.md#enable-runtime-protection).
 
-## Protection modes
-
-Runtime protection can be set to **Enabled** (Block) or **Audit**.
-
-| Mode | What it means |
-|---|---|
-| **Enabled** (Block) | Defender scans runtime activity and blocks detected threats. Users might see a notification in the agent UI or a Windows toast notification, and an alert is sent to Microsoft Defender. |
-| **Audit** | Defender scans runtime activity and allows the action to continue. An alert is sent to Microsoft Defender for security team review. |
-
 ## Investigation
 
 When runtime protection detects a threat, Microsoft Defender surfaces an alert on the device timeline and correlates related alerts into incidents. Your security team uses the same investigation workflows they're familiar with for other endpoint detections — including timeline review, alert and entity correlation, and response actions.

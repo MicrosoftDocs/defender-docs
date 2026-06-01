@@ -52,7 +52,7 @@ To enable runtime protection on a single device (for testing or validation):
 
     ```
 
-1. Replace `<mode>` with `Disabled`, `Audit`, or `Block`, depending on how you want Microsoft Defender to handle detected threats. For details on each mode, see [Protection modes](ai-agent-runtime-protection-overview.md#protection-modes).
+1. Replace `<mode>` with `Disabled`, `Audit`, or `Block`, depending on how you want Microsoft Defender to handle detected threats. For details on each mode, see [What happens when you enable runtime protection](ai-agent-runtime-protection-overview.md#what-happens-when-you-enable-runtime-protection).
 
 1. To verify the current setting, run:
 
@@ -85,7 +85,7 @@ After enabling runtime protection, review alerts to validate detection accuracy 
 
 When Microsoft Defender detects a threat based on your runtime protection settings, it generates an alert in Microsoft Defender and takes action based on the configured mode (**Block** or **Audit**). Detection details appear across the agent's UI, Windows notifications, and the Microsoft Defender portal.
 
-For more information on mode behavior, see [Protection modes](ai-agent-runtime-protection-overview.md#protection-modes).
+For more information on mode behavior, see [What happens when you enable runtime protection](ai-agent-runtime-protection-overview.md#what-happens-when-you-enable-runtime-protection).
 
 ### End-user experience
 
