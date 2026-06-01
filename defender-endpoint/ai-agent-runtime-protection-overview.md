@@ -80,10 +80,6 @@ The following table lists the local AI agents that Microsoft Defender supports f
 |-------|---------------------|
 | [Claude Code](https://code.claude.com/) | [Claude Code hooks](https://code.claude.com/docs/en/hooks) |
 | [GitHub Copilot CLI](https://docs.github.com/en/copilot) | [GitHub Copilot coding agent](https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-agent-mode-in-vs-code/using-copilot-coding-agent) |
-| [Codex CLI](https://developers.openai.com/codex/) | [Codex hooks](https://developers.openai.com/codex/hooks) |
-
-<!-- TODO: Spencer noted support between Windows and Mac may differ. Also need to confirm how to handle MCP support in this table. See Spencer comment #17 -->
-<!-- TODO: Spencer asked Eitan if runtime protection has OS version restrictions to call out. See Spencer comment #21 -->
 
 ## Broader AI security capabilities
 
