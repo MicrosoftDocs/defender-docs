@@ -101,12 +101,12 @@ Change the organization of the chart by selecting **Campaign Type**, and then se
 - **URL domain**
 - **URL domain and path**
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export chart data** to export the data in the chart to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export chart data** to export the data in the chart to a CSV file.
 
 To remove the chart from the page (which maximizes the size of the details area), do either of the following steps:
 
-- Select :::image type="icon" source="media/m365-cc-sc-chart-view-icon.png" border="false"::: **Chart View** \> :::image type="icon" source="media/m365-cc-sc-list-view-icon.png" border="false"::: **List View** at the top of the page.
-- Select :::image type="icon" source="media/m365-cc-sc-show-list-view-icon.png" border="false"::: **Show list view** between the chart and the views for the details table.
+- Select :::image type="icon" source="media/defender-portal-icon-chart-view.png" border="false"::: **Chart View** \> :::image type="icon" source="media/defender-portal-icon-list-view.png" border="false"::: **List View** at the top of the page.
+- Select :::image type="icon" source="media/defender-portal-icon-show-list-view.png" border="false"::: **Show list view** between the chart and the views for the details table.
 
 ### Details area on the Campaigns page
 
@@ -128,9 +128,9 @@ On the **Campaigns** page, the **Campaign** tab below the chart shows the follow
 - **Click rate**: In phishing campaigns, the percentage as calculated by "**Clicked** / **Inboxed**". This value is an indicator of the effectiveness of the campaign. In other words, were the recipients able to identify the message as phishing, and therefore avoided the payload URL? **Click rate** isn't used in malware campaigns.
 - **Visited**: How many users actually made it through to the payload website. If there are **Clicked** values, but [Safe Links](safe-links-about.md) blocked access to the website, this value is zero.
 
-Select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns are selected.
+Select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**. By default, all available columns are selected.
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the data in the details table to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the data in the details table to a CSV file.
 
 On the **Campaigns** page, the **Campaign origin** tab below the chart shows the message sources on a map of the world.
 
@@ -202,11 +202,11 @@ After you select a property from the **Campaign Type** dropdown, select **Equal 
 
 To add more conditions, select another property/value pair, and then select **AND** or **OR**. Repeat these steps as many times as necessary.
 
-To remove existing property/value pairs, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+To remove existing property/value pairs, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
 When you're finished building your filter query, select **Refresh**.
 
-To save your filter query, select **Save query** \> :::image type="icon" source="media/m365-cc-sc-save-icon.png" border="false"::: **Save query**. In the **Save query** flyout that opens, configure the following settings:
+To save your filter query, select **Save query** \> :::image type="icon" source="media/defender-portal-icon-save.png" border="false"::: **Save query**. In the **Save query** flyout that opens, configure the following settings:
 
 - **Query name**: Enter a unique value.
 - Select one of the following values:
@@ -216,7 +216,7 @@ To save your filter query, select **Save query** \> :::image type="icon" source=
 
 When you're finished in the **Save query** flyout, select **Save**, and then select **OK** in the confirmation dialog.
 
-When you return to the **Campaigns** page, you can load a saved filter by selecting **Save query** \> :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Saved query settings**.
+When you return to the **Campaigns** page, you can load a saved filter by selecting **Save query** \> :::image type="icon" source="media/defender-portal-icon-gear.png" border="false"::: **Saved query settings**.
 
 ## Campaign details
 
@@ -344,7 +344,7 @@ The tabs in the campaign details flyout allow you to further investigate the cam
 
 <sup>\*</sup> Selecting this value opens a new flyout that contains more details about the specified item (user, URL, etc.) on top of the campaign details view. To return to the campaign details flyout, select **Done** in the new flyout.
 
-On each tab, select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns on each tab are selected.
+On each tab, select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**. By default, all available columns on each tab are selected.
 
 ### Additional actions
 
