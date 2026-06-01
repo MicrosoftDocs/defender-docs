@@ -121,6 +121,9 @@ External access allows your users to communicate externally in Teams, allowing e
 
 Note that external organizations must also allow your organization's domain for external access to work.
 
+> [!TIP]
+> You can also create external access policies with domain allow/deny lists and assign them to specific users or groups for more granular control. For more information, see [Manage external access](/microsoftteams/manage-external-access).
+
 ## Learn More
 
 Consider configuring access policies to implement Zero Trust identity and device access policies to protect Microsoft Teams chats, groups, and content such as files and calendars.

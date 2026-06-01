@@ -17,14 +17,16 @@ appliesto:
 
 # Discover AI agents and assess security posture using Microsoft Defender (Preview)
 
-After you onboard to [Microsoft Agent 365](/microsoft-agent-365/overview), you can discover AI agents in your organization, including local AI agents, and view their configuration details using Advanced Hunting in the Microsoft Defender portal.
-
-> [!NOTE]
-> Local AI agent discovery on endpoints works automatically for devices onboarded to Microsoft Defender for Endpoint and doesn't require Agent 365 onboarding. Agent 365 onboarding is required for all other capabilities described in this article. For more information, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents).
+You can discover all of the AI agents in your organization and view their configuration details using Advanced Hunting in the Microsoft Defender portal.
 
 Microsoft Defender also provides a dedicated AI agent inventory experience in the Defender portal for agent discovery and posture management, including agent details, posture insights, risk factors, and security recommendations, where supported. This inventory is currently available for agents built with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, GCP Vertex AI, and [local AI agents](/defender-endpoint/protect-ai-agents-overview) discovered on endpoints. To use the inventory, you need to enable the required features.
 
 This article explains how to discover AI agents, assess their security posture, and use the AI agent inventory in the Microsoft Defender portal. For information on discovering local AI agents, see [Discover local AI agents in Microsoft Defender for Endpoint](/defender-endpoint/discover-local-ai-agents).
+
+## Prerequisites
+
+- [Onboard to Microsoft Agent 365](/microsoft-agent-365/overview) (devices that use the AI agent runtime protection feature don't need to onboard to Agent 365.)
+- [Enable preview features](../preview.md) in the Microsoft Defender portal to access the `AIAgentsInfo` table in Advanced Hunting and get AI agent-related evidence in alerts.
 
 ## View all Agent 365-managed agents and configuration details using Advanced Hunting
 

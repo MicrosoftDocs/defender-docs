@@ -2,7 +2,7 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 05/28/2026    
+ms.date: 05/31/2026    
 # This file is auto-generated. Do not edit manually. Changes will be overwritten.
 ---
 
@@ -467,6 +467,16 @@ ms.date: 05/28/2026
 |[Syslog](/azure/azure-monitor/reference/tables/Syslog)|[CTERA Syslog](/azure/sentinel/data-connectors-reference#ctera-syslog)<br>[Cisco Software Defined WAN](/azure/sentinel/data-connectors-reference#cisco-software-defined-wan)<br>[Syslog via AMA](/azure/sentinel/data-connectors-reference#syslog-via-ama)<br>[Syslog via Legacy Agent](/azure/sentinel/data-connectors-reference#syslog-via-legacy-agent)|Yes|Yes|
 |TacitRed_Findings_CL|[TacitRed Compromised Credentials](/azure/sentinel/data-connectors-reference#tacitred-compromised-credentials)|No|No|
 |Talon_CL|[Talon Insights](/azure/sentinel/data-connectors-reference#talon-insights)|No|No|
+|TaniumComplyCompliance_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
+|TaniumComplyVulnerabilities_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
+|TaniumDefenderHealth_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
+|TaniumDiscoverUnmanagedAssets_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
+|TaniumHighUptime_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
+|TaniumPatchCoverageStatus_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
+|TaniumPatchListApplicability_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
+|TaniumPatchListCompliance_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
+|TaniumSCCMClientHealth_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
+|TaniumThreatResponse_CL|[Tanium's CCF Push Connector](/azure/sentinel/data-connectors-reference#taniums-ccf-push-connector)|No|No|
 |Tenable_IE_CL|[Tenable Identity Exposure](/azure/sentinel/data-connectors-reference#tenable-identity-exposure)|Yes|Yes|
 |Tenable_VM_Asset_CL|[Tenable Vulnerability Management (using Azure Functions)](/azure/sentinel/data-connectors-reference#tenable-vulnerability-management-using-azure-functions)|Yes|Yes|
 |Tenable_VM_Compliance_CL|[Tenable Vulnerability Management (using Azure Functions)](/azure/sentinel/data-connectors-reference#tenable-vulnerability-management-using-azure-functions)|Yes|Yes|
