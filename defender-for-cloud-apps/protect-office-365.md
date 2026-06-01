@@ -70,14 +70,11 @@ In addition to monitoring for potential threats, you can apply and automate the 
 
 |Type|Action|
 |---|---|
-|Data governance|**OneDrive:** <br/> - Inherit parent folder permissions <br/> - Make file/folder private <br/> - Put file/folder in admin quarantine <br/> - Put file/folder in user quarantine <br/> - Trash file/folder <br/> - Remove a specific collaborator <br/> - Remove external collaborators on file/folder <br/> - Apply Microsoft Purview Information Protection sensitivity label <br/> - Remove Microsoft Purview Information Protection sensitivity label <br/> **SharePoint:** <br/> - Inherit parent folder permissions <br/> - Make file/folder private <br/> - Put file/folder in admin quarantine <br/> - Put file/folder in user quarantine <br/> - Put file/folder in user quarantine and add owner permissions <br/> - Trash file/folder <br/> - Remove external collaborators on file/folder <br/> - Remove a specific collaborator <br/> - Apply Microsoft Purview Information Protection sensitivity label <br/> - Remove Microsoft Purview Information Protection sensitivity label|
-|User governance|- Notify user on alert (via Microsoft Entra ID) <br/> - Require user to sign in again (via Microsoft Entra ID) <br/> - Confirm user compromised (via Microsoft Entra ID) <br/> - Suspend user (via Microsoft Entra ID)|
-|OAuth app governance|- Revoke OAuth app permission|
+|Data governance|**OneDrive:** <ul><li>Inherit parent folder permissions</li><li>Make file/folder private</li><li>Put file/folder in admin quarantine</li><li>Put file/folder in user quarantine</li><li>Trash file/folder</li><li>Remove a specific collaborator</li><li>Remove external collaborators on file/folder</li><li>Apply Microsoft Purview Information Protection sensitivity label</li><li>Remove Microsoft Purview Information Protection sensitivity label</li></ul> **SharePoint:** <ul><li>Inherit parent folder permissions</li><li>Make file/folder private</li><li>Put file/folder in admin quarantine</li><li>Put file/folder in user quarantine</li><li>Put file/folder in user quarantine and add owner permissions</li><li>Trash file/folder</li><li>Remove external collaborators on file/folder</li><li>Remove a specific collaborator</li><li>Apply Microsoft Purview Information Protection sensitivity label</li><li>Remove Microsoft Purview Information Protection sensitivity label</li></ul>|
+|User governance|<ul><li>Notify user on alert (via Microsoft Entra ID)</li><li>Require user to sign in again (via Microsoft Entra ID)</li><li>Confirm user compromised (via Microsoft Entra ID)</li><li>Suspend user (via Microsoft Entra ID)</li></ul> **Note:** Require user to sign in again, Confirm user compromised, and Suspend user don't apply to guest users. These actions are skipped for guest user accounts.|
+|OAuth app governance|<ul><li>Revoke OAuth app permission</li></ul>|
 
 For more information about remediating threats from apps, see [Governing connected apps](governance-actions.md).
-
-> [!NOTE]
-> The following user governance actions don't apply to guest users: **Require user to sign in again**, **Confirm user compromised**, and **Suspend user**. These actions are skipped for guest user accounts.
 
 ## Protect Microsoft 365 in real time
 
