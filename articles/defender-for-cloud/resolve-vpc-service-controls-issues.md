@@ -3,7 +3,7 @@ title: Resolve VPC service controls issues
 description: Troubleshoot VPC service controls issues in Microsoft Defender for Cloud to ensure your resources are connected and protected.
 ms.date: 06/05/2025
 ms.topic: how-to
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 #customer intent: As a security professional, I want to resolve VPC service controls issues in Microsoft Defender for Cloud to ensure my resources are connected and protected.
 ---
@@ -18,7 +18,9 @@ If you're unsure whether your Defender for Cloud account is experiencing issues 
 
 ## Prerequisites
 
-- A Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free one](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+Before you configure VPC Service Controls for Defender for Cloud, make sure you have the following prerequisites:
+
+- A Microsoft Azure subscription. If you don't have one, you can [sign up for a free Azure subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - [Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) set up on your Azure subscription.
 
@@ -28,7 +30,7 @@ If you're unsure whether your Defender for Cloud account is experiencing issues 
 
 ## Add ingress and egress policies
 
-Each VPC Service Controls perimeter in GCP protects one or more projects. Configure any perimeter that restricts Google Services to allow Defender for Cloud to scan the relevant projects.
+Each VPC Service Controls perimeter in GCP protects one or more projects. Configure any perimeter that restricts Google Services so Defender for Cloud can scan the projects in that perimeter.
 
 1. Sign in to your GCP project.
 
@@ -50,7 +52,7 @@ Each VPC Service Controls perimeter in GCP protects one or more projects. Config
 
 1. Select **Save**.
 
-Defender for Cloud triggers agentless disk scanning with API calls. You'll know that everything works after the next API call, which takes up to 24 hours to occur, when results for agentless scanning are generated.
+Defender for Cloud triggers agentless disk scanning with API calls. You'll know this configuration works after the next scheduled scan API call, which can take up to 24 hours.
 
 ## Next step
 
