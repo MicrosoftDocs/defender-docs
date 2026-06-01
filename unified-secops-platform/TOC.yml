@@ -117,6 +117,8 @@
               href: mto-dashboard.md
             - name: Manage tenants
               href: mto-tenants.md
+            - name: Create and manage tenant groups
+              href: mto-tenant-groups.md
             - name: Create and manage endpoint security policies
               href: mto-endpoint-security-policy.md
             - name: Manage content distribution across tenants

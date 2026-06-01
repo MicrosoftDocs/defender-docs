@@ -99,6 +99,6 @@ Device configuration management monitors baseline compliance only of Windows 10 
 
 - [Ensure your devices are configured properly](configure-machines.md)
 - [Get devices onboarded to Microsoft Defender for Endpoint](configure-machines-onboarding.md)
-- [Optimize ASR rule deployment and detections](configure-machines-asr.md)
+- [Monitor ASR rule activity](attack-surface-reduction-rules-monitor.md)
 
 

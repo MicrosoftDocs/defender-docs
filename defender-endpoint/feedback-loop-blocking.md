@@ -53,7 +53,7 @@ If your organization is using Defender for Endpoint, feedback-loop blocking is e
 
 - [EDR in block mode](edr-in-block-mode.md)
 
-- [Attack surface reduction](attack-surface-reduction.md)
+- [Attack surface reduction](attack-surface-reduction-rules-overview.md)
 
 - [Next-generation protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-microsoft-defender-antivirus-features) (antivirus)
 

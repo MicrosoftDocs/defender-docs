@@ -1,6 +1,6 @@
 ---
 title: Get started with Microsoft Defender Experts for cloud workloads
-description: Learn how to set up Microsoft Defender Experts for cloud workloads by selecting coverage, granting permissions, and configuring notifications in the Microsoft Defender portal.
+description: Set up Microsoft Defender Experts for cloud workloads by selecting coverage, granting permissions, and configuring notifications in the Defender portal.
 ms.service: defender-experts
 ms.subservice: dex-xdr
 ms.author: pauloliveria
@@ -30,11 +30,11 @@ ms.date: 05/18/2026
 
 - [Microsoft Defender Experts for Servers](dex-servers-overview.md)
 
-This article explains how to set up Defender Experts for Servers in the Microsoft Defender portal, including onboarding cloud resources, granting permissions, configuring notifications, and preparing your environment.
+Set up Defender Experts for Servers in the Microsoft Defender portal by onboarding cloud resources, granting permissions, configuring notifications, and preparing your environment.
 
 ## Review pricing information
 
-For Defender Experts for Servers pricing, review the [Microsoft Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also contact your Microsoft representative for more information.
+Defender Experts for Servers uses **pay-as-you-go consumption meter**. For more information on pricing, review the [Microsoft Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) or contact your Microsoft representative.
 
 ## Prerequisites
 
@@ -43,9 +43,13 @@ Before you begin, confirm the following:
 - [Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/defender-for-servers-overview) enabled in Microsoft Defender for Cloud
 - Microsoft Entra ID Plan 2
 
-To onboard your cloud workloads, you need at least a **Security Administrator** role in the Microsoft Defender portal. 
+Ensure you have at least a **Security Administrator** role assigned in the Microsoft Defender portal to onboard your cloud workloads. 
 
-## Select the cloud resources to onboard
+## Complete the onboarding steps
+
+Complete these steps to onboard your cloud workloads to the Defender Experts service.
+
+### Select the cloud resources to onboard
 
 Choose which cloud resource types you want Defender Experts to cover. The Defender Experts service is enabled at the tenant level.
 
@@ -58,15 +62,18 @@ To select your coverage options:
 
 1. Under supported cloud coverage options, select **Defender Experts for Servers**.
 
-    :::image type="content" source="media/get-started-dex-servers/defender-experts-servers-select.png" alt-text="Screenshot of the Defender Experts settings page in the Defender portal, with the Defender Experts for Servers option higlighted." lightbox="media/get-started-dex-servers/defender-experts-servers-select.png":::  
+    :::image type="content" source="media/get-started-dex-servers/defender-experts-servers-select.png" alt-text="Screenshot of the Defender Experts settings page in the Defender portal, with the Defender Experts for Servers option highlighted." lightbox="media/get-started-dex-servers/defender-experts-servers-select.png":::  
 
-1. Select **Save**. Saving your selection opens the Defender Experts onboarding wizard.
+1. Select **Save**.
 
-1. Select **Continue** to proceed with the onboarding wizard, or select **Cancel** to go back.
+   - If you're an existing Defender Experts for XDR customer, no additional action is needed (the provisioning script, permissions, and setup steps don't apply), and server coverage starts immediately.
+   - If you're a new Defender Experts customer, saving your selection opens the Defender Experts onboarding wizard.
 
-## Run the provisioning script
+1. Select **Continue** to proceed with the onboarding wizard to complete the following steps, or select **Cancel** to go back.
 
-To start your managed cloud security service, first set up the components that Defender Experts needs to securely access your environment. Download and run a signed PowerShell script on any managed device by using PowerShell 7 or in Azure Cloud Shell. This script provisions and registers the necessary first-party applications Defender Experts relies on to securely access and manage your environment.
+### Run the provisioning script
+
+To start your managed cloud security service, download and run a signed PowerShell script on any managed device by using PowerShell 7 or in Azure Cloud Shell. This script provisions and registers the necessary first-party applications that Defender Experts relies on to securely access and manage your environment.
 
 > [!NOTE]
 > To perform this onboarding step, ensure you're assigned _at least_ an **Application Admin** role.
@@ -79,7 +86,7 @@ To run the provisioning script:
 1. After you run the script, it might take some time to process. Don't close the wizard while the script processes. You can select **Validate** to check connector access and verify that the required components are provisioned.
 
 
-## Grant permissions to experts
+### Grant permissions to experts
 
 Defender Experts for Servers requires **Service provider access** that experts use to sign in to your tenant and deliver services based on assigned security roles. For more information, see [Cross-tenant access overview](/entra/external-id/cross-tenant-access-overview).
 
@@ -96,7 +103,7 @@ To grant permissions:
 
 1. Select **Next** to continue. 
 
-## Finish the setup and prepare your environment
+### Finish the setup and prepare your environment
 
 To finish the setup:
 1. Continue with the onboarding wizard to set up the following configurations:
@@ -105,12 +112,14 @@ To finish the setup:
 
 1. Review and submit settings. The onboarding wizard finishes its initial setup.
 
+## After you complete the onboarding steps
+
 After you onboard your cloud workloads, take note of the following information:
 
 - **Billing:** Billing starts when you finish onboarding.
   - View your bill in **Microsoft Cost Management**. For more information, see [What is Microsoft Cost Management](/azure/cost-management-billing/costs/overview-cost-management).
   - At the end of your billing cycle, look for **Microsoft Defender Experts for Servers costs**. 
-- **Endpoint protection:** The Microsoft Defender for Endpoint extension is automatically installed on all supported machines connected to Microsoft Defender for Cloud. Ensure that automatic provisioning of the Defender for Endpoint sensor is enabled.
+- **Endpoint protection:** The Microsoft Defender for Endpoint extension is automatically installed on all supported devices connected to Microsoft Defender for Cloud. Ensure that automatic provisioning of the Defender for Endpoint sensor is enabled.
 
 ## Turn off Defender Experts for Servers service
 

@@ -10,7 +10,7 @@ ms.reviewer: rlitinsky
 
 The Defender for Identity sensor v2.x has the following requirements. The v2.x sensor supports:
 
-- Domain controllers running Windows Server 2016 or later
+- Domain controllers running Windows Server 2016 or earlier
 - AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers
 
 > [!TIP]

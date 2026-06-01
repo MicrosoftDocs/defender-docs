@@ -1,6 +1,6 @@
 ---
 title: Customize controlled folder access
-description: Add other folders that should be protected by controlled folder access, or allow apps that are incorrectly blocking changes to important files.
+description: Customize controlled folder access by adding protected folders, allowing trusted apps, and configuring notifications in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: paulinbar
@@ -8,40 +8,39 @@ ms.author: painbar
 ms.reviewer: dbodorin, vladiso, nixanm, anvascon
 ms.subservice: asr
 ms.topic: how-to
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 03/04/2025
+ms.date: 05/06/2026
+ms.custom: msecd-doc-authoring-1012
+ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to customize controlled folder access settings so that I can protect important folders while allowing trusted apps to function.
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
-
 ---
-# Customize controlled folder access
 
-> [!TIP]
-> Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Controlled folder access is supported on:
-
+# Customize controlled folder access settings
 
 > [!IMPORTANT]
-> Controlled folder access is not supported on Linux servers.
+> Controlled folder access isn't supported on Linux servers.
 
 This article describes how to customize controlled folder access capabilities, and includes the following sections:
+
 - [Protect additional folders](#protect-additional-folders)
 - [Add apps that should be allowed to access protected folders](#allow-specific-apps-to-make-changes-to-controlled-folders)
 - [Allow signed executable files to access protected folders](#allow-signed-executable-files-to-access-protected-folders)
 - [Customize the notification](#customize-the-notification)
 
 > [!IMPORTANT]
-> Controlled folder access monitors apps for activities that are detected as malicious. Sometimes, legitimate apps are blocked from making changes to your files. If controlled folder access impacts your organization's productivity, you might consider running this feature in [audit mode](overview-attack-surface-reduction.md) to fully assess the impact.
+> Controlled folder access monitors apps for activities that are detected as malicious. Sometimes, legitimate apps are blocked from making changes to your files. If controlled folder access impacts your organization's productivity, you might consider running this feature in [audit mode](evaluate-controlled-folder-access.md#use-audit-mode-to-measure-impact) to fully assess the impact.
 
 ## Prerequisites
 
 ### Supported operating systems
 
-- Windows
 - Windows 11
 - Windows 10
 - Windows Server 2019 and later
@@ -49,11 +48,11 @@ This article describes how to customize controlled folder access capabilities, a
 
 ## Protect additional folders
 
-Controlled folder access applies to many system folders and default locations, including folders such as **Documents**, **Pictures**, and **Movies**. You can add other folders to be protected, but you cannot remove the default folders in the default list.
+Controlled folder access applies to many system folders and default locations, including folders such as **Documents**, **Pictures**, and **Movies**. You can add other folders to be protected, but you can't remove the default folders.
 
-Adding other folders to controlled folder access can be helpful for cases when you don't store files in the default Windows libraries, or you've changed the default location of your libraries.
+Adding other folders to controlled folder access can be helpful for cases when you don't store files in the default Windows libraries, or you changed the default location of your libraries.
 
-You can also specify network shares and mapped drives. Environment variables are supported; however, wildcards are not.
+You can also specify network shares and mapped drives. Environment variables are supported; however, wildcards aren't.
 
 You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobile device management configuration service providers to add and remove protected folders.
 
@@ -73,7 +72,7 @@ You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobil
 
 ### Use Group Policy to protect additional folders
 
-1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)?preserve=true). 
+1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)?preserve=true).
 
 1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
 
@@ -87,16 +86,17 @@ You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobil
 
 ### Use PowerShell to protect additional folders
 
-1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**
+1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
 
 1. Type the following PowerShell cmdlet, replacing `<the folder to be protected>` with the folder's path (such as `"c:\apps\"`):
 
     ```PowerShell
     Add-MpPreference -ControlledFolderAccessProtectedFolders "<the folder to be protected>"
     ```
+
 1. Repeat step 2 for each folder that you want to protect. Folders that are protected are visible in the Windows Security app.
 
-   :::image type="content" source="media/cfa-allow-folder-ps.png" alt-text="The PowerShell window with cmdlet shown" lightbox="media/cfa-allow-folder-ps.png":::
+   :::image type="content" source="media/cfa-allow-folder-ps.png" alt-text="Screenshot of a PowerShell window showing the Add-MpPreference cmdlet for protected folders." lightbox="media/cfa-allow-folder-ps.png":::
 
 > [!IMPORTANT]
 > Use `Add-MpPreference` to append or add apps to the list and not `Set-MpPreference`. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
@@ -110,13 +110,13 @@ Use the [./Device/Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessProte
 You can specify if certain apps are always considered safe and give write access to files in protected folders. Allowing apps can be useful if a particular app you know and trust is being blocked by the controlled folder access feature.
 
 > [!IMPORTANT]
-> By default, Windows adds apps that are considered friendly to the allowed list. Such apps that are added automatically are not recorded in the list shown in the Windows Security app or by using the associated PowerShell cmdlets. You shouldn't need to add most apps. Only add apps if they are being blocked and you can verify their trustworthiness.
+> By default, Windows adds apps that are considered friendly to the allowed list. Such apps that are added automatically aren't recorded in the list shown in the Windows Security app or by using the associated PowerShell cmdlets. You shouldn't need to add most apps. Only add apps if they're being blocked and you can verify their trustworthiness.
 
-When you add an app, you have to specify the app's location. Only the app in that location will be permitted access to the protected folders. If the app (with the same name) is in a different location, it will not be added to the allowlist and may be blocked by controlled folder access.
+When you add an app, you have to specify the app's location. Only the app in that location is permitted access to the protected folders. If the app (with the same name) is in a different location, it isn't added to the allowlist and might be blocked by controlled folder access.
 
-An allowed application or service only has write access to a controlled folder after it starts. For example, an update service will continue to trigger events after it's allowed until it is stopped and restarted.
+An allowed application or service only has write access to a controlled folder after it starts. For example, an update service continues to trigger events after it's allowed until it's stopped and restarted.
 
-### Use the Windows Defender Security app to allow specific apps
+### Use the Windows Security app to allow specific apps
 
 1. Open the Windows Security app by searching the start menu for **Security**.
 
@@ -126,7 +126,7 @@ An allowed application or service only has write access to a controlled folder a
 
 1. Select **Add an allowed app** and follow the prompts to add apps.
 
-   :::image type="content" source="media/cfa-allow-app.png" alt-text="The Add an allowed app button" lightbox="media/cfa-allow-app.png":::
+   :::image type="content" source="media/cfa-allow-app.png" alt-text="Screenshot of the Add an allowed app button in Windows Security." lightbox="media/cfa-allow-app.png":::
 
 ### Use Group Policy to allow specific apps
 
@@ -157,7 +157,7 @@ An allowed application or service only has write access to a controlled folder a
 
    Continue to use `Add-MpPreference -ControlledFolderAccessAllowedApplications` to add more apps to the list. Apps added using this cmdlet will appear in the Windows Security app.
 
-   :::image type="content" source="media/cfa-allow-app-ps.png" alt-text="The PowerShell cmdlet to allow an application" lightbox="media/cfa-allow-app-ps.png":::
+   :::image type="content" source="media/cfa-allow-app-ps.png" alt-text="Screenshot of a PowerShell window showing the Add-MpPreference cmdlet for allowed applications." lightbox="media/cfa-allow-app-ps.png":::
 
 > [!IMPORTANT]
 > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
@@ -170,17 +170,15 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessAllowedAppli
 
 Microsoft Defender for Endpoint certificate and file indicators can allow signed executable files to access protected folders. For implementation details, see [Create indicators based on certificates](indicator-certificates.md).
 
-> [!Note]
-> This does not apply to scripting engines, including Powershell.
+> [!NOTE]
+> Certificate and file indicators don't apply to scripting engines, including PowerShell.
 
 ## Customize the notification
 
 For more information about customizing the notification when a rule is triggered and blocks an app or file, see [Configure alert notifications in Microsoft Defender for Endpoint](/defender-xdr/configure-email-notifications).
 
-## See also
+## Related content
 
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Enable controlled folder access](enable-controlled-folders.md)
-- [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
-
-
+- [Configure attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md)

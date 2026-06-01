@@ -76,7 +76,7 @@ See [Protect important folders with controlled folder access](controlled-folders
 
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Evaluate Microsoft Defender for Endpoint](evaluate-mde.md)
-- [Use audit mode](overview-attack-surface-reduction.md)
+- [Use audit mode](attack-surface-reduction-overview.md#audit-mode)
 
 
 

@@ -11,7 +11,7 @@ ms.custom:
   - sfi-ga-nochange
 description: Admins can learn how to view, create, modify, and delete anti-spam policies in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 03/30/2026
+ms.date: 05/22/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -51,6 +51,8 @@ You can configure anti-spam policies in the Microsoft Defender portal or in [Exc
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
+  [!INCLUDE [rbac-save-failure-tip](../includes/rbac-save-failure-tip.md)]
+
 - For our recommended settings for anti-spam policies, see [Anti-spam policy settings](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings).
 
   > [!TIP]
@@ -75,7 +77,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in [Exc
    When you're finished on the **Name your policy** page, select **Next**.
 
 4. On the **Users, groups, and domains** page, identify the internal recipients that the policy applies to (recipient conditions):
-   - **Users**: The specified mailboxes, mail users, mail contacts, or mail enabled public folders.
+   - **Users**: The specified mailboxes, mail users, or mail enabled public folders.
    - **Groups**:
      - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
      - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).
@@ -587,6 +589,10 @@ Remove-HostedContentFilterRule -Identity "Marketing Department"
 ```
 
 For detailed syntax and parameter information, see [Remove-HostedContentFilterRule](/powershell/module/exchangepowershell/remove-hostedcontentfilterrule).
+
+## Troubleshoot anti-spam policy issues
+
+If you encounter issues with anti-spam policy configuration, such as policy precedence conflicts, unexpected SCL overrides, or false positives caused by ASF settings, see [Troubleshoot common anti-spam policy issues](anti-spam-policies-troubleshooting.md).
 
 ## How do you know these procedures worked?
 

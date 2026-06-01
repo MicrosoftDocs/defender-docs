@@ -16,7 +16,7 @@ ms.topic: overview
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 06/27/2024
+ms.date: 05/19/2026
 ---
 
 # Custom detections overview
@@ -27,7 +27,7 @@ ms.date: 06/27/2024
 
 With custom detections, you can proactively monitor for and respond to various events and system states, including suspected breach activity and misconfigured endpoints. Custom detections are customizable detection rules that automatically trigger alerts and response actions.
 
-Custom detections work with [advanced hunting](advanced-hunting-overview.md), which provides a powerful, flexible query language that covers a broad set of event and system information from your network. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches.
+Custom detections work with [advanced hunting](advanced-hunting-overview.md), which provides a powerful, flexible query language that covers a broad set of event and system information from your network. You can set them to run at regular intervals, generating alerts and taking response actions whenever there are matches. You can create custom detection rules from the advanced hunting query editor or directly from the custom detection rules list.
 
 Custom detections provide:
 
