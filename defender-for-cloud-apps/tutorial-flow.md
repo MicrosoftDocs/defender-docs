@@ -3,6 +3,7 @@ title: Extend governance to endpoint remediation
 description: This tutorial describes the process to configure Microsoft Defender for Cloud Apps policy alerts to trigger Microsoft Power Automate workflows to run Microsoft Defender for Endpoint remediation actions.
 ms.date: 01/29/2023
 ms.topic: tutorial
+ms.custom: sfi-image-nochange
 ---
 # Tutorial: Extend governance to endpoint remediation
 

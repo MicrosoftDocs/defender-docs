@@ -4,6 +4,7 @@ description: Learn about how to activate the Microsoft Defender for Identity sen
 ms.date: 06/30/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange
 ---
 
 # Activate the Defender for Identity sensor v3.x on a domain controller

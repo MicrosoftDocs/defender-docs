@@ -4,6 +4,7 @@ description: This article provides information about how to personalize the emai
 ms.date: 03/15/2023
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart 
+ms.custom: sfi-image-nochange
 ---
 
 # Configure user notifications

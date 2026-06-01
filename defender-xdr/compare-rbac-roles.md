@@ -9,6 +9,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.custom:
+  - sfi-ga-nochange
 ms.topic: concept-article
 ms.date: 04/07/2026
 ms.reviewer:

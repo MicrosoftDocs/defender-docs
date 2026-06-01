@@ -3,6 +3,7 @@ title: Prerequisites and support in Microsoft Security Exposure Management
 description: Review the prerequisites for Microsoft Security Exposure Management.
 ms.topic: overview
 ms.date: 07/30/2025
+ms.custom: sfi-ga-nochange
 
 ---
 

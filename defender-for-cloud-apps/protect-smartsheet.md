@@ -4,6 +4,7 @@ description: Learn how about connecting your Smartsheet app to Defender for Clou
 ms.date: 10/05/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ms.custom: sfi-image-nochange
 ---
 # How Defender for Cloud Apps helps protect your Smartsheet
 
