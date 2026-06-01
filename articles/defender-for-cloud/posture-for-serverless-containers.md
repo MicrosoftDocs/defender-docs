@@ -2,10 +2,10 @@
 title: Posture for Serverless Containers (Preview)
 description: Learn how Defender CSPM in Microsoft Defender for Cloud provides inventory, recommendations, and attack path visibility for serverless containers.
 ms.topic: concept-article
-#customer intent: ["As a cloud security administrator, I want to understand posture for serverless containers in Microsoft Defender for Cloud so that I can prioritize risk across supported serverless workloads."]
-ms.date: 05/27/2026
+ms.date: 06/01/2026
 author: ElazarK
 ms.author: elkrieger
+#customer intent: "As a cloud security administrator, I want to understand posture for serverless containers in Microsoft Defender for Cloud so that I can prioritize risk across supported serverless workloads."
 ---
 
 # Posture for Serverless Containers (Preview)
@@ -60,23 +60,36 @@ For enablement steps, see [Protect resources with Defender CSPM](tutorial-enable
 
 Defender for Cloud discovers supported serverless container resources and shows them in inventory views so you can understand resource presence and coverage.
 
-<!-- TODO: Add screenshot placeholder - inventory view for posture for serverless containers. -->
+:::image type="content" source="media/posture-for-serverless-containers/serverless-inventory.png" alt-text="Screenshot of serverless container inventory." lightbox="media/posture-for-serverless-containers/serverless-inventory.png":::
+
+After you filter your results, select any of the resources to view more details about its security posture, including any active security recommendations and their severity levels.
+
+:::image type="content" source="media/posture-for-serverless-containers/serverless-posture-resource.png" alt-text="Screenshot that shows a sample serverless containers resource." lightbox="media/posture-for-serverless-containers/serverless-posture-resource.png":::
 
 ### Recommendations
 
 Defender for Cloud generates posture recommendations based on control-plane configuration signals and container image metadata, including vulnerability assessment findings where applicable.
 
-To remediate findings, see [Remediate security recommendations in Microsoft Defender for Cloud](implement-security-recommendations.md).
+:::image type="content" source="media/posture-for-serverless-containers/serverless-container-recommendations.png" alt-text="Screenshot that shows the recommendations page filtered for serverless containers." lightbox="media/posture-for-serverless-containers/serverless-container-recommendations.png":::
 
-<!-- TODO: Add screenshot placeholder - recommendations view for posture for serverless containers. -->
+
+To remediate findings, see [Remediate security recommendations in Microsoft Defender for Cloud](implement-security-recommendations.md).
 
 ### Attack path analysis
 
 Defender for Cloud correlates supported findings into attack paths to help you prioritize remediation based on likely risk propagation.
 
+:::image type="content" source="media/posture-for-serverless-containers/attack-path-serverless-containers.png" alt-text="Screenshot that shows attack paths filtered for serverless containers." lightbox="media/posture-for-serverless-containers/attack-path-serverless-containers.png":::
+
 To learn how to investigate attack paths, see [How to manage attack path analysis](how-to-manage-attack-path.md).
 
-<!-- TODO: Add screenshot placeholder - attack path view for posture for serverless containers. -->
+### Cloud security explorer
+
+Defender for Cloud's Cloud Security Explorer provides advanced filtering and querying capabilities that allow you to analyze the security posture of your serverless containers. You can create custom queries to identify specific misconfigurations or vulnerabilities across your workloads.
+
+:::image type="content" source="media/posture-for-serverless-containers/serverless-containers-security-explorer.png" alt-text="Screenshot that shows how to search teh cloud security explorer for serverless containers.":::
+
+Learn how to [build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
 
 ## Limitations
 
@@ -84,7 +97,7 @@ In preview, posture for serverless containers has the following limitations:
 
 - Posture-only coverage. Runtime threat detection and active response aren't included.
 - Insights are based on control-plane signals and image metadata. Host and runtime process telemetry isn't used.
-- Availability is limited to supported workloads in Azure and AWS commercial clouds.
+- Availability is limited to supported workloads in Azure and AWS clouds.
 
 ## Related content
 

@@ -3,7 +3,7 @@ title: Reference table for serverless containers security recommendations
 description: This article lists Microsoft Defender for Cloud security recommendations for serverless containers.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 05/31/2026
+ms.date: 06/01/2026
 author: ElazarK
 ms.author: elkrieger
 ms.custom: generated
