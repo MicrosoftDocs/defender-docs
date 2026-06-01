@@ -8,7 +8,7 @@ ms.date: 06/01/2026
 #customer intent: As a security administrator, I want to deploy Defender for Containers to private clusters so that I can protect nonpublic Kubernetes environments.
 ---
 
-# Deploy Defender for Containers to private clusters (Preview)
+# Deploy Defender for Containers to private clusters (preview)
 
 Private clusters isolate Kubernetes environments from the internet and, in this context, restricted connectivity means no direct access to the Kubernetes API server. Defender for Containers extends threat detection and security visibility to these environments, so you can maintain protection coverage while preserving private cluster network boundaries.
 
