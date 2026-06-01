@@ -1,7 +1,7 @@
 ---
 title: Protect your Microsoft 365 environment | Microsoft Defender for Cloud Apps
 description: Learn how about connecting your Microsoft 365 app to Defender for Cloud Apps using the API connector.
-ms.date: 01/13/2026
+ms.date: 06/01/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ---
@@ -71,10 +71,13 @@ In addition to monitoring for potential threats, you can apply and automate the 
 |Type|Action|
 |---|---|
 |Data governance|**OneDrive:** <br/> - Inherit parent folder permissions <br/> - Make file/folder private <br/> - Put file/folder in admin quarantine <br/> - Put file/folder in user quarantine <br/> - Trash file/folder <br/> - Remove a specific collaborator <br/> - Remove external collaborators on file/folder <br/> - Apply Microsoft Purview Information Protection sensitivity label <br/> - Remove Microsoft Purview Information Protection sensitivity label <br/> **SharePoint:** <br/> - Inherit parent folder permissions <br/> - Make file/folder private <br/> - Put file/folder in admin quarantine <br/> - Put file/folder in user quarantine <br/> - Put file/folder in user quarantine and add owner permissions <br/> - Trash file/folder <br/> - Remove external collaborators on file/folder <br/> - Remove a specific collaborator <br/> - Apply Microsoft Purview Information Protection sensitivity label <br/> - Remove Microsoft Purview Information Protection sensitivity label|
-|User governance|- Notify user on alert (via Microsoft Entra ID) <br/> - Require user to sign in again (via Microsoft Entra ID) <br/> - Suspend user (via Microsoft Entra ID)|
+|User governance|- Notify user on alert (via Microsoft Entra ID) <br/> - Require user to sign in again (via Microsoft Entra ID) <br/> - Confirm user compromised (via Microsoft Entra ID) <br/> - Suspend user (via Microsoft Entra ID)|
 |OAuth app governance|- Revoke OAuth app permission|
 
 For more information about remediating threats from apps, see [Governing connected apps](governance-actions.md).
+
+> [!NOTE]
+> The following user governance actions don't apply to guest users: **Require user to sign in again**, **Confirm user compromised**, and **Suspend user**. These actions are skipped for guest user accounts.
 
 ## Protect Microsoft 365 in real time
 
