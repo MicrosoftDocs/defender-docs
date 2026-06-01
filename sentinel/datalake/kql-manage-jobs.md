@@ -98,7 +98,7 @@ To delete a job, select  **Delete** in the job details panel. A confirmation dia
 
 ## Graph jobs
 
-A **graph job** is a scheduled run of a custom Microsoft Security Exposure Management graph against data in the Microsoft Sentinel data lake. Graph jobs are created implicitly when you publish a custom graph from the VS Code or notebook custom-graph authoring experience - they are not created from the **Jobs** page. For more information about creating custom graphs, see [Create custom graphs](create-custom-graphs.md) and [Custom graphs overview](custom-graphs-overview.md).
+A **graph job** is a scheduled notebook-based custom graph job in your Microsoft Sentinel data lake tenant. Graph jobs are created when you publish a custom graph from Sentinel VSC extension or when graphs are subsequently refreshed per your schedule configurations. For more information about creating custom graphs, see [Create custom graphs](create-custom-graphs.md) and [Custom graphs overview](custom-graphs-overview.md).
 
 > [!IMPORTANT]
 > Graph jobs are **view-only** from the Jobs page. To change a graph job's query, schedule, or pool size, edit and republish the graph from the custom-graph authoring experience. The Jobs page doesn't support create, edit, or delete actions for graph jobs.
