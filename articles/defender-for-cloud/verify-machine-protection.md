@@ -27,7 +27,7 @@ Defender for Cloud presents [The status of Microsoft SQL Servers on Machines sho
 
 1. Select **View recommendation for all resources**.
 
-    :::image type="content" source="media/verify-machines-protection/view-recommendation.png" alt-text="Screenshot that shows were to locate the View recommendation for all resources button is located. " lightbox="media/verify-machines-protection/view-recommendation.png":::
+    :::image type="content" source="media/verify-machines-protection/view-recommendation.png" alt-text="Screenshot that shows where to locate the View recommendation for all resources button." lightbox="media/verify-machines-protection/view-recommendation.png":::
 
 1. Review the protection status and the unhealthy reason.
 

@@ -53,6 +53,3 @@ The change might take several minutes to propagate. After the change is applied,
 - [Assign access to workload owners](assign-access-to-workload.md).
 - [Troubleshoot your multicloud connectors](troubleshoot-connectors.md).
 - Get answers in [common questions about connecting your GCP project](faq-general.yml).
-
-> [!div class="nextstepaction"]
-> [Troubleshoot your multicloud connectors](troubleshoot-connectors.md)
