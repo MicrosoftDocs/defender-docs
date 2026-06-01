@@ -8,7 +8,7 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: concept-article
-ms.date: 07/09/2025
+ms.date: 06/01/2026
 ms.collection: ms-security  
 
 # Customer intent: As a threat hunter, security engineer or an security administrator, I want to manage jobs in the Microsoft Sentinel data lake so that I can run KQL queries  against the data in the lake tier and promote the results to the analytics tier.
@@ -20,14 +20,16 @@ ms.collection: ms-security
 
 A KQL job is a one-time or scheduled task that runs a KQL (Kusto Query Language) query against the data in the data lake tier to promote the results to the analytics tier. Jobs can be created in the **KQL queries** editor, or the **Jobs** page under **Microsoft Sentinel** > **Data lake exploration**  in the Microsoft Defender portal for. For more information, see [KQL jobs](kql-jobs.md). 
 
+The **Jobs** page also lists notebook jobs and graph jobs that run against the data lake, so you can monitor every scheduled job from one place. Notebook jobs are created from the notebook authoring experience (see [Notebook jobs](notebook-jobs.md)). Graph jobs are scheduled runs of a custom Microsoft Security Exposure Management graph and are created from the VS Code or notebook custom-graph authoring experience (see [Custom graphs overview](custom-graphs-overview.md) and the [Graph jobs](#graph-jobs) section below). Notebook jobs and graph jobs are **view-only** from this page.
+
 The Jobs management page provides the following functions:
 
-+ View all jobs in the Microsoft Sentinel data lake. You can view jobs created in the KQL queries editor or jobs created for notebooks. 
-+ View a summary of KQL and Notebook jobs.
++ View all jobs in the Microsoft Sentinel data lake, including KQL, notebook, and graph jobs.
++ View a summary of KQL, notebook, and graph jobs.
 + View details of all jobs and apply filter to narrow down the list.
 + View recent job health issues.
-+ Create a new job to run a KQL query. For more information on creating jobs, see [Create jobs in the Microsoft Sentinel data lake using KQL](kql-jobs.md).
-+ Edit job details. You can view but can't edit a notebook job from the jobs page. For more information on editing notebook jobs, see [Notebook notebooks](notebook-jobs.md).
++ Create a new job to run a KQL query. For more information on creating jobs, see [Create jobs in the Microsoft Sentinel data lake using KQL](kql-jobs.md). Notebook jobs and graph jobs can't be created from this page.
++ Edit job details for KQL jobs. You can view but can't edit a notebook job or a graph job from the Jobs page. For more information on editing notebook jobs, see [Notebook jobs](notebook-jobs.md). To edit a graph job, republish the graph from the custom-graph authoring experience.
 + Disable a job, preventing it from running until you enable it again.
 + Enable a job, allowing it to run again after being disabled.
 + View job history, including the run times, and statuses of the job.
@@ -41,7 +43,7 @@ Microsoft Entra ID roles provide broad access across all workspaces in the data 
 
 ## Manage jobs
 
-The Jobs page shows a list of jobs, including the job name, status, job type, last and next run dates, and the recent job health. You can filter the jobs by status, last run date, and creation date. **Jobs status** column indicates whether the job enabled or disabled. The **Job type** column indicates whether the job is a KQL query job or a notebook job.
+The Jobs page shows a list of jobs, including the job name, status, job type, last and next run dates, and the recent job health. You can filter the jobs by status, last run date, and creation date. The **Jobs status** column indicates whether the job is enabled or disabled. The **Job type** column indicates whether the job is a **KQL** job, a **Notebook** job, or a **Graph** job.
 :::image type="content" source="media/kql-manage-jobs/jobs-page.png" lightbox="media/kql-manage-jobs/jobs-page.png" alt-text="A screenshot showing the jobs page in the Defender portal.":::
 
 The **Recent health issues** column shows whether the job encountered any issues in its recent runs as per the filters. Select the link to view the job's health details.
@@ -92,6 +94,24 @@ To enable or disable a job, select **Enable** or **Disable** in the job details 
 
 To delete a job, select  **Delete** in the job details panel. A confirmation dialog appears, asking you to confirm the deletion. If you confirm, the job is permanently deleted and can't be recovered. You can't delete a running job.
 
+## Graph jobs
+
+A **graph job** is a scheduled run of a custom Microsoft Security Exposure Management graph against data in the Microsoft Sentinel data lake. Graph jobs are created implicitly when you publish a custom graph from the VS Code or notebook custom-graph authoring experience - they are not created from the **Jobs** page. For more information about creating custom graphs, see [Create custom graphs](create-custom-graphs.md) and [Custom graphs overview](custom-graphs-overview.md).
+
+> [!IMPORTANT]
+> Graph jobs are **view-only** from the Jobs page. To change a graph job's query, schedule, or pool size, edit and republish the graph from the custom-graph authoring experience. The Jobs page doesn't support create, edit, or delete actions for graph jobs.
+
+To find graph jobs, open the Jobs page and look for rows where the **Job type** column shows **Graph**. Selecting a graph job opens a details panel that shows:
+
++ Job name and description.
++ **Job type**: Graph.
++ Status (enabled or disabled) and most recent run status.
++ Schedule configuration.
++ Pool size.
++ Last run and next run times.
+
+<!-- TODO: confirm with engineering whether the History tab is populated for graph jobs before this section goes live - behavior was uncertain during the docs working session. -->
+
 ## Considerations and limitations
 
 For information on considerations and limitations when managing KQL jobs in the Microsoft Sentinel data lake, see [KQL jobs](kql-jobs.md#considerations-and-limitations).
@@ -100,5 +120,7 @@ For information on considerations and limitations when managing KQL jobs in the 
 
 - [Overview of the Microsoft Sentinel data lake](sentinel-lake-overview.md)
 - [Create jobs in the Microsoft Sentinel data lake using KQL](kql-jobs.md)
+- [Notebook jobs](notebook-jobs.md)
+- [Custom graphs overview](custom-graphs-overview.md)
 - [Data lake exploration - KQL queries](kql-queries.md)
 - [Microsoft Sentinel data lake roles and permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake)
