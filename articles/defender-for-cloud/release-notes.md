@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 05/31/2026
+ms.date: 06/01/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -54,7 +54,9 @@ Private clusters now support the Defender sensor for gated deployment, binary dr
 
 This update extends Defender for Containers coverage to private cluster scenarios where you use the sensor-based features for container protection.
 
-For more information, see [access patterns and private cluster support for Defender for Containers features](defender-for-containers-feature-access-patterns.md).
+For private cluster installation instructions for the preview path, see [Enable private cluster support for Defender for Containers (Preview)](defender-for-containers-private-clusters-preview.md).
+
+For feature-level support details, see [access patterns and private cluster support for Defender for Containers features](defender-for-containers-feature-access-patterns.md).
 
 ### Malware detection for EKS and GKE nodes (Preview)
 
