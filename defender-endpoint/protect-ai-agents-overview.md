@@ -47,8 +47,6 @@ Microsoft Defender discovers the following local AI agent families on Windows en
 
 For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).
 
-For information on runtime protection for local AI agents, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
-
 ## Broader AI security capabilities
 
 Microsoft Defender's discovery capabilities are part of a comprehensive AI security approach. Microsoft Defender provides other capabilities across your organization's AI ecosystem:
