@@ -27,7 +27,7 @@ This article explains how local AI agent discovery works, lists supported agents
 
 ## Local AI agent discovery on endpoints
 
-Microsoft Defender automatically detects supported local AI agents and MCP server configurations on onboarded devices. When Microsoft Defender Antivirus identifies a supported local AI agent, the agent is displayed as a discoverable asset in the Microsoft Defender portal with visibility into:
+Microsoft Defender automatically detects supported local AI agents and MCP server configurations on onboarded devices. When Microsoft Defender identifies a supported local AI agent, the agent is displayed as a discoverable asset in the Microsoft Defender portal with visibility into:
 
 - **Local AI agent inventory**: A centralized view of discovered local AI agents with device associations and discovery metadata.
 - **Exposure map**: Visual relationships between local AI agents, devices, identities, and cloud resources to help assess potential impact.
