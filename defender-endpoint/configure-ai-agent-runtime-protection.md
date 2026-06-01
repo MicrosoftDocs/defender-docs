@@ -14,7 +14,7 @@ appliesto:
 
 # Set up AI agent runtime protection with Microsoft Defender for Endpoint
 
-Local AI agents can read files, invoke tools, and execute commands on user workstations — making them targets for prompt injection attacks. Runtime protection helps you detect and block these attacks at the device level before agents can act on malicious instructions.
+Local AI agents run with the user's privileges on the endpoints they operate on, where they can read files, invoke tools, and run commands. Malicious instructions hidden in the content an agent reads can hijack it through prompt injection. Runtime protection helps you detect prompt injection at the device level and block or audit the agent's action before it acts on those instructions.
 
 This article explains how to enable runtime protection, deploy it across your organization, and investigate detections.
 
@@ -25,7 +25,7 @@ For an overview of how runtime protection works, see [Runtime protection for loc
 Microsoft recommends the following phased rollout:
 
 1. **Test**: [Enable runtime protection](#enable-runtime-protection) in **Audit** mode on a small set of devices where supported agents are actively used.
-1. **Review**: Monitor alerts in the Microsoft Defender portal for 1-2 weeks. Identify any false positives and adjust expectations.
+1. **Review**: Monitor alerts in the Microsoft Defender portal for 1-2 weeks. Identify any false positives before broadening enforcement.
 1. **Deploy**: [Roll out across your organization](#deploy-settings-across-your-organization-with-intune) in Audit mode to additional device groups.
 1. **Enforce**: After validating that alerts are accurate and actionable, switch to **Block** mode on device groups where you want active enforcement.
 
@@ -71,7 +71,7 @@ After validating runtime protection on test devices, use Intune to deploy settin
 
 The PowerShell command in the previous section configures a single device and is useful for testing and validation. To deploy the same settings across your organization, use Intune to run a PowerShell script on target device groups.
 
-1. Create a PowerShell script that includes the following command:
+1. Create a PowerShell script that includes the following command, setting the mode to match your rollout phase (Audit while validating, Block for enforcement):
 
     ```powershell
     Set-MpPreference -AiAgentProtection Block

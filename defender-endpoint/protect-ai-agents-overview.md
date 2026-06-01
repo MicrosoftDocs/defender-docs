@@ -29,21 +29,24 @@ This article explains how local AI agent discovery works, lists supported agents
 
 Microsoft Defender automatically detects supported local AI agents and MCP server configurations on onboarded devices. When Microsoft Defender identifies a supported local AI agent, the agent is displayed as a discoverable asset in the Microsoft Defender portal with visibility into:
 
-- **Local AI agent inventory**: A centralized view of discovered local AI agents with device associations and discovery metadata.
-- **Exposure map**: Visual relationships between local AI agents, devices, identities, and cloud resources to help assess potential impact.
+- **Local AI agent inventory**: A centralized view of discovered local AI agents with device and user associations and discovery metadata.
+- **Exposure map**: Visual relationships between local AI agents, devices, identities, and the resources those identities can access, to help assess potential impact.
 - **Advanced hunting**: Hunting for discovery data using Kusto Query Language (KQL) to investigate local AI agents and the resources they can access based on the permissions of the user running them.
 
 ### Supported local AI agents and MCP server configurations
 
 Defender defines an agent as a combination of user, device, and agent type. For example, if Claude Code runs in 15 different project folders on the same device for the same user, it appears as a single agent entry in the inventory.
 
-Microsoft Defender discovers the following local AI agent families on Windows endpoints. It also discovers MCP server configurations associated with supported agents, including local and remote MCP server configurations.
+Microsoft Defender discovers supported local AI agents on Windows endpoints. This includes agents that run from the command line, desktop apps, agentic IDEs, VS Code extensions, and Claw-based local agent implementations.
+When supported, Microsoft Defender also discovers MCP server configurations associated with these agents, including local and remote MCP server configurations.
 
-- **CLI agents**: Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, OpenCode
+Supported local AI agents include:
+
+- **CLI agents**: Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, OpenCode, Antigravity CLI
 - **Desktop apps**: ChatGPT Desktop, Claude Desktop, Codex Desktop, Ollama Desktop, Poe Desktop
-- **Agentic IDEs**: Cursor
-- **VS Code extensions**: Cline, Claude Code, Codex, Gemini Code Assist, GitHub Copilot, Roo Code
-- **Other**: Clawpilot, Claw/Nanobot, OpenClaw
+- **Agentic IDEs**: Cursor, Antigravity IDE, Windsurf
+- **VS Code extensions**: Claude Code, Cline, Codex, Gemini Code Assist, GitHub Copilot, Roo Code
+- **Claw-based agents**: OpenClaw, Clawpilot, Claw/Nanobot
 
 For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).
 

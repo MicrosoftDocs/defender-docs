@@ -16,7 +16,7 @@ appliesto:
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-Microsoft Defender automatically discovers supported local AI agents and MCP servers configured on onboarded devices and surfaces them in the AI agent inventory. To learn more about local AI agent discovery, see [Local AI agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md).
+Microsoft Defender automatically discovers supported local AI agents and MCP servers configured on onboarded devices and surfaces them in the AI agent inventory and advanced hunting. To learn more about local AI agent discovery, see [Local AI agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md).
 
 In this article, you learn how to view discovered agents in the inventory, explore their relationships with devices and identities, and investigate agent presence by using advanced hunting.
 
