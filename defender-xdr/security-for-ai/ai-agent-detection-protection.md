@@ -42,6 +42,8 @@ This article explains how Microsoft Defender detects, blocks, and enables securi
 
 Microsoft Defender provides real-time protection (RTP) to prevent AI agents from performing unsafe actions during runtime. Defender integrates directly with [Work IQ MCP](/microsoft-agent-365/tooling-servers-overview) to evaluate supported agent-initiated tool invocations before they execute. If Defender determines that an action is risky, it blocks the action before the agent performs it, preventing harmful behavior.
 
+For supported local AI agents, [runtime protection](/defender-endpoint/ai-agent-runtime-protection-overview) extends this value to the endpoint where agents can read files, invoke tools, call services, and act on user workstations. Defender inspects covered agent-loop activity, including user prompts, pre-tool calls, and post-tool responses, using provider-supported application-layer hooks, then audits or blocks based on policy before risky actions continue.
+
 > [!NOTE]
 > Real-time protection is available only for AI agents that use tools currently supported in Work IQ MCP. Agents that rely on unsupported tools or do not integrate with Work IQ MCP are outside the scope of this capability.
 
@@ -58,6 +60,8 @@ Real-time protection focuses on high-confidence threats, including:
 - Use of obfuscated or hidden content to manipulate agent behavior  
 
 - Credential leakage through legitimate channels such as email or external APIs  
+
+- Prompt injection attacks that attempt to manipulate agents through injected instructions hidden in files, tool responses, or user input (specifically for local AI agents with runtime protection)
 
 > [!NOTE]
 > For agents built with Microsoft Copilot Studio, Microsoft Defender also provides real-time protection by evaluating model prompts and responses. This capability doesn't depend on Work IQ.
@@ -82,21 +86,7 @@ To enable real-time protection for your AI agents:
 
     For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).
 
-## Protect supported local AI agents on Windows endpoints (Preview)
-
-Microsoft Defender extends runtime protection to supported local AI agents running on Windows endpoints. These agents can read files, invoke tools, call services, and act on user workstations, so security teams need protection that catches risky activity before it executes.
-
-Runtime protection helps reduce the risk that an attacker-controlled prompt, malicious tool response, or unsafe agent action manipulates a local agent into doing something harmful. Defender inspects covered agent activity in the agent loop, including user prompts, pre-tool calls, and post-tool responses, then audits or blocks based on policy.
-
-Runtime protection uses event-based inspection through provider-supported hooks exposed by supported agents to inspect lifecycle events such as user prompts, pre-tool calls, and post-tool responses at the application layer. This gives Defender precise context before risky actions continue.
-
-Microsoft recommends starting with a small test deployment, then rolling out in audit mode to review detections, and finally moving selected device groups to block mode. When Defender blocks or audits runtime activity, alerts appear in Microsoft Defender to support investigation and incident correlation.
-
-For more information, see:
-
-- [Runtime protection for local AI agents with Microsoft Defender for Endpoint](/defender-endpoint/ai-agent-runtime-protection-overview)
-
-- [Set up AI agent runtime protection with Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection)
+1. To enable runtime protection for local AI agents running on endpoints, follow the steps in [Set up AI agent runtime protection with Microsoft Defender for Endpoint](configure-ai-agent-runtime-protection.md).
 
 ## Detect AI agent threats in near-real-time
 
