@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/28/2026
+ms.date: 06/01/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -772,7 +772,7 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 |__Feature Area__| __Update Summary__|
 | -------- | -------- |
-|Feature Enhancements|Trust this network option is only applicable to unsecure networks from now, suspicious/rogue networks cannot be trusted by the users.|
+|Feature Enhancements|The Trust this network option is now only applicable to unsecure networks. Suspicious/rogue networks can't be trusted by users.|
 |Improvements|Performance improvements and general bug fixes.|
 
 ### iOS | May 2026 | Platform Version: 1.1.77130101
