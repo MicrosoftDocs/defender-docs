@@ -132,7 +132,7 @@ If automatic auditing isn't available or you opted out, [configure auditing manu
 
 ### Configure RPC auditing
 
-To improve security visibility and unlock more identity detections, apply the **Unified Sensor RPC Audit** tag to your devices. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device Inventory for transparency and auditing.
+To improve security visibility and enable additional identity detections, apply the **Unified Sensor RPC Audit** tag to your devices. Once applied, the configuration is enforced on all existing and future devices that match the rule criteria. The tag is visible in the Device inventory for auditing purposes.
 
 #### Prerequisites
 
