@@ -86,7 +86,7 @@ To enable real-time protection for your AI agents:
 
     For more information, see [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory).
 
-1. To enable runtime protection for local AI agents running on endpoints, follow the steps in [Set up AI agent runtime protection with Microsoft Defender for Endpoint](configure-ai-agent-runtime-protection.md).
+1. To enable runtime protection for local AI agents running on endpoints, follow the steps in [Set up AI agent runtime protection with Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection).
 
 ## Detect AI agent threats in near-real-time
 
