@@ -848,9 +848,9 @@ If an override or policy configuration was found, the result should be available
 
 > [!NOTE]
 >
-> In Defender for Office 365 Plan 2, we introduced agentic AI grading for admin and user reported phishing messages. The agentic grading system has multiple layers: a machine learning grader model, agentic grading, and human graders. If machine learning returns a verdict with high confidence, this verdict is shown for the submission result. If not, the message goes to agentic grading for additional analysis/response. After that, the message goes to a human grader for final review if required.
+> In Defender for Office 365 Plan 2, agentic AI grading is available for admin and user reported phishing messages. The agentic grading system has multiple layers: a machine learning grader model, agentic grading, and human graders. If machine learning returns a verdict with high confidence, this verdict is shown for the submission result. If not, the message goes to agentic grading for additional analysis/response. After that, the message goes to a human grader for final review if required.
 >
-> AI-powered Submissions Response capability introduces generative AI explanations for admin email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
+> AI-powered Submissions Response provides generative AI explanations for admin and user reported email submissions to Microsoft. For more information, see [Submission result definitions](submissions-result-definitions.md).
 
 ### Dispute the result for submissions to Microsoft
 
@@ -954,7 +954,7 @@ For email messages, admins can see what users are reporting on the **User report
 - User reported messages that are sent to Microsoft only or to Microsoft and the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) appear on the **User reported** tab.
 - User reported messages that are sent only to the reporting mailbox appear on the **User reported** tab with the **Result** value **Not Submitted to Microsoft**. Admins should report these messages to Microsoft for analysis.
 
-In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), admins can also see [user reported messages in Microsoft Teams in Defender for Office 365 Plan 2](submissions-teams.md).
+In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), admins can also see [user reported messages in Microsoft Teams](submissions-teams.md).
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Actions & submissions** \> **Submissions**. Or, to go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 

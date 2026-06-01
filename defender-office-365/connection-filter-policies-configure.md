@@ -56,6 +56,8 @@ This article describes how to configure the default connection filter policy in 
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
+  [!INCLUDE [rbac-save-failure-tip](../includes/rbac-save-failure-tip.md)]
+
 - To find the source IP addresses of the email servers (senders) that you want to allow or block, you can check the connecting IP (**CIP**) header field in the message header. To view a message header in various email clients, see [View internet message headers in Outlook](https://support.microsoft.com/office/cd039382-dc6e-4264-ac74-c048563d212c).
 
 - The IP Allow List takes precedence over the IP Block List (an address on both lists isn't blocked).

@@ -242,10 +242,7 @@ This action is only applicable for Defender for Endpoint alerts.
 - **Resolve alert**: Automatically resolves the alert and related incidents. Matching alerts and their associated incidents are triggered with resolved status.
 - **Set as behavior**: Converts matching signals into behaviors. They won’t appear in the alert queue or trigger incidents. Data remains in *BehaviorInfo* and *BehaviorEntities* tables for hunting. This action isn't supported for Defender for Cloud or Microsoft Defender for Office 365 alerts.
 
-> [!NOTE]
-> Alert tuning is available for Microsoft Defender XDR services, including Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID Protection.
-
-Microsoft Defender XDR also includes built-in alert tuning rules that suppress alerts from common benign activitywithout affecting Automated Investigation and Response (AIR) investigations and email notifications.
+Microsoft Defender XDR also includes built-in alert tuning rules that suppress alerts from common benign activity without affecting Automated Investigation and Response (AIR) investigations and email notifications.
 
 > [!CAUTION]
 > Use alert tuning with caution, for scenarios where known, internal business applications or security tests trigger expected activity.

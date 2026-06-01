@@ -444,6 +444,8 @@
             href: advanced-hunting-security-copilot-threat-hunting-agent.md
           - name: Dynamic Threat Detection Agent
             href: dynamic-threat-detection-agent.md
+          - name: Security Analyst Agent
+            href: security-analyst-agent.md
     - name: Identity Security
       items:
       - name: Identity Security overview

@@ -95,6 +95,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `InitiatingProcessRemoteSessionIP` | `string` | IP address of the remote device from which the initiating process's RDP session was initiated |
 | `ProcessUniqueId` | `string` | Unique identifier of the process; this is equal to the Process Start Key in Windows devices |
 | `InitiatingProcessUniqueId` | `string` | Unique identifier of the initiating process; this is equal to the Process Start Key in Windows devices |
+| `LogonID`|`long` |A unique identifier for the user initiating the event, enabling attribution of file activity to the originating interactive user across privilege escalation and session transitions. This field is located inside AdditionalFields/InitiatingProcessPosixEffectiveUser|
 
 
 > [!NOTE]

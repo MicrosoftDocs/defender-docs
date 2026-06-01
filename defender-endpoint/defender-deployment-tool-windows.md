@@ -1,5 +1,5 @@
 ---
-title: Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
+title: Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool
 description: Learn how to onboard and offboard Windows devices using the Defender deployment tool.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
@@ -7,18 +7,18 @@ ms.topic: install-set-up-deploy
 author: paulinbar
 ms.author: painbar
 ms.custom: nextgen
-ms.reviewer: pahuijbr
+ms.reviewer: pahuijbr, sihamilt
 ms.collection: 
 - m365-security
 - tier3
 ms.subservice: onboard
-ms.date: 05/19/2026
+ms.date: 05/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 ---
 
-# Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool (preview)
+# Deploy Microsoft Defender endpoint security to Windows devices using the Defender deployment tool
 
 The Defender deployment tool is a lightweight, self-updating application designed to streamline onboarding for [all Windows versions supported by the Defender endpoint security solution](./minimum-requirements.md#windows-versions-supported-by-defender-for-endpoint). The tool takes care of prerequisites, automates migrations from older solutions, and removes the need for complex onboarding scripts, separate downloads, and manual installations, while providing onboarding visibility, customizability, and guardrails.
 
@@ -39,19 +39,25 @@ The following table describes some of the main features the tool supports.
 | **Help** | A built-in help function displays all available command-line options. |
 | **Configuration files** | You can generate reusable configuration files that make bulk deployments more efficient and less error-prone. |
 | **Working without connectivity** | When connectivity is temporarily unavailable, offline onboarding and offboarding are possible. |
-| **Deployment key entry** | To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page. |
-| **Custom expiry** | Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
-| **Ability to view deployment packages** | You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
+| **Deployment key entry** (preview) | To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page. |
+| **Custom expiry** (preview)| Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
+| **Ability to view deployment packages** (preview)| You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
 
-When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and asks you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **Settings** > **Endpoints** > **Onboarding**. It handles the installation of most prerequisite updates and the latest Defender components, and connects the device to the Defender services. If needed, the tool asks you to reboot the device to finish installation after you sign in again.
+When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and asks you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **System** > **Settings** > **Endpoints** > **Onboarding**. It handles the installation of most prerequisite updates and the latest Defender components, and connects the device to the Defender services. If needed, the tool asks you to reboot the device to finish installation after you sign in again.
 
 For more [advanced and large-scale deployments](#advanced-and-large-scale-deployments), the tool offers functionality to perform additional and orchestrated steps through command-line parameters or a configuration file.
 
-To view the complete command reference after [downloading the tool](#generate-and-download-a-new-onboarding-package), run: `DefenderDT.exe -?`.
+To view the complete command reference after downloading the tool, run: `DefenderDT.exe -?`.
 
 ## Supported operating systems
 
-The Defender deployment tool supports the following operating systems: Windows 7 SP1, Windows Server 2008 R2 SP1, Windows Server 2012 R2, 2016, 2019, 2022, 2025, Windows 10 (version 1809 and newer), and all versions of Windows 11.
+The Defender deployment tool supports the following operating systems:
+
+- Windows 7 SP1
+- Windows Server 2008 R2 SP1
+- Windows Server 2012 R2, 2016, 2019, 2022, 2025
+- Windows 10 (version 1809 and newer)
+- Windows 11 (all versions)
 
 ## Prerequisites
 
@@ -81,9 +87,23 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 - On Server 2008 R2 SP1 devices, .NET 3.5 or a higher version of the .NET framework must also be installed.
 
 > [!NOTE]
-> For Windows 7 SP1, Windows Server 2008 R2, and Windows Server 2012, the Defender endpoint security solution that will be installed is currently in public preview. For more information about Defender endpoint security for Windows 7 SP1 and Windows Server 2008 R2 devices, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
+> For more information about Defender endpoint security for Windows 7 SP1, Windows Server 2008 R2, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
 
-## Generate and download a new onboarding package
+## Download the tool
+
+If preview features are enabled on your tenant, select the **Generate and download a new onboarding package (preview)** tab to see how to generate and download a new onboarding package. If preview features aren't enabled, select the **Download the tool (GA)** tab and follow the instructions for downloading the tool and required .onboarding file.
+
+## [Download the tool (GA)](#tab/ga-experience)
+
+1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
+
+1. In the Step 1 dropdown menu, choose **Windows**.
+
+1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This downloads the Defender executable and the onboarding file package.
+
+   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png":::
+
+## [Generate and download a new onboarding package (preview)](#tab/preview-experience)
 
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
 
@@ -110,9 +130,7 @@ There are prerequisites that pertain to all supported Windows and Windows Server
    Copy the key and save it, as it will be needed with the deployment tool.
 
    After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
-
-> [!NOTE] 
-> For offboarding, select **Offboarding** in the **Device management** section, choose **Windows 10 and 11** in the Step 1 dropdown menu, and then select the **Download package** button. This downloads the offboarding file package only - it doesn't download the Defender deployment tool executable, as that is the same for both onboarding and offboarding.
+---
 
 ## Deploy Defender endpoint security on devices
 
@@ -122,7 +140,17 @@ The Defender deployment tool can be used interactively or non-interactively.
 
 The tool supports two interactive experiences that are suitable for deployment to one or a limited number of devices - a "double-click" quick single-machine onboarding experience without any changes to default behavior, and a manual command-line experience that provides more flexibility.
 
-To use the quick "double-click" default installation:
+To use the quick "double-click" default installation, select the relevant tab.
+
+### [If preview features aren't enabled](#tab/ga-experience)
+
+1. Make sure the tool executable and the onboarding file are in the same directory.
+
+1. Double-click the executable to launch it. The tool will automatically detect the onboarding file and begin the onboarding process.
+
+1. Follow the instructions in the user interface to complete onboarding.
+
+### [If preview features are enabled](#tab/preview-experience)
 
 1. Double-click the executable to launch it.
 
@@ -137,6 +165,7 @@ To use the quick "double-click" default installation:
 1. Wait until installation is complete, and then select **OK**. No device reboot is required.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/process-complete.png" alt-text="Screenshot showing the message indicating that onboarding is complete.":::
+---
 
 ### Non-interactive use
 
@@ -302,6 +331,46 @@ The following steps show how to create a scheduled task to run the tool using Gr
 1. Select **OK** and close any open GPMC windows.
 
 1. To link the GPO to an Organization Unit (OU), right-click and select **Link an existing GPO**. In the dialogue box that is displayed, select the Group Policy Object that you wish to link and select **OK**.
+
+## Offboard a device
+
+To offboard a device using the Defender deployment tool, download the offboarding package from the portal, transfer it to the target device, and run the offboarding command.
+
+### Step 1: Download the offboarding package
+
+1. In the [Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Endpoints** > **Device management** > **Offboarding**.
+
+1. Under **Select operating system**, choose **Windows**.
+
+1. Under **Defender deployment tool**, select **Download package** to download the .zip file that contains the offboarding script.
+
+   :::image type="content" source="media/defender-deployment-tool-windows/defender-deployment-tool-windows-offboard.png" alt-text="Screenshot of the Offboarding page showing the Download package button" lightbox="media/defender-deployment-tool-windows/defender-deployment-tool-windows-offboard.png":::
+
+### Step 2: Run the offboarding command
+
+1. Copy the .zip file to the target machine and extract it to access the `.offboarding` script.
+
+1. Open Command Prompt as Administrator and navigate to the extracted folder.
+
+1. Run the following command:
+
+   ```dos
+   <PackageExecutable>.exe -offboard -file:<PathToOffboardingFile>
+   ```
+
+   For example:
+
+   ```dos
+   C:\Packages>Disable_Live_Response.exe -offboard -file:WindowsDefenderATP_valid_until_2025-11-12.offboarding
+   ```
+
+1. When prompted `Are you sure you want to offboard? Yes(Y)/No(N)?`, type **Y** to proceed.
+
+1. Wait for the process to complete. A successful offboarding displays the following message:
+
+   ```console
+   Microsoft Defender deployment tool completed, exit code: 0 [Success]
+   ```
 
 ## Considerations and limitations
 
