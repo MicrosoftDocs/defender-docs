@@ -10,6 +10,8 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 description: Learn how to create and assign quarantine policies to control what users can do to quarantined messages and configure quarantine notifications.
 ms.service: defender-office-365
 ms.date: 05/19/2026

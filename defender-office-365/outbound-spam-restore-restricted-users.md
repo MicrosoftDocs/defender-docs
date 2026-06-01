@@ -12,7 +12,8 @@ ms.collection:
   - tier2
 description: Admins can learn how to remove user accounts from the Restricted entities page in the Microsoft Defender portal. Users are added to the Restricted entities page for sending outbound spam, typically as a result of account compromise.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ms.date: 05/07/2025
 appliesto:

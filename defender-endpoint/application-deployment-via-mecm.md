@@ -14,6 +14,7 @@ ms.date: 03/27/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Migrating servers from Microsoft Monitoring Agent to the unified solution

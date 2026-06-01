@@ -12,6 +12,7 @@ ms.service: defender-office-365
 ms.date: 04/07/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365
