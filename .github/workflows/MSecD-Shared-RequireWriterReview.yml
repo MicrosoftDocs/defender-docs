@@ -69,8 +69,8 @@ jobs:
             exit 0
           fi
 
-          HAS_QUALIFIES=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["qualifies-for-auto-merge"])')
-          HAS_BLOCKED=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["blocked-qualifies-for-auto-merge"])')
+          HAS_QUALIFIES=$(echo "$PR_DATA" | jq -r --arg label "$QUALIFIES_LABEL" '[.labels[].name] | contains([$label])')
+          HAS_BLOCKED=$(echo "$PR_DATA" | jq -r --arg label "$BLOCKED_LABEL" '[.labels[].name] | contains([$label])')
           PR_AUTHOR=$(echo "$PR_DATA" | jq -r '.user.login')
 
           echo "PR #$PR_NUMBER — author: $PR_AUTHOR, has_qualifies: $HAS_QUALIFIES, has_blocked: $HAS_BLOCKED"
