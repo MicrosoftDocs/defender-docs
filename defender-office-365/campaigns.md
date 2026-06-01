@@ -10,6 +10,8 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 description: Learn about Campaigns in Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 06/19/2025

@@ -10,6 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: View, create, modify, and delete outbound spam policies in Microsoft Defender for Office 365 and Exchange Online PowerShell.
 ms.service: defender-office-365
 ms.date: 05/22/2026

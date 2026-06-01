@@ -9,6 +9,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to identify specific groups of users with user tags in Microsoft Defender for Office 365. Tag filtering is available across alerts, reports, and investigations in Microsoft Defender for Office 365 to quickly identify the tagged users.
 ms.service: defender-office-365
 appliesto:

@@ -8,8 +8,9 @@ ms.collection:
   - tier2
 ms.localizationpriority: medium
 ms.assetid: 3e64f99d-ac33-4aba-91c5-9cb4ca476803
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can use the Message trace link in the Microsoft Defender portal to find out what happened to messages.
 ms.service: defender-office-365
 ms.date: 10/9/2023

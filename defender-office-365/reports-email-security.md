@@ -9,8 +9,10 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can find and use email security reports available in the Microsoft Defender portal, including the Threat protection status report.
-ms.custom: 
-- seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:

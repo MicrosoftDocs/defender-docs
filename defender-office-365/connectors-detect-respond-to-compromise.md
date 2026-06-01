@@ -9,6 +9,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - sfi-image-nochange
 description: Learn how to recognize and respond to a compromised connector in Microsoft 365.
 ms.service: defender-office-365
 ms.date: 6/14/2023
