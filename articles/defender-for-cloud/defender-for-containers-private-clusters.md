@@ -10,15 +10,15 @@ ms.date: 06/01/2026
 
 # Deploy Defender for Containers to private clusters (Preview)
 
-Private clusters isolate Kubernetes environments from the internet and require deployment paths that work with restricted connectivity. Defender for Containers extends threat detection and security visibility to these environments, so you can keep protection coverage while preserving private cluster network boundaries.
+Private clusters isolate Kubernetes environments from the internet and, in this context, restricted connectivity means no direct access to the Kubernetes API server. Defender for Containers extends threat detection and security visibility to these environments, so you can maintain protection coverage while preserving private cluster network boundaries.
 
 ## Prerequisites
 
-Before you begin, make sure that:
+Before you begin, ensure the following prerequisites are met:
 
 - Defender for Containers is enabled for your target environment.
-- You have Helm, curl, and jq installed for Helm-based deployments.
-- You have Azure command-line interface (Azure CLI) installed and signed in for Azure Arc-enabled Kubernetes deployments.
+- If you're deploying by using **Helm**, ensure that `Helm`, `curl`, and `jq` are installed.
+- If you're deploying by using an **Azure Arc-enabled Kubernetes extension**, ensure that your cluster is connected to Azure Arc, Azure command-line interface (Azure CLI) is installed, and you're signed in.
 
 ## Install preview components for private clusters
 
