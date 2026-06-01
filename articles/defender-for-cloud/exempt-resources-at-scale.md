@@ -3,8 +3,9 @@ title: Exempt resources at scale
 description: Learn how to create exemptions for how policies are applied to resources in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: elkrieger
-author: Elazark
-ms.date: 02/05/2026
+author: ElazarK
+ms.date: 05/31/2026
+#customer intent: As a security administrator, I want to create exemptions at scale so I can manage recommendation scope consistently.
 ---
 
 # Exempt resources at scale
@@ -17,14 +18,15 @@ For example, Defender for Cloud might not track the process that remediates a re
 
 - Prevent a recommendation from affecting the secure score or appearing again by excluding a subscription or management group.
 
-- Prevent a recommendation or resource from being listed as unhealthy. Apply the rule to the required scope and mark the item as "mitigated" or "risk accepted".
+- Prevent a recommendation or resource from being listed as unhealthy. Apply the exemption to the required scope and mark the item as "mitigated" or "risk accepted".
 
 [!INCLUDE [exempt-resource](./includes/exempt-resource.md)]
-
 
 ## Create exemptions at scale
 
 To tailor your security posture, create exemptions for recommendations that aren't applicable or are already mitigated. 
+
+To create exemptions at scale:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -36,7 +38,7 @@ To tailor your security posture, create exemptions for recommendations that aren
 
 1. Select **+ Create**.
 
-1. Enter an Exemption name, and (Optional) a description.
+1. Enter an exemption name and, optionally, a description.
 
     :::image type="content" source="media/exempt-resources-at-scale/create-exemption.png" alt-text="Screenshot that shows the exemption creation screen." lightbox="media/exempt-resources-at-scale/create-exemption.png":::
 
@@ -44,25 +46,19 @@ To tailor your security posture, create exemptions for recommendations that aren
 
 1. Select a management group, subscription, or resource (per subscription).
 
-1. Select a category, <br>
+1. Select a category:
 
-    1. **Mitigated (resolved through a third-party service)** 
-     
-        Or, 
-
-    1. **Waiver (risk accepted)**.
+    - **Mitigated (resolved through a third-party service)**
+    - **Waiver (risk accepted)**
 
 1. (Optional) Select an expiry date.
 
 1. Select **Next**.
 
-1. Select either: <br>
+1. Select one of the following options:
 
-    1. **Selected recommendations** and the specific recommendations to exempt.
-    
-        Or,
-
-    1. **Recommendation category** and the  category to exempt.
+    - **Selected recommendations** and the specific recommendations to exempt.
+    - **Recommendation category** and the category to exempt.
 
 1. Select **Next**.
 
