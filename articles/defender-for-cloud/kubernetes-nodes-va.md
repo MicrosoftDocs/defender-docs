@@ -1,7 +1,7 @@
 ---
 title: Review and remediate Kubernetes node vulnerabilities
 description: Learn how to review and remediate vulnerability findings for Kubernetes nodes in Microsoft Defender for Cloud.
-ms.date: 04/09/2026
+ms.date: 05/26/2026
 ms.topic: how-to
 ms.custom: sfi-image-nochange
 ---

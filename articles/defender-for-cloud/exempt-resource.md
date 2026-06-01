@@ -1,11 +1,12 @@
 ---
-title: Exempt resources from recommendation in Microsoft Defender for Cloud
-description: Learn how to exempt resources from recommendation in Microsoft Defender for Cloud.
+title: Exempt resources from recommendations
+description: Create exemption rules to remove resources or recommendations from secure score impact in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
-author: Elazark
-ms.date: 05/18/2026
+author: ElazarK
+ms.date: 05/31/2026
+#customer intent: As a security administrator, I want to exempt resources and recommendations when appropriate so I can keep secure score signals accurate.
 ---
 
 # Exempt resources from recommendations
@@ -28,7 +29,7 @@ For each scope, create an exemption rule to:
 
 ## Prerequisites
 
-Defender for Cloud exemption relies on the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative. MCSB must be assigned on the subscription before you create exemptions.
+Defender for Cloud exemptions rely on the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative. MCSB must be assigned on the subscription before you create exemptions.
 
 > [!IMPORTANT]
 > Without MCSB assigned:
@@ -44,13 +45,13 @@ You can create exemptions for recommendations that belong to the default MCSB in
 To create exemptions, you need the following permissions:
 
 - **Owner** or **Security Admin** on the scope where you create the exemption.
-- To create a rule, you need permissions to edit policies in Azure Policy. [Learn more](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
+- To create a rule, you need permissions to edit policies in Azure Policy. For details, see [Azure RBAC permissions in Azure Policy](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
 - You must have exemption permission on all initiative assignments at the target scope. If multiple initiatives contain a recommendation, you must create the exemption with permissions across all of them. A missing permission on even one initiative can cause the exemption to fail.
 
 You need the following RBAC actions:
 
 | Action | Description |
-|--------|-------------|
+| ------ | ----------- |
 | `Microsoft.Authorization/policyExemptions/write` | Create an exemption |
 | `Microsoft.Authorization/policyExemptions/delete` | Delete an exemption |
 | `Microsoft.Authorization/policyExemptions/read` | View an exemption |
@@ -76,8 +77,6 @@ You need the following RBAC actions:
 - You don't create exemptions for custom recommendations.
 
 - Preview recommendations might not support exemptions. Check whether the recommendation shows a **Preview** tag.
-
-- Some recommendations in MCSB don't support exemptions. You can find a list of these recommendations in [the exemptions FAQ](faq-general.yml).
 
 - If you disable a recommendation, you also exempt all of its subrecommendations.
 
@@ -117,7 +116,7 @@ To create an exemption rule:
 
 1. Enter a name.
 
-1. (Optional) set an expiration date.
+1. (Optional) Set an expiration date.
 
 1. Select the category for the exemption:
     - **Resolved through third-party service (mitigated)** – if you use a non-Microsoft service for remediation that Defender for Cloud doesn't track.
@@ -127,9 +126,9 @@ To create an exemption rule:
 
     - **Risk accepted (waiver)** – if you decide to accept the risk of not mitigating this recommendation.
 
-    1. Enter a description.
-    
-    1. Select **Create**.
+1. Enter a description.
+
+1. Select **Create**.
     
     :::image type="content" source="media/exempt-resource/defining-recommendation-exemption.png" alt-text="Steps to create an exemption rule to exempt a recommendation from your subscription or management group."  lightbox="media/exempt-resource/defining-recommendation-exemption.png":::
 

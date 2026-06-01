@@ -1,12 +1,13 @@
 ---
 title: Enable just-in-time access
 description: Learn how just-in-time VM access (JIT) in Microsoft Defender for Cloud helps you control access to your Azure virtual machines.
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 02/19/2025
+ms.date: 05/31/2026
 ms.topic: how-to
 ms.custom:
   - ge-structured-content-pilot
+#customer intent: As a security administrator, I want to enable just-in-time access for VMs so I can reduce exposure to unauthorized network access.
 ---
 
 # Enable just-in-time access
@@ -33,7 +34,7 @@ In this article, you learn how to set up and use just-in-time access, including 
 
 -   To create a JIT policy, the policy name, together with the targeted VM name, must not exceed a total of 56 characters.
 
--   You need **Reader** and **SecurityReader** permissions, or a custom role can view the JIT status and parameters.
+-   You need **Reader** and **SecurityReader** permissions to view JIT status and parameters. A custom role can also provide this access.
 
 -   For a custom role, assign the permissions summarized in the table. To create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role).
 
@@ -67,6 +68,8 @@ You can use Defender for Cloud or you can programmatically enable JIT VM access 
 ### Enable JIT on your VMs from Microsoft Defender for Cloud
 
 From Defender for Cloud, you can enable and configure the JIT VM access.
+
+To enable JIT on your VMs from Defender for Cloud:
 
 1.  Open **Workload protections** and, in the advanced protections, select **Just-in-time VM access**.
 
@@ -104,13 +107,15 @@ To edit the existing JIT rules for a VM:
 
 1.  In the **Configured** virtual machines tab, right-click on a VM and select **Edit**.
 
-1.  In the **JIT VM access configuration**, you can either edit the list of port or select Add a new custom port.
+1.  In the **JIT VM access configuration**, you can edit the list of ports or select **Add** for a new custom port.
 
 1.  When you finish editing the ports, select **Save**.
 
 ### Request access to a JIT-enabled VM from Microsoft Defender for Cloud
 
 When a VM has JIT enabled, you have to request access to connect to it. You can request access in any of the supported ways, regardless of how you enabled JIT.
+
+To request access to a JIT-enabled VM from Defender for Cloud:
 
 1.  From the **Just-in-time VM access** page, select the **Configured** tab.
 
@@ -137,8 +142,10 @@ When a VM has JIT enabled, you have to request access to connect to it. You can 
 
 You can enable JIT on a VM from the Azure virtual machines pages of the Azure portal.
 
+To enable JIT on a VM from Azure virtual machines:
+
 > [!TIP]
-> If a VM already has JIT enabled, the VM configuration page shows that JIT is enabled. You can use the link to open the JIT VM access page in Defender for Cloud to view and change the settings.
+> If a VM already has JIT enabled, the VM configuration page shows that JIT is enabled. Use the **Just-in-time VM access** link on that page to open Defender for Cloud and review or change settings.
 
 1.  From the [Azure portal](https://portal.azure.com), search for and select **Virtual machines**.
 
@@ -172,7 +179,7 @@ You can enable JIT on a VM from the Azure virtual machines pages of the Azure po
 
 #### Request access to a JIT-enabled VM from the Azure virtual machine's connect page
 
-When a VM has a JIT enabled, you have to request access to connect to it. You can request access in any of the supported ways, regardless of how you enabled JIT.
+When a VM has JIT enabled, you have to request access to connect to it. You can request access in any of the supported ways, regardless of how you enabled JIT.
 
 :::image type="content" source="./media/just-in-time-access-usage/jit-request-vm.png" alt-text="Screenshot of a just-in-time VM access request showing selected ports and access duration.":::
 
@@ -195,6 +202,8 @@ To request access from Azure virtual machines:
 #### Enable JIT on your VMs using PowerShell
 
 To enable just-in-time VM access from PowerShell, use the official Microsoft Defender for Cloud PowerShell cmdlet `Set-AzJitNetworkAccessPolicy`.
+
+To configure JIT on a VM with PowerShell:
 
 **Example** - Enable just-in-time VM access on a specific VM with the following rules:
 
@@ -239,6 +248,8 @@ The following PowerShell commands create this JIT configuration:
 #### Request access to a JIT-enabled VM using PowerShell
 
 In the following example, you can see a just-in-time VM access request to a specific VM for port 22, for a specific IP address, and for a specific amount of time:
+
+To request access to a JIT-enabled VM using PowerShell:
 
 Run the following commands in PowerShell:
 
