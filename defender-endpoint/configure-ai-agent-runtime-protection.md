@@ -33,7 +33,8 @@ Microsoft recommends the following phased rollout:
 
 Before you configure runtime protection, make sure the following requirements are met:
 
-- The device is onboarded to [Microsoft Defender](/defender-endpoint/onboard-configure) and runs on a supported Windows version with Microsoft Defender platform version <!-- TODO: Confirm platform version number with engineering --> or later.
+- The device is onboarded to [Microsoft Defender](/defender-endpoint/onboard-configure).
+- The device runs a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates. Keep both Windows and Defender up to date. For preview validation devices, assign updates to [Current Channel (Preview)](manage-gradual-rollout.md#update-channels-for-monthly-updates).
 - Microsoft Defender Antivirus is running in active mode.
 - One or more [supported local AI agents](ai-agent-runtime-protection-overview.md#supported-agents) are installed on the device.
 - The local AI agent must natively support a hooks framework. See [Supported agents](ai-agent-runtime-protection-overview.md#supported-agents) for the full list.
