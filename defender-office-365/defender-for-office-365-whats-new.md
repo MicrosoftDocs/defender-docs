@@ -10,7 +10,9 @@ ms.collection:
   - m365-security
   - tier1
 ms.topic: whats-new
-ms.custom: seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.reviewer: vippand
 ms.service: defender-office-365
 appliesto:

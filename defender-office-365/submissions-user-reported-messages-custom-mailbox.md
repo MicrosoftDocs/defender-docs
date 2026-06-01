@@ -7,7 +7,8 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier1
-ms.custom: msecd-doc-authoring-101
+ms.custom:
+  - sfi-ga-nochange
 description: Configure where user reported messages go for analysis in Microsoft Defender for Office 365. Set up a reporting mailbox and choose Microsoft, mailbox-only, or both.
 ms.service: defender-office-365
 ms.date: 05/19/2026

@@ -11,6 +11,7 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Learn about threat investigation and response capabilities in Microsoft Defender for Office 365 Plan.
 ms.service: defender-office-365
 appliesto:

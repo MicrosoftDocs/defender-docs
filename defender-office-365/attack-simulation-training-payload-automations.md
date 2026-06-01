@@ -12,6 +12,7 @@ description: Admins can learn how to use payload automations (payload harvesting
 ms.date: 06/24/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ms.custom: sfi-image-nochange
 ---
 
 # Payload automations for Attack simulation training

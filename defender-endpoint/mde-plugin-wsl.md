@@ -12,7 +12,8 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom:
-- partner-contribution
+  - partner-contribution
+  - sfi-image-nochange
 ms.date: 10/27/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2

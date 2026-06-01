@@ -10,6 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can learn how to configure connection filtering in Microsoft 365 to allow or block emails from email servers.
 ms.service: defender-office-365
 ms.date: 10/30/2025

@@ -10,7 +10,8 @@ ms.collection:
   - tier1
 description: Learn about threat hunting and remediation in Microsoft Defender for Office 365 using Threat Explorer or Real-time detections in the Microsoft Defender portal.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-image-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>

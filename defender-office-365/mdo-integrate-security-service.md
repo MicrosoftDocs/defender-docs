@@ -7,6 +7,7 @@ ms.localizationpriority: medium
 ms.collection: 
   - tier1
 ms.custom:
+  - sfi-image-nochange
 description: Learn about the considerations for integrating non-Microsoft security services with the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 02/06/2026

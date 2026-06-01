@@ -8,8 +8,9 @@ ms.assetid:
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can learn how to use Attack simulation training to run simulated phishing and password attacks in their Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
 ms.date: 01/06/2026
