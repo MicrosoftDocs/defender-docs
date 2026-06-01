@@ -108,6 +108,28 @@ Learn more about [What is Serverless protection?](serverless-protection.md), [Se
 | May 5, 2026 | GA | [General availability of of Defender for Cloud integration into the Defender portal](#general-availability-of-defender-for-cloud-integration-into-the-defender-portal) |
 | May 3, 2026 | GA | [General availability of Microsoft Defender for Cloud and GitHub Advanced Security integration](#general-availability-of-microsoft-defender-for-cloud-and-github-advanced-security-integration) |
 
+### Private clusters protection for gated deployment, binary drift detection, and malware detection (Preview)
+
+May 31, 2026
+
+Private clusters now support the Defender sensor for gated deployment, binary drift detection, and malware detection in preview.
+
+This update extends Defender for Containers coverage to private cluster scenarios where you use the sensor-based features for container protection.
+
+For private cluster installation instructions for the preview path, see [Deploy Defender for Containers to private clusters (Preview)](defender-for-containers-private-clusters.md).
+
+For feature-level support details, see [access patterns and private cluster support for Defender for Containers features](defender-for-containers-feature-access-patterns.md).
+
+### Malware detection for EKS and GKE nodes (Preview)
+
+May 31, 2026
+
+Malware detection is now in preview for Amazon Elastic Kubernetes Service (EKS) nodes and Google Kubernetes Engine (GKE) nodes.
+
+This update expands Kubernetes node malware coverage beyond Azure Kubernetes Service (AKS) so you can detect malware in more multicloud environments.
+
+For more information, see [Kubernetes nodes overview](kubernetes-nodes-overview.md) and [Review and remediate malware alerts for Kubernetes nodes](kubernetes-nodes-malware.md).
+
 ### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage
 
 May 26, 2026

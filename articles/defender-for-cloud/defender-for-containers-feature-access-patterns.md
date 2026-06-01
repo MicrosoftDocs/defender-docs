@@ -19,6 +19,8 @@ View the [network access and permissions reference](defender-for-containers-netw
 > - **Supported by enabling a restricted public API endpoint** means the feature supports private clusters when the Kubernetes API is exposed through a restricted public endpoint.
 > - **Requires outbound HTTPS access** means the cluster must allow outbound HTTPS connectivity to Microsoft Defender for Cloud.
 > - Some entries describe feature prerequisites instead of private cluster support behavior.
+>
+> For preview deployment instructions for private clusters, see [Deploy Defender for Containers to private clusters (Preview)](defender-for-containers-private-clusters.md).
 
 ## Connectivity patterns used by Defender for Containers
 
