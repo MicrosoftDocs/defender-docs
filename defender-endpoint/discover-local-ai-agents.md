@@ -34,7 +34,7 @@ Before you can discover local AI agents on endpoints, make sure the following re
 - Microsoft Defender Antivirus is running in active mode on the device.
 - Your environment is in the commercial cloud. Sovereign and national clouds aren't supported.
 
-No additional deployment, configuration, or scripts are required beyond device onboarding. Agent discovery begins automatically after your tenant is enabled.
+You don't need additional deployment, configuration, or scripts beyond the device onboarding requirements: If the device meets all of the prerequisites, agent discovery begins automatically.
 
 ## View local AI agents in the inventory
 
