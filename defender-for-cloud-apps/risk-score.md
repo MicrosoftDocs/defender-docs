@@ -4,6 +4,7 @@ description: Learn about the Microsoft Defender for Cloud Apps' cloud app catalo
 ms.date: 05/12/2025
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 #CustomerIntent: As a Defender for Cloud Apps user, I want to understand how to use the Cloud app catalog and my cloud app risk scores.
 ---
 

@@ -11,8 +11,9 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.custom:
-- autoir
-- admindeeplinkDEFENDER
+  - autoir
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.reviewer: evaldm, isco
 appliesto:
 - Microsoft Defender XDR

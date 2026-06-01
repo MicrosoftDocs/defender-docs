@@ -4,6 +4,7 @@ description: This article describes how to govern Microsoft Defender for Endpoin
 ms.date: 05/20/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 
 # Govern discovered apps using Microsoft Defender for Endpoint

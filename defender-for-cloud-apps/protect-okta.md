@@ -4,6 +4,7 @@ description: Learn how about connecting your Okta app to Defender for Cloud Apps
 ms.date: 11/24/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ms.custom: sfi-image-nochange
 ---
 
 # How Defender for Cloud Apps helps protect your Okta environment
