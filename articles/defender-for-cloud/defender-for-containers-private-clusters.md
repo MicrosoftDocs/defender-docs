@@ -1,19 +1,16 @@
 ---
-title: Enable private cluster support for Defender for Containers (Preview)
-description: Learn how to enable private cluster support for Microsoft Defender for Containers by using preview Helm charts and the Azure Arc Preview release train.
+title: Deploy Defender for Containers to private clusters (Preview)
+description: Learn how to deploy Microsoft Defender for Containers to private clusters by using preview Helm charts and the Azure Arc Preview release train.
 author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
 ms.date: 06/01/2026
-#customer intent: As a security administrator, I want to enable Defender for Containers support on private clusters so that I can protect nonpublic Kubernetes environments.
+#customer intent: As a security administrator, I want to deploy Defender for Containers to private clusters so that I can protect nonpublic Kubernetes environments.
 ---
 
-# Enable private cluster support for Defender for Containers (Preview)
+# Deploy Defender for Containers to private clusters (Preview)
 
 Private clusters isolate Kubernetes environments from the internet and require deployment paths that work with restricted connectivity. Defender for Containers extends threat detection and security visibility to these environments, so you can keep protection coverage while preserving private cluster network boundaries.
-
-> [!IMPORTANT]
-> Private cluster support for this deployment path is currently in preview.
 
 ## Prerequisites
 
@@ -111,7 +108,7 @@ az k8s-extension show \
   --resource-group $ARC_RESOURCE_GROUP
 ```
 
-## Next steps
+## Related content
 
 - [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 - [Install Defender for Containers sensor using Helm](deploy-helm.md)

@@ -20,7 +20,7 @@ View the [network access and permissions reference](defender-for-containers-netw
 > - **Requires outbound HTTPS access** means the cluster must allow outbound HTTPS connectivity to Microsoft Defender for Cloud.
 > - Some entries describe feature prerequisites instead of private cluster support behavior.
 >
-> For preview deployment instructions for private clusters, see [Enable private cluster support for Defender for Containers (Preview)](defender-for-containers-private-clusters.md).
+> For preview deployment instructions for private clusters, see [Deploy Defender for Containers to private clusters (Preview)](defender-for-containers-private-clusters.md).
 
 ## Connectivity patterns used by Defender for Containers
 

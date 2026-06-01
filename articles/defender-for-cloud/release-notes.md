@@ -54,7 +54,7 @@ Private clusters now support the Defender sensor for gated deployment, binary dr
 
 This update extends Defender for Containers coverage to private cluster scenarios where you use the sensor-based features for container protection.
 
-For private cluster installation instructions for the preview path, see [Enable private cluster support for Defender for Containers (Preview)](defender-for-containers-private-clusters.md).
+For private cluster installation instructions for the preview path, see [Deploy Defender for Containers to private clusters (Preview)](defender-for-containers-private-clusters.md).
 
 For feature-level support details, see [access patterns and private cluster support for Defender for Containers features](defender-for-containers-feature-access-patterns.md).
 
