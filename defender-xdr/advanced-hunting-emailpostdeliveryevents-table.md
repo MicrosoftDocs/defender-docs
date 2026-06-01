@@ -6,7 +6,7 @@ ms.subservice: adv-hunting
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 ms.custom:
@@ -16,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/28/2025
+ms.date: 06/01/2026
 ---
 
 # EmailPostDeliveryEvents
