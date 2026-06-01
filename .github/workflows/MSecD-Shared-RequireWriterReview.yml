@@ -634,10 +634,18 @@ jobs:
           echo "Confirmation comment added."
 
       - name: Write policy summary
-        if: always() && steps.resolve.outputs.skip != 'true'
+        if: always()
         run: |
           {
             echo "## Writer review policy summary"
+            echo "- Event: ${{ github.event_name }} / ${{ github.event.action || 'n/a' }}"
+
+            if [ "${{ steps.resolve.outputs.skip }}" = "true" ]; then
+              echo "- No action taken: no PR number was found in this event payload."
+              exit 0
+            fi
+
+            echo "- PR number: #${{ steps.resolve.outputs.number }}"
 
             if [ "${{ steps.pr-state.outputs.skip }}" = "true" ]; then
               echo "- No action taken: PR is closed, merged, or draft."
