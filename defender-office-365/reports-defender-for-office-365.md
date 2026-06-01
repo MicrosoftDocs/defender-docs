@@ -74,7 +74,7 @@ On the **Mail latency report** page, the following tabs are available:
 Regardless of the tab you select, the chart shows messages organized into the following categories:
 
 - **Overall**
-- **Detonation** (these values are explained in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** values)
+- **Detonation** (these values are explained in the :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** values)
 
 Hover over a category in the chart to see a breakdown of the latency in each category.
 
@@ -89,7 +89,7 @@ In the details table below the chart, the following information is available:
 - **90th percentile**
 - **99th percentile**
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**
 - **Message view**: Select one of the following values:
@@ -98,9 +98,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
     - **Inline detonation**: Safe Links and Safe Attachments fully test links and attachments in messages before delivery.
     - **Asynchronous detonation**: [Dynamic delivery](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies) of attachments by Safe Attachments and links in email tested by Safe Links after delivery.
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Mail latency report** page, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** action is available.
+On the **Mail latency report** page, the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** action is available.
 
 ## Post-delivery activities report
 
@@ -138,7 +138,7 @@ The details table below the graph shows the following information:
   - Narrow the width of appropriate columns.
   - Zoom out in your web browser.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Updated threat**: Select one ore more of the following values:
@@ -147,9 +147,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **Phishing**
   - **Malware**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Post delivery activities** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)** and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
+On the **Post delivery activities** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)** and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
 :::image type="content" source="media/post-delivery-activities-report.png" alt-text="The Post-delivery activities report." lightbox="media/post-delivery-activities-report.png":::
 
@@ -278,7 +278,7 @@ The details table below the chart provides the following near-real-time view of 
 - **App**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Action**: The same URL click protection actions as previously described. By default, **Allowed** and **Allowed by tenant admin** aren't selected.
@@ -287,9 +287,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Recipients (separated by commas)**
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **URL threat protection** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
+On the **URL threat protection** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
 ### View data by URL click by application in the URL protection report
 
@@ -313,7 +313,7 @@ The details table below the chart provides the following near-real-time view of 
 - **App**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Application**: The same click by application values as previously described.
@@ -323,9 +323,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Recipients (separated by commas)**
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **URL threat protection** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
+On the **URL threat protection** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
 ## Other reports to view
 
