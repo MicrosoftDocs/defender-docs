@@ -91,9 +91,17 @@ jobs:
           COMMENTS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
 
-          LAST_ENTRY=$(echo "$COMMENTS" | jq -r '
-            [.[] | select(.body | test("^#[a-zA-Z-]+"))] | last |
-            {command: (.body | split("\n")[0] | ascii_downcase), author: .user.login}
+          LAST_ENTRY=$(echo "$COMMENTS" | jq -r --arg signoff_cmd "${SIGN_OFF_COMMAND}" '
+            [
+              .[]
+              | {
+                  first_line: (.body | split("\n")[0] | ascii_downcase),
+                  author: .user.login
+                }
+              | select(.first_line == $signoff_cmd)
+            ]
+            | last
+            | {command: .first_line, author: .author}
           ' 2>/dev/null || echo '{}')
 
           LAST_COMMAND=$(echo "$LAST_ENTRY" | jq -r '.command // ""')
