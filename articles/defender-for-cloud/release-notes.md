@@ -32,8 +32,26 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| June 01, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
+| June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
+| June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### Container-level misconfiguration recommendations for Kubernetes (Preview)
+
+June 1, 2026
+
+Defender for Cloud now introduces agentless, container-level Kubernetes Security Posture Management (KSPM) misconfiguration recommendations, replacing the previous cluster-level findings with more granular, actionable insights integrated into Defender CSPM.
+
+The new recommendations assess individual containers rather than entire clusters, covering areas such as CPU/memory limits, trusted registries, privilege escalation, sensitive host namespaces, read-only root filesystem, HTTPS-only access, automounting API credentials, Linux capabilities, privileged containers, and running as root.
+
+**Key details:**
+
+- Container-level and cluster-level recommendations may coexist temporarily during the transition period. Cluster-level recommendations will be deprecated at GA.
+- The following cluster-level recommendations are set for deprecation: HostPath volume mount restrictions, allowed ports enforcement, host networking/ports restrictions, CAP_SYS_ADMIN capability restrictions, and AppArmor profile restrictions.
+- No runtime agent required — uses agentless architecture.
+- Includes scale controls for high-volume environments.
+
+Learn more about [container security recommendations](recommendations-reference-container.md).
 
 ### New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)
 
