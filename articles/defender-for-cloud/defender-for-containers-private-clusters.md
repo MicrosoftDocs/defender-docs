@@ -12,17 +12,20 @@ ms.date: 06/01/2026
 
 Private clusters isolate Kubernetes environments from the internet and require deployment paths that work with restricted connectivity. Defender for Containers extends threat detection and security visibility to these environments, so you can keep protection coverage while preserving private cluster network boundaries.
 
+> [!IMPORTANT]
+> Private cluster support for this deployment path is currently in preview.
+
 ## Prerequisites
 
 Before you begin, make sure that:
 
 - Defender for Containers is enabled for your target environment.
 - You have Helm, curl, and jq installed for Helm-based deployments.
-- You have Azure CLI installed and signed in for Azure Arc-enabled Kubernetes deployments.
+- You have Azure command-line interface (Azure CLI) installed and signed in for Azure Arc-enabled Kubernetes deployments.
 
 ## Install preview components for private clusters
 
-Defender for Containers Helm public preview charts are published to `mcr.microsoft.com/azuredefender/microsoft-defender-for-containers` with a `-preview` suffix.
+Defender for Containers Helm preview charts are published to `mcr.microsoft.com/azuredefender/microsoft-defender-for-containers` with a `-preview` suffix.
 
 Private clusters are supported in `0.11.X-preview` chart versions.
 
@@ -108,7 +111,7 @@ az k8s-extension show \
   --resource-group $ARC_RESOURCE_GROUP
 ```
 
-## Related content
+## Next steps
 
 - [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 - [Install Defender for Containers sensor using Helm](deploy-helm.md)
