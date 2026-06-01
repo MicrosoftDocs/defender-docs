@@ -373,7 +373,6 @@
         - name: Posture for Serverless Containers (Preview)
           displayName: serverless containers, ACA, ACI, AWS - ECS Fargate, posture, inventory, recommendations, attack path
           href: posture-for-serverless-containers.md
-        - name: Serverless protection (Preview)
         - name: What is Serverless protection?
           displayName: serverless, functions, web apps, aws lambda, inventory, misconfigurations, vulnerabilities, dependencies
           href: serverless-protection.md
