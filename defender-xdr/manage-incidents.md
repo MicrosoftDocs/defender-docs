@@ -11,7 +11,6 @@ ms.collection:
   - m365-security
   - usx-security
   - tier1
-  - sentinel-only
 ms.custom:
   - admindeeplinkDEFENDER
   - sfi-image-nochange
