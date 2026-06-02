@@ -115,7 +115,7 @@ Similarly, if your graph queries take one minute to complete, the cost is determ
 
 Any notebook/Spark compute and Data lake storage consumed for data transformations to build node and edges for the graph is billed independently per existing Sentinel data lake meters (Data lake storage and Advanced Data Insights).
 
-In addition, you can now monitor usage for custom graphs by using [Microsoft Sentinel cost management in the Microsoft Defender portal](billing-monitor-costs.md#microsoft-sentinel-cost-management-in-the-microsoft-defender-portal).
+You can monitor usage for custom graphs by using [Microsoft Sentinel cost management in the Microsoft Defender portal](billing-monitor-costs.md#microsoft-sentinel-cost-management-in-the-microsoft-defender-portal).
 
 #### Sentinel Model Context Protocol (MCP) server
 

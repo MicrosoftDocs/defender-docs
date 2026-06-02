@@ -11,7 +11,9 @@ ms.collection:
   - m365-security
   - usx-security
   - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 ms.topic: how-to
 search.appverid: 
   - MOE150

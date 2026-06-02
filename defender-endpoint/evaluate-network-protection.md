@@ -16,6 +16,7 @@ ms.date: 04/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Evaluate network protection

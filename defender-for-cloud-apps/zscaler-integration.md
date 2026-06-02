@@ -4,6 +4,7 @@ description: This article describes how to integrate Microsoft Defender for Clou
 ms.date: 01/29/2023
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 # Integrate Defender for Cloud Apps with Zscaler
 

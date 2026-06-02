@@ -12,7 +12,9 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

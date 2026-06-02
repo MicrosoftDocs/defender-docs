@@ -144,7 +144,7 @@ For more information about DMARC, use the following resources:
 
 3. On the domain details page that opens, select the **DNS records** tab.
 
-4. On the **DNS records** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add record**.
+4. On the **DNS records** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add record**.
 
 5. On the **Add a custom DNS record** flyout that opens, configure the following settings:
    - **Type**: Verify that **TXT (Text)** is selected.

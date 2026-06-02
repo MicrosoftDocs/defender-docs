@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 05/04/2026
+ms.date: 05/28/2026
 search.appverid: met150
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want detailed per-rule reference information for ASR rules so I can understand OS support, deployment methods, and alert behavior for each rule.
@@ -473,9 +473,6 @@ Safe Mode is still manually accessible from the Windows Recovery Environment.
   - `AsrSafeModeRebootWarnBypassed`
 - **Dependencies**: Microsoft Defender Antivirus
 
-> [!NOTE]
-> Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
-
 #### Block untrusted and unsigned processes that run from USB
 
 This ASR rule prevents unsigned or untrusted executable files (for example, .exe, .dll, or .scr) from running from USB removable drives, including SD cards.
@@ -503,9 +500,6 @@ This ASR rule blocks the propagation and use of executable files identified as c
   - `AsrAbusedSystemToolWarnBypassed`
 - **Dependencies**: Microsoft Defender Antivirus
 
-> [!NOTE]
-> Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
-
 #### Block Webshell creation for Servers
 
 This ASR rule blocks web shell script creation on Windows servers running Microsoft Exchange. A web shell script is a crafted script that allows an attacker to control the compromised server. A web shell script might include the following functionality:
@@ -525,7 +519,6 @@ This ASR rule blocks web shell script creation on Windows servers running Micros
 >
 > - This rule isn't supported when deployed via Microsoft Intune to Windows Server 2012 R2 or Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 > - If you manage ASR rules in Microsoft Defender for Endpoint, don't configure this ASR in Group Policy or other local settings (leave the value as `Not Configured`). Any other value (for example, `Enabled` or `Disabled`) can cause conflicts and prevent the rule from applying correctly.
-> - Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
 
 #### Block Win32 API calls from Office macros
 

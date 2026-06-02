@@ -9,7 +9,9 @@ ms.collection:
   - m365-security
 ms.localizationpriority: medium
 description: Learn how to recognize and remediate the Outlook rules and custom forms injections attacks in Office 365
-ms.custom: seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

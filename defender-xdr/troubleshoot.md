@@ -12,6 +12,7 @@ ms.topic: how-to
 ms.date: 02/19/2025
 appliesto:
   - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange
 ---
 
 # Troubleshoot Microsoft Defender XDR service issues
