@@ -58,7 +58,7 @@ The AI agent inventory in Advanced Hunting is moving from the `AIAgentInfo` tabl
 
 #### Third-party cloud agents (Foundry)
 
-Third-party cloud agents will no longer be discoverable through Microsoft Defender for Cloud connectors. To continue discovering third-party cloud agents, see [Registry sync in the Microsoft 365 agent registry (preview)](/microsoft-agent-365/registry-sync).
+Third-party cloud agents will no longer be discoverable through Microsoft Defender for Cloud connectors. To continue discovering third-party cloud agents, see [Registry sync in the Microsoft 365 agent registry (preview)](/microsoft-agent-365/admin/agent-registry).
 
 #### Microsoft Defender portal changes
 
@@ -105,7 +105,7 @@ Microsoft Foundry agent data will no longer appear in the following Azure portal
 
 ## Related content
 
-- [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](defender-security-for-ai)
+- [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](defender-security-for-ai.md)
 - [Microsoft Agent 365 overview](/microsoft-agent-365/overview)
 - [Detect, block, and investigate threats to AI agents using Microsoft Defender](ai-agent-detection-protection.md)
 - [Discover AI agents and assess security posture using Microsoft Defender](ai-agent-inventory.md)
