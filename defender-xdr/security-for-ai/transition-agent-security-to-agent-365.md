@@ -1,5 +1,5 @@
 ---
-title: "Action required: Transition Microsoft Copilot Studio and Microsoft Foundry agent security capabilities to Microsoft Agent 365"
+title: Transition Microsoft Copilot Studio and Microsoft Foundry agent security capabilities to Microsoft Agent 365
 description: Learn what actions to take as AI agent security capabilities in Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud transition to a Microsoft Agent 365 license on July 1, 2026.
 ms.author: guywild
 author: guywi-ms
