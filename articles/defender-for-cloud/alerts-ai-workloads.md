@@ -313,7 +313,7 @@ Severity: High 
 
 ### (Preview) AI agent Reconnaissance Attempt Detected  
 
-(AI.Azure_Agentic_LLMReconaissance) 
+(AI.Azure_Agentic_LLMReconnaissance) 
 
 **Description:** A threat actor is interacting with your Agent in a way that resembles reconnaissance behavior, including attempts to extract system instructions, Agent capabilities, or bypass safety guardrails. These prompts may precede attempted prompt injection or jailbreak attacks. 
 
@@ -324,7 +324,7 @@ Severity: High 
 ## Alerts for AI models
 
 ### (Preview) Malicious content detected in uploaded AI model
-(Ai.AIModelScan_MalwareDetected)
+(AI.AIModelScan_MalwareDetected)
 
 **Description:** A user-uploaded machine learning model was scanned and found to contain malware. The detection indicates the file may execute malicious code if loaded, posing a threat to account integrity, data confidentiality, and the compute environment.
 
