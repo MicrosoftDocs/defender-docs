@@ -21,7 +21,7 @@ This article describes the key changes and the actions you need to take to prepa
 
 ## Capabilities that require a Microsoft Agent 365 license as of July 1, 2026
 
-These capabilities, currently through Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud will be fully disabled for tenants without an Agent 365-eligible license starting July 1, 2026:
+These capabilities, currently through Microsoft Defender for Cloud Apps and Microsoft Defender for Cloud, will be fully disabled for tenants without an Agent 365-eligible license starting July 1, 2026:
 
 - **Microsoft Copilot Studio agents** — previously supported through Microsoft Defender for Cloud Apps:
 
@@ -58,7 +58,7 @@ The AI agent inventory in Advanced Hunting is moving from the `AIAgentInfo` tabl
 
 #### Third-party cloud agents (Foundry)
 
-Third-party cloud agents will no longer be discoverable through Microsoft Defender for Cloud connectors. To continue discovering third-party cloud agents, [Connect third-party cloud agents using the Agent 365 registry sync](/microsoft-agent-365/registry-sync).
+Third-party cloud agents will no longer be discoverable through Microsoft Defender for Cloud connectors. To continue discovering third-party cloud agents, see [Registry sync in the Microsoft 365 agent registry (preview)](/microsoft-agent-365/registry-sync).
 
 #### Microsoft Defender portal changes
 
@@ -93,8 +93,7 @@ Microsoft Foundry agent data will no longer appear in the following Azure portal
 
 1. **Update Advanced Hunting queries** - Review saved queries, custom detections, and workbooks that reference the `AIAgentInfo` table and update them to the new `AgentInfo` table before July 1, 2026.
 
-1. **If you already use Agent 365, redefine real-time protection blocking rules** — The existing Agent 365 real-time protection settings are moving to a new **Policies** experience. Any rules currently set to **Block** stop enforcing on July 1, 2026. Redefine them under **Settings** > **Security for AI** > **Policies** (available July 1, 2026) to preserve blocking. This applies only to Agent 365 real-time protection — Copilot Studio real-time protection via Defender for Cloud Apps is unchanged.
-
+1. **If you already use Agent 365, redefine real-time protection blocking rules** - The existing Agent 365 real-time protection settings are moving to a new **Policies** experience. Any rules currently set to **Block** stop enforcing on July 1, 2026. Redefine them under **Settings** > **Security for AI** > **Policies** (available July 1, 2026) to preserve blocking. This applies only to Agent 365 real-time protection — Copilot Studio real-time protection via Defender for Cloud Apps is unchanged.
 
 1. **Connect third-party cloud agents using the Agent 365 registry sync (Foundry agents only)** - Configure [registry sync in the Microsoft 365 agent registry (preview)](/microsoft-agent-365/admin/agent-registry) to continue discovering third-party cloud agents previously discovered using Microsoft Defender for Cloud connectors.
 
