@@ -30,7 +30,7 @@ Resources with sensitive data are at risk of unauthorized access. Use this proce
 
 1. Go to **Defender for Cloud** > **Data and AI security dashboard**.
 
-1. In **Data closer look**, select **View all resources with sensitive info types**.
+1. In Data closer look, select **View all resources with sensitive info types**.
 
     :::image type="content" source="media/discover-sensitive-data/view-all-resources.png" alt-text="Screenshot of the Data and AI security dashboard that shows where the view all resources with sensitive data type button is located." lightbox="media/discover-sensitive-data/view-all-resources.png":::
 
