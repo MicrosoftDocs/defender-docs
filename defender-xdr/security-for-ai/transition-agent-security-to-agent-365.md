@@ -56,7 +56,7 @@ The AI agent inventory in Advanced Hunting is moving from the `AIAgentInfo` tabl
 > [!IMPORTANT]
 > Tenants currently configured to **Block** on existing Agent 365 rules will stop blocking on July 1, 2026. To resume blocking, define rules under the new real-time protection policy experience, available under **Settings** > **Security for AI** > **Policies** starting July 1, 2026.
 
-#### Third-party cloud agents (Foundry)
+#### Third-party cloud agents (previously through Defender for Cloud)
 
 Third-party cloud agents will no longer be discoverable through Microsoft Defender for Cloud connectors. To continue discovering third-party cloud agents, see [Registry sync in the Microsoft 365 agent registry (preview)](/microsoft-agent-365/admin/agent-registry).
 
@@ -95,7 +95,7 @@ Microsoft Foundry agent data will no longer appear in the following Azure portal
 
 1. **If you already use Agent 365, redefine real-time protection blocking rules** - The existing Agent 365 real-time protection settings are moving to a new **Policies** experience. Any rules currently set to **Block** stop enforcing on July 1, 2026. Redefine them under **Settings** > **Security for AI** > **Policies** (available July 1, 2026) to preserve blocking. This applies only to Agent 365 real-time protection — Copilot Studio real-time protection through Defender for Cloud Apps is unchanged.
 
-1. **Connect third-party cloud agents using the Agent 365 registry sync (Foundry agents only)** - Configure [registry sync in the Microsoft 365 agent registry (preview)](/microsoft-agent-365/admin/agent-registry) to continue discovering third-party cloud agents previously discovered using Microsoft Defender for Cloud connectors.
+1. **Connect third-party cloud agents using the Agent 365 registry sync (previously through Defender for Cloud)** - Configure [registry sync in the Microsoft 365 agent registry (preview)](/microsoft-agent-365/admin/agent-registry) to continue discovering third-party cloud agents previously discovered using Microsoft Defender for Cloud connectors.
 
 1. **Migrate alert workflows** - Move any monitoring or response workflows that consume legacy alerts to their replacements by July 1, 2026:
    - Real-time protection rule alerts (audit and block modes) move to the `BehaviorInfo` table in Advanced Hunting. Build custom detections, hunting queries, and downstream automation against [behaviors](../advanced-hunting-behaviorinfo-table.md) in place of the legacy alerts.
