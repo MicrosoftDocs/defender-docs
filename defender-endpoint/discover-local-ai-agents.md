@@ -27,7 +27,7 @@ In this article, you learn how to view discovered agents in the inventory, explo
 
 Before you can discover local AI agents on endpoints, make sure you meet the following requirements:
 
-- Your devices are onboarded to [Microsoft Defender](/defender-endpoint/onboard-configure).
+- Your devices are onboarded to [Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
 - Your devices run a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
 - Your organization has the applicable Plan 2 license.
 - Your devices are running Microsoft Defender Antivirus in active mode.

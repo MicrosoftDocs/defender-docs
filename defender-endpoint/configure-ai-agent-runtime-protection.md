@@ -96,7 +96,7 @@ The PowerShell command in the previous section configures a single device and is
     Set-MpPreference -AiAgentProtection Block
     ```
 
-1. Use Intune to deploy the script to target devices. For detailed steps, see [Use PowerShell scripts on Windows devices in Intune](/mem/intune/apps/intune-management-extension).
+1. Use Intune to deploy the script to target devices. For detailed steps, see [Use PowerShell scripts on Windows devices in Intune](/intune/device-management/tools/run-powershell-scripts-windows).
 
 ## Review and investigate detections
 
@@ -125,7 +125,7 @@ Users can also review detections under **Windows Security** > **Virus & threat p
 
 For security operations teams, runtime protection events appear in the Microsoft Defender portal:
 
-- Select an alert to view detection type, severity, affected agent, process tree details, and recommended actions.
+Select an alert to view detection type, severity, affected agent, process tree details, and recommended actions.
 
 Your security team uses the same investigation workflows as other endpoint detections: timeline review, alert and entity correlation, and response actions.
 

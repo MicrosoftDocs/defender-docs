@@ -75,7 +75,7 @@ The following table lists the local AI agents that Defender supports for runtime
 | Agent | Hooks documentation |
 |-------|---------------------|
 | [Claude Code](https://code.claude.com/) | [Claude Code hooks](https://code.claude.com/docs/en/hooks) |
-| [GitHub Copilot CLI](https://docs.github.com/en/copilot) | [GitHub Copilot coding agent](https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-agent-mode-in-vs-code/using-copilot-coding-agent) |
+| [GitHub Copilot CLI](https://docs.github.com/en/copilot) | [GitHub Copilot hooks](https://docs.github.com/copilot/how-tos/copilot-cli/customize-copilot/use-hooks) |
 
 ## Broader AI security capabilities
 
