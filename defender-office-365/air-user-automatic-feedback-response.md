@@ -47,7 +47,7 @@ This article explains how to enable and customize automatic feedback response fo
 
    :::image type="content" source="media/air-automatic-feedback.png" alt-text="Automatic feedback response options on the User reported settings page." lightbox="media/air-automatic-feedback.png":::
 
-4. The notification email uses the same template as when an admin selects :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>.
+4. The notification email uses the same template as when an admin selects :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>.
 
    You can customize the notification email by selecting the **Customize results email** link.
 

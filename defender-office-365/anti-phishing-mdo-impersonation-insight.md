@@ -93,11 +93,11 @@ You can sort the entries by clicking on an available column header. The followin
 - Narrow the width of appropriate columns.
 - Zoom out in your web browser.
 
-To change the list of domain impersonation detections from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of domain impersonation detections from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a comma-separated list of values to find specific domain impersonation detections.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a comma-separated list of values to find specific domain impersonation detections.
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of domain impersonation detections to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of domain impersonation detections to a CSV file.
 
 ### View details about a domain impersonation detection
 
@@ -168,11 +168,11 @@ You can sort the entries by clicking on an available column header. The followin
 - Narrow the width of appropriate columns.
 - Zoom out in your web browser.
 
-To change the list of user impersonation detections from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of user impersonation detections from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a comma-separated list of values to find specific user impersonation detections.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a comma-separated list of values to find specific user impersonation detections.
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of user impersonation detections to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of user impersonation detections to a CSV file.
 
 ### View details about a user impersonation detection
 

@@ -55,15 +55,15 @@ The playbook evaluates and automatically resolves submissions where no action is
 
 You're in Explorer (Threat Explorer) at <https://security.microsoft.com/threatexplorerv3> in the **All email**, **Malware**, or **Phish** views. You're on the **Email** tab (view) of the details area below the chart. You select a message to investigate by using either of the following methods:
 
-- Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available directly in the tab.
+- Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** is available directly in the tab.
 
   :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
-- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
+- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** at the top of the flyout.
 
   :::image type="content" source="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="The actions available in the details tab after you select a Subject value in the Email tab of the details area in the All email view." lightbox="media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
 
-After you select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**, select **Initiate automated investigation**. For more information, see [Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+After you select :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**, select **Initiate automated investigation**. For more information, see [Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 Similar to playbooks triggered by an alert, automatic investigations that are triggered from Threat Explorer include:
 
