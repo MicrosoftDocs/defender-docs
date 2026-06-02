@@ -17,7 +17,7 @@ Effective July 1, 2026, AI agent security capabilities currently available in pu
 
 Once you onboard to Agent 365, these experiences remain in the Microsoft Defender portal — powered by Agent 365 observability logs and the agent registry as the single source of truth for agent inventory, real-time threat protection, and consistent posture across your environment.
 
-This article describes the key changes and the actions you need to take to prepare.
+This article lists the capabilities that require an Agent 365 license, describes how the experience changes after you transition, and provides step-by-step actions to prepare your environment before July 1, 2026.
 
 ## Capabilities that require a Microsoft Agent 365 license as of July 1, 2026
 
