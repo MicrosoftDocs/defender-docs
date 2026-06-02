@@ -25,6 +25,13 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
+## June 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Feature |[Local AI agent discovery](/defender-xdr/security-for-ai/ai-agent-inventory#discover-local-ai-coding-agents-on-endpoints-preview) |Preview |Microsoft Defender for Endpoint now automatically discovers supported local AI agents running on onboarded Windows devices — including coding agents and IDE extensions, desktop AI assistants, local AI runtimes, and agent platforms. Discovered agents appear as assets in the AI agent inventory, exposure map, and advanced hunting, giving security teams visibility into local AI agent usage across the organization. For more information, see [Discover local AI agents](discover-local-ai-agents.md).|
+|Feature |[Local AI agent runtime protection](configure-ai-agent-runtime-protection.md) |Preview |Runtime protection for supported local AI agents on Windows endpoints is now available in public preview. Microsoft Defender inspects the agent loop (user prompts, tool calls, and tool responses) and can block risky activity before it executes, helping stop prompt injection and unsafe agent actions at the device level. Blocked and audited events appear as alerts in Microsoft Defender to support incident correlation and investigation workflows. For more information, see [Set up AI agent runtime protection](configure-ai-agent-runtime-protection.md).|
+
 ## May 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
