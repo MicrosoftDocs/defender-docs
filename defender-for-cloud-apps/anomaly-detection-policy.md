@@ -4,6 +4,7 @@ description: This article provides a description of Anomaly detection policies a
 ms.date: 03/01/2023
 ms.topic: how-to
 ms.reviewer: Ronen-Refaeli
+ms.custom: sfi-image-nochange
 ---
 
 # Create Defender for Cloud Apps anomaly detection policies

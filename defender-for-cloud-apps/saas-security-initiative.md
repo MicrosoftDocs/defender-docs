@@ -4,6 +4,7 @@ description: Learn how to use the SaaS Security Initiative in Microsoft Defender
 ms.topic: how-to
 ms.date: 05/15/2025
 ms.reviewer: iidogGedanken
+ms.custom: sfi-image-nochange
 ---
 
 # SaaS Security Initiative 

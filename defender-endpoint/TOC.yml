@@ -36,11 +36,14 @@
 
   - name: Microsoft Defender for Endpoint demonstrations and evaluation
     items:
-    - name: Evaluate Microsoft Defender Antivirus
-      href: evaluate-microsoft-defender-antivirus.md
+    - name: Evaluate Microsoft Defender
       items:
+      - name: Evaluate Microsoft Defender Antivirus
+        href: evaluate-microsoft-defender-antivirus.md
       - name: Guidance for pen testing and BAS scenarios
         href: guidance-for-pen-testing-and-bas.md
+      - name: Guidance for pen testing and BAS scenarios on Linux
+        href: guidance-pen-testing-bas-linux.md
       - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
       - name: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management
@@ -569,7 +572,9 @@
     - name: Onboarding using Microsoft Intune
       href: onboarding-endpoint-manager.md
     - name: Deploy Microsoft Defender for Endpoint prerelease builds on Android devices
-      href: mobile-pretest-android.md
+      href: mobile-pretest-android.md   
+    - name: Allow Defender for Endpoint scripts with WDAC script enforcement
+      href: configure-wdac-script-enforcement-mde.md
 
   - name: Migration guides
     items:

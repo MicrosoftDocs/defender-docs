@@ -10,7 +10,9 @@ ms.collection:
 - m365-security
 - tier3
 - mde-asr
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 ms.topic: faq
 ms.date: 01/05/2026
 ms.reviewer: tewchen, joshbregman

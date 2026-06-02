@@ -11,7 +11,9 @@ ms.collection:
   - m365solution-scenario
   - highpri
   - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
 ms.date: 03/26/2025

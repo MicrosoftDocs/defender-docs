@@ -10,7 +10,9 @@ ms.collection:
 - m365-security
 - tier1
 - mde-ngp
-ms.custom: intro-overview
+ms.custom:
+  - intro-overview
+  - sfi-image-nochange
 ms.topic: install-set-up-deploy
 ms.subservice: ngp
 ms.date: 10/20/2025

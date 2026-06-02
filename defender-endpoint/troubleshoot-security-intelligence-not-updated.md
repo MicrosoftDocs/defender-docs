@@ -10,7 +10,8 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
 ms.custom:
-- partner-contribution
+  - partner-contribution
+  - sfi-image-nochange
 ms.reviewer:
 appliesto:
   - Microsoft Defender for Business

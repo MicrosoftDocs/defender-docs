@@ -17,8 +17,6 @@ appliesto:
 
 # Microsoft Defender for Office 365 support for Microsoft Teams
 
-[!INCLUDE [Prerelease information](../includes/prerelease.md)]
-
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 With the increased use of collaboration tools like Microsoft Teams, the possibility of malicious attacks using chat messages has also increased. This article describes the Microsoft 365 and Microsoft Defender for Office 365 protection features for Microsoft Teams.
