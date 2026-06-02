@@ -9,8 +9,10 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can find and use email security reports available in the Microsoft Defender portal, including the Threat protection status report.
-ms.custom: 
-- seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ms.service: defender-office-365
 ms.date: 07/08/2025
 appliesto:
@@ -82,15 +84,15 @@ The details table below the graph shows the following information:
 - **Action**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Activity**: **Restricted** or **Suspicious**
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Compromised users** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Compromised users** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 ## Exchange transport rule report
 
@@ -150,7 +152,7 @@ The details table below the graph shows the following information:
 - **15 days**
 - **30 days**
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Mail direction**: Select **Inbound**, **Outbound**, and **Intra-org**.
@@ -164,7 +166,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **Data loss prevention**
 - **Domain**: Select **All** or an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 On the **Type** tab, select **Choose a category for more details** to see more information:
 
@@ -172,7 +174,7 @@ On the **Type** tab, select **Choose a category for more details** to see more i
 - **Malware in email**: This selection takes you to [View data by Email \> Malware and Chart breakdown by Detection Technology](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) in the Threat protection status report.
 - **Spam detections**: This selection takes you to [View data by Email \> Spam and Chart breakdown by Detection Technology](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) in the Threat protection status report.
 
-On the **Type** tab, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Type** tab, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 ### Direction view for the Mailflow status report
 
@@ -184,7 +186,7 @@ On the **Direction** tab, the chart shows the following information for the spec
 - **Intra-org**
 - **Outbound**
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 
@@ -204,7 +206,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **Data loss prevention**: Email quarantined by [data loss prevention (DLP) policies](/purview/dlp-learn-about-dlp).
 - **Domain**: Select **All** or an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 On the **Direction** tab, select **Choose a category for more details** to see more information:
 
@@ -212,7 +214,7 @@ On the **Direction** tab, select **Choose a category for more details** to see m
 - **Malware in email**: This selection takes you to [View data by Email \> Malware and Chart breakdown by Detection Technology](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) in the Threat protection status report.
 - **Spam detections**: This selection takes you to [View data by Email \> Spam and Chart breakdown by Detection Technology](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) in the Threat protection status report.
 
-On the **Direction** tab, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create schedule** and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** actions are available.
+On the **Direction** tab, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create schedule** and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** actions are available.
 
 ### Mailflow view for the Mailflow status report
 
@@ -264,19 +266,19 @@ The details table below the diagram shows the following information:
 
 Select a row in the details table to see a further breakdown of the email counts in the details flyout that opens.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**.
 - **Mail direction**: Select **Inbound**, **Outbound**, and **Intra-org**.
 - **Domain**: Select **All** or an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Mailflow** tab, select :::image type="icon" source="media/m365-cc-sc-show-trends-icon.png" border="false"::: **Show trends** to see trend graphs in the **Mailflow trends** flyout that opens.
+On the **Mailflow** tab, select :::image type="icon" source="media/defender-portal-icon-show-trends.png" border="false"::: **Show trends** to see trend graphs in the **Mailflow trends** flyout that opens.
 
 :::image type="content" source="media/mail-flow-status-report-mailflow-view-show-trends.png" alt-text="The Mailflow trends flyout in Mailflow view in the Mailflow status report." lightbox="media/mail-flow-status-report-mailflow-view-show-trends.png":::
 
-On the **Mailflow** tab, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** action is available.
+On the **Mailflow** tab, the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** action is available.
 
 ## Malware detections report
 
@@ -340,7 +342,7 @@ The details table below the graph shows the following information:
 
 For more information about composite authentication result codes, see [Anti-spam message headers](message-headers-eop-mdo.md).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**
 - **Result**:
@@ -351,9 +353,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **Other**
 - **Spoof type**: **Internal** and **External**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Spoof mail report** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Spoof mail report** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 :::image type="content" source="media/spoof-detections-report-page.png" alt-text="The Spoof mail report page in the Microsoft Defender portal." lightbox="media/spoof-detections-report-page.png":::
 
@@ -374,13 +376,13 @@ The chart shows the following information:
 
 The details table below the graph shows the same information and has the same available actions as the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>:
 
-- :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**
-- :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group**
-- :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**
+- :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**
+- :::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **Group**
+- :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Submit to Microsoft for analysis**
 
 For more information, see [View email admin submissions to Microsoft](submissions-admin.md#view-email-admin-submissions-to-microsoft).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date submitted**: **Start date** and **End date**
 - **Submission ID**
@@ -401,7 +403,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **Completed**
 - **Tags**: **All** or one or more [user tags](user-tags-about.md).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 On the **Submissions** page, the **[Export](#export-report-data)** action is available.
 
@@ -429,7 +431,7 @@ On the **Email & collaboration reports** page at <https://security.microsoft.com
 
 :::image type="content" source="media/threat-protection-status-report-widget.png" alt-text="The Threat protection status widget on the Email & collaboration reports page." lightbox="media/threat-protection-status-report-widget.png":::
 
-By default, the chart shows data for the past seven days. Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** on the **Threat protection status report** page to select a 90 day date range (trial subscriptions might be limited to 30 days). The details table allows filtering for 30 days.
+By default, the chart shows data for the past seven days. Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** on the **Threat protection status report** page to select a 90 day date range (trial subscriptions might be limited to 30 days). The details table allows filtering for 30 days.
 
 The available views are described in the following subsections.
 
@@ -446,7 +448,7 @@ In the **View data by Overview** view, the following detection information is sh
 
 No details table is available below the chart.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**.
 - **Detection**: The same values as in the chart.
@@ -462,7 +464,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
   - **Mail flow rule** (transport rule)
   - **Others**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 ### View data by Email \> Phish and Chart breakdown by Detection Technology
 
@@ -512,7 +514,7 @@ To see all columns, you likely need to do one or more of the following steps:
 - Narrow the width of appropriate columns.
 - Zoom out in your web browser.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**
 - **Detection**: The same values as in the chart.
@@ -532,16 +534,16 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Policy name (details table view only)**: Select **All** or a specific policy.
 - **Recipients (separated by commas)**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 If you select an entry from the details table by clicking anywhere in the row other than the check box next to the first column, an email details flyout opens. This details flyout is known as the _Email summary panel_ and contains summarized information that's also available on the [Email entity page in Defender for Office 365](mdo-email-entity-page.md) for the message. For details about the information in the Email summary panel, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
-- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+- :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
-On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Threat protection status** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 ### View data by Email \> Spam and Chart breakdown by Detection Technology
 
@@ -576,7 +578,7 @@ To see all columns, you likely need to do one or more of the following steps:
 - Narrow the width of appropriate columns.
 - Zoom out in your web browser.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**
 - **Detection**: The same values as in the chart.
@@ -598,16 +600,16 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Policy name (details table view only)**: Select **All** or a specific policy.
 - **Recipients**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 If you select an entry from the details table by clicking anywhere in the row other than the check box next to the first column, an email details flyout opens. This details flyout is known as the _Email summary panel_ and contains summarized information that's also available on the [Email entity page in Defender for Office 365](mdo-email-entity-page.md) for the message. For details about the information in the Email summary panel, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
-- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+- :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
-On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Threat protection status** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 ### View data by Email \> Malware and Chart breakdown by Detection Technology
 
@@ -646,7 +648,7 @@ In the details table below the chart, the following information is available:
   - Narrow the width of appropriate columns.
   - Zoom out in your web browser.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**
 - **Detection**: The same values as in the chart.
@@ -666,16 +668,16 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Policy name (details table view only)**: Select **All** or a specific policy.
 - **Recipients (separated by commas)**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 If you select an entry from the details table by clicking anywhere in the row other than the check box next to the first column, an email details flyout opens. This details flyout is known as the _Email summary panel_ and contains summarized information that's also available on the [Email entity page in Defender for Office 365](mdo-email-entity-page.md) for the message. For details about the information in the Email summary panel, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
-- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+- :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
-On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Threat protection status** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 ### Chart breakdown by Policy type
 
@@ -707,7 +709,7 @@ In the details table below the chart, the following information is available:
   - Narrow the width of appropriate columns.
   - Zoom out in your web browser.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**
 - **Detection**: Detection technology values as previously described in this article and at [Detection technologies](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
@@ -729,16 +731,16 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
 <sup>\*</sup> Defender for Office 365 only
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 If you select an entry from the details table by clicking anywhere in the row other than the check box next to the first column, an email details flyout opens. This details flyout is known as the _Email summary panel_ and contains summarized information that's also available on the [Email entity page in Defender for Office 365](mdo-email-entity-page.md) for the message. For details about the information in the Email summary panel, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
-- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+- :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
-On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Threat protection status** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 ### View data by Email \> Phish and Chart breakdown by Threat classification (Defender for Office 365)
 
@@ -775,7 +777,7 @@ In the details table below the chart, the following information is available:
   - Narrow the width of appropriate columns.
   - Zoom out in your web browser.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**
 - **Detection** section:
@@ -814,16 +816,16 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Policy name (details table view only)**: Select **All** or a specific policy.
 - **Recipients (separated by commas)**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 If you select an entry from the details table by clicking anywhere in the row other than the check box next to the first column, an email details flyout opens. This details flyout is known as the _Email summary panel_ and contains summarized information that's also available on the [Email entity page in Defender for Office 365](mdo-email-entity-page.md) for the message. For details about the information in the Email summary panel, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
 The following actions are available at the top of the Email summary panel for the Threat protection status report:
 
-- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+- :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
-On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Threat protection status** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 ### Chart breakdown by Delivery status
 
@@ -858,7 +860,7 @@ In the details table below the chart, the following information is available:
   - Narrow the width of appropriate columns.
   - Zoom out in your web browser.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**
 - **Detection**: Detection technology values as previously described in this article and at [Detection technologies](/office/office-365-management-api/office-365-management-activity-api-schema#detection-technologies).
@@ -878,16 +880,16 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
 <sup>\*</sup> Defender for Office 365 only
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
 If you select an entry from the details table by clicking anywhere in the row other than the check box next to the first column, an email details flyout opens. This details flyout is known as the _Email summary panel_ and contains summarized information that's also available on the [Email entity page in Defender for Office 365](mdo-email-entity-page.md) for the message. For details about the information in the Email summary panel, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
-- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+- :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
-On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Threat protection status** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 ### View data by Content \> Malware
 
@@ -908,15 +910,15 @@ In the details table below the chart, the following information is available:
 - **File size**
 - **Last modifying user**
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**.
 - **Detection**: The same values as in the chart.
 - **Workload**: **Teams**, **SharePoint**, and **OneDrive**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** action is available.
+On the **Threat protection status** page, the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** action is available.
 
 ### View data by System override and Chart breakdown by Reason
 
@@ -960,7 +962,7 @@ In the details table below the chart, the following information is available:
 - **Sender IP**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**
 - **Reason**: The same values as the chart.
@@ -978,9 +980,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Policy name (details table view only)**: Select **All** or a specific policy.
 - **Recipients (separated by commas)**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** action is available.
+On the **Threat protection status** page, the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** action is available.
 
 ### View data by System override and Chart breakdown by Delivery location
 
@@ -1001,7 +1003,7 @@ In the details table below the chart, the following information is available:
 - **Sender IP**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**
 - **Reason**: The same values as in [Chart breakdown by Policy type](#chart-breakdown-by-policy-type)
@@ -1019,9 +1021,9 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 - **Policy name (details table view only)**: Select **All** or a specific policy.
 - **Recipients (separated by commas)**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** action is available.
+On the **Threat protection status** page, the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** action is available.
 
 ## Top malware report
 
@@ -1040,9 +1042,9 @@ On the **Top malware report** page, a larger version of the pie chart is display
 - **Top malware**: The malware name
 - **Count**: How many messages contained the malware.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting the **Start date** and **End date** values in the flyout that opens.
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting the **Start date** and **End date** values in the flyout that opens.
 
-On the **Top malware** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Top malware** page, the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** and :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 :::image type="content" source="media/top-malware-report-view.png" alt-text="The Top malware report view." lightbox="media/top-malware-report-view.png":::
 
@@ -1088,14 +1090,14 @@ For each chart, the details table below the chart shows the following informatio
 - **Item count**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to modify the report by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)** **Start date** and **End date**
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-On the **Top senders and recipients** page, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** action is available.
+On the **Top senders and recipients** page, the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** action is available.
 
 :::image type="content" source="media/top-senders-and-recipients-report-view.png" alt-text="The Show data for Top mail senders view in the Top senders and recipients report." lightbox="media/top-senders-and-recipients-report-view.png":::
 
@@ -1124,17 +1126,17 @@ The chart shows the following information:
 
 The details table below the graph shows the same information and has the same actions that are available on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>:
 
-- :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**
-- :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group**
-- :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**
-- :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify**
-- :::image type="icon" source="media/m365-cc-sc-submit-user-reported-message-icon.png" border="false"::: **Submit to Microsoft for analysis**
+- :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns**
+- :::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **Group**
+- :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**
+- :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify**
+- :::image type="icon" source="media/defender-portal-icon-submit-user-reported-message.png" border="false"::: **Submit to Microsoft for analysis**
 
 For more information, see [View user reported messages to Microsoft](submissions-admin.md#view-user-reported-messages-to-microsoft) and [Admin actions for user reported messages](submissions-admin.md#admin-actions-for-user-reported-messages).
 
 :::image type="content" source="media/user-reported-messages-report.png" alt-text="The user-reported messages report." lightbox="media/user-reported-messages-report.png":::
 
-On the report page, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** action is available.
+On the report page, the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)** action is available.
 
 ## What permissions are needed to view these reports?
 
@@ -1148,7 +1150,7 @@ You need to be assigned permissions before you can view and use the reports that
   - **Global Reader**
 - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**¹ ², **Security Administrator**, **Security Reader**, or **Global Reader** roles in Microsoft Entra ID gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
-¹ Membership in the **Organization Management** role group or in the **Global Administrator** role is required to use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** or :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)** actions in reports (where available).
+¹ Membership in the **Organization Management** role group or in the **Global Administrator** role is required to use the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** or :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)** actions in reports (where available).
 
 > [!IMPORTANT]
 > ² Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
@@ -1165,9 +1167,9 @@ If you don't see data in the reports, check the report filters and double-check 
 
 Depending on the report and the specific view in the report, one or more of the following actions might be available on the main report page as previously described:
 
-- :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)**
-- :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**
-- :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**
+- :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Export](#export-report-data)**
+- :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**
+- :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**
 
 ### Export report data
 
@@ -1176,7 +1178,7 @@ Depending on the report and the specific view in the report, one or more of the 
 > - Configured filters at the time of export affect the exported data.
 > - If the exported data exceeds 150,000 entries, the data is split into multiple files.
 
-1. On the report page, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
+1. On the report page, select :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export**.
 
 2. In the **Export conditions** flyout that opens, review, and configure the following settings:
 
@@ -1202,7 +1204,7 @@ To create scheduled reports, you need to be a member of the **Organization manag
 > [!IMPORTANT]
 > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-1. On the report page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png"::: **Create schedule** to start the new scheduled report wizard.
+1. On the report page, select :::image type="icon" source="media/defender-portal-icon-create.png"::: **Create schedule** to start the new scheduled report wizard.
 
 2. On the **Name scheduled report** page, review or customize the **Name** value, and then select **Next**.
 
@@ -1230,7 +1232,7 @@ To create scheduled reports, you need to be a member of the **Organization manag
    - Click in the box, wait for the list of users to resolve, and then select the user from the list below the box.
    - Click in the box, start typing a value, and then select the user from the list below the box.
 
-   To remove an entry from the list, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+   To remove an entry from the list, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
    When you're finished on the **Recipients** page, select **Next**.
 
@@ -1260,24 +1262,24 @@ On the **Manage schedules** page, the following information is shown for each sc
 - **Frequency**
 - **Last sent**
 
-To change the list from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Search** box to find an existing scheduled report entry.
+Use the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Search** box to find an existing scheduled report entry.
 
 To modify the scheduled report settings, do the following steps:
 
 1. Select the scheduled report entry by clicking anywhere in the row other than the check box.
 
 2. In the details flyout that opens, do any of the following steps:
-   - Select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit name** to change the name of the scheduled report.
+   - Select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit name** to change the name of the scheduled report.
    - Select the **Edit** link in the section to modify the corresponding settings.
 
    The settings and configuration steps are the same as described in [Schedule report](#schedule-recurring-reports).
 
 To delete a scheduled report entry, use either of the following methods:
 
-- Select the check box next to one, more or all of the scheduled reports, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears on the main page.
-- Select the scheduled report by clicking anywhere in the row other than the check box, and then select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** in the details flyout that opens.
+- Select the check box next to one, more or all of the scheduled reports, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears on the main page.
+- Select the scheduled report by clicking anywhere in the row other than the check box, and then select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** in the details flyout that opens.
 
 Read the warning dialog that opens, and then select **OK**.
 
@@ -1290,7 +1292,7 @@ To create on-demand reports, you need to be a member of the **Organization manag
 > [!IMPORTANT]
 > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-1. On the report page, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Request report** to start the new on-demand report wizard.
+1. On the report page, select :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Request report** to start the new on-demand report wizard.
 
 2. On the **Name on-demand report** page, review or customize the **Name** value, and then select **Next**.
 
@@ -1304,7 +1306,7 @@ To create on-demand reports, you need to be a member of the **Organization manag
    - Click in the box, wait for the list of users to resolve, and then select the user from the list below the box.
    - Click in the box, start typing a value, and then select the user from the list below the box.
 
-   To remove an entry from the list, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+   To remove an entry from the list, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
    When you're finished on the **Recipients** page, select **Next**.
 
@@ -1340,9 +1342,9 @@ On the **Reports for download** page, the following information is shown for eac
   - **Complete - Ready for download**: Report generation is complete, and the report is available to download.
   - **Complete - No results found**: Report generation is complete, but the report contains no data, so you can't download it.
 
-To download the report, select the check box next in the start date of the report, and then select the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Download report** action that appears.
+To download the report, select the check box next in the start date of the report, and then select the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Download report** action that appears.
 
-Use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Search** box to find an existing report.
+Use the :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Search** box to find an existing report.
 
 In the **Save as** dialog that opens, you see the default name of the .csv file and the download location (the local Downloads folder by default), but you can change those values and then select **Save** to download the report.
 

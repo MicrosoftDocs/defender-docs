@@ -18,6 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 08/12/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # Turn on Microsoft Defender XDR

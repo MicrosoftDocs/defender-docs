@@ -9,7 +9,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier2
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.topic: how-to
 ms.date: 02/12/2025
 appliesto:

@@ -15,6 +15,7 @@ appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender for Business
+ms.custom: sfi-ga-nochange
 ---
 
 # Configure alert notifications

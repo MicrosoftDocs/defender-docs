@@ -13,7 +13,8 @@ ai-usage: human-only
 ms.collection: 
 - m365-security
 ms.custom:
-- partner-contribution
+  - partner-contribution
+  - sfi-image-nochange
 ---
 
 # Troubleshoot Microsoft Defender Antivirus performance issues with WPRUI
