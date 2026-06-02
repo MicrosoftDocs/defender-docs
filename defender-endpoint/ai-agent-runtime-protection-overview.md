@@ -26,7 +26,7 @@ When configured to block, Defender stops the agent's action on the device and no
 This article explains what runtime protection stops, how it works, and how to investigate detections.
 
 > [!TIP]
-> Runtime protection complements Microsoft Defender's **discovery capabilities**, which automatically detect supported local AI agents and MCP server configurations across your devices. For more information, see [Local AI agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md).
+> Runtime protection complements Microsoft Defender's **discovery capabilities**, which automatically detect supported local AI agents and MCP server configurations across your devices. For more information, see [Local AI agent discovery with Microsoft Defender for Endpoint](local-agent-discovery-overview.md).
 
 ## What runtime protection detects
 
@@ -85,7 +85,7 @@ The following table lists the local AI agents that Microsoft Defender supports f
 
 Microsoft Defender's runtime protection capabilities are part of a comprehensive AI security approach. Microsoft Defender provides other capabilities across your organization's AI ecosystem:
 
-- **Discover local AI agents**: Automatically detect supported local AI agents and MCP server configurations across your devices. For more information, see [Local AI agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md).
+- **Discover local AI agents**: Automatically detect supported local AI agents and MCP server configurations across your devices. For more information, see [Local AI agent discovery with Microsoft Defender for Endpoint](local-agent-discovery-overview.md).
 - **Discover cloud and platform agents**: Find agents built with Microsoft Copilot Studio, Microsoft Foundry, Amazon Web Services (AWS) Bedrock, and Google Cloud Platform (GCP) Vertex AI.
 - **Assess security posture**: Evaluate agent configurations, identify risks, get prioritized recommendations, and surface attack paths.
 - **Detect and investigate threats**: Correlate alerts and investigate suspicious agent behavior across your security infrastructure.
@@ -95,4 +95,4 @@ For details on these capabilities and how to apply them, see [Protect AI assets 
 ## Next steps
 
 - [Set up AI agent runtime protection with Microsoft Defender for Endpoint](configure-ai-agent-runtime-protection.md)
-- [Local AI agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md)
+- [Local AI agent discovery with Microsoft Defender for Endpoint](local-agent-discovery-overview.md)

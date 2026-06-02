@@ -16,24 +16,24 @@ appliesto:
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-Microsoft Defender automatically discovers supported local AI agents and MCP servers configured on onboarded devices and surfaces them in the AI agent inventory and advanced hunting. To learn more about local AI agent discovery, see [Local AI agent discovery with Microsoft Defender for Endpoint](protect-ai-agents-overview.md).
+Microsoft Defender automatically discovers supported local AI agents and MCP servers configured on onboarded devices and surfaces them in the AI agent inventory and advanced hunting. To learn more about local AI agent discovery, see [Local AI agent discovery with Microsoft Defender for Endpoint](local-agent-discovery-overview.md).
 
-In this article, you learn how to view discovered agents in the inventory, explore their relationships with devices and identities, and investigate agent presence by using advanced hunting.
+In this article, you learn how to view discovered agents in the inventory, explore their relationships with devices and identities, and investigate agent presence using advanced hunting.
 
 > [!NOTE]
-> Local AI agent discovery provides discovery and investigation capabilities only. It doesn't include security posture assessment or alerts for endpoint agents at this time.
+> Local AI agent discovery provides discovery and investigation capabilities only, and doesn't include security posture assessment or alerts for endpoint agents.
 
 ## Prerequisites
 
-Before you can discover local AI agents on endpoints, make sure the following requirements are met:
+Before you can discover local AI agents on endpoints, make sure you meet the following requirements:
 
-- The device is onboarded to [Microsoft Defender](/defender-endpoint/onboard-configure).
-- The device runs a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
+- Your devices are onboarded to [Microsoft Defender](/defender-endpoint/onboard-configure).
+- Your devices run a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
 - Your organization has the applicable Plan 2 license.
-- Microsoft Defender Antivirus is running in active mode on the device.
+- Your devices are running Microsoft Defender Antivirus in active mode.
 - Your environment is in the commercial cloud. Sovereign and national clouds aren't supported.
 
-You don't need additional deployment, configuration, or scripts beyond the device onboarding requirements: If the device meets all of the prerequisites, agent discovery begins automatically.
+You don't need additional deployment, configuration, or scripts beyond the device onboarding requirements. If the device meets all of the prerequisites, agent discovery begins automatically.
 
 ## View local AI agents in the inventory
 
@@ -43,13 +43,13 @@ You don't need additional deployment, configuration, or scripts beyond the devic
 
     1. In the left navigation pane, select **Assets** > **AI Agents**.
 
-    1. Select **Local agents (Preview)** to see a filtered list of local AI agents discovered on endpoint devices.
+    1. Select **Local agents** to see a filtered list of local AI agents discovered on endpoint devices.
     
 - To view a specific agent's details:
 
-    1. From the **Local agents** list, select an agent to open the **Agent entity page**.
+    1. From the **Local agents** list, select an agent to open the **Agent** pane.
     
-        :::image type="content" source="media/protect-ai-agents-overview/discovery-overview.png" alt-text="Screenshot showing the local AI agents inventory in the Microsoft Defender portal with discovered agents listed." lightbox="media/protect-ai-agents-overview/discovery-overview.png":::
+        :::image type="content" source="media/local-agent-discovery-overview/discovery-overview.png" alt-text="Screenshot showing the local AI agents inventory in the Microsoft Defender portal with discovered agents listed." lightbox="media/local-agent-discovery-overview/discovery-overview.png":::
 
     1. Review the agent details, including:
 

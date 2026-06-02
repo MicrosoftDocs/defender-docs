@@ -20,16 +20,16 @@ Local AI agents run with user-level permissions and can access files, tools, and
 
 Microsoft Defender automatically discovers supported local AI agents and MCP server configurations on onboarded devices, then surfaces them in the Microsoft Defender portal. This gives security teams a centralized view of AI agent presence across the organization.
 
-:::image type="content" source="media/protect-ai-agents-overview/discovery-overview.png" alt-text="Screenshot showing the local AI agents inventory in the Microsoft Defender portal with discovered agents listed." lightbox="media/protect-ai-agents-overview/discovery-overview.png":::
+:::image type="content" source="media/local-agent-discovery-overview/discovery-overview.png" alt-text="Screenshot showing the local AI agents inventory in the Microsoft Defender portal with discovered agents listed." lightbox="media/local-agent-discovery-overview/discovery-overview.png":::
 
 This article explains how local AI agent discovery works, lists supported agents and MCP server configurations, and describes how to view discovered agents in the Microsoft Defender portal.
 
 > [!TIP]
-> Defender also provides **AI agent runtime protection** for local agents. When enabled, it monitors activity in the agentic loop and blocks malicious instructions before the agent can act on them. For more information, see [AI agent runtime protection](ai-agent-runtime-protection-overview.md).
+> Defender also provides **AI agent runtime protection** for local agents. When enabled, runtime protection monitors activity in the agentic loop and blocks malicious instructions before the agent can act on them. For more information, see [AI agent runtime protection](ai-agent-runtime-protection-overview.md).
 
 ## Local AI agent discovery on endpoints
 
-Microsoft Defender automatically detects supported local AI agents and MCP server configurations on onboarded devices. When Microsoft Defender identifies a supported local AI agent, the agent is displayed as a discoverable asset in the Microsoft Defender portal with visibility into:
+Defender automatically detects supported local AI agents and MCP server configurations on onboarded devices. When Defender identifies a supported local AI agent, the agent is displayed as a discoverable asset in the Microsoft Defender portal with visibility into:
 
 - **Local AI agent inventory**: A centralized view of discovered local AI agents with device and user associations and discovery metadata.
 - **Exposure map**: Visual relationships between local AI agents, devices, identities, and the resources those identities can access, to help assess potential impact.
@@ -37,9 +37,9 @@ Microsoft Defender automatically detects supported local AI agents and MCP serve
 
 ### Supported local AI agents and MCP server configurations
 
-Defender defines an agent as a combination of user, device, and agent type. For example, if Claude Code runs in 15 different project folders on the same device for the same user, it appears as a single agent entry in the inventory.
+Defender defines an agent as a combination of a user, a device, and an agent type. For example, if Claude Code runs in 15 different project folders on the same device for the same user, it appears as a single agent entry in the inventory.
 
-Microsoft Defender discovers supported local AI agents on Windows endpoints. This includes agents that run from the command line, desktop apps, agentic IDEs, VS Code extensions, and Claw-based local agent implementations.
+Defender discovers supported local AI agents on Windows endpoints. This includes agents that run from the command line, desktop apps, agentic IDEs, VS Code extensions, and Claw-based local agent implementations.
 When supported, Microsoft Defender also discovers MCP server configurations associated with these agents, including local and remote MCP server configurations.
 
 Supported local AI agents include:
@@ -50,7 +50,7 @@ Supported local AI agents include:
 - **VS Code extensions**: Claude Code, Cline, Codex, Gemini Code Assist, GitHub Copilot, Roo Code
 - **Claw-based agents**: OpenClaw, Clawpilot, Claw/Nanobot
 
-For specific steps on discovering and viewing local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).
+To learn how to discover and view local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).
 
 ## Broader AI security capabilities
 
