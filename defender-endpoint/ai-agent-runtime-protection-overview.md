@@ -66,7 +66,7 @@ When runtime protection detects prompt injection, Microsoft Defender raises an a
 
 This screenshot shows a **Suspicious AI prompt injection** alert, which is triggered after runtime protection blocks or audits the detected malicious activities. The process tree includes details on the affected process and the detected malicious activities:
 
-:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-alert-after-blocking.png" alt-text="Screenshot showing the blocking notification displayed to the user when Defender detects and blocks a prompt injection attack on a local AI agent." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png":::
+:::image type="content" source="media/configure-ai-agent-runtime-protection/runtime-protection-suspicious-prompt-injection-alert.png" alt-text="Screenshot showing a Suspicious AI prompt injection alert in Microsoft Defender, including the process tree and related detection details." lightbox="media/configure-ai-agent-runtime-protection/runtime-protection-suspicious-prompt-injection-alert.png":::
 
 For more information, see [View and investigate alerts in Microsoft Defender](/defender-endpoint/investigate-alerts).
 
