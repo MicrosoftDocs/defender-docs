@@ -8,7 +8,9 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-ropc-nochange
 ms.topic: how-to
 ms.date: 04/18/2025
 appliesto:

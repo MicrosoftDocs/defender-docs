@@ -3,6 +3,7 @@ title: Manage action accounts
 description: Learn how to manage action accounts to work with Microsoft Defender for Identity. This step is optional.
 ms.date: 02/21/2024
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Configure Microsoft Defender for Identity action accounts

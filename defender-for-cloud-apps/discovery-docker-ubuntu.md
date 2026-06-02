@@ -3,6 +3,7 @@ title: Configure automatic log upload using on-premises Docker on Linux | Micros
 description: This article describes the process configuring automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on Linux in an on-premises server.
 ms.date: 08/05/2024
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Configure automatic log upload using on-premises Docker on Linux
 

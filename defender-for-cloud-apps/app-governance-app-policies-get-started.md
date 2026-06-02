@@ -4,6 +4,7 @@ ms.date: 08/31/2025
 ms.topic: how-to
 description: Get started learning about app governance policies with Microsoft Defender for Cloud Apps in Microsoft Defender XDR
 ms.reviewer: shragar456
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with app policies

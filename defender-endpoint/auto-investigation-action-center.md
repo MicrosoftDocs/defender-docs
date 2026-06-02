@@ -10,7 +10,9 @@ ms.collection:
 - m365-security
 - tier3
 - mde-edr
-ms.custom: admindeeplinkDEFENDER
+ms.custom:
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 ms.topic: how-to
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
 ms.date: 03/26/2025

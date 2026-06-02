@@ -7,6 +7,7 @@ ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 07/23/2024
 ms.topic: how-to
+ms.custom: sfi-ga-nochange
 ---
 
 # Set up RBAC permissions to access site security
