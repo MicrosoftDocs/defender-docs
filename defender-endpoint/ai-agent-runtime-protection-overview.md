@@ -63,6 +63,10 @@ For configuration steps, see [Enable runtime protection](configure-ai-agent-runt
 
 When runtime protection detects prompt injection, Microsoft Defender raises an alert named **Suspicious AI prompt injection** and correlates related alerts into incidents. The alert also appears on the device timeline. In **Block** mode, the alert carries a severity — Critical, High, Medium, or Low — reflecting the assessed risk of the detection. In **Audit** mode, the alert is **Informational**, so your team can review what would have been blocked without triaging it as an active threat.
 
+This screenshot shows a **Suspicious AI prompt injection** alert, which is triggered after runtime protection blocks or audits the detected malicious activities. The process tree includes details on the affected process and the detected malicious activities:
+
+:::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-alert-after-blocking.png" alt-text="Screenshot showing the blocking notification displayed to the user when Defender detects and blocks a prompt injection attack on a local AI agent." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png":::
+
 For more information, see [View and investigate alerts in Microsoft Defender](/defender-endpoint/investigate-alerts).
 
 For step-by-step configuration instructions, see [Set up AI agent runtime protection with Microsoft Defender for Endpoint](configure-ai-agent-runtime-protection.md).
