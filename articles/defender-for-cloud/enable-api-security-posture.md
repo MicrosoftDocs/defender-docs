@@ -1,17 +1,17 @@
 ---
-title: Enable API security posture management
-description: Learn how to enable API security posture management in Microsoft Defender for Cloud to protect your APIs.
+title: Enable API security posture with Defender CSPM
+description: Discover and secure APIs across API Management, Function Apps, and Logic Apps with prioritized risk insights and API security recommendations.
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 ms.topic: how-to
-ms.date: 03/31/2026
+ms.date: 06/02/2026
 ms.custom: sfi-image-nochange, references_regions
 #customer intent: As a cloud administrator, I want to learn how to enable API security posture management to protect my APIs in Azure API Management, Function Apps, and Logic Apps.
 ---
 
-# Enable API security posture with Defender CSPM  
+# Enable API security posture with Defender CSPM
 
-The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud gives you a complete view of your APIs across Azure API Management, Function Apps, and Logic Apps. It helps you improve API security by finding misconfigurations and vulnerabilities. This article explains how to enable API security posture management in your Defender CSPM plan and assess your API security. Defender CSPM onboards APIs without an agent and regularly checks for risks and sensitive data exposure. It provides prioritized risk insights and mitigation through API attack path analysis and security recommendations.
+Defender cloud security posture management (Defender CSPM) gives you visibility into APIs across Azure API Management, Function Apps, and Logic Apps. It helps you detect misconfigurations and vulnerabilities. This article shows you how to enable API security posture, review inventory and findings, and prioritize remediation actions.
 
 > [!NOTE]
 > API discovery and security posture capabilities in Microsoft Defender for Cloud now also support **Function Apps** and **Logic Apps**. This feature is currently available in **Preview**. 
@@ -22,6 +22,7 @@ The Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender
 - You need a Microsoft Azure subscription. If you don't have one, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial).  
 - Enable [Defender for Cloud on your Azure subscription](connect-azure-subscription.md).  
 - Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
+- To scan for sensitive information in APIs onboarded to Defender CSPM, [enable sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
 - The **Subscription Owner** must enable the CSPM plan to access all features.  
 - Ensure the APIs you want to protect are deployed in [Azure API Management](/azure/api-management/api-management-key-concepts), [Function Apps](/azure/azure-functions/functions-overview), or [Logic Apps](/azure/logic-apps/logic-apps-overview).
 
@@ -50,6 +51,8 @@ API Security Posture Management within Defender CSPM is available in the Azure c
 Review the latest cloud support information for Defender for Cloud plans and features in the [cloud support matrix](support-matrix-defender-for-cloud.md).
 
 ## API support
+
+Use the following table to review supported tiers and API types for API security posture management.
 
 **Feature** | **Supported**
 --- | ---
@@ -98,14 +101,13 @@ APIs onboarded to the Defender CSPM plan appear in the API security dashboard un
 
 ### API endpoint detailed findings  
 
+The API endpoint details page shows the following findings for each operation:
+
 1. **Sensitive Information Type**: Provides details on the sensitive information exposed in API URL paths, query parameters, request bodies, and response bodies based on supported data types, along with the source of the information type found. 
 
 1. **Additional Information**: In the case of API response bodies, this field shows which HTTP response codes contained sensitive information (such as 2xx, 3xx, 4xx).  
 
-Review API security posture findings along with your API inventory in the Microsoft Defender for Cloud Inventory experience.  
-
-> [!NOTE]
-> Sensitive data exposure isn't scanned if the sensitive data discovery extension isn't enabled. To scan for sensitive information in your APIs, you must [enable sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan). This setting only affects APIs onboarded to the Defender CSPM plan. If you enable the Defender for APIs workload protection plan on the same APIs, they are scanned for sensitive data.
+Review API security posture findings along with your API inventory in the Microsoft Defender for Cloud Inventory experience.
 
 ## Investigate API security recommendations
 
@@ -159,4 +161,6 @@ Select **Continue** and then **Save** to confirm. This action offboards all APIs
 
 ## Related content
 
-- Monitor for API threats by using [Defender for APIs Workload Protection](defender-for-apis-deploy.md).
+> [!div class="nextstepaction"]
+> [Monitor API threats with Defender for APIs workload protection](defender-for-apis-deploy.md)
+

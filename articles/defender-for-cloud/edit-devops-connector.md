@@ -1,9 +1,11 @@
 ---
 title: Edit your DevOps connector
-description: Learn how to make changes to the DevOps connectors onboarded to Defender for Cloud.
-ms.date: 06/30/2025
+description: Update authorization, organization scope, and connector settings for Azure DevOps, GitHub, and GitLab environments onboarded to Defender for Cloud.
+ms.date: 06/02/2026
 ms.topic: how-to
 ms.custom: ignite-2023
+author: ElazarK
+ms.author: elkrieger
 ---
 
 # Edit your DevOps Connector in Microsoft Defender for Cloud
@@ -12,31 +14,38 @@ After onboarding your Azure DevOps, GitHub, or GitLab environments to Microsoft 
 
 ## Prerequisites
 
+Before you edit a DevOps connector, make sure you have the following:
+
 - An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
-- [Azure DevOps](quickstart-onboard-devops.md), [GitHub](quickstart-onboard-github.md), or [GitLab](quickstart-onboard-gitlab.md) environment onboarded to Microsoft Defender for Cloud.
+- An onboarded DevOps environment. For onboarding guidance, see [Onboard Azure DevOps](quickstart-onboard-devops.md), [Onboard GitHub](quickstart-onboard-github.md), or [Onboard GitLab](quickstart-onboard-gitlab.md).
 
 ## Make edits to your DevOps connector
 
+To edit a DevOps connector in Defender for Cloud:
+
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Go to **Microsoft Defender for Cloud** > **Environment settings** and identify the connector you want to make changes to.
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Identify the connector you want to change.
 
 1. Select **Edit settings** for the connector.
 
-    :::image type="content" source="media/edit-devops-connector/edit-connector-1.png" alt-text="A screenshot showing how to edit settings on the edit connector page." lightbox="media/edit-devops-connector/edit-connector-1.png":::
+    :::image type="content" source="media/edit-devops-connector/edit-connector-1.png" alt-text="Screenshot of the connector page that shows where to select Edit settings." lightbox="media/edit-devops-connector/edit-connector-1.png":::
 
-1. Navigate to **Configure access**. Here you can perform token exchange, change the organizations/groups onboarded, or toggle autodiscovery.
+1. Go to **Configure access**. Here you can exchange tokens, change onboarded organizations or groups, or toggle autodiscovery.
 
     > [!NOTE]
     > If you're the owner of the connector, reauthorizing your environment to make changes is **optional**.
-    > If you're trying to take ownership of the connector, you must reauthorize using your access token. This change is irreversible as soon as you select "Reauthorize".
+    > If you're trying to take ownership of the connector, you must reauthorize by using your access token. This change is irreversible as soon as you select **Reauthorize**.
 
-1. Use **Edit connector account** component to make changes to onboarded inventory. If an organization/group is greyed out, ensure that you have proper permissions to the environment and the scope isn't onboarded elsewhere in the Tenant.
+1. Use **Edit connector account** to update onboarded inventory. If an organization or group is grayed out, verify that you have permissions to that environment and that the scope isn't onboarded elsewhere in the tenant.
 
-    :::image type="content" source="media/edit-devops-connector/edit-connector-2.png" alt-text="A screenshot showing how to select an account when editing a connector." lightbox="media/edit-devops-connector/edit-connector-2.png":::
+    :::image type="content" source="media/edit-devops-connector/edit-connector-2.png" alt-text="Screenshot of the Edit connector account page that shows account selection options." lightbox="media/edit-devops-connector/edit-connector-2.png":::
 
-1. To save your inventory changes, Select **Next: Review and generate >** and **Update**. Failing to select **Update** causes any inventory changes to not be saved.
+1. To save inventory changes, select **Next: Review and generate >** and then select **Update**. If you skip **Update**, Defender for Cloud doesn't save your inventory changes.
 
 ## Next steps
 
-- Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
+- Learn more in [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
+
