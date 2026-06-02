@@ -74,6 +74,8 @@
           href: security-for-ai/ai-agent-detection-protection.md
         - name: Data privacy as part of Agent 365
           href: security-for-ai/privacy-defender-agent-365.md
+        - name: Transition agent security to Agent 365
+          href: security-for-ai/transition-agent-security-to-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
