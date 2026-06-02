@@ -41,7 +41,7 @@ If no devices are listed, see [Onboard devices to Defender for Business](mdb-onb
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Assets** \> **Devices**. Or, to go directly to the **Device inventory** page, use <https://security.microsoft.com/machines>.
 2. On the **Device inventory** page, select a device from the list.
-3. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More**, and then select an available action (for example, **Run antivirus scan** or **Initiate Automated Investigation**).
+3. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More**, and then select an available action (for example, **Run antivirus scan** or **Initiate Automated Investigation**).
 
 ## View the state of Microsoft Defender Antivirus
 
