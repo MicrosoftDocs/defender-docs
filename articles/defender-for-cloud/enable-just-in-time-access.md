@@ -26,7 +26,7 @@ In this article, you learn how to set up and use just-in-time access, including 
 
 -   [Microsoft Defender for Servers Plan 2](defender-for-servers-overview.md) must be enabled on the subscription.
 
--   Supported VMs: VMs deployed through Azure Resource Manager, VMs protected by Azure Firewalls on the same VNET as the VM, AWS EC2 instances (Preview).
+-   Supported VMs: VMs deployed through Azure Resource Manager, VMs protected by Azure Firewall on the same virtual network (VNet) as the VM, and AWS EC2 instances (Preview).
 
 -   Unsupported VMs: VMs deployed with [classic deployment models](/azure/azure-resource-manager/management/deployment-models), VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview).
 
@@ -46,7 +46,7 @@ In this article, you learn how to set up and use just-in-time access, including 
 
 > [!NOTE]
 > Only the `Microsoft.Security` permissions are relevant for AWS.
-> To create a least-privileged role for users that only need to request JIT access to a VM, use the Set-JitLeastPrivilegedRole script.
+> To create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role).
 
 ## Work with JIT VM access using Microsoft Defender for Cloud
 

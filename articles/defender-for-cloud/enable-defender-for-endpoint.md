@@ -1,5 +1,5 @@
 ---
-title: Enable Defender for Endpoint in Defender for Cloud
+title: Enable Defender for Endpoint integration in Microsoft Defender for Cloud
 description: Learn how to enable Microsoft Defender for Endpoint integration in Microsoft Defender for Cloud to protect your multicloud and on-premises machines.
 author: ElazarK
 ms.author: elkrieger
@@ -8,7 +8,7 @@ ms.date: 06/02/2026
 #customer intent: As a user, I want to learn how to manually enable the Defender for Endpoint integration in Defender for Cloud so that I can protect multicloud and on-premises machines.
 ---
 
-# Enable Defender for Endpoint integration
+# Enable Defender for Endpoint integration in Microsoft Defender for Cloud
 
 Microsoft Defender for Cloud [integrates natively with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) to provide Defender for Endpoint and Defender Vulnerability Management capabilities in Defender for Cloud.
 
@@ -19,12 +19,14 @@ This article explains how to manually enable Defender for Endpoint integration w
 
 ## Prerequisites
 
+Before you enable Defender for Endpoint integration, review these requirements.
+
 **Requirement** | **Details**
 --- | ---
 **Windows support** | Verify that Windows machines are [supported by Defender for Endpoint](/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016).
 **Linux support** | For Linux servers, you must have Python installed. Python 3 is recommended for all distros, but is required for RHEL 8.x and Ubuntu 20.04 or higher.<br/><br/> Automatic deployment of the Defender for Endpoint sensor on Linux machines might not work as expected if machines run services that use [fanotify](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements). Manually install the Defender for Endpoint sensor on these machines.
 **Azure VMs** | Check that VMs can connect to the Defender for Endpoint service.<br/><br/> If machines don't have direct access, proxy settings or firewall rules need to allow access to Defender for Endpoint URLs. Review [Windows proxy and internet configuration](/defender-endpoint/configure-proxy-internet) and [Linux static proxy configuration](/defender-endpoint/linux-static-proxy-configuration).
-**On-premises VMs** | We recommend that you [onboard on-premises machines as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).<br/><br/> If you [onboard on-premises VMs directly](onboard-machines-with-defender-for-endpoint.md), Defender Server Plan 1 features are available, but most Defender for Servers Plan 2 functionality doesn't work.
+**On-premises VMs** | We recommend that you [onboard on-premises machines as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).<br/><br/> If you [onboard on-premises VMs directly](onboard-machines-with-defender-for-endpoint.md), Defender for Servers Plan 1 features are available, but most Defender for Servers Plan 2 functionality doesn't work.
 **Azure tenant** | If you moved your subscription between Azure tenants, some manual preparatory steps are also required. [Contact Microsoft support](https://portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview) for details.
 **Windows Server 2016, 2012 R2** | Unlike later versions of Windows Server, which come with the Defender for Endpoint sensor preinstalled, Defender for Cloud installs the sensor on machines running Windows Server 2016/2012 R2 using the unified Defender for Endpoint solution. 
 
@@ -32,13 +34,15 @@ This article explains how to manually enable Defender for Endpoint integration w
 
 Defender for Endpoint integration is enabled by default when you enable a Defender for Servers plan. If you turn off integration on a subscription, you can manually turn it on again.
 
+To enable Defender for Endpoint integration on a subscription:
+
 1. In Defender for Cloud, select **Environment settings** and select the subscription containing the machines on which you want to deploy the Defender for Endpoint integration.
 
-1. In **Settings and monitoring** > **Endpoint protection**, toggle the **Status** column settings to **On**.
+1. In **Settings and monitoring** > **Endpoint protection**, set **Status** to **On**.
 
     :::image type="content" source="media/integration-defender-for-endpoint/enable-defender-for-endpoint.png" alt-text="Screenshot of Status toggle that enables Microsoft Defender for Endpoint." lightbox="media/integration-defender-for-endpoint/enable-defender-for-endpoint.png":::
 
-1. Select **Continue** and **Save** to save your settings.
+1. Select **Continue**, and then select **Save**.
 
 1. The Defender for Endpoint sensor is deployed to all Windows and Linux machines in the selected subscription.
 
@@ -49,7 +53,7 @@ Defender for Endpoint integration is enabled by default when you enable a Defend
 
 ### Verify installation on Linux machines
 
-Verify Defender for Endpoint sensor installation on a Linux machine by following these steps:
+To verify Defender for Endpoint sensor installation on a Linux machine:
 
 1. Run the following shell command on each machine: `mdatp health`. If Microsoft Defender for Endpoint is installed, you see its health status:
 
@@ -61,7 +65,6 @@ Verify Defender for Endpoint sensor installation on a Linux machine by following
 
 > [!NOTE]
 > On new subscriptions, Defender for Endpoint integration is automatically enabled and covers machines running a supported Windows Server or Linux operating system. The following sections cover one-time opt-in procedures for the unified solution on Windows Server 2012 R2 and 2016, and for Linux integration, that might be required for legacy subscriptions.
-
 
 ## Enable Defender for Endpoint unified solution on Windows Server 2016/2012 R2
 
@@ -96,7 +99,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription with the Linux machines that you want to receive Defender for Endpoint.
 
-1. In the **Monitoring coverage** column of the Defender for Server plan, select **Settings**.
+1. In the **Monitoring coverage** column of the Defender for Servers plan, select **Settings**.
 
     The status of the **Endpoint protections** component is **Partial**, meaning that not all parts of the component are enabled.
 
@@ -152,7 +155,7 @@ This configuration is supported for Azure VMs and Azure Arc machines, where the 
 
 You can enable the Defender for Endpoint integration at scale through the supplied REST API version 2022-05-01. For full details, see the [API documentation](/rest/api/defenderforcloud-composite/settings/update?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true).
 
-Here's an example request body for the PUT request to enable the Defender for Endpoint integration:
+The following example shows the request body for the PUT request that enables Defender for Endpoint integration:
 
 URI: `https://management.azure.com/subscriptions/<subscriptionId>/providers/Microsoft.Security/settings/WDATP?api-version=2022-05-01`
 
@@ -191,7 +194,7 @@ To access the Microsoft Defender portal from Defender for Cloud, complete the fo
 
 ## Run a detection test
 
-Follow the instructions in [EDR detection test for verifying device's onboarding and reporting services](/defender-endpoint/edr-detection).
+To run a detection test, follow [EDR detection test for verifying device's onboarding and reporting services](/defender-endpoint/edr-detection).
 
 ## Remove Defender for Endpoint from a machine
 
@@ -221,5 +224,5 @@ To remove these tags completely, follow these steps. On Linux, the system stores
     - `SecurityAgentId`
 
 > [!IMPORTANT]
-> Editing the registry incorrectly might cause issues on your device. 
+> Editing the registry incorrectly might cause issues on your device.
 

@@ -10,7 +10,7 @@ author: ElazarK
 
 # Enable Defender for open-source relational databases on Azure
 
-## Enable Microsoft Defender for open-source relational databases
+Use Microsoft Defender for open-source relational databases to detect anomalous activity on Azure Database for PostgreSQL and Azure Database for MySQL. This article explains the prerequisites and the steps to enable the plan in Azure.
 
 Microsoft Defender for Cloud detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases for the following services:
 
@@ -31,26 +31,26 @@ Before you enable Defender for open-source relational databases, make sure you m
 
 - (Optional) Connect your non-Azure machines. For steps, see [Onboard non-Azure machines](quickstart-onboard-machines.md).
 
-## Enable Defender for open-source relational databases on your Azure account
+## Enable Defender for open-source relational databases on your Azure subscription
 
-To enable Defender for open-source relational databases on your Azure account, complete the following steps:
+To enable Defender for open-source relational databases on your Azure subscription:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. Search for and select **Azure Database for MySQL servers**.
+1. Search for and select **Azure Database for MySQL servers** or **Azure Database for PostgreSQL servers**.
 
-1. Select the relevant database.
+1. Select the relevant database server.
 
-1. Expand the security menu.
+1. Expand the **Security** menu.
  
 1. Select **Microsoft Defender for Cloud**.
 
 1. If Defender for open-source relational databases isn't enabled, select **Enable Microsoft Defender for [Database type]** (for example, "Microsoft Defender for MySQL").
 
-    :::image type="content" source="media/defender-for-databases-usage/enable-defender-for-mysql.png" alt-text="Screenshot that shows you where and what the Enable Microsoft Defender for MySQL button looks like and is located." lightbox="media/defender-for-databases-usage/enable-defender-for-mysql.png":::
+    :::image type="content" source="media/defender-for-databases-usage/enable-defender-for-mysql.png" alt-text="Screenshot of the Azure Database for MySQL server page with the Enable Microsoft Defender for MySQL button highlighted." lightbox="media/defender-for-databases-usage/enable-defender-for-mysql.png":::
 
     > [!TIP]
-    > This page in the portal will be the same regardless of the database type (PostgreSQL or MySQL).
+    > This page in the portal is the same for PostgreSQL and MySQL.
 
 1. Select **Save**.
 

@@ -11,8 +11,6 @@ ms.topic: how-to
 
 # Enable sensitive data threat detection
 
-## Sensitive data threat detection in Defender for Storage
-
 Sensitive data threat detection is enabled by default when you enable Defender for Storage. You can enable or disable it in the Azure portal or with other at-scale methods. For instructions, see [Configure Defender for Storage](/azure/storage/common/azure-defender-storage-configure). This feature is included in the price of Defender for Storage.
 
 This article explains what sensitive data threat detection includes, how to interpret sensitivity findings in alerts, and how to align detection with Microsoft Purview sensitivity settings.
@@ -21,14 +19,14 @@ This article explains what sensitive data threat detection includes, how to inte
 
 Sensitive data threat detection helps security teams identify and prioritize incidents faster. Defender for Storage alerts include sensitivity scan findings and indicate operations performed on resources that contain sensitive data.
 
-In the alert’s extended properties, you can find sensitivity scanning findings for a **blob container**:
+In the alert's extended properties, you can find sensitivity scanning findings for a **blob container**:
 
 - **Sensitivity scanning time (UTC)**: When the last scan was performed.
 - **Top sensitivity label**: The most sensitive label found in the blob container.
 - **Sensitive information types**: Information types that were found and whether they're based on custom rules.
 - **Sensitive file types**: The file types of the sensitive data.
 
-:::image type="content" source="media/defender-for-storage-data-sensitivity/sensitive-data-alerts.png" alt-text="Screenshot of an alert regarding sensitive data." lightbox="media/defender-for-storage-data-sensitivity/sensitive-data-alerts.png":::
+:::image type="content" source="media/defender-for-storage-data-sensitivity/sensitive-data-alerts.png" alt-text="Screenshot of a Defender for Storage alert that lists sensitive data findings in the extended properties panel." lightbox="media/defender-for-storage-data-sensitivity/sensitive-data-alerts.png":::
 
 ## Integrate with the organizational sensitivity settings in Microsoft Purview (optional)
 
@@ -36,11 +34,11 @@ When you enable sensitive data threat detection, the sensitive data categories i
 
 Of the built-in sensitive information types in the default list of Microsoft Purview, a subset is supported by sensitive data discovery. You can view a [supported sensitive information types reference](sensitive-info-types.md), which indicates which information types are enabled by default. To change these defaults, see [Configure data sensitivity settings](data-sensitivity-settings.md).
 
-To customize Data Sensitivity Discovery for your organization, create custom sensitive information types (SITs) and connect to organizational settings by using a single-step integration. For details, see [Create a custom sensitive information type](/microsoft-365/compliance/create-a-custom-sensitive-information-type) and [advanced customization options for data sensitivity discovery](episode-two.md).
+To customize data sensitivity discovery for your organization, create custom sensitive information types (SITs) and connect to organizational settings by using a single-step integration. For details, see [Create a custom sensitive information type](/microsoft-365/compliance/create-a-custom-sensitive-information-type) and [advanced customization options for data sensitivity discovery](episode-two.md).
 
 You can also create and publish sensitivity labels for your tenant in Microsoft Purview. The sensitivity label scope includes Items, Schematized data assets, and autolabeling rules (recommended). For details, see [Sensitivity labels in Microsoft Purview](/microsoft-365/compliance/sensitivity-labels).
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Enable Defender for Storage](connect-azure-subscription.md)
