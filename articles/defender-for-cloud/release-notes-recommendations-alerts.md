@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 06/01/2026
+ms.date: 06/02/2026
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -48,6 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
+| June 2, 2026 | Recommendation | Preview | The following recommendations are now available in preview for Kubernetes node vulnerability assessment on EKS and GKE:<br/>\* EKS nodes should have vulnerability findings resolved<br/>\* GKE nodes should have vulnerability findings resolved |
 | June 1, 2026 | Recommendation | Preview | The following new container-level Kubernetes misconfiguration recommendations are now available in preview as part of Defender CSPM:<br/>\* Containers should not use excessive CPU or memory<br/>\* Containers should only use images from trusted registries<br/>\* Containers should not allow privilege escalation<br/>\* Containers should not share sensitive host namespaces<br/>\* Containers should use a read-only root filesystem<br/>\* Kubernetes clusters should be accessible only over HTTPS<br/>\* Containers should not automount API credentials<br/>\* Containers should not run in the default namespace<br/>\* Containers should drop all capabilities and add only those required<br/>\* Privileged containers should be avoided<br/>\* Containers should not run as root<br/><br/>These container-level recommendations replace existing cluster-level equivalents. Cluster-level recommendations will be deprecated at GA. |
 | June 1, 2026 | Recommendation | Upcoming deprecation | The following cluster-level Kubernetes recommendations are set for deprecation at GA of the new container-level misconfiguration recommendations:<br/>\* Containers should only use allowed AppArmor profiles<br/>\* Kubernetes clusters should not grant CAPSYSADMIN security capabilities<br/>\* Services should listen on allowed ports only<br/>\* Usage of host networking and ports should be restricted<br/>\* Usage of pod HostPath volume mounts should be restricted to a known list to restrict node access from compromised containers |
 | June 1, 2026 | Recommendation | Preview | [Upgrade Azure Kubernetes Service Version](recommendations-reference-container.md#upgrade-azure-kubernetes-service-to-remove-vulnerabilities-from-aks-system-pods-preview) |
