@@ -13,32 +13,26 @@ ms.topic: concept-article
 
 # Transition Microsoft Copilot Studio and Microsoft Foundry agent security capabilities to Microsoft Agent 365
 
-Effective July 1, 2026, AI agent security capabilities currently available in public preview through Microsoft Defender for Cloud Apps (for Microsoft Copilot Studio agents) and Microsoft Defender for Cloud (for Microsoft Foundry agents) are consolidating under a unified Microsoft Agent 365 license.
+Effective July 1, 2026, AI agent security capabilities currently available in public preview through Microsoft Defender for Cloud Apps (for Microsoft Copilot Studio agents) and Microsoft Defender for Cloud (for Microsoft Foundry agents) require a Microsoft Agent 365 license. These capabilities are no longer covered by existing Microsoft Defender for Cloud Apps or Microsoft Defender for Cloud licenses. Tenants without an Agent 365-eligible license lose access to these capabilities at cutover.
 
-After July 1, 2026, tenants without an Agent 365-eligible license lose access to these agent security capabilities. Agent protection in Microsoft Defender will be powered by Agent 365 observability logs and the agent registry, providing a single source of truth for agent inventory, real-time threat protection, and consistent posture.
+Once you onboard to Agent 365, these experiences remain in the Microsoft Defender portal — powered by Agent 365 observability logs and the agent registry as the single source of truth for agent inventory, real-time threat protection, and consistent posture.
 
-For tenants with an eligible license, these experiences continue to be delivered through the Microsoft Defender portal.
-
-This article describes the key changes taking effect on July 1, 2026, and the actions you need to take to continue securing your AI agents with Microsoft Agent 365.
+This article describes the key changes and the actions you need to take to prepare.
 
 ## Capabilities that require a Microsoft Agent 365 license as of July 1, 2026
 
-- **Microsoft Copilot Studio agents** 
+- **Microsoft Copilot Studio agents** — the following capabilities will no longer be included in Microsoft Defender for Cloud Apps:
 
-   These capabilities will no longer be included in Microsoft Defender for Cloud Apps:
+   - Agent discovery and posture
+   - Agent threat detection and real-time protection
+   - Investigation of agent activity via Advanced Hunting
 
-   - Microsoft Copilot Studio agent discovery and posture
-   - Microsoft Copilot Studio agent threat detection and real-time protection
-   - Investigation of Microsoft Copilot Studio agent activity via Advanced Hunting
+- **Microsoft Foundry agents** — the following capabilities will no longer be included in Microsoft Defender for Cloud:
 
-- **Microsoft Foundry agents**
+   - Discovery and security posture for cloud-hosted agents, including multi-cloud (currently available via Defender Cloud Security Posture Management plan)
+   - Threat protection for agents (currently available via Defender for AI Services plan)
 
-   These capabilities will no longer be included in Microsoft Defender for Cloud:
-
-   - Discovery and security posture for cloud-hosted Microsoft Foundry agents, including multi-cloud (currently available via Defender Cloud Security Posture Management plan)
-   - Threat protection for Microsoft Foundry agents (currently available via Defender for AI Services plan)
-
-## What changes after you transition to Microsoft Agent 365?
+## What changes when you transition to Microsoft Agent 365?
 
 ### Advanced Hunting
 
