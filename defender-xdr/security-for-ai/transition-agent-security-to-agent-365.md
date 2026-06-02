@@ -85,10 +85,10 @@ Microsoft Foundry agent data will no longer appear in the following Azure portal
 
 1. **Update Advanced Hunting queries** - Review saved queries, custom detections, and workbooks that reference the `AIAgentInfo` table and update them to the new `AgentInfo` table before July 1, 2026.
 
-1. **If you have existing A365-eligible licenses enabled, redefine Microsoft Agent 365 real-time protection blocking rules (Copilot Studio agents only)** - The existing real-time protection card is being deprecated and is moving to a new policy experience. Any rules currently set to **Block** stop enforcing on July 1, 2026. Redefine them in the new policy experience (not yet available) to preserve blocking.
+1. **If you already use Agent 365, redefine real-time protection blocking rules** — The existing Agent 365 real-time protection settings are moving to a new **Policies** experience. Any rules currently set to **Block** stop enforcing on July 1, 2026. Redefine them under **Settings** > **Security for AI** > **Policies** (available July 1, 2026) to preserve blocking.
 
    > [!NOTE]
-   > Real-time protection for Microsoft Copilot Studio is unchanged and continues through Defender for Cloud Apps, with a planned future transition to Agent 365.
+   > If you aren't moving to Agent 365, real-time protection for Microsoft Copilot Studio is unchanged and continues through Defender for Cloud Apps with no action required.
 
 
 1. **Connect third-party cloud agents using the Agent 365 registry sync (Foundry agents only)** - Use [registry sync in the Microsoft 365 agent registry (preview)](/microsoft-agent-365/admin/agent-registry) to continue discovering third-party cloud agents previously reached via Microsoft Defender for Cloud connectors.
