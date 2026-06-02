@@ -33,6 +33,16 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 ## Sensor versions available per release
 
+### Sensor v0.11 (deployed by Helm or Arc for K8s)
+
+**Sensor v0.11.3 — Preview**
+
+- **Released:** June 2026
+
+- **What's included:**
+
+  - Public Preview of EKS/GKE Private clusters support
+
 ### Sensor v0.10 (deployed by Helm or Arc for K8s)
 
 **Sensor v0.10.5 — GA**
