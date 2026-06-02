@@ -8,6 +8,7 @@ ms.reviewer: maelgami
 ms.date: 04/30/2026
 ms.topic: article
 ms.service: microsoft-defender
+ms.custom: sfi-image-nochange
 ---
 
 # Investigate an identity

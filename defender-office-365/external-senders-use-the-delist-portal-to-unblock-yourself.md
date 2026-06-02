@@ -12,6 +12,7 @@ ms.collection:
   - tier3
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-image-nochange
 description: Learn how to resolve 5.7.606-649 Access denied, banned sending IP errors, and what to do for 5.7.511 Access denied, banned sender errors for sending mail to Microsoft 365.
 ms.service: defender-office-365
 appliesto:

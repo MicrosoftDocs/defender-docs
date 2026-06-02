@@ -4,6 +4,7 @@ description: This topic provides information about how to add custom apps to clo
 ms.date: 01/29/2023
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 # Add custom apps to cloud discovery
 

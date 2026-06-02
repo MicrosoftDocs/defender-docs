@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ms.custom: sfi-image-nochange
 
 ---
 # Schedule an antivirus scan using Anacron with Microsoft Defender for Endpoint on Linux

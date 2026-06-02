@@ -8,6 +8,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
 description: "Admins can configure whether users can report malicious messages or calls in Microsoft Teams."
 ms.service: defender-office-365
 ms.date: 05/27/2026
@@ -76,7 +77,7 @@ To view or configure this setting, you need to be a member of the **Global Admin
 
 3. On the tab, go to the **Messaging** section and select **Messaging**. If you selected the **Custom policies for users & groups** tab in the previous step, do one of the following steps to edit the specific policy:
    - Click on the policy name in the **Name** column.
-   - Click anywhere in the row other than the **Name** column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+   - Click anywhere in the row other than the **Name** column, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 
 4. In the policy details page that opens, find the **Report a security concern** toggle, and verify the value is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
@@ -129,7 +130,7 @@ For more information about user reported items settings in the Defender portal, 
 
 ### Report malicious messages in Teams
 
-1. In the Microsoft Teams client, hover over the malicious message without selecting it, and then select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> **Report this message**.
+1. In the Microsoft Teams client, hover over the malicious message without selecting it, and then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report this message**.
 
    :::image type="content" source="media/submissions-user-report-message-in-teams-client-click-path.png" alt-text="Screenshot of the select path to report a message in the Microsoft Teams client." lightbox="media/submissions-user-report-message-in-teams-client-click-path.png":::
 
@@ -144,7 +145,7 @@ For more information about user reported items settings in the Defender portal, 
 
 ### Report non-malicious messages in Teams
 
-1. In the Teams chat or channel, hover over the message without selecting it, and then select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> **Report this message**.
+1. In the Teams chat or channel, hover over the message without selecting it, and then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report this message**.
 
 2. In the **report this message** dialog that opens, select **Not a security concern**, and then select **Report**.
 
@@ -152,7 +153,7 @@ For more information about user reported items settings in the Defender portal, 
 
 Currently, only completed or missed one-to-one calls are supported.
 
-1. In the Microsoft Teams client, go to the call history view and then select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> **Report call**.
+1. In the Microsoft Teams client, go to the call history view and then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report call**.
 
    :::image type="content" source="media/submissions-user-report-calls-in-teams-client-click-path.png" alt-text="Screenshot of the select path to report a call in the Microsoft Teams client." lightbox="media/submissions-user-report-calls-in-teams-client-click-path.png":::
 
@@ -180,7 +181,7 @@ For more information, see [User reported settings](submissions-user-reported-mes
   - Metadata from the reported Teams items (for example, senders/callers, recipients, reported by, and item details) is available on the **User reported** tab on the **Submissions** page.
   - The alert policies named **Teams message reported by user as a security risk**, **Teams message reported by user as a not security risk**, **Teams call reported by user as a security risk**, and **Teams call reported by user as a not security risk** generate alerts by default. For more information, see [Manage alerts](/defender-xdr/alert-policies#manage-alerts).
 
-  To view the corresponding alert for a user reported item in Teams, go to the **User reported** tab on the **Submissions** page, and then double-click the item to open the submission flyout. Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** and then select **View alert**.
+  To view the corresponding alert for a user reported item in Teams, go to the **User reported** tab on the **Submissions** page, and then double-click the item to open the submission flyout. Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** and then select **View alert**.
 
 ## View and triage user reported items in Teams
 

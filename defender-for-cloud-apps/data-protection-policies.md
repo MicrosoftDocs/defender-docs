@@ -4,6 +4,7 @@ description: This article describes the procedure for setting up a data policy t
 ms.date: 09/01/2025
 ms.topic: how-to
 ms.reviewer: MayaAbelson
+ms.custom: sfi-ga-nochange
 ---
 
 # File policies in Microsoft Defender for Cloud Apps

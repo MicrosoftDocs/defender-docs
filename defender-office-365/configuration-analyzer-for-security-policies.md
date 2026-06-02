@@ -10,6 +10,8 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 description: Admins can learn how to use the configuration analyzer to find and fix threat policies that are less secure than Standard protection and Strict protections in preset security policies.
 ms.service: defender-office-365
 ms.date: 1/29/2024
@@ -109,7 +111,7 @@ The rest of the tab is the table of settings that need to be brought up to the l
 - Narrow the width of appropriate columns.
 - Zoom out in your web browser.
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filters** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filters** flyout that opens:
 
 - **Anti-spam**
 - **Anti-phishing**
@@ -120,9 +122,9 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **DKIM**
 - **Outlook**
 
-When you're finished in the **Filters** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filters** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
 #### View details about a recommended policy setting
 
@@ -145,21 +147,21 @@ When you're finished in the details flyout, select **Close**.
 
 On the **Standard protection** or **Strict protection** tab of the configuration analyzer, select an entry by selecting the check box next to the recommendation name. The following actions appear on the page:
 
-- :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Apply recommendation**: If the recommendation requires multiple steps, this action is grayed out.
+- :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Apply recommendation**: If the recommendation requires multiple steps, this action is grayed out.
 
   When you select this action, a confirmation dialog (with the option to not show the dialog again) opens. When you select **OK**, the following things happen:
 
   - The setting is updated to the recommended value.
-  - The recommendation is still selected, but the only available action is :::image type="icon" source="media/m365-cc-sc-refresh-icon.png" border="false"::: **Refresh**.
+  - The recommendation is still selected, but the only available action is :::image type="icon" source="media/defender-portal-icon-refresh.png" border="false"::: **Refresh**.
   - The **Status** value for the row changes to **Complete**.
 
-- :::image type="icon" source="media/m365-cc-sc-view-policy-icon.png" border="false":::**View policy**: You're taken to the details flyout of the affected policy in the Microsoft Defender portal where you can manually update the setting.
+- :::image type="icon" source="media/defender-portal-icon-view-policy.png" border="false":::**View policy**: You're taken to the details flyout of the affected policy in the Microsoft Defender portal where you can manually update the setting.
 
-- :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**: Exports the selected recommendation to a .csv file, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
+- :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export**: Exports the selected recommendation to a .csv file, select :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export**.
 
   You can also export recommendations after you select multiple recommendations or after you select all recommendations by selecting the check box next to the **Recommendations** column header.
 
-After you automatically or manually update the setting, select :::image type="icon" source="media/m365-cc-sc-refresh-icon.png" border="false"::: **Refresh** to see the reduced number of recommendations and the removal of the updated row from the results.
+After you automatically or manually update the setting, select :::image type="icon" source="media/defender-portal-icon-refresh.png" border="false"::: **Refresh** to see the reduced number of recommendations and the removal of the updated row from the results.
 
 ### Configuration drift analysis and history tab in the configuration analyzer
 
@@ -176,15 +178,15 @@ This tab allows you to track the changes to your threat policies and how those c
 - **Configuration change**: The old value and the new value of the setting
 - **Configuration drift**: The value **Increase** or **Decrease** that indicates the setting increased or decreased security compared to the recommended Standard or Strict setting.
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filters** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filters** flyout that opens:
 
 - **Date**: **Start time** and **End time**. You can go back as far as 90 days from today.
 - **Type**: **Standard protection** or **Strict protection**.
 
-When you're finished in the **Filters** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filters** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the entries by a specific **Modified by**, **Setting name**, or **Type** value.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to filter the entries by a specific **Modified by**, **Setting name**, or **Type** value.
 
-To export the entries shown on the **Configuration drift analysis and history** tab to a .csv file, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
+To export the entries shown on the **Configuration drift analysis and history** tab to a .csv file, select :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export**.
 
 :::image type="content" source="media/configuration-analyzer-configuration-drift-analysis-view.png" alt-text="The Configuration drift analysis and history view in the Configuration analyzer" lightbox="media/configuration-analyzer-configuration-drift-analysis-view.png":::

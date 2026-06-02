@@ -13,7 +13,9 @@ ms.collection:
 - must-keep
 ms.topic: reference
 ms.subservice: reference
-ms.custom: api
+ms.custom:
+  - api
+  - sfi-ga-nochange
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
