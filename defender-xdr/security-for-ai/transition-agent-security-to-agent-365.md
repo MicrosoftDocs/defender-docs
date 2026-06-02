@@ -54,7 +54,7 @@ Copilot Studio agent alerts based on near-real detections and blocked agent acti
 
 ### Third-party cloud agents (Foundry)
 
-Third-party cloud agents previously discoverable through Microsoft Defender for Cloud connectors will no longer be available through this path. To continue discovering third-party cloud agents, [Connect third-party cloud agents using the Agent 365 registry sync](/microsoft-agent-365/registry-sync).
+Third-party cloud agents will no longer be discoverable through Microsoft Defender for Cloud connectors. To continue discovering third-party cloud agents, [Connect third-party cloud agents using the Agent 365 registry sync](/microsoft-agent-365/registry-sync).
 
 ### Microsoft Defender portal changes
 
