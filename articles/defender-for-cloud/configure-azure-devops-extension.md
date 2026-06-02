@@ -2,7 +2,10 @@
 title: Configure the Microsoft Security DevOps Azure DevOps extension
 description: Learn how to configure the Microsoft Security DevOps Azure DevOps extension.
 ms.topic: how-to
-ms.date: 10/29/2025
+author: ElazarK
+ms.author: elkrieger
+ms.date: 05/26/2026
+#customer intent: As a DevOps engineer, I want to configure the Microsoft Security DevOps extension in Azure DevOps so I can run security analyzers in my pipelines and send findings to Defender for Cloud.
 ---
 
 # Configure the Microsoft Security DevOps Azure DevOps extension
@@ -28,9 +31,11 @@ Microsoft Security DevOps uses the following open-source tools:
 
 ## Prerequisites
 
-- You need Project Collection Administrator privileges in your Azure DevOps organization to install the extension. If you don't have access, request it from your Azure DevOps administrator during installation.
+- You need Project Collection Administrator privileges in your Azure DevOps organization to install the extension. If you don't have access, request these privileges from your Azure DevOps administrator.
 
 ## Configure the Microsoft Security DevOps Azure DevOps extension
+
+To install the Microsoft Security DevOps extension:
 
 1. Sign in to [Azure DevOps](https://dev.azure.com/).
 1. Go to **Shopping Bag** > **Manage extensions**.
@@ -52,6 +57,8 @@ Microsoft Security DevOps uses the following open-source tools:
 1. Select **Proceed to organization**.
 
 ## Configure pipelines using YAML
+
+To configure a pipeline with YAML:
 
 1. Sign into [Azure DevOps](https://dev.azure.com/).
 1. Select your project.
@@ -96,10 +103,10 @@ Microsoft Security DevOps uses the following open-source tools:
         # artifactName: string. Optional. The name of the pipeline artifact to publish the SARIF result file to. Default: CodeAnalysisLogs*.
     ```
 
-    > [!NOTE]  
+    > [!NOTE]
     > The artifactName 'CodeAnalysisLogs' is required for integration with
-    > Defender for Cloud. **For additional tool configuration options and environment variables, see
-    > [the Microsoft Security DevOps wiki](https://github.com/microsoft/security-devops-action/wiki)**
+    > Defender for Cloud. For additional tool configuration options and environment variables, see the
+    > [Microsoft Security DevOps wiki](https://github.com/microsoft/security-devops-action/wiki).
 
 1. Select **Save and run** to commit and run the pipeline.
 
@@ -121,6 +128,7 @@ Use the `PublishBuildArtifacts@1` task to publish SARIF files to the `CodeAnalys
 Defender for Cloud displays these findings under the *Azure DevOps repositories should have code scanning findings resolved* assessment for the affected repository.
 
 ## Related content:
-  - [Create your first pipeline](/azure/devops/pipelines/create-first-pipeline)
-  - [DevOps Security in Defender for Cloud](defender-for-devops-introduction.md)
-  - [Connect your Azure DevOps Environment to Defender for Cloud](quickstart-onboard-devops.md)
+
+- [Create your first Azure DevOps pipeline](/azure/devops/pipelines/create-first-pipeline)
+- [DevOps security in Defender for Cloud](defender-for-devops-introduction.md)
+- [Connect your Azure DevOps environment to Defender for Cloud](quickstart-onboard-devops.md)

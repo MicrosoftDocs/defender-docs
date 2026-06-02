@@ -3,7 +3,7 @@ title: Resolve agentless scan error
 description: Troubleshoot disk scan error in Microsoft Defender for Cloud to ensure your resources are connected and protected.
 ms.date: 05/25/2025
 ms.topic: how-to
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 #customer intent: As a security professional, I want to resolve the disk scan errors in Microsoft Defender for Cloud's GCP connector to ensure my resources are connected and protected.
 ---
@@ -44,7 +44,7 @@ By configuring your organization policies, you can control the resources that De
 
 1. Select **Save**.
 
-Defender for Cloud triggers agentless disk scanning with API calls. You'll know that everything works after the next API call, which takes up to 24 hours to occur, when results for agentless scanning are generated.
+Defender for Cloud triggers agentless disk scanning with API calls. You'll know this fix worked after the next scheduled scan API call, which can take up to 24 hours.
 
 ## Next step
 

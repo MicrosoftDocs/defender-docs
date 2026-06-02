@@ -118,9 +118,10 @@ Before you begin, make sure that:
 
 1. Select **Next : Configure access >**.
 
-1. Regenerate and update the AWS CloudFormation template to apply the required permissions for the enabled components.
+1. Regenerate the AWS CloudFormation template for the connector, and use it to [update the existing stack in AWS CloudFormation](quickstart-onboard-aws.md#update-the-cloudformation-template).
 
    :::image type="content" source="./media/defender-for-containers-enable-plan/amazon-web-services-configure-access.png" alt-text="Screenshot of the Configure access step for an AWS connector in Microsoft Defender for Cloud, showing the AWS CloudFormation deployment template." lightbox="./media/defender-for-containers-enable-plan/amazon-web-services-configure-access.png":::
+
 1. Select **Next: Review and generate >**.
 
 1. Select **Update**.
@@ -182,7 +183,7 @@ Before you begin, make sure that:
 
 1. Select **Next : Configure access >**.
 
-1. Regenerate and redeploy the onboarding script in your GCP project to apply the required permissions for the enabled components.
+1. Regenerate and rerun the onboarding script in your GCP project.
 
    :::image type="content" source="./media/defender-for-containers-enable-plan/google-cloud-platform-configure-access.png" alt-text="Screenshot of the Configure access step for a GCP connector in Microsoft Defender for Cloud, showing the GCP Cloud Shell deployment script." lightbox="./media/defender-for-containers-enable-plan/google-cloud-platform-configure-access.png":::
 
