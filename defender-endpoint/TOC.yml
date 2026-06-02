@@ -669,7 +669,7 @@
           displayName: AI agent discovery overview
         - name: Discover local AI agents
           href: discover-local-ai-agents.md
-      - name: Protect local AI agents at runtime
+      - name: Protect local AI agents with runtime protection
         items:
         - name: Overview
           href: ai-agent-runtime-protection-overview.md

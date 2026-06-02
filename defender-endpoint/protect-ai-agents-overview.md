@@ -25,7 +25,7 @@ Microsoft Defender automatically discovers supported local AI agents and MCP ser
 This article explains how local AI agent discovery works, lists supported agents and MCP server configurations, and describes how to view discovered agents in the Microsoft Defender portal.
 
 > [!TIP]
-> Defender also provides **runtime protection** for local AI agents. When enabled, it monitors activity in the agentic loop and blocks malicious instructions before the agent can act on them. For more information, see [Runtime protection for local AI agents with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md).
+> Defender also provides **AI agent runtime protection** for local agents. When enabled, it monitors activity in the agentic loop and blocks malicious instructions before the agent can act on them. For more information, see [AI agent runtime protection](ai-agent-runtime-protection-overview.md).
 
 ## Local AI agent discovery on endpoints
 
