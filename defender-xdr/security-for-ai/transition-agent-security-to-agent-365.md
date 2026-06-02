@@ -105,6 +105,7 @@ Microsoft Foundry agent data will no longer appear in the following Azure portal
 
 ## Related content
 
+- [Protect AI assets from emerging threats and vulnerabilities using Microsoft Defender](defender-security-for-ai)
 - [Microsoft Agent 365 overview](/microsoft-agent-365/overview)
 - [Detect, block, and investigate threats to AI agents using Microsoft Defender](ai-agent-detection-protection.md)
 - [Discover AI agents and assess security posture using Microsoft Defender](ai-agent-inventory.md)
