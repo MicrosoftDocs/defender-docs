@@ -644,6 +644,23 @@
     - name: Tamper resiliency
       href: tamper-resiliency.md
 
+    - name: Protect AI agents
+      items:
+      - name: Discover local AI agents
+        items:
+        - name: Overview
+          href: local-agent-discovery-overview.md
+          displayName: AI agent discovery overview
+        - name: Discover local AI agents
+          href: discover-local-ai-agents.md
+      - name: Protect local AI agents with runtime protection
+        items:
+        - name: Overview
+          href: ai-agent-runtime-protection-overview.md
+          displayName: AI agent runtime protection overview
+        - name: Set up AI agent runtime protection
+          href: configure-ai-agent-runtime-protection.md
+
     - name: Attack surface reduction
       items:
       - name: Attack surface reduction overview
