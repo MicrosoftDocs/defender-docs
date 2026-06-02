@@ -68,7 +68,7 @@ Use advanced hunting to proactively investigate local AI agent presence, underst
 The [ExposureGraphNodes](/defender-xdr/advanced-hunting-exposuregraphnodes-table) and [ExposureGraphEdges](/defender-xdr/advanced-hunting-exposuregraphedges-table) tables represent the security graph for local AI agents, including entities and relationships.
 
 > [!NOTE]
-> In the following queries, you can either use the `ExposureGraphEdges` table as listed to query the device associated with the AI agent, or `ExposureGraphNodes` to query the actual agent.
+> The following queries use the `ExposureGraphEdges` table to query the device associated with the AI agent. You can also use the `ExposureGraphNodes` table to query the actual agent.
 
 ### Get an inventory of AI agents across endpoints
 

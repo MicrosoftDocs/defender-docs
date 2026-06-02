@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.date: 05/27/2026
 ai-usage: ai-assisted
 appliesto:
-  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Endpoint Plan 1
 #customer intent: As a security administrator, I want to configure runtime protection for local AI agents on my organization's endpoints so that I can detect and block prompt injection attacks in real time.
 ---
 
@@ -31,37 +31,52 @@ Microsoft recommends the following phased rollout:
 
 ## Prerequisites
 
-Before you configure runtime protection, make sure the following requirements are met:
+Before you configure runtime protection, review the following requirements and considerations:
 
 - The device is onboarded to [Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
-- The device runs a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates. For preview validation devices, assign updates to [Current Channel (Preview)](manage-gradual-rollout.md#update-channels-for-monthly-updates).
+- The device runs a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
+- The feature is currently available only on devices configured to receive `Beta` platform and engine updates.
 - Microsoft Defender Antivirus is running in active mode.
 - One or more [supported local AI agents](ai-agent-runtime-protection-overview.md#supported-agents) are installed on the device.
 - The local AI agent must natively support a hooks framework. See [Supported agents](ai-agent-runtime-protection-overview.md#supported-agents) for the full list.
 
 ## Enable runtime protection
 
-To enable runtime protection on a single device (for testing or validation):
-
+To enable runtime protection on a single device for testing or validation:
+ 
 1. Open an elevated PowerShell session.
+1. Configure the device to receive preview updates.
+ 
+   ```powershell
+   Set-MpPreference -PlatformUpdatesChannel Beta
+   Set-MpPreference -EngineUpdatesChannel Beta
+ 
+   Update-MpSignature
+   Update-MpSignature
+   Update-MpSignature
+   ```
+ 
+1. Run `Update-MpSignature` three times. This step is required for preview validation.
+1. Verify that `AntivirusSignatureVersion` is `1.451.224.0` or later.
+ 
+   ```powershell
+   Get-MpComputerStatus | Select-Object AntivirusSignatureVersion
+   ```
 
-1. Run the following command:
-
-    ```powershell
-
-    Set-MpPreference -AiAgentProtection <mode>
-
-    ```
-
-1. Replace `<mode>` with `Disabled`, `Audit`, or `Block`, depending on how you want Microsoft Defender to handle detected threats. For details on each mode, see [What happens when you enable runtime protection](ai-agent-runtime-protection-overview.md#what-happens-when-you-enable-runtime-protection).
-
-1. To verify the current setting, run:
-
-    ```powershell
-
-    Get-MpPreference | Select-Object AiAgentProtection
-
-    ```
+1. Enable runtime protection.
+ 
+   ```powershell
+   Set-MpPreference -AiAgentProtection <mode>
+   ```
+ 
+   Replace `<mode>` with `Disabled`, `Audit`, or `Block`.
+ 
+   For details about each mode, see [What happens when you enable runtime protection](ai-agent-runtime-protection-overview.md#what-happens-when-you-enable-runtime-protection). 
+1. Verify the current setting.
+ 
+   ```powershell
+   Get-MpPreference | Select-Object AiAgentProtection
+   ```
 
 ## Deploy settings across your organization with Intune
 
