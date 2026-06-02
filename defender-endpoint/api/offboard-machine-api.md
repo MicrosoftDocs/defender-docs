@@ -44,7 +44,7 @@ Microsoft recommends that you use roles with the fewest permissions. This helps 
 
 When obtaining a token using user credentials:
 
-- The user must have an appropriate role assigned. For more information,see: [Permission options](../user-roles.md#permission-options).
+- The user must have an appropriate role assigned. For more information, see: [Permission options](../user-roles.md#permission-options).
 
 - The user must have access to the device, based on device group settings. For more information, see: [Create and manage device groups](../machine-groups.md).
 
