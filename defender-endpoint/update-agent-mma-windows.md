@@ -27,7 +27,7 @@ If you're using the Microsoft Monitoring Agent (MMA) on Windows devices, it's im
 
 - **[Update the MMA on your devices](#update-mma-on-your-devices)** (for devices running Windows 8.1 Pro or Enterprise).
 
-- [Upgrade to the new agent for Defender for Endpoint](#upgrade-to-the-new-unified-agent-for-defender-for-endpoint) (for devices running Windows 7 SP1 Enterprise, Windows 7 SP1 Pro, Windows Server 2008 R2 SP1, Windows Server 2012 R2, and Windows Server 2016).
+- [Upgrade to the new agent for Defender for Endpoint](#upgrade-to-the-new-agent-for-defender-for-endpoint) (for devices running Windows 7 SP1 Enterprise, Windows 7 SP1 Pro, Windows Server 2008 R2 SP1, Windows Server 2012 R2, and Windows Server 2016).
 
 ## Update MMA on your devices
 
