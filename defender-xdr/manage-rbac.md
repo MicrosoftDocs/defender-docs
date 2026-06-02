@@ -8,7 +8,8 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: 
+ms.custom:
+  - sfi-ga-nochange
 ms.topic: overview
 ms.date: 04/12/2026
 ms.reviewer: Tomas Beerthuis

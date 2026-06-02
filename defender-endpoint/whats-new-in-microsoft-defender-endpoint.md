@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/20/2026
+ms.date: 05/27/2026
 ms.collection:
 - m365-security
 - tier1
@@ -29,6 +29,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Feature | [Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security) | GA | The Defender for endpoint security solution for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is now generally available. The solution provides advanced protection capabilities and improved functionality for these devices compared to other solutions. The solution is available using the [Defender deployment tool](./defender-deployment-tool-windows.md). |
 |Feature |[Enhanced exposure score in Defender Vulnerability Management](/defender-vulnerability-management/tvm-exposure-score#transition-to-the-new-exposure-score-preview) |Preview |The new exposure score model in Defender Vulnerability Management is now available in preview. This model improves risk prioritization and recommendation impact accuracy by incorporating exploit prediction data (EPSS) and asset context factors such as internet-facing status and criticality. For more information, see [Exposure score in Defender Vulnerability Management](/defender-vulnerability-management/tvm-exposure-score) and [Security recommendations](/defender-vulnerability-management/tvm-security-recommendation). |
 |Feature |[Schedule antivirus scans on Linux](schedule-antivirus-scans-linux.md) |Preview |You can now configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux. Scheduled scans support hourly quick scans, interval-based quick scans, and weekly full scans, with options for low-priority execution, idle-time scheduling, and randomized start times. Configure scans using managed JSON, the Microsoft Defender portal, or the mdatp CLI. |
 |Feature |[Automatic device isolation (automatic attack disruption)](respond-machine-alerts.md#isolate-device-automatic-attack-disruption) |Preview |Microsoft Defender for Endpoint can now automatically isolate compromised devices as part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption). Isolation blocks most network traffic while keeping the device connected to security services. The action is time-limited, scoped to the incident, and security operators can release isolation at any time. |

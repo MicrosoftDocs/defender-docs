@@ -29,7 +29,7 @@ In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps*
 
 1. **Name** your IP range. The name doesn't appear in the activities log. It's only used to manage your IP range.
 
-1. Enter each **IP address range** you wish to configure. You can add as many IP addresses and subnets as you want using network prefix notation (also known as CIDR notation), for example 192.168.1.0/32.
+1. Enter each **IP address range** you want to configure. You can add as many IP addresses and subnets as you want using network prefix notation (also known as CIDR notation), for example 192.168.1.0/32 for IPv4 or 2001:db8::/32 for IPv6.
 
 1. **Categories** are used to easily recognize activities from important IP addresses in your logs and alerts. Categories are available in the portal. However, they typically require user configuration to determine which IP addresses are included in each category. The exception to this configuration is the **Risky** category, which includes two IP tags - Anonymous proxy and Tor.
 
@@ -59,7 +59,7 @@ In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps*
 1. When you're done, select **Create**.
 
     ![newipaddress range.](media/newipaddress-range.png "newipaddress range")
-
+   
 ## Next steps
 
 > [!div class="nextstepaction"]

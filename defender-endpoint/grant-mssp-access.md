@@ -14,6 +14,7 @@ ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 ---
 
 # Grant managed security service provider (MSSP) access (preview)

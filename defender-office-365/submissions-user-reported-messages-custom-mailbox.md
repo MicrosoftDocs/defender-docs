@@ -7,7 +7,8 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier1
-ms.custom: msecd-doc-authoring-101
+ms.custom:
+  - sfi-ga-nochange
 description: Configure where user reported messages go for analysis in Microsoft Defender for Office 365. Set up a reporting mailbox and choose Microsoft, mailbox-only, or both.
 ms.service: defender-office-365
 ms.date: 05/19/2026
@@ -31,7 +32,7 @@ User reported settings and the reporting mailbox work with the following message
 Delivering user reported messages to a reporting mailbox instead of directly to Microsoft allows admins to selectively and manually submit messages to Microsoft from the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. For more information, see [Admin submission](submissions-admin.md).
 
 > [!NOTE]
-> For information about user reported message settings in Microsoft Teams in Defender for Office 365 Plan 2, see [User reported message settings in Microsoft Teams](submissions-teams.md).
+> For information about user reported message settings in Microsoft Teams in Defender for Office 365 Plan 1 or Plan 2, see [User reported settings in Microsoft Teams](submissions-teams.md).
 
 ## Configuration requirements for the reporting mailbox
 
@@ -132,7 +133,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   - **Status**: The value is **5 of 5 messages configured** for the default notifications or **n of 5 notifications configured** for custom notifications.
   - **Action**: The **View** link for the default notifications. The **Edit** and **Delete** links for custom notifications.
 
-  To create customized pop-up notifications in specific languages, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add customized message**. In the **Add customized message** flyout that opens, configure the following settings:
+  To create customized pop-up notifications in specific languages, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add customized message**. In the **Add customized message** flyout that opens, configure the following settings:
 
   - Select the tab for the notification pop-up to customize:
     - **Report phishing** (this selection is the default)
@@ -164,7 +165,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
     The default user reporting mailbox is the Exchange Online mailbox of the global admin. Currently, the global admin isn't _shown_ as the user reported mailbox on the **User reported settings** page until _after_ the first user in the organization reports a message from Outlook.
 
-    To specify a different mailbox, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to any existing entry in the **Add an Exchange Online mailbox to Send reported items to** box. Click in the box and wait for the list of mailboxes to populate, or start typing a value to filter the list, and then select the mailbox in the results. Distribution groups and routing to an external or on-premises mailbox aren't allowed.
+    To specify a different mailbox, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to any existing entry in the **Add an Exchange Online mailbox to Send reported items to** box. Click in the box and wait for the list of mailboxes to populate, or start typing a value to filter the list, and then select the mailbox in the results. Distribution groups and routing to an external or on-premises mailbox aren't allowed.
 
     In organizations with Defender for Office 365 Plan 2, [Automatic investigation and response (AIR)](air-about.md) is triggered automatically to carry out analysis and clean up actions for you.
 
@@ -182,7 +183,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   >
   > - In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), the only available value for **Send reported items to** is **My reporting mailbox only**. The other two options are unavailable for compliance reasons (data isn't allowed to leave the organization boundary).
 
-- **Email notifications** section: These options affect the notification email message that's sent to users when an admin selects :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>. The following options are available:
+- **Email notifications** section: These options affect the notification email message that's sent to users when an admin selects :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>. The following options are available:
 
   - **Results email** section:
     - Select **Customize results email**. In the **Customize admin review email notifications** flyout that opens, configure the following settings on the **Phishing**, **Junk**, and **No threats found** tabs:
@@ -243,7 +244,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
     The default user reporting mailbox is the Exchange Online mailbox of the global admin. Currently, the global admin isn't _shown_ as the user reported mailbox on the **User reported settings** page until _after_ the first user in the organization reports a message from Outlook.
 
-    To specify a different mailbox, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to any existing entry in the **Add an Exchange Online mailbox to Send reported items to** box. Click in the box and wait for the list of mailboxes to populate, or start typing a value to filter the list, and then select the mailbox in the results. Distribution groups and routing to an external or on-premises mailbox aren't allowed.
+    To specify a different mailbox, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to any existing entry in the **Add an Exchange Online mailbox to Send reported items to** box. Click in the box and wait for the list of mailboxes to populate, or start typing a value to filter the list, and then select the mailbox in the results. Distribution groups and routing to an external or on-premises mailbox aren't allowed.
 
     In organizations with Defender for Office 365 Plan 2, [Automatic investigation and response (AIR)](air-about.md) is triggered automatically to carry out analysis and clean up actions for you.
 
@@ -253,7 +254,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
     On the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, the **Result** value for these entries is **Not Submitted to Microsoft**. Messages don't go to Microsoft for analysis unless an admin manually submits the message. For instructions, see [Submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis).
 
-- **Email notifications** section: These options affect the notification email message that's sent to users when an admin selects :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>. The following options are available:
+- **Email notifications** section: These options affect the notification email message that's sent to users when an admin selects :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>. The following options are available:
 
   - **Results email** section:
     - Select **Customize results email**. In the **Customize admin review email notifications** flyout that opens, configure the following settings on the **Phishing**, **Junk**, and **No threats found** tabs:

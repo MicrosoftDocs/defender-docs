@@ -4,6 +4,7 @@ ms.date: 08/12/2025
 ms.topic: how-to
 ms.reviewer: anandd512
 description: Get started with app governance capabilities to govern your apps in  Microsoft Defender for Cloud Apps.
+ms.custom: sfi-ga-nochange
 ---
 
 # Turn on app governance for Microsoft Defender for Cloud Apps

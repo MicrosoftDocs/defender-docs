@@ -11,7 +11,8 @@ ms.collection:
 ms.localizationpriority: medium
 description: Admins can learn about the roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ms.date: 03/27/2026
 ---
@@ -20,26 +21,26 @@ ms.date: 03/27/2026
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-The [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), [Microsoft Purview portal](/purview/purview-portal), and the [governance](/purview/use-microsoft-purview-governance-portal) portals have replaced the Security & Compliance Center as the places to manage Microsoft Defender for Office 365 and Microsoft Purview roles and role groups for your organization. For more information about permissions within these portals, see the following articles:
+This article lists the default roles and role groups in Microsoft Defender for Office 365 and Microsoft Purview.
+
+Permissions in these products are based on role-based access control (RBAC). Users need to be a global admin or a member of one or more role groups to access the Microsoft Defender portal or Microsoft Purview portals. RBAC is the same permissions model that's used by Exchange Online, but role groups in Exchange Online don't share membership or permissions with role groups in Defender for Office 365 or Purview.
+
+The Security Dashboard for AI at `ai.security.microsoft.com` is also available to eligible tenants and provides a unified, real-time view of AI-related risk signals from Microsoft Defender, Microsoft Entra, and Microsoft Purview.
+
+> [!NOTE]
+> Microsoft Defender XDR unified RBAC is a separate permissions model that's also available. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
+>
+> **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender unified RBAC.**
+>
+> :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender unified RBAC roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
+
+For more information about permissions, see the following articles:
 
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 - [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 - [Permissions in the Microsoft Purview portal](/purview/purview-portal)
 - [Permissions in Microsoft Purview solutions](/purview/purview-permissions)
 - [Permissions in the Microsoft Purview governance portal](/purview/roles-permissions)
-
-These portals let you grant permissions to people who perform tasks like device management, data loss prevention, eDiscovery, retention, and so on. These people can perform only the tasks that you explicitly grant them access to. To access these portals, users need to be a global admin or a member of one or more role groups in Defender for Office 365 (**Email & collaboration** role groups) or Purview (**Microsoft Purview solutions** role groups). The [Microsoft Purview portal (preview)](/purview/purview-portal) provides access to data governance, data security, and risk and compliance solutions.
-
-Permissions in these portals are based on the role-based access control (RBAC) permissions model. RBAC is the same permissions model that's used by Exchange, so if you're familiar with Exchange Online, granting permissions in these portals is very similar. But, It's important to remember that role groups in Exchange Online and role groups for Defender for Office 365 or Purview compliance don't share membership or permissions. For example, while an Organization Management role group exists in Exchange Online, the permissions granted and role group members are different than the Organization Management role group in Defender for Office 365 and Purview compliance.
-
-This article contains the inventory of Defender for Office 365 and Microsoft Purview roles and role groups.
-
-> [!NOTE]
-> In the Microsoft Defender XDR preview program, a different Microsoft Defender 365 RBAC model is also available. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
->
-> **If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender unified RBAC.**
->
-> :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender unified RBAC roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
 
 ## Role groups in Microsoft Defender for Office 365 and Microsoft Purview
 
@@ -85,8 +86,8 @@ Managing permissions in Defender for Office 365 or Microsoft Purview gives users
 |**Data Security Investigation Investigators**|Investigators for Data Security Investigation that can create and manage assigned investigations, processes, and settings.|Data Security Investigation Analyst <br/><br/> Data Security Investigation Investigator <br/><br/> Data Security Investigation Reviewer|
 |**Data Security Investigation Reviewers**|Reviewers for Data Security Investigation that can create and manage all assigned investigations.|Data Security Investigation Reviewer|
 |**Data Security IRM Triage Agent**|Intended exclusively for non-interactive agent users to triage and remediate insider risk management alerts.|Insider Risk Management Analysis <br/><br/> Insider Risk Management Investigation <br/><br/> Purview Copilot Workspace Contributor|
-|**Data Security Management**|View all Data Security Posture Management insights, use Copilot for Security, and manage Microsoft Purview data security solutions (Data Loss Prevention, Information Protection, and Insider Risk Management).|Case Management <br/><br/> Custodian <br/><br/> Data Classification Content Download <br/><br/> Data Classification Content Viewer <br/><br/> Data Classification List Viewer <br/><br/> Data Connector Admin <br/><br/> Data Map Reader <br/><br/> Data Security Investigation Contributor <br/><br/> Data Security Viewer <br/><br/> Information Protection Admin <br/><br/> Information Protection Analyst <br/><br/> Information Protection Investigator <br/><br/> Information Protection Reader <br/><br/> Insider Risk Management Admin <br/><br/> Insider Risk Management Analysis <br/><br/> Insider Risk Management Approval <br/><br/> Insider Risk Management Audit <br/><br/> Insider Risk Management Graph Reader <br/><br/> Insider Risk Management Investigation <br/><br/> Insider Risk Management Reports Administrator <br/><br/> Insider Risk Management Sessions <br/><br/> Insights Reader <br/><br/> Purview Agent Analysis <br/><br/> Purview Agent Deployment <br/><br/> Purview Copilot Workspace Contributor <br/><br/> Purview Evaluation Administrator <br/><br/> Review <br/><br/> Scan Reader <br/><br/> Source Reader <br/><br/> View-Only Case|
-|**Data Security Viewers**|View Data Security Posture Management (DSPM) dashboard insights and use Copilot for Security to view detailed information.|Data Security Viewer|
+|**Data Security Management**|View all Data Security Posture Management insights, use Security Copilot (including within the Security Dashboard for AI to prioritize and investigate AI risks and view tailored remediation suggestions), and manage Microsoft Purview data security solutions (Data Loss Prevention, Information Protection, and Insider Risk Management).|Case Management <br/><br/> Custodian <br/><br/> Data Classification Content Download <br/><br/> Data Classification Content Viewer <br/><br/> Data Classification List Viewer <br/><br/> Data Connector Admin <br/><br/> Data Map Reader <br/><br/> Data Security Investigation Contributor <br/><br/> Data Security Viewer <br/><br/> Information Protection Admin <br/><br/> Information Protection Analyst <br/><br/> Information Protection Investigator <br/><br/> Information Protection Reader <br/><br/> Insider Risk Management Admin <br/><br/> Insider Risk Management Analysis <br/><br/> Insider Risk Management Approval <br/><br/> Insider Risk Management Audit <br/><br/> Insider Risk Management Graph Reader <br/><br/> Insider Risk Management Investigation <br/><br/> Insider Risk Management Reports Administrator <br/><br/> Insider Risk Management Sessions <br/><br/> Insights Reader <br/><br/> Purview Agent Analysis <br/><br/> Purview Agent Deployment <br/><br/> Purview Copilot Workspace Contributor <br/><br/> Purview Evaluation Administrator <br/><br/> Review <br/><br/> Scan Reader <br/><br/> Source Reader <br/><br/> View-Only Case|
+|**Data Security Viewers**|Read-only access to Data Security Posture Management (DSPM) dashboard insights and the Security Dashboard for AI, including the AI risk scorecard and AI inventory (Microsoft 365 Copilot, Copilot Studio agents, Microsoft Foundry applications and agents, and third-party models and agents). Members can view unmanaged and shadow AI agents and use Security Copilot to view detailed information.|Data Security Viewer|
 |**Data Source Administrators**|Manage data sources and data scans.|Credential Reader <br/><br/> Credential Writer <br/><br/> Scan Reader <br/><br/> Scan Writer <br/><br/> Source Reader <br/><br/> Source Writer|
 |**eDiscovery Manager**|Members can perform searches and place holds on mailboxes, SharePoint sites, and OneDrive locations. Members can also create and manage eDiscovery cases, add and remove members to a case, create and edit Content Searches associated with a case, and access case data in eDiscovery (Premium). <br/><br/> An eDiscovery Administrator is a member of the eDiscovery Manager role group who has been assigned additional permissions. In addition to the tasks that an eDiscovery Manager can perform, an eDiscovery Administrator can:<ul><li>View all eDiscovery cases in the organization.</li><li>Manage any eDiscovery case after they add themselves as a member of the case.</li></ul> <br/><br/> The primary difference between an eDiscovery Manager and an eDiscovery Administrator is that an eDiscovery Administrator can access all cases that are listed on the **eDiscovery cases** page in the Microsoft Purview portal. An eDiscovery manager can only access the cases they created or cases they're a member of. For more information about making a user an eDiscovery Administrator, see [Assign eDiscovery permissions in the Microsoft Purview portal](/purview/ediscovery-assign-permissions).|Case Management <br/><br/> Communication <br/><br/> Compliance Search <br/><br/> Custodian <br/><br/> Export <br/><br/> Hold <br/><br/> Manage Review Set Tags <br/><br/> Preview <br/><br/> Review <br/><br/> RMS Decrypt|
 |**Exact Data Match Upload Admins**|Upload data for Exact Data Match.|Exact Data Match Upload Admin|
@@ -178,7 +179,7 @@ Roles that aren't assigned to the Organization Management role group by default 
 |**Data Security Investigation Contributor**|Create investigations and list or get the investigations that they own or are members of.|Data Security Management <br/><br/> Insider Risk Management <br/><br/> Insider Risk Management Investigators <br/><br/> Organization Management <br/><br/> Security Administrator <br/><br/> Security Operator|
 |<sup>\*</sup>**Data Security Investigation Investigator**|Used to create and manage assigned investigations, processes, and settings in Data Security Investigation.|Data Security Investigation Admins <br/><br/> Data Security Investigation Investigators|
 |<sup>\*</sup>**Data Security Investigation Reviewer**|Used to review assigned investigations in Data Security Investigation.|Data Security Investigation Admins <br/><br/> Data Security Investigation Investigators <br/><br/> Data Security Investigation Reviewers|
-|<sup>\*</sup>**Data Security Viewer**|View access to Data Security Posture Management insights. Allows users to use Security Copilot to view details and run prompts.|Data Security Management <br/><br/> Data Security Viewers|
+|<sup>\*</sup>**Data Security Viewer**|Read access to Data Security Posture Management insights and the Security Dashboard for AI (AI risk scorecard, AI inventory for Microsoft 365 Copilot, Copilot Studio, Microsoft Foundry, and third-party models and agents). Allows users to use Security Copilot to view details and run prompts. Viewing prompts and responses requires the Data Security AI Content Viewer role.|Data Security Management <br/><br/> Data Security Viewers|
 |**Device Management**|View and edit settings and reports for device management features.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Security Administrator|
 |<sup>\*</sup>**Disposition Management**|Control permissions for accessing Manual Disposition in the Defender and compliance portals.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Records Management|
 |**DLP Compliance Management**|View and edit settings and reports for data loss prevention (DLP) policies.|Compliance Administrator <br/><br/> Compliance Data Administrator <br/><br/> Organization Management <br/><br/> Security Administrator|
