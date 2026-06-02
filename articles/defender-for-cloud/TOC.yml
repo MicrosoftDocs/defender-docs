@@ -430,7 +430,7 @@
               href: data-security-posture-enable.md
             - name: Supported sensitive data information types
               href: sensitive-info-types.md
-            - name: Discover sensitive data
+            - name: Discover sensitive data in cloud resources
               href: discover-sensitive-data.md
             - name: Explore risks to sensitive data
               href: data-security-review-risks.md
