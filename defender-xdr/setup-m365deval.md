@@ -15,6 +15,7 @@ ms.collection:
   - tier1
 ms.topic: how-to
 ms.date: 06/28/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # Set up your Microsoft Defender XDR trial in a lab environment

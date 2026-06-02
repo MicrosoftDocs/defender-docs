@@ -16,6 +16,7 @@ ms.date: 04/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 ---
 
 # Troubleshoot system extension issues in Microsoft Defender for Endpoint on macOS

@@ -9,8 +9,9 @@ ms.collection:
 - tier2
 description: "Learn about automated remediation in automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2."
 ms.date: 12/15/2025
-ms.custom: 
-- air
+ms.custom:
+  - air
+  - sfi-image-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -119,8 +120,8 @@ For more information about Advanced hunting, see [Proactively hunt for threats w
 
 The following methods are available to revert automated remediation actions and restore messages to mailboxes:
 
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** on the message in Threat Explorer or Advanced Hunting. For information about the **Take action** wizard, see [The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
-- The **Move to Inbox** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Move to Junk** actions in the cluster property details flyout on **History** tab of the Action center as shown in the following screenshot:
+- :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** on the message in Threat Explorer or Advanced Hunting. For information about the **Take action** wizard, see [The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
+- The **Move to Inbox** or :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: \> **Move to Junk** actions in the cluster property details flyout on **History** tab of the Action center as shown in the following screenshot:
 
   :::image type="content" source="media/auto-air-mdo-action-center-cluster-details.png" alt-text="Screenshot of the details flyout of an automatically remediated email cluster showing the available Move to Inbox action to undo the automated remediation action and restore messages to mailboxes." lightbox="media/auto-air-mdo-action-center-cluster-details.png":::
 

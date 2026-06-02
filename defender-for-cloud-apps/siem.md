@@ -3,6 +3,7 @@ title: Generic SIEM integration
 description: This article provides information integrating your generic SIEM with Defender for Cloud Apps.
 ms.date: 05/14/2025
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Generic SIEM integration
 
