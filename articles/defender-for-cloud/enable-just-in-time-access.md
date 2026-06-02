@@ -3,7 +3,7 @@ title: Enable just-in-time access
 description: Learn how just-in-time VM access (JIT) in Microsoft Defender for Cloud helps you control access to your Azure virtual machines.
 author: ElazarK
 ms.author: elkrieger
-ms.date: 05/31/2026
+ms.date: 06/02/2026
 ms.topic: how-to
 ms.custom:
   - ge-structured-content-pilot
@@ -12,9 +12,9 @@ ms.custom:
 
 # Enable just-in-time access
 
-[Defender for Servers](defender-for-servers-overview.md) in Microsoft Defender for Cloud provides a just-in-time machine access feature.
+[Defender for Servers](defender-for-servers-overview.md) in Microsoft Defender for Cloud provides a just-in-time (JIT) machine access feature.
 
-You can use Microsoft Defender for Cloud's just-in-time access to protect your Azure VMs from unauthorized network access. Many times firewalls contain allow rules that leave your VMs vulnerable to attack. JIT lets you allow access to your VMs only when the access is needed, on the ports needed, and for the period of time needed.
+You can use Microsoft Defender for Cloud's just-in-time access to protect your Azure VMs from unauthorized network access. Firewalls often include allow rules that leave VMs exposed. JIT lets you allow access only when it's needed, on the required ports, and for the required time.
 
 In this article, you learn how to set up and use just-in-time access, including how to:
 
@@ -38,11 +38,11 @@ In this article, you learn how to set up and use just-in-time access, including 
 
 -   For a custom role, assign the permissions summarized in the table. To create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role).
 
-| User action                               | Permissions to set                                                                                                                                                                                                                                                                                                                                    |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Configure or edit a JIT policy for a VM   | *Assign these actions to the role:* <ul><li>On the scope of a subscription (or resource group when using API or PowerShell only) that is associated with the VM:<br/> `Microsoft.Security/locations/jitNetworkAccessPolicies/write` </li><li> On the scope of a subscription (or resource group when using API or PowerShell only) of VM: <br/>`Microsoft.Compute/virtualMachines/write`</li></ul> |
-| Request JIT access to a VM                | *Assign these actions to the user:* <ul><li> `Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action` </li><li> `Microsoft.Security/locations/jitNetworkAccessPolicies/*/read` </li><li> `Microsoft.Compute/virtualMachines/read` </li><li> `Microsoft.Network/networkInterfaces/*/read` </li> <li> `Microsoft.Network/publicIPAddresses/read` </li></ul> |
-| Read JIT policies                         | *Assign these actions to the user:* <ul><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/read`</li><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action`</li><li>`Microsoft.Security/policies/read`</li><li>`Microsoft.Security/pricings/read`</li><li>`Microsoft.Compute/virtualMachines/read`</li><li>`Microsoft.Network/*/read`</li>|
+| User action | Permissions to set |
+| --- | --- |
+| Configure or edit a JIT policy for a VM | *Assign these actions to the role:* <ul><li>On the scope of a subscription (or resource group when using API or PowerShell only) that is associated with the VM:<br/>`Microsoft.Security/locations/jitNetworkAccessPolicies/write`</li><li>On the scope of a subscription (or resource group when using API or PowerShell only) of VM:<br/>`Microsoft.Compute/virtualMachines/write`</li></ul> |
+| Request JIT access to a VM | *Assign these actions to the user:* <ul><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action`</li><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/*/read`</li><li>`Microsoft.Compute/virtualMachines/read`</li><li>`Microsoft.Network/networkInterfaces/*/read`</li><li>`Microsoft.Network/publicIPAddresses/read`</li></ul> |
+| Read JIT policies | *Assign these actions to the user:* <ul><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/read`</li><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action`</li><li>`Microsoft.Security/policies/read`</li><li>`Microsoft.Security/pricings/read`</li><li>`Microsoft.Compute/virtualMachines/read`</li><li>`Microsoft.Network/*/read`</li></ul> |
 
 > [!NOTE]
 > Only the `Microsoft.Security` permissions are relevant for AWS.
@@ -294,7 +294,7 @@ Learn more at [JIT network access policies](/rest/api/defenderforcloud-composite
 
 ## Audit JIT access activity in Defender for Cloud
 
-You can gain insights into VM activities using log search. To view the logs:
+Use log search to review VM activity. To view the logs:
 
 1.  From **Just-in-time VM access**, select the **Configured** tab.
 
@@ -312,3 +312,4 @@ You can gain insights into VM activities using log search. To view the logs:
 
 > [!div class="nextstepaction"]
 > [Understand just-in-time VM access management](just-in-time-access-overview.md)
+
