@@ -29,6 +29,11 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## June 2026
+
+- (Preview) Local AI agent discovery on Windows endpoints: as part of the [Defender AI agents experience](/defender-xdr/security-for-ai/defender-security-for-ai), Microsoft Defender now automatically discovers supported local AI agents running on onboarded Windows devices - including coding agents and IDE extensions, desktop AI assistants, local AI runtimes, and agent platforms. Discovered agents appear as assets in the AI agent inventory, exposure map, and advanced hunting, giving security teams visibility into local AI agent usage across the organization. For more information, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents).
+- (Preview) Local AI agent runtime protection on Windows endpoints: as part of the [Defender AI agents experience](/defender-xdr/security-for-ai/defender-security-for-ai), runtime protection for supported local AI agents on Windows endpoints is now available in public preview. Microsoft Defender inspects the agent loop (user prompts, tool calls, and tool responses) and can block risky activity before it executes, helping stop prompt injection and unsafe agent actions at the device level. Blocked and audited events appear as alerts in Microsoft Defender to support incident correlation and investigation workflows. For more information, see [Set up AI agent runtime protection with Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection).
+
 ## May 2026
 
 - **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts for Hunting - Servers** are now offered as standalone offerings for customers who wish to avail managed extended detection and response and threat hunting services for their on-premises and multicloud servers protected by Microsoft Defender for Cloud. These services were previously offered as add-ons to Microsoft Defender Experts for XDR and Mircosoft Defender Experts for Hunting, respectively. [Learn more.](dex-servers-overview.md)
