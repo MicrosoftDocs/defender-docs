@@ -222,3 +222,4 @@ To remove these tags completely, follow these steps. On Linux, the system stores
 
 > [!IMPORTANT]
 > Editing the registry incorrectly might cause issues on your device. 
+
