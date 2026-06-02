@@ -38,7 +38,7 @@ To enable Defender for Endpoint integration on a subscription:
 
 1. Go to **Defender for Cloud** > **Environment settings**.
 
-1. Select the subscription containing the machines on which you want to deploy the Defender for Endpoint integration.
+1. Select the relevant subscription.
 
 1. Go to **Settings and monitoring** > **Endpoint protection**.
 
@@ -78,7 +78,7 @@ If Defender for Servers is enabled and Defender for Endpoint integration is on i
 
 1. Go to **Defender for Cloud** > **Environment settings**.
 
-1. Select the subscription with the Windows machines that you want to receive Defender for Endpoint.
+1. Select the relevant subscription.
 
 1. In the Monitoring coverage column of the Defender for Servers plan, select **Settings**.
 
@@ -88,11 +88,14 @@ If Defender for Servers is enabled and Defender for Endpoint integration is on i
 
     :::image type="content" source="./media/integration-defender-for-endpoint/fix-defender-for-endpoint.png" alt-text="Screenshot of Fix button that enables Microsoft Defender for Endpoint support." lightbox="media/integration-defender-for-endpoint/fix-defender-for-endpoint.png":::
 
-1. In Missing components > Unified solution, select **Enable** to automatically install the Defender for Endpoint agent on Windows Server 2012 R2 and 2016 machines connected to Microsoft Defender for Cloud.
+1. Go to **Missing components** > **Unified solution**.
+1. Select **Enable**. 
 
     :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified-small.png" alt-text="Screenshot of enabling the use of the Defender for Endpoint unified solution for Windows Server 2012 R2 and 2016 machines." lightbox="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified.png":::
 
-1. Select **Save** at the top of the page.
+    The Defender for Endpoint agent automatically installs on Windows Server 2012 R2 and 2016 machines connected to Microsoft Defender for Cloud.
+
+1. Select **Save**.
 
 1. In Settings and monitoring, select **Continue**.
 
@@ -109,7 +112,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
 1. Go to **Defender for Cloud** > **Environment settings**.
 
-1. Select the subscription with the Linux machines that you want to receive Defender for Endpoint.
+1. Select the relevant subscription.
 
 1. In the Monitoring coverage column of the Defender for Servers plan, select **Settings**.
 
@@ -123,7 +126,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
     :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-linux-small.png" alt-text="Screenshot of enabling the integration between Defender for Cloud and Microsoft's EDR solution, Microsoft Defender for Endpoint for Linux." lightbox="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-linux.png":::
 
-1. Select **Save** at the top of the page.
+1. Select **Save**.
 
 1. In Settings and monitoring, select **Continue**.
 
