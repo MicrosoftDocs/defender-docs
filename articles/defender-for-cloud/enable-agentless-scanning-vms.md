@@ -27,13 +27,13 @@ When you turn on Defender for Servers Plan 2 or Defender cloud security posture 
 
 |**Requirement** | **Details**|
 |--- | ---|
-|**Plan** | To use agentless scanning the [Defender CSPM](concept-cloud-security-posture-management.md) plan, or [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled.<br/><br/> When you enable agentless scanning on either plan, the setting is enabled for both plans.|
+|**Plan** | To use agentless scanning, the [Defender cloud security posture management (Defender CSPM)](concept-cloud-security-posture-management.md) plan or [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled.<br/><br/> When you enable agentless scanning on either plan, the setting is enabled for both plans.|
 |**Malware scanning** | Malware scanning is only available when Defender for Servers Plan 2 is enabled.<br/><br/> For malware scanning of Kubernetes node VMs, either Defender for Servers Plan 2 or the Defender for Containers plan is required.|
 | **Supported machines** | You can scan Azure virtual machines (VMs), Amazon Web Services (AWS) Elastic Compute Cloud (EC2) instances, and Google Cloud Platform (GCP) compute instances without installing an agent, if they're connected to [Microsoft Defender for Cloud](/azure/defender-for-cloud/). |
-|**Azure VMs** | Agentless scanning is available on Azure standard VMs with:<br/><br/>- Maximum total disk size id 4TB (sum of all disks). **Note**: If exceeded, only the OS disk is scanned, provided its size is less than 4TB.<br/>- Maximum number of disks allowed: 6<br/>- Virtual machine scale set - Flex<br/><br/> Support for disks that are:<br/> - Unencrypted<br/> - Encrypted (managed disks using Azure Storage encryption with platform-managed keys (PMK))<br/>- Encrypted with customer-managed keys.|
+|**Azure VMs** | Agentless scanning is available on Azure standard VMs with:<br/><br/>- Maximum total disk size of 4 TB (sum of all disks). **Note**: If exceeded, only the OS disk is scanned, provided that its size is less than 4 TB.<br/>- Maximum number of disks allowed: six<br/>- Virtual machine scale set - Flex<br/><br/> Support for disks that are:<br/> - Unencrypted<br/> - Encrypted (managed disks using Azure Storage encryption with platform-managed keys (PMK))<br/>- Encrypted with customer-managed keys.|
 |**AWS** | Agentless scanning is available on EC2, Auto Scale instances, and disks that are unencrypted, encrypted (PMK), and encrypted (CMK). AMIs requiring third-party licensing, for example from AWS Marketplace, are not supported.|
 |**GCP** | Agentless scanning is available on compute instances, instance groups (managed and unmanaged), with Google-managed encryption keys, and customer-managed encryption key (CMEK)|
-|**Kubernetes nodes** | Agentless scanning for vulnerabilities and malware in Kubernetes node VMs is available.<br/><br/> For [vulnerability assessment](kubernetes-nodes-va.md) the Defender for Servers Plan 2, or the Defender for Containers plan, or the Defender Cloud Security Posture Management (CSPM) plan is required.<br/><br/> For [malware scanning](kubernetes-nodes-malware.md), Defender for Servers Plan 2 or Defender for Containers is required.|
+|**Kubernetes nodes** | Agentless scanning for vulnerabilities and malware in Kubernetes node VMs is available.<br/><br/> For [vulnerability assessment](kubernetes-nodes-va.md), Defender for Servers Plan 2, the Defender for Containers plan, or the Defender cloud security posture management (Defender CSPM) plan is required.<br/><br/> For [malware scanning](kubernetes-nodes-malware.md), Defender for Servers Plan 2 or Defender for Containers is required.|
 |**Permissions** | [Review the permissions](concept-agentless-data-collection.md#permissions-used-by-agentless-scanning) used by Defender for Cloud for agentless scanning.|
 |**Unsupported** | Disk type - If any of the VM's disks are on this list, the VM isn't scanned: <br> - UltraSSD_LRS <br> - PremiumV2_LRS <br> - Azure Kubernetes Service (AKS) Ephemeral OS Disks <br> <br> Resource type: <br> - Databricks VM <br> <br> File systems: <br> - UFS (Unix File System) <br> - ReFS (Resilient File System) <br> - ZFS (ZFS Member) <br> <br> RAID and Block storage formats: <br> - OracleASM (Oracle Automatic Storage Management) <br> - DRBD (Distributed Replicated Block Device) <br> - Linux_Raid_Member <br> <br> Integrity mechanisms: <br> - DM_Verity_Hash <br> - Swap|
 
@@ -72,7 +72,7 @@ To enable agentless scanning on AWS:
 
 1. In Defender for Cloud, open **Environment settings**.
 1. Select the relevant account.
-1. For either the Defender Cloud Security Posture Management (CSPM) or Defender for Servers P2 plan, select **Settings**.
+1. For either Defender cloud security posture management (Defender CSPM) or Defender for Servers P2, select **Settings**.
 
     :::image type="content" source="media/enable-vulnerability-assessment-agentless/defender-plan-settings-aws.png" alt-text="Screenshot of link for the settings of the Defender plans for AWS accounts." lightbox="media/enable-vulnerability-assessment-agentless/defender-plan-settings-aws.png":::
 
@@ -100,7 +100,7 @@ To enable agentless scanning on Google Cloud Platform (GCP):
 
 1. In Defender for Cloud, select **Environment settings**.
 1. Select the relevant project or organization.
-1. For either the Defender Cloud Security Posture Management (CSPM) or Defender for Servers P2 plan, select  **Settings**.
+1. For either Defender cloud security posture management (Defender CSPM) or Defender for Servers P2, select **Settings**.
 
     :::image type="content" source="media/enable-agentless-scanning-vms/gcp-select-plan.png" alt-text="Screenshot that shows where to select the plan for GCP projects." lightbox="media/enable-agentless-scanning-vms/gcp-select-plan.png":::
 
@@ -118,4 +118,3 @@ To enable agentless scanning on Google Cloud Platform (GCP):
 
 > [!div class="nextstepaction"]
 > [Review agentless scanning support and permissions](concept-agentless-data-collection.md)
-

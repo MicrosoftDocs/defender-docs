@@ -1,5 +1,5 @@
 ---
-title: Edit your DevOps connector
+title: Edit DevOps connectors
 description: Update authorization, organization scope, and connector settings for Azure DevOps, GitHub, and GitLab environments onboarded to Defender for Cloud.
 ms.date: 06/02/2026
 ms.topic: how-to
@@ -8,9 +8,9 @@ author: ElazarK
 ms.author: elkrieger
 ---
 
-# Edit your DevOps Connector in Microsoft Defender for Cloud
+# Edit DevOps connectors
 
-After onboarding your Azure DevOps, GitHub, or GitLab environments to Microsoft Defender for Cloud, you might want to change the authorization token used for the connector. You might also want to add or remove organizations/groups onboarded to Defender for Cloud or install the GitHub application to another scope. This page provides a simple tutorial for making changes to your DevOps connectors.
+After onboarding your Azure DevOps, GitHub, or GitLab environments to Microsoft Defender for Cloud, you might need to change the authorization token for a connector. You might also need to add or remove onboarded organizations or groups, or install the GitHub application to another scope. This article shows how to update those connector settings.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ To edit a DevOps connector in Defender for Cloud:
 
 1. To save inventory changes, select **Next: Review and generate >** and then select **Update**. If you skip **Update**, Defender for Cloud doesn't save your inventory changes.
 
-## Next steps
+## Next step
 
-- Learn more in [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
-
+> [!div class="nextstepaction"]
+> [Learn about DevOps security in Defender for Cloud](defender-for-devops-introduction.md)

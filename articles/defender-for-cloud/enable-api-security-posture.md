@@ -21,7 +21,7 @@ Defender cloud security posture management (Defender CSPM) gives you visibility 
 - Read about [Improve your API security posture](api-security-posture-overview.md).  
 - You need a Microsoft Azure subscription. If you don't have one, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/free-trial).  
 - Enable [Defender for Cloud on your Azure subscription](connect-azure-subscription.md).  
-- Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
+- Enable Defender cloud security posture management (Defender CSPM) on your Azure subscription. For setup instructions, see [Enable Defender CSPM](tutorial-enable-cspm-plan.md).
 - To scan for sensitive information in APIs onboarded to Defender CSPM, [enable sensitive data discovery](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan).
 - The **Subscription Owner** must enable the CSPM plan to access all features.  
 - Ensure the APIs you want to protect are deployed in [Azure API Management](/azure/api-management/api-management-key-concepts), [Function Apps](/azure/azure-functions/functions-overview), or [Logic Apps](/azure/logic-apps/logic-apps-overview).
@@ -159,8 +159,7 @@ You can't offboard individual APIs that are part of the Defender CSPM plan. To o
 
 Select **Continue** and then **Save** to confirm. This action offboards all APIs from the Defender CSPM plan, and API security posture management is disabled.
 
-## Related content
+## Next step
 
 > [!div class="nextstepaction"]
 > [Monitor API threats with Defender for APIs workload protection](defender-for-apis-deploy.md)
-
