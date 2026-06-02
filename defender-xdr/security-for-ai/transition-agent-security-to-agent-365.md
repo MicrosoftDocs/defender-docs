@@ -35,7 +35,7 @@ These capabilities, currently through Microsoft Defender for Cloud Apps and Micr
    - Threat protection for agents (previously available with the Defender for AI Services plan)
 
    > [!NOTE]
-   > Defender CSPM continues to discover Microsoft Foundry accounts and projects, but agent-level discovery, posture, and threat detection require an Agent 365 license.
+   > Defender Cloud Security Posture Management (CSPM) continues to discover Microsoft Foundry accounts and projects, but agent-level discovery, posture, and threat detection require an Agent 365 license.
 
 ## How does the experience change when you transition to Microsoft Agent 365?
 
