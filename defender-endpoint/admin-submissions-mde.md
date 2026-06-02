@@ -21,7 +21,7 @@ In Microsoft Defender for Endpoint, admins can use the unified submissions featu
 
 ## What do you need to know before you begin?
 
-The new unified submissions experience is available only in subscriptions that include Microsoft Defender for Endpoint Plan 2.
+The new unified submissions experience is available in subscriptions that include Microsoft Defender XDR or Microsoft Defender for Endpoint Plan 2.
 You need to assign permissions before you can perform the procedures in this article. Use one of the following options:
 
 **Microsoft Defender for Endpoint** permissions:
