@@ -63,7 +63,7 @@ The following reference lists all the tables in the schema. Each table name link
 | **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** | Cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |	
 | **[CloudDnsEvents](advanced-hunting-clouddnsevents-table.md)** | DNS activity events from cloud infrastructure environments |	
 | **[CloudPolicyEnforcementEvents](advanced-hunting-cloudpolicyenforcementevents-table.md)** (Preview)| Policy enforcement evaluation decisions and metadata of security gating events for various cloud platforms protected by the organization's Microsoft Defender for Cloud |	
-| **[CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md)** | Cloud process events for various cloud platforms protected by the organization's Microsoft Defender for Containers |	
+| **[CloudProcessEvents](advanced-hunting-cloudprocessevents-table.md)** (Preview)| Cloud process events for various cloud platforms protected by the organization's Microsoft Defender for Containers |	
 | **[CloudStorageAggregatedEvents](advanced-hunting-cloudstorageaggregatedevents-table.md)** (Preview)| Cloud storage activity and related events |	
 | **[DataSecurityBehaviors](advanced-hunting-datasecuritybehaviors-table.md)** (Preview)| Insights about potentially suspicious user behaviors that violate user-defined or default policies configured in the Microsoft Purview suite of solutions|	
 | **[DataSecurityEvents](advanced-hunting-datasecurityevents-table.md)** (Preview)| Information about user activities that violate user-defined or default policies in the Microsoft Purview suite of solutions |	
