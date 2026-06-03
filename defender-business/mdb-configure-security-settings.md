@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 08/28/2025
+ms.date: 08/27/2025
 ms.reviewer: efratka
 ms.collection:
  - SMB
