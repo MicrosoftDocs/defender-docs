@@ -5,17 +5,6 @@ on:
 
 env:
   TEST_USER: '' # Set to a GitHub username to override the event-derived user for testing
-  SIGN_OFF_COMMAND: '#sign-off'
-  HOLD_OFF_COMMAND: '#hold-off'
-  QUALIFIES_LABEL: 'qualifies-for-auto-merge'
-  BLOCKED_LABEL: 'blocked-qualifies-for-auto-merge'
-  HOLD_OFF_MESSAGE: |
-    This PR requires a writer review before merging.
-    The review process typically takes 2-3 business days. For urgent requests, please contact the page's author or assigned team.
-  UNAUTHORIZED_AUTHOR_MESSAGE: |
-    The 'qualifies-for-auto-merge' label was removed because the PR author is not an authorized approver.
-    Only authorized approvers can have their PRs qualify for auto-merge.
-    If you believe this PR qualifies for auto-merge, please contact an authorized reviewer.
 
 jobs:
   gate:
@@ -57,16 +46,8 @@ jobs:
           VERSION="3.0.0"
           echo "Require Writer Review Workflow Version: $VERSION"
 
-          PR_RESPONSE=$(curl -sS -w "\n%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
+          PR_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER")
-          PR_HTTP_CODE=$(echo "$PR_RESPONSE" | tail -n1)
-          PR_DATA=$(echo "$PR_RESPONSE" | sed '$d')
-
-          if [ "$PR_HTTP_CODE" != "200" ]; then
-            echo "::error::Failed to fetch PR state for #$PR_NUMBER (HTTP $PR_HTTP_CODE)."
-            [ -n "$PR_DATA" ] && echo "$PR_DATA"
-            exit 1
-          fi
 
           PR_STATE=$(echo "$PR_DATA" | jq -r '.state')
           PR_MERGED=$(echo "$PR_DATA" | jq -r '.merged')
@@ -77,14 +58,16 @@ jobs:
             exit 0
           fi
 
-          HAS_QUALIFIES=$(echo "$PR_DATA" | jq -r --arg label "$QUALIFIES_LABEL" '[.labels[].name] | contains([$label])')
-          HAS_BLOCKED=$(echo "$PR_DATA" | jq -r --arg label "$BLOCKED_LABEL" '[.labels[].name] | contains([$label])')
+          HAS_QUALIFIES=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["qualifies-for-auto-merge"])')
+          HAS_BLOCKED=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["blocked-qualifies-for-auto-merge"])')
           PR_AUTHOR=$(echo "$PR_DATA" | jq -r '.user.login')
+          PR_HEAD_SHA=$(echo "$PR_DATA" | jq -r '.head.sha')
 
           echo "PR #$PR_NUMBER — author: $PR_AUTHOR, has_qualifies: $HAS_QUALIFIES, has_blocked: $HAS_BLOCKED"
           echo "has_qualifies=$HAS_QUALIFIES" >> "$GITHUB_OUTPUT"
           echo "has_blocked=$HAS_BLOCKED" >> "$GITHUB_OUTPUT"
           echo "pr_author=$PR_AUTHOR" >> "$GITHUB_OUTPUT"
+          echo "head_sha=$PR_HEAD_SHA" >> "$GITHUB_OUTPUT"
           echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
 
       - name: Check if last PRMerger command is sign-off
@@ -96,36 +79,43 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           echo "Checking last PRMerger command..."
-          COMMENTS_RESPONSE=$(curl -sS -w "\n%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
-            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
-          COMMENTS_HTTP_CODE=$(echo "$COMMENTS_RESPONSE" | tail -n1)
-          COMMENTS=$(echo "$COMMENTS_RESPONSE" | sed '$d')
 
-          if [ "$COMMENTS_HTTP_CODE" != "200" ]; then
-            echo "::error::Failed to fetch issue comments for PR #$PR_NUMBER (HTTP $COMMENTS_HTTP_CODE)."
-            [ -n "$COMMENTS" ] && echo "$COMMENTS"
-            exit 1
-          fi
+          # Fetch ALL comments across pages (the issue-comments endpoint returns
+          # oldest-first, so the latest command may be on a later page).
+          : > /tmp/all-comments.json
+          page=1
+          while :; do
+            PAGE_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100&page=${page}")
+            COUNT=$(echo "$PAGE_DATA" | jq 'length' 2>/dev/null || echo 0)
+            [ "$COUNT" -eq 0 ] && break
+            echo "$PAGE_DATA" | jq -c '.[]' >> /tmp/all-comments.json
+            [ "$COUNT" -lt 100 ] && break
+            ((page++))
+          done
 
-          LAST_ENTRY=$(echo "$COMMENTS" | jq -r --arg signoff_cmd "${SIGN_OFF_COMMAND}" '
-            [
-              .[]
-              | {
-                  first_line: (.body | split("\n")[0] | ascii_downcase),
-                  author: .user.login
-                }
-              | select(.first_line == $signoff_cmd)
-            ]
-            | last
-            | {command: .first_line, author: .author}
-          ' 2>/dev/null || echo '{}')
+          # Identify the most recent human-authored PRMerger command. Bot
+          # comments (e.g. the workflow's own '#hold-off') are excluded so they
+          # are never mistaken for an operator command. The first line is
+          # lowercased and stripped of trailing whitespace/CR (GitHub stores
+          # comment bodies with CRLF line endings).
+          LAST_ENTRY=$(jq -rs '
+            [ .[]
+              | select(.user.type != "Bot")
+              | select((.body | gsub("\r"; "")) | test("^#[a-zA-Z-]+"))
+            ] | last |
+            {
+              command: (.body | gsub("\r"; "") | split("\n")[0] | ascii_downcase | sub("\\s+$"; "")),
+              author: .user.login
+            }
+          ' /tmp/all-comments.json 2>/dev/null || echo '{}')
 
           LAST_COMMAND=$(echo "$LAST_ENTRY" | jq -r '.command // ""')
           SIGNOFF_AUTHOR=$(echo "$LAST_ENTRY" | jq -r '.author // ""')
 
           echo "Last PRMerger command: $LAST_COMMAND (by: $SIGNOFF_AUTHOR)"
 
-          if [ "$LAST_COMMAND" = "${SIGN_OFF_COMMAND}" ]; then
+          if [ "$LAST_COMMAND" = "#sign-off" ]; then
             echo "is_signoff=true" >> "$GITHUB_OUTPUT"
             echo "author=$SIGNOFF_AUTHOR" >> "$GITHUB_OUTPUT"
           else
@@ -143,45 +133,17 @@ jobs:
           private-key: ${{ secrets.MSECD_APP_PK }}
           owner: ${{ github.repository_owner }}
 
-      - name: Create approver parsing helpers
-        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
-        run: |
-          cat <<'EOF' > /tmp/approver-helpers.sh
-          find_approvers_file() {
-            local path
-            for path in "authorized-approvers.txt" ".github/authorized-approvers.txt" "docs/authorized-approvers.txt"; do
-              if [ -f "$path" ]; then
-                echo "$path"
-                return 0
-              fi
-            done
-            return 1
-          }
-
-          list_approver_entries() {
-            local auth_file="$1"
-            local line owners entry
-            while IFS= read -r line || [ -n "$line" ]; do
-              line="${line%$'\r'}"
-              [[ "$line" =~ ^[[:space:]]*# ]] && continue
-              [[ -z "${line// }" ]] && continue
-              owners=$(echo "$line" | grep -oE '@[^ [:space:]]+' | sed 's/@//' || true)
-              [ -z "$owners" ] && continue
-              for entry in $owners; do
-                entry="${entry%$'\r'}"
-                echo "$entry"
-              done
-            done < "$auth_file"
-          }
-          EOF
-
       - name: Compute approvers cache key
         if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
         id: cache-key
         run: |
-          source /tmp/approver-helpers.sh
-
-          AUTH_FILE=$(find_approvers_file || true)
+          AUTH_FILE=""
+          for path in "authorized-approvers.txt" ".github/authorized-approvers.txt" "docs/authorized-approvers.txt"; do
+            if [ -f "$path" ]; then
+              AUTH_FILE="$path"
+              break
+            fi
+          done
 
           if [ -z "$AUTH_FILE" ]; then
             echo "::warning::No authorized-approvers.txt found."
@@ -206,10 +168,14 @@ jobs:
         env:
           TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          source /tmp/approver-helpers.sh
-
           # Find authorized-approvers.txt
-          AUTH_FILE=$(find_approvers_file || true)
+          AUTH_FILE=""
+          for path in "authorized-approvers.txt" ".github/authorized-approvers.txt" "docs/authorized-approvers.txt"; do
+            if [ -f "$path" ]; then
+              AUTH_FILE="$path"
+              break
+            fi
+          done
 
           : > /tmp/auth-teams.txt
           if [ -z "$AUTH_FILE" ]; then
@@ -225,40 +191,6 @@ jobs:
 
           # Resolve team references with pagination and cache
           declare -A TEAM_CACHE
-          github_get_with_retry() {
-            local url="$1"
-            local attempt=1
-            local max_attempts=3
-            local delay=1
-            local response http_code body headers_file rate_remaining
-
-            while :; do
-              headers_file=$(mktemp)
-              response=$(curl -sS -D "$headers_file" -w "\n%{http_code}" \
-                -H "Authorization: token $TOKEN" \
-                "$url")
-              http_code=$(echo "$response" | tail -n1)
-              body=$(echo "$response" | sed '$d')
-              rate_remaining=$(awk 'BEGIN{IGNORECASE=1} /^x-ratelimit-remaining:/ {gsub(/\r/,"",$2); print $2}' "$headers_file" | tail -n1)
-              rm -f "$headers_file"
-
-              if [ -n "$rate_remaining" ] && [ "$rate_remaining" -lt 10 ]; then
-                echo "::warning::Low GitHub rate limit headroom during team resolution: $rate_remaining remaining."
-              fi
-
-              if [ "$http_code" = "200" ] || [ "$attempt" -ge "$max_attempts" ] || [ "$http_code" = "404" ]; then
-                echo "$body"
-                echo "$http_code"
-                return
-              fi
-
-              echo "::warning::Retrying team resolution request (attempt $attempt/$max_attempts, HTTP $http_code)"
-              sleep "$delay"
-              attempt=$((attempt + 1))
-              delay=$((delay * 2))
-            done
-          }
-
           resolve_team() {
             local org="$1" team="$2" key="$org/$team"
             if [[ -n "${TEAM_CACHE[$key]+x}" ]]; then
@@ -268,7 +200,9 @@ jobs:
             local page=1 all_members=""
             while :; do
               local response http_code body page_members count
-              response=$(github_get_with_retry "https://api.github.com/orgs/${org}/teams/${team}/members?per_page=100&page=${page}")
+              response=$(curl -s -w "\n%{http_code}" \
+                -H "Authorization: token $TOKEN" \
+                "https://api.github.com/orgs/${org}/teams/${team}/members?per_page=100&page=${page}")
               http_code=$(echo "$response" | tail -n1)
               body=$(echo "$response" | sed '$d')
               if [ "$http_code" != "200" ]; then
@@ -290,18 +224,26 @@ jobs:
 
           # Parse rules and collect all authorized usernames
           ALL_USERS=""
-          while IFS= read -r entry || [ -n "$entry" ]; do
-            if [[ "$entry" == *"/"* ]]; then
-              org_name=$(echo "$entry" | cut -d'/' -f1)
-              team_name=$(echo "$entry" | cut -d'/' -f2)
-              # Record team for live-fallback membership checks later
-              echo "${org_name}/${team_name}" >> /tmp/auth-teams.txt
-              resolved=$(resolve_team "$org_name" "$team_name")
-              ALL_USERS="$ALL_USERS $resolved"
-            else
-              ALL_USERS="$ALL_USERS $entry"
-            fi
-          done < <(list_approver_entries "$AUTH_FILE")
+          while IFS= read -r line || [ -n "$line" ]; do
+            line="${line%$'\r'}"
+            [[ "$line" =~ ^[[:space:]]*# ]] && continue
+            [[ -z "${line// }" ]] && continue
+            owners=$(echo "$line" | grep -oE '@[^ [:space:]]+' | sed 's/@//' || true)
+            [ -z "$owners" ] && continue
+            for entry in $owners; do
+              entry="${entry%$'\r'}"
+              if [[ "$entry" == *"/"* ]]; then
+                org_name=$(echo "$entry" | cut -d'/' -f1)
+                team_name=$(echo "$entry" | cut -d'/' -f2)
+                # Record team for live-fallback membership checks later
+                echo "${org_name}/${team_name}" >> /tmp/auth-teams.txt
+                resolved=$(resolve_team "$org_name" "$team_name")
+                ALL_USERS="$ALL_USERS $resolved"
+              else
+                ALL_USERS="$ALL_USERS $entry"
+              fi
+            done
+          done < "$AUTH_FILE"
 
           # Deduplicate the recorded team list
           if [ -s /tmp/auth-teams.txt ]; then
@@ -336,11 +278,15 @@ jobs:
         if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
         id: teams-list
         run: |
-          source /tmp/approver-helpers.sh
-
           # Build /tmp/auth-teams.txt from the local approvers file. Runs on
           # every execution so live fallback works even on cache-hit runs.
-          AUTH_FILE=$(find_approvers_file || true)
+          AUTH_FILE=""
+          for path in "authorized-approvers.txt" ".github/authorized-approvers.txt" "docs/authorized-approvers.txt"; do
+            if [ -f "$path" ]; then
+              AUTH_FILE="$path"
+              break
+            fi
+          done
 
           : > /tmp/auth-teams.txt
           if [ -z "$AUTH_FILE" ]; then
@@ -348,11 +294,18 @@ jobs:
             exit 0
           fi
 
-          while IFS= read -r entry || [ -n "$entry" ]; do
-            if [[ "$entry" == *"/"* ]]; then
-              echo "$entry" >> /tmp/auth-teams.txt
-            fi
-          done < <(list_approver_entries "$AUTH_FILE")
+          while IFS= read -r line || [ -n "$line" ]; do
+            line="${line%$'\r'}"
+            [[ "$line" =~ ^[[:space:]]*# ]] && continue
+            [[ -z "${line// }" ]] && continue
+            owners=$(echo "$line" | grep -oE '@[^ [:space:]]+' | sed 's/@//' || true)
+            for entry in $owners; do
+              entry="${entry%$'\r'}"
+              if [[ "$entry" == *"/"* ]]; then
+                echo "$entry" >> /tmp/auth-teams.txt
+              fi
+            done
+          done < "$AUTH_FILE"
 
           if [ -s /tmp/auth-teams.txt ]; then
             sort -u /tmp/auth-teams.txt -o /tmp/auth-teams.txt
@@ -360,92 +313,45 @@ jobs:
             cat /tmp/auth-teams.txt
           fi
 
-      - name: Create GitHub auth helpers
-        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
-        env:
-          TOKEN: ${{ steps.app-token.outputs.token }}
-        run: |
-          cat <<'EOF' > /tmp/github-auth.sh
-          github_membership_http_code() {
-            local org="$1"
-            local team="$2"
-            local user="$3"
-            local attempt=1
-            local max_attempts=3
-            local delay=1
-            local http_code headers_file rate_remaining
-
-            while :; do
-              headers_file=$(mktemp)
-              http_code=$(curl -sS --globoff -D "$headers_file" -o /dev/null -w "%{http_code}" \
-                -H "Authorization: token $TOKEN" \
-                "https://api.github.com/orgs/${org}/teams/${team}/memberships/${user}")
-              rate_remaining=$(awk 'BEGIN{IGNORECASE=1} /^x-ratelimit-remaining:/ {gsub(/\r/,"",$2); print $2}' "$headers_file" | tail -n1)
-              rm -f "$headers_file"
-
-              if [ -n "$rate_remaining" ] && [ "$rate_remaining" -lt 10 ]; then
-                echo "::warning::Low GitHub rate limit headroom during membership lookup: $rate_remaining remaining."
-              fi
-
-              if [ "$http_code" = "200" ] || [ "$http_code" = "404" ] || [ "$attempt" -ge "$max_attempts" ]; then
-                echo "$http_code"
-                return
-              fi
-
-              echo "::warning::Retrying membership lookup for ${org}/${team} (attempt $attempt/$max_attempts, HTTP $http_code)"
-              sleep "$delay"
-              attempt=$((attempt + 1))
-              delay=$((delay * 2))
-            done
-          }
-
-          github_is_authorized_user() {
-            local user="$1"
-            local subject="$2"
-
-            if grep -qx "$user" /tmp/resolved-approvers.txt; then
-              echo "${subject} '$user' is authorized (cache hit)."
-              return 0
-            fi
-
-            case "$user" in
-              *'[bot]')
-                echo "${subject} '$user' is a bot account; not authorized."
-                return 1
-                ;;
-            esac
-
-            if [ -s /tmp/auth-teams.txt ]; then
-              while IFS= read -r team_ref || [ -n "$team_ref" ]; do
-                org=$(echo "$team_ref" | cut -d'/' -f1)
-                team=$(echo "$team_ref" | cut -d'/' -f2)
-                http_code=$(github_membership_http_code "$org" "$team" "$user")
-                if [ "$http_code" = "200" ]; then
-                  echo "${subject} '$user' is authorized (live fallback: ${team_ref})."
-                  return 0
-                fi
-              done < /tmp/auth-teams.txt
-            fi
-
-            echo "${subject} '$user' is NOT authorized."
-            return 1
-          }
-          EOF
-
       - name: Check if sign-off author is authorized
         if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.signoff.outputs.is_signoff == 'true'
         id: signoff-auth
         env:
           TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          source /tmp/github-auth.sh
-
           USER=$(echo "${{ env.TEST_USER || steps.signoff.outputs.author }}" | tr '[:upper:]' '[:lower:]')
-          if github_is_authorized_user "$USER" "Sign-off author"; then
+          if grep -qx "$USER" /tmp/resolved-approvers.txt; then
             echo "authorized=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "authorized=false" >> "$GITHUB_OUTPUT"
+            echo "Sign-off author '$USER' is authorized (cache hit)."
+            exit 0
           fi
+          # Bot accounts (login ends with "[bot]") cannot be members of human
+          # approver teams. Skip the live lookup to avoid curl URL-globbing on
+          # the bracket characters (curl would exit 3 -> step failure).
+          case "$USER" in
+            *'[bot]')
+              echo "authorized=false" >> "$GITHUB_OUTPUT"
+              echo "Sign-off author '$USER' is a bot account; not authorized."
+              exit 0
+              ;;
+          esac
+          # Live fallback: check team membership directly via API.
+          if [ -s /tmp/auth-teams.txt ]; then
+            while IFS= read -r team_ref || [ -n "$team_ref" ]; do
+              org=$(echo "$team_ref" | cut -d'/' -f1)
+              team=$(echo "$team_ref" | cut -d'/' -f2)
+              http_code=$(curl -s --globoff -o /dev/null -w "%{http_code}" \
+                -H "Authorization: token $TOKEN" \
+                "https://api.github.com/orgs/${org}/teams/${team}/memberships/${USER}")
+              if [ "$http_code" = "200" ]; then
+                echo "authorized=true" >> "$GITHUB_OUTPUT"
+                echo "Sign-off author '$USER' is authorized (live fallback: ${team_ref})."
+                exit 0
+              fi
+            done < /tmp/auth-teams.txt
+          fi
+          echo "authorized=false" >> "$GITHUB_OUTPUT"
+          echo "Sign-off author '$USER' is NOT authorized."
 
       - name: Check if PR author is authorized
         if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.pr-state.outputs.has_qualifies == 'true' && steps.signoff.outputs.is_signoff != 'true'
@@ -453,14 +359,38 @@ jobs:
         env:
           TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          source /tmp/github-auth.sh
-
           USER=$(echo "${{ env.TEST_USER || steps.pr-state.outputs.pr_author }}" | tr '[:upper:]' '[:lower:]')
-          if github_is_authorized_user "$USER" "PR author"; then
+          if grep -qx "$USER" /tmp/resolved-approvers.txt; then
             echo "authorized=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "authorized=false" >> "$GITHUB_OUTPUT"
+            echo "PR author '$USER' is authorized (cache hit)."
+            exit 0
           fi
+          # Bot accounts (login ends with "[bot]") cannot be members of human
+          # approver teams. Skip the live lookup to avoid curl URL-globbing on
+          # the bracket characters (curl would exit 3 -> step failure).
+          case "$USER" in
+            *'[bot]')
+              echo "authorized=false" >> "$GITHUB_OUTPUT"
+              echo "PR author '$USER' is a bot account; not authorized."
+              exit 0
+              ;;
+          esac
+          if [ -s /tmp/auth-teams.txt ]; then
+            while IFS= read -r team_ref || [ -n "$team_ref" ]; do
+              org=$(echo "$team_ref" | cut -d'/' -f1)
+              team=$(echo "$team_ref" | cut -d'/' -f2)
+              http_code=$(curl -s --globoff -o /dev/null -w "%{http_code}" \
+                -H "Authorization: token $TOKEN" \
+                "https://api.github.com/orgs/${org}/teams/${team}/memberships/${USER}")
+              if [ "$http_code" = "200" ]; then
+                echo "authorized=true" >> "$GITHUB_OUTPUT"
+                echo "PR author '$USER' is authorized (live fallback: ${team_ref})."
+                exit 0
+              fi
+            done < /tmp/auth-teams.txt
+          fi
+          echo "authorized=false" >> "$GITHUB_OUTPUT"
+          echo "PR author '$USER' is NOT authorized."
 
       - name: Check if reopener is authorized
         if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && github.event_name == 'pull_request_target' && github.event.action == 'reopened'
@@ -468,84 +398,38 @@ jobs:
         env:
           TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          source /tmp/github-auth.sh
-
           USER=$(echo "${{ env.TEST_USER || github.event.sender.login }}" | tr '[:upper:]' '[:lower:]')
-          if github_is_authorized_user "$USER" "Reopener"; then
+          if grep -qx "$USER" /tmp/resolved-approvers.txt; then
             echo "authorized=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "authorized=false" >> "$GITHUB_OUTPUT"
+            echo "Reopener '$USER' is authorized (cache hit)."
+            exit 0
           fi
-
-      - name: Create GitHub mutation helpers
-        if: steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true'
-        run: |
-          cat <<'EOF' > /tmp/github-mutations.sh
-          github_post_comment() {
-            local comment_body="$1"
-            local description="$2"
-            local payload response http_code body
-
-            payload=$(jq -n --arg body "$comment_body" '{body: $body}')
-            response=$(curl -sS -w "\n%{http_code}" -X POST \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
-              -d "$payload")
-            http_code=$(echo "$response" | tail -n1)
-            body=$(echo "$response" | sed '$d')
-
-            if [ "$http_code" != "201" ]; then
-              echo "::error::${description} failed (HTTP $http_code)"
-              [ -n "$body" ] && echo "$body"
-              exit 1
-            fi
-          }
-
-          github_add_label() {
-            local label="$1"
-            local description="$2"
-            local response http_code body
-
-            response=$(curl -sS -w "\n%{http_code}" -X POST \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
-              -d "{\"labels\":[\"$label\"]}")
-            http_code=$(echo "$response" | tail -n1)
-            body=$(echo "$response" | sed '$d')
-
-            if [ "$http_code" != "200" ]; then
-              echo "::error::${description} failed (HTTP $http_code)"
-              [ -n "$body" ] && echo "$body"
-              exit 1
-            fi
-          }
-
-          github_delete_label() {
-            local label="$1"
-            local description="$2"
-            local response http_code body
-
-            response=$(curl -sS -w "\n%{http_code}" -X DELETE \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              -H "Accept: application/vnd.github.v3+json" \
-              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/$label")
-            http_code=$(echo "$response" | tail -n1)
-            body=$(echo "$response" | sed '$d')
-
-            if [ "$http_code" = "404" ]; then
-              echo "::warning::${description} skipped because '$label' was already absent."
-              return 0
-            fi
-
-            if [ "$http_code" != "200" ]; then
-              echo "::error::${description} failed (HTTP $http_code)"
-              [ -n "$body" ] && echo "$body"
-              exit 1
-            fi
-          }
-          EOF
+          # Bot accounts (login ends with "[bot]") cannot be members of human
+          # approver teams. Skip the live lookup to avoid curl URL-globbing on
+          # the bracket characters (curl would exit 3 -> step failure).
+          case "$USER" in
+            *'[bot]')
+              echo "authorized=false" >> "$GITHUB_OUTPUT"
+              echo "Reopener '$USER' is a bot account; not authorized."
+              exit 0
+              ;;
+          esac
+          if [ -s /tmp/auth-teams.txt ]; then
+            while IFS= read -r team_ref || [ -n "$team_ref" ]; do
+              org=$(echo "$team_ref" | cut -d'/' -f1)
+              team=$(echo "$team_ref" | cut -d'/' -f2)
+              http_code=$(curl -s --globoff -o /dev/null -w "%{http_code}" \
+                -H "Authorization: token $TOKEN" \
+                "https://api.github.com/orgs/${org}/teams/${team}/memberships/${USER}")
+              if [ "$http_code" = "200" ]; then
+                echo "authorized=true" >> "$GITHUB_OUTPUT"
+                echo "Reopener '$USER' is authorized (live fallback: ${team_ref})."
+                exit 0
+              fi
+            done < /tmp/auth-teams.txt
+          fi
+          echo "authorized=false" >> "$GITHUB_OUTPUT"
+          echo "Reopener '$USER' is NOT authorized."
 
       # --- Branch 1: Unauthorized sign-off → hold-off + block label ---
 
@@ -558,22 +442,34 @@ jobs:
           REPO: ${{ github.repository }}
           HAS_QUALIFIES: ${{ steps.pr-state.outputs.has_qualifies }}
         run: |
-          source /tmp/github-mutations.sh
-
           echo "Sign-off author '$SIGNOFF_AUTHOR' is not authorized. Adding hold-off comment..."
 
-          COMMENT_BODY="${HOLD_OFF_COMMAND}
-          ${HOLD_OFF_MESSAGE}"
+          COMMENT_BODY="#hold-off
+          This PR requires a writer review before merging.
+          The review process typically takes 2-3 business days. For urgent requests, please contact the page's author or assigned team."
 
-          github_post_comment "$COMMENT_BODY" "Posting hold-off comment"
+          jq -n --arg body "$COMMENT_BODY" '{body: $body}' | \
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
+            -d @-
 
           echo "Hold-off comment added."
 
           if [ "$HAS_QUALIFIES" = "true" ]; then
-            github_delete_label "$QUALIFIES_LABEL" "Removing $QUALIFIES_LABEL label"
-            github_add_label "$BLOCKED_LABEL" "Adding $BLOCKED_LABEL label"
+            curl -s -X DELETE \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/qualifies-for-auto-merge"
 
-            echo "Swapped '$QUALIFIES_LABEL' to '$BLOCKED_LABEL'."
+            curl -s -X POST \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+              -d '{"labels":["blocked-qualifies-for-auto-merge"]}'
+
+            echo "Swapped 'qualifies-for-auto-merge' to 'blocked-qualifies-for-auto-merge'."
           fi
 
       # --- Branch 2: Authorized sign-off → restore label ---
@@ -586,14 +482,20 @@ jobs:
           PR_NUMBER: ${{ steps.pr-state.outputs.number }}
           REPO: ${{ github.repository }}
         run: |
-          source /tmp/github-mutations.sh
-
           echo "Author '$SIGNOFF_AUTHOR' is authorized. Restoring auto-merge label..."
 
-          github_delete_label "$BLOCKED_LABEL" "Removing $BLOCKED_LABEL label"
-          github_add_label "$QUALIFIES_LABEL" "Adding $QUALIFIES_LABEL label"
+          curl -s -X DELETE \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/blocked-qualifies-for-auto-merge"
 
-          echo "Restored '$QUALIFIES_LABEL' label."
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+            -d '{"labels":["qualifies-for-auto-merge"]}'
+
+          echo "Restored 'qualifies-for-auto-merge' label."
 
       # --- Branch 3: Unauthorized PR owner with qualifies-for-auto-merge ---
 
@@ -610,18 +512,31 @@ jobs:
           PR_NUMBER: ${{ steps.pr-state.outputs.number }}
           REPO: ${{ github.repository }}
         run: |
-          source /tmp/github-mutations.sh
-
           echo "PR author '$PR_AUTHOR' is not authorized. Blocking auto-merge..."
 
-          github_delete_label "$QUALIFIES_LABEL" "Removing $QUALIFIES_LABEL label"
-          github_add_label "$BLOCKED_LABEL" "Adding $BLOCKED_LABEL label"
+          curl -s -X DELETE \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/qualifies-for-auto-merge"
 
-          echo "Swapped '$QUALIFIES_LABEL' to '$BLOCKED_LABEL'."
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+            -d '{"labels":["blocked-qualifies-for-auto-merge"]}'
 
-          COMMENT_BODY="$UNAUTHORIZED_AUTHOR_MESSAGE"
+          echo "Swapped 'qualifies-for-auto-merge' to 'blocked-qualifies-for-auto-merge'."
 
-          github_post_comment "$COMMENT_BODY" "Posting unauthorized-author explanation comment"
+          COMMENT_BODY="The 'qualifies-for-auto-merge' label was removed because the PR author is not an authorized approver.
+          Only authorized approvers can have their PRs qualify for auto-merge.
+          If you believe this PR qualifies for auto-merge, please contact an authorized reviewer."
+
+          jq -n --arg body "$COMMENT_BODY" '{body: $body}' | \
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
+            -d @-
 
           echo "Explanation comment added."
 
@@ -642,57 +557,67 @@ jobs:
           PR_NUMBER: ${{ steps.pr-state.outputs.number }}
           REPO: ${{ github.repository }}
         run: |
-          source /tmp/github-mutations.sh
-
           echo "Reopener '$REOPENER' is authorized. Restoring auto-merge label..."
 
-          github_delete_label "$BLOCKED_LABEL" "Removing $BLOCKED_LABEL label"
-          github_add_label "$QUALIFIES_LABEL" "Adding $QUALIFIES_LABEL label"
+          curl -s -X DELETE \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels/blocked-qualifies-for-auto-merge"
 
-          echo "Restored '$QUALIFIES_LABEL' label."
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/labels" \
+            -d '{"labels":["qualifies-for-auto-merge"]}'
+
+          echo "Restored 'qualifies-for-auto-merge' label."
 
           COMMENT_BODY="Auto-merge restored on reopen by authorized approver @${REOPENER}."
 
-          github_post_comment "$COMMENT_BODY" "Posting reopen confirmation comment"
+          jq -n --arg body "$COMMENT_BODY" '{body: $body}' | \
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
+            -d @-
 
           echo "Confirmation comment added."
 
-      - name: Write policy summary
-        if: always()
+      # --- Publish gate result onto the PR head commit ---
+      # issue_comment-triggered runs (e.g. '#sign-off') execute in the default
+      # branch context and their job conclusion is NOT recorded against the PR
+      # head SHA, so the required check would never update from a comment. This
+      # step always posts a commit status to the PR head SHA so that both
+      # pull_request_target and issue_comment runs move the required check.
+      - name: Publish gate status to PR head
+        if: always() && steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.pr-state.outputs.head_sha != ''
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ steps.pr-state.outputs.head_sha }}
+          JOB_STATUS: ${{ job.status }}
         run: |
-          {
-            echo "## Writer review policy summary"
-            echo "- Event: ${{ github.event_name }} / ${{ github.event.action || 'n/a' }}"
+          # Mirror the job conclusion onto the PR head commit. 'success' and
+          # 'failure' are the only states branch protection acts on; anything
+          # else (cancelled) is reported as 'error'.
+          case "$JOB_STATUS" in
+            success) STATE="success" ;;
+            failure) STATE="failure" ;;
+            *)       STATE="error" ;;
+          esac
 
-            if [ "${{ steps.resolve.outputs.skip }}" = "true" ]; then
-              echo "- No action taken: no PR number was found in this event payload."
-              exit 0
-            fi
+          echo "Publishing commit status '$STATE' to $HEAD_SHA (context: Approver Review / gate)"
 
-            echo "- PR number: #${{ steps.resolve.outputs.number }}"
+          jq -n \
+            --arg state "$STATE" \
+            --arg context "Approver Review / gate" \
+            --arg desc "Approver review gate ($STATE)" \
+            --arg url "https://github.com/$REPO/actions/runs/${GITHUB_RUN_ID}" \
+            '{state: $state, context: $context, description: $desc, target_url: $url}' | \
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/statuses/$HEAD_SHA" \
+            -d @-
 
-            if [ "${{ steps.pr-state.outputs.skip }}" = "true" ]; then
-              echo "- No action taken: PR is closed, merged, or draft."
-            elif [ "${{ steps.signoff.outputs.is_signoff }}" = "true" ] && [ "${{ steps.signoff-auth.outputs.authorized }}" = "false" ]; then
-              echo "- Unauthorized sign-off detected."
-              echo "- Hold-off comment posted."
-              if [ "${{ steps.pr-state.outputs.has_qualifies }}" = "true" ]; then
-                echo "- Label changed: $QUALIFIES_LABEL -> $BLOCKED_LABEL."
-              else
-                echo "- No label swap was needed because $QUALIFIES_LABEL was absent."
-              fi
-            elif [ "${{ steps.signoff.outputs.is_signoff }}" = "true" ] && [ "${{ steps.signoff-auth.outputs.authorized }}" = "true" ] && [ "${{ steps.pr-state.outputs.has_blocked }}" = "true" ]; then
-              echo "- Authorized sign-off detected."
-              echo "- Label restored: $BLOCKED_LABEL -> $QUALIFIES_LABEL."
-            elif [ "${{ steps.pr-state.outputs.has_qualifies }}" = "true" ] && [ "${{ steps.pr-author-auth.outputs.authorized }}" = "false" ] && [ "${{ steps.signoff.outputs.is_signoff }}" != "true" ]; then
-              echo "- Unauthorized PR author detected on an auto-merge-qualified PR."
-              echo "- Label changed: $QUALIFIES_LABEL -> $BLOCKED_LABEL."
-              echo "- Explanation comment posted."
-            elif [ "${{ github.event_name }}" = "pull_request_target" ] && [ "${{ github.event.action }}" = "reopened" ] && [ "${{ steps.reopener-auth.outputs.authorized }}" = "true" ] && [ "${{ steps.pr-state.outputs.has_blocked }}" = "true" ] && [ "${{ steps.signoff.outputs.is_signoff }}" != "true" ]; then
-              echo "- Authorized reopen detected."
-              echo "- Label restored: $BLOCKED_LABEL -> $QUALIFIES_LABEL."
-              echo "- Confirmation comment posted."
-            else
-              echo "- No policy mutation was required for this event."
-            fi
-          } >> "$GITHUB_STEP_SUMMARY"
+          echo "Commit status published."
