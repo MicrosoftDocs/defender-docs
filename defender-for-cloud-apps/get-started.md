@@ -3,6 +3,7 @@ title: Get started | Microsoft Defender for Cloud Apps
 description: This quickstart outlines the process for getting Defender for Cloud Apps up and running so you have cloud app use, insight, and control.
 ms.date: 07/24/2025
 ms.topic: quickstart
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with Microsoft Defender for Cloud Apps

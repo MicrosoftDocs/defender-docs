@@ -102,7 +102,7 @@ By default the **master** (main) branch is active when you open your cloned fork
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-select-active-branch.png" alt-text="Screenshot of the active (open) branch highlighted in Visual Studio Code." lightbox="../media/add-advanced-hunting-community-queries-vs-code-select-active-branch.png":::
 
-2. In the dialog that opens, select :::image type="icon" source="../media/m365-cc-sc-create-icon.png" border="false"::: **Create new branch from...**, and then select **master** (other available branches also appear in the list).
+2. In the dialog that opens, select :::image type="icon" source="../media/defender-portal-icon-create.png" border="false"::: **Create new branch from...**, and then select **master** (other available branches also appear in the list).
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-clone-create-new-branch-from.png" alt-text="Screenshot of the dialog that opens after you select the active (open) branch in Visual Studio Code with Create new branch from... highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-clone-create-new-branch-from.png":::
 

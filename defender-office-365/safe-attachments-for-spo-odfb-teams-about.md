@@ -9,9 +9,10 @@ ms.collection:
   - m365-security
   - SPO_Content
   - tier2
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
   - seo-marvel-jun2020
+  - sfi-image-nochange
 description: Learn about Microsoft Defender for Office 365 for files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
 ms.date: 04/09/2026

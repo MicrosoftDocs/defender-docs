@@ -161,8 +161,8 @@ Attacker is creating new entities to further their reach, install malware agents
 |Activity|Signal source|Alternate security portal|
 |---|---|---|
 |New apps that are installed|Defender for Cloud Apps with the app governance add-on|Defender for Cloud Apps|
-|New user accounts|Azure Identity Protection|Defender for Cloud Apps|
-|Role changes|Azure Identity Protection|Defender for Cloud Apps|
+|New user accounts|Microsoft Entra ID Protection|Defender for Cloud Apps|
+|Role changes|Microsoft Entra ID Protection|Defender for Cloud Apps|
 
 #### Suspicious behavior
 

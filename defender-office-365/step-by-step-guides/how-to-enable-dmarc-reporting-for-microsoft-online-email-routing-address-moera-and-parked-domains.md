@@ -11,6 +11,7 @@ ms.collection:
 - tier3
 ms.topic: how-to
 ms.date: 01/31/2023
+ms.custom: sfi-ga-nochange
 ---
 
 # How to enable DMARC Reporting for Microsoft Online Email Routing Address (MOERA) and parked Domains

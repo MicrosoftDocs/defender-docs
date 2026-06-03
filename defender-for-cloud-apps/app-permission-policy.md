@@ -3,6 +3,7 @@ title: Create policies to control OAuth apps
 description: This article provides instructions for creating and working with app permission policies in Microsoft Defender for Cloud Apps.
 ms.date: 12/16/2025
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Create policies to control OAuth apps

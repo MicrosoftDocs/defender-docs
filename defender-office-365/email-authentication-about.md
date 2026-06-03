@@ -147,6 +147,8 @@ This section describes why you need SPF, DKIM, and DMARC for domains on the inte
 
   **DMARC issues**: Legitimate services that modify messages in transit before delivery break SPF, DKIM, and therefore DMARC checks.
 
+  When messages are automatically forwarded between domains or organizations, DMARC alignment can fail even for legitimate service senders. For example, if a Microsoft service domain (such as voicemail.microsoft.com) fails DMARC after forwarding, use a scoped allow entry in the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders) or authenticated relay rather than allowing the entire sending domain.
+
 - **ARC**: As explained in [Configure trusted ARC sealers](email-authentication-arc-configure.md), legitimate services that modify messages in transit can use ARC to preserve the original email authentication information of modified messages.
 
   **How ARC helps DMARC**: The destination email system can identify the service as a trusted ARC sealer. ARC can then use the preserved email authentication information to validate the message.

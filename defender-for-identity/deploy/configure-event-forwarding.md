@@ -4,6 +4,7 @@ description: Learn about Microsoft Defender for Identity's support for configuri
 ms.date: 08/10/2023
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange
 ---
 
 # Configure Windows event forwarding to your Defender for Identity standalone sensor

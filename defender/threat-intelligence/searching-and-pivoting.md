@@ -3,10 +3,11 @@ title: 'Searching and pivoting with Microsoft Defender Threat Intelligence (Defe
 description: 'Learn how to search and pivot across internet data sets, threat articles, vulnerability articles, and projects using Microsoft Defender Threat Intelligence (Defender TI).'
 ms.topic: how-to 
 ms.date: 09/12/2025
-ms.custom: 
-- template-overview
-- cx-ti
-- cx-mdti
+ms.custom:
+  - template-overview
+  - cx-ti
+  - cx-mdti
+  - sfi-image-nochange
 ---
 
 # Searching and pivoting

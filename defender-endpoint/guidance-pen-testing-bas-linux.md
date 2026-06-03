@@ -30,7 +30,7 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
 ## Table of contents
 
 - [Challenges and solutions at a glance](#challenges-and-solutions-at-a-glance)
-- [Detailed guidance](#detailed-guidance)
+- [Configure Defender for accurate evaluation](#configure-defender-for-accurate-evaluation)
   - [Enable Full Protection Settings](#enable-full-protection-settings)
   - [Enable new protection capabilities currently in preview](#enable-new-protection-capabilities-currently-in-preview)
   - [Keep Defender up to date](#keep-defender-up-to-date)
@@ -51,7 +51,7 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
 | Outdated platform or signatures | Reduced detection accuracy | Keep platform, engine, and signature updates current. |
 | Not meeting minimum system requirements | High CPU or latency during tests | Ensure the minimum system requirements are met. |
 
-## Detailed guidance
+## Configure Defender for accurate evaluation
 
 For accurate BAS and penetration testing results, Microsoft Defender for Endpoint on Linux should run with the full protection stack enabled, the latest platform updates applied, and adequate system resources available. See the following sections for guidance regarding each requirement.
 

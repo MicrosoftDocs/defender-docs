@@ -2,7 +2,7 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 05/28/2026
+ms.date: 05/31/2026
 
 # This file is auto-generated. Do not edit manually. Changes will be overwritten.
 ---
@@ -16954,6 +16954,80 @@ The Talon Security Logs connector allows you to easily connect your Talon events
 
   - **Workspace ID**: <variable value provided at install time>
   - **Primary Key**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="taniums-ccf-push-connector"></a><details><summary>**Tanium's CCF Push Connector**</summary>
+
+**Supported by:** [Tanium Inc.](https://www.tanium.com/contact-us/)
+
+This data feeds Microsoft Sentinel workbooks and playbooks so analysts can enrich incidents, visualize endpoint risk and health, and automate investigation and response workflows. For more details about Tanium, head to [https://www.tanium.com/contact-us/](https://www.tanium.com/contact-us/)
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`TaniumComplyCompliance_CL`|No|No|
+|`TaniumComplyVulnerabilities_CL`|No|No|
+|`TaniumDefenderHealth_CL`|No|No|
+|`TaniumDiscoverUnmanagedAssets_CL`|No|No|
+|`TaniumHighUptime_CL`|No|No|
+|`TaniumPatchCoverageStatus_CL`|No|No|
+|`TaniumPatchListApplicability_CL`|No|No|
+|`TaniumPatchListCompliance_CL`|No|No|
+|`TaniumSCCMClientHealth_CL`|No|No|
+|`TaniumThreatResponse_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR).
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector enables your Tanium Server to push Basic Inventory data directly to Microsoft Sentinel via the Azure Monitor Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics table and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables the Tanium data to be sent securely to the DCR using an Entra token.
+
+
+**2. Configure Tanium Connections**
+
+Use the following parameters to configure the your Tanium Connections to push data to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+  - **Compliance Findings Logs Stream Name**: <variable value provided at install time>
+  - **Compliance Vulnerabilities Logs Stream Name**: <variable value provided at install time>
+  - **Defender Health Logs Stream Name**: <variable value provided at install time>
+  - **Discover Unmanaged Assets Health Logs Stream Name**: <variable value provided at install time>
+  - **High Uptime Logs Stream Name**: <variable value provided at install time>
+  - **Patch Coverage Status Logs Stream Name**: <variable value provided at install time>
+  - **Patch List Applicability Logs Stream Name**: <variable value provided at install time>
+  - **Patch List Compliance Logs Stream Name**: <variable value provided at install time>
+  - **SCCM Client Health Logs Stream Name**: <variable value provided at install time>
+  - **Threat Response Alerts Logs Stream Name**: <variable value provided at install time>
+
+**3. Create the Connection in Tanium**
+
+After you've successfully deployed the data connector in Azure, create the required connection in your Tanium server in the Connect Module. For more information regarding the Connect module see [Tanium Help](https://help.tanium.com/bundle/ug_connect_cloud/page/connect/overview.html)
+
+  1. Download the [connection import file](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Tanium/Data%20Connectors/connect-module-connections.json).
+1. Replace the placeholders with the parameters displayed above.
+1. In your Tanium Server open the Connect Module.
+1. Use the import functionality to import you new connections.
+
 
 <br><br>
 </details> 

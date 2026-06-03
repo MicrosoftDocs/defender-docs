@@ -4,6 +4,7 @@ description: This article provides information integrating Microsoft Sentinel wi
 ms.date: 10/29/2025
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart 
+ms.custom: sfi-image-nochange
 ---
 
 # Microsoft Sentinel integration (Preview)

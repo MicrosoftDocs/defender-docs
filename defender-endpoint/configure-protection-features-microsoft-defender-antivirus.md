@@ -48,6 +48,7 @@ See [Use next-gen Microsoft Defender Antivirus technologies through cloud protec
 |---|---|
 | [Detect and block potentially unwanted applications](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md)| Detect and block apps that mighty be unwanted in your network, such as adware, browser modifiers and toolbars, and rogue or fake antivirus apps |
 | [Enable and configure Microsoft Defender Antivirus protection capabilities](configure-real-time-protection-microsoft-defender-antivirus.md)|Enable and configure real-time protection, heuristics, and other always-on Microsoft Defender Antivirus monitoring features |
+| [AI agent runtime protection with Microsoft Defender for Endpoint](ai-agent-runtime-protection-overview.md) | Detect and block attacks targeting local AI agents running on your devices |
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

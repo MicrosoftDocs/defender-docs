@@ -7,7 +7,9 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom: asr, msecd-doc-authoring-1012
+ms.custom:
+  - asr
+  - sfi-image-nochange
 ms.topic: how-to
 ms.collection:
  - m365-security
