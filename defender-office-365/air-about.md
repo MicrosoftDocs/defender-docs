@@ -10,9 +10,10 @@ ms.collection:
 - tier2
 description: Learn how automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2 helps your security team identify and remediate threats efficiently.
 ms.custom:
-- air
-- seo-marvel-mar2020
-- msecd-doc-authoring-1012
+  - air
+  - seo-marvel-mar2020
+  - msecd-doc-authoring-1012
+  - sfi-ga-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -53,7 +54,7 @@ An alert is triggered, and a security playbook starts an automated investigation
        > - These alerts are disabled.
        > - These alerts were replaced by custom alerts.
 
-   - A security analyst manually triggers the investigation by selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, or the Email summary panel. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation). For examples, see [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md).
+   - A security analyst manually triggers the investigation by selecting :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, or the Email summary panel. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation). For examples, see [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md).
 
 2. The automated investigation evaluates and analyzes the nature of the alert, the message involved, and additional evidence surrounding the message. The scope of the investigation can increase based on the evidence uncovered and collected during the investigation.
 

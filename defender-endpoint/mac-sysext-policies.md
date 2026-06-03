@@ -17,6 +17,7 @@ ms.date: 05/08/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # New configuration profiles for macOS Big Sur and newer versions of macOS 

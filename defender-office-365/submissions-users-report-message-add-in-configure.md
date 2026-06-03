@@ -16,6 +16,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Transition from the Microsoft Report Message or the Report Phishing add-ins
@@ -128,7 +129,7 @@ The rest of this article describes how to remove the Report Message and Report P
 
    Click in the search box to find and select users or groups. New selections are added to the **To be added** section that appears.
 
-   To remove a user or group, select :::image type="icon" source="media/m365-cc-sc-remove-icon.png" border="false"::: on the entry:
+   To remove a user or group, select :::image type="icon" source="media/defender-portal-icon-remove.png" border="false"::: on the entry:
 
    - From the **Added users** section: The user or group is added to the **To be removed** section that appears.
    - From the **To be added** section: The user or group is removed from this section and won't be added.
@@ -141,7 +142,7 @@ The rest of this article describes how to remove the Report Message and Report P
 
    After a few moments, the **Updating users completed** flyout appears. Select **Done** to return to the **Users** tab of the add-in details flyout where your updates are shown in the **Added users** section.
 
-   Select :::image type="icon" source="media/m365-cc-sc-remove-icon.png" border="false"::: **Close flyout** to return to the **Integrated apps** page.
+   Select :::image type="icon" source="media/defender-portal-icon-remove.png" border="false"::: **Close flyout** to return to the **Integrated apps** page.
 
 ## Frequently asked questions
 
