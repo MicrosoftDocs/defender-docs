@@ -29,7 +29,7 @@ After you enable the feature, a default security rule named **Default K8s miscon
 Kubernetes Misconfiguration Enforcement helps you:
 
 - Stop risky Kubernetes workloads before deployment by blocking containers with unsafe or non-compliant configurations.
-- Enforce non-root execution and approved user/group IDs so containers can't run with excessive OS privileges.
+- Enforce non-root execution and approved user or group IDs so containers can't run with excessive OS privileges.
 - Prevent containers from automatically mounting Kubernetes API credentials to reduce blast radius if a pod is compromised.
 - Block use of the default Kubernetes namespace to reduce accidental exposure and privilege leakage.
 - Protect the host by preventing containers from sharing sensitive host namespaces such as PID, IPC, or network.
@@ -47,10 +47,10 @@ Kubernetes Misconfiguration Enforcement helps you:
 | **Requirement** | **Details** |
 |-----------------|-------------|
 | Defender plan | Enable Defender for Containers on the subscription or cloud account where the Kubernetes cluster is running. |
-| Defender sensor (Azure) | Defender sensor must be enabled in the plan, or Kubernetes API Access must be enabled. |
-| Agentless Threat Protection (AWS/GCP) | Agentless Threat Protection should also be enabled in the plan for AWS and GCP scenarios. |
+| Defender sensor (Azure) | Enable the Defender sensor in the plan, or enable Kubernetes API Access. |
+| Agentless Threat Protection (AWS/GCP) | For AWS and GCP scenarios, also enable Agentless Threat Protection in the plan. |
 | Kubernetes cluster | Supported cluster running in a commercial cloud environment: AKS, EKS, or GKE. |
-| VAP policies | The Kubernetes cluster must have VAP policies enabled. These are enabled by default from Kubernetes 1.30 and later. |
+| VAP policies | The Kubernetes cluster must have VAP policies enabled. Kubernetes 1.30 and later versions enable these policies by default. |
 
 **Required roles and permissions**
 
@@ -80,11 +80,11 @@ Kubernetes Misconfiguration Enforcement requires the Defender for Containers sen
     defender-admission-controller.enableMisconfigurationPolicies=true
     ```
 
-After the sensor is deployed with this value, the feature is active and the default audit rule is created automatically in the portal.
+After you deploy the sensor with this value, the feature is active and the default audit rule is created automatically in the portal.
 
 ## Configure misconfiguration enforcement rules
 
-By default, the **Default K8s misconfiguration rule** is created in Audit mode, scoped to all resources. While in Audit mode, the admission controller logs violations but still allows deployments to proceed. You can modify the default rule's action or create additional rules scoped to specific subscriptions, clusters, or namespaces.
+By default, the portal creates the **Default K8s misconfiguration rule** in Audit mode, scoped to all resources. While in Audit mode, the admission controller logs violations but still allows deployments to proceed. You can modify the default rule's action or create additional rules scoped to specific subscriptions, clusters, or namespaces.
 
 1. Go to **Microsoft Defender for Cloud** > **Environment Settings**.
 1. Select the relevant subscription, AWS account, or GCP project.
