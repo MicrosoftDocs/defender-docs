@@ -18,7 +18,7 @@ The recommendations that appear in your environment are based on the resources t
 
 To learn about actions that you can take in response to these recommendations, see [Remediate recommendations in Defender for Cloud](implement-security-recommendations.md).
 
-These recommendations cover Azure Container Apps and Azure Container Instances workloads.
+These recommendations cover Azure Container Apps, Azure Container Instances, and AWS - Amazon Elastic Container Service (ECS) Fargate workloads. They also include Identity and Access Management (IAM) permissions guidance.
 
 > [!TIP]
 > If a recommendation description says *No related policy*, it usually depends on another recommendation that has the policy.
@@ -61,6 +61,48 @@ These recommendations cover Azure Container Apps and Azure Container Instances w
 (No related policy)
 
 **Severity**: High
+
+### IAM task roles assigned to ECS Fargate tasks should follow least privilege
+
+**Description**: Defender for Cloud identified IAM task roles with excessive permissions (for example, AdministratorAccess, wildcard actions, or permissive custom policies). Over-privileged IAM task roles increase the impact of a compromised container.
+(No related policy)
+
+**Severity**: High
+
+### ECS Fargate tasks should not run containers with elevated privileges
+
+**Description**: Defender for Cloud detected ECS Fargate task definitions where containers run as the root user or request extra Linux capabilities. Running containers with elevated privileges increases the risk of unauthorized file access and privilege escalation.
+(No related policy)
+
+**Severity**: High
+
+### Read-only root filesystem should be enabled for ECS Containers
+
+**Description**: Defender for Cloud identified ECS task definitions with writable root filesystems. This configuration poses a risk by allowing runtime modifications to critical system paths, potentially enabling tampering, persistence of unauthorized changes, and exploitation of mutable directories.
+(No related policy)
+
+**Severity**: Medium
+
+### ECS Fargate tasks should not be publicly exposed
+
+**Description**: Defender for Cloud identified one or more ECS Fargate tasks that are publicly accessible from the internet due to their network configuration. Public exposure increases the likelihood of unauthorized access and exploitation of application-level vulnerabilities.
+(No related policy)
+
+**Severity**: High
+
+### Logging should be configured for ECS Exec on ECS clusters
+
+**Description**: Defender for Cloud identified that an ECS cluster associated with services using ECS Exec doesn't have audit logging properly configured. Without explicit logging, command activity might go unrecorded, posing a risk of undetected unauthorized access.
+(No related policy)
+
+**Severity**: Medium
+
+### ECS Exec should be disabled on Fargate ECS services
+
+**Description**: Defender for Cloud identified that ECS Exec is enabled on an Amazon ECS Fargate service. ECS Exec allows command execution inside running containers via AWS Systems Manager, exposing an interactive access path. Unless explicitly required for approved debugging scenarios, ECS Exec should remain disabled.
+(No related policy)
+
+**Severity**: Medium
 
 ## Related content
 

@@ -49,6 +49,12 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
+| June 3, 2026 | Recommendation | Preview | [IAM task roles assigned to ECS Fargate tasks should follow least privilege](recommendations-reference-serverless-containers.md#iam-task-roles-assigned-to-ecs-fargate-tasks-should-follow-least-privilege) |
+| June 3, 2026 | Recommendation | Preview | [ECS Fargate tasks shouldn't run containers with elevated privileges](recommendations-reference-serverless-containers.md#ecs-fargate-tasks-should-not-run-containers-with-elevated-privileges) |
+| June 3, 2026 | Recommendation | Preview | [Read-only root filesystem should be enabled for ECS Containers](recommendations-reference-serverless-containers.md#read-only-root-filesystem-should-be-enabled-for-ecs-containers) |
+| June 3, 2026 | Recommendation | Preview | [ECS Fargate tasks shouldn't be publicly exposed](recommendations-reference-serverless-containers.md#ecs-fargate-tasks-should-not-be-publicly-exposed) |
+| June 3, 2026 | Recommendation | Preview | [Logging should be configured for ECS Exec on ECS clusters](recommendations-reference-serverless-containers.md#logging-should-be-configured-for-ecs-exec-on-ecs-clusters) |
+| June 3, 2026 | Recommendation | Preview | [ECS Exec should be disabled on Fargate ECS services](recommendations-reference-serverless-containers.md#ecs-exec-should-be-disabled-on-fargate-ecs-services) |
 | June 3, 2026 | Recommendation | Preview | [Authentication should be enabled on Azure Container Apps](recommendations-reference-serverless-containers.md#authentication-should-be-enabled-on-azure-container-apps) |
 | June 3, 2026 | Recommendation | Preview | [Azure Container Apps shouldn't be exposed to the public internet unless required](recommendations-reference-serverless-containers.md#azure-container-apps-should-not-be-exposed-to-the-public-internet-unless-required) |
 | June 3, 2026 | Recommendation | Preview | [Managed identities assigned to Azure Container Apps should follow least privilege](recommendations-reference-serverless-containers.md#managed-identities-assigned-to-azure-container-apps-should-follow-least-privilege) |

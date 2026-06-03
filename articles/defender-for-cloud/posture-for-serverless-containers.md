@@ -19,6 +19,7 @@ In Defender cloud security posture management (Defender CSPM), this capability e
 >
 > - Azure Container Apps (ACA)
 > - Azure Container Instances (ACI)
+> - Amazon Elastic Container Service (ECS) on AWS Fargate
 
 ## What is discovery and posture for serverless container workloads?
 
@@ -35,7 +36,7 @@ To use discovery and posture for serverless container workloads:
 - Use a role with the required permissions:
   - **Security Reader** to view findings and posture state.
   - **Security Admin** to change settings and manage exemptions.
-- Use commercial clouds only. This preview supports Azure and isn't available in sovereign or national clouds.
+- Use commercial clouds only. This preview supports Azure and AWS and isn't available in sovereign or national clouds.
 
 For cloud and platform availability details, see:
 
@@ -59,7 +60,7 @@ For enablement steps, see [Protect resources with Defender CSPM](tutorial-enable
 
 Defender for Cloud discovers supported serverless container resources and shows them in inventory views so you can understand resource presence and coverage.
 
-:::image type="content" source="media/posture-for-serverless-containers/serverless-inventory.png" alt-text="Cloud asset inventory view filtered to serverless containers, showing Azure Container Apps and Azure Container Instances resources." lightbox="media/posture-for-serverless-containers/serverless-inventory.png":::
+:::image type="content" source="media/posture-for-serverless-containers/serverless-inventory.png" alt-text="Cloud asset inventory view filtered to serverless containers, showing Azure Container Apps, Azure Container Instances, and Amazon ECS on AWS Fargate resources." lightbox="media/posture-for-serverless-containers/serverless-inventory.png":::
 
 After you filter your results, select a resource to view details about its security posture, including active security recommendations and their severity levels.
 
@@ -96,7 +97,7 @@ In preview, posture for serverless containers has the following limitations:
 
 - Posture-only coverage. Runtime threat detection and active response aren't included.
 - Insights are based on control-plane signals and image metadata. Host and runtime process telemetry isn't used.
-- Availability is limited to supported workloads in Azure clouds.
+- Availability is limited to supported workloads in Azure and AWS clouds.
 
 ## Related content
 

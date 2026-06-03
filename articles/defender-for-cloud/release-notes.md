@@ -33,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | June 3, 2026 | Preview | [Discovery and posture for serverless container workloads (Preview)](#discovery-and-posture-for-serverless-container-workloads-preview) |
+| June 3, 2026 | Preview | [AWS support for Discovery and posture for serverless container workloads (Preview)](#aws-support-for-discovery-and-posture-for-serverless-container-workloads-preview) |
 | June 3, 2026 | Preview | [Kubernetes misconfiguration enforcement in Defender for Containers (preview)](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-preview) |
 | June 2, 2026 | Preview | [Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)](#vulnerability-assessment-extended-to-runtime-discovered-container-images-on-eks-and-gke-preview) |
 | June 2, 2026 | Preview | [Kubernetes node vulnerability assessment extended to EKS and GKE (Preview)](#kubernetes-node-vulnerability-assessment-extended-to-eks-and-gke-preview) |
@@ -48,6 +49,16 @@ June 3, 2026
 Microsoft Defender for Cloud now includes discovery and posture coverage for supported serverless container workloads in preview.
 
 This capability adds inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps and Azure Container Instances.
+
+Learn more about [Discovery and posture for serverless container workloads (Preview)](posture-for-serverless-containers.md).
+
+### AWS support for Discovery and posture for serverless container workloads (Preview)
+
+June 3, 2026
+
+Discovery and posture for serverless container workloads in Defender CSPM now adds support for Amazon Elastic Container Service (ECS) on AWS Fargate.
+
+With this update, inventory visibility, recommendations, and attack path analysis now include supported AWS Fargate workloads alongside Azure Container Apps and Azure Container Instances.
 
 Learn more about [Discovery and posture for serverless container workloads (Preview)](posture-for-serverless-containers.md).
 
