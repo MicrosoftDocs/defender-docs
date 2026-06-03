@@ -1,8 +1,7 @@
 ---
 title: Get started with Microsoft Defender Experts for cloud workloads
 description: Set up Microsoft Defender Experts for cloud workloads by selecting coverage, granting permissions, and configuring notifications in the Defender portal.
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
