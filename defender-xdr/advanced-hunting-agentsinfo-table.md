@@ -27,7 +27,7 @@ ai-usage: ai-assisted
 > [!IMPORTANT]
 > Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 > 
-> The `AgentsInfo` table replaces the [`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table. This table provides a unified schema with expanded coverage for all agent types, including Copilot Studio, Microsoft Foundry, Microsoft 365 Copilot, third-party, and endpoint-discovered agents. Migrate your queries from `AIAgentsInfo` to `AgentsInfo` before July 1, 2026. For more information, see [Advanced hunting schema - Naming changes](advanced-hunting-schema-changes.md).
+> The `AIAgentsInfo` table is transitioning to the `AgentsInfo` table. Microsoft Agent 365 customers should use the `AgentsInfo` table today. The `AIAgentsInfo` table remains accessible until July 1, 2026. Migrate your queries from `AIAgentsInfo` to `AgentsInfo` before this date. For more information, see [Advanced hunting schema - Naming changes](advanced-hunting-schema-changes.md).
 
 The `AgentsInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about AI agents and their properties from various platforms. Use this reference to construct queries that return information from this table.
 

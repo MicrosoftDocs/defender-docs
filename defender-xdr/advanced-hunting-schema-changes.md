@@ -34,7 +34,7 @@ Naming changes are automatically applied to queries that are saved in Microsoft 
 
 ## June 2026
 
-- The [`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table is being replaced by the [`AgentsInfo`](advanced-hunting-agentsinfo-table.md) table on July 1, 2026. The `AIAgentsInfo` table was originally built for Copilot Studio scenarios, and many of its columns were specific to that platform. The new `AgentsInfo` table provides a unified schema that supports agent inventory and governance for all agent types, including Copilot Studio, Azure AI Foundry, Microsoft 365 Copilot, third-party agents, and endpoint-discovered agents.
+- The [`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table is transitioning to the [`AgentsInfo`](advanced-hunting-agentsinfo-table.md) table. The `AIAgentsInfo` table was originally built for Copilot Studio scenarios, and many of its columns were specific to that platform. The new `AgentsInfo` table provides a unified schema that supports agent inventory and governance for all agent types, including Copilot Studio, Azure AI Foundry, Microsoft 365 Copilot, third-party agents, and endpoint-discovered agents. Microsoft Agent 365 customers should use the `AgentsInfo` table today.
 
     Key changes in the new table include expanded coverage for agent identity, authentication, permissions, lifecycle, and configuration. The new schema also includes a `RawAgentInfo` column that stores additional agent data in JSON format, ensuring no data loss as the schema evolves.
 
@@ -43,7 +43,7 @@ Naming changes are automatically applied to queries that are saved in Microsoft 
     - Review and update any filters, projections, or joins that reference `AIAgentsInfo` column names, as column names have changed in the new table.
     - Update any queries run through the API or saved outside Microsoft Defender XDR. Saved queries in Microsoft Defender XDR, including custom detection rules, are updated automatically.
 
-    The legacy `AIAgentsInfo` table remains in the schema until July 1, 2026, to allow time for migration.
+    The `AIAgentsInfo` table remains accessible until July 1, 2026, to allow time for migration.
 
 ## November 2025
 - The Boolean field values in advanced hunting results will change from numeric (`1` and `0`) to textual (`True` and `False`) on February 25, 2026. While your queries and custom detection rules won't be affected by this change, you might want to update your automated processes (for example, scripts, playbooks, or integrations) parsing these values.
