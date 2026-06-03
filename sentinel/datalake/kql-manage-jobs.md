@@ -108,8 +108,17 @@ The query can be copied by selecting **Copy query**.
 :::image type="content" source="media/kql-manage-jobs/manage-job-details.png" alt-text="A screenshot showing the job details page." lightbox="media/kql-manage-jobs/manage-job-details.png":::
 
 
+### View a job's run history
 
-### Edit a job
+To view the history of a job, select **View history** in the job details panel. The job history panel opens, showing a list of job run times and statuses. The row count reflects the number of rows sent to the destination table in the analytics tier.
+
+:::image type="content" source="media/kql-manage-jobs/job-history.png" lightbox="media/kql-manage-jobs/job-history.png" alt-text="A screenshot showing the job history panel.":::
+
+## Manage KQL jobs
+
+The jobs page supports the full lifecycle of KQL jobs, including creating, editing, enabling or disabling, and deleting a KQL job. 
+
+### Edit a KQL job
 
 To edit a job, select  **Edit** in the job details panel. The job details panel opens, allowing you to edit the following fields:
 
@@ -124,17 +133,12 @@ After you edit the job, select **Submit** to save the changes. The job is update
 > [!NOTE]
 > Editing a one-time job immediately triggers its execution.
 
-### View a job's run history
 
-To view the history of a job, select **View history** in the job details panel. The job history panel opens, showing a list of job run times and statuses. The row count reflects the number of rows sent to the destination table in the analytics tier.
-
-:::image type="content" source="media/kql-manage-jobs/job-history.png" lightbox="media/kql-manage-jobs/job-history.png" alt-text="A screenshot showing the job history panel.":::
-
-### Enable or disable a job
+### Enable or disable a KQL job
 
 To enable or disable a job, select **Enable** or **Disable** in the job details panel. When a job is disabled, it won't run until you enable it again. The status of the job changes to reflect whether it's enabled or disabled.
 
-### Delete a job
+### Delete a KQL job
 
 To delete a job, select  **Delete** in the job details panel. A confirmation dialog appears, asking you to confirm the deletion. If you confirm, the job is permanently deleted and can't be recovered. You can't delete a running job.
 
