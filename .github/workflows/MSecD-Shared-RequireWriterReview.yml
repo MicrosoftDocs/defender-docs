@@ -61,11 +61,13 @@ jobs:
           HAS_QUALIFIES=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["qualifies-for-auto-merge"])')
           HAS_BLOCKED=$(echo "$PR_DATA" | jq -r '[.labels[].name] | contains(["blocked-qualifies-for-auto-merge"])')
           PR_AUTHOR=$(echo "$PR_DATA" | jq -r '.user.login')
+          PR_HEAD_SHA=$(echo "$PR_DATA" | jq -r '.head.sha')
 
           echo "PR #$PR_NUMBER — author: $PR_AUTHOR, has_qualifies: $HAS_QUALIFIES, has_blocked: $HAS_BLOCKED"
           echo "has_qualifies=$HAS_QUALIFIES" >> "$GITHUB_OUTPUT"
           echo "has_blocked=$HAS_BLOCKED" >> "$GITHUB_OUTPUT"
           echo "pr_author=$PR_AUTHOR" >> "$GITHUB_OUTPUT"
+          echo "head_sha=$PR_HEAD_SHA" >> "$GITHUB_OUTPUT"
           echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
 
       - name: Check if last PRMerger command is sign-off
@@ -77,13 +79,36 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           echo "Checking last PRMerger command..."
-          COMMENTS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100")
 
-          LAST_ENTRY=$(echo "$COMMENTS" | jq -r '
-            [.[] | select(.body | test("^#[a-zA-Z-]+"))] | last |
-            {command: (.body | split("\n")[0] | ascii_downcase), author: .user.login}
-          ' 2>/dev/null || echo '{}')
+          # Fetch ALL comments across pages (the issue-comments endpoint returns
+          # oldest-first, so the latest command may be on a later page).
+          : > /tmp/all-comments.json
+          page=1
+          while :; do
+            PAGE_DATA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments?per_page=100&page=${page}")
+            COUNT=$(echo "$PAGE_DATA" | jq 'length' 2>/dev/null || echo 0)
+            [ "$COUNT" -eq 0 ] && break
+            echo "$PAGE_DATA" | jq -c '.[]' >> /tmp/all-comments.json
+            [ "$COUNT" -lt 100 ] && break
+            ((page++))
+          done
+
+          # Identify the most recent human-authored PRMerger command. Bot
+          # comments (e.g. the workflow's own '#hold-off') are excluded so they
+          # are never mistaken for an operator command. The first line is
+          # lowercased and stripped of trailing whitespace/CR (GitHub stores
+          # comment bodies with CRLF line endings).
+          LAST_ENTRY=$(jq -rs '
+            [ .[]
+              | select(.user.type != "Bot")
+              | select((.body | gsub("\r"; "")) | test("^#[a-zA-Z-]+"))
+            ] | last |
+            {
+              command: (.body | gsub("\r"; "") | split("\n")[0] | ascii_downcase | sub("\\s+$"; "")),
+              author: .user.login
+            }
+          ' /tmp/all-comments.json 2>/dev/null || echo '{}')
 
           LAST_COMMAND=$(echo "$LAST_ENTRY" | jq -r '.command // ""')
           SIGNOFF_AUTHOR=$(echo "$LAST_ENTRY" | jq -r '.author // ""')
@@ -557,3 +582,42 @@ jobs:
             -d @-
 
           echo "Confirmation comment added."
+
+      # --- Publish gate result onto the PR head commit ---
+      # issue_comment-triggered runs (e.g. '#sign-off') execute in the default
+      # branch context and their job conclusion is NOT recorded against the PR
+      # head SHA, so the required check would never update from a comment. This
+      # step always posts a commit status to the PR head SHA so that both
+      # pull_request_target and issue_comment runs move the required check.
+      - name: Publish gate status to PR head
+        if: always() && steps.resolve.outputs.skip != 'true' && steps.pr-state.outputs.skip != 'true' && steps.pr-state.outputs.head_sha != ''
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ steps.pr-state.outputs.head_sha }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          # Mirror the job conclusion onto the PR head commit. 'success' and
+          # 'failure' are the only states branch protection acts on; anything
+          # else (cancelled) is reported as 'error'.
+          case "$JOB_STATUS" in
+            success) STATE="success" ;;
+            failure) STATE="failure" ;;
+            *)       STATE="error" ;;
+          esac
+
+          echo "Publishing commit status '$STATE' to $HEAD_SHA (context: Approver Review / gate)"
+
+          jq -n \
+            --arg state "$STATE" \
+            --arg context "Approver Review / gate" \
+            --arg desc "Approver review gate ($STATE)" \
+            --arg url "https://github.com/$REPO/actions/runs/${GITHUB_RUN_ID}" \
+            '{state: $state, context: $context, description: $desc, target_url: $url}' | \
+          curl -s -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$REPO/statuses/$HEAD_SHA" \
+            -d @-
+
+          echo "Commit status published."
