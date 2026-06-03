@@ -36,7 +36,6 @@ You can also get product updates and important notifications through the [messag
 - (GA) The following advanced hunting schema tables are now generally available:
     - The [`CloudAuditEvents`](advanced-hunting-cloudauditevents-table.md) table contains information about cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud.
     - The [`CloudDnsEvents`](advanced-hunting-clouddnsevents-table.md) table contains information about DNS activity events from cloud infrastructure environments.
-    - The [`CloudProcessEvents`](advanced-hunting-cloudprocessevents-table.md) table contains information about process events in multicloud hosted environments such as Azure Kubernetes Service, Amazon Elastic Kubernetes Service, and Google Kubernetes Engine as protected by the organization's Microsoft Defender for Cloud.
 
 ## May 2026
 
