@@ -3,6 +3,7 @@ title: Troubleshooting access and session controls for end-users | Microsoft Def
 description: This article describes how to troubleshoot common access and session control issues experienced by end-users with Microsoft Defender for Cloud Apps.
 ms.date: 05/15/2024
 ms.topic: troubleshooting
+ms.custom: sfi-image-nochange
 ---
 
 # Troubleshooting access and session controls for end-users

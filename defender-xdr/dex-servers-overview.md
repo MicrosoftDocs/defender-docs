@@ -1,8 +1,7 @@
 ---
 title: Microsoft Defender Experts for Servers overview
 description: Learn about Microsoft Defender Experts for Servers, a managed detection and response service for on-premises and multicloud server workloads.
-ms.service: defender-experts
-ms.subservice: dex-xdr
+ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium

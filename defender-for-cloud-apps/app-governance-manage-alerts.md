@@ -4,6 +4,7 @@ ms.date: 05/23/2025
 ms.topic: how-to
 description: Remediate app threats.
 ms.reviewer: shragar
+ms.custom: sfi-image-nochange
 ---
 
 # Manage app governance alerts

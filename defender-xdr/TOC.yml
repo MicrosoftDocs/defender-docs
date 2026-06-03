@@ -74,6 +74,8 @@
           href: security-for-ai/ai-agent-detection-protection.md
         - name: Data privacy as part of Agent 365
           href: security-for-ai/privacy-defender-agent-365.md
+        - name: Transition agent security to Agent 365
+          href: security-for-ai/transition-agent-security-to-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -254,6 +256,8 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AgentsInfo
+            href: advanced-hunting-agentsinfo-table.md
           - name: AIAgentsInfo
             href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence
@@ -491,7 +495,9 @@
           - name: Work with MSSPs
             href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
-          items: 
+          items:
+          - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+            href: teams-restrictions-dexapp.md
           - name: General information
             href: faq-defender-experts-hunting.md
           - name: Server and cloud workload coverage

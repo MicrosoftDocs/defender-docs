@@ -11,6 +11,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: onboard
 ms.date: 04/04/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Manage system extensions using the manual methods of deployment

@@ -4,6 +4,7 @@ description: Learn how to set up your firewall or proxy to allow communication b
 ms.date: 02/12/2024
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-ropc-nochange
 ---
 
 # Connect to the Defender for Identity service

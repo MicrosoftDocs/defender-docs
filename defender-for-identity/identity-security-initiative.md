@@ -4,6 +4,7 @@ description: Learn how to enhance your organization's identity security using th
 ms.topic: overview
 ms.date: 04/05/2025
 ms.reviewer: AbbyMSFT
+ms.custom: sfi-image-nochange
 ---
 
 # Identity Security Initiative (Preview)

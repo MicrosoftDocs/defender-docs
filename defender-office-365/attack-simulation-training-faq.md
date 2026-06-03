@@ -10,6 +10,7 @@ ms.collection:
 - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-image-nochange
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
 ms.date: 02/06/2026
