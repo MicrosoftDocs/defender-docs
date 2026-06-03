@@ -39,7 +39,7 @@ The [AgentsInfo table](/defender-xdr/advanced-hunting-agentsinfo-table) in Advan
 - **Assess security posture and risks** by querying authentication, access control, tools, knowledge sources, and orchestration settings.
 
 > [!NOTE]
-> The `AgentsInfo` table provides an extended set of properties for Copilot Studio agents.
+> The `AgentsInfo` table replaces the previous `AIAgentsInfo` table as part of the Microsoft Agent 365 transition. For more information, see [Transition agent security capabilities to Microsoft Agent 365](transition-agent-security-to-agent-365.md).
 
 To view your Agent 365-managed agents and their configuration details:
 
