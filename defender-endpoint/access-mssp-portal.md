@@ -10,7 +10,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 12/25/2025
+ms.date: 12/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
