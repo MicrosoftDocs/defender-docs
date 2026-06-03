@@ -163,7 +163,7 @@
                   - name: Enable Defender for SQL Servers on Machines government
                     displayName: hybrid, arc, Azure Defender
                     href: defender-for-sql-usage-gov.md
-                  - name: Enable Defender for SQL servers on machines at scale
+                  - name: Enable Microsoft Defender for SQL Servers on Machines at scale
                     displayName: SQL, enable, scale, Defender, machines, SQL server, SQL servers, sql
                     href: enable-defender-sql-at-scale.md
                   - name: Verify SQL machine protection government
@@ -180,12 +180,15 @@
                 - name: Overview
                   displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: defender-for-databases-introduction.md
-                - name: Enable on Azure
+                - name: Enable Defender for open-source relational databases on Azure
                   displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-azure.md
-                - name: Enable on AWS (Preview)
+                - name: Enable on AWS
                   displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB
                   href: enable-defender-for-databases-aws.md
+                - name: Verify AWS protection
+                  displayName: PG, PostgreSQL, MySQL, Azure Defender, OS RDBs, OSRDB, RDS, Aurora, AWS
+                  href: verify-protection-open-source-relational-databases-aws.md                 
               - name: Defender for Azure Cosmos DB
                 items:
                 - name: Defender for Azure Cosmos DB
@@ -238,6 +241,8 @@
               items:
                 - name: Deploy using Azure CLI
                   href: defender-for-containers-deploy-azure-cli.md
+                - name: Deploy to private clusters (Preview)
+                  href: defender-for-containers-private-clusters.md
                 - name: Deploy using Helm (advanced)
                   href: deploy-helm.md
             - name: Verify deployment
@@ -370,7 +375,7 @@
           href: enable-permissions-management.md
         - name: Agentless machine scanning
           href: concept-agentless-data-collection.md
-        - name: Serverless protection (Preview)
+        - name: What is Serverless protection?
           displayName: serverless, functions, web apps, aws lambda, inventory, misconfigurations, vulnerabilities, dependencies
           href: serverless-protection.md
     - name: Assess your security posture
@@ -425,7 +430,7 @@
               href: data-security-posture-enable.md
             - name: Supported sensitive data information types
               href: sensitive-info-types.md
-            - name: Discover sensitive data
+            - name: Discover sensitive data in cloud resources
               href: discover-sensitive-data.md
             - name: Explore risks to sensitive data
               href: data-security-review-risks.md
@@ -660,7 +665,7 @@
         items:
           - name: Overview
             href: integration-defender-for-endpoint.md
-          - name: Enable Defender integration
+          - name: Enable Defender for Endpoint integration in Microsoft Defender for Cloud
             displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
             href: enable-defender-for-endpoint.md
       - name: Agentless machine scanning
@@ -731,7 +736,7 @@
           - name: Overview
             displayName: jit, management
             href: just-in-time-access-overview.md
-          - name: Enable just-in-time access 
+          - name: Enable just-in-time access
             displayName: jit, management, ports
             href: enable-just-in-time-access.md
   - name: Defender for Containers
@@ -776,13 +781,13 @@
             href: view-and-remediate-vulnerability-registry-images.md
           - name: Remediate vulnerabilities for running containers (risk-based)
             href: view-and-remediate-vulnerabilities-containers.md
-          - name: Disable vulnerabilities on images (risk-based)
+          - name: Disable vulnerability findings on images (risk-based)
             href: disable-vulnerability-findings-containers.md
           - name: Remediate vulnerabilities for registry images (secure score)
             href: view-and-remediate-vulnerability-assessment-findings-secure-score.md
           - name: Remediate vulnerabilities for running images (secure score)
             href: view-and-remediate-vulnerabilities-for-images-secure-score.md
-          - name: Disable vulnerabilities on images (secure score)
+          - name: Disable vulnerability findings (secure score)
             href: disable-vulnerability-findings-containers-secure-score.md
           - name: REST API (secure score)
             href: subassessment-rest-api.md
@@ -1321,7 +1326,7 @@
               - name: Overview Microsoft Defender for Endpoint integration
                 displayName: CSPM, Cloud security, posture, management, Microsoft Defender for Endpoint
                 href: integration-defender-for-endpoint.md
-              - name: Enable the Defender for Endpoint integration
+              - name: Enable Defender for Endpoint integration in Microsoft Defender for Cloud
                 displayName: CSPM, Cloud security, posture, management, Microsoft Defender for Endpoint
                 href: enable-defender-for-endpoint.md
           - name: Microsoft Defender XDR

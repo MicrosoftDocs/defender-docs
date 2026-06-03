@@ -1,24 +1,26 @@
 ---
-title: What is Serverless protection (Preview)
-description: Learn about Serverless protection in Microsoft Defender for Cloud and how it helps secure your serverless resources.
+title: What is Serverless protection?
+description: Learn how Serverless protection in Microsoft Defender for Cloud helps secure serverless resources across Azure and AWS.
+author: ElazarK
+ms.author: elkrieger
 ms.topic: overview
-ms.date: 04/13/2026
+ms.date: 06/01/2026
 #customer intent: As a reader, I want to understand what Serverless protection is in Microsoft Defender for Cloud.
 ---
 
-# Serverless protection (Preview)
+# What is Serverless protection?
 
-Microsoft Defender for Cloud, as a Cloud-Native Application Protection Platform (CNAPP), delivers comprehensive visibility, security, and posture management for serverless workloads across multicloud environments. It extends coverage to Azure Web Apps, Azure Functions, and Amazon Web Service (AWS) Lambda, ensuring these resources are fully protected.
+Microsoft Defender for Cloud, as a cloud-native application protection platform (CNAPP), delivers visibility, security, and posture management for serverless workloads across multicloud environments. It extends coverage to Azure Web Apps, Azure Functions, and Amazon Web Services (AWS) Lambda.
 
-Serverless protection automatically discovers and inventories all Web Apps, Azure Functions, and AWS Lambda functions in your environment. Once it discovers these resources, Defender for Cloud identifies misconfigurations, vulnerabilities, and insecure dependencies. Defender for Cloud then offers remediation guidance and continuous posture assessment, helping organizations maintain strong posture management and reduce risk in dynamic, serverless architectures.
+Serverless protection automatically discovers and inventories Web Apps, Azure Functions, and AWS Lambda functions in your environment. After discovery, Defender for Cloud identifies misconfigurations, vulnerabilities, and insecure dependencies. It then provides remediation guidance and continuous posture assessment to help organizations reduce risk in dynamic serverless architectures.
 
 Learn more about the [cloud availability](support-matrix-defender-for-cloud.md#cloud-support) for this feature.
 
 ## Serverless protection requirements and availability
 
-Serverless protection is available as part of the [Defender Cloud Security Posture Management (CSPM) plan](concept-cloud-security-posture-management.md#cspm-plans). 
+Serverless protection is available as part of the [Defender cloud security posture management (Defender CSPM) plan](concept-cloud-security-posture-management.md#cspm-plans).
 
-To enable serverless protection, you must [Enable the Defender CSPM plan](tutorial-enable-cspm-plan.md) on your subscription, and [enable the Serverless protection component](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) of the Defender CSPM plan.
+To enable serverless protection, you must [enable the Defender CSPM plan](tutorial-enable-cspm-plan.md) on your subscription and [enable the Serverless protection component](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan) of that plan.
 
 Currently, the available features vary by portal. The following table shows which features are available in each portal:
 
@@ -26,10 +28,10 @@ Currently, the available features vary by portal. The following table shows whic
 |--|--|--|
 | Onboarding through the Defender CSPM plan | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
 | Review misconfiguration recommendations | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
-| Build queries with the cloud security explorer | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
+| Build queries with Cloud Security Explorer | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="../defender-for-cloud/media/icons/no-icon.png"::: |
 | Explore workloads in Cloud Inventory | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
 | Investigate attack paths | :::image type="icon" source="./media/icons/yes-icon.png"::: | :::image type="icon" source="./media/icons/yes-icon.png"::: |
-| Vulnerability Assessment | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |
+| Vulnerability assessment | - | :::image type="icon" source="./media/icons/yes-icon.png"::: |
 
 To view the availability, see [cloud support](support-matrix-defender-for-cloud.md#cloud-support).
 
@@ -43,18 +45,18 @@ Defender for Cloud extends its CSPM capabilities to serverless workloads by prov
 
 - **Continuous posture assessment**: Evaluates configurations for risks like public endpoints, weak authentication, and missing encryption.
 
-- **Misconfiguration detection**: Includes:
-    - Access Control: Restrict network exposure, enforce authentication.
-    - Identity & Permissions: Prevent lateral movement, data exfiltration, and privilege abuse.
-    - Code Integrity: Protect against unauthorized code changes [like AWS Lambda code signing].
+- **Misconfiguration detection**: Highlights risks in:
+    - **Access control**: Restricts network exposure and enforces authentication.
+    - **Identity and permissions**: Helps prevent lateral movement, data exfiltration, and privilege abuse.
+    - **Code integrity**: Helps protect against unauthorized code changes, such as AWS Lambda code signing bypass risks.
  
 - **Vulnerability assessment**: Scans function packages for vulnerable dependencies and provides remediation guidance.
 
-- **Attack Path Analysis**: Maps potential attack chains involving serverless resources for proactive risk mitigation.
+- **Attack path analysis**: Maps potential attack chains that involve serverless resources so you can prioritize high-risk issues.
 
-Defender for Cloud uses these features to help organizations secure their serverless workloads, ensuring robust security posture management in dynamic cloud environments.
+Defender for Cloud uses these features to help organizations secure serverless workloads in dynamic cloud environments.
 
-Beyond these core benefits, serverless security in Defender for Cloud aligns with the broader vision of CNAPP, which aims to secure applications throughout their lifecycle. 
+Beyond these core benefits, serverless security in Defender for Cloud aligns with the broader CNAPP vision to secure applications throughout their lifecycle.
 
 Serverless protection is also integrated into the Defender portal. This integration provides visibility for misconfiguration detection, attack path analysis, and vulnerability assessment in a single interface.
 
@@ -70,34 +72,46 @@ After Defender for Cloud discovers the resources, it continuously monitors their
 
 Defender for Cloud provides a unified inventory of all discovered serverless resources, so you can easily view and manage them. The inventory page includes details such as resource names, types, locations, and associated security findings. Simply filter the results based on resource type to focus on Web Apps, Azure Functions, or AWS Lambda functions.
 
-:::image type="content" source="media/serverless-protection/serverless-inventory.png" alt-text="Screenshot that shows the inventory page filtered by resources." lightbox="media/serverless-protection/serverless-inventory.png":::
+:::image type="content" source="media/serverless-protection/serverless-inventory.png" alt-text="Cloud inventory page filtered to serverless resources, showing Azure Web Apps, Azure Functions, and AWS Lambda entries." lightbox="media/serverless-protection/serverless-inventory.png":::
 
-After you filter your results, select any of the resources to view more details about its security posture, including any active security recommendations and their severity levels.
+After you filter your results, select a resource to view details about its security posture, including active security recommendations and their severity levels.
 
-:::image type="content" source="media/serverless-protection/resource-health.png" alt-text="Screenshot that shows a selected resources health." lightbox="media/serverless-protection/resource-health.png":::
+:::image type="content" source="media/serverless-protection/resource-health.png" alt-text="Resource details page for a serverless workload showing security health, active recommendations, and severity information." lightbox="media/serverless-protection/resource-health.png":::
 
-You can also review the security recommendations associated with each resource to prioritize remediation efforts based on the severity of the findings and remediate them.
+You can also review the security recommendations associated with each resource to prioritize remediation based on finding severity.
 
 Learn how to [remediate security recommendations](implement-security-recommendations.md).
 
 ### Cloud Security Explorer
 
-Defender for Cloud's Cloud Security Explorer provides advanced filtering and querying capabilities that allow you to analyze the security posture of your serverless resources. You can create custom queries to identify specific misconfigurations or vulnerabilities across your serverless workloads.
+Defender for Cloud's Cloud Security Explorer provides advanced filtering and query capabilities so you can analyze the security posture of your serverless resources. You can create custom queries to identify specific misconfigurations or vulnerabilities across your serverless workloads.
 
 :::image type="content" source="media/serverless-protection/serverless-cloud-security-explorer.png" alt-text="Screenshot of the Cloud Security Explorer page with a query specific to serverless protection entered." lightbox="media/serverless-protection/serverless-cloud-security-explorer.png":::
 
-Learn how to [build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md).
+Learn how to [build queries with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md).
 
 ## Limitations
 
-Serverless resources that are not eligible for vulnerability assessment are as follows:
-- Web Apps and function apps that do not have a "Running" power stat
-- Web Apps and Function Apps that do not have access to the internet
-- WebApps and Function Apps with the following ‘kind’ values are not scanned:
-   - app,migration; functionapp,botapp; app,linux,aspiredashboard; app,container,xenon; app,botapp; app,linux,Kubernetes; app,functionapp,windows; functionapp,linux,container,Kubernetes; app,linux,container,Kubernetes; app,xenon; functionapp,linux,Kubernetes; app,functionapp
- 
+Serverless resources that aren't eligible for vulnerability assessment include:
+
+- Web Apps and function apps that don't have a Running power state.
+- Web Apps and function apps that don't have internet access.
+- Web Apps and function apps with the following kind values:
+    - `app,migration`
+    - `functionapp,botapp`
+    - `app,linux,aspiredashboard`
+    - `app,container,xenon`
+    - `app,botapp`
+    - `app,linux,Kubernetes`
+    - `app,functionapp,windows`
+    - `functionapp,linux,container,Kubernetes`
+    - `app,linux,container,Kubernetes`
+    - `app,xenon`
+    - `functionapp,linux,Kubernetes`
+    - `app,functionapp`
+
 ## Related content
 
 - [Protect your resources with Defender CSPM](tutorial-enable-cspm-plan.md)
 - [Remediate recommendations in Microsoft Defender for Cloud](implement-security-recommendations.md)
-- [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md)
+- [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md)

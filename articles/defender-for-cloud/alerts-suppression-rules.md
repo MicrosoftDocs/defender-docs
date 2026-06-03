@@ -1,28 +1,32 @@
 ---
 title: Suppress alerts from Microsoft Defender for Cloud
 description: Learn how to create alert suppression rules in Microsoft Defender for Cloud to automatically dismiss false positives and reduce alert noise.
-ms.date: 05/25/2026
+ms.date: 05/28/2026
 ms.topic: how-to
 ms.author: elkrieger
 author: ElazarK
 ms.custom: sfi-image-nochange, msecd-doc-authoring-1012
 #customer intent: As a security admin, I want to suppress false positive security alerts so that I can focus on genuine threats.
 ---
+
 # Suppress alerts from Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud generates security alerts when it detects threats in your environment. Some alerts can be false positives or otherwise unwanted. You can suppress those alerts automatically by using suppression rules.
+Microsoft Defender for Cloud generates security alerts when it detects threats in your environment. Some alerts might be expected or not relevant for your environment. You can create suppression rules to automatically dismiss alerts that match predefined conditions.
 
 When an alert matches an active suppression rule, its status changes to **Dismissed**. The alert still appears in the security alerts list, but it no longer triggers notifications or appears in active alert views.
 
 ## Prerequisites
 
 Required roles and permissions:
-- **Security admin** and **Owner** can create and delete rules.
-- **Security reader** and **Reader** can view rules.
+
+- **Security admin** or **Owner** can create and delete suppression rules.
+- **Security reader** or **Reader** can view suppression rules.
 
 For cloud availability, see the [Defender for Cloud support matrices for Azure commercial/other clouds](support-matrix-defender-for-cloud.md).
 
 ## Create a suppression rule
+
+You can create a suppression rule for one or more alert types, or start from an existing alert to suppress similar alerts.
 
 You can apply suppression rules to management groups or to subscriptions.
 
@@ -31,42 +35,9 @@ You can apply suppression rules to management groups or to subscriptions.
 
 A suppression rule applies only to alert types that have already been triggered at least once.
 
-To create a suppression rule for a specific alert in the Azure portal:
+### Create a suppression rule for one or more alert types
 
-1. Sign in to the [Azure portal](https://portal.azure.com/).
-
-1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
-
-    :::image type="content" source="media/alerts-suppression-rules/alerts-page.jpg" alt-text="Screenshot of Microsoft Defender for Cloud Security alerts page showing the alerts list." lightbox="media/alerts-suppression-rules/alerts-page.jpg":::
-
-1. Select an alert.
-
-1. Select **Take action**.
-
-    :::image type="content" source="media/alerts-suppression-rules/take-action.jpg" alt-text="Screenshot of an alert details pane showing the Take action button." lightbox="media/alerts-suppression-rules/take-action.jpg":::
-
-1. Select **Create suppression rule**.
-
-    :::image type="content" source="media/alerts-suppression-rules/create-suppression-rule.png" alt-text="Screenshot of the Take action menu showing Create suppression rule." lightbox="media/alerts-suppression-rules/create-suppression-rule.png":::
-
-1. Enter the appropriate details:
-
-    - **Subscription** - The subscription where you want to create the rule.
-    - (Optional) **Entities** - The resources that the rule applies to. You can specify a single resource, multiple resources, or resources that contain a partial resource ID. If you don't specify any resources, the rule applies to all resources in the subscription.
-    - **Rule name** - A name for the rule. Rule names must begin with a letter or a number, be between 2 and 50 characters, and contain no symbols other than dashes (-) or underscores (_).
-    - **State** - Whether the rule is enabled or disabled.
-    - **Reason** - Select one of the built-in reasons or 'other' to specify your own reason in the comment.
-    - (Optional) **Expiration date** - An end date and time for the rule. If you don't set an expiration date, the rule runs indefinitely.
-
-1. (Optional) Select **Simulate** to test your rule.
-
-1. Select **Apply**.
-
-The rule is created and listed in the **Suppression rules** page.
-
-## Edit or delete a suppression rule
-
-To edit a rule that you created from the suppression rules page:
+To create a suppression rule for one or more alert types:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -74,48 +45,117 @@ To edit a rule that you created from the suppression rules page:
 
 1. Select **Suppression rules**.
 
-    :::image type="content" source="media/alerts-suppression-rules/suppression-rules-button.png" alt-text="Screenshot of the Security alerts page showing the Suppression rules button." lightbox="media/alerts-suppression-rules/suppression-rules-button.png":::
+   :::image type="content" source="media/alerts-suppression-rules/security-alerts-suppression-rules-button.png" alt-text="Screenshot of the Security alerts page with the Suppression rules button highlighted." lightbox="media/alerts-suppression-rules/security-alerts-suppression-rules-button.png":::
 
-1. Select the relevant subscriptions.
+1. Select **Create new suppression rule**.
 
-1. Select the three dots button **...** for the rule you want to edit.
+   :::image type="content" source="media/alerts-suppression-rules/create-new-suppression-rule-all-alerts.png" alt-text="Screenshot of the Suppression rules page with the Create new suppression rule button highlighted." lightbox="media/alerts-suppression-rules/create-new-suppression-rule-all-alerts.png":::
 
-1. Select **Edit**.
+1. Select the subscriptions that the rule applies to.
 
-1. Edit the rule details.
+1. Under **Alerts**, select **Custom** to choose specific alert types, or select **All** to apply the rule to all alert types.
+
+1. If you selected **Custom**, select the alert types that the rule applies to.
+
+1. If needed, add entity conditions to limit the rule to specific resources or entity values.
+
+1. Enter a rule name.
+
+    Rule names must begin with a letter or a number, be between 2 and 50 characters, and contain no symbols other than dashes (-) or underscores (_).
+
+1. Select whether the rule is enabled or disabled.
+
+1. Select a reason for suppressing the alert.
+
+1. If needed, add a comment.
+
+1. Select when the rule expires:
+
+    - Select **Custom** to set an end date and time.
+    - Select **None** to run the rule indefinitely.
+
+1. If needed, select **Simulate** to test the rule.
 
 1. Select **Apply**.
 
-To delete a rule, use the same three dots menu and select **Remove**.
+The rule is created and listed on the **Suppression rules** page.
+
+### Create a suppression rule from a specific alert
+
+To create a suppression rule from an alert that already exists:
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
+
+1. Select an alert.
+
+1. Select **Take action**.
+
+1. In the **Take action** tab, expand **Suppress similar alerts**.
+
+1. Select **Create suppression rule**.
+
+    :::image type="content" source="media/alerts-suppression-rules/create-suppression-rule-one-alert.png" alt-text="Screenshot of an alert details page with the Create suppression rule button highlighted under Suppress similar alerts." lightbox="media/alerts-suppression-rules/create-suppression-rule-one-alert.png":::
+
+1. Review the selected alert type.
+
+1. If needed, add entity conditions to limit the rule to specific resources or entity values.
+
+1. Enter a rule name.
+
+    Rule names must begin with a letter or a number, be between 2 and 50 characters, and contain no symbols other than dashes (-) or underscores (_).
+
+1. Select whether the rule is enabled or disabled.
+
+1. Select a reason for suppressing the alert.
+
+1. If needed, add a comment.
+
+1. Select when the rule expires:
+
+    - Select **Custom** to set an end date and time.
+    - Select **None** to run the rule indefinitely.
+
+1. If needed, select **Simulate** to test the rule.
+
+1. Select **Apply**.
+
+The rule is created and listed on the **Suppression rules** page.
+
+## Edit or delete a suppression rule
+
+To edit or delete a suppression rule:
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. Go to **Microsoft Defender for Cloud** > **Security alerts**.
+
+1. Select **Suppression rules**.
+
+1. Select the rule that you want to update.
+
+1. To edit the rule, select **Edit**, update the rule details, and then select **Apply**.
+
+1. To delete the rule, select **Remove**.
+
+Deleting a suppression rule doesn't change the status of alerts that the rule already dismissed.
 
 ## Create and manage suppression rules with the API
 
-You can create, view, or delete alert suppression rules by using the Defender for Cloud REST application programming interface (API).
+You can create, view, and delete alert suppression rules by using the Defender for Cloud REST API.
 
-Create a suppression rule for an alert that the API already triggered. First, use the [Alerts REST API](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true) to retrieve the alert that you want to suppress. Then use the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) to create the rule.
+To create a suppression rule for a specific alert type, first use the [Alerts REST API](/rest/api/defenderforcloud-composite/alerts?view=rest-defenderforcloud-composite-latest&preserve-view=true) to retrieve the alert that you want to suppress. Then use the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) to create the rule.
 
 The relevant methods for suppression rules in the [Alerts Suppression Rules REST API](/rest/api/defenderforcloud-composite/alerts-suppression-rules?view=rest-defenderforcloud-composite-latest&preserve-view=true) are:
 
-- **UPDATE**:
-
-  - To create or update a suppression rule in a specified subscription.
-
-- **GET**:
-
-  - To get the details of a specific suppression rule on a specified subscription. This method returns one suppression rule.
-
-- **LIST**:
-
-  - To list all suppression rules configured for a specified subscription. This method returns an array of the applicable rules.
-
-- **DELETE**:
-  - To delete an existing suppression rule. This method doesn't change the status of alerts that the suppression rule already dismissed.
+- **UPDATE** - Create or update a suppression rule in a specified subscription.
+- **GET** - Get the details of a specific suppression rule in a specified subscription.
+- **LIST** - List all suppression rules configured for a specified subscription.
+- **DELETE** - Delete an existing suppression rule. This method doesn't change the status of alerts that the suppression rule already dismissed.
 
 For details and usage examples, see the [Defender for Cloud operation groups API reference](/rest/api/defenderforcloud-composite/operation-groups?view=rest-defenderforcloud-composite-latest&preserve-view=true).
 
-## Next steps
+## Related content
 
-> [!div class="nextstepaction"]
-> [Review security alerts generated by Defender for Cloud](alerts-reference.md)
-
-
+- Review [security alerts generated by Defender for Cloud](alerts-reference.md)

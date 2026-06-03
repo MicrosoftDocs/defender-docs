@@ -9,14 +9,18 @@ ms.date: 04/19/2026
 
 # Connect AWS accounts to Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud helps protect workloads running in Amazon Web Services (AWS). To assess your AWS resources and get security recommendations, you need to connect your AWS account to Defender for Cloud. The connector gathers configuration and security signals from AWS services. By using this information, Defender for Cloud can analyze posture, generate recommendations, and surface alerts.
+This article shows you how to connect a single Amazon Web Services (AWS) account or AWS management account to Microsoft Defender for Cloud by using the native AWS connector.
 
-For more information, watch the [New AWS connector in Defender for Cloud](episode-one.md) video from the *Defender for Cloud in the Field* video series.
+After you connect the account, Defender for Cloud discovers AWS resources, assesses security posture, and surfaces security recommendations and alerts.
+
+The following screenshot shows AWS accounts displayed in the [Defender for Cloud overview dashboard](cloud-infrastructure-dashboard.md?pivots=defender-portal):
 
 :::image type="content" source="./media/quickstart-onboard-aws/aws-account-in-overview.png" alt-text="Screenshot showing AWS accounts listed in the Defender for Cloud overview dashboard." lightbox="./media/quickstart-onboard-aws/aws-account-in-overview.png":::
 
-> [!IMPORTANT]
-> If you already connected your AWS account to Microsoft Sentinel, you might need to do extra configuration when connecting it to Defender for Cloud. This extra configuration prevents deployment or ingestion problems. For more information, see [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
+For more information, watch the [New AWS connector in Defender for Cloud](episode-one.md) video from the *Defender for Cloud in the Field* video series.
+
+> [!NOTE]
+> If you have an AWS account that is connected to Microsoft Sentinel, you can't connect it to Defender for Cloud. To ensure the connector works correctly, follow the instructions on [Connect a Sentinel connected AWS account to Defender for Cloud](sentinel-connected-aws.md).
 
 ## Authentication architecture
 
@@ -30,11 +34,13 @@ Before you connect your AWS account, make sure you have:
 
 - A Microsoft Azure subscription. If you don't have one, [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
-- [Microsoft Defender for Cloud enabled](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on that subscription.
+- [Microsoft Defender for Cloud enabled](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 - Access to an AWS account.
 
-- Permission to create resources in Azure (Contributor or above).
+- Contributor level permission for the relevant Azure subscription.
+
+- To enable CIEM as part of Defender CSPM, you need the required [Security Admin role and Application.ReadWrite.All permission](enable-permissions-management.md#before-you-start) for the tenant.
 
 Additional requirements apply when enabling specific Defender plans. Review the [native connector plan requirements](#native-connector-plan-requirements).
 
@@ -63,7 +69,7 @@ Each Defender plan has specific setup requirements.
 
 Learn more about [monitoring components](monitoring-components.md).
 
-### [Defender for open-source databases (Preview)](#tab/Defender-for-open-source-databases-Preview)
+### [Defender for open-source databases](#tab/Defender-for-open-source-databases)
 
 - An active Azure subscription with [Defender for Cloud enabled](get-started.md#enable-defender-for-cloud-on-your-azure-subscription).  
 - A connected account in Azure or AWS.  
@@ -107,6 +113,11 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
 ## Connect your AWS account
 
+> [!IMPORTANT]
+> For management account onboarding, use only the AWS management account. Delegated administrator accounts aren't supported.
+
+To connect your AWS environment to Defender for Cloud by using a native connector:
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Defender for Cloud** > **Environment settings**.
@@ -115,59 +126,132 @@ Learn more about [enabling Defender CSPM](tutorial-enable-cspm-plan.md).
 
     :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-environment-settings.png" alt-text="Screenshot that shows connecting an AWS account to an Azure subscription." lightbox="media/quickstart-onboard-aws/add-aws-account-environment-settings.png":::
 
-1. Enter the AWS account details, including the Azure region where the connector resource will be created.
+1. Enter a **Name** for your connector.
+
+1. For **Onboard**, select the account type:
+
+    - **Management account**: Creates a connector for the AWS management account. Auto provisioning creates connectors for discovered member accounts and newly created accounts under the management account.
+    - **Single account**: Creates a connector for a single AWS account.
+
+1. Select the **AWS regions** that contain resources you want Defender for Cloud to protect. All regions are selected by default.
+
+1. Select the **Subscription** in which the security connector will be created.
+
+1. Select the **Resource group** in which the security connector will be created.
+
+1. Select the **Location** where the security connector will be created.
+
+1. Select an interval to scan the AWS environment every 4, 6, 12, or 24 hours. Some data collectors run with fixed scan intervals and aren't affected by custom interval configurations.
+
+1. Enter your **AWS account ID**.
+
+1. **Management account only:** If needed, enter AWS account IDs to exclude, separated by commas.
 
     :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-details.png" alt-text="Screenshot that shows the tab for entering account details for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-details.png":::
 
-    Use the **AWS regions** dropdown to select the regions Defender for Cloud monitors. Regions you deselect don't receive API calls from Defender for Cloud.
+1. Select **Next: Select plans**.
 
-1. Select a scan interval (4, 6, 12, or 24 hours). 
+1. Choose the Defender plans you want to enable. 
 
-   This selection defines the standard interval for most posture checks. Some data collectors with fixed intervals run more frequently, regardless of this setting:
-
-   | Scan interval | Data collectors |
-   |--|--|
-   | 1 hour | EC2Instance, ECRImage, ECRRepository, RDSDBInstance, S3Bucket, S3BucketTags, S3Region, EKSCluster, EKSClusterName, EKSNodegroup, EKSNodegroupName, AutoScalingAutoScalingGroup |
-   | 12 hours | EcsClusterArn, EcsService, EcsServiceArn, EcsTaskDefinition, EcsTaskDefinitionArn, EcsTaskDefinitionTags, AwsPolicyVersion, LocalPolicyVersion, AwsEntitiesForPolicy, LocalEntitiesForPolicy, BucketEncryption, BucketPolicy, S3PublicAccessBlockConfiguration, BucketVersioning, S3LifecycleConfiguration, BucketPolicyStatus, S3ReplicationConfiguration, S3AccessControlList, S3BucketLoggingConfig, PublicAccessBlockConfiguration |
-
-1. Select **Next: Select plans**, and choose the Defender plans you want to enable.
-
-   Review the default plan selections, as some plans might be enabled automatically depending on your configuration. For example, the Databases plan extends Defender for SQL coverage to AWS EC2, RDS Custom for SQL Server, and open-source relational databases on RDS.
+   > [!NOTE]
+   > Each plan might incur charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
 
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-plans-selection.png" alt-text="Screenshot showing the plan selection step for an AWS account." lightbox="media/quickstart-onboard-aws/add-aws-account-plans-selection.png":::
 
-   Each plan might incur charges. Learn more about [Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud).
-
    > [!IMPORTANT]
-   > To present up-to-date recommendations, Defender CSPM queries AWS resource APIs several times a day. These read-only API calls incur no AWS charges. However, if you enable read-event logging, CloudTrail might record them. Exporting this data to external SIEM systems might increase ingestion costs. If required, filter read-only calls from:
+   > To present the current status of your recommendations, the Microsoft Defender Cloud Security Posture Management plan queries the AWS resource APIs several times a day. These read-only API calls incur no charges, but they're registered in CloudTrail if you enable a trail for read events.
    >
-   > `arn:aws:iam::<accountId>:role/CspmMonitorAws`
+   > AWS documentation explains that there are no extra charges for keeping one trail. If you're exporting the data out of AWS, for example to an external SIEM system, this increased volume of calls might also increase ingestion costs. In such cases, we recommend filtering out the read-only calls from the Defender for Cloud user or ARN role: `arn:aws:iam::[accountId]:role/CspmMonitorAws`. This is the default role name. Confirm the role name configured on your account.
 
-1. Select **Configure access**, and choose:
+1. Select **Configure access**.
+
+1. Select the permissions type:
 
     - **Default access**: Grants permissions required for current and future capabilities.
     - **Least privilege access**: Grants only the permissions required today. You might receive notifications if additional access is needed later.
 
-1. Select a deployment method: 
+1. Select a deployment method:
 
     - **AWS CloudFormation**
-    - **Terraform**.
+    - **Terraform**
 
    :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot showing deployment method configuration." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
 
+1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies in AWS.
+
    > [!NOTE]
-   > When onboarding a **management account**, Defender for Cloud uses AWS StackSets and automatically creates connectors for child accounts. Autoprovisioning is enabled for newly discovered accounts.
+   > If you select **Management account**, the tab for onboarding by using Terraform isn't visible in the UI. Terraform onboarding is still supported. For guidance, see [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/onboarding-your-aws-gcp-environment-to-microsoft-defender-for/ba-p/3798664).
 
-    > [!NOTE]
-    > If you select **Management account** to create a connector to a management account, the tab for onboarding by using Terraform isn't visible in the UI. Terraform onboarding is still supported. For guidance, see [Onboarding your AWS/GCP environment to Microsoft Defender for Cloud with Terraform](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/onboarding-your-aws-gcp-environment-to-microsoft-defender-for/ba-p/3798664).
+   If you deploy by using CloudFormation, choose one of the following template options:
 
-1. Follow the on-screen instructions to deploy the CloudFormation template. If you select Terraform, follow the equivalent deployment instructions provided in the portal.
+   - **Amazon S3 URL**: Upload the downloaded CloudFormation template to your own S3 bucket with your own security configurations. Provide the S3 URL in the AWS deployment wizard.
+   - **Upload a template file**: AWS automatically creates an S3 bucket to store the template. This configuration might trigger the `S3 buckets should require requests to use Secure Socket Layer` recommendation. You can fix it by applying the following bucket policy:
+
+     ```json
+     {
+       "Id": "ExamplePolicy",
+       "Version": "2012-10-17",
+       "Statement": [
+         {
+           "Sid": "AllowSSLRequestsOnly",
+           "Action": "s3:*",
+           "Effect": "Deny",
+           "Resource": [
+             "<S3_Bucket_ARN>",
+             "<S3_Bucket_ARN>/*"
+           ],
+           "Condition": {
+             "Bool": {
+               "aws:SecureTransport": "false"
+             }
+           },
+           "Principal": "*"
+         }
+       ]
+     }
+     ```
+
+   > [!IMPORTANT]
+   > When you run the CloudFormation StackSet for an AWS management account, you might encounter the following error message:
+   >
+   > `You must enable organizations access to operate a service managed stack set`
+   >
+   > This error means that trusted access for AWS Organizations isn't enabled.
+   >
+   > To fix this error, go to the CloudFormation StackSets page and select the prompt to enable trusted access. After trusted access is enabled, run the CloudFormation template again.
 
 1. Select **Next: Review and generate**.
 
 1. Select **Create**.
 
 Defender for Cloud starts scanning your AWS resources. Security recommendations appear within a few hours. After onboarding, you can monitor AWS posture, alerts, and resource inventory in Defender for Cloud.
+
+## Update the CloudFormation template
+
+Update the CloudFormation template deployed in your AWS account when the permissions or resources required by Defender for Cloud change.
+
+### When to update the template
+
+Update the template in the following cases:
+
+- You enabled a new Defender plan, such as Defender CSPM, Defender for Databases, or Defender for Containers.
+- You modified plan configuration, such as enabling auto provisioning or changing the selected regions.
+- Microsoft released a new version of the template, such as a version that supports new features, fixes bugs, or updates the runtime.
+- You experience deployment errors, such as `AccessDenied`, `EntityAlreadyExists`, or Lambda runtime errors. For specific errors or CloudFormation template deployment errors, see the [CloudFormation error resolution table](troubleshoot-connectors.md#cloudformation-error-resolution-table).
+
+### Update the template
+
+1. In Defender for Cloud, generate or download the latest CloudFormation template for the AWS connector.
+
+1. In AWS CloudFormation, update the existing stack that was created for the Defender for Cloud connector.
+
+1. Replace the existing template with the updated template file or with the Amazon S3 URL for the updated template.
+
+1. Keep the existing stack details and parameters unless Defender for Cloud provides updated values.
+
+1. Review the changes, acknowledge IAM resource changes if prompted, and update the stack.
+
+Learn how to [update stacks directly](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-direct.html) in AWS CloudFormation.
 
 ## Validate connector health
 
@@ -188,66 +272,6 @@ The Environment details page lists any detected configuration or permission issu
 If an issue is present, you can select it to view a description of the problem and the recommended remediation steps. In some cases, a remediation script is provided to help resolve the issue.
 
 Learn more about [troubleshooting multicloud connectors](troubleshoot-connectors.md).
-
-## Deploy a CloudFormation template to your AWS account
-
-As part of onboarding, deploy the generated CloudFormation template:
-
-- As a **Stack** (single account)
-- As a **StackSet** (management account)
-
-:::image type="content" source="media/quickstart-onboard-aws/cloudformation-template.png" alt-text="Screenshot showing the CloudFormation template deployment wizard." lightbox="media/quickstart-onboard-aws/cloudformation-template.png":::
-
-### Template deployment options
-
-- **Amazon S3 URL**: Upload the downloaded CloudFormation template to your own S3 bucket with your own security configurations. Provide the S3 URL in the AWS deployment wizard.
-
-- **Upload a template file**: AWS automatically creates an S3 bucket to store the template. This configuration might trigger the `S3 buckets should require requests to use Secure Socket Layer` recommendation. You can fix it by applying the following bucket policy:
-
-```bash
-{
-  "Id": "ExamplePolicy",
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "AllowSSLRequestsOnly",
-      "Action": "s3:*",
-      "Effect": "Deny",
-      "Resource": [
-        "<S3_Bucket_ARN>",
-        "<S3_Bucket_ARN>/*"
-      ],
-      "Condition": {
-        "Bool": {
-          "aws:SecureTransport": "false"
-        }
-      },
-      "Principal": "*"
-    }
-  ]
-}
-```
-
-> [!NOTE]
-> When running the CloudFormation StackSets when onboarding an AWS management account, you might encounter the following error message:
-> `You must enable organizations access to operate a service managed stack set`
->
-> This error message indicates that you didn't enable [the trusted access for AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-activate-trusted-access.html).
->
-> To fix this error, the CloudFormation StackSets page has a prompt with a button that you can select to enable trusted access. After trusted access is enabled, run the CloudFormation Stack again.
-
-### Do you need to update the CloudFormation template?
-
-This table helps you determine whether you need to update the CloudFormation template deployed in your AWS account.
-
-| Step | Question | If YES | If NO |
-|--|--|--|--|
-| 1 | Did you enable a new Defender plan (for example, CSPM, Databases, Defender for Containers)? | Update the CloudFormation Stack with the latest template. | Go to Step 2. |
-| 2 | Are you modifying plan configuration (for example, enabling autoprovisioning or changing region)? | Update the CloudFormation Stack with the latest template. | Go to Step 3. |
-| 3 | Did Microsoft release a new version of the template? (For example, support new features, fix bugs, or update runtime) | Update the CloudFormation Stack with the latest template. | Go to Step 4. |
-| 4 | Are you experiencing deployment errors<sup>[1](#footnote1)</sup> (for example, Access Denied error, Entity already exist, Lambda runtime)? | Update the CloudFormation Stack with the latest template. | No update of CloudFormation template needed. |
-
-<sup><a name="footnote1"></a>1</sup> If you're receiving specific errors, or errors with the CloudFormation template deployment, refer to the [CloudFormation error resolution table](troubleshoot-connectors.md#cloudformation-error-resolution-table).
 
 ## View your current coverage
 

@@ -1,19 +1,20 @@
 ---
 title: Enable just-in-time access
 description: Learn how just-in-time VM access (JIT) in Microsoft Defender for Cloud helps you control access to your Azure virtual machines.
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 02/19/2025
+ms.date: 06/02/2026
 ms.topic: how-to
 ms.custom:
   - ge-structured-content-pilot
+#customer intent: As a security administrator, I want to enable just-in-time access for VMs so I can reduce exposure to unauthorized network access.
 ---
 
 # Enable just-in-time access
 
-[Defender for Servers](defender-for-servers-overview.md) in Microsoft Defender for Cloud provides a just-in-time machine access feature.
+[Defender for Servers](defender-for-servers-overview.md) in Microsoft Defender for Cloud provides a just-in-time (JIT) machine access feature.
 
-You can use Microsoft Defender for Cloud's just-in-time access to protect your Azure VMs from unauthorized network access. Many times firewalls contain allow rules that leave your VMs vulnerable to attack. JIT lets you allow access to your VMs only when the access is needed, on the ports needed, and for the period of time needed.
+You can use Microsoft Defender for Cloud's just-in-time access to protect your Azure VMs from unauthorized network access. Firewalls often include allow rules that leave VMs exposed. JIT lets you allow access only when it's needed, on the required ports, and for the required time.
 
 In this article, you learn how to set up and use just-in-time access, including how to:
 
@@ -25,7 +26,7 @@ In this article, you learn how to set up and use just-in-time access, including 
 
 -   [Microsoft Defender for Servers Plan 2](defender-for-servers-overview.md) must be enabled on the subscription.
 
--   Supported VMs: VMs deployed through Azure Resource Manager, VMs protected by Azure Firewalls on the same VNET as the VM, AWS EC2 instances (Preview).
+-   Supported VMs: VMs deployed through Azure Resource Manager, VMs protected by Azure Firewall on the same virtual network (VNet) as the VM, and AWS EC2 instances (Preview).
 
 -   Unsupported VMs: VMs deployed with [classic deployment models](/azure/azure-resource-manager/management/deployment-models), VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview).
 
@@ -33,19 +34,19 @@ In this article, you learn how to set up and use just-in-time access, including 
 
 -   To create a JIT policy, the policy name, together with the targeted VM name, must not exceed a total of 56 characters.
 
--   You need **Reader** and **SecurityReader** permissions, or a custom role can view the JIT status and parameters.
+-   You need **Reader** and **SecurityReader** permissions to view JIT status and parameters. A custom role can also provide this access.
 
 -   For a custom role, assign the permissions summarized in the table. To create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role).
 
-| User action                               | Permissions to set                                                                                                                                                                                                                                                                                                                                    |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Configure or edit a JIT policy for a VM   | *Assign these actions to the role:* <ul><li>On the scope of a subscription (or resource group when using API or PowerShell only) that is associated with the VM:<br/> `Microsoft.Security/locations/jitNetworkAccessPolicies/write` </li><li> On the scope of a subscription (or resource group when using API or PowerShell only) of VM: <br/>`Microsoft.Compute/virtualMachines/write`</li></ul> |
-| Request JIT access to a VM                | *Assign these actions to the user:* <ul><li> `Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action` </li><li> `Microsoft.Security/locations/jitNetworkAccessPolicies/*/read` </li><li> `Microsoft.Compute/virtualMachines/read` </li><li> `Microsoft.Network/networkInterfaces/*/read` </li> <li> `Microsoft.Network/publicIPAddresses/read` </li></ul> |
-| Read JIT policies                         | *Assign these actions to the user:* <ul><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/read`</li><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action`</li><li>`Microsoft.Security/policies/read`</li><li>`Microsoft.Security/pricings/read`</li><li>`Microsoft.Compute/virtualMachines/read`</li><li>`Microsoft.Network/*/read`</li>|
+| User action | Permissions to set |
+| --- | --- |
+| Configure or edit a JIT policy for a VM | *Assign these actions to the role:* <ul><li>On the scope of a subscription (or resource group when using API or PowerShell only) that is associated with the VM:<br/>`Microsoft.Security/locations/jitNetworkAccessPolicies/write`</li><li>On the scope of a subscription (or resource group when using API or PowerShell only) of VM:<br/>`Microsoft.Compute/virtualMachines/write`</li></ul> |
+| Request JIT access to a VM | *Assign these actions to the user:* <ul><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action`</li><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/*/read`</li><li>`Microsoft.Compute/virtualMachines/read`</li><li>`Microsoft.Network/networkInterfaces/*/read`</li><li>`Microsoft.Network/publicIPAddresses/read`</li></ul> |
+| Read JIT policies | *Assign these actions to the user:* <ul><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/read`</li><li>`Microsoft.Security/locations/jitNetworkAccessPolicies/initiate/action`</li><li>`Microsoft.Security/policies/read`</li><li>`Microsoft.Security/pricings/read`</li><li>`Microsoft.Compute/virtualMachines/read`</li><li>`Microsoft.Network/*/read`</li></ul> |
 
 > [!NOTE]
 > Only the `Microsoft.Security` permissions are relevant for AWS.
-> To create a least-privileged role for users that only need to request JIT access to a VM, use the Set-JitLeastPrivilegedRole script.
+> To create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role).
 
 ## Work with JIT VM access using Microsoft Defender for Cloud
 
@@ -67,6 +68,8 @@ You can use Defender for Cloud or you can programmatically enable JIT VM access 
 ### Enable JIT on your VMs from Microsoft Defender for Cloud
 
 From Defender for Cloud, you can enable and configure the JIT VM access.
+
+To enable JIT on your VMs from Defender for Cloud:
 
 1.  Open **Workload protections** and, in the advanced protections, select **Just-in-time VM access**.
 
@@ -104,13 +107,15 @@ To edit the existing JIT rules for a VM:
 
 1.  In the **Configured** virtual machines tab, right-click on a VM and select **Edit**.
 
-1.  In the **JIT VM access configuration**, you can either edit the list of port or select Add a new custom port.
+1.  In the **JIT VM access configuration**, you can edit the list of ports or select **Add** for a new custom port.
 
 1.  When you finish editing the ports, select **Save**.
 
 ### Request access to a JIT-enabled VM from Microsoft Defender for Cloud
 
 When a VM has JIT enabled, you have to request access to connect to it. You can request access in any of the supported ways, regardless of how you enabled JIT.
+
+To request access to a JIT-enabled VM from Defender for Cloud:
 
 1.  From the **Just-in-time VM access** page, select the **Configured** tab.
 
@@ -137,8 +142,10 @@ When a VM has JIT enabled, you have to request access to connect to it. You can 
 
 You can enable JIT on a VM from the Azure virtual machines pages of the Azure portal.
 
+To enable JIT on a VM from Azure virtual machines:
+
 > [!TIP]
-> If a VM already has JIT enabled, the VM configuration page shows that JIT is enabled. You can use the link to open the JIT VM access page in Defender for Cloud to view and change the settings.
+> If a VM already has JIT enabled, the VM configuration page shows that JIT is enabled. Use the **Just-in-time VM access** link on that page to open Defender for Cloud and review or change settings.
 
 1.  From the [Azure portal](https://portal.azure.com), search for and select **Virtual machines**.
 
@@ -172,7 +179,7 @@ You can enable JIT on a VM from the Azure virtual machines pages of the Azure po
 
 #### Request access to a JIT-enabled VM from the Azure virtual machine's connect page
 
-When a VM has a JIT enabled, you have to request access to connect to it. You can request access in any of the supported ways, regardless of how you enabled JIT.
+When a VM has JIT enabled, you have to request access to connect to it. You can request access in any of the supported ways, regardless of how you enabled JIT.
 
 :::image type="content" source="./media/just-in-time-access-usage/jit-request-vm.png" alt-text="Screenshot of a just-in-time VM access request showing selected ports and access duration.":::
 
@@ -195,6 +202,8 @@ To request access from Azure virtual machines:
 #### Enable JIT on your VMs using PowerShell
 
 To enable just-in-time VM access from PowerShell, use the official Microsoft Defender for Cloud PowerShell cmdlet `Set-AzJitNetworkAccessPolicy`.
+
+To configure JIT on a VM with PowerShell:
 
 **Example** - Enable just-in-time VM access on a specific VM with the following rules:
 
@@ -240,6 +249,8 @@ The following PowerShell commands create this JIT configuration:
 
 In the following example, you can see a just-in-time VM access request to a specific VM for port 22, for a specific IP address, and for a specific amount of time:
 
+To request access to a JIT-enabled VM using PowerShell:
+
 Run the following commands in PowerShell:
 
 1.  Configure the VM request access properties:
@@ -283,7 +294,7 @@ Learn more at [JIT network access policies](/rest/api/defenderforcloud-composite
 
 ## Audit JIT access activity in Defender for Cloud
 
-You can gain insights into VM activities using log search. To view the logs:
+Use log search to review VM activity. To view the logs:
 
 1.  From **Just-in-time VM access**, select the **Configured** tab.
 
@@ -301,3 +312,4 @@ You can gain insights into VM activities using log search. To view the logs:
 
 > [!div class="nextstepaction"]
 > [Understand just-in-time VM access management](just-in-time-access-overview.md)
+
