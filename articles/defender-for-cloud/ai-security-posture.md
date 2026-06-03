@@ -53,14 +53,9 @@ With these features, Defender for Cloud provides full visibility of AI workloads
 
 ## Discover AI agents (Preview)
 
-Effective July 1, 2026, agent-level discovery, security posture, and threat detection for Microsoft Foundry agents and third-party cloud agents require a [Microsoft Agent 365](/microsoft-agent-365/overview) license. These capabilities were previously available through the Defender CSPM plan in Microsoft Defender for Cloud. Defender CSPM continues to discover Microsoft Foundry accounts and projects, but agent-level capabilities now require Agent 365.
+Effective July 1, 2026, agent-level discovery, security posture, and threat detection for Microsoft Foundry agents and third-party cloud agents require a [Microsoft Agent 365](/microsoft-agent-365/overview) license. These capabilities were previously available through the Defender CSPM plan in Microsoft Defender for Cloud. Defender CSPM continues to discover Microsoft Foundry accounts and projects, but agent-level capabilities now require Agent 365. For more information on this transition, see [Transition AI agent security capabilities to Microsoft Agent 365](/defender-xdr/security-for-ai/transition-agent-security-to-agent-365).
 
-The AI agent inventory is available in the Microsoft Defender portal and provides a centralized view of your agents along with their security status.
-
-For more information, see:
-
-- [Discover AI agents and assess security posture using the AI agent inventory](/defender-xdr/security-for-ai/ai-agent-inventory)
-- [Transition AI agent security capabilities to Microsoft Agent 365](/defender-xdr/security-for-ai/transition-agent-security-to-agent-365)
+The AI agent inventory is available in the Microsoft Defender portal and provides a centralized view of your agents along with their security status. For more information, see [Discover AI agents and assess security posture using the AI agent inventory in the Microsoft Defender portal](/defender-xdr/security-for-ai/ai-agent-inventory).
 
 ## Reduce risks to generative AI apps
 
