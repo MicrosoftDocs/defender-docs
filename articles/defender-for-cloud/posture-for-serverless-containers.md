@@ -2,7 +2,7 @@
 title: Posture for Serverless Containers (Preview)
 description: Learn how Microsoft Defender for Cloud uses Defender cloud security posture management (Defender CSPM) to provide inventory, recommendations, and attack path visibility for serverless containers.
 ms.topic: concept-article
-ms.date: 06/01/2026
+ms.date: 06/03/2026
 author: ElazarK
 ms.author: elkrieger
 #customer intent: "As a cloud security administrator, I want to understand posture for serverless containers in Microsoft Defender for Cloud so that I can prioritize risk across supported serverless workloads."
@@ -19,7 +19,6 @@ In Defender cloud security posture management (Defender CSPM), this capability e
 >
 > - Azure Container Apps (ACA)
 > - Azure Container Instances (ACI)
-> - Amazon Elastic Container Service (ECS) on AWS Fargate
 
 ## What is posture for serverless containers?
 
@@ -36,7 +35,7 @@ To use posture for serverless containers:
 - Use a role with the required permissions:
   - **Security Reader** to view findings and posture state.
   - **Security Admin** to change settings and manage exemptions.
-- Use commercial clouds only. This preview supports Azure and AWS and isn't available in sovereign or national clouds.
+- Use commercial clouds only. This preview supports Azure and isn't available in sovereign or national clouds.
 
 For cloud and platform availability details, see:
 
@@ -60,7 +59,7 @@ For enablement steps, see [Protect resources with Defender CSPM](tutorial-enable
 
 Defender for Cloud discovers supported serverless container resources and shows them in inventory views so you can understand resource presence and coverage.
 
-:::image type="content" source="media/posture-for-serverless-containers/serverless-inventory.png" alt-text="Cloud asset inventory view filtered to serverless containers, showing Azure Container Apps, Azure Container Instances, and Amazon ECS on AWS Fargate resources." lightbox="media/posture-for-serverless-containers/serverless-inventory.png":::
+:::image type="content" source="media/posture-for-serverless-containers/serverless-inventory.png" alt-text="Cloud asset inventory view filtered to serverless containers, showing Azure Container Apps and Azure Container Instances resources." lightbox="media/posture-for-serverless-containers/serverless-inventory.png":::
 
 After you filter your results, select a resource to view details about its security posture, including active security recommendations and their severity levels.
 
@@ -97,7 +96,7 @@ In preview, posture for serverless containers has the following limitations:
 
 - Posture-only coverage. Runtime threat detection and active response aren't included.
 - Insights are based on control-plane signals and image metadata. Host and runtime process telemetry isn't used.
-- Availability is limited to supported workloads in Azure and AWS clouds.
+- Availability is limited to supported workloads in Azure clouds.
 
 ## Related content
 

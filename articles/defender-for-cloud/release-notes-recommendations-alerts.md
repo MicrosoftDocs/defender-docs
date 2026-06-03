@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 06/01/2026
+ms.date: 06/03/2026
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -49,17 +49,11 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
-| June 1, 2026 | Recommendation | Preview | [Authentication should be enabled on Azure Container Apps](recommendations-reference-serverless-containers.md#authentication-should-be-enabled-on-azure-container-apps) |
-| June 1, 2026 | Recommendation | Preview | [Azure Container Apps shouldn't be exposed to the public internet unless required](recommendations-reference-serverless-containers.md#azure-container-apps-should-not-be-exposed-to-the-public-internet-unless-required) |
-| June 1, 2026 | Recommendation | Preview | [Managed identities assigned to Azure Container Apps should follow least privilege](recommendations-reference-serverless-containers.md#managed-identities-assigned-to-azure-container-apps-should-follow-least-privilege) |
-| June 1, 2026 | Recommendation | Preview | [Azure Container Instances shouldn't be publicly exposed](recommendations-reference-serverless-containers.md#azure-container-instances-should-not-be-publicly-exposed) |
-| June 1, 2026 | Recommendation | Preview | [Managed identities assigned to Azure Container Instances should follow least privilege](recommendations-reference-serverless-containers.md#managed-identities-assigned-to-azure-container-instances-should-follow-least-privilege) |
-| June 1, 2026 | Recommendation | Preview | [IAM task roles assigned to ECS Fargate tasks should follow least privilege](recommendations-reference-serverless-containers.md#iam-task-roles-assigned-to-ecs-fargate-tasks-should-follow-least-privilege) |
-| June 1, 2026 | Recommendation | Preview | [ECS Fargate tasks shouldn't run containers with elevated privileges](recommendations-reference-serverless-containers.md#ecs-fargate-tasks-should-not-run-containers-with-elevated-privileges) |
-| June 1, 2026 | Recommendation | Preview | [Read-only root filesystem should be enabled for ECS Containers](recommendations-reference-serverless-containers.md#read-only-root-filesystem-should-be-enabled-for-ecs-containers) |
-| June 1, 2026 | Recommendation | Preview | [ECS Fargate tasks shouldn't be publicly exposed](recommendations-reference-serverless-containers.md#ecs-fargate-tasks-should-not-be-publicly-exposed) |
-| June 1, 2026 | Recommendation | Preview | [Logging should be configured for ECS Exec on ECS clusters](recommendations-reference-serverless-containers.md#logging-should-be-configured-for-ecs-exec-on-ecs-clusters) |
-| June 1, 2026 | Recommendation | Preview | [ECS Exec should be disabled on Fargate ECS services](recommendations-reference-serverless-containers.md#ecs-exec-should-be-disabled-on-fargate-ecs-services) |
+| June 3, 2026 | Recommendation | Preview | [Authentication should be enabled on Azure Container Apps](recommendations-reference-serverless-containers.md#authentication-should-be-enabled-on-azure-container-apps) |
+| June 3, 2026 | Recommendation | Preview | [Azure Container Apps shouldn't be exposed to the public internet unless required](recommendations-reference-serverless-containers.md#azure-container-apps-should-not-be-exposed-to-the-public-internet-unless-required) |
+| June 3, 2026 | Recommendation | Preview | [Managed identities assigned to Azure Container Apps should follow least privilege](recommendations-reference-serverless-containers.md#managed-identities-assigned-to-azure-container-apps-should-follow-least-privilege) |
+| June 3, 2026 | Recommendation | Preview | [Azure Container Instances shouldn't be publicly exposed](recommendations-reference-serverless-containers.md#azure-container-instances-should-not-be-publicly-exposed) |
+| June 3, 2026 | Recommendation | Preview | [Managed identities assigned to Azure Container Instances should follow least privilege](recommendations-reference-serverless-containers.md#managed-identities-assigned-to-azure-container-instances-should-follow-least-privilege) |
 | June 1, 2026 | Recommendation | Preview | The following new container-level Kubernetes misconfiguration recommendations are now available in preview as part of Defender CSPM:<br/>\* Containers shouldn't use excessive CPU or memory<br/>\* Containers should only use images from trusted registries<br/>\* Containers shouldn't allow privilege escalation<br/>\* Containers shouldn't share sensitive host namespaces<br/>\* Containers should use a read-only root filesystem<br/>\* Kubernetes clusters should be accessible only over HTTPS<br/>\* Containers shouldn't automount API credentials<br/>\* Containers shouldn't run in the default namespace<br/>\* Containers should drop all capabilities and add only those required<br/>\* Privileged containers should be avoided<br/>\* Containers shouldn't run as root<br/><br/>These container-level recommendations replace existing cluster-level equivalents. Cluster-level recommendations will be deprecated at GA. |
 | June 1, 2026 | Recommendation | Upcoming deprecation | The following cluster-level Kubernetes recommendations are set for deprecation at GA of the new container-level misconfiguration recommendations:<br/>\* Containers should only use allowed AppArmor profiles<br/>\* Kubernetes clusters shouldn't grant CAPSYSADMIN security capabilities<br/>\* Services should listen on allowed ports only<br/>\* Usage of host networking and ports should be restricted<br/>\* Usage of pod HostPath volume mounts should be restricted to a known list to restrict node access from compromised containers |
 | June 1, 2026 | Recommendation | Preview | [Upgrade Azure Kubernetes Service Version](recommendations-reference-container.md#upgrade-azure-kubernetes-service-to-remove-vulnerabilities-from-aks-system-pods-preview) |

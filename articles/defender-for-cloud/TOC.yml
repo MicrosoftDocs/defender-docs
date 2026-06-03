@@ -373,7 +373,7 @@
         - name: Agentless machine scanning
           href: concept-agentless-data-collection.md
         - name: Posture for Serverless Containers (Preview)
-          displayName: serverless containers, ACA, ACI, AWS - ECS Fargate, posture, inventory, recommendations, attack path
+          displayName: serverless containers, ACA, ACI, posture, inventory, recommendations, attack path
           href: posture-for-serverless-containers.md
         - name: What is Serverless protection?
           displayName: serverless, functions, web apps, aws lambda, inventory, misconfigurations, vulnerabilities, dependencies
@@ -1148,7 +1148,7 @@
           displayName: serverless, protection, recommendations
           href: recommendations-reference-serverless-protection.md
         - name: Serverless containers recommendations
-          displayName: serverless, containers, recommendations, ACA, ACI, AWS - ECS Fargate
+          displayName: serverless, containers, recommendations, ACA, ACI
           href: recommendations-reference-serverless-containers.md
         - name: Assessment checks for endpoint detection and response solutions
           href: endpoint-protection-recommendations-technical.md

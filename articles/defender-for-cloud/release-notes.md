@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 06/01/2026
+ms.date: 06/03/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,18 +32,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| June 1, 2026 | Preview | [Posture for Serverless Containers (Preview)](#posture-for-serverless-containers-preview) |
+| June 3, 2026 | Preview | [Posture for Serverless Containers (Preview)](#posture-for-serverless-containers-preview) |
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
 
 ### Posture for Serverless Containers (Preview)
 
-June 1, 2026
+June 3, 2026
 
 Microsoft Defender for Cloud now includes Posture for Serverless Containers in preview for supported serverless container workloads.
 
-This capability adds inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Web Services (AWS) - ECS Fargate.
+This capability adds inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps and Azure Container Instances.
 
 Learn more about [Posture for Serverless Containers (Preview)](posture-for-serverless-containers.md).
 

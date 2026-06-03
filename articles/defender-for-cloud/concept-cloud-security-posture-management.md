@@ -2,7 +2,7 @@
 title: What is Cloud Security Posture Management (CSPM)
 description: Learn more about Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud and how it helps improve your security posture.
 ms.topic: concept-article
-ms.date: 05/27/2026
+ms.date: 06/03/2026
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
 ---
 
@@ -63,7 +63,7 @@ For specific regional availability and government cloud support details, see the
 | [Regulatory compliance assessments](concept-regulatory-compliance-standards.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP, , Docker Hub, JFrog Artifactory |
 | [Risk hunting with security explorer](how-to-manage-cloud-security-explorer.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP , Docker Hub, JFrog Artifactory |
 | [Risk prioritization](risk-prioritization.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP , Docker Hub, JFrog Artifactory |
-| [Posture for Serverless Containers (Preview)](posture-for-serverless-containers.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
+| [Posture for Serverless Containers (Preview)](posture-for-serverless-containers.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure |
 | [Serverless protection](serverless-protection.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS |
 | [ServiceNow Integration](integration-servicenow.md) | - | :::image type="icon" source="./media/icons/yes-icon.png"::: | Azure, AWS, GCP |
 

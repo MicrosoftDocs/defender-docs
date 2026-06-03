@@ -4,7 +4,7 @@ description: Learn about the Azure cloud environments where Defender for Cloud c
 ms.topic: limits-and-quotas
 author: ElazarK
 ms.author: elkrieger
-ms.date: 06/01/2026
+ms.date: 06/03/2026
 ---
 
 # Support matrices for Defender for Cloud
