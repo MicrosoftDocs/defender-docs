@@ -256,6 +256,8 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AgentsInfo
+            href: advanced-hunting-agentsinfo-table.md
           - name: AIAgentsInfo
             href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence

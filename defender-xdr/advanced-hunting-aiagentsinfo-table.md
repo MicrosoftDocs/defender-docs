@@ -25,6 +25,8 @@ ms.date: 04/15/2026
 
 > [!IMPORTANT]
 > Some information relates to prereleased product that may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+>
+> The `AIAgentsInfo` table is being replaced by the [`AgentsInfo`](advanced-hunting-agentsinfo-table.md) table on July 1, 2026. The new table provides a unified schema with expanded coverage for all agent types. Update your queries to use `AgentsInfo` before this date. For more information, see [Advanced hunting schema - Naming changes](advanced-hunting-schema-changes.md).
 
 The `AIAgentsInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about AI agents and their associated entities. Use this reference to construct queries that return information from this table.
 
