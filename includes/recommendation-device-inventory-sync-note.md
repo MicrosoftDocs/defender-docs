@@ -1,6 +1,0 @@
-> [!NOTE]
-> Security recommendations reflect devices that matched the recommendation criteria during the recommendation assessment window. Device exposure, configuration, and state can change over time, and Defender experiences may refresh at different times. As a result, the devices shown in a recommendation may temporarily differ from the latest results shown in Device inventory.
->
-> For recommendations that are based on data also surfaced in Device inventory, use Device inventory to validate the latest device-level status and apply the filters that match the recommendation scenario. For example, when reviewing “Reduce unnecessary inbound internet exposure on internet-facing devices,” use the Internet-facing filter and a relevant time filter, such as Last 30 days, to align Device inventory results more closely with the recommendation scope.
->
-> If a device was recently remediated, or its exposure or configuration recently changed, allow time for the recommendation to reflect the latest status.
