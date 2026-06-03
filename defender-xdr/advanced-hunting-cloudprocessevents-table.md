@@ -19,7 +19,7 @@ ms.topic: reference
 ms.date: 06/01/2026
 ---
 
-# CloudProcessEvents
+# CloudProcessEvents (Preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -29,6 +29,8 @@ The `CloudProcessEvents` table in the [advanced hunting](advanced-hunting-overvi
 
 This advanced hunting table is populated by records from Microsoft Defender for Cloud. If your organization doesn't have Microsoft Defender for Cloud, queries that use the table aren’t going to work or return any results. For more information about prerequisites in integrating Defender for Cloud with Defender XDR, read [Microsoft Defender XDR integration](/azure/defender-for-cloud/concept-integration-365).
 
+> [!IMPORTANT]
+> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 For information on other tables in the advanced hunting schema, see the [advanced hunting reference](advanced-hunting-schema-tables.md).
 
