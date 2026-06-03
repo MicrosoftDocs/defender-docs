@@ -95,4 +95,3 @@ CloudProcessEvents | where AzureResourceId = "x" and KubernetesNamespace = "y" a
 - [Hunt across devices, emails, apps, and identities](advanced-hunting-query-emails-devices.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Apply query best practices](advanced-hunting-best-practices.md)
-
