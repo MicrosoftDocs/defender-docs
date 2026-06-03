@@ -11,11 +11,11 @@ ms.topic: concept-article
 ms.date: 06/01/2026
 ms.collection: ms-security  
 
-# Customer intent: As a threat hunter, security engineer or an security administrator, I want to manage jobs in the Microsoft Sentinel data lake so that I can run KQL queries  against the data in the lake tier and promote the results to the analytics tier.
+# Customer intent: As a threat hunter, security engineer or an security administrator, I want to manage KQL, notebook and graph jobs in the Microsoft Sentinel data lake.
 
 ---  
  
-#  Manage KQL jobs in the Microsoft Sentinel data lake 
+#  Manage jobs in the Microsoft Sentinel data lake 
  
 A job is a one-time or scheduled task that runs against data in the Microsoft Sentinel data lake. The **Jobs** page, under **Microsoft Sentinel** > **Data lake exploration** in the Microsoft Defender portal, lists every job in your tenant so you can monitor and manage them from one place.
 
@@ -44,13 +44,13 @@ The Jobs management page provides the following functions:
 
 ## KQL jobs
 
-A **KQL job** runs a Kusto Query Language (KQL) query against the data lake tier and writes the results to the analytics tier, either once or on a schedule. You can create KQL jobs in the **KQL queries** editor or from the **Jobs** page. For more information about creating KQL jobs, see [Create jobs in the Microsoft Sentinel data lake using KQL](kql-jobs.md).
+A KQL job runs a Kusto Query Language (KQL) query against the data lake tier and writes the results to the analytics tier, either once or on a schedule. You can create KQL jobs in the **KQL queries** editor or from the **Jobs** page. For more information about creating KQL jobs, see [Create jobs in the Microsoft Sentinel data lake using KQL](kql-jobs.md).
 
 The Jobs page supports the full KQL job lifecycle: you can create, edit, enable or disable, view run history for, and delete a KQL job from this page. To find KQL jobs, open the Jobs page and look for rows where the **Job type** column shows **KQL**. For step-by-step procedures, see [Manage jobs](#manage-jobs).
 
 ## Notebook jobs
 
-A **notebook job** is a scheduled run of a notebook against data in the Microsoft Sentinel data lake. Notebook jobs are created from the VS Code extension when you schedule a notebook, not from the Jobs page. For more information about creating, editing, and scheduling notebook jobs, see [Notebook jobs](notebook-jobs.md).
+A notebook job is a scheduled run of a notebook against data in the Microsoft Sentinel data lake. Notebook jobs are created from the VS Code extension when you schedule a notebook, not from the Jobs page. For more information about creating, editing, and scheduling notebook jobs, see [Notebook jobs](notebook-jobs.md).
 
 To find notebook jobs, open the Jobs page and look for rows where the **Job type** column shows **Notebook**. Selecting a notebook job opens a details panel that shows:
 
@@ -64,7 +64,7 @@ To find notebook jobs, open the Jobs page and look for rows where the **Job type
 
 ## Graph jobs
 
-A **graph job** is a scheduled notebook-based custom graph job in your Microsoft Sentinel data lake tenant. Graph jobs are created when you publish a custom graph from Sentinel VS Code extension or when graphs are subsequently refreshed per your schedule configurations. For more information about creating custom graphs, see [Create custom graphs](create-custom-graphs.md) and [Custom graphs overview](custom-graphs-overview.md).
+A graph job is a scheduled notebook-based custom graph job in your Microsoft Sentinel data lake tenant. Graph jobs are created when you publish a custom graph from Sentinel VS Code extension or when graphs are subsequently refreshed per your schedule configurations. For more information about creating custom graphs, see [Create custom graphs](create-custom-graphs.md) and [Custom graphs overview](custom-graphs-overview.md).
 
 
 
@@ -87,6 +87,7 @@ Microsoft Entra ID roles provide broad access across all workspaces in the data 
 ## Manage jobs
 
 The Jobs page shows a list of jobs, including the job name, status, job type, last and next run dates, and the recent job health. You can filter the jobs by status, last run date, and creation date. The **Jobs status** column indicates whether the job is enabled or disabled. The **Job type** column indicates whether the job is a **KQL** job, a **Notebook** job, or a **Graph** job.
+  
 :::image type="content" source="media/kql-manage-jobs/jobs-page.png" lightbox="media/kql-manage-jobs/jobs-page.png" alt-text="A screenshot showing the jobs page in the Defender portal.":::
 
 The **Recent health issues** column shows whether the job encountered any issues in its recent runs as per the filters. Select the link to view the job's health details.
