@@ -1,4 +1,4 @@
 > [!NOTE]
-> Security configuration and device state changes update continuously throughout Defender Vulnerability Management experiences. Because the recommendation view and device inventory process updates independently, temporary differences can appear between the exposed devices list in a recommendation and the device inventory.
+> Security recommendations reflect devices that met the recommendation criteria during the assessment window. Device exposure, security configuration, and device state can change over time, and different Defender experiences might refresh at different times. As a result, temporary differences can occur between a recommendation and device inventory results.
 >
-> When reviewing exposed devices, use the device inventory to validate the most current device data available. To align the results with the recommendation scope, set the **Device inventory** time filter to **Last 30 days**.
+> For the most current device-level view, use device inventory to validate the latest device data available and apply the relevant filters for the scenario you're investigating. To align results more closely with recommendation scope, set the **Device inventory** time filter to **Last 30 days**. If a device was recently remediated or its exposure recently changed, allow time for the recommendation to reflect the latest status.
