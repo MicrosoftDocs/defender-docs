@@ -31,7 +31,7 @@ This article explains how to discover AI agents, assess their security posture, 
 - [Onboard to Microsoft Agent 365](/microsoft-agent-365/overview) (except for endpoints that use the [AI agent runtime protection feature](/defender-endpoint/ai-agent-runtime-protection-overview.md), which are included in Agent 365 by default).
 - [Enable preview features](../preview.md) in the Microsoft Defender portal to access the `AgentsInfo` table in Advanced Hunting and get AI agent-related evidence in alerts.
 
-## View Agent 365-managed agents and assess security posture using Advanced Hunting
+## Discover AI agents and assess security posture using Advanced Hunting
 
 The [AgentsInfo table](/defender-xdr/advanced-hunting-agentsinfo-table) in Advanced Hunting provides a complete inventory of your Agent 365 agents along with their security-relevant properties. This table enables you to:
 
