@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-ms.date: 12/25/2025
+ms.date: 6/2/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -42,6 +42,7 @@ See the [streamlined connectivity prerequisites](configure-device-connectivity.m
 |Core Defender for Endpoint services|443|*.endpoint.security.microsoft.com|Core Defender for Endpoint services. Formerly: MAPS, Malware Sample Submission Storage, AutoIR Sample Storage, Command and Control, Cyber data.|Required|Core Defender for Endpoint services. Prerequisites must be met to successfully connect to the new URL patterns.|All|
 |Web & network protection|443|*.smartscreen-prod.microsoft.com *.smartscreen.microsoft.com|Used for Microsoft Defender SmartScreen browsing protection, reporting, notifications, and web content filtering. Network/web protection and custom URL/IP indicators.|Required|Optional in disconnected environments where web browsing and connectivity to external destinations is limited. Required for custom URL/IP indicators.|All|
 |SmartScreen|443|*.smartscreen.microsoft.com *.checkappexec.microsoft.com *.urs.microsoft.com|Used for Microsoft Defender SmartScreen to check application execution for trusted apps|Optional|Needed for checking reputation/trust for downloaded applications|Windows|
+|Defender for Endpoint|443|reflector.defender.microsoft.com|Used by Microsoft Defender to probe IPv6 connectivity|Optional|Helps Microsoft Security Intelligence detect attacker activity.|All|
 |Defender for Endpoint|443|https://config.edge.skype.com/config/v1|Internal configuration management|Required|This URL must be allowed to enable Defender on Linux endpoints to receive internal configurations from the cloud.<br/>**Note**: The "skype" string in this URL is a legacy artifact, unrelated to Skype, and retained solely for backward compatibility.|Linux|
 
 ## URLs used for updates
@@ -192,6 +193,7 @@ Because these Defender for Endpoint-related processes generate network communica
 
 |Date|Change Log|
 |---|---|
+|06/02/2026|Added `reflector.defender.microsoft.com` to [Common endpoints](#common-endpoints).|
 |04/14/2026|Removed `officecdn-microsoft-com.akamaized.net` from [URLs used for updates](#urls-used-for-updates). Mac app/platform updates now use the new CDN endpoint referenced in the standard URL list.|
 |04/13/2026|Added SmartScreen row (`*.smartscreen.microsoft.com`, `*.checkappexec.microsoft.com`, `*.urs.microsoft.com`) to [Common endpoints](#common-endpoints).|
 |03/26/2026|Renamed **Microsoft Defender process exclusions** section to **Client processes**, and aligned the content for all URL lists.|

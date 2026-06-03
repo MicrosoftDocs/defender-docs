@@ -695,7 +695,7 @@
         - name: Create KQL jobs
           href: datalake/kql-jobs.md
           displayName: data lake
-        - name: Manage KQL jobs
+        - name: Manage jobs
           href: datalake/kql-manage-jobs.md
           displayName: data lake
         - name: Compare KQL jobs, summary rules, and search jobs
