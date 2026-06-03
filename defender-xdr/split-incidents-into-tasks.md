@@ -13,6 +13,7 @@ ms.topic: how-to
 
 # customer intent: As a security operations analyst, I want to manage incidents using tasks in the Microsoft Defender portal so that I can improve collaboration, efficiency, and accountability in incident investigations.    
 ms.subservice: unified-security-operations
+ms.custom: sfi-image-nochange
 ---
 
 # Streamline incident response using tasks in the Microsoft Defender portal (Preview)

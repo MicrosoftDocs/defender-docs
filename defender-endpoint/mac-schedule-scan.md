@@ -16,6 +16,7 @@ ms.subservice: macos
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Schedule scans with Microsoft Defender for Endpoint on macOS

@@ -10,9 +10,10 @@ ms.date: 05/15/2025
 ms.collection:
 - m365-security
 - tier2
-ms.custom: 
-- autoir
-- admindeeplinkDEFENDER
+ms.custom:
+  - autoir
+  - admindeeplinkDEFENDER
+  - sfi-ga-nochange
 ms.reviewer: evaldm, isco
 ---
 

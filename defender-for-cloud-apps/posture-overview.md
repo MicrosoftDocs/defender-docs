@@ -4,6 +4,7 @@ description: Learn about SaaS security posture management (SSPM) in Microsoft De
 ms.topic: how-to
 ms.date: 04/07/2025
 ms.reviewer: iidogGedanken
+ms.custom: sfi-image-nochange
 ---
 
 # SaaS security posture management (SSPM) overview 

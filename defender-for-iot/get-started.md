@@ -7,6 +7,7 @@ ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 05/19/2024
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with Microsoft Defender for IoT in the Defender portal
