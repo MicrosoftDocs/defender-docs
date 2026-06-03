@@ -17,12 +17,13 @@ ms.collection: ms-security
  
 #  Manage KQL jobs in the Microsoft Sentinel data lake 
  
+A job is a one-time or scheduled task that runs against data in the Microsoft Sentinel data lake. The **Jobs** page, under **Microsoft Sentinel** > **Data lake exploration** in the Microsoft Defender portal, lists every job in your tenant so you can monitor and manage them from one place.
 
-A KQL job is a one-time or scheduled task that runs a KQL (Kusto Query Language) query against the data in the data lake tier to promote the results to the analytics tier. KQL jobs can be created in the **KQL queries** editor, or the **Jobs** page under **Microsoft Sentinel** > **Data lake exploration**  in the Microsoft Defender portal for. For more information, see [KQL jobs](kql-jobs.md). 
+The data lake supports three job types:
 
-The **Jobs** page also lists notebook jobs and graph jobs that run against the data lake, so you can monitor every scheduled job from one place. 
-Notebook jobs are created from the notebook authoring experience (see [Notebook jobs](notebook-jobs.md)). 
-Graph jobs are also created using custom-graph authoring experience in Sentinel VSC extension (see [Custom graphs overview](custom-graphs-overview.md) and the [Graph jobs section below](#graph-jobs)). These graph jobs are represent on demand or scheduled runs of a custom graph built using the notebook.
+- **KQL jobs** run a Kusto Query Language (KQL) query against the data lake tier and promote the results to the analytics tier. You create them from the **KQL queries** editor or the **Jobs** page. For more information, see [KQL jobs](kql-jobs.md).
+- **Notebook jobs** run a notebook on a schedule against data in the lake. You create them from the notebook authoring experience. For more information, see [Notebook jobs](notebook-jobs.md).
+- **Graph jobs** run a custom graph built in the Microsoft Sentinel Visual Studio Code extension, either on demand or on a schedule. You create them when you publish or refresh a custom graph. For more information, see [Custom graphs overview](custom-graphs-overview.md) and [Graph jobs](#graph-jobs) in this article.
 
 The Jobs management page provides the following functions:
 
@@ -31,12 +32,52 @@ The Jobs management page provides the following functions:
 + View details of all jobs and apply filter to narrow down the list.
 + View recent job health issues.
 + Create a new job to run a KQL query. For more information on creating jobs, see [Create jobs in the Microsoft Sentinel data lake using KQL](kql-jobs.md). Notebook jobs and graph jobs can't be created from this page.
-+ Edit job details for KQL jobs. You can view but can't edit a notebook job or a graph job from the Jobs page. For more information on editing notebook jobs, see [Notebook jobs](notebook-jobs.md). To edit a graph job, republish the graph from the custom-graph authoring experience.
++ Edit job details for KQL jobs. 
 + Disable a job, preventing it from running until you enable it again.
 + Enable a job, allowing it to run again after being disabled.
 + View job history, including the run times, and statuses of the job.
 + Delete a job, removing it from the list of jobs. This action is permanent and can't be undone.
 
+> [!NOTE]
+> Graph jobs and notebook jobs are **view-only** from the Jobs page. To change a graph job's query, schedule, or pool size, edit and republish the graph or notebook from the VS Code extension. The Jobs page doesn't support create, edit, or delete actions for graph or notebook jobs.
+
+
+## KQL jobs
+
+A **KQL job** runs a Kusto Query Language (KQL) query against the data lake tier and writes the results to the analytics tier, either once or on a schedule. You can create KQL jobs in the **KQL queries** editor or from the **Jobs** page. For more information about creating KQL jobs, see [Create jobs in the Microsoft Sentinel data lake using KQL](kql-jobs.md).
+
+The Jobs page supports the full KQL job lifecycle: you can create, edit, enable or disable, view run history for, and delete a KQL job from this page. To find KQL jobs, open the Jobs page and look for r
+
+## Notebook jobs
+
+A **notebook job** is a scheduled run of a notebook against data in the Microsoft Sentinel data lake. Notebook jobs are created from the notebook authoring experience when you schedule a notebook, not from the Jobs page. For more information about creating, editing, and scheduling notebook jobs, see [Notebook jobs](notebook-jobs.md).
+
+To find notebook jobs, open the Jobs page and look for rows where the **Job type** column shows **Notebook**. Selecting a notebook job opens a details panel that shows:
+
++ Job name and description.
++ **Job type**: Notebook.
++ Status (enabled or disabled) and most recent run status.
++ Schedule configuration.
++ Last run and next run times.
+
+<!-- TODO: confirm with engineering exactly which fields and actions the notebook job details panel exposes (for example, whether enable/disable and delete are available, and whether the History tab is populated). -->
+
+## Graph jobs
+
+A **graph job** is a scheduled notebook-based custom graph job in your Microsoft Sentinel data lake tenant. Graph jobs are created when you publish a custom graph from Sentinel VSC extension or when graphs are subsequently refreshed per your schedule configurations. For more information about creating custom graphs, see [Create custom graphs](create-custom-graphs.md) and [Custom graphs overview](custom-graphs-overview.md).
+
+
+
+To find graph jobs, open the Jobs page and look for rows where the **Job type** column shows **Graph**. Selecting a graph job opens a details panel that shows:
+
++ Job name and description.
++ **Job type**: Graph.
++ Status (enabled or disabled) and most recent run status.
++ Schedule configuration.
++ Pool size.
++ Last run and next run times.
+
+<!-- TODO: confirm with engineering whether the History tab is populated for graph jobs before this section goes live - behavior was uncertain during the docs working session. -->
 
 ## Permissions
 
@@ -96,23 +137,6 @@ To enable or disable a job, select **Enable** or **Disable** in the job details 
 
 To delete a job, select  **Delete** in the job details panel. A confirmation dialog appears, asking you to confirm the deletion. If you confirm, the job is permanently deleted and can't be recovered. You can't delete a running job.
 
-## Graph jobs
-
-A **graph job** is a scheduled notebook-based custom graph job in your Microsoft Sentinel data lake tenant. Graph jobs are created when you publish a custom graph from Sentinel VSC extension or when graphs are subsequently refreshed per your schedule configurations. For more information about creating custom graphs, see [Create custom graphs](create-custom-graphs.md) and [Custom graphs overview](custom-graphs-overview.md).
-
-> [!IMPORTANT]
-> Graph jobs are **view-only** from the Jobs page. To change a graph job's query, schedule, or pool size, edit and republish the graph from the custom-graph authoring experience. The Jobs page doesn't support create, edit, or delete actions for graph jobs.
-
-To find graph jobs, open the Jobs page and look for rows where the **Job type** column shows **Graph**. Selecting a graph job opens a details panel that shows:
-
-+ Job name and description.
-+ **Job type**: Graph.
-+ Status (enabled or disabled) and most recent run status.
-+ Schedule configuration.
-+ Pool size.
-+ Last run and next run times.
-
-<!-- TODO: confirm with engineering whether the History tab is populated for graph jobs before this section goes live - behavior was uncertain during the docs working session. -->
 
 ## Considerations and limitations
 
