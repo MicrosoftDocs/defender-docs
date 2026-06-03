@@ -10,9 +10,10 @@ ms.collection:
   - m365-security
   - tier1
 ms.topic: concept-article
-ms.custom: 
-- cx-ti
-- cx-dex
+ms.custom:
+  - cx-ti
+  - cx-dex
+  - sfi-ga-nochange
 ms.date: 08/01/2025
 ---
 

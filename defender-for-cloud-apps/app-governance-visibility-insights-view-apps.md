@@ -4,6 +4,7 @@ ms.date: 08/18/2025
 ms.topic: how-to
 description: Learn how to view app details with app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ms.reviewer: anandd512
+ms.custom: sfi-image-nochange
 ---
 
 # View your app details with app governance

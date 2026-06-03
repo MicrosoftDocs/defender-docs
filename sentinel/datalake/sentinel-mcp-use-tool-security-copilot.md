@@ -30,7 +30,7 @@ For information about how to get started with MCP tools, see the following artic
 To add a Microsoft Sentinel tool collection during custom agent building, follow these steps:
 
 1. Select **Add tool** to open the Tools catalog modal.
-1.	In the **Add a tool** modal, search for and select the tools you want to add from Microsoft Sentinel's collection of MCP tools. For example, search for "data exploration" to find the data exploration tool.
+1.	In the **Add a tool** modal, search for and select the tools you want to add from Microsoft Sentinel's collection of MCP tools. For example, search for "entity analyzer" to find the entity analyzer tools.
 1.	Select **Add selected** to add the tools to your agent.
 
 Your agent is now connected with Sentinel's available collection of tools. You can start prompting your agent and use the tools to deliver outcomes.

@@ -4,6 +4,7 @@ description: This article describes the process for identifying and remediating 
 ms.date: 06/02/2024
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 
 # View discovered apps with the Cloud discovery dashboard

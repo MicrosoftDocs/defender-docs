@@ -3,6 +3,7 @@ title: What's new archive
 description: This article lists Microsoft Defender for Cloud Apps release notes for versions and features released over 6 months ago.
 ms.date: 02/08/2026
 ms.topic: reference
+ms.custom: sfi-ga-blocked
 ---
 # Archive of past updates for Microsoft Defender for Cloud Apps
 

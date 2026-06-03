@@ -3,6 +3,7 @@ title: Remediation actions
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
 ms.date: 03/05/2026
 ms.topic: how-to
+ms.custom: sfi-ga-blocked
 ---
 
 # Remediation actions in Microsoft Defender for Identity

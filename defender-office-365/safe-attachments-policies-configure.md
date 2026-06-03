@@ -9,7 +9,9 @@ ms.collection:
   - m365-security
   - tier2
 description: Learn about how to define Safe Attachments policies to protect your organization from malicious files in email.
-ms.custom: seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ms.date: 05/22/2026
 appliesto:
@@ -60,6 +62,8 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
+  [!INCLUDE [rbac-save-failure-tip](../includes/rbac-save-failure-tip.md)]
+
 - For our recommended settings for Safe Attachments policies, see [Safe Attachments settings](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
 
   > [!TIP]
@@ -73,7 +77,7 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section.Or, to go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
-2. On the **Safe Attachments** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new Safe Attachments policy wizard.
+2. On the **Safe Attachments** page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create** to start the new Safe Attachments policy wizard.
 
 3. On the **Name your policy** page, configure these settings:
    - **Name**: Enter a unique, descriptive name for the policy.
@@ -93,7 +97,7 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
    >
    > Subdomains are automatically included unless you specifically exclude them. For example, a policy that includes contoso.com also includes marketing.contoso.com unless you exclude marketing.contoso.com.
 
-   Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png"::: next to the value.
+   Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png"::: next to the value.
 
    For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users, enter an asterisk (\*) by itself to see all available values.
 
@@ -164,13 +168,13 @@ On the **Safe Attachments** page, the following properties are displayed in the 
 - **Status**: Values are **On** or **Off**.
 - **Priority**: For more information, see the [Set the priority of Safe Attachments policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-safe-attachments-policies) section.
 
-To change the list of policies from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of policies from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific Safe Attachment policies.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific Safe Attachment policies.
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of policies to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to export the list of policies to a CSV file.
 
-Use :::image type="icon" source="media/m365-cc-sc-view-reports-icon.png" border="false"::: **View reports** to open the [Threat protection status report](reports-defender-for-office-365.md#threat-protection-status-report).
+Use :::image type="icon" source="media/defender-portal-icon-view-reports.png" border="false"::: **View reports** to open the [Threat protection status report](reports-defender-for-office-365.md#threat-protection-status-report).
 
 Select a policy by clicking anywhere in the row other than the check box next to the name to open the details flyout for the policy.
 
@@ -183,7 +187,7 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Em
 
 On the **Safe Attachments** page, select the Safe Attachments policy by using either of the following methods:
 
-- Select the policy from the list by selecting the check box next to the name. The following actions are available in the :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** dropdown list that appears:
+- Select the policy from the list by selecting the check box next to the name. The following actions are available in the :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More actions** dropdown list that appears:
   - **Enable selected policies**.
   - **Disable selected policies**.
   - **Delete selected policies**.
@@ -192,9 +196,9 @@ On the **Safe Attachments** page, select the Safe Attachments policy by using ei
 
 - Select the policy from the list by clicking anywhere in the row other than the check box next to the name. Some or all following actions are available in the details flyout that opens:
   - Modify policy settings by clicking **Edit** in each section (custom policies or the default policy)
-  - :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn on** or :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn off** (custom policies only)
-  - :::image type="icon" source="media/m365-cc-sc-increase-icon.png" border="false"::: **Increase priority** or :::image type="icon" source="media/m365-cc-sc-decrease-icon.png" border="false"::: **Decrease priority** (custom policies only)
-  - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete policy** (custom policies only)
+  - :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn on** or :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn off** (custom policies only)
+  - :::image type="icon" source="media/defender-portal-icon-increase.png" border="false"::: **Increase priority** or :::image type="icon" source="media/defender-portal-icon-decrease.png" border="false"::: **Decrease priority** (custom policies only)
+  - :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete policy** (custom policies only)
 
   :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom Safe Attachments policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
 
@@ -204,7 +208,7 @@ The actions are described in the following subsections.
 
 After you select a custom Safe Attachments policy by clicking anywhere in the row other than the check box next to the name, the policy settings are shown in the details flyout that opens. Select **Edit** in each section to modify the settings within the section. For more information about the settings, see the [Create Safe Attachments policies](#use-the-microsoft-defender-portal-to-create-safe-attachments-policies) section earlier in this article.
 
-You can't modify the Safe Attachments policies named **Standard Preset Security Policy**, **Strict Preset Security Policy**, or **Built-in protection (Microsoft)** that are associated with [preset security policies](preset-security-policies.md) in the policy details flyout. Instead, you select :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **View preset security policies** in the details flyout to go to the **Preset security policies** page at <https://security.microsoft.com/presetSecurityPolicies> to modify the preset security policies.
+You can't modify the Safe Attachments policies named **Standard Preset Security Policy**, **Strict Preset Security Policy**, or **Built-in protection (Microsoft)** that are associated with [preset security policies](preset-security-policies.md) in the policy details flyout. Instead, you select :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **View preset security policies** in the details flyout to go to the **Preset security policies** page at <https://security.microsoft.com/presetSecurityPolicies> to modify the preset security policies.
 
 ### Use the Microsoft Defender portal to enable or disable custom Safe Attachments policies
 
@@ -212,13 +216,13 @@ You can't enable or disable the Safe Attachments policies named **Standard Prese
 
 After you select an enabled custom Safe Attachments policy (the **Status** value is **On**), use either of the following methods to disable it:
 
-- **On the Safe Attachments page**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> **Disable selected policies**.
-- **In the details flyout of the policy**: Select :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn off** at the top of the flyout.
+- **On the Safe Attachments page**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More actions** \> **Disable selected policies**.
+- **In the details flyout of the policy**: Select :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn off** at the top of the flyout.
 
 After you select a disabled custom Safe Attachments policy (the **Status** value is **Off**), use either of the following methods to enable it:
 
-- **On the Safe Attachments page**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> **Enable selected policies**.
-- **In the details flyout of the policy**: Select :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn on** at the top of the flyout.
+- **On the Safe Attachments page**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More actions** \> **Enable selected policies**.
+- **In the details flyout of the policy**: Select :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn on** at the top of the flyout.
 
 On the **Safe Attachments** page, the **Status** value of the policy is now **On** or **Off**.
 
@@ -238,9 +242,9 @@ Safe Attachments protection stops for a recipient after the first policy is appl
 
 After you select the custom Safe Attachments policy by clicking anywhere in the row other than the check box next to the name, you can increase or decrease the priority of the policy in the details flyout that opens:
 
-- The custom policy with the **Priority** value **0** on the **Safe Attachments** page has the :::image type="icon" source="media/m365-cc-sc-decrease-icon.png" border="false"::: **Decrease priority** action at the top of the details flyout.
-- The custom policy with the lowest priority (highest **Priority** value; for example, **3**) has the :::image type="icon" source="media/m365-cc-sc-increase-icon.png" border="false"::: **Increase priority** action at the top of the details flyout.
-- If you have three or more policies, the policies between **Priority** 0 and the lowest priority have both the :::image type="icon" source="media/m365-cc-sc-increase-icon.png" border="false"::: **Increase priority** and the :::image type="icon" source="media/m365-cc-sc-decrease-icon.png" border="false"::: **Decrease priority** actions at the top of the details flyout.
+- The custom policy with the **Priority** value **0** on the **Safe Attachments** page has the :::image type="icon" source="media/defender-portal-icon-decrease.png" border="false"::: **Decrease priority** action at the top of the details flyout.
+- The custom policy with the lowest priority (highest **Priority** value; for example, **3**) has the :::image type="icon" source="media/defender-portal-icon-increase.png" border="false"::: **Increase priority** action at the top of the details flyout.
+- If you have three or more policies, the policies between **Priority** 0 and the lowest priority have both the :::image type="icon" source="media/defender-portal-icon-increase.png" border="false"::: **Increase priority** and the :::image type="icon" source="media/defender-portal-icon-decrease.png" border="false"::: **Decrease priority** actions at the top of the details flyout.
 
 When you're finished in the policy details flyout, select **Close**.
 
@@ -252,8 +256,8 @@ You can't remove the Safe Attachments policies named **Standard Preset Security 
 
 After you select the custom Safe Attachments policy, use either of the following methods to remove it:
 
-- **On the Safe Attachments page**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> **Delete selected policies**.
-- **In the details flyout of the policy**: Select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete policy** at the top of the flyout.
+- **On the Safe Attachments page**: Select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More actions** \> **Delete selected policies**.
+- **In the details flyout of the policy**: Select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete policy** at the top of the flyout.
 
 Select **Yes** in the warning dialog that opens.
 

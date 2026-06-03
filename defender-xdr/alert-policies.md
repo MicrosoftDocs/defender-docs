@@ -10,9 +10,10 @@ ms.collection:
 - tier1
 - M365-security-compliance
 ms.custom:
-- seo-marvel-apr2020
-- admindeeplinkCOMPLIANCE
-- admindeeplinkDEFENDER
+  - seo-marvel-apr2020
+  - admindeeplinkCOMPLIANCE
+  - admindeeplinkDEFENDER
+  - sfi-image-nochange
 description: "Create alert policies in the Microsoft Defender portal to monitor potential threats."
 ---
 

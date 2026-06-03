@@ -4,6 +4,7 @@ description: Create and configure a group managed service account (gMSA) for use
 ms.date: 10/12/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange
 ---
 
 # Configure a gMSA directory service account for Defender for Identity

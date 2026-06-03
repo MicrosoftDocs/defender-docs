@@ -4,6 +4,7 @@ description: This article provides information about how to enrich Defender for 
 ms.date: 01/29/2023
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 # Enrich cloud discovery data with Microsoft Entra usernames
 

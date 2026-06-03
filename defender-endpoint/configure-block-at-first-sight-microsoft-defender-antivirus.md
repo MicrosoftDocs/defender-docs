@@ -6,7 +6,9 @@ ms.localizationpriority: high
 author: chrisda
 ms.author: chrisda
 ms.reviewer: marcmcc
-ms.custom: nextgen
+ms.custom:
+  - nextgen
+  - sfi-image-nochange
 ms.date: 10/20/2025
 ms.subservice: ngp
 ms.topic: how-to

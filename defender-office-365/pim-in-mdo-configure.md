@@ -11,6 +11,7 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-image-nochange
 description: Learn to integrate Azure PIM in order to grant just-in-time, time limited access to users to do elevated privilege tasks in Microsoft Defender for Office 365, lowering risk to your data.
 ms.service: defender-office-365
 ---

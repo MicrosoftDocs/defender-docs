@@ -15,6 +15,7 @@ ms.date: 04/09/2025
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # Merge incidents manually in the Microsoft Defender portal (Preview)
