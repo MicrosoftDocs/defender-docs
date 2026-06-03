@@ -3,6 +3,7 @@ name: Approver Review
 permissions:
   pull-requests: write
   contents: read
+  statuses: write
 
 on:
   pull_request_target:
@@ -25,15 +26,15 @@ concurrency:
 
 jobs:
   policy:
-    # Skip noise from unrelated label events. Only react to labeled events when
-    # the label is one this workflow actually gates on. All other event types
-    # (opened, synchronize, reopened, issue_comment) always proceed.
+    # Run on every triggering event on the protected org repos. The job must
+    # never skip at the job level here: a skipped reusable-workflow caller job
+    # surfaces as the check "Approver Review / policy", whereas a job that runs
+    # surfaces the reusable job nested as "Approver Review / policy / gate".
+    # Letting some events skip therefore produces two different check names for
+    # the same automation. The gate job derives label qualification from the
+    # live PR state (not the event payload), so running on non-qualifying label
+    # events is an idempotent no-op and keeps a single check name.
     if: >-
-      (github.repository_owner == 'MicrosoftDocs' || github.repository_owner == 'microsoftgraph')
-      && (
-        github.event.action != 'labeled'
-        || github.event.label.name == 'qualifies-for-auto-merge'
-        || github.event.label.name == 'blocked-qualifies-for-auto-merge'
-      )
+      github.repository_owner == 'MicrosoftDocs' || github.repository_owner == 'microsoftgraph'
     uses: MicrosoftDocs/defender-docs/.github/workflows/MSecD-Shared-RequireWriterReview.yml@workflows-test
     secrets: inherit
