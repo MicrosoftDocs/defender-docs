@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      statuses: write
     steps:
       - name: Checkout calling repo for approvers file
         uses: actions/checkout@v5
@@ -606,11 +607,11 @@ jobs:
             *)       STATE="error" ;;
           esac
 
-          echo "Publishing commit status '$STATE' to $HEAD_SHA (context: Approver Review / gate)"
+          echo "Publishing commit status '$STATE' to $HEAD_SHA (context: Approver Review)"
 
           jq -n \
             --arg state "$STATE" \
-            --arg context "Approver Review / gate" \
+            --arg context "Approver Review" \
             --arg desc "Approver review gate ($STATE)" \
             --arg url "https://github.com/$REPO/actions/runs/${GITHUB_RUN_ID}" \
             '{state: $state, context: $context, description: $desc, target_url: $url}' | \
@@ -621,3 +622,4 @@ jobs:
             -d @-
 
           echo "Commit status published."
+
