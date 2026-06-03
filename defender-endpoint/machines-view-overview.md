@@ -100,6 +100,10 @@ Use filters to narrow down the list of devices and focus on specific device cate
 >
 > To clear your filters, navigate to the top-right of the **Devices list** and select the  **Filter** icon. On the flight-out pane, select the **Clear all filters** button.
 
+### Recommendation and device inventory sync considerations
+
+[!INCLUDE [recommendation-device-inventory-sync-note](../includes/recommendation-device-inventory-sync-note.md)]
+
 Here are a few common filter scenarios to get you started:
 
 - Filter by **Risk level** > **High** to find devices that need immediate investigation.
