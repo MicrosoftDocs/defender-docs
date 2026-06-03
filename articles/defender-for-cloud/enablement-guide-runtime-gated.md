@@ -1,6 +1,6 @@
 ---
 title: Enable Gated Deployment for Kubernetes Clusters
-description: Learn how to configure Gated Deployment and Kubernetes Misconfiguration Enforcement in Microsoft Defender for Containers to enforce security policies during deployments.
+description: Learn how to configure Gated Deployment and Kubernetes misconfiguration enforcement in Microsoft Defender for Containers to enforce security policies during deployments.
 #customer intent: As a Kubernetes administrator, I want to configure Gated Deployment in Defender for Containers so that I can enforce container image security policies during deployments.
 author: Elazark
 ms.author: elkrieger
@@ -159,11 +159,11 @@ To investigate a specific admission event, select it from the list. A details pa
     - Select **Vulnerability Assessment** to view a list of defined security rules.
     - Select a security rule and then select **Delete**.
 
-## Kubernetes Misconfiguration Enforcement (preview)
+## Kubernetes misconfiguration enforcement (preview)
 
-Kubernetes Misconfiguration Enforcement extends Kubernetes security by evaluating resource configurations at admission time and enforcing Microsoft Defender security best practice rules. It complements gated deployment by adding proactive enforcement for workload configuration—not just image vulnerabilities.
+Kubernetes misconfiguration enforcement extends Kubernetes security by evaluating resource configurations at admission time and enforcing Microsoft Defender security best practice rules. It complements gated deployment by adding proactive enforcement for workload configuration—not just image vulnerabilities.
 
-For full configuration steps, built-in rules, and use cases, see [Kubernetes Misconfiguration Enforcement (preview)](kubernetes-misconfiguration-enforcement.md).
+For full configuration steps, built-in rules, and use cases, see [Kubernetes misconfiguration enforcement (preview)](kubernetes-misconfiguration-enforcement.md).
 
 ## Related content
 
@@ -172,7 +172,7 @@ For more detailed guidance and support, see the following documentation:
 - [Overview: Gated Deployment of Container Images to a Kubernetes Cluster](runtime-gated-overview.md)  
   Introduction to the feature, its benefits, key capabilities, and how it works
 
-- [Kubernetes Misconfiguration Enforcement (preview)](kubernetes-misconfiguration-enforcement.md)  
+- [Kubernetes misconfiguration enforcement (preview)](kubernetes-misconfiguration-enforcement.md)  
   Full configuration steps, built-in rules, and use cases for enforcing Kubernetes resource configuration at admission time
 
 - [FAQ: Gated Deployment in Defender for Containers](faq-runtime-gated.md)  

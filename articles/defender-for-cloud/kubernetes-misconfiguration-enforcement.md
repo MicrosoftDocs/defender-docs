@@ -1,6 +1,6 @@
 ---
-title: Kubernetes Misconfiguration Enforcement (preview)
-description: Learn how to enable and configure Kubernetes Misconfiguration Enforcement in Microsoft Defender for Containers to audit or block misconfigured workloads at deployment time.
+title: Kubernetes misconfiguration enforcement (preview)
+description: Learn how to enable and configure Kubernetes misconfiguration enforcement in Microsoft Defender for Containers to audit or block misconfigured workloads at deployment time.
 #customer intent: As a Kubernetes administrator, I want to enforce Kubernetes security best practices at deployment time so that I can prevent misconfigured workloads from running in my clusters.
 author: dlanger
 ms.author: dlanger
@@ -9,12 +9,12 @@ ms.topic: how-to
 ai-usage: ai-assisted
 ---
 
-# Kubernetes Misconfiguration Enforcement (preview)
+# Kubernetes misconfiguration enforcement (preview)
 
 > [!IMPORTANT]
-> Kubernetes Misconfiguration Enforcement is currently in public preview. This feature is available only in commercial clouds. It isn't available in national or sovereign clouds, including US Government, China Government, and other sovereign regions.
+> Kubernetes misconfiguration enforcement is currently in public preview. This feature is available only in commercial clouds. It isn't available in national or sovereign clouds, including US Government, China Government, and other sovereign regions.
 
-Microsoft Defender for Cloud extends Kubernetes security from detection to prevention with Kubernetes Misconfiguration Enforcement. This capability lets organizations audit or block insecure Kubernetes configurations at deployment time, helping teams stop misconfigurations before they become incidents. Misconfiguration Enforcement evaluates Kubernetes resources during deployment and enforces Microsoft security best-practice rules consistently across clusters without relying on post-deployment scans or fragmented policy tools.
+Microsoft Defender for Cloud extends Kubernetes security from detection to prevention with Kubernetes misconfiguration enforcement. This capability lets organizations audit or block insecure Kubernetes configurations at deployment time, helping teams stop misconfigurations before they become incidents. Misconfiguration enforcement evaluates Kubernetes resources during deployment and enforces Microsoft security best-practice rules consistently across clusters without relying on post-deployment scans or fragmented policy tools.
 
 After you enable the feature, a default security rule named **Default K8s misconfiguration rule** is automatically created in Audit mode and applied globally to all your Kubernetes clusters. You can modify it to Block mode or create additional scoped policies to actively prevent non-compliant deployments.
 
@@ -26,7 +26,7 @@ After you enable the feature, a default security rule named **Default K8s miscon
 
 ## Use cases
 
-Kubernetes Misconfiguration Enforcement helps you:
+Kubernetes misconfiguration enforcement helps you:
 
 - Stop risky Kubernetes workloads before deployment by blocking containers with unsafe or non-compliant configurations.
 - Enforce non-root execution and approved user or group IDs so containers can't run with excessive OS privileges.
@@ -66,7 +66,7 @@ Kubernetes Misconfiguration Enforcement helps you:
 
 ## Enable the feature
 
-Kubernetes Misconfiguration Enforcement requires the Defender for Containers sensor (version 0.11) to be deployed to your cluster with misconfiguration policies enabled.
+Kubernetes misconfiguration enforcement requires the Defender for Containers sensor (version 0.11) to be deployed to your cluster with misconfiguration policies enabled.
 
 1. Follow the [Helm installation guide for the Defender for Containers sensor](defender-for-containers-deploy-azure-cli.md) for your environment. Use the latest `0.11.*` tag from the following Helm repository:
 
