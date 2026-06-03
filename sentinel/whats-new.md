@@ -18,13 +18,17 @@ The listed features were released in the last six months. For information about 
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
-## May 2026
+## June 2026
 
 - [Reason over Microsoft Sentinel graphs with graph tool (Preview)](#reason-over-microsoft-sentinel-graphs-with-graph-tool-preview)
-- [UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections](#ueba-enhancements-new-settings-experience-okta-v2-support-and-more-gcp-anomaly-detections)
 
 ### Reason over Microsoft Sentinel graphs with graph tool (Preview)
-The graph tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server provides visual graph-based exploration of relationships across identities, devices, threats, and signals to assess coverage, dependencies, and configuration gaps. For more information, see [Explore Microsoft Sentinel graphs with graph tools](datalake/sentinel-mcp-data-exploration-tool.md#graph-tools-preview). 
+
+The graph tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server provides visual graph-based exploration of relationships across identities, devices, threats, and signals to assess coverage, dependencies, and configuration gaps. For more information, see [Explore Microsoft Sentinel graphs with graph tools](datalake/sentinel-mcp-data-exploration-tool.md#graph-tools-preview).
+
+## May 2026
+
+- [UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections](#ueba-enhancements-new-settings-experience-okta-v2-support-and-more-gcp-anomaly-detections)
 
 ### UEBA enhancements: New settings experience, Okta V2 support, and more GCP anomaly detections
 

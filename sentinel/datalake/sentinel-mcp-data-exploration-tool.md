@@ -275,9 +275,9 @@ While this tool automatically polls for a few minutes until results are ready, i
 > [!IMPORTANT]
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-The graph tools let you reason over multiple Microsoft Sentinel graphs, including exposure, hunting, and data risk graphs. By using these tools, you can gather insights and make data-driven decisions while querying in natural language.
+The graph tools let you reason over multiple Microsoft Sentinel graphs, including exposure, hunting, and blast radius graphs. By using these tools, you can gather insights and make data-driven decisions while querying in natural language.
 
-#### Blast radius finder (`graph_find_blastradius`) 
+#### Blast radius finder (`find_blastradius`) 
 
 This tool evaluates the blast radius of a node by exploring propagation paths towards an organization's critical assets. It details the paths that start at the entity you provide, evaluates the risk, and specifies recommendations to reduce it.
 
@@ -285,7 +285,7 @@ This tool evaluates the blast radius of a node by exploring propagation paths to
 |----------|----------|----------|
 | `sourceName`| Yes |This parameter takes in keywords to search for relevant information matching an entity in the graph. It can be a node or a group of nodes. |
 
-#### Connection and path discovery (`graph_find_walkable_paths`) 
+#### Connection and path discovery (`find_walkable_paths`) 
 This tool enumerates the connections between any given pairs of sources and targets. It analyzes the nature of the connections and then decides whether it can be traversed for lateral movement. 
 
 | Parameters | Required? | Description | 
@@ -293,7 +293,7 @@ This tool enumerates the connections between any given pairs of sources and targ
 | `sourceName`  | Yes |This parameter takes in keywords to match an entity within the graph for the path starting point.|
 |`targetName`  |Yes |This parameter takes in keywords to match an entity within the graph for the path target. |
 
-#### Exposure perimeter analyzer (`graph_exposure_perimeter`) 
+#### Exposure perimeter analyzer (`find_exposure_perimeter`) 
 This tool lists the incoming connections from other entities to the specified entity. It helps you determine the risk that the entity faces. The tool might return prioritized recommendations based on the results. 
 
 | Parameters | Required? | Description | 
@@ -303,29 +303,29 @@ This tool lists the incoming connections from other entities to the specified en
 | `maxPathLength` | No |This parameter takes in the maximum number of hops in a path. |
 | `resultsCountLimit` | No |This parameter takes in the maximum number of paths to return. |
 
-#### Path between two entities (`graph_find_connected_nodes`) 
+#### Path between two entities (`find_connected_nodes`) 
 
 This tool lists traversable paths between two entities that match a criteria or characteristic that describes those entities. 
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
-| `sourceNodeLabel` | Yes |This parameter takes in a valid source label to filter on. For supported labels, use the `graph_get_context` tool. |
-| `sourceNodeProperties` | No |This parameter takes in a list of valid properties for the starting point entity, separated by commas. For supported properties, use the `graph_get_context` tool. |
-| `targetNodeLabel` | Yes |This parameter takes in a valid target label to filter on. For supported labels, use the `graph_get_context` tool. |
-| `targetNodeProperties` | No |This parameter takes in a list of valid properties for the ending point entity, separated by commas. For supported properties, use the `graph_get_context` tool. |
+| `sourceNodeLabel` | Yes |This parameter takes in a valid source label to filter on. For supported labels, use the `get_graph_context` tool. |
+| `sourceNodeProperties` | No |This parameter takes in a list of valid properties for the starting point entity, separated by commas. For supported properties, use the `get_graph_context` tool. |
+| `targetNodeLabel` | Yes |This parameter takes in a valid target label to filter on. For supported labels, use the `get_graph_context` tool. |
+| `targetNodeProperties` | No |This parameter takes in a list of valid properties for the ending point entity, separated by commas. For supported properties, use the `get_graph_context` tool. |
 | `resultsCountLimit` | No |This parameter takes in the maximum number of results to return. |
 
-#### Nodes match (`graph_find_nodes`)
+#### Nodes match (`find_nodes`)
 
 This tool finds and matches entities that the graph represents as nodes based on given criteria or characteristics. It returns a list of nodes that match the defined criteria.
 
 | Parameters | Required? | Description | 
 |----------|----------|----------|
-| `validNodeLabel` | Yes |This parameter takes in a node label to match. For supported labels, use the `graph_get_context` tool. |
-| `validNodeProperties` | No |This parameter takes in a list of properties to match, separated by commas. For supported properties, use the `graph_get_context` tool. |
+| `validNodeLabel` | Yes |This parameter takes in a node label to match. For supported labels, use the `get_graph_context` tool. |
+| `validNodeProperties` | No |This parameter takes in a list of properties to match, separated by commas. For supported properties, use the `get_graph_context` tool. |
 | `resultsLimit` | No |This parameter takes in the maximum number of results to return. |
 
-#### General information and context for graph (`graph_get_context`)
+#### General information and context for graph (`get_graph_context`)
 
 This tool provides context for the parameters and serves as a reference to help you understand which tools, functionalities, or parameters you can use. Use it as a helper to get the graph context so you can better use the other graph MCP tools in the collection. 
 
