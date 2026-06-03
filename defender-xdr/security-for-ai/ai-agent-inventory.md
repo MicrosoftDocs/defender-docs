@@ -54,13 +54,12 @@ To view your Agent 365-managed agents and their configuration details:
     ```kql
     AgentsInfo
     | summarize arg_max(Timestamp, *) by AgentId
-    | where RegistrySource == "A365"
-    | where AgentStatus != "Deleted"
+    | where LifecycleStatus != "Deleted"
     ```
 
     The results show you the AI agents in your organization that are registered with Microsoft Agent 365, along with their configuration settings. 
 
-    :::image type="content" source="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png" alt-text="Screenshot of Advanced Hunting in Microsoft Defender showing a KQL query editor, Run query button, and agent results table." lightbox="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png":::
+    :::image type="content" source="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png" alt-text="Screenshot of Advanced Hunting in Microsoft Defender showing the AgentsInfo table query with results displaying agent name, platform, description, version, published status, lifecycle status, and creation time." lightbox="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png":::
 
     > [!IMPORTANT]
     > The `AgentsInfo` table stores multiple snapshots of each agent over time. Use `arg_max(Timestamp, *)` to get the latest state of each agent. For more information about the arg_max() aggregation function, see [arg_max() function](/kusto/query/arg-max-aggregation-function).
