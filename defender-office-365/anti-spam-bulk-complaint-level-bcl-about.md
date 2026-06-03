@@ -49,7 +49,7 @@ Messages that meet or exceed the configured BCL threshold have the following def
 
 The filters in the [View data by Email \> Spam and Chart breakdown by Detection Technology](reports-email-security.md#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) view of the **Threat protection status report** in the Microsoft Defender portal at <https://security.microsoft.com/reports/TPSEmailSpamReportATP> contain the **Bulk complaint level** slider.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. In the **Filters** flyout that opens,  select only the **Detection** value **Bulk** in the **Filters** flyout that opens. Use the **Bulk complaint level** slider to increase or decrease the BCL threshold.
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. In the **Filters** flyout that opens,  select only the **Detection** value **Bulk** in the **Filters** flyout that opens. Use the **Bulk complaint level** slider to increase or decrease the BCL threshold.
 
 After you apply the filters and return to the main report page, you see that hanging the BCL threshold changes the data in the report:
 

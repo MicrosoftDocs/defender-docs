@@ -10,6 +10,9 @@ ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ---
 
 # Automatic user notifications for user reported phishing results in AIR
@@ -44,7 +47,7 @@ This article explains how to enable and customize automatic feedback response fo
 
    :::image type="content" source="media/air-automatic-feedback.png" alt-text="Automatic feedback response options on the User reported settings page." lightbox="media/air-automatic-feedback.png":::
 
-4. The notification email uses the same template as when an admin selects :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>.
+4. The notification email uses the same template as when an admin selects :::image type="icon" source="media/defender-portal-icon-mark-and-notify.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>.
 
    You can customize the notification email by selecting the **Customize results email** link.
 

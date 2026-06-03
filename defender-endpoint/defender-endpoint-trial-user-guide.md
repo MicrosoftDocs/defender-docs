@@ -12,6 +12,7 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: 
+ms.custom: sfi-ga-nochange
 ---
 
 # Trial user guide: Microsoft Defender for Endpoint

@@ -6,7 +6,7 @@ ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: concept-article
-ms.date: 04/02/2026
+ms.date: 05/04/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.custom: references_regions
@@ -34,6 +34,10 @@ performs over the Microsoft Sentinel data lake. You're charged for the [Security
 ### Triage tool
 
 You can use the [triage tool collection](sentinel-mcp-triage-tool.md) at no extra cost, if you're onboarded to the required products and services.
+
+### Graph tool
+
+Installing and configuring the [graph tool collection](sentinel-mcp-data-exploration-tool.md#graph-tools-preview) carries no cost. However, you invoke the graph meter when you start using the tools to query a Microsoft Sentinel graph. For more information, see:  [Plan costs and understand Microsoft Sentinel pricing and billing](../billing.md#graph-charges).
 
 ## Quotas and limits
 

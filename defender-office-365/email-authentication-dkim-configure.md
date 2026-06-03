@@ -12,6 +12,8 @@ ms.collection:
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
+  - sfi-image-nochange
 description: Learn how Microsoft 365 uses DomainKeys Identified Mail (DKIM) to sign outbound mail, and how to configure DKIM signing of outbound mail using custom domains.
 ms.service: defender-office-365
 appliesto:
@@ -238,7 +240,7 @@ Proceed if the domain meets these requirements.
 
    After a moment, the **Status** value of the \*.onmicrosoft.com domain domain changes to **Valid**, but the **Toggle** value is still :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Disabled**.
 
-   Select **Refresh** :::image type="icon" source="media/m365-cc-sc-refresh-icon.png" border="false"::: and the **Toggle** value updates to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Enabled**.
+   Select **Refresh** :::image type="icon" source="media/defender-portal-icon-refresh.png" border="false"::: and the **Toggle** value updates to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Enabled**.
 
 ### Use Exchange Online PowerShell to configure DKIM signing of outbound messages
 
