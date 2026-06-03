@@ -53,7 +53,8 @@ The following reference lists all the tables in the schema. Each table name link
 |------------|-------------|
 | **[AADSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)** | Microsoft Entra interactive and non-interactive sign-ins |	
 | **[AADSpnSignInEventsBeta](advanced-hunting-aadspnsignineventsbeta-table.md)** | Microsoft Entra service principal and managed identity sign-ins |	
-|**[AIAgentsInfo](advanced-hunting-aiagentsinfo-table.md)** (Preview) | Information about AI agents created with Microsoft Copilot Studio, including agent configuration and ownership details |	
+| **[AgentsInfo](advanced-hunting-agentsinfo-table.md)** (Preview) | Information about AI agents and their properties from various platforms |
+|**[AIAgentsInfo](advanced-hunting-aiagentsinfo-table.md)** (Preview) | Information about AI agents created with Microsoft Copilot Studio, including agent configuration and ownership details |
 | **[AlertEvidence](advanced-hunting-alertevidence-table.md)** | Files, IP addresses, URLs, users, or devices associated with alerts |	
 | **[AlertInfo](advanced-hunting-alertinfo-table.md)** | Alerts from Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity, including severity information and threat categorization  |	
 | **[BehaviorEntities](advanced-hunting-behaviorentities-table.md)** (Preview) | Entities (file, process, device, user, and others) that are involved in a behavior in Microsoft Defender for Cloud Apps (not available for GCC) and User and Entity Behavior Analytics (UEBA) |	
