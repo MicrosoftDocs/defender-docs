@@ -81,14 +81,14 @@ For Microsoft Foundry agents, Microsoft Defender also surfaces security posture 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
 1. In the left navigation pane, select **Assets** > **AI Agents**.
 
-    A list of all detected AI agents appears. 
+    The **AI Assets** page opens. Select the **Agents** tab to see cloud-based agents, or the **Local agents** tab to see agents discovered on endpoints.
 
-    :::image type="content" source="media/ai-agent-inventory/ai-agent-inventory.png" alt-text="Screenshot that shows the AI agent inventory in the Defender portal." lightbox="media/ai-agent-inventory/ai-agent-inventory.png":::  
+    :::image type="content" source="media/ai-agent-inventory/ai-agent-inventory.png" alt-text="Screenshot that shows the AI Assets page in the Defender portal with the Agents tab selected, displaying agent name, platform, publish status, MCP servers count, discovered tools, active alerts, and creation time columns." lightbox="media/ai-agent-inventory/ai-agent-inventory.png":::  
 
-1. Select **Microsoft Foundry**, **Copilot Studio**, **AWS Bedrock**, or **GCP Vertex AI** to see a filtered list of AI agents based on the tool used to create the agent.
+1. Use the **Platform** filter to select **Microsoft Foundry**, **Copilot Studio**, **AWS Bedrock**, or **GCP Vertex AI** to see a filtered list of AI agents based on the tool used to create the agent. You can also filter by **Agent name**, **Publish status**, **Model**, **Version**, and **Creation time**.
 1. To see detailed information about an AI agent, select the agent from the list. This opens the **Agent** pane, which provides detailed information about the selected agent. The information displayed varies based on whether the agent was created in Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, or GCP Vertex AI.
 
-    :::image type="content" source="media/ai-agent-inventory/ai-agent-details-pane.png" alt-text="Screenshot of the AI agent inventory in the Defender portal showing agent list, filters, and detailed information for a selected Microsoft Foundry agent." lightbox="media/ai-agent-inventory/ai-agent-details-pane.png":::
+    :::image type="content" source="media/ai-agent-inventory/ai-agent-details-pane.png" alt-text="Screenshot of the AI agent inventory in the Defender portal showing the agent details pane for a selected Copilot Studio agent, including description, version, publish status, creation time, model, tools, channels, and MCP servers." lightbox="media/ai-agent-inventory/ai-agent-details-pane.png":::
 
     > [!NOTE]
     > For Microsoft Copilot Studio agents, the AI agent inventory currently supports agent discovery, but not security posture management. To manage security posture for Copilot Studio agents, use [Advanced Hunting](#view-all-agent-365-managed-agents-and-configuration-details-using-advanced-hunting).
