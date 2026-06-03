@@ -17,88 +17,78 @@ appliesto:
 
 # Discover AI agents and assess security posture using Microsoft Defender (Preview)
 
-You can discover all of the AI agents in your organization and view their configuration details using Advanced Hunting in the Microsoft Defender portal.
+Microsoft Defender lets you discover all of the Microsoft Agent 365 managed agents in your organization and view their configuration details using two experiences in the Microsoft Defender portal: 
 
-Microsoft Defender also provides a dedicated AI agent inventory experience in the Defender portal for agent discovery and posture management, including agent details, posture insights, risk factors, and security recommendations, where supported. This inventory is currently available for agents built with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, GCP Vertex AI, and [local AI agents](/defender-endpoint/local-agent-discovery-overview) discovered on endpoints. To use the inventory, you need to enable the required features.
+- Advanced Hunting
+- A dedicated AI agent inventory experience
 
-This article explains how to discover AI agents, assess their security posture, and use the AI agent inventory in the Microsoft Defender portal. For information on discovering local AI agents, see [Discover local AI agents in Microsoft Defender for Endpoint](/defender-endpoint/discover-local-ai-agents).
+This inventory includes cloud agents built with Microsoft Copilot Studio, Microsoft Foundry, and [supported non-Microsoft cloud platforms](/microsoft-agent-365/admin/agent-registry), and [local AI agents](/defender-endpoint/local-agent-discovery-overview) discovered on endpoints. 
+
+This article explains how to discover AI agents, assess their security posture, and use the AI agent inventory in the Microsoft Defender portal. 
 
 ## Prerequisites
 
-- [Onboard to Microsoft Agent 365](/microsoft-agent-365/overview) (except for endpoints that use the [AI agent runtime protection feature](/defender-endpoint/ai-agent-runtime-protection-overview.md), which are included in Agent 365 by default).
-- [Enable preview features](../preview.md) in the Microsoft Defender portal to access the `AIAgentsInfo` table in Advanced Hunting and get AI agent-related evidence in alerts.
+- [Onboard to Microsoft Agent 365](/microsoft-agent-365/overview) (except for endpoints that use the [AI agent runtime protection feature](/defender-endpoint/ai-agent-runtime-protection-overview), which are included in Agent 365 by default).
+- [Enable preview features](../preview.md) in the Microsoft Defender portal to access the `AgentsInfo` table in Advanced Hunting and get AI agent-related evidence in alerts.
 
-## View all Agent 365-managed agents and configuration details using Advanced Hunting
+## Discover AI agents and assess security posture using Advanced Hunting
 
-The [AIAgentsInfo table](/defender-xdr/advanced-hunting-aiagentsinfo-table) in Advanced Hunting provides a complete inventory of your Agent 365 agents along with their security-relevant properties. This table enables you to:
+The [AgentsInfo table](/defender-xdr/advanced-hunting-agentsinfo-table) in Advanced Hunting provides a complete inventory of your Agent 365 agents along with their security-relevant properties. This table enables you to:
 
 - **Discover AI agents** registered in your Agent 365 environment.
 - **Assess security posture and risks** by querying authentication, access control, tools, knowledge sources, and orchestration settings.
 
 > [!NOTE]
-> The `AIAgentsInfo` table provides an extended set of properties for Copilot Studio agents.
+> The `AgentsInfo` table replaces the previous `AIAgentsInfo` table as part of the Microsoft Agent 365 transition. For more information, see [Transition agent security capabilities to Microsoft Agent 365](transition-agent-security-to-agent-365.md).
 
 To view your Agent 365-managed agents and their configuration details:
 
 1. Open the [Microsoft Defender portal](https://security.microsoft.com/)
 1. Select **Investigation & response** > **Hunting** > **Advanced hunting**.
-1. Query the `AIAgentsInfo` table.
+1. Query the `AgentsInfo` table.
 
     **To manage security posture**, use the prebuilt queries that Microsoft provides and maintains for AI agents. To access these queries, select the **Queries** tab, then select **AI Agents**. For more information, see [Sample queries](/defender-xdr/advanced-hunting-aiagentsinfo-table).
 
     Create your own queries using Kusto Query Language (KQL). For example, run this query to get a list of all AI agents registered with Microsoft Agent 365, along with their key security information:
 
     ```kql
-    AIAgentsInfo
-    | summarize arg_max(Timestamp, *) by AIAgentId
-    | where RegistrySource == "A365"
-    | where AgentStatus != "Deleted"
+    AgentsInfo
+    | summarize arg_max(Timestamp, *) by AgentId
+    | where LifecycleStatus != "Deleted"
     ```
 
     The results show you the AI agents in your organization that are registered with Microsoft Agent 365, along with their configuration settings. 
 
-    :::image type="content" source="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png" alt-text="Screenshot of Advanced Hunting in Microsoft Defender showing a KQL query editor, Run query button, and agent results table." lightbox="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png":::
+    :::image type="content" source="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png" alt-text="Screenshot of Advanced Hunting in Microsoft Defender showing the AgentsInfo table query with results displaying agent name, platform, description, version, published status, lifecycle status, and creation time." lightbox="media/ai-agent-inventory/advanced-hunting-ai-agents-query.png":::
 
     > [!IMPORTANT]
-    > The `AIAgentsInfo` table stores multiple snapshots of each agent over time. Use `arg_max(Timestamp, *)` to get the latest state of each agent. For more information about the arg_max() aggregation function, see [arg_max() function](/kusto/query/arg-max-aggregation-function).
+    > The `AgentsInfo` table stores multiple snapshots of each agent over time. Use `arg_max(Timestamp, *)` to get the latest state of each agent. For more information about the arg_max() aggregation function, see [arg_max() function](/kusto/query/arg-max-aggregation-function).
 
     For more information:
 
     - To learn how to query local AI agents discovered on endpoint devices, see [Discover local AI agents in Microsoft Defender for Endpoint](/defender-endpoint/discover-local-ai-agents).
     - To learn about advanced hunting, see [Proactively hunt for threats with Advanced Hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
-## Discover and manage security posture of supported AI agents using the AI agent inventory UI
+## Discover and manage AI agents using the AI Assets page (Preview)
 
-The AI agent inventory page in the Defender portal provides a centralized view of all agents you build with Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, and GCP Vertex AI, along with their key attributes and security status.
+The **AI Assets** page in the Defender portal provides a centralized view of all agents you build with Microsoft agent plaforms, supported non-Microsoft cloud platforms, and [local AI agents](/defender-endpoint/local-agent-discovery-overview) discovered on endpoints.
 
-In this view, you can also discover local AI agents with [Microsoft Defender for Endpoint](/defender-endpoint/discover-local-ai-agents).
-
-For Microsoft Foundry agents, Microsoft Defender also surfaces security posture recommendations. For a complete list of AI security posture recommendations that can apply to Microsoft Foundry workloads, see [AI security recommendations](/azure/defender-for-cloud/recommendations-reference-ai#azure-recommendations).
-
-1. Enable the required features for AI agent inventory:
-    - For Copilot Studio agents, enable the [Copilot Studio integration in Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-inventory). 
-    - For Microsoft Foundry, AWS Bedrock, and GCP Vertex AI, enable the [Microsoft Foundry integration in Microsoft Defender for Cloud](/azure/defender-for-cloud/ai-security-posture#discover-ai-agents-preview). 
+To view your AI agent inventory:
+ 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
 1. In the left navigation pane, select **Assets** > **AI Agents**.
 
-    A list of all detected AI agents appears. 
+    The **AI Assets** page opens. Select the **Agents** tab to see cloud-based agents, or the **Local agents** tab to see agents discovered on endpoints.
 
-    :::image type="content" source="media/ai-agent-inventory/ai-agent-inventory.png" alt-text="Screenshot that shows the AI agent inventory in the Defender portal." lightbox="media/ai-agent-inventory/ai-agent-inventory.png":::  
+    :::image type="content" source="media/ai-agent-inventory/ai-agent-inventory.png" alt-text="Screenshot that shows the AI Assets page in the Defender portal with the Agents tab selected, displaying agent name, platform, publish status, MCP servers count, discovered tools, active alerts, and creation time columns." lightbox="media/ai-agent-inventory/ai-agent-inventory.png":::  
 
-1. Select **Microsoft Foundry**, **Copilot Studio**, **AWS Bedrock**, or **GCP Vertex AI** to see a filtered list of AI agents based on the tool used to create the agent.
-1. To see detailed information about an AI agent, select the agent from the list. This opens the **Agent** pane, which provides detailed information about the selected agent. The information displayed varies based on whether the agent was created in Microsoft Copilot Studio, Microsoft Foundry, AWS Bedrock, or GCP Vertex AI.
+1. Use the filter bar to narrow the list by **Agent name**, **Platform**, **Publish status**, **Model**, **Version**, or **Creation time**.
+1. To see detailed information about an AI agent, select the agent from the list. This opens the **Agent** pane, which provides detailed information about the selected agent. 
 
-    :::image type="content" source="media/ai-agent-inventory/ai-agent-details-pane.png" alt-text="Screenshot of the AI agent inventory in the Defender portal showing agent list, filters, and detailed information for a selected Microsoft Foundry agent." lightbox="media/ai-agent-inventory/ai-agent-details-pane.png":::
-
-    > [!NOTE]
-    > For Microsoft Copilot Studio agents, the AI agent inventory currently supports agent discovery, but not security posture management. To manage security posture for Copilot Studio agents, use [Advanced Hunting](#view-all-agent-365-managed-agents-and-configuration-details-using-advanced-hunting).
+    :::image type="content" source="media/ai-agent-inventory/ai-agent-details-pane.png" alt-text="Screenshot of the AI agent inventory in the Defender portal showing the agent details pane for a selected Copilot Studio agent, including description, version, publish status, creation time, model, tools, channels, and MCP servers." lightbox="media/ai-agent-inventory/ai-agent-details-pane.png":::
 
     - Select **Open agent page** to open the **AI Agent** page.
-
-        :::image type="content" source="media/ai-agent-inventory/foundry-agent-details.png" alt-text="Screenshot that shows the details for Microsoft Foundry AI agents in the Defender portal." lightbox="media/ai-agent-inventory/foundry-agent-details.png"::: 
-
     - Select **Go hunt** to run [Advanced Hunting](/defender-xdr/advanced-hunting-overview) queries.
-    - Select **View on map** to see the agent's location and related attack paths.
 
 ## Next steps
 
