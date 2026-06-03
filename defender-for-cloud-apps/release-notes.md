@@ -1,8 +1,11 @@
 ---
 title: What's new | Microsoft Defender for Cloud Apps
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Cloud Apps.
-ms.date: 01/05/2026
+ms.date: 05/20/2026
 ms.topic: overview
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ---
 
 # What's new in Microsoft Defender for Cloud Apps
@@ -18,6 +21,12 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 
 For news about earlier releases, see [Archive of past updates for Microsoft Defender for Cloud Apps](release-note-archive.md).
+
+## May 2026
+
+### Disable informational alerts for unsanctioned app access (Preview)
+
+You can now disable informational alerts generated when users access unsanctioned apps. A new **Generate alert for blocked app access** toggle in the Microsoft Defender for Endpoint settings lets you suppress these alerts while keeping blocking enforcement active. For more information, see [Disable informational alerts for unsanctioned app access](mde-govern.md#disable-informational-alerts-for-unsanctioned-app-access-preview).
 
 ## March 2026
 

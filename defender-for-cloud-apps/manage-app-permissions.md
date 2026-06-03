@@ -4,6 +4,7 @@ description: This article provides information about how you can control, ban, a
 ms.date: 08/12/2025
 ms.reviewer: anandd512
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Manage OAuth apps
 

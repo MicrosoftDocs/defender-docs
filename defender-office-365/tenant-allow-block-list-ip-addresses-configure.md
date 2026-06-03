@@ -14,6 +14,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Allow or block IPv6 addresses using the Tenant Allow/Block List
@@ -91,7 +92,7 @@ You can create allow entries for IPv6 addresses directly in the Tenant Allow/Blo
 
 2. On the **Tenant Allow/Block Lists** page, select the **IP addresses** tab.
 
-3. On the **IP addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Allow**.
+3. On the **IP addresses** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Allow**.
 
 4. In the **Allow IP addresses** flyout that opens, configure the following settings:
 
@@ -138,7 +139,7 @@ Incoming email messages from IPv6 addresses in block entries are blocked at the 
 
 2. On the **Tenant Allow/Block Lists** page, select the **IP addresses** tab.
 
-3. On the **IP addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **IP addresses** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Block**.
 
 4. In the **Block IP addresses** flyout that opens, configure the following settings:
 
@@ -189,7 +190,7 @@ On the **IP addresses** tab, you can sort the entries by clicking on an availabl
 - **Remove on**: The expiration date.
 - **Notes**
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Action**: The available values are **Allow** and **Block**.
 - **Never expire**: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: or :::image type="icon" source="media/scc-toggle-off.png" border="false":::
@@ -198,11 +199,11 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Remove on**: Select **From** and **To** dates.
 - **Modified by**: Provide an incomplete or complete email address to search by it.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
+To group the entries, select :::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
 
 ### Use PowerShell to view entries for IPv6 addresses in the Tenant Allow/Block List
 
@@ -240,7 +241,7 @@ For existing IP addresses entries, you can change the expiration date and note.
 
 2. Select the **IP addresses** tab
 
-3. On the **IP addresses** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. On the **IP addresses** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 
 4. In the **Edit IP addresses** flyout that opens, the following settings are available:
    - **Block entries**:
@@ -286,8 +287,8 @@ For detailed syntax and parameter information, see [Set-TenantAllowBlockListItem
 
 3. On the **IP addresses** tab, do one of the following steps:
 
-   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout.
+   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
+   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** at the top of the flyout.
 
      > [!TIP]
      > To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.

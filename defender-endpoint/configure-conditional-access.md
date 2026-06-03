@@ -13,6 +13,7 @@ ms.date: 01/05/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 ---
 
 # Configure Conditional Access in Microsoft Defender for Endpoint

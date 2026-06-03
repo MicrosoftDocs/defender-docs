@@ -304,6 +304,26 @@
       "source_path": "defender-endpoint/targeting-devices.md",
       "redirect_url": "/defender-endpoint/machine-tags",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/supported-capabilities-by-platform.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint#defender-for-endpoint-capabilities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/defender-compatibility.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-endpoint-windows#antivirus-solution-compatibility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/microsoft-defender-endpoint-ios.md",
+      "redirect_url": "/defender-endpoint/mtd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/microsoft-defender-endpoint-android.md",
+      "redirect_url": "/defender-endpoint/mtd",
+      "redirect_document_id": false
     }
   ]
 }

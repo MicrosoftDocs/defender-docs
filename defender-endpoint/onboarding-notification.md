@@ -14,6 +14,7 @@ ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Create a notification rule when a local onboarding or offboarding script is used

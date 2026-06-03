@@ -8,8 +8,9 @@ ms.assetid: 6a601501-a6a8-4559-b2e7-56b59c96a586
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can learn about the outbound spam controls in Microsoft 365, and what to do if you need to send mass mailings.
 ms.service: defender-office-365
 ms.date: 09/03/2025

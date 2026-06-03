@@ -3,18 +3,26 @@ title: Manage action accounts
 description: Learn how to manage action accounts to work with Microsoft Defender for Identity. This step is optional.
 ms.date: 02/21/2024
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Configure Microsoft Defender for Identity action accounts
 
-Defender for Identity allows you to take [remediation actions](../remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so.
+Defender for Identity allows you to take [remediation actions](../remediation-actions.md) targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Microsoft Defender for Identity needs to have the required permissions to do so. This is separate from the [Directory Service Account](directory-service-accounts.md), which is for reading AD data.
+
+> [!IMPORTANT]
+> This configuration applies to the Defender for Identity sensor v2.x on domain controllers only. Remediation actions aren't performed by sensors on AD FS, AD CS, or Microsoft Entra Connect servers that aren't domain controllers. The sensor v3.x always uses the domain controller's local system account for remediation actions. If all your sensors are v3.x, no action account configuration is needed.
 
 By default, the Microsoft Defender for Identity sensor impersonates the `LocalSystem` account of the domain controller and performs the actions, including [attack disrupting scenarios from Microsoft Defender XDR](/microsoft-365/security/defender/automatic-attack-disruption).
 
 If you need to change this behavior, set up a dedicated gMSA and scope the permissions that you need. For example:
 
 > [!WARNING]
-> The Defender for Identity sensor v3.x does not support gMSA action accounts. If you're using or migrating to sensor v3.x, you must use the default `LocalSystem` account. If a gMSA is configured, response actions, including [attack disruption](/microsoft-365/security/defender/automatic-attack-disruption), won't work. For more information, see [Defender for Identity sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
+> The sensor v3.x does not use gMSA action accounts. It always uses the domain controller's local system account for remediation actions.
+>
+> If any of your sensors are v3.x, select **Automatically use the sensor's local system account**. The v3.x sensors use the local system account regardless of gMSA configuration. The v3.x sensors don't use gMSA accounts configured for v2.x sensors.
+>
+> For more information, see [Sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
 
 :::image type="content" source="../media/management-accounts.png" alt-text="Screenshot of the Manage action accounts tab." lightbox="../media/management-accounts.png":::
 
