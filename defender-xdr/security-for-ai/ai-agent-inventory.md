@@ -22,7 +22,7 @@ Microsoft Defender lets you discover all of the Microsoft Agent 365 managed agen
 - Advanced Hunting
 - A dedicated AI agent inventory experience
 
-This inventory includes cloud agents built with Microsoft Copilot Studio, Microsoft Foundry, and supported non-Microsoft cloud platforms, and [local AI agents](/defender-endpoint/local-agent-discovery-overview) discovered on endpoints. 
+This inventory includes cloud agents built with Microsoft Copilot Studio, Microsoft Foundry, and [supported non-Microsoft cloud platforms](/microsoft-agent-365/admin/agent-registry), and [local AI agents](/defender-endpoint/local-agent-discovery-overview) discovered on endpoints. 
 
 This article explains how to discover AI agents, assess their security posture, and use the AI agent inventory in the Microsoft Defender portal. 
 
