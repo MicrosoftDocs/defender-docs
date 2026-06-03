@@ -53,24 +53,14 @@ With these features, Defender for Cloud provides full visibility of AI workloads
 
 ## Discover AI agents (Preview)
 
-Defender for Cloud discovers AI agent workloads and identifies details of your organization's AI BOM. This visibility allows you to identify and address vulnerabilities and protect generative AI agent applications from potential threats.
+Effective July 1, 2026, agent-level discovery, security posture, and threat detection for Microsoft Foundry agents and third-party cloud agents require a [Microsoft Agent 365](/microsoft-agent-365/overview) license. These capabilities were previously available through the Defender CSPM plan in Microsoft Defender for Cloud. Defender CSPM continues to discover Microsoft Foundry accounts and projects, but agent-level capabilities now require Agent 365.
 
-> [!IMPORTANT]
-> This feature is currently in preview and included with Defender CSPM in Microsoft Defender for Cloud at no extra cost. Licensing requirements might change when the feature becomes generally available. If a change in pricing occurs, the feature is automatically disabled, and you'll receive notification. To continue using the feature, you might need a new license to re-enable the feature.
+The AI agent inventory is available in the Microsoft Defender portal and provides a centralized view of your agents along with their security status.
 
-Defender for Cloud automatically and continuously discovers deployed AI agents across the following services:
+For more information, see:
 
-- Azure Foundry AI Agents (requires access to Defender for Cloud with the [Defender CSPM plan enabled](tutorial-enable-cspm-plan.md))
-- Copilot Studio AI Agents (requires a [Microsoft Defender for Cloud Apps](/defender-cloud-apps/ai-agent-protection) license) 
-
-When you enable the Defender CSPM plan on your Azure subscription, the portal automatically discovers and inventories AI agents deployed with Azure AI Foundry and populates the AI inventory with the list of discovered AI agents.
-
-> [!NOTE]
-> To view preview features in the Defender portal, you need to [enable Microsoft Defender for Cloud preview features in the Defender portal.](/defender-xdr/preview).
->
-> :::image type="content" source="media/ai-security-posture/enable-preview-features.png" alt-text="Screenshot that shows Defender for Cloud's preview features set to enabled in the Defender portal." lightbox="media/ai-security-posture/enable-preview-features.png":::
-
-Learn how to [Protect your AI agents (Preview)](/defender-xdr/ai-agent-inventory).
+- [Discover AI agents and assess security posture using the AI agent inventory](/defender-xdr/security-for-ai/ai-agent-inventory)
+- [Transition AI agent security capabilities to Microsoft Agent 365](/defender-xdr/security-for-ai/transition-agent-security-to-agent-365)
 
 ## Reduce risks to generative AI apps
 
