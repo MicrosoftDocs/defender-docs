@@ -1,5 +1,5 @@
 ---
-title: Posture for Serverless Containers (Preview)
+title: Discovery and posture for serverless container workloads (Preview)
 description: Learn how Microsoft Defender for Cloud uses Defender cloud security posture management (Defender CSPM) to provide inventory, recommendations, and attack path visibility for serverless containers.
 ms.topic: concept-article
 ms.date: 06/03/2026
@@ -8,9 +8,9 @@ ms.author: elkrieger
 #customer intent: "As a cloud security administrator, I want to understand posture for serverless containers in Microsoft Defender for Cloud so that I can prioritize risk across supported serverless workloads."
 ---
 
-# Posture for Serverless Containers (Preview)
+# Discovery and posture for serverless container workloads (Preview)
 
-Posture for Serverless Containers in Microsoft Defender for Cloud helps you assess and prioritize risk in serverless container environments where host-level agents aren't available.
+Discovery and posture for serverless container workloads in Microsoft Defender for Cloud helps you assess and prioritize risk in serverless container environments where host-level agents aren't available.
 
 In Defender cloud security posture management (Defender CSPM), this capability extends posture coverage to supported serverless container resources and surfaces findings in the same experiences you already use. These experiences include inventory, recommendations, and attack path analysis. This visibility helps your team find exposed workloads, understand broader risk, and focus remediation on the issues that matter most.
 
@@ -20,15 +20,15 @@ In Defender cloud security posture management (Defender CSPM), this capability e
 > - Azure Container Apps (ACA)
 > - Azure Container Instances (ACI)
 
-## What is posture for serverless containers?
+## What is discovery and posture for serverless container workloads?
 
-Posture for Serverless Containers extends Defender CSPM capabilities to serverless container platforms. It gives you a unified view of discovered resources, misconfiguration findings, vulnerability assessment findings, and attack path context for supported workloads.
+Discovery and posture for serverless container workloads extends Defender CSPM capabilities to serverless container platforms. It gives you a unified view of discovered resources, misconfiguration findings, vulnerability assessment findings, and attack path context for supported workloads.
 
-This capability is posture-focused in preview. It is designed for serverless container environments where runtime and host telemetry are limited by the platform abstraction.
+This capability is discovery and posture focused in preview. It is designed for serverless container environments where runtime and host telemetry are limited by the platform abstraction.
 
 ## Requirements and availability
 
-To use posture for serverless containers:
+To use discovery and posture for serverless container workloads:
 
 - Enable [Defender CSPM](tutorial-enable-cspm-plan.md).
 - Make sure supported workloads are present in your connected environments.

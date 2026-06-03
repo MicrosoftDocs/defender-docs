@@ -32,7 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| June 3, 2026 | Preview | [Posture for Serverless Containers (Preview)](#posture-for-serverless-containers-preview) |
+| June 3, 2026 | Preview | [Discovery and posture for serverless container workloads (Preview)](#discovery-and-posture-for-serverless-container-workloads-preview) |
 | June 3, 2026 | Preview | [Kubernetes misconfiguration enforcement in Defender for Containers (preview)](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-preview) |
 | June 2, 2026 | Preview | [Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)](#vulnerability-assessment-extended-to-runtime-discovered-container-images-on-eks-and-gke-preview) |
 | June 2, 2026 | Preview | [Kubernetes node vulnerability assessment extended to EKS and GKE (Preview)](#kubernetes-node-vulnerability-assessment-extended-to-eks-and-gke-preview) |
@@ -41,15 +41,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
 
-### Posture for Serverless Containers (Preview)
+### Discovery and posture for serverless container workloads (Preview)
 
 June 3, 2026
 
-Microsoft Defender for Cloud now includes Posture for Serverless Containers in preview for supported serverless container workloads.
+Microsoft Defender for Cloud now includes discovery and posture coverage for supported serverless container workloads in preview.
 
 This capability adds inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps and Azure Container Instances.
 
-Learn more about [Posture for Serverless Containers (Preview)](posture-for-serverless-containers.md).
+Learn more about [Discovery and posture for serverless container workloads (Preview)](posture-for-serverless-containers.md).
 
 ### Kubernetes misconfiguration enforcement in Defender for Containers (preview)
 
@@ -232,8 +232,6 @@ The **Cloud Posture** report offers a centralized view of your overall cloud sec
 To access cloud security reports, navigate to the **Reporting** page in the Microsoft Defender portal and select the **Cloud** tab.
 
 Learn more about [Cloud security reporting in Microsoft Defender portal](cloud-security-reporting.md).
-
-<a name="scanning-support-for-docker-hardened-container-images"></a>
 
 ### Scanning support for Docker Hardened container images (preview)
 

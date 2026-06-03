@@ -375,7 +375,7 @@
           href: enable-permissions-management.md
         - name: Agentless machine scanning
           href: concept-agentless-data-collection.md
-        - name: Posture for Serverless Containers (Preview)
+        - name: Discovery and posture for serverless container workloads (Preview)
           displayName: serverless containers, ACA, ACI, posture, inventory, recommendations, attack path
           href: posture-for-serverless-containers.md
         - name: What is Serverless protection?
