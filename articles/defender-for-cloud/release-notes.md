@@ -33,6 +33,10 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | June 3, 2026 | Preview | [Posture for Serverless Containers (Preview)](#posture-for-serverless-containers-preview) |
+| June 3, 2026 | Preview | [Kubernetes misconfiguration enforcement in Defender for Containers (preview)](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-preview) |
+| June 2, 2026 | Preview | [Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)](#vulnerability-assessment-extended-to-runtime-discovered-container-images-on-eks-and-gke-preview) |
+| June 2, 2026 | Preview | [Kubernetes node vulnerability assessment extended to EKS and GKE (Preview)](#kubernetes-node-vulnerability-assessment-extended-to-eks-and-gke-preview) |
+| June 1, 2026 | GA | [General availability of Microsoft Defender for Open-Source Relational Databases on AWS RDS](#general-availability-of-microsoft-defender-for-open-source-relational-databases-on-aws-rds) |
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
@@ -46,6 +50,62 @@ Microsoft Defender for Cloud now includes Posture for Serverless Containers in p
 This capability adds inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps and Azure Container Instances.
 
 Learn more about [Posture for Serverless Containers (Preview)](posture-for-serverless-containers.md).
+
+### Kubernetes misconfiguration enforcement in Defender for Containers (preview)
+
+June 3, 2026
+
+Kubernetes misconfiguration enforcement is now available in public preview in Microsoft Defender for Containers. This feature extends Kubernetes security from audit to audit or block mode at deployment time, preventing risky Kubernetes deployments before they reach production.
+
+Kubernetes misconfiguration enforcement evaluates Kubernetes resource configurations at admission time and enforces Microsoft Defender security best practice rules, complementing existing post-deployment monitoring with proactive enforcement. After you enable the feature, a default security rule is automatically created in Audit mode. You can configure rules to use Block mode to actively prevent non-compliant deployments.
+
+This feature is available only in commercial clouds. It isn't available in national or sovereign clouds, including US Government, China Government, and other sovereign regions.
+
+For more information, see [Enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md).
+
+
+### Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)
+
+June 4, 2026
+
+Defender for Cloud now extends vulnerability assessment to runtime-discovered container images on Amazon Elastic Kubernetes Service (EKS) and Google Kubernetes Engine (GKE). Previously, vulnerability assessment covered registry-based images. With this update, images discovered at runtime that weren't previously scanned from a registry are now also assessed, providing additional findings and increased visibility into running workloads.
+
+This capability delivers a unified vulnerability assessment experience across Azure, AWS, and GCP, using the same recommendation model and workflows. To use this feature, you must have AWS or GCP onboarded into Defender for Cloud. As additional image types are being scanned, your bill might increase.
+
+Learn more about [vulnerability assessment for containers](view-and-remediate-vulnerabilities-containers.md).
+
+### Kubernetes node vulnerability assessment extended to EKS and GKE (Preview)
+
+June 2, 2026
+
+Defender for Cloud now extends Kubernetes node (host) vulnerability assessment to Amazon Elastic Kubernetes Service (EKS) and Google Kubernetes Engine (GKE), bringing parity with the existing Azure Kubernetes Service (AKS) capability.
+
+This feature detects OS-level vulnerabilities in Kubernetes node VMs across EKS and GKE environments. When vulnerabilities are detected, Defender for Cloud surfaces an "Upgrade Kubernetes nodes" recommendation that identifies affected node pools and guides you to upgrade to a patched Kubernetes or node version. As additional image types are being scanned, your bill might increase. 
+
+**Key details:**
+
+- Covers Kubernetes host nodes (OS/infrastructure layer), not container workloads.
+- Provides consistent visibility and unified remediation guidance across Azure, AWS, and GCP.
+
+Requires AWS or GCP onboarded into Defender for Cloud with agentless scanning enabled.
+
+Learn more about [Kubernetes node vulnerability assessment](kubernetes-nodes-va.md).
+
+### General availability of Microsoft Defender for Open-Source Relational Databases on AWS RDS
+
+June 1, 2026
+
+Microsoft Defender for Open-Source Relational Databases is now generally available for Amazon Web Services Relational Database Service (AWS RDS) instances.
+
+As of June 1, 2026, the plan bills for AWS RDS instances that were previously onboarded to the preview version of the feature. Usage starts to appear on your July 2026 bill.
+
+You continue to receive database threat protection and sensitive data discovery for supported open-source relational databases, including Aurora PostgreSQL, Aurora MySQL, PostgreSQL, MySQL, and MariaDB on AWS RDS.
+
+No action is required to maintain protection if you onboarded Open-Source Relational Databases on AWS RDS during the preview. The feature automatically transitioned to general availability.
+
+To opt out and avoid future charges, disable Open-Source Relational Databases on the relevant AWS account.
+
+Learn more about [Microsoft Defender for Open-Source Relational Databases](defender-for-databases-introduction.md) and how to [manage database protection plans](enable-defender-for-databases-aws.md).
 
 ### Container-level misconfiguration recommendations for Kubernetes (Preview)
 
@@ -93,7 +153,7 @@ Learn more about [What is Serverless protection?](serverless-protection.md), [Se
 | May 26, 2026 | GA | [General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage](#general-availability-of-on-demand-malware-scanning-of-azure-files-in-microsoft-defender-for-storage) |
 | May 24, 2026 | Upcoming | [Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available](#microsoft-defender-for-open-source-relational-databases-on-aws-rds-will-become-generally-available) |
 | May 20, 2026 | Preview | [Cloud security reporting in Microsoft Defender portal (Preview)](#cloud-security-reporting-in-microsoft-defender-portal-preview) |
-| May 19, 2026| Preview | [Scanning support for Docker Hardened container images](#scanning-support-for-docker-hardened-container-images-preview) |
+| May 19, 2026| Preview | [Scanning support for Docker Hardened container images (preview)](#scanning-support-for-docker-hardened-container-images-preview) |
 | May 18, 2026 | GA | [Microsoft Defender Experts for Servers as a managed XDR option](#microsoft-defender-experts-for-servers-as-a-managed-xdr-option) |
 | May 17, 2026 | Preview | [SQL Vulnerability Assessment Express Configuration now available for Azure SQL Managed Instance and Synapse (Preview)](#sql-vulnerability-assessment-express-configuration-now-available-for-azure-sql-managed-instance-and-synapse-preview) |
 | May 6, 2026 | GA | [Updated Helm installation for Defender for Containers sensor](#updated-helm-installation-for-defender-for-containers-sensor) |
@@ -124,17 +184,17 @@ This update expands Kubernetes node malware coverage beyond Azure Kubernetes Ser
 
 For more information, see [Kubernetes nodes overview](kubernetes-nodes-overview.md) and [Review and remediate malware alerts for Kubernetes nodes](kubernetes-nodes-malware.md).
 
-### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage 
+### General availability of on-demand malware scanning of Azure Files in Microsoft Defender for Storage
 
 May 26, 2026
 
-On-demand malware scanning for Azure Files in Microsoft Defender for Storage is now in publicly available. This feature extends the existing on-demand malware scan feature and lets you scan entire Azure Storage accounts that contain blobs and files.
+On-demand malware scanning of Azure Files in Microsoft Defender for Storage is now generally available.
 
-You can start scans in the Azure portal UI or with the Representational State Transfer (REST) application programming interface (API). You can also automate scans with Azure Logic Apps, Azure Automation playbooks, and PowerShell scripts.
+This feature extends on-demand malware scanning so you can scan Azure Storage accounts that contain blobs and files.
 
-This feature uses Microsoft Defender Antivirus and applies the latest malware definitions for each scan. It also shows an upfront cost estimate in the Azure portal before you start a scan.
+You can start scans in the Azure portal or by using the REST API. You can also automate scans by using Azure Logic Apps, Azure Automation runbooks, and PowerShell scripts.
 
-For more information, see [On-demand malware scanning](/azure/defender-for-cloud/on-demand-malware-scanning).
+Learn more about [on-demand malware scanning](on-demand-malware-scanning.md).
 
 ### Microsoft Defender for Open-Source Relational Databases on AWS RDS will become Generally Available
 

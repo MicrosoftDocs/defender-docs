@@ -1,19 +1,19 @@
 ---
-title: Enable Defender for open-source relational databases on Amazon Web Services (AWS) (Preview)
-description: Learn how to enable Microsoft Defender for open-source relational databases to detect potential security threats on AWS environments.
-ms.date: 05/24/2026
+title: Enable Defender for open-source relational databases on Amazon Web Services (AWS)
+description: Enable Defender for open-source relational databases on AWS RDS to detect suspicious activity and protect supported database engines.
+ms.date: 06/02/2026
 ms.topic: how-to
 ms.author: elkrieger
-author: Elazark
+author: ElazarK
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my AWS databases.
 ---
 
-# Enable Defender for open-source relational databases on Amazon Web Services (AWS) (Preview)
+# Enable Defender for open-source relational databases on Amazon Web Services (AWS)
 
 > [!IMPORTANT]
-> On June 1, 2026, Microsoft Defender for Open-Source Relational Databases for AWS RDS transitions to General Availability, and billing starts with usage reflected in your July 2026 bill. You continue to receive database threat protection and sensitive data discovery capabilities for supported AWS RDS databases. No action is required if you want to keep the protection enabled. To opt out before charges begin, follow the instructions in [Disable the plan](#disable-the-plan).
+> On June 1, 2026, Microsoft Defender for Open-Source Relational Databases for AWS RDS transitioned to General Availability, and billing started. If you had the plan enabled before June 1, 2026 you continue to receive database threat protection and sensitive data discovery capabilities for supported AWS RDS databases. No action is required if you want to keep the protection enabled. To opt out, follow the instructions in [Disable the plan](#disable-the-plan).
 
-The Defender for open-source relational databases plan in Microsoft Defender for Cloud helps you detect and investigate unusual activity in your AWS RDS databases. This preview supports the following database instance types:
+The Defender for open-source relational databases plan in Microsoft Defender for Cloud helps you detect and investigate unusual activity in your AWS Relational Database Service (RDS) databases. This plan supports the following database instance types:
 
 - Aurora PostgreSQL
 - Aurora MySQL
@@ -51,18 +51,18 @@ To enable Defender for open-source relational databases on AWS:
 
 1. Locate the **Databases** plan and select **Settings**.
 
-    :::image type="content" source="media/enable-defender-for-databases-aws/databases-settings.png" alt-text="Screenshot of the AWS environment settings page that shows where the settings button is located." lightbox="media/enable-defender-for-databases-aws/databases-settings.png":::
+    :::image type="content" source="media/enable-defender-for-databases-aws/databases-settings.png" alt-text="Screenshot of the AWS environment settings page that shows where to select Settings." lightbox="media/enable-defender-for-databases-aws/databases-settings.png":::
 
-1. Toggle open-source relational databases to **On**.  
+1. Toggle open-source relational databases to **On**.
 
-    :::image type="content" source="media/enable-defender-for-databases-aws/toggle-open-source-on.png" alt-text="Screenshot that shows how to toggle the open-source relational databases to on." lightbox="media/enable-defender-for-databases-aws/toggle-open-source-on.png":::
+    :::image type="content" source="media/enable-defender-for-databases-aws/toggle-open-source-on.png" alt-text="Screenshot that shows how to turn on open-source relational databases protection." lightbox="media/enable-defender-for-databases-aws/toggle-open-source-on.png":::
 
     > [!NOTE]
-    > Turning on Open-source relational databases also enables Sensitive data discovery, a shared feature with Defender CSPM for relational database service (RDS) resources.
+    > Turning on open-source relational databases also enables sensitive data discovery, a shared feature with Defender CSPM for RDS resources.
     >
     > :::image type="content" source="media/enable-defender-for-databases-aws/cspm-shared.png" alt-text="Screenshot that shows the settings page for Defender CSPM and the sensitive data turned on with the protected resources." lightbox="media/enable-defender-for-databases-aws/cspm-shared.png":::
     >
-    > Learn more about [sensitive data discovery in AWS RDS instances](concept-data-security-posture-prepare.md#discover-and-scan-aws-rds-instances).
+    > For more information, see [Discover and scan AWS RDS instances](concept-data-security-posture-prepare.md#discover-and-scan-aws-rds-instances).
 
 1. Select **Configure access**.
 
@@ -166,3 +166,4 @@ To disable Defender for open-source relational databases on AWS RDS:
 
 > [!div class="nextstepaction"]
 > [Respond to Defender open-source database alerts](defender-for-databases-usage.md)
+

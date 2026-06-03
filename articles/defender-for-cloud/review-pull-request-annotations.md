@@ -3,11 +3,14 @@ title: Review pull request annotations in GitHub and Azure DevOps
 description: Review pull request annotations in GitHub or in Azure DevOps.
 ms.topic: how-to
 ms.date: 05/25/2025
+author: ElazarK
+ms.author: elkrieger
+#customer intent: As a developer or security reviewer, I want to review pull request annotations so I can address security issues before merge.
 ---
 
 # Review pull request annotations in GitHub and Azure DevOps
 
-Reviewing pull request annotations in GitHub and Azure DevOps is crucial for maintaining code quality and security. This process helps identify and resolve potential issues early in the development cycle, ensuring that the codebase remains robust and secure.
+This article shows how to review and act on Defender for Cloud pull request annotations in GitHub and Azure DevOps. Use these annotations to resolve security issues before you merge code.
 
 ## Resolve security issues in GitHub
 
@@ -55,9 +58,9 @@ DevOps security in Defender for Cloud reactivates an annotation if the security 
 
 Learn more about [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
 
-Learn how to [Discover misconfigurations in Infrastructure as Code](iac-vulnerabilities.md).
+Learn how to [discover misconfigurations in Infrastructure as Code](iac-vulnerabilities.md).
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [DevOps security in Defender for Cloud](defender-for-devops-introduction.md).
+> [DevOps security in Defender for Cloud](defender-for-devops-introduction.md)

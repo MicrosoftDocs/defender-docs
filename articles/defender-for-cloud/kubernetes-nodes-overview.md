@@ -1,7 +1,7 @@
 ---
 title: Overview of Kubernetes Nodes Protection
 description: Learn about Defender for Containers vulnerability assessment and malware detection for Kubernetes nodes.
-ms.date: 03/09/2026
+ms.date: 05/26/2026
 ms.topic: overview
 ---
 
