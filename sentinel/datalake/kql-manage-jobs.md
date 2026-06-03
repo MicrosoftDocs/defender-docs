@@ -39,18 +39,18 @@ The Jobs management page provides the following functions:
 + Delete a job, removing it from the list of jobs. This action is permanent and can't be undone.
 
 > [!NOTE]
-> Graph jobs and notebook jobs are **view-only** from the Jobs page. To change a graph job's query, schedule, or pool size, edit and republish the graph or notebook from the VS Code extension. The Jobs page doesn't support create, edit, or delete actions for graph or notebook jobs.
+> Graph jobs and notebook jobs are **view-only** from the Jobs page. To change a graph or notebook job's query, schedule, or pool size, edit and republish the graph or notebook from the VS Code extension. The Jobs page doesn't support create, edit, or delete actions for graph or notebook jobs.
 
 
 ## KQL jobs
 
 A **KQL job** runs a Kusto Query Language (KQL) query against the data lake tier and writes the results to the analytics tier, either once or on a schedule. You can create KQL jobs in the **KQL queries** editor or from the **Jobs** page. For more information about creating KQL jobs, see [Create jobs in the Microsoft Sentinel data lake using KQL](kql-jobs.md).
 
-The Jobs page supports the full KQL job lifecycle: you can create, edit, enable or disable, view run history for, and delete a KQL job from this page. To find KQL jobs, open the Jobs page and look for r
+The Jobs page supports the full KQL job lifecycle: you can create, edit, enable or disable, view run history for, and delete a KQL job from this page. To find KQL jobs, open the Jobs page and look for rows where the **Job type** column shows **KQL**. For step-by-step procedures, see [Manage jobs](#manage-jobs).
 
 ## Notebook jobs
 
-A **notebook job** is a scheduled run of a notebook against data in the Microsoft Sentinel data lake. Notebook jobs are created from the notebook authoring experience when you schedule a notebook, not from the Jobs page. For more information about creating, editing, and scheduling notebook jobs, see [Notebook jobs](notebook-jobs.md).
+A **notebook job** is a scheduled run of a notebook against data in the Microsoft Sentinel data lake. Notebook jobs are created from the VS Code extension when you schedule a notebook, not from the Jobs page. For more information about creating, editing, and scheduling notebook jobs, see [Notebook jobs](notebook-jobs.md).
 
 To find notebook jobs, open the Jobs page and look for rows where the **Job type** column shows **Notebook**. Selecting a notebook job opens a details panel that shows:
 
@@ -64,7 +64,7 @@ To find notebook jobs, open the Jobs page and look for rows where the **Job type
 
 ## Graph jobs
 
-A **graph job** is a scheduled notebook-based custom graph job in your Microsoft Sentinel data lake tenant. Graph jobs are created when you publish a custom graph from Sentinel VSC extension or when graphs are subsequently refreshed per your schedule configurations. For more information about creating custom graphs, see [Create custom graphs](create-custom-graphs.md) and [Custom graphs overview](custom-graphs-overview.md).
+A **graph job** is a scheduled notebook-based custom graph job in your Microsoft Sentinel data lake tenant. Graph jobs are created when you publish a custom graph from Sentinel VS Code extension or when graphs are subsequently refreshed per your schedule configurations. For more information about creating custom graphs, see [Create custom graphs](create-custom-graphs.md) and [Custom graphs overview](custom-graphs-overview.md).
 
 
 
