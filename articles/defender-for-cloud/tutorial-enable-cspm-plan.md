@@ -1,10 +1,10 @@
 ---
 title: Protect your resources with Defender CSPM
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
 description: Learn how to enable Defender CSPM on your Azure subscription for Microsoft Defender for Cloud and enhance your security posture.
 ms.topic: install-set-up-deploy
-ms.date: 11/25/2025
+ms.date: 06/03/2026
 ---
 
 # Protect your resources with Defender CSPM
@@ -68,17 +68,19 @@ Once the Defender CSPM plan is enabled on your subscription, you have the abilit
 
 - **[Serverless protection](serverless-protection.md)** - Detects and assesses serverless resources such as Azure Web Apps, Azure Functions, and AWS Lambda for security risks without requiring agents to be installed. It identifies misconfigurations, vulnerabilities, and insecure dependencies, providing remediation guidance to improve security posture.
 
+- **[Serverless Containers (Preview)](posture-for-serverless-containers.md)** - Assesses Azure Container Apps, Azure Container Instances, and AWS - ECS Fargate workloads in Defender CSPM experiences such as inventory, recommendations, and attack path analysis.
+
 **To enable the components of the Defender CSPM plan**:
 
 1. On the Defender plans page, select **Settings**.
 
-    :::image type="content" source="media/tutorial-enable-cspm-plan/cspm-settings.png" alt-text="Screenshot of the Defender plans page that shows where to select the settings option." lightbox="media/tutorial-enable-cspm-plan/cspm-settings.png":::
+    :::image type="content" source="media/tutorial-enable-cspm-plan/cspm-settings.png" alt-text="Screenshot showing the Defender plans page where you select the Settings option." lightbox="media/tutorial-enable-cspm-plan/cspm-settings.png":::
 
 1. Select **On** for each component to enable it.
 
 1. (Optional) For agentless scanning, select **Edit configuration**.
 
-    :::image type="content" source="media/tutorial-enable-cspm-plan/cspm-configuration.png" alt-text="Screenshot that shows where to select edit configuration." lightbox="media/tutorial-enable-cspm-plan/cspm-configuration.png":::
+    :::image type="content" source="media/tutorial-enable-cspm-plan/cspm-configuration.png" alt-text="Screenshot showing where you select Edit configuration." lightbox="media/tutorial-enable-cspm-plan/cspm-configuration.png":::
 
     1. Enter a tag name and tag value for any machines to be excluded from scans.
 

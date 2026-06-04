@@ -297,6 +297,8 @@ Privileged containers have all of the root capabilities of a host machine. They 
 
 **Severity**: Medium
 
+### Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods (Preview)
+
 **Type**: [Preview] Upgrade Azure Kubernetes Service Version
 
 **Description**: Defender for Cloud scans AKS-managed system pods for known vulnerabilities (CVEs). When vulnerabilities are detected, this recommendation identifies the minimum AKS version upgrade that resolves each CVE, giving you a clear and actionable remediation path. This recommendation applies to system pods managed by AKS, not customer workloads. For each CVE, the recommendation lists CVSS score, and the minimum AKS version that includes the fix.
@@ -527,7 +529,7 @@ All the [Kubernetes data plane security recommendations](kubernetes-workload-pro
 
 ### Secrets should be configured for containers to prevent the use of sensitive plaintext environment variables
 
-**Description**: Defender for Cloud identified plain text environment variables in your ECS task definitions. This issue arises when sensitive information such as credentials, tokens, or keys is stored directly within container configurations rather than secured using secrets. Plaintext variables can be accessed by any internal process or inadvertently logged, increasing the risk of unauthorized access and secret leakage.
+**Description**: Defender for Cloud identified plain text environment variables in your ECS task definitions. This issue arises when sensitive information such as credentials, tokens, or keys are stored directly within container configurations rather than secured using secrets. Plaintext variables can be accessed by any internal process or inadvertently logged, increasing the risk of unauthorized access and secret leakage.
 
 **Severity**: High
 

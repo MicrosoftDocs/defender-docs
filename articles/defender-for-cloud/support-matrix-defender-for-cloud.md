@@ -4,7 +4,7 @@ description: Learn about the Azure cloud environments where Defender for Cloud c
 ms.topic: limits-and-quotas
 author: ElazarK
 ms.author: elkrieger
-ms.date: 05/25/2026
+ms.date: 06/03/2026
 ---
 
 # Support matrices for Defender for Cloud
@@ -107,6 +107,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | Custom Recommendations (Preview) | Preview|NA|NA|NA|
 | Agentless containers vulnerability assessment |GA|GA|NA|NA|
 | API security posture management (Preview) | Preview|NA|NA|NA|
+| [Serverless Containers (Preview)](posture-for-serverless-containers.md) | Preview | NA | NA | NA |
 | [Serverless protection](serverless-protection.md) <sup>[4](#footnote4)</sup> | GA | NA | NA | NA |
 |**DEFENDER FOR CLOUD PLANS** | | | | |
 |[Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md)| GA | GA| NA | NA|

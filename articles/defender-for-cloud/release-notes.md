@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 06/02/2026
+ms.date: 06/04/2026
 ---
 
 # What's new in Defender for Cloud features
@@ -32,13 +32,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| June 3, 2026 | Preview | [Kubernetes misconfiguration enforcement in Defender for Containers (Preview)](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-preview) |
+| June 4, 2026 | Preview | [Discovery and posture for serverless container workloads (Preview)](#discovery-and-posture-for-serverless-container-workloads-preview) |
+| June 3, 2026 | Preview | [Kubernetes misconfiguration enforcement in Defender for Containers (preview)](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-preview) |
 | June 2, 2026 | Preview | [Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)](#vulnerability-assessment-extended-to-runtime-discovered-container-images-on-eks-and-gke-preview) |
 | June 2, 2026 | Preview | [Kubernetes node vulnerability assessment extended to EKS and GKE (Preview)](#kubernetes-node-vulnerability-assessment-extended-to-eks-and-gke-preview) |
 | June 1, 2026 | GA | [General availability of Microsoft Defender for Open-Source Relational Databases on AWS RDS](#general-availability-of-microsoft-defender-for-open-source-relational-databases-on-aws-rds) |
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### Discovery and posture for serverless container workloads (Preview)
+
+June 4, 2026
+
+Microsoft Defender for Cloud now includes discovery and posture coverage for supported serverless container workloads in preview.
+
+This capability adds inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps and Azure Container Instances.
+
+Learn more about [Discovery and posture for serverless container workloads (Preview)](posture-for-serverless-containers.md).
 
 ### Kubernetes misconfiguration enforcement in Defender for Containers (Preview)
 
