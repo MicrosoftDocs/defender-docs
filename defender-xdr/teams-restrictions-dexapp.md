@@ -106,7 +106,7 @@ To add a new app permission policy, follow these steps:
 
 ## Teams channel unavailable
 
-You can't receive updates or chat with Defender Experts if the Managed Response channel is archived or deleted. To learn more, see how to [archive](https://support.microsoft.com/office/archive-or-restore-a-channel-53c46491-a265-4391-a2a7-001c5026c9e5) or [restore a deleted channel](https://support.microsoft.com/office/delete-a-channel-in-microsoft-teams-973f9014-53db-4165-8ab4-365021fe36b7).
+You can't receive updates or chat with Defender Experts if the Managed Response or Hunting notification channel is archived or deleted. To learn more, see how to [archive](https://support.microsoft.com/office/archive-or-restore-a-channel-53c46491-a265-4391-a2a7-001c5026c9e5) or [restore a deleted channel](https://support.microsoft.com/office/delete-a-channel-in-microsoft-teams-973f9014-53db-4165-8ab4-365021fe36b7).
 
 If the Teams app is deleted, you can reconfigure it again in the Defender portal by going to **Settings** > **Defender Experts** > **Teams**.
 
