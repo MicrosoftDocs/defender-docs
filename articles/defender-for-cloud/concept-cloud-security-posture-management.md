@@ -92,7 +92,7 @@ Defender for Cloud supports integrations with partner systems for incident manag
 
 | Service | Resource Types | Exclusions |
 |---|---|---|
-| Compute | Virtual machines, VM scale sets, classic VMs | Deallocated VMs, Databricks VMs |
+| Compute | Virtual machines, Virtual Machine scale sets, classic VMs | Deallocated VMs, Databricks VMs |
 | Storage | Storage accounts | Accounts without blob containers or file shares |
 | Databases | SQL servers, PostgreSQL/MySQL servers, Synapse workspaces | – |
 

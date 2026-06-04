@@ -529,7 +529,7 @@ All the [Kubernetes data plane security recommendations](kubernetes-workload-pro
 
 ### Secrets should be configured for containers to prevent the use of sensitive plaintext environment variables
 
-**Description**: Defender for Cloud identified plain text environment variables in your ECS task definitions. This issue arises when sensitive information such as credentials, tokens, or keys is stored directly within container configurations rather than secured using secrets. Plaintext variables can be accessed by any internal process or inadvertently logged, increasing the risk of unauthorized access and secret leakage.
+**Description**: Defender for Cloud identified plain text environment variables in your ECS task definitions. This issue arises when sensitive information such as credentials, tokens, or keys are stored directly within container configurations rather than secured using secrets. Plaintext variables can be accessed by any internal process or inadvertently logged, increasing the risk of unauthorized access and secret leakage.
 
 **Severity**: High
 
