@@ -4,7 +4,7 @@ description: Defend your AWS resources with Microsoft Defender for Cloud, a guid
 author: ElazarK
 ms.author: elkrieger
 ms.topic: install-set-up-deploy
-ms.date: 04/19/2026
+ms.date: 06/04/2026
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -167,7 +167,7 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
 
     ### [Defender CSPM](#tab/Defender-for-CSPM)
     
-    Defender CSPM has two plan option, Foundational CSPM which is included with you Defender for Cloud subscription and enabled by default, and Defender CSPM which is the paid plan for CSPM. 
+    Defender CSPM has two plan options: Foundational CSPM, which is included with your Defender for Cloud subscription and enabled by default, and Defender CSPM, which is the paid plan.
     
     To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
     
@@ -187,23 +187,23 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
     
     ### [Defender for SQL](#tab/Defender-for-SQL)
     
-    Defender for databases helps you protect SQL Server workloads on EC2 instances and RDS Custom for SQL Server, and open-source relational databases hosted on AWS RDS. It adds threat protection and security insights for supported database engines in your AWS environment.
+    Defender for SQL on machines helps you secure SQL Server workloads that run on EC2 instances and RDS Custom for SQL Server. It provides threat protection and security insights for supported SQL Server deployments in your AWS environment.
 
     To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
     
     :::image type="content" source="media/quickstart-onboard-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/quickstart-onboard-aws/databases-settings.png":::
     
-    Learn more about [Defender for SQL databases](defender-for-sql-introduction.md).
+    Learn more about [Microsoft Defender for SQL Servers on Machines](defender-for-sql-on-machines-overview.md).
     
     ### [Defender for open-source databases](#tab/Defender-for-open-source-databases)
     
-    Defender for databases helps you protect SQL Server workloads on EC2 instances and RDS Custom for SQL Server, and open-source relational databases hosted on AWS RDS. It adds threat protection and security insights for supported database engines in your AWS environment.
+    Defender for open-source relational databases helps you detect and investigate unusual activity in AWS Relational Database Service (RDS) databases. It provides threat protection and security insights for supported engines such as Aurora PostgreSQL, Aurora MySQL, PostgreSQL, MySQL, and MariaDB.
 
     To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
     
     :::image type="content" source="media/quickstart-onboard-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/quickstart-onboard-aws/databases-settings.png":::
     
-    Learn more about [Defender for Open-Source Relational Databases](defender-for-databases-introduction.md).
+    Learn more about [Defender for open-source relational databases](defender-for-databases-introduction.md).
     
     ### [Defender for Containers](#tab/Defender-for-Containers)
     
@@ -217,6 +217,9 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
     
     ---
 
+    > [!NOTE]
+    > If you return to enable or disable plan features, you might need to update the CloudFormation template in your AWS account. To determine whether you need to update it, see [Update your CloudFormation template](#update-the-cloudformation-template).
+
 1. Select **Configure access**.
 
 1. Select the permissions type:
@@ -229,7 +232,7 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
     - **AWS CloudFormation**
     - **Terraform**
 
-   :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot showing deployment method configuration." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
+      :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot showing deployment method configuration." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
 
 1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies in AWS.
 
