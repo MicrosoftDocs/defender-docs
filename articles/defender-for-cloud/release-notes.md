@@ -51,7 +51,7 @@ This capability adds inventory visibility, security recommendations for misconfi
 
 Learn more about [Discovery and posture for serverless container workloads (Preview)](posture-for-serverless-containers.md).
 
-### Kubernetes misconfiguration enforcement in Defender for Containers (preview)
+### Kubernetes misconfiguration enforcement in Defender for Containers (Preview)
 
 June 3, 2026
 
