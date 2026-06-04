@@ -76,6 +76,8 @@
       items:
         - name: Overview
           href: exposure-insights-overview.md
+        - name: Risk evaluation framework changelog
+          href: risk-evaluation-changelog.md
         - name: Review security initiatives
           href: initiatives.md
         - name: Security initiatives catalog
