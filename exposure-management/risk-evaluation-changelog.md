@@ -36,4 +36,4 @@ MSEM initiates REF changes, not customer actions. They might include:
 
 
 | Date | Change type | Description | More information |
-|------|-------------|-------------|------------------|
+|EXAMPLE|New recommendations|100 new recommendations are now generally available.|[What's new in Defender for Cloud recommendations, alerts, and incidents(azure/defender-for-cloud/release-notes-recommendations-alerts)|
