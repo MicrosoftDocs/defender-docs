@@ -169,7 +169,7 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
 
     Defender CSPM has two plan option, Foundational CSPM which is included with you Defender for Cloud subscription and enabled by default, and Defender CSPM which is the paid plan for CSPM. To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
 
-    :::image type="content" source="media/quickstart-onboard-aws/cspm-plan-features.png" alt-text="Screenshot of the available features of the Defender CSPM plan." lightbox="media/quickstart-onboard-aws/cspm-plan-features-zoom.png":::
+    :::image type="content" source="media/quickstart-onboard-aws/posture-plan-features.png" alt-text="Screenshot of the available features of the Defender CSPM plan." lightbox="media/quickstart-onboard-aws/posture-plan-features-zoom.png":::
 
     Learn more about the [Defender CSPM's plan availability and features](concept-cloud-security-posture-management.md#plan-availability).
 
