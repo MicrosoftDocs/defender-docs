@@ -56,7 +56,16 @@ To use [device isolation functionality](./respond-machine-alerts.md#isolate-devi
 
 - `iptables`
 - `ip6tables`
-- Linux kernel with `CONFIG_NETFILTER`, `CONFIG_IP_NF_IPTABLES`, and `CONFIG_IP_NF_MATCH_OWNER` for kernel version lower than 5.x and `CONFIG_NETFILTER_XT_MATCH_OWNER` from 5.x kernel.
+- The following kernel configurations (enabled by default on the supported distros).
+
+  | Older kernels (lower than 5.x) | Newer kernels (5.x and later) | All kernel versions |
+  |---|---|---|
+  | `CONFIG_NETFILTER_XT_TARGET_NFQUEUE` | `CONFIG_NF_TABLES` | `CONFIG_NETFILTER` |
+  | `CONFIG_IP_NF_IPTABLES` | `CONFIG_NFT_QUEUE` | `CONFIG_NETFILTER_NETLINK_QUEUE` |
+  | `CONFIG_IP_NF_FILTER` | `CONFIG_NFT_COMPAT` | `CONFIG_PROC_FS` |
+  | `CONFIG_IP6_NF_IPTABLES` | `CONFIG_NETFILTER_XT_MATCH_OWNER` | `CONFIG_UNIX` |
+  | `CONFIG_IP6_NF_FILTER` | | |
+  | `CONFIG_IP_NF_MATCH_OWNER` | | |
 
 ## Network requirements
 
