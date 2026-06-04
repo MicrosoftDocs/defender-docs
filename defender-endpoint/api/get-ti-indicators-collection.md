@@ -39,7 +39,7 @@ Supports [OData V4 queries](https://www.odata.org/documentation/). OData support
   - `createdBy`
   - `action`
   - `severity`
-- `$stop` with max value of 10,000.
+- `$top` with max value of 10,000.
 - `$skip`
 
 See examples at [OData queries with Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
