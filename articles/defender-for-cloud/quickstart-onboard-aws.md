@@ -175,11 +175,27 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
 
     ### [Defender for Servers](#tab/Defender-for-Servers)
 
-    Defender for Servers protects 
+    Defender for Servers reduces security risk and exposure for your machines. It protects Windows and Linux machines across AWS, Azure, GCP, and on-premises environments, and provides recommendations, posture insights, and threat protection.
+
+    :::image type="content" source="media/tutorial-enable-servers-plan/enable-servers-plan.png" alt-text="Screenshot of the Defender for Servers plan settings in Microsoft Defender for Cloud." lightbox="media/tutorial-enable-servers-plan/enable-servers-plan.png":::
+
+    Learn more about [Defender for Servers](defender-for-servers-overview.md).
 
     ### [Defender for databases](#tab/Defender-for-databases)
 
+    Defender for databases helps you protect SQL Server workloads on EC2 instances and RDS Custom for SQL Server, and open-source relational databases hosted on AWS RDS. It adds threat protection and security insights for supported database engines in your AWS environment.
+
+    :::image type="content" source="media/enable-defender-for-databases-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/enable-defender-for-databases-aws/databases-settings.png":::
+
+    Learn more about [enabling Defender for databases on AWS](enable-defender-for-databases-aws.md).
+
     ### [Defender for Containers](#tab/Defender-for-Containers)
+
+    Defender for Containers is a cloud-native solution that secures your containerized assets, including Kubernetes clusters, nodes, workloads, registries, and images, across multicloud and on-premises environments.
+
+    :::image type="content" source="media/defender-for-containers-enable-plan/containers-features.png" alt-text="Screenshot of the Defender for Containers plan selection for an AWS environment." lightbox="media/defender-for-containers-enable-plan/containers-features-zoom.png":::
+
+    Learn more about [Microsoft Defender for Containers](defender-for-containers-introduction.md).
 
 ---
 
