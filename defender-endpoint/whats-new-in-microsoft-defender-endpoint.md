@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/27/2026
+ms.date: 05/31/2026
 ms.collection:
 - m365-security
 - tier1
