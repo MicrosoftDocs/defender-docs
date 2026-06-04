@@ -34,6 +34,6 @@ MSEM initiates REF changes, not customer actions. They might include:
 > [!NOTE]
 > This changelog includes publicly available changes only. Private preview updates are communicated separately through preview communications and in-app experiences.
 
-
 | Date | Change type | Description | More information |
-|EXAMPLE|New recommendations|100 new recommendations are now generally available.|[What's new in Defender for Cloud recommendations, alerts, and incidents(azure/defender-for-cloud/release-notes-recommendations-alerts)|
+| -------- | -------- | -------- | -------- |
+| EXAMPLE | New recommendations |100 new recommendations are now generally available.|[What's new in Defender for Cloud recommendations, alerts, and incidents(azure/defender-for-cloud/release-notes-recommendations-alerts) |
