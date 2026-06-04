@@ -169,7 +169,7 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
     
     Defender CSPM has two plan options: Foundational CSPM, which is included with your Defender for Cloud subscription and enabled by default, and Defender CSPM, which is the paid plan.
     
-    To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
     
     :::image type="content" source="media/quickstart-onboard-aws/posture-plan-features.png" alt-text="Screenshot of the available features of the Defender CSPM plan." lightbox="media/quickstart-onboard-aws/posture-plan-features-zoom.png":::
     
@@ -179,7 +179,7 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
     
     Defender for Servers reduces security risk and exposure for your machines. It protects Windows and Linux machines and provides recommendations, posture insights, and threat protection.
     
-    To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
 
     :::image type="content" source="media/quickstart-onboard-aws/enable-servers-plan.png" alt-text="Screenshot of the Defender for Servers plan settings in Microsoft Defender for Cloud." lightbox="media/quickstart-onboard-aws/enable-servers-plan.png":::
     
@@ -189,7 +189,7 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
     
     Defender for SQL on machines helps you secure SQL Server workloads that run on EC2 instances and RDS Custom for SQL Server. It provides threat protection and security insights for supported SQL Server deployments in your AWS environment.
 
-    To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
     
     :::image type="content" source="media/quickstart-onboard-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/quickstart-onboard-aws/databases-settings.png":::
     
@@ -199,7 +199,7 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
     
     Defender for open-source relational databases helps you detect and investigate unusual activity in AWS Relational Database Service (RDS) databases. It provides threat protection and security insights for supported engines such as Aurora PostgreSQL, Aurora MySQL, PostgreSQL, MySQL, and MariaDB.
 
-    To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
     
     :::image type="content" source="media/quickstart-onboard-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/quickstart-onboard-aws/databases-settings.png":::
     
@@ -209,7 +209,7 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
     
     Defender for Containers is a cloud-native solution that secures your containerized assets, including Kubernetes clusters, nodes, workloads, registries, and images, across multicloud and on-premises environments.
 
-    To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
     
     :::image type="content" source="media/quickstart-onboard-aws/containers-features.png" alt-text="Screenshot of the Defender for Containers plan selection for an AWS environment." lightbox="media/quickstart-onboard-aws/containers-features-zoom.png":::
     
