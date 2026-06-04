@@ -165,39 +165,47 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
 
 1. (Optional) Configure the different plan configurations.
 
-    ### [Defender CSPM](#tab/Defender-for-CSPM)
+  ### [Defender CSPM](#tab/Defender-for-CSPM)
 
-    Defender CSPM has two plan option, Foundational CSPM which is included with you Defender for Cloud subscription and enabled by default, and Defender CSPM which is the paid plan for CSPM. To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
+  Defender CSPM has two plan option, Foundational CSPM which is included with you Defender for Cloud subscription and enabled by default, and Defender CSPM which is the paid plan for CSPM. To enable or disable specific features of the plan, select **Settings** > toggle the feature(s) to **On** and select **Save**.
 
-    :::image type="content" source="media/quickstart-onboard-aws/posture-plan-features.png" alt-text="Screenshot of the available features of the Defender CSPM plan." lightbox="media/quickstart-onboard-aws/posture-plan-features-zoom.png":::
+  :::image type="content" source="media/quickstart-onboard-aws/posture-plan-features.png" alt-text="Screenshot of the available features of the Defender CSPM plan." lightbox="media/quickstart-onboard-aws/posture-plan-features-zoom.png":::
 
-    Learn more about the [Defender CSPM's plan availability and features](concept-cloud-security-posture-management.md#plan-availability).
+  Learn more about the [Defender CSPM's plan availability and features](concept-cloud-security-posture-management.md#plan-availability).
 
-    ### [Defender for Servers](#tab/Defender-for-Servers)
+  ### [Defender for Servers](#tab/Defender-for-Servers)
 
-    Defender for Servers reduces security risk and exposure for your machines. It protects Windows and Linux machines across AWS, Azure, GCP, and on-premises environments, and provides recommendations, posture insights, and threat protection.
+  Defender for Servers reduces security risk and exposure for your machines. It protects Windows and Linux machines across AWS, Azure, GCP, and on-premises environments, and provides recommendations, posture insights, and threat protection.
 
-    :::image type="content" source="media/quickstart-onboard-aws/enable-servers-plan.png" alt-text="Screenshot of the Defender for Servers plan settings in Microsoft Defender for Cloud." lightbox="media/quickstart-onboard-aws/enable-servers-plan.png":::
+  :::image type="content" source="media/quickstart-onboard-aws/enable-servers-plan.png" alt-text="Screenshot of the Defender for Servers plan settings in Microsoft Defender for Cloud." lightbox="media/quickstart-onboard-aws/enable-servers-plan.png":::
 
-    Learn more about [Defender for Servers](defender-for-servers-overview.md).
+  Learn more about [Defender for Servers](defender-for-servers-overview.md).
 
-    ### [Defender for databases](#tab/Defender-for-databases)
+  ### [Defender for SQL](#tab/Defender-for-SQL)
 
-    Defender for databases helps you protect SQL Server workloads on EC2 instances and RDS Custom for SQL Server, and open-source relational databases hosted on AWS RDS. It adds threat protection and security insights for supported database engines in your AWS environment.
+  Defender for databases helps you protect SQL Server workloads on EC2 instances and RDS Custom for SQL Server, and open-source relational databases hosted on AWS RDS. It adds threat protection and security insights for supported database engines in your AWS environment.
 
-    :::image type="content" source="media/quickstart-onboard-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/quickstart-onboard-aws/databases-settings.png":::
+  :::image type="content" source="media/quickstart-onboard-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/quickstart-onboard-aws/databases-settings.png":::
 
-    Learn more about [enabling Defender for databases on AWS](enable-defender-for-databases-aws.md).
+  Learn more about [Defender for SQL databases](defender-for-sql-introduction.md).
 
-    ### [Defender for Containers](#tab/Defender-for-Containers)
+  ### [Defender for open-source databases](#tab/Defender-for-open-source-databases)
 
-    Defender for Containers is a cloud-native solution that secures your containerized assets, including Kubernetes clusters, nodes, workloads, registries, and images, across multicloud and on-premises environments.
+  Defender for databases helps you protect SQL Server workloads on EC2 instances and RDS Custom for SQL Server, and open-source relational databases hosted on AWS RDS. It adds threat protection and security insights for supported database engines in your AWS environment.
 
-    :::image type="content" source="media/quickstart-onboard-aws/containers-features.png" alt-text="Screenshot of the Defender for Containers plan selection for an AWS environment." lightbox="media/quickstart-onboard-aws/containers-features-zoom.png":::
+  :::image type="content" source="media/quickstart-onboard-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/quickstart-onboard-aws/databases-settings.png":::
 
-    Learn more about [Microsoft Defender for Containers](defender-for-containers-introduction.md).
+  Learn more about [Defender for Open-Source Relational Databases](defender-for-databases-introduction.md).
 
----
+  ### [Defender for Containers](#tab/Defender-for-Containers)
+
+  Defender for Containers is a cloud-native solution that secures your containerized assets, including Kubernetes clusters, nodes, workloads, registries, and images, across multicloud and on-premises environments.
+
+  :::image type="content" source="media/quickstart-onboard-aws/containers-features.png" alt-text="Screenshot of the Defender for Containers plan selection for an AWS environment." lightbox="media/quickstart-onboard-aws/containers-features-zoom.png":::
+
+  Learn more about [Defender for Containers](defender-for-containers-introduction.md).
+
+  ---
 
 1. Select **Configure access**.
 
