@@ -116,14 +116,13 @@ When Teams notifications are enabled:
 1. In the Microsoft Defender portal, go to **Settings** > **Defender Experts**.
 1. Select **Teams**.
 1. Turn on **Notify me on Teams**.
-1. Select **Save**.
+1. Select **Save**. Any notification contacts you added on the previous onboarding step are also added automatically as members of the Teams channel. 
+1. To add additional SOC team members to the created channel, go to **Microsoft Teams** > **Defender Experts team** > **More options (...)** > **Manage team** > **Add member**.
 
 After setup, the system creates the Defender Experts team and the **Hunting notifications** channel, and provides a link to open the Teams channel. A welcome message appears in Teams confirming the setup is complete.
 
 > [!TIP]
 > If the setup fails, see [Configuring the Microsoft Defender Experts app in Teams](teams-restrictions-dexapp.md) for troubleshooting guidance.
-
-Any notification contacts you added on the previous onboarding step are also added automatically as members of the Teams channel. To add additional SOC team members to the created channel, go to **Microsoft Teams** > **Defender Experts team** > **More options (...)** > **Manage team** > **Add member**.
 
 ### Generate sample Defender Experts Notifications
 
