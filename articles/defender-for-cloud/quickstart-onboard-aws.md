@@ -4,7 +4,7 @@ description: Defend your AWS resources with Microsoft Defender for Cloud, a guid
 author: ElazarK
 ms.author: elkrieger
 ms.topic: install-set-up-deploy
-ms.date: 04/19/2026
+ms.date: 06/04/2026
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud
@@ -163,6 +163,63 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
    >
    > AWS documentation explains that there are no extra charges for keeping one trail. If you're exporting the data out of AWS, for example to an external SIEM system, this increased volume of calls might also increase ingestion costs. In such cases, we recommend filtering out the read-only calls from the Defender for Cloud user or ARN role: `arn:aws:iam::[accountId]:role/CspmMonitorAws`. This is the default role name. Confirm the role name configured on your account.
 
+1. (Optional) Configure the different plan configurations.
+
+    ### [Defender CSPM](#tab/Defender-for-CSPM)
+    
+    Defender CSPM has two plan options: Foundational CSPM, which is included with your Defender for Cloud subscription and enabled by default, and Defender CSPM, which is the paid plan.
+    
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
+    
+    :::image type="content" source="media/quickstart-onboard-aws/posture-plan-features.png" alt-text="Screenshot of the available features of the Defender CSPM plan." lightbox="media/quickstart-onboard-aws/posture-plan-features-zoom.png":::
+    
+    Learn more about the [Defender CSPM's plan availability and features](concept-cloud-security-posture-management.md#plan-availability).
+    
+    ### [Defender for Servers](#tab/Defender-for-Servers)
+    
+    Defender for Servers reduces security risk and exposure for your machines. It protects Windows and Linux machines and provides recommendations, posture insights, and threat protection.
+    
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
+
+    :::image type="content" source="media/quickstart-onboard-aws/enable-servers-plan.png" alt-text="Screenshot of the Defender for Servers plan settings in Microsoft Defender for Cloud." lightbox="media/quickstart-onboard-aws/enable-servers-plan.png":::
+    
+    Learn more about [Defender for Servers](defender-for-servers-overview.md).
+    
+    ### [Defender for SQL](#tab/Defender-for-SQL)
+    
+    Defender for SQL on machines helps you secure SQL Server workloads that run on EC2 instances and RDS Custom for SQL Server. It provides threat protection and security insights for supported SQL Server deployments in your AWS environment.
+
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
+    
+    :::image type="content" source="media/quickstart-onboard-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/quickstart-onboard-aws/databases-settings.png":::
+    
+    Learn more about [Microsoft Defender for SQL Servers on Machines](defender-for-sql-on-machines-overview.md).
+    
+    ### [Defender for open-source databases](#tab/Defender-for-open-source-databases)
+    
+    Defender for open-source relational databases helps you detect and investigate unusual activity in AWS Relational Database Service (RDS) databases. It provides threat protection and security insights for supported engines such as Aurora PostgreSQL, Aurora MySQL, PostgreSQL, MySQL, and MariaDB.
+
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
+    
+    :::image type="content" source="media/quickstart-onboard-aws/databases-settings.png" alt-text="Screenshot of the Defender for databases settings for an AWS environment." lightbox="media/quickstart-onboard-aws/databases-settings.png":::
+    
+    Learn more about [Defender for open-source relational databases](defender-for-databases-introduction.md).
+    
+    ### [Defender for Containers](#tab/Defender-for-Containers)
+    
+    Defender for Containers is a cloud-native solution that secures your containerized assets, including Kubernetes clusters, nodes, workloads, registries, and images, across multicloud and on-premises environments.
+
+    To enable or disable specific features of the plan, select **Settings**, toggle the feature(s) to **On** and select **Save**.
+    
+    :::image type="content" source="media/quickstart-onboard-aws/containers-features.png" alt-text="Screenshot of the Defender for Containers plan selection for an AWS environment." lightbox="media/quickstart-onboard-aws/containers-features-zoom.png":::
+    
+    Learn more about [Defender for Containers](defender-for-containers-introduction.md).
+    
+    ---
+
+    > [!NOTE]
+    > If you return to enable or disable plan features, you might need to update the CloudFormation template in your AWS account. To determine whether you need to update it, see [Update your CloudFormation template](#update-the-cloudformation-template).
+
 1. Select **Configure access**.
 
 1. Select the permissions type:
@@ -175,7 +232,7 @@ To connect your AWS environment to Defender for Cloud by using a native connecto
     - **AWS CloudFormation**
     - **Terraform**
 
-   :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot showing deployment method configuration." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
+      :::image type="content" source="media/quickstart-onboard-aws/add-aws-account-configure-access.png" alt-text="Screenshot showing deployment method configuration." lightbox="media/quickstart-onboard-aws/add-aws-account-configure-access.png":::
 
 1. Follow the on-screen instructions for the selected deployment method to complete the required dependencies in AWS.
 
