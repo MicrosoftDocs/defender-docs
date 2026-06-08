@@ -4,6 +4,7 @@ description: Learn how to configure Microsoft Defender for Identity detection ex
 ms.date: 04/05/2026
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
+ms.custom: sfi-image-nochange
 ---
 
 # Configure Defender for Identity detection exclusions in Microsoft Defender XDR

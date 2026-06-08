@@ -3,6 +3,7 @@ title: Create Workbooks for Microsoft Sentinel Solutions
 description: This article guides you through the process of creating and publishing workbooks for Microsoft Sentinel solutions.
 ms.author: monaberdugo
 author: mberdugo
+ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to
 ms.date: 1/22/2025

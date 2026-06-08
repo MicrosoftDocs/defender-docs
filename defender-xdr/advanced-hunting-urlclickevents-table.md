@@ -16,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 05/08/2026
+ms.date: 06/04/2026
 ---
 
 # UrlClickEvents
@@ -43,7 +43,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `IsClickedThrough` | `bool` | Indicates whether the user was able to click through to the original URL (1) or not (0) on the Safe Links warning page using "Continue anyway" option |
 | `UrlChain` | `string` | For scenarios involving redirections, it includes URLs present in the redirection chain|
 | `ReportId` | `string` | The unique identifier for a click event. For clickthrough scenarios, report ID would have same value, and therefore it should be used to correlate a click event |
-| `AppName` | `string` | The application's display name as exposed by the associated service principal |
+| `AppName` | `string` | Name of the client application where the click occurred |
 | `AppVersion` | `string` | Version of the client application where the click occurred |
 | `SourceId` | `string` | Unique identifier for the source of the click |
 | `TenantId` | `string` | The Log Analytics workspace ID |

@@ -3,7 +3,6 @@ title: The Advanced Security Information Model (ASIM) Registry Event normalizati
 description: This article describes the Microsoft Sentinel Registry Event normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: ofshezaf
 ms.topic: reference
 ms.date: 11/09/2021
 
@@ -189,9 +188,7 @@ These are the changes in version 0.1.2 of the schema:
 These are the changes in version 0.1.3 of the schema:
 - Added inspection fields.
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Normalization in Microsoft Sentinel](normalization.md)
 - [Microsoft Sentinel authentication normalization schema reference](normalization-schema-authentication.md)

@@ -8,8 +8,9 @@ ms.assetid: 5a6f2d7f-d998-4f31-b4f5-f7cbf6f38578
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
+  - sfi-image-nochange
 description: Admins can learn about the anti-phishing policies that are available in the built-in security features for all cloud mailboxes and in Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 04/14/2026
@@ -77,7 +78,7 @@ The following policy settings are available in anti-phishing policies for all cl
 
 - **Users, groups, and domains** and **Exclude these users, groups, and domains**: Recipient filters to identify the internal recipients that the policy applies to. At least one condition is required in custom policies. Conditions and exceptions aren't available in the default policy (the default policy applies to all recipients). You can use the following recipient filters for conditions and exceptions:
 
-  - **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
+  - **Users**: One or more mailboxes, or mail users in the organization.
   - **Groups**:
     - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
     - The specified Microsoft 365 Groups (dynamic membership groups in Microsoft Entra ID aren't supported).

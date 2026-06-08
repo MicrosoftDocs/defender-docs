@@ -5,9 +5,9 @@ ms.date: 01/11/2026
 ms.custom:  
   - responsible-ai-faqs  
 ms.topic: contributor-guide  
-author: guywi-ms  
 ms.author: guywild  
-ms.reviewer: mschechter  
+author: guywi-ms  
+ms.reviewer: mshechter
 ---
 
 # Responsible AI FAQ for the Microsoft Sentinel UEBA behaviors layer

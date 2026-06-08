@@ -15,6 +15,7 @@ ms.subservice: edr
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Review alerts in Microsoft Defender for Endpoint

@@ -15,6 +15,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Outbound delivery pools
@@ -33,7 +34,7 @@ The high risk delivery pool is a separate IP address pool for outbound email tha
 
 The possibility that IP addresses in the high-risk delivery pool are placed on IP blocklists remains, but this behavior is by design. Delivery to the intended recipients isn't guaranteed, because many email organizations don't accept messages from the high risk delivery pool.
 
-For more information, see [Control outbound spam](outbound-spam-protection-about.md).
+For more information, see [Control outbound spam](outbound-spam-protection-about.md) and [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md).
 
 > [!NOTE]
 > Messages where the source email domain has no A record and no MX record defined in public DNS are always routed through the high-risk delivery pool, regardless of their spam or sending limit disposition.

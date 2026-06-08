@@ -74,6 +74,8 @@
           href: security-for-ai/ai-agent-detection-protection.md
         - name: Data privacy as part of Agent 365
           href: security-for-ai/privacy-defender-agent-365.md
+        - name: Transition agent security to Agent 365
+          href: security-for-ai/transition-agent-security-to-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -159,7 +161,13 @@
         - name: View details and results
           href: autoad-results.md
         - name: Exclude assets from automated responses
-          href: automatic-attack-disruption-exclusions.md  
+          href: automatic-attack-disruption-exclusions.md
+        - name: External disruptions
+          items:
+          - name: Enable attack disruption actions in Okta (preview)
+            href: okta-attack-disruption.md
+          - name: Enable attack disruption actions on AWS (preview)
+            href: /azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
       - name: Predictive shielding
         items:
         - name: Overview
@@ -248,6 +256,8 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AgentsInfo
+            href: advanced-hunting-agentsinfo-table.md
           - name: AIAgentsInfo
             href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence
@@ -400,7 +410,73 @@
             href: threat-analytics-indicators.md
         - name: Microsoft Defender Threat Intelligence in Defender XDR
           href: defender-threat-intelligence.md
-      - name: Collaborate with Microsoft Defender Experts for Hunting
+      - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
+        items:
+        - name: Overview
+          href: security-copilot-in-microsoft-365-defender.md
+        - name: Summarize incidents
+          href: security-copilot-m365d-incident-summary.md
+        - name: Run script analysis
+          href: security-copilot-m365d-script-analysis.md
+        - name: Analyze files
+          href: copilot-in-defender-file-analysis.md
+        - name: Generate device summaries
+          href: copilot-in-defender-device-summary.md
+        - name: Summarize identities
+          href: security-copilot-defender-identity-summary.md                
+        - name: Use guided responses
+          href: security-copilot-m365d-guided-response.md
+        - name: Generate KQL queries
+          href: advanced-hunting-security-copilot-query-assistant.md
+        - name: Create incident reports
+          href: security-copilot-m365d-create-incident-report.md
+        - name: Application card
+          href: application-card-copilot-defender.md
+        - name: Responsible AI FAQs
+          href: responsible-ai-copilot-defender.md        
+        - name: Security Copilot agents in Microsoft Defender
+          items:
+          - name: Overview
+            href: security-copilot-agents-defender.md          
+          - name: Phishing Triage Agent
+            href: phishing-triage-agent.md
+          - name: Security Alert Triage Agent (Preview)
+            href: security-alert-triage-agent.md
+          - name: Threat Intelligence Briefing Agent
+            href: threat-intel-briefing-agent-defender.md
+          - name: Threat Hunting Agent
+            href: advanced-hunting-security-copilot-threat-hunting-agent.md
+          - name: Dynamic Threat Detection Agent
+            href: dynamic-threat-detection-agent.md
+          - name: Security Analyst Agent
+            href: security-analyst-agent.md
+    - name: Identity Security
+      items:
+      - name: Identity Security overview
+        href: ./identity-security/identity-security-overview.md
+      - name: View your identity coverage and maturity 
+        href: ./identity-security/coverage-maturity.md  
+      - name: View your identities
+        items:
+        - name: The identity security dashboard
+          href: /defender-for-identity/dashboard?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: View the identity inventory
+          href: /defender-for-identity/identity-inventory?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Investigate a human identity
+          href: investigate-users.md
+        - name: Investigate a non-human identity
+          href: investigate-non-human-identities.md
+        - name: Investigate an Active Directory domain
+          href: /defender-for-identity/investigate-domain?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+      - name: Security recommendations
+        items:
+        - name: Identity security initiative (Preview)
+          href: /defender-for-identity/identity-security-initiative?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Unified identity security recommendations
+          href: ./identity-security/identity-security-recommendations.md
+    - name: Collaborate with Microsoft Defender Experts
+      items:
+      - name: Defender Experts for Hunting
         items:
         - name: Overview
           href: defender-experts-for-hunting.md
@@ -408,7 +484,7 @@
           href: before-you-begin-defender-experts.md
         - name: Start using Defender Experts for Hunting
           items:
-          - name: Onboarding and setting up Defender Experts Notifications
+          - name: Onboard and set up Defender Experts Notifications
             href: onboarding-defender-experts-for-hunting.md
           - name: Access Defender Experts Notifications using Graph security API
             href: access-den-graph-api.md
@@ -419,20 +495,22 @@
           - name: Work with MSSPs
             href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
-          items: 
+          items:
+          - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+            href: teams-restrictions-dexapp.md
           - name: General information
             href: faq-defender-experts-hunting.md
           - name: Server and cloud workload coverage
             href: faq-cloud-coverage-defender-experts.md
-      - name: Collaborate with Microsoft Defender Experts for XDR
+      - name: Defender Experts for XDR
         items:
         - name: Overview
           href: dex-xdr-overview.md
         - name: Before you begin
           href: before-you-begin-xdr.md
-        - name: Get started with Microsoft Defender Experts for XDR service
+        - name: Get started with Defender Experts for XDR
           href: get-started-xdr.md
-        - name: Start using Microsoft Defender Experts for XDR service
+        - name: Start using Defender Experts for XDR
           items:
           - name: Overview
             href: start-using-mdex-xdr.md
@@ -460,74 +538,20 @@
               href: frequently-asked-questions.md
             - name: Managed response
               href: faq-managed-response.md
-            - name: Server and cloud workload coverage
-              href: faq-cloud-coverage-defender-experts.md
           - name: Important considerations
             href: additional-information-xdr.md
           - name: How Defender Experts for XDR permissions work
             href: dex-xdr-permissions.md
           - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
             href: teams-restrictions-dexapp.md
-      - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
+      - name: Defender Experts for Servers
         items:
         - name: Overview
-          href: security-copilot-in-microsoft-365-defender.md
-        - name: Summarize incidents
-          href: security-copilot-m365d-incident-summary.md
-        - name: Run script analysis
-          href: security-copilot-m365d-script-analysis.md
-        - name: Analyze files
-          href: copilot-in-defender-file-analysis.md
-        - name: Generate device summaries
-          href: copilot-in-defender-device-summary.md
-        - name: Summarize identities
-          href: security-copilot-defender-identity-summary.md                
-        - name: Use guided responses
-          href: security-copilot-m365d-guided-response.md
-        - name: Generate KQL queries
-          href: advanced-hunting-security-copilot-query-assistant.md
-        - name: Create incident reports
-          href: security-copilot-m365d-create-incident-report.md
-        - name: Application card for Microsoft Copilot in Microsoft Defender
-          href: application-card-copilot-defender.md
-        - name: Security Copilot agents in Microsoft Defender
-          items:
-          - name: Overview
-            href: security-copilot-agents-defender.md          
-          - name: Phishing Triage Agent
-            href: phishing-triage-agent.md
-          - name: Security Alert Triage Agent (Preview)
-            href: security-alert-triage-agent.md
-          - name: Threat Intelligence Briefing Agent
-            href: threat-intel-briefing-agent-defender.md
-          - name: Threat Hunting Agent
-            href: advanced-hunting-security-copilot-threat-hunting-agent.md
-          - name: Dynamic Threat Detection Agent
-            href: dynamic-threat-detection-agent.md
-    - name: Identity Security
-      items:
-      - name: Identity Security overview
-        href: ./identity-security/identity-security-overview.md
-      - name: View your identity coverage and maturity 
-        href: ./identity-security/coverage-maturity.md  
-      - name: View your identities
-        items:
-        - name: The identity security dashboard
-          href: /defender-for-identity/dashboard?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: View the identity inventory
-          href: /defender-for-identity/identity-inventory?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: Investigate a human identity
-          href: investigate-users.md
-        - name: Investigate a non-human identity
-          href: investigate-non-human-identities.md
-        - name: Investigate an Active Directory domain
-          href: /defender-for-identity/investigate-domain?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-      - name: Security recommendations
-        items:
-        - name: Identity security initiative (Preview)
-          href: /defender-for-identity/identity-security-initiative?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
-        - name: Unified identity security recommendations
-          href: ./identity-security/identity-security-recommendations.md
+          href: dex-servers-overview.md
+        - name: Get started with Defender Experts for Servers
+          href: get-started-dex-servers.md
+        - name: Frequently asked questions
+          href: faq-cloud-coverage-defender-experts.md
     - name: Enhance security operations
       items:
       - name: Security operations guide
@@ -571,7 +595,7 @@
             - name: Create custom roles
               href: create-custom-rbac-roles.md
             - name: Import roles
-              href: Import-rbac-roles.md
+              href: import-rbac-roles.md
             - name: Activate Defender unified RBAC
               href: activate-defender-rbac.md
             - name: Edit, delete and export roles

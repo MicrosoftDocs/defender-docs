@@ -11,7 +11,7 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-ms.date: 03/11/2026
+ms.date: 06/02/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -38,6 +38,7 @@ This article includes a list of the standard connectivity URLs required to onboa
 |Microsoft Defender for Endpoint|WW|Common (Linux)|443|`packages.microsoft.com`|Required to download and update the MDE Linux agent|Required|||||Yes||
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`login.windows.net`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`*.security.microsoft.com`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
+|Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`reflector.defender.microsoft.com`|Used to probe IPv6 connectivity|Optional|Yes|Yes|Yes|Yes|Yes|Helps Microsoft Security Intelligence detect attacker activity|
 |Microsoft Defender for Endpoint|WW|Microsoft Defender for Endpoint|443|`*.blob.core.windows.net/networkscannerstable/*`|Microsoft Defender for Endpoint Vulnerability assessment for network devices (network scanner)|Optional|Yes|Yes|Yes|||Supported on Windows 8 and above and Windows Server 2012 and above|
 |Microsoft Defender for Endpoint|WW|Security Management|443|`enterpriseregistration.windows.net`|Security Management for Microsoft Defender for Endpoint - Azure Registration|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
 |Microsoft Defender for Endpoint|WW|Security Management|443|`*.dm.microsoft.com`|Security Management for Microsoft Defender for Endpoint - Enrollment, check-in, and reporting|Optional|Yes|||||Only required when using Security Management for Microsoft Defender for Endpoint|
@@ -153,6 +154,7 @@ Because these Defender for Endpoint-related processes generate network communica
 
 |Date|Change Log|
 |---|---|
+|06/02/2026|Added `reflector.defender.microsoft.com`.|
 |04/14/2026|Replaced `officecdn-microsoft-com.akamaized.net` with new CDN ChannelURL reference for Mac/Linux product updates. New CDN endpoint starting with macOS build 101.26012.0012.|
 |04/13/2026|Added SmartScreen URLs (`*.checkappexec.microsoft.com`, `*.urs.microsoft.com`) to [Microsoft Defender URLs](#microsoft-defender-urls).|
 |03/26/2026|Added new Azure UAE North (AEN) and Azure UAE Central (AEC) URLs to the [Microsoft Defender URLs](#microsoft-defender-urls) section: `winatp-gw-aec0a.microsoft.com`, `winatp-gw-aen0a.microsoft.com`, `automatedirstrprdaen0a.blob.core.windows.net`,`automatedirstrprdaec0a.blob.core.windows.net`.|

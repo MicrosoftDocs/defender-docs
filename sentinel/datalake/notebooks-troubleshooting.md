@@ -2,8 +2,9 @@
 title: Troubleshoot notebooks on the Microsoft Sentinel data lake
 titleSuffix: Microsoft Security  
 description: Find solutions for common errors when working with Jupyter notebooks in the Microsoft Sentinel data lake, including database, table, authorization, and ingestion errors.
-author: EdB-MSFT  
 ms.author: edbaynash 
+author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.topic: troubleshooting  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform

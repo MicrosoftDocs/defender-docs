@@ -1,10 +1,11 @@
 ---
 title: Search for specific events across large datasets in Microsoft Sentinel
 description: Learn how to use search jobs to search large datasets.
+ms.author: guywild
 author: guywi-ms
+ms.reviewer: noak
 ms.topic: how-to
 ms.date: 03/06/2025
-ms.author: guywild
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal

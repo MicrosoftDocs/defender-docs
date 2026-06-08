@@ -2,8 +2,9 @@
 title: Create and manage Jupyter notebook jobs
 titleSuffix: Microsoft Security  
 description: This article describes how to explore and interact with lake data using Spark notebooks in Visual Studio Code.
-author: EdB-MSFT  
 ms.author: edbaynash  
+author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to  

@@ -5,25 +5,25 @@
     href: index.yml 
   - name: Overview
     href: overview.md
-  - name: Understanding inventory assets
+  - name: Understand inventory assets
     href: understanding-inventory-assets.md
   - name: What is Discovery?
     href: what-is-discovery.md
 - name: How-to
   items:
-  - name: Understanding asset details
+  - name: Understand asset details
     href: understanding-asset-details.md
-  - name: Understanding dashboards
+  - name: Understand dashboards
     href: understanding-dashboards.md
-  - name: Using and managing discovery
+  - name: Use and manage discovery
     href: using-and-managing-discovery.md
-  - name: Modifying inventory assets 
+  - name: Modify inventory assets 
     href: modifying-inventory-assets.md
   - name: Policy engine automation
     href: policy-engine.md 
   - name: Understand billable assets
     href: understanding-billable-assets.md
-  - name: Leveraging data connections
+  - name: Leverage data connections
     href: data-connections.md
   - name: Inventory filters 
     expanded: true
@@ -48,11 +48,11 @@
       href: asn-asset-filters.md 
 - name: Quickstart
   items:
-  - name: Deploying the Defender EASM Azure resource
+  - name: Deploy the Defender EASM Azure resource
     href: deploying-the-defender-easm-azure-resource.md
 - name: Tutorials
   items:
-  - name: Discovering your attack surface
+  - name: Discover your attack surface
     href: discovering-your-attack-surface.md
 
 - name: Integrations

@@ -7,7 +7,9 @@ ms.date: 12/31/2025
 author: paulinbar
 ms.author: painbar
 ms.reviewer: ericlaw
-ms.custom: asr
+ms.custom:
+  - asr
+  - sfi-image-nochange
 ms.subservice: macos
 ms.topic: overview
 ms.collection:

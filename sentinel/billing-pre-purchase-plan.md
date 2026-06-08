@@ -2,10 +2,11 @@
 title: Optimize costs with a prepurchase plan
 titleSuffix: Microsoft Sentinel
 description: Learn how to save costs and buy a Microsoft Sentinel prepurchase plan
+ms.author: edbaynash
 author: EdB-MSFT
+ms.reviewer: daniha
 ms.topic: how-to
 ms.date: 07/07/2025
-ms.author: edbaynash
 
 #customerintent: As a SOC administrator or a billing specialist, I want to know how to buy a prepurchase plan and whether commit units will benefit us financially.
 ---

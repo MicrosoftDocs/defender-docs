@@ -60,7 +60,7 @@ Deployment methods vary, depending on operating system and preferred methods. Th
 |Operating systems  |Methods  |
 |---------|---------|
 |Windows 10 or later<br/><br/>Windows Server 2016 or later<br/><br/>Windows Server, version 1803 or later<br/><br/>Windows Server 2012 R2 | [Microsoft Intune or Mobile Device Management](configure-endpoints-mdm.md)<br/><br/>[Microsoft Configuration Manager](configure-endpoints-sccm.md)<br/><br/>[Group Policy](configure-endpoints-gp.md)<br/><br/>[VDI scripts](configure-endpoints-vdi.md)<br/><br/>[Local script (up to 10 devices)](configure-endpoints-script.md)<br/> The local script method is suitable for a proof of concept but shouldn't be used for production deployment. For a production deployment, we recommend using Group Policy, Microsoft Configuration Manager, or Intune. |
-|Windows Server 2008 R2 SP1 | [Microsoft Monitoring Agent (MMA)](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) or [Microsoft Defender for Cloud](/azure/security-center/security-center-wdatp) <br> The Microsoft Monitoring Agent is now Azure Log Analytics agent. To learn more, see [Log Analytics agent overview](/azure/azure-monitor/platform/log-analytics-agent).  |
+|Windows Server 2008 R2 SP1 | [Microsoft Monitoring Agent (MMA)](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-windows-81-only) or [Microsoft Defender for Cloud](/azure/security-center/security-center-wdatp) <br> The Microsoft Monitoring Agent is now Azure Log Analytics agent. To learn more, see [Log Analytics agent overview](/azure/azure-monitor/platform/log-analytics-agent).  |
 |Windows 8.1 Enterprise<br/><br/>Windows 8.1 Pro<br/><br/>Windows 7 SP1 Pro<br/><br/>Windows 7 SP1| [Microsoft Monitoring Agent (MMA)](onboard-downlevel.md) <br>The Microsoft Monitoring Agent is now Azure Log Analytics agent. To learn more, see [Log Analytics agent overview](/azure/azure-monitor/platform/log-analytics-agent).  |
 |**Windows servers<br><br>Linux servers** | [Integration with Microsoft Defender for Cloud](azure-server-integration.md)
 |macOS|[Local script](mac-install-manually.md) <br> [Microsoft Intune](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobile Device Management](mac-install-with-other-mdm.md)|
@@ -119,11 +119,7 @@ To set Microsoft Defender Antivirus to passive mode on Windows Server 2019 and l
 
 If you're using Windows Server 2016, you might need to start Microsoft Defender Antivirus manually by doing the following steps:
 
-1. Open an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**). For example:
-   1. Open the **Start** menu, and then type **cmd**.
-   2. Right-click on the **Command Prompt** result, and then select **Run as administrator**.
-
-1. In the elevated Command Prompt, run the following commands:
+1. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
    > [!TIP]
    > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.

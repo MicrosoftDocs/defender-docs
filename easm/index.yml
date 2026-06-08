@@ -26,7 +26,7 @@ landingContent:
         links:
           - text: Overview
             url: overview.md
-          - text: Understanding inventory assets
+          - text: Understand inventory assets
             url: understanding-inventory-assets.md
           - text: What is discovery?
             url: what-is-discovery.md
@@ -44,7 +44,7 @@ landingContent:
             url: using-and-managing-discovery.md 
       - linkListType: tutorial
         links:
-          - text: Discovering your attack surface
+          - text: Discover your attack surface
             url: discovering-your-attack-surface.md  
 
   # Card
@@ -52,9 +52,9 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Understanding asset details
+          - text: Understand asset details
             url: understanding-asset-details.md
-          - text: Understanding dashboards
+          - text: Understand dashboards
             url: understanding-dashboards.md
           - text:  Understand billable assets 
             url: understanding-billable-assets.md
@@ -64,11 +64,11 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Using and managing discovery
+          - text: Use and manage discovery
             url: using-and-managing-discovery.md 
-          - text: Modifying inventory assets
+          - text: Modify inventory assets
             url: modifying-inventory-assets.md
-          - text: Leveraging data connections
+          - text: Leverage data connections
             url: data-connections.md
 
   # Card
@@ -103,7 +103,7 @@ landingContent:
     linkLists:
       - linkListType: learn
         links:
-          - text: Leveraging data connections
+          - text: Leverage data connections
             url: data-connections.md
           - text: Microsoft Security Copilot (preview) and Defender EASM
             url: easm-copilot.md 

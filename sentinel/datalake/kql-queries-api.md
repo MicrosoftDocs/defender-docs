@@ -2,12 +2,13 @@
 title: Run KQL queries on Microsoft Sentinel data lake using APIs
 titleSuffix: Microsoft Security  
 description: Learn how to run KQL queries against the Microsoft Sentinel data lake programmatically using REST APIs. Enable automation, intelligent agents, and scalable analytics.
+ms.author: edbaynash  
 author: EdB-MSFT  
+ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
 ms.date: 03/26/2026
-ms.author: edbaynash  
 ms.collection: ms-security  
 ---  
 

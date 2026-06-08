@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 05/07/2026
+ms.date: 06/01/2026
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -29,10 +29,22 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## June 2026
+
+- (Preview) Local AI agent discovery on Windows endpoints: as part of the [Defender AI agents experience](/defender-xdr/security-for-ai/defender-security-for-ai), Microsoft Defender now automatically discovers supported local AI agents running on onboarded Windows devices - including coding agents and IDE extensions, desktop AI assistants, local AI runtimes, and agent platforms. Discovered agents appear as assets in the AI agent inventory, exposure map, and advanced hunting, giving security teams visibility into local AI agent usage across the organization. For more information, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents).
+- (Preview) Local AI agent runtime protection on Windows endpoints: as part of the [Defender AI agents experience](/defender-xdr/security-for-ai/defender-security-for-ai), runtime protection for supported local AI agents on Windows endpoints is now available in public preview. Microsoft Defender inspects the agent loop (user prompts, tool calls, and tool responses) and can block risky activity before it executes, helping stop prompt injection and unsafe agent actions at the device level. Blocked and audited events appear as alerts in Microsoft Defender to support incident correlation and investigation workflows. For more information, see [Set up AI agent runtime protection with Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection).
+- (GA) The following advanced hunting schema tables are now generally available:
+    - The [`CloudAuditEvents`](advanced-hunting-cloudauditevents-table.md) table contains information about cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud.
+    - The [`CloudDnsEvents`](advanced-hunting-clouddnsevents-table.md) table contains information about DNS activity events from cloud infrastructure environments.
+- (Preview) The [`AgentsInfo`](advanced-hunting-agentsinfo-table.md) table in advanced hunting is now available in preview. The [`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table is transitioning to this new table, which provides a unified schema that supports agent inventory and governance for all agent types, including Copilot Studio, Microsoft Foundry, Microsoft 365 Copilot, third-party, and endpoint-discovered agents. Microsoft Agent 365 customers should use the `AgentsInfo` table today. The `AIAgentsInfo` table remains accessible until July 1, 2026. Update your queries to use `AgentsInfo` before this date. For more information, see [Advanced hunting schema - Naming changes](advanced-hunting-schema-changes.md).
+
 ## May 2026
 
+- **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts for Hunting - Servers** are now offered as standalone offerings for customers who wish to avail managed extended detection and response and threat hunting services for their on-premises and multicloud servers protected by Microsoft Defender for Cloud. These services were previously offered as add-ons to Microsoft Defender Experts for XDR and Mircosoft Defender Experts for Hunting, respectively. [Learn more.](dex-servers-overview.md)
+- (Preview) [Automatic attack disruption](automatic-attack-disruption.md) can now isolate compromised devices from the network when high-confidence incident analysis indicates the device is being used as an active foothold. Isolation blocks attacker communication and lateral movement while keeping the device connected to security services. The action is time-limited, scoped to devices involved in the incident, and can be released by security operators at any time. [Learn more](/defender-endpoint/respond-machine-alerts#isolate-device-automatic-attack-disruption)
 - In advanced hunting, the **Take action** wizard now lets customers allow or block top-level domains and files attachment hashes in emails based on query results. [Learn more](advanced-hunting-take-action.md#take-various-actions-on-emails).
 - The [hunting graph](advanced-hunting-graph.md) in advanced hunting now includes new identity-focused predefined scenarios. These scenarios help you discover attack paths, privilege escalation routes, and credential access risks across on-premises and cloud environments, including Kerberoast and AS-REP roast paths, domain compromise routes, OAuth application risks, and external user access to cloud resources.
+- [Defender Chat experience](./security-copilot-in-microsoft-365-defender.md#microsoft-security-copilot-integration-in-microsoft-defender) (Preview) is an open prompt chat assistant built into Microsoft Defender. It helps SOC analysts investigate threats, explore incidents, and answer security questions in plain language, without needing to navigate multiple screens or write complex queries.
 
 ## April 2026
 

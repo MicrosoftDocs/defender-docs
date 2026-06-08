@@ -16,7 +16,9 @@ ms.collection:
   - m365-security
   - tier2
 description: Integrate your organization's SIEM server with Microsoft Defender for Office 365 and related threat events in the Office 365 Activity Management API.
-ms.custom: seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

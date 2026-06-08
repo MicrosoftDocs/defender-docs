@@ -13,6 +13,7 @@ ms.date: 10/28/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # Advanced hunting in Microsoft Defender multitenant management

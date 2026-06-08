@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/04/2026
+ms.date: 05/31/2026
 ms.collection:
 - m365-security
 - tier1
@@ -25,13 +25,26 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
+## June 2026
+
+|Type  |Feature  |Preview/GA  |Description  |
+|---------|------------|-------------|-------------|
+|Feature |New Microsoft Secure Score recommendation |Preview |Microsoft Secure Score now includes the **Reduce unnecessary inbound internet exposure on internet-facing devices** recommendation, which helps identify devices that are accessible from the public internet and may represent unnecessary attack surface.<br><br>Internet-facing devices are primary entry points for attackers and automated scanners, making them prime targets for credential brute-forcing, exploitation of unpatched vulnerabilities, and initial access for ransomware and hands-on-keyboard intrusions.<br><br>This recommendation provides centralized visibility into internet-facing devices across the environment, enabling organizations to validate whether exposure is expected, prioritize remediation for unintended exposure, and reduce external attack surface at scale. |
+|Feature |[Local AI agent discovery](/defender-xdr/security-for-ai/ai-agent-inventory#discover-local-ai-coding-agents-on-endpoints-preview) |Preview |Microsoft Defender for Endpoint now automatically discovers supported local AI agents running on onboarded Windows devices — including coding agents and IDE extensions, desktop AI assistants, local AI runtimes, and agent platforms. Discovered agents appear as assets in the AI agent inventory, exposure map, and advanced hunting, giving security teams visibility into local AI agent usage across the organization. For more information, see [Discover local AI agents](discover-local-ai-agents.md).|
+|Feature |[Local AI agent runtime protection](configure-ai-agent-runtime-protection.md) |Preview |Runtime protection for supported local AI agents on Windows endpoints is now available in public preview. Microsoft Defender inspects the agent loop (user prompts, tool calls, and tool responses) and can block risky activity before it executes, helping stop prompt injection and unsafe agent actions at the device level. Blocked and audited events appear as alerts in Microsoft Defender to support incident correlation and investigation workflows. For more information, see [Set up AI agent runtime protection](configure-ai-agent-runtime-protection.md).|
+
 ## May 2026
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Feature | [Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security) | GA | The Defender for endpoint security solution for legacy Windows 7 SP1 and Windows Server 2008 R2 SP1 devices is now generally available. The solution provides advanced protection capabilities and improved functionality for these devices compared to other solutions. The solution is available using the [Defender deployment tool](./defender-deployment-tool-windows.md). |
+|Feature |[Enhanced exposure score in Defender Vulnerability Management](/defender-vulnerability-management/tvm-exposure-score#transition-to-the-new-exposure-score-preview) |Preview |The new exposure score model in Defender Vulnerability Management is now available in preview. This model improves risk prioritization and recommendation impact accuracy by incorporating exploit prediction data (EPSS) and asset context factors such as internet-facing status and criticality. For more information, see [Exposure score in Defender Vulnerability Management](/defender-vulnerability-management/tvm-exposure-score) and [Security recommendations](/defender-vulnerability-management/tvm-security-recommendation). |
+|Feature |[Schedule antivirus scans on Linux](schedule-antivirus-scans-linux.md) |Preview |You can now configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux. Scheduled scans support hourly quick scans, interval-based quick scans, and weekly full scans, with options for low-priority execution, idle-time scheduling, and randomized start times. Configure scans using managed JSON, the Microsoft Defender portal, or the mdatp CLI. |
+|Feature |[Automatic device isolation (automatic attack disruption)](respond-machine-alerts.md#isolate-device-automatic-attack-disruption) |Preview |Microsoft Defender for Endpoint can now automatically isolate compromised devices as part of [automatic attack disruption](/defender-xdr/automatic-attack-disruption). Isolation blocks most network traffic while keeping the device connected to security services. The action is time-limited, scoped to the incident, and security operators can release isolation at any time. |
 |Feature |[Custom data collection](custom-data-collection.md) |GA |Custom data collection is now generally available. This feature enables organizations to expand and customize telemetry collection beyond default configurations with rule-based filtering for specific events from endpoint devices. The maximum event limit per rule has been updated from 25,000 to 75,000 events per device within a 24-hour rolling window. |
 |Feature |[Configure offline security intelligence update settings for Linux from the Defender and Intune portals](./linux-support-offline-security-intelligence-update.md#configure-the-endpoints) |GA |You can now configure offline security intelligence update settings for Linux directly from the Defender and Intune portals. |
 |Feature |[Selective Response Actions](./restrict-response-actions-high-value-assets.md) |Preview |Selective Response Actions enables organizations to tailor high-impact security operations on devices during onboarding. It provides precise control over how response actions are applied on Tier-0 systems and other high-value assets, helping maintain operational stability while delivering strong protection. |
+|Release - Windows|Windows Defender Antivirus: Platform 4.18.26040.7 / Engine 1.1.26040.8 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--april-2026--platform-418260407--engine-11260408). |
 
 ## April 2026
 
@@ -75,7 +88,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 |Feature |Enhanced Defender deployment tool for Windows | Preview |The new version of the tool streamlines onboarding and enhances security by:<br/>- Bundling the onboarding package directly into the tool's executable.<br/>- Generating a key during deployment package creation that is required for running the tool.<br/>- Enabling users to configure an expiry date for the package to reduce the risk of unauthorized use.<br/><br/>In addition, a new Deployment packages page in the Defender portal facilitates management of downloaded packages by providing centralized visibility into all the packages and their current status. |
 |Release - macOS |Build 101.25122.0008 |GA |Release version 20.125122.8.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--february-2026--platform-101251220008). |
 |Release - Linux |Build 101.25122.0004 |GA |Release version 30.125122.0004.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--february-2026--101251220004). |
-|Release - Windows | Windows Defender Antivirus: Platform 4.18.26010.5 / Engine 1.1.26010.1 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--january-2026--platform-418260105--engine-11260101). |
+|Release - Windows | Windows Defender Antivirus: Platform 4.18.26010.5 / Engine 1.1.26010.1 |GA |See [enhancements and features for this release](msda-updates-previous-versions-technical-upgrade-support.md#january-2026-platform-418260105--engine-11260101). |
 
 ## January 2026
 
