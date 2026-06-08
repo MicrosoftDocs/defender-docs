@@ -115,7 +115,7 @@ The following steps show how to generate and download a new onboarding package.
 
    Copy the key and save it, as it will be needed with the deployment tool.
 
-   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
+   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* or *.exe* file of the Defender deployment tool executable, depending on the download choice you make.
 
 ## Deploy Defender endpoint security on devices
 
