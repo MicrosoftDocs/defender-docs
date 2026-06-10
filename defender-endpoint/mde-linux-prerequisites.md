@@ -54,18 +54,7 @@ Linux server endpoints should have systemd (system manager) installed.
 
 To use [device isolation functionality](./respond-machine-alerts.md#isolate-devices-from-the-network), the following must be enabled:
 
-- `iptables`
-- `ip6tables`
-- The following kernel configurations (enabled by default on the supported distros).
-
-  | Older kernels (lower than 5.x) | Newer kernels (5.x and later) | All kernel versions |
-  |---|---|---|
-  | `CONFIG_NETFILTER_XT_TARGET_NFQUEUE` | `CONFIG_NF_TABLES` | `CONFIG_NETFILTER` |
-  | `CONFIG_IP_NF_IPTABLES` | `CONFIG_NFT_QUEUE` | `CONFIG_NETFILTER_NETLINK_QUEUE` |
-  | `CONFIG_IP_NF_FILTER` | `CONFIG_NFT_COMPAT` | `CONFIG_PROC_FS` |
-  | `CONFIG_IP6_NF_IPTABLES` | `CONFIG_NETFILTER_XT_MATCH_OWNER` | `CONFIG_UNIX` |
-  | `CONFIG_IP6_NF_FILTER` | | |
-  | `CONFIG_IP_NF_MATCH_OWNER` | | |
+- `iptables` and `ip6tables`, or `iptables-nft` and `ip6tables-nft`
 
 ## Network requirements
 
