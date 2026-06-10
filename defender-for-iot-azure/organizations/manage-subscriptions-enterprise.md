@@ -29,7 +29,7 @@ Before performing the procedures in this article, make sure that you have:
     - A Microsoft 365 E5 (ME5) or E5 Security license and a Microsoft Defender for Endpoint P2 license
     - A Microsoft Defender for Endpoint P2 license alone
 
-    For more information, see [Enterprise IoT security in Microsoft Defender](concept-enterprise.md#enterprise-iot-security-in-microsoft-defender-xdr).
+    For more information, see [Enterprise IoT security in Microsoft Defender XDR](concept-enterprise.md#enterprise-iot-security-in-microsoft-defender-xdr).
 
 - Access to the Microsoft Defender Portal as a [Security administrator](/azure/active-directory/roles/permissions-reference#security-administrator)
 
@@ -72,7 +72,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 
 **To calculate the number of devices you're monitoring:**:
 
-1. In [Microsoft Defender](https://security.microsoft.com/), select **Assets** \> **Devices** to open the **Device inventory** page.
+1. In [Microsoft Defender XDR](https://security.microsoft.com/), select **Assets** \> **Devices** to open the **Device inventory** page.
 
 1. Note down the total number of **IoT devices** listed.
 
@@ -123,7 +123,7 @@ Turn off the **Enterprise IoT security** option if you're no longer using the se
 
 **To turn off enterprise IoT monitoring**:
 
-1. In [Microsoft Defender](https://security.microsoft.com/), select **Settings** \> **Device discovery** \> **Enterprise IoT**.
+1. In [Microsoft Defender XDR](https://security.microsoft.com/), select **Settings** \> **Device discovery** \> **Enterprise IoT**.
 
 1. Toggle the option to **Off**.
 
@@ -133,7 +133,7 @@ You stop getting security value in Microsoft Defender, including purpose-built a
 
 If you have a legacy Enterprise IoT plan, are *not* an ME5/E5 Security customer, and no longer use the service, cancel your plan as follows:
 
-1. In [Microsoft Defender](https://security.microsoft.com/) portal, select **Settings** \> **Device discovery** \> **Enterprise IoT**.
+1. In [Microsoft Defender XDR](https://security.microsoft.com/) portal, select **Settings** \> **Device discovery** \> **Enterprise IoT**.
 
 1. Select **Cancel plan**. This page is available only for legacy Enterprise IoT plan customers.
 
