@@ -5,7 +5,7 @@ ms.topic: overview
 ms.date: 09/09/2025
 ---
 
-# Palo Alto Prisma data connector?
+# Palo Alto Prisma data connector
 
 To integrate with Palo Alto Prisma, you need to provide an authentication endpoint API URL, and a valid Access Key and Secret Key generated using a Palo Alto service account.
 
