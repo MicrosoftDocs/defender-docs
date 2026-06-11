@@ -1,7 +1,7 @@
 ---
 title: View your identity coverage and maturity (Preview)
 description: Learn how to use the Coverage and maturity page in Microsoft Defender to check your identity protection status and close coverage gaps in your environments.
-ms.date: 03/23/2026
+ms.date: 06/02/2026
 ms.topic: how-to
 ms.author: abbyweisberg
 author: AbbyMSFT
@@ -36,7 +36,7 @@ To use the **Coverage and maturity** page, you need:
 
 To access the **Coverage and maturity** page, sign in to the [Microsoft Defender portal](https://security.microsoft.com) and select **Identities > Coverage and maturity**.
 
-:::image type="content" source="media/coverage-maturity-page.png" alt-text="Screenshot that shows the Coverage and maturity page in Microsoft Defender.":::
+:::image type="content" source="media/coverage-maturity-page.png" alt-text="Screenshot that shows the Coverage and maturity page in Microsoft Defender." lightbox="media/coverage-maturity-page.png":::
 
 ## Maturity level
 
@@ -57,15 +57,17 @@ The maturity level is based on a score ranging from 0 to 100, based on the combi
 
 ## Top setup tasks
 
-The **Top setup tasks** section shows the five most important things you can do to improve your coverage. Each task shows its **impact**, **maturity score effect**, and **estimated effort**.
+The **Top setup tasks** section shows up to five cards at the top of the page representing the most important things you can do to improve your coverage. Each card shows the task name, source type (such as Identity provider or SaaS), **impact** level, and **estimated effort**.
 
 Tasks are ranked so that high-impact, low-effort items appear first:
 
 1. On-premises sensor deployment, Microsoft Entra ID connector, and app governance
-2. SaaS app connectors
-3. Identity provider, PAM, and IGA integrations
+1. SaaS app connectors
+1. Identity provider, PAM, and IGA integrations
 
-Select a task to go directly to the setup page in the portal. A green checkmark appears when you complete a task. After you finish all five, the list refreshes with the next five priorities.
+Select a card to go directly to the setup page in the portal. After you complete a task, the card is removed and replaced with the next priority.
+
+By default, only components detected in your environment are shown. To also see other supported integrations that aren't currently in use, change the filter on the **Review and improve coverage** side panel. For more information, see [Review and improve coverage](#review-and-improve-coverage).
 
 ## Coverage sources
 
@@ -126,6 +128,36 @@ Shows partner integrations for privileged access management (PAM) and identity g
 | Coverage score | Percentage of connected PAM and IGA solutions out of discovered solutions. |
 | Active connectors | Connected solutions out of total supported solutions. |
 | Actions required | Number of unresolved gaps. |
+
+## Review and improve coverage
+
+To see the specific setup actions for a coverage source, select **Review and improve coverage** on its card. A side panel opens with the source name and the following information:
+
+- A summary of the benefits of expanding coverage for that source.
+- A connection count. For example, **2/2 connected** for identity providers, on-premises, and PAM & IGA sources, or **6/21 active connectors** for SaaS apps.
+- A **Coverage progress** list of the setup actions available for that source.
+- A configuration button at the bottom of the panel that opens the related settings page (for example, **Configure on-premises sensors** or **Configure cloud apps connectors**).
+
+The following screenshot shows the Identity providers side panel as an example:
+
+:::image type="content" source="media/identity-providers-side-panel.png" alt-text="Screenshot that shows the Identity providers side panel in Microsoft Defender." lightbox="media/identity-providers-side-panel.png":::
+
+The **Coverage progress** list includes the following columns. Select the checkbox next to an action to mark it complete.
+
+| Column | Description |
+| --- | --- |
+| **Action name** | The setup task, such as connecting a specific app, sensor, or partner solution. |
+| **Impact** | The security impact of completing the action. |
+| **Effort** | The estimated effort to complete the action. |
+
+### SaaS identities panel
+
+The SaaS identities panel includes additional options that aren't available for other coverage sources:
+
+- An **Observed** column that indicates whether each application is detected in your environment.
+- A **Show Only Observed Applications** toggle. By default, only observed applications are shown. Turn off the toggle to also see other supported SaaS apps that aren't currently observed.
+
+:::image type="content" source="media/saas-identities-side-panel.png" alt-text="Screenshot that shows the SaaS identities side panel with the Observed column and Show Only Observed Applications toggle in Microsoft Defender." lightbox="media/saas-identities-side-panel.png":::
 
 ## Related content
 
