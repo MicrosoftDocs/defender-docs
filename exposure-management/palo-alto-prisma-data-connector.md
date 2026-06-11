@@ -37,7 +37,7 @@ To establish a connection with Palo Alto Prisma in Exposure Management, follow t
 
 ## Retrieved data
 
-The Palo Alto Prisma connector retrieves data on your IT assets and risks, providing extended exposure insights based on the additional data and context it offers.
+The Palo Alto Prisma connector retrieves data on compute devices. This data includes virtual machines and cloud resources, along with vulnerability findings and configuration data from Palo Alto Prisma on those assets. It also retrieves network and configuration information to identify those devices.
 
 | **Category**            | **Properties**                                                                 |
 |-------------------------|--------------------------------------------------------------------------------|
