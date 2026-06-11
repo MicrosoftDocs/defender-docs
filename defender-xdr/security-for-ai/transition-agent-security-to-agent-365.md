@@ -41,7 +41,7 @@ These capabilities, currently through Microsoft Defender for Cloud Apps and Micr
 
 #### Advanced Hunting
 
-The AI agent inventory in Advanced Hunting is moving from the `AIAgentInfo` table to a new `AgentInfo` table, powered by Microsoft Agent 365 as the single source of truth for AI agent inventory. The `AIAgentInfo` table will be deprecated. The `AgentInfo` schema will be published on Microsoft Learn, and Microsoft-published community queries will be updated to use the new table.
+The AI agent inventory in Advanced Hunting is moving from the `AIAgentInfo` table to a new `Agentsinfo` table, powered by Microsoft Agent 365 as the single source of truth for AI agent inventory. The `AIAgentInfo` table will be deprecated. The `Agentsinfo` schema will be published on Microsoft Learn, and Microsoft-published community queries will be updated to use the new table.
 
 #### Threat detection alerts
 
@@ -66,7 +66,7 @@ For tenants with a Microsoft Agent 365-eligible license, the following experienc
 
 - AI Agents inventory and asset pages
 - AI Agents recommendations (Foundry agents)
-- `AIAgentInfo` table in Advanced Hunting (until migrated to `AgentInfo`)
+- `AIAgentInfo` table in Advanced Hunting (until migrated to `Agentsinfo`)
 - Security for AI settings page
 
 The **AI Agents** sub-tab under **Cloud Assets** will be removed for all customers.
@@ -91,7 +91,7 @@ Microsoft Foundry agent data will no longer appear in the following Azure portal
 
 1. **Confirm your Defender enablement settings** - On July 1, 2026, all Security for AI capabilities consolidate under a single **Security for AI Agents** toggle in Defender settings. Confirm the toggle is **On** and review the consolidated configuration. When the toggle is off, all Security for AI capabilities are disabled.
 
-1. **Update Advanced Hunting queries** - Review saved queries, custom detections, and workbooks that reference the `AIAgentInfo` table and update them to the new `AgentInfo` table before July 1, 2026.
+1. **Update Advanced Hunting queries** - Review saved queries, custom detections, and workbooks that reference the `AIAgentInfo` table and update them to the new `Agentsinfo` table before July 1, 2026.
 
 1. **If you already use Agent 365, redefine real-time protection blocking rules** - The existing Agent 365 real-time protection settings are moving to a new **Policies** experience. Any rules currently set to **Block** stop enforcing on July 1, 2026. Redefine them under **Settings** > **Security for AI** > **Policies** (available July 1, 2026) to preserve blocking. This applies only to Agent 365 real-time protection — Copilot Studio real-time protection through Defender for Cloud Apps is unchanged.
 
