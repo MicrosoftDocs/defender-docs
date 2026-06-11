@@ -15,6 +15,7 @@ While the number of IoT devices continues to grow, they often lack the security 
 
 [Microsoft Defender for IoT](./index.yml) seamlessly integrates with [Microsoft Defender](/microsoft-365/security/defender) and [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/) to provide both IoT device discovery and security value for IoT devices, including purpose-built recommendations, and vulnerability data.
 
+<a name="enterprise-iot-security-in-microsoft-defender-xdr"></a>
 ## Enterprise IoT security in Microsoft Defender
 
 Enterprise IoT security in Microsoft Defender provides IoT-specific security value, including risk and exposure levels, vulnerabilities, and recommendations in Microsoft Defender.
