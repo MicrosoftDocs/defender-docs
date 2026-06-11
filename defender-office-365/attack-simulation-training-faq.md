@@ -13,7 +13,7 @@ ms.custom:
   - sfi-image-nochange
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 02/06/2026
+ms.date: 06/08/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -402,9 +402,11 @@ During simulation creation, if you scan the QR code or you use **Send a Test** t
 
 When the payload is used in a simulation, the service replaces the QR code with a dynamically generated QR code to track click and compromise metrics. The size, position, and shape of the QR code matches the configuration options you configured in the payload. Scanning the QR code during an actual simulation takes you to the configured landing page.
 
-### Q: I'm trying to create a payload in HTML, but the payload editor seems to remove certain content from my design?
+### Q: I'm trying to create a payload in HTML, but the payload editor seems to remove certain content from my design or doesn't save the payload?
 
 A: Currently, the following HTML tags aren't supported in the payload editor: `applet, base, basefont, command, embed, frame, frameset, iframe, keygen, link, meta, noframes, noscript, param, script, object, title`.
+
+Payloads containing the following case-insensitive terms are blocked: `IRS, I.R.S., Internal Revenue Service, Inland Revenue Service, Treasury`. This behavior aligns with the restrictions on using certain government-related trademarks and symbols described in [Create payloads](attack-simulation-training-payloads.md#create-payloads). If your payload is rejected unexpectedly, review the content for these terms and remove them.
 
 ### Q: What happens if you modify the content used in an existing simulation?
 
