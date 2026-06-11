@@ -1,10 +1,10 @@
 ---
-title: Planning multicloud security determine ownership requirements security functions team alignment best practices guidance
+title: Determine ownership requirements
 description: Learn about determining ownership requirements when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
-author: Elazark
+author: ElazarK
 ms.author: elkrieger
-ms.date: 05/25/2025
+ms.date: 06/11/2026
 ---
 
 # Determine ownership requirements
@@ -35,24 +35,24 @@ Depending on the size of your organization, separate teams will manage [security
 
 ## Team alignment
 
-Despite the many different teams who manage cloud security, it’s critical that they work together to figure out who’s responsible for decision making in the multicloud environment. Lack of ownership creates friction that can result in stalled projects and insecure deployments that couldn’t wait for security approval.
+Despite the many different teams who manage cloud security, it's critical that they work together to figure out who's responsible for decision making in the multicloud environment. Lack of ownership creates friction that can result in stalled projects and insecure deployments that couldn't wait for security approval.
 
-Security leadership, most commonly under the CISO, should specify who’s accountable for security decision making. Typically, responsibilities align as summarized in the table.
+Security leadership, most commonly under the CISO, should specify who's accountable for security decision making. Typically, responsibilities align as summarized in the table.
 
 |Category | Description | Typical Team|
 | --- | --- | --- |
-|Server endpoint security | Monitor and remediate server security, includes patching, configuration, endpoint security, etc.| Joint responsibility of [central IT operations](/azure/cloud-adoption-framework/organize/central-it) and [Infrastructure and endpoint security](/azure/cloud-adoption-framework/organize/central-it) teams.|
-|Incident monitoring and response| Investigate and remediate security incidents in your organization’s SIEM or source console.| [Security operations](/azure/cloud-adoption-framework/organize/cloud-security-operations-center) team.|
-|Policy management|Set direction for Azure role-based access control (Azure RBAC), Microsoft Defender for Cloud, administrator protection strategy, and Azure Policy, in order to govern Azure resources, custom AWS/GCP recommendations etc.|Joint responsibility of [policy and standards](/azure/cloud-adoption-framework/organize/cloud-security-policy-standards) and [security architecture](/azure/cloud-adoption-framework/organize/cloud-security-architecture) teams.|
-|threat and vulnerability management| Maintain complete visibility and control of the infrastructure, to ensure that critical issues are discovered and remediated as efficiently as possible.| Joint responsibility of [central IT operations](/azure/cloud-adoption-framework/organize/central-it) and [Infrastructure and endpoint security](/azure/cloud-adoption-framework/organize/central-it) teams.|
+|Server endpoint security | Monitor and remediate server security, includes patching, configuration, endpoint security, and similar tasks.| Joint responsibility of [central IT operations](/azure/cloud-adoption-framework/organize/central-it) and [Infrastructure and endpoint security](/azure/cloud-adoption-framework/organize/central-it) teams.|
+|Incident monitoring and response| Investigate and remediate security incidents in your organization's SIEM or source console.| [Security operations](/azure/cloud-adoption-framework/organize/cloud-security-operations-center) team.|
+|Policy management|Set direction for Azure role-based access control (Azure RBAC), Microsoft Defender for Cloud, administrator protection strategy, and Azure Policy to govern Azure resources and custom AWS/GCP recommendations.|Joint responsibility of [policy and standards](/azure/cloud-adoption-framework/organize/cloud-security-policy-standards) and [security architecture](/azure/cloud-adoption-framework/organize/cloud-security-architecture) teams.|
+|Threat and vulnerability management| Maintain complete visibility and control of the infrastructure, to ensure that critical issues are discovered and remediated as efficiently as possible.| Joint responsibility of [central IT operations](/azure/cloud-adoption-framework/organize/central-it) and [Infrastructure and endpoint security](/azure/cloud-adoption-framework/organize/central-it) teams.|
 |Application workloads|Focus on security controls for specific workloads. The goal is to integrate security assurances into development processes and custom line of business (LOB) applications.|Joint responsibility of [application development](/azure/cloud-adoption-framework/organize/cloud-security-application-security-devsecops) and [central IT operations](/azure/cloud-adoption-framework/organize/central-it) teams.|
 |Identity security and standards | Understand Permission Creep Index (PCI) for Azure subscriptions, AWS accounts, and GCP projects, in order to identify risks associated with unused or excessive permissions across identities and resources.| Joint responsibility of [identity and key management](/azure/cloud-adoption-framework/organize/cloud-security-identity-keys), [policy and standards](/azure/cloud-adoption-framework/organize/cloud-security-policy-standards), and [security architecture](/azure/cloud-adoption-framework/organize/cloud-security-architecture) teams. |
 
 ## Best practices
 
 - Although multicloud security might be divided across different areas of the business, teams should manage security across the multicloud estate. This is better than having different teams secure different cloud environments. For example where one team manages Azure and another team manages AWS. Teams working across multicloud environments helps to prevent sprawl within the organization. It also helps to ensure that security policies and compliance requirements are applied in every environment.
-- Often, teams that manage Defender for Cloud don’t have privileges to remediate recommendations in workloads. For example, the Defender for Cloud team might not be able to remediate vulnerabilities in an AWS EC2 instance. The security team might be responsible for improving the security posture, but unable to fix the resulting security recommendations. To address this issue:
-  - It’s imperative to involve the AWS workload owners.
+- Often, teams that manage Defender for Cloud don't have privileges to remediate recommendations in workloads. For example, the Defender for Cloud team might not be able to remediate vulnerabilities in an AWS EC2 instance. The security team might be responsible for improving the security posture, but unable to fix the resulting security recommendations. To address this issue:
+  - It's imperative to involve the AWS workload owners.
     - [Assigning owners with due dates](./governance-rules.md) and [defining governance rules](./governance-rules.md) creates accountability and transparency, as you drive processes to improve security posture.
 - Depending on organizational models, we commonly see these options for central security teams operating with workload owners:
   - **Option 1: Centralized model.** Security controls are defined, deployed, and monitored by a central team.
@@ -67,7 +67,7 @@ Security leadership, most commonly under the CISO, should specify who’s accoun
     - The central security team on the other hand only acts as a controlling entity, without write-access to any of the workloads.
     - The security team usually has insights into the overall security posture of the organization, and they might hold the workload owners accountable for improving their security posture.
     - This model is most suitable for organizations that need visibility into their overall security posture, but at the same time want to keep responsibility for security with the workload owners.
-    - Currently, the only way to achieve Option 2 in Defender for Cloud is to assign the workload owners with Security Reader permissions to the subscription that’s hosting the multicloud connector resource.
+    - Currently, the only way to achieve Option 2 in Defender for Cloud is to assign the workload owners with Security Reader permissions to the subscription that's hosting the multicloud connector resource.
 
 ## Next steps
 

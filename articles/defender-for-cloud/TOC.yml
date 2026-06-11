@@ -46,6 +46,10 @@
           href: support-matrix-defender-for-cloud.md
         - name: Regional availability for Defender for Cloud plans
           href: regional-availability.md
+    - name: Plan multicloud protection
+      items:
+        - name: Determine ownership requirements
+          href: plan-multicloud-security-determine-ownership-requirements.md
     - name: Connect environments and enable all plans
       expanded: false
       items:

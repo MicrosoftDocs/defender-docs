@@ -4,7 +4,9 @@ description: Learn how you can optimize Microsoft Defender for Cloud costs with 
 ms.topic: how-to
 ms.reviewer: liuyizhu
 ms.service: defender-for-cloud
-ms.date: 04/20/2026
+author: ElazarK
+ms.author: elkrieger
+ms.date: 06/11/2026
 ---
 
 # Optimize Microsoft Defender for Cloud costs with a pre-purchase plan
@@ -25,9 +27,9 @@ As another example, an enterprise customer has an Annual Commitment Discount (AC
 
 This year, the customer decided to purchase 100,000 Defender Credit Units (DCUs) for 82,000 USD, which includes an 18% discount off the retail prices. This discount isn't combined with the ACD, effectively making the actual discount rate 8%.
 
-As DCUs are consumed at retail prices, the customer would still need to use 20,000 USD worth of Defender for Cloud at the pay-as-you-go (PAYG) rates, applying the ACD discount.
+As DCUs are consumed at retail prices, the customer would still need to use 20,000 USD worth of Defender for Cloud at the pay-as-you-go rates, applying the ACD discount.
 
-At the end of the commitment period, the actual Defender for Cloud usage cost for the customer would be 82,000 USD for the DCUs (reflecting the price with the 18% discount) plus 18,000 USD for the PAYG consumption (reflecting the 10% ACD discount). This totals to 100,000 USD.
+At the end of the commitment period, the actual Defender for Cloud usage cost for the customer would be 82,000 USD for the DCUs (reflecting the price with the 18% discount) plus 18,000 USD for the pay-as-you-go consumption (reflecting the 10% ACD discount). This totals to 100,000 USD.
 
 > [!NOTE]
 > The mentioned prices are for example purposes only. They aren't intended to represent actual costs.
@@ -87,7 +89,7 @@ To view reservation plan utilization in the Azure portal, sign in, go to the **R
 
 You can also access reservation utilization through APIs, PowerShell, or the CLI.
 
-For more information, see the full documentation [here](/azure/cost-management-billing/reservations/reservation-utilization).
+For more information, see [Reservation utilization](/azure/cost-management-billing/reservations/reservation-utilization).
 
 ## Change scope and ownership
 
