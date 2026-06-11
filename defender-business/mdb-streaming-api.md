@@ -41,7 +41,7 @@ To stream Defender for Business data to Microsoft Sentinel, complete the followi
 
 3. Onboard to Microsoft Sentinel. See [Quickstart: Onboard Microsoft Sentinel](/azure/sentinel/quickstart-onboard).
 
-4. Enable the Microsoft Defender XDR connector. See [Connect data from Microsoft Defender XDR to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
+4. Enable the Microsoft Defender connector. See [Connect data from Microsoft Defender to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
 
 ## Use the streaming API with Event Hubs
 
@@ -88,7 +88,7 @@ The following JSON sample shows the format of each event hub message that Azure 
 }
 ```
 
-Each event hub message in Azure Event Hubs contains a list of records. Each record contains the event name, the time Defender for Business received the event, the organization to which it belongs (you get events from your organization only), and the event in JSON format in a property called "**properties**". For more information about the schema, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
+Each event hub message in Azure Event Hubs contains a list of records. Each record contains the event name, the time Defender for Business received the event, the organization to which it belongs (you get events from your organization only), and the event in JSON format in a property called "**properties**". For more information about the schema, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
 ## Use the streaming API with Azure Storage
 
@@ -126,7 +126,7 @@ A blob container is created for each event type. The following JSON sample shows
   }
   ```
 
-Each blob contains multiple rows. Each row contains the event name, the time Defender for Business received the event, the organization to which it belongs (you get events from your organization only), and the event in JSON format properties. For more information about the schema of Microsoft Defender for Endpoint events, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
+Each blob contains multiple rows. Each row contains the event name, the time Defender for Business received the event, the organization to which it belongs (you get events from your organization only), and the event in JSON format properties. For more information about the schema of Microsoft Defender for Endpoint events, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
 ## See also
 
