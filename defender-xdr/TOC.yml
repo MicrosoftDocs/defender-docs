@@ -722,6 +722,8 @@
         href: /security/operations/incident-response-playbooks
       - name: Customize incident responses
         href: security-upload-guide.md
+      - name: SOP template - Compromised identity
+        href: sop-documentation-template.md
       - name: Ransomware playbooks
         items:
         - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR
