@@ -16,6 +16,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 02/19/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # What's new in Microsoft Secure Score

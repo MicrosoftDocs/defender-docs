@@ -39,15 +39,11 @@ In some cases when using ASIM parser functions, usually when there are no result
 
 While the message is alarming, it's informational only, and the system behaved as expected. ASIM functions combine data from many sources, regardless of whether they're available in your environment or not. The message suggests that some of the sources aren't available in your environment.
 
-## <a name="next-steps"></a>Next steps
+## Related content
 
-This article discusses the Advanced Security Information Model (ASIM) help functions.
-
-For more information, see:
-
-- Watch the [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjGtoRPQ2XYe3wQDz?e=R3dWeM)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-about-parsers.md)
 - [Using the Advanced Security Information Model (ASIM)](normalization-about-parsers.md)
 - [Modifying Microsoft Sentinel content to use the Advanced Security Information Model (ASIM) parsers](normalization-modify-content.md)
+- [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) 

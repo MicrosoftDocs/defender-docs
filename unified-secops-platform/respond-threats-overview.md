@@ -12,6 +12,7 @@ ms.topic: article
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 
 # Customer intent: As a security operations center business decision maker, I want to learn about the tools available to respond to threats automatically in Microsoft's unified security platform to help me determine whether it meets my organization's requirements.
 ---

@@ -18,7 +18,8 @@ ms.custom:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 12/16/2025
+ms.date: 06/10/2026
+ai-usage: ai-assisted
 ---
 
 # Use Microsoft Sentinel functions, saved queries, and custom rules 
@@ -55,7 +56,8 @@ For example, to get the first 10 rows of data from the `StormEvents` table store
 :::image type="content" source="/defender-xdr/media/adx-sample.png" alt-text="Screenshot of adx operator in advanced hunting." lightbox="/defender-xdr/media/adx-sample.png":::
 
 > [!NOTE]
-> The `adx()` operator isn't supported for custom detections.
+> - The `adx()` operator isn't supported for custom detections.
+> - Cross-query between Defender XDR and Microsoft Sentinel tables using `adx()` isn't supported in GCC environments.
 
 ### Use arg() operator for Azure Resource Graph queries
 
@@ -64,9 +66,6 @@ Use the `arg()` operator to query across deployed Azure resources like subscript
 Previously, this feature was only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender XDR tables aren't supported). By using this operator, you can make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
 
 For more information, see [Query data in Azure Resource Graph by using arg()](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#query-data-in-azure-resource-graph-by-using-arg-preview).
-
->[!NOTE]
-> The `arg()` operator isn't supported for analytics rules.
 
 In the query editor, enter *arg("").* followed by the Azure Resource Graph table name. 
 
@@ -85,10 +84,36 @@ BehaviorAnalytics
 ) on $left.name == $right.SourceDevice
 ```
 
+>[!NOTE]
+> - The `arg()` operator isn't supported for analytics rules.
+> - The `arg()` operator only works with Microsoft Sentinel tables. If your query includes Defender XDR tables that haven't been exported to Log analytics, it will fail. To use the `arg()` operator in a query that references Defender XDR tables, ensure that those tables are exported to your Log analytics workspace and contain data.
+
+### Use workspace() operator for cross-workspace queries
+
+Use the `workspace()` operator to query data from a specific Log Analytics workspace in the same or a different resource group or subscription. This operator lets you include log data from other workspaces in your advanced hunting queries.
+
+For more information, see [Query across resources with Azure Monitor](/azure/azure-monitor/logs/cross-workspace-query).
+
+In the query editor, enter the query in the following format:
+
+```Kusto
+workspace('<Workspace ID or Azure Resource ID>').<Table Name>
+```
+
+For example, to retrieve the first 10 rows of the `SigninLogs` table from another workspace:
+
+```Kusto
+workspace('00000000-0000-0000-0000-000000000000').SigninLogs
+| take 10
+```
+
+> [!NOTE]
+> - The `workspace()` operator isn't supported for custom detections.
+> - The `workspace()` operator only works with Microsoft Sentinel tables. If your query includes Defender XDR tables that haven't been exported to Log analytics, it will fail. To use the `workspace()` operator in a query that references Defender XDR tables, ensure that those tables are exported to your Log analytics workspace and contain data.
+
 ### Create custom functions
 
 For more information about creating custom functions in the Defender portal, see [Custom functions in the advanced hunting schema](advanced-hunting-custom-functions.md).
-
 
 ## Use saved queries
 

@@ -9,9 +9,10 @@ ms.sitesec: library
 ms.pagetype: security
 ms.author: pauloliveria
 author: poliveria
-ms.custom: 
-- cx-ti
-- cx-ean
+ms.custom:
+  - cx-ti
+  - cx-ean
+  - sfi-image-nochange
 ms.localizationpriority: medium
 ms.collection:
   - m365-security

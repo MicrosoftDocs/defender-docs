@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot outbound sending limits in Exchange Online
-description: Learn about outbound sending limits in Exchange Online, how to monitor usage, request increases, and resolve blocked sending for users and organizations.
+description: Learn about outbound sending limits in Exchange Online, how to monitor usage, and resolve blocked sending for users and organizations.
 author: chrisda
 ms.author: chrisda
-ms.date: 05/21/2026
+ms.date: 05/26/2026
 ms.topic: troubleshooting
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -24,11 +24,9 @@ appliesto:
 
 Exchange Online enforces outbound sending limits to protect the service from spam, bulk-mailing abuse, and compromised accounts. When a user or organization exceeds these limits, email sending is restricted.
 
-Use the information here to understand what limits exist, how to monitor usage, and how to resolve blocked sending.
-
 ## Sending limits in Exchange Online
 
-Exchange Online applies outbound sending limits to all cloud mailboxes. These limits operate at the user level and the organization level.
+Exchange Online applies outbound sending limits to all cloud mailboxes. These limits apply at the user and organization levels.
 
 For the complete list of service limits, see [Exchange Online sending limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-1).
 
@@ -40,7 +38,7 @@ The recipient rate limit and message rate limit are hard limits enforced at the 
 |---|---|---|
 |**Recipient rate limit**|10,000 recipients per day|24-hour sliding window. The mailbox can't send until the number of recipients sent to in the past 24 hours drops below the limit.|
 |**Message rate limit**|30 messages per minute|Excess submissions are throttled and carried over to following minutes.|
-|**Recipient limit per message**|500 recipients (default)|Customizable between 1 to 1000 in the Exchange admin center (EAC) or PowerShell. For more information, see [Customizable recipient limits in Office 365](https://techcommunity.microsoft.com/t5/exchange-team-blog/customizable-recipient-limits-in-office-365/ba-p/1183228).|
+|**Recipient limit per message**|500 recipients (default)|Customizable from 1 to 1000 in the Exchange admin center (EAC) or PowerShell. For more information, see [Customizable recipient limits in Office 365](https://techcommunity.microsoft.com/t5/exchange-team-blog/customizable-recipient-limits-in-office-365/ba-p/1183228).|
 
 > [!NOTE]
 > For the recipient rate limit, distribution groups in the organization's address book count as **one recipient**. Distribution groups in a mailbox's Contacts folder are counted **individually** by member.
@@ -48,6 +46,10 @@ The recipient rate limit and message rate limit are hard limits enforced at the 
 ### Tenant External Recipient Rate Limit
 
 The Tenant External Recipient Rate Limit (TERRL) is the maximum number of external recipients an organization can send to per day. TERRL scales automatically with the number of licenses in the organization. Trial organizations have a default limit of 5,000 external recipients per day.
+
+When the TERRL is exceeded, senders receive a non-delivery report (also known as an NDR or bounce message) with the following error:
+
+> `550 5.7.233 Your message can't be sent because your tenant exceeded its daily limit for sending email to external recipients (tenant external recipient rate limit).`
 
 > [!NOTE]
 > TERRL counts distribution group members individually. For example, a message sent to a distribution group with 1,000 external recipients counts as 1,000 external recipients.
@@ -62,12 +64,25 @@ Admins can configure more limits in outbound spam policies. For instructions, se
 |**Internal message limit**|Maximum number of internal recipients per hour|0–10,000 (0 = service default)|
 |**Daily message limit**|Maximum total number of recipients per day|0–10,000 (0 = service default)|
 
+### Connector and relay sending limits
+
+The following limits apply to outbound mail sent through connectors, SMTP relay, or Direct Send scenarios:
+
+|Sending method|Limit|Details|
+|---|---|---|
+|**Client SMTP submission (SMTP AUTH)**|10,000 recipients/day, 30 messages/minute|Uses authenticated user credentials. Subject to per-user limits.|
+|**SMTP relay (connector-based)**|10,000 recipients/day per mailbox used for relay|Requires a configured outbound connector. Subject to per-user limits for the mailbox.|
+|**Direct Send**|Subject to receiving limits (3,600 messages/hour per recipient)|Sends to internal recipients only. Unauthenticated; not subject to per-user sending limits.|
+
+> [!TIP]
+> For applications or devices that need to send large volumes of outbound email, use **SMTP relay** through a connector or a **non-Microsoft bulk email service** rather than Client SMTP submission. For configuration instructions, see [Set up a multifunction device or application to send email using Microsoft 365](/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365).
+
 ## Monitor sending usage
 
 Use the following tools to monitor outbound email activity and detect potential issues:
 
 - **Message trace**: Track individual outbound messages and identify delivery failures. For more information, see [Message trace in the Microsoft Defender portal](message-trace-defender-portal.md).
-- **Mail flow reports**: The following reports in the Exchange admin center help monitor outbound sending. On the **Mail flow** reports page in the Exchange admin center at <https://admin.exchange.microsoft.com/#/reports/mailflowreportsmain>, select the report to view. For a complete list of available reports, see [Mail flow reports](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
+- **Mail flow reports**: Use the following reports in the Exchange admin center to monitor outbound sending. On the **Mail flow** reports page in the Exchange admin center at <https://admin.exchange.microsoft.com/#/reports/mailflowreportsmain>, select the report to view. For a complete list of available reports, see [Mail flow reports](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
   - **Tenant Outbound External Recipients** report: Shows TERRL usage for your organization.
   - [Mailboxes exceeding receiving limits report](/exchange/monitoring/mail-flow-reports/mailboxes-exceeding-receiving-limits-report): Identifies mailboxes receiving unusually high volumes.
 - **Built-in alert policies**: The following [alert policies](/defender-xdr/alert-policies#threat-management-alert-policies) are enabled by default and send notifications to the **TenantAdmins** (Global Administrator) group. On the **Alert policy** page in the Microsoft Defender portal at <https://security.microsoft.com/alertpoliciesv2>, search for the policy to review or modify its settings:
@@ -76,11 +91,11 @@ Use the following tools to monitor outbound email activity and detect potential 
   - [User restricted from sending email](/defender-xdr/alert-policies#threat-management-alert-policies): A user is blocked from sending due to outbound spam.
 
 > [!TIP]
-> For programmatic monitoring, use [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) with the `Get-MailDetailTransportRuleReport` and `Get-MailTrafficSummaryReport` cmdlets.
+> For programmatic monitoring, use the [Get-MailDetailTransportRuleReport](/powershell/module/exchangepowershell/get-maildetailtransportrulereport) and [Get-MailTrafficSummaryReport](/powershell/module/exchangepowershell/get-mailtrafficsummaryreport) cmdlets in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## Best practices for bulk senders
 
-Exchange Online isn't designed for bulk mailing scenarios. If you require sending volumes that exceed the limits described in this article, use a dedicated bulk email service provider. For detailed recommendations, see [Outbound spam protection](outbound-spam-protection-about.md#recommendations-for-customers-who-want-to-send-mass-mailings-through-microsoft-365).
+Exchange Online isn't designed for bulk mailing scenarios. If your sending volumes exceed these limits, use a dedicated bulk email service provider. For detailed recommendations, see [Outbound spam protection](outbound-spam-protection-about.md#recommendations-for-customers-who-want-to-send-mass-mailings-through-microsoft-365).
 
 ### Alternatives for bulk email
 
@@ -107,15 +122,30 @@ Follow these guidelines to reduce the risk of being blocked or routed to the [hi
 - **Manage sending rate**: Spread bulk sends over time rather than sending all at once. Monitor bounce rates and don't exceed 30 messages per minute per mailbox.
 - **Protect domain reputation**: Use a custom subdomain for bulk email (for example, `m.contoso.com` for marketing). Use message trace to check whether your messages are being routed to the high-risk delivery pool.
 
+## What happens when limits are exceeded
+
+The following table summarizes the behavior when each type of sending limit is exceeded:
+
+|Limit exceeded|Behavior|User experience|Admin notification|
+|---|---|---|---|
+|**Per-user recipient rate limit**|Mailbox can't send until the 24-hour sliding window drops below the limit.|Messages are rejected. The user can send again after the recipient count from the past 24 hours drops below 10,000. In some cases, the user might also appear on the [Restricted entities](outbound-spam-restore-restricted-users.md) page.|Alert: **Email sending limit exceeded**|
+|**Per-user message rate limit**|Messages are throttled (queued and delivered over subsequent minutes).|Slight sending delay; no NDR.|No alert unless sustained.|
+|**TERRL**|All tenant users sending to external recipients are blocked.|NDR `550 5.7.233` returned to senders.|Alert: **Email sending limit exceeded**|
+|**Outbound spam policy limit**|Action depends on policy configuration (**Restrict**, **Restrict until next day**, or **Alert only**).|NDR or delivery delay depending on the configured action.|Configured notification recipients are notified.|
+|**Outbound spam detected**|Messages routed to the [high-risk delivery pool](outbound-spam-high-risk-delivery-pool-about.md). If volume continues, user is restricted.|Reduced deliverability; eventual block.|Alert: **Suspicious email sending patterns detected**|
+
+> [!TIP]
+> Set up custom alert policies to receive notifications before your organization reaches sending limits. For example, create an alert at 80% of your TERRL to allow time to redistribute sending or shift to a non-Microsoft provider.
+
 ## Resolve blocked sending
 
-When a user exceeds outbound sending limits or is detected sending spam ("I'm blocked"), Exchange Online restricts the user from sending email. The user appears on the **Restricted entities** page in the Microsoft Defender portal at <https://security.microsoft.com/restrictedusers>.
+When a user exceeds outbound sending limits or is detected sending spam, Exchange Online restricts the user from sending email. The user appears on the **Restricted entities** page in the Microsoft Defender portal at <https://security.microsoft.com/restrictedusers>.
 
 A blocked user shows the following symptoms:
 
-- The user receives a non-delivery report (also known as an NDR or bounce message) with error code [5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) when trying to send email.
+- The user receives an NDR with error code [5.1.8](https://support.microsoft.com/topic/ndr-error-code-550-5-1-8-access-denied-bad-outbound-sender-e323f21d-4460-4be1-999c-c9c0cc6be4b4) (bad outbound sender, typically due to suspected spam) when trying to send email.
 - The user appears on the **Restricted entities** page.
-- Admins receive the **"User restricted from sending email"** [alert notification](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users).
+- Admins receive the **User restricted from sending email** [alert notification](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users).
 
 Before unblocking the user, determine why the restriction was applied:
 
@@ -140,4 +170,4 @@ To prevent future blocks, take the following actions:
 - [High-risk delivery pool for outbound messages](outbound-spam-high-risk-delivery-pool-about.md)
 - [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits)
 - [Troubleshoot email from external senders to Microsoft 365](external-senders-mail-flow-troubleshooting.md)
-- [Anti-spam protection FAQ](anti-spam-protection-faq.md)
+- [Anti-spam protection FAQ](anti-spam-protection-faq.yml)

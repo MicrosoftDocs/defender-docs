@@ -9,6 +9,7 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 
 # What's new for Microsoft unified security operations

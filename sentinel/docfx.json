@@ -149,6 +149,28 @@
     },
     "overwrite": [],
     "externalReference": [],
-    "template": []
+    "template": [],
+    "rules": {
+      "sensitive-language-ma": {
+        "exclude": []
+      },
+      "filename-incomplete": {
+        "exclude": []
+      },
+      "sensitive-language-sl": {
+        "exclude": []
+      },
+      "sensitive-language-bl": {
+        "exclude": []
+      },
+      "sensitive-language-wl": {
+        "exclude": [
+          "includes/connector-details.md",
+          "includes/deprecated-connectors.md",
+          "data-connectors-reference.md",
+          "includes/sentinel-tables-connectors.md"
+        ]
+      }
+    }
   }
 }

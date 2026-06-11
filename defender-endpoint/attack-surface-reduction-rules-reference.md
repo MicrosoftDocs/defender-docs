@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 05/04/2026
+ms.date: 05/28/2026
 search.appverid: met150
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want detailed per-rule reference information for ASR rules so I can understand OS support, deployment methods, and alert behavior for each rule.
@@ -99,7 +99,7 @@ Although Defender for Endpoint supports ASR rules, you need a separate service t
 |Block Adobe Reader from creating child processes|Y|N|Y|Y|
 |Block all Office applications from creating child processes|Y|1710 or later|Y|Y|
 |Block executable content from email client and webmail|Y|1710 or later|Y|Y|
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion[[1](#CMS1)]|Y|1802 or later|Y|Y|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|Y|1802 or later|Y|Y|
 |Block execution of potentially obfuscated scripts|Y|1710 or later|Y|Y|
 |Block JavaScript or VBScript from launching downloaded executable content|Y|1710 or later|Y|Y|
 |Block Office applications from creating executable content|Y|1710 or later|Y|Y|
@@ -115,8 +115,6 @@ Although Defender for Endpoint supports ASR rules, you need a separate service t
 
 > [!TIP]
 > You can also configure ASR rules locally on individual devices using Group Policy or [PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell). All ASR rules are supported by both methods on local devices.
-
-<a id="CMS1">1</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the other available ASR policy configuration methods or in existing Intune ASR policies created before the issue.
 
 <a name='per-asr-rule-alert-and-notification-details'></a>
 
@@ -319,9 +317,6 @@ This rule blocks email opened with Microsoft Outlook, Outlook.com, and other pop
 
 #### Block executable files from running unless they meet a prevalence, age, or trusted list criterion
 
-> [!TIP]
-> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-configure.md) or in existing Intune ASR policies created before the issue.
-
 This ASR rule blocks executable files (for example, .exe, .dll, or .scr, from launching). Launching untrusted or unknown executable files can be risky, as it's not initially clear if the files are malicious.
 
 - **Microsoft Intune name**: `Block executable files from running unless they meet a prevalence, age, or trusted list criterion`
@@ -473,9 +468,6 @@ Safe Mode is still manually accessible from the Windows Recovery Environment.
   - `AsrSafeModeRebootWarnBypassed`
 - **Dependencies**: Microsoft Defender Antivirus
 
-> [!NOTE]
-> Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
-
 #### Block untrusted and unsigned processes that run from USB
 
 This ASR rule prevents unsigned or untrusted executable files (for example, .exe, .dll, or .scr) from running from USB removable drives, including SD cards.
@@ -503,9 +495,6 @@ This ASR rule blocks the propagation and use of executable files identified as c
   - `AsrAbusedSystemToolWarnBypassed`
 - **Dependencies**: Microsoft Defender Antivirus
 
-> [!NOTE]
-> Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
-
 #### Block Webshell creation for Servers
 
 This ASR rule blocks web shell script creation on Windows servers running Microsoft Exchange. A web shell script is a crafted script that allows an attacker to control the compromised server. A web shell script might include the following functionality:
@@ -525,7 +514,6 @@ This ASR rule blocks web shell script creation on Windows servers running Micros
 >
 > - This rule isn't supported when deployed via Microsoft Intune to Windows Server 2012 R2 or Windows Server 2016 using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 > - If you manage ASR rules in Microsoft Defender for Endpoint, don't configure this ASR in Group Policy or other local settings (leave the value as `Not Configured`). Any other value (for example, `Enabled` or `Disabled`) can cause conflicts and prevent the rule from applying correctly.
-> - Currently, Microsoft Defender Vulnerability Management doesn't recognize this rule. The [Attack surface reduction (ASR) rules report](attack-surface-reduction-rules-report.md) shows this rule as **Not applicable**.
 
 #### Block Win32 API calls from Office macros
 

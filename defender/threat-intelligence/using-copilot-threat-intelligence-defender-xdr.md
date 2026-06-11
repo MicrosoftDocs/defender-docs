@@ -9,8 +9,9 @@ ms.collection:
   - security-copilot
   - magic-ai-copilot
 ms.custom:
-- cx-ti
-- cx-mdti
+  - cx-ti
+  - cx-mdti
+  - sfi-image-nochange
 ms.topic: how-to
 ms.update-cycle: 180-days
 ms.date: 09/12/2025
