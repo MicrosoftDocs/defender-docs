@@ -31,7 +31,7 @@ Automatic attack disruption enables the exclusion of specific user accounts, dev
 
 ## Prerequisites
 
-To exclude assets from automated responses in automatic attack disruption, you must be a **Security Administrator or higher** in either Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com)) or in the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)).
+To exclude assets from automated responses in automatic attack disruption, you must be a **Security Administrator or higher** in either [Microsoft Entra ID](https://portal.azure.com) or in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 ## Review or change automated response exclusions for assets
 
@@ -115,4 +115,4 @@ If you must opt out of attack disruption, you can do so by opening a support cas
 
 - [View details and results of automated attack disruption actions](autoad-results.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender join tech community](../includes/defender-m3d-techcommunity.md)]
