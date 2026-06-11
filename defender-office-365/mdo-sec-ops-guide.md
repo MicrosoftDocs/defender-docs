@@ -222,9 +222,9 @@ The following permissions (roles and role groups) are available in Defender for 
 
 ### SIEM/SOAR integration
 
-Defender for Office 365 exposes most of its data through a set of programmatic APIs. These APIs help you automate workflows and make full use of Defender for Office 365 capabilities. Data is available through the [Microsoft Defender XDR APIs](/defender-xdr/api-overview) and can be used to integrate Defender for Office 365 into existing SIEM/SOAR solutions.
+Defender for Office 365 exposes most of its data through a set of programmatic APIs. These APIs help you automate workflows and make full use of Defender for Office 365 capabilities. Data is available through the [Microsoft Defender APIs](/defender-xdr/api-overview) and can be used to integrate Defender for Office 365 into existing SIEM/SOAR solutions.
 
-- [Incident API](/defender-xdr/api-incident): Defender for Office 365 alerts and automated investigations are active parts of incidents in Microsoft Defender XDR. Security teams can focus on what's critical by grouping the full attack scope and all impacted assets together.
+- [Incident API](/defender-xdr/api-incident): Defender for Office 365 alerts and automated investigations are active parts of incidents in Microsoft Defender. Security teams can focus on what's critical by grouping the full attack scope and all impacted assets together.
 
 - [Event streaming API](/defender-xdr/streaming-api): Allows shipping of real-time events and alerts into a single data stream as they happen. Supported event types in Defender for Office 365 include:
   - [EmailAttachmentInfo](/defender-xdr/advanced-hunting-emailattachmentinfo-table)
@@ -313,9 +313,9 @@ When a user reported message arrives in the reporting mailbox, Defender for Offi
 - Gather data about the threats and _entities_ related to that email (for example, files, URLs, and recipients).
 - Provide recommended actions for the SecOps team to take based on the investigation findings.
 
-**Email reported by user as malware or phish** alerts, automated investigations and their recommended actions are automatically correlated to incidents in Microsoft Defender XDR. This correlation further simplifies the triage and response process for security teams. If multiple users report the same or similar messages, all of the users and messages are correlated into the same incident.
+**Email reported by user as malware or phish** alerts, automated investigations and their recommended actions are automatically correlated to incidents in Microsoft Defender. This correlation further simplifies the triage and response process for security teams. If multiple users report the same or similar messages, all of the users and messages are correlated into the same incident.
 
-Data from alerts and investigations in Defender for Office 365 is automatically compared to alerts and investigations in the other Microsoft Defender XDR products:
+Data from alerts and investigations in Defender for Office 365 is automatically compared to alerts and investigations in the other Microsoft Defender products:
 
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Cloud Apps
