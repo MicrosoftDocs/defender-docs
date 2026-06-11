@@ -32,6 +32,7 @@ This table includes supported releases for all supported platforms in the past s
 |iOS |1.1.77280101|June 2026|- Build: 1.1.77280101<br>- Release: June 1, 2026|[Release details and updates](#ios--june-2026--platform-version-1177280101)|
 |iOS|1.1.77130101|May 2026|- Build: 1.1.77130101<br>- Release: May 15, 2026|[Release details and updates](#ios--may-2026--platform-version-1177130101)|
 |Android |1.0.8913.0101|May 2026|- Build: 1.0.8913.0101<br>- Released: May 18, 2026|[Release details and updates](#android--may-2026--platform-1089130101)|
+|Windows Antivirus |Platform 4.18.26050.15 / Engine 1.1.26050.11 |May 2026 |- Platform: 4.18.26050.15<br>- Engine: 1.1.26050.11<br>- Security intelligence: 1.453.4.0 |[Release details and updates](#windows-antivirus--may-2026--platform-4182605015--engine-112605011) |
 |Linux  |101.26032.0000  |April 2026 |- Release version: 30.126032.0000.0<br>- Engine version: 1.1.26010.1004<br>- Signature version: 1.445.617.0 |[Release details and updates](#linux--april-2026--101260320000) |
 |macOS |101.26032.0016  |April 2026 |- Release version: 20.126032.16.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--april-2026--101260320016) |
 |macOS |4.18.25040.1  |April 2026 |- Release version: 4.18.25040.1<br>- Engine version: 1.1.25030.1<br>- Signature version: 1.421.40.0 |[Release details and updates](#macos--april-2026--418250401) |
@@ -44,7 +45,7 @@ This table includes supported releases for all supported platforms in the past s
 |macOS |101.26012.0017  |March 2026 |- Release version: 20.126012.17.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120017) |
 |macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
 |Linux  |101.26012.0007  |March 2026 |- Release version: 30.126012.0007.0<br>- Engine version: 1.1.25110.3002<br>- Signature version: 1.443.508.0 |[Release details and updates](#linux--march-2026--101260120007) |
-|Windows Antivirus |Platform 4.18.26020.6 / Engine 1.1.26020.3 |February 2026 |- Platform: 4.18.26020.6<br>- Engine: 1.1.26020.3<br>- Security intelligence: 1.447.2.0 |[Release details and updates](#windows-antivirus--february-2026--platform-418260206--engine-11260203) |
+|Windows Antivirus |Platform 4.18.26020.6 / Engine 1.1.26020.3 |February 2026 |- Platform: 4.18.26020.6<br>- Engine: 1.1.26020.3<br>- Security intelligence: 1.447.2.0 |[Release details and updates](msda-updates-previous-versions-technical-upgrade-support.md#february-2026-platform-418260206--engine-11260203) |
 |macOS |101.26012.0012  |February 2026 |- Release version: 20.126012.12.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101260120012) |
 |macOS |101.25122.0008  |February 2026 |- Release version: 20.125122.8.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--platform-101251220008) |
 |Linux  |101.25122.0004  |February 2026 |- Release version: 30.125122.0004.0<br>- Engine version: 1.1.25110.3002<br>- Signature version: 1.443.508.0 |[Release details and updates](#linux--february-2026--101251220004) |
@@ -866,6 +867,26 @@ For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
 
 For more information about Microsoft Defender Antivirus updates, see [Microsoft Defender Antivirus security intelligence product updates and support](microsoft-defender-antivirus-updates.md).
 
+### Windows Antivirus | May 2026 | Platform 4.18.26050.15 | Engine 1.1.26050.11
+
+#### Release details
+
+| Component | Version | Date |
+| -------- | -------- | -------- |
+| Platform | 4.18.26050.15 | June 9, 2026 |
+| Engine | 1.1.26050.11 | June 9, 2026 |
+| Security intelligence<sup>1</sup> | 1.453.4.0 | June 9, 2026 |
+| Support phase | Security and Critical Updates | - |
+
+<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
+[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
+
+#### Enhancements and features
+
+- Fixed remote-share file scans missing detections, when files were accessed through a symlink.
+- Fixed `mpcmdrun -scan` output incorrectly displaying non-ASCII characters in localized paths and threat names.
+- Fixed network protection watchdog timers silently not firing.
+
 ### Windows Antivirus | April 2026 | Platform 4.18.26040.7 | Engine 1.1.26040.8
 
 #### Release details
@@ -919,26 +940,5 @@ For more information about Microsoft Defender Antivirus updates, see [Microsoft 
 - Improved encrypted PDF scanning.
 - Fixed `Get-MpPerformanceReport` JSON parsing failures.
 
-### Windows Antivirus | February 2026 | Platform 4.18.26020.6 | Engine 1.1.26020.3
-
-#### Release details
-
-| Component | Version | Date |
-| -------- | -------- | -------- |
-| Platform | 4.18.26020.6 | March 25, 2026 |
-| Engine | 1.1.26020.3 | March 25, 2026 |
-| Security intelligence<sup>1</sup> | 1.447.2.0 | March 25, 2026 |
-| Support phase | Security and Critical Updates | - |
-
-<sup>1</sup>The security intelligence version listed here is relevant to the listed engine release. Newer versions of security intelligence are released regularly. For more information, see
-[Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](https://www.microsoft.com/wdsi/defenderupdates).
-
-#### Enhancements and features
-
-- Improved the **network protection** feature to promptly release closed connections and reduce unnecessary memory usage.
-- Fixed an issue where the `Get-MpComputerStatus` PowerShell cmdlet could fail after updates due to a configuration mismatch.
-- Improved performance for **Network Response Intelligence (NRI)** by reducing CPU usage during high-volume asynchronous message processing.
-- Added support for **AMSI path exclusions for Exchange Server** so configured path exclusions are now correctly evaluated during AMSI scanning for Exchange workloads.
-- Improved policy refresh behavior for **device control** by updating default policy and Azure AD refresh intervals to reduce retry frequency.
 
 
