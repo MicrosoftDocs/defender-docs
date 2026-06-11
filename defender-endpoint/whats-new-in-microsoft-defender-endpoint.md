@@ -7,7 +7,8 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/31/2026
+ms.date: 06/08/2026
+ai-usage: ai-assisted
 ms.collection:
 - m365-security
 - tier1
@@ -79,7 +80,6 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |----------|---------|------------|-------------|
-|Release - macOS |Build 101.26012.0012 |GA |Release version 20.126012.12.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--february-2026--101260120012).|
 |Feature |What's new and release notes documentation updates |GA |The what's new and OS-specific release notes pages are now updated to provide better visibility and access to new features, improvements, and fixes:<br>- The what's new page (this page) is now named **New features in Microsoft Defender for Endpoint** and includes both features and links to latest release notes.<br>- The [Release notes page](microsoft-defender-endpoint-releases.md) now consolidates release details for all supported operating systems, including Windows Antivirus. The new page groups updates by platform and date, making it easier to find specific information.<br>- All previous release notes pages redirect to the consolidated release notes page. |
 |Feature |Support for software product vulnerability data on Windows 7 |GA |To provide comprehensive vulnerability management capabilities across all supported Windows versions, Microsoft Defender Vulnerability Management now gathers software product vulnerability data on Windows 7 devices. |
 |Feature |[Library management for live response](configure-libraries-live-response.md) |Preview |You can now view and manage files and scripts used during live response sessions in the Microsoft Defender portal. With this enhancement, you get a centralized view of all uploaded files and their properties, and can upload, view and delete files outside the live response session. |
@@ -87,6 +87,8 @@ Learn more about [Preview features](/defender-xdr/preview).
 |Feature |Vulnerable components page renamed to [Software components](/defender-vulnerability-management/tvm-vulnerable-components) |GA |To reflect Defender Vulnerability Management's visibility into all software components identified in your organization, the **Vulnerable components** page is now named **Software components**. |
 |Feature |Improved Device Vulnerabilities report experience | GA |To simplify and streamline the [Device vulnerabilities report](/defender-vulnerability-management/tvm-vulnerable-devices-report) experience, the Vulnerable devices report now includes the following changes and enhancements:<br>- The **Vulnerable devices by Windows 10/11 version over time** section is now removed.<br>- The report's filters only include the **Device group** filter.<br>- The report's history is now limited to the last 30 days.<br>- The report's history is now limited to the last 30 days.<br><br>**Note**: These changes are now visible to government cloud customers, but aren't yet visible in air-gapped environments. This visibility will be added in the coming months. |
 |Feature |Enhanced Defender deployment tool for Windows | Preview |The new version of the tool streamlines onboarding and enhances security by:<br/>- Bundling the onboarding package directly into the tool's executable.<br/>- Generating a key during deployment package creation that is required for running the tool.<br/>- Enabling users to configure an expiry date for the package to reduce the risk of unauthorized use.<br/><br/>In addition, a new Deployment packages page in the Defender portal facilitates management of downloaded packages by providing centralized visibility into all the packages and their current status. |
+|Release - macOS |Build 101.26012.0012 |GA |Release version 20.126012.12.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--february-2026--101260120012).|
+|Release - Windows |Sense version 10.8821 |GA |Release details are now available: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows--february-2026--platform-108821). |
 |Release - macOS |Build 101.25122.0008 |GA |Release version 20.125122.8.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--february-2026--platform-101251220008). |
 |Release - Linux |Build 101.25122.0004 |GA |Release version 30.125122.0004.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--february-2026--101251220004). |
 |Release - Windows | Windows Defender Antivirus: Platform 4.18.26010.5 / Engine 1.1.26010.1 |GA |See [enhancements and features for this release](msda-updates-previous-versions-technical-upgrade-support.md#january-2026-platform-418260105--engine-11260101). |
@@ -152,3 +154,4 @@ Learn more about [Preview features](/defender-xdr/preview).
 |Release - Linux |Build 101.25082.0003 |GA |Release version 30.125082.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--september-2025--platform-101250820003-build-1). |
 |Release - Linux |Build 101.25072.0003 |GA |Release version 30.125072.0003.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--september-2025--platform-101250720003-build-2). |
 |Release - iOS |Build 1.1.68200103 |GA |Build 1.1.68200103 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#ios--september-2025--platform-1168200103). |
+|Release - Windows |Sense version 10.8804 |GA |Release details are now available: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows--september-2025--platform-108804). |

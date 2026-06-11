@@ -10,7 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
 description: Admins can learn how to create and manage payloads for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 03/10/2025
+ms.date: 06/09/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -30,6 +30,11 @@ To see the available payloads, open the Microsoft Defender portal at <https://se
 - **Global payloads**: Contains the built-in, unmodifiable payloads. These payloads are based on real-world attacks that were observed in the Microsoft data centers. Although there's no specific release schedule, we typically average 30 to 40 new payloads every month.
 - **Tenant payloads**: Contains the custom payloads that you created.
 - **MDO recommendations**: Payloads that are recommended by Defender for Office 365 as having considerable impact when used by attackers. The recommendations are based on identified campaigns and a high predicted compromise rate. This list is refreshed monthly. If there's no recent campaign activity in your organization (less than 60 days), the **MDO recommendations** tab might be empty.
+
+> [!NOTE]
+> The trademark, logo, and brand guidance for payloads applies equally to **Global payloads** (built-in payloads provided by Microsoft) and **Tenant payloads** (custom payloads that you create). For the detailed legal considerations, see [Create payloads](#create-payloads).
+>
+> Microsoft provides Attack simulation training payloads to help customers simulate real-world attack techniques. Microsoft does not provide legal advice, and customers remain responsible for determining the appropriate use of any payloads in their own environment. For questions relating to applicable laws, trademark use, or other legal considerations, customers should consult their own legal advisors.
 
 The information that's available on the tabs is described in the following list:
 

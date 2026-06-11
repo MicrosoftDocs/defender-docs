@@ -7,12 +7,14 @@ ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: nehabha
-ms.date: 06/19/2024
+ms.date: 06/11/2026
 ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
 - tier1
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Device groups in Microsoft Defender for Business
@@ -43,7 +45,7 @@ All device groups, including your default device groups and any custom device gr
 
 Currently, in Defender for Business, you can create a new device group while you are in the process of creating or editing a policy, as described in the following procedure:
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. In the navigation pane, choose **Configuration management** and select **Device configuration**.
 
@@ -73,7 +75,7 @@ Currently, in Defender for Business, you can create a new device group while you
 
 Currently, in Defender for Business, you can view your existing device groups while you are in the process of creating or editing a policy, as described in the following procedure:
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. In the navigation pane, choose **Device configuration**.
 
@@ -95,7 +97,7 @@ When you're creating or editing a policy, you might see the **Add all devices** 
 
 :::image type="content" source="media/add-all-devices-option.png" alt-text="Screenshot of the Add All Devices option.":::
 
-If you select this option, all devices enrolled in Microsoft Intune receive the current policy.
+Microsoft Intune is the device management service that tracks enrolled devices. If you select this option, all devices enrolled in Intune receive the current policy.
 
 ## Next steps
 

@@ -99,7 +99,7 @@ Although Defender for Endpoint supports ASR rules, you need a separate service t
 |Block Adobe Reader from creating child processes|Y|N|Y|Y|
 |Block all Office applications from creating child processes|Y|1710 or later|Y|Y|
 |Block executable content from email client and webmail|Y|1710 or later|Y|Y|
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion[[1](#CMS1)]|Y|1802 or later|Y|Y|
+|Block executable files from running unless they meet a prevalence, age, or trusted list criterion|Y|1802 or later|Y|Y|
 |Block execution of potentially obfuscated scripts|Y|1710 or later|Y|Y|
 |Block JavaScript or VBScript from launching downloaded executable content|Y|1710 or later|Y|Y|
 |Block Office applications from creating executable content|Y|1710 or later|Y|Y|
@@ -115,8 +115,6 @@ Although Defender for Endpoint supports ASR rules, you need a separate service t
 
 > [!TIP]
 > You can also configure ASR rules locally on individual devices using Group Policy or [PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell). All ASR rules are supported by both methods on local devices.
-
-<a id="CMS1">1</a> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the other available ASR policy configuration methods or in existing Intune ASR policies created before the issue.
 
 <a name='per-asr-rule-alert-and-notification-details'></a>
 
@@ -318,9 +316,6 @@ This rule blocks email opened with Microsoft Outlook, Outlook.com, and other pop
 >   - **Group Policy**: `Block executable content from email client and webmail`
 
 #### Block executable files from running unless they meet a prevalence, age, or trusted list criterion
-
-> [!TIP]
-> Currently, this ASR rule might not be available in the Intune ASR policy configuration due to a known backend issue. But, the rule is available through the [other available ASR policy configuration methods](attack-surface-reduction-rules-configure.md) or in existing Intune ASR policies created before the issue.
 
 This ASR rule blocks executable files (for example, .exe, .dll, or .scr, from launching). Launching untrusted or unknown executable files can be risky, as it's not initially clear if the files are malicious.
 
