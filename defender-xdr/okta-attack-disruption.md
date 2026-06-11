@@ -1,5 +1,5 @@
 ---
-title: Enable attack disruption actions in Okta
+title: Enable attack disruption actions in Okta with Microsoft Sentinel
 description: Learn how to configure your Okta integration with Microsoft Defender XDR to enable automatic attack disruption capabilities.
 ms.service: defender-xdr
 ms.author: monaberdugo
@@ -10,13 +10,13 @@ ms.collection:
   - m365-security
   - tier2
 ms.topic: how-to
-ms.date: 02/15/2026
+ms.date: 05/15/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender XDR
 ---
 
-# Enable attack disruption actions in Okta (preview)
+# Enable attack disruption actions in Okta with Microsoft Sentinel (preview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -47,8 +47,8 @@ To create the integration from an Okta account with admin privileges, follow the
 1. [Find your Okta domain](https://developer.okta.com/docs/guides/find-your-domain/main/#find-your-okta-domain)
 1. [Create an Okta API key](https://help.okta.com/en-us/content/topics/security/api.htm#create-okta-api-token)
 
-  - Provide a friendly name for your token
-  - Make sure to keep the generated token value to be used later when creating the integration.
+   - Provide a friendly name for your token
+   - Make sure to keep the generated token value to be used later when creating the integration.
 
 > [!NOTE]
 > This token is a secret that allows connecting to your Okta environment and performing actions. Don't share its value or save it in any visible or public location.
@@ -79,5 +79,8 @@ To create the integration from an Okta account with admin privileges, follow the
 
 - [Automatic attack disruption in Microsoft Defender XDR](automatic-attack-disruption.md)
 - [Configure automatic attack disruption](configure-attack-disruption.md)
+- [Enable attack disruption actions on AWS with Microsoft Sentinel](/azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json)
 - [How Microsoft Defender for Identity protects your Okta accounts](/defender-for-identity/okta-defender-for-identity-overview)
 - [Connect Okta to Microsoft Defender for Identity](/defender-for-identity/okta-integration)
+
+[!INCLUDE [Microsoft Defender join tech community](../includes/defender-m3d-techcommunity.md)]
