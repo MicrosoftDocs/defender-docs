@@ -13,7 +13,7 @@ ms.custom:
   - sfi-image-nochange
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 06/08/2026
+ms.date: 06/09/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -393,6 +393,10 @@ A: Yes. First you archive the payload, then you delete the archived payload. For
 ### Q: Can I modify the built-in payloads?
 
 A: Not directly. You can copy the built-in payload and then modify the copy. For instructions, see [Copy payloads](attack-simulation-training-payloads.md#copy-payloads).
+
+### Q: What is Microsoft's guidance on the third-party brands or logos used in the built-in (global) payloads?
+
+A: Microsoft provides Attack simulation training payloads to help customers simulate real-world attack techniques. Microsoft does not provide legal advice, and customers remain responsible for determining the appropriate use of any payloads in their own environment. For questions relating to applicable laws, trademark use, or other legal considerations, customers should consult their own legal advisors. This guidance applies equally to global payloads (provided by Microsoft) and tenant payloads (custom payloads that you create). For the detailed legal considerations, see [Create payloads](attack-simulation-training-payloads.md#create-payloads).
 
 ### Q: I'm trying to run a QR code simulation, but scanning the QR code shows me 'ping successful' instead of the landing page?
 
