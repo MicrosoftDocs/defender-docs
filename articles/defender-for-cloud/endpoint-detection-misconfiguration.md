@@ -1,15 +1,17 @@
 ---
 title: Investigate Defender for Endpoint misconfiguration recommendations (agentless)
-description: Learn how to investigate Defender for Endpoint misconfiguration recommendations detected by Microsoft Defender for Cloud.
-author: Elazark
+description: Use agentless scanning to identify and investigate Defender for Endpoint configuration issues, such as outdated signatures, disabled antivirus, or overdue scans.
+author: ElazarK
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 02/19/2025
+ms.date: 06/02/2026
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to review endpoint detection and response configuration recommendations in order to ensure the security of my virtual machine.
 ---
 
 # Investigate Defender for Endpoint misconfiguration recommendations (agentless)
+
+Defender for Cloud uses agentless scanning with Defender for Endpoint integration to surface endpoint detection and response (EDR) misconfiguration recommendations for protected machines. Investigating and remediating these findings helps maintain endpoint protection health and keeps machine posture aligned with Defender for Cloud risk reduction workflows.
 
 Microsoft Defender for Cloud integrates with [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to identify endpoint detection and response configuration issues for machines.
 
@@ -19,13 +21,11 @@ As part of these [integrated capabilities](integration-defender-for-endpoint.md)
 - `Signature out of date`
 - `Anti-virus is off or partially configured`
 
-When misconfigurations are found, Defender for Cloud generates recommendations. Remediation actions are completed in Microsoft Defender for Endpoint or on the affected machine. 
-
-This article explains how to investigate these recommendations and view the remediation guidance provided for each finding.
+When misconfigurations are found, Defender for Cloud generates recommendations. Complete remediation actions in Microsoft Defender for Endpoint or on the affected machine.
 
 > [!NOTE]
 >
-> - Defender for Cloud uses agentless scanning to assess EDR settings.
+> - Defender for Cloud uses agentless scanning to assess endpoint detection and response (EDR) settings.
 > - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
 > - The use of MMA is retired. Scanning using the MMA was deprecated in November 2024.
 
@@ -35,11 +35,13 @@ Before you start, make sure that:
 
 - [Defender for Cloud](connect-azure-subscription.md) is enabled on your subscription with one of the following plans:
     - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
-    - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-- [Agentless scanning for machines](concept-agentless-data-collection.md) is enabled. If needed, you can [enable it manually](enable-agentless-scanning-vms.md).
+    - [Defender cloud security posture management (Defender CSPM)](tutorial-enable-cspm-plan.md)
+- [Agentless scanning for machines](concept-agentless-data-collection.md) is enabled. If needed, you can [enable agentless scanning manually](enable-agentless-scanning-vms.md).
 - Defender for Endpoint is running as the EDR solution on the virtual machines.
 
 ## Investigate misconfiguration recommendations
+
+To investigate and remediate misconfiguration recommendations for Defender for Endpoint, perform the following steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -70,9 +72,10 @@ Before you start, make sure that:
 
     :::image type="content" source="media/endpoint-detection-response/security-check-remediation.png" alt-text="Screenshot that shows the additional details section.":::
 
-After remediation is completed, it can take up to 24 hours for the machine to appear in the **Healthy resources** tab.
+After remediation is complete, it can take up to 24 hours for the machine to appear in the **Healthy resources** tab.
 
-## Related content
+## Next step
 
-- [Verify that machines have an EDR solution configured](endpoint-detection-response.md)
-- [Implement security recommendations](implement-security-recommendations.md)
+> [!div class="nextstepaction"]
+> [Verify that machines have an EDR solution configured](endpoint-detection-response.md)
+
