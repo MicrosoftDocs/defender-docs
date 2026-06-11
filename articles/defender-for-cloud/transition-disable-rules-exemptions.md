@@ -4,7 +4,7 @@ description: Learn how to migrate from disable rules to exemptions in Microsoft 
 ms.topic: how-to
 author: dlanger
 ms.author: dlanger
-ms.date: 06/09/2026
+ms.date: 06/11/2026
 ai-usage: ai-assisted
 ---
 
@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Cloud is transitioning its recommendation model from grouped recommendations to individual recommendations. As part of this change:
 
-- Grouped recommendations are being deprecated and replaced with individual recommendations.
+- Grouped recommendations are being deprecated and replaced with individual recommendations. Learn more about this [transition](transition-grouped-individual-recommendations.md).
 - Disable rules, which are used with grouped recommendations, are being deprecated.
 - Exemption rules are the new approach for individual and risk-based recommendations.
 
@@ -57,7 +57,15 @@ Use this table to translate your existing disable rules into exemption condition
 
 ### Recommended migration steps
 
-1. **Identify existing disable rules**: Review the rules configured for each recommendation and note the conditions you use, such as CVE and severity.
+1. **Identify existing disable rules**: Review the rules configured for each recommendation and note the conditions you use, such as CVE and severity. Alternatively, you can use the following Azure Resource Graph (ARG) query to retrieve all existing disabled rules:
+
+```kusto
+policyresources
+| where type =~ "microsoft.authorization/policyassignments"
+| extend filters = todynamic(properties).metadata.subAssessmentSettings.filters
+| where filters != ""
+```
+
 1. **Translate to exemption conditions**: Use the preceding mapping table to convert each rule to its exemption equivalent.
 1. **Create the exemptions**: To create and manage exemptions, see [Exempt resources at scale](exempt-resources-at-scale.md) and [Exempt resources from recommendations](exempt-resource.md).
 
