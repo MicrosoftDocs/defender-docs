@@ -4,7 +4,7 @@ description: Learn how to review security recommendations in Microsoft Defender 
 ms.topic: how-to
 author: dlanger
 ms.author: dlanger
-ms.date: 02/17/2026
+ms.date: 06/09/2026
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
@@ -210,7 +210,7 @@ You can interact with recommendations in multiple ways. If an option isn't avail
 
    - **Remediate**: A description of the manual steps required to resolve the security problem on the affected resources. For recommendations with the **Fix** option, you can select **View remediation logic** before applying the suggested fix to your resources.
    - **Recommendation owner and set due date**: If you enable a [governance rule](governance-rules.md) for the recommendation, you can assign an owner and due date.
-   - **Exempt**: You can exempt resources from the recommendation or disable specific findings by using disable rules.
+   - **Exempt**: You can exempt resources from the recommendation. Disable rules, which were previously used to suppress specific findings, are being deprecated. Use [exemptions](exempt-resource.md) instead. For migration guidance, see [Transition from disable rules to exemptions](transition-disable-rules-exemptions.md).
    - **Workflow automation**: Set a logic app to trigger with the recommendation.
    
    >[!NOTE]

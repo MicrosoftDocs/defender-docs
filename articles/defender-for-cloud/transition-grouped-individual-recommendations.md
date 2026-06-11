@@ -175,3 +175,4 @@ The updated management experience is available in **Environment settings**, unde
 - [Review security recommendations](review-security-recommendations.md)
 - [Remediate security recommendations](implement-security-recommendations.md)
 - [Security recommendations overview](security-recommendations.md)
+- [Transition from disable rules to exemptions](transition-disable-rules-exemptions.md)
