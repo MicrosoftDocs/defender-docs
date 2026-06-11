@@ -691,7 +691,7 @@
         items:
           - name: Detecting EDR solutions
             href: detect-endpoint-detection-response-solutions.md
-          - name: Assessing Defender for Endpoint EDR
+          - name: Assess Defender for Endpoint EDR settings
             href: endpoint-detection-response.md
           - name: Enable agentless machine scanning
             displayName: vulnerability, software inventory, agentless scanning
@@ -1073,7 +1073,7 @@
           href: defender-for-apis-posture.md
     - name: Defender for Servers
       items:
-        - name: Remediate EDR solutions (agentless)
+        - name: Remediate EDR solution recommendations
           displayName: defender for endpoint, endpoint, edr
           href: endpoint-detection-response-solution-recommendations.md   
         - name: Investigate Defender for Endpoint misconfigurations

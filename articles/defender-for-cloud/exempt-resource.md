@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.author: elkrieger
 author: ElazarK
-ms.date: 05/31/2026
+ms.date: 06/02/2026
 #customer intent: As a security administrator, I want to exempt resources and recommendations when appropriate so I can keep secure score signals accurate.
 ---
 
@@ -48,7 +48,7 @@ To create exemptions, you need the following permissions:
 - To create a rule, you need permissions to edit policies in Azure Policy. For details, see [Azure RBAC permissions in Azure Policy](/azure/governance/policy/overview#azure-rbac-permissions-in-azure-policy).
 - You must have exemption permission on all initiative assignments at the target scope. If multiple initiatives contain a recommendation, you must create the exemption with permissions across all of them. A missing permission on even one initiative can cause the exemption to fail.
 
-You need the following RBAC actions:
+You need the following role-based access control (RBAC) actions:
 
 | Action | Description |
 | ------ | ----------- |
@@ -80,7 +80,7 @@ You need the following RBAC actions:
 
 - If you disable a recommendation, you also exempt all of its subrecommendations.
 
-- KQL-based recommendations use standard assignments and don't use Azure Policy exemption events in the Activity Logs. To determine whether a recommendation is KQL-based or policy-based, open the recommendation in the portal and check the **Assessment key** field. KQL-based recommendations show a standard assessment key format and don't have an associated Azure Policy definition link. Policy-based recommendations display a direct link to the underlying policy definition.
+- Kusto Query Language (KQL)-based recommendations use standard assignments and don't use Azure Policy exemption events in the Activity Logs. To determine whether a recommendation is KQL-based or policy-based, open the recommendation in the portal and check the **Assessment key** field. KQL-based recommendations show a standard assessment key format and don't have an associated Azure Policy definition link. Policy-based recommendations display a direct link to the underlying policy definition.
 
 - When you create an exemption from the Defender for Cloud portal, Defender for Cloud identifies all initiatives that contain the recommendation and creates the exemption across all of them automatically. If you create the exemption through the Azure Policy API instead, you must create a separate exemption for each initiative manually. For more information, see [the exemptions FAQ](faq-general.yml).
 
@@ -96,7 +96,7 @@ You need the following RBAC actions:
 
 ## Define an exemption
 
-We recommend creating exemptions in the Defender for Cloud portal. Exemptions created through the Azure Policy API might not fully integrate with Defender for Cloud and can cause unexpected results, such as exemptions that don't propagate correctly across all relevant initiatives. If you need to use the API, see [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
+We recommend creating exemptions in the Defender for Cloud portal. Exemptions created through the Azure Policy API might not fully integrate with Defender for Cloud. They can cause unexpected results, such as exemptions that don't propagate across all relevant initiatives. If you need to use the API, see [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
 
 To create an exemption rule:
 
@@ -134,13 +134,13 @@ To create an exemption rule:
 
 ## After you create the exemption
 
-An exemption can take up to 24 hours to take effect because Defender for Cloud evaluates resources every 12-24 hours. After the exemption takes effect:
+An exemption can take up to 24 hours to take effect. Defender for Cloud evaluates resources every 12 to 24 hours. After the exemption takes effect:
 
 - The recommendation or resources don't affect your secure score.
 
 - If you exempt specific resources, Defender for Cloud lists them in the **Not applicable** tab of the recommendation details page.
 
-- If you exempt a recommendation, Defender for Cloud hides it by default on the **Recommendations** page. This behavior happens because the default **Recommendation status** filter excludes **Not applicable** recommendations. The same behavior occurs if you exempt all recommendations in a security control.
+- If you exempt a recommendation, Defender for Cloud hides it by default on the **Recommendations** page. This happens because the default **Recommendation status** filter excludes **Not applicable** recommendations. The same behavior occurs if you exempt all recommendations in a security control.
 
 ### Understand how the exemption type affects the recommendation status
 
@@ -160,3 +160,4 @@ If the recommendation still shows resources as unhealthy after 24 hours, see [Re
 
 > [!div class="nextstepaction"]
 > [Review and manage recommendation exemptions](review-exemptions.md)
+

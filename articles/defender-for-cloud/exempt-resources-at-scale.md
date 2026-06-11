@@ -4,15 +4,15 @@ description: Learn how to create exemptions for how policies are applied to reso
 ms.topic: how-to
 ms.author: elkrieger
 author: ElazarK
-ms.date: 05/31/2026
+ms.date: 06/02/2026
 #customer intent: As a security administrator, I want to create exemptions at scale so I can manage recommendation scope consistently.
 ---
 
 # Exempt resources at scale
 
-Microsoft Defender for Cloud presents a list of affected resources to investigate through recommendations. Occasionally, a resource doesn't need to be included, or a recommendation appears in a scope where it's not relevant.
+Microsoft Defender for Cloud shows affected resources through recommendations. Sometimes, a resource doesn't need to be included, or a recommendation appears in a scope where it isn't relevant.
 
-For example, Defender for Cloud might not track the process that remediates a resource, or a specific subscription might not require a recommendation. Organizations might accept the risks for specified resources or recommendations. In these cases, create exemptions at scale to:
+For example, Defender for Cloud might not track a remediation process, or a specific subscription might not need a recommendation. Organizations might also accept risk for specific resources or recommendations. In these cases, create exemptions at scale to:
 
 - Prevent a resource from being listed as unhealthy or affecting the secure score by excluding it. Defender for Cloud marks it as "not applicable" and displays the selected justification.
 
@@ -24,7 +24,7 @@ For example, Defender for Cloud might not track the process that remediates a re
 
 ## Create exemptions at scale
 
-To tailor your security posture, create exemptions for recommendations that aren't applicable or are already mitigated. 
+To tailor your security posture, create exemptions for recommendations that aren't applicable or are already mitigated.
 
 To create exemptions at scale:
 
@@ -66,9 +66,10 @@ To create exemptions at scale:
 
 The exemption is created and applied to the selected resources or recommendations.
 
-To view or manage existing exemptions, return to the **Exemptions** page in the Defender for Cloud menu. Select the three dot button **...** next to the exemption you want to manage. From there, you can edit or delete the exemption as needed.
+To view or manage existing exemptions, return to the **Exemptions** page in the Defender for Cloud menu. Select the ellipsis (**...**) next to the exemption you want to manage. You can then edit or delete the exemption as needed.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Remediate recommendations](implement-security-recommendations.md)  
+> [Remediate recommendations](implement-security-recommendations.md)
+
