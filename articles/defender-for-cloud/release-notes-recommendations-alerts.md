@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 06/09/2026
+ms.date: 06/11/2026
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -49,6 +49,61 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
+| June 9, 2026 | Recommendation | Preview | New preview multicloud recommendations are now available for AWS MSK, AWS OpenSearch Service, GCP App Engine, and GCP Certificate Manager across networking, data, identity and access, and compute categories. |
+| June 8, 2026 | Recommendation | Preview | [Customer-managed KMS key should be configured for encryption on Amazon AppFlow Flows (Preview)](recommendations-reference-data.md#customer-managed-kms-key-should-be-configured-for-encryption-on-amazon-appflow-flows) |
+| June 8, 2026 | Recommendation | Preview | [Glue Data Catalog metadata registration should be configured on AppFlow flows (Preview)](recommendations-reference-data.md#glue-data-catalog-metadata-registration-should-be-configured-on-appflow-flows) |
+| June 8, 2026 | Recommendation | Preview | [CloudWatch query metrics should be enabled on Athena workgroups (Preview)](recommendations-reference-data.md#cloudwatch-query-metrics-should-be-enabled-on-athena-workgroups) |
+| June 8, 2026 | Recommendation | Preview | [Workgroup configuration enforcement should be enabled on Athena workgroups (Preview)](recommendations-reference-data.md#workgroup-configuration-enforcement-should-be-enabled-on-athena-workgroups) |
+| June 8, 2026 | Recommendation | Preview | [Expected S3 bucket owner should be configured for query results on Athena workgroups (Preview)](recommendations-reference-data.md#expected-s3-bucket-owner-should-be-configured-for-query-results-on-athena-workgroups) |
+| June 8, 2026 | Recommendation | Preview | [Query results output location should be configured on Athena workgroups (Preview)](recommendations-reference-data.md#query-results-output-location-should-be-configured-on-athena-workgroups) |
+| June 8, 2026 | Recommendation | Preview | [KMS-based encryption should be enforced for query results on Athena workgroups (Preview)](recommendations-reference-data.md#kms-based-encryption-should-be-enforced-for-query-results-on-athena-workgroups) |
+| June 8, 2026 | Recommendation | Preview | [Encryption at rest should be enabled for EBS volumes in Auto Scaling Groups (Preview)](recommendations-reference-data.md#encryption-at-rest-should-be-enabled-for-ebs-volumes-in-auto-scaling-groups) |
+| June 8, 2026 | Recommendation | Preview | [Customer-managed encryption keys should be enabled on Comprehend EntityRecognizer Models (Preview)](recommendations-reference-data.md#customer-managed-encryption-keys-should-be-enabled-on-comprehend-entityrecognizer-models) |
+| June 8, 2026 | Recommendation | Preview | [Customer-managed encryption keys should be enabled on Comprehend EntityRecognizer Volume (Preview)](recommendations-reference-data.md#customer-managed-encryption-keys-should-be-enabled-on-comprehend-entityrecognizer-volume) |
+| June 8, 2026 | Recommendation | Preview | [VPC configuration should be enabled on Amazon Comprehend EntityRecognizer (Preview)](recommendations-reference-data.md#vpc-configuration-should-be-enabled-on-amazon-comprehend-entityrecognizer) |
+| June 8, 2026 | Recommendation | Preview | [Customer-managed encryption keys should be used on DMS replication instances (Preview)](recommendations-reference-data.md#customer-managed-encryption-keys-should-be-used-on-dms-replication-instances) |
+| June 8, 2026 | Recommendation | Preview | [Data integrity verification should be enabled on DataSync tasks (Preview)](recommendations-reference-data.md#data-integrity-verification-should-be-enabled-on-datasync-tasks) |
+| June 8, 2026 | Recommendation | Preview | [File-level audit visibility should be configured on DataSync tasks (Preview)](recommendations-reference-data.md#file-level-audit-visibility-should-be-configured-on-datasync-tasks) |
+| June 8, 2026 | Recommendation | Preview | [Automatic backups should be enabled on FSx for Lustre (Preview)](recommendations-reference-data.md#automatic-backups-should-be-enabled-on-fsx-for-lustre) |
+| June 8, 2026 | Recommendation | Preview | [Automatic backups should be enabled on FSx for OpenZFS (Preview)](recommendations-reference-data.md#automatic-backups-should-be-enabled-on-fsx-for-openzfs) |
+| June 8, 2026 | Recommendation | Preview | [File access auditing should be enabled on FSx for Windows File Server (Preview)](recommendations-reference-data.md#file-access-auditing-should-be-enabled-on-fsx-for-windows-file-server) |
+| June 8, 2026 | Recommendation | Preview | [Automatic backups should be enabled on FSx for Windows File Server (Preview)](recommendations-reference-data.md#automatic-backups-should-be-enabled-on-fsx-for-windows-file-server) |
+| June 8, 2026 | Recommendation | Preview | [Customer-managed KMS encryption at rest should be configured on Amazon Kendra indexes (Preview)](recommendations-reference-data.md#customer-managed-kms-encryption-at-rest-should-be-configured-on-amazon-kendra-indexes) |
+| June 8, 2026 | Recommendation | Preview | [Customer-managed KMS keys should be used for encryption on Amazon Keyspaces tables without replica regions (Preview)](recommendations-reference-data.md#customer-managed-kms-keys-should-be-used-for-encryption-on-amazon-keyspaces-tables-without-replica-regions) |
+| June 8, 2026 | Recommendation | Preview | [Point-in-Time Recovery (PITR) should be enabled on Amazon Keyspaces tables (Preview)](recommendations-reference-data.md#point-in-time-recovery-pitr-should-be-enabled-on-amazon-keyspaces-tables) |
+| June 8, 2026 | Recommendation | Preview | [Server-side encryption should be enabled on Kinesis streams (Preview)](recommendations-reference-data.md#server-side-encryption-should-be-enabled-on-kinesis-streams) |
+| June 8, 2026 | Recommendation | Preview | [Customer-managed KMS key for encryption at rest should be configured on Amazon MQ broker (Preview)](recommendations-reference-data.md#customer-managed-kms-key-for-encryption-at-rest-should-be-configured-on-amazon-mq-broker) |
+| June 8, 2026 | Recommendation | Preview | [Encryption at rest should be enabled on Neptune DB instances (Preview)](recommendations-reference-data.md#encryption-at-rest-should-be-enabled-on-neptune-db-instances) |
+| June 8, 2026 | Recommendation | Preview | [Public sharing should be disabled on QuickSight accounts (Preview)](recommendations-reference-data.md#public-sharing-should-be-disabled-on-quicksight-accounts) |
+| June 8, 2026 | Recommendation | Preview | [Termination protection should be enabled on Amazon QuickSight accounts (Preview)](recommendations-reference-data.md#termination-protection-should-be-enabled-on-amazon-quicksight-accounts) |
+| June 8, 2026 | Recommendation | Preview | [Smart card sign-in should be configured for WorkSpaces Applications (AppStream) Stacks (Preview)](recommendations-reference-identity-access.md#smart-card-sign-in-should-be-configured-for-workspaces-applications-appstream-stacks) |
+| June 8, 2026 | Recommendation | Preview | [Secure authorization modes should be configured on AppSync APIs (Preview)](recommendations-reference-identity-access.md#secure-authorization-modes-should-be-configured-on-appsync-apis) |
+| June 8, 2026 | Recommendation | Preview | [IMDSv2 should be configured on Auto Scaling Groups (Preview)](recommendations-reference-identity-access.md#imdsv2-should-be-configured-on-auto-scaling-groups) |
+| June 8, 2026 | Recommendation | Preview | [Trust policy scoping conditions should be enforced on unauthenticated IAM roles for Amazon Cognito Identity Pool (Preview)](recommendations-reference-identity-access.md#trust-policy-scoping-conditions-should-be-enforced-on-unauthenticated-iam-roles-for-amazon-cognito-identity-pool) |
+| June 8, 2026 | Recommendation | Preview | [Wildcard principals should be removed from Amazon Cognito Identity Pool IAM role trust policies (Preview)](recommendations-reference-identity-access.md#wildcard-principals-should-be-removed-from-amazon-cognito-identity-pool-iam-role-trust-policies) |
+| June 8, 2026 | Recommendation | Preview | [Multi-factor authentication should be enforced on Cognito User Pools (Preview)](recommendations-reference-identity-access.md#multi-factor-authentication-should-be-enforced-on-cognito-user-pools) |
+| June 8, 2026 | Recommendation | Preview | [Strong password policy should be enforced on Cognito User Pools (Preview)](recommendations-reference-identity-access.md#strong-password-policy-should-be-enforced-on-cognito-user-pools) |
+| June 8, 2026 | Recommendation | Preview | [Threat protection should be enabled on Cognito User Pools (Preview)](recommendations-reference-identity-access.md#threat-protection-should-be-enabled-on-cognito-user-pools) |
+| June 8, 2026 | Recommendation | Preview | [Custom KMS key should be configured for encryption on Cognito User Pools (Preview)](recommendations-reference-identity-access.md#custom-kms-key-should-be-configured-for-encryption-on-cognito-user-pools) |
+| June 8, 2026 | Recommendation | Preview | [Object tags should be preserved during transfer on DataSync tasks (Preview)](recommendations-reference-identity-access.md#object-tags-should-be-preserved-during-transfer-on-datasync-tasks) |
+| June 8, 2026 | Recommendation | Preview | [POSIX permissions should be preserved during transfer on DataSync tasks (Preview)](recommendations-reference-identity-access.md#posix-permissions-should-be-preserved-during-transfer-on-datasync-tasks) |
+| June 8, 2026 | Recommendation | Preview | [POSIX user and group ownership should be preserved during transfer on DataSync tasks (Preview)](recommendations-reference-identity-access.md#posix-user-and-group-ownership-should-be-preserved-during-transfer-on-datasync-tasks) |
+| June 8, 2026 | Recommendation | Preview | [SMB security descriptors should be preserved during Windows-to-Windows transfers on DataSync tasks (Preview)](recommendations-reference-identity-access.md#smb-security-descriptors-should-be-preserved-during-windows-to-windows-transfers-on-datasync-tasks) |
+| June 8, 2026 | Recommendation | Preview | [Per-user query access control should be configured on Amazon Kendra indexes (Preview)](recommendations-reference-identity-access.md#per-user-query-access-control-should-be-configured-on-amazon-kendra-indexes) |
+| June 8, 2026 | Recommendation | Preview | [Secure authentication strategy should be configured on Amazon MQ brokers (Preview)](recommendations-reference-identity-access.md#secure-authentication-strategy-should-be-configured-on-amazon-mq-brokers) |
+| June 8, 2026 | Recommendation | Preview | [VPC Access Endpoints should be configured on WorkSpaces Applications (AppStream) Stacks (Preview)](recommendations-reference-networking.md#vpc-access-endpoints-should-be-configured-on-workspaces-applications-appstream-stacks) |
+| June 8, 2026 | Recommendation | Preview | [AWS WAF web ACL should be associated with AppSync APIs (Preview)](recommendations-reference-networking.md#aws-waf-web-acl-should-be-associated-with-appsync-apis) |
+| June 8, 2026 | Recommendation | Preview | [Public access should be disabled on DMS replication instances (Preview)](recommendations-reference-networking.md#public-access-should-be-disabled-on-dms-replication-instances) |
+| June 8, 2026 | Recommendation | Preview | [Public access should be disabled on Amazon MQ brokers (Preview)](recommendations-reference-networking.md#public-access-should-be-disabled-on-amazon-mq-brokers) |
+| June 8, 2026 | Recommendation | Preview | [CloudWatch group metrics collection should be enabled on Auto Scaling Groups (Preview)](recommendations-reference-compute.md#cloudwatch-group-metrics-collection-should-be-enabled-on-auto-scaling-groups) |
+| June 8, 2026 | Recommendation | Preview | [Deletion protection should be enabled on Auto Scaling Groups (Preview)](recommendations-reference-compute.md#deletion-protection-should-be-enabled-on-auto-scaling-groups) |
+| June 8, 2026 | Recommendation | Preview | [Artifact encryption should be enabled on CodeBuild projects (Preview)](recommendations-reference-container.md#artifact-encryption-should-be-enabled-on-codebuild-projects) |
+| June 8, 2026 | Recommendation | Preview | [Privileged mode should be disabled on CodeBuild projects (Preview)](recommendations-reference-container.md#privileged-mode-should-be-disabled-on-codebuild-projects) |
+| June 8, 2026 | Recommendation | Preview | [Source provider authentication should be enabled on CodeBuild projects (Preview)](recommendations-reference-container.md#source-provider-authentication-should-be-enabled-on-codebuild-projects) |
+| June 8, 2026 | Recommendation | Preview | [Secure SSL should be enabled on CodeBuild source connections (Preview)](recommendations-reference-container.md#secure-ssl-should-be-enabled-on-codebuild-source-connections) |
+| June 8, 2026 | Recommendation | Preview | [Data at rest encryption with customer-managed keys should be enabled on Kinesis streams (Preview)](recommendations-reference-app-services.md#data-at-rest-encryption-with-customer-managed-keys-should-be-enabled-on-kinesis-streams) |
+| June 8, 2026 | Recommendation | Preview | [Audit logging should be enabled on Amazon MQ broker (Preview)](recommendations-reference-app-services.md#audit-logging-should-be-enabled-on-amazon-mq-broker) |
+| June 8, 2026 | Recommendation | Preview | [General logging should be enabled on Amazon MQ broker (Preview)](recommendations-reference-app-services.md#general-logging-should-be-enabled-on-amazon-mq-broker) |
 | June 3, 2026 | Recommendation | Preview | [IAM task roles assigned to ECS Fargate tasks should follow least privilege](recommendations-reference-serverless-containers.md#iam-task-roles-assigned-to-ecs-fargate-tasks-should-follow-least-privilege) |
 | June 3, 2026 | Recommendation | Preview | [ECS Fargate tasks shouldn't run containers with elevated privileges](recommendations-reference-serverless-containers.md#ecs-fargate-tasks-should-not-run-containers-with-elevated-privileges) |
 | June 3, 2026 | Recommendation | Preview | [Read-only root filesystem should be enabled for ECS Containers](recommendations-reference-serverless-containers.md#read-only-root-filesystem-should-be-enabled-for-ecs-containers) |
@@ -127,3 +182,4 @@ New and updated recommendations, alerts, and incidents are added to the table in
 ## Related content
 
 For information about new features, see [What's new in Defender for Cloud features](release-notes.md).
+

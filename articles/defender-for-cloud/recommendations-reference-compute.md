@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud compute securit
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/30/2026
+ms.date: 06/09/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -602,6 +602,12 @@ CloudFront origin failover can increase availability. Origin failover automatica
 
 **Severity**: Medium
 
+### CloudWatch group metrics collection should be enabled on Auto Scaling Groups (Preview)
+
+**Description**: Defender for Cloud identified that an Auto Scaling Group is not configured to collect CloudWatch group metrics. This poses a risk of delayed detection of abnormal scaling activity, since without metrics on instance counts, capacity changes, and termination events, indicators such as mass termination or unauthorized scale-out (potentially driven by resource hijacking) may go unnoticed and impede incident response.
+
+**Severity**: Low
+
 ### CodeBuild GitHub or Bitbucket source repository URLs should use OAuth
 
 **Description**: This control checks whether the GitHub or Bitbucket source repository URL contains either personal access tokens or a user name and password.
@@ -616,6 +622,12 @@ Authentication credentials should never be stored or transmitted in clear text o
 Authentication credentials `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` should never be stored in clear text, as this could lead to unintended data exposure and unauthorized access.
 
 **Severity**: High
+
+### Deletion protection should be enabled on Auto Scaling Groups (Preview)
+
+**Description**: Defender for Cloud identified that deletion protection is not enabled on an Auto Scaling Group. This poses a risk of accidental or malicious deletion, which could lead to data loss or service disruption.
+
+**Severity**: Medium
 
 ### DynamoDB Accelerator (DAX) clusters should be encrypted at rest
 
@@ -669,6 +681,25 @@ This agentless endpoint recommendation is available if you have Defender for Ser
 
 **Severity**: High
 
+### Eligible service software updates should be applied on OpenSearch Service domains (Preview)
+
+**Description**: Defender for Cloud identified OpenSearch Service domains with eligible service software updates that have not been applied. Running outdated service software can expose the domain to known vulnerabilities and reduce overall security posture.
+(No related policy)
+
+**Severity**: Medium
+
+### Encryption at rest should be enabled for EBS volumes in Auto Scaling Groups (Preview)
+
+**Description**: Defender for Cloud identified Auto Scaling Group launch templates that provision EBS volumes without encryption at rest. This poses a risk of unauthorized data exposure, as snapshots or copies of unencrypted volumes can be read by any principal with sufficient EBS permissions, bypassing the running instance's access controls. Encryption at rest ensures that storage-level access alone does not reveal the data, since decryption additionally requires permissions on the KMS key.
+
+**Severity**: Medium
+
+### IMDSv2 should be configured on Auto Scaling Groups (Preview)
+
+**Description**: Defender for Cloud identified that Instance Metadata Service Version 2 (IMDSv2) is not enforced for an Auto Scaling Group. This poses a risk of credential theft through Server-Side Request Forgery (SSRF) attacks. IMDSv2 requires session-oriented tokens to access instance metadata, which mitigates SSRF attacks that could be used to steal IAM role credentials from EC2 instances.
+
+**Severity**: High
+
 ### Instances managed by Systems Manager should have an association compliance status of COMPLIANT
 
 **Description**: This control checks whether the status of the AWS Systems Manager association compliance is COMPLIANT or NON_COMPLIANT after the association is run on an instance. The control passes if the association compliance status is COMPLIANT.
@@ -710,7 +741,6 @@ To learn more about the supported runtimes that this control checks for the supp
  Healthy finding can indicate there are unused Amazon EC2 security groups.
 
 **Severity**: Low
-
 ## Additional GCP Compute recommendations
 
 ### Compute Engine VMs should use the Container-Optimized OS

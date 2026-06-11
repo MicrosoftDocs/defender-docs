@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud container secur
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/01/2026
+ms.date: 06/08/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -336,6 +336,12 @@ Privileged containers have all of the root capabilities of a host machine. They 
 
 ## AWS container recommendations
 
+### Artifact encryption should be enabled on CodeBuild projects (Preview)
+
+**Description**: Defender for Cloud identified unencrypted build artifacts in AWS CodeBuild projects that store output in Amazon S3. Build artifacts are files produced during a build, such as packages, binaries, and reports. If artifact encryption is disabled, sensitive build output can be exposed to unauthorized access or disclosure.
+
+**Severity**: Medium
+
 ### AWS registry container images should have vulnerability findings resolved
 
 **Description**: Scans your AWS registries container images for commonly known vulnerabilities (CVEs) and provides a detailed vulnerability report for each image. Resolving vulnerabilities can greatly improve your security posture, ensuring images are safe to use prior to deployment.
@@ -376,6 +382,24 @@ Use this information to harden the security of Kubernetes clusters and remediate
 When you enable Microsoft Defender for Containers and deploy Azure Arc to your EKS clusters, the protections - and charges - will begin. If you don't deploy Azure Arc on a cluster, Defender for Containers won't protect it, and no charges are incurred for this Microsoft Defender plan for that cluster.
 
 **Severity**: High
+
+### Privileged mode should be disabled on CodeBuild projects (Preview)
+
+**Description**: Defender for Cloud identified enabled privileged mode in AWS CodeBuild project environments. Privileged mode allows the build container broader access to the host and Docker runtime. This poses a risk of privilege escalation and unauthorized access if a build process or dependency is compromised.
+
+**Severity**: Medium
+
+### Secure SSL should be enabled on CodeBuild source connections (Preview)
+
+**Description**: Defender for Cloud identified insecure SSL settings in AWS CodeBuild source connections. SSL protects data exchanged between CodeBuild and the source repository by encrypting the connection and validating the remote endpoint. This poses a risk of source code interception or tampering if encrypted transport is not enforced.
+
+**Severity**: Medium
+
+### Source provider authentication should be enabled on CodeBuild projects (Preview)
+
+**Description**: Defender for Cloud identified missing source provider authentication in AWS CodeBuild projects that connect to external source repositories. Source provider authentication verifies that CodeBuild accesses the repository by using an approved connection or credential. This poses a risk of unauthorized repository access and source code exposure if access to a private repository is not properly controlled. Public repositories do not require this setting.
+
+**Severity**: Medium
 
 ### Data plane recommendations
 
@@ -549,3 +573,4 @@ All the [Kubernetes data plane security recommendations](kubernetes-workload-pro
 
 - [Learn about security recommendations](security-policy-concept.md)
 - [Review security recommendations](review-security-recommendations.md)
+

@@ -32,6 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| June 9, 2026 | Preview | [New multicloud security recommendations now in public preview](#new-multicloud-security-recommendations-now-in-public-preview) |
 | June 4, 2026 | Preview | [Discovery and posture for serverless container workloads (Preview)](#discovery-and-posture-for-serverless-container-workloads-preview) |
 | June 3, 2026 | Preview | [Kubernetes misconfiguration enforcement in Defender for Containers (preview)](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-preview) |
 | June 2, 2026 | Preview | [Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)](#vulnerability-assessment-extended-to-runtime-discovered-container-images-on-eks-and-gke-preview) |
@@ -40,6 +41,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### New multicloud security recommendations now in public preview
+
+June 8, 2026
+
+More than 60 multicloud security recommendations are now available in public preview. These recommendations add coverage across AWS services including AppFlow, AppStream, AppSync, Athena, Auto Scaling, CodeBuild, Cognito, Comprehend, DMS, DataSync, FSx, Kendra, Keyspaces, Kinesis, MQ, Neptune, and QuickSight.
+
+The new recommendations span data security, identity and access, networking, compute, and container categories, helping you assess encryption, access control, logging, network exposure, backup, and workload hardening scenarios across your multicloud estate.
+
+Additional preview recommendations were added for Amazon MSK and OpenSearch Service (covering TLS enforcement, public access, unauthenticated access, encryption, audit logging, fine-grained access control, VPC access, customer-managed keys, and service update hygiene), along with GCP networking recommendations for App Engine SSL certificate expiration and DNS authorization on Google-managed certificates.
+
+For a full list of available recommendations, see [Security recommendations](security-recommendations.md).
 
 ### Discovery and posture for serverless container workloads (Preview)
 
@@ -1438,3 +1451,4 @@ Microsoft Defender for Cloud's vulnerability scanner, powered by Microsoft Defen
 ## Next steps
 
 Check [What's new in security recommendations and alerts](release-notes-recommendations-alerts.md).
+

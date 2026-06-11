@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud identity and ac
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/29/2026
+ms.date: 06/09/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -232,6 +232,20 @@ This doesn't evaluate the VPC subnet routing configuration to determine public r
 
 **Severity**: High
 
+### Anonymous access should be removed on OpenSearch Service domains (Preview)
+
+**Description**: Defender for Cloud identified OpenSearch Service domains whose access policies allow anonymous (unauthenticated) access by granting permissions to the wildcard principal "*". Such policies increase the risk of unauthorized data exposure.
+(No related policy)
+
+**Severity**: High
+
+### Audit logs should be enabled on OpenSearch Service domains (Preview)
+
+**Description**: Defender for Cloud identified OpenSearch Service domains that do not have audit logs enabled. Audit logs provide visibility into authentication attempts, access patterns and operational activities. Without audit logs, the ability to detect unauthorized or suspicious activity and investigate security incidents is reduced.
+(No related policy)
+
+**Severity**: Medium
+
 ### Avoid the use of the "root" account
 
 **Description**: The "root" account has unrestricted access to all resources in the AWS account. It's highly recommended that the use of this account be avoided.
@@ -295,6 +309,12 @@ CloudFront OAI prevents users from accessing S3 bucket content directly. When us
 Sending CloudTrail logs to CloudWatch Logs facilitates real-time and historic activity logging based on user, API, resource, and IP address, and provides opportunity to establish alarms and notifications for anomalous or sensitivity account activity.
 
 **Severity**: Low
+
+### Custom KMS key should be configured for encryption on Cognito User Pools (Preview)
+
+**Description**: Defender for Cloud identified that the Cognito User Pool is not using a customer-managed KMS key for encryption. A custom KMS key provides control over key rotation, access policies and audit trails for sensitive data. This poses a risk of reduced control over data encryption and key lifecycle management.
+
+**Severity**: Medium
 
 ### Database logging should be enabled
 
@@ -448,6 +468,13 @@ Enabling MFA provides increased security for console access as it requires the a
 
 **Severity**: Medium
 
+### Fine-grained access control should be enabled on OpenSearch Service domains (Preview)
+
+**Description**: Defender for Cloud identified OpenSearch Service domains that do not have fine-grained access control enabled. Without fine-grained access control, access permissions can be overly broad, allowing authenticated users to access or modify data beyond their intended scope, increasing the risk of unauthorized data access.
+(No related policy)
+
+**Severity**: Medium
+
 ### GuardDuty should be enabled
 
 **Description**: To provide additional protection against intrusions, GuardDuty should be enabled on your AWS account and region.
@@ -551,6 +578,12 @@ Instead of granting permission for all keys, determine the minimum set of keys t
 
 **Severity**: Medium
 
+### IMDSv2 should be configured on Auto Scaling Groups (Preview)
+
+**Description**: Defender for Cloud identified that Instance Metadata Service Version 2 (IMDSv2) is not enforced for an Auto Scaling Group. This poses a risk of credential theft through Server-Side Request Forgery (SSRF) attacks. IMDSv2 requires session-oriented tokens to access instance metadata, which mitigates SSRF attacks that could be used to steal IAM role credentials from EC2 instances.
+
+**Severity**: High
+
 ### Lambda functions should restrict public access
 
 **Description**: Lambda function resource-based policy should restrict public access. This recommendation doesn't check access by internal principals.
@@ -572,6 +605,18 @@ Instead of granting permission for all keys, determine the minimum set of keys t
 
 **Severity**: Low
 
+### Multi-factor authentication should be enforced on Cognito User Pools (Preview)
+
+**Description**: Defender for Cloud identified that Multi-Factor Authentication (MFA) is not enforced on the Cognito User Pool. MFA requires users to provide a second form of authentication beyond their password. This poses a risk of account compromise through credential stuffing and phishing attacks.
+
+**Severity**: High
+
+### Object tags should be preserved during transfer on DataSync tasks (Preview)
+
+**Description**: Defender for Cloud identified a DataSync task transferring data between Amazon S3 locations that is configured to discard S3 object tags. Object tags enforce access boundaries through tag-based IAM and bucket policy condition keys (such as s3:ExistingObjectTag) and drive lifecycle and compliance workflows. This poses a risk of unintended access grants or broken authorized access when Attribute-Based Access Control (ABAC) policies cannot evaluate the missing tags at the destination.
+
+**Severity**: Low
+
 ### Password policies for IAM users should have strong configurations
 
 **Description**: Checks whether the account password policy for IAM users uses the following minimum configurations.
@@ -585,9 +630,27 @@ Instead of granting permission for all keys, determine the minimum set of keys t
 
 **Severity**: Medium
 
+### Per-user query access control should be configured on Amazon Kendra indexes (Preview)
+
+**Description**: Defender for Cloud identified Amazon Kendra indexes that do not have token-based user access control configured. Without UserContextPolicy set to USER_TOKEN with a valid token configuration, the index cannot cryptographically validate caller identity, increasing the risk of unauthorized data retrieval where all documents may be returned to any caller with kendra:Query permission regardless of document-level ACLs.
+
+**Severity**: Low
+
 ### Permissions of inactive identities in your AWS account should be revoked
 
 **Description**: Microsoft Defender for Cloud discovered an identity that has not performed any action on any resource within your AWS account in the past 45 days. It is recommended to revoke permissions of inactive identities, in order to reduce the attack surface of your cloud environment.
+
+**Severity**: Medium
+
+### POSIX permissions should be preserved during transfer on DataSync tasks (Preview)
+
+**Description**: Defender for Cloud identified a DataSync task transferring data to a POSIX file system (such as Amazon EFS or NFS) that is configured to discard POSIX file permissions. POSIX permissions (read, write, execute for owner, group, and others) are the primary access control mechanism on Linux and POSIX-compatible file systems. This poses a risk of sensitive data exposure to unauthorized users when destination files inherit overly permissive defaults instead of the original permissions.
+
+**Severity**: Medium
+
+### POSIX user and group ownership should be preserved during transfer on DataSync tasks (Preview)
+
+**Description**: Defender for Cloud identified a DataSync task transferring data to a POSIX-compliant destination (such as Amazon EFS or NFS) that is configured to discard User ID (UID) and Group ID (GID) metadata. These attributes enforce access boundaries. If stripped, files may be assigned a default owner. This poses a risk of privilege escalation or service disruption when legitimate users lose access.
 
 **Severity**: Medium
 
@@ -639,6 +702,30 @@ Secrets Manager can rotate secrets. You can use rotation to replace long-term se
 
 **Severity**: Medium
 
+### Secure authentication strategy should be configured on Amazon MQ brokers (Preview)
+
+**Description**: Defender for Cloud identified Amazon MQ brokers that are using a weak authentication strategy. This poses a risk of unauthorized access to the broker. Using weaker authentication methods such as SIMPLE authentication increases the risk of unauthorized access. Stronger authentication mechanisms such as LDAP or centrally managed authentication provide improved access control and security.
+
+**Severity**: Medium
+
+### Secure authorization modes should be configured on AppSync APIs (Preview)
+
+**Description**: Defender for Cloud identified that your AWS AppSync API relies on API_KEY as its authorization mode without a secure identity-based provider such as AWS_IAM, Amazon Cognito User Pools, or OpenID Connect. This poses a risk of unauthorized access, as API keys are easily leaked and lack identity context.
+
+**Severity**: High
+
+### Smart card sign-in should be configured for WorkSpaces Applications (AppStream) Stacks (Preview)
+
+**Description**: Defender for Cloud identified a WorkSpaces Applications (AppStream) stack where smart card sign-in is disabled. This poses a risk of unauthorized access, as users may authenticate using weaker methods instead of multi-factor smart card authentication. Enabling smart card sign-in for Active Directory helps ensure that only users with authorized smart cards can access the applications within the stack.
+
+**Severity**: Medium
+
+### SMB security descriptors should be preserved during Windows-to-Windows transfers on DataSync tasks (Preview)
+
+**Description**: Defender for Cloud identified a DataSync task transferring data between Windows file systems (such as Amazon FSx for Windows File Server) that is configured to discard SMB security descriptors (DACLs and owner information). DACLs define which users and groups can access files and folders. When descriptors are stripped, destination files inherit default NTFS permissions. This poses a risk of broader access than intended and loss of SACL-based auditing.
+
+**Severity**: Medium
+
 ### Stale access keys should be rotated for IAM users
 
 **Description**: Defender for Cloud identified stale primary access keys in IAM users. Stale keys are those that have not been rotated within the recommended 90-day period. Their continued use poses a risk by increasing the chance for unauthorized access if they are compromised. Attackers who exploit these outdated credentials can potentially breach sensitive systems and cause data loss, making regular key rotation essential for maintaining robust security.
@@ -652,11 +739,36 @@ Secrets Manager can rotate secrets. You can use rotation to replace long-term se
 
 **Severity**: Medium
 
+### Strong password policy should be enforced on Cognito User Pools (Preview)
+
+**Description**: Defender for Cloud identified that the Cognito User Pool does not enforce a strong password policy. A strong policy requiring minimum length of 12 characters with uppercase, lowercase, numbers, and symbols protects against brute force and dictionary attacks. This poses a risk of account compromise from weak passwords.
+
+**Severity**: Medium
+
+### Threat protection should be enabled on Cognito User Pools (Preview)
+
+**Description**: Defender for Cloud identified a Cognito User Pool without threat protection enabled. This poses a risk of undetected compromised credentials and suspicious sign-in attempts. Threat protection provides risk-based adaptive authentication that detects and responds to compromised credentials, credential stuffing, and anomalous sign-in patterns.
+
+**Severity**: Medium
+
 ### Timely password rotation should be enabled on IAM users
 
 **Description**: Defender for Cloud identified that password rotation is not enforced on your IAM user accounts. IAM users are individual accounts used to access cloud resources, and without updating passwords every 90 days, compromised credentials may remain valid indefinitely. This can lead to unauthorized access and data breaches, as attackers gain extended opportunity to exploit stale passwords.
 
 **Severity**: Medium
+
+### Trust policy scoping conditions should be enforced on unauthenticated IAM roles for Amazon Cognito Identity Pool (Preview)
+
+**Description**: Defender for Cloud identified that the trust policy of unauthenticated IAM roles for your Amazon Cognito Identity Pool is missing required scoping conditions. The trust policy should include both an audience (aud) condition restricting the role to a specific identity pool and an authentication method (amr) condition restricting assumption to unauthenticated identities. Without these conditions, unintended principals could assume the role, leading to privilege escalation and unauthorized access to resources.
+
+**Severity**: High
+
+### Unauthenticated access should be disabled on Amazon MSK clusters (Preview)
+
+**Description**: Defender for Cloud identified that Amazon MSK clusters allow unauthenticated client access. This poses a risk of data breaches, data loss, or unauthorized resource consumption, as any client with network reachability can read from or write to topics without authentication.
+(No related policy)
+
+**Severity**: High
 
 ### Unused access keys should be disabled for IAM users
 
@@ -676,6 +788,11 @@ Secrets Manager can rotate secrets. You can use rotation to replace long-term se
 
 **Severity**: Medium
 
+### Wildcard principals should be removed from Amazon Cognito Identity Pool IAM role trust policies (Preview)
+
+**Description**: Defender for Cloud identified IAM roles associated with Amazon Cognito Identity Pools that use wildcard principals in their trust policies. Wildcard principals are entries, such as "*" or "AWS":"*", that allow any AWS principal or federated identity to assume the role. This imposes a risk of unauthorized role assumption and escalation of privileges by bypassing the identity isolation enforced by Cognito.
+
+**Severity**: High
 ## GCP identity and access recommendations
 
 ### Cryptographic keys should not have more than three users

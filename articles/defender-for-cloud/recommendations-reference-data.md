@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud data security r
 author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 04/20/2026
+ms.date: 06/09/2026
 ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
@@ -791,24 +791,6 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Low
 
-### AWS Key Management Service encryption should be configured for EventBridge Pipe
-
-**Description**: Configuring AWS Key Management Service (KMS) encryption for EventBridge Pipe ensures that data at rest is encrypted using customer-controlled keys, providing enhanced security and compliance capabilities. This measure allows to better manage and rotate encryption keys according to internal policies or regulatory requirements. If this is not implemented, the data will be encrypted using AWS-managed keys, which may not meet stringent security or compliance standards. This recommendation is particularly important for organizations handling sensitive or regulated data, such as personally identifiable information (PII), financial records, or intellectual property. To implement this, configure the EventBridge Pipe to use a customer-managed KMS key in the AWS Management Console or via the AWS CLI.
-
-**Severity**: Low
-
-### AWS Key Management Service encryption should be enabled for SageMaker domain
-
-**Description**: Defender for Cloud identified that your SageMaker domain is using AWS-managed KMS keys instead of customer-managed keys. AWS KMS encryption protects data at rest by allowing you to control key management-including rotation and access-ensuring compliance with stringent security requirements. Without customer-managed keys, sensitive data may be at higher risk of unauthorized access and non-compliance. Learn more.
-
-**Severity**: Low
-
-### AWS Key Management Service encryption should be enabled on SageMaker endpoints
-
-**Description**: Defender for Cloud identified a lack of AWS Key Management Service (KMS) encryption on Sagemaker endpoints. KMS encryption secures sensitive data by managing encryption keys-including their lifecycle activities such as generation, rotation, and deletion. Without KMS enabled, endpoints risk exposure to data breaches and unauthorized access. Learn more.
-
-**Severity**: Medium
-
 ### Access logging should be enabled for LightSail buckets
 
 **Description**: Defender for Cloud identified that access logging is not configured on your LightSail bucket. Access logging records activities performed on the bucket and helps verify that only authorized actions occur. Without it, unauthorized access may go undetected, reducing security visibility and complicating forensic investigations and incident response.
@@ -851,6 +833,24 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Medium
 
+### Automatic backups should be enabled on FSx for Lustre (Preview)
+
+**Description**: Defender for Cloud identified that an FSx for Lustre file system that does not have automatic backups enabled. Automatic backups are scheduled, incremental snapshots that preserve recovery points. Without these backups, the file system is at risk of irreversible data loss from accidental deletions, corruption, or malicious activities. Enabling automatic backups is essential for maintaining data resilience and ensuring business continuity.
+
+**Severity**: Medium
+
+### Automatic backups should be enabled on FSx for OpenZFS (Preview)
+
+**Description**: Defender for Cloud identified an FSx for OpenZFS file system that does not have automatic backups enabled. Automatic backups are scheduled, incremental snapshots that serve as recovery points. Without them, the FSx for OpenZFS resource is prone to severe data loss from accidental deletions, file corruption or potentially malicious activities.
+
+**Severity**: Medium
+
+### Automatic backups should be enabled on FSx for Windows File Server (Preview)
+
+**Description**: Defender for Cloud identified that automatic backups have not been configured on your FSx for Windows File Server. Automatic backups create regular recovery points that are essential for quickly restoring data in the event of accidental deletion, malicious activity, or system failures. This poses a risk of extended downtime and potentially irreversible data loss, since without these recovery points there is no managed snapshot to restore from.
+
+**Severity**: Medium
+
 ### Automatic security updates should be enabled on RedisOSS ElastiCache clusters
 
 **Description**: Defender for Cloud identified that auto-upgrade is disabled in your RedisOSS ElastiCache clusters. Auto-upgrade automatically installs the latest security patches and software updates to protect cluster nodes from known vulnerabilities. This poses a risk by leaving your clusters open to cyberattacks that exploit outdated software. Learn more.
@@ -860,6 +860,24 @@ Configure a private endpoint connection to enable access to traffic coming only 
 ### Automatic snapshots should be enabled for MemoryDB clusters
 
 **Description**: Defender for Cloud identified MemoryDB cluster without automatic snapshot configuration. Automated snapshot automatically preserves resource snapshots for a specified duration, ensuring critical recovery data is available after incidents. Without it, there is an increased risk of data loss through accidental deletion or corruption.
+
+**Severity**: Medium
+
+### AWS Key Management Service encryption should be configured for EventBridge Pipe
+
+**Description**: Configuring AWS Key Management Service (KMS) encryption for EventBridge Pipe ensures that data at rest is encrypted using customer-controlled keys, providing enhanced security and compliance capabilities. This measure allows to better manage and rotate encryption keys according to internal policies or regulatory requirements. If this is not implemented, the data will be encrypted using AWS-managed keys, which may not meet stringent security or compliance standards. This recommendation is particularly important for organizations handling sensitive or regulated data, such as personally identifiable information (PII), financial records, or intellectual property. To implement this, configure the EventBridge Pipe to use a customer-managed KMS key in the AWS Management Console or via the AWS CLI.
+
+**Severity**: Low
+
+### AWS Key Management Service encryption should be enabled for SageMaker domain
+
+**Description**: Defender for Cloud identified that your SageMaker domain is using AWS-managed KMS keys instead of customer-managed keys. AWS KMS encryption protects data at rest by allowing you to control key management-including rotation and access-ensuring compliance with stringent security requirements. Without customer-managed keys, sensitive data may be at higher risk of unauthorized access and non-compliance. Learn more.
+
+**Severity**: Low
+
+### AWS Key Management Service encryption should be enabled on SageMaker endpoints
+
+**Description**: Defender for Cloud identified a lack of AWS Key Management Service (KMS) encryption on Sagemaker endpoints. KMS encryption secures sensitive data by managing encryption keys-including their lifecycle activities such as generation, rotation, and deletion. Without KMS enabled, endpoints risk exposure to data breaches and unauthorized access. Learn more.
 
 **Severity**: Medium
 
@@ -875,6 +893,12 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: High
 
+### CloudWatch query metrics should be enabled on Athena workgroups (Preview)
+
+**Description**: Defender for Cloud identified an Athena workgroup without CloudWatch query metrics publishing enabled. This poses a risk of detection evasion and silent data harvesting, since without metrics on query volume, scanned bytes, and execution counts, anomalous activity such as a single principal suddenly scanning very large data volumes goes unnoticed, letting reconnaissance and slow exfiltration through Athena run undetected.
+
+**Severity**: Medium
+
 ### Cluster endpoint encryption should be enabled for DAX clusters
 
 **Description**: Defender for Cloud identified that cluster endpoint encryption is not enabled in clusters. Cluster endpoint encryption protects data during transmission between clients and the cluster. Without it, sensitive information may be intercepted or accessed by unauthorized parties, potentially compromising data confidentiality and integrity. Enable encryption to secure data in transit and reduce the risk of cyber attacks.
@@ -886,12 +910,6 @@ Configure a private endpoint connection to enable access to traffic coming only 
 **Description**: Defender for Cloud identified that your Amazon SNS topic is configured for cross-account access, allowing external AWS accounts to interact with it. Cross-account access means that users outside your trusted environment can publish or subscribe to your topics. This poses a risk by potentially exposing sensitive notifications to unauthorized parties and misuse. Restricting such access will help secure your topic from external threats.
 
 **Severity**: Medium
-
-### Customer-managed KMS encryption should be enabled on Amazon Bedrock Agents
-
-**Description**: Defender for Cloud identified that Amazon Bedrock Custom Models are being deployed without customer-managed KMS encryption in place. Amazon Bedrock Custom Models can be created or imported without explicitly selecting a customer-managed key, which causes model artifacts to be encrypted with AWS-managed keys instead. This poses a risk by reducing control over key rotation, strict access policies, and audit transparency, potentially leading to compliance and security vulnerabilities.
-
-**Severity**: Low
 
 ### Customer-managed encryption keys should be enabled for CodeArtifact domains
 
@@ -959,6 +977,18 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Low
 
+### Customer-managed encryption keys should be enabled on Comprehend EntityRecognizer Models (Preview)
+
+**Description**: Defender for Cloud identified an Amazon Comprehend EntityRecognizer without customer-managed encryption keys configured for the trained model. This poses a risk of reduced control over model encryption and potential unauthorized access. The ModelKmsKeyId property specifies the KMS key used to encrypt trained custom models. Using customer-managed keys ensures model integrity and provides greater control over access to sensitive ML models.
+
+**Severity**: Medium
+
+### Customer-managed encryption keys should be enabled on Comprehend EntityRecognizer Volume (Preview)
+
+**Description**: Defender for Cloud identified an Amazon Comprehend EntityRecognizer without customer-managed encryption keys configured for the storage volume. This poses a risk of reduced control over data encryption and potential unauthorized access. The VolumeKmsKeyId property specifies the KMS key used to encrypt data on the storage volume attached to ML compute instances. Using customer-managed keys provides greater control over encryption and helps protect sensitive training data.
+
+**Severity**: Medium
+
 ### Customer-managed encryption keys should be enabled on Filestore instances
 
 **Description**: Defender for Cloud identified Filestore instances without Customer-Managed Encryption Keys (CMEK). This poses a risk of reduced control over encryption key rotation and access policies in Cloud KMS, which could compromise compliance with regulatory and organizational standards. Learn more: https://cloud.google.com/filestore/docs/cmek
@@ -971,11 +1001,67 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Low
 
+### Customer-managed encryption keys should be used on DMS replication instances (Preview)
+
+**Description**: Defender for Cloud identified that encryption at rest is not enabled on your AWS DMS replication instance. This poses a risk of unauthorized data exposure if the underlying storage is compromised. Encryption at rest protects sensitive data by encrypting it while stored on disk, ensuring that even if physical storage media is accessed, the data remains unreadable without the proper KMS key.
+
+**Severity**: Medium
+
+### Customer Managed Key encryption at rest should be configured on Amazon MSK clusters (Preview)
+
+**Description**: Defender for Cloud identified Amazon MSK provisioned clusters using an AWS-managed KMS key for data-at-rest encryption instead of a Customer Managed Key (CMK). Without a CMK, the customer cannot rotate the key on a defined schedule, revoke key access to render the data unreadable if the cluster is compromised or audit per-operation key usage through CloudTrail. MSK Serverless clusters do not support CMK and are excluded from this assessment.
+(No related policy)
+
+**Severity**: Medium
+
+### Customer-managed KMS encryption at rest should be configured on Amazon Kendra indexes (Preview)
+
+**Description**: Defender for Cloud identified that an Amazon Kendra index is not configured with a customer-managed KMS key for encryption at rest. This poses a risk of reduced control over key rotation, access policies, and auditability. Using a customer-managed key helps enforce least-privilege access to encrypted data and supports stronger separation of duties.
+
+**Severity**: Medium
+
+### Customer-managed KMS encryption should be enabled on Amazon Bedrock Agents
+
+**Description**: Defender for Cloud identified that Amazon Bedrock Custom Models are being deployed without customer-managed KMS encryption in place. Amazon Bedrock Custom Models can be created or imported without explicitly selecting a customer-managed key, which causes model artifacts to be encrypted with AWS-managed keys instead. This poses a risk by reducing control over key rotation, strict access policies, and audit transparency, potentially leading to compliance and security vulnerabilities.
+
+**Severity**: Low
+
+### Customer-managed KMS key for encryption at rest should be configured on Amazon MQ broker (Preview)
+
+**Description**: Defender for Cloud identified Amazon MQ brokers that use AWS-owned KMS keys for encryption at rest instead of customer-managed keys. Using customer-managed KMS keys provides stronger control over key policies, rotation and auditability compared to AWS-owned keys. This helps meet compliance requirements, enables granular access control and reduces reliance on default key management configurations.
+
+**Severity**: Medium
+
+### Customer-managed KMS key should be configured for encryption on Amazon AppFlow Flows (Preview)
+
+**Description**: Defender for Cloud identified Amazon AppFlow Flows that are not encrypted with a customer-managed KMS key. Using customer-managed KMS keys provides stronger control over key policies, rotation and auditability compared to AWS-owned keys. This helps meet compliance requirements and reduces reliance on default key management configurations.
+
+**Severity**: Medium
+
+### Customer-managed KMS key should be configured on OpenSearch Service domains (Preview)
+
+**Description**: Defender for Cloud identified OpenSearch Service domains that use AWS-owned keys for encryption at rest instead of a customer-managed KMS key. Using non-customer-managed keys limits control over key access policies, key rotation and key usage auditing, increasing the risk of unauthorized data access.
+(No related policy)
+
+**Severity**: Medium
+
+### Customer-managed KMS keys should be used for encryption on Amazon Keyspaces tables without replica regions (Preview)
+
+**Description**: Defender for Cloud identified an Amazon Keyspaces table using AWS-owned KMS keys instead of customer-managed keys for encryption. This poses a risk of reduced control over encryption key management, including key rotation and access policies. Customer-managed KMS keys provide greater control over encryption and enable stricter security controls. Note: Tables configured with replication regions use AWS-owned keys by default; customer-managed KMS keys are not supported for multi-region tables.
+
+**Severity**: Medium
+
 ### Data encryption at rest should be enabled on ElastiCache clusters
 
 **Description**: Defender for Cloud identified that encryption at rest is not enabled on your ElastiCache cluster. Encryption at rest converts stored data into a cryptographically secure format, protecting information even if the underlying storage is breached. Without this safeguard, unauthorized access or data tampering may occur, risking compliance and overall system integrity.
 
 **Severity**: Medium
+
+### Data integrity verification should be enabled on DataSync tasks (Preview)
+
+**Description**: Defender for Cloud identified a DataSync task with verify mode set to NONE, so DataSync does not validate that data written to the destination matches the source. This poses a risk of silent data manipulation, since corruption or tampering of files during or after transfer between on-premises and AWS storage will not be detected, undermining trust in the destination data.
+
+**Severity**: Low
 
 ### Database drop protection should be enabled for GCP Spanner databases
 
@@ -1007,15 +1093,34 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Medium
 
-### Encryption in transit should be enabled on MemoryDB clusters
+### Encryption at rest should be enabled for EBS volumes in Auto Scaling Groups (Preview)
 
-**Description**: Defender for Cloud identified that TLS (Transport Layer Security) encryption is not enabled on your MemoryDB cluster. TLS secures data and client communications by encrypting transmitted information. Without TLS enabled, data in transit is susceptible to interception and alteration by unauthorized parties.
+**Description**: Defender for Cloud identified Auto Scaling Group launch templates that provision EBS volumes without encryption at rest. This poses a risk of unauthorized data exposure, as snapshots or copies of unencrypted volumes can be read by any principal with sufficient EBS permissions, bypassing the running instance's access controls. Encryption at rest ensures that storage-level access alone does not reveal the data, since decryption additionally requires permissions on the KMS key.
+
+**Severity**: Medium
+
+### Encryption at rest should be enabled on OpenSearch Service domains (Preview)
+
+**Description**: Defender for Cloud identified OpenSearch Service domains without encryption at rest enabled. Without encryption at rest, stored data can be exposed if underlying storage is accessed without authorization, increasing the risk of unauthorized access to sensitive data.
+(No related policy)
+
+**Severity**: Medium
+
+### Encryption at rest should be enabled on Neptune DB instances (Preview)
+
+**Description**: Defender for Cloud identified that encryption at rest is not enabled on your Neptune DB instance. This poses a risk of unauthorized access to sensitive data if the underlying storage is compromised. Encryption at rest protects stored data by encrypting it using a secure key, ensuring that data remains unreadable without proper decryption credentials.
 
 **Severity**: Medium
 
 ### Encryption in transit should be enabled on cluster-based cache
 
 **Description**: Defender for Cloud identified that encryption in transit is not enabled in your cluster-based cache used by ElastiCache. Encryption in transit safeguards data as it moves between cache nodes and client applications. Without it, sensitive information may be exposed to interception or tampering during transmission, creating a risk of data breaches and non-compliance with security best practices.
+
+**Severity**: Medium
+
+### Encryption in transit should be enabled on MemoryDB clusters
+
+**Description**: Defender for Cloud identified that TLS (Transport Layer Security) encryption is not enabled on your MemoryDB cluster. TLS secures data and client communications by encrypting transmitted information. Without TLS enabled, data in transit is susceptible to interception and alteration by unauthorized parties.
 
 **Severity**: Medium
 
@@ -1031,11 +1136,35 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Low
 
+### Expected S3 bucket owner should be configured for query results on Athena workgroups (Preview)
+
+**Description**: Defender for Cloud identified Athena workgroups without an expected S3 bucket owner configured for query results, or whose ResultConfiguration can be overridden by callers because EnforceWorkGroupConfiguration is disabled. This poses a risk of bucket-name squatting: if the configured result bucket is deleted or its name predicted, an attacker can create a bucket with the same name in their own AWS account, and Athena would write sensitive query results into the attacker-controlled bucket.
+
+**Severity**: Low
+
 ### Explicit prompt override control should be configured for Amazon Bedrock Agents
 
 **Description**: Defender for Cloud identified uncontrolled prompt override settings in Amazon Bedrock Agents. These agents, which execute generative AI tasks, are at risk when prompt override controls are misconfigured-allowing unsafe instructions to bypass established safety mechanisms. This misconfiguration could result in unpredictable AI behavior and potential security or compliance breaches, undermining the trusted operation of your services.
 
 **Severity**: Medium
+
+### File access auditing should be enabled on FSx for Windows File Server (Preview)
+
+**Description**: Defender for Cloud identified that file access auditing is not enabled on FSx for Windows File Server. File access auditing involves monitoring and logging file operations such as reads and modifications to create an audit trail. Without these logs, unauthorized file access or modifications may go undetected, increasing the risk of delayed incident response and hampering forensic investigations.
+
+**Severity**: Low
+
+### File-level audit visibility should be configured on DataSync tasks (Preview)
+
+**Description**: Defender for Cloud identified a DataSync task without file-level audit visibility: the log level is not set to log all transferred objects, and no Standard Task Report with transferred-file details is configured. This poses a risk of undetected data exfiltration, since without per-file records forensic teams cannot determine which objects were copied to an attacker-controlled destination.
+
+**Severity**: Medium
+
+### Glue Data Catalog metadata registration should be configured on AppFlow flows (Preview)
+
+**Description**: Defender for Cloud identified AppFlow flows with Amazon S3 destination that do not have Glue Data Catalog metadata registration enabled. Without catalog integration, data schemas and lineage are not recorded, reducing governance visibility and increasing the risk of undetected or untracked data movement.
+
+**Severity**: Low
 
 ### In-transit encryption should be enabled for Memorystore for Redis instances
 
@@ -1048,6 +1177,12 @@ Configure a private endpoint connection to enable access to traffic coming only 
 **Description**: Defender for Cloud identified that your SQS queue is not configured to use KMS managed keys for server-side encryption. KMS managed keys are fully controlled by the Key Management Service and provide enhanced oversight of key lifecycle and access auditing. Without these controls, your queue faces increased risk of unauthorized key usage and reduced protection of sensitive data at rest.
 
 **Severity**: Medium
+
+### KMS-based encryption should be enforced for query results on Athena workgroups (Preview)
+
+**Description**: Defender for Cloud identified an Athena workgroup that does not enforce KMS-based encryption (SSE-KMS or CSE-KMS) with a customer-managed key for query results. This poses a risk of unauthorized data access: without customer-managed keys, access cannot be revoked via key policy if credentials are compromised; without workgroup enforcement, callers can bypass encryption settings at query time.
+
+**Severity**: Low
 
 ### Knowledge Base field mapping should be securely configured on Amazon Bedrock
 
@@ -1078,6 +1213,12 @@ Configure a private endpoint connection to enable access to traffic coming only 
 **Description**: Defender for Cloud identified a custom parser override setting (ParserMode = OVERRIDDEN) in Amazon Bedrock Agents. Custom parser overrides modify the default parsing mechanism to meet specific output requirements but can increase operational complexity, potentially causing parsing errors or exposing security vulnerabilities if not rigorously maintained. We recommend disabling this override unless strict output validation is essential.
 
 **Severity**: High
+
+### Point-in-Time Recovery (PITR) should be enabled on Amazon Keyspaces tables (Preview)
+
+**Description**: Defender for Cloud identified an Amazon Keyspaces (Cassandra) table with Point-in-Time Recovery (PITR) disabled. Without PITR, malicious or accidental destructive operations (DROP/TRUNCATE TABLE, mass DELETE, ransomware-style overwrite via compromised credentials) cannot be rolled back, resulting in permanent data loss. PITR allows tables to be restored to any point in time within the recovery window, providing protection against data destruction and ransomware impact.
+
+**Severity**: Medium
 
 ### Point-in-Time Recovery should be enabled for Firestore databases
 
@@ -1120,6 +1261,18 @@ Configure a private endpoint connection to enable access to traffic coming only 
 **Description**: Defender for Cloud identified that your LightSail bucket permits public read access. This setting allows anyone to access stored objects without authentication, making sensitive data vulnerable to unauthorized exposure and exploitation.
 
 **Severity**: High
+
+### Public sharing should be disabled on QuickSight accounts (Preview)
+
+**Description**: Defender for Cloud identified that public sharing is enabled in Amazon QuickSight account settings. This poses a risk of unauthorized data access, as dashboards and visuals can be shared publicly without requiring a QuickSight account or AWS credentials. Disable public sharing to reduce the risk of data exposure.
+
+**Severity**: Medium
+
+### Query results output location should be configured on Athena workgroups (Preview)
+
+**Description**: Defender for Cloud identified an Athena workgroup without a centrally defined S3 output location for query results. This poses a risk of query results landing in unmanaged or attacker-controlled S3 buckets: without a workgroup-level output location, callers must specify their own destination at query time, bypassing centralized audit, bucket policies, and data governance controls.
+
+**Severity**: Low
 
 ### Resource labels should be configured on Artifact Registry repositories
 
@@ -1175,6 +1328,12 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Medium
 
+### Server-side encryption should be enabled on Kinesis streams (Preview)
+
+**Description**: Defender for Cloud identified missing server-side encryption on Kinesis data streams. This poses a risk of unauthorized disclosure of stream records at rest, because anyone with read access to the underlying storage can retrieve plaintext data.
+
+**Severity**: Medium
+
 ### Server-side encryption should be enabled on SQS queues
 
 **Description**: Defender for Cloud identified that server-side encryption (SSE) is not enabled on your SQS queues. SSE is a method that uses encryption keys to transform sensitive data into an unreadable format until it is properly decrypted. Without this safeguard, your SQS queues are at risk of unauthorized data access, potentially exposing sensitive information and leading to data breaches and compliance issues.
@@ -1184,6 +1343,12 @@ Configure a private endpoint connection to enable access to traffic coming only 
 ### Strict cross-account access restrictions should be configured on LightSail buckets
 
 **Description**: Defender for Cloud identified cross-account access in your LightSail bucket. Cross-account access occurs when AWS accounts outside your trusted environment are granted permissions to access bucket objects. This poses a risk of unauthorized data exposure if these external accounts are unknown or unmonitored. Restricting access exclusively to accounts with a legitimate need can help safeguard your sensitive information.
+
+**Severity**: Medium
+
+### Termination protection should be enabled on Amazon QuickSight accounts (Preview)
+
+**Description**: Defender for Cloud identified that termination protection is disabled on the Amazon QuickSight account. This poses a risk of permanent data loss and service disruption, because an unauthorized or compromised principal could delete the QuickSight subscription and remove all dashboards, datasets, analyses, and account configuration.
 
 **Severity**: Medium
 
@@ -1205,6 +1370,17 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Low
 
+### VPC configuration should be enabled on Amazon Comprehend EntityRecognizer (Preview)
+
+**Description**: Defender for Cloud identified an Amazon Comprehend EntityRecognizer that is not configured to run inside a customer VPC. Without a VpcConfig, the training compute uses AWS-managed networking with default outbound internet access, providing no customer-controlled boundary on what the training job can reach. Configuring VpcConfig with security groups and subnets places the training compute inside the customer VPC, where Security Groups, route tables, and (optionally) VPC endpoints constrain its outbound network access. This restricts a compromised training-time component from exfiltrating training data (which often contains sensitive entity samples such as PII or business identifiers) to attacker-controlled endpoints, and enables VPC Flow Logs for audit.
+
+**Severity**: Medium
+
+### Workgroup configuration enforcement should be enabled on Athena workgroups (Preview)
+
+**Description**: Defender for Cloud identified an Athena workgroup that does not enforce workgroup-level configuration. This poses a risk of client-side override attacks, where a caller supplies its own ResultConfiguration at query time (via SDK, JDBC, or API) to ship sensitive query results to an attacker-controlled S3 bucket or to weaken encryption, bypassing the workgroup's centrally defined output location and encryption controls.
+
+**Severity**: High
 ## AWS/GCP cross-category data and networking recommendations
 
 ### In-transit encryption should be enabled for Memorystore for Redis clusters
