@@ -9,7 +9,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block files in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/08/2025
+ms.date: 06/08/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -21,7 +21,12 @@ ms.custom: sfi-ga-nochange
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with cloud mailboxes, admins can create and manage entries for files in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
+In all organizations with cloud mailboxes, admins can create and manage entries for files in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md). Tenant Allow/Block List file hash matching applies to all files extracted during message analysis, including:
+
+- Standard attachments.
+- Inline or embedded content. For example:
+  - Images in the message body.
+  - Files contained within supported attachment types.
 
 This article describes how admins can manage entries for files in the Microsoft Defender portal and in Exchange Online PowerShell.
 
