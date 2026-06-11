@@ -6,7 +6,7 @@ metadata:
   ms.service: defender-for-cloud
   author: Elazark
   ms.author: elkrieger
-  ms.date: 08/19/2025
+  ms.date: 06/09/2026
 title: Common questions about Defender for Servers
 summary: Get answers to common questions about Microsoft Defender for Servers.
 
@@ -33,6 +33,10 @@ sections:
           Connected | Receiving regular heartbeat from Connected Machine agent. | Billed
           Offline/Disconnected | No heartbeat received in 15-30 minutes. | Not billed
           Expired | If disconnected for 45 days, status might change to Expired. | Not billed
+          **Direct onboarding (Defender for Endpoint only)** | | 
+          Sensor connected | Server is directly onboarded to Defender for Cloud through the Defender for Endpoint sensor connection model. | Billed per hour
+
+          If you already have standalone Microsoft Defender for Endpoint for Servers licenses, submit a support request to apply the billing adjustment and avoid double billing. For steps, see [Can I get a discount if I already have a Microsoft Defender for Endpoint license?](#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-).
       
       - question: |
           What are the licensing requirements for Microsoft Defender for Endpoint?
