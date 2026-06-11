@@ -7,7 +7,7 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen, msecd-doc-authoring-1012
 ms.reviewer: ksarens
-ms.date: 05/14/2026
+ms.date: 06/09/2026
 ms.subservice: ngp
 ms.topic: reference
 ms.collection:
@@ -67,15 +67,6 @@ The commands and their available options are described in the following table.
 |Command|Option|Description|
 |---|---|---|
 |`-?` or `-h`||Displays all available commands and their options.|
-|`-Scan [Options]`||Scans for malicious software. Typically, `-Scan` with no options runs a quick scan, unless a different default scan type is configured on the device. <br/><br/> Quick scans and full scans have default timeouts. The scan automatically stops after the time passes: <ul><li>**Quick scans**: One day</li><li>**Full scans**: Seven days</li></ul>|
-||`-ScanType <value>`|Specifies the type of antimalware scan to run. Valid values are: <ul><li>**0**: Default, according to the device configuration.</li><li>**1**: Quick scan.</li><li>**2**: Full scan</li><li>**3**: Custom scan</li></ul> <br/> The return code is one of the following values: <ul><li>**0**: One of the following results: <ul><li>No malware found.</li><li>Malware found and successfully remediated.</li></ul></li><li>**2**: One of the following results: <ul><li>Malware found and not remediated.</li><li>Malware found and user action required to complete remediation.</li><li>Scanning errors.</li></ul></li></ul>|
-||`-BootSectorScan`|Valid only for custom scans. Enables boot sector scanning.|
-||`-Cancel`|Tries to cancel active quick scans or full scans.|
-||`-CpuThrottling`|Specifies the maximum CPU usage percentage. The default value is 50.|
-||`-DisableRemediation`|Valid only for custom scans. <ul><li>File exclusions are ignored.</li><li>Archive files are scanned.</li><li>Actions aren't applied after detection.</li><li>Event log entries aren't written after detection.</li><li>Detections from the custom scan aren't displayed in the user interface.</li><li>Detections from the custom scan are displayed in the command output.</li></ul>|
-||`-File <PathAndFilename or Path>`|Valid only for custom scans. Specifies the file or folder to scan.|
-||`-ReturnHR`|Instead of returning 0 or 2, return the actual HRESULT of the scan command.|
-||`-Timeout <days>`|Default value is 7 for full scans and 1 for all other scan types. The maximum value is 30.|
 |`-AddDynamicSignature -Path <path>`||Loads dynamic security intelligence from the specified location.|
 |`-CaptureNetworkTrace -Path <path>`||Captures network input from the Network Protection service, and saves it to the specified location. To stop tracing, use `-Path` without a value. <br/><br/>**Note**: NT AUTHORITY\LocalService must have write access to the specified path (for example, `C:\Windows\Temp\MpCmdRun`).|
 |`-CheckExclusion -Path <PathAndFilename or Path>`||Verifies whether the specified file or path is excluded from scanning. For more information, see [Verify whether a specified path is excluded using MpCmdRun](configure-extension-file-exclusions-microsoft-defender-antivirus.md#verify-whether-a-specified-path-is-excluded-using-mpcmdrun).|
@@ -100,13 +91,23 @@ The commands and their available options are described in the following table.
 ||`-Engine`|Restores the previously installed engine.|
 |`-RemoveDynamicSignature -SignatureSetID <SignatureSetID>`||Removes the specified dynamic security intelligence update.|
 |`-ResetPlatform`||Resets platform binaries back to `%ProgramFiles%\Windows Defender`.|
-|`-RevertPlatform`||Reverts platform binaries back to the previously installed version of the Defender platform.|
 |`-Restore [Options]`||Restores or lists quarantined items.|
 ||`-ListAll`|Lists all quarantined items.|
 ||`-Name <name> [-All]`|Restores the most recently quarantined item based on the specified threat name. If you use `-All`, all quarantined items are restored based on the specified threat name. A threat can map to multiple files.|
 ||`-FilePath <QuarantinedFilePath>`|Restores a quarantined item based on the file path of the quarantined item.|
 ||`-Path <path>`|Specifies where to restore the quarantined items. <ul><li>If you don't use `-Path`, the item is restored to its original location and is removed from quarantine.</li><li>If you use `-Path`, the item is restored to the specified path, but the item isn't removed from quarantine.</li></ul>|
 ||`-Output <filename>`|Writes all quarantined item names to the specified file with UTF-8 encoding.|
+|`-RevertEdr -ToVersion <value>`||Reverts the endpoint detection and response (EDR) binaries to the specified version. Available in platform version 4.18.26030.3011 or later. Valid values are: <ul><li>**Inbox**: Reverts EDR to the inbox version stored in `%ProgramFiles%\Windows Defender Advanced Threat Protection`.</li><li>**Previous**: Reverts EDR to the previously installed (N-1) version, if a backup is available in `%ProgramData%\Microsoft\Windows Defender Advanced Threat Protection\Platform`.</li></ul>|
+|`-RevertPlatform`||Reverts platform binaries back to the previously installed version of the Defender platform.|
+|`-Scan [Options]`||Scans for malicious software. Typically, `-Scan` with no options runs a quick scan, unless a different default scan type is configured on the device. <br/><br/> Quick scans and full scans have default timeouts. The scan automatically stops after the time passes: <ul><li>**Quick scans**: One day</li><li>**Full scans**: Seven days</li></ul>|
+||`-ScanType <value>`|Specifies the type of antimalware scan to run. Valid values are: <ul><li>**0**: Default, according to the device configuration.</li><li>**1**: Quick scan.</li><li>**2**: Full scan</li><li>**3**: Custom scan</li></ul> <br/> The return code is one of the following values: <ul><li>**0**: One of the following results: <ul><li>No malware found.</li><li>Malware found and successfully remediated.</li></ul></li><li>**2**: One of the following results: <ul><li>Malware found and not remediated.</li><li>Malware found and user action required to complete remediation.</li><li>Scanning errors.</li></ul></li></ul>|
+||`-BootSectorScan`|Valid only for custom scans. Enables boot sector scanning.|
+||`-Cancel`|Tries to cancel active quick scans or full scans.|
+||`-CpuThrottling`|Specifies the maximum CPU usage percentage. The default value is 50.|
+||`-DisableRemediation`|Valid only for custom scans. <ul><li>File exclusions are ignored.</li><li>Archive files are scanned.</li><li>Actions aren't applied after detection.</li><li>Event log entries aren't written after detection.</li><li>Detections from the custom scan aren't displayed in the user interface.</li><li>Detections from the custom scan are displayed in the command output.</li></ul>|
+||`-File <PathAndFilename or Path>`|Valid only for custom scans. Specifies the file or folder to scan.|
+||`-ReturnHR`|Instead of returning 0 or 2, return the actual HRESULT of the scan command.|
+||`-Timeout <days>`|Default value is 7 for full scans and 1 for all other scan types. The maximum value is 30.|
 |`-SignatureUpdate [Options]`||Checks for new security intelligence updates.|
 ||`-UNC <path>`|Downloads updates directly from the specified UNC file share. If you don't specify a path value, the update is done directly from the preconfigured UNC location.|
 ||`-MMPC`|Downloads updates directly from the Microsoft Malware Protection Center.|

@@ -1,27 +1,31 @@
 ---
 title: Respond to and mitigate threats in Microsoft Defender for Business
-description: As threats are detected in Defender for Business, you can take actions to respond to those threats. See how to use the device inventory view.
+description: Learn how to investigate, respond to, and mitigate detected threats in Microsoft Defender for Business through an example workflow in the Defender portal.
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 09/11/2025
+ms.date: 06/11/2026
 ms.reviewer: nehabha
 ms.collection:
 - SMB
 - m365-security
 - m365-initiative-defender-business
 - tier1
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Respond to and mitigate threats in Microsoft Defender for Business
 
-The Microsoft Defender portal enables your security team to respond to and mitigate detected threats. This article walks you through an example of how you can use Defender for Business.
+The Microsoft Defender portal enables your security team to respond to and mitigate detected threats. This article walks you through an example of how you can use Defender for Business to review threat indicators on the Home page, investigate at-risk devices in the device inventory, and take response actions such as running an antivirus scan or initiating an automated investigation.
 
 ## View detected threats
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+Use the following steps to view detected threats in the Microsoft Defender portal and take response actions.
+
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. Notice cards on the Home page. These cards were designed to tell you at a glance how many threats were detected, how many user accounts, and what endpoints (devices) or other assets were affected. The following image is an example of cards you might see:
 

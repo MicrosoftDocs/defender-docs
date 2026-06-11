@@ -7,7 +7,8 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 06/01/2026
+ms.date: 06/08/2026
+ai-usage: ai-assisted
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
 
@@ -45,6 +46,7 @@ This table includes supported releases for all supported platforms in the past s
 |macOS |101.26012.0017  |March 2026 |- Release version: 20.126012.17.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120017) |
 |macOS |101.26012.0015  |March 2026 |- Release version: 20.126012.15.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--march-2026--101260120015) |
 |Linux  |101.26012.0007  |March 2026 |- Release version: 30.126012.0007.0<br>- Engine version: 1.1.25110.3002<br>- Signature version: 1.443.508.0 |[Release details and updates](#linux--march-2026--101260120007) |
+|Windows |10.8821  |February 2026 |Supported on: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows 11 26H1, Windows 11 24H2, Windows 11 25H2, Windows 11 23H2, Windows 10 21H2, Windows 10 22H2 |[Release KBs and updates](#windows--february-2026--platform-108821) |
 |Windows Antivirus |Platform 4.18.26020.6 / Engine 1.1.26020.3 |February 2026 |- Platform: 4.18.26020.6<br>- Engine: 1.1.26020.3<br>- Security intelligence: 1.447.2.0 |[Release details and updates](msda-updates-previous-versions-technical-upgrade-support.md#february-2026-platform-418260206--engine-11260203) |
 |macOS |101.26012.0012  |February 2026 |- Release version: 20.126012.12.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--101260120012) |
 |macOS |101.25122.0008  |February 2026 |- Release version: 20.125122.8.0<br>- Engine version: 1.1.25100.4000<br>- Signature version: 1.439.74.0 |[Release details and updates](#macos--february-2026--platform-101251220008) |
@@ -74,13 +76,15 @@ This table includes supported releases for all supported platforms in the past s
 |Linux  |101.25082.0003  |September 2025 |- Release version: 30.125082.0003.0<br>- Engine version: 1.1.25070.4000<br>- Signature version: 1.435.242.0 |[Release details and updates](#linux--september-2025--platform-101250820003-build-1) |
 |Linux  |101.25072.0003  |September 2025 |- Release version: 30.125072.0003.0<br>- Engine version: 1.1.25060.4000<br>- Signature version: 1.431.4.0 |[Release details and updates](#linux--september-2025--platform-101250720003-build-2) |
 |macOS  |101.25072.0011  |September 2025 |- Release version: 20.125072.11.0<br>- Engine version: 1.1.25060.3000<br>- Signature version: 1.429.309.0 |[Release details and updates](#macos--september-2025--platform-101250720011) |
+|Windows |10.8804  |September 2025 |Supported on: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows 10 1809, Windows 11 24H2, Windows 11 25H2, Windows 11 23H2, Windows 10 21H2, Windows 10 22H2 |[Release KBs and updates](#windows--september-2025--platform-108804) |
 |iOS |1.1.68140102  |August 2025 |- Build: 1.1.68140102<br>- Released: August 19, 2025 |[Release details and updates](#ios--august-2025--platform-1168140102) |
 |Android |1.0.8018.0103  |August 2025 |- Build: 1.0.8018.0103<br>- Released: August 19, 2025 |[Release details and updates](#android--august-2025--platform-1080180103) |
 |Linux  |101.25062.0003  |August 2025 |- Release version: 30.125062.0003.0<br>- Engine version: 1.1.25040.4000<br>- Signature version: 1.429.442.0 |[Release details and updates](#linux--august-2025--platform-101250620003) |
 |iOS |1.1.67040101  |July 2025 |- Build: 1.1.67040101<br>- Released: July 8, 2025 |[Release details and updates](#ios--july-2025--platform-1167040101) |
 |Android |1.0.7901.0101  |July 2025 |- Build: 1.0.7901.0101<br>- Released: July 10, 2025 |[Release details and updates](#android--july-2025--platform-1079010101) |
-|Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--platform-108797258571000) |
+|Windows |10.8798  |July 2025 |Supported on: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows 11 24H2, Windows 11 23H2, Windows 11 25H2, Windows 10 21H2, Windows 10 22H2 |[Release KBs and updates](#windows--july-2025--platform-108798) |
 |Windows |10.8760.27617.1006  |July 2024 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--july-2024--platform-108760276171006) |
+|Windows |10.8797.25857.1000  |May 2025 |Supported on: Windows 11 24H2, Windows 11 23H2, Windows 10 22/H2 |[Release KBs and updates](#windows--may-2025--platform-108797258571000) |
 
 
 ## Windows releases
@@ -92,6 +96,71 @@ This section covers Microsoft Defender for Endpoint EDR `MsSense.exe` versions. 
 - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
 - [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
 - [Windows Server 2025 updates](https://support.microsoft.com/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7)
+
+### Windows | February 2026 | Platform: 10.8821
+
+#### Release details
+
+| OS | KB |
+| -------- | -------- |
+| Windows Server 2025, all editions | [KB5078740](https://support.microsoft.com/help/5078740) |
+| Windows Server 2022 | [KB5078766](https://support.microsoft.com/help/5078766) |
+| Windows Server 2019, Windows 10 1809 | [KB5078752](https://support.microsoft.com/help/5078752) |
+| Windows 11 26H1 | [KB5077239](https://support.microsoft.com/help/5077239) |
+| Windows 11 24H2, Windows 11 25H2 | [KB5077241](https://support.microsoft.com/help/5077241) |
+| Windows 11 23H2 | [KB5078883](https://support.microsoft.com/help/5078883) |
+| Windows 10 21H2, Windows 10 22H2 | [KB5078885](https://support.microsoft.com/help/5078885) |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|-------------|---------------|
+| Data Loss Prevention (DLP) | - Enhanced advanced classification stability to reduce potential failures and timeouts.<br>- Improved OCR support for text in images.<br>- Added file origin tracking for process and web sources.<br>- Improved Recall feature reliability and performance.<br>- Improved archived file coverage by extracting metadata and enabling more granular classification.<br>- Extended DLP protection to Arm64 devices.<br>- Improved endpoint DLP reliability and operational readiness. |
+| Threat and Vulnerability Management (TVM) | Enabled support for file-based programs through simple configuration changes and improved software composition analysis (SCA) detection and recommendations. |
+| Identity | Improved visibility by sending Windows event logs, improved synchronization of Active Directory (AD) entities, and extended protection for Active Directory Certificate Services (AD CS) and Active Directory Federation Services (AD FS) integrations in domain controller machines. |
+
+### Windows | September 2025 | Platform: 10.8804
+
+#### Release details
+
+| OS | KB |
+| -------- | -------- |
+| Windows Server 2025, all editions | [KB5066835](https://support.microsoft.com/help/5066835) |
+| Windows Server 2022 | [KB5066782](https://support.microsoft.com/help/5066782) |
+| Windows Server 2019, Windows 10 1809 | [KB5066586](https://support.microsoft.com/help/5066586) |
+| Windows 11 24H2, Windows 11 25H2 | [KB5065789](https://support.microsoft.com/help/5065789) |
+| Windows 11 23H2 | [KB5065790](https://support.microsoft.com/help/5065790) |
+| Windows 10 21H2, Windows 10 22H2 | [KB5066791](https://support.microsoft.com/help/5066791) |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|-------------|---------------|
+| General | Improved detection logic to reduce false positives. |
+| Data Loss Prevention (DLP) | Expanded OCR support for image-based files, improved endpoint DLP protection resilience when policy evaluation fails, improved cold data scanning coverage and functionality, and strengthened protection for non-Office files with sensitivity labels. |
+| SOC experience | Enabled execution of signed PowerShell scripts in environments with Windows Defender Application Control (WDAC) policies. |
+| Identity | Reduced manual configuration requirements for simpler deployment and management, achieved feature parity with the classic sensor, improved resilience when Active Directory changes aren't applied or are lost, and enhanced group policy alerting and Identity Security Posture Management (ISPM) capabilities. |
+
+### Windows | July 2025 | Platform: 10.8798
+
+#### Release details
+
+| OS | KB |
+| -------- | -------- |
+| Windows Server 2025, all editions | [KB5063878](https://support.microsoft.com/help/5063878) |
+| Windows Server 2022 | [KB5063880](https://support.microsoft.com/help/5063880) |
+| Windows Server 2019 | [KB5063877](https://support.microsoft.com/help/5063877) |
+| Windows 11 24H2 | [KB5062660](https://support.microsoft.com/help/5062660) |
+| Windows 11 23H2 | [KB5062663](https://support.microsoft.com/help/5062663) |
+| Windows 11 25H2 | [KB5063875](https://support.microsoft.com/help/5063875) |
+| Windows 10 21H2, Windows 10 22H2 | [KB5063709](https://support.microsoft.com/help/5063709) |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|-------------|---------------|
+| Platform | Simplified and unified the update experience for Defender for Endpoint agents. This release is the first step toward enabling EDR updates through Microsoft Update, which allows EDR components to be delivered independently from OS updates on Windows 10 and Windows 11 devices. |
+| SOC experience | Added granular control for response actions during onboarding so you can define which actions are enabled or disabled. |
 
 ### Windows | May 2025 | Platform: 10.8797.25857.1000
 

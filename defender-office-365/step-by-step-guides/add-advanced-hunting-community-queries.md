@@ -13,7 +13,7 @@ ms.topic: how-to
 ms.date: 06/12/2025
 ---
 
-# Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
+# Add Advanced Hunting community queries to Microsoft Defender and Microsoft Sentinel
 
 Creating and sharing Advanced Hunting queries in Microsoft Defender not only enhances your own security operations but also contributes to the broader community of Defender users. This guide walks you through the process of creating new or modifying existing queries, and publishing them to the **Community queries** section within the Microsoft Defender portal.
 
@@ -28,7 +28,7 @@ Following the steps in this article ensures your queries are accessible to all c
 - The procedures in this article use [Visual Studio Code](https://code.visualstudio.com/) (VS Code) for forking, cloning, creating, and synchronizing queries to and from the Azure Sentinel GitHub repository. Different tools with different instructions are available for all of these tasks.
 
 - A Microsoft 365 subscription that includes Advanced Hunting. For example:
-  - Microsoft Defender XDR
+  - Microsoft Defender
   - Microsoft Sentinel
   - Microsoft Defender for Office 365 Plan 2
 
