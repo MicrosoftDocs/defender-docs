@@ -10,36 +10,66 @@ ms.date: 05/07/2026
 # Express configuration PowerShell commands reference
 
 > [!IMPORTANT]
-> New public preview SQL vulnerability assessment unified API reference can be found under:
-> - [Sql Vulnerability Assessment Settings](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings)
-> - [Sql Vulnerability Assessment Baseline Rules](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules)
-> - [Sql Vulnerability Assessment Scan Results](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results)
-> - [Sql Vulnerability Assessment Scans](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans)
-> Examples below refer only to Azure SQL Databases (GA).
+> The commands below target this SQL vulnerability assessment unified API and accept a single Azure `-ResourceId` for all five supported resource types:
+>
+> - `Microsoft.Sql/servers`
+> - `Microsoft.Sql/managedInstances`
+> - `Microsoft.Synapse/workspaces`
+> - `Microsoft.Compute/virtualMachines` (with the `sqlServers/{instance}/databases/{db}` child path)
+> - `Microsoft.HybridCompute/machines` (with the `sqlServers/{instance}/databases/{db}` child path)
+>
+> Settings (`Get` / `Set` / `Remove`), scan initiation/polling (`Invoke-…Scan`, `Get-…ScanOperationResult`), and scan-record reads (`Get-…Scan`, single and list) are **PaaS-only** - they aren't supported on `Microsoft.Compute/virtualMachines` or `Microsoft.HybridCompute/machines`. On IaaS resources, use `Get-SqlVulnerabilityAssessmentScanResult -ScanId 'latest'` to read scan data.
+>
+> System databases on Managed Instance (`master`, `model`, `msdb`) and Synapse (`master`) are addressed using their natural resource id (for example `…/managedInstances/{mi}/databases/master`). The module transparently routes those requests to the instance/workspace-level URL with `databaseName` as a query parameter.
+>
+> Reference API docs:
+>
+> - [Sql Vulnerability Assessment Settings](/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings)
+> - [Sql Vulnerability Assessment Baseline Rules](/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules)
+> - [Sql Vulnerability Assessment Scan Results](/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results)
+> - [Sql Vulnerability Assessment Scans](/en-us/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans)
 
 This article lists the PowerShell commands that can be used with SQL vulnerability assessment express configuration.
 
 Make a local copy of the script located on [Express configuration PowerShell wrapper module](express-configuration-sql-commands.md), and save the file with the following file name `SqlVulnerabilityAssessmentCommands.psm1`, which can be referenced with the following commands:
 
-- [Set SQL vulnerability assessment baseline](#set-sql-vulnerability-assessment-baseline)
+- [Get SQL vulnerability assessment setting](#get-sql-vulnerability-assessment-setting)
+- [Set SQL vulnerability assessment setting](#set-sql-vulnerability-assessment-setting)
+- [Remove SQL vulnerability assessment setting](#remove-sql-vulnerability-assessment-setting)
+- [Invoke SQL vulnerability assessment scan](#invoke-sql-vulnerability-assessment-scan)
+- [Get SQL vulnerability assessment scan](#get-sql-vulnerability-assessment-scan)
+- [Get SQL vulnerability assessment scan operation result](#get-sql-vulnerability-assessment-scan-operation-result)
+- [Get SQL vulnerability assessment scan result](#get-sql-vulnerability-assessment-scan-result)
 - [Get SQL vulnerability assessment baseline](#get-sql-vulnerability-assessment-baseline)
+- [Add SQL vulnerability assessment baseline](#add-sql-vulnerability-assessment-baseline)
+- [Get SQL vulnerability assessment baseline rule](#get-sql-vulnerability-assessment-baseline-rule)
 - [Set SQL vulnerability assessment baseline rule](#set-sql-vulnerability-assessment-baseline-rule)
 - [Remove SQL vulnerability assessment baseline rule](#remove-sql-vulnerability-assessment-baseline-rule)
-- [Get SQL vulnerability assessment scan results](#get-sql-vulnerability-assessment-scan-results)
-- [Get SQL vulnerability assessment scan](#get-sql-vulnerability-assessment-scan)
-- [Invoke SQL vulnerability assessment scan](#invoke-sql-vulnerability-assessment-scan)
-- [Get SQL vulnerability assessment server setting](#get-sql-vulnerability-assessment-server-setting)
-- [Set SQL vulnerability assessment server setting](#set-sql-vulnerability-assessment-server-setting)
-- [Remove SQL vulnerability assessment server setting](#remove-sql-vulnerability-assessment-server-setting)
 
-### Set SQL vulnerability assessment baseline
+### Get SQL vulnerability assessment setting
 
-**Example 1**:
-
-```azurepowershell-interactive
+```azurepowershell
 Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
 Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Set-SqlVulnerabilityAssessmentBaseline -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -Body '{  "properties": {    "latestScan": true,    "results": {}  }}'
+Get-SqlVulnerabilityAssessmentSetting -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest
+
+Results:
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-reads, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : GET
+Content    : {"properties":{"state":"Enabled"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/providers/Microsoft.Security/sqlVulnerabilityAssessments/default","name":"default","type":"Microsoft.Security/sqlVulnerabilityAssessments"}
+```
+
+### Set SQL vulnerability assessment setting
+
+**Example 1**: Enable the vulnerability assessment setting. The wrapper constructs the request body from `-State`.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Set-SqlVulnerabilityAssessmentSetting -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest -State Enabled
 
 Results:
 
@@ -47,27 +77,216 @@ Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-
 Version    : 1.1
 StatusCode : 200
 Method     : PUT
-Content    : {"properties":{"results":{"VA1143":[["True"]],"VA1219":[["False"]]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/serv
-             ers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default","name":"Default","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"}
+Content    : {"properties":{"state":"Enabled"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/providers/Microsoft.Security/sqlVulnerabilityAssessments/default","name":"default","type":"Microsoft.Security/sqlVulnerabilityAssessments"}
 ```
 
-**Example 2**:
+**Example 2**: Disable the vulnerability assessment setting.
 
-```azurepowershell-interactive
+```azurepowershell
 Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
 Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Set-SqlVulnerabilityAssessmentBaseline -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -Body '{
-  "properties": {
-    "latestScan": false,
-    "results": {
-      "VA2062": [
-        [
-          "AllowAll",
-          "0.0.0.0",
-          "255.255.255.255"
-        ]
+Set-SqlVulnerabilityAssessmentSetting -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest -State Disabled
+
+Results:
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-writes, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : PUT
+Content    : {"properties":{"state":"Disabled"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/providers/Microsoft.Security/sqlVulnerabilityAssessments/default","name":"default","type":"Microsoft.Security/sqlVulnerabilityAssessments"}
+```
+
+### Remove SQL vulnerability assessment setting
+
+Example shown for a SQL Managed Instance resource.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Remove-SqlVulnerabilityAssessmentSetting -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/managedInstances/vulnerabilityaseessmentmi
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-deletes, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : DELETE
+Content    :
+```
+
+### Invoke SQL vulnerability assessment scan
+
+**Example 1**: Fire-and-forget. The wrapper returns a `pscustomobject` exposing the `Location` header and the parsed `OperationId` you can poll later with `Get-SqlVulnerabilityAssessmentScanOperationResult`.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Invoke-SqlVulnerabilityAssessmentScan -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db
+
+Results:
+
+Headers     : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Location, System.String[]]…}
+Version     : 1.1
+StatusCode  : 202
+Method      : POST
+Location    : https://management.azure.com/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/scans/scanOperationResults/9e2c1b3a-4d6f-4d8b-9b88-3c2e9a7e0a11?api-version=2026-04-01-preview
+OperationId : 9e2c1b3a-4d6f-4d8b-9b88-3c2e9a7e0a11
+```
+
+**Example 2**: Initiate a scan and wait inline for it to reach a terminal state. With `-Wait`, the wrapper polls the scan operation and, once it reaches a terminal state, fetches the latest scan record so you get the full scan summary (trigger type, state, start/end time, rule counts, baseline-applied flag, …). The cmdlet returns a `pscustomobject` with `ScanStatus` (the terminal status string) and `Scan` (the deserialized scan record).
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+$r = Invoke-SqlVulnerabilityAssessmentScan -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db -Wait -PollIntervalSeconds 5 -TimeoutSeconds 600
+$r.ScanStatus
+$r.Scan.properties
+
+Results:
+
+ScanStatus : Passed
+Scan       : @{properties=@{triggerType=OnDemand; state=Passed; startTime=2026-06-02T12:00:01Z;
+              endTime=2026-06-02T12:00:48Z; scanStatus=Passed; isBaselineApplied=True;
+              numberOfFailedSecurityChecks=0; server=vulnerabilityaseessmenttest; database=db};
+              id=/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/scans/Scheduled-20260602;
+              name=Scheduled-20260602; type=Microsoft.Security/sqlVulnerabilityAssessments/scans}
+```
+
+### Get SQL vulnerability assessment scan
+
+**Example 1**: List every scan recorded for an Azure SQL database.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Get-SqlVulnerabilityAssessmentScan -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db
+
+Results:
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-reads, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : GET
+Content    : {"value":[{"properties":{"triggerType":"OnDemand","state":"Passed","scanStatus":"Passed","isBaselineApplied":true,"numberOfFailedSecurityChecks":0},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/scans/Scheduled-20260602","name":"Scheduled-20260602","type":"Microsoft.Security/sqlVulnerabilityAssessments/scans"}]}
+```
+
+**Example 2**: Get the latest scan for a Synapse SQL pool. The wrapper accepts the literal `-ScanId 'latest'` to drill into the most recent scan record.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Get-SqlVulnerabilityAssessmentScan -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Synapse/workspaces/vaSynapseWs/sqlPools/pool1 -ScanId 'latest'
+
+Results:
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-reads, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : GET
+Content    : {"properties":{"triggerType":"OnDemand","state":"Passed","scanStatus":"Passed","isBaselineApplied":true,"numberOfFailedSecurityChecks":2},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Synapse/workspaces/vaSynapseWs/sqlPools/pool1/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/scans/latest","name":"latest","type":"Microsoft.Security/sqlVulnerabilityAssessments/scans"}
+```
+
+### Get SQL vulnerability assessment scan operation result
+
+Polls an in-flight scan initiated by `Invoke-SqlVulnerabilityAssessmentScan`.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Get-SqlVulnerabilityAssessmentScanOperationResult -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db -OperationId 9e2c1b3a-4d6f-4d8b-9b88-3c2e9a7e0a11
+
+Results:
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-reads, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : GET
+Content    : {"properties":{"scanStatus":"InProgress","startTime":"2026-06-02T12:00:01Z"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/scans/scanOperationResults/9e2c1b3a-4d6f-4d8b-9b88-3c2e9a7e0a11","name":"9e2c1b3a-4d6f-4d8b-9b88-3c2e9a7e0a11","type":"Microsoft.Security/sqlVulnerabilityAssessments/scans/scanOperationResults"}
+```
+
+### Get SQL vulnerability assessment scan result
+
+**Example 1**: List every rule result for a given scan on an Azure SQL database.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Get-SqlVulnerabilityAssessmentScanResult -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db -ScanId 'latest'
+
+Results:
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-reads, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : GET
+Content    : {"value":[{"properties":{"ruleId":"VA2062","status":"NonFinding","isTrimmed":false},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/scans/latest/scanResults/VA2062","name":"VA2062","type":"Microsoft.Security/sqlVulnerabilityAssessments/scans/scanResults"},{"properties":{"ruleId":"VA2065","status":"Finding","isTrimmed":false},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/scans/latest/scanResults/VA2065","name":"VA2065","type":"Microsoft.Security/sqlVulnerabilityAssessments/scans/scanResults"}]}
+```
+
+**Example 2**: Drill into a single failing rule on a SQL VM. The VM resource id uses the `Microsoft.Compute/virtualMachines/{vm}/sqlServers/{instance}/databases/{db}` child path.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Get-SqlVulnerabilityAssessmentScanResult -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Compute/virtualMachines/vaSqlVm/sqlServers/MSSQLSERVER/databases/db -ScanId 'latest' -RuleId VA2065
+
+Results:
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-reads, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : GET
+Content    : {"properties":{"ruleId":"VA2065","status":"Finding","isTrimmed":false,"queryResults":[["dbo","db_owner"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Compute/virtualMachines/vaSqlVm/sqlServers/MSSQLSERVER/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/scans/latest/scanResults/VA2065","name":"VA2065","type":"Microsoft.Security/sqlVulnerabilityAssessments/scans/scanResults"}
+```
+
+### Get SQL vulnerability assessment baseline
+
+Lists the baseline rules currently configured for a database (any of the five supported resource types).
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Get-SqlVulnerabilityAssessmentBaseline -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db
+
+Results:
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-reads, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : GET
+Content    : {"value":[{"properties":{"results":[["True"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/baselineRules/VA1143","name":"VA1143","type":"Microsoft.Security/sqlVulnerabilityAssessments/baselineRules"},{"properties":{"results":[["False"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/baselineRules/VA1219","name":"VA1219","type":"Microsoft.Security/sqlVulnerabilityAssessments/baselineRules"}]}
+```
+
+### Add SQL vulnerability assessment baseline
+
+**Example 1**: Seed the baseline from the most recent scan by sending `latestScan = true` with an empty `results` object.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Add-SqlVulnerabilityAssessmentBaseline -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db -Body '{ "latestScan": true, "results": {} }'
+
+Results:
+
+Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-writes, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
+Version    : 1.1
+StatusCode : 200
+Method     : POST
+Content    : {"value":[{"properties":{"results":[["True"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/baselineRules/VA1143","name":"VA1143","type":"Microsoft.Security/sqlVulnerabilityAssessments/baselineRules"}]}
+```
+
+**Example 2**: Seed the baseline with explicit rule results - useful for declarative, idempotent baselines.
+
+```azurepowershell
+Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
+Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
+Add-SqlVulnerabilityAssessmentBaseline -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db -Body '{
+  "latestScan": false,
+  "results": {
+    "VA2062": [
+      [
+        "AllowAll",
+        "0.0.0.0",
+        "255.255.255.255"
       ]
-    }
+    ]
   }
 }'
 
@@ -76,18 +295,16 @@ Results:
 Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-writes, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
 Version    : 1.1
 StatusCode : 200
-Method     : PUT
-Content    : {"properties":{"results":{"VA2062":[["AllowAll","0.0.0.0","255.255.255.255"]]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microso
-             ft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default","name":"Default","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baseline
-             s"}
+Method     : POST
+Content    : {"value":[{"properties":{"results":[["AllowAll","0.0.0.0","255.255.255.255"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/baselineRules/VA2062","name":"VA2062","type":"Microsoft.Security/sqlVulnerabilityAssessments/baselineRules"}]}
 ```
 
-### Get SQL vulnerability assessment baseline
+### Get SQL vulnerability assessment baseline rule
 
-```azurepowershell-interactive
+```azurepowershell
 Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
 Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Get-SqlVulnerabilityAssessmentBaseline -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db
+Get-SqlVulnerabilityAssessmentBaselineRule -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db -RuleId VA2062
 
 Results:
 
@@ -95,310 +312,42 @@ Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-
 Version    : 1.1
 StatusCode : 200
 Method     : GET
-Content    : {"properties":{"results":{"VA1143":[["True"]],"VA1219":[["False"]]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/serv
-             ers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default","name":"Default","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"}
+Content    : {"properties":{"results":[["AllowAll","0.0.0.0","255.255.255.255"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/baselineRules/VA2062","name":"VA2062","type":"Microsoft.Security/sqlVulnerabilityAssessments/baselineRules"}
 ```
 
 ### Set SQL vulnerability assessment baseline rule
 
-```azurepowershell-interactive
+Create or replace a single baseline rule. The `-Body` is sent verbatim, so it can match the standard `properties.results` shape.
+
+```azurepowershell
 Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
 Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Set-SqlVulnerabilityAssessmentBaselineRule -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -RuleId VA2062 -Body '{
-  "properties": {
-     "latestScan": false,
-     "results": [
-         [
-           "AllowAll",
-           "0.0.0.0",
-           "255.255.255.255"
-         ]
-     ]
-   }
- }'
+Set-SqlVulnerabilityAssessmentBaselineRule -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db -RuleId VA2062 -Body '{
+  "latestScan": false,
+  "results": [
+    [
+      "AllowAll",
+      "0.0.0.0",
+      "255.255.255.255"
+    ]
+  ]
+}'
 
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
+Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server, System.String[]]…}
 Version    : 1.1
 StatusCode : 200
 Method     : PUT
-Content    : {"properties":{"results":[["AllowAll","0.0.0.0","255.255.255.255"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/dat
-             abases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2062","name":"VA2062","type":"Mic
-             rosoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"}
-```
-
-### Get SQL vulnerability assessment baseline rule
-
-**Example 1**:
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Get-SqlVulnerabilityAssessmentBaselineRule -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -RuleId VA2062
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : GET
-Content    : {"properties":{"results":[["AllowAll","0.0.0.0","255.255.255.255"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/dat
-             abases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2062","name":"VA2062","type":"Mic
-             rosoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"}
-```
-
-**Example 2**:
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Get-SqlVulnerabilityAssessmentBaselineRule -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : GET
-Content    : {"value":[{"properties":{"results":[["True"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/r
-             esourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerab
-             ilityAssessments/Default/baselines/default/rules/VA1143","name":"VA1143","type":"Microsoft.Sql/servers/dat
-             abases/sqlVulnerabilityAssessments/baselines"},{"properties":{"results":[["False"]]},"id":"/subscriptions/
-             00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/m
-             igrationsql1/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA1219","name":"VA1
-             219","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"},{"properties":{"resul
-             ts":[["AllowAll","0.0.0.0","255.255.255.255"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/
-             resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnera
-             bilityAssessments/Default/baselines/default/rules/VA2062","name":"VA2062","type":"Microsoft.Sql/servers/da
-             tabases/sqlVulnerabilityAssessments/baselines"}]}
+Content    : {"properties":{"results":[["AllowAll","0.0.0.0","255.255.255.255"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/baselineRules/VA2062","name":"VA2062","type":"Microsoft.Security/sqlVulnerabilityAssessments/baselineRules"}
 ```
 
 ### Remove SQL vulnerability assessment baseline rule
 
-```azurepowershell-interactive
+Example shown for an Azure Arc-enabled SQL Server database. Arc resource ids use the `Microsoft.HybridCompute/machines/{machine}/sqlServers/{instance}/databases/{db}` child path.
+
+```azurepowershell
 Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
 Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Remove-SqlVulnerabilityAssessmentBaselineRule -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -RuleId VA2062
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : DELETE
-Content    :
-```
-
-### Get SQL vulnerability assessment scan results
-
-**Example 1**:
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Get-SqlVulnerabilityAssessmentScanResults -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -ScanId latest -RuleId VA2062
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : GET
-Content    : {"properties":{"ruleId":"VA2062","status":"NonFinding","errorMessage":null,"isTrimmed":false,"queryResults
-             ":[],"remediation":{"description":"Remove database firewall rules that grant excessive access","scripts":[
-             ],"automated":false,"portalLink":""},"baselineAdjustedResult":null,"ruleMetadata":{"ruleId":"VA2062","seve
-             rity":"High","category":"SurfaceAreaReduction","ruleType":"NegativeList","title":"Database-level firewall
-             rules should not grant excessive access","description":"The Azure SQL Database-level firewall helps protec
-             t your data by preventing all access to your database until you specify which IP addresses have permission
-             . Database-level firewall rules grant access to the specific database based on the originating IP address
-             of each request.\n\nDatabase-level firewall rules for master and user databases can only be created and ma
-             naged through Transact-SQL (unlike server-level firewall rules which can also be created and managed using
-              the Azure portal or PowerShell). For more details please see: https://docs.microsoft.com/azure/sql-
-             database/sql-database-firewall-configure\n\nThis check verifies that each database-level firewall rule doe
-             s not grant access to more than 255 IP addresses.","rationale":"Often, administrators add rules that grant
-              excessive access as part of a troubleshooting process - to eliminate the firewall as the source of a prob
-             lem, they simply create a rule that allows all traffic to pass to the affected database.\n\nGranting exces
-             sive access using database firewall rules is a clear security concern, as it violates the principle of lea
-             st privilege by allowing unnecessary access to your database. In fact, it's the equivalent of placing the
-             database outside of the firewall.","queryCheck":{"query":"SELECT name AS [Firewall Rule Name]\n    ,start_
-             ip_address AS [Start Address]\n    ,end_ip_address AS [End Address]\nFROM sys.database_firewall_rules\nWHE
-             RE ( \n        (CONVERT(bigint, parsename(end_ip_address, 1)) +\n         CONVERT(bigint, parsename(end_ip
-             _address, 2)) * 256 + \n         CONVERT(bigint, parsename(end_ip_address, 3)) * 65536 + \n         CONVER
-             T(bigint, parsename(end_ip_address, 4)) * 16777216 ) \n        - \n        (CONVERT(bigint, parsename(star
-             t_ip_address, 1)) +\n         CONVERT(bigint, parsename(start_ip_address, 2)) * 256 + \n         CONVERT(b
-             igint, parsename(start_ip_address, 3)) * 65536 + \n         CONVERT(bigint, parsename(start_ip_address, 4)
-             ) * 16777216 )\n      ) > 255","expectedResult":[],"columnNames":["Firewall Rule Name","Start Address","En
-             d Address"]},"benchmarkReferences":[]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resource
-             Groups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAs
-             sessments/Default/scans/VA2062/scanResults/VA2062","name":"VA2062","type":"Microsoft.Sql/servers/databases
-             /sqlVulnerabilityAssessments/scans/scanResults"}
-```
-
-**Example 2**:
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Get-SqlVulnerabilityAssessmentScanResults -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -ScanId latest
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : GET
-Content    : {"value":[
-            {"properties":{"ruleId":"VA1219","status":"No
-             nFinding","errorMessage":null,"isTrimmed":false,"queryResults":[["False"]],"remediation":{"description":"E
-             nable TDE on the affected databases","scripts":[],"automated":false,"portalLink":"EnableTDE"},"baselineAdj
-             ustedResult":{"baseline":{"expectedResults":[["False"]],"updatedTime":"2023-05-15T08:52:39.3476874+00:00"}
-             ,"status":"NonFinding","resultsNotInBaseline":[],"resultsOnlyInBaseline":[]},"ruleMetadata":{"ruleId":"VA1
-             219","severity":"Medium","category":"DataProtection","ruleType":"Binary","title":"Transparent data encrypt
-             ion should be enabled","description":"Transparent data encryption (TDE) helps to protect the database file
-             s against information disclosure by performing real-time encryption and decryption of the database, associ
-             ated backups, and transaction log files 'at rest', without requiring changes to the application. This rule
-              checks that TDE is enabled on the database.","rationale":"Transparent Data Encryption (TDE) protects data
-              'at rest', meaning the data and log files are encrypted when stored on disk.","queryCheck":{"query":"SELE
-             CT CASE\n        WHEN EXISTS (\n                SELECT *\n                FROM sys.databases\n
-                 WHERE db_name(database_id) = db_name()\n                    AND is_encrypted = 0\n                )\n
-                        THEN 1\n        ELSE 0\n        END AS [Violation]","expectedResult":[["0"]],"columnNames":["Vi
-             olation"]},"benchmarkReferences":[{"benchmark":"FedRAMP","reference":null}]}},"id":"/subscriptions/f000000
-    00-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/
-    vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA1219/scanResults/VA1219","name":"VA1219","
-             type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults"},{"prope
-             rties":{"ruleId":"VA1223","status":"NonFinding","errorMessage":null,"isTrimmed":false,"queryResults":[],"r
-             emediation":{"description":"Create new certificates, re-encrypt the data/sign-data using the new key, and
-             drop the affected keys.","scripts":[],"automated":false,"portalLink":""},"baselineAdjustedResult":null,"ru
-             leMetadata":{"ruleId":"VA1223","severity":"High","category":"DataProtection","ruleType":"NegativeList","ti
-             tle":"Certificate keys should use at least 2048 bits","description":"Certificate keys are used in RSA and
-             other encryption algorithms to protect data. These keys need to be of enough length to secure the user's d
-             ata. This rule checks that the key's length is at least 2048 bits for all certificates.","rationale":"Key
-             length defines the upper-bound on the encryption algorithm's security. Using short keys in encryption algo
-             rithms may lead to weaknesses in data-at-rest protection.","queryCheck":{"query":"SELECT name AS [Certific
-             ate Name], thumbprint AS [Thumbprint]\nFROM sys.certificates\nWHERE key_length < 2048","expectedResult":[]
-             ,"columnNames":["Certificate Name","Thumbprint"]},"benchmarkReferences":[{"benchmark":"FedRAMP","reference
-             ":null}]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/p
-             roviders/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA122
-             3/scanResults/VA1223","name":"VA1223","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/
-             scans/scanResults"}]}
-```
-
-### Get SQL vulnerability assessment scan
-
-**Example 1**:
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Get-SqlVulnerabilityAssessmentScans -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -ScanId latest
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : GET
-Content    : {"properties":{"scanId":"f64d81a1-9d7b-4516-a623-a1bfc845ed7e","triggerType":"OnDemand","state":"Passed","
-             startTime":"2023-04-17T12:52:41.4142209Z","endTime":"2023-04-17T12:52:41.5235755Z","server":"vulnerabilityaseessmenttest
-             ","database":"db","sqlVersion":"16.0.5100","highSeverityFailedRulesCount":0,"mediumSeverityFailedRulesCou
-             nt":0,"lowSeverityFailedRulesCount":0,"totalPassedRulesCount":24,"totalFailedRulesCount":0,"totalRulesCoun
-             t":24,"isBaselineApplied":true},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/m
-             igrationscripttests/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/vulnerabilityAssessments/D
-             efault/scans/f64d81a1-9d7b-4516-a623-a1bfc845ed7e","name":"f64d81a1-9d7b-4516-a623-a1bfc845ed7e","type":"M
-             icrosoft.Sql/servers/databases/vulnerabilityAssessments/scans"}
-```
-
-**Example 2**:
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Get-SqlVulnerabilityAssessmentScans -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : GET
-Content    : {"value":[{"properties":{"scanId":"f64d81a1-9d7b-4516-a623-a1bfc845ed7e","triggerType":"OnDemand","state":
-             "Passed","startTime":"2023-04-17T12:52:41.4142209Z","endTime":"2023-04-17T12:52:41.5235755Z","server":
-    "vulnerabilityaseessmenttest","database":"db","sqlVersion":"16.0.5100","highSeverityFailedRulesCount":0,"mediumSeverityFail
-             edRulesCount":0,"lowSeverityFailedRulesCount":0,"totalPassedRulesCount":24,"totalFailedRulesCount":0,"tota
-             lRulesCount":24,"isBaselineApplied":true},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resour
-             ceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/vulnerabilityAss
-             essments/Default/scans/f64d81a1-9d7b-4516-a623-a1bfc845ed7e","name":"f64d81a1-9d7b-4516-a623-a1bfc845ed7e"
-             ,"type":"Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans"}]}
-```
-
-### Invoke SQL vulnerability assessment scan
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Invoke-SqlVulnerabilityAssessmentScan -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [Location, System.String[]], [Retry-After, S
-             ystem.String[]]…}
-Version    : 1.1
-StatusCode : 202
-Method     : POST
-Content    : {"operation":"ExecuteDatabaseVulnerabilityAssessmentScan","startTime":"2023-05-15T10:58:48.367Z"}
-```
-
-### Get SQL vulnerability assessment server setting
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Get-SqlVulnerabilityAssessmentServerSetting -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : GET
-Content    : {"properties":{"state":"Enabled"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups
-             /vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default","
-             name":"Default","type":"Microsoft.Sql/servers/sqlVulnerabilityAssessments"}
-```
-
-### Set SQL vulnerability assessment server setting
-
-**Example 1**:
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Set-SqlVulnerabilityAssessmentServerSetting -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -State 'Enabled'
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : PUT
-Content    : {"properties":{"state":"Enabled"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups
-             /vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default","
-             name":"Default","type":"Microsoft.Sql/servers/sqlVulnerabilityAssessments"}
-```
-
-**Example 2**:
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Set-SqlVulnerabilityAssessmentServerSetting -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -State 'Disabled'
-
-Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-              System.String[]]…}
-Version    : 1.1
-StatusCode : 200
-Method     : PUT
-Content    : {"properties":{"state":"Disabled"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroup
-             s/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default",
-             "name":"Default","type":"Microsoft.Sql/servers/sqlVulnerabilityAssessments"}
-```
-
-### Remove SQL vulnerability assessment server setting
-
-```azurepowershell-interactive
-Connect-AzAccount -Subscription 00000000-1111-2222-3333-444444444444
-Import-Module .\SqlVulnerabilityAssessmentCommands.psm1
-Remove-SqlVulnerabilityAssessmentServerSetting -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest
-
+Remove-SqlVulnerabilityAssessmentBaselineRule -ResourceId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.HybridCompute/machines/vaSqlArc/sqlServers/MSSQLSERVER/databases/db -RuleId VA2062
 
 Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-deletes, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
 Version    : 1.1

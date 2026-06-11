@@ -10,12 +10,11 @@ ms.date: 05/07/2026
 # Express configuration PowerShell wrapper module
 
 > [!IMPORTANT]
-> New public preview SQL vulnerability assessment unified API reference can be found under:
+> Updated to reflect SQL vulnerability assessment unified API reference that can be found under:
 > - [Sql Vulnerability Assessment Settings](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-settings)
 > - [Sql Vulnerability Assessment Baseline Rules](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-baseline-rules)
 > - [Sql Vulnerability Assessment Scan Results](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scan-results)
 > - [Sql Vulnerability Assessment Scans](/rest/api/defenderforcloud-composite/sql-vulnerability-assessment-scans)
-> Examples below refer only to Azure SQL Databases (GA).
 
 This article provides the PowerShell wrapper for SQL vulnerability assessment express configuration.
 
@@ -26,669 +25,842 @@ You should use the [Express configuration PowerShell commands reference](express
 ## SqlVulnerabilityAssessmentCommands.psm1
 
 ```powershell
-#Requires -Modules @{ ModuleName="Az.Sql"; ModuleVersion="3.11.0" }
-#Requires -Modules @{ ModuleName="Az.Accounts"; ModuleVersion="2.9.1" }
-#Requires -Version 5.1
+# =================================================================================
+#  SqlVulnerabilityAssessmentCommands.psm1
+#  ---------------------------------------------------------------------------------
+#  Resource-agnostic PowerShell wrapper for the SQL Vulnerability Assessment (VA)
+#  V20260401 REST API (api-version = 2026-04-01-preview).
+#
+#  Design
+#  ------
+#  Every public function takes a single `-ResourceId` parameter that locates the
+#  target resource in ARM. The function appends the appropriate VA operation
+#  segment under the `Microsoft.Security/sqlVulnerabilityAssessments/default`
+#  provider namespace and issues the call via `Invoke-AzRestMethod`.
+#
+#  * Settings (Get / Set / Remove)            → `-ResourceId` is the
+#    **top-level PaaS resource** (server / managed instance / Synapse workspace).
+#    Settings are PaaS-only and are not supported on VM or Arc.
+#
+#  * Invoke-Scan, Get-ScanOperationResult, and Get-Scan → `-ResourceId`
+#    is the **PaaS database** (Azure SQL DB / MI database / Synapse SQL pool).
+#    Scan initiation, polling, and scan-record reads (single + list) are
+#    PaaS-only and are not supported on VM or Arc. To read scan data on
+#    IaaS, use `Get-ScanResult -ScanId latest` instead.
+#
+#  * Get-ScanResult, Baseline, BaselineRule → `-ResourceId` is the
+#    **database resource id** for any of the five supported providers, including
+#    the `sqlServers/{srv}/databases/{db}` child path on VM/Arc.
+#
+#  No provider-shape table is needed because the caller supplies the fully
+#  qualified resource id; the module simply uses it as the route prefix.
+#
+#  All five providers in the V20260401 supported set are covered:
+#      Microsoft.Sql/servers/{srv}/databases/{db}
+#      Microsoft.Sql/managedInstances/{mi}/databases/{db}
+#      Microsoft.Synapse/workspaces/{ws}/sqlPools/{pool}
+#      Microsoft.Compute/virtualMachines/{vm}/sqlServers/{srv}/databases/{db}
+#      Microsoft.HybridCompute/machines/{m}/sqlServers/{srv}/databases/{db}
+#
+#  System / master database resource ids (PaaS)
+#  --------------------------------------------
+#  How you express a system database (`master`, `model`, `msdb`) depends on
+#  the PaaS provider:
+#
+#  * Azure SQL DB (`Microsoft.Sql/servers`) - system DBs are first-class
+#    database resources. Use the regular database resource id, e.g.
+#        …/servers/{srv}/databases/master
+#    Every data-plane operation in this module works as-is.
+#
+#  * Managed Instance (`Microsoft.Sql/managedInstances`) - the system DBs
+#    `master`, `model`, and `msdb` are valid VA targets but must be addressed
+#    on the instance-level URL with `databaseName` as a query parameter.
+#    Callers still pass the natural database resource id, e.g.
+#        …/managedInstances/{mi}/databases/master
+#    The module detects the system-DB name and transparently rewrites the
+#    request to `…/managedInstances/{mi}/providers/Microsoft.Security/sqlVulnerabilityAssessments/default/…?api-version=…&databaseName=master`.
+#
+#  * Synapse (`Microsoft.Synapse/workspaces`) - the only system DB exposed is
+#    `master` (on the serverless SQL endpoint). Address it as
+#        …/workspaces/{ws}/sqlPools/master
+#    The module detects this and routes to the workspace-level URL with
+#    `databaseName=master`. Regular dedicated pools continue to use the
+#    database-route as before.
+# =================================================================================
 
-######SQL Vulnerability Assessment PowerShell Commands ######
-#############################################################
+Set-StrictMode -Version 3.0
 
-###Sql Vulnerability Assessment Baseline###
+#region Module constants
 
-# Create Or Update
-function Set-SqlVulnerabilityAssessmentBaseline([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName, [parameter(mandatory)] [string] $DatabaseName, [parameter(mandatory)] [string] $Body) {
+$Script:ApiVersion              = '2026-04-01-preview'
+$Script:VaProviderSegment       = 'providers/Microsoft.Security/sqlVulnerabilityAssessments/default'
+$Script:DefaultPollIntervalSec  = 5
+$Script:DefaultTimeoutSec       = 600
+
+#endregion
+
+#region Internal helpers
+
+function Test-VaResourceId {
     <#
         .SYNOPSIS
-        Sets vulnerability assessment baselines on the database.
+        Validates that a string looks like an ARM resource id.
 
         .DESCRIPTION
-        Sets vulnerability assessment baselines on the database.
+        Performs lightweight structural validation only - confirms that the
+        value starts with `/subscriptions/{guid}/resourceGroups/{name}/providers/`.
+        The RP enforces provider/route shape on the wire.
+    #>
+    param([Parameter(Mandatory)][string] $ResourceId)
+    if ($ResourceId -notmatch '^/subscriptions/[0-9a-fA-F-]{36}/resourceGroups/[^/]+/providers/[^/]+/[^/]+/.+') {
+        throw "Invalid -ResourceId '$ResourceId'. Expected an ARM resource id of the form '/subscriptions/{guid}/resourceGroups/{rg}/providers/{ns}/{type}/{name}[/...]'."
+    }
+}
 
-        .PARAMETER SubscriptionId
-        Subscription id.
+function Test-VaPaasOnly {
+    <#
+        .SYNOPSIS
+        Throws when the resource id targets an IaaS host (VM or Arc machine).
 
-        .PARAMETER ResourceGroupName
-        Resource group name.
+        .DESCRIPTION
+        A subset of V20260401 operations - Settings (Get/Set/Remove),
+        InitiateScan, Get-ScanOperationResult, and **Get-Scan (single + list)**
+        - are supported only on PaaS hosts (Microsoft.Sql/servers,
+        Microsoft.Sql/managedInstances, Microsoft.Synapse/workspaces). This
+        helper inspects the provider segment of the ARM resource id and
+        throws a descriptive error if the caller passes a
+        `Microsoft.Compute/virtualMachines` or
+        `Microsoft.HybridCompute/machines` resource id.
 
-        .PARAMETER ServerName
-        Server name.
+        Called only by the 6 PaaS-only functions; all other functions
+        (Get-ScanResult, Get/Add baseline, Get/Set/Remove BaselineRule)
+        accept any of the 5 supported provider types.
+    #>
+    param([Parameter(Mandatory)][string] $ResourceId)
+    if ($ResourceId -match '/providers/(Microsoft\.Compute/virtualMachines|Microsoft\.HybridCompute/machines)/') {
+        throw "This operation is not supported for VM (Microsoft.Compute/virtualMachines) or Arc (Microsoft.HybridCompute/machines) resources. Settings, scan-initiation/polling, and scan-record reads are PaaS-only (Microsoft.Sql/servers, Microsoft.Sql/managedInstances, Microsoft.Synapse/workspaces). Use Get-SqlVulnerabilityAssessmentScanResult -ScanId latest to read scan data on IaaS."
+    }
+}
 
-        .PARAMETER DatabaseName
-        Database name.
+function Resolve-VaRoute {
+    <#
+        .SYNOPSIS
+        Resolves the effective routing URL components for a given `-ResourceId`.
 
-        .PARAMETER Body
-        Baseline.
+        .DESCRIPTION
+        Most resource ids map 1:1 to the request URL (the database appears in
+        the ARM path). The V20260401 RP, however, requires a *server-level*
+        URL plus a `databaseName` query parameter for:
 
-        .EXAMPLE
-        Set-SqlVulnerabilityAssessmentBaseline -SubscriptionId 00000000-1111-2222-3333-444444444444 -ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -Body '{  "properties": {    "latestScan": true,    "results": {}  }}'
-        Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-writes, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : PUT
-        Content    : {"properties":{"results":{"VA1143":[["True"]],"VA1219":[["False"]]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/serv
-                    ers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default","name":"Default","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"}
+            * Managed Instance system DBs : `master`, `model`, `msdb`
+            * Synapse `master` (the serverless `sqlPools/master`)
 
-        .EXAMPLE
-        Set-SqlVulnerabilityAssessmentBaseline -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -Body '{
-            "properties": {
-                "latestScan": false,
-                "results": {
-                    "VA2062": [
-                        [
-                            "AllowAll",
-                            "0.0.0.0",
-                            "255.255.255.255"
-                        ]
-                    ]
-                }
+        This helper detects those patterns and returns the rewritten route id
+        plus the database name to inject into the query string. For every
+        other resource id it returns the original id and a null database name.
+
+        Returns a `[pscustomobject]` with `RouteId` and `DatabaseName`.
+    #>
+    param([Parameter(Mandatory)][string] $ResourceId)
+
+    $trimmed = $ResourceId.TrimEnd('/')
+
+    # Managed Instance system DBs → server route on the instance.
+    if ($trimmed -match '^(?<srv>.+/providers/Microsoft\.Sql/managedInstances/[^/]+)/databases/(?<db>master|model|msdb)$') {
+        return [pscustomobject]@{ RouteId = $Matches.srv; DatabaseName = $Matches.db }
+    }
+
+    # Synapse master (serverless) → server route on the workspace.
+    if ($trimmed -match '^(?<srv>.+/providers/Microsoft\.Synapse/workspaces/[^/]+)/sqlPools/(?<db>master)$') {
+        return [pscustomobject]@{ RouteId = $Matches.srv; DatabaseName = $Matches.db }
+    }
+
+    return [pscustomobject]@{ RouteId = $trimmed; DatabaseName = $null }
+}
+
+function Get-VaUri {
+    <#
+        .SYNOPSIS
+        Builds the full VA REST URI for an operation against a target resource.
+
+        .DESCRIPTION
+        Combines the caller's `-ResourceId`, the VA provider segment, an
+        optional operation suffix (e.g. `/scans/initiateScan`), and the
+        api-version query string.
+
+        For MI system DBs (`master`, `model`, `msdb`) and Synapse `master`,
+        the URL is rewritten to the server-level form with a `databaseName`
+        query parameter - see `Resolve-VaRoute` for details.
+    #>
+    param(
+        [Parameter(Mandatory)][string] $ResourceId,
+        [string] $OperationSuffix = '',
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    Test-VaResourceId -ResourceId $ResourceId
+    $route = Resolve-VaRoute -ResourceId $ResourceId
+    $qs    = "?api-version=$ApiVersion"
+    if ($route.DatabaseName) { $qs += "&databaseName=$($route.DatabaseName)" }
+    return "$($route.RouteId)/$($Script:VaProviderSegment)$OperationSuffix$qs"
+}
+
+function SendRestRequest {
+    <#
+        .SYNOPSIS
+        Thin wrapper around `Invoke-AzRestMethod` that throws on HTTP failure.
+
+        .DESCRIPTION
+        Submits the request, parses the JSON response when present, and throws
+        a descriptive error for any non-2xx status code. Returns the raw
+        response object so callers that need the headers (e.g. Location for
+        async operations) or the status code can still inspect them.
+    #>
+    param(
+        [Parameter(Mandatory)][ValidateSet('Get','Put','Post','Delete')][string] $Method,
+        [Parameter(Mandatory)][string] $Uri,
+        [string] $Body
+    )
+
+    $params = @{
+        Method = $Method.ToUpperInvariant()
+        Path   = $Uri
+    }
+    if ($PSBoundParameters.ContainsKey('Body') -and -not [string]::IsNullOrEmpty($Body)) {
+        $params['Payload'] = $Body
+    }
+
+    $resp = Invoke-AzRestMethod @params
+    if (-not $resp) {
+        throw "Invoke-AzRestMethod returned no response for $Method $Uri."
+    }
+    if ($resp.StatusCode -lt 200 -or $resp.StatusCode -ge 300) {
+        throw "HTTP $($resp.StatusCode) calling $Method $Uri. Body: $($resp.Content)"
+    }
+    return $resp
+}
+
+function Get-VaLocationHeader {
+    <#
+        .SYNOPSIS
+        Extracts the Location response header in a shape-tolerant way.
+
+        .DESCRIPTION
+        `Invoke-AzRestMethod` surfaces Headers as either a Hashtable (with
+        string-array values) or an IEnumerable of KeyValuePair objects,
+        depending on PowerShell version and Az module version. This helper
+        normalises both shapes and returns the first Location value as a
+        single string (or $null if absent).
+    #>
+    param([Parameter(Mandatory)] $Response)
+    if (-not $Response.Headers) { return $null }
+    $h = $Response.Headers
+    if ($h -is [System.Collections.IDictionary]) {
+        if ($h.Contains('Location')) {
+            $v = $h['Location']
+            if ($v -is [System.Collections.IEnumerable] -and -not ($v -is [string])) {
+                return ($v | Select-Object -First 1)
             }
-        }'
-        Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-writes, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : PUT
-        Content    : {"properties":{"results":{"VA2062":[["AllowAll","0.0.0.0","255.255.255.255"]]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microso
-                    ft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default","name":"Default","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baseline
-                    s"}
-    #>
-    if ($DatabaseName -eq 'master') {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview&systemDatabaseName=master"
-    } else {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/databases/$DatabaseName/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview"
-    }
-
-    return SendRestRequest -Method "Put" -Uri $Uri -Body $Body
-}
-
-# Get
-function Get-SqlVulnerabilityAssessmentBaseline([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName, [parameter(mandatory)] [string] $DatabaseName) {
-    <#
-        .SYNOPSIS
-        Gets vulnerability assessment baselines for the user database.
-
-        .DESCRIPTION
-        Gets vulnerability assessment baselines for the user database.
-
-        .PARAMETER SubscriptionId
-        Subscription id.
-
-        .PARAMETER ResourceGroupName
-        Resource group name.
-
-        .PARAMETER ServerName
-        Server name.
-
-        .PARAMETER DatabaseName
-        Database name.
-
-        .EXAMPLE
-        Get-SqlVulnerabilityAssessmentBaseline -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db
-        Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-reads, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : GET
-        Content    : {"properties":{"results":{"VA1143":[["True"]],"VA1219":[["False"]]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/serv
-                    ers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default","name":"Default","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"}
-    #>
-
-    if ($DatabaseName -eq 'master') {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview&systemDatabaseName=master"
-    } else {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/databases/$DatabaseName/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview"
-    }
-    return SendRestRequest -Method "Get" -Uri $Uri
-}
-
-###Database Sql Vulnerability Assessment Rule Baselines###
-
-# Create Or Update
-function Set-SqlVulnerabilityAssessmentBaselineRule([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName, [parameter(mandatory)] [string] $DatabaseName, [parameter(mandatory)] [string] $RuleId, [parameter(mandatory)] [string] $Body) {
-    <#
-        .SYNOPSIS
-        Sets vulnerability assessment baseline for a specific rule on the database.
-
-        .DESCRIPTION
-        Sets vulnerability assessment baseline for a specific rule on the database.
-
-        .PARAMETER SubscriptionId
-        Subscription id.
-
-        .PARAMETER ResourceGroupName
-        Resource group name.
-
-        .PARAMETER ServerName
-        Server name.
-
-        .PARAMETER DatabaseName
-        Database name.
-
-        .PARAMETER RuleId
-        Rule id.
-
-        .PARAMETER Body
-        Baseline.
-
-        .EXAMPLE
-        Set-SqlVulnerabilityAssessmentBaselineRule -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -RuleId VA2062 -Body '{
-        "properties": {
-            "latestScan": false,
-            "results": [
-                [
-                "AllowAll",
-                "0.0.0.0",
-                "255.255.255.255"
-                ]
-            ]
+            return [string]$v
         }
-        }'
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : PUT
-        Content    : {"properties":{"results":[["AllowAll","0.0.0.0","255.255.255.255"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/dat
-                    abases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2062","name":"VA2062","type":"Mic
-                    rosoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"}
-    #>
-    if ($DatabaseName -eq 'master') {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId" + "?api-version=2022-02-01-preview&systemDatabaseName=master"
-    } else {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/databases/$DatabaseName/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId" + "?api-version=2022-02-01-preview"
+        return $null
     }
-
-    return SendRestRequest -Method "Put" -Uri $Uri -Body $Body
+    $kv = $h | Where-Object { $_.Key -eq 'Location' } | Select-Object -First 1
+    if (-not $kv) { return $null }
+    $val = $kv.Value
+    if ($val -is [System.Collections.IEnumerable] -and -not ($val -is [string])) {
+        return ($val | Select-Object -First 1)
+    }
+    return [string]$val
 }
 
-# Get
-function Get-SqlVulnerabilityAssessmentBaselineRule([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName, [parameter(mandatory)] [string] $DatabaseName, $RuleId) {
+function Wait-VaScanOperation {
     <#
         .SYNOPSIS
-        Gets vulnerability assessment baseline for a specific rule from the database.
+        Polls a scan operation URL until it reaches a terminal state.
 
         .DESCRIPTION
-        Gets vulnerability assessment baseline for a specific rule from the database.
-
-        .PARAMETER SubscriptionId
-        Subscription id.
-
-        .PARAMETER ResourceGroupName
-        Resource group name.
-
-        .PARAMETER ServerName
-        Server name.
-
-        .PARAMETER DatabaseName
-        Database name.
-
-        .PARAMETER RuleId
-        Rule id.
-
-        .EXAMPLE
-        Get-SqlVulnerabilityAssessmentBaselineRule -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -RuleId VA2062
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : GET
-        Content    : {"properties":{"results":[["AllowAll","0.0.0.0","255.255.255.255"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/dat
-                    abases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2062","name":"VA2062","type":"Mic
-                    rosoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"}
-
-        .EXAMPLE
-        Get-SqlVulnerabilityAssessmentBaselineRule -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : GET
-        Content    : {"value":[{"properties":{"results":[["True"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/r
-                    esourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerab
-                    ilityAssessments/Default/baselines/default/rules/VA1143","name":"VA1143","type":"Microsoft.Sql/servers/dat
-                    abases/sqlVulnerabilityAssessments/baselines"},{"properties":{"results":[["False"]]},"id":"/subscriptions/
-                    00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/m
-                    igrationsql1/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA1219","name":"VA1
-                    219","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"},{"properties":{"resul
-                    ts":[["AllowAll","0.0.0.0","255.255.255.255"]]},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/
-                    resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnera
-                    bilityAssessments/Default/baselines/default/rules/VA2062","name":"VA2062","type":"Microsoft.Sql/servers/da
-                    tabases/sqlVulnerabilityAssessments/baselines"}]}
+        Issues GETs against `-OperationUri` at `-PollIntervalSeconds`
+        cadence. The operation is terminal when `properties.scanStatus` is
+        one of `Passed`, `Failed`, or `FailedToRun`. Throws after
+        `-TimeoutSeconds` elapsed. Returns the terminal scan status string.
     #>
-        if ($DatabaseName -eq 'master') {
-            $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId" + "?api-version=2022-02-01-preview&systemDatabaseName=master"
-        } else {
-            $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/databases/$DatabaseName/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId" + "?api-version=2022-02-01-preview"
+    param(
+        [Parameter(Mandatory)][string] $OperationUri,
+        [int] $PollIntervalSeconds = $Script:DefaultPollIntervalSec,
+        [int] $TimeoutSeconds      = $Script:DefaultTimeoutSec
+    )
+
+    $deadline = (Get-Date).AddSeconds($TimeoutSeconds)
+    while ($true) {
+        $resp = SendRestRequest -Method 'Get' -Uri $OperationUri
+        $obj = $resp.Content | ConvertFrom-Json
+        $status = $obj.properties.scanStatus
+        if ($status -in @('Passed', 'Failed', 'FailedToRun')) {
+            return [string]$status
         }
-
-    return SendRestRequest -Method "Get" -Uri $Uri
-}
-
-# Remove
-function Remove-SqlVulnerabilityAssessmentBaselineRule([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName, [parameter(mandatory)] [string] $DatabaseName, [parameter(mandatory)] [string] $RuleId) {
-    <#
-        .SYNOPSIS
-        Deletes vulnerability assessment baseline for a specific rule from the database.
-
-        .DESCRIPTION
-        Deletes vulnerability assessment baseline for a specific rule from the database.
-
-        .PARAMETER SubscriptionId
-        Subscription id.
-
-        .PARAMETER ResourceGroupName
-        Resource group name.
-
-        .PARAMETER ServerName
-        Server name.
-
-        .PARAMETER DatabaseName
-        Database name.
-
-        .PARAMETER RuleId
-        Rule id.
-
-        .EXAMPLE
-        Remove-SqlVulnerabilityAssessmentBaselineRule -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -RuleId VA2062
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : DELETE
-        Content    :
-    #>
-    if ($DatabaseName -eq 'master') {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId" + "?api-version=2022-02-01-preview&systemDatabaseName=master"
-    } else {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/databases/$DatabaseName/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId" + "?api-version=2022-02-01-preview"
+        if ((Get-Date) -ge $deadline) {
+            throw "Timed out after $TimeoutSeconds second(s) waiting for scan operation to complete. Last status: '$status'."
+        }
+        if ($PollIntervalSeconds -gt 0) {
+            Start-Sleep -Seconds $PollIntervalSeconds
+        }
     }
-
-    return SendRestRequest -Method "Delete" -Uri $Uri
 }
 
-###Sql Vulnerability Assessment Scan Result###
+#endregion
 
-# Get
-function Get-SqlVulnerabilityAssessmentScanResults([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName, [parameter(mandatory)] [string] $DatabaseName, [parameter(mandatory)] [string] $ScanId, $RuleId) {
+###################################################################################
+###  Settings - top-level (server / MI / workspace ) VA policy        ###
+###################################################################################
+
+function Get-SqlVulnerabilityAssessmentSetting {
     <#
         .SYNOPSIS
-        Gets vulnerability assessment scan results for a specific rule from the database.
+        Gets the VA settings for a top-level resource.
 
         .DESCRIPTION
-        Gets vulnerability assessment scan results for a specific rule from the database.
+        Wraps `GET {resourceId}/providers/Microsoft.Security/sqlVulnerabilityAssessments/default`.
+        Returns 200 with the settings document; `properties.state` is
+        `Enabled` or `Disabled` (the RP returns `Disabled` when VA has
+        never been configured on the resource - there is no 404 case).
 
-        .PARAMETER SubscriptionId
-        Subscription id.
+        .PARAMETER ResourceId
+        ARM resource id of the **top-level** PaaS resource:
+        SQL server (`Microsoft.Sql/servers`), Managed Instance
+        (`Microsoft.Sql/managedInstances`), or Synapse workspace
+        (`Microsoft.Synapse/workspaces`).
 
-        .PARAMETER ResourceGroupName
-        Resource group name.
+        VM (`Microsoft.Compute/virtualMachines`) and Arc
+        (`Microsoft.HybridCompute/machines`) are **not supported** for
+        Settings operations.
 
-        .PARAMETER ServerName
-        Server name.
-
-        .PARAMETER DatabaseName
-        Database name.
-
-        .PARAMETER ScanId
-        Scan id.
-
-        .PARAMETER RuleId
-        Rule id.
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
 
         .EXAMPLE
-        Get-SqlVulnerabilityAssessmentScanResults -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -ScanId latest -RuleId VA2062
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : GET
-        Content    : {"properties":{"ruleId":"VA2062","status":"NonFinding","errorMessage":null,"isTrimmed":false,"queryResults
-                    ":[],"remediation":{"description":"Remove database firewall rules that grant excessive access","scripts":[
-                    ],"automated":false,"portalLink":""},"baselineAdjustedResult":null,"ruleMetadata":{"ruleId":"VA2062","seve
-                    rity":"High","category":"SurfaceAreaReduction","ruleType":"NegativeList","title":"Database-level firewall
-                    rules should not grant excessive access","description":"The Azure SQL Database-level firewall helps protec
-                    t your data by preventing all access to your database until you specify which IP addresses have permission
-                    . Database-level firewall rules grant access to the specific database based on the originating IP address
-                    of each request.\n\nDatabase-level firewall rules for master and user databases can only be created and ma
-                    naged through Transact-SQL (unlike server-level firewall rules which can also be created and managed using
-                    the Azure portal or PowerShell). For more details please see: https://docs.microsoft.com/azure/sql-
-                    database/sql-database-firewall-configure\n\nThis check verifies that each database-level firewall rule doe
-                    s not grant access to more than 255 IP addresses.","rationale":"Often, administrators add rules that grant
-                    excessive access as part of a troubleshooting process - to eliminate the firewall as the source of a prob
-                    lem, they simply create a rule that allows all traffic to pass to the affected database.\n\nGranting exces
-                    sive access using database firewall rules is a clear security concern, as it violates the principle of lea
-                    st privilege by allowing unnecessary access to your database. In fact, it's the equivalent of placing the
-                    database outside of the firewall.","queryCheck":{"query":"SELECT name AS [Firewall Rule Name]\n    ,start_
-                    ip_address AS [Start Address]\n    ,end_ip_address AS [End Address]\nFROM sys.database_firewall_rules\nWHE
-                    RE ( \n        (CONVERT(bigint, parsename(end_ip_address, 1)) +\n         CONVERT(bigint, parsename(end_ip
-                    _address, 2)) * 256 + \n         CONVERT(bigint, parsename(end_ip_address, 3)) * 65536 + \n         CONVER
-                    T(bigint, parsename(end_ip_address, 4)) * 16777216 ) \n        - \n        (CONVERT(bigint, parsename(star
-                    t_ip_address, 1)) +\n         CONVERT(bigint, parsename(start_ip_address, 2)) * 256 + \n         CONVERT(b
-                    igint, parsename(start_ip_address, 3)) * 65536 + \n         CONVERT(bigint, parsename(start_ip_address, 4)
-                    ) * 16777216 )\n      ) > 255","expectedResult":[],"columnNames":["Firewall Rule Name","Start Address","En
-                    d Address"]},"benchmarkReferences":[]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resource
-                    Groups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAs
-                    sessments/Default/scans/VA2062/scanResults/VA2062","name":"VA2062","type":"Microsoft.Sql/servers/databases
-                    /sqlVulnerabilityAssessments/scans/scanResults"}
-
-        .EXAMPLE
-        Get-SqlVulnerabilityAssessmentScanResults -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -ScanId latest
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : GET
-        Content    : {"value":[
-                    {"properties":{"ruleId":"VA1219","status":"No
-                    nFinding","errorMessage":null,"isTrimmed":false,"queryResults":[["False"]],"remediation":{"description":"E
-                    nable TDE on the affected databases","scripts":[],"automated":false,"portalLink":"EnableTDE"},"baselineAdj
-                    ustedResult":{"baseline":{"expectedResults":[["False"]],"updatedTime":"2023-05-15T08:52:39.3476874+00:00"}
-                    ,"status":"NonFinding","resultsNotInBaseline":[],"resultsOnlyInBaseline":[]},"ruleMetadata":{"ruleId":"VA1
-                    219","severity":"Medium","category":"DataProtection","ruleType":"Binary","title":"Transparent data encrypt
-                    ion should be enabled","description":"Transparent data encryption (TDE) helps to protect the database file
-                    s against information disclosure by performing real-time encryption and decryption of the database, associ
-                    ated backups, and transaction log files 'at rest', without requiring changes to the application. This rule
-                    checks that TDE is enabled on the database.","rationale":"Transparent Data Encryption (TDE) protects data
-                    'at rest', meaning the data and log files are encrypted when stored on disk.","queryCheck":{"query":"SELE
-                    CT CASE\n        WHEN EXISTS (\n                SELECT *\n                FROM sys.databases\n
-                        WHERE db_name(database_id) = db_name()\n                    AND is_encrypted = 0\n                )\n
-                                THEN 1\n        ELSE 0\n        END AS [Violation]","expectedResult":[["0"]],"columnNames":["Vi
-                    olation"]},"benchmarkReferences":[{"benchmark":"FedRAMP","reference":null}]}},"id":"/subscriptions/f000000
-                    00-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/
-                    vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA1219/scanResults/VA1219","name":"VA1219","
-                    type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults"},{"prope
-                    rties":{"ruleId":"VA1223","status":"NonFinding","errorMessage":null,"isTrimmed":false,"queryResults":[],"r
-                    emediation":{"description":"Create new certificates, re-encrypt the data/sign-data using the new key, and
-                    drop the affected keys.","scripts":[],"automated":false,"portalLink":""},"baselineAdjustedResult":null,"ru
-                    leMetadata":{"ruleId":"VA1223","severity":"High","category":"DataProtection","ruleType":"NegativeList","ti
-                    tle":"Certificate keys should use at least 2048 bits","description":"Certificate keys are used in RSA and
-                    other encryption algorithms to protect data. These keys need to be of enough length to secure the user's d
-                    ata. This rule checks that the key's length is at least 2048 bits for all certificates.","rationale":"Key
-                    length defines the upper-bound on the encryption algorithm's security. Using short keys in encryption algo
-                    rithms may lead to weaknesses in data-at-rest protection.","queryCheck":{"query":"SELECT name AS [Certific
-                    ate Name], thumbprint AS [Thumbprint]\nFROM sys.certificates\nWHERE key_length < 2048","expectedResult":[]
-                    ,"columnNames":["Certificate Name","Thumbprint"]},"benchmarkReferences":[{"benchmark":"FedRAMP","reference
-                    ":null}]}},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/p
-                    roviders/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA122
-                    3/scanResults/VA1223","name":"VA1223","type":"Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/
-                    scans/scanResults"}]}
+        Get-SqlVulnerabilityAssessmentSetting `
+            -ResourceId '/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg/providers/Microsoft.Sql/servers/srv'
     #>
-
-    if ($DatabaseName -eq 'master') {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default/scans/$ScanId/scanResults/$RuleId" + "?api-version=2022-02-01-preview&systemDatabaseName=master"
-    } else {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/databases/$DatabaseName/sqlVulnerabilityAssessments/default/scans/$ScanId/scanResults/$RuleId" + "?api-version=2022-02-01-preview"
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        Test-VaPaasOnly -ResourceId $ResourceId
+        $uri = Get-VaUri -ResourceId $ResourceId -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Get' -Uri $uri
     }
-    return SendRestRequest -Method "Get" -Uri $Uri
 }
 
-###Sql Vulnerability Assessment Scans###
-
-# Get
-function Get-SqlVulnerabilityAssessmentScans([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName, [parameter(mandatory)] [string] $DatabaseName, $ScanId) {
+function Set-SqlVulnerabilityAssessmentSetting {
     <#
         .SYNOPSIS
-        Gets vulnerability assessment scan summary from the database.
+        Creates or updates VA settings on a top-level resource.
 
         .DESCRIPTION
-        Gets vulnerability assessment scan summary from the database.
+        Wraps `PUT {resourceId}/providers/Microsoft.Security/sqlVulnerabilityAssessments/default`.
+        The function constructs the request body from the `-State` parameter
+        (`Enabled` or `Disabled`) - callers do not need to craft JSON.
 
-        .PARAMETER SubscriptionId
-        Subscription id.
-
-        .PARAMETER ResourceGroupName
-        Resource group name.
-
-        .PARAMETER ServerName
-        Server name.
-
-        .PARAMETER DatabaseName
-        Database name.
-
-        .PARAMETER ScanId
-        Scan id.
-
-        .EXAMPLE
-        Get-SqlVulnerabilityAssessmentScans -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db -ScanId latest
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : GET
-        Content    : {"properties":{"scanId":"f64d81a1-9d7b-4516-a623-a1bfc845ed7e","triggerType":"OnDemand","state":"Passed","
-                    startTime":"2023-04-17T12:52:41.4142209Z","endTime":"2023-04-17T12:52:41.5235755Z","server":"vulnerabilityaseessmenttest
-                    ","database":"db","sqlVersion":"16.0.5100","highSeverityFailedRulesCount":0,"mediumSeverityFailedRulesCou
-                    nt":0,"lowSeverityFailedRulesCount":0,"totalPassedRulesCount":24,"totalFailedRulesCount":0,"totalRulesCoun
-                    t":24,"isBaselineApplied":true},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/m
-                    igrationscripttests/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/vulnerabilityAssessments/D
-                    efault/scans/f64d81a1-9d7b-4516-a623-a1bfc845ed7e","name":"f64d81a1-9d7b-4516-a623-a1bfc845ed7e","type":"M
-                    icrosoft.Sql/servers/databases/vulnerabilityAssessments/scans"}
-
-        .EXAMPLE
-        Get-SqlVulnerabilityAssessmentScans -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : GET
-        Content    : {"value":[{"properties":{"scanId":"f64d81a1-9d7b-4516-a623-a1bfc845ed7e","triggerType":"OnDemand","state":
-                    "Passed","startTime":"2023-04-17T12:52:41.4142209Z","endTime":"2023-04-17T12:52:41.5235755Z","server":
-                    "vulnerabilityaseessmenttest","database":"db","sqlVersion":"16.0.5100","highSeverityFailedRulesCount":0,"mediumSeverityFail
-                    edRulesCount":0,"lowSeverityFailedRulesCount":0,"totalPassedRulesCount":24,"totalFailedRulesCount":0,"tota
-                    lRulesCount":24,"isBaselineApplied":true},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resour
-                    ceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/vulnerabilityAss
-                    essments/Default/scans/f64d81a1-9d7b-4516-a623-a1bfc845ed7e","name":"f64d81a1-9d7b-4516-a623-a1bfc845ed7e"
-                    ,"type":"Microsoft.Sql/servers/databases/vulnerabilityAssessments/scans"}]}
-    #>
-    if ($DatabaseName -eq 'master') {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default/scans/$ScanId" + "?api-version=2022-02-01-preview&systemDatabaseName=master"
-    } else {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/databases/$DatabaseName/sqlVulnerabilityAssessments/default/scans/$ScanId" + "?api-version=2022-02-01-preview"
-    }
-    return SendRestRequest -Method "Get" -Uri $Uri
-}
-
-
-###Sql Vulnerability Assessment Execute Scan###
-
-# Invoke
-function Invoke-SqlVulnerabilityAssessmentScan([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName, [parameter(mandatory)] [string] $DatabaseName) {
-    <#
-        .SYNOPSIS
-        Runs vulnerability assessment scan on the database.
-
-        .DESCRIPTION
-        Runs vulnerability assessment scan on the database.
-
-        .PARAMETER SubscriptionId
-        Subscription id.
-
-        .PARAMETER ResourceGroupName
-        Resource group name.
-
-        .PARAMETER ServerName
-        Server name.
-
-        .PARAMETER DatabaseName
-        Database name.
-
-        .EXAMPLE
-        Invoke-SqlVulnerabilityAssessmentScan -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -DatabaseName db
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [Location, System.String[]], [Retry-After, S
-                    ystem.String[]]…}
-        Version    : 1.1
-        StatusCode : 202
-        Method     : POST
-        Content    : {"operation":"ExecuteDatabaseVulnerabilityAssessmentScan","startTime":"2023-05-15T10:58:48.367Z"}
-    #>
-    if ($DatabaseName -eq 'master') {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default/initiateScan?api-version=2022-02-01-preview&systemDatabaseName=master"
-    } else {
-        $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/databases/$DatabaseName/sqlVulnerabilityAssessments/default/initiateScan?api-version=2022-02-01-preview"
-    }
-    SendRestRequest -Method "Post" -Uri $Uri
-}
-
-
-###Sql Vulnerability Assessments Settings###
-
-# Get
-function Get-SqlVulnerabilityAssessmentServerSetting([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName) {
-    <#
-        .SYNOPSIS
-        Gets vulnerability assessment settings of the server.
-
-        .DESCRIPTION
-        Gets vulnerability assessment settings of the server.
-
-        .PARAMETER SubscriptionId
-        Subscription id.
-
-        .PARAMETER ResourceGroupName
-        Resource group name.
-
-        .PARAMETER ServerName
-        Server name.
-
-        .EXAMPLE
-        Get-SqlVulnerabilityAssessmentServerSetting -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : GET
-        Content    : {"properties":{"state":"Enabled"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups
-                    /vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default","
-                    name":"Default","type":"Microsoft.Sql/servers/sqlVulnerabilityAssessments"}
-    #>
-    $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview"
-    return SendRestRequest -Method "Get" -Uri $Uri
-}
-
-# Set
-function Set-SqlVulnerabilityAssessmentServerSetting([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName, [parameter(mandatory)] [string] $State) {
-    <#
-        .SYNOPSIS
-        Sets vulnerability assessment settings on the server.
-
-        .DESCRIPTION
-        Sets vulnerability assessment settings on the server.
-
-        .PARAMETER SubscriptionId
-        Subscription id.
-
-        .PARAMETER ResourceGroupName
-        Resource group name.
-
-        .PARAMETER ServerName
-        Server name.
+        .PARAMETER ResourceId
+        ARM resource id of the top-level **PaaS** resource (server / MI /
+        workspace). VM and Arc are **not supported**.
 
         .PARAMETER State
-        Setting's state.
+        Desired VA state. One of `Enabled` or `Disabled`.
+
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
 
         .EXAMPLE
-        Set-SqlVulnerabilityAssessmentServerSetting -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -State 'Enabled'
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : PUT
-        Content    : {"properties":{"state":"Enabled"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups
-                    /vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default","
-                    name":"Default","type":"Microsoft.Sql/servers/sqlVulnerabilityAssessments"}
+        Set-SqlVulnerabilityAssessmentSetting -ResourceId $sqlSrv.ResourceId -State Enabled
 
         .EXAMPLE
-        Set-SqlVulnerabilityAssessmentServerSetting -SubscriptionId 00000000-1111-2222-3333-444444444444-ResourceGroupName vulnerabilityaseessmenttestRg -ServerName vulnerabilityaseessmenttest -State 'Disabled'
-        Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Server,
-                    System.String[]]…}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : PUT
-        Content    : {"properties":{"state":"Disabled"},"id":"/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroup
-                    s/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default",
-                    "name":"Default","type":"Microsoft.Sql/servers/sqlVulnerabilityAssessments"}
+        Set-SqlVulnerabilityAssessmentSetting -ResourceId $sqlSrv.ResourceId -State Disabled
     #>
-    $Body = @{
-        properties = @{
-            state = $State
-        }
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [Parameter(Mandatory)][ValidateSet('Enabled','Disabled')][string] $State,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        Test-VaPaasOnly -ResourceId $ResourceId
+        $uri  = Get-VaUri -ResourceId $ResourceId -ApiVersion $ApiVersion
+        $body = @{ properties = @{ state = $State } } | ConvertTo-Json -Depth 4 -Compress
+        return SendRestRequest -Method 'Put' -Uri $uri -Body $body
     }
-    $Body = $Body | ConvertTo-Json
-
-    $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview"
-    return SendRestRequest -Method "Put" -Uri $Uri -Body $Body
 }
 
-# Remove
-function Remove-SqlVulnerabilityAssessmentServerSetting([parameter(mandatory)] [string] $SubscriptionId, [parameter(mandatory)] [string] $ResourceGroupName, [parameter(mandatory)] [string] $ServerName) {
+function Remove-SqlVulnerabilityAssessmentSetting {
     <#
         .SYNOPSIS
-        Deletes vulnerability assessment settings on the server.
+        Deletes the VA settings from a top-level resource.
 
         .DESCRIPTION
-        Deletes vulnerability assessment settings on the server.
+        Wraps `DELETE {resourceId}/providers/Microsoft.Security/sqlVulnerabilityAssessments/default`.
 
-        .PARAMETER SubscriptionId
-        Subscription id.
+        .PARAMETER ResourceId
+        ARM resource id of the top-level **PaaS** resource (server / MI /
+        workspace). VM and Arc are **not supported**.
 
-        .PARAMETER ResourceGroupName
-        Resource group name.
-
-        .PARAMETER ServerName
-        Server name.
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
 
         .EXAMPLE
-        Headers    : {[Pragma, System.String[]], [x-ms-request-id, System.String[]], [x-ms-ratelimit-remaining-subscription-deletes, System.String[]], [x-ms-correlation-request-id, System.String[]]...}
-        Version    : 1.1
-        StatusCode : 200
-        Method     : DELETE
-        Content    :
+        Remove-SqlVulnerabilityAssessmentSetting -ResourceId $sqlSrv.ResourceId
     #>
-
-    $Uri = "/subscriptions/$SubscriptionId/resourceGroups/$ResourceGroupName/providers/Microsoft.Sql/servers/$ServerName/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview"
-    return SendRestRequest -Method "Delete" -Uri $Uri
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        Test-VaPaasOnly -ResourceId $ResourceId
+        $uri = Get-VaUri -ResourceId $ResourceId -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Delete' -Uri $uri
+    }
 }
 
+###################################################################################
+###  Scans - initiate, poll, get/list scan records                              ###
+###################################################################################
 
-function SendRestRequest(
-    [Parameter(Mandatory = $True)]
-    [string] $Method,
-    [Parameter(Mandatory = $True)]
-    [string] $Uri,
-    [parameter( Mandatory = $false )]
-    [string] $Body = "DEFAULT") {
+function Invoke-SqlVulnerabilityAssessmentScan {
+    <#
+        .SYNOPSIS
+        Initiates a VA scan on a database resource.
 
-    $Params = @{
-        Method       = $Method
-        Path         = $Uri
-    }
+        .DESCRIPTION
+        Wraps `POST {dbResourceId}/.../scans/initiateScan`. The RP responds
+        with HTTP 202 + a `Location` header pointing at the scan operation.
 
-    if (!($Body -eq "DEFAULT")) {
-        $Params = @{
-            Method       = $Method
-            Path         = $Uri
-            Payload      = $Body
+        Without `-Wait`, returns an object containing the initial status code,
+        the raw Location, and a parsed `OperationId` so callers can poll
+        themselves via `Get-SqlVulnerabilityAssessmentScanOperationResult`.
+
+        With `-Wait`, the function polls the operation URL until it reaches
+        a terminal state (`Passed`, `Failed`, `FailedToRun`) and then issues
+        `GET .../scans/latest` to return the final scan record properties
+        (trigger type, scan status, start/end time, server, database,
+        rule counts, baseline applied flag, …).
+
+        .PARAMETER ResourceId
+        ARM resource id of the **database** (Microsoft.Sql/servers/.../databases
+        or Microsoft.Sql/managedInstances/.../databases or
+        Microsoft.Synapse/workspaces/.../sqlPools).
+
+        Scan initiation and polling are **PaaS-only**. VM
+        (`Microsoft.Compute/virtualMachines`) and Arc
+        (`Microsoft.HybridCompute/machines`) resources are not supported by
+        this operation - the function throws a descriptive error if such a
+        resource id is supplied.
+
+        .PARAMETER Wait
+        If specified, polls the scan operation until it completes.
+
+        .PARAMETER PollIntervalSeconds
+        Seconds between polling GETs when `-Wait` is set. Defaults to 5.
+
+        .PARAMETER TimeoutSeconds
+        Maximum seconds to wait for the scan to complete. Defaults to 600.
+
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
+
+        .EXAMPLE
+        # Fire-and-forget
+        $r = Invoke-SqlVulnerabilityAssessmentScan -ResourceId $dbId
+        $r.OperationId
+
+        .EXAMPLE
+        # Wait for completion
+        $r = Invoke-SqlVulnerabilityAssessmentScan -ResourceId $dbId -Wait
+        $r.ScanStatus     # 'Passed' / 'Failed' / 'FailedToRun'
+        $r.Scan           # Full scan record (triggerType, state, startTime, endTime, …)
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [switch] $Wait,
+        [int] $PollIntervalSeconds = $Script:DefaultPollIntervalSec,
+        [int] $TimeoutSeconds      = $Script:DefaultTimeoutSec,
+        [string] $ApiVersion       = $Script:ApiVersion
+    )
+    process {
+        Test-VaPaasOnly -ResourceId $ResourceId
+        $uri  = Get-VaUri -ResourceId $ResourceId -OperationSuffix '/scans/initiateScan' -ApiVersion $ApiVersion
+        $resp = SendRestRequest -Method 'Post' -Uri $uri
+
+        $location = Get-VaLocationHeader -Response $resp
+
+        if (-not $Wait) {
+            $operationId = $null
+            if ($location -and ($location -match '/scanOperationResults/([^/?]+)')) {
+                $operationId = $Matches[1]
+            }
+            return [pscustomobject]@{
+                StatusCode  = $resp.StatusCode
+                Location    = $location
+                OperationId = $operationId
+                Response    = $resp
+            }
+        }
+
+        if (-not $location) {
+            throw "InitiateScan returned status $($resp.StatusCode) with no Location header to poll."
+        }
+
+        # Strip the host prefix; Invoke-AzRestMethod's -Path accepts either form.
+        $pollPath = $location
+        if ($pollPath -match '^https?://[^/]+(/.+)$') { $pollPath = $Matches[1] }
+
+        $terminalStatus = Wait-VaScanOperation -OperationUri $pollPath -PollIntervalSeconds $PollIntervalSeconds -TimeoutSeconds $TimeoutSeconds
+
+        # Once the operation completes, fetch the latest scan record so the
+        # caller gets the full scan summary (triggerType, state, startTime,
+        # endTime, scan/rule counts, baseline-applied flag, …), not just
+        # the scanOperationResults envelope which only carries scanStatus.
+        $scanUri  = Get-VaUri -ResourceId $ResourceId -OperationSuffix '/scans/latest' -ApiVersion $ApiVersion
+        $scanResp = SendRestRequest -Method 'Get' -Uri $scanUri
+        $scanObj  = $scanResp.Content | ConvertFrom-Json
+
+        return [pscustomobject]@{
+            ScanStatus = $terminalStatus
+            Scan       = $scanObj
         }
     }
-
-    Invoke-AzRestMethod @Params
 }
 
-# Exported functions
-Export-ModuleMember -Function Set-SqlVulnerabilityAssessmentBaseline
-Export-ModuleMember -Function Get-SqlVulnerabilityAssessmentBaseline
+function Get-SqlVulnerabilityAssessmentScanOperationResult {
+    <#
+        .SYNOPSIS
+        Polls the result of a previously initiated VA scan.
 
-Export-ModuleMember -Function Set-SqlVulnerabilityAssessmentBaselineRule
-Export-ModuleMember -Function Get-SqlVulnerabilityAssessmentBaselineRule
-Export-ModuleMember -Function Remove-SqlVulnerabilityAssessmentBaselineRule
+        .DESCRIPTION
+        Wraps `GET {dbResourceId}/.../scans/scanOperationResults/{operationId}`.
+        Use the operation id returned by `Invoke-SqlVulnerabilityAssessmentScan`
+        to poll the scan's status.
 
-Export-ModuleMember -Function Get-SqlVulnerabilityAssessmentScanResults
+        Terminal states are `Passed`, `Failed`, `FailedToRun`. The only
+        non-terminal state is `InProgress`.
 
-Export-ModuleMember -Function Get-SqlVulnerabilityAssessmentScans
+        .PARAMETER ResourceId
+        ARM resource id of the **PaaS database** resource. Scan polling is
+        PaaS-only - VM and Arc resource ids throw a descriptive error.
 
-Export-ModuleMember -Function Invoke-SqlVulnerabilityAssessmentScan
+        .PARAMETER OperationId
+        Operation id returned by `Invoke-SqlVulnerabilityAssessmentScan`.
 
-Export-ModuleMember -Function Get-SqlVulnerabilityAssessmentServerSetting
-Export-ModuleMember -Function Set-SqlVulnerabilityAssessmentServerSetting
-Export-ModuleMember -Function Remove-SqlVulnerabilityAssessmentServerSetting
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
+
+        .EXAMPLE
+        Get-SqlVulnerabilityAssessmentScanOperationResult -ResourceId $dbId -OperationId 'op-abc'
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [Parameter(Mandatory)][string] $OperationId,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        Test-VaPaasOnly -ResourceId $ResourceId
+        $uri = Get-VaUri -ResourceId $ResourceId -OperationSuffix "/scans/scanOperationResults/$OperationId" -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Get' -Uri $uri
+    }
+}
+
+function Get-SqlVulnerabilityAssessmentScan {
+    <#
+        .SYNOPSIS
+        Gets a single scan record or lists all scan records on a database.
+
+        .DESCRIPTION
+        Wraps `GET {dbResourceId}/.../scans` (LIST) or
+        `GET {dbResourceId}/.../scans/{scanId}` (GET). Pass `-ScanId 'latest'`
+        to retrieve the most recent completed scan.
+
+        Supported on PaaS providers only (Microsoft.Sql/servers,
+        Microsoft.Sql/managedInstances, Microsoft.Synapse/workspaces). Scan
+        records on VM and Arc are not exposed through the unified RP - use
+        `Get-SqlVulnerabilityAssessmentScanResult -ScanId latest` to read
+        scan data on IaaS instead.
+
+        .PARAMETER ResourceId
+        ARM resource id of the database resource.
+
+        .PARAMETER ScanId
+        Optional scan id; when omitted the function lists all scans.
+
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
+
+        .EXAMPLE
+        Get-SqlVulnerabilityAssessmentScan -ResourceId $dbId
+        Get-SqlVulnerabilityAssessmentScan -ResourceId $dbId -ScanId 'latest'
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [string] $ScanId,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        Test-VaPaasOnly -ResourceId $ResourceId
+        $suffix = if ($ScanId) { "/scans/$ScanId" } else { '/scans' }
+        $uri = Get-VaUri -ResourceId $ResourceId -OperationSuffix $suffix -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Get' -Uri $uri
+    }
+}
+
+###################################################################################
+###  Scan Results                                                               ###
+###################################################################################
+
+function Get-SqlVulnerabilityAssessmentScanResult {
+    <#
+        .SYNOPSIS
+        Gets a single scan result (rule outcome) or lists all rule results
+        for a given scan.
+
+        .DESCRIPTION
+        Wraps `GET {dbResourceId}/.../scans/{scanId}/scanResults` (LIST) or
+        `GET {dbResourceId}/.../scans/{scanId}/scanResults/{ruleId}` (GET).
+        `-ScanId 'latest'` is supported.
+
+        .PARAMETER ResourceId
+        ARM resource id of the database resource.
+
+        .PARAMETER ScanId
+        Scan id (or `latest`) whose results to fetch.
+
+        .PARAMETER RuleId
+        Optional rule id; when omitted the function lists all rule results.
+
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
+
+        .EXAMPLE
+        Get-SqlVulnerabilityAssessmentScanResult -ResourceId $dbId -ScanId 'latest'
+        Get-SqlVulnerabilityAssessmentScanResult -ResourceId $dbId -ScanId 'latest' -RuleId 'VA2065'
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [Parameter(Mandatory)][string] $ScanId,
+        [string] $RuleId,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        $suffix = if ($RuleId) { "/scans/$ScanId/scanResults/$RuleId" } else { "/scans/$ScanId/scanResults" }
+        $uri = Get-VaUri -ResourceId $ResourceId -OperationSuffix $suffix -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Get' -Uri $uri
+    }
+}
+
+###################################################################################
+###  Baselines and Baseline Rules                                               ###
+###################################################################################
+
+function Get-SqlVulnerabilityAssessmentBaseline {
+    <#
+        .SYNOPSIS
+        Lists all baseline rules configured on a database.
+
+        .DESCRIPTION
+        Wraps `GET {dbResourceId}/.../baselineRules`. Supports any of the
+        five V20260401 provider types (Sql/servers/databases,
+        Sql/managedInstances/databases, Synapse/workspaces/sqlPools,
+        Compute/virtualMachines/sqlServers/databases,
+        HybridCompute/machines/sqlServers/databases).
+
+        .PARAMETER ResourceId
+        ARM resource id of the database resource.
+
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
+
+        .EXAMPLE
+        Get-SqlVulnerabilityAssessmentBaseline -ResourceId $dbId
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        $uri = Get-VaUri -ResourceId $ResourceId -OperationSuffix '/baselineRules' -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Get' -Uri $uri
+    }
+}
+
+function Add-SqlVulnerabilityAssessmentBaseline {
+    <#
+        .SYNOPSIS
+        Bulk-adds baseline rules on a database.
+
+        .DESCRIPTION
+        Wraps `POST {dbResourceId}/.../baselineRules`. The `-Body`
+        parameter is a JSON document containing the rules to add. Use the
+        `latestScan` action to seed the baseline from the most recent scan
+        results.
+
+        .PARAMETER ResourceId
+        ARM resource id of the database resource.
+
+        .PARAMETER Body
+        JSON request body for the bulk-add operation.
+
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
+
+        .EXAMPLE
+        # Seed the baseline from the latest scan results (recommended).
+        Add-SqlVulnerabilityAssessmentBaseline -ResourceId $dbId -Body '{"latestScan":true}'
+
+        .EXAMPLE
+        # Seed an explicit baseline (flat body - no `properties` wrapper).
+        $body = @{ latestScan = $false; results = @{ VA2065 = @(,@('dbo','db_owner')) } } | ConvertTo-Json -Depth 6
+        Add-SqlVulnerabilityAssessmentBaseline -ResourceId $dbId -Body $body
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [Parameter(Mandatory)][string] $Body,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        $uri = Get-VaUri -ResourceId $ResourceId -OperationSuffix '/baselineRules' -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Post' -Uri $uri -Body $Body
+    }
+}
+
+function Get-SqlVulnerabilityAssessmentBaselineRule {
+    <#
+        .SYNOPSIS
+        Gets a single baseline rule from a database.
+
+        .DESCRIPTION
+        Wraps `GET {dbResourceId}/.../baselineRules/{ruleId}`.
+
+        .PARAMETER ResourceId
+        ARM resource id of the database resource.
+
+        .PARAMETER RuleId
+        Baseline rule id (e.g. `VA2065`).
+
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
+
+        .EXAMPLE
+        Get-SqlVulnerabilityAssessmentBaselineRule -ResourceId $dbId -RuleId 'VA2065'
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [Parameter(Mandatory)][string] $RuleId,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        $uri = Get-VaUri -ResourceId $ResourceId -OperationSuffix "/baselineRules/$RuleId" -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Get' -Uri $uri
+    }
+}
+
+function Set-SqlVulnerabilityAssessmentBaselineRule {
+    <#
+        .SYNOPSIS
+        Creates or updates a single baseline rule.
+
+        .DESCRIPTION
+        Wraps `PUT {dbResourceId}/.../baselineRules/{ruleId}`.
+
+        .PARAMETER ResourceId
+        ARM resource id of the database resource.
+
+        .PARAMETER RuleId
+        Baseline rule id.
+
+        .PARAMETER Body
+        JSON request body describing the rule's expected results.
+
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
+
+        .EXAMPLE
+        # PUT body is FLAT (no `properties` wrapper). `latestScan` is required.
+        $body = @{ latestScan = $false; results = @(,@('user1','db_owner')) } | ConvertTo-Json -Depth 5
+        Set-SqlVulnerabilityAssessmentBaselineRule -ResourceId $dbId -RuleId 'VA2065' -Body $body
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [Parameter(Mandatory)][string] $RuleId,
+        [Parameter(Mandatory)][string] $Body,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        $uri = Get-VaUri -ResourceId $ResourceId -OperationSuffix "/baselineRules/$RuleId" -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Put' -Uri $uri -Body $Body
+    }
+}
+
+function Remove-SqlVulnerabilityAssessmentBaselineRule {
+    <#
+        .SYNOPSIS
+        Deletes a single baseline rule from a database.
+
+        .DESCRIPTION
+        Wraps `DELETE {dbResourceId}/.../baselineRules/{ruleId}`.
+
+        .PARAMETER ResourceId
+        ARM resource id of the database resource.
+
+        .PARAMETER RuleId
+        Baseline rule id.
+
+        .PARAMETER ApiVersion
+        REST API version. Defaults to `2026-04-01-preview`.
+
+        .EXAMPLE
+        Remove-SqlVulnerabilityAssessmentBaselineRule -ResourceId $dbId -RuleId 'VA2065'
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory, ValueFromPipelineByPropertyName)][string] $ResourceId,
+        [Parameter(Mandatory)][string] $RuleId,
+        [string] $ApiVersion = $Script:ApiVersion
+    )
+    process {
+        $uri = Get-VaUri -ResourceId $ResourceId -OperationSuffix "/baselineRules/$RuleId" -ApiVersion $ApiVersion
+        return SendRestRequest -Method 'Delete' -Uri $uri
+    }
+}
+
+###################################################################################
+###  Exports                                                                    ###
+###################################################################################
+
+Export-ModuleMember -Function @(
+    # Settings
+    'Get-SqlVulnerabilityAssessmentSetting',
+    'Set-SqlVulnerabilityAssessmentSetting',
+    'Remove-SqlVulnerabilityAssessmentSetting',
+    # Scans
+    'Invoke-SqlVulnerabilityAssessmentScan',
+    'Get-SqlVulnerabilityAssessmentScan',
+    'Get-SqlVulnerabilityAssessmentScanOperationResult',
+    # Scan results
+    'Get-SqlVulnerabilityAssessmentScanResult',
+    # Baselines
+    'Get-SqlVulnerabilityAssessmentBaseline',
+    'Add-SqlVulnerabilityAssessmentBaseline',
+    'Get-SqlVulnerabilityAssessmentBaselineRule',
+    'Set-SqlVulnerabilityAssessmentBaselineRule',
+    'Remove-SqlVulnerabilityAssessmentBaselineRule'
+)
 ```
 
 ## Next steps

@@ -33,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date | Category | Update |
 | -------- | -------- | -------- |
 | June 9, 2026 | Preview | [New multicloud security recommendations now in public preview](#new-multicloud-security-recommendations-now-in-public-preview) |
+| June 8, 2026 | GA | [SQL Vulnerability Assessment Express Configuration is now generally available for Azure SQL Managed Instance and Azure Synapse Analytics workspaces](#sql-vulnerability-assessment-express-configuration-is-now-generally-available-for-azure-sql-managed-instance-and-azure-synapse-analytics-workspaces) |
 | June 4, 2026 | Preview | [Discovery and posture for serverless container workloads (Preview)](#discovery-and-posture-for-serverless-container-workloads-preview) |
 | June 3, 2026 | Preview | [Kubernetes misconfiguration enforcement in Defender for Containers (preview)](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-preview) |
 | June 2, 2026 | Preview | [Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)](#vulnerability-assessment-extended-to-runtime-discovered-container-images-on-eks-and-gke-preview) |
@@ -42,9 +43,10 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
 
+
 ### New multicloud security recommendations now in public preview
 
-June 8, 2026
+June 9, 2026
 
 More than 60 multicloud security recommendations are now available in public preview. These recommendations add coverage across AWS services including AppFlow, AppStream, AppSync, Athena, Auto Scaling, CodeBuild, Cognito, Comprehend, DMS, DataSync, FSx, Kendra, Keyspaces, Kinesis, MQ, Neptune, and QuickSight.
 
@@ -53,6 +55,22 @@ The new recommendations span data security, identity and access, networking, com
 Additional preview recommendations were added for Amazon MSK and OpenSearch Service (covering TLS enforcement, public access, unauthenticated access, encryption, audit logging, fine-grained access control, VPC access, customer-managed keys, and service update hygiene), along with GCP networking recommendations for App Engine SSL certificate expiration and DNS authorization on Google-managed certificates.
 
 For a full list of available recommendations, see [Security recommendations](security-recommendations.md).
+
+### SQL Vulnerability Assessment Express Configuration is now generally available for Azure SQL Managed Instance and Azure Synapse Analytics workspaces
+
+June 8, 2026
+
+Defender for SQL Vulnerability Assessment (SQL VA) Express Configuration is now generally available for Azure SQL Managed Instance and Azure Synapse Analytics workspaces. Express Configuration is already generally available for Azure SQL Database, and is now available across supported Azure PaaS SQL resource types at no extra cost.
+
+With Express Configuration, you can enable SQL VA without provisioning or managing a customer-managed storage account. Express Configuration is the recommended enablement mode and provides the same security value as Classic Configuration, including the full set of SQL VA rules, weekly automatic scans, on-demand scans, and baseline management.
+
+A new unified SQL VA REST API provides a consistent management surface across Azure SQL Database, Azure SQL Managed Instance, Azure Synapse Analytics workspaces, and SQL Server on machines, including SQL Server on Azure VMs and Azure Arc-enabled SQL Server.
+
+**Upcoming automatic enablement at the subscription level:**
+
+Over the next month, Defender for Cloud will begin rolling out automatic enablement of SQL VA Express Configuration at the subscription level for subscriptions where Defender for Azure SQL Databases is enabled. SQL VA Express Configuration will be turned on for Azure SQL Managed Instances and Azure Synapse Analytics workspaces that don't have an existing SQL VA configuration. Resources that are already configured with Classic Configuration or Express Configuration are not affected, and existing baselines and scan results are preserved.
+
+Learn more about [SQL vulnerability assessment](sql-azure-vulnerability-assessment-overview.md) and how to [enable vulnerability assessment](sql-azure-vulnerability-assessment-enable.md).
 
 ### Discovery and posture for serverless container workloads (Preview)
 
@@ -75,7 +93,6 @@ Kubernetes misconfiguration enforcement evaluates Kubernetes resource configurat
 This feature is available only in commercial clouds. It isn't available in national or sovereign clouds, including US Government, China Government, and other sovereign regions.
 
 For more information, see [Enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md).
-
 
 ### Vulnerability assessment extended to runtime-discovered container images on EKS and GKE (Preview)
 
