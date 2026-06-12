@@ -1,8 +1,6 @@
 ---
 title: Enable Microsoft Defender for Azure Cosmos DB
 description: Learn how to enable enhanced security features in Microsoft Defender for Azure Cosmos DB.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/25/2026
 #customer intent: As a security administrator, I want to enable Microsoft Defender for Azure Cosmos DB so that I can protect Azure Cosmos DB accounts and validate alert behavior.

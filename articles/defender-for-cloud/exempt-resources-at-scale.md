@@ -2,8 +2,6 @@
 title: Exempt resources at scale
 description: Learn how to create exemptions for how policies are applied to resources in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.author: elkrieger
-author: ElazarK
 ms.date: 06/02/2026
 #customer intent: As a security administrator, I want to create exemptions at scale so I can manage recommendation scope consistently.
 ---

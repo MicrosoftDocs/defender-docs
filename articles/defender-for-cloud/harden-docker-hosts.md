@@ -1,8 +1,6 @@
 ---
 title: Review Docker host hardening recommendations
 description: How to protect your Docker hosts and verify they're compliant with the CIS Docker benchmark with Microsoft Defender for Cloud.
-author: Elazark
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/28/2026
 ms.custom: sfi-image-nochange

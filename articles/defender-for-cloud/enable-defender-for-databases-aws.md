@@ -3,8 +3,6 @@ title: Enable Defender for open-source relational databases on Amazon Web Servic
 description: Enable Defender for open-source relational databases on AWS RDS to detect suspicious activity and protect supported database engines.
 ms.date: 06/02/2026
 ms.topic: how-to
-ms.author: elkrieger
-author: ElazarK
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my AWS databases.
 ---
 

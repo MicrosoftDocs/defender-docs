@@ -1,8 +1,6 @@
 ---
 title: Verify protection for open-source relational databases on AWS
 description: Learn how to verify that Microsoft Defender for Cloud is configured to protect open-source relational databases on Amazon RDS and Aurora.
-author: ElazarK
-ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/27/2026

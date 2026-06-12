@@ -2,8 +2,6 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 02/16/2026
-ms.author: elkrieger
-author: Elazark
 ---
 
 To exclude the Defender sensor from automatic provisioning, add the following tag to the cluster resource in Azure:

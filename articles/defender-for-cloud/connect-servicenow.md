@@ -1,8 +1,6 @@
 ---
 title: Connect ServiceNow's ITSM module to Defender for Cloud
 description: Learn how to connect ServiceNow with Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
-author: Elazark
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/24/2026
 ai-usage: ai-assisted

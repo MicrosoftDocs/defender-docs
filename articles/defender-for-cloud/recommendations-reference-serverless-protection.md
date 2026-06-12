@@ -1,7 +1,5 @@
 ---
 title: Serverless protection recommendations
-author: ElazarK
-ms.author: elkrieger
 description: This article lists the Microsoft Defender for Cloud security recommendations for serverless protection.
 ms.service: defender-for-cloud
 ms.topic: reference

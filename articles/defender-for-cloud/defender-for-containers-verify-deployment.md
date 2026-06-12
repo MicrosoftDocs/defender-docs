@@ -2,8 +2,6 @@
 title: Verify Defender for Containers deployment
 description: Learn how to verify that Microsoft Defender for Containers sensors and extensions are running correctly on Kubernetes clusters.
 ms.topic: how-to
-ms.author: elkrieger
-author: Elazark
 ms.date: 03/12/2026
 ---
 

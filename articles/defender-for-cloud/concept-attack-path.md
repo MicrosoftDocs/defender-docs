@@ -3,8 +3,6 @@ title: Security explorer and attack paths in Microsoft Defender for Cloud
 description: Learn how Security explorer and attack paths in Microsoft Defender for Cloud help you prioritize high-risk exposures and reduce exploitable paths across multicloud environments.
 ms.topic: concept-article
 ms.date: 05/19/2026
-ms.author: elkrieger
-author: ElazarK
 #customer intent: As a security analyst, I want to understand attack paths so that I can mitigate risks effectively.
 ---
 

@@ -2,8 +2,6 @@
 title: Security Recommendations
 description: Learn about security recommendations in Microsoft Defender for Cloud to improve the security posture of your environments.
 ms.topic: concept-article
-author: Elazark
-ms.author: dlanger
 ms.date: 12/29/2025
 #customer intent: As a security analyst, I want to learn about security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
 ---

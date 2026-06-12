@@ -2,8 +2,6 @@
 title: Network access and permissions reference for Defender for Containers
 description: Reference documentation for network connectivity and permissions required by Microsoft Defender for Containers.
 ms.topic: reference
-author: Elazark
-ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.date: 04/16/2026
 ---

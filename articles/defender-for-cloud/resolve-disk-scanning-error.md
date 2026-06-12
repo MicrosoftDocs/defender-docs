@@ -3,8 +3,6 @@ title: Resolve agentless scan error
 description: Troubleshoot disk scan error in Microsoft Defender for Cloud to ensure your resources are connected and protected.
 ms.date: 05/25/2025
 ms.topic: how-to
-author: ElazarK
-ms.author: elkrieger
 #customer intent: As a security professional, I want to resolve the disk scan errors in Microsoft Defender for Cloud's GCP connector to ensure my resources are connected and protected.
 ---
 

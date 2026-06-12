@@ -2,8 +2,6 @@
 title: Map container images from code to runtime
 description: Learn how to map your container images from code to cloud.
 ms.date: 05/24/2026
-author: dlanger
-ms.author: dlanger
 ms.topic: how-to
 ms.custom: ignite-2023
 ---

@@ -1,8 +1,6 @@
 ---
 title: Remediate system updates and patches recommendations
 description: Understand and remediate Defender for Cloud recommendations for missing system updates and patches. This article covers assessment powered by Azure Update Manager and configuration requirements.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 06/02/2026
 #customer intent: As a <role>, I want to learn how to enable system updates on my servers so that I can keep them secure and healthy.

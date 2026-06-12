@@ -4,8 +4,6 @@ description: Troubleshoot AWS connector deployment issues in Microsoft Defender 
 ms.date: 12/10/2025
 ms.topic: how-to
 #customer intent: As a security professional, I want to ensure that my AWS connector is connected to Defender for Cloud correctly and is operating the way it should be.
-author: Elazark
-ms.author: elkrieger
 ---
 
 # Connect a Microsoft Sentinel connected AWS account to Defender for Cloud

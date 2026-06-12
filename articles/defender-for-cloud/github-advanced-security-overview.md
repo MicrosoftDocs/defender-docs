@@ -3,8 +3,6 @@ title: GitHub Advanced Security Integration with Microsoft Defender for Cloud
 description: Learn how GitHub Advanced Security integrates with Microsoft Defender for Cloud to provide unified code-to-runtime security from development to production.
 ms.date: 04/30/2026
 ms.topic: overview
-ms.author: dlanger
-author: dlanger
 #customer intent: As a security administrator, I want to understand how GitHub Advanced Security integrates with Microsoft Defender for Cloud to provide comprehensive application security across the development lifecycle.
 ---
 

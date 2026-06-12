@@ -1,8 +1,6 @@
 ---
 title: Query software bill of materials (SBOM)
 description: Learn how to query Software Bill of Materials (SBOM) results in Microsoft Defender for Cloud's Cloud Security Explorer.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 06/11/2026
 ---

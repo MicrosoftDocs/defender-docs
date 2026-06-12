@@ -1,8 +1,6 @@
 ---
 title: Enable preview features in the Defender portal
 description: Learn how to enable and configure preview features for Microsoft Defender for Cloud in the Defender portal to access the latest capabilities and enhancements.
-author: dlanger
-ms.author: dlanger
 ms.topic: how-to
 ms.date: 11/10/2025
 ms.service: defender-for-cloud

@@ -5,8 +5,6 @@ ms.topic: reference
 ms.custom: linux-related-content
 ms.date: 05/18/2026
 ai-usage: ai-assisted
-author: ElazarK
-ms.author: elkrieger
 ---
 
 # Kubernetes alerts in Defender for Containers

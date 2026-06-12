@@ -2,8 +2,6 @@
 title: Review and manage recommendation exemptions
 description: Learn how to review, manage, and delete recommendation exemptions in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.author: elkrieger
-author: Elazark
 ms.date: 04/29/2026
 #customer intent: As a user, I want to review and manage exempted resources in Microsoft Defender for Cloud so that I can keep my security posture accurate.
 ---

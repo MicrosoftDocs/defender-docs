@@ -3,8 +3,6 @@ title: Review and remediate OS misconfigurations in Microsoft Defender for Cloud
 description: Learn how Microsoft Defender for Cloud uses the guest configuration to compare machine OS settings with baselines in Microsoft Cloud Security Benchmark.
 ms.topic: how-to
 #customer intent: As a security admin, I want to review and remediate OS misconfigurations so that I can reduce machine hardening risks in Microsoft Defender for Cloud.
-ms.author: elkrieger
-author: ElazarK
 ms.date: 05/25/2026
 ---
 

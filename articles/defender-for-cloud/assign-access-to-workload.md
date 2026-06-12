@@ -1,8 +1,6 @@
 ---
 title: Assign access to workload owners
 description: Learn how to assign access to a workload owner of an Amazon Web Service or Google Cloud Platform connector.
-ms.author: elkrieger
-author: ElazarK
 ms.topic: how-to
 ms.date: 05/25/2026
 ms.custom: sfi-image-nochange

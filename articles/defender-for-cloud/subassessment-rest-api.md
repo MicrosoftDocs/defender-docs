@@ -1,8 +1,6 @@
 ---
 title: Container vulnerability assessments powered by Microsoft Defender Vulnerability Management subassessments 
 description: Learn about container vulnerability assessments powered by Microsoft Defender Vulnerability Management subassessments 
-author: Elazark
-ms.author: elkrieger
 ms.date: 07/15/2025
 ms.topic: how-to
 ---

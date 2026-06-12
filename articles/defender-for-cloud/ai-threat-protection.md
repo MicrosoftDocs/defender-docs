@@ -3,8 +3,6 @@ title: AI threat protection in Microsoft Defender for Cloud
 description: Learn how AI threat protection in Microsoft Defender for Cloud detects and helps you respond to threats targeting generative AI applications and agents.
 ms.date: 05/19/2026
 ms.topic: overview
-ms.author: elkrieger
-author: ElazarK
 #customer intent: As a cloud security professional, I want to understand how to secure my generative AI resources using Defender for Cloud's AI security posture management capabilities.
 ---
 

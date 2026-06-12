@@ -1,11 +1,9 @@
 ---
 title: Reference table for Azure App Service security recommendations 
 description: This article lists the Microsoft Defender for Cloud security recommendations for Azure App Service.
-author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
 ms.date: 06/08/2026
-ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
 ---

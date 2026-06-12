@@ -2,8 +2,6 @@
 title: Kubernetes misconfiguration enforcement (preview)
 description: Learn how to enable and configure Kubernetes misconfiguration enforcement in Microsoft Defender for Containers to audit or block misconfigured workloads at deployment time.
 #customer intent: As a Kubernetes administrator, I want to enforce Kubernetes security best practices at deployment time so that I can prevent misconfigured workloads from running in my clusters.
-author: dlanger
-ms.author: dlanger
 ms.date: 06/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted

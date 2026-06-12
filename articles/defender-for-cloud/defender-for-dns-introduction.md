@@ -3,8 +3,6 @@ title: Microsoft Defender for DNS - the benefits and features
 description: Learn about the benefits and features of Microsoft Defender for DNS.
 ms.date: 08/20/2025
 ms.topic: overview
-ms.author: elkrieger
-author: Elazark
 ---
 
 # Overview of Microsoft Defender for DNS

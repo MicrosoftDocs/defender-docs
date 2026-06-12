@@ -1,8 +1,6 @@
 ---
 title: Review changes in file integrity monitoring
 description: Learn how to review changes in file integrity monitoring in Microsoft Defender for Cloud.
-author: Elazark
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/28/2026
 ---

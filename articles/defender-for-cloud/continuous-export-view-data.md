@@ -1,8 +1,6 @@
 ---
 title: View exported data in Azure Monitor
 description: Learn how to view the data you exported with continuous export in Azure Monitor and analyze it effectively.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/24/2026
 #customer intent: As a security analyst, I want to be able to view the exported data in Azure Monitor so that I can analyze and respond to security alerts and recommendations effectively.

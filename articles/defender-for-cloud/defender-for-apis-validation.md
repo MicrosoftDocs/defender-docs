@@ -1,8 +1,6 @@
 ---
 title: Validate your Microsoft Defender for APIs alerts
 description: Walk through triggering a test alert in Defender for APIs to validate detection capabilities by simulating suspicious user-agent activity.
-author: ElazarK
-ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/25/2026

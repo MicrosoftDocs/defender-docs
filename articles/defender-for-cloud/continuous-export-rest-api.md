@@ -1,8 +1,6 @@
 ---
 title: Set up continuous export with REST API
 description: Configure continuous export to Log Analytics or Event Hubs by using the REST API, including destination options and automation parameters.
-author: Elazark
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/24/2026
 # customer intent: As a reader, I want to learn how to set up continuous export of Microsoft Defender for Cloud security alerts and recommendations using the REST API, so that I can integrate it into my own applications.

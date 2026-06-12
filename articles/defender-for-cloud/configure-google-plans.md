@@ -2,8 +2,6 @@
 title: Configure GCP plans
 description: Learn how to configure Microsoft Defender for Cloud plans for your Google Cloud Platform (GCP) projects.
 ms.topic: install-set-up-deploy
-ms.author: Elkrieger
-author: Elazark
 ms.date: 01/14/2026
 ms.custom: sfi-image-nochange
 ---

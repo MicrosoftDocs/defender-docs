@@ -1,7 +1,5 @@
 ---
 title: Assign a recommendation to an active user
-author: ElazarK
-ms.author: elkrieger
 description: Learn how to assign recommendations to active users in Defender for Cloud to enhance security and streamline remediation processes.
 ms.topic: how-to
 ms.date: 05/24/2026

@@ -3,8 +3,6 @@ title: Overview of Defender for Open-Source Relational Databases
 description: Learn about the benefits and features of Microsoft Defender for Open-Source Relational Databases such as PostgreSQL and MySQL.
 ms.date: 04/20/2026
 ms.topic: overview
-ms.author: elkrieger
-author: Elazark
 ms.custom: sfi-image-nochange
 #customer intent: As a reader, I want to understand the purpose and features of Microsoft Defender for Open-Source Relational Databases so that I can make informed decisions about its usage.
 ---

@@ -3,8 +3,6 @@ title: Disable Microsoft Defender for Cloud plans
 description: Learn how to disable Microsoft Defender for Cloud plans at subscription and resource levels across Azure, AWS, and GCP to prevent unexpected charges.
 ms.topic: how-to
 ms.custom: msecd-doc-authoring-1012
-author: Elazark
-ms.author: elkrieger
 ms.date: 05/04/2026
 #customer intent: As a cloud administrator, I want to disable Defender for Cloud plans so that I can manage my security costs.
 ---

@@ -2,8 +2,6 @@
 title: Remediate security recommendations in Defender for Cloud
 description: Remediate security recommendations in Defender for Cloud across Azure, AWS, and GCP. Review assessments, apply practical fixes, and improve security posture.
 ms.topic: how-to
-ms.author: elkrieger
-author: ElazarK
 ms.date: 05/28/2026
 ai-usage: ai-assisted
 #customer intent: As a security professional, I want to understand how to remediate security recommendations in Microsoft Defender for Cloud so that I can improve my security posture.

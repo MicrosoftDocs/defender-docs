@@ -2,8 +2,6 @@
 title: Gated deployment for Infrastructure as Code
 description: Learn how to deploy gated deployment infrastructure as code for managed cluster API.
 #customer intent: As a Kubernetes administrator, I want to deploy gated deployment infrastructure as code so that I can automate the setup and ensure consistent configuration across environments.
-author: Elazark
-ms.author: elkrieger
 ms.date: 05/28/2026
 ms.topic: how-to
 ---

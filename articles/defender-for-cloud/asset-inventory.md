@@ -3,8 +3,6 @@ title: Cloud asset inventory
 description: Learn about the cloud asset inventory in Microsoft Defender for Cloud and Security Exposure Management
 ms.date: 05/25/2026
 ms.topic: how-to
-ms.author: elkrieger
-author: ElazarK
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to use cloud asset inventory so that I can review the security posture of connected resources across my multicloud environment.
 ---

@@ -1,8 +1,6 @@
 ---
 title: Install the Defender for Cloud CLI
 description: Learn how to download and install the Defender for Cloud CLI on Windows, macOS, and Linux.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/25/2026
 #customer intent: As a developer or security engineer, I want to install the Defender for Cloud CLI so that I can run security scans locally and in CI/CD pipelines.

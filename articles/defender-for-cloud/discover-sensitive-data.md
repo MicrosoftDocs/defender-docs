@@ -3,8 +3,6 @@ title: Discover sensitive data in cloud resources
 description: Learn how to discover resources with sensitive data types in the Data and AI security dashboard in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 06/02/2026
-author: ElazarK
-ms.author: elkrieger
 #customer intent: As a security administrator, I want to discover sensitive data so that I can protect it.
 ---
 

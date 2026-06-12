@@ -1,8 +1,6 @@
 ---
 title: Review security findings in the AKS security dashboard
 description: Learn how to review and investigate alerts, vulnerabilities, misconfigurations, and compliance findings in the AKS security dashboard in Microsoft Defender for Cloud.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/18/2026
 ms.service: defender-for-cloud

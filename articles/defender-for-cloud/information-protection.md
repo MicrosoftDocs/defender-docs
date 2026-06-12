@@ -1,8 +1,6 @@
 ---
 title: Prioritize security actions by data sensitivity
 description: Use Microsoft Purview's data sensitivity classifications in Microsoft Defender for Cloud
-author: Elazark
-ms.author: elkrieger
 ms.topic: overview
 ms.date: 05/20/2025
 ms.custom: sfi-image-nochange

@@ -1,7 +1,5 @@
 ---
 title: Enable cloud infrastructure entitlement management (CIEM)
-author: ElazarK
-ms.author: elkrieger
 description: Enable CIEM to enforce least privilege access and manage user entitlements across Azure, AWS, and GCP as part of Defender for Cloud's CNAPP solution.
 ms.topic: how-to
 ms.date: 06/02/2026

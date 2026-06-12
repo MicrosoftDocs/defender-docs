@@ -2,8 +2,6 @@
 title: Access patterns and private cluster support for Defender for Containers features
 description: Reference which Microsoft Defender for Containers features require registry access, Kubernetes API access, cloud-provider access, or sensor outbound connectivity, and whether they support private clusters.
 ms.topic: reference
-author: Elazark
-ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.date: 05/31/2026
 ---

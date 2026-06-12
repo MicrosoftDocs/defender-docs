@@ -1,8 +1,6 @@
 ---
 title: Remediate EDR solution recommendations
 description: Identify and remediate security gaps in endpoint detection and response solutions on your virtual machine with Defender for Cloud recommendations.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 06/02/2026
 ai-usage: ai-assisted

@@ -2,8 +2,6 @@
 title: Use a Custom Data Collection Rule for Defender for Servers ingestion
 description: Learn how to use Data Collection Rules (DCRs) to customize how Defender for Servers security events are collected and ingested.
 ms.topic: how-to
-ms.author: elkrieger
-author: elazark
 ms.date: 12/15/2025
 #customer intent: As a security administrator, I want to control which Windows Security events are ingested for Defender for Servers so that I can reduce ingestion volume and costs.
 ---

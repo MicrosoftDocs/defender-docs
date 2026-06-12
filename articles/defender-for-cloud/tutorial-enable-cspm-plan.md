@@ -1,7 +1,5 @@
 ---
 title: Protect your resources with Defender CSPM
-author: ElazarK
-ms.author: elkrieger
 description: Learn how to enable Defender CSPM on your Azure subscription for Microsoft Defender for Cloud and enhance your security posture.
 ms.topic: install-set-up-deploy
 ms.date: 06/03/2026

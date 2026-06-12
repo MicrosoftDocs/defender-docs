@@ -3,8 +3,6 @@ title: Respond to Microsoft Defender for DNS alerts
 description: Learn best practices for responding to alerts that indicate security risks in DNS services.
 ms.date: 05/25/2026
 ms.topic: how-to
-ms.author: elkrieger
-author: ElazarK
 #customer intent: As a security administrator, I want to respond to Microsoft Defender for DNS alerts so that I can investigate suspicious DNS activity and contain potential compromises.
 ---
 

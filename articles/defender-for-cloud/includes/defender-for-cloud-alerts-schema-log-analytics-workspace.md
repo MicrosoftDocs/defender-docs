@@ -1,11 +1,9 @@
 ---
 title: include file
 description: include file
-author: memildin
 ms.service: azure-data-factory
 ms.topic: include
 ms.date: 08/18/2024
-ms.author: memildin
 ms.custom: include file
 ---
 ### The data model of the schema

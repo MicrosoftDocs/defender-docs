@@ -1,8 +1,6 @@
 ---
 title: Deploy Defender for Containers to private clusters (Preview)
 description: Learn how to deploy Microsoft Defender for Containers to private clusters by using preview Helm charts and the Azure Arc Preview release train.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 06/01/2026
 #customer intent: As a security administrator, I want to deploy Defender for Containers to private clusters so that I can protect nonpublic Kubernetes environments.

@@ -1,8 +1,6 @@
 ---
 title: Internet exposure analysis
 description: Learn how Defender for Cloud detects, assesses, and mitigates internet exposure for your multicloud resources to enhance security.
-author: Elazark
-ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 04/20/2026

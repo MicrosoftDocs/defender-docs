@@ -1,8 +1,6 @@
 ---
 title: Enable just-in-time access
 description: Learn how just-in-time VM access (JIT) in Microsoft Defender for Cloud helps you control access to your Azure virtual machines.
-author: ElazarK
-ms.author: elkrieger
 ms.date: 06/02/2026
 ms.topic: how-to
 ms.custom:

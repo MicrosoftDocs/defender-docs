@@ -1,8 +1,6 @@
 ---
 title: Configure agentless code scanning (Preview)
 description: Learn how to configure agentless code scanning in Microsoft Defender for Cloud to detect code and dependency risks across Azure DevOps and GitHub repositories.
-ms.author: elkrieger
-author: ElazarK
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/24/2026

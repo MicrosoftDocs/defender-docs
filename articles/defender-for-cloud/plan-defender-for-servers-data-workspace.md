@@ -2,8 +2,6 @@
 title: Plan Defender for Servers data residency
 description: Review data residency and workspace design for Microsoft Defender for Servers.
 ms.topic: concept-article
-ms.author: elkrieger
-author: Elazark
 ms.date: 02/19/2025
 ms.custom: references_regions
 ---

@@ -1,8 +1,6 @@
 ---
 title: Known limitations in the Defender portal
 description: Understand current limitations and known issues when using Microsoft Defender for Cloud in the Defender portal.
-author: dlanger
-ms.author: dlanger
 ms.topic: reference
 ms.date: 04/28/2026
 ms.service: defender-for-cloud

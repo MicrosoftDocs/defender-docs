@@ -2,8 +2,6 @@
 title: Secure Kubernetes Deployments with Gated Container Images
 description: Enforce container image security in Kubernetes with gated deployment. Learn how to block vulnerable workloads and maintain compliance with Defender for Containers.
 #customer intent: As a Kubernetes administrator, I want to enforce security policies for container images so that I can prevent the deployment of vulnerable workloads.
-author: Elazark
-ms.author: elkrieger
 ms.date: 02/16/2026
 ms.topic: overview
 ---

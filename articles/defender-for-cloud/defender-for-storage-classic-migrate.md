@@ -2,8 +2,6 @@
 title: Migrate from Defender for Storage (classic)
 description: Learn about how to migrate from Defender for Storage (classic) to the new Defender for Storage plan to take advantage of its enhanced capabilities and pricing.
 ms.date: 04/19/2026
-author: Elazark
-ms.author: elkrieger
 ms.topic: how-to
 ---
 

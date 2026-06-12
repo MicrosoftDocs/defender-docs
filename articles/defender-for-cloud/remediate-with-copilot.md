@@ -1,7 +1,5 @@
 ---
 title: Remediate recommendations with Microsoft Security Copilot
-author: ElazarK
-ms.author: elkrieger
 description: Learn how to remediate recommendations with Copilot in Microsoft Defender for Cloud and improve your security posture.
 ms.topic: how-to
 ms.date: 09/25/2025

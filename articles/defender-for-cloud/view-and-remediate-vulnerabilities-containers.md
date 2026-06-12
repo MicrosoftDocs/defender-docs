@@ -4,8 +4,6 @@ description: Learn how to view and remediate runtime threat findings for contain
 ms.service: defender-for-cloud
 ms.custom: build-2023, sfi-image-nochange
 ms.topic: how-to
-author: ElazarK
-ms.author: elkrieger
 ms.date: 05/31/2026
 #customer intent: As a security administrator, I want to review and remediate container vulnerability findings based on runtime risk so I can prioritize the highest-impact fixes.
 ---

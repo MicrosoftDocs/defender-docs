@@ -1,6 +1,4 @@
 ---
-author: memildin
-ms.author: memildin
 manager: rkarlin
 ms.date: 11/08/2020
 ms.topic: include

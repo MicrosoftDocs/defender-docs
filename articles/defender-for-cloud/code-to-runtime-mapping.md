@@ -3,8 +3,6 @@ title: Code to runtime for recommendations
 description: Learn how to use code to runtime visibility to trace security issues from runtime back to source code and fix them at the origin to prevent recurrence.
 ms.date: 04/23/2026
 ms.topic: how-to
-ms.author: dlanger
-author: dlanger
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to trace runtime security issues back to their source code origin and understand the blast radius to fix issues effectively at the source.
 ---

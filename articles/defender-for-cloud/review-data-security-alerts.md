@@ -2,8 +2,6 @@
 title: Review data security alerts
 description: Learn how to review data security alerts in the Data and AI security dashboard in Microsoft Defender for Cloud.
 ms.topic: how-to
-author: ElazarK
-ms.author: elkrieger
 ms.date: 05/31/2026
 #customer intent: As a security analyst, I want to review data security alerts so that I can identify and mitigate potential threats in my environments.
 ---

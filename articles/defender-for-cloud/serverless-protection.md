@@ -1,8 +1,6 @@
 ---
 title: What is Serverless protection?
 description: Learn how Serverless protection in Microsoft Defender for Cloud helps secure serverless resources across Azure and AWS.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: overview
 ms.date: 06/01/2026
 #customer intent: As a reader, I want to understand what Serverless protection is in Microsoft Defender for Cloud.

@@ -1,8 +1,6 @@
 ---
 title: Investigate Defender for Endpoint misconfiguration recommendations (agentless)
 description: Use agentless scanning to identify and investigate Defender for Endpoint configuration issues, such as outdated signatures, disabled antivirus, or overdue scans.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 06/02/2026
 ai-usage: ai-assisted

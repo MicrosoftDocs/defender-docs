@@ -1,8 +1,6 @@
 ---
 title: How to consume and export scan results
 description: Access vulnerability assessment findings in Azure Resource Graph and use multiple methods to query, view, and export scan results for reporting and remediation.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/27/2026
 ms.custom: sfi-image-nochange

@@ -2,8 +2,6 @@
 title: Operating system misconfigurations
 description: Apply security recommendations to harden operating system baseline configurations with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.author: elkrieger
-author: ElazarK
 ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to review and remediate operating system baseline misconfigurations so I can reduce risk across my environment.
 ---

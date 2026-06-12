@@ -3,8 +3,6 @@ metadata:
   title: Common questions about integrating vulnerability scanning in Microsoft Defender for Cloud
   description: Common questions about the integrated Microsoft Defender Vulnerability Management solution in Defender for Cloud.
   services: defender-for-cloud
-  author: ElazarK
-  ms.author: elkrieger
   manager: orspodek
   ms.topic: faq
   ms.date: 05/18/2025

@@ -2,8 +2,6 @@
 title: Automate connector deployment
 description: Automate cloud connector deployment for multicloud environments with Microsoft Defender for Cloud.
 ms.topic: how-to
-author: ElazarK
-ms.author: elkrieger
 ms.date: 05/28/2026
 #customer intent: As a cloud security architect, I want to automate connector deployment so I can onboard multicloud environments consistently at scale.
 ---

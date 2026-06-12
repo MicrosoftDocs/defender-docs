@@ -2,8 +2,6 @@
 title: Technical onboarding guide for Bright Security (preview)
 description: Learn how to use Bright Security with Microsoft Defender for Cloud to enhance your application security testing.
 ms.date: 05/28/2026
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 #customer intent: As an API security engineer, I want to onboard Bright Security with Defender for Cloud so that API security test findings are unified in Defender recommendations.
 ---

@@ -1,8 +1,6 @@
 ---
 title: Enable data security posture management for Azure datastores
 description: Learn how to enable data security posture management in Microsoft Defender for Cloud for Azure and AWS resources.
-author: ElazarK
-ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/25/2026

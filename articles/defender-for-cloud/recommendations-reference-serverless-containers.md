@@ -4,8 +4,6 @@ description: This article lists Microsoft Defender for Cloud security recommenda
 ms.service: defender-for-cloud
 ms.topic: reference
 ms.date: 06/03/2026
-author: ElazarK
-ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
 ---

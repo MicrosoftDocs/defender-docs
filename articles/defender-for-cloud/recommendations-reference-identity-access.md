@@ -1,11 +1,9 @@
 ---
 title: Reference table for all identity and access security recommendations in Microsoft Defender for cloud
 description: This article lists all Microsoft Defender for Cloud identity and access security recommendations that help you harden and protect your resources.
-author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
 ms.date: 06/09/2026
-ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
 ---

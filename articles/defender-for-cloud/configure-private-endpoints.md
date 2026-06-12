@@ -1,8 +1,6 @@
 ---
 title: Configure private endpoints with Microsoft Security Private Link
 description: Configure private endpoints with Microsoft Security Private Link to securely connect your virtual network to Microsoft Defender for Cloud.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/26/2026
 #customer intent: As a security administrator, I want to configure a private endpoint for Microsoft Defender for Cloud so that Defender traffic stays within my private network.

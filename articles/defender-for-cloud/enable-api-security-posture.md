@@ -1,8 +1,6 @@
 ---
 title: Enable API security posture with Defender CSPM
 description: Discover and secure APIs across API Management, Function Apps, and Logic Apps with prioritized risk insights and API security recommendations.
-ms.author: elkrieger
-author: ElazarK
 ms.topic: how-to
 ms.date: 06/02/2026
 ms.custom: sfi-image-nochange, references_regions

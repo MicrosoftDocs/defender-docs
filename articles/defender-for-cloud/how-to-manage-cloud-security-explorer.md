@@ -3,8 +3,6 @@ title: Build queries with cloud security explorer
 description: Learn how to build queries with cloud security explorer in Microsoft Defender for Cloud to proactively identify security risks in your cloud environment.
 ms.topic: how-to
 ms.date: 05/28/2026
-ms.author: elkrieger
-author: elazark
 ai-usage: ai-assisted
 # Customer Intent: As a security professional, I want to learn how to build queries with cloud security explorer in Microsoft Defender for Cloud so that I can proactively identify security risks in my cloud environment and improve my security posture.
 ---

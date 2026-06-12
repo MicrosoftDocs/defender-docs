@@ -1,8 +1,6 @@
 ---
 title: Overview of integration with Power BI
 description: Learn about integrating Power BI with Microsoft Defender for Cloud to gain enhanced value from the data collected by Defender for Cloud.
-author: Elazark
-ms.author: elkrieger
 ms.topic: overview
 ms.date: 05/20/2025
 ai-usage: ai-assisted

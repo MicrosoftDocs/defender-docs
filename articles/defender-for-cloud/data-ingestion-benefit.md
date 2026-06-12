@@ -3,8 +3,6 @@ title: Use the data ingestion benefit in Microsoft Defender for Cloud
 description: Defender for Servers Plan 2 includes 500 MB of free daily data ingestion per node to Log Analytics. Learn how the benefit is calculated and applied.
 ms.topic: how-to
 #customer intent: As a security admin, I want to understand how the data ingestion benefit is applied so that I can estimate eligible Log Analytics coverage and avoid unexpected charges.
-ms.author: elkrieger
-author: ElazarK
 ms.date: 05/25/2026
 ---
 

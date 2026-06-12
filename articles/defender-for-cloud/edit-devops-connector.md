@@ -4,8 +4,6 @@ description: Update authorization, organization scope, and connector settings fo
 ms.date: 06/02/2026
 ms.topic: how-to
 ms.custom: ignite-2023
-author: ElazarK
-ms.author: elkrieger
 ---
 
 # Edit DevOps connectors

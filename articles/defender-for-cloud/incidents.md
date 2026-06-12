@@ -2,8 +2,6 @@
 title: Manage security incidents
 description: Triage and investigate security incidents with correlated alerts and analytics in Microsoft Defender for Cloud to understand attack campaigns and affected resources.
 ms.topic: how-to
-ms.author: elkrieger
-author: Elazark
 ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security analyst, I want to manage and investigate security incidents in Microsoft Defender for Cloud so that I can understand attack campaigns and respond effectively.

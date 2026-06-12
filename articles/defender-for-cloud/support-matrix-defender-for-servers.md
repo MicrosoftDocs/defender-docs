@@ -3,8 +3,6 @@ title: Support for the Defender for Servers plan
 description: Review support requirements, network configurations, and feature support for the "Defender for Servers" plan in Microsoft Defender for Cloud.
 ms.topic: limits-and-quotas
 ms.custom: linux-related-content
-author: elazark
-ms.author: elkrieger
 ms.date: 05/10/2026
 ---
 

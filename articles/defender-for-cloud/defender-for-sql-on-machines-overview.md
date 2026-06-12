@@ -1,8 +1,6 @@
 ---
 title: Microsoft Defender for SQL Servers on Machines overview
 description: Protect infrastructure as a service (IaaS) SQL servers across Azure, multicloud, and on-premises environments with vulnerability assessment and threat protection.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/27/2026
 #customer intent: As a user, I want an overview of Defender for SQL Servers on Machines so I can understand capabilities and onboarding options.

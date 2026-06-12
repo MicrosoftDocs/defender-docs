@@ -1,8 +1,6 @@
 ---
 title: Detecting endpoint detection and response solutions
 description: Learn about detection for endpoint detection and response solutions in Microsoft Defender for Cloud
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/28/2026
 ai-usage: ai-assisted

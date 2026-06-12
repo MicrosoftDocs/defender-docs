@@ -1,8 +1,6 @@
 ---
 title: Set up continuous export to an event hub behind a firewall
 description: Learn how to set up continuous export of Microsoft Defender for Cloud security alerts and recommendations to an event hub behind a firewall.
-author: Elazark
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/24/2026
 ms.custom: sfi-image-nochange

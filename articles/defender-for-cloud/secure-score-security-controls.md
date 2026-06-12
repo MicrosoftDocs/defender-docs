@@ -2,8 +2,6 @@
 title: Cloud secure score in Microsoft Defender for Cloud
 description: Learn about the Microsoft Defender for Cloud secure score, which is part of the Microsoft cloud security benchmark.
 ms.topic: concept-article
-author: dlanger
-ms.author: dlanger
 ms.date: 11/17/2025
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience

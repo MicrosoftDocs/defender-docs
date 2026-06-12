@@ -3,8 +3,6 @@ title: Respond to Defender open-source database alerts
 description: Investigate and respond to alerts from Microsoft Defender for open-source relational databases, including Azure Database services and AWS Relational Database Service instances.
 ms.date: 05/25/2026
 ms.topic: how-to
-ms.author: elkrieger
-author: ElazarK
 ms.custom: sfi-image-nochange
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my databases.
 ---

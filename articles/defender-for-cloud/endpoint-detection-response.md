@@ -1,8 +1,6 @@
 ---
 title: Assess Defender for Endpoint EDR settings
 description: Learn how Microsoft Defender for Cloud uses agentless scanning to assess Defender for Endpoint EDR settings on protected machines.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 06/02/2026
 ai-usage: ai-assisted

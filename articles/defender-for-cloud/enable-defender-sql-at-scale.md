@@ -2,8 +2,6 @@
 title: Enable Microsoft Defender for SQL Servers on Machines at scale
 description: Enable Defender for SQL Servers on Machines across multiple subscriptions by using PowerShell, including auto-provisioning and custom configuration options.
 ms.topic: how-to
-ms.author: elkrieger
-author: ElazarK
 ms.date: 06/02/2026
 #customer intent: As a user, I want to learn how to enable Defender for SQL servers at scale so that I can protect my SQL servers efficiently.
 ---

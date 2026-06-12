@@ -3,8 +3,6 @@ title: Manage cloud scopes and unified role-based access control in Microsoft De
 description: Learn how to configure cloud scopes and unified role-based access control for granular permissions management across your cloud environments.
 ms.topic: how-to
 ms.date: 05/26/2026
-ms.author: elkrieger
-author: ElazarK
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to configure cloud scopes and unified RBAC to manage access and permissions across my cloud environments.
 ---

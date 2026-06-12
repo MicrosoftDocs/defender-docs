@@ -3,8 +3,6 @@ title: Enable Defender for open-source relational databases on Azure
 description: Detect anomalous activity and unusual attempts to access or exploit Azure Database for PostgreSQL and MySQL with Microsoft Defender for open-source relational databases.
 ms.date: 06/02/2026
 ms.topic: how-to
-ms.author: elkrieger
-author: ElazarK
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my Azure databases.
 ---
 

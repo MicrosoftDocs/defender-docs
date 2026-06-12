@@ -1,8 +1,6 @@
 ---
 title: Enable File Integrity Monitoring 
 description: Learn how to enable File Integrity Monitoring when you collect data with Microsoft Defender for Endpoint.
-author: Elazark
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 03/22/2026
 ms.custom: sfi-image-nochange

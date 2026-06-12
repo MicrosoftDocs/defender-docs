@@ -1,8 +1,6 @@
 ---
 title: Azure Monitor Agent (AMA) in Microsoft Defender for Cloud
 description: Learn about using the Azure Monitor Agent in Microsoft Defender for Cloud
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/27/2026
 ms.custom: template-how-to

@@ -2,8 +2,6 @@
 title: Technical onboarding guide for StackHawk (preview)
 description: Learn how to use StackHawk with Microsoft Defender for Cloud to enhance your application security testing.
 ms.date: 05/28/2026
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 #customer intent: As an API security engineer, I want to onboard StackHawk with Defender for Cloud so that API security findings are integrated into centralized security operations.
 ---

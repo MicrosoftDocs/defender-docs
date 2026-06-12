@@ -1,8 +1,6 @@
 ---
 title: Deploy GitHub Advanced Security integration with Microsoft Defender for Cloud (Sandbox project)
 description: Set up and validate a sandbox environment to evaluate GitHub Advanced Security and Microsoft Defender for Cloud integration end to end.
-author: dlanger
-ms.author: dlanger
 ms.topic: how-to
 ms.date: 04/30/2026
 ms.service: defender-for-cloud

@@ -1,8 +1,6 @@
 ---
 title: Onboard a management group
 description: Learn how to use a supplied Azure Policy definition to enable Microsoft Defender for Cloud for all the subscriptions in a management group.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to onboard management groups to Defender for Cloud so that all subscriptions are covered consistently.

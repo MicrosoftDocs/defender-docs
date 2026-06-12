@@ -3,8 +3,6 @@ title: Cloud security reporting in Microsoft Defender portal (Preview)
 description: Learn how to create, customize, and export cloud security reports in Microsoft Defender portal, including built-in reports and custom report options.
 ms.topic: how-to
 ms.date: 05/04/2026
-ms.author: dlanger
-author: dlanger
 ai-usage: ai-assisted
 ---
 

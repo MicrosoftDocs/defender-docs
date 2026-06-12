@@ -1,11 +1,9 @@
 ---
 title: Reference table for all container security recommendations in Microsoft Defender for Cloud
 description: This article lists all Microsoft Defender for Cloud container security recommendations that help you harden and protect your resources.
-author: Elazark
 ms.service: defender-for-cloud
 ms.topic: reference
 ms.date: 06/08/2026
-ms.author: elkrieger
 ms.custom: generated
 ai-usage: ai-assisted
 ---

@@ -1,6 +1,4 @@
 ---
-author: Elazark
-ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 11/02/2023

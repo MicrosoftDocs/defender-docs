@@ -3,8 +3,6 @@ title: Exempt resources from recommendations
 description: Create exemption rules to remove resources or recommendations from secure score impact in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.custom: ignite-2023
-ms.author: elkrieger
-author: ElazarK
 ms.date: 06/02/2026
 #customer intent: As a security administrator, I want to exempt resources and recommendations when appropriate so I can keep secure score signals accurate.
 ---

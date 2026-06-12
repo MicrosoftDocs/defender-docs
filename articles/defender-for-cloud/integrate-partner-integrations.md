@@ -1,8 +1,6 @@
 ---
 title: Connect partner integrations in Microsoft Defender for Cloud
 description: Connect third-party partner solutions to Microsoft Defender for Cloud to enhance detection, simplify deployment, and extend multicloud protection.
-author: Elazark
-ms.author: elkrieger
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/28/2026

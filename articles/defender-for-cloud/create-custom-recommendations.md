@@ -1,8 +1,6 @@
 ---
 title: Create custom standards and recommendations in Microsoft Defender for Cloud
 description: Learn how to create custom security standards and recommendations in Microsoft Defender for Cloud across Azure, AWS, and GCP with KQL queries and Azure Policy.
-author: ElazarK
-ms.author: elkrieger
 ms.topic: how-to
 ms.date: 05/24/2026
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.

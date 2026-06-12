@@ -2,8 +2,6 @@
 title: Deployment planning for Microsoft Defender for Containers
 description: Learn how to plan deployment of Microsoft Defender for Containers across Kubernetes environments, including onboarding, deployment methods, and post-deployment verification.
 ms.topic: concept-article
-ms.author: elkrieger
-author: Elazark
 ms.date: 03/16/2026
 ---
 

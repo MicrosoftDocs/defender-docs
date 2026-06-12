@@ -1,8 +1,6 @@
 ---
 title: Overview of Defender for Cloud in Defender portal
 description: Comprehensive overview of Microsoft Defender for Cloud in the Defender portal, including navigation hub, dashboard features, and unified security management capabilities.
-author: dlanger
-ms.author: dlanger
 ms.topic: overview
 ms.date: 04/28/2026
 ms.service: defender-for-cloud
