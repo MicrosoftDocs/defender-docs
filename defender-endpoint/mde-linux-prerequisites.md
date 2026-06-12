@@ -12,7 +12,7 @@ ms.collection:
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-ms.date: 04/30/2026
+ms.date: 06/12/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -103,11 +103,16 @@ The following Linux server distributions are supported:
 | Debian | 9–13 | 11, 12, 13 |
 | SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
 | Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
-| Amazon Linux | 2, 2023 | 2, 2023 |
+| Amazon Linux | 2, 2023 | 2, 2023 (See deprecation note below) |
 | Fedora | 33–42 | - |
 | Rocky Linux | 8.7+, 9.2+ | 8.7+, 9.2+ |
 | Alma Linux | 8.4+, 9.2+ | 8.4+, 9.2+ |
 | Mariner | 2 | 2 |
+
+> [!IMPORTANT]
+> Support for Microsoft Defender for Endpoint on Amazon Linux 2 (AL2) running on ARM64 architecture will be deprecated on 31 October 2026, when the last supported version, 101.25122.0004, expires. After this date, newer Defender versions will not install on servers running AL2 (ARM64), and support for existing deployments will end. Customers are advised to migrate to a supported Linux distribution before this date.
+>  
+> This change only applies to ARM64-based AL2 machines. AMD64 and x86_64 architectures are not impacted.
 
 > [!NOTE]
 > Distributions and versions that aren't explicitly listed above are unsupported
