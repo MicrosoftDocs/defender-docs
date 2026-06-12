@@ -103,7 +103,7 @@ The following Linux server distributions are supported:
 | Debian | 9–13 | 11, 12, 13 |
 | SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
 | Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
-| Amazon Linux | 2, 2023 | 2, 2023 (Support retiring on 31 October 2026. See note below.) |
+| Amazon Linux | 2, 2023 | 2 (Support retiring on 31 October 2026. See note below.), 2023 |
 | Fedora | 33–42 | - |
 | Rocky Linux | 8.7+, 9.2+ | 8.7+, 9.2+ |
 | Alma Linux | 8.4+, 9.2+ | 8.4+, 9.2+ |
@@ -114,7 +114,7 @@ The following Linux server distributions are supported:
 >
 > The last supported Defender version for AL2 (ARM64) is 101.25122.0004 (expiry 31 October 2026). **After that date, official support for AL2 (ARM64) will end**. Customers are advised to migrate to a supported Linux distribution before this date to ensure continued protection and support.
 >
-> This change applies only to ARM64-based AL2 machines. **AMD64 and x86_64 architectures are not impacted**.
+> This change applies only to ARM64-based AL2 machines. **AMD64/x86_64 architectures are not impacted**.
 
 > [!NOTE]
 > Distributions and versions that aren't explicitly listed above are unsupported
