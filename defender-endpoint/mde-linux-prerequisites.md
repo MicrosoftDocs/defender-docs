@@ -109,9 +109,7 @@ The following Linux server distributions are supported:
 | Alma Linux | 8.4+, 9.2+ | 8.4+, 9.2+ |
 | Mariner | 2 | 2 |
 
-> [!IMPORTANT]
-> [!IMPORTANT]
-
+> [!NOTE]
 > **Support for Microsoft Defender for Endpoint on Amazon Linux 2 (AL2) running on ARM64 architecture will be deprecated on 31 October 2026**.
 >
 > The last supported Defender version for AL2 (ARM64) is 101.25122.0004, which expires on 31 October 2026. After that date, official support for AL2 (ARM64) will end. Customers are advised to migrate to a supported Linux distribution before this date to ensure continued protection and support.
