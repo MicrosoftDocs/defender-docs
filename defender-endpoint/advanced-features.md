@@ -164,7 +164,7 @@ Enabling this feature allows you to run unsigned scripts in a live response sess
 
 ## Automatic attack disruption
 
-Automatic attack disruption disrupts attacks by automatically containing compromised assets that the attacker is using. It limits lateral movement early on, thereby reducing the overall impact of an attack, both on the associated costs and on  loss of productivity. At the same time, it leaves security operations teams in complete control of investigating, remediating, and bringing assets back online. For more information, see [Automatic attack disruption in Microsoft Defender XDR](/defender-xdr/automatic-attack-disruption).
+Automatic attack disruption disrupts attacks by automatically containing compromised assets that the attacker is using. It limits lateral movement early on, thereby reducing the overall impact of an attack, both on the associated costs and on  loss of productivity. At the same time, it leaves security operations teams in complete control of investigating, remediating, and bringing assets back online. For more information, see [Automatic attack disruption in Microsoft Defender](/defender-xdr/automatic-attack-disruption).
 
 ## Share endpoint alerts with Microsoft Compliance Center
 

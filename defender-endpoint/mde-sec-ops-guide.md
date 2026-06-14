@@ -100,7 +100,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 
 - **Message Center**
 
-    Microsoft Defender XDR uses the Microsoft 365 Message center to notify you of upcoming changes, such as new and changed features, planned maintenance, or other important announcements.
+    Microsoft Defender uses the Microsoft 365 Message center to notify you of upcoming changes, such as new and changed features, planned maintenance, or other important announcements.
 
     Review the Message center messages to understand any upcoming changes that impact your environment.
 

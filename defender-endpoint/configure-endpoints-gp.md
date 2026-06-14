@@ -68,7 +68,7 @@ Check out [Identify Defender for Endpoint architecture and deployment method](de
 
 ## Additional Defender for Endpoint configuration settings
 
-For each device, you can state whether samples can be collected from the device when a request is made through Microsoft Defender XDR to submit a file for deep analysis.
+For each device, you can state whether samples can be collected from the device when a request is made through the Defender portal to submit a file for deep analysis.
 
 You can use Group Policy (GP) to configure settings, such as settings for the sample sharing used in the deep analysis feature.
 
