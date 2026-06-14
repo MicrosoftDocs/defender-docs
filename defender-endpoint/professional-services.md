@@ -17,11 +17,11 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Professional services supported by Microsoft Defender XDR
+# Professional services supported by Microsoft Defender
 
 **Applies to:**
 
-- Microsoft Defender XDR
+- Microsoft Defender
 - Microsoft Defender for Endpoint
 
 ## Manage
