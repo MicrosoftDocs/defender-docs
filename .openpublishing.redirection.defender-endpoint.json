@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "defender-endpoint/get-started-partner-integration.md",
+      "redirect_url": "https://partner.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/professional-services.md",
+      "redirect_url": "https://marketplace.microsoft.com",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-endpoint/troubleshoot-asr-rules.md",
       "redirect_url": "/defender-endpoint/attack-surface-reduction-rules-monitor",
       "redirect_document_id": false
