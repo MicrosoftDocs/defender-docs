@@ -10,7 +10,7 @@ ms.date: 06/09/2026
 
 This article summarizes what's new in Microsoft Defender for Cloud. It includes information about new features in preview or in general availability (GA), feature updates, upcoming feature plans, and deprecated functionality.
 
-<!-- Please don't adjust this next line without getting approval from the Defender for Cloud documentation team. It is necessary for proper RSS functionality. -->
+<!-- Please don't adjust this next line without getting approval from the Defender for or Cloud documentation team. It is necessary for proper RSS functionality. -->
 - This page is updated frequently with the latest updates in Defender for Cloud.
 
 - Find the latest information about security recommendations and alerts in [What's new in recommendations and alerts](release-notes-recommendations-alerts.md).
@@ -314,7 +314,7 @@ The classic secure score in the Azure portal is also affected by these individua
 
 **Deprecation notice: Legacy grouped recommendations**
 
-Grouped recommendation types are deprecated from the Azure portal and will be removed on July 30, 2026. These recommendations are currently tagged as **Set for deprecation**.
+Grouped recommendation types are deprecated from the Azure portal and will be removed on July 31, 2026. These recommendations are currently tagged as **Set for deprecation**.
 
 For more information, see [security recommendations](review-security-recommendations.md).
 
