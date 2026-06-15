@@ -66,9 +66,9 @@ While cloud apps continue to be a target for adversaries trying to exfiltrate co
 
 Defender for Cloud Apps offers built-in adaptive access control (AAC), provides user and entity behavior analysis (UEBA), and helps you mitigate malware.
 
-Defender for Cloud Apps is also integrated directly into Microsoft Defender XDR, correlating XDR signals from the Microsoft Defender suite and providing incident-level detection, investigation, and powerful response capabilities. Integrating SaaS security into Microsoft's XDR experience gives SOC teams full kill chain visibility and improves operational efficiency and effectivity.
+Defender for Cloud Apps is also integrated directly into Microsoft Defender, correlating cross-domain signals from the Microsoft Defender suite and providing incident-level detection, investigation, and powerful response capabilities. Integrating SaaS security into Microsoft's unified security experience gives SOC teams full kill chain visibility and improves operational efficiency and effectivity.
 
-For more information, see [Microsoft Defender for Cloud Apps in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-defender-cloud-apps).
+For more information, see [Microsoft Defender for Cloud Apps in Microsoft Defender](/microsoft-365/security/defender/microsoft-365-security-center-defender-cloud-apps).
 
 ## App to app protection with app governance
 

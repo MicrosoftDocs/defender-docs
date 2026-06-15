@@ -31,7 +31,7 @@ The term "tuning" is used often and can mean different things. For example:
 
 The easiest and safest way to configure security controls is by onboarding to [preset security policies](../preset-security-policies.md). By using the Standard or Strict preset security policies, you always have Microsoft's recommended, best practice configuration for users. For instructions, see [Steps to set up the Standard or Strict preset security policies for Microsoft Defender for Office 365](ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md).
 
-Are you worried about attacks targeting your CEO, CIO, or CFO? You can [Protect your c-suite with Priority account protection in Microsoft Defender for Office 365 Plan 2](protect-your-c-suite-with-priority-account-protection.md).
+Are you worried about attacks targeting your CEO, CIO, or CFO? You can [manage and monitor priority accounts in Microsoft 365](/microsoft-365/admin/security-and-compliance/priority-accounts).
 
 If you use custom security policies, configuration analyzer gives recommendations to make sure you follow Microsoft's best practices. You can [Optimize and correct threat policies with configuration analyzer](optimize-and-correct-security-policies-with-configuration-analyzer.md).
 

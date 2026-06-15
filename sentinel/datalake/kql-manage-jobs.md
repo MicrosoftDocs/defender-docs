@@ -8,7 +8,7 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: concept-article
-ms.date: 06/01/2026
+ms.date: 06/04/2026
 ms.collection: ms-security  
 
 # Customer intent: As a threat hunter, security engineer or an security administrator, I want to manage KQL, notebook and graph jobs in the Microsoft Sentinel data lake.
@@ -137,6 +137,9 @@ After you edit the job, select **Submit** to save the changes. The job is update
 ### Enable or disable a KQL job
 
 To enable or disable a job, select **Enable** or **Disable** in the job details panel. When a job is disabled, it won't run until you enable it again. The status of the job changes to reflect whether it's enabled or disabled.
+
+> [!IMPORTANT]
+> Disabling or deleting a KQL job doesn't stop any job runs that are already in progress or queued. Any runs that started before the job was disabled or deleted continue to completion. Any already queued jobs will run. Jobs scheduled to be run in the future and not queued will no longer be scheduled.
 
 ### Delete a KQL job
 
