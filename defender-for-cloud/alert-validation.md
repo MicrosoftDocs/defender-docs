@@ -137,7 +137,7 @@ To validate Azure Key Vault threat detection, complete the prerequisites and the
 
 ### Prerequisites
 
-- [Create a key vault by using the Azure portal](../key-vault/general/quick-create-portal.md).
+- [Create a key vault by using the Azure portal](/azure/key-vault/general/quick-create-portal).
 
 ### Validation steps
 

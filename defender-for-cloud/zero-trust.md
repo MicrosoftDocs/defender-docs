@@ -17,7 +17,7 @@ Zero Trust infrastructure solutions assess, monitor, and prevent security threat
 
 ## What is Zero Trust?
 
-[!INCLUDE [zero-trust-principles](~/reusable-content/ce-skilling/azure/includes/security/zero-trust-principles.md)]
+[!INCLUDE [zero-trust-principles](~/../reusable-content/ce-skilling/azure/includes/security/zero-trust-principles.md)]
 
 ## Zero Trust and Defender for Cloud
 

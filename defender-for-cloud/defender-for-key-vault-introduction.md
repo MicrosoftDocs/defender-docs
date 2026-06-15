@@ -66,7 +66,7 @@ Depending on the *type* of access that occurred, some fields might not be availa
 If you don't recognize the user or application, or if you think the access shouldn't have been authorized:
 
 - If the traffic came from an unrecognized IP Address:
-    1. Enable the Azure Key Vault firewall as described in [Configure Azure Key Vault firewalls and virtual networks](../key-vault/general/network-security.md).
+    1. Enable the Azure Key Vault firewall as described in [Configure Azure Key Vault firewalls and virtual networks](/azure/key-vault/general/network-security).
     1. Configure the firewall with trusted resources and virtual networks.
 
 - If the source of the alert was an unauthorized application or suspicious user:

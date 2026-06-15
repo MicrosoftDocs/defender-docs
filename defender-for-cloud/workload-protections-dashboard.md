@@ -9,7 +9,7 @@ ms.date: 07/15/2025
 
 Microsoft Defender for Cloud provides unified view into threat detection and protection for protected resources with the interactive **Workload protections** dashboard.
 
-:::image type="content" source="~/reusable-content/ce-skilling/azure/media/defender-for-cloud/sample-defender-dashboard-numbered.png" alt-text="An example of Defender for Cloud's workload protections dashboard." lightbox="~/reusable-content/ce-skilling/azure/media/defender-for-cloud/sample-defender-dashboard-numbered.png":::
+:::image type="content" source="~/../reusable-content/ce-skilling/azure/media/defender-for-cloud/sample-defender-dashboard-numbered.png" alt-text="An example of Defender for Cloud's workload protections dashboard." lightbox="~/../reusable-content/ce-skilling/azure/media/defender-for-cloud/sample-defender-dashboard-numbered.png":::
 
 ## Defender for Cloud coverage
 
