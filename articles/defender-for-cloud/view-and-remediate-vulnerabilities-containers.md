@@ -1,54 +1,66 @@
 ---
-title: View and remediate vulnerabilities for containers running on Kubernetes clusters (risk-based)
-description: Learn how to view and remediate runtime threat findings for containers running on your Kubernetes clusters.
+title: View and remediate vulnerabilities for running containers
+description: Learn how to view and remediate vulnerability findings for running containers in Microsoft Defender for Cloud.
 ms.service: defender-for-cloud
 ms.custom: build-2023, sfi-image-nochange
 ms.topic: how-to
-ms.date: 05/31/2026
-#customer intent: As a security administrator, I want to review and remediate container vulnerability findings based on runtime risk so I can prioritize the highest-impact fixes.
+ms.date: 06/14/2026
+#customer intent: As a security administrator, I want to review vulnerability findings for images used by running containers so I can prioritize and remediate issues that affect active Kubernetes workloads.
 ---
 
-# View and remediate vulnerabilities for containers running on Kubernetes clusters (risk-based)
+# View and remediate vulnerabilities for running containers
 
+Defender for Cloud helps you identify and prioritize vulnerabilities in images currently used by workloads running on Kubernetes clusters.
+
+To generate these findings, Defender for Cloud builds an inventory of your Kubernetes workloads by using supported discovery and protection components, and correlates that inventory with vulnerability data for the images used by those workloads.
+
+Vulnerability findings for running containers are shown as security recommendations in Defender for Cloud. The steps in this article use the **Flat list** recommendations view, which shows recommendations at the affected-resource level. Learn more about [reviewing recommendations by title or by resource](review-security-recommendations.md#recommendation-title-view).
 > [!NOTE]
-> This article describes the new risk-based approach to vulnerability management in Microsoft Defender for Cloud. If you're using the Defender cloud security posture management (Defender CSPM) plan, use this method. To use the classic secure score approach, see [View and remediate vulnerabilities for images running on your Kubernetes clusters (Secure Score)](view-and-remediate-vulnerabilities-for-images-secure-score.md).
+> During the transition from grouped to individual recommendations, you might see both recommendation formats in the portal. Learn more about [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
 
-Defender for Cloud helps you prioritize remediation for vulnerabilities in containers running on your Kubernetes clusters. It uses contextual risk analysis across your cloud environment. In this article, you review the [Containers running in Azure should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e9acaf48-d2cf-45a3-a6e7-3caa2ef769e0) recommendation. For other supported environments, see [Vulnerability assessments in supported environments](agentless-vulnerability-assessment-azure.md).
+## Prerequisites
 
-To provide findings for the recommendation, Defender for Cloud uses [agentless discovery for Kubernetes](defender-for-containers-introduction.md) or the [Defender sensor](tutorial-enable-containers-azure.md#deploy-the-defender-sensor-in-azure) to create a full inventory of your Kubernetes clusters and their workloads. It correlates that inventory with the vulnerability reports created for your registry images. The recommendation shows your running containers with the vulnerabilities associated with the images that each container uses and remediation steps.
+Before you begin, make sure that [Defender for Containers](defender-for-containers-enable-plan.md) or [Defender CSPM](tutorial-enable-cspm-plan.md) is enabled on your subscription with one of the following component combinations toggled on:
 
-Defender for Cloud presents the findings and related information as recommendations. This information includes remediation steps and relevant CVEs. You can view the identified vulnerabilities for one or more subscriptions or for a specific resource.
+- **Registry access** and either **Kubernetes API access** or **Defender sensor** to map registry-scanned images to running workloads.
+- **Agentless scanning for machines** and either **Kubernetes API access** or **Defender sensor** for registry-agnostic runtime vulnerability assessment.
 
-Details include additional containers affected by that vulnerability, information on the software version that contributes to resolving the vulnerability, and links to external resources to help with patching the vulnerability.
+## View vulnerabilities for running containers
 
-## View vulnerabilities for a container
-
-To view vulnerabilities for a container:
+To view vulnerabilities for a running container:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-1. Go to **Microsoft Defender for Cloud > Recommendations**. 
-1. Search for `Containers running in Azure should have vulnerability findings resolved`
 
-    :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-image-recommendation-line.png" alt-text="Screenshot showing the recommendation line for running container images should have vulnerability findings resolved." lightbox="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-image-recommendation-line.png":::
+1. Go to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Select the recommendation.
-1. Review the recommendation details.
+1. Select the **Vulnerabilities** tab.
 
-    :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-select-cluster.png" alt-text="Screenshot showing the affected clusters for the recommendation." lightbox="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-select-cluster.png":::
+1. Select the **Flat list** view.
 
-1. Select the **Findings** tab to see the list of vulnerabilities impacting the container.
+1. Select **Add filter**.
 
-    :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-select-container.png" alt-text="Screenshot showing the findings tab containing the vulnerabilities." lightbox="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-select-container.png":::
+1. Select **Resource type**.
 
-1. Select each vulnerability to view a detailed description of the vulnerability.
+1. Select **Container**.
 
-    :::image type="content" source="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-list-vulnerabilities.png" alt-text="Screenshot showing the container vulnerabilities." lightbox="media/view-and-remediate-vulnerabilities-for-images-running-on-aks/running-list-vulnerabilities.png":::
+   :::image type="content" source="./media/view-and-remediate-vulnerabilities-containers/resource-type-container.png" alt-text="Screenshot of the Resource type filter in Microsoft Defender for Cloud Recommendations with Container selected." lightbox="./media/view-and-remediate-vulnerabilities-containers/resource-type-container.png":::
 
-To find all containers affected by a specific vulnerability, see [Group recommendations by title](review-security-recommendations.md#resource-views).
+1. Select **Apply**.
 
-To remediate vulnerabilities, see [Remediate recommendations](implement-security-recommendations.md).
+1. Select a recommendation.
 
-## Next step
+1. Review the recommendation details, including the risk information, remediation guidance, and recommendation metadata.
 
-> [!div class="nextstepaction"]
-> [View and remediate vulnerabilities for registry images](view-and-remediate-vulnerability-assessment-findings.md)
+1. Select the **Associated CVEs** tab to review the CVEs associated with the recommendation.
+
+1. Select a CVE to view details such as severity, affected components, and fix version information.
+
+## Related content
+
+- To find all containers affected by a specific vulnerability, see [Group recommendations by title](review-security-recommendations.md#resource-views).
+
+- To remediate vulnerabilities, see [Remediate recommendations](implement-security-recommendations.md).
+
+- [Build Cloud Security Explorer queries for container vulnerabilities](cloud-security-explorer-container-vulnerabilities.md)
+
+- [View and remediate vulnerabilities for registry images](view-and-remediate-vulnerability-registry-images.md)

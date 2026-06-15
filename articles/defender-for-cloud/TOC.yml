@@ -398,8 +398,6 @@
           href: secure-score-security-controls.md
         - name: Regulatory compliance standards
           href: concept-regulatory-compliance-standards.md
-        - name: Assign regulatory compliance standards
-          href: assign-regulatory-compliance-standards.md
         - name: Microsoft Cloud Security Benchmark (MCSB)
           displayName: mcsb, azure, security, benchmark 
           href: concept-regulatory-compliance.md
@@ -776,7 +774,7 @@
             href: kubernetes-nodes-malware.md
       - name: Image and runtime container vulnerability assessment
         items:
-          - name: Vulnerability assessments for supported environments
+          - name: Overview
             href: agentless-vulnerability-assessment-azure.md
           - name: Vulnerability assessments for external registries
             items:
@@ -784,26 +782,14 @@
               href: agentless-vulnerability-assessment-docker-hub.md
             - name: Vulnerability assessments for JFrog Artifactory
               href: agentless-vulnerability-assessment-jfrog-artifactory.md
-          - name: Enable vulnerability assessments
-            href: enable-vulnerability-assessment.md
-          - name: Remediate vulnerabilities for registry images (risk-based)
+          - name: Remediate vulnerabilities for registry images
             href: view-and-remediate-vulnerability-registry-images.md
-          - name: Remediate vulnerabilities for running containers (risk-based)
+          - name: Remediate vulnerabilities for running containers
             href: view-and-remediate-vulnerabilities-containers.md
-          - name: Disable vulnerability findings on images (risk-based)
+          - name: Build Cloud Security Explorer queries for container vulnerabilities
+            href: cloud-security-explorer-container-vulnerabilities.md
+          - name: Create exemptions for container vulnerabilities
             href: disable-vulnerability-findings-containers.md
-          - name: Remediate vulnerabilities for registry images (secure score)
-            href: view-and-remediate-vulnerability-assessment-findings-secure-score.md
-          - name: Remediate vulnerabilities for running images (secure score)
-            href: view-and-remediate-vulnerabilities-for-images-secure-score.md
-          - name: Disable vulnerability findings (secure score)
-            href: disable-vulnerability-findings-containers-secure-score.md
-          - name: REST API (secure score)
-            href: subassessment-rest-api.md
-          - name: Transition to Defender Vulnerability Management
-            href: transition-to-defender-vulnerability-management.md
-          - name: Common questions 
-            href: common-questions-microsoft-defender-vulnerability-management.md
       - name: Container runtime antimalware detection and blocking
         displayName: antimalware, containers,
         href: anti-malware.md
@@ -899,7 +885,7 @@
           href: defender-for-sql-scan-results.md
       - name: Investigate and remediate
         items:
-        - name: Explore and investigate Defender for SQL security alerts
+        - name: Investigate Defender for SQL security alerts
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-alerts.md
         - name: Simulate alerts for SQL servers on machines
@@ -976,7 +962,7 @@
         href: defender-for-resource-manager-introduction.md
       - name: Protect resources with Defender for Resource Manager
         href: tutorial-enable-resource-manager-plan.md
-      - name: Respond to Defender for Resource Manager alerts
+      - name: Handle Defender for Resource Manager alerts
         displayName: arm
         href: defender-for-resource-manager-usage.md
   - name: Defender for DNS
@@ -1105,7 +1091,7 @@
           href: cloud-security-explorer-software-vulnerabilities.md
     - name: Defender for Databases
       items:
-        - name: Explore and investigate Defender for SQL security alerts
+        - name: Investigate Defender for SQL security Alerts, reporting, and queries
           displayName: SQL, SQL servers, defender, machines
           href: defender-for-sql-alerts.md
         - name: Find and remediate vulnerabilities
@@ -1116,7 +1102,7 @@
           href: sql-azure-vulnerability-assessment-rules-changelog.md
         - name: Consume and export scan results
           href: defender-for-sql-scan-results.md
-        - name: Explore and investigate Defender for SQL security alerts
+        - name: Investigate Defender for SQL security alerts
           href: defender-for-sql-alerts.md
     - name: Defender for Storage
       items:
