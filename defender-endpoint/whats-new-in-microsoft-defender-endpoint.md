@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 06/14/2026
+ms.date: 06/15/2026
 ai-usage: ai-assisted
 ms.collection:
 - m365-security
@@ -30,6 +30,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Feature |[Selective Response Actions](./restrict-response-actions-high-value-assets.md) |GA |Selective Response Actions enables organizations to tailor high-impact security operations on devices during onboarding. It provides precise control over how response actions are applied on Tier-0 systems and other high-value assets, helping maintain operational stability while delivering strong protection. |
 |Feature |[Enhanced exposure score in Defender Vulnerability Management](/defender-vulnerability-management/tvm-exposure-score#transition-to-the-new-exposure-score-preview) |GA |The new exposure score model in Defender Vulnerability Management is now generally available. This model improves risk prioritization and recommendation impact accuracy by incorporating exploit prediction data (EPSS) and asset context factors such as internet-facing status and criticality. For more information, see [Exposure score in Defender Vulnerability Management](/defender-vulnerability-management/tvm-exposure-score) and [Security recommendations](/defender-vulnerability-management/tvm-security-recommendation). |
 |Release - Windows|Windows Defender Antivirus: Platform 4.18.26050.15 / Engine 1.1.26050.11 |GA |See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows-antivirus--may-2026--platform-4182605015--engine-112605011). |
 |Feature |New Microsoft Secure Score recommendation |GA |Microsoft Secure Score now includes the **Reduce unnecessary inbound internet exposure on internet-facing devices** recommendation, which helps identify devices that are accessible from the public internet and may represent unnecessary attack surface.<br><br>Internet-facing devices are primary entry points for attackers and automated scanners, making them prime targets for credential brute-forcing, exploitation of unpatched vulnerabilities, and initial access for ransomware and hands-on-keyboard intrusions.<br><br>This recommendation provides centralized visibility into internet-facing devices across the environment, enabling organizations to validate whether exposure is expected, prioritize remediation for unintended exposure, and reduce external attack surface at scale. |

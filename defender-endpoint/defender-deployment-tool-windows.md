@@ -491,4 +491,4 @@ When you run the tool as part of a large-scale deployment, for example through a
 ## Related content
 
 - [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security)
-- [Restrict response actions on high-value assets (preview)](restrict-response-actions-high-value-assets.md)
+- [Restrict response actions on high-value assets](restrict-response-actions-high-value-assets.md)
