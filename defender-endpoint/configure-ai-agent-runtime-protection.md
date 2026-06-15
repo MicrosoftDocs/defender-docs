@@ -7,9 +7,6 @@ ms.service: defender-endpoint
 ms.topic: how-to
 ms.date: 05/27/2026
 ai-usage: ai-assisted
-appliesto:
-  - Microsoft Defender for Endpoint Plan 1
-  - Microsoft Defender Antivirus
 #customer intent: As a security administrator, I want to configure runtime protection for local AI agents on my organization's endpoints so that I can detect and block prompt injection attacks in real time.
 ---
 
@@ -25,8 +22,9 @@ For an overview of how runtime protection works, see [AI agent runtime protectio
 
 Before you configure runtime protection, review the following requirements:
 
+- Your organization has a Microsoft Defender for Endpoint Plan 2, Microsoft 365 E5, Microsoft Agent 365, or Microsoft 365 E7 license.
 - Your devices are onboarded to [Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure).
-- Your devices are running a supported version of Windows, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
+- Your devices are running a supported version of Windows or macOS, and Microsoft Defender Antivirus is updated with current monthly platform and engine updates.
 
     > [!NOTE]
     > Runtime protection is currently available only on devices configured to receive `Beta` platform and engine updates.

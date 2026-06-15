@@ -7,8 +7,6 @@ ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 05/27/2026
 ai-usage: ai-assisted
-appliesto:
-  - Microsoft Defender for Endpoint Plan 2
 #customer intent: As a security administrator, I want to understand how Microsoft Defender provides visibility into local AI agents on my organization's devices.
 ---
 
@@ -39,16 +37,16 @@ Defender automatically detects supported local AI agents and MCP server configur
 
 Defender defines an agent as a combination of a user, a device, and an agent type. For example, if Claude Code runs in 15 different project folders on the same device for the same user, it appears as a single agent entry in the inventory.
 
-Defender discovers supported local AI agents on Windows endpoints. This includes agents that run from the command line, desktop apps, agentic IDEs, VS Code extensions, and Claw-based local agent implementations.
+Defender discovers supported local AI agents on Windows and macOS endpoints. This includes agents that run from the command line, desktop apps, agentic IDEs, VS Code extensions, and Claw-based local agent implementations.
 When supported, Microsoft Defender also discovers MCP server configurations associated with these agents, including local and remote MCP server configurations.
 
 Supported local AI agents include:
 
-- **CLI agents**: Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, OpenCode, Antigravity CLI
-- **Desktop apps**: ChatGPT Desktop, Claude Desktop, Codex Desktop, Ollama Desktop, Poe Desktop
-- **Agentic IDEs**: Cursor, Antigravity IDE, Windsurf
+- **CLI agents**: Claude Code, Codex CLI, Gemini CLI, GitHub Copilot CLI, Junie CLI, Kiro CLI, OpenCode, Warp, Antigravity CLI
+- **Desktop apps**: ChatGPT Desktop, Claude Desktop, Codex Desktop, Goose Desktop, Hermes Agent, Ollama Desktop, Perplexity Desktop, Poe Desktop
+- **Agentic IDEs**: Cursor, Devin Desktop (formerly Windsurf), Kiro IDE, Antigravity IDE
 - **VS Code extensions**: Claude Code, Cline, Codex, Gemini Code Assist, GitHub Copilot, Roo Code
-- **Claw-based agents**: OpenClaw, Clawpilot, Claw/Nanobot
+- **Claw-based agents**: OpenClaw, Clawpilot, QClaw, Claw/Nanobot
 
 To learn how to discover and view local AI agents, see [Discover local AI agents](discover-local-ai-agents.md).
 

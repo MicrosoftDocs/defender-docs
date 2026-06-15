@@ -7,9 +7,6 @@ ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 05/27/2026
 ai-usage: ai-assisted
-appliesto:
-  - Microsoft Defender for Endpoint Plan 1
-  - Microsoft Defender Antivirus
 #customer intent: As a security administrator, I want to understand how Microsoft Defender for Endpoint runtime protection works for local AI agents so that I can protect my organization from prompt injection attacks.
 ---
 
