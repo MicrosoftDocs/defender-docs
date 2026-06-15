@@ -33,7 +33,7 @@ Defender automatically detects supported local AI agents and MCP server configur
 - **Exposure map**: Visual relationships between local AI agents, devices, identities, and the resources those identities can access, to help assess potential impact.
 - **Advanced hunting**: Hunting for discovery data using Kusto Query Language (KQL) to investigate local AI agents and the resources they can access based on the permissions of the user running them.
 
-### Supported local AI agents and MCP server configurations
+## Supported local AI agents and MCP server configurations
 
 Defender defines an agent as a combination of a user, a device, and an agent type. For example, if Claude Code runs in 15 different project folders on the same device for the same user, it appears as a single agent entry in the inventory.
 
