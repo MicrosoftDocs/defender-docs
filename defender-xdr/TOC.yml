@@ -100,6 +100,8 @@
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
+      - name: Manually create an incident or alert
+        href: manually-create-incident.md
       - name: Use tasks to handle incident workflow
         href: split-incidents-into-tasks.md
       - name: Investigate and respond to incidents
