@@ -6,7 +6,7 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: amibarayev
 ms.localizationpriority: medium
-ms.date: 06/02/2026
+ms.date: 06/15/2026
 ms.topic: concept-article
 ms.custom: msecd-doc-authoring-1012
 #customer intent:As a security engineer, I want to configure which response actions are allowed on high-value assets I'm onboarding to reduce operational risk.
