@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.subservice: onboard
-ms.date: 05/28/2026
+ms.date: 06/15/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -39,9 +39,9 @@ The following table describes some of the main features the tool supports.
 | **Help** | A built-in help function displays all available command-line options. |
 | **Configuration files** | You can generate reusable configuration files that make bulk deployments more efficient and less error-prone. |
 | **Working without connectivity** | When connectivity is temporarily unavailable, offline onboarding and offboarding are possible. |
-| **Deployment key entry** (preview) | To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page. |
-| **Custom expiry** (preview)| Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
-| **Ability to view deployment packages** (preview)| You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
+| **Deployment key entry** | To add guardrails to the onboarding process and prevent accidental onboarding, using the Defender deployment tool requires entering a key generated in the portal onboarding page. |
+| **Custom expiry** | Defender deployment packages allow you to specify when you'd like them to expire, for any time up to a year, so that the package won't remain valid forever. This prevents adversaries from exploiting any old onboarding packages they might discover. Microsoft recommends making the validity period of packages as short as possible to reduce the risk of unauthorized deployment package use. |
+| **Ability to view deployment packages** | You can see key properties of your deployment packages in one place by navigating to **Settings** > **Endpoints** > **Deployment packages**. You can filter by active, expired, or hidden deployment packages. |
 
 When the [interactive](#interactive-use), double-click experience is used, the tool automatically begins the onboarding process and asks you to input the Defender deployment tool key generated in the portal when you create your Defender deployment tool package in **System** > **Settings** > **Endpoints** > **Onboarding**. It handles the installation of most prerequisite updates and the latest Defender components, and connects the device to the Defender services. If needed, the tool asks you to reboot the device to finish installation after you sign in again.
 
@@ -67,8 +67,6 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 
 - Administrative privileges are required for most operations.
 
-- Preview features must be enabled on the tenant.
-
 - Access to the domain *definitionupdates.microsoft.com*. The tool is downloaded and updated from this domain. Since the files it downloads are hosted on a content distribution platform, there will be no static or predictable IP ranges associated with it – unlike for other Defender cloud services.
 
 - While the tool checks for connectivity against your specific tenant before proceeding, other connectivity requirements, such as access to the consolidated *\*.endpoint.security.microsoft.com/*\*, apply to (additional) functionality you might want to use with the product. See [Configure your network environment to ensure connectivity with the Defender for Endpoint service](./configure-environment.md).
@@ -89,21 +87,9 @@ There are prerequisites that pertain to all supported Windows and Windows Server
 > [!NOTE]
 > For more information about Defender endpoint security for Windows 7 SP1, Windows Server 2008 R2, see [Deploy the Defender endpoint security solution for Windows 7 SP1 and Windows Server 2008 R2 SP1 devices](./onboard-downlevel.md#use-the-defender-deployment-tool-to-deploy-defender-endpoint-security).
 
-## Download the tool
+## Generate and download a new onboarding package
 
-If preview features are enabled on your tenant, select the **Generate and download a new onboarding package (preview)** tab to see how to generate and download a new onboarding package. If preview features aren't enabled, select the **Download the tool (GA)** tab and follow the instructions for downloading the tool and required .onboarding file.
-
-## [Download the tool (GA)](#tab/ga-experience)
-
-1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
-
-1. In the Step 1 dropdown menu, choose **Windows**.
-
-1. Under **Deploy by downloading and applying packages or files**, select the **Download package** button. This downloads the Defender executable and the onboarding file package.
-
-   :::image type="content" source="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png" alt-text="Screenshot showing the Download package button in the Microsoft Defender portal." lightbox="./media/defender-deployment-tool-windows/defender-deployment-tool-windows-download-package-ga.png":::
-
-## [Generate and download a new onboarding package (preview)](#tab/preview-experience)
+The following steps show how to generate and download a new onboarding package.
 
 1. In the Microsoft Defender portal (security.microsoft.com), go **System** > **Settings** > **Endpoints** > **Onboarding**.
 
@@ -129,8 +115,7 @@ If preview features are enabled on your tenant, select the **Generate and downlo
 
    Copy the key and save it, as it will be needed with the deployment tool.
 
-   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* file of the Defender deployment tool executable.
----
+   After you've copied the key and saved it, select **Download deployment tool**. This downloads a *.zip* or *.exe* file of the Defender deployment tool executable, depending on the download choice you make.
 
 ## Deploy Defender endpoint security on devices
 
@@ -140,17 +125,7 @@ The Defender deployment tool can be used interactively or non-interactively.
 
 The tool supports two interactive experiences that are suitable for deployment to one or a limited number of devices - a "double-click" quick single-machine onboarding experience without any changes to default behavior, and a manual command-line experience that provides more flexibility.
 
-To use the quick "double-click" default installation, select the relevant tab.
-
-### [If preview features aren't enabled](#tab/ga-experience)
-
-1. Make sure the tool executable and the onboarding file are in the same directory.
-
-1. Double-click the executable to launch it. The tool will automatically detect the onboarding file and begin the onboarding process.
-
-1. Follow the instructions in the user interface to complete onboarding.
-
-### [If preview features are enabled](#tab/preview-experience)
+To use the quick "double-click" default installation:
 
 1. Double-click the executable to launch it.
 
@@ -165,7 +140,6 @@ To use the quick "double-click" default installation, select the relevant tab.
 1. Wait until installation is complete, and then select **OK**. No device reboot is required.
 
    :::image type="content" source="./media/defender-deployment-tool-windows/process-complete.png" alt-text="Screenshot showing the message indicating that onboarding is complete.":::
----
 
 ### Non-interactive use
 
