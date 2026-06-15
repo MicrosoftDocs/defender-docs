@@ -88,7 +88,7 @@ Simulate risky activity in a test environment to verify that alerts are triggere
 
 1. Verify that the expected alerts appear in the Defender portal.
 
-For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](../manage-security-alerts.md).
+For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender](../manage-security-alerts.md).
 
 ## Test remediation actions
 

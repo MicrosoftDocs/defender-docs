@@ -180,7 +180,7 @@ Replace the onboarding package file in the current deployment method.
 You can use the following methods to check that you have successfully connected Windows devices:
 
 - [Client analyzer](#use-defender-for-endpoint-client-analyzer-windows-to-validate-connectivity-after-onboarding-for-migrated-endpoints)
-- [Tracking with advanced hunting in Microsoft Defender XDR](#tracking-with-advanced-hunting-in-microsoft-365-defender)
+- [Tracking with advanced hunting in Microsoft Defender](#tracking-with-advanced-hunting-in-microsoft-365-defender)
 - [Track locally using Event Viewer (for Windows)](#tracking-locally-on-a-device-through-windows-event-viewer)
 - [Run tests to confirm connectivity with Defender for Endpoint services](#run-tests-to-confirm-connectivity-with-defender-for-endpoint-services)
 - Checking the registry editor
@@ -189,7 +189,7 @@ You can use the following methods to check that you have successfully connected 
 For macOS and Linux, you can use the following methods:
 
 - MDATP connectivity tests
-- Tracking with advanced hunting in Microsoft Defender XDR
+- Tracking with advanced hunting in Microsoft Defender
 - Run tests to confirm connectivity with Defender for Endpoint services
 
 ### Use Defender for Endpoint Client Analyzer (Windows) to validate connectivity after onboarding for migrated endpoints
@@ -204,7 +204,7 @@ Ensure connectivity is established with the appropriate URLs.
 
 <a name='tracking-with-advanced-hunting-in-microsoft-365-defender'></a>
 
-### Tracking with advanced hunting in Microsoft Defender XDR
+### Tracking with advanced hunting in Microsoft Defender
 
 You can use advanced hunting in Microsoft Defender portal to view the connectivity type status.
 
@@ -313,7 +313,7 @@ After the command runs, the Command Prompt window closes automatically. If succe
 For macOS and Linux, you can use the following methods:
 
 - MDATP connectivity tests
-- Tracking with advanced hunting in Microsoft Defender XDR
+- Tracking with advanced hunting in Microsoft Defender
 - Run tests to confirm connectivity with Defender for Endpoint services
 
 ### MDATP connectivity test (macOS and Linux)
@@ -326,7 +326,7 @@ For example: `https://mdav.us.endpoint.security.microsoft.com/storage`
 
 <a name='tracking-with-advanced-hunting-in-microsoft-365-defender'></a>
 
-### Tracking with advanced hunting in Microsoft Defender XDR
+### Tracking with advanced hunting in Microsoft Defender
 
 To view all devices (limit 30k) and their most recently reported connectivity type:
 

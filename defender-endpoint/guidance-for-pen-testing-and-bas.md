@@ -112,7 +112,7 @@ It's crucial to report to Microsoft as soon as possible. The advanced hunting te
 | Portal | Description |
 |--|--|
 | MDSI portal | The MDSI portal is a service provided by Microsoft Defender Security Intelligence. It allows users to submit files for malware analysis. Microsoft Defender security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions.<br/><br/>|
-| Microsoft Defender portal | If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal. |
+| Microsoft Defender portal | If you have a subscription to Microsoft Defender, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal. |
 
 1. Submit the data you gathered during steps 1-2 by using either the MDSI portal or the Microsoft Defender portal.
 

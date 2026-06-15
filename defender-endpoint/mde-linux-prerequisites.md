@@ -139,8 +139,8 @@ The following Linux server distributions are supported:
 |`ecryptfs`|`Efs`|
 |`ext2`|`S3fs`|
 |`ext3`|`Blobfuse`|
-|`ext4`|`Lustr`|
-|`fuse`|`glustrefs`|
+|`ext4`|`Lustre`|
+|`fuse`|`glusterfs`|
 |`fuseblk`|`Afs`|
 |`jfs`|`sshfs`|
 |`nfs` (v3)|`cifs`|
