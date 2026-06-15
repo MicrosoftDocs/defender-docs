@@ -3,6 +3,9 @@ title: Filter and query activities | Microsoft Defender for Cloud Apps
 description: This article provides a list of Defender for Cloud Apps activity filters and queries and explains how to work with them.
 ms.date: 12/21/2023
 ms.topic: how-to
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ---
 
 # Filter and query Defender for Cloud Apps activities

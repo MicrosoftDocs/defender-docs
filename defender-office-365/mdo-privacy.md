@@ -110,7 +110,7 @@ Your data is available to you while the license is within the grace period or su
 
 Defender for Office 365 shares data, including customer data, among the following Microsoft products, if they're also licensed by a customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
-- Microsoft 365 Defender XDR
+- Microsoft Defender
 - Microsoft Sentinel
 - Audit logs
 

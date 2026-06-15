@@ -37,7 +37,7 @@ The following table describes the recommended learning resources for Defender fo
 |Training|Description|
 |---|---|
 |**Defender for Endpoint** training modules and learning paths|Defender for Business was built on Defender for Endpoint. Try one or more of the modules and learning paths that are available in the [Defender for Endpoint training courses](/training/browse/?expanded=m365%2Cmicrosoft-defender&products=defender-endpoint).|
-|**Defender XDR Ninja training**|Ramp up on security operations through our Defender XDR Ninja training. These resources include videos, blog posts, webcasts, articles, and more. Content is available for the beginner, intermediate, and advanced levels. See [Become a Microsoft Defender XDR Ninja](https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/become-a-microsoft-defender-xdr-ninja/ba-p/1789376#_Toc53749480).|
+|**Defender Ninja training**|Ramp up on security operations through our Defender Ninja training. These resources include videos, blog posts, webcasts, articles, and more. Content is available for the beginner, intermediate, and advanced levels. See [Become a Microsoft Defender Ninja](https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/become-a-microsoft-defender-xdr-ninja/ba-p/1789376#_Toc53749480).|
 
 ## Next steps
 

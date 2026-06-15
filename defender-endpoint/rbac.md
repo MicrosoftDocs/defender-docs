@@ -13,6 +13,7 @@ ms.date: 01/28/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 
 ---
 # Manage portal access using role-based access control
@@ -39,7 +40,7 @@ Large geo-distributed security operations teams typically adopt a tier-based mod
 |Tier 3|**Global security operations team** <br/>This team consists of security experts and is authorized to see and perform all actions from the portal.|
 
 > [!NOTE]
-> For Tier 0 assets, refer to [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) for security admins to provide more granular control of Microsoft Defender for Endpoint and Microsoft Defender XDR.
+> For Tier 0 assets, refer to [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) for security admins to provide more granular control of Microsoft Defender for Endpoint and Microsoft Defender.
 
 Defender for Endpoint RBAC is designed to support your tier- or role-based model of choice and gives you granular control over what roles can see, devices they can access, and actions they can take. The RBAC framework is centered around the following controls:
 

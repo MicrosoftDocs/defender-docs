@@ -139,7 +139,7 @@ To compare the different capabilities between Defender for Office 365 Plan 1 and
 - For more information, see [Feature availability across Defender for Office 365 plans](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description#feature-availability).
 - [Safe Documents](safe-documents-in-e5-plus-security-about.md) is available to users with the Microsoft 365 A5 or Microsoft Defender Suite licenses (not included in Defender for Office 365 plans).
 - If your current subscription doesn't include Defender for Office 365 Plan 2, you can [try Defender for Office 365](try-microsoft-defender-for-office-365.md) free for 90 days. Or, [contact sales to start a trial](https://info.microsoft.com/ww-landing-M365SMB-web-contact.html).
-- Organizations with Defender for Office 365 Plan 2 have access to **Microsoft Defender XDR integration** to efficiently detect, review, and respond to incidents and alerts.
+- Organizations with Defender for Office 365 Plan 2 have access to **Microsoft Defender integration** to efficiently detect, review, and respond to incidents and alerts.
 
 ## Related content
 

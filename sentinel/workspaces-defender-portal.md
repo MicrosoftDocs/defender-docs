@@ -4,7 +4,8 @@ description: Learn about the support of multiple workspaces for Microsoft Sentin
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: concept-article
-ms.date: 03/17/2026
+ms.date: 06/08/2026
+ai-usage: ai-assisted
 appliesto: 
     - Microsoft Sentinel with Defender XDR in the Defender portal
 
@@ -44,10 +45,14 @@ Use one of the following roles or role combinations to manage primary and second
 
  |Task |Microsoft Entra or Azure built-in role required |Scope |
   |---------|---------|---------|
-  |**Onboard Microsoft Sentinel to the Defender portal**| At least a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID <br><br> [Owner](/azure/role-based-access-control/built-in-roles#owner)<br> OR <br>[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) and [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) |Tenant<br><br><br>- Subscription for Owner or User Access Administrator roles </br></br>- Subscription, resource group, or workspace resource for Microsoft Sentinel Contributor|
-  |**Connect or disconnect a secondary workspace**| At least a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID <br><br> [Owner](/azure/role-based-access-control/built-in-roles#owner)<br> OR <br>[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) and [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) |Tenant<br><br><br>- Subscription for Owner or User Access Administrator roles </br></br>- Subscription, resource group, or workspace resource for Microsoft Sentinel Contributor|
+  |**Onboard a *primary* Microsoft Sentinel workspace to the Defender portal**| At least a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID <br><br> [Owner](/azure/role-based-access-control/built-in-roles#owner) (unconditional role assignment)<br> OR <br>[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) and [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) |Tenant<br><br><br>- Subscription for Owner role|
+  |**Connect or disconnect a *secondary* workspace only**| [Owner](/azure/role-based-access-control/built-in-roles#owner)<br> OR <br>[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) and [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) |- Subscription for Owner or User Access Administrator roles </br></br>- Subscription, resource group, or workspace resource for Microsoft Sentinel Contributor|
   |**Change the primary workspace**| At least a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID <br><br> [Owner](/azure/role-based-access-control/built-in-roles#owner)<br> OR <br>[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) and [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) |Tenant<br><br><br>- Subscription for Owner or User Access Administrator roles </br></br>- Subscription, resource group, or workspace resource for Microsoft Sentinel Contributor|
 |**Activate or deactivate a Sentinel workspace in Unified RBAC**| At least a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) in Microsoft Entra ID <br><br> [Owner](/azure/role-based-access-control/built-in-roles#owner)<br> OR <br>[User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator) and [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) |Tenant<br><br><br>- Subscription for Owner or User Access Administrator roles </br></br>- Subscription, resource group, or workspace resource for Microsoft Sentinel Contributor|
+
+For onboarding, the [Owner](/azure/role-based-access-control/built-in-roles#owner) role assignment must be unconditional at the subscription scope.
+
+:::image type="content" source="media/workspaces-defender-portal/owner-unconditional-role-assignment.png" alt-text="Screenshot of Azure Add role assignment conditions showing Owner set to Allow user to assign all roles (highly privileged).":::
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization.

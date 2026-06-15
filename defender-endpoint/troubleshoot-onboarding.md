@@ -14,6 +14,7 @@ ms.date: 01/15/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 ---
 
 # Troubleshoot Microsoft Defender for Endpoint onboarding issues

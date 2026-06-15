@@ -15,6 +15,7 @@ ms.date: 03/26/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
 ---
 # Investigate connection events that occur behind forward proxies
@@ -32,8 +33,8 @@ Monitoring network connection behind a forward proxy is possible due to other ne
 
 Network protection can be controlled using the following modes:
 
-- **Block**: Users or apps are blocked from connecting to dangerous domains. You'll be able to see this activity in Microsoft Defender XDR.
-- **Audit**: Users or apps won't be blocked from connecting to dangerous domains. However, you'll still see this activity in Microsoft Defender XDR.
+- **Block**: Users or apps are blocked from connecting to dangerous domains. You'll be able to see this activity in the Defender portal.
+- **Audit**: Users or apps won't be blocked from connecting to dangerous domains. However, you'll still see this activity in the Defender portal.
 
 
 If you turn off network protection, users or apps won't be blocked from connecting to dangerous domains. You won't see any network activity in Microsoft Defender XDR.

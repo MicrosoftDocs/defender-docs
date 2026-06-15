@@ -29,7 +29,7 @@ If you're experiencing issues with a cloud service, we recommend checking servic
 
 Similar to reviewing activity logs, advanced hunting can be used as a scheduled activity, using custom detections or ad-hoc queries to proactively hunt for threats.
 
-Advanced hunting is a unified tool that allows you to hunt for threats across Microsoft Defender XDR. We recommend that you save frequently used queries for faster manual threat hunting and remediation. 
+Advanced hunting is a unified tool that allows you to hunt for threats in Microsoft Defender. We recommend that you save frequently used queries for faster manual threat hunting and remediation. 
 
 The following sample queries are useful when querying for Defender for Cloud Apps data:
 

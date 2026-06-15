@@ -33,6 +33,9 @@ The sensor version you deploy depends on the server role and operating system. U
 
 Defender for Identity supports mixed environments with both v3.x and v2.x sensors. For example, you might deploy v3.x on domain controllers running Windows Server 2019 or later, and v2.x on older domain controllers or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. Both sensor versions work together and report to the same Defender for Identity workspace.
 
+> [!IMPORTANT]
+> If any of your sensors are v3.x, select **Automatically use the sensor's local system account** for all sensors. The v3.x sensors don't use gMSA accounts configured for v2.x sensors; they always use the local system account. For more information, see [Sensor v3.x service account requirements](deploy-sensor-v3.md#service-account-requirements).
+
 Before you activate the Defender for Identity sensor v3.x, note that v3.x:
 
 - Requires Defender for Endpoint deployed on the server. The endpoint deployment alone isn't a prerequisite; Defender for Endpoint must be onboarded on the server where the sensor runs.

@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ---
-# Access the Microsoft Defender XDR MSSP customer portal
+# Access the Microsoft Defender MSSP customer portal
 
 
 

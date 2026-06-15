@@ -4,11 +4,12 @@ description: View ASR rule detections, device configuration status, and exclusio
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-audience: ITPro
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom: asr, msecd-doc-authoring-1012
+ms.custom:
+  - asr
+  - sfi-ga-nochange
 ms.topic: how-to
 ms.collection:
 - m365-security

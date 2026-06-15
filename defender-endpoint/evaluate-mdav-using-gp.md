@@ -168,7 +168,7 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 |OS|PowerShell command|
 |---|---|
 |Windows Server 2012 R2 and later|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
-|Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](update-agent-mma-windows.md#upgrade-to-the-new-unified-agent-for-defender-for-endpoint)|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true -AllowNetworkProtectionDownLevel $true`|
+|Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](update-agent-mma-windows.md#upgrade-to-the-new-agent-for-defender-for-endpoint)|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true -AllowNetworkProtectionDownLevel $true`|
 
 ## Attack surface reduction rules
 
@@ -278,7 +278,7 @@ If your settings don't take effect, you might have a conflict. To resolve confli
 
 If you have any questions about a detection that Microsoft Defender AV makes, or you discover a missed detection, you can submit a file to us.
 
-If you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business: refer [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
+If you have Microsoft Defender, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business: refer [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
 
 If you have Microsoft Defender Antivirus, see [Submit files for analysis](/unified-secops/submission-guide).
 

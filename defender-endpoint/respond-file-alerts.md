@@ -14,6 +14,7 @@ ms.subservice: edr
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 ---
 
 # Take response actions on a file
@@ -147,8 +148,8 @@ The **Download file** button can have the following states:
 - **Active** - You are able to collect the file.
 
 - **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files. The following permissions are required:
-  - Microsoft Defender XDR Unified role-based access control (RBAC):
-    - Add file collection permission in Microsoft Defender XDR Unified (RBAC)
+  - Microsoft Defender Unified role-based access control (RBAC):
+    - Add file collection permission in Microsoft Defender Unified (RBAC)
   - Microsoft Defender for Endpoint role-based access control (RBAC):
     - Portable Executable files (.exe, .sys, .dll, and others):
       - Security Administrator or Advanced live response or Alerts

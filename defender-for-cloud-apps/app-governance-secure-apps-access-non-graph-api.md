@@ -4,6 +4,7 @@ ms.date: 10/30/2025
 ms.topic: how-to
 description: Learn how to secure apps accessing other APIs using app governance in the Microsoft Defender portal.
 ms.reviewer: shragar
+ms.custom: sfi-image-nochange
 ---
 
 # Secure apps accessing non-Graph APIs using app governance
