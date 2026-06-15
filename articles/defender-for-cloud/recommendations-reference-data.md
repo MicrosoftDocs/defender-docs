@@ -3,7 +3,7 @@ title: Reference table for all data security recommendations in Microsoft Defend
 description: This article lists all Microsoft Defender for Cloud data security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/09/2026
+ms.date: 06/15/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -1091,6 +1091,12 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Medium
 
+### Deletion protection should be enabled on Neptune DB clusters (Preview)
+
+**Description**: Defender for Cloud identified that deletion protection is not enabled on your Neptune DB cluster. This poses a risk of accidental or malicious data loss, as the database can be permanently deleted without any safeguard. Enabling deletion protection ensures the cluster cannot be removed until the setting is explicitly disabled, protecting critical data from unintended destruction.
+
+**Severity**: Medium
+
 ### Encryption at rest should be enabled for EBS volumes in Auto Scaling Groups (Preview)
 
 **Description**: Defender for Cloud identified Auto Scaling Group launch templates that provision EBS volumes without encryption at rest. This poses a risk of unauthorized data exposure, as snapshots or copies of unencrypted volumes can be read by any principal with sufficient EBS permissions, bypassing the running instance's access controls. Encryption at rest ensures that storage-level access alone does not reveal the data, since decryption additionally requires permissions on the KMS key.
@@ -1194,6 +1200,12 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: Medium
 
+### Logging should be enabled and encrypted on EMR clusters (Preview)
+
+**Description**: Defender for Cloud identified EMR clusters that either do not publish cluster logs to Amazon S3 or Amazon CloudWatch Logs, or publish logs without encryption configured for the chosen destination. Cluster logs may contain operational details such as application logs, query text and error traces. Without log publishing, visibility into cluster activity is reduced, and without encryption on the chosen log destination there is a risk of unauthorized access to log contents.
+
+**Severity**: Medium
+
 ### Managed admin credentials should be enabled for Amazon Redshift clusters
 
 **Description**: Defender for Cloud identified that your Amazon Redshift clusters are not using managed admin credentials. Managed admin credentials involve securely storing administrative credentials in AWS Secrets Manager with automatic rotation, which minimizes the risk of credential exposure. Without this setup, there is an increased risk of unauthorized database access and potential data breaches.
@@ -1283,6 +1295,12 @@ Configure a private endpoint connection to enable access to traffic coming only 
 **Description**: Defender for Cloud identified insecure client connection settings in AlloyDB instance. The evaluation checks the 'Require connectors' property, which when set to false permits direct PostgreSQL protocol connections without a secure mediator such as the AlloyDB Auth Proxy. This bypasses IAM-based authentication and automatic TLS encryption, increasing the risk of weaker authentication and potential exposure of unencrypted traffic within your VPC.
 
 **Severity**: Medium
+
+### Security configuration should be enabled on EMR clusters (Preview)
+
+**Description**: Defender for Cloud identified EMR clusters that are not associated with a security configuration. A security configuration defines settings for encryption, authentication (Kerberos is recommended), authorization etc. Without a security configuration, data processed and stored within EMR clusters may be exposed to unauthorized access.
+
+**Severity**: High
 
 ### Security groups should be configured for MemoryDB clusters
 

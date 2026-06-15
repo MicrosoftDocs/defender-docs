@@ -3,7 +3,7 @@ title: Reference table for all networking security recommendations
 description: This article lists all Microsoft Defender for Cloud networking security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/09/2026
+ms.date: 06/15/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -461,6 +461,18 @@ Monitoring changes to IAM policies helps ensure authentication and authorization
 ### Public access should be disabled on DMS replication instances (Preview)
 
 **Description**: Defender for Cloud identified that a DMS replication instance is configured as publicly accessible. This poses a risk of unauthorized access and potential data breaches, as the instance can be reached from the internet rather than being restricted to the VPC.
+
+**Severity**: High
+
+### Public access should be disabled on Neptune DB instances (Preview)
+
+**Description**: Defender for Cloud identified that your Neptune DB instance is publicly accessible. This poses a risk of unauthorized access and data breaches, as the database is exposed to the internet. Restricting public access ensures that only trusted networks can connect to the database.
+
+**Severity**: High
+
+### Public network access should be disabled on EMR cluster primary nodes (Preview)
+
+**Description**: Defender for Cloud identified EMR clusters whose primary node is reachable through a public DNS name. Public exposure of the primary node increases the attack surface, allowing internet-based actors to interact with cluster endpoints and management interfaces, which can increase the risk of unauthorized access, reconnaissance, and exploitation of exposed services.
 
 **Severity**: High
 

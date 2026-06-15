@@ -3,7 +3,7 @@ title: Reference table for all compute security recommendations in Microsoft Def
 description: This article lists all Microsoft Defender for Cloud compute security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/09/2026
+ms.date: 06/15/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -732,6 +732,12 @@ To learn more about the supported runtimes that this control checks for the supp
 **Description**: Microsoft Defender for Cloud identified some overly permissive inbound rules for management ports in your network. Enable just-in-time access control to protect your Instances from internet-based brute-force attacks. [Learn more](just-in-time-access-usage.yml).
 
 **Severity**: High
+
+### Termination protection should be enabled on EMR clusters (Preview)
+
+**Description**: Defender for Cloud identified EMR clusters with termination protection disabled. Termination protection helps prevent accidental or unauthorized termination of the cluster and the loss of associated HDFS data on core instances. Without termination protection, the cluster is more susceptible to unintended termination events, increasing operational and availability risk.
+
+**Severity**: Low
 
 ### Unused EC2 security groups should be removed
 

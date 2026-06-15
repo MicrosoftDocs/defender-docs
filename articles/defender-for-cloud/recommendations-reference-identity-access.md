@@ -3,7 +3,7 @@ title: Reference table for all identity and access security recommendations in M
 description: This article lists all Microsoft Defender for Cloud identity and access security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/09/2026
+ms.date: 06/15/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -308,6 +308,12 @@ Sending CloudTrail logs to CloudWatch Logs facilitates real-time and historic ac
 
 **Severity**: Low
 
+### Custom IAM roles should be configured on EMR clusters (Preview)
+
+**Description**: Defender for Cloud identified EMR clusters using one or more AWS default IAM identities, such as the default service role (EMR_DefaultRole / EMR_DefaultRole_V2), the default EC2 instance profile (EMR_EC2_DefaultRole) or the default Auto Scaling role (EMR_AutoScaling_DefaultRole). Default identities may have broader permissions than required and may not align with least-privilege principles, which can increase the risk of unintended access to AWS resources.
+
+**Severity**: Medium
+
 ### Custom KMS key should be configured for encryption on Cognito User Pools (Preview)
 
 **Description**: Defender for Cloud identified that the Cognito User Pool is not using a customer-managed KMS key for encryption. A custom KMS key provides control over key rotation, access policies and audit trails for sensitive data. This poses a risk of reduced control over data encryption and key lifecycle management.
@@ -547,6 +553,12 @@ When you group related IAM actions in this way, you can also avoid exceeding the
 
 **Severity**: Low
 
+### IAM Database Authentication should be enabled on DB Cluster (Preview)
+
+**Description**: Defender for Cloud identified that IAM database authentication is disabled on your DB cluster. This feature uses AWS Identity and Access Management (IAM) credentials to centrally authenticate access across the entire DB cluster. Without it, your cluster relies on traditional database credentials, increasing the risk of unauthorized access and misconfigurations that could lead to data breaches.
+
+**Severity**: Medium
+
 ### IAM policies should be attached only to groups or roles
 
 **Description**: By default, IAM users, groups, and roles have no access to AWS resources. IAM policies are the means by which privileges are granted to users, groups, or roles.
@@ -581,6 +593,12 @@ Instead of granting permission for all keys, determine the minimum set of keys t
 **Description**: Defender for Cloud identified that Instance Metadata Service Version 2 (IMDSv2) is not enforced for an Auto Scaling Group. This poses a risk of credential theft through Server-Side Request Forgery (SSRF) attacks. IMDSv2 requires session-oriented tokens to access instance metadata, which mitigates SSRF attacks that could be used to steal IAM role credentials from EC2 instances.
 
 **Severity**: High
+
+### Kerberos authentication should be enabled on EMR clusters (Preview)
+
+**Description**: Defender for Cloud identified EMR clusters that do not have Kerberos authentication enabled. The absence of Kerberos authentication reduces the ability to reliably verify and attribute user activity across distributed services on the cluster. This weakens authentication assurance, non-repudiation and audit integrity, and may increase the risk of unauthorized access through user impersonation.
+
+**Severity**: Medium
 
 ### Lambda functions should restrict public access
 
