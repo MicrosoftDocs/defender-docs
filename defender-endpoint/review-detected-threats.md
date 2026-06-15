@@ -132,4 +132,4 @@ The device has not been [retired](/intune/intune-service/remote-actions/devices-
 ## Related articles
 
 - [Alerts in Microsoft Defender for Endpoint](investigate-alerts.md)
-- [Alerts queue in Microsoft Defender XDR](alerts-queue-endpoint-detection-response.md)
+- [Alerts queue in Microsoft Defender](alerts-queue-endpoint-detection-response.md)

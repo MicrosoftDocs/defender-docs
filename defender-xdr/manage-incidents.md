@@ -18,7 +18,7 @@ ms.topic: how-to
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 1/04/2026
+ms.date: 06/03/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -37,6 +37,8 @@ To manage your incidents in the Microsoft Defender portal ([https://security.mic
 :::image type="content" source="./media/manage-incidents/incidents-queue.png" alt-text="Screenshot showing the incident queue and quick launch pane in the Microsoft Defender portal." lightbox="./media/manage-incidents/incidents-queue.png":::
 
 This article shows you how to perform various incident management tasks associated with different stages in an incident's lifecycle.
+
+To open an incident or alert on demand for an investigation or operational workflow, see [Manually create an incident or alert in Microsoft Defender](manually-create-incident.md).
 
 **[Incident triage:](#incident-triage)**
 
