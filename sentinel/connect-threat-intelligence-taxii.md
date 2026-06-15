@@ -1,17 +1,18 @@
 ---
 title: Connect to STIX/TAXII threat intelligence feeds
 titleSuffix: Microsoft Sentinel
-description: Learn how to connect Microsoft Sentinel to industry-standard threat intelligence feeds to import threat indicators.
+description: Learn how to connect Microsoft Sentinel to STIX/TAXII threat intelligence feeds to import indicators and configure TAXII 2.1 export to share intelligence with external platforms.
 ms.author: pauloliveria 
 author: poliveria  
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 1/20/2025
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security admin, I want to integrate STIX/TAXII feeds into Microsoft Sentinel to ingest threat intelligence, generating alerts and incidents to enhance threat detection and response capabilities.
@@ -35,6 +36,8 @@ For more information, see [Connect your threat intelligence platform (TIP) to Mi
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
 ## Prerequisites
+
+Before you begin, make sure you have the following prerequisites:
 
 - To install, update, and delete standalone content or solutions in the **Content hub**, you need the Microsoft Sentinel Contributor role at the resource group level.
 - You must have a TAXII 2.0 or TAXII 2.1 API root URI and collection ID.
@@ -113,7 +116,7 @@ When relevant, the following IP addresses are the addresses to include in your a
 
 ## Enable the Threat intelligence - TAXII Export data connector 
 
-To configure the TAXII data connector:
+To configure the Threat Intelligence - TAXII Export connector:
 
 1. Make sure you have the latest version of the Threat Intelligence solution in Microsoft Sentinel. For more information, see [Install the Threat Intelligence solution in Microsoft Sentinel](#install-the-threat-intelligence-solution-in-microsoft-sentinel).
 
@@ -143,7 +146,7 @@ To configure the TAXII data connector:
       ---
 
    > [!NOTE]
-   > Editing existing connectors is currently not supported. To change the configuration of a TAXII server or its rules, reinstall the connector.        
+   > Editing existing connectors is currently not supported. To change the configuration of a TAXII server or its rules, reinstall the TAXII Export connector.        
 
 1. Select **Add** to add your server.
 
