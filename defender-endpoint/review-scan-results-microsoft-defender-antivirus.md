@@ -33,9 +33,9 @@ After a Microsoft Defender Antivirus scan completes, whether it's an [on-demand]
 
 - Windows
 
-## Use Microsoft Defender XDR to review scan results
+## Use Microsoft Defender to review scan results
 
-To view the scan results using Microsoft Defender XDR Endpoint, follow the below process.
+To view the scan results using the Defender portal, follow the below process.
 
 1. Sign in to [Microsoft Defender portal](https://security.microsoft.com)
 

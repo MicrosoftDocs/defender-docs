@@ -6,28 +6,33 @@ ms.author: pauloliveria
 author: poliveria  
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 3/14/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security engineer, I want to add entities to threat intelligence during incident investigations so that my team can track and manage indicators of compromise effectively.
 ---
 
 # Add entities to threat intelligence in Microsoft Sentinel
 
+This article shows how to add entities discovered in an incident investigation as threat intelligence indicators in Microsoft Sentinel, and how to find and use those indicators afterward.
+
 During an investigation, you examine entities and their context as an important part of understanding the scope and nature of an incident. When you discover an entity as a malicious domain name, URL, file, or IP address in the incident, it should be labeled and tracked as an indicator of compromise (IOC) in your threat intelligence.
 
 For example, you might discover an IP address that performs port scans across your network or functions as a command and control node by sending and/or receiving transmissions from large numbers of nodes in your network.
 
-With Microsoft Sentinel, you can flag these types of entities from within your incident investigation and add them to your threat intelligence. You can view the added indicators by querying them or searching for them in the threat intelligence management interface and use them across your Microsoft Sentinel workspace.
+With Microsoft Sentinel, you can flag malicious domain names, URLs, files, and IP addresses from within your incident investigation and add them to your threat intelligence. You can view the added indicators by querying them or searching for them in the threat intelligence management interface and use them across your Microsoft Sentinel workspace.
 
 ## Add an entity to your threat intelligence
 
 The [Incident details page](investigate-incidents.md) and the investigation graph give you two ways to add entities to threat intelligence.
 
 # [Incident details page](#tab/incidents)
+
+Perform the following steps to add an entity to threat intelligence from the Incident details page:
 
 1. On the Microsoft Sentinel menu, select **Incidents** from the **Threat management** section.
 
@@ -71,9 +76,9 @@ The [investigation graph](investigate-cases.md) is a visual, intuitive tool that
 
 ---
 
-Whichever of the two interfaces you choose, you end up here.
+After you select **Add to TI** from either the Incident details page or the investigation graph, the **New indicator** side pane opens.
 
-1. The **New indicator** side pane opens. The following fields are populated automatically:
+1. The following fields are populated automatically:
 
     - **Types**
         - The type of indicator represented by the entity you're adding.
@@ -131,7 +136,7 @@ Whichever of the two interfaces you choose, you end up here.
 
 1. When all the fields are filled in to your satisfaction, select **Apply**. A message appears in the upper-right corner to confirm that your indicator was created.
 
-1. The entity is added as threat intelligence in your workspace. You can find it [in threat intelligence management interface](work-with-threat-indicators.md#view-your-threat-intelligence-in-the-management-interface). You can also query it [using the ThreatIntelligenceIndicators table](work-with-threat-indicators.md#find-and-view-threat-intelligence-with-queries).
+1. The entity is added as threat intelligence in your workspace. You can find the indicator in the [threat intelligence management interface](work-with-threat-indicators.md#view-your-threat-intelligence-in-the-management-interface). You can also query it by using [ThreatIntelligenceIndicators table queries](work-with-threat-indicators.md#find-and-view-threat-intelligence-with-queries).
 
 ## Related content
 
