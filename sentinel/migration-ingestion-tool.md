@@ -17,15 +17,17 @@ After you [select a target platform](migration-ingestion-target-platform.md) for
 
 This article describes a set of different tools used to transfer your historical data to the selected target platform. This table lists the tools available for each target platform, and general tools to help you with the ingestion process.
 
-|Azure Monitor Basic Logs/Archive  |Azure Data Explorer  |Azure Blob Storage  |General tools |
+| Microsoft Sentinel data lake |Azure Data Explorer  |Azure Blob Storage  |General tools |
 |---------|---------|---------|---------|
 |• [Azure Monitor custom log ingestion tool](#azure-monitor-custom-log-ingestion-tool)<br>• [Direct API](#direct-api)     |• [LightIngest](#lightingest)<br>• [Logstash](#logstash) |• [Azure Data Factory or Azure Synapse](#azure-data-factory-or-azure-synapse)<br>• [AzCopy](#azcopy)          |• [Azure Data Box](#azure-data-box)<br> • [SIEM data migration accelerator](#siem-data-migration-accelerator) |
 
-## Azure Monitor Basic Logs/Archive 
+## Microsoft Sentinel data lake
 
-Before you ingest data to Azure Monitor Basic Logs or Archive, for lower ingestion prices, ensure that the table you're writing to is [configured as Basic Logs](/azure/azure-monitor/logs/logs-table-plans). Review the [Azure Monitor custom log ingestion tool](#azure-monitor-custom-log-ingestion-tool) and the [direct API](#direct-api) method for Azure Monitor Basic Logs. 
+Microsoft Sentinel data lake is the native data layer of the Microsoft Sentinel platform. It's the simplest path to a unified, queryable history of your security data inside Microsoft Sentinel and the recommended platform for long-term data retention.
 
-### Azure Monitor custom log ingestion tool 
+To learn more, see [What is Microsoft Sentinel data lake?](/azure/sentinel/datalake/sentinel-lake-overview) and [Onboard to Microsoft Sentinel data lake](/azure/sentinel/datalake/sentinel-lake-onboarding).
+
+### Azure Monitor custom log ingestion tool
 
 The [custom log ingestion tool](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/CustomLogsIngestion-DCE-DCR) is a PowerShell script that sends custom data to an Azure Monitor Logs workspace. You can point the script to the folder where all your log files reside, and the script pushes the files to that folder. The script accepts a CSV or JSON format for log files. 
 
@@ -38,6 +40,7 @@ With this option, you [ingest your custom logs into Azure Monitor Logs](/azure/a
 You can [ingest data to Azure Data Explorer](/azure/data-explorer/ingest-data-overview) (ADX) in several ways.
 
 The ingestion methods that ADX accepts are based on different components:
+
 - SDKs for different languages, such as .NET, Go, Python, Java, NodeJS, and APIs.
 - Managed pipelines, such as Event Grid or Storage Blob Event Hubs, and Azure Data Factory.
 - Connectors or plugins, such as Logstash, Kafka, Power Automate, and Apache Spark.
