@@ -466,7 +466,7 @@
             - name: Discover generative AI workloads
               displayName: AI, workloads, models, applications, apps, AI BOM
               href: identify-ai-workload-model.md
-            - name: Discover AI models
+            - name: Discover AI models (Preview)
               displayName: AI, models, generative, applications, apps
               href: ai-model-security.md
             - name: Explore risks to pre-deployment generative AI artifacts

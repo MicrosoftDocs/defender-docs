@@ -1,12 +1,12 @@
 ---
-title: Discover AI models
+title: Discover AI models (Preview)
 description: Learn about AI model security in Microsoft Defender for Cloud.
 ms.topic: concept-article
 ms.date: 04/14/2026
 zone_pivot_groups: defender-portal-experience
 ---
 
-# AI model security
+# AI model security (Preview)
 
 > [!IMPORTANT]
 > This feature is currently in preview and included with the Microsoft Defender for AI Services plan. During preview, there is no additional charge for AI model scanning. However, enabling the Defender for AI Services plan may incur costs related to threat protection features. Continued inclusion of AI model scanning feature as part of Defender for AI Services is not guaranteed when it becomes generally available (GA), and licensing requirements may change. If that occurs, a notification will be sent before the feature is disabled with options to re‑enable it under the applicable license.
