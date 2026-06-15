@@ -92,9 +92,12 @@ The Defender for Identity sensor needs to be deployed on the domain controller w
 
 Microsoft Defender for Cloud Apps must be connected to Microsoft Office 365 through the connector. To connect Defender for Cloud Apps, see [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps). 
 
-#### App Governance
 
-App Governance must be turned on. Refer to the [app governance documentation](/defender-cloud-apps/app-governance-get-started) to turn it on. 
+> [!IMPORTANT]
+> To ensure full functionality of the capability, it is mandatory to properly configure the Microsoft 365 connector. As part of the setup process, all checkboxes within the Microsoft 365 connector must be selected, including the option to enable Microsoft Entra ID apps. Failure to select all required options may result in:
+- Partial or degraded functionality
+- Inability to perform critical actions (such as app governance or disruption flows)
+- Increased likelihood of operation failures 
 
 ### Microsoft Defender for Office 365 prerequisites
 
