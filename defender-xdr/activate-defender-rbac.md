@@ -52,7 +52,7 @@ Before you activate Microsoft Defender unified RBAC, consider the following:
 The following steps guide you on how to activate the Microsoft Defender unified RBAC model. You can activate your workloads in the following ways:
 
 * [Activate in the permissions and roles page](#activate-from-the-permissions-and-roles-page)
-* [Activate in Microsoft Defender XDR settings](#activate-in-microsoft-365-defender-settings)
+* [Activate in Microsoft Defender settings](#activate-in-microsoft-365-defender-settings)
 
 ### Activate from the Permissions and roles page
 
@@ -82,8 +82,9 @@ The following steps guide you on how to activate the Microsoft Defender unified 
 1. Select **Activate** on the confirmation message.
 
 <a name='activate-in-microsoft-365-defender-settings'></a>
+<a name='activate-in-microsoft-defender-xdr-settings'></a>
 
-### Activate in Microsoft Defender XDR settings
+### Activate in Microsoft Defender settings
 
 Follow these steps to activate your workloads directly in Microsoft Defender XDR settings:
 
@@ -105,7 +106,7 @@ Follow these steps to activate your workloads directly in Microsoft Defender XDR
 
 ## Deactivate Microsoft Defender unified RBAC
 
-You can deactivate Microsoft Defender XDR unified RBAC and revert to the individual RBAC models from Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Sentinel, and Microsoft Defender for Office 365 (which includes [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about)).
+You can deactivate Microsoft Defender unified RBAC and revert to the individual RBAC models from Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Sentinel, and Microsoft Defender for Office 365 (which includes [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about)).
 
 To deactivate the workloads, repeat the steps in the previous section and select the workloads you want to deactivate. The status is set to **Not Active**.
 

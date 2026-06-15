@@ -12,7 +12,7 @@ ms.collection:
 - mde-linux
 ms.topic: article
 ms.subservice: linux
-ms.date: 04/30/2026
+ms.date: 06/12/2026
 ---
 
 # Prerequisites for Microsoft Defender for Endpoint on Linux
@@ -103,11 +103,18 @@ The following Linux server distributions are supported:
 | Debian | 9–13 | 11, 12, 13 |
 | SUSE Linux Enterprise Server | 12.x, 15.x | 15 (SP5, SP6) |
 | Oracle Linux | 7.2+, 8.x, 9.x | 8.x, 9.x |
-| Amazon Linux | 2, 2023 | 2, 2023 |
+| Amazon Linux | 2, 2023 | 2 (Support retiring 31 October 2026. See notice below.)<br>2023 |
 | Fedora | 33–42 | - |
 | Rocky Linux | 8.7+, 9.2+ | 8.7+, 9.2+ |
 | Alma Linux | 8.4+, 9.2+ | 8.4+, 9.2+ |
 | Mariner | 2 | 2 |
+
+> [!IMPORTANT]
+> **Support for Microsoft Defender for Endpoint on Amazon Linux 2 (AL2) running on ARM64 architecture will be deprecated on 31 October 2026**.
+>
+> The last supported Defender version for AL2 (ARM64) is 101.25122.0004 (expiry 31 October 2026). **After that date, official support for AL2 (ARM64) will end**. Customers are advised to migrate to a supported Linux distribution before this date to ensure continued protection and support.
+>
+> This change applies only to ARM64-based AL2 machines. **AMD64/x86_64 architectures are not impacted**.
 
 > [!NOTE]
 > Distributions and versions that aren't explicitly listed above are unsupported
@@ -132,8 +139,8 @@ The following Linux server distributions are supported:
 |`ecryptfs`|`Efs`|
 |`ext2`|`S3fs`|
 |`ext3`|`Blobfuse`|
-|`ext4`|`Lustr`|
-|`fuse`|`glustrefs`|
+|`ext4`|`Lustre`|
+|`fuse`|`glusterfs`|
 |`fuseblk`|`Afs`|
 |`jfs`|`sshfs`|
 |`nfs` (v3)|`cifs`|

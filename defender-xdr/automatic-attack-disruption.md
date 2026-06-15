@@ -4,17 +4,19 @@ description: Automatically contain assets controlled by attackers by using autom
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
+ms.reviewer: Ofer Shreiber
 ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
-  - usx-security
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.date: 06/22/2025
+ms.date: 06/11/2026
 appliesto:
   - Microsoft Defender XDR
+
+#customer intent: As a security operator, I want to understand how automatic attack disruption works in Microsoft Defender, so that I can have confidence in the automatic response actions taken in my environment and explain this capability to my stakeholders.
 ---
 
 # Automatic attack disruption in Microsoft Defender
@@ -25,7 +27,9 @@ Microsoft Defender correlates millions of individual signals to identify active 
 
 Automatic attack disruption limits lateral movement early on and reduces the overall impact of an attack, from associated costs to loss of productivity. At the same time, it leaves security operations teams in complete control of investigating, remediating, and bringing assets back online.
 
-This article provides an overview of automated attack disruption and includes links to the next steps and other resources.
+This overview explains automated attack disruption and links to next steps and related resources.
+
+Attack disruption supports response actions in Microsoft Defender services and integrated identity services. This support includes actions in Microsoft Entra ID and Active Directory, and preview support for [Okta](okta-attack-disruption.md) and [AWS](/azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json) integrated scenarios.
 
 > [!TIP]
 > This article describes how attack disruption works. To configure these capabilities, see [Configure attack disruption capabilities](configure-attack-disruption.md) in Microsoft Defender.
@@ -40,13 +44,13 @@ Automatic attack disruption operates in three key stages:
 
 - It uses Microsoft Defender's ability to correlate signals from many different sources into a single, high-confidence incident through insights from endpoints, identities, email and collaboration tools, and SaaS apps.
 - It identifies assets controlled by the attacker and used to spread the attack.
-- It automatically takes response actions across relevant Microsoft Defender products to contain the attack in real-time by containing and disabling affected assets.
+- It automatically takes response actions in relevant Microsoft Defender products to contain the attack in real-time by containing and disabling affected assets.
 
 This game-changing capability limits a threat actor's progress early on and dramatically reduces the overall impact of an attack, from associated costs to loss of productivity.
 
 ## How Defender establishes confidence for automatic action
 
-Security teams might hesitate when systems take automatic action because response actions can affect business operations. Automatic attack disruption addresses this concern by using high-fidelity signals and incident-level correlation across real data from email, identity, applications, documents, devices, networks, and files.
+Security teams might hesitate when systems take automatic action because response actions can affect business operations. Automatic attack disruption addresses this concern by using high-fidelity signals and incident-level correlation from real data from email, identity, applications, documents, devices, networks, and files.
 
 Confidence in automatic attack disruption refers to detector precision, measured by signal-to-noise ratio (SNR). For containment actions, Defender maintains a confidence level of 99% or higher based on real production data. Defender evaluates each detector hit against a broad set of indicators to classify true positives and false positives by combining machine learning outputs, cross-workload correlation, and expert-led incident classification.
 
@@ -56,9 +60,11 @@ Microsoft security experts continuously review disruption activity, monitor anom
 
 In addition, all automatic actions can be undone by your security team, so you maintain full control over your environment. For more information, see [Details and results of an automatic attack disruption action](autoad-results.md).
 
+Automatic attack disruption enables the exclusion of specific user accounts, devices, and IP addresses from automated containment actions. Excluding assets from automated responses isn't recommended because it can reduce the effectiveness of automatic attack disruption in protecting your environment from sophisticated, high-impact attacks. To learn more, see [Exclude assets from automated responses in automatic attack disruption](automatic-attack-disruption-exclusions.md).
+
 ## How attack disruption uses AI
 
-Attack disruption AI uses an ensemble of purpose-built models and detectors developed across the Microsoft Defender suite. These capabilities are trained and tuned using multiple data sources, including:
+Attack disruption AI uses an ensemble of purpose-built models and detectors developed throughout the Microsoft Defender suite. These capabilities are trained and tuned using multiple data sources, including:
 
 - Correlated Defender workload telemetry
 - Microsoft threat intelligence
@@ -100,27 +106,37 @@ Defender for Identity executes the disable user action in Microsoft Entra ID by 
 
 For more information, see [remediation actions](m365d-remediation-actions.md) in Microsoft Defender.
 
+## Supported identity services for disruption actions
+
+Use the following table to find where each supported identity service is configured:
+
+| Identity service | Availability | Configuration and setup |
+| --- | --- | --- |
+| Microsoft Entra ID and Active Directory | Generally available | [Configure automatic attack disruption in Microsoft Defender XDR](configure-attack-disruption.md) |
+| Okta (through Microsoft Sentinel integration) | Preview | [Enable attack disruption actions in Okta](okta-attack-disruption.md) |
+| AWS IAM (through Microsoft Sentinel integration) | Preview | [Enable attack disruption actions on AWS with Microsoft Sentinel](/azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json) |
+
 ## Identify when an attack disruption happens in your environment
 
-The Microsoft Defender incident page will reflect the automatic attack disruption actions through the attack story and the status indicated by a yellow bar (Figure 1). The incident shows a dedicated disruption tag, highlight the status of the assets contained in the incident graph, and add an action to the Action Center.
+The Microsoft Defender incident page will reflect the automatic attack disruption actions through the attack story and the status indicated by a yellow bar (Figure 1). The incident shows a dedicated disruption tag, highlights the status of the assets contained in the incident graph, and adds an action to the Action Center.
 
 :::image type="content" source="media/automatic-attack-disruption/Fig1-auto-attack-disruption.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="media/automatic-attack-disruption/Fig1-auto-attack-disruption.png":::
 *Figure 1. Incident view showing the yellow bar where automatic attack disruption took action*
 
-The Microsoft Defender user experience now includes additional visual cues to ensure visibility of these automatic actions. You can find them across the following experiences:
+The Microsoft Defender user experience includes visual cues to ensure visibility of these automatic actions. You can find them in the following experiences:
 
 1. In the incident queue:
 
     - A tag titled *Attack Disruption* appears next to affected incidents
 
-2. On the incident page:
+1. On the incident page:
 
-- A tag titled *Attack Disruption*
-- A yellow banner at the top of the page that highlights the automatic action taken
-- The current asset status is shown in the incident graph if an action is done on an asset, for example, account disabled or device contained
-- The **Policy status** column (Preview) in the **Activities** tab shows the current status of all actions and policies relevant to the incident. Filter by **Provider: Attack disruption** and **Policy status: Active, Inactive, No status** to view disruption policy statuses.
+    - A tag titled *Attack Disruption*
+    - A yellow banner at the top of the page that highlights the automatic action taken
+    - The current asset status is shown in the incident graph if an action is done on an asset, for example, account disabled or device contained
+    - The **Policy status** column (Preview) in the **Activities** tab shows the current status of all actions and policies relevant to the incident. Filter by **Provider: Attack disruption** and **Policy status: Active, Inactive, No status** to view disruption policy statuses.
 
-3. Via API:
+1. Via API:
 
     An **(attack disruption)** string is added to the end of the titles of incidents with high confidence likely to be automatically disrupted. For example:
 
@@ -132,6 +148,7 @@ For more information, see [view attack disruption details and results](autoad-re
 
 - [Configure automatic attack disruption](configure-attack-disruption.md)
 - [View details and results](autoad-results.md)
+- [Exclude assets from automated responses](automatic-attack-disruption-exclusions.md)
 - [Get email notifications for response actions](m365d-response-actions-notifications.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender join tech community](../includes/defender-m3d-techcommunity.md)]

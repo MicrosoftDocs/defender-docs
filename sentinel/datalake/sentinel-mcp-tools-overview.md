@@ -6,7 +6,7 @@ ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: article
-ms.date: 12/01/2025
+ms.date: 05/04/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 

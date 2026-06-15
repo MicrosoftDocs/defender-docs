@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 05/04/2026
+ms.date: 06/09/2026
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to understand attack surface reduction rules so I can protect Windows devices from common malware attack vectors.
 appliesto:
@@ -140,13 +140,16 @@ ASR rules require Microsoft Defender Antivirus as the primary anti-virus app on 
 
 ## Supported operating systems for ASR rules
 
-ASR rules are a Microsoft Defender Antivirus feature found on any edition of Windows that includes Microsoft Defender Antivirus (for example, Windows 11 Home). You can configure ASR rules locally on devices using PowerShell or Group Policy.
+ASR rules are a Microsoft Defender Antivirus feature available on any edition of Windows that includes Microsoft Defender Antivirus (for example, Windows 11 Home). You can configure ASR rules locally on individual devices by using PowerShell. On **Pro** and **Enterprise** editions, you can also use Group Policy.
 
 Centralized management, reporting, and alerting for ASR rules in Microsoft Defender for Endpoint are available in the following editions and versions of Windows:
 
 - **Pro** and **Enterprise** editions of Windows 10 or later.
 - Windows Server 2012 R2 or later.
 - Azure Local (formerly known as Azure Stack HCI) version 23H2 or later.
+
+> [!NOTE]
+> ASR rules are a Windows feature. They aren't available on Linux or macOS devices, even those onboarded to Microsoft Defender for Endpoint.
 
 For more operating system support information, see [Operating system support for ASR rules](attack-surface-reduction-rules-reference.md#operating-system-support-for-asr-rules).
 

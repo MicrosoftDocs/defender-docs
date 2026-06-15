@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 03/21/2025
+ms.date: 06/09/2026
 ms.collection:
 - m365-security
 - tier3
@@ -124,56 +124,74 @@ This page explains how to create a Microsoft Entra application, get an access to
 For more information on Microsoft Entra tokens, see [Microsoft Entra tutorial](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
 
 > [!NOTE]
-> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
+> The example in this article uses interactive sign-in, which prompts the user to authenticate in a browser and supports multifactor authentication and Conditional Access. Avoid authentication flows that require the application to collect or handle a user's password directly. If you need programmatic access without a signed-in user, use [application context](exposed-apis-create-app-webapp.md) with a managed identity or certificate credential instead.
 
 ### Using C\#
 
 > [!TIP]
 > Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
 
-- Copy/Paste the below class in your application.
-- Use **AcquireUserTokenAsync** method with your application ID, tenant ID, user name, and user authentication to acquire a token.
+This example uses the [Microsoft Authentication Library (MSAL)](/entra/msal/dotnet/) to acquire a token interactively. Before you run it:
 
-> [!NOTE]
-> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in the following example requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
+- Add the [`Microsoft.Identity.Client`](https://www.nuget.org/packages/Microsoft.Identity.Client) NuGet package to your project.
+- On your app registration, configure a **Mobile and desktop applications** platform with the `http://localhost` redirect URI, so the interactive flow can return the token.
+- Copy/paste the following class into your application, then call **AcquireUserTokenAsync** with your application ID and tenant ID. The user is prompted to sign in interactively; their password is never handled by your application.
 
 ```csharp
     namespace WindowsDefenderATP
     {
-        using System.Net.Http;
-        using System.Text;
+        using System.Linq;
         using System.Threading.Tasks;
-        using Newtonsoft.Json.Linq;
+        using Microsoft.Identity.Client;
 
         public static class WindowsDefenderATPUtils
         {
             private const string Authority = "https://login.microsoftonline.com";
 
-            private const string WdatpResourceId = "https://api.securitycenter.microsoft.com";
+            // Microsoft Defender for Endpoint APIs expect tokens issued for this resource.
+            private static readonly string[] Scopes = { "https://api.securitycenter.microsoft.com/.default" };
 
-            public static async Task<string> AcquireUserTokenAsync(string username, string password, string appId, string tenantId)
+            public static async Task<string> AcquireUserTokenAsync(string appId, string tenantId)
             {
-                using (var httpClient = new HttpClient())
+                // Public client application for a native (desktop) app.
+                // No client secret or user password is stored or handled by the app.
+                var app = PublicClientApplicationBuilder
+                    .Create(appId)
+                    .WithAuthority($"{Authority}/{tenantId}")
+                    .WithDefaultRedirectUri() // http://localhost - register as a public client redirect URI
+                    .Build();
+
+                var account = (await app.GetAccountsAsync().ConfigureAwait(false)).FirstOrDefault();
+
+                try
                 {
-                    var urlEncodedBody = $"resource={WdatpResourceId}&client_id={appId}&grant_type=password&username={username}&password={password}";
+                    // Reuse a cached token when one is available.
+                    var silentResult = await app
+                        .AcquireTokenSilent(Scopes, account)
+                        .ExecuteAsync()
+                        .ConfigureAwait(false);
 
-                    var stringContent = new StringContent(urlEncodedBody, Encoding.UTF8, "application/x-www-form-urlencoded");
+                    return silentResult.AccessToken;
+                }
+                catch (MsalUiRequiredException)
+                {
+                    // First run or expired session: prompt the user to sign in.
+                    // Uses the authorization code flow with PKCE and supports
+                    // multifactor authentication and Conditional Access.
+                    var interactiveResult = await app
+                        .AcquireTokenInteractive(Scopes)
+                        .ExecuteAsync()
+                        .ConfigureAwait(false);
 
-                    using (var response = await httpClient.PostAsync($"{Authority}/{tenantId}/oauth2/token", stringContent).ConfigureAwait(false))
-                    {
-                        response.EnsureSuccessStatusCode();
-
-                        var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-
-                        var jObject = JObject.Parse(json);
-
-                        return jObject["access_token"].Value<string>();
-                    }
+                    return interactiveResult.AccessToken;
                 }
             }
         }
     }
 ```
+
+> [!TIP]
+> For a headless or no-browser environment, use the [device code flow](/entra/msal/dotnet/acquiring-tokens/desktop-mobile/device-code-flow) (`AcquireTokenWithDeviceCode`) instead of `AcquireTokenInteractive`.
 
 ## Validate the token
 

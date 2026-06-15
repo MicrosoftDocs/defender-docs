@@ -43,7 +43,7 @@ In order for your session policy to work, you must also have a Microsoft Entra I
 
 This procedure describes how to create a new session policy in Defender for Cloud Apps.
 
-1. In Microsoft Defender XDR, select the **Cloud Apps > Policies > Policy management > Conditional Access** tab.
+1. In the Defender portal, select the **Cloud Apps > Policies > Policy management > Conditional Access** tab.
 1. Select **Create policy** > **Session policy**. For example:
 
     ![Screenshot of the Create a Conditional Access policy page.](media/create-policy-from-conditional-access-tab.png)

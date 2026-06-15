@@ -281,7 +281,7 @@ Microsoft Defender for Identity discovers if particular users are **sensitive** 
 
 However, **Sensitive** accounts can also become *dormant* if they aren't used for a period of 180 days. Dormant sensitive entities are targets of opportunity for malicious actors to gain sensitive access to your organization. 
 
-For more information, see [Defender for Identity entity tags in Microsoft Defender XDR](../entity-tags.md#default-sensitive-entities).
+For more information, see [Defender for Identity entity tags in Microsoft Defender](../entity-tags.md#default-sensitive-entities).
 
 **User impact**
 

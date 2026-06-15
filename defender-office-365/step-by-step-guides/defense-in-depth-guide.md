@@ -81,7 +81,7 @@ The following information details how to get the most out of your investment, br
 
 - Priority account protection offers enhanced visibility for accounts in tooling, along with additional protection when in an advanced defense in-depth configuration state.
 
-  **Read more here:** [Priority account protection](protect-your-c-suite-with-priority-account-protection.md)
+  **Read more here:** [Manage and monitor priority accounts](/microsoft-365/admin/security-and-compliance/priority-accounts)
 
 - Advanced Delivery should be configured to deliver any non-Microsoft phish simulations correctly, and if you have a Security Operations mailbox, consider defining it as a SecOps mailbox to ensure emails *don't* get removed from the mailbox due to threats.
 
