@@ -103,6 +103,9 @@ You'll need to have any of the following roles to access Microsoft Defender for 
 > [!NOTE]
 > Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
 
+> [!NOTE]
+> If Microsoft Sentinel is connected to the Microsoft Defender portal, Microsoft XDR alerts may include data from Microsoft Sentinel workspaces. Access to these alerts requires the user to have the appropriate Azure RBAC permissions on the corresponding Sentinel workspace. For more information about Microsoft Sentinel roles, please see: [Connect Microsoft Sentinel to the Microsoft Defender portal](https://learn.microsoft.com/en-us/unified-secops/microsoft-sentinel-onboard)
+
 ## Analyze an alert
 
 To see the main alert page, select the name of the alert. Here's an example.
