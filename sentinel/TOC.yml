@@ -970,7 +970,7 @@
     - name: Publish solutions
       href: publish-sentinel-solutions.md
     - name: Sentinel SIEM solution lifecycle post publish
-      href: sentinel-solutions-post-publish-tracking.md
+      href: isv/sentinel-solutions-post-publish-tracking.md
     - name: Packaging and publishing a Sentinel platform solution
       href: package-platform-solution.md
     - name: Managing Platform Solutions
