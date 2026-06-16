@@ -132,7 +132,7 @@ Select **Show details** at the top right to view more information about all of t
 
 |Column name  |Description  |
 |---------|---------|
-|**Permissions**     |  A list of all permissions currently granted to the app. This information is available for Google Workspace only.     |
+|**Permissions**     |  A list of all permissions currently granted to the app. Available for Google Workspace and Salesforce (Preview).     |
 |**Community use**     | Common, Uncommon, Rare. Indicates how popular the app is across all your users.      |
 |**App ID**     |  The app's ID      |
 |**App activities**     |  A link to the app's activity log, which you can use to understand the app's recent usage.      |
