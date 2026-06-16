@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: install-set-up-deploy
 ms.subservice: linux
 search.appverid: met150
-ms.date: 08/18/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint for servers
 ---
@@ -64,7 +64,7 @@ This section describes the additional steps required for deploying Defender for 
 
 - **Defender deployment tool (Recommended)**
    
-  The recommended method is to run the `defender_deployment_tool.sh` script with the `--install-path /your/custom/path` option at the time of installation. For details, see the [Deployment tool based deployment](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-defender-deployment-tool)
+  The recommended method is to run the `defender_deployment_tool.sh` script with the `--install-path /your/custom/path` option at the time of installation. For details, see the [Deployment tool based deployment](/defender-endpoint/linux-install-with-defender-deployment-tool)
 
 - **Installer script**:
 
@@ -189,7 +189,7 @@ lrwxrwxrwx 1 root root ... /opt/microsoft/mdatp -> /var/tmp/TestInstall/microsof
 - [Prerequisites for Defender for Endpoint on Linux](mde-linux-prerequisites.md)
 
 - Deployment methods:
-   - [Deployment tool based deployment](https://learn.microsoft.com/en-us/defender-endpoint/linux-install-with-defender-deployment-tool)
+   - [Deployment tool based deployment](/defender-endpoint/linux-install-with-defender-deployment-tool)
    - [Installer script based deployment](linux-installer-script.md) 
    - [Ansible based deployment](linux-install-with-ansible.md)
    - [Chef based deployment](linux-deploy-defender-for-endpoint-with-chef.md)
