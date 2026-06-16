@@ -12,13 +12,14 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/25/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
 
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Explore devices in the device inventory
@@ -63,6 +64,8 @@ When you open the device inventory, you can:
 Customize how you view devices in the inventory by adding or removing columns, applying filters, searching, and exporting data.
 
 ### Search for devices
+
+Use the following search options to find devices in the inventory.
 
 | Task | Steps |
 |------|-------|
@@ -111,13 +114,17 @@ Here are a few common filter scenarios to get you started:
 
 ### Sort devices
 
+Use column headers to sort the device list by one or more fields.
+
 1. Select any column header to sort devices by that column. Select the header again to reverse the sort order.
 1. To sort by multiple columns, hold **Shift** and select additional column headers.
 
 ### Export device list
 
+Export the device inventory to a CSV file for offline review or reporting.
+
 1. Select **Export** at the top of the device inventory.
-1. Wait for the export to complete. For large organizations, this process might take time.
+1. Wait for the export to complete. For large organizations, the export might take time.
 1. Download the CSV file containing all devices in your organization.
 
 > [!NOTE]
@@ -145,9 +152,9 @@ Use the device inventory to perform common security tasks.
 | **Focus on critical assets** | View only business critical devices | 1. Use **Criticality level** filter<br>2. Select **Very high** to see business critical assets<br>3. Review critical asset counts at the top of the tab |
 | **Filter by management method** | View devices managed by specific tools | 1. Use **Managed by** filter<br>2. Select Intune, ConfigMgr, MDE, or Unknown<br>3. Review management status for compliance |
 
-## Next steps
+## Related content
 
-Now that you understand how to explore the device inventory, continue through the device lifecycle:
+Learn more about managing devices throughout their lifecycle:
 
 - **[Manage device scope and relevance](manage-device-scope-relevance.md)**: Control which devices are relevant to your security operations
 - **[Create and manage device tags](machine-tags.md)**: Add business context and organize devices into groups
