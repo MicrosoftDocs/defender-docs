@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - asr
   - sfi-ga-nochange
 ms.topic: how-to
@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 05/04/2026
+ms.date: 06/16/2026
 search.appverid: met150
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to understand the ASR rules report so I can monitor detections, review device configuration, and manage exclusions.
@@ -44,6 +44,8 @@ For more information about ASR rules, see [Attack surface reduction (ASR) rules 
 ## Prerequisites
 
 ### Supported operating systems
+
+The following operating systems are supported for the Attack surface reduction rules report:
 
 - Windows
 
@@ -76,7 +78,8 @@ The following tabs are available on the **Attack surface reduction rules** repor
 
 <a name='attack-surface-reduction-rules-main-detections-tab'></a>
 
-### Detections tab
+<a name="detections-tab"></a>
+### Review detections on the Detections tab
 
 The **Detections** tab is the default tab of the page. To go directly to the **Detections** tab of the **Attack surface reduction rules** report, use <https://security.microsoft.com/asr> or <https://security.microsoft.com/asr?viewid=detections>.
 
@@ -183,7 +186,8 @@ When you select a detection event from the details table on the **Detections** t
 
 <a name='attack-surface-reduction-rules-main-configuration-tab'></a>
 
-### Configuration tab
+<a name="configuration-tab"></a>
+### Review device configuration on the Configuration tab
 
 To go directly to the **Configuration** tab of the **Attack surface reduction rules** report page, use <https://security.microsoft.com/asr?viewid=configuration>.
 
@@ -239,7 +243,8 @@ When you select a device entry from the details table on the **Configuration** t
 
 <a name='attack-surface-reduction-rules-add-exclusions-tab'></a>
 
-### Add exclusions tab
+<a name="add-exclusions-tab"></a>
+### Manage exclusions on the Add exclusions tab
 
 > [!IMPORTANT]
 > Excluding files or folders can severely reduce the protection provided by ASR rules. Excluded files are allowed to run, and no report or event is recorded.
@@ -286,6 +291,8 @@ When you select one or more file entries from the details table on the **Add exc
 :::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-tab.png" alt-text="Screenshot showing the Add exclusions tab of the Attack surface reduction rules report page with file entries selected." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-tab.png":::
 
 ## Related content
+
+For more information about deploying, configuring, and managing ASR rules, see the following articles:
 
 - [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 - [Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)

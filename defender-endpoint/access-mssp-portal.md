@@ -1,6 +1,6 @@
 ---
 title: Access the Microsoft Defender XDR MSSP customer portal
-description: Access the Microsoft Defender XDR MSSP customer portal
+description: Learn how MSSPs access a customer tenant in Microsoft Defender XDR using a tenant-specific portal URL.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: chrisda
@@ -10,21 +10,25 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 12/24/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Access the Microsoft Defender MSSP customer portal
 
 
 
+## Access an MSSP customer tenant in Microsoft Defender XDR
+
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 > [!NOTE]
-> These set of steps are directed towards the MSSP.
+> The following steps show MSSPs how to find a customer tenant ID and access the tenant-specific Microsoft Defender XDR portal URL.
 
 By default, MSSP customers access their Microsoft Defender XDR tenant through the following URL: `https://security.microsoft.com/`.
 
@@ -40,7 +44,8 @@ Use the following steps to obtain the MSSP customer tenant ID and then use the I
 1. Access the MSSP customer portal by replacing the `customer_tenant_id` value in the following URL: `https://security.microsoft.com/?tid=customer_tenant_id`.
 1. Access a Unified View for MSSP (Preview) in `https://mto.security.microsoft.com/`
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Grant MSSP access to the portal](grant-mssp-access.md)
 - [Configure alert notifications](configure-mssp-notifications.md)
