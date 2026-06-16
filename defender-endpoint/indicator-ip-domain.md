@@ -1,7 +1,7 @@
 ---
 title: Create indicators for IPs and URLs/domains
 ms.reviewer: ericlaw
-description: Create indicators for IPs and URLs/domains that define the detection, prevention, and exclusion of entities.
+description: Learn how to create custom indicators in Microsoft Defender for Endpoint to allow, block, or warn on specific IP addresses, URLs, and domains using SmartScreen and network protection.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
@@ -12,11 +12,13 @@ ms.collection:
 - -asr
 ms.topic: how-to
 ms.subservice: 
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Create indicators for IPs and URLs/domains
 
@@ -33,6 +35,8 @@ To block malicious IPs/URLs, Defender for Endpoint can use:
 The default threat-intelligence data set to block malicious IPs/URLs is managed by Microsoft.
 
 You can block additional malicious IPs/URLs by configuring "**Custom network indicators**".
+
+Before you begin, review the [Prerequisites](#prerequisites) to ensure your environment is properly configured.
 
 ## Prerequisites
 
@@ -51,6 +55,8 @@ Integration into Microsoft browsers is controlled by the browser's SmartScreen s
 - The anti-malware client version must be `4.18.1906.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md).
 
 ### Supported operating systems
+
+IP, URL, and domain indicators are supported on the following operating systems:
 
 - Windows 11
 - Windows 10, version 1709 or later
@@ -126,9 +132,10 @@ When using warn mode, you can configure the following controls:
 
 For more information, see [Govern apps discovered by Microsoft Defender for Endpoint](/cloud-app-security/mde-govern).
 
-## Indicator IP URL and domain policy conflict handling order
+<a name="indicator-ip-url-and-domain-policy-conflict-handling-order"></a>
+## Policy conflict handling order for IP, URL, and domain indicators
 
-Policy conflict handling for domains/URLs/IP addresses differ from policy conflict handling for certificates.
+Policy conflict handling for domains, URLs, and IP addresses differs from certificate indicators, which use a separate precedence order. For details on certificate indicator policies, see [Create indicators based on certificates](indicator-certificates.md).
 
 In the case where multiple different action types are set on the same indicator (for example, three indicators for Microsoft.com with the action types **block**,  **warn**, and **allow**), the order those action types would take effect is:
 
@@ -142,7 +149,7 @@ In the case where multiple different action types are set on the same indicator 
 
 ### Defender for Cloud Apps Indicators
 
-If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators are created in Defender for Endpoint for all unsanctioned cloud applications. If an application is put in monitor mode, warn indicators (bypassable block) are created for the URLs associated with the application. Allow indicators aren't automatically created for sanctioned applications. Indicators created by Defender for Cloud Apps follow the same policy conflict handling described in the previous section.
+If your organization has enabled integration between Defender for Endpoint and Defender for Cloud Apps, block indicators are created in Defender for Endpoint for all unsanctioned cloud applications. If an application is put in monitor mode, warn indicators (bypassable block) are created for the URLs associated with the application. Allow indicators aren't automatically created for sanctioned applications. Indicators created by Defender for Cloud Apps use the same precedence order: `Allow` > `Warn` > `Block`.
 
 ## Policy precedence
 
@@ -161,6 +168,8 @@ The result is that categories 1-4 are all blocked. This scenario is illustrated 
 
 ## Create an indicator for IPs, URLs, or domains from the settings page
 
+To create an indicator for IPs, URLs, or domains from the Microsoft Defender portal, perform the following steps:
+
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
 1. Select the **IP addresses or URLs/Domains** tab.
@@ -178,7 +187,8 @@ The result is that categories 1-4 are all blocked. This scenario is illustrated 
 > [!IMPORTANT]
 > It can take up to 48 hours after a policy is created for a URL or IP address to be blocked on a device. In most cases, blocks take effect in under two hours.
 
-## Related articles
+<a name="related-articles"></a>
+## Related content
 
 - [Create indicators](indicators-overview.md)
 - [Create indicators for files](indicator-file.md)
