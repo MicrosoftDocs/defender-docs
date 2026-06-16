@@ -12,7 +12,7 @@ ms.subservice: ngp
 ms.collection:
 - m365-security
 - tier2
-ms.date: 10/20/2025
+ms.date: 06/11/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -254,7 +254,7 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
 
    If the scheduled task fails, run the following commands:
 
-   ```powershell
+   ```cmd
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x64 -isDelta $False -destDir C:\Temp\TempSigs\x64"
 
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x64 -isDelta $True -destDir C:\Temp\TempSigs\x64"
@@ -263,6 +263,13 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
 
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x86 -isDelta $True -destDir C:\Temp\TempSigs\x86"
     ```
+
+   > [!NOTE]
+   > Because the scheduled task launches PowerShell with `-ExecutionPolicy AllSigned`, the task runs non-interactively under the SYSTEM account. It can't respond to the `Do you want to run software from this untrusted publisher?` prompt that PowerShell displays the first time it encounters a signed script from a publisher that isn't yet classified as trusted. The first run of `SignatureDownloadCustomTask.ps1` can fail with an `UnauthorizedAccess` error.
+   >
+   > Before you run the scheduled task (or the recovery commands shown later), export the Authenticode code-signing certificate that's used to sign `SignatureDownloadCustomTask.ps1`, and import it into the local computer's Trusted Publishers certificate store.
+   >
+   > Alternatively, in environments where Group Policy is available, deploy the certificate to **Computer Configuration** \> **Policies** \> **Windows Settings** \> **Security Settings** \> **Public Key Policies** \> **Trusted Publishers**. For more information, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies) and [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing).
 
 1. Create a share pointing to `C:\Temp\TempSigs` (for example, `\\server\updates`).
 

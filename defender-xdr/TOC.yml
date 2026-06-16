@@ -100,6 +100,8 @@
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
+      - name: Manually create an incident or alert
+        href: manually-create-incident.md
       - name: Use tasks to handle incident workflow
         href: split-incidents-into-tasks.md
       - name: Investigate and respond to incidents
@@ -152,7 +154,7 @@
           href: m365d-autoir-results.md
         - name: Address false positives and negatives
           href: m365d-autoir-report-false-positives-negatives.md
-      - name: Attack disruption
+      - name: Attack disruption with Microsoft Sentinel
         items:
         - name: Overview
           href: automatic-attack-disruption.md
@@ -164,10 +166,10 @@
           href: automatic-attack-disruption-exclusions.md
         - name: External disruptions
           items:
-          - name: Enable attack disruption actions in Okta (preview)
+          - name: Enable attack disruption actions in Okta with Microsoft Sentinel (preview)
             href: okta-attack-disruption.md
-          - name: Enable attack disruption actions on AWS (preview)
-            href: /azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
+          - name: Enable attack disruption actions in AWS with Microsoft Sentinel (preview)
+            href: /azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Predictive shielding
         items:
         - name: Overview
@@ -256,6 +258,8 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AgentsInfo
+            href: advanced-hunting-agentsinfo-table.md
           - name: AIAgentsInfo
             href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence
@@ -493,7 +497,9 @@
           - name: Work with MSSPs
             href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
-          items: 
+          items:
+          - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+            href: teams-restrictions-dexapp.md
           - name: General information
             href: faq-defender-experts-hunting.md
           - name: Server and cloud workload coverage
@@ -718,6 +724,8 @@
         href: /security/operations/incident-response-playbooks
       - name: Customize incident responses
         href: security-upload-guide.md
+      - name: SOP template - Compromised identity
+        href: sop-documentation-template.md
       - name: Ransomware playbooks
         items:
         - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR

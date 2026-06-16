@@ -1,11 +1,11 @@
 ---
 title: Geographical availability and data residency in Microsoft Sentinel
-description: In this article, you learn about geographical availability and data residency in Microsoft Sentinel.
+description: Learn about privacy, data residency, and geographical availability in Microsoft Sentinel.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: concept-article
-ms.date: 08/29/2024
+ms.date: 05/28/2026
 ms.custom: references_regions
 
 
@@ -26,17 +26,21 @@ This article can help you meet compliance requirements by describing where Micro
 Microsoft Sentinel collects the following types of data:
 
 - **Raw data**, such as event data collected from connected Microsoft services and partner systems. Data from multiple clouds and sources are streamed to the customer’s Azure Log Analytics workspace associated with Microsoft Sentinel, under the customer’s tenant’s subscription. This approach gives the customer the ability to choose region and retention and deletion policies.
-- **Processed data**, such as incidents, alerts, and so on.
+- **Processed data**, such as incidents, alerts, behaviors, and so on.
 - **Configuration data**, such as connector settings, rules, and so on.
 
 ## Data storage location
 
-Data used by the service, including customer data, might be stored and processed in the following locations:
+Microsoft Sentinel stores data used by the service, including customer data, in the same region as the associated Azure Log Analytics workspace. For more information, see [Supported regions](#supported-regions).
 
-|Data type  |Location  |
-|---------|---------|
-|**Raw data**     |  Stored in the same region as the Azure Log Analytics workspace associated with Microsoft Sentinel. For more information, see [Supported regions](#supported-regions).  <br><br>Raw data is processed in one of the following locations: <br>- For Log Analytics workspaces located in Europe, customer data is processed in Europe. <br>- For Log Analytics workspaces located in Israel, customer data is processed in Israel. <br>- For Log Analytics workspaces located in any of the China 21Vianet regions, customer data is processed in China 21Vianet. <br>- For workspaces located in any other location, customer data is processed in a US region.     |
-|**Processed data and configuration data**     |   - When Microsoft Sentinel is onboarded to the Defender portal, processed data and configuration data might be stored and processed in Microsoft Defender XDR regions. For more information, see [Data security and retention in Microsoft Defender XDR](/defender-xdr/data-privacy).   <br><br>- When Microsoft Sentinel isn't onboarded to the Defender portal, processed data and configuration data is stored and processed using the same methodology as raw data.    |
+Microsoft Sentinel processes data in one of the following locations:
+
+- For Log Analytics workspaces located in Europe, Microsoft Sentinel processes customer data in Europe.
+- For Log Analytics workspaces located in Israel, Microsoft Sentinel processes customer data in Israel.
+- For Log Analytics workspaces located in any of the China 21Vianet regions, Microsoft Sentinel processes customer data in China 21Vianet.
+- For workspaces located in any other location, Microsoft Sentinel processes customer data in a US region.
+
+When you onboard Microsoft Sentinel from the Defender portal, the service might process data in the destination regions specified during onboarding, or in the existing Microsoft Defender XDR regions if applicable. The raw data storage location, however, remains unchanged. For more information, see [Data security and retention in Microsoft Defender XDR](/defender-xdr/data-privacy).
  
 ### Supported regions
 
@@ -87,6 +91,7 @@ Microsoft Sentinel may share data, including customer data, among the following 
 
 - Microsoft Defender XDR
 - Azure Log Analytics
+- Security Copilot
 
 ## Related content
 

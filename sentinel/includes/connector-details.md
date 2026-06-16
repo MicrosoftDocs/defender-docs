@@ -2,7 +2,7 @@
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: include
-ms.date: 05/31/2026
+ms.date: 06/14/2026
 
 # This file is auto-generated. Do not edit manually. Changes will be overwritten.
 ---
@@ -209,7 +209,7 @@ Set the `uri` value to: `<add uri value>`
    
 <a name="agent-365"></a><details><summary>**Agent 365**</summary>
 
-**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+**Supported by:** [Microsoft](https://support.microsoft.com/)
 
 Agent 365 data connector gives richer insights into AI agent activity by bringing AI agent telemetry from Agent 365, AI Foundry, and Copilot in the Microsoft Sentinel data lake to investigate agent behavior, tool usage, and execution with hunting, graph, and MCP workflows. Data from this connector is used to investigate AI agent behavior, tool usage, and execution in Microsoft Sentinel. If you have enabled these workflows, deactivating this connector will prevent those investigations from being performed.
 
@@ -224,6 +224,57 @@ Agent 365 data connector gives richer insights into AI agent activity by bringin
 **Setup Instructions:**
 
  
+<br><br>
+</details> 
+
+ ---
+   
+<a name="airlock-digital-connector-via-codeless-connector-framework"></a><details><summary>**Airlock Digital connector (via Codeless Connector Framework)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+The Airlock Digital connector collects application control and execution logs from your Airlock Digital server, providing visibility into file executions, server activities, and security event summaries in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`AirlockDigitalExecutionHistories`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Airlock Digital API Key**: API Key with read access to logging endpoints. Generate from Airlock Digital Web UI: User Menu > Settings > API Keys.
+
+**Setup Instructions:**
+
+ **1. Configure Airlock Digital API Access**
+
+Provide API connection details for Airlock Digital
+
+  Before you begin:
+- Access to your Airlock Digital server
+- API Key from Airlock Digital (User Menu > Settings > API Keys)
+- Server must be accessible from Azure (ensure firewall allows connections)
+
+**Base URL:** Enter your Airlock Digital server URL. Default port is 3129 for REST API.
+Example: `https://airlock.company.com:3129`
+
+  - **Base URL**: (https://server.name:3129)
+  - **API Key**: (Enter your Airlock Digital API Key)
+
+**2. Connect and Start Data Collection**
+
+Click Connect to start ingesting Airlock Digital logs
+
+  The connector collects:
+- **Execution Histories**: File execution events including blocked, audited, and trusted executions with file hashes, publishers, and user details
+- **Server Activities**: Administrative actions, policy changes, agent check-ins, and repository updates
+- **File Activity Summary: Aggregated statistics on file activity, security events, and execution trends Data refresh:** Logs are retrieved every 5 minutes. Data should appear within 5-10 minutes after connection.
+
+  - Enable/Disable Connection
+
 <br><br>
 </details> 
 
@@ -3392,6 +3443,51 @@ To Ingest Netflow data into Microsoft sentinel, Filebeat and Logstash needs to b
 
  ---
    
+<a name="cisco-umbrella-via-codeless-connector-framework"></a><details><summary>**Cisco Umbrella (via Codeless Connector Framework)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
+
+The Cisco Cloud Security solution for Microsoft Sentinel enables you to ingest [Cisco Secure Access](https://securitydocs.cisco.com/secure-access-sub-landing-page) and [Cisco Umbrella](https://securitydocs.cisco.com/umbrella-sub-landing-page) logs stored in Cisco-managed Amazon S3 Bucket into Microsoft Sentinel using the Amazon S3 REST API. Refer to [Cisco Cloud Security log management documentation](https://securitydocs.cisco.com/docs/csa/olh/118897.dita) for more information.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`CiscoUmbrellaAdminAudit_CL`|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Amazon S3 REST API Credentials/permissions**: **AWS Access Key, AWS Secret Access Key, AWS S3 Bucket Name** are required for Amazon S3 REST API.
+
+**Setup Instructions:**
+
+ **1. Configuration of the Cisco Cloud Security Logs Collection**
+
+  > **NOTE:**
+ This connector has been updated to support [Cisco Cloud Security log schema version 15.](https://securitydocs.cisco.com/docs/csa/olh/121214.dita)
+
+  [See documentation](https://securitydocs.cisco.com/docs/csa/olh/121193.dita) and follow the instructions to set up logging and obtain the necessary credentials and information.
+
+  Once you have set up the Cisco-managed S3 Bucket, you will be given three pieces of information: Data Path, Access Key, and Secret Key.
+
+  > **WARNING:**
+ For Cisco-managed S3 buckets, the Secret Key expires every 90 days. You are responsible for rotating the Secret Key in the Cisco dashboard and reconnecting this connector with the new key before expiration.
+
+  For Access Key and Secret Key, you can paste them into the following inputs. For the other required fields, you will retrieve them from Data Path.
+
+  For example, the Data Path provided by Cisco is `cisco-managed-us-west-1/2003477-12345`. For the AWS S3 Bucket Name, the input S3 Bucket Name will be `cisco-managed-us-west-1`. The S3 Bucket Region will be `us-west-1`. The S3 Bucket Prefix will be `2003477-12345`.
+
+  To enable stream-based collection, click **Add new collector, choose a Data type**, and provide the AWS details.
+
+  - Data Connectors Grid (configure in portal)
+
+<br><br>
+</details> 
+
+ ---
+   
 <a name="claroty-xdome"></a><details><summary>**Claroty xDome**</summary>
 
 **Supported by:** [xDome Customer Support](https://claroty.com/support-policy)
@@ -3563,6 +3659,8 @@ If you're already signed in, go to the next step.
 **Supported by:** [Cloudflare](https://dash.cloudflare.com/)
 
  The Cloudflare data connector provides the capability to ingest Cloudflare logs into Microsoft Sentinel using the Cloudflare Logpush and Azure Blob Storage. Refer to [Cloudflare documentation](https://developers.cloudflare.com/logs/about/)for more information.
+
+<p>NOTE: The Cloudflare (Using Blob Container) (via Codeless Connector Framework) data connector available in the solution requires the Azure Blob Storage account and the Microsoft Sentinel workspace to be in the same Azure subscription and the same Resource Group. Deploying across different subscriptions or resource groups may result in errors such as CreateDataFlowResources not defined during connector configuration.</p>
 
 **Log Analytics table(s):**  
 
@@ -3995,16 +4093,6 @@ The [CrowdStrike Data Connector](https://www.crowdstrike.com/) allows ingesting 
  **Connect CrowdStrike to Microsoft Sentinel**
 
   > Note: **Important Notice:** The Incidents API is fully decommissioned. Use the new Cases data type instead.
-
-  To gather data from CrowdStrike, you need to provide the following resources
-
-  **1. Base API URL** - To gather data from CrowdStrike, you'll need the Base API URL.
-
-  **2. Client ID** - To gather data from CrowdStrike, you'll need the Client ID.
-
-  **3. Client Secret** - To gather data from CrowdStrike, you'll need the Client Secret.
-
-  For detailed instructions on retrieving the Base API URL, Client ID, and Client Secret, please refer to the [Connector Tutorial](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/CrowdStrike%20Falcon%20Endpoint%20Protection/Data%20Connectors/CrowdStrikeAPI_ccp/README.md).
 
   - Data Connectors Grid (configure in portal)
 
@@ -4560,6 +4648,40 @@ Step 6: Connect CyberArk Audit Service with Microsoft Sentinel Data Connector
 
  ---
    
+<a name="cyberark-epm"></a><details><summary>**CyberArk EPM**</summary>
+
+**Supported by:** [CyberArk Support](https://www.cyberark.com/services-support/technical-support/)
+
+The [CyberArk Endpoint Privilege Manager](https://www.cyberark.com/products/endpoint-privilege-manager/) data connector enables Microsoft Sentinel to ingest security event logs and other events from CyberArk EPM via REST API.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`CyberArk_EPMEvents_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **CyberArk EPM Platform**: Access to perform required configurations in CyberArk EPM platform
+
+**Setup Instructions:**
+
+ **Connect to CyberArk EPM API to start collecting event logs in Microsoft Sentinel**
+
+Follow the configuration steps [here](https://docs.cyberark.com/epm/latest/en/content/webservices/authenticate-with-identity-administration.htm) to integrate Microsoft Sentinel with CyberArk EPM and enable centralized monitoring of endpoint events within Microsoft Sentinel.
+
+  - **Web App ID**: (The OAuth2 server web app ApplicationID)
+  - **Region based Tenant URL**: (e.g. api-na.epm.cyberark.cloud)
+  - **Set ID**: (List of comma seperated EPM Set IDs to poll events from)
+  - **Identity Endpoint**: (e.g. kln9281.id.cyberark.cloud)
+
+<br><br>
+</details> 
+
+ ---
+   
 <a name="cyberarkaudit-using-azure-functions"></a><details><summary>**CyberArkAudit (using Azure Functions)**</summary>
 
 **Supported by:** [CyberArk Support](https://www.cyberark.com/services-support/technical-support/)
@@ -4652,6 +4774,107 @@ If you're already signed in, go to the next step.
 		WorkspaceKey
 		logAnalyticsUri (optional)
  - Use logAnalyticsUri to override the log analytics API endpoint for dedicated cloud. For example, for public cloud, leave the value empty; for Azure GovUS cloud environment, specify the value in the following format: `https://<CustomerId>.ods.opinsights.azure.us`.
+4. Once all application settings have been entered, click **Save**.
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="cyberarkepm-using-azure-functions"></a><details><summary>**CyberArkEPM (using Azure Functions)**</summary>
+
+**Supported by:** [CyberArk Support](https://www.cyberark.com/services-support/technical-support/)
+
+The [CyberArk Endpoint Privilege Manager](https://www.cyberark.com/products/endpoint-privilege-manager/) data connector provides the capability to retrieve security event logs of the CyberArk EPM services and more events into Microsoft Sentinel through the REST API. The connector enables event retrieval to assess potential security risks, monitor collaboration, and diagnose and troubleshoot configuration issues.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`CyberArkEPM_Events_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
+- **REST API Credentials/permissions**: **OauthUsername**, **OauthPassword**, **IdentityEndpoint**, **EPMRegionHost** and **WebAppID** are required for making API calls.
+
+**Setup Instructions:**
+
+ >**NOTE:** This connector uses Azure Functions to connect to the CyberArk EPM API to pull logs into Microsoft Sentinel. This might result in additional costs for data ingestion and for storing data in Azure Blob Storage costs. Check the [Azure Functions pricing page](https://azure.microsoft.com/pricing/details/functions/) and [Azure Blob Storage pricing page](https://azure.microsoft.com/pricing/details/storage/blobs/) for details.
+
+>**NOTE:** API authorization key(s) or token(s) are securely stored in Azure Key Vault. Azure Key Vault provides a secure mechanism to store and retrieve key values.
+
+>**NOTE:** This data connector depends on a parser based on a Kusto Function to work as expected [**CyberArkEPM**](https://aka.ms/sentinel-CyberArkEPM-parser) which is deployed with the Microsoft Sentinel Solution.
+
+STEP 1 - Configuration steps for the CyberArk EPM API
+
+ Follow the [instructions](https://docs.cyberark.com/epm/latest/en/content/webservices/authenticate-with-identity-administration.htm) to obtain the OAuth2 credentials.
+
+1. Obtain the **OauthUsername, OauthPassword, WebAppID, IdentityEndpoint and EPMRegionHost** for your CyberArk EPM account.
+
+STEP 2 - Choose ONE from the following two deployment options to deploy the connector and the associated Azure Function
+
+>**IMPORTANT:** Before deploying the CyberArk EPM data connector, have the Workspace Name and Workspace Location (can be copied from the following).
+
+  - **Workspace Name**: <variable value provided at install time>
+  - **Workspace Location**: <variable value provided at install time>
+
+**Option 1 - Azure Resource Manager (ARM) Template**
+
+Use this method for automated deployment of the CyberArk EPM data connector using an ARM Template.
+
+1. Click the **Deploy to Azure** button below. 
+
+	[aka.ms](https://aka.ms/sentinel-CyberArkEPMAPI-azuredeploy)
+2. Select the preferred **Subscription, Resource Group and Location**. 
+> **NOTE:** Within the same resource group, you can't mix Windows and Linux apps in the same region. Select existing resource group without Windows apps in it or create new resource group.
+3. Enter the **OauthUsername, OauthPassword, IdentityEndpoint, EPMRegionHost and WebAppID** and deploy. 
+4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. 
+5. Click **Purchase** to deploy.
+
+**Option 2 - Manual Deployment of Azure Functions**
+
+Use the following step-by-step instructions to deploy the CyberArk EPM data connector manually with Azure Functions (Deployment via Visual Studio Code).
+
+1. Deploy a Function App
+
+> **NOTE:** You will need to [prepare VS code](/azure/azure-functions/functions-create-first-function-python#prerequisites) for Azure function development.
+
+1. Download the [Azure Function App](https://aka.ms/sentinel-CyberArkEPMAPI-functionapp) file. Extract archive to your local development computer.
+2. Start VS Code. Choose File in the main menu and select Open Folder.
+3. Select the top level folder from extracted files.
+4. Choose the Azure icon in the Activity bar, then in the **Azure: Functions area, choose the Deploy to function app** button.
+If you aren't already signed in, choose the Azure icon in the Activity bar, then in the **Azure: Functions area, choose Sign in to Azure**
+If you're already signed in, go to the next step.
+5. Provide the following information at the prompts:
+
+	a. **Select folder:** Choose a folder from your workspace or browse to one that contains your function app.
+
+	b. **Select Subscription:** Choose the subscription to use.
+
+	c. Select **Create new Function App in Azure** (Don't choose the Advanced option)
+
+	d. **Enter a globally unique name for the function app:** Type a name that is valid in a URL path. The name you type is validated to make sure that it's unique in Azure Functions. (e.g. CyberArkXXXXX).
+
+	e. **Select a runtime:** Choose Python 3.12.
+
+	f. Select a location for new resources. For better performance and lower costs choose the same [region](https://azure.microsoft.com/regions/) where Microsoft Sentinel is located.
+
+6. Deployment will begin. A notification is displayed after your function app is created and the deployment package is applied.
+7. Go to Azure Portal for the Function App configuration.
+
+2. Configure the Function App
+
+1. In the Function App, select the Function App Name and select **Configuration**.
+2. In the **Application settings tab, select  New application setting**.
+3. Add each of the following application settings individually, with their respective string values (case-sensitive): 
+		OAuthUsername
+		OAuthPassword
+		IdentityEndpoint
+		EPMRegionHost
+		WebAppID
 4. Once all application settings have been entered, click **Save**.
 
 <br><br>
@@ -7602,6 +7825,225 @@ Post Deployment steps
 *Now we are done with the github Webhook configuration. Once the github events triggered and after the delay of 20 to 30 mins (As there will be a dealy for LogAnalytics to spin up the resources for the first time), you should be able to see all the transactional events from the Github into LogAnalytics workspace table called "githubscanaudit_CL".*
 
  For more details, Click [here](https://aka.ms/sentinel-gitHubwebhooksteps)
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="github-using-webhooks-v2"></a><details><summary>**GitHub (using Webhooks) V2**</summary>
+
+**Supported by:** [Microsoft Corporation](https://azure.microsoft.com/support/options/)
+
+The [GitHub](https://www.github.com) webhook data connector (V2) provides the capability to ingest GitHub subscribed events into Microsoft Sentinel using [GitHub webhook events](https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads). This connector uses the Azure Monitor **Logs Ingestion API (CLv2)** with **Managed Identity** authentication and is the designated successor to the original GitHub (using Webhooks) connector, which uses the CLv1 HTTP Data Collector API (ODS endpoint) that Microsoft is replacing with CLv2.
+
+Events are written to the `GitHubAdvancedSecurityAlerts_CL` table. The `githubscanaudit` parser function provides a unified view across both the legacy `githubscanaudit_CL` table and the new `GitHubAdvancedSecurityAlerts_CL` table, so all existing workbooks, analytic rules, and hunting queries continue to work without modification.
+
+> **Note:** If you are currently using the original GitHub (using Webhooks) connector, both connectors can run side-by-side. To avoid duplicate data ingestion, stop the original V1 Function App once you have confirmed V2 is working correctly. See the migration instructions at the bottom of this connector page.
+
+> **Note:** If you intend to ingest GitHub Audit logs, refer to the GitHub Enterprise Audit Log Connector from the "**Data Connectors**" gallery.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`GitHubAdvancedSecurityAlerts_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Microsoft.Web/sites permissions**: Read and write permissions to Azure Functions to create a Function App is required. For more information, see [Azure Functions](/azure/azure-functions/).
+- **Microsoft.Authorization/roleAssignments permissions**: Permissions to create role assignments are required at the resource group scope. This is needed to grant the Function App's Managed Identity the **Monitoring Metrics Publisher** role on the Data Collection Rule.
+
+**Setup Instructions:**
+
+ >**NOTE: This connector is built on an HTTP trigger based Azure Function using the Logs Ingestion API (CLv2) with Managed Identity** authentication. There is no need to configure a Workspace Key — authentication is handled automatically by the Function App's system-assigned managed identity. This might result in additional data ingestion costs. Check the [Azure Functions pricing page](https://azure.microsoft.com/pricing/details/functions/) for details.
+
+**(Optional Step)** Securely store the GitHub Webhook Secret in Azure Key Vault. [Follow these instructions](/azure/app-service/app-service-key-vault-references) to use Azure Key Vault with an Azure Function App.
+
+Choose ONE from the following two deployment options to deploy the connector and the associated Azure Function
+
+>**IMPORTANT: Before deploying the Github Webhook V2 connector, have the Log Analytics Workspace Name ready. The connector resources (Function App, DCE, DCR, table) must be deployed to the same resource group** as the Log Analytics workspace.
+
+  - **Workspace Name**: <variable value provided at install time>
+
+**Option 1 - Azure Resource Manager (ARM) Template**
+
+Use this method for automated deployment of the GitHub V2 data connector using an ARM Template.
+
+1. Click the **Deploy to Azure** button below.
+
+	[portal.azure.com](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FSolutions%2FGitHub%2FData%2520Connectors%2FGithubWebhookV2%2Fazuredeploy_GithubWebhookV2_API_FunctionApp.json)
+2. Select the **Subscription and Resource Group — deploy to the same resource group** as your Log Analytics workspace.
+> **NOTE:** You can't mix Windows and Linux apps in the same region and resource group.
+3. Enter the **WorkspaceName** — the name of your Log Analytics workspace (not the full resource ID).
+4. Optionally enter a **GithubWebhookSecret** to enable payload signature validation.
+5. Mark the checkbox labeled **I agree to the terms and conditions stated above**.
+6. Click **Purchase** to deploy.
+
+**Option 2 - Manual Deployment of Azure Functions**
+
+Use the following step-by-step instructions to deploy the GitHub V2 webhook data connector manually with Azure Functions.
+
+**Step 1 - Deploy a Function App**
+
+1. Download the [Azure Function App](https://aka.ms/sentinel-GitHubWebhookAPIV2-functionapp) file. Extract archive to your local development computer.
+2. Follow the [function app manual deployment instructions](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AzureFunctionsManualDeployment.md#function-app-manual-deployment-instructions) to deploy the Azure Functions app using VSCode.
+3. After successful deployment of the function app, follow next steps for configuring it.
+
+**Step 2 - Configure the Function App**
+
+1. Go to Azure Portal for the Function App configuration.
+2. In the Function App, select the Function App Name and select **Configuration**.
+3. In the **Application settings tab, select New application setting**.
+4. Add each of the following application settings individually, with their respective string values (case-sensitive):
+		DCE_ENDPOINT - The logs ingestion endpoint of your Data Collection Endpoint
+		DCR_RULE_ID - The immutableId of your Data Collection Rule
+		DCR_STREAM_NAME - Custom-GitHubAdvancedSecurityAlerts_CL
+		GithubWebhookSecret (optional) - Your GitHub webhook secret for payload validation
+5. Once all application settings have been entered, click **Save**.
+6. Ensure the Function App has a **System Assigned Managed Identity** enabled.
+7. Grant the Managed Identity the **Monitoring Metrics Publisher** role on your Data Collection Rule.
+
+
+
+Post Deployment steps
+
+
+
+**STEP 1 - To get the Azure Function url**
+
+ 1. Go to Azure function Overview page and Click on "Functions" in the left blade.
+ 2. Click on the function called "GithubWebhookConnectorV2".
+ 3. Go to "GetFunctionurl" and copy the function url.
+
+**STEP 2 - Configure Webhook to Github Organization**
+
+1. Go to [GitHub](https://www.github.com) and open your account and click on "Your Organizations."
+ 2. Click on Settings.
+ 3. Click on "Webhooks" and enter the function app url which was copied from above STEP 1 under payload URL textbox.
+ 4. Choose content type as "application/json".
+ 5. Subscribe for events and Click on "Add Webhook"
+
+
+*Now we are done with the GitHub Webhook V2 configuration. Once GitHub events are triggered, after the delay of 5 to 10 mins, you should be able to see all the transactional events from GitHub in the LogAnalytics workspace table called `GitHubAdvancedSecurityAlerts_CL`. Use the `githubscanaudit` parser function for a unified view that includes data from both the legacy `githubscanaudit_CL` and new `GitHubAdvancedSecurityAlerts_CL` tables.*
+
+**⚠️ IMPORTANT: Migrating from GitHub Webhook V1 to V2**
+
+If you are currently using the original **GitHub (using Webhooks) connector (`githubscanaudit_CL` table), follow these steps to migrate to V2 without disrupting existing data or breaking workbooks and analytic rules. Before you begin: Both connectors can run side-by-side. V1 data lands in `githubscanaudit_CL` and V2 data lands in `GitHubAdvancedSecurityAlerts_CL`. The `githubscanaudit()` parser function unions both tables so all workbooks, analytic rules, and hunting queries continue to work unchanged during and after migration. Migration Steps:**
+
+1. **Deploy V2 alongside V1.** Complete all steps above to deploy the GitHub Webhook V2 Function App. Do not remove V1 yet.
+
+2. **Verify V2 is receiving events.** Update the GitHub webhook payload URL in your GitHub Organization settings (**Settings → Webhooks**) to point to the new V2 Function App URL. Trigger some GitHub events and confirm data appears in `GitHubAdvancedSecurityAlerts_CL` within 5–10 minutes.
+
+3. **Validate the unified parser.** Run `githubscanaudit() | sort by TimeGenerated desc | take 50` in Log Analytics to confirm both V1 and V2 data appears under the same schema.
+
+4. **Disable the V1 Function App.** Once V2 is confirmed working, stop the original V1 Function App to prevent duplicate event ingestion:
+   - In the Azure Portal, navigate to your original GitHub Webhook V1 Function App.
+   - Under **Overview, click Stop** to halt execution.
+   - Optionally, update the GitHub webhook payload URL to point exclusively to the V2 endpoint.
+
+5. **Retain V1 data.** The `githubscanaudit_CL` table data is subject to your Log Analytics workspace retention policy. No action is required — historical V1 data continues to be queryable via `githubscanaudit()` until it ages out per your retention settings.
+
+ **⚠️ Warning: Do not delete the V1 Function App resources until you have verified V2 is fully operational and you no longer need to roll back. Running both simultaneously does not** cause duplicate ingestion as long as only one webhook URL is active in GitHub at a time.
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="github-enterprise-audit-log-via-azure-storage"></a><details><summary>**GitHub Enterprise Audit Log (via Azure Storage)**</summary>
+
+**Supported by:** [Microsoft Corporation](https://azure.microsoft.com/support/options/)
+
+The GitHub audit log connector ingests GitHub Enterprise audit logs into Microsoft Sentinel from Azure Blob Storage with near real-time latency. GitHub streams audit logs to Blob Storage in near real time, and the connector polls the Azure Storage Queue for new blob-created notifications every 5 minutes (default polling interval). By connecting GitHub audit logs to Microsoft Sentinel, you can view this data in workbooks, create custom alerts, and improve your investigation process.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`GitHubAuditLogsV2_CL`|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra ID - Admin Consent (one-time per tenant)**: The connector uses Microsoft's **ScubaSentinelToStorageProd** enterprise application to access your storage account. If this app has not been previously consented to in your tenant, a user with one of the following roles must click **'Grant tenant-wide admin consent'** on the connector page before proceeding:
+- **Cloud Application Administrator** *(minimum required role)*
+- **Application Administrator**
+- **Global Administrator**
+
+> **Note:** This is a one-time action per tenant. If the service principal already exists (i.e., another connector using ScubaSentinelToStorageProd was previously configured in this tenant), the service principal ID will be auto-populated and no action is needed.
+- **Subscription permissions**: You need the following permissions to deploy the connector's data flow resources:
+- **Contributor** role on the subscription or resource group - to deploy Event Grid, storage queues, DCR, and related connector resources.
+- **Owner** or **User Access Administrator** role on the Storage Account - to assign RBAC roles to the Microsoft Sentinel service principal.
+- **Owner** or **Event Grid Contributor** role on the Storage Account - to create Event Grid system topics and event subscriptions.
+
+> **Note:** The `Microsoft.EventGrid` resource provider must be [registered](/azure/azure-resource-manager/management/resource-providers-and-types) in the subscription containing the storage account.
+- **Storage Account Requirements**: The Azure Blob Storage account must meet the following requirements:
+- **Azure Data Lake Storage Gen2 (hierarchical namespace enabled)** - standard storage accounts are not supported.
+- A blob container already configured to receive GitHub Enterprise audit log streaming.
+- **Storage Account Network Configuration**: IP-based network rules (selected networks / IPv4 CIDR) are **not supported** for this connector due to [Azure Storage firewall restrictions and limitations](/azure/storage/common/storage-network-security-limitations):
+- IP network rules have **no effect** on requests originating from the same Azure region as the storage account.
+- IP network rules **cannot restrict** access to Azure services deployed in the same region, as these services use private Azure IP addresses for communication.
+- Virtual network service endpoint rules do not apply to clients in a paired region.
+
+**Options:**
+- **No network restrictions needed?** Set the storage account's **Networking** blade to **Enabled from all networks**.
+- **Need to restrict access?** Use [Network Security Perimeter (NSP)](/azure/sentinel/enable-storage-network-security) to whitelist Scuba IPv4 addresses. Note: only IPv4 addresses are currently supported for NSP inbound rules; IPv6 is not supported. There is an ongoing effort with the NSP team to support service tags, which will eliminate the need for manual IP management in the future.
+
+**Important:** Do **not** configure network rules based on GitHub IP ranges. GitHub does not provide stable IP ranges as the source of audit log streaming, and those IPs may change without notice.
+- **Storage Account Role Assignments**: The following Azure RBAC roles must be assigned to the Microsoft Sentinel enterprise application service principal (displayed below) on the **Storage Account** that contains your blob container:
+- **Storage Blob Data Reader** - required for reading blob data from the container.
+- **Storage Queue Data Contributor** - required for managing notification and dead-letter queue messages.
+
+To assign these roles: navigate to the Storage Account -> **Access Control (IAM)** -> **Add role assignment**, search for the service principal ID shown below, and assign both roles.
+- **Collecting GitHub audit logs to your blob container**: Follow the steps in the [GitHub documentation](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise#setting-up-streaming-to-azure-blob-storage) to configure audit log streaming to your Azure Blob Storage container.
+
+**Setup Instructions:**
+
+ **Connect GitHub Audit Logs to Microsoft Sentinel**
+
+To enable the GitHub Audit Log ingestion from Azure Blob Storage, provide the required information below and click on Connect.
+
+
+  - **The blob container URL you want to collect data from**: 
+  - **The blob folder name in the container. Optional.**: 
+  - **The blob container's storage account location**: (eastus)
+  - **The blob container's storage account resource group name**: (my-resource-group)
+  - **The blob container's storage account subscription id**: 
+  - **The Event Grid system topic name for the storage account, if one exists; otherwise, leave empty.**: 
+  - Enable/Disable Connection
+
+**Blob Lifecycle Policy (Recommended)**
+
+To prevent unbounded storage growth, configure a [lifecycle management policy](/azure/storage/blobs/lifecycle-management-overview) on your storage account to automatically delete blobs after a retention period (for example, 7 days). Once the connector ingests the audit logs into Microsoft Sentinel, the source blobs are no longer needed.
+
+To create a lifecycle rule scoped to your container:
+1. Navigate to your **Storage Account -> Data management -> Lifecycle management**.
+2. Click **Add a rule** and configure:
+   - **Rule name:** for example, `github-audit-cleanup`
+   - **Rule scope: Select Limit blobs with filters and set the Prefix match** to your container name (for example, `my-container/`). This ensures the rule applies only to blobs in that container.
+   - **Blob type:** Block blobs.
+   - **Base blobs: Delete blobs that were last modified more than 7 days** ago (adjust as needed).
+3. Save the rule.
+
+> **Note:** Each storage account has a single management policy that can contain multiple rules. Each rule can target a specific container via prefix filters. If you already have a lifecycle policy, add a new rule to the existing policy rather than creating a new one.
+
+
+**Reference**
+
+For detailed instructions on setting up the Azure Storage connector to stream logs to Microsoft Sentinel, see [Set up Azure Storage connector](/azure/sentinel/setup-azure-storage-connector).
+
+
+**Troubleshooting**
+
+If you encounter issues with data ingestion:
+- **Enable the health feature** - If the connector health feature isn't enabled, enable it to monitor connector status and detect issues early.
+- **Enable diagnostic logs - Consider enabling diagnostic logs for both the Storage Account and Event Grid** resources to help identify and troubleshoot health issues.
+- For more details, see [Troubleshoot Azure Storage Blob connector issues](https://review.learn.microsoft.com/azure/sentinel/azure-storage-blob-connector-troubleshoot?branch=main).
+
 
 <br><br>
 </details> 
@@ -11343,6 +11785,28 @@ Security Events logs are collected only from **Windows** agents.
 
  ---
    
+<a name="microsoft-agent-identities"></a><details><summary>**Microsoft Agent Identities**</summary>
+
+**Supported by:** [Microsoft](https://support.microsoft.com/)
+
+The Microsoft Agent Identities connector provides a central view of agent and agent blueprint identities. It ingests and tracks agent identities and asset data which helps you understand ownership, analyze relationships, and correlate identity assets with activity and risk signals. This leads to enriched investigations, improved governance, risk assessment and security posture via graphs.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+
+
+**Data collection rule support:** Not currently supported
+
+**Setup Instructions:**
+
+ 
+<br><br>
+</details> 
+
+ ---
+   
 <a name="microsoft-copilot"></a><details><summary>**Microsoft Copilot**</summary>
 
 **Supported by:** [Microsoft](https://support.microsoft.com/)
@@ -14378,6 +14842,106 @@ Integrating NordPass with Microsoft Sentinel SIEM via the API will allow you to 
 
  ---
    
+<a name="nordstellar-push"></a><details><summary>**NordStellar (Push)**</summary>
+
+**Supported by:** [NordStellar](https://docs.nordstellar.com/platform/integrations/siem-microsoft-sentinel)
+
+The [NordStellar](https://nordstellar.com) connector pushes real-time threat intelligence and exposure events from the NordStellar platform into Microsoft Sentinel using the Codeless Connector Framework (CCF) Push pattern. All event types are routed to a single unified `NordStellar_CL` table with common columns (`EventId`, `EventType`, `Module`, `RiskLevel`, `AssetType`, `AssetValue`, `Tags`) extracted by the DCR's KQL transform, while type-specific payload is preserved in a dynamic `Details` column.
+
+**Supported event types:**
+
+- **Leaked Data** (`module: LEAKED_DATA`): `DATA_BREACH`, `COMBO_LIST`, `MALWARE_INFECTION`, `CONSUMER_CREDENTIAL`
+- **Dark Web Monitoring** (`module: DARK_WEB_MONITORING`): `DARK_WEB_FORUM_POST`, `DARK_WEB_TELEGRAM_POST`, `DARK_WEB_RANSOMWARE_POST`, `DARK_WEB_MARKETPLACE_POST`
+- **Domain Squatting** (`module: DOMAIN_SQUATTING`): `DOMAIN_PERMUTATION`
+- **Attack Surface** (`module: ATTACK_SURFACE`): `ATTACK_SURFACE_WEB_APPLICATION_VULNERABILITY`, `ATTACK_SURFACE_NETWORK_SERVICE_VULNERABILITY`, `ATTACK_SURFACE_DNS_VULNERABILITY`
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`NordStellar_CL`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.
+- **NordStellar**: Active NordStellar tenant with permission to configure outbound webhooks for the integration.
+
+**Setup Instructions:**
+
+ **1. Deploy connector resources**
+
+This connector enables NordStellar to push real-time threat intelligence and exposure events directly to Microsoft Sentinel via the Azure Monitor Ingestion API.
+
+Automated configuration
+Clicking **Deploy** will create:
+- A custom Log Analytics table `NordStellar_CL`
+- A Data Collection Rule (DCR) with a single stream `Custom-NordStellar` and a KQL transform that promotes common fields and preserves the type-specific payload in `Details`
+- The Data Collection Endpoint (DCE) used for ingestion
+- A Microsoft Entra application with OAuth 2.0 client credentials
+- The required `Monitoring Metrics Publisher` role assignment on the DCR
+
+The credentials returned below are then configured in the NordStellar portal so events can be pushed securely.
+
+
+**2. Configure NordStellar**
+
+Use the following parameters to configure the Microsoft Sentinel integration in the NordStellar portal.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Application (Client) ID**: <variable value provided at install time>
+  - **Client Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint URI**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+  - **Stream Name**: <variable value provided at install time>
+On-the-wire envelope
+NordStellar must POST a JSON array to `{DCE URI}/dataCollectionRules/{DCR Immutable ID}/streams/Custom-NordStellar?api-version=2023-01-01` with an OAuth bearer token for the scope `https://monitor.azure.com//.default`.
+
+Each element wraps the original webhook event in a thin envelope:
+
+```json
+[
+  {
+    "time": "2026-04-27T10:30:00Z",
+    "event": {
+      "id": "...",
+      "type": "DATA_BREACH",
+      "module": "LEAKED_DATA",
+      "risk_level": "HIGH",
+      "date_added": "...",
+      "tags": ["NAME"],
+      "asset": { "type": "EMAIL", "value": "user@company.com" }
+    }
+  }
+]
+```
+
+The DCR's KQL transform promotes `id`, `type`, `module`, `risk_level`, `asset.type`/`source_type`, `asset.value`/`asset_value`, `tags`, and the appropriate timestamp (`date_added` for leaked-data/dark-web/domain-permutation, `detected_at` for attack-surface) into typed columns. Everything else is preserved in the dynamic `Details` column.
+
+
+**3. Verify data ingestion**
+
+Confirm events are flowing from NordStellar to Sentinel.
+
+  Wait 5-10 minutes after enabling the integration, then run this KQL query in your Microsoft Sentinel workspace:
+
+```kql
+NordStellar_CL
+| where TimeGenerated > ago(1h)
+| summarize count() by EventType, Module
+| order by count_ desc
+```
+
+If no data appears after 15 minutes, verify the credentials in the NordStellar portal and check Azure Monitor for ingestion errors on the DCR.
+
+
+<br><br>
+</details> 
+
+ ---
+   
 <a name="obsidian-datasharing-connector"></a><details><summary>**Obsidian Datasharing Connector**</summary>
 
 **Supported by:** [Obsidian Security](http://obsidiansecurity.com/contact)
@@ -16784,6 +17348,49 @@ Follow [Sophos instructions](https://developer.sophos.com/getting-started-tenant
   - **Sophos Tenant ID**: (Sophos Tenant ID)
   - **Sophos Tenant Data Region**: (eu01, eu02, us01, us02 or us03)
   - Data Connectors Grid (configure in portal)
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="strider-shield"></a><details><summary>**Strider Shield**</summary>
+
+**Supported by:** [NVISO](https://nviso.atlassian.net/servicedesk)
+
+The [Strider Shield](https://www.striderintel.com/shield/) Data Connector delivers curated intelligence on state-sponsored actors by ingesting Strider Shield data into Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`StriderShieldEmailAddresses_CL`|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Strider Shield API token**: A Strider Shield API Token is required. See the Strider Shield documentation on how to create an API token.
+
+**Setup Instructions:**
+
+ **STEP 1 - Use an Authentication Strider Shield API endpoint**
+
+Follow the Strider Shield documentation for guidance on this step.
+
+**STEP 2 - Choose the correct base URL**
+
+There are multiple Strider Shield servers which might host your events. The correct server depends on your license and region.Input the base URL as displayed by the documentation (including 'https://' and without a trailing '/').
+
+**STEP 3 - Enter your Strider Shield Details**
+
+Enter the Strider Shield Authentication API endpoint, Base URL, Client ID & Client Secret below:
+
+  - **Authentication API endpoint**: (Enter your Authentication API endpoint)
+  - **Base Url**: (Enter your Base Url)
+  - **Client ID**: (Enter your Client ID)
+  - **Client Secret**: (Enter your Client Secret)
+  - Enable/Disable Connection
 
 <br><br>
 </details> 
@@ -19213,6 +19820,57 @@ For more information, see [Carbon Black Data Forwarder Docs](https://docs.vmware
 
  ---
    
+<a name="vmware-workspace-one-via-codeless-connector-framework"></a><details><summary>**VMware Workspace ONE (via Codeless Connector Framework)**</summary>
+
+**Supported by:** [Microsoft](https://support.microsoft.com/)
+
+The VMware Workspace ONE connector ingests enrolled device inventory and installed application details from the Workspace ONE Unified Endpoint Management (UEM) platform into Microsoft Sentinel. It supports device compliance tracking, non-compliant endpoint detection, and unauthorized application discovery across iOS, Android, Windows, and macOS managed devices.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`VMwareWorkspaceOneDevices`|No|No|
+
+**Data collection rule support:** Not currently supported
+
+**Setup Instructions:**
+
+ **Connect VMware Workspace ONE to Microsoft Sentinel**
+
+Prerequisites
+
+Before connecting, ensure:
+1. You have an active **VMware Workspace ONE UEM** (Omnissa) tenant
+2. You have administrator access to create an OAuth Client in **Groups & Settings -> Configurations -> OAuth Client Management**
+3. The OAuth Client role must include: **REST API Devices Read, REST API MDM Devices, REST API Apps Read**
+
+## Authentication Setup
+
+Create an OAuth Client in Workspace ONE UEM:
+1. Go to **Groups & Settings -> Configurations** and search for *OAuth*
+2. Select **OAuth Client Management -> click Add**
+3. Enter a Name (e.g., `MicrosoftSentinelConnector`), assign a role with device/app read permissions, set Status to **Enabled, then click Save**
+4. **Copy the Client ID and Client Secret immediately** - they cannot be retrieved after closing the dialog
+
+## Auth URL by Region
+
+Select the Auth URL that matches your Workspace ONE tenant's data center region:
+
+| Region | Auth URL |
+|--------|----------|
+| United States / Canada | `https://na.uemauth.vmwservices.com` |
+| United Kingdom / Germany | `https://emea.uemauth.vmwservices.com` |
+| Australia / APAC | `https://apac.uemauth.vmwservices.com` |
+| UAT Environment | `https://uat.uemauth.vmwservices.com` |
+
+  - Data Connectors Grid (configure in portal)
+
+<br><br>
+</details> 
+
+ ---
+   
 <a name="windows-dns-events-via-ama"></a><details><summary>**Windows DNS Events via AMA**</summary>
 
 **Supported by:** [Microsoft Corporation](https://support.microsoft.com/)
@@ -19753,6 +20411,38 @@ Enter the Zero Networks API URL (e.g. portal.zeronetworks.com). The connector ad
 
  ---
    
+<a name="zerofox-alerts"></a><details><summary>**ZeroFox Alerts**</summary>
+
+**Supported by:** [ZeroFox](https://www.zerofox.com/contact-us/)
+
+Collects alerts from ZeroFox API.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|`ZeroFoxAlertPoller_CL`|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **ZeroFox Integrations API Key**: A ZeroFox Integrations API Key is required. Request it at integrations@zerofox.com.
+
+**Setup Instructions:**
+
+ **Connect ZeroFox to Microsoft Sentinel**
+
+To enable the connector, provide the required information below and click Connect.
+
+  - **Provide your ZeroFox Integrations API Key**: (ZeroFox Integrations API Key)
+  - Enable/Disable Connection
+
+<br><br>
+</details> 
+
+ ---
+   
 <a name="zerofox-cti"></a><details><summary>**ZeroFox CTI**</summary>
 
 **Supported by:** [ZeroFox](https://www.zerofox.com/contact-us/)
@@ -20083,6 +20773,681 @@ ZoomV2_CL
 ```
 
   - Enable/Disable Connection
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-audit-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS Audit Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA Audit log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-casb-activity-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS CASB Activity Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA CASB Activity log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-casb-cloud-storage-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS CASB Cloud Storage Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA CASB Cloud Storage log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-casb-collaboration-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS CASB Collaboration Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA CASB Collaboration log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-casb-crm-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS CASB CRM Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA CASB CRM log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-casb-email-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS CASB Email Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA CASB Email log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-casb-file-sharing-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS CASB File Sharing Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA CASB File Sharing log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-casb-itsm-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS CASB ITSM Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA CASB ITSM log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-casb-repo-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS CASB Repo Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA CASB Repository log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-dns-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS DNS Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA DNS log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-email-dlp-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS Email DLP Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA Email DLP log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-endpoint-dlp-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS Endpoint DLP Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA Endpoint DLP log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-firewall-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS Firewall Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA firewall log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Jamf Protect uses in a Microsoft Analytics Workspace, if the [data forwarding](https://docs.jamf.com/jamf-protect/documentation/Data_Forwarding_to_a_Third_Party_Storage_Solution.html?hl=sentinel#task-4227) option is enabled in Jamf Protect then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-tunnel-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS Tunnel Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA tunnel log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Zscaler uses in a Microsoft Analytics Workspace, if the Cloud NSS option is enabled in Zscaler then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
+
+<br><br>
+</details> 
+
+ ---
+   
+<a name="zscaler-internet-access-cloud-nss-web-log-push-connector"></a><details><summary>**Zscaler Internet Access Cloud NSS Web Log Push Connector**</summary>
+
+**Supported by:** [Zscaler](https://www.zscaler.com/)
+
+The [Zscaler](https://www.zscaler.com/) connector provides the capability to read ZIA web log data in Microsoft Sentinel.
+
+**Log Analytics table(s):**  
+
+|Table|DCR support|Lake-only ingestion|
+|---|---|---|
+|[`CommonSecurityLog`](/azure/azure-monitor/reference/tables/CommonSecurityLog)|Yes|Yes|
+
+**Data collection rule support:** [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal)
+
+**Prerequisites:**
+
+- **Microsoft Entra**: Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
+- **Microsoft Azure**: Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role
+
+**Setup Instructions:**
+
+ **1. Create ARM Resources and Provide the Required Permissions**
+
+This connector reads data from the tables that Jamf Protect uses in a Microsoft Analytics Workspace, if the [data forwarding](https://docs.jamf.com/jamf-protect/documentation/Data_Forwarding_to_a_Third_Party_Storage_Solution.html?hl=sentinel#task-4227) option is enabled in Jamf Protect then raw event data is sent to the Microsoft Sentinel Ingestion API.
+
+Automated Configuration and Secure Data Ingestion with Entra Application 
+Clicking on "Deploy" will trigger the creation of Log Analytics tables and a Data Collection Rule (DCR). 
+It will then create an Entra application, link the DCR to it, and set the entered secret in the application. This setup enables data to be sent securely to the DCR using an Entra token.
+
+
+**2. Push your logs into the workspace**
+
+Use the following parameters to configure the your machine to send the logs to the workspace.
+
+  - **Tenant ID (Directory ID)**: <variable value provided at install time>
+  - **Entra App Registration Application ID**: <variable value provided at install time>
+  - **Entra App Registration Secret**: <variable value provided at install time>
+  - **Data Collection Endpoint Uri**: <variable value provided at install time>
+  - **Data Collection Rule Immutable ID**: <variable value provided at install time>
 
 <br><br>
 </details> 

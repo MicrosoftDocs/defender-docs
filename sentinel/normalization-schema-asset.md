@@ -4,7 +4,7 @@ description: This article displays the Microsoft Sentinel Asset Entity normaliza
 ms.author: edbaynash
 author: EdB-MSFT
 ms.topic: reference
-ms.date: 03/04/2026
+ms.date: 05/21/2026
 
 
 
@@ -66,7 +66,9 @@ The following list mentions fields for an Entity schema alongside their specific
 |-------|-------|------|-------------|
 | **EntityUpdatedTime** | Mandatory | datetime | The timestamp (UTC) of when the Entity was updated or collected at the source. |
 | **EntityIngestionTime** | Optional | datetime | The timestamp (UTC) of when the ingestion pipeline receives the asset log. |
+| **EntityKey** | Optional | string | The unique identifier of the entity, used for correlation across schemas. |
 | **EntityId** | Mandatory | string | The unique identifier of the asset. |
+| **EntityIdType** | Mandatory | string | The type or format of the entity identifier. |
 | **EntityOriginalId** | Optional | string | The unique identifier of the asset at the source if it is different from **'EntityId'**. |
 | **EntityName** | Mandatory | string | The name of the entity. |
 | **EntityNameType** | Recommended | string | The type of the entity name. |
@@ -80,8 +82,9 @@ The following list mentions fields for an Entity schema alongside their specific
 | **EntityLastModifiedTime** | Mandatory | datetime | The timestamp (UTC) of when the entity was last modified in the source system. |
 | **EntityIsDeleted** | Optional | bool | Indicates whether the entity has been deleted in the source system. |
 | **EntityFeedType** | Mandatory | Enumerated | The type or category of the data feed that provided the entity record. The allowed values are: `Snapshot` or `Changefeed`. |
+| **EntitySnapshotId** | Optional | string | The identifier of the snapshot to which the current record belongs. |
 | **EntitySchema** | Mandatory | Enumerated | The schema used for the entity. The schema documented here is `Asset`. |
-| **EntitySchemaVersion** | Mandatory | SchemaVersion (String) | The version of the schema. The version of the schema documented here is `0.1.0`. |
+| **EntitySchemaVersion** | Mandatory | SchemaVersion (String) | The version of the schema. The version of the schema documented here is `1.0.0`. |
 
 ### <a id="asset-owner-fields">Asset owner fields</a>
 
@@ -180,6 +183,7 @@ This section captures site-specific location properties for sharepoint site asse
 The following are the changes in various versions of the schema:
 
 - **Version 0.1.0**: Initial release.
+- **Version 1.0.0**: Added the `EntityKey`, `EntityIdType`, and `EntitySnapshotId` fields.
 
 ## Related content
 

@@ -26,4 +26,4 @@ You might want to proactively hunt on a daily or weekly basis, depending on your
 - [Weekly operational guide](ops-guide-weekly.md)
 - [Monthly operational guide](ops-guide-monthly.md)
 - [Quarterly / Ad hoc operational guide](ops-guide-quarterly.md)
-- The Microsoft Defender XDR [Security operations overview](/security/operations/overview).
+- The Microsoft Defender [Security operations overview](/security/operations/overview).

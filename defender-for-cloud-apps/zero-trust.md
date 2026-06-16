@@ -15,7 +15,7 @@ ms.collection:
 |---------|---------|---------|
 |Always authenticate and authorize based on all available data points.     | Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.        | Minimize blast radius and segment access. Verify end-to-end encryption and use analytics to get visibility, drive threat detection, and improve defenses.        |
 
-Microsoft Defender for Cloud apps is a primary component of a Zero Trust strategy and your XDR deployment with Microsoft Defender XDR. Microsoft Defender for Cloud Apps gathers signals from your organization's use of cloud apps and protects data flowing between your environment and these apps, including both sanctioned and unsanctioned cloud apps. For example, Microsoft Defender for Cloud Apps notices anomalous behavior like impossible-travel, credential access, and unusual download, file share, or mail forwarding activity and reports these to the security team for mitigation.
+Microsoft Defender for Cloud apps is a primary component of a Zero Trust strategy and your deployment with Microsoft Defender. Microsoft Defender for Cloud Apps gathers signals from your organization's use of cloud apps and protects data flowing between your environment and these apps, including both sanctioned and unsanctioned cloud apps. For example, Microsoft Defender for Cloud Apps notices anomalous behavior like impossible-travel, credential access, and unusual download, file share, or mail forwarding activity and reports these to the security team for mitigation.
 
 ## Monitoring for Zero Trust
 
@@ -44,4 +44,4 @@ See these articles for additional Zero Trust policies and best practices for app
 
 Learn more about other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture with [Zero Trust deployment plan with Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust).
 
-For an overview of Zero Trust for Microsoft Defender XDR services, see [Zero Trust with Microsoft Defender XDR](/microsoft-365/security/defender/zero-trust-with-microsoft-365-defender).
+For an overview of Zero Trust for Microsoft Defender services, see [Zero Trust with Microsoft Defender](/microsoft-365/security/defender/zero-trust-with-microsoft-365-defender).
