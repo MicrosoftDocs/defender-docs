@@ -5,7 +5,7 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 12/24/2025
+ms.date: 06/14/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
@@ -91,6 +91,9 @@ Use Microsoft Defender for Identity to sync user entities from your on-premises 
 ### Connect events
 
 If you want to collect advanced hunting events from Microsoft Defender for Endpoint or Microsoft Defender for Office 365, the following types of events can be collected from their corresponding advanced hunting tables.
+
+> [!IMPORTANT]
+> **Defender Vulnerability Management (TVM) tables aren't ingested into Microsoft Sentinel.** Tables such as `DeviceTvmSoftwareInventory` and `DeviceTvmSoftwareVulnerabilities` appear in the advanced hunting schema for autocomplete and discoverability, but Microsoft Sentinel doesn't ingest TVM data into the workspace. TVM queries can be accepted by the query editor but return no results. To query TVM data, run your queries in Defender XDR Advanced Hunting, where the data is available. To use TVM data in Microsoft Sentinel, you must build a [custom ingestion path](/azure/sentinel/create-custom-connector). For more information, see [Which Defender XDR tables aren't supported in Microsoft Sentinel](#which-defender-xdr-tables-arent-supported-in-microsoft-sentinel).
 
 1. Mark the check boxes of the tables with the event types you wish to collect:
 
@@ -182,6 +185,27 @@ let Now = now();
 | project Value = iff(isnull(Count), 0, Count), Time = TimeGenerated, Legend = "Events")
 | render timechart
 ```
+
+## Which Defender XDR tables aren't supported in Microsoft Sentinel
+
+The following advanced hunting tables are **not ingested** into Microsoft Sentinel, even though they appear in the schema:
+
+### Defender Vulnerability Management (TVM) tables
+
+- `DeviceTvmBrowserExtensions`
+- `DeviceTvmBrowserExtensionsKB`
+- `DeviceTvmCertificateInfo`
+- `DeviceTvmHardwareFirmware`
+- `DeviceTvmInfoGathering`
+- `DeviceTvmInfoGatheringKB`
+- `DeviceTvmSecureConfigurationAssessment`
+- `DeviceTvmSecureConfigurationAssessmentKB`
+- `DeviceTvmSoftwareEvidenceBeta`
+- `DeviceTvmSoftwareInventory`
+- `DeviceTvmSoftwareVulnerabilities`
+- `DeviceTvmSoftwareVulnerabilitiesKB`
+
+These tables are critical for security vulnerability management, but data is not currently streamed to Microsoft Sentinel through the Defender XDR connector. If you need to use this data in Microsoft Sentinel for analytics or detections, you must implement a [custom ingestion solution](/azure/sentinel/create-custom-connector). Otherwise, query the data in Defender XDR Advanced Hunting, where it’s available.
 
 See more information on the following items used in the preceding examples, in the Kusto documentation:
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
