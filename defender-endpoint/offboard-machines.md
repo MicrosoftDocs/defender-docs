@@ -10,7 +10,7 @@ ms.collection:
 - tier2
 ms.topic: article
 ms.subservice: onboard
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -62,11 +62,9 @@ In the following procedure, steps 1 and 2 are optional if you do not want to see
 
 1. Remove policies for [Tamper Protection](tamperprotection-macos.md). See [Set preferences on Mac: Tamper protection](mac-preferences.md#tamper-protection) or use manual configuration.
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, select **Settings** > **Endpoints** > **Device management** > **Offboarding**, and then select an operating system to start the offboarding process.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), navigate to, **System** > **Settings** > **Endpoints** > **Device management** > **Offboarding**. Select **macOS** in Step 1, then choose your preferred deployment method, and select **Download package** to download the offboarding package.
 
    Or, if you're using a non-Microsoft device management solution, disable integration with Defender for Endpoint.
-
-     :::image type="content" source="media/offboard-machines/remove-endpoint.png" alt-text="Screenshot that shows how to offboard endpoints in the Microsoft Defender portal. " lightbox="media/offboard-machines/remove-endpoint.png":::  
 
 1. Uninstall the Defender for Endpoint app on Mac devices.
 
