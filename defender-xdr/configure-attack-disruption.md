@@ -95,9 +95,9 @@ Microsoft Defender for Cloud Apps must be connected to Microsoft Office 365 thro
 
 > [!IMPORTANT]
 > To ensure full functionality of the capability, it is mandatory to properly configure the Microsoft 365 connector. As part of the setup process, all checkboxes within the Microsoft 365 connector must be selected, including the option to enable Microsoft Entra ID apps. Failure to select all required options may result in:
-- Partial or degraded functionality
-- Inability to perform critical actions (such as app governance or disruption flows)
-- Increased likelihood of operation failures 
+> - Partial or degraded functionality
+> - Inability to perform critical actions (such as app governance or disruption flows)
+> - Increased likelihood of operation failures 
 
 ### Microsoft Defender for Office 365 prerequisites
 
