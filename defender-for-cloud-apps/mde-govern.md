@@ -1,9 +1,10 @@
 ---
 title: Govern discovered apps using Microsoft Defender for Endpoint
 description: This article describes how to govern Microsoft Defender for Endpoint discovered apps.
-ms.date: 07/22/2024
+ms.date: 05/20/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ms.custom: sfi-image-nochange
 ---
 
 # Govern discovered apps using Microsoft Defender for Endpoint
@@ -49,7 +50,7 @@ Use the following steps to enable access control for cloud apps:
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Cloud Discovery**, select **Microsoft Defender for Endpoint**, and then select **Enforce app access**.
 
     ![Screenshot showing how to enable blocking with Defender for Endpoint.](media/mde-integration.png)
-   
+
     > [!NOTE]
     > It can take up to 30 minutes for this setting to take effect.
 
@@ -58,7 +59,7 @@ Use the following steps to enable access control for cloud apps:
     This allows you to leverage Microsoft Defender Antivirus network protection capabilities to block access to a predefined set of URLs using Defender for Cloud Apps, either by manually assigning [app tags](governance-discovery.md#sanctioningunsanctioning-an-app) to specific apps or automatically using an [app discovery policy](cloud-discovery-policies.md#creating-an-app-discovery-policy).
 
     ![Screenshot showing how to enable custom network indicators in Defender for Endpoint.](media/mde-custom-network-indicators.png)
-   
+
 ## Educate users when accessing blocked apps & customize the block page
 
 Admins can now configure and embed a support/help URL for block pages. With this configuration, admins can educate users when they access blocked apps. Users are prompted with a custom redirect link to a company page listing apps blocked for use and necessary steps to be followed to secure an exception on block pages. End users will be redirected to this URL that is configured by admin when they click on "Visit the Support page” on the block page.
@@ -76,6 +77,23 @@ Use the following steps to configure a custom help/support URL pointing to a com
 1. Under **User warnings** > **Notification URL for blocked apps**, enter your URL. For example:
 
     [ ![Screenshot showing configuration of adding custom URL for blocked apps.](media/mde-govern/mda-custom-block-url-config.png) ](media/mde-govern/mda-custom-block-url-config.png#lightbox)
+
+## Disable informational alerts for unsanctioned app access (Preview)
+
+By default, when users access an unsanctioned app, Defender for Cloud Apps generates an informational alert. To reduce alert noise and improve SOC focus in Microsoft Defender XDR, you can turn off these alerts using the **Generate alert for blocked app access** toggle.
+
+When the toggle is off:
+
+- Defender for Cloud Apps stops generating alerts for unsanctioned or blocked app access.
+- Existing alerts aren't retroactively removed.
+- Other Cloud Discovery or Defender alerts remain unaffected.
+- Blocking enforcement continues to work as expected.
+
+To turn off informational alerts:
+
+1. In the Microsoft Defender portal, select **Setup & configuration** > **Settings** > **Cloud Apps** > **Cloud Discovery** > **Microsoft Defender for Endpoint**.
+1. Locate the **Generate alert for blocked app access** toggle.
+1. Turn off the toggle to disable informational alerts for blocked app access.
 
 ## Block apps for specific device groups
 

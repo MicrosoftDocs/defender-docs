@@ -2,22 +2,15 @@
 title: Manage predictive shielding in Microsoft Defender
 description: Manage the predictive shielding feature in Microsoft Defender.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
-ms.author: lwainstein
-author: limwainstein
+ms.author: monaberdugo
+author: mberdugo
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
   - usx-security
   - usx-security
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - MET150
 ms.date: 11/04/2025
 appliesto:
   - Microsoft Defender XDR
@@ -48,7 +41,7 @@ In the **Incidents** page, filter by the **Predictive Shielding** tag to find in
 :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png" alt-text="Screenshot of the incident list filtered by the Predictive Shielding tag." lightbox="media/shield-predict-threats-manage/shield-predict-threats-filter-incidents.png":::
 
 > [!NOTE]
-> While the incident and alert details show historical data from the inception of the incident, the **Activities** tab shows a snapshot of the current status. For more information, see [Review the activity information](#review-the-activity-information).
+> While the incident and alert details show historical data from the inception of the incident, the **Activities** tab shows a snapshot of the current status. For more information, see [Track the action status in the Activities tab](autoad-results.md#track-the-action-status-in-the-activities-tab-preview).
 
 You can then select the relevant incident, and review the incident graph to get the entire [attack story](investigate-incidents.md#attack-story) and assess the predictive shielding impact and status.
 
@@ -60,7 +53,7 @@ You can also review the alert, and disruption information for predictive shieldi
     
     :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-alert-details.png" alt-text="Screenshot of the alert details with the Predictive Shielding label."::: 
 
-- In the disruption summary, view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
+- In the [disruption summary](autoad-results.md#review-the-attack-disruption-summary-card), view the number of predictive shielding policies invoked as part of this incident, and the number of hardened devices across all policies.
 
     :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-disruption-summary.png" alt-text="Screenshot of the disruption summary card showing predictive shielding details." loc-scope="other":::
 

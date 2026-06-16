@@ -1,8 +1,28 @@
 {
   "redirections": [
     {
+      "source_path": "defender-for-identity/deploy/event-collection-overview.md",
+      "redirect_url": "/defender-for-identity/deploy/configure-windows-event-collection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-for-identity/deploy/download-sensor.md",
+      "redirect_url": "/defender-for-identity/deploy/install-sensor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-for-identity/deploy/prerequisites-sensor-version-3.md",
+      "redirect_url": "/defender-for-identity/deploy/deploy-sensor-v3",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "defender-for-identity/security-assessment-do-not-expire-passwords.md",
       "redirect_url": "/defender-for-identity/security-assessment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/investigate-assets.md",
+      "redirect_url": "/defender-for-identity/identity-inventory",
       "redirect_document_id": false
     },
     {
@@ -13,6 +33,11 @@
     {
       "source_path": "defender-for-identity/active-directory-federation-services.md",
       "redirect_url": "/defender-for-identity/deploy/active-directory-federation-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/architecture.md",
+      "redirect_url": "/defender-for-identity/what-is",
       "redirect_document_id": false
     },
     {
@@ -1119,6 +1144,16 @@
       "source_path": "defender-for-identity/link-unlink-account-to-identity.md",
       "redirect_url": "/defender-for-identity/manage-related-identities-accounts",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "defender-for-identity/deploy/remote-calls-sam.md",
+      "redirect_url": "/defender-for-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/understand-lateral-movement-paths.md",
+      "redirect_url": "/defender-for-identity",
+      "redirect_document_id": false
+    },
   ]
 }

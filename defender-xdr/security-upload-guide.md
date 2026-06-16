@@ -11,9 +11,6 @@ ms.collection:
   - security-copilot
   - magic-ai-copilot
 ms.topic: install-set-up-deploy
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 11/18/2025
 appliesto:
 - Microsoft Defender XDR
@@ -74,5 +71,7 @@ You have the opportunity to provide feedback on the effectiveness of the guided 
 ## Best practices for creating effective guidebooks
 
 For examples of Microsoft's own incident response playbooks, see [Incident response playbooks](/security/operations/incident-response-playbooks).
+
+To create a guidebook for your organization, start with the [SOP template - Compromised identity](sop-documentation-template.md).
 
 When creating your organization's guidebooks, keep in mind that the guidebook can only read text. Avoid using images, graphs, or complex formatting that may hinder text extraction.

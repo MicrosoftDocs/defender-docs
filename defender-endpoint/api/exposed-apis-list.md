@@ -1,4 +1,4 @@
-﻿---
+---
 title: Supported Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn about the specific supported Microsoft Defender for Endpoint entities where you can create API calls to.
@@ -7,8 +7,6 @@ ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.date: 03/21/2025
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -16,7 +14,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Troubleshoot Microsoft Defender for Endpoint service issues
 description: Find solutions and workarounds to known issues such as server errors when trying to access the service.
 ms.service: defender-endpoint
@@ -6,13 +6,10 @@ ms.subservice: onboard
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: troubleshooting
-search.appverid: met150
 ms.date: 02/24/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -31,7 +28,7 @@ Configure your browser to allow cookies.
 
 ## Elements or data missing on the portal
 
-If some elements or data is missing on Microsoft Defender XDR, it's possible that proxy settings are blocking it.
+If some elements or data is missing in the Defender portal, it's possible that proxy settings are blocking it.
 
 Make sure that `*.security.microsoft.com` is included in the proxy allow list.
 

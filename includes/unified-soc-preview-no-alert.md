@@ -3,8 +3,8 @@ title: "include file"
 description: "include file" 
 ms.date: 03/30/2025
 manager: orspodek
-ms.author: bagol
-author: batamig
+ms.author: guywild
+author: guywi-ms
 ms.service: microsoft-365-security
 ms.topic: include
 ms.custom: "include file"

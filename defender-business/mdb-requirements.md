@@ -1,17 +1,13 @@
 ---
 title: Requirements for Microsoft Defender for Business
 description: Microsoft Defender for Business license, hardware, and software requirements
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 09/11/2025
 ms.reviewer: nehabha
-f1.keywords: NOCSH
 ms.collection:
  - SMB
  - m365-security

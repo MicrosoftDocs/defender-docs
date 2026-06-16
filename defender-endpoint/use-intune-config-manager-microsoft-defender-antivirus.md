@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus using Microsoft Intune
 description: Use Microsoft Intune to configure Microsoft Defender Antivirus and Endpoint Protection
 ms.service: defender-endpoint
@@ -8,15 +8,12 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 05/07/2025
 ms.reviewer: phuijbr, yongrhee
-manager: bagol
 ms.subservice: ngp
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -30,7 +27,7 @@ appliesto:
 - Microsoft Defender Antivirus using Intune is available on the following platforms:
 - Windows 10 and later
 
-You can use the Microsoft Intune family of products to configure Microsoft Defender Antivirus settings, like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) and [Configuration Manager](/mem/configmgr/core/understand/introduction).
+You can use the Microsoft Intune family of products to configure Microsoft Defender Antivirus settings, like [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) and [Configuration Manager](/intune/configmgr/core/understand/introduction).
 
 ### Configure Microsoft Defender Antivirus settings in Intune
 
@@ -595,13 +592,13 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
   - **The Defender core service stops using the OneDsCollector framework to rapidly collect telemetry, impacting Microsoft's ability to quickly recognize and address poor performance, false positives, and other problems**.
   
 > [!TIP]
-> Need help? See [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security).
+> Need help? See [Manage endpoint security in Microsoft Intune](/intune/intune-service/protect/endpoint-security).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

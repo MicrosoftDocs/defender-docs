@@ -26,7 +26,7 @@ If the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned on, the RPC interface only
 If the RPC enrollment interface doesn't require packet privacy, it becomes vulnerable to relay attacks (ESC11). The `IF_ENFORCEENCRYPTICERTREQUEST` flag is on by default, but is often turned off to allow clients that can't support the required RPC authentication level, such as clients running Windows XP. 
 
 >[!NOTE]
->This assessment is available only to customers who have installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](../whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs)
+>This assessment is available only to customers who have installed a sensor on an AD CS server. 
 
 **Implementation**
 
@@ -117,7 +117,7 @@ The effect of a misconfigured ACL varies based on the type of permission applied
 
 ### Prerequisites
 
-This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see [New sensor type for Active Directory Certificate Services (AD CS)](../whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs).
+This assessment is available only to customers who installed a sensor on an AD CS server. 
 
 **Implementation**
 
@@ -285,7 +285,7 @@ If the AD CS `editflags` > `EDITF_ATTRIBUTESUBJECTALTNAME2` flag is turned on, e
 If there's a template where the `EDITF_ATTRIBUTESUBJECTALTNAME2` setting is turned on, and the template is valid for authentication, an attacker can enroll a certificate that can impersonate any arbitrary account.
 
 > [!NOTE]
-> This assessment is available only to customers who installed a sensor on an AD CS server. For more information, see: [What's new in Microsoft Defender for Identity](../whats-new.md#new-sensor-type-for-active-directory-certificate-services-ad-cs)
+> This assessment is available only to customers who installed a sensor on an AD CS server.
 
 **Implementation**
 

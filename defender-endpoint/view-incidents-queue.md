@@ -1,4 +1,4 @@
-﻿---
+---
 title: View and organize the Incidents queue
 ms.reviewer: 
 description: See the list of incidents and learn how to apply filters to limit the list and get a more focused view.
@@ -6,15 +6,12 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
 ms.topic: article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 01/06/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

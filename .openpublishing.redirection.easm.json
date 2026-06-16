@@ -1,0 +1,14 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/easm/data-connections-overview.md",
+      "redirect_url": "/azure/external-attack-surface-management/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/easm/labeling-inventory-assets.md",
+      "redirect_url": "/azure/external-attack-surface-management/modifying-inventory-assets",
+      "redirect_document_id": true
+    }
+  ]
+}

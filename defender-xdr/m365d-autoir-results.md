@@ -1,16 +1,11 @@
 ---
 title: Details and results of an automated investigation
 description: View the results and key findings of automated investigation in Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-- NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/28/2025
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2

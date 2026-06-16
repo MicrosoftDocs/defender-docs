@@ -1,15 +1,11 @@
 ---
 title: Microsoft Security Copilot advanced hunting query assistant
 description: Learn how Microsoft Security Copilot threat hunting agent can help you can generate a KQL query for you.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1

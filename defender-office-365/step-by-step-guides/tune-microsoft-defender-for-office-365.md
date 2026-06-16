@@ -2,19 +2,14 @@
 title: Tune Microsoft Defender for Office 365
 description: Tune settings and protection in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-f1.keywords:
-  - NOCSH
 author: MSFTBen
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 04/14/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -36,7 +31,7 @@ The term "tuning" is used often and can mean different things. For example:
 
 The easiest and safest way to configure security controls is by onboarding to [preset security policies](../preset-security-policies.md). By using the Standard or Strict preset security policies, you always have Microsoft's recommended, best practice configuration for users. For instructions, see [Steps to set up the Standard or Strict preset security policies for Microsoft Defender for Office 365](ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md).
 
-Are you worried about attacks targeting your CEO, CIO, or CFO? You can [Protect your c-suite with Priority account protection in Microsoft Defender for Office 365 Plan 2](protect-your-c-suite-with-priority-account-protection.md).
+Are you worried about attacks targeting your CEO, CIO, or CFO? You can [manage and monitor priority accounts in Microsoft 365](/microsoft-365/admin/security-and-compliance/priority-accounts).
 
 If you use custom security policies, configuration analyzer gives recommendations to make sure you follow Microsoft's best practices. You can [Optimize and correct threat policies with configuration analyzer](optimize-and-correct-security-policies-with-configuration-analyzer.md).
 

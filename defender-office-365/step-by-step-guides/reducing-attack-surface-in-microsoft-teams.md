@@ -4,15 +4,12 @@ description: Configuration which can be used to reduce the attack surface in Mic
 ms.service: defender-office-365
 author: MSFTBen
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 01/05/2023
 ---
 
@@ -48,7 +45,7 @@ If licensed for Microsoft Defender for Office 365 (free 90-day evaluation availa
 7. Press **Edit protection settings**.
 8. Ensure **Safe Links checks a list of known, malicious links when users click links in Microsoft Teams** is checked.
 9. Press **Save**.
-10. In organizations with Microsoft Defender for Office 365 Plan 2 or Microsoft Defender XDR, admins can decide whether users can report malicious messages in Microsoft Teams. Learn more here. [User reported message settings in Microsoft Teams](../submissions-teams.md)
+10. In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2, or Microsoft Defender XDR, admins can decide whether users can report malicious messages in Microsoft Teams. For more information, see [User reported settings in Microsoft Teams](../submissions-teams.md).
 
 ## Restricting channel email messages to approved domains
 
@@ -123,6 +120,9 @@ External access allows your users to communicate externally in Teams, allowing e
 5. Select **Save**.
 
 Note that external organizations must also allow your organization's domain for external access to work.
+
+> [!TIP]
+> You can also create external access policies with domain allow/deny lists and assign them to specific users or groups for more granular control. For more information, see [Manage external access](/microsoftteams/manage-external-access).
 
 ## Learn More
 

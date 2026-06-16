@@ -18,7 +18,7 @@ Use the **Adjust alert thresholds** page to customize the threshold level for sp
 Alerts are triggered immediately if the **Recommended test mode** option is selected, or if a threshold level is set to **Medium** or **Low**, regardless of whether the alert's learning period has already completed.
 
 > [!NOTE]
-> The **Adjust alert thresholds** page was previously named **Advanced settings**. For details about this transition and how any previous settings were retained, see our [What's New announcement](whats-new.md#enhanced-user-experience-for-adjusting-alert-thresholds-preview).
+> The **Adjust alert thresholds** page was previously named **Advanced settings**.
 
 ## Prerequisites
 

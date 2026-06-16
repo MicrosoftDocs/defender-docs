@@ -1,24 +1,18 @@
 ---
 title: Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: 07e76024-0c80-40dc-8c48-1dd0d0f863cb
 ms.collection: 
   - m365-security
   - SPO_Content
   - tier2
 description: Admins can learn how to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, including how to set alerts for detected files.
-ms.custom: 
-- seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ms.date: 08/05/2025
 appliesto:
@@ -60,7 +54,7 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section. Or, to go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
-2. On the **Safe Attachments** page, select :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**.
+2. On the **Safe Attachments** page, select :::image type="icon" source="media/defender-portal-icon-gear.png" border="false"::: **Global settings**.
 
 3. In the **Global settings** flyout that opens, go to the **Protect files in SharePoint, OneDrive, and Microsoft Teams** section.
 
@@ -103,7 +97,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Alert policy**. To go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpolicies>.
 
-2. On the **Alert policy** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **New alert policy** to start the new alert policy wizard.
+2. On the **Alert policy** page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **New alert policy** to start the new alert policy wizard.
 
 3. On the **Name your alert, categorize it, and choose a severity** page, configure the following settings:
    - **Name**: Type a unique and descriptive name. For example, **Malicious Files in Libraries**.

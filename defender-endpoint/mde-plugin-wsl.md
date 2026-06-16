@@ -1,9 +1,8 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 description: Learn how to set up and use the Defender for Endpoint plug-in for Windows Subsystem for Linux.
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.reviewer: gokulgiju, priyankagill, kvitta, pahuijbr
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -13,10 +12,9 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom:
-- partner-contribution
-audience: ITPro
+  - partner-contribution
+  - sfi-image-nochange
 ms.date: 10/27/2025
-search.appverid: MET150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
@@ -30,7 +28,7 @@ Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL 
 
 ## Prerequisites
 
-- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
+- WSL version `2.0.7.0` or later must be running with at least one active distro. Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl --update --pre-release` to get the latest update.
 
 - The Windows client device must be onboarded to Defender for Endpoint.
 
@@ -92,7 +90,7 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
    1. Open a command prompt/terminal and run `wsl`.
 
-   You can [deploy the package using Microsoft Intune](/mem/intune/apps/lob-apps-windows).
+   You can [deploy the package using Microsoft Intune](/intune/intune-service/apps/lob-apps-windows).
 
 > [!NOTE]
 > If `WslService` is running, it stops during the installation process. You do not need to onboard the subsystem separately. Instead, the plug-in automatically onboards to the tenant the Windows host is onboarded to.
@@ -222,9 +220,8 @@ In the Advanced Hunting schema, under the `DeviceInfo` table, there's a new attr
 ```kusto
 //Get all WSL device ids for the current organization/tenant 
 let wsl_endpoints = DeviceInfo  
-| where OSPlatform == "Linux" and isempty(HostDeviceId) != true
+| where OSPlatform == "Linux" and isnotempty(HostDeviceId)
 | distinct DeviceId; 
-
 wsl_endpoints
 ```
 
@@ -233,7 +230,7 @@ wsl_endpoints
 ```kusto
 //Get WSL device ids and their corresponding host device ids 
 DeviceInfo  
-| where OSPlatform == "Linux" and isempty(HostDeviceId) != true
+| where OSPlatform == "Linux" and isnotempty(HostDeviceId)
 | distinct WSLDeviceId=DeviceId, HostDeviceId
 ```
 
@@ -242,9 +239,8 @@ DeviceInfo
 ```kusto
 //Get a list of WSL device ids where curl or wget was run
 let wsl_endpoints = DeviceInfo  
-| where OSPlatform == "Linux" and isempty(HostDeviceId) != true
+| where OSPlatform == "Linux" and isnotempty(HostDeviceId)
 | distinct DeviceId; 
-
 DeviceProcessEvents   
 | where FileName == "curl" or FileName == "wget" 
 | where DeviceId in (wsl_endpoints) 

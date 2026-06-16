@@ -1,14 +1,11 @@
-﻿---
+---
 title: Device health reporting in Microsoft Defender for Endpoint
 description: Use the device health report to track device health, antivirus status and versions, OS platforms, and Windows 10 versions.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
 ms.date: 03/25/2025
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -17,6 +14,7 @@ ms.subservice: ngp
 ms.reviewer: mkaminska
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 
 ---
 # Device health reports in Microsoft Defender for Endpoint

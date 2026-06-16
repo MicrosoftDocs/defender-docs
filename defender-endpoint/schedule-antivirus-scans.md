@@ -1,4 +1,4 @@
-﻿---
+---
 title: About regular quick and full scans with Microsoft Defender Antivirus
 description: Learn about recurring (scheduled) scans, including when they should run and whether they run as full or quick scans
 ms.service: defender-endpoint
@@ -8,14 +8,12 @@ ms.author: chrisda
 ms.custom: nextgen
 ms.date: 12/12/2025
 ms.reviewer: pauhijbr, ksarens, yongrhee, bsabetghadam
-manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

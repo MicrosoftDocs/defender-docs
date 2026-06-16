@@ -1,15 +1,9 @@
 ---
 title: Outbound delivery pools
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: ac11edd9-2da3-462d-8ea3-bbf9dbc6f948
 ms.collection: 
   - m365-security
@@ -21,6 +15,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Outbound delivery pools
@@ -39,7 +34,7 @@ The high risk delivery pool is a separate IP address pool for outbound email tha
 
 The possibility that IP addresses in the high-risk delivery pool are placed on IP blocklists remains, but this behavior is by design. Delivery to the intended recipients isn't guaranteed, because many email organizations don't accept messages from the high risk delivery pool.
 
-For more information, see [Control outbound spam](outbound-spam-protection-about.md).
+For more information, see [Control outbound spam](outbound-spam-protection-about.md) and [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md).
 
 > [!NOTE]
 > Messages where the source email domain has no A record and no MX record defined in public DNS are always routed through the high-risk delivery pool, regardless of their spam or sending limit disposition.
@@ -70,7 +65,6 @@ The forwarded or relayed message should meet one of the following criteria to av
 
 - The outbound sender is in an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 - SPF passes when the message comes to Microsoft 365.
-- DKIM on the sender domain passes when the message comes to Microsoft 365.
 
 In cases where we can authenticate the sender, we use Sender Rewriting Scheme (SRS) to help the recipient email system know that the forwarded message is from a trusted source. You can read more about how that works and what you can do to help make sure the sending domain passes authentication in [Sender Rewriting Scheme (SRS) in Office 365](/office365/troubleshoot/antispam/sender-rewriting-scheme).
 

@@ -3,16 +3,13 @@ title: Visualize security impact with the unified security summary
 description: Learn how to use the unified security summary in the Microsoft Defender portal to visualize your security impact and achievements.
 ms.service: defender-xdr
 ms.localizationpriority: medium
-audience: ITPro
 author: guywi-ms
 ms.author: guywild
 ms.date: 05/07/2025
-manager: deniseb
 ms.topic: how-to
 ms.collection:
 - m365-security
 - tier2
-search.appverid: met150
 appliesto:
 - Microsoft Defender XDR
 #customer intent: As a SOC analyst, I want to know how to showcase security achievements and impact using data from the Microsoft Defender portal.

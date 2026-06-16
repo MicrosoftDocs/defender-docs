@@ -1,11 +1,7 @@
 ---
 title: Integrate ServiceNow data connector in Microsoft Security Exposure Management
 description: Learn how to the ServiceNow data connector in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 10/23/2025
 ---
 
@@ -20,11 +16,11 @@ To set up the ServiceNow CMDB integration, you need to provide the hostname of y
 
 1. Find the hostname of your ServiceNow instance. For example, "contoso.service-now.com".  
 1. Create a New ServiceNow user:
-   1. Follow the steps [here](https://docs.servicenow.com/en-US/bundle/vancouver-platform-administration/page/administer/users-and-groups/task/t_CreateAUser.html) to create a new user.
+   1. Follow [these steps] (https://docs.servicenow.com/en-US/bundle/vancouver-platform-administration/page/administer/users-and-groups/task/t_CreateAUser.html) to create a new user.
    1. Keep the **username (User Id) and password** you provided for future use.
-   1. If there’s no password field, submit the form to create the user. Afterwards, when you select on the new user, you receive the **Set Password** option.
-   1. As you create the user, check the **Web service access only** box such that the user will be of dedicated use only for this integration.
-1. Assign a **cmdb_read** role to the user you have created. Detailed instructions can be found [here](https://docs.servicenow.com/bundle/vancouver-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html).
+   1. If there’s no password field, submit the form to create the user. Afterwards, when you select the new user, you'll receive the **Set Password** option.
+   1. As you create the user, check the **Web service access only** box so that the user will be of dedicated use only for this integration.
+1. Assign a **cmdb_read** role to the user you've created. See these [detailed instructions](https://docs.servicenow.com/bundle/vancouver-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html).
 
 ## Configure OAuth 2.0 authentication (client credentials flow)
 
@@ -52,7 +48,7 @@ Use OAuth 2.0 client credentials to avoid storing a long‑lived password and to
 1. Ensure Public Client remains unchecked (must be a confidential client).
 1. Save the record.
 1. In the Application Registries list view, customize the view (gear icon) to add the "OAuth Application User" column.
-1. Set the OAuth Application User to the dedicated integration user (the token will assume this user's roles).
+1. Set the OAuth Application User to the dedicated integration user (the token assumes this user's roles).
 1. Open the record to copy the Client ID and generate/view the Client Secret.
 
 ### Token endpoint and grant details
@@ -113,14 +109,14 @@ Here are some common issues that might arise when configuring the ServiceNow Con
 | **Error Type**                                               | **Troubleshooting Action**                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 'The remote server name couldn't be resolved' error message | Verify ServiceNow Instance hostname. Learn more about authentication to ServiceNow here: [Authentication (servicenow.com)](https://docs.servicenow.com/bundle/vancouver-platform-security/page/integrate/single-sign-on/concept/c_Authentication.html) |
-| **Error code 401**: Authorization failure                    | An authorization failure indicates that credentials might not be correct, or there might not be sufficient permissions to access the ServiceNow data. Check your credentials and make sure they are correct and valid. Also check that your credentials have the required permissions. See the [Configure ServiceNow with Basic Authentication](#configure-servicenow-with-basic-authentication) section for details on how to ensure the cmdb_read role is assigned. Another possible reason for this failure is the that your ServiceNow instance is configured to accept connections only from a limited range of IP addresses. In this case, see the guidance for adding the right set of IPs to your allowlist here: [Allowlist IP addresses](configure-data-connectors.md#allowlist-ip-addresses) |
+| **Error code 401**: Authorization failure                    | An authorization failure indicates that credentials might not be correct, or there might not be sufficient permissions to access the ServiceNow data. Check your credentials and make sure they're correct and valid. Also check that your credentials have the required permissions. See the [Configure ServiceNow with Basic Authentication](#configure-servicenow-with-basic-authentication) section for details on how to ensure the cmdb_read role is assigned. Another possible reason for this failure is the that your ServiceNow instance is configured to accept connections only from a limited range of IP addresses. In this case, see the guidance for adding the right set of IPs to your allowlist here: [Allowlist IP addresses](configure-data-connectors.md#allowlist-ip-addresses) |
 | **Error code 403:** Access forbidden error                   | This error indicates that the provided credentials lack the necessary permissions to run the requested APIs. Update your credentials with the proper permissions as described in the [Configure ServiceNow with Basic Authentication](#configure-servicenow-with-basic-authentication) section, and make sure they have at minimum cmdb_read role assigned. |
 | **Error code 404:** Not found error                          | This error indicates that the requested endpoint wasn't found to be reachable. Verify that your ServiceNow Instance hostname is correct. |
 | **Error code 429** 'Too many requests"                       | The system periodically pulls data from the configured external providers, which might have a limit on the number of concurrent requests. We recommend creating a dedicated user or account for the connector to avoid reaching this limit. |
 | Bad URL error message                                        | This error indicates that the requested endpoint wasn't found to be reachable. Verify that your ServiceNow Instance hostname is correct. |
-| 'Temporary disconnected' or 'Temporary failure' error        | In the case where this error message appears without any additional information, verify the connector configuration (hostname and credentials). If these are valid and the issue does not resolve on its own, contact Support. |
+| 'Temporary disconnected' or 'Temporary failure' error        | In the case where this error message appears without any additional information, verify the connector configuration (hostname and credentials). If these are valid and the issue doesn't resolve on its own, contact Support. |
 | Not seeing some ServiceNow CMDB CIs or assets in the ingested data | See [Retrieved data](#retrieved-data) for a description of the data expected to be retrieved by the ServiceNow CMDB connector. If there's still missing data, contact Support. |
-| Not seeing any data ingested from ServiceNow CMDB            | Review your connection status to ensure there are no errors. Validate that there are valid entries in your ServiceNow CMDB that correspond with the data we are retrieving. Run the sample [Advanced Hunting query](value-data-connectors.md#advanced-hunting) to check if any ServiceNow assets can be found in the Exposure Graph tables.If you are still unable to find your ServiceNow CMDB data, contact Support. |
+| Not seeing any data ingested from ServiceNow CMDB            | Review your connection status to ensure there are no errors. Validate that there are valid entries in your ServiceNow CMDB that correspond with the data we're retrieving. Run the sample [Advanced Hunting query](value-data-connectors.md#advanced-hunting) to check if any ServiceNow assets can be found in the Exposure Graph tables. If you're still unable to find your ServiceNow CMDB data, contact Support. |
 | ServiceNow allowed IPs need to be configured to enable Exposure Management connectors to access ServiceNow | Read how to add the set of IPs to add to your allowlist here: [Allowlist IP addresses](configure-data-connectors.md#allowlist-ip-addresses)|
 
 ## Next steps

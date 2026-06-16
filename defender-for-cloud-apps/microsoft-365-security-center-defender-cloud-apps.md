@@ -3,22 +3,17 @@ title: Microsoft Defender for Cloud Apps in the Microsoft Defender portal
 description: Learn about using Microsoft Defender for Cloud Apps in the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.localizationpriority: medium
-f1.keywords:
-- NOCSH
 ms.author: abbyweisberg 
 author: AbbyMSFT
 ms.date: 02/01/2026
-audience: ITPro
 ms.topic: article
-search.appverid: 
-- MOE150
-- MET150
 ms.collection: 
 - m365-security 
 - tier2
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud Apps
+ms.custom: sfi-image-nochange
 ---
 
 # Microsoft Defender for Cloud Apps in the Microsoft Defender portal

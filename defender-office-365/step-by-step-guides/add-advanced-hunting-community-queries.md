@@ -2,23 +2,18 @@
 title: Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
 description: Detailed steps to add Advanced Hunting community queries
 ms.service: defender-office-365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 06/12/2025
 ---
 
-# Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
+# Add Advanced Hunting community queries to Microsoft Defender and Microsoft Sentinel
 
 Creating and sharing Advanced Hunting queries in Microsoft Defender not only enhances your own security operations but also contributes to the broader community of Defender users. This guide walks you through the process of creating new or modifying existing queries, and publishing them to the **Community queries** section within the Microsoft Defender portal.
 
@@ -33,7 +28,7 @@ Following the steps in this article ensures your queries are accessible to all c
 - The procedures in this article use [Visual Studio Code](https://code.visualstudio.com/) (VS Code) for forking, cloning, creating, and synchronizing queries to and from the Azure Sentinel GitHub repository. Different tools with different instructions are available for all of these tasks.
 
 - A Microsoft 365 subscription that includes Advanced Hunting. For example:
-  - Microsoft Defender XDR
+  - Microsoft Defender
   - Microsoft Sentinel
   - Microsoft Defender for Office 365 Plan 2
 
@@ -107,7 +102,7 @@ By default the **master** (main) branch is active when you open your cloned fork
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-select-active-branch.png" alt-text="Screenshot of the active (open) branch highlighted in Visual Studio Code." lightbox="../media/add-advanced-hunting-community-queries-vs-code-select-active-branch.png":::
 
-2. In the dialog that opens, select :::image type="icon" source="../media/m365-cc-sc-create-icon.png" border="false"::: **Create new branch from...**, and then select **master** (other available branches also appear in the list).
+2. In the dialog that opens, select :::image type="icon" source="../media/defender-portal-icon-create.png" border="false"::: **Create new branch from...**, and then select **master** (other available branches also appear in the list).
 
    :::image type="content" source="../media/add-advanced-hunting-community-queries-vs-code-clone-create-new-branch-from.png" alt-text="Screenshot of the dialog that opens after you select the active (open) branch in Visual Studio Code with Create new branch from... highlighted." lightbox="../media/add-advanced-hunting-community-queries-vs-code-clone-create-new-branch-from.png":::
 

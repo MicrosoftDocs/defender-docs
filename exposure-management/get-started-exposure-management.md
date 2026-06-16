@@ -1,12 +1,9 @@
 ---
 title: Start using Microsoft Security Exposure Management
 description: This article describes how to start using the Microsoft Security Exposure Management dashboard
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 11/04/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with Microsoft Security Exposure Management

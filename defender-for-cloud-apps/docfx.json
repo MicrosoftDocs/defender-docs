@@ -38,7 +38,7 @@
       "searchScope": ["Defender for Cloud Apps"],
       "titleSuffix": "Microsoft Defender for Cloud Apps",
       "author": "AbbyMSFT",
-      "manager": "AbbyMSFT",
+      "manager": "bagol",
       "ms.author": "abbyweisberg",
       "ms.collection": "M365-security-compliance",
       "ms.service": "defender-for-cloud-apps",

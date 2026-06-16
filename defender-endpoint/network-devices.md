@@ -1,161 +1,123 @@
-﻿---
-title: Network device discovery and vulnerability management
-description: Security recommendations and vulnerability detection are now available for operating systems of switches, routers, WLAN controllers, and firewalls.
+---
+title: Set up authenticated network scans in Microsoft Defender for Endpoint
+description: Set up authenticated network scans to discover network devices in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid: met150
-ms.date: 03/11/2025
+ms.date: 01/12/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
 
 ---
-# Network device discovery and vulnerability management
+# Set up authenticated network scans in Microsoft Defender for Endpoint
 
+Authenticated network scans provide an agentless way to discover and assess network infrastructure devices, such as switches, routers, WLAN controllers, firewalls, and VPN gateways.
 
-> [!NOTE]
-> The [Tech Community Blog: Network device discovery and vulnerability assessments](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/network-device-discovery-and-vulnerability-assessments/ba-p/2267548) (published 04-13-2021) provides insights into the new **Network device discovery** capabilities in Defender for Endpoint. This article provides an overview of the challenge that **Network device discovery** is designed to address, and detailed information about how to get started using these new capabilities.
-
-Network discovery capabilities are available in the **Device inventory** section of the [Microsoft Defender portal](https://security.microsoft.com) and Microsoft Defender XDR consoles.
-
-A designated Microsoft Defender for Endpoint device is used on each network segment to perform periodic authenticated scans of preconfigured network devices. Once discovered, vulnerability management capabilities in Defender for Endpoint provide integrated workflows to secure discovered switches, routers, WLAN controllers, firewalls, and VPN gateways.
-
-Once the network devices are discovered and classified, security administrators are able to receive the latest security recommendations and review recently discovered vulnerabilities on network devices deployed across their organizations.
+For more information, see [Authenticated network scans](device-discovery.md#authenticated-network-scans).
 
 > [!NOTE]
 > The Windows authenticated scan is deprecated from December 18,2025. For more information, see [Windows authenticated scan deprecation FAQs](/defender-vulnerability-management/defender-vulnerability-management-faq#windows-authenticated-scan-deprecation-faqs).
 
-## Approach
+## Prerequisites
 
-Network devices aren't managed as standard endpoints since Defender for Endpoint doesn't have a sensor built into the network devices themselves. These types of devices require an agentless approach where a remote scan obtains the necessary information from the devices. Depending on the network topology and characteristics, a single device or a few devices onboarded to Microsoft Defender for Endpoint performs authenticated scans of network devices using SNMP (read-only).
+To configure scan jobs, you need the **Manage security settings in Defender** permission. For more information, see [Create and manage roles for role-based access control](user-roles.md). 
+
+### Supported devices
+
+Any network device that responds to SNMPv2 or SNMPv3 queries can be discovered by authenticated network scans. We recommend that you configure all your network devices for scanning, regardless of vendor or operating system.
+
+### Supported Windows versions for the scanner
+
+The scanner is supported on Windows 10, version 1903 and Windows Server, version 1903 and later. For more information, see [Windows 10, version 1903 and Windows Server, version 1903](https://support.microsoft.com/topic/windows-10-update-history-e6058e7c-4116-38f1-b984-4fcacfba5e5d)
 
 > [!NOTE]
-> Authenticated scans support `SNMPv2` and `SNMPv3`.
+> You can install up to 40 scanners per tenant.
 
-There are two types of devices to keep in mind:
+## Select scanner device
 
-- **Scanning device**: A device that's already onboarded that you use to scan the network devices.
-- **Network devices**: The network devices you plan to scan and onboard.
+To select a device that performs the authenticated network scans:
 
-### Vulnerability management for network devices
+- Decide on a Defender for Endpoint onboarded device (client or server) that has a network connection to the management port for the network devices you plan on scanning.
 
-Once the network devices are discovered and classified, security administrators are able to receive the latest security recommendations and review recently discovered vulnerabilities on network devices deployed across their organizations.
+- Allow SNMP traffic between the Defender for Endpoint scanning device and the targeted network devices (for example, by the firewall).
 
-## Operating systems that are supported
+- Decide which network devices are assessed for vulnerabilities (for example, a Cisco switch or a Palo Alto Networks firewall).
 
-The following operating systems are currently supported:
+- Make sure SNMP read-only is enabled on all configured network devices to allow the Defender for Endpoint scanning device to query the configured network devices. `SNMP write` isn't needed for the proper functionality of this feature.
 
-- Cisco IOS, IOS-XE, NX-OS
-- Fortinet FortiOS
-- Juniper JUNOS
-- HPE Aruba Networking ArubaOS, AOS-CX
-- HPE ArubaOS, Procurve Switch Software
-- Palo Alto Networks PAN-OS
+- Obtain the IP addresses of the network devices to be scanned (or the subnets where these devices are deployed).
 
-More networking vendors and OS will be added over time, based on data gathered from customer usage. Therefore, you're encouraged to configure all your network devices, even if they're not specified in this list.
+- Obtain the SNMP credentials of the network devices (for example, Community String, noAuthNoPriv, authNoPriv, authPriv). You need to provide the credentials when configuring a new scan job.
 
-## How to get started
+- Proxy client configuration: No extra configuration is required other than the Defender for Endpoint device proxy requirements.
 
-Your first step is to select a device that performs the authenticated network scans.
-
-1. Decide on a Defender for Endpoint onboarded device (client or server) that has a network connection to the management port for the network devices you plan on scanning.
-
-1. SNMP traffic between the Defender for Endpoint scanning device and the targeted network devices must be allowed (for example, by the Firewall).
-
-1. Decide which network devices are assessed for vulnerabilities (for example: a Cisco switch or a Palo Alto Networks firewall).
-
-1. Make sure SNMP read-only is enabled on all configured network devices to allow the Defender for Endpoint scanning device to query the configured network devices. 'SNMP write' isn't needed for the proper functionality of this feature.
-
-1. Obtain the IP addresses of the network devices to be scanned (or the subnets where these devices are deployed).
-
-1. Obtain the SNMP credentials of the network devices (for example: Community String, noAuthNoPriv, authNoPriv, authPriv). You're required to provide the credentials when configuring a new scan job.
-
-1. Proxy client configuration: No extra configuration is required other than the Defender for Endpoint device proxy requirements.
-
-1. To allow the scanner to be authenticated and work properly, it's essential that you add the following domains/URLs:
+- To allow the scanner to be authenticated and work properly, add the following domains/URLs:
 
     - `*.security.microsoft.com`
+    - `*.mdiot.microsoft.com`
     - `login.microsoftonline.com`
     - `*.blob.core.windows.net/networkscannerstable/*`
 
     > [!NOTE]
     > Not all URLs are specified in the Defender for Endpoint documented list of allowed data collection.
 
-## Permissions
-
-To configure scan jobs, the following user permission option is required: **Manage security settings in Defender**. You can find the permission by going to **Settings** \> **Roles**. For more information, see [Create and manage roles for role-based access control](user-roles.md).
-
-## Windows version prerequisite for the scanner
-
-The scanner is supported on Windows 10, version 1903 and Windows Server, version 1903 and later. For more information, see [Windows 10, version 1903 and Windows Server, version 1903](https://support.microsoft.com/topic/windows-10-update-history-e6058e7c-4116-38f1-b984-4fcacfba5e5d).
-
-> [!NOTE]
-> There's a limit of 40 scanner installations per tenant. 
-
 ## Install the scanner
 
-1. Go to **Microsoft 365 security** \> **Settings** \> **Device discovery** \> **Authenticated scans**.
+1. In the Microsoft Defender Portal, select **Settings** \> **Device discovery** \> **Authenticated scans**.
 
 1. Download the scanner and install it on the designated Defender for Endpoint scanning device.
 
    :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan-new.png" alt-text="Screenshot of the add new authenticated scan screen." lightbox="/defender/media/defender-endpoint/network-authenticated-scan-new.png":::
 
-## Scanner installation & registration
+## Register the scanner
 
-The signing-in process can be completed on the designated scanning device itself or any other device (for example, your personal client device).
+You can complete the registration on the designated scanning device or any other device (for example, your personal client device).
 
-> [!NOTE]
-> Both the account the user signs in with and the device being used to complete the sign in process, must be in the same tenant where the device is onboarded to Microsoft Defender for Endpoint.
+The account the user signs in with and the device used to complete the sign in process, must be in the same tenant where the device is onboarded to Microsoft Defender for Endpoint.
 
 To complete the scanner registration process:
 
-1. Copy and follow the URL that appears on the command line and use the provided installation code to complete the registration process.
+1. Copy and follow the URL that appears on the command line and use the provided installation code to complete the registration process. You might need to change command prompt settings to copy the URL.
 
-   > [!NOTE]
-   > You may need to change Command Prompt settings to be able to copy the URL.
+1. Type the code and sign in using a Microsoft account that has the **Manage security settings in Defender** permission.
 
-1. Enter the code and sign in using a Microsoft account that has the Defender for Endpoint permission called "Manage security settings in Defender."
+When finished, you should see a message confirming you've signed in.
 
-1. When finished, you should see a message confirming you've signed in.
+> [!NOTE]
+> A scheduled task that searches for updates runs regularly. When the task runs, it compares the version of the scanner on the client device to the version of the agent on the update location. The update location is where Windows looks for updates, such as on a network share or from the internet.
+>
+> If there's a difference between the two versions, the update process determines which files are different and need to be updated on the local computer. Once the required updates are determined, the downloading of the updates start.
 
-### Updates for scanner
+## Configure a new authenticated network scan
 
-The scanner has a scheduled task that, by default, is configured to look for updates regularly. When the task runs, it compares the version of the scanner on the client device to the version of the agent on the update location. The update location is where Windows looks for updates, such as on a network share or from the internet.
-
-If there's a difference between the two versions, the update process determines which files are different and need to be updated on the local computer. Once the required updates are determined, the downloading of the updates start.
-
-## Configure a new network device authenticated scan
-
-1. Go to **Settings** \> **Device discovery** \> **Authenticated scans** in the [Microsoft Defender portal](https://security.microsoft.com).
+1. In the Microsoft Defender Portal, select **Settings** \> **Device discovery** \> **Authenticated scans**.
 
 1. Select **Add new scan** and choose **Network device authenticated scan** and select **Next**.
 
    :::image type="content" source="/defender/media/defender-endpoint/network-authenticated-scan.png" alt-text="Screenshot of the add new network device authenticated scan screen." lightbox="/defender/media/defender-endpoint/network-authenticated-scan.png":::
 
-1. Choose whether to **Activate scan**.
+1. Select whether to **Activate scan**.
 
-1. Enter a **Scan name**.
+1. Type a **Scan name**.
 
 1. Select the **Scanning device:** The onboarded device you use to scan the network devices.
 
-1. Enter the **Target (range):** The IP address ranges or hostnames you want to scan. You can either enter the addresses or import a CSV file. Importing a file overrides any manually added addresses.
+1. Type the **Target (range):** The IP address ranges or hostnames you want to scan. You can either enter the addresses or import a CSV file. Importing a file overrides any manually added addresses.
 
 1. Select the **Scan interval:** By default, the scan runs every four hours. You can change the scan interval or have it only run once, by selecting **Don't repeat**.
 
-1. Choose your **Authentication method**.
+1. Select your **Authentication method**.
 
-   You can select to **Use azure KeyVault for providing credentials:** If you manage your credentials in Azure KeyVault, you can enter the Azure KeyVault URL and Azure KeyVault secret name to be accessed by the scanning device to provide credentials. The secret value is dependent on the Authenticated Method you choose, as described in the following table:
+   You can select to **Use azure KeyVault for providing credentials:** If you manage your credentials in Azure KeyVault, you can type the Azure KeyVault URL and Azure KeyVault secret name to be accessed by the scanning device to provide credentials. The secret value is dependent on the method you choose, as described in the following table:
 
    |Authentication Method|Azure KeyVault secret value|
    |:----|:----:|
@@ -181,63 +143,10 @@ Each scanning device can support up to 1,500 successful IP addresses scan. For e
 
 If there are multiple IP address ranges/subnets to scan, the test scan results take several minutes to show up. A test scan is available for up to 1,024 addresses.
 
-Once the results show up, you can choose which devices to include in the periodic scan. If you skip viewing the scan results, all configured IP addresses are added to the network device authenticated scan (regardless of the device's response). The scan results can also be exported.
+When the results are displayed, you can choose which devices to include in the periodic scan. If you skip viewing the scan results, all configured IP addresses are added to the network device authenticated scan (regardless of the device's response). The scan results can also be exported.
 
-## Device inventory
+## View network devices in the device inventory
 
-Newly discovered devices are shown under the new **Network devices** tab in the **Device inventory** page. It might take up to two hours after adding a scanning job until the devices are updated.
+Newly discovered devices are displayed under the device inventory in the new **Network devices** tab. It might take up to two hours after adding a scanning job until the devices are updated.
 
 :::image type="content" source="/defender/media/defender-endpoint/network-devices-inventory.png" alt-text="Screenshot of the network device tab in the device inventory." lightbox="/defender/media/defender-endpoint/network-devices-inventory.png":::
-
-## Troubleshooting
-
-### Scanner installation failed
-
-Verify that the required URLs are added to the allowed domains in your firewall settings. Also, make sure proxy settings are configured as described in [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
-
-### The Microsoft.com/devicelogin web page didn't show up
-
-Verify that the required URLs are added to the allowed domains in your firewall. Also, make sure proxy settings are configured as described in [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md).
-
-### Network devices aren't shown in the device inventory after several hours
-
-The scan results should be updated a few hours after the initial scan that took place after completing the network device authenticated scan configuration.
-
-If devices are still not shown, verify that the service `MdatpNetworkScanService` is running on your devices being scanned, on which you installed the scanner, and perform a "Run scan" in the relevant network device authenticated scan configuration.
-
-If you still don't get results after 5 minutes, restart the service.
-
-### Devices last seen time is longer than 24 hours
-
-Validate that the scanner is running properly. Then go to the scan definition and select "Run test." Check what error messages are returning from the relevant IP addresses.
-
-### My scanner is configured but scans aren't running
-
-As the authenticated scanner currently uses an encryption algorithm that isn't compliant with [Federal Information Processing Standards (FIPS)](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing/), the scanner can't operate when an organization enforces the use of FIPS compliant algorithms.
-
-To allow algorithms that aren't compliant with FIPS, set the following value in the registry for the devices where the scanner runs:
-
-Computer`\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmPolicy` with a DWORD value named `Enabled` and value of `0x0`.
-
-FIPS compliant algorithms are only used in relation to departments and agencies of the United States federal government.
-
-### Required Defender Vulnerability Management user permission
-
-Registration finished with an error: "It looks like you don't have sufficient permissions for adding a new agent. The required permission is 'Manage security settings in Defender'."
-
-Press any key to exit.
-
-Ask your system administrator to assign you the required permissions. Alternately, ask another relevant member to help you with the sign-in process by providing them with the sign-in code and link.
-
-### Registration process fails using provided link in the command line in registration process
-
-Try a different browser or copy the sign-in link and code to a different device.
-
-### Text too small or can't copy text from command line
-
-Change command-line settings on your device to allow copying and change text size.
-
-## Related articles
-
-- [Device inventory](machines-view-overview.md)
-

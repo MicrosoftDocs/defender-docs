@@ -1,12 +1,10 @@
-﻿---
+---
 title: Investigate domains and URLs associated with an alert
 description: Use the investigation options to see if devices and servers have been communicating with malicious domains.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -14,7 +12,6 @@ ms.collection:
 ms.topic: how-to
 ms.date: 07/05/2023
 ms.subservice: edr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
