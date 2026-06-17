@@ -252,6 +252,10 @@ After creation and activation you can:
 - GitLab Groups
 - Docker Hub Organizations
 - JFrog Artifactory
+- K8s namespace
+- K8s cluster
+- Registry (multicloud)
+- Repository (multicloud)
 
 (Additional primitives like management groups and container resources planned.)
 
