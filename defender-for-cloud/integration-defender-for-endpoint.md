@@ -2,9 +2,9 @@
 title: Defender for Endpoint integration in Defender for Cloud
 description: Learn about how Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management integrate with Defender for Cloud to enhance security.
 ms.topic: concept-article
-ms.date: 05/01/2025
-#customer intent: I want to understand how Defender for Endpoint integrates with Defender for Cloud.
+ms.date: 06/17/2026
 ai-usage: ai-assisted
+#customer intent: I want to understand how Defender for Endpoint integrates with Defender for Cloud.
 ---
 
 # Defender for Endpoint/Defender for Vulnerability Management integration
@@ -13,6 +13,8 @@ Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management 
 
 - **Integrated security capabilities**: Security capabilities provided by Defender for Endpoint, Defender Vulnerability Management, and Defender for Cloud come together to provide end-to-end protection for machines protected by the Defender for Servers plan.
 - **Licensing**: Defender for Servers licensing entitles customers with the same benefits on their servers as Defender for Endpoint Plan 2 provides on client endpoints. Licensing is charged per hour instead of per user, reducing costs by protecting VMs only when they're in use.
+
+  - If you already have licenses for Microsoft Defender for Endpoint for Servers and also use Defender for Servers, request the billing discount to avoid double billing. For steps, see [Can I get a discount if I already have a Microsoft Defender for Endpoint license?](faq-defender-for-servers.yml#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-).
 - **Agent provisioning**: Defender for Cloud can automatically provision the Defender for Endpoint sensor on supported machines connected to Defender for Cloud.
 - **Unified alerts**: Alerts and vulnerability data from Defender for Endpoint appear in Defender for Cloud in the Azure portal. You can move to the Defender portal to drill down for detailed alert information and context.
 
@@ -65,7 +67,7 @@ Defender for Servers provides visibility to the Defender for Endpoint agents ins
 You must have either:
 - Defender for Servers P2 enabled.
   <br> or,
-- Defender CSPM enabled with Defender for Servers plan 1 enabled.
+- Defender cloud security posture management (Defender CSPM) enabled with Defender for Servers Plan 1 enabled.
 
 ### Visibility into health issues in Defender for Servers
 
@@ -75,7 +77,7 @@ Defender for Servers provides visibility into two main types of health issues:
 
 - **Heartbeat Issues**: Problems where the agent is installed but not reporting correctly.
 
-In some situations, Defender for Endpoint doesn't apply to certain machines, such as in cases where a client operating system is installed. These devices need to be covered by a Defender for Endpoint user licenses, such as Microsoft 365 E5. This status is also shown as described in the last query.
+In some situations, Defender for Endpoint doesn't apply to certain machines, such as when a client operating system is installed. These devices need coverage from a Defender for Endpoint user license, such as Microsoft 365 E5. This status is also shown as described in the last query.
 
 Defender for Servers shows specific error messages for each issue type. These messages explain the problem. When available, you'll also find instructions to fix the issue.
 
@@ -99,12 +101,9 @@ To see Defender for Endpoint health issues, use the security explorer as follows
 
   :::image type="content" source="media/integration-defender-for-endpoint/not-applicable-virtual-machines-query.png" alt-text="Screenshot of query of virtual machines where Defender for Endpoint isn't applicable." lightbox="media/integration-defender-for-endpoint/not-applicable-virtual-machines-query.png":::
 
-## Next steps
- 
-[Learn more](endpoint-detection-response.md) about EDR recommendations in Defender for Servers.
-
 ## Related content
 
+- [Review EDR recommendations in Defender for Servers](endpoint-detection-response.md).
 - [Onboard servers to Defender for Endpoint](/defender-endpoint/onboard-server)
 - [Antivirus solution compatibility with Defender for Endpoint](/defender-endpoint/defender-compatibility)
 - [Server migration scenarios from the previous, MMA-based Microsoft Defender for Endpoint solution](/defender-endpoint/server-migration)
