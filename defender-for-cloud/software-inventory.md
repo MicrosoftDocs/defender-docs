@@ -3,6 +3,7 @@ title: Review the software inventory in Defender for Cloud
 description: Learn how to review the software inventory in Microsoft Defender for Cloud
 ms.date: 06/02/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ---
 # Review the software inventory
 

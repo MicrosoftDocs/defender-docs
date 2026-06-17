@@ -2,8 +2,9 @@
 title: Onboard non-Azure servers with Defender for Endpoint
 description: Learn how to connect your non-Azure machines directly to Microsoft Defender for Cloud with Microsoft Defender for Endpoint.
 ms.topic: quickstart
-ms.date: 05/01/2025
-
+ms.date: 06/17/2026
+ai-usage: ai-assisted
+#customer intent: I want to directly onboard non-Azure servers to Microsoft Defender for Cloud by using Microsoft Defender for Endpoint.
 ---
 
 # Connect your non-Azure servers to Microsoft Defender for Cloud with Defender for Endpoint
@@ -45,13 +46,17 @@ When you enable direct onboarding, Defender for Cloud applies the setting to bot
 
 Before you begin:
 
+> [!IMPORTANT]
+> If you have both Microsoft Defender for Endpoint for Servers licenses and Defender for Servers enabled, request the billing discount to avoid double billing. For steps, see [Can I get a discount if I already have a Microsoft Defender for Endpoint license?](faq-defender-for-servers.yml#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-).
+
 - Make sure you have the required permissions:
     - **Subscription Owner** permissions on the subscription you select for onboarding.
     - **Microsoft Entra Security Administrator** (or higher) permissions on the tenant.
-- If your tenant already has a Defender for Endpoint for Servers license, [indicate it](faq-defender-for-servers.yml#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-) in Defender for Cloud
 - Review the [current limitations](#current-limitations)
 
 ### Enable in the Defender for Cloud portal
+
+To enable direct onboarding in the Defender for Cloud portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 

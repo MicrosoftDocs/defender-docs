@@ -4,6 +4,7 @@ description: "Defender for Cloud CLI: Orchestrate security scans in CI/CD pipeli
 #customer intent: As a developer, I want to integrate Defender for Cloud CLI into my CI/CD pipeline so that I can automate security scans with minimal setup.
 ms.date: 11/06/2025
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Defender for Cloud CLI overview

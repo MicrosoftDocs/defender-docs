@@ -4,6 +4,7 @@ description: Learn how to connect your Azure DevOps environment to Defender for 
 ms.date: 05/13/2025
 ms.topic: quickstart
 ms.custom: ignite-2023
+ai-usage: ai-assisted
 ---
 
 # Connect Azure DevOps environments to Defender for Cloud

@@ -3,6 +3,7 @@ title: Kubernetes gated deployment
 description: Learn about Kubernetes gated deployment and how to control deployments in Defender for Cloud.
 ms.topic: reference
 ms.date: 04/29/2025
+ai-usage: ai-assisted
 ---
 
 # Kubernetes gated deployment

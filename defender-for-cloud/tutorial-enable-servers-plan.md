@@ -4,6 +4,7 @@ description: Learn how to enable the Defender for Servers plan in Microsoft Defe
 ms.topic: install-set-up-deploy
 ms.date: 09/28/2025
 # customer intent: I want to deploy the Defender for Servers plan in Defender for Cloud so that I can protect connected machines and reduce security risk.
+ai-usage: ai-assisted
 ---
 
 # Protect your servers with Defender for Servers

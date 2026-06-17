@@ -4,6 +4,7 @@ description: Learn how to use StackHawk with Microsoft Defender for Cloud to enh
 ms.date: 05/28/2026
 ms.topic: how-to
 #customer intent: As an API security engineer, I want to onboard StackHawk with Defender for Cloud so that API security findings are integrated into centralized security operations.
+ai-usage: ai-assisted
 ---
 
 # StackHawk technical onboarding guide

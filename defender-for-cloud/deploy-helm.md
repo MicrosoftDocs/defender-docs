@@ -4,6 +4,7 @@ description: Install the Defender for Containers sensor on AKS, EKS, and GKE clu
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to install Defender for Containers sensor by using Helm so that I can control deployment and upgrade timing across my clusters.
+ai-usage: ai-assisted
 ---
 
 # Install Defender for Containers sensor using Helm

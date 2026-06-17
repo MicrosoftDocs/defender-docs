@@ -3,6 +3,7 @@ title: Lessons learned from the field
 description: Learn how Microsoft Defender for Cloud is used to fill the gap between cloud security posture management and cloud workload protection.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Lessons learned from the field with Microsoft Defender for Cloud

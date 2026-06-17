@@ -4,6 +4,7 @@ description: Manage your Defender for APIs deployment in Microsoft Defender for 
 ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 07/15/2025
+ai-usage: ai-assisted
 ---
 
 # Manage your Defender for APIs deployment

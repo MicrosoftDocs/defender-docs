@@ -5,6 +5,7 @@ ms.service: azure-data-factory
 ms.topic: include
 ms.date: 08/18/2024
 ms.custom: include file
+ai-usage: ai-assisted
 ---
 ### The data model of the schema
 

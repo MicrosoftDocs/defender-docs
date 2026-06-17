@@ -5,6 +5,7 @@ ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 05/18/2026
 ms.custom: template-concept
+ai-usage: ai-assisted
 ---
 
 # Agentless container posture in Defender CSPM

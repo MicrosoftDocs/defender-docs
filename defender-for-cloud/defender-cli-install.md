@@ -4,6 +4,7 @@ description: Learn how to download and install the Defender for Cloud CLI on Win
 ms.topic: how-to
 ms.date: 05/25/2026
 #customer intent: As a developer or security engineer, I want to install the Defender for Cloud CLI so that I can run security scans locally and in CI/CD pipelines.
+ai-usage: ai-assisted
 ---
 
 # Install the Defender for Cloud CLI

@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 05/27/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a user, I want to query and export SQL vulnerability scan results so I can investigate findings and report on remediation progress.
+ai-usage: ai-assisted
 ---
 
 # How to consume and export scan results in Microsoft Defender for Cloud

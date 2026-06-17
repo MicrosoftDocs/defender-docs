@@ -4,6 +4,7 @@ description: Learn how to map your container images from code to cloud.
 ms.date: 05/24/2026
 ms.topic: how-to
 ms.custom: ignite-2023
+ai-usage: ai-assisted
 ---
 
 # Map container images from code to runtime

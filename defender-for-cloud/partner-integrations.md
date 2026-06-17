@@ -4,6 +4,7 @@ description: Learn about The different partners that integrate with Defender for
 ms.topic: concept-article
 ms.date: 12/01/2025
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # Overview of partner integration

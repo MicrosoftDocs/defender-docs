@@ -4,6 +4,7 @@ description: Learn more about Cloud Security Posture Management (CSPM) in Micros
 ms.topic: concept-article
 ms.date: 06/03/2026
 #customer intent: As a reader, I want to understand the concept of Cloud Security Posture Management (CSPM) in Microsoft Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # What is Cloud Security Posture Management (CSPM)

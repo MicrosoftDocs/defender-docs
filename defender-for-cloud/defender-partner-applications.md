@@ -5,6 +5,7 @@ ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 11/26/2024
 #customer intent: As a security administrator, I want to understand the integration of API security testing tools so that I can enhance the security of our APIs.
+ai-usage: ai-assisted
 ---
 
 # Overview of API security testing integrations (preview)

@@ -4,6 +4,7 @@ description: Automate cloud connector deployment for multicloud environments wit
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a cloud security architect, I want to automate connector deployment so I can onboard multicloud environments consistently at scale.
+ai-usage: ai-assisted
 ---
 
 # Automate connector deployment

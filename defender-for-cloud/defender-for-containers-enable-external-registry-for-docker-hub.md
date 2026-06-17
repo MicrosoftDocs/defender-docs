@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.date: 05/25/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to connect my Docker Hub registries to Microsoft Defender for Containers so that I can assess image vulnerabilities in Docker Hub.
+ai-usage: ai-assisted
 ---
 
 # Onboard Docker Hub registries to Microsoft Defender for Containers

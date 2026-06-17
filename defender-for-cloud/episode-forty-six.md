@@ -3,6 +3,7 @@ title: DevOps Security Capabilities in Defender CSPM | Defender for Cloud in the
 description: Learn about DevOps security capabilities in Defender for Cloud.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # DevOps security capabilities in Defender CSPM

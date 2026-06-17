@@ -4,6 +4,7 @@ title: Zero Trust and Defender for Cloud | Defender for Cloud in the Field
 description: Learn about Zero Trust best practices and Zero Trust visibility and analytics tools
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Zero Trust and Defender for Cloud | Defender for Cloud in the field

@@ -4,6 +4,7 @@ description: Learn how to update your SQL Servers on machine configuration acros
 ms.topic: how-to
 ms.date: 04/28/2025
 #customer intent: As a security administrator, I want to update the Defender for SQL servers on Machines plan so that I can ensure my SQL servers in various environments have the latest configuration.
+ai-usage: ai-assisted
 ---
 
 # Update Defender for SQL Servers on Machines plan configuration

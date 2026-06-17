@@ -4,6 +4,7 @@ description: Learn how to deploy gated deployment infrastructure as code for man
 #customer intent: As a Kubernetes administrator, I want to deploy gated deployment infrastructure as code so that I can automate the setup and ensure consistent configuration across environments.
 ms.date: 05/28/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ---
 
 # Gated deployment for Infrastructure as Code

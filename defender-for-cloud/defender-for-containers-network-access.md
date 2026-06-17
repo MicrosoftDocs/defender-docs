@@ -4,6 +4,7 @@ description: Reference documentation for network connectivity and permissions re
 ms.topic: reference
 ms.service: defender-for-cloud
 ms.date: 04/16/2026
+ai-usage: ai-assisted
 ---
 
 # Network access and permissions reference for Defender for Containers

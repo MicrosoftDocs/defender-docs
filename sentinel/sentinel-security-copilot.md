@@ -94,7 +94,7 @@ For example:
 For more information, see the following resources:
 
 - [Integrate Microsoft Defender XDR](microsoft-365-defender-sentinel-integration.md)
-- [Microsoft Sentinel in the Microsoft Defender portal](microsoft-sentinel-defender-portal.md#new-and-improved-capabilities)
+- [Microsoft Sentinel in the Microsoft Defender portal](microsoft-sentinel-defender-portal.md#feature-comparison-sentinel-in-azure-vs-sentinel-in-the-defender-portal)
 - [Copilot in Microsoft Defender](/defender-xdr/security-copilot-in-microsoft-365-defender)
 
 ### Integrate Microsoft Sentinel with Security Copilot in advanced hunting

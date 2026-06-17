@@ -4,6 +4,7 @@ description: Learn about Defender for Cloud integration with Defender External a
 ms.topic: concept-article
 ms.date: 07/03/2024
 #customer intent: As a reader, I want to learn about the integration between Defender for Cloud and Defender External attack surface management so that I can enhance my organization's security.
+ai-usage: ai-assisted
 ---
 
 # External attack surface management in Defender for Cloud

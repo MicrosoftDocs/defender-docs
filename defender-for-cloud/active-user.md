@@ -4,6 +4,7 @@ description: Learn how to assign recommendations to active users in Defender for
 ms.topic: how-to
 ms.date: 05/24/2026
 #customer intent: As a security administrator, I want to assign recommendations to Active Users in Defender for Cloud to enhance security and streamline remediation processes.
+ai-usage: ai-assisted
 ---
 
 # Assign a recommendation to an active user

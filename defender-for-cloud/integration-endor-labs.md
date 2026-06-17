@@ -5,6 +5,7 @@ ms.topic: overview
 ms.date: 12/28/2025
 #customer intent: As a security administrator, I want to understand how the Endor Labs integration enhances vulnerability analysis in Defender for Cloud so that I can prioritize exploitable vulnerabilities from code to runtime.
 
+ai-usage: ai-assisted
 ---
 
 # Overview of Endor Labs integration

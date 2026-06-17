@@ -7,6 +7,7 @@ ms.service: defender-for-cloud
 author: ElazarK
 ms.author: elkrieger
 ms.date: 06/11/2026
+ai-usage: ai-assisted
 ---
 
 # Optimize Microsoft Defender for Cloud costs with a pre-purchase plan

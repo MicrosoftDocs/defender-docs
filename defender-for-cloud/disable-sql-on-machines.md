@@ -4,6 +4,7 @@ description: Disable the Defender for SQL Servers on Machines plan to stop SQL a
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to disable Defender for SQL Servers on Machines in Defender for Cloud to manage my security posture effectively.
+ai-usage: ai-assisted
 ---
 
 # Disable Defender for SQL Servers on Machines

@@ -2,6 +2,7 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 03/16/2026
+ai-usage: ai-assisted
 ---
 
 The Defender sensor must connect to Microsoft Defender for Cloud to send security data and events. Make sure that the required endpoints are configured for outbound access.

@@ -4,6 +4,7 @@ description: Learn about the security threats and alerts Microsoft Defender for 
 ms.date: 07/15/2025
 ms.topic: concept-article
 #customer intent: As a security professional, I want to understand the security threats and alerts in Microsoft Defender for Storage so that I can better protect my organization's data.
+ai-usage: ai-assisted
 ---
 
 # Understand security threats and alerts in Microsoft Defender for Storage

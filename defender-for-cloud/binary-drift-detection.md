@@ -4,6 +4,7 @@ description: Learn how binary drift detecting and blocking can help you detect u
 ms.topic: how-to
 ms.date: 05/26/2026
 #customer intent: As a user, I want to understand how binary drift detection and blocking can help me detect unauthorized external processes within containers.
+ai-usage: ai-assisted
 ---
 
 # Binary drift detection and blocking

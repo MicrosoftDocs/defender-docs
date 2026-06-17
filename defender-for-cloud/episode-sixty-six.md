@@ -3,6 +3,7 @@ title: New secure score
 description: Learn about the newest version of the secure score in Defender for Cloud.
 ms.topic: reference
 ms.date: 02/08/2026
+ai-usage: ai-assisted
 ---
 
 # New secure score

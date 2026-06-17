@@ -4,6 +4,7 @@ title: Remediate security recommendations with governance
 description: Learn about the new governance feature in Defender for Cloud, and how to drive security posture improvement.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Remediate security recommendations with governance

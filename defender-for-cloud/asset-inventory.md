@@ -5,6 +5,7 @@ ms.date: 05/25/2026
 ms.topic: how-to
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to use cloud asset inventory so that I can review the security posture of connected resources across my multicloud environment.
+ai-usage: ai-assisted
 ---
 # Cloud asset inventory
 

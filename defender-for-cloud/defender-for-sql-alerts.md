@@ -4,6 +4,7 @@ description: View and investigate SQL security alerts through the Alerts page, a
 ms.topic: how-to
 ms.date: 05/25/2026
 #customer intent: As a security administrator, I want to investigate Defender for SQL security alerts so that I can understand suspicious activity and remediate the affected resources.
+ai-usage: ai-assisted
 ---
 
 # Explore and investigate Defender for SQL security alerts

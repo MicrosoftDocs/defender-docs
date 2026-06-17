@@ -4,6 +4,7 @@ title: Enhancements in Defender for SQL vulnerability assessment | Defender for 
 description: Learn about Enhancements in Defender for SQL Vulnerability Assessment
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Enhancements in Defender for SQL vulnerability assessment | Defender for Cloud in the field

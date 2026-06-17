@@ -4,6 +4,7 @@ description: This document helps you to plan before adopting Defender for Cloud 
 ms.topic: concept-article
 ms.date: 07/15/2025
 #customer intent: As a reader, I want to understand the planning and operations considerations for adopting Defender for Cloud and how it fits into my organization's security requirements and cloud management model. I also want to learn about the security roles, access controls, security policies, data collection, and storage in Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # Planning and operations guide

@@ -4,6 +4,7 @@ description: Learn how to connect your non-Azure machines to Microsoft Defender 
 ms.topic: install-set-up-deploy
 ms.date: 03/13/2025
 ms.custom: mode-other
+ai-usage: ai-assisted
 ---
 
 # Connect your non-Azure machines to Microsoft Defender for Cloud

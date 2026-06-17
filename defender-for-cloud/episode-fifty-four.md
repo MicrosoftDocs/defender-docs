@@ -3,6 +3,7 @@ title: Updates from Microsoft Ignite 2024
 description: Learn about Microsoft's Defender for Cloud's updates from Ignite 2024, including new features and improvements.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Updates from Microsoft Ignite 2024

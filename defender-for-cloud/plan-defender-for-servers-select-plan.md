@@ -4,6 +4,7 @@ description: This article helps you understand which Defender for Servers plan t
 ms.topic: concept-article
 ms.date: 02/23/2025
 #customer intent: As a reader, I want to understand which Defender for Servers plan I want to deploy.
+ai-usage: ai-assisted
 ---
 
 # Select a Defender for Servers plan and deployment scope

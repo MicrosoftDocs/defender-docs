@@ -4,6 +4,7 @@ description: Learn how to configure Gated Deployment and Kubernetes misconfigura
 #customer intent: As a Kubernetes administrator, I want to configure Gated Deployment in Defender for Containers so that I can enforce container image security policies during deployments.
 ms.date: 06/01/2026
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Enable gated deployment in Defender for Containers

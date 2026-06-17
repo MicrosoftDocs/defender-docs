@@ -4,6 +4,7 @@ description: Learn how to connect your Azure subscriptions to Microsoft Defender
 ms.topic: install-set-up-deploy
 ms.date: 10/23/2025
 ms.custom: mode-other
+ai-usage: ai-assisted
 ---
 
 # Connect your Azure subscriptions

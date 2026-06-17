@@ -3,6 +3,7 @@ title: Troubleshoot Microsoft Defender for Containers
 description: Troubleshoot common deployment and post-deployment issues in Microsoft Defender for Containers across supported Kubernetes environments.
 ms.topic: troubleshooting
 ms.date: 01/13/2026
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot Microsoft Defender for Containers

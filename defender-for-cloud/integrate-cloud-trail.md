@@ -4,6 +4,7 @@ description: Learn how to enable and validate AWS CloudTrail management event in
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a cloud security administrator, I want to integrate AWS CloudTrail logs with Microsoft Defender for Cloud so that I can improve identity and permission risk visibility.
+ai-usage: ai-assisted
 ---
 
 # Integrate AWS CloudTrail logs (Preview)

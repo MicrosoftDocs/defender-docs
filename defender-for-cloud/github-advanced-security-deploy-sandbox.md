@@ -4,6 +4,7 @@ description: Set up and validate a sandbox environment to evaluate GitHub Advanc
 ms.topic: how-to
 ms.date: 04/30/2026
 ms.service: defender-for-cloud
+ai-usage: ai-assisted
 ---
 
 # GitHub Advanced Security Integration with Microsoft Defender for Cloud – Sandbox Project

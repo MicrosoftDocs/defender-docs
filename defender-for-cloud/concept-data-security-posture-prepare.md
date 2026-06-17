@@ -6,6 +6,7 @@ ms.topic: concept-article
 ms.date: 04/20/2026
 ms.custom: references_regions
 #customer intent: As a security administrator, I want to understand the prerequisites for data security posture management so that I can set it up correctly.
+ai-usage: ai-assisted
 ---
 
 # Support and prerequisites for data security posture management

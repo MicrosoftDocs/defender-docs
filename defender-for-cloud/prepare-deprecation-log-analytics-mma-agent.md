@@ -6,6 +6,7 @@ author: ElazarK
 ms.author: elkrieger
 ms.date: 06/11/2026
 # customer intent: As a user, I want to understand how to prepare for the retirement of the Log Analytics agent in Microsoft Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # Prepare for retirement of the Log Analytics agent

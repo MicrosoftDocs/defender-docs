@@ -3,6 +3,7 @@ ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 09/27/2023
 
+ai-usage: ai-assisted
 ---
 ## DevOps recommendations
 

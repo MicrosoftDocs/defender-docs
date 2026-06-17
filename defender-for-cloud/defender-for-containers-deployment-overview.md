@@ -3,6 +3,7 @@ title: Defender for Containers deployment overview
 description: Learn about Microsoft Defender for Containers capabilities, architecture, and deployment options for Kubernetes environments across Azure, AWS, and Google Cloud.
 ms.topic: overview
 ms.date: 12/09/2025
+ai-usage: ai-assisted
 ---
 
 # Defender for Containers deployment overview

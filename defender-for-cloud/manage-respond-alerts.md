@@ -7,6 +7,7 @@ ms.custom:
   - sfi-image-nochange
   - ge-structured-content-pilot
 #customer intent: As a security analyst, I want to manage and respond to security alerts in Defender for Cloud so that I can triage threats and take remediation actions quickly.
+ai-usage: ai-assisted
 ---
 
 # Manage and respond to security alerts

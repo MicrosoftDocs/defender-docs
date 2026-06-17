@@ -4,6 +4,7 @@ description: Learn how to simulate alerts for SQL servers on machines in Microso
 ms.topic: how-to
 ms.date: 02/09/2026
 #customer intent: As a security administrator, I want to simulate alerts for SQL servers on machines to test my security monitoring setup.
+ai-usage: ai-assisted
 ---
 
 # Simulate alerts for SQL servers on machines

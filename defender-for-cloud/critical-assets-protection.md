@@ -4,6 +4,7 @@ description: Learn how to identify and protect your critical assets in Microsoft
 ms.topic: concept-article
 ms.date: 05/18/2025
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Critical assets protection in Microsoft Defender for Cloud

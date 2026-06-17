@@ -4,6 +4,7 @@ description: Learn how to remediate recommendations with Copilot in Microsoft De
 ms.topic: how-to
 ms.date: 09/25/2025
 #customer intent: As a security professional, I want to understand how to use Copilot to remediate recommendations in Defender for Cloud so that I can improve my security posture.
+ai-usage: ai-assisted
 ---
 
 # Remediate recommendations with Microsoft Security Copilot

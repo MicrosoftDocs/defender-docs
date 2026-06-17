@@ -4,6 +4,7 @@ description: Learn about new, updated, and deprecated features in Microsoft Defe
 ms.topic: overview
 ms.custom: references_regions
 ms.date: 06/09/2026
+ai-usage: ai-assisted
 ---
 
 # What's new in Defender for Cloud features
@@ -32,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| June 17, 2026 | Update | [Expanded container support for cloud scopes](#expanded-container-support-for-cloud-scopes) |
 | June 9, 2026 | Preview | [New multicloud security recommendations now in public preview](#new-multicloud-security-recommendations-now-in-public-preview) |
 | June 8, 2026 | GA | [SQL Vulnerability Assessment Express Configuration is now generally available for Azure SQL Managed Instance and Azure Synapse Analytics workspaces](#sql-vulnerability-assessment-express-configuration-is-now-generally-available-for-azure-sql-managed-instance-and-azure-synapse-analytics-workspaces) |
 | June 4, 2026 | Preview | [Discovery and posture for serverless container workloads (Preview)](#discovery-and-posture-for-serverless-container-workloads-preview) |
@@ -43,6 +45,25 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
 
+### Expanded container support for cloud scopes
+
+June 17, 2026
+
+Microsoft Defender for Cloud has expanded the supported environment primitives for cloud scopes to include additional container-related resources. Cloud scopes now support the following new environment types:
+
+- **K8s namespace** - Organize resources by Kubernetes namespace for granular access control
+- **K8s cluster** - Group entire Kubernetes clusters for comprehensive security management  
+- **Registry (multi cloud)** - Include container registries from multiple cloud providers
+- **Repository (multi cloud)** - Manage artifact repositories across different cloud platforms
+
+These additions provide greater flexibility when grouping container and Kubernetes resources, helping you better align cloud scopes with operational boundaries and security requirements across multicloud environments.
+
+Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
+
+Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
+
+Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
+Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
 
 ### New multicloud security recommendations now in public preview
 

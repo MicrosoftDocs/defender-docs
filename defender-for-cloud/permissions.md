@@ -3,6 +3,7 @@ title: User roles and permissions
 description: Learn how Microsoft Defender for Cloud uses role-based access control to assign permissions and identify permitted actions for each role.
 ms.topic: limits-and-quotas
 ms.date: 03/10/2025
+ai-usage: ai-assisted
 ---
 
 # User roles and permissions

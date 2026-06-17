@@ -4,6 +4,7 @@ description: Learn how to create rich, interactive reports for your Microsoft De
 ms.topic: concept-article
 ms.date: 08/14/2025
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Create interactive reports with Azure Monitor workbooks

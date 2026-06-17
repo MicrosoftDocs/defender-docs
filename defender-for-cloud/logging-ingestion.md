@@ -4,6 +4,7 @@ description: Learn how to ingest Google Cloud Platform (GCP) Cloud Logging into 
 ms.topic: install-set-up-deploy
 ms.date: 01/18/2026
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Integrate GCP cloud logging with Pub/Sub (Preview)

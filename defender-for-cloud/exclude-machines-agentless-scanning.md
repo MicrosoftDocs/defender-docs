@@ -3,6 +3,7 @@ title: Exclude machines from agentless scanning
 description: Learn how to exclude machines from agentless scanning in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 06/02/2026
+ai-usage: ai-assisted
 ---
 
 # Exclude machines from agentless scanning

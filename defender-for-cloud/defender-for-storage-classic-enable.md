@@ -5,6 +5,7 @@ ms.date: 03/20/2025
 ms.topic: how-to
 #customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage (classic) so that I can protect my storage accounts from threats.
 ms.custom: devx-track-azurepowershell, devx-track-azurecli
+ai-usage: ai-assisted
 ---
 
 # Enable Microsoft Defender for Storage (classic)

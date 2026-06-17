@@ -4,6 +4,7 @@ description: Learn how to map your Infrastructure as Code (IaC) templates to you
 ms.date: 05/28/2026
 ms.topic: how-to
 ms.custom: ignite-2023
+ai-usage: ai-assisted
 ---
 
 # Map Infrastructure as Code templates to cloud resources
