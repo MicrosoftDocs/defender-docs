@@ -120,6 +120,12 @@ Microsoft Defender integrates with existing security tools and workflows through
 | **[Management and automation APIs](api/management-apis.md)** | Automate workflows and integrate Defender for Endpoint into your existing processes. |
 | **[Partner integrations](/defender-endpoint/partner-integration)** | Integrate with Microsoft and non-Microsoft security solutions. |
 
+## What's new in the latest release
+
+To learn about what's new in Endpoint security, see the latest updates in [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint).
+
+Microsoft includes security fixes in monthly releases. However, the release notes don’t always list these fixes under a separate Security patch section. For more information, see [What's new in Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-releases#linux-releases).
+
 ## Related content
 
 - [What's new in Defender for Endpoint on Linux](whats-new-in-microsoft-defender-endpoint.md)
@@ -127,4 +133,3 @@ Microsoft Defender integrates with existing security tools and workflows through
 - [Configure Defender for Endpoint security settings](linux-preferences.md)
 - [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md)
 - [Device health reporting in Microsoft Defender for Endpoint](device-health-microsoft-defender-antivirus-health.md)
-
