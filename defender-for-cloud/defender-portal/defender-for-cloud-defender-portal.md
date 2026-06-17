@@ -4,6 +4,7 @@ description: Comprehensive overview of Microsoft Defender for Cloud in the Defen
 ms.topic: overview
 ms.date: 04/28/2026
 ms.service: defender-for-cloud
+ai-usage: ai-assisted
 ---
 
 # Defender for Cloud in Defender portal

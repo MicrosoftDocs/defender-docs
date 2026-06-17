@@ -4,6 +4,7 @@ description: Learn how to check the status of your 30 day free trial of Microsof
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a new user, I want to check the status of my free trial of Microsoft Defender for Cloud to understand my usage and remaining trial period.
+ai-usage: ai-assisted
 ---
 
 # Check the status of your free trial

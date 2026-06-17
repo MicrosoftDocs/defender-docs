@@ -3,6 +3,7 @@ title: Exclude Kubernetes clusters from automatic Defender sensor deployment
 description: Learn how to exclude specific Kubernetes clusters from automatic Defender for Containers sensor deployment by using resource tags.
 ms.topic: how-to
 ms.date: 05/05/2026
+ai-usage: ai-assisted
 ---
 
 # Exclude Kubernetes clusters from automatic Defender sensor deployment

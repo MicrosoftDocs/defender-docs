@@ -4,6 +4,7 @@ description: Learn how to discover potential security risks for your generative 
 ms.topic: how-to
 ms.date: 07/15/2025
 # customer intent: As a user, I want to learn how to identify potential security risks for my generative AI applications in Microsoft Defender for Cloud so that I can enhance their security.
+ai-usage: ai-assisted
 ---
 
 # Explore risks to pre-deployment generative AI artifacts

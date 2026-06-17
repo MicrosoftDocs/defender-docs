@@ -3,6 +3,7 @@ title: Binary drift detection in Defender for Containers
 description: Learn about Microsoft's Defender for Cloud's binary drift detection capabilities, including how to create policies and manage alerts effectively.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Binary drift detection in Defender for Containers

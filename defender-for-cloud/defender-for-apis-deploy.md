@@ -5,6 +5,7 @@ ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 09/28/2025
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Protect your APIs with Defender for APIs

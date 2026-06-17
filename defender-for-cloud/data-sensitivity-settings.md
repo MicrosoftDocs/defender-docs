@@ -4,6 +4,7 @@ description: Learn how to customize data sensitivity settings in Microsoft Defen
 ms.topic: how-to
 ms.date: 05/25/2026
 #customer intent: As a security administrator, I want to customize data sensitivity settings so that I can better manage and protect sensitive data in my organization.
+ai-usage: ai-assisted
 ---
 
 # Customize data sensitivity settings

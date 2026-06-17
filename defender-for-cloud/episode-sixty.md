@@ -3,6 +3,7 @@ title: Code reachability analysis
 description: Learn about code reachability analysis and how it helps prioritize vulnerabilities in Defender for Cloud.
 ms.topic: reference
 ms.date: 12/23/2025
+ai-usage: ai-assisted
 ---
 
 # Code reachability analysis

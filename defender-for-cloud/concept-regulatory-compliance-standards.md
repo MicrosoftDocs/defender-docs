@@ -5,6 +5,7 @@ ms.topic: concept-article
 ms.date: 09/09/2024
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a cloud security professional, I want to understand how Defender for Cloud helps me meet regulatory compliance standards, so that I can ensure my organization is compliant with industry standards and regulations.
+ai-usage: ai-assisted
 ---
 
 # Regulatory compliance standards in Microsoft Defender for Cloud

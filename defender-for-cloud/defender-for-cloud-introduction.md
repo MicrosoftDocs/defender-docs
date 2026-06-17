@@ -4,6 +4,7 @@ description: Secure your Azure, hybrid, and multicloud resources with Microsoft 
 ms.topic: overview
 ms.date: 04/23/2026
 #customer intent: As a security professional, I want to understand Microsoft Defender for Cloud so that I can protect my cloud resources.
+ai-usage: ai-assisted
 ---
 
 # What is Microsoft Defender for Cloud?

@@ -4,6 +4,7 @@ description: Learn how to test attack paths and perform enhanced risk-hunting fo
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/28/2026
+ai-usage: ai-assisted
 ---
 
 # Attack path analysis and enhanced risk-hunting for containers

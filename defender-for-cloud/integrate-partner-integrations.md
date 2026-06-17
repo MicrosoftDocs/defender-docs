@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to connect partner integrations in Microsoft Defender for Cloud so that I can extend detection and protection across my environment.
+ai-usage: ai-assisted
 ---
 
 # Connect partner integrations in Microsoft Defender for Cloud

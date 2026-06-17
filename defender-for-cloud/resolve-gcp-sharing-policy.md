@@ -4,6 +4,7 @@ description: Resolve GCP Domain Restricted Sharing policy settings that block De
 ms.date: 06/03/2025
 ms.topic: how-to
 #customer intent: As a security professional, I want to resolve the Domain Restricted Sharing policy in Google Cloud Platform (GCP) to ensure my resources are connected and protected.
+ai-usage: ai-assisted
 ---
 
 # Resolve Domain Restricted Sharing policy

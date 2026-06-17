@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security analyst, I want to manage and investigate security incidents in Microsoft Defender for Cloud so that I can understand attack campaigns and respond effectively.
+ai-usage: ai-assisted
 ---
 # Manage security incidents in Microsoft Defender for Cloud
 

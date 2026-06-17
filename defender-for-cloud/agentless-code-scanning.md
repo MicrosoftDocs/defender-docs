@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.date: 05/24/2026
 ms.custom: references_regions
 #customer intent: As a security professional, I want to learn how agentless code scanning in Microsoft Defender for Cloud can help identify vulnerabilities in my code and IaC configurations.
+ai-usage: ai-assisted
 ---
 
 # Configure agentless code scanning (Preview)

@@ -4,6 +4,7 @@ description: Get an overview of the Defender for Servers plan in Microsoft Defen
 ms.topic: concept-article
 ms.date: 04/23/2026
 # customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.
+ai-usage: ai-assisted
 ---
 
 # Defender for Servers

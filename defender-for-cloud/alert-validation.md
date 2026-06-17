@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.custom: linux-related-content
 #customer intent: As a security admin, I want to validate Microsoft Defender for Cloud alerts so that I can confirm detections and response workflows are working as expected.
 ms.date: 05/25/2026
+ai-usage: ai-assisted
 ---
 
 # Validate alerts in Microsoft Defender for Cloud

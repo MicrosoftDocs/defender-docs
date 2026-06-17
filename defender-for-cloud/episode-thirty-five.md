@@ -3,6 +3,7 @@ title: Security alert correlation | Defender for Cloud in the Field
 description: Security alert correlation
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Security alert correlation

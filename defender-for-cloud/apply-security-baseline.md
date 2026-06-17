@@ -4,6 +4,7 @@ description: Learn how Microsoft Defender for Cloud uses the guest configuration
 ms.topic: how-to
 #customer intent: As a security admin, I want to review and remediate OS misconfigurations so that I can reduce machine hardening risks in Microsoft Defender for Cloud.
 ms.date: 05/25/2026
+ai-usage: ai-assisted
 ---
 
 # Review and remediate OS misconfigurations in Microsoft Defender for Cloud

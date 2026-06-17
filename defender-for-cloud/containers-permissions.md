@@ -3,6 +3,7 @@ title: Cloud IAM permissions for Defender for Containers on AWS and GCP
 description: Reference of cloud IAM roles and permissions required to onboard and operate Microsoft Defender for Containers in AWS (EKS) and Google Cloud (GKE) environments.
 ms.topic: reference
 ms.date: 03/06/2025
+ai-usage: ai-assisted
 ---
 
 # Cloud IAM permissions for Defender for Containers on AWS and GCP

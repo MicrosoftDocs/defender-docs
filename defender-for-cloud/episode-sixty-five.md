@@ -3,6 +3,7 @@ title: Malware automated remediation
 description: Learn about malware automated remediation in Defender for Storage.
 ms.topic: reference
 ms.date: 02/08/2026
+ai-usage: ai-assisted
 ---
 
 # Malware automated remediation

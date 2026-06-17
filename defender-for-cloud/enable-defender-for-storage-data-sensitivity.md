@@ -5,6 +5,7 @@ ms.date: 06/02/2026
 ms.topic: how-to
 #customer intent: As a security professional, I want to enable and configure sensitive data threat detection in Microsoft Defender for Storage so that I can protect my organization's data from exposure and enhance overall security.
 
+ai-usage: ai-assisted
 ---
 
 # Enable sensitive data threat detection

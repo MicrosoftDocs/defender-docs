@@ -3,6 +3,7 @@ title: Securing a container image with a signature of the vulnerability findings
 description: Learn about securing a container image with a signed vulnerability findings artifact.
 ms.date: 03/16/2025
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Secure a container image by signing the vulnerability findings artifact

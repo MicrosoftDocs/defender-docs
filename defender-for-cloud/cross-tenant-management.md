@@ -3,6 +3,7 @@ title: Cross-tenant management
 description: Learn how to set up cross-tenant management to manage the security posture of multiple tenants in Defender for Cloud using Azure Lighthouse.
 ms.topic: concept-article
 ms.date: 06/30/2025
+ai-usage: ai-assisted
 ---
 
 # Cross-tenant management in Defender for Cloud

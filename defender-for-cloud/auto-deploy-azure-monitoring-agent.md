@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 05/27/2026
 ms.custom: template-how-to
 #customer intent: As a user, I want to understand how Microsoft Defender for Cloud uses Azure Monitor Agent for SQL Servers on Machines so I can configure it correctly.
+ai-usage: ai-assisted
 ---
 
 # Azure Monitor Agent (AMA) in Microsoft Defender for Cloud

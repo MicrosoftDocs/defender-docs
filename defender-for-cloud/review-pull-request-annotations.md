@@ -4,6 +4,7 @@ description: Review pull request annotations in GitHub or in Azure DevOps.
 ms.topic: how-to
 ms.date: 05/25/2025
 #customer intent: As a developer or security reviewer, I want to review pull request annotations so I can address security issues before merge.
+ai-usage: ai-assisted
 ---
 
 # Review pull request annotations in GitHub and Azure DevOps

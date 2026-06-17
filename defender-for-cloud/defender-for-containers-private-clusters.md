@@ -4,6 +4,7 @@ description: Learn how to deploy Microsoft Defender for Containers to private cl
 ms.topic: how-to
 ms.date: 06/01/2026
 #customer intent: As a security administrator, I want to deploy Defender for Containers to private clusters so that I can protect nonpublic Kubernetes environments.
+ai-usage: ai-assisted
 ---
 
 # Deploy Defender for Containers to private clusters (preview)

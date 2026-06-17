@@ -4,6 +4,7 @@ description: Learn how to use the cloud security explorer to determine which AI 
 ms.topic: how-to
 ms.date: 05/28/2026
 # customer intent: As a user, I want to learn how to identify AI workloads and models in my environment so that I can assess their security posture.
+ai-usage: ai-assisted
 ---
 
 # Discover generative AI workloads

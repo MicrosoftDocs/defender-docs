@@ -80,7 +80,7 @@
         - name: Connect individual non-Azure machines
           items:
             - name: Connect machines with Defender for Endpoint
-              displayName: azure stack, ash, windows, linux, hybrid, defender for endpoint
+              displayName: direct onboarding, non-azure servers, defender for endpoint, defender for servers, licensing, discount, double billing
               href: onboard-machines-with-defender-for-endpoint.md
             - name: Connect machines with Azure Arc
               displayName: azure stack, ash, windows, linux, hybrid, arc, on-premises, Microsoft Defender XDR, alerts, integration, m365, m365d, m365 defender
@@ -639,6 +639,7 @@
         Ask Defender Experts
       href: defender-for-servers-overview.md
     - name: Common questions
+      displayName: faq, discount, defender for endpoint license, double billing, billing adjustment
       href: faq-defender-for-servers.yml
     - name: Plan 
       items:
@@ -671,6 +672,7 @@
       - name: Defender integration
         items:
           - name: Overview
+            displayName: defender for endpoint integration, defender vulnerability management integration, defender for servers, licensing, discount, double billing
             href: integration-defender-for-endpoint.md
           - name: Enable Defender for Endpoint integration in Microsoft Defender for Cloud
             displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
@@ -1322,7 +1324,7 @@
           - name: Microsoft Defender for Endpoint
             items:
               - name: Overview Microsoft Defender for Endpoint integration
-                displayName: CSPM, Cloud security, posture, management, Microsoft Defender for Endpoint
+                displayName: defender for endpoint integration, defender vulnerability management integration, defender for servers, licensing, discount, double billing
                 href: integration-defender-for-endpoint.md
               - name: Enable Defender for Endpoint integration in Microsoft Defender for Cloud
                 displayName: CSPM, Cloud security, posture, management, Microsoft Defender for Endpoint

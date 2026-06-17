@@ -3,6 +3,7 @@ title: Threat landscape for Defender for Containers
 description: Learn about the new detections that are available for different attacks and how Defender for Containers can help to quickly identify malicious activities in containers.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Threat landscape for Defender for Containers

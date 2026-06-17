@@ -3,6 +3,7 @@ title: Enable pull request annotations in GitHub or in Azure DevOps
 description: Add pull request annotations in GitHub or in Azure DevOps. By adding pull request annotations, your SecOps, and developer teams so that they can be on the same page when it comes to mitigating issues.
 ms.topic: overview
 ms.date: 07/15/2025
+ai-usage: ai-assisted
 ---
 
 # Enable pull request annotations in GitHub and Azure DevOps

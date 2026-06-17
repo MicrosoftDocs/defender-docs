@@ -4,6 +4,7 @@ description: Learn how Microsoft Defender for SQL servers on machines secures yo
 ms.date: 01/26/2025
 ms.topic: concept-article
 #customer intent: As a security administrator, I want to understand how Microsoft Defender for SQL servers on machines works so that I can protect my SQL databases from potential threats.
+ai-usage: ai-assisted
 ---
 
 # Overview of Microsoft Defender for SQL servers on machines

@@ -5,6 +5,7 @@ ms.date: 05/13/2025
 ms.topic: quickstart
 ms.custom: ignite-2023
 #customer intent: As a user, I want to learn how to connect my GitHub Environment to Defender for Cloud so that I can enhance the security of my GitHub resources.
+ai-usage: ai-assisted
 ---
 
 # Quick Start: Connect your GitHub Environment to Microsoft Defender for Cloud

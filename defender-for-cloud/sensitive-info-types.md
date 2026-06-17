@@ -3,6 +3,7 @@ title: Sensitive information types supported by Microsoft Defender for Cloud
 description: List table of sensitive information types supported by Microsoft Defender for Cloud
 ms.topic: reference
 ms.date: 11/01/2023
+ai-usage: ai-assisted
 ---
 
 # Sensitive information types supported by Microsoft Defender for Cloud

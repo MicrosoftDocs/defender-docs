@@ -6,6 +6,7 @@ ms.topic: concept-article
 ms.date: 04/20/2026
 ms.custom: template-concept
 #customer intent: As a user, I want to understand how Defender for Cloud detects and assesses internet exposure for my multicloud resources. This knowledge will help me identify and mitigate potential security risks effectively.
+ai-usage: ai-assisted
 ---
 
 # Internet exposure analysis

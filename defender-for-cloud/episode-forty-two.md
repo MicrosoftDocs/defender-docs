@@ -3,6 +3,7 @@ title: Agentless secrets scanning for virtual machines | Defender for Cloud in t
 description: Learn about agentless secrets scanning for virtual machines
 ms.topic: reference
 ms.date: 11/13/2025
+ai-usage: ai-assisted
 ---
 
 # Agentless secrets scanning for virtual machines

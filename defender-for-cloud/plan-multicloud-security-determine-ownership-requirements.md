@@ -3,6 +3,7 @@ title: Determine ownership requirements
 description: Learn about determining ownership requirements when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 06/11/2026
+ai-usage: ai-assisted
 ---
 
 # Determine ownership requirements

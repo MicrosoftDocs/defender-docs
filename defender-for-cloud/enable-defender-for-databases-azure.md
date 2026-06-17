@@ -4,6 +4,7 @@ description: Detect anomalous activity and unusual attempts to access or exploit
 ms.date: 06/02/2026
 ms.topic: how-to
 #customer intent: As a reader, I want to learn how to configure Microsoft Defender for open-source relational databases to enhance the security of my Azure databases.
+ai-usage: ai-assisted
 ---
 
 # Enable Defender for open-source relational databases on Azure

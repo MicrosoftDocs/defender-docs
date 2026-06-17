@@ -5,6 +5,7 @@ ms.date: 05/28/2026
 ms.topic: how-to
 ms.custom: sfi-image-nochange, msecd-doc-authoring-1012
 #customer intent: As a security admin, I want to suppress false positive security alerts so that I can focus on genuine threats.
+ai-usage: ai-assisted
 ---
 
 # Suppress alerts from Microsoft Defender for Cloud

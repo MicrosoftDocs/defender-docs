@@ -4,6 +4,7 @@ description: Learn how to use 42Crunch with Microsoft Defender.
 ms.date: 05/28/2026
 ms.topic: how-to
 #customer intent: As an API security engineer, I want to onboard 42Crunch with Defender for Cloud so that API security findings are visible and actionable in a centralized workflow.
+ai-usage: ai-assisted
 ---
 
 # 42Crunch technical onboarding guide

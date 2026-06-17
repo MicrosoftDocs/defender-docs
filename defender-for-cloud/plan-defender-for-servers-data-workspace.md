@@ -4,6 +4,7 @@ description: Review data residency and workspace design for Microsoft Defender f
 ms.topic: concept-article
 ms.date: 02/19/2025
 ms.custom: references_regions
+ai-usage: ai-assisted
 ---
 # Understand data storage and workspaces
 

@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.custom: msecd-doc-authoring-1012
 ms.date: 05/04/2026
 #customer intent: As a cloud administrator, I want to disable Defender for Cloud plans so that I can manage my security costs.
+ai-usage: ai-assisted
 ---
 
 # Disable Microsoft Defender for Cloud plans

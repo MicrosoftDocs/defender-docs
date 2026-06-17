@@ -4,6 +4,7 @@ description: Compare Microsoft Defender for Cloud features and capabilities betw
 ms.topic: article
 ms.date: 03/29/2026
 ms.service: defender-for-cloud
+ai-usage: ai-assisted
 ---
 
 # Azure portal vs Defender portal feature comparison

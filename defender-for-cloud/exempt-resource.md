@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.custom: ignite-2023
 ms.date: 06/02/2026
 #customer intent: As a security administrator, I want to exempt resources and recommendations when appropriate so I can keep secure score signals accurate.
+ai-usage: ai-assisted
 ---
 
 # Exempt resources from recommendations

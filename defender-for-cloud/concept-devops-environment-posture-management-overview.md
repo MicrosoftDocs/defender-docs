@@ -3,6 +3,7 @@ title: DevOps environment posture management overview
 description: Learn how to discover security posture violations in DevOps environments 
 ms.date: 07/14/2025
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Improve DevOps environment security posture

@@ -5,6 +5,7 @@ services: defender-for-cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/28/2026
+ai-usage: ai-assisted
 ---
 
 # Drive recommendation remediation by using governance rules

@@ -3,6 +3,7 @@ title: Enable Defender for Storage by Using an Azure Built-in Policy
 description: Learn how to enable and configure the Microsoft Defender for Storage plan at scale by using an Azure built-in policy.
 ms.topic: install-set-up-deploy
 ms.date: 06/30/2025
+ai-usage: ai-assisted
 ---
 
 # Enable and configure Defender for Storage at scale by using an Azure built-in policy

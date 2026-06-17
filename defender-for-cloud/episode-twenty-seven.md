@@ -3,6 +3,7 @@ title: Demystifying Defender for Servers | Defender for Cloud in the field
 description: Learn about different deployment options in Defender for Servers
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Demystifying Defender for Servers | Defender for Cloud in the field

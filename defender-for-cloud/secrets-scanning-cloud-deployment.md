@@ -3,6 +3,7 @@ title: Protect cloud deployment secrets with Microsoft Defender for Cloud
 description: Learn how to protect cloud deployment secrets with Defender for CSPM's agentless secrets scanning in Microsoft Defender for Cloud.
 ms.topic: overview
 ms.date: 07/15/2025
+ai-usage: ai-assisted
 ---
 
 

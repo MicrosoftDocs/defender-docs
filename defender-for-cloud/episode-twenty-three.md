@@ -3,6 +3,7 @@ title: Defender Threat Intelligence  | Defender for Cloud in the field
 description: Learn about Microsoft Defender Threat Intelligence (Defender TI)
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Defender threat Intelligence | Defender for Cloud in the Field

@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 05/26/2026
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to configure cloud scopes and unified RBAC to manage access and permissions across my cloud environments.
+ai-usage: ai-assisted
 ---
 
 # Manage cloud scopes and unified role-based access control (preview)
@@ -251,6 +252,10 @@ After creation and activation you can:
 - GitLab Groups
 - Docker Hub Organizations
 - JFrog Artifactory
+- K8s namespace
+- K8s cluster
+- Registry (multicloud)
+- Repository (multicloud)
 
 (Additional primitives like management groups and container resources planned.)
 

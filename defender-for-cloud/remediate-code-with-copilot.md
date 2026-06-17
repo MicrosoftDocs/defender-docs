@@ -4,6 +4,7 @@ description: Learn how to remediate code with Copilot in Microsoft Defender for 
 ms.topic: how-to
 ms.date: 09/25/2025
 #customer intent: As a security professional, I want to understand how to use Copilot to remediate code in Defender for Cloud so that I can improve my security posture.
+ai-usage: ai-assisted
 ---
 
 # Remediate code with Microsoft Security Copilot

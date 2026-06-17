@@ -4,6 +4,7 @@ description: Learn how to download and export your alerts and recommendations to
 ms.topic: how-to
 ms.date: 06/30/2025
 #customer intent: As a user, I want to learn how to download a CSV report of all alerts from Microsoft Defender for Cloud so that I can analyze the data.
+ai-usage: ai-assisted
 ---
 
 # Download a CSV report

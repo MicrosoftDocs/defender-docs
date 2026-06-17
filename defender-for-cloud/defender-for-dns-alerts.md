@@ -4,6 +4,7 @@ description: Learn best practices for responding to alerts that indicate securit
 ms.date: 05/25/2026
 ms.topic: how-to
 #customer intent: As a security administrator, I want to respond to Microsoft Defender for DNS alerts so that I can investigate suspicious DNS activity and contain potential compromises.
+ai-usage: ai-assisted
 ---
 
 # Respond to Microsoft Defender for DNS alerts

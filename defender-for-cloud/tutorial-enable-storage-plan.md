@@ -3,6 +3,7 @@ title: Deploy Microsoft Defender for Storage
 description: Learn how to enable Microsoft Defender for Storage on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
 ms.date: 05/13/2025
+ai-usage: ai-assisted
 ---
 
 # Deploy Microsoft Defender for Storage

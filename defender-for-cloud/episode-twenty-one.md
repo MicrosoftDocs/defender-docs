@@ -3,6 +3,7 @@ title: Latest updates in the regulatory compliance dashboard | Defender for Clou
 description: Learn about the latest updates in the regulatory compliance dashboard
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Latest updates in the regulatory compliance dashboard| Defender for Cloud in the Field

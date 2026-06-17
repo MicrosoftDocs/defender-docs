@@ -4,6 +4,7 @@ description: Learn about AI model security in Microsoft Defender for Cloud.
 ms.topic: concept-article
 ms.date: 04/14/2026
 zone_pivot_groups: defender-portal-experience
+ai-usage: ai-assisted
 ---
 
 # AI model security (Preview)

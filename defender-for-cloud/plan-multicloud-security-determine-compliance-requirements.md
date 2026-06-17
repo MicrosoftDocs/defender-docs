@@ -3,6 +3,7 @@ title: Planning multicloud security compliance requirements guidance AWS standar
 description: Learn about determining compliance requirements in multicloud environment with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 05/31/2026
+ai-usage: ai-assisted
 ---
 
 # Determine compliance requirements

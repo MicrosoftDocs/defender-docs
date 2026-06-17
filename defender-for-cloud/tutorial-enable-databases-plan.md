@@ -4,6 +4,7 @@ description: Learn how to enable the Databases plan on your Azure subscription f
 ms.topic: how-to
 ms.date: 04/20/2026
 #customer intent: As a database administrator, I want to enable Defender for Databases so that I can enhance the security of my databases.
+ai-usage: ai-assisted
 ---
 
 # Protect your databases with Defender for Databases

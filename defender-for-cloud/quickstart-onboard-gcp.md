@@ -4,6 +4,7 @@ description: Connect your GCP project or organization to Microsoft Defender for 
 ms.topic: install-set-up-deploy
 ms.date: 01/13/2026
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Connect your GCP project to Microsoft Defender for Cloud

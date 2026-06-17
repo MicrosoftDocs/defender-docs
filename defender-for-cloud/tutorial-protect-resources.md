@@ -5,6 +5,7 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.date: 04/19/2026
 
+ai-usage: ai-assisted
 ---
 # Protect your Virtual Machines (VMs) with Microsoft Defender for Servers
 

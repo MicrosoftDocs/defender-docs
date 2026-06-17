@@ -4,6 +4,7 @@ description: Investigate and remediate security alerts from Defender for Resourc
 ms.date: 05/25/2026
 ms.topic: how-to
 #customer intent: As a security administrator, I want to respond to alerts so that I can mitigate threats effectively.
+ai-usage: ai-assisted
 ---
 
 # Respond to Defender for Resource Manager alerts

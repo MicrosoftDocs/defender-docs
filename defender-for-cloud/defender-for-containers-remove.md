@@ -3,6 +3,7 @@ title: Disable and remove Defender for Containers
 description: Learn how to disable Microsoft Defender for Containers and remove its components for Kubernetes environments running on Azure, AWS, and Google Cloud.
 ms.topic: how-to
 ms.date: 01/25/2026
+ai-usage: ai-assisted
 ---
 
 # Disable and remove Defender for Containers

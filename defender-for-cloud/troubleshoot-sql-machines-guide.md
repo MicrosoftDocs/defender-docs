@@ -5,6 +5,7 @@ ms.date: 04/22/2025
 ms.topic: how-to
 ms.custom: references_regions
 #customer intent: As a security professional, I want to ensure that my configuration of SQL servers on Machines is correct and protects my resources.
+ai-usage: ai-assisted
 ---
 
 # Troubleshoot Defender for SQL on Machines configuration
