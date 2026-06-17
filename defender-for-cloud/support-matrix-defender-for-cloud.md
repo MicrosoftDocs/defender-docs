@@ -141,7 +141,7 @@ In the support table, **NA** indicates that the feature isn't available.
 
 <sup><a name="footnote1"></a>1</sup>: Azure DNS Zone isn't supported for malware scanning and sensitive data threat detection. <br>
 <sup><a name="footnote2"></a>2</sup>: GovCon Cloud Moderate (GCCM) doesn't support File Integrity Monitoring. <br>
-<sup><a name="footnote3"></a>3</sup>: All Microsoft Defender for Cloud features will be officially retired in the Azure in China region on August 18, 2026. Learn more about the [retirement of Microsoft Defender for Cloud in Azure operated by 21Vianet](https://azure.microsoft.com/updates/?id=498749). <br>
+<sup><a name="footnote3"></a>3</sup>: All Microsoft Defender for Cloud features will be officially retired in the Azure in China region on October 1, 2026. Learn more about the [retirement of Microsoft Defender for Cloud in Azure operated by 21Vianet](https://azure.microsoft.com/updates/?id=498749). <br>
 <sup><a name="footnote4"></a>4</sup>: Vulnerability assessment is not supported for private network.
 
 [!INCLUDE [Defender for DNS note](./includes/defender-for-dns-note.md)]
