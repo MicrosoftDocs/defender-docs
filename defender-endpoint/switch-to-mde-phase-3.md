@@ -11,21 +11,23 @@ ms.collection:
   - m365solution-migratetomdatp
   - highpri
   - tier1
-ms.custom: 
-- migrationguides
-- admindeeplinkDEFENDER
+ms.custom:
+  - msecd-doc-authoring-1014
+  - migrationguides
+  - admindeeplinkDEFENDER
 ms.topic: how-to
-ms.date: 03/04/2025
+ms.date: 06/17/2026
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Migrate to Microsoft Defender for Endpoint - Phase 3: Onboard
 
 
-| [![Phase 1: Prepare3.](media/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Phase 1: Prepare](switch-to-mde-phase-1.md) | [![Phase 2: Set up](media/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Phase 2: Set up](switch-to-mde-phase-2.md) | ![Phase 3: Onboard](media/phase-diagrams/onboard.png#lightbox)<br/>Phase 3: Onboard |
+| [![Diagram of the migration phases with Phase 1 Prepare highlighted.](media/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Phase 1: Prepare](switch-to-mde-phase-1.md) | [![Diagram of the migration phases with Phase 2 Set up highlighted.](media/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Phase 2: Set up](switch-to-mde-phase-2.md) | ![Diagram of the migration phases with Phase 3 Onboard highlighted as the current step.](media/phase-diagrams/onboard.png#lightbox)<br/>Phase 3: Onboard |
 |--|--|--|
 || |*You're here!* |
 
@@ -42,7 +44,9 @@ appliesto:
 
 ## Step 1: Onboard devices to Microsoft Defender for Endpoint
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+Follow these steps to start onboarding devices to Microsoft Defender for Endpoint.
+
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 1. Choose **Settings** \> **Endpoints** \> **Onboarding** (under **Device management**).
 
@@ -81,7 +85,7 @@ To verify that your onboarded devices are properly connected to Defender for End
 |Operating system|Guidance|
 |---|---|
 |Windows 10 or later<br/><br/>Windows Server 2012 R2 and later <br/><br/><br/>Windows Server, version 1803, or later<br/><br/>|See [Run a detection test](run-detection-test.md).|
-|macOS (see [System requirements](microsoft-defender-endpoint-mac.md))| Download and use the DIY app at [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy). Also see [Run the connectivity test](troubleshoot-cloud-connect-mdemac.md#run-the-connectivity-test).|
+|macOS (see [System requirements](microsoft-defender-endpoint-mac.md))| Download and use the [DIY detection test app for macOS](https://aka.ms/mdatpmacosdiy). Also see [Run the connectivity test](troubleshoot-cloud-connect-mdemac.md#run-the-connectivity-test).|
 |Linux (see [System requirements](mde-linux-prerequisites.md))|1. Run the following command, and look for a result of **1**: `mdatp health --field real_time_protection_enabled`.<br/><br/>2. Open a Terminal window, and run the following command: `curl -o ~/Downloads/eicar.com.txt https://www.eicar.org/download/eicar.com.txt`.<br/><br/>3. Run the following command to list any detected threats: `mdatp threat list`.<br/><br/>For more information, see [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).|
 
 ## Step 3: Confirm that Microsoft Defender Antivirus is in passive mode on your endpoints
@@ -124,6 +128,8 @@ If you're using Windows Server 2016, you might need to start Microsoft Defender 
    > [!TIP]
    > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Microsoft Defender`.
 
+   To enable Windows Defender from the correct installation folder, first change to the latest Defender platform directory and then run MpCmdRun with the enable switch:
+
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
@@ -159,13 +165,14 @@ To get help with uninstalling your non-Microsoft solution, contact their technic
 
 Now that you have onboarded to Defender for Endpoint, and you have uninstalled your former non-Microsoft solution, your next step is to make sure that Defender for Endpoint working correctly. 
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 1. In the navigation pane, choose **Endpoints** > **Device inventory**. There, you're able to see protection status for devices.
 
 To learn more, see [Device inventory](machines-view-overview.md).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 **Congratulations**! You have completed your [migration to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)!
 

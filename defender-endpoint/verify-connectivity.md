@@ -11,10 +11,12 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 09/21/2024
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs
@@ -28,7 +30,7 @@ For more information on the Defender for Endpoint Client Analyzer, see [Troubles
 > You can run the Defender for Endpoint Client Analyzer on devices prior to onboarding and after onboarding.
 > - When testing on a device onboarded to Defender for Endpoint, the tool will use the onboarding parameters. <br>
 > - When testing on a device not yet onboarded to Defender for Endpoint, the tool will use the defaults of US, UK, and EU.
-> For the consolidated service URLs provided by streamlined connectivity (default for new tenants), when testing devices not yet onboarded to Defender for Endpoint, run `mdeclientanalyzer.cmd` with `-o <path to MDE onboarding package >`. The command will use geo parameters from the onboarding script to test connectivity. Otherwise, the default pre-onboarding test runs against the standard URL set. See the following section for more details.
+> For the consolidated service URLs provided by streamlined connectivity (default for new tenants), when testing devices not yet onboarded to Defender for Endpoint, run `mdeclientanalyzer.cmd` with `-o <path to MDE onboarding package >`. The command will use geo parameters from the onboarding script to test connectivity. Otherwise, the default pre-onboarding test runs against the standard URL set. For more details, see [Testing connectivity to the streamlined onboarding method](#testing-connectivity-to-the-streamlined-onboarding-method).
 
 Verify that the proxy configuration is completed successfully. The WinHTTP can then discover and communicate through the proxy server in your environment, and then the proxy server allows traffic to the Defender for Endpoint service URLs.
 
@@ -70,7 +72,7 @@ Verify that the proxy configuration is completed successfully. The WinHTTP can t
 
 If any one of the connectivity options returns a (200) status, then the Defender for Endpoint client can communicate with the tested URL properly using this connectivity method.
 
-However, if the connectivity check results indicate a failure, an HTTP error is displayed (see HTTP Status Codes). You can then use the URLs in the table shown in [Enable access to Defender for Endpoint service URLs in the proxy server](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). The URLs available for use depend on the region selected during the onboarding procedure.
+However, if the connectivity check results indicate a failure, an HTTP error is displayed (see HTTP Status Codes). You can then use the URLs in the table shown in [Enable access to Defender for Endpoint service URLs in the proxy server](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). The URLs available for use depend on the region selected in the Defender for Endpoint onboarding package or onboarding script used for the device.
 
 > [!NOTE]
 >
@@ -81,19 +83,19 @@ However, if the connectivity check results indicate a failure, an HTTP error is 
 
 ## Testing connectivity to the streamlined onboarding method
 
-If you're testing connectivity on a device that hasn't yet been onboarded to Defender for Endpoint using the streamlined approach (relevant for both new and migrating devices):
+If you're testing connectivity on a device that hasn't yet been onboarded to Defender for Endpoint using streamlined device connectivity (relevant for both new and migrating devices):
 
 1. Download the streamlined onboarding package for relevant OS.
 
 1. Extract the .cmd from onboarding package.
 
-1. Follow the instructions in the previous section to download the Client Analyzer.
+1. Download the [Microsoft Defender for Endpoint Client Analyzer tool](https://aka.ms/mdeanalyzer) and extract the contents of MDEClientAnalyzer.zip on the device.
 
 1. Run `mdeclientanalyzer.cmd -o <path to onboarding cmd file>` from within the MDEClientAnalyzer folder. The command uses geo parameters from the onboarding script to test connectivity.
 
 If you're testing connectivity on a device onboarded to Defender for Endpoint using the streamlined onboarding package, run the Defender for Endpoint Client Analyzer as normal. The tool uses the configured onboarding parameters to test connectivity.
 
-For more info on how to access streamlined onboarding script, see [Onboarding devices using streamlined device connectivity](configure-device-connectivity.md).
+For more info on how to access the streamlined onboarding package and connectivity script, see [Onboarding devices using streamlined device connectivity](configure-device-connectivity.md).
 
 
 ## Microsoft Monitoring Agent (MMA) Service URL connections
@@ -106,7 +108,7 @@ For more info on how to access streamlined onboarding script, see [Onboarding de
 
 1. Run the TestCloudConnection.exe tool from `C:\Program Files\Microsoft Monitoring Agent\Agent` to validate the connectivity, and to get the required URLs for your specific workspace.
 
-1. Check the Microsoft Defender for Endpoint URLs list for the complete list of requirements for your region (refer to the Service URLs [Spreadsheet](https://go.microsoft.com/fwlink/?linkid=2247417)).
+1. Check the Microsoft Defender for Endpoint URLs list for the complete list of requirements for your region (refer to the [Microsoft Defender for Endpoint service URLs spreadsheet](https://go.microsoft.com/fwlink/?linkid=2247417)).
 
   :::image type="content" source="/defender/media/defender-endpoint/admin-powershell.png" alt-text="This is admin PowerShell.":::
 
@@ -117,7 +119,10 @@ The `*.blob.core.windows.net` URL endpoint can be replaced with the URLs shown i
 > [!NOTE]
 > In the case of onboarding via Microsoft Defender for Cloud, multiple workspaces can be used. You will need to perform the TestCloudConnection.exe procedure on the onboarded machine from each workspace (to determine, if there are any changes to the *.blob.core.windows.net URLs between the workspaces).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
+
+After you verify connectivity, onboard your devices to the Defender for Endpoint service:
 
 - [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)
 - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
