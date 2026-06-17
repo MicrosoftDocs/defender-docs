@@ -11,7 +11,7 @@ ms.collection:
 - essentials-overview
 ms.custom: intro-overview
 ms.topic: overview
-ms.date: 05/19/2026
+ms.date: 06/17/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -27,7 +27,7 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 
 As the endpoint security pillar of [Microsoft Defender](/defender-xdr/), Defender for Endpoint feeds endpoint signals into the unified Defender portal. The portal correlates these signals with alerts from identity, email, and cloud workloads to form complete incident views. Your security team can trace an attack from a phishing email to a compromised endpoint to lateral movement - all in one place.
 
-Defender for Endpoint also [integrates](threat-protection-integration.md) with the broader Microsoft security ecosystem, including:
+Defender for Endpoint also integrates with the broader Microsoft security ecosystem, including:
 
 * [Intune](/intune/intune-service/)
 * [Microsoft Defender for Cloud](/azure/defender-for-cloud/)
@@ -36,6 +36,7 @@ Defender for Endpoint also [integrates](threat-protection-integration.md) with t
 * [Microsoft Defender for Office](/defender-office-365/)
 * [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 * [Microsoft Sentinel](/azure/sentinel/)
+* [Microsoft threat intelligence](threat-protection-integration.md)
 
 ## Operating systems
 
@@ -50,27 +51,16 @@ For detailed system requirements and supported versions, see [Minimum requiremen
 
 ## Licensing
 
-To onboard Defender for Endpoint, you need a license. Choose from the following options:
-
-- **Microsoft Defender for Business** - An endpoint security solution designed for small and medium-sized businesses (up to 300 users).
-- **Defender for Endpoint Plan 1** - Provides core endpoint protection capabilities, including next-generation antivirus, attack surface reduction, and centralized management.
-- **Defender for Endpoint Plan 2** - A comprehensive endpoint protection solution that includes advanced capabilities such as endpoint detection and response, automated investigation, and vulnerability management.
-- **Microsoft Defender for Servers Plan 1 or Plan 2** - To onboard servers to Defender for Endpoint.
-- **Microsoft Defender for Endpoint for servers** - To onboard servers to Defender for Endpoint.
-- **[Microsoft Defender for Business servers](/defender-business/get-defender-business?tabs=findpartner#how-to-get-microsoft-defender-for-business-servers)** - For small and medium-sized businesses only.
-
-Microsoft 365 E5 and Microsoft 365 E5 Security include Defender for Endpoint. To onboard servers, you need server licenses. For more information, see the licensing section in [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md#licensing-requirements).
+Defender for Endpoint is available with several licensing options, including Defender for Endpoint Plan 1, Plan 2, and Microsoft Defender for Business. Microsoft 365 E5 and Microsoft 365 E5 Security include Defender for Endpoint Plan 2. For licensing requirements, see [Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements#licensing-requirements). For full plan comparison and pricing, see [Microsoft Defender for Endpoint plans and pricing](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint#Licensing).
 
 > [!TIP]
 > The more Microsoft Defender workloads you deploy (identity, email, cloud apps, and endpoints), the stronger your overall protection becomes. Each workload contributes signals that enrich detection, correlation, and automated response in the unified Defender portal.
-
-For full plan comparison and pricing, see [Microsoft Defender for Endpoint plans and pricing](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint#Licensing).
 
 ## Defender for Endpoint capabilities
 
 Defender for Endpoint provides a comprehensive set of capabilities, including [endpoint detection and response](overview-endpoint-detection-response.md), [autonomous protection](/defender-xdr/automatic-attack-disruption) with [automatic attack disruption](/defender-xdr/automatic-attack-disruption) and [predictive shielding](/defender-xdr/shield-predict-threats), [next-generation protection](next-generation-protection.md) with ransomware prevention, [attack surface reduction](overview-attack-surface-reduction.md), [vulnerability management](/defender-vulnerability-management/defender-vulnerability-management), [Endpoint Attack Notifications](endpoint-attack-notifications.md), and [APIs](api/management-apis.md) for integration with your existing workflows.
 
-For guidance on planning and rolling out Defender for Endpoint in your environment, see [Plan your Defender for Endpoint deployment](mde-planning-guide.md). To learn about new and upcoming capabilities, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md). To turn on preview features in your environment, see [Preview features in Microsoft Defender XDR](/defender-xdr/preview).
+For guidance on planning and rolling out Defender for Endpoint in your environment, see [Plan your Defender for Endpoint deployment](mde-planning-guide.md). Before you begin, review [Minimum requirements](minimum-requirements.md) to confirm your environment is ready. To learn about new and upcoming capabilities, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md). To turn on preview features in your environment, see [Preview features in Microsoft Defender XDR](/defender-xdr/preview).
 
 For a step-by-step workflow for piloting and deploying Defender for Endpoint in a production environment, including onboarding endpoints and verifying pilot groups, see [Pilot and deploy Defender for Endpoint](/defender-xdr/pilot-deploy-defender-endpoint).
 
@@ -82,10 +72,9 @@ Use these capabilities to integrate Microsoft Defender for Endpoint with your ex
 
 ## Privacy and compliance
 
-* [Zero Trust](zero-trust-with-microsoft-defender-endpoint.md)
-* [Microsoft Trust Center - Data protection and privacy](https://www.microsoft.com/trust-center/privacy)
-* [Privacy at Microsoft](https://privacy.microsoft.com/)
-* [Privacy & data management overview](/compliance/assurance/assurance-privacy)
+Defender for Endpoint is built with privacy, data protection, and regulatory compliance as core principles. For details on how Defender for Endpoint collects, stores, and protects your data, see [Data storage and privacy](data-storage-privacy.md).
+
+Defender for Endpoint supports a [Zero Trust](zero-trust-with-microsoft-defender-endpoint.md) security model, helping you verify identities and device health before granting access. To learn more about Microsoft's data handling practices and privacy commitments, visit the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy) and [Privacy at Microsoft](https://privacy.microsoft.com/). For an overview of how Microsoft manages data privacy and protection in compliance with global standards, see [Privacy and data management](/compliance/assurance/assurance-privacy).
 
 ## Related content
 
