@@ -4,6 +4,7 @@ description: Learn how to improve your cloud security posture in Microsoft Defen
 ms.topic: concept-article
 ms.date: 02/09/2025
 #customer intent: As a security administrator, I want to understand how Microsoft Defender for Cloud uses security policies, standards, and recommendations to assess and improve my organization’s cloud security posture.
+ai-usage: ai-assisted
 ---
 
 # Security policies in Defender for Cloud

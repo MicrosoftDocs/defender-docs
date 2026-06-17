@@ -4,6 +4,7 @@ description: Protect infrastructure as a service (IaaS) SQL servers across Azure
 ms.topic: how-to
 ms.date: 05/27/2026
 #customer intent: As a user, I want an overview of Defender for SQL Servers on Machines so I can understand capabilities and onboarding options.
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for SQL Servers on Machines overview

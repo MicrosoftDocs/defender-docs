@@ -3,6 +3,7 @@ title: Microsoft CNAPP solution | Defender for Cloud in the field
 description: Learn about Microsoft's CNAPP Defender for Cloud solution.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Microsoft CNAPP solution

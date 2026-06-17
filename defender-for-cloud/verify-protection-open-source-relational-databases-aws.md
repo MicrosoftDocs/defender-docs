@@ -4,6 +4,7 @@ description: Learn how to verify that Microsoft Defender for Cloud is configured
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/27/2026
+ai-usage: ai-assisted
 ---
 
 # Verify protection for open-source relational databases on AWS

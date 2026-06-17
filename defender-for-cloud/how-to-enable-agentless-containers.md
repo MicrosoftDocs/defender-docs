@@ -4,6 +4,7 @@ description: Learn how to onboard agentless containers in Defender CSPM.
 ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/28/2026
+ai-usage: ai-assisted
 ---
 
 # Onboard agentless containers for CSPM

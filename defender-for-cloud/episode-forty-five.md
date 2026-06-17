@@ -3,6 +3,7 @@ title: Risk prioritization | Defender for Cloud in the field
 description: Learn about risk prioritization in Defender for Cloud.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Risk prioritization in Defender for Cloud

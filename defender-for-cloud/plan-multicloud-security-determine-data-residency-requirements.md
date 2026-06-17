@@ -3,6 +3,7 @@ title: Planning multicloud security determine data residency requirements and ag
 description: Learn about determining data residency requirements when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.date: 05/31/2026
+ai-usage: ai-assisted
 ---
 
 # Determine data residency requirements

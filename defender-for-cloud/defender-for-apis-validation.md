@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.date: 05/25/2026
 ms.custom: references_regions, sfi-image-nochange
 #customer intent: As a user, I want to learn how to validate my Microsoft Defender for APIs alerts so that I can ensure the security of my APIs.
+ai-usage: ai-assisted
 ---
 
 # Validate your Microsoft Defender for APIs alerts

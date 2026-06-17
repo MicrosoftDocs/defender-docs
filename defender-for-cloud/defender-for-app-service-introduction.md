@@ -4,6 +4,7 @@ description: Learn about the capabilities of Microsoft Defender for App Service 
 ms.date: 05/14/2026
 ms.topic: overview
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Overview of Defender for App Service to protect your Azure App Service web apps and APIs

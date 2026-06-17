@@ -3,6 +3,7 @@ title: Defender EASM | Defender for Cloud in the field
 description: Learn about Microsoft Defender External Attack Surface Management (Defender EASM)
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Defender EASM | Defender for Cloud in the Field

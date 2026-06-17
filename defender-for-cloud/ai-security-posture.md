@@ -4,6 +4,7 @@ description: Learn how AI security posture management in Microsoft Defender for 
 ms.date: 05/18/2026
 ms.topic: concept-article
 #customer intent: As a cloud security professional, I want to understand how to secure my generative AI resources using Defender for Cloud's AI security posture management capabilities.
+ai-usage: ai-assisted
 ---
 
 # Overview - AI security posture management

@@ -4,6 +4,7 @@ description: Understand support and prerequisites for DevOps security in Microso
 ms.date: 01/04/2025
 ms.topic: feature-availability
 ms.custom: ignite-2023, references_regions
+ai-usage: ai-assisted
 ---
 
 # Support and prerequisites: DevOps security

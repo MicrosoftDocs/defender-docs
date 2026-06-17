@@ -4,6 +4,7 @@ description: Understand how Defender for Containers can secure your containers s
 ms.topic: concept-article
 ms.date: 3/19/2025
 #customer intent: As a devops person, I want to understand how Defender for Containers can secure my containers software supply chain.
+ai-usage: ai-assisted
 ---
 
 # Containers software supply chain (CSSC) security using Defender for Containers

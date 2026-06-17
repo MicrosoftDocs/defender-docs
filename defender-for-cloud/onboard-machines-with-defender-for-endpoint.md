@@ -4,6 +4,7 @@ description: Learn how to connect your non-Azure machines directly to Microsoft 
 ms.topic: quickstart
 ms.date: 05/01/2025
 
+ai-usage: ai-assisted
 ---
 
 # Connect your non-Azure servers to Microsoft Defender for Cloud with Defender for Endpoint

@@ -4,6 +4,7 @@ description: Learn how Microsoft Defender for Cloud uses Defender cloud security
 ms.topic: concept-article
 ms.date: 06/03/2026
 #customer intent: "As a cloud security administrator, I want to understand posture for serverless containers in Microsoft Defender for Cloud so that I can prioritize risk across supported serverless workloads."
+ai-usage: ai-assisted
 ---
 
 # Discovery and posture for serverless container workloads (Preview)

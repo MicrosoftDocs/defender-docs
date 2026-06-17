@@ -4,6 +4,7 @@ description: Use this step-by-step guide to integrate GitHub Advanced Security w
 ms.date: 05/28/2026
 ms.topic: how-to
 #customer intent: As a security administrator, I want to deploy and configure GitHub Advanced Security integration with Microsoft Defender for Cloud to protect applications from code to production.
+ai-usage: ai-assisted
 ---
 
 # Deploy GitHub Advanced Security integration

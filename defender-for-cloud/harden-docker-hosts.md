@@ -4,6 +4,7 @@ description: How to protect your Docker hosts and verify they're compliant with 
 ms.topic: how-to
 ms.date: 05/28/2026
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 # Review Docker host hardening recommendations
 

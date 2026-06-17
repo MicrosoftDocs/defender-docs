@@ -4,6 +4,7 @@ description: Learn about new, updated, and deprecated features in Microsoft Defe
 ms.topic: overview
 ms.custom: references_regions
 ms.date: 06/09/2026
+ai-usage: ai-assisted
 ---
 
 # What's new in Defender for Cloud features

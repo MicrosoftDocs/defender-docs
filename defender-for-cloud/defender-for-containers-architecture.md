@@ -4,6 +4,7 @@ description: Learn about the architecture of Microsoft Defender for Containers f
 ms.topic: concept-article
 ms.date: 05/18/2026
 # customer intent: As a developer, I want to understand the container security architecture of Microsoft Defender for Containers so that I can implement it effectively.
+ai-usage: ai-assisted
 ---
 
 # Defender for Containers architecture

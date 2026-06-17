@@ -3,6 +3,7 @@ title: Storage aggregated logs
 description: Learn about storage aggregated logs and how to investigate storage activity in XDR Advanced Hunting.
 ms.topic: reference
 ms.date: 09/26/2025
+ai-usage: ai-assisted
 ---
 
 # Storage aggregated logs

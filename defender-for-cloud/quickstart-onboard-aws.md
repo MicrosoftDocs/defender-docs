@@ -3,6 +3,7 @@ title: Connect your AWS account
 description: Defend your AWS resources with Microsoft Defender for Cloud, a guide to set up and configure Defender for Cloud to protect your workloads in AWS.
 ms.topic: install-set-up-deploy
 ms.date: 06/04/2026
+ai-usage: ai-assisted
 ---
 
 # Connect AWS accounts to Microsoft Defender for Cloud

@@ -4,6 +4,7 @@ description: Learn how AI threat protection in Microsoft Defender for Cloud dete
 ms.date: 05/19/2026
 ms.topic: overview
 #customer intent: As a cloud security professional, I want to understand how to secure my generative AI resources using Defender for Cloud's AI security posture management capabilities.
+ai-usage: ai-assisted
 ---
 
 # AI threat protection in Microsoft Defender for Cloud

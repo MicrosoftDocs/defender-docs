@@ -5,6 +5,7 @@ ms.service: defender-for-cloud
 ms.topic: checklist
 ms.date: 03/31/2026
 ms.custom: references_regions
+ai-usage: ai-assisted
 ---
 # Support and prerequisites for Defender for APIs deployment
 

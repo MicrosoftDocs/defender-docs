@@ -4,6 +4,7 @@ description: Learn about the benefits, features, and security capabilities of Mi
 ms.topic: concept-article
 ms.date: 12/24/2024
 #customer intent: As a security administrator, I want to understand the features of Microsoft Defender for Azure Cosmos DB so that I can protect my databases from threats.
+ai-usage: ai-assisted
 ---
 
 # Overview of Microsoft Defender for Azure Cosmos DB

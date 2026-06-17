@@ -4,6 +4,7 @@ description: Learn how to enable and configure preview features for Microsoft De
 ms.topic: how-to
 ms.date: 11/10/2025
 ms.service: defender-for-cloud
+ai-usage: ai-assisted
 ---
 
 # Enable preview features in the Defender portal

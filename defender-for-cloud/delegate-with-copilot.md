@@ -4,6 +4,7 @@ description: Learn how to delegate recommendations with Copilot in Microsoft Def
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a security professional, I want to understand how to use Copilot to delegate recommendations in Defender for Cloud so that I can improve my security posture.
+ai-usage: ai-assisted
 ---
 
 # Delegate recommendations with Microsoft Security Copilot

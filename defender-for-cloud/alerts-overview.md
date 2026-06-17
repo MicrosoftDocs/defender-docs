@@ -4,6 +4,7 @@ description: Learn how Microsoft Defender for Cloud generates security alerts an
 ms.topic: concept-article
 ms.date: 07/14/2025
 ms.custom: fasttrack-edit
+ai-usage: ai-assisted
 ---
 # Security alerts and incidents
 

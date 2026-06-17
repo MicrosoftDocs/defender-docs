@@ -4,6 +4,7 @@ description: Reference which Microsoft Defender for Containers features require 
 ms.topic: reference
 ms.service: defender-for-cloud
 ms.date: 05/31/2026
+ai-usage: ai-assisted
 ---
 
 # Access patterns and private cluster support for Defender for Containers features

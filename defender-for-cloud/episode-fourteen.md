@@ -4,6 +4,7 @@ title: Defender for Servers deployment in Amazon Web Service and Google Cloud Pl
 description: Learn about the capabilities available for Defender for Servers deployment within Amazon Web Service and Google Cloud Platform.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Defender for Servers deployment in Amazon Web Service and Google Cloud Platform

@@ -2,6 +2,7 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 07/14/2022
+ai-usage: ai-assisted
 ---
 ## Remove the Defender sensor
 

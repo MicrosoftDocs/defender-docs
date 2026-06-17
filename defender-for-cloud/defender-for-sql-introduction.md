@@ -5,6 +5,7 @@ ms.date: 05/13/2025
 ms.topic: overview
 ms.custom: references_regions
 #customer intent: As a database administrator, I want to understand the benefits and features of Microsoft Defender for Azure SQL Databases so that I can protect my databases effectively.
+ai-usage: ai-assisted
 ---
 
 # Overview of Microsoft Defender for Azure SQL Databases

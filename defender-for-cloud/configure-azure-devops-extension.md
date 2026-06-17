@@ -4,6 +4,7 @@ description: Learn how to configure the Microsoft Security DevOps Azure DevOps e
 ms.topic: how-to
 ms.date: 05/26/2026
 #customer intent: As a DevOps engineer, I want to configure the Microsoft Security DevOps extension in Azure DevOps so I can run security analyzers in my pipelines and send findings to Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # Configure the Microsoft Security DevOps Azure DevOps extension

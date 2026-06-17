@@ -4,6 +4,7 @@ description: Understand and remediate Defender for Cloud recommendations for mis
 ms.topic: how-to
 ms.date: 06/02/2026
 #customer intent: As a <role>, I want to learn how to enable system updates on my servers so that I can keep them secure and healthy.
+ai-usage: ai-assisted
 ---
 
 # Remediate system updates and patches recommendations

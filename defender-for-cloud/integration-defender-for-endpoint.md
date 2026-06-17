@@ -4,6 +4,7 @@ description: Learn about how Microsoft Defender for Endpoint and Microsoft Defen
 ms.topic: concept-article
 ms.date: 05/01/2025
 #customer intent: I want to understand how Defender for Endpoint integrates with Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # Defender for Endpoint/Defender for Vulnerability Management integration

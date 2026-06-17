@@ -5,6 +5,7 @@ ms.service: defender-for-cloud
 ms.topic: overview
 ms.date: 11/04/2024
 ms.custom: sfi-ropc-nochange
+ai-usage: ai-assisted
 ---
 
 

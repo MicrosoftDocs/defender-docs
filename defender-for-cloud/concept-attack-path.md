@@ -4,6 +4,7 @@ description: Learn how Security explorer and attack paths in Microsoft Defender 
 ms.topic: concept-article
 ms.date: 05/19/2026
 #customer intent: As a security analyst, I want to understand attack paths so that I can mitigate risks effectively.
+ai-usage: ai-assisted
 ---
 
 # Security explorer and attack paths in Microsoft Defender for Cloud

@@ -5,6 +5,7 @@ ms.topic: quickstart
 ms.custom: devx-track-azurepowershell
 ms.date: 05/07/2026
 ms.service: defender-for-cloud
+ai-usage: ai-assisted
 ---
 
 # Get started with the unified SQL Vulnerability Assessment REST API

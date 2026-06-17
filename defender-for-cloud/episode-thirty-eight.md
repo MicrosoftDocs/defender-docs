@@ -3,6 +3,7 @@ title: Data Security Dashboard | Defender for Cloud in the Field
 description: Learn about Defender for Cloud's data security dashboard.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Data security dashboard in Defender for Cloud

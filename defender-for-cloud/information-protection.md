@@ -4,6 +4,7 @@ description: Use Microsoft Purview's data sensitivity classifications in Microso
 ms.topic: overview
 ms.date: 05/20/2025
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 # Leverage Purview Catalog to protect sensitive data (Preview)
 

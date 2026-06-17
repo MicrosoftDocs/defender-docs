@@ -3,6 +3,7 @@ title: Vulnerability management in Defender CSPM | Defender for Cloud in the fie
 description: Learn about vulnerability management in Defender CSPM in Defender for Cloud.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Vulnerability management in Defender CSPM

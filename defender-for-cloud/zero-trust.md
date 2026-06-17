@@ -5,6 +5,7 @@ ms.date: 07/17/2024
 ms.topic: concept-article
 ms.collection:
   -       zerotrust-services
+ai-usage: ai-assisted
 ---
 
 # Zero Trust and Defender for Cloud

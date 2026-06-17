@@ -6,6 +6,7 @@ ms.topic: concept-article
 ms.date: 04/19/2026
 ms.custom: template-concept
 #customer intent: As a user, I want to understand how agentless machine scanning works in Defender for Cloud so that I can effectively collect data from my machines.
+ai-usage: ai-assisted
 ---
 
 # Agentless machine scanning

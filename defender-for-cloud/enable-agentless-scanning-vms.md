@@ -6,6 +6,7 @@ ms.date: 06/02/2026
 ms.custom: sfi-image-nochange
 
 #customer intent: As a security administrator, I want to enable agentless scanning for VMs so that I can identify vulnerabilities and threats without impacting performance.
+ai-usage: ai-assisted
 ---
 
 # Enable agentless machine scanning

@@ -5,6 +5,7 @@ ms.topic: concept-article
 ms.date: 11/17/2025
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
+ai-usage: ai-assisted
 ---
 
 ::: zone pivot="azure-portal"

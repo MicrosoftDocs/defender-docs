@@ -4,6 +4,7 @@ description: Learn how to create a Microsoft Defender for Cloud automation to tr
 ms.topic: quickstart
 ms.custom: subject-armqs, mode-arm, devx-track-bicep, devx-track-arm-template
 ms.date: 05/18/2025
+ai-usage: ai-assisted
 ---
 
 # Quickstart: Create an automatic response to a specific security alert using an ARM template or Bicep

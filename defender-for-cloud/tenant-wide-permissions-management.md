@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 07/15/2025
 ms.custom: sfi-ga-nochange, sfi-image-nochange
 # customer intent: As a user, I want to learn how to manage tenant-wide permissions in Microsoft Defender for Cloud so that I can effectively manage my organization's security.
+ai-usage: ai-assisted
 ---
 
 # Grant and request tenant-wide visibility

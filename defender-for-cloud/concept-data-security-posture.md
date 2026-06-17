@@ -5,6 +5,7 @@ ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 02/05/2025
 #customer intent: As a security professional, I want to understand how Defender for Cloud enhances data security in a multicloud environment so that I can effectively protect sensitive data.
+ai-usage: ai-assisted
 ---
 
 # Overview - About data security posture management

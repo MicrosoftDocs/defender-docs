@@ -3,6 +3,7 @@ title: Governance capability improvements in Defender for Cloud | Defender for C
 description: Learn about the need for governance and new at scale governance capability
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Governance capability improvements in Defender for Cloud | Defender for Cloud in the field

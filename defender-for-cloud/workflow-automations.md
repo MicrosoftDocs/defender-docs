@@ -3,6 +3,7 @@ title: Workflow automation
 description: Learn how to create and automate workflows in Microsoft Defender for Cloud.
 ms.date: 10/19/2025
 ms.topic: how-to
+ai-usage: ai-assisted
 ---
 
 # Automate remediation responses

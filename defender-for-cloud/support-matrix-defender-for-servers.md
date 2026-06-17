@@ -4,6 +4,7 @@ description: Review support requirements, network configurations, and feature su
 ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 ms.date: 05/10/2026
+ai-usage: ai-assisted
 ---
 
 # Defender for Servers support

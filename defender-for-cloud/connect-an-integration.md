@@ -5,6 +5,7 @@ ms.service: defender-for-cloud
 ms.topic: how-to
 ms.date: 05/24/2026
 #customer intent: As a cloud administrator, I want to connect partner integrations so that I can enhance security and gain insights.
+ai-usage: ai-assisted
 ---
 
 # Connect an integration

@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 09/25/2025
 ms.custom: sfi-image-nochange
 #customer intent: As a security professional, I want to understand how to use Copilot to summarize recommendations in Defender for Cloud so that I can improve my security posture.
+ai-usage: ai-assisted
 ---
 
 # Summarize recommendations with Microsoft Security Copilot

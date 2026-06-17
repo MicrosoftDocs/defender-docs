@@ -2,6 +2,7 @@
 ms.service: defender-for-cloud
 ms.topic: include
 ms.date: 11/02/2023
+ai-usage: ai-assisted
 ---
 
 | Aspect | Details |

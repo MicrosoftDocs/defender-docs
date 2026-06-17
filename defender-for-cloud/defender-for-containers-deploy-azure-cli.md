@@ -3,6 +3,7 @@ title: Deploy Defender sensor and Azure Policy to clusters using Azure CLI
 description: Learn how to deploy Microsoft Defender for Containers sensors and Azure Policy components to AKS, Amazon EKS, and Google Kubernetes Engine clusters by using Azure CLI.
 ms.topic: how-to
 ms.date: 11/27/2025
+ai-usage: ai-assisted
 ---
 
 # Deploy Defender sensor and Azure Policy to clusters using Azure CLI

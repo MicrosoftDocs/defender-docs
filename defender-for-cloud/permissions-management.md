@@ -4,6 +4,7 @@ description: Learn about CIEM in Microsoft Defender for Cloud and enhance the se
 ms.topic: concept-article
 ms.date: 07/15/2025
 #customer intent: As a user, I want to understand how to manage permissions effectively so that I can enhance the security of my cloud infrastructure.
+ai-usage: ai-assisted
 ---
 
 # Cloud infrastructure entitlement management (CIEM)

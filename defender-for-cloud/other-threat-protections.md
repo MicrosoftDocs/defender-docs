@@ -3,6 +3,7 @@ title: Other threat protections
 description: Learn about the threat protections available from Microsoft Defender for Cloud.
 ms.topic: overview
 ms.date: 11/13/2025
+ai-usage: ai-assisted
 ---
 
 # Other threat protections in Microsoft Defender for Cloud

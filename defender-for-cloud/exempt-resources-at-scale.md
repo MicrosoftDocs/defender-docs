@@ -4,6 +4,7 @@ description: Learn how to create exemptions for how policies are applied to reso
 ms.topic: how-to
 ms.date: 06/02/2026
 #customer intent: As a security administrator, I want to create exemptions at scale so I can manage recommendation scope consistently.
+ai-usage: ai-assisted
 ---
 
 # Exempt resources at scale

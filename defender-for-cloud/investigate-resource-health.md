@@ -4,6 +4,7 @@ description: 'Tutorial: Learn how to investigate the health of your resources us
 ms.topic: tutorial
 ms.date: 05/20/2025
 ms.custom: sfi-image-blocked
+ai-usage: ai-assisted
 ---
 
 # Tutorial: Investigate the health of your resources

@@ -3,6 +3,7 @@ title: Cloud Detection Response experience
 description: Learn about Microsoft's Defender for Cloud's Cloud Detection Response experience, including investigation enhancements and response capabilities.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Cloud Detection Response experience

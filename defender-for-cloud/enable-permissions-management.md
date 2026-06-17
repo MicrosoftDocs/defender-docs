@@ -4,6 +4,7 @@ description: Enable CIEM to enforce least privilege access and manage user entit
 ms.topic: how-to
 ms.date: 06/02/2026
 #customer intent: As a cloud administrator, I want to learn how to enable permissions (CIEM) in order to effectively manage user access and entitlements in my cloud infrastructure.
+ai-usage: ai-assisted
 ---
 
 # Enable cloud infrastructure entitlement management (CIEM)

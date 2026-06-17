@@ -4,6 +4,7 @@ description: Frequently asked questions about integrating and using Microsoft De
 ms.topic: faq
 ms.date: 04/28/2026
 ms.service: defender-for-cloud
+ai-usage: ai-assisted
 ---
 
 # FAQ for Defender portal

@@ -3,6 +3,7 @@ title: Agentless code scanning
 description: Learn about agentless code scanning and how to scan code without deploying agents in Defender for Cloud.
 ms.topic: reference
 ms.date: 07/22/2025
+ai-usage: ai-assisted
 ---
 
 # Agentless code scanning

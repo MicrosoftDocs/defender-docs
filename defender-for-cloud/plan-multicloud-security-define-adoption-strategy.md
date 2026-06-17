@@ -4,6 +4,7 @@ description: Define ownership models, business requirements, and lifecycle plann
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a cloud security architect, I want to define an adoption strategy so I can align ownership, governance, and rollout planning across multicloud environments.
+ai-usage: ai-assisted
 ---
 
 # Define an adoption strategy

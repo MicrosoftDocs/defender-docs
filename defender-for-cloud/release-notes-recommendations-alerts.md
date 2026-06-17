@@ -4,6 +4,7 @@ description: Get release notes for new and upcoming changes in recommendations, 
 ms.topic: overview
 ms.date: 06/15/2026
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
+ai-usage: ai-assisted
 ---
 
 # What's new in Defender for Cloud recommendations, alerts, and incidents
