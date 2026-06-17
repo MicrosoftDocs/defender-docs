@@ -5,8 +5,6 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: raynew
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -14,10 +12,10 @@ ms.collection:
 - sentinel-only
 ms.topic: how-to
 ms.date: 04/09/2025
-search.appverid: met150
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # Merge incidents manually in the Microsoft Defender portal (Preview)

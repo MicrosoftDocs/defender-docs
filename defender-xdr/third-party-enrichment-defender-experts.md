@@ -6,8 +6,6 @@ ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -16,7 +14,6 @@ ms.topic: article
 ms.custom: 
 - cx-ti
 - cx-dex
-search.appverid: met150
 ms.date: 08/01/2025
 ---
 
@@ -54,7 +51,7 @@ The Defender Experts team employs a threat-centric methodology that monitors pot
 4. **Response:** Once Defender Experts confirmed malicious access, they initiated a coordinated response across identity, network, and device domains. They revoked active tokens, isolated affected devices, and hardened mobile policy configurations to enforce Conditional Access more strictly.
 
 ## Ingesting third-party network signals for enrichment
-If you're a Microsoft Defender XDR customer, [reach out to your Security Delivery Expert](communicate-defender-experts-xdr.md#collaborating-with-your-security-delivery-expert-sdx) if you're interested in enabling the third-party network signal enrichment.
+If you're a Microsoft Defender XDR customer, [reach out to your Security Delivery Expert](communicate-defender-experts-xdr.md#collaborating-with-your-security-delivery-expert) if you're interested in enabling the third-party network signal enrichment.
 
 ### Prerequisites
 
@@ -79,7 +76,7 @@ This feature is currently supported in the following regions only:
 |**Europe**| | • North Europe<br>• West Europe|
 | | **UK**| • UK South |
 
-For more information, read [Geographical availability and data residency in Microsoft Sentinel](/azure/sentinel/geographical-availability-data-residency) or contact your service delivery manager.
+For more information, read [Geographical availability and data residency in Microsoft Sentinel](/azure/sentinel/geographical-availability-data-residency) or contact your Security Delivery Expert.
 
 ## Frequently asked questions
 

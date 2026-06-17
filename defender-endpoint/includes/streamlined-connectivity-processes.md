@@ -8,6 +8,8 @@ ms.service: defender-endpoint
 
 Select the tab for information about exclusions for that operating system.
 
+The processes in this section are exclusively for Microsoft Defender for Endpoint for Windows platforms, including down-level OS. This list doesn't account for any other Windows communications requirements.
+
 ### [**Windows**](#tab/Windows)
 
 The specific exclusions to configure depend on which version of Windows your endpoints or devices are running, and are listed in the following table.
@@ -43,6 +45,5 @@ For Linux servers, the following table lists processes to exclude in your non-Mi
 | `crashpad_handler`<br/>Collects crash dumps  | `/opt/microsoft/mdatp/sbin/` |
 | `mdatp` <br/>Command line utility| `/opt/microsoft/mdatp/sbin/Wdavdaemonclient`  |
 | `mde_netfilter` <br/>Packet filter for Network protection, also used for response capabilities | `/opt/microsoft/mde_netfilter/sbin` |
-|Allow these URLs from version 2512 and later. These URLs are used for internal configuration management.<br><br>- Default: `https://config.edge.skype.com/config/v1`<br>- DoD: `https://config.ecs.dod.teams.microsoft.us/config/v1`<br>- GCC High: `https://config.ecs.gov.teams.microsoft.us/config/v1`<br>- GCC Mod: `https://gccmod.ecs.office.com/config/v1` | N/A |
 
 ---

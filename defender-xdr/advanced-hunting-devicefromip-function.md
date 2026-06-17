@@ -1,16 +1,11 @@
 ---
 title: DeviceFromIP() function in advanced hunting for Microsoft Defender XDR
 description: Learn how to use the DeviceFromIP() function to get the devices that have been assigned a specific IP address
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

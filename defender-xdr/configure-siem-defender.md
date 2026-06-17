@@ -1,21 +1,20 @@
 ---
 title: Integrate your SIEM tools with Microsoft Defender XDR
 description: Learn how to use REST API and configure supported security information and events management tools to receive and pull detections.
-search.appverid: met150
 ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 04/25/2025
+ms.date: 06/16/2026
 appliesto:
 - Microsoft Defender for Endpoint   
 - Microsoft Defender XDR
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Integrate your SIEM tools with Microsoft Defender XDR
@@ -53,11 +52,14 @@ Microsoft Defender XDR currently supports the following SIEM solution integratio
 
 ## Ingesting incidents from the incidents REST API
 
+The following SIEM solutions support ingesting Microsoft Defender XDR incidents and their contained alerts from the incidents REST API.
+
 ### Incident schema
 
 For more information on Microsoft Defender XDR incident properties including contained alert and evidence entities metadata, see [Schema mapping](api-list-incidents.md#schema-mapping).
 
-### Splunk
+<a name="splunk"></a>
+### Ingest incidents into Splunk
 
 Using the new, fully supported Splunk Add-on for Microsoft Security that supports:
 
@@ -78,7 +80,8 @@ For more information on:
 
 - The Microsoft 365 App for Splunk, see the [Microsoft 365 App on Splunkbase](https://splunkbase.splunk.com/app/3786/)
 
-### Micro Focus ArcSight
+<a name="micro-focus-arcsight"></a>
+### Ingest incidents into Micro Focus ArcSight
 
 The new SmartConnector for Microsoft Defender XDR ingests incidents into ArcSight and maps these onto its Common Event
 Framework (CEF).
@@ -87,7 +90,8 @@ For more information on the new ArcSight SmartConnector for Microsoft Defender X
 
 The SmartConnector replaces the previous FlexConnector for Microsoft Defender for Endpoint that's now retired.
 
-### Elastic
+<a name="elastic"></a>
+### Ingest incidents into Elastic
 
 Elastic Security combines SIEM threat detection features with endpoint prevention and response capabilities in one solution.
 
@@ -97,21 +101,24 @@ For more information on the Elastic connector, see: [Microsoft M365 Defender | E
 
 ## Ingesting streaming event data via Event Hubs
 
-First you need to stream events from your Microsoft Entra tenant to your Event Hubs or Azure Storage Account. For more information, see [Streaming API](streaming-api.md).
+For streaming event data integrations, you must first stream events from your Microsoft Entra tenant to your Event Hubs or Azure Storage Account. For more information, see [Microsoft Defender XDR Streaming API](streaming-api.md).
 
-For more information on the event types supported by the Streaming API, see [Supported streaming event types](supported-event-types.md).
+For more information on the event types supported by the Streaming API, see [Microsoft Defender XDR supported streaming event types](supported-event-types.md).
 
-### Splunk
+<a name="splunk-1"></a>
+### Stream event data to Splunk
 
 Use the Splunk Add-on for Microsoft Cloud Services to ingest events from Azure Event Hubs.
 
 For more information on the Splunk Add-on for Microsoft Cloud Services, see the [Microsoft Cloud Services Add-on on Splunkbase](https://splunkbase.splunk.com/app/3110/).
 
-### IBM QRadar
+<a name="ibm-qradar"></a>
+### Stream event data to IBM QRadar
 
-Use the new IBM QRadar Microsoft Defender XDR Device Support Module (DSM) that calls the [Microsoft Defender XDR Streaming API](streaming-api.md) that allows ingesting streaming event data from Microsoft Defender XDR products via Event Hubs or Azure Storage Account. For more information on supported event types, see [Supported event types](supported-event-types.md).
+Use the new IBM QRadar Microsoft Defender XDR Device Support Module (DSM), which calls the [Microsoft Defender XDR Streaming API](streaming-api.md). The Streaming API allows you to ingest streaming event data from Microsoft Defender XDR products via Event Hubs or Azure Storage Account. For more information on supported event types, see [Supported event types](supported-event-types.md).
 
-### Elastic
+<a name="elastic-1"></a>
+### Stream event data to Elastic
 
 For more information on the Elastic streaming API integration, see [Microsoft M365 Defender | Elastic docs](https://docs.elastic.co/integrations/m365_defender).
 

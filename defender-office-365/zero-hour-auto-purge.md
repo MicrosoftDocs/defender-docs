@@ -1,18 +1,9 @@
 ---
 title: Zero-hour auto purge in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid:
-  - MOE150
-  - MED150
-  - MBS150
-  - MET150
 ms.assetid: 96deb75f-64e8-4c10-b570-84c99c674e15
 ms.collection:
   - m365-security
@@ -21,7 +12,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Zero-hour auto purge (ZAP) in all organizations with cloud mailboxes handles messages in mailboxes retroactively identified as spam, phishing, or malware.
 ms.service: defender-office-365
-ms.date: 01/15/2026
+ms.date: 06/01/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -31,7 +22,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In all organizations with cloud mailboxes, zero-hour auto purge (ZAP) retroactively detects and neutralizes malicious phishing, spam, or malware messages that were delivered to cloud mailboxes. ZAP doesn't work in on-premises mailboxes protected by Microsoft 365.
+In all organizations with cloud mailboxes, zero-hour auto purge (ZAP) retroactively detects and neutralizes malicious phishing, spam, or malware messages that were delivered to cloud mailboxes. ZAP doesn't work in on-premises mailboxes protected by Microsoft 365. ZAP also acts on messages in the Deleted Items folder, using the same per-verdict actions configured in your anti-spam, anti-phishing, and anti-malware policies.
 
 > [!NOTE]
 > ZAP is also able to retroactively detect existing malicious chat messages in Microsoft Teams.
@@ -208,7 +199,7 @@ For malware and high confidence phishing verdicts, there are few scenarios where
 - [Non-Microsoft phishing simulation URLs specified in the Advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-non-microsoft-phishing-simulations-in-the-advanced-delivery-policy) (high confidence phishing).
 - [SecOps mailboxes specified in the Advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy) (malware and high confidence phishing).
 - The MX record for your Microsoft 365 domain points to another service or device, and you use a mail flow rule to [bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl) (high confidence phishing).
-- [Admin submissions of false positives to Microsoft](submissions-admin.md#report-good-email-to-microsoft). By default, allow entries for domains and email addresses, files, and URLs exist for 30 days (malware and high confidence phishing).
+- [Admin submissions of false positives to Microsoft](submissions-admin.md#report-good-email-to-microsoft). By default, allow entries for domains and email addresses, files, and URLs exist for 45 days after the last used date (malware and high confidence phishing).
 
 It's important for you to carefully consider the implications of bypassing filtering, as it could compromise the security posture of your organization.
 
@@ -216,7 +207,7 @@ It's important for you to carefully consider the implications of bypassing filte
 
 There are no special licensing requirements for ZAP for malware, spam, and phishing. ZAP works on all mailboxes hosted in Exchange Online. ZAP doesn't work in on-premises mailboxes that are protected by Microsoft 365.
 
-ZAP for Teams protection requires Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 licenses.
+ZAP for Teams protection requires Microsoft Defender for Office 365 Plan 1 or Plan 2 licenses.
 
 ### Does ZAP work on messages in other folders in the mailbox (for example, messages moved by Inbox rules)?
 

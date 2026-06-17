@@ -2,7 +2,6 @@
 title: Schedule Microsoft Defender Antivirus protection updates
 description: Schedule the day, time, and interval for when protection updates should be downloaded
 ms.service: defender-endpoint
-search.appverid: met150
 ms.localizationpriority: medium
 ms.date: 10/20/2025
 ms.topic: how-to
@@ -10,7 +9,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: pahuijbr
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -108,7 +106,7 @@ See the following for more information and allowed parameters:
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)

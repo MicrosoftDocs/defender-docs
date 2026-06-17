@@ -1,15 +1,12 @@
 ---
 title: Microsoft Defender Core service configurations and experimentation 
 description: Understand the interaction between Microsoft Defender Core Service and the Experimentation and Configuration Service (ECS). 
-search.appverid: met150
 ms.service: defender-endpoint
 author: paulinbar
 ms.author: painbar
 ms.reviewer: yongrhee
-manager: bagol
 ms.localizationpriority: medium
 ms.date: 07/19/2024
-audience: ITPro
 ms.topic: troubleshooting
 ms.subservice: ngp
 ms.collection: 
@@ -53,7 +50,7 @@ Controlled feature rollout (CFR) is a procedure for slowly increasing the size o
 
 ## Experiments 
 
-Currently, Microsoft Defender Core service doesn't do any experimental testing. Development is carried out via the [Gradual Rollout process](/defender-endpoint/manage-gradual-rollout#microsoft-gradual-rollout-model). If this changes, an announcement will be posted in the [Message Center](/microsoft-365/admin/manage/message-center). 
+Currently, Microsoft Defender Core service doesn't do any experimental testing. Development is carried out via the [Gradual Rollout process](manage-gradual-rollout.md#microsoft-gradual-rollout-model). If this changes, an announcement will be posted in the [Message Center](/microsoft-365/admin/manage/message-center). 
 
 ## See also 
 

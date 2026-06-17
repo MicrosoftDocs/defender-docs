@@ -1,12 +1,10 @@
-﻿---
+---
 title: Add, update, or delete a scan definition
 description: Learn how to use the add, update, or delete scan definitions.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -14,7 +12,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/10/2025
 appliesto:
   - Microsoft Defender for Endpoint
@@ -127,7 +124,7 @@ Here's an example of the response.
   "target": "127.0.0.1",
   "orgId": "0335a792-18d2-424b-aeed-559567054570",
   "intervalInHours": 1,
-  "createdBy": "username@test.com",
+  "createdBy": "username@contoso.com",
   "targetType": "Ip",
   "scanAuthenticationParams": null,
   "scannerAgent": {
@@ -154,7 +151,7 @@ Here's an example of the response.
 Here's an example of a request that updates a scan.
 
 ```http
-PATCH  https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/289224fb-1686-472c-9751-5555960854ca
+PATCH  https://api.security.microsoft.com/api/DeviceAuthenticatedScanDefinitions/aaaabbbb-0000-cccc-1111-dddd2222eeee
 ```
 
 ```json
@@ -193,9 +190,9 @@ Here's an example of the response.
   "scanName": "Test Network scan",
   "isActive": true,
   "target": "127.0.0.1,127.0.0.2",
-  "orgId": "0335a792-18d2-424b-aeed-559567054570",
+  "orgId": "0000000-0000-0000-0000-000000000000",
   "intervalInHours": 1,
-  "createdBy": "username@test.com",
+  "createdBy": "username@contoso.com",
   "targetType": "Ip",
   "scanAuthenticationParams": null,
   "scannerAgent": {

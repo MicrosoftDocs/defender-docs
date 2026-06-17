@@ -1,21 +1,19 @@
-﻿---
+---
 title: Manage automation file uploads
 description: Enable content analysis and configure the file extension and email attachment extensions that will be submitted for analysis
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
-search.appverid: met150
 ms.date: 06/25/2024
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 
 ---
 # Manage automation file uploads

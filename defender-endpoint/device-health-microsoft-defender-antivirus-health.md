@@ -1,14 +1,11 @@
 ---
 title: Device health Microsoft Defender Antivirus health report
 description: Use the Microsoft Defender Antivirus report to track antivirus status and Microsoft Defender Antivirus engine, intelligence, and platform versions.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
 ms.date: 04/08/2025
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -18,6 +15,9 @@ ms.subservice: ngp
 ms.reviewer: mkaminska, yongrhee
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 
 ---
 # Device health, Microsoft Defender Antivirus health report
@@ -382,7 +382,7 @@ The following table lays out the possible up to date report values for **Securit
 >
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

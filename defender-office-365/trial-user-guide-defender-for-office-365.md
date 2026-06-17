@@ -1,22 +1,17 @@
 ---
 title: Microsoft Defender for Office 365 trial user guide
-f1.keywords:
-- NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: article
 ms.collection: 
 - m365-security
 - tier1
 ms.localizationpriority: high
 ms.service: defender-office-365
-search.appverid:
-- MOE150
-- MET150
 description: "Microsoft Defender for Office 365 solutions trial user guide."
-ms.custom: trial-user guide
+ms.custom:
+  - trial-user guide
+  - sfi-image-nochange
 ms.date: 02/24/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>

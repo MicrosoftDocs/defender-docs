@@ -1,22 +1,21 @@
-﻿---
+---
 title: Use network protection to help prevent macOS connections to bad sites
 description: Protect your network by preventing macOS users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 12/31/2025
-audience: ITPro
 author: paulinbar
 ms.author: painbar
 ms.reviewer: ericlaw
-manager: bagol
-ms.custom: asr
+ms.custom:
+  - asr
+  - sfi-image-nochange
 ms.subservice: macos
 ms.topic: overview
 ms.collection:
 - m365-security
 - tier2
 - mde-macos
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Business
 ---
@@ -25,7 +24,7 @@ appliesto:
 
 ## Prerequisites
 
-- Licensing: Microsoft Defender XDR for Endpoint Plan 1 or Microsoft Defender XDR for Endpoint Plan 2 (can be trial) or Microsoft Defender for Business.
+- Licensing: Microsoft Defender for Endpoint Plan 1 or Microsoft Defender for Endpoint Plan 2 (can be trial) or Microsoft Defender for Business.
 - Onboarded Machines: macOS version: Big Sur (11) or later, with product version 101.94.13 or later.
 - Non-Microsoft web browsers, such as Brave, Chrome, Opera, and Safari
 - Microsoft Edge for macOS browser
@@ -90,7 +89,7 @@ To roll out Network Protection for macOS, we recommend the following actions:
 
 <a name='microsoft-365-defender-for-endpoint'></a>
 
-### Microsoft Defender XDR for Endpoint
+### Microsoft Defender for Endpoint
 
 Install the most recent product version through Microsoft AutoUpdate. To open Microsoft AutoUpdate, run the following command from the Terminal:
 
@@ -137,7 +136,7 @@ After you create this configuration profile, assign it to the devices where you 
 ##### Configure the enforcement level
 
 > [!NOTE]
-> If you've already configured Microsoft Defender XDR for Endpoint on Mac using the instructions listed here, then update the plist file you previously deployed with the content listed in this section, and then redeploy it from JAMF.
+> If you've already configured Microsoft Defender for Endpoint on Mac using the instructions listed here, then update the plist file you previously deployed with the content listed in this section, and then redeploy it from JAMF.
 
 1. In **Computers** \> **Configuration Profiles**, select **Options** \> **Applications & Custom Settings**.
 
@@ -298,7 +297,7 @@ The following scenarios are supported.
 
 ### Web threat protection
 
-Web threat protection is part of web protection in Microsoft Defender XDR for Endpoint. It uses network protection to secure your devices against web threats. By integrating with Microsoft Edge for macOS and popular non-Microsoft browsers (such as Brave, Chrome, Firefox, Safari, Opera), web threat protection stops web threats without requiring a web proxy. For more information about browser support, see [Prerequisites](#prerequisites)  Web threat protection can protect devices while they're on-premises or away. Web threat protection stops access to the following types of sites:
+Web threat protection is part of web protection in Microsoft Defender for Endpoint. It uses network protection to secure your devices against web threats. By integrating with Microsoft Edge for macOS and popular non-Microsoft browsers (such as Brave, Chrome, Firefox, Safari, Opera), web threat protection stops web threats without requiring a web proxy. For more information about browser support, see [Prerequisites](#prerequisites)  Web threat protection can protect devices while they're on-premises or away. Web threat protection stops access to the following types of sites:
 
 - phishing sites
 - malware vectors
@@ -398,7 +397,7 @@ Upon facing an unexpected behavior, users' confusion might be reduced by providi
 ## See also
 
 - [Microsoft Defender XDR for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender XDR for Endpoint integration with Microsoft Microsoft Defender XDR for Cloud Apps](/defender-cloud-apps/mde-integration)
+- [Microsoft Defender XDR for Endpoint integration with Microsoft Defender for Cloud Apps](/defender-cloud-apps/mde-integration)
 - [Get to know the innovative features in Microsoft Edge](https://www.microsoft.com/edge/features)
 - [Protect your network](network-protection.md)
 - [Turn on network protection](enable-network-protection.md)

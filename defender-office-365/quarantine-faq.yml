@@ -6,7 +6,7 @@ metadata:
   author: chrisda
   ms.author: chrisda
   manager: bagol
-  ms.date: 10/22/2025
+  ms.date: 04/02/2026
   audience: ITPro
   ms.topic: faq
   ms.localizationpriority: medium
@@ -119,12 +119,12 @@ sections:
 
           When a message expires from quarantine, you can't recover it.
 
-          By default, messages from blocked senders are hidden from view in quarantine (quarantine is filtered by **Don't show blocked senders**). To see messages from all senders, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and then select **Show all senders**.
+          By default, messages from blocked senders are hidden from view in quarantine (quarantine is filtered by **Don't show blocked senders**). To see messages from all senders, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** and then select **Show all senders**.
 
           If the previous suggestion doesn't apply to you, open a support case within 7 days of the affected messages for a better chance of fixing the issue.
 
           > [!TIP]
-          > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+          > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides. For more information, see [Limits for junk email settings](configure-junk-email-settings-on-exo-mailboxes.md#limits-for-junk-email-settings).
 
       - question: |
           A message was released from quarantine, but the original recipient can't find it. How can I determine what happened to the message?
@@ -282,7 +282,7 @@ sections:
 
           Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**.
 
-          **Approve release** has been retired and is now included in :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Release**.
+          **Approve release** has been retired and is now included in :::image type="icon" source="media/defender-portal-icon-check-mark.png" border="false"::: **Release**.
 
       - question: |
           The **Block sender** button in quarantine notifications or on the **Quarantine** page doesn't seem to be working. What's going on?

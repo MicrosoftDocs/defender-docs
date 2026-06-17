@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: schmurky
-manager: deniseb
 audience: ITPro
 ms.topic: install-set-up-deploy
 ms.localizationpriority: medium

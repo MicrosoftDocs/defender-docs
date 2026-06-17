@@ -3,20 +3,15 @@ title: Get email notifications for Threat analytics updates
 ms.reviewer: 
 description: Set up email notifications to get notified of new Threat analytics reports in Microsoft Defender XDR.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security 
 - m365initiative-m365-defender 
 - tier1
 ms.topic: how-to
 ms.custom: seo-marvel-apr2020
-search.appverid: met150
 ms.date: 01/17/2025
 appliesto:
 - Microsoft Defender XDR

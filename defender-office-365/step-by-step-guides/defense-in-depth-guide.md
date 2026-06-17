@@ -6,7 +6,6 @@ f1.keywords:
   - NOCSH
 author: MSFTBen
 ms.author: benharri
-manager: bagol
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -15,7 +14,7 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/26/2026
+ms.date: 05/21/2026
 ---
 
 # Getting the best security value from Microsoft Defender for Office 365 when you have non-Microsoft email filtering
@@ -82,13 +81,13 @@ The following information details how to get the most out of your investment, br
 
 - Priority account protection offers enhanced visibility for accounts in tooling, along with additional protection when in an advanced defense in-depth configuration state.
 
-  **Read more here:** [Priority account protection](protect-your-c-suite-with-priority-account-protection.md)
+  **Read more here:** [Manage and monitor priority accounts](/microsoft-365/admin/security-and-compliance/priority-accounts)
 
 - Advanced Delivery should be configured to deliver any non-Microsoft phish simulations correctly, and if you have a Security Operations mailbox, consider defining it as a SecOps mailbox to ensure emails *don't* get removed from the mailbox due to threats.
 
   **Read more here:** [Advanced delivery](../advanced-delivery-policy-configure.md)
 
-- You can configure user reported settings to allow users to report good or bad messages to Microsoft, to a designated reporting mailbox (to integrate with current security workflows) or both using the built-in **Report** button in [supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or using [supported non-Microsoft solutions](../submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). Admins can use the **User reported** tab on the **Submissions** page to triage false positives and false negative user reported messages.
+- You can configure user reported settings to allow users to report good or bad messages to Microsoft, to a designated reporting mailbox (to integrate with current security workflows) or both using the built-in **Report** button in [supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or using [supported non-Microsoft solutions](../submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). Admins can use the **User reported** tab on the **Submissions** page to triage false positives and false negative user reported messages. In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails.
 
   > [!TIP]
   > In [attack simulation training in Defender for Office 365 Plan 2](../attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Configure custom exclusions for Microsoft Defender Antivirus
 description: You can exclude files (including files modified by specified processes) and folders from Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
@@ -8,7 +8,6 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: ksarens
-manager: bagol
 ms.subservice: ngp
 ms.audience: ITPro
 ms.topic: how-to
@@ -16,7 +15,6 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -59,7 +57,7 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
     - Malware protection.
     - [File IOCs](indicator-file.md).
     - [Certificate IOCs](indicator-certificates.md).
-  - Process exclusions on any platform prevent [network protection](network-protection.md) and [attack surface reduction rules](attack-surface-reduction.md) from inspecting traffic or enforcing rules for excluded processes.
+  - Process exclusions on any platform prevent [network protection](network-protection.md) and [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) from inspecting traffic or enforcing rules for excluded processes.
 
 - Periodically review and audit exclusions. Recheck and re-enforce mitigations as part of your review process. To avoid confusion, your security team should preserve context around why a certain exclusion was required.
 

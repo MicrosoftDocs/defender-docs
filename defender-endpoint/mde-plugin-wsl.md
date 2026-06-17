@@ -1,9 +1,8 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 description: Learn how to set up and use the Defender for Endpoint plug-in for Windows Subsystem for Linux.
 author: paulinbar
 ms.author: painbar
-manager: bagol
 ms.reviewer: gokulgiju, priyankagill, kvitta, pahuijbr
 ms.service: defender-endpoint
 ms.subservice: onboard
@@ -13,10 +12,9 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom:
-- partner-contribution
-audience: ITPro
+  - partner-contribution
+  - sfi-image-nochange
 ms.date: 10/27/2025
-search.appverid: MET150
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
@@ -92,7 +90,7 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
    1. Open a command prompt/terminal and run `wsl`.
 
-   You can [deploy the package using Microsoft Intune](/mem/intune/apps/lob-apps-windows).
+   You can [deploy the package using Microsoft Intune](/intune/intune-service/apps/lob-apps-windows).
 
 > [!NOTE]
 > If `WslService` is running, it stops during the installation process. You do not need to onboard the subsystem separately. Instead, the plug-in automatically onboards to the tenant the Windows host is onboarded to.

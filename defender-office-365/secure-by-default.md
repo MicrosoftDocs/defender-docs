@@ -1,17 +1,10 @@
 ---
 title: Secure by default in Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 02/13/2026
-audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - tier2

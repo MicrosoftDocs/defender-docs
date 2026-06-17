@@ -4,6 +4,7 @@ description: Learn how about connecting your Google Cloud Platform app to Defend
 ms.date: 11/25/2025
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ms.custom: sfi-image-nochange
 ---
 
 # How Defender for Cloud Apps helps protect your Google Cloud Platform (GCP) environment
@@ -31,8 +32,8 @@ You can use the following built-in policy templates to detect and notify you abo
 
 | Type | Name |
 | ---- | ---- |
-| Built-in anomaly detection policy | [Activity from anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses)<br />[Activity from infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country)<br />[Activity from suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses)<br />[Impossible travel](anomaly-detection-policy.md#impossible-travel)<br />[Activity performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP)<br />[Multiple failed login attempts](anomaly-detection-policy.md#multiple-failed-login-attempts)<br />[Unusual administrative activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Multiple delete VM activities](anomaly-detection-policy.md#multiple-delete-vm-activities)<br />[Unusual multiple VM creation activities](anomaly-detection-policy.md#unusual-activities-by-user) (preview) |
-| Activity policy template | Changes to compute engine resources<br />Changes to StackDriver configuration<br />Changes to storage resources<br />Changes to Virtual Private Network<br />Logon from a risky IP address |
+| Built-in anomaly detection policy |[Activity from anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses)<br />[Activity from infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country)<br />[Activity from suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses)<br />[Impossible travel](anomaly-detection-policy.md#impossible-travel)<br />[Activity performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP)|
+| Activity policy template |Changes to compute engine resources<br />Changes to StackDriver configuration<br />Changes to storage resources<br />Changes to Virtual Private Network<br />Logon from a risky IP address |
 
 For more information about creating policies, see [Create a policy](control-cloud-apps-with-policies.md#create-a-policy).
 

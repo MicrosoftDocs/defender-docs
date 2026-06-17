@@ -1,14 +1,11 @@
-﻿---
+---
 title: Microsoft Defender for Endpoint Cloud-delivered protection demonstration
 description: See how Cloud-delivered protection can automatically detect and delete malicious files. 
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2

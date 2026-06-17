@@ -5,7 +5,6 @@ metadata:
   search.appverid: MET150
   author: chrisda
   ms.author: chrisda
-  manager: bagol
   audience: Admin
   ms.topic: faq
   ms.service: defender-business
@@ -170,7 +169,7 @@ sections:
         answer: |
           No.
 
-          Microsoft Defender for Business doesn't support mixed licensing. An organization with Defender for Business (included in Microsoft 365 Business Premium) and with Defender for Endpoint Plan 2 (included in Microsoft 365 E5 Security) defaults to the Defender for Business experience.
+          Microsoft Defender for Business doesn't support mixed licensing. An organization with Defender for Business (included in Microsoft 365 Business Premium) and with Defender for Endpoint Plan 2 (included in Microsoft 365 E5 Security) defaults to the Defender for Business experience. Separate Licensing is required for GCC, GCC High, DoD. For more information, see the [full government plans comparison table](https://www.microsoft.com/en-us/microsoft-365/enterprise/government-plans-and-pricing?msockid=39a1c296c261646b379ad7dfc3db65ec#comparison-pdf).
 
           For example, you have 80 users licensed for Defender for Business as part of a Microsoft 365 Business Premium, and you add Microsoft 365 E5 Security for 30 of those users. The experience for all users defaults to Defender for Business.
 

@@ -1,14 +1,8 @@
 ---
 title: SecOps guide for email authentication in Microsoft 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
-search.appverid:
-  - MET150
 ms.assetid:
 ms.collection:
   - m365-security

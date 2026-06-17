@@ -1,19 +1,14 @@
 ---
 title: Configure the advanced delivery policy for non-Microsoft phishing simulations and email delivery to SecOps mailboxes
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier3
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to use the advanced delivery policy in Microsoft 365 to identify messages that shouldn't be filtered in specific supported scenarios. For example, non-Microsoft phishing simulations and messages delivered to security operations (SecOps) mailboxes.
 ms.service: defender-office-365
 ms.date: 02/23/2026
@@ -77,7 +72,7 @@ Messages identified by the advanced delivery policy aren't security threats, so 
 
 2. On the **SecOps mailbox** tab, select the **Add** button in the **No SecOps mailboxes configured** area of the page.
 
-   If there are already existing entries on the **SecOps mailbox** tab, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** (the **Add** button isn't available).
+   If there are already existing entries on the **SecOps mailbox** tab, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** (the **Add** button isn't available).
 
 3. In the **Add SecOps mailboxes** flyout that opens, enter an existing Exchange Online mailbox that you want to designate as SecOps mailbox by doing either of the following steps:
    - Click in the box, let the list of mailboxes resolve, and then select the mailbox.
@@ -85,7 +80,7 @@ Messages identified by the advanced delivery policy aren't security threats, so 
 
      Repeat this step as many times as necessary. Distribution groups aren't allowed.
 
-     To remove an existing value, select remove :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+     To remove an existing value, select remove :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
 4. When you're finished in the **Add SecOps mailboxes** flyout, select **Add**.
 
@@ -95,7 +90,7 @@ Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configur
 
 - The **Display name** column contains display name of the mailboxes.
 - The **Email** column contains the email address for each entry.
-- To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+- To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
 ## Use the Microsoft Defender portal to modify or remove SecOps mailboxes in the advanced delivery policy
 
@@ -103,11 +98,11 @@ Back on the **SecOps mailbox** tab, the SecOps mailbox entries that you configur
 
    On the **Advanced delivery** page, verify that the **SecOps mailbox** tab is selected.
 
-2. On the **SecOps mailbox** tab, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+2. On the **SecOps mailbox** tab, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 
 3. In **Edit SecOps mailboxes** flyout that opens, add or remove mailboxes as described in Step 3 in the [Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy](#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy) section.
 
-   To remove all mailboxes, select remove :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to each value until there are no more mailboxes selected.
+   To remove all mailboxes, select remove :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to each value until there are no more mailboxes selected.
 
 4. When you're finished in the **Edit SecOps mailboxes** flyout, select **Save**.
 
@@ -132,7 +127,7 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 > [!NOTE]
 >
 > - Currently, IPv6 addresses are supported only in PowerShell. To use PowerShell to configure non-Microsoft phishing simulations in the advanced delivery policy, see the [Use PowerShell to configure non-Microsoft phishing simulations](#use-powershell-to-configure-non-microsoft-phishing-simulations) section later in this article.
->   
+>
 > - Enhanced Filtering for Connectors doesn't work for non-Microsoft phishing simulations in the following in-and-out email routing scenario:
 >
 >   Internet \> Microsoft 365 \> on-premises environment or non-Microsoft security service \> back to Microsoft 365
@@ -156,7 +151,7 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 
 2. On the **Phishing simulation** tab, select the **Add** button in the **No third party phishing simulations configured** area of the page.
 
-   If there are already existing entries on the **Phishing simulation** tab, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** (the **Add** button isn't available).
+   If there are already existing entries on the **Phishing simulation** tab, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** (the **Add** button isn't available).
 
 3. In the **Add third party phishing simulations** flyout that opens, configure the following settings:
 
@@ -173,7 +168,7 @@ If your MX record doesn't point to Microsoft 365, the IP address in the `Authent
 
      Add URL entries by expanding this setting, clicking in the box, entering a value, and then pressing the ENTER key or selecting the value displayed below the box. You can add up to 30 entries. For the URL syntax, see [URL syntax for the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md#url-syntax-for-the-tenant-allowblock-list).
 
-   To remove an existing domain, IP, or URL value, select remove :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+   To remove an existing domain, IP, or URL value, select remove :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
    Consider the following example:
 
@@ -209,7 +204,7 @@ Back on the **Phishing simulation** tab, the non-Microsoft phishing simulation e
 - The **Value** column contains the domain, IP address, or URL entry.
 - The **Type** column contains the value **Sending IP**, **Domain**, or **Allowed simulation URL** for each entry.
 - The **Date** column shows when the entry was created.
-- To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+- To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
 <a name='use-the-microsoft-defender-portal-to-modify-or-remove-third-party-phishing-simulations-in-the-advanced-delivery-policy'></a>
 
@@ -219,11 +214,11 @@ Back on the **Phishing simulation** tab, the non-Microsoft phishing simulation e
 
    On the **Advanced delivery** page, select the **Phishing simulation** tab.
 
-2. On the **Phishing simulation** tab, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+2. On the **Phishing simulation** tab, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 
 3. In the **Edit non-Microsoft phishing simulation** flyout that opens, add or remove entries for **Domain**, **Sending IP**, and **Simulation URLs** as described in Step 3 in the [Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy](#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy) section.
 
-   To remove all entries, select remove :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to each value until there are no more domains, IPs, or URLs selected.
+   To remove all entries, select remove :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to each value until there are no more domains, IPs, or URLs selected.
 
 4. When you're finished in the **Edit non-Microsoft phishing simulation** flyout, select **Save**.
 

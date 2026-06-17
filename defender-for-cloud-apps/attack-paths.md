@@ -3,6 +3,7 @@ title: Investigate OAuth application attack paths in Defender for Cloud Apps
 description: Learn how to identify, analyze, and mitigate attack paths involving OAuth applications using Microsoft Defender for Cloud Apps and Security Exposure Management.
 ms.topic: how-to
 ms.date: 03/23/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)
@@ -31,7 +32,6 @@ Alternatively, you can use one of the following **Entra ID roles**:
 
 |Permission |Actions |
 |---------|---------|
-|**Global Admin**    | (read and write permissions)        |
 |**Security Admin**    | (read and write permissions)        |
 |**Security Operator**   | (read and limited write permissions)        |
 |**Global Reader**    | (read permissions)        |

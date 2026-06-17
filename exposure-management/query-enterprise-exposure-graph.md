@@ -1,11 +1,7 @@
 ---
 title: Query the enterprise exposure graph in Microsoft Security Exposure Management
 description: Learn how to query the enterprise exposure graph to understand security risk in Microsoft Security Exposure Management.
-author: dlanger
-ms.author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 07/30/2025
 ---
 

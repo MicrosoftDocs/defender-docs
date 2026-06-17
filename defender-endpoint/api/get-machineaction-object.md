@@ -1,12 +1,10 @@
-﻿---
+---
 title: Get MachineAction object API
 description: Learn how to use the Get MachineAction API to retrieve a specific Machine Action by its ID in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -14,7 +12,6 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 ms.date: 11/13/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -71,7 +68,7 @@ If successful, this method returns 200, Ok response code with a [Machine Action]
 Here's an example of the request.
 
 ```http
-GET https://api.security.microsoft.com/api/machineactions/2e9da30d-27f6-4208-81f2-9cd3d67893ba
+GET https://api.security.microsoft.com/api/machineactions/aaaabbbb-0000-cccc-1111-dddd2222eeee
 ```
 
 ### Response example

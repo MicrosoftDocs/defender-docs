@@ -1,25 +1,21 @@
-﻿---
+---
 title: Troubleshoot device discovery and authenticated network scans in Microsoft Defender for Endpoint
 description: Learn how to troubleshoot device discovery and authenticated network scans in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.subservice: onboard
-f1.keywords:
-- NOCSH
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-search.appverid: met150
-ms.date: 01/12/2026
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Troubleshoot device discovery and authenticated network scans in Microsoft Defender for Endpoint
 
@@ -49,11 +45,11 @@ The scan results should be updated a few hours after the initial scan that took 
 
 If devices are still not shown, verify that the service `MdatpNetworkScanService` is running on your devices being scanned, on which you installed the scanner, and perform a "Run scan" in the relevant network device authenticated scan configuration.
 
-If you still don't get results after 5 minutes, restart the service.
+If you still don't get results after 5 minutes, restart the `MdatpNetworkScanService` service.
 
 ## Devices last seen time is longer than 24 hours
 
-Validate that the scanner is running properly. Then go to the scan definition and select "Run test." Check what error messages are returning from the relevant IP addresses.
+Validate that the scanner is running properly. Then go to the scan definition (the saved settings for the scan) and select "Run test." Check what error messages are returning from the relevant IP addresses.
 
 ## My scanner is configured but scans aren't running
 
@@ -65,13 +61,17 @@ Computer`\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\FipsAlgorithmP
 
 FIPS compliant algorithms are only used in relation to departments and agencies of the United States federal government.
 
-## Required Defender Vulnerability Management user permission
+<a name="required-defender-vulnerability-management-user-permission"></a>
+## Registration error: insufficient permissions to add a new agent
 
 Registration finished with an error: "It looks like you don't have sufficient permissions for adding a new agent. The required permission is 'Manage security settings in Defender'."
 
 Press any key to exit.
 
-Ask your system administrator to assign you the required permissions. Alternately, ask another relevant member to help you with the sign-in process by providing them with the sign-in code and link.
+To resolve this issue:
+
+- Ask your system administrator to assign you the required permissions.
+- Alternately, ask another relevant member to help you with the sign-in process by providing them with the sign-in code and link.
 
 ## Registration process fails using provided link in the command line in registration process
 
@@ -83,4 +83,4 @@ Change command-line settings on your device to allow copying and change text siz
 
 ## Unmanaged device health state is always "Active".
 
-Temporarily, unmanaged device health state is "Active" during the standard retention period of the device inventory, regardless of their actual state.
+Temporarily, unmanaged device health state is "Active" during the standard retention period of the device inventory, regardless of the devices' actual state.

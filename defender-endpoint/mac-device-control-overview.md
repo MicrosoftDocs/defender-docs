@@ -5,16 +5,13 @@ ms.service: defender-endpoint
 author: limwainstein
 ms.author: lwainstein
 ms.reviewer: joshbregman
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: install-set-up-deploy
 ms.subservice: macos
-search.appverid: met150
 ms.date: 04/16/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -27,7 +24,7 @@ appliesto:
 
 ## Requirements
 
-Device control for macOS is available on the versions listed in the [System requirements](/defender-endpoint/microsoft-defender-endpoint-mac) section of Defender for Endpoint on macOS documentation.
+Device control for macOS is available on the versions listed in the [System requirements](microsoft-defender-endpoint-mac.md) section of Defender for Endpoint on macOS documentation.
 
 ## Overview
 

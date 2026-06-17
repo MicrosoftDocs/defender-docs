@@ -5,10 +5,9 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection:
   - m365-security
@@ -190,7 +189,7 @@ Distribution groups can be created and defined directly in Exchange Online or sy
 
    :::image type="content" source="./media/pilot-deploy-defender-office-365/1_mdo-eval-pilot.png" alt-text=" Screenshot of the Groups menu item." lightbox="./media/pilot-deploy-defender-office-365/1_mdo-eval-pilot.png":::
 
-3. On the **Groups** page, select ![Add a group icon.](/defender/media/m365-cc-sc-add-internal-icon.png) **Add a group**.
+3. On the **Groups** page, select ![Add a group icon.](media/defender-portal-icon-add-internal.png) **Add a group**.
 
    :::image type="content" source="./media/pilot-deploy-defender-office-365/2_mdo-eval-pilot-add-group.png" alt-text="Screenshot of the Add a group option." lightbox="./media/pilot-deploy-defender-office-365/2_mdo-eval-pilot-add-group.png":::
 

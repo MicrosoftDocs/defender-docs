@@ -1,4 +1,4 @@
-﻿---
+---
 title: Advanced Hunting with PowerShell API Guide
 ms.reviewer:
 description: Use these code samples, querying several Microsoft Defender for Endpoint APIs.
@@ -6,8 +6,6 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
@@ -16,7 +14,6 @@ ms.topic: reference
 ms.date: 03/21/2025
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

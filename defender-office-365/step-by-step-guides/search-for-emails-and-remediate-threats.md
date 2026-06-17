@@ -2,19 +2,14 @@
 title: Search for emails and remediate threats using Threat Explorer in Microsoft Defender XDR
 description: The steps to do manual remediation in Threat Explorer in Microsoft Defender XDR, including how to get the best performance and scenarios that call for remediation.
 ms.service: defender-office-365
-f1.keywords: 
- - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 01/31/2023
 ---
 
@@ -29,7 +24,7 @@ Email remediation is an already existing feature that helps admins act on emails
 
 ## Create and track the remediation
 
-1. **Select a threat to remediate** in [Threat Explorer](https://security.microsoft.com/threatexplorer) and select :::image type="icon" source="../media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**, which offers you options such as *Soft Delete* or *Hard Delete*.
+1. **Select a threat to remediate** in [Threat Explorer](https://security.microsoft.com/threatexplorer) and select :::image type="icon" source="../media/defender-portal-icon-take-actions.png" border="false"::: **Take action**, which offers you options such as *Soft Delete* or *Hard Delete*.
 1. The side pane opens and asks for details, like a name for the remediation, severity, and description. Once the information is reviewed, select **Submit**.
 1. As soon as the admin approves this action, they see the Approval ID and a link to the Microsoft Defender XDR Action Center [here](https://security.microsoft.com/action-center/history). This page is where **actions can be tracked**.
     1. **Admin action alert** - A system alert shows up in the alert queue with the name 'Administrative action submitted by an Administrator'. This indicates that an admin took the action of remediating an entity. It gives details such as the name of the admin who took the action, and the investigation link and time. This makes admins aware of each important action, like remediation, taken on entities.

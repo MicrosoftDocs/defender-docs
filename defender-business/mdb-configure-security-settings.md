@@ -1,17 +1,13 @@
 ---
 title: Set up, review, and edit your security policies and settings in Microsoft Defender for Business
 description: View and edit security policies and settings in Defender for Business
-search.appverid: MET150
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 08/27/2025
 ms.reviewer: efratka
-f1.keywords: NOCSH
 ms.collection:
  - SMB
  - m365-security

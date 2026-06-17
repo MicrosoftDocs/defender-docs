@@ -2,13 +2,9 @@
 title: Incidents and alerts in the Microsoft Defender portal
 description: An introduction to incidents and alerts, and the differences between them, in the Microsoft Defender portal.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -16,9 +12,6 @@ ms.collection:
   - sentinel-only
 ms.custom: admindeeplinkDEFENDER
 ms.topic: concept-article
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 12/22/2025
 appliesto: 
 - Microsoft Defender XDR

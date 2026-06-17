@@ -1,16 +1,11 @@
 ---
 title: Extend advanced hunting coverage with the right settings
 description: Check auditing settings on Windows devices and other settings to help ensure that you get the most comprehensive data in advanced hunting
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2

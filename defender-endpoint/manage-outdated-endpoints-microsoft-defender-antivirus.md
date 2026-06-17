@@ -1,4 +1,4 @@
-﻿---
+---
 title: Apply Microsoft Defender Antivirus protection updates to out of date endpoints
 description: Define when and how updates should be applied for out of date endpoints in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
@@ -8,12 +8,10 @@ author: chrisda
 ms.author: chrisda
 ms.custom: nextgen
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier3
-search.appverid: met150
 ms.date: 10/20/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -229,7 +227,7 @@ See the following article for more information and allowed parameters:
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)

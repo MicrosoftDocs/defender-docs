@@ -1,14 +1,12 @@
-﻿---
+---
 title: Device control policies in Microsoft Defender for Endpoint
 description: Learn about Device control policies in Defender for Endpoint
 author: limwainstein
 ms.author: lwainstein
-manager: bagol
 ms.date: 10/23/2025
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -16,8 +14,6 @@ ms.collection:
 ms.custom:
 - partner-contribution
 ms.reviewer: joshbregman, ksarens
-search.appverid: MET150
-f1.keywords: NOCSH
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2

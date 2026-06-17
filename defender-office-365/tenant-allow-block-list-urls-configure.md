@@ -1,15 +1,9 @@
 ---
 title: Allow or block URLs using the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150manage-tenant-allows.md
 ms.collection:
   - m365-security
   - tier1
@@ -20,6 +14,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Allow or block URLs using the Tenant Allow/Block List
@@ -108,7 +103,7 @@ To create allow entries for URLs, use either of the following methods:
 
 2. On the **Tenant Allow/Block List** page, select the **URLs** tab.
 
-3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Allow**.
+3. On the **URLs** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**, and then select **Allow**.
 
 4. In the **Allow URLs** flyout that opens, configure the following settings:
 
@@ -158,7 +153,7 @@ To create block entries for URLs, use either of the following methods:
 
 2. On the **Tenant Allow/Block List** page, select the **URLs** tab.
 
-3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
+3. On the **URLs** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**, and then select **Block**.
 
 4. In the **Block URLs** flyout that opens, configure the following settings:
 
@@ -213,7 +208,7 @@ On the **URLs** tab, you can sort the entries by clicking on an available column
 - **Remove on**: The expiration date.
 - **Notes**
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Action**: The available values are **Allow** and **Block**.
 - **Never expire**: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: or :::image type="icon" source="media/scc-toggle-off.png" border="false":::
@@ -222,11 +217,11 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Remove on**: Select **From** and **To** dates.
 - **Modified by**: Provide an incomplete or complete email address to search by it.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
+To group the entries, select :::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
 
 ### Use PowerShell to view entries for URLs in the Tenant Allow/Block List
 
@@ -258,7 +253,7 @@ In existing URL entries, you can change the expiration date and note.
 
 2. Select the **URLs** tab
 
-3. On the **URLs** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. On the **URLs** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 
 4. In the **Edit URL** flyout that opens, the following settings are available:
    - **Block entries**:
@@ -281,7 +276,7 @@ In existing URL entries, you can change the expiration date and note.
    When you're finished in the **Edit URL** flyout, select **Save**.
 
 > [!TIP]
-> In the details flyout of an entry on the **URLs** tab, use :::image type="icon" source="media/m365-cc-sc-view-submission-icon.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
+> In the details flyout of an entry on the **URLs** tab, use :::image type="icon" source="media/defender-portal-icon-view-submission.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
 
 ### Use PowerShell to modify entries for URLs in the Tenant Allow/Block List
 
@@ -307,8 +302,8 @@ For detailed syntax and parameter information, see [Set-TenantAllowBlockListItem
 
 3. On the **URLs** tab, do one of the following steps:
 
-   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout.
+   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
+   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** at the top of the flyout.
 
      > [!TIP]
      > To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
@@ -411,8 +406,8 @@ Valid URL entries and their results are described in the following subsections.
   - `contoso.com/a`
   - `abc.xyz.contoso.com/a/b/c`
   - `payroll.contoso.com`
-  - `test.com/contoso.com`
-  - `test.com/q=contoso.com`
+  - `fabrikam.com.com/contoso.com`
+  - `fabirkam.com/q=contoso.com`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
@@ -421,8 +416,8 @@ Valid URL entries and their results are described in the following subsections.
   - `contoso.com/a`
   - `abc.xyz.contoso.com/a/b/c`
   - `payroll.contoso.com`
-  - `test.com/contoso.com`
-  - `test.com/q=contoso.com`
+  - `fabrikam.com/contoso.com`
+  - `fabrikam.com/q=contoso.com`
   - `www.contoso.com`
   - `www.contoso.com/q=a@contoso.com`
 
@@ -442,7 +437,7 @@ Valid URL entries and their results are described in the following subsections.
 - **Allow not matched** and **Block not matched**:
   - `123contoso.com`
   - `contoso.com`
-  - `test.com/contoso.com`
+  - `fabrikam.com/contoso.com`
   - `www.contoso.com/abc`
 
 #### Scenario: Right wildcard at top of path
@@ -523,12 +518,12 @@ Valid URL entries and their results are described in the following subsections.
   - `xyz.abc.contoso.com`
   - `abc.xyz.contoso.com/a/b/c`
   - `contoso.com/b/a/c`
-  - `test.com/contoso.com`
+  - `fabrikam.com/contoso.com`
 
 - **Allow not matched** and **Block not matched**:
   - `123contoso.com`
   - `contoso.org`
-  - `test.com/q=contoso.com`
+  - `fabrikam.com/q=contoso.com`
 
 #### Scenario: IP address
 

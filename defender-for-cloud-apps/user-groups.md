@@ -31,7 +31,7 @@ When you connect apps using API connectors, Microsoft Defender for Cloud Apps en
 
 ## Import user groups
 
-1. In Microsoft Defender XDR, select **Settings > Cloud Apps > System > User groups > + Import user group**.
+1. In the Defender portal, select **Settings > Cloud Apps > System > User groups > + Import user group**.
 
 1. In the **Import user group** pane, select the app from which to import the user group. The apps shown depend on which connectors you've deployed.
 

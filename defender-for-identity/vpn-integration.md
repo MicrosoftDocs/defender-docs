@@ -5,6 +5,7 @@ ms.date: 07/10/2025
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity user, I want to learn how to collect accounting information from VPN solutions. 
 ms.reviewer: martin77s
+ms.custom: sfi-image-nochange
 ---
 
 # Defender for Identity VPN integration in Microsoft Defender XDR

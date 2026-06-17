@@ -1,11 +1,10 @@
-﻿---
+---
 title: Configure and validate Microsoft Defender Antivirus network connections
 description: Configure and test your connection to the Microsoft Defender Antivirus cloud protection service.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 author: paulinbar
-manager: bagol
 ms.author: painbar
 ms.topic: how-to
 ms.custom: nextgen
@@ -15,18 +14,16 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender Antivirus
-
 ---
-# Configure and validate Microsoft Defender Antivirus network connections
 
+# Configure and validate Microsoft Defender Antivirus network connections
 
 > [!IMPORTANT]
 > This article contains information about configuring network connections only for Microsoft Defender Antivirus, when used without Microsoft Defender for Endpoint. If you are using **Microsoft Defender for Endpoint** (which includes Microsoft Defender Antivirus), see [Configure device proxy and Internet connectivity settings for Defender for Endpoint](configure-proxy-internet.md).
 
-To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations much be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
+To ensure Microsoft Defender Antivirus cloud-delivered protection works properly, your security team must configure your network to allow connections between your endpoints and certain Microsoft servers. This article lists which destinations must be accessible. It also provides instructions for validating connections. Configuring connectivity properly ensures you receive the best value from Microsoft Defender Antivirus cloud-delivered protection services.
 
 ## Prerequisites
 
@@ -36,7 +33,7 @@ To ensure Microsoft Defender Antivirus cloud-delivered protection works properly
 
 ## Allow connections to the Microsoft Defender Antivirus cloud service
 
-The Microsoft Defender Antivirus cloud service provides fast, strong protection for your endpoints. While it's optional to enable and use the cloud-delivered protection services provided by Microsoft Defender Antivirus, it's highly recommended because it provides important and timely protection against emerging threats on your endpoints and network. For more information, see [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md), which describes how to enable the service by using Intune, Microsoft Endpoint Configuration Manager, Group Policy, PowerShell cmdlets, or individual clients in the Windows Security app.
+The Microsoft Defender Antivirus cloud service provides fast, strong protection for your endpoints. While it's optional to enable and use the cloud-delivered protection services provided by Microsoft Defender Antivirus, it's highly recommended because it provides important and timely protection against emerging threats on your endpoints and network. For more information, see [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md), which describes how to enable the service by using Intune, Microsoft Configuration Manager, Group Policy, PowerShell cmdlets, or individual clients in the Windows Security app.
 
 After you've enabled the service, you need to configure your network or firewall to allow connections between network and your endpoints. Computers must have access to the internet and reach the Microsoft cloud services for proper operation.
 
@@ -62,26 +59,32 @@ Make sure that there are no firewall or network filtering rules denying access t
 
 After allowing the URLs listed, test whether you're connected to the Microsoft Defender Antivirus cloud service. Test the URLs are correctly reporting and receiving information to ensure you're fully protected.
 
-### Use the cmdline tool to validate cloud-delivered protection
+<a name="use-the-cmdline-tool-to-validate-cloud-delivered-protection"></a>
 
-Use the following argument with the Microsoft Defender Antivirus command-line utility (`mpcmdrun.exe`) to verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
+### Use the MpCmdRun command-line tool to validate cloud-delivered protection
 
-```console
-"%ProgramFiles%\Windows Defender\MpCmdRun.exe" -ValidateMapsConnection
+Verify that your network can communicate with the Microsoft Defender Antivirus cloud service:
+
+In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
+
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
+
+MpCmdRun.exe -ValidateMapsConnection
 ```
 
-> [!NOTE]
-> Open Command Prompt as an administrator. Right-click the item in the **Start** menu, click **Run as administrator** and click **Yes** at the permissions prompt. This command will only work on Windows 10, version 1703 or higher, or Windows 11.
-
-For more information, see [Manage Microsoft Defender Antivirus with the mpcmdrun.exe commandline tool](command-line-arguments-microsoft-defender-antivirus.md).
+For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
 #### Error messages
 
-Here are some error messages you might see: 
+Here are some error messages you might see:
 
 ```console
-Start Time: <Day_of_the_week> MM DD YYYY HH:MM:SS 
-MpEnsureProcessMitigationPolicy: hr = 0x1 
+Start Time: <Day_of_the_week> MM DD YYYY HH:MM:SS
+MpEnsureProcessMitigationPolicy: hr = 0x1
 ValidateMapsConnection
 ```
 
@@ -106,12 +109,23 @@ The root cause of these error messages is that the device doesn't have its syste
 
 #### Solutions
 
-The following table lists solutions:
+- **Preferred solution**: Configure the system-wide WinHttp proxy that allows the CRL check.
 
-|Solution|Description|
-|:---|:---|
-| Solution (Preferred) | Configure the system-wide WinHttp proxy that allows the CRL check.|
-| Work-around solution (Alternative) <br/> *This is not a best practice since you're no longer checking for revoked certificates or certificate pinning.*| Disable CRL check only for SPYNET. <br/> Configuring this registry SSLOption disables CRL check only for SPYNET reporting. It won't impact other services.<br/><br/> Go to **HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet**, and then set `SSLOptions (dword)` to `2` (hex). <br/>For reference, here are possible values for the DWORD: <br/> - `0 – disable pinning and revocation checks` <br/> - `1 – disable pinning` <br/>  - `2 – disable revocation checks only` <br/> - `3 – enable revocation checks and pinning (default)` |
+- **Alternate solution**: Configuring the following `SSLOption` registry key and value to Disable the CRL check for SpyNet only. This registry key doesn't affect other services. This solution isn't a best practice since you're no longer checking for revoked certificates or certificate pinning.
+
+  ```text
+  Windows Registry Editor Version 5.00
+
+  [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet]
+  "SSLOptions"=dword:00000002
+  ```
+
+  The available values are:
+
+  - **0**: Disable pinning and revocation checks.
+  - **1**: Disable pinning.
+  - **2**: Disable revocation checks only.
+  - **3** (default): Enable revocation checks and pinning.
 
 ## Attempt to download a fake malware file from Microsoft
 
@@ -155,7 +169,4 @@ A similar message occurs if you're using Internet Explorer:
 
 - [Configure device proxy and Internet connectivity settings for Microsoft Defender for Endpoint](configure-proxy-internet.md)
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)
-- [Important changes to Microsoft Active Protection Services endpoint](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Important-changes-to-Microsoft-Active-Protection-Service-MAPS/ba-p/274006) 
-
-
-
+- [Important changes to Microsoft Active Protection Services endpoint](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/Important-changes-to-Microsoft-Active-Protection-Service-MAPS/ba-p/274006)

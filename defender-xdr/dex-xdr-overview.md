@@ -6,8 +6,6 @@ ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -16,7 +14,6 @@ ms.topic: overview
 ms.custom: 
 - cx-ti
 - cx-dex
-search.appverid: met150
 ms.date: 02/27/2026
 ---
 
@@ -27,14 +24,14 @@ ms.date: 02/27/2026
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Experts for XDR is sold separately from other Microsoft Defender XDR products. Microsoft Defender XDR customers interested in purchasing either Defender Experts for XDR as a standalone offering or the **Microsoft Defender Experts for Servers** add-on can complete the [customer interest form](https://aka.ms/IWantDefenderExperts).
+> Microsoft Defender Experts for XDR is sold separately from other Microsoft Defender XDR products. Microsoft Defender XDR customers interested in purchasing Defender Experts for XDR as a standalone offering can complete the [customer interest form](https://aka.ms/IWantDefenderExperts).
 >
 >Defender Experts for XDR is also available as part of the **Microsoft Defender Experts Suite**. Customers interested in the suite can learn more on the [Defender Experts Suite service page](https://www.microsoft.com/security/services/) and [contact the Microsoft Security team](https://info.microsoft.com/ww-landing-microsoft-defender-contact-me.html) for follow-up.
 
 > [!NOTE]
 > Any incident response services offered by Defender Experts ares offered under the Defender Experts Service Terms.
 
-**Microsoft Defender Experts for XDR** is a managed extended detection and response service that helps your security operations centers (SOCs) focus and accurately respond to incidents that matter. It provides extended detection and response for customers who use Microsoft Defender XDR services: Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID. It also offers an add-on service, **Microsoft Defender Experts for Servers**, which provides coverage for cloud workloads, beginning with on-premises and multicloud servers protected by Microsoft Defender for Cloud.
+**Microsoft Defender Experts for XDR** is a managed extended detection and response service that helps your security operations centers (SOCs) focus and accurately respond to incidents that matter. It provides extended detection and response for customers who use Microsoft Defender XDR services: Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID. 
 
 Defender Experts for XDR augments your SOC by combining automation and Microsoft's security analyst expertise. This combination helps you detect and respond to threats with confidence and improve your security posture. With deep product expertise powered by threat intelligence, we're uniquely positioned to help you:
 
@@ -52,7 +49,7 @@ Apart from the constantly updated research and intelligence tailored for the thr
 - **Proactive check-ins for continuous security improvements** - Periodic check-ins with your named service delivery team to guide your Defender Experts for XDR experience and improve your security posture
 
 > [!NOTE] 
-> SDXs are included if your Defender Experts for XDR and Defender Experts for Servers services are licensed for 500 or more seats and/or cloud workloads.
+> SDXs are included if your Defender Experts for XDR are licensed for 500 or more seats and/or cloud workloads.
 
 [Read the Defender Experts for XDR ebook](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Defender-Experts-for-XDR-eBook-Final.pdf) and maximize the benefits of this product suite. 
 

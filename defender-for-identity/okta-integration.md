@@ -29,8 +29,8 @@ Your Okta environment must have one of the following licenses:
 
 The Super Admin role is required only to create the API token. After you create the token, remove the role and assign the Read-Only Administrator and Defender for Identity custom roles for ongoing API access.
 
-
 ### Microsoft Entra and Defender XDR role-based access options
+
 To configure the Okta connector in Microsoft Defender for Identity, your account must have either of the following access configurations assigned:
 
 - **Microsoft Entra roles:**
@@ -38,7 +38,7 @@ To configure the Okta connector in Microsoft Defender for Identity, your account
     - Security Operator
     - Security Admin
 
-- **Defender XDR Unified RBAC permission:**
+- **Defender unified RBAC permission:**
 
     - Core security settings (manage)
 

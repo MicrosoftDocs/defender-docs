@@ -5,18 +5,16 @@ ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 ---
 
 # Take response actions on a file
@@ -119,25 +117,25 @@ A warning is shown before the action is implemented for files widely used throug
 
 You can roll back and remove a file from quarantine if you've determined that it's clean after an investigation. Run the following command on each device where the file was quarantined.
 
-1. Open an elevated command-line prompt on the device:
+In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
-   1. Go to **Start** and type _cmd_.
+> [!TIP]
+> The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
 
-   1. Right-click **Command prompt** and select **Run as administrator**.
+```dos
+(set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
 
-1. Enter the following command, and press **Enter**:
+MpCmdRun.exe -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
+```
 
-   ```dos
-   "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Restore -Name EUS:Win32/CustomEnterpriseBlock -All
-   ```
+For more information about MpCmdRun, see [Configure and manage Microsoft Defender Antivirus with the MpCmdRun command-line tool](command-line-arguments-microsoft-defender-antivirus.md).
 
-   > [!NOTE]
-   > In some scenarios, the **ThreatName** may appear as: EUS:Win32/CustomEnterpriseBlock!cl.
-   >
-   > Defender for Endpoint will restore all custom blocked files that were quarantined on this device in the last 30 days.
-
-> [!IMPORTANT]
-> A file that was quarantined as a potential network threat might not be recoverable. If a user attempts to restore the file after quarantine, that file might not be accessible. This can be due to the system no longer having network credentials to access the file. Typically, this is a result of a temporary sign-in to a system or shared folder and the access tokens expired.
+> [!NOTE]
+> In some scenarios, the **ThreatName** might appear as: `EUS:Win32/CustomEnterpriseBlock!cl`.
+>
+> Defender for Endpoint restores all custom blocked files that were quarantined on this device in the last 30 days.
+>
+> Files quarantined as a potential network threat might not be recoverable. This type of file might not be accessible in quarantine due to lack of network credentials or expired tokens from a temporary sign-in.
 
 ## Download or collect file
 
@@ -150,8 +148,8 @@ The **Download file** button can have the following states:
 - **Active** - You are able to collect the file.
 
 - **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files. The following permissions are required:
-  - Microsoft Defender XDR Unified role-based access control (RBAC):
-    - Add file collection permission in Microsoft Defender XDR Unified (RBAC)
+  - Microsoft Defender Unified role-based access control (RBAC):
+    - Add file collection permission in Microsoft Defender Unified (RBAC)
   - Microsoft Defender for Endpoint role-based access control (RBAC):
     - Portable Executable files (.exe, .sys, .dll, and others):
       - Security Administrator or Advanced live response or Alerts

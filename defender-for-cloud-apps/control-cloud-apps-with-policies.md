@@ -3,6 +3,7 @@ title: Control cloud apps with policies
 description: This article provides information on how policies are used and set up to control cloud app use.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Control cloud apps with policies
 
@@ -11,6 +12,9 @@ ms.topic: how-to
 Policies allow you to define the way you want your users to behave in the cloud. They enable you to detect risky behavior, violations, or suspicious data points and activities in your cloud environment. If necessary, you can integrate remediation work flows to achieve complete risk mitigation. There are multiple types of policies that correlate to the different types of information you want to gather about your cloud environment and the types of remediation actions you may want to take.
 
 For example, if there's a data violation threat that you want to quarantine, you need a different type of policy in place than if you want to block a risky cloud app from being used by your organization.
+
+> [!NOTE]
+> As Microsoft Defender moves toward a fully unified identity platform, some Defender for Cloud Apps data pipelines remain separate. Defender for Cloud Apps policies and built-in detections use a separate data pipeline that isn't yet integrated with the [Identity inventory](/defender-for-identity/identity-inventory). Correlations defined in the Identity inventory don't currently affect these features. For a full list of affected features, see [Enable Identity inventory integration](/defender-cloud-apps/general-setup#enable-identity-inventory-integration).
 
 ## Policy types
 
@@ -36,7 +40,7 @@ Defender for Cloud Apps helps you mitigate different risks in the cloud. You can
 
 - **Access control:** Who accesses what from where?
 
-    Continuously monitor behavior and detect anomalous activities, including high-risk insider and external attacks, and apply a policy to alert, block, or require identity verification for any app or specific action within an app. Enables on-premises and mobile access control policies based on user, device, and geography with coarse blocking and granular view, edit, and block. Detect suspicious login events, including multi-factor authentication failures, disabled account login failures, and impersonation events.
+    Continuously monitor behavior and detect anomalous activities, including high-risk insider and external attacks, and apply a policy to alert, block, or require identity verification for any app or specific action within an app. Enables on-premises and mobile access control policies based on user, device, and geography with coarse blocking and granular view, edit, and block. Detect suspicious login events, including multifactor authentication failures, disabled account login failures, and impersonation events.
 
 - **Compliance:** Are your compliance requirements breached?
 
@@ -173,7 +177,7 @@ To export a log, perform the following steps:
 
 To download the exported report:
 
-1. After the report is ready, i n the Microsoft Defender Portal, go to **Reports** and then **Cloud Apps** -> **Exported reports**.
+1. After the report is ready, in the Microsoft Defender Portal, go to **Reports** and then **Cloud Apps** -> **Exported reports**.
 
 1. In the table, select the relevant report, and then select download.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Hello World for Microsoft Defender for Endpoint API
 ms.reviewer:
 description: Create a practice 'Hello world'-style API call to the Microsoft Defender for Endpoint API.
@@ -6,16 +6,15 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
-ms.custom: api
-search.appverid: met150
+ms.custom:
+  - api
+  - sfi-image-nochange
 ms.date: 01/08/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1

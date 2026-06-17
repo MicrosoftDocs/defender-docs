@@ -2,21 +2,14 @@
 title: Configure junk email settings on Exchange Online mailboxes
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
-  - MOE150
-  - MED150
-  - MBS150
-  - MET150
-ms.collection: 
+ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to configure the junk email settings in Exchange Online mailboxes. Many of these settings are available to users in Outlook or Outlook on the web.
 ms.service: defender-office-365
-ms.date: 07/31/2025
+ms.date: 04/02/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -125,7 +118,7 @@ To verify you successfully configured the safelist collection on a mailbox, use 
 
 ## About Outlook junk email settings
 
-To enable, disable, and configure the client-side Junk Email Filter settings that are available in Outlook, use [Group Policy](https://support.microsoft.com/help/2252421). For more information, see [Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+To enable, disable, and configure the client-side Junk Email Filter settings that are available in Outlook, use [Group Policy](/microsoft-365-apps/outlook/email-security/deploy-junk-email-settings). For more information, see [Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 
 When the Outlook Junk Email Filter is set to the default value **No automatic filtering** in **Home** \> **Junk** \> **Junk E-Mail Options** \> **Options**, Outlook doesn't attempt to classify messages as spam, but still uses the safelist collection (the Safe Senders list, the Safe Recipients list, and the Blocked Senders list) to move messages to the Junk Email folder after delivery. For more information about these settings, see [Overview of the Junk Email Filter](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089).
 
@@ -152,27 +145,38 @@ The safelist collection (the Safe Senders list, the Safe Recipients list, and th
   For more information about this limit and how to change it, see [KB2669081](https://support.microsoft.com/help/2669081).
 
 - The synchronized safelist collection in Microsoft 365 has the following synchronization limits:
-  - 1,024 total entries in the Safe Senders list, the Safe Recipients list, and external contacts if **Trust email from my contacts** is enabled.
+
   - 65,535 total entries in the Blocked Senders list and the Blocked Domains list.
 
-  When the 1024 entry limit is reached, the following things happen:
+    > [!NOTE]
+    > Only the first 500 blocked sender entries have their hashes synced to Microsoft Entra ID. These 500 synced entries determine whether messages from blocked senders receive a **User Block** verdict:
+    >
+    > - **Blocked senders in the first 500 entries** (hashes synced): Messages are quarantined with a **User Block** verdict. These quarantined messages have the following characteristics:
+    >   - The messages are hidden when the **Don't show blocked senders** filter is active in quarantine.
+    >   - Quarantine notifications aren't sent for these messages.
+    >   - The **Sender address override reason** property has the value **Message sender is blocked by recipient settings**.
+    > - **Blocked senders beyond the first 500 entries** (hashes not synced): Messages don't receive a **User Block** verdict. If the messages are quarantined, they have the following characteristics:
+    >   - The messages are visible, even if the **Don't show blocked senders** filter is active in quarantine.
+    >   - Quarantine notifications are sent for these messages.
+    >   - The **Sender address override reason** property has the value **None**.
+    >
+    >   Messages from these senders that aren't otherwise detected as malicious are delivered to the Junk Email folder instead of quarantine.
+    >
+    > In other words, two nearly identical spam messages from two different blocked senders could have different behavior in quarantine, or one message might not even be quarantined at all.
 
-  - The list stops accepting entries in PowerShell and Outlook on the web, but no error is displayed.
+  - 1,024 total entries in the Safe Senders list, the Safe Recipients list, and external contacts if **Trust email from my contacts** is enabled.
+    - When the 1,024 entry limit is reached, the following things happen:
+      - The list stops accepting entries in PowerShell and Outlook on the web, but no error is displayed.
 
-    Outlook users can continue to add more than 1,024 entries until they reach the Outlook limit of 510 KB. Outlook can use these extra entries, as long as a Microsoft 365 filter doesn't block the message before delivery to the mailbox (mail flow rules, anti-spoofing, and so on).
-
-- With directory synchronization, the entries are synchronized to Microsoft Entra ID in the following order:
-  1. Mail contacts if **Trust email from my contacts** is enabled.
-  2. The Safe Senders list and the Safe Recipient list are combined, deduplicated, and sorted alphabetically whenever a change is made for the first 1,024 entries.
-
-  The first 1,024 entries are used, and relevant information is stamped in the message headers.
-
-  For remaining entries over 1,024, Outlook processes unsynchronized entries, but no information is stamped in the message headers. This behavior doesn't occur in Outlook on the web.
-
-As you can see, enabling the **Trust email from my contacts** setting reduces the number of Safe Senders and Safe Recipients that can be synchronized. If this reduction is a concern, we recommend using Group Policy to turn off this feature:
-
-- File name: outlk16.opax
-- Policy setting: **Trust e-mail from contacts**
+        Outlook users can continue to add more than 1,024 entries until they reach the Outlook limit of 510 KB. Outlook can use these extra entries, as long as a Microsoft 365 filter doesn't block the message before delivery to the mailbox (mail flow rules, anti-spoofing, and so on).
+    - With directory synchronization, the entries are synchronized to Microsoft Entra ID in the following order:
+      1. Mail contacts if **Trust email from my contacts** is enabled.
+      2. The Safe Senders list and the Safe Recipient list are combined, deduplicated, and sorted alphabetically whenever a change is made for the first 1,024 entries.
+    - The first 1,024 entries are used, and relevant information is stamped in the message headers.
+    - For remaining entries over 1,024, Outlook processes unsynchronized entries, but no information is stamped in the message headers. This behavior doesn't occur in Outlook on the web.
+    - As you can see, enabling the **Trust email from my contacts** setting reduces the number of Safe Senders and Safe Recipients that can be synchronized. If this reduction is a concern, we recommend using Group Policy to turn off this feature:
+      - File name: outlk16.opax
+      - Policy setting: **Trust e-mail from contacts**
 
 > [!IMPORTANT]
 > The following button helps identify and resolve issues with the safelist collection in user mailboxes (the Safe Senders list and Blocked Senders list) which includes individual senders and domains:

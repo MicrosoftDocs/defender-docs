@@ -1,15 +1,11 @@
 ---
 title: Microsoft Security Copilot in advanced hunting
 description: Learn about the different Microsoft Security Copilot advanced hunting capabilities in Microsoft Defender.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -20,7 +16,7 @@ ms.custom:
 - cx-ah
 ms.topic: how-to
 ms.update-cycle: 180-days
-ms.date: 12/12/2025
+ms.date: 05/21/2026
 appliesto:
 - Microsoft Defender
 - Microsoft Defender XDR
@@ -69,4 +65,4 @@ The Threat Hunting Agent and Query assistant support the following tables in adv
 
 | Microsoft Defender tables | Microsoft Sentinel tables |
 | ------------- | ------------- |
-|<ul><li>AADSignInEventsBeta <li>AADSpnSignInEventsBeta <li>AlertEvidence <li>AlertInfo <li>BehaviorEntities <li>BehaviorInfo <li>CloudAppEvents <li>DeviceAlertEvents <li>DeviceBaselineComplianceAssessment <li>DeviceBaselineComplianceAssessmentKB <li>DeviceBaselineComplianceProfiles <li>DeviceEvents<li>DeviceFileCertificateInfo <li>DeviceFileEvents <li>DeviceImageLoadEvents <li>DeviceInfo <li>DeviceInternetFacing <li>DeviceLogonEvents <li>DeviceNetworkEvents <li>DeviceNetworkInfo <li>DeviceProcessEvents <li>DeviceRegistryEvents <li>DeviceScriptEvents <li>DeviceTvmInfoGathering <li>DeviceTvmInfoGatheringKB <li>DeviceTvmSecureConfigurationAssessment <li>DeviceTvmSecureConfigurationAssessmentKB <li>DeviceTvmSoftwareEvidenceBeta <li>DeviceTvmSoftwareInventory <li>DeviceTvmSoftwareVulnerabilities <li>DeviceTvmSoftwareVulnerabilitiesKB <li>DynamicEventCollection <li>EmailAttachmentInfo <li>EmailEvents <li>EmailPostDeliveryEvents <li>EmailUrlInfo <li>IdentityDirectoryEvents <li>IdentityInfo <li>IdentityLogonEvents <li>IdentityQueryEvents <li>UrlClickEvents</ul> |<ul><li>AADManagedIdentitySignInLogs <li>AADNonInteractiveUserSignInLogs <li>AADProvisioningLogs <li>AADRiskyUsers <li>AADServicePrincipalSignInLogs <li>AADUserRiskEvents <li>ABAPAuditLog_CL <li>AlertEvidence <li>AlertInfo <li>Anomalies <li>AppDependencies <li>AppTraces <li>AuditLogs <li>AWSCloudTrail <li>AWSGuardDuty <li>AzureActivity <li>AzureDevOpsAuditing <li>AzureDiagnostics <li>AzureMetrics <li>BehaviorAnalytics <li>CloudAppEvents <li>CommonSecurityLog <li>ContainerInventory <li>ContainerLog <li>DeviceEvents <li>DeviceFileCertificateInfo <li>DeviceFileEvents <li>DeviceImageLoadEvents <li>DeviceInfo <li>DeviceLogonEvents <li>DeviceNetworkEvents <li>DeviceNetworkInfo <li>DeviceProcessEvents <li>DeviceRegistryEvents <li>DnsEvents <li>Dynamics365Activity <li>EmailPostDeliveryEvents <li>Event <li>Heartbeat <li>IdentityInfo <li>InsightsMetrics <li>IntuneAuditLogs <li>IntuneDevices <li>LAQueryLogs <li>MicrosoftAzureBastionAuditLogs <li>MicrosoftPurviewInformationProtection <li>OfficeActivity <li>Perf <li>PowerBIActivity <li>ProtectionStatus <li>SecurityAlert <li>SecurityEvent <li>SecurityIncident <li>SecurityRecommendation <li>SigninLogs <li>SqlAtpStatus <li>StorageBlobLogs <li>StorageFileLogs <li>Syslog <li>ThreatIntelligenceIndicator <li>Update <li>UrlClickEvents <li>Usage <li>UserAccessAnalytics <li>UserPeerAnalytics <li>VMBoundPort <li>VMComputer <li>VMConnection <li>VMProcess <li>WindowsEvent <li>W3CIISLog <li>WindowsFirewall</ul>|
+|<ul><li>AADSignInEventsBeta <li>AADSpnSignInEventsBeta <li>AlertEvidence <li>AlertInfo <li>BehaviorEntities <li>BehaviorInfo <li>CloudAppEvents <li>CloudAuditEvents <li>CloudDnsEvents <li>CloudProcessEvents <li>DeviceAlertEvents <li>DeviceBaselineComplianceAssessment <li>DeviceBaselineComplianceAssessmentKB <li>DeviceBaselineComplianceProfiles <li>DeviceEvents<li>DeviceFileCertificateInfo <li>DeviceFileEvents <li>DeviceImageLoadEvents <li>DeviceInfo <li>DeviceInternetFacing <li>DeviceLogonEvents <li>DeviceNetworkEvents <li>DeviceNetworkInfo <li>DeviceProcessEvents <li>DeviceRegistryEvents <li>DeviceScriptEvents <li>DeviceTvmInfoGathering <li>DeviceTvmInfoGatheringKB <li>DeviceTvmSecureConfigurationAssessment <li>DeviceTvmSecureConfigurationAssessmentKB <li>DeviceTvmSoftwareEvidenceBeta <li>DeviceTvmSoftwareInventory <li>DeviceTvmSoftwareVulnerabilities <li>DeviceTvmSoftwareVulnerabilitiesKB <li>DynamicEventCollection <li>EmailAttachmentInfo <li>EmailEvents <li>EmailPostDeliveryEvents <li>EmailUrlInfo <li>IdentityDirectoryEvents <li>IdentityInfo <li>IdentityLogonEvents <li>IdentityQueryEvents <li>UrlClickEvents</ul> |<ul><li>AADManagedIdentitySignInLogs <li>AADNonInteractiveUserSignInLogs <li>AADProvisioningLogs <li>AADRiskyUsers <li>AADServicePrincipalSignInLogs <li>AADUserRiskEvents <li>ABAPAuditLog_CL <li>AlertEvidence <li>AlertInfo <li>Anomalies <li>AppDependencies <li>AppTraces <li>AuditLogs <li>AWSCloudTrail <li>AWSGuardDuty <li>AzureActivity <li>AzureDevOpsAuditing <li>AzureDiagnostics <li>AzureMetrics <li>BehaviorAnalytics <li>CloudAppEvents <li>CloudAuditEvents <li>CloudDnsEvents <li>CloudProcessEvents <li>CommonSecurityLog <li>ContainerInventory <li>ContainerLog <li>DeviceEvents <li>DeviceFileCertificateInfo <li>DeviceFileEvents <li>DeviceImageLoadEvents <li>DeviceInfo <li>DeviceLogonEvents <li>DeviceNetworkEvents <li>DeviceNetworkInfo <li>DeviceProcessEvents <li>DeviceRegistryEvents <li>DnsEvents <li>Dynamics365Activity <li>EmailPostDeliveryEvents <li>Event <li>Heartbeat <li>IdentityInfo <li>InsightsMetrics <li>IntuneAuditLogs <li>IntuneDevices <li>LAQueryLogs <li>MicrosoftAzureBastionAuditLogs <li>MicrosoftPurviewInformationProtection <li>OfficeActivity <li>Perf <li>PowerBIActivity <li>ProtectionStatus <li>SecurityAlert <li>SecurityEvent <li>SecurityIncident <li>SecurityRecommendation <li>SigninLogs <li>SqlAtpStatus <li>StorageBlobLogs <li>StorageFileLogs <li>Syslog <li>ThreatIntelligenceIndicator <li>Update <li>UrlClickEvents <li>Usage <li>UserAccessAnalytics <li>UserPeerAnalytics <li>VMBoundPort <li>VMComputer <li>VMConnection <li>VMProcess <li>WindowsEvent <li>W3CIISLog <li>WindowsFirewall</ul>|

@@ -4,10 +4,9 @@ description: Learn how to enable Microsoft Defender XDR and start integrating yo
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
     - m365-security
@@ -19,6 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 08/12/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # Turn on Microsoft Defender XDR

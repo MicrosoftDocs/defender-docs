@@ -1,14 +1,11 @@
 ---
 title: Run a detection test on a device recently onboarded to Microsoft Defender for Endpoint
 description: Run the detection test script on a device recently onboarded to the Microsoft Defender for Endpoint service to verify that it's properly added.
-search.appverid: met150
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
 ms.date: 10/20/2025
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
@@ -47,7 +44,7 @@ Run the following PowerShell script on a newly onboarded device to verify that i
    The Command Prompt window closes automatically. If successful, a new alert appears in the portal for the onboarded device in about 10 minutes.
 
     > [!NOTE]
-    > You can also [use the EICAR test string](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus) to perform this test. You'll receive a notification on the endpoint and an alert in the Microsoft Defender portal.
+    > You can also [use the EICAR test string](configure-extension-file-exclusions-microsoft-defender-antivirus.md) to perform this test. You'll receive a notification on the endpoint and an alert in the Microsoft Defender portal.
 
 ## Related articles
 

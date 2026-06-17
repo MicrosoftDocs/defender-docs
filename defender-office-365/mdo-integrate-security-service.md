@@ -1,19 +1,13 @@
 ---
 title: Integrate non-Microsoft security services with Microsoft 365
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.collection: 
   - tier1
 ms.custom:
+  - sfi-image-nochange
 description: Learn about the considerations for integrating non-Microsoft security services with the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365.
 ms.service: defender-office-365
 ms.date: 02/06/2026
@@ -35,7 +29,7 @@ While Microsoft provides a comprehensive platform for email security, we underst
     - The non-Microsoft service should integrate with existing Security Operations (SecOps) processes and tools. For example, security information and event management (SIEM), security orchestration, automation, and response (SOAR), etc.
 
   > [!NOTE]
-  > Email security is an adversarial space. With the rise of commodity phishing and attack kits, attacks evolve and morph rapidly. Microsoft Defender for Office 365 is part of Microsoft Defender XDR, our multi-layered, pre-breach and post-breach approach to enterprise cyber security.
+  > Email security is an adversarial space. With the rise of commodity phishing and attack kits, attacks evolve and morph rapidly. Microsoft Defender for Office 365 is part of Microsoft Defender, our multi-layered, pre-breach and post-breach approach to enterprise cyber security.
   >
   > No matter how many layers of email protection exist, total protection never reaches 100 percent.
 
@@ -93,7 +87,7 @@ For these reasons, we strongly recommend avoiding this configuration, and workin
 
 Defender for Office 365 has [user reported settings](submissions-user-reported-messages-custom-mailbox.md) that work with the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 
-Knowing that non-Microsoft security services might include their own tools and processes for reporting false positives and false negatives (including user education/awareness efforts), Defender for Office 365 supports submissions from [non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). This support helps streamline reporting [false positives and false negatives to Microsoft](submissions-admin.md), and empowers your SecOps team to take advantage of Microsoft Defender XDR [incident management](/defender-xdr/incidents-overview) and [automated investigations and response (AIR)](air-about.md).
+Knowing that non-Microsoft security services might include their own tools and processes for reporting false positives and false negatives (including user education/awareness efforts), Defender for Office 365 supports submissions from [non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). This support helps streamline reporting [false positives and false negatives to Microsoft](submissions-admin.md), and empowers your SecOps team to take advantage of Microsoft Defender [incident management](/defender-xdr/incidents-overview) and [automated investigations and response (AIR)](air-about.md).
 
 For more information, see [Options for non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools).
 

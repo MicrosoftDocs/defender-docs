@@ -4,6 +4,7 @@ description: This article explains how to view and manage Microsoft Defender for
 ms.date: 05/08/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange
 ---
 
 # View and Manage security alerts
@@ -157,5 +158,4 @@ For more information, see [Tune an alert](/microsoft-365/security/defender/inves
 
 - [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
 - [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
-- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+

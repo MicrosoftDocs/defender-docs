@@ -5,15 +5,13 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.topic: how-to
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 04/04/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Manage system extensions using the manual methods of deployment

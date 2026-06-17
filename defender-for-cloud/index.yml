@@ -1,0 +1,112 @@
+### YamlMime:Landing
+
+title: Microsoft Defender for Cloud documentation # < 60 chars
+summary: Microsoft Defender for Cloud provides unified security management and advanced threat protection across hybrid cloud workloads. # < 160 chars
+
+metadata:
+  title: Microsoft Defender for Cloud documentation
+  description: Get started with Defender for Cloud, learn how to secure your workloads, limit risks, and detect and respond to attacks with our quickstarts & tutorials.
+  ms.topic: landing-page
+  ms.date: 03/02/2025
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card
+  - title: Introduction to Microsoft Defender for Cloud
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Defender for Cloud?
+            url: defender-for-cloud-introduction.md
+          - text: Defender for Cloud in the Defender portal
+            url: defender-portal/defender-for-cloud-defender-portal.md
+          - text: What's new in Defender for Cloud?
+            url: release-notes.md
+          - text: Microsoft Defender for Cloud product page
+            url: https://azure.microsoft.com/products/defender-for-cloud
+          - text: Microsoft Defender for Cloud - Pricing
+            url: https://azure.microsoft.com/pricing/details/defender-for-cloud
+ 
+  # Card
+  - title: Get started
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Planning and operations guide
+            url: defender-for-cloud-planning-and-operations-guide.md
+          - text: Plan multicloud protection
+            url: plan-multicloud-security-get-started.md
+          - text: Connect your Azure subscriptions
+            url: connect-azure-subscription.md
+          - text: Connect your AWS accounts
+            url: quickstart-onboard-aws.md
+          - text: Connect your GCP projects
+            url: quickstart-onboard-gcp.md
+          - text: Onboard non-Azure machines with Defender for Endpoint
+            url: onboard-machines-with-defender-for-endpoint.md
+          - text: Connect on-premises machines
+            url: quickstart-onboard-machines.md
+
+  # Card
+  - title: Workload protection
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Defender for Servers
+            url: defender-for-servers-overview.md
+          - text: Defender for Containers
+            url: defender-for-containers-introduction.md
+          - text: Defender for Databases
+            url: defender-for-databases-overview.md
+          - text: Defender for Storage
+            url: defender-for-storage-introduction.md
+          - text: Defender for DevOps  
+            url: defender-for-devops-introduction.md
+          - text: Defender for App Service
+            url: defender-for-app-service-introduction.md
+          - text: Defender for Key Vault
+            url: defender-for-key-vault-introduction.md
+          - text: Defender for Resource Manager
+            url: defender-for-resource-manager-introduction.md
+
+  # Card
+  - title: AI security
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Data and AI security dashboard (Preview)
+            url: data-aware-security-dashboard-overview.md
+          - text: AI security posture management
+            url: ai-security-posture.md
+          - text: AI threat protection
+            url: ai-threat-protection.md
+
+  # Card
+  - title: Posture management
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Cloud Security Posture Management (CSPM)
+            url: concept-cloud-security-posture-management.md
+          - text: Secure score 
+            url: secure-score-security-controls.md
+          - text: Regulatory compliance 
+            url: concept-regulatory-compliance-standards.md
+          - text: Enable just-in-time access on VMs
+            url: just-in-time-access-usage.yml
+
+  # Card
+  - title: Investigation & response
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Manage and respond to security alerts
+            url: manage-respond-alerts.md
+          - text: Security alerts and incidents
+            url: alerts-overview.md
+          - text: Review security recommendations
+            url: review-security-recommendations.md
+          - text: Manage security incidents
+            url: incidents.md

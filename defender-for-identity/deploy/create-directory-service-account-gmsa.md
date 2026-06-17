@@ -4,11 +4,15 @@ description: Create and configure a group managed service account (gMSA) for use
 ms.date: 10/12/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange
 ---
 
 # Configure a gMSA directory service account for Defender for Identity
 
-This article describes how to create a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) to use as a Microsoft Defender for Identity directory service account entry.
+Create and configure a [group managed service account (gMSA)](/windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts) for the sensor v2.x to use when reading Active Directory data (querying objects, tracking changes, resolving entities). This is separate from the [action account](manage-action-accounts.md) used to perform remediation actions like disabling users or resetting passwords.
+
+> [!IMPORTANT]
+> This configuration applies to the sensor v2.x only. The sensor v3.x uses LocalSystem for all AD interactions and doesn't require a gMSA or any other Directory Service Account. If all your sensors are v3.x, skip this page.
 
 ## Prerequisites
 
@@ -125,13 +129,13 @@ If you see this alert, check to see if the *Log on as a service policy* is confi
 > [!NOTE]
 > If you use the Group Policy Management Editor to configure the **Log on as a service** setting, make sure to add both **NT Service\All Services** and the gMSA account you created.
 
-## Configure a Directory service account in Microsoft Defender XDR
+## Configure a Directory service account in Microsoft Defender portal
 
-To connect your sensors with your Active Directory domains, configure Directory service accounts in Microsoft Defender XDR.
+To connect your sensors with your Active Directory domains, configure Directory service accounts in Microsoft Defender portal.
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com/), go to **Settings > Identities**.
+1. In [Microsoft Defender portal](https://security.microsoft.com/), go to **Settings > Identities**.
 
-    :::image type="content" source="../media/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identity page." lightbox="../media/settings-identities.png":::
+    :::image type="content" source="../media/detect-exclusions/settings-identities.png" alt-text="Screenshot that shows the settings page and how to access the Defender for Identity page." lightbox="../media/detect-exclusions/settings-identities.png":::
 
 1. Select **Directory service accounts** to see which accounts are associated with which domains. 
 
@@ -169,7 +173,4 @@ To connect your sensors with your Active Directory domains, configure Directory 
 
 For more information, see [Sensor failed to retrieve the gMSA credentials](../troubleshooting-known-issues.md#sensor-failed-to-retrieve-group-managed-service-account-gmsa-credentials).
 
-## Next step
 
-> [!div class="step-by-step"]
-> [Configure SAM-R to enable lateral movement path detection in Microsoft Defender for Identity »](remote-calls-sam.md)

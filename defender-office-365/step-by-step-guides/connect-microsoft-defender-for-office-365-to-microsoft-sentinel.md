@@ -2,25 +2,20 @@
 title: Connect Microsoft Defender for Office 365 to Microsoft Sentinel
 description: The steps to connect Microsoft Defender for Office 365 to Sentinel. Add your Microsoft Defender for Office 365 data (*and* data from the rest of the Microsoft Defender XDR suite), including incidents, to Microsoft Sentinel for a single pane of glass into your security.
 ms.service: defender-office-365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
 ms.date: 01/31/2023
 ---
 
 # Connect Microsoft Defender for Office 365 to Microsoft Sentinel
 
-You can ingest your Microsoft Defender for Office 365 data (*and* data from the rest of the Microsoft Defender XDR suite), including incidents, into Microsoft Sentinel.
+You can ingest your Microsoft Defender for Office 365 data (*and* data from the rest of the Microsoft Defender suite), including incidents, into Microsoft Sentinel.
 
 Take advantage of rich security information events management (SIEM) combined with data from other Microsoft 365 sources, synchronization of incidents and alerts, and advanced hunting.
 
@@ -45,6 +40,6 @@ Admins are now able to see incidents, alerts, and raw data in Microsoft Sentinel
 
 ## More Information
 
-[Connect Microsoft Defender XDR data to Microsoft Sentinel | Microsoft Docs](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
+[Connect Microsoft Defender data to Microsoft Sentinel | Microsoft Docs](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
 
 [Connect Microsoft Teams to Microsoft Sentinel](/microsoftteams/teams-sentinel-guide).
