@@ -23,7 +23,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 (for example, Microsoft 365 E3/A3/G3, Microsoft 365 Business Premium, or Microsoft 365 E5/A5/G5) a variety of security-related reports are available. If you have the [necessary permissions](#what-permissions-are-needed-to-view-the-defender-for-office-365-reports), you can view and download these reports in the Microsoft Defender portal.
+In organizations with Microsoft Defender for Office 365 Plan 1 or Plan 2 (for example, Microsoft 365 E3/G3, Microsoft 365 Business Premium, or Microsoft 365 E5/A5/G5) a variety of security-related reports are available. If you have the [necessary permissions](#what-permissions-are-needed-to-view-the-defender-for-office-365-reports), you can view and download these reports in the Microsoft Defender portal.
 
 The reports are available in the Microsoft Defender portal at <https://security.microsoft.com> on the **Email & collaboration reports** page at **Reports** \> **Email & collaboration** \> **Email & collaboration reports**. Or, to go directly to the **Email & collaboration reports** page, use <https://security.microsoft.com/emailandcollabreport>.
 
