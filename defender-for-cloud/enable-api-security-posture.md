@@ -2,7 +2,7 @@
 title: Enable API security posture with Defender CSPM
 description: Discover and secure APIs across API Management, Function Apps, and Logic Apps with prioritized risk insights and API security recommendations.
 ms.topic: how-to
-ms.date: 06/18/2026
+ms.date: 06/17/2026
 ms.custom: sfi-image-nochange, references_regions
 #customer intent: As a cloud administrator, I want to learn how to enable API security posture management to protect my APIs in Azure API Management, Function Apps, and Logic Apps.
 ai-usage: ai-assisted

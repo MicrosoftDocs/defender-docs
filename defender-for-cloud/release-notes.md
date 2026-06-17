@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 06/18/2026
+ms.date: 06/17/2026
 ai-usage: ai-assisted
 ---
 
@@ -50,7 +50,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 June 18, 2026
 
-API discovery and security posture management in the Defender Cloud Security Posture Management (CSPM) plan for APIs hosted in Azure Function Apps and Azure Logic Apps is now generally available. This capability extends API security posture management in Microsoft Defender for Cloud beyond Azure API Management to your serverless and workflow APIs.
+API discovery and security posture management in the Defender cloud security posture management (Defender CSPM) plan for APIs hosted in Azure Function Apps and Azure Logic Apps is now generally available. This capability extends API security posture management in Microsoft Defender for Cloud beyond Azure API Management to your serverless and workflow APIs.
 
 With this release, you can:
 
