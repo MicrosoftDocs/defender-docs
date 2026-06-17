@@ -4,6 +4,7 @@ description: Learn how to remediate cloud deployment secrets security issues in 
 ms.topic: overview
 ms.date: 05/25/2025
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 

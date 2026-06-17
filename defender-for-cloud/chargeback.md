@@ -4,6 +4,7 @@ description: Learn how to use Microsoft Defender for Cloud's chargeback feature 
 contributors:
 ms.topic: concept-article
 ms.date: 03/17/2025
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Cloud chargeback process using Azure Cost Analysis

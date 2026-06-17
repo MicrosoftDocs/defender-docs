@@ -3,6 +3,7 @@ title: Remediate machine secrets in Microsoft Defender for Cloud
 description: Learn how to remediate security issues with machine secrets in Microsoft Defender for Cloud.
 ms.topic: overview
 ms.date: 04/19/2026
+ai-usage: ai-assisted
 ---
 
 # Remediate machine secrets

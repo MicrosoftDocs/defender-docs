@@ -3,6 +3,7 @@ title: Native integration with ServiceNow
 description: Learn about the native integration with ServiceNow.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Native integration with ServiceNow

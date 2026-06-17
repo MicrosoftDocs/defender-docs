@@ -4,6 +4,7 @@ description: Find answers to common questions about gated deployment in Defender
 #customer intent: As a Kubernetes administrator, I want to understand gated deployment so that I can enforce container image security policies in my cluster.
 ms.date: 10/29/2025
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Frequently asked questions about gated deployment in Defender for Containers

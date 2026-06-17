@@ -4,6 +4,7 @@ description: This document walks you through the process of enabling Microsoft D
 ms.topic: quickstart
 ms.date: 04/19/2026
 ms.custom: mode-api, devx-track-azurepowershell
+ai-usage: ai-assisted
 ---
 
 # Automate onboarding of Microsoft Defender for Cloud using PowerShell

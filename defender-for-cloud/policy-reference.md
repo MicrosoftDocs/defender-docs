@@ -4,6 +4,7 @@ description: Lists Azure Policy built-in policy definitions for Microsoft Defend
 ms.topic: reference
 ms.date: 03/26/2025
 ms.custom: subject-policy-reference
+ai-usage: ai-assisted
 ---
 
 # Azure Policy built-in definitions for Microsoft Defender for Cloud

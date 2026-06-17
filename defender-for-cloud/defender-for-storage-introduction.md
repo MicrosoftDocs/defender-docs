@@ -4,6 +4,7 @@ description: Learn about the benefits, features, and security capabilities of Mi
 ms.date: 05/13/2025
 ms.topic: overview
 #customer intent: As a security professional, I want to understand the features and benefits of Microsoft Defender for Storage so that I can ensure the security of my data.
+ai-usage: ai-assisted
 ---
 
 # What is Microsoft Defender for Storage

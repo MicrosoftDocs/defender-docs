@@ -4,6 +4,7 @@ title: Understanding the DevOps Threat Matrix | Defender for Cloud in the Field
 description: Learn about the DevOps Threat Matrix.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Understanding the DevOps Threat Matrix

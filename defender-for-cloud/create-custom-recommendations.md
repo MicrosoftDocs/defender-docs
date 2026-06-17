@@ -4,6 +4,7 @@ description: Learn how to create custom security standards and recommendations i
 ms.topic: how-to
 ms.date: 05/24/2026
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # Create custom standards and recommendations in Microsoft Defender for Cloud

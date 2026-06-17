@@ -3,6 +3,7 @@ title: Improve regulatory compliance in Microsoft Defender for Cloud
 description: Learn how to improve regulatory compliance in Microsoft Defender for Cloud.
 ms.topic: tutorial
 ms.date: 07/15/2025
+ai-usage: ai-assisted
 ---
 
 # Improve regulatory compliance

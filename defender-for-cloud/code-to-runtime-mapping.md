@@ -5,6 +5,7 @@ ms.date: 04/23/2026
 ms.topic: how-to
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security administrator, I want to trace runtime security issues back to their source code origin and understand the blast radius to fix issues effectively at the source.
+ai-usage: ai-assisted
 ---
 
 # Code to runtime enrichment for recommendations

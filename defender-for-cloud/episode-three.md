@@ -3,6 +3,7 @@ title: Microsoft Defender for Containers
 description: Learn how about Microsoft Defender for Containers.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Containers

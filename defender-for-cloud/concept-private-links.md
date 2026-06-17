@@ -5,6 +5,7 @@ ms.topic: concept-article
 author: ElazarK
 ms.author: elkrieger
 ms.date: 06/14/2026
+ai-usage: ai-assisted
 ---
 
 # Microsoft Security Private Link for Microsoft Defender for Cloud

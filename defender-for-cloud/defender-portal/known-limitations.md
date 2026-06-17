@@ -4,6 +4,7 @@ description: Understand current limitations and known issues when using Microsof
 ms.topic: reference
 ms.date: 04/28/2026
 ms.service: defender-for-cloud
+ai-usage: ai-assisted
 ---
 
 # Known limitations in the Defender portal

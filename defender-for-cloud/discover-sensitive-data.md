@@ -4,6 +4,7 @@ description: Learn how to discover resources with sensitive data types in the Da
 ms.topic: how-to
 ms.date: 06/02/2026
 #customer intent: As a security administrator, I want to discover sensitive data so that I can protect it.
+ai-usage: ai-assisted
 ---
 
 # Discover sensitive data in cloud resources

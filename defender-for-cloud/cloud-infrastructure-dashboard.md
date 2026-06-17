@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 05/26/2026
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to use the Cloud overview dashboard to get unified visibility into my cloud security posture across Azure, AWS, and GCP.
+ai-usage: ai-assisted
 ---
 
 # Cloud overview dashboard

@@ -4,6 +4,7 @@ description: Learn about the benefits and features of Microsoft Defender for Key
 ms.date: 08/20/2025
 ms.topic: overview
 ms.custom: references_regions
+ai-usage: ai-assisted
 ---
 
 # Overview of Microsoft Defender for Key Vault

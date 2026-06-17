@@ -4,6 +4,7 @@ description: Enable Defender for Azure SQL Databases as part of the Databases pl
 ms.topic: how-to
 ms.date: 06/02/2026
 #customer intent: As a database administrator, I want to enable Defender for Azure SQL Databases so that I can enhance the security of my databases.
+ai-usage: ai-assisted
 ---
 
 # Deploy Defender for Azure SQL Databases

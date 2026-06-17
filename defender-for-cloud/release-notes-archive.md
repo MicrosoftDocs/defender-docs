@@ -4,6 +4,7 @@ description: A description of what's new and changed in Microsoft Defender for C
 ms.topic: reference
 ms.date: 06/03/2026
 ms.custom: sfi-ga-nochange, sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Defender for Cloud-What's new archive

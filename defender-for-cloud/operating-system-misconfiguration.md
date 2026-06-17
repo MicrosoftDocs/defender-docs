@@ -4,6 +4,7 @@ description: Apply security recommendations to harden operating system baseline 
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to review and remediate operating system baseline misconfigurations so I can reduce risk across my environment.
+ai-usage: ai-assisted
 ---
 
 # Operating system misconfigurations

@@ -3,6 +3,7 @@ title: AKS security dashboard
 description: Learn more about the AKS security dashboard.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # AKS security dashboard

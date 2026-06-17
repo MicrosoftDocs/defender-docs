@@ -3,6 +3,7 @@ title: Enable Defender for Storage by Using the REST API
 description: Learn how to enable Microsoft Defender for Storage on your Azure subscription for Microsoft Defender for Cloud by using the REST API.
 ms.topic: install-set-up-deploy
 ms.date: 06/30/2025
+ai-usage: ai-assisted
 ---
 
 # Enable and configure Defender for Storage by using the REST API

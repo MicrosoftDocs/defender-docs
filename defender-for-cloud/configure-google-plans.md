@@ -4,6 +4,7 @@ description: Learn how to configure Microsoft Defender for Cloud plans for your 
 ms.topic: install-set-up-deploy
 ms.date: 01/14/2026
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Configure GCP plans

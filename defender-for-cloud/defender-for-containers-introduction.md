@@ -4,6 +4,7 @@ description: Learn about Microsoft Defender for Containers, a cloud-native solut
 ms.topic: overview
 ms.date: 06/03/2026
 #customer intent: As a security admin, I want to understand container security to protect my containerized assets.
+ai-usage: ai-assisted
 ---
 
 # Introduction to Microsoft Defender for Containers

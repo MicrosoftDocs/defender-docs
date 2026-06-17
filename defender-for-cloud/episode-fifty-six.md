@@ -3,6 +3,7 @@ title: Improvements in Container’s Posture Management
 description: Learn about Microsoft's Defender for Cloud's improvements in Container’s Posture Management.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Improvements in container posture management

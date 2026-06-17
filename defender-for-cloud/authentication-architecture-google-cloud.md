@@ -4,6 +4,7 @@ description: Learn how Microsoft Defender for Cloud authenticates to Google Clou
 ms.topic: concept-article
 ms.date: 02/11/2026
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Authentication architecture for GCP connectors

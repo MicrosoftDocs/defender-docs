@@ -4,6 +4,7 @@ description: Learn how Serverless protection in Microsoft Defender for Cloud hel
 ms.topic: overview
 ms.date: 06/01/2026
 #customer intent: As a reader, I want to understand what Serverless protection is in Microsoft Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # What is Serverless protection?

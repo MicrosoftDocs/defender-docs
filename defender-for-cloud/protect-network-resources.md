@@ -4,6 +4,7 @@ description: This document addresses recommendations in Microsoft Defender for C
 ms.topic: concept-article
 ms.date: 12/22/2025
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 # Protect network resources
 

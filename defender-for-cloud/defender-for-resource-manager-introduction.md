@@ -4,6 +4,7 @@ description: Learn about the benefits and features of Microsoft Defender for Res
 ms.date: 04/19/2026
 ms.topic: overview
 #customer intent: As a security operations team, I want to learn about the benefits and features of Microsoft Defender for Resource Manager so that I can protect the resource management layer of my Azure resources.
+ai-usage: ai-assisted
 ---
 
 # Overview of Microsoft Defender for Resource Manager

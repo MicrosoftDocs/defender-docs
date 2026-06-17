@@ -4,6 +4,7 @@ description: Review support requirements for container capabilities in Microsoft
 ms.topic: limits-and-quotas
 ms.date: 06/02/2026
 ms.custom: references_regions
+ai-usage: ai-assisted
 ---
 
 # Containers support matrix in Defender for Cloud

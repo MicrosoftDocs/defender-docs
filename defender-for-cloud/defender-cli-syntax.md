@@ -4,6 +4,7 @@ description: Discover how to scan container images for security risks using Micr
 #customer intent: As a DevOps engineer, I want to scan container images for vulnerabilities so that I can ensure the security of my deployments.
 ms.date: 02/12/2026
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Defender for Cloud CLI Reference

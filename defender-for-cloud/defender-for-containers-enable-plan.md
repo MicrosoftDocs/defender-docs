@@ -3,6 +3,7 @@ title: Enable Defender for Containers in Microsoft Defender for Cloud
 description: Learn how to enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud for Azure subscriptions, AWS connectors, and GCP connectors.
 ms.topic: how-to
 ms.date: 01/19/2026
+ai-usage: ai-assisted
 ---
 
 # Enable Defender for Containers in Microsoft Defender for Cloud

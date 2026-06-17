@@ -4,6 +4,7 @@ title: New custom recommendations for AWS and GCP | Defender for Cloud in the fi
 description: Learn about new custom recommendations for AWS and GCP in Defender for Cloud
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # New custom recommendations for AWS and GCP in Defender for Cloud

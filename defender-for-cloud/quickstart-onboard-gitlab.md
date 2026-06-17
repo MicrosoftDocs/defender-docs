@@ -4,6 +4,7 @@ description: Learn how to connect your GitLab Environment to Defender for Cloud.
 ms.date: 05/13/2025
 ms.topic: quickstart
 ms.custom: ignite-2023
+ai-usage: ai-assisted
 ---
 
 # Quickstart: Connect your GitLab Environment to Microsoft Defender for Cloud

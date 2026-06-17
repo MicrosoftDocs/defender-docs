@@ -3,6 +3,7 @@ title: Express configuration PowerShell commands reference
 description: In this article, you can review the Express configuration PowerShell commands reference and copy example scripts to use in your environments.
 ms.topic: sample
 ms.date: 05/07/2026
+ai-usage: ai-assisted
 ---
 
 # Express configuration PowerShell commands reference

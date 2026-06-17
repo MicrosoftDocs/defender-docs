@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 05/26/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security professional, I want to build Cloud Security Explorer queries in Microsoft Defender for Cloud to identify software vulnerabilities in virtual machines and container images.
+ai-usage: ai-assisted
 ---
 
 # Build a Cloud Security Explorer query to identify software vulnerabilities in virtual machines (VMs) and container images

@@ -4,6 +4,7 @@ description: Learn how to migrate File Integrity Monitor (FIM) from previous ver
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to migrate FIM so that I can use the latest features and improvements.
+ai-usage: ai-assisted
 ---
 
 # Migrate from the Microsoft Monitoring Agent or the Azure Monitor Agent 

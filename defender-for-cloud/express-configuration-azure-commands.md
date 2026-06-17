@@ -4,6 +4,7 @@ description: In this article, you can review the Express configuration Azure Com
 ms.topic: sample
 ms.custom: devx-track-azurecli
 ms.date: 05/07/2026
+ai-usage: ai-assisted
 ---
 
 # Express configuration Azure Command Line Interface (CLI) commands reference

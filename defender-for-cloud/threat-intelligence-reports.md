@@ -4,6 +4,7 @@ description: This page helps you to use Microsoft Defender for Cloud threat inte
 ms.topic: how-to
 ms.date: 07/30/2025
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Cloud threat intelligence report

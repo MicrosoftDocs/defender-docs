@@ -4,6 +4,7 @@ description: Learn how to review and investigate alerts, vulnerabilities, miscon
 ms.topic: how-to
 ms.date: 05/18/2026
 ms.service: defender-for-cloud
+ai-usage: ai-assisted
 ---
 
 # Review security findings in the AKS security dashboard

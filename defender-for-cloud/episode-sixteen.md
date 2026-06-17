@@ -4,6 +4,7 @@ title: Defender for Servers integration with Microsoft Defender for Endpoint
 description: Learn about the integration between Defender for Servers and Microsoft Defender for Endpoint.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Defender for Servers integration with Microsoft Defender for Endpoint

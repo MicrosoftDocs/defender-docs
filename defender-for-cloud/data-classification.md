@@ -4,6 +4,7 @@ description: Learn how to monitor your APIs for sensitive data exposure.
 ms.date: 07/01/2025
 ms.topic: concept-article
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Classify APIs with sensitive data exposure

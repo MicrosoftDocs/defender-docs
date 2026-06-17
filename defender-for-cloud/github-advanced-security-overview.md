@@ -4,6 +4,7 @@ description: Learn how GitHub Advanced Security integrates with Microsoft Defend
 ms.date: 04/30/2026
 ms.topic: overview
 #customer intent: As a security administrator, I want to understand how GitHub Advanced Security integrates with Microsoft Defender for Cloud to provide comprehensive application security across the development lifecycle.
+ai-usage: ai-assisted
 ---
 
 # What is GitHub Advanced Security integration with Microsoft Defender for Cloud?

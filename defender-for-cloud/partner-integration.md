@@ -4,6 +4,7 @@ description: Learn about how Microsoft Defender for Cloud integrates with partne
 ms.topic: concept-article
 ms.date: 04/28/2025
 #customer intent: As a reader, I want to learn how security solutions integrate into Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # Security solutions integrations (legacy)

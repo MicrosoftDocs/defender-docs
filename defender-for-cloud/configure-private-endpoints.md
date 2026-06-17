@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 05/26/2026
 #customer intent: As a security administrator, I want to configure a private endpoint for Microsoft Defender for Cloud so that Defender traffic stays within my private network.
 
+ai-usage: ai-assisted
 ---
 
 # Configure private endpoints with Microsoft Security Private Link

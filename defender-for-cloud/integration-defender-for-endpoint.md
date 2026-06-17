@@ -5,6 +5,7 @@ ms.topic: concept-article
 ms.date: 06/17/2026
 ai-usage: ai-assisted
 #customer intent: I want to understand how Defender for Endpoint integrates with Defender for Cloud.
+ai-usage: ai-assisted
 ---
 
 # Defender for Endpoint/Defender for Vulnerability Management integration

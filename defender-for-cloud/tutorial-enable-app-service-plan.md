@@ -4,6 +4,7 @@ description: Learn how to enable the Microsoft Defender for App Service plan on 
 ms.topic: how-to
 ms.date: 05/14/2026
 #customer intent: As an Azure administrator, I want to enable Microsoft Defender for App Service so that I can detect threats targeting my web applications.
+ai-usage: ai-assisted
 ---
 
 # Protect your applications with Microsoft Defender for App Service

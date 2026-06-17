@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.date: 05/25/2026
 ms.custom: template-how-to-pattern
 #customer intent: As a security professional, I want to explore sensitive data risks so that I can prioritize remediation across attack paths, alerts, and cloud security insights.
+ai-usage: ai-assisted
 ---
 # Explore risks to sensitive data
 

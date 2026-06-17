@@ -4,6 +4,7 @@ title: Defender for DevOps | Defender for Cloud in the Field
 description: Learn about Defender for Cloud integration with Defender for DevOps.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Defender for DevOps | Defender for Cloud in the Field

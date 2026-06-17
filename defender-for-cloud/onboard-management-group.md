@@ -4,6 +4,7 @@ description: Learn how to use a supplied Azure Policy definition to enable Micro
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to onboard management groups to Defender for Cloud so that all subscriptions are covered consistently.
+ai-usage: ai-assisted
 ---
 
 # Enable Defender for Cloud on all subscriptions in a management group

@@ -4,6 +4,7 @@ description: Learn about security recommendations in Microsoft Defender for Clou
 ms.topic: concept-article
 ms.date: 12/29/2025
 #customer intent: As a security analyst, I want to learn about security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
+ai-usage: ai-assisted
 ---
 
 # Security recommendations

@@ -5,6 +5,7 @@ ms.service: defender-for-cloud
 ms.topic: concept-article
 ms.date: 01/04/2026
 #customer intent: As a security professional, I want to understand how to manage and improve the security posture of my APIs using Microsoft Defender for Cloud, so that I can protect my cloud-native applications effectively.
+ai-usage: ai-assisted
 ---
 
 # Improve your API security posture

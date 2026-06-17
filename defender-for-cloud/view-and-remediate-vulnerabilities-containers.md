@@ -6,6 +6,7 @@ ms.custom: build-2023, sfi-image-nochange
 ms.topic: how-to
 ms.date: 06/14/2026
 #customer intent: As a security administrator, I want to review vulnerability findings for images used by running containers so I can prioritize and remediate issues that affect active Kubernetes workloads.
+ai-usage: ai-assisted
 ---
 
 # View and remediate vulnerabilities for running containers

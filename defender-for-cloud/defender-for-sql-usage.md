@@ -4,6 +4,7 @@ description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on-pr
 ms.topic: how-to
 ms.date: 09/21/2025
 #customer intent: As a security administrator, I want to enable Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
+ai-usage: ai-assisted
 ---
 
 # Enable Defender for SQL Servers on Machines

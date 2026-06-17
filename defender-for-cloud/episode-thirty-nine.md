@@ -3,6 +3,7 @@ title: Defender for APIs reaches GA | Defender for Cloud in the Field
 description: Learn about what's new in Defender for APIs GA.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Defender for APIs reaches GA

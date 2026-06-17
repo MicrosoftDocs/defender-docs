@@ -3,6 +3,7 @@ title: Kubernetes lateral movement
 description: Learn how Defender for Cloud identifies lateral movement threats in Kubernetes environments.
 ms.topic: reference
 ms.date: 03/17/2025
+ai-usage: ai-assisted
 ---
 
 # Kubernetes lateral movement

@@ -3,6 +3,7 @@ title: Defender CSPM support for GCP and more updates | Defender for Cloud in th
 description: Learn about Defender CSPM's support for GCP and more updates for Defender for Cloud.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Defender CSPM support for GCP and more updates

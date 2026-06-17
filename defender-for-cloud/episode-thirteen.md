@@ -3,6 +3,7 @@ title: Defender for Storage
 description: Learn about the capabilities available in Defender for Storage.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Defender for Storage

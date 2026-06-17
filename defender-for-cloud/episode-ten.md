@@ -3,6 +3,7 @@ title: Protecting containers in GCP with Defender for Containers
 description: Learn how to use Defender for Containers, to protect Containers that are located in Google Cloud Platforms.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Protecting containers in GCP with Defender for Containers

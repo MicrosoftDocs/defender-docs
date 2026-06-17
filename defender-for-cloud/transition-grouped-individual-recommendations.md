@@ -5,6 +5,7 @@ ms.topic: best-practice
 ms.date: 02/17/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to understand the transition from grouped to individual recommendations so that I can adapt my workflows and maintain effective security posture management.
+ai-usage: ai-assisted
 ---
 
 # Transition from grouped to individual recommendations in Defender for Cloud

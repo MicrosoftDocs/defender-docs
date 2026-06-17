@@ -3,6 +3,7 @@ title: Capabilities to counter identity-based supply chain attacks | Defender fo
 description: Learn about Defender for Cloud's capability to counter identity-based supply chain attacks.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Capabilities to counter identity-based supply chain attacks

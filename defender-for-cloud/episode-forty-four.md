@@ -3,6 +3,7 @@ title: Agentless malware detection | Defender for Cloud in the field
 description: Learn about agentless malware detection in Defender for Cloud
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Agentless malware detection

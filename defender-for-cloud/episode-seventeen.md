@@ -4,6 +4,7 @@ title: Defender for Cloud integration with Microsoft Entra | Defender for Cloud 
 description: Learn about Defender for Cloud integration with Microsoft Entra.
 ms.topic: reference
 ms.date: 11/13/2025
+ai-usage: ai-assisted
 ---
 
 # Defender for Cloud integration with Microsoft Entra | Defender for Cloud in the Field

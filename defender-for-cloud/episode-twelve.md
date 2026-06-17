@@ -3,6 +3,7 @@ title: Enhanced workload protection features in Defender for Servers
 description: Learn about the enhanced capabilities available in Defender for Servers, for VMs that are located in Amazon Web Service and Google Cloud Platform, and on-premises.
 ms.topic: reference
 ms.date: 10/05/2025
+ai-usage: ai-assisted
 ---
 
 # Enhanced workload protection features in Defender for Servers

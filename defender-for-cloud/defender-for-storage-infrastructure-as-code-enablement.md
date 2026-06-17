@@ -4,6 +4,7 @@ description: Learn how to enable and configure Microsoft Defender for Storage by
 ms.date: 07/01/2025
 ms.topic: how-to
 #customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage by using IaC templates so that I can help protect all storage accounts.
+ai-usage: ai-assisted
 ---
 
 # Enable Defender for Storage by using infrastructure as code

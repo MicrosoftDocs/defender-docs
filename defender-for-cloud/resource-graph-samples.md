@@ -4,6 +4,7 @@ description: Sample Azure Resource Graph queries for Microsoft Defender for Clou
 ms.date: 05/18/2025
 ms.topic: sample
 ms.custom: subject-resourcegraph-sample, devx-track-azurepowershell, devx-track-azurecli
+ai-usage: ai-assisted
 ---
 
 # Azure Resource Graph sample queries for Microsoft Defender for Cloud

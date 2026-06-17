@@ -4,6 +4,7 @@ description: Learn how to review data security alerts in the Data and AI securit
 ms.topic: how-to
 ms.date: 05/31/2026
 #customer intent: As a security analyst, I want to review data security alerts so that I can identify and mitigate potential threats in my environments.
+ai-usage: ai-assisted
 ---
 
 # Review data security alerts

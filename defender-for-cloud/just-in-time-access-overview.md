@@ -4,6 +4,7 @@ description: This document explains how just-in-time VM access in Microsoft Defe
 ms.topic: how-to
 ms.date: 05/28/2026
 #customer intent: As a security administrator, I want to understand just-in-time VM access so that I can control access to my Azure virtual machines.
+ai-usage: ai-assisted
 ---
 
 # Just-in-time machine access

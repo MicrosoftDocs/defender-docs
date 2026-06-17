@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 04/23/2026
 ms.author: elkrieger
 author: Elazark
+ai-usage: ai-assisted
 ---
 
 # Build Cloud Security Explorer queries for container vulnerabilities

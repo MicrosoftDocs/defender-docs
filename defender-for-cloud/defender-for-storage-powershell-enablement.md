@@ -3,6 +3,7 @@ title: Enable Microsoft Defender for Storage with Azure PowerShell
 description: Learn how to enable Microsoft Defender for Storage on your Azure subscription for Microsoft Defender for Cloud by using Azure PowerShell.
 ms.topic: install-set-up-deploy
 ms.date: 06/30/2025
+ai-usage: ai-assisted
 ---
 
 # Enable and configure Microsoft Defender for Storage with Azure PowerShell
