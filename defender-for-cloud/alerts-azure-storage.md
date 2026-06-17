@@ -419,6 +419,18 @@ Storage.Blob_MalwareDownload
 
 **Severity**: High, if Eicar - low
 
+### **Suspected exposure of Azure Storage account key in a distributed client-side application**
+
+Storage.AccountKey_PubliclyLeaked
+
+**Description**: The access key of this storage account was used by a large number of distinct client IP addresses across multiple countries. This usage pattern is consistent with the storage account key being embedded in a distributed client-side application (such as an Android or iOS app, or a decompilable .NET application), allowing any user of the application - or an attacker who extracted the key from it - to access blob data outside of the intended trust boundary
+
+**Applies to**: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen2, or premium block blobs) storage accounts with the Defender for Storage plan.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Credential Access
+
+**Severity**: High
+
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
