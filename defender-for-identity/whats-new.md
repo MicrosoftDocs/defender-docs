@@ -24,6 +24,31 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## June 2026
+
+### New Defender for Identity security alerts
+
+These new alerts were added to the Defender for Identity security alerts:
+
+**New alerts related to Entra ID**:
+
+- [Anomalous activity following Global Administrator elevation](alerts-xdr.md#anomalous-activity-following-global-administrator-elevation)
+- [Reciprocal Temporary Access Pass creation between users](alerts-xdr.md#reciprocal-temporary-access-pass-creation-between-users)
+- [Suspicious service principal sign-in following credential addition](alerts-xdr.md#suspicious-service-principal-sign-in-following-credential-addition)
+- [Suspicious bulk user deletion via scripted activity](alerts-xdr.md#suspicious-bulk-user-deletion-via-scripted-activity)
+- [Suspicious removal of privileged app role assignment through Graph API](alerts-xdr.md#suspicious-removal-of-privileged-app-role-assignment-through-graph-api)
+- [Suspicious sign-in by a user exhibiting a spike in account update activity](alerts-xdr.md#suspicious-signin-by-a-user-exhibiting-a-spike-in-account-update-activity)
+- [User exhibiting spike in distinct application-resource access combinations](alerts-xdr.md#user-exhibiting-spike-in-distinct-applicationresource-access-combinations)
+
+**New alerts related to Active Directory**:
+
+- [DCSync attack (replication of directory services)](alerts-xdr.md#dcsync-attack-replication-of-directory-services)
+- [Suspicious Entra Connect account authentication](alerts-xdr.md#suspicious-entra-connect-account-authentication)
+
+**New alerts related to other identity providers**:
+
+- [SailPoint ISC suspected brute-force attack](alerts-xdr.md#sailpoint-isc-suspected-brute-force-attack)
+
 ## May 2026
 
 ### Sensor v3.x supports all identity roles on domain controllers

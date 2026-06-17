@@ -10,11 +10,13 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 11/17/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Migrate devices to use the streamlined connectivity method
@@ -36,7 +38,10 @@ In most cases, full device offboarding isn't required when reonboarding. You can
 
 ## Migrating devices using the streamlined method
 
-### Migration recommendation
+<a name="migration-recommendation"></a>
+### Review migration recommendations before switching connectivity methods
+
+Use the following recommendations to plan your migration rollout:
 
 - **Start small**. It's recommended to start with a small set of devices first. Apply the onboarding blob using any of the supported deployment tools, then monitor for connectivity. If you're using a new onboarding policy, to prevent conflicts make sure to exclude device from any other existing onboarding policies.
 
@@ -44,7 +49,7 @@ In most cases, full device offboarding isn't required when reonboarding. You can
 
 - **Complete migration**. At this stage, you can gradually roll out the migration to a larger set of devices. To complete the migration, you can replace previous onboarding policies and remove the old URLs from your network device.
 
-Validate [device prerequisites](configure-device-connectivity.md#prerequisites) before proceeding with any migrations. This information builds upon the previous article by focusing on migrating existing devices.
+Validate [device prerequisites](configure-device-connectivity.md#prerequisites) before proceeding with any migrations. This article builds upon [Onboarding devices using streamlined connectivity](configure-device-connectivity.md) by focusing on migrating existing devices.
 
 To reonboard devices, you need to use the streamlined onboarding package. For more information on how to access the package, see [Streamlined connectivity](configure-device-connectivity.md).
 
@@ -98,7 +103,8 @@ For general information on onboarding Windows server devices, see [Onboard Windo
 
 Confirm prerequisites are met: [Prerequisites for streamlined method](configure-device-connectivity.md#prerequisites).
 
-### Microsoft Defender for Cloud
+<a name="microsoft-defender-for-cloud"></a>
+### Migrate devices with Microsoft Defender for Cloud
 
 Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-server.md).
 
@@ -126,9 +132,11 @@ Confirm prerequisites are met: [Prerequisites for streamlined method](configure-
 
 Follow the guidance in [Manual deployment for Microsoft Defender for Endpoint on macOS](mac-install-manually.md) using the streamlined onboarding package.
 
-After completing the steps, you must either reboot the device or restart the service for connectivity to switch over.
+After completing the steps, you must either reboot the device or restart the Defender for Endpoint service for connectivity to switch over.
 
 ### Microsoft Intune
+
+Use the following steps to migrate macOS devices with Microsoft Intune:
 
 1. In Microsoft Intune, create a new onboarding policy using Custom Configuration profile. Don't assign it yet. Follow the instructions under [Intune-based deployment for Microsoft Defender for Endpoint on Mac](mac-install-with-intune.md).
 
@@ -138,7 +146,10 @@ After completing the steps, you must either reboot the device or restart the ser
 
 1. Reboot the device.
 
-### JAMF Pro
+<a name="jamf-pro"></a>
+### Migrate macOS devices with JAMF Pro
+
+Use the following steps to migrate macOS devices with JAMF Pro:
 
 1. Exclude device from any existing 'onboarding' policies in JAMF Pro.
 
@@ -171,7 +182,7 @@ Device connectivity to streamlined approach doesn't start if you don't reboot th
 
 ### Third-party Linux deployment tools (Puppet, Ansible, Chef)
 
-Replace the onboarding package file in the current deployment method.
+Replace the onboarding package file in your existing Puppet, Ansible, or Chef deployment configuration with the streamlined onboarding package.
 
 ---
 
@@ -198,7 +209,7 @@ Once onboarded, run the MDE Client Analyzer to confirm your device is connecting
 
 Download the Microsoft Defender for Endpoint Client Analyzer tool where Defender for Endpoint sensor is running.
 
-You can follow the same instructions as in [Verify client connectivity to Microsoft Defender for Endpoint service](verify-connectivity.md).  The script automatically uses the onboarding package configured on the device (should be streamlined version) to test connectivity.
+Follow the client connectivity validation steps in [Verify client connectivity to Microsoft Defender for Endpoint service](verify-connectivity.md).  The script automatically uses the onboarding package configured on the device (should be streamlined version) to test connectivity.
 
 Ensure connectivity is established with the appropriate URLs.
 
@@ -259,19 +270,22 @@ Once the device is onboarded to Defender for Endpoint, validate that it's contin
 
 Check the Device Page Timeline tab to confirm events are flowing from the device.
 
-#### Live Response
+<a name="live-response"></a>
+#### Test Live Response connectivity
 
 Ensure [Live Response](respond-machine-alerts.md#initiate-live-response-session) is working on your test device. Follow instructions in [Investigate entities on devices using live response](live-response.md).
 
 Make sure to run a couple of basic commands post-connection to confirm connectivity (such as cd, jobs, connect).
 
-#### Automated investigation and response
+<a name="automated-investigation-and-response"></a>
+#### Test automated investigation and response connectivity
 
 Ensure that Automated investigation and response is working on your test device: [Configure automated investigation and response capabilities](/defender-xdr/m365d-configure-auto-investigation-response).
 
 For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluations & Tutorials** \> **Tutorials & Simulations** \> **Tutorials** \> **Automated Investigation tutorials**.
 
-#### Cloud-delivered protection
+<a name="cloud-delivered-protection"></a>
+#### Test cloud-delivered protection connectivity
 
 Verify that Cloud Protection network connectivity is working:
 
