@@ -3,7 +3,7 @@ title: Reference table for all API security recommendations in Microsoft Defende
 description: This article lists all Microsoft Defender for Cloud API security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/17/2026
+ms.date: 06/18/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---

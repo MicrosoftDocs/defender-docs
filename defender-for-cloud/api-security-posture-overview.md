@@ -3,7 +3,7 @@ title: API security posture overview
 description: Learn how Microsoft Defender for Cloud enhances API security posture management for your APIs across Azure API Management, Function Apps, and Logic Apps.
 ms.service: defender-for-cloud
 ms.topic: concept-article
-ms.date: 06/17/2026
+ms.date: 06/18/2026
 #customer intent: As a security professional, I want to understand how to manage and improve the security posture of my APIs using Microsoft Defender for Cloud, so that I can protect my cloud-native applications effectively.
 ai-usage: ai-assisted
 ---
