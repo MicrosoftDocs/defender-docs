@@ -1,13 +1,14 @@
 ---
 title: Permissions needed for the site security feature of Microsoft Defender for IoT in the Defender portal
-description: This article describes the permissions required for the site security feature of Microsoft Defender for IoT in the Microsoft Defender portal.
+description: Assign the RBAC roles and permissions needed to access site security, Defender for IoT alerts, and vulnerability updates in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 07/23/2024
+ms.date: 06/11/2026
 ms.topic: how-to
-ms.custom: sfi-ga-nochange
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1013
+ai-usage: ai-assisted
 ---
 
 # Set up RBAC permissions to access site security
@@ -29,7 +30,7 @@ To make general changes to RBAC roles and permissions that relate to all other a
 
 ## Access management options
 
-There are three ways to manage user access to the Defender portal, depending on the type of tenent you're using. Each system has different named permissions that allow access for site security. The systems are:
+There are three ways to manage user access to the Defender portal, depending on whether your organization uses Global Microsoft Entra roles, Microsoft Defender unified RBAC, or Microsoft Defender for Endpoint XDR RBAC. Each access-control system listed below has different permission names that allow access to site security:
 
 - [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
 - [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac): Use Defender unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
@@ -39,7 +40,7 @@ The instructions and permission settings listed in this article apply to both De
 
 ## Set up Defender unified RBAC roles for site security
 
-Assign RBAC permissions and roles, based on the [summary table](#summary-of-rbac-roles-and-permissions-for-site-security), to give users access to site security features:
+Assign RBAC permissions and roles, based on the [RBAC roles and permissions summary](#summary-of-rbac-roles-and-permissions-for-site-security), to give users access to site security features:
 
 1. In the Defender portal, select **Settings** \> **Microsoft Defender XDR** \> **Permissions and roles**.
 1. Enable **Endpoints & Vulnerability Management**.
@@ -67,7 +68,7 @@ Assign RBAC permissions and roles, based on the [summary table](#summary-of-rbac
 
 ## Set up Microsoft Defender for Endpoint XDR RBAC (Version 2) roles for site security
 
-Assign RBAC permissions and roles, based on the [summary table](#summary-of-rbac-roles-and-permissions-for-site-security), to give users access to site security features:
+Assign RBAC permissions and roles, based on the [RBAC roles and permissions summary for site security](#summary-of-rbac-roles-and-permissions-for-site-security), to give users access to site security features:
 
 1. In the Defender portal, select **Settings** \> **Endpoints** \> **Roles**.
 1. Select **Add role**.
@@ -89,6 +90,8 @@ Assign RBAC permissions and roles, based on the [summary table](#summary-of-rbac
 1. Select **Submit**.
 
 ### Summary of RBAC roles and permissions for site security
+
+The following tables summarize the write and read permissions required for site security across the supported RBAC models.
 
 **For Unified RBAC**:
 

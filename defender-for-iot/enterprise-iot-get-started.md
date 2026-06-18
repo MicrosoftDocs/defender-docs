@@ -5,8 +5,10 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 08/25/2024
+ms.date: 06/11/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Get started with enterprise IoT
@@ -41,9 +43,10 @@ There are two ways to add enterprise IoT to the Defender portal:
 
 - Defender for Endpoint P2 customers: Start with a free trial or purchase standalone, per-device licenses to gain the same IoT-specific security value. For more information, see [set up a standalone trial license](#set-up-a-standalone-trial-license). To purchase a full license, see [purchase the standalone full license](#set-up-a-standalone-full-license).
 
-## ME5/ E5 Security customers
+<a name="me5-e5-security-customers"></a>
+## Turn on enterprise IoT security for ME5/E5 Security customers
 
-This procedure describes how to turn on enterprise IoT security in Defender portal for ME5/ E5 Security customers.
+Turn on enterprise IoT security in the Defender portal if you have an ME5 or E5 Security license.
 
 If you have extra devices that aren't covered by your ME5/E5 licenses, you can purchase standalone licenses. For more information, see [set up a standalone full license](#set-up-a-standalone-full-license).
 
@@ -59,7 +62,8 @@ If you have extra devices that aren't covered by your ME5/E5 licenses, you can p
 
     :::image type="content" source="media/enterprise-iot-get-started/eiot-toggle-on.png" alt-text="Screenshot of enterprise IoT toggled on in Microsoft Defender portal.":::
 
-## Defender for Endpoint P2 customers
+<a name="defender-for-endpoint-p2-customers"></a>
+## Set up enterprise IoT security for Defender for Endpoint P2 customers
 
 Customers with a Microsoft Defender for Endpoint P2 license only can use a trial standalone license for enterprise IoT security.
 
