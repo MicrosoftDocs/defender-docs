@@ -165,5 +165,5 @@ Within a few minutes, threat indicators should begin flowing into this Microsoft
 
 The TIP data connector described here uses the Microsoft Graph Security tiIndicators API, which is on a path for deprecation. To connect your TIP using the recommended method, see [Connect your TIP with the upload API](connect-threat-intelligence-upload-api.md).
 
-- [Visualize collected data](get-visibility.md).
-- [Detect threats with built-in analytics rules](./detect-threats-built-in.md).
+- [Visualize collected data](get-visibility.md)
+- [Detect threats with built-in analytics rules](./detect-threats-built-in.md)

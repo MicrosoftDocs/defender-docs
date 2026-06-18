@@ -918,5 +918,5 @@ There are 5 ARM deployment resources in this template guide which house the 4 CC
 ## Related content
 
 For more information, see 
-- [About Microsoft Sentinel solutions](sentinel-solutions.md).
+- [About Microsoft Sentinel solutions](sentinel-solutions.md)
 - [Data connector ARM template reference](/azure/templates/microsoft.securityinsights/dataconnectors#dataconnectors-objects-1)

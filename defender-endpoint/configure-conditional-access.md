@@ -1,6 +1,6 @@
 ---
 title: Configure Conditional Access in Microsoft Defender for Endpoint
-description: Learn about steps that you need to do in Intune, Microsoft Defender XDR, and Azure to implement Conditional Access
+description: Configure Conditional Access for Microsoft Defender for Endpoint by completing the required setup steps in Intune, Microsoft Defender XDR, and Microsoft Entra ID.
 ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
@@ -9,16 +9,17 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 01/05/2026
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Configure Conditional Access in Microsoft Defender for Endpoint
 
-This section guides you through all the steps you need to take to properly implement Conditional Access.
+Use this procedure to implement Conditional Access for Microsoft Defender for Endpoint with Microsoft Intune and Microsoft Entra ID.
 
 ## Before you begin
 
@@ -44,7 +45,7 @@ It's important to note the required roles to access these portals and implement 
 
 You need a Microsoft Intune environment with Intune managed and Microsoft Entra joined Windows 10 and Windows 11 devices.
 
-Take the following steps to enable Conditional Access as described in this article:
+Take the following steps to enable this Conditional Access configuration:
 
 1. Turn on the Microsoft Intune connection in the Microsoft Defender portal.
 2. Turn on the Defender for Endpoint integration in the Microsoft Intune admin center.
@@ -59,6 +60,8 @@ On the **Advanced features** page, verify the **Microsoft Intune connection** se
 
 ### Step 2: Turn on the Defender for Endpoint integration in Intune
 
+Perform the following steps to enable the Defender for Endpoint integration in the Microsoft Intune admin center.
+
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, select **Endpoint security** \> **Setup** section \> **Microsoft Defender for Endpoint**. Or, to go directly to the **Endpoint security \| Microsoft Defender for Endpoint** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/atp>.
 
 2. On the **Endpoint security \| Microsoft Defender for Endpoint** page, in the **Compliance policy evaluation** section, slide the **Connect Windows devices version 10.0.15063 and above to Microsoft Defender for Endpoint** toggle to **On**.
@@ -70,6 +73,8 @@ On the **Advanced features** page, verify the **Microsoft Intune connection** se
 <a name='step-4-assign-the-policy'></a>
 
 ### Step 3: Create and assign the compliance policy in Intune
+
+Use the following steps to create and assign the compliance policy in Intune.
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Devices** \> **Manage devices** section \> **Compliance**. Or, to go directly to the **Devices \| Compliance** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/compliance>.
 
@@ -129,6 +134,8 @@ On the **Advanced features** page, verify the **Microsoft Intune connection** se
 
 > [!TIP]
 > The following procedure requires the [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) role in Microsoft Entra ID.
+
+Perform the following steps to create a Conditional Access policy in Microsoft Entra ID.
 
 1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Entra ID** section \> **Conditional access**. Or, to go directly to the **Conditional Access \| Overview** page, use <https://entra.microsoft.com/#view/Microsoft_AAD_ConditionalAccess/ConditionalAccessBlade/~/Overview/menuId//fromNav/Identity>.
 
