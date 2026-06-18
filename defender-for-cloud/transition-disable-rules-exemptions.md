@@ -59,12 +59,12 @@ Use this table to translate your existing disable rules into exemption condition
 
 1. **Identify existing disable rules**: Review the rules configured for each recommendation and note the conditions you use, such as CVE and severity. Alternatively, you can use the following Azure Resource Graph (ARG) query to retrieve all existing disabled rules:
 
-```kusto
-policyresources
-| where type =~ "microsoft.authorization/policyassignments"
-| extend filters = todynamic(properties).metadata.subAssessmentSettings.filters
-| where filters != ""
-```
+    ```kusto
+    policyresources
+    | where type =~ "microsoft.authorization/policyassignments"
+    | extend filters = todynamic(properties).metadata.subAssessmentSettings.filters
+    | where filters != ""
+    ```
 
 1. **Translate to exemption conditions**: Use the preceding mapping table to convert each rule to its exemption equivalent.
 1. **Create the exemptions**: To create and manage exemptions, see [Exempt resources at scale](exempt-resources-at-scale.md) and [Exempt resources from recommendations](exempt-resource.md).

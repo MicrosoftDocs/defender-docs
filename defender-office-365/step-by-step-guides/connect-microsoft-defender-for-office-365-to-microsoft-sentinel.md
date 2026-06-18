@@ -40,6 +40,6 @@ Admins are now able to see incidents, alerts, and raw data in Microsoft Sentinel
 
 ## More Information
 
-[Connect Microsoft Defender data to Microsoft Sentinel | Microsoft Docs](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
+[Connect Microsoft Defender data to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE)
 
-[Connect Microsoft Teams to Microsoft Sentinel](/microsoftteams/teams-sentinel-guide).
+[Connect Microsoft Teams to Microsoft Sentinel](/microsoftteams/teams-sentinel-guide)

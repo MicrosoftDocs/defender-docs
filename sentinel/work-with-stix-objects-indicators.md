@@ -170,7 +170,7 @@ source
 
 For more information, see the following articles:
 
-- [Threat intelligence in Microsoft Sentinel](understand-threat-intelligence.md).
+- [Threat intelligence in Microsoft Sentinel](understand-threat-intelligence.md)
 - Connect Microsoft Sentinel to [STIX/TAXII threat intelligence feeds](./connect-threat-intelligence-taxii.md).
 - See which [TIPs, TAXII feeds, and enrichments](threat-intelligence-integration.md) can be readily integrated with Microsoft Sentinel.
 

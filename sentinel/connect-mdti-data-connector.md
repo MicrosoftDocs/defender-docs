@@ -78,4 +78,4 @@ After you connect the Defender Threat Intelligence data connector, explore these
 
 - Learn about [What is Defender Threat Intelligence?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
 - Get started with the [Defender Threat Intelligence portal](/defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal).
-- [Use matching analytics to detect threats](use-matching-analytics-to-detect-threats.md).
+- [Use matching analytics to detect threats](use-matching-analytics-to-detect-threats.md)

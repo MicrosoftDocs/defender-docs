@@ -172,4 +172,4 @@ For troubleshooting KQL queries, see [Troubleshoot KQL queries in the Microsoft 
 - [Onboarding to Microsoft Sentinel data lake](sentinel-lake-onboarding.md)
 - [Create jobs in the Microsoft Sentinel data lake](kql-jobs.md)
 - [Manage jobs in the Microsoft Sentinel data lake](kql-manage-jobs.md)
-- [Troubleshoot KQL queries in the Microsoft Sentinel data lake](kql-troubleshoot.md).
+- [Troubleshoot KQL queries in the Microsoft Sentinel data lake](kql-troubleshoot.md)
