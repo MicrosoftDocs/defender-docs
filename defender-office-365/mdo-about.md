@@ -18,7 +18,7 @@ ms.custom:
 description: Learn how Microsoft Defender for Office 365 protects email and collaboration from phishing, malware, and business email compromise with Plan 1 and Plan 2 features.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 04/17/2026
+ms.date: 05/21/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -46,7 +46,7 @@ This article is intended for Security Operations (SecOps) personnel, Microsoft 3
 The protection ladder in Defender for Office 365 contains the following elements:
 
 1. **The built-in security features for all cloud mailboxes**: Included in all Microsoft 365 subscriptions with cloud mailboxes.
-2. **Defender for Office 365 Plan 1**: Included in some Microsoft 365 subscriptions that cater to small to medium-sized businesses (for example, Microsoft 365 Business Premium).
+2. **Defender for Office 365 Plan 1**: Included in some Microsoft 365 subscriptions that cater to small to medium-sized businesses (for example, Microsoft 365 E3/G3 and Microsoft 365 Business Premium).
 3. **Defender for Office 365 Plan 2**: Included in some Microsoft 365 subscriptions that cater to enterprise organizations (for example, Microsoft 365 A5/E5/G5).
 
 Defender for Office 365 is also available as an add-on subscription to many Microsoft 365 subscriptions with cloud mailboxes.
