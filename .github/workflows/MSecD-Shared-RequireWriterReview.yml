@@ -12,6 +12,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      statuses: write
     steps:
       - name: Checkout calling repo for approvers file
         uses: actions/checkout@v5
