@@ -183,7 +183,7 @@ For more information, see [Microsoft Defender XDR for US Government customers](/
 
 |Feature  |Feature stage |Azure commercial  |Azure Government |Azure operated by 21Vianet  |
 |---------|---------|---------|---------|---------|
-|[Active Directory sync via MDI](enable-entity-behavior-analytics.md#access-ueba-from-workspace-settings) |Public preview |Yes |Yes |No |
+|[Active Directory sync via MDI](./enable-entity-behavior-analytics.md#access-ueba-from-ueba-tab) |Public preview |Yes |Yes |No |
 |[Azure resource entity pages](entity-pages.md) |Public preview |Yes |Yes |No |
 |[Entity insights](identify-threats-with-entity-behavior-analytics.md) |GA |Yes |Yes |Yes |
 |[Entity pages](entity-pages.md) |GA |Yes |Yes |Yes |

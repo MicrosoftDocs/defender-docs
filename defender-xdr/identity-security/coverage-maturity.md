@@ -1,14 +1,14 @@
 ---
 title: View your identity coverage and maturity (Preview)
 description: Learn how to use the Coverage and maturity page in Microsoft Defender to check your identity protection status and close coverage gaps in your environments.
-ms.date: 06/02/2026
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.author: abbyweisberg
 author: AbbyMSFT
 ms.reviewer: maelgami
 ai-usage: ai-assisted
 ms.service: defender-xdr
-ms.custom: msecd-doc-authoring-106
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security admin, I want to see how well my identities are protected so that I can find and close coverage gaps in my environments.
 ---
@@ -38,7 +38,8 @@ To access the **Coverage and maturity** page, sign in to the [Microsoft Defender
 
 :::image type="content" source="media/coverage-maturity-page.png" alt-text="Screenshot that shows the Coverage and maturity page in Microsoft Defender." lightbox="media/coverage-maturity-page.png":::
 
-## Maturity level
+<a name="maturity-level"></a>
+## Understand your maturity level
 
 The maturity level shows how complete your identity protection is overall. It reflects how much of your identity environment is connected, monitored, and secured. The level is tailored to your environment based on the identity sources that Defender detects, so it reflects your specific coverage status.
 
@@ -55,7 +56,8 @@ The maturity tiers are:
 
 The maturity level is based on a score ranging from 0 to 100, based on the combined coverage scores of the identity sources detected in your organization. Sources that don't exist in your environment aren't included in the calculation. As your score increases, your maturity tier progresses from **Connected** through **Protected** and **Fortified** to **Resilient**.
 
-## Top setup tasks
+<a name="top-setup-tasks"></a>
+## Review top setup tasks to improve coverage
 
 The **Top setup tasks** section shows up to five cards at the top of the page representing the most important things you can do to improve your coverage. Each card shows the task name, source type (such as Identity provider or SaaS), **impact** level, and **estimated effort**.
 
@@ -69,7 +71,8 @@ Select a card to go directly to the setup page in the portal. After you complete
 
 By default, only components detected in your environment are shown. To also see other supported integrations that aren't currently in use, change the filter on the **Review and improve coverage** side panel. For more information, see [Review and improve coverage](#review-and-improve-coverage).
 
-## Coverage sources
+<a name="coverage-sources"></a>
+## Review identity coverage sources
 
 The page shows one card for each identity source: **Identity providers**, **SaaS identities**, **On-premises identities**, and **PAM & IGA identities**. The cards you see depend on your environment and licensing.
 
@@ -83,11 +86,12 @@ Each card shows:
 - **Actions required**: The number of unresolved gaps.
 - **Review and improve coverage**: Select to see the specific gaps for this source.
 
-If any servers or app connectors have health issues, the card shows a notification that links to the **Health issues** page.
+If any servers or app connectors have health issues, the affected identity source card shows a notification that links to the **Health issues** page.
 
-### Identity providers card
+<a name="identity-providers-card"></a>
+### Review the Identity providers card
 
-Shows identities from Microsoft Entra ID and other connected identity providers. Connecting Microsoft Entra ID enables risk insights, sign-in event hunting, linking identities between environments, and security recommendations.
+The **Identity providers** card shows identities from Microsoft Entra ID and other connected identity providers. Connecting Microsoft Entra ID enables risk insights, sign-in event hunting, linking identities between environments, and security recommendations.
 
 | Item | Description |
 | --- | --- |
@@ -96,9 +100,10 @@ Shows identities from Microsoft Entra ID and other connected identity providers.
 | Coverage score | Percentage of setup tasks completed for identity providers. |
 | Actions required | Number of unresolved gaps. |
 
-### On-premises identities card
+<a name="on-premises-identities-card"></a>
+### Review the On-premises identities card
 
-Shows identities from on-premises Active Directory. Deploying sensors enables threat detections, security recommendations, automated attack disruption, and remediation actions for AD identities.
+The **On-premises identities** card shows identities from on-premises Active Directory. Deploying sensors enables threat detections, security recommendations, automated attack disruption, and remediation actions for AD identities.
 
 | Item | Description |
 | --- | --- |
@@ -107,11 +112,12 @@ Shows identities from on-premises Active Directory. Deploying sensors enables th
 | Actions required | Number of unresolved gaps. |
 
 > [!NOTE]
-> The **Coverage and maturity** page lists all servers that don't have a Defender for Identity sensor. It links to the **Sensor activation** page (**Settings** > **Identities** > **Sensors**), where you can install sensor version 3. However, sensor version 3 requires Defender for Endpoint. If a server doesn't have Defender for Endpoint, it won't appear on the Sensor activation page. For those servers, deploy [sensor version 2](/defender-for-identity/deploy/install-sensor) instead.
+> The **Coverage and maturity** page lists all servers that don't have a Defender for Identity sensor. Sensor version 3 requires Defender for Endpoint. If a server has Defender for Endpoint, you can install sensor version 3 from the **Sensor activation** page (**Settings** > **Identities** > **Sensors**). If a server doesn't have Defender for Endpoint, it won't appear on the Sensor activation page. For those servers, deploy [sensor version 2](/defender-for-identity/deploy/install-sensor) instead.
 
-### SaaS identities card
+<a name="saas-identities-card"></a>
+### Review the SaaS identities card
 
-Shows identities from connected SaaS applications. Connecting SaaS apps enables user tracking, activity hunting, security recommendations, and OAuth app threat detection.
+The **SaaS identities** card shows identities from connected SaaS applications. Connecting SaaS apps enables user tracking, activity hunting, security recommendations, and OAuth app threat detection.
 
 | Item | Description |
 | --- | --- |
@@ -119,9 +125,10 @@ Shows identities from connected SaaS applications. Connecting SaaS apps enables 
 | Active connectors | Connected apps out of total supported apps. |
 | Actions required | Number of unresolved gaps. |
 
-### PAM & IGA identities card
+<a name="pam--iga-identities-card"></a>
+### Review the PAM & IGA identities card
 
-Shows partner integrations for privileged access management (PAM) and identity governance and administration (IGA) solutions. Partner gaps count toward your maturity score. Resolving them increases the score.
+The **PAM & IGA identities** card shows partner integrations for privileged access management (PAM) and identity governance and administration (IGA) solutions. Partner gaps count toward your maturity score. Resolving them increases the score.
 
 | Item | Description |
 | --- | --- |
