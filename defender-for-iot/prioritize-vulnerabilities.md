@@ -1,15 +1,17 @@
 ---
 title: Prioritize, investigate and remediate vulnerabilities with Microsoft Defender for IoT in the Defender portal
-description: This article describes how to prioritize, investigate and remediate vulnerabilities with Microsoft Defender for IoT in the Defender portal.
+description: Learn how to review OT vulnerabilities, investigate affected devices, and take recommended remediation actions in Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/24/2024
+ms.date: 06/11/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
-# Prioritize and remediate vulnerabilities
+# Prioritize and remediate vulnerabilities in Microsoft Defender for IoT
 
 With vulnerability management, Microsoft Defender for IoT in the Defender portal provides extended coverage for operational technology (OT) networks, gathers OT device data into one place, and displays the data with the other devices on your network.
 
@@ -20,6 +22,8 @@ Learn more about how Defender for IoT [discovers vulnerabilities](discover-vulne
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
 ## Investigate vulnerabilities
+
+To investigate vulnerabilities and review recommended remediation actions, follow these steps:
 
 1. In the Defender portal, select **Endpoints > Vulnerability management > Weaknesses**.
 
@@ -44,4 +48,4 @@ Learn more about how Defender for IoT [discovers vulnerabilities](discover-vulne
 
 ## Next steps
 
-[Investigate and remediate incidents and alerts](investigate-threats.md)
+- [Investigate and remediate incidents and alerts](investigate-threats.md)
