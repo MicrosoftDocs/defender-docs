@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 06/15/2026
+ms.date: 06/18/2026
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ai-usage: ai-assisted
 ---
@@ -23,6 +23,7 @@ This article summarizes what's new in security recommendations, alerts, and inci
 
 - Review a complete list of multicloud security recommendations and alerts:
   - [AI recommendations](recommendations-reference-ai.md)
+  - [API recommendations](recommendations-reference-api.md)
   - [Compute recommendations](recommendations-reference-compute.md)
   - [Container recommendations](recommendations-reference-container.md)
   - [Data recommendations](recommendations-reference-data.md)
@@ -50,6 +51,10 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
+| June 18, 2026 | Recommendation | GA | [Unused API endpoints should be disabled and removed from Function Apps](recommendations-reference-api.md#unused-api-endpoints-should-be-disabled-and-removed-from-function-apps) |
+| June 18, 2026 | Recommendation | GA | [Unused API endpoints should be disabled and removed from Logic Apps](recommendations-reference-api.md#unused-api-endpoints-should-be-disabled-and-removed-from-logic-apps) |
+| June 18, 2026 | Recommendation | GA | [Authentication should be enabled on API endpoints hosted in Function Apps](recommendations-reference-api.md#authentication-should-be-enabled-on-api-endpoints-hosted-in-function-apps) |
+| June 18, 2026 | Recommendation | GA | [Authentication should be enabled on API endpoints hosted in Logic Apps](recommendations-reference-api.md#authentication-should-be-enabled-on-api-endpoints-hosted-in-logic-apps) |
 | June 15, 2026 | Recommendation | Preview | [Custom IAM roles should be configured on EMR clusters (Preview)](recommendations-reference-identity-access.md#custom-iam-roles-should-be-configured-on-emr-clusters-preview) |
 | June 15, 2026 | Recommendation | Preview | [Security configuration should be enabled on EMR clusters (Preview)](recommendations-reference-data.md#security-configuration-should-be-enabled-on-emr-clusters-preview) |
 | June 15, 2026 | Recommendation | Preview | [Public network access should be disabled on EMR cluster primary nodes (Preview)](recommendations-reference-networking.md#public-network-access-should-be-disabled-on-emr-cluster-primary-nodes-preview) |
