@@ -4,11 +4,12 @@ ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
 description: Turn tamper protection on or off using tenant attach with Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
 ms.custom: 
+- msecd-doc-authoring-1014
 - nextgen
 - admindeeplinkDEFENDER
 ms.subservice: ngp
@@ -20,7 +21,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
   - Microsoft Defender Antivirus
-
+ai-usage: ai-assisted
 ---
 # Manage tamper protection using tenant attach with Configuration Manager, version 2006
 
@@ -36,11 +37,16 @@ Using Configuration Manager with tenant attach, you can turn on (or off) the tam
 
 ## Prerequisites
 
+Make sure your environment meets the following requirements before you configure tamper protection with tenant attach.
+
 ### Supported operating systems
+
+Tamper protection using tenant attach is supported on the following operating systems:
 
 - Windows
 
-## Turn tamper protection using tenant attach
+<a name="turn-tamper-protection-using-tenant-attach"></a>
+## Turn tamper protection on or off by using tenant attach
 
 1. Set up tenant attach. To learn more, see [Get started: Create and deploy endpoint security policies from the admin center](/intune/configmgr/tenant-attach/endpoint-security-get-started).
 
@@ -57,7 +63,10 @@ Using Configuration Manager with tenant attach, you can turn on (or off) the tam
 
     :::image type="content" source="media/tamper-protect-configmgr.png" alt-text="Screenshot showing Windows Security settings with tamper protection enabled.":::
 
-## See also
+<a name="see-also"></a>
+## Related content
+
+The following resources provide more information about tamper protection:
 
 - [Frequently asked questions (FAQs) on tamper protection](faqs-on-tamper-protection.yml)
 - [Tech Community Blog: Announcing Tamper Protection for Configuration Manager Tenant Attach clients](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/announcing-tamper-protection-for-configuration-manager-tenant/ba-p/1700246#.X3QLR5Ziqq8.linkedin)

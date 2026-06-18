@@ -6,7 +6,7 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 06/02/2026
+ms.date: 06/17/2026
 ms.collection: 
 - m365-security
 - tier2
@@ -16,11 +16,13 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Updating MMA on Windows devices for Microsoft Defender for Endpoint
 
 > [!IMPORTANT]
-> If you've arrived on this page as a result of clicking on a notification at the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), you have devices in your environment with outdated agents, and you need to take action (described in this article) to avoid service disruption. For more details, please reference message center post MC598631 (requires access to [Message Center](/microsoft-365/admin/manage/message-center)).
+> If you've arrived on this page as a result of clicking on a notification at the [Microsoft Defender portal](https://security.microsoft.com), you have devices in your environment with outdated agents, and you need to take action (described in this article) to avoid service disruption. For more details, please reference message center post MC598631 (requires access to [Message Center](/microsoft-365/admin/manage/message-center)).
 
 
 If you're using the Microsoft Monitoring Agent (MMA) on Windows devices, it's important to keep this agent updated. Microsoft recommends upgrading to the latest version of Defender for Endpoint. This article describes how to: 
@@ -41,8 +43,8 @@ If you're using the Microsoft Monitoring Agent (MMA) on Windows devices, it's im
 
 - Download the MMA setup file:
 
-   - **Windows 64-bit agent**: [https://go.microsoft.com/fwlink/?LinkId=828603](https://go.microsoft.com/fwlink/?LinkId=828603)
-   - **Windows 32-bit agent**: [https://go.microsoft.com/fwlink/?LinkId=828604](https://go.microsoft.com/fwlink/?LinkId=828604)
+   - **Windows 64-bit agent**: [Download the Windows 64-bit agent](https://go.microsoft.com/fwlink/?LinkId=828603)
+   - **Windows 32-bit agent**: [Download the Windows 32-bit agent](https://go.microsoft.com/fwlink/?LinkId=828604)
 
 ## Upgrade to the new agent for Defender for Endpoint
 

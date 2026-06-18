@@ -21,11 +21,7 @@ ms.custom: sfi-image-nochange
 
 User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel analyzes logs and alerts from connected data sources to build baseline behavioral profiles of your organization's entities—such as users, hosts, IP addresses, and applications. Using machine learning, UEBA identifies anomalous activity that might indicate a compromised asset.
 
-You can enable User and Entity Behavior Analytics in three ways, all with the same result:
-
-- [From the SIEM workspaces tab in Microsoft Sentinel settings](#access-ueba-from-workspace-settings): Enable UEBA for your workspace and select which data sources to connect in the Microsoft Defender portal or Azure portal.
-- [From the UEBA tab in Microsoft Sentinel settings](#access-ueba-from-ueba-tab): Enable UEBA and configure data sources directly from the UEBA tab.
-- [From supported data connectors](#enable-ueba-from-supported-connectors): Enable UEBA when you configure UEBA supported data connectors in the Microsoft Defender portal.
+You can enable User and Entity Behavior Analytics [from the UEBA tab in Microsoft Sentinel settings](#access-ueba-from-ueba-tab).
 
 This article explains how to enable UEBA and configure data sources from your Microsoft Sentinel workspace settings and from supported data connectors.
 
@@ -52,33 +48,6 @@ To enable or disable this feature (these prerequisites aren't required to use th
 >
 > - No special license is required to add UEBA functionality to Microsoft Sentinel, and there's no extra cost for using it.
 > - However, since UEBA generates new data and stores it in new tables that UEBA creates in your Log Analytics workspace, **additional data storage charges** apply.
-
-## Access UEBA from workspace settings
-
-To enable UEBA from your Microsoft Sentinel workspace settings:
-
-1. Go to the **Entity behavior configuration** page.
-
-    ### [Azure portal](#tab/azure)
-
-    Use any one of these three ways to get to the **Entity behavior configuration** page:
-
-    - Select **Entity behavior** from the Microsoft Sentinel navigation menu, then select **Entity behavior settings** from the top menu bar.
-
-    - Select **Settings** from the Microsoft Sentinel navigation menu, select the **Settings** tab, then under the **Entity behavior analytics** expander, select **Set UEBA**.
-
-    - From the Microsoft Defender XDR data connector page, select the **Go the UEBA configuration page** link.
-
-    ### [From SIEM workspace settings](#tab/siem)
-
-    To get to the **Entity behavior configuration** page:
-
-
-    1. From the Microsoft Defender portal navigation menu, select **Settings** > **Microsoft Sentinel** > **SIEM workspaces**.
-    1. Select the workspace you want to configure.
-    1. From the workspace configuration page, select **Entity behavior analytics** > **Configure UEBA**. 
-
----
 
 ## Access UEBA from UEBA tab
 
@@ -110,7 +79,7 @@ To get to the **Entity behavior configuration** page:
     - Azure Activity
     - Security Events
 
-    You can enable these data sources from the Defender portal only (preview):
+    You can enable these data sources from the Defender portal only:
 
     - AAD Managed Identity Signin logs (Microsoft Entra ID)
     - AAD Service Principal Signin logs (Microsoft Entra ID)
@@ -131,12 +100,6 @@ To get to the **Entity behavior configuration** page:
     1. From the Microsoft Defender portal navigation menu, select **Settings** > **Microsoft Sentinel** > **SIEM workspaces**.
     1. Select the workspace you want to configure.
     1. From the workspace configuration page, select **Anomalies** and toggle on **Detect Anomalies**. 
-
-## Enable UEBA from supported connectors
-
-[!INCLUDE [data-connector-behavior-analytics](includes/data-connector-behavior-analytics.md)] 
-
-For more information about configuring Microsoft Sentinel data connectors, see [Connect data sources to Microsoft Sentinel by using data connectors](./configure-data-connector.md).
 
 ## Install the UEBA Essentials solution (optional)
 

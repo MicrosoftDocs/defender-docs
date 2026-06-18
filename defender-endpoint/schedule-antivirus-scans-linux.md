@@ -7,13 +7,14 @@ ms.author: painbar
 author: paulinbar
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 05/25/2026
+ms.date: 06/17/2026
 ai-usage: ai-generated
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Schedule antivirus scans on Linux (preview)
 
-This article describes how to configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux. It's intended for IT and security administrators who manage Linux devices and want to ensure continuous antivirus protection through centralized scan scheduling.
+This article describes how to configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux. It's intended for IT and security administrators who manage Linux devices and want to ensure continuous antivirus protection through centralized scan scheduling. Before you begin, review the [prerequisites](#prerequisites) to ensure your environment meets the necessary requirements.
 
 ## Overview
 
@@ -99,7 +100,7 @@ You can configure scheduled antivirus scans on Linux using one of the following 
    1. For **Platform**, select **Linux**.
    1. Select the template **Microsoft Defender Antivirus** and then select **Create policy**.
    1. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
-   1. On the **Configuration settings** page, go to the **Schedule Scan** section towards the end of the page and configure the [settings](#scheduled-scan-settings) you want to manage with this profile.
+   1. On the **Configuration settings** page, go to the **Schedule Scan** section towards the end of the page and configure the [scheduled scan settings](#scheduled-scan-settings) you want to manage with this profile.
    1. When you're done configuring settings, select **Next**.
    1. On the **Assignments** page, select the groups that receive this profile. Then select **Next**.
    1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.

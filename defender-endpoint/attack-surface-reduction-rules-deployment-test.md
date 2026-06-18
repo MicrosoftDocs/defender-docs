@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - asr
   - sfi-image-nochange
 ms.topic: how-to
@@ -17,7 +17,7 @@ ms.collection:
  - highpri
  - tier1
  - mde-asr
-ms.date: 05/04/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to test ASR rules in Audit mode so that I can identify false positives and configure exclusions before enabling rules in Block mode.
 appliesto:
@@ -52,7 +52,7 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Ex
 ## Step 1: Test all ASR rules in Audit mode
 
 > [!NOTE]
-> As previously described, you can typically enable the [standard protection rules](attack-surface-reduction-rules-overview.md#asr-rules) in **Block** or **Warn** mode without testing.
+> As described in [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules), you can typically enable the standard protection rules in **Block** or **Warn** mode without testing.
 
 Typically, enable all ASR rules in **Audit** mode at the same time so you can determine which rules are triggered by everyday business activities. Start with your ASR rule champions or devices in ring 1.
 

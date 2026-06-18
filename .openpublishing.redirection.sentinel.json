@@ -3414,6 +3414,11 @@
       "source_path": "sentinel/work-with-styx-objects-indicators.md",
       "redirect_url": "/azure/sentinel/work-with-stix-objects-indicators",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/sentinel/sentinel-solutions-post-publish-tracking.md",
+      "redirect_url": "/azure/sentinel/isv/sentinel-solutions-post-publish-tracking",
+      "redirect_document_id": false
     }
   ]
 }
