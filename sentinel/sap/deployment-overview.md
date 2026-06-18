@@ -136,7 +136,7 @@ For more information, see [Stop SAP data collection](stop-collection.md).
 
 For more information, see:
 
-- [About Microsoft Sentinel content and solutions](../sentinel-solutions.md).
+- [About Microsoft Sentinel content and solutions](../sentinel-solutions.md)
 - [Monitor the health and role of your SAP systems](../monitor-sap-system-health.md)
 - [Update Microsoft Sentinel's SAP data connector agent](update-sap-data-connector.md)
 
