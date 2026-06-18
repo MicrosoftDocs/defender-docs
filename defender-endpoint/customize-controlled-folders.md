@@ -12,8 +12,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 05/06/2026
-ms.custom: msecd-doc-authoring-1012
+ms.date: 06/17/2026
+ms.custom: msecd-doc-authoring-1014
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to customize controlled folder access settings so that I can protect important folders while allowing trusted apps to function.
 appliesto:
@@ -41,6 +41,8 @@ This article describes how to customize controlled folder access capabilities, a
 
 ### Supported operating systems
 
+Controlled folder access is supported on the following operating systems:
+
 - Windows 11
 - Windows 10
 - Windows Server 2019 and later
@@ -58,6 +60,8 @@ You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobil
 
 ### Use the Windows Security app to protect additional folders
 
+To add protected folders by using the Windows Security app, perform the following steps:
+
 1. Open the Windows Security app by selecting the shield icon in the task bar, or by searching for *security* in the Start menu.
 
 1. Select **Virus & threat protection**, and then scroll down to the **Ransomware protection** section.
@@ -72,6 +76,8 @@ You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobil
 
 ### Use Group Policy to protect additional folders
 
+To configure protected folders by using Group Policy, follow these steps:
+
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)?preserve=true).
 
 1. Right-click the Group Policy Object you want to configure, and then select **Edit**.
@@ -85,6 +91,11 @@ You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobil
 1. Deploy your Group Policy Object as you usually do.
 
 ### Use PowerShell to protect additional folders
+
+To add protected folders by using PowerShell, follow these steps:
+
+> [!IMPORTANT]
+> Use `Add-MpPreference` to append or add apps to the list and not `Set-MpPreference`. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
 
 1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
 
@@ -103,7 +114,7 @@ You can use the Windows Security app, Group Policy, PowerShell cmdlets, or mobil
 
 ### Use MDM CSPs to protect additional folders
 
-Use the [./Device/Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessprotectedfolders) configuration service provider (CSP) to specify additional folders that should be protected by the Controlled folder access feature.
+Use the [ControlledFolderAccessProtectedFolders CSP setting](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessprotectedfolders) configuration service provider (CSP) to specify additional folders that should be protected by the Controlled folder access feature.
 
 ## Allow specific apps to make changes to controlled folders
 
@@ -118,6 +129,8 @@ An allowed application or service only has write access to a controlled folder a
 
 ### Use the Windows Security app to allow specific apps
 
+To allow a specific app by using the Windows Security app, follow these steps:
+
 1. Open the Windows Security app by searching the start menu for **Security**.
 
 1. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar) and then select **Manage ransomware protection**.
@@ -130,6 +143,8 @@ An allowed application or service only has write access to a controlled folder a
 
 ### Use Group Policy to allow specific apps
 
+To allow specific apps by using Group Policy, complete the following steps:
+
 1. On your Group Policy management device, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)?preserve=true), right-click the Group Policy Object you want to configure and select **Edit**.
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration** and select **Administrative templates**.
@@ -141,6 +156,11 @@ An allowed application or service only has write access to a controlled folder a
     a. Add the full path to the executable in **Value name**. Set **Value** to `0`. For example, to allow the Command Prompt set **Value name** as `C:\Windows\System32\cmd.exe`. **Value** should be set to `0`.
 
 ### Use PowerShell to allow specific apps
+
+To allow specific apps by using PowerShell, follow these steps:
+
+> [!IMPORTANT]
+> Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
 
 1. Type **PowerShell** in the Start menu, right-click **Windows PowerShell** and then select **Run as administrator**.
 1. Enter the following cmdlet:
@@ -164,7 +184,7 @@ An allowed application or service only has write access to a controlled folder a
 
 ### Use MDM CSPs to allow specific apps
 
-Use the [./Vendor/MSFT/Policy/Config/Defender/ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-guardedfoldersallowedapplications) configuration service provider (CSP) to allow apps to make changes to protected folders.
+Use the [ControlledFolderAccessAllowedApplications CSP setting](/windows/client-management/mdm/policy-csp-defender#defender-guardedfoldersallowedapplications) configuration service provider (CSP) to allow apps to make changes to protected folders.
 
 ## Allow signed executable files to access protected folders
 
@@ -175,7 +195,7 @@ Microsoft Defender for Endpoint certificate and file indicators can allow signed
 
 ## Customize the notification
 
-For more information about customizing the notification when a rule is triggered and blocks an app or file, see [Configure alert notifications in Microsoft Defender for Endpoint](/defender-xdr/configure-email-notifications).
+For more information about customizing alert notifications for controlled folder access events when a rule is triggered and blocks an app or file, see [Configure alert notifications in Microsoft Defender for Endpoint](/defender-xdr/configure-email-notifications).
 
 ## Related content
 

@@ -4,11 +4,11 @@ description: Learn how to configure Microsoft Defender for Endpoint on Linux for
 author: paulinbar
 ms.author: painbar
 ms.reviewer: rutujadange
-ms.date: 05/28/2026
+ms.date: 06/17/2026
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.custom: msecd-doc-authoring-1012
+ms.custom: msecd-doc-authoring-1014
 ai-usage: ai-assisted
 #customer intent: As a penetration tester, I want to configure Defender for Endpoint on Linux with full protection so that my evaluation results reflect true detection capabilities.
 ---
@@ -27,20 +27,9 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
 
 - **Using a consistent process to submit potential false negatives** for investigation and signal improvement.
 
-## Table of contents
+Before you begin, ensure your environment meets the [recommended system requirements](#ensure-your-environment-meets-recommended-system-requirements) and that Defender for Endpoint on Linux is already deployed and onboarded.
 
-- [Challenges and solutions at a glance](#challenges-and-solutions-at-a-glance)
-- [Configure Defender for accurate evaluation](#configure-defender-for-accurate-evaluation)
-  - [Enable Full Protection Settings](#enable-full-protection-settings)
-  - [Enable new protection capabilities currently in preview](#enable-new-protection-capabilities-currently-in-preview)
-  - [Keep Defender up to date](#keep-defender-up-to-date)
-  - [Ensure your environment meets recommended system requirements](#ensure-your-environment-meets-recommended-system-requirements)
-  - [Review your exclusions](#review-your-exclusions)
-- [Interpret evaluation results](#interpret-evaluation-results)
-- [Submit possible false negatives for investigation](#submit-possible-false-negatives-for-investigation)
-  - [Step 1: Gather the Microsoft Defender for Endpoint diagnostic logs](#step-1-gather-the-microsoft-defender-for-endpoint-diagnostic-logs)
-  - [Step 2: Gather information](#step-2-gather-information)
-  - [Step 3: Submit data to Microsoft as soon as possible](#step-3-submit-data-to-microsoft-as-soon-as-possible)
+<a name="table-of-contents"></a>
 
 ## Challenges and solutions at a glance
 
@@ -53,7 +42,7 @@ The following guidance explains how to enable Microsoft Defender for Endpoint on
 
 ## Configure Defender for accurate evaluation
 
-For accurate BAS and penetration testing results, Microsoft Defender for Endpoint on Linux should run with the full protection stack enabled, the latest platform updates applied, and adequate system resources available. See the following sections for guidance regarding each requirement.
+For accurate BAS and penetration testing results, Microsoft Defender for Endpoint on Linux should run with the full protection stack enabled, the latest platform updates applied, and adequate system resources available. For guidance regarding each requirement, see [Enable Full Protection Settings](#enable-full-protection-settings), [Enable new protection capabilities currently in preview](#enable-new-protection-capabilities-currently-in-preview), [Keep Defender up to date](#keep-defender-up-to-date), [Ensure your environment meets recommended system requirements](#ensure-your-environment-meets-recommended-system-requirements), and [Review your exclusions](#review-your-exclusions).
 
 ### Enable Full Protection Settings
 
@@ -118,11 +107,7 @@ To get the most current and comprehensive assessment of Defender's detection and
 
 Running an older Defender for Endpoint on Linux version means the agent continues to operate and receive security intelligence updates. However, you don't receive the latest features, bug fixes, and optimizations from Microsoft. An outdated agent puts your environment at greater risk for new threats and operational issues, because the agent won't be improved with the latest capabilities.
 
-To maintain the highest level of security, support, and reliability, upgrade to the latest agent version as soon as possible. For upgrade guidance, see the following articles:
-
-- [Deploy updates for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-updates)
-
-- [Update Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-update-mde-linux)
+To maintain the highest level of security, support, and reliability, upgrade to the latest agent version as soon as possible. For upgrade guidance, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-updates) and [Update Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-update-mde-linux).
 
 ### Ensure your environment meets recommended system requirements
 
@@ -148,9 +133,11 @@ After running BAS or penetration testing scenarios, correctly interpret the resu
 
 ## Submit possible false negatives for investigation
 
+If your evaluation reveals expected detections that Defender did not trigger, submit the potential false negatives to Microsoft for investigation. The following three steps guide you through collecting diagnostic logs, gathering required information, and submitting the data for analysis.
+
 ### Step 1: Gather the Microsoft Defender for Endpoint diagnostic logs
 
-**Use the MDE Client Analyzer log:** You can collect logs by using [Live Response](/defender-endpoint/run-analyzer-linux) or [locally](/defender-endpoint/run-analyzer-linux).
+**Use the MDE Client Analyzer log:** You can collect logs by using [Live Response](/defender-endpoint/run-analyzer-linux) or by [running the analyzer locally](/defender-endpoint/run-analyzer-linux).
 
 **Microsoft Defender Antivirus diagnostic data (MpSupport.cab)**
 
@@ -201,4 +188,4 @@ Submit the data you gathered in Steps 1 and 2 by using either the MDSI portal or
 
 1. Use the Submission ID to track the status of your submission.
 
-1. If you have questions, [contact support](/defender-endpoint/contact-support).
+1. If you have questions, [contact Microsoft Defender for Endpoint support](/defender-endpoint/contact-support).
