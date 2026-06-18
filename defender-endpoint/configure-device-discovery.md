@@ -1,6 +1,6 @@
 ---
 title: Configure device discovery in Microsoft Defender for Endpoint
-description: Learn how to configure device discovery in Microsoft Defender XDR using basic or standard discovery
+description: Configure device discovery in Microsoft Defender for Endpoint using basic or standard discovery modes, and review setup requirements and supported operating systems.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: painbar
@@ -9,12 +9,13 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-ms.date: 01/12/2026
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Manage device discovery in Microsoft Defender for Endpoint
 
@@ -22,7 +23,7 @@ appliesto:
 
 This article describes how to set up and configure device discovery in Microsoft Defender for Endpoint.
 
-Learn about the [Supported operating systems](device-discovery.md#supported-operating-systems) for this feature.
+Learn about the [Supported operating systems](device-discovery.md#supported-operating-systems) for device discovery.
 
 ## Set up device discovery
 
@@ -44,7 +45,7 @@ To set up device discovery:
 To customize the list of devices used to perform standard discovery, do one of the following:
 
 - Enable standard discovery on all onboarded devices that support device discovery.
-- Select a subset or subsets of your devices using device tags (see [Set up device discovery](configure-device-discovery.md#set-up-device-discovery)). In this case, all other devices run basic discovery only.
+- Select a subset or subsets of your devices using device tags (see [Set up device discovery](configure-device-discovery.md#set-up-device-discovery)). When you select subsets of devices using device tags, all other devices run basic discovery only.
 
 ## Exclude devices from standard discovery
 
@@ -72,7 +73,7 @@ The **Monitored networks** page shows a list of networks where device discovery 
 
 By default, Defender for Endpoint automatically monitors networks that are identified as corporate networks, and ignores non-corporate networks.
 
-The list sorts networks based on the total number of devices seen on the network in the last seven days. If fewer than 50 networks are identified as corporate networks, then list shows up to 50 networks with the most onboarded devices.
+The list sorts networks based on the total number of devices seen on the network in the last seven days. If fewer than 50 networks are identified as corporate networks, the Monitored networks list shows up to 50 networks with the most onboarded devices.
 
 ### Manage monitored networks
 
@@ -106,7 +107,7 @@ To review and assess non-onboarded devices, and to find other device details, se
 
 ## Disable device discovery
 
-You can disable device discovery in the [Advanced features](advanced-features.md) page. When you disable device discovery, Defender for Endpoint doesn't discover devices in your network, but **SenseNDR.exe** still runs on the onboarded devices.
+You can disable device discovery in the [Advanced features](advanced-features.md) page. When you disable device discovery, Defender for Endpoint doesn't discover devices in your network, but **SenseNDR.exe** (the network detection and response sensor process) still runs on the onboarded devices.
 
 ## Troubleshoot
 
@@ -114,7 +115,7 @@ If you encounter issues with device discovery or authenticated network scans, se
 
 ## Explore devices in the network
 
-You can use the following advanced hunting query to get more context about each network name described in the networks list. The query lists all the onboarded devices that were connected to a certain network within the last seven days.
+You can use the following advanced hunting query to get more context about each network name described in the Monitored networks list. The query lists all the onboarded devices that were connected to a certain network within the last seven days.
 
 ```kusto
 DeviceNetworkInfo
@@ -127,9 +128,10 @@ DeviceNetworkInfo
 | summarize arg_max(Timestamp, *) by DeviceId
 ```
 
-### Get information on device
+<a name="get-information-on-device"></a>
+### Get information about a device
 
-You can use the following advanced hunting query to get the latest complete information on a specific device.
+You can use the following advanced hunting query to get the latest complete information on a specific device. The query resolves a device name to its most recent DeviceId and platform details, which you can use in subsequent hunting queries.
 
 ```kusto
 DeviceInfo
