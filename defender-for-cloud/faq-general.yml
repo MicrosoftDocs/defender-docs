@@ -1,14 +1,18 @@
 ### YamlMime:FAQ
 metadata:
-  title: Common questions -  General questions
+  title: Common questions - General questions
   description: Frequently asked general questions about Microsoft Defender for Cloud, a product that helps you prevent, detect, and respond to threats
   services: defender-for-cloud
+  author: ElazarK
+  ms.author: elkrieger
   manager: orspodek
   ms.topic: faq
   ms.date: 06/18/2026
   ms.custom: sfi-image-nochange
 title: Common questions - General questions
 summary: |
+  This article answers common general questions about Microsoft Defender for Cloud.
+  Use this FAQ to quickly find guidance about access, pricing, recommendations, alerts, and multicloud scenarios.
 
 sections:
   - name: General questions
@@ -29,7 +33,7 @@ sections:
       - question: |
           Is there a trial version of Defender for Cloud?
         answer: |
-          Defender for Cloud is free for the first 30 days. Any usage beyond 30 days is automatically charged as per the pricing scheme. [Learn more](https://azure.microsoft.com/pricing/details/defender-for-cloud/). Note that malware scanning in Defender for Storage is not included for free in the first 30 day trial and will be charged from the first day.
+          Defender for Cloud is free for the first 30 days. Any usage beyond 30 days is automatically charged based on the pricing model. See [Microsoft Defender for Cloud pricing details](https://azure.microsoft.com/pricing/details/defender-for-cloud/). Note that malware scanning in Defender for Storage isn't included in the free 30-day trial and is charged from the first day.
   
       - question: |
           Which Azure resources are monitored by Microsoft Defender for Cloud?
@@ -77,7 +81,7 @@ sections:
           * Deploying missing system updates
           * Addressing OS configurations that don't match the recommended baselines
           
-          Only recommendations that are enabled in Security Policies are shown here.
+          Only recommendations that are enabled in security policies are shown in Defender for Cloud.
           
           
       - question: |
@@ -115,7 +119,7 @@ sections:
         answer: |
           Sometimes, a security recommendation appears in more than one policy initiative. If you have multiple instances of the same recommendation assigned to the same subscription, and you create an exemption for the recommendation, it affects all of the initiatives that you have permission to edit.
 
-          If you try to create an exemption for this recommendation, you'll see one of the two following messages:
+          If you try to create an exemption for that recommendation instance, you'll see one of these two messages:
 
           - If you **have** the necessary permissions to edit both initiatives, you'll see:
 
@@ -129,7 +133,7 @@ sections:
       - question: |
           Are there any recommendations that don't support exemption?
         answer: |
-          These generally available recommendations don't support exemption:
+          The following generally available recommendations don't support exemption:
 
           - All advanced threat protection types should be enabled in SQL managed instance advanced data security settings
           - All advanced threat protection types should be enabled in SQL server advanced data security settings
@@ -179,7 +183,7 @@ sections:
       - question: |
           What operating systems for my EC2 instances are supported?
         answer: |
-          For a list of the AMIs with the SSM Agent preinstalled, see [this page in the AWS docs](https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent-technical-details.html#ami-preinstalled-agent).
+          For a list of Amazon Machine Images (AMIs) with the AWS Systems Manager (SSM) Agent preinstalled, see [AWS docs: AMIs with SSM Agent preinstalled](https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent-technical-details.html#ami-preinstalled-agent).
 
           For other operating systems, the SSM Agent should be installed manually using the following instructions:
 
@@ -261,13 +265,13 @@ sections:
         answer: |
           There's no cost for enabling a continuous export. Costs might be incurred for ingestion and retention of data in your Log Analytics workspace, depending on your configuration there.
 
-          Many alerts are only provided when you enabled Defender plans for your resources. A good way to preview the alerts you get in your exported data is to see the alerts shown in Defender for Cloud's pages in the Azure portal.
+          Many alerts are only provided when you enable Defender plans for your resources. A good way to preview the alerts in your exported data is to review alerts on the **Alerts** page in Defender for Cloud in the Azure portal.
 
           Learn more about [Log Analytics workspace pricing](https://azure.microsoft.com/pricing/details/monitor/).
 
           Learn more about [Azure Event Hubs pricing](https://azure.microsoft.com/pricing/details/event-hubs/).
 
-          For general information about Defender for Cloud pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+          For general information about Defender for Cloud pricing, see the [Microsoft Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
       
       
       - question: |
@@ -296,7 +300,7 @@ sections:
       - question: |
           Does continuous export support any business continuity or disaster recovery (BCDR) scenarios?
         answer: |
-          Continuous export can be helpful in to prepare for BCDR scenarios where the target resource is experiencing an outage or other disaster. However, it's the organization's responsibility to prevent data loss by establishing backups according to the guidelines from Azure Event Hubs, Log Analytics workspace, and Logic App.
+          Continuous export can help you prepare for business continuity and disaster recovery (BCDR) scenarios where the target resource is experiencing an outage or another disaster. However, it's your organization's responsibility to prevent data loss by establishing backups according to guidance for Azure Event Hubs, Log Analytics workspaces, and Azure Logic Apps.
 
           Learn more in [Azure Event Hubs - Geo-disaster recovery](/azure/event-hubs/event-hubs-geo-dr).
 
@@ -308,7 +312,7 @@ sections:
       - question: |
           When I enable default access, in which situations do I need to re-run the Cloud Formation template, Cloud Shell script, or Terraform template?
         answer: |
-          Modifications to Defender for Cloud plans or their options, including features within those plans, necessitate running the deployment template. This applies regardless of the permission type selected during the creation of the security connector. If regions have been changed, as in this screenshot, you don't need to re-run the Cloud Formation template or Cloud Shell script.
+          Modifications to Defender for Cloud plans or plan options, including plan features, require rerunning the relevant deployment artifact, such as the CloudFormation template, Cloud Shell script, or Terraform template. This applies regardless of the permission type selected during creation of the security connector. If only regions were changed, as shown in this screenshot, you don't need to rerun the CloudFormation template or Cloud Shell script.
 
           :::image type="content" source="media/faq-general/change-region.png" alt-text="Screenshot that shows a change in region.":::
         
@@ -324,13 +328,13 @@ sections:
       - question: |
           How does onboarding an AWS organization or management account to Microsoft Defender for Cloud work?
         answer: |
-          Onboarding an organization or a management account to Microsoft Defender for Cloud initiates the process of [deploying a StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started-create.html). The StackSet includes the necessary roles and permissions. The StackSet also propagates the required permissions across all accounts within the organization. 
+          Onboarding an organization or a management account to Microsoft Defender for Cloud initiates the process of [deploying a StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started-create.html). The StackSet includes the necessary roles and permissions. The StackSet also propagates the required permissions across all accounts within the organization.
           
           The included permissions allow Microsoft Defender for Cloud to deliver the selected security features through the created connector in Defender for Cloud. The permissions also allow Defender for Cloud to continuously monitor all accounts that might be added using the auto-provisioning service.
           
           Defender for Cloud is capable of identifying the creation of new management accounts and can leverage the granted permissions to automatically provision an equivalent member security connector for each member account.
           
-          This feature is available for organizational onboarding only and allows Defender for Cloud to create connectors for newly added accounts. The feature also allows Defender for Cloud to edit all member connectors when the management account is edited, delete all member accounts when the management account is deleted, and remove specific member account if the corresponding account is removed.
+          Automatic connector creation for newly added accounts is available for organizational onboarding only. Management-account-based connector management also allows Defender for Cloud to edit all member connectors when the management account is edited, delete all member connectors when the management account is deleted, and remove a specific member connector when the corresponding account is removed.
 
           A separate stack must be deployed specifically for the management account.
 
@@ -349,7 +353,7 @@ sections:
       - question: |
           What time of the day my VM is scanned, including start and end time?
         answer: |
-          The time of the day is dynamic and can change across different account and subscriptions.
+          Scan timing is dynamic and can change across different accounts and subscriptions.
 
       - question: |
           Is there any telemetry regarding the copied snapshot?
@@ -359,33 +363,34 @@ sections:
       - question: |
           Which data is collected from snapshots?
         answer: |
-          Agentless scanning collects data similar to the data an agent collects to perform the same analysis. Raw data, PIIs, or sensitive business data isn't collected, and only metadata results are sent to Defender for Cloud.
+          Agentless scanning collects data similar to the data an agent collects to perform the same analysis. Raw data, personally identifiable information (PII), and sensitive business data aren't collected. Only metadata results are sent to Defender for Cloud.
       - question: |
-          Where are the Disk snapshots copied?
+          Where are disk snapshots copied?
         answer: |
-          The analysis of the snapshots takes place in secure environments managed by Defender for Cloud.
+          Analysis of copied disk snapshots takes place in secure environments managed by Defender for Cloud.
 
-          The environments are regional across multicloud, such that snapshots remain at the same cloud region as the VM they originated from (for example - a snapshot of an EC2 instance in US West are analyzed at the same region, without being copied to another region or cloud).
+          The environments are regional across multicloud, so snapshots remain in the same cloud region as the VM they originated from. For example, a snapshot of an EC2 instance in US West is analyzed in that same region, without being copied to another region or cloud.
 
           The scanning environment where disks are analyzed is volatile, isolated, and highly secure.
 
       - question: |
-          How is the Disk snapshot handled in Microsoft Account? Can Microsoft share Agentless scanning platform security & privacy principles?
+          How are disk snapshots handled in Microsoft accounts, and what are the agentless scanning platform security and privacy principles?
         answer: |
-          Agentless scanning platform is audited & compliant with Microsoft's strict security and privacy standards.
-          Some of the measures taken are (not a comprehensive list): 
+          The agentless scanning platform is audited and compliant with Microsoft's strict security and privacy standards.
+          Some of the measures include (this list isn't comprehensive):
           - Physical isolation per region, additional isolation per customer and subscription
-          - E2E encryption at rest and transit
-          - Disk snapshots immediately purged after scan
+          - End-to-end (E2E) encryption at rest and in transit
+          - Disk snapshots are immediately purged after the scan
           - Only metadata (that is, security findings) leaves the isolated scanning environment
           - The scanning environment is autonomous
-          - All operations are internally audited 
+          - All operations are internally audited
       - question: |
           What are the costs related to agentless scanning?
         answer: |
-          Agentless scanning is included in Defender Cloud Security Posture Management (CSPM) and Defender for Servers P2 plans. No other costs incur to Defender for Cloud when enabling it.
-            > [!NOTE]
-            > AWS charges for retention of disk snapshots. The Defender for Cloud scanning process actively tries to minimize the period during which a snapshot is stored in your account (typically up to a few minutes). AWS might charge an overhead cost for the disk snapshots storage. Check with AWS to see what costs apply to you.
+          Agentless scanning is included in the Defender cloud security posture management (Defender CSPM) plan and Defender for Servers Plan 2. There are no additional Defender for Cloud charges when you enable agentless scanning.
+
+          > [!NOTE]
+          > AWS charges for retention of disk snapshots. The Defender for Cloud scanning process tries to minimize how long a snapshot is stored in your account, typically up to a few minutes. AWS might charge an overhead cost for snapshot storage. Check with AWS to understand which costs apply to you.
       - question: |
           How can I track AWS costs incurred for the disk snapshots created by Defender for Cloud agentless scanning?
         answer: | 
@@ -393,7 +398,8 @@ sections:
           You need to [activate the tags in the Billing and Cost Management console](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/activate-built-in-tags.html). It can take up to 24 hours for tags to activate.    
 additionalContent: |
 
-  ## Next steps
-  
-  [Learn about what's new in Defender for Cloud](release-notes.md)
+  ## Next step
+
+  > [!div class="nextstepaction"]
+  > [Learn about what's new in Defender for Cloud](release-notes.md)
   
