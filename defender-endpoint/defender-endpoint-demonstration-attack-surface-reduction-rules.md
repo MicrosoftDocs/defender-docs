@@ -12,8 +12,8 @@ ms.collection:
 - demo
 ms.topic: how-to
 ms.subservice: asr
-ms.custom: msecd-doc-authoring-1012
-ms.date: 05/04/2026
+ms.custom: msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -34,13 +34,16 @@ ASR rules target risky software behavior on Windows devices that attackers commo
 
 ## Prerequisites
 
+Before you begin these demonstrations, make sure your environment meets the following requirements:
+
 - Windows 10 version 1709 (October 2017) or later.
 - Windows Server 2012 R2 or later.
   - Windows Server 2012 R2 and Windows Server 2016 require the [Functionality in the modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 - Azure Local (formerly known as Azure Stack hyper-converged infrastructure (HCI)) OS version 23H2 or later.
 - [Download and extract the attack surface reduction PowerShell scripts](https://demo.wd.microsoft.com/Content/WindowsDefender_ASR_scripts.zip)
 
-## PowerShell commands
+<a name="powershell-commands"></a>
+## Use PowerShell to enable and verify attack surface reduction rules
 
 To enable all available ASR rules, run the following command in an elevated PowerShell window (a PowerShell window you opened after selecting **Run as administrator**):
 
@@ -48,7 +51,7 @@ To enable all available ASR rules, run the following command in an elevated Powe
 Add-MpPreference -AttackSurfaceReductionRules_Ids 01443614-cd74-433a-b99e-2ecdc07bfc25,33ddedf1-c6e0-47cb-833e-de6133960387,3b576869-a4ec-4529-8536-b80a7769e899,56a863a9-875e-4185-98a7-b882c64b5ce5,5beb7efe-fd9a-4556-801d-275e5ffc04cc,75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84,92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b,9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2,a8f5898e-1dc8-49a9-9878-85004b8a61e6,b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4,be9ba2d9-53ea-4cdc-84e5-9b1eeee46550,c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb,c1db55ab-c21a-4637-bb3f-a12568109d35,d1e49aac-8f56-4280-b9ba-993a6d77406c,d3e037e1-3eb8-44c8-a917-57927947596d,d4f940ab-401b-4efc-aadc-ad5f3c50688a,e6db77e5-3df2-4cf1-b95a-636979351e5b,26190899-1602-49e8-8b27-eb1d0a1ce869,7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c -AttackSurfaceReductionRules_Actions Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,Enabled,AuditMode,AuditMode
 ```
 
-The ASR rule names and associated GUID values are listed in the [Test files](#test-files) section.
+For a complete list of ASR rule names and their associated GUID values, see [Test files](#test-files) later in this article.
 
 ### Verify configuration
 
@@ -78,7 +81,8 @@ The available rule states are described in the following table:
 |Not configured|NotConfigured|5|
 |Enabled in Warn mode|Warn|6|
 
-## Test files
+<a name="test-files"></a>
+## ASR rule names, GUIDs, and available test files
 
 The following table associates the ASR rule names with the corresponding GUID values.
 
@@ -109,9 +113,15 @@ The following table associates the ASR rule names with the corresponding GUID va
 |[d4f940ab-401b-4efc-aadc-ad5f3c50688a](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes)|[Block all Office applications from creating child processes](https://demo.wd.microsoft.com/Content/TestFile_OfficeChildProcess_d4f940ab-401b-4efc-aadc-ad5f3c50688a.docm)|
 |[e6db77e5-3df2-4cf1-b95a-636979351e5b](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)|Block persistence through WMI event subscription|
 
-## Scenarios
+<a name="scenarios"></a>
+## Run attack surface reduction demonstration scenarios
 
-### Setup
+Use the following scenarios to test how attack surface reduction rules behave in different conditions. Complete the setup steps first, then run any of the individual scenarios.
+
+<a name="setup"></a>
+### Set up the demo environment
+
+Perform the following steps to prepare your environment before running the demonstration scenarios:
 
 1. Run the following command in an elevated PowerShell window to set the execution policy to Unrestricted:
 
@@ -119,17 +129,19 @@ The following table associates the ASR rule names with the corresponding GUID va
    Set-ExecutionPolicy Unrestricted
    ```
 
-1. Download, extract, and run this [setup script](https://demo.wd.microsoft.com/Content/ASR_SetupScript.zip).
+1. Download, extract, and run this [ASR demo setup script](https://demo.wd.microsoft.com/Content/ASR_SetupScript.zip).
 
    Or, you can do the following manual steps instead:
 
    1. Create the folder C:\Demo.
-   1. Save this [clean file](https://demo.wd.microsoft.com/Content/testfile_safe.txt) in C:\Demo.
-   1. Enable all rules using the [PowerShell command](#powershell-commands).
+   1. Save the [safe test file (testfile_safe.txt)](https://demo.wd.microsoft.com/Content/testfile_safe.txt) to C:\Demo.
+   1. Enable all rules using the [Add-MpPreference command to enable all ASR rules](#powershell-commands) earlier in this article.
 
 ### Scenario 1: Attack surface reduction blocks a test file with multiple vulnerabilities
 
-1. Enable all rules in **Block** mode using the [PowerShell command](#powershell-commands).
+This scenario verifies that ASR rules block a test file that contains multiple risky behaviors when all rules are enabled in Block mode.
+
+1. Enable all rules in **Block** mode by running the [Add-MpPreference command listed under PowerShell commands](#powershell-commands) earlier in this article.
 1. Download and open the test files/documents. If prompted, enable editing and content.
 
 **Expected result**:
@@ -137,6 +149,8 @@ The following table associates the ASR rule names with the corresponding GUID va
 You should immediately see an "Action blocked" notification.
 
 ### Scenario 2: ASR rule blocks the test file with the corresponding vulnerability
+
+Use this scenario to test a single ASR rule against its matching demo file.
 
 1. Configure the individual rule you want to test. For example, to enable the **Block all Office applications from creating child processes** rule, run the following command in an elevated PowerShell window:
 
@@ -177,7 +191,11 @@ You should immediately see an "Action blocked" notification.
 
 ### Scenario 4: What would happen without attack surface reduction
 
-1. Turn off all attack surface reduction rules using PowerShell command in the [Clean-up](#clean-up) section.
+1. Turn off all attack surface reduction rules by running the disable command in the [Clean-up](#clean-up) section later in this article, or by running the following command in an elevated PowerShell window:
+
+   ```powershell
+   Add-MpPreference -AttackSurfaceReductionRules_Ids 01443614-cd74-433a-b99e-2ecdc07bfc25,33ddedf1-c6e0-47cb-833e-de6133960387,3b576869-a4ec-4529-8536-b80a7769e899,56a863a9-875e-4185-98a7-b882c64b5ce5,5beb7efe-fd9a-4556-801d-275e5ffc04cc,75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84,92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b,9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2,a8f5898e-1dc8-49a9-9878-85004b8a61e6,b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4,be9ba2d9-53ea-4cdc-84e5-9b1eeee46550,c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb,c1db55ab-c21a-4637-bb3f-a12568109d35,d1e49aac-8f56-4280-b9ba-993a6d77406c,d3e037e1-3eb8-44c8-a917-57927947596d,d4f940ab-401b-4efc-aadc-ad5f3c50688a,e6db77e5-3df2-4cf1-b95a-636979351e5b,26190899-1602-49e8-8b27-eb1d0a1ce869,7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c -AttackSurfaceReductionRules_Actions Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled,Disabled
+   ```
 
 1. Download any test file/document. If prompted, enable editing and content.
 
@@ -186,7 +204,8 @@ You should immediately see an "Action blocked" notification.
 - The files in C:\Demo are encrypted and you should get a warning message.
 - Run the test file again to decrypt the files.
 
-## Clean-up
+<a name="clean-up"></a>
+## Clean up demo files and settings
 
 Download, extract, and run this [clean-up script](https://demo.wd.microsoft.com/Content/ASR_CFA_CleanupScript.zip).
 

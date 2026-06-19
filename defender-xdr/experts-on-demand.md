@@ -10,6 +10,7 @@ ms.pagetype: security
 ms.author: pauloliveria
 author: poliveria
 ms.custom:
+  - msecd-doc-authoring-1014
   - cx-ti
   - cx-ean
   - sfi-image-nochange
@@ -20,7 +21,8 @@ ms.collection:
   - essentials-manage
 ms.topic: how-to
 search.appverid: met150
-ms.date: 04/30/2026
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Collaborate with experts on demand
@@ -39,6 +41,8 @@ Select **Ask Defender Experts** directly inside the Microsoft 365 security porta
 - Gather additional information on alerts and incidents, including root causes and scope
 - Gain clarity into suspicious devices, alerts, or incidents and take next steps if faced with an advanced attacker
 - Determine risks and available protections related to threat actors, campaigns, or emerging attacker techniques
+
+This article explains how to access Ask Defender Experts in the Microsoft Defender portal, the permissions you need, the types of questions you can ask, and where to view expert responses.
 
  :::image type="content" source="media/experts-on-demand/ask-defender-expert-dialog.png" alt-text="Screenshot of the Ask Defender Experts dialog box." lightbox="media/experts-on-demand/ask-defender-expert-dialog.png":::
 
@@ -82,13 +86,17 @@ You can find the **Ask Defender Experts** option in several places throughout th
 
 ## Where to view responses from Defender Experts
 
-### In portal
+You can view Defender Experts responses either in the Microsoft Defender portal or through email notifications.
+
+<a name="in-portal"></a>
+### View Defender Experts responses in the portal
 
 You can view responses to inquiries you submitted to Ask Defender Experts from up to six months ago by going to **Reports** > **Defender Experts messages**. You can also ask follow-up questions or reply with more information to Defender Experts from this page.
 
 :::image type="content" source="media/experts-on-demand/inportal-managed-response.png" alt-text="Screenshot of in-portal managed response." lightbox="media/experts-on-demand/inportal-managed-response.png":::
 
-### Email
+<a name="email"></a>
+### View Defender Experts responses by email
 
 If you include contact email addresses when you submit your inquiry, they receive an email notification when Defender Experts posts a response.
 
@@ -96,7 +104,12 @@ If you include contact email addresses when you submit your inquiry, they receiv
 
 ## Sample questions you can ask from Defender Experts
 
-### Alert information
+The following examples show the kinds of questions you can submit to Defender Experts, grouped by scenario.
+
+<a name="alert-information"></a>
+### Questions about alert information
+
+Examples of alert-related questions include the following:
 
 - We saw a new type of alert for a living-off-the-land binary. We can provide the alert ID. Can you tell us more about this alert and if it's related to any incident and how we can investigate it further?
 - We've observed two similar attacks, which both try to execute malicious PowerShell scripts but generate different alerts. One is "Suspicious PowerShell command line" and the other is "A malicious file was detected based on indication provided by Office 365." What is the difference?
@@ -104,18 +117,27 @@ If you include contact email addresses when you submit your inquiry, they receiv
 - Can you give more context or insight about the alert and any related incidents, "Suspicious behavior by a system utility was observed"?
 - I observed an alert titled "Creation of forwarding/redirect rule". I believe the activity is benign. Can you tell me why I received an alert?
 
-### Possible device compromise
+<a name="possible-device-compromise"></a>
+### Questions about possible device compromise
+
+Examples of device-compromise questions include the following:
 
 - Can you help explain why we see a message or alert for "Unknown process observed" on many devices in our organization? We appreciate any input to clarify whether this message or alert is related to malicious activity or incidents.
 - Can you help validate a possible compromise on the following system, dating from last week? It's behaving similarly as a previous malware detection on the same system six months ago.
 
-### Threat intelligence details
+<a name="threat-intelligence-details"></a>
+### Questions about threat intelligence details
+
+You can ask Defender Experts questions like the following about threat intelligence:
 
 - We detected a phishing email that delivered a malicious Word document to a user. The document caused a series of suspicious events, which triggered multiple alerts for a particular malware family. Do you have any information on this malware? If yes, can you send us a link?
 - We recently saw a blog post about a threat that is targeting our industry. Can you help us understand what protection Microsoft Defender XDR provides against this threat actor?
 - We recently observed a phishing campaign conducted against our organization. Can you tell us if this was targeted specifically to our company or vertical?
 
-### Microsoft Defender Experts for Hunting alert communications
+<a name="microsoft-defender-experts-for-hunting-alert-communications"></a>
+### Questions about Defender Experts for Hunting alert communications
+
+The following are examples of questions related to Defender Experts for Hunting notifications:
 
 - Can your incident response team help us address the Defender Experts Notification that we got?
 - We received this Defender Experts Notification from Microsoft Defender Experts for Hunting. We don't have our own incident response team. What can we do now, and how can we contain the incident?
@@ -125,7 +147,7 @@ If you include contact email addresses when you submit your inquiry, they receiv
 
 Ask Defender Experts is focused on products that are only included in Microsoft Defender XDR, that is, Microsoft Defender for Endpoint, Microsoft Defender for Office, Microsoft Defender for Cloud Apps, and Microsoft Defender for Identity.
 
-The service doesn't cover the following scenarios:
+Ask Defender Experts doesn't cover the following scenarios:
 
 - **Inquiries related to custom detections**- Inquiries related to custom detections in the above products can't be handled in Ask Defender Experts because our experts typically don't have access to such telemetry or visibility into how these custom policies were set up. Examples of such policies include:
 
@@ -141,6 +163,10 @@ The service doesn't cover the following scenarios:
 - **Inquiries related to security incident response issues**- Ask Defender Experts isn't a security incident response service. It's intended to provide a better understanding of complex threats affecting your organization. Engage with your own security incident response team to address urgent security incident response issues. If you don't have your own security incident response team and would like Microsoft's help, create a support request in the [Premier Services Hub](/services-hub/).
 
 ### Next step
+
+After you submit inquiries and review responses, learn how to interpret the findings that Defender Experts provide in their reports.
+
+For more information, see the following resource:
 
 - [Understand the Defender Experts for Hunting report in Microsoft Defender XDR](defender-experts-report.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

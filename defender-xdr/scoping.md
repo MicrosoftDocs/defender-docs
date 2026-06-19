@@ -7,15 +7,16 @@ ms.subservice: sentinel-platform
 author: mberdugo
 ms.author: monaberdugo
 ms.reviewer: tbeerthuis
-ms.date: 06/14/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security administrator, I want to configure Microsoft Sentinel scoping to control access to data at the row level, so that I can ensure that users only have access to the data relevant to their role and responsibilities.
 ---
 
 # Configure Microsoft Sentinel scoping (row-level RBAC)
 
-Microsoft Sentinel scoping provides row-level role-based access control (RBAC), enabling granular access without requiring workspace separation. This capability allows multiple teams to operate securely within a shared Microsoft Sentinel environment while using consistent and reusable scope definitions for tables and experiences.
+Microsoft Sentinel scoping provides row-level role-based access control (RBAC), enabling granular, row-level access without requiring workspace separation. Microsoft Sentinel scoping allows multiple teams to operate securely within a shared Microsoft Sentinel environment while using consistent and reusable scope definitions across tables and experiences.
 
 Configure scoping in the Microsoft Defender portal. Sentinel in the Azure portal (Ibiza) doesn't support scoping.
 
@@ -23,19 +24,20 @@ Configure scoping in the Microsoft Defender portal. Sentinel in the Azure portal
 
 Microsoft Sentinel scoping extends permissions management in the Defender portal so the administrator can grant permissions to specific subsets of data in Sentinel tables. To create scopes, complete the following steps:
 
-- [Define logical scopes](#step-1-create-a-sentinel-scope): Create scope definitions that align with your organizational structure (by business unit, region, or data sensitivity).
-- [Assign users or groups to scopes](#step-2-assign-scope-tags-to-users-or-groups): Assign specific users or groups to one or more scopes by using Unified RBAC.
-- [Tag data rows at ingestion time](#step-3-tag-tables-with-scope): Apply scope tags to rows in tables by using Table Management, which allows you to create rules that tag newly ingested data automatically.
-- [Restrict access by scope](#step-4-access-scoped-data): Limit user access to alerts, incidents, hunting queries, and data lake exploration based on their assigned scope.
-
-After you set up scopes, you can also [create scoped custom detection rules](#create-scoped-custom-detection-rules) and [scoped automation rules](#create-scoped-automation-rules) so detections and automations operate only on the data within their assigned scopes.
+- [Define logical scopes](#step-1-create-a-sentinel-scope): Create scope definitions that align with your organizational structure (by business unit, region, or data sensitivity)
+- [Assign users or groups to scopes](#step-2-assign-scope-tags-to-users-or-groups): Assign specific users or groups to one or more scopes using Unified RBAC (role-based access control)
+- [Tag data rows at ingestion time](#step-3-tag-tables-with-scope): Apply scope tags to rows in tables using Table Management, allowing you to create rules that tag newly ingested data automatically
+- [Restrict access by scope](#step-4-access-scoped-data): Limit user access to alerts, incidents, hunting queries, and data lake exploration based on their assigned scope
 
 > [!NOTE]
-> Scopes are additive. Users assigned multiple roles get the broadest permissions available to them from all their assignments. For example, if you hold both an Entra global reader role and a Defender XDR URBAC role that provides scoped permissions on *System tables*, the Entra role grants you unrestricted access to System tables. Another example is if you hold the same role permissions in Microsoft Defender XDR for a workspace, with two different scopes, you have that permission for both scopes.
+> Scopes are additive. Users assigned multiple roles get the broadest permissions available to them from all their assignments. For example, if you hold both an Entra global reader role and a Defender XDR URBAC role that provides scoped permissions on *System tables*, you're unrestricted by scopes on System tables due to the Entra role. Another example is if you hold the same role permissions in Microsoft Defender XDR for a workspace, with two different scopes, you have those permissions for both scopes.
 
 Scopes apply to Sentinel tables that support ingestion-time transformations.
 
-## Use cases
+<a name="use-cases"></a>
+## Use cases for Microsoft Sentinel scoping
+
+Microsoft Sentinel scoping is useful in the following scenarios:
 
 - **Distributed or federated SOC teams**: Large enterprises and MSSPs often operate federated SOC models where different teams are responsible for specific regions, business units, or customers. Scoping allows each SOC team to operate independently within a shared Sentinel workspace, ensuring that they can investigate and respond to threats in their domain without accessing unrelated data.
 - **Scoped access for external, non-security teams**: Teams such as networking, IT operations, or compliance often require access to specific raw data sources without needing visibility into broader security content. Row-level scoping enables these external teams to securely access only the data relevant to their function.
@@ -64,7 +66,7 @@ To create a Sentinel scope, follow these steps:
 1. Enter a scope name and optional description.
 1. Select **Create scope**.
 
-You can create multiple scopes and define your own values for each scope to reflect your organizational structure and policies.
+You can create multiple scopes and define custom scope names and descriptions for each scope to reflect your organizational structure and policies.
 
 > [!NOTE]
 > You can create up to 100 unique Sentinel scopes per tenant.
@@ -164,39 +166,12 @@ Use the `SentinelScope_CF` custom field in queries and detection rules to refere
 
 :::image type="content" source="./media/scoping/scoped-alerts-view.png" alt-text="Screenshot of alerts filtered by Sentinel scope.":::
 
-## Scoped custom detection rules and automation rules
+<a name="limitations"></a>
+## Limitations of Microsoft Sentinel scoping
 
-After you create, assign, and apply scopes to tables, you can build custom detection rules and automation rules that are limited to one or more Microsoft Sentinel scopes. Scoped rules:
+:::image type="content" source="./media/scoping/select-scopes-detection.png" alt-text="Screenshot of selecting specific scopes for a custom detection rule.":::
 
-- Operate only on the data tagged with the rule's scopes.
-- Target one or more scopes for precise threat detection and response.
-- Are visible only to users who have access to at least **one** of the rule's scopes.
-- Are editable only by users who have access to **all** of the rule's scopes.
-
-### Create scoped custom detection rules
-
-To create scoped custom detection rules, follow these steps:
-
-1. In the Microsoft Defender portal, go to **Hunting** > **Advanced hunting**.
-1. Build your detection query as usual, and then select **Create custom detection**.
-
-    :::image type="content" source="./media/scoping/custom-detection-button.png" alt-text="Screenshot of the Create custom detection button in advanced hunting.":::
-
-1. In the query, project the `SentinelScope_CF` column so that triggered alerts are tagged with the scope of the data that generated them. This step ensures that analysts who can see the underlying data can also see and manage the alert.
-
-    > [!IMPORTANT]
-    > Projecting `SentinelScope_CF` controls how alerts inherit scope:
-    >
-    > - **If you project the column**: alerts are tagged with the scope of the specific events that triggered them.
-    > - **If you don't project the column**: all alerts are unscoped and not visible to scoped users.
-
-1. In the **Scope** step of the wizard, under **Sentinel scope**, select **Specific scoped data** and choose one or more of your assigned scopes to tag this detection with.
-
-    :::image type="content" source="./media/scoping/custom-detection-scope-step.png" alt-text="Screenshot of the Sentinel scope section in the custom detection wizard.":::
-
-    :::image type="content" source="./media/scoping/select-scopes-detection.png" alt-text="Screenshot of selecting specific scopes for a custom detection rule.":::
-
-    If you're an unscoped user, you can also select **All data**. By selecting this option, the rule is unscoped, runs over all data, and is visible and editable only to unscoped users.
+1. If you're an unscoped user, you can also select **All data**. By selecting this option, the rule is unscoped, runs over all data, and is visible and editable only to unscoped users.
 
 1. Complete the wizard and save the rule.
 
@@ -235,16 +210,21 @@ The automation rule applies to the data associated with the selected scope and i
 > [!NOTE]
 > Playbooks and integrations don't yet support Sentinel scoping.
 
-## Permissions and access
+<a name="permissions-and-access"></a>
+## How permissions and access work with scoped data
+
+The following points describe how permissions and scoped access behave in Microsoft Sentinel:
 
 - Users can view an incident if they have access to at least one alert in the incident. They can manage the incident only if they have access to all alerts in the incident and have the required permission.
-- Scoped users can only see the data associated with their scope. If the alert contains entities that users don't have access to, they can't see those entities. If users have access to at least one of the associated entities, they can see the alert itself.
-- To scope an entire table, use a rule that matches all rows (for example, using a condition that is always true). You can't scope previously ingested data retroactively.
-- Scoped users can't manage resources (such as detection rules, playbooks, and automation rules) unless permission is assigned to them in a separate role assignment.
+- The scoped user can only see the data associated with their scope. If the alert contains entities that the user has no access to, the user can't see those entities. If the user has access to at least one of the associated entities, they can see the alert itself.
+- To scope an entire table, use a rule that matches all rows (for example, using a condition that is always true). Previously ingested data can't be scoped retroactively.
+- Scoped users can't manage resources (such as detection rules, playbooks, automation rules) unless permission is assigned to them in a separate role assignment.
 
 ## Next steps
 
-- Review the list of [tables that support ingestion-time transformations](/azure/azure-monitor/logs/tables-feature-support).
-- Plan scope names and logic before tagging data.
-- Start with a pilot scope for a small team or data subset.
-- Learn more about [Unified RBAC in Microsoft Defender XDR](/defender-xdr/manage-rbac).
+Use the following resources to continue planning your scoping deployment:
+
+- Review the list of [tables that support ingestion-time transformations](/azure/azure-monitor/logs/tables-feature-support)
+- Plan scope names and logic before tagging data
+- Start with a pilot scope for a small team or data subset
+- Learn more about [Unified RBAC in Microsoft Defender XDR](/defender-xdr/manage-rbac)

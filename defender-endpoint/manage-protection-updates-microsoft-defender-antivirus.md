@@ -7,16 +7,17 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: pahuijbr
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.subservice: ngp
 ms.collection:
 - m365-security
 - tier2
-ms.date: 06/11/2026
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Manage the sources for Microsoft Defender Antivirus protection updates
@@ -42,9 +43,10 @@ This article describes how to specify from where updates should be downloaded (t
 
 - Windows
 
-## Fallback order
+<a name="fallback-order"></a>
+## Understand fallback order for protection update sources
 
-Typically, you configure endpoints to individually download updates from a primary source followed by other sources in order of priority, based on your network configuration. Updates are obtained from sources in the order you specify. If updates from the current source are out-of-date, the next source in the list is used immediately.
+Typically, you configure endpoints to individually download updates from a primary source followed by other sources in order of priority, based on your network configuration. Updates are obtained from sources in the order you specify. If updates from the current source are out-of-date, the next configured update source in the fallback order is used immediately.
 
 When updates are published, logic is applied to minimize the size of the update. In most cases, only the differences between the latest update and the update that is currently installed is downloaded and applied to the device. The set of differences is referred to as the *delta*. The size of the delta depends on two main factors:
 
@@ -56,10 +58,10 @@ The older the updates on an endpoint, the larger the download is. However, you m
 There are five locations where you can specify where an endpoint should obtain updates:
 
 - [Microsoft Update](https://support.microsoft.com/help/12373/windows-update-faq)
-- [Windows Server Update Service](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) (See note 1 below)
+- [Windows Server Update Service](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus). If you use a Software Update Point (SUP) in Microsoft Configuration Manager, you can transition to co-management and use the Intune internal definition update server option with on-premises WSUS as the update source.
 - [Microsoft Configuration Manager](/intune/configmgr/core/servers/manage/updates)
 - [Network file share](#unc-share)
-- [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](manage-protection-update-schedule-microsoft-defender-antivirus.md) (See note 2 below)
+- [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware](manage-protection-update-schedule-microsoft-defender-antivirus.md). Your policy and registry might list this source as Microsoft Malware Protection Center (MMPC) security intelligence, its former name.
 
 > [!NOTE]
 > Intune Internal Definition Update Server: If you use a Software Update Point (SUP) in Microsoft Configuration Manager to get definition updates for Microsoft Defender Antivirus, and you must access Windows Update on blocked client devices, you can transition to co-management and offload the endpoint protection workload to Intune. In the antimalware policy configured in Intune, there's an "internal definition update server" option that you can set to use on-premises Windows Server Update Service (WSUS) as the update source. This configuration helps you control which updates from the official Windows Update (WU) server are approved for enterprise organizations. It also helps proxy and save network traffic to the official Windows Updates network.
@@ -74,7 +76,7 @@ Platform updates and engine updates are released on a monthly cadence. Security 
 > You can, however, [set the number of days before protection is reported as out-of-date](manage-outdated-endpoints-microsoft-defender-antivirus.md).<p>
 > Starting Monday, October 21, 2019, security intelligence updates and platform updates are SHA-2 signed exclusively. Devices must be updated to support SHA-2 in order to get the latest security intelligence updates and platform updates. To learn more, see [2019 SHA-2 Code Signing Support requirement for Windows and WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
-Each source has typical scenarios that depend on how your network is configured, in addition to how often they publish updates, as described in the following table:
+Each source has typical scenarios that depend on how your network is configured, in addition to how often they publish updates. The following update source locations and sample scenarios describe when to use each source:
 
 |Location|Sample scenario|
 |---|---|
@@ -87,9 +89,9 @@ Each source has typical scenarios that depend on how your network is configured,
 You can manage the order in which update sources are used with Group Policy, Microsoft Configuration Manager, PowerShell cmdlets, and WMI.
 
 > [!IMPORTANT]
-> If you set Windows Server Update Service as a download location, you must approve the updates, regardless of the management tool you use to specify the location. You can set up an automatic approval rule with Windows Server Update Service, which might be useful as updates arrive at least once a day. To learn more, see [synchronize endpoint protection updates in standalone Windows Server Update Service](/intune/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
+> If you set Windows Server Update Service as a download location, you must approve the updates, regardless of the management tool you use to specify the location. You can set up an automatic approval rule with Windows Server Update Service, which might be useful as updates arrive at least once a day. For instructions on configuring automatic approval rules, see [synchronize endpoint protection updates in standalone Windows Server Update Service](/intune/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
 
-The procedures in this article first describe how to set the order, and then how to set up the Windows File Server - **File share** option if it's enabled.
+The procedures in this article first describe how to set the order, and then how to set up the Windows File Server - **File share** option if the file share source is enabled in your update policy.
 
 ## Use Group Policy to manage the update location
 
@@ -173,7 +175,7 @@ For example, suppose that Contoso has hired Fabrikam to manage their security so
 
 ## Create a UNC share for security intelligence
 
-On a Windows File Server set up a network file share (UNC/mapped drive) to download security intelligence from the MMPC site by using a scheduled task.
+On a Windows File Server set up a network file share (UNC/mapped drive) to download security intelligence from the Microsoft Malware Protection Center (MMPC) site by using a scheduled task.
 
 1. On the system for which you want to provision the share and download the updates, create a folder for the script.
 
@@ -189,7 +191,7 @@ On a Windows File Server set up a network file share (UNC/mapped drive) to downl
     MD C:\Temp\TempSigs\x86
     ```
 
-1. Download the PowerShell script from [www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4](https://www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4).
+1. Download the PowerShell script from the [SignatureDownloadCustomTask package on PowerShell Gallery](https://www.powershellgallery.com/packages/SignatureDownloadCustomTask/1.4).
 
 1. Select **Manual Download**.
 
