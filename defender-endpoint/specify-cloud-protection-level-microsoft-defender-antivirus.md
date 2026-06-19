@@ -7,8 +7,8 @@ ms.topic: how-to
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-ms.date: 10/20/2025
-ms.custom: nextgen
+ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Specify the cloud protection level
 
@@ -32,6 +33,8 @@ Cloud protection works together with Microsoft Defender Antivirus to deliver pro
 - Windows
 
 ## Use Microsoft Intune to specify the level of cloud protection
+
+Perform the following steps in Microsoft Intune to specify the level of cloud protection:
 
 1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in.
 
@@ -57,6 +60,8 @@ Cloud protection works together with Microsoft Defender Antivirus to deliver pro
 > - [Configure Endpoint Protection](/intune/configmgr/protect/deploy-use/endpoint-protection-configure) (Configuration Manager)
 
 ## Use Group Policy to specify the level of cloud protection
+
+Perform the following steps to specify the level of cloud protection by using Group Policy:
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)).
 

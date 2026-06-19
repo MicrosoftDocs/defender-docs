@@ -6,9 +6,9 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 ms.reviewer: pahuijbr
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.subservice: asr
 ms.collection:
 - m365-security
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Turn on cloud protection in Microsoft Defender Antivirus
 
@@ -26,11 +27,13 @@ appliesto:
 [Cloud protection in Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md) delivers accurate, real-time, and intelligent protection. Cloud protection should be enabled by default.
 
 > [!NOTE]
-> [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep cloud protection and other security settings from being changed. As a result, when tamper protection is enabled, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored. If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+> [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps keep cloud protection and other security settings from being changed. Because tamper protection prevents unauthorized changes, any changes made to [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) are ignored when tamper protection is enabled. If you must make changes to a device and those changes are blocked by tamper protection, we recommend using [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device. Note that after troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
 
 ## Prerequistes
 
 ### Supported operating systems
+
+The following operating systems support cloud protection:
 
 - Windows
 
@@ -38,7 +41,7 @@ appliesto:
 
 Microsoft Defender Antivirus cloud protection helps protect against malware on your endpoints and across your network. We recommend keeping cloud protection turned on, because certain security features and capabilities in Microsoft Defender for Endpoint only work when cloud protection is enabled.
 
-[![alt-text="Diagram showing things that depend on cloud protection](media/mde-cloud-protection.png#lightbox)](enable-cloud-protection-microsoft-defender-antivirus.md)
+[![Diagram showing Microsoft Defender features and protections that rely on cloud protection, including tamper protection, block at first sight, ASR rules, EDR in block mode, and emergency signature updates.](media/mde-cloud-protection.png#lightbox)](enable-cloud-protection-microsoft-defender-antivirus.md)
 
 
 The following table summarizes the features and capabilities that depend on cloud protection: <br/><br/>
@@ -74,11 +77,13 @@ You can also use [Configuration Manager](/intune/configmgr/protect/deploy-use/de
 For more information about the specific network-connectivity requirements to ensure your endpoints can connect to the cloud protection service, see [Configure and validate network connections](configure-network-connections-microsoft-defender-antivirus.md).
 
 > [!NOTE]
-> In Windows 10 and Windows 11, there is no difference between the **Basic** and **Advanced** reporting options described in this article. This is a legacy distinction and choosing either setting results in the same level of cloud protection. There is no difference in the type or amount of information that is shared. For more information on what we collect, see the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=521839).
+> In Windows 10 and Windows 11, there is no difference between the **Basic** and **Advanced** reporting options described in this article. The distinction between the Basic and Advanced reporting options is legacy, and choosing either setting results in the same level of cloud protection. There is no difference in the type or amount of information that is shared. For more information on what we collect, see the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=521839).
 
 ## Use Microsoft Intune to turn on cloud protection
 
-1. Go to the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in.
+To enable cloud protection by using Microsoft Intune, perform the following steps:
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign in.
 
 1. Choose **Endpoint security** \> **Antivirus**.
 
@@ -93,6 +98,8 @@ For more information about the specific network-connectivity requirements to ens
 > To learn more about Microsoft Defender Antivirus settings in Intune, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
 ## Use Group Policy to turn on cloud protection
+
+To enable cloud protection by using Group Policy, perform the following steps:
 
 1. On your Group Policy management device, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
 
@@ -126,7 +133,7 @@ For more information about the specific network-connectivity requirements to ens
 
 ## Use PowerShell cmdlets to turn on cloud protection
 
-The following cmdlets can turn on cloud protection:
+The following cmdlets enable advanced cloud-delivered protection (MAPS) reporting and configure automatic sample submission for all file types:
 
 ```PowerShell
 Set-MpPreference -MAPSReporting Advanced
@@ -144,7 +151,7 @@ For more information on how to use PowerShell with Microsoft Defender Antivirus,
 
 ## Use Windows Management Instrumentation (WMI) to turn on cloud protection
 
-Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/defender/set-msft-mppreference) class for the following properties:
+Use the [**Set** method of the **MSFT_MpPreference**](/previous-versions/windows/desktop/defender/set-msft-mppreference) class to configure the following properties that control cloud-delivered protection (MAPS reporting) and sample submission behavior:
 
 ```WMI
 MAPSReporting

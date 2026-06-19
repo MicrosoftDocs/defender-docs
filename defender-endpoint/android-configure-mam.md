@@ -11,7 +11,7 @@ ms.collection:
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-ms.date: 06/17/2026
+ms.date: 06/19/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -188,12 +188,6 @@ Use the following steps to configure Network Protection in Intune:
    | `DefenderEndUserTrustFlowEnable` | Integer | 0 | 0 - Disable<br>1 - Enable<br><br>The DefenderEndUserTrustFlowEnable setting is used by IT admins to enable or disable the end-user in-app experience for trusting or untrusting unsecured networks and malicious certificates. |
    | `DefenderNetworkProtectionAutoRemediation` | Integer | 1 | 0 - Disable<br>1 - Enable<br><br>The DefenderNetworkProtectionAutoRemediation setting is used by IT admins to enable or disable remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points or deleting suspicious certificates detected by Defender. |
    | `DefenderNetworkProtectionPrivacy` | Integer | 1 | 0 - Disable<br>1 - Enable<br><br>The DefenderNetworkProtectionPrivacy setting is used by IT admins to enable or disable privacy in network protection. If privacy is disabled with value 0, then user consent is shown to share the malicious wifi or certs data. If its in enabled state with value 1, then no user consent is shown and no app data is collected.|
-
-   > [!NOTE]
-   > The ability of end-users to trust and untrust suspicious networks (granted via the `DefenderEndUserTrustFlowEnable` setting) is being deprecated. Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. The new behavior will be as follows:
-   > - End users will no longer be able to mark suspicious networks as trusted.
-   > - Any previously trusted suspicious networks will automatically be treated as untrusted.
-   > - Users will receive in-app notifications when connecting to such networks.
 
 1. Include or exclude the groups you want the policy to apply to. Proceed to review and submit the policy.
 
