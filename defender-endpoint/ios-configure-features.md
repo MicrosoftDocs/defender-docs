@@ -11,7 +11,7 @@ ms.collection:
 - mde-ios
 ms.topic: how-to
 ms.subservice: ios
-ms.date: 06/17/2026
+ms.date: 06/19/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -127,12 +127,6 @@ To set up network protection using MDM configuration for enrolled devices, follo
    | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable<br>false - disable<br><br>This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not device timeline events. So, this is not applicable to open Wi-Fi detection.|
    | `DefenderNetworkProtectionPrivacy` | String | true | true - enable<br>false - disable<br><br>This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious Wi-Fi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
 
-   > [!NOTE]
-   > The ability of end-users to trust and untrust suspicious networks (granted via the `DefenderEndUserTrustFlowEnable` setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. The new behavior will be as follows:
-   > - End users will no longer be able to mark suspicious networks as trusted.
-   > - Any previously trusted suspicious networks will automatically be treated as untrusted.
-   > - Users will receive in-app notifications when connecting to such networks.
-   
 1. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
 
 1. Review and create the configuration policy.
@@ -161,12 +155,6 @@ Use the following procedure to set up MAM config for unenrolled devices for netw
    |`DefenderNetworkProtectionAutoRemediation`| true |true - enable<br>false - disable<br><br>This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer Wi-Fi access points. This setting is only applied to alerts and not the device timeline events. So, this is not applicable to open Wi-Fi detection.|
    |`DefenderNetworkProtectionPrivacy`| true |true - enable<br>false - disable<br><br>This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
 
-   > [!NOTE]
-   > The ability of end-users to trust and untrust suspicious networks (granted via the `DefenderEndUserTrustFlowEnable` setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. The new behavior will be as follows:
-   > - End users will no longer be able to mark suspicious networks as trusted.
-   > - Any previously trusted suspicious networks will automatically be treated as untrusted.
-   > - Users will receive in-app notifications when connecting to such networks.
-   
 1. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
 
    :::image type="content" source="media/assigniosconfig.png" alt-text="Assign configuration." lightbox="media/assigniosconfig.png":::

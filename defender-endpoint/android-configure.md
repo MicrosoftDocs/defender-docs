@@ -12,7 +12,7 @@ ms.collection:
 - mde-android
 ms.topic: how-to
 ms.subservice: android
-ms.date: 06/17/2026
+ms.date: 06/19/2026
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
@@ -90,12 +90,6 @@ In the Microsoft Intune admin center, navigate to Apps > App configuration polic
    |Manage Network Protection detection for Open Networks| 2:  Enable (default)<br/> 1: Audit Mode <br/> 0: Disable <br/><br/>Security admins manage this setting to enable or disable open network detection. |
    |Manage Network protection Detection for Certificates|2: Enable <br/> 1: Audit mode<br/> 0: Disable (default)<br/><br/>In audit mode, events are sent to SOC admins, but no end user notifications are shown when Defender detects a bad certificate. Admins can enable full feature functionality by setting the value 2. When the value is 2, end user notifications are sent to users and events are sent to SOC admins when Defender detects a bad certificate.|
 
-   > [!NOTE]
-   > The ability of end-users to trust and untrust suspicious networks (granted via the Enable Users to Trust Networks and Certificates setting) is being deprecated.  Deprecation will begin rolling out at the beginning of June 2026, and is expected to last about two weeks. The new behavior will be as follows:
-   > - End users will no longer be able to mark suspicious networks as trusted.
-   > - Any previously trusted suspicious networks will automatically be treated as untrusted.
-   > - Users will receive in-app notifications when connecting to such networks.
-   
 1. Add the required groups to which the policy has to be applied. Review and create the policy.
 
 > [!NOTE]
