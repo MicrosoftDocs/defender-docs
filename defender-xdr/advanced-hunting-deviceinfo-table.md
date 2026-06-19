@@ -37,7 +37,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
-| `Timestamp` | `datetime` | Last date and time recorded for the device |
+| `Timestamp` |`datetime` | Last date and time recorded for the device |
 | `DeviceId` | `string` | Unique identifier for the device in the service |
 | `DeviceName` | `string` | Fully qualified domain name (FQDN) of the device |
 | `ClientVersion` | `string` | Version of the endpoint agent or sensor running on the device |
@@ -86,6 +86,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `MitigationStatus` | `string` | Indicates the mitigation action applied to a device |
 | `Site` | `string` | Represents the physical location where the device is located |
 | `DiscoverySources` | `string` | Products or services that have seen or reported the device, including when they last reported it. |
+|`DlpInfo`|`string`|JSON object containing Endpoint DLP device configuration status, policy sync status, protection settings, and user information. For information about the properties available in this field, see [Troubleshooting endpoint data loss prevention configuration and policy sync. ](https://https://learn.microsoft.com/en-us/purview/dlp-edlp-tshoot-sync#access-device-attribute-data-using-advanced-hunting) |
 
 The DeviceInfo table is updated continuously, and all updates contain the full current device data for that device.
 
