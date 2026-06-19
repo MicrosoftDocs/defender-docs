@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|Android |1.0.9014.0101|June 2026|- Build: 1.0.9014.0101<br>- Release: June 19, 2026|[Release details and updates](#android--june-2026--platform-1090140101)| 
 |iOS |1.1.78020101|June 2026|- Build: 1.1.78020101<br>- Release: June 11, 2026|[Release details and updates](#ios--june-2026--platform-version-1178020101)|
 |Android |1.0.9003.0101|June 2026|- Build: 1.0.9003.0101<br>- Release: June 8, 2026|[Release details and updates](#android--june-2026--platform-1090030101)|
 |iOS |1.1.77280101|June 2026|- Build: 1.1.77280101<br>- Release: June 1, 2026|[Release details and updates](#ios--june-2026--platform-version-1177280101)|
@@ -647,6 +648,20 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 ## Android releases
 
 See the full list of [Android UX improvements](android-new-ux.md).
+
+### Android | June 2026 | Platform: 1.0.9014.0101
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.9014.0101|June 19, 2026|
+
+#### Enhancements and features
+
+|__Feature Area__| __Update Summary__|
+| -------- | -------- |
+|General|Performance improvements and general bug fixes. |
 
 ### Android | June 2026 | Platform: 1.0.9003.0101
 
