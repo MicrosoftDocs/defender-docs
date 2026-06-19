@@ -10,10 +10,11 @@ ms.collection:
   - m365-security
   - tier2
 ms.topic: how-to
-ms.date: 05/15/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender XDR
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Enable attack disruption actions in Okta with Microsoft Sentinel (preview)
@@ -22,7 +23,7 @@ appliesto:
 
 Microsoft Defender XDR's [automatic attack disruption](automatic-attack-disruption.md) capabilities can help protect your Okta-managed identities by automatically responding to threats. When an identity managed by Okta is compromised, Defender XDR can take remediation actions directly in Okta to contain the attack, limit lateral movement, and reduce overall impact.
 
-This article describes how to set up the Okta integration with Microsoft Defender for Identity to enable attack disruption actions in your Okta environment.
+This article describes how to set up the Okta integration with Microsoft Defender for Identity to enable attack disruption actions in your Okta environment. Before you begin, review the [prerequisites](#prerequisites) to ensure your Okta and Microsoft environments are properly configured.
 
 ## Prerequisites
 
@@ -33,6 +34,8 @@ Before you begin, make sure the following prerequisites are met:
 You have an Okta account with admin privileges and a developer or enterprise license.
 
 ### Microsoft requirements
+
+Make sure the following Microsoft prerequisites are completed before you continue:
 
 - Your Microsoft Sentinel analytic workspace is connected to the unified security operations portal
 - The Okta connector for Microsoft Sentinel is deployed and enabled.
@@ -54,6 +57,8 @@ To create the integration from an Okta account with admin privileges, follow the
 > This token is a secret that allows connecting to your Okta environment and performing actions. Don't share its value or save it in any visible or public location.
 
 ## Step 2: Create the integration from the Defender portal
+
+To create the integration in the Defender portal, follow these steps:
 
 1. Log in to the [Defender portal](https://security.microsoft.com/)
 1. Navigate **Microsoft Sentinel** -> **Configuration** -> **Automation**.
