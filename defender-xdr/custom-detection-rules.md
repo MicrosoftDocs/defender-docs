@@ -12,6 +12,7 @@ ms.collection:
   - m365initiative-m365-defender
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1014
   - sfi-ga-nochange
   - cx-ti
   - cx-ah
@@ -21,7 +22,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 05/19/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to create custom detection rules so that I can proactively monitor for threats and automate response actions using advanced hunting queries.
 ---
@@ -34,7 +35,7 @@ Custom detection rules are [advanced hunting](advanced-hunting-overview.md) quer
 
 ## Required permissions for managing custom detections
 
-To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender XDR and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender XDR and Sentinel roles. For more information, see the following sections.
+To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender XDR and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender XDR and Sentinel roles. For more information, see [Microsoft Defender XDR](#microsoft-defender-xdr) and [Microsoft Sentinel](#microsoft-sentinel).
 
 ### Microsoft Defender XDR
 To manage custom detections on Microsoft Defender XDR data, you need to be assigned one of these roles:
@@ -153,12 +154,12 @@ When you create custom detections and analytics rules, you must project the `Sen
 In the query editor, select **Create detection rule** and specify the following alert details:
 
 - **Detection name** - Name of the detection rule; make it unique.
-- **Frequency** - Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency).
-- **Lookback** - The time period covered by the query when the custom detection targets data from Microsoft Sentinel only. [See more guidance in the lookback section](#lookback). 
+- **Frequency** - Interval for running the query and taking action. For more information, see [Rule frequency](#rule-frequency).
+- **Lookback** - The time period covered by the query when the custom detection targets data from Microsoft Sentinel only. For more information, see [Lookback](#lookback). 
 - **Alert title** - Title displayed with alerts triggered by the rule; make it unique and use plaintext. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
-- **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
+- **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). The MITRE ATT&CK techniques field is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
 - **Threat analytics report** - Link the generated alert to an existing threat analytics report so that it appears in the [Related incidents](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports) tab in threat analytics.
 - **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the description should follow the percent-encoding format for them to display properly.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
@@ -244,7 +245,7 @@ If your custom detections target Microsoft Sentinel data only, you can customize
 - For detections set to run in frequencies of **one day or less**, the lookback can be set **up to 30 days**.  
 
 > [!IMPORTANT]
-> Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because of this condition, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
+> Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because custom detections evaluate `ingestion_time()` instead of event timestamps, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
 > 
 > When the lookback period is longer than the frequency, duplicate events might occur. However, custom detections [group and deduplicate them automatically](#how-custom-detections-handle-duplicate-alerts) to reduce alert noise and fatigue.
 
