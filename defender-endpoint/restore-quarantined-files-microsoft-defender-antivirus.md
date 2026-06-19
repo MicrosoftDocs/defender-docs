@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 10/20/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: yongrhee, pahuijbr
 ms.subservice: ngp
 ms.topic: how-to
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 
 # Restore quarantined files in Microsoft Defender Antivirus
@@ -29,9 +30,13 @@ Depending on how Microsoft Defender Antivirus is configured, it quarantines susp
 
 ### Supported operating systems
 
+The following operating systems support restoring quarantined files:
+
 - Windows
 
 ## Using the Windows Security app
+
+To restore a quarantined file by using the Windows Security app, perform the following steps:
 
 1. On your Windows device, open **Windows Security**.
 
@@ -42,6 +47,8 @@ Depending on how Microsoft Defender Antivirus is configured, it quarantines susp
 1. Select an item you want to keep, and choose an action, such as **Restore**.
 
 ## Using the MpCmdRun command line
+
+Use the following steps to restore quarantined files from the command line using the MpCmdRun utility:
 
 1. **Show all quarantined files**:
 
@@ -56,7 +63,7 @@ Depending on how Microsoft Defender Antivirus is configured, it quarantines susp
    MpCmdRun.exe -Restore -ListAll
    ```
 
-2. **Restore a quarantined file**: Using the information from the previous command, replace \<filename\> with the name of the file you want to restore, and then run the following command:
+2. **Restore a quarantined file**: After identifying the quarantined item from the list, you can restore a specific file by name. Replace \<filename\> with the name of the quarantined file you want to restore (as shown in the previous command's output), and then run the following command:
 
    ```dos
    MpCmdRun.exe -Restore -Name <filename>
@@ -66,7 +73,7 @@ For more information about MpCmdRun, see [Configure and manage Microsoft Defende
 
 ## Download or collect the file
 
-Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout appears where you can record a reason for downloading the file, and set a password. By default, you should be able to download files that are in quarantine.
+In the Microsoft Defender for Endpoint portal, you can download or collect a quarantined file from a device's file page. Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout appears where you can record a reason for downloading the file, and set a password. By default, you should be able to download quarantined files using this response action.
 
 The **Download file** button can have the following states:
 
