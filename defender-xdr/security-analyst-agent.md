@@ -11,10 +11,12 @@ ms.collection:
   - tier1
   - security-copilot
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 06/16/2026
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Microsoft Security Copilot Security Analyst Agent
@@ -54,7 +56,8 @@ When you configure the agent, it is tied to your identity and applies only to yo
 
 Other users in the same tenant can also configure the agent using their own identity, provided they have the required access to the selected data sources.
 
-## Data sources
+<a name="data-sources"></a>
+## Data sources used by the Security Analyst Agent
 
 The agent currently supports three data sources:
 
@@ -133,7 +136,9 @@ You can run the Security Analyst agent directly in Defender without completing s
 
 ## Use the Security Analyst Agent
 
-1. Go to Microsoft Defender at [https://defender.microsoft.com](https://defender.microsoft.com), and then select **Advanced hunting** under **Investigation and response**.
+Perform the following steps to use the Security Analyst Agent in Microsoft Defender.
+
+1. Go to the [Microsoft Defender portal](https://defender.microsoft.com), and then select **Advanced hunting** under **Investigation and response**.
 
 1. Open Copilot, and then select **Security Analyst Agent**.
 
@@ -166,14 +171,16 @@ You can run the Security Analyst agent directly in Defender without completing s
 
 ## Interpreting the report
 
+The report is organized into the following sections to help you review the analysis and supporting evidence.
+
 ### Executive summary
-This section provides a clear narrative of how the analysis was performed, outlining the steps taken and the data considered. It explains the filtering criteria, time ranges, and any ranking applied, all in straightforward language so readers can easily follow the process.
+The Executive summary provides a clear narrative of how the analysis was performed, outlining the steps taken and the data considered. It explains the filtering criteria, time ranges, and any ranking applied, all in straightforward language so readers can easily follow the process.
 
 ### Key insights
 Here you’ll find the most significant findings from the analysis, presented in a concise and meaningful way. Each insight includes a brief explanation of why it matters and, where relevant, references to supporting evidence.
 
 ### Visualizations
-This section contains charts or graphs that add depth and clarity to the report, helping readers quickly interpret patterns or relationships in the data. Visuals are included only when they provide unique value to the analysis.
+The Visualizations section contains charts or graphs that add depth and clarity to the report, helping readers quickly interpret patterns or relationships in the data. Visuals are included only when they provide unique value to the analysis.
 
 ### Artifacts
 Artifacts are the supporting files that accompany the report, such as a comprehensive CSV of all analyzed entities and, when applicable, detailed evidence files. These resources allow readers to explore the full dataset behind the findings. Artifacts include the KQL query that was used by the agent to retrieve the data (please note the agent only uses KQL for data retrieval, analysis is done in python), comprehensive plan that was formulated for performing the task.

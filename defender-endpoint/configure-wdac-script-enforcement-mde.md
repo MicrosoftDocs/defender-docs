@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: msecd-doc-authoring-1012
-ms.date: 05/19/2026
+ms.custom: msecd-doc-authoring-1014
+ms.date: 06/16/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1 and Plan 2
 - Microsoft Defender XDR
@@ -24,7 +24,8 @@ ai-usage: ai-assisted
 
 This article explains how to configure allow rules in Windows Defender Application Control (WDAC), also known as [App Control for Business](/windows/security/application-security/application-control/app-control-for-business/appcontrol), to let built-in Microsoft Defender for Endpoint PowerShell scripts run in **FullLanguage** mode. Without the appropriate WDAC allow rules, MDE features that rely on PowerShell scripts don't work as expected.
 
-## Applies to
+<a name="applies-to"></a>
+## Supported platforms and requirements
 
 - Windows 10 or later
 - Windows Server 2019 or later
@@ -33,7 +34,7 @@ This article explains how to configure allow rules in Windows Defender Applicati
 
 ## Overview
 
-When the **ConstrainedLanguageCompatible** capability is enabled, Microsoft Defender for Endpoint adjusts how it invokes PowerShell to remain compatible with PowerShell Constrained Language Mode (CLM) that WDAC enforces.
+When the **ConstrainedLanguageCompatible** capability (a Defender for Endpoint sensor setting that controls how MDE invokes PowerShell under script enforcement) is enabled, Microsoft Defender for Endpoint adjusts its PowerShell calls to remain compatible with PowerShell Constrained Language Mode (CLM) that WDAC enforces.
 
 With the appropriate WDAC allow rules in place, trusted PowerShell scripts can run in **FullLanguage** mode while WDAC script enforcement remains enabled.
 
@@ -44,6 +45,8 @@ This article explains how to:
 - Create path-based allow rules (use only when necessary).
 
 ## Before you begin
+
+Review the following prerequisites and planning considerations before you update your WDAC policy:
 
 - Use the least permissive rule that meets your requirement. Prefer **Publisher (certificate-based)** rules over path-based rules.
 - Plan how you update and re-sign your WDAC policy if it's signed.
@@ -406,11 +409,13 @@ To finish the path-based rule setup:
 
 ## Security best practices
 
-- Prefer Publisher (certificate-based) allow rules over path-based rules.
-- Scope allow rules as narrowly as possible (specific Publisher, Product, or Binary when available).
-- Avoid user-writable paths and broad wildcards (for example, `C:\Users\*\Downloads\*`).
-- Track who requested each allow rule, the business justification, and an expiration or review date.
-- Validate all changes in a pilot ring before you enforce them broadly.
+Follow these tips to keep your WDAC policy secure:
+
+- Use Publisher (certificate-based) rules instead of path-based rules.
+- Keep allow rules narrow. Specify a Publisher, Product, or Binary name when you can.
+- Don't allow user-writable paths or broad wildcards (for example, `C:\Users\*\Downloads\*`).
+- Record who requested each rule, the reason, and a review date.
+- Test all changes in a pilot ring before broad enforcement.
 
 ## Related content
 

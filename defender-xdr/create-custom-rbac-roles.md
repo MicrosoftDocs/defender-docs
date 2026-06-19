@@ -1,6 +1,6 @@
 ---
 title: Create custom roles with Microsoft Defender unified role-based access control (RBAC)
-description: Create custom roles in Microsoft Defender XDR Security portal role-based access control (RBAC)
+description: Create custom roles in Microsoft Defender unified RBAC and assign specific permissions to users or groups for granular access to Microsoft Defender portal experiences.
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: 
+ms.custom: msecd-doc-authoring-1014
 ms.topic: how-to
-ms.date: 03/12/2026
+ms.date: 06/16/2026
 ms.reviewer: 
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
@@ -22,6 +22,7 @@ appliesto:
 - Microsoft Security Exposure Management
 - Microsoft Defender for Cloud Apps
 - Microsoft Sentinel data lake
+ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to create custom roles in Microsoft Defender unified RBAC so that I can manage permissions and access to Microsoft Defender portal experiences.
 ---
 
@@ -29,7 +30,7 @@ appliesto:
 
 This article describes how to create custom roles in Microsoft Defender unified role-based access control (RBAC). Microsoft Defender unified RBAC enables you to create custom roles with specific permissions and assign them to users or groups, allowing for granular control over access to Microsoft Defender portal experiences.
 
-Creating custom roles for [Microsoft Sentinel data lake](https://aka.ms/data-lake-overview) is supported in Preview.
+Creating custom roles for [Microsoft Sentinel data lake](https://aka.ms/data-lake-overview) is supported in Preview. Before you begin, make sure you meet the [prerequisites](#prerequisites) listed in this article.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -72,12 +73,12 @@ The following steps describe how to create custom roles in the Microsoft Defende
 
     For more information, see [Permissions in Microsoft Defender unified role-based access control (RBAC)](custom-permissions-details.md).
 
-1. When you're done assigning permissions for each permission group, select **Apply** and then **Next** to continue on to the next permission group.
+1. When you're done assigning permissions for each selected permission group, select **Apply** and then **Next** to continue configuring the remaining permission groups you selected.
     
     > [!NOTE]
-    > If all read-only or all read and manage permissions are assigned, any new permissions added to this category in the future are automatically assigned under this role.
+    > If all read-only permissions or all read and manage permissions are assigned, any new permissions added to those permission categories in the future are automatically assigned under this role.
     >
-    > If you assigned custom permissions and new permissions are added to this category, you'll need to reassign your roles with the new permissions if needed.
+    > If you assigned custom permissions and new permissions are added to the same category, you'll need to reassign your roles with the new permissions if needed.
 
 1. After you select your permissions for any relevant permission group, select **Apply** and then **Next** to assign users and data sources.
 
@@ -101,7 +102,7 @@ The following steps describe how to create custom roles in the Microsoft Defende
 
 ## Create a role to access and manage roles and permissions
 
-To access and manage roles and permissions, if you're not at least a Security Administrator in Microsoft Entra ID, create a role with **Authorization** permissions. To create this role:
+**Authorization** permissions are the unified RBAC permissions that allow users to view, create, and manage roles and permissions in the Microsoft Defender portal. If you're not at least a Security Administrator in Microsoft Entra ID, you need a role with **Authorization** permissions to access and manage roles and permissions. To create this role:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as Security Administrator or higher.
 
@@ -124,11 +125,11 @@ To access and manage roles and permissions, if you're not at least a Security Ad
 
 1. Select **Add assignments** and enter the **Assignment name**.
 
-1. To choose the data sources that users assigned with the *Authorization* permission have access to, select one of the following options:
+1. To configure the access scope for users assigned with the *Authorization* permission, select one of the following access settings:
 
-    - **Choose all data sources**: This grants users permissions to create new roles and manage roles for all data sources.
-    - **Select specific data sources**: This grants users permissions to create new roles and manage roles for a specific data source. For example, select **Microsoft Defender for Endpoint** from the dropdown to grant users the *Authorization* permission for the Microsoft Defender for Endpoint data source only.
-    - **Microsoft Sentinel data lake collection**: Select this option to grant users the *Authorization* permission for the Microsoft Sentinel data lake.
+    - **Choose all data sources**: Grants users permissions to create and manage roles for all data sources.
+    - **Select specific data sources**: Grants users permissions to create and manage roles for a specific data source. For example, select **Microsoft Defender for Endpoint** from the dropdown to grant users the *Authorization* permission for the Microsoft Defender for Endpoint data source only.
+    - **Microsoft Sentinel data lake collection**: Grants users the *Authorization* permission for the Microsoft Sentinel data lake data collection.
 
 1. In **Assigned users and groups** – choose the Microsoft Entra security groups or individual users to assign the role to, and select **Add**.
 
@@ -157,9 +158,11 @@ Microsoft Defender for Endpoint device groups continue to govern per-device visi
 For more information, see [Create and manage device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups).
 
 > [!NOTE]
-> In multi-workspace Microsoft Sentinel environments, URBAC data source selections control access to Sentinel workspace data in the Defender portal. These selections don't change SIEM access or permissions configured through Azure RBAC for individual workspaces. Azure RBAC continues to govern direct workspace access outside the Defender portal.
+> In multi-workspace Microsoft Sentinel environments, URBAC data source selections control access to Sentinel workspace data in the Defender portal. These selections don't change security information and event management (SIEM) access or permissions configured through Azure RBAC for individual workspaces. Azure RBAC continues to govern direct workspace access outside the Defender portal.
 
 ## Next steps
+
+After you create custom roles, continue with the following related tasks:
 
 - [Import existing RBAC roles](import-rbac-roles.md)
 - [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md)
