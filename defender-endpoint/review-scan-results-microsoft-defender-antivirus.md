@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: yongrhee
-ms.custom: nextgen
-ms.date: 10/20/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -21,21 +21,24 @@ appliesto:
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 
 # Review Microsoft Defender Antivirus scan results
 
-After a Microsoft Defender Antivirus scan completes, whether it's an [on-demand](run-scan-microsoft-defender-antivirus.md) or [scheduled scan](schedule-antivirus-scans.md), the results are recorded and you can view the results.
+After a Microsoft Defender Antivirus scan completes, whether it's an [on-demand scan](run-scan-microsoft-defender-antivirus.md) or [scheduled antivirus scan](schedule-antivirus-scans.md), the results are recorded and you can view the results. This article explains how to review scan results, including detected threats and their details, using the Microsoft Defender portal, Microsoft Intune, Configuration Manager, PowerShell, or Windows Management Instrumentation (WMI).
 
 ## Prerequisites
 
 ### Supported operating systems
 
+The following operating systems are supported:
+
 - Windows
 
 ## Use Microsoft Defender to review scan results
 
-To view the scan results using the Defender portal, follow the below process.
+To view the scan results using the Defender portal, follow these steps.
 
 1. Sign in to [Microsoft Defender portal](https://security.microsoft.com)
 
@@ -45,7 +48,7 @@ To view the scan results using the Defender portal, follow the below process.
 
 ## Use Microsoft Intune to review scan results
 
-To view the scan results using Microsoft Intune admin center, follow the below process.
+To view the scan results using Microsoft Intune admin center, follow these steps.
 
 1. Sign in to [Microsoft Intune admin center](https://intune.microsoft.com/#home).
 1. Go to **Reports**.
@@ -68,7 +71,7 @@ See [How to monitor Endpoint Protection status](/intune/configmgr/protect/deploy
 
 ## Use PowerShell cmdlets to review scan results
 
-The following cmdlet returns each detection on the endpoint. If there are multiple detections of the same threat, each detection is listed separately, based on the time of each detection:
+To review recent threat detections recorded by Microsoft Defender Antivirus, run the following cmdlet. It returns each detection on the endpoint. If there are multiple detections of the same threat, each detection is listed separately, based on the time of each detection:
 
 ```PowerShell
 Get-MpThreatDetection
@@ -78,7 +81,7 @@ Get-MpThreatDetection
 
 You can specify `-ThreatID` to limit the output to only show the detections for a specific threat.
 
-If you want to list threat detections, but combine detections of the same threat into a single item, you can use the following cmdlet:
+To list threats currently known to Microsoft Defender Antivirus on the device, with multiple detections of the same threat combined into a single item, use the following cmdlet:
 
 ```PowerShell
 Get-MpThreat
