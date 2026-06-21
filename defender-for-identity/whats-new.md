@@ -28,9 +28,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Identity risk score (General Availability)
 
-The identity risk score is now generally available. The risk score ranges from 0 to 100 and indicates the likelihood of compromise and the potential impact based on criticality and privileged roles. The risk score is available in Microsoft Entra ID, where it can be used to inform conditional access policies and identity protection workflows.
-
-The **Risk score** tab on the **Identity** page provides a detailed breakdown of the risk factors, including percentile comparison and risk trends. For more information, see [Investigate an identity](/defender-xdr/investigate-users#risk-score-tab).
+The [identity risk score](/defender-xdr/investigate-users#risk-score-tab) is now generally available. The score ranges from 0 to 100 and reflects how likely an identity is to be compromised and how much damage a compromise could cause, based on the identity's criticality level and privileged role assignments. The **Risk score** tab on the **Identity** page provides a detailed breakdown of risk factors, percentile comparison, and risk trends.
 
 ### New Defender for Identity security alerts
 

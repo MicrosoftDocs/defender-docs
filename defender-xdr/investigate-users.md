@@ -117,7 +117,7 @@ The **Risk score** tab summarizes the identity's risk level by combining alert a
 Select **Reset risk** at the top of the tab to manually reset the identity's risk score, for example after completing remediation.
 
 > [!NOTE]
-> Identity risk in Defender uses automated decay logic to allow SOC prioritization. If no new risk factors are detected, the identity risk score decreases over time. Microsoft Entra ID maintains its own risk level independently and doesn't apply decay. As a result, you might see an Entra risk level with no corresponding identity risk score when the Entra risk update time is older than 30 days.
+> Identity risk in Microsoft Defender for Identity uses automated decay logic to allow SOC prioritization. If no new risk factors are detected, the identity risk score decreases over time. Microsoft Entra ID maintains its own risk level independently and doesn't apply decay. As a result, you might see an Entra risk level with no corresponding identity risk score when the Entra risk update time is older than 30 days.
 
 ## Timeline tab
 
