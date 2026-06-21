@@ -160,3 +160,6 @@ If the recommendation still shows resources as unhealthy after 24 hours, see [Re
 > [!div class="nextstepaction"]
 > [Review and manage recommendation exemptions](review-exemptions.md)
 
+## Related content
+
+- [Manage false-positive security recommendations for Defender for Storage](defender-for-storage-false-positive-recommendations.md)

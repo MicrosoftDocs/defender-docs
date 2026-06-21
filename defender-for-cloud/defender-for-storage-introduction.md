@@ -134,4 +134,5 @@ You can enable Defender for Storage at the subscription level or the storage acc
 
 - [Enable Defender for Storage](tutorial-enable-storage-plan.md)
 - [Enable Defender for Storage using infrastructure as code](defender-for-storage-infrastructure-as-code-enablement.md)
+- [Manage false-positive security recommendations for Defender for Storage](defender-for-storage-false-positive-recommendations.md)
 - Check out [common questions](faq-defender-for-storage.yml) about Defender for Storage.
