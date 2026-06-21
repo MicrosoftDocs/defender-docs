@@ -13,7 +13,7 @@ ms.custom:
   - msecd-doc-authoring-106
   - sfi-ga-nochange
   - sfi-image-nochange
-ms.date: 04/15/2026
+ms.date: 06/22/2026
 ms.reviewer: maelgami 
 appliesto: 
 - Microsoft Defender for Identity
@@ -114,7 +114,7 @@ The **Identities** list highlights key details for each human identity, includin
 | UPN (User Principal Name) | The unique sign-in name of the identity in an email-like format. |
 | Identity environment | Indicates whether the identity is on-premises (originates from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID). |
 | Identity provider | The name of the identity provider. |
-| Risk score | The risk score dynamically calculated for the identity. |
+| Risk score | The risk score dynamically calculated for the identity, ranging from 0 to 100. The score combines likelihood of compromise (based on alert activity) with potential impact (based on criticality and privileged roles). Identity risk in Defender uses automated decay logic to allow SOC prioritization, so the score decreases over time if no new risk factors are detected. For a detailed breakdown of risk factors, see [Risk score tab](/defender-xdr/investigate-users#risk-score-tab). |
 | Criticality level | The criticality level assigned to the identity. |
 | Tags | Custom labels that help categorize identities considered high-value assets. For example, **Sensitive**, **Honeytoken**, or **Privileged Accounts** managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service. |
 | SID | The Security Identifier, a unique value used to identify the identity in Active Directory. |
