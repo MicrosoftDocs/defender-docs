@@ -28,6 +28,8 @@ sections:
         answer: |
           Yes, you can exclude storage accounts from protection.
 
+          Some storage accounts, such as Azure Databricks DBFS root storage, generate false-positive security recommendations. For guidance on identifying which recommendations to exempt and how to create exemptions using the Azure portal, CLI, or Azure Policy, see [Manage false-positive security recommendations for Defender for Storage](defender-for-storage-false-positive-recommendations.md).
+
 
       - question: |
           How long does it take for subscription-level enablement to take effect?
