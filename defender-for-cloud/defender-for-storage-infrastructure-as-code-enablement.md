@@ -1,7 +1,7 @@
 ---
 title: Enable Defender for Storage by Using Infrastructure as Code
 description: Learn how to enable and configure Microsoft Defender for Storage by using infrastructure as code (IaC) templates.
-ms.date: 07/01/2025
+ms.date: 06/17/2026
 ms.topic: how-to
 #customer intent: As a security administrator, I want to enable and configure Microsoft Defender for Storage by using IaC templates so that I can help protect all storage accounts.
 ai-usage: ai-assisted
@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 
 # Enable Defender for Storage by using infrastructure as code
 
-Use this article to enable and configure Microsoft Defender for Storage by using Terraform, Bicep, or Azure Resource Manager templates at either the subscription level or the storage account level.
+Use this article to enable and configure Microsoft Defender for Storage by using infrastructure as code (IaC) templates, PowerShell, or Azure Policy. You can enable at either the subscription level or the storage account level. For an overview of Defender for Storage and its features, see [What is Microsoft Defender for Storage](defender-for-storage-introduction.md).
 
 ## Enable Defender for Storage by using infrastructure as code
 
@@ -268,7 +268,88 @@ By customizing this code, you can:
 >
 > [Learn more on how to set up a response for malware scanning results](defender-for-storage-configure-malware-scan.md).
 
+## Enable at scale with PowerShell
+
+Use PowerShell when you need to enable Defender for Storage for multiple subscriptions.
+
+Before you begin, install the `Az.Security` module:
+
+```powershell
+Install-Module -Name Az.Security
+```
+
+Use the following command to enable Defender for Storage on a single subscription:
+
+```powershell
+Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard" -SubPlan "DefenderForStorageV2"
+```
+
+Use the following script to enable Defender for Storage on all subscriptions in a tenant:
+
+```powershell
+$subscriptions = Get-AzSubscription
+foreach ($sub in $subscriptions) {
+    Set-AzContext -SubscriptionId $sub.Id
+    Write-Host "Enabling Defender for Storage on subscription: $($sub.Name)"
+    Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard" -SubPlan "DefenderForStorageV2"
+}
+```
+
+> [!NOTE]
+> You need the Security Admin or Owner role on each subscription that you update.
+
+To verify the configuration, run:
+
+```powershell
+Get-AzSecurityPricing -Name "StorageAccounts"
+```
+
+## Enable automatically with Azure Policy
+
+Use Azure Policy to help ensure new subscriptions are automatically covered and to help prevent configuration drift.
+
+Use the built-in policy definition **Configure Microsoft Defender for Storage to be enabled**.
+
+To assign the policy in the Azure portal:
+
+1. Go to **Policy**.
+1. Select **Definitions**.
+1. Search for **Defender for Storage**.
+1. Select **Configure Microsoft Defender for Storage to be enabled**.
+1. Select **Assign**.
+
+Use the `DeployIfNotExists` effect to remediate supported resources automatically.
+
+You can create policy exemptions for specific storage accounts or subscriptions that shouldn't be covered.
+
+> [!NOTE]
+> Azure Policy assignments can take up to 30 minutes to take effect. Existing non-compliant resources require a remediation task.
+
+For more information, see [Azure Policy documentation](/azure/governance/policy/overview).
+
+## Validate your deployment
+
+After you deploy Defender for Storage, use the following checklist to validate the configuration:
+
+1. In the Azure portal, go to **Microsoft Defender for Cloud** > **Environment settings** > select your subscription > confirm **Defender for Storage** shows as **On**.
+1. Verify storage accounts are listed as protected under **Inventory**.
+1. Run a test upload to confirm malware scanning is active. Upload an [EICAR test file](https://www.eicar.org/download-anti-malware-testfile/) to a blob container.
+1. Check role assignments. Defender for Storage requires the `StorageBlobDataReader` role on the storage account for the Defender for Cloud service principal.
+1. For IaC deployments, confirm no configuration drift by rerunning your template and verifying idempotency.
+
+## Troubleshoot common issues
+
+| Issue | Likely cause | Resolution |
+|---|---|---|
+| Plan activation fails at subscription level | Insufficient permissions | Ensure you have the Security Admin or Owner role on the subscription. |
+| Storage account not protected after subscription-level enablement | Propagation delay | Protection can take up to 24 hours to apply to existing accounts. |
+| Configuration drift after ARM/Bicep deployment | Conflicting resource-level settings | Check for resource-level overrides by using `overrideSubscriptionLevelSettings`. Set it to `false` at the storage account level to inherit subscription settings. |
+| Auto-provisioning not enabling on new subscriptions | Azure Policy not assigned | Assign the **Configure Microsoft Defender for Storage to be enabled** built-in policy to your management group. |
+| Malware scanning not triggering | Plan enabled but extension disabled | Verify the `OnUploadMalwareScanning` extension has `isEnabled: True` in your template. |
+
 ## Related content
 
-> [!div class="nextstepaction"]
-> [Review Microsoft.Security/DefenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true)
+- [What is Microsoft Defender for Storage](defender-for-storage-introduction.md)
+- [Enable Defender for Storage](tutorial-enable-storage-plan.md)
+- [Advanced configurations for malware scanning](advanced-configurations-for-malware-scanning.md)
+- [Review Microsoft.Security/DefenderForStorageSettings API documentation](/rest/api/defenderforcloud-composite/defender-for-storage/create?view=rest-defenderforcloud-composite-latest&tabs=HTTP&preserve-view=true)
