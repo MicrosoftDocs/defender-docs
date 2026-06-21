@@ -930,6 +930,8 @@
                 href: defender-for-storage-data-sensitivity.md
               - name: Enable sensitive data threat detection
                 href: enable-defender-for-storage-data-sensitivity.md
+      - name: Manage false-positive recommendations
+        href: defender-for-storage-false-positive-recommendations.md
       - name: Common questions about Defender for Storage
         displayName: storage, common questions, defender for storage, storage, faq,
           frequently asked questions
