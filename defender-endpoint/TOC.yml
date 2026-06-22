@@ -606,27 +606,30 @@
     - name: Detect vulnerabilities
     - name: Detect vulnerabilities
       href: /defender-vulnerability-management
-    - name: Discover devices
+    - name: Discover and manage devices
       items:
-      - name: Overview
+      - name: Device discovery
         href: device-discovery.md
       - name: Manage device discovery
         href: configure-device-discovery.md
       - name: Review and assess devices
         href: assess-devices.md
-
       - name: Configure network authenticated scans
         href: network-devices.md
-      - name: Troubleshoot
-        href: troubleshoot-device-discovery-network-scans.md
-    - name: Devices
-      items:
-      - name: Overview
+        items:
+        - name: Troubleshoot
+          href: troubleshoot-device-discovery-network-scans.md    
+      - name: Device inventory
         displayName: devices, device inventory
         href: devices-overview.md
       - name: Explore devices in the device inventory
-        displayName: device inventory
-        href: machines-view-overview.md
+        items:
+        - name: Overview
+          displayName: device inventory
+          href: machines-view-overview.md
+        - name: Device inventory field and filter reference
+          displayName: device inventory fields, device inventory filters
+          href: device-inventory-field-reference.md
       - name: Manage device scope and relevance
         displayName: exclude devices, transient devices
         href: manage-device-scope-relevance.md

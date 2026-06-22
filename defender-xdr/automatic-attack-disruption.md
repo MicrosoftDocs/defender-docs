@@ -36,9 +36,9 @@ Attack disruption supports response actions in Microsoft Defender services and i
 
 ## How automatic attack disruption works
 
-Automatic attack disruption is designed to contain attacks in progress, limit the impact on an organization's assets, and provide more time for security teams to remediate the attack fully. Attack disruption uses the full breadth of our extended detection and response (XDR) signals, taking the entire attack into account to act at the incident level. This capability is unlike known protection methods such as prevention and blocking based on a single indicator of compromise.
+Automatic attack disruption is designed to contain attacks in progress, limit the impact on an organization's assets, and provide more time for security teams to remediate the attack fully. Attack disruption uses extended detection and response (XDR) signals and evaluates the entire attack to take action at the incident level. This capability differs from protection methods such as prevention and blocking based on a single indicator of compromise.
 
-While many XDR and security orchestration, automation, and response (SOAR) platforms allow you to create your automatic response actions, automatic attack disruption is built in and uses insights from Microsoft security researchers and advanced AI models to counteract the complexities of advanced attacks. Automatic attack disruption considers the entire context of signals from different sources to determine compromised assets.
+While many XDR and security orchestration, automation, and response (SOAR) platforms allow you to create automatic response actions, automatic attack disruption is built in and uses insights from Microsoft security researchers and AI models to detect and contain advanced attacks. Automatic attack disruption considers signals from different sources to determine compromised assets.
 
 Automatic attack disruption operates in three key stages:
 
@@ -46,7 +46,7 @@ Automatic attack disruption operates in three key stages:
 - It identifies assets controlled by the attacker and used to spread the attack.
 - It automatically takes response actions in relevant Microsoft Defender products to contain the attack in real-time by containing and disabling affected assets.
 
-This game-changing capability limits a threat actor's progress early on and dramatically reduces the overall impact of an attack, from associated costs to loss of productivity.
+This capability can limit a threat actor's progress early on and reduce the overall impact of an attack, including associated costs and loss of productivity.
 
 ## How Defender establishes confidence for automatic action
 
@@ -60,11 +60,11 @@ Microsoft security experts continuously review disruption activity, monitor anom
 
 In addition, all automatic actions can be undone by your security team, so you maintain full control over your environment. For more information, see [Details and results of an automatic attack disruption action](autoad-results.md).
 
-Automatic attack disruption enables the exclusion of specific user accounts, devices, and IP addresses from automated containment actions. Excluding assets from automated responses isn't recommended because it can reduce the effectiveness of automatic attack disruption in protecting your environment from sophisticated, high-impact attacks. To learn more, see [Exclude assets from automated responses in automatic attack disruption](automatic-attack-disruption-exclusions.md).
+If you have critical assets that shouldn't be automatically contained, you can configure exclusions for supported users, devices, and IP addresses. For guidance, see [Exclude assets from automated response actions](automatic-attack-disruption-exclusions.md).
 
 ## How attack disruption uses AI
 
-Attack disruption AI uses an ensemble of purpose-built models and detectors developed throughout the Microsoft Defender suite. These capabilities are trained and tuned using multiple data sources, including:
+Attack disruption AI uses an ensemble of specialized models and detectors developed across the Microsoft Defender suite. These capabilities are trained and tuned using multiple data sources, including:
 
 - Correlated Defender workload telemetry
 - Microsoft threat intelligence
@@ -72,7 +72,7 @@ Attack disruption AI uses an ensemble of purpose-built models and detectors deve
 
 The platform uses multiple machine learning approaches, including graph models, boosted decision trees, neural networks, and dedicated small language models (SLMs), to improve detection quality and action precision.
 
-Model and detector quality is maintained through continuous engineering and validation cycles rather than a single static release point. Before broad rollout, new detectors go through rigorous pre-release validation and staged deployment. Ongoing quality is supported by expert review of AI decisions and 24x7 operational response coverage for anomalous behavior.
+Model and detector quality is maintained through continuous engineering and validation cycles rather than a single static release point. Before broad rollout, new detectors go through rigorous pre-release validation and staged deployment. Ongoing quality is supported by review of AI decisions and 24x7 operational response coverage for anomalous behavior.
 
 ## Automated response actions
 
@@ -91,7 +91,7 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
   - **When the user account is hosted in Active Directory and is synced to Microsoft Entra ID**:
 Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account in Microsoft Entra ID.
   - **When the user account is hosted in Microsoft Entra ID only (cloud‑native account)**:
-Defender for Identity executes the disable user action in Microsoft Entra ID by using a Microsoft‑managed enterprise application. This application validates the signed‑in user’s assigned roles and permissions through role‑based access control (RBAC) before the account is disabled.
+Defender for Identity executes the disable user action in Microsoft Entra ID by using a Microsoft‑managed enterprise application. This application validates the signed-in user’s assigned roles and permissions through role-based access control (RBAC) before the account is disabled.
 
   The enterprise application is named `Microsoft Defender for Identity` and uses application ID `60ca1954‑583c‑4d1f‑86de‑39d835f3e452`. In older tenants, this application might appear as `Radius Aad Syncer`.
 
@@ -120,7 +120,7 @@ Use the following table to find where each supported identity service is configu
 
 The Microsoft Defender incident page will reflect the automatic attack disruption actions through the attack story and the status indicated by a yellow bar (Figure 1). The incident shows a dedicated disruption tag, highlights the status of the assets contained in the incident graph, and adds an action to the Action Center.
 
-:::image type="content" source="media/automatic-attack-disruption/Fig1-auto-attack-disruption.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="media/automatic-attack-disruption/Fig1-auto-attack-disruption.png":::
+:::image type="content" source="media/automatic-attack-disruption/auto-attack-disruption.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="media/automatic-attack-disruption/auto-attack-disruption.png":::
 *Figure 1. Incident view showing the yellow bar where automatic attack disruption took action*
 
 The Microsoft Defender user experience includes visual cues to ensure visibility of these automatic actions. You can find them in the following experiences:

@@ -39,7 +39,7 @@ View OT devices as part of the [device inventory](/defender-endpoint/machines-vi
 
 To customize the device inventory views:
 
-- [Use filters](/defender-endpoint/machines-view-overview#use-filters-to-customize-the-device-inventory-views)
+- [Use filters](/defender-endpoint/machines-view-overview#sort-and-filter-the-device-list)
 - [Use columns](/defender-endpoint/machines-view-overview#use-columns-to-customize-the-device-inventory-views)
 
 [!INCLUDE [defender-iot-site-association](includes/site-association.md)]
