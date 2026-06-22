@@ -228,7 +228,7 @@ For known issues, see [macOS known issues](#macos-known-issues).
 
 | Feature area | Update summary |
 |--------------|----------------|
-| General      | Security and Critical Updates |
+| General      | Security and critical updates |
 
 ### macOS | April-2026 | 101.26032.0016
 
