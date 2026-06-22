@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 06/15/2026
+ms.date: 06/22/2026
 ai-usage: ai-assisted
 ms.collection:
 - m365-security
