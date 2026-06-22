@@ -8,12 +8,13 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-ga-nochange
   - sfi-image-nochange
-description: Authenticated Received Chain (ARC) is an email authentication method that tries to preserve authentication results across devices and any message modification that occurs between the sender and recipient.
+description: Configure trusted ARC sealers in Microsoft 365 so messages modified by legitimate intermediary services retain original authentication results and avoid unnecessary SPF, DKIM, and DMARC failures.
 ms.service: defender-office-365
-ms.date: 05/27/2026
+ms.date: 06/15/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -34,7 +35,8 @@ But some legitimate email services might modify messages before they're delivere
 
 Authenticated Received Chain (ARC) helps reduce inbound email authentication failures from message modification by legitimate email services. ARC preserves the original email authentication information at the email service. You can configure your Microsoft 365 organization to trust the service that modified the message, and to use that original information in email authentication checks.
 
-## When to use trusted ARC sealers?
+<a name="when-to-use-trusted-arc-sealers"></a>
+## When to use trusted ARC sealers
 
 A Microsoft 365 organization needs to identify trusted ARC sealers only when messages delivered to Microsoft 365 recipients are regularly affected in the following ways:
 
@@ -44,7 +46,7 @@ A Microsoft 365 organization needs to identify trusted ARC sealers only when mes
 After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 uses the original email authentication information that the ARC sealer provides to validate the messages sent through the service into Microsoft 365.
 
 > [!TIP]
-> Add only legitimate, required services as trusted ARC sealers in your Microsoft 365 organization. This action helps affected messages pass email authentication checks, and prevents legitimate messages from being delivered to the Junk Email folder, quarantined, or rejected due to email authentication failures.
+> Add only legitimate, required services as trusted ARC sealers in your Microsoft 365 organization. Adding only legitimate services helps affected messages pass email authentication checks, and prevents legitimate messages from being delivered to the Junk Email folder, quarantined, or rejected due to email authentication failures.
 
 ## What do you need to know before you begin?
 
@@ -52,7 +54,7 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- You need to be assigned permissions before you can do the procedures in this article. You have the following options:
+- You need to be assigned permissions before you can configure trusted ARC sealers. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Security Administrator** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>. Members of the Security Administrator role can't access email authentication settings in the Defender portal.
@@ -80,11 +82,12 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
 
    When you're finished in the **Add trusted ARC sealers** flyout, select **Save**.
 
-### Use Exchange Online PowerShell to add trusted ARC sealers
+<a name="use-exchange-online-powershell-to-add-trusted-arc-sealers"></a>
+## Use Exchange Online PowerShell to add trusted ARC sealers
 
 If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to run the following commands.
 
-- **View existing trusted ARC sealers**
+- **View existing trusted ARC sealers**: Run the following command to display the current ARC configuration and see which trusted ARC sealers are already configured in your tenant:
 
   ```powershell
   Get-ArcConfig
@@ -110,7 +113,7 @@ If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, conn
 
   To preserve existing values, be sure to include the ARC sealers that you want to keep along with the new ARC sealers that you want to add.
 
-  To add or remove ARC sealers without affecting the other entries, see the Examples section in [Set-ArcConfig](/powershell/module/exchangepowershell/set-arcconfig).
+  To add or remove ARC sealers without affecting the other entries, see [Set-ArcConfig examples](/powershell/module/exchangepowershell/set-arcconfig#examples).
 
 ## Vendor-specific ARC sealer configuration
 
@@ -126,11 +129,12 @@ When you add a trusted ARC sealer in Microsoft 365, you enter the domain shown i
 > [!IMPORTANT]
 > The ARC sealer domain is **not** your organization's domain. It's the vendor's signing domain that appears in the `d=` field of the ARC-Seal header. Always verify the actual `d=` value from a message header before you configure the trusted sealer.
 
-### Proofpoint
+<a name="proofpoint"></a>
+### Configure trusted ARC sealers for Proofpoint
 
 Proofpoint Protection Server (PPS) adds ARC headers when messages are processed through the gateway. The ARC-Seal header uses `d=pphosted.com`.
 
-1. **Verify the ARC sealer domain from a message header**: Look for the following pattern in message headers:
+1. **Verify the ARC sealer domain from a message header**: Locate the `d=` value in the `ARC-Seal` header to identify the ARC sealer domain. For Proofpoint, look for the following pattern in message headers:
 
    ```text
    ARC-Seal: i=1; a=rsa-sha256; d=pphosted.com; s=arcselector;
@@ -147,7 +151,8 @@ Proofpoint Protection Server (PPS) adds ARC headers when messages are processed 
    > [!NOTE]
    > Some Proofpoint deployments use a custom domain for ARC sealing (for example, `proofpoint.com` or a customer-specific domain). Always check actual message headers to confirm the `d=` value before you configure trusted sealers.
 
-### Mimecast
+<a name="mimecast"></a>
+### Configure trusted ARC sealers for Mimecast
 
 Mimecast Email Security adds ARC headers when it processes inbound and outbound mail. The ARC-Seal header uses `d=mimecast.com`.
 
@@ -168,11 +173,12 @@ Mimecast Email Security adds ARC headers when it processes inbound and outbound 
    > [!TIP]
    > If you're migrating from Mimecast to Microsoft 365 native protection, keep the Mimecast trusted ARC sealer configured until you fully cut over MX records and all queued messages are delivered.
 
-### Barracuda
+<a name="barracuda"></a>
+### Configure trusted ARC sealers for Barracuda
 
 Barracuda Email Gateway Defense and Email Security Gateway add ARC headers using `d=barracudanetworks.com`.
 
-1. **Verify the ARC sealer domain from a message header**: Look for the following pattern in message headers:
+1. **Verify the ARC sealer domain from a message header**: Locate the `d=` value in the `ARC-Seal` header to confirm the Barracuda sealing domain. Look for the following pattern in message headers:
 
    ```text
    ARC-Seal: i=1; a=rsa-sha256; d=barracudanetworks.com; s=arc1;
@@ -186,11 +192,12 @@ Barracuda Email Gateway Defense and Email Security Gateway add ARC headers using
    Set-ArcConfig -Identity Default -ArcTrustedSealers "barracudanetworks.com"
    ```
 
-### Sophos
+<a name="sophos"></a>
+### Configure trusted ARC sealers for Sophos
 
 Sophos Central Email Security adds ARC headers using `d=sophos.com`.
 
-1. **Verify the ARC sealer domain from a message header**: Look for the following pattern in message headers:
+1. **Verify the ARC sealer domain from a message header**: Locate the `d=` value in the `ARC-Seal` header to confirm the Sophos sealing domain. Look for the following pattern in message headers:
 
    ```text
    ARC-Seal: i=1; a=rsa-sha256; t=1686324586; cv=none;
@@ -204,23 +211,24 @@ Sophos Central Email Security adds ARC headers using `d=sophos.com`.
    Set-ArcConfig -Identity Default -ArcTrustedSealers "sophos.com"
    ```
 
-### Multiple vendors
+<a name="multiple-vendors"></a>
+### Configure trusted ARC sealers for multiple vendors
 
-If your organization uses multiple email services that add ARC seals, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and add all vendor domains in a single command:
+If your organization uses multiple email services that add ARC seals, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and add all vendor domains in a single command.
+
+> [!IMPORTANT]
+> The **-ArcTrustedSealers** parameter _replaces_ all existing entries. To preserve existing trusted sealers, include them in the command along with any new domains you want to add.
+
+> [!CAUTION]
+> Only add vendors that you actively use and trust. Adding unnecessary ARC sealers increases your attack surface because a compromised vendor could pass spoofed messages through your authentication checks.
 
 ```powershell
 Set-ArcConfig -Identity Default -ArcTrustedSealers "pphosted.com","mimecast.com","barracudanetworks.com","sophos.com"
 ```
 
-> [!CAUTION]
-> Only add vendors that you actively use and trust. Adding unnecessary ARC sealers increases your attack surface because a compromised vendor could pass spoofed messages through your authentication checks.
-
-> [!NOTE]
-> The **-ArcTrustedSealers** parameter _replaces_ all existing entries. To preserve existing trusted sealers, include them in the command along with any new domains you want to add.
-
 ### Find your vendor's ARC sealer domain
 
-If your vendor isn't listed in the previous table, use the following steps to identify the correct ARC sealer domain:
+If your vendor isn't listed in the table of common email security vendors and ARC sealer domains, use the following steps to identify the correct ARC sealer domain:
 
 1. Send a test email through the intermediary service to a Microsoft 365 mailbox.
 1. Open the message headers (in Outlook: **File** \> **Properties** \> **Internet Headers**, or use the [Message Header Analyzer](https://mha.azurewebsites.net)).
@@ -237,7 +245,7 @@ In the last **ARC-Authentication-Results** header, look for `arc=pass` and `oda=
 - The previous ARC sealer is trusted.
 - The previous pass result can be used to override the current DMARC failure.
 
-For example:
+The following example shows an `ARC-Authentication-Results` header where `arc=pass` and `oda=1` confirm that the trusted ARC sealer result can override the DMARC failure:
 
 ```text
 ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
@@ -250,7 +258,7 @@ dkim=[1,1,header.d=sampledoamin.onmicrosoft.com]
 dmarc=[1,1,header.from=sampledoamin.onmicrosoft.com])
 ```
 
-To check whether the ARC result was used to override a DMARC failure, look for `compauth=pass` and `reason=130` in the last **Authentication-Results** header. For example:
+To check whether the ARC result was used to override a DMARC failure, look for `compauth=pass` and `reason=130` in the last **Authentication-Results** header. The following example shows an `Authentication-Results` header where composite authentication passed with `reason=130`, which confirms that a trusted ARC sealer result overrode the DMARC failure:
 
 ```text
 Authentication-Results: spf=fail (sender IP is 10.10.10.10)
@@ -266,11 +274,11 @@ header.from=contoso.com;compauth=pass reason=130
 
 The diagrams in this section contrast mail flow and the effect on email authentication results with and without a trusted ARC sealer. In both diagrams, the Microsoft 365 organization uses a legitimate email service that modifies inbound mail before it's delivered to Microsoft 365. This modification interrupts mail flow, which can cause email authentication failures by changing the source IP and updating the email message header.
 
-This diagram demonstrates the result _without_ a trusted ARC sealer:
+The following mail-flow diagram shows the result _without_ a trusted ARC sealer:
 
 :::image type="content" source="media/m365d-indirect-traffic-flow-without-trusted-arc-sealer.PNG" alt-text="Contoso publishes SPF, DKIM, and DMARC. A sender using SPF sends email from inside contoso.com to fabrikam.com, and this message passes through a legitimate non-Microsoft service that modifies the sending IP address in the email header. During the DNS check at Microsoft 365, the message fails SPF due to the altered IP, and fails DKIM because the content was modified. DMARC fails because of the SPF and DKIM failures. The message is delivered to the Junk Email folder, quarantined, or rejected.":::
 
-This diagram demonstrates the result _with_ a trusted ARC sealer:
+The following mail-flow diagram shows the result _with_ a trusted ARC sealer:
 
 :::image type="content" source="media/m365d-indirect-traffic-flow-with-trusted-arc-sealer.PNG" alt-text="Contoso publishes SPF, DKIM, and DMARC, but also configures the required trusted ARC sealers. A sender using SPF sends email from inside contoso.com to fabrikam.com, and this message passes through a legitimate non-Microsoft service that modifies the sending IP address in the email header. The service uses ARC sealing, and because the service is defined as a trusted ARC sealer in Microsoft 365, the modification is accepted. SPF fails for the new IP address. DKIM fails because of the content modification. DMARC fails because of the earlier failures. But ARC recognizes the modifications, issues a Pass, and accepts the changes. Spoof also receives a pass. The message is delivered to the Inbox.":::
 
@@ -279,6 +287,8 @@ This diagram demonstrates the result _with_ a trusted ARC sealer:
 When ARC doesn't work as expected, use the following troubleshooting reference.
 
 ### Quick reference: ARC failure symptoms
+
+The following table lists common ARC failure symptoms, their likely causes, and recommended resolutions.
 
 |Symptom|Likely cause|Resolution|
 |---|---|---|
@@ -293,14 +303,14 @@ When ARC doesn't work as expected, use the following troubleshooting reference.
 
 **Problem**: You added your own domain (for example, `contoso.com`) instead of the vendor's ARC sealing domain.
 
-The message headers show the vendor's actual ARC sealing domain:
+The message headers show the vendor's actual ARC sealing domain. Verify the `d=` value in the `ARC-Seal` header to identify the correct domain to configure as a trusted sealer:
 
 ```text
 ARC-Seal: i=1; a=rsa-sha256; d=pphosted.com; s=arcselector;
   cv=none; b=<signature>
 ```
 
-But when you run **Get-ArcConfig** in Exchange Online PowerShell, the output shows the wrong domain is configured:
+But when you run **Get-ArcConfig** in Exchange Online PowerShell, the `ArcTrustedSealers` output shows the wrong domain is configured instead of the vendor's domain:
 
 ```text
 ArcTrustedSealers : {contoso.com}
@@ -338,7 +348,7 @@ Set-ArcConfig -Identity Default -ArcTrustedSealers "pphosted.com"
 
 **Problem**: The ARC chain validation shows `cv=fail`, meaning a previous ARC seal in the chain couldn't be verified.
 
-The message headers show a failed chain validation:
+The message headers show a failed chain validation. Look for an `ARC-Seal` header where `cv=fail` indicates that a previous ARC seal in the chain couldn't be verified:
 
 ```text
 ARC-Seal: i=2; a=rsa-sha256; d=mimecast.com; s=arc-2018;
@@ -370,7 +380,7 @@ This failure typically has the following causes:
 - Mail flow rule actions.
 - Safe/Blocked sender lists.
 
-**Diagnosis**: Check the `X-Forefront-Antispam-Report` header:
+**Diagnosis**: Review the `X-Forefront-Antispam-Report` header to determine whether spam filtering scores or categories caused the message to be treated as spam independent of ARC:
 
 ```text
 X-Forefront-Antispam-Report: CIP:10.10.10.10; CTRY:US; LANG:en; SCL:5;
@@ -386,6 +396,8 @@ If `CAT:SPM` or `SCL:5` or higher, the message was filtered as spam by content f
 - [Submit the message as a false positive](submissions-admin.md#report-good-email-to-microsoft) via the Microsoft Defender portal.
 
 ### CompAuth reason codes reference
+
+The following table summarizes the composite authentication (CompAuth) reason codes that appear in message headers during email authentication evaluation.
 
 |Reason code|Description|
 |---|---|
