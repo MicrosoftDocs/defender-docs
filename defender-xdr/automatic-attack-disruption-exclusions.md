@@ -125,7 +125,7 @@ To exclude an IP address from automated responses:
 
 1. Add a name and note for the exclusion. Select **Create** to save the exclusion.
 
-### Policy applications and exclusions
+### Policy applications and exclusions (Preview)
 
 When automatic attack disruption detects with high confidence that a user or device is compromised, it automatically applies containment policies to managed devices in your organization. These policies help contain the threat and stop it from spreading across your environment.
 
