@@ -352,7 +352,7 @@ The classic secure score in the Azure portal is also affected by these individua
 
 Grouped recommendation types are deprecated from the Azure portal and will be removed on July 31, 2026. These recommendations are currently tagged as **Set for deprecation**.
 
-For more information, see [security recommendations](review-security-recommendations.md).
+For more information, see [security recommendations](review-security-recommendations.md) and [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
 
 ### Daily score calculation enhancement for risk-based Cloud secure score
 
