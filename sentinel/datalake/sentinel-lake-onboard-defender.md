@@ -4,10 +4,12 @@ titleSuffix: Microsoft Security
 description: This article describes how to onboard to the Microsoft Sentinel data lake for customers who are currently using Microsoft Defender.
 author: mberdugo
 ms.topic: how-to  
-ms.date: 11/13/2025
+ms.date: 06/12/2026
 ms.author: monaberdugo
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
   
 # Customer intent: As an administrator I want to onboard to the Microsoft Sentinel data lake from my Defender portal so that I can benefit from the storage and analysis capabilities of the data lake.
 ---
@@ -21,7 +23,7 @@ Onboarding your tenant to the Microsoft Sentinel data lake occurs once and start
 
 Use the following steps to onboard to the Microsoft Sentinel data lake from the Defender portal:
 
-1. Sign in to your Defender portal at [https://security.microsoft.com](https://security.microsoft.com).
+1. Sign in to your Defender portal at the [Microsoft Defender portal](https://security.microsoft.com).
 
 1. A banner appears at the top of the page, indicating that you can onboard to the Microsoft Sentinel data lake. Select **Get started**.
 
@@ -64,17 +66,19 @@ If you encounter any issues during the setup process, see the following troubles
 
 The following are errors that you might encounter during the onboarding process.
 
-### DL102
+<a name="dl102"></a>
+### DL102: Can't complete setup due to insufficient regional resources
 
 - **Error**: Can’t complete setup.
 - **Description**: There’s a lack of Azure resources in the region at the time of provisioning.
 - **Resolution**: Select the retry button to start the setup again.
 
-### DL103
+<a name="dl103"></a>
+### DL103: Can't complete setup due to blocking Azure policies
 
 - **Error**: Can’t complete setup.
 - **Description**: There are policies enabled that prevent the creation of the Azure managed resources needed to enable the data lake.
-- **Resolution**: Check your Azure [policies](./sentinel-lake-onboarding.md#policy-exemption-for-microsoft-sentinel-data-lake-onboarding) to allow for creation of Azure managed resources.
+- **Resolution**: Check your Azure [policy exemptions for Microsoft Sentinel data lake onboarding](./sentinel-lake-onboarding.md#policy-exemption-for-microsoft-sentinel-data-lake-onboarding) to allow for creation of Azure managed resources.
 
 ## Related content
 
