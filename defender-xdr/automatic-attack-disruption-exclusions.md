@@ -11,7 +11,7 @@ ms.collection:
   - usx-security
   - usx-security
 ms.topic: how-to
-ms.date: 05/12/2025
+ms.date: 06/23/2025
 appliesto:
 - Microsoft Defender XDR
 
@@ -31,11 +31,26 @@ Automatic attack disruption and exclusion policies work together to help contain
 
 ## Prerequisites
 
-To configure automated response settings or to add or edit device tags, you must be a **Security Administrator or higher** in either [Microsoft Entra ID](https://portal.azure.com) or in the [Microsoft 365 admin center](https://admin.microsoft.com).
+The permissions required to manage attack disruption exclusions depend on whether [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) is enabled for the relevant workload.
 
-A Security Reader and view tags but not edit them.
+### Device exclusions (endpoints)
 
-A Security operator can trigger manual incestigations but can't change automation settings.
+| Unified RBAC for endpoints | Required permission |
+| --- | --- |
+| **Disabled** | Security Administrator or Global Administrator role in [Microsoft Entra ID](https://portal.azure.com) or the [Microsoft 365 admin center](https://admin.microsoft.com). |
+| **Enabled** | Security Operator (or higher) global Microsoft Entra role, **or** the [Core security settings (manage)](custom-permissions-details.md) permission in Unified RBAC. |
+
+For more information, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).
+
+### Identity exclusions
+
+| Unified RBAC for identities or endpoints | Required permission |
+| --- | --- |
+| **Disabled** (both identities and endpoints) | Security Administrator or Global Administrator role in [Microsoft Entra ID](https://portal.azure.com) or the [Microsoft 365 admin center](https://admin.microsoft.com). |
+| **Enabled** (for identities or endpoints) | Security Operator (or higher) global Microsoft Entra role, **or** the [Core security settings (manage)](custom-permissions-details.md) permission in Unified RBAC. |
+
+> [!NOTE]
+> A Security Reader can view exclusions and tags but can't edit them.
 
 ## Exclusion types and approaches
 
