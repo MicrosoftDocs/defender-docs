@@ -4,7 +4,7 @@ description: Learn about the latest new features and announcement in Microsoft S
 author: guywi-ms
 ms.author: guywild
 ms.topic: concept-article
-ms.date: 05/01/2026
+ms.date: 06/23/2026
 #Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
 ms.custom:
   - build-2025
@@ -20,7 +20,12 @@ The listed features were released in the last six months. For information about 
 
 ## June 2026
 
+- [Link behavior results to incidents in advanced hunting (Preview)](#link-behavior-results-to-incidents-in-advanced-hunting-preview)
 - [Reason over Microsoft Sentinel graphs with graph tool (Preview)](#reason-over-microsoft-sentinel-graphs-with-graph-tool-preview)
+
+### Link behavior results to incidents in advanced hunting (Preview)
+
+You can now link behavior-based query results from the `BehaviorInfo` table to new or existing incidents in advanced hunting. This feature lets you enrich incident context with behavior records from Microsoft Sentinel UEBA. The wizard automatically populates alert metadata and entities from the selected behavior record. For more information, see [Link a behavior result to an incident](/defender-xdr/advanced-hunting-link-to-incident#link-a-behavior-result-to-an-incident-preview).
 
 ### Reason over Microsoft Sentinel graphs with graph tool (Preview)
 
