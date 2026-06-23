@@ -203,6 +203,18 @@ Synapse.SQLPool_ShellExternalSourceAnomaly)
 
 **Severity**: High/Medium
 
+### **An abnormally large number of rows were extracted from your SQL Server - Preview**
+
+(SQL.VM_DataExfiltration)
+
+**Description**: An unusually large number of rows has been extracted from your database in a single query. The activity might be related to legitimate operations, such as nonstandard backups or maintenance tasks. Alternatively, it could indicate a potential attempt to exfiltrate data from your SQL Server instances.
+
+*Applies only to Defender for SQL on machines with extension version 2.0.3448.357 and later.*
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Exfiltration
+
+**Severity**: Medium
+
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 

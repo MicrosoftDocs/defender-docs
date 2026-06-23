@@ -51,6 +51,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
+| June 23, 2026 | Alert | Preview | [An abnormally large number of rows were extracted from your SQL server](alerts-reference.md#an-abnormally-large-number-of-rows-were-extracted-from-your-sql-server-preview) |
 | June 18, 2026 | Recommendation | GA | [Unused API endpoints should be disabled and removed from Function Apps](recommendations-reference-api.md#unused-api-endpoints-should-be-disabled-and-removed-from-function-apps) |
 | June 18, 2026 | Recommendation | GA | [Unused API endpoints should be disabled and removed from Logic Apps](recommendations-reference-api.md#unused-api-endpoints-should-be-disabled-and-removed-from-logic-apps) |
 | June 18, 2026 | Recommendation | GA | [Authentication should be enabled on API endpoints hosted in Function Apps](recommendations-reference-api.md#authentication-should-be-enabled-on-api-endpoints-hosted-in-function-apps) |
