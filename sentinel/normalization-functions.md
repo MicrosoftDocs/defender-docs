@@ -78,7 +78,7 @@ The device resolution functions analyze a hostname and determine whether it has 
 
 | Function | Extended fields | Description |
 | -------- | ---------------- | ----------- |
-| **_ASIM_ResolveFQDN** | - `ExtractedHostname`<br> - `Domain`<br> - `DomainType` <br> - `FQDN` | Analyzes the value in the field specified and set the output fields accordingly. For more information, see [example](normalization-develop-parsers.md#resolvefqnd) in the article about developing parsers. | 
+| **_ASIM_ResolveFQDN** | - `ExtractedHostname`<br> - `Domain`<br> - `DomainType` <br> - `FQDN` | Analyzes the value in the field specified and set the output fields accordingly. For more information, see [example](isv/normalization-develop-parsers.md#resolvefqnd) in the article about developing parsers. | 
 | **_ASIM_ResolveSrcFQDN** | - `SrcHostname`<br> - `SrcDomain`<br> - `SrcDomainType`<br> - `SrcFQDN` | Similar to `_ASIM_ResolveFQDN`, but sets the `Src` fields | 
 | **_ASIM_ResolveDstFQDN** | - `DstHostname`<br> - `DstDomain`<br> - `DstDomainType`<br> - `DstFQDN` | Similar to `_ASIM_ResolveFQDN`, but sets the `Dst` fields | 
 | **_ASIM_ResolveDvcFQDN** | - `DvcHostname`<br> - `DvcDomain`<br> - `DvcDomainType`<br> - `DvcFQDN` | Similar to `_ASIM_ResolveFQDN`, but sets the `Dvc` fields | 
@@ -95,7 +95,7 @@ The user type functions help determine the type of user based on username patter
 
 ### Source identification functions
 
-The **_ASIM_GetSourceBySourceType** function retrieves the list of sources associated with a source type provided as input from the `SourceBySourceType` Watchlist. The function is intended for use by parsers writers. For more information, see [Filtering by source type using a Watchlist](normalization-develop-parsers.md#filtering-by-source-type-using-a-watchlist).
+The **_ASIM_GetSourceBySourceType** function retrieves the list of sources associated with a source type provided as input from the `SourceBySourceType` Watchlist. The function is intended for use by parsers writers. For more information, see [Filtering by source type using a Watchlist](isv/normalization-develop-parsers.md#filtering-by-source-type-using-a-watchlist).
 
 The **_ASIM_GetDisabledParsers** function reads the `ASimDisabledParsers` watchlist and determines based on it whether the parser provided as a parameter is disabled. This function is used internally by ASIM parsers to support disabling specific parsers.
 

@@ -196,7 +196,7 @@ Microsoft offers the programs to help partners approach Microsoft customers:
 
 - [Azure Marketplace](https://azure.microsoft.com/marketplace/). Microsoft Sentinel solutions are delivered via the Azure Marketplace, which is where customers go to discover and deploy both Microsoft- and partner-supplied general Azure integrations.
 
-  Microsoft Sentinel solutions are one of many types of offers found in the Marketplace. You can also find the solution offerings embedded in the Microsoft Sentinel [content hub](sentinel-solutions-catalog.md)
+  Microsoft Sentinel solutions are one of many types of offers found in the Marketplace. You can also find the solution offerings embedded in the Microsoft Sentinel [content hub](../sentinel-solutions-catalog.md)
 
 - [Microsoft Intelligent Security Association (MISA)](https://www.microsoft.com/security/partnerships/intelligent-security-association). MISA provides Microsoft Security Partners with help in creating awareness about partner-created integrations with Microsoft customers, and helps to provide discoverability for Microsoft Security product integrations.
 
@@ -214,28 +214,28 @@ For more information, see:
 
 **Data collection**:
 
-- [Data collection best practices](best-practices-data.md)
-- [Microsoft Sentinel data connectors](connect-data-sources.md)
-- [Find your Microsoft Sentinel data connector](data-connectors-reference.md)
-- [Understand threat intelligence in Microsoft Sentinel](understand-threat-intelligence.md)
+- [Data collection best practices](../best-practices-data.md)
+- [Microsoft Sentinel data connectors](../connect-data-sources.md)
+- [Find your Microsoft Sentinel data connector](../data-connectors-reference.md)
+- [Understand threat intelligence in Microsoft Sentinel](../understand-threat-intelligence.md)
 
 **Threat detection**:
 
-- [Automate incident handling in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)
-- [Investigate incidents with Microsoft Sentinel](investigate-cases.md)
-- [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md)
+- [Automate incident handling in Microsoft Sentinel with automation rules](../automate-incident-handling-with-automation-rules.md)
+- [Investigate incidents with Microsoft Sentinel](../investigate-cases.md)
+- [Automate threat response with playbooks in Microsoft Sentinel](../automate-responses-with-playbooks.md)
 
 **Hunting and notebooks**:
 
-- [Hunt for threats with Microsoft Sentinel](hunting.md)
-- [Manage hunting queries in Microsoft Sentinel using REST API](hunting-with-rest-api.md)
-- [Use Jupyter notebooks to hunt for security threats](notebooks.md)
+- [Hunt for threats with Microsoft Sentinel](../hunting.md)
+- [Manage hunting queries in Microsoft Sentinel using REST API](../hunting-with-rest-api.md)
+- [Use Jupyter notebooks to hunt for security threats](../notebooks.md)
 
-**Visualization**: [Visualize collected data](get-visibility.md).
+**Visualization**: [Visualize collected data](../get-visibility.md).
 
-**Investigation**: [Investigate incidents with Microsoft Sentinel](investigate-cases.md).
+**Investigation**: [Investigate incidents with Microsoft Sentinel](../investigate-cases.md).
 
 **Response**:
 
-- [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md)
-- [Create and customize Microsoft Sentinel playbooks from built-in templates](use-playbook-templates.md)
+- [Automate threat response with playbooks in Microsoft Sentinel](../automate-responses-with-playbooks.md)
+- [Create and customize Microsoft Sentinel playbooks from built-in templates](../use-playbook-templates.md)

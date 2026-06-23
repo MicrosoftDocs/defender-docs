@@ -8,13 +8,15 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 03/26/2026
+ms.date: 06/12/2026
 ms.collection: ms-security  
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---  
  
 #  Run KQL queries on the Microsoft Sentinel data lake
  
-Data lake exploration in the Microsoft Defender portal provides a unified interface to analyze your data lake. It lets you run KQL (Kusto Query Language) queries, create jobs, and manage them.
+Data lake exploration in the Microsoft Defender portal provides a unified interface to analyze your data lake. It lets you run KQL (Kusto Query Language) queries, create jobs, and manage them. Before you begin, make sure you meet the [prerequisites](#prerequisites), including data lake onboarding and required permissions.
 
 The **KQL queries** page under **Data lake exploration** lets you edit and run KQL queries on data lake resources and federated tables. Create jobs to promote data from the data lake to the analytics tier, or create aggregate tables in the data lake tier. Run jobs on demand or schedule them. The **Jobs** page lets you manage jobs; enable, disable, edit, or delete. For more information, see [Create jobs in the Microsoft Sentinel data lake](kql-jobs.md).
 
@@ -28,7 +30,7 @@ You can run KQL queries in the Microsoft Defender portal after completing the on
 
 ### Permissions
 
-Microsoft Entra ID roles let you access all workspaces in the data lake. Alternatively, you can grant access to individual workspaces using Azure RBAC roles. Users with Azure RBAC permissions for Microsoft Sentinel workspaces can run KQL queries against those workspaces in the data lake tier. For more information on roles and permissions, see [Microsoft Sentinel data lake roles and permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
+Microsoft Entra ID roles let you access all workspaces in the data lake. Alternatively, you can grant access to individual workspaces using Azure role-based access control (Azure RBAC) roles. Users with Azure RBAC permissions for Microsoft Sentinel workspaces can run KQL queries against those workspaces in the data lake tier. For more information on roles and permissions, see [Microsoft Sentinel data lake roles and permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
 
 Optionally, Microsoft Sentinel scoping or row-level RBAC can be configured to further restrict data access within a workspace. When enabled, row-level scoping limits the data returned by queries based on the user’s assigned scope. If row-level scoping isn’t configured, the existing workspace-level permission model applies unchanged. [Configure Microsoft Sentinel scoping (row-level RBAC) (preview)](../scoping.md).
 
@@ -58,6 +60,10 @@ If you select a single, empty workspace or a workspace in the process of onboard
 :::image type="content" source="media/kql-queries/select-a-workspace.png" lightbox="media/kql-queries/select-a-workspace.png" alt-text="A screenshot showing the workspaces selection panel.":::
 
 ### Time range selection
+
+> [!NOTE]
+> Queries are limited to 500,000 rows or 64 MB of data and time out after 8 minutes. Broad time ranges can exceed these limits. For long-running queries, consider using [async queries](#async-queries).
+
 Use the time picker above the query editor to select the time range for your query. By using the **Custom time range** option, you can set a specific start and end time. Time ranges can be up to 12 years in duration.
 
 :::image type="content" source="media/kql-queries/time-range-selector.png" lightbox="media/kql-queries/time-range-selector.png" alt-text="A screenshot showing the time range selector.":::
@@ -98,7 +104,14 @@ For more information on sample queries, see [Sample KQL queries for Microsoft Se
 
 ## Async queries
 
-You can run long-running queries asynchronously, so you can keep working while the query runs on the server. To run a query asynchronously, select the down arrow on the **Run query** button, then select **Run async query**. Enter a query name to identify your async query. After submitting the query, you can monitor its status in the **Async Queries** tab. When the query completes, you can view the results by selecting the query name from the list.
+### Run async queries
+
+You can run long-running queries asynchronously, so you can keep working while the query runs on the server. To run a query asynchronously:
+
+1. Select the down arrow on the **Run query** button, then select **Run async query**.
+1. Enter a query name to identify your async query.
+1. After submitting the query, monitor its status in the **Async Queries** tab.
+1. When the query completes, select the query name from the list to view the results.
 
 :::image type="content" source="media/kql-queries/run-async-query.png" lightbox="media/kql-queries/run-async-query.png" alt-text="A screenshot showing the Async Queries tab in the KQL query editor.":::
 
@@ -116,11 +129,13 @@ Results are stored for 24 hours and can be accessed multiple times. You can expo
 
 [!INCLUDE [Service limits for KQL async queries](../includes/service-limits-kql-async-queries.md)]
 
-## Jobs
+<a name="jobs"></a>
+## Create and manage KQL query jobs
 
 Jobs are used to run KQL queries against the data in the data lake tier and promote the results to the analytics tier. You can create one-time or scheduled jobs, and you can enable, disable, edit, or delete jobs from the **Jobs** page. To create a job based on your current query, select the **Create job** button. For more information on creating and managing jobs, see [Create jobs in the Microsoft Sentinel data lake](kql-jobs.md).
 
-## Azure Data Explorer
+<a name="azure-data-explorer"></a>
+## Query the data lake with Azure Data Explorer
 
 You can run KQL queries against the Microsoft Sentinel data lake using Azure Data Explorer (ADX). ADX provides a powerful query engine and advanced analytics capabilities. To connect to the data lake using ADX, create a new connection using the following URI: `https://api.securityplatform.microsoft.com/lake/kql`
 
@@ -132,6 +147,8 @@ external_table("AADRiskyUsers")
 ```
 
 ## Query considerations and limitations
+
+Keep the following limitations and considerations in mind when running KQL queries against the data lake.
 
 + Querying legacy tables such as AzureDiagnostics is not supported.
 + Empty tables don’t appear in schema view, and queries aren’t supported until the table contains data.

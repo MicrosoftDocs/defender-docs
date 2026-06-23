@@ -4,19 +4,21 @@ description: Learn how to use Microsoft Sentinel graph to query, visualize, and 
 ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: dandennis
-ms.date: 03/26/2026
+ms.date: 06/12/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
-ms.custom: msecd-doc-authoring-1012
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to use Microsoft Sentinel graph to query and visualize custom security graphs so that I can gain new insights into entity relationships and threats in my environment.
 ---
 
 # Visualize graphs in Microsoft Sentinel (preview)
 
-The Microsoft Sentinel graph experience lets you perform interactive, graph-based security investigations on your custom graphs—for example, quickly evaluating the impact of a recent incident, profiling an attacker, and tracing paths throughout Microsoft telemetry and third-party data. Run graph queries to explore entity relationships, traverse connected assets, and validate results in the table view or export them for use in other workflows. Use Jupyter Notebooks in Visual Studio Code to create and materialize custom graphs, then use the graph experience in Microsoft Sentinel to query and visualize them.
+The graphs experience in the Microsoft Defender portal enables you to perform interactive graph-based investigations on your custom graphs, such as using a graph built for phishing analysis to help you quickly evaluate the impact of a recent incident, profile the attacker, and trace its paths across Microsoft telemetry and third-party data. The graphs experience allows you to run graph queries to visualize the insights that matter most to your organization and supports ad hoc traversal of the graph so you can quickly investigate entities of interest. You can study the graph schema to understand the relationships defined on your graph and use any of the displayed metadata to narrow down your results. You can quickly validate your results with the table view and export them for easy integration into any preexisting workflows. Use Jupyter Notebooks in Microsoft Visual Studio Code to create and materialize your custom graphs, then use the graph experience in Microsoft Sentinel to query and visualize your custom graphs.
+
+Use Microsoft Sentinel graph to query, visualize, and interact with graphs to obtain new insights.
 
 ## Prerequisites
 
@@ -29,7 +31,7 @@ To access the graph experience in Microsoft Sentinel, sign in to the Microsoft D
 
 The Sentinel Graph management page lists all custom graphs you created using the Visual Studio Code Sentinel extension. If you haven't created a custom graph, see [Create a custom graph](./create-custom-graphs.md) to get started.
 
-If you already created custom graphs, the Sentinel graph management page displays all available custom graphs. View an overview of each custom graph by selecting the **...** menu on any graph tile.
+If you already created custom graphs, the **Graphs** page in Microsoft Sentinel displays all available custom graphs. View an overview of each custom graph by selecting the **...** menu on any graph tile.
 
 :::image type="content" source="media/graph-visualization/graphs-landing-page.png" alt-text="Screenshot showing how to access Sentinel graph from the Microsoft Sentinel navigation pane." lightbox="media/graph-visualization/graphs-landing-page.png":::
 
@@ -122,8 +124,6 @@ View a tabular representation of your data by selecting the **Table** tab. From 
 :::image type="content" source="media/graph-visualization/graph-table-export.png" alt-text="Screenshot showing the table view with search, sort, and export capabilities." lightbox="media/graph-visualization/graph-table-export.png":::
 
 Customize the table format by using the `RETURN` operator to define the column structure, or order results to your preference. For more information, see the [GQL documentation](./gql-reference-for-sentinel-custom-graph.md).
-
-
 
 
 ## Configuration options 

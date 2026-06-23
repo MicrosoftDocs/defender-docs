@@ -1,10 +1,10 @@
 ---
 title: Protect your Salesforce environment | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Salesforce app to Defender for Cloud Apps using the API connector.
-ms.date: 06/14/2026
+description: Connect Salesforce to Microsoft Defender for Cloud Apps using the API connector to monitor user activity, detect threats and external sharing, and enable automated remediation.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ai-usage: ai-assisted
 ---
 
@@ -12,11 +12,12 @@ ai-usage: ai-assisted
 
 As a major CRM cloud provider, Salesforce incorporates large amounts of sensitive information about customers, pricing playbooks, and major deals inside your organization. Being a business-critical app, people inside your organization and others outside of it (such as partners and contractors) access and use Salesforce for various purposes. In many cases, a large proportion of your users accessing Salesforce have low awareness of security and might put your sensitive information at risk by unintentionally sharing it. In other instances, malicious actors might gain access to your most sensitive customer-related assets.
 
-By connecting Salesforce to Defender for Cloud Apps, you get improved insights into your users' activities, threat detection by using machine learning-based anomaly detections and information protection detections (such as detecting external information sharing). It also enables automated remediation controls, and detects threats from enabled third-party apps in your organization.
+Connecting Salesforce to Defender for Cloud Apps gives you improved insights into your users' activities, provides threat detection using machine learning based anomaly detections and information protection detections (such as detecting external information sharing). Defender for Cloud Apps also enables automated remediation controls, and detects threats from enabled third-party apps in your organization.
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your Salesforce environment
 
 - Compromised accounts and insider threats
 - Data leakage
@@ -27,7 +28,17 @@ By connecting Salesforce to Defender for Cloud Apps, you get improved insights i
 - Unmanaged bring your own device (BYOD)
 
 
-## How Defender for Cloud Apps helps protect your environment
+### Prerequisites
+
+Before you connect Salesforce to Defender for Cloud Apps, complete the following prerequisites:
+
+- Install and authorize the Salesforce Connected App in the target Salesforce org before you start the connection process. Salesforce enforces usage restrictions on Connected Apps. For more information, see:[Prepare for Connected App Usage Restrictions Change](https://help.salesforce.com/s/articleView?id=005132365&type=1)
+
+- Assign the **Approve Uninstalled Connected Apps** permission to the Salesforce service account used to connect Microsoft Defender for Cloud Apps. Salesforce requires this permission to connect third-party apps via OAuth.
+
+## How Defender for Cloud Apps helps to protect your environment
+
+Defender for Cloud Apps helps protect your Salesforce environment in the following ways:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Discover, classify, label, and protect regulated and sensitive data stored in the cloud](best-practices.md#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)
@@ -36,7 +47,8 @@ By connecting Salesforce to Defender for Cloud Apps, you get improved insights i
 - [Limit exposure of shared data and enforce collaboration policies](best-practices.md#limit-exposure-of-shared-data-and-enforce-collaboration-policies)
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
-## SaaS security posture management
+<a name="saas-security-posture-management"></a>
+## SaaS security posture management for Salesforce
 
 [Connect Salesforce](#connect-salesforce-to-microsoft-defender-for-cloud-apps) to automatically get security recommendations for Salesforce in Microsoft Secure Score.
 
@@ -81,11 +93,15 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect Salesforce to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft  Defender for Cloud Apps to your existing Salesforce account using the app connector API. This connection gives you visibility into and control over Salesforce use.
+Use the following prerequisites and steps to connect Salesforce to Microsoft Defender for Cloud Apps.
+
+### Prerequisites 
+
+- For all integrations other than SaaS security posture management (SSPM), make sure that Salesforce Shield is available for your Salesforce instance.
+
+Use the following instructions to connect Microsoft Defender for Cloud Apps to your existing Salesforce account using the app connector API. The Salesforce app connector gives you visibility into and control over Salesforce use.
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
-
-### Prerequisites
 
 - Install and authorize the Salesforce Connected App in the target Salesforce org before you start the connection process. Salesforce enforces usage restrictions on Connected Apps. For more information, see [Prepare for Connected App Usage Restrictions Change](https://help.salesforce.com/s/articleView?id=005132365&type=1).
 - Assign the **Approve Uninstalled Connected Apps** permission to the Salesforce service account used to connect Microsoft Defender for Cloud Apps. Salesforce requires this permission to connect third-party apps via OAuth.
@@ -119,6 +135,8 @@ This section provides instructions for connecting Microsoft  Defender for Cloud 
 > To query file sharing data, enable the Content Deliveries feature for Defender for Cloud Apps. For more information, see [ContentDistribution](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contentdistribution.htm).
 
 ### Configure Defender for Cloud Apps
+
+Perform the following steps to connect Defender for Cloud Apps to Salesforce:
 
 1. In the Defender for Cloud Apps console, select **Investigate** and then **Connected apps**.
 1. In the **App connectors** page, select **+Connect an app** followed by **Salesforce**.

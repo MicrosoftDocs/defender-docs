@@ -8,8 +8,10 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 03/26/2026
+ms.date: 06/12/2026
 ms.collection: ms-security  
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 # Customer intent: As a security engineer or administrator, I want to create jobs in the Microsoft Sentinel data lake so that I can run KQL queries against the data in the lake tier and promote the results to the analytics tier.
 
@@ -24,7 +26,7 @@ KQL jobs are one-time or scheduled KQL queries on data in the Microsoft Sentinel
 + Historical threat intelligence (TI) matching scans for retrospective analysis
 + Anomaly detection scans that identify unusual patterns across multiple tables
 
-KQL jobs are especially effective when queries use joins or unions across different datasets. 
+KQL jobs are especially effective when queries use joins or unions across different datasets. Before you begin, make sure you meet the [prerequisites](#prerequisites), including data lake onboarding and required permissions.
 
 Use jobs to promote data from the data lake tier to the analytics tier. Once in the analytics tier, use the advanced hunting KQL editor to query the data. Promoting data to the analytics tier has the following benefits:
 
@@ -155,7 +157,7 @@ To create a job from a template, follow these steps:
 
 1. Review and modify the job details as required, then select **Next** to proceed through the job creation wizard.
 
-1. The remaining steps are the same as creating a new job. The fields are prepopulated from the template and can be modified as needed. For more information, see [Create a job](#create-a-job).
+1. The remaining steps are the same as those in [Create a job](#create-a-job). The fields are prepopulated from the template and can be modified as needed.
   
 
 The following templates are available:
@@ -187,10 +189,14 @@ The following templates are available:
 
 When you create jobs in the Microsoft Sentinel data lake, consider the following limitations and best practices:
 
-## Data tier
+<a name="data-tier"></a>
+## Choose a data tier for KQL job output
 KQL jobs can write data to either the Analytics tier or the Data lake tier, depending on the tier of the destination table. When creating a new table through the job creation wizard, you can select system tables as the destination workspace to write data directly to the data lake. Tables created in this way are created and stored directly in the data lake tier and are automatically suffixed with _KQL.
 
-## KQL
+<a name="kql"></a>
+## KQL considerations for data lake jobs
+
+The following KQL limitations apply to data lake jobs:
 
 + All KQL operators and functions are supported except for the following:
   + `adx()`
@@ -203,7 +209,11 @@ KQL jobs can write data to either the Analytics tier or the Data lake tier, depe
 + User-defined functions aren't supported.
 
 
-## Jobs
+<a name="jobs"></a>
+## Job naming and scheduling limits
+
+The following naming and scheduling limitations apply to KQL jobs:
+
 + Job names must be unique for the tenant.
 + Job names can be up to 256 characters. 
 + Job names can't contain a `#` or a `-`.

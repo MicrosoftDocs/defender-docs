@@ -30,8 +30,8 @@ Microsoft Sentinel supports two solution types:
 
 Before you create and publish a platform solution, make sure you have:
 
-- A [Microsoft Sentinel data lake](../sentinel/datalake/sentinel-lake-overview.md) to analyze data and write to the data lake:
-    - If you haven’t onboarded yet, see [Onboard to Microsoft Sentinel data lake](../sentinel/datalake/sentinel-lake-onboarding.md).
+- A [Microsoft Sentinel data lake](../../sentinel/datalake/sentinel-lake-overview.md) to analyze data and write to the data lake:
+    - If you haven’t onboarded yet, see [Onboard to Microsoft Sentinel data lake](../../sentinel/datalake/sentinel-lake-onboarding.md).
     - After onboarding, ingest enough data to support notebook analysis.
 - [Visual Studio Code](https://code.visualstudio.com/) with:
     - The [Microsoft Sentinel extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azure-sentinel): 

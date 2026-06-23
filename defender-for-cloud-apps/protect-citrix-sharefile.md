@@ -1,22 +1,26 @@
 ---
 title: Connect Citrix ShareFile | Microsoft Defender for Cloud Apps
-description: This article provides information about how to connect your Citrix ShareFile app to Defender for Cloud Apps using the API connector for visibility and control over use.
-ms.date: 12/12/2023
+description: Connect Citrix ShareFile to Microsoft Defender for Cloud Apps using the API connector to gain visibility into user activity and improve threat detection and control.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Connect Citrix ShareFile to Microsoft Defender for Cloud Apps
 
 
 
-Citrix ShareFile is a secure content collaboration, file sharing and sync solution that supports all the document-centric tasks and workflow needs of small and large businesses. Citrix ShareFile holds critical data of your organization, and this makes it a target for malicious actors.
+Citrix ShareFile is a secure content collaboration, file sharing and sync solution that supports all the document-centric tasks and workflow needs of small and large businesses. Citrix ShareFile holds critical data of your organization, and that critical role makes it a target for malicious actors.
 
 Connecting Citrix ShareFile to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection using machine learning based anomaly detections.
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
 ## Main threats
+
+Connecting Citrix ShareFile to Defender for Cloud Apps helps you address the following threats:
 
 - Compromised accounts and insider threats 
 - Data leakage 
@@ -39,7 +43,7 @@ For example, recommendations for Citrix Share File include:
 - *Enable single sign on (SSO)*
 - *Enable session timeout for web users*
 
-If a connector already exists and you don't see Citrix Share File recommendations yet, refresh the connection by disconnecting the API connector, and then reconnecting it with the *Access Company account* permissions.
+If a connector already exists and you don't see Citrix Share File recommendations yet, refresh the connection by disconnecting the API connector, and then reconnecting the API connector with the *Access Company account* permissions.
 
 For more information, see:
 
@@ -47,6 +51,8 @@ For more information, see:
 - [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
 ## Connect Citrix ShareFile to Defender for Cloud Apps
+
+Complete the following prerequisites and steps to connect Citrix ShareFile to Microsoft Defender for Cloud Apps.
 
 ### Prerequisites
 
@@ -56,15 +62,15 @@ The Citrix Share file user used for logging into Citrix Share file must have Acc
 
 1. Go to [ShareFile API Documentation](https://api.sharefile.com/), and sign in to your organization account.
 
-    ![connect Citrix ShareFile login.](media/connect-citrix-sharefile-login.png "connect Citrix ShareFile login")
+    ![Screenshot of the Citrix ShareFile sign-in page for API access.](media/connect-citrix-sharefile-login.png "Screenshot of the Citrix ShareFile sign-in page for API access")
 
 1. Select **Get an API Key**.
 
-    ![connect Citrix ShareFile API key.](media/connect-citrix-sharefile-api-key.png "connect Citrix ShareFile API key")
+    ![Screenshot of the Citrix ShareFile Get an API Key option.](media/connect-citrix-sharefile-api-key.png "Screenshot of the Citrix ShareFile Get an API Key option")
 
 1. To generate API keys (*Client ID* and *Client Secret*), go to **Create New**.
 
-    ![connect Citrix ShareFile create new key.](media/connect-citrix-sharefile-create-new.png "connect Citrix ShareFile create new key")
+    ![Screenshot of the Citrix ShareFile API portal Create New key option.](media/connect-citrix-sharefile-create-new.png "Screenshot of the Citrix ShareFile API portal Create New key option")
 
 1. Fill out the following fields:
 
@@ -86,11 +92,11 @@ The Citrix Share file user used for logging into Citrix Share file must have Acc
 
 1. In the **App connectors** page, select **+Connect an app**, followed by **Citrix ShareFile**.
 
-    ![connect Citrix ShareFile app connectors.](media/connect-citrix-sharefile-app-connectors.png "connect Citrix ShareFile app connectors")
+    ![Screenshot of the App connectors page with the Connect Citrix ShareFile option.](media/connect-citrix-sharefile-app-connectors.png "Screenshot of the App connectors page with the Connect Citrix ShareFile option")
 
 1. In the pop-up, give the connector a descriptive name, and select **Connect Citrix ShareFile**.  
 
-    ![connect Citrix ShareFile instance name.](media/connect-citrix-sharefile-instance-name.png "connect Citrix ShareFile instance name")
+    ![Screenshot of the Citrix ShareFile connector dialog with instance name field.](media/connect-citrix-sharefile-instance-name.png "Screenshot of the Citrix ShareFile connector dialog with instance name field")
 
 1. In the next screen, enter the following fields:
 

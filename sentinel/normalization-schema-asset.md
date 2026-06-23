@@ -35,7 +35,7 @@ To use parsers that unify all ASIM out-of-the-box parsers and ensure that your a
 
 ### Add your own normalized parsers
 
-When [developing custom parsers](normalization-develop-parsers.md) for the Asset Entity schema, name your KQL functions using the following syntax:
+When [developing custom parsers](isv/normalization-develop-parsers.md) for the Asset Entity schema, name your KQL functions using the following syntax:
 - `vimAssetEntity<vendor><Product>` for parameterized parsers
 - `ASimAssetEntity<vendor><Product>` for regular parsers
 

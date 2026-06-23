@@ -39,7 +39,7 @@ A Security operator can trigger manual incestigations but can't change automatio
 
 ## Exclusion types and approaches
 
-You can [exclude specific assets](#exclude-assets), or you can configure [broad policy-driven rules](#policy-applications-and-exclusions) based on your operational needs.
+You can [exclude specific assets](#exclude-assets), or you can configure [broad policy-driven rules](#policy-applications-and-exclusions-preview) based on your operational needs.
 
 ### Exclude assets
 

@@ -4,7 +4,7 @@ author: chrisda
 ms.author: chrisda
 ms.date: 07/07/2025
 ms.reviewer: gigarrub
-ms.topic: conceptual
+ms.topic: concept-article
 ms.localizationpriority: medium
 description: Learn how incoming messages pass through the four-phase threat filtering stack in Microsoft Defender for Office 365, from edge protection to post-delivery protection.
 ms.service: defender-office-365
