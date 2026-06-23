@@ -4,11 +4,13 @@ description: Learn how to create and manage Microsoft Sentinel playbooks to auto
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 10/16/2024
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a security analyst, I want to manage automated response playbooks so that I can efficiently handle incidents and alerts in my environment.
 
 ---
@@ -17,7 +19,7 @@ ms.collection: usx-security
 
 Playbooks are collections of procedures that can be run from Microsoft Sentinel in response to an entire incident, to an individual alert, or to a specific entity. A playbook can help automate and orchestrate your response and can be attached to an automation rule to run automatically when specific alerts are generated or when incidents are created or updated. Playbooks can also be run manually on-demand on specific incidents, alerts, or entities.
 
-This article describes how to create and manage Microsoft Sentinel playbooks. You can later attach these playbooks to analytics rules or automation rules, or run them manually on specific incidents, alerts, or entities.
+This article describes how to create and manage Microsoft Sentinel playbooks. Before you begin, make sure you meet the [prerequisites](#prerequisites), including an Azure subscription and the required Logic App Azure roles. You can later attach these playbooks to analytics rules or automation rules, or run them manually on specific incidents, alerts, or entities.
 
 > [!NOTE]
 >
@@ -27,7 +29,7 @@ This article describes how to create and manage Microsoft Sentinel playbooks. Yo
 
 ## Prerequisites
 
-- An Azure account and subscription. If you don't have a subscription, [sign up for a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- An Azure account and subscription. If you don't have a subscription, [create a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - To create and manage playbooks, you need access to Microsoft Sentinel with one of the following Azure roles:
 
@@ -62,15 +64,15 @@ Follow these steps to create a new playbook in Microsoft Sentinel:
 
 1. From the top menu, select **Create**, and then select one of the following options:
 
-   - If you're creating a **Consumption** playbook, select one of the following options, depending on the trigger you want to use, and then follow the [steps for a **Consumption** logic app](create-playbooks.md?tabs=consumption#prepare-playbook-logic-app):
+   - If you're creating a **Consumption** playbook, select one of the following options, depending on the trigger you want to use, and then follow the steps to [prepare a **Consumption** logic app playbook](create-playbooks.md?tabs=consumption#prepare-playbook-logic-app):
 
      - **Playbook with incident trigger**
      - **Playbook with alert trigger**
      - **Playbook with entity trigger**
 
-     This guide continues with the **Playbook with entity trigger**.
+     The following example continues with the **Playbook with entity trigger**.
 
-   - If you're creating a **Standard** playbook, select **Blank playbook** and then [follow the steps for the **Standard** logic app type](create-playbooks.md?tabs=standard#prepare-playbook-logic-app).
+   - If you're creating a **Standard** playbook, select **Blank playbook** and then [prepare a **Standard** logic app playbook](create-playbooks.md?tabs=standard#prepare-playbook-logic-app).
 
    For more information, see [Supported logic app types](../automation/logic-apps-playbooks.md#supported-logic-app-types) and [Supported triggers and actions in Microsoft Sentinel playbooks](playbook-triggers-actions.md).
 
@@ -160,6 +162,8 @@ Follow these steps to create your Standard logic app:
 
 #### Create Standard logic app
 
+To create and configure your Standard logic app resource, follow these steps:
+
 1. On the **Create Logic App** page, confirm your hosting plan selection, and then select **Select**.
 
 1. On the **Basics** tab, provide the following information:
@@ -214,6 +218,8 @@ Follow these steps to create your Standard logic app:
 
 #### Create a workflow for your playbook
 
+After your Standard logic app is deployed, create a workflow to define your playbook's logic:
+
 1. On your logic app menu, under **Workflows**, select **Workflows**.
 
 1. On the **Workflows** page toolbar, select **Add**.
@@ -239,11 +245,13 @@ Follow these steps to create your Standard logic app:
 
 #### Add the workflow trigger
 
+To add a Microsoft Sentinel trigger to your workflow, follow these steps:
+
 1. On the designer, select **Add a trigger** to open the **Add a trigger** pane, for example:
 
    :::image type="content" source="../media/create-playbooks/designer-standard.png" alt-text="Screenshot shows designer in Standard logic app workflow." lightbox="../media/create-playbooks/designer-standard.png":::
 
-1. [Follow these general steps to find the **Microsoft Sentinel** triggers](/azure/logic-apps/create-workflow-with-trigger-or-action?tabs=standard#add-trigger), which include these triggers:
+1. [Find the **Microsoft Sentinel** triggers in the workflow designer](/azure/logic-apps/create-workflow-with-trigger-or-action?tabs=standard#add-trigger). The available triggers include:
 
    - **Microsoft Sentinel entity**
    - **Microsoft Sentinel alert**
@@ -287,7 +295,7 @@ For more information, see [Supported triggers and actions in Microsoft Sentinel 
 
 <a name="authentication-prompts"></a>
 
-### Authentication prompts
+### Authenticate connections for your playbook actions
 
 When you add a trigger or subsequent action that requires authentication, you might be prompted to choose from the available authentication types supported by the corresponding resource provider. In this example, a Microsoft Sentinel trigger is the first operation that you add to your workflow. So, the resource provider is Microsoft Sentinel, which supports several authentication options. For more information, see the following documentation:
 
@@ -304,10 +312,7 @@ In each action, when you select inside a field, you get the following options:
 
 - **Dynamic content** (lightning icon): Choose from a list of available outputs from the preceding actions in the workflow, including the Microsoft Sentinel trigger. For example, these outputs can include the attributes of an alert or incident that was passed to the playbook, including the values and attributes of all the [mapped entities](../map-data-fields-to-entities.md) and [custom details](../surface-custom-details-in-alerts.md) in the alert or incident. You can add references to the current action by selecting these outputs.
 
-  For examples that show using dynamic content, see the following sections:
-
-  - [Use entity playbooks with no incident ID](#dynamic-content-entity-playbooks-with-no-incident-id)
-  - [Work with custom details](#dynamic-content-work-with-custom-details)
+  For examples that show using dynamic content, see [Use entity playbooks with no incident ID](#dynamic-content-entity-playbooks-with-no-incident-id) and [Work with custom details](#dynamic-content-work-with-custom-details).
 
 - **Expression editor** (function icon): Choose from a large library of functions to add more logic to your workflow.
 
@@ -319,7 +324,7 @@ Playbooks created with the **Microsoft Sentinel entity** trigger often use the *
 
 To prevent this failure, we recommend that you create a condition that checks for a value in the incident ID field before the workflow takes any other actions. You can prescribe a different set of actions to take if the field has a null value, due to the playbook not being run from an incident.
 
-1. In your workflow, preceding the first action that refers to the **Incident ARM ID** field, [follow these general steps to add a **Condition** action](/azure/logic-apps/create-workflow-with-trigger-or-action).
+1. In your workflow, preceding the first action that refers to the **Incident ARM ID** field, [add a **Condition** action in the workflow designer](/azure/logic-apps/create-workflow-with-trigger-or-action).
 
 1. In the **Condition** pane, on the condition row, select the left **Choose a value** field, and then select the dynamic content option (lightning icon).
 
@@ -388,7 +393,7 @@ To use custom fields for incident triggers, follow these steps for your workflow
 
    For example, you can find a sample payload by looking in Log Analytics for another instance of this alert, and then copying the custom details object, which you can find under **Extended Properties**. To access Log Analytics data, go either to the **Logs** page in the Azure portal or the **Advanced hunting** page in the Defender portal.
 
-   The following example shows the earlier sample JSON code:
+   The following example shows the sample custom-details JSON payload from step 4 in the schema generation procedure:
 
    :::image type="content" source="../media/create-playbooks/sample-payload.png" alt-text="Screenshot shows sample JSON payload." lightbox="../media/create-playbooks/sample-payload.png":::
 
@@ -419,6 +424,8 @@ Select a playbook to open its Azure Logic Apps page, which shows more details ab
 - View a log of all times the playbook ran
 - View run results, including successes and failures and other details
 - If you have the relevant permissions, open the workflow designer in Azure Logic Apps to edit the playbook directly
+
+<a name="related-content"></a>
 
 ## Related content
 
