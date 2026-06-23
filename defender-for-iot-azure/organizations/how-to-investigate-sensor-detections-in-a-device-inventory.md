@@ -1,9 +1,10 @@
 ---
 title: Manage your OT device inventory from a sensor console
 description: Learn how to view and manage OT devices (assets) from the Device inventory page on a sensor console.
-ms.date: 12/19/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Manage your OT device inventory from a sensor console
@@ -97,7 +98,7 @@ Examples of this scenario might include a PLC with four network cards, a laptop 
 > - You can only merge authorized devices.
 > - Device merges are irreversible. If you merge devices incorrectly, you'll have to delete the merged device and wait for the sensor to rediscover both devices.
 > - Alternately, merge devices from the [Device map](how-to-work-with-the-sensor-device-map.md) page.
-When merging, you instruct the sensor to combine the device properties of two devices into one. When you do this, the Device Properties window and sensor reports will be updated with the new device property details.
+When merging, you instruct the sensor to combine the device properties of two devices into one. When you merge the devices, the Device Properties window and sensor reports will be updated with the new device property details.
 
 For example, if you merge two devices, each with an IP address, both IP addresses will appear as separate interfaces in the Device Properties window.
 
@@ -113,7 +114,7 @@ The devices are merged, and a confirmation message appears at the top right.
 
 You may want to view devices in your network that have been inactive and delete them.
 
-For example, devices may become inactive because of misconfigured SPAN ports, changes in network coverage, or by unplugging them from the network
+For example, devices may become inactive because of misconfigured SPAN ports, changes in network coverage, or by unplugging the devices from the network
 
 **To view inactive devices**, filter the device inventory to display devices that have been inactive.
 
@@ -124,11 +125,11 @@ On the **Device inventory** page:
 1. Choose the time period in the **Filter** field. Filtering options include seven days or more, 14 days or more, 30 days or more, or 90 days or more.
 
 > [!TIP]
-> We recommend that you [delete](#delete-devices) inactive devices to display a more accurate representation of current network activity, better evaluate the number of [devices](architecture.md#devices-monitored-by-defender-for-iot) being monitored, and reduce clutter on your screen.
+> We recommend that you [delete inactive devices](#delete-devices) to display a more accurate representation of current network activity, better evaluate the number of [devices monitored by Defender for IoT](architecture.md#devices-monitored-by-defender-for-iot), and reduce clutter on your screen.
 
 ## Delete devices
 
-You may want to delete devices from your device inventory, such as if they've been [merged incorrectly](#merge-devices), or are [inactive](#view-inactive-devices).
+You may want to delete devices from your device inventory, such as if they've been [incorrectly merged (see Merge devices)](#merge-devices), or are [inactive devices](#view-inactive-devices).
 
 Deleted devices are removed from the **Device map** and the device inventories on the Azure portal, and aren't calculated when generating reports, such as Data Mining, Risk Assessment, or Attack Vector reports.
 
