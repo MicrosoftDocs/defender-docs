@@ -2,8 +2,10 @@
 title: Work with discovered apps via Graph API | Microsoft Defender for Cloud Apps
 description: Learn how to work with apps discovered by Microsoft Defender for Cloud Apps via Graph API.
 ms.topic: how-to #Don't change
-ms.date: 06/18/2025
+ms.date: 06/16/2026
 ms.reviewer: Mravela
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As a security engineer, I want to work with discovered apps via API so that I can customize and automate the Microsoft Defender for Cloud Apps **Discovered apps** page functionality.
 ---
 
@@ -16,7 +18,7 @@ This article provides sample procedures for using the [uploadedStreams API](/gra
 
 ## Prerequisites
 
-Before you start using the Graph API, make sure to create an app and get an access token to use the application. Then, use the token to access the Defender for Cloud Apps API.
+Before you start using the Graph API, make sure to create an app and get an access token to call the API. Then, use the access token to access the Defender for Cloud Apps API.
 
 - Make sure to give the app permissions to access Defender for Cloud Apps, by granting it with `CloudApp-Discovery.Read.All` permissions and admin consent.
 
@@ -41,7 +43,7 @@ GET https://graph.microsoft.com/beta/security/dataDiscovery/cloudAppDiscovery/up
 
 To drill down to data for a specific stream:
 
-1. Copy the relevant `<streamID>` value from the previous command's output.
+1. Copy the relevant `<streamID>` value from the `GET .../uploadedStreams` response.
 1. Run the following GET command using the `<streamID>` value:
 
     ```http
@@ -72,7 +74,7 @@ Identify the users, devices, or IP addresses that are currently using a specific
     GET  https://graph.microsoft.com/beta/security/dataDiscovery/cloudAppDiscovery/uploadedStreams/<streamId>/aggregatedAppsDetails (period=duration'P30D')/ <id>/ipAddress  
     ```
 
-- **To return devices**:
+- **To return devices** (lists the device names that accessed the specified app during the period):
 
     ```http
     GET  https://graph.microsoft.com/beta/security/dataDiscovery/cloudAppDiscovery/uploadedStreams/<streamId>/aggregatedAppsDetails (period=duration'P30D')/ <id>/name  

@@ -4,11 +4,13 @@ description: Learn how to automate incident response with Microsoft Sentinel pla
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 10/16/2024
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to automate incident response using playbooks so that I can streamline and enhance the efficiency of threat management.
@@ -19,7 +21,7 @@ ms.collection: usx-security
 
 Playbooks are collections of procedures that can be run from Microsoft Sentinel in response to an entire incident, to an individual alert, or to a specific entity. A playbook can help automate and orchestrate your response and can be set to run automatically when specific alerts are generated or when incidents are created or updated, by being attached to an automation rule. It can also be run manually on-demand on specific incidents, alerts, or entities.
 
-This article describes how to attach playbooks to analytics rules or automation rules, or run playbooks manually on specific incidents, alerts, or entities.
+This article describes how to attach playbooks to analytics rules or automation rules, or run playbooks manually on specific incidents, alerts, or entities. Before you begin, make sure you meet the [prerequisites](#prerequisites), including required Azure roles and playbook permissions.
 
 > [!NOTE]
 > Playbooks in Microsoft Sentinel are based on workflows built in [Azure Logic Apps](/azure/logic-apps/logic-apps-overview), which means that you get all the power, customizability, and built-in templates of Logic Apps. Additional charges might apply. Visit the [Azure Logic Apps](https://azure.microsoft.com/pricing/details/logic-apps/) pricing page for more details.
@@ -41,7 +43,7 @@ To run playbooks, you need the following Azure roles:
 |**Microsoft Sentinel Contributor**     |    Attach a playbook to an analytics rule or automation rule     |
 |**Microsoft Sentinel Responder**     |  Access an incident in order to run a playbook manually. To actually run the playbook, you also need the following roles:  <br><br>- **Microsoft Sentinel Playbook Operator**, to run a playbook manually<br>    - **Microsoft Sentinel Automation Contributor** role, to allow automation rules to run playbooks.     |
 
-For more information, see [playbook prerequisites](automate-responses-with-playbooks.md#prerequisites).
+For more information about required roles and permissions, see [playbook prerequisites](automate-responses-with-playbooks.md#prerequisites).
 
 ### Extra permissions required to run playbooks on incidents
 
@@ -150,9 +152,9 @@ For more information, see [Create and manage Microsoft Sentinel playbooks](creat
 
 Another way to run playbooks automatically in response to **alerts** is to call them from an **analytics rule**. When the rule generates an alert, the playbook runs.
 
-**This method will be deprecated as of March 2026.**
+**Calling playbooks from analytics rules will be deprecated as of March 2026.**
 
-Beginning **June 2023**, you can no longer add playbooks to analytics rules in this way. However, you can still see the existing playbooks called from analytics rules, and these playbooks will still run until March 2026. We strongly encourage you to [create automation rules to call these playbooks instead](migrate-playbooks-to-automation-rules.md) before then.
+Beginning **June 2023**, you can no longer add playbooks directly from an analytics rule. However, you can still see the existing playbooks called from analytics rules, and these playbooks will still run until March 2026. We strongly encourage you to [create automation rules to call these playbooks instead](migrate-playbooks-to-automation-rules.md) before then.
 
 ## Run a playbook manually, on demand
 
@@ -160,11 +162,13 @@ You can also manually run a playbook on demand, whether in response to alerts, i
 
 ### Run a playbook manually on an alert
 
-This procedure isn't supported in the Defender portal.
+Running a playbook manually on an alert isn't supported in the Defender portal.
 
 In the Azure portal, select one of the following tabs as needed for your environment:
 
-#### [Incident details page](#tab/incidents)
+#### [Run a playbook from the incident details page](#tab/incidents)
+
+To run a playbook on an alert from the incident details page, perform the following steps:
 
 1. In the **Incidents** page, select an incident, and then select **View full details** to open the incident details page.
 
@@ -176,7 +180,9 @@ In the Azure portal, select one of the following tabs as needed for your environ
 
 1. Select **Run** on the line of a specific playbook to run it immediately.
 
-#### [Investigation graph](#tab/cases)
+#### [Run a playbook from the investigation graph](#tab/cases)
+
+To run a playbook on an alert from the investigation graph, follow these steps:
 
 1. In the **Incidents** page, select an incident, and then select **View full details** to open the incident details page.
 
@@ -192,10 +198,12 @@ You can see the run history for playbooks on an alert by selecting the **Runs** 
 
 ### Run a playbook manually on an incident
 
-This procedure differs, depending on if you're working in the Azure portal or in the Defender portal. Select the relevant tab for your environment:
+The procedure for manually running a playbook on an incident differs, depending on whether you're working in the Azure portal or in the Defender portal. Select the relevant tab for your environment:
 
 
-#### [Azure portal](#tab/azure)
+#### [Run a playbook on an incident in the Azure portal](#tab/azure)
+
+In the Azure portal, use the following steps to run a playbook on an incident:
 
 1. In the **Incidents** page, select an incident.
 
@@ -215,7 +223,9 @@ This procedure differs, depending on if you're working in the Azure portal or in
 
     You must have the **Microsoft Sentinel playbook operator** role on any resource group containing playbooks you want to run. If you're unable to run the playbook due to missing permissions, we recommend you contact an admin to grant you with the relevant permissions. For more information, see [Microsoft Sentinel playbook prerequisites](automate-responses-with-playbooks.md#prerequisites).
 
-#### [Microsoft Defender portal](#tab/microsoft-defender)
+#### [Run a playbook on an incident in the Microsoft Defender portal](#tab/microsoft-defender)
+
+In the Microsoft Defender portal, follow these steps to run a playbook on an incident:
 
 1. In the **Incidents** page, select an incident.
 
@@ -236,11 +246,11 @@ View the run history for playbooks on an incident by selecting the **Runs** tab 
 
 ### Run a playbook manually on an entity
 
-This procedure isn't supported in the Defender portal.
+Running a playbook manually on an entity isn't supported in the Defender portal.
 
 Select an entity in one of the following ways, depending on your originating context:
 
-#### [Incident details page (new)](#tab/incident-details-new)
+#### [Run a playbook on an entity from the new incident details page](#tab/incident-details-new)
 
 **If you're in an incident's details page (new version):**
 
@@ -252,7 +262,7 @@ In the **Entities** widget in the **Overview** tab, locate your entity, and do o
 
 - Select an entity and drill down to the entity details page. Then, select the **Run playbook** button in the left-hand panel. Locate the playbook you want to run, and select **Run** in that playbook's row.
 
-#### [Incident details page (legacy)](#tab/incident-details-legacy)
+#### [Run a playbook on an entity from the legacy incident details page](#tab/incident-details-legacy)
 
 **If you're in an incident's details page (legacy version):**
 
@@ -265,7 +275,7 @@ In the **Entities** widget in the **Overview** tab, locate your entity, and do o
 
 1. Locate the playbook you want to run, and select **Run** in that playbook's row.
 
-#### [Investigation graph](#tab/investigation-graph)
+#### [Run a playbook on an entity from the investigation graph](#tab/investigation-graph)
 
 **If you're in the Investigation graph:**
 
@@ -275,7 +285,7 @@ In the **Entities** widget in the **Overview** tab, locate your entity, and do o
 
 1. Locate the playbook you want to run, and select **Run** in that playbook's row.
     
-#### [Pro-active hunting](#tab/hunting)
+#### [Run a playbook on an entity from proactive hunting](#tab/hunting)
 
 **If you're proactively hunting for threats:**
 

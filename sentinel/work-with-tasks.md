@@ -1,14 +1,15 @@
 ---
 title: Work with incident tasks in Microsoft Sentinel in the Azure portal
-description: This article explains how SOC analysts can use incident tasks to manage their incident-handling workflow processes in Microsoft Sentinel.
+description: Learn how analysts can view, create, and complete incident tasks in the Azure portal to track and manage investigation workflow.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 11/24/2022
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to manage and track incident tasks so that I can efficiently handle incident workflows and ensure thorough investigations.
 ---
 
@@ -38,6 +39,8 @@ Other articles at the following links address scenarios that apply more to SOC m
 The **Microsoft Sentinel Responder** role is required to create automation rules and to view and edit incidents, both of which are necessary to add, view, and edit tasks.
 
 ## View and follow incident tasks
+
+Perform the following steps to view and follow tasks for an incident:
 
 1. In the **Incidents** page, select an incident from the list, and select **View full details**  under **Tasks** in the details panel, or select **View full details** at the bottom of the details panel.
 
@@ -81,7 +84,7 @@ You can also add tasks for yourself, on the spot, to an incident's task list. Th
 
 - Learn more about [incident tasks](incident-tasks.md).
 - Learn how to [investigate incidents](investigate-cases.md).
-- Learn how to add tasks to groups of incidents automatically using [automation rules](create-tasks-automation-rule.md) or [playbooks](create-tasks-playbook.md), and [when to use which](incident-tasks.md#use-automation-rules-or-playbooks-to-add-tasks).
+- Learn how to add tasks to groups of incidents automatically using [automation rules](create-tasks-automation-rule.md) or [playbooks](create-tasks-playbook.md), and [when to use automation rules or playbooks to add tasks](incident-tasks.md#use-automation-rules-or-playbooks-to-add-tasks).
 - Learn about [keeping track of your tasks](audit-track-tasks.md).
-- Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and how to [create them](./create-manage-use-automation-rules.md).
-- Learn more about [playbooks](automate-responses-with-playbooks.md) and how to [create them](tutorial-respond-threats-playbook.md).
+- Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and how to [create and manage automation rules](./create-manage-use-automation-rules.md).
+- Learn more about [playbooks](automate-responses-with-playbooks.md) and how to [create playbooks to respond to threats](tutorial-respond-threats-playbook.md).

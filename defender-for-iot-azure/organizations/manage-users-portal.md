@@ -1,13 +1,17 @@
 ---
 title: Manage Azure users for Microsoft Defender for IoT
 description: Learn how to manage user permissions in the Azure portal for Microsoft Defender for IoT services.
-ms.date: 09/04/2022
+ms.date: 06/12/2026
 ms.topic: how-to
 ms.collection:
   -       zerotrust-extra
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Manage users on the Azure portal
+
+## Manage user access
 
 Microsoft Defender for IoT provides tools both in the Azure portal and on-premises for managing user access across Defender for IoT resources.
 
@@ -21,7 +25,7 @@ For OT network monitoring, Defender for IoT has the extra *site* level, which yo
 
 ## Define Azure users for Defender for IoT per subscription
 
-Manage user access for Defender for IoT using Azure RBAC, applying the roles to users or user groups as needed to access required functionality.
+Use Azure RBAC to manage user access for Defender for IoT. Assign roles to users or user groups so they can access the features they need.
 
 - [Grant a user access to Azure resources using the Azure portal](/azure/role-based-access-control/quickstart-assign-role-user-portal)
 - [Grant a group access to Azure resources using Azure PowerShell](/azure/role-based-access-control/tutorial-role-assignments-group-powershell)
@@ -55,16 +59,16 @@ Site-based access control activities also allow you to check the following detai
 
     :::image type="content" source="media/manage-users-portal/access-control-site.png" alt-text="Screenshot of the Access Control page for site-based access control." lightbox="media/manage-users-portal/access-control-site.png":::
 
-For more information, see:
+For more information about site-based access control and user roles, see:
 
 - [Azure user roles and permissions for Defender for IoT](roles-azure.md)
 - [Grant a user access to Azure resources using the Azure portal](/azure/role-based-access-control/quickstart-assign-role-user-portal)
 - [List Azure role assignments using the Azure portal](/azure/role-based-access-control/role-assignments-list-portal)
 - [Check access for a user to Azure resources](/azure/role-based-access-control/check-access)
 
-## Next steps
+## Related content
 
-For more information, see:
+For more information about Defender for IoT user roles and on-premises user management, see:
 
 - [Azure user roles for OT and Enterprise IoT monitoring with Defender for IoT](roles-azure.md)
 - [Create and manage on-premises users for OT monitoring](how-to-create-and-manage-users.md)

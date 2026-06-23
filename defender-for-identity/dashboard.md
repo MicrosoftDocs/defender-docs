@@ -1,13 +1,14 @@
 ---
-title: Microsoft Defender Identity Security dashboard (Preview)
+title: Identity Security dashboard in Microsoft Defender for Identity (Preview)
 description: Learn how to work with the Identity Security dashboard in Microsoft Defender for Identity to monitor identity-related security risks.
-ms.date: 06/02/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: maelgami 
-ms.custom: sfi-ga-blocked
+ms.custom: sfi-ga-blocked, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# The Identity Security dashboard (Preview)
+# Identity Security dashboard overview (Preview)
 
 The Microsoft Defender for Identity **Dashboard** page shows data to help you better analyze your security posture, understand how well you're protected, identify vulnerabilities, and perform recommended actions.
 
@@ -18,7 +19,7 @@ Use the **Dashboard** page to view critical insights and real-time data about id
 
 ## Prerequisites
 
-To access this new dashboard, you need:
+To access the Identity Security dashboard, you need:
 
 - A Microsoft Defender for Identity license and an Entra ID Identity Protection license.
 - A user role with at least the [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions.
@@ -33,9 +34,10 @@ To access the dashboard, sign into Microsoft Defender and select **Identities 
 
 :::image type="content" source="media/dashboard/dashboard.png" alt-text="A screenshot showing the Defender Identity security Dashboard page." lightbox="media/dashboard/dashboard.png":::
 
-## Summary cards
+<a name="summary-cards"></a>
+## Review summary cards
 
-The top of the dashboard shows summary cards for each of the coverage source categories. Select links in the cards to go to more details, such as documentation, related recommendations in [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), and more.
+The top of the dashboard shows summary cards for each coverage source category. Select links in the cards for more details, such as documentation or related recommendations in [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score).
 
 Each card shows identity counts and a coverage score gauge:
 
@@ -48,14 +50,20 @@ Each card shows identity counts and a coverage score gauge:
 | **Non-human identities** | Shows a donut chart of non-human identities (OAuth apps and service accounts) broken down by source: Entra ID, SaaS, and on-premises. |
 | **Human identities** | Shows a donut chart of human identities broken down by source: Entra ID, SaaS, and on-premises. |
 
-## Top insights
+<a name="top-insights"></a>
+## Review top insights
+
+The following table describes the key insights shown on the dashboard:
 
 | Name | Description |
 | ----- | ---- |
 | **Users identified in a risky lateral movement path** | Indicates any sensitive accounts with risky lateral movement paths, which are windows of opportunity for attackers and can expose risks.<br><br>We recommend that you take action on any sensitive accounts found with risky lateral movement paths to minimize your risk. <br><br>For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md). |
 | **Dormant Active Directory users** | Lists accounts that have been left unused for at least 180 days. <br><br>Inactive accounts that are a part of sensitive groups provide an easy path into your organization. We recommend removing those users from sensitive groups. |
 
-## Dashboard widgets
+<a name="dashboard-widgets"></a>
+## Understand dashboard widgets
+
+The following table describes the widgets available on the dashboard:
 
 | Name | Description |
 | ----- | ---- |
