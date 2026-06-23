@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 06/19/2026
+ms.date: 06/22/2026
 ai-usage: ai-assisted
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ---
@@ -29,6 +29,7 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|macOS |101.26042.0020  |June 2026 |- Release version: 20.126042.20.0<br>- Engine version: 1.1.26040.3000<br>- Signature version: 1.453.151.0 |[Release details and updates](#macos--june-2026--101260420020) |
 |Linux  |101.26042.0009  |June 2026 |- Release version: 30.126042.0009.0<br>- Engine version: 1.1.26040.3001<br>- Signature version: 1.449.136.0 |[Release details and updates](#linux--june-2026--101260420009) |
 |Android |1.0.9014.0101|June 2026|- Build: 1.0.9014.0101<br>- Release: June 19, 2026|[Release details and updates](#android--june-2026--platform-1090140101)| 
 |iOS |1.1.78020101|June 2026|- Build: 1.1.78020101<br>- Release: June 11, 2026|[Release details and updates](#ios--june-2026--platform-version-1178020101)|
@@ -214,6 +215,20 @@ To share feedback, open Defender for Endpoint on macOS and go to **Help > Send f
 To get latest features, configure your device for the Beta channel (formerly Insider-Fast) device.
 
 For known issues, see [macOS known issues](#macos-known-issues).
+
+### macOS | June-2026 | 101.26042.0020
+
+#### Versions
+
+| Release version | Engine version | Signature version |
+|-----------------|----------------|-------------------|
+| 20.126042.20.0  | 1.1.26040.3000 | 1.453.151.0       |
+
+#### Enhancements and features
+
+| Feature area | Update summary |
+|--------------|----------------|
+| General      | Security and critical updates |
 
 ### macOS | April-2026 | 101.26032.0016
 
