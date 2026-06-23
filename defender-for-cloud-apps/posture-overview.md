@@ -1,29 +1,32 @@
 ---
-title: SaaS Security Posture Management (SSPM) - Overview 
+title: SaaS Security Posture Management (SSPM) in Microsoft Defender for Cloud Apps
 description: Learn about SaaS security posture management (SSPM) in Microsoft Defender for Cloud Apps.
 ms.topic: how-to
-ms.date: 04/07/2025
+ms.date: 06/16/2026
 ms.reviewer: iidogGedanken
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # SaaS security posture management (SSPM) overview 
 
 One of the pillars of Microsoft Defender for Cloud Apps is SaaS security posture management (SSPM). SSPM offers detailed visibility into the security state of your software as a service (SaaS) applications. It also provides actionable guidance to help you strengthen your security posture efficiently.
 
-Defender for Cloud Apps provides security configuration assessments to help you identify and mitigate potential risks in your SaaS application environments. These recommendations appear in [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) after you have a connector to an application.
+Defender for Cloud Apps provides security configuration assessments to help you identify and mitigate potential risks in your SaaS application environments. These recommendations appear in [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) after you connect the SaaS application by using an app connector in Defender for Cloud Apps.
 
 Additionally, Defender for Cloud Apps includes OAuth applications in both the Attack Path and Attack Surface Map experiences.
-To learn more, see [How to investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md)
+To learn more about investigating OAuth application attack paths, see [How to investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md)
 
 >[!NOTE]
-> Microsoft Security Exposure Management data and capabilities are currently unavailable in US government clouds: GCC, GCC High, and DoD. For these environments, we recommend consuming SaaS security posture recommendations via [Microsoft Secure Score](/microsoft-365/security/defender-endpoint/tvm-security-recommendation). 
+> Microsoft Security Exposure Management data and capabilities are currently unavailable in US government clouds: GCC, GCC High, and DoD. For US government clouds (GCC, GCC High, and DoD), we recommend consuming SaaS security posture recommendations via [Microsoft Secure Score](/microsoft-365/security/defender-endpoint/tvm-security-recommendation). 
 
-The following example shows Secure Score recommendations for a Salesforce app.
+The screenshot shows Secure Score recommendations for a Salesforce app.
 
 :::image type="content" source="media/security-saas-sspm-in-secure-score-salesforce-filter.png" alt-text="Screenshot of Salesforce recommendations in Secure Score." lightbox="media/security-saas-sspm-in-secure-score-salesforce-filter.png" :::
 
 ## Prerequisites
+
+Before you turn on SaaS security recommendations, make sure the following prerequisites are met:
 
 - Your organization must have Microsoft Defender for Cloud Apps licenses.
 - Your app must be connected to Defender for Cloud Apps. For information about connecting and about which of the app connectors provide security recommendations, see [Connect apps to get visibility and control with Microsoft Defender for Cloud Apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
@@ -36,7 +39,7 @@ To ensure that your application connector is set to show data in Microsoft Secur
 
 1. Use the filter to locate the application where you want to turn on security recommendations.
 
-1. Open the instance drawer and note whether **Security recommendations** is turned on or off. The following example shows that **Security recommendations** is turned on.
+1. Open the instance drawer and note whether **Security recommendations** is turned on or off. In the following screenshot, **Security recommendations** is turned on.
 
    :::image type="content" source="media/posture-overview/screenshot-of-an-instance-where-secure-score-recommendations-are-turned-on.png" alt-text="Screenshot of an app instance where Secure Score recommendations are turned on." lightbox="media/posture-overview/screenshot-of-an-instance-where-secure-score-recommendations-are-turned-on.png":::
 
@@ -49,7 +52,7 @@ To ensure that your application connector is set to show data in Microsoft Secur
 
 Security recommendations appear automatically in Microsoft Security Exposure Management. Recommendations are based on Microsoft benchmarks, and they might take time to update.
 
-In [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), filter the **Recommended actions** tab by product to view any recommended actions. If you have multiple instances of an app, you can choose to filter recommendations from specific instances only. The following example shows options for filtering specific instances.
+In [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score), filter the **Recommended actions** tab by product to view any recommended actions. If you have multiple instances of an app, you can choose to filter recommendations from specific instances only. The screenshot shows filter options for specific app instances.
 
 :::image type="content" source="media/secure-score-filter.png" alt-text="Screenshot of a Secure Score filter that shows multiple instances of an app." lightbox="media/secure-score-filter.png":::
 
@@ -59,7 +62,7 @@ For more information, see [Assess your security posture with Microsoft Secure Sc
 
 ## Manage your organization's SaaS security posture
 
-To effectively manage your organization's SaaS security posture, we recommend beginning with the [SaaS Security Initiative](/defender-cloud-apps/saas-security-initiative). This initiative consolidates best practices and measurable metrics specifically for securing SaaS applications, so that you can prioritize and address the most impactful recommendations for SaaS environments. The following example shows security metrics from the SaaS Security Initiative.
+To effectively manage your organization's SaaS security posture, we recommend beginning with the [SaaS Security Initiative](/defender-cloud-apps/saas-security-initiative). The SaaS Security Initiative consolidates best practices and measurable metrics specifically for securing SaaS applications, so that you can prioritize and address the most impactful recommendations for SaaS environments. The screenshot shows security metrics from the SaaS Security Initiative.
 
 :::image type="content" source="media/posture-overview/screenshot-of-the-saas-security-initiative-home-page.png" alt-text="Screenshot of metrics from the SaaS Security Initiative." lightbox="media/posture-overview/screenshot-of-the-saas-security-initiative-home-page.png":::
 
@@ -71,11 +74,14 @@ You can also find various SSPM recommendations under other initiatives:
 - Business Email Compromise (financial fraud)
 - Zero Trust (foundational)
 
-[Preview] After you configure your SaaS posture recommendations, use the attack paths capability to expand your investigation.
-Attack paths show how an attacker might move laterally from a vulnerable entry point, through an OAuth application, to gain high privileges in your Microsoft 365 SaaS environment.
-This visibility helps you investigate potential threats and take steps to remediate them. To learn more, see [How to investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md)
+### Investigate attack paths for OAuth apps (Preview)
 
-## Next step
+After configuring SaaS posture recommendations in Defender for Cloud Apps, you can use the attack paths capability to expand your investigation.
+Attack paths show how an attacker might move laterally from a vulnerable entry point, through an OAuth application, to gain high privileges in your Microsoft 365 SaaS environment.
+Attack path visibility helps you investigate potential threats and take steps to remediate them. To learn more, see [How to investigate OAuth application attack paths in Defender for Cloud Apps (Preview)](attack-paths.md)
+
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Control cloud apps with policies](control-cloud-apps-with-policies.md)
