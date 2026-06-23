@@ -1,18 +1,22 @@
 ---
 title: Protect your Zendesk | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Zendesk app to Defender for Cloud Apps using the API connector.
-ms.date: 01/04/2026
+description: Connect Zendesk to Microsoft Defender for Cloud Apps by using the API connector to gain visibility into admin activities and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How Defender for Cloud Apps helps protect your Zendesk
 
 As a customer service software solution, Zendesk holds the sensitive information to your organization. Any abuse of Zendesk by a malicious actor or any human error might expose your most critical assets and services to potential attacks.
 
-Connecting Zendesk to Defender for Cloud Apps gives you improved insights into your Zendesk admin activities and provides threat detection for anomalous behavior.
+Connecting Zendesk to Defender for Cloud Apps gives you improved insights into your Zendesk admin activities and provides threat detection for anomalous user and admin activity in Zendesk.
 
 ## Main threats
+
+Zendesk usage without proper protection can expose your organization to the following threats:
 
 - Compromised accounts and insider threats
 
@@ -24,11 +28,15 @@ Connecting Zendesk to Defender for Cloud Apps gives you improved insights into y
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Use the following Defender for Cloud Apps best practices to help protect your Zendesk environment:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
 ## Control Zendesk with policies
+
+The following table lists the policy types you can use to monitor and control Zendesk activity:
 
 |   Type                             |   Name                                                       |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -53,7 +61,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## SaaS security posture management
 
-[Connect Zendesk](#connect-zendesk-to-microsoft-defender-for-cloud-apps) to automatically get security posture recommendations for Zendesk in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **Zendesk**. For example, recommendations for Zendesk include:
+Software as a Service (SaaS) security posture management helps you evaluate and improve the security configuration of your SaaS apps. After you connect Zendesk to Microsoft Defender for Cloud Apps, you automatically get security posture recommendations for Zendesk in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **Zendesk**. For example, recommendations for Zendesk include:
 
 - *Enable multifactor authentication (MFA)*
 - *Enable session timeout for users*
@@ -67,7 +75,7 @@ For more information, see:
 
 ## Connect Zendesk to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Zendesk using the App Connector APIs. This connection gives you visibility into and control over your organization's Zendesk use.
+The following instructions explain how to connect Microsoft Defender for Cloud Apps to your existing Zendesk using the App Connector APIs. This connection gives you visibility into and control over your organization's Zendesk use.
 
 ### Prerequisites
 

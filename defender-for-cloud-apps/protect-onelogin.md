@@ -1,18 +1,22 @@
 ---
-title: Protect your OneLogin | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your OneLogin app to Defender for Cloud Apps using the API connector.
-ms.date: 01/04/2026
+title: Protect your OneLogin environment | Microsoft Defender for Cloud Apps
+description: Connect OneLogin to Microsoft Defender for Cloud Apps with the API connector to gain visibility into admin activity and managed user sign-ins and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# How Defender for Cloud Apps helps protect your OneLogin
+# How Defender for Cloud Apps helps protect your OneLogin environment
 
 As an identity and access management solution, OneLogin holds the keys to your organizations most business critical services. OneLogin manages the authentication and authorization processes for your users. Any abuse of OneLogin by a malicious actor or any human error might expose your most critical assets and services to potential attacks.
 
 Connecting OneLogin to Defender for Cloud Apps gives you improved insights into your OneLogin admin activities and managed users sign-ins and provides threat detection for anomalous behavior.
 
 ## Main threats
+
+The main threats to consider in a OneLogin environment include:
 
 - Compromised accounts and insider threats
 - Data leakage
@@ -21,11 +25,15 @@ Connecting OneLogin to Defender for Cloud Apps gives you improved insights into 
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Defender for Cloud Apps helps you protect your OneLogin environment in the following ways:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
 ## Control OneLogin with policies
+
+The following table lists the policy types and detections you can use to monitor and control OneLogin activity:
 
 | **Type**                           | **Name**                                                     |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -36,7 +44,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following OneLogin governance actions to remediate detected threats:
+Besides monitoring for potential threats, you can apply and automate the following OneLogin governance actions to fix detected threats:
 
 | **Type**        | **Action**                                                   |
 | --------------- | ------------------------------------------------------------ |
@@ -55,16 +63,20 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Prerequisites
 
-- The OneLogin account used for logging into OneLogin must be a Super User. For more information about OneLogin administrative privileges, see [this article](https://onelogin.service-now.com/kb_view_customer.do?sysparm_article=KB0010391).
+- The OneLogin account used for logging into OneLogin must be a Super User. For more information, see [OneLogin administrative privileges](https://onelogin.service-now.com/kb_view_customer.do?sysparm_article=KB0010391).
 
 ### Configure OneLogin
+
+Perform the following steps in OneLogin to create the credentials required for the connector:
 
 1. Sign-in to the OneLogin admin portal.
 1. Select **New Credential**.
 1. Name the application **Microsoft Defender for Cloud Apps**, and assign **Read all** permissions.
-1. Copy the **Client ID** and the **Client Secret**. You'll need them in the following steps.
+1. Copy the **Client ID** and the **Client Secret**. You'll enter them when you configure the OneLogin connector in Defender for Cloud Apps.
 
 ### Configure Defender for Cloud Apps
+
+Perform the following steps in Defender for Cloud Apps to create the OneLogin connector:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 1. In the **App connectors** page, select **+Connect an app**, followed by **OneLogin**.
@@ -77,6 +89,6 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 1. The first connection can take up to 4 hours to get all users and their activities after the connector was established.
 1. After the connector's **Status** is marked as **Connected**, the connector is live and working.
 
-## Next steps
+## Related content
 
 - [Control cloud apps with policies](control-cloud-apps-with-policies.md)
