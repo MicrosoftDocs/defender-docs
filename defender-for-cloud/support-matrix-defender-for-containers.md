@@ -164,7 +164,7 @@ The following table lists the features provided by Defender for Containers for t
 | Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | Arc enabled Kubernetes clusters | Preview | - | Requires **Defender sensor** | **Defender for Containers** |  |
 | Binary drift detection | Detects binary of runtime container from container image | - | - | - | - | - | - |
 | Binary drift blocking | Blocks binary drift in runtime containers | - | - | - | - | - |
-| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | Arc enabled Kubernetes clusters | GA | GA | Requires **Defender sensor** | **Defender for Containers** |  |
+| Advanced hunting in XDR | View cluster incidents and alerts in Microsoft XDR | Arc enabled Kubernetes clusters | Preview - currently supports audit logs & process events | Preview - currently supports audit logs & process events | Requires **Defender sensor** | **Defender for Containers** |  |
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | - | - | - | - | - | - |
 | Malware detection | Detection of malware | - | - | - | - | - | - |
 
