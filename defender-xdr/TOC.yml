@@ -128,6 +128,8 @@
             href: entity-page-device.md
           - name: IP
             href: entity-page-ip.md
+          - name: View threat intelligence in entity pages
+            href: entity-page-threat-intelligence.md
         - name: Investigate data loss prevention alerts with Microsoft Defender XDR
           href: dlp-investigate-alerts-defender.md
         - name: Investigate data loss prevention alerts with Microsoft Sentinel
@@ -410,7 +412,7 @@
             href: threat-analytics-analyst-reports.md
           - name: Get access to indicators
             href: threat-analytics-indicators.md
-        - name: Microsoft Defender Threat Intelligence in Defender XDR
+        - name: Microsoft Threat Intelligence in Defender XDR
           href: defender-threat-intelligence.md
       - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
         items:
