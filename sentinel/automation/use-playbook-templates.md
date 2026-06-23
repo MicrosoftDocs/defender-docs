@@ -1,15 +1,16 @@
 ---
-title: Create and customize Microsoft Sentinel playbooks from templates | Microsoft Docs
+title: Create and customize Microsoft Sentinel playbooks from templates
 description: This article shows how to create playbooks from and work with playbook templates, to customize them to fit your needs.
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.date: 03/14/2024
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 
@@ -54,7 +55,7 @@ Access playbook templates from the following sources:
 
 Technically, a playbook template is an [Azure Resource Manager (ARM) template](/azure/azure-resource-manager/templates/), which consists of several resources: an Azure Logic Apps workflow and API connections for each connection involved.
 
-This article focuses on deploying a playbook template from the **Playbook templates** tab under **Automation**.
+This section focuses on deploying a playbook template from the **Playbook templates** tab under **Automation**.
 
 ## Explore playbook templates
 
@@ -62,7 +63,7 @@ For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select t
 
 On the **Content hub** page, select **Content type** to filter for **Playbook**. This filtered view lists all the solutions and standalone content that include one or more playbook templates. Install the solution or standalone content to get the template.
 
-Then, select **Configuration** > **Automation** > **Playbook templates** tab to view the installed templates. For example:
+To view the installed templates, select **Configuration** > **Automation** > **Playbook templates** tab. For example:
 
 :::image type="content" source="../media/use-playbook-templates/gallery.png" alt-text="Screenshot of the playbook templates gallery." lightbox="../media/use-playbook-templates/gallery.png":::
 
@@ -123,7 +124,7 @@ While most playbook templates can be used as they are, we recommend that you adj
 
     :::image type="content" source="../media/use-playbook-templates/designer.png" alt-text="Screenshot of the playbook in Logic Apps designer." lightbox="../media/use-playbook-templates/designer.png":::
 
-1. For each connector you chose, create a new connection for after deployment:
+1. For each connector for which you selected **Create new connection after deployment**, create the connection:
 
     1. From the navigation menu, select **API connections** and then select the connection name. For example:
 
@@ -151,7 +152,7 @@ To run your playbook, set an automated response or run it manually. For more inf
 
 ## Report an issue in a playbook template
 
-To report a bug or request an improvement for a playbook, select the **Supported by** link in the playbook's details pane. If this is a community-supported playbook, the link takes you to open a GitHub issue. Otherwise, you're directed to the supporter's page, with information about how to send your feedback.
+To report a bug or request an improvement for a playbook, select the **Supported by** link in the playbook's details pane. If the playbook is community-supported, the link takes you to open a GitHub issue. Otherwise, you're directed to the supporter's page, with information about how to send your feedback.
 
 ## Related content
 

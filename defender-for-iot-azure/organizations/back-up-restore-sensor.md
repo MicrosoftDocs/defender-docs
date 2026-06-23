@@ -1,9 +1,10 @@
 ---
 title: Back up and restore OT network sensors from the sensor console - Microsoft Defender for IoT
 description: Learn how to back up and restore Microsoft Defender for IoT OT network sensors from the sensor console.
-ms.date: 07/20/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-ropc-nochange
+ms.custom: sfi-ropc-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Back up and restore OT network sensors from the sensor console
@@ -19,7 +20,7 @@ OT sensor data can be backed up and restored from the sensor console to help pro
 
 OT sensors are automatically backed up daily at 3:00 AM, including configuration and detected data. Backup files do *not* include PCAP or log files, which must be manually backed up if needed.
 
-We recommend that you configure your system to automatically transfer backup files to your own internal network.
+We recommend that you configure your OT sensor to automatically transfer backup files to your own internal network.
 
 For more information, see [On-premises backup file capacity](references-data-retention.md#backup-file-capacity).
 
@@ -28,7 +29,7 @@ For more information, see [On-premises backup file capacity](references-data-ret
 
 ### Turn on backup functionality
 
-If your OT sensor is configured *not* to run automatic backups, you can turn this back on manually in the `/var/cyberx/properties/backup.properties` file on the OT sensor machine.
+If your OT sensor is configured *not* to run automatic backups, you can turn automatic backups back on manually in the `/var/cyberx/properties/backup.properties` file on the OT sensor machine.
 
 ## Create a manual backup file
 
@@ -58,7 +59,7 @@ We recommend saving your OT sensor backup files on your internal network. To do 
 
 1. Sign into your OT sensor via SSH using the [*admin*](roles-on-premises.md#access-per-privileged-user) user.
    > [!NOTE]
-   > If you're using a sensor version earlier than 23.2.0, use the [*cyberx_host*](roles-on-premises.md#legacy-users) user instead. Skip the next step for running `system shell` and jump directly to creating a directory for your backup files. 
+   > If you're using a sensor version earlier than 23.2.0, use the [*cyberx_host*](roles-on-premises.md#legacy-users) user instead. Skip the step where you run `system shell` and go directly to the step to create a directory for your backup files. 
 
 1. Access the host by running the `system shell` command. Enter the admin user's password when prompted and press **ENTER**. 
 
@@ -84,9 +85,9 @@ We recommend saving your OT sensor backup files on your internal network. To do 
     sudo nano /etc/samba/user
     ```
 
-1. Add your credentials as follows:
+1. Add your SMB server credentials in the following format:
 
-   ```bash
+   ```text
    username=<user name>
    password=<password>
    ```
@@ -103,29 +104,31 @@ We recommend saving your OT sensor backup files on your internal network. To do 
     sudo dpkg-reconfigure iot-sensor
     ```
 
-    Follow the instructions on screen and validate that the settings are correct on each step.
+    Follow the instructions on screen and validate that the backup-folder and SMB-mount settings are correct at each prompt.
 
-    To move to the next step without making changes, press **ENTER**.
+    To continue to the next prompt without making changes, press **ENTER**.
 
     You'll be prompted to `Enter path to the mounted backups folder`. For example:
 
-    ![Screenshot of the Enter path to the mounted backups folder prompt.](media/back-up-restore-sensor/screenshot-of-enter-path-to-mounted-backups-folder-prompt.png)
+    ![Screenshot of the sensor configuration dialog prompting for the mounted backups folder path.](media/back-up-restore-sensor/screenshot-of-enter-path-to-mounted-backups-folder-prompt.png)
 
 
     The factory default value is `/opt/sensor/persist/backups`.
 
     Set the value to the folder you created in the first few steps, using the following syntax: `/<backup_folder_name>`. For example:
 
-    ![Screenshot of the Enter path to the mounted backups folder with an updated value.](media/back-up-restore-sensor/screenshot-of-enter-path-to-mounted-backups-folder-with-updated-value.png)
+    ![Screenshot of the sensor configuration dialog with the mounted backups folder path entered.](media/back-up-restore-sensor/screenshot-of-enter-path-to-mounted-backups-folder-with-updated-value.png)
 
 
-    Confirm the change by pressing **ENTER** and continue with the rest of the steps until the end.
+    Press **ENTER** to confirm the change, then continue through the remaining `dpkg-reconfigure iot-sensor` prompts until the command finishes.
 
 ## Restore an OT sensor
 
-The following procedures describe how to restore your sensor using a backup file created via automatically or via CLI. Restoring your sensor using backup files created via the sensor GUI is supported only together with customer support.
+Use the procedures in this section to restore your OT sensor from an automatically generated or CLI-created backup file. Restoring your sensor using backup files created via the sensor GUI is supported only together with customer support.
 
 ### Restore an OT sensor from the sensor GUI
+
+To restore an OT sensor from a backup file using the sensor GUI, perform the following steps:
 
 1. Sign into the OT sensor via SFTP and download the backup file you want to use to a location accessible from the OT sensor GUI. 
     Backup files are saved on your OT sensor machine, at `/var/cyberx/backups`, and are named using the following syntax: `<sensor name>-backup-version-<version>-<date>.tar`.
@@ -153,7 +156,7 @@ To restore your OT sensor from the latest, automatically generated backup file v
 
 1. Use the `cyberx-xsense-system-restore` CLI command to restore your OT sensor.
 
-For more information, see the [OT sensor CLI reference](cli-ot-sensor.md#start-an-immediate-unscheduled-backup).
+For more information, see the [OT sensor CLI reference](cli-ot-sensor.md#restore-data-from-the-most-recent-backup).
 
 ## Next steps
 

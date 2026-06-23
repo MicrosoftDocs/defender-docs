@@ -4,9 +4,10 @@ description: This article describes how to connect your SAP system to Microsoft 
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.custom: devx-track-azurecli
-ms.date: 09/30/2025
+ms.custom: devx-track-azurecli, msecd-doc-authoring-1014
+ms.date: 06/12/2026
 ms.collection: usx-security
+ai-usage: ai-assisted
 
 #Customer intent: As a security, infrastructure, or SAP BASIS team member, I want to deploy and configure a containerized SAP data connector agent from the command line so that I can ingest SAP data into Microsoft Sentinel for enhanced monitoring and threat detection.
 
@@ -14,7 +15,7 @@ ms.collection: usx-security
 
 # Deploy an SAP data connector agent from the command line
 
-This article provides command line options for deploying an SAP data connector agent. For typical deployments we recommend that you use the [portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview) instead of the command line, as data connector agents installed via the command line can be managed only via the command line.
+This article provides command line options for deploying an SAP data connector agent. For typical deployments we recommend that you use the [portal deployment steps](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview) instead of the command line, as data connector agents installed via the command line can be managed only via the command line.
 
 However, if you're using a configuration file to store your credentials instead of Azure Key Vault, or if you're an advanced user who wants to deploy the data connector manually, such as in a Kubernetes cluster, use the procedures in this article instead.
 
@@ -35,11 +36,11 @@ For more information, see the [SAP documentation](https://help.sap.com/docs/ABAP
 
 ## Deploy the data connector agent using a managed identity or registered application
 
-This procedure describes how to create a new agent and connect it to your SAP system via the command line, authenticating with a managed identity or a Microsoft Entra ID registered application.
+The following procedure describes how to create a new agent and connect it to your SAP system via the command line, authenticating with a managed identity or a Microsoft Entra ID registered application.
 
 - If you're using SNC, make sure that you've completed [Prepare the kickstart script for secure communication with SNC](#prepare-the-kickstart-script-for-secure-communication-with-snc) first.
 
-- If you're using a configuration file to store your credentials, see [Deploy the data connector using a configuration file](#deploy-the-data-connector-using-a-configuration-file) instead.
+- If you're using a configuration file to store your credentials, see [Deploy the data connector using a configuration file](#deploy-the-data-connector-using-a-configuration-file) rather than this managed identity or registered application procedure.
 
 **To deploy your data connector agent**:
 
@@ -112,11 +113,11 @@ This procedure describes how to create a new agent and connect it to your SAP sy
     docker ps -a
     ```
 
-    You'll use the name of the docker container in the next step.
+    You'll use the Docker container name when you assign role permissions to the VM's identity.
 
 1. Deploying the SAP data connector agent requires that you grant your agent's VM identity with specific permissions to the Log Analytics workspace enabled for Microsoft Sentinel, using the **Microsoft Sentinel Business Applications Agent Operator** and **Reader** roles.
 
-    To run the command in this step, you must be a resource group owner on the Log Analytics workspace enabled for Microsoft Sentinel. If you aren't a resource group owner on your workspace, this procedure can also be performed later on.
+    To run the role-assignment commands, you must be a resource group owner on the Log Analytics workspace enabled for Microsoft Sentinel. If you aren't a resource group owner on your workspace, you can assign these roles later.
 
     Assign the **Microsoft Sentinel Business Applications Agent Operator** and **Reader** roles to the VM's identity:
 
@@ -144,7 +145,7 @@ This procedure describes how to create a new agent and connect it to your SAP sy
     |`<SUB_ID>`     |    The subscription ID for you Log Analytics workspace enabled for Microsoft Sentinel    |
     |`<RESOURCE_GROUP_NAME>`     |  The resource group name for your Log Analytics workspace enabled for Microsoft Sentinel      |
     |`<WS_NAME>`     |    The name of your Log Analytics workspace enabled for Microsoft Sentinel     |
-    |`<AGENT_IDENTIFIER>`     |   The agent ID displayed after running the command in the [previous step](#agent-id-managed).      |
+    |`<AGENT_IDENTIFIER>`     |   The agent ID displayed after running the [Get the agent ID](#agent-id-managed) command.      |
 
 1. To configure the Docker container to start automatically, run the following command, replacing the `<container-name>` placeholder with the name of your container:
 
@@ -156,11 +157,11 @@ The deployment procedure generates a [**systemconfig.json**](reference-systemcon
 
 ## Deploy the data connector using a configuration file
 
-Azure Key Vault is the recommended method to store your authentication credentials and configuration data. If you're prevented from using Azure Key Vault, this procedure describes how you can deploy the data connector agent container using a configuration file instead.
+Azure Key Vault is the recommended method to store your authentication credentials and configuration data. If you're prevented from using Azure Key Vault, the following procedure describes how to deploy the data connector agent container using a configuration file.
 
 - If you're using SNC, make sure that you've completed [Prepare the kickstart script for secure communication with SNC](#prepare-the-kickstart-script-for-secure-communication-with-snc) first.
 
-- If you're using a managed identity or registered application, see [Deploy the data connector agent using a managed identity or registered application](#deploy-the-data-connector-agent-using-a-managed-identity-or-registered-application) instead.
+- If you're using a managed identity or registered application, see [Deploy the data connector agent using a managed identity or registered application](#deploy-the-data-connector-agent-using-a-managed-identity-or-registered-application) rather than this configuration-file procedure.
 
 **To deploy your data connector agent**:
 
@@ -195,11 +196,11 @@ Azure Key Vault is the recommended method to store your authentication credentia
     docker ps -a
     ```
 
-    You'll use the name of the docker container in the next step.
+    You'll use the Docker container name when retrieving the agent ID in the following role-assignment step.
 
 1. Deploying the SAP data connector agent requires that you grant your agent's VM identity with specific permissions to the Log Analytics workspace enabled for Microsoft Sentinel, using the **Microsoft Sentinel Business Applications Agent Operator** and **Reader** roles.
 
-    To run the commands in this step, you must be a resource group owner on your workspace. If you aren't a resource group owner on your workspace, this step can also be performed later on.
+    To run the role-assignment commands, you must be a resource group owner on your workspace. If you aren't a resource group owner on your workspace, you can assign these roles later.
 
     Assign the **Microsoft Sentinel Business Applications Agent Operator** and **Reader** roles to the VM's identity:
 
@@ -227,7 +228,7 @@ Azure Key Vault is the recommended method to store your authentication credentia
         |`<SUB_ID>`     |   The subscription ID for your Log Analytics workspace enabled for Microsoft Sentinel    |
         |`<RESOURCE_GROUP_NAME>`     |  The resource group name for your Log Analytics workspace enabled for Microsoft Sentinel       |
         |`<WS_NAME>`     |    The name of your Log Analytics workspace enabled for Microsoft Sentinel   |
-        |`<AGENT_IDENTIFIER>`     |   The agent ID displayed after running the command in the [previous step](#agent-id-file).      |
+        |`<AGENT_IDENTIFIER>`     |   The agent ID displayed after running the [Get the agent ID](#agent-id-file) command.      |
 
 1. Run the following command to configure the Docker container to start automatically.
 
@@ -239,7 +240,7 @@ The deployment procedure generates a [**systemconfig.json**](reference-systemcon
 
 ## Prepare the kickstart script for secure communication with SNC
 
-This procedure describes how to prepare the deployment script to configure settings for secure communications with your SAP system using SNC. If you're using SNC, you must perform this procedure before deploying the data connector agent.
+The following procedure describes how to prepare the deployment script to configure settings for secure communications with your SAP system using SNC. If you're using SNC, you must perform this procedure before deploying the data connector agent.
 
 **To configure the container for secure communication with SNC**:
 

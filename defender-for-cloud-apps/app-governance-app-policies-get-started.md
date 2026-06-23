@@ -1,13 +1,14 @@
 ---
 title: Get started with app governance policies | Microsoft Defender for Cloud Apps
-ms.date: 08/31/2025
+ms.date: 06/16/2026
 ms.topic: how-to
 description: Get started learning about app governance policies with Microsoft Defender for Cloud Apps in Microsoft Defender XDR
 ms.reviewer: shragar456
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# Get started with app policies
+# Get started with app policies in app governance
 
 Policies for app governance are a way to implement proactive and reactive alerts and automatic remediation for your specific needs for app compliance in your organization. You can create policies in app governance to manage OAuth apps in Microsoft 365, Google and Salesforce.
 
@@ -63,13 +64,15 @@ When you select a policy, you get a detailed policy pane with these extra detail
 
 You can edit, activate, deactivate, or delete an app policy by selecting **Edit**, **Delete**, **Activate**, or **Deactivate** in the detailed policy pane, or by selecting the vertical ellipses of the policy in the policy list.
 
-You can also:
+From the policy list, you can also:
 
 - Create a new policy. You can start with an app usage policy or a permissions policy.
 - Export the policy list to a comma-separated value (CSV) file. For example, you could open the CVS file in Microsoft Excel and sort the policies by **Severity** and then **Number of Total Alerts**.
 - Search the policy list.
 
 ## Edit an existing user-defined policy
+
+Perform the following steps to edit an existing user-defined policy:
 
 1. On the **App governance** page, select the **Policies** tab and select the policy you want to edit. A panel opens on the right side with the details of the existing policy.
 
@@ -79,11 +82,11 @@ You can also:
 
 1. Choose whether you want to continue with the existing policy settings or customize them. Select **No, I'll customize the policy** to make changes, and then select **Next**.
 
-1. Choose whether this policy applies to all apps, specific apps, or all apps except the apps you select. 
+1. Choose whether the policy you're editing applies to all apps, specific apps, or all apps except the apps you select. 
 
 1. Select **Choose apps** to select which apps to apply the policy to, and then select **Next**.
 
-1. Choose whether to modify the existing conditions of the policy. 
+1. Choose whether to modify the existing conditions of the policy you're editing. 
 
     - If you choose to modify the conditions, select **Edit or modify existing conditions for the policy** and choose which policy conditions to apply. 
     - Otherwise, select **Use existing conditions of the policy**. 
@@ -94,8 +97,9 @@ You can also:
 
 1. Set the policy status to **Active**, or **Disabled**, as needed, and then select **Next**.
 
-1. Review your setting choices for the policy and if everything is the way you want it, select **Submit**.
+1. Review your settings for the policy, and if the configuration is correct, select **Submit**.
 
-## Next step
+<a name="next-step"></a>
+## Related content
 
-[Create an app policy](app-governance-app-policies-create.md)
+- [Create an app policy](app-governance-app-policies-create.md)

@@ -1,8 +1,10 @@
 ---
 title: Configure Windows Endpoint Monitoring for OT active monitoring - Microsoft Defender for IoT
 description: This article describes how to configure Windows Endpoint Monitoring with active monitoring with Microsoft Defender for IoT.
-ms.date: 06/02/2022
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure Windows Endpoint monitoring
@@ -19,7 +21,7 @@ Currently the only protocol supported for Windows Endpoint Monitoring with Defen
 
 Before performing the procedures in this article, you must have:
 
-- An OT network sensor [installed](ot-deploy/install-software-ot-sensor.md), [configured, and activated](ot-deploy/activate-deploy-sensor.md).
+- An OT network sensor with software [installed on the OT sensor](ot-deploy/install-software-ot-sensor.md) and [configured and activated on the OT sensor](ot-deploy/activate-deploy-sensor.md).
 
 - Access to your OT network sensor as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
@@ -39,10 +41,14 @@ This procedure describes how to configure WMI scanning using a Group Policy Obje
 
 ### Prerequisites for WMI domain scanning
 
+Before configuring WMI domain scanning, make sure the following requirements are met:
+
 - Make sure that the Windows Management Instrumentation service (**winmgmt**) is in the automatic start mode.
 - Create a user named **wmiuser**. Make sure this user is a member of the Domain users on your Windows machine.
 
 ### Configure a Group Policy Object (GPO)
+
+Perform the following steps to create and configure the GPO used for WMI access:
 
 1. On your Windows machine, [create a new GPO](/windows/security/threat-protection/windows-firewall/create-a-group-policy-object) named **WMIAccess**.
 
@@ -88,7 +94,9 @@ This procedure describes how to configure WMI scanning using a Group Policy Obje
 
 ### Configure your firewall
 
-1. Navigate back to your **WMIAccess** GPO you'd created [earlier](#configure-a-group-policy-object-gpo), and select **Edit**.
+Perform the following steps to create an inbound firewall rule that allows WMI traffic:
+
+1. Navigate back to the **WMIAccess** GPO you created in [Configure a Group Policy Object (GPO)](#configure-a-group-policy-object-gpo), and select **Edit**.
 
 1. In the **Group Policy Management Editor** dialog, go to **Computer Configuration > Windows Settings > Security Settings** and expand the **Windows Defender Firewall with Advanced Security** node.
 
@@ -135,6 +143,8 @@ If you'll be using a non-admin account to run your WEM scans, this procedure is 
 1. Select **OK** until all dialog boxes you'd opened in this procedure are closed.
 
 ### Add your wmiuser account to the local Performance Log Users group
+
+Perform the following steps to add the **wmiuser** account to the local **Performance Log Users** group:
 
 1. Sign in to your Windows machine with a user you know is part of the **Performance Log Users** group.
 

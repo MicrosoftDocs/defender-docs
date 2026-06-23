@@ -1,18 +1,21 @@
 ---
 title: Configure automatic log upload using on-premises Docker on Linux | Microsoft Defender for Cloud Apps
-description: This article describes the process configuring automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on Linux in an on-premises server.
-ms.date: 08/05/2024
+description: Configure automatic log upload for continuous reports in Defender for Cloud Apps by deploying a Docker-based log collector on an on-premises Ubuntu or CentOS server. For RHEL 7.1 or higher, use Podman instead.
+ms.date: 06/16/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 # Configure automatic log upload using on-premises Docker on Linux
 
-You can configure automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on an on-premises Ubuntu  or CentOS server.
+You can configure automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on an on-premises Ubuntu  or CentOS server. This article walks you through defining data sources in the Microsoft Defender portal, deploying a Docker-based log collector on your Linux server, configuring your network appliances to export logs, and verifying the deployment. Before you begin, review the [Prerequisites](#prerequisites) to confirm that your environment meets the minimum requirements.
 
 > [!IMPORTANT]
 > If you're using RHEL version 7.1 or higher, you must use Podman for automatic log collection instead of Docker. For more information, see [Configure automatic log upload using Podman](discovery-linux-podman.md).
 
 ## Prerequisites
+
+Your machine must meet the following minimum requirements to deploy the log collector:
 
 |Specification  |Description  |
 |---------|---------|
@@ -26,7 +29,7 @@ Make sure to set your firewall as needed. For more information, see [Network req
 
 ## Remove an existing log collector
 
-If you have an existing log collector and want to remove it before deploying it again, or if you simply want to remove it, run the following commands:
+If you have an existing log collector and want to remove the log collector before deploying again, or if you simply want to remove the log collector, run the following commands to stop the running container and delete it:
 
 ```console
 docker stop <collector_name>
@@ -43,17 +46,19 @@ The log collector can successfully handle log capacity of up to 50 GB per hour. 
 
 ## Step 1 – Web portal configuration: Define data sources and link them to a log collector
 
+Perform the following steps in the Microsoft Defender portal to define data sources for your firewalls or proxies and associate them with a log collector.
+
 1. In the Microsoft Defender portal, select **Settings** > **Cloud Apps** > **Cloud Discovery** > **Automatic log upload** > **Data sources** tab.
 
 1. For each firewall or proxy from which you want to upload logs, create a matching data source.
 
     1. Select **+Add data source**.  
 
-        ![Screenshot of the Add data source button.](media/add-data-source.png)
+        ![Screenshot showing the Add data source option on the Data sources tab in Cloud Discovery settings.](media/add-data-source.png)
 
     1. **Name** your proxy or firewall.  
 
-        ![Screenshot of the Add data source dialog](media/ubuntu1.png)
+        ![Screenshot of the Add data source dialog with fields for naming the proxy or firewall.](media/ubuntu1.png)
 
     1. Select the appliance from the **Source** list. If you select **Custom log format** to work with a network appliance that isn't listed, see [Working with the custom log parser](custom-log-parser.md) for configuration instructions.
 
@@ -64,7 +69,7 @@ The log collector can successfully handle log capacity of up to 50 GB per hour. 
         > [!NOTE]
         > Integrating with secure transfer protocols (FTPS and Syslog – TLS) often requires additional settings for your firewall/proxy.
 
-    1. Repeat this process for each firewall and proxy whose logs can be used to detect traffic on your network. We recommend that you set up a dedicated data source per network device to enable you to:
+    1. Repeat the data source creation steps for each firewall and proxy whose logs can be used to detect traffic on your network. We recommend that you set up a dedicated data source per network device to enable you to:
 
     * Monitor the status of each device separately, for investigation purposes.
     * Explore Shadow IT Discovery per device, if each device is used by a different user segment.
@@ -79,11 +84,11 @@ The log collector can successfully handle log capacity of up to 50 GB per hour. 
 
     1. Select all **Data sources** that you want to connect to the collector, and select **Update** to save the configuration.
 
-        Further deployment information appears in the **Next steps** section, including a command you'll use later to import the collector configuration. If you selected Syslog, this information also includes data about which port the Syslog listener is listening on.
+        Further deployment information appears in the **Next steps** section of the dialog, including a command you'll use later in [Step 2](#step-2--on-premises-deployment-of-your-machine) to import the collector configuration. If you selected Syslog, this information also includes data about which port the Syslog listener is listening on.
 
-    1. Use the ![copy to clipboard icon.](media/copy-icon.png) **Copy** button to copy the command to the clipboard and save it to a separate location.
+    1. Use the ![Icon for copying the collector configuration command to the clipboard.](media/copy-icon.png) **Copy** button to copy the command to the clipboard and save it to a separate location.
 
-    1. Use the ![Export.](media/export-icon.png) **Export** button to export the expected data source configuration. This configuration describes how you should set the log export in your appliances.
+    1. Use the ![Icon for exporting the expected data source configuration.](media/export-icon.png) **Export** button to export the expected data source configuration. This configuration describes how you should set the log export in your appliances.
 
 For users sending log data via FTP for the first time, we recommend changing the password for the FTP user. For more information, see [Changing the FTP password](log-collector-advanced-management.md#change-the-ftp-password).
 
@@ -299,7 +304,7 @@ The following steps describe the deployment in Ubuntu. The deployment steps for 
 
 ## Step 3 - On-premises configuration of your network appliances
 
-Configure your network firewalls and proxies to periodically export logs to the dedicated Syslog port or the FTP directory according to the directions in the dialog. For example:
+Configure your network firewalls and proxies to periodically export logs to the dedicated Syslog port or the FTP directory according to the directions in the **Create log collector** dialog. For example, the following destination path shows the FTP folder structure for a data source named BlueCoat_HQ on the log collector machine:
 
 ```bash
 BlueCoat_HQ - Destination path: \<<machine_name>>\BlueCoat_HQ\
@@ -342,7 +347,7 @@ Verify that the logs are being uploaded to Defender for Cloud Apps and that repo
     >[!NOTE]
     >When applying filters on continuous reports, the selection will be included, not excluded. For example, if you apply a filter on a certain user group, only that user group will be included in the report.
 
-    ![Custom continuous report.](media/custom-continuous-report.png)
+    ![Screenshot of the custom continuous report configuration page with filter options for data source, user group, and IP address.](media/custom-continuous-report.png)
 
 ## Next steps
 

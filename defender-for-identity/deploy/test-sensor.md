@@ -1,10 +1,11 @@
 ---
 title: Validate sensor deployment on domain controllers
 description: Validate your Microsoft Defender for Identity sensor deployment by checking the Identity Security dashboard, entity pages, advanced hunting, and alert functionality.
-ms.date: 05/07/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: msecd-doc-authoring-106
+ms.custom: msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #customer intent: As an admin deploying Defender for Identity, I want to validate that my sensors are working correctly so that I can confirm my deployment is complete.
 ---
 
@@ -32,6 +33,8 @@ Use the following procedures to check that your sensors are working.
 For more information, see [Investigate assets](../investigate-assets.md).
 
 ## Verify data in advanced hunting tables
+
+Use advanced hunting queries to confirm that sensor data is written to the expected tables.
 
 1. In the Defender portal's **Advanced hunting** page, run the following queries to verify that data appears in the expected tables:
 
