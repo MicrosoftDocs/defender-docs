@@ -3,10 +3,12 @@ title: Encrypt Defender for Cloud Apps data at rest with your own key
 description: This article provides instructions for using your own key to encrypt data at rest stored in Defender for Cloud Apps.
 ms.topic: how-to
 ms.custom:
+  - msecd-doc-authoring-1014
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done
   - sfi-image-nochange
-ms.date: 01/04/2024
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Encrypt Defender for Cloud Apps data at rest with your own key (BYOK)
@@ -25,6 +27,8 @@ Defender for Cloud Apps takes your security and privacy seriously. Therefore, on
 You must register the **Microsoft Defender for Cloud Apps - BYOK** app in your tenant's Microsoft Entra ID associated with your Defender for Cloud Apps tenant.
 
 ### To register the app
+
+Perform the following steps to register the Microsoft Defender for Cloud Apps - BYOK app in Microsoft Entra ID.
 
 <!-- IDs listed here are approved and shouldn't be changed.-->
 
@@ -56,6 +60,8 @@ You must register the **Microsoft Defender for Cloud Apps - BYOK** app in your t
 
 ## Deploy your Azure Key Vault key
 
+Use the following steps to create and configure the Azure Key Vault key that Defender for Cloud Apps uses for encryption.
+
 1. Create a [new Key Vault](/azure/key-vault/general/quick-create-portal#create-a-vault) with the **Soft-delete** and **Purge protection** options enabled.
 
 1. In the new generated Key Vault, open the **Access policies** pane and then select **+Add Access Policy**.
@@ -66,11 +72,11 @@ You must register the **Microsoft Defender for Cloud Apps - BYOK** app in your t
         | Key Management Operations | - List |
         | Cryptographic Operations | - Wrap key<br />- Unwrap key |
 
-        ![Screenshot showing the selection of key permissions.](media/cloud-app-security-byok/byok-kv-access-policy-key-perms.PNG)
+        ![Screenshot of Azure Key Vault access policy configuration showing the required List, Wrap key, and Unwrap key permissions selected for Defender for Cloud Apps.](media/cloud-app-security-byok/byok-kv-access-policy-key-perms.PNG)
 
     2. Under **Select principal**, choose **Microsoft Defender for Cloud Apps - BYOK** or **Microsoft Cloud App Security - BYOK**.
 
-        ![Screenshot showing add access policy page.](media/cloud-app-security-byok/byok-kv-add-access-policy.PNG)
+        ![Screenshot of the Azure Key Vault Add access policy page with Microsoft Defender for Cloud Apps - BYOK selected as the principal.](media/cloud-app-security-byok/byok-kv-add-access-policy.PNG)
 
     3. Select **Save**.
 
@@ -88,7 +94,7 @@ You must register the **Microsoft Defender for Cloud Apps - BYOK** app in your t
 
     1. Copy the **Key Identifier** URI. You'll need it later.
 
-    ![Screenshot showing key settings page.](media/cloud-app-security-byok/byok-kv-key-perms.PNG)
+    ![Screenshot showing key settings and permitted operations page.](media/cloud-app-security-byok/byok-kv-key-perms.PNG)
 
 1. Optionally, if using a firewall for a selected network, configure the following firewall settings to give Defender for Cloud Apps access to the specified key, and then click **Save**:
     1. Make sure no virtual networks are selected.
@@ -103,7 +109,7 @@ You must register the **Microsoft Defender for Cloud Apps - BYOK** app in your t
         - 52.227.8.45
     1. Select **Allow trusted Microsoft services to bypass this firewall**.
 
-    ![Screenshot showing firewall configuration.](media/cloud-app-security-byok/byok-kv-firewall.PNG)
+    ![Screenshot of Azure Key Vault firewall settings showing allowed IP addresses and trusted Microsoft services option for Defender for Cloud Apps access.](media/cloud-app-security-byok/byok-kv-firewall.PNG)
 
 ## Enable data encryption in Defender for Cloud Apps
 
@@ -111,9 +117,11 @@ When you enable data encryption, Defender for Cloud Apps immediately uses your A
 
 ### To enable data encryption
 
+Perform the following steps to enable customer-managed data encryption in Defender for Cloud Apps.
+
 1. In the Microsoft Defender portal, select **Settings > Cloud Apps > Data encryption > Enable data encryption**.
 
-1. In the **Azure Key Vault key URI** box, paste the key identifier URI value you copied earlier. Defender for Cloud Apps always uses the latest key version, regardless of the key version specified by the URI.
+1. In the **Azure Key Vault key URI** box, paste the **Key Identifier** URI value you copied from the key in Azure Key Vault. Defender for Cloud Apps always uses the latest key version, regardless of the key version specified by the URI.
 
 1. Once the URI validation has completed, select **Enable**.
 
