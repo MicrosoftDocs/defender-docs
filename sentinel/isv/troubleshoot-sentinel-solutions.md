@@ -20,7 +20,7 @@ Before opening a support case, complete the following checks:
 
 - **Verify data availability:** Confirm that source data is arriving and that expected schemas and tables are present. If you use the Advanced Security Information Model (ASIM), make sure analytics rely on normalized fields.
 
-- **Check platform health:** Review Sentinel health signals at [Auditing and health monitoring in Microsoft Sentinel](health-audit.md) to confirm platform status and identify any issues.
+- **Check platform health:** Review Sentinel health signals at [Auditing and health monitoring in Microsoft Sentinel](../health-audit.md) to confirm platform status and identify any issues.
 
 - **Collect diagnostic artifacts:** Gather UTC timestamps, tenant and workspace IDs, solution name and version, failing API calls, and sanitized payloads.
 
@@ -113,9 +113,9 @@ Use the following scenario-based checks and solutions to troubleshoot common iss
 
 When a solution or package is installed, updated, or deleted, its components are created, updated, or removed as defined in the package configuration. Actions on individual package components are recorded in audit logs.  
 
-For Microsoft Sentinel platform components, see: [Audit log for Microsoft Sentinel data lake](datalake/auditing-lake-activities.md)
+For Microsoft Sentinel platform components, see: [Audit log for Microsoft Sentinel data lake](../datalake/auditing-lake-activities.md)
 
-For Microsoft Sentinel SIEM components, see: [Audit Microsoft Sentinel queries and activities](audit-sentinel-data.md)
+For Microsoft Sentinel SIEM components, see: [Audit Microsoft Sentinel queries and activities](../audit-sentinel-data.md)
 
 
 ## Related content 

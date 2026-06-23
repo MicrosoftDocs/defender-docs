@@ -34,7 +34,7 @@ Before you begin, ensure that you meet the following requirements:
 
 - The [Microsoft Sentinel VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel) installed
 
-- Microsoft Sentinel [Contributor](./roles.md#built-in-azure-roles-for-microsoft-sentinel) role to create or modify Sentinel data connectors
+- Microsoft Sentinel [Contributor](../roles.md#built-in-azure-roles-for-microsoft-sentinel) role to create or modify Sentinel data connectors
 - [Claude Sonnet 4.5 or later](https://claude.ai/login)
 
 ## Benefits of Connectors with Agentic experience

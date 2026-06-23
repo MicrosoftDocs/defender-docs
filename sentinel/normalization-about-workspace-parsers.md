@@ -110,4 +110,4 @@ For example, the following code shows a DNS filtering unifying parser, having re
 
 - [ASIM parsers overview](normalization-parsers-overview.md)
 - [Manage ASIM parsers](normalization-manage-parsers.md)
-- [Develop custom ASIM parsers](normalization-develop-parsers.md)
+- [Develop custom ASIM parsers](isv/normalization-develop-parsers.md)
