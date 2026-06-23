@@ -1,10 +1,11 @@
 ---
 title: Protect your Smartsheet | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Smartsheet app to Defender for Cloud Apps using the API connector.
-ms.date: 10/05/2025
+description: Connect Smartsheet to Microsoft Defender for Cloud Apps with the API connector to monitor activities and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 # How Defender for Cloud Apps helps protect your Smartsheet
 
@@ -16,6 +17,8 @@ Connecting Smartsheet to Defender for Cloud Apps gives you improved insights int
 
 ## Main threats
 
+Connecting Smartsheet to Defender for Cloud Apps helps you address threats such as:
+
 - Compromised accounts and insider threats
 
 - Data leakage
@@ -26,11 +29,15 @@ Connecting Smartsheet to Defender for Cloud Apps gives you improved insights int
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Use the following best practices to help protect your environment:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
 ## Control Smartsheet with policies
+
+The following policies can help you monitor and control Smartsheet:
 
 | **Type**                           | **Name**                                                     |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -46,7 +53,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following Smartsheet governance actions to remediate detected threats:
+You can automate the following Smartsheet governance actions in Defender for Cloud Apps to fix detected threats:
 
 | **Type**        | **Action**                                                   |
 | --------------- | ------------------------------------------------------------ |
@@ -107,7 +114,7 @@ This section describes how to connect Microsoft Defender for Cloud Apps to your 
 
       ![Screenshot that shows the Create New App dialog.](media/smartsheet-oauth-app-creation.png)
 
-5. Select **Save**. Copy the **App client id** and the **App secret** that are generated. You'll need them in the following steps.
+5. Select **Save**. Copy the **App client id** and the **App secret** that are generated. You'll need these values when you configure Defender for Cloud Apps.
 
 ### Configure Defender for Cloud Apps
 

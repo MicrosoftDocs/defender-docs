@@ -1,18 +1,21 @@
 ---
-title: Protect your Slack Enterprise
-description: Learn how about connecting your Slack Enterprise app to Defender for Cloud Apps using the API connector.
-ms.date: 01/07/2026
+title: Protect your Slack Enterprise environment
+description: Connect Slack Enterprise to Microsoft Defender for Cloud Apps with the API connector to gain visibility into user activity and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# How Defender for Cloud Apps helps protect your Slack Enterprise
+# How Defender for Cloud Apps helps protect your Slack Enterprise environment
 
 Slack is a cloud service that helps organizations collaborate and communicate in one place. Along with the benefits of effective collaboration in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include messages, channels, and files with potentially sensitive information, collaboration, and partnership details, and more. Preventing exposure of this data requires continuous monitoring to prevent any malicious actors or security-unaware insiders from exfiltrating sensitive information.
 
 Connecting Slack Enterprise to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection for anomalous behavior.
 
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your Slack Enterprise environment
 
 - Compromised accounts and insider threats
 
@@ -24,11 +27,15 @@ Connecting Slack Enterprise to Defender for Cloud Apps gives you improved insigh
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Defender for Cloud Apps helps you protect your Slack Enterprise environment with the following best practices:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
 ## Control Slack with policies
+
+The following table lists the policy types you can use to monitor and control Slack activities:
 
 | **Type**                           | **Name**                                                     |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -54,7 +61,7 @@ Review our best practices for [securing and collaborating with guests](best-prac
 
 ## Connect Slack to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Slack using the App Connector APIs. This connection gives you visibility into and control over your organization's Slack use.
+The following instructions explain how to connect Microsoft Defender for Cloud Apps to your existing Slack using the App Connector APIs. This connection gives you visibility into and control over your organization's Slack use.
 
 ### Prerequisites
 
