@@ -17,14 +17,6 @@ You can use attack path analysis to address security issues that pose immediate 
 
 By default attack paths are organized by risk level. The risk level is determined by a context-aware risk-prioritization engine that considers the risk factors of each resource. Learn more about how Defender for Cloud [prioritizes security recommendations](risk-prioritization.md).
 
-::: zone pivot="azure-portal"
-
-::: zone-end
-
-::: zone pivot="defender-portal"
-
-::: zone-end
-
 ## Prerequisites
 
 - You must [enable Defender Cloud Security Posture Management (CSPM)](connect-azure-subscription.md) and have [agentless scanning](enable-agentless-scanning-vms.md) enabled.
