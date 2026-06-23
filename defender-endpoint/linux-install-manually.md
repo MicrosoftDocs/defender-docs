@@ -368,12 +368,14 @@ cat /etc/apt/sources.list.d/*
 ```
 
 ```console
-deb [arch=arm64,armhf,amd64] https://packages.microsoft.com/config/ubuntu/18.04/prod insiders-fast main
-deb [arch=amd64] https://packages.microsoft.com/config/ubuntu/18.04/prod bionic main
+deb [arch=arm64,armhf,amd64] https://packages.microsoft.com/config/ubuntu/[version]/prod insiders-fast main
+deb [arch=amd64] https://packages.microsoft.com/config/ubuntu/[version]/prod [Release-Codename] main
 ```
+> [!Note]
+> Check the release name from the above console result and use the same in next command.
 
 ```bash
-sudo apt -t bionic install mdatp
+sudo apt -t [Release-Codename] install mdatp
 ```
 
 > [!NOTE]
