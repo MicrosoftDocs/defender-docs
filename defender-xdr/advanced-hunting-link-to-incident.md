@@ -1,6 +1,6 @@
 ---
 title: Link query results to an incident
-description: Link query results to an incident
+description: Use the link to incident feature in Microsoft Defender XDR to attach advanced hunting query results to a new or existing incident for richer investigation context.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -11,13 +11,14 @@ ms.collection:
   - m365initiative-m365-defender
   - tier1
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/08/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 ---
 
@@ -27,13 +28,19 @@ ai-usage: ai-assisted
 
 Use the link to incident feature to add advanced hunting query results to a new or existing incident under investigation. This feature helps you capture records from advanced hunting activities, including behavior-based results, so you can create richer incident context.
 
-## Required permissions for linking incidents
+
+
+Use the link to incident feature to add advanced hunting query results to a new or existing incident under investigation. The link to incident feature helps you easily capture records from advanced hunting activities, which enables you to create a richer timeline or context of events regarding an incident. 
+
+## Required permissions for linking incidents 
 
 To link query results to an incident, you need the same permissions required for managing custom detections. For more information, see [Create custom detection rules](custom-detection-rules.md#required-permissions-for-managing-custom-detections).
 
 To link results from the `BehaviorInfo` table (preview), you also need access to the [BehaviorInfo](advanced-hunting-behaviorinfo-table.md) and [BehaviorEntities](advanced-hunting-behaviorentities-table.md) tables, and the relevant behaviors data sources must be onboarded. For onboarding guidance, see [Deploy supported services](deploy-supported-services.md) and [Enable the UEBA behaviors layer](/azure/sentinel/entity-behaviors-layer#enable-the-ueba-behaviors-layer).
 
 ## Link results to new or existing incidents
+
+Use the following steps to link advanced hunting results to a new or existing incident.
 
 1. In the advanced hunting query page, first enter your query in the query field provided then select **Run query** to get your results.
 
@@ -49,7 +56,7 @@ To link results from the `BehaviorInfo` table (preview), you also need access to
 
    :::image type="content" source="media/advanced-hunting-results-link4.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal." lightbox="media/advanced-hunting-results-link4.png":::
 
-4. For either selection, provide the following details, then select **Next**:
+4. For either option—**Create new incident** or **Link to an existing incident**—provide the following details, then select **Next**:
       - **Alert title** - Provide a descriptive title for the results that your incident responders can understand. This descriptive title becomes the alert title.
       - **Severity** - Choose the severity applicable to the group of alerts.
       - **Category** - Choose the appropriate threat category for the alerts.

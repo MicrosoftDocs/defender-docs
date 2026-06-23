@@ -73,7 +73,7 @@ The following table describes DCR support for Microsoft Sentinel data connector 
 | ------------------- | ----------- |
 | [**Azure Monitor agent (AMA) logs**](connect-services-windows-based.md), such as: <li>[Windows Security Events via AMA](./data-connectors-reference.md#windows-security-events-via-ama)<li>[Windows Forwarded Events](./data-connectors-reference.md#windows-forwarded-events)<li>[CEF data](connect-cef-ama.md)<li>[Syslog data](connect-cef-syslog.md) | One or more DCRs associated with the agent |
 | **Direct ingestion via [Logs ingestion API](/azure/azure-monitor/logs/logs-ingestion-api-overview)** | DCR specified in API call |
-| **Built-in, API-based data connector**, such as: <li>[Codeless data connectors](create-codeless-connector.md) | DCR created for connector |
+| **Built-in, API-based data connector**, such as: <li>[Codeless data connectors](isv/create-codeless-connector.md) | DCR created for connector |
 | [**Diagnostic settings-based connections**](connect-services-diagnostic-setting-based.md) | Workspace transformation DCR with [supported output tables](/azure/azure-monitor/logs/tables-feature-support) |
 | **Built-in, API-based data connectors**, such as: <li>[Legacy codeless data connectors](create-codeless-connector-legacy.md)<li>[Azure Functions-based data connectors](connect-azure-functions-template.md) | Not currently supported |
 | **Built-in, service-to-service data connectors**, such as:<li>[Microsoft Office 365](connect-services-api-based.md)<li>[Microsoft Entra ID](connect-azure-active-directory.md)<li>[Amazon S3](connect-aws.md) | Workspace transformation DCR for [tables that support transformations](/azure/azure-monitor/logs/tables-feature-support) |

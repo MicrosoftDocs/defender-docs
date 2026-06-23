@@ -1,14 +1,16 @@
 ---
-title: Ingest Microsoft Defender for Cloud subscription-based alerts to Microsoft Sentinel
-description: Learn how to connect security alerts from Microsoft Defender for Cloud and stream them into Microsoft Sentinel.
+title: Ingest Microsoft Defender for Cloud alerts into Microsoft Sentinel
+description: Connect Microsoft Defender for Cloud alerts to Microsoft Sentinel using subscription-based or tenant-based connectors, and configure alert synchronization between the services.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 11/19/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to integrate and synchronize alerts from cloud security tools into Microsoft Sentinel so that analysts can efficiently monitor, analyze, and respond to security incidents across my organization's hybrid and multicloud environments.
 
@@ -54,13 +56,15 @@ appliesto:
 
 ## Connect to Microsoft Defender for Cloud
 
+To connect Microsoft Defender for Cloud to Microsoft Sentinel and start ingesting security alerts, follow these steps:
+
 1. In Microsoft Sentinel, install the solution for **Microsoft Defender for Cloud** from the **Content Hub**. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md).
 
 1. Select **Configuration > Data connectors**.
 
 1. From the **Data connectors** page, select either the **Subscription-based Microsoft Defender for Cloud (Legacy)** or the **Tenant-based Microsoft Defender for Cloud (Preview)** connector, and then select **Open connector page**.
 
-1. Under **Configuration**, you'll see a list of the subscriptions in your tenant, and the status of their connection to Microsoft Defender for Cloud. Select the **Status** toggle next to each subscription whose alerts you want to stream into Microsoft Sentinel. If you want to connect several subscriptions at once, you can do this by marking the check boxes next to the relevant subscriptions and then selecting the **Connect** button on the bar above the list.
+1. Under **Configuration**, you'll see a list of the subscriptions in your tenant, and the status of their connection to Microsoft Defender for Cloud. Select the **Status** toggle next to each subscription whose alerts you want to stream into Microsoft Sentinel. If you want to connect several subscriptions at once, mark the check boxes next to the relevant subscriptions and then select the **Connect** button on the bar above the list.
 
     - The check boxes and **Connect** toggles are active only on the subscriptions for which you have the [required permissions](#prerequisites).
     - The **Connect** button is active only if at least one subscription's check box has been marked.
@@ -70,7 +74,7 @@ appliesto:
     - The check boxes and drop-down lists are active only on the subscriptions for which you have the [required permissions](#prerequisites).
     - The **Enable bi-directional sync** button is active only if at least one subscription's check box has been marked.
 
-1. In the **Microsoft Defender plans** column of the list, you can see if Microsoft Defender plans are enabled on your subscription, which is a [prerequisite](#prerequisites) for enabling the connector.
+1. In the **Microsoft Defender plans** column of the list, you can see if Microsoft Defender plans are enabled on your subscription, which is a [connector prerequisite](#prerequisites).
 
     The value for each subscription in this column is either blank, meaning no Defender plans are enabled, **All enabled**, or **Some enabled**. Those that say **Some enabled** also have an **Enable all** link you can select, that takes you to your Microsoft Defender for Cloud configuration dashboard for that subscription, where you can choose Defender plans to enable.
 
@@ -88,7 +92,7 @@ appliesto:
 
 ## Find and analyze your data
 
-Security alerts are stored in the *SecurityAlert* table in your Log Analytics workspace. To query security alerts in Log Analytics, copy the following into your query window as a starting point:
+Security alerts are stored in the *SecurityAlert* table in your Log Analytics workspace. To query security alerts in Log Analytics, use the following Kusto query as a starting point:
 
 ```kusto
 SecurityAlert 
@@ -97,11 +101,11 @@ SecurityAlert
 
 Alert synchronization *in both directions* can take a few minutes. Changes in the status of alerts might not be displayed immediately.
 
-See the **Next steps** tab in the connector page for more useful sample queries, analytics rule templates, and recommended workbooks.
+On the **Microsoft Defender for Cloud** connector page in Microsoft Sentinel, select the **Next steps** tab for sample queries, analytics rule templates, and recommended workbooks.
 
 ## Related content
 
-In this document, you learned how to connect Microsoft Defender for Cloud to Microsoft Sentinel and synchronize alerts between them. To learn more about Microsoft Sentinel, see the following articles:
+In this article, you learned how to connect Microsoft Defender for Cloud to Microsoft Sentinel and synchronize alerts between them. To learn more about Microsoft Sentinel, see the following articles:
 
 - Learn how to [get visibility into your data and potential threats](get-visibility.md).
 - Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).

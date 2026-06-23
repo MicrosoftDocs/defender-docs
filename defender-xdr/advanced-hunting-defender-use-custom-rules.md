@@ -1,6 +1,6 @@
 ---
 title: Use Microsoft Sentinel custom functions in advanced hunting in Microsoft Defender
-description: Using functions, saved queries, and custom rules in advanced hunting in the portal unifying Defender XDR and Sentinel data
+description: Learn how to use Microsoft Sentinel functions, saved queries, and custom rules in advanced hunting in the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
 ms.author: pauloliveria
@@ -13,12 +13,13 @@ ms.collection:
   - usx-security
 ms.topic: how-to
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 06/10/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 ---
 
@@ -30,7 +31,7 @@ This article explains how to use Microsoft Sentinel functions, saved queries, an
 
 To use a Microsoft Sentinel function, go to the **Functions** tab and scroll until you find the function that you want. Double-click the function name to insert the function in the query editor. 
 
-You can also select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the function and select **Insert to query** to insert the function into a query in the query editor. 
+You can also select the vertical ellipses ( ![Vertical ellipses or kebab menu icon for more options](/defender/media/ah-kebab.png) ) to the right of the function and select **Insert to query** to insert the function into a query in the query editor. 
 
 Other options include:
 - **View details** – Opens the function side pane containing its details.
@@ -43,7 +44,7 @@ For editable functions, more options are available when you select the vertical 
 ### Use adx() operator for Azure Data Explorer queries
 Use the `adx()` operator to query tables stored in Azure Data Explorer. For more information, see [What is Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
 
-Previously, this feature was only available in log analytics in Microsoft Sentinel. Now, users can use the operator in advanced hunting in the unified Microsoft Defender portal without needing to manually open a Microsoft Sentinel window. 
+Previously, the `adx()` operator was only available in log analytics in Microsoft Sentinel. Now, users can use the operator in advanced hunting in the unified Microsoft Defender portal without needing to manually open a Microsoft Sentinel window. 
 
 In the query editor, enter the query in the following format:
 
@@ -63,7 +64,7 @@ For example, to get the first 10 rows of data from the `StormEvents` table store
 
 Use the `arg()` operator to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like.
 
-Previously, this feature was only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender XDR tables aren't supported). By using this operator, you can make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
+Previously, the `arg()` operator was only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender XDR tables aren't supported). By using this operator, you can make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
 
 For more information, see [Query data in Azure Resource Graph by using arg()](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#query-data-in-azure-resource-graph-by-using-arg-preview).
 
@@ -117,7 +118,7 @@ For more information about creating custom functions in the Defender portal, see
 
 ## Use saved queries
 
-To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scroll until you find the query that you want. Double-click the query name to load the query in the query editor. For more options, select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the query. From here, you can perform the following actions:
+To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scroll until you find the query that you want. Double-click the query name to load the query in the query editor. For more options, select the vertical ellipses ( ![Vertical ellipses or kebab menu icon for more options](/defender/media/ah-kebab.png) ) to the right of the query. From here, you can perform the following actions:
 
 - **Run query** – Loads the query in the query editor and runs it automatically.
 - **Open in query editor** – Loads the query in the query editor.
@@ -139,7 +140,8 @@ To help discover threats and anomalous behaviors in your environment, you can cr
 - Custom detection rules - to generate detections from rules that query data from Defender XDR or from both Microsoft Sentinel and Defender XDR
 
 
-##### Analytics rules
+<a name="analytics-rules"></a>
+### Analytics rules
 
 For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**.
 
@@ -148,11 +150,12 @@ For analytics rules that apply to data ingested through the connected Microsoft 
 The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
 
 
-##### Custom detection rules
+<a name="custom-detection-rules"></a>
+### Custom detection rules
 You can create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create custom detection rules](custom-detection-rules.md) for more information. 
 
 
-In both custom detection and analytics rule creation, you can only query data ingested as analytics logs (that is, not as basic logs or auxiliary logs. See [log management plans](/azure/sentinel/log-plans#log-management-plans) to check the different tiers) otherwise the rule creation won't proceed.
+In both custom detection and analytics rule creation, you can only query data ingested as analytics logs (that is, not as basic logs or auxiliary logs. See [log management plans](/azure/sentinel/log-plans#log-management-plans) to check the different tiers) otherwise custom detection or analytics rule creation won't proceed.
 
 If your Defender XDR data is ingested into Microsoft Sentinel, you have the option to choose between **Create custom detection** and **Create analytics rule**.
 

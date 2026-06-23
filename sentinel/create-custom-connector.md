@@ -45,7 +45,7 @@ The Codeless Connector Framework (CCF) provides a configuration file that can be
 
 Connectors created using the CCF are fully SaaS, without any requirements for service installations, and also include health monitoring and full support from Microsoft Sentinel.
 
-For more information, see [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md).
+For more information, see [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md).
 
 ## Connect with the Azure Monitor Agent
 
@@ -149,7 +149,7 @@ For examples of this method, see:
 
 ## Parse your custom connector data
 
-To take advantage of the data collected with your custom connector, [develop Advanced Security Information Model (ASIM) parsers](normalization-develop-parsers.md) to work with your connector. Using [ASIM](normalization.md) enables Microsoft Sentinel's built-in content to use your custom data and makes it easier for analysts to query the data.
+To take advantage of the data collected with your custom connector, [develop Advanced Security Information Model (ASIM) parsers](isv/normalization-develop-parsers.md) to work with your connector. Using [ASIM](normalization.md) enables Microsoft Sentinel's built-in content to use your custom data and makes it easier for analysts to query the data.
 
 If your connector method allows for it, you can implement part of the parsing as part of the connector to improve query time parsing performance:
 - **If you've used Logstash**, use the [Grok](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) filter plugin to parse your data.

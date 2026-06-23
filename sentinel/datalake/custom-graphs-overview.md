@@ -1,13 +1,15 @@
 ---
-title: Custom graphs in Microsoft Sentinel-Overview (preview)
-description: An overview of custom graphs in Microsoft Sentinel 
+title: Custom graphs in Microsoft Sentinel overview (preview)
+description: Learn how custom graphs in Microsoft Sentinel help you model connected security data from Sentinel data lake and external sources to visualize attack paths, uncover hidden relationships, and improve investigations.
 ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: sourinpaul
-ms.date: 03/23/2026
+ms.date: 06/12/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security researcher, I want to create custom graphs in my tenant so that I can continuously monitor and detect systemic threats.
 
@@ -15,7 +17,7 @@ ms.subservice: sentinel-platform
 
 # Custom Graph overview (preview)
 
-Custom graphs let you build tailored security graphs tuned to your unique security scenarios using data from Sentinel data lake as well as non-Microsoft sources. With custom graph, powered by Fabric, you can build, query, and visualize connected data, uncover hidden patterns and attack paths, and help surface risks that are hard to detect when data is analyzed in isolation. These graphs provide the knowledge context that enables AI-powered agent experiences to work more effectively, speeding investigations, revealing blast radius, and helping you move from noisy, disconnected alerts to confident decisions at scale. 
+Custom graphs let you build tailored security graphs tuned to your unique security scenarios using data from Sentinel data lake as well as non-Microsoft sources. With custom graph, powered by Fabric, you can build, query, and visualize connected data, uncover hidden patterns and attack paths, and help surface risks that are hard to detect when data is analyzed in isolation. Custom graphs provide the knowledge context that enables AI-powered agent experiences to work more effectively, speeding investigations, revealing blast radius, and helping you move from noisy, disconnected alerts to confident decisions at scale. 
 
 
 ## Common scenarios
@@ -36,7 +38,7 @@ Use the Jupyter notebooks in Microsoft Visual Studio Code to interactively creat
 
 You can author custom graphs using either AI‑assisted graph authoring or by writing your own code using the Microsoft Sentinel graph provider reference to define your graph model (nodes and edges), transform your data from the Sentinel data lake, and use Graph Query Language (GQL) to query and analyze your graphs. For more information, see [AI-assisted custom graph authoring in Microsoft Sentinel](./create-graphs-with-ai.md),  [Microsoft Sentinel graph provider reference](./sentinel-graph-provider-reference.md) and [Graph Query Language (GQL) reference for Sentinel custom graph](./gql-reference-for-sentinel-custom-graph.md).
 
-Once you author the graph code in notebook, your can run the notebook in an interactive session or schedule a graph job. Graphs created during the interactive notebook session are ephemeral and are available only in the context of the notebook session. To materialize your graph and share with your team, schedule a graph job to rebuild your graph frequently. Once the graph is materialized, it is accessible from: the graph experience in Microsoft Defender portal under Sentinel, Visual Studio Code Notebooks, and Graph query APIs. 
+Once you author the graph code in notebook, your can run the notebook in an interactive session or schedule a graph job. Graphs created during the interactive notebook session are ephemeral and are available only in the context of the notebook session. To materialize your graph and share with your team, schedule a graph job to rebuild your graph frequently. Once materialized, the graph is accessible from: the graph experience in Microsoft Defender portal under Sentinel, Visual Studio Code Notebooks, and Graph query APIs. 
 
 The following table summarizes the steps to build custom graphs in Microsoft Sentinel:
 

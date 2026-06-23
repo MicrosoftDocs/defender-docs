@@ -15,7 +15,7 @@ ms.date: 09/26/2024
 
 The Codeless Connector Framework (CCF) provides partners, advanced users, and developers the ability to create custom connectors for ingesting data to Microsoft Sentinel.
 
-Connectors created using the CCF are fully SaaS, with no requirements for service installations. They also include [health monitoring](monitor-data-connector-health.md) and full support from Microsoft Sentinel.
+Connectors created using the CCF are fully SaaS, with no requirements for service installations. They also include [health monitoring](../monitor-data-connector-health.md) and full support from Microsoft Sentinel.
 
 **Use the following steps to create your CCF connector and connect your data source to Microsoft Sentinel**
 
@@ -31,7 +31,7 @@ If you're a software development partner and need support to build a CCF data co
 
 ## How is this CCF different from the previous version?
 
-The initial version of the CCF was [announced](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/the-codeless-connector-platform/ba-p/3095455) in January of 2022. Since then, we've improved upon the platform and the [legacy release](create-codeless-connector-legacy.md) is no longer recommended. This new version of the CCF has the following key improvements:
+The initial version of the CCF was [announced](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/the-codeless-connector-platform/ba-p/3095455) in January of 2022. Since then, we've improved upon the platform and the [legacy release](../create-codeless-connector-legacy.md) is no longer recommended. This new version of the CCF has the following key improvements:
 
 1. Better support for various authentication and pagination types.
 
@@ -51,7 +51,7 @@ Before building a connector, understand your data source and how Microsoft Senti
 
    It's important to understand the shape of your data stream and the fields you want to include in the output table. Reference your data source documentation or analyze sufficient output examples.
 
-Research the following components and verify support for them in the [Data Connector API reference](data-connector-connection-rules-reference.md):
+Research the following components and verify support for them in the [Data Connector API reference](../data-connector-connection-rules-reference.md):
 
 1. HTTP request and response structure to the data source
 
@@ -93,7 +93,7 @@ Each component has a section detailing the process to create and validate. Take 
 ### Output table definition
 
 >[!TIP]
->Skip this step if your data is only ingested to standard Log Analytics tables. Examples of standard tables include *CommonSecurityLog* and *ASimDnsActivityLogs*. For more information about the full list of supported standard data types, see [Data transformation support for custom data connectors](data-transformation.md#data-ingestion-flow-in-microsoft-sentinel).
+>Skip this step if your data is only ingested to standard Log Analytics tables. Examples of standard tables include *CommonSecurityLog* and *ASimDnsActivityLogs*. For more information about the full list of supported standard data types, see [Data transformation support for custom data connectors](../data-transformation.md#data-ingestion-flow-in-microsoft-sentinel).
 
 If your data source doesn't conform to the schema of a standard table, you have two options:
 
@@ -124,7 +124,7 @@ To understand how to create a complex DCR with multiple data flows, see the [DCR
 
 This component renders the UI for the data connector in the Microsoft Sentinel data connector gallery. Each data connector may have only one UI definition. 
 
-Build the data connector user interface with the [**Data Connector Definition** API](/rest/api/securityinsights/data-connector-definitions). Use the [Data connector definitions reference](data-connector-ui-definitions-reference.md) as a supplement to explain the API elements in greater detail.
+Build the data connector user interface with the [**Data Connector Definition** API](/rest/api/securityinsights/data-connector-definitions). Use the [Data connector definitions reference](../data-connector-ui-definitions-reference.md) as a supplement to explain the API elements in greater detail.
 
 Notes: 
 1)	The `kind` property for API polling connector should always be `Customizable`.
@@ -133,15 +133,15 @@ Notes:
 
 Use an [API testing tool](#testing-apis) to call the data connector definitions API to create the data connector UI in order to validate it in the data connectors gallery.
 
-To learn from an example, see the [Data connector definitions reference example section](data-connector-ui-definitions-reference.md#example-data-connector-definition).
+To learn from an example, see the [Data connector definitions reference example section](../data-connector-ui-definitions-reference.md#example-data-connector-definition).
 
 ### Data connection rules
 
 There are currently three kinds of data connection rules possible for defining your CCF data connector.
 
-- `RestApiPoller` kind allows you to customize paging, authorization and expected request/response payloads for your data source. For more information, see [RestApiPoller data connector connection rules reference](data-connector-connection-rules-reference.md).
-- `GCP` kind allows you to decrease your development time by automatically configuring paging and expected response payloads for your Google Cloud Platform (GCP) data source. For more information, see [GCP data connector connection rules reference](data-connection-rules-reference-gcp.md)
-- `StorageAccountBlobContainer` kind allows you to ingest from an Azure Storage Blob data source. For more information, see [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md).
+- `RestApiPoller` kind allows you to customize paging, authorization and expected request/response payloads for your data source. For more information, see [RestApiPoller data connector connection rules reference](../data-connector-connection-rules-reference.md).
+- `GCP` kind allows you to decrease your development time by automatically configuring paging and expected response payloads for your Google Cloud Platform (GCP) data source. For more information, see [GCP data connector connection rules reference](../data-connection-rules-reference-gcp.md)
+- `StorageAccountBlobContainer` kind allows you to ingest from an Azure Storage Blob data source. For more information, see [Azure Storage Blob connectors API reference](../data-connection-rules-reference-azure-storage.md).
 
 Use an [API testing tool](#testing-apis) to call the data connector API to create the data connector which combines the connection rules and previous components. Verify the connector is now connected in the UI.
 
@@ -225,7 +225,7 @@ Finally, the CCF utilizes the credential objects in the data connector section.
 
 Manually package an Azure Resource Management (ARM) template using the [example template code samples](#example-arm-template) as your guide. These code samples are divided by ARM template sections which you must splice together.
 
-If you're creating a Google Cloud Platform (GCP) CCF data connector, package the deployment template using the [example GCP CCF template](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/Templates/Connector_GCP_CCP_template.json). For information on how to fill out the GCP CCF template, see [GCP data connector connection rules reference](data-connection-rules-reference-gcp.md).
+If you're creating a Google Cloud Platform (GCP) CCF data connector, package the deployment template using the [example GCP CCF template](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/Templates/Connector_GCP_CCP_template.json). For information on how to fill out the GCP CCF template, see [GCP data connector connection rules reference](../data-connection-rules-reference-gcp.md).
 
 In addition to the example templates, published solutions available in the Microsoft Sentinel content hub use the CCF for their data connectors. Review the following solutions as more examples of how to stitch the components together into an ARM template.
 
@@ -274,8 +274,8 @@ Each step in building the codeless connector is represented in the following exa
 - [Example data](#example-data)
 - [Example custom table](#example-custom-table)
 - [Example data collection rule](#example-data-collection-rule)
-- [Example data connector UI definition](data-connector-ui-definitions-reference.md#example-data-connector-definition)
-- [Example data connection rules](data-connector-connection-rules-reference.md#example-ccf-data-connector)
+- [Example data connector UI definition](../data-connector-ui-definitions-reference.md#example-data-connector-definition)
+- [Example data connection rules](../data-connector-connection-rules-reference.md#example-ccf-data-connector)
 - [Use example data with example template](#example-arm-template)
 
 To demonstrate a complex data source with ingestion to more than one table, this example features an output table schema and a DCR with multiple output streams. The DCR example puts these together along with its KQL transforms. The data connector UI definition and connection rules examples continue from this same example data source. Finally, the solution template uses all these example components to show end to end how to create the example CCF data connector.
@@ -454,11 +454,11 @@ To create this DCR in a test environment, follow the [Data Collection Rules API]
 
 ### Example data connector UI definition
 
-This example is located in the [Data connector definitions reference](data-connector-ui-definitions-reference.md#example-data-connector-definition).
+This example is located in the [Data connector definitions reference](../data-connector-ui-definitions-reference.md#example-data-connector-definition).
 
 ### Example data connector connection rules
 
-This example is located in the [Data connectors reference](data-connector-connection-rules-reference.md#example-ccf-data-connector).
+This example is located in the [Data connectors reference](../data-connector-connection-rules-reference.md#example-ccf-data-connector).
 
 ### Example ARM template
 
@@ -918,5 +918,5 @@ There are 5 ARM deployment resources in this template guide which house the 4 CC
 ## Related content
 
 For more information, see 
-- [About Microsoft Sentinel solutions](sentinel-solutions.md)
+- [About Microsoft Sentinel solutions](../sentinel-solutions.md)
 - [Data connector ARM template reference](/azure/templates/microsoft.securityinsights/dataconnectors#dataconnectors-objects-1)
