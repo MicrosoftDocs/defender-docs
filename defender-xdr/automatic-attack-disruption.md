@@ -76,35 +76,50 @@ Model and detector quality is maintained through continuous engineering and vali
 
 ## Automated response actions
 
-Automatic attack disruption uses Microsoft-based XDR response actions. Examples of these actions are:
+For containment actions, Defender for Endpoint applies a containment policy on all onboarded devices to prevent communication from the compromised entity (user, IP address, or device).
 
-- [Device contain](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) - based on Microsoft Defender for Endpoint's capability, this action is an automatic containment of a suspicious device to block any incoming/outgoing communication with the said device.
-  - In addition, Defender for Endpoint automatically contains malicious IP addresses associated with undiscovered/not onboarded devices to block any lateral movement and encryption activity to other Defender for Endpoint-onboarded/discovered devices. It does this through its **[Contain IP](/defender-endpoint/respond-machine-alerts#contain-ip-addresses-of-undiscovered-devices)** (Preview) policy. Moreover, [compromised critical assets' IP addresses are also automatically contained](/defender-endpoint/respond-machine-alerts#containing-critical-assets) with specific blocking mechanisms to stop the spread of an attack while avoiding productivity loss.
+| Action | Capability | Product | Description |
+|---|---|---|---|
+| [Contain device](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) | Attack disruption | Defender for Endpoint | Automatically contains a suspicious device by applying a policy on all Defender for Endpoint onboarded devices to block communication from that device. |
+| [Contain IP](/defender-endpoint/respond-machine-alerts#contain-ip-addresses-of-undiscovered-devices) | Attack disruption | Defender for Endpoint | Contains an IP address associated with undiscovered/not onboarded devices by applying a policy on all Defender for Endpoint onboarded devices to block communication from that IP address. |
+| [Isolate device](/defender-endpoint/respond-machine-alerts#isolate-device-automatic-attack-disruption) | Attack disruption | Defender for Endpoint | Automatically isolates a compromised device from the network when it's identified as an active foothold. Most network traffic is blocked while the device remains connected to required security services. |
+| [Disable user](#disable-user-considerations) | Attack disruption | Defender for Identity | Disables the user account to prevent further sign-in and access. |
+| [Contain user](#contain-user-considerations) | Attack disruption, Predictive shielding | Defender for Endpoint | Temporarily contains a suspicious identity by applying a policy on all Defender for Endpoint onboarded devices to block communication from that user and reduce lateral movement and remote encryption risk. |
+| [Revoke user session](/defender-for-identity/remediation-actions#supported-actions) | Attack disruption | Microsoft Entra ID | Revokes active user sessions to interrupt access. |
+| [Suspend user in Entra](/defender-xdr/investigate-users#identity-actions) | Attack disruption | Microsoft Entra ID | Suspends the user account in Microsoft Entra ID to prevent further access. |
+| [OAuth app compromise](/defender-cloud-apps/governance-actions) | Attack disruption | Defender for Cloud Apps | Executes protective measures for a potentially compromised OAuth application. |
+| [Safeboot hardening](/defender-endpoint/respond-machine-alerts#safeboot-hardening) | Predictive shielding | Defender for Endpoint | Applies preventive hardening to block potential tampering through Safe Mode reboots. |
+| [GPO hardening](/defender-endpoint/respond-machine-alerts#gpo-hardening) | Predictive shielding | Defender for Endpoint | Applies preventive hardening to block potential Group Policy abuse. |
+| [Proactive user containment](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) | Predictive shielding | Defender for Endpoint | Proactively contains a user account to prevent potential misuse before an incident escalates, focusing on users identified as high risk through prediction logic. |
+| [Attach deny policy to AWS user](/azure/sentinel/aws-disruption) | Attack disruption | Microsoft Sentinel (AWS connector) | Attaches a deny policy to a compromised AWS IAM user or federated role to revoke permissions and block further access to AWS resources. |
+| [Suspend user in Okta](okta-attack-disruption.md) | Attack disruption | Microsoft Sentinel (Okta connector) | Suspends a compromised Okta user account to temporarily deactivate the account and block login and activity until the suspension is lifted. |
 
-- [Isolate device (Preview)](/defender-endpoint/respond-machine-alerts#isolate-device-automatic-attack-disruption) - based on Microsoft Defender for Endpoint's capability, this action automatically isolates a compromised device from the network when the incident analysis indicates with high confidence that the device is being used as an active foothold. Most network traffic is blocked while the device remains connected to required security services for investigation and remediation. Isolation is time-limited and scoped only to devices involved in the incident. Security operators can release isolation at any time after completing investigation.
+### Contain user considerations
 
-- [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity’s capability, this action is an automatic suspension of a compromised account to prevent additional damage, such as lateral movement, malicious mailbox use, or malware execution.
+The contain user action enforces user containment at the endpoint layer. Defender for Endpoint applies a containment policy on all onboarded devices to block communication from the compromised user and limits authentication-based access, file system access, and network communication paths.
 
-  Defender for Identity enables remediation actions for users from Active Directory, Microsoft Entra ID, and integrated identity providers. The Disable user action behaves differently depending on how the user is hosted in your environment.
+> [!NOTE]
+> While the contain user action is used in both attack disruption and predictive shielding, it's applied differently in each context. In predictive shielding, the contain user action applies restrictions more selectively, focusing on users identified as high risk through prediction logic. It prevents new sessions rather than terminating existing ones.
 
+### Disable user considerations
   - **When the user account is hosted in Active Directory**: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity sensor.
   - **When the user account is hosted in Active Directory and is synced to Microsoft Entra ID**:
 Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account in Microsoft Entra ID.
   - **When the user account is hosted in Microsoft Entra ID only (cloud‑native account)**:
 Defender for Identity executes the disable user action in Microsoft Entra ID by using a Microsoft‑managed enterprise application. This application validates the signed-in user’s assigned roles and permissions through role-based access control (RBAC) before the account is disabled.
 
-  The enterprise application is named `Microsoft Defender for Identity` and uses application ID `60ca1954‑583c‑4d1f‑86de‑39d835f3e452`. In older tenants, this application might appear as `Radius Aad Syncer`.
+The [disable user](/defender-for-identity/remediation-actions) action is an automatic suspension of a compromised account to prevent additional damage, such as lateral movement, malicious mailbox use, or malware execution.
 
-  > [!NOTE]
-  > Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity.
+Defender for Identity enables remediation actions for users from Active Directory, Microsoft Entra ID, and integrated identity providers. The disable user action behaves differently depending on how the user is hosted in your environment:
 
-- [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
+- **When the user account is hosted in Active Directory**: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity sensor.
+- **When the user account is hosted in Active Directory and is synced to Microsoft Entra ID**: Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account in Microsoft Entra ID.
+- **When the user account is hosted in Microsoft Entra ID only (cloud‑native account)**: Defender for Identity executes the disable user action in Microsoft Entra ID by using a Microsoft‑managed enterprise application. This application validates the signed‑in user's assigned roles and permissions through role‑based access control (RBAC) before the account is disabled.
 
-  Defender for Endpoint enforces user containment at the endpoint layer and doesn't disable the account in the identity provider. Defender for Endpoint blocks attacker use of compromised identities on protected devices and limits authentication-based access, file system access, and network communication paths.
+The enterprise application is named `Microsoft Defender for Identity` and uses application ID `60ca1954‑583c‑4d1f‑86de‑39d835f3e452`. In older tenants, this application might appear as `Radius Aad Syncer`.
 
-  This action applies controls at a granular level, so Microsoft can target attack-related activity and preserve normal business communication where possible.
-
-For more information, see [remediation actions](m365d-remediation-actions.md) in Microsoft Defender.
+> [!NOTE]
+> Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity.
 
 ## Supported identity services for disruption actions
 
