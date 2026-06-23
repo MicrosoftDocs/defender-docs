@@ -3,7 +3,7 @@ title: Alerts for SQL Database and Azure Synapse Analytics
 description: This article lists the security alerts for SQL Database and Azure Synapse Analytics visible in Microsoft Defender for Cloud.
 ms.topic: reference
 ms.custom: linux-related-content
-ms.date: 06/03/2024
+ms.date: 06/23/2026
 ai-usage: ai-assisted
 ---
 
