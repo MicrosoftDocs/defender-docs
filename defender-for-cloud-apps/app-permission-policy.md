@@ -1,16 +1,19 @@
 ---
 title: Create policies to control OAuth apps 
 description: This article provides instructions for creating and working with app permission policies in Microsoft Defender for Cloud Apps.
-ms.date: 12/16/2025
+ms.date: 06/16/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Create policies to control OAuth apps
 
-In addition to the [existing investigation of OAuth apps](manage-app-permissions.md) connected to your environment, set permission policies so that you get automated notifications when an OAuth app meets certain criteria. For example, you can automatically be alerted when there are apps that require a high permission level and are authorized by more than 50 users.
+## Create OAuth app policies
 
-OAuth app policies enable you to investigate which permissions each app requested and which users authorized them for Microsoft 365, Google Workspace, and Salesforce. You're also able to mark these permissions as approved or banned. Marking them as banned disables the correlating Enterprise Application.
+Set permission policies so that you get automated notifications when an OAuth app meets certain criteria. For example, you can automatically be alerted when there are apps that require a high permission level and are authorized by more than 50 users. For more information about investigating OAuth apps, see [Manage app permissions](manage-app-permissions.md).
+
+OAuth app policies enable you to investigate which permissions each app requested and which users authorized them for Microsoft 365, Google Workspace, and Salesforce. You're also able to mark these permissions as approved or banned. Marking permissions as banned disables the corresponding Enterprise Application.
 
 Along with a built-in set of capabilities to detect anomalous app behavior and generate alerts based on machine learning algorithms, app policies in app governance are a way for you to:
 
@@ -22,9 +25,9 @@ Along with a built-in set of capabilities to detect anomalous app behavior and g
 
 ## Create a new OAuth app policy
 
-There are two ways to create a new OAuth app policy. The first way is under **Policy management** and the second is under **App governance**.
+You can create a new OAuth app policy from **Policy management** or from **App governance**.
 
-If you have [preview features](/microsoft-365/security/defender/preview) and [app governance turned on](app-governance-get-started.md), select the **App governance** page instead.
+If you have [Microsoft Defender preview features](/microsoft-365/security/defender/preview) and [app governance enabled (get started with app governance)](app-governance-get-started.md), create the policy from the **App governance** page rather than from **Policy management**.
 
 To create a new OAuth app policy:
 
@@ -39,7 +42,7 @@ To create a new OAuth app policy:
     :::image type="content" source="create-oauth-app-policies/oauth-app-policy.png" alt-text="Screenshot that shows where to enter the details for your new Oauth app policy." lightbox="create-oauth-app-policies/oauth-app-policy.png":::
 
 1. Filter the apps according to your needs. For example, you can view all apps that request **Permission** to **Modify calendars in your mailbox**.
-1. You can use the **Community use** filter to get information on whether allowing permission to this app is common, uncommon, or rare. This filter can be helpful if you have an app that's rare and requests permission that has a high severity level or requests permission from many users.
+1. You can use the **Community use** filter to get information on whether allowing permission to this app is common, uncommon, or rare. The **Community use** filter can be helpful if you have an app that's rare and requests permission that has a high severity level or requests permission from many users.
 1. Select the **New policy from search** button.
 
 
