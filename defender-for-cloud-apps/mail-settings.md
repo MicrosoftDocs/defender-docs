@@ -1,20 +1,21 @@
 ---
-title: Configure user notifications
-description: This article provides information about how to personalize the email notifications sent by Defender for Cloud Apps.
-ms.date: 03/15/2023
+title: Configure Defender for Cloud Apps user email notifications
+description: Customize the email notifications Defender for Cloud Apps sends to end users when a breach is detected, including sender identity, email design templates, and scope limitations.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart 
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Configure user notifications
 
 
 
-This article provides information about how to personalize the email notifications sent by Defender for Cloud Apps to your users when a breach is detected.
+This article provides information about how to personalize the email notifications sent by Defender for Cloud Apps to your users when a breach is detected. You can customize the email design by uploading an HTML template that includes your company logo, policy-driven titles, and content placeholders. These customizations apply to end-user notifications such as security alerts, data loss prevention, and file sharing reports.
 
 > [!NOTE]
-> This customization only affects the notifications sent to your end users, not the notifications sent to Defender for Cloud Apps administrators.
+> Custom email notification settings only affect the notifications sent to your end users, not the notifications sent to Defender for Cloud Apps administrators.
 
 ## Set email notification preferences
 
@@ -25,7 +26,7 @@ This article provides information about how to personalize the email notificatio
 
 1. In the Microsoft Defender Portal, select **Settings** > **Cloud Apps** > **System** > **Mail settings**.
 
-    ![Screenshot of the Mail settings tab.](media/mail-settings/email-settings.png)
+    ![Screenshot of the Mail settings tab in Microsoft Defender Portal.](media/mail-settings/email-settings.png)
     
     The **Default settings** option is always selected for the **Email sender identity**, and Defender for Cloud Apps always sends notifications using the default settings.
 
@@ -51,7 +52,8 @@ This article provides information about how to personalize the email notificatio
     - The title in the email body
     - The content
 
-## Additional notes
+<a name="additional-notes"></a>
+## Notification types that use custom email templates
 
 The following types of notifications use the custom email templates:
 
@@ -69,7 +71,7 @@ The following types of notifications use the custom email templates:
 - Ownership of items transferred to you
 
 > [!NOTE]
-> There are some types of notifications that are sent to admins only. In such a case, the default template is used, instead of the custom template.
+> Some notification types are sent to admins only. For admin-only notifications, the default template is used instead of the custom template.
 
 ## Sample email template
 
