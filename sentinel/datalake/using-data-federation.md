@@ -8,8 +8,10 @@ ms.reviewer: amyhari
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 03/29/2026
+ms.date: 06/12/2026
 ms.collection: ms-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to use federated data sources so that I can query external data alongside my Sentinel security data for comprehensive investigations.
 ---
@@ -52,7 +54,7 @@ The table management view provides an overview of all tables in your Sentinel da
 
 ### View table details
 
-Select a table row to open the details panel. The panel contains three tabs:
+Select a table row to open the details panel. The table details panel contains three tabs:
 
 | Tab | Description |
 |-----|-------------|
@@ -105,7 +107,8 @@ You can create KQL jobs based on queries that use federated tables:
 
 Federated tables are fully supported for KQL jobs, async queries, and MCP tools.
 
-## Create MCP tool with federated table queries
+<a name="create-mcp-tool-with-federated-table-queries"></a>
+## Create an MCP tool with federated table queries
 
 You can create MCP tools based on queries that use federated tables:
 
@@ -154,11 +157,15 @@ You can create scheduled Jupyter notebook jobs that utilize federated tables in 
 
 ### Query optimization
 
+Use the following practices to improve federated query performance.
+
 - **Apply filters early**: Filter data at the source when possible to reduce data transfer.
 - **Limit result sets**: Use `take` or `limit` clauses during development.
 - **Use projections**: Select only the columns you need to improve performance.
 
 **Example: Optimized query**
+
+The following query demonstrates filtering a large federated dataset early to reduce data volume and selecting only the necessary columns to improve query performance.
 
 ```kusto
 large_dataset_adls_connector
@@ -170,11 +177,15 @@ large_dataset_adls_connector
 
 ### Join strategies
 
+Use these practices when joining federated and native tables.
+
 - **Use appropriate join kinds**: Choose `inner`, `leftouter`, or `rightouter` based on your needs.
 - **Filter before joining**: Reduce the data volume before join operations.
 - **Consider data sizes**: Place the smaller table on the right side of the join.
 
 ### Error handling
+
+Consider the following practices to diagnose and handle common federated query issues.
 
 - **Check connection status**: Verify federated connector instances are connected before querying.
 - **Handle null values**: External data may contain unexpected nulls; use `coalesce()` or `isnull()` functions.

@@ -8,8 +8,10 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform  
 ms.topic: how-to
-ms.date: 08/27/2025
+ms.date: 06/12/2026
 ms.collection: ms-security  
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 # Customer intent: As a security engineer, I want to troubleshoot KQL queries in the Microsoft Sentinel data lake so that I can resolve common issues and ensure successful query execution.
 
@@ -36,7 +38,7 @@ Job-specific validation:
 + Validate that the query output schema aligns with the destination table in column names, and data types.
 + Verify job status and track progress.
 
-+ Refer to the following error tables for specific error messages and resolution steps.
++ Refer to the [KQL query error messages](#kql-query-error-messages) table and the [KQL job error messages](#kql-job-error-messages) table for specific error messages and resolution steps.
 
 > [!NOTE]
 > Data promoted to the analytics tier may take 15-30 minutes to appear in Advanced Hunting depending on the data size and query complexity.
@@ -45,6 +47,9 @@ Job-specific validation:
 
 
 ## KQL query error messages
+
+The following table lists common KQL query error messages, their causes, and recommended actions.
+
 | Error message | Root cause | Suggested actions |
 |-------------------|------------|-------------------|
 | **Table could not be found or is empty.** | The referenced table doesn't exist, is empty, or the user doesn't have the required permissions. | Verify the table name, confirm data availability, and ensure the user has appropriate access. For more information, see [Roles and permissions for the Microsoft Sentinel data lake](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake). |
@@ -66,6 +71,8 @@ Job-specific validation:
 
 
 ## KQL job error messages
+
+The following table describes common KQL job error messages and how to resolve them.
 
 | Error message | Root cause | Suggested actions |
 |-------------------|------------|-------------------|
