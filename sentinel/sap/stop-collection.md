@@ -5,16 +5,17 @@ description: Learn about how to stop Microsoft Sentinel from collecting data fro
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 09/30/2025
+ms.date: 06/12/2026
 ai-usage: ai-assisted
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 #customerIntent: As an SAP admin, I want to stop Microsoft Sentinel from collecting data from our SAP applications.
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Stop SAP data collection
+# Stop SAP data collection in Microsoft Sentinel for SAP applications
 
 There might be instances where you need to halt the data collection from your SAP applications by the Microsoft Sentinel data connector agent, whether for maintenance, troubleshooting, or other administrative reasons.
 
@@ -31,13 +32,13 @@ Before you stop the data collection from your SAP applications, ensure you have 
 
 ## Stop log ingestion and disable the connector
 
-To stop ingesting SAP logs into Microsoft and to stop the data stream from the Docker container, sign into your data connector agent machine and run:
+To stop ingesting SAP logs into Microsoft Sentinel and to stop the data stream from the Docker container, sign into your data connector agent machine and run:
 
 ```bash
 docker stop sapcon-[SID/agent-name]
 ```
 
-The Docker container stops and doesn't send any more SAP logs to Microsoft Sentinel. This stops both the ingestion and billing for the SAP system related to the connector.
+The Docker container stops and doesn't send any more SAP logs to Microsoft Sentinel. Stopping the Docker container stops both the ingestion and billing for the SAP system related to the connector.
 
 If you need to reenable the Docker container, sign into the data connector agent machine and run:
 
@@ -45,7 +46,7 @@ If you need to reenable the Docker container, sign into the data connector agent
 docker start sapcon-[SID]
 ```
 
-To stop ingesting a specific SID for a multi-SID container, make sure that you also delete the SID from the connector page UI in Microsoft Sentinel. This option is relevant only if you [deployed the agent via the portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview).
+To stop ingesting a specific SID for a multi-SID container, make sure that you also delete the SID from the connector page UI in Microsoft Sentinel. Deleting the SID from the connector page UI is relevant only if you [deployed the agent via the portal](deploy-data-connector-agent-container.md#deploy-the-data-connector-agent-from-the-portal-preview).
 
 1. In Microsoft Sentinel, select **Configuration > Data connectors** and search for **Microsoft Sentinel for SAP**.
 1. Select the data connector row and then select **Open connector page** in the side pane.
