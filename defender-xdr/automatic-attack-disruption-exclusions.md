@@ -11,9 +11,11 @@ ms.collection:
   - usx-security
   - usx-security
 ms.topic: how-to
-ms.date: 05/12/2025
+ms.date: 06/15/2026
 appliesto:
 - Microsoft Defender XDR
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security administrator, I want to learn how to exclude specific assets from being automatically contained by automatic attack disruption in Microsoft Defender XDR, so that I can prevent disruptions to critical assets while still maintaining security.
 ---
@@ -31,7 +33,7 @@ Automatic attack disruption and exclusion policies work together to help contain
 
 ## Prerequisites
 
-To configure automated response settings or to add or edit device tags, you must be a **Security Administrator or higher** in either [Microsoft Entra ID](https://portal.azure.com) or in the [Microsoft 365 admin center](https://admin.microsoft.com).
+To exclude assets from automated responses, you need the **Security Administrator** role or higher. You can assign this role in [Microsoft Entra ID](https://portal.azure.com) or the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 A Security Reader and view tags but not edit them.
 
@@ -58,6 +60,8 @@ To exclude a user account from automated responses:
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 1. Go to **Settings** > **Microsoft Defender XDR**.
+
+To exclude one or more user accounts from automated responses, follow these steps:
 
 1. Under **Automated response**, select **Identities**.
 
@@ -151,6 +155,8 @@ To create a tag go to Asset rule management in the Microsoft Defender portal and
 
 1. Go to **Settings** > **Microsoft Defender XDR**.
 
+To exclude IP addresses from automated responses, follow these steps:
+
 1. Under **Automated responses**, select **Devices**.
 
    :::image type="content" source="media/automatic-attack-disruption-exclusions/attack-disrupt-devices-tab.png" alt-text="Screenshot of the Devices page in automated response settings for attack disruption" lightbox="media/automatic-attack-disruption-exclusions/attack-disrupt-devices-tab.png":::
@@ -182,7 +188,7 @@ To create a tag go to Asset rule management in the Microsoft Defender portal and
 
 Removing an exclusion allows the asset to be included in automated responses for attack disruption again. When an exclusion is removed, the asset is no longer excluded from automated responses and can be automatically contained if it's involved in an attack that triggers attack disruption.
 
-To remove an exclusion:
+In the Microsoft Defender portal, go to **Settings** > **Microsoft Defender XDR** > **Automated response**. Then use the appropriate tab to remove an exclusion:
 
 - Go to the **Identities** page. Select the user account you want to remove from the list and then select **Remove**.
 
@@ -205,7 +211,10 @@ Opting out of attack disruption can greatly increase security risk. Consider [ex
 
 If you must opt out of attack disruption, open a support case in the Microsoft Defender portal with the subject *Attack disruption opt-out*. In your request, specify that you wish to opt out of attack disruption and include a brief explanation about your decision. This feedback helps us improve the feature and better understand customer needs. By opting out, you still receive alerts related to attack disruption but no automated actions are taken.
 
-## See also
+<a name="see-also"></a>
+## Related content
+
+For more information about attack disruption, see the following article:
 
 - [View details and results of automated attack disruption actions](autoad-results.md)
 

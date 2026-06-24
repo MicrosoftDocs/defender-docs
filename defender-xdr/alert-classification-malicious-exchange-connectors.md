@@ -1,6 +1,6 @@
 ---
-title: Alert classification for malicious Exchange connectors
-description: Learn how to classify alerts on malicious Exchange connectors activity and protect your network from attacks.
+title: Investigate and classify alerts for malicious Exchange connectors
+description: Learn how to investigate and classify alerts on malicious Exchange connectors activity and protect your network from attacks.
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
@@ -8,21 +8,22 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-ms.date: 04/18/2025
+ms.date: 06/15/2026
 appliesto:
   - Microsoft Defender XDR
+ai-usage: ai-assisted
 #customer intent: As a SOC analyst, I want to know how to investigate and classify alerts for malicious Exchange connectors so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
-# Alert classification for malicious Exchange connectors
+# Investigate and classify alerts for malicious Exchange connectors
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 Threat actors use compromised Microsoft Exchange connectors for sending out spam and phishing emails in bulk to unsuspecting recipients by masquerading legitimate emails. Since the connector is compromised, the emails would usually be trusted by the recipients. These kinds of phishing emails are common vectors for phishing campaigns, and business email compromise (BEC) scenario. Hence, such emails need to be monitored heavily due to the likelihood of successful recipients' compromises being high.
 
-This playbook helps in investigating instances where malicious connectors are setup/deployed by malicious actors. Accordingly, they take necessary steps to remediate the attack and mitigate the security risks arising from it. The playbook helps in classifying the alerts as either true positive (TP) or false positive (FP). If alerts are TP, the playbook lists necessary recommended actions for remediating the attack. This playbook is available for security teams who review, handle/manage, and grade the alerts.
+This malicious Exchange connector investigation playbook helps in investigating instances where malicious connectors are setup/deployed by malicious actors. Accordingly, they take necessary steps to remediate the attack and mitigate the security risks arising from it. The playbook helps in classifying the alerts as either true positive (TP) or false positive (FP). If alerts are TP, the playbook lists necessary recommended actions for remediating the attack. This playbook is available for security teams who review, handle/manage, and grade the alerts.
 
 Following are the results of using a playbook:
 
@@ -59,7 +60,7 @@ You must follow the sequence to identify malicious Exchange connectors:
 
 ## Investigate malicious connectors
 
-This section describes the steps to investigate an alert and remediate the security risk due to this incident.
+This section describes the steps to investigate an alert and remediate the security risk due to a malicious Exchange connector incident.
 
 - Determine whether the connector demonstrates bad (malicious) behavior.
   - Look for events indicating unusual mail traffic and identify, whether any new and recently added Exchange connector.
@@ -70,12 +71,13 @@ This section describes the steps to investigate an alert and remediate the secur
 - Look for:
   - Field values in the P1 sender (email header sender) and P2 sender (envelope sender), and check whether there's a mismatch.
   - Empty values in the SenderObjectId field.
-- Use telemetry data to note:
+- Use email and audit telemetry from EmailEvents and CloudAppEvents to note:
   - The NetworkMessageId (Message ID) of the emails that were sent from the malicious connector.
   - The connector creation date, last modified date, and last modified by date.
   - The IP address of the connector from where the email traffic is observed.
 
-## Advanced hunting queries
+<a name="advanced-hunting-queries"></a>
+## Use advanced hunting queries to investigate connectors
 
 You can use [advanced hunting](advanced-hunting-overview.md) queries to gather information related to an alert and determine whether the activity is suspicious.
 
@@ -88,6 +90,8 @@ Ensure you have access to the following tables:
 |IdentityLogonEvents|Contains login information for all users.|
 
 ### Sample queries
+
+Use the following sample queries to investigate connector creation and suspicious mail activity.
 
 - Run this KQL to check new connector creation.
 
@@ -106,7 +110,7 @@ Ensure you have access to the following tables:
   | project-reorder ConnectorName, IsEnabled
   ```
 
-- Run this KQL to check the volume of events from the alerted connector with time window of before and after the alerts.
+- Run this KQL to correlate outbound connector changes with message flow to identify potentially malicious connector abuse. The query checks the volume of emails sent through the alerted connector within a configurable time window.
 
   ```KQL
   //modify timeWindow to modify the lookback.
@@ -147,7 +151,7 @@ Ensure you have access to the following tables:
   look across all mailflow directions
   ```
 
-  - If sent to external domains, who else in the environment is sending similar emails (Could indicate compromised user if recipient is unknown domain).
+  - If emails from the alerted connector are being sent to external domains, identify who else in the environment is sending similar emails (could indicate a compromised user if the recipient is in an unknown domain).
 
      ```KQL
      //modify timeWindow to modify the lookback.
@@ -174,7 +178,7 @@ Following are the query considerations for protecting the recipients from malici
 
 - Check for admin logins for those who frequently manage connectors from unusual locations (generate stats and exclude locations from where most successful logins are observed).
 
-- Look for login failures from unusual locations.
+- Look for login failures from unusual locations. The following query correlates failed logon attempts with subsequent successful logons to detect potential brute-force compromises of admin accounts that manage connectors.
 
   ```
   //modify timeWindow to modify the lookback.
@@ -217,7 +221,7 @@ Following are the query considerations for protecting the recipients from malici
 
 ## Recommended actions
 
-Once it's determined that the observed alert activities are part of TP, classify those alerts and perform the actions below:
+Once you determine that the alert activity is a true positive (TP), classify the alert accordingly and perform the following actions:
 
 - Disable or remove the connector that was found to be malicious.
 - If the admin account was compromised, reset the admin's account credentials. Also, disable/revoke tokens for the compromised admin account and enable multi-factor authentication for all admin accounts.
