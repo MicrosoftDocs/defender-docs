@@ -36,7 +36,7 @@ There are three ways to manage user access to the Defender portal, depending on 
 - [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac): Use Defender unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 - [Microsoft Defender for Endpoint XDR RBAC](/defender-endpoint/user-roles): Use Defender for Endpoint XDR role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
-The instructions and permission settings listed in this article apply to both Defender unified RBAC and Microsoft Defender for Endpoint XDR RBAC.
+The instructions and permission settings listed in this article apply to both Defender unified RBAC and Microsoft Defender for Endpoint RBAC.
 
 ## Set up Defender unified RBAC roles for site security
 
@@ -99,7 +99,7 @@ The following tables summarize the write and read permissions required for site 
 |----|----|
 | **Defender permissions**: Core security settings (manage) under Authorization and Settings and scoped to all device groups. <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator and scoped to all device groups.| Write roles (including roles that are non-scoped to all device groups). <br> **Defender permissions**: Security data basics (under Security Operations).<br>**Entra ID roles**: Global Reader, Security Reader.|
 
-**For Microsoft Defender for Endpoint XDR RBAC (version 2)**:
+**For Microsoft Defender for Endpoint RBAC (version 2)**:
 
 |Write permissions |Read permissions |
 |----|----|
