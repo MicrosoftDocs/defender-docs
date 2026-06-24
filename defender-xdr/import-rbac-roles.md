@@ -1,6 +1,6 @@
 ---
 title: Import roles to Microsoft Defender unified role-based access control (RBAC)
-description: Create custom Microsoft Defender Security portal role-based access control (RBAC)
+description: Import existing roles from individual Microsoft Defender RBAC models into unified RBAC in the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier3
-ms.custom: 
+ms.custom: msecd-doc-authoring-1014
 ms.topic: how-to
-ms.date: 11/17/2024
+ms.date: 06/15/2026
 ms.reviewer: 
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
@@ -20,6 +20,7 @@ appliesto:
 - Microsoft Defender Vulnerability Management
 - Microsoft Defender for Cloud
 - Microsoft Defender for Cloud Apps
+ai-usage: ai-assisted
 ---
 
 # Import roles to Microsoft Defender unified role-based access control (RBAC)
@@ -74,9 +75,10 @@ You need to activate the new Defender unified RBAC model to start enforcing the 
 Imported roles appear in the **Permissions and roles** list together with any custom roles you created. All imported roles are marked as **Imported** in the description. Once you edit an imported role, it will no longer be marked as **Imported**.
 
 > [!NOTE]
-> You can import roles as frequently as required. After you edit an imported role, the changes will not affect the original role where it was imported from. This means you have the option to delete an imported role and re-import the original role, if necessary. If you import the same role twice, you create a duplicate role.
+> You can import roles as frequently as required. After you edit an imported role, the changes will not affect the original role where it was imported from. Because changes to an imported role don't affect the original role, you can delete the imported role and re-import the original role, if necessary. If you import the same role twice, you create a duplicate role.
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
 - [Activate Microsoft Defender unified RBAC](activate-defender-rbac.md)
 - [Edit or delete roles](edit-delete-rbac-roles.md)
