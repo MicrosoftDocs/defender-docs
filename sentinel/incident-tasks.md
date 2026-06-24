@@ -5,18 +5,22 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 11/14/2022
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #Customer intent: As a security operations manager, I want to standardize incident response tasks using automation rules and playbooks so that my team can handle incidents consistently and efficiently.
 ---
 
 # Use tasks to manage incidents in Microsoft Sentinel in the Azure portal
 
-One of the most important factors in running your security operations (SecOps) effectively and efficiently is the **standardization of processes**. SecOps analysts are expected to perform a list of steps, or tasks, in the process of triaging, investigating, or remediating an incident. Standardizing and formalizing the list of tasks can help keep your SOC running smoothly, ensuring the same requirements apply to all analysts. This way, regardless of who is on-shift, an incident will always get the same treatment and SLAs. Analysts won't need to spend time thinking about what to do, or worry about missing a critical step. Those steps are defined by the SOC manager or senior analysts (tier 2/3) based on common security knowledge (such as NIST), their experience with past incidents, or recommendations provided by the security vendor that detected the incident. 
+This article explains how to use incident tasks in Microsoft Sentinel to standardize and track the steps your team follows when triaging, investigating, and responding to incidents. You can add tasks manually, or automate task creation by using automation rules and playbooks.
 
-## Use cases
+One of the most important factors in running your security operations (SecOps) effectively and efficiently is the **standardization of processes**. SecOps analysts are expected to perform a list of steps, or tasks, in the process of triaging, investigating, or remediating an incident. Standardizing and formalizing the list of tasks can help keep your SOC running smoothly, ensuring the same requirements apply to all analysts. With this standardized process, regardless of who is on-shift, an incident will always get the same treatment and SLAs. Analysts won't need to spend time thinking about what to do, or worry about missing a critical step. Those steps are defined by the SOC manager or senior analysts (tier 2/3) based on common security knowledge (such as NIST), their experience with past incidents, or recommendations provided by the security vendor that detected the incident. 
+
+<a name="use-cases"></a>
+## When to use incident tasks
 
 - Your SOC analysts can use a single central checklist to handle the processes of incident triage, investigation, and response, all without worrying about missing a critical step.
 
@@ -30,9 +34,11 @@ The **Microsoft Sentinel Responder** role is required to create automation rules
 
 The **Logic Apps Contributor** role is required to create and edit playbooks.
 
-## Scenarios
+<a name="scenarios"></a>
+## Incident task management scenarios
 
-### Analyst
+<a name="analyst"></a>
+### Analyst scenarios
 
 #### Follow tasks when handling an incident
 
@@ -46,9 +52,10 @@ Mark a task complete by selecting its "checkbox" circle.
 
 #### Add tasks to an incident on the spot
 
-You can add tasks to an open incident that you're working on, either to give yourself reminders of actions you've discovered a need to take, or to record actions that you've taken of your own initiative that don't appear in the task list. Tasks added in this way will apply only to the open incident.
+You can add tasks to an open incident that you're working on, either to give yourself reminders of actions you've discovered a need to take, or to record actions that you've taken of your own initiative that don't appear in the task list. Tasks added manually to an incident apply only to that incident.
 
-### Workflow creator
+<a name="workflow-creator"></a>
+### Workflow creator scenarios
 
 #### Add tasks to incidents with automation rules
 
@@ -86,7 +93,7 @@ Consider the following scenarios as examples:
 
 #### Use automation rules or playbooks to add tasks?
 
-What considerations should dictate which of these methods should be used to create incident tasks?
+What considerations should dictate whether automation rules or playbooks should be used to create incident tasks?
 
 - **Automation rules**: Use whenever possible. Use for plain, static tasks that don't require interactivity.
 - **Playbooks**: Use for advanced use cases&mdash;the creation of tasks based on conditions, or of tasks with integrated automated actions.
@@ -96,5 +103,5 @@ What considerations should dictate which of these methods should be used to crea
 - Learn how analysts can [use tasks to handle incident workflow in Microsoft Sentinel](work-with-tasks.md).
 - Learn more about [investigating incidents in Microsoft Sentinel](investigate-cases.md).
 - Learn how to add tasks to groups of incidents automatically using [automation rules](create-tasks-automation-rule.md) or [playbooks](create-tasks-playbook.md).
-- Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and how to [create them](./create-manage-use-automation-rules.md).
-- Learn more about [playbooks](automate-responses-with-playbooks.md) and how to [create them](tutorial-respond-threats-playbook.md).
+- Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and how to [create and manage automation rules](./create-manage-use-automation-rules.md).
+- Learn more about [playbooks](automate-responses-with-playbooks.md) and how to [create playbooks](tutorial-respond-threats-playbook.md).
