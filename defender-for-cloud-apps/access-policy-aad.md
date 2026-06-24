@@ -41,7 +41,7 @@ Before you start, make sure that you have the following prerequisites:
 
 This procedure describes how to create a new access policy in Defender for Cloud Apps.
 
-1. In Microsoft Defender XDR, select the **Cloud Apps > Policies > Policy management > Conditional Access** tab.
+1. In Microsoft Defender, select the **Cloud Apps > Policies > Policy management > Conditional Access** tab.
 
 1. Select **Create policy** > **Access policy**. For example:
 
