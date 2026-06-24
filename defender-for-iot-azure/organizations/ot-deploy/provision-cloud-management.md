@@ -2,7 +2,9 @@
 title: Provision OT sensors for cloud management
 description: Learn how to ensure that your OT sensor can connect to Azure by accessing a list of required endpoints to define in your firewalls rules.
 ms.topic: how-to
-ms.date: 03/20/2023
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Provision sensors for cloud management
@@ -11,13 +13,13 @@ This article is one in a series of articles describing the [deployment path](ot-
 
 :::image type="content" source="../media/deployment-paths/progress-network-level-deployment.png" alt-text="Diagram of a progress bar with Site networking setup highlighted." border="false" lightbox="../media/deployment-paths/progress-network-level-deployment.png":::
 
-If you're working with air-gapped environment and locally-managed sensors, you can skip this step.
+If you're working with air-gapped environment and locally-managed sensors, you can skip downloading endpoint details and configuring firewall rules for Azure connectivity.
 
 ## Prerequisites
 
 To perform the steps described in this article, you need access to the Azure portal as a [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader), [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner) user.
 
-This step is performed by your connectivity teams.
+Downloading endpoint details and configuring firewall rules is performed by your connectivity teams.
 
 ## Allow connectivity to Azure
 
@@ -36,7 +38,7 @@ For more information, see [Methods for connecting sensors to Azure](../architect
 Configure your firewall rules so that your sensor can access the cloud on port 443, to each of the listed endpoints in the downloaded list.
 
 > [!IMPORTANT]
-> Azure public IP addresses are updated weekly. If you must define firewall rules based on IP addresses, make sure to download the new [JSON file](https://www.microsoft.com/download/details.aspx?id=56519) each week and make the required changes on your site to correctly identify services running in Azure.
+> Azure public IP addresses are updated weekly. If you must define firewall rules based on IP addresses, make sure to download the new [Azure public IP ranges and service tags JSON file](https://www.microsoft.com/download/details.aspx?id=56519) each week and make the required changes on your site to correctly identify services running in Azure.
 >
 
 ## Next steps

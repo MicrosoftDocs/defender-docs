@@ -1,14 +1,15 @@
 ---
 title: Verify and update detected device inventory - Microsoft Defender for IoT
 description: Learn how to fine-tune your newly detected device inventory on an OT sensor, such as updating device types and properties, merging devices as needed, and more.
-ms.date: 03/09/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Verify and update your detected device inventory
 
-This article is one in a series of articles describing the [deployment path](../ot-deploy/ot-deploy-path.md) for Operational Technology (OT) monitoring with Microsoft Defender for IoT, and describes how to review your device inventory and enhance security monitoring with fine-tuned device details.
+This article is one in a series of articles describing the [OT monitoring deployment path](../ot-deploy/ot-deploy-path.md) for Operational Technology (OT) monitoring with Microsoft Defender for IoT, and describes how to review your device inventory and enhance security monitoring with fine-tuned device details.
 
 :::image type="content" source="../media/deployment-paths/progress-fine-tuning-ot-monitoring.png" alt-text="Diagram of a progress bar with Fine-tune OT monitoring highlighted." border="false" lightbox="../media/deployment-paths/progress-fine-tuning-ot-monitoring.png":::
 
@@ -16,11 +17,11 @@ This article is one in a series of articles describing the [deployment path](../
 
 Before performing the procedures in this article, make sure that you have:
 
-- An OT sensor [installed](install-software-ot-sensor.md), [configured, and activated](activate-deploy-sensor.md), with device data detected.
+- An OT sensor with [OT sensor software installed](install-software-ot-sensor.md), [configured, and activated](activate-deploy-sensor.md), with device data detected.
 
 - Access to your OT sensor as **Security Analyst** or **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](../roles-on-premises.md).
 
-This step is performed by your deployment teams.
+Verifying and updating the device inventory is performed by your deployment teams.
 
 ## View the device inventory on your OT sensor
 
@@ -61,12 +62,12 @@ You might want to increase device visibility and enhance device data with more d
 
 - To increase device visibility to Windows-based devices, use the Defender for IoT [Windows Management Instrumentation (WMI) tool](../detect-windows-endpoints-script.md).
 
-- If your organization's network policies prevent some data from being ingested, [import the extra data in bulk](../how-to-import-device-information.md).
+- If your organization's network policies prevent some data from being ingested, [import device information in bulk](../how-to-import-device-information.md).
 
 ## Next steps
 
 > [!div class="step-by-step"]
-> [« Control what traffic is monitored](../how-to-control-what-traffic-is-monitored.md)
+> [Control what traffic is monitored](../how-to-control-what-traffic-is-monitored.md)
 
 > [!div class="step-by-step"]
-> [Create a learned baseline of OT alerts »](create-learned-baseline.md)
+> [Create a learned baseline of OT alerts](create-learned-baseline.md)
