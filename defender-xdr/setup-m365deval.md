@@ -14,8 +14,9 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: how-to
-ms.date: 06/28/2024
-ms.custom: sfi-ga-nochange
+ms.date: 06/15/2026
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Set up your Microsoft Defender XDR trial in a lab environment
@@ -31,6 +32,8 @@ This article guides you to set up a dedicated lab environment. For information o
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Create a Microsoft 365 E5 trial tenant
+
+Perform the following steps to create a Microsoft 365 E5 trial tenant.
 
 > [!NOTE]
 > If you already have an existing Microsoft 365 or Microsoft Entra subscription, you can skip the Microsoft 365 E5 trial tenant creation steps.
@@ -60,7 +63,7 @@ This article guides you to set up a dedicated lab environment. For information o
 
 11. [Optional] Download Office apps. Select **Next** to skip this step.
 
-12. [Optional] Migrate email messages. Again, you can skip this step.
+12. [Optional] Migrate email messages. You can skip this step by selecting **Next**.
 
 13. Choose online services. Select **Exchange** and select **Next**.
 
@@ -69,6 +72,8 @@ This article guides you to set up a dedicated lab environment. For information o
 Congratulations! You have completed the provisioning of your Microsoft 365 tenant.
 
 ## Enable your Microsoft 365 trial subscription
+
+Perform the following steps to enable your Microsoft 365 trial subscription.
 
 > [!NOTE]
 > Signing up for a trial gives you 25 user licenses to use for a month. See [Try or buy a Microsoft 365 subscription](/microsoft-365/commerce/try-or-buy-microsoft-365) for details.
@@ -87,9 +92,10 @@ Congratulations! You have completed the provisioning of your Microsoft 365 tenan
 
 7. Select the Global Administrator account again then select **Manage username**.
 
-8. [Optional] Change the domain from *onmicrosoft.com* to your own domain—depending on what you chose on the previous steps. Select **Save changes**.
+8. [Optional] Change the domain from *onmicrosoft.com* to your own domain—depending on whether you connected your own domain during tenant setup. Select **Save changes**.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 |[Phase 3: Configure & Onboard](pilot-deploy-overview.md) | Configure each Microsoft Defender XDR pillar for your Microsoft Defender XDR trial lab or pilot environment and onboard your endpoints.
 |:-------|:-----|
