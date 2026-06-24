@@ -38,7 +38,7 @@ Start by using the following steps to get visibility and insights about your app
 
     Use these sorting and filtering options to gain deeper insights into your OAuth apps, including relevant app metadata and usage data.
 
-1. **[Get detailed app information](app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)**: On the **App governance** tabs, select an app in the grid to view an app details page. Investigate [priority account](/microsoft-365/admin/setup/priority-accounts) data usage for a specific app, trace exactly whose data is being accessed, which permissions are being used, and which permissions aren't used.
+1. **[Get detailed app information](app-governance-visibility-insights-view-apps.md#get-detailed-information-about-an-app)**: On the **App governance** tabs, select an app in the grid to view an app details page. Investigate [priority account](/microsoft-365/admin/setup/priority-accounts) data usage for a specific app, trace exactly whose data is being accessed, which permissions are being used, and which permissions aren't used.
 
 For more information, see [Get started with visibility and insights](app-governance-visibility-insights-get-started.md).
 

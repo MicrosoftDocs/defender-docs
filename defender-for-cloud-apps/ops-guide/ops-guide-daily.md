@@ -165,7 +165,7 @@ For more information, see:
 
 - [View and manage incidents and alerts](/unified-secops-platform/mto-incidents-alerts)
 - [View your app details with app governance](../app-governance-visibility-insights-view-apps.md)
-- [Getting detailed information on an app](../app-governance-visibility-insights-view-apps.md#getting-detailed-information-on-an-app)
+- [Get detailed information about an app](../app-governance-visibility-insights-view-apps.md#get-detailed-information-about-an-app)
 
 ### Create and manage app governance policies
 
