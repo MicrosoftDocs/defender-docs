@@ -1,14 +1,16 @@
 ---
-title: Plan your migration to Microsoft Sentinel | Microsoft Docs
+title: Plan your migration to Microsoft Sentinel
 description: Discover the reasons for migrating from a legacy SIEM, and learn how to plan out the different phases of your migration.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: soulisabag
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 04/15/2026
+ms.date: 06/15/2026
 ms.collection:
  - migration
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a SOC team leader, I want to migrate from a legacy SIEM to Microsoft Sentinel so that I can improve threat detection, automate responses, and ensure comprehensive coverage of both on-premises and cloud assets.
 
 ---
@@ -19,7 +21,8 @@ Security operations center (SOC) teams use centralized security information and 
 
 This article discusses the reasons for migrating from a legacy SIEM, and describes how to plan out the different phases of your migration.
 
-## Migration steps
+<a name="migration-steps"></a>
+## Microsoft Sentinel migration process
 
 In this guide, you learn how to migrate your legacy SIEM to Microsoft Sentinel. Follow your migration process through this series of articles, in which you'll learn how to navigate different steps in the process.
 
@@ -59,11 +62,12 @@ During the planning phase, you identify your existing SIEM components, your exis
 
 This diagram describes the high-level phases that a typical migration includes. Each phase includes clear goals, key activities, and specified outcomes and deliverables. 
 
-The phases in this diagram are a guideline for how to complete a typical migration procedure. An actual migration may not include some phases or may include more phases. Rather than reviewing the full set of phases, [the articles in this guide](#migration-steps) review specific tasks and steps that are especially important to a Microsoft Sentinel migration.
+The phases in this diagram are a guideline for how to complete a typical migration procedure. An actual migration may not include some phases or may include more phases. Rather than reviewing the full set of phases, the [Microsoft Sentinel migration tasks and steps](#migration-steps) review specific tasks and steps that are especially important to a Microsoft Sentinel migration.
 
 :::image type="content" source="media/migration-overview/migration-phases.png" alt-text="Diagram of the Microsoft Sentinel migration phases." lightbox="media/migration-overview/migration-phases.png" border="false":::
 
-### Considerations
+<a name="considerations"></a>
+### Migration planning considerations
 
 Review these key considerations for each phase.
 
