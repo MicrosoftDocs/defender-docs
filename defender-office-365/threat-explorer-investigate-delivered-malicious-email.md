@@ -1,9 +1,9 @@
 ---
-title: Investigate malicious email that was delivered in Microsoft 365, find and investigate malicious email
+title: Investigate malicious email delivered in Microsoft 365
 keywords: TIMailData-Inline, Security Incident, incident, Microsoft Defender for Endpoint PowerShell, email malware, compromised users, email phish, email malware, read email headers, read headers, open email headers,special actions
 author: chrisda
 ms.author: chrisda
-ms.date: 2/27/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 
 ms.localizationpriority: medium
@@ -13,12 +13,14 @@ ms.collection:
   - tier1
 description: Learn how to use threat investigation and response capabilities to find and investigate malicious email.
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-image-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Investigate malicious email that was delivered in cloud organizations
@@ -54,6 +56,8 @@ This article explains how to use Threat Explorer and Real-time detections to fin
 - For permissions and licensing requirements for Threat Explorer and Real-time detections, see [Permissions and licensing for Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#permissions-and-licensing-for-threat-explorer-and-real-time-detections).
 
 ## Find suspicious email that was delivered
+
+Use the following steps to locate suspicious delivered email in Threat Explorer or Real-time detections.
 
 1. Use one of the following steps to open Threat Explorer or Real-time detections:
    - **Threat Explorer**: In the Defender portal at <https://security.microsoft.com>, go to **Email & Security** \> **Explorer**. Or, to go directly to the **Explorer** page, use <https://security.microsoft.com/threatexplorerv3>.
@@ -154,13 +158,13 @@ This article explains how to use Threat Explorer and Real-time detections to fin
 
 The **Email** tab (view) in the details area of the **[All email](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-all-email-view-in-threat-explorer)**, **[Malware](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-malware-view-in-threat-explorer-and-real-time-detections)**, or **[Phish](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-phish-view-in-threat-explorer-and-real-time-detections)** views contains the details you need to investigate suspicious email.
 
-For example, Use the **Delivery Action**, **Original delivery location**, and **Last delivery location** columns in the **Email** tab (view) to get a complete picture of where the affected messages went. The values were explained in Step 4.
+For example, use the **Delivery Action**, **Original delivery location**, and **Last delivery location** columns in the **Email** tab (view) to get a complete picture of where the affected messages went. **Delivery Action** shows whether the message was delivered, junked, or blocked. **Original delivery location** shows where the message went initially (for example, Inbox, Junk folder, or Quarantine), and **Last delivery location** shows where the message ended up after any post-delivery actions by the system or admins.
 
 Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
 
 ## Remediate malicious email that was delivered
 
-After you identify the malicious email messages that were delivered, you can remove them from recipient mailboxes. For instructions, see [Remediate malicious email delivered](remediate-malicious-email-delivered-office-365.md).
+After you identify the malicious email messages that were delivered, you can remove them from recipient mailboxes. For instructions, see [Remediate malicious email delivered in Office 365](remediate-malicious-email-delivered-office-365.md).
 
 ## Related articles
 
