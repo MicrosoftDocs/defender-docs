@@ -5,7 +5,9 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: daniha
 ms.topic: how-to
-ms.date: 07/24/2025
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a billing administrator, I want to switch to simplified pricing tiers for Microsoft Sentinel so that I can streamline billing and potentially reduce costs.
 
@@ -23,8 +25,12 @@ For many Microsoft Sentinel workspaces created before July 2023, there's a separ
 ## Change pricing tier to simplified
 Classic pricing tiers are when Microsoft Sentinel and Log Analytics pricing tiers are configured separately and show up as different meters on your invoice. To move to the simplified pricing tier where Microsoft Sentinel and Log Analytics billing are combined for the same pricing meter, **Switch to new pricing**.
 
-## [Microsoft Sentinel](#tab/microsoft-sentinel)
-Use the following steps to change the pricing tier of your workspace using the Microsoft Sentinel portal. Once you make the switch, reverting back to a classic pricing tier can't be performed using this interface.  
+## [Change pricing in the Microsoft Sentinel portal](#tab/microsoft-sentinel)
+
+> [!WARNING]
+> After you switch to the simplified pricing tier, you can't revert to a classic pricing tier by using the Microsoft Sentinel portal.
+
+Use the following steps to change the pricing tier of your workspace using the Microsoft Sentinel portal.
 
 1. From the **Settings** menu, select **Switch to new pricing**. 
 
@@ -34,7 +40,7 @@ Use the following steps to change the pricing tier of your workspace using the M
 1. Choose a selection from the **Unified pricing tiers** pull-down menu based on your typical ingestion.
 1. Select **Ok** to confirm.
     
-## [Azure Resource Manager](#tab/azure-resource-manager)
+## [Change pricing with an Azure Resource Manager template](#tab/azure-resource-manager)
 To set the pricing tier using an Azure Resource Manager template, set the following values:
 
 - Set `Microsoft.OperationsManagement/solutions` `sku` name to `Unified`.
@@ -83,7 +89,7 @@ The following sample template configures Microsoft Sentinel simplified pricing w
 }
 ```
 
-Only tenants that had Microsoft Sentinel enabled before July 2023 are able to revert back to classic pricing tiers. To make the switch back, set the `Microsoft.OperationsManagement/solutions` `sku` name to `capacityreservation` and set the `capacityReservationLevel` for both sections to the appropriate pricing tier. 
+Only tenants that had Microsoft Sentinel enabled before July 2023 are able to revert back to classic pricing tiers. To make the switch back, set the `Microsoft.OperationsManagement/solutions` `sku` name to `capacityreservation` and set the `capacityReservationLevel` for both the `Microsoft.OperationsManagement/solutions` resource and the `Microsoft.OperationalInsights/workspaces` resource to the appropriate pricing tier. 
 
 The following sample template sets Microsoft Sentinel to the classic pricing tier of pay-as-you-go and sets the Log Analytic workspace to the 100 GB/day Commitment tier.
 
@@ -129,14 +135,14 @@ The following sample template sets Microsoft Sentinel to the classic pricing tie
 
 See [Deploying the sample templates](/azure/azure-monitor/resource-manager-samples) to learn more about using Resource Manager templates.
 
-To reference how to implement this template in Terraform or Bicep start [here](/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces).
+To implement this template in Terraform or Bicep, see the [Microsoft.OperationalInsights workspaces template reference](/azure/templates/microsoft.operationalinsights/2020-08-01/workspaces).
 
 ---
 
 ## Simplified pricing tiers for dedicated clusters
 In classic pricing tiers, Microsoft Sentinel was always billed as a secondary meter at the workspace level. The meter for Microsoft Sentinel could differ from the overall meter of the workspace. 
 
-With simplified pricing tiers, the same Commitment tier and billing mode used by the cluster is set for the Microsoft Sentinel workspace. Microsoft Sentinel usage is billed at the effective per GB price of that tier meter, and all usage is counted towards the total allocation for the dedicated cluster. This allocation is either at the cluster level or proportionately at the workspace level depending on the billing mode of the cluster. For more information, see [Cost details - Dedicated cluster](/azure/azure-monitor/logs/cost-logs#dedicated-clusters).
+With simplified pricing tiers, the same Commitment tier and billing mode used by the cluster is set for the Microsoft Sentinel workspace. Microsoft Sentinel usage is billed at the effective per GB price of that tier meter, and all usage is counted towards the total allocation for the dedicated cluster. The dedicated cluster allocation is either at the cluster level or proportionately at the workspace level depending on the billing mode of the cluster. For more information, see [Cost details - Dedicated cluster](/azure/azure-monitor/logs/cost-logs#dedicated-clusters).
 
 ### Dedicated cluster billing examples
 Compare the following cluster scenarios to better understand simplified pricing when adding Microsoft Sentinel enabled workspaces to a dedicated cluster.
@@ -187,7 +193,8 @@ Though the goal of the experience is to merely simplify the pricing and cost man
 ### Is there ever a reason NOT to switch?
 It's possible your Microsoft account team negotiated a discounted price for Log Analytics or Microsoft Sentinel charges on the classic tiers. You can't tell if this is so from the Microsoft Sentinel pricing interface alone. It might be possible to calculate the expected cost vs actual charge in Microsoft Cost Management to see if there's a discount included. In such cases, we recommend contacting your Microsoft account team if you want to switch to the simplified pricing tiers or have any questions.
 
-## Learn more
+<a name="learn-more"></a>
+## Cost management resources for Microsoft Sentinel
 
 - For more tips on reducing Log Analytics data volume, see [Azure Monitor best practices - Cost management](/azure/azure-monitor/best-practices-cost).
 - Learn [how to optimize your cloud investment with Microsoft Cost Management](/azure/cost-management-billing/costs/cost-mgt-best-practices?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
