@@ -13,16 +13,20 @@ ms.collection:
   - essentials-privacy
   - essentials-security
   - essentials-compliance
-ms.date: 05/10/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 adobe-target: true
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Zero Trust with Microsoft Defender for Office 365
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+
+## Microsoft Defender for Office 365 and Zero Trust
 
 Microsoft Defender for Office 365 is a cloud-based email filtering service that helps protect your organization against advanced threats to email and collaboration tools (for example, phishing, business email compromise, and malware attacks). Defender for Office 365 also provides investigation, Threat Hunting, and remediation capabilities to help security teams efficiently identify, prioritize, investigate, and respond to threats.
 
