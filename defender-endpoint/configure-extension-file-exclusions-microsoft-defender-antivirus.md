@@ -4,11 +4,11 @@ description: Exclude files from Microsoft Defender Antivirus scans based on thei
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 03/23/2026
+ms.date: 06/16/2026
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.reviewer: thdoucet
 ms.collection:
 - m365-security
@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Configure and validate exclusions based on file extension and folder location
@@ -37,13 +38,16 @@ You can define exclusions for Microsoft Defender Antivirus that apply to [schedu
 
 ### Supported operating systems
 
+File extension and folder location exclusions described in this article are supported on the following operating systems:
+
 - Windows
 
 ## Before you begin
 
 See [Recommendations for defining exclusions](configure-exclusions-microsoft-defender-antivirus.md) before defining your exclusion lists.
 
-## Exclusion lists
+<a name="exclusion-lists"></a>
+## Types of exclusion lists for file extensions and folders
 
 To exclude certain files from Microsoft Defender Antivirus scans, modify your exclusion lists. Microsoft Defender Antivirus includes many automatic exclusions based on known operating system behaviors and typical management files. For example:
 
@@ -66,10 +70,14 @@ The following table lists some examples of exclusions based on file extension an
 
 ## Characteristics of exclusion lists
 
+Exclusion lists have the following characteristics:
+
 - Folder exclusions apply to all files and folders in that folder, unless the subfolder is a reparse point. You need to exclude reparse point subfolders separately.
 - File extensions exclusions apply to any file with that extension if a path or folder isn't also specified.
 
 ## Important notes about exclusions based on file extensions and folder locations
+
+Keep the following considerations in mind when you define exclusions by file extension or folder location:
 
 - Wildcards (for example, `*`) alter how exclusion rules are interpreted. for important information about how wildcards work, see the [Use wildcards in the file name and folder path or extension exclusion lists](#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) section in this article.
 
@@ -159,7 +167,7 @@ Use the following parameters on those cmdlets:
 
   Use the following syntax: `"Entry1","Entry2",..."EntryN"`.
 
-This example excludes any file with the `.test` file extension from Microsoft Defender Antivirus scans:
+For example, the following command adds the `.test` file extension to the exclusion list so Microsoft Defender Antivirus skips files with that extension during scans:
 
 ```PowerShell
 Add-MpPreference -ExclusionExtension ".test"
@@ -284,6 +292,10 @@ The following table lists system account environment variables and their corresp
 
 ## Review the list of exclusions
 
+> [!IMPORTANT]
+> Exclusion list changes you make with Group Policy **appear** in the lists of [Windows Security app](microsoft-defender-security-center-antivirus.md).
+> Exclusion list changes you make in the Windows Security app **don't appear** in the Group Policy lists.
+
 You can retrieve the items in the exclusion list by using one of the following methods:
 
 - [Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-intune-setup)
@@ -291,10 +303,6 @@ You can retrieve the items in the exclusion list by using one of the following m
 - [MpCmdRun](command-line-arguments-microsoft-defender-antivirus.md)
 - [PowerShell](/powershell/module/defender)
 - [Windows Security app](microsoft-defender-security-center-antivirus.md)
-
-> [!IMPORTANT]
-> Exclusion list changes you make with Group Policy **appear** in the lists of [Windows Security app](microsoft-defender-security-center-antivirus.md).
-> Exclusion list changes you make in the Windows Security app **don't appear** in the Group Policy lists.
 
 <a name='validate-the-exclusion-list-by-using-mpcmdrun'></a>
 
@@ -327,7 +335,7 @@ For example, the command `MpCmdRun.exe -CheckExclusion -Path C:\Data\Test` retur
 
 ### Retrieve exclusions using PowerShell
 
-Run the following commands in an elevated PowerShell window:
+The following command retrieves all currently configured file extension and path exclusions from Microsoft Defender Antivirus preferences and displays them by type. Run the command in an elevated PowerShell window:
 
 ```PowerShell
 $p=Get-MpPreference; @(
@@ -346,13 +354,15 @@ You can validate your exclusion lists are working by using PowerShell with the *
 
 In the following PowerShell command, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you're excluding the `.testing` extension, replace `test.txt` with `test.testing`. If you're testing a path, make sure that you run the cmdlet within that path.
 
+The following command downloads the harmless EICAR antivirus test file to verify whether your exclusion prevents Microsoft Defender Antivirus from detecting it:
+
 ```PowerShell
 Invoke-WebRequest "https://secure.eicar.org/eicar.com.txt" -OutFile "test.txt"
 ```
 
 If Microsoft Defender Antivirus reports malware, the rule isn't working. If there's no report of malware and the downloaded file exists, then the exclusion is working. You can open the file to confirm the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
 
-You can also use the following PowerShell commands, which call the .NET WebClient class to download the test file. Replace `c:\test.txt` with a file that conforms to the rule you're validating:
+Alternatively, you can use the .NET WebClient class to download the same EICAR test file if `Invoke-WebRequest` is unavailable. Replace `c:\test.txt` with a file path that conforms to the exclusion rule you're validating:
 
 ```PowerShell
 $client = new-object System.Net.WebClient
@@ -360,7 +370,7 @@ $client = new-object System.Net.WebClient
 $client.DownloadFile("http://www.eicar.org/download/eicar.com.txt","c:\test.txt")
 ```
 
-If you don't have internet access, you can create your own EICAR test file by writing the EICAR string to a new text file with the following PowerShell command:
+If you don't have internet access, you can create the EICAR test file locally without downloading it. The following PowerShell command writes the standard EICAR test string directly to a text file on disk, which you can use to test whether Microsoft Defender Antivirus detects or excludes the file:
 
 ```PowerShell
 [io.file]::WriteAllText("test.txt",'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*')
@@ -369,6 +379,8 @@ If you don't have internet access, you can create your own EICAR test file by wr
 You can also copy the string into a blank text file and try to save it with the file name or in the folder you're trying to exclude.
 
 ## See also
+
+For more information about Microsoft Defender Antivirus exclusions, see the following articles:
 
 - [Configure and validate exclusions in Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)
 - [Configure and validate exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)

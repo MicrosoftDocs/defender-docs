@@ -3,11 +3,13 @@ title: Get started with custom graphs in Microsoft Sentinel (preview)
 description: Learn how to create and manage custom graphs in Microsoft Sentinel to model attack patterns, investigate threats, and run advanced graph algorithms.
 ms.author: edbaynash
 author: EdB-MSFT
-ms.reviewer: sourinpaul, amyhari
-ms.date: 03/23/2026
+ms.reviewer: sourinpaul
+ms.date: 06/18/2026
 ms.topic: how-to 
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-graph
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security researcher, I want to create custom graphs in my tenant so that I can continuously monitor and detect systemic threats.
 ---
@@ -68,6 +70,8 @@ The following steps walk you through creating your first custom graph by using a
 
 ### Set up your notebook and connect to the data lake
 
+Use the following steps to create a notebook and connect to the Microsoft Sentinel data lake.
+
 1. In Visual Studio Code with the Microsoft Sentinel extension installed, select the **Microsoft Sentinel** icon in the left-hand menu.
 1. Select **Sign in to view graphs**
 1. A dialog box appears with the text *The extension 'Microsoft Sentinel' wants to sign in using Microsoft*. Select **Allow** to sign in.
@@ -87,7 +91,7 @@ The following steps walk you through creating your first custom graph by using a
 
 1. Run a cell to by selecting the run cell triangle icon to the left of the cell. The first time you run a cell, you might be prompted to select a kernel if you didn't already select one.
 
-     The first time you run a cell, takes about five minutes to start the Spark session.
+     The first time you run a cell, starting the Spark session takes about five minutes.
 
    :::image type="content" source="media/create-custom-graphs/run-first-cell.png" lightbox="media/create-custom-graphs/run-first-cell.png" alt-text="A screenshot showing the running of the first cell in Visual Studio Code.":::
 
@@ -248,7 +252,7 @@ The following sample creates a graph to traverse Microsoft Entra group membershi
     )
     ```
 
-1. Define your graph schema and bind to the DataFrames created in the previous step
+1. Define your graph schema and bind to the node and edge DataFrames you prepared earlier in this procedure
 
     ```python
     from sentinel_graph import GraphSpecBuilder, Graph
@@ -335,7 +339,7 @@ The following sample creates a graph to traverse Microsoft Entra group membershi
 
 You have now created a graph in the notebook.
 
-To show a visual representation of the graph, in a new cell paste and run the following code:
+To show a visual representation of the graph, in a new cell paste and run the following sample Graph Query Language (GQL) query. This query traverses nested Microsoft Entra group memberships up to eight levels deep and displays the resulting relationships:
 
 ```python
 # Query 1: Find nested group relationships nexting up to 8 levels deep
@@ -401,6 +405,43 @@ After you create a graph job, you can view and manage the graph in your tenant f
 
 1. You can now query and visualize your graph from the graph visualization in Microsoft Sentinel in the Defender portal. For more information, see [Visualize graphs in Microsoft Sentinel graph (preview)](./graph-visualization.md).
 
+
+## Update custom graphs
+
+After you update notebook graph code, run the notebook locally to validate your changes before you update a graph job.
+
+### Edit existing custom graph details
+
+Use this workflow to edit an existing graph job.
+
+1. In the Visual Studio Code Microsoft Sentinel Graph panel, select **Edit graph job** for the graph you want to update, and then go to **Graph name** > **Job details**.
+1. Update the fields you want to change:
+
+    - **Graph name** (optional). Updating the graph name creates a new graph in your tenant. The existing graph remains unchanged.
+    - **Description** (optional). Updating the description replaces the current graph description and rebuilds the graph.
+    - **Cluster configuration** (optional). Updating the cluster configuration changes the compute size and rebuilds the graph.
+    - **Job frequency** (optional). Updating the job frequency changes the recurring schedule and rebuilds the graph.
+
+:::image type="content" source="media/create-custom-graphs/edit-graph-job-details.png" lightbox="media/create-custom-graphs/edit-graph-job-details.png" alt-text="A screenshot showing the Edit graph job workflow in the Microsoft Sentinel Graph panel in Visual Studio Code.":::
+
+### Overwrite an existing custom graph
+
+Use this workflow when you want to recreate a graph and overwrite an existing graph with the same name.
+
+1. Open the updated notebook.
+1. Select **Create Scheduled Job** in the Sentinel notebook experience, then select **Create a graph job**.
+1. In the **Create graph** form, provide a graph name.
+    - If you provide a new graph name, a new graph is created in the tenant, and the existing graph remains available.
+    - If you reuse an existing graph name for tenant, the existing graph is overwritten after confirmation. Graph names are unique, duplicate graph names aren't supported.
+
+1. Verify that **Path** references your updated notebook.
+1. Update the **Description** for the graph.
+1. Select **Cluster configuration** and **Job frequency**, similar to creating a new graph.
+1. Update the **Schedule** information, if needed.
+1. Update the **Description** field again as needed.
+1. Select **Submit** to recreate the graph in your tenant.
+
+:::image type="content" source="media/create-custom-graphs/overwrite-graph-job.png" lightbox="media/create-custom-graphs/overwrite-graph-job.png" alt-text="A screenshot showing the Create graph form used to overwrite an existing custom graph in Visual Studio Code.":::
 
 ## Related articles
 

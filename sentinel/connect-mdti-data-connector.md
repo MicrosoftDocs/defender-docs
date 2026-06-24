@@ -1,5 +1,5 @@
 ---
-title: Enable the data connector for Microsoft's threat intelligence
+title: Enable the Defender Threat Intelligence data connector in Microsoft Sentinel
 titleSuffix: Microsoft Defender Threat Intelligence
 keywords: premium, TI, STIX objects, relationships, threat actor, watchlist, license
 description: Learn how to ingest Microsoft's threat intelligence into your Microsoft Sentinel workspace to generate high-fidelity alerts and incidents.
@@ -7,12 +7,13 @@ ms.author: pauloliveria
 author: poliveria  
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 8/16/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security administrator, I want to enable the data connector for Microsoft Defender Threat Intelligence so that I can ingest high fidelity threat intelligence into my Microsoft Sentinel workspace for enhanced threat monitoring and response.
@@ -29,6 +30,8 @@ For more information about the benefits of the standard and premium Defender Thr
 
 ## Prerequisites
 
+Before you install the solution or configure the data connector, make sure you meet the following requirements:
+
 - To install, update, and delete standalone content or solutions in the **Content hub**, you need the Microsoft Sentinel Contributor role at the resource group level.
 - To configure these data connectors, you must have read and write permissions to the Microsoft Sentinel workspace.
 - To access threat intelligence from the premium version of the Defender Threat Intelligence data connector, contact sales to purchase the **MDTI API Access** SKU. 
@@ -37,7 +40,7 @@ For more information on how to get a premium license and explore all the differe
 
 ## Install the threat intelligence solution in Microsoft Sentinel
 
-To import threat intelligence into Microsoft Sentinel from standard and premium Defender Threat Intelligence, follow these steps:
+To import threat intelligence into Microsoft Sentinel, follow these steps:
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Content management**, select **Content hub**.
 
@@ -51,26 +54,28 @@ For more information about how to manage the solution components, see [Discover 
 
 ## Enable the Defender Threat Intelligence data connector
 
+To enable the data connector, complete the following steps:
+
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Configuration**, select **Data connectors**.
 
    For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Configuration** > **Data connectors**.
 
-1. Find and select either the standard or premium Defender Threat Intelligence data connector. Select **Open connector page** button.
+1. Find and select the standard or premium Defender Threat Intelligence data connector, and then select **Open connector page**.
 
 1. Enable the feed by selecting **Connect**.
 
     :::image type="content" source="media/connect-mdti-data-connector/premium-connect.png" alt-text="Screenshot that shows the Defender Threat Intelligence Data connector page and the Connect button." lightbox="media/connect-mdti-data-connector/premium-connect.png"::: 
 
-1. When Defender Threat Intelligence starts populating the Microsoft Sentinel workspace, the connector status displays **Connected**.
+1. When the data starts to flow into your Microsoft Sentinel workspace, the connector status changes to **Connected**.
 
-At this point, the ingested intelligence is now available for use in the `TI map...` analytics rules. For more information, see [Use threat indicators in analytics rules](use-threat-indicators-in-analytics-rules.md). 
+After the connector status displays **Connected**, the ingested intelligence is available for use in the `TI map...` analytics rules. For more information, see [Use threat indicators in analytics rules](use-threat-indicators-in-analytics-rules.md). 
 
 Find the new intelligence in the management interface or directly in **Logs** by querying the `ThreatIntelIndicators` table. For more information, see [Work with threat intelligence](work-with-threat-indicators.md).
 
 ## Related content
 
-In this article, you learned how to connect Microsoft Sentinel to the Microsoft threat intelligence feed with the Defender Threat Intelligence data connector. To learn more about Defender Threat Intelligence, see the following articles:
+After you connect the Defender Threat Intelligence data connector, explore these resources to learn more:
 
 - Learn about [What is Defender Threat Intelligence?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
 - Get started with the [Defender Threat Intelligence portal](/defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal).
-- Use Defender Threat Intelligence in analytics [by using matching analytics to detect threats](use-matching-analytics-to-detect-threats.md).
+- [Use matching analytics to detect threats](use-matching-analytics-to-detect-threats.md)

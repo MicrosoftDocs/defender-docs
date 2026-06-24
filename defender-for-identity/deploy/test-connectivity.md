@@ -1,18 +1,19 @@
 ---
 title: Test connectivity | Microsoft Defender for Identity
 description: Learn how to test whether the server where you're installing your Microsoft Defender for Identity sensor can access the Defender for Identity cloud service.
-ms.date: 01/16/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity admin, I want to verify that the server I'm using for my sensor can connect successfully to the Defender for Identity cloud service so that I can continue on with deploying confidently.
 ms.reviewer: rlitinsky
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Test Microsoft Defender for Identity connectivity
 
 The Defender for Identity sensor requires network connectivity to the Defender for Identity service. Depending on which version of the sensor you deployed, see [Sensor v2.x prerequisites](prerequisites-sensor-version-2.md) or [Sensor v3.x prerequisites](prerequisites-sensor-version-2.md).
 
-After preparing the server that you're going to use for your Microsoft Defender for Identity sensor we recommend that you test connectivity to make sure that your server can access the Defender for Identity cloud service. Use the procedures in this article even after deploying if your sensor server is experiencing connectivity issues.
+After preparing the server that you're going to use for your Microsoft Defender for Identity sensor we recommend that you test connectivity to make sure that your server can access the Defender for Identity cloud service. Use the connectivity test procedures below even after deploying if your sensor server is experiencing connectivity issues.
 
 For more information, see [Required ports](../prerequisites.md#ports).
 
@@ -20,6 +21,8 @@ For more information, see [Required ports](../prerequisites.md#ports).
 > To get the name and other important details about your Defender for Identity workspace, see the [About page](../settings-about.md) in the [Microsoft Defender XDR](https://security.microsoft.com/) portal.
 
 ## Test connectivity using a browser
+
+Perform the following steps to test sensor connectivity from a browser:
 
 1. Open a browser. If you're using a proxy, make sure that your browser uses the same proxy settings being used by the sensor.
 
@@ -44,7 +47,7 @@ For more information, see [Required ports](../prerequisites.md#ports).
 
       :::image type="content" source="../media/configure-proxy/certificate.png" alt-text="Screenshot of the required certificate path.":::
 
-### Test service connectivity using PowerShell
+## Test service connectivity using PowerShell
 
 **Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
 
@@ -69,7 +72,8 @@ Sign into your server and run one of the following commands:
 
 For more information, see the [MDI PowerShell documentation](/powershell/module/defenderforidentity/test-mdisensorapiconnection).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 
 > [!div class="step-by-step"]

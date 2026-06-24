@@ -25,6 +25,22 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 ## Engine and platform updates
 
+### February-2026 (Platform: 4.18.26020.6 | Engine: 1.1.26020.3)
+
+- Security intelligence update version: **1.447.2.0**
+- Release date:  **March 25, 2026 (Engine) / March 25, 2026 (Platform)**
+- Platform: **4.18.26020.6**
+- Engine: **1.1.26020.3**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- **Network protection**: Improved the network protection feature to promptly release closed connections and reduce unnecessary memory usage.
+- **PowerShell**: Fixed an issue where the `Get-MpComputerStatus` PowerShell cmdlet could fail after updates due to a configuration mismatch.
+- **Performance**: Improved performance for Network Response Intelligence (NRI) by reducing CPU usage during high-volume asynchronous message processing.
+- **AMSI**: Added support for AMSI path exclusions for Exchange Server so configured path exclusions are now correctly evaluated during AMSI scanning for Exchange workloads.
+- **Device control**: Improved policy refresh behavior for device control by updating default policy and Azure AD refresh intervals to reduce retry frequency.
+
 ### January-2026 (Platform: 4.18.26010.5 | Engine: 1.1.26010.1)
 
 - Security intelligence update version: **1.445.6.0**

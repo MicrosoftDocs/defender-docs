@@ -1,7 +1,7 @@
 ---
 title: Before you begin using the Microsoft Defender Experts for Hunting service
 ms.reviewer:
-description: To enable us to get started with the defender experts managed service, we require the following prerequisites
+description: Review the prerequisites for Microsoft Defender Experts for Hunting, including required licensing, onboarding, and setup steps before you begin using the service.
 ms.service: defender-experts-for-hunting
 ms.author: pauloliveria
 author: poliveria
@@ -12,10 +12,12 @@ ms.collection:
   - tier1
   - essentials-compliance
 ms.topic: how-to
-ms.custom: 
+ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ean
-ms.date: 09/18/2025
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Before you begin using Defender Experts for Hunting
@@ -105,7 +107,7 @@ The following sections enumerate additional information about the service's data
 
 ### Data collection, usage, and retention
 
-All data used for hunting from existing Defender services will continue to reside in the customer's original Microsoft Defender XDR service storage location. [Learn more](/microsoft-365/enterprise/o365-data-locations)
+All data used for hunting from existing Defender services will continue to reside in the customer's original Microsoft Defender XDR service storage location. [Learn more about Microsoft 365 data locations](/microsoft-365/enterprise/o365-data-locations)
 
 Defender Experts for Hunting operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the EU region for customers whose Defender XDR data is in scope of European Union data boundary and in the US region for other customers, for the length of the service, irrespective of the Microsoft Defender XDR service storage location. Data generated for the reporting dashboard is stored in customer's Microsoft Defender XDR service storage location. Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
 
@@ -135,6 +137,8 @@ You can apply for the Defender Experts for Hunting by performing the following s
 3. Select **Submit**. Someone from our sales team will reach out within five business days. 
 
 ### Next step
+
+Continue to the following article to start using Defender Experts for Hunting:
 
 - [Start using Defender Experts for Hunting](onboarding-defender-experts-for-hunting.md)
 

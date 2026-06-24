@@ -6,12 +6,13 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 06/18/2025
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to use threat intelligence managed by Microsoft Sentinel so that I can detect and respond to security threats more effectively.
 ---
 
@@ -31,15 +32,15 @@ Accelerate threat detection and remediation with streamlined creation and manage
 
 ## Access the management interface
 
-Reference one of the following tabs, depending on where you want to work with threat intelligence. Even though the management interface is accessed differently depending which portal you use, the creation and management tasks have the same steps once you get there. 
+Access the threat intelligence management interface from either the Defender portal or the Azure portal. Even though the navigation path differs between portals, the creation and management tasks have the same steps once you get there.
 
-### [Defender portal](#tab/defender-portal)
+### [Access intel management in the Defender portal](#tab/defender-portal)
 
 In the Defender portal, navigate to **Threat intelligence** > **Intel management**.
 
 :::image type="content" source="media/work-with-threat-indicators/intel-management-navigation.png" alt-text="Screenshot showing the intel management menu item in the Defender portal.":::
 
-### [Azure portal](#tab/azure-portal)
+### [Access threat intelligence in the Azure portal](#tab/azure-portal)
 
 In the Azure portal, navigate to **Threat management** > **Threat intelligence**.
 
@@ -58,6 +59,8 @@ For more information on supported STIX objects, see [Threat intelligence in Micr
 
 ### Create a new STIX object
 
+To create a new STIX object in the management interface, complete the following steps.
+
 1. Select **Add new** > **TI object**.
 
     :::image type="content" source="media/work-with-threat-indicators/threat-intel-add-new-indicator.png" alt-text="Screenshot that shows adding a new threat indicator." lightbox="media/work-with-threat-indicators/threat-intel-add-new-indicator.png":::
@@ -65,7 +68,7 @@ For more information on supported STIX objects, see [Threat intelligence in Micr
 1. Choose the **Object type**, then fill in the form on the **New TI object** page. Required fields are marked with a red asterisk (*).
 1. Consider designating a sensitivity value, or **Traffic light protocol** (TLP) rating to the TI object. For more information on what the values represent, see [Curate threat intelligence](understand-threat-intelligence.md#curate-threat-intelligence).
 1. If you know how this object relates to another threat intelligence object, indicate that connection with the **Relationship type** and the **Target reference**.
-1. Select **Add** for an individual object, or **Add and duplicate** if you want to create more items with the same metadata. The following image shows the common section of each STIX object's metadata that is duplicated. 
+1. Select **Add** for an individual object, or **Add and duplicate** if you want to create more items with the same metadata. When you select **Add and duplicate**, the common metadata section of each STIX object is copied to the new object.
 
 :::image type="content" source="media/work-with-threat-indicators/common-metadata-stix-object-reduced.png" alt-text="Screenshot showing new STIX object creation and the common metadata available to all objects.":::
 
@@ -75,7 +78,7 @@ Optimize TI from your sources with ingestion rules. Curate existing TI with the 
 
 ### Optimize threat intelligence feeds with ingestion rules
 
-Reduce noise from your TI feeds, extend the validity of high value indicators, and add meaningful tags to incoming objects. These are just some of the use cases for ingestion rules. Here are the steps for extending the validity date on high value indicators.
+Reduce noise from your TI feeds, extend the validity of high value indicators, and add meaningful tags to incoming objects. These are just some of the use cases for ingestion rules. Here are the steps for extending the `Valid until` date on high value indicators.
 
 1. Select **Ingestion rules** to open a whole new page to view existing rules and construct new rule logic.
 
@@ -118,7 +121,7 @@ Connect threat intelligence objects with the relationship builder. There's a max
    | **Indicates** | `Indicator` Indicates `Attack pattern` or `Threat actor` |
    | **Impersonates** | `Threat actor` Impersonates `Identity` |
 
-1. Use the following image as an example of how to use the relationship builder. This example demonstrates how to connect between a threat actor and an attack pattern, indicator, and identity using the relationship builder in the Defender portal.
+1. For example, you can connect a threat actor to an attack pattern, indicator, and identity using the relationship builder in the Defender portal.
 
    :::image type="content" source="media/work-with-threat-indicators/relationship-example-defender-portal.png" alt-text="Screenshot showing the relationship builder." lightbox="media/work-with-threat-indicators/relationship-example-defender-portal.png":::
 
@@ -136,15 +139,15 @@ Use the management interface to sort, filter, and search your threat intelligenc
 
 1. Select the object you want to see more information about.
 
-In the following image, multiple sources were used to search by placing them in an `OR` group, while multiple conditions were grouped with the `AND` operator.
+For example, you can search by multiple sources by placing them in an `OR` group, while grouping multiple conditions with the `AND` operator.
 
 :::image type="content" source="media/work-with-threat-indicators/advanced-search.png" alt-text="Screenshot shows an OR operator combined with multiple AND conditions to search threat intelligence." lightbox="media/work-with-threat-indicators/advanced-search.png":::
 
 Microsoft Sentinel only displays the most current version of your threat intel in this view. For more information on how objects are updated, see [Threat intelligence lifecycle](understand-threat-intelligence.md#threat-intelligence-lifecycle).
 
-IP and domain name indicators are enriched with extra `GeoLocation` and `WhoIs` data so you can provide more context for any investigations where indicator is found.
+IP and domain name indicators are enriched with extra `GeoLocation` and `WhoIs` data so you can provide more context for any investigations where the indicator is found.
 
-Here's an example.
+Here's an example of an indicator enriched with `GeoLocation` and `WhoIs` data.
 
 :::image type="content" source="media/work-with-threat-indicators/geolocation-whois-unified.png" alt-text="Screenshot that shows the Threat intelligence page with an indicator showing GeoLocation and WhoIs data." lightbox="media/work-with-threat-indicators/geolocation-whois-unified.png":::
 
@@ -166,7 +169,7 @@ For more information on how threat intel is updated, see [View your threat intel
 
 ### Find and view threat intelligence with queries
 
-This procedure describes how to view your threat intelligence with queries, regardless of the source feed or method you used to ingest them.
+View your threat intelligence with queries, regardless of the source feed or method you used to ingest them.
 
 Threat indicators are stored in the Microsoft Sentinel `ThreatIntelIndicators` table. This table is the basis for threat intelligence queries performed by other Microsoft Sentinel features, such as **Analytics**, **Hunting**, and **Workbooks**.
 
@@ -184,7 +187,7 @@ Threat indicators are stored in the Microsoft Sentinel `ThreatIntelIndicators` t
 
 1. Select the **Preview data** icon (the eye) next to the table name. Select **See in query editor** to run a query that shows records from this table.
 
-Your results should look similar to the sample threat indicator shown here.
+Your results should look similar to the sample `ThreatIntelligenceIndicator` table results with expanded details.
 
 :::image type="content" source="media/work-with-threat-indicators/table-results.png" alt-text="Screenshot that shows sample ThreatIntelIndicators table results with the details expanded." lightbox="media/work-with-threat-indicators/table-results.png":::
 
@@ -196,7 +199,7 @@ For more information, see [View your threat intelligence](understand-threat-inte
 
 Use a purpose-built Microsoft Sentinel workbook to visualize key information about your threat intelligence in Microsoft Sentinel, and customize the workbook according to your business needs.
 
-Here's how to find the threat intelligence workbook provided in Microsoft Sentinel, and an example of how to make edits to the workbook to customize it.
+To find the threat intelligence workbook in Microsoft Sentinel and customize it, complete the following steps.
 
  1. From the [Azure portal](https://portal.azure.com/), go to **Microsoft Sentinel**.
 
@@ -223,7 +226,7 @@ Here's how to find the threat intelligence workbook provided in Microsoft Sentin
     | summarize count() by ThreatType
     ```
 
-    See more information on the following items used in the preceding example, in the Kusto documentation:
+    For more information about the `summarize` operator and the `count()` aggregation function used in this query, see the Kusto documentation:
     - [***summarize*** operator](/kusto/query/summarize-operator?view=microsoft-sentinel&preserve-view=true)
     - [***count()*** aggregation function](/kusto/query/count-aggregation-function?view=microsoft-sentinel&preserve-view=true)
 
@@ -280,7 +283,7 @@ To export threat intelligence:
 
 For more information, see the following articles:
 
-- [Threat intelligence in Microsoft Sentinel](understand-threat-intelligence.md).
+- [Threat intelligence in Microsoft Sentinel](understand-threat-intelligence.md)
 - Connect Microsoft Sentinel to [STIX/TAXII threat intelligence feeds](./connect-threat-intelligence-taxii.md).
 - See which [TIPs, TAXII feeds, and enrichments](threat-intelligence-integration.md) can be readily integrated with Microsoft Sentinel.
 

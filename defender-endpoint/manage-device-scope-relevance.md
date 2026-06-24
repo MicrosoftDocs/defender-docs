@@ -13,16 +13,17 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 02/25/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Manage device scope and relevance with tags and exclusions
 
-Not all devices discovered in your network require the same level of security attention. Some devices appear briefly on the network (guests, test devices), while others are permanently out of scope for vulnerability management (isolated labs, decommissioned systems). Managing device scope with transient device tagging and device exclusions keeps your security team focused on relevant devices, ensures accurate exposure and secure scores, and produces cleaner reports that reflect your true production environment.
+Not all devices discovered in your network require the same level of security attention. Some devices appear briefly on the network (guests, test devices), while others are permanently out of scope for vulnerability management (isolated labs, decommissioned systems). This article explains how to use transient device tagging and device exclusions to manage which devices are in scope for vulnerability management. Managing device scope with these tools keeps your security team focused on relevant devices, ensures accurate exposure and secure scores, and produces cleaner reports that reflect your true production environment.
 
 ## Use tags or exclusions
 
@@ -32,10 +33,10 @@ Defender for Endpoint provides two complementary mechanisms for managing device 
 |-----------|----------|--------------|--------|
 | Devices appear and disappear frequently (guests, test VMs, short-lived containers) | **Transient device tagging** (automatic) | An internal algorithm detects intermittent network patterns and tags matching devices. Servers, network devices, printers, industrial and smart-facility devices are never tagged as transient. | Transient devices are filtered out of the default inventory view but remain visible if you change the filter. Exposure score, secure score, vulnerability reports, and advanced hunting still include these devices. |
 | Permanent lab or sandbox environment | **Device exclusion** (manual) | You exclude devices individually or in bulk with a documented justification. | Excluded devices don't appear in vulnerability management pages or reports, and don't contribute to exposure or secure scores. They remain in the device inventory but are marked as excluded. |
-| Devices scheduled for decommissioning | **Device exclusion** (manual) | Exclude with a justification and note about the planned retirement date. | Same as above. Historical records remain in the inventory. |
+| Devices scheduled for decommissioning | **Device exclusion** (manual) | Exclude with a justification and note about the planned retirement date. | Excluded devices don't appear in vulnerability management pages or reports, and don't contribute to exposure or secure scores. Historical records remain in the inventory. |
 | Duplicate entries after reimaging | **Device exclusion** (manual) | Exclude the obsolete entries with a "Duplicate device" justification; keep the active device in scope. | Cleans up inventory and ensures accurate device counts. |
-| Devices offline for extended periods | Check if already transient-tagged; if not, consider exclusion | Transient tagging might already handle this. Exclude manually only if the device won't return. | Depends on chosen approach. |
-| Active devices you want to ignore temporarily | **Device filters or custom tags** | Use inventory filters or [device tags](machine-tags.md) to create targeted views. | Full visibility is maintained. Never exclude active devices—that creates blind spots. |
+| Devices offline for extended periods | Check if already transient-tagged; if not, consider exclusion | Transient tagging might already handle this scenario. Exclude manually only if the device won't return. | Depends on chosen approach. |
+| Active devices you want to ignore temporarily | **Device filters or custom tags** | Use inventory filters or [create and manage device tags](machine-tags.md) to create targeted views. | Full visibility is maintained. Never exclude active devices—that creates blind spots. |
 | Devices managed by a different team | **Device filters or custom tags** | Use device tags and filters to scope views per team. | Full visibility is maintained across the organization. |
 
 > [!IMPORTANT]
@@ -47,6 +48,8 @@ Transient device tagging is automatic and can't be disabled. You control visibil
 
 ### View transient devices in the inventory
 
+To view transient devices in the device inventory, follow these steps:
+
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Assets** > **Devices**.
 1. Select the **Filter** icon.
 1. In the **Transient device** filter, select **Yes** to view only transient devices, or select **No** to exclude them from the list.
@@ -54,6 +57,8 @@ Transient device tagging is automatic and can't be disabled. You control visibil
 You can also add the **Transient device** column to your inventory view to see the transient status alongside other device details.
 
 ### How transient tagging works
+
+The following points explain how transient tagging behaves in Defender for Endpoint:
 
 - **Automatic detection**: An internal algorithm identifies transient devices based on network appearance patterns.
 - **Excluded device types**: Servers, network devices, printers, industrial devices, surveillance equipment, smart facility devices, and smart appliances are never tagged as transient.
@@ -68,6 +73,8 @@ Device exclusion lets you manually remove specific devices from vulnerability ma
 > Excluded devices remain connected to the network and can still present security risks. Device exclusion only affects vulnerability management visibility—it doesn't prevent attacks or reduce actual risk. If you attempt to exclude an active device, Defender for Endpoint displays a warning and asks for confirmation.
 
 ### Exclude a single device
+
+To exclude a single device from vulnerability management visibility, follow these steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Assets** > **Devices**.
 1. Select the device you want to exclude.
@@ -85,6 +92,8 @@ Device exclusion lets you manually remove specific devices from vulnerability ma
 
 ### Exclude multiple devices
 
+To exclude multiple devices at once, complete the following steps:
+
 1. In the **Device inventory**, select multiple devices using the checkboxes.
 1. From the action bar, select **Exclude**.
 1. Choose a justification and add a note.
@@ -98,6 +107,8 @@ If you select devices with mixed exclusion statuses, the dialog shows how many a
 > It can take up to 10 hours for devices to be fully excluded from vulnerability management views and data.
 
 ### View and manage excluded devices
+
+To view excluded devices in the inventory, use the following steps:
 
 1. In the **Device inventory**, select the **Filter** icon.
 1. Use the **Exclusion state** filter to view:

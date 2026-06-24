@@ -1,10 +1,11 @@
 ---
 title: Configure Windows event forwarding  | Microsoft Defender for Identity
 description: Learn about Microsoft Defender for Identity's support for configuring Windows event forwarding.
-ms.date: 08/10/2023
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Configure Windows event forwarding to your Defender for Identity standalone sensor
@@ -24,7 +25,7 @@ Before you start:
 
 ## Step 1: Add the network service account to the domain
 
-This procedure describes how to add the network service account to the **Event Log Readers Group** domain. For this scenario, assume that the Defender for Identity standalone sensor is a member of the domain.
+This procedure describes how to add the Network Service account to the **Event Log Readers** group in the domain. For this scenario, assume that the Defender for Identity standalone sensor is a member of the domain.
 
 1. In Active Directory's Users and Computers, go to the **Built-in** folder and double-click **Event Log Readers**.
 
@@ -40,7 +41,7 @@ For more information, see [Active Directory accounts](/windows-server/identity/a
 
 ## Step 2: Create a policy that sets the Configure target setting
 
-This procedure describes how to create a policy on the domain controllers to set the **Configure target** Subscription Manager setting
+This procedure describes how to create a policy on the domain controllers to set the **Configure target Subscription Manager** setting, which is the Group Policy setting that tells domain controllers where to forward events.
 
 > [!TIP]
 > You can create a group policy for these settings and apply the group policy to each domain controller monitored by the Defender for Identity standalone sensor. The following steps modify the local policy of the domain controller.
@@ -59,7 +60,7 @@ This procedure describes how to create a policy on the domain controllers to set
 
 1. Expand **Computer Configuration > Administrative Templates > Windows Components > Event Forwarding**. For example:
 
-    ![Screenshot of the Local policy group editor dialog.](../media/wef-1-local-group-policy-editor.png)
+    ![Screenshot of Local Group Policy Editor expanded to Computer Configuration, Administrative Templates, Windows Components, Event Forwarding.](../media/wef-1-local-group-policy-editor.png)
 
 1. Double-click **Configure target Subscription Manager** and then:
 
@@ -71,7 +72,7 @@ This procedure describes how to create a policy on the domain controllers to set
         
         For example, using **Server=http://atpsensor.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10**:
 
-        ![Screenshot of the Configure target subscription dialog.](../media/wef-2-config-target-sub-manager.png)
+        ![Screenshot of the Configure target Subscription Manager dialog with Enabled selected and the server URL entered in the SubscriptionManagers field.](../media/wef-2-config-target-sub-manager.png)
 
 1. Select **OK**.
 
@@ -113,9 +114,9 @@ This procedure describes how to create a subscription for use with Defender for 
 
     1. In the **Includes/Excludes Event ID** field type the event number and select **OK**. For example, enter **4776**:
     
-        ![Screenshot of the Query  dialog.](../media/wef-4-query-filter.png)
+        ![Screenshot of the Query filter dialog with the Security log selected and event ID 4776 entered in the Includes/Excludes Event ID field.](../media/wef-4-query-filter.png)
 
-    1. Return to the command window opened in the first step. Run the following commands, replacing *SubscriptionName* with the name you created for the subscription.
+    1. Return to the elevated command prompt where you ran `wecutil qc`. Run the following commands, replacing *SubscriptionName* with the name you created for the subscription.
 
         ```cmd
         wecutil ss "SubscriptionName" /cm:"Custom"

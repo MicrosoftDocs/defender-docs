@@ -16,14 +16,12 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 11/27/2025
+ms.date: 06/14/2026
 ---
 
 # DeviceTvmSecureConfigurationAssessment
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
 
 Each row in the `DeviceTvmSecureConfigurationAssessment` table contains an assessment event for a specific security configuration from [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt). Use this reference to check the latest assessment results and determine whether devices are compliant.
 
@@ -32,6 +30,8 @@ You can join this table with the [DeviceTvmSecureConfigurationAssessmentKB](adva
 This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Endpoint in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](advanced-hunting-schema-tables.md).
+
+[!INCLUDE [TVM Sentinel schema visibility note](../includes/tvm-sentinel-schema-visibility-note.md)]
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|

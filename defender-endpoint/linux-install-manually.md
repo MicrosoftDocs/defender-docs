@@ -514,7 +514,7 @@ Download the onboarding package from the [Microsoft Defender portal](https://sec
       
 1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-   1. Verify that the onboarded Linux server appears in Microsoft Defender XDR. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
+   1. Verify that the onboarded Linux server appears in the Defender portal. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
       
    1. Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server, and then run the following command: `./mde_linux_edr_diy.sh`
    

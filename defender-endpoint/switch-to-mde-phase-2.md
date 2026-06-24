@@ -6,7 +6,7 @@ ms.subservice: onboard
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 05/08/2025
+ms.date: 06/17/2026
 ms.collection:
   - m365-security
   - m365solution-migratetomdatp
@@ -15,16 +15,17 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: how-to
-ms.custom: migrationguides
+ms.custom: migrationguides, msecd-doc-authoring-1014
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Migrate to Microsoft Defender for Endpoint - Phase 2: Setup
 
-|[![Phase 1: Prepare.](media/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Phase 1: Prepare](switch-to-mde-phase-1.md)|![Phase 2: Set up.](media/phase-diagrams/setup.png#lightbox)<br/>Phase 2: Set up|[![Phase 3: Onboard3.](media/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Phase 3: Onboard](switch-to-mde-phase-3.md)|
+|[![Phase 1: Prepare your environment for migration to Defender for Endpoint.](media/phase-diagrams/prepare.png#lightbox)](switch-to-mde-phase-1.md)<br/>[Phase 1: Prepare](switch-to-mde-phase-1.md)|![Phase 2: Set up your Defender for Endpoint environment.](media/phase-diagrams/setup.png#lightbox)<br/>Phase 2: Set up|[![Phase 3: Onboard devices to Microsoft Defender for Endpoint.](media/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Phase 3: Onboard](switch-to-mde-phase-3.md)|
 |---|---|---|
 ||*You're here!*||
 
@@ -53,6 +54,8 @@ As you're making the switch to Defender for Endpoint, you might need to take cer
 
 ### Manually set Microsoft Defender Antivirus to passive mode on Windows Server
 
+To set Microsoft Defender Antivirus to passive mode on Windows Server, complete the following steps.
+
 > [!TIP]
 > You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2012 R2 and 2016. For more information, see [Onboard Windows Server 2012 R2 and Windows Server 2016 to Microsoft Defender for Endpoint](onboard-server.md).
 
@@ -69,7 +72,7 @@ As you're making the switch to Defender for Endpoint, you might need to take cer
 
 ## Step 2: Add Microsoft Defender for Endpoint to the exclusion list for your existing solution
 
-This step of the setup process involves adding Defender for Endpoint to the exclusion list for your existing endpoint protection solution and any other security products your organization is using. Make sure to refer to your solution provider's documentation to add exclusions.
+In the exclusion-list step, you add Defender for Endpoint to the exclusion list for your existing endpoint protection solution and any other security products your organization is using. Make sure to refer to your solution provider's documentation to add exclusions.
 
 [!INCLUDE [Microsoft Defender for Endpoint processes](includes/streamlined-connectivity-processes.md)]
 
@@ -78,12 +81,12 @@ This step of the setup process involves adding Defender for Endpoint to the excl
 
 ## Step 3: Configure Defender for Endpoint
 
-This article describes how to configure your Defender for Endpoint capabilities before devices are onboarded.
+Configure your Defender for Endpoint capabilities before devices are onboarded.
 
 - If you have Defender for Endpoint Plan 1, complete steps 1-5 in the following procedure.
 - If you have Defender for Endpoint Plan 2, complete steps 1-7 in the following procedure.
 
-1. Make sure Defender for Endpoint is provisioned. As a Security Administrator, go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in. Then, in the navigation pane, select **Assets** > **Devices**.
+1. Make sure Defender for Endpoint is provisioned. As a Security Administrator, go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in. Then, in the navigation pane, select **Assets** > **Devices**.
 
    The following table shows what your screen might look like and what it means.
 
@@ -92,7 +95,7 @@ This article describes how to configure your Defender for Endpoint capabilities 
    |:::image type="content" source="media/mde-hangon-provisioning.png" alt-text="Screenshot showing message that says hang on because MDE isn't provisioned yet." lightbox="media/mde-hangon-provisioning.png":::|Defender for Endpoint isn't finished provisioning yet. You might have to wait a little while for the process to finish.|
    |:::image type="content" source="media/device-inventory-empty.png" alt-text="Screenshot showing device inventory page with no device onboarded yet." lightbox="media/device-inventory-empty.png":::|Defender for Endpoint is provisioned. In this case, proceed to the next step.|
 
-1. Turn on [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). We recommend turning tamper protection on for your whole organization. You can do this task in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
+1. Turn on [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md). We recommend turning tamper protection on for your whole organization. You can do this task in the [Microsoft Defender portal](https://security.microsoft.com).
 
    1. In the Microsoft Defender portal, choose **Settings** > **Endpoints**.
 
@@ -100,18 +103,18 @@ This article describes how to configure your Defender for Endpoint capabilities 
 
    1. Select **Save**.
 
-   [Learn more about tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md).
+   For more information, see [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md).
 
 1. If you're using either [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) or [Microsoft Configuration Manager](/intune/configmgr/core/understand/introduction) to onboard devices and configure device policies, set up integration with Defender for Endpoint by following these steps: <br/>
 
-    1. In the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), go to **Endpoint security**.
+    1. In the [Microsoft Intune admin center](https://intune.microsoft.com), go to **Endpoint security**.
 
     1. Under **Setup**, choose **Microsoft Defender for Endpoint**.
 
     1. Under **Endpoint Security Profile Settings**, set the toggle for **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
     1. Near the top of the screen, select **Save**.
 
-    1. In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), choose **Settings** > **Endpoints**.
+    1. In the [Microsoft Defender portal](https://security.microsoft.com), choose **Settings** > **Endpoints**.
 
     1. Scroll down to **Configuration management**, and select **Enforcement scope**.
 
@@ -124,9 +127,9 @@ This article describes how to configure your Defender for Endpoint capabilities 
 
    |Standard protection rules|Configuration methods|
    |---|---|
-   |[Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem) <br/><br/>[Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)<br/><br/>[Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)|[Intune](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-microsoft-intune) (Device configuration profiles or Endpoint Security policies) <br/><br/>[Mobile Device Management (MDM)](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp) (Use the [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductionrules) configuration service provider (CSP) to individually enable and set the mode for each rule.)<br/><br/>[Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy) or [PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell) (only if you're not using Intune, Configuration Manager, or another enterprise-level management platform)|
+   |[Block credential stealing from the Windows local security authority subsystem](attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem) <br/><br/>[Block abuse of exploited vulnerable signed drivers (Device)](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)<br/><br/>[Block persistence through WMI event subscription](attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)|[Intune](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-microsoft-intune) (Device configuration profiles or Endpoint Security policies) <br/><br/>[Mobile Device Management (MDM)](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-any-mdm-solution-using-the-policy-csp) (Use the [Defender/AttackSurfaceReductionRules policy CSP](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductionrules) configuration service provider (CSP) to individually enable and set the mode for each rule.)<br/><br/>[Group Policy](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy) or [PowerShell](attack-surface-reduction-rules-configure.md#configure-asr-rules-in-powershell) (only if you're not using Intune, Configuration Manager, or another enterprise-level management platform)|
 
-   [Learn more about attack surface reduction capabilities](attack-surface-reduction-overview.md).
+   For more information, see [Attack surface reduction capabilities](attack-surface-reduction-overview.md).
 
 1. Configure your [next-generation protection capabilities](next-generation-protection.md).
 
@@ -134,20 +137,20 @@ This article describes how to configure your Defender for Endpoint capabilities 
    |---|---|
    |[Intune](/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager)|1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** \> **Configuration profiles**, and then select the profile type you want to configure. If you haven't yet created a **Device restrictions** profile type, or if you want to create a new one, see [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure).<br/><br/>2. Select **Properties**, and then select **Configuration settings: Edit**<br/><br/>3. Expand **Microsoft Defender Antivirus**.<br/><br/>4. Enable **Cloud-delivered protection**.<br/><br/>5. In the **Prompt users before sample submission** dropdown, select **Send all samples automatically**.<br/><br/>6. In the **Detect potentially unwanted applications** dropdown, select **Enable** or **Audit**.<br/><br/>7. Select **Review + save**, and then choose **Save**. <br/><br/> **TIP**: For more information about Intune device profiles, including how to create and configure their settings, see [What are Microsoft Intune device profiles?](/intune/intune-service/configuration/device-profiles).|
    |[Configuration Manager](/intune/configmgr)|See [Create and deploy antimalware policies for Endpoint Protection in Configuration Manager](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies). <br/><br/> When you create and configure your antimalware policies, make sure to review the [real-time protection settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#real-time-protection-settings) and [enable block at first sight](configure-block-at-first-sight-microsoft-defender-antivirus.md).
-   |[Advanced Group Policy Management](/microsoft-desktop-optimization-pack/agpm/) <br/> or <br/> [Group Policy Management Console](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus)|1. Go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus**.<br/><br/>2. Look for a policy called **Turn off Microsoft Defender Antivirus**.<br/><br/>3. Choose **Edit policy setting**, and make sure that policy is disabled. This action enables Microsoft Defender Antivirus. (You might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus* in some versions of Windows.)|
+   |[Advanced Group Policy Management](/microsoft-desktop-optimization-pack/agpm/) <br/> or <br/> [Group Policy Management Console](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus)|1. Go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus**.<br/><br/>2. Look for a policy called **Turn off Microsoft Defender Antivirus**.<br/><br/>3. Choose **Edit policy setting**, and make sure that policy is disabled. Disabling that policy enables Microsoft Defender Antivirus. (You might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus* in some versions of Windows.)|
    |Control Panel in Windows|Follow the guidance here: [Company Portal device setting requirements for Windows](/intune/intune-service/user-help/update-device-settings-windows). (You might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus* in some versions of Windows.)|
 
    *If you have Defender for Endpoint Plan 1, your initial setup and configuration is complete. If you have Defender for Endpoint Plan 2, continue through steps 6-7.*
 
-1. Configure your endpoint detection and response (EDR) policies in the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)). To get help with this task, see [Create EDR policies](/intune/intune-service/protect/endpoint-security-edr-policy#create-edr-policies).
+1. Configure your endpoint detection and response (EDR) policies in the [Intune admin center](https://intune.microsoft.com). To get help with this task, see [Create EDR policies](/intune/intune-service/protect/endpoint-security-edr-policy#create-edr-policies).
 
-1. Configure your automated investigation and remediation capabilities in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). To get help with this task, see [Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint](configure-automated-investigations-remediation.md).
+1. Configure your automated investigation and remediation capabilities in the [Microsoft Defender portal](https://security.microsoft.com). To get help with this task, see [Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint](configure-automated-investigations-remediation.md).
 
    *At this point, initial setup and configuration of Defender for Endpoint Plan 2 is complete.*
 
 ## Step 4: Add your existing solution to the exclusion list for Microsoft Defender Antivirus
 
-During this step of the setup process, you add your existing solution to the list of exclusions for Microsoft Defender Antivirus. You can choose from several methods to add your exclusions to Microsoft Defender Antivirus, as listed in the following table:
+When configuring Microsoft Defender Antivirus exclusions, you add your existing solution to the list of exclusions for Microsoft Defender Antivirus. You can choose from several methods to add your exclusions to Microsoft Defender Antivirus, as listed in the following table:
 
 |Method|What to do|
 |---|---|
@@ -177,11 +180,12 @@ Device groups, device collections, and organizational units enable your security
 
 |Collection type|What to do|
 |---|---|
-|[Device groups](machine-groups.md) (formerly called *machine groups*) enable your security operations team to configure security capabilities, such as automated investigation and remediation. <br/><br/> Device groups are also useful for assigning access to those devices so that your security operations team can take remediation actions if needed. <br/><br/> Device groups are created while the attack was detected and stopped, alerts, such as an "initial access alert," were triggered and appeared in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender).|1. Go to the Microsoft Defender portal (<https://security.microsoft.com>).<br/><br/>2. In the navigation pane on the left, choose **Settings** \> **Endpoints** \> **Permissions** \> **Device groups**.<br/><br/>3. Choose **+ Add device group**.<br/><br/>4. Specify a name and description for the device group.<br/><br/>5. In the **Automation level** list, select an option. (We recommend **Full - remediate threats automatically**.) To learn more about the various automation levels, see [How threats are remediated](automated-investigations.md#how-threats-are-remediated).<br/><br/>6. Specify conditions for a matching rule to determine which devices belong to the device group. For example, you can choose a domain, OS versions, or even use [device tags](machine-tags.md).<br/><br/>7. On the **User access** tab, specify roles that should have access to the devices that are included in the device group.<br/><br/>8. Choose **Done**.|
+|[Device groups](machine-groups.md) (formerly called *machine groups*) enable your security operations team to configure security capabilities, such as automated investigation and remediation. <br/><br/> Device groups are also useful for assigning access to those devices so that your security operations team can take remediation actions if needed. <br/><br/> Device groups are created while the attack was detected and stopped, alerts, such as an "initial access alert," were triggered and appeared in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender).|1. Go to the [Microsoft Defender portal](https://security.microsoft.com).<br/><br/>2. In the navigation pane on the left, choose **Settings** \> **Endpoints** \> **Permissions** \> **Device groups**.<br/><br/>3. Choose **+ Add device group**.<br/><br/>4. Specify a name and description for the device group.<br/><br/>5. In the **Automation level** list, select an option. (We recommend **Full - remediate threats automatically**.) To learn more about the various automation levels, see [How threats are remediated](automated-investigations.md#how-threats-are-remediated).<br/><br/>6. Specify conditions for a matching rule to determine which devices belong to the device group. For example, you can choose a domain, OS versions, or even use [device tags](machine-tags.md).<br/><br/>7. On the **User access** tab, specify roles that should have access to the devices that are included in the device group.<br/><br/>8. Choose **Done**.|
 |[Device collections](/intune/configmgr/core/clients/manage/collections/introduction-to-collections) enable your security operations team to manage applications, deploy compliance settings, or install software updates on the devices in your organization. <br/><br/> Device collections are created by using [Configuration Manager](/intune/configmgr/).|Follow the steps in [Create a collection](/intune/configmgr/core/clients/manage/collections/create-collections#bkmk_create).|
 |[Organizational units](/azure/active-directory-domain-services/create-ou) enable you to logically group objects such as user accounts, service accounts, or computer accounts. <br/><br/> You can then assign administrators to specific organizational units, and apply group policy to enforce targeted configuration settings. <br/><br/> Organizational units are defined in [Microsoft Entra Domain Services](/azure/active-directory-domain-services).|Follow the steps in [Create an Organizational Unit in a Microsoft Entra Domain Services managed domain](/azure/active-directory-domain-services/create-ou).|
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 **Congratulations**! You've completed the Setup phase of [migrating to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)!
 

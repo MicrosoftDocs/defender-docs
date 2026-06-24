@@ -1,13 +1,14 @@
 ---
-title: Protect important folders from ransomware from encrypting your files with controlled folder access
+title: Protect important folders from ransomware with controlled folder access
 description: Files in default folders can be protected from changes through malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/20/2025
+ms.date: 06/17/2026
 author: paulinbar
 ms.author: painbar
 ms.reviewer: sugamar 
 ms.custom:
+  - msecd-doc-authoring-1014
   - asr
   - sfi-image-nochange
 ms.subservice: asr
@@ -19,6 +20,7 @@ ms.collection:
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
 ---
 
 # Protect important folders with controlled folder access
@@ -42,6 +44,8 @@ Controlled folder access requires:
 
 ### Supported operating systems
 
+Controlled folder access is supported on the following operating systems:
+
 - Windows
 - Windows 11
 - Windows 10
@@ -61,9 +65,9 @@ Apps can also be added manually to the trusted list by using Configuration Manag
 
 ## Why controlled folder access is important
 
-Controlled folder access is especially useful in helping to protect your documents and information from [ransomware](https://www.microsoft.com/wdsi/threats). In a ransomware attack, your files can get encrypted and held hostage. With controlled folder access in place, a notification appears on the computer where an app attempted to make changes to a file in a protected folder. You can [customize the notification](attack-surface-reduction-rules-overview.md#notifications-and-alerts-for-asr-rules) with your company details and contact information. You can also enable the rules individually to customize what techniques the feature monitors.
+Controlled folder access is especially useful in helping to protect your documents and information from [ransomware](https://www.microsoft.com/wdsi/threats). In a ransomware attack, your files can get encrypted and held hostage. With controlled folder access in place, a notification appears on the computer where an app attempted to make changes to a file in a protected folder. You can [customize the notification](attack-surface-reduction-rules-overview.md#notifications-and-alerts-for-asr-rules) with your company details and contact information. You can also configure controlled folder access settings individually to customize the protection behavior.
 
-The [protected folders](#review-controlled-folder-access-events-in-windows-event-viewer) include common system folders (including boot sectors), and you can [add more folders](customize-controlled-folders.md#protect-additional-folders). You can also [allow apps](customize-controlled-folders.md#allow-specific-apps-to-make-changes-to-controlled-folders) to give them access to the protected folders.
+The [default protected folders](#windows-system-folders-are-protected-by-default) include common system folders (including boot sectors), and you can [protect additional folders](customize-controlled-folders.md#protect-additional-folders). You can also [allow specific apps to make changes to controlled folders](customize-controlled-folders.md#allow-specific-apps-to-make-changes-to-controlled-folders).
 
 You can use [audit mode](attack-surface-reduction-overview.md#audit-mode) to evaluate how controlled folder access would impact your organization if it were enabled.
 
@@ -85,9 +89,9 @@ The protected folders include common system folders (including boot sectors), an
 
 Default folders appear in the user's profile, under **This PC**, as shown in the following image:
 
-![Protected Windows default systems folders](media/defaultfolders.png)
+![Screenshot of the Windows user profile showing the default system folders protected by controlled folder access, such as Documents, Pictures, and Music.](media/defaultfolders.png)
 
-The same profile folders are also protected for system accounts, such as `LocalService`, `NetworkService`, `systemprofile`, and so on. For example, `C:\Windows\System32\config\systemprofile\Documents` is also protected (if it exists).
+These default protected folders are also protected for system accounts, such as `LocalService`, `NetworkService`, `systemprofile`, and so on. For example, `C:\Windows\System32\config\systemprofile\Documents` is also protected (if it exists).
 
 > [!NOTE]
 > You can configure more folders as protected, but you can't remove Windows system folders that are protected by default.
@@ -113,7 +117,9 @@ DeviceEvents
 
 ## Review controlled folder access events in Windows Event Viewer
 
-You can review the Windows event log to see events that are created when controlled folder access blocks (or audits) an app:
+You can review the Windows event log to see events that are created when controlled folder access blocks (or audits) an app.
+
+### Import a custom view for controlled folder access events
 
 1. Download the [Evaluation Package](https://aka.ms/mp7z2w) and extract the file *cfa-events.xml* to an easily accessible location on the device.
 
@@ -121,7 +127,7 @@ You can review the Windows event log to see events that are created when control
 
 1. On the left panel, under **Actions**, select **Import custom view...**.
 
-1. Navigate to where you extracted *cfa-events.xml* and select it. Alternatively, [copy the XML directly](attack-surface-reduction-windows-events.md#copy-the-xml-directly).
+1. Navigate to where you extracted *cfa-events.xml* and select it. Alternatively, [copy the custom view XML directly from the ASR events reference](attack-surface-reduction-windows-events.md#copy-the-xml-directly).
 
 1. Select **OK**.
 
@@ -135,9 +141,10 @@ You can review the Windows event log to see events that are created when control
    |`1127`|Blocked controlled folder access sector write block event|
    |`1128`|Audited controlled folder access sector write block event|
 
-## Controlled folder access experience
+<a name="controlled-folder-access-experience"></a>
+## Controlled folder access alerts and prompts
 
-A user tries to install an application that triggers Controlled folder access, if the software or application has an unknown reputation, a toast notification presents the user with the following:
+If a user tries to install an application with an unknown reputation that triggers controlled folder access, Windows displays the following toast notification:
 
 
 ```
@@ -175,7 +182,7 @@ You can use the Windows Security app to view the list of folders that are protec
    > [!IMPORTANT]
    > Don't add local share paths (loopbacks) as protected folders. Use the local path instead. For example, if you have shared `C:\demo` as `\\mycomputer\demo`, don't add `\\mycomputer\demo` to the list of protected folders. Instead add `C:\demo`.
 
-[Windows system folders](#windows-system-folders-are-protected-by-default) are protected by default, and you can't remove them from the list. Subfolders are also included in protection when you add a new folder to the list.
+[Windows system folders](#windows-system-folders-are-protected-by-default) are protected by default, and you can't remove those folders from the list. Subfolders are also included in protection when you add a new folder to the list.
 
 
 

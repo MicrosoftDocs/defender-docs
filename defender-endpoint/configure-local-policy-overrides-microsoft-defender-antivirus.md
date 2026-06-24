@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: paulinbar
 ms.author: painbar
 ms.topic: how-to
-ms.custom: nextgen
-ms.date: 04/15/2026
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/17/2026
 ms.reviewer: yongrhee
 ms.collection:
 - m365-security
@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Prevent or allow users to locally modify Microsoft Defender Antivirus policy settings
@@ -140,8 +141,6 @@ When creating or modifying an Antivirus policy, use this setting on the **Config
 - **Disable local admin merge**: Select **Disable local admin merge**.
 
 For more information about antivirus policy profiles available in Microsoft Intune, see [Antivirus policy for endpoint security in Intune](/intune/device-configuration/endpoint-security/antivirus).
-
-(/intune/device-configuration/endpoint-security/antivirus)
 
 > [!NOTE]
 > Disabling local list merging overrides controlled folder access settings. It also overrides any protected folders or allowed apps set by the local administrator. For more information about controlled folder access settings, see [Allow a blocked app in Windows Security](https://support.microsoft.com/help/4046851/windows-10-allow-blocked-app-windows-security).

@@ -1,0 +1,34 @@
+### YamlMime:FAQ
+metadata:
+  title: Common questions - permissions
+  description: This FAQ answers questions about permissions in Microsoft Defender for Cloud, a product that helps you prevent, detect, and respond to threats.
+  services: defender-for-cloud
+  manager: orspodek
+  ms.topic: faq
+  ms.date: 05/18/2025
+title: Common questions about permissions in Defender for Cloud
+summary: |
+
+sections:
+  - name: Ignored
+    questions:
+      - question: How do permissions work in Microsoft Defender for Cloud?
+        answer: |
+          Microsoft Defender for Cloud uses [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/role-assignments-portal), which provides [built-in roles](/azure/role-based-access-control/built-in-roles) that can be assigned to users, groups, and services in Azure.
+          
+          Defender for Cloud assesses the configuration of your resources to identify security issues and vulnerabilities. In Defender for Cloud, you only see information related to a resource when you're assigned the role of Owner, Contributor, or Reader for the subscription or resource group that a resource belongs to.
+          
+          See [Permissions in Microsoft Defender for Cloud](permissions.md) to learn more about roles and allowed actions in Defender for Cloud.
+          
+          
+          
+      - question: Who can modify a security policy?
+        answer: |
+          To modify a security policy, you must be a Security Admin or an Owner or Contributor of that subscription.
+          
+          To learn how to configure a security policy, see [Setting security policies in Microsoft Defender for Cloud](tutorial-security-policy.md).
+
+      - question: |
+          What is the minimum SAS policy permissions required when exporting data to Azure Event Hubs?
+        answer: |
+          **Send** is the minimum SAS policy permissions required. For step-by-step instructions, see **Step 1: Create an Event Hubs namespace and event hub with send permissions** in [this article](./export-to-splunk-or-qradar.md#step-1-create-an-event-hubs-namespace-and-event-hub-with-send-permissions).

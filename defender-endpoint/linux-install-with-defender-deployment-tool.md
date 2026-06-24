@@ -162,7 +162,7 @@ The deployment tool enforces the following set of prerequisites checks, which if
          ./mde_linux_edr_diy.sh
          ```
 
-    1. After a few minutes, a detection should be raised in the Microsoft Defender XDR.
+    1. After a few minutes, a detection should be raised in the Defender portal.
 
     1. Check the alert details, machine timeline, and perform your typical investigation steps.
 

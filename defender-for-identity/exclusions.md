@@ -1,10 +1,11 @@
 ---
 title: Detection exclusions in Microsoft Defender XDR
 description: Learn how to configure Microsoft Defender for Identity detection exclusions in Microsoft Defender XDR.
-ms.date: 04/05/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Configure Defender for Identity detection exclusions in Microsoft Defender XDR
@@ -16,11 +17,13 @@ Microsoft Defender for Identity enables the exclusion of specific IP addresses, 
 For example, a **DNS Reconnaissance** alert could be triggered by a security scanner that uses DNS as a scanning mechanism. Creating an exclusion helps Microsoft Defender for Identity ignore such scanners and reduce false positives.
 
 > [!NOTE]
-> - We recommend that you [tune an alert](/microsoft-365/security/defender/investigate-alerts#tune-an-alert) instead of using exclusions. Alert tuning rules allow more granular conditions than exclusions, and allow you to review the alerts, which were tuned.
+> - We recommend that you [tune an alert in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-alerts#tune-an-alert) instead of using exclusions. Alert tuning rules allow more granular conditions than exclusions, and allow you to review the alerts, which were tuned.
 > 
 >- Among the most common domains with [Suspicious communication over DNS](other-alerts.md#suspicious-communication-over-dns-external-id-2031) alerts, we observed the domains that were most frequently excluded from the alert. These domains are added to the exclusions list by default, but you have the option to remove them.
 
 ## How to add detection exclusions
+
+To add detection exclusions, complete the following steps.
 
 > [!NOTE]
 > When replacing an existing exclusion with an alert tuning rule, identify the detection associated with the excluded entity and map it to the corresponding detector in alert tuning. After creating the tuning rule, verify that the detector appears under Alert tuning in the Microsoft Defender portal to ensure that the intended alert scope is preserved.
@@ -37,6 +40,8 @@ For example, a **DNS Reconnaissance** alert could be triggered by a security sca
 
 
 ## Exclusions by detection rule
+
+To configure exclusions for a specific detection rule, follow these steps:
 
 1. Select **Exclusions by detection rule**. 
 
@@ -76,7 +81,7 @@ For example, a **DNS Reconnaissance** alert could be triggered by a security sca
 
 ## Global excluded entities
 
-You can now also configure exclusions by **Global excluded entities**. Global exclusions allow you to define certain entities (IP addresses, subnets, devices, or domains) to be excluded across all of the detections Microsoft Defender for Identity has. So for example, if you exclude a device, it will only apply to those detections that have device identification as part of the detection.
+You can now also configure exclusions by **Global excluded entities**. Global exclusions allow you to define certain entities (IP addresses, subnets, devices, or domains) to be excluded across all of the detections Microsoft Defender for Identity has. So for example, if you exclude a device, the exclusion will only apply to those detections that have device identification as part of the detection.
 
 1. Select **Global excluded entities** to see the categories of entities that you can exclude.
 
@@ -101,4 +106,4 @@ You can now also configure exclusions by **Global excluded entities**. Global ex
 ## Next steps
 
 - [Configure event collection](deploy/configure-event-collection.md)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+- [Microsoft Defender for Identity community forum](<https://aka.ms/MDIcommunity>)

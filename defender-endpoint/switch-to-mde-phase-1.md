@@ -1,6 +1,6 @@
 ---
 title: Migrate to Microsoft Defender for Endpoint - Prepare
-description: Get ready to move to Microsoft Defender for Endpoint. Update your devices and configure your network connections.
+description: Prepare to migrate to Microsoft Defender for Endpoint by updating devices, obtaining licenses, and reviewing prerequisite connectivity and readiness steps.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: painbar
@@ -12,20 +12,22 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: how-to
-ms.custom: 
-- migrationguides
-- admindeeplinkDEFENDER
-ms.date: 04/17/2025
+ms.custom:
+  - msecd-doc-authoring-1014
+  - migrationguides
+  - admindeeplinkDEFENDER
+ms.date: 06/17/2026
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Migrate to Microsoft Defender for Endpoint - Phase 1: Prepare
 
 
-| ![Phase 1: Prepare.](media/phase-diagrams/prepare.png#lightbox)<br/>Phase 1: Prepare | [![Phase 2: Set up](media/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Phase 2: Set up](switch-to-mde-phase-2.md) | [![Phase 3: Onboard](media/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Phase 3: Onboard](switch-to-mde-phase-3.md) |
+| ![Diagram of migration phases highlighting Phase 1: Prepare as the current step.](media/phase-diagrams/prepare.png#lightbox)<br/>Phase 1: Prepare | [![Diagram of migration phases highlighting Phase 2: Set up.](media/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Phase 2: Set up](switch-to-mde-phase-2.md) | [![Diagram of migration phases highlighting Phase 3: Onboard.](media/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Phase 3: Onboard](switch-to-mde-phase-3.md) |
 |--|--|--|
 |*You're here!*| | |
 
@@ -73,13 +75,13 @@ Now that you've updated your organization's devices, the next step is to get Def
 
 1. If any devices in your organization use a proxy to access the internet, follow the guidance in [Defender for Endpoint setup: Network configuration](production-deployment.md#network-configuration).
 
-At this point, you're ready to grant access to your security administrators and security operators to use the [Microsoft Defender portal](https://security.microsoft.com).
+After provisioning licenses and configuring your Defender for Endpoint tenant, grant your security administrators and security operators access to the [Microsoft Defender portal](https://security.microsoft.com).
 
 <a name='step-3-grant-access-to-the-microsoft-365-defender-portal'></a>
 
 ## Step 3: Grant access to the Microsoft Defender portal
 
-The [Microsoft Defender portal](https://security.microsoft.com) is where you and your security team access and configure features and capabilities of Defender for Endpoint. To learn more, see [Overview of the Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal).
+The [Microsoft Defender portal](https://security.microsoft.com) is where you and your security team access and configure features and capabilities of Defender for Endpoint. For an overview of portal features and navigation, see [Overview of the Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal).
 
 Permissions to the Microsoft Defender portal can be granted by using either basic permissions or role-based access control (RBAC). We recommend using RBAC so that you have more granular control over permissions.
 
@@ -125,7 +127,8 @@ Performance data should include the process list, CPU usage (aggregate across al
 
 One of the tools that you can use is the Performance Monitor (perfmon). You can use it to collect a performance baseline of your Windows or Windows Server endpoint. See [Setting a local perfmon in a Windows client or Windows Server](/archive/blogs/yongrhee/setting-a-local-perfmon-in-a-windows-client-or-windows-server).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 **Congratulations**! You've completed the **Prepare** phase of [switching to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)!
 

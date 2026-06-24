@@ -1,10 +1,11 @@
 ---
 title: Protect your GitHub Enterprise environment | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your GitHub Enterprise app to Defender for Cloud Apps using the API connector.
-ms.date: 01/07/2026
+description: Connect GitHub Enterprise Cloud to Microsoft Defender for Cloud Apps by using the API connector to monitor user activity and detect anomalous behavior that could expose sensitive repositories and collaboration data.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # How Defender for Cloud Apps helps protect your GitHub Enterprise environment
@@ -18,12 +19,16 @@ Connecting GitHub Enterprise Cloud to Defender for Cloud Apps gives you improved
 
 ## Main threats
 
+The main threats to GitHub Enterprise Cloud environments include:
+
 - Compromised accounts and insider threats
 - Data leakage
 - Insufficient security awareness
 - Unmanaged bring your own device (BYOD)
 
 ## How Defender for Cloud Apps helps to protect your environment
+
+Defender for Cloud Apps helps protect your GitHub Enterprise environment with the following best practices:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
@@ -52,11 +57,13 @@ Review our best practices for [securing and collaborating with guests](best-prac
 
 ## Connect GitHub Enterprise Cloud to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing GitHub Enterprise Cloud organization using the App Connector APIs. This connection gives you visibility into and control over your organization's GitHub Enterprise Cloud use. For more information about how Defender for Cloud Apps protects GitHub Enterprise Cloud, see [Protect GitHub Enterprise](protect-github.md).
+Use the following steps to connect Microsoft Defender for Cloud Apps to your existing GitHub Enterprise Cloud organization using the App Connector APIs. This connection gives you visibility into and control over your organization's GitHub Enterprise Cloud use. For more information about how Defender for Cloud Apps protects GitHub Enterprise Cloud, see [Protect GitHub Enterprise](protect-github.md).
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
 ### Prerequisites
+
+Before you connect GitHub Enterprise Cloud to Defender for Cloud Apps, make sure the following prerequisites are met:
 
 - Your organization must have a **GitHub Enterprise Cloud** license.
 - The GitHub account used for connecting to Defender for Cloud Apps must have Owner permissions for your organization.
@@ -67,7 +74,7 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 Verifying your domains is optional. We recommend that you do verify your domains so that Defender for Cloud Apps can match the domain emails of your GitHub organization's members to their corresponding Azure Active Directory user.
 
-These steps are independent of the [Configure GitHub Enterprise Cloud](#configure-github-enterprise-cloud) steps and can be skipped if your domains are already verified.
+Domain verification is optional and separate from the GitHub Enterprise Cloud app configuration process. Skip this procedure if your domains are already verified.
 
 1. Upgrade your organization to the [Corporate Terms of Service](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/upgrading-to-the-corporate-terms-of-service).
 1. Verify [your organization's domains](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/verifying-your-organizations-domain).
@@ -77,7 +84,7 @@ These steps are independent of the [Configure GitHub Enterprise Cloud](#configur
 
 ### Configure GitHub Enterprise Cloud
 
-1. Copy your organization's sign-in name. You'll need it later.
+1. Copy your organization's sign-in name. You'll need the organization's sign-in name later.
 
     > [!NOTE]
     > The page will have a URL like `https://github.com/<your-organization>`. For example, if your organization's page is `https://github.com/sample-organization`, the organization's sign-in name is *sample-organization*.
@@ -108,7 +115,7 @@ These steps are independent of the [Configure GitHub Enterprise Cloud](#configur
 
 1. In the next window, give the connector a descriptive name, and then select **Next**.
 
-1. In the **Enter details** window, fill out the **Client ID**, **Client Secret**, and **Organization Login Name** that you made a note of earlier.
+1. In the **Enter details** window, fill out the **Client ID** and **Client Secret** from the OAuth app and the **Organization Login Name** you copied when configuring GitHub Enterprise Cloud.
 
    :::image type="content" source="media/connect-github-connect-app.png" alt-text="Connect GitHub.":::
 
@@ -143,6 +150,8 @@ These steps are independent of the [Configure GitHub Enterprise Cloud](#configur
 After connecting GitHub Enterprise Cloud, you'll receive events for 7 days prior to connection.
 
 ## Next steps
+
+Use the following resources for troubleshooting and managing your connected GitHub Enterprise Cloud environment:
 
 - If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 

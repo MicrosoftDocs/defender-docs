@@ -1,12 +1,13 @@
 ---
 title: Analyze programming details and changes on an OT sensor - Microsoft Defender for IoT
 description: Discover suspicious programming activity by investigating programming events occurring on your network devices.
-ms.date: 02/28/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# Analyze programming details and changes
+# Analyze OT device programming details and changes
 
 Enhance forensics by displaying programming events occurring on your network devices and analyzing any code changes using the OT sensor. Watching for programming events helps you investigate suspicious programming activity, such as:
 
@@ -35,6 +36,8 @@ The **Programming Timeline** tab can be accessed from the **Device map**, **Devi
 
 ### Access programming data from the device map
 
+To open programming data from the device map:
+
 1. Sign into the OT sensor console and select **Device map**.
 
 1. In the **Groups** area to the left of the map, select **Filter** > **OT Protocols** > select a text based programming protocol, such as DeltaV.
@@ -46,6 +49,8 @@ The **Programming Timeline** tab can be accessed from the **Device map**, **Devi
       The device details page opens with the **Programming Timeline** tab open.
   
 ### Access programming data from the device inventory
+
+To access programming data from the device inventory:
 
 1. Sign into the OT sensor console and select **Device inventory**.
 
@@ -93,7 +98,7 @@ For example:
 
 ## Compare programming detail files
 
-This procedure describes how to compare multiple programming detail files to identify discrepancies or investigate them for suspicious activity.
+This procedure describes how to compare multiple programming detail files to identify discrepancies or investigate the files for suspicious activity.
 
 **To compare files:**
 
@@ -113,4 +118,4 @@ This procedure describes how to compare multiple programming detail files to ide
 
 ## Next steps
 
-For more information, see [Import device information to a sensor](how-to-import-device-information.md).
+To ensure your sensor has complete and accurate device data for programming analysis, you can also [Import device information to a sensor](how-to-import-device-information.md).

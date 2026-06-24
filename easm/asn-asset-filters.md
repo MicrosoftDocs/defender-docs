@@ -5,13 +5,15 @@ description: This article outlines the filter functionality available in Microso
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 12/14/2022
+ms.date: 06/15/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # ASN asset filters
 
-These filters specifically apply to ASN assets. Use these filters when searching for a specific ASN or group of ASNs.  
+This article lists the available filters for Autonomous System Number (ASN) assets in Microsoft Defender External Attack Surface Management. It describes each filter's purpose, expected value format, and supported operators so you can refine your Defender EASM inventory searches to locate a specific ASN or group of ASNs.  
 
 ## Freeform filters  
 

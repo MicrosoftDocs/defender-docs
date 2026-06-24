@@ -101,7 +101,7 @@ However, due to current service limitations in the United Arab Emirates, MDE com
 
 Defender for Endpoint (including Defender Vulnerability Management) shares data, including customer data, among the following Microsoft products, also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
-- Microsoft Defender XDR
+- Microsoft Defender
 - Microsoft Defender for Cloud Apps
 - Microsoft Sentinel
 - Microsoft Tunnel for Mobile Application Management - Android

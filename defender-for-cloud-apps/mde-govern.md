@@ -1,22 +1,23 @@
 ---
 title: Govern discovered apps using Microsoft Defender for Endpoint
-description: This article describes how to govern Microsoft Defender for Endpoint discovered apps.
-ms.date: 05/20/2026
+description: Use the Microsoft Defender for Cloud Apps integration with Defender for Endpoint to govern discovered cloud apps by blocking or warning on unsanctioned apps.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Govern discovered apps using Microsoft Defender for Endpoint
 
-The Microsoft Defender for Cloud Apps [integration with Microsoft Defender for Endpoint](mde-integration.md) provides a seamless Shadow IT visibility and control solution. Our integration enables Defender for Cloud Apps administrators to block access of end users to cloud apps, by natively integrating Defender for Cloud Apps app governance controls with Microsoft Defender for Endpoint's network protection. Alternatively, administrators can take a gentler approach of warning users when they access risky cloud apps.
+The Microsoft Defender for Cloud Apps [Integrate Defender for Cloud Apps with Microsoft Defender for Endpoint](mde-integration.md) provides a seamless Shadow IT visibility and control solution. Our integration enables Defender for Cloud Apps administrators to block access of end users to cloud apps, by natively integrating Defender for Cloud Apps app governance controls with Microsoft Defender for Endpoint's network protection. Alternatively, administrators can take a gentler approach of warning users when they access risky cloud apps.
 
-Defender for Cloud Apps uses the built-in [**Unsanctioned**](governance-discovery.md#sanctioningunsanctioning-an-app) app tag to mark cloud apps as prohibited for use, available in both the **Cloud Discovery** and **Cloud App Catalog** pages. By enabling the integration with Defender for Endpoint, you can seamlessly block access to unsanctioned apps with a single click in Defender for Cloud Apps.
+Defender for Cloud Apps uses the built-in **Unsanctioned** app tag to mark cloud apps as prohibited for use, available in both the **Cloud Discovery** and **Cloud App Catalog** pages. For more information, see [Sanction or unsanction an app](governance-discovery.md#sanctioningunsanctioning-an-app). By enabling the integration with Defender for Endpoint, you can seamlessly block access to unsanctioned apps with a single click in Defender for Cloud Apps.
 
 Apps marked as **Unsanctioned** in Defender for Cloud Apps are automatically synced to Defender for Endpoint. More specifically, the domains used by these unsanctioned apps are propagated to endpoint devices to be blocked by Microsoft Defender Antivirus within the Network Protection SLA.
 
 > [!NOTE]
-> The time latency to block an app via Defender for Endpoint is up to three hours from the moment you mark the app as unsanctioned in Defender for Cloud Apps to the moment the app is blocked in the device. This is due to up to one hour of synchronization of Defender for Cloud Apps sanctioned/unsanctioned apps to Defender for Endpoint, and up to two hours to push the policy to the devices in order to block the app once the indicator was created in Defender for Endpoint.
+> The time latency to block an app via Defender for Endpoint is up to three hours from the moment you mark the app as unsanctioned in Defender for Cloud Apps to the moment the app is blocked in the device. This latency is due to up to one hour of synchronization of Defender for Cloud Apps sanctioned/unsanctioned apps to Defender for Endpoint, and up to two hours to push the policy to the devices in order to block the app once the indicator was created in Defender for Endpoint.
 
 ## Prerequisites
 
@@ -56,7 +57,7 @@ Use the following steps to enable access control for cloud apps:
 
 1. In Microsoft Defender XDR, go to **Settings** > **Endpoints** > **Advanced features**, and then select **Custom network indicators**. For information about network indicators, see [Create indicators for IPs and URLs/domains](/microsoft-365/security/defender-endpoint/indicator-ip-domain).
 
-    This allows you to leverage Microsoft Defender Antivirus network protection capabilities to block access to a predefined set of URLs using Defender for Cloud Apps, either by manually assigning [app tags](governance-discovery.md#sanctioningunsanctioning-an-app) to specific apps or automatically using an [app discovery policy](cloud-discovery-policies.md#creating-an-app-discovery-policy).
+    Enabling custom network indicators allows you to leverage Microsoft Defender Antivirus network protection capabilities to block access to a predefined set of URLs using Defender for Cloud Apps, either by manually [sanctioning or unsanctioning apps using app tags](governance-discovery.md#sanctioningunsanctioning-an-app) or automatically by [creating an app discovery policy](cloud-discovery-policies.md#creating-an-app-discovery-policy).
 
     ![Screenshot showing how to enable custom network indicators in Defender for Endpoint.](media/mde-custom-network-indicators.png)
 
@@ -115,7 +116,7 @@ To block usage for specific device groups, do the following steps:
 
 1. Select **Save**.
 
-    ![Scoped profiles.](media/scoped-profiles.png)
+    ![Screenshot of the scoped profiles tab for creating include or exclude device group profiles.](media/scoped-profiles.png)
    
 To block an app, do the following steps:
 
@@ -125,11 +126,11 @@ To block an app, do the following steps:
 
 1. Tag the app as **Unsanctioned**.
 
-    ![Unsanction an app.](media/unsanctioned-app.png)
+    ![Screenshot of the Defender for Cloud Apps page for tagging a discovered app as unsanctioned.](media/unsanctioned-app.png)
    
 1. To block all the devices in your organization, in the **Tag as unsanctioned?** dialog, select **Save**. To block specific device groups in your organizations, select **Select a profile to include or exclude groups from being blocked**. Then choose the profile for which the app will be blocked, and select **Save**.
 
-    ![Choose a profile to unsanction an app with.](media/choosing-unsanctioned-app-profile.png)
+    ![Screenshot of the profile selection dialog used to choose a scoped profile when tagging an app as unsanctioned.](media/choosing-unsanctioned-app-profile.png)
    
     The **Tag as unsanctioned?** dialog appears only when your tenant has cloud app blocking with Defender for Endpoint enabled and if you have admin access to make changes.
 
@@ -144,7 +145,7 @@ To block an app, do the following steps:
 
 ## Educate users when accessing risky apps
 
-Admins have the option to warn users when they access risky apps. Rather than blocking users, they're prompted with a message providing a custom redirect link to a company page listing apps approved for use. The prompt provides options for users to bypass the warning and continue to the app. Admins are also able to monitor the number of users that bypass the warning message.
+Admins have the option to warn users when they access risky apps. Rather than blocking users, they're prompted with a message providing a custom redirect link to a company page listing apps approved for use. The warning prompt provides options for users to bypass the warning and continue to the app. Admins are also able to monitor the number of users that bypass the warning message.
 
 Defender for Cloud Apps uses the built-in **Monitored** app tag to mark cloud apps as risky for use. The tag is available on both the **Cloud Discovery** and **Cloud App Catalog** pages. By enabling the integration with Defender for Endpoint, you can seamlessly warn users on access to monitored apps with a single click in Defender for Cloud Apps.
 
@@ -161,7 +162,7 @@ Use the following steps to configure a custom URL pointing to a company web page
    
 ### Setting up user bypass duration
 
-Since users can bypass the warning message, you can use the following steps to configure the duration of the bypass apply. Once the duration has elapsed, users are prompted with the warning message the next time they access the monitored app.
+Since users can bypass the warning message, you can use the following steps to configure how long the bypass remains in effect. Once the duration has elapsed, users are prompted with the warning message the next time they access the monitored app.
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Cloud Discovery**, select **Microsoft Defender for Endpoint**.
 1. In the **Bypass duration** box, enter the duration (hours) of the user bypass.
@@ -170,9 +171,9 @@ Since users can bypass the warning message, you can use the following steps to c
    
 ### Monitor applied app controls
 
-Once controls are applied, you can monitor app usage patterns by the applied controls (access, block, bypass) using the following steps.
+Once access, block, or bypass controls are applied, you can monitor app usage patterns for those controls using the following steps.
 
-1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Cloud Discovery** and then go to the **Discovered apps** tab. Use the [filters](discovered-app-queries.md) to find the relevant monitored app.
+1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Cloud Discovery** and then go to the **Discovered apps** tab. Use the [discovered app query filters](discovered-app-queries.md) to find the relevant monitored app.
 1. Select the app's name to view applied app controls on the app's overview page.
 
 ## Next steps

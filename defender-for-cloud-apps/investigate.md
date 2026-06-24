@@ -1,9 +1,11 @@
 ---
 title: Investigate cloud app risks and suspicious activity 
 description: This article provides an outline of the process for investigating alerts, issues, and suspicious activities by using Defender for Cloud Apps.
-ms.date: 02/15/2023
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: gayasalomon
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Investigate cloud app risks and suspicious activity
 
@@ -13,15 +15,17 @@ After Microsoft Defender for Cloud Apps runs in your cloud environment, you'll n
 
 ## <a name="sanctionapp"></a>Tag apps as sanctioned or unsanctioned
 
-An important step to understanding your cloud is to tag apps as sanctioned or unsanctioned. After you sanction an app, you can filter for apps that aren't sanctioned and start migration to sanctioned apps of the same type.
+An important step to understanding your cloud is to tag apps as sanctioned or unsanctioned. After you sanction an app, you can filter for apps that aren't sanctioned and start migration to sanctioned apps of the same app category.
 
 - In the Microsoft Defender Portal, under **Cloud Apps**, go to the **Cloud app catalog** or **Cloud discovery** - > **Discovered apps**.
 
-- In the list of apps, on the row in which the app you want to tag as sanctioned appears, choose the three dots at the end of the row ![Tag as sanctioned dots.](media/sanction-three-dots.png "Tag as sanctioned dots") and choose **Sanctioned**.
+- In the list of apps, on the row in which the app you want to tag as sanctioned appears, choose the three dots at the end of the row ![Screenshot of the three-dot menu icon at the end of an app row used to tag an app as sanctioned.](media/sanction-three-dots.png "Screenshot of the three-dot menu icon at the end of an app row used to tag an app as sanctioned.") and choose **Sanctioned**.
 
-    ![Tag as sanctioned.](media/mark-as-sanctioned.png "tag as sanctioned")
+    ![Screenshot of the context menu option to mark a cloud app as sanctioned in Microsoft Defender for Cloud Apps.](media/mark-as-sanctioned.png "Screenshot of the context menu option to mark a cloud app as sanctioned")
 
 ## Use the investigation tools
+
+Use the following steps to investigate activity, files, identities, and connected apps in your cloud environment.
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to the **Activity log** and filter by a specific app. Check the following items:
 
@@ -59,7 +63,7 @@ An important step to understanding your cloud is to tag apps as sanctioned or un
 
     - You can drill down into the user's account by selecting the three dots at the end of the user's account row and selecting an action to take. Take an action such as **Suspend user** or **Remove user's collaborations**. If the user was imported from Microsoft Entra ID, you can also select **Microsoft Entra account settings** to get easy access to advanced user management features. Examples of management features include group management, MFA, details about the user's sign ins, and the ability to block sign in.
 
-4. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected Apps**, select **App connectors**, then select an app. The app dashboard opens and gives you information and insights. You can use the tabs across the top to check:
+4. In the Microsoft Defender Portal, select **Settings**, and then choose **Cloud Apps**. Under **Connected Apps**, select **App connectors**, then select an app. The app dashboard opens and gives you information and insights. You can use the tabs across the top to check:
 
     - What kind of devices are your users using to connect to the app?
 
@@ -75,7 +79,7 @@ An important step to understanding your cloud is to tag apps as sanctioned or un
 
     - How many users have deployed them? How common are these apps in general?
 
-    ![App dashboard.](media/investigate-app.png "investigate app")
+    ![Screenshot of the connected app dashboard in Microsoft Defender for Cloud Apps showing device, file, and activity insights.](media/investigate-app.png "Screenshot of the connected app dashboard in Microsoft Defender for Cloud Apps")
 
 5. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Cloud Discovery**. Select the **Dashboard** tab and check the following items:
 
@@ -91,7 +95,8 @@ An important step to understanding your cloud is to tag apps as sanctioned or un
 
     - Are there cloud apps that are used but not in compliance with your organization's policy?
 
-## Sample investigation
+<a name="sample-investigation"></a>
+## Sample investigation of risky IP address access
 
 Let's say that you assume you don't have any access to your cloud environment by risky IP addresses. As an example, let's say Tor. But you create a policy for risk IPs just to make sure:
 
@@ -105,21 +110,21 @@ Let's say that you assume you don't have any access to your cloud environment by
 
 5. Under **Activities matching all of the following**, choose **+** to add a filter. Scroll down to **IP tag**, and then choose **Tor**.
 
-    ![Example policy for risky IPs.](media/example-policy-risky-ips.png "example policy risky ips")
+    ![Screenshot of an activity policy configured to detect sign-ins from risky IP addresses such as Tor in Microsoft Defender for Cloud Apps.](media/example-policy-risky-ips.png "Screenshot of an activity policy configured to detect sign-ins from risky IP addresses such as Tor")
 
-Now that you have the policy in place, you discover to see that you have an alert that the policy was violated.
+Now that you have the risky-IP policy in place, you discover that you have an alert that the policy was violated.
 
 1. In the Microsoft Defender Portal, go to **Incidents & alerts** -> **Alerts** and view the alert about the policy violation.
 
-2. If you see that it looks like a real violation, you want to contain risk or remediate it.
+2. If you see that the alert looks like a real violation, you want to contain risk or remediate the violation.
 
     To contain risk, you can send the user a notification to ask if the violation was intentional and if the user was aware of it.
 
     You can also drill down into the alert and suspend the user until you can figure out what needs to be done.
 
-3. If it's an allowed event that isn't likely to recur, you can dismiss the alert.
+3. If the event is allowed and isn't likely to recur, you can dismiss the alert.
 
-    If it's allowed and you expect it to recur, you can change the policy so that this type of event won't be considered a violation in the future.
+    If the event is allowed and you expect the event to recur, you can update the policy so that logons from that approved source aren't considered violations in the future.
 
 ## Next steps
 

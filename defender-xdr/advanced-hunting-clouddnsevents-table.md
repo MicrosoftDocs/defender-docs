@@ -31,7 +31,7 @@ ms.date: 06/01/2026
 
 The `CloudDnsEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about DNS activity events from cloud infrastructure environments. Use this reference to construct queries that return information from this table.
 
-[Microsoft Defender for Cloud](/azure/defender-for-cloud/concept-integration-365#advanced-hunting-in-xdr) populates this advanced hunting table with records. If your organization doesn't have Defender for Cloud, queries that use the table won't work or return any results. For more information about prerequisites in integrating Defender for Cloud with Defender XDR, see [Microsoft Defender XDR integration](/azure/defender-for-cloud/concept-integration-365).
+[Microsoft Defender for Cloud](/azure/defender-for-cloud/concept-integration-365#advanced-hunting-in-xdr) populates this advanced hunting table with records. If your organization doesn't have Defender for Cloud, queries that use the table won't work or return any results. For more information about prerequisites in integrating Defender for Cloud with Defender, see [Microsoft Defender integration](/azure/defender-for-cloud/concept-integration-365).
 
 For information on other tables in the advanced hunting schema, see [advanced hunting reference](advanced-hunting-schema-tables.md).
 

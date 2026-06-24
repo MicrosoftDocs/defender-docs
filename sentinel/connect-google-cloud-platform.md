@@ -1,12 +1,13 @@
 ---
 title: Ingest Google Cloud Platform log data into Microsoft Sentinel 
-description: This article describes how to ingest service log data from the Google Cloud Platform (GCP) into Microsoft Sentinel.
+description: Ingest Google Cloud Platform (GCP) audit logs, Security Command Center findings, and Google Kubernetes Engine logs into Microsoft Sentinel using GCP Pub/Sub connectors for multicloud security monitoring.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 01/17/2024
-ms.custom: sfi-image-nochange
+ms.date: 06/15/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security engineer, I want to ingest Google Cloud Platform log data into Microsoft Sentinel so that analysts can monitor and detect potential threats across my multicloud environment.
 
@@ -16,9 +17,9 @@ ms.custom: sfi-image-nochange
 
 Organizations are increasingly moving to multicloud architectures, whether by design or due to ongoing requirements. A growing number of these organizations use applications and store data on multiple public clouds, including the Google Cloud Platform (GCP).
 
-This article describes how to ingest GCP data into Microsoft Sentinel to get full security coverage and analyze and detect attacks in your multicloud environment.
+This article describes how to ingest GCP data into Microsoft Sentinel to get full security coverage and analyze and detect attacks in your multicloud environment. Before you begin, review the [prerequisites](#prerequisites), including required access permissions for both Azure and GCP.
 
-With the **GCP Pub/Sub** connectors, based on our [Codeless Connector Framework (CCF)](create-codeless-connector.md?tabs=deploy-via-arm-template%2Cconnect-via-the-azure-portal), you can ingest logs from your GCP environment using the GCP [Pub/Sub capability](https://cloud.google.com/pubsub/docs/overview):
+With the **GCP Pub/Sub** connectors, based on our [Codeless Connector Framework (CCF)](isv/create-codeless-connector.md?tabs=deploy-via-arm-template%2Cconnect-via-the-azure-portal), you can ingest logs from your GCP environment using the GCP [Pub/Sub capability](https://cloud.google.com/pubsub/docs/overview):
 
 - The **Google Cloud Platform (GCP) Pub/Sub Audit Logs connector** collects audit trails of access to GCP resources. Analysts can monitor these logs to track resource access attempts and detect potential threats across the GCP environment.
 
@@ -65,7 +66,8 @@ You can set up the environment in one of two ways:
   > [!IMPORTANT]
   > If you're creating resources manually, you must create *all* the authentication (IAM) resources in the **same GCP project**, otherwise it won't work. (Pub/Sub resources can be in a different project.)
 
-### GCP Authentication Setup
+<a name="gcp-authentication-setup"></a>
+### Set up GCP authentication
 
 Required for all GCP connectors.
 
@@ -83,7 +85,7 @@ Required for all GCP connectors.
     1. Open the Terraform [GCPInitialAuthenticationSetup script](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/GCP/Terraform/sentinel_resources_creation/GCPInitialAuthenticationSetup/GCPInitialAuthenticationSetup.tf) file and copy its contents.
 
        > [!NOTE]
-       > For ingesting GCP data into an **Azure Government cloud**, [use this authentication setup script instead](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/GCP/Terraform/sentinel_resources_creation_gov/GCPInitialAuthenticationSetupGov/GCPInitialAuthenticationSetupGov.tf).
+       > For ingesting GCP data into an **Azure Government cloud**, use the [GCPInitialAuthenticationSetupGov Terraform script](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/GCP/Terraform/sentinel_resources_creation_gov/GCPInitialAuthenticationSetupGov/GCPInitialAuthenticationSetupGov.tf) instead.
 
     1. Create a directory in your Cloud Shell environment, enter it, and create a new blank file.
         ```bash
@@ -184,7 +186,8 @@ For more information about granting access in Google Cloud Platform, see [Manage
 
 ---
 
-### GCP Audit Logs Setup
+<a name="gcp-audit-logs-setup"></a>
+### Set up GCP audit logs
 
 The instructions in this section are for using the Microsoft Sentinel **GCP Pub/Sub Audit Logs** connector.
 
@@ -228,9 +231,11 @@ See [GKE Logs setup](#google-kubernetes-engine-connector-setup) for using the Mi
 
 When the output from the script is displayed, save the resources parameters for later use.
 
-Wait five minutes before moving to the next step. 
+Wait five minutes before proceeding to [set up the GCP Pub/Sub connector in Microsoft Sentinel](#set-up-the-gcp-pubsub-connector-in-microsoft-sentinel). 
 
 # [Manual setup](#tab/manual)
+
+Use the following steps to manually configure GCP Pub/Sub resources for audit log collection.
 
 #### Create a publishing topic
 
@@ -278,7 +283,8 @@ If you're also setting up the **GCP Pub/Sub Security Command Center** connector,
 
 Otherwise, skip to [Set up the GCP Pub/Sub connector in Microsoft Sentinel](#set-up-the-gcp-pubsub-connector-in-microsoft-sentinel).
 
-### GCP Security Command Center setup
+<a name="gcp-security-command-center-setup"></a>
+### Set up GCP Security Command Center
 
 The instructions in this section are for using the Microsoft Sentinel **GCP Pub/Sub Security Command Center** connector.
 
@@ -292,9 +298,10 @@ Follow the instructions in the Google Cloud documentation to [**configure Pub/Su
 
 1. When asked to select a project for your export, select a project you created for this purpose, or [create a new project](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project).
 
-1. When asked to select a Pub/Sub topic where you want to export your findings, follow the instructions above to [create a new topic](#create-a-publishing-topic).
+1. When asked to select a Pub/Sub topic where you want to export your findings, follow the instructions in [Create a publishing topic](#create-a-publishing-topic) to create a new topic.
 
-### Google Kubernetes Engine Connector Setup
+<a name="google-kubernetes-engine-connector-setup"></a>
+### Set up the Google Kubernetes Engine connector
 
 The instructions in this section are for using the Microsoft Sentinel **Google Kubernetes Engine** connector.
 
@@ -335,13 +342,17 @@ See [GCP Audit Logs setup](#gcp-audit-logs-setup) for using the Microsoft Sentin
 
 When the output from the script is displayed, save the resources parameters for later use.
 
-Wait five minutes before moving to the next step. 
+Wait five minutes before proceeding to [set up the GCP Pub/Sub connector in Microsoft Sentinel](#set-up-the-gcp-pubsub-connector-in-microsoft-sentinel). 
 
 ---
 
 ## Set up the GCP Pub/Sub connector in Microsoft Sentinel
 
+After you set up your GCP environment, install the connector solution in Microsoft Sentinel and configure a collector for your GCP project. Select the tab for the connector you want to set up.
+
 # [GCP Audit Logs](#tab/auditlogs)
+
+Perform the following steps to install and connect the GCP Pub/Sub Audit Logs connector in Microsoft Sentinel.
 
 1. Open the [Azure portal](https://portal.azure.com/) and navigate to the **Microsoft Sentinel** service.
 
@@ -367,6 +378,8 @@ Wait five minutes before moving to the next step.
 
 # [Google Security Command Center](#tab/scc)
 
+Perform the following steps to install and connect the Security Command Center connector in Microsoft Sentinel.
+
 1. Open the [Azure portal](https://portal.azure.com/) and navigate to the **Microsoft Sentinel** service.
 
 1. In the **Content hub**, in the search bar, type *Google Security Command Center*.
@@ -390,6 +403,8 @@ Wait five minutes before moving to the next step.
 1. Make sure that the values in all the fields match their counterparts in your GCP project (the values in the screenshot are samples, not literals), and select **Connect**. 
 
 # [GKE Logs](#tab/gkelogs)
+
+Perform the following steps to install and connect the Google Kubernetes Engine connector in Microsoft Sentinel.
 
 1. Open the [Azure portal](https://portal.azure.com/) and navigate to the **Microsoft Sentinel** service.
 
@@ -417,7 +432,7 @@ Wait five minutes before moving to the next step.
 
 ## Verify that the GCP data is in the Microsoft Sentinel environment 
 
-1. To ensure that the GCP logs were successfully ingested into Microsoft Sentinel, run the following query 30 minutes after you finish to [set up the connector](#set-up-the-gcp-pubsub-connector-in-microsoft-sentinel). 
+1. To ensure that the GCP logs were successfully ingested into Microsoft Sentinel, run the following query 30 minutes after you finish [setting up the GCP Pub/Sub connector in Microsoft Sentinel](#set-up-the-gcp-pubsub-connector-in-microsoft-sentinel). 
 
     # [GCP Audit Logs](#tab/auditlogs)
 
@@ -445,8 +460,11 @@ Wait five minutes before moving to the next step.
 1. Enable the [health feature](enable-monitoring.md) for data connectors. 
 
 ## Troubleshooting
+
+Use the following guidance to resolve common issues when setting up the GCP Pub/Sub connectors.
+
 1. "Error 409: Requested entity already exists" When running terraform scripts:  import those existing GCP resources into Terraform state so Terraform manages them instead of trying to recreate them.
-For example, with error message: "Error creating WorkloadIdentityPool: googleapi: Error 409: Requested entity already exists", please find the pool ID and project ID, run:
+For example, with error message: "Error creating WorkloadIdentityPool: googleapi: Error 409: Requested entity already exists", import the existing workload identity pool into Terraform state so Terraform can manage it declaratively. Find the pool ID and project ID, then run:
 ```bash
 terraform import google_iam_workload_identity_pool.<POOL_RESOURCE_NAME> projects/<PROJECT_ID>/locations/global/workloadIdentityPools/<POOL_ID>
 ```
