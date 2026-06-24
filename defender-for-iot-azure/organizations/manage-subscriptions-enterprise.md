@@ -38,7 +38,7 @@ Before performing the procedures in this article, make sure that you have:
 
 This procedure describes how to start using a trial, standalone license for enterprise IoT monitoring, for customers who have a Microsoft Defender for Endpoint P2 license only.
 
-Customers with ME5/E5 Security plans have support for enterprise IoT monitoring available on by default, and don't need to start a trial. For more information, see [Get started with enterprise IoT monitoring in Microsoft Defender XDR](eiot-defender-for-endpoint.md).
+Customers with ME5/E5 Security plans have support for enterprise IoT monitoring available on by default, and don't need to start a trial. For more information, see [Get started with enterprise IoT monitoring in Microsoft Defender](eiot-defender-for-endpoint.md).
 
 Start your enterprise IoT trial using the [Microsoft Defender for IoT - EIoT Device License - add-on wizard](https://signup.microsoft.com/get-started/signup?products=b2f91841-252f-4765-94c3-75802d7c0ddb&ali=1&bac=1) or via the Microsoft 365 admin center.
 
@@ -85,7 +85,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 
 For example:
 
-- If in Microsoft Defender XDR **Device inventory**, you have *1204* IoT devices.
+- If in Microsoft Defender **Device inventory**, you have *1204* IoT devices.
 - Round down to *1200* devices.
 - You have 240 ME5 licenses, which cover **1200** devices
 
@@ -118,7 +118,7 @@ For more information, see the [Microsoft 365 admin center help](/microsoft-365/a
 
 ## Turn off enterprise IoT security
 
-This procedure describes how to turn off enterprise IoT monitoring in Microsoft Defender XDR, and is supported only for customers who don't have any standalone, per-device licenses added on to Microsoft Defender XDR.
+This procedure describes how to turn off enterprise IoT monitoring in Microsoft Defender, and is supported only for customers who don't have any standalone, per-device licenses added on to Microsoft Defender.
 
 Turn off the **Enterprise IoT security** option if you're no longer using the service. 
 
@@ -128,7 +128,7 @@ Turn off the **Enterprise IoT security** option if you're no longer using the se
 
 1. Toggle the option to **Off**.
 
-You stop getting security value in Microsoft Defender XDR, including purpose-built alerts, vulnerabilities, and recommendations.
+You stop getting security value in Microsoft Defender, including purpose-built alerts, vulnerabilities, and recommendations.
 
 ### Cancel a legacy Enterprise IoT plan
 
@@ -138,7 +138,7 @@ If you have a legacy Enterprise IoT plan, are *not* an ME5/E5 Security customer,
 
 1. Select **Cancel plan**. This page is available only for legacy Enterprise IoT plan customers.
 
-After you cancel your plan, the integration stops and you'll no longer get added security value in Microsoft Defender XDR, or detect new Enterprise IoT devices in Defender for IoT.
+After you cancel your plan, the integration stops and you'll no longer get added security value in Microsoft Defender, or detect new Enterprise IoT devices in Defender for IoT.
 
 The cancellation takes effect one hour after confirming the change.  The plan cancellation appears on your next monthly statement, and you're charged based on the length of time the plan was in effect.
 

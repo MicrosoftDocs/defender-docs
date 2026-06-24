@@ -1,11 +1,12 @@
 ---
-title: Migrate QRadar detection rules to Microsoft Sentinel | Microsoft Docs
-description: Identify, compare, and migrate your QRadar detection rules to Microsoft Sentinel built-in rules.
+title: Migrate QRadar detection rules to Microsoft Sentinel
+description: Learn how to inventory QRadar detection rules, map them to Microsoft Sentinel analytics rule types, and plan your migration using built-in detections or custom KQL queries.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 07/03/2025
-ms.custom: sfi-image-nochange
+ms.date: 06/15/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security engineer, I want to migrate QRadar detection rules to Microsoft Sentinel so that analysts can leverage machine learning analytics for more efficient threat detection and incident response.
 
@@ -71,7 +72,7 @@ Learn more about [best practices for migrating detection rules](https://techcomm
 
 1. When you're satisfied, you can consider the rule migrated. Create a playbook for your rule action as needed. For more information, see [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md).
 
-Learn more about analytics rules:
+For more information about Microsoft Sentinel analytics rules and KQL, see the following resources:
 
 - [**Scheduled analytics rules in Microsoft Sentinel**](scheduled-rules-overview.md). Use [alert grouping](scheduled-rules-overview.md#alert-grouping) to reduce alert fatigue by grouping alerts that occur within a given timeframe.
 - [**Map data fields to entities in Microsoft Sentinel**](map-data-fields-to-entities.md) to enable SOC engineers to define entities as part of the evidence to track during an investigation. Entity mapping also makes it possible for SOC analysts to take advantage of an intuitive [investigation graph](investigate-cases.md#use-the-investigation-graph-to-deep-dive) that can help reduce time and effort.
@@ -80,7 +81,7 @@ Learn more about analytics rules:
 
 ## Compare rule terminology
 
-This table helps you to clarify the concept of a rule in Microsoft Sentinel compared to QRadar.
+This table helps you to clarify the concept of a rule in Microsoft Sentinel compared to QRadar. Microsoft Sentinel rule types include scheduled queries, Fusion, Microsoft Security, and Machine Learning (ML) Behavior Analytics.
 
 | |QRadar |Microsoft Sentinel |
 |---------|---------|---------|
@@ -251,6 +252,8 @@ Here's the sample rule in QRadar.
 
 ### Event property tests: IP protocol example (KQL)
 
+Here's the event property tests rule with an IP protocol filter in KQL.
+
 ```kusto
 CommonSecurityLog
 | where Protocol in ("UDP","ICMP")
@@ -268,13 +271,14 @@ Here's the sample rule in QRadar.
 
 ### Event property tests: Event Payload string example (KQL)
 
+Here's the event property tests rule with an `Event Payload` string in KQL. To optimize performance, avoid using the `search` command if you already know the table name.
+
 ```kusto
 CommonSecurityLog
 | where DeviceVendor has "Palo Alto"
 
 search "Palo Alto"
 ```
-To optimize performance, avoid using the `search` command if you already know the table name.
 
 ### Functions: counters syntax
 
@@ -294,6 +298,8 @@ Here's the sample rule in QRadar.
 :::image type="content" source="media/migration-qradar-detection-rules/rule-4-sample-event-property.png" alt-text="Diagram illustrating a functions rule that uses event properties.":::
 
 ### Counters: Event property and time example (KQL)
+
+Here's the counters rule with event property and time conditions in KQL.
 
 ```kusto
 CommonSecurityLog
@@ -319,11 +325,13 @@ Here are two defined rules in QRadar. The negative conditions will be based on t
 
 :::image type="content" source="media/migration-qradar-detection-rules/rule-5-sample-2.png" alt-text="Diagram illustrating a common property tests rule to be used for a negative conditions rule.":::
 
-Here's a sample of the negative conditions rule based on the rules above.
+Here's a sample of the negative conditions rule based on the two previously defined QRadar rules (Test2 and Test6).
 
 :::image type="content" source="media/migration-qradar-detection-rules/rule-5-sample-3.png" alt-text="Diagram illustrating a functions rule with negative conditions.":::
 
 ### Negative conditions example (KQL)
+
+Here's the negative conditions rule with a `rightanti` join in KQL.
 
 ```kusto
 let spanoftime = 10m;
@@ -358,6 +366,8 @@ Here's the sample rule in QRadar.
 
 ### Simple conditions example (KQL)
 
+Here's the simple conditions rule in KQL.
+
 ```kusto
 CommonSecurityLog
 | where Protocol !in ("UDP","ICMP") or SourceIP == DestinationIP
@@ -381,6 +391,8 @@ Here's the sample rule in QRadar.
 
 ### IP/port tests: Source port example (KQL)
 
+Here's the IP/port tests rule with a source port filter in KQL.
+
 ```kusto
 CommonSecurityLog
 | where SourcePort == 20
@@ -398,6 +410,8 @@ Here's the sample rule in QRadar.
 
 ### IP/port tests: Source IP example (KQL)
 
+Here's the IP/port tests rule with a source IP filter in KQL.
+
 ```kusto
 CommonSecurityLog
 | where SourceIP in ("10.1.1.1","10.2.2.2")
@@ -408,7 +422,7 @@ Here's the QRadar syntax for a log source tests rule.
 
 :::image type="content" source="media/migration-qradar-detection-rules/rule-8-syntax.png" alt-text="Diagram illustrating the syntax of a log source tests rule.":::
 
-#### Log source example (QRadar)
+### Log source example (QRadar)
 
 Here's the syntax for a sample QRadar rule specifying log sources. 
 
@@ -419,7 +433,8 @@ Here's the sample rule in QRadar.
 
 :::image type="content" source="media/migration-qradar-detection-rules/rule-8-sample-1.png" alt-text="Diagram illustrating a rule that specifies log sources.":::
 
-#### Log source example (KQL)
+<a name="log-source-example-kql"></a>
+### Log source example (KQL)
 
 ```kusto
 OfficeActivity

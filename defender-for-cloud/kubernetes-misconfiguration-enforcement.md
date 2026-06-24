@@ -2,7 +2,9 @@
 title: Kubernetes misconfiguration enforcement (preview)
 description: Learn how to enable and configure Kubernetes misconfiguration enforcement in Microsoft Defender for Containers to audit or block misconfigured workloads at deployment time.
 #customer intent: As a Kubernetes administrator, I want to enforce Kubernetes security best practices at deployment time so that I can prevent misconfigured workloads from running in my clusters.
-ms.date: 06/03/2026
+author: dlanger
+ms.author: dlanger
+ms.date: 06/08/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
@@ -12,122 +14,157 @@ ai-usage: ai-assisted
 > [!IMPORTANT]
 > Kubernetes misconfiguration enforcement is currently in public preview. This feature is available only in commercial clouds. It isn't available in national or sovereign clouds, including US Government, China Government, and other sovereign regions.
 
-Microsoft Defender for Cloud extends Kubernetes security from detection to prevention with Kubernetes misconfiguration enforcement. This capability lets organizations audit or block insecure Kubernetes configurations at deployment time, helping teams stop misconfigurations before they become incidents. Misconfiguration enforcement evaluates Kubernetes resources during deployment and enforces Microsoft security best-practice rules consistently across clusters without relying on post-deployment scans or fragmented policy tools.
+Kubernetes misconfiguration enforcement is a Microsoft Defender for Containers capability that evaluates Kubernetes resources before they're admitted into a cluster. You can use it to audit or block deployments that don't meet Microsoft security best-practice rules.
 
-After you enable the feature, a default security rule named **Default K8s misconfiguration rule** is automatically created in Audit mode and applied globally to all your Kubernetes clusters. You can modify it to Block mode or create additional scoped policies to actively prevent non-compliant deployments.
+After you enable the feature, Defender for Containers creates a default security rule named **Default K8s misconfiguration rule**. The default rule is created in **Audit** mode and applies to all Kubernetes clusters in scope. You can change the rule action to **Block**, configure individual rules and parameters, or create custom policies for specific scopes.
 
-## Scope
+Use Kubernetes misconfiguration enforcement to help:
 
-- Applies to Kubernetes resource evaluation at deployment time.
-- Supports Audit and Block (enforcement) modes.
-- Enforces Microsoft security best-practice rules across clusters.
-
-## Use cases
-
-Kubernetes misconfiguration enforcement helps you:
-
-- Stop risky Kubernetes workloads before deployment by blocking containers with unsafe or non-compliant configurations.
-- Enforce non-root execution and approved user or group IDs so containers can't run with excessive OS privileges.
-- Prevent containers from automatically mounting Kubernetes API credentials to reduce blast radius if a pod is compromised.
-- Block use of the default Kubernetes namespace to reduce accidental exposure and privilege leakage.
-- Protect the host by preventing containers from sharing sensitive host namespaces such as PID, IPC, or network.
-- Reduce supply-chain risk by allowing only container images from trusted registries or approved patterns.
-- Prevent denial-of-service and noisy-neighbor scenarios by enforcing CPU and memory limits on all containers.
-- Protect data in transit by requiring HTTPS for Kubernetes Ingress resources.
-- Enforce least privilege at runtime by blocking containers that allow privilege escalation to root.
-- Prevent high-impact security incidents by blocking fully privileged containers entirely.
-- Stop runtime tampering and persistence by requiring containers to run with a read-only root filesystem.
+- Audit or block Kubernetes workloads with unsafe security configurations.
+- Enforce non-root execution and approved user or group IDs.
+- Prevent automatic mounting of Kubernetes API credentials.
+- Block workloads from running in the default Kubernetes namespace.
+- Prevent containers from sharing sensitive host namespaces, such as PID, IPC, or network.
+- Restrict container images to trusted registries or approved patterns.
+- Enforce CPU and memory limits.
+- Require HTTPS for Kubernetes Ingress resources.
+- Block privilege escalation and fully privileged containers.
+- Require containers to use a read-only root filesystem.
 
 ## Prerequisites
 
-**Environmental requirements**
+Before you begin, make sure that:
 
-| **Requirement** | **Details** |
-|-----------------|-------------|
-| Defender plan | Enable Defender for Containers on the subscription or cloud account where the Kubernetes cluster is running. |
-| Defender sensor (Azure) | Enable the Defender sensor in the plan, or enable Kubernetes API Access. |
-| Agentless Threat Protection (AWS/GCP) | For AWS and GCP scenarios, also enable Agentless Threat Protection in the plan. |
-| Kubernetes cluster | Supported cluster running in a commercial cloud environment: AKS, EKS, or GKE. |
-| VAP policies | The Kubernetes cluster must have VAP policies enabled. Kubernetes 1.30 and later versions enable these policies by default. |
+- [Defender for Containers is enabled on the subscription or cloud account](defender-for-containers-enable-plan.md) where the Kubernetes cluster is running.
 
-**Required roles and permissions**
+- Your Kubernetes cluster is supported and runs in a commercial cloud environment.
 
-| **Role** | **Access** |
-|----------|------------|
-| Subscription Owner or Security Admin | Required to enable and manage deployment-time enforcement policies. |
-| Security Reader or equivalent | Required for visibility and monitoring only. |
+- The cluster uses AKS, EKS, or GKE.
 
-**Supported cloud environments**
+- Kubernetes ValidatingAdmissionPolicy is enabled on the cluster. Kubernetes 1.30 and later versions enable this capability by default.
 
-- Available in commercial clouds: Azure, AWS, and GCP.
-- Not available in national or sovereign clouds, including US Government, China Government, and other sovereign regions.
+- Helm is installed and available in your command-line environment.
 
-## Enable the feature
+- You have the required permissions:
 
-Kubernetes misconfiguration enforcement requires the Defender for Containers sensor (version 0.11) to be deployed to your cluster with misconfiguration policies enabled.
+  - To enable and manage deployment-time enforcement policies, you need **Subscription Owner** or **Security Admin** permissions.
+  - To view policies and monitoring information, you need **Security Reader** or equivalent permissions.
 
-1. Follow the [Helm installation guide for the Defender for Containers sensor](defender-for-containers-deploy-azure-cli.md) for your environment. Use the latest `0.11.*` tag from the following Helm repository:
+## Enable misconfiguration enforcement
 
-    ```
-    oci://mcr.microsoft.com/azuredefender-preview/microsoft-defender-for-containers
-    ```
+> [!NOTE]
+> During public preview, Kubernetes misconfiguration enforcement is enabled by installing the Defender for Containers sensor with the preview Helm chart. At general availability (GA), this Helm-based enablement flow won't be required. Customers will still be able to use Helm, but it won't be the only supported onboarding method.
 
-1. When installing the chart, include the following value in addition to those specified in the general guide:
+Kubernetes misconfiguration enforcement requires the Defender for Containers sensor version 0.11 to be deployed to your cluster with misconfiguration policies enabled.
+
+1. Follow the [Helm installation guide for the Defender for Containers sensor](deploy-helm.md) for your environment.
+
+1. During Helm chart installation, use the latest `0.11.*` tag from the following Helm repository:
+
+   ```bash
+   oci://mcr.microsoft.com/azuredefender-preview/microsoft-defender-for-containers
+   ```
+
+1. Include the following value:
 
     ```
     defender-admission-controller.enableMisconfigurationPolicies=true
     ```
 
-After you deploy the sensor with this value, the feature is active and the default audit rule is created automatically in the portal.
+After you deploy the sensor with this value, misconfiguration enforcement is active and the default audit rule is created automatically in the portal.
 
-## Configure misconfiguration enforcement rules
+## Create a misconfiguration enforcement policy
 
-By default, the portal creates the **Default K8s misconfiguration rule** in Audit mode, scoped to all resources. While in Audit mode, the admission controller logs violations but still allows deployments to proceed. You can modify the default rule's action or create additional rules scoped to specific subscriptions, clusters, or namespaces.
+By default, Defender for Containers creates the **Default K8s misconfiguration rule** in **Audit** mode, scoped to all resources. While in **Audit** mode, the admission controller logs violations but allows deployments to continue. You can create custom policies scoped to specific subscriptions, clusters, or namespaces.
 
-1. Go to **Microsoft Defender for Cloud** > **Environment Settings**.
-1. Select the relevant subscription, AWS account, or GCP project.
-1. Select the **Security Rules** tile.
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select **Security rules**.
 
     :::image type="content" source="media/kubernetes-misconfiguration-enforcement/security-rules.png" alt-text="Screenshot of the Security Rules tile in Environment Settings." lightbox="media/kubernetes-misconfiguration-enforcement/security-rules.png":::
 
-1. Select the **Misconfiguration** tab to view available policies.
+1. Select **Gated deployment** > **Misconfigurations** to view available policies.
 
     :::image type="content" source="media/kubernetes-misconfiguration-enforcement/misconfigurations.png" alt-text="Screenshot of the Misconfiguration tab in Security Rules showing the default policy." lightbox="media/kubernetes-misconfiguration-enforcement/misconfigurations.png":::
 
-1. Open an existing policy to edit it, or select **Create new policy** to create a scoped policy.
+1. Select **Create new policy**.
+
+1. Enter a **Policy name**.
 
     :::image type="content" source="media/kubernetes-misconfiguration-enforcement/create-new-policy.png" alt-text="Screenshot of the Create new policy panel showing Policy name and Action fields." lightbox="media/kubernetes-misconfiguration-enforcement/create-new-policy.png":::
 
-1. Configure the policy:
-    - **Policy name**: Enter a unique name.
-    - **Action**: Choose **Audit** to log violations without blocking, or **Block** to deny non-compliant deployments.
-    - **Scope**: Select the cloud scope (Azure subscription, AWS account, or GCP project) and Kubernetes scope (cluster, namespace) to target.
-1. Select the **Rules** tab. Enable or disable individual rules and configure parameters for rules that support customization.
+1. Select an **Action**:
+
+   - **Audit**: Logs violations without blocking deployments.
+   - **Block**: Denies noncompliant deployments.
+
+   > [!NOTE]
+   > Selecting **Block** mode can introduce a short delay during deployments because of real-time policy enforcement.
+
+1. If needed, enter a **Rule description**.
+
+1. Enter a **Scope name**.
+
+1. Select the **Cloud scope**.
+
+1. Under **Resource scope**, keep the default scope or select **Add condition** to narrow the rule scope.
+
+1. Select **Next**.
+
+1. Select the checkbox next to each rule that you want to enable.
 
     :::image type="content" source="media/kubernetes-misconfiguration-enforcement/choose-policy-rules.png" alt-text="Screenshot of the Rules tab showing individual rules that can be enabled or disabled." lightbox="media/kubernetes-misconfiguration-enforcement/choose-policy-rules.png":::
 
-1. To configure parameters for a specific rule, select the rule name.
+1. To configure parameters for a rule, select the rule name.
+
+   Some rules include configurable parameters. If parameters are available, update them as needed, and then select **Save**.
 
     :::image type="content" source="media/kubernetes-misconfiguration-enforcement/configure-rule.png" alt-text="Screenshot of the rule configuration panel showing customizable parameters and their default values." lightbox="media/kubernetes-misconfiguration-enforcement/configure-rule.png":::
 
-1. Select **Save** to activate the policy. The updated parameters appear in the **Rules** table.
+1. Select **Next**.
 
-> [!NOTE]
-> Selecting **Block** mode can introduce a short delay during deployments because of real-time policy enforcement.
+1. Review the policy configuration.
+
+1. Select **Add policy**.
+
+## Edit a misconfiguration enforcement policy
+
+You can edit an existing misconfiguration enforcement policy to update its action, enabled rules, and configurable rule parameters.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
+
+1. Select **Security rules**.
+
+1. Select **Gated deployment** > **Misconfigurations**.
+
+1. Select the checkbox next to the policy that you want to edit.
+
+1. Select **Edit**.
+
+1. Update the policy settings as needed.
+
+1. Select **Save policy**.
 
 ### Default policy limitations
 
-The built-in **Default K8s misconfiguration rule** has the following constraints:
+The built-in **Default K8s misconfiguration rule** has the following limitations:
 
-- You can change the **Action** between Audit and Block.
-- You can enable or disable individual rules and configure their parameters.
+- You can change the **Action** between **Audit** and **Block**.
+- You can enable or disable individual rules.
+- You can configure parameters for rules that support customization.
 - You can't edit the policy name, description, or scope.
 
 Custom policies you create don't have these restrictions.
 
 ## Built-in misconfiguration rules
 
-Misconfiguration Enforcement includes built-in rules based on Microsoft Defender security best practices. These rules cover:
+Kubernetes misconfiguration enforcement includes built-in rules based on Microsoft security best practices.
+
+Built-in rules help enforce controls for:
 
 - **Container resource limits (CPU and memory)**: Ensures containers don't exceed specified limits to prevent resource exhaustion.
 - **Privilege and capability management**: Prevents containers from running with elevated privileges, unnecessary Linux capabilities, or privilege escalation paths.
@@ -143,15 +180,10 @@ You can enable or disable individual rules within a policy and configure paramet
 
 ## Related content
 
-- [Enable gated deployment in Defender for Containers](enablement-guide-runtime-gated.md)
-  Configuration steps for gated deployment, which enforces container image vulnerability policies at deployment time.
+- [Enable Defender for Containers in Microsoft Defender for Cloud](defender-for-containers-enable-plan.md)
 
-- [Overview: Gated Deployment of Container Images to a Kubernetes Cluster](runtime-gated-overview.md)
-  Introduction to gated deployment, its benefits, key capabilities, and how it works.
+- [Install Defender for Containers sensor using Helm](deploy-helm.md)
 
-- [FAQ: Gated Deployment in Defender for Containers](faq-runtime-gated.md)
-  Answers to common questions about gated deployment behavior and configuration.
+- [Defender for Containers support matrix](support-matrix-defender-for-containers.md)
 
-- [Troubleshooting Guide: Gated Deployment and Developer Experience](troubleshooting-runtime-gated.md)
-  Help resolving onboarding issues, deployment failures, and interpreting developer-facing messages.
-
+- [Gated deployment for Kubernetes container images](runtime-gated-overview.md)

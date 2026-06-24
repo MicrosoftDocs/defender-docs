@@ -1,10 +1,12 @@
 ---
-title: Migrate IBM Security QRadar SOAR automation to Microsoft Sentinel | Microsoft Docs
+title: Migrate IBM Security QRadar SOAR automation to Microsoft Sentinel
 description: Learn how to identify SOAR use cases, and how to migrate your QRadar SOAR automation to Microsoft Sentinel.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 05/03/2022
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security engineer, I want to migrate my SOAR automation from IBM Security QRadar to Microsoft Sentinel so that I can streamline incident response and enhance threat remediation using Microsoft Sentinel's advanced automation capabilities.
@@ -57,15 +59,15 @@ Review which Microsoft Sentinel or Azure Logic Apps features map to the main QRa
 |Custom action processors |[Custom API calls](/azure/logic-apps/logic-apps-create-api-app) in Azure Logic Apps or third party connectors |
 |Functions |[Azure Function connector](/azure/logic-apps/logic-apps-azure-functions) |
 |Message destinations |[Azure Logic Apps with Azure Service Bus](/azure/connectors/connectors-create-api-servicebus) |
-|IBM X-Force Exchange |• [Automation > Templates tab](use-playbook-templates.md)<br>• [Content hub catalog](sentinel-solutions-catalog.md)<br>• [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser) |
+|IBM X-Force Exchange |• [Automation > Templates tab](use-playbook-templates.md)<br>• [Content hub catalog](sentinel-solutions-catalog.md)<br>• [Microsoft Sentinel playbooks on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser) |
 
 ## Operationalize playbooks and automation rules in Microsoft Sentinel
 
-Most of the playbooks that you use with Microsoft Sentinel are available in either the [Automation > Templates tab](use-playbook-templates.md), the [Content hub catalog](sentinel-solutions-catalog.md), or [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser). In some cases, however, you might need to create playbooks from scratch or from existing templates.
+Most of the playbooks that you use with Microsoft Sentinel are available in either the [Automation > Templates tab](use-playbook-templates.md), the [Content hub catalog](sentinel-solutions-catalog.md), or [Microsoft Sentinel playbooks on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser). In some cases, however, you might need to create playbooks from scratch or from existing templates.
 
 You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview), which facilitate development, deployment and portability of Azure Logic Apps across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
 
-Use these resources for cases where you need to build your own playbooks either from scratch or from existing templates.
+Use the following articles and blog posts for cases where you need to build your own playbooks either from scratch or from existing templates.
 - [Automate incident handling in Microsoft Sentinel](automate-incident-handling-with-automation-rules.md)
 - [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md)
 - [Tutorial: Use playbooks with automation rules in Microsoft Sentinel](tutorial-respond-threats-playbook.md)
@@ -79,7 +81,7 @@ Here are best practices you should take into account after your SOAR migration:
 - After you migrate your playbooks, test the playbooks extensively to ensure that the migrated actions work as expected.
 - Periodically review your automations to explore ways to further simplify or enhance your SOAR. Microsoft Sentinel constantly adds new connectors and actions that can help you to further simplify or increase the effectiveness of your current response implementations.
 - Monitor the performance of your playbooks using the [Playbooks health monitoring workbook](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-monitoring-your-logic-apps-playbooks-in-azure/ba-p/1873211).
-- Use managed identities and service principals: Authenticate against various Azure services within your Logic Apps, store the secrets in Azure Key Vault, and obscure the output of the flow execution. We also recommend that you [monitor the activities of these service principals](https://techcommunity.microsoft.com/t5/azure-sentinel/non-interactive-logins-minimizing-the-blind-spot/ba-p/2287932).
+- Use managed identities and service principals: Authenticate against various Azure services within your Logic Apps, store the secrets in Azure Key Vault, and obscure the output of the flow execution. We also recommend that you [monitor the activities of the service principals used by your Logic Apps](https://techcommunity.microsoft.com/t5/azure-sentinel/non-interactive-logins-minimizing-the-blind-spot/ba-p/2287932).
 
 ## Next steps
 

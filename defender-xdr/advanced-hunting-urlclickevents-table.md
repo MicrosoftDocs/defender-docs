@@ -66,7 +66,7 @@ UrlClickEvents
 
 ## Related articles
 
-- [Supported Microsoft Defender XDR streaming event types in event streaming API](supported-event-types.md)
+- [Supported Microsoft Defender streaming event types in event streaming API](supported-event-types.md)
 - [Proactively hunt for threats](advanced-hunting-overview.md)
 - [Safe Links in Microsoft Defender for Office 365](/defender-office-365/safe-links-about)
 - [Take action on advanced hunting query results](advanced-hunting-take-action.md)

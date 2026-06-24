@@ -43,7 +43,7 @@ To investigate Microsoft Purview Data Loss Prevention incidents in the Microsoft
 - Microsoft 365 E5/A5 Information Protection and Governance
 
 > [!NOTE]
-> When you are licensed and eligible for this feature, DLP alerts will automatically flow into Microsoft Defender XDR. If you don't want DLP alerts to flow into Defender, open a support case to disable this feature. If you disable automatic DLP alert flow into Microsoft Defender XDR, DLP alerts will surface in the Defender portal as Microsoft Defender for Office alerts.
+> When you are licensed and eligible for this feature, DLP alerts will automatically flow into Microsoft Defender. If you don't want DLP alerts to flow into Defender, open a support case to disable this feature. If you disable automatic DLP alert flow into Microsoft Defender, DLP alerts will surface in the Defender portal as Microsoft Defender for Office alerts.
 
 ### Roles
 

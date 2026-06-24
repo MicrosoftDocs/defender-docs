@@ -1,8 +1,10 @@
 ---
 title: Configure Pluggable Authentication Modules (PAM) to audit sign-in events (Preview)
 description: Learn how to configure Pluggable Authentication Modules (PAM) to audit sign-in events when syslog isn't configured for your device. 
-ms.date: 02/20/2022
+ms.date: 06/12/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure Pluggable Authentication Modules (PAM) to audit sign-in events
@@ -59,7 +61,7 @@ This example in this procedure is based on an unmodified Ubuntu 18.04 or 20.04 i
     auth    requisite           pam_deny.so
     ```
 
-    This section authenticates via the `pam_unix.so` module. In case of authentication failure, this section continues to the `pam_deny.so` module to prevent access.
+    The `common-auth` configuration shown above authenticates via the `pam_unix.so` module. In case of authentication failure, the configuration continues to the `pam_deny.so` module to prevent access.
 
 1. Replace the indicated lines of code with the following:
 
@@ -72,7 +74,7 @@ This example in this procedure is based on an unmodified Ubuntu 18.04 or 20.04 i
     auth	requisite			pam_deny.so
     ```
 
-    In this modified section, PAM skips one module to the `pam_echo.so` module, and then skips the `pam_deny.so` module and authenticates successfully.
+    In the modified `/etc/pam.d/common-auth` configuration shown above, PAM skips one module to the `pam_echo.so` module, and then skips the `pam_deny.so` module and authenticates successfully.
 
     In case of failure, PAM continues to report the sign-in failure to the agent log file, and then skips one module to the `pam_deny.so` module, which blocks access.
 

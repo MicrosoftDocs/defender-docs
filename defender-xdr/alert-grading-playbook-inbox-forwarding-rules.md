@@ -1,6 +1,6 @@
 ---
 title: Alert classification for suspicious inbox forwarding rules
-description: Alert classification for suspicious inbox forwarding rules to review the alerts and take recommended actions to remediate the attack and protect your network.
+description: Investigate suspicious inbox forwarding rule alerts, classify them as true or false positives, and follow recommended remediation steps to protect your network.
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
@@ -8,11 +8,12 @@ ms.localizationpriority: medium
 ms.collection: 
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
-ms.date: 04/18/2025
+ms.date: 06/15/2026
 appliesto:
   - Microsoft Defender XDR
+ai-usage: ai-assisted
 #customer intent: As a SOC analyst, I want to know how to review and classify suspicious inbox forwarding rules alerts so that I can take the necessary actions to remediate the attack and protect my network.
 ---
 
@@ -22,7 +23,7 @@ appliesto:
 
 Threat actors can use compromised user accounts for several malicious purposes including reading emails in a user's inbox, creating inbox rules to forward emails to external accounts, sending phishing mails, among others. Malicious inbox rules are widely common during business email compromise (BEC) and phishing campaigns, and it important to monitor them consistently. This playbook helps you investigate alerts for suspicious inbox forwarding rules and quickly grade them as either a true positive (TP) or a false positive (FP). You can then take recommended actions for the TP alerts to remediate the attack.
 
-For an overview of alert classification for Microsoft Defender for Office 365 and Microsoft Defender for Cloud Apps, see the [introduction article](alert-classification-playbooks.md).
+For an overview of alert classification for Microsoft Defender for Office 365 and Microsoft Defender for Cloud Apps, see the [Alert classification playbooks overview](alert-classification-playbooks.md).
 
 The results of using this playbook are:
 
@@ -32,11 +33,13 @@ The results of using this playbook are:
 
 - You've taken the necessary action if emails have been forwarded to a malicious email address.
 
-## Inbox forwarding rules
+<a name="inbox-forwarding-rules"></a>
+## Overview of inbox forwarding rules
 
 You configure inbox rules to automatically manage email messages based on predefined criteria. For example, you can create an inbox rule to move all messages from your manager into another folder, or forward messages you receive to another email address.
 
-### Suspicious inbox forwarding rules
+<a name="suspicious-inbox-forwarding-rules"></a>
+### How attackers use suspicious inbox forwarding rules
 
 After gaining access to users' mailboxes, attackers often create an inbox rule that allows them to exfiltrate sensitive data to an external email address and use it for malicious purposes.
 
@@ -44,7 +47,8 @@ Malicious inbox rules automate the exfiltration process. With specific rules, ev
 
 Suspicious inbox forwarding rules might be difficult to detect because maintenance of inbox rules is common task done by users. Therefore, it's important to monitor the alerts.
 
-## Workflow
+<a name="workflow"></a>
+## Investigation workflow for suspicious inbox forwarding rules
 
 Here's the workflow to identify suspicious email forwarding rules.
 
@@ -52,7 +56,7 @@ Here's the workflow to identify suspicious email forwarding rules.
 
 ## Investigation steps
 
-This section contains detailed step-by-step guidance to respond to the incident and take the recommended steps to protect your organization from further attacks.
+Use the following steps to investigate suspicious inbox forwarding rule alerts, respond to the incident, and protect your organization from further attacks.
 
 ### Review generated alerts
 
@@ -118,7 +122,7 @@ CloudAppEvents
 
 *RuleConfig* will contain the rule configuration.
 
-Run this query to check whether the ISP is common for the user by looking at the history of the user.
+After you review the inbox rule events, check whether the ISP that created the rule is typical for the affected user. Run this query to compare the ISP against the user's 30-day history.
 
 ```kusto
 let alert_date = now(); //enter alert date
@@ -168,6 +172,8 @@ CloudAppEvents
 ```
 
 ## Recommended actions
+
+If you confirm that the inbox forwarding rule is malicious, take the following actions to remediate the attack:
 
 1. Disable the malicious inbox rule.
 2. Reset the user's account credentials. You can also verify if the user account has been compromised with Microsoft Defender for Cloud Apps, which gets security signals from Microsoft Entra ID Protection.

@@ -64,7 +64,7 @@ As needed for in-process incidents, continue your [investigation](investigate-in
 
 ## See also
 
-- [Investigate alerts in Microsoft Defender XDR](investigate-alerts.md)
+- [Investigate alerts in Microsoft Defender](investigate-alerts.md)
 - [Incidents overview](incidents-overview.md)
 - [Manage incidents](manage-incidents.md)
 - [Investigate incidents](investigate-incidents.md)
