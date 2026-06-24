@@ -1,13 +1,15 @@
 ---
 title: Delete incidents in Microsoft Sentinel in the Azure portal
-description: Delete incidents in Microsoft Sentinel from the Azure portal, through the API, or using a Logic App.
+description: Delete incidents in Microsoft Sentinel from the Azure portal or through the API, with guidance on when deletion is appropriate.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 08/22/2022
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a security analyst, I want to delete duplicate or erroneous incidents in my incident management system so that I can maintain an accurate and efficient incident queue.
 ---
 
@@ -34,6 +36,8 @@ In all other cases, when an incident is no longer needed, it should be **closed*
 
 ## Delete an incident using the Azure portal
 
+You can delete one or more incidents directly from the Azure portal incident queue.
+
 **To delete a single incident:**
 
 1. From the Microsoft Sentinel navigation menu, select **Incidents**.
@@ -48,7 +52,7 @@ In all other cases, when an incident is no longer needed, it should be **closed*
 1. Answer **Yes** to the confirmation prompt that appears.
     :::image type="content" source="media/delete-incident/delete-incident-confirm.png" alt-text="Screenshot of single incident deletion confirmation dialog.":::
 
-Alternatively, you can follow the instructions for deleting multiple incidents (immediately below), and mark a single incident's checkbox.
+Alternatively, you can delete a single incident from the incident queue by selecting only one checkbox and using the multi-delete flow described in the following procedure.
 
 **To delete multiple incidents:**
 
@@ -64,9 +68,9 @@ Alternatively, you can follow the instructions for deleting multiple incidents (
 
 ## Delete an incident using the Microsoft Sentinel API
 
-The [Incidents](/rest/api/securityinsights/preview/incidents) operation group allows you to delete incidents as well as to [create and update (edit)](/rest/api/securityinsights/preview/incidents/create-or-update), [get (retrieve)](/rest/api/securityinsights/preview/incidents/get), and [list](/rest/api/securityinsights/preview/incidents/list) them.
+The [Incidents](/rest/api/securityinsights/preview/incidents) operation group allows you to delete incidents as well as to [create and update (edit)](/rest/api/securityinsights/preview/incidents/create-or-update), [get (retrieve)](/rest/api/securityinsights/preview/incidents/get), and [list incidents](/rest/api/securityinsights/preview/incidents/list).
 
-You [delete an incident](/rest/api/securityinsights/preview/incidents/delete) using the following endpoint. After this request is made, the incident will be visible in the incident queue in the portal.
+You [delete an incident](/rest/api/securityinsights/preview/incidents/delete) by sending a `DELETE` request to the following endpoint, specifying the target incident by its incident ID. After this request is made, the incident will no longer be visible in the incident queue in the portal.
 
 ```http
 DELETE https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/incidents/{incidentId}?api-version=2022-07-01-preview
