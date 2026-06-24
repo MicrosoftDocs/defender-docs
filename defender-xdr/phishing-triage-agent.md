@@ -1,6 +1,6 @@
 ---
 title: Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender
-description: Learn about the Security Copilot Phishing Triage Agent, including requirements for setup and providing feedback to the agent.
+description: Learn how the Security Copilot Phishing Triage Agent in Microsoft Defender uses AI to triage and classify user-reported phishing emails, set up the agent, provide feedback, and monitor its performance.
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
@@ -11,11 +11,13 @@ ms.collection:
 - security-copilot
 - magic-ai-copilot 
 ms.topic: how-to
-ms.date: 02/22/2026
+ms.date: 06/15/2026
 ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Office 365 Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As a security analyst, I want to learn about the Phishing Triage Agent in Microsoft Defender so that I can triage and classify user-submitted phishing incidents efficiently.
 ---
 
@@ -106,7 +108,7 @@ For more information about unified RBAC in the Defender portal, see [Microsoft D
 
 ## Set up the Phishing Triage Agent
 
-Make sure you have the [permissions required](#permissions-required) and all [prerequisites](#prerequisites) are met before setting up the agent.
+Make sure you have the [permissions required for the Phishing Triage Agent](#permissions-required) and all [prerequisites for the Phishing Triage Agent](#prerequisites) are met before setting up the agent.
 
 ### Begin setup
 
@@ -117,7 +119,7 @@ Open the Phishing Triage Agent setup wizard in one of two ways:
 
    :::image type="content" source="media/phishing-triage-agent/phishing-triage-setup-incident.png" alt-text="Screenshot of the incident queue with the Phishing Triage card where Set up agent is highlighted." lightbox="media/phishing-triage-agent/phishing-triage-setup-incident.png":::
 
-Follow the steps in the setup wizard, as described in the sections below.
+Follow the steps in the setup wizard, as described in [Assign the agent's identity and permissions](#assign-the-agents-identity-and-permissions).
 
 ### Assign the agent’s identity and permissions
 
@@ -157,7 +159,7 @@ In alignment with [the principle of least privileges](/entra/identity-platform/s
 
    :::image type="content" source="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG" alt-text="Screenshot of the Create a new agent identity screen in the Phishing Triage Agent setup wizard." lightbox="media/phishing-triage-agent/setup-assign-entra-agent-id.PNG":::   
 
-- If you use an existing user account, you need to [assign the required permissions](#phishing-triage-agent-required-permissions) to that identity before assigning the agent identity during setup - you can't do this from the setup wizard.
+- If you use an existing user account, you need to assign the [Phishing Triage Agent required permissions](#phishing-triage-agent-required-permissions) to that identity before assigning the agent identity during setup - you can't do this from the setup wizard.
 
    :::image type="content" source="media/phishing-triage-agent/setup-assign-user.PNG" alt-text="Screenshot of the Connect with an existing user accout screen in the Phishing Triage Agent setup wizard" lightbox="media/phishing-triage-agent/setup-assign-user.PNG":::
 
@@ -263,7 +265,7 @@ Lessons provide systematic guidelines that help the agent determine whether an a
 1. **Ensure feedback is relevant and contextual.** Feedback should pertain only to the email currently under review. It must also align with the updated classification you’ve assigned.
 1. **Be descriptive and specific.** Clearly explain the characteristics of the email. Provide relevant details like the email subject, message body, sender, or recipients to help the agent understand the context. Specific feedback with multiple details enhances effectiveness.
 1. **Ensure clarity and decisiveness.** Avoid vague or universal statements. Give feedback that's clear and actionable. Use decisive and clear identification terms.
-1. **Be consistent with previous feedback.** Ensure that new feedback aligns with what was previously provided to avoid contradictions that could confuse the agent or reduce the accuracy of its decisions. You can review all previously submitted input on the [Feedback](#view-and-manage-feedback-to-the-agent) management page.
+1. **Be consistent with previous feedback.** Ensure that new feedback aligns with what was previously provided to avoid contradictions that could confuse the agent or reduce the accuracy of its decisions. You can review all previously submitted input on the [agent feedback management](#view-and-manage-feedback-to-the-agent) page.
 1. **Review the agent’s interpretation of your feedback.** When you submit feedback, always verify that the feedback is accurately translated into a lesson. Confirm that the lesson reflects your intent and maintains consistency with your original input. Checking the validity of AI-generated responses to ensure they're applicable to the scenario.
 
 Here are examples of how you can write your feedback to the agent.
@@ -401,7 +403,7 @@ To remove the agent:
 
 ## Frequently asked questions
 
-Following are responses to commonly asked questions about the Phishing Triage Agent. For information about the agent's capabilities and requirements, see [How the agent works](#how-the-agent-works) and [prerequisites](#prerequisites) sections of this article.
+Following are responses to commonly asked questions about the Phishing Triage Agent. For information about the agent's capabilities and requirements, see [How the agent works](#how-the-agent-works) and [Prerequisites](#prerequisites).
 
 ### When is the agent triggered?
 
@@ -417,7 +419,7 @@ Microsoft AI agents follow strict Responsible AI guidelines and undergo thorough
 
 ### How does the agent differ from a standard SOAR solution?
 
-While both SOAR solutions and the Phishing Triage Agent aim to automate aspects of security operations, their approaches are fundamentally different. SOAR tools rely on static, policy- and rule-based workflows that require predefined logic and manual tuning. In contrast, the agent uses recursive reasoning to autonomously complete tasks—learning, adapting, and improving over time.
+While both security orchestration, automation, and response (SOAR) solutions and the Phishing Triage Agent aim to automate aspects of security operations, their approaches are fundamentally different. SOAR tools rely on static, policy- and rule-based workflows that require predefined logic and manual tuning. In contrast, the agent uses recursive reasoning to autonomously complete tasks—learning, adapting, and improving over time.
 
 The agent doesn’t need to be reprogrammed for every new situation. Within defined boundaries, it adjusts to the task at hand, making it far more flexible than traditional automation. Rather than being rigid and reactive, it continuously evolves with your environment and threat landscape, guided by analyst feedback and grounded in real data. Purpose-built for security teams, the Phishing Triage Agent helps accelerate responses and reduces manual workloads, freeing up analysts to focus on strategic initiatives.
 
