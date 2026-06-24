@@ -1,12 +1,13 @@
 ---
 title: Manage EIoT monitoring support | Microsoft Defender for IoT
 description: Learn how to manage your EIoT monitoring support with Microsoft Defender for IoT.
-ms.date: 09/13/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - enterprise-iot
   - sfi-image-nochange
 #CustomerIntent: As a Defender for IoT customer, I want to understand how to manage my EIoT monitoring support with Microsoft Defender for IoT so that I can best plan my deployment.
+ai-usage: ai-assisted
 ---
 
 # Manage enterprise IoT monitoring support with Microsoft Defender for IoT
@@ -61,7 +62,7 @@ Start your enterprise IoT trial using the [Microsoft Defender for IoT - EIoT Dev
 > Make sure to [assign your licenses to specific users](/microsoft-365/admin/manage/assign-licenses-to-users) to start using them.
 >
 
-For more information, see [Free trial](billing.md#free-trial).
+For more information, see [Defender for IoT free trial billing details](billing.md#free-trial).
 
 ## Calculate monitored devices for Enterprise IoT monitoring
 
@@ -139,7 +140,7 @@ If you have a legacy Enterprise IoT plan, are *not* an ME5/E5 Security customer,
 
 After you cancel your plan, the integration stops and you'll no longer get added security value in Microsoft Defender, or detect new Enterprise IoT devices in Defender for IoT.
 
-The cancellation takes effect one hour after confirming the change.  This change appears on your next monthly statement, and you're charged based on the length of time the plan was in effect.
+The cancellation takes effect one hour after confirming the change.  The plan cancellation appears on your next monthly statement, and you're charged based on the length of time the plan was in effect.
 
 ## Next steps
 

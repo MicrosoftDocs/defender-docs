@@ -1,14 +1,15 @@
 ---
 title: Investigate CIS benchmark recommendation
-description: Perform basic and advanced investigations based on OS baseline recommendations.
-ms.date: 05/03/2022
+description: Investigate CIS benchmark recommendation results in Microsoft Defender for IoT using basic portal analysis and advanced Log Analytics queries for OS baseline findings.
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Investigate OS baseline (based on CIS benchmark) recommendation
 
-Perform basic and advanced investigations based on OS baseline recommendations.
+Microsoft Defender for IoT evaluates OS configurations against CIS benchmarks and raises recommendations when a device doesn't meet baseline security checks. This article walks you through two investigation approaches: a basic investigation using the Defender for IoT portal, and an advanced investigation that uses Azure Log Analytics to query OS baseline test results, identify failed checks, and pinpoint affected devices across your fleet. The advanced investigation requires a Log Analytics workspace connected to Defender for IoT. For details, see the [prerequisites](#advanced-os-baseline-security-recommendation-investigation) in the advanced investigation section.
 
 ## Basic OS baseline security recommendation investigation
 
@@ -16,7 +17,7 @@ You can investigate OS baseline recommendations by navigating to [Defender for I
 
 ## Advanced OS baseline security recommendation investigation
 
-This section describes how to better understand the OS baseline test results, and querying events in Azure Log Analytics.
+The advanced investigation workflow helps you understand OS baseline test results and query related events in Azure Log Analytics.
 
 **Prerequisites**:
 
@@ -41,6 +42,8 @@ For example:
 >
 
 ## Useful queries to investigate the OS baseline resources
+
+Use the following Kusto queries in your Log Analytics workspace to retrieve the latest OS baseline check results for your devices.
 
 > [!Note]
 > Make sure to replace `<device-id>` with the name(s) you gave your device in each of the following queries.
@@ -106,6 +109,6 @@ For example:
     project DeviceId;
     ```
 
-## Next steps
+## Related content
 
-[Investigate security recommendations](quickstart-investigate-security-recommendations.md).
+- [Investigate security recommendations](quickstart-investigate-security-recommendations.md)

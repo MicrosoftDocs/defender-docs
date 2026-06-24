@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-ms.date: 03/17/2026
+ms.date: 06/17/2026
 ms.collection:
 - m365-security
 - tier3
@@ -16,6 +16,8 @@ ms.subservice: linux
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure security settings in Microsoft Defender for Endpoint on Linux
@@ -49,7 +51,7 @@ You can use the command line to configure specific settings, gather diagnostics,
 
 ### Defender for Endpoint Security Settings Management
 
-You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([https://security.microsoft.com](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>.
+You can configure Defender for Endpoint on Linux in the Microsoft Defender portal at ([Microsoft Defender portal](https://security.microsoft.com)) using Defender for Endpoint Security Settings Management. For more information, including how to create, edit, and verify security policies, see <a href="/intune/intune-service/protect/mde-security-integration" target="_blank" rel="noopener noreferrer">Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus</a>.
 
 ### Configuration profile
 
@@ -57,7 +59,7 @@ You can configure settings in Defender for Endpoint on Linux through a configura
 
 In other words, users in your enterprise aren't able to change preferences that are set through this configuration profile. If exclusions were added through the managed configuration profile, they can only be removed through the managed configuration profile. The command line works for exclusions added locally.
 
-This article describes the structure of this profile (including a recommended profile you can use to get started) and instructions on how to deploy the profile.
+This section describes the structure of the Defender for Endpoint on Linux configuration profile, includes a recommended starter profile, and explains how to deploy it.
 
 #### Configuration profile structure
 
@@ -65,7 +67,7 @@ The configuration profile is a `.json` file that consists of entries identified 
 
 Typically, you use a configuration management tool to push a file named `mdatp_managed.json` to the location `/etc/opt/microsoft/mdatp/managed/`.
 
-The top level of the configuration profile includes product-wide preferences and entries for subareas of the product, which are explained in more detail in the next sections.
+The top level of the configuration profile includes product-wide preferences and entries for subareas of the product, such as [Antivirus engine preferences](#antivirus-engine-preferences), [Cloud-delivered protection preferences](#cloud-delivered-protection-preferences), [Advanced optional features](#advanced-optional-features), and [Network protection configurations](#network-protection-configurations).
 
 #### Recommended configuration profile
 
@@ -263,7 +265,7 @@ The *antivirusEngine* section of the configuration profile manages the preferenc
 |**Key**|`antivirusEngine`|Antivirus Engine|
 |**Data type**|Dictionary (nested preference)|Collapsed Section|
 
-See the following subsections for a description of the dictionary contents and policy properties.
+For descriptions of the dictionary contents and policy properties, see [Enforcement level for Microsoft Defender Antivirus](#enforcement-level-for-microsoft-defender-antivirus), [Scan exclusions](#scan-exclusions), [Threat type settings](#threat-type-settings), and [Exclusion merge policy](#exclusion-merge-policy).
 
 #### Enforcement level for Microsoft Defender Antivirus
 
@@ -386,7 +388,7 @@ Entities excluded from scans. You specify exclusions as an array of items. Admin
 |**Key**|`exclusions`|Scan exclusions|
 |**Data type**|Dictionary (nested preference)|Dynamic Properties List|
 
-See the following subsections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Type of exclusion](#type-of-exclusion), [Path to excluded content](#path-to-excluded-content), [Path type (file / directory)](#path-type-file--directory), [File extension excluded from the scan](#file-extension-excluded-from-the-scan), and [Process excluded from the scan](#process-excluded-from-the-scan).
 
 #### Type of exclusion
 
@@ -561,7 +563,7 @@ Control how certain threat types are handled.
 |**Key**|`threatTypeSettings`|Threat type settings|
 |**Data type**|Dictionary (nested preference)|Dynamic Properties List|
 
-See the following subsections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Threat type](#threat-type) and [Action to take](#action-to-take).
 
 #### Threat type
 
@@ -641,14 +643,17 @@ The `exclusionSettings` section of the configuration profile configures various 
 |**Key**|`exclusionSettings`|
 |**Data type**|Dictionary (nested preference)|
 
-See the following sections for a description of the dictionary contents.|
+For a description of the dictionary contents, see [Merge policy](#merge-policy), [Exclusion merge policy](#exclusion-merge-policy), and [Exclusions](#exclusions).
 
 > [!NOTE]
 >
 > - Previously configured antivirus exclusions in the [antivirusEngine](#antivirus-engine-preferences) section in managed JSON continue to function.
 > - You can specify antivirus exclusions in this section or in the `antivirusEngine`) section. You should add all other exclusion type in this section, because the `exclusionSettings` section is designed to centrally host all exclusion types.
 
-### Merge policy
+<a name="merge-policy"></a>
+### Exclusion settings merge policy
+
+The following setting controls how admin-defined and user-defined exclusions are combined.
 
 ### Exclusion merge policy
 
@@ -772,7 +777,7 @@ You can configure the following settings to enable certain advanced scanning fea
 Specifies whether Defender for Endpoint scans files when their permissions changed to set the executed bits.
 
 > [!NOTE]
-> This setting is meaningful only when `enableFilePermissionEvents` is enabled. For more information, see the [Advanced optional features](#configure-monitoring-of-file-modify-permissions-events) section later in this article.
+> This setting is meaningful only when `enableFilePermissionEvents` is enabled. For more information, see [Configure monitoring of file modify permissions events](#configure-monitoring-of-file-modify-permissions-events).
 
 |Description|JSON Value|Microsoft Defender portal value|
 |---|---|---|
@@ -788,7 +793,7 @@ Specifies whether Defender for Endpoint scans files when their permissions chang
 Specifies whether Defender for Endpoint scans files with changed ownership.
 
 > [!NOTE]
-> This setting is meaningful only when `enableFileOwnershipEvents` is enabled. For more information, see the [Advanced optional features](#configure-monitoring-of-file-modify-ownership-events) section later in this article.
+> This setting is meaningful only when `enableFileOwnershipEvents` is enabled. For more information, see [Configure monitoring of file modify ownership events](#configure-monitoring-of-file-modify-ownership-events).
 
 |Description|JSON Value|Microsoft Defender portal value|
 |---|---|---|
@@ -809,7 +814,7 @@ Specifies whether Defender for Endpoint scans network socket events. For example
 > [!NOTE]
 >
 > - This setting is meaningful only when Behavior Monitoring is enabled.
-> - This setting is meaningful only when `enableRawSocketEvent` is enabled. For more information, see the [Advanced optional features](#configure-monitoring-of-raw-socket-events) section later in this article.
+> - This setting is meaningful only when `enableRawSocketEvent` is enabled. For more information, see [Configure monitoring of raw socket events](#configure-monitoring-of-raw-socket-events).
 
 |Description|JSON Value|Microsoft Defender portal value|
 |---|---|---|
@@ -918,6 +923,8 @@ Runs a quick scan every N hours (interval-based scheduling).
 > `interval` and `timeOfDay` (daily) are independent settings. If both are configured, they create separate quick scan schedules and can result in multiple scans per day.
 
 #### Advanced scheduled scan settings
+
+The following settings let you fine-tune how scheduled scans run.
 
 ##### Run scan when idle
 
@@ -1052,7 +1059,8 @@ Specifies whether security intelligence updates are installed automatically.
 
 Depending on the enforcement level, the automatic security intelligence updates are installed differently. In RTP mode, updates are installed periodically. In Passive or On-Demand mode, updates are installed before every scan.
 
-### Advanced optional features
+<a name="advanced-optional-features"></a>
+### Configure advanced optional features
 
 Use the following settings to enable certain advanced optional features.
 
@@ -1064,7 +1072,7 @@ Use the following settings to enable certain advanced optional features.
 |**Key**|features|*Not available*|
 |**Data type**|Dictionary (nested preference)|*n/a*|
 
-See the following subsections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Module load feature](#module-load-feature), [Remediate Infected File feature](#remediate-infected-file-feature), and [Supplementary sensor configurations](#supplementary-sensor-configurations).
 
 ### Module load feature
 
@@ -1107,7 +1115,7 @@ Use the following settings to configure certain advanced supplementary sensor fe
 |**Key**|`supplementarySensorConfigurations`|*Not available*|
 |**Data type**|Dictionary (nested preference)|*n/a*|
 
-See the following sections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Configure monitoring of file modify permissions events](#configure-monitoring-of-file-modify-permissions-events), [Configure monitoring of file modify ownership events](#configure-monitoring-of-file-modify-ownership-events), [Configure monitoring of raw socket events](#configure-monitoring-of-raw-socket-events), and [Report suspicious antivirus events to EDR](#report-suspicious-antivirus-events-to-edr).
 
 #### Configure monitoring of file modify permissions events
 
@@ -1292,9 +1300,11 @@ Use the following settings to configure advanced Network Protection inspection f
 |**Key**|`networkProtection`|Network protection|
 |**Data type**|Dictionary (nested preference)|Collapsed section|
 
-See the following subsections for a description of the dictionary contents.
+For a description of the dictionary contents, see [Enforcement Level](#enforcement-level) and [Configure ICMP inspection](#configure-icmp-inspection).
 
 #### Enforcement Level
+
+Use this setting to control how network protection is enforced on the device.
 
 |Description|JSON Value|Microsoft Defender portal value|
 |---|---|---|
@@ -1321,6 +1331,9 @@ Specifies whether ICMP events are monitored and scanned.
 ## Add tag or group ID to the configuration profile
 
 When you first run the `mdatp health` command, the tag and group ID values are blank. To add a tag or group ID to the `mdatp_managed.json` file, follow these steps:
+
+> [!CAUTION]
+> Before editing the file, make sure you add a comma after the closing curly bracket at the end of the `cloudService` block and preserve the two closing curly brackets shown in the example. The only supported key name for tags is `GROUP`. Invalid JSON formatting breaks the configuration.
 
 1. Open the configuration profile from the path `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`.
 
@@ -1354,6 +1367,8 @@ When you first run the `mdatp health` command, the tag and group ID values are b
    > - Currently, the only supported key name for tags is `GROUP`.
 
 ## Configuration profile validation
+
+### Validate the managed JSON file
 
 The configuration profile must be a valid JSON-formatted file. Many tools are available for you to verify the configuration profile. For example, run the following command if you have `python` installed on your device:
 

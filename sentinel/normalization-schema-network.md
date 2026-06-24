@@ -34,7 +34,7 @@ For the list of the Network Session parsers Microsoft Sentinel provides out-of-t
 
 ### Add your own normalized parsers
 
-When [developing custom parsers](normalization-develop-parsers.md) for the Network Session information model, name your KQL functions using the following syntax:
+When [developing custom parsers](isv/normalization-develop-parsers.md) for the Network Session information model, name your KQL functions using the following syntax:
 
 - `vimNetworkSession<vendor><Product>` for parametrized parsers
 - `ASimNetworkSession<vendor><Product>` for regular parsers

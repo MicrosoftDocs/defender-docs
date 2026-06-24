@@ -1,6 +1,6 @@
 ---
 title: Get started with Microsoft Defender Experts for cloud workloads
-description: Set up Microsoft Defender Experts for cloud workloads by selecting coverage, granting permissions, and configuring notifications in the Defender portal.
+description: Set up Microsoft Defender Experts for Servers by onboarding cloud resources, granting permissions, configuring notifications, and preparing your environment in the Defender portal.
 ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
@@ -13,11 +13,13 @@ ms.collection:
   - essentials-get-started
 ms.topic: how-to
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-dex
 - msecd-doc-authoring-1012
 search.appverid: met150
-ms.date: 05/18/2026
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 
 #customer intent: As a security administrator, I want to set up Defender Experts for Servers so that my organization's cloud server workloads are covered by Microsoft's managed detection and response service.
 

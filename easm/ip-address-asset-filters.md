@@ -5,13 +5,15 @@ description: This article outlines the filter functionality available in Microso
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 12/14/2022
+ms.date: 06/15/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # IP address asset filters
 
-These filters specifically apply to IP address assets. Use these filters when searching for a specific subset of IPs.  
+This article provides a comprehensive reference for all filters that apply specifically to IP address assets in Microsoft Defender External Attack Surface Management. Use these filters when searching your inventory for a specific subset of IP addresses based on criteria such as port status, geolocation, web components, banners, and CVE scores. The following sections organize the available filters into defined value filters with predefined options and freeform filters that accept custom input, along with the applicable operators and expected value formats for each.
 
 ## Defined value filters  
 

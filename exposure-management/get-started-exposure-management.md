@@ -8,11 +8,11 @@ ms.custom: sfi-image-nochange
 
 # Get started with Microsoft Security Exposure Management
 
-This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard in the unified Microsoft Defender XDR portal.
+This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard in the unified Microsoft Defender portal.
 
 ## Accessing Microsoft Security Exposure Management
 
-Microsoft Security Exposure Management is now fully integrated into the Microsoft Defender XDR portal at [security.microsoft.com](https://security.microsoft.com). All Exposure Management functions are accessible through the unified portal under the **Exposure Management** section in the navigation.
+Microsoft Security Exposure Management is now fully integrated into the Microsoft Defender portal at [security.microsoft.com](https://security.microsoft.com). All Exposure Management functions are accessible through the unified portal under the **Exposure Management** section in the navigation.
 
 ### Prerequisites for access
 
@@ -22,13 +22,14 @@ Microsoft Security Exposure Management is now fully integrated into the Microsof
 
 ### Navigation in the unified portal
 
-Navigate to **Exposure Management** in the Microsoft Defender XDR portal to access:
+Navigate to **Exposure Management** in the Microsoft Defender portal to access:
 
 - Overview dashboard
 - Attack surface management tools
 - Critical asset management
 - Exposure insights and recommendations
 - Data connectors configuration
+- Vulnerability management cababilities
 
 ## Reviewing security exposure state
 

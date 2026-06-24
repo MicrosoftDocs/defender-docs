@@ -10,8 +10,8 @@ ms.collection:
   - m365-security
   - tier2
   - mde-asr
-ms.custom: msecd-doc-authoring-1012
-ms.date: 05/04/2026
+ms.custom: msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -56,9 +56,9 @@ All attack surface reduction events are located in **Applications and Services L
 
 1. In Event Viewer, expand **Applications and Services Logs** \> **Microsoft** \> **Windows**.
 
-1. Continue to expand the path for the different types of attack surface reduction events as described in the following subsections.
+1. Continue to expand the path for [ASR rule events](#asr-rule-events), [controlled folder access events](#controlled-folder-access-events), [exploit protection events](#exploit-protection-events), or [network protection events](#network-protection-events).
 
-1. Find and filter the events you want to see as described in the following subsections.
+1. Find and filter the events you want to see by using the event ID tables in the preceding sections, or by creating [custom views in Event Viewer](#use-custom-views-in-windows-event-viewer-to-view-attack-surface-reduction-events).
 
 ### ASR rule events
 
@@ -71,7 +71,8 @@ ASR rule events are located in the **Windows Defender** \> **Operational** log:
 |1129|Event when user overrides block in warn mode|
 |5007|Event when settings are changed|
 
-### Controlled folder access events
+<a name="controlled-folder-access-events"></a>
+### View controlled folder access events
 
 Controlled folder access events are located in **Windows Defender** \> **Operational**.
 
@@ -83,7 +84,8 @@ Controlled folder access events are located in **Windows Defender** \> **Operati
 |1127|Blocked controlled folder access sector write block event|
 |1128|Audited controlled folder access sector write block event|
 
-### Exploit protection events
+<a name="exploit-protection-events"></a>
+### View exploit protection events
 
 The following exploit protection events are located in the **Security-Mitigations** \> **Kernel Mode** and **Security-Mitigations** \> **User Mode** logs:
 
@@ -126,7 +128,8 @@ The following exploit protection event is located in the **Win32k** \> **Operati
 |:---:|---|
 |260|Untrusted Font|
 
-### Network protection events
+<a name="network-protection-events"></a>
+### View network protection events
 
 Network protection events are located in **Windows Defender** \> **Operational**.
 
@@ -144,6 +147,8 @@ For ready-to-use XML templates, see the [Custom XML templates for attack surface
 
 ### Import an existing XML custom view
 
+To import an existing XML custom view into Event Viewer, complete the following steps:
+
 1. Create an empty .txt file and copy the XML for the custom view you want to use into the .txt file. Do this step for each of the custom views you want to use. Rename the files as follows (ensure you change the type from .txt to .xml):
 
    - Controlled folder access events custom view: *cfa-events.xml*
@@ -156,15 +161,18 @@ For ready-to-use XML templates, see the [Custom XML templates for attack surface
 1. Select **Action** \> **Import Custom View...**
 
    > [!div class="mx-imgBorder"]
-   > ![Animation that shows how to import a custom view in Event Viewer.](media/events-import.gif)
+   > ![Animation showing how to select and import a saved XML file as a custom view in Event Viewer.](media/events-import.gif)
 
 1. Navigate to the XML file for the custom view you want and select it.
 
 1. Select **Open**.
 
-The custom view filters to show only the events related to that feature.
+The custom view filters to show only the events related to the selected attack surface reduction capability.
 
-### Copy the XML directly
+<a name="copy-the-xml-directly"></a>
+### Copy XML directly into Event Viewer
+
+To paste XML directly into a custom view, complete the following steps:
 
 1. Select **Start**, type **Event Viewer**, and then press **Enter** to open Event Viewer.
 
@@ -172,13 +180,17 @@ The custom view filters to show only the events related to that feature.
 
 1. Go to the XML tab and select **Edit query manually**. A warning indicates that you can't edit the query using the **Filter** tab when you use the XML option. Select **Yes**.
 
-1. Paste the XML code for the feature you want to filter events from into the XML section.
+1. Paste the XML code for attack surface reduction rules, controlled folder access, exploit protection, or network protection from the [custom XML templates](#custom-xml-templates-for-attack-surface-reduction-events) into the XML section.
 
-1. Select **OK**. Specify a name for your filter. The custom view filters to show only the events related to that feature.
+1. Select **OK**. Specify a name for your filter. The custom view filters to show only the events related to the selected attack surface reduction capability.
 
 ### Custom XML templates for attack surface reduction events
 
+Use the following XML templates to create custom views in Event Viewer for each attack surface reduction capability. You can import these templates as XML files or paste them directly into Event Viewer.
+
 #### XML for attack surface reduction rule events
+
+The following XML query filters the Windows Defender Operational log for ASR rule events (event IDs 1121, 1122, 1129, and 5007):
 
 ```xml
 <QueryList>
@@ -191,6 +203,8 @@ The custom view filters to show only the events related to that feature.
 
 #### XML for controlled folder access events
 
+The following XML query filters the Windows Defender Operational log for controlled folder access events (event IDs 1123, 1124, 1127, 1128, and 5007):
+
 ```xml
 <QueryList>
   <Query Id="0" Path="Microsoft-Windows-Windows Defender/Operational">
@@ -201,6 +215,8 @@ The custom view filters to show only the events related to that feature.
 ```
 
 #### XML for exploit protection events
+
+The following XML query creates a custom view for exploit protection events across the Security-Mitigations, WER-Diagnostics, and Win32k providers (event IDs 1–24, 5, and 260):
 
 ```xml
 <QueryList>
@@ -221,6 +237,8 @@ The custom view filters to show only the events related to that feature.
 ```
 
 #### XML for network protection events
+
+The following XML query filters the Windows Defender Operational log for network protection events (event IDs 1125, 1126, and 5007):
 
 ```xml
 <QueryList>

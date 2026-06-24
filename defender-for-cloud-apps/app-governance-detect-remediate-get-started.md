@@ -24,7 +24,7 @@ To see all of the alerts, select the **Alerts** tab.
 
 ## Alerts page
 
-App governance alerts are now listed with all other Microsoft Defender XDR alerts. To find them, filter for "App governance" as the service source.
+App governance alerts are now listed with all other Microsoft Defender alerts. To find them, filter for "App governance" as the service source.
 
 For example:
 

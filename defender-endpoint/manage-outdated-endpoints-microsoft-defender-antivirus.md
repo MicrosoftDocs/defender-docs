@@ -6,18 +6,19 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier3
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Manage Microsoft Defender Antivirus updates and scans for endpoints that are out of date
 
@@ -31,11 +32,13 @@ For example, an employee who uses a particular computer takes three days off of 
 
 ### Supported operating systems
 
+The following operating systems support catch-up protection updates and catch-up scans:
+
 - Windows
 
 ## Set up catch-up protection updates for endpoints that haven't updated for a while
 
-If Microsoft Defender Antivirus didn't download protection updates for a specified period, you can set it up to automatically check and download the latest update the next time someone signs in on an endpoint. This configuration is useful if you have [globally disabled automatic update downloads on startup](manage-event-based-updates-microsoft-defender-antivirus.md).
+If Microsoft Defender Antivirus didn't download protection updates for a specified period, you can set it up to automatically check and download the latest update the next time someone signs in on an endpoint. Configuring catch-up protection updates to check for updates at sign-in is useful if you have [globally disabled automatic update downloads on startup](manage-event-based-updates-microsoft-defender-antivirus.md).
 
 You can use one of several methods to set up catch-up protection updates:
 
@@ -46,18 +49,22 @@ You can use one of several methods to set up catch-up protection updates:
 
 ### Use Configuration Manager to configure catch-up protection updates
 
+To configure catch-up protection updates in Configuration Manager, use the following steps:
+
 1. On your Microsoft Configuration Manager console, open the anti-malware policy you want to change (select **Assets and Compliance** in the navigation pane on the left, then expand the tree to **Overview** \> **Endpoint Protection** \> **Antimalware Policies**)
 
 1. Go to the **Security intelligence updates** section and configure the following settings:
 
     - Set **Force a security intelligence update if the client computer is offline for more than two consecutive scheduled updates** to **Yes**.
-    - For the  **If Configuration Manager is used as a source for security intelligence updates...**, specify the hours before which the protection updates delivered by Configuration Manager should be considered out of date. This setting causes the next update location to be used, based on the defined [fallback source order](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order).
+    - For the  **If Configuration Manager is used as a source for security intelligence updates...**, specify the hours before which the protection updates delivered by Configuration Manager should be considered out of date. The **If Configuration Manager is used as a source for security intelligence updates...** setting causes the next update location to be used, based on the defined [fallback source order](manage-protection-updates-microsoft-defender-antivirus.md#fallback-order).
 
 1. Select **OK**.
 
 1. [Deploy the updated policy as usual](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
 
 ### Use Group Policy to enable and configure the catch-up update feature
+
+To enable and configure the catch-up update feature in Group Policy, use the following steps:
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object you want to configure and then select **Edit**.
 
@@ -106,6 +113,8 @@ You can use Group Policy to specify the number of days after which endpoint prot
 
 ### Use Group Policy to specify the number of days before protection is considered out of date
 
+To specify when protection is considered out of date by using Group Policy, use the following steps:
+
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and then select **Edit**.
 
 1. In the **Group Policy Management Editor** go to **Computer configuration**.
@@ -126,7 +135,7 @@ You can use Group Policy to specify the number of days after which endpoint prot
 
 You can set the number of consecutive scheduled scans that can be missed before Microsoft Defender Antivirus forces a scan.
 
-The process for enabling this feature is:
+The process for enabling catch-up scans is:
 
 1. Set up at least one scheduled scan.
 
@@ -134,7 +143,7 @@ The process for enabling this feature is:
 
 1. Define the number of scans that can be skipped before a catch-up scan occurs.
 
-This feature can be enabled for both full and quick scans.
+Catch-up scans can be enabled for both full and quick scans.
 
 > [!TIP]
 > We recommend using quick scans for most situations. To learn more, see [About scheduled scans](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan).
@@ -147,6 +156,8 @@ You can use one of several methods to set up catch-up scans:
 - [Configuration Manager](#use-configuration-manager-to-configure-catch-up-scans)
 
 ### Use Group Policy to enable and configure the catch-up scan feature
+
+To enable and configure the catch-up scan feature in Group Policy, use the following steps:
 
 1. Ensure you set up at least one scheduled scan.
 
@@ -198,6 +209,8 @@ See the following article for more information and allowed parameters:
 
 ### Use Configuration Manager to configure catch-up scans
 
+To configure catch-up scans in Configuration Manager, use the following steps:
+
 1. On your Microsoft Configuration Manager console, open the anti-malware policy you want to change (select **Assets and Compliance** in the navigation pane on the left, then expand the tree to **Overview** \> **Endpoint Protection** \> **Antimalware Policies**)
 
 1. Go to the **Scheduled scans** section and **Force a scan of the selected scan type if client computer is offline...** to **Yes**.
@@ -207,6 +220,8 @@ See the following article for more information and allowed parameters:
 1. [Deploy the updated policy as usual](/sccm/protect/deploy-use/endpoint-antimalware-policies#deploy-an-antimalware-policy-to-client-computers).
 
 ### Use Group Policy to configure security intelligence updates over a metered connection
+
+To configure security intelligence updates over a metered connection by using Group Policy, use the following steps:
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
 

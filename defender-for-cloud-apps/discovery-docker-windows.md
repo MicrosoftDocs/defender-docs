@@ -1,12 +1,14 @@
 ---
 title: Configure automatic log upload using on-premises Docker on Windows | Microsoft Defender for Cloud Apps
-description: This article describes the process configuring automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on Windows in an on-premises server.
-ms.date: 01/14/2026
+description: Configure automatic log upload for continuous reports in Microsoft Defender for Cloud Apps using Docker on an on-premises Windows server.
+ms.date: 06/16/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 # Configure automatic log upload using on-premises Docker on Windows
 
-You can configure automatic log upload for continuous reports in Defender for Cloud Apps using a Docker on Windows.
+You can configure automatic log upload for continuous reports in Microsoft Defender for Cloud Apps using a Docker container on an on-premises Windows server. This article walks you through setting up data sources in the Microsoft Defender portal, deploying the Docker-based log collector, configuring your network appliances to forward logs, and verifying the deployment.
 
 ## Prerequisites
 
@@ -33,18 +35,25 @@ You can configure automatic log upload for continuous reports in Defender for Cl
 > * Enterprise customers with more than 250 users or more than $10 million USD in annual revenue require a paid subscription to use Docker Desktop for Windows. For more information, see [Docker subscription overview](https://docs.docker.com/subscription/).
 > * A user must be signed in for Docker to collect logs. We recommend advising your Docker users to disconnect without signing out.
 > * Docker for Windows isn't officially supported in VMWare virtualization scenarios.
-> * Docker for Windows isn't officially supported in nested virtualization scenarios. If you still plan to use nested virtualization, refer to [Docker's official guide](https://docs.docker.com/docker-for-windows/troubleshoot/#running-docker-desktop-in-nested-virtualization-scenarios).
+> * Docker for Windows isn't officially supported in nested virtualization scenarios. If you still plan to use nested virtualization, refer to [Running Docker Desktop in nested virtualization scenarios](https://docs.docker.com/docker-for-windows/troubleshoot/#running-docker-desktop-in-nested-virtualization-scenarios).
 > * For information about additional configuration and implementation considerations for Docker for Windows, see [Install Docker Desktop on Windows](https://docs.docker.com/desktop/windows/install/).
 
 
 ## Remove an existing log collector
 
-If you have an existing log collector and want to remove it before deploying it again, or if you simply want to remove it, run the following commands:
+If you have an existing log collector and want to remove it before deploying it again, or if you simply want to remove it, use the following steps:
 
-```console
-docker stop <collector_name>
-docker rm <collector_name>
-```
+1. Stop the log collector:
+
+    ```console
+    docker stop <collector_name>
+    ```
+
+1. Remove the log collector:
+
+    ```console
+    docker rm <collector_name>
+    ```
 
 ## Log collector performance
 
@@ -64,7 +73,7 @@ Use the following steps to define your data sources and link them to a log colle
 
     1. Select **+Add data source**.  
 
-        ![Screenshot of the Add data source button.](media/add-data-source.png)
+        ![Screenshot of the Data sources tab showing the Add data source button in Cloud Discovery settings.](media/add-data-source.png)
 
     1. **Name** your proxy or firewall.  
 
@@ -79,7 +88,7 @@ Use the following steps to define your data sources and link them to a log colle
         > [!NOTE]
         > Integrating with secure transfer protocols (FTPS and Syslog – TLS) often requires additional settings for your firewall/proxy.
 
-    1. Repeat this process for each firewall and proxy whose logs can be used to detect traffic on your network. We recommend that you set up a dedicated data source per network device to enable you to:
+    1. Repeat these data source configuration steps for each firewall and proxy whose logs can be used to detect traffic on your network. We recommend that you set up a dedicated data source per network device to enable you to:
 
         * Monitor the status of each device separately, for investigation purposes.
         * Explore Shadow IT Discovery per device, if each device is used by a different user segment.
@@ -94,11 +103,11 @@ Use the following steps to define your data sources and link them to a log colle
 
     1. Select all **Data sources** that you want to connect to the collector, and select **Update** to save the configuration.
 
-        Further deployment information appears in the **Next steps** section, including a command you'll use later to import the collector configuration. If you selected Syslog, this information also includes data about which port the Syslog listener is listening on.
+        Further deployment information appears in the dialog's **Next steps** section, including a command you'll use later in [Step 2 – On-premises deployment of your machine](#step-2--on-premises-deployment-of-your-machine) to import the collector configuration. If you selected Syslog, this information also includes data about which port the Syslog listener is listening on.
 
-    1. Use the ![copy to clipboard icon.](media/copy-icon.png) **Copy** button to copy the command to the clipboard and save it to a separate location.
+    1. Use the ![Copy the command to clipboard icon.](media/copy-icon.png) **Copy** button to copy the command to the clipboard and save it to a separate location.
 
-    1. Use the ![Export](media/export-icon.png) **Export** button to export the expected data source configuration. This configuration describes how you should set the log export in your appliances.
+    1. Use the ![Export expected data source configuration icon.](media/export-icon.png) **Export** button to export the expected data source configuration. This configuration describes how you should set the log export in your appliances.
 
 For users sending log data via FTP for the first time, we recommend changing the password for the FTP user. For more information, see [Changing the FTP password](log-collector-advanced-management.md#change-the-ftp-password).
 
@@ -149,7 +158,7 @@ The following steps describe the deployment in Windows. The deployment steps for
 
 1. Open the Docker Desktop client again and make sure that it has started.
 
-1. Open a command prompt as an administrator and enter the run command you'd copied earlier from the portal in [Step 1 – Web portal configuration](#step-1--web-portal-configuration). 
+1. Open a command prompt as an administrator and enter the run command you copied from the portal in [Step 1 – Web portal configuration](#step-1--web-portal-configuration). 
 
     If you need to configure a proxy, add the proxy IP address and port number. For example, if your proxy details are 172.31.255.255:8080, your updated run command is:
 
@@ -165,11 +174,11 @@ The following steps describe the deployment in Windows. The deployment steps for
 
     You should see the message: **Finished successfully!** For example:
 
-    ![Screenshot of a command that the collector is running properly.](media/ubuntu8.png)
+    ![Screenshot of docker logs output displaying the Finished successfully message, confirming the log collector is running.](media/ubuntu8.png)
 
 ## Step 3 - On-premises configuration of your network appliances
 
-Configure your network firewalls and proxies to periodically export logs to the dedicated Syslog port of the FTP directory according to the directions in the dialog. For example:
+Configure your network firewalls and proxies to periodically export logs to the dedicated Syslog port of the FTP directory according to the directions in the **Create log collector** dialog. For example:
 
 ```console
 BlueCoat_HQ - Destination path: \<<machine_name>>\BlueCoat_HQ\
@@ -212,7 +221,7 @@ Verify that the logs are being uploaded to Defender for Cloud Apps and that repo
     >[!NOTE]
     >When applying filters on continuous reports, the selection will be included, not excluded. For example, if you apply a filter on a certain user group, only that user group will be included in the report.
 
-    ![Custom continuous report.](media/custom-continuous-report.png)
+    ![Screenshot of the custom continuous report configuration page with filter options.](media/custom-continuous-report.png)
 
 ## Optional - Validate installer signature
 
@@ -222,11 +231,11 @@ To make sure that the docker installer is signed by Microsoft:
 1. Select **Digital Signatures** and make sure that it says **This digital signature is OK**.
 1. Make sure that **Microsoft Corporation** is listed as the sole entry under **Name of signer**.
 
-    ![Digital signature valid.](media/digital-signature-successful.png)
+    ![Screenshot showing a valid digital signature from Microsoft Corporation.](media/digital-signature-successful.png)
 
     If the digital signature isn't valid, it will say **This digital signature is not valid**:
 
-    ![Digital signature not valid.](media/digital-signature-unsuccessful.png)
+    ![Screenshot showing an invalid digital signature verification result.](media/digital-signature-unsuccessful.png)
 
 ## Next steps
 

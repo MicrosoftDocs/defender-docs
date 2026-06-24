@@ -4,12 +4,14 @@ description: This article shows you how to configure initial security content fo
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 09/30/2025
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 zone_pivot_groups: sentinel-sap-connection
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to configure and monitor SAP systems using Microsoft Sentinel so that I can detect and respond to suspicious activities and threats effectively.
@@ -18,7 +20,7 @@ zone_pivot_groups: sentinel-sap-connection
 
 # Enable SAP detections and threat protection
 
-While deploying a Microsoft Sentinel data collector and solution for SAP provides you with the ability to monitor SAP systems for suspicious activities and identify threats, extra configuration steps are required to ensure the solution is optimized for your SAP deployment. This article provides best practices for getting started with the security content delivered with the Microsoft Sentinel solution for SAP applications, and is the last step in deploying the SAP integration.
+Deploying the Microsoft Sentinel data collector and solution for SAP lets you monitor SAP systems for suspicious activities and identify threats. However, extra configuration steps are needed to optimize the solution for your SAP deployment. Configure the security content delivered with the Microsoft Sentinel solution for SAP applications as the final step in deploying the SAP integration.
 
 :::zone pivot="connection-agent"
 
@@ -38,7 +40,10 @@ Content in this article is relevant for your **security** team.
 
 ## Prerequisites
 
-Before configuring the settings described in this article, you must have a Microsoft Sentinel SAP solution installed and a data connector configured.
+Before you configure the settings described in this article, make sure you have:
+
+- A Microsoft Sentinel SAP solution installed
+- A data connector configured
 
 For more information, see [Deploy the Microsoft Sentinel solution for SAP applications from the content hub](deploy-sap-security-content.md) and [Deploy Microsoft Sentinel solution for SAP applications](deployment-overview.md).
 
@@ -47,9 +52,9 @@ For more information, see [Deploy the Microsoft Sentinel solution for SAP applic
 
 ## Start enabling analytics rules
 
-By default, all analytics rules in the Microsoft Sentinel solution for SAP applications are provided as [alert rule templates](../manage-analytics-rule-templates.md#manage-template-versions-for-your-scheduled-analytics-rules-in-microsoft-sentinel). We recommend a staged approach, where you use the templates to create a few rules at a time, allowing time for fine-tuning each scenario.
+By default, all analytics rules in the Microsoft Sentinel solution for SAP are provided as [alert rule templates](../manage-analytics-rule-templates.md#manage-template-versions-for-your-scheduled-analytics-rules-in-microsoft-sentinel). We recommend a staged approach. Use the templates to create a few rules at a time, and allow time to fine-tune each scenario.
 
-We recommend starting with the following analytics rules, which are considered to be simpler to test:
+Start with the following analytics rules, which are simpler to test:
 
 - [Change in Sensitive privileged user](sap-solution-security-content.md#suspicious-privileges-operations)
 - [Sensitive privileged user logged in](sap-solution-security-content.md#suspicious-privileges-operations)
@@ -81,19 +86,16 @@ The Microsoft Sentinel solution for SAP applications includes the **SAP - Securi
 
 For more information, see [Check compliance for your SAP security controls with the SAP - Security Audit Controls workbook](sap-audit-controls-workbook.md).
 
-## Next step
+## Related content
 
-There's a lot more content to discover for SAP with Microsoft Sentinel, including functions, playbooks, workbooks, and more. This article highlights some useful starting points, and you should continue to implement other content to get the most out of your SAP security monitoring.
+The SAP solution for Microsoft Sentinel includes more content, such as functions, playbooks, and workbooks. Use the links below as starting points. Add more content over time to get the most from your SAP security monitoring.
 
-For more information, see:
+Explore SAP solution reference content:
 
 - [Microsoft Sentinel solution for SAP applications - functions reference](sap-solution-function-reference.md)
 - [Microsoft Sentinel solution for SAP applications: security content reference](sap-solution-security-content.md).
 
-
-## Related content
-
-For more information, see:
+Monitor and maintain your SAP integration:
 
 - [Monitor the health of your SAP system](../monitor-sap-system-health.md)
 - [Update Microsoft Sentinel's SAP data connector agent](update-sap-data-connector.md)

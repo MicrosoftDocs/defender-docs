@@ -10,12 +10,13 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 03/26/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Create a notification rule when a local onboarding or offboarding script is used
 
@@ -37,7 +38,7 @@ You need to have access to:
 
 ## Create the notification flow
 
-1. In [make.powerautomate.com](https://make.powerautomate.com/).
+1. Go to the [Power Automate portal](https://make.powerautomate.com/) and sign in.
 
 1. Navigate to **My flows > New > Scheduled - from blank**.
 
@@ -178,13 +179,17 @@ You need to have access to:
     :::image type="content" source="media/condition3.png" alt-text="The condition-2" lightbox="media/condition3.png":::
     :::image type="content" source="media/send-email.png" alt-text="The Send an email section" lightbox="media/send-email.png":::
 
-## Alert notification
+<a name="alert-notification"></a>
+## Review the alert notification email
 
 The following image is an example of an email notification.
 
 :::image type="content" source="media/alert-notification.png" alt-text="The email notification screen" lightbox="media/alert-notification.png":::
 
-## Tips
+<a name="tips"></a>
+## Tips for filtering and reducing duplicate alerts
+
+Use the following tips when configuring the notification flow:
 
 - You can filter here using lastSeen only:
   - Every 60 min:
@@ -198,7 +203,7 @@ In this solution, you don't have duplicate alerts.
 
 There are tenants that have numerous devices. Getting all those devices might require paging.
 
-You can split it to two queries:
+You can split the device lookup into two queries:
 
 1. For offboarding take only this interval using the OData $filter and only notify if the conditions are met.
 

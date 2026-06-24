@@ -12,11 +12,13 @@ ms.collection:
 - m365-security
 - tier3
 - mde-asr
-ms.date: 03/10/2026
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Enable controlled folder access
@@ -46,6 +48,8 @@ You can enable controlled folder access by using any of the following methods de
 
 ### Supported operating systems
 
+Controlled folder access is supported on the following operating systems:
+
 - Windows
 
 ## Enable controlled folder access in the Microsoft Intune admin center
@@ -57,13 +61,17 @@ To configure controlled folder access using a Microsoft Intune Endpoint Security
 - **Profile**: Attack Surface Reduction Rules
 - **Configuration settings**: Set **Enable Controlled Folder Access** to **Audit mode** to assess impact before switching to **Enabled**
 
-For more information about attack surface reduction profiles available in Microsoft Intune, see [Manage attack surface reduction settings with Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy#attack-surface-reduction-profiles).
+For more information about the Intune attack surface reduction profile used to configure controlled folder access, see [Manage attack surface reduction settings with Microsoft Intune](/intune/intune-service/protect/endpoint-security-asr-policy#attack-surface-reduction-profiles).
 
-## Mobile Device Management (MDM)
+<a name="mobile-device-management-mdm"></a>
+## Enable controlled folder access by using Mobile Device Management (MDM)
 
-Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender) configuration service provider (CSP) to allow apps to make changes to protected folders.
+To configure controlled folder access with MDM, use the [ControlledFolderAccessProtectedFolders policy CSP](/windows/client-management/mdm/policy-csp-defender) (`./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders`) to allow apps to make changes to protected folders.
 
-## Microsoft Configuration Manager
+<a name="microsoft-configuration-manager"></a>
+## Enable controlled folder access by using Microsoft Configuration Manager
+
+To enable controlled folder access by using Microsoft Configuration Manager, perform the following steps:
 
 1. In Microsoft Configuration Manager, go to **Assets and Compliance** > **Endpoint Protection** > **Windows Defender Exploit Guard**.
 
@@ -82,7 +90,10 @@ Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/wi
 
 For more information about Microsoft Configuration Manager and Controlled Folder Access, visit [Controlled folder access policies and options](/intune/configmgr/protect/deploy-use/create-deploy-exploit-guard-policy).
 
-## Group Policy
+<a name="group-policy"></a>
+## Enable controlled folder access by using Group Policy
+
+Use the following steps to configure controlled folder access with Group Policy:
 
 1. On your Group Policy management device, open the [Group Policy Management Console (GPMC)](/windows-server/identity/ad-ds/manage/group-policy/group-policy-management-console). Right-click the Group Policy Object you want to configure and select **Edit**.
 
@@ -103,11 +114,14 @@ For more information about Microsoft Configuration Manager and Controlled Folder
 > [!IMPORTANT]
 > To fully enable controlled folder access, you must set the Group Policy option to **Enabled** and select **Block** in the options drop-down menu.
 
-## PowerShell
+<a name="powershell"></a>
+## Enable controlled folder access by using PowerShell
+
+Use PowerShell to enable controlled folder access as follows:
 
 1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
 
-1. Run the following command:
+1. Run the following command to enable controlled folder access and help protect sensitive folders from unauthorized changes by ransomware or other untrusted apps:
 
    ```powershell
    Set-MpPreference -EnableControlledFolderAccess Enabled
@@ -115,9 +129,10 @@ For more information about Microsoft Configuration Manager and Controlled Folder
 
    You can enable the feature in audit mode by specifying `AuditMode` instead of `Enabled`. Use `Disabled` to turn off the feature.
 
-For detailed syntax and parameter information, see [EnableControlledFolderAccess](/powershell/module/defender/set-mppreference#-enablecontrolledfolderaccess).
+For detailed syntax and parameter information, see [Set-MpPreference EnableControlledFolderAccess parameter](/powershell/module/defender/set-mppreference#-enablecontrolledfolderaccess).
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Customize controlled folder access](customize-controlled-folders.md)

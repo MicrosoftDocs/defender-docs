@@ -1,7 +1,7 @@
 ---
 title: Application card for Microsoft Sentinel SIEM
 titleSuffix: Microsoft Security
-description: Learn about the capabilities, intended uses, limitations, and responsible AI practices for Microsoft Sentinel SIEM's AI-driven features.
+description: Details the AI-driven capabilities that support threat detection, investigation, response, and proactive hunting across multicloud environments.
 f1.keywords:
 - NOCSH
 author: guywi-ms

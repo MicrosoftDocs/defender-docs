@@ -1,11 +1,12 @@
 ---
 title: Manage your device inventory from the Azure portal
 description: Learn how to view and manage OT and IoT devices (assets) from the Device inventory page in the Azure portal.
-ms.date: 08/27/2023
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - enterprise-iot
   - sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Manage your device inventory from the Azure portal
@@ -32,7 +33,7 @@ Use any of the following options to modify or filter the devices shown:
 | **Sort devices** | Select a column header to sort the devices by that column. Select it again to change the sort direction. |
 |**Filter devices shown**    |   Either use the **Search** box to search for specific device details, or select **Add filter** to filter the devices shown. <br><br> In the **Add filter** box, define your filter by column name, operator, and value. Select **Apply** to apply your filter.<br><br> You can apply multiple filters at the same time. Search results and filters aren't saved when you refresh the **Device inventory** page. <br><br> The **Last active time** and **Network location (Preview)** filters are on by default. |
 |**Modify columns shown**     |   Select **Edit columns** :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/edit-columns-icon.png" border="false":::. In the **Edit columns** pane:<br><br>        - Select the **+ Add Column** button to add new columns to the grid.<br>        - Drag and drop fields to change the columns order.<br>- To remove a column, select the **Delete** :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/trashcan-icon.png" border="false"::: icon to the right.<br>- To reset the columns to their default settings, select **Reset** :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/reset-icon.png" border="false":::.   <br><br>Select **Save** to save any changes made.  |
-| **Group devices** | From the **Group by** above the grid, select a category, such as **Class**, **Data source**, **Location**, **Purdue level**, **Site**, **Type**, **Vendor**, or **Zone**, to group the devices shown. Inside each group, devices retain the same column sorting. To remove the grouping, select **No grouping**. |
+| **Group devices** | From the **Group by** dropdown, select a category, such as **Class**, **Data source**, **Location**, **Purdue level**, **Site**, **Type**, **Vendor**, or **Zone**, to group the devices shown. Inside each group, devices retain the same column sorting. To remove the grouping, select **No grouping**. |
 
 For more information, see [Device inventory column data](device-inventory.md#device-inventory-column-data).
 
@@ -137,20 +138,18 @@ The device inventory is exported with any filters currently applied, and you can
 
 If you have devices no longer in use, delete them from the device inventory so that they're no longer connected to Defender for IoT.
 
-Devices might be inactive because of misconfigured SPAN ports, changes in network coverage, or because the device was unplugged from the network.
+Devices might be inactive because of misconfigured SPAN (port mirroring) ports, changes in network coverage, or because the device was unplugged from the network.
 
 Delete inactive devices to maintain a correct representation of current network activity, better understand the number of devices that you're monitoring when managing your Defender for IoT [licenses and plans](billing.md), and to reduce clutter on your screen.
+
+> [!IMPORTANT]
+> Device deletions are one-directional. When you delete a device from the **Azure portal**, the deletion doesn't sync to the sensor connected to the same site. When you delete a device from the **sensor**, the deletion syncs to the **Device inventory** in the Azure portal.
 
 **To delete a device**:
 
 In the **Device inventory** page, select the device you want to delete, and then select **Delete** :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/delete-device.png" border="false"::: in the toolbar at the top of the page.
 
 At the prompt, select **Yes** to confirm that you want to delete the device from Defender for IoT.
-
-> [!NOTE]
-> Device deletions are one-directional.  
-> When you delete a device from the **Azure portal**, the deletion doesn't sync to the sensor connected to the same site.  
-> When you delete a device from the **sensor**, the deletion syncs to the **Device inventory** in the Azure portal.
 
 
 ## Next steps

@@ -31,7 +31,7 @@ Before you start troubleshooting, make sure your environment meets the following
 
 If you're using [in-browser protection with Microsoft Edge](in-browser-protection.md) and are still being served by a reverse proxy, make sure you meet the following additional requirements:
 
-- **The feature is turned on in your Defender XDR settings**. For more information, see [Configure in-browser protection settings](in-browser-protection.md#configure-in-browser-protection-settings).
+- **The feature is turned on in your Defender settings**. For more information, see [Configure in-browser protection settings](in-browser-protection.md#configure-in-browser-protection-settings).
 
 - **All policies that the user is covered by are supported for Microsoft Edge for Business**. If a user is served by another policy that's *not* supported by Microsoft Edge for Business, they're always served by the reverse proxy. For more information, see [In-browser protection requirements](in-browser-protection.md#in-browser-protection-requirements).
 
@@ -101,7 +101,7 @@ Configure your environment to remove any factors that might be causing slowness 
 
 Some apps use a nonce hash during authentication to prevent replay attacks. By default, Defender for Cloud Apps assumes that an app uses a nonce. If the app you're working with doesn't use nonce, disable nonce-handling for this app in Defender for Cloud Apps:
 
-1. In Microsoft Defender XDR, select **Settings** > **Cloud Apps**. 
+1. In the Defender portal, select **Settings** > **Cloud Apps**. 
 1. Under **Connected apps**, select **Conditional Access App Control apps**.
 1. In the list of apps, on the row in which the app you're configuring appears, select the three dots at the end of the row, and then select **Edit** for your app.
 1. Select **Nonce-handling** to expand the section and then clear **Enable nonce handling**.
@@ -468,7 +468,7 @@ If the **Protect** action isn't available, use the following steps to investigat
 
 The **Admin View** toolbar sits at the bottom of your screen and provides tools for admin users to diagnose and troubleshoot issues with conditional access app control.
 
-To view the **Admin View** toolbar, you must make sure to add specific admin user accounts to the **App onboarding / maintenance** list in the Microsoft Defender XDR settings. 
+To view the **Admin View** toolbar, you must make sure to add specific admin user accounts to the **App onboarding / maintenance** list in the Defender portal settings. 
 
 **To add a user to the App onboarding / maintenance list**:
 

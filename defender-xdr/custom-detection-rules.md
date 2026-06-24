@@ -12,6 +12,7 @@ ms.collection:
   - m365initiative-m365-defender
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1014
   - sfi-ga-nochange
   - cx-ti
   - cx-ah
@@ -21,7 +22,7 @@ appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Defender for Endpoint Plan 2
 ms.topic: how-to
-ms.date: 05/19/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to create custom detection rules so that I can proactively monitor for threats and automate response actions using advanced hunting queries.
 ---
@@ -34,7 +35,7 @@ Custom detection rules are [advanced hunting](advanced-hunting-overview.md) quer
 
 ## Required permissions for managing custom detections
 
-To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender XDR and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender XDR and Sentinel roles. For more information, see the following sections.
+To manage custom detections, you need roles with permissions for the data these detections target. For example, to manage custom detections on multiple data sources (Microsoft Defender XDR and Microsoft Sentinel, or multiple Defender workloads), you need all the applicable Defender XDR and Sentinel roles. For more information, see [Microsoft Defender XDR](#microsoft-defender-xdr) and [Microsoft Sentinel](#microsoft-sentinel).
 
 ### Microsoft Defender XDR
 To manage custom detections on Microsoft Defender XDR data, you need to be assigned one of these roles:
@@ -95,38 +96,39 @@ In the Microsoft Defender portal, go to **Advanced hunting** and select an exist
 #### Required columns in the query results
 
 
-To create a custom detection rule by using Defender XDR data, the query must return the following columns:
-1. `Timestamp` or `TimeGenerated` - This column sets the timestamp for generated alerts. The query shouldn't manipulate this column and should return it exactly as it appears in the raw event.
-   
-1. **For detections based on XDR tables**, a column or combination of columns that uniquely identify the event in these tables:
-   - For Microsoft Defender for Endpoint tables, the `Timestamp`, `DeviceId`, and `ReportId` columns must appear in the same event
-   - For Alert* tables, `Timestamp` must appear in the event
-   - For Observation* tables, `Timestamp` and `ObservationId` must appear in the same event
-   - For all others, `Timestamp` and `ReportId` must appear in the same event
-1. A column that contains a strong identifier for an impacted asset. To map an impacted asset automatically in the wizard, project one of the following columns that contain a strong identifier for an impacted asset:
-      - `DeviceId`
-      - `DeviceName`
-      - `RemoteDeviceName`
-      - `RecipientEmailAddress`
-      - `SenderFromAddress` (envelope sender or Return-Path address)
-      - `SenderMailFromAddress` (sender address displayed by email client)
-      - `SenderObjectId`
-      - `RecipientObjectId`
-      - `AccountObjectId`
-      - `AccountSid`
-      - `AccountUpn`
-      - `InitiatingProcessAccountSid`
-      - `InitiatingProcessAccountUpn`
-      - `InitiatingProcessAccountObjectId`
+To create a custom detection rule by using Defender XDR data, we recommend that the query returns the following columns: 
+1. `Timestamp` or `TimeGenerated` - This column sets the timestamp for generated alerts. If these columns aren't projected from the KQL, the first and last event time for the generated alert is set according to the lookback window of the detection. 
+1. **For Microsoft Defender for Endpoint tables**, include `DeviceId` or `DeviceName` columns to ensure that: 
+    - Alerts are tagged with the correct device group scope 
+    - Process tree view is built successfully.
+1. **For all other XDR tables**, project `Timestamp` and `ReportId` from the same event to ensure Defender XDR identifies the original event that triggered the alert so that: 
+    - Alerts are tagged with the correct entity scope (only relevant for organizations that use Defender XDR scopes) 
+    - Alert timeline view is fully enriched with relevant data. 
+1. To map an impacted asset automatically in the wizard, project one of the following columns that contain a strong identifier for an impacted asset: 
+    - Device:
+        - `DeviceId` 
+        - `DeviceName` 
+        - `RemoteDeviceName` 
+    - Mailbox: 
+        - `RecipientEmailAddress` 
+        - `SenderFromAddress` (envelope sender or Return-Path address) 
+        - `SenderMailFromAddress` (sender address displayed by email client) 
+        - `SenderObjectId`
+        - `RecipientObjectId` 
+    - Account: 
+        - `AccountObjectId`
+        - `AccountSid`
+        - `AccountUpn`
+        - `InitiatingProcessAccountSid` 
+        - `InitiatingProcessAccountUpn`
 
-Support for more entities is added as new tables are added to the [advanced hunting schema](advanced-hunting-schema-tables.md).
+Simple queries, such as those that don't use the `project` or `summarize` operator to customize or aggregate results, typically return these recommended columns. 
 
-Simple queries, such as those that don't use the `project` or `summarize` operator to customize or aggregate results, typically return these common columns.
-
-There are various ways to ensure more complex queries return these columns. For example, if you prefer to aggregate and count by entity under a column such as `DeviceId`, you can still return `Timestamp` and `ReportId` by getting them from the most recent event involving each unique `DeviceId`.
+There are various ways to ensure more complex queries return these columns. For example, if you prefer to aggregate and count by entity under a column such as `AccountObjectId`, you can still return `Timestamp` and `ReportId` by getting them from the most recent event involving each unique `AccountObjectId`. 
 
 > [!IMPORTANT]
-> Avoid filtering custom detections by using the `Timestamp` column. The service prefilters data for custom detections based on the detection frequency.
+> Avoid filtering custom detections by using the `Timestamp` or `TimeGenerated` column. The service prefilters data for custom detections based on the detection lookback. Filter the results by `Timestamp` or `TimeGenerated` columns only if you want to add additional filtering to ensure a specific sunset of the lookback window is evaluated.  
+
 
 The following sample query counts the number of unique devices (`DeviceId`) with antivirus detections and uses this count to find only the devices with more than five detections. To return the latest `Timestamp` and the corresponding `ReportId`, it uses the `summarize` operator with the `arg_max` function.
 
@@ -152,12 +154,12 @@ When you create custom detections and analytics rules, you must project the `Sen
 In the query editor, select **Create detection rule** and specify the following alert details:
 
 - **Detection name** - Name of the detection rule; make it unique.
-- **Frequency** - Interval for running the query and taking action. [See more guidance in the rule frequency section](#rule-frequency).
-- **Lookback** - The time period covered by the query when the custom detection targets data from Microsoft Sentinel only. [See more guidance in the lookback section](#lookback). 
+- **Frequency** - Interval for running the query and taking action. For more information, see [Rule frequency](#rule-frequency).
+- **Lookback** - The time period covered by the query when the custom detection targets data from Microsoft Sentinel only. For more information, see [Lookback](#lookback). 
 - **Alert title** - Title displayed with alerts triggered by the rule; make it unique and use plaintext. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the title should follow the [percent-encoding format](https://en.m.wikipedia.org/wiki/Percent-encoding) for them to display properly.
 - **Severity** - Potential risk of the component or activity identified by the rule.
 - **Category** - Threat component or activity identified by the rule.
-- **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). This section is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
+- **MITRE ATT&CK techniques** - One or more attack techniques identified by the rule as documented in the [MITRE ATT&CK framework](https://attack.mitre.org/). The MITRE ATT&CK techniques field is hidden for certain alert categories, including malware, ransomware, suspicious activity, and unwanted software.
 - **Threat analytics report** - Link the generated alert to an existing threat analytics report so that it appears in the [Related incidents](threat-analytics.md#set-up-custom-detections-and-link-them-to-threat-analytics-reports) tab in threat analytics.
 - **Description** - More information about the component or activity identified by the rule. Strings are sanitized for security purposes, so HTML, Markdown, and other code don't work. Any URLs included in the description should follow the percent-encoding format for them to display properly.
 - **Recommended actions** - Additional actions that responders might take in response to an alert.
@@ -243,7 +245,7 @@ If your custom detections target Microsoft Sentinel data only, you can customize
 - For detections set to run in frequencies of **one day or less**, the lookback can be set **up to 30 days**.  
 
 > [!IMPORTANT]
-> Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because of this condition, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
+> Custom detections evaluate `ingestion_time()` to account for ingestion delays. Because custom detections evaluate `ingestion_time()` instead of event timestamps, events with `Timestamp` or `TimeGenerated` values older than the configured lookback period might still be included in the rule evaluation.
 > 
 > When the lookback period is longer than the frequency, duplicate events might occur. However, custom detections [group and deduplicate them automatically](#how-custom-detections-handle-duplicate-alerts) to reduce alert noise and fatigue.
 

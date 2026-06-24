@@ -5,7 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 02/24/2023
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to ingest diagnostic data from Azure services to Microsoft Sentinel so that analysts can monitor logs for enhanced threat detection and response.
 
@@ -15,7 +17,7 @@ ms.date: 02/24/2023
 
 This article describes how to connect to Microsoft Sentinel by using diagnostic settings connections. Microsoft Sentinel uses the Azure foundation to provide built-in, service-to-service support for data ingestion from many Azure and Microsoft 365 services, Amazon Web Services, and various Windows Server services. There are a few different methods through which these connections are made.
 
-This article presents information that is common to the group of data connectors that use diagnostic settings-based connections. Some of these types of connectors are managed by using Azure Policy. For the other connectors of this type, use the standalone instructions.
+This article presents information that is common to the Microsoft Sentinel data connectors that use diagnostic settings-based connections. Some of these types of connectors are managed by using Azure Policy. For diagnostic settings-based connectors that aren't managed by Azure Policy, use the standalone instructions.
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 
@@ -31,7 +33,7 @@ To ingest data into Microsoft Sentinel using diagnostic settings-based connector
 
   |Data connector  |Licensing, costs, and other information  |
   |---------|---------|
-  |**Azure Activity**| This connector now uses the diagnostic settings pipeline. If you're using the legacy method, you must disconnect the existing subscriptions from the legacy method before setting up the new Azure Activity log connector.<br><br>1. From the Microsoft Sentinel navigation menu, select **Data connectors**. From the list of connectors, select **Azure Activity**, and then select the **Open connector page** button on the lower right.<br>2. Under the **Instructions** tab, in the **Configuration** section, in step 1, review the list of your existing subscriptions that are connected to the legacy method, and disconnect them all at once by clicking the **Disconnect All** button below.<br>3. Continue setting up the new connector with the instructions in this section. |
+  |**Azure Activity**| This connector now uses the diagnostic settings pipeline. If you're using the legacy method, you must disconnect the existing subscriptions from the legacy method before setting up the new Azure Activity log connector.<br><br>1. From the Microsoft Sentinel navigation menu, select **Data connectors**. From the list of connectors, select **Azure Activity**, and then select the **Open connector page** button on the lower right.<br>2. Under the **Instructions** tab, in the **Configuration** section, in step 1, review the list of your existing subscriptions that are connected to the legacy method, and disconnect them all at once by clicking the **Disconnect All** button below.<br>3. Continue setting up the new connector with the instructions in [Connect via a standalone diagnostic settings-based connector](#connect-via-a-standalone-diagnostic-settings-based-connector). |
   |**Azure DDoS Protection**|- Configured [Azure DDoS Standard protection plan](/azure/ddos-protection/manage-ddos-protection#create-a-ddos-protection-plan).<br>- Configured [virtual network with Azure DDoS Standard enabled](/azure/ddos-protection/manage-ddos-protection#enable-ddos-protection-for-a-virtual-network)<br>- Other charges may apply<br>- The **Status** for Azure DDoS Protection Data Connector changes to **Connected** only when the protected resources are under a DDoS attack.|
   |**Azure Storage Account**|The storage account (parent) resource has within it other (child) resources for each type of storage: files, tables, queues, and blobs. </br>When configuring diagnostics for a storage account, you must select and configure: <br><br>- The parent account resource, exporting the **Transaction** metric.<br>- Each of the child storage-type resources, exporting all the logs and metrics.<br><br>You'll only see the storage types that you actually have defined resources for.|
 
@@ -53,9 +55,9 @@ This procedure describes how to connect to Microsoft Sentinel using data connect
 
 1. In the **Diagnostics settings** screen, enter a name in the **Diagnostic settings name** field.
 
-    Mark the **Send to Log Analytics** check box. Two new fields are displayed below it. Choose the relevant **Subscription** and **Log Analytics Workspace** (where Microsoft Sentinel resides).
+    Mark the **Send to Log Analytics** check box. Two new fields are displayed below the **Send to Log Analytics** check box. Choose the relevant **Subscription** and **Log Analytics Workspace** (where Microsoft Sentinel resides).
 
-1. Mark the check boxes of the types of logs and metrics you want to collect. See our recommended choices for each resource type in the section for the resource's connector in the [Data connectors reference](data-connectors-reference.md) page.
+1. Mark the check boxes of the types of logs and metrics you want to collect. See our recommended choices for each resource type in the corresponding connector's section of the [Data connectors reference](data-connectors-reference.md) page.
 
 1. Select **Save** at the top of the screen.
 
@@ -89,7 +91,7 @@ Connectors of this type use Azure Policy to apply a single diagnostic settings c
 
 With this type of data connector, the connectivity status indicators (a color stripe in the data connectors gallery and connection icons next to the data type names) shows as *connected* (green) only if data has been ingested at some point in the past 14 days. Once 14 days have passed with no data ingestion, the connector shows as being disconnected. The moment more data comes through, the *connected* status returns.
 
-You can find and query the data for each resource type using the table name that appears in the section for the resource's connector in the [Data connectors reference](data-connectors-reference.md) page. For more information, see [Create diagnostic settings to send Azure Monitor platform logs and metrics to different destinations](/azure/azure-monitor/essentials/diagnostic-settings?tabs=CMD) in the Azure Monitor documentation.
+You can find and query the data for each resource type using the table name that appears in the corresponding connector's section of the [Data connectors reference](data-connectors-reference.md) page. For more information, see [Create diagnostic settings to send Azure Monitor platform logs and metrics to different destinations](/azure/azure-monitor/essentials/diagnostic-settings?tabs=CMD) in the Azure Monitor documentation.
 
 ## Related content
 

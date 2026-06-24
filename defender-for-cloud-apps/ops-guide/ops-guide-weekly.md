@@ -17,7 +17,7 @@ This article lists weekly operational activities that we recommend you perform w
 
 SaaS Security Posture Management (SSPM) capabilities in Microsoft Defender for Cloud Apps enable you to get deeper visibility, automatically identify SaaS app misconfigurations, and help you remediate those misconfigurations to improve your organizational security. 
 
-Defender for Cloud Apps SSPM features are integrated into Microsoft Defender XDR so that security teams can see their holistic security posture across the enterprise with Microsoft Secure Score.
+Defender for Cloud Apps SSPM features are integrated into Microsoft Defender so that security teams can see their holistic security posture across the enterprise with Microsoft Secure Score.
 
 To view Secure Score recommendations per product, in Microsoft Defender XDR, select **Secure Score** > **Recommended actions**, and group the list by **Product**.
 
@@ -33,7 +33,7 @@ If you're using a SIEM agent, system alerts can be sent directly to your SIEM sy
 
 We also recommend reviewing the following settings to ensure that they're correct and up to date:
 
-|Status to check  |Where to check in Microsoft Defender XDR  |
+|Status to check  |Where to check in the Defender portal  |
 |---------|---------|
 |**App connectors**     |  **Settings > Cloud apps > Connected apps > App Connectors**       |
 |**Conditional Access App Control apps**     |  **Settings > Cloud apps > Connected apps > Conditional Access App Control apps**       |

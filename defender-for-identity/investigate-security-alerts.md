@@ -1,9 +1,10 @@
 ---
 title: Investigate alerts in Microsoft Defender for Identity
 description: Learn how to investigate and respond to security alerts issued by Microsoft Defender for Identity
-ms.date: 05/08/2025
+ms.date: 06/15/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Investigate alerts in Microsoft Defender for Identity
@@ -31,7 +32,7 @@ Together, the alert story, alert graph, and Important information give you a com
 ## Take action from the details pane
 Once you've selected an alert of interest, the details pane changes to display information about the selected alert, historic information when it's available, and offer recommended actions to take action on this alert.
 
-Once you're done investigating, go back to the alert you started with, mark the alert's status as Resolved and classify it as either False alert or True alert. Classifying alerts helps tune this capability to provide more true alerts and less false alerts.
+After completing your investigation, return to the selected alert, mark its status as Resolved, and classify it as either False alert or True alert. Classifying alerts helps tune this capability to provide more true alerts and less false alerts.
 
 
 ### Advanced security alert investigation
@@ -89,13 +90,15 @@ Investigations can be as detailed as needed. Here are some ideas of ways to inve
 
 In each alert, the last tab provides the **Related Entities**. Related entities are all entities involved in a suspicious activity, without the separation of the "role" they played in the alert. Each entity has two Json files, the Unique Entity Json and Unique Entity Profile Json. Use these two Json files to learn more about the entity and to help you investigate the alert.
 
-#### Unique Entity Json file
+<a name="unique-entity-json-file"></a>
+#### Unique Entity JSON file format
 
-Includes the data Defender for Identity learned from Active Directory about the account. This includes all attributes such as *Distinguished Name*, *SID*, *LockoutTime*, and *PasswordExpiryTime*. For user accounts, includes data such as *Department*, *Mail*, and *PhoneNumber*. For computer accounts, includes data such as *OperatingSystem*, *IsDomainController*, and *DnsName*.
+The Unique Entity JSON file includes the data that Defender for Identity learned from Active Directory about the entity's account. This includes all attributes such as *Distinguished Name*, *SID*, *LockoutTime*, and *PasswordExpiryTime*. For user accounts, includes data such as *Department*, *Mail*, and *PhoneNumber*. For computer accounts, includes data such as *OperatingSystem*, *IsDomainController*, and *DnsName*.
 
-#### Unique Entity Profile Json file
+<a name="unique-entity-profile-json-file"></a>
+#### Unique Entity Profile JSON file format
 
-Includes all data Defender for Identity profiled on the entity. Defender for Identity uses the network and event activities captured to learn about the environment's users and computers. Defender for Identity profiles relevant information per entity. This information contributes Defender for Identity's threat identification capabilities.
+The Unique Entity Profile JSON file includes all data that Defender for Identity profiled on the entity. Defender for Identity uses the network and event activities captured to learn about the environment's users and computers. Defender for Identity profiles relevant information per entity. This information contributes Defender for Identity's threat identification capabilities.
 
 :::image type="content" source="media/understanding-security-alerts/related-entities.png" alt-text="Screenshot showing the Related Entities tab of a Microsoft Defender for Identity alert report for Network mapping reconnaissance (DNS)." lightbox="media/understanding-security-alerts/related-entities.png":::
 

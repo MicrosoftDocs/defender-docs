@@ -1,12 +1,14 @@
 ---
-title: Hunting capabilities in Microsoft Sentinel| Microsoft Docs
+title: Hunting capabilities in Microsoft Sentinel
 description: Use Microsoft Sentinel's built-in hunting queries to guide you into asking the right questions to find issues in your data.
 ms.topic: how-to
-ms.date: 12/31/2024
+ms.date: 06/15/2026
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: efratka
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to use advanced threat hunting tools and queries so that I can proactively identify and mitigate security threats across my organization's data sources.
 
@@ -16,7 +18,7 @@ ms.collection: usx-security
 
 As security analysts and investigators, you want to be proactive about looking for security threats, but your various systems and security appliances generate mountains of data that can be difficult to parse and filter into meaningful events. Microsoft Sentinel has powerful hunting search and query tools to hunt for security threats across your organization's data sources. To help security analysts look proactively for new anomalies that aren't detected by your security apps or even by your scheduled analytics rules, hunting queries guide you into asking the right questions to find issues in the data you already have on your network.
 
-For example, one out of the box query provides data about the most uncommon processes running on your infrastructure. You wouldn't want an alert each time they run. They could be entirely innocent. But you might want to take a look at the query on occasion to see if there's anything unusual.
+For example, one out of the box query provides data about the most uncommon processes running on your infrastructure. You wouldn't want an alert each time those uncommon processes run. Those processes could be entirely innocent. But you might want to take a look at the query on occasion to see if there's anything unusual.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -41,7 +43,7 @@ To get started, see [Conduct end-to-end proactive threat hunting in Microsoft Se
 
 ## Hunting queries
 
-In Microsoft Sentinel in Defender, select **Threat management** > **Hunting**, then the **Queries** tab to run all your queries, or a selected subset. The **Queries** tab lists all the hunting queries installed with security solutions from the **Content hub**, and any extra query you created or modified. Each query provides a description of what it hunts for, and what kind of data it runs on. These queries are grouped by their MITRE ATT&CK **tactics**. The icons on top categorize the type of threat, such as initial access, persistence, and exfiltration. MITRE ATT&CK **techniques** are shown in the **Techniques** column and describe the specific behavior identified by the hunting query.
+In Microsoft Sentinel in Defender, select **Threat management** > **Hunting**, then the **Queries** tab to run all your queries, or a selected subset. The **Queries** tab lists all the hunting queries installed with security solutions from the **Content hub**, and any extra query you created or modified. Each query provides a description of what it hunts for, and what kind of data it runs on. These queries are grouped by their MITRE ATT&CK **tactics**. The icons at the top of the **Queries** tab categorize the type of threat, such as initial access, persistence, and exfiltration. MITRE ATT&CK **techniques** are shown in the **Techniques** column and describe the specific behavior identified by the hunting query.
 
 :::image type="content" source="media/hunting/hunting-start.png" alt-text="Microsoft Sentinel starts hunting" lightbox="media/hunting/hunting-start.png":::
 
@@ -53,7 +55,7 @@ The following table describes detailed actions available from the hunting dashbo
 | --------- | --------- |
 | **See how queries apply to your environment**      | Select the **Run all queries** button, or select a subset of queries using the check boxes to the left of each row and select the **Run selected queries** button. <br><br>Running your queries can take anywhere from a few seconds to many minutes, depending on how many queries are selected, the time range, and the amount of data that is being queried.      |
 | **View the queries that returned results**         | After your queries are done running, view the queries that returned results using the **Results** filter: <br>- Sort to see which queries had the most or fewest results. <br>- View the queries that aren't at all active in your environment by selecting *N/A* in the **Results** filter. <br>- Hover over the info icon (**i**) next to the *N/A* to see which data sources are required to make this query active.  |
-| **Identify spikes in your data**                   | Identify spikes in the data by sorting or filtering on **Results delta** or **Results delta percentage**. <br><br>Compares the results of the last 24 hours against the results of the previous 24-48 hours, highlighting any large differences or relative difference in volume.   |
+| **Identify spikes in your data**                   | Identify spikes in the data by sorting or filtering on **Results delta** or **Results delta percentage**. <br><br>These metrics compare the results of the last 24 hours against the results of the previous 24-48 hours, highlighting any large differences or relative difference in volume.   |
 | **View queries mapped to the MITRE ATT&CK tactic** | The **MITRE ATT&CK tactic bar**, at the top of the table, lists how many queries are mapped to each MITRE ATT&CK tactic. The tactic bar gets dynamically updated based on the current set of filters applied. <br><br>Enables you to see which MITRE ATT&CK tactics show up when you filter by a given result count, a high result delta, *N/A* results, or any other set of filters.        |
 | **View queries mapped to MITRE ATT&CK techniques** | Queries can also be mapped to MITRE ATT&CK techniques. You can filter or sort by MITRE ATT&CK techniques using the **Technique** filter. By opening a query, you're able to select the technique to see the MITRE ATT&CK description of the technique.        |
 | **Save a query to your favorites**                 |   Queries saved to your favorites automatically run each time the **Hunting** page is accessed. You can create your own hunting query or clone and customize an existing hunting query template.      |
@@ -97,11 +99,15 @@ Many available hunting queries are developed by Microsoft security researchers o
 
 Create or edit a query and save it as your own query or share it with users who are in the same tenant. In Microsoft Sentinel, create a custom hunting query from the **Hunting** > **Queries** tab.
 
-#### [Defender portal](#tab/defender-portal)
+#### [Create a custom hunting query in the Defender portal](#tab/defender-portal)
+
+The following image shows the save query experience in the Defender portal.
 
 :::image type="content" source="./media/hunting/save-query-defender.png" alt-text="Save query" lightbox="./media/hunting/save-query-defender.png":::
 
-#### [Azure portal](#tab/azure-portal)
+#### [Create a custom hunting query in the Azure portal](#tab/azure-portal)
+
+The following image shows how to save a custom hunting query in the Azure portal.
 
 :::image type="content" source="./media/hunting/save-query.png" alt-text="Save query" lightbox="./media/hunting/save-query.png":::
 
@@ -115,9 +121,9 @@ For more information, see [Create custom hunting queries in Microsoft Sentinel](
 
 Threat hunting typically requires reviewing mountains of log data looking for evidence of malicious behavior. During this process, investigators find events that they want to remember, revisit, and analyze as part of validating potential hypotheses and understanding the full story of a compromise.
 
-During the hunting and investigation process, you might come across query results that look unusual or suspicious. Bookmark these items to refer back to them in the future, such as when creating or enriching an incident for investigation. Events such as potential root causes, indicators of compromise, or other notable events should be raised as a bookmark. If a key event you bookmarked is severe enough to warrant an investigation, escalate it to an incident.
+During the hunting and investigation process, you might come across query results that look unusual or suspicious. Bookmark these items to refer back to them in the future, such as when creating or enriching an incident for investigation. Events such as potential root causes, indicators of compromise, or other notable events should be raised as a bookmark. If a key event you bookmarked is severe enough to warrant an investigation, escalate the bookmarked event to an incident.
 
-- In your results, mark the checkboxes for any rows you want to preserve, and select **Add bookmark**. This creates for a record for each marked row, a bookmark, that contains the row results and the query that created the results. You can add your own tags and notes to each bookmark.
+- In your results, mark the checkboxes for any rows you want to preserve, and select **Add bookmark**. Selecting **Add bookmark** creates a bookmark for each marked row that contains the row results and the query that created the results. You can add your own tags and notes to each bookmark.
 
   - As with scheduled analytics rules, you can enrich your bookmarks with entity mappings to extract multiple entity types and identifiers, and MITRE ATT&CK mappings to associate particular tactics and techniques.
   - Bookmarks default to use the same entity and MITRE ATT&CK technique mappings as the hunting query that produced the bookmarked results. 
@@ -141,7 +147,7 @@ To start using bookmarks, see [Keep track of data during hunting with Microsoft 
 
 When your hunting and investigations become more complex, use Microsoft Sentinel notebooks to enhance your activity with machine learning, visualizations, and data analysis.
 
-Notebooks provide a kind of virtual sandbox, complete with its own kernel, where you can carry out a complete investigation. Your notebook can include the raw data, the code you run on that data, the results, and their visualizations. Save your notebooks so that you can share it with others to reuse in your organization.
+Notebooks provide a kind of virtual sandbox, complete with its own kernel, where you can carry out a complete investigation. Your notebook can include the raw data, the code you run on that data, the results, and their visualizations. Save your notebooks so that you can share them with others to reuse in your organization.
 
 Notebooks might be helpful when your hunting or investigation becomes too large to remember easily, view details, or when you need to save queries and results. To help you create and share notebooks, Microsoft Sentinel provides [Jupyter Notebooks](https://jupyter.org), an open-source, interactive development, and data manipulation environment, integrated directly in the Microsoft Sentinel **Notebooks** page.
 
@@ -189,7 +195,7 @@ For more information, see:
 
 Hunting queries are built in [Kusto Query Language (KQL)](/kusto/query/?view=microsoft-sentinel&preserve-view=true), a powerful query language with IntelliSense language that gives you the power and flexibility you need to take hunting to the next level.
 
-It's the same language used by the queries in your analytics rules and elsewhere in Microsoft Sentinel. For more information, see [Query Language Reference](/azure/azure-monitor/logs/get-started-queries).
+KQL is the same language used by the queries in your analytics rules and elsewhere in Microsoft Sentinel. For more information, see [Query Language Reference](/azure/azure-monitor/logs/get-started-queries).
 
 The following operators are especially helpful in Microsoft Sentinel hunting queries:
 
@@ -215,8 +221,10 @@ The following operators are especially helpful in Microsoft Sentinel hunting que
 
 - **adx()** - This function performs cross-resource queries of Azure Data Explorer data sources from the Microsoft Sentinel hunting experience and Log Analytics. For more information, see [Cross-resource query Azure Data Explorer by using Azure Monitor](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy).
 
-## Related articles
+## Related content
+
+For more information about threat hunting in Microsoft Sentinel, see the following articles:
 
 - [Jupyter notebooks with Microsoft Sentinel hunting capabilities](notebooks.md)
 - [Keep track of data during hunting with Microsoft Sentinel](bookmarks.md)
-- Learn from an example of using custom analytics rules when [monitoring Zoom](https://techcommunity.microsoft.com/t5/azure-sentinel/monitoring-zoom-with-azure-sentinel/ba-p/1341516) with a [custom connector](create-custom-connector.md).
+- Learn from an example of using custom analytics rules when [monitoring Zoom](https://techcommunity.microsoft.com/t5/azure-sentinel/monitoring-zoom-with-azure-sentinel/ba-p/1341516) with a [custom Microsoft Sentinel connector](create-custom-connector.md).

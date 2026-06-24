@@ -5,13 +5,15 @@ description: This article outlines the filter functionality available in Microso
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 12/14/2022
+ms.date: 06/15/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # SSL certificate asset filters
 
-These filters specifically apply to SSL certificate assets. Use these filters when searching for a specific cert, or select group of certs.
+This article provides a reference for all filters available for SSL certificate assets in Microsoft Defender External Attack Surface Management. Use these filters to search your inventory for a specific SSL certificate or a select group of certificates based on defined or freeform filter values. Each filter listing includes applicable operators and accepted value formats to help you refine your queries.
 
 ## Defined value filters
 

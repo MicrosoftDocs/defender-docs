@@ -12,7 +12,9 @@ ms.collection:
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-ms.date: 02/09/2026
+ms.date: 06/17/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
@@ -95,7 +97,7 @@ Various antivirus settings and configurations can influence both performance and
 |**Scan archives (on-demand antivirus scans only)**|This setting specifies whether to scan archives (such as *.zip*, *.rar*, *.7z*, etc.) during on-demand antivirus scans. |
 |**Maximum on-demand scan threads**|This setting controls how many threads are used for on-demand scans, impacting both CPU usage and the scan's duration.|
 
-For detailed instructions on configuring the above settings using CLI or managed JSON, see [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences.md#antivirus-engine-preferences).
+For detailed instructions on configuring scan-after-definition-update, archive scanning, and maximum on-demand scan threads using CLI or managed JSON, see [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences.md#antivirus-engine-preferences).
 
 ## Best practices
 
@@ -103,7 +105,7 @@ Starting from version 101.23062.0001, Defender for Endpoint on Linux operates in
  
 After installing Defender for Endpoint on Linux, it's a good practice to run a full scan (or a quick scan) to help identify and remediate any existing threats on the system.
  
-This is especially important before switching from passive mode to RTP mode, as enabling RTP primarily provides protection against newly introduced malware, and not the threats already present on the system. Running a scan beforehand helps ensure the device starts from a known clean state.
+Running a scan after installation is especially important before switching from passive mode to RTP mode, as enabling RTP primarily provides protection against newly introduced malware, and not the threats already present on the system. Running a scan beforehand helps ensure the device starts from a known clean state.
  
 For continuous protection, incorporate quick scans into your regular scheduled scans. Quick scans offer comprehensive coverage for malware that starts with the system and kernel-level threats, all while maintaining minimal impact on your device's performance.
 

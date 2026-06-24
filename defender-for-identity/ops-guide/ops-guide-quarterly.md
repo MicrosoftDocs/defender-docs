@@ -35,7 +35,7 @@ For more information, see [Review Defender for Identity health issues](ops-guide
 
 We recommend that you periodically verify your organization's server setup process to make sure that it includes installing the Defender for Identity sensor. This ensures that all new domain controllers, AD CS, and AD FS servers are protected right away.
 
-For more information, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](../deploy/deploy-defender-identity.md).
+For more information, see [Deploy Microsoft Defender for Identity with Microsoft Defender](../deploy/deploy-defender-identity.md).
 
 ## Check domain configuration via PowerShell
 
@@ -55,7 +55,7 @@ For more information, see:
 
 For more information, see:
 
-- [Microsoft Defender XDR Security operations overview](/security/operations/overview)
+- [Microsoft Defender Security operations overview](/security/operations/overview)
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
 - [Daily operational guide - Microsoft Defender for Identity](ops-guide-daily.md)
 - [Weekly operational guide - Microsoft Defender for Identity](ops-guide-weekly.md)

@@ -1,10 +1,11 @@
 ---
 title: View discovered apps on the Cloud discovery dashboard | Microsoft Defender for Cloud Apps
-description: This article describes the process for identifying and remediating risky cloud discovery apps in Defender for Cloud Apps.
-ms.date: 06/02/2024
+description: Learn how to view cloud discovery insights, app risk levels, top users, and filter dashboard data in Microsoft Defender for Cloud Apps.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # View discovered apps with the Cloud discovery dashboard
@@ -47,7 +48,7 @@ This procedure describes how to get an initial, general picture of your cloud di
 
 To dive deeper in to cloud discovery data, use the filters to check for risky or commonly used apps.
 
-For example, if you want to identify commonly used, risky cloud storage and collaboration apps, use the **Discovered apps** page to filter for the apps you want. Then, [unsanction or block](governance-discovery.md) them as follows:
+For example, if you want to identify commonly used, risky cloud storage and collaboration apps, use the **Discovered apps** page to filter for the apps you want. Then, [unsanction or block](governance-discovery.md) those apps as follows:
 
 1. In the Microsoft Defender portal, under **Cloud Apps**, select **Cloud discovery**. Then choose the  **Discovered apps** tab.
 
@@ -62,7 +63,7 @@ For example, if you want to identify commonly used, risky cloud storage and coll
 
     :::image type="content" source="media/discovered-app-filters.png" alt-text="Screenshot of discovered app filters." lightbox="media/discovered-app-filters.png":::
 
-After the results are filtered, [unsanction and block](governance-discovery.md) them by using the bulk action checkbox to unsanction them all in one action. Once they're unsanctioned, use a blocking script to block them from being used in your environment.
+After the results are filtered, [unsanction and block](governance-discovery.md) the filtered apps by using the bulk action checkbox to unsanction all of those apps in one action. Once the apps are unsanctioned, use a blocking script to block those apps from being used in your environment.
 
 You also might want to identify specific app instances that are in use by investigating the discovered subdomains. For example, differentiate between different SharePoint sites:
 
@@ -80,10 +81,10 @@ You also might want to identify specific app instances that are in use by invest
 
 Cloud discovery also enables you to dive into your IaaS and PaaS resources. Discover activity across your resource-hosting platforms, viewing access to data across your self-hosted apps and resources including storage accounts, infrastructure and custom apps hosted on Azure, Google Cloud Platform, and AWS. Not only can you see overall usage in your IaaS solutions, but you can get visibility into the specific resources that are hosted on each, and the overall usage of the resources, to help mitigate risk per resource.
 
-For example, if a large amount of data is uploaded, discover what resource it's uploaded to, and drill down to see who performed the activity.
+For example, if a large amount of data is uploaded, discover which resource received the uploaded data, and drill down to see who performed the activity.
 
 > [!NOTE]
-> This is supported only in firewalls and proxies that contain target URL data. For more information, see the list of supported appliances in [Supported firewalls and proxies](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
+> Discovery of IaaS and PaaS resources is supported only in firewalls and proxies that contain target URL data. For more information, see the list of supported appliances in [Supported firewalls and proxies](set-up-cloud-discovery.md#supported-firewalls-and-proxies).
 
 **To view discovered resources**:
 
@@ -169,7 +170,7 @@ We recommend deleting cloud discovery data in the following cases:
 - If many users or IP addresses recently started working again after being offline for some time, their activity is identified as anomalous and might give you false positive violations.
 
 > [!IMPORTANT]
-> Make sure you want to delete data before doing so. This action is irreversible and deletes **all** cloud discovery data in the system.
+> Make sure you want to delete data before doing so. Deleting cloud discovery data is irreversible and deletes **all** cloud discovery data in the system.
 >
 
 **To delete cloud discovery data**:

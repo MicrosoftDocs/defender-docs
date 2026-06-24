@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - asr
   - sfi-ga-nochange
 ms.topic: how-to
@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 05/04/2026
+ms.date: 06/16/2026
 search.appverid: met150
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to understand the ASR rules report so I can monitor detections, review device configuration, and manage exclusions.
@@ -45,6 +45,8 @@ For more information about ASR rules, see [Attack surface reduction (ASR) rules 
 
 ### Supported operating systems
 
+The following operating systems are supported for the Attack surface reduction rules report:
+
 - Windows
 
   To appear in the report, Windows Server 2012 R2 and Windows Server 2016 devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
@@ -60,23 +62,17 @@ You need to be assigned permissions before you can do the procedures in this art
   > [!IMPORTANT]
   > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-<a name='navigate-to-the-attack-surface-reduction-rules-report'></a>
-
-<a name='attack-surface-reduction-rules-main-tabs'></a>
-
 ## The Attack surface reduction rules report page
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Reports** \> **Endpoints** tab \> **Attack surface reduction rules**. Or, to go directly to the **Attack surface reduction rules** report page, use <https://security.microsoft.com/asr>.
 
 The following tabs are available on the **Attack surface reduction rules** report page:
 
-- [Detections](#attack-surface-reduction-rules-main-detections-tab)
-- [Configuration](#attack-surface-reduction-rules-main-configuration-tab)
-- [Add exclusions](#attack-surface-reduction-rules-add-exclusions-tab)
+- [Detections](#review-detections-on-the-detections-tab)
+- [Configuration](#review-device-configuration-on-the-configuration-tab)
+- [Add exclusions](#manage-exclusions-on-the-add-exclusions-tab)
 
-<a name='attack-surface-reduction-rules-main-detections-tab'></a>
-
-### Detections tab
+### Review detections on the Detections tab
 
 The **Detections** tab is the default tab of the page. To go directly to the **Detections** tab of the **Attack surface reduction rules** report, use <https://security.microsoft.com/asr> or <https://security.microsoft.com/asr?viewid=detections>.
 
@@ -145,8 +141,6 @@ The :::image type="icon" source="media/defender-portal-icon-search.png" border="
 >
 > To view all ASR rules triggered in Defender for Endpoint Plan 2, use the [DeviceEvents table in advanced hunting](/defender-xdr/advanced-hunting-deviceevents-table).
 
-<a name='actionable-flyout'></a>
-
 #### Detected file details
 
 When you select a detection event from the details table on the **Detections** tab of the **Attack surface reduction rules** report page by clicking anywhere in the row other than the check box next to the **Detected file** value, a **File info** details flyout opens with the following information:
@@ -157,12 +151,12 @@ When you select a detection event from the details table on the **Detections** t
 
   The following actions are available in this section:
 
-  - **Go hunt**: In Defender for Endpoint Plan 2, this action opens the advanced hunting query page with the detected filename specified in the query. For example, for the file `conhost.exe`, the query looks like this:
+  - **Go hunt**: In Defender for Endpoint Plan 2, this action opens the advanced hunting query page with the detected filename specified in the query. For example, for the file `svchost.exe`, the query looks like this:
 
     ```kql
     DeviceEvents
         | where Timestamp >= ago(1d)
-        | where FileName == 'conhost.exe'
+        | where FileName == 'svchost.exe'
         | where ActionType startswith 'Asr'
         | extend ParsedFields=parse_json(AdditionalFields)
         | distinct ActionType, Audit=tostring(ParsedFields.IsAudit), InitiatingProcessParentFileName, InitiatingProcessFolderPath, InitiatingProcessFileName, InitiatingProcessCommandLine, FolderPath, FileName, ProcessCommandLine, ASRRuleId=tostring(ParsedFields.RuleId)
@@ -177,13 +171,11 @@ When you select a detection event from the details table on the **Detections** t
 
 - **Add exclusions** at the bottom of the flyout opens the Microsoft Intune admin center. For more information about configuring exclusions for ASR rules, see [Configure attack surface reduction (ASR) rules and exclusions](attack-surface-reduction-rules-configure.md).
 
-<!--- The **Add exclusion** button is linked with the add exclusion main page.--->
+<!--- The **Add exclusion** button is NOT linked with the add exclusion main page.--->
 
 :::image type="content" source="media/attack-surface-reduction-rules-report-main-detections-flyout.png" alt-text="Screenshot showing the File info details flyout after you select an entry from the details table on the Detections tab of the Attack surface reduction rules report." lightbox="media/attack-surface-reduction-rules-report-main-detections-flyout.png":::
 
-<a name='attack-surface-reduction-rules-main-configuration-tab'></a>
-
-### Configuration tab
+### Review device configuration on the Configuration tab
 
 To go directly to the **Configuration** tab of the **Attack surface reduction rules** report page, use <https://security.microsoft.com/asr?viewid=configuration>.
 
@@ -226,20 +218,17 @@ Use the :::image type="icon" source="media/defender-portal-icon-search.png" bord
 When you select a device entry from the details table on the **Configuration** tab of the **Attack surface reduction rules** report page by clicking anywhere in the row, a device details flyout opens with the following information:
 
 - A list of all available ASR rules and their states on the device:
-
-- **Off**
-- **Audit**
-- **Block**
-- **Warn**
-- **Not applicable**
+  - **Off**
+  - **Audit**
+  - **Block**
+  - **Warn**
+  - **Not applicable**
 
 - **Add to policy** at the bottom of the flyout opens the Microsoft Intune admin center. For more information about the different ways to configure ASR rules, see [Deployment and configuration methods for ASR rules](attack-surface-reduction-rules-overview.md#deployment-and-configuration-methods-for-asr-rules).
 
 :::image type="content" source="media/attack-surface-reduction-rules-report-configuration-flyout.png" alt-text="Screenshot of the devices details flyout for a device from the Configuration tab of the Attack surface reduction rules report page." lightbox="media/attack-surface-reduction-rules-report-configuration-flyout.png":::
 
-<a name='attack-surface-reduction-rules-add-exclusions-tab'></a>
-
-### Add exclusions tab
+### Manage exclusions on the Add exclusions tab
 
 > [!IMPORTANT]
 > Excluding files or folders can severely reduce the protection provided by ASR rules. Excluded files are allowed to run, and no report or event is recorded.
@@ -248,7 +237,7 @@ When you select a device entry from the details table on the **Configuration** t
 
 To go directly to the **Add exclusions** tab of the **Attack surface reduction rules** report page, use <https://security.microsoft.com/asr?viewid=exclusions>.
 
-:::image type="content" source="media/attack-surface-reduction-rules-report-exclusion-tab.png" alt-text="Screenshot of the Add exclusions tab of the Attack surface reduction rules report page in the Microsoft Defender portal." lightbox="media/attack-surface-reduction-rules-report-exclusion-tab.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-tab.png" alt-text="Screenshot showing the Add exclusions tab of the Attack surface reduction rules report page with no file entries selected." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-tab.png":::
 
 The **Add exclusions** tab lists file detections by ASR rules across all devices.
 
@@ -283,9 +272,11 @@ When you select one or more file entries from the details table on the **Add exc
 
   - **Get selected exclusion paths**: Generates an `AsrExclusionPaths.csv` file with the complete paths to the affected files for download.
 
-:::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-tab.png" alt-text="Screenshot showing the Add exclusions tab of the Attack surface reduction rules report page with file entries selected." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-tab.png":::
+:::image type="content" source="media/attack-surface-reduction-rules-report-main-add-exclusions-tab-with-selections.png" alt-text="Screenshot showing the Add exclusions tab of the Attack surface reduction rules report page with file entries selected." lightbox="media/attack-surface-reduction-rules-report-main-add-exclusions-tab-with-selections.png":::
 
 ## Related content
+
+For more information about deploying, configuring, and managing ASR rules, see the following articles:
 
 - [Attack surface reduction (ASR) rules deployment guide](attack-surface-reduction-rules-deployment.md)
 - [Plan your attack surface reduction (ASR) rules deployment](attack-surface-reduction-rules-deployment-plan.md)

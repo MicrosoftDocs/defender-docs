@@ -36,7 +36,7 @@ The `BehaviorInfo` table in the [advanced hunting](advanced-hunting-overview.md)
 - [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors)
 - [Translate raw security logs to behavioral insights using UEBA behaviors in Microsoft Sentinel](/azure/sentinel/entity-behaviors-layer)
 
-This advanced hunting table is populated by records from both Defender for Cloud Apps and UEBA. If your organization doesn't deploy these services in Microsoft Defender XDR, queries that use the table won't work or return any results. For more information about how to deploy services in Defender XDR, see [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from both Defender for Cloud Apps and UEBA. If your organization doesn't deploy these services in Microsoft Defender, queries that use the table won't work or return any results. For more information about how to deploy services in Defender, see [Deploy supported services](deploy-supported-services.md).
 
 To make sure Defender for Cloud Apps and UEBA data populate the `BehaviorInfo` table, follow the instructions in the following articles:
 - [Connect Microsoft 365 to Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-office-365#prerequisites)

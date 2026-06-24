@@ -12,10 +12,12 @@ ms.collection:
 - tier3
 - mde-linux
 ms.topic: how-to
-ms.date: 05/08/2026
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure offline security intelligence updates for Microsoft Defender for Endpoint on Linux 
@@ -38,7 +40,10 @@ Key benefits include:
 - Older versions of signatures (`n-1`) are moved to a backup folder on your mirror server in each iteration. If there's an issue with the latest updates, you can pull the `n-1` signature version from the backup folder to your devices.
 - In the rare event an offline update fails, you can configure a fallback option to get online updates from the Microsoft cloud.
 
-## How offline security intelligence update works
+<a name="how-offline-security-intelligence-update-works"></a>
+## Process overview
+
+At a high level, the offline update process works as follows:
 
 - You set up a mirror server, which is a local Web or NFS server that's reachable by the Microsoft cloud.
 - Signatures are downloaded from Microsoft cloud on this mirror server by executing a script using cron job or task scheduler on the local server.
@@ -88,11 +93,13 @@ The mirror server can run any of the following operating systems:
 
 ### Get the offline security intelligence downloader script
 
-Microsoft hosts an offline security intelligence downloader script on [this GitHub repo](https://github.com/microsoft/mdatp-xplat).
+Microsoft hosts an offline security intelligence downloader script on the [microsoft/mdatp-xplat GitHub repository](https://github.com/microsoft/mdatp-xplat).
 
 Perform the following steps to get the downloader script:
 
 #### Option 1: Clone the repo (Preferred)
+
+To clone the repository, perform the following steps:
 
 1. [Install git](https://kinsta.com/knowledgebase/install-git/) on the mirror server.
 
@@ -101,6 +108,8 @@ Perform the following steps to get the downloader script:
 1. Run the following command: `git clone https://github.com/microsoft/mdatp-xplat.git`
 
 #### Option 2: Download the zipped file
+
+To use the zip package instead of cloning the repository, follow these steps:
 
 1. [Download the zipped file](https://github.com/microsoft/mdatp-xplat/archive/refs/heads/master.zip).
 
@@ -127,7 +136,7 @@ linux/definition_downloader/
 ```
 
 > [!NOTE]
-> Go through the `README.md` file to understand in detail about how to use the script.
+> Go through the `README.md` file for details about how to use the offline update downloader scripts.
 
 The `settings.json` file consists of a few variables that the user can configure to determine the output of the script execution.
 
@@ -135,7 +144,7 @@ The `settings.json` file consists of a few variables that the user can configure
 |--------------------------|--------|--------------------------------------------------------|
 | `downloadFolder`         | string | Maps to the location where the script downloads the files to. |
 | `downloadLinuxUpdates`   | bool   | When set to `true`, the script downloads the Linux specific updates to the `downloadFolder`. |
-| `logFilePath`            | string | Sets up the diagnostic logs at a given folder. This file can be shared with Microsoft for debugging the script if there are any issues. |
+| `logFilePath`            | string | Sets up the diagnostic logs at a given folder. The diagnostic log file can be shared with Microsoft for debugging if there are any issues. |
 | `downloadMacUpdates`     | bool   | The script downloads the Mac-specific updates to the `downloadFolder`. |
 | `downloadPreviewUpdates` | bool   | Downloads the preview version of the updates available for the specific OS. |
 | `backupPreviousUpdates`  | bool   | Allows the script to copy the previous update in the `_back` folder, and new updates are downloaded to `downloadFolder`. |
@@ -165,14 +174,14 @@ Once the script is executed, the latest signatures get downloaded to the folder 
 
 Once the signatures zip is downloaded, the mirror server can be used to host it. The mirror server can be hosted using any of the HTTP/HTTPS/network share servers, or a local/remote mount point.
 
-Once hosted, copy the absolute path of the hosted server (up to and not including the `arch_*` directory).
+Once the updates are hosted on the mirror server, copy the absolute path of the hosted server (up to and not including the `arch_*` directory).
 
 > [!NOTE]
 > For example, if the downloader script is executed with `downloadFolder=/tmp/wdav-update`, and the HTTP server (`www.example.server.com:8000`) is hosting the `/tmp/wdav-update` path, then the corresponding URI is: `www.example.server.com:8000/linux/production/` (verify that within the directory, there are `arch_*` directories).
 > 
 > You can also use the absolute path of directory (local/remote mount point). For example, if the files are downloaded by the script into a directory `/tmp/wdav-update`, then the corresponding URI is:`/tmp/wdav-update/linux/production`.
 
-Once the mirror server is set up, you need to propagate this URI to the Linux endpoints as the `offlineDefinitionUpdateUrl` in the Managed Configuration as described in the next section.
+Once the mirror server is set up, you need to propagate this URI to the Linux endpoints as the `offlineDefinitionUpdateUrl` in the Managed Configuration as described in [Configure the endpoints](#configure-the-endpoints).
 
 ## Configure the endpoints
 
@@ -182,6 +191,8 @@ You can configure the offline security intelligence updates feature in two ways:
 - Via the **managed JSON file**: Allows for configuration of the settings manually or via third-party management tools like Chef, Ansible, and others.
 
 # [Portal](#tab/portal)
+
+To configure offline security intelligence updates in the Defender portal, follow these steps:
 
 1. In the Defender portal, navigate to **Endpoints** > **Configuration management** > **Endpoint security policies**, and choose **Create new policy**.
 1. In the policy creation wizard, select **Linux** as the platform, **Microsoft Defender Antivirus** as the template. and then select **Create policy**.
@@ -221,7 +232,7 @@ Use the following sample `mdatp_managed.json` and update the parameters as per t
 |-------------------------------------------|----------------------|-----------------------------------------------------|
 | `automaticDefinitionUpdateEnabled`        | `True`/`False`         | Determines the behavior of Defender for Endpoint attempting to perform updates automatically, is turned on or off respectively. |
 | `definitionUpdatesInterval`               | Numeric              | Time of interval between each automatic update of signatures (in seconds). |
-| `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). See the previous section for information about how to specify this path.|
+| `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the mirror server setup. This can be either in terms of the remote server URL or a directory (local/remote mount point). See [Host the offline security intelligence updates on the mirror server](#host-the-offline-security-intelligence-updates-on-the-mirror-server) for information about how to specify this path.|
 | `offlineDefinitionUpdate`                 | `enabled`/`disabled`   | When set to `enabled`, the offline security intelligence update feature is enabled, and vice versa. |
 | `offlineDefinitionUpdateFallbackToCloud`  | `True`/`False`         | Determine Defender for Endpoint security intelligence update approach when offline mirror server fails to serve the update request. If set to `true`, the update is retried via the Microsoft cloud when offline security intelligence update failed; else, vice versa. |
 | `offlineDefinitionUpdateVerifySig`        | `enabled`/`disabled`     | When set to `enabled`, downloaded definitions are verified on the endpoints; else, vice versa. **This setting is enabled by default starting from version 101.25092.0005, and therefore is not available for configuration in the Defender portal**. |
@@ -255,14 +266,18 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 ## Triggering the offline security intelligence updates
 
+You can trigger offline security intelligence updates automatically or manually.
+
 ### Automatic update
+
+Automatic updates occur under the following conditions:
 
 - If the [enforcement level for the antivirus engine](linux-preferences.md#enforcement-level-for-microsoft-defender-antivirus) is set to `real_time`, and the fields `automaticDefinitionUpdateEnabled` and `offline_definition_update` in the managed json are set to `true`, then the offline security intelligence updates are triggered automatically at periodic intervals.
 - By default, this periodic interval is **8 hours**. But it can be configured by setting the `definitionUpdatesInterval` parameter in the managed json.
 
 ### Manual update
 
-- To trigger the offline security intelligence update manually to download the signatures from the mirror server on the Linux endpoints, run the following command:
+To trigger the offline security intelligence update manually to download the signatures from the mirror server on the Linux endpoints, run the following command:
 
   ```bash
   mdatp definitions update
@@ -270,9 +285,11 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 ### Check update status
 
-- After triggering offline security intelligence updates by using either the automatic or manual method, verify that the update was successful by running the command: `mdatp health --details --definitions`.
+After triggering an update, use the following checks to confirm success:
 
-- Verify the following fields:
+1. Verify that the update was successful by running the command: `mdatp health --details --definitions`.
+
+1. Verify the following fields:
 
   ```console
   user@vm:~$ mdatp health --details definitions
@@ -314,7 +331,8 @@ If updates fail, are stuck, or don't start, follow these steps to troubleshoot:
    mdatp definitions update
    ```
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Linux resources](linux-resources.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
