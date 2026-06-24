@@ -5,11 +5,13 @@ ms.author: monaberdugo
 author: mberdugo 
 ms.reviewer: efratka
 ms.topic: how-to
-ms.date: 07/09/2025
+ms.date: 06/15/2026
 ms.collection: usx-security
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security analyst, I want to create and manage hunting bookmarks so that I can preserve and collaborate on relevant threat investigation data.
 
@@ -18,6 +20,8 @@ appliesto:
 # Keep track of data during hunting with Microsoft Sentinel
 
 Hunting bookmarks in Microsoft Sentinel helps you preserve the queries and query results that you deem relevant. You can also record your contextual observations and reference your findings by adding notes and tags. Bookmarked data is visible to you and your teammates for easy collaboration. For more information, see [Bookmarks](hunting.md#bookmarks-to-keep-track-of-data).
+
+This article explains how to create, view, and manage hunting bookmarks in Microsoft Sentinel and how to use them during investigations.
 
 >[!NOTE]
 > Bookmarks can only be created in the Azure portal. While you can't add bookmarks in the Microsoft Defender portal, you can see bookmarks that were already created.
@@ -36,7 +40,7 @@ Create a bookmark to preserve the queries, results, your observations, and findi
 
     :::image type="content" source="media/bookmarks/new-processes-observed-example.png" alt-text="Screenshot of viewing query results from Microsoft Sentinel hunting.":::
 
-    This action opens the query results in the **Logs** pane.
+    Selecting **View query results** opens the query results in the **Logs** pane.
 
 1. From the log query results list, use the checkboxes to select one or more rows that contain the information you find interesting.
 
@@ -58,7 +62,7 @@ Create a bookmark to preserve the queries, results, your observations, and findi
 
 1. Select **Create** to commit your changes and add the bookmark. All bookmarked data is shared with other analysts, and is a first step toward a collaborative investigation experience.
 
-The log query results support bookmarks whenever this pane is opened from Microsoft Sentinel. For example, if you select **General** > **Logs** from the navigation bar, select event links in the investigations graph, or select an alert ID from the full details of an incident. You can't create bookmarks when the **Logs** pane is opened from another location, such as directly from Azure Monitor.
+The log query results support bookmarks whenever the **Logs** pane is opened from Microsoft Sentinel. For example, if you select **General** > **Logs** from the navigation bar, select event links in the investigations graph, or select an alert ID from the full details of an incident. You can't create bookmarks when the **Logs** pane is opened from another location, such as directly from Azure Monitor.
 
 ## View and update bookmarks
 
@@ -75,17 +79,18 @@ Find and update a bookmark from the bookmark tab.
 5. Make your changes as needed. Your changes are automatically saved.
 
 > [!NOTE]
-> You can only view up to 1,000 bookmarks in the bookmark tab. You can view the rest of your bookmarked data in your logs. [Learn more](#view-bookmarked-data-in-logs)
+> You can only view up to 1,000 bookmarks in the bookmark tab. You can view the rest of your bookmarked data in your logs. [View bookmarked data in logs](#view-bookmarked-data-in-logs)
 
 ## Exploring bookmarks in the investigation graph
 
 Visualize your bookmarked data by launching the investigation experience in which you can view, investigate, and visually communicate your findings by using an interactive entity-graph diagram and timeline.
 
+> [!IMPORTANT]
+> Each bookmark you want to investigate must have at least one mapped entity. If a bookmark doesn't have a mapped entity, update the bookmark to add one before you begin.
+
 1. From the **Bookmarks** tab, select the bookmark or bookmarks you want to investigate.
 
-2. In the bookmark details, ensure that at least one entity is mapped.
-
-3. Select **Investigate** to view the bookmark in the investigation graph.
+1. Select **Investigate** to view the bookmark in the investigation graph.
 
 For instructions to use the investigation graph, see [Use the investigation graph to deep dive](investigate-cases.md#use-the-investigation-graph-to-deep-dive).
 
@@ -124,13 +129,13 @@ View bookmarked queries, results, or their history.
 
    :::image type="content" source="media/bookmarks/bookmark-logs.png" alt-text="Screenshot of bookmark logs command.":::
 
-This view shows all your bookmarks with associated metadata. You can use [Kusto Query Language (KQL)](/kusto/query/kql-quick-reference?view=microsoft-sentinel&preserve-view=true) queries to filter down to the latest version of the specific bookmark you're looking for.
+The **Bookmark Logs** view shows all your bookmarks with associated metadata. You can use [Kusto Query Language (KQL)](/kusto/query/kql-quick-reference?view=microsoft-sentinel&preserve-view=true) queries to filter down to the latest version of the specific bookmark you're looking for.
 
 There can be a significant delay (measured in minutes) between the time you create a bookmark and when it's displayed in the **Bookmarks** tab.
 
 ## Delete a bookmark
 
-Deleting the bookmark removes the bookmark from the list in the **Bookmark** tab. The **HuntingBookmark** table for your Log Analytics workspace continues to contain previous bookmark entries, but the latest entry changes the **SoftDelete** value to true, making it easy to filter out old bookmarks. Deleting a bookmark doesn't remove any entities from the investigation experience that are associated with other bookmarks or alerts.
+Deleting the bookmark removes the bookmark from the list in the **Bookmark** tab. The **HuntingBookmark** table for your Log Analytics workspace continues to contain previous bookmark entries, but the latest entry changes the **SoftDelete** value to **true**, which marks the bookmark as deleted so you can filter out old bookmarks. Deleting a bookmark doesn't remove any entities from the investigation experience that are associated with other bookmarks or alerts.
 
 To delete a bookmark, complete the following steps.
 
@@ -139,8 +144,6 @@ To delete a bookmark, complete the following steps.
 2. Right-click, and select the option to delete the  bookmarks selected.
 
 ## Related content
-
-In this article, you learned how to run a hunting investigation using bookmarks in Microsoft Sentinel. To learn more about Microsoft Sentinel, see the following articles:
 
 - [Threat hunting with Microsoft Sentinel](hunting.md)
 - [Use notebooks to run automated hunting campaigns](notebooks.md)
