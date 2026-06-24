@@ -62,7 +62,7 @@ While you can include all Defender products (except Defender for IoT) in the ser
 
 Ensure that you deploy at least one product, such as Defender for Endpoint or Defender for Office 365, in active mode. This deployment enables Defender Experts to take direct action on high-priority threats, including advanced attacks like adversary-in-the-middle (AiTM).
 
-For maximum, native coverage, deploy the full Microsoft Defender XDR suite and enable all eligible products in active mode.
+For maximum, native coverage, deploy the full Microsoft Defender suite and enable all eligible products in active mode.
 
 Defender Experts for XDR also covers servers that have Defender for Endpoint deployed on them with a **Microsoft Defender for Endpoint for Server** license. For Defender Experts coverage, a server counts as a user account for billing. 
 [Learn more about specific hardware and software requirements](/defender-endpoint/minimum-requirements)
@@ -83,20 +83,20 @@ Defender Experts for XDR and Defender Experts for Servers request for certain ro
 
 ## Service availability and data protection
 
-Defender Experts for XDR and Defender Experts for Servers are managed extended detection and response services that proactively hunt for threats across endpoints, email, identity, cloud apps, and servers. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender XDR advanced hunting data. If you have the Defender Experts for Servers add-on service, they need to review [Microsoft Defender for Cloud alerts and incidents in Defender XDR](/azure/defender-for-cloud/concept-integration-365). By purchasing these services, you grant Microsoft experts permission to access this data.
+Defender Experts for XDR and Defender Experts for Servers are managed extended detection and response services that proactively hunt for threats across endpoints, email, identity, cloud apps, and servers. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender advanced hunting data. If you have the Defender Experts for Servers add-on service, they need to review [Microsoft Defender for Cloud alerts and incidents in the Defender portal](/azure/defender-for-cloud/concept-integration-365). By purchasing these services, you grant Microsoft experts permission to access this data.
 
 The following sections provide additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment to valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/en-us/trust-center/product-overview) and scroll down to **Additional products and services** > **Managed Security Services** > **Microsoft Defender Experts**.
 
 ### Data collection, usage, and retention
 
-All data used for hunting from existing Defender services stays in your original Microsoft Defender XDR service storage location. [Learn more](/microsoft-365/enterprise/o365-data-locations).
+All data used for hunting from existing Defender services stays in your original Microsoft Defender service storage location. [Learn more](/microsoft-365/enterprise/o365-data-locations).
 
-Defender Experts for XDR operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the European Union region for customers whose Defender XDR data is in scope of EU data boundary and in the US region for other customers, irrespective of the Microsoft Defender XDR service storage location. Data generated for the reporting dashboard is stored in your Microsoft Defender XDR service storage location. Reporting data and operational data are retained for a grace period of no more than 90 days after your subscription expires. If you terminate your subscription, data is deleted within 30 days.
+Defender Experts for XDR operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the European Union region for customers whose Defender data is in scope of EU data boundary and in the US region for other customers, irrespective of the Microsoft Defender service storage location. Data generated for the reporting dashboard is stored in your Microsoft Defender service storage location. Reporting data and operational data are retained for a grace period of no more than 90 days after your subscription expires. If you terminate your subscription, data is deleted within 30 days.
 
-Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tables.md) in Microsoft Defender XDR advanced hunting tables. The data in these tables depend on the set of Defender services you enable (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
+Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tables.md) in Microsoft Defender advanced hunting tables. The data in these tables depend on the set of Defender services you enable (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
 
 > [!NOTE]
-> Microsoft Defender for Cloud is integrated with Microsoft Defender XDR. This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. The Defender Experts for Servers service accesses data through the Defender portal, so the same data collection, usage, and retention policies apply to this service.
+> Microsoft Defender for Cloud is integrated with Microsoft Defender. This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. The Defender Experts for Servers service accesses data through the Defender portal, so the same data collection, usage, and retention policies apply to this service.
 
 ### Security and compliance
 
