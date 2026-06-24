@@ -23,19 +23,19 @@ ms.custom: msecd-doc-authoring-1014
 
 <a name='pull-microsoft-365-defender-incidents-and-streaming-event-data-using-security-information-and-events-management-siem-tools'></a>
 
-## Pull Microsoft Defender XDR incidents and streaming event data using security information and events management (SIEM) tools
+## Pull Microsoft Defender incidents and streaming event data using security information and events management (SIEM) tools
 
 > [!NOTE]
 >
-> - [Microsoft Defender XDR Incidents](incident-queue.md) consists of collections of correlated alerts and their evidence.
-> - [Microsoft Defender XDR Streaming API](streaming-api.md) streams event data from Microsoft Defender XDR to event hubs or Azure storage accounts.
+> - [Microsoft Defender Incidents](incident-queue.md) consists of collections of correlated alerts and their evidence.
+> - [Microsoft Defender Streaming API](streaming-api.md) streams event data from Microsoft Defender to event hubs or Azure storage accounts.
 
-Microsoft Defender XDR supports security information and event management (SIEM) tools ingesting information from your enterprise tenant in Microsoft Entra ID using the OAuth 2.0 authentication protocol for a registered Microsoft Entra application representing the specific SIEM solution or connector installed in your environment.
+Microsoft Defender supports security information and event management (SIEM) tools ingesting information from your enterprise tenant in Microsoft Entra ID using the OAuth 2.0 authentication protocol for a registered Microsoft Entra application representing the specific SIEM solution or connector installed in your environment.
 
 For more information, see:
 
-- [Microsoft Defender XDR APIs license and terms of use](/legal/microsoft-365/api-terms)
-- [Access the Microsoft Defender XDR APIs](api-access.md)
+- [Microsoft Defender APIs license and terms of use](/legal/microsoft-365/api-terms)
+- [Access the Microsoft Defender APIs](api-access.md)
 - [Hello World example](api-hello-world.md)
 - [Get access with application context](api-create-app-web.md)
 
@@ -45,7 +45,7 @@ There are two primary models to ingest security information:
 
 2. Ingesting streaming event data either through Azure Event Hubs or Azure Storage Accounts.
 
-Microsoft Defender XDR currently supports the following SIEM solution integrations:
+Microsoft Defender currently supports the following SIEM solution integrations:
 
 - [Ingesting incidents from the incidents REST API](#ingesting-incidents-from-the-incidents-rest-api)
 - [Ingesting streaming event data via Event Hubs](#ingesting-streaming-event-data-via-event-hubs)
@@ -56,7 +56,7 @@ The following SIEM solutions support ingesting Microsoft Defender XDR incidents 
 
 ### Incident schema
 
-For more information on Microsoft Defender XDR incident properties including contained alert and evidence entities metadata, see [Schema mapping](api-list-incidents.md#schema-mapping).
+For more information on Microsoft Defender incident properties including contained alert and evidence entities metadata, see [Schema mapping](api-list-incidents.md#schema-mapping).
 
 <a name="splunk"></a>
 ### Ingest incidents into Splunk
@@ -65,14 +65,14 @@ Using the new, fully supported Splunk Add-on for Microsoft Security that support
 
 - Ingesting incidents that contain alerts from the following products, which are mapped onto Splunk's Common Information Model (CIM):
 
-  - Microsoft Defender XDR
+  - Microsoft Defender
   - Microsoft Defender for Endpoint
   - Microsoft Defender for Identity and Microsoft Entra ID Protection
   - Microsoft Defender for Cloud Apps
 
 - Ingesting Defender for Endpoint alerts (from the Defender for Endpoint's Azure endpoint) and updating these alerts
 
-- Support for updating Microsoft Defender XDR Incidents and/or Microsoft Defender for Endpoint Alerts and the respective dashboards has moved to the Microsoft 365 App for Splunk.
+- Support for updating Microsoft Defender Incidents and/or Microsoft Defender for Endpoint Alerts and the respective dashboards has moved to the Microsoft 365 App for Splunk.
 
 For more information on:
 
@@ -115,7 +115,7 @@ For more information on the Splunk Add-on for Microsoft Cloud Services, see the 
 <a name="ibm-qradar"></a>
 ### Stream event data to IBM QRadar
 
-Use the new IBM QRadar Microsoft Defender XDR Device Support Module (DSM), which calls the [Microsoft Defender XDR Streaming API](streaming-api.md). The Streaming API allows you to ingest streaming event data from Microsoft Defender XDR products via Event Hubs or Azure Storage Account. For more information on supported event types, see [Supported event types](supported-event-types.md).
+Use the new IBM QRadar Microsoft Defender XDR Device Support Module (DSM) that calls the [Microsoft Defender Streaming API](streaming-api.md) that allows ingesting streaming event data from Microsoft Defender products via Event Hubs or Azure Storage Account. For more information on supported event types, see [Supported event types](supported-event-types.md).
 
 <a name="elastic-1"></a>
 ### Stream event data to Elastic

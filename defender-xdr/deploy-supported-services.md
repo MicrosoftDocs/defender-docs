@@ -26,7 +26,7 @@ appliesto:
 
 ## Supported services
 
-A Microsoft 365 E5, E5 Security, A5, or A5 Security license or a valid combination of licenses provides access to the following supported services and entitles you to use Microsoft Defender XDR. [See licensing requirements](prerequisites.md#licensing-requirements)
+A Microsoft 365 E5, E5 Security, A5, or A5 Security license or a valid combination of licenses provides access to the following supported services and entitles you to use Microsoft Defender. [See licensing requirements](prerequisites.md#licensing-requirements)
 
 | Supported service | Description |
 | ------ | ------ |
@@ -37,11 +37,11 @@ A Microsoft 365 E5, E5 Security, A5, or A5 Security license or a valid combinati
 
 ## Deployed services and functionality
 
-Microsoft Defender XDR provides better visibility, correlation, and remediation as you deploy more supported services.
+Microsoft Defender provides better visibility, correlation, and remediation as you deploy more supported services.
 
 ### Benefits of full deployment
 
-To get the complete benefits of Microsoft Defender XDR, we recommend deploying all supported services. Here are some of the key benefits of full deployment:
+To get the complete benefits of Microsoft Defender, we recommend deploying all supported services. Here are some of the key benefits of full deployment:
 
 - Incidents are identified and correlated based on alerts and event signals from all available sensors and service-specific analysis capabilities
 - Automated investigation and remediation (AIR) playbooks apply across various entity types, including devices, mailboxes, and user accounts
@@ -49,7 +49,7 @@ To get the complete benefits of Microsoft Defender XDR, we recommend deploying a
 
 ### Limited deployment scenarios
 
-Each supported service that you deploy provides an extremely rich set of raw signals and correlated information. While limited deployment doesn't cause Microsoft Defender XDR functionality to turn off, its ability to provide comprehensive visibility across your endpoints, apps, data, and identities is affected. At the same time, any remediation capabilities only apply to entities that are managed by the services you've deployed.
+Each supported service that you deploy provides an extremely rich set of raw signals and correlated information. While limited deployment doesn't cause Microsoft Defender functionality to turn off, its ability to provide comprehensive visibility across your endpoints, apps, data, and identities is affected. At the same time, any remediation capabilities only apply to entities that are managed by the services you've deployed.
 
 The table below lists how each supported service provides additional data, opportunities to obtain additional insight by correlating the data, and better remediation and response capabilities.
 
@@ -75,8 +75,8 @@ Once you've deployed the supported services, [turn on Microsoft Defender XDR](m3
 
 ## Related articles
 
-- [Microsoft Defender XDR overview](microsoft-365-defender.md)
-- [Turn on Microsoft Defender XDR](m365d-enable.md)
+- [Microsoft Defender overview](microsoft-365-defender.md)
+- [Turn on Microsoft Defender](m365d-enable.md)
 - [Setup guides for Microsoft Defender XDR](deploy-configure-m365-defender.md)
 - [Microsoft Defender for Endpoint overview](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Office 365 overview](/defender-office-365/mdo-about)
