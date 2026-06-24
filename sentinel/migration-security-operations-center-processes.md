@@ -1,17 +1,19 @@
 ---
-title: "Microsoft Sentinel migration: Update SOC and analyst processes | Microsoft Docs"
+title: "Microsoft Sentinel migration: Update SOC and analyst processes"
 description: Learn how to update your SOC and analyst processes as part of your migration to Microsoft Sentinel.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 05/03/2022
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security operations manager, I want to update our SOC processes and analyst workflows for Microsoft Sentinel so that we can effectively manage and respond to cybersecurity incidents using the new toolsets and features.
 
 ---
 
-# Update SOC processes
+# Update SOC processes for Microsoft Sentinel migration
 
 A security operations center (SOC) is a centralized function within an organization that integrates people, processes, and technology. A SOC implements the organization's overall cybersecurity framework. The SOC collaborates the organizational efforts to monitor, alert, prevent, detect, analyze, and respond to cybersecurity incidents. SOC teams, led by a SOC manager, may include incident responders, SOC analysts at levels 1, 2, and 3, threat hunters, and incident response managers.
 
@@ -25,7 +27,7 @@ Microsoft Sentinel offers a range of tools that map to a typical analyst workflo
 
 ### Incidents in Microsoft Sentinel
 
-In Microsoft Sentinel, an incident is a collection of alerts that Microsoft Sentinel determines have sufficient fidelity to trigger the incident. Hence, with Microsoft Sentinel, the analyst triages incidents in the **Incidents** page first, and then proceeds to analyze alerts, if a deeper dive is needed. [Compare your SIEM's incident terminology and management areas](#compare-siem-concepts) with Microsoft Sentinel.
+In Microsoft Sentinel, an incident is a collection of alerts that Microsoft Sentinel determines have sufficient fidelity to trigger the incident. Hence, with Microsoft Sentinel, the analyst triages incidents in the **Incidents** page first, and then proceeds to analyze alerts, if a deeper dive is needed. [Compare your security information and event management (SIEM) incident terminology and management areas](#compare-siem-concepts) with Microsoft Sentinel.
 
 ### Analyst workflow stages
 
@@ -35,9 +37,10 @@ This table describes the key stages in the analyst workflow, and highlights the 
 |---------|---------|---------|---------|
 |**[Assign incidents](#assign)**:<br>• Manually, in the **Incidents** page <br>• Automatically, using playbooks or automation rules  |**[Triage incidents](#triage)** using:<br>• The incident details in the **Incident** page<br>• Entity information in the **Incident page**, under the **Entities** tab<br>• Jupyter Notebooks     |**[Investigate incidents](#investigate)** using:<br>• The investigation graph<br>• Microsoft Sentinel Workbooks<br>• The Log Analytics query window      |**[Respond to incidents](#respond)** using:<br>• Playbooks and automation rules<br>• Microsoft Teams War Room  |
 
-The next sections map both the terminology and analyst workflow to specific Microsoft Sentinel features.
+The following workflow stages map analyst activities and SIEM terminology to specific Microsoft Sentinel features.
 
-#### Assign
+<a name="assign"></a>
+#### Assign incident ownership
 
 Use the Microsoft Sentinel **Incidents** page to assign incidents. The **Incidents** page includes an incident preview, and a detailed view for single incidents. 
 
@@ -45,11 +48,12 @@ Use the Microsoft Sentinel **Incidents** page to assign incidents. The **Inciden
 
 To assign an incident:
 - **Manually**. Set the **Owner** field to the relevant user name. 
-- **Automatically**. [Use a custom solution based on Microsoft Teams and Logic Apps](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/automate-incident-assignment-with-shifts-for-teams/ba-p/2297549), [or an automation rule](automate-incident-handling-with-automation-rules.md).
+- **Automatically**. [Use a custom solution based on Microsoft Teams and Logic Apps](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/automate-incident-assignment-with-shifts-for-teams/ba-p/2297549), or [create an automation rule](automate-incident-handling-with-automation-rules.md).
 
 :::image type="content" source="media/migration-soc-processes/analyst-workflow-assign-incidents.png" alt-text="Screenshot of assigning an owner in the Incidents page." lightbox="media/migration-soc-processes/analyst-workflow-assign-incidents.png":::
 
-#### Triage
+<a name="triage"></a>
+#### Triage security incidents
 
 To conduct a triage exercise in Microsoft Sentinel, you can start with various Microsoft Sentinel features, depending on your level of expertise and the nature of the incident under investigation. As a typical starting point, select **View full details** in the **Incident** page. You can now examine the alerts that comprise the incident, review bookmarks, select entities to drill down further into specific entities, or add comments.
 
@@ -57,7 +61,7 @@ To conduct a triage exercise in Microsoft Sentinel, you can start with various M
 
 Here are suggested actions to continue your incident review:
 - Select **Investigation** for a visual representation of the relationships between the incidents and the relevant entities. 
-- Use a [Jupyter notebook](notebooks.md) to perform an in-depth triage exercise for a particular entity. You can use the **Incident triage** notebook for this exercise.
+- Use a [Microsoft Sentinel notebook](notebooks.md) to perform an in-depth triage exercise for a particular entity. You can use the **Incident triage** notebook for in-depth triage of the selected entity.
 
 :::image type="content" source="media/migration-soc-processes/analyst-workflow-incident-triage-notebook.png" alt-text="Screenshot of Incident triage notebook, including detailed steps in TOC." lightbox="media/migration-soc-processes/analyst-workflow-incident-triage-notebook.png":::
 
@@ -71,7 +75,8 @@ Use these features and capabilities to expedite triage:
 - For detailed entity information, in the **Incidents page**, select an incident and select an entity name under **Entities** to view the entity's directory information, timeline, and insights. Learn how to [map entities](map-data-fields-to-entities.md).
 - To link to relevant workbooks, select **Incident preview**. You can customize the workbook to display additional information about the incident, or associated entities and custom fields.
 
-#### Investigate
+<a name="investigate"></a>
+#### Investigate security incidents
 
 Use the investigation graph to deeply investigate incidents. From the **Incidents** page, select an incident and select **Investigate** to view the [investigation graph](investigate-cases.md#use-the-investigation-graph-to-deep-dive).
 
@@ -88,7 +93,8 @@ From the investigation graph, you can also open workbooks to further support you
 
 :::image type="content" source="media/migration-soc-processes/analyst-workflow-investigation-workbooks.png" alt-text="Screenshot of a workbook opened from the investigation graph." lightbox="media/migration-soc-processes/analyst-workflow-investigation-workbooks.png":::
 
-#### Respond
+<a name="respond"></a>
+#### Respond to incidents
 
 Use Microsoft Sentinel automated response capabilities to respond to complex threats and reduce alert fatigue. Microsoft Sentinel provides automated response using [Logic Apps playbooks and automation rules](automate-responses-with-playbooks.md). 
 
@@ -97,7 +103,7 @@ Use Microsoft Sentinel automated response capabilities to respond to complex thr
 Use one of the following options to access playbooks:
 - The [Automation > Playbook templates tab](use-playbook-templates.md)
 - The Microsoft Sentinel [Content hub](sentinel-solutions-deploy.md) 
-- The Microsoft Sentinel [GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks)  
+- The Microsoft Sentinel [playbooks GitHub repository](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks)  
 
 These sources include a wide range of security-oriented playbooks to cover a substantial portion of use cases of varying complexity. To streamline your work with playbooks, use the templates under **Automation > Playbook templates**. Templates allow you to easily deploy playbooks into the Microsoft Sentinel instance, and then modify the playbooks to suit your organization's needs. 
 
