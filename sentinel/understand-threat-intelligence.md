@@ -213,7 +213,7 @@ View your threat intelligence from the management interface or by using queries:
 
 - Use queries to view threat intelligence from **Logs** in the Azure portal or **Advanced hunting** in the Defender portal. 
 
-    Either way, the `ThreatIntelligenceIndicator` table under the **Microsoft Sentinel** schema stores all your Microsoft Sentinel threat indicators. This table is the basis for threat intelligence queries performed by other Microsoft Sentinel features, such as analytics, hunting queries, and workbooks.
+    Either way, the `ThreatIntelIndicators` table under the **Microsoft Sentinel** schema stores all your Microsoft Sentinel threat indicators. This table is the basis for threat intelligence queries performed by other Microsoft Sentinel features, such as analytics, hunting queries, and workbooks.
 
 >[!IMPORTANT]
 > On April 3, 2025, we publicly previewed two new tables to support STIX indicator and object schemas: 

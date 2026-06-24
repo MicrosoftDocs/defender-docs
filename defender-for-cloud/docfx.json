@@ -19,13 +19,6 @@
         ],
         "src": "breadcrumb/defender-for-cloud",
         "dest": "breadcrumb/defender-for-cloud"
-      },
-      {
-        "files": [
-          "zone-pivot-groups.yml"
-        ],
-        "src": "zone-pivots",
-        "dest": "zone-pivots/defender-for-cloud"
       }
     ],
     "resource": [
@@ -115,7 +108,7 @@
       "searchScope": [
         "Microsoft Defender for Cloud"
       ],
-      "zone_pivot_group_filename": "zone-pivots/defender-for-cloud/zone-pivot-groups.yml",
+      "zone_pivot_group_filename": "defender-for-cloud/zone-pivots/zone-pivot-groups.yml",
       "adobe-target": true,
       "author": "elazark",
       "ms.author": "elkrieger",
