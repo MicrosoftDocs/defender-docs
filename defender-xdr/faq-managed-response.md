@@ -22,7 +22,7 @@ ms.date: 04/30/2026
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender](microsoft-365-defender.md)
 
 This article lists questions you or your SOC team might have regarding [Managed response](managed-detection-and-response-xdr.md).
 
@@ -70,9 +70,9 @@ This article lists questions you or your SOC team might have regarding [Managed 
 
 | Questions | Answers |
 |---------|---------|
-| **Can I get Defender Experts updates from Microsoft Defender XDR in email?** | When a Defender Experts analyst publishes recommended response actions to an incident, your designated incident contacts receive an email notification to the email addresses specified in **Settings** > **Defender Experts** > **Notification contacts** in your Microsoft Defender portal.<br><br>Additionally, you can [configure a Logic App](/connectors/connector-reference/connector-reference-logicapps-connectors) to send all incident updates to your designated email addresses automatically.|
-| **Can I get Defender Experts updates from Microsoft Defender XDR in Microsoft Teams?** | You can access two-way chat functionality through an incident's **Managed response** flyout panel in your Microsoft Defender portal.<br><br>You receive notifications when a Managed response is posted and can engage in real-time chat conversations with Defender Experts directly within Microsoft Teams. [Learn more about setting up Teams](get-started-xdr.md#receive-managed-response-notifications-and-updates-in-microsoft-teams).|
-| **Can I get Defender Experts updates from Microsoft Defender XDR as SMS or phone call updates, or in third-party communications services such as Slack?** | You can [configure a Logic App](/connectors/connector-reference/connector-reference-logicapps-connectors) to send notifications from communication services such as Slack, Twilio, Azure Communication Services, and more.|
+| **Can I get Defender Experts updates from Microsoft Defender in email?** | When a Defender Experts analyst publishes recommended response actions to an incident, your designated incident contacts receive an email notification to the email addresses specified in **Settings** > **Defender Experts** > **Notification contacts** in your Microsoft Defender portal.<br><br>Additionally, you can [configure a Logic App](/connectors/connector-reference/connector-reference-logicapps-connectors) to send all incident updates to your designated email addresses automatically.|
+| **Can I get Defender Experts updates from Microsoft Defender in Microsoft Teams?** | You can access two-way chat functionality through an incident's **Managed response** flyout panel in your Microsoft Defender portal.<br><br>You receive notifications when a Managed response is posted and can engage in real-time chat conversations with Defender Experts directly within Microsoft Teams. [Learn more about setting up Teams](get-started-xdr.md#receive-managed-response-notifications-and-updates-in-microsoft-teams).|
+| **Can I get Defender Experts updates from Microsoft Defender as SMS or phone call updates, or in third-party communications services such as Slack?** | You can [configure a Logic App](/connectors/connector-reference/connector-reference-logicapps-connectors) to send notifications from communication services such as Slack, Twilio, Azure Communication Services, and more.|
 
 
 ### See also

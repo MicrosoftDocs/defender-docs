@@ -19,13 +19,13 @@ ms.custom: msecd-doc-authoring-1014
 
 **Applies to:**
 
-- Microsoft Defender XDR
+- Microsoft Defender
 - Microsoft Sentinel
 
 <a name="before-you-start"></a>
 ## Prepare to investigate DLP alerts in Microsoft Sentinel
 
-See, [Investigate data loss prevention alerts with Microsoft Defender XDR](dlp-investigate-alerts-defender.md) for more details.
+See, [Investigate data loss prevention alerts with Microsoft Defender](dlp-investigate-alerts-defender.md) for more details.
 
 ## DLP investigation experience in Microsoft Sentinel
 

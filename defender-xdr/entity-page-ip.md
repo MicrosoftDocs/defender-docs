@@ -151,7 +151,7 @@ Response actions run along the top of a specific IP entity page and include:
 
 ## Related content
 
-- [Microsoft Defender XDR overview](microsoft-365-defender.md)
+- [Microsoft Defender overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
 - [Device entity page in Microsoft Defender](entity-page-device.md)
 - [User entity page in Microsoft Defender](investigate-users.md)

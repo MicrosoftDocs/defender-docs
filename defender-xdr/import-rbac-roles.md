@@ -30,7 +30,7 @@ appliesto:
 
 ## Import roles to Microsoft Defender unified RBAC from individual RBAC models
 
-You can import existing roles that are maintained as part of individual supported products in Microsoft Defender XDR (for example, Microsoft Defender for Endpoint) to the Microsoft Defender unified RBAC model.
+You can import existing roles that are maintained as part of individual supported products in Microsoft Defender (for example, Microsoft Defender for Endpoint) to the Microsoft Defender unified RBAC model.
 
 Importing roles migrates and maintains the roles with full parity in relation to their permissions and user assignments in the Microsoft Defender unified RBAC model.
 
@@ -40,7 +40,7 @@ Importing roles migrates and maintains the roles with full parity in relation to
 The following steps guide you on how to import roles into Microsoft Defender unified RBAC:
 
 > [!IMPORTANT]
-> You must be a Security Administrator or higher in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
+> You must be a Security Administrator or higher in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 

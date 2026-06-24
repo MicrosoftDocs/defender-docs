@@ -31,7 +31,7 @@ ms.date: 02/27/2026
 > [!NOTE]
 > Any incident response services offered by Defender Experts ares offered under the Defender Experts Service Terms.
 
-**Microsoft Defender Experts for XDR** is a managed extended detection and response service that helps your security operations centers (SOCs) focus and accurately respond to incidents that matter. It provides extended detection and response for customers who use Microsoft Defender XDR services: Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID. 
+**Microsoft Defender Experts for XDR** is a managed extended detection and response service that helps your security operations centers (SOCs) focus and accurately respond to incidents that matter. It provides extended detection and response for customers who use Microsoft Defender services: Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID.
 
 Defender Experts for XDR augments your SOC by combining automation and Microsoft's security analyst expertise. This combination helps you detect and respond to threats with confidence and improve your security posture. With deep product expertise powered by threat intelligence, we're uniquely positioned to help you:
 
@@ -40,7 +40,7 @@ Defender Experts for XDR augments your SOC by combining automation and Microsoft
 - **Access expertise when you need it** - Extend your team's capacity with access to Defender Experts for assistance on an investigation
 - **Stay ahead of emerging threats** - Our experts proactively hunt for emerging threats in your environment, informed by unparalleled threat intelligence and visibility
 
-Apart from the constantly updated research and intelligence tailored for the threats currently seen across the various Microsoft Defender XDR signals, you also receive managed response from our security analysts and, if your service includes it, support from Microsoft's security-focused Security Delivery Experts (SDXs). This service lets you enjoy the following capabilities:
+Apart from the constantly updated research and intelligence tailored for the threats currently seen across the various Microsoft Defender signals, you also receive managed response from our security analysts and, if your service includes it, support from Microsoft's security-focused Security Delivery Experts (SDXs). This service lets you enjoy the following capabilities:
 
 - **Managed detection and response** - Expert analysts manage your Microsoft Defender XDR incident queue and handle triage and investigation on your behalf; they partner with you and your team to take action or guide you to respond to incidents
 - **Proactive threat hunting** - [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) is built in to extend your team's threat hunting capabilities and prioritize significant threats
