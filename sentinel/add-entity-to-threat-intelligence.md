@@ -136,7 +136,7 @@ After you select **Add to TI** from either the Incident details page or the inve
 
 1. When all the fields are filled in to your satisfaction, select **Apply**. A message appears in the upper-right corner to confirm that your indicator was created.
 
-1. The entity is added as threat intelligence in your workspace. You can find the indicator in the [threat intelligence management interface](work-with-threat-indicators.md#view-your-threat-intelligence-in-the-management-interface). You can also query it by using [ThreatIntelligenceIndicators table queries](work-with-threat-indicators.md#find-and-view-threat-intelligence-with-queries).
+1. The entity is added as threat intelligence in your workspace. You can find it [in threat intelligence management interface](work-with-threat-indicators.md#view-your-threat-intelligence-in-the-management-interface). You can also query it [using the ThreatIntelIndicators table](work-with-threat-indicators.md#find-and-view-threat-intelligence-with-queries).
 
 ## Related content
 
