@@ -28,8 +28,8 @@ Before Defender for Containers can deploy cluster components, the Kubernetes env
 | Deployment approach | Description |
 |--------|-------------|
 | **Automatic provisioning** | Supported components are deployed automatically after the Defender for Containers plan or relevant settings are enabled. |
-| **Manual deployment** | Automatic provisioning is turned off and supported components are installed manually. |
-| **Mixed deployment** | Automatic provisioning is enabled, but specific AKS, EKS, or GKE clusters are excluded and deployed manually. Mixed deployment isn't supported for on-premises or other Kubernetes clusters connected directly to Azure Arc.
+| **Manual deployment** | Automatic provisioning is turned off and supported components are installed manually. Manual deployment also includes the preview deployment path for private clusters. |
+| **Mixed deployment** | Automatic provisioning is enabled, but specific AKS, EKS, or GKE clusters are excluded and deployed manually. Mixed deployment isn't supported for on-premises or other Kubernetes clusters connected directly to Azure Arc. |
 
 ## Automatic provisioning
 
@@ -58,6 +58,8 @@ You can deploy components manually by using one of the following methods:
 
 - [Deploy Defender sensor and Azure Policy to clusters using Azure CLI](defender-for-containers-deploy-azure-cli.md)
 
+- [Deploy Defender for Containers to private clusters (Preview)](defender-for-containers-private-clusters.md)
+
 - [Install Defender for Containers sensor by using Helm](deploy-helm.md)
 
 ## Post-deployment steps
@@ -73,5 +75,3 @@ After deployment, verify that Defender components are running correctly and addr
 - [Enable Defender for Containers](defender-for-containers-enable-plan.md)
 
 - [Exclude clusters from automatic Defender sensor provisioning](defender-for-containers-exclude-cluster.md)
-
-

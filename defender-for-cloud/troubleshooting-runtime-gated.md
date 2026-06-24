@@ -44,17 +44,37 @@ Gated deployment enforces container image security policies at deploy time based
 - Rule scope doesn't match the deployed resource.
 - CVE conditions aren't met.
 - The image deploys before scan results are available.
+- The vulnerability findings artifact isn't available for the image in the container registry.
 
 **Resolution:**
 
 - Check the rule scope and matching criteria.
 - Check that the image has vulnerabilities that match the rule conditions.
 - Make sure the image is in a supported container registry. The registry must belong to a subscription, account, or project with Registry Access and Security Findings enabled.
+- Make sure Defender for Cloud scans the image before deployment. If it doesn't, gating doesn't apply.
 
-- Make sure Defender for Cloud scans the image before deployment. If it doesn't, gating doesn't apply.  
   > [!NOTE]
   > Defender for Containers scans an image in a supported container registry within a few hours after the initial push event. For more information about scanning triggers, see [Vulnerability assessments for Defender for Container supported environments](/azure/defender-for-cloud/agentless-vulnerability-assessment-azure?tabs=azure-new%2Cazure-old#scanning-images-in-defender-for-containers-supported-registries).
 
+- For ACR images, check that the vulnerability findings artifact is available and signed:
+
+  1. Sign in to the [Azure portal](https://portal.azure.com).
+
+  1. Go to **Container registries**.
+
+  1. Select the relevant registry.
+
+  1. Select **Repositories**.
+
+  1. Select the repository and image tag or digest.
+
+  1. Select the **Referrers** tab.
+
+  1. Confirm that the image has a vulnerability findings artifact and a signature.
+
+  :::image type="content" source="media/troubleshooting-runtime-gated/container-registries-security-artifact.png" alt-text="Screenshot of an Azure Container Registry image Referrers tab showing a vulnerability findings artifact and signature artifact." lightbox="media/troubleshooting-runtime-gated/container-registries-security-artifact.png":::
+
+If the artifact or signature is missing, gated deployment can't validate the image. Confirm that the image was scanned and that **Security findings** is enabled for the registry scope.
 
 ### Issue: Exclusion not applied
 
@@ -87,22 +107,7 @@ Gated deployment enforces policies when you deploy. You might see specific messa
 
 :::image type="content" source="media/enablement-guide-runtime-gating/admission-monitoring.png" alt-text="Screenshot of Admission Monitoring view showing developer-facing results." lightbox="media/enablement-guide-runtime-gating/admission-monitoring.png":::
 
-## Best practices for developers
-
-- Scan images before deployment to avoid bypassing gating.
-- Use audit mode during initial rollout to monitor impact without blocking.
-- Coordinate with security teams to request exclusions when needed.
-- Monitor the **Admission Monitoring** view to see rule evaluation and enforcement.
-
 ## Related content
 
-For detailed guidance and support, see these articles:
-
-- [Overview: Gated Deployment of Container Images to a Kubernetes Cluster](runtime-gated-overview.md) 
-  Introduction to the feature, its value, and how it works
-
-- [Enablement Guide: Configure Gated Deployment for Kubernetes Clusters](enablement-guide-runtime-gated.md)
-  Step-by-step instructions for onboarding, rule creation, Exclusions, and monitoring
-
-- [FAQ: Gated Deployment in Defender for Containers](faq-runtime-gated.md)
-  Answers to common customer questions about gated deployment behavior and configuration
+- [Gated deployment for Kubernetes container images](runtime-gated-overview.md) 
+- [Configure gated deployment rules for Kubernetes container images](enablement-guide-runtime-gated.md)
