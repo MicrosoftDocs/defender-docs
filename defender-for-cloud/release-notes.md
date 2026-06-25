@@ -89,7 +89,7 @@ Discovery and posture for serverless container workloads is now generally availa
 
 This capability provides inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Elastic Container Service (ECS) on AWS Fargate.
 
-Learn more about [Discovery and posture for serverless container workloads](posture-for-serverless-containers.md).
+Learn more about [Discovery and posture for serverless container workloads (Preview)](posture-for-serverless-containers.md).
 
 ### New multicloud security recommendations now in public preview
 
