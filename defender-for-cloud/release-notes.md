@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 06/25/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 ---
 
@@ -29,11 +29,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## July 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+
 ## June 2026
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
-| June 25, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
 | June 18, 2026 | GA | [API security posture management for Function Apps and Logic Apps is now generally available](#api-security-posture-management-for-function-apps-and-logic-apps-is-now-generally-available) |
 | June 17, 2026 | Update | [Expanded container support for cloud scopes](#expanded-container-support-for-cloud-scopes) |
 | June 9, 2026 | Preview | [New multicloud security recommendations now in public preview](#new-multicloud-security-recommendations-now-in-public-preview) |
@@ -49,7 +54,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ### Discovery and posture for serverless container workloads is now generally available
 
-June 25, 2026
+July 1, 2026
 
 Discovery and posture for serverless container workloads is now generally available in Microsoft Defender for Cloud.
 
