@@ -9,14 +9,16 @@ ms.collection:
   - m365-security
   - tier1
 ms.topic: how-to
-ms.date: 01/17/2025
+ms.date: 06/15/2026
 appliesto:
 - Microsoft Defender XDR
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security administrator, I want to set up email notifications for manual and automated response actions in Microsoft Defender XDR, so that I can stay informed about actions taken in my environment and respond accordingly.
 ---
 
-# Get email notifications for response actions
+# Get email notifications for response actions in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -46,7 +48,7 @@ To create a rule for email notifications, perform the following steps:
 
     :::image type="content" source="media/m365d-response-actions-notifications/fig2-response-notifications.png" alt-text="Basics section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig2-response-notifications.png":::
 
-1. Proceed to the next section by selecting Next located at the bottom of the pane.
+1. Proceed to the **Notification settings** section by selecting **Next** at the bottom of the pane.
 1. You can choose what type of action, what status, and where the action is sourced from in the **Notification settings** section.
 
     :::image type="content" source="media/m365d-response-actions-notifications/fig3-response-notifications.png" alt-text="Notifications settings section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig3-response-notifications.png":::
@@ -61,22 +63,27 @@ To create a rule for email notifications, perform the following steps:
     :::image type="content" source="media/m365d-response-actions-notifications/fig5-response-notifications.png" alt-text="Highlighting the Device groups scope in the Notification settings section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig5-response-notifications.png":::
 
 1. Select if you want to be notified if an action is completed or failed in the **Action status** field. You can select all options available.
-1. At the bottom of the pane, you can proceed to the next section by selecting **Next**. Alternately, you can go back to the Basics section by selecting Back.
+1. At the bottom of the pane, select **Next** to proceed to the **Recipients** section. Alternately, you can go back to the Basics section by selecting **Back**.
 1. In the **Recipients** section, you can add one or more email addresses to receive notifications. Separate multiple addresses by adding a comma at the end of each address. Select **Add** to add the recipients. You can see the recipients at the bottom of the pane after successfully adding addresses.
 
     :::image type="content" source="media/m365d-response-actions-notifications/fig6-response-notifications.png" alt-text="Adding multiple addresses in the Recipients section of the add notification rule" lightbox="media/m365d-response-actions-notifications/fig6-response-notifications.png":::
 
-1. Test the notification by selecting **Send test email**. Select Next located on the bottom of the pane to proceed to the review section.
+1. Test the notification by selecting **Send test email**. Select **Next** at the bottom of the pane to proceed to the **Review rule** section.
 1. Check the rule's details in the **Review rule** section. You can edit the details by selecting **Edit** under each section's details.
 
     :::image type="content" source="media/m365d-response-actions-notifications/fig7-response-notifications.png" alt-text="Highlighting the Edit option while in the Review rule section" lightbox="media/m365d-response-actions-notifications/fig7-response-notifications.png":::
 
-1. Select **Submit** at the bottom of the pane to finish the rule creation. Recipients start receiving notifications through email based on the settings. The new rule appears in the Notifications rule list under the Actions tab.
-1. To edit or delete a notification rule, select the rule from the list. Select **Edit** to change the rule's details. Select **Delete** to remove the rule.
+1. Select **Submit** at the bottom of the pane to finish the rule creation. Recipients start receiving notifications through email based on the notification rule settings you configured. The new rule appears in the Notifications rule list under the Actions tab.
+1. To edit or delete a notification rule, select the rule from the list. Select **Edit** to change the rule's details.
+
+    > [!WARNING]
+    > Deleting a notification rule is permanent and can't be undone.
+
+    Select **Delete** to remove the rule.
 
     :::image type="content" source="media/m365d-response-actions-notifications/fig8-response-notifications.png" alt-text="Highlighting the Edit and Delete options while in the rule list view" lightbox="media/m365d-response-actions-notifications/fig8-response-notifications.png":::
 
-Once you get the notification, you can go directly to the action and review or remediate the action.
+Once you receive an email notification, you can go directly to the response action referenced in the notification to review or remediate it.
 
 ## Next steps
 
