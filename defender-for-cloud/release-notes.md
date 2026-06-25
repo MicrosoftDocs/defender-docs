@@ -35,6 +35,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | -------- | -------- | -------- |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
 
+### Discovery and posture for serverless container workloads is now generally available
+
+July 1, 2026
+
+Discovery and posture for serverless container workloads is now generally available in Microsoft Defender for Cloud.
+
+This capability provides inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Elastic Container Service (ECS) on AWS Fargate.
+
+Learn more about [Discovery and posture for serverless container workloads](posture-for-serverless-containers.md).
+
 ## June 2026
 
 | Date | Category | Update |
@@ -51,16 +61,6 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
-
-### Discovery and posture for serverless container workloads is now generally available
-
-July 1, 2026
-
-Discovery and posture for serverless container workloads is now generally available in Microsoft Defender for Cloud.
-
-This capability provides inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Elastic Container Service (ECS) on AWS Fargate.
-
-Learn more about [Discovery and posture for serverless container workloads](posture-for-serverless-containers.md).
 
 ### API security posture management for Function Apps and Logic Apps is now generally available
 
