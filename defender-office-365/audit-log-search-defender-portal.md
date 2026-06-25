@@ -9,15 +9,17 @@ ms.collection:
 ms.localizationpriority: medium
 ms.assetid:
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-ga-nochange
 description: Admins can use the Audit page in the Microsoft Defender portal to search the unified audit log for user and admin actions in the organization.
 ms.service: defender-office-365
-ms.date: 10/9/2023
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Audit log search in the Microsoft Defender portal
@@ -31,6 +33,8 @@ In all organizations with cloud mailboxes, the unified audit log records support
 
 ## What do you need to know before you begin?
 
+Review the following prerequisites before you search the audit log.
+
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Compliance Management** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Compliance Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
@@ -42,7 +46,7 @@ In all organizations with cloud mailboxes, the unified audit log records support
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Audit**. Or, to go directly to the **Audit** page, use <https://security.microsoft.com/auditlogsearch>.
 
-On the **Audit** page, create the audit log search. For instructions, see the following articles:
+On the **Audit** page, create the audit log search. For instructions, see [Audit New Search](/purview/audit-new-search) or [Use a PowerShell script to search the audit log](/purview/audit-log-search-script).
 
 - [Audit New Search](/purview/audit-new-search)
 - [Use a PowerShell script to search the audit log](/purview/audit-log-search-script)

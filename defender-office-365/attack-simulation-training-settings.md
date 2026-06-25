@@ -9,9 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to configure global settings in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/14/2023
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Global settings in Attack simulation training
@@ -26,9 +28,15 @@ In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Offi
 
 - **Training threshold**: In [Training campaigns](attack-simulation-training-training-campaigns.md), the _training threshold_ specifies a time period in days to prevent users from having the same training modules assigned to them. Specifically, a training module isn't reassigned to users who completed the module during the training threshold, nor is a training module assigned to users who haven't completed modules assigned during the training threshold. For more information, see [Set the training threshold time period](attack-simulation-training-training-campaigns.md#set-the-training-threshold).
 
-- **View exclude simulations from reporting**: After a simulation has completed, you can exclude the results of the simulation from reporting. For instructions, see [Exclude completed simulations from reporting](attack-simulation-training-simulations.md#exclude-completed-simulations-from-reporting). You can use the **View all** link in this section to see excluded simulations on the **Simulations** tab.
+- **View exclude simulations from reporting**: After a simulation has completed, you can exclude the results of the simulation from reporting. For instructions, see [Exclude completed simulations from reporting](attack-simulation-training-simulations.md#exclude-completed-simulations-from-reporting). You can use the **View all** link in the **Simulations excluded from reporting** section to see excluded simulations on the **Simulations** tab.
 
-To get to the **Settings** tab, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> and then select **Login pages**. To go directly to the **Settings** tab, use <https://security.microsoft.com/attacksimulator?viewid=setting>.
+To get to the **Settings** tab, do the following steps:
+
+1. Open the Microsoft Defender portal at <https://security.microsoft.com>.
+2. Go to **Email & collaboration** \> **Attack simulation training**.
+3. Select the **Settings** tab.
+
+To go directly to the **Settings** tab, use <https://security.microsoft.com/attacksimulator?viewid=setting>.
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
