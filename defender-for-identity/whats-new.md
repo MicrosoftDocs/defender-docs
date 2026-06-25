@@ -49,6 +49,10 @@ These new alerts were added to the Defender for Identity security alerts:
 
 - [SailPoint ISC suspected brute-force attack](alerts-xdr.md#sailpoint-isc-suspected-brute-force-attack)
 
+### Visibility into service principals used by AI agents (Preview)
+
+The non-human identity inventory now identifies which Entra ID service principals are used by AI agents. A new "Used by AI agents" column and insight card help you find and prioritize these identities. For more information, see [View the Identity inventory](identity-inventory.md).
+
 ## May 2026
 
 ### Sensor v3.x supports all identity roles on domain controllers
