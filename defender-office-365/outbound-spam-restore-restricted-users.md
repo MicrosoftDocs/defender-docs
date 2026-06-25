@@ -36,7 +36,7 @@ In all organizations with cloud mailboxes, several things happen if a user excee
 
   A _restricted entity_ is a **user account** or a **connector** that's blocked from sending email due to indications of compromise, which typically includes exceeding message receiving and sending limits.
 
-- If the user tries to send email, the message is returned in a non-delivery report (also known as an NDR or bounce message) with the error code [5.1.8 - Fix error code 5.1.8 in Exchange Online](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) and the following text:
+- If the user tries to send email, the message is returned in a non-delivery report (also known as an NDR or bounce message) with the error code [Fix error code 5.1.8 in Exchange Online](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) and the following text:
 
 > "Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that
 > your email address is suspected of sending spam and it's no longer allowed to send email.  Contact  your email admin for

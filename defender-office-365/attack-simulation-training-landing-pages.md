@@ -32,7 +32,7 @@ To see the available landing pages, open the Microsoft Defender portal at <https
 The following information is shown for each landing page. You can sort the landing pages by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Name**
-- **⋮** (**Actions** control): Take action on the landing page. The available actions depend on the **Status** value of the landing page as described in the [Create landing pages](#create-landing-pages), [Modify landing pages](#modify-landing-pages), [Copy landing pages](#copy-landing-pages), and [Remove landing pages](#remove-landing-pages) sections.
+- **⋮** (**Actions** control): Take action on the landing page. The available actions depend on the **Status** value of the landing page as described in [Modify landing pages](#modify-landing-pages) and [Remove landing pages](#remove-landing-pages).
 - **Language**: One or more of the following values: **German**, **English**, **Spanish**, **French**, **Italian**, **Japanese**, **Korean**, **Dutch**, **Portuguese**, **Russian**, **Chinese (Simplified)**, and **Chinese (Traditional, Taiwan)**.
 - **Default language**
 - **Status**: **Ready** or **Draft**.
@@ -77,7 +77,7 @@ In custom landing pages only, an **Edit landing page** link is available at the 
 
 ## Create landing pages
 
-To create a custom landing page, follow these steps:
+To create a landing page in Attack simulation training, use the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> and then select **Phish landing pages**. To go directly to the **Content library** tab where you can select **Phish landing pages**, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 

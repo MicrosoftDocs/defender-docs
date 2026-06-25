@@ -24,7 +24,7 @@ In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Offi
 
 Payload automation mimics the messages and payloads from the attack and stores them as custom payloads with identifiers in the payload name. You can then use the harvested payloads in simulations or automations to automatically launch harmless simulations to targeted users.
 
-Payload automations are collected from real-world phishing campaigns that Defender for Office 365 identifies. For details about the collection criteria, see [Payload automation collection details](#appendix).
+Payload automations rely on email messages that Defender for Office 365 identifies as phishing campaigns. Eligible payloads are harvested from user-reported messages that were delivered to the Inbox, reported as phishing, and confirmed as phishing by Microsoft. For more details, see [How payload automations collect payloads](#appendix).
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
@@ -123,7 +123,7 @@ To modify an existing payload automation on the **Payload automations** page, do
 - Select the payload automation from the list by selecting the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit automation** action that appears.
 - Select the payload automation from the list by clicking anywhere in the row except the check box. In the details flyout that opens, on the **General** tab, select **Edit** in the **Name**, **Description**, or **Run conditions** sections.
 
-The payload automation wizard opens with the settings and values of the selected payload automation. The wizard uses the same pages: **Automation name** (name and description), **Run conditions** (phishing attack criteria), and **Review automation** (review and submit). For detailed information about each page, see [Create payload automations](#create-payload-automations).
+The payload automation wizard opens with the settings and values of the selected payload automation. The wizard uses the same pages: **Automation name** (name and description), **Run conditions** (phishing attack criteria), and **Review automation** (review and submit). For detailed descriptions of each page, see [Create payload automations](#create-payload-automations).
 
 ## Remove payload automations
 
@@ -151,18 +151,18 @@ For payload automations with the **Status** value **Ready**, select the payload 
 > To see details about other payload automations without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 <a name="appendix"></a>
-## Appendix: Payload automation collection details
+## Appendix: How payload automations collect payloads
 
 Payload automation relies on email messages that are identified as campaigns by Defender for Office 365:
 
 - Admins [marking messages as phishing](submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) doesn't result in payload harvesting.
 
-- Payload automation requires access to the raw payload (the original email content, including the message body, headers, links, and any attachments). User reported messages can serve as the source of raw payloads when they meet the following criteria:
+- Payload automation requires access to the raw payload (the original, unmodified email message content, including headers, body, links, and attachments). Sources for raw payloads can include user reported messages that meet the following criteria:
   - The message was delivered to the Inbox (false negative).
   - The user reported the message as phishing.
   - The reported message was submitted to Microsoft (directly by the user or [by an admin from the Submissions portal](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis)), and Microsoft determined that the message was phishing.
 
-- Eligible payloads are harvested if the messages meet the run conditions configured for the payload automation (for example, number of targeted users, phish technique, or sender information). For details about configuring run conditions, see [Create payload automations](#create-payload-automations).
+- Eligible payloads are harvested if the messages meet the run conditions configured for the payload automation (for example, number of targeted users, phishing technique, sender domain, or specific recipients). For details about configuring run conditions, see Step 4 in [Create payload automations](#create-payload-automations).
 
 <a name="related-links"></a>
 ## Related content
