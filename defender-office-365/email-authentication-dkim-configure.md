@@ -93,7 +93,7 @@ In Microsoft 365, two public-private key pairs are generated when DKIM signing u
 The selector used to verify the DKIM signature (which infers the private key used to sign the message) is stored in the **s=** value in the **DKIM-Signature** header field (for example, `s=selector1-contoso-com`).
 
 > [!IMPORTANT]
-> Use the Defender portal or Exchange Online PowerShell to view the required CNAME values for DKIM signing of outbound messages using a custom domain. **The values presented in this article are for illustration only**. To get the required values for your custom domains or subdomains, use the procedures in [Configure DKIM signing of outbound messages in Microsoft 365](#configure-dkim-signing-of-outbound-messages-in-microsoft-365).
+> Use the Defender portal or Exchange Online PowerShell to view the required CNAME values for DKIM signing of outbound messages using a custom domain. **The values presented in this article are for illustration only**. To get the required values for your custom domains or subdomains, use the [Defender portal](#use-the-defender-portal-to-enable-dkim-signing-of-outbound-messages-using-a-custom-domain) or [Exchange Online PowerShell](#use-exchange-online-powershell-to-configure-dkim-signing-of-outbound-messages) procedures.
 
 The basic syntax of the DKIM CNAME records for custom domains that send mail from Microsoft 365 is:
 
@@ -251,7 +251,7 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 > [!TIP]
 > Before you can configure DKIM signing using the custom domain, you need to add the domain to Microsoft 365. For instructions, see [Add a domain](/microsoft-365/admin/setup/add-domain#add-a-domain). To confirm that the custom domain is available for DKIM configuration, run the following command: `Get-AcceptedDomain`.
 >
-> By default, your \*.onmicrosoft.com domain already signs outbound email from senders in the \*.onmicrosoft.com domain automatically. Typically, unless you manually configured DKIM signing for the \*.onmicrosoft.com domain in the Defender portal or in PowerShell, the \*.onmicrosoft.com doesn't appear in the output of **Get-DkimSigningConfig**.
+> Your \*.onmicrosoft.com domain is already signing outbound email from senders in the \*.onmicrosoft.com by default (see [Use the Defender portal to customize DKIM signing of outbound messages using the \*.onmicrosoft.com domain](#use-the-defender-portal-to-customize-dkim-signing-of-outbound-messages-using-the-onmicrosoftcom-domain)). Typically, unless you manually configured DKIM signing for the \*.onmicrosoft.com domain in the Defender portal or in PowerShell, the \*.onmicrosoft.com doesn't appear in the output of **Get-DkimSigningConfig**.
 
 1. Run the following command to verify the availability and DKIM status of all domains in the organization:
 
@@ -375,7 +375,7 @@ For detailed syntax and parameter information, see the following articles:
 
 For the same reasons you should periodically change passwords, you should periodically change the DKIM key that's used for DKIM signing. Replacing the DKIM key for a domain is known as _DKIM key rotation_.
 
-To review all DKIM key rotation properties for a specific custom domain, run the following command in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
+To review all DKIM configuration properties for a specific custom domain, including key rotation details, run the following command in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
 ```powershell
 Get-DkimSigningConfig -Identity <CustomDomain> | Format-List
@@ -400,7 +400,7 @@ To confirm the corresponding public key that's used to verify the DKIM signature
 
 ### Use the Defender portal to rotate DKIM keys for a custom domain
 
-To rotate DKIM keys, the domain must have **Toggle** set to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Enabled** and **Status** set to **Valid** or **CnameMissing** on the **DKIM** tab of the **Email authentication settings** page.
+Use the following steps to rotate DKIM keys for a custom domain. The domain must have **Toggle** set to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Enabled** and **Status** set to **Valid** or **CnameMissing** on the **DKIM** tab of the **Email authentication settings** page.
 
 1. In the Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Email authentication settings** page. Or, to go directly to the **Email authentication settings** page, use <https://security.microsoft.com/authentication>.
 
@@ -589,7 +589,7 @@ Use any of the following methods to verify DKIM signing of outbound email from M
 Some email service providers or software-as-a-service providers let you enable DKIM signing for your mail that originates from the service, but the methods depend entirely on the email service.
 
 > [!TIP]
-> We recommend using subdomains (for example, marketing.contoso.com) for email systems or services you don't directly control, so issues with those services don't affect the reputation of your main email domain.
+> We recommend using subdomains for email systems or services you don't directly control, so issues with those services don't affect your main domain's reputation.
 
 For example, your email domain in Microsoft 365 is contoso.com, and you use the Adatum bulk mailing service for marketing email. If Adatum supports DKIM signing of messages from senders in your domain at their service, the messages might contain the following elements:
 
@@ -613,7 +613,7 @@ In this example, the following steps are required:
 
 ## Troubleshoot DKIM DNS configuration
 
-This section covers common DKIM DNS configuration mistakes and how to fix them, including [wrong CNAME hostname format](#wrong-cname-hostname-format), [missing selector2 CNAME record](#missing-selector2-cname-record), [TXT record instead of CNAME](#txt-record-instead-of-a-cname-record), [TTL set too low](#ttl-set-too-low), [domain mismatch in CNAME target](#domain-mismatch-in-cname-target-value), and [trailing dot issues](#trailing-dot-missing-or-extra-in-cname-target).
+Common mistakes that prevent DKIM from working include [wrong CNAME hostname format](#wrong-cname-hostname-format), [missing selector2 CNAME record](#missing-selector2-cname-record), [TXT record instead of a CNAME record](#txt-record-instead-of-a-cname-record), [TTL set too low](#ttl-set-too-low), [domain mismatch in CNAME target value](#domain-mismatch-in-cname-target-value), and [trailing dot issues](#trailing-dot-missing-or-extra-in-cname-target). See also [Common DKIM DNS mistakes at a glance](#common-dkim-dns-mistakes-at-a-glance).
 
 ### Wrong CNAME hostname format
 
@@ -711,7 +711,7 @@ This section covers common DKIM DNS configuration mistakes and how to fix them, 
 
 ### Verify DNS propagation
 
-Use `nslookup` or `dig` to verify that both DKIM selector CNAME records resolve correctly in public DNS.
+After creating the CNAME records, use `nslookup` or `dig` to verify that both DKIM selectors resolve correctly in public DNS.
 
 **Windows (nslookup)**:
 
@@ -726,7 +726,7 @@ nslookup -type=CNAME selector2._domainkey.contoso.com
 selector1._domainkey.contoso.com  canonical name = selector1-contoso-com._domainkey.contoso.n-v1.dkim.mail.microsoft
 ```
 
-On macOS or Linux, use `dig` to confirm the DKIM selector CNAME targets:
+On macOS or Linux, use `dig` instead of `nslookup` to confirm the DKIM selector CNAME targets:
 
 **macOS/Linux (dig)**:
 
@@ -841,7 +841,7 @@ Use the following steps to create the DKIM CNAME records in Azure DNS.
 
 #### Azure DNS via CLI
 
-Use the following Azure CLI commands to create both DKIM selector CNAME records and set the recommended TTL in your Azure DNS zone:
+Use the following Azure CLI commands to create both DKIM selector CNAME records and set the TTL to 3600 seconds for your custom domain in Azure DNS:
 
 ```azurecli
 # Create selector1 CNAME

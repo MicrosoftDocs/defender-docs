@@ -42,7 +42,7 @@ For anti-phishing policy procedures in organizations without Defender for Office
 
 ## What do you need to know before you begin?
 
-Verify the following prerequisites before you configure anti-phishing policies:
+Verify the following prerequisites before you create or manage anti-phishing policies:
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>.
 
@@ -388,7 +388,7 @@ Select a policy by clicking anywhere in the row other than the check box next to
 
      :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom anti-phishing policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
 
-You can modify, enable or disable, reprioritize, or delete policies by using the following procedures.
+The actions are described in the following sections: [Modify anti-phishing policies](#use-the-microsoft-defender-portal-to-modify-anti-phishing-policies), [Enable or disable custom anti-phishing policies](#use-the-microsoft-defender-portal-to-enable-or-disable-custom-anti-phishing-policies), [Set the priority of custom anti-phishing policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-anti-phishing-policies), and [Remove custom anti-phishing policies](#use-the-microsoft-defender-portal-to-remove-custom-anti-phishing-policies).
 
 ### Use the Microsoft Defender portal to modify anti-phishing policies
 
@@ -713,11 +713,13 @@ To verify you successfully configured anti-phishing policies in Defender for Off
 
 - On the **Anti-phishing** page in the Microsoft Defender portal at <https://security.microsoft.com/antiphishing>, verify the list of policies, their **Status** values, and their **Priority** values. To view more details, select the policy from the list by clicking anywhere in the row other than the check box next to the name to open the details flyout.
 
-- In Exchange Online PowerShell, replace \<Name\> with the name of the policy or rule, and run the following command and verify the settings:
+- In Exchange Online PowerShell, replace \<Name\> with the name of the policy or rule, and run the following commands to verify the settings:
 
   ```powershell
   Get-AntiPhishPolicy -Identity "<Name>"
   ```
+
+  To verify the configuration of a specific anti-phish rule, run the following command:
 
   ```powershell
   Get-AntiPhishRule -Identity "<Name>"

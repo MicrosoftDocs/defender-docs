@@ -45,7 +45,7 @@ For more background on routing mail through a non-Microsoft cloud service before
 
 ## Integration via the Microsoft Graph API
 
-Some non-Microsoft services authenticate and use the Microsoft Graph API to scan messages after they're delivered to user mailboxes. Microsoft Graph API integration also allows the non-Microsoft service to remove messages that they believe to be malicious or unwanted. Typically, this configuration requires full access to mailboxes by the non-Microsoft service. Be sure to understand the security and support practices of the non-Microsoft service before granting this permission.
+Some non-Microsoft services authenticate and use the Microsoft Graph API to scan messages after they're delivered to user mailboxes. Using the Microsoft Graph API to scan messages after delivery also allows the non-Microsoft service to remove messages that they believe to be malicious or unwanted. Typically, this configuration requires full access to mailboxes by the non-Microsoft service. Be sure to understand the security and support practices of the non-Microsoft service before granting this permission.
 
 ## Integration via in-and-out mail routing
 
