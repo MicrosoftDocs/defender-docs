@@ -98,6 +98,30 @@ Parameterized notebook jobs support three levels of values:
 
 When you create a notebook job from a notebook that contains parameters, the Microsoft Sentinel extension reads the parameters from the notebook and displays them in the job configuration.
 
+To create a parameterized notebook job:
+
+1. In the notebook, create a code cell near the top of the notebook that contains the parameter defaults. Open the cell menu and select **Mark Cell as Parameters**.
+
+    :::image type="content" source="./media/notebook-jobs/mark-cell-as-parameters.png" lightbox="./media/notebook-jobs/mark-cell-as-parameters.png" alt-text="Screenshot of Visual Studio Code showing the Mark Cell as Parameters menu item for a notebook cell.":::
+
+1. Define the parameters in the cell. For example:
+
+    ```python
+    # Parameters
+    lookback_days = [7, 14, 30, 90]
+    min_failed_attempts = [5, 10, 20]
+    ```
+
+1. In the **Explorer** pane, right-click the notebook file, select **Microsoft Sentinel**, and then select **Create Scheduled Job**.
+
+    :::image type="content" source="./media/notebook-jobs/create-scheduled-job-from-notebook.png" lightbox="./media/notebook-jobs/create-scheduled-job-from-notebook.png" alt-text="Screenshot of Visual Studio Code showing the Microsoft Sentinel menu with Create Scheduled Job selected.":::
+
+1. In the job editor, expand **Default parameters**, and then select **Refresh parameters** to load the latest parameter definitions from the notebook.
+
+    :::image type="content" source="./media/notebook-jobs/refresh-notebook-job-parameters.png" lightbox="./media/notebook-jobs/refresh-notebook-job-parameters.png" alt-text="Screenshot of the scheduled notebook job editor showing the Refresh parameters button under Default parameters.":::
+
+1. Review or update the default parameter values, and then submit the job.
+
 You can keep the notebook default values or change the values before you submit the job. Values that you change are saved with the job configuration and used for future scheduled runs.
 
 If a parameter value doesn't match the expected type, the extension shows an inline validation error and prevents you from submitting the job until the error is fixed.
@@ -129,6 +153,8 @@ Use reset for an individual parameter to restore only that value. Use **Reset al
 ### Run with custom runtime parameter values
 
 When you select **Run now** for a parameterized notebook job, the Microsoft Sentinel extension opens a runtime parameters dialog. The dialog is prepopulated with the parameter values saved in the job configuration.
+
+:::image type="content" source="./media/notebook-jobs/run-job-with-parameter-overrides.png" lightbox="./media/notebook-jobs/run-job-with-parameter-overrides.png" alt-text="Screenshot of the Run job dialog showing parameter values that can be changed before running a notebook job.":::
 
 You can keep the saved values or change them for the current run. Runtime parameter changes apply only to that job run and don't update the saved job configuration or future scheduled runs.
 
