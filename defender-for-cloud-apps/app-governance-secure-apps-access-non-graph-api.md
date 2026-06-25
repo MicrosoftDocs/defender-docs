@@ -1,5 +1,5 @@
 ---
-title: Secure apps accessing non-Graph APIs using app governance
+title: Secure OAuth apps accessing non-Graph APIs using app governance
 ms.date: 06/16/2026
 ms.topic: how-to
 description: Learn how to secure apps accessing other APIs using app governance in the Microsoft Defender portal.
@@ -8,7 +8,7 @@ ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ai-usage: ai-assisted
 ---
 
-# Secure apps accessing non-Graph APIs using app governance
+# Secure OAuth apps accessing non-Graph APIs using app governance
 
 Many apps use APIs other than Microsoft Graph to access Microsoft 365 and other resources. With visibility over such apps, you can identify and defend against risks inherent to these apps, including the APIs that they access. Some of these APIs might receive limited support and updates.
 

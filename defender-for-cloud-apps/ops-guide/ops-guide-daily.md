@@ -178,7 +178,7 @@ We recommend that you check your OAuth apps daily for regular in-depth visibilit
 For more information, see:
 
 - [Create app policies in app governance](../app-governance-app-policies-create.md)
-- [Manage app policies](../app-governance-app-policies-manage.md)
+- [Manage app policies](../app-governance-app-policies-create.md#manage-app-policies)
 
 ## Review Conditional Access app control
 
