@@ -106,7 +106,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | Custom Recommendations (Preview) | Preview|NA|NA|NA|
 | Agentless containers vulnerability assessment |GA|GA|NA|NA|
 | API security posture management |GA|NA|NA|NA|
-| [Serverless Containers](posture-for-serverless-containers.md) | GA | NA | NA | NA |
+| [Serverless Containers](posture-for-serverless-containers.md) | GA | NA | GA | NA |
 | [Serverless protection](serverless-protection.md) <sup>[4](#footnote4)</sup> | GA | NA | NA | NA |
 |**DEFENDER FOR CLOUD PLANS** | | | | |
 |[Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md)| GA | GA| NA | NA|
