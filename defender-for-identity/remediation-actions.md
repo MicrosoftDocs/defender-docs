@@ -1,9 +1,10 @@
 ---
-title: Remediation actions
+title: Remediation actions for compromised users in Microsoft Defender for Identity
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
-ms.date: 03/05/2026
+ms.date: 06/15/2026
 ms.topic: how-to
-ms.custom: sfi-ga-blocked
+ms.custom: sfi-ga-blocked, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Remediation actions in Microsoft Defender for Identity
@@ -61,7 +62,7 @@ Depending on your Microsoft Entra ID roles, you might see additional Microsoft E
 
 ## Roles and permissions
 
-This table lists the remediation actions supported by Defender for Identity and the roles required to initiate each action.
+The following table lists the remediation actions supported by Defender for Identity and the roles required to initiate each action.
 
 | Remediation Action | Active Directory |Microsoft Entra ID | Okta |
 | ---- | ---- | ---- | ---- |
@@ -83,7 +84,7 @@ To perform any of the [supported actions](#supported-actions), you need to:
 - **Configure the account that Microsoft Defender for Identity uses to perform actions.** Make sure the **Automatically use the sensor's local system account** option is selected. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities** > **Microsoft Defender for Identity** > **Manage action accounts**. This setting is required if any of your sensors are v3.x. For more information, see [Manage action accounts](deploy/manage-action-accounts.md).
 - **Sign in to the Microsoft Defender portal with the required permissions.** For Defender for Identity actions, you'll need a custom role with **Response (manage)** permissions. For more information, see [Create custom roles with Microsoft Defender unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles). For details on the specific roles required for each action, see [Roles and permissions](#roles-and-permissions).
 
-To apply a remediation action to an identity:
+To apply a remediation action to an identity, perform the following steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to one of the following locations:
     - **Identity page**: Go to **Assets** > **Identities**, and select the identity you want to act on.
@@ -98,7 +99,8 @@ To apply a remediation action to an identity:
 
 The action is submitted and executed by the relevant identity system. You can track the status in the **Action center**.
 
-## Related video
+<a name="related-video"></a>
+## Video: Defender for Identity remediation actions
 
 - [Remediation actions in Microsoft Defender for Identity](https://learn-video.azurefd.net/vod/id/adc6068b-225c-457d-b053-db6b64dedb79)
 
