@@ -3,11 +3,13 @@ title: Delete installed Microsoft Sentinel out-of-the-box content and solutions
 description: Remove solutions and content you deployed in Microsoft Sentinel.
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 03/01/2024
+ms.date: 06/15/2026
 ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security operations center (SOC) analyst, I want to delete Microsoft Sentinel out-of-the-box content and solutions so that I can manage and customize my security monitoring environment effectively.
@@ -16,16 +18,18 @@ appliesto:
 
 # Delete installed Microsoft Sentinel out-of-the-box content and solutions
 
-If you installed a Microsoft Sentinel out-of-the-box solution, you can remove content items from the solution or delete the installed solution. If you later need to restore deleted content items, select **Reinstall** on the solution. Similarly, you can restore the solution by reinstalling the solution.
+If you installed an out-of-the-box solution, you can remove content items or delete the solution. To restore deleted content items, select **Reinstall** on the solution. You can also restore the solution by reinstalling it.
  
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
 ## Delete content items
 
-Delete content items for an installed solution deployed by the content hub.
+Delete content items from a solution you installed from the content hub.
 
-1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Content management** > **Content hub**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Content management**, select **Content hub**.
-1. Select an installed solution where the version is 2.0.0 or higher.
+1. Open the content hub.
+    - **Defender portal**: Select **Microsoft Sentinel** > **Content management** > **Content hub**.
+    - **Azure portal**: Under **Content management**, select **Content hub**.
+1. Select an installed solution with version 2.0.0 or higher.
 1. On the solutions details page, select **Manage**.
 1. Select the content item or items you want to delete.
 1. Select **Delete**.
@@ -36,7 +40,7 @@ To restore deleted content items, select **Reinstall** on the solution.
 
 ## Delete the solution
 
-Delete a solution and the related content templates from the content hub or in the manage solution view. Active, cloned, saved, or custom items associated with a content template aren't deleted.
+Delete a solution and its content templates from the content hub or the manage solution view. This action doesn't delete active, cloned, saved, or custom items.
 
 1. In the content hub, select an installed solution.
 1. On the solutions details page, select **Delete**.
