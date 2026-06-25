@@ -27,7 +27,7 @@ Microsoft Sentinel provides built-in, source-specific parsers for many data sour
 
   - The events might be collected, modified, and forwarded by an intermediary system.
 
-To understand how parsers fit within the ASIM architecture, refer to the [ASIM architecture diagram](../normalization.md#asim-components).
+To understand how parsers fit within the ASIM architecture, refer to the [ASIM architecture diagram](normalization.md#asim-components).
 
 ## Custom ASIM parser development process
 
@@ -35,7 +35,7 @@ The following workflow describes the high level steps in developing a custom ASI
 
 1. [Collect sample logs](#collect-sample-logs).
 
-1. Identify the schemas or schemas that the events sent from the source represent. For more information, see [Schema overview](../normalization-about-schemas.md).
+1. Identify the schemas or schemas that the events sent from the source represent. For more information, see [Schema overview](normalization-about-schemas.md).
 
 1. [Map](#planning-mapping) the source event fields to the identified schema or schemas. 
 
@@ -45,7 +45,7 @@ The following workflow describes the high level steps in developing a custom ASI
 
 1. [Deploy](#deploy-parsers) the parsers into your Microsoft Sentinel workspaces.
 
-1. Update the relevant ASIM unifying parser to reference the new custom parser. For more information, see [Managing ASIM parsers](../normalization-manage-parsers.md). 
+1. Update the relevant ASIM unifying parser to reference the new custom parser. For more information, see [Managing ASIM parsers](normalization-manage-parsers.md). 
 
 1. You might also want to [contribute your parsers](#contribute-parsers) to the primary ASIM distribution. Contributed parsers may also be made available in all workspaces as built-in parsers.  
 
@@ -108,7 +108,7 @@ Event | where Source == "Microsoft-Windows-Sysmon" and EventID == 1
 
 In some cases, the event itself does not contain information that would allow filtering for specific source types.
 
-For example, Infoblox DNS events are sent as Syslog messages, and are hard to distinguish from Syslog messages sent from other sources. In such cases, the parser relies on a list of sources that defines the relevant events. This list is maintained in the [**Sources_by_SourceType**](../normalization-manage-parsers.md#configure-the-sources-relevant-to-a-source-specific-parser) watchlist.
+For example, Infoblox DNS events are sent as Syslog messages, and are hard to distinguish from Syslog messages sent from other sources. In such cases, the parser relies on a list of sources that defines the relevant events. This list is maintained in the [**Sources_by_SourceType**](normalization-manage-parsers.md#configure-the-sources-relevant-to-a-source-specific-parser) watchlist.
 
 To use the ASimSourceType watchlist in your parsers, use the `_ASIM_GetSourceBySourceType` function in the parser filtering section. For example, the Infoblox DNS parser includes the following in the filtering section:
 
@@ -124,7 +124,7 @@ To use this sample in your parser:
 
 #### Filtering based on parser parameters
 
-When developing [filtering parsers](../normalization-about-parsers.md#optimizing-parsing-using-parameters), make sure that your parser accepts the filtering parameters for the relevant schema, as documented in the reference article for that schema. Using an existing parser as a starting point ensures that your parser includes the correct function signature. In most cases, the actual filtering code is also similar for filtering parsers for the same schema.
+When developing [filtering parsers](normalization-about-parsers.md#optimizing-parsing-using-parameters), make sure that your parser accepts the filtering parameters for the relevant schema, as documented in the reference article for that schema. Using an existing parser as a starting point ensures that your parser includes the correct function signature. In most cases, the actual filtering code is also similar for filtering parsers for the same schema.
 
 When filtering, make sure that you:
 
@@ -260,7 +260,7 @@ Microsoft Sentinel provides handy functions for common lookup values. For exampl
 
 The first option accepts as a parameter the value to look up and let you choose the output field and therefore useful as a general lookup function. The second option is more geared towards parsers, takes as input the name of the source field, and updates the needed ASIM field, in this case `DnsResponseCodeName`.
 
-For a full list of ASIM help functions, refer to [ASIM functions](../normalization-functions.md)
+For a full list of ASIM help functions, refer to [ASIM functions](normalization-functions.md)
 
 
 #### Enrichment fields
@@ -276,7 +276,7 @@ In addition to the fields available from the source, a resulting ASIM event incl
      EventSchema = 'ProcessEvent'
 ```
 
-Another type of enrichment fields that your parsers should set are type fields, which designate the type of the value stored in a related field. For example, the `SrcUsernameType` field designates the type of value stored in the `SrcUsername` field. You can find more information about type fields in the [entities description](../normalization-about-schemas.md#event-entities).
+Another type of enrichment fields that your parsers should set are type fields, which designate the type of the value stored in a related field. For example, the `SrcUsernameType` field designates the type of value stored in the `SrcUsername` field. You can find more information about type fields in the [entities description](normalization-about-schemas.md#event-entities).
 
 In most cases, types are also assigned a constant value. However, in some cases the type has to be determined based on the actual value, for example:
 
@@ -298,7 +298,7 @@ This function will set the fields as follows:
 | server1.microsoft.com | SrcHostname: server1<br>SrcDomain: microsoft.com<br> SrcDomainType: FQDN<br>SrcFQDN:server1.microsoft.com |
 
 
-The functions `_ASIM_ResolveDstFQDN` and `_ASIM_ResolveDvcFQDN` perform a similar task populating the related `Dst` and `Dvc` fields. For a full list of ASIM help functions, refer to [ASIM functions](../normalization-functions.md)
+The functions `_ASIM_ResolveDstFQDN` and `_ASIM_ResolveDvcFQDN` perform a similar task populating the related `Dst` and `Dvc` fields. For a full list of ASIM help functions, refer to [ASIM functions](normalization-functions.md)
 
 ### Select fields in the result set
 
@@ -439,7 +439,7 @@ Handle the results as follows:
 | Message | Action |
 | ------- | ------ |
 | **(0) Error: type mismatch for column  [\<Field\>]. It is currently [\<Type\>] and should be [\<Type\>]** | Make sure that the type of normalized field is correct, usually by using a [conversion function](/kusto/query/scalar-functions?view=microsoft-sentinel&preserve-view=true#conversion-functions) such as `tostring`.  |
-| **(0) Error: Invalid value(s) (up to 10 listed) for field [\<Field\>] of type [\<Logical Type\>]** | Make sure that the parser maps the correct source field to the output field. If mapped correctly, update the parser to transform the source value to the correct type, value or format. Refer to the [list of logical types](../normalization-about-schemas.md#logical-types) for more information on the correct values and formats for each logical type. <br><br>Note that the testing tool lists only a sample of 10 invalid values.   |
+| **(0) Error: Invalid value(s) (up to 10 listed) for field [\<Field\>] of type [\<Logical Type\>]** | Make sure that the parser maps the correct source field to the output field. If mapped correctly, update the parser to transform the source value to the correct type, value or format. Refer to the [list of logical types](normalization-about-schemas.md#logical-types) for more information on the correct values and formats for each logical type. <br><br>Note that the testing tool lists only a sample of 10 invalid values.   |
 | **(1) Warning: Empty value in mandatory field [\<Field\>]** | Mandatory fields should be populated, not just defined. Check whether the field can be populated from other sources for records for which the current source is empty. |
 | **(2) Info: Empty value in recommended field [\<Field\>]** | Recommended fields should usually be populated. Check whether the field can be populated from other sources for records for which the current source is empty. |
 | **(2) Info: Empty value in optional field [\<Field\>]** | Check whether the aliased field is mandatory or recommended, and if so, whether it can be populated from other sources. |
@@ -527,14 +527,14 @@ To submit your test results, use the following steps:
 
 Learn more about ASIM parsers:
 
-- [ASIM parsers overview](../normalization-parsers-overview.md)
-- [Use ASIM parsers](../normalization-about-parsers.md)
-- [Manage  ASIM parsers](../normalization-manage-parsers.md)
-- [The ASIM parsers list](../normalization-parsers-list.md)
+- [ASIM parsers overview](normalization-parsers-overview.md)
+- [Use ASIM parsers](normalization-about-parsers.md)
+- [Manage  ASIM parsers](normalization-manage-parsers.md)
+- [The ASIM parsers list](normalization-parsers-list.md)
 
 Learn more about the ASIM in general: 
 
-- [Advanced Security Information Model (ASIM) overview](../normalization.md)
-- [Advanced Security Information Model (ASIM) schemas](../normalization-about-schemas.md)
-- [Advanced Security Information Model (ASIM) content](../normalization-content.md)
+- [Advanced Security Information Model (ASIM) overview](normalization.md)
+- [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
+- [Advanced Security Information Model (ASIM) content](normalization-content.md)
 - [Deep Dive Webinar on Microsoft Sentinel Normalizing Parsers and Normalized Content](https://www.youtube.com/watch?v=zaqblyjQW6k) 

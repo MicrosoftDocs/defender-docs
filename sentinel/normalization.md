@@ -123,7 +123,7 @@ To start using ASIM:
 
 - Write your own analytics rules using ASIM or [convert existing ones](normalization-content.md#builtin).
 
-- Enable your custom data to use built-in analytics by [writing parsers](isv/normalization-develop-parsers.md) for your custom sources and [adding](normalization-manage-parsers.md) them to the relevant source agnostic parser.
+- Enable your custom data to use built-in analytics by [writing parsers](normalization-develop-parsers.md) for your custom sources and [adding](normalization-manage-parsers.md) them to the relevant source agnostic parser.
 
 ## Related content
 
