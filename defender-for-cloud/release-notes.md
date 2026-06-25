@@ -33,9 +33,9 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| June 25, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
 | June 18, 2026 | GA | [API security posture management for Function Apps and Logic Apps is now generally available](#api-security-posture-management-for-function-apps-and-logic-apps-is-now-generally-available) |
 | June 17, 2026 | Update | [Expanded container support for cloud scopes](#expanded-container-support-for-cloud-scopes) |
-| June 25, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
 | June 9, 2026 | Preview | [New multicloud security recommendations now in public preview](#new-multicloud-security-recommendations-now-in-public-preview) |
 | June 8, 2026 | GA | [SQL Vulnerability Assessment Express Configuration is now generally available for Azure SQL Managed Instance and Azure Synapse Analytics workspaces](#sql-vulnerability-assessment-express-configuration-is-now-generally-available-for-azure-sql-managed-instance-and-azure-synapse-analytics-workspaces) |
 | June 4, 2026 | Preview | [Discovery and posture for serverless container workloads (Preview)](#discovery-and-posture-for-serverless-container-workloads-preview) |
@@ -46,6 +46,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### Discovery and posture for serverless container workloads is now generally available
+
+June 25, 2026
+
+Discovery and posture for serverless container workloads is now generally available in Microsoft Defender for Cloud.
+
+This capability provides inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Elastic Container Service (ECS) on AWS Fargate.
+
+Learn more about [Discovery and posture for serverless container workloads (Preview)](posture-for-serverless-containers.md).
 
 ### API security posture management for Function Apps and Logic Apps is now generally available
 
@@ -80,16 +90,6 @@ Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
 
 Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
 Learn more about [cloud scopes](cloud-scopes-unified-rbac.md).
-
-### Discovery and posture for serverless container workloads is now generally available
-
-June 25, 2026
-
-Discovery and posture for serverless container workloads is now generally available in Microsoft Defender for Cloud.
-
-This capability provides inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Elastic Container Service (ECS) on AWS Fargate.
-
-Learn more about [Discovery and posture for serverless container workloads (Preview)](posture-for-serverless-containers.md).
 
 ### New multicloud security recommendations now in public preview
 
