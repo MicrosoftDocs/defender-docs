@@ -58,16 +58,14 @@ You can expand the basic filter by selecting **Advanced filters** to drill down 
 You can view more information about each activity, by selecting the Activity itself in the Activity log. This opens the Activity drawer that provides the following additional actions and insights for each activity:
 
 - Matched policies: Select the **Matched policies** link to see a list of policies this activity matched.
-
 - View raw data: Select **View raw data** to see the actual data that was received from the app.
-
 - User: Select the user to view the user page for the user who performed the activity.
-
 - Device type: Select **Device type** to view the raw user agent data.
-
 - Location: Select the location to view the location in Bing Maps.
-
 - IP address category and tags: Select the IP tag to view the list of IP tags found in this activity. You can then filter by all activities matching this tag.
+
+> [!NOTE]
+> The **IP address category** is assigned automatically based on threat intelligence and can be manually overridden using [IP address ranges](ip-tags.md).
 
 The fields in the Activity drawer provide contextual links to additional activities and drill-downs you might want to perform from the drawer directly. For example, if you move your cursor next to the IP address category, you can use the **add to filter** icon ![Icon for adding the activity to a filter.](media/activity-filters/add-to-filter-icon.png) to immediately add the IP address to the current page's filter. You can also use the settings cog icon ![Settings cog icon used to access configuration settings](media/activity-filters/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **User groups**.
 

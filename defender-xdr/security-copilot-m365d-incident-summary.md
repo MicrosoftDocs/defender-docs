@@ -5,13 +5,15 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.topic: how-to
-ms.date: 11/18/2025
+ms.date: 06/15/2026
 ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
 
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Summarize an incident with Microsoft Copilot in Microsoft Defender
@@ -36,7 +38,7 @@ Incident responders can access the right context to investigate and remediate in
 
 The incident summary capability is available in the Microsoft Defender portal for customers with provisioned access to Security Copilot.
 
-This capability is also available in the Security Copilot standalone experience through the Microsoft Defender XDR plugin. Know more about [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
+The incident summary capability is also available in the Security Copilot standalone experience through the Microsoft Defender XDR plugin. For more information about the Microsoft Defender XDR plugin, see [preinstalled plugins in Security Copilot](/security-copilot/manage-plugins#preinstalled-plugins).
 
 ## Incident summary content
 
@@ -51,6 +53,8 @@ Incidents containing up to 100 alerts can be summarized into one incident summar
 - Suggested Security Copilot prompts, which guide you to focus on the most relevant next steps, gain deeper insights, and simplify investigations.
 
 ### Summarize an incident
+
+To view an incident summary in Microsoft Defender, perform the following steps:
 
 1. Open an incident page. Copilot automatically creates an incident summary in the **Tasks** pane. You can stop the summary creation by selecting **Cancel** or restart creation by selecting **Regenerate**.
 
@@ -111,11 +115,13 @@ In the Security Copilot standalone portal, you can use the following prompt to g
 > [!TIP]
 > When you generate an incident summary in the Security Copilot portal, include the word ***Defender*** in your prompts to ensure that the incident summary capability delivers the results.
 
-## Provide feedback
+<a name="provide-feedback"></a>
+## Provide feedback on incident summaries
 
-Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. You can provide feedback on the summary by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom of the Copilot pane.
+Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for continuous improvement of the incident summary capability. You can provide feedback on the summary by selecting the feedback icon ![Screenshot of the feedback button in Copilot in Defender cards](media/copilot-in-defender/copilot-defender-feedback.png) found on the bottom of the Copilot pane.
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Learn about other Security Copilot embedded experiences](/security-copilot/experiences-security-copilot)
 - [Privacy and data security in Security Copilot](/copilot/security/privacy-data-security)

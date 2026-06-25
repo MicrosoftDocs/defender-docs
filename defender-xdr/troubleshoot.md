@@ -12,7 +12,8 @@ ms.topic: how-to
 ms.date: 06/18/2026
 appliesto:
   - Microsoft Defender XDR
-ms.custom: sfi-ga-nochange
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 #Customer intent: As a security administrator, I want to troubleshoot known Microsoft Defender XDR service issues so that I can restore functionality and resolve errors quickly.
 ---
@@ -37,7 +38,7 @@ For more information, see [Prerequisites](prerequisites.md).
 
 ## Microsoft Defender for Identity alerts aren't showing up in Microsoft Defender XDR incidents
 
-If you have Microsoft Defender for Identity deployed in your environment but you're not seeing Defender for Identity alerts as part of Microsoft Defender XDR incidents, you need to ensure that the Microsoft Defender for Cloud Apps and Defender for Identity integration is enabled.
+If you deployed Microsoft Defender for Identity but don't see its alerts in Microsoft Defender XDR incidents, check that the Defender for Cloud Apps and Defender for Identity integration is turned on.
 
 For more information, see [Microsoft Defender for Identity integration](/cloud-app-security/mdi-integration).
 
@@ -47,9 +48,9 @@ A false positive is a file or URL that is detected as malicious but isn't a thre
 
 ## My ServiceNow tickets are no longer available in the Microsoft Defender portal
 
-The Microsoft Defender XDR-ServiceNow connector is no longer available in the Microsoft Defender portal. However, you can still integrate Microsoft Defender XDR with ServiceNow by using the Microsoft Security Graph API. For more information, see [Security solution integrations using the Microsoft Graph Security API](/graph/security-integration).
+The ServiceNow connector is no longer in the Microsoft Defender portal. To connect Microsoft Defender XDR with ServiceNow, use the Microsoft Graph Security API instead. For details, see [Security solution integrations using the Microsoft Graph Security API](/graph/security-integration).
 
-The Microsoft Defender XDR-ServiceNow integration was previously available in the Microsoft Defender portal for preview and feedback. This integration allowed you to create ServiceNow incidents from Microsoft Defender XDR incidents.
+The ServiceNow connector was offered in the portal as a preview. It let you create ServiceNow incidents from Microsoft Defender XDR incidents.
 
 ## I can't submit files
 
@@ -117,7 +118,7 @@ All users in the tenant can now use this application.
 
 #### Option 3: Delete and read app permissions
 
-If neither of these options resolve the issue, try the following steps (as an admin):
+If neither Option 1 (user request) nor Option 2 (admin authentication) resolves the issue, try the following steps (as an admin):
 
 1. Remove previous configurations for the application. Go to [Enterprise applications](https://portal.azure.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview).
 

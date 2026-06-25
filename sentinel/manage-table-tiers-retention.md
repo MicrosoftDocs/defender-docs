@@ -5,7 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 11/05/2025
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 # Customer intent: As an IT administrator or subscription owner, I want to manage Microsoft Sentinel and Defender XDR table tiers and retention settings in Microsoft Defender Portal to optimize security operations needs and cost efficiency.
 ---
 
@@ -50,7 +52,7 @@ To view and manage table settings in the Microsoft Defender portal, follow these
 
 1. Select a table on the **Tables** screen.
 
-    This action opens the table details side panel with more information about the table, including the table description, tier, and retention details.
+    Selecting a table opens the table details side panel with more information about the table, including the table description, tier, and retention details.
 
     :::image type="content" source="media/manage-data-overview/table-management-microsoft-defender-portal.png" lightbox="media/manage-data-overview/table-management-microsoft-defender-portal.png" alt-text="Screenshot that shows the table details side panel for the CommonSecurityLog table on the Table Management screen in the Defender portal.":::  
 
