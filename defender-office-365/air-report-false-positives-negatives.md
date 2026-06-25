@@ -43,7 +43,7 @@ The instructions depend on the available subscriptions in your organization:
 > [!TIP]
 > For permission and licensing requirements, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
 
-SecOps personnel can often use :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** to undo a remediation action that AIR applied to an item. For example:
+SecOps personnel can often use :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** to undo the remediation action that AIR applied to the item. For example:
 
 - From Explorer (Threat Explorer). For details, see [Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 - From the Email entity page. For more information, see [Actions on the Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page).
@@ -57,13 +57,14 @@ For details about the available actions in :::image type="icon" source="media/de
 - To take action on messages that were quarantined, do one of the following steps:
   - To release the message, use **Take action** \> **Move to mailbox folder** \> **Inbox** and then select **Release to one or more of the original recipients of the email** or **Release to all recipients**. Or, you can [release the message directly from quarantine](quarantine-admin-manage-messages-files.md#release-quarantined-email).
   - [Delete the message directly from quarantine](quarantine-admin-manage-messages-files.md#delete-email-from-quarantine) if the user has access to the quarantined message.
-  - If the user doesn't have access to the quarantined message, you don't need to do anything (the message eventually expires based on the [quarantine retention](quarantine-about.md#quarantine-retention) policy).
+  - If the user doesn't have access to the quarantined message, you don't need to do anything (the message eventually expires based on the [quarantine retention](quarantine-about.md#quarantine-retention) period).
 - To take action on files that were quarantined, do one of the following steps:
   - [Release the quarantined file from quarantine](quarantine-admin-manage-messages-files.md#release-quarantined-files-from-quarantine).
   - [Delete the quarantined file from quarantine](quarantine-admin-manage-messages-files.md#delete-quarantined-files-from-quarantine) if the user has access to the quarantined file.
-  - If the user doesn't have access to the quarantined file, you don't need to do anything (the file eventually expires based on the [quarantine retention](quarantine-about.md#quarantine-retention) policy).
+  - If the user doesn't have access to the quarantined file, you don't need to do anything (the file eventually expires based on the [quarantine retention](quarantine-about.md#quarantine-retention) period).
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Microsoft Defender for Office 365](mdo-about.md)
 - [Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2](air-about.md)

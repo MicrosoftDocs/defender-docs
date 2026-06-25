@@ -49,7 +49,7 @@ This article uses the scenario for a user named Alex on the security team. We ca
 The name of the user (Alex in this scenario) appears under Eligible assignments on the next page. The user's appearance under Eligible assignments means they can activate the role in PIM with the settings configured earlier.
 
 > [!NOTE]
-> For a quick review of Privileged Identity Management, see [Overview of Privileged Identity Management](https://www.youtube.com/watch?v=VQMAg0sa_lE).
+> For a quick review of Privileged Identity Management see [Privileged Identity Management overview](https://www.youtube.com/watch?v=VQMAg0sa_lE).
 
 :::image type="content" source="media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG" alt-text="The Role setting details - Security Reader page" lightbox="media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG":::
 
@@ -90,7 +90,7 @@ Create a Microsoft Entra security group to hold the elevated permissions and ena
 > [!NOTE]
 > This step is required only if you used an Email & collaboration role group in [Create a role or role group with the required permissions](#create-a-role-or-role-group-with-the-required-permissions). Defender unified RBAC supports direct permissions assignments to Microsoft Entra groups, and you can add members to the group for PIM.
 
-1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command to add the Azure security group as a member of the Exchange role group, which grants the group's members the permissions assigned to the role group:
+1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command to add the Azure security group as a member of the role group, which grants the group's members the permissions assigned to that role group:
 
    ```powershell
    Add-RoleGroupMember "<Role Group Name>" -Member "<Azure Security Group>"`
@@ -103,7 +103,7 @@ Use the following steps to verify that the PIM configuration grants the expected
 1. Sign in with the test user (Alex), who should have no administrative access within the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender) at this point.
 2. In the Microsoft Entra Admin Center, open **Privileged Identity Management** and activate the day-to-day Security Reader role.
 3. If you try to purge an email using Threat Explorer, you get an error stating you need more permissions.
-4. Activate the Search and Purge PIM group in Privileged Identity Management. After a short delay, you should be able to purge emails without issue.
+4. Activate the elevated Search and Purge PIM group in Privileged Identity Management. After a short delay, you should be able to purge emails without issue.
 
    :::image type="content" source="media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG" alt-text="The Actions pane under the Email tab" lightbox="media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG":::
 

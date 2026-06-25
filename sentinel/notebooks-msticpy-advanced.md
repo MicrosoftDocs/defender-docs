@@ -4,8 +4,9 @@ description: Learn about advanced configurations available for Jupyter notebooks
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.custom: devx-track-python
-ms.date: 01/09/2023
+ms.custom: devx-track-python, msecd-doc-authoring-1014
+ms.date: 06/15/2026
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to configure advanced settings for Jupyter notebooks and MSTICPy in Microsoft Sentinel so that I can efficiently hunt for security threats and automate my workflows.
@@ -40,7 +41,7 @@ This procedure describes how to configure authentication parameters for Microsof
 1. Select the authentication methods to use:
 
     - While you can use a different set of methods from the defaults, this usage isn't a typical configuration. For more information, see the [**Getting Started Guide For Azure Sentinel ML Notebooks** notebook](notebook-get-started.md).
-    - Unless you want to use the **env** (environment variable) authentication, leave the **clientId**, **tenantId**, and **clientSecret** fields empty.
+    - Unless you want to use environment variable (**env**) authentication, leave the **clientId**, **tenantId**, and **clientSecret** fields empty.
     - While not recommended, MSTICPy also supports using client app IDs and secrets for your authentication. In such cases, define your **clientId**, **tenantId**, and **clientSecret** fields directly in the **Data Providers** tab.
 
 1. Select **Save File** to save your changes.
@@ -179,7 +180,7 @@ Use multiple configuration files, with multiple environment variables, if you wa
 
 1. Set the **MSTICPYCONFIG** environment variable to point to that location.
 
-Use one of the following procedures to define the **MSTICPYCONFIG** environment variable.
+Use the Windows System Properties procedure, the Linux .bashrc procedure, or an Azure Machine Learning option to define the **MSTICPYCONFIG** environment variable.
 
 # [Windows](#tab/windows)
 
@@ -217,7 +218,7 @@ This procedure describes how to update the **.bashrc** file to set the **MSTICPY
    mv msticpyconfig.yaml ~
    ```
 
-1. Use one of the following processes to edit the **.bashrc** file for your environment variable:
+1. Use one of the following processes to edit the **.bashrc** file for the **MSTICPYCONFIG** environment variable:
 
     |Command  |Steps  |
     |---------|---------|
@@ -232,7 +233,7 @@ This procedure describes how to update the **.bashrc** file to set the **MSTICPY
 
 # [Azure Machine Learning options](#tab/azure-ml)
 
-If you need to store your **msticpyconfig.yaml**  file somewhere other than your Azure Machine Learning user folder, use one of the following options:
+If you need to store your **msticpyconfig.yaml**  file somewhere other than your Azure Machine Learning user folder, use either an **nbuser_settings.py** file or the **kernel.json** file:
 
 - **An *nbuser_settings.py* file at the root of your user folder**. While this process is simpler and less intrusive than editing the **kernel.json** file, it's only supported when you run the `init_notebook` function at the start of your notebook code. While this is the default behavior, if you run the notebook code without first running `init_notebook`, MSTICPy mmight not be able to find the configuration file.
 
