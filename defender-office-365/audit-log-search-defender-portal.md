@@ -28,6 +28,8 @@ ai-usage: ai-assisted
 
 In all organizations with cloud mailboxes, the unified audit log records supported user and admin operations. Audit records for these events are searchable by security ops, IT admins, insider risk teams, and compliance and legal investigators in the organization. This capability provides visibility into the activities performed across your Microsoft 365 organization.
 
+This article describes how to open and start an audit log search in the Microsoft Defender portal, including the required permissions and links to detailed search instructions.
+
 > [!TIP]
 > Audit log search in Microsoft Defender portal is identical to audit log search in the Microsoft Purview portal at <https://purview.microsoft.com/auditlogsearch>.
 
@@ -47,6 +49,3 @@ Review the following prerequisites before you search the audit log.
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Audit**. Or, to go directly to the **Audit** page, use <https://security.microsoft.com/auditlogsearch>.
 
 On the **Audit** page, create the audit log search. For instructions, see [Audit New Search](/purview/audit-new-search) or [Use a PowerShell script to search the audit log](/purview/audit-log-search-script).
-
-- [Audit New Search](/purview/audit-new-search)
-- [Use a PowerShell script to search the audit log](/purview/audit-log-search-script)

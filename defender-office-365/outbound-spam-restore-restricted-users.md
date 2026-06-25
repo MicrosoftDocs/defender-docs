@@ -12,14 +12,16 @@ ms.collection:
   - tier2
 description: Admins can learn how to remove user accounts from the Restricted entities page in the Microsoft Defender portal. Users are added to the Restricted entities page for sending outbound spam, typically as a result of account compromise.
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-ga-nochange
 ms.service: defender-office-365
-ms.date: 05/07/2025
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 #customer intent: As an admin, I need steps to unblock users restricted for outbound spam, including required checks and portal/PowerShell actions so I can safely restore sending.
 ---
 
@@ -34,7 +36,7 @@ In all organizations with cloud mailboxes, several things happen if a user excee
 
   A _restricted entity_ is a **user account** or a **connector** that's blocked from sending email due to indications of compromise, which typically includes exceeding message receiving and sending limits.
 
-- If the user tries to send email, the message is returned in a non-delivery report (also known as an NDR or bounce message) with the error code [5.1.8](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) and the following text:
+- If the user tries to send email, the message is returned in a non-delivery report (also known as an NDR or bounce message) with the error code [5.1.8 - Fix error code 5.1.8 in Exchange Online](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-1-8-in-exchange-online) and the following text:
 
 > "Your message couldn't be delivered because you weren't recognized as a valid sender. The most common reason for this is that
 > your email address is suspected of sending spam and it's no longer allowed to send email.  Contact  your email admin for
@@ -47,6 +49,8 @@ The procedures in this article explain how admins can remove user accounts from 
 For more information about compromised _connectors_ and how to remove them from the **Restricted entities** page, see [Remove blocked connectors from the Restricted entities page](connectors-remove-blocked.md).
 
 ## What do you need to know before you begin?
+
+Before you begin, make sure you have access to the required tools and permissions:
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Restricted users** page, use <https://security.microsoft.com/restrictedusers>.
 
@@ -86,7 +90,7 @@ For more information about compromised _connectors_ and how to remove them from 
 
    When you're finished on the **Unblock user page**, select **Submit**.
 
-6. Select **Yes** in the warning dialog that opens.
+6. A warning dialog confirms that you're about to remove the sending restriction for the selected user. If you verified that the account is secured, select **Yes** to confirm.
 
    > [!NOTE]
    > Under most circumstances, all restrictions should be removed from the user within one hour. Transient technical issues might cause a longer wait time, but the total wait should be no longer than 24 hours.
@@ -145,7 +149,8 @@ Remove-BlockedSenderAddress -SenderAddress <emailaddress>
 
 For detailed syntax and parameter information, see [Remove-BlockedSenderAddress](/powershell/module/exchangepowershell/remove-blockedsenderaddress).
 
-## More information
+<a name="more-information"></a>
+## Related content
 
 - [Troubleshoot outbound sending limits in Exchange Online](outbound-spam-sending-limits-troubleshoot.md)
 - [Responding to a compromised email account](responding-to-a-compromised-email-account.md)

@@ -9,11 +9,13 @@ ms.collection:
 ms.localizationpriority: medium
 description: Admins can learn about the available and preferred options to block inbound messages to Microsoft 365.
 ms.service: defender-office-365
-ms.date: 10/06/2025
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create sender blocklists for cloud mailboxes
@@ -30,7 +32,7 @@ The following list contains the available methods to block senders from most rec
 4. Exchange mail flow rules (also known as transport rules).
 5. The IP Block List in the default connection filter policy.
 
-The rest of this article contains specifics about each method.
+The following sections describe each method in more detail.
 
 > [!TIP]
 > Always submit messages in your blocklists to Microsoft for analysis. For instructions, see [Report questionable email to Microsoft](submissions-admin.md#report-questionable-email-to-microsoft). If the messages or message sources are determined to be harmful, Microsoft can automatically block the messages, and you don't need to manually maintain entries in your own blocklists.
@@ -71,10 +73,10 @@ The maximum limit for these lists is approximately 1,000 entries.
 
 Mail flow rules can also look for keywords or other properties in the unwanted messages.
 
-Regardless of the conditions or exceptions that you use to identify the messages, you configure the action to set the spam confidence level (SCL) of the message to 9, which marks the message as **High confidence spam**. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
-
 > [!IMPORTANT]
 > It's easy to create rules that block too many messages or that don't block enough messages. Use specific criteria that identify _only_ the messages you want to block. Also, be sure to [monitor the usage of the rule](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#monitor-rule-usage) to ensure everything works as expected.
+
+Regardless of the conditions or exceptions that you use to identify the messages, you configure the action to set the spam confidence level (SCL) of the message to 9, which marks the message as **High confidence spam**. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
 ## Use the IP Block List in the default connection filter policy
 
