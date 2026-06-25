@@ -2,7 +2,9 @@
 title: Investigate OAuth application attack paths in Defender for Cloud Apps
 description: Learn how to identify, analyze, and mitigate attack paths involving OAuth applications using Microsoft Defender for Cloud Apps and Security Exposure Management.
 ms.topic: how-to
-ms.date: 03/23/2025
+ms.date: 06/16/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Investigate OAuth application attack paths in Defender for Cloud Apps (Preview)
@@ -42,7 +44,7 @@ Alternatively, you can use one of the following **Entra ID roles**:
 
 ### Critical Asset Management - Service Principals
 
-Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth permissions. OAuth applications with these permissions are considered high-value assets. If compromised, an attacker can gain high privileges to SaaS applications. To reflect this risk, attack paths treat service principals with these permissions as target goals.
+Service principals are identities that Microsoft Entra ID assigns to applications so they can authenticate and access resources on behalf of the application rather than a user. Microsoft Defender for Cloud Apps defines a set of critical privilege OAuth permissions. OAuth applications with these permissions are considered high-value assets. If compromised, an attacker can gain high privileges to SaaS applications. To reflect this risk, attack paths treat service principals with these permissions as target goals.
 
 #### View permissions for critical assets
 
@@ -110,7 +112,7 @@ To get started:
 1. Click View blast radius to further investigate the choke point in the Attack Surface Map.
      :::image type="content" source="media/saas-securty-initiative/screenshot-of-the-view-blast-radius-button.png" alt-text="Screenshot showing the view blast radius button" lightbox="media/saas-securty-initiative/Screenshot-of-the-view-blast-radius-button.png":::
 
-If the choke point is an OAuth application, continue the investigation in Applications page, as described in steps 7–9 above.
+If the choke point is an OAuth application, continue the investigation by searching for the app by name in the **Applications** page, reviewing its assigned permissions and usage insights, and optionally disabling the app if appropriate.
 
 
 ## Analyze attack surface map and hunt with queries
@@ -121,9 +123,9 @@ In the [Attack surface map](/security-exposure-management/cross-workload-attack-
 
 - ExposureGraphNodes table (includes node properties like permissions)
 
-Use the following Advanced Hunting query to identify all OAuth applications with critical permissions:
+Use the following Advanced Hunting query to identify all OAuth applications with critical permissions. This query joins the `ExposureGraphNodes` and `ExposureGraphEdges` tables to find Microsoft Entra OAuth app registrations that can authenticate as service principals classified as critical (criticality level 0) and that hold permissions to Microsoft Graph. Use it to discover which OAuth apps in your tenant have high-privilege access and to prioritize them for review:
 
-```
+```kusto
 let RelevantNodes = ExposureGraphNodes
 | where NodeLabel == "Microsoft Entra OAuth App" or NodeLabel == "serviceprincipal"
 | project NodeId, NodeLabel, NodeName, NodeProperties;

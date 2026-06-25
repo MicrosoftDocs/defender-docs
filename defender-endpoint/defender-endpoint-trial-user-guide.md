@@ -4,7 +4,7 @@ description: Use this guide to get the most of your 90-day free trial. See how D
 author: limwainstein
 ms.author: lwainstein
 ms.topic: how-to
-ms.date: 06/19/2025
+ms.date: 06/16/2026
 ms.collection: 
 - m365-security
 - tier2
@@ -12,6 +12,8 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: 
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Trial user guide: Microsoft Defender for Endpoint
@@ -56,6 +58,8 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 
 ## Set up your trial
 
+Complete the following steps to set up your Defender for Endpoint trial:
+
 1. [Confirm your license state](#step-1-confirm-your-license-state).
 1. [Set up role-based access control and grant permissions to your security team](#step-2-set-up-role-based-access-control-and-grant-permissions-to-your-security-team).
 1. [Visit the Microsoft Defender portal](#step-3-visit-the-microsoft-365-defender-portal).
@@ -65,7 +69,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 
 ## Step 1: Confirm your license state
 
-To make sure your Defender for Endpoint subscription is properly provisioned, you can check your license state in either the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) or Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products)).
+To make sure your Defender for Endpoint subscription is properly provisioned, you can check your license state in either the [Microsoft 365 admin center](https://admin.microsoft.com) or [Microsoft Entra ID](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products).
 
 [Check your license state](production-deployment.md#check-your-license-state).
 
@@ -75,7 +79,7 @@ To make sure your Defender for Endpoint subscription is properly provisioned, yo
 > Starting February 16, 2025, new Microsoft Defender for Endpoint customers will only have access to the Unified Role-Based Access Control (URBAC).
 > Existing customers keep their current roles and permissions. For more information, see URBAC [Unified Role-Based Access Control (URBAC) for Microsoft Defender for Endpoint](/defender-xdr/manage-rbac)
 
-Microsoft recommends using the concept of least privileges. Defender for Endpoint uses built-in roles within Microsoft Entra ID. [Review the different roles that are available](/azure/active-directory/roles/permissions-reference) and choose appropriate roles for your security team. Some roles might need to be applied temporarily and removed after the trial is finished.
+Microsoft recommends using the concept of least privileges. Defender for Endpoint uses built-in roles within Microsoft Entra ID. Review the [Microsoft Entra built-in roles reference](/azure/active-directory/roles/permissions-reference) and choose appropriate roles for your security team. Some roles might need to be applied temporarily and removed after the trial is finished.
 
 Use [Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) to manage your roles to provide extra auditing, control, and access review for users with directory permissions.
 
@@ -89,35 +93,39 @@ Defender for Endpoint supports two ways to manage permissions:
 
 <a name='step-3-visit-the-microsoft-365-defender-portal'></a>
 
-## Step 3: Visit the Microsoft Defender portal
+<a name="step-3-visit-the-microsoft-defender-portal"></a>
 
-The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is where you can access your Defender for Endpoint capabilities.
+## Step 3: Sign in to the Microsoft Defender portal and review trial settings
+
+The [Microsoft Defender portal](https://security.microsoft.com) is where you can access your Defender for Endpoint capabilities.
 
 1. [Review what to expect](/defender-xdr/microsoft-365-defender-portal) in the Microsoft Defender portal.
 
-1. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 1. In the navigation pane, see the **Endpoints** section to access your capabilities. 
 
 ## Step 4: Onboard endpoints using any of the supported management tools 
 
-This section outlines the general steps you to onboard devices (endpoints).
+To onboard devices (endpoints), follow these general steps:
 
-1. [Watch this video](https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60) for a quick overview of the onboarding process and learn about the available tools and methods.
+1. [Watch the Defender for Endpoint onboarding overview video](https://learn-video.azurefd.net/vod/player?id=2524ee5d-6a5f-482c-8f69-dc3792577c60) for a quick overview of the onboarding process and learn about the available tools and methods.
 
 1. Review your [device onboarding tool options](onboarding.md) and select the most appropriate option for your environment. 
 
-## Step 5: Configure capabilities 
+<a name="step-5-configure-capabilities"></a>
+## Step 5: Configure Defender for Endpoint trial capabilities 
 
 After onboarding devices (endpoints), you'll configure the various capabilities, such as endpoint detection and response, next-generation protection, and attack surface reduction.
 
-Use [the device onboarding table](onboarding.md) to choose components to configure. We recommend configuring all available capabilities, but you're able to skip the ones that don't apply.
+Use the [device onboarding options](onboarding.md) to choose components to configure. We recommend configuring all available capabilities, but you're able to skip the ones that don't apply.
 
 After you have onboarded devices, [run a detection test](run-detection-test.md). 
 
-## Step 6: Visit the Microsoft Defender portal
+<a name="step-6-visit-the-microsoft-defender-portal"></a>
+## Step 6: Review alerts and device data in the Microsoft Defender portal
 
-The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is a central location where you can view onboarded devices, security recommendations, detected threats, alerts, and more. To get started, see [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal).   
+The [Microsoft Defender portal](https://security.microsoft.com) is a central location where you can view onboarded devices, security recommendations, detected threats, alerts, and more. To get started, see [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal).   
 
 > [!IMPORTANT]
 > If you decide not to renew your trial or purchase a subscription, make sure to offboard devices before your trial expires.

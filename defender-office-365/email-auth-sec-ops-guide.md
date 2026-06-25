@@ -7,20 +7,21 @@ ms.assetid:
 ms.collection:
   - m365-security
   - tier2
-ms.custom: TopSMBIssues
+ms.custom: TopSMBIssues, msecd-doc-authoring-1014
 ms.localizationpriority: medium
 description: Admins can learn about pass and fail scenarios for email authentication in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 10/08/2025
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Security Operations guide for email authentication in Microsoft 365
 
-[Email authentication](email-authentication-about.md) is a critical component of securing communication in your organization. When an email is received in Microsoft 365, the service adds an **Authentication-Results** header. This header shows the results of various email authentication checks, including SPF, DKIM, DMARC, and composite authentication (compauth).
+[Email authentication in Microsoft 365](email-authentication-about.md) is a critical component of securing communication in your organization. When an email is received in Microsoft 365, the service adds an **Authentication-Results** header. This header shows the results of various email authentication checks, including SPF, DKIM, DMARC, and composite authentication (compauth).
 
 This guide explains common scenarios you might encounter with these results:
 
@@ -28,15 +29,15 @@ This guide explains common scenarios you might encounter with these results:
 - Whether the email source or email destination is responsible for the result.
 - What actions (if any) we recommend for improving email authentication results.
 
-But first, a few definitions as described in the following table:
+But first, here are a few key definitions:
 
 |Acronym|Description|
 |---|---|
-|[SPF](email-authentication-spf-configure.md)|Sender Policy Framework. Identifies email sources for a domain to help prevent spoofing.|
-|[DKIM](email-authentication-dkim-configure.md)|DomainKeys Identified Mail. Digitally signs important elements of a message (including the From address header) to verify the message wasn't altered in transit, which helps prevent spoofing.|
-|[DMARC](email-authentication-dmarc-configure.md)|Domain-based Message Authentication, Reporting, and Conformance. Uses SPF and DKIM results to verify alignment between domains in the MAIL FROM address and From address to help prevent spoofing.|
-|[ARC](email-authentication-arc-configure.md)|Authenticated Received Chain. Preserve email authentication results across intermediaries that modify messages in transit.|
-|[compauth](email-authentication-about.md#composite-authentication)|Composite authentication. A proprietary Microsoft 365 technology that combines multiple email authentication signals.|
+|[Set up SPF](email-authentication-spf-configure.md)|Sender Policy Framework. Identifies email sources for a domain to help prevent spoofing.|
+|[Set up DKIM](email-authentication-dkim-configure.md)|DomainKeys Identified Mail. Digitally signs important elements of a message (including the From address header) to verify the message wasn't altered in transit, which helps prevent spoofing.|
+|[Use DMARC to validate email](email-authentication-dmarc-configure.md)|Domain-based Message Authentication, Reporting, and Conformance. Uses SPF and DKIM results to verify alignment between domains in the MAIL FROM address and From address to help prevent spoofing.|
+|[Configure trusted ARC sealers](email-authentication-arc-configure.md)|Authenticated Received Chain. Preserve email authentication results across intermediaries that modify messages in transit.|
+|[Composite authentication](email-authentication-about.md#composite-authentication)|Composite authentication. A proprietary Microsoft 365 technology that combines multiple email authentication signals.|
 |MAIL FROM address|Also known as the `5321.MailFrom` address, P1 sender, or envelope sender. Used in the transmission of messages between SMTP email servers. Typically recorded in the **Return-Path** header field in the message header. Used as the address for non-delivery reports (also known as NDRs or bounce messages).|
 |From address|Also known as the `5322.From` address or P2 sender. The email address in the **From** header field. Shown as the sender's email address in email clients.|
 
@@ -48,12 +49,16 @@ These scenarios describe messages that **passed email authentication checks** or
 
 ### All authentication checks passed
 
+This scenario applies when all standard email authentication checks pass successfully.
+
 - **Header example**: `dmarc=pass` (and typically `spf=pass` and `dkim=pass`).
 - **What it means**: All email authentication checks (SPF, DKIM, and DMARC) **succeeded**. This result indicates the message is fully authenticated according to standard email authentication protocols.
 - **Who's responsible**: The **sender**.
 - **Recommended action**: **None.** Email authentication is correctly configured and working as intended. The recipient can trust the sender domain properly authenticated this message.
 
 ### Composite authentication passed
+
+This scenario describes how Microsoft 365 composite authentication can accept a message as legitimate.
 
 - **Header example**: `compauth=pass` (composite authentication pass).
 - **What it means**: The message passed Microsoft 365 composite authentication:
@@ -68,12 +73,16 @@ These scenarios describe messages that **passed email authentication checks** or
 
 ### DMARC pass with no DMARC policy (no DMARC record)
 
+This scenario covers messages that appear to pass DMARC even though the sender's domain has no published DMARC record.
+
 - **Header example**: `dmarc=bestguesspass action=none`
 - **What it means**: The message passed DMARC **by default** because the sender's domain has **no published DMARC record**. When a domain has no DMARC policy, destination email servers can't fail the message on DMARC. Effectively, the DMARC check doesn't apply. `DMARC=bestguesspass action=none` means if the domain had a valid DMARC record, the DMARC check for the message would pass.
 - **Who's responsible**: The **sender**.
 - **Recommended action**: **The sender should publish a DMARC record** for their domain. Although the message was accepted, the absence of a DMARC policy isn't a good sign. We recommend that the domain owner sets up a DMARC TXT record to enforce a DMARC policy (`p=quarantine` or `p=reject`) for messages that fail DMARC validation. For more information, see [Syntax for DMARC TXT records](email-authentication-dmarc-configure.md#syntax-for-dmarc-txt-records).
 
 ### ARC-validated (complex routing scenarios)
+
+This scenario applies to messages accepted through ARC validation in forwarding or other complex mail routing paths.
 
 - **Header example**: `compauth=pass reason=130` (composite authentication passed due to ARC).
 - **What it means**: The message passed authentication due to an **Authenticated Received Chain (ARC)** override. This result typically occurs in complex mail routing or email forwarding scenarios. If an intermediate mail server modifies the message and causes SPF or DKIM to fail, a trusted ARC signature informs Microsoft 365 that the original authentication is valid. In this case, the system accepted the message based on the valid ARC chain, even though direct SPF or DKIM checks might fail.
@@ -85,14 +94,18 @@ These scenarios describe messages that **passed email authentication checks** or
 
 ### Message delivered due to allow entries for spoofed senders in the Tenant Allow/Block List
 
+This scenario explains why a message that fails authentication can still be delivered when the recipient organization explicitly allows the spoofed sender.
+
 - **What it means**: The message bypassed normal authentication failure actions because [allow entries for spoofed senders exist in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders). In Microsoft 365, an allow entry for spoofed senders can override failures. Even when email authentication checks normally fail, the message is allowed due to this explicit trust configuration.
 - **Header example**: `compauth=fail reason=000` (but an organization policy allowed the message: **Tenant Allow/Block List spoof allowed**).
-- **Who's responsible**: The **recipient**. Admins in the recipient's organization configured an allow entry for spoofing in the Tenant Allow/Block list for this specific [domain pair](tenant-allow-block-list-email-spoof-configure.md#domain-pair-syntax-for-spoofed-sender-entries). The **sender** should resolve authentication issues to avoid deliverability problems with *other* recipients.
+- **Who's responsible**: The **recipient**. Admins in the recipient's organization configured an allow entry for spoofing in the Tenant Allow/Block list for this specific [domain pair syntax for spoofed sender entries](tenant-allow-block-list-email-spoof-configure.md#domain-pair-syntax-for-spoofed-sender-entries). The **sender** should resolve authentication issues to avoid deliverability problems with *other* recipients.
 - **Recommended action**: Recipient administrators can check the **All Overrides** section on the [Email entity page](mdo-email-entity-page.md) to confirm whether a Tenant Allow/Block List override is involved. These messages contain **Allowed by organization policy: Tenant Allow/Block List spoof allowed.**
 
   Generally, **there's no immediate action** for these messages, since they're intentionally allowed. However, it's good practice for admins to **periodically review allow entries for spoofed senders** to ensure only necessary senders are allowed. Overusing the Tenant Allow/Block List allows delivery of (possibly malicious) messages that would normally fail authentication checks.
 
 ### Authenticated via PTR (reverse DNS) alignment
+
+This scenario describes fallback authentication where Microsoft 365 uses reverse DNS (PTR) information to validate the sender.
 
 - **Header example**: `compauth=pass` with codes like `reason=116` or `reason=111` to indicate PTR record use.
 - **What it means**: The message passed authentication **based on PTR (reverse DNS) validation** as a fallback. In some cases when SPF and DKIM checks don't yield a conclusive pass, Microsoft 365 can look at the sender's PTR record. If the sending server's IP address has a PTR record (reverse DNS) that matches the domain in the message's **From** address, the system might treat the message as authenticated.
@@ -107,6 +120,8 @@ These scenarios cover **failed authentication checks** or other conditions where
 
 ### DMARC Failed (Message Rejected or Quarantined)
 
+This scenario explains how to interpret a DMARC failure that results in the message being quarantined or rejected.
+
 - **Header example**: `dmarc=fail action=quarantine` (or `action=reject`); often accompanied by `compauth=fail` with a code (for example, `reason=000`, `reason=001`, or `reason=601`).
 - **What it means**: **DMARC validation failed** for the message. This result means:
   - SPF or DKIM didn't pass with alignment for the From address domain.
@@ -117,7 +132,7 @@ These scenarios cover **failed authentication checks** or other conditions where
 
   As a result, Microsoft 365 marked the message for the specified policy action: deliver to the Junk Email folder, quarantine, or reject.
 
-- **Who's responsible**: The **sender** or the **recipient**. The failure is due to the sender's domain not passing DMARC or the recipient's [complex mail routing configuration](mdo-integrate-security-service.md) that caused DMARC to fail.
+- **Who's responsible**: The **sender** or the **recipient**. The failure is due to the sender's domain not passing DMARC or the recipient's [complex mail routing configuration involving non-Microsoft security services](mdo-integrate-security-service.md) that caused DMARC to fail.
 
   While senders are responsible for correctly configuring SPF, DKIM, and DMARC for their domain, authentication failures can sometimes result from issues in the recipient's organization. For example:
 
@@ -140,6 +155,8 @@ These scenarios cover **failed authentication checks** or other conditions where
 
 ### SPF check failed
 
+This scenario helps you diagnose messages that fail SPF evaluation.
+
 - **Header example**: `spf=fail` or `spf=softfail`. Watch for `spf=temperror` indicating transient DNS issues or `spf=permerror` indicating SPF configuration issues.
 - **What it means**: One of the following possibilities:
   - The sending server's IP address is **not authorized** by the domain's SPF record, so SPF returned *fail*.
@@ -154,11 +171,13 @@ These scenarios cover **failed authentication checks** or other conditions where
     - Align the domains used in the MAIL FROM and From addresses.
     - Set up DKIM signing of outgoing messages using a domain that matches the From address domain. DMARC requires either SPF or DKIM validation, not both.
   - `spf=temperror` generally indicates the recipient had a problem resolving the SPF record (for example, transient DNS issues). The sender should verify the DNS servers for their domain are healthy and reachable. If the time-to-Live (TTL) value is too low and causes frequent timeouts, consider increasing the TTL to **at least one hour**.
-  - `spf=permerror` typically indicates an issue with the SPF record itself, including [requiring more than 10 DNS lookups](email-authentication-spf-configure.md#troubleshooting-spf-txt-records). Simplify the SPF record by removing unnecessary `include:` statements and correcting any syntax errors.
+  - `spf=permerror` typically indicates an issue with the SPF record itself, including [troubleshooting SPF records that require more than 10 DNS lookups](email-authentication-spf-configure.md#troubleshooting-spf-txt-records). Simplify the SPF record by removing unnecessary `include:` statements and correcting any syntax errors.
 
 Resolving SPF issues means messages are more likely to pass DMARC authentication. Recipients should notify senders about SPF failures and the recommend actions to fix the issues.
 
 ### DKIM Check Failed (No key for signature)
+
+This scenario covers DKIM failures caused by missing or mismatched public keys in DNS.
 
 - **Header example**: `dkim=fail` (no key for signature) if the public key was missing.
 - **What it means**: One of the following possibilities:
@@ -186,6 +205,8 @@ Once DKIM is properly configured and aligned, recipients see `dkim=pass` for you
 
 ### DKIM failed after modification (Signature didn't verify)
 
+This scenario explains DKIM failures caused by header changes after the message was signed.
+
 - **Header example**: `dkim=fail` (Signature didn't verify).
 - **What it means**: The message contained a **valid DKIM signature**, but the message failed DKIM verification because a header included in the DKIM signature was **modified in transit after being signed**. This modification typically occurs when an intermediary (for example, a mailing list, forwarding service, or security appliance) alters a signed header (for example, **Subject:**, **From:**, or **To:**) after the DKIM signature was originally applied. The `h=` value in the **DKIM-Signature** identifies the headers included in the original hash. Modifying any of these headers results in DKIM failure.
 - **Who's responsible**: The **sender** or the **intermediary** who altered the message headers. The original sender correctly DKIM signed the message, but an intermediary might be responsible for the broken DKIM signature.
@@ -194,6 +215,8 @@ Once DKIM is properly configured and aligned, recipients see `dkim=pass` for you
   - **Intermediaries**: Allow customers to configure your service as a [trusted ARC sealer](email-authentication-arc-configure.md) to override DKIM failures caused by message modification in transit.
 
 ### DKIM failed after modification (Body hash failed)
+
+This scenario covers DKIM failures caused by message body changes after signing.
 
 - **Header example**: `dkim=fail` (body hash fail).
 - **What it means**: The message contained a **valid DKIM signature**, but the message failed DKIM verification because the message body was **modified in transit after being signed**. This modification typically occurs when an intermediary (for example, a mailing list, forwarding service, or security appliance) alters the message body content after the DKIM signature was originally applied. The result is the hash calculated by the receiving email system doesn't match the hash in the DKIM signature, so DKIM check fails.
@@ -204,9 +227,10 @@ Once DKIM is properly configured and aligned, recipients see `dkim=pass` for you
     - Consider using Microsoft 365 to apply message modifications (footers, disclaimers, subject, etc.) instead of non-Microsoft services.
   - **Intermediaries**: Allow customers to configure your service as a [trusted ARC sealer](email-authentication-arc-configure.md) to override DKIM failures caused by message modification in transit.
 
-## Quick Reference Table
+<a name="quick-reference-table"></a>
+## Quick reference table for email authentication scenarios
 
-This section contains a simplified table that summarizes the scenarios, the recommended solutions, and links to relevant articles for further reading.
+The following table summarizes the email authentication scenarios, the recommended solutions, and links to relevant articles for further reading.
 
 **Sender** refers to admins of the sending domain. **Recipient** refers to the admins of the receiving organization.
 

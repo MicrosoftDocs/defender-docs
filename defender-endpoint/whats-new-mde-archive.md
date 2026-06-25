@@ -53,6 +53,8 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Defender Core service](microsoft-defender-core-service-overview.md) - GA. Microsoft Defender Core service helps with the stability and performance of Microsoft Defender Antivirus.
 
+- **(Windows)** Sense version 10.8798 - GA. Simplified and unified the update experience for Defender for Endpoint agents. This release is the first step toward enabling EDR updates through Microsoft Update, which allows EDR components to be delivered independently from OS updates on Windows 10 and Windows 11 devices. Added granular control for response actions during onboarding so you can define which actions are enabled or disabled. See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#windows--july-2025--platform-108798).
+
 ## May 2025
 
 - **(Android)** Alerts for activities related to open wireless connection and certificates are now detected as events. Starting May 19, 2025, connecting or disconnecting to open wireless networks and download/installation/removal of self-signed certificates appear as events in the Timeline tab instead of alerts. For more information, see [Network protection](android-configure.md#network-protection).

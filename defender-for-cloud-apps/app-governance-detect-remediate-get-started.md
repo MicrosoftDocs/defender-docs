@@ -4,6 +4,7 @@ ms.date: 08/31/2025
 ms.topic: overview
 description: Get started with app governance threat detection and remediation in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ms.reviewer: shragar456
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with app threat detection and remediation
@@ -23,7 +24,7 @@ To see all of the alerts, select the **Alerts** tab.
 
 ## Alerts page
 
-App governance alerts are now listed with all other Microsoft Defender XDR alerts. To find them, filter for "App governance" as the service source.
+App governance alerts are now listed with all other Microsoft Defender alerts. To find them, filter for "App governance" as the service source.
 
 For example:
 

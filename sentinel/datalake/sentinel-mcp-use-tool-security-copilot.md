@@ -6,9 +6,11 @@ ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 09/30/2025
+ms.date: 06/12/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security analyst, I want to add Sentinel MCP tools in Microsoft Security Copilot.
 ---
@@ -30,7 +32,7 @@ For information about how to get started with MCP tools, see the following artic
 To add a Microsoft Sentinel tool collection during custom agent building, follow these steps:
 
 1. Select **Add tool** to open the Tools catalog modal.
-1.	In the **Add a tool** modal, search for and select the tools you want to add from Microsoft Sentinel's collection of MCP tools. For example, search for "data exploration" to find the data exploration tool.
+1.	In the **Add a tool** modal, search for and select the tools you want to add from Microsoft Sentinel's collection of MCP tools. For example, search for "entity analyzer" to find the entity analyzer tools.
 1.	Select **Add selected** to add the tools to your agent.
 
 Your agent is now connected with Sentinel's available collection of tools. You can start prompting your agent and use the tools to deliver outcomes.
@@ -40,7 +42,7 @@ Your agent is now connected with Sentinel's available collection of tools. You c
 Custom MCP tools let you build deterministic workflows by prescribing exactly what data agents can reason over. To add your custom tool collection in Security Copilot, follow these steps:
 
 ### Step 1: Create a YAML file for your tool collection 
-Use the following YAML file template to create and save your plugin. Specify which tools from your custom tool collection you want to add.
+Use the following YAML file template to create and save your plugin. This YAML defines the collection descriptor for your custom plugin, including its metadata and connection settings. Replace each placeholder value (enclosed in angle brackets) with your collection-specific information, such as the collection name, endpoint URL, and the tools you want to add.
 
 ```yaml
 Descriptor:
@@ -71,7 +73,7 @@ For more information about all the parameters you can add and configure in your 
     :::image type="content" source="media/sentinel-mcp/custom-copilot-manage-sources.png" alt-text="Screenshot of the Manage sources window in Security Copilot with the Add plugin option highlighted." lightbox="media/sentinel-mcp/custom-copilot-manage-sources.png":::
 
 1. From the drop-down options, specify if you want to make the plugin available to just yourself or anyone in the organization. 
-1. Select **Security Copilot plugin**, choose the YAML file you created previously, then select **Add**.
+1. Select **Security Copilot plugin**, choose the YAML plugin file you created from the template in step 1 of this section, then select **Add**.
 
     :::image type="content" source="media/sentinel-mcp/custom-copilot-add-plugin.png" alt-text="Screenshot of Add plugin pop-up window in Security Copilot with Security Copilot plugin and Add options highlighted." lightbox="media/sentinel-mcp/custom-copilot-add-plugin.png":::
 
@@ -81,7 +83,7 @@ For more information about all the parameters you can add and configure in your 
 
 ### Step 3: Build an agent using the saved plugin
 1. In the Security Copilot portal, go to **Build** and select **Start from Scratch** or open an existing custom agent.
-1. In your agent skill, select **Add a tool** and find the custom plugin you saved previously.
+1. In your agent skill, select **Add a tool** and find the custom plugin you added in the **Custom** section in step 2.
 
     :::image type="content" source="media/sentinel-mcp/custom-copilot-add-tool.png" alt-text="Screenshot of Add a tool option in Security Copilot." lightbox="media/sentinel-mcp/custom-copilot-add-tool.png":::
 

@@ -1,5 +1,5 @@
 ---
-title: Alerts queue in Microsoft Defender XDR
+title: Alerts queue in Microsoft Defender
 ms.reviewer:
 description: View and manage the alerts surfaced in Microsoft Defender XDR
 keywords:

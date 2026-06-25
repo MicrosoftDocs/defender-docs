@@ -1,9 +1,9 @@
 ---
 title: Set up or edit your controlled folder access policy in Microsoft Defender for Business
-description: Get an overview of attack surface reduction capabilities in Microsoft Defender for Business
+description: Set up or edit a controlled folder access policy in Microsoft Intune to help protect Windows devices from ransomware in Microsoft Defender for Business.
 author: chrisda
 ms.author: chrisda
-ms.date: 06/07/2024
+ms.date: 06/11/2026
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
@@ -11,6 +11,8 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: efratka
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Set up or edit your controlled folder access policy in Microsoft Defender for Business

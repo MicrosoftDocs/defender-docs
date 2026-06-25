@@ -1,7 +1,7 @@
 ---
 title: Before you begin using the Microsoft Defender Experts for Hunting service
 ms.reviewer:
-description: To enable us to get started with the defender experts managed service, we require the following prerequisites
+description: Review the prerequisites for Microsoft Defender Experts for Hunting, including required licensing, onboarding, and setup steps before you begin using the service.
 ms.service: defender-experts-for-hunting
 ms.author: pauloliveria
 author: poliveria
@@ -12,10 +12,12 @@ ms.collection:
   - tier1
   - essentials-compliance
 ms.topic: how-to
-ms.custom: 
+ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ean
-ms.date: 09/18/2025
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Before you begin using Defender Experts for Hunting
@@ -24,7 +26,7 @@ ms.date: 09/18/2025
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender](microsoft-365-defender.md)
 
 [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) is a managed service that provides hunting capabilities for novel emerging threats that aren't yet well known in the industry. The analysts for the hunting service review trends in the threat actor evolution based on world-renowned Microsoft Threat Intelligence and Research. They then apply the insights they gather to hunt for emerging attack vectors within the customer ecosystem.
 
@@ -95,24 +97,24 @@ Defender Experts for Hunting customers are assigned 10 Ask Defender Experts cred
 
 Anyone from your organization can [apply for the Defender Experts for Hunting service](#apply-for-microsoft-defender-experts-for-hunting-service). However, you need to work with your Commercial Executive to transact the SKU.
 
-You might need certain roles and permissions to fully access the service capabilities. Refer to [Custom roles in role-based access control for Microsoft Defender XDR](custom-roles.md) for details.
+You might need certain roles and permissions to fully access the service capabilities. Refer to [Custom roles in role-based access control for Microsoft Defender](custom-roles.md) for details.
 
 ## Service availability and data protection
 
-Defender Experts for Hunting - XDR and Defender Experts for Hunting - Servers are managed threat hunting services that proactively hunt for threats across endpoints, email, identity, cloud apps, and servers. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender XDR advanced hunting data. Enrolling in this service means you're granting permission to Microsoft experts to access the said data.
+Defender Experts for Hunting - XDR and Defender Experts for Hunting - Servers are managed threat hunting services that proactively hunt for threats across endpoints, email, identity, cloud apps, and servers. To carry out hunting on your behalf, Microsoft experts need access to your Microsoft Defender advanced hunting data. Enrolling in this service means you're granting permission to Microsoft experts to access the said data.
 
 The following sections enumerate additional information about the service's data usage, compliance, and availability. For more information about Microsoft's commitment in valuing and protecting your data, visit the [Trust Center](https://www.microsoft.com/trust-center/product-overview) then scroll down to **Additional products and services** > **Managed Security Services** > **Microsoft Defender Experts**.
 
 ### Data collection, usage, and retention
 
-All data used for hunting from existing Defender services will continue to reside in the customer's original Microsoft Defender XDR service storage location. [Learn more](/microsoft-365/enterprise/o365-data-locations)
+All data used for hunting from existing Defender services will continue to reside in the customer's original Microsoft Defender service storage location. [Learn more](/microsoft-365/enterprise/o365-data-locations)
 
-Defender Experts for Hunting operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the EU region for customers whose Defender XDR data is in scope of European Union data boundary and in the US region for other customers, for the length of the service, irrespective of the Microsoft Defender XDR service storage location. Data generated for the reporting dashboard is stored in customer's Microsoft Defender XDR service storage location. Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
+Defender Experts for Hunting operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the EU region for customers whose Defender data is in scope of European Union data boundary and in the US region for other customers, for the length of the service, irrespective of the Microsoft Defender service storage location. Data generated for the reporting dashboard is stored in customer's Microsoft Defender service storage location. Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
 
-Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tables.md) in Microsoft Defender XDR advanced hunting tables. The data in these tables depend on the set of Defender services the customer is enabled for (for example, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
+Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tables.md) in Microsoft Defender advanced hunting tables. The data in these tables depend on the set of Defender services the customer is enabled for (for example, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
 
 > [!NOTE]
-> Microsoft Defender for Cloud is integrated with Microsoft Defender XDR. This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. The Defender Experts for Hunting - Servers add-on service accesses data through the Defender portal, so the same data collection, usage, and retention policies apply to this service.
+> Microsoft Defender for Cloud is integrated with Microsoft Defender. This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. The Defender Experts for Hunting - Servers add-on service accesses data through the Defender portal, so the same data collection, usage, and retention policies apply to this service.
 
 ### Security and compliance
 
@@ -135,6 +137,8 @@ You can apply for the Defender Experts for Hunting by performing the following s
 3. Select **Submit**. Someone from our sales team will reach out within five business days. 
 
 ### Next step
+
+Continue to the following article to start using Defender Experts for Hunting:
 
 - [Start using Defender Experts for Hunting](onboarding-defender-experts-for-hunting.md)
 

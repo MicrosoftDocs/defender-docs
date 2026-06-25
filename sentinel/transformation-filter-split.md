@@ -6,7 +6,9 @@ ms.author: edbaynash
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ms.topic: how-to
-ms.date: 03/26/2026
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to filter and split incoming data during ingestion so that I can reduce noise, optimize costs, and route data to the appropriate storage tier.
 
@@ -16,7 +18,7 @@ ms.date: 03/26/2026
 
 As security data volumes continue to grow, organizations face the challenge of balancing cost-effective retention of telemetry used for AI, compliance, and investigations while ensuring that only necessary data is retained in high-performance storage tiers. Use filter and split data transformations in Microsoft Sentinel to address this challenge by modifying data at ingestion time to optimize your data retention strategy.
 
-This article describes how to configure filter and split data transformations without the need to manually create custom Data Collection Rule (DCR) configurations. By tailoring data ingestion, these transformations improve performance and reduce noise.
+This article describes how to configure filter and split data transformations without the need to manually create custom Data Collection Rule (DCR) configurations. By tailoring data ingestion, filter and split data transformations improve performance and reduce noise.
 
 By using data transformations, you can optimize your security data pipeline by controlling what data is stored and in which tier. Using filter and split transformations provides the following benefits:
 
@@ -24,9 +26,9 @@ By using data transformations, you can optimize your security data pipeline by c
 
 - **Improved SOC efficiency**: Focus your security operations center (SOC) on actionable, high-value events. By removing noise at ingestion time, analysts spend less time sifting through irrelevant logs and more time investigating real threats.
 
-- **Faster query performance**: Smaller datasets in the Analytics tier result in faster query execution times. This improvement makes your threat hunting, incident investigations, and analytics rules more responsive.
+- **Faster query performance**: Smaller datasets in the Analytics tier result in faster query execution times, making your threat hunting, incident investigations, and analytics rules more responsive.
 
-- **Compliance and retention flexibility**: Maintain comprehensive data retention for regulatory audits and forensic analysis in the Data lake tier while optimizing the Analytics tier for operational workloads. This approach satisfies compliance requirements without sacrificing performance.
+- **Compliance and retention flexibility**: Maintain comprehensive data retention for regulatory audits and forensic analysis in the Data lake tier while optimizing the Analytics tier for operational workloads. Maintaining comprehensive retention in the Data lake tier while optimizing the Analytics tier satisfies compliance requirements without sacrificing performance.
 
 - **Scalable data management**: As your organization's data volumes grow, transformations help you maintain control over costs and performance. Apply consistent policies across tables to ensure predictable data management.
 
@@ -74,7 +76,7 @@ Your enterprise relies on firewall logs to identify anomalies. Most firewall log
 Split transformations enable you to route data between the Analytics tier and the Data lake tier based on specified conditions. Use a split transformation rule to define a KQL expression that determines which data lands in Analytics. Data that doesn't match the expression is routed to the Data lake tier only.
 
 > [!NOTE]
-> When you configure a split transformation, data designated for the Analytics tier is also mirrored to the Data lake tier. Data that doesn't match the Analytics criteria goes to the Data lake tier only. This configuration ensures that all your data remains available in the Data lake for long-term retention and compliance purposes.
+> When you configure a split transformation, data designated for the Analytics tier is also mirrored to the Data lake tier. Data that doesn't match the Analytics criteria goes to the Data lake tier only. Mirroring Analytics-tier data to the Data lake while sending nonmatching data only to the Data lake ensures that all your data remains available in the Data lake for long-term retention and compliance purposes.
 
 Use split transformations when you need to balance cost and performance by routing data to the appropriate storage tier:
 
@@ -133,7 +135,7 @@ Follow these steps to create a split transformation rule:
 1. Verify that the split rule is applied by checking the **Transformation Rules** column for the table. The column displays **Split** when a split rule is active.
 
 > [!NOTE]
-> The split data ingested into the Data lake tier goes into a separate table with the same name as the original table but with an "_SPLT" suffix. For example, if you apply a split rule to the "FirewallLogs" table, the data routed to the Data lake tier is ingested into a separate "FirewallLogs_SPLT" table. This setup lets you manage retention and access policies separately for Analytics and Data lake tiers.
+> The split data ingested into the Data lake tier goes into a separate table with the same name as the original table but with an "_SPLT" suffix. For example, if you apply a split rule to the "FirewallLogs" table, the data routed to the Data lake tier is ingested into a separate "FirewallLogs_SPLT" table. Using a separate _SPLT table for Data lake data lets you manage retention and access policies separately for Analytics and Data lake tiers.
 
 :::image type="content" source="media/transformation-filter-split/split-rule.png" alt-text="Screenshot showing the split rule applied in the table list in Microsoft Sentinel." lightbox="media/transformation-filter-split/split-rule.png":::
 
@@ -156,7 +158,7 @@ Alternatively, select the original table and configure both Analytics and Data l
 
 To manage existing rules, select the table and then select either **Split rule** or **Filter rule** depending on the rule type you want to manage.
 + To disable a rule, select the **Rule status** switch to turn off the rule, and then select **Save**.
-+ Delete a rule by selecting **Delete**.
++ To delete a rule, select **Delete**. Deleting a transformation rule immediately stops data processing for that rule and can affect active ingestion.
 
 Verify rules by running KQL queries to confirm that data is ingested correctly and routed to the correct tier.
 

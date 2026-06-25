@@ -1,12 +1,16 @@
 ---
-title: SaaS Security Initiative
+title: SaaS Security Initiative in Microsoft Defender XDR
 description: Learn how to use the SaaS Security Initiative in Microsoft Defender XDR.
 ms.topic: how-to
-ms.date: 05/15/2025
+ms.date: 06/16/2026
 ms.reviewer: iidogGedanken
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# SaaS Security Initiative 
+# Use the SaaS Security Initiative in Defender for Cloud Apps
+
+## Overview of the SaaS Security Initiative
 
 The SaaS Security Initiative provides a centralized place for software as a service (SaaS) security best practices, so that organizations can manage and prioritize security recommendations effectively. By focusing on the most impactful metrics, organizations can enhance their SaaS security posture.
 
@@ -14,14 +18,20 @@ The SaaS Security Initiative serves as the main hub for SaaS security posture ma
 
 ## How to use the SaaS Security Initiative
 
+Watch the following video for an overview of how to use the SaaS Security Initiative.
+
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=352cf722-69b2-45c1-932e-0ca32ef40fa0]
 
 ## Prerequisites
+
+Before you view SaaS Security Initiative recommendations, ensure that the following prerequisites are met:
 
 - Your organization must have Microsoft Defender for Cloud Apps licenses.
 - The app for which you want to view security recommendations must be connected to Defender for Cloud Apps. For information about connecting and about which of the app connectors provide security recommendations, see [Connect apps to get visibility and control with Microsoft Defender for Cloud Apps](enable-instant-visibility-protection-and-governance-actions-for-your-apps.md).
 
 ## View SaaS Security Initiative recommendations
+
+To view SaaS Security Initiative recommendations, perform the following steps:
 
 1. In Microsoft Defender XDR, go to **Exposure Management** and select **Initiatives**.
 1. Select the  **SaaS Security** initiative, and then select **Open Initiative Page**.
@@ -36,7 +46,10 @@ To effectively monitor progress, set a **target score** value for your organizat
 
 For instance, to gain visibility into all best-practice recommendations that pertain to privileged access within SaaS applications, select the metric labeled **Missing Best Practices to Secure Privileged Access in SaaS Apps**. You can then select any of the **Non-Compliant** recommendations to access the associated remediation steps.
 
-## Additional information
+<a name="additional-information"></a>
+## Related resources for SaaS Security Initiative
+
+The following information can help you interpret and extend the initiative results:
 
 - Each metric includes a list of associated app connectors. The list encourages organizations to enable more connectors for enhanced visibility. If you're interested in recommendations for specific applications, go to the **Security recommendations** tab and filter by the relevant application.
 - To learn more about Microsoft Security Exposure Management initiatives, see [Review security initiatives](/security-exposure-management/initiatives).

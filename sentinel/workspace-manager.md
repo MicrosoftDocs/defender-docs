@@ -4,10 +4,11 @@ description: Learn how to centrally manage multiple Microsoft Sentinel workspace
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 10/17/2024
-ms.custom: template-how-to
+ms.date: 06/15/2026
+ms.custom: template-how-to, msecd-doc-authoring-1014
 appliesto:
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
 
 
 #Customer intent: As a Managed Security Services Provider (MSSP) or global enterprise, I want to centrally manage multiple security workspaces so that I can efficiently operate at scale across one or more Azure tenants.
@@ -39,7 +40,8 @@ If you onboard Microsoft Sentinel to the Microsoft Defender portal, see [Microso
 - Enable Azure Lighthouse if you're managing workspaces across multiple Microsoft Entra tenants. To learn more, see [Manage Microsoft Sentinel workspaces at scale](/azure/lighthouse/how-to/manage-sentinel-workspaces).
 
 
-## Considerations
+<a name="considerations"></a>
+## Workspace manager considerations
 Configure a central workspace to be the environment where you consolidate content items and configurations to be published at scale to member workspaces. Create a new Microsoft Sentinel workspace or utilize an existing one to serve as the central workspace.
 
 Depending on your scenario, consider these architectures:
@@ -91,7 +93,8 @@ Workspace manager groups allow you to organize workspaces together based on busi
 1. Filter the content as needed before you **Review + create**.
 1. Once created, the **Group count** increases and your groups are reflected in the **Groups tab**.
 
-## Publish the Group definition
+<a name="publish-the-group-definition"></a>
+## Publish the group definition
 At this point, the content items selected haven't been published to the member workspace(s) yet.
 
 > [!NOTE]
@@ -128,13 +131,16 @@ Common reasons for failure include:
 - A member workspace has been deleted.
 
 ### Known limitations
+Be aware of the following limitations when using workspace manager:
+
 - The maximum published operations per group is 2000. *Published operations* = (*member workspaces*) * (*content items*).<br>For example, if you have 10 member workspaces in a group and you publish 20 content items in that group,<br>*published operations* = *10* * *20* = *200*.
 - Playbooks attributed or attached to analytics and automation rules aren't currently supported.
 - Workbooks stored in bring-your-own-storage aren't currently supported.
 - Workspace manager only manages content items published from the central workspace. It doesn't manage content created locally from member workspace(s).
 - Currently, deleting content residing in member workspace(s) centrally via workspace manager isn't supported.
 
-### API references
+<a name="api-references"></a>
+### API reference
 - [Workspace Manager Assignment Jobs](/rest/api/securityinsights/workspace-manager-assignment-jobs)
 - [Workspace Manager Assignments](/rest/api/securityinsights/workspace-manager-assignments)
 - [Workspace Manager Configurations](/rest/api/securityinsights/workspace-manager-configurations)

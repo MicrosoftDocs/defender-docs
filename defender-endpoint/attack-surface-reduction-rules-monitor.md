@@ -4,10 +4,10 @@ description: Learn how to monitor attack surface reduction (ASR) rule events usi
 ms.service: defender-endpoint
 ms.subservice: asr
 ms.localizationpriority: medium
-author: limwainstein
-ms.author: lwainstein
+author: chrisda
+ms.author: chrisda
 ms.reviewer: sugamar, yongrhee
-ms.custom: asr, msecd-doc-authoring-1012
+ms.custom: asr, msecd-doc-authoring-1014
 ms.topic: how-to
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 - highpri
 - tier1
 - mde-asr
-ms.date: 05/04/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to monitor ASR rule events so I can identify false positives and maintain effective threat protection.
 appliesto:
@@ -25,9 +25,10 @@ appliesto:
 
 # Monitor attack surface reduction (ASR) rule activity
 
-A critical part of any deployment of attack surface reduction (ASR) rules is monitoring the effect of rules on devices. This article describes the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
+A critical part of any deployment of attack surface reduction (ASR) rules is monitoring the effect of rules on devices. The following sections describe the available methods to view ASR rule events in your Microsoft Defender for Endpoint organization. For more information about ASR rules, see [Attack surface reduction (ASR) rules overview](attack-surface-reduction-rules-overview.md).
 
-## ASR rules report
+<a name="asr-rules-report"></a>
+## View the ASR rules report
 
 > [!NOTE]
 > This feature requires Microsoft Defender for Endpoint Plan 2 or Microsoft Defender for Business.
@@ -36,7 +37,8 @@ For complete information, see [Attack surface reduction rules report in the Micr
 
 <a name='asr-rules-advanced-hunting'></a>
 
-## ASR rule events in Advanced Hunting
+<a name="asr-rule-events-in-advanced-hunting"></a>
+## Query ASR rule events in Advanced Hunting
 
 > [!NOTE]
 > This feature requires Microsoft Defender for Endpoint Plan 2.
@@ -62,7 +64,7 @@ DeviceEvents
 
 :::image type="content" source="media/advanced-hunting-attack-surface-reduction-rules-query.png" alt-text="Screenshot of the Advanced hunting page in the Microsoft Defender portal with the example DeviceEvents query results." lightbox="media/advanced-hunting-attack-surface-reduction-rules-query.png":::
 
-To focus on a specific rule and get details on the actual files and processes involved, change the filter for `ActionType` and replace the `summarize` line with a `project` line that contains the fields you want to see as shown in the following example:
+To focus on a specific rule and get details on the actual files and processes involved, change the filter for `ActionType` and replace the `summarize` line with a `project` line that contains the fields you want to see. The following query filters for Office child-process ASR events and extracts the corresponding `RuleId` from `AdditionalFields` to help troubleshoot rule behavior:
 
 ```kusto
 DeviceEvents
@@ -77,7 +79,8 @@ For more information about hunting options, see [Demystifying attack surface red
 
 <a name="microsoft-defender-for-endpoint-machine-timeline"></a>
 
-## ASR events in the device timeline
+<a name="asr-events-in-the-device-timeline"></a>
+## View ASR events in the device timeline
 
 > [!NOTE]
 > This feature requires Microsoft Defender for Endpoint Plan 2 or Microsoft Defender for Business.
@@ -97,7 +100,8 @@ To open the device timeline of a device in the Microsoft Defender portal, comple
 
 <a name="how-to-troubleshoot-attack-surface-reduction-rules"></a>
 
-## ASR events in Windows Event Viewer
+<a name="asr-events-in-windows-event-viewer"></a>
+## View ASR events in Windows Event Viewer
 
 For complete information, see [Attack surface reduction events in Windows Event Viewer](attack-surface-reduction-windows-events.md).
 

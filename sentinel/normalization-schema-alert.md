@@ -34,7 +34,7 @@ For the list of the Alert parsers Microsoft Sentinel provides out-of-the-box, re
 
 ### Add Your Own Normalized Parsers
 
-When [developing custom parsers](normalization-develop-parsers.md) for the Alert information model, name your KQL functions using the following syntax:
+When [developing custom parsers](isv/normalization-develop-parsers.md) for the Alert information model, name your KQL functions using the following syntax:
 - `vimAlertEvent<vendor><Product>` for parameterized parsers
 - `ASimAlertEvent<vendor><Product>` for regular parsers
 

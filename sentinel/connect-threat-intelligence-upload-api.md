@@ -7,12 +7,13 @@ ms.author: pauloliveria
 author: poliveria  
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 3/14/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #Customer intent: As a security admin, I want to connect my threat intelligence platform with Microsoft Sentinel using the appropriate API so that I can centralize and enhance threat detection and response capabilities.
 ---
 
@@ -41,7 +42,7 @@ For more information about threat intelligence, see [Threat intelligence](unders
 
 ## Instructions
 
-Follow these steps to import threat intelligence STIX objects to Microsoft Sentinel from your integrated TIP or custom threat intelligence solution:
+Follow these steps to import STIX objects from your TIP or custom solution into Microsoft Sentinel:
 
 1. Register a Microsoft Entra application, and then record its application ID.
 1. Generate and record a client secret for your Microsoft Entra application.
@@ -96,6 +97,6 @@ Enter these values in the configuration of your integrated TIP or custom solutio
 
 In this article, you learned how to connect your TIP to Microsoft Sentinel. To learn more about using threat intelligence in Microsoft Sentinel, see the following articles:
 
-- [Understand threat intelligence](understand-threat-intelligence.md).
+- [Understand threat intelligence](understand-threat-intelligence.md)
 - [Work with threat indicators](work-with-threat-indicators.md) throughout the Microsoft Sentinel experience.
-- Get started detecting threats with [built-in](detect-threats-built-in.md) or [custom](detect-threats-custom.md) analytics rules in Microsoft Sentinel.
+- Get started detecting threats with [built-in analytics rules](detect-threats-built-in.md) or [custom analytics rules](detect-threats-custom.md) in Microsoft Sentinel.

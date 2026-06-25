@@ -20,7 +20,7 @@ ms.date: 05/18/2026
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender](microsoft-365-defender.md)
 
 The following section lists down questions you or your SOC team might have regarding Microsoft Defender Experts coverage for servers and cloud workloads.
 

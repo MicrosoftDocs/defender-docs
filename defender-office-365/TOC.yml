@@ -384,7 +384,7 @@
          href: campaigns.md
        - name: Report suspicious messages and files
          items:
-         - name: Report suspicious email or files to Microsoft
+         - name: Report suspicious email, Teams messages, or files to Microsoft
            href: submissions-report-messages-files-to-microsoft.md
          - name: Admin submissions
            href: submissions-admin.md
@@ -566,8 +566,6 @@
           href: step-by-step-guides/how-to-setup-attack-simulation-training-for-automated-attacks-and-training.md
         - name: Optimize and correct threat policies with configuration analyzer
           href: step-by-step-guides/optimize-and-correct-security-policies-with-configuration-analyzer.md
-        - name: Protect your c-suite with priority account protection
-          href: step-by-step-guides/protect-your-c-suite-with-priority-account-protection.md
         - name: Search for emails and remediate threats using Threat Explorer in Microsoft Defender XDR
           href: step-by-step-guides/search-for-emails-and-remediate-threats.md
         - name: How to prioritize and manage Automated Investigations and Response (AIR)

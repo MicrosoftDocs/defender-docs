@@ -9,6 +9,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - sfi-image-nochange
 description: Admins can learn how Attack simulation training in the Microsoft Defender portal affects users and can gain insights from simulation and training outcomes.
 ms.date: 04/23/2026
 appliesto:
@@ -146,7 +147,7 @@ The **Training efficacy** tab is selected by default on the **Attack simulation 
 
 The chart shows the **Actual compromised rate** and the **Predicted compromise rate**. If you hover over a section in the chart, the actual percentage values for are shown.
 
-The details table below the chart shows the following information. You can sort the simulations by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The details table below the chart shows the following information. You can sort the simulations by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Simulation name**
 - **Simulation technique**
@@ -156,9 +157,9 @@ The details table below the chart shows the following information. You can sort 
 - **Total users targeted**
 - **Count of clicked users**
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by **Simulation name** or **Simulation Technique**. Wildcards aren't supported.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to filter the results by **Simulation name** or **Simulation Technique**. Wildcards aren't supported.
 
-Use the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
+Use the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
 
 ### User coverage tab for the Attack simulation report
 
@@ -166,7 +167,7 @@ On the **User coverage** tab, the chart shows the **Simulated users** and **Non-
 
 :::image type="content" source="media/attack-sim-report-user-coverage-view.png" alt-text="The User coverage tab in the Attack simulation report in the Microsoft Defender portal." lightbox="media/attack-sim-report-user-coverage-view.png":::
 
-The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Username**
 - **Email address**
@@ -176,9 +177,9 @@ The details table below the chart shows the following information. You can sort 
 - **Count of clicked**
 - **Count of compromised**
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by **Username** or **Email address**. Wildcards aren't supported.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to filter the results by **Username** or **Email address**. Wildcards aren't supported.
 
-Use the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
+Use the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
 
 ### Training completion tab for the Attack simulation report
 
@@ -186,7 +187,7 @@ On the **Training completion** tab, the chart shows the number of **Completed**,
 
 :::image type="content" source="media/attack-sim-report-training-completion-view.png" alt-text="The Training completion tab in the Attack simulation report in the Microsoft Defender portal." lightbox="media/attack-sim-report-training-completion-view.png":::
 
-The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Username**
 - **Email address**
@@ -197,13 +198,13 @@ The details table below the chart shows the following information. You can sort 
 - **Date completed**
 - **All trainings**
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the chart and details table by a **Status** values of the trainings: **Completed**, **In progress**, or **All**.
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to filter the chart and details table by a **Status** values of the trainings: **Completed**, **In progress**, or **All**.
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by **Username** or **Email address**. Wildcards aren't supported.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to filter the results by **Username** or **Email address**. Wildcards aren't supported.
 
-If you select the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button, report generation progress is shown as a percentage of complete. In the dialog that opens, you can choose to open the .csv file, save the .csv file, and remember the selection.
+If you select the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export report** button, report generation progress is shown as a percentage of complete. In the dialog that opens, you can choose to open the .csv file, save the .csv file, and remember the selection.
 
 ### Repeat offenders tab for the Attack simulation report
 
@@ -215,7 +216,7 @@ On the **Repeat offenders** tab, the chart shows the number of **Repeat offender
 
 If you hover over a data point in the chart, the actual values are shown.
 
-The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **User**: Name of the user.
 - **Simulation types**: Type of simulations where the user was involved.
@@ -234,18 +235,18 @@ The details table below the chart shows the following information. You can sort 
 - **Last training assigned**
 - **Last training status**
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the chart and details table by one or more simulation type values:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to filter the chart and details table by one or more simulation type values:
 
 - **Credential Harvest**
 - **Malware Attachment**
 - **Link in Attachment**
 - **Link to Malware**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by any of the column values. Wildcards aren't supported.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to filter the results by any of the column values. Wildcards aren't supported.
 
-Use the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
+Use the :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
 
 > [!TIP]
 > If the **Department** property in Microsoft Entra ID is populated for users, you can export the information from this report to identify departments that were most vulnerable to completed phishing simulations.
@@ -262,7 +263,7 @@ The simulation report shows the details of in-progress or completed simulations 
 
   - On the **Training** tab of the **Attack simulation training** page at <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>, select the training campaign using either of the following methods:
   - Click anywhere in the row other than the check box next to the name.
-  - Select the check box next to the name, and then select :::image type="icon" source="media/m365-cc-sc-eye-icon.png" border="false"::: **View report**.
+  - Select the check box next to the name, and then select :::image type="icon" source="media/defender-portal-icon-eye.png" border="false"::: **View report**.
 
   For more information, see [View Training campaign reports](attack-simulation-training-training-campaigns.md#view-training-campaign-reports).
 

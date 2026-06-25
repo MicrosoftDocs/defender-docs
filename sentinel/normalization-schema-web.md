@@ -204,12 +204,11 @@ The following are the changes in version 0.2.6 of the schema:
 The following are the changes in version 0.2.7 of the schema:
 - Added the fields `HttpCookie`, `HttpIsProxied`, `HttpRequestBodyBytes`, `HttpRequestCacheControl`, `HttpRequestHeaderCount`, `HttpResponseBodyBytes`, `HttpResponseCacheControl`, `HttpResponseExpires`, and `HttpResponseHeaderCount`.
 
-## Next steps
 
-For more information, see:
+### Related content
 
-- Watch the [ASIM Webinar](https://www.youtube.com/watch?v=WoGD-JeC7ng) or review the [slides](https://1drv.ms/b/s!AnEPjr8tHcNmjDY1cro08Fk3KUj-?e=murYHG)
 - [Advanced Security Information Model (ASIM) overview](normalization.md)
 - [Advanced Security Information Model (ASIM) schemas](normalization-about-schemas.md)
 - [Advanced Security Information Model (ASIM) parsers](normalization-parsers-overview.md)
 - [Advanced Security Information Model (ASIM) content](normalization-content.md)
+- [Azure Sentinel Webinar: The Information Model-Understanding Normalization in Azure Sentinel](https://www.youtube.com/watch?v=WoGD-JeC7ng)

@@ -6,9 +6,11 @@ ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 02/16/2026
+ms.date: 06/12/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security analyst, I want to build Azure Logic Apps using Microsoft Sentinel MCP tools.
 ---
@@ -24,7 +26,10 @@ The entity analyzer tool, built on Microsoft Sentinel data lake data, offers a s
 
 ## Prerequisites to building a logic app
 
-If you're new to using logic apps, see [Automate Threat Response with Playbooks in Microsoft Sentinel](../automation/automate-responses-with-playbooks.md) to get started with building them before proceeding to adding the entity analyzer tool.
+Before you begin, make sure you meet the following requirements:
+
+- If you're new to using logic apps, see [Automate Threat Response with Playbooks in Microsoft Sentinel](../automation/automate-responses-with-playbooks.md) to get started with building them before proceeding to adding the entity analyzer tool.
+- The logic app's identity requires the **Security reader** role to operate the entity analyzer connector.
 
 
 ## Add entity analyzer tool to a logic app
@@ -70,7 +75,7 @@ To add the entity analyzer tool by using an existing logic app:
 1. Select **Add a new action** and then search for **New Action**. 
 1. Search for `entity analyzer` and choose the action listed under **Microsoft Sentinel MCP tools connector**.
 
-    ![Screenshot of entity analyzer as listed under Microsoft Sentinel MCP tools connector.](media/sentinel-mcp/logic-app-existing.png)
+    ![Screenshot of the Microsoft Sentinel MCP tools connector showing the Entity Analyzer action in the available actions list.](media/sentinel-mcp/logic-app-existing.png)
 
 1. Provide the following required information: 
     - **Workspace ID** - Microsoft Sentinel data lake workspace ID (GUID) 
@@ -103,11 +108,11 @@ Every logic app connector requires an authentication connection. This new action
 
 ## Additional information
 
-Running multiple instances of the entity analyzer at the same time can increase latency for each run. This issue is especially important when you use a **For each** loop in your entity analyzer logic apps, because it can queue multiple analyses at once (for example, multiple users in an incident, multiple incidents triggered at once). 
+Running multiple instances of the entity analyzer at the same time can increase latency for each run. This latency increase is especially important to consider when you use a **For each** loop in your entity analyzer logic apps, because it can queue multiple analyses at once (for example, multiple users in an incident, multiple incidents triggered at once). 
 
-To prevent timeouts from too many analyses running at once and to avoid hitting the entity analyzer's [preview thresholds](sentinel-mcp-billing.md#microsoft-sentinel-entity-analyzer-tool-1), turn on the **Concurrency control** in the **For each** action. Start by setting the **Degree of parallelism** to `5` and then adjust it as needed based on how often the logic app is triggered in your organization. 
+To prevent timeouts from too many analyses running at once and to avoid exceeding the [rate and usage limits that apply](sentinel-mcp-billing.md#microsoft-sentinel-entity-analyzer-tool-1), turn on the **Concurrency control** in the **For each** action. Start by setting the **Degree of parallelism** to `5` and then adjust it as needed based on how often the logic app is triggered in your organization. 
 
-:::image type="content" source="media/sentinel-mcp/logic-app-concurrency.png" alt-text="Screenshot of the logic app loop settings." lightbox="media/sentinel-mcp/logic-app-concurrency.png":::
+:::image type="content" source="media/sentinel-mcp/logic-app-concurrency.png" alt-text="Screenshot of the Logic Apps For each loop settings with Concurrency control enabled and Degree of parallelism set to 5." lightbox="media/sentinel-mcp/logic-app-concurrency.png":::
 
 For more information about loops, see [Add loops to repeat actions in workflows for Azure Logic Apps](/azure/logic-apps/logic-apps-control-flow-loops).
 

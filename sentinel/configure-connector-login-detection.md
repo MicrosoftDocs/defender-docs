@@ -5,7 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 02/24/2023
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to enable the detection of anomalous RDP logins, so that analysts can identify and respond to the resulting potential security threats in my network.
 
@@ -13,7 +15,7 @@ ms.date: 02/24/2023
 
 # Configure the Security Events or Windows Security Events connector for anomalous RDP login detection
 
-Microsoft Sentinel can apply machine learning (ML) to Security events data to identify anomalous Remote Desktop Protocol (RDP) login activity. Scenarios include:
+Microsoft Sentinel can apply machine learning (ML) to Security events data to identify anomalous Remote Desktop Protocol (RDP) login activity. This article explains how to configure the Security Events or Windows Security Events data connector to enable anomalous RDP login detection. Scenarios include:
 
 - **Unusual IP** - the IP address has rarely or never been observed in the last 30 days
 
@@ -28,7 +30,9 @@ Microsoft Sentinel can apply machine learning (ML) to Security events data to id
 
 ## Configure anomalous RDP login detection
 
-1. You must be collecting RDP login data (Event ID 4624) through the **Security events** or **Windows Security Events** data connectors. Make sure you have selected an [event set](windows-security-event-id-reference.md) besides "None", or created a data collection rule that includes this event ID, to stream into Microsoft Sentinel.
+To enable anomalous RDP login detection in Microsoft Sentinel, perform the following steps:
+
+1. You must be collecting RDP login data (Event ID 4624) through the **Security events** or **Windows Security Events** data connectors. Make sure you have selected a [Windows security event set](windows-security-event-id-reference.md) besides "None", or created a data collection rule that includes this event ID, to stream into Microsoft Sentinel.
 
 1. From the Microsoft Sentinel portal, select **Analytics**, and then select the **Rule templates** tab. Choose the **(Preview) Anomalous RDP Login Detection** rule, and move the **Status** slider to **Enabled**.
 

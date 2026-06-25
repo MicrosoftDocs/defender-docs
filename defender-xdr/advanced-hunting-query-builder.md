@@ -10,13 +10,15 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 03/28/2025
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Build hunting queries using guided mode in Microsoft Defender
@@ -35,19 +37,20 @@ You can watch this video to get an overview of guided hunting:
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=782ffe97-7528-4bbc-b13a-2fd209dd6d87]
 
-## Open Query in builder
+<a name="open-query-in-builder"></a>
+## Open a query in Query Builder
 
 In the **Advanced hunting** page, select **Create new** to open a new query tab and select **Query in builder**.
 
-![Screenshot of guided mode query builder](media/advanced-hunting-query-builder/01-open-query-builder.png)
+![Screenshot of the advanced hunting page with the Query in builder option selected to open guided mode](media/advanced-hunting-query-builder/01-open-query-builder.png)
 
-This brings you to the guided mode, where you can then construct your query by selecting different components using dropdown menus.
+Selecting **Query in builder** opens guided mode, where you can construct your query by selecting different components from dropdown menus.
 
 ## Specify the data domain to hunt in
 
 You can control the scope of the hunt by selecting which domain the query covers:
 
-![Screenshot of guided mode query builder domains dropdown](media/advanced-hunting-query-builder/02-specify-domain.png)
+![Screenshot of the guided mode query builder with the data domain dropdown open for selecting a hunting scope](media/advanced-hunting-query-builder/02-specify-domain.png)
 
 Selecting **All** includes data from all domains you currently have access to. Narrowing down to a specific domain allows filters relevant to that domain only.
 
@@ -64,11 +67,11 @@ You can choose from:
 
 By default, guided hunting includes a few basic filters to get you started fast.
 
-![Screenshot of guided mode query builder basic filter set](media/advanced-hunting-query-builder/03-use-basic-filters.png)
+![Screenshot of the guided mode query builder showing the default basic filters available for defining a query](media/advanced-hunting-query-builder/03-use-basic-filters.png)
 
 When you choose one data source, for instance, **Endpoints**, the query builder displays only the applicable filter groups. You can then choose a filter you are interested in narrowing down by selecting that filter group, for instance, **EventType**, and selecting the filter of your choice.
 
-![Screenshot of guided mode query builder endpoint basic filter set](media/advanced-hunting-query-builder/03a-use-basic-filters.png)
+![Screenshot of the guided mode query builder with endpoint-specific filters displayed after selecting the Endpoints domain](media/advanced-hunting-query-builder/03a-use-basic-filters.png)
 
 Once the query is ready, select the blue **Run query** button. If the button is grayed out, it means the query needs to be filled out or edited further.
 
@@ -78,18 +81,18 @@ Once the query is ready, select the blue **Run query** button. If the button is 
 ## Load sample queries
 
 Another quick way to get familiar with guided hunting is to load sample queries using the **Load sample queries** dropdown menu.
-![Screenshot of guided mode query builder load sample queries list](media/advanced-hunting-query-builder/05-load-sample-queries.png)
+![Screenshot of the guided mode query builder showing predefined sample queries available to load from the dropdown menu](media/advanced-hunting-query-builder/05-load-sample-queries.png)
 
 > [!NOTE]
 > Selecting a sample query overrides the existing query.
 
 Once the sample query is loaded, select **Run query**.
 
-![Screenshot of guided mode query builder loaded query](media/advanced-hunting-query-builder/06-load-sample-queries.png)
+![Screenshot of the guided mode query builder with a sample query loaded and ready to run](media/advanced-hunting-query-builder/06-load-sample-queries.png)
 
 If you have previously selected a domain, the list of available sample queries changes accordingly.
 
-![Screenshot of guided mode query builder restricted list](media/advanced-hunting-query-builder/07-load-sample-queries.png)
+![Screenshot of the guided mode query builder showing sample queries filtered to match the previously selected domain](media/advanced-hunting-query-builder/07-load-sample-queries.png)
 
 To restore the complete list of sample queries, select **All domains** then reopen **Load sample queries**.
 
@@ -109,20 +112,20 @@ When the **All filters** toggle is active, you can now use the full range of fil
 
 To specify a set of data to be used in the query, select **Select a filter**. Explore the different filter sections to find what is available to you.
 
-![Screenshot showing different filters you can use](media/advanced-hunting-query-builder/10-create-conditions.png)
+![Screenshot of the guided mode query builder showing the filter selection list for choosing a field to add as a query condition](media/advanced-hunting-query-builder/10-create-conditions.png)
 
 Type the section's titles in the search box at the top of the list to find the filter. Sections ending in *info* contain filters that provide information about the different components you can look at and filters for the states of entities. Sections ending in *events* contain filters that allow you to look for any monitored event on the entity. For instance, to hunt for activities involving certain devices, you can use the filters under the **Device events** section.
 
 > [!NOTE]
-> Choosing a filter that isn't in the basic filters list deactivates or grays out the toggle to return to the basic filters view. To reset the query or remove existing filters in the current query, select **Clear all**. This also reactivates the basic filters list.
+> Choosing a filter that isn't in the basic filters list deactivates or grays out the toggle to return to the basic filters view. To reset the query or remove existing filters in the current query, select **Clear all**. Selecting **Clear all** also reactivates the basic filters list.
 
 Next, set the appropriate condition to further filter the data by selecting it from the second dropdown menu and providing entries in the third dropdown menu if necessary:
 
-![Screenshot showing different conditions you can use](media/advanced-hunting-query-builder/11-create-conditions.png)
+![Screenshot of the guided mode query builder showing the condition operator options available after selecting a filter](media/advanced-hunting-query-builder/11-create-conditions.png)
 
 You can add more conditions to your query by using **AND**, and **OR** conditions. AND returns results that fulfill all conditions in the query, while OR returns results that fulfill any of the conditions in the query.
 
-![Screenshot showing AND OR operators](media/advanced-hunting-query-builder/12-create-conditions.png)
+![Screenshot of the guided mode query builder showing AND and OR options for combining multiple query conditions](media/advanced-hunting-query-builder/12-create-conditions.png)
 
 Refining your query allows you to automatically sift through voluminous records to generate a list of results that is already targeted to your specific threat hunting need.
 

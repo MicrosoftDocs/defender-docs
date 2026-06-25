@@ -10,6 +10,7 @@ ms.collection:
   - tier2
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: View, create, modify, and delete outbound spam policies in Microsoft Defender for Office 365 and Exchange Online PowerShell.
 ms.service: defender-office-365
 ms.date: 05/22/2026
@@ -49,6 +50,8 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
+  [!INCLUDE [rbac-save-failure-tip](../includes/rbac-save-failure-tip.md)]
+
 - For our recommended settings for outbound spam policies, see [Outbound spam policy settings](recommended-settings-for-eop-and-office365.md#outbound-spam-policy-settings).
 
 - The default [alert policies](/defender-xdr/alert-policies#threat-management-alert-policies) named **Email sending limit exceeded**, **Suspicious email sending patterns detected**, and **User restricted from sending email** already send email notifications to members of the **TenantAdmins** group (**Global Administrator** members) about unusual outbound email activity and blocked users due to outbound spam. For more information, see [Verify the alert settings for restricted users](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users). We recommend that you use these alert policies instead of the notification options in outbound spam policies.
@@ -57,7 +60,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
-2. On the **Anti-spam policies** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create policy** and then select **Outbound** from the dropdown list to start the new outbound spam policy wizard.
+2. On the **Anti-spam policies** page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create policy** and then select **Outbound** from the dropdown list to start the new outbound spam policy wizard.
 
 3. On the **Name your policy page**, configure these settings:
    - **Name**: Enter a unique, descriptive name for the policy.
@@ -77,7 +80,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
    >
    > Identifying a Microsoft 365 Group in **Groups** applies the policy to _messages sent by members_ of the group. To apply the policy to _messages sent from_ the Microsoft 365 Group, identify the group in **Users**. Automatic external email forwarding by Inbox rules in the Microsoft 365 Group uses the group email address as the sender.
 
-   Select the appropriate box, start typing a value, and then select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+   Select the appropriate box, start typing a value, and then select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
    For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users or groups, enter an asterisk (\*) by itself to see all available values.
 
@@ -144,7 +147,7 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
        To enable this setting, select the check box. In the box that appears, click in the box, enter a valid email address, and then press the Enter key or select the complete value displayed below the box.
 
-       Repeat this step as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+       Repeat this step as many times as necessary. To remove an existing value, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the value.
 
    - **Notify these users and groups if a sender is blocked due to sending outbound spam**
 
@@ -181,9 +184,9 @@ On the **Anti-spam policies** page, the following properties are displayed in th
   - **Custom outbound spam policy**
   - Blank for the default outbound spam policy (for example, **Anti-spam outbound policy (Default)**).
 
-To change the list of policies from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of policies from normal to compact spacing, select :::image type="icon" source="media/defender-portal-icon-standard.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/defender-portal-icon-compact.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific policies.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific policies.
 
 Select an outbound spam policy by clicking anywhere in the row other than the check box next to the name to open the details flyout for the policy.
 
@@ -197,9 +200,9 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Em
 On the **Anti-spam policies** page, select the outbound spam policy from the list by clicking anywhere in the row other than the check box next to the name. Some or all following actions are available in the details flyout that opens:
 
 - Modify policy settings by clicking **Edit** in each section (custom policies or the default policy)
-- :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn on** or :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn off** (custom policies only)
-- :::image type="icon" source="media/m365-cc-sc-increase-icon.png" border="false"::: **Increase priority** or :::image type="icon" source="media/m365-cc-sc-decrease-icon.png" border="false"::: **Decrease priority** (custom policies only)
-- :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete policy** (custom policies only)
+- :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn on** or :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn off** (custom policies only)
+- :::image type="icon" source="media/defender-portal-icon-increase.png" border="false"::: **Increase priority** or :::image type="icon" source="media/defender-portal-icon-decrease.png" border="false"::: **Decrease priority** (custom policies only)
+- :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete policy** (custom policies only)
 
 :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom outbound spam policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
 
@@ -215,9 +218,9 @@ For the default policy, you can't modify the name of the policy, and there are n
 
 You can't disable the default outbound spam policy (it's always enabled).
 
-After you select an enabled custom outbound spam policy (the **Status** value is **On**) by clicking anywhere in the row other than the check box next to the name, select :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn off** at the top of the policy details flyout.
+After you select an enabled custom outbound spam policy (the **Status** value is **On**) by clicking anywhere in the row other than the check box next to the name, select :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn off** at the top of the policy details flyout.
 
-After you select a disabled custom outbound spam policy (the **Status** value is **Off**) by clicking anywhere in the row other than the check box next to the name, select :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn on** at the top of the policy details flyout.
+After you select a disabled custom outbound spam policy (the **Status** value is **Off**) by clicking anywhere in the row other than the check box next to the name, select :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn on** at the top of the policy details flyout.
 
 When you're finished in the policy details flyout, select **Close**.
 
@@ -237,9 +240,9 @@ Outbound spam protection stops for a sender after the first policy is applied (t
 
 After you select the custom outbound spam policy by clicking anywhere in the row other than the check box next to the name, you can increase or decrease the priority of the policy in the details flyout that opens:
 
-- The custom policy with the **Priority** value **0** on the **Anti-spam policies** page has the :::image type="icon" source="media/m365-cc-sc-decrease-icon.png" border="false"::: **Decrease priority** action at the top of the details flyout.
-- The custom policy with the lowest priority (highest **Priority** value; for example, **3**) has the :::image type="icon" source="media/m365-cc-sc-increase-icon.png" border="false"::: **Increase priority** action at the top of the details flyout.
-- If you have three or more policies, the policies between **Priority** 0 and the lowest priority have both the :::image type="icon" source="media/m365-cc-sc-increase-icon.png" border="false"::: **Increase priority** and the :::image type="icon" source="media/m365-cc-sc-decrease-icon.png" border="false"::: **Decrease priority** actions at the top of the details flyout.
+- The custom policy with the **Priority** value **0** on the **Anti-spam policies** page has the :::image type="icon" source="media/defender-portal-icon-decrease.png" border="false"::: **Decrease priority** action at the top of the details flyout.
+- The custom policy with the lowest priority (highest **Priority** value; for example, **3**) has the :::image type="icon" source="media/defender-portal-icon-increase.png" border="false"::: **Increase priority** action at the top of the details flyout.
+- If you have three or more policies, the policies between **Priority** 0 and the lowest priority have both the :::image type="icon" source="media/defender-portal-icon-increase.png" border="false"::: **Increase priority** and the :::image type="icon" source="media/defender-portal-icon-decrease.png" border="false"::: **Decrease priority** actions at the top of the details flyout.
 
 When you're finished in the policy details flyout, select **Close**.
 
@@ -249,7 +252,7 @@ Back on the **Anti-spam policies** page, the order of the policy in the list mat
 
 You can't remove the default outbound spam policy.
 
-After you select the custom outbound spam policy by clicking anywhere in the row other than the check box next to the name, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete policy** at the top of the flyout, and then select **Yes** in the warning dialog that opens.
+After you select the custom outbound spam policy by clicking anywhere in the row other than the check box next to the name, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete policy** at the top of the flyout, and then select **Yes** in the warning dialog that opens.
 
 On the **Anti-spam policies** page, the deleted policy is no longer listed.
 

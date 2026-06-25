@@ -1,17 +1,22 @@
 ---
 title: Configure admin notifications
-description: This article provides instructions for setting admin preferences in Defender for Cloud Apps.
-ms.date: 01/29/2023
+description: Configure admin notification settings in Defender for Cloud Apps to control whether administrators receive email alerts for policy violations.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
-# Configure admin notifications
+# Configure admin notifications in Microsoft Defender for Cloud Apps
 
 
 
-Microsoft Defender for Cloud Apps allows you to customize your admin notification settings. The notification settings allow admins to specify if they would like to receive email notifications for alerts.
+Microsoft Defender for Cloud Apps allows you to customize admin email notification settings. As an administrator, you can configure which policy violation alerts trigger email notifications and set the minimum severity level for those notifications. Email notifications are sent to the email alias associated with your administrator account. Notifications aren't sent for Microsoft Entra IPC events.
 
-## Customize your notifications
+<a name="customize-your-notifications"></a>
+## Customize admin email notification settings
+
+Use the following steps to customize your admin email notification settings in the Microsoft Defender Portal:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**.
 1. Under **My account**, select **My email notifications**.
@@ -22,7 +27,7 @@ Microsoft Defender for Cloud Apps allows you to customize your admin notificatio
     >
     > - Notifications are not sent for Microsoft Entra IPC events.
 
-    ![notification settings.](media/notification-settings.png)
+    ![Screenshot of the email notification settings page showing severity and notification preference options.](media/notification-settings.png)
 
 1. When you're done, select **Save**.
 
@@ -31,4 +36,4 @@ Microsoft Defender for Cloud Apps allows you to customize your admin notificatio
 > [!div class="nextstepaction"]
 > [Set up cloud discovery](set-up-cloud-discovery.md)
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [contact Microsoft Defender XDR support](/defender-xdr/contact-defender-support).

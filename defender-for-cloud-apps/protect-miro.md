@@ -1,18 +1,22 @@
 ---
 title: Protect your Miro environment
-description: This article provides information about the benefits of connecting your Miro app to Defender for Cloud Apps using the API connector for visibility and control over use.
-ms.date: 01/01/2026
+description: Connect Miro to Microsoft Defender for Cloud Apps by using the API connector to gain visibility into user activity and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How Defender for Cloud Apps helps protect your Miro environment
 
-Miro is an online workspace that enables distributed, cross-functional teams organize and collaborate on projects. Miro holds critical data of your organization, and this makes it a target for malicious actors. 
+Miro is an online workspace that enables distributed, cross-functional teams organize and collaborate on projects. Miro holds critical data of your organization, which makes Miro a target for malicious actors. 
 
-Connecting Miro to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection using machine learning based anomaly detections.
+Connecting Miro to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection using machine learning based anomaly detections. Before you connect, review the [prerequisites](#connect-miro-to-microsoft-defender-for-cloud-apps) later in this article to ensure your environment is ready.
 
 ## Main threats
+
+The main threats to consider in a Miro environment include the following:
 
 - Compromised accounts and insider threats
 - Data leakage
@@ -21,10 +25,14 @@ Connecting Miro to Defender for Cloud Apps gives you improved insights into your
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Defender for Cloud Apps helps protect your Miro environment in the following ways:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
 ## Control Miro with policies
+
+The following table lists the detection policies available for Miro in Defender for Cloud Apps.
 
 | **Type**                           | **Name**                                                     |
 | ---------------------------------- | ------------------------------------------------------------ |
@@ -35,7 +43,9 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following Miro governance actions to remediate detected threats:
+In addition to monitoring for potential threats, you can apply and automate the following Miro governance actions to remediate detected threats.
+
+### Supported governance actions
 
 | **Type**        | **Action**                                                   |
 | --------------- | ------------------------------------------------------------ |
@@ -53,6 +63,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 ### Configure Miro 
 
+Perform the following steps in Miro to create the app registration needed for the connector:
+
 1. Sign into [Miro](https://miro.com/app/dashboard/) portal with a company admin account.
 1. Create a developer team with default permissions.
 1. Create a new application in the developer team and ensure the “Expire user authentication token” setting is checked.
@@ -63,6 +75,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 - ‘organization:read’
 
 ### Connect Microsoft Defender for Cloud Apps
+
+After you configure Miro, complete the connection in Defender for Cloud Apps by following these steps:
 
 1. In the [Defender for Cloud Apps](https://portal.cloudAppSecurity.com) portal, navigate to Investigate > Connected apps.
 1. In the **App connectors** page, select **Connect an app**, and choose **Miro**.

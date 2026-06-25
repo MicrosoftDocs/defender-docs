@@ -1,9 +1,11 @@
 ---
 title: Activate the Defender for Identity sensor v3.x on a domain controller 
 description: Learn about how to activate the Microsoft Defender for Identity sensor on domain controllers.
-ms.date: 06/30/2025
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Activate the Defender for Identity sensor v3.x on a domain controller
@@ -12,11 +14,12 @@ For complete protection of your on-premises deployment, activate the Defender fo
 
 ## Prerequisites
 
-See [Microsoft Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md) for all system requirements and [sensor version limitations](deploy-sensor-v3.md#sensor-version-limitations) before proceeding with activating the sensor.
+See [Microsoft Defender for Identity sensor v3.x prerequisites](deploy-sensor-v3.md) for all system requirements and [sensor version limitations](deploy-sensor-v3.md#sensor-version-limitations) before proceeding with activating the Defender for Identity sensor on eligible domain controllers.
 
-## The Activation page
+<a name="the-activation-page"></a>
+## Review the Activation page
 
-The **Activation** page displays all servers from your device inventory. Defender for Identity detects all of your servers and their configuration. The server's activation state lets you know what you need to do to onboard the domain controller to Defender for Identity.
+The **Activation** page displays all servers from your device inventory. Defender for Identity detects all of your servers and their configuration. Each server's activation state lets you know what you need to do to onboard that domain controller to Defender for Identity.
 
 You can choose to activate eligible domain controllers either automatically, where Defender for Identity activates them as soon as they're discovered, or manually, by selecting specific domain controllers from the list of eligible servers.
  
@@ -37,13 +40,15 @@ The process for activating the sensor depends on your configuration.
 
 ## Activate the Defender for Identity sensor
 
+Perform the following steps to activate the Defender for Identity sensor on a domain controller:
+
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Identities** > **Activation**.
 1. Select the domain controller where you want to activate Defender for Identity, and select **Activate**. Confirm your selection when prompted. 
 
    [![Screenshot that shows how to activate an new server.](media/activate-sensor/image.png)](media/activate-sensor/image.png#lightbox)
    
    
-1. When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers**. This takes you to the **Sensors** page, where you can check your sensor health.
+1. When sensor activation for the selected domain controller is complete, a green success banner appears. In the green success banner, select **Click here to see the onboarded servers**. Selecting this link takes you to the **Sensors** page, where you can check your sensor health.
 
     :::image type="content" source="media/activated-sensor.png" alt-text="Screenshot that shows successful activation." lightbox="media/activated-sensor.png":::
 

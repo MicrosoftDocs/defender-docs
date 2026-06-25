@@ -16,6 +16,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+#customer intent: As an IT administrator, I want to understand how email authentication (SPF, DKIM, DMARC, and composite authentication) works in Microsoft 365 so I can protect my organization from spoofing and phishing attacks.
 ---
 
 # Email authentication in cloud organizations
@@ -145,6 +146,8 @@ This section describes why you need SPF, DKIM, and DMARC for domains on the inte
   DMARC addresses these deficiencies by using SPF and DKIM to confirm that the domains in the MAIL FROM and From addresses match.
 
   **DMARC issues**: Legitimate services that modify messages in transit before delivery break SPF, DKIM, and therefore DMARC checks.
+
+  When messages are automatically forwarded between domains or organizations, DMARC alignment can fail even for legitimate service senders. For example, if a Microsoft service domain (such as voicemail.microsoft.com) fails DMARC after forwarding, use a scoped allow entry in the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-spoofed-senders) or authenticated relay rather than allowing the entire sending domain.
 
 - **ARC**: As explained in [Configure trusted ARC sealers](email-authentication-arc-configure.md), legitimate services that modify messages in transit can use ARC to preserve the original email authentication information of modified messages.
 

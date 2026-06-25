@@ -6,9 +6,9 @@ ms.localizationpriority: medium
 audience: ITPro
 author: chrisda
 ms.author: chrisda
-ms.date: 05/04/2026
+ms.date: 06/16/2026
 ms.reviewer:
-ms.custom: asr, msecd-doc-authoring-1012
+ms.custom: asr, msecd-doc-authoring-1014
 ms.subservice: asr
 ms.topic: how-to
 ms.collection:
@@ -113,8 +113,8 @@ After you configure the rule in **Audit** mode, do the following steps:
 If the ASR rule still isn't working as expected, do one of the following steps:
 
 - For false positives, add the file or path as an exclusion to the ASR rule. For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
-- Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for ASR rules. With a Windows E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
-- When you report a problem involving ASR rules to Microsoft, you need to collect and submit diagnostic data to help troubleshoot the issue as described in the next section.
+- Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for ASR rules. With a Windows E5 subscription, you can also provide a link to any associated alert from the [Alerts queue](alerts-queue.md).
+- When you report a problem involving ASR rules to Microsoft, you need to collect and submit diagnostic data to help troubleshoot the issue as described in [Collect diagnostic data for Microsoft support](#collect-diagnostic-data-for-microsoft-support).
 
 <a name="collect-microsoft-defender-anti-malware-protection-diagnostic-data-for-file-submissions"></a>
 
@@ -124,11 +124,13 @@ If the ASR rule still isn't working as expected, do one of the following steps:
 
 ### Collect diagnostic data with the MDE Client Analyzer
 
+Follow these steps to collect diagnostic data with the MDE Client Analyzer:
+
 1. Download the [MDE Client Analyzer](overview-client-analyzer.md).
 
 1. Close any apps on the device that aren't essential to reproducing the issue.
 
-1. Run the MDE Client Analyzer with the `-v` switch [locally or using Live Response](run-analyzer-windows.md):
+1. To collect verbose Defender for Endpoint diagnostics for ASR troubleshooting, run the MDE Client Analyzer with the `-v` switch [locally or using Live Response](run-analyzer-windows.md):
 
    ```dos
    C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd -v

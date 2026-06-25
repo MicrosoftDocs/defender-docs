@@ -5,7 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 05/31/2023
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to get specific labeling data from Microsoft Purview, so analysts can track, analyze, report on the data and use it for compliance purposes.
 ---
@@ -44,7 +46,7 @@ This connector replaces the Azure Information Protection (AIP) data connector. T
 > - Learn how to [disconnect the AIP connector](#disconnect-the-azure-information-protection-connector).
 
 When you enable the Microsoft Purview Information Protection connector, audit logs stream into the standardized 
-`MicrosoftPurviewInformationProtection` table. Data is gathered through the [Office Management API](/office/office-365-management-api/office-365-management-activity-api-schema), which uses a structured schema. The new standardized schema is adjusted to enhance the deprecated schema used by AIP, with more fields and easier access to parameters.
+`MicrosoftPurviewInformationProtection` table. Data is gathered through the [Office Management API](/office/office-365-management-api/office-365-management-activity-api-schema), which uses a structured schema. The `MicrosoftPurviewInformationProtection` table schema enhances the deprecated schema used by AIP, with more fields and easier access to parameters.
 
 Review the list of supported [audit log record types and activities](microsoft-purview-record-types-activities.md).
 
@@ -59,6 +61,8 @@ Before you begin, verify that you have:
 - The Security Administrator role on the tenant, or the equivalent permissions.
 
 ## Set up the connector
+
+To set up the Microsoft Purview Information Protection connector, perform the following steps.
 
 > [!NOTE]
 > If you set the connector on a workspace located in a different region than your Office 365 location, data might be streamed across regions.
@@ -87,6 +91,8 @@ To disconnect the Azure Information Protection connector:
 
 ## Known issues and limitations
 
+Be aware of the following known issues and limitations when using this connector:
+
 - Sensitivity label events collected through the Office Management API do not populate the Label Names. Customers can use watchlists or enrichments defined in KQL as the example below. 
 - The Office Management API doesn't obtain a Downgrade Label with the names of the labels before and after the downgrade. To retrieve this information, extract the `labelId` of each label and enrich the results. 
 
@@ -107,7 +113,7 @@ To disconnect the Azure Information Protection connector:
  
 - The `MicrosoftPurviewInformationProtection` table and the `OfficeActivity` table might include some duplicated events.
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information in the Kusto documentation for the functions and operators used in the example KQL query:
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***extend*** operator](/kusto/query/extend-operator?view=microsoft-sentinel&preserve-view=true)
 - [***parse_json()*** function](/kusto/query/parse-json-function?view=microsoft-sentinel&preserve-view=true)

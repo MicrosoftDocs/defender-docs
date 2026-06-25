@@ -70,7 +70,7 @@ Defender for Cloud Apps includes several built-in [anomaly detection policies](a
 |**Unusual administrative activities**      |Detects multiple administrative activities in a single session with respect to the baseline learned, which could indicate an attempted breach.         |
 
 > [!NOTE]
-> Some anomaly detections focus on detecting problematic security scenarios, while others help identify and investigate anomalous user behavior that might not necessarily indicate a compromise. For such detections, you can use [Behaviors](behaviors.md) which is available in the Microsoft Defender XDR advanced hunting experience.
+> Some anomaly detections focus on detecting problematic security scenarios, while others help identify and investigate anomalous user behavior that might not necessarily indicate a compromise. For such detections, you can use [Behaviors](behaviors.md) which is available in the Microsoft Defender advanced hunting experience.
 
 1. **Scope policies to specific users or groups**
 

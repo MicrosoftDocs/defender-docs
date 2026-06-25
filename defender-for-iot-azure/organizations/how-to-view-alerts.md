@@ -1,18 +1,19 @@
 ---
 title: View and manage alerts on your OT sensor - Microsoft Defender for IoT
 description: Learn about viewing and managing alerts on an OT network sensor.
-ms.date: 10/10/2024
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # View and manage alerts on your OT sensor
 
 Microsoft Defender for IoT alerts enhance your network security and operations with real-time details about events logged in your network. OT alerts are triggered when OT network sensors detect changes or suspicious activity in network traffic that needs your attention.
 
-This article describes how to view Defender for IoT alerts directly on an OT network sensor. You can also view OT alerts on the [Azure portal](how-to-manage-cloud-alerts.md).
+The following sections explain how to view Defender for IoT alerts directly on an OT network sensor. You can also [view and manage Defender for IoT alerts in the Azure portal](how-to-manage-cloud-alerts.md).
 
-For more information, see [Microsoft Defender for IoT alerts](alerts.md).
+For more information, see [Defender for IoT alerts overview](alerts.md).
 
 ## Prerequisites
 
@@ -38,7 +39,7 @@ For more information, see [On-premises users and roles for OT monitoring with De
     | **Severity** | A predefined alert severity assigned by the sensor that you can modify as needed, including: *Critical*, *Major*, *Minor*, *Warning*. |
     | **Name** | The alert title |
     | **Engine** | The [Defender for IoT detection engine](architecture.md#defender-for-iot-analytics-engines) that detected the activity and triggered the alert. |
-    | **Last detection** | The last time the alert was detected. <br><br>- If an alert's status is **New**, and the same traffic is seen again, the **Last detection** time is updated for the same alert. <br>- If the alert's status is **Closed** and traffic is seen again, the **Last detection** time is *not* updated, and a new alert is triggered.<br><br>**Note**: While the sensor console displays an alert's **Last detection** field in real-time, Defender for IoT in the Azure portal may take up to one hour to display the updated time. This explains a scenario where the last detection time in the sensor console isn't the same as the last detection time in the Azure portal.  |
+    | **Last detection** | The last time the alert was detected. <br><br>- If an alert's status is **New**, and the same traffic is seen again, the **Last detection** time is updated for the same alert. <br>- If the alert's status is **Closed** and traffic is seen again, the **Last detection** time is *not* updated, and a new alert is triggered.<br><br>**Note**: While the sensor console displays an alert's **Last detection** field in real-time, Defender for IoT in the Azure portal may take up to one hour to display the updated time. This delay explains a scenario where the last detection time in the sensor console isn't the same as the last detection time in the Azure portal.  |
     | **Status** |The alert status: *New*, *Active*, *Closed*<br><br>For more information, see [Alert statuses and triaging options](alerts.md#alert-statuses-and-triaging-options).|
     | **Source Device** | The source device IP address, MAC, or device name. |
     | **Id** | The unique alert ID, aligned with the ID on the Azure portal.<br><br> **Note:** If the [alert was merged with other alerts](alerts.md#alert-management-options) from sensors that detected the same alert, the Azure portal displays the alert ID of the first sensor that generated the alerts. |
@@ -68,7 +69,7 @@ Filtering alerts by **Groups** uses any custom groups you may have created in th
 
 Use the **Group by** menu at the top right to collapse the grid into subsections based on *Severity*, *Name*, *Engine*, or *Status*.
 
-For example, while the total number of alerts appears above the grid, you may want more specific information about alert count breakdown, such as the number of alerts with a specific severity or status.
+For example, while the total number of alerts appears in the alerts summary header, you may want more specific information about alert count breakdown, such as the number of alerts with a specific severity or status.
 
 ## View details and remediate a specific alert
 
@@ -169,7 +170,7 @@ The file is generated, and you're prompted to save it locally.
 
 Alert comments help you accelerate your investigation and remediation process by making communication between team members and recording data more efficient.
 
-If your admin has [created custom comments](how-to-accelerate-alert-incident-response.md#create-alert-comments-on-an-ot-sensor) for your team to add to alerts, add them from the **Comments** section on an alert details page.
+If your admin has [created custom alert comments on your OT sensor](how-to-accelerate-alert-incident-response.md#create-alert-comments-on-an-ot-sensor) for your team to add to alerts, add them from the **Comments** section on an alert details page.
 
 1. Sign into your OT sensor console and select the **Alerts** page on the left.
 
@@ -197,7 +198,7 @@ To reduce alert fatigue, multiple versions of the same alert violation with iden
 
 1. Select the **Take action** tab. Follow the **Remediation steps**.
 
-1. Select **Learn**, if needed. For more information, see [learning an alert](alerts.md#alert-statuses-and-triaging-options).
+1. Select **Learn**, if needed. For more information, see [Alert statuses and triaging options](alerts.md#alert-statuses-and-triaging-options).
 
 > [!NOTE]
 > An alert with specific violations does not prevent new alerts with different violations from appearing. After you learn an alert, the same alert might be triggered again if the new alert has different violation parameters. To check why the alert was triggered, review the list of violations in the alert list (for the first 10 alerts) or the CSV file you downloaded in step 3.

@@ -1,9 +1,12 @@
 ---
 title: Configure Windows event auditing
 description: Configure Windows event auditing for Defender for Identity sensors. Learn automatic, manual, and PowerShell methods to enable required audit policies.
-ms.date: 05/07/2026
+ms.date: 06/15/2026
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-106
+ms.custom:
+  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-106
+  - sfi-image-nochange
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
 ---
@@ -21,7 +24,7 @@ Configure auditing using one of these methods:
 
 Defender for Identity generates health alerts when it detects incorrect Windows event auditing configurations. For more information, see [Microsoft Defender for Identity health alerts](../health-alerts.md).
 
-If you configure auditing properly, it has minimal effect on server performance.
+If you configure auditing properly, Windows event auditing has minimal effect on server performance.
 
 ## Configure Defender for Identity to collect Windows events automatically
 
@@ -51,7 +54,7 @@ When enabled, the sensor automatically:
 
 > [!NOTE]
 > - Automatic Windows event auditing is supported for domain controllers that use the Defender for Identity sensor version 3.x only. It doesn't apply to v2.x domain controllers or to AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. For those servers, [configure Windows event auditing manually](#configure-windows-event-collection-manually).
-> - If you don't turn on automatic Windows auditing, you **must** configure Windows event auditing either [manually](#configure-windows-event-collection-manually) or by using [PowerShell](#configure-windows-event-collection-using-powershell).
+> - If you don't turn on automatic Windows auditing, you **must** [configure Windows event auditing manually](#configure-windows-event-collection-manually) or by [configuring Windows event collection using PowerShell](#configure-windows-event-collection-using-powershell).
 > - GPO settings can conflict with local settings set by the sensor.
 
 ## Required Windows events
@@ -205,12 +208,12 @@ This section describes how to modify your domain controller's Audit (Premium) Po
         | Audit policy | Subcategory | Triggers event IDs |
         | --- |---|---|
         | **Account Logon** | **Audit Credential Validation** | 4776 |
-        | **Account Management** | **Audit Computer Account Management**<sup>[*](#failure)</sup> | 4741, 4743 |
-        | **Account Management** | **Audit Distribution Group Management**<sup>[*](#failure)</sup> | 4753, 4763 |
-        | **Account Management** | **Audit Security Group Management**<sup>[*](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
+        | **Account Management** | **Audit Computer Account Management**<sup>[See note](#failure)</sup> | 4741, 4743 |
+        | **Account Management** | **Audit Distribution Group Management**<sup>[See note](#failure)</sup> | 4753, 4763 |
+        | **Account Management** | **Audit Security Group Management**<sup>[See note](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | **Audit User Account Management** | 4726 |
-        | **DS Access** | **Audit Directory Service Changes**<sup>[*](#failure)</sup> | 5136  |
-        | **System** | **Audit Security System Extension**<sup>[*](#failure)</sup> | 7045 |
+        | **DS Access** | **Audit Directory Service Changes**<sup>[See note](#failure)</sup> | 5136  |
+        | **System** | **Audit Security System Extension**<sup>[See note](#failure)</sup> | 7045 |
         | **DS Access** | **Audit Directory Service Access** | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
 
         > [!NOTE]
@@ -241,7 +244,9 @@ When a Defender for Identity sensor parses Windows event 8004, it enriches Defen
 
 To configure NTLM auditing:
 
-1. Open **Group Policy Management**, and go to **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
+1. Open **Group Policy Management** and Expand **Domain Controllers Organizational Units**, right-click **Default Domain Controllers Policy**, and then select **Edit**.
+
+1.  Go to **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
 
 1. Configure the specified security policies as follows:
 
@@ -466,6 +471,8 @@ The following commands show how to modify your domain controller's Audit (Premiu
 
 **To view your audit policies:**
 
+Use the `Get-MDIConfiguration` cmdlet to retrieve the current Defender for Identity configuration values in domain or local machine mode:
+
 ```powershell
 Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
 ```
@@ -476,6 +483,8 @@ Where:
 - `Configuration` specifies which configuration to get. Use `All` to get all configurations.
 
 **To configure your settings:**
+
+Use the following syntax to apply one or more Defender for Identity configurations in domain or local machine mode:
 
 ```powershell
 Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
@@ -489,7 +498,7 @@ Where:
 - `SkipGpoLink` specifies that GPO links aren't created.
 - `Force` specifies that the configuration is set or GPOs are created without validating the current state.
 
-The following command defines all settings for the domain, creates group policy objects, and links them.
+The following example applies the full recommended Defender for Identity configuration set through Group Policy in domain mode, creates the group policy objects, and links them:
 
 ```powershell
 Set-MDIConfiguration -Mode Domain -Configuration All
@@ -497,7 +506,7 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ## Update legacy configurations
 
-Defender for Identity no longer requires logging 1,644 events. If you enabled either of the following settings, remove them from the registry.
+Defender for Identity no longer requires logging 1,644 events. If you enabled either of the following settings, remove them from the registry. These registry values configured NTDS diagnostic logging levels and search thresholds that were previously required for event 1644 collection but are no longer needed.
 
 ```reg
 Windows Registry Editor Version 5.00

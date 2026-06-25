@@ -5,7 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 11/11/2024
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to integrate data governance logs with Microsoft Sentinel so that analysts can prioritize and investigate critical security incidents involving sensitive information.
 
@@ -31,7 +33,7 @@ Before you start, make sure you have both a [Microsoft Sentinel workspace](quick
 
     The **Microsoft Purview** solution is a set of bundled content, including a data connector, workbook, and analytics rules configured specifically for Microsoft Purview data. For more information, see [About Microsoft Sentinel content and solutions](sentinel-solutions.md) and [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md).
 
-    Instructions for enabling your data connector also available in Microsoft Sentinel, on the **Microsoft Purview** data connector page.
+    Instructions for enabling your data connector are also available in Microsoft Sentinel, on the **Microsoft Purview** data connector page.
 
 ## Start ingesting Microsoft Purview data in Microsoft Sentinel
 
@@ -68,13 +70,15 @@ The Microsoft Purview solution provides two analytics rule templates out-of-the-
 - The generic version, *Sensitive Data Discovered in the Last 24 Hours*, monitors for the detection of any classifications found across your data estate during a Microsoft Purview scan.
 - The customized version, *Sensitive Data Discovered in the Last 24 Hours - Customized*, monitors and generates alerts each time the specified classification, such as Social Security Number, has been detected.
 
-Use this procedure to customize the Microsoft Purview analytics rules' queries to detect assets with specific classification, sensitivity label, source region, and more. Combine the data generated with other data in Microsoft Sentinel to enrich your detections and alerts.
+Use the following procedure to customize the Microsoft Purview analytics rules' queries to detect assets with specific classification, sensitivity label, source region, and more. Combine the data generated with other data in Microsoft Sentinel to enrich your detections and alerts.
 
 > [!NOTE]
 > Microsoft Sentinel analytics rules are KQL queries that trigger alerts when suspicious activity has been detected. Customize and group your rules together to create incidents for your SOC team to investigate.
 >
 
 ### Modify the Microsoft Purview analytics rule templates
+
+Use the following steps to create and customize a Microsoft Purview analytics rule from the built-in template.
 
 1. In Microsoft Sentinel, open the **Microsoft Purview** solution, and then locate and select the **Sensitive Data Discovered in the Last 24 Hours - Customized** rule. On the side pane, select **Create rule** to create a new rule based on the template.
 
@@ -120,6 +124,8 @@ Use this procedure to customize the Microsoft Purview analytics rules' queries t
 For more information, see [Create custom analytics rules to detect threats](detect-threats-custom.md).
 
 ### View Microsoft Purview data in Microsoft Sentinel workbooks
+
+Use the following steps to add the Microsoft Purview workbook to your workspace and open it.
 
 1. In Microsoft Sentinel, open the **Microsoft Purview** solution, and then locate and select the **Microsoft Purview** workbook. On the side pane, select **Configuration** to add the workbook to your workspace.
 

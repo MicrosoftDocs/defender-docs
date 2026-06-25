@@ -1,9 +1,10 @@
 ---
 title: Accelerate OT alert workflows - Microsoft Defender for IoT
 description: Learn how to improve Microsoft Defender for IoT OT alert workflows on an OT network sensor.
-ms.date: 10/11/2024
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Accelerate OT alert workflows
@@ -15,7 +16,7 @@ Microsoft Defender for IoT alerts enhance your network security and operations w
 
 This article describes the following methods for reducing OT network alert fatigue in your team:
 
-- **Create suppression rules** from the Azure portal to reduce the alerts triggered by your sensors. If you're working in an air-gapped environment, do this by creating alert exclusion rules on the OT sensor.
+- **Create suppression rules** from the Azure portal to reduce the alerts triggered by your sensors. If you're working in an air-gapped environment, reduce alerts by creating alert exclusion rules on the OT sensor.
 
 - **Create alert comments** for your teams to add to individual alerts, streamlining communication and record-keeping across your alerts.
 
@@ -51,7 +52,7 @@ Configure your OT sensors to suppress alerts for specific traffic on your networ
 >
 ### Create alert suppression rules on the Azure portal (Public Preview)
 
-This section describes how to create an alert suppression rule on the Azure portal, and is supported for cloud-connected sensors only.
+Use the following procedure to create an alert suppression rule on the Azure portal. Alert suppression rules are supported for cloud-connected sensors only.
 
 **To create an alert suppression rule**:
 
@@ -144,6 +145,8 @@ For example:
 The generated data mining report shows a list of the allowed domains and each IP address that’s being resolved for those domains. The report also includes the TTL, in seconds, during which those IP addresses won't trigger an internet connectivity alert.
 
 ## Create alert comments on an OT sensor
+
+Use the following steps to create custom alert comments on your OT sensor that team members can add to individual alerts.
 
 1. Sign into your OT sensor and select **System Settings** > **Network Monitoring** > **Alert Comments**.
 

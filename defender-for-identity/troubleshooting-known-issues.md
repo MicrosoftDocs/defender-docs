@@ -4,6 +4,9 @@ description: Describes how you can troubleshoot issues in Microsoft Defender for
 ms.date: 02/04/2026
 ms.topic: troubleshooting
 ms.reviewer: rlitinsky
+ms.custom:
+  - sfi-image-nochange
+  - sfi-ropc-nochange
 ---
 
 # Troubleshooting Microsoft Defender for Identity known issues

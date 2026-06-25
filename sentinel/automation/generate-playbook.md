@@ -4,16 +4,18 @@ description: Generate playbooks through natural language conversations directly 
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 02/13/2026
+ms.date: 06/12/2026
 ms.service: microsoft-sentinel
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a security analyst, I want to generate playbooks using AI so that I can quickly create automation workflows without extensive coding knowledge.
 
 ---
 
-# Generate playbooks using AI in Microsoft Sentinel (preview)
+# Generate playbooks using AI in Microsoft Sentinel
 
 The SOAR playbook generator creates python based automation workflows coauthored through a conversational experience with Cline, an AI coding agent. You describe automation logic in natural language, and the system generates validated, code-based playbooks with complete documentation and visual flow diagrams. This experience is powered by an embedded VS Code environment within the Defender portal, so you can author and refine playbooks without leaving the portal. Generated playbooks use alert data as input and dynamically generate the required API calls, as long as you configure the integration for the target provider.
 
@@ -37,26 +39,29 @@ You also must meet the following requirements:
 
 ### Environment requirements
 
-- **Security Copilot**: Your tenant must be [Security Copilot enabled with SCUs available](/copilot/security/get-started-security-copilot#option-1-recommended-provision-capacity-through-security-copilot). You aren't billed for SCUs, but their availability is a technical requirement.
+- **Security Copilot**: Your tenant must be [Security Copilot enabled with Security Compute Units (SCUs) available](/copilot/security/get-started-security-copilot#option-1-recommended-provision-capacity-through-security-copilot). You aren't billed for SCUs, but their availability is a technical requirement.
 
 - **Microsoft Sentinel workspace**: Your tenant must have a Microsoft Sentinel workspace onboarded to Microsoft Defender. To create a new workspace, see [Create a workspace](/copilot/security/manage-workspaces#create-a-workspace).
 
 - **Recommended Data sharing preferences**: In Security Copilot, enable the first slider, *Allow Microsoft to capture data from Security Copilot to validate product performance using human review*, in Customer Data Sharing preferences. For more information, see [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
 
 ### Required roles and permissions
-
-To use playbook generator, you need the following permissions:
-
-- **To author Automation Rules**: You need the **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Azure. See [Microsoft Entra built-in roles](/azure/sentinel/roles#built-in-azure-roles-for-microsoft-sentinel)
-
-- **To use the playbook generator**: You need the **Detection tuning** role in Microsoft Entra in Azure. See [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
+ 
+You need the following permissions in [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/custom-permissions-details):
+ 
+- **To use the playbook generator**:
+  - Authorization and settings: **Detection tuning (manage)**
+  - Security operations: **Security Copilot (read)**
+ 
+- **To author automation rules**:
+  - **Microsoft Sentinel Contributor** role on the relevant Workspaces or Resource Groups containing them in Defender.
 
 > [!NOTE]
 > Permissions might take up to two hours to take effect after assignment.
 
-### Recommended: Configure a dedicated Security Copilot workspace
+### Required: Configure a dedicated Security Copilot workspace
 
-If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's set in geo **US** or **Europe**, or allowing cross-region evaluation, we recommended you [create one](/copilot/security/manage-workspaces#create-a-workspace).
+If you don't already have a dedicated Security Copilot workspace for AI-generated playbooks that's set in geo **US** or **Europe**, or allowing cross-region evaluation, you need to [create a Security Copilot workspace](/copilot/security/manage-workspaces#create-a-workspace).
 
 1. In the **Create a new workspace** dialog:
 
@@ -85,9 +90,11 @@ If you don't already have a dedicated Security Copilot workspace for AI-generate
 
 :::image type="content" source="./media/generate-playbook/create-capacity.png" alt-text="Screenshot of the new capacity details." lightbox="./media/generate-playbook/create-capacity.png":::
 
-Generated playbooks automatically use this workspace.
+Generated playbooks automatically use the dedicated Security Copilot workspace you created.
 
 ## Key concepts
+
+Before you generate a playbook, understand the following concepts that the playbook generator relies on.
 
 ### Integration profiles
 
@@ -97,7 +104,7 @@ Integration profiles are secure configurations that allow generated playbooks to
 - Authentication method
 - Required credentials
 
-The playbook generator uses the integration to execute API calls. If the integration is missing, it prompts you to create one before proceeding with playbook generation.
+The playbook generator uses each configured integration profile to execute API calls for its corresponding service. If the integration is missing, it prompts you to create one before proceeding with playbook generation.
 Manage integration profiles centrally in the Defender portal under the **Automation** tab. Before creating a playbook, ensure you configure all required integrations.
 
 To add integration, select **Integration** from the Automation tab, or use the **Add integration** link on top of the VS Code page. You can't edit the URL of existing integration links. Create a new integration link if needed, and delete the old one.
@@ -114,7 +121,11 @@ This trigger mechanism enables automatic execution of generated playbooks across
 
 ## Generate a new playbook
 
+To generate a new playbook, configure the required integration profiles and then create the playbook in the embedded VS Code environment.
+
 ### Step 1. Create a Graph API integration profile and add any other required integrations you want to utilize
+
+Register a Microsoft Entra ID application and create a Graph API integration profile by completing the following steps:
 
 1. In the Azure portal, go to **Microsoft Entra ID** > **Manage** > **App registrations**.
 
@@ -154,6 +165,8 @@ This trigger mechanism enables automatic execution of generated playbooks across
 
 #### Create the integration profile
 
+After you register the app, create the integration profile in the Microsoft Defender portal:
+
 1. In the Microsoft Defender portal, go to **Microsoft Sentinel** > **Configuration** > **Automation**.
 
 1. Select the **Integration Profiles** tab.
@@ -191,6 +204,8 @@ Configure integration profiles for any other third-party services your playbooks
 
 ### Step 2. Create a generated playbook
 
+Create the generated playbook in the Microsoft Defender portal by completing the following steps:
+
 1. Select the **Playbooks** tab.
 
 1. Select **Create** > **Playbook Generator**.
@@ -202,7 +217,7 @@ Configure integration profiles for any other third-party services your playbooks
 
 #### Work in Plan mode
 
-When the editor opens, the experience starts in **Plan mode**. In this mode, you describe your automation requirements and the playbook generator generates a plan for review.
+When the editor opens, the playbook generator session starts in **Plan mode**. In this mode, you describe your automation requirements and the playbook generator generates a plan for review.
 
 1. In the chat interface, describe your playbook requirements in detail. Be explicit about:
 
@@ -211,7 +226,7 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
    - What conditions to evaluate
    - Expected outcomes
 
-   **Example**: "Create a playbook that triggers on phishing alerts. Extract the sender email address. Check if the user exists in our directory, and if so, temporarily disable their account and notify the security team." For other examples of prompts, see the [Example use case](#example-use-case) section.
+   **Example**: "Create a playbook that triggers on phishing alerts. Extract the sender email address. Check if the user exists in our directory, and if so, temporarily disable their account and notify the security team." For other example prompts, see [Example use case](#example-use-case).
 
 1. If the playbook generator requests approval to fetch documentation URLs, approve the request. This approval allows the playbook generator to access relevant API documentation to generate accurate code.
 
@@ -234,6 +249,8 @@ When the editor opens, the experience starts in **Plan mode**. In this mode, you
    :::image type="content" source="./media/generate-playbook/add-integration.png" alt-text="Screenshot showing missing integration profiles in the embedded Visual Studio Code environment." lightbox="./media/generate-playbook/add-integration.png":::
 
 #### Review and approve the plan
+
+After the playbook generator produces a plan, review and approve it before proceeding to code generation:
 
 1. Review the generated plan and flow diagram carefully.
 
@@ -281,6 +298,8 @@ After creation, your generated playbook requires activation and an alert trigger
 
 ### Enable the playbook
 
+Generated playbooks are created in a disabled state. Enable the playbook by completing the following steps:
+
 1. In the **Automation** page, select the **Active Playbooks** tab.
 
 1. Locate your newly created playbook.
@@ -288,6 +307,8 @@ After creation, your generated playbook requires activation and an alert trigger
 1. Switch the playbook status to **Activate**.
 
 ### Create an enhanced alert trigger
+
+Create an enhanced alert trigger to automatically run the playbook when specific alert conditions are met:
 
 1. Go to the **Automation Rules** tab.
 
@@ -335,6 +356,8 @@ Be aware of the following limitations when working with generated playbooks:
 
 ### Playbook limitations
 
+Generated playbooks have the following limitations:
+
 - **Language support**: Only Python is supported for playbook authoring
 - **Input constraints**: Playbooks currently accept alerts as the sole input type
 - **Concurrent editing**: A single user can edit only one playbook at a time. However, multiple users can edit different playbooks simultaneously
@@ -348,11 +371,15 @@ Be aware of the following limitations when working with generated playbooks:
 
 ### Integration profiles limitations
 
+Integration profiles have the following limitations:
+
 - **Integration limitations**: Microsoft Graph and Azure Resource Manager integrations aren't enabled by default and must be manually created
 - **Authentication methods**: Available methods include OAuth2 Client Credentials, API Key, AWS Auth, User and Password, Bearer/JWT Authentication, and Hawk
 - **Integration configuration**: The API URL and authentication method can't be changed after creation
 
 ### Automation rule alert trigger limitations
+
+Enhanced alert trigger rules have the following limitations:
 
 - **Trigger limitations**: Enhanced Alert Trigger rules don't support priority ordering or expiration dates
 - **Available actions**: Currently, the only available actions are triggering generated Playbooks and updating action alerts

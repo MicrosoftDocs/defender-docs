@@ -147,4 +147,4 @@ We welcome feedback, suggestions, requests for features, bug reports or improvem
 - [Set up your Azure Storage connector to stream logs to Microsoft Sentinel](setup-azure-storage-connector.md)
 - [Azure Storage Blob data connector reference for the Codeless Connector Framework](data-connection-rules-reference-azure-storage.md)
 - [Enable network security on connector integrated storage resources](enable-storage-network-security.md)
-- [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md)
+- [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md)

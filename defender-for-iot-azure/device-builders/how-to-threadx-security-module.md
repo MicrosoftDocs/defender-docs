@@ -2,16 +2,19 @@
 title: Configure and customize Defender-IoT-micro-agent for Eclipse ThreadX
 description: Learn about how to configure and customize your Defender-IoT-micro-agent for Eclipse ThreadX.
 ms.topic: how-to
-ms.date: 04/17/2024
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure and customize Defender-IoT-micro-agent for Eclipse ThreadX
 
-This article describes how to configure the Defender-IoT-micro-agent for your Eclipse ThreadX device, to meet your network, bandwidth, and memory requirements.
+This article describes how to configure the Defender-IoT-micro-agent for your Eclipse ThreadX device, to meet your network, bandwidth, and memory requirements. You learn how to select a target distribution, tune device behavior settings, adjust data collection intervals, and enable or disable individual collectors for resource-constrained devices.
 
 [!INCLUDE [device-agents-note](../includes/device-agents-note.md)]
 
-## Configuration steps
+<a name="configuration-steps"></a>
+## Configure the Defender-IoT-micro-agent
 
 You must select a target distribution file that has a `*.dist` extension, from the `netxduo/addons/azure_iot/azure_iot_security_module/configs` directory.  
 
@@ -19,7 +22,8 @@ When using a CMake compilation environment, you must set a command line paramete
 
 In an IAR, or other non CMake compilation environment, you must add the `netxduo/addons/azure_iot/azure_iot_security_module/inc/configs/<target distribution>/` path to any known included paths. For example, `netxduo/addons/azure_iot/azure_iot_security_module/inc/configs/RTOS_BASE`.
 
-## Device behavior
+<a name="device-behavior"></a>
+## Configure device behavior settings
 
 Use the following file to configure your device behavior.
 
@@ -29,7 +33,10 @@ In a CMake compilation environment, you must change the default configuration by
 
 The default behavior of each configuration is provided in the following tables: 
 
-## General configuration
+<a name="general-configuration"></a>
+## Configure general micro agent settings
+
+The following table lists the general configuration settings and their default values.
 
 | Name | Type | Default | Details |
 | - | - | - | - |
@@ -38,7 +45,10 @@ The default behavior of each configuration is provided in the following tables:
 | ASC_SECURITY_MODULE_SEND_MESSAGE_RETRY_TIME  | Number  | 3 | The amount of time the Defender-IoT-micro-agent will take to send the security message after a fail (in seconds). |
 | ASC_SECURITY_MODULE_PENDING_TIME  | Number | 300 | The Defender-IoT-micro-agent pending time (in seconds). The state changes to suspend, if the time is exceeded. |
 
-## Collection configuration
+<a name="collection-configuration"></a>
+## Configure data collection settings
+
+The following table lists the data collection configuration settings and their default values.
 
 | Name | Type | Default | Details |
 | - | - | - | - |
@@ -47,7 +57,7 @@ The default behavior of each configuration is provided in the following tables:
 | ASC_MEDIUM_PRIORITY_INTERVAL | Number | 30 | The collector's medium priority group interval (in seconds). |
 | ASC_LOW_PRIORITY_INTERVAL | Number | 145,440  | The collector's low priority group interval (in seconds). |
 
-#### Collector network activity
+### Collector network activity
 
 To customize your collector network activity configuration, use the following:
 
@@ -61,18 +71,22 @@ To customize your collector network activity configuration, use the following:
 | ASC_COLLECTOR_NETWORK_ACTIVITY_MAX_IPV4_OBJECTS_IN_CACHE | Number | 64 | The maximum number of IPv4 network events to store in memory. |
 | ASC_COLLECTOR_NETWORK_ACTIVITY_MAX_IPV6_OBJECTS_IN_CACHE | Number | 64  | The maximum number of IPv6 network events to store in memory. |
 
-### Collectors
+<a name="collectors"></a>
+### Available collectors
+
+The following table lists the available collector enablement flags.
+
 | Name | Type | Default | Details |
 | - | - | - | - |
 | ASC_COLLECTOR_HEARTBEAT_ENABLED | Boolean | ON | Enables the heartbeat collector. |
 | ASC_COLLECTOR_NETWORK_ACTIVITY_ENABLED  | Boolean | ON | Enables the network activity collector. |
 | ASC_COLLECTOR_SYSTEM_INFORMATION_ENABLED | Boolean | ON | Enables the system information collector. |
 
-Other configurations flags are advanced, and have unsupported features. Contact support to change this, or for more information.
+Other configurations flags are advanced, and have unsupported features. Contact support to change these advanced configuration flags, or for more information.
  
 ## Supported security alerts and recommendations
 
-The Defender-IoT-micro-agent for Eclipse ThreadX supports specific security alerts and recommendations. Make sure to [review and customize the relevant alert and recommendation values](concept-threadx-security-alerts-recommendations.md) for your service.
+The Defender-IoT-micro-agent for Eclipse ThreadX supports specific security alerts and recommendations. Make sure to [customize the security alert and recommendation values for Eclipse ThreadX](concept-threadx-security-alerts-recommendations.md) for your service.
 
 ## Log Analytics (optional)
 

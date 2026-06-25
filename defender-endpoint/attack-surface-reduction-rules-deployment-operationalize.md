@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.reviewer: sugamar, yongrhee
-ms.custom: asr, msecd-doc-authoring-1012
+ms.custom: asr, msecd-doc-authoring-1014
 ms.topic: how-to
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 - highpri
 - tier1
 - mde-asr
-ms.date: 05/04/2026
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to manage and monitor my ASR rules deployment so I can respond to false positives and maintain effective threat protection.
 appliesto:
@@ -27,7 +27,7 @@ appliesto:
 
 This article is part of the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md).
 
-After you fully deploy attack surface reduction (ASR) rules, you need processes to monitor and respond to ASR rules-related activity. This article describes how to review ASR rule reports and troubleshoot issues as the final step of your ASR rules deployment.
+After you deploy attack surface reduction (ASR) rules, monitor reports regularly and troubleshoot rule behavior to maintain protection and reduce false positives. This article describes how to review ASR rule reports and respond to ASR rules-related activity.
 
 ## Keep up with ASR rule reports and data
 

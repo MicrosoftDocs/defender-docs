@@ -10,7 +10,9 @@ metadata:
   ms.date: 05/11/2026
   ai-usage: ai-assisted
   ms.localizationpriority: medium
-  ms.custom: nextgen
+  ms.custom:
+    - nextgen
+    - sfi-image-nochange
   ms.subservice: ngp
   ms.collection:
   - m365-security

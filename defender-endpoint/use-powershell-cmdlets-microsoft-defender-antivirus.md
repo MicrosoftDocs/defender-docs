@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 10/20/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus
 
@@ -32,7 +33,7 @@ PowerShell cmdlets are most useful in Windows Server environments that don't rel
 > [!NOTE]
 > PowerShell cmdlets should not be used as a replacement for a full network policy management infrastructure, such as [Microsoft Configuration Manager](/intune/configmgr), [Group Policy Management Console](use-group-policy-microsoft-defender-antivirus.md), or [Microsoft Defender Antivirus Group Policy ADMX templates](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
-Changes made with PowerShell will affect local settings on the endpoint where the changes are deployed or made. This means that deployments of policy with Microsoft Defender for Endpoint security settings management, Microsoft Intune, Microsoft Configuration Manager Tenant Attach, or Group Policy can overwrite changes made with PowerShell.
+Changes made with PowerShell will affect local settings on the endpoint where the changes are deployed or made. Because PowerShell changes only local settings on the endpoint, deployments of policy with Microsoft Defender for Endpoint security settings management, Microsoft Intune, Microsoft Configuration Manager Tenant Attach, or Group Policy can overwrite changes made with PowerShell.
 
 You can [configure which settings can be overridden locally with local policy overrides](configure-local-policy-overrides-microsoft-defender-antivirus.md).
 
@@ -46,6 +47,8 @@ PowerShell is typically installed under the folder `%SystemRoot%\system32\Window
 
 ## Use Microsoft Defender Antivirus PowerShell cmdlets
 
+Use the following steps to run Microsoft Defender Antivirus PowerShell cmdlets:
+
 1. In the Windows search bar, type **powershell**.
 1. Select **Windows PowerShell** from the results to open the interface.
 1. Enter the PowerShell command and any parameters.
@@ -53,7 +56,7 @@ PowerShell is typically installed under the folder `%SystemRoot%\system32\Window
 > [!NOTE]
 > You may need to open PowerShell in administrator mode. Right-click the item in the Start menu, click **Run as administrator** and click **Yes** at the permissions prompt.
 
-To open online help for any of the cmdlets type the following:
+To view the full online documentation for any Defender PowerShell cmdlet, including additional parameters and examples, use the following command:
 
 ```PowerShell
 Get-Help <cmdlet> -Online

@@ -1,0 +1,2 @@
+> [!TIP]
+> If policy changes fail to save with a 403 or **CmdletAccessDeniedException** error and you verified that you have the required permissions, the issue might be related to an Exchange Online role-based access control (RBAC) configuration problem. Some organizations require a backend RBAC configuration refresh before policy changes succeed. If the issue persists, contact [Microsoft Support](/microsoft-365/admin/get-help-support) and reference "RBAC configuration refresh."

@@ -1,10 +1,12 @@
 ---
-title: "Microsoft Sentinel migration: Export QRadar data to target platform | Microsoft Docs"
-description: Learn how to export your historical data from QRadar.
+title: "Microsoft Sentinel migration: Export QRadar data to target platform"
+description: Export historical QRadar data for Microsoft Sentinel migration by using the QRadar REST API and AQL queries, with guidance on limiting query scope and preparing for ingestion.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 05/03/2022
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security engineer, I want to export historical data from QRadar using AQL queries and the QRadar REST API so that I can migrate it to a new platform for analysis and compliance purposes.
@@ -21,13 +23,15 @@ To export your QRadar data, you use the QRadar REST API to run Ariel Query Langu
 
 ## Create AQL query
 
+Perform the following steps to create or select an AQL query for export.
+
 1. In the QRadar Console, select the **Log Activity** tab. 
 1. Create a new AQL search query or select a saved search query to export the data. Ensure that the query includes the `START` and `STOP` functions to set the date and time range. 
 
     Learn how to use [AQL](https://www.ibm.com/docs/en/qsip/7.5?topic=aql-ariel-query-language) and how to [save search criteria](https://www.ibm.com/docs/en/qsip/7.5?topic=searches-saving-search-criteria) in AQL. 
 
 1. Copy the AQL query for later use.
-1. Encode the AQL query to the URL encoded format. Paste the query you copied in step 3 [into the decoder](https://www.url-encode-decode.com/). Copy the encoded format output.
+1. Encode the AQL query to the URL encoded format. Paste the query you copied in step 3 into the [URL Encode/Decode tool](https://www.url-encode-decode.com/). Copy the encoded format output.
 
 ## Execute search query
 

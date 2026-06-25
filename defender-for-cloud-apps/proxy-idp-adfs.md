@@ -1,8 +1,10 @@
 ---
 title: Deploy conditional access app control for any web app using AD FS
 description: This article provides information about how to deploy the Microsoft Defender for Cloud Apps conditional access app control for any web app using AD FS as the identity provider.
-ms.date: 05/15/2024
+ms.date: 06/16/2026
 ms.topic: how-to
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 # Deploy conditional access app control for any web app using Active Directory Federation Services (AD FS) as the identity provider (IdP)
 
@@ -24,7 +26,8 @@ For this article, we'll use the Salesforce app as an example of a web app being 
 >[!NOTE]
 >The steps here apply to all versions of AD FS that run on supported version of Windows Server.
 
-## To configure session controls for your app using AD FS as the IdP
+<a name="to-configure-session-controls-for-your-app-using-ad-fs-as-the-idp"></a>
+## Configure session controls for your app by using AD FS as the IdP
 
 Use the following steps to route your web app sessions from AD FS to Defender for Cloud Apps.
 
@@ -56,22 +59,26 @@ Use the following steps to route your web app sessions from AD FS to Defender fo
 
 ## Step 1: Get your app's SAML single sign-on settings
 
+Use the following steps to collect your app's current SAML single sign-on settings.
+
 1. In Salesforce, browse to **Setup** > **Settings** > **Identity** > **Single Sign-On Settings**.
 
 1. Under **Single Sign-On Settings**, click on the name of your existing AD FS configuration.
 
-    ![Select Salesforce SSO settings.](media/proxy-idp-adfs/idp-adfs-sf-select-sso-settings.png)
+    ![Screenshot of Salesforce Single Sign-On Settings page showing the existing AD FS configuration.](media/proxy-idp-adfs/idp-adfs-sf-select-sso-settings.png)
 
 1. On the **SAML Single Sign-On Setting** page, make a note of the Salesforce **Login URL**. You'll need this later when configuring Defender for Cloud Apps.
 
     > [!NOTE]
     > If your app provides a SAML certificate, download the certificate file.
 
-    ![Select Salesforce SSO login URL.](media/proxy-idp-adfs/idp-adfs-sf-copy-saml-sso-login-url.png)
+    ![Screenshot of Salesforce SAML Single Sign-On settings page showing the Login URL to copy.](media/proxy-idp-adfs/idp-adfs-sf-copy-saml-sso-login-url.png)
 
 <a name="idp1-conf-cas-with-your-app-saml-info"></a>
 
 ## Step 2: Configure Defender for Cloud Apps with your app's SAML information
+
+Use the following steps to add the app in Defender for Cloud Apps and enter its SAML details.
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**.
 1. Under **Connected apps**, select **Conditional Access App Control apps**.
@@ -83,7 +90,7 @@ Use the following steps to route your web app sessions from AD FS to Defender fo
     > [!NOTE]
     > If your app provides a SAML certificate, select **Use <app_name> SAML certificate** and upload the certificate file.
 
-    ![Manually fill in Salesforce SAML information.](media/proxy-idp-adfs/idp-adfs-cas-sf-app-info.png)
+    ![Screenshot of the Defender for Cloud Apps APP INFORMATION page with fields to manually enter Salesforce SAML details.](media/proxy-idp-adfs/idp-adfs-cas-sf-app-info.png)
 
 <a name="idp1-create-custom-app-adfs"></a>
 
@@ -100,16 +107,16 @@ Use the following steps to route your web app sessions from AD FS to Defender fo
     > [!NOTE]
     > You can use the following endpoint to access your federation metadata file: `https://<Your_Domain>/federationmetadata/2007-06/federationmetadata.xml`
 
-    ![Note existing Salesforce app's SSO service location.](media/proxy-idp-adfs/idp-adfs-sf-app-copy-saml-sso-service-location.png)
+    ![Screenshot of the federation metadata file showing the AD FS SingleSignOnService location for the Salesforce app.](media/proxy-idp-adfs/idp-adfs-sf-app-copy-saml-sso-service-location.png)
 
 1. Download the identity provider's Signing Certificate. You'll need this later.
     1. Under **Services** > **Certificates**, right-click on the AD FS signing certificate, and then select **View Certificate**.
 
-        ![View IdP signing certificate properties.](media/proxy-idp-adfs/idp-adfs-view-signing-cert-props.png)
+        ![Screenshot of the identity provider signing certificate properties window in AD FS.](media/proxy-idp-adfs/idp-adfs-view-signing-cert-props.png)
 
     1. On the certificate's details tab, click **Copy to File** and follow the steps in the **Certificate Export Wizard** to export your certificate as a *Base-64 encoded X.509 (.CER)* file.
 
-        ![Save IdP signing certificate file.](media/proxy-idp-adfs/idp-adfs-save-signing-cert-file.png)
+        ![Screenshot of the Certificate Export Wizard showing the step to save the IdP signing certificate as a file.](media/proxy-idp-adfs/idp-adfs-save-signing-cert-file.png)
 
 1. Back in Salesforce, on the existing AD FS single sign-on settings page, make a note of all the settings.
 1. Create a new SAML single sign-on configuration. Apart from the **Entity ID** value that must match the relying party trust **Identifier**, configure the single sign-on using the settings you noted earlier. You'll need this later when configuring Defender for Cloud Apps.
@@ -118,15 +125,17 @@ Use the following steps to route your web app sessions from AD FS to Defender fo
 
 ## Step 4: Configure Defender for Cloud Apps with the AD FS app's information
 
+Use the AD FS values you collected to complete the identity provider configuration in Defender for Cloud Apps.
+
 1. Back in the Defender for Cloud Apps **IDENTITY PROVIDER** page, click **Next** to proceed.
 
-1. On the next page, select **Fill in data manually**, do the following, and then click **Next**.
+1. On the **IDENTITY PROVIDER** details page, select **Fill in data manually**, do the following, and then click **Next**.
     - For the **Single sign-on service URL**, enter the Salesforce **Login URL** you noted earlier.
     - Select **Upload identity provider's SAML certificate** and upload the certificate file you downloaded earlier.
 
-    ![Add SSO service URL and SAML certificate.](media/proxy-idp-adfs/idp-adfs-cas-sf-app-idp-info.png)
+    ![Screenshot of the Defender for Cloud Apps identity provider page with fields for the SSO service URL and SAML certificate.](media/proxy-idp-adfs/idp-adfs-cas-sf-app-idp-info.png)
 
-1. On the next page, make a note of the following information, and then click **Next**. You'll need the information later.
+1. On the **EXTERNAL CONFIGURATION** page, make a note of the following information, and then click **Next**. You'll need this information when configuring the AD FS relying party trust and updating the app.
 
     - Defender for Cloud Apps single sign-on URL
     - Defender for Cloud Apps attributes and values
@@ -134,15 +143,17 @@ Use the following steps to route your web app sessions from AD FS to Defender fo
     > [!NOTE]
     > If you see an option to upload the **Defender for Cloud Apps SAML certificate for the identity provider**, click on the link to download the certificate file. You'll need this later.
 
-    ![In Defender for Cloud Apps, note SSO URL and attributes.](media/proxy-idp-adfs/idp-adfs-cas-get-sf-app-external-config.png)
+    ![Screenshot of Defender for Cloud Apps showing the single sign-on URL, attributes, and SAML certificate download link.](media/proxy-idp-adfs/idp-adfs-cas-get-sf-app-external-config.png)
 
 <a name="idp1-complete-custom-app-in-adfs"></a>
 
 ## Step 5: Complete the configuration of the AD FS Relying Party Trust
 
+Complete the following steps to update the AD FS relying party trust with the required claim rules and certificate settings.
+
 1. Back in the **AD FS Management** console, right-click on the relying party trust you created earlier, and then select **Edit Claim Issuance Policy**.
 
-    ![Locate and edit relying trust claim issuance.](media/proxy-idp-adfs/idp-adfs-sf-relying-trust-edit.png)
+    ![Screenshot of AD FS Management console with the relying party trust context menu showing the Edit Claim Issuance Policy option.](media/proxy-idp-adfs/idp-adfs-sf-relying-trust-edit.png)
 
 1. In the **Edit Claim Issuance Policy** dialog box, under **Issuance Transform Rules**, use the provided information in the following table to complete the steps to create custom rules.
 
@@ -160,11 +171,11 @@ Use the following steps to route your web app sessions from AD FS to Defender fo
 1. Back on the **Relying Party Trust** page, right-click on the relying party trust you created earlier, and then select **Properties**.
 1. On the **Endpoints** tab, select **SAML Assertion Consumer Endpoint**, click **Edit** and replace the **Trusted URL** with the Defender for Cloud Apps single sign-on URL you noted earlier, and then click **OK**.
 
-    ![Update relying trust endpoint properties Trusted URL.](media/proxy-idp-adfs/idp-adfs-sf-relying-trust-endpoint-properties.png)
+    ![Screenshot of the relying party trust endpoint properties dialog showing the Trusted URL field for the SAML Assertion Consumer Endpoint.](media/proxy-idp-adfs/idp-adfs-sf-relying-trust-endpoint-properties.png)
 
 1. If you downloaded a **Defender for Cloud Apps SAML certificate for the identity provider**, On the **Signature** tab, click **Add** and upload the certificate file, and then click **OK**.
 
-    ![Update relying trust signature properties SAML certificate.](media/proxy-idp-adfs/idp-adfs-sf-relying-trust-signature-properties.png)
+    ![Screenshot of the relying party trust signature properties dialog showing the SAML certificate configuration.](media/proxy-idp-adfs/idp-adfs-sf-relying-trust-signature-properties.png)
 
 1. Save your settings.
 
@@ -177,7 +188,7 @@ Back in the Defender for Cloud Apps **APP CHANGES** page, do the following, but 
 - Copy the Defender for Cloud Apps SAML Single sign-on URL
 - Download the Defender for Cloud Apps SAML certificate
 
-![Note the Defender for Cloud Apps SAML SSO URL and download the certificate.](media/proxy-idp-adfs/idp-adfs-cas-sf-app-changes.png)
+![Screenshot of the Defender for Cloud Apps APP CHANGES page showing the SAML single sign-on URL and certificate download option.](media/proxy-idp-adfs/idp-adfs-cas-sf-app-changes.png)
 
 <a name="idp1-complete-app-changes"></a>
 
@@ -196,6 +207,8 @@ In Salesforce, browse to **Setup** > **Settings** > **Identity** > **Single Sign
 <a name="idp1-complete-conf-in-cas"></a>
 
 ## Step 8: Complete the configuration in Defender for Cloud Apps
+
+Complete the wizard to enable routing through conditional access app control.
 
 - Back in the Defender for Cloud Apps **APP CHANGES** page, click **Finish**. After completing the wizard, all associated login requests to this app will be routed through conditional access app control.
 

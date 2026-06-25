@@ -1,7 +1,7 @@
 ---  
 title: Create and manage Jupyter notebook jobs
 titleSuffix: Microsoft Security  
-description: This article describes how to explore and interact with lake data using Spark notebooks in Visual Studio Code.
+description: Create and schedule Jupyter notebook jobs in the Microsoft Sentinel extension for Visual Studio Code to automate data processing, analysis, and writing results to custom tables.
 ms.author: edbaynash  
 author: EdB-MSFT  
 ms.reviewer: zeinam
@@ -17,7 +17,10 @@ ms.date: 06/25/2026
  
 You can create scheduled jobs to run at specific times or intervals using the Microsoft Sentinel extension for Visual Studio Code. Jobs allow you to automate data processing tasks to summarize, transform, or analyze data in the Microsoft Sentinel data lake and federated tables. Jobs are also used to process data and write results to custom tables in the lake tier or analytics tier.
 
-## Permissions
+This article shows you how to create, schedule, edit, and manage notebook jobs, including configuring job schedules, viewing job details and run history, and monitoring jobs in the Microsoft Defender portal.
+
+<a name="permissions"></a>
+## Required permissions for notebook jobs
 
 Microsoft Entra ID roles provide broad access across all workspaces in the data lake. To create and schedule jobs, read tables across all workspaces, write to the analytics and lake tiers, you must have one of the supported Microsoft Entra ID roles. For more information on roles and permissions, see [Roles and permissions in Microsoft Sentinel](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
 
@@ -57,7 +60,7 @@ You can create a job in one of three ways:
     
 1. To specify a schedule for the job, select **Scheduled** in the **Schedule** section.  
     1. Select a **Repeat frequency** for the job. You can choose from **By the minute**, **Hourly**, **Weekly**, **Daily**, or **Monthly**.
-    1. Additional options are displayed to configure the schedule, depending on the frequency you select. For example day of the week, time of day, or day of the month.
+    1. Additional schedule options, such as day of the week, time of day, or day of the month, are displayed depending on the frequency you select.
 
     1. Select a **Start on** time for the schedule to start running.
     1. Select an **End on** time for the schedule to stop running. If you don't want to set an end time for the schedule, select **Set job to run indefinitely**.
@@ -67,7 +70,7 @@ You can create a job in one of three ways:
 
     :::image type="content" source="./media/notebook-jobs/job-configuration.png" lightbox="./media/notebook-jobs/job-configuration.png" alt-text="A screenshot showing the job configuration page."  :::
 
-1. To view your jobs, select the Microsoft Sentinel ![the sentinel icon](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar. Jobs are displayed on the **Jobs** panel.
+1. To view your jobs, select the Microsoft Sentinel ![The Microsoft Sentinel icon in the VS Code left toolbar](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar. Jobs are displayed on the **Jobs** panel.
 
 1. Select a job to see the job details. 
 1. You can run the job immediately by selecting **Run now**, disable and enable the job schedule, or delete the job.
@@ -183,6 +186,8 @@ The page shows a list of jobs and their types. Select a notebook job to view its
 
 ## Service parameters and limits and troubleshooting
 
+The following sections summarize column naming rules, service limits, and troubleshooting resources for notebook jobs in the Microsoft Sentinel data lake.
+
 ### Column names
 
 The following rules apply to column names when using the save_as method to write data from a notebook to the Microsoft Sentinel data lake.
@@ -207,11 +212,11 @@ The following rules apply to column names when using the save_as method to write
 For a list of service limits for the Microsoft Sentinel data lake, see [Microsoft Sentinel data lake service limits](notebooks.md#service-parameters-and-limits-for-vs-code-notebooks).  
 
 ### Troubleshooting
-For information on troubleshooting, see [Troubleshoot notebooks on the Microsoft Sentinel data lake](notebooks-troubleshooting.md).
+For troubleshooting notebook jobs and data lake operations, see [Troubleshoot notebooks on the Microsoft Sentinel data lake](notebooks-troubleshooting.md).
 
 ## Related content
 
 - [Sample notebooks for Microsoft Sentinel data lake](./notebook-examples.md)
 - [Microsoft Sentinel Provider class reference](./sentinel-provider-class-reference.md)
 - [Microsoft Sentinel data lake overview](./sentinel-lake-overview.md)
-- [Roles and permissions in Microsoft Sentinel](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
+- [Roles and permissions in Microsoft Sentinel](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake)

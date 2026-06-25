@@ -74,6 +74,8 @@
           href: security-for-ai/ai-agent-detection-protection.md
         - name: Data privacy as part of Agent 365
           href: security-for-ai/privacy-defender-agent-365.md
+        - name: Transition agent security to Agent 365
+          href: security-for-ai/transition-agent-security-to-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
@@ -98,6 +100,8 @@
         href: incident-queue.md
       - name: Manage incidents
         href: manage-incidents.md
+      - name: Manually create an incident or alert
+        href: manually-create-incident.md
       - name: Use tasks to handle incident workflow
         href: split-incidents-into-tasks.md
       - name: Investigate and respond to incidents
@@ -124,6 +128,8 @@
             href: entity-page-device.md
           - name: IP
             href: entity-page-ip.md
+          - name: View threat intelligence in entity pages
+            href: entity-page-threat-intelligence.md
         - name: Investigate data loss prevention alerts with Microsoft Defender XDR
           href: dlp-investigate-alerts-defender.md
         - name: Investigate data loss prevention alerts with Microsoft Sentinel
@@ -150,7 +156,7 @@
           href: m365d-autoir-results.md
         - name: Address false positives and negatives
           href: m365d-autoir-report-false-positives-negatives.md
-      - name: Attack disruption
+      - name: Attack disruption with Microsoft Sentinel
         items:
         - name: Overview
           href: automatic-attack-disruption.md
@@ -162,10 +168,10 @@
           href: automatic-attack-disruption-exclusions.md
         - name: External disruptions
           items:
-          - name: Enable attack disruption actions in Okta (preview)
+          - name: Enable attack disruption actions in Okta with Microsoft Sentinel (preview)
             href: okta-attack-disruption.md
-          - name: Enable attack disruption actions on AWS (preview)
-            href: /azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json  
+          - name: Enable attack disruption actions in AWS with Microsoft Sentinel (preview)
+            href: /azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Predictive shielding
         items:
         - name: Overview
@@ -254,6 +260,8 @@
             href: advanced-hunting-aadsignineventsbeta-table.md
           - name: AADSpnSignInEventsBeta
             href: advanced-hunting-aadspnsignineventsbeta-table.md
+          - name: AgentsInfo
+            href: advanced-hunting-agentsinfo-table.md
           - name: AIAgentsInfo
             href: advanced-hunting-aiagentsinfo-table.md
           - name: AlertEvidence
@@ -404,7 +412,7 @@
             href: threat-analytics-analyst-reports.md
           - name: Get access to indicators
             href: threat-analytics-indicators.md
-        - name: Microsoft Defender Threat Intelligence in Defender XDR
+        - name: Microsoft Threat Intelligence in Defender XDR
           href: defender-threat-intelligence.md
       - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
         items:
@@ -444,6 +452,8 @@
             href: advanced-hunting-security-copilot-threat-hunting-agent.md
           - name: Dynamic Threat Detection Agent
             href: dynamic-threat-detection-agent.md
+          - name: Security Analyst Agent
+            href: security-analyst-agent.md
     - name: Identity Security
       items:
       - name: Identity Security overview
@@ -489,7 +499,9 @@
           - name: Work with MSSPs
             href: defender-experts-managed-security-guide.md
         - name: Frequently asked questions
-          items: 
+          items:
+          - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+            href: teams-restrictions-dexapp.md
           - name: General information
             href: faq-defender-experts-hunting.md
           - name: Server and cloud workload coverage
@@ -714,6 +726,8 @@
         href: /security/operations/incident-response-playbooks
       - name: Customize incident responses
         href: security-upload-guide.md
+      - name: SOP template - Compromised identity
+        href: sop-documentation-template.md
       - name: Ransomware playbooks
         items:
         - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR

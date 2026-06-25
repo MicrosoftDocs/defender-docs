@@ -1,10 +1,12 @@
 ---
-title: Migrate ArcSight SOAR automation to Microsoft Sentinel | Microsoft Docs
+title: Migrate ArcSight SOAR automation to Microsoft Sentinel
 description: Learn how to identify SOAR use cases, and how to migrate your ArcSight SOAR automation to Microsoft Sentinel.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 05/03/2022
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security engineer, I want to migrate my ArcSight SOAR automation to Microsoft Sentinel so that analysts can leverage advanced incident handling and response capabilities.
@@ -34,7 +36,7 @@ Here’s what you need to think about when migrating SOAR use cases from ArcSigh
 
 ## Migrate SOAR workflow
 
-This section shows how key SOAR concepts in ArcSight translate to Microsoft Sentinel components, and provides general guidelines for how to migrate each step or component in the SOAR workflow.
+The following mapping shows how key SOAR concepts in ArcSight translate to Microsoft Sentinel components, and provides general guidelines for how to migrate each step or component in the SOAR workflow.
 
 :::image type="content" source="media/migration-arcsight-automation/arcsight-sentinel-soar-workflow.png" alt-text="Diagram displaying the ArcSight and Microsoft Sentinel SOAR workflows." border="false":::
 
@@ -44,7 +46,7 @@ This section shows how key SOAR concepts in ArcSight translate to Microsoft Sent
 |2 |Automatically filter alerts for case creation.     |Use [analytics rules](detect-threats-built-in.md) to trigger alerts. Enrich alerts using the [custom details feature](surface-custom-details-in-alerts.md) to create dynamic incident names.   |
 |3 |Classify cases. |Use [automation rules](automate-incident-handling-with-automation-rules.md). With automation rules, Microsoft Sentinel treats incidents according to the analytics rule that triggered the incident, and the incident properties that match defined criteria. |
 |4 |Consolidate cases. |You can consolidate several alerts to a single incident according to properties such as matching entities, alert details, or creation timeframe, using the alert grouping feature. |
-|5 |Dispatch cases. |Assign incidents to specific analysts using [an integration](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/automate-incident-assignment-with-shifts-for-teams/ba-p/2297549) between Microsoft Teams, Azure Logic Apps, and Microsoft Sentinel automation rules. |
+|5 |Dispatch cases. |Assign incidents to specific analysts using [automated incident assignment with Shifts for Teams](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/automate-incident-assignment-with-shifts-for-teams/ba-p/2297549) between Microsoft Teams, Azure Logic Apps, and Microsoft Sentinel automation rules. |
 
 ## Map SOAR components 
 
@@ -52,20 +54,20 @@ Review which Microsoft Sentinel or Azure Logic Apps features map to the main Arc
 
 |ArcSight  |Microsoft Sentinel/Azure Logic Apps  |
 |---------|---------|
-|Trigger     |[Trigger](/azure/logic-apps/logic-apps-overview)         |
+|Trigger     |[Logic Apps triggers overview](/azure/logic-apps/logic-apps-overview)         |
 |Automation bit     |[Azure Function connector](/azure/logic-apps/logic-apps-azure-functions)         |
-|Action     |[Action](/azure/logic-apps/logic-apps-overview)         |
+|Action     |[Logic Apps actions overview](/azure/logic-apps/logic-apps-overview)         |
 |Scheduled playbooks     |Playbooks initiated by the [recurrence trigger](/azure/connectors/connectors-native-recurrence)         |
 |Workflow playbooks     |Playbooks automatically initiated by Microsoft Sentinel [alert or incident triggers](playbook-triggers-actions.md)         |
-|Marketplace     |• [Automation > Templates tab](use-playbook-templates.md)<br>• [Content hub catalog](sentinel-solutions-catalog.md)<br>• [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser) |
+|Marketplace     |• [Automation > Templates tab](use-playbook-templates.md)<br>• [Content hub catalog](sentinel-solutions-catalog.md)<br>• [Microsoft Sentinel playbooks on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser) |
 
 ## Operationalize playbooks and automation rules in Microsoft Sentinel
 
-Most of the playbooks that you use with Microsoft Sentinel are available in either the [Automation > Templates tab](use-playbook-templates.md), the [Content hub catalog](sentinel-solutions-catalog.md), or [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser). In some cases, however, you might need to create playbooks from scratch or from existing templates.
+Most of the playbooks that you use with Microsoft Sentinel are available in either the [Automation > Templates tab](use-playbook-templates.md), the [Content hub catalog](sentinel-solutions-catalog.md), or [Microsoft Sentinel playbooks on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Block-OnPremADUser). In some cases, however, you might need to create playbooks from scratch or from existing templates.
 
 You typically build your custom logic app using the Azure Logic App Designer feature. The logic apps code is based on [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview), which facilitate development, deployment and portability of Azure Logic Apps across multiple environments. To convert your custom playbook into a portable ARM template, you can use the [ARM template generator](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/export-microsoft-sentinel-playbooks-or-azure-logic-apps-with/ba-p/3275898).
 
-Use these resources for cases where you need to build your own playbooks either from scratch or from existing templates.
+Use the following Microsoft Sentinel automation and playbook resources for cases where you need to build your own playbooks either from scratch or from existing templates.
 - [Automate incident handling in Microsoft Sentinel](automate-incident-handling-with-automation-rules.md)
 - [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md)
 - [Tutorial: Use playbooks with automation rules in Microsoft Sentinel](tutorial-respond-threats-playbook.md)

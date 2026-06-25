@@ -1,9 +1,10 @@
 ---
 title: Control the OT traffic monitored by Microsoft Defender for IoT
 description: Learn how to control the OT network traffic monitored by Microsoft Defender for IoT.
-ms.date: 10/11/2024
+ms.date: 06/12/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Control the OT traffic monitored by Microsoft Defender for IoT
@@ -20,15 +21,15 @@ After installing, activating, and configuring your OT network sensor, use the to
 
 Before performing the procedures in this article, you must have:
 
-- An OT network sensor [installed](ot-deploy/install-software-ot-sensor.md), [configured, and activated](ot-deploy/activate-deploy-sensor.md).
+- An OT network sensor [installed and set up](ot-deploy/install-software-ot-sensor.md), then [configured and activated](ot-deploy/activate-deploy-sensor.md).
 
 - Access to your OT network sensor as an **Admin** user.  For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
-This step is performed by your deployment teams.
+Installing, configuring, and activating the OT network sensor is performed by your deployment teams.
 
 ## Analyze your deployment
 
-After [onboarding](onboard-sensors.md) a new OT network sensor to Microsoft Defender for IoT, validate that your sensor is deployed correctly by analyzing the traffic being monitored.
+After [onboarding an OT network sensor](onboard-sensors.md) to Microsoft Defender for IoT, validate that your sensor is deployed correctly by analyzing the traffic being monitored.
 
 **To analyze your network**:
 
@@ -38,7 +39,7 @@ After [onboarding](onboard-sensors.md) a new OT network sensor to Microsoft Defe
 
 1. Each interface tab shows the following details:
 
-    - Connection status, indicated by a green or red connection icon in the tab name. For example, in the image above, the *eth1* interface shows as green, and is therefore connected.
+    - Connection status, indicated by a green or red connection icon in the tab name. For example, an interface tab shown in green, such as *eth1*, indicates that the interface is connected.
     - The total number of detected subnets and VLANs, shown at the top of the tab.
     - The protocols detected on each subnet.
     - The number of unicast addresses detected for each subnet.
@@ -52,9 +53,9 @@ If the traffic shown on the **Deployment** page isn't what you expect, you might
 
 After having analyzed the traffic your sensor is monitoring and fine tuning the deployment, you may need to further fine tune your subnet list. Use this procedure to ensure that your subnets are configured correctly.
 
-While your OT sensor automatically learns your network subnets during the initial deployment, we recommend analyzing the detected traffic and updating them as needed to optimize your map views and device inventory.
+While your OT sensor automatically learns your network subnets during the initial deployment, we recommend analyzing the detected traffic and updating the subnets as needed to optimize your map views and device inventory.
 
-Also use this procedure to also define subnet settings, determining how devices are displayed in the sensor's [device map](how-to-work-with-the-sensor-device-map.md) and the [Azure device inventory](device-inventory.md).
+Also use this procedure to also define subnet settings, determining how devices are displayed in the [OT sensor device map](how-to-work-with-the-sensor-device-map.md) and the [Azure device inventory](device-inventory.md).
 
 - **In the device map**, IT devices are automatically aggregated by subnet, where you can expand and collapse each subnet view to drill down as needed.
 - **In the Azure device inventory**, once the subnets have been configured, use the *Network location* (Public preview) filter to view *local* or *routed* devices as defined in your subnets list. All of the devices associated with the listed subnets are displayed as *local*, while devices associated with detected subnets not included in the list will be displayed as *routed*.
@@ -85,7 +86,7 @@ While the OT network sensor automatically learns the subnets in your network, we
     |**Segregated**     |   Select to show this subnet separately when displaying the device map according to Purdue level.  |
     | **Remove subnet** | Select to remove any subnets that aren't related to your IoT/OT network scope.|
 
-    In the subnet grid, subnets marked as **ICS subnet** are recognized as OT networks. This option is read-only in this grid, but you can [manually define a subnet as ICS](#manually-define-a-subnet-as-ics) if there's an OT subnet not being recognized correctly.
+    In the subnet grid, subnets marked as **ICS subnet** are recognized as OT networks. The **ICS subnet** setting is read-only in this grid, but you can [manually define a subnet as ICS](#manually-define-a-subnet-as-ics) if there's an OT subnet not being recognized correctly.
 
 1. When you're done, select **Save** to save your updates.
 
@@ -125,7 +126,7 @@ For example, you might want to assign a name to a nonreserved port that shows un
 
 Defender for IoT automatically assigns names to most universally reserved ports, such as DHCP or HTTP. However, you might want to customize the name of a specific port to highlight it, such as when you're watching a port with unusually high detected activity.
 
-Port names are shown in Defender for IoT when viewing device groups from the OT sensor's [device map](how-to-work-with-the-sensor-device-map.md), or when you create OT sensor reports that include port information.
+Port names are shown in Defender for IoT when viewing device groups from the [OT sensor device map](how-to-work-with-the-sensor-device-map.md), or when you create OT sensor reports that include port information.
 
 **To customize a port name:**
 
@@ -180,7 +181,7 @@ For more information, see [Configure reverse DNS lookup](configure-reverse-dns-l
 
 ### Test the DNS configuration
 
-Use a test device to verify that the reverse DNS lookup settings you'd defined work as expected.
+Use a test device to verify that the reverse DNS lookup settings configured in [Define DNS servers](#define-dns-servers) work as expected.
 
 1. On your sensor console, select **System settings** > **Network monitoring** and under **Active Discovery**, select **Reverse DNS Lookup**.
 

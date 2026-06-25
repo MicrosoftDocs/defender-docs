@@ -1,15 +1,16 @@
 ---
 title: Edit watchlists - Microsoft Sentinel
-description: Learn how to edit and add more items to Microsoft Sentinel watchlists to them to keep them up-to-date.
+description: Edit existing Microsoft Sentinel watchlists and add items to keep them current. Learn when to update a watchlist instead of deleting and recreating it.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 3/14/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to manage Microsoft Sentinel watchlists so that I can efficiently monitor and respond to potential threats.

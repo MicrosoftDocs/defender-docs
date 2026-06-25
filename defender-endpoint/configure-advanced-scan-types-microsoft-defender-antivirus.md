@@ -5,10 +5,10 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.reviewer: pahuijbr
 ms.subservice: ngp
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -17,14 +17,16 @@ ms.collection:
 - tier2
 - mde-ngp
 ms.topic: how-to
+ai-usage: ai-assisted
 ---
 
 # Configure Microsoft Defender Antivirus scanning options
 
+You can configure Microsoft Defender Antivirus to scan email storage files, reparse points, network files, and archived files (such as .zip files). You can configure these scanning options by using Microsoft Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI.
 
 ## Use Microsoft Intune to configure scanning options
 
-For more information, see [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
+You can configure Microsoft Defender Antivirus scanning options in Microsoft Intune by using device restriction profiles. For more information, see [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
 
 
 ## Prerequisites
@@ -50,13 +52,15 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 
 1. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
 
-1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**, and then select a location (refer to [Settings and locations](#settings-and-locations) in this article).
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**, and then select a location (refer to the [Settings and locations](#settings-and-locations) section).
 
 1. Edit the policy object.
 
 1. Select **OK**, and repeat for any other settings.
 
 ### Settings and locations
+
+The following table lists the available scanning policy settings, their Group Policy locations, and the corresponding PowerShell parameters.
 
 |Policy item and location|Default setting <br/>(if not configured)|PowerShell `Set-MpPreference` parameter <br/>or WMI property for `MSFT_MpPreference` class|
 |---|---|---|
@@ -110,6 +114,6 @@ If Microsoft Defender Antivirus detects a threat inside an email message, the fo
 
 ## Scanning mapped network drives
 
-On any OS, only the network drives that are mapped at system level, are scanned. User-level mapped network drives aren't scanned. User-level mapped network drives are those that a user maps in their session manually and using their own credentials.
+On all supported operating systems, only the network drives that are mapped at system level are scanned. User-level mapped network drives aren't scanned. User-level mapped network drives are those that a user maps in their session manually and using their own credentials.
 
 

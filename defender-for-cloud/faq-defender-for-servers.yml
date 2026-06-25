@@ -1,0 +1,197 @@
+### YamlMime:FAQ
+metadata:
+  title: Common questions - Defender for Servers
+  description: Get answers to frequently asked questions about Microsoft Defender for Servers.
+  ms.topic: faq
+  ms.service: defender-for-cloud
+  ms.date: 06/09/2026
+title: Common questions about Defender for Servers
+summary: Get answers to common questions about Microsoft Defender for Servers.
+
+
+sections:
+  - name: Pricing
+    questions:
+      - question: |
+          What servers do I pay for in a subscription?
+        answer: |
+          When you enable Defender for Servers on a subscription, you're charged for all machines based on their power states.
+
+          State | Details | Billing
+          --- | --- | ---
+          **Azure VMs** | | 
+          Starting | VM starting up. | Not billed
+          Running | Normal working state. | Billed
+          Stopping | Transitional. Moves to Stopped state when finished. | Billed
+          Stopped | VM shut down from within guest OS or by using PowerOff APIs. Hardware is still allocated, and the machine remains on the host. | Billed
+          Deallocating | Transitional. Moves to Deallocated state when finished. | Not billed
+          Deallocated | VM stopped and removed from the host. | Not billed 
+          **Azure Arc machines** | | 
+          Connecting | Servers connected, but heartbeat not yet received. | Not billed
+          Connected | Receiving regular heartbeat from Connected Machine agent. | Billed
+          Offline/Disconnected | No heartbeat received in 15-30 minutes. | Not billed
+          Expired | If disconnected for 45 days, status might change to Expired. | Not billed
+          **Direct onboarding (Defender for Endpoint only)** | | 
+          Sensor connected | Server is directly onboarded to Defender for Cloud through the Defender for Endpoint sensor connection model. | Billed per hour
+
+          If you already have standalone Microsoft Defender for Endpoint for Servers licenses, submit a support request to apply the billing adjustment and avoid double billing. For steps, see [Can I get a discount if I already have a Microsoft Defender for Endpoint license?](#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-).
+      
+      - question: |
+          What are the licensing requirements for Microsoft Defender for Endpoint?
+        answer: |
+          Licenses for Defender for Endpoint for Servers are included with Defender for Servers.
+
+      - question: |
+          Can I get a discount if I already have a Microsoft Defender for Endpoint license?
+        answer: |
+          If you already have a license for **Microsoft Defender for Endpoint for Servers**, you don't pay for that part of your Microsoft Defender for Servers Plan 1 (P1) or 2 (P2) license.
+
+          1. To request your discount, in the Azure portal, select **Support and Troubleshooting** > **Help + support**.
+          Select **Create a support request** and fill in the fields.
+
+              :::image type="content" source="media/faq-defender-for-servers/support-ticket-description.png" alt-text="Screenshot that shows the support ticket description with the information filled out.":::
+
+          1. In *Additional details*, enter details, tenant ID, the number of  Defender for Endpoint licenses that were purchased, the expiration date, and all other required fields.
+          1. Complete the process and select **Create**.
+        
+          The discount becomes effective starting on the approval date. It isn't retroactive.
+
+      - question: |
+          What's the free data ingestion allowance? 
+        answer: |
+          When Defender for Servers Plan 2 is enabled you get a free data ingestion allowance for specific data types. [Learn more](data-ingestion-benefit.md)
+
+  - name: Deployment
+    questions:
+      - question: |
+          Can I enable Defender for Servers on a subset of machines in a subscription?
+        answer: |
+          Yes you can enable Defender for Servers on specific resources in a subscription. Learn more about [planning deployment scope](plan-defender-for-servers-select-plan.md).
+
+      - question: |
+          How does Defender for Servers collect data?
+        answer: |
+          Learn about [data collection methods in Defender for Servers](plan-defender-for-servers-agents.md).
+
+      - question: |
+          Where does Defender for Servers store my data?
+        answer: |
+          Learn about [data residency for Defender for Cloud](plan-defender-for-servers-data-workspace.md). 
+
+      - question: |
+          Does Defender for Servers need a Log Analytics workspace?
+        answer: |
+          Defender for Servers Plan 1 doesn't depend on Log Analytics. In Defender for Servers Plan 2, you need a Log Analytics workspace to take advantage of the [free data ingestion benefit](data-ingestion-benefit.md). You also need a workspace to use [file integrity monitoring](file-integrity-monitoring-overview.md) in Plan 2.
+          If you do set up a Log Analytics workspace for the free data ingestion benefit, you need to [enable Defender for Servers Plan 2](data-ingestion-benefit.md#configure-a-workspace) directly on it.
+
+      - question: |
+          What if I have Defender for Servers enabled on a workspace but not on a subscription?
+        answer: |
+          The [legacy method for onboarding servers to Defender for Servers Plan 2](quickstart-onboard-machines.md) using a workspace and the Log Analytics agent is no longer supported or available in the portal. To ensure that machines that are currently connected to the workspace remain protected, do the following:
+
+          - **On-premises and multicloud machines**: If you previously onboarded on-premises and AWS/GCP machines using the legacy method, [connect these machines to Azure](/azure/azure-arc/servers/deployment-options) as Azure Arc-enabled servers to the subscription with Defender for Servers Plan 2 enabled.
+          - **Selected machines**: If you used the legacy method to enable Defender for Servers Plan 2 on individual machines, we recommend that you enable Defender for Server Plan 2 on the entire subscription. Then you can exclude specific machines using [resource-level configuration](plan-defender-for-servers-select-plan.md).
+
+      - question: |
+          Does disabling Defender for Servers Plan 2 automatically remove the plan from my workspace?
+        answer: |
+          Disabling the Defender for Servers Plan 2 on your subscription doesn't automatically disable the plan on your workspace. If Defender for Servers Plan 2 is enabled on a workspace, you need to manually disable it in the workspace settings to stop data collection and turn off the feature.
+          
+          Learn how to [disable the Defender for Servers plan](tutorial-enable-servers-plan.md#disable-defender-for-servers-on-a-subscription).
+  
+  - name: Defender for Endpoint integration
+    questions:
+      - question: |
+          Which Microsoft Defender for Endpoint plan is supported in Defender for Servers?
+        answer: |
+          Defender for Servers Plan 1 and Plan 2 provides the capabilities of [Microsoft Defender for Endpoint Plan 2](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint), including endpoint detection and response (EDR).
+  
+      - question: |
+          Do I need to buy a separate anti-malware solution for my machines?
+        answer: |
+          No.  With Defender for Endpoint integration in Defender for Servers, you'll also get malware protection on your machines. In addition, Defender for Servers Plan 2 provides [agentless malware scanning](agentless-malware-scanning.md).
+
+          On new Windows Server operating systems, Microsoft Defender Antivirus is part of the operating system and will be enabled in *active mode*. For machines running Windows Server with the Defender for Endpoint unified solution integration enabled, Defender for Servers deploys [Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows) in *active mode*. On Linux, Defender for Servers deploys Defender for Endpoint including the anti-malware component, and set the component in *passive mode*.
+                      
+      - question: |
+          How do I switch from a non-Microsoft EDR tool?
+        answer: |
+          Full instructions for switching from a non-Microsoft endpoint solution are available in the Microsoft Defender for Endpoint documentation: [Migration overview](/windows/security/threat-protection/microsoft-defender-atp/switch-to-microsoft-defender-migration).
+
+      - question: |
+          What's the "MDE.Windows" / "MDE.Linux" extension running on my machines?
+        answer: |
+          When you turn on the Defender for Servers plan in a subscription, the native Defender for Endpoint integration in Defender for Cloud automatically deploys the Defender for Endpoint agent on supported machines in the subscription as needed. Automatic onboarding installs the MDE.Windows/MDE.Linux extension.
+
+          If the extension isn't showing, check that the machine meets the [prerequisites](enable-defender-for-endpoint.md#prerequisites), and that Defender for Servers is enabled.
+
+          > [!IMPORTANT]
+          > If you delete the **MDE.Windows**/**MDE.Linux** extension, it won't remove Microsoft Defender for Endpoint. Learn about [offboard Windows servers from Defender for Endpoint](/defender-endpoint/configure-server-endpoints#offboard-windows-servers).
+
+  - name: Machine support and scanning
+    questions:
+      - question: |
+          What types of virtual machines do Defender for Servers support?
+        answer: |
+          Review [Windows](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux](/defender-endpoint/microsoft-defender-endpoint-linux) machines that are supported for Defender for Endpoint integration.
+        
+      - question: |
+          How often does Defender for Cloud scan for operating system vulnerabilities, system updates, and endpoint protection issues?
+        answer: |
+          System updates interpretation occurs every 12 hours and every 24 hours for agentless endpoint protection platform.
+ 
+          Defender for Cloud typically scans for new data every hour, and refreshes security recommendations accordingly.
+
+      - question: |
+          What is endpoint protection platform (EPP)?
+        answer: |
+          Microsoft Defender for Servers, EPP refers to the core set of security capabilities that protect endpoints (like servers) from threats. These capabilities are typically delivered through Microsoft Defender for Endpoint.
+
+          When you enable Microsoft Defender for Servers, it integrates with Microsoft Defender for Endpoint to provide EPP capabilities. This integration allows Defender for Cloud to access data about vulnerabilities, installed software, and alerts from your endpoints.
+      
+      - question: |
+          How are VM snapshots collected by agentless scanning secured?
+        answer: |
+          Agentless scanning protects disk snapshots according to Microsoft's highest security standards. Security measures include:
+
+          - Data is encrypted at rest and in-transit.
+          - Snapshots are immediately deleted when the analysis process is complete.
+          - Snapshots remain within their original AWS or Azure region. EC2 snapshots aren't copied to Azure.
+          - Isolation of environments per customer account/subscription.
+          - Only metadata containing scan results is sent outside the isolated scanning environment.
+          - All operations are audited.
+
+      - question: |
+          What is the auto-provisioning feature for vulnerability scanning with a "bring your own license" (BYOL) solution? Can it be applied on multiple solutions?
+        answer: |
+          Defender for Servers can scan machines to see if they have an EDR solution enabled. If they don't, you can use Microsoft Defender Vulnerability Management that's integrated by default into Defender for Cloud. As an alternative, Defender for Cloud can deploy a supported non-Microsoft BYOL vulnerability scanner. You can only use a single BYOL scanner. Multiple non-Microsoft scanners aren't supported.
+
+      - question: | 
+          Does the integrated Defender for Vulnerability Management scanner find network vulnerabilities?
+        answer: | 
+          No, it only finds vulnerabilities on the machine itself.
+
+      - question: |
+          Why do I get the message "Missing scan data" for my VM?
+        answer: |
+          This message appears when there's no scan data for a VM. It takes around an hour or less to scan data after a data collection method is enabled. After the initial scan, you might receive this message because there's no scan data available. For example, scans don't populate for a VM that's stopped. This message might also appear if scan data hasn't populated recently.
+
+      - question: |
+          Why is a machine shown as not applicable?
+        answer: |
+          The list of resources in the **Not applicable** tab includes a **Reason** column
+
+          | Reason                                                            | Details                                                                                                                                                                        |
+          |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+          | **No scan data available on the machine**                         | There aren't any compliance results for this machine in Azure Resource Graph. All compliance results are written to Azure Resource Graph by the Azure machine configuration extension. You can check the data in Azure Resource Graph using the [sample Resource Graph queries][(/azure/governance/policy/samples/resource-graph-samples?tabs=azure-cli#azure-policy-guest-configuration).|
+          | **Azure machine configuration extension isn't installed on the machine** | The machine is missing the extension, which is a prerequisite for assessing compliance against the Microsoft Cloud Security Baseline.                               |
+          | **System managed identity isn't configured on the machine**      | A system-assigned, managed identity must be deployed on the machine.                                                                                                           |
+          | **The recommendation is disabled in policy**                      | The policy definition that assesses the OS baseline is disabled on the scope that includes the 
+
+    
+    
+additionalContent: |
+
+  ## Next steps
+  
+  [Plan Defender for Servers deployment](plan-defender-for-servers.md)
