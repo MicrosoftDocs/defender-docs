@@ -67,7 +67,7 @@ Once the Defender CSPM plan is enabled on your subscription, you have the abilit
 
 - **[Serverless protection](serverless-protection.md)** - Detects and assesses serverless resources such as Azure Web Apps, Azure Functions, and AWS Lambda for security risks without requiring agents to be installed. It identifies misconfigurations, vulnerabilities, and insecure dependencies, providing remediation guidance to improve security posture.
 
-- **[Serverless Containers](posture-for-serverless-containers.md)** - Assesses Azure Container Apps, Azure Container Instances, and AWS ECS on Fargate workloads in Defender CSPM experiences such as inventory, recommendations, and attack path analysis.
+- **[Serverless Containers](posture-for-serverless-containers.md)** - Assesses Azure Container Apps, Azure Container Instances, and AWS ECS on Fargate workloads in Defender CSPM experiences such as inventory, recommendations, and attack path analysis. To get full access to all Serverless Containers features, enable **Registry access** in the Defender CSPM plan settings.
 
 **To enable the components of the Defender CSPM plan**:
 

@@ -31,6 +31,7 @@ This capability is discovery and posture focused. It is designed for serverless 
 To use discovery and posture for serverless container workloads:
 
 - Enable [Defender CSPM](tutorial-enable-cspm-plan.md).
+- For full access to all Serverless Containers features, enable **Registry access** in Defender CSPM plan settings.
 - Make sure supported workloads are present in your connected environments.
 - Use a role with the required permissions:
   - **Security Reader** to view findings and posture state.
