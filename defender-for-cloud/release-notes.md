@@ -127,7 +127,7 @@ Microsoft Defender for Cloud now includes discovery and posture coverage for sup
 
 This capability adds inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps and Azure Container Instances.
 
-Learn more about [Discovery and posture for serverless container workloads](posture-for-serverless-containers.md).
+Learn more about [Discovery and posture for serverless container workloads (Preview)](posture-for-serverless-containers.md).
 
 ### Kubernetes misconfiguration enforcement in Defender for Containers (Preview)
 
