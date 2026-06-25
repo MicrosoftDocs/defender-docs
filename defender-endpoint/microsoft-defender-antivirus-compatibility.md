@@ -171,7 +171,7 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 | [Threat remediation](configure-remediation-microsoft-defender-antivirus.md) | Yes |[See note 3](#notes-about-protection-states) | No |
 | [Security intelligence updates](microsoft-defender-antivirus-updates.md) | Yes | Yes <br/>[See note 4](#notes-about-protection-states) | No |
 | [Data Loss Prevention](/Microsoft-365/compliance/endpoint-dlp-learn-about) | Yes | Yes | No |
-| [Controlled folder access](controlled-folders.md) | Yes |No | No |
+| [Controlled folder access (CFA)](controlled-folder-access-overview.md) | Yes |No | No |
 | [Web content filtering](web-content-filtering.md) | Yes | [See note 5](#notes-about-protection-states) | No |
 | [Device control](device-control-report.md) | Yes | Yes | No |
 | [PUA protection](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) | Yes | No | No |

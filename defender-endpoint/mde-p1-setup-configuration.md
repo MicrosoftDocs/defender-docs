@@ -156,7 +156,7 @@ Attack surface reduction is all about reducing the places and ways your organiza
 |Feature/capability|Description|
 |---|---|
 |[Attack surface reduction (ASR) rules](#attack-surface-reduction-asr-rules)|ASR rules target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes).|
-|[Ransomware mitigation](#ransomware-mitigation)|Set up ransomware mitigation by configuring controlled folder access, which helps protect your organization's valuable data from malicious apps and threats, such as ransomware.|
+|[Ransomware mitigation](#ransomware-mitigation)|Set up ransomware mitigation by configuring controlled folder access (CFA), which helps protect your organization's valuable data from malicious apps and threats, such as ransomware.|
 |[Device control](#device-control)|Configure device control settings for your organization to allow or block removable devices (such as USB drives).|
 |[Network protection](#network-protection)|Set up network protection to prevent people in your organization from using applications that access dangerous domains or malicious content on the Internet.|
 |[Web protection](#web-protection)|Set up web threat protection to protect your organization's devices from phishing sites, exploit sites, and other untrusted or low-reputation sites. Set up web content filtering to track and regulate access to websites based on their content categories (such as Leisure, High bandwidth, Adult content, or Legal liability).|
@@ -173,11 +173,11 @@ Typically, you can enable the [standard protection rules](attack-surface-reducti
 
 ### Ransomware mitigation
 
-You get ransomware mitigation through [controlled folder access](controlled-folders.md#what-is-controlled-folder-access), which allows only trusted apps to access protected folders on your endpoints.
+You get ransomware mitigation through [controlled folder access](controlled-folder-access-overview.md), which allows only trusted apps to access protected folders on your endpoints.
 
 To configure controlled folder access in Intune, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies). Use the **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications** settings in the policy.
 
-For more information, see [Protect important folders with controlled folder access](controlled-folders.md).
+For more information, see [Controlled folder access (CFA) overview](controlled-folder-access-overview.md).
 
 ### Device control
 
