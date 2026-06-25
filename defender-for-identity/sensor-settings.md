@@ -1,10 +1,10 @@
 ---
 title: Manage and update sensors
 description: Learn how to view, manage, and update Microsoft Defender for Identity sensors in the Microsoft Defender portal, including sensor health, migration state, and delayed updates.
-ms.date: 03/18/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
   - msecd-doc-authoring-106
   - sfi-image-nochange
 ai-usage: ai-assisted
@@ -17,6 +17,8 @@ ai-usage: ai-assisted
 This article explains how to view, manage, and update Defender for Identity sensors in the Microsoft Defender portal.
 
 ## View sensor settings and status
+
+To view sensor settings and status in the Microsoft Defender portal, perform the following steps:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Identities**.
 1. In the left sidebar, under **Deployment**, select **On-premises**.
@@ -35,7 +37,8 @@ The **Sensors** tab shows all Defender for Identity sensors deployed in your env
 
 Select a sensor row to open a details pane with information about the sensor and its health status. From the details pane, you can select **Manage sensor** to update sensor configuration, or select a health issue to see more details and reopen closed issues.
 
-## Sensor details
+<a name="sensor-details"></a>
+## Sensor status and property details
 
 The **Sensors** tab shows the following columns. For columns with multiple possible values, see the tables below.
 
@@ -51,7 +54,8 @@ The **Sensors** tab shows the following columns. For columns with multiple possi
 - **Health status**: The overall health of the sensor based on the highest severity open health issue. For possible values, see [Health status](#health-status).
 - **Created**: The date the sensor was installed.
 
-### Type
+<a name="type"></a>
+### Sensor type
 
 The type column indicates the sensor type based on the server role where the sensor is installed. If a sensor is installed on a domain controller that also runs Entra Connect or AD CS, the type shows as **Domain controller sensor**.
 
@@ -63,7 +67,8 @@ The type column indicates the sensor type based on the server role where the sen
 | **Entra Connect sensor** | Installed on a Microsoft Entra Connect server. |
 | **ADCS sensor** | Installed on an Active Directory Certificate Services (AD CS) server. |
 
-### Migration state
+<a name="migration-state"></a>
+### Sensor migration state
 
 The migration state column shows if the sensor is eligible for [migration from v2.x to v3.x](deploy/migrate-to-sensor-v3.md).
 
@@ -85,7 +90,8 @@ For the full list of v3.x requirements, see [Defender for Identity sensor v3.x p
 | **Up to date** | The migration completed successfully. The server is running sensor v3.x. |
 | **Migration failed** | The migration encountered an error. You can retry the migration. |
 
-### Service status
+<a name="service-status"></a>
+### Sensor service status
 
 The service status column indicates the current operational state of the sensor service on the server.
 
@@ -97,7 +103,8 @@ The service status column indicates the current operational state of the sensor 
 | **Stopped** | The sensor service is stopped. |
 | **Unknown** | The sensor is disconnected or unreachable. |
 
-### Sensor status
+<a name="sensor-status"></a>
+### Sensor status values
 
 The sensor status column indicates the current update and configuration state of the sensor software.
 
@@ -113,7 +120,8 @@ The sensor status column indicates the current update and configuration state of
 | **Disconnected** | No communication from this sensor in 10 minutes. |
 | **Unreachable** | The domain controller was deleted from Active Directory, but the sensor wasn't uninstalled before decommissioning. You can safely delete this entry. |
 
-### Health status
+<a name="health-status"></a>
+### Sensor health status
 
 The health status column indicates the overall health of the sensor based on the severity of any open health issues.
 
@@ -128,7 +136,7 @@ The health status column indicates the overall health of the sensor based on the
 
 Defender for Identity sensor v3.x is delivered as a component of Microsoft Defender for Endpoint and is updated automatically through Windows Updates. No manual sensor update process is required for v3.x sensors.
 
-The rest of this section applies only to Defender for Identity sensor v2.x.
+The following sensor update information applies only to Defender for Identity sensor v2.x.
 
 ### Defender for Identity sensor v2.x update types
 
@@ -196,6 +204,8 @@ Use the following command to silently update the Defender for Identity v2.x sens
 
 **Syntax**:
 
+The following command shows the basic syntax for running the sensor installer silently or interactively:
+
 ```cmd
 "Azure ATP sensor Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"]
 ```
@@ -212,7 +222,7 @@ Use the following command to silently update the Defender for Identity v2.x sens
 
 **Examples**:
 
-To update the Defender for Identity sensor silently:
+The following example runs the sensor installer silently from the command line without user interaction:
 
 ```cmd
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
@@ -233,7 +243,7 @@ Learn more about [asset management rules](/defender-xdr/configure-asset-rules).
 
 We recommend that you configure initial proxy settings during silent installation [using command line switches](deploy/install-sensor.md#perform-a-defender-for-identity-silent-installation). If you need to update your proxy settings later on, use either the [CLI](deploy/configure-proxy.md#change-proxy-configuration-using-the-cli) or [PowerShell](deploy/configure-proxy.md#change-proxy-configuration-using-powershell).
 
-If you'd previously configured your proxy settings via either WinINet or a registry key and need to update them, you'll need to [use the same method](deploy/configure-proxy.md#change-proxy-configuration-using-legacy-methods) you used originally.
+If you'd previously configured your proxy settings via either WinINet or a registry key and need to update them, you'll need to [use the legacy proxy configuration method](deploy/configure-proxy.md#change-proxy-configuration-using-legacy-methods) you used originally.
 
 For more information, see [Configure endpoint proxy and internet connectivity settings](deploy/configure-proxy.md).
 

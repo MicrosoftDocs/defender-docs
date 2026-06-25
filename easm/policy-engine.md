@@ -4,11 +4,13 @@ description: Automate inventory curation by leveraging the policy engine to proa
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/18/2024
+ms.date: 06/15/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# Policy engine automation
+# Create and manage policies with policy engine automation
 
 The policy engine enables Defender External Attack Surface Management (Defender EASM) users to automate certain actions based on predetermined parameters. You can elect to label assets or change their states based on highly flexible query parameters to automate the curation of your attack surface. Once defined, policies run automatically to ensure that your inventory is categorized according to your specific needs on a recurrent basis.  With the policy engine, you can apply business context to your inventory in bulk with minimal manual effort with the following actions:
 
@@ -19,11 +21,11 @@ The policy engine enables Defender External Attack Surface Management (Defender 
 
 ## Access and understand policies
 
-To quickly access policy information, navigate to the dedicated Policies page in your Defender EASM resource. This page can be found under the **Manage** section of the left-hand navigation pane.
+To quickly access policy information, navigate to the dedicated Policies page in your Defender EASM resource. The Policies page is located under the **Manage** section of the left-hand navigation pane.
 
-[![Screenshot of Policies page with left-hand navigation option highlighted.](media/policies-1.png)](media/policies-1.png#lightbox)
+[![Screenshot of Defender EASM navigation with Policies selected under Manage.](media/policies-1.png)](media/policies-1.png#lightbox)
 
-This page displays a list of all active policies in your Defender EASM resource. This list view provides immediate access to key information about each policy, including:
+The Policies page displays a list of all active policies in your Defender EASM resource. The policy list view provides immediate access to key information about each policy, including:
 
 - **Policy:** The designated name for the policy.
 - **Description:** The designated description for the policy, providing more context about the configuration and intended business value.
@@ -33,9 +35,11 @@ This page displays a list of all active policies in your Defender EASM resource.
 - **Created on:** The date that the policy was first created.
 - **Affected assets:** A count of all assets that were updated in accordance with the policy. Clicking the numerical count routes you to the inventory list view, filtered to display only the assets that match the underlying quer(ies) that power the policy.
 
- [![Screenshot of visible metadata in columns on Policies page.](media/policies-2.png)](media/policies-2.png#lightbox)
+ [![Screenshot of the Policies page showing policy list columns including name, description, query, action, created by, created on, and affected assets.](media/policies-2.png)](media/policies-2.png#lightbox)
 
 ## Create a policy
+
+To create a policy in your Defender EASM resource, perform the following steps:
 
 1. Navigate to the Policies page by selecting **Policies** from the **Manage** section of the left-hand navigation pane within your Defender EASM resource.
 2. Select **+ Add Policy**. This action opens a right-hand pane to configure the policy.

@@ -167,7 +167,7 @@ Typically, you get Microsoft Defender Antivirus updates from Windows update once
 
 Exploit protection provides features that help protect devices from known malicious behaviors and attacks on vulnerable technologies. Controlled folder access protects sensitive data in specific folders by preventing untrusted apps from writing to those locations.
 
-- **Prevent malicious and suspicious apps (such as ransomware) from making changes to protected folders with [controlled folders](controlled-folders.md)**:
+- **Prevent malicious and suspicious apps (such as ransomware) from making changes to protected folders with [controlled folder access (CFA)](controlled-folder-access-overview.md)**:
 
   ```powershell
   Set-MpPreference -EnableControlledFolderAccess Enabled

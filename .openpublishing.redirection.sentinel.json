@@ -3481,16 +3481,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/sentinel/normalization-create-parsers-ai-agent.md",
-      "redirect_url": "/azure/sentinel/isv/normalization-create-parsers-ai-agent",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/sentinel/normalization-develop-parsers.md",
-      "redirect_url": "/azure/sentinel/isv/normalization-develop-parsers",
-      "redirect_document_id": false
-    },
-    {
       "source_path_from_root": "/sentinel/publish-sentinel-solutions.md",
       "redirect_url": "/azure/sentinel/isv/publish-sentinel-solutions",
       "redirect_document_id": false

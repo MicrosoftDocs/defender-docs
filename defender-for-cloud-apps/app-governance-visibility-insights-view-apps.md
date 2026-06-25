@@ -1,5 +1,5 @@
 ---
-title: View your app details with app governance | Microsoft Defender for Cloud Apps
+title: View your OAuth app details with app governance | Microsoft Defender for Cloud Apps
 ms.date: 06/16/2026
 ms.topic: how-to
 description: Learn how to view app details with app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
@@ -8,7 +8,7 @@ ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 ai-usage: ai-assisted
 ---
 
-# View your app details with app governance
+# View your OAuth app details with app governance
 
 Use app governance to gain visibility and meaningful insights on your app ecosystem.
 

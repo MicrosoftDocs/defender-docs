@@ -9,12 +9,13 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: Users can learn how to view and manage quarantined email messages in Microsoft 365 that were meant to be delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 05/19/2026
+ms.date: 06/15/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -52,7 +53,7 @@ As an ordinary user (not an admin), the **default** capabilities that are availa
 |**Mail flow rules (transport rules)**||||
 |&nbsp;&nbsp;&nbsp;Mail flow rules that quarantine email messages (directly, not by marking them as spam).||||
 
-In [supported protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), _quarantine policies_ define what users are allowed to do to quarantined messages based on why the message was quarantined. Default quarantine policies enforce the historical capabilities for messages as described in the previous table. Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
+In [supported protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), _quarantine policies_ define what users are allowed to do to quarantined messages based on why the message was quarantined. Default quarantine policies enforce the historical capabilities for messages as described in the default user quarantine capabilities table at the beginning of this article. Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 You view and manage your quarantined messages in the Microsoft Defender portal or (if an admin set it up) quarantine notifications from quarantine policies.
 
@@ -173,6 +174,8 @@ After you find a specific quarantined message, select the message to view detail
 
 #### View quarantined message details
 
+To view the details of a quarantined message, perform the following steps:
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
 2. On the **Email** tab, select the quarantined message by clicking anywhere in the row other than the check box.
@@ -213,6 +216,8 @@ To take action on the message, see the next section.
 
 ### Take action on quarantined email
 
+To take action on a quarantined email message, use the following steps:
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
 2. On the **Email** tab, select the quarantined email message by using either of the following methods:
@@ -227,7 +232,7 @@ To take action on the message, see the next section.
 
    Using either method to select the message, some actions are available under :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More** or **More options**.
 
-After you select the quarantined message, the available actions are described in the following subsections.
+After you select the quarantined message, the available actions are: [Release quarantined email](#release-quarantined-email), [Request the release of quarantined email](#request-the-release-of-quarantined-email), [Delete email from quarantine](#delete-email-from-quarantine), [Preview email from quarantine](#preview-email-from-quarantine), [View email message headers](#view-email-message-headers), [Allow email senders from quarantine](#allow-email-senders-from-quarantine), [Block email senders from quarantine](#block-email-senders-from-quarantine), and [Take action on multiple quarantined email messages](#take-action-on-multiple-quarantined-email-messages).
 
 > [!TIP]
 > On mobile devices, the action experience is slightly different:
@@ -242,6 +247,8 @@ After you select the quarantined message, the available actions are described in
 
 #### Release quarantined email
 
+If your quarantine policy allows it, you can release a quarantined email message to deliver it to your mailbox.
+
 > [!NOTE]
 > The quarantine policy assigned to the verdict that quarantined the message controls your ability to view quarantined messages. The quarantine policy might be the default quarantine policy as described in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
 >
@@ -249,7 +256,7 @@ After you select the quarantined message, the available actions are described in
 >
 > If the Release button is greyed out, this is an expected behavior. Some quarantined messages can't be released by users, based on the quarantine reason or assigned quarantine policy. In such cases, you can only request release, or an admin must release the message.
 
-This action isn't available for released email messages (the **Release status** value is **Released**).
+The **Release** action isn't available for released email messages (the **Release status** value is **Released**).
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
@@ -273,12 +280,14 @@ The message is delivered to your Inbox (or some other folder, depending on any [
 
 #### Request the release of quarantined email
 
+If your quarantine policy doesn't allow you to directly release a message, you can request that an admin release it.
+
 > [!NOTE]
 > The quarantine policy for the protection feature that quarantined the message controls your ability to request the release of quarantined messages.
 >
 > A quarantine policy can allow you to release a message or request the release of a message, but both options aren't available for the same message. A quarantine policy can also prevent you from releasing or requesting the release of quarantined messages.
 
-This action isn't available for email messages where you already requested release (the **Release status** value is **Released requested**).
+The **Request release** action isn't available for email messages where you already requested release (the **Release status** value is **Released requested**).
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
@@ -336,10 +345,10 @@ Select the **Microsoft Message Header Analyzer** link to analyze the header fiel
 
 #### Allow email senders from quarantine
 
+The **Allow sender** action adds the message sender to the Safe Senders list in your mailbox. For more information about allowing senders, see [Add recipients of my email messages to the Safe Senders List](https://support.microsoft.com/office/be1baea0-beab-4a30-b968-9004332336ce).
+
 > [!TIP]
 > If the sender is already in your [Junk email filter lists](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089), **Allow sender** isn't available.
-
-The **Allow sender** action adds the message sender to the Safe Senders list in your mailbox. For more information about allowing senders, see [Add recipients of my email messages to the Safe Senders List](https://support.microsoft.com/office/be1baea0-beab-4a30-b968-9004332336ce).
 
 After you select the message, use either of the following methods to add the message sender to the Safe Senders list in your mailbox:
 
@@ -447,7 +456,7 @@ In the details flyout that opens, the following information is available:
   - **Recipients**
   - **Teams message ID**
 
-To take action on the message, see the next section.
+To take action on the message, see [Take action on quarantined messages in Microsoft Teams](#take-action-on-quarantined-messages-in-microsoft-teams).
 
 ### Take action on quarantined messages in Microsoft Teams
 

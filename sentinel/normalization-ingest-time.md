@@ -60,7 +60,7 @@ The stub parser presents a view to the calling query that adds to the ASIM nativ
 
 When using custom normalized tables, create your own stub parser to implement this functionality, and add it to the unifying parsers as discussed in [Manage Parsers](normalization-manage-parsers.md). Use the stub parser for the native table, such as the [DNS native table stub parser](https://github.com/Azure/Azure-Sentinel/blob/master/Parsers/ASimDns/Parsers/ASimDnsNative.yaml) and its [filtering counterpart](https://github.com/Azure/Azure-Sentinel/blob/master/Parsers/ASimDns/Parsers/vimDnsNative.yaml), as a starting point. If your table is semi-normalized, use the stub parser to perform the additional parsing and normalization needed.
 
-Learn more about writing parsers in [Developing ASIM parsers](isv/normalization-develop-parsers.md).
+Learn more about writing parsers in [Developing ASIM parsers](normalization-develop-parsers.md).
 
 ## Implementing ingest time normalization
  

@@ -1,15 +1,19 @@
 ---
 title: Manage reports | Microsoft Defender for Identity
 description: Learn how to download and schedule Microsoft Defender for Identity reports from Microsoft Defender XDR.
-ms.date: 12/20/2023
+ms.date: 06/15/2026
 ms.topic: how-to
 #CustomerIntent: As a Defender for Identity admin, I want to understand how to generate and schedule reports for activity detected in my environment.
 ms.reviewer: LiorShapiraa
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)
 
-Microsoft Defender XDR provides Defender for Identity reports, which you can either generate on demand or configure to be sent periodically by email.
+## Overview
+
+Microsoft Defender XDR provides Defender for Identity reports, which you can either generate on demand or configure to be sent periodically by email. This article explains how to access, download, and schedule Defender for Identity reports in Microsoft Defender XDR. Available reports cover system activity summaries, modifications to sensitive groups, and passwords exposed in cleartext, helping you monitor identity-related risks in your environment.
 
 ## Access Defender for Identity reports in Microsoft Defender XDR
 
@@ -55,12 +59,14 @@ To define a schedule for a report to be sent to you by email:
 
     1. The **Finish** page shows a confirmation message. Select **Close** to close the wizard.
     
-Once the scheduling is configured, repeat this procedure to edit the scheduled time or recipients.
+Once the scheduling is configured, repeat the schedule report procedure to edit the scheduled time or recipients.
 
 ### Remove all scheduled reports
 
 To remove a scheduled report and stop it from being sent:
 
+> [!WARNING]
+> Resetting the schedule stops future email delivery for this report until you configure a new schedule.
 
 1. In Microsoft Defender XDR, select **Reports** > **Identities** > **Reports management**.
 

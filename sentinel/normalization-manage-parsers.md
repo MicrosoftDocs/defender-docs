@@ -37,7 +37,7 @@ This article guides you through managing your parsers.
 
 The procedures in this article assume that all source-specific parsers have already been deployed to your Microsoft Sentinel workspace. 
 
-For more information, see [Develop ASIM parsers](isv/normalization-develop-parsers.md#deploy-parsers).
+For more information, see [Develop ASIM parsers](normalization-develop-parsers.md#deploy-parsers).
 
 ## Manage built-in unifying parsers
 
@@ -131,7 +131,7 @@ Learn more about ASIM parsers:
 
 - [ASIM parsers overview](normalization-parsers-overview.md)
 - [Use ASIM parsers](normalization-about-parsers.md)
-- [Develop custom ASIM parsers](isv/normalization-develop-parsers.md)
+- [Develop custom ASIM parsers](normalization-develop-parsers.md)
 - [The ASIM parsers list](normalization-parsers-list.md)
 
 Learn more about the ASIM in general: 

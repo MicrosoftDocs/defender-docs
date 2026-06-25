@@ -9,9 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create and manage landing pages for simulated phishing attacks in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/14/2024
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Landing pages in Attack simulation training
@@ -30,7 +32,7 @@ To see the available landing pages, open the Microsoft Defender portal at <https
 The following information is shown for each landing page. You can sort the landing pages by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Name**
-- **⋮** (**Actions** control): Take action on the landing page. The available actions depend on the **Status** value of the landing page as described in the procedure sections.
+- **⋮** (**Actions** control): Take action on the landing page. The available actions depend on the **Status** value of the landing page as described in the [Create landing pages](#create-landing-pages), [Modify landing pages](#modify-landing-pages), [Copy landing pages](#copy-landing-pages), and [Remove landing pages](#remove-landing-pages) sections.
 - **Language**: One or more of the following values: **German**, **English**, **Spanish**, **French**, **Italian**, **Japanese**, **Korean**, **Dutch**, **Portuguese**, **Russian**, **Chinese (Simplified)**, and **Chinese (Traditional, Taiwan)**.
 - **Default language**
 - **Status**: **Ready** or **Draft**.
@@ -74,6 +76,8 @@ In custom landing pages only, an **Edit landing page** link is available at the 
 > To see details about other landing pages without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 ## Create landing pages
+
+To create a custom landing page, follow these steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> and then select **Phish landing pages**. To go directly to the **Content library** tab where you can select **Phish landing pages**, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 
@@ -154,7 +158,7 @@ To modify an existing custom landing page on the **Tenant landing pages** tab, d
 - Select **⋮** (**Actions**) next to the **Name** value of the landing page, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 - Select the landing page from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select **Edit landing page** at the bottom of the flyout.
 
-The landing page wizard opens with the settings and values of the selected landing page. The steps are the same as described in the [Create landing pages](#create-landing-pages) section.
+The landing page wizard opens with the settings and values of the selected landing page. The wizard uses the same steps as creating a landing page: define details, configure content and translations, review, and submit. For details, see [Create landing pages](#create-landing-pages).
 
 ## Copy landing pages
 
@@ -167,14 +171,17 @@ When you copy a custom landing page on the **Tenant landing pages** tab, a copy 
 
 When you copy a built-in landing page on the **Global landing pages** tab, a **Create copy** dialog appears. The dialog confirms that a copy of the landing page has been created, and is available on the **Tenant landing pages** tab. If you select **Go to Tenant landing page** you're taken to the **Tenant landing pages** tab, where the copied built-in landing page is named "\<OriginalName\> - Copy" is available. If you select **Stay here** in the dialog, you return to the **Global landing pages** tab.
 
-After the copy is created, you can modify it as [previously described](#modify-landing-pages).
+After the copy is created, you can modify it as described in [Modify landing pages](#modify-landing-pages).
 
 > [!TIP]
 > When you're creating or editing a landing page, the **Use from default** control on the **Text** tab of the **Add content in default language** step in the landing page wizard also allows you to copy the contents of a built-in landing page.
 
 ## Remove landing pages
 
-You can't remove built-in landing pages from the **Global landing pages** tab. You can only remove custom landing pages on the **Tenant landing pages** tab. When you delete a landing page, all translations of the landing page are deleted.
+You can't remove built-in landing pages from the **Global landing pages** tab. You can only remove custom landing pages on the **Tenant landing pages** tab.
+
+> [!WARNING]
+> When you delete a landing page, all translations of the landing page are also deleted.
 
 To remove an existing custom landing page from the **Tenant landing pages** tab, do one of the following steps:
 
@@ -183,7 +190,8 @@ To remove an existing custom landing page from the **Tenant landing pages** tab,
 
 In the confirmation dialog that opens, select **Delete**.
 
-## Related links
+<a name="related-links"></a>
+## Related content
 
 [Get started using Attack simulation training](attack-simulation-training-get-started.md)
 

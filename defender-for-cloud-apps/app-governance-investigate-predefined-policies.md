@@ -1,5 +1,5 @@
 ---
-title: Investigate predefined app governance policy alerts | Microsoft Defender for Cloud Apps 
+title: Investigate predefined OAuth app policy alerts with app governance | Microsoft Defender for Cloud Apps 
 ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: shragar
@@ -8,7 +8,7 @@ ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
 ---
 
-# Investigate predefined app policy alerts
+# Investigate predefined OAuth app policy alerts
 
 App governance provides predefined app policy alerts for anomalous activities. The purpose of this guide is to provide you with general and practical information on each alert, to help with your investigation and remediation tasks. 
 

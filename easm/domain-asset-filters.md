@@ -5,13 +5,15 @@ description: This article outlines the filter functionality available in Microso
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 12/14/2022
+ms.date: 06/15/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Domain asset filters
 
-These filters specifically apply to domain assets. Use these filters when searching for a specific subset of domain assets.  
+This article lists the filters that specifically apply to domain assets in Microsoft Defender External Attack Surface Management. Use these filters to refine your inventory searches and locate a specific subset of domain assets. Each filter entry describes the filter's purpose, provides example values, and lists the applicable operators. Some filters offer predefined values from a drop-down list, while others require you to manually enter a value.
 
 ## Defined value filters  
 

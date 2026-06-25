@@ -46,8 +46,8 @@ The following table lists the available demonstrations alphabetically, with thei
 |[App reputation demonstration](defender-endpoint-demonstration-app-reputation.md)| NGP | Navigate to the app reputation page to see the demonstration scenario using Microsoft Edge.|
 |[Behavior Monitoring demonstration](demonstration-behavior-monitoring.md)| NGP |Confirm that behavior monitoring is detecting and blocking malware. |
 |[Cloud-delivered protection demonstration](defender-endpoint-demonstration-cloud-delivered-protection.md)| NGP |Confirm that cloud-delivered protection is working properly on your computer. |
-| [Controlled folder access (CFA) demonstration (block script)](defender-endpoint-demonstration-controlled-folder-access-test-tool.md)| ASR | Download the CFA test tool. |
-| [Controlled folder access (CFA) demonstrations (block ransomware)](defender-endpoint-demonstration-controlled-folder-access.md)|  ASR| Download and execute a sample file to trigger CFA ransomware protection.|
+| [Controlled folder access (CFA) demonstration (block script)](defender-endpoint-demonstration-controlled-folder-access-block-app.md)| ASR | Download the CFA test tool. |
+| [Controlled folder access (CFA) demonstrations (block ransomware)](defender-endpoint-demonstration-controlled-folder-access-ransomware.md)|  ASR| Download and execute a sample file to trigger CFA ransomware protection.|
 |[Endpoint Detection and Response (EDR) detections](edr-detection.md)| EDR |Confirm that EDR is detecting cyber threats such as malware.|
 | [Exploit protection (EP) demonstrations](defender-endpoint-demonstration-exploit-protection.md) | ASR | Apply custom exploit protection settings. |
 | [Network protection demonstrations](defender-endpoint-demonstration-network-protection.md)| ASR | Navigate to a suspicious URL to trigger network protection. |

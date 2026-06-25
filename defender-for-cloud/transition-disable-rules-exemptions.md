@@ -12,13 +12,16 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Cloud is transitioning its recommendation model from grouped recommendations to individual recommendations. As part of this change:
 
+> [!IMPORTANT]
+> Grouped recommendations are deprecated on **July 31, 2026**. We recommend completing your migration to exemptions before that date.
+
 - Grouped recommendations are being deprecated and replaced with individual recommendations. Learn more about this [transition](transition-grouped-individual-recommendations.md).
 - Disable rules, which are used with grouped recommendations, are being deprecated.
 - Exemption rules are the new approach for individual and risk-based recommendations.
 
 ## What's changing
 
-In the old model, which is being deprecated, grouped recommendations use **disable rules** to suppress findings.
+In the old model, which is deprecated on **July 31, 2026**, grouped recommendations use **disable rules** to suppress findings.
 
 :::image type="content" source="./media/transition-disable-rules-exemptions/disable-rules.png" alt-text="Screenshot showing the disable rules interface for sub-assessment recommendations." lightbox="./media/transition-disable-rules-exemptions/disable-rules.png":::
 

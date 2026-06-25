@@ -62,7 +62,7 @@ It's common for penetration testers to disable features of Microsoft Defender An
 
 - [Network Protection](enable-network-protection.md) is set to block mode.
 
-- [Controlled Folder Access](enable-controlled-folders.md) (CFA) is set to block mode.
+- [Controlled Folder Access](controlled-folder-access-configure.md) (CFA) is set to block mode.
 
 It's important to get the settings correct. To resolve misconfiguration issues, use the following articles:
 

@@ -274,7 +274,7 @@ On the **Anti-spam policies** page, select the anti-spam policy from the list by
 
 :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom anti-spam policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
 
-The actions are described in the following sections: [Modify anti-spam policies](#use-the-microsoft-defender-portal-to-modify-anti-spam-policies), [Enable or disable anti-spam policies](#use-the-microsoft-defender-portal-to-enable-or-disable-anti-spam-policies), [Set the priority of custom anti-spam policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-anti-spam-policies), and [Remove custom anti-spam policies](#use-the-microsoft-defender-portal-to-remove-custom-anti-spam-policies).
+These actions are described in the following sections: [Modify anti-spam policies](#use-the-microsoft-defender-portal-to-modify-anti-spam-policies), [Enable or disable anti-spam policies](#use-the-microsoft-defender-portal-to-enable-or-disable-anti-spam-policies), [Set the priority of custom anti-spam policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-anti-spam-policies), and [Remove custom anti-spam policies](#use-the-microsoft-defender-portal-to-remove-custom-anti-spam-policies).
 
 ### Use the Microsoft Defender portal to modify anti-spam policies
 
@@ -518,7 +518,7 @@ For detailed syntax and parameter information, see [Set-HostedContentFilterRule]
 
 Enabling or disabling a spam filter rule in PowerShell enables or disables the whole anti-spam policy (the spam filter rule and the assigned spam filter policy). You can't enable or disable the default anti-spam policy (always applied to all recipients).
 
-To enable or disable a spam filter rule (which also enables or disables the associated anti-spam policy), [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and use this syntax:
+To enable or disable a spam filter rule (and by extension, the associated anti-spam policy), [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and use the following syntax:
 
 ```PowerShell
 <Enable-HostedContentFilterRule | Disable-HostedContentFilterRule> -Identity "<RuleName>"
@@ -530,7 +530,7 @@ This example disables the spam filter rule named Marketing Department.
 Disable-HostedContentFilterRule -Identity "Marketing Department"
 ```
 
-This example enables the same rule.
+This example enables the spam filter rule named Marketing Department.
 
 ```PowerShell
 Enable-HostedContentFilterRule -Identity "Marketing Department"

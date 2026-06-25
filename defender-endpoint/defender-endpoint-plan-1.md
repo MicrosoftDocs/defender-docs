@@ -96,9 +96,9 @@ To learn more, see [Attack surface reduction (ASR) rules overview](attack-surfac
 
 ### Ransomware mitigation
 
-With controlled folder access, you get ransomware mitigation. Controlled folder access allows only trusted apps to access protected folders on your endpoints. Apps are added to the trusted apps list based on their prevalence and reputation. Your security operations team can add or remove apps from the trusted apps list, too.
+With controlled folder access (CFA), you get ransomware mitigation. Controlled folder access allows only trusted apps to access protected folders on your endpoints. Apps are added to the trusted apps list based on their prevalence and reputation. Your security operations team can add or remove apps from the trusted apps list, too.
 
-To learn more, see [Protect important folders with controlled folder access](controlled-folders.md).
+To learn more, see [Controlled folder access (CFA) overview](controlled-folder-access-overview.md).
 
 ### Device control
 
