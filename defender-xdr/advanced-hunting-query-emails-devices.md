@@ -27,7 +27,7 @@ ai-usage: ai-assisted
 
 
 
-[Advanced hunting](advanced-hunting-overview.md) in Microsoft Defender XDR allows you to proactively hunt for threats across:
+[Advanced hunting](advanced-hunting-overview.md) in Microsoft Defender allows you to proactively hunt for threats in:
 
 - Devices managed by Microsoft Defender for Endpoint
 - Emails processed by Microsoft 365

@@ -30,7 +30,7 @@ The `DeviceInfo` table in the [advanced hunting](advanced-hunting-overview.md) s
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 
-This advanced hunting table is populated by records from various Microsoft services. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy a Microsoft service in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from various Microsoft services. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy a Microsoft service in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).

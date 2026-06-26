@@ -26,7 +26,7 @@ Issues might arise as you use the Microsoft Defender XDR service. The following 
 
 <a name='i-dont-see-microsoft-365-defender-content'></a>
 
-## I don't see Microsoft Defender XDR content
+## I don't see Microsoft Defender content
 
 If you don't see capabilities on the navigation pane such as the Incidents, Action center, or Hunting in your portal, verify that your tenant has the appropriate licenses.
 
@@ -34,11 +34,9 @@ For more information, see [Prerequisites](prerequisites.md).
 
 <a name='microsoft-defender-for-identity-alerts-are-not-showing-up-in-the-microsoft-365-defender-incidents'></a>
 
-<a name='microsoft-defender-for-identity-alerts-are-not-showing-up-in-the-microsoft-defender-xdr-incidents'></a>
+## Microsoft Defender for Identity alerts are not showing up in the Microsoft Defender incidents
 
-## Microsoft Defender for Identity alerts aren't showing up in Microsoft Defender XDR incidents
-
-If you deployed Microsoft Defender for Identity but don't see its alerts in Microsoft Defender XDR incidents, check that the Defender for Cloud Apps and Defender for Identity integration is turned on.
+If you deployed Microsoft Defender for Identity but don't see its alerts in Microsoft Defender incidents, check that the Defender for Cloud Apps and Defender for Identity integration is turned on.
 
 For more information, see [Microsoft Defender for Identity integration](/cloud-app-security/mdi-integration).
 
