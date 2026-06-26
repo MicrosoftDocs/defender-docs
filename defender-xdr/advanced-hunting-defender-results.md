@@ -97,7 +97,7 @@ Perform the following steps to link advanced hunting query results to a new or e
     - Mail message
  
 > [!NOTE]
-> For queries containing only XDR data, only entity types that are available in XDR tables are shown.
+> For queries containing only Defender data, only entity types that are available in Defender tables are shown.
 
 6. After an entity type is selected, select an identifier type that exists in the selected records so that it can be used to identify this entity. Each entity type has a list of supported identifiers, as can be seen in the relevant drop down. Read the description displayed when hovering on each identifier to better understand it.
 7. After selecting the identifier, select a column from the query results that contain the selected identifier. You can select **Explore query and results** to open the advanced hunting context panel. The advanced hunting context panel allows you to explore your query and results to make sure you chose the right column for the selected identifier. 

@@ -58,13 +58,13 @@ For example, to get the first 10 rows of data from the `StormEvents` table store
 
 > [!NOTE]
 > - The `adx()` operator isn't supported for custom detections.
-> - Cross-query between Defender XDR and Microsoft Sentinel tables using `adx()` isn't supported in GCC environments.
+> - Cross-query between Defender and Microsoft Sentinel tables using `adx()` isn't supported in GCC environments.
 
 ### Use arg() operator for Azure Resource Graph queries
 
 Use the `arg()` operator to query across deployed Azure resources like subscriptions, virtual machines, CPU, storage, and the like.
 
-Previously, the `arg()` operator was only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender XDR tables aren't supported). By using this operator, you can make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
+Previously, the `arg()` operator was only available in the Logs feature in Microsoft Sentinel. In the Microsoft Defender portal, the `arg()` operator works to combine Azure Resource Graph (arg) queries with Microsoft Sentinel tables (that is, Defender tables aren't supported). By using this operator, you can make the cross-service query in advanced hunting without manually opening a Microsoft Sentinel window.
 
 For more information, see [Query data in Azure Resource Graph by using arg()](/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#query-data-in-azure-resource-graph-by-using-arg-preview).
 
@@ -87,7 +87,7 @@ BehaviorAnalytics
 
 >[!NOTE]
 > - The `arg()` operator isn't supported for analytics rules.
-> - The `arg()` operator only works with Microsoft Sentinel tables. If your query includes Defender XDR tables that haven't been exported to Log analytics, it will fail. To use the `arg()` operator in a query that references Defender XDR tables, ensure that those tables are exported to your Log analytics workspace and contain data.
+> - The `arg()` operator only works with Microsoft Sentinel tables. If your query includes Defender tables that haven't been exported to Log analytics, it will fail. To use the `arg()` operator in a query that references Defender tables, ensure that those tables are exported to your Log analytics workspace and contain data.
 
 ### Use workspace() operator for cross-workspace queries
 
@@ -110,7 +110,7 @@ workspace('00000000-0000-0000-0000-000000000000').SigninLogs
 
 > [!NOTE]
 > - The `workspace()` operator isn't supported for custom detections.
-> - The `workspace()` operator only works with Microsoft Sentinel tables. If your query includes Defender XDR tables that haven't been exported to Log analytics, it will fail. To use the `workspace()` operator in a query that references Defender XDR tables, ensure that those tables are exported to your Log analytics workspace and contain data.
+> - The `workspace()` operator only works with Microsoft Sentinel tables. If your query includes Defender tables that haven't been exported to Log analytics, it will fail. To use the `workspace()` operator in a query that references Defender tables, ensure that those tables are exported to your Log analytics workspace and contain data.
 
 ### Create custom functions
 
@@ -137,7 +137,7 @@ For editable queries, more options are available:
 
 To help discover threats and anomalous behaviors in your environment, you can create customized detection rules. There are two kinds:
 - Analytics rules - to generate detections from rules that query data that is ingested through Microsoft Sentinel
-- Custom detection rules - to generate detections from rules that query data from Defender XDR or from both Microsoft Sentinel and Defender XDR
+- Custom detection rules - to generate detections from rules that query data from Defender or from both Microsoft Sentinel and Defender
 
 
 <a name="analytics-rules"></a>
@@ -152,16 +152,15 @@ The **Analytics rule wizard** appears. Fill up the required details as described
 
 <a name="custom-detection-rules"></a>
 ### Custom detection rules
-You can create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create custom detection rules](custom-detection-rules.md) for more information. 
-
+You can create custom detection rules that query data from both Microsoft Sentinel and Defender tables. Select **Manage rules > Create custom detection**. Read [Create custom detection rules](custom-detection-rules.md) for more information. 
 
 In both custom detection and analytics rule creation, you can only query data ingested as analytics logs (that is, not as basic logs or auxiliary logs. See [log management plans](/azure/sentinel/log-plans#log-management-plans) to check the different tiers) otherwise custom detection or analytics rule creation won't proceed.
 
-If your Defender XDR data is ingested into Microsoft Sentinel, you have the option to choose between **Create custom detection** and **Create analytics rule**.
+If your Defender data is ingested into Microsoft Sentinel, you have the option to choose between **Create custom detection** and **Create analytics rule**.
 
 
 > [!NOTE]
-> If a Defender XDR table isn't set up to stream to log analytics in Microsoft Sentinel but is recognized as a standard table in Microsoft Sentinel, an analytics rule can be created successfully but the rule won't run correctly since no data is available in Microsoft Sentinel. For these cases, use the custom detection rule wizard instead. 
+> If a Defender table isn't set up to stream to log analytics in Microsoft Sentinel but is recognized as a standard table in Microsoft Sentinel, an analytics rule can be created successfully but the rule won't run correctly since no data is available in Microsoft Sentinel. For these cases, use the custom detection rule wizard instead. 
 
 ## Manage custom analytics and detection rules
 
