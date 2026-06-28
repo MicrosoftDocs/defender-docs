@@ -1,5 +1,5 @@
 ---
-title: The Advanced Security Information Model (ASIM) Registry Event normalization schema reference | Microsoft Docs
+title: The Advanced Security Information Model (ASIM) Registry Event normalization schema reference
 description: This article describes the Microsoft Sentinel Registry Event normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT
