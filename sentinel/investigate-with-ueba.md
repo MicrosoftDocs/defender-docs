@@ -1,5 +1,5 @@
 ---
-title: Investigate incidents with UEBA data | Microsoft Docs
+title: Investigate incidents with UEBA data
 description: Learn how to use UEBA data while investigating to gain greater context to potentially malicious activity occurring in your organization.
 ms.author: guywild
 author: guywi-ms
