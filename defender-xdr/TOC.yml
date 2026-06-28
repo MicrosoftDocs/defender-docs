@@ -156,7 +156,7 @@
           href: m365d-autoir-results.md
         - name: Address false positives and negatives
           href: m365d-autoir-report-false-positives-negatives.md
-      - name: Attack disruption with Microsoft Sentinel
+      - name: Attack disruption
         items:
         - name: Overview
           href: automatic-attack-disruption.md

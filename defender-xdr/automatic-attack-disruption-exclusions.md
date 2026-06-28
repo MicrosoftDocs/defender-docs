@@ -11,7 +11,7 @@ ms.collection:
   - usx-security
   - usx-security
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 06/25/2026
 appliesto:
 - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -33,11 +33,26 @@ Automatic attack disruption and exclusion policies work together to help contain
 
 ## Prerequisites
 
-To exclude assets from automated responses, you need the **Security Administrator** role or higher. You can assign this role in [Microsoft Entra ID](https://portal.azure.com) or the [Microsoft 365 admin center](https://admin.microsoft.com).
+The permissions required to manage attack disruption exclusions depend on whether [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) is enabled for the relevant workload.
 
-A Security Reader and view tags but not edit them.
+### Device exclusions
 
-A Security operator can trigger manual incestigations but can't change automation settings.
+| Unified RBAC for endpoints | Required permission |
+| --- | --- |
+| **Disabled** | Security Administrator or Global Administrator role in [Microsoft Entra ID](https://entra.microsoft.com) or the [Microsoft 365 admin center](https://admin.microsoft.com). |
+| **Enabled** | Security Operator (or higher) global Microsoft Entra role, **or** the [Core security settings (manage)](custom-permissions-details.md) permission in Unified RBAC. |
+
+For more information, see [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md).
+
+### Identity exclusions
+
+| Unified RBAC for identities or endpoints | Required permission |
+| --- | --- |
+| **Disabled** (both identities and endpoints) | Security Administrator or Global Administrator role in [Microsoft Entra ID](https://entra.microsoft.com) or the [Microsoft 365 admin center](https://admin.microsoft.com). |
+| **Enabled** (for identities or endpoints) | Security Operator (or higher) global Microsoft Entra role, **or** the [Core security settings (manage)](custom-permissions-details.md) permission in Unified RBAC. |
+
+> [!NOTE]
+> A Security Reader can view exclusions and tags but can't edit them.
 
 ## Exclusion types and approaches
 
