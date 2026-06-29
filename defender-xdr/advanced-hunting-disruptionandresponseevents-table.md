@@ -16,12 +16,9 @@ ms.topic: reference
 ms.date: 06/11/2025
 ---
 
-# DisruptionAndResponseEvents (Preview)
+# DisruptionAndResponseEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-> [!IMPORTANT]
-> Some information relates to prereleased product which might be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The `DisruptionAndResponseEvents` table in the [advanced hunting](advanced-hunting-overview.md) contains information about [automatic attack disruption](automatic-attack-disruption.md) and [predictive shielding](shield-predict-threats.md) events in Microsoft Defender. These events include both block and policy application events related to triggered attack disruption policies, and automatic actions that were taken across related workloads.
 
