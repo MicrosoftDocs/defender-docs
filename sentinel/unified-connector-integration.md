@@ -5,7 +5,9 @@ ms.author: monaberdugo
 author: mberdugo
 contributors:
 ms.topic: how-to
-ms.date: 08/10/2025
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a Microsoft Defender for Identity user, I want to simplify my connections by using a unified connector so I can manage my Okta integration more efficiently.
 ---
@@ -16,7 +18,8 @@ Use [unified connectors](./unified-connector.md) to simplify connection manageme
 
 ## Prerequisites
 
-### Microsoft Sentinel workspace
+<a name="microsoft-sentinel-workspace"></a>
+### Microsoft Sentinel workspace requirements
 
 The following steps are required if you want to link an existing Okta connector to a Sentinel workspace:
 
@@ -24,7 +27,8 @@ The following steps are required if you want to link an existing Okta connector 
   1. Find the connected Sentinel workspace.
   1. You can link the Okta connector to any connected workspace. Choose which workspace to connect to your Okta account.
 
-### Azure access permissions
+<a name="azure-access-permissions"></a>
+### Required Azure access permissions
 
 The user setting up the Okta connector must have these roles:
 
@@ -34,9 +38,10 @@ The user setting up the Okta connector must have these roles:
 If you connect to both Sentinel and Defender for Identity, you need permissions for both products.
 
 Check user roles under the **Access control (IAM)** section of the **Log analytics workspace**.
-If you assign these roles, allow up to 15 minutes for the changes to take effect.
+If you assign the Log Analytics Contributor and Microsoft Sentinel Contributor roles, allow up to 15 minutes for the changes to take effect.
 
-### Okta credentials
+<a name="okta-credentials"></a>
+### Required Okta credentials
 
 From your Okta account, you need the following information:
 
@@ -45,15 +50,16 @@ From your Okta account, you need the following information:
 
 For information about integrating Okta with Defender for Identity, see [Integrate Okta with Microsoft Defender for Identity](/defender-for-identity/okta-integration).
 
-## Configure a connector to a Sentinel workspace
+<a name="configure-a-connector-to-a-sentinel-workspace"></a>
+## Configure a connector to a Microsoft Sentinel workspace
 
 To create a unified connector in Microsoft Sentinel:
 
-1. Go to the Data connectors Gallery [directly](https://security.microsoft.com/sentinel/unified-connector), or navigate to it via **System** > **Data management** > **Data connectors**.
+1. Go to the [Data connectors Gallery in the Microsoft Security portal](https://security.microsoft.com/sentinel/unified-connector), or navigate to it via **System** > **Data management** > **Data connectors**.
 
    :::image type="content" source="./media/unified-connector-integration/connectors-gallery.png" alt-text="Screenshot of connectors gallery.":::
 
-   For more information about the Data connectors Gallery, see [Data connectors Gallery](./unified-connector.md#data-connectors-gallery).
+   For more information about the Data connectors Gallery, see [Data connectors Gallery in Unified connectors](./unified-connector.md#data-connectors-gallery).
 
 1. In the **My connectors** tab, find the **Unified connectors** section.
 
@@ -67,7 +73,7 @@ To create a unified connector in Microsoft Sentinel:
 1. In the **Name and connection details** section, provide the following information:
    - **Connector name**: A descriptive user friendly name for the connector.
    - **Domain name**: The Okta domain, such as `yourcompany.okta.com`.
-   - **API key**: Paste the [API key](#okta-credentials). Include only the token value, not the *Authorization* prefix.
+   - **API key**: Paste the [Okta API key](#okta-credentials). Include only the token value, not the *Authorization* prefix.
    Select **Next**.
 
 1. In the **Select products** section, check the products you want to connect to. Check *SIEM* to enable the connector for Microsoft Sentinel.
@@ -76,7 +82,7 @@ To create a unified connector in Microsoft Sentinel:
 
 1. Configure the product details for each product you selected:
 
-   - Select the required workspace, whose permissions you validated [earlier](#azure-access-permissions).
+   - Select the required workspace, whose permissions you validated in [Azure access permissions](#azure-access-permissions).
    - Select the table manager.
 
 1. Select **Connect**. The **Connect** button is only active when all the required fields are valid.
@@ -121,5 +127,7 @@ To verify that the Okta connector is successfully ingesting data into your Log A
 > - The connector will only ingest system logs from one hour before the instance was created.
 
 ## Considerations and limitations
+
+Keep the following limitations in mind:
 
 - Unified connectors aren't visible in the Content hub. To see all connectors, including the traditional Sentinel connectors, go to the [Data connectors Gallery](https://security.microsoft.com/sentinel/unified-connector).
