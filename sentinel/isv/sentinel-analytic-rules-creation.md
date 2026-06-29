@@ -6,9 +6,11 @@ author: mberdugo
 ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 1/27/2025
+ms.date: 06/15/2026
 
 #CustomerIntent: As an ISV partner, I want to create and publish analytics rules to my Microsoft Sentinel solution so that I can provide inbuilt detection use cases to my customers.
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create and publish analytics rules for Microsoft Sentinel solutions
@@ -38,15 +40,17 @@ Microsoft Sentinel analytics rules can be applied to a wide range of scenarios t
 
 You create analytics rules in [YAML](https://yaml.org/) format. You can use this example of an analytics rule as a reference to create your own queries: [Sample analytics rule in GitHub](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Entra%20ID/Analytic%20Rules/FailedLogonToAzurePortal.yaml).
 
-The following sections provide a detailed walkthrough of various attributes of an analytics rule.
+Each analytics rule YAML template includes a set of key attributes that control identification, scheduling, detection logic, and alert behavior.
 
-### ID
+<a name="id"></a>
+### Specify the rule ID
 
 The `id` attribute consists of a standard globally unique identifier (GUID). Generate it by using any development tool, an online generator, or the new PowerShell [New-GUID cmdlet](/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-6&preserve-view=true). It must be unique among other GUIDs.
 
 This field is mandatory.
 
-### Kind
+<a name="kind"></a>
+### Specify the rule kind
 
 The `kind` attribute represents the type of rule.
 
@@ -54,7 +58,8 @@ There are two accepted values: `scheduled` and `NRT` (near-real time). The `sche
 
 This field is mandatory.
 
-### Name
+<a name="name"></a>
+### Specify the rule name
 
 The `name` attribute provides a brief label that summarizes the detection. Make sure the label is clear and concise to help users understand the purpose of the rule. Use `alertDetailsOverride` to generate dynamic names to help analysts understand the alert. This attribute:
 
@@ -64,7 +69,8 @@ The `name` attribute provides a brief label that summarizes the detection. Make 
 
 This field is mandatory.
 
-### Description
+<a name="description"></a>
+### Write the rule description
 
 The `description` attribute provides a detailed description of the detection. The description includes information about the behavior being detected, the potential effect, and any recommended actions. This attribute:
 
@@ -78,7 +84,8 @@ The `description` attribute provides a detailed description of the detection. Th
 
 This field is mandatory.
 
-### Severity
+<a name="severity"></a>
+### Set the rule severity
 
 The `severity` attribute defines the severity level of the detection. Severity reflects the potential effect of the behavior being detected and the urgency of the response.
 
@@ -90,35 +97,39 @@ The `severity` attribute defines the severity level of the detection. Severity r
 > [!NOTE]
 > Severity level defaults aren't a guarantee of the current or environment impact level. Severity level applies only to Microsoft Sentinel analytics templates. Otherwise, the security service that issued the alert controls the `severity` attribute in the Alerts table. You can use `alertDetailsOverride` to provide a dynamic `severity` attribute that depends on the actual outcome of the query.
 
-### Required data connectors
+<a name="required-data-connectors"></a>
+### Specify required data connectors
 
 The `requiredDataConnectors` attribute represents the list of data connectors that the rule needs to function correctly, including the data sources against which the rule queries. If there's no current data connector mapping, you must use an open brace: `requiredDataConnectors: []`.
 
-The `connectorId` attribute specifies the ID of the data connector that you need so the query functions correctly. If your detection query depends on the data fetched from a specific connector, you must specify the connector ID here. For instance, if your analytics rule depends on the data from this [connector](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/1Password/Data%20Connectors/1Password_ccpv2/1Password_DataConnectorDefinition.json), you must specify the `connectorID` as `1PasswordCCPDefinition`.
+The `connectorId` attribute specifies the ID of the data connector that you need so the query functions correctly. If your detection query depends on the data fetched from a specific connector, you must specify the connector ID here. For instance, if your analytics rule depends on the data from this [1Password data connector definition](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/1Password/Data%20Connectors/1Password_ccpv2/1Password_DataConnectorDefinition.json), you must specify the `connectorID` as `1PasswordCCPDefinition`.
 
-The `dataTypes` attribute represents the data types that the analytics rule depends on and mentions the name of the data type referenced in the `dataTypes` section of the connector. For instance, if your hunting query depends on the data from this [connector](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/1Password/Data%20Connectors/1Password_ccpv2/1Password_DataConnectorDefinition.json), you must specify the data type as `OnePasswordEventLogs_CL`. If the hunting query operates on a Kusto function/parser instead of the table (like `Syslog`, `CommonEventFormat`, or `_CL`), `dataTypes` is the Kusto function name/parser name and not the table name.
+The `dataTypes` attribute represents the data types that the analytics rule depends on and mentions the name of the data type referenced in the `dataTypes` section of the connector. For instance, if your hunting query depends on the data from this [1Password data connector definition](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/1Password/Data%20Connectors/1Password_ccpv2/1Password_DataConnectorDefinition.json), you must specify the data type as `OnePasswordEventLogs_CL`. If the hunting query operates on a Kusto function/parser instead of the table (like `Syslog`, `CommonEventFormat`, or `_CL`), `dataTypes` is the Kusto function name/parser name and not the table name.
 
-### Query period
+<a name="query-period"></a>
+### Set the query period
 
 The `queryPeriod` attribute represents a specified period during which the query runs. For example: the last 3 days. For this attribute:
 
-* Use Kusto Query Language (KQL) `TimeSpan` format (for example, 3 days is `3d`, 2 hours is `2h`).
+* Use Kusto Query Language (KQL) `TimeSpan` format, which expresses durations as a number followed by a unit suffix (for example, 3 days is `3d`, 2 hours is `2h`).
 * Ensure that any learning or reference period is within this time frame.
 * Don't use a value higher than the maximum supported value, which is `14d`.
 
 This field is mandatory for scheduled analytics rules.
 
-### Query frequency
+<a name="query-frequency"></a>
+### Set the query frequency
 
 The `queryFrequency` attribute represents the frequency at which the query runs. For this attribute:
 
-* Use KQL `TimeSpan` format (for example, 3 days is `3d`, 2 hours is `2h`).
+* Use the KQL duration syntax (`TimeSpan` format), which expresses durations as a number followed by a unit suffix (for example, 3 days is `3d`, 2 hours is `2h`).
 * Use a `queryFrequency` that is less than or equal to the `queryPeriod`.
 * Follow this rule: if the `queryPeriod` is greater than or equal to 2 days (`2d`), the `queryFrequency` value can't be less than 1 hour (`1h`) and is only used for high-severity detections.
 
 This field is mandatory for scheduled analytics rules.
 
-### Trigger operator
+<a name="trigger-operator"></a>
+### Set the trigger operator
 
 The `triggerOperator` attribute indicates the mechanism that triggers the alert. For example: greater than (`gt`) the number set in the `triggerThreshold` attribute (see [Trigger threshold](#trigger-threshold)).
 
@@ -128,7 +139,8 @@ The `triggerOperator` attribute indicates the mechanism that triggers the alert.
 
 This field is mandatory for scheduled analytics rules.
 
-### Trigger threshold
+<a name="trigger-threshold"></a>
+### Set the trigger threshold
 
 The `triggerThreshold` attribute represents the threshold that triggers the alert. Threshold is the value that the `triggerOperator` references. Supported values include any integer between 0 and 10,000.
 
@@ -136,7 +148,8 @@ For example, if the `triggerOperator` is set to `gt` and the `triggerThreshold` 
 
 This field is mandatory for scheduled analytics rules.
 
-### Tactics
+<a name="tactics"></a>
+### Map the rule to MITRE ATT&CK tactics
 
 The `tactics` attribute defines the [`MITRE ATT&CK tactics`](https://attack.mitre.org/versions/v13/matrices/enterprise/) that the detection relates to. When you define the tactics, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
 
@@ -145,7 +158,8 @@ The `tactics` attribute defines the [`MITRE ATT&CK tactics`](https://attack.mitr
 
 This field is mandatory.
 
-### Relevant techniques
+<a name="relevant-techniques"></a>
+### Map relevant techniques
 
 The `relevantTechniques` attribute defines the [`MITRE ATT&CK techniques`](https://attack.mitre.org/versions/v13/matrices/enterprise/) that the detection relates to. When you define the techniques, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
 
@@ -155,7 +169,8 @@ The `relevantTechniques` attribute defines the [`MITRE ATT&CK techniques`](https
 
 This field is mandatory.
 
-### Query
+<a name="query"></a>
+### Write the detection query
 
 The `query` attribute defines the detection logic. We recommend that you write the query in KQL and make sure that it's structured and easy to understand. We recommend that you create an efficient query that's optimized for performance to ensure it can be run against large datasets without affecting performance. Make sure that your query meets the following criteria.
 
@@ -182,7 +197,7 @@ We highly recommend that you use comments to clarify the query. Avoid adding com
 
 If you're referencing a parser instead of a table name, ensure clarity in the description by including a comment next to the parser function reference. The parser must be imported into the workspace first. Otherwise, the queries don't recognize it as valid.
 
-Ensure that every available entity field is returned for mapping purposes. (Refer to the [Entity mappings section](#entity-mappings).) Sanitize the returned table so that it provides only the properties that you need to investigate further. You don't need a `TimeGenerated` filter when you use a simple `lookback` command across the entire query. The `queryPeriod` value in the YAML controls this process.
+Ensure that every available entity field is returned for entity mapping in the rule output. For more information about entity mappings, see [Configure entity mappings](#entity-mappings). Sanitize the returned table so that it provides only the properties that you need to investigate further. You don't need a `TimeGenerated` filter when you use a simple `lookback` command across the entire query. The `queryPeriod` value in the YAML controls this process.
 
 For baselining or performing a historical comparison, such as comparing today to the previous seven days, include a time-bounded filter such as `| where TimeGenerated >= ago(lookback)`, because the YAML template doesn't currently support multiple `queryPeriod` values. Avoid using time frames shorter than one day unless there's a specific reason. We don't recommend time frames longer than 14 days due to potential performance impacts.
 
@@ -192,7 +207,8 @@ Additionally, include as many fields as possible to help the user understand the
 
 This field is mandatory.
 
-### Event grouping settings
+<a name="event-grouping-settings"></a>
+### Configure event grouping settings
 
 The `eventGroupingSettings` attribute relates to alerts. An alert rule can generate a separate alert for each query result. For instance, a rule that identifies non-Microsoft alerts in the event stream could create a Microsoft Sentinel alert for each source alert.
 
@@ -210,7 +226,8 @@ The `eventGroupingSettings` attribute relates to alerts. An alert rule can gener
   aggregationKind: AlertPerResult
   ```
 
-### Entity mappings
+<a name="entity-mappings"></a>
+### Configure entity mappings
 
 The `entityMappings` attribute is integral when you configure scheduled analytics rules. It enriches the query's output (alerts and incidents) with essential information that serves as the building blocks of any investigative processes and remedial actions that follow.
 
@@ -218,7 +235,8 @@ The `entityType` represents the standard list of entities recognized by Microsof
 
 This field is mandatory.
 
-### Field mappings
+<a name="field-mappings"></a>
+### Configure field mappings
 
 The `fieldMappings` attribute represents the identifier of the field in the query output that corresponds to the entity type. See allowed values under the identifiers column value at [Entity mapping table](/azure/sentinel/entities-reference#entity-types-and-identifiers). For this attribute:
 
@@ -246,7 +264,8 @@ The `fieldMappings` attribute represents the identifier of the field in the quer
 
   ```
 
-### Custom details
+<a name="custom-details"></a>
+### Define custom details
 
 The `customDetails` attribute integrates event data into alerts, making it visible in security incidents for faster triaging, investigation, and response. Custom details are key/value pairs of property and column names. For more information, see [Surface custom event details in alerts in Microsoft Sentinel](/azure/sentinel/surface-custom-details-in-alerts). Up to 20 custom details (that is, key/value pairs) can be defined per template.
 
@@ -256,7 +275,8 @@ The `customDetails` attribute integrates event data into alerts, making it visib
       IPs: ComputerIP
 ```
 
-### Alert details override
+<a name="alert-details-override"></a>
+### Configure alert details override
 
 The `alertDetailsOverride` attribute is a dynamic field that you can use to override the alert details. You can use this attribute to provide more context or information to the analyst when the alert is triggered. When you use this feature, you ensure that analysts receive pertinent information, including relevant entity names, to facilitate a quicker, and more accurate understanding of the incident. Limitations include:
 
@@ -281,8 +301,9 @@ The `alertDetailsOverride` attribute is a dynamic field that you can use to over
         alertSeverityColumnName: dynamicSeverity
   ```
 
-### Version
+<a name="version"></a>
+### Specify the rule version
 
-When a customer creates a new hunting query from the template, the template `version` is saved. If a new template version is published, customers are notified in the UX. Versions follow the format `a`, `b`, and `c`, in which `a` is the major version, `b` is the minor version, and `c` is the patch. The version field is the last line of the template.
+When a customer creates a new hunting query from the template, the template `version` is saved. If a new template version is published, customers are notified in the Microsoft Sentinel user interface. Versions follow the format `a`, `b`, and `c`, in which `a` is the major version, `b` is the minor version, and `c` is the patch. The version field is the last line of the template.
 
 This field is mandatory.
