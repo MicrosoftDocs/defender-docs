@@ -20,7 +20,7 @@ This article describes how to get started using app governance features in Micro
 
 - Your sign-in account must have a supported [app governance administrator role](app-governance-get-started.md#roles) to view any app governance data.
 
-- To use full functionality for app governance alerts, you must have provisioned both Defender for Cloud Apps and Microsoft Defender XDR by accessing their respective portals at least once.
+- To use full functionality for app governance alerts, you must have provisioned both Defender for Cloud Apps and Microsoft Defender by accessing their respective portals at least once.
 
 ## Step 1: Get visibility and insights
 
@@ -101,7 +101,7 @@ You can also remediate alerts, manually after investigation, or automatically th
 
 - **[Investigate anomaly detection alerts:](app-governance-anomaly-detection-alerts.md)** App governance provides security detections and alerts for malicious activities. The purpose of this guide is to provide you with general and practical information on each alert, to help with your investigation and remediation tasks.
 
-- [**Remediate app threats:**](app-governance-manage-alerts.md) You remediate harmful app and app activity identified by app governance alerts in Microsoft Defender XDR.
+- [**Remediate app threats:**](app-governance-manage-alerts.md) You remediate harmful app and app activity identified by app governance alerts in the Defender portal.
 
 For more information, see [Learn about app threat detection and remediation](app-governance-detect-remediate-overview.md).
 
