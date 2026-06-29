@@ -7,9 +7,9 @@ ms.reviewer: krishsa
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-siem
 ms.topic: how-to
-ms.date: 04/28/2026
+ms.date: 06/15/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1012
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As a security engineer, I want to configure the Logstash output plugin with DCRs so that I can stream external log data into Microsoft Sentinel with full control over the output schema.
 ---
 
@@ -20,7 +20,7 @@ ms.custom: msecd-doc-authoring-1012
 
 Microsoft Sentinel's Logstash output plugin supports pipeline transformations and advanced configuration via Data Collection Rules (DCRs). The plugin forwards logs from external data sources into custom or standard tables in Log Analytics or Microsoft Sentinel.
 
-In this article, learn how to set up the Logstash plugin to stream data into Log Analytics or Microsoft Sentinel using DCRs, with full control over the output schema.
+In this article, learn how to set up the Logstash plugin to stream data into Log Analytics or Microsoft Sentinel using DCRs, with full control over the output schema. Before you begin, review the [Logstash plugin prerequisites](#logstash-plugin-prerequisites), including supported Logstash versions, workspace permissions, and DCR configuration access.
 
 With the plugin, you can:
 
@@ -34,6 +34,8 @@ To learn more about working with the Logstash data collection engine, see [Getti
 
 ## Architecture overview
 
+The following diagram shows how the Logstash pipeline sends data to Log Analytics through the Logs Ingestion API.
+
 :::image type="content" source="media/connect-logstash-data-collection-rules/logstash-data-collection-rule-architecture.png" alt-text="Diagram of the Logstash architecture showing input, filter, and output plugin stages sending data to Log Analytics via the Logs Ingestion API." lightbox="media/connect-logstash-data-collection-rules/logstash-data-collection-rule-architecture.png":::
 
 The Logstash engine is composed of three components:
@@ -45,7 +47,7 @@ The Logstash engine is composed of three components:
 > [!NOTE]
 > - Microsoft supports only the Microsoft Sentinel-provided Logstash output plugin discussed here. The current plugin is **[microsoft-sentinel-log-analytics-logstash-output-plugin](https://github.com/Azure/Azure-Sentinel/tree/master/DataConnectors/microsoft-sentinel-log-analytics-logstash-output-plugin)**, v2.1.0. You can [open a support ticket](https://portal.azure.com/#create/Microsoft.Support) for any issues regarding the output plugin.
 > - Microsoft does not support third-party Logstash output plugins for Microsoft Sentinel, or any other Logstash plugin or component of any type.
-> - See the prerequisites for the plugin's Logstash version support.
+> - See the [Logstash plugin prerequisites](#logstash-plugin-prerequisites) section for supported Logstash versions.
 
 The plugin sends JSON-formatted data to your Log Analytics workspace using the Logs Ingestion API. The data is ingested into custom logs or a standard table.
 
@@ -65,6 +67,8 @@ To set up the plugin, follow these steps:
 - Monitor output plugin audit logs
 
 ### Logstash plugin prerequisites
+
+Before you install and configure the plugin, make sure the following requirements are met:
 
 - Install a supported version of Logstash. The plugin supports the following Logstash versions:
 
@@ -104,7 +108,7 @@ In this section, you create a sample file in one of these scenarios:
 
 In this scenario, you configure the Logstash input plugin to send events to Microsoft Sentinel. This example uses the generator input plugin to simulate events. You can use any other input plugin.
 
-In this example, the Logstash configuration file looks like this:
+The following Logstash input configuration uses the generator plugin to create sample test events for validating the pipeline and plugin setup:
 
 ```
 input {
@@ -233,7 +237,7 @@ To ingest the data to a custom table, follow these steps (based on the [Send dat
 1. Review the [prerequisites](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#prerequisites).
 2. [Configure the application](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-azure-ad-application).
 3. [Add a custom log table](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#create-new-table-in-log-analytics-workspace).
-4. [Parse and filter sample data](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#parse-and-filter-sample-data) using the sample file you created in the previous section.
+4. [Parse and filter sample data](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#parse-and-filter-sample-data) using the sample file you created in the [Create a sample file](#create-a-sample-file) section.
 5. [Collect information from the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#collect-information-from-the-dcr).
 6. [Assign permissions to the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#assign-permissions-to-the-dcr).
 
@@ -245,14 +249,14 @@ If you come across any issues, see the [troubleshooting steps](/azure/azure-moni
 
 To ingest the data to a standard table like Syslog or CommonSecurityLog, you use a process based on the [Send data to Azure Monitor Logs using REST API (Resource Manager templates) tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api). While the tutorial explains how to ingest data into a custom table, you can easily adjust the process to ingest data into a standard table. The steps below indicate relevant changes in the steps.
 
-1. Review the [prerequisites](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#prerequisites).
+1. Review the [prerequisites for the REST API (Resource Manager templates) tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#prerequisites).
 2. [Collect workspace details](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#collect-workspace-details).
 3. [Configure an application](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-azure-ad-application).
 
     Skip the Create new table in Log Analytics workspace step. This step isn't relevant when ingesting data into a standard table, because the table is already defined in Log Analytics.
 4. [Create the DCR](/azure/azure-monitor/logs/tutorial-logs-ingestion-api#create-data-collection-rule). In this step:
 
-    - Provide the sample file you created in the previous section.
+    - Provide the sample file you created in the [Create a sample file](#create-a-sample-file) section.
     - Use the sample file you created to define the `streamDeclarations` property. Each of the fields in the sample file should have a corresponding column with the same name and the appropriate type (see the example below).
     - Configure the value of the `outputStream` property with the name of the standard table instead of the custom table. Unlike custom tables, standard table names don't have the `_CL` suffix.
     - The prefix of the table name should be `Microsoft-` instead of `Custom-`. In this example, the `outputStream` property value is `Microsoft-Syslog`.
@@ -260,7 +264,7 @@ To ingest the data to a standard table like Syslog or CommonSecurityLog, you use
 
     Skip the Send sample data step.
 
-If you come across any issues, see the [troubleshooting steps](/azure/azure-monitor/logs/tutorial-logs-ingestion-code#troubleshooting).
+If you come across any issues, see [Troubleshoot Azure Monitor Logs ingestion](/azure/azure-monitor/logs/tutorial-logs-ingestion-code#troubleshooting).
 
 ##### Example: DCR that ingests data into the Syslog table
 
@@ -352,12 +356,12 @@ To configure the Logstash configuration file to ingest the logs into a custom ta
 
 | Field | How to retrieve |
 | --- | --- |
-| `client_app_Id` | The `Application (client) ID` value you create in step 3 when you create the DCR resources, according to the tutorial you used in this section. |
-| `client_app_secret` | The client secret value you create in step 5 when you create the DCR resources, according to the tutorial you used in this section. |
+| `client_app_Id` | The `Application (client) ID` value you create in step 3 when you follow the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or the [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api) in the [Create the required DCR resources](#create-the-required-dcr-resources) section. |
+| `client_app_secret` | The client secret value you create in step 5 when you follow the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or the [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api) in the [Create the required DCR resources](#create-the-required-dcr-resources) section. |
 | `tenant_id` | Your subscription's tenant ID. You can find the tenant ID under **Home > Microsoft Entra ID > Overview > Basic Information**. |
-| `data_collection_endpoint` | The value of the `logsIngestion` URI in step 3 when you create the DCR resources, according to the tutorial you used in this section. |
-| `dcr_immutable_id` | The value of the DCR `immutableId` in step 6 when you create the DCR resources, according to the tutorial you used in this section. |
-| `dcr_stream_name` | For custom tables, as explained in step 6 when you create the DCR resources, go to the JSON view of the DCR, and copy the `dataFlows` > `streams` property. See the `dcr_stream_name` in the example below. For standard tables, the value is `Custom-SyslogStream`. |
+| `data_collection_endpoint` | The value of the `logsIngestion` URI from the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal) or the [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api), depending on which procedure you followed in the [Create the required DCR resources](#create-the-required-dcr-resources) section. |
+| `dcr_immutable_id` | The value of the DCR `immutableId` collected when you follow the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#collect-information-from-the-dcr) or the [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api) in the [Create the required DCR resources](#create-the-required-dcr-resources) section. |
+| `dcr_stream_name` | For custom tables, go to the JSON view of the DCR and copy the `dataFlows` > `streams` property, as described in the [Azure portal tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#collect-information-from-the-dcr) or the [Resource Manager templates tutorial](/azure/azure-monitor/logs/tutorial-logs-ingestion-api) in the [Create the required DCR resources](#create-the-required-dcr-resources) section. See the `dcr_stream_name` in the [Service principal output plugin configuration](#example-service-principal-output-plugin-configuration) example. For standard tables, the value is `Custom-SyslogStream`. |
 
 After you retrieve the required values:
 
@@ -366,6 +370,8 @@ After you retrieve the required values:
 1. Make sure you change the `create_sample_file` attribute to `false`.
 
 ##### Example: Service principal output plugin configuration
+
+The following sample configures the Microsoft Sentinel output plugin to authenticate with service principal client credentials and send events to Log Analytics via the Logs Ingestion API:
 
 ```
 output {
@@ -402,6 +408,8 @@ Required configuration for managed identity:
 
 ##### Example: System-assigned managed identity
 
+Use the following output configuration to authenticate the plugin with a system-assigned managed identity.
+
 ```
 output {
     microsoft-sentinel-log-analytics-logstash-output-plugin {
@@ -414,6 +422,8 @@ output {
 ```
 
 ##### Example: User-assigned managed identity
+
+Use the following output configuration when you want the plugin to authenticate with a user-assigned managed identity.
 
 ```
 output {
@@ -433,6 +443,8 @@ output {
 > - When you set an empty string as a value for a proxy setting, it unsets any system-wide proxy setting.
 
 #### Optional configuration
+
+The following table describes optional settings you can add to the output plugin configuration to customize its behavior.
 
 | Field | Description | Default value |
 | --- | --- | --- |
@@ -495,9 +507,13 @@ The following table lists the firewall requirements for scenarios where Azure vi
 
 ### 2.1.0
 
+This release includes the following change:
+
 - Fixed event normalization.
 
 ### 2.0.0
+
+This release includes the following updates:
 
 - Refactored the plugin from Ruby to Java.
 - Added ManagedIdentity authentication.
@@ -505,6 +521,8 @@ The following table lists the firewall requirements for scenarios where Azure vi
 - Closed codebase.
 
 ### 1.2.0
+
+This release includes the following changes:
 
 - Adds managed identity authentication support for Azure VMs/VMSS (system-assigned and user-assigned via IMDS).
 - Adds AKS workload identity support via OIDC token exchange.
@@ -515,17 +533,25 @@ The following table lists the firewall requirements for scenarios where Azure vi
 
 ### 1.1.4
 
+This release includes the following change:
+
 - Limits `excon` library version to lower than 1.0.0 to ensure the port is always used when using a proxy.
 
 ### 1.1.3
+
+This release includes the following update:
 
 - Replaces the `rest-client` library used for connecting to Azure with the `excon` library.
 
 ### 1.1.1
 
+This release includes the following change:
+
 - Adds support for Azure US Government cloud and Microsoft Azure operated by 21Vianet in China.
 
 ### 1.1.0
+
+This release includes the following changes:
 
 - Allows setting different proxy values for API connections.
 - Upgrades version for logs ingestion API to 2023-01-01.
@@ -533,17 +559,19 @@ The following table lists the firewall requirements for scenarios where Azure vi
 
 ### 1.0.0
 
+This is the initial release:
+
 - The initial release for the Logstash output plugin for Microsoft Sentinel. This plugin uses Data Collection Rules (DCRs) with Azure Monitor's Logs Ingestion API.
 
 ## Known issues
 
-When using Logstash installed on a Docker image of Lite Ubuntu, the following warning may appear:
+When using Logstash installed on a Docker image of Lite Ubuntu, the following warning may appear. This error indicates that the *netbase* system package is missing from the container image:
 
 ```
 java.lang.RuntimeException: getprotobyname_r failed
 ```
 
-To resolve this error, install the *netbase* package in your Dockerfile:
+To resolve this error, add the following lines to your Dockerfile to install the *netbase* package, which provides the missing network protocol definitions:
 
 ```bash
 USER root
@@ -560,4 +588,4 @@ If your environment's event rate is low, increase the value of *plugin_flush_int
 
 - The columns of the input stream in the `streamDeclarations` property must start with a letter. If you start a column with other characters (for example `@` or `_`), the operation fails.
 - The `TimeGenerated` datetime field is required. You must include this field in the KQL transform.
-- For additional possible issues, review the [troubleshooting section](/azure/azure-monitor/logs/tutorial-logs-ingestion-code#troubleshooting) in the tutorial.
+- For additional possible issues, review [Troubleshoot Azure Monitor Logs ingestion](/azure/azure-monitor/logs/tutorial-logs-ingestion-code#troubleshooting).
