@@ -109,12 +109,14 @@ In multi-workspace environments, the Microsoft Defender XDR connector is connect
 
 From a Log Analytics perspective, Microsoft Sentinel’s integration into Microsoft Defender doesn't change how Microsoft Sentinel stores log data in Log Analytics. Despite the front-end unification, the Microsoft Sentinel backend remains fully integrated with Log Analytics for data storage, search, and correlation.
 
-Alerts related to Defender products are streamed directly from the [Microsoft Defender XDR connector](/azure/sentinel/connect-microsoft-365-defender) to ensure consistency. Make sure that you have incidents and alerts from this connector turned on in your workspace. Once you have this data connector configured in your workspace, [offboarding the workspace from Microsoft Defender](/unified-secops/microsoft-sentinel-onboard#offboard-microsoft-sentinel) also disconnects the Microsoft Defender XDR connector.
+Alerts related to Defender products are streamed directly from the [Microsoft Defender connector](/azure/sentinel/connect-microsoft-365-defender) to ensure consistency. Make sure that you have incidents and alerts from this connector turned on in your workspace. Once you have this data connector configured in your workspace, [offboarding the workspace from Microsoft Defender](/unified-secops/microsoft-sentinel-onboard#offboard-microsoft-sentinel) also disconnects the Microsoft Defender connector.
 
 > [!NOTE]
 > This change in connectors results in schema differences for some alerts. For a detailed comparison, see [Alert schema differences: Standalone vs. Microsoft Defender XDR connector](security-alert-schema-differences.md).
 
-For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](connect-microsoft-365-defender.md).
+To migrate analytics rule incident creation and alert grouping settings, see [Migrate Microsoft Sentinel incident creation rules and alert grouping settings to Defender XDR](/unified-secops/migrate-sentinel-incident-creation-rules-alert-grouping).
+
+For more information, see [Connect data from Microsoft Defender to Microsoft Sentinel](connect-microsoft-365-defender.md).
 
 #### Integrate with Microsoft Defender for Cloud
 

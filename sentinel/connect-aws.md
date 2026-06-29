@@ -5,7 +5,9 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 06/09/2025
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security engineer, I want to connect AWS service logs to Microsoft Sentinel so that analysts can centralize log management and enhance threat detection capabilities.
@@ -14,22 +16,24 @@ ms.date: 06/09/2025
 
 # Connect Microsoft Sentinel to Amazon Web Services to ingest AWS service log data
 
-The Amazon Web Services (AWS) service log connector is available in two versions: the legacy connector for CloudTrail management and data logs, and the new version that can ingest logs from the following AWS services by pulling them from an S3 bucket (links are to AWS documentation):
+This article explains how to configure the Amazon Web Services (AWS) service log connector in Microsoft Sentinel to ingest AWS resource logs. The connector is available in two versions: the legacy connector for CloudTrail management and data logs, and the new version that can ingest logs from the following AWS services by pulling them from an S3 bucket (links are to AWS documentation):
 
 - [Amazon Virtual Private Cloud (VPC)](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) - [VPC Flow Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html)
-- [Amazon GuardDuty](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html) - [Findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings.html)
-- [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) - [Management](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html) and [data](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html) events
+- [Amazon GuardDuty](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html) - [GuardDuty findings](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings.html)
+- [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) - [Management events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-events-with-cloudtrail.html) and [data events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
 - [AWS CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html) - [CloudWatch logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
 
 
 # [S3 connector (new)](#tab/s3)
 
-This tab explains how to configure the AWS S3 connector using one of two methods: 
+This section explains how to configure the AWS S3 connector using one of two methods: 
 
 - [Automatic setup](#automatic-setup) (Recommended) 
 - [Manual setup](#manual-setup)
 
 ## Prerequisites
+
+Before you begin, make sure you meet the following requirements:
 
 - You must have write permission on the Microsoft Sentinel workspace.
 - Install the Amazon Web Services solution from the **Content Hub** in Microsoft Sentinel. For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](sentinel-solutions-deploy.md).
@@ -41,7 +45,7 @@ This tab explains how to configure the AWS S3 connector using one of two methods
     - **Amazon VPC**: .csv file in GZIP format with headers; delimiter: space.
     - **Amazon GuardDuty**: json-line and GZIP formats.
     - **AWS CloudTrail**: .json file in a GZIP format.
-    - **CloudWatch**: .csv file in a GZIP format without a header. If you need to convert your logs to this format, you can use this [CloudWatch lambda function](#send-formatted-cloudwatch-events-to-s3-using-a-lambda-function-optional).
+    - **CloudWatch**: .csv file in a GZIP format without a header. If you need to convert your logs to the required .csv GZIP format without a header, you can use the [CloudWatch Lambda function to format events for S3](#send-formatted-cloudwatch-events-to-s3-using-a-lambda-function-optional).
 
 
 ## Automatic setup
@@ -56,11 +60,11 @@ The script:
 
 - Enables specified AWS services to send logs to that S3 bucket, and notification messages to that SQS queue.
 
-- If necessary, creates that S3 bucket and that SQS queue for this purpose.
+- If necessary, creates that S3 bucket and that SQS queue to store AWS logs and receive notification messages.
 
 - Configures any necessary IAM permissions policies and applies them to the IAM role created above.
 
-For Azure Government clouds, a specialized script creates a different OIDC web identity provider, to which it assigns the IAM assumed role.
+For Azure Government clouds, a specialized script creates a different OIDC web identity provider and assigns the IAM assumed role to that provider.
 
 ### Instructions
 
@@ -70,7 +74,7 @@ To run the script to set up the connector, use the following steps:
 
 1. Select **Amazon Web Services S3** from the data connectors gallery.
 
-   If you don't see the connector, install the Amazon Web Services solution from the **Content Hub** in Microsoft Sentinel.
+   If you don't see the Amazon Web Services S3 connector, install the Amazon Web Services solution from the **Content Hub** in Microsoft Sentinel.
 
 1. In the details pane for the connector, select **Open connector page**.
 
@@ -79,7 +83,7 @@ To run the script to set up the connector, use the following steps:
 1. Follow the on-screen instructions to download and extract the [AWS S3 Setup Script](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/ConfigAwsS3DataConnectorScripts.zip?raw=true) (link downloads a zip file containing the main setup script and helper scripts) from the connector page.
 
    > [!NOTE]
-   > For ingesting AWS logs into an **Azure Government cloud**, download and extract [this specialized AWS S3 Gov Setup Script](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/ConfigAwsS3DataConnectorScriptsGov.zip?raw=true) instead.
+   > For ingesting AWS logs into an **Azure Government cloud**, download and extract the [specialized AWS S3 Gov Setup Script](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/ConfigAwsS3DataConnectorScriptsGov.zip?raw=true) instead.
 
 1. Before running the script, run the `aws configure` command from your PowerShell command line, and enter the relevant information as prompted. See [AWS Command Line Interface | Configuration basics](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html) (from AWS documentation) for details.
 
@@ -95,14 +99,14 @@ To run the script to set up the connector, use the following steps:
 
    :::image type="content" source="media/connect-aws/aws-add-connection.png" alt-text="Screenshot of pasting the A W S role information from the script, to the S3 connector." lightbox="media/connect-aws/aws-add-connection.png":::
 
-1. Select a data type from the **Destination table** drop-down list. This tells the connector which AWS service's logs this connection is being established to collect, and into which Log Analytics table it stores the ingested data. Then select **Add connection**.
+1. Select a data type from the **Destination table** drop-down list. Selecting a data type tells the connector which AWS service's logs this connection collects, and which Log Analytics table stores the ingested data. Then select **Add connection**.
 
 > [!NOTE]
 > The script may take up to 30 minutes to finish running.
 
 ## Manual setup
 
-We recommend using the automatic setup script to deploy this connector. If for whatever reason you don't want to take advantage of this convenience, follow the steps below to set up the connector manually.
+We recommend using the automatic setup script to deploy the AWS S3 connector. If for whatever reason you don't want to take advantage of this convenience, follow the steps below to set up the connector manually.
 
 1. Set up your AWS environment as described in [Set up your Amazon Web Services environment to collect AWS logs to Microsoft Sentinel](connect-aws-configure-environment.md#manual-setup).  
 
@@ -132,7 +136,11 @@ We recommend using the automatic setup script to deploy this connector. If for w
 
 ## Known issues and troubleshooting
 
+Review the following known issues and troubleshooting resources for the AWS S3 connector.
+
 ### Known issues
+
+Be aware of the following limitations and configuration rules when using the AWS S3 connector:
 
 - Different types of logs can be stored in the same S3 bucket, but shouldn't be stored in the same path.
 
@@ -146,10 +154,10 @@ Learn how to [troubleshoot Amazon Web Services S3 connector issues](aws-s3-troub
 
 # [CloudTrail connector (legacy)](#tab/ct)
 
-This tab explains how to configure the AWS CloudTrail connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. This two-way authentication creates secure communication.
+This section explains how to configure the AWS CloudTrail connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. The AWS-side process produces information used by Microsoft Sentinel, and the Microsoft Sentinel-side process produces information used by AWS. This two-way authentication creates secure communication.
 
 > [!NOTE]
-> AWS CloudTrail has [built-in limitations](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) in its LookupEvents API. It allows no more than two transactions per second (TPS) per account, and each query can return a maximum of 50 records. If a single tenant constantly generates more than 100 records per second in one region, backlogs and delays in data ingestion will result.
+> AWS CloudTrail has [LookupEvents API limitations](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/WhatIsCloudTrail-Limits.html) in its LookupEvents API. It allows no more than two transactions per second (TPS) per account, and each query can return a maximum of 50 records. If a single tenant constantly generates more than 100 records per second in one region, backlogs and delays in data ingestion will result.
 >
 > Currently, you can only connect your AWS Commercial CloudTrail to Microsoft Sentinel and not AWS GovCloud CloudTrail.
 
@@ -163,11 +171,11 @@ This tab explains how to configure the AWS CloudTrail connector. The process of 
 
 ## Connect AWS CloudTrail
 
-Setting up this connector has two steps:
+Setting up the AWS CloudTrail connector has two steps:
 - [Create an AWS assumed role and grant access to the AWS Sentinel account](#create-an-aws-assumed-role-and-grant-access-to-the-aws-sentinel-account)
 - [Add the AWS role information to the AWS CloudTrail data connector](#add-the-aws-role-information-to-the-aws-cloudtrail-data-connector)
 
-#### Create an AWS assumed role and grant access to the AWS Sentinel account
+### Create an AWS assumed role and grant access to the AWS Sentinel account
 
 1. In Microsoft Sentinel, select **Data connectors** from the navigation menu.
 
@@ -191,7 +199,7 @@ Setting up this connector has two steps:
 
     - Name the role with a meaningful name that includes a reference to Microsoft Sentinel. Example: "*MicrosoftSentinelRole*".
 
-#### Add the AWS role information to the AWS CloudTrail data connector
+### Add the AWS role information to the AWS CloudTrail data connector
 
 1. In the browser tab open to the AWS console, enter the **Identity and Access Management (IAM)** service and navigate to the list of **Roles**. Select the role you created above.
 
@@ -210,7 +218,7 @@ Setting up this connector has two steps:
 
 ## Send formatted CloudWatch events to S3 using a lambda function (optional)
 
-If your CloudWatch logs aren't in the format accepted by Microsoft Sentinel - .csv file in a GZIP format without a header - use a lambda function [view the source code](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/CloudWatchLambdaFunction.py) within AWS to send CloudWatch events to an S3 bucket in the accepted format.
+If your CloudWatch logs aren't in the format accepted by Microsoft Sentinel - .csv file in a GZIP format without a header - use a lambda function ([CloudWatch Lambda function source code](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/CloudWatchLambdaFunction.py)) within AWS to send CloudWatch events to an S3 bucket in .csv GZIP format without a header.
 
 The lambda function uses Python 3.12 runtime and x86_64 architecture.
 
@@ -236,7 +244,7 @@ To deploy the lambda function:
 
    :::image type="content" source="media/cloudwatch-lambda-function/lambda-other-permissions-policies.png" alt-text="Screenshot of the AWS Management Console Add permissions policies screen." lightbox="media/cloudwatch-lambda-function/lambda-other-permissions-policies.png":::
 
-1. Return to the function, select **Code**, and paste the code link under **Code source**.
+1. Return to the function, select **Code**, and paste the [CloudWatch lambda function source code](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/CloudWatchLambdaFunction.py) into **Code source**.
 1. The default values for the parameters are set using environment variables. If necessary, you can manually adjust these values directly in the code.
 1. Select **Deploy**, and then select **Test**.
 1. Create an event by filling in the required fields.
@@ -247,7 +255,7 @@ To deploy the lambda function:
 
 ## Next steps
 
-In this document, you learned how to connect to AWS resources to ingest their logs into Microsoft Sentinel. To learn more about Microsoft Sentinel, see the following articles:
+After connecting AWS resources to ingest their logs into Microsoft Sentinel, you can learn more about Microsoft Sentinel from the following articles:
 - Learn how to [get visibility into your data, and potential threats](get-visibility.md).
 - Get started [detecting threats with Microsoft Sentinel](detect-threats-built-in.md).
 - [Use workbooks](monitor-your-data.md) to monitor your data.

@@ -5,14 +5,16 @@ ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: tbeerthuis
-ms.date: 09/19/2025
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Package and publish a Microsoft Sentinel platform solution
 
 A Microsoft Sentinel platform solution is a deployable package for the Microsoft Sentinel data lake. It includes code and configuration that help you analyze and respond to security data.
 
-This article shows how to package and publish your completed platform solution in the Microsoft Security Store. 
+This article shows how to package and publish your completed platform solution in the Microsoft Security Store. Before you start, make sure you meet the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
@@ -34,7 +36,7 @@ Before you create the package manifest, check that all your solution components 
 - You can include `mainTemplate.json` if your solution deploys Azure resources.
 
 > [!NOTE]
-> The ARM template doesn't support user input.
+> The `mainTemplate.json` ARM template doesn't support user input.
 
 ## Create the package manifest
 
@@ -53,6 +55,8 @@ Create a package manifest to list the solution components. It includes the solut
 1. (Optional) Select **View YAML** to edit the YAML file.
 
 ### Example manifest
+
+The following example shows a minimal package manifest.
 
 ```yaml
 packageName: ContosoPlatformSolution

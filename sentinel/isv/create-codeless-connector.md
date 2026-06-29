@@ -5,7 +5,9 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 09/26/2024
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security engineer, I want to create custom data connectors for Microsoft Sentinel so that I can ingest and analyze data from various sources without writing code.
@@ -25,13 +27,13 @@ Connectors created using the CCF are fully SaaS, with no requirements for servic
 > * Deploy the connector
 > * Connect Microsoft Sentinel to your data source and start ingesting data
 
-This article will show you how to complete each step and provide an [example codeless connector](#example) to build along the way.
+The following sections explain how to complete each step and provide an [example codeless connector](#example-codeless-connector-implementation) to build along the way.
 
 If you're a software development partner and need support to build a CCF data connector, contact Microsoft Sentinel Partners at [AzureSentinelPartner@microsoft.com](mailto:AzureSentinelPartner@microsoft.com) for assistance.
 
 ## How is this CCF different from the previous version?
 
-The initial version of the CCF was [announced](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/the-codeless-connector-platform/ba-p/3095455) in January of 2022. Since then, we've improved upon the platform and the [legacy release](../create-codeless-connector-legacy.md) is no longer recommended. This new version of the CCF has the following key improvements:
+The initial version of the CCF was [introduced in the Codeless Connector Platform blog post](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/the-codeless-connector-platform/ba-p/3095455) in January of 2022. Since then, we've improved upon the platform and the [legacy codeless connector release](../create-codeless-connector-legacy.md) is no longer recommended. This new version of the CCF has the following key improvements:
 
 1. Better support for various authentication and pagination types.
 
@@ -81,19 +83,19 @@ We recommend testing your components with an API testing tool like one of the fo
 >[!TIP]
 >If you're an Independent Software Vendor (ISV) and need support when building a Microsoft Sentinel integration using the Microsoft Sentinel Codeless Connector Framework, the Microsoft App Assure team may be able to assist. To engage the App Assure team, send an email to azuresentinelpartner@microsoft.com.
 
-There are four components required to build the CCF data connector.
+There are four components required to build the Codeless Connector Framework (CCF) data connector.
 
 1. [Output table definition](#output-table-definition)
 1. [Data Collection Rule (DCR)](#data-collection-rule)
 1. [Data connector user interface](#data-connector-user-interface)
 1. [Data connector connection rules](#data-connection-rules)
 
-Each component has a section detailing the process to create and validate. Take the JSON from each component for the final packaging of the ARM template.
+Each component has a section detailing the process to create and validate. Use the JSON generated in the output table definition, DCR, UI definition, and connection rules sections to assemble the final ARM template.
 
 ### Output table definition
 
 >[!TIP]
->Skip this step if your data is only ingested to standard Log Analytics tables. Examples of standard tables include *CommonSecurityLog* and *ASimDnsActivityLogs*. For more information about the full list of supported standard data types, see [Data transformation support for custom data connectors](../data-transformation.md#data-ingestion-flow-in-microsoft-sentinel).
+>Skip custom table creation if your data is only ingested to standard Log Analytics tables. Examples of standard tables include *CommonSecurityLog* and *ASimDnsActivityLogs*. For more information about the full list of supported standard data types, see [Data transformation support for custom data connectors](../data-transformation.md#data-ingestion-flow-in-microsoft-sentinel).
 
 If your data source doesn't conform to the schema of a standard table, you have two options:
 
@@ -116,7 +118,7 @@ Reference the latest information on DCRs in these articles:
 - [Data collection rules overview](/azure/azure-monitor/essentials/data-collection-rule-overview)
 - [Structure of a data collections rule](/azure/azure-monitor/essentials/data-collection-rule-structure)
 
-For a tutorial demonstrating the creation of a DCE, including using sample data to create the custom table and DCR, see [Tutorial: Send data to Azure Monitor Logs with Logs ingestion API (Azure portal)](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal). Use the process in this tutorial to verify data is ingested correctly to your table with your DCR.
+For a tutorial demonstrating the creation of a DCE, including using sample data to create the custom table and DCR, see [Tutorial: Send data to Azure Monitor Logs with Logs ingestion API (Azure portal)](/azure/azure-monitor/logs/tutorial-logs-ingestion-portal). Use the process in the Logs ingestion API tutorial to verify data is ingested correctly to your table with your DCR.
 
 To understand how to create a complex DCR with multiple data flows, see the [DCR example section](#example-data-collection-rule).
 
@@ -143,13 +145,14 @@ There are currently three kinds of data connection rules possible for defining y
 - `GCP` kind allows you to decrease your development time by automatically configuring paging and expected response payloads for your Google Cloud Platform (GCP) data source. For more information, see [GCP data connector connection rules reference](../data-connection-rules-reference-gcp.md)
 - `StorageAccountBlobContainer` kind allows you to ingest from an Azure Storage Blob data source. For more information, see [Azure Storage Blob connectors API reference](../data-connection-rules-reference-azure-storage.md).
 
-Use an [API testing tool](#testing-apis) to call the data connector API to create the data connector which combines the connection rules and previous components. Verify the connector is now connected in the UI.
+Use an [API testing tool](#testing-apis) to call the data connector API to create the data connector, which combines the connection rules with the output table definition, DCR, and connector UI definition. Verify the connector is now connected in the UI.
 
 ## Secure confidential input
 
 Whatever authentication is used by your CCF data connector, take these steps to ensure confidential information is kept secure. The goal is to pass along credentials from the ARM template to the CCF without leaving readable confidential objects in your deployments history.
 
-### Create label
+<a name="create-label"></a>
+### Create a credential prompt label for the connector definition
 
 The data connector definition creates a UI element to prompt for security credentials. For example, if your data connector authenticates to a log source with OAuth, your data connector definition section includes the `OAuthForm` type in the instructions. This sets up the ARM template to prompt for the credentials.  
 
@@ -216,7 +219,7 @@ Finally, the CCF utilizes the credential objects in the data connector section.
 
 >[!Note]
 > The strange syntax for the credential object, `"ClientSecret": "[[parameters('Password')]",` isn't a typo! 
-> In order to create the deployment template which also uses parameters, you need to escape the parameters in that section with an extra starting`[`. This allows the parameters to assign a value based on the user interaction with the connector.
+> In order to create the deployment template which also uses parameters, you need to escape the parameters in that section with an extra starting`[`. Escaping the parameter with an extra opening `[` allows the parameters to assign a value based on the user interaction with the connector.
 >
 > For more information, see [Template expressions escape characters](/azure/azure-resource-manager/templates/template-expressions#escape-characters).
   
@@ -225,7 +228,7 @@ Finally, the CCF utilizes the credential objects in the data connector section.
 
 Manually package an Azure Resource Management (ARM) template using the [example template code samples](#example-arm-template) as your guide. These code samples are divided by ARM template sections which you must splice together.
 
-If you're creating a Google Cloud Platform (GCP) CCF data connector, package the deployment template using the [example GCP CCF template](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/Templates/Connector_GCP_CCP_template.json). For information on how to fill out the GCP CCF template, see [GCP data connector connection rules reference](../data-connection-rules-reference-gcp.md).
+If you're creating a Google Cloud Platform (GCP) Codeless Connector Framework (CCF) data connector, package the deployment template using the [example GCP CCF template](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/Templates/Connector_GCP_CCP_template.json). For information on how to fill out the GCP CCF template, see [GCP data connector connection rules reference](../data-connection-rules-reference-gcp.md).
 
 In addition to the example templates, published solutions available in the Microsoft Sentinel content hub use the CCF for their data connectors. Review the following solutions as more examples of how to stitch the components together into an ARM template.
 
@@ -246,10 +249,10 @@ In addition to the example templates, published solutions available in the Micro
 Deploy your codeless connector as a custom template. 
 
 >[!TIP]
->Delete resources you created in previous steps. The DCR and custom table is created with the deployment. If you don't remove those resources before deploying, it's more difficult to verify your template.
+>If you manually created a DCR or custom table while testing during the build phase, delete those resources before deploying. The ARM template deployment creates the DCR and custom table automatically. If pre-existing copies of those resources remain, it's more difficult to verify your template.
 
-1. Copy the contents of the ARM [deployment template](#create-the-deployment-template).
-1. Follow the **Edit and deploy the template** instructions from the article, [Quickstart: Create and deploy ARM templates by using the Azure portal](/azure/azure-resource-manager/templates/quickstart-create-templates-use-the-portal#edit-and-deploy-the-template).
+1. Copy the contents of the ARM template you created in [Create the deployment template](#create-the-deployment-template).
+1. Follow the **Edit and deploy the template** instructions in [Quickstart: Create and deploy ARM templates by using the Azure portal](/azure/azure-resource-manager/templates/quickstart-create-templates-use-the-portal#edit-and-deploy-the-template).
 
 ### Maintain network isolation for logging source
 
@@ -267,7 +270,8 @@ View your codeless connector in the data connector gallery. Open the data connec
 >It may take up to 30 minutes to see data begin ingesting.
 
 
-## Example
+<a name="example"></a>
+## Example codeless connector implementation
 
 Each step in building the codeless connector is represented in the following example sections. 
 
@@ -454,11 +458,11 @@ To create this DCR in a test environment, follow the [Data Collection Rules API]
 
 ### Example data connector UI definition
 
-This example is located in the [Data connector definitions reference](../data-connector-ui-definitions-reference.md#example-data-connector-definition).
+The example data connector UI definition is located in the [Data connector definitions reference](../data-connector-ui-definitions-reference.md#example-data-connector-definition).
 
 ### Example data connector connection rules
 
-This example is located in the [Data connectors reference](../data-connector-connection-rules-reference.md#example-ccf-data-connector).
+The example data connector connection rules are located in the [Data connectors reference](../data-connector-connection-rules-reference.md#example-ccf-data-connector).
 
 ### Example ARM template
 
@@ -537,7 +541,7 @@ For more information, see [Parameters in ARM templates](/azure/azure-resource-ma
 
 #### Example ARM template - variables
 
-These recommended variables help simplify the template. Use more or less as needed. For more information, see [Variables in ARM templates](/azure/azure-resource-manager/templates/variables).
+The following recommended variables help simplify the template. Use more or less as needed. For more information, see [Variables in ARM templates](/azure/azure-resource-manager/templates/variables).
 
 ```json
     "variables": {
@@ -917,6 +921,6 @@ There are 5 ARM deployment resources in this template guide which house the 4 CC
 
 ## Related content
 
-For more information, see 
-- [About Microsoft Sentinel solutions](../sentinel-solutions.md)
+For more information about Microsoft Sentinel solutions and data connector ARM templates, see 
+- [About Microsoft Sentinel solutions](../sentinel-solutions.md).
 - [Data connector ARM template reference](/azure/templates/microsoft.securityinsights/dataconnectors#dataconnectors-objects-1)

@@ -6,13 +6,15 @@ author: EdB-MSFT
 ms.reviewer: krishsa
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 01/28/2026
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 # customer intent: As a security engineer or ISV partner, I want to understand how CCF Push connectors work and how to build one so I can send real-time data from my application to Microsoft Sentinel.
 ---
 
 # Microsoft Sentinel CCF push connectors (preview) - Getting started guide
 
-This guide helps you understand, build, and deploy push-based codeless connectors for Microsoft Sentinel using the Codeless Connector Framework (CCF) Push (preview).
+This guide helps you understand, build, and deploy push-based codeless connectors for Microsoft Sentinel using the Codeless Connector Framework (CCF) Push (preview). It covers the push connector architecture, the required JSON artifacts, the end-to-end deployment flow, and sample application code for sending data. The guide is intended for security engineers and ISV partners who need to send real-time events from their applications to Microsoft Sentinel. Before you begin, review the [prerequisites](#prerequisites), which include access to the Azure-Sentinel GitHub repository and specific Microsoft Entra and Azure permissions.
 
 ## What is CCF push?
 
@@ -31,14 +33,15 @@ CCF Push provides several key benefits:
 - Before you begin, you must have access to the Azure-Sentinel GitHub repository for packaging tools.
 - Microsoft Entra permissions:
     - Permission to create an app registration in Microsoft Entra ID. Typically requires Entra ID Application Developer role or higher.
-    - Permission to create an application with secrets. If you don't grant this permission, the connector fails due to security reasons.
-    - The publisher must have the appropriate role to retrieve tokens from the Microsoft Entra application. These tokens are required for authenticating requests to the Data Collection Endpoint (DCE), which is the endpoint where the connector ultimately pushes its data. If the provider can't retrieve tokens, data can't be sent to the DCE.
+    - Permission to create an application with secrets. If you don't grant permission to create an application with secrets, the connector fails due to security requirements.
+    - The publisher must have the appropriate role to retrieve tokens from the Microsoft Entra application. A Data Collection Endpoint (DCE) is the URL where the connector pushes its data. These tokens are required for authenticating requests to the DCE. If the provider can't retrieve tokens, data can't be sent to the DCE.
 - Microsoft Azure permissions:
     - Permission to assign Monitoring Metrics Publisher role on data collection rule (DCR). Typically requires Azure RBAC Owner or User Access Administrator role.
 
 
 ## How CCF push works
 
+The following sections explain the CCF Push connector architecture, including how push differs from pull ingestion and the end-to-end data flow from your application into Microsoft Sentinel.
 
 ### The push model vs pull model
 
@@ -115,6 +118,8 @@ A CCF Push connector solution consists of four main components:
 
 **Example:**
 
+The following ARM resource definition creates the custom Log Analytics table that stores incoming security alert data:
+
 ```json
 {
   "name": "ContosoSecurityAlerts_CL",
@@ -176,6 +181,8 @@ A CCF Push connector solution consists of four main components:
 - `dataCollectionEndpointId`: Links to the DCE for data ingestion
 
 **Example:**
+
+The following ARM resource definition creates the data collection rule (DCR) that maps incoming custom alert data to the destination Log Analytics table:
 
 ```json
 {
@@ -515,7 +522,7 @@ Example:
 > [!IMPORTANT]
 > - The `connectorDefinitionName` must exactly match the connector definition's `id`.
 > - The `streamName` must match the stream declared in your DCR.
-> - This resource is automatically created during deployment when users select the **DeployPushConnector** button.
+> - The push connector configuration resource is automatically created during deployment when users select the **DeployPushConnector** button.
 
 
 
@@ -576,7 +583,7 @@ Your application sends the event structure:
 
 1.  Define Your Table
 
-    In the ContosoSecurityAlerts_ccf folder, create a file named table.json with your custom table definition:
+    In the ContosoSecurityAlerts_ccf folder, create a file named table.json with your custom table definition. This ARM resource definition creates the custom Log Analytics table that stores incoming security alert data and defines the schema that ingested records must match.
 
     ```json
     {
@@ -1165,13 +1172,19 @@ Now that you understand CCF Push connectors, take the following steps:
 
 ## Additional resources
 
+Use the following resources to learn more about CCF connectors, Azure Monitor data ingestion, authentication, and Microsoft Sentinel.
+
 ### CCF documentation
+
+The following references cover connector definitions and related pull-connector concepts:
 
 - [Create a codeless connector (CCF Pull)](/azure/sentinel/create-codeless-connector) - Polling-based connectors.
 - [Data Connector Definitions API reference](/rest/api/securityinsights/data-connector-definitions) - UI configuration guide.
 - [Data connector connection rules reference](/azure/sentinel/create-codeless-connector) - Connection rules for polling connectors.
 
 ### Azure Monitor and data collection
+
+These Azure Monitor resources explain the ingestion API, data collection rules, endpoints, and related tutorials:
 
 - [Azure Monitor Logs Ingestion API](/azure/azure-monitor/logs/logs-ingestion-api-overview) - Core API for sending data.
 - [Data collection rules in Azure Monitor](/azure/azure-monitor/essentials/data-collection-rule-overview) - Understanding DCRs.
@@ -1181,6 +1194,8 @@ Now that you understand CCF Push connectors, take the following steps:
 - [Create a custom table](/azure/azure-monitor/logs/create-custom-table) - Custom table creation guide.
 
 ### Authentication and security
+
+Use these resources to understand authentication flows, token handling, app registration, and security practices for push connectors:
 
 - [OAuth 2.0 client credentials flow](/entra/identity-platform/v2-oauth2-client-creds-grant-flow) - How app-to-service authentication works.
 - [Microsoft identity platform access tokens](/entra/identity-platform/access-tokens) - Understanding OAuth tokens.
@@ -1192,11 +1207,16 @@ Now that you understand CCF Push connectors, take the following steps:
 
 ### Microsoft Sentinel
 
+The following Microsoft Sentinel resources cover solution packaging, connector health monitoring, and API references:
+
 - [About Microsoft Sentinel solutions](/azure/sentinel/sentinel-solutions) - Packaging connectors as solutions.
 - [Monitor the health of your data connectors](/azure/sentinel/monitor-data-connector-health) - Health monitoring.
 - [ARM template reference for data connectors](/rest/api/securityinsights/data-connectors) - Complete API reference.
 
-## Getting help
+<a name="getting-help"></a>
+## Support
+
+If you need assistance while building or deploying a connector, use the following support options:
 
 - For ISV partners building integrations, contact: azuresentinelpartner@microsoft.com
 - For technical questions, use [Microsoft Q&A](/answers/topics/azure-sentinel.html) with the tag 'azure-sentinel'.

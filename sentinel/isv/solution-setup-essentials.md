@@ -1,11 +1,13 @@
 ---
 title: Microsoft Sentinel solution setup essentials
-description: Learn the prerequisites for creating Microsoft Sentinel SIEM and platform solutions.
+description: Learn about the two Microsoft Sentinel solution types and review the setup steps required before you build or publish.
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: tbeerthuis
-ms.date: 09/18/2025
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Microsoft Sentinel solution setup essentials

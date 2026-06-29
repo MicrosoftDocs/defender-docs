@@ -5,11 +5,13 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 07/09/2025
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to install and configure data connectors in my SIEM platform so that I can ingest and analyze data from various sources for threat detection and response.
@@ -40,7 +42,7 @@ After you or someone in your organization installs the solution that includes th
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Configurations** > **Data connectors**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Configuration**, select **Data connectors**.
 
-1. Search for and select the connector. If you don't see the data connector you want, check again that the relevant solution is installed in the **Content hub**.
+1. Search for and select the connector. If you don't see the data connector you want, check again that the solution that contains the data connector is installed in the **Content hub**.
 
 1. Select **Open connector page**.  
 
@@ -80,14 +82,14 @@ Once you have set up your connector, configure data retention and tiering using 
 1. To configure the data lake tier, select a retention period from the **Total retention** drop-down list. 
     :::image type="content" source="media/configure-data-connector/analytics-and-data-lake-tier.png" lightbox="media/configure-data-connector/analytics-and-data-lake-tier.png" alt-text="A screenshot showing the analytics and data lake tier options.":::
 
-1. To change the tier to data lake only, select the **Data lake tier** and select a retention period from the **Retention** drop-down list. Selecting this option stops further ingestion to the analytics tier.
+1. To change the tier to data lake only, select the **Data lake tier** and select a retention period from the **Retention** drop-down list. Selecting the **Data lake tier** option stops further ingestion to the analytics tier.
 
 1. Select **Save** to save the changes.
 
 :::image type="content" source="media/configure-data-connector/data-lake-tier-only.png" lightbox="media/configure-data-connector/data-lake-tier-only.png" alt-text="A screenshot showing the data lake tier retention only option.":::
 
 
-After you configure the data connector, it might take some time for the data to be ingested into Microsoft Sentinel. It takes 90 - 120 minutes for data to be ingested into the data lake. When the data connector is connected, you see a summary of the data in the **Data received** graph, and the connectivity status of the data types.  
+After you configure the data connector, data ingestion into Microsoft Sentinel might take some time. It takes 90 - 120 minutes for data to be ingested into the data lake. When the data connector is connected, you see a summary of the data in the **Data received** graph, and the connectivity status of the data types.  
 
    :::image type="content" source="media/configure-data-connector/connected-data-connector.png" alt-text="Screenshot of a data connector page with status connected and graph that shows the data received.":::
 
@@ -106,7 +108,7 @@ Navigate to **Data lake explorer** , **KQL queries** to query data in the data l
 
 ## Find support for a data connector
 
-Both Microsoft and other organizations author Microsoft Sentinel data connectors. Find the support contact from data connector page in Microsoft Sentinel.
+Both Microsoft and other organizations author Microsoft Sentinel data connectors. Find the support contact from the data connector's details page in Microsoft Sentinel.
 
 1. In the Microsoft Sentinel **Data connectors** page, select the relevant connector.
 1. To access support and maintenance for the connector, use the support contact link in the **Supported by** field on the side panel for the connector. 
