@@ -2,13 +2,13 @@
 title: Enable Defender for Containers in Microsoft Defender for Cloud
 description: Learn how to enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud for Azure subscriptions, AWS connectors, and GCP connectors.
 ms.topic: how-to
-ms.date: 01/19/2026
+ms.date: 06/29/2026
 ai-usage: ai-assisted
 ---
 
 # Enable Defender for Containers in Microsoft Defender for Cloud
 
-This article explains how to enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud.
+Enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud to protect your Kubernetes clusters and container workloads.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
@@ -54,6 +54,9 @@ Before you begin, make sure that:
     - **Registry access**  
       Enables agentless vulnerability assessment for container images stored in connected registries.
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
+
+          > [!NOTE]
+          > The **Security findings** component can't be enabled through Azure Policy. To enable it, toggle it on in the plan **Settings** page.
 
    :::image type="content" source="./media/defender-for-containers-enable-plan/azure-defender-plans.png" alt-text="Screenshot of the Settings and monitoring page for the Containers plan in Microsoft Defender for Cloud, showing available Defender for Containers components." lightbox="./media/defender-for-containers-enable-plan/azure-defender-plans.png":::
 
@@ -110,6 +113,9 @@ Before you begin, make sure that:
     - **Registry access** 
       Enables agentless vulnerability assessment for container images in Amazon ECR. Images pushed to ECR are scanned automatically (typically within 24 hours).
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
+
+          > [!NOTE]
+          > The **Security findings** component can't be enabled through Azure Policy. To enable it, toggle it on in the plan **Settings** page.
 
    :::image type="content" source="./media/defender-for-containers-enable-plan/amazon-web-services-select-plans.png" alt-text="Screenshot of the Defender for Containers configuration pane for an AWS connector in Microsoft Defender for Cloud." lightbox="./media/defender-for-containers-enable-plan/amazon-web-services-select-plans.png":::
   
@@ -175,6 +181,9 @@ Before you begin, make sure that:
     - **Registry access**  
       Enables agentless vulnerability assessment for container images stored in Google Container Registry (GCR) and Artifact Registry.
         - **Security findings:** Generates findings and links them to container images when new images are pushed or existing images are updated.
+
+          > [!NOTE]
+          > The **Security findings** component can't be enabled through Azure Policy. To enable it, toggle it on in the plan **Settings** page.
 
    :::image type="content" source="./media/defender-for-containers-enable-plan/google-cloud-platform-select-plans.png" alt-text="Screenshot of the Defender for Containers configuration pane for a GCP connector in Microsoft Defender for Cloud." lightbox="./media/defender-for-containers-enable-plan/google-cloud-platform-select-plans.png":::
 
