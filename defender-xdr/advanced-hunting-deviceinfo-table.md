@@ -86,9 +86,13 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `MitigationStatus` | `string` | Indicates the mitigation action applied to a device |
 | `Site` | `string` | Represents the physical location where the device is located |
 | `DiscoverySources` | `string` | Products or services that have seen or reported the device, including when they last reported it. |
-|`DlpInfo`|`string`|JSON object containing Endpoint DLP device configuration status, policy sync status, protection settings, and user information. For information about the properties available in this field, see [Troubleshooting endpoint data loss prevention configuration and policy sync. ](https://https://learn.microsoft.com/en-us/purview/dlp-edlp-tshoot-sync#access-device-attribute-data-using-advanced-hunting) |
+|`DlpInfo`|`string`| Properties related to Endpoint Data Loss Prevention (DLP).[*](#dlp-only) |
+
+<a name="dlp-only"></a>* For information about the properties available in this field, see [Troubleshooting endpoint data loss prevention configuration and policy sync. ](/purview/dlp-edlp-tshoot-sync#access-device-attribute-data-using-advanced-hunting)
 
 The DeviceInfo table is updated continuously, and all updates contain the full current device data for that device.
+
+## Sample query
 
 You can use the following sample query to get the latest state of a device:
 
