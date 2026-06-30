@@ -2,7 +2,7 @@
 title: Cloud secure score in Microsoft Defender for Cloud
 description: Learn about the Microsoft Defender for Cloud secure score, which is part of the Microsoft cloud security benchmark.
 ms.topic: concept-article
-ms.date: 11/17/2025
+ms.date: 06/30/2026
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 ai-usage: ai-assisted
@@ -23,6 +23,15 @@ The MCSB issues recommendations based on assessment findings. Only built-in reco
 >
 > Recommendations flagged as **Preview** aren't included in secure score calculations. You should still remediate these recommendations wherever possible, so that when the preview period ends, they'll contribute toward your score. Preview recommendations are marked with an icon: :::image type="icon" source="media/secure-score-security-controls/preview-icon.png" border="false":::.
 > Recommendation maturity [Preview] doesn't modify the secure score UI or weighting model; it only classifies recommendations. Aside from excluding preview recommendations, the secure score formulas and UI values remain unchanged.
+
+> [!IMPORTANT]
+> **June 30, 2026 — Multicloud recommendations now affect Secure Score**: With the general availability of expanded multicloud security coverage, over 200 new AWS and GCP security recommendations now contribute to Secure Score. If you see your score change, it reflects the broader scope of your evaluated multicloud estate — not a degradation of your environment. The more resources are assessed, the more complete your security picture.
+>
+> To understand what's new and what's driving score changes:
+> - Look for the **New** tag on recommendations added in the last 30 days.
+> - Select **View updates** on the Secure Score card to open the change log.
+>
+> For more information, see [Expanded multicloud security coverage is now generally available](release-notes.md#expanded-multicloud-security-coverage-is-now-generally-available).
 
 ## View the secure score
 

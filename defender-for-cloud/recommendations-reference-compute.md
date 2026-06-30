@@ -3,7 +3,7 @@ title: Reference table for all compute security recommendations in Microsoft Def
 description: This article lists all Microsoft Defender for Cloud compute security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/15/2026
+ms.date: 06/30/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -600,7 +600,7 @@ CloudFront origin failover can increase availability. Origin failover automatica
 
 **Severity**: Medium
 
-### CloudWatch group metrics collection should be enabled on Auto Scaling Groups (Preview)
+### CloudWatch group metrics collection should be enabled on Auto Scaling Groups
 
 **Description**: Defender for Cloud identified that an Auto Scaling Group is not configured to collect CloudWatch group metrics. This poses a risk of delayed detection of abnormal scaling activity, since without metrics on instance counts, capacity changes, and termination events, indicators such as mass termination or unauthorized scale-out (potentially driven by resource hijacking) may go unnoticed and impede incident response.
 
@@ -621,7 +621,7 @@ Authentication credentials `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` shoul
 
 **Severity**: High
 
-### Deletion protection should be enabled on Auto Scaling Groups (Preview)
+### Deletion protection should be enabled on Auto Scaling Groups
 
 **Description**: Defender for Cloud identified that deletion protection is not enabled on an Auto Scaling Group. This poses a risk of accidental or malicious deletion, which could lead to data loss or service disruption.
 
@@ -679,20 +679,20 @@ This agentless endpoint recommendation is available if you have Defender for Ser
 
 **Severity**: High
 
-### Eligible service software updates should be applied on OpenSearch Service domains (Preview)
+### Eligible service software updates should be applied on OpenSearch Service domains
 
 **Description**: Defender for Cloud identified OpenSearch Service domains with eligible service software updates that have not been applied. Running outdated service software can expose the domain to known vulnerabilities and reduce overall security posture.
 (No related policy)
 
 **Severity**: Medium
 
-### Encryption at rest should be enabled for EBS volumes in Auto Scaling Groups (Preview)
+### Encryption at rest should be enabled for EBS volumes in Auto Scaling Groups
 
 **Description**: Defender for Cloud identified Auto Scaling Group launch templates that provision EBS volumes without encryption at rest. This poses a risk of unauthorized data exposure, as snapshots or copies of unencrypted volumes can be read by any principal with sufficient EBS permissions, bypassing the running instance's access controls. Encryption at rest ensures that storage-level access alone does not reveal the data, since decryption additionally requires permissions on the KMS key.
 
 **Severity**: Medium
 
-### IMDSv2 should be configured on Auto Scaling Groups (Preview)
+### IMDSv2 should be configured on Auto Scaling Groups
 
 **Description**: Defender for Cloud identified that Instance Metadata Service Version 2 (IMDSv2) is not enforced for an Auto Scaling Group. This poses a risk of credential theft through Server-Side Request Forgery (SSRF) attacks. IMDSv2 requires session-oriented tokens to access instance metadata, which mitigates SSRF attacks that could be used to steal IAM role credentials from EC2 instances.
 
@@ -733,7 +733,7 @@ To learn more about the supported runtimes that this control checks for the supp
 
 **Severity**: High
 
-### Termination protection should be enabled on EMR clusters (Preview)
+### Termination protection should be enabled on EMR clusters
 
 **Description**: Defender for Cloud identified EMR clusters with termination protection disabled. Termination protection helps prevent accidental or unauthorized termination of the cluster and the loss of associated HDFS data on core instances. Without termination protection, the cluster is more susceptible to unintended termination events, increasing operational and availability risk.
 
