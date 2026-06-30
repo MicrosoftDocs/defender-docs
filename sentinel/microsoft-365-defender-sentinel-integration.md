@@ -156,7 +156,7 @@ To avoid creating *duplicate incidents for the same alerts*, the **Microsoft inc
 
 - **Scheduled analytics rules**. If you use Microsoft Sentinel's incident creation rules for other Microsoft security solutions or products not integrated into Defender XDR, such as Microsoft Purview Insider Risk Management, and you plan to onboard to the Defender portal, replace your incident creation rules with [scheduled analytics rules](scheduled-rules-overview.md).
 
-If you want to preserve Sentinel-style incident creation behavior for XDR alerts while using the Defender portal, you can [migrate Microsoft Sentinel incident creation rules to alert grouping in Microsoft Defender](/unified-secops/migrate-sentinel-incident-creation-rules-alert-grouping).
+If you want to preserve Sentinel-style incident creation behavior for XDR alerts while using the Defender portal, you can [migrate Microsoft Sentinel incident creation rules to alert grouping in Microsoft Defender](/unified-secops-platform/migrate-sentinel-incident-creation-rules-alert-grouping).
 
 ## Working with Microsoft Defender XDR incidents in Microsoft Sentinel and bi-directional sync
 

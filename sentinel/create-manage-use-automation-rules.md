@@ -59,6 +59,9 @@ The following table shows the different possible scenarios that cause an automat
 | **When incident is updated** | <li>An incident's status is changed (closed/reopened/triaged).<li>An incident's owner is assigned or changed.<li>An incident's severity is raised or lowered.<li>Alerts are added to an incident.<li>Comments, tags, or tactics are added to an incident. |
 | **When alert is created** | <li>An alert is created by a Microsoft Sentinel **Scheduled** or **NRT** analytics rule. |
 
+> [!NOTE]
+> **In the Defender portal:** Alert triggers work only on Microsoft Sentinel alerts. To automate responses to alerts across Microsoft Sentinel, Microsoft Defender, and XDR platforms, use the **[Enhanced Alert Trigger](automation/generate-playbook.md#enhanced-alert-trigger)**.
+
 ## Create your automation rule
 
 The steps in this section apply to most automation rule scenarios.
