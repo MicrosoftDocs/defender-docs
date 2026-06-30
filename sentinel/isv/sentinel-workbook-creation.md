@@ -1,16 +1,14 @@
 ---
 title: Create Workbooks for Microsoft Sentinel Solutions
-description: Create interactive Microsoft Sentinel workbooks to visualize security data and publish them as part of a Sentinel solution.
+description: This article guides you through the process of creating and publishing workbooks for Microsoft Sentinel solutions.
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 1/22/2025
 
 #CustomerIntent: As an ISV partner, I want to create and publish workbooks for my Microsoft Sentinel solution so that I can provide insights to my customers.
-ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create and publish workbooks for Microsoft Sentinel solutions
@@ -21,8 +19,6 @@ This article walks you through the process of creating and publishing workbooks 
 
 ## Use cases for Microsoft Sentinel workbooks
 
-Microsoft Sentinel workbooks support several common security and reporting scenarios, including the following use cases:
-
 - **Security operations center (SOC) monitoring**: In an SOC, Microsoft Sentinel workbooks are used to monitor and analyze security events in real time. SOC analysts can create workbooks that display key performance indicators (KPIs) such as incident response times, alert volumes, and threat detection rates. By having a centralized view of security metrics, SOC teams can optimize their workflows and improve incident management processes.
 
 - **Compliance and audit reporting**: Organizations need to adhere to regulatory standards and audit requirements. Microsoft Sentinel workbooks help with generating compliance reports by visualizing data related to security controls, user activities, and policy enforcement. Organizations can customize these reports to align with specific regulatory frameworks, so they can more easily demonstrate compliance during audits.
@@ -31,11 +27,9 @@ Microsoft Sentinel workbooks support several common security and reporting scena
 
 ## Create a workbook
 
-Before you begin, make sure you have a Microsoft Sentinel workspace, or create one during setup. Perform the following steps to create a workbook in Microsoft Sentinel:
-
 1. Go to the [Azure portal](https://ms.portal.azure.com/) and select **Microsoft Sentinel** from the list of available services.
 
-1. Select your designated workspace for your Microsoft Sentinel instance, or create a new one.
+1. Ensure that you have a designated workspace for your Microsoft Sentinel instance. You can either create a new workspace or select an existing one.
 
 1. In the Microsoft Sentinel workspace, select the **Workbooks** tab.
 
@@ -51,17 +45,15 @@ Before you begin, make sure you have a Microsoft Sentinel workspace, or create o
 
 ## Publish your workbook by using a gallery template
 
-To publish your workbook as a gallery template, perform the following steps:
-
 1. Go to your workbook, select **Edit**, and then select **Advanced editor**.
 
 1. Select the **Gallery Template** tab.
 
    :::image type="content" source="media/sentinel-workbook-creation/sentinel-workbook-edit-mode.png" alt-text="Screenshot that shows the Gallery Template tab in the edit mode of a Microsoft Sentinel workbook." lightbox="media/sentinel-workbook-creation/sentinel-workbook-edit-mode.png":::
 
-1. Copy the gallery template from the Advanced editor and save it as a JSON file on your machine.
+1. Copy the gallery template and save it as JSON file on your machine.
 
-1. Add the following template identification properties to the end of your gallery template JSON. These properties set the template ID and schema reference so that Microsoft Sentinel can identify the workbook. Use the format `sentinel-<workbookName>` for the `fromTemplateId` value.
+1. Add the following properties to your gallery template. These properties identify the specific Microsoft Sentinel workbook that was opened. Use the format `sentinel-<workbookName>` for consistency.
 
    ```json
     "styleSettings": {},
@@ -75,11 +67,11 @@ To publish your workbook as a gallery template, perform the following steps:
 
    Be consistent with the file name conventions. The file name for the dark-theme image should contain the word *black*. The file name for the light-theme image should contain the word *white*.
 
-   Upload these images to the [Workbooks preview images folder on GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Workbooks/Images/Preview).
+   Upload these images to [GitHub](https://github.com/Azure/Azure-Sentinel/tree/master/Workbooks/Images/Preview).
 
-1. You can optionally add a logo to display in the workbook. Upload the logo to the [Workbook logo images](https://github.com/Azure/Azure-Sentinel/tree/master/Workbooks/Images/Logos) folder on GitHub. The logo should be in SVG format. If you don't provide a logo, the default Microsoft Sentinel logo appears.
+1. You can optionally add a logo to display in the workbook. Upload the logo to the [Logos](https://github.com/Azure/Azure-Sentinel/tree/master/Workbooks/Images/Logos) folder in GitHub. The logo should be in SVG format. If you don't provide a logo, the default Microsoft Sentinel logo appears.
 
-1. Add the following JSON metadata entry for your workbook in the [workbook metadata file (WorkbooksMetadata.json)](https://github.com/Azure/Azure-Sentinel/blob/master/Workbooks/WorkbooksMetadata.json). This file contains metadata for all the workbooks in the Microsoft Sentinel gallery. For more details, review the existing entries in WorkbooksMetadata.json.
+1. Add the following section for your workbook in the [WorkbooksMetadata.json](https://github.com/Azure/Azure-Sentinel/blob/master/Workbooks/WorkbooksMetadata.json) file. This file contains metadata for all the workbooks in the Microsoft Sentinel gallery. For more details, you can look at the existing entries in the file.
 
    ```json
    {
