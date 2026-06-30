@@ -56,19 +56,10 @@ To specify the cloud block time out period with Microsoft Defender for Endpoint 
 
 ## Specify the extended time out period using Microsoft Intune
 
-You can specify the cloud block time out period with an [endpoint security policy in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy).
+To specify the cloud block time out period with an [endpoint security policy in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy), see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). When modifying the policy, use these settings:
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/) and sign in.
-
-1. Select **Endpoint security**, and then under **Manage**, choose **Antivirus**.
-
-1. Select (or create) an antivirus policy.
-
-1. In the **Configuration settings** section, scroll down to **Cloud Extended Timeout** and specify the time out, in seconds, from 0 to 50 seconds. Whatever you specify is added to the default 10 seconds.
-
-1. (This step is optional) Make any other changes to your antivirus policy. (Need help? See [Settings for Microsoft Defender Antivirus policy in Microsoft Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows).)
-
-1. Choose **Next**, and finish configuring your policy.
+- **Configuration settings**: Scroll down to **Cloud Extended Timeout** and specify the time out, in seconds, from 0 to 50 seconds. Whatever you specify is added to the default 10 seconds.
+- (Optional) Make any other changes to your antivirus policy. (Need help? See [Settings for Microsoft Defender Antivirus policy in Microsoft Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows).)
 
 ## Specify the extended time out period using Group Policy
 
@@ -97,5 +88,3 @@ You can use Group Policy to specify an extended time out for cloud checks.
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md) 
-
-
