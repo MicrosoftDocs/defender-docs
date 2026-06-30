@@ -65,7 +65,7 @@ Use one of the following methods:
 
 Or
 
-- Create a custom role in Microsoft Defender unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender unified RBAC model](/defender-xdr/manage-rbac#start-using-microsoft-defender-unified-rbac-model).
+- Create a custom role in Microsoft Defender unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender unified RBAC model](/defender-xdr/manage-rbac#start-using-microsoft-defender-unified-rbac-model). For Defender for Office 365-specific role templates and configuration steps, see [How to configure Unified RBAC for Defender for Office 365](step-by-step-guides/configure-unified-rbac-defender-office-365.md).
 
 For either method:
 
