@@ -24,7 +24,7 @@ Alerts are triggered immediately if the **Recommended test mode** option is sele
 
 ## Prerequisites
 
-To view the **Adjust alerts thresholds** page in Microsoft Defender XDR, you need access at least as a *Security viewer*.
+To view the **Adjust alerts thresholds** page in Microsoft Defender, you need access at least as a *Security viewer*.
 
 To make changes on the **Adjust alerts thresholds** page, you need access at least as a *Security administrator*.
 
@@ -90,4 +90,4 @@ For more information, see [Security alerts in Microsoft Defender for Identity](a
 
 ## Next step
 
-For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md).
+For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender](manage-security-alerts.md).
