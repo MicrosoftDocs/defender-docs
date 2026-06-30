@@ -58,10 +58,10 @@ Asia Northeast, Belgium Central, Chile Central, China East 2, China East 3, Chin
 ### Defender for Key Vault
 
 **Supported regions:**  
-Asia East, Asia Southeast, Asia Northeast, Australia Central 2, Australia East, Australia Southeast, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Central US (EU Access Program), East US, East US 2, East US 2 (EU Access Program), France Central, Germany North, Germany West Central, India Central, India South, Israel Central, Italy North, Japan East, Japan West, Jio India Central, Jio India West, Korea Central, Korea South, Mexico Central, North Central US, North Europe, Norway East, Norway West, Poland Central, South Central US, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, UK West, West Central US, West Europe, West US, West US 2, West US 3
+Asia East, Asia Southeast, Asia Northeast, Australia Central 2, Australia East, Australia Southeast, Brazil South, Brazil Southeast, Canada Central, Canada East, Central US, Central US (EU Access Program), East US, East US 2, East US 2 (EU Access Program), France Central, Germany North, Germany West Central, India Central, India South, Israel Central, Italy North, Japan East, Japan West, Jio India Central, Jio India West, Korea Central, Korea South, Mexico Central, North Central US, North Europe, Norway East, Norway West, Poland Central, South Central US, Spain Central, Sweden Central, Sweden South, Switzerland North, Switzerland West, Taiwan North, Taiwan North West, UAE Central, UAE North, UK West, West Central US, West Europe, West US, West US 2, West US 3, US Gov East, US Gov South Central, US Gov Southwest
 
 **Unsupported regions:**  
-Austria East, Belgium Central, Chile Central, China East, China East 2, China East 3, China North, China North 2, China North 3, EU SSLV, India West, Indonesia Central, Israel North West, Malaysia South, New Zealand North, Qatar, South Africa North, South Africa West, South East US, South East US 3, South US 2, UK South, US DoD Central, US DoD East, US Gov East, US Gov South Central, US Gov Southwest
+Austria East, Belgium Central, Chile Central, China East, China East 2, China East 3, China North, China North 2, China North 3, EU SSLV, India West, Indonesia Central, Israel North West, Malaysia South, New Zealand North, Qatar, South Africa North, South Africa West, South East US, South East US 3, South US 2, UK South, US DoD Central, US DoD East
 
 ### Defender for Open-source Relational Databases
 
