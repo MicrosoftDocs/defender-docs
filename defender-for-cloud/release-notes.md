@@ -33,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| June 30, 2026 | GA | [General availability of Defender for Key Vault in Azure Government cloud](#general-availability-of-defender-for-key-vault-in-azure-government-cloud) |
 | June 30, 2026 | GA | [Expanded multicloud security coverage is now generally available](#expanded-multicloud-security-coverage-is-now-generally-available) |
 | June 30, 2026 | GA | [Cloud security reporting is now generally available](#cloud-security-reporting-is-now-generally-available) |
 | June 18, 2026 | GA | [API security posture management for Function Apps and Logic Apps is now generally available](#api-security-posture-management-for-function-apps-and-logic-apps-is-now-generally-available) |
@@ -47,6 +48,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### General availability of Defender for Key Vault in Azure Government cloud
+
+June 30, 2026
+
+With this general availability announcement, the Defender for Key Vault plan in Azure Government cloud now aligns with the commercial cloud offering in feature coverage and runtime protection capabilities.
+
+For more information about Microsoft Defender for Key Vault, see [Overview of Microsoft Defender for Key Vault](/azure/defender-for-cloud/defender-for-key-vault-introduction).
+
+For more information about feature and cloud availability, see [Support matrix for Defender for Cloud](/azure/defender-for-cloud/support-matrix-defender-for-cloud).
 
 ### Expanded multicloud security coverage is now generally available
 
