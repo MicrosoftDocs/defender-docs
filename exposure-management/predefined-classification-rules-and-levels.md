@@ -3,7 +3,7 @@ title: Criticality Levels for Classifications
 description: Lists of all the current criticality levels for classifications in Microsoft Security Exposure Management.
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 06/18/2026
+ms.date: 06/24/2026
 ms.custom: sfi-ga-nochange
 ai-usage: ai-assisted
 ---
@@ -122,6 +122,9 @@ Current asset types are:
 | Senior Executive (Information)     | Identity | Very High | Identities with this classification belong to senior executives in the field of Information. |
 | Senior Executive (Execution)       | Identity | Very High | Identities with this classification belong to senior executives in the field of Execution. |
 | Senior Executive (Human Resources) | Identity | Very High | Identities with this classification belong to senior executives in the field of Human Resources. |
+| Widespread Local Admin on Servers | Identity | High | This rule applies to identities that are configured as local administrators on a high number of servers in the environment. |
+| Widespread Local Admin on Workstations | Identity | High | This rule applies to identities that are configured as local administrators on a high number of workstations in the environment. |
+| Widespread Local Admin on Servers and Workstations | Identity | Very High | This rule applies to identities that are configured as local administrators on a high number of both servers and workstations in the environment. **Note**: This rule logic relies on the predefined critical identity classifications "Widespread Local Admin on Servers" and "Widespread Local Admin on Workstations". |
 
 ##### Cloud resource
 

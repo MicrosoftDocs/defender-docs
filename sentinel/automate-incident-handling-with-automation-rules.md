@@ -92,7 +92,7 @@ Even without being onboarded to the unified portal, you might anyway decide to u
 > [!NOTE]
 > - Alert-triggered automation is available only for alerts created by [**Scheduled**, **NRT**, and **Microsoft security** analytics rules](threat-detection.md).
 >
-> - Alert-triggered automation for alerts created by Microsoft Defender XDR is not available in the Defender portal. For more information, see [Automation in the Defender portal](automation.md#automation-with-the-unified-security-operations-platform).
+> - **In the Defender portal:** Alert-triggered automation for alerts created by Microsoft Defender XDR isn't available. To automate responses to alerts across Microsoft Sentinel, Microsoft Defender, and XDR platforms, use the **[Enhanced Alert Trigger](automation/generate-playbook.md#enhanced-alert-trigger)**. For more information, see [Automation in the Defender portal](automation.md#automation-with-the-unified-security-operations-platform).
 
 ### Conditions
 
@@ -229,7 +229,7 @@ Rules based on the update trigger have their own separate order queue. If such r
 - Rules always run sequentially, never in parallel.
 
 > [!NOTE]
-> After onboarding to the Defender portal, if multiple changes are made to the same incident in a five to ten minute period, a single update is sent to Microsoft Sentinel, with only the most recent change.
+> After onboarding to the Defender portal, if multiple changes are made to the same incident in a 5-10 minute period, a single update is sent to Microsoft Sentinel, with only the most recent change. Intermediate updates are lost, which can impact workflows that depend on processing sequential incident state changes.
 
 ## Common use cases and scenarios
 
