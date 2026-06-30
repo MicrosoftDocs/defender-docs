@@ -2,8 +2,10 @@
 title: Criticality Levels for Classifications
 description: Lists of all the current criticality levels for classifications in Microsoft Security Exposure Management.
 ms.topic: reference
+ms.author: dlanger
+author: dlanger
 ms.service: exposure-management
-ms.date: 06/24/2026
+ms.date: 06/30/2026
 ms.custom: sfi-ga-nochange
 ai-usage: ai-assisted
 ---
@@ -21,6 +23,7 @@ Current asset types are:
 * [Device](#device)
 * [Identity](#identity)
 * [Cloud resource](#cloud-resource)
+* [AI agent](#ai-agent)
 
 > [!Note]
 > The critical asset out-of-the-box classification logic classifies your assets based on asset behavior accumulated from Microsoft Defender workloads and  third-party integrations set up in your environment.
@@ -159,5 +162,12 @@ Current asset types are:
 | Microsoft Power Apps | SaaS application | Medium | Low-code application platform capable of connecting to business systems and data sources. Compromise can turn applications into access brokers and indirectly expose or manipulate critical connected systems. Requires onboarding to Microsoft Defender for Cloud Apps. |
 | Microsoft Power Automate | SaaS application | Medium | Workflow automation platform that enables headless data movement and orchestration for services and connectors. Compromise can support persistence, silent data transfer, and chaining throughout enterprise applications. Requires onboarding to Microsoft Defender for Cloud Apps. |
 | Microsoft Universal Print | SaaS application | Low | Cloud print management service with service-specific printer and print-job permissions. Compromise is typically limited to a niche workload and has relatively low enterprise-wide security impact compared to core control planes. Requires onboarding to Microsoft Defender for Cloud Apps. |
+
+##### AI agent
+
+| Classification | Asset type | Default criticality level | Description |
+| -------------- | ---------- | ------------------------- | ----------- |
+| Executive-Sponsored AI Agent | AI agent | Medium | This rule applies to AI agents that are created or owned by senior executives in the organization. As such, these agents may be granted access to sensitive data and act on the executive's behalf. Compromise could lead to unauthorized actions performed under executive authority, and exposure of sensitive executive-level data - without the executive's identity being directly compromised. |
+| AI Agent with Privileged Business System Write Access | AI agent | Medium | This rule applies to AI agents configured with tools that can perform high-risk write operations on business-critical systems. These operations include creating, modifying, and deleting records such as sales orders, customer data, financial transactions, and legal agreements. Compromise could lead to significant business impact. |
 
 

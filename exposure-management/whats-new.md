@@ -2,7 +2,9 @@
 title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 06/24/2026
+ms.author: dlanger
+author: dlanger
+ms.date: 06/30/2026
 ai-usage: ai-assisted
 ---
 
@@ -21,6 +23,17 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 > `https://aka.ms/msem/rss`
 
 ## June 2026
+
+### New predefined classifications for AI agents
+
+The following predefined **AI agent** classification rules were added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| Executive-Sponsored AI Agent | This rule applies to AI agents that are created or owned by senior executives in the organization. As such, these agents may be granted access to sensitive data and act on the executive's behalf. Compromise could lead to unauthorized actions performed under executive authority, and exposure of sensitive executive-level data - without the executive's identity being directly compromised. |
+| AI Agent with Privileged Business System Write Access | This rule applies to AI agents configured with tools that can perform high-risk write operations on business-critical systems. These operations include creating, modifying, and deleting records such as sales orders, customer data, financial transactions, and legal agreements. Compromise could lead to significant business impact. |
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
 
 ### New predefined classifications
 
