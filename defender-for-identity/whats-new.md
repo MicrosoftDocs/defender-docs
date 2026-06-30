@@ -26,7 +26,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## June 2026
 
-### Identity risk score (General Availability)
+### Identity risk score is now generally available
 
 The [identity risk score](/defender-xdr/investigate-users#risk-score-tab) is now generally available. The score ranges from 0 to 100 and reflects how likely an identity is to be compromised and how much damage a compromise could cause, based on the identity's criticality level and privileged role assignments. The **Risk score** tab on the **Identity** page provides a detailed breakdown of risk factors, percentile comparison, and risk trends.
 
