@@ -4,14 +4,13 @@ description: Learn how to manage and monitor costs and billing for Microsoft Sen
 ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: daniha
-ms.custom: subject-cost-optimization, msecd-doc-authoring-1014
+ms.custom: subject-cost-optimization
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 03/29/2026
 ms.collection: usx-security
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
-ai-usage: ai-assisted
 
 
 #Customer intent: As a cloud administrator, I want to manage and monitor costs for Microsoft Sentinel so that I can optimize spending and prevent budget overruns.
@@ -20,7 +19,7 @@ ai-usage: ai-assisted
 
 # Manage and monitor costs for Microsoft Sentinel
 
-After you start using Microsoft Sentinel resources, use built-in Cost Management features to confidently manage budgets, monitor costs and security performance. You can also review forecasted costs and identify spending trends to optimize your spending. With the Sentinel data lake enabled, you can also view your usage directly in the Microsoft Defender portal.
+After you start using Microsoft Sentinel resources, use built-in Cost Management features to confidently manage budgets, monitor costs and security performance. You can also review forecasted costs and identify spending trends to optimize. With the Sentinel data lake enabled, you can also view your usage directly in the Microsoft Defender portal.
 
 Microsoft Sentinel costs are only a portion of your monthly Azure bill. Although this article explains how to manage and monitor costs for Microsoft Sentinel, you're billed for all Azure services and resources your Azure subscription uses, including Partner services.
 
@@ -44,7 +43,7 @@ As soon as Microsoft Sentinel starts to ingest billable data, it incurs costs. V
 
 When you use cost analysis, you view Microsoft Sentinel costs in graphs and tables for different time intervals. Some examples are by day, current and prior month, and year. You also view costs against budgets and forecasted costs. Switching to longer views over time can help you identify spending trends. And you see where overspending might have occurred. If you created budgets, you can also easily see where they're exceeded.
 
-The [Microsoft Cost Management + Billing](/azure/cost-management-billing/costs/quick-acm-cost-analysis) hub provides useful functionality. After you open **Cost Management + Billing** in the Azure portal, select **Cost Management** in the left navigation and then select the [Cost Management scope](/azure/cost-management-billing/costs/understand-work-scopes) or set of resources to investigate, such as an Azure subscription or resource group.
+The [Microsoft Cost Management + Billing](/azure/cost-management-billing/costs/quick-acm-cost-analysis) hub provides useful functionality. After you open **Cost Management + Billing** in the Azure portal, select **Cost Management** in the left navigation and then select the [scope](/azure/cost-management-billing/costs/understand-work-scopes) or set of resources to investigate, such as an Azure subscription or resource group.
 
 The **Cost Analysis** screen shows detailed views of your Azure usage and costs, with the option to apply various controls and filters.
 
@@ -139,7 +138,7 @@ You can also [export your cost data](/azure/cost-management-billing/costs/tutori
 
 ### Create budgets
 
-You can create [cost management budgets](/azure/cost-management/tutorial-acm-create-budgets?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) to track costs and create [cost management alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) that automatically notify stakeholders of spending anomalies and overspending risks. Alerts are based on spending compared to budget and cost thresholds. Budgets and alerts are created for Azure subscriptions and resource groups, so they're useful as part of an overall cost monitoring strategy.
+You can create [budgets](/azure/cost-management/tutorial-acm-create-budgets?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) to track costs and create [alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) that automatically notify stakeholders of spending anomalies and overspending risks. Alerts are based on spending compared to budget and cost thresholds. Budgets and alerts are created for Azure subscriptions and resource groups, so they're useful as part of an overall cost monitoring strategy.
 
 You can create budgets with filters for specific resources or services in Azure if you want finer granularity in your monitoring. Filters help ensure that you don't accidentally create new resources that cost you more money. For more information about the filter options available when you create a budget, see [Group and filter options](/azure/cost-management-billing/costs/group-filter?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
 
@@ -151,7 +150,7 @@ The Microsoft Sentinel GitHub community provides the [`Send-IngestionCostAlert`]
 
 ## Manage and monitor costs for the data lake tier
 
-Once your organization is onboarded to Microsoft Sentinel data lake tier capabilities, usage is billed using new Microsoft Sentinel data lake meters. For more information on the new meters, see [Data lake tier](billing.md#data-lake-tier).
+Once onboarded, usage of data lake tier capabilities is billed using new Microsoft Sentinel data lake meters. For more information on the new meters, see [Data lake tier](billing.md#data-lake-tier).
 
 ### Microsoft Sentinel cost management in the Microsoft Defender portal
 
@@ -183,7 +182,7 @@ Select a resource to view a detailed breakdown in the side panel.
 
 The **Configure Policies** wizard lets you set threshold‑based alerts for Microsoft Sentinel data lake capabilities. These policies help you track usage and receive email notifications before unexpected charges occur. Currently, email notifications are sent to the billing administrator who configured the policy.
 
-You can also enable **threshold enforcement**, which causes supported actions such as queries and notebook sessions to fail after a configured usage limit is exceeded. Enforcement is supported for:
+You can also enable **threshold enforcement** to block usage after a configured limit is exceeded. Enforcement is supported for:
 
 - **Data Lake Query** (interactive KQL queries and jobs)
 
@@ -232,7 +231,7 @@ You can pay for Microsoft Sentinel charges with your Azure Prepayment credit. Yo
 
 - [Reduce costs for Microsoft Sentinel](billing-reduce-costs.md)
 - Learn [how to optimize your cloud investment with Microsoft Cost Management](/azure/cost-management-billing/costs/cost-mgt-best-practices?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
-- Learn more about managing costs with [Azure Cost Management cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
+- Learn more about managing costs with [cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
 - Learn about how to [prevent unexpected costs](/azure/cost-management-billing/understand/analyze-unexpected-charges?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn).
-- Take the [Control spending and manage bills with Cost Management](/training/paths/control-spending-manage-bills?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) guided learning course.
+- Take the [Cost Management](/training/paths/control-spending-manage-bills?WT.mc_id=costmanagementcontent_docsacmhorizontal_-inproduct-learn) guided learning course.
 - For more tips on reducing Log Analytics data volume, see [Azure Monitor best practices - Cost management](/azure/azure-monitor/best-practices-cost).
