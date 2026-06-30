@@ -29,7 +29,7 @@ When automatic attack disruption triggers in Microsoft Defender XDR, you can vie
 
 ## Review the incident graph
 
-Microsoft Defender XDR automatic attack disruption is built into the incident view. Review the incident graph to get the entire attack story and assess the attack disruption impact and status.
+Microsoft Defender automatic attack disruption is built into the incident view. Review the incident graph to get the entire attack story and assess the attack disruption impact and status.
 
 The incident page includes the following information:
 
@@ -119,7 +119,7 @@ Containment in Microsoft Defender for Endpoint prevents further threat actor act
 
 Attack disruption uses the remediation action capability of Microsoft Defender for Identity to disable accounts. By default, Microsoft Defender for Identity uses the LocalSystem account of the domain controller for all remediation actions. 
 
-The following query looks for events where a domain controller disabled user accounts. This query also returns user accounts disabled by automatic attack disruption by manually triggering account disable in Microsoft Defender XDR:
+The following query looks for events where a domain controller disabled user accounts. This query also returns user accounts disabled by automatic attack disruption by manually triggering account disable in Microsoft Defender:
 
 ```Kusto
 let AllDomainControllers =

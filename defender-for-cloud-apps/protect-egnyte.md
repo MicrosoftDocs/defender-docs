@@ -1,9 +1,11 @@
 ---
 title: Protect your Egnyte environment (Preview) | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Egnyte app to Defender for Cloud Apps using the API connector.
-ms.date: 11/27/2025
+description: Connect Egnyte to Microsoft Defender for Cloud Apps by using the API connector to gain visibility into user activity and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How Defender for Cloud Apps helps protect your Egnyte environment
@@ -14,6 +16,8 @@ Connecting Egnyte to Defender for Cloud Apps gives you improved insights into yo
 
 ## Main threats
 
+Using Egnyte without Defender for Cloud Apps exposes your organization to the following threats:
+
 - Compromised accounts and insider threats
 
 - Insufficient security awareness
@@ -22,11 +26,15 @@ Connecting Egnyte to Defender for Cloud Apps gives you improved insights into yo
 
 ## How Defender for Cloud Apps helps to protect your environment
 
+Defender for Cloud Apps helps protect your Egnyte environment in the following ways:
+
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
 ## Control Egnyte with policies
+
+The following table lists the policy types you can use to monitor and control Egnyte activities:
 
 | **Type**                           | **Name**                                                     |
 | ---------------------------------- | ------------------------------------------------------------ |

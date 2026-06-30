@@ -1,9 +1,11 @@
 ---
 title: Start your Defender for Identity deployment security assessment
-description: This article provides an overview of Microsoft Defender for Identity's Start your Defender for Identity deployment security posture assessment report.
-ms.date: 06/11/2023
+description: Learn how the Start your Defender for Identity deployment assessment helps identify missing sensor installations on domain controllers and other eligible servers.
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Security assessment: Start your Defender for Identity deployment
@@ -25,6 +27,8 @@ For more information, see:
 
 ## How do I use this security assessment?
 
+Use the following steps to review this assessment and remediate it.
+
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to be alerted if you have a Defender for Identity license, but don't have Defender for Identity deployed.
 
 1. Take appropriate action by deploying Defender for Identity. For more information, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md).
@@ -33,7 +37,8 @@ For more information, see:
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
 >
 
-## See also
+<a name="see-also"></a>
+## Related content
 
-- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+- [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
+- [Microsoft Defender for Identity community forum](<https://aka.ms/MDIcommunity>)

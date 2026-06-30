@@ -5,7 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 05/28/2025
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As an administrator, I want to set up my Amazon Web Services environment to send AWS logs to Microsoft Sentinel using one of the Microsoft Sentinel AWS connectors.
@@ -48,21 +50,23 @@ This diagram shows how to set up your AWS environment to send logs to Azure:
 
 ### Manual setup
 
-Although you can set up the AWS environment manually, as described in this section, we strongly recommend using the automated tools provided when you [deploy AWS connectors](#4-deploy-aws-connectors) instead.
+Although you can set up the AWS environment manually by following the steps below, we strongly recommend using the automated tools provided when you [deploy AWS connectors](#4-deploy-aws-connectors) instead. The deploy AWS connectors section provides connector-specific setup instructions and automated configuration options for each supported connector type.
 
 #### 1. Create an S3 bucket and SQS queue
 
+Create the S3 bucket and SQS queue required for log collection.
+
 1. Create an **S3 bucket** to which you can send the logs from your AWS services - VPC, GuardDuty, CloudTrail, or CloudWatch.
 
-   See the [instructions to create an S3 storage bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html) in the AWS documentation.
+   For details, see [Create an S3 storage bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html) in the AWS documentation.
 
 1. Create a standard **Simple Queue Service (SQS) message queue** to which the S3 bucket can publish notifications.
 
-   See the [instructions to create a standard Simple Queue Service (SQS) queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/creating-sqs-standard-queues.html) in the AWS documentation.
+   For details, see [Create a standard SQS queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/creating-sqs-standard-queues.html) in the AWS documentation.
 
 1. Configure your S3 bucket to send notification messages to your SQS queue. 
 
-   See the [instructions to publish notifications to your SQS queue](https://docs.aws.amazon.com/AmazonS3/latest/userguide/enable-event-notifications.html) in the AWS documentation.
+   For details, see [Enable S3 event notifications to an SQS queue](https://docs.aws.amazon.com/AmazonS3/latest/userguide/enable-event-notifications.html) in the AWS documentation.
 
 #### 2. Create an Open ID Connect (OIDC) web identity provider
 
@@ -81,8 +85,10 @@ Follow these instructions in the AWS documentation:<br>[Creating OpenID Connect 
 
 ### 3. Create an AWS assumed role
 
+Create an AWS assumed role for the OIDC identity provider you configured in the previous section. When you name the role, the role name must start with `OIDC_`.
+
    > [!IMPORTANT]
-   > The name must include the exact prefix `OIDC_`; otherwise, the connector can't function properly.
+   > The role name must include the exact prefix `OIDC_`; otherwise, the connector can't function properly.
 
 1. Follow these instructions in the AWS documentation:<br>[Creating a role for web identity or OpenID Connect Federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html#idp_oidc_Create). 
    
@@ -91,7 +97,7 @@ Follow these instructions in the AWS documentation:<br>[Creating OpenID Connect 
    | **Trusted entity type** | *Web identity* | Instead of default *AWS service*. |
    | **Identity provider** | Commercial:<br>`sts.windows.net/33e01921-4d64-4f8c-a055-5bdaffd5e33d/`<br><br>Government:<br>`sts.windows.net/cab8a31a-1906-4287-a0d8-4eef66b95f6e/` | The provider you created in the previous step. |
    | **Audience** | Commercial:<br>`api://1462b192-27f7-4cb9-8523-0f4ecb54b47e`<br><br>Government:<br>`api://d4230588-5f84-4281-a9c7-2c15194b28f7` | The audience you defined for the identity provider in the previous step. |
-   | **Permissions to assign** | <ul><li>`AmazonSQSReadOnlyAccess`<li>`AWSLambdaSQSQueueExecutionRole`<li>`AmazonS3ReadOnlyAccess`<li>`ROSAKMSProviderPolicy`<li>Other policies for ingesting the different types of AWS service logs | For information on these policies, see the relevant AWS S3 connector permissions policies page, in the Microsoft Sentinel GitHub repository.<ul><li>[AWS Commercial S3 connector permissions policies page](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/AwsRequiredPolicies.md)<li>[AWS Government S3 connector permissions policies page](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/AwsRequiredPoliciesForGov.md)|
+   | **Permissions to assign** | <ul><li>`AmazonSQSReadOnlyAccess`<li>`AWSLambdaSQSQueueExecutionRole`<li>`AmazonS3ReadOnlyAccess`<li>`ROSAKMSProviderPolicy`<li>Other policies for ingesting the different types of AWS service logs | For information on these policies, see the [AWS Commercial S3 connector permissions policies page](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/AwsRequiredPolicies.md) or the [AWS Government S3 connector permissions policies page](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/AWS-S3/AwsRequiredPoliciesForGov.md) in the Microsoft Sentinel GitHub repository.|
    | **Name** | "OIDC_*MicrosoftSentinelRole*"| Choose a meaningful name that includes a reference to Microsoft Sentinel.<br><br>The name must include the exact prefix `OIDC_`; otherwise, the connector can't function properly. |
    
 1. Edit the new role's trust policy and add another condition:<br>`"sts:RoleSessionName": "MicrosoftSentinel_{WORKSPACE_ID)"`

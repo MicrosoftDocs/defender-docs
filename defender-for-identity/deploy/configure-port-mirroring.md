@@ -1,9 +1,11 @@
 ---
 title: Configure port mirroring  | Microsoft Defender for Identity
 description: Learn about Defender for Identity port mirroring options.
-ms.date: 08/10/2023
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: martin77s
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure port mirroring
@@ -18,7 +20,7 @@ When using port mirroring, configure port mirroring for each domain controller t
 
 ## Choose a port mirroring method
 
-Your domain controllers and Defender for Identity standalone sensor can be either physical or virtual. The following are common methods for port mirroring and some considerations. For more information, see your switch or virtualization server product documentation. Your switch manufacturer might use different terminology.
+Your domain controllers and Defender for Identity standalone sensor can be either physical or virtual. The following are common methods for port mirroring and some considerations. Your switch manufacturer might use different terminology. Refer to your specific switch or virtualization server product documentation for detailed configuration steps.
 
 
 |Method  |Description  |
@@ -40,7 +42,7 @@ The following table describes Defender for Identity's support for port mirroring
 |---------------|---------------------|------------------|
 |Virtual|Virtual on same host|The virtual switch needs to support port mirroring.<br /><br />Moving one of the virtual machines to another host by itself may break the port mirroring.|
 |Virtual|Virtual on different hosts|Make sure your virtual switch supports this scenario.|
-|Virtual|Physical|Requires a dedicated network adapter otherwise Defender for Identity sees all of the traffic coming in and out of the host, even the traffic it sends to the Defender for Identity cloud service.|
+|Virtual|Physical|Requires a dedicated network adapter otherwise Defender for Identity sees all of the traffic coming in and out of the host, even the traffic the host sends to the Defender for Identity cloud service.|
 |Physical|Virtual|Make sure your virtual switch supports this scenario - and port mirroring configuration on your physical switches based on the scenario:<br /><br />If the virtual host is on the same physical switch, you need to configure a switch level span.<br /><br />If the virtual host is on a different switch, you need to configure RSPAN or ERSPAN&#42;.|
 |Physical|Physical on the same switch|Physical switch must support SPAN/Port Mirroring.|
 |Physical|Physical on a different switch|Requires physical switches to support RSPAN or ERSPAN <br><br>ERSPAN is only supported when decapsulation is performed before the traffic is analyzed by Defender for Identity.|

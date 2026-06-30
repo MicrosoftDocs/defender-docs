@@ -1,10 +1,12 @@
 ---
 title: Connect Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement to Microsoft Sentinel
-description: Learn how to deploy the Microsoft Sentinel solution for Business Applications with Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement to Microsoft Sentinel
+description: Deploy the Microsoft Sentinel solution for Microsoft Business Apps to collect audit and activity logs from Power Platform and Dynamics 365 Customer Engagement for threat detection.
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 11/14/2024
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security administrator, I want to deploy a monitoring solution for Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement so that I can detect and respond to threats and suspicious activities in real-time.
@@ -13,7 +15,7 @@ ms.date: 11/14/2024
 
 # Connect Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement to Microsoft Sentinel
 
-This article describes how to deploy the [Microsoft Sentinel solution for Microsoft Business Apps](../business-applications/solution-overview.md) to connect your Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement system to Microsoft Sentinel. The solution collects audit and activity logs to detect threats, suspicious activities, illegitimate activities, and more.
+This article describes how to deploy the [Microsoft Sentinel solution for Microsoft Business Apps](../business-applications/solution-overview.md) to connect your Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement system to Microsoft Sentinel. The solution collects audit and activity logs to detect threats, suspicious activities, illegitimate activities, and more. Before you begin, make sure you meet the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
@@ -33,7 +35,9 @@ Before deploying the Microsoft Sentinel solution for Microsoft Business Apps, en
 
 ## Install the solution and deploy your data connectors
 
-1. Start by installing the Microsoft Sentinel solution for Microsoft Business Applications from the Microsoft Sentinel **Content hub**.
+Complete the following steps to install the solution and set up data connectors in Microsoft Sentinel.
+
+1. Install the Microsoft Sentinel solution for Microsoft Business Applications from the Microsoft Sentinel **Content hub**.
 
     For more information, see [Discover and manage Microsoft Sentinel out-of-the-box content](../sentinel-solutions-deploy.md).
 
@@ -54,8 +58,8 @@ When working with Microsoft Dataverse, Dataverse activity logging is available o
 
 - To enable auditing on default entities, import one of the following Power Platform managed solutions:
 
-    - For use with Dynamics 365 CE Apps, import [https://aka.ms/AuditSettings/Dynamics](https://aka.ms/AuditSettings/Dynamics).
-    - Otherwise, import [https://aka.ms/AuditSettings/DataverseOnly](https://aka.ms/AuditSettings/DataverseOnly).
+    - For use with Dynamics 365 CE Apps, import the [Audit Settings solution for Dynamics 365 CE Apps](https://aka.ms/AuditSettings/Dynamics).
+    - Otherwise, import the [Audit Settings solution for Dataverse only](https://aka.ms/AuditSettings/DataverseOnly).
 
 
     The solution enables detailed auditing for each of the default entities listed in the article, [Audit Settings for Dataverse](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Business%20Applications/Audit%20Settings/README.md).
@@ -70,6 +74,8 @@ When working with Microsoft Dataverse, Dataverse activity logging is available o
     Make sure to save and publish your customizations.
 
 ## Verify log ingestion to Microsoft Sentinel
+
+Use the following steps to confirm that logs are being ingested into Microsoft Sentinel.
 
 1. After deploying your data connectors and configuring data collection, run activities like create, update, and delete to generate logs for data that you enabled for monitoring.
 

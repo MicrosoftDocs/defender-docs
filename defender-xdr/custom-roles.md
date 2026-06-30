@@ -1,6 +1,6 @@
 ---
 title: Custom roles for role-based access control
-description: Learn how to manage custom roles for Microsoft Defender XDR in the Microsoft Defender portal.
+description: Learn how to manage custom roles for Microsoft Defender in the Microsoft Defender XDR portal.
 ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
@@ -54,7 +54,7 @@ For information about the permissions and roles for each Microsoft Defender XDR 
 - [Roles and permissions in **Defender for Identity**](/defender-for-identity/role-groups)
 - [Microsoft **Defender for IoT** user management](/azure/defender-for-iot/organizations/manage-users-overview)
 - [Microsoft **Defender for Office 365** permissions](/defender-office-365/mdo-portal-permissions)
-- [Manage access to **Microsoft Defender XDR**](m365d-permissions.md)
+- [Manage access to **Microsoft Defender**](m365d-permissions.md)
 - [**Microsoft Security Exposure Management** permissions](/security-exposure-management/prerequisites#permissions)
 - [Roles and permissions in **Microsoft Sentinel**](/azure/sentinel/roles)
 

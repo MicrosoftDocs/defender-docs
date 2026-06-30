@@ -1,14 +1,16 @@
 ---
-title: Visualize your data using workbooks in Microsoft Sentinel | Microsoft Docs
-description: Learn how to visualize your data using workbooks in Microsoft Sentinel.
+title: Visualize your data using workbooks in Microsoft Sentinel
+description: Create and customize Microsoft Sentinel workbooks to visualize and monitor security data using built-in templates or custom designs, with access managed through Azure RBAC.
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 08/20/2025
+ms.date: 06/15/2026
 ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to create and customize workbooks in Microsoft Sentinel so that I can visualize and monitor security data effectively.
@@ -24,6 +26,8 @@ Microsoft Sentinel allows you to create custom workbooks across your data or use
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
 ## Prerequisites
+
+Before you create or use workbooks, make sure you meet the following prerequisites:
 
 - You must have at least **Workbook reader** or **Workbook contributor** permissions on the resource group of the Microsoft Sentinel workspace.
 
@@ -82,7 +86,8 @@ For more information, see:
 - [Create interactive reports with Azure Monitor Workbooks](/azure/azure-monitor/visualize/workbooks-overview)
 - [Tutorial: Visual data in Log Analytics](/azure/azure-monitor/visualize/tutorial-logs-dashboards)
 
-## Create new workbook
+<a name="create-new-workbook"></a>
+## Create a new workbook
 
 Create a workbook from scratch in Microsoft Sentinel.
 
@@ -100,7 +105,7 @@ Create a workbook from scratch in Microsoft Sentinel.
  
 1. When you're done with your edits, select **Done editing** and then **Save**. In the side pane, enter a meaningful name for your workbook, and select the subscription and resource group for your workspace.
 
-1. When working in the Azure portal, switch between workbooks in your workspace by selecting **Open** ![Icon for opening a workbook.](./media/monitor-your-data/switch.png) in the toolbar of any workbook. The screen switches to a list of other workbooks you can switch to.
+1. When working in the Azure portal, switch between workbooks in your workspace by selecting **Open** ![Icon for the Open button used to switch between saved workbooks in your workspace.](./media/monitor-your-data/switch.png) in the toolbar of any workbook. The screen switches to a list of other workbooks you can switch to.
 
     Select the workbook you want to open:
 
@@ -144,11 +149,14 @@ To print a workbook, or save it as a PDF, use the options menu to the right of t
 
 You can delete both saved templates and customized workbooks from the **My workbooks** tab. Templates themselves can't be deleted.
 
-To delete a workbook, select the workbook in the **My workbooks** tab, and then select **Delete**. This action removes the workbook resource and any changes you made to the template. The original template remains available.
+> [!WARNING]
+> Deleting a workbook permanently removes the workbook resource and any customizations you made to the template. This action can't be undone. The original template remains available.
+
+To delete a workbook, select the workbook in the **My workbooks** tab, and then select **Delete**.
 
 ## Workbook recommendations
 
-This section reviews basic recommendations we have for using workbooks with Microsoft Sentinel.
+The following recommendations help you use Microsoft Sentinel workbooks effectively.
 
 ### Add Microsoft Entra ID workbooks
 
@@ -177,6 +185,8 @@ Use the following query to create a visualization that compares traffic trends a
 
 The following sample query uses the **SecurityEvent** table from Windows. You might want to switch it to run on the **AzureActivity** or **CommonSecurityLog** table, on any other firewall.
 
+The query compares daily security event counts between the current week and the previous week, so you can quickly spot unusual changes in event volume.
+
 ```kusto
 // week over week query
 SecurityEvent
@@ -187,7 +197,9 @@ SecurityEvent
 
 ### Sample query with data from multiple sources
 
-You might want to create a query that incorporates data from multiples sources. For example, create a query that looks at Microsoft Entra audit logs for new users that were created, and then checks your Azure logs to see if the user started making role assignment changes within 24 hours of creation. That suspicious activity would show up in a visualization with the following query:
+You might want to create a query that incorporates data from multiples sources. For example, create a query that looks at Microsoft Entra audit logs for new users that were created, and then checks your Azure activity logs to see if the user started making Azure RBAC role assignment changes within 24 hours of creation. That suspicious activity would show up in a visualization with the following query.
+
+The following query finds newly created users in Microsoft Entra audit logs and joins them with Azure activity logs to detect role assignment changes made within 24 hours of user creation.
 
 ```kusto
 AuditLogs

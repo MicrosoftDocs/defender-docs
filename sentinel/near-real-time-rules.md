@@ -1,5 +1,5 @@
 ---
-title: Quick threat detection with near-real-time (NRT) analytics rules in Microsoft Sentinel | Microsoft Docs
+title: Quick threat detection with near-real-time (NRT) analytics rules in Microsoft Sentinel
 description: This article explains how the new near-real-time (NRT) analytics rules can help you detect threats quickly in Microsoft Sentinel.
 ms.author: guywild
 author: guywi-ms

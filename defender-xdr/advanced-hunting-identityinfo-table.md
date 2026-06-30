@@ -30,11 +30,11 @@ Microsoft Sentinel uses a slightly expanded version of this table in Log Analyti
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
-The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender XDR advanced hunting. The complete set of columns is available for Defender portal users who onboarded Microsoft Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
+The following schema is the unified `IdentityInfo` schema that streamlines a similar table in Microsoft Sentinel's log analytics and in Microsoft Defender advanced hunting. The complete set of columns is available for Defender portal users who onboarded Microsoft Sentinel and turned on the User and Entity Behavior Analytics (UEBA) service. 
 
 Defender portal users who don't onboard a Microsoft Sentinel workspace that has the UEBA service turned on can't view UEBA-specific columns. Read [UEBA-specific columns](#ueba-specific-columns).
 
-This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization doesn't deploy the service in Microsoft Defender XDR, queries that use the table don't work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from Microsoft Defender for Identity or Microsoft Sentinel and Microsoft Entra ID. If your organization doesn't deploy the service in Microsoft Defender, queries that use the table don't work or return any results. For more information about how to deploy Defender for Identity in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|

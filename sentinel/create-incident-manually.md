@@ -5,10 +5,11 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 10/16/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to manually create incidents in Microsoft Sentinel so that I can investigate and respond to threats not automatically detected or ingested from external systems.
 ---
 
@@ -36,7 +37,7 @@ Microsoft Sentinel in the Azure portal allows your security analysts to manually
 
 ### Create an incident for a reported event
 
-This is the scenario described in the introduction above.
+Use this option when a user, employee, or analyst reports suspicious activity that was not ingested as telemetry into Microsoft Sentinel. For example, an employee might notice an unrecognized person engaging in suspicious activity related to your organization's information assets and report it to the security operations center (SOC) by phone or email.
 
 ### Create incidents out of events from external systems
 
@@ -65,9 +66,11 @@ The following roles and permissions are required to manually create an incident.
 | Azure portal and API | One of the following:<li>[Microsoft Sentinel Responder](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-responder)<li>[Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) |
 | Azure Logic Apps | One of the above, plus:<li>[Microsoft Sentinel Playbook Operator](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-playbook-operator) to use an existing playbook<li>[Logic App Contributor](/azure/role-based-access-control/built-in-roles/integration#logic-app-contributor) to create a new playbook |
 
-Learn more about [roles in Microsoft Sentinel](roles.md).
+Learn more about [Microsoft Sentinel roles and permissions](roles.md).
 
 ### Create an incident using the Azure portal
+
+To manually create an incident in the Azure portal, follow these steps:
 
 1. Select **Microsoft Sentinel** and choose your workspace.
 
@@ -116,7 +119,7 @@ Learn more about [roles in Microsoft Sentinel](roles.md).
 
 Select the incident in the queue to see its full details, add bookmarks, change its owner and status, and more.
 
-If for some reason you change your mind after the fact about creating the incident, you can [delete it](delete-incident.md) from the queue grid, or from within the incident itself. You must have the [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) role in order to delete an incident.
+If for some reason you change your mind after the fact about creating the incident, you can [delete the incident](delete-incident.md) from the queue grid, or from within the incident itself. You must have the [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles/security#microsoft-sentinel-contributor) role in order to delete an incident.
 
 ### Create an incident using Azure Logic Apps
 
@@ -130,7 +133,7 @@ You need to supply parameters as described below:
 
 - Select your **Subscription**, **Resource group**, and **Workspace name** from their respective drop-downs.
 
-- For the remaining fields, see the explanations above (under [Create an incident using the Azure portal](#create-an-incident-using-the-azure-portal)).
+- For the remaining fields, see the field explanations in [Create an incident using the Azure portal](#create-an-incident-using-the-azure-portal).
 
     :::image type="content" source="media/create-incident-manually/create-incident-logicapp-parameters.png" alt-text="Screenshot of create incident action parameters in Microsoft Sentinel connector.":::
 
@@ -143,15 +146,15 @@ You can find them in the playbook templates gallery on the Microsoft Sentinel **
 
 ### Create an incident using the Microsoft Sentinel API
 
-The [Incidents](/rest/api/securityinsights/preview/incidents) operation group allows you not only to create, but also to [update (edit)](/rest/api/securityinsights/preview/incidents/create-or-update), [get (retrieve)](/rest/api/securityinsights/preview/incidents/get), [list](/rest/api/securityinsights/preview/incidents/list), and [delete](/rest/api/securityinsights/preview/incidents/delete) incidents.
+The [Incidents](/rest/api/securityinsights/preview/incidents) operation group allows you not only to create, but also to [update an incident](/rest/api/securityinsights/preview/incidents/create-or-update), [retrieve an incident](/rest/api/securityinsights/preview/incidents/get), [list incidents](/rest/api/securityinsights/preview/incidents/list), and [delete an incident](/rest/api/securityinsights/preview/incidents/delete).
 
-You [create an incident](/rest/api/securityinsights/preview/incidents/create-or-update) using the following endpoint. After this request is made, the incident will be visible in the incident queue in the portal.
+To create or update a Microsoft Sentinel incident through the REST API, send a `PUT` request to the following endpoint. If the specified incident ID doesn't already exist, the API creates a new incident. After the request completes successfully, the incident is visible in the incident queue in the portal.
 
 ```http
 PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}/providers/Microsoft.SecurityInsights/incidents/{incidentId}?api-version=2022-07-01-preview
 ```
 
-Here's an example of what a request body might look like:
+The following example shows a JSON request body that creates an incident with properties such as title, description, severity, owner, status, and classification:
 
 ```json
 {
@@ -174,6 +177,8 @@ Here's an example of what a request body might look like:
 ```
 
 ## Notes
+
+Keep the following limitations and behaviors in mind for manually created incidents:
 
 - Incidents created manually do not contain any entities or alerts. Therefore, the **Alerts** tab in the incident page will remain empty until you [relate existing alerts to your incident](relate-alerts-to-incidents.md).
 

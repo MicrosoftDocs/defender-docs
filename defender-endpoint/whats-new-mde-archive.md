@@ -97,7 +97,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## November-December 2024
 
-- New demonstration scenarios - GA. Five new demonstration scenarios are available: [AMSI demos](mde-demonstration-amsi.md), [Cloud protection demo](defender-endpoint-demonstration-cloud-delivered-protection.md), [Controlled folder access (block ransomware) demo](defender-endpoint-demonstration-controlled-folder-access.md), [Endpoint detection and response (EDR) detection test](edr-detection.md), [URL reputation (SmartScreen) demo](defender-endpoint-demonstration-smartscreen-url-reputation.md).
+- New demonstration scenarios - GA. Five new demonstration scenarios are available: [AMSI demos](mde-demonstration-amsi.md), [Cloud protection demo](defender-endpoint-demonstration-cloud-delivered-protection.md), [Controlled folder access (block ransomware) demo](defender-endpoint-demonstration-controlled-folder-access-ransomware.md), [Endpoint detection and response (EDR) detection test](edr-detection.md), [URL reputation (SmartScreen) demo](defender-endpoint-demonstration-smartscreen-url-reputation.md).
 
 ## December 2024
 
@@ -363,7 +363,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md)<BR>All ASR rules are now supported on Windows Server 2019.
 
-- [Controlled folder access](enable-controlled-folders.md)<BR> Controlled folder access is now supported on Windows Server 2019.
+- [Controlled folder access (CFA)](controlled-folder-access-configure.md)<BR> CFA is now supported on Windows Server 2019.
 
 - [Custom detection](/defender-xdr/custom-detections-overview)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by using the power of advanced hunting through the creation of custom detection rules.
 
@@ -417,7 +417,7 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 - [Microsoft Defender for Endpoint Community center](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP)<BR>The Microsoft Defender for Endpoint Community Center is a place where community members can learn, collaborate, and share experiences about the product.
 
-- [Controlled folder access](enable-controlled-folders.md)<BR>You can now block untrusted processes from writing to disk sectors using Controlled Folder Access.
+- [Controlled folder access](controlled-folder-access-configure.md)<BR>You can now block untrusted processes from writing to disk sectors using Controlled Folder Access.
 
 - [Onboard Windows and Mac client devices to Microsoft Defender for Endpoint](onboard-client.md)<BR>Microsoft Defender for Endpoint provides a centralized security operations experience for Windows and non-Windows platforms. You'll be able to see alerts from various supported operating systems (OS) in Microsoft Defender Security Center and better protect your organization's network.
 

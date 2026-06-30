@@ -58,7 +58,7 @@ Each report provides an analysis of a tracked threat and extensive guidance on h
 
 ## Required roles and permissions
 
-To access Threat analytics in the Defender portal, you need a license for at least one Microsoft Defender XDR product. For more information, see [Microsoft Defender XDR prerequisites](prerequisites.md). 
+To access Threat analytics in the Defender portal, you need a license for at least one Microsoft Defender product. For more information, see [Microsoft Defender prerequisites](prerequisites.md). 
 
 >[!NOTE]
 > The Microsoft Defender for Endpoint P1 license is an exception to this prerequisite and doesn't grant Threat analytics access.
@@ -240,7 +240,7 @@ Set up [custom detection rules](custom-detection-rules.md#2-create-new-rule-and-
 
 ### Set up email notifications for report updates
 
-Set up email notifications that send you updates on Threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender XDR](m365d-threat-analytics-notifications.md).
+Set up email notifications that send you updates on Threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender](m365d-threat-analytics-notifications.md).
 
 ## Other report details and limitations
 

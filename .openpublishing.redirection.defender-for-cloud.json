@@ -739,6 +739,16 @@
       "source_path_from_root": "/defender-for-cloud/episode-forty-three.md",
       "redirect_url": "/azure/defender-for-cloud/episode-forty-four",
       "redirect_document_id": false
+    },
+    {  
+      "source_path_from_root": "/defender-for-cloud/secure-container-image.md",
+      "redirect_url": "/azure/defender-for-cloud/containers-software-supply-chain-security-introduction",
+      "redirect_document_id": false
+    },
+    {  
+      "source_path_from_root": "/defender-for-cloud/faq-runtime-gated.md",
+      "redirect_url": "/azure/defender-for-cloud/runtime-gated-overview",
+      "redirect_document_id": false
     }
   ]
 }

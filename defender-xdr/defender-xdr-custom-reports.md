@@ -38,7 +38,7 @@ In this article, we create a sample Security Operations Center (SOC) efficiency 
 
 ## Importing data into Power BI
 
-The following steps show how to get Microsoft Defender XDR alerts data into Power BI.
+The following steps show how to get Microsoft Defender alerts data into Power BI.
 
 1. Open Microsoft Power BI Desktop.
 2. Select **Get Data > Blank Query**.

@@ -2,8 +2,9 @@
 title: Configure proxy connections from your OT sensor to Azure
 description: Learn how to configure proxy settings on your OT sensors to connect to Azure.
 ms.topic: how-to
-ms.date: 05/17/2023
-ms.custom: sfi-image-nochange
+ms.date: 06/12/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Configure proxy settings on an OT sensor
@@ -28,7 +29,7 @@ To perform the steps described in this article, you'll need:
 
 - Access to the OT sensor as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
-This step is performed by your deployment and connectivity teams.
+Configuring proxy settings on the OT sensor is performed by your deployment and connectivity teams.
 
 ## Configure proxy settings on your OT sensor
 
@@ -68,7 +69,7 @@ You might use an Azure proxy to connect your sensor to Defender for IoT in the f
 - Your site is connected to Azure via ExpressRoute
 - Your site is connected to Azure over a VPN
 
-If you already have a proxy configured, continue directly with  [defining the proxy settings on your sensor console](#configure-proxy-settings-on-an-ot-sensor).
+If you already have a proxy configured, continue directly with  [Configure proxy settings on your OT sensor](#configure-proxy-settings-on-an-ot-sensor).
 
 If you don't yet have a proxy configured, use the procedures in this section to set one up in your Azure VNET.
 
@@ -128,7 +129,7 @@ Create the following VNET and contained subnets:
 
 Create a VPN or ExpressRoute Gateway for virtual gateways, or create a local gateway, depending on how you connect your on-premises network to Azure.
 
-Attach the gateway to the `GatewaySubnet` subnet you created [earlier](#step-2-define-virtual-networks-and-subnets).
+Attach the gateway to the `GatewaySubnet` subnet you created in [Step 2: Define virtual networks and subnets](#step-2-define-virtual-networks-and-subnets).
 
 For more information, see:
 
@@ -148,7 +149,7 @@ For more information, see:
 
     - Optional. If you're using Bastion, create rule `4094` to allow Bastion SSH to the servers. Use the Bastion subnet as the source.
 
-1. Assign the NSG to the `ProxyserverSubnet` you created [earlier](#step-2-define-virtual-networks-and-subnets).
+1. Assign the NSG to the `ProxyserverSubnet` you created in [Step 2: Define virtual networks and subnets](#step-2-define-virtual-networks-and-subnets).
 
 1. Define your NSG logging:
 
@@ -163,7 +164,7 @@ For more information, see:
         **On the Basics tab**:
 
         - Enter a meaningful name
-        - Select the storage account you'd created [earlier](#step-1-define-a-storage-account-for-nsg-logs)
+        - Select the storage account you created in [Step 1: Define a storage account for NSG logs](#step-1-define-a-storage-account-for-nsg-logs)
         - Define your required retention days
 
         **On the Configuration tab**:
@@ -190,7 +191,7 @@ For more information, see [What are virtual machine scale sets?](/azure/virtual-
 
     Keep the default value for **Disks** settings.
 
-1. Create a network interface in the `Proxyserver` subnet you created [earlier](#step-2-define-virtual-networks-and-subnets), but don't yet define a load balancer.
+1. Create a network interface in the `Proxyserver` subnet you created in [Step 2: Define virtual networks and subnets](#step-2-define-virtual-networks-and-subnets), but don't yet define a load balancer.
 
 1. Define your scaling settings as follows:
 
@@ -272,9 +273,9 @@ For more information, see the [Azure Load Balancer documentation](/azure/load-ba
 
 1. Create a load balancer with a standard SKU and an **Internal** type to ensure that the load balancer is closed to the internet.
 
-1. Define a dynamic frontend IP address in the `proxysrv` subnet you created [earlier](#step-2-define-virtual-networks-and-subnets), setting the availability to zone-redundant.
+1. Define a dynamic frontend IP address in the `proxysrv` subnet you created in [Step 2: Define virtual networks and subnets](#step-2-define-virtual-networks-and-subnets), setting the availability to zone-redundant.
 
-1. For a backend, choose the virtual machine scale set you created in the [earlier](#step-5-define-an-azure-virtual-machine-scale-set).
+1. For a backend, choose the virtual machine scale set you created in [Step 5: Define an Azure virtual machine scale set](#step-5-define-an-azure-virtual-machine-scale-set).
 
 1. On the port defined in the sensor, create a TCP load balancing rule connecting the frontend IP address with the backend pool. The default port is 3128.
 
@@ -298,7 +299,7 @@ To configure a NAT gateway for your sensor connection:
 
 1. In the **Outbound IP** tab, select **Create a new public IP address**.
 
-1. In the **Subnet** tab, select the `ProxyserverSubnet` subnet you created [earlier](#step-2-define-virtual-networks-and-subnets).
+1. In the **Subnet** tab, select the `ProxyserverSubnet` subnet you created in [Step 2: Define virtual networks and subnets](#step-2-define-virtual-networks-and-subnets).
 
 Your proxy is now fully configured. Continue by [defining the proxy settings](#configure-sensor-proxy-settings) on your OT sensor.
 
@@ -309,7 +310,7 @@ You might connect your sensor to Defender for IoT in Azure using proxy chaining 
 - Your sensor needs a proxy to reach from the OT network to the cloud
 - You want multiple sensors to connect to Azure through a single point
 
-If you already have a proxy configured, continue directly with  [defining the proxy settings on your sensor console](#configure-proxy-settings-on-an-ot-sensor).
+If you already have a proxy configured, continue directly with  [Configure proxy settings on your OT sensor](#configure-proxy-settings-on-an-ot-sensor).
 
 If you don't yet have a proxy configured, use the procedures in this section to configure your proxy chaining. 
 
@@ -325,7 +326,8 @@ We've validated this procedure using the open-source [Squid](http://www.squid-ca
 > Microsoft Defender for IoT does not offer support for Squid or any other proxy services. It is the customer's responsibility to set up and maintain the proxy service.
 >
 
-### Configuration a proxy chaining connection
+<a name="configuration-a-proxy-chaining-connection"></a>
+### Configure a proxy chaining connection
 
 This procedure describes how to install and configure a connection between your sensors and Defender for IoT using the latest version of Squid on an Ubuntu server.
 
@@ -370,7 +372,7 @@ This procedure describes how to install and configure a connection between your 
 
     For more information, see [Provision OT sensors for cloud management](ot-deploy/provision-cloud-management.md).
 
-Your proxy is now fully configured. Continue by [defining the proxy settings](#configure-sensor-proxy-settings) on your OT sensor.
+Your proxy is now fully configured. Continue by [configuring proxy settings on your OT sensor](#configure-sensor-proxy-settings).
 
 ## Set up connectivity for multicloud environments
 
@@ -402,13 +404,16 @@ Use the following flow chart to determine which connectivity method to use:
     - If you want to own and manage the routers making the connection, use ExpressRoute with customer-managed routing.
     - If you don't need to own and manage the routers making the connection, use ExpressRoute with a cloud exchange provider.
 
-### Configuration
+<a name="configuration"></a>
+### Configure multicloud connectivity
+
+Use the following steps to configure multicloud connectivity and then define proxy settings on the sensor.
 
 1. Configure your sensor to connect to the cloud using one of the Azure Cloud Adoption Framework recommended methods. For more information, see [Connectivity to other cloud providers](/azure/cloud-adoption-framework/ready/azure-best-practices/connectivity-to-other-providers).
 
 1. To enable private connectivity between your VPCs and Defender for IoT, connect your VPC to an Azure VNET over a VPN connection. For example if you're connecting from an AWS VPC, see our TechCommunity blog: [How to create a VPN between Azure and AWS using only managed solutions](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/how-to-create-a-vpn-between-azure-and-aws-using-only-managed/ba-p/2281900).
 
-1. After your VPC and VNET are configured, [define the proxy settings](#configure-sensor-proxy-settings) on your OT sensor.
+1. After your VPC and VNET are configured, [configure the sensor proxy settings](#configure-sensor-proxy-settings) on your OT sensor.
 
 ## Next steps
 

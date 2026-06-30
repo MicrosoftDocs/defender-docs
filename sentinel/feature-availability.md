@@ -65,7 +65,7 @@ For more information, see [Microsoft Defender XDR for US Government customers](/
 |[Azure SQL Databases](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/azure-sentinel-sql-solution-query-deep-dive/ba-p/2597961) |GA |Yes |Yes|Yes |
 |[Azure Web Application Firewall (WAF)](data-connectors-reference.md#azure-web-application-firewall-waf) |GA |Yes |Yes|Yes |
 |[Cisco ASA](data-connectors-reference.md#cisco-asaftd-via-ama) |GA |Yes |Yes|Yes |
-|[Codeless Connectors Platform](create-codeless-connector.md?tabs=deploy-via-arm-template%2Cconnect-via-the-azure-portal) |Public preview |Yes |No|No |
+|[Codeless Connectors Platform](isv/create-codeless-connector.md?tabs=deploy-via-arm-template%2Cconnect-via-the-azure-portal) |Public preview |Yes |No|No |
 |[Common Event Format (CEF)](connect-common-event-format.md) |GA |Yes |Yes|Yes |
 |[Common Event Format (CEF) via AMA](connect-cef-syslog-ama.md) |GA |Yes |Yes |Yes |
 |[DNS](data-connectors-reference.md#dns) |Public preview |Yes |No |Yes |

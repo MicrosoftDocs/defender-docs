@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sentinel automation rules reference | Microsoft Docs
+title: Microsoft Sentinel automation rules reference
 description: This article displays the supported properties and entities in Microsoft Sentinel automation rules.
 ms.author: guywild
 author: guywi-ms

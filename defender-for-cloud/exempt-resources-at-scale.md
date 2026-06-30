@@ -72,3 +72,6 @@ To view or manage existing exemptions, return to the **Exemptions** page in the 
 > [!div class="nextstepaction"]
 > [Remediate recommendations](implement-security-recommendations.md)
 
+## Related content
+
+- [Manage false-positive security recommendations for Defender for Storage](defender-for-storage-false-positive-recommendations.md)

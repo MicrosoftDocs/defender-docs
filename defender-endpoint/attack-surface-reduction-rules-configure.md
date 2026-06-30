@@ -47,8 +47,7 @@ For more information, see [Requirements for ASR rules](attack-surface-reduction-
 
 ## Configure ASR rules in Microsoft Intune
 
-> [!IMPORTANT]
-> The procedures in this section require Microsoft Intune Plan 1 (included in subscriptions like Microsoft 365 E3 or available as a standalone add-on).
+[!INCLUDE [Intune is recommended but is a separate product](includes/intune-recommended-separate-product.md)]
 
 Microsoft Intune is the recommended tool for configuring and distributing ASR rule policies to devices.
 
@@ -73,12 +72,12 @@ To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surfa
 
     To specify per-ASR rule exclusions or global ASR rule exclusions, use either of the following methods:
 
-    - Select **Add**. In the box that appears, enter the path or path and filename to exclude. For example:
+    - Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**. In the box that appears, enter the path or path and filename to exclude. For example:
       - `C:\folder`
       - `%ProgramFiles%\folder\file.exe`
         `C:\path`
 
-    - Select **Import** to import a CSV file that contains the names of files and folders to exclude. The CSV file uses the following format:
+    - Select :::image type="icon" source="media/intune-icon-import.png" border="false"::: **Import** to import a CSV file that contains the names of files and folders to exclude. The CSV file uses the following format:
 
       ```text
       AttackSurfaceReductionOnlyExclusions
@@ -93,7 +92,7 @@ To configure ASR rules using a Microsoft Intune Endpoint Security **Attack surfa
 
     For more information about exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
-  - **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications**: For more information, see [Protect important folders with controlled folder access](controlled-folders.md).
+  - **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications**: For more information, see [Configure CFA in Intune using endpoint security policies](controlled-folder-access-configure.md#configure-cfa-in-intune-using-endpoint-security-policies).
 
 <a name="custom-profile-in-intune-alternative-2"></a>
 
@@ -301,7 +300,6 @@ For instructions, see the attack surface reduction information in [Create and de
 1. In the **Group Policy Management Editor**, go to **Computer configuration** \> **Administrative templates** \> **Windows components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard \> Attack Surface Reduction**.
 
 1. In the details pane of **Attack Surface Reduction**, the available settings are:
-
    - [Configure Attack Surface Reduction rules](#configure-asr-rules-in-group-policy)
    - [Exclude files and paths from Attack surface reduction rules](#enable-exclusions-for-all-asr-rules-in-group-policy)
    - [Apply a list of exclusions to specific attack surface reduction (ASR) rules](#enable-per-rule-exclusions-in-group-policy)
@@ -331,16 +329,15 @@ Use the following steps to configure ASR rules and their modes in the Group Poli
 
 1. In the setting window that opens, configure the following options:
    1. Select **Enabled**.
-   2. **Set the state for each ASR rule**: Select **Show...**.
-
-1. In the **Set the state for each ASR rule** dialog that opens, configure the following settings:
-   - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-overview.md#asr-rules).
-   - **Value**: Enter one of the following [rule mode](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) values:
-     - `0`: Off
-     - `1`: Block
-     - `2`: Audit
-     - `5`: Not configured
-     - `6`: Warn
+   1. **Set the state for each ASR rule**: Select **Show...**.
+   1. In the **Set the state for each ASR rule** dialog that opens, configure the following settings:
+      - **Value name**: Enter the [GUID value of the ASR rule](attack-surface-reduction-rules-overview.md#asr-rules).
+      - **Value**: Enter one of the following [rule mode](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) values:
+        - `0`: Off
+        - `1`: Block
+        - `2`: Audit
+        - `5`: Not configured
+        - `6`: Warn
 
    :::image type="content" source="media/asr-rules-gp.png" alt-text="Screenshot of Configure Attack Surface Reduction rules in Group Policy." lightbox="media/asr-rules-gp.png":::
 

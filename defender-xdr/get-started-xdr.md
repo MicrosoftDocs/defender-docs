@@ -178,7 +178,7 @@ To turn on Teams notifications and chat after the initial setup, go to **Setting
 
 ## Prepare your environment for the Defender Experts service
 
-Apart from onboarding service delivery, the expertise of Microsoft Defender Experts on the Microsoft Defender XDR product suite enables them to help you run a **readiness assessment** and get the most out of your Microsoft security products.
+Apart from onboarding service delivery, the expertise of Microsoft Defender Experts on the Microsoft Defender product suite enables them to help you run a **readiness assessment** and get the most out of your Microsoft security products.
 
 The readiness assessment is based on the number of protected devices and identities in your environment, and Defender Experts' policy recommendations. To view the assessment, in your Microsoft Defender portal, go to **Settings** > **Defender Experts** then select **Service status**.
 

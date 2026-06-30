@@ -197,7 +197,7 @@ Kubernetes gated deployment in Microsoft Defender for Containers is now generall
 - Performance optimizations with reduced latency for admission decisions
 - Enhanced documentation for troubleshooting and developer experience
 
-Learn more about [gated deployment for Kubernetes container images](runtime-gated-overview.md), [how to enable gated deployment](enablement-guide-runtime-gated.md), and [gated deployment FAQ](faq-runtime-gated.md).
+Learn more about [gated deployment for Kubernetes container images](runtime-gated-overview.md) and [how to enable gated deployment](enablement-guide-runtime-gated.md).
 
 ### Defender for Cloud integration into the Defender portal (preview)
 

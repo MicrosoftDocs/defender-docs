@@ -8,20 +8,24 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel  
 ms.topic: how-to
 ms.subservice: sentinel-platform
-ms.date: 03/11/2026
+ms.date: 06/12/2026
 
 ms.collection: ms-security  
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---  
 
 # Visualize data in Microsoft Sentinel data lake using workbooks
  
-Running Microsoft Sentinel workbooks on top of Microsoft Sentinel data lake data allows SOC teams to visualize and monitor security data directly from the lake using KQL (Kusto Query Language), without duplicating or transforming data. By selecting Sentinel data lake as the data source in a workbook, analysts can run the same analytical queries used for investigations and hunting. They can render them as interactive charts and tables for operational monitoring and reporting. Using Sentinel data lake as a workbook data source enables consistent analytics across queries, supports longer data retention, and scales with high-volume historical data. This makes workbooks ideal for advanced threat hunting, trend analysis, and executive dashboards.
+Microsoft Sentinel workbooks let SOC teams visualize and monitor security data directly from the data lake. Analysts use KQL (Kusto Query Language) to query the lake without duplicating or transforming data. Select Sentinel data lake as the data source in a workbook to run the same queries used for investigations and hunting. Then render results as interactive charts and tables for monitoring and reporting. This approach keeps analytics consistent across queries, supports longer data retention, and scales with high-volume historical data. These capabilities make workbooks ideal for threat hunting, trend analysis, and executive dashboards.
  
 This article walks you through the process of creating workbooks for using Microsoft Sentinel data lake as the data source. For more information on using workbooks with Sentinel, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data?tabs=defender-portal).
 
-When using Sentinel data lake as the data source for your workbooks, keep in mind the importance of query performance as workbook visualization can autorefresh and execute repeatedly. Queries should be scoped with appropriate time filters, summarization, and projections to avoid scanning excessive historical data in the lake. Appropriately scoped queries ensure dashboards remain responsive while still using long-term, high-volume data for analysis.
+Query performance matters because workbook visuals can autorefresh and run many times. Add time filters, summarize results, and project only the columns you need. These steps prevent queries from scanning too much historical data. Well-scoped queries keep dashboards fast while still using long-term data for analysis.
 
 ## Create a workbook with Microsoft Sentinel data lake as the data source
+
+Follow these steps to create a workbook that uses Microsoft Sentinel data lake as its data source:
 
 1. In the Defender portal, go to **Microsoft Sentinel** > **Threat management** > **Workbooks**.
 
@@ -64,12 +68,12 @@ When using Sentinel data lake as the data source for your workbooks, keep in min
  
     :::image type="content" source="./media/workbooks-for-data-lake/edit-new-query.png" alt-text="Screenshot showing the editing of a new query and visualization." lightbox="./media/workbooks-for-data-lake/edit-new-query.png":::
 
-    This visual shows the top 10 AWS principal identities generating the highest number of failed API calls in AWSCloudTrail logs. Failed events are aggregated and filtered to highlight identities with repeated errors. The chart helps analysts quickly identify potentially suspicious or misconfigured identities producing abnormal failure patterns.
+    This visual shows the top 10 AWS principal identities with the most failed API calls in AWSCloudTrail logs. Failed events are counted and filtered to show identities with repeated errors. Use this chart to spot suspicious or misconfigured identities that produce unusual failure patterns.
     
     > [!NOTE]
     > The **Visualization** type **Set by query** isn't supported. 
     >
-    > Relative time ranges such as `> ago(10d) ` are supported up to 90 days. Absolute time ranges are supported according to your data retention policy. 
+    > Relative time ranges such as `> ago(10d) ` work for up to 90 days. Absolute time ranges follow your data retention policy. 
 
 
 1.  On the workbook page, select **Done editing**.

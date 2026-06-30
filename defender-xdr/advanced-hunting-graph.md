@@ -30,7 +30,7 @@ Analysts often rely on [Kusto Query Language](/azure/kusto/query/) (KQL) queries
 
 ## Get access
 
-To use hunting graph, advanced hunting, or other [Microsoft Defender XDR](microsoft-365-defender.md) capabilities, you need an appropriate role in Microsoft Entra ID. [Read about required roles and permissions for advanced hunting](custom-roles.md).
+To use hunting graph, advanced hunting, or other [Microsoft Defender](microsoft-365-defender.md) capabilities, you need an appropriate role in Microsoft Entra ID. [Read about required roles and permissions for advanced hunting](custom-roles.md).
 
 You must also have the following access or permissions:
 
@@ -133,4 +133,4 @@ After selecting a scenario and applying the necessary filters, select **Run scen
 
 ## Related content
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender](advanced-hunting-overview.md)
-- [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](advanced-hunting-modes.md)
+- [Choose between guided and advanced modes to hunt in Microsoft Defender](advanced-hunting-modes.md)

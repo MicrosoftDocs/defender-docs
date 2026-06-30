@@ -7,13 +7,15 @@ ms.localizationpriority: medium
 ms.collection: 
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - sfi-image-nochange
 description: Learn about the considerations for integrating non-Microsoft security services with the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 02/06/2026
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Considerations for integrating non-Microsoft security services with Microsoft 365
@@ -37,34 +39,34 @@ While Microsoft provides a comprehensive platform for email security, we underst
 
 ## Integration via DNS mail routing (MX record points to the non-Microsoft-service)
 
-This configuration is covered in detail in [Enhanced Filtering for Connectors in Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) and Microsoft fully supports it. Email security vendors that support [Authenticated Received Chain (ARC)](email-authentication-arc-configure.md) work best, but there are limitations. For example, avoid using [Safe Links](safe-links-about.md) to check and wrap links with a non-Microsoft service that also rewrites links. Double link wrapping can prevent Safe Links from validating link status, detonating links for threats, and potentially triggering one-time use links. We recommend disabling the link wrapping feature in the non-Microsoft service.
+Using Enhanced Filtering for Connectors with a non-Microsoft service placed before Microsoft 365 is covered in detail in [Enhanced Filtering for Connectors in Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) and Microsoft fully supports it. Email security vendors that support [Authenticated Received Chain (ARC)](email-authentication-arc-configure.md) work best, but there are limitations. For example, avoid using [Safe Links](safe-links-about.md) to check and wrap links with a non-Microsoft service that also rewrites links. Double link wrapping can prevent Safe Links from validating link status, detonating links for threats, and potentially triggering one-time use links. We recommend disabling the link wrapping feature in the non-Microsoft service.
 
-For more background on this configuration, see [Manage mail flow using a non-Microsoft cloud service with Exchange Online](/exchange/mail-flow-best-practices/manage-mail-flow-using-third-party-cloud).
+For more background on routing mail through a non-Microsoft cloud service before Exchange Online, see [Manage mail flow using a non-Microsoft cloud service with Exchange Online](/exchange/mail-flow-best-practices/manage-mail-flow-using-third-party-cloud).
 
 ## Integration via the Microsoft Graph API
 
-Some non-Microsoft services authenticate and use the Microsoft Graph API to scan messages after they're delivered to user mailboxes. This configuration also allows the non-Microsoft service to remove messages that they believe to be malicious or unwanted. Typically, this configuration requires full access to mailboxes by the non-Microsoft service. Be sure to understand the security and support practices of the non-Microsoft service before granting this permission.
+Some non-Microsoft services authenticate and use the Microsoft Graph API to scan messages after they're delivered to user mailboxes. Using the Microsoft Graph API to scan messages after delivery also allows the non-Microsoft service to remove messages that they believe to be malicious or unwanted. Typically, this configuration requires full access to mailboxes by the non-Microsoft service. Be sure to understand the security and support practices of the non-Microsoft service before granting this permission.
 
 ## Integration via in-and-out mail routing
 
-This configuration allows the MX record to point to Microsoft 365. However, the non-Microsoft service operates *after* Microsoft 365 email protection and processing as shown in the following diagram:
+In-and-out mail routing allows the MX record to point to Microsoft 365. However, the non-Microsoft service operates *after* Microsoft 365 email protection and processing as shown in the following diagram:
 
 :::image type="content" source="media/mdo-mail-flow-with-additional-security-service.png" alt-text=" diagram showing mail flow with a non-Microsoft security service being used after mail delivery to Microsoft 365." lightbox="media/mdo-mail-flow-with-additional-security-service.png":::
 
 > [!TIP]
 > [Enhanced Filtering for Connectors](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) doesn't work with this configuration. Enhanced Filtering for Connectors is designed for scenarios where the non-Microsoft service is **before** Microsoft 365 as previously explained in the [Integration via DNS mail routing](#integration-via-dns-mail-routing-mx-record-points-to-the-non-microsoft-service) section. The non-Microsoft service before Microsoft 365 allows the full email protection stack to operate, while intelligently preventing spoofing false positives related to the non-Microsoft service's sending infrastructure. You can't use Enhanced Filtering for Connectors to inherently trust all messages from Microsoft 365 IP addresses.
 
-This configuration requires the message to leave the Microsoft 365 service boundary. Messages returning from the non-Microsoft service are treated as entirely new messages by Microsoft 365. This behavior results in the following problems and complexities:
+In-and-out mail routing requires the message to leave the Microsoft 365 service boundary. Messages returning from the non-Microsoft service are treated as entirely new messages by Microsoft 365. This behavior results in the following problems and complexities:
 
 - Messages are counted twice in most reporting tools, including Explorer (Threat Explorer), Advanced Hunting, and automated investigation and response (AIR). This behavior makes it difficult to properly correlate the message verdict and actions.
 
 - Because messages coming back to Microsoft 365 are likely to fail email authentication checks, the messages might be identified as spoofing (false positives). Some non-Microsoft services recommend using mail flow rules (transport rules) or IP connection filtering to overcome this issue, but it can lead to false negatives being delivered.
 
 - Most importantly, machine learning in Defender for Office 365 doesn't operate as effectively as it can. Machine learning algorithms rely on accurate data to make decisions on content. Inconsistent or altered data can negatively affect the learning process, which leads to a decrease in the overall effectiveness of Defender for Office 365. Examples include:
-  - **Reputation**: Over time, the machine learning models discover the elements that are associated with good and bad content (IP addresses, sending domains, URLs, etc.). When messages return from the non-Microsoft service, the initial sending IP addresses aren't preserved, and can reduce the effectiveness of IP addresses in rendering a correct verdict. This behavior can also affect submissions, which are discussed in point 3 later.
+  - **Reputation**: Over time, the machine learning models discover the elements that are associated with good and bad content (IP addresses, sending domains, URLs, etc.). When messages return from the non-Microsoft service, the initial sending IP addresses aren't preserved, and can reduce the effectiveness of IP addresses in rendering a correct verdict. This behavior can also affect false negative and false positive email submissions to Microsoft, as described in the submission guidance later in this procedure.
   - **Message content modifications**: Many email security services add message headers, add disclaimers, modify message body content, and/or rewrite URLs in messages. Machine learning might accidentally decide messages with these modifications are malicious because [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md) found and removed malicious messages, and those malicious messages happened to contain these modifications.
 
-For these reasons, we strongly recommend avoiding this configuration, and working with the non-Microsoft service vendor to use the other integration options described in this article. However, if you must adopt this configuration, we strongly recommend the following settings and operations to maximize your protection posture:
+For these reasons, we strongly recommend avoiding this configuration, and working with the non-Microsoft service vendor to use the other integration options described in this article. However, if you must adopt in-and-out mail routing, we strongly recommend the following settings and operations to maximize your protection posture:
 
 1. Configure Defender for Office 365 policy actions to quarantine all negative verdicts. While this configuration can be less user friendly than using the Junk Email folder, the junk action happens only upon final delivery to the mailbox. An email that was going to be delivered to the Junk Email folder was sent to the non-Microsoft service instead. If/when this message comes back to Microsoft, there's no guarantee that the original verdict (for example, spam) is preserved. This behavior leads to lower overall effectiveness.
 
@@ -87,7 +89,7 @@ For these reasons, we strongly recommend avoiding this configuration, and workin
 
 Defender for Office 365 has [user reported settings](submissions-user-reported-messages-custom-mailbox.md) that work with the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 
-Knowing that non-Microsoft security services might include their own tools and processes for reporting false positives and false negatives (including user education/awareness efforts), Defender for Office 365 supports submissions from [non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). This support helps streamline reporting [false positives and false negatives to Microsoft](submissions-admin.md), and empowers your SecOps team to take advantage of Microsoft Defender [incident management](/defender-xdr/incidents-overview) and [automated investigations and response (AIR)](air-about.md).
+Knowing that non-Microsoft security services might include their own tools and processes for reporting false positives and false negatives (including user education/awareness efforts), Defender for Office 365 supports submissions from [non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools). This support helps streamline reporting [false positives and false negatives to Microsoft](submissions-admin.md), and empowers your security operations (SecOps) team to take advantage of Microsoft Defender [incident management](/defender-xdr/incidents-overview) and [automated investigations and response (AIR)](air-about.md).
 
 For more information, see [Options for non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-non-microsoft-reporting-tools).
 

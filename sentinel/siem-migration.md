@@ -6,10 +6,11 @@ ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: yohasson
 ms.topic: how-to
-ms.date: 05/4/2026
+ms.date: 06/17/2026
 ai-usage: ai-assisted
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As an security operations administrator, I want to use the SIEM migration so I can streamline a migration to Microsoft Sentinel to enhance my security monitoring capabilities.
 ---
@@ -25,6 +26,8 @@ The SIEM Migration experience includes the following features:
 
 ## Prerequisites
 
+Before you start the SIEM migration experience, make sure you have the following prerequisites in place:
+
 - [Microsoft Sentinel in Microsoft Defender portal](/unified-secops/microsoft-sentinel-onboard#onboard-microsoft-sentinel)
 - At least [Microsoft Sentinel Contributor](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-contributor) permissions in the Microsoft Sentinel workspace
 - <a href="/copilot/security/get-started-security-copilot" target="_blank">[Security Copilot](/defender-xdr/security-copilot-in-microsoft-365-defender)</a> enabled in your tenant with at least a [workspace operator role](/copilot/security/authentication#assign-security-copilot-access) assigned
@@ -35,6 +38,8 @@ The SIEM Migration experience includes the following features:
 > :::image type="content" source="./media/siem-migration/monitor-usage.png" alt-text="Screenshot of the Security Copilot usage monitoring settings.":::
 
 ## Export detection rules from your current SIEM
+
+Export your existing detection rules from Splunk or QRadar so you can import them into the SIEM migration experience.
 
 ### [Splunk](#tab/splunk)
 
@@ -48,15 +53,42 @@ You need a Splunk admin role to export all Splunk alerts. For more information, 
 
 ### [QRadar](#tab/qradar)
 
-Export your QRadar rule data as a CSV file, as explained here [Exporting rules - IBM Documentation](https://go.microsoft.com/fwlink/?linkid=2332524).
+Use the QRadar migration data collector script to export your QRadar detection rules and building blocks to a CSV file that the SIEM migration experience can analyze.
 
-Two notes regarding the export:
+Before you start, make sure you have:
 
-1. The default export includes the alert rules, but not the building blocks that can carry important information. Clear any filter values for the *Rule or Building Block(BB)* to allow both the rules and the BBs to be exported.
+- Python 3 installed on the machine where you'll run the script. The latest stable release is recommended.
+- A QRadar authorized service token with Admin privileges. For more information, see [Creating authorized service tokens in IBM QRadar](https://www.ibm.com/docs/qradar-common?topic=configuration-creating-authorized-service-token).
+- Network access from the script machine to your QRadar console.
 
-1. Only include the following fields in your export to avoid duplications that can lead to QRadar application freeze:
+1. In the SIEM migration experience, select **QRadar**, then select **Download script**.
+1. Save `qradar_collector.py` to the machine where you'll run it.
+1. From a terminal, run the script with your QRadar console hostname or IP address:
+
+    ```bash
+    python3 qradar_collector.py --host <qradar-host-or-ip>
+    ```
+
+    If `python3` isn't recognized, use the Python command for your environment, such as `python`.
+
+1. When prompted, enter your QRadar authorized service token. The token input is hidden. Don't include the token in the command line.
+1. When the script finishes, upload the generated `qradar_rules_YYYYMMDDHHMMSS.csv` file in the SIEM migration experience, then select **Next**.
+
+For more information about the script and its parameters, see the [QRadar migration data collector README](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/QRadarMigration).
+
+#### Troubleshoot QRadar exports
+
+If the script fails and you need a workaround, manually export QRadar rules as a CSV file by using [Exporting rules - IBM Documentation](https://go.microsoft.com/fwlink/?linkid=2332524).
+
+When you export manually:
+
+1. Clear any filter values for *Rule or Building Block(BB)* so the export includes both rules and building blocks.
+
+1. Include only the supported fields:
 
    "Rule name", "Type", "Rule enabled", "Notes", "Action details", "Response details", "Rule response: Event description", "Is rule", "Rule installed", "Rule response: Event name", "Rule: test definition", "Content extension name", "Content category"
+
+Manual exports can produce less accurate migration results than the collector script because the script enriches and normalizes QRadar data for migration analysis.
 
 ---
 
@@ -78,7 +110,7 @@ After exporting the rules, do the following:
 
     :::image type="content" source="./media/siem-migration/select-siem.png" alt-text="Screenshot of the UI asking the user to select the SIEM they're migrating from.":::
 
-1. Upload the configuration data that [you exported from your current SIEM](#export-detection-rules-from-your-current-siem) and select **Next**.
+1. Upload the Splunk query output or QRadar CSV file you exported earlier (see [Export detection rules from your current SIEM](#export-detection-rules-from-your-current-siem)), and select **Next**.
 
     The migration tool analyzes the export and identifies the number of data sources and detection rules in the file you provided. Use this information to confirm that you have the right export.
 
@@ -98,7 +130,7 @@ After exporting the rules, do the following:
 
     :::image type="content" source="./media/siem-migration/setup-analysis-status.png" alt-text="Screenshot of the SIEM Set-up analysis status showing the progress of the analysis.":::
 
-    This page doesn't refresh automatically. To see the latest status, close and reopen the page.
+    The **SIEM setup analysis status** page doesn't refresh automatically. To see the latest status, close and reopen the page.
 
     The analysis is complete when all three check marks are green. If the three checkmarks are green but there are no recommendations, it means that no matches were found for your rules.
 
@@ -115,7 +147,7 @@ After exporting the rules, do the following:
     :::image type="content" source="./media/siem-migration/recommendation-card.png" alt-text="A screenshot of a recommendation card." lightbox="./media/siem-migration/recommendation-card.png":::
 
     The tool matches Splunk and QRadar rules to out-of-box Microsoft Sentinel data connectors, out-of-box Microsoft Sentinel detection rules, and Defender XDR native detections.
-    The *connectors* tab shows the data connectors matched to the rules from your SIEM and the status (connected or not disconnected). If the connector you want to use isn't already connected, you can connect from the connector tab. If a connector isn't installed, go to the Content hub and install the solution that contains the connector you want to use.
+    The *connectors* tab shows the data connectors matched to the rules imported from Splunk or QRadar and the status (connected or not connected). If the connector you want to use isn't already connected, you can connect from the connector tab. If a connector isn't installed, go to the Content hub and install the solution that contains the connector you want to use.
 
     :::image type="content" source="./media/siem-migration/connectors.png" alt-text="Screenshot of Microsoft Sentinel data connectors matched to Splunk or QRadar rules.":::
 
@@ -134,6 +166,8 @@ After exporting the rules, do the following:
     :::image type="content" source="./media/siem-migration/detection.png" alt-text="Screenshot of Microsoft Sentinel detection rules matched to Splunk or QRadar rules." lightbox="./media/siem-migration/detection.png":::
 
 ## Enable detection rules
+
+After reviewing the matched rules, use the following options to enable the detections you want.
 
 ### [Microsoft Sentinel detection rules](#tab/sentinel-detection-rules)
 

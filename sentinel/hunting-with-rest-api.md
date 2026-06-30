@@ -1,5 +1,5 @@
 ---
-title: Manage hunting queries in Microsoft Sentinel using REST API | Microsoft Docs
+title: Manage hunting queries in Microsoft Sentinel using REST API
 description: This article describes how Microsoft Sentinel hunting features enable you to take advantage Log Analytics’ REST API to manage hunting queries.
 ms.author: guywild
 author: guywi-ms

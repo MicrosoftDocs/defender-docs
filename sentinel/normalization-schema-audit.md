@@ -1,5 +1,5 @@
 ---
-title: The Advanced Security Information Model (ASIM) Audit Events normalization schema reference | Microsoft Docs
+title: The Advanced Security Information Model (ASIM) Audit Events normalization schema reference
 description: This article displays the Microsoft Sentinel Audit Events normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT

@@ -5,10 +5,11 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 03/30/2022
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to take advantage of Microsoft Teams' integration with Microsoft Sentinel to collaborate efficiently on incident investigations with my team.
 ---
 
@@ -50,7 +51,7 @@ Investigate together with an *incident team* by integrating Microsoft Teams dire
 
 1. At the bottom of the incident pane that appears on the right, select **Actions** > **Create team (Preview)**.
 
-    [ ![Create a team to collaborate in a incident team.](media/collaborate-in-microsoft-teams/create-team.png) ](media/collaborate-in-microsoft-teams/create-team.png#lightbox)
+    [ ![Screenshot of the option to create a Microsoft Teams team for the incident.](media/collaborate-in-microsoft-teams/create-team.png) ](media/collaborate-in-microsoft-teams/create-team.png#lightbox)
 
     The **Incident team** pane opens on the right. Define the following settings for your incident team:
 
@@ -68,14 +69,14 @@ Investigate together with an *incident team* by integrating Microsoft Teams dire
 
     The incident pane refreshes, with a link to your new incident team under the **Team name** title.
 
-    [ ![Click the Teams integration link added to your incident.](media/collaborate-in-microsoft-teams/teams-link-added-to-incident.jpg) ](media/collaborate-in-microsoft-teams/teams-link-added-to-incident.jpg#lightbox)
+    [ ![Screenshot of an incident pane with the Teams integration link added.](media/collaborate-in-microsoft-teams/teams-link-added-to-incident.jpg) ](media/collaborate-in-microsoft-teams/teams-link-added-to-incident.jpg#lightbox)
 
 
 1. Select your **Teams integration** link to switch into Microsoft Teams, where all of the data about your incident is listed on the **Incident page** tab.
 
-    [ ![Incident page in Microsoft Teams.](media/collaborate-in-microsoft-teams/incident-in-teams.png) ](media/collaborate-in-microsoft-teams/incident-in-teams.png#lightbox)
+    [ ![Screenshot of the incident page displayed in Microsoft Teams.](media/collaborate-in-microsoft-teams/incident-in-teams.png) ](media/collaborate-in-microsoft-teams/incident-in-teams.png#lightbox)
 
-Continue the conversation about the investigation in Teams for as long as needed. You have the full incident details directly in teams.
+Continue the conversation about the investigation in Teams for as long as needed. You have the full incident details directly in Microsoft Teams.
 
 > [!TIP]
 > - <a name="more-users"></a>If you need to add individual users to your team, you can do so in Microsoft Teams using the **Add more people** button on the **Posts** tab.

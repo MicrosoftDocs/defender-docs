@@ -1,14 +1,16 @@
 ---
-title: Migrate your Microsoft Sentinel alert-trigger playbooks to automation rules | Microsoft Docs
+title: Migrate Microsoft Sentinel alert-trigger playbooks to automation rules
 description: This article explains how (and why) to take your existing playbooks built on the alert trigger and migrate them from being invoked by analytics rules to being invoked by automation rules.
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.date: 03/14/2024
+ms.date: 06/12/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to migrate my alert-trigger playbooks to automation rules so that I can streamline automation management and prepare for the deprecation of analytics rule triggers.
 
@@ -16,7 +18,7 @@ ms.collection: usx-security
 
 # Migrate your Microsoft Sentinel alert-trigger playbooks to automation rules
 
-We recommend that you migrate existing playbooks built on alert triggers and migrate them from being invoked by **analytics rules** to being invoked by **automation rules**. This article explains why we recommend this action, and how to migrate your playbooks.
+We recommend that you migrate existing playbooks built on alert triggers and migrate them from being invoked by **analytics rules** to being invoked by **automation rules**. This article explains why we recommend migrating playbooks from analytics rules to automation rules, and how to do it. Before you begin, review the [Prerequisites](#prerequisites).
 
 - If you're migrating a playbook that's used by only one analytics rule, follow the instructions under [Create an automation rule from an analytics rule](#create-an-automation-rule-from-an-analytics-rule).
 
@@ -52,7 +54,7 @@ For more information, see [Microsoft Sentinel playbook prerequisites](automate-r
 
 ## Create an automation rule from an analytics rule
 
-Use this procedure if you're migrating a playbook that's used by only one analytics rule. Otherwise, use [Create a new automation rule from the Automation page](#create-a-new-automation-rule-from-the-automation-page).
+Use this procedure if you're migrating a playbook that's used by only one analytics rule. If the playbook is used by multiple analytics rules, use [Create a new automation rule from the Automation page](#create-a-new-automation-rule-from-the-automation-page).
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select the **Configuration** > **Analytics** page. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Configuration** > **Analytics**.
 

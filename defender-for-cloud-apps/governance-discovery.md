@@ -1,13 +1,14 @@
 ---
 title: Govern discovered apps 
-description: This article describes the procedure for governing your discovered apps by blocking their usage in your organization.
-ms.date: 09/30/2025
+description: Govern discovered apps by sanctioning approved apps or unsanctioning and blocking unwanted apps in your organization.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# Govern discovered apps
+# Govern discovered apps in Microsoft Defender for Cloud Apps
 
 
 After you review the list of discovered apps in your environment, you can secure your environment by approving safe apps (**Sanctioned**) or prohibiting unwanted apps (**Unsanctioned**) in the following ways.
@@ -30,9 +31,9 @@ You can mark a specific risky app as unsanctioned by clicking the three dots at 
 > An app that is onboarded to inline proxy or connected via app connector, all such applications would be auto sanctioned state in Cloud Discovery.
 ## Blocking apps with built-in streams
 
-If your tenant uses Microsoft Defender for Endpoint, once you mark an app as unsanctioned, it's automatically blocked. Moreover, you can scope blocking to specific Defender for Endpoint device groups, monitor applications, and use the [warn and educate](mde-govern.md#educate-users-when-accessing-risky-apps) features. For more information, see [Govern discovered apps using Microsoft Defender for Endpoint](mde-govern.md).
+If your tenant uses Microsoft Defender for Endpoint, once you mark an app as unsanctioned, it's automatically blocked. Moreover, you can scope blocking to specific Defender for Endpoint device groups, monitor applications, and use the [warn and educate users when accessing risky apps](mde-govern.md#educate-users-when-accessing-risky-apps) features. For more information, see [Govern discovered apps using Microsoft Defender for Endpoint](mde-govern.md).
 
-Otherwise, if your tenant uses Zscaler NSS, iboss, Corrata, Menlo, or Open Systems, you can still enjoy seamless blocking capabilities when an app is unsanctioned, but you can't use the scope by device groups or [warn and educate](mde-govern.md#educate-users-when-accessing-risky-apps) features. For more information, see [Integrate with Zscaler](zscaler-integration.md), [Integrate with iboss](iboss-integration.md), [Integrate with Corrata](Corrata-integration.md), [Integrate with Menlo](menlo-integration.md), and [Integrate with Open Systems](open-systems-integration.md).
+Otherwise, if your tenant uses Zscaler NSS, iboss, Corrata, Menlo, or Open Systems, you can still enjoy seamless blocking capabilities when an app is unsanctioned, but you can't use the scope by device groups or [warn and educate users when accessing risky apps](mde-govern.md#educate-users-when-accessing-risky-apps) features. For more information, see [Integrate with Zscaler](zscaler-integration.md), [Integrate with iboss](iboss-integration.md), [Integrate with Corrata](Corrata-integration.md), [Integrate with Menlo](menlo-integration.md), and [Integrate with Open Systems](open-systems-integration.md).
 
 ## Block apps by exporting a block script
 
@@ -44,21 +45,21 @@ Defender for Cloud Apps enables you to block access to unsanctioned apps by usin
 
 1. In the title bar, select **Actions** and then select **Generate block script...**.
 
-    ![Generate block script.](media/generate-block-script.png)
+    ![Screenshot of the Generate block script option in the Actions menu of Microsoft Defender for Cloud Apps.](media/generate-block-script.png)
    
 1. In **Generate block script**, select the appliance you want to generate the block script for.
 
-    ![Generate block script pop-up.](media/generate-block-script-pop-up.png)
+    ![Screenshot of the Generate block script dialog showing the appliance selection option for generating a block script.](media/generate-block-script-pop-up.png)
    
 1. Then select the **Generate script** button to create a block script for all your unsanctioned apps. By default, the file is named with the date on which it was exported and the appliance type you selected. *2017-02-19_CAS_Fortigate_block_script.txt* would be an example file name.
 
-   ![Generate block script button.](media/generate-block-script-button.png)
+   ![Screenshot of the Generate script button used to create a block script for all unsanctioned apps.](media/generate-block-script-button.png)
    
 5. Import the file created to your appliance.
 
 ## Blocking unsupported streams
 
-If your tenant doesn't use any of the streams above, you can still export a list of all the domains of all unsanctioned apps and configure your third-party nonsupported appliance to block those domains.
+If your tenant doesn't use Microsoft Defender for Endpoint, Zscaler NSS, iboss, Corrata, Menlo, or Open Systems, you can still export a list of all the domains of all unsanctioned apps and configure your third-party nonsupported appliance to block those domains.
 
 In the **Discovered apps** page, filter all *Unsanctioned* apps and then use the export capability to export all the domains.
 
@@ -81,9 +82,10 @@ To prevent users from accidentally blocking business-critical services and causi
 - Microsoft Support
 - Microsoft Online Services
 
-## Governance conflicts
+<a name="governance-conflicts"></a>
+## Resolve governance conflicts between manual actions and policies
 
-If there's a conflict between [manual governance actions](#sanctioningunsanctioning-an-app) and [governance set by policy](cloud-discovery-policies.md), the last operation applied takes precedence.
+If there's a conflict between [manually sanctioning or unsanctioning an app](#sanctioningunsanctioning-an-app) and [governance actions set by cloud discovery policies](cloud-discovery-policies.md), the last operation applied takes precedence.
 
 ## Next steps
 

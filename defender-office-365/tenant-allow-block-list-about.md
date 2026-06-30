@@ -4,17 +4,18 @@ author: chrisda
 ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 05/11/2026
+ms.date: 06/15/2026
 ms.collection:
 - m365-security
 - tier1
-ms.custom: msecd-doc-authoring-1012
-description: Learn how to use allow and block entries in the Tenant Allow/Block List in Microsoft Defender for Office 365 to manually override email filtering verdicts.
+ms.custom: msecd-doc-authoring-1014
+description: Learn how to manage allow and block entries in the Tenant Allow/Block List to override filtering verdicts for email, Teams, and Office app content in Microsoft Defender for Office 365.
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 #customer intent: As an admin, I need to know when to create allow or block entries, their effects, and how to use the Tenant Allow/Block List safely so I can override filtering appropriately.
 ---
 
@@ -127,4 +128,4 @@ The following list describes what happens in the Tenant Allow/Block List when yo
 
 After you add an allow entry on the **Submissions** page or a block entry in the Tenant Allow/Block List, the entry should start working immediately (within 5 minutes).
 
-If Microsoft learned from the allow entry, the built-in [alert policy](/defender-xdr/alert-policies#threat-management-alert-policies) named **Removed an entry in Tenant Allow/Block List** generates an alert when the (now unnecessary) allow entry is removed.
+If Microsoft learned from the allow entry, the built-in [threat management alert policy](/defender-xdr/alert-policies#threat-management-alert-policies) named **Removed an entry in Tenant Allow/Block List** generates an alert when the (now unnecessary) allow entry is removed.

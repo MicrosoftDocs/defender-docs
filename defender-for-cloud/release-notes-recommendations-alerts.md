@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 06/18/2026
+ms.date: 06/30/2026
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ai-usage: ai-assisted
 ---
@@ -51,6 +51,9 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date announced**     | **Type**       | **State**            | **Name**                                                     |
 | ------------ | -------------- | -------------------- | ------------------------------------------------------------ |
+| June 30, 2026 | Recommendation | GA | Over 200 new multicloud security recommendations for AWS and GCP resources are now generally available as part of the [expanded multicloud security coverage release](release-notes.md#expanded-multicloud-security-coverage-is-now-generally-available). These recommendations now affect Secure Score. Recommendations span data, identity and access, networking, compute, and container categories across about 90 newly supported AWS and GCP resource types. See the full lists by category: [Compute](recommendations-reference-compute.md) \| [Container](recommendations-reference-container.md) \| [Data](recommendations-reference-data.md) \| [Identity and access](recommendations-reference-identity-access.md) \| [Networking](recommendations-reference-networking.md) |
+| June 25, 2026 | Recommendation | GA | The following recommendations are now available generally available for Azure Database for PostgreSQL Flexible Servers as part of Defender CSPM:<br/>* logfiles.retention_days should be greater than 3 for PostgreSQL Servers <br/>* pgaudit.log_statement should be set to “on” for Azure Database for PostgreSQL Servers <br/>* pgaudit.log_statement_once should be set to “on” for Azure Database for PostgreSQL Servers <br/>* pgaudit.log should include role, ddl, and misc for Azure Database for PostgreSQL Servers <br/>* pgaudit.log_level should be set to “log” for Azure Database for PostgreSQL Servers <br/>* Public IP access should be disabled for Azure Database for PostgreSQL Servers <br/>* Private endpoint should be configured for Azure Database for PostgreSQL Servers <br/>* 'Allow access to Azure services' should be disabled for PostgreSQL Servers <br/>* Geo-redundant backups should be enabled for PostgreSQL Servers <br/>* require_secure_transport should be set to "on" for Azure Database for PostgreSQL Servers |
+| June 23, 2026 | Alert | Preview | [An abnormally large number of rows were extracted from your SQL server](alerts-sql-database-and-azure-synapse-analytics.md#an-abnormally-large-number-of-rows-were-extracted-from-your-sql-server---preview) |
 | June 18, 2026 | Recommendation | GA | [Unused API endpoints should be disabled and removed from Function Apps](recommendations-reference-api.md#unused-api-endpoints-should-be-disabled-and-removed-from-function-apps) |
 | June 18, 2026 | Recommendation | GA | [Unused API endpoints should be disabled and removed from Logic Apps](recommendations-reference-api.md#unused-api-endpoints-should-be-disabled-and-removed-from-logic-apps) |
 | June 18, 2026 | Recommendation | GA | [Authentication should be enabled on API endpoints hosted in Function Apps](recommendations-reference-api.md#authentication-should-be-enabled-on-api-endpoints-hosted-in-function-apps) |

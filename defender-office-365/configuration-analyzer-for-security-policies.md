@@ -10,15 +10,17 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - sfi-ga-nochange
   - sfi-image-nochange
 description: Admins can learn how to use the configuration analyzer to find and fix threat policies that are less secure than Standard protection and Strict protections in preset security policies.
 ms.service: defender-office-365
-ms.date: 1/29/2024
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Configuration analyzer for threat policies in cloud organizations
@@ -47,7 +49,7 @@ The Standard and Strict policy setting values used as baselines are described in
 The configuration analyzer also checks the following non-policy settings:
 
 - **DKIM**: Whether [SPF](email-authentication-spf-configure.md) and [DKIM](email-authentication-dkim-configure.md) records for the specified domain are detected in DNS.
-- **Outlook**: Whether native Outlook external sender identifiers are [enabled](/powershell/module/exchangepowershell/set-externalinoutlook) in the organization.
+- **Outlook**: Whether native Outlook external sender identifiers are [configured by using the Set-ExternalInOutlook cmdlet](/powershell/module/exchangepowershell/set-externalinoutlook) in the organization.
 
 ## What do you need to know before you begin?
 
@@ -168,7 +170,7 @@ After you automatically or manually update the setting, select :::image type="ic
 > [!NOTE]
 > [Unified Auditing](/purview/audit-log-enable-disable) needs to be enabled for drift analysis.
 
-This tab allows you to track the changes to your threat policies and how those changes compare to the Standard or Strict settings. By default, the following information is displayed:
+The **Configuration drift analysis and history** tab allows you to track the changes to your threat policies and how those changes compare to the Standard or Strict settings. By default, the following information is displayed:
 
 - **Last modified**
 - **Modified by**

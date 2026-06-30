@@ -10,14 +10,16 @@ ms.collection:
   - tier1
 description: Admins can learn how to manage Microsoft Defender for Office 365 (Email & collaboration) permissions in the Microsoft Defender portal.
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-ga-nochange
 ms.service: defender-office-365
-ms.date: 09/29/2025
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Microsoft Defender for Office 365 permissions in the Microsoft Defender portal
@@ -45,7 +47,7 @@ You need to be member of the **Global Administrator**<sup>\*</sup> role in Micro
 
 ## Relationship of members, roles, and role groups
 
-Defender for Office 365 permissions in the Microsoft Defender portal are based on the role-based access control (RBAC) permissions model. RBAC is the same permissions model that's used by most Microsoft 365 services, so if you're familiar with the permission structure in these services, granting permissions in the Microsoft Defender portal should be familiar.
+Defender for Office 365 permissions in the Microsoft Defender portal are based on the role-based access control (RBAC) permissions model. This permissions model is the same one that's used by most Microsoft 365 services, so if you're familiar with the permission structure in these services, granting permissions in the Microsoft Defender portal should be familiar.
 
 A **role** grants the permissions to do a set of tasks.
 
@@ -67,7 +69,7 @@ On the **Permissions** page in the Defender portal at <https://security.microsof
 
 ### Microsoft Entra roles in the Microsoft Defender portal
 
-Microsoft Entra roles that are described in this section are available in the [Defender portal](https://security.microsoft.com) \> **Permissions** \> **Microsoft Entra ID** \> **Roles** or directly at <https://security.microsoft.com/aadpermissions>.
+The Microsoft Entra roles listed in the following table are available in the [Microsoft Defender portal](https://security.microsoft.com) \> **Permissions** \> **Microsoft Entra ID** \> **Roles** or directly at <https://security.microsoft.com/aadpermissions>.
 
 When you select a role, a details flyout opens that contains the description of the role and the user assignments. But to manage those assignments, you need to select **Manage members in Microsoft Entra ID** at the bottom of the flyout.
 
@@ -91,8 +93,8 @@ For more information, see [Assign Microsoft Entra roles to users](/entra/identit
 
 The same role groups and roles are available in the Defender portal and in the Purview compliance portal:
 
-- [Defender portal](https://security.microsoft.com): **Permissions** \> **Email & collaboration roles** \> **Roles** or directly at <https://security.microsoft.com/emailandcollabpermissions>
-- [Purview compliance portal](https://purview.microsoft.com): **Roles & Scopes** \> **Permissions** \> **Microsoft Purview solutions** \> **Roles** or directly at <https://purview.microsoft.com/compliancecenterpermissions>
+- [Microsoft Defender portal](https://security.microsoft.com): **Permissions** \> **Email & collaboration roles** \> **Roles** or directly at <https://security.microsoft.com/emailandcollabpermissions>
+- [Microsoft Purview compliance portal](https://purview.microsoft.com): **Roles & Scopes** \> **Permissions** \> **Microsoft Purview solutions** \> **Roles** or directly at <https://purview.microsoft.com/compliancecenterpermissions>
 
 For complete information about these role groups, see [Roles and role groups in the Microsoft Defender XDR and Microsoft Purview compliance portals](scc-permissions.md)
 
@@ -108,6 +110,8 @@ The following actions are available for Email & collaboration role groups in the
 - [Remove role groups](#remove-email--collaboration-role-groups-in-the-microsoft-defender-portal) (custom role groups only)
 
 #### Create Email & collaboration role groups in the Microsoft Defender portal
+
+To create a new Email & collaboration role group in the Microsoft Defender portal, perform the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 
@@ -163,19 +167,23 @@ Back on the **Permissions** page, the new role group is listed.
 
 #### Copy Email & collaboration role groups in the Microsoft Defender portal
 
+To copy an existing Email & collaboration role group in the Microsoft Defender portal, perform the following steps:
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 
 2. On the **Permissions** page, select the role group from the list. Use the **Name** column header to sort the list by name, or the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the role group.
 
 3. In the role group details flyout that opens, select **Copy role group** at the top of the flyout.
 
-The new role group wizard opens as previously described for [creating a new role group](#create-email--collaboration-role-groups-in-the-microsoft-defender-portal).
+The new role group wizard opens. For instructions, see [Create Email & collaboration role groups in the Microsoft Defender portal](#create-email--collaboration-role-groups-in-the-microsoft-defender-portal).
 
 The default name of the new role group is **Copy of \<original role group name\>**, but you can change it.
 
 The roles and members are populated with the values from the role you're copying, but you can change them.
 
 #### Modify Email & collaboration role group membership in the Microsoft Defender portal
+
+To add or remove members in an Email & collaboration role group, perform the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 
@@ -215,6 +223,8 @@ The roles and members are populated with the values from the role you're copying
 > [!NOTE]
 > You can modify the role assignments for custom role groups only. You can't modify the role assignments for built-in role groups.
 
+To modify the role assignments for a custom Email & collaboration role group, perform the following steps:
+
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 
 2. On the **Permissions** page, select the role group from the list. Select the **Name** column header to sort the list by name, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the role group.
@@ -252,6 +262,8 @@ The roles and members are populated with the values from the role you're copying
 
 > [!NOTE]
 > You can remove custom role groups only. You can't remove built-in role groups.
+
+To remove a custom Email & collaboration role group, perform the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 

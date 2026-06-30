@@ -5,8 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 02/12/2025
-ms.custom: sfi-image-nochange
+ms.date: 06/15/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to handle false positives in my SIEM system so that I can reduce noise and focus on genuine threats.
@@ -16,7 +17,7 @@ ms.custom: sfi-image-nochange
 # Handle false positives in Microsoft Sentinel
 
 >[!IMPORTANT]
-> [**Custom detections**](/defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [this blog](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
+> [**Custom detections**](/defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [Custom detections are now the unified experience for creating detections in Microsoft Defender XDR](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
 
 [Microsoft Sentinel analytics rules](threat-detection.md) notify you when something suspicious occurs in your network. No analytics rule is perfect, and you're bound to get some false positives that need handling. This article describes how to handle false positives, either by using automation or by modifying scheduled analytics rules.
 
@@ -54,7 +55,7 @@ To add an automation rule to handle a false positive:
 1. In the incident details pane on the side, select **Actions > Create automation rule**.
 1. In the **Create new automation rule** sidebar, optionally modify the new rule name to identify the exception, rather than just the alert rule name.
 1. Under **Conditions**, optionally add more **Analytics rule name**s to apply the exception to. Select the drop-down box containing the analytics rule name and select more analytics rules from the list.
-1. The sidebar presents the specific entities in the current incident that might have caused the false positive. Keep the automatic suggestions, or modify them to fine-tune the exception. For example, you could change a condition on an IP address to apply to an entire subnet.
+1. The sidebar presents the specific entities in the current incident that might have caused the false positive. Keep the automatic suggestions, or modify the suggested conditions to fine-tune the exception. For example, you could change a condition on an IP address to apply to an entire subnet.
 
    :::image type="content" source="media/false-positives/create-rule.png" alt-text="Screenshot showing how to create an automation rule for an incident in Microsoft Sentinel.":::
 
@@ -110,7 +111,7 @@ To implement a more fine-grained exception when applicable, and reduce the chanc
 
 Excluding IP ranges used by an organization requires subnet exclusion. The following example shows how to exclude subnets.
 
-The `ipv4_lookup` operator is an enrichment operator, not a filtering operator. The `where isempty(network)` line actually does the filtering, by inspecting those events that don't show a match.
+The `ipv4_lookup` operator is an enrichment operator, not a filtering operator. The `where isempty(network)` line actually does the filtering, by keeping only events whose IP address doesn't match any subnet entry.
 
 ```kusto
 let subnets = datatable(network:string) [ "111.68.128.0/17", "5.8.0.0/19", ...];

@@ -1,10 +1,12 @@
 ---
-title: "Microsoft Sentinel migration: Ingest data into target platform | Microsoft Docs"
+title: "Microsoft Sentinel migration: Ingest data into target platform"
 description: Learn how to ingest historical data into your selected target platform.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 05/03/2022
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a data engineer, I want to ingest historical data into my target platform so that I can ensure seamless data migration and integration for analysis and reporting.
@@ -13,7 +15,7 @@ ms.date: 05/03/2022
 
 # Ingest historical data into your target platform
 
-In previous articles, you [selected a target platform](migration-ingestion-target-platform.md) for your historical data. You also selected [a tool to transfer your data](migration-ingestion-tool.md) and stored the historical data in a staging location. You can now start to ingest the data into the target platform. 
+In previous articles, you [selected a target platform for your historical data](migration-ingestion-target-platform.md). You also selected [a data transfer tool for migration ingestion](migration-ingestion-tool.md) and stored the historical data in a staging location. You can now start to ingest the data into the target platform. 
 
 This article describes how to ingest your historical data into your selected target platform.
 
@@ -54,9 +56,10 @@ To ingest your historical data into Azure Blob Storage (option 3 in the [diagram
 1. [Create an Azure Blob Storage account](/azure/storage/common/storage-account-create) and copy the authorized [Microsoft Entra ID](/azure/storage/common/storage-use-azcopy-v10#option-1-use-azure-active-directory) credentials or [Shared Access Signature](/azure/storage/common/storage-use-azcopy-v10#option-2-use-a-sas-token) token.   
 1. [Run AzCopy](/azure/storage/common/storage-use-azcopy-v10#run-azcopy) with the folder path that includes the exported logs as the source, and the Azure Blob Storage connection string as the output.
 
-## Next steps
+<a name="next-steps"></a>
+## Next step
 
-In this article, you learned how to ingest your data into the target platform. 
+Now that you ingested historical data into your target platform, convert your dashboards to workbooks.
 
 > [!div class="nextstepaction"]
 > [Convert your dashboards to workbooks](migration-convert-dashboards.md)

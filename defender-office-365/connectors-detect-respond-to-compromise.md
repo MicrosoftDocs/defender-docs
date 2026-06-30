@@ -9,14 +9,16 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
+  - msecd-doc-authoring-1014
   - sfi-image-nochange
 description: Learn how to recognize and respond to a compromised connector in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 6/14/2023
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Respond to a compromised connector
@@ -41,13 +43,15 @@ A compromised connector exhibits one or more of the following characteristics:
 - Unauthorized changes in the configuration of an existing connector (for example, the name, domain name, and IP address).
 - A recently compromised admin account. Creating or editing connectors requires admin access.
 
-If you see these symptoms or other unusual symptoms, you should investigate.
+If you see any of the preceding signs of connector compromise or other unusual symptoms, you should investigate.
 
 ## Secure and restore email function to a suspected compromised connector
 
 Do **all** of the following steps to regain control of the connector. Go through the steps as soon as you suspect a problem and as quickly as possible to make sure that the attacker doesn't resume control of the connector. These steps also help you remove any back-door entries that the attacker might have added to the connector.
 
 ### Step 1: Identify if an inbound connector has been compromised
+
+Use the following subsections to review suspicious connector traffic and audit connector-related admin activity to confirm whether a connector is compromised.
 
 #### Review recent suspicious connector traffic or related messages
 
@@ -74,7 +78,7 @@ In [Microsoft Defender for Office 365 Plan 2](mdo-about.md), open the Microsoft 
 
 In [Microsoft Defender for Office 365](mdo-about.md) or [the built-in security features for all cloud mailboxes](eop-about.md), use **Alerts** and **Message trace** to look for the symptoms of connector compromise:
 
-1. Open the Defender portal at <https://security.microsoft.com> and go to **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, useOpen **Suspicious connector activity** alert in <https://security.microsoft.com/alerts>.
+1. Open the Defender portal at <https://security.microsoft.com> and go to **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, use <https://security.microsoft.com/alerts>.
 
 2. On the **Alerts** page, use the :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** \> **Policy** \> **Suspicious connector activity** to find any alerts related to suspicious connector activity.
 
@@ -101,7 +105,7 @@ In [Microsoft Defender for Office 365](mdo-about.md) or [the built-in security f
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), replace \<StartDate\> and \<EndDate\> with your values, and then run the following command to find and validate admin-related connector activity in the audit log. For more information, see [Use a PowerShell script to search the audit log](/purview/audit-log-search-script).
 
 ```powershell
-Search-UnifiedAuditLog -StartDate "<ExDateTime>" -EndDate "<ExDateTime>" -Operations "New-InboundConnector","Set-InboundConnector","Remove-InboundConnector
+Search-UnifiedAuditLog -StartDate "<StartDate>" -EndDate "<EndDate>" -Operations "New-InboundConnector","Set-InboundConnector","Remove-InboundConnector"
 ```
 
 For detailed syntax and parameter information, see [Search-UnifiedAuditLog](/powershell/module/exchangepowershell/search-unifiedauditlog).
@@ -120,7 +124,10 @@ After you've regained control of the compromised connector, unblock the connecto
 
 After you identify the admin account that was responsible for the unauthorized connector configuration activity, investigate the admin account for compromise. For instructions, see [Responding to a Compromised Email Account](responding-to-a-compromised-email-account.md).
 
-## More information
+<a name="more-information"></a>
+## Related content
+
+For more information about compromised connectors and restricted users, see the following articles:
 
 - [Remove blocked connectors](connectors-remove-blocked.md)
 - [Remove blocked users](outbound-spam-restore-restricted-users.md)

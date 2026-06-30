@@ -5,11 +5,13 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: how-to
-ms.date: 04/15/2026
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a security operator, I want to ingest Elastic Kubernetes Service (EKS) audit logs from my Amazon Web Services S3 bucket to my Microsoft Sentinel workspace, so that security analysts can monitor Kubernetes cluster activities and detect security threats.
 ---
 
@@ -34,7 +36,7 @@ The **Amazon Web Services S3 EKS** data connector serves the following use cases
 
 - **DevSecOps and cluster governance:** Monitor developer activities, resource access patterns, and configuration changes within your EKS clusters to ensure proper governance and security practices in your DevSecOps workflows.
 
-This article explains how to configure the Amazon Web Services S3 EKS connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. This two-way authentication creates secure communication.
+This article explains how to configure the Amazon Web Services S3 EKS connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. Exchanging configuration information between the AWS setup and the Microsoft Sentinel setup creates secure communication.
 
 ## Prerequisites
 
@@ -79,7 +81,7 @@ To enable and configure the connector, complete the following tasks:
 
 - **In Microsoft Sentinel:**
 
-    - Configure the **Amazon Web Services S3 EKS Connector** in the Microsoft Sentinel portal by adding **log collectors** that poll the SQS queue and retrieve log data from the S3 bucket. [See the instructions below](#add-log-collectors).
+    - Configure the **Amazon Web Services S3 EKS Connector** in the Microsoft Sentinel portal by adding **log collectors** that poll the SQS queue and retrieve log data from the S3 bucket. For details, see [Add log collectors](#add-log-collectors).
 
 ## Set up the AWS environment
 
@@ -104,7 +106,7 @@ To run the script that sets up the AWS environment, use the following steps:
 
     :::image type="content" source="media/connect-aws-s3-waf/find-aws-waf-connector.png" alt-text="Screenshot of data connectors gallery showing AWS S3 EKS connector.":::
 
-1. In the **Configuration** section, under **1. AWS CloudFormation Deployment**, select the [AWS CloudFormation Stacks](https://aka.ms/awsCloudFormationLink#/stacks/create) link. This action opens the AWS console in a new browser tab.
+1. In the **Configuration** section, under **1. AWS CloudFormation Deployment**, select the [AWS CloudFormation Stacks](https://aka.ms/awsCloudFormationLink#/stacks/create) link. Selecting the link opens the AWS console in a new browser tab.
 
 1. Return to the tab of the portal where you have Microsoft Sentinel open. Select **Download** under *Template 1: OpenID Connect authentication deployment* to download the template that creates the OIDC web identity provider. The template is downloaded as a JSON file to your designated downloads folder.
 
@@ -192,6 +194,8 @@ When you create the resource stacks and configure EKS audit logging, return to t
 
 ## Verify data ingestion
 
+To confirm that EKS audit logs are flowing into your workspace, run sample queries in Log Analytics.
+
 1. After setting up the connector, go to the **Logs** page (or the **Advanced hunting** page in the Defender portal) and run the following query. If you get any results, the connector is working properly.
 
     ```kusto
@@ -248,6 +252,8 @@ The EKS audit logs ingest into the **AWSEKSLogs_CL** table with the following sc
 | RawEvent | dynamic | Complete raw audit event data for advanced analysis |
 
 ## Troubleshooting
+
+Use the following guidance to diagnose common connector setup and ingestion problems.
 
 ### Common issues and solutions
 

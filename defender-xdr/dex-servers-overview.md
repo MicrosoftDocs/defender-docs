@@ -30,7 +30,7 @@ ms.date: 05/18/2026
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
 > [!IMPORTANT]
-> Microsoft Defender Experts for Servers is sold separately from other Microsoft Defender XDR products and uses **pay-as-you-go consumption meter**. If you're interested in purchasing Defender Experts for Servers, contact your Microsoft account representative. [Learn more about Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+> Microsoft Defender Experts for Servers is sold separately from other Microsoft Defender products and uses **pay-as-you-go consumption meter**. If you're interested in purchasing Defender Experts for Servers, contact your Microsoft account representative. [Learn more about Microsoft Defender for Cloud pricing](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
 > [!NOTE]
 > Any incident response services offered by Defender Experts ares offered under the Defender Experts Service Terms.
@@ -48,7 +48,7 @@ Defender Experts for Servers augments your security operation center (SOC) with 
 
 Defender Experts for Servers is a standalone service that you can purchase independently. It doesn't require a [Microsoft Defender Experts for XDR](dex-xdr-overview.md) enrollment. You can purchase and use this service independently.
 
-If your organization also has Defender Experts for XDR, the two services complement each other. Defender Experts for XDR covers your broader Microsoft Defender XDR environment (endpoints, email, identity, and cloud apps), while Defender Experts for Servers provides dedicated coverage for your server infrastructure protected by Defender for Cloud.
+If your organization also has Defender Experts for XDR, the two services complement each other. Defender Experts for XDR covers your broader Microsoft Defender environment (endpoints, email, identity, and cloud apps), while Defender Experts for Servers provides dedicated coverage for your server infrastructure protected by Defender for Cloud.
 
 To get started with this Defender Experts for Servers, you need the following items:
 
@@ -63,7 +63,7 @@ For more information, see [Before you begin using Defender Experts](before-you-b
 
 Defender Experts for Servers delivers managed security operations for your server workloads through a combination of automation and human expertise. The service includes the following capabilities:
 
-- **Managed detection and response:** Expert analysts manage your server-related incidents in the Microsoft Defender XDR incident queue, handle triage and investigation on your behalf, and partner with your team to take action or guide you through response. For details, see [Managed detection and response](managed-detection-and-response-xdr.md).
+- **Managed detection and response:** Expert analysts manage your server-related incidents in the Microsoft Defender incident queue, handle triage and investigation on your behalf, and partner with your team to take action or guide you through response. For details, see [Managed detection and response](managed-detection-and-response-xdr.md).
 
 - **Proactive threat hunting:** [Microsoft Defender Experts for Hunting - Servers](defender-experts-for-hunting.md) is built in to extend your team's threat hunting capabilities and prioritize significant threats targeting your servers.
     > [!NOTE]

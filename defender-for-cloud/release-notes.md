@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 06/18/2026
+ms.date: 06/30/2026
 ai-usage: ai-assisted
 ---
 
@@ -33,6 +33,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| June 30, 2026 | GA | [Expanded multicloud security coverage is now generally available](#expanded-multicloud-security-coverage-is-now-generally-available) |
+| June 30, 2026 | GA | [Cloud security reporting is now generally available](#cloud-security-reporting-is-now-generally-available) |
 | June 18, 2026 | GA | [API security posture management for Function Apps and Logic Apps is now generally available](#api-security-posture-management-for-function-apps-and-logic-apps-is-now-generally-available) |
 | June 17, 2026 | Update | [Expanded container support for cloud scopes](#expanded-container-support-for-cloud-scopes) |
 | June 9, 2026 | Preview | [New multicloud security recommendations now in public preview](#new-multicloud-security-recommendations-now-in-public-preview) |
@@ -45,6 +47,50 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### Expanded multicloud security coverage is now generally available
+
+June 30, 2026
+
+Microsoft Defender for Cloud's expanded multicloud security coverage is now generally available. This release significantly broadens posture assessment for AWS and GCP environments, adding support for about 90 new resource types and over 200 new security recommendations across data, identity and access, networking, compute, and container categories.
+
+**What's included in this release:**
+
+- Over 200 new security recommendations for AWS and GCP resources are now generally available and contribute to your Cloud secure score.
+- Support for about 90 additional AWS and GCP resource types, including services such as Amazon EMR, Amazon Neptune, AWS DMS, AWS DataSync, Amazon FSx, Amazon Kendra, Amazon Keyspaces, Amazon Kinesis, Amazon MQ, Amazon QuickSight, AWS AppFlow, AWS AppSync, AWS CodeBuild, AWS Cognito, AWS Comprehend, and more.
+
+**Cloud secure score impact:**
+
+With GA, these recommendations now affect your Cloud secure score. If you see score changes, they reflect the broader scope of your evaluated AWS and GCP estate — not a degradation of your environment's security. As more resources are assessed, you get more complete visibility and better prioritization of remediation work.
+
+To help you understand what changed and why, the portal includes:
+
+- **"New" tag**: Recommendations introduced in the last 30 days are marked with a **New** tag in the recommendations list, so you can quickly identify recently added findings.
+- **Change log**: Select **View updates** on the Cloud secure score card to open a change log entry that explains which new recommendations were added and how they affect your score.
+- **Portal banner**: A banner on the Cloud secure score page highlights score changes caused by the expansion and links to the change log for context.
+
+For a full list of new and updated recommendations, see [What's new in recommendations and alerts](release-notes-recommendations-alerts.md). 
+
+
+To review the complete multicloud recommendation catalog, see the recommendations reference by category:
+
+- [Compute recommendations](recommendations-reference-compute.md)
+- [Container recommendations](recommendations-reference-container.md)
+- [Data recommendations](recommendations-reference-data.md)
+- [Identity and access recommendations](recommendations-reference-identity-access.md)
+- [Networking recommendations](recommendations-reference-networking.md)
+
+To understand how Cloud secure score is calculated and what affects it, see [Secure score in Defender for Cloud](secure-score-security-controls.md).
+
+### Cloud security reporting is now generally available
+
+June 30, 2026
+
+Cloud security reporting in Microsoft Defender portal is now generally available. You can create, customize, and share cloud security insights across your organization using built-in and custom reports.
+
+With this release, you can also customize cards when building custom reports, allowing you to tailor the data each card displays to match your specific reporting needs.
+
+Learn more about [cloud security reporting](cloud-security-reporting.md).
 
 ### API security posture management for Function Apps and Logic Apps is now generally available
 
@@ -352,7 +398,7 @@ The classic secure score in the Azure portal is also affected by these individua
 
 Grouped recommendation types are deprecated from the Azure portal and will be removed on July 31, 2026. These recommendations are currently tagged as **Set for deprecation**.
 
-For more information, see [security recommendations](review-security-recommendations.md).
+For more information, see [security recommendations](review-security-recommendations.md) and [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
 
 ### Daily score calculation enhancement for risk-based Cloud secure score
 

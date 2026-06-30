@@ -98,18 +98,7 @@ This dynamic understanding allows Defender to move beyond reactive responses, en
 
 ## Predictive shielding actions
 
-Predictive shielding uses Defender for Endpoint-based actions. To use these actions, you need a Defender for Endpoint license.
-
-- [Safeboot hardening](/defender-endpoint/respond-machine-alerts#safeboot-hardening) (Preview) - hardens the device against booting into Safe Mode. Booting into Safe Mode is a common tactic used by attackers to bypass security controls and maintain persistence on compromised systems.
-
-- [GPO hardening](/defender-endpoint/respond-machine-alerts#gpo-hardening) (Preview) - hardens Group Policy Objects (GPOs) to prevent attackers from exploiting misconfigurations or weaknesses in GPO settings to escalate privileges or move laterally within the network.
-
-- [Proactive user containment (contain user)](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - infuses activity data with exposure data to identify exposed credentials at risk of being compromised and reused to conduct malicious activity. Proactively restricts the activity of the users associated with those credentials.
-
-    > [!NOTE]
-    > While the contain user action is used both in attack disruption and predictive shielding, this action is applied differently in each context. In predictive shielding, the contain user action applies restrictions more selectively, with a focus on users identified as high risk through prediction logic. This action prevents new sessions rather than terminating existing ones.
-    > 
-    > This action is generally available, both when triggered by attack disruption and predictive shielding.
+Predictive shielding uses Defender for Endpoint-based actions. To use these actions, you need a Defender for Endpoint license. For a list of actions, see [Automated response actions](automatic-attack-disruption.md#automated-response-actions).
 
 ## Next steps
 

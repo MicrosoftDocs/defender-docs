@@ -102,7 +102,7 @@ You can create Event Hubs within your Namespace and **all** the Event Types (Tab
 
 Instead of exporting all the Event Types (Tables) into one Event Hub, you can export each table into different Event Hubs inside your Event Hubs Namespace (one Event Hub per Event Type).
 
-In this option, Microsoft Defender XDR creates Event Hubs for you.
+In this option, Microsoft Defender creates Event Hubs for you.
 
 > [!NOTE]
 > If you are using an Event Hub Namespace that is **not** part of an Event Hub Cluster, you're only able to choose up to 10 Event Types (Tables) to export in each Export Settings you define, due to an Azure limitation of 10 Event Hub per Event Hub Namespace.
@@ -125,7 +125,7 @@ For these Event Hubs (not namespace), you need to configure a Shared Access Poli
 
 <a name='configure-microsoft-365-defender-to-send-email-tables'></a>
 
-## Configure Microsoft Defender XDR to send email tables
+## Configure Microsoft Defender to send email tables
 
 <a name='set-up-microsoft-365-defender-send-email-tables-to-splunk-via-event-hubs'></a>
 

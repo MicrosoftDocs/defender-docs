@@ -6,11 +6,12 @@ author: guywi-ms
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 05/31/2026
+ms.date: 06/15/2026
 ms.collection:
 - m365-security
 - tier2
 ms.custom:
+  - msecd-doc-authoring-1014
   - autoir
   - admindeeplinkDEFENDER
   - sfi-ga-nochange
@@ -26,19 +27,21 @@ ai-usage: ai-assisted
 
 Microsoft Defender XDR includes powerful [automated attack disruption](automatic-attack-disruption.md) capabilities that can protect your environment from sophisticated, high-impact attacks.
 
-Configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to settings.
+Configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to automatic attack disruption settings.
 
 ## Prerequisites
 
-The following are prerequisites for configuring automatic attack disruption in Microsoft Defender XDR:
+The following are prerequisites for configuring automatic attack disruption in Microsoft Defender:
 
 |Requirement|Details|
 |---|---|
 |Subscription requirements|One of these subscriptions: <ul><li>Microsoft 365 E5 or A5</li><li>Microsoft 365 E3 with the Microsoft Defender Suite add-on</li><li>Microsoft 365 E3 with the Enterprise Mobility + Security E5 add-on</li><li>Microsoft 365 A3 with the Microsoft 365 A5 Security add-on</li><li>Windows 10 Enterprise E5 or A5</li><li>Windows 11 Enterprise E5 or A5</li><li>Enterprise Mobility + Security (EMS) E5 or A5</li><li>Office 365 E5 or A5</li><li>Microsoft Defender for Endpoint (Plan 2)</li><li>Microsoft Defender for Identity</li><li>Microsoft Defender for Cloud Apps</li><li>Defender for Office 365 (Plan 2)</li><li>Microsoft Defender for Business</li></ul> <p> See [Microsoft Defender XDR licensing requirements](./prerequisites.md#licensing-requirements).|
-|Deployment requirements|<ul><li>Deployment of Defender products (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps)</li><ul><li>The wider the deployment, the greater the protection coverage is. For example, if a Microsoft Defender for Cloud Apps signal is used in a certain detection, then this product is required to detect the relevant specific attack scenario.</li><li>Similarly, the relevant product should be deployed to execute an automated response action. For example, Microsoft Defender for Endpoint is required to automatically contain a device. </li></ul><li>Microsoft Defender for Endpoint's device discovery is set to 'standard discovery' (prerequisite for the automatic initiation of the "Contain Device" action)</li><li>For attack disruption actions in [external platforms](#microsoft-sentinel-prerequisites-for-external-platforms-preview) such as Okta or AWS (preview): Microsoft Sentinel analytic workspace connected to the unified security operations portal with the relevant provider connector deployed.</li></ul>|
+|Deployment requirements|<ul><li>Deployment of Defender products (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps)</li><ul><li>The wider the deployment, the greater the protection coverage is. For example, if a Microsoft Defender for Cloud Apps signal is used in a certain detection, then this product is required to detect the relevant specific attack scenario.</li><li>Similarly, each Defender product must be deployed to execute its automated response actions. For example, Microsoft Defender for Endpoint is required to automatically contain a device. </li></ul><li>Microsoft Defender for Endpoint's device discovery is set to 'standard discovery' (prerequisite for the automatic initiation of the "Contain Device" action)</li><li>For attack disruption actions in [external platforms](#microsoft-sentinel-prerequisites-for-external-platforms-preview) such as Okta or AWS (preview): Microsoft Sentinel analytic workspace connected to the unified security operations portal with the relevant provider connector deployed.</li></ul>|
 |Permissions|To configure automatic attack disruption capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Global Administrator</li><li>Security Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li> <li>Helpdesk Administrator</li><li>Security Operator</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 
 ### Microsoft Defender for Endpoint prerequisites
+
+To support automatic attack disruption, Microsoft Defender for Endpoint requires a minimum Sense client version and proper automation settings for your device groups.
 
 #### Minimum Sense Client version (MDE client)
 
@@ -58,7 +61,7 @@ Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows 
 
 Review the automation settings for your device group policies to determine whether automated investigations run and whether remediation actions are taken automatically or only after approval. You must be a global administrator or security administrator to perform the following procedure:
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. Go to **System** \> **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
 
@@ -67,9 +70,11 @@ Review the automation settings for your device group policies to determine wheth
 You can also create or edit your device groups to set the appropriate remediation level for each group. Selecting the **Semi automation** level allows triggering of automatic attack disruption without the need for manual approval. To exclude a device group from automated containment, you can set its automation level to **no automated response**. This setting isn't highly recommended and should only be done for a limited number of devices.
 
 > [!NOTE]
-> Attack disruption can act on devices independent of a device's Microsoft Defender Antivirus operating state. The operating state can be in Active, Passive, or EDR Block Mode.
+> Attack disruption can act on devices independent of a device's Microsoft Defender Antivirus operating state. The Microsoft Defender Antivirus operating state can be Active, Passive, or EDR Block Mode.
 
 ### Microsoft Defender for Identity prerequisites
+
+To support automatic attack disruption, Microsoft Defender for Identity requires domain controller auditing and properly configured action accounts.
 
 #### Set up auditing in domain controllers
 
@@ -77,7 +82,7 @@ To set up auditing on domain controllers, see [Configure audit policies for Wind
 
 #### Validate action accounts
 
-Defender for Identity allows you to take remediation actions targeting on-premises Active Directory accounts when an identity is compromised. To take these actions, Defender for Identity needs to have the required permissions to do so. By default, the Defender for Identity sensor impersonates the LocalSystem account of the domain controller and performs the actions. Since the default can be changed, validate that Defender for Identity has the required permissions or uses the default LocalSystem account.
+Defender for Identity allows you to take remediation actions targeting on-premises Active Directory accounts when an identity is compromised. To take these actions, Defender for Identity needs to have the required permissions to do so. By default, the Defender for Identity sensor impersonates the LocalSystem account of the domain controller and performs the actions. Since this default LocalSystem account impersonation can be changed, validate that Defender for Identity has the required permissions or uses the default LocalSystem account.
 
 You can find more information on the action accounts in [Configure Microsoft Defender for Identity action accounts](/defender-for-identity/deploy/manage-action-accounts).
 
@@ -87,6 +92,8 @@ The Defender for Identity sensor needs to be deployed on the domain controller w
 > If you have automation in place to activate or block a user, check if the automation can interfere with disruption. For example, if there's an automation in place to regularly check and enforce that all active employees have enabled accounts, this could unintentionally activate accounts that were deactivated by attack disruption while an attack is detected. 
 
 ### Microsoft Defender for Cloud Apps prerequisites
+
+To support automatic attack disruption, Microsoft Defender for Cloud Apps requires a properly configured Microsoft Office 365 connector.
 
 #### Microsoft Office 365 connector
 
@@ -101,19 +108,15 @@ Microsoft Defender for Cloud Apps must be connected to Microsoft Office 365 thro
 
 ### Microsoft Defender for Office 365 prerequisites
 
+To support automatic attack disruption, Microsoft Defender for Office 365 requires mailboxes hosted in Exchange Online and specific mailbox audit logging events.
+
 #### Mailboxes location
 
 Mailboxes are required to be hosted in Exchange Online.
 
 #### Mailbox audit logging
 
-The following mailbox events need to be audited by minimum:
-
-- MailItemsAccessed
-- UpdateInboxRules
-- MoveToDeletedItems
-- SoftDelete
-- HardDelete
+At minimum, audit these mailbox events: MailItemsAccessed, UpdateInboxRules, MoveToDeletedItems, SoftDelete, and HardDelete.
 
 Review [manage mailbox auditing](/purview/audit-mailboxes) to learn about managing mailbox auditing.
 

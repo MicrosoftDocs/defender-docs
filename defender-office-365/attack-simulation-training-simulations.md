@@ -8,11 +8,12 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
 description: Admins can learn how to simulate phishing attacks and train their users on phishing prevention using Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 04/23/2026
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
 ---
 
 # Simulate a phishing attack with Attack simulation training
@@ -51,7 +52,7 @@ On the **Select technique** page, select an available social engineering techniq
 - **OAuth Consent Grant**<sup>\*</sup>
 - **How-to Guide**<sup>\*</sup>
 
-<sup>\*</sup> This social engineering technique allows you to use QR codes. For more information, see the [QR code simulations and training](#qr-code-simulations-and-training) section later in this article.
+<sup>\*</sup> This social engineering technique allows you to use QR codes. For more information, see [QR code simulations and training](#qr-code-simulations-and-training).
 
 If you select the **View details** link in the description, a details flyout opens that describes the technique and the simulation steps that result from the technique.
 
@@ -303,7 +304,7 @@ Use the following options on the page to assign trainings as part of the simulat
 
 - **Preferences** section: In **Select training content preference**, choose one of the following options in the dropdown list:
 
-  - **Microsoft training experience (Recommended)**: This value is the default. This value has the following associated options to configure on the page:
+  - **Microsoft training experience (Recommended)**: This value is the default. **Microsoft training experience (Recommended)** has the following associated options to configure on the page:
     - Select one of the following values:
       - **Assign training for me (Recommended)**: This value is the default. We assign training based on a user's previous simulation and training results.
       - **Select training courses and modules myself**: If you select this value, the next step in the wizard is **Training assignment** where you find and select trainings. The steps are described in the [Training assignment](#training-assignment) subsection.
@@ -312,7 +313,7 @@ Use the following options on the page to assign trainings as part of the simulat
       - **15 days after simulation ends**
       - **7 days after simulation ends**
 
-  - **Redirect to a custom URL**: This value has the following associated options to configure on the page:
+  - **Redirect to a custom URL**: **Redirect to a custom URL** has the following associated options to configure on the page:
     - **Custom training URL** (required)
     - **Custom training name** (required)
     - **Custom training description**
@@ -377,9 +378,9 @@ Select one of the following options:
 
 - **Use landing pages from library**: The following options are available:
   - **Payload indicators** section: Select **Add payload indicators to email** to help users learn how do identify phishing email.
-    - This setting isn't available if you selected **Malware Attachment** or **Link to Malware** on the [Select a social engineering technique](#select-a-social-engineering-technique) page.
+    - **Add payload indicators to email** isn't available if you selected **Malware Attachment** or **Link to Malware** on the [Select a social engineering technique](#select-a-social-engineering-technique) page.
     - For landing pages that you create on the **Tenant landing pages** tab, this setting is meaningful only if you use the **Dynamic tag** named **Insert Payload content** in the landing page content as described in the [Create landing pages](attack-simulation-training-landing-pages.md#create-landing-pages) subsection.
-  - **Show the interstitial page before the landing page**: This setting is available only if you selected **Drive-by URL** on the [Select a social engineering technique](#select-a-social-engineering-technique) page. You can show the overlay that comes up for drive-by URL attacks. To hide the overlay and go directly to the landing page, don't select this option.
+  - **Show the interstitial page before the landing page**: **Show the interstitial page before the landing page** is available only if you selected **Drive-by URL** on the [Select a social engineering technique](#select-a-social-engineering-technique) page. You can show the overlay that comes up for drive-by URL attacks. To hide the overlay and go directly to the landing page, don't select this option.
 
   The remainder of the **Selecting phish landing page** page has two tabs where you select the landing page to use:
 
@@ -418,7 +419,7 @@ Select one of the following options:
 
   On the **Selecting phish landing page** page, select a landing page to use by selecting the check box next to the **Name** column.
 
-- **Use a custom URL**: This setting isn't available if you selected **Malware Attachment** or **Link to Malware** on the [Select technique](#select-a-social-engineering-technique) page.
+- **Use a custom URL**: **Use a custom URL** isn't available if you selected **Malware Attachment** or **Link to Malware** on the [Select technique](#select-a-social-engineering-technique) page.
 
   If you select **Use a custom URL**, you need to add the URL in the **Enter the custom landing page URL** box that appears. No other options are available on the **Selecting phish landing page** page.
 
@@ -854,7 +855,7 @@ After you remove the simulation, it no longer appears on the **Simulations** tab
 
 ### Exclude completed simulations from reporting
 
-The **Exclude** action is available only for simulations with the **Status** value **Competed**.
+The **Exclude** action is available only for simulations with the **Status** value **Completed**.
 
 By default, all completed simulations are included in reporting. To exclude a completed simulation from reporting, do the following steps:
 
@@ -875,6 +876,6 @@ A simulation is excluded from reporting only if you exclude it as described in t
 To include a completed session in reporting after it has been excluded, do the following steps:
 
 1. On the **Simulations** tab at <https://security.microsoft.com/attacksimulator?viewid=simulations>, set the **Show excluded simulations** toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
-2. Select the simulation by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/defender-portal-icon-include.png" border="false"::: **Exclude**.
+2. Select the simulation by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/defender-portal-icon-include.png" border="false"::: **Include**.
 
 After you included the excluded simulation, the **Status** value changes to **Completed**. Toggle **Show excluded simulations** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the simulation.

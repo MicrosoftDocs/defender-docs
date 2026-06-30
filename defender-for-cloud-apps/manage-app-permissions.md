@@ -1,10 +1,11 @@
 ---
 title: Manage OAuth apps | Microsoft Defender for Cloud Apps
-description: This article provides information about how you can control, ban, and allow third-party OAuth apps.
-ms.date: 08/12/2025
+description: Review third-party OAuth app permissions and decide which apps to allow, ban, or monitor across Microsoft 365, Google Workspace, and Salesforce.
+ms.date: 06/16/2026
 ms.reviewer: anandd512
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 # Manage OAuth apps
 
@@ -15,9 +16,9 @@ The Microsoft Defender for Cloud Apps app permissions enable you to see which us
 For more information, see [Investigate risky OAuth apps](investigate-risky-oauth.md).
 
 > [!NOTE]
-> This article uses samples and screenshots from the **OAuth apps** page, which is used when you don't have app governance turned on.
+> The following samples and screenshots are from the **OAuth apps** page, which is used when you don't have app governance turned on.
 >
-> If you are using [preview features](/microsoft-365/security/defender/preview) and have app governance turned on, the same functionality is available from the **App governance** page instead.
+> If you are using [preview features](/microsoft-365/security/defender/preview) and have app governance turned on, OAuth app permissions management is available from the **App governance** page instead.
 > 
 > For more information, see [App governance in Microsoft Defender for Cloud Apps](app-governance-manage-app-governance.md).
 >
@@ -28,13 +29,13 @@ You must have connected one or more of the supported platforms to Defender for C
 
 ## Working with the OAuth apps page
 
-The **OAuth** page displays information about app permissions in your connected apps.
+The **OAuth apps** page displays information about app permissions in your connected apps.
 
-To access the OAuth tab:
+To access the **OAuth apps** page:
 
 In the Microsoft Defender Portal, under **Cloud Apps** select **OAuth apps**.
 
-![app permissions.](media/app-permissions.png)
+![Screenshot of the OAuth apps page showing app permissions, including permissions level, app state, community use, and authorization details.](media/app-permissions.png)
 
 The OAuth apps page provides the following information about each OAuth app that was granted permissions. Defender for Cloud Apps only identifies apps that request [*Delegated* permissions](/azure/active-directory/develop/developer-glossary#permissions).
 
@@ -47,7 +48,7 @@ The OAuth apps page provides the following information about each OAuth app that
 |Export icon in the app list  |Export a CSV file that contains a list of apps, number of users for each app, permissions associated with the app, permissions level, app state, and community use level.|Microsoft 365, Google Workspace, Salesforce|
 |App|Name of the app. Select the name to view more information, including the description, publisher (for Microsoft 365), app website, and ID.|Microsoft 365, Google Workspace, Salesforce|
 |Authorized by|The number of users who authorized this app to access their app's account, and granted the app permissions. Select the number to view more information, including a list of user emails and whether an admin has consented the app previously.|Microsoft 365, Google Workspace, Salesforce|
-|Permissions Level  |The permissions level icon and text indicating either High, Medium, or Low. The level indicates how much access this app has to app's data. For example, Low might indicate that the app only accesses user profile and name. Select the level to view more information, including permissions granted to the app, community use, or related activity in the [Governance log](governance-actions.md).|Microsoft 365, Google Workspace|
+|Permissions Level  |The permissions level icon and text indicating either High, Medium, or Low. The level indicates how much access this app has to app's data. For example, Low might indicate that the OAuth app only accesses the user's profile and name. Select the level to view more information, including permissions granted to the app, community use, or related activity in the [Governance log](governance-actions.md).|Microsoft 365, Google Workspace|
 |App state|An admin can mark an app as approved, banned, or leave is as undetermined.|Microsoft 365, Google Workspace, Salesforce|
 |Community use|Shows you how popular the app is across all your users (common, uncommon, rare)|Microsoft 365, Google Workspace, Salesforce|
 |Last authorized|The most recent date on which a user granted permissions to this app.|Microsoft 365, Salesforce|
@@ -55,6 +56,8 @@ The OAuth apps page provides the following information about each OAuth app that
 |Last used|The most recent date on which this app was used by anyone in your organization.|Salesforce|
 
 ## Ban or approve an app
+
+To ban or approve an app, perform the following steps:
 
 1. On the **Google** or **Salesforce** tabs on the **App governance** page, select the app to open the **App drawer** to view more information about the app and the permissions it was granted.
 
@@ -64,18 +67,18 @@ The OAuth apps page provides the following information about each OAuth app that
 
 2. To ban the app, select the ban icon at the end of the app row in the table.
 
-    ![ban app icon.](media/ban-app-icon.png)
+    ![Icon for banning an OAuth app in the App governance page.](media/ban-app-icon.png)
 
     - You can choose if you want to tell users the app they installed and authorized has been banned. The notification lets users know the app will be disabled and they won't have access to the connected app. If you don't want them to know, unselect **Notify users who granted access to this banned app** in the dialog.
     - It's recommended that you let the app users know their app is about to be banned from use.
 
-    ![ban app.](media/ban-app.png)
+    ![Screenshot of the ban app dialog with the option to notify users who granted access to the banned app.](media/ban-app.png)
 
 3. Type the message you want to send to the app users in the Enter a custom notification message box. Select **Ban app** to send the mail, and ban the app from your connected app users.
 
 4. To approve the app, select the approve icon at the end of the row in the table.
 
-    ![approve app.](media/approve-app.png)
+    ![Screenshot of the approve icon at the end of an app row used to mark an OAuth app as approved.](media/approve-app.png)
 
     - The icon turns green, and the app is approved for all your connected app users.
     - When you mark an app as approved, there's no effect on the end user. This color change is meant to help you see the apps that you've approved to separate them from ones that you haven't reviewed yet.
@@ -98,15 +101,16 @@ To export the log, perform the following steps:
 
 1. In the pop-up, select **Export**.
 
-    ![Screenshot showing export of OAuth app auditing.](media/oauth-export-users.png)
+    ![Screenshot of the Authorized by users pop-up with the Export button for OAuth app audit data.](media/oauth-export-users.png)
 
-## Send feedback
+<a name="send-feedback"></a>
+## Send feedback about an OAuth app
 
 If there's an OAuth app discovered in your organization that seems malicious, you can send the Defender for Cloud Apps team feedback to let us know. This feature enables you to be part of our security community and enhance OAuth app risk score and analysis.
 
 1. On the **Google** or **Salesforce** tabs on the **App governance** page, select the three dots at the end of the app row and select **Report app**.
 
-    ![report app.](media/report-app.png)
+    ![Screenshot of the app row context menu with the Report app option selected.](media/report-app.png)
 2. In the **Report this app** screen, you can select whether to report the app as malicious or to report another issue with the way Defender for Cloud Apps perceives the app. For example, you could use **Incorrect publisher**, **Incorrect permissions**, or **Other**. The data you submit will be used to update the app's risk score and other analytics about the app.
 
 ## Next steps

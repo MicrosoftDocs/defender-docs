@@ -801,31 +801,26 @@
       - name: Kubernetes data plane hardening
         displayName: k8s, containers, aks
         href: kubernetes-workload-protections.md
-      - name: Container software supply chain (CSSC) security
+      - name: Container software supply chain protection
         items:
-          - name: Overview
+          - name: Software supply chain security
             href: containers-software-supply-chain-security-introduction.md
-          - name: Securing a container image
-            href: secure-container-image.md
           - name: Gated deployment
             items:
               - name: Overview
                 href: runtime-gated-overview.md
-              - name: Enable gated deployment
-                displayName: gated deployment, enable
+              - name: Configure gated deployment
+                displayName: gated deployment, configure
                 href: enablement-guide-runtime-gated.md
               - name: Kubernetes misconfiguration enforcement (preview)
                 displayName: misconfiguration, kubernetes, enforcement, admission
                 href: kubernetes-misconfiguration-enforcement.md
-              - name: Gated deployment for Infrastructure as Code
+              - name: Enable gated deployment by API
                 displayName: gated deployment, infrastructure as code, IaC
                 href: gated-deployment-infrastructure-as-code.md
               - name: Troubleshooting
                 displayName: troubleshooting, gated deployment
                 href: troubleshooting-runtime-gated.md
-              - name: Frequently asked questions
-                displayName: faq, frequently asked questions, gated deployment
-                href: faq-runtime-gated.md
       - name: Protect clusters with AKS Security Dashboard
         items:
           - name: Overview
@@ -930,6 +925,8 @@
                 href: defender-for-storage-data-sensitivity.md
               - name: Enable sensitive data threat detection
                 href: enable-defender-for-storage-data-sensitivity.md
+      - name: Manage false-positive recommendations
+        href: defender-for-storage-false-positive-recommendations.md
       - name: Common questions about Defender for Storage
         displayName: storage, common questions, defender for storage, storage, faq,
           frequently asked questions
