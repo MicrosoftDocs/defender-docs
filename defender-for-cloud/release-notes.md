@@ -33,6 +33,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| June 30, 2026 | Update | [Support for additional Azure regions in the UAE geography for Defender for APIs and API security posture management with Defender CSPM](#support-for-additional-azure-regions-in-the-uae-geography-for-defender-for-apis-and-api-security-posture-management-with-defender-cspm) |
 | June 30, 2026 | GA | [General availability of Defender for Key Vault in Azure Government cloud](#general-availability-of-defender-for-key-vault-in-azure-government-cloud) |
 | June 30, 2026 | GA | [Expanded multicloud security coverage is now generally available](#expanded-multicloud-security-coverage-is-now-generally-available) |
 | June 30, 2026 | GA | [Cloud security reporting is now generally available](#cloud-security-reporting-is-now-generally-available) |
@@ -48,6 +49,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### Support for additional Azure regions in the UAE geography for Defender for APIs and API security posture management with Defender CSPM
+
+June 30, 2026
+
+Microsoft Defender for APIs and API security posture management with Defender CSPM has expanded to provide its capabilities in the following Azure regions:
+
+- UAE North
+- UAE Central
+
+Customers who have Azure API Management services in these regions can now use the capabilities offered by Microsoft Defender for APIs and API security posture management with Defender CSPM. API discovery and security posture capabilities in Defender CSPM for Azure Function Apps and Azure Logic Apps have also been expanded to these regions.
+
+Learn more about [Microsoft Defender for APIs](defender-for-apis-introduction.md) and [API security posture management with Defender CSPM](api-security-posture-overview.md).
 
 ### General availability of Defender for Key Vault in Azure Government cloud
 
