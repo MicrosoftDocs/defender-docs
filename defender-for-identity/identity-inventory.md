@@ -13,7 +13,7 @@ ms.custom:
   - msecd-doc-authoring-106
   - sfi-ga-nochange
   - sfi-image-nochange
-ms.date: 04/15/2026
+ms.date: 06/22/2026
 ms.reviewer: maelgami 
 appliesto: 
 - Microsoft Defender for Identity
@@ -114,7 +114,7 @@ The **Identities** list highlights key details for each human identity, includin
 | UPN (User Principal Name) | The unique sign-in name of the identity in an email-like format. |
 | Identity environment | Indicates whether the identity is on-premises (originates from Active Directory), Cloud only (Entra ID) or Hybrid (synced from Azure Active Directory to Microsoft Entra ID). |
 | Identity provider | The name of the identity provider. |
-| Risk score | The risk score dynamically calculated for the identity. |
+| Risk score | A score from 0 to 100 that's dynamically calculated for the identity. The score reflects how likely the identity is to be compromised and how much damage a compromise could cause. For details, see [Risk score tab](/defender-xdr/investigate-users#risk-score-tab). |
 | Criticality level | The criticality level assigned to the identity. |
 | Tags | Custom labels that help categorize identities considered high-value assets. For example, **Sensitive**, **Honeytoken**, or **Privileged Accounts** managed by a [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) (PIM) service. |
 | SID | The Security Identifier, a unique value used to identify the identity in Active Directory. |
@@ -159,7 +159,7 @@ The **Identities** list highlights key details for each non-human identity, incl
 | --------- | --------- |
 | Display name | The full name of the identity as shown in the directory. |
 | Status | Shows whether the identity is enabled or disabled, and if disabled, by whom. |
-| Risk score | Shows the identity risk score (1-100). Higher values indicate greater risk. |
+| Risk score | Shows the identity risk score, from 0 to 100. Higher values indicate greater risk. |
 | Graph API access | Shows whether the identity has at least one Graph API permission. |
 | Permission type | Shows whether the identity has application (app only), dedicated, or mixed permission. |
 | Origin | Shows whether the identity originated in the tenant or is registered in an external tenant. |
