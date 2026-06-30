@@ -67,6 +67,8 @@ The following table shows the different possible scenarios that cause an automat
 | **When incident is updated** | <li>An incident's status is changed (closed/reopened/triaged).<li>An incident's owner is assigned or changed.<li>An incident's severity is raised or lowered.<li>Alerts are added to an incident.<li>Comments, tags, or tactics are added to an incident. |
 | **When alert is created** | <li>An alert is created by a Microsoft Sentinel **Scheduled** or **NRT** analytics rule. |
 
+If your workspace is onboarded to the Microsoft Defender portal, you can also use the **Case created** and **Case updated** triggers from [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview) to automate case workflows.
+
 #### Incident-based or alert-based automation?
 
 With automation rules centrally handling the response to both incidents and alerts, how should you choose which to automate, and in which circumstances?
@@ -197,6 +199,8 @@ Actions can be defined to run when the conditions (see above) are met. You can d
 - Assigning an incident to an owner: This helps you direct types of incidents to the personnel best suited to deal with them, or to the most available personnel.
 
 - Adding a tag to an incident: This is useful for classifying incidents by subject, by attacker, or by any other common denominator.
+
+If your workspace is onboarded to the Microsoft Defender portal, [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview) adds more pre-built actions you can use directly from the automation rule wizard, without writing a playbook. Available actions include **Send Case Created/Updated/SLA Exceeded Email**, **Update Case**, **Add Task**, and **Update Alert**.
 
 Also, you can define an action to [**run a playbook**](tutorial-respond-threats-playbook.md), in order to take more complex response actions, including any that involve external systems. The playbooks available to be used in an automation rule depend on the [**trigger**](automate-responses-with-playbooks.md#extra-permissions-required-for-microsoft-sentinel-to-run-playbooks) on which the playbooks *and* the automation rule are based: Only incident-trigger playbooks can be run from incident-trigger automation rules, and only alert-trigger playbooks can be run from alert-trigger automation rules. You can define multiple actions that call playbooks, or combinations of playbooks and other actions.  Actions are executed in the order in which they are listed in the rule.
 
