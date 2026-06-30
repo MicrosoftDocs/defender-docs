@@ -48,22 +48,7 @@ To view the scan results using the Defender portal, follow these steps.
 
 ## Use Microsoft Intune to review scan results
 
-To view the scan results using Microsoft Intune admin center, follow these steps.
-
-1. Sign in to [Microsoft Intune admin center](https://intune.microsoft.com/#home).
-1. Go to **Reports**.
-1. Under **Endpoint security**, select **Microsoft Defender Antivirus**.
-1. In the **Reports** tab, select **Detected malware**.
-1. Select the **Severity** level from the dropdown list.
-
-   By default **All severity** option is selected.
-1. Select **Execution state** from the dropdown list.
-
-   By default **All execution state** option is selected.
-1. Select **Managed by** from the dropdown list.
-
-   By default **All Managed by** option is selected.
-1. Click on **Generate report**.
+To view the scan results using Microsoft Intune admin center, see <a href="/intune/device-management/reports/overview#antivirus-agent-status-report-organizational" target="_blank">Antivirus agent status report</a> (opens in a new tab in the Intune documentation).
 
 ## Use Configuration Manager to review scan results
 

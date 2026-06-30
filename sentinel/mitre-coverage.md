@@ -3,13 +3,12 @@ title: View MITRE ATT&CK coverage in Microsoft Sentinel
 description: View your organization's MITRE ATT&CK coverage in Microsoft Sentinel. Identify active detections and available rules to strengthen security.
 author: mberdugo 
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 06/16/2025
 ms.author: monaberdugo 
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
-ai-usage: ai-assisted
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1012
 
 #Customer intent: As a security analyst, I want to use the MITRE ATT&CK framework in Microsoft Sentinel so that I can assess and enhance my organization's threat detection and response capabilities.
 
@@ -19,12 +18,12 @@ ai-usage: ai-assisted
 
 [MITRE ATT&CK](https://attack.mitre.org/#) is a publicly accessible knowledge base of tactics and techniques commonly used by attackers. It's created and maintained based on real-world observations. Many organizations use the MITRE ATT&CK knowledge base to develop specific threat models and methodologies to verify security status in their environments.
 
-Microsoft Sentinel analyzes ingested data, not only to [detect threats out-of-the-box](detect-threats-built-in.md) and help you [investigate incidents](investigate-cases.md), but also to visualize the nature and coverage of your organization's security status.
+Microsoft Sentinel analyzes ingested data, not only to [detect threats](detect-threats-built-in.md) and help you [investigate](investigate-cases.md), but also to visualize the nature and coverage of your organization's security status.
 
-Use the **MITRE** page in Microsoft Sentinel to view the analytics rules (detections) already active in your workspace and the detections available for you to configure. The **MITRE** page in Microsoft Sentinel helps you understand your organization's security coverage based on the tactics and techniques from the MITRE ATT&CK framework. Before you start, make sure you meet the [prerequisites](#prerequisites), including an active Microsoft Sentinel instance with the necessary permissions and data connectors configured.
+This article describes how to use the **MITRE** page in Microsoft Sentinel to view the analytics rules (detections) already active in your workspace and the detections available for you to configure. Use this page to understand your organization's security coverage based on the tactics and techniques from the MITRE ATT&CK framework.
 
 > [!IMPORTANT]
-> The MITRE page in Microsoft Sentinel is currently in PREVIEW. See the [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for the legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> The MITRE page in Microsoft Sentinel is currently in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
 ## Prerequisites
 
@@ -72,13 +71,13 @@ To view the current MITRE coverage for your organization:
 
     - **Use the search bar** to search for a specific technique in the matrix, using the technique name or ID, to view your organization's security status for the selected technique.
 
-    - **Select a specific technique** in the matrix to view more details in the details pane. In the details pane, use the links to jump to any of the following locations:
+    - **Select a specific technique** in the matrix to view more details in the details pane. There, use the links to jump to any of the following locations:
 
         - In the **Description** area, select **View full technique details ...** for more information about the selected technique in the MITRE ATT&CK framework knowledge base.
 
         - Scroll down in the pane and select links to any of the active items to jump to the relevant area in Microsoft Sentinel.
 
-        For example, select **Hunting queries** to jump to the **Hunting** page. On the **Hunting** page, you see a filtered list of the hunting queries that are associated with the selected technique, and available for you to configure in your workspace.
+        For example, select **Hunting queries** to jump to the **Hunting** page. There, you see a filtered list of the hunting queries that are associated with the selected technique, and available for you to configure in your workspace.
 
     On the Defender portal, the details pane also shows recommended coverage details, including the ratio of active detections and security services (products) out of all recommended detections and services for the selected technique.
 
@@ -88,7 +87,7 @@ In the MITRE coverage matrix, *simulated* coverage refers to detections that are
 
 1. In Microsoft Sentinel, under **Threat management**, select **MITRE ATT&CK (Preview)**, and then select items in the **Simulated rules** menu to simulate your organization's possible security status.
 
-1. Use the coverage matrix elements as described in [View current MITRE coverage](#view-current-mitre-coverage) to view the simulated coverage for a specific technique.
+1. Use the coverage matrix elements as you would otherwise to view the simulated coverage for a specific technique.
 
 ## Use the MITRE ATT&CK framework in analytics rules and incidents
 

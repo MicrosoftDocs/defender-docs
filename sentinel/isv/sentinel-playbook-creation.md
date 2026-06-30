@@ -6,11 +6,9 @@ author: mberdugo
 ms.reviewer: sshuster
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 1/23/2025
 
 #CustomerIntent: As a ISV partner, I want to create and publish playbooks for my Microsoft Sentinel solution so that I can provide inbuilt automation use cases to my customers.
-ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create and publish playbooks for Microsoft Sentinel solutions
@@ -27,7 +25,7 @@ Due to the growing number of alerts and incidents, security operations center (S
 - **Sync with ticketing systems**: Synchronize Microsoft Sentinel incidents with other systems (like ServiceNow) bidirectionally. Example: On incident creation, sync details with a ServiceNow ticket. For more information, see the [ServiceNow connector reference](/connectors/service-now/).
 - **Automated response**: Take automated actions in response to suspicious activities. Example: Send a Teams message to the user for confirmation if a suspicious action is detected.
 
-For recommended playbook use cases, templates, and examples, see [Recommended playbook use cases, templates, and examples](/azure/sentinel/automation/playbook-recommendations).
+To understand more about potential use cases for playbooks, see [Recommended playbook use cases, templates, and examples](/azure/sentinel/automation/playbook-recommendations).
 
 ## Create and publish playbooks for example scenarios
 
@@ -37,12 +35,11 @@ Logic Apps includes numerous out-of-the-box connectors, such as Salesforce, Offi
 
 ### Scenario: Playbook that uses built-in connectors
 
-<a name="create-the-playbook"></a>
-#### Create the playbook with built-in connectors
+#### Create the playbook
 
 If your playbook doesn't require any custom actions outside the actions that the built-in connectors already provide, you can use the Logic Apps UI in Microsoft Sentinel to create the playbook. No other code is required.
 
-To learn how to create and manage playbooks in the Azure portal or the Microsoft Defender portal, see [Create and manage Microsoft Sentinel playbooks](/azure/sentinel/automation/create-playbooks).  
+For detailed instructions on how to create playbooks from the Azure portal or the Microsoft Defender portal, see [Create and manage Microsoft Sentinel playbooks](/azure/sentinel/automation/create-playbooks).  
 
 #### Generate the ARM template for the playbook
 
@@ -85,8 +82,7 @@ Custom connectors extend Azure Logic Apps by integrating with APIs or services t
 
 For more information, see [Custom connectors overview](/connectors/custom-connectors).
 
-<a name="create-the-playbook"></a>
-#### Create the playbook with custom connectors
+#### Create the playbook
 
 To create a custom connector, describe the API so that the connector understands its operations and data structures. This example uses an OpenAPI definition for the Cognitive Services Text Analytics Sentiment API. For more information on creating custom connectors, see [Create a custom connector from an OpenAPI definition](/connectors/custom-connectors/define-openapi-definition).
 
@@ -124,8 +120,6 @@ On the **Code view** tab of the Azure Logic Apps editor, you can access the JSON
 For more information, see the [azuredeploy.json file on GitHub](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/ThreatXCloud/Playbooks/ThreatXPlaybooks/ThreatX-BlockIP-URL/azuredeploy.json).
 
 #### Generate the ARM template for the Logic Apps custom connector
-
-Follow these steps to export and sanitize the ARM template for your Logic Apps custom connector.
 
 1. Go to the Azure portal.
 

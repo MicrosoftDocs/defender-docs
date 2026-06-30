@@ -59,20 +59,7 @@ To check on the detections, see [Review the results of Microsoft Defender Antivi
 
 ### Use endpoint security to run a scan on Windows devices
 
-Use the following steps to run a scan from Endpoint security in Intune:
-
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign-in.
-
-1. Choose **Endpoint security** \> **Antivirus**.
-
-1. In the list of tabs, select **Windows 10 unhealthy endpoints** or **Windows 11 unhealthy endpoints**.
-
-1. From the list of actions provided, select **Quick Scan** (recommended) or **Full Scan**.
-
-   [![Screenshot of the Windows 10 unhealthy endpoints tab showing available scan options in Microsoft Intune.](media/mem-antivirus-scan-on-demand.png)](media/mem-antivirus-scan-on-demand.png#lightbox)
-
-> [!TIP]
-> For more information about using Microsoft Configuration Manager to run a scan, see [Antimalware and firewall tasks: How to perform an on-demand scan](/intune/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers).
+Too run a scan from Endpoint security in Intune, see <a href="/intune/configmgr/protect/deploy-use/endpoint-antimalware-firewall#how-to-perform-an-on-demand-scan-of-computers" target="_blank">Antimalware and firewall tasks: How to perform an on-demand scan</a> (opens in a new tab in the Intune documentation).
 
 ### Use devices to run a scan on a single device
 
