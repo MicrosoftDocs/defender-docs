@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 Applies to:
 
 - Microsoft Defender for Identity
-- Microsoft Defender XDR
+- Microsoft Defender
 
 Microsoft Defender for Identity allows you to respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the action center.
 

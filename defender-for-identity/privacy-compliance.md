@@ -48,7 +48,7 @@ Your data is kept and is available to you while the license is under grace perio
 
 Defender for Identity shares data, including customer data, among any of the following Microsoft products that are also licensed by the customer. For customers in the Government Community Cloud (GCC), data sharing between government and commercial cloud environments may occur, depending on the location of the service offering.
 
-- Microsoft Defender XDR
+- Microsoft Defender
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Cloud
