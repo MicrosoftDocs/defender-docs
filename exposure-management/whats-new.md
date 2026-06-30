@@ -2,7 +2,7 @@
 title: Release notes
 description: This page is updated frequently with the latest updates in Microsoft Security Exposure Management.
 ms.topic: overview
-ms.date: 06/18/2026
+ms.date: 06/24/2026
 ai-usage: ai-assisted
 ---
 
@@ -21,6 +21,18 @@ Learn more about MSEM by reading the [Microsoft Security and Compliance blog](ht
 > `https://aka.ms/msem/rss`
 
 ## June 2026
+
+### New predefined classifications
+
+The following predefined **Identity** classification rules were added to the critical assets list:
+
+| Classification | Description |
+| -------------- | ----------- |
+| Widespread Local Admin on Servers | This rule applies to identities that are configured as local administrators on a high number of servers in the environment. |
+| Widespread Local Admin on Workstations | This rule applies to identities that are configured as local administrators on a high number of workstations in the environment. |
+| Widespread Local Admin on Servers and Workstations | This rule applies to identities that are configured as local administrators on a high number of both servers and workstations in the environment. **Note**: This rule logic relies on the predefined critical identity classifications "Widespread Local Admin on Servers" and "Widespread Local Admin on Workstations". |
+
+For more information, see [Predefined classifications](predefined-classification-rules-and-levels.md).
 
 ### New predefined classifications
 
