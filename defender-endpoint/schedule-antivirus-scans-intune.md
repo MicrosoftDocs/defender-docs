@@ -37,25 +37,17 @@ Scheduled antivirus scans through Intune are supported on the following operatin
 
 ## Configure antivirus scans using Intune
 
-1. In the [Intune admin center](https://intune.microsoft.com/), go to **Endpoint security** > **Antivirus** > **Create Policy**. For **Platform**, select **Windows**, and for **Profile**, select **Microsoft Defender Antivirus**. Then select **Create**.
+To configure antivirus scans by using Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-1. On the **Basics** page, specify a name and description for the policy, and then choose **Next**.
+- **Policy type**: Antivirus
+- **Platform**: Windows
+- **Profile**: Microsoft Defender Antivirus
+- **Basics**: Enter a name and description for the policy.
+- **Configuration settings**: Expand each group of settings, and configure the settings you want to manage with this policy. For more information about these settings, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender).
+- **Scope tags**: If your organization is using [scope tags](/intune/intune-service/fundamentals/scope-tags), select the tags you want to use.
+- **Assignments**: Select the users or groups to receive this policy. For more information, see [Assign policies in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign).
 
-1. On the **Configuration settings** page, expand each group of settings, and configure the settings you want to manage with this policy. For more information about these settings, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender).
-
-1. When you're done configuring settings, select **Next**.
-
-1. On the **Scope tags** page, you can either use the default setting, or search for scope tags to assign to the policy. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags). 
-
-1. When you're done specifying scope tags, select **Next**.
-
-1. On the **Assignments** page, select the users or groups to receive this policy. For more information, see [Assign policies in Microsoft Intune](/intune/intune-service/configuration/device-profile-assign). 
-
-1. When you're done assigning users or groups, select **Next**.
-
-1. On the **Review + create**, review your settings. When you select **Save**, your changes are saved, and the policy is created and applied. 
-
-For more information: [Antivirus policy for endpoint security in Intune ](/intune/intune-service/protect/endpoint-security-antivirus-policy)
+For more information, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy)
 
 ## Use Intune for scheduling daily quick scans
 
