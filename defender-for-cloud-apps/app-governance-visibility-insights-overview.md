@@ -99,6 +99,7 @@ One of the primary value points for app governance is the ability to quickly vie
    - **Permission usage**
    - **App origin**
    - **Permission type**
+   - **Roles** (built-in Microsoft Entra roles only)
    - **Publisher verified**
    - **Last used**
    - **Services accessed**

@@ -9,7 +9,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to block domains and addresses in Microsoft Teams using the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -46,7 +46,7 @@ Review the following requirements and considerations before you create or manage
 
 - Before adding a block entry, check the [Microsoft Teams external domain anomalies report](/microsoftteams/teams-analytics-and-reports/external-domain-anomalies-report) to identify suspicious external domains that might need to be blocked.
 
-- After you add the block entry for the domain or sender address in Teams, all new Teams communication from that organization is blocked. Block communication includes new Teams meetings, chats, channels, and calls. Existing Teams meetings, chats, channels, and calls are deleted.
+- After you add the block entry for the domain or sender address in Teams, all new Teams communication from that organization is blocked. Block communication includes new Teams meetings, chats, channels, and calls. 
 
 - On the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>, the following settings are required to create and manage block entries for domains and senders in Teams using the Tenant Allow/Block List:
   - **Teams and Skype for Business users in external organizations** must be **Allow all external domains** or **Block only specific external domains**.

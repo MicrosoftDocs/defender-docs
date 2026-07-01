@@ -53,6 +53,12 @@ These new alerts were added to the Defender for Identity security alerts:
 
 - [SailPoint ISC suspected brute-force attack](alerts-xdr.md#sailpoint-isc-suspected-brute-force-attack)
 
+### NHI inventory enhancements (Preview)
+
+- **Expanded Entra ID inventory**: The non-human identity inventory now includes all Microsoft Entra service principals, not just those with API permissions. For more information, see [View the Identity inventory](identity-inventory.md).
+
+- **Microsoft Entra roles visibility**: The Permissions tab now shows assigned Microsoft Entra roles alongside API permissions. For more information, see [View your app details with app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps).
+
 ## May 2026
 
 ### Sensor v3.x supports all identity roles on domain controllers
