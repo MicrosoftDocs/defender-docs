@@ -33,9 +33,23 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
 | July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+
+### New container security capabilities are now generally available
+
+July 1, 2026
+
+The following container security capabilities in Microsoft Defender for Cloud are now generally available:
+
+- **Container-level misconfiguration recommendations for Kubernetes** — agentless, container-level KSPM recommendations in Defender CSPM that assess individual containers rather than entire clusters. The following cluster-level recommendations are now deprecated: HostPath volume mount restrictions, allowed ports enforcement, host networking/ports restrictions, CAP_SYS_ADMIN capability restrictions, and AppArmor profile restrictions. Learn more about [container security recommendations](recommendations-reference-container.md).
+- **Upgrade Azure Kubernetes Service Version recommendation** — actionable recommendation to remediate vulnerabilities in AKS-managed system pods by identifying the minimum AKS version upgrade required. Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md) and [security recommendations for containers](recommendations-reference-container.md).
+- **Vulnerability assessment for runtime-discovered container images on EKS and GKE** — extends vulnerability assessment to runtime-discovered images on Amazon EKS and Google GKE, providing unified coverage across Azure, AWS, and GCP. Learn more about [vulnerability assessment for containers](view-and-remediate-vulnerabilities-containers.md).
+- **Kubernetes node vulnerability assessment for EKS and GKE** — extends Kubernetes node (host) vulnerability assessment to EKS and GKE, bringing parity with the existing AKS capability. Learn more about [Kubernetes node vulnerability assessment](kubernetes-nodes-va.md).
+- **Scanning support for Docker Hardened container images** — extends vulnerability scanning coverage to Docker Hardened container images. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+
 
 ### Kubernetes misconfiguration enforcement in Defender for Containers is now generally available
 
