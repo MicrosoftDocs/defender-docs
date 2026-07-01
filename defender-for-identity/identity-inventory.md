@@ -167,6 +167,8 @@ The **Identities** list highlights key details for each non-human identity, incl
 | Publisher | Publisher of the identity and their verification status. |
 | Last used | Last time the identity signed in. This data is tracked only back to June 1, 2022. |
 
+### Respond to high-risk identities
+
 For Microsoft Entra ID identities, select **Create new policy** to set up a governance policy that automatically responds when high-risk apps appear. Use the built-in **New high risk app** template for a quick setup, or create a custom policy with risk score as a policy condition.
 
 ---
