@@ -229,7 +229,7 @@ This table summarizes the required permissions and data scopes for each alert ty
 
 | Alert type | Permissions | Data scopes |
 |:---|:---|:---|
-| **Email and collaboration alerts, including phishing** | Security Copilot (read), Security data basics (read), Alerts (manage), Email & collaboration metadata (read), Email & collaboration content (read) | Microsoft Defender for Office 365 |
+| **Email and collaboration alerts, including phishing** | Security Copilot (read), Security data basics (read), Alerts (manage), Email & collaboration metadata (read), Email & collaboration content: Emails associated with alerts (read) | Microsoft Defender for Office 365 |
 | **Cloud alerts, including containers** | Security Copilot (read), Security data basics (read), Alerts (manage) | Microsoft Defender for Cloud |
 | **Identity alerts** | Security Copilot (read), Security data basics (read), Alerts (manage) | Microsoft Defender for Identity and Microsoft Defender for Cloud Apps |
 
