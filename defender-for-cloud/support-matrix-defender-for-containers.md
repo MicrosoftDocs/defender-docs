@@ -252,6 +252,7 @@ The following table lists the features provided by Defender for Containers for t
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method | Cloud availability |
 |--|--|--|--|--|--|--|--|
 | Gated deployment | Gated deployment of container images to your Kubernetes environment | AKS 1.31 or higher (including AKS Automatic)<sup>[1](#footnote1cssc)</sup> | GA | - | Requires **Defender sensor**, **Security gating**, **Security findings**, and **Registry access**.| Commercial clouds |
+| Kubernetes misconfiguration enforcement | Audits or blocks Kubernetes deployments that don't meet Microsoft security best-practice rules | AKS | GA | - | Requires **Kubernetes API access**. For manual deployment, Helm is supported. | Commercial clouds |
 
 <sup><a name="footnote1cssc"></a>1</sup> On AKS Automatic clusters, the Defender sensor must be installed by using Helm in the `kube-system` namespace. Installation in the `mdc` namespace and add-on deployment aren’t supported for gated deployment.
 
@@ -260,18 +261,22 @@ The following table lists the features provided by Defender for Containers for t
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method |
 |--|--|--|--|--|--|--|--|
 | Gated deployment | Gated deployment of container images to your Kubernetes environment | EKS 1.31 or higher, Amazon Elastic Container Registry (ECR) | GA | - | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** |
+| Kubernetes misconfiguration enforcement | Audits or blocks Kubernetes deployments that don't meet Microsoft security best-practice rules | EKS | GA | - | Requires **Agentless threat protection**. For manual deployment, Helm is supported. |
 
 ### [GCP](#tab/gcpcssc)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method |
 |--|--|--|--|--|--|--|--|
 | Gated deployment | Gated deployment of container images to your Kubernetes environment | GKE 1.31 or higher, Google Artifact Registry | GA | - | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** |
+| Kubernetes misconfiguration enforcement | Audits or blocks Kubernetes deployments that don't meet Microsoft security best-practice rules | GKE | GA | - | Requires **Agentless threat protection**. For manual deployment, Helm is supported. |
 
 ### [Arc enabled](#tab/arccssc)
 
 | Feature | Description | Supported resources | Linux release state | Windows release state | Enablement method |
-|--|--|--|--|--|--|--|--|
-| Gated deployment | Gated deployment of container images to your Kubernetes environment | Arc enabled Kubernetes clusters | GA | - | Requires **Defender Sensor**, **Security Gating**, **Security Findings**, and **Registry Access** |
+|--|--|--|--|--|--|
+| Gated deployment | Gated deployment of container images to your Kubernetes environment | Arc enabled Kubernetes clusters | GA | - | Requires **Defender sensor**, **Security gating**, **Security findings**, and **Registry access** |
+| Kubernetes misconfiguration enforcement | Audits or blocks Kubernetes deployments that don't meet Microsoft security best-practice rules | Arc enabled Kubernetes clusters | GA | - | Requires **Kubernetes API access**. For manual deployment, Helm is supported. |
+
 
 ---
 

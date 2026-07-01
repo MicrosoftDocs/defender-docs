@@ -33,7 +33,24 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
 | July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+
+### Kubernetes misconfiguration enforcement in Defender for Containers is now generally available
+
+July 1, 2026
+
+Kubernetes misconfiguration enforcement in Microsoft Defender for Containers is now generally available. This feature evaluates Kubernetes resource configurations at admission time and can audit or block deployments that don't meet Microsoft security best-practice rules.
+
+With this release, Kubernetes misconfiguration enforcement is available through automatic provisioning.
+
+- **AKS and Azure Arc-enabled Kubernetes:** Enable Defender for Containers with Kubernetes API access.
+- **AWS and GCP:** Enable Defender for Containers with Agentless threat protection.
+
+Manual deployment with Helm is still supported.
+
+Learn more about [Kubernetes misconfiguration enforcement](kubernetes-misconfiguration-enforcement.md).
 
 ### Discovery and posture for serverless container workloads is now generally available
 

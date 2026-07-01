@@ -812,7 +812,7 @@
               - name: Configure gated deployment
                 displayName: gated deployment, configure
                 href: enablement-guide-runtime-gated.md
-              - name: Kubernetes misconfiguration enforcement (preview)
+              - name: Kubernetes misconfiguration enforcement
                 displayName: misconfiguration, kubernetes, enforcement, admission
                 href: kubernetes-misconfiguration-enforcement.md
               - name: Enable gated deployment by API
