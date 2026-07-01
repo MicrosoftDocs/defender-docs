@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 06/08/2026
+ms.date: 07/01/2026
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -28,6 +28,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Purview](/purview/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## July 2026
+
+- (GA) **Security for Microsoft Agent 365 with Defender**: With a Microsoft Agent 365 license, Microsoft Defender provides discovery, security posture, threat detection and investigation, and real-time protection for the AI agents in your tenant. Onboarding includes enabling data collection, connecting the Microsoft 365 app connector, and connecting Copilot Studio for real-time protection of Copilot Studio agents. For more information, see [Protect AI agents using Microsoft Defender](security-for-ai/defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender) and [Enable security for AI agents using Microsoft Defender](security-for-ai/get-started-defender-security-for-ai.md).
 
 ## June 2026
 

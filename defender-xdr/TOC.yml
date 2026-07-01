@@ -68,14 +68,20 @@
         items:
         - name: Secure AI using Microsoft Defender
           href: security-for-ai/defender-security-for-ai.md
-        - name: Discover AI agents and manage posture
-          href: security-for-ai/ai-agent-inventory.md
-        - name: Detect, block, and investigate threats to AI agents
-          href: security-for-ai/ai-agent-detection-protection.md
-        - name: Data privacy as part of Agent 365
-          href: security-for-ai/privacy-defender-agent-365.md
-        - name: Transition agent security to Agent 365
-          href: security-for-ai/transition-agent-security-to-agent-365.md
+        - name: Protect AI agents
+          items:
+          - name: Enable security for AI agents using Microsoft Defender
+            href: security-for-ai/get-started-defender-security-for-ai.md
+          - name: Configure real-time agent protection and prompt evidence
+            href: security-for-ai/ai-agent-real-time-protection.md
+          - name: Discover AI agents and manage posture
+            href: security-for-ai/ai-agent-inventory.md
+          - name: Detect and investigate threats to AI agents
+            href: security-for-ai/ai-agent-detection-protection.md
+          - name: Data privacy as part of Agent 365
+            href: security-for-ai/privacy-defender-agent-365.md
+          - name: Transition agent security to Agent 365
+            href: security-for-ai/transition-agent-security-to-agent-365.md
       - name: Microsoft Secure Score
         items:
           - name: Overview
