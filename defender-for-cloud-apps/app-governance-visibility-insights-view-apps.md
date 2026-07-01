@@ -33,7 +33,7 @@ On the **Microsoft 365** tab, the apps in your tenant are listed with the follow
 | **App name** | The display name of the app as registered on Microsoft Entra ID |
 | **App status** | Shows whether the app is enabled or disabled, and if disabled by whom |
 | **Graph API access**| Shows whether the app has at least one Graph API permission |
-| **Permission type**| Shows whether the app has application (app only), delegated, or mixed permissions |
+| **Permission type**| Shows the app's permission type: <ul><li>**Delegated**: Delegated API permissions only, no roles.</li><li>**Application**: Application API permissions only, no roles.</li><li>**Microsoft Entra roles**: Microsoft Entra roles only, no API permissions.</li><li>**Mixed**: A combination of any two or more of the above.</li><li>**None**: No API permissions or Entra roles assigned.</li></ul> |
 | **App origin**| Shows whether the app originated within the tenant or was registered in an external tenant |
 | **Consent type**| Shows whether the app consent is given at the user or the admin level, and the number of users whose data is accessible to the app |
 | **Publisher**| Publisher of the app and their verification status |
@@ -97,7 +97,11 @@ If an app is *admin consented*, the **Total consented users** are all users in t
 
 ### Permissions tab
 
-Shows a summary and list of the Graph API and legacy permissions granted to the app, consent type, privilege level, and whether they're in use.
+Shows a summary and list of the Graph API and legacy permissions granted to the app, consent type, privilege level, and whether they're in use. This also shows the Microsoft Entra roles granted to the app, including its type (built-in or custom), privilege level, and whether it grants tenant-wide access. 
+Select a role to view its granular permissions, descriptions, and privilege levels.
+
+> [!NOTE]
+> Only directly assigned Microsoft Entra roles are shown. Roles inherited through group membership and Azure role-based access control (Azure RBAC) roles aren't included.
 
 :::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-permissions.png" alt-text="Screenshot of the Permissions tab." lightbox="media/app-governance-visibility-insights-view-apps/app-governance-app-permissions.png":::
 

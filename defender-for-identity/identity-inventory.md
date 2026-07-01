@@ -138,7 +138,7 @@ These statistics highlight non-human identities that might need prioritization. 
 | Name | Description |
 | --------- | --------- |
 | Risky | The number of non-human identities with a high risk score. Risk scores are based on factors described in the [Risk score tab of the identity](/defender-cloud-apps/app-governance-visibility-insights-view-apps#getting-detailed-information-on-an-app). |
-| Highly privileged | The number of non-human identities with high-privilege permissions, such as admin consent or broad application permissions. |
+| Highly privileged | The number of non-human identities that have at least one high-privilege API permission or high-privilege Microsoft Entra role. |
 | Overprivileged | The number of non-human identities with more permissions than they use. |
 | Unused | The number of non-human identities with no recent sign-in activity. |
 | External unverified publishers | The number of non-human identities from unverified external publishers. |
@@ -148,7 +148,7 @@ These statistics highlight non-human identities that might need prioritization. 
 
 The **Non-Human identities** tab contains these sections:
 
-- **Entra ID**: OAuth apps registered in Microsoft Entra ID.
+- **Entra ID**: All service principals registered in Microsoft Entra ID, excluding managed identities and Microsoft first-party applications.
 - **Active Directory**: On-premises service accounts.
 - **Salesforce**: OAuth apps registered in Salesforce.
 - **Google Workspace**: OAuth apps registered in Google.
@@ -161,9 +161,9 @@ The **Identities** list highlights key details for each non-human identity, incl
 | Status | Shows whether the identity is enabled or disabled, and if disabled, by whom. |
 | Risk score | Shows the identity risk score, from 0 to 100. Higher values indicate greater risk. |
 | Graph API access | Shows whether the identity has at least one Graph API permission. |
-| Permission type | Shows whether the identity has application (app only), dedicated, or mixed permission. |
+| Permission type | Shows the type of permissions assigned to the identity: <ul><li>**Delegated**: Delegated API permissions only, no roles.</li><li>**Application**: Application API permissions only, no roles.</li><li>**Microsoft Entra roles**: Microsoft Entra roles only, no API permissions.</li><li>**Mixed**: A combination of any two or more of the above.</li><li>**None**: No API permissions or Entra roles assigned.</li></ul> |
 | Origin | Shows whether the identity originated in the tenant or is registered in an external tenant. |
-| Content type | Shows whether the identity has admin or user-only consent. For identities with only user consent, the total consented users are shown. Identities with admin consent have broad access to all data, unless access policies and other restrictions limit that access. |
+| Consent type | Shows whether the identity has admin or user-only consent. For identities with only user consent, the total consented users are shown. Identities with admin consent have broad access to all data, unless access policies and other restrictions limit that access. |
 | Publisher | Publisher of the identity and their verification status. |
 | Last used | Last time the identity signed in. This data is tracked only back to June 1, 2022. |
 

@@ -113,7 +113,7 @@ Use a custom app policy when you need to do something not already done by one of
    |**Publisher verified**|Yes or No|Apps that have verified publishers|[Publisher Verification](/entra/identity-platform/publisher-verification-overview)|
    |**Application permissions** (Graph only)|Select one or more API permissions from list|Apps with specific Graph API permissions that have been granted directly|[Microsoft Graph permissions reference](/graph/permissions-reference)|
    |**Delegated permissions** (Graph only)|Select one or more API permissions from list|Apps with specific Graph API permissions given by a user|[Microsoft Graph permissions reference](/graph/permissions-reference)|
-   |**Highly privileged**|Yes or No|Apps with relatively powerful permissions to Microsoft Graph and other common Microsoft first-party APIs|An internal designation based on the same logic used by Defender for Cloud Apps.|
+   |**Highly privileged**|Yes or No|Apps with powerful permissions to Microsoft Graph and other common Microsoft first-party APIs, or with high-privilege Microsoft Entra roles|An internal designation based on the same logic used by Defender for Cloud Apps.|
    |**Overprivileged** (Graph only)|Yes or No|Apps with unused Graph API permissions|Apps with more granted permissions than are being used by those apps.|
    |**Non-Graph API permissions**|Yes or No|Apps with permissions to non-Graph APIs. These apps can expose you to risks if the APIs they access receive limited support and updates.||
    |**Data usage**|Greater than X GB of data downloaded and uploaded per day|Apps that have read and written more than a specified amount of data using Microsoft Graph and EWS APIs||
