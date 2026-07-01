@@ -2,7 +2,7 @@
 title: Risk evaluation framework changelog
 description: Track MSEM-initiated changes to the Risk Evaluation Framework that affect Secure Score and recommendation risk level calculations in Microsoft Security Exposure Management.
 ms.topic: reference
-ms.date: 05/27/2026
+ms.date: 07/01/2026
 ---
 
 # Risk Evaluation Framework changelog
@@ -36,4 +36,4 @@ MSEM initiates REF changes, not customer actions. They might include:
 
 | Date | Change type | Description | More information |
 | -------- | -------- | -------- | -------- |
-| EXAMPLE | New recommendations |100 new recommendations are now generally available.|[What's new in Defender for Cloud recommendations, alerts, and incidents](/azure/defender-for-cloud/release-notes-recommendations-alerts) |
+| 30 June 2026 | New recommendations added |200+ multi-cloud recommendations are now generally available.|[What's new in Defender for Cloud](/azure/defender-for-cloud/release-notes#expanded-multicloud-security-coverage-is-now-generally-available)|
