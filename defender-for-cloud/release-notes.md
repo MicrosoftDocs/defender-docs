@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 06/30/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 ---
 
@@ -28,6 +28,22 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 4. In Category, specify whether the item is GA, Preview, Update, Deprecation, Upcoming update, Upcoming deprecation.-->
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
+
+## July 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+
+### Discovery and posture for serverless container workloads is now generally available
+
+July 1, 2026
+
+Discovery and posture for serverless container workloads is now generally available in Microsoft Defender for Cloud.
+
+This capability provides inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Elastic Container Service (ECS) on AWS Fargate.
+
+Learn more about [Discovery and posture for serverless container workloads](posture-for-serverless-containers.md).
 
 ## June 2026
 

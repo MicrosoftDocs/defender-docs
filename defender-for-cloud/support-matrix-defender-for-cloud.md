@@ -2,7 +2,7 @@
 title: Interoperability with Azure services, Azure clouds, and client operating systems
 description: Learn about the Azure cloud environments where Defender for Cloud can be used, the Azure services that Defender for Cloud protects, and the client operating systems that Defender for Cloud supports.
 ms.topic: limits-and-quotas
-ms.date: 06/18/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 ---
 
@@ -106,7 +106,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | Custom Recommendations (Preview) | Preview|NA|NA|NA|
 | Agentless containers vulnerability assessment |GA|GA|NA|NA|
 | API security posture management |GA|NA|NA|NA|
-| [Serverless Containers (Preview)](posture-for-serverless-containers.md) | Preview | NA | NA | NA |
+| [Serverless Containers](posture-for-serverless-containers.md) | GA | NA | GA | NA |
 | [Serverless protection](serverless-protection.md) <sup>[4](#footnote4)</sup> | GA | NA | NA | NA |
 |**DEFENDER FOR CLOUD PLANS** | | | | |
 |[Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md)| GA | GA| NA | NA|
