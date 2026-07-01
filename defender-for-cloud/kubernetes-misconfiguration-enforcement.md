@@ -1,18 +1,15 @@
 ---
-title: Kubernetes misconfiguration enforcement (preview)
+title: Kubernetes misconfiguration enforcement
 description: Learn how to enable and configure Kubernetes misconfiguration enforcement in Microsoft Defender for Containers to audit or block misconfigured workloads at deployment time.
 #customer intent: As a Kubernetes administrator, I want to enforce Kubernetes security best practices at deployment time so that I can prevent misconfigured workloads from running in my clusters.
 author: dlanger
 ms.author: dlanger
-ms.date: 06/08/2026
+ms.date: 07/01/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
 
-# Kubernetes misconfiguration enforcement (preview)
-
-> [!IMPORTANT]
-> Kubernetes misconfiguration enforcement is currently in public preview. This feature is available only in commercial clouds. It isn't available in national or sovereign clouds, including US Government, China Government, and other sovereign regions.
+# Kubernetes misconfiguration enforcement
 
 Kubernetes misconfiguration enforcement is a Microsoft Defender for Containers capability that evaluates Kubernetes resources before they're admitted into a cluster. You can use it to audit or block deployments that don't meet Microsoft security best-practice rules.
 
@@ -37,29 +34,34 @@ Before you begin, make sure that:
 
 - [Defender for Containers is enabled on the subscription or cloud account](defender-for-containers-enable-plan.md) where the Kubernetes cluster is running.
 
-- Your Kubernetes cluster is supported and runs in a commercial cloud environment.
+- Your Kubernetes cluster is supported.
 
-- The cluster uses AKS, EKS, or GKE.
+- The cluster uses AKS, Azure Arc-enabled Kubernetes, EKS, or GKE.
+
+- **If you are using automatic provisioning:** The required Defender for Containers components are enabled for your environment:
+
+  - **AKS and Azure Arc-enabled Kubernetes**: Kubernetes API access is enabled.
+  - **AWS and GCP**: Agentless threat protection is enabled to collect audit logs.
+
+  > [!NOTE]
+  > Agentless threat protection is enabled by default when you enable Defender for Containers for AWS or GCP. If it was disabled, enable it before you configure Kubernetes misconfiguration enforcement.
+
+- **If you're using Helm for manual deployment:** Make sure [`helm`](https://helm.sh/docs/intro/install/) is installed and available in your command-line environment. Then, [manually enable misconfiguration enforcement with Helm](#manually-enable-misconfiguration-enforcement-with-helm).
 
 - Kubernetes ValidatingAdmissionPolicy is enabled on the cluster. Kubernetes 1.30 and later versions enable this capability by default.
-
-- Helm is installed and available in your command-line environment.
 
 - You have the required permissions:
 
   - To enable and manage deployment-time enforcement policies, you need **Subscription Owner** or **Security Admin** permissions.
   - To view policies and monitoring information, you need **Security Reader** or equivalent permissions.
 
-## Enable misconfiguration enforcement
+## Manually enable misconfiguration enforcement with Helm
 
-> [!NOTE]
-> During public preview, Kubernetes misconfiguration enforcement is enabled by installing the Defender for Containers sensor with the preview Helm chart. At general availability (GA), this Helm-based enablement flow won't be required. Customers will still be able to use Helm, but it won't be the only supported onboarding method.
-
-Kubernetes misconfiguration enforcement requires the Defender for Containers sensor version 0.11 to be deployed to your cluster with misconfiguration policies enabled.
+To manually enable misconfiguarion enforcement with Helm:
 
 1. Follow the [Helm installation guide for the Defender for Containers sensor](deploy-helm.md) for your environment.
 
-1. During Helm chart installation, use the latest `0.11.*` tag from the following Helm repository:
+1. During Helm chart installation, use the latest supported chart tag from the following Helm repository:
 
    ```bash
    oci://mcr.microsoft.com/azuredefender-preview/microsoft-defender-for-containers
@@ -67,11 +69,11 @@ Kubernetes misconfiguration enforcement requires the Defender for Containers sen
 
 1. Include the following value:
 
-    ```
-    defender-admission-controller.enableMisconfigurationPolicies=true
-    ```
+   ```bash
+   defender-admission-controller.enableMisconfigurationPolicies=true
+   ```
 
-After you deploy the sensor with this value, misconfiguration enforcement is active and the default audit rule is created automatically in the portal.
+After misconfiguration enforcement is enabled, the default audit rule is created automatically in the portal.
 
 ## Create a misconfiguration enforcement policy
 

@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 06/30/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 ---
 
@@ -28,6 +28,53 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 4. In Category, specify whether the item is GA, Preview, Update, Deprecation, Upcoming update, Upcoming deprecation.-->
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
+
+## July 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
+| July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
+| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+
+### New container security capabilities are now generally available
+
+July 1, 2026
+
+The following container security capabilities in Microsoft Defender for Cloud are now generally available:
+
+- **Container-level misconfiguration recommendations for Kubernetes** — agentless, container-level KSPM recommendations in Defender CSPM that assess individual containers rather than entire clusters. The following cluster-level recommendations are now deprecated: HostPath volume mount restrictions, allowed ports enforcement, host networking/ports restrictions, CAP_SYS_ADMIN capability restrictions, and AppArmor profile restrictions. Learn more about [container security recommendations](recommendations-reference-container.md).
+- **Upgrade Azure Kubernetes Service Version recommendation** — actionable recommendation to remediate vulnerabilities in AKS-managed system pods by identifying the minimum AKS version upgrade required. Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md) and [security recommendations for containers](recommendations-reference-container.md).
+- **Vulnerability assessment for runtime-discovered container images on EKS and GKE** — extends vulnerability assessment to runtime-discovered images on Amazon EKS and Google GKE, providing unified coverage across Azure, AWS, and GCP. Learn more about [vulnerability assessment for containers](view-and-remediate-vulnerabilities-containers.md).
+- **Kubernetes node vulnerability assessment for EKS and GKE** — extends Kubernetes node (host) vulnerability assessment to EKS and GKE, bringing parity with the existing AKS capability. Learn more about [Kubernetes node vulnerability assessment](kubernetes-nodes-va.md).
+- **Scanning support for Docker Hardened container images** — extends vulnerability scanning coverage to Docker Hardened container images. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+
+
+### Kubernetes misconfiguration enforcement in Defender for Containers is now generally available
+
+July 1, 2026
+
+Kubernetes misconfiguration enforcement in Microsoft Defender for Containers is now generally available. This feature evaluates Kubernetes resource configurations at admission time and can audit or block deployments that don't meet Microsoft security best-practice rules.
+
+With this release, Kubernetes misconfiguration enforcement is available through automatic provisioning.
+
+- **AKS and Azure Arc-enabled Kubernetes:** Enable Defender for Containers with Kubernetes API access.
+- **AWS and GCP:** Enable Defender for Containers with Agentless threat protection.
+
+Manual deployment with Helm is still supported.
+
+Learn more about [Kubernetes misconfiguration enforcement](kubernetes-misconfiguration-enforcement.md).
+
+### Discovery and posture for serverless container workloads is now generally available
+
+July 1, 2026
+
+Discovery and posture for serverless container workloads is now generally available in Microsoft Defender for Cloud.
+
+This capability provides inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Elastic Container Service (ECS) on AWS Fargate.
+
+Learn more about [Discovery and posture for serverless container workloads](posture-for-serverless-containers.md).
 
 ## June 2026
 

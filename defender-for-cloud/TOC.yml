@@ -379,7 +379,7 @@
           href: enable-permissions-management.md
         - name: Agentless machine scanning
           href: concept-agentless-data-collection.md
-        - name: Discovery and posture for serverless container workloads (Preview)
+        - name: Discovery and posture for serverless container workloads
           displayName: serverless containers, ACA, ACI, posture, inventory, recommendations, attack path
           href: posture-for-serverless-containers.md
         - name: What is Serverless protection?
@@ -812,7 +812,7 @@
               - name: Configure gated deployment
                 displayName: gated deployment, configure
                 href: enablement-guide-runtime-gated.md
-              - name: Kubernetes misconfiguration enforcement (preview)
+              - name: Kubernetes misconfiguration enforcement
                 displayName: misconfiguration, kubernetes, enforcement, admission
                 href: kubernetes-misconfiguration-enforcement.md
               - name: Enable gated deployment by API
