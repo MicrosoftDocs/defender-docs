@@ -54,7 +54,7 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- You need to be assigned permissions before you can configure trusted ARC sealers. You have the following options:
+- You need to be assigned permissions before you can add or manage trusted ARC sealers. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Security Administrator** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>. Members of the Security Administrator role can't access email authentication settings in the Defender portal.
@@ -87,7 +87,7 @@ After an admin adds a trusted ARC sealer in the Defender portal, Microsoft 365 u
 
 If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to run the following commands.
 
-- **View existing trusted ARC sealers**: Run the following command to display the current ARC configuration and see which trusted ARC sealers are already configured in your tenant:
+- **View existing trusted ARC sealers**: Run the following command to check which trusted ARC sealers are currently configured in your organization:
 
   ```powershell
   Get-ArcConfig
@@ -113,7 +113,7 @@ If you'd rather use PowerShell to view, add, or remove trusted ARC sealers, conn
 
   To preserve existing values, be sure to include the ARC sealers that you want to keep along with the new ARC sealers that you want to add.
 
-  To add or remove ARC sealers without affecting the other entries, see [Set-ArcConfig examples](/powershell/module/exchangepowershell/set-arcconfig#examples).
+  To add or remove ARC sealers without affecting the other entries, see the examples in [Set-ArcConfig](/powershell/module/exchangepowershell/set-arcconfig#examples).
 
 ## Vendor-specific ARC sealer configuration
 
@@ -228,7 +228,7 @@ Set-ArcConfig -Identity Default -ArcTrustedSealers "pphosted.com","mimecast.com"
 
 ### Find your vendor's ARC sealer domain
 
-If your vendor isn't listed in the table of common email security vendors and ARC sealer domains, use the following steps to identify the correct ARC sealer domain:
+If your vendor isn't listed in the vendor ARC sealer domain table, use the following steps to identify the correct ARC sealer domain:
 
 1. Send a test email through the intermediary service to a Microsoft 365 mailbox.
 1. Open the message headers (in Outlook: **File** \> **Properties** \> **Internet Headers**, or use the [Message Header Analyzer](https://mha.azurewebsites.net)).
@@ -245,7 +245,7 @@ In the last **ARC-Authentication-Results** header, look for `arc=pass` and `oda=
 - The previous ARC sealer is trusted.
 - The previous pass result can be used to override the current DMARC failure.
 
-The following example shows an `ARC-Authentication-Results` header where `arc=pass` and `oda=1` confirm that the trusted ARC sealer result can override the DMARC failure:
+The following example shows an **ARC-Authentication-Results** header where `arc=pass` and `oda=1` confirm a trusted ARC sealer:
 
 ```text
 ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
@@ -258,7 +258,7 @@ dkim=[1,1,header.d=sampledoamin.onmicrosoft.com]
 dmarc=[1,1,header.from=sampledoamin.onmicrosoft.com])
 ```
 
-To check whether the ARC result was used to override a DMARC failure, look for `compauth=pass` and `reason=130` in the last **Authentication-Results** header. The following example shows an `Authentication-Results` header where composite authentication passed with `reason=130`, which confirms that a trusted ARC sealer result overrode the DMARC failure:
+To check whether the ARC result was used to override a DMARC failure, look for `compauth=pass` and `reason=130` in the last **Authentication-Results** header. The following example shows an **Authentication-Results** header where composite authentication passed because of a trusted ARC sealer (`reason=130`):
 
 ```text
 Authentication-Results: spf=fail (sender IP is 10.10.10.10)
@@ -310,7 +310,7 @@ ARC-Seal: i=1; a=rsa-sha256; d=pphosted.com; s=arcselector;
   cv=none; b=<signature>
 ```
 
-But when you run **Get-ArcConfig** in Exchange Online PowerShell, the `ArcTrustedSealers` output shows the wrong domain is configured instead of the vendor's domain:
+But when you run **Get-ArcConfig** in Exchange Online PowerShell, the output shows your own domain is configured instead of the vendor's ARC sealing domain:
 
 ```text
 ArcTrustedSealers : {contoso.com}
@@ -348,7 +348,7 @@ Set-ArcConfig -Identity Default -ArcTrustedSealers "pphosted.com"
 
 **Problem**: The ARC chain validation shows `cv=fail`, meaning a previous ARC seal in the chain couldn't be verified.
 
-The message headers show a failed chain validation. Look for an `ARC-Seal` header where `cv=fail` indicates that a previous ARC seal in the chain couldn't be verified:
+The following example shows an **ARC-Seal** header where `cv=fail` indicates a broken ARC chain:
 
 ```text
 ARC-Seal: i=2; a=rsa-sha256; d=mimecast.com; s=arc-2018;
@@ -380,7 +380,7 @@ This failure typically has the following causes:
 - Mail flow rule actions.
 - Safe/Blocked sender lists.
 
-**Diagnosis**: Review the `X-Forefront-Antispam-Report` header to determine whether spam filtering scores or categories caused the message to be treated as spam independent of ARC:
+**Diagnosis**: Review the `X-Forefront-Antispam-Report` header to determine whether content-based spam filtering caused the message to go to Junk Email independent of ARC:
 
 ```text
 X-Forefront-Antispam-Report: CIP:10.10.10.10; CTRY:US; LANG:en; SCL:5;
@@ -397,7 +397,7 @@ If `CAT:SPM` or `SCL:5` or higher, the message was filtered as spam by content f
 
 ### CompAuth reason codes reference
 
-The following table summarizes the composite authentication (CompAuth) reason codes that appear in message headers during email authentication evaluation.
+The following table summarizes the composite authentication (CompAuth) reason codes that appear in the **Authentication-Results** header.
 
 |Reason code|Description|
 |---|---|

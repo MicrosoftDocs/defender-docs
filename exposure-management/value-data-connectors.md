@@ -11,7 +11,14 @@ ms.date: 09/21/2025
 
 ## Imported assets and data types
 
-The intent of connecting to external products is to create complete visibility across all your digital assets and any security context that could impact your attack surface. The following asset types, context enrichment, and vulnerability information are ingested for this purpose:
+The intent of connecting to external products is to create complete visibility across all your digital assets and any security context that could impact your attack surface. 
+
+> [!NOTE]
+> At this time, devices are onboarded into the unified inventory only when they include sufficient identifying attributes (such as, MAC address, cloud resource identifiers, or other supported unique identifiers). If this information is not present or is incomplete, the system may not be able to confidently match or represent those assets in the Device Inventory page. 
+>
+> In such cases, assets may still be visible in Advanced Hunting. This is a **known** **limitation** of the current onboarding and normalization process, and we are actively working on enhancing data coverage and improve how these assets are represented across experiences.
+
+The following asset types, context enrichment, and vulnerability information are ingested for this purpose:
 
 - Devices
 - Cloud assets

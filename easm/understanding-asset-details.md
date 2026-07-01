@@ -1,12 +1,13 @@
 ---
 title: Understand Asset Details
-description: Learn how Microsoft Defender External Attack Surface Management discovers and defines your organization's internet-exposed attack surface.
+description: Learn how to view and interpret asset details in Microsoft Defender External Attack Surface Management, including the metadata collected for different asset types and how it supports attack surface insights.
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 07/14/2022
+ms.date: 06/15/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Understand asset details
@@ -19,13 +20,14 @@ For more information, see [Understanding inventory assets](understanding-invento
 
 ## Asset details summary view
 
-You can view the asset details page for any asset by selecting its name from your inventory list. On the left pane of this page, you can view an asset summary that provides key information about that particular asset. This section primarily includes data that applies to all asset types, although more fields are available in some cases. For more information on the metadata provided for each asset type in the summary section, see the following chart.
+You can view the asset details page for any asset by selecting its name from your inventory list. On the left pane of this page, you can view an asset summary that provides key information about that particular asset. The asset summary in the left pane primarily includes data that applies to all asset types, although more fields are available in some cases. For more information on the metadata provided for each asset type in the summary section, see the following chart.
 
 ![Screenshot that shows an asset details page with the summary pane highlighted.](media/inventory-1.png)
 
-### General information
+<a name="general-information"></a>
+### General asset information
 
-This section includes high-level information that's key to understanding your assets at a glance. Most of these fields apply to all assets. This section can also include information that's specific to one or more asset types.
+The General information section includes high-level information that's key to understanding your assets at a glance. Most of these fields apply to all assets. This section can also include information that's specific to one or more asset types.
 
 | Name | Definition | Asset types |
 |--|--|--|
@@ -55,9 +57,10 @@ This section includes high-level information that's key to understanding your as
 | Signature algorithm OID | The OID that identifies the hash algorithm used to sign the certificate request. | SSL certificate |
 | Self-signed | Indicates whether the SSL certificate was self-signed.| SSL certificate |
 
-### Network
+<a name="network"></a>
+### Network information
 
-The following IP address information provides more context about the use of the IP.
+The following IP address information provides more context about the use of the IP address asset.
 
 | Name | Definition | Asset types |
 |--|--|--|
@@ -66,9 +69,10 @@ The following IP address information provides more context about the use of the 
 | IP blocks | The IP block that contains the IP address asset. | IP address |
 | ASNs | The ASN associated with an asset. | IP address |
 
-### Block information
+<a name="block-information"></a>
+### IP block information
 
-The following data is specific to IP blocks and provides contextual information about its use.
+The following data is specific to IP blocks and provides contextual information about how each IP block is used.
 
 | Name | Definition | Asset types |
 |--|--|--|
@@ -79,7 +83,8 @@ The following data is specific to IP blocks and provides contextual information 
 | ASNs | The ASN associated with the IP block. | IP block |
 | Country | The country/region of origin as detected in the Whois registration information for the IP block. | IP block |
 
-### Subject
+<a name="subject"></a>
+### Certificate subject information
 
 The following data is specific to the subject (that is, the protected entity) associated with an SSL certificate.
 
@@ -93,7 +98,8 @@ The following data is specific to the subject (that is, the protected entity) as
 | Country | Denotes the country/region where the organization is located. | SSL certificate |
 | State/Province | Denotes the state or province where the organization is located. | SSL certificate |
 
-### Issuer
+<a name="issuer"></a>
+### Certificate issuer information
 
 The following data is specific to the issuer of an SSL certificate.
 
@@ -104,7 +110,8 @@ The following data is specific to the issuer of an SSL certificate.
 | Organization name | The name of the organization that orchestrated the issue of a certificate. | SSL certificate |
 | Organization unit | Other information about the organization that issued the certificate. | SSL certificate |
 
-## Data tabs
+<a name="data-tabs"></a>
+## Understand the data tabs
 
 On the rightmost pane of the asset details page, users can access more expansive data related to the selected asset. This data is organized in a series of categorized tabs. The available metadata tabs change depending on the type of asset you're viewing.
 
@@ -116,11 +123,12 @@ Certain tabs display a **Recent only** toggle in the upper-right corner. By defa
 
 The **Overview** tab provides more context to ensure that significant insights are quickly identifiable when you view the details of an asset. This section includes key discovery data for all asset types. It provides insight about how Microsoft maps the asset to your known infrastructure.
 
-This section can also include dashboard widgets that visualize insights that are relevant to the asset type in question.
+The Overview tab can also include dashboard widgets that visualize insights that are relevant to the asset type in question.
 
 ![Screenshot that shows the asset details page Overview pane.](media/inventory-2.png)
 
-### Discovery chain
+<a name="discovery-chain"></a>
+### Discovery chain data
 
 The discovery chain outlines the observed connections between a discovery seed and the asset. This information helps users visualize these connections and better understand why an asset was determined to belong to their organization.
 
@@ -128,9 +136,10 @@ In the example, you can see that the seed domain is tied to this asset through t
 
 ![Screenshot that shows the discovery chain.](media/inventory-3.png)
 
-### Discovery information
+<a name="discovery-information"></a>
+### Discovery information tab
 
-This section provides information about the process that's used to detect the asset. It includes information about the discovery seed that connects to the asset and the approval process.
+The Discovery information section provides information about the process that's used to detect the asset. It includes information about the discovery seed that connects to the asset and the approval process.
 
 Options include:
 
@@ -138,57 +147,65 @@ Options include:
 - **Candidate**: This option indicates that the asset required manual approval to be incorporated into your inventory.
 - **Last discovery run**: This date indicates when the discovery group that initially detected the asset was last utilized for a discovery scan.
 
-### IP reputation
+<a name="ip-reputation"></a>
+### IP reputation tab
 
 The **IP reputation** tab displays a list of potential threats related to a given IP address. This section outlines any detected malicious or suspicious activity that relates to the IP address. This information is key to understanding the trustworthiness of your own attack surface. These threats can help organizations uncover past or present vulnerabilities in their infrastructure.
 
-The Defender EASM IP reputation data displays instances when the IP address was detected on a threat list. For instance, the recent detection in the following example shows that the IP address relates to a host known to be running a cryptocurrency miner. This data was derived from a suspicious host list supplied by CoinBlockers. Results are organized by the **Last seen** date to show the most relevant detections first.
+The Defender EASM IP reputation data displays instances when the IP address was detected on a threat list. For instance, the recent detection in the following example shows that the IP address relates to a host known to be running a cryptocurrency miner. This IP reputation entry was derived from a suspicious host list supplied by CoinBlockers. Results are organized by the **Last seen** date to show the most relevant detections first.
 
 In this example, the IP address is present on an abnormally high number of threat feeds. This information indicates that the asset should be thoroughly investigated to prevent malicious activity in the future.
 
 ![Screenshot that shows the asset details page IP reputation tab.](media/inventory-4.png)
 
-### Services
+<a name="services"></a>
+### Services tab
 
-The **Services** tab is available for IP address, domain, and host assets. This section provides information on services observed to be running on the asset. It includes IP addresses, name and mail servers, and open ports that correspond with other types of infrastructure (for example, remote access services).
+The **Services** tab is available for IP address, domain, and host assets. The Services tab provides information on services observed to be running on the asset. It includes IP addresses, name and mail servers, and open ports that correspond with other types of infrastructure (for example, remote access services).
 
 Defender EASM's services data is key to understanding the infrastructure that powers your asset. It can also alert you to resources that are exposed on the open internet that should be protected.
 
 ![Screenshot that shows the asset details page Services tab.](media/inventory-5.png)
 
-### IP addresses
+<a name="ip-addresses"></a>
+### IP addresses section
 
-This section provides insight on any IP addresses that are running on the asset's infrastructure. On the **Services** tab, Defender EASM provides the name of the IP address and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the IP address was observed during the most recent scan of the asset. If there's no checkbox in this column, the IP address was seen in prior scans, but it isn't currently running on the asset.
+The IP addresses section provides insight on any IP addresses that are running on the asset's infrastructure. On the **Services** tab, Defender EASM provides the name of the IP address and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the IP address was observed during the most recent scan of the asset. If there's no checkbox in this column, the IP address was seen in prior scans, but it isn't currently running on the asset.
 
 ![Screenshot that shows the asset details page IP address section of the Services tab.](media/inventory-6.png)
 
-### Mail servers
+<a name="mail-servers"></a>
+### Mail servers section
 
-This section provides a list of any mail servers that are running on the asset. This information indicates that the asset is capable of sending emails. In this section, Defender EASM provides the name of the mail server and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the mail server was detected during the most recent scan of the asset.
+The Mail servers section provides a list of any mail servers that are running on the asset. This information indicates that the asset is capable of sending emails. In this section, Defender EASM provides the name of the mail server and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the mail server was detected during the most recent scan of the asset.
 
 ![Screenshot that shows the asset details page Mail server section of the Services tab.](media/inventory-7.png)
 
-### Name servers
+<a name="name-servers"></a>
+### Name servers section
 
-This section displays any name servers that are running on the asset to provide resolution for a host. In this section, Defender EASM provides the name of the mail server and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the name server was detected during the most recent scan of the asset.
+The Name servers section displays any name servers that are running on the asset to provide resolution for a host. In this section, Defender EASM provides the name of the mail server and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the name server was detected during the most recent scan of the asset.
 
 ![Screenshot that shows the asset details page Name server section of the Services tab.](media/inventory-8.png)
 
-### Open ports
+<a name="open-ports"></a>
+### Open ports section
 
-This section lists any open ports detected on the asset. Microsoft regularly scans around 230 distinct ports. This data is useful to identify any unsecured services that shouldn't be accessible from the open internet. These services include databases, IoT devices, and network services like routers and switches. It's also helpful in identifying shadow IT infrastructure or insecure remote access services.
+The Open ports section lists any open ports detected on the asset. Microsoft regularly scans around 230 distinct ports. This data is useful to identify any unsecured services that shouldn't be accessible from the open internet. These services include databases, IoT devices, and network services like routers and switches. It's also helpful in identifying shadow IT infrastructure or insecure remote access services.
 
 In this section, Defender EASM provides the open port number, a description of the port, the last state it was observed in, and the **First seen** and **Last seen** dates. The **Recent** column indicates whether the port was observed as open during the most recent scan. Defender EASM considers a port **open** when our system can successfully complete a syn-ack handshake that results in attributed banners. When we can establish a TCP connection but are unable to complete our service fingerprinting, we mark the port as **filtered**. A **closed** port is still accessible but there is no service listening on the port and thus denies connections.
 
 ![Screenshot that shows the asset details page Open ports section of the Services tab.](media/inventory-9.png)
 
-### Trackers
+<a name="trackers"></a>
+### Trackers tab
 
 Trackers are unique codes or values found within webpages and often are used to track user interaction. These codes can be used to correlate a disparate group of websites to a central entity. Microsoft's tracker dataset includes IDs from providers like Google, Yandex, Mixpanel, New Relic, and Clicky and it continues to grow.
 
-In this section, Defender EASM provides the tracker type (for example, GoogleAnalyticsID), the unique identifier value, and the **First seen** and **Last seen** dates.
+In the Trackers section, Defender EASM provides the tracker type (for example, GoogleAnalyticsID), the unique identifier value, and the **First seen** and **Last seen** dates.
 
-### Web components
+<a name="web-components"></a>
+### Web components tab
 
 Web components are details that describe the infrastructure of an asset as observed through a Microsoft scan. These components provide a high-level understanding of the technologies used on the asset. Microsoft categorizes the specific components and includes version numbers when possible.
 
@@ -211,11 +228,12 @@ Web components are categorized based on their function.
 | Network device | Cisco Router, Motorola WAP, ZyXEL Modem |
 | Building control | Linear eMerge, ASI Controls Weblink, Optergy |
 
-### Observations
+<a name="observations"></a>
+### Observations tab
 
 The **Observation** tab displays any insights from the Attack Surface Priorities dashboard that pertain to the asset. These priorities can include:
 
-- Critical CVEs.
+- Critical CVEs (Common Vulnerabilities and Exposures).
 - Known associations to compromised infrastructure.
 - Use of deprecated technology.
 - Infrastructure best-practice violations.
@@ -227,13 +245,14 @@ The **Observations** tab features two tables: **Observations** and **Non-applica
 
    ![Screenshot that shows the Observations tab with multiple CVEs selected to be marked as non-applicable.](media/cves-3.png)
 
-### Connected assets
+<a name="connected-assets"></a>
+### Connected assets tab
 
 Connected Assets empowers users to graphically link and gather information about assets for investigative analysis. You can explore your environment and its intricate relationships through relationship mappings, which offer clear and concise views. This helps you identify hidden connections and potential attack paths. By visually mapping out the relationships between assets and vulnerabilities, you can comprehend your environment's complexity and make well-informed decisions to enhance your security posture and apply choke points effectively. 
 
 [![Screenshot that shows the Connected assets tab.](media/connected-1.png)](media/connected-1.png#lightbox)
 
-On this page, all the assets that are connected to the specified asset are identified in a list. The list provides key information about each policy including:
+On the Connected assets tab, all the assets that are connected to the specified asset are identified in a list. The list provides key information about each policy including:
 
 - **Asset:** The identified connected asset.
 - **Kind:** The type of asset.
@@ -242,23 +261,26 @@ On this page, all the assets that are connected to the specified asset are ident
 - **First Seen:** When the asset was first discovered.
 - **Last Seen:** When the asset was last identified.
 
-From this page, you can modify or remove connected assets. You can also sort or filter the asset list to further categorize the list of connected assets. You can also download a CSV report of the listed assets. Any filters applied will be reflected on the CSV export.
+From the Connected assets tab, you can modify or remove connected assets. You can also sort or filter the asset list to further categorize the list of connected assets. You can also download a CSV report of the listed assets. Any filters applied will be reflected on the CSV export.
 
-### Resources
+<a name="resources"></a>
+### Resources tab
 
-The **Resources** tab provides insight on any JavaScript resources running on any page or host assets. When applicable to a host, these resources are aggregated to represent the JavaScript running on all pages on that host. This section provides an inventory of the JavaScript detected on each asset so that your organization has full visibility into these resources and can detect any changes.
+The **Resources** tab provides insight on any JavaScript resources running on any page or host assets. When applicable to a host, these resources are aggregated to represent the JavaScript running on all pages on that host. The Resources tab provides an inventory of the JavaScript detected on each asset so that your organization has full visibility into these resources and can detect any changes.
 
 Defender EASM provides the resource URL, resource host, MD5 value, and first-seen and last-seen dates to help organizations effectively monitor the use of JavaScript resources across their inventory.
 
 ![Screenshot that shows the Resources tab.](media/inventory-12.png)
 
-### SSL certificates
+<a name="ssl-certificates"></a>
+### SSL certificates tab
 
-Certificates are used to secure communications between a browser and a web server via SSL. use of certificates ensures that sensitive data in transit can't be read, tampered with, or forged. This section of Defender EASM lists any SSL certificates detected on the asset, including key data like the issue and expiry dates.
+Certificates are used to secure communications between a browser and a web server via SSL. use of certificates ensures that sensitive data in transit can't be read, tampered with, or forged. The SSL certificates tab in Defender EASM lists any SSL certificates detected on the asset, including key data like the issue and expiry dates.
 
 ![Screenshot that shows the SSL certificates tab.](media/inventory-13.png)
 
-### Whois
+<a name="whois"></a>
+### Whois tab
 
 The Whois protocol is used to query and respond to the databases that store data related to the registration and ownership of internet resources. Whois contains key registration data that can apply to domains, hosts, IP addresses, and IP blocks in Defender EASM. On the **Whois** data tab, Microsoft provides a robust amount of information associated with the registry of the asset.
 
@@ -284,7 +306,8 @@ The following fields are included in the table in the **Values** section on the 
 
 Many organizations opt to obfuscate their registry information. Sometimes contact email addresses end in *@anonymised.email*. This placeholder is used instead of a real contact address. Many fields are optional during registration configuration, so any field with an empty value wasn't included by the registrant.
 
-### Change history
+<a name="change-history"></a>
+### Change history tab
 
 The **Change history** tab displays a list of modifications that have been applied to an asset over time. This information helps you track these changes over time and better understand the lifecycle of the asset. This tab displays a variety of changes, including but not limited to asset states, labels and external IDs. For each change, we list the user who implemented the change and a timestamp.
 

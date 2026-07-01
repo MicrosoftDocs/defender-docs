@@ -1,7 +1,7 @@
 ---
 title: What is Microsoft Defender for Storage
 description: Learn about the benefits, features, and security capabilities of Microsoft Defender for Storage to protect your data and workloads.
-ms.date: 06/17/2026
+ms.date: 06/28/2026
 ms.topic: overview
 #customer intent: As a security professional, I want to understand the features and benefits of Microsoft Defender for Storage so that I can ensure the security of my data.
 ai-usage: ai-assisted
@@ -26,6 +26,8 @@ Defender for Storage includes the following features:
 - **Sensitive data threat detection** - Identify and protect sensitive data within storage accounts by detecting suspicious activities that might indicate a potential security threat. Defender for Storage enhances the security of sensitive information stored in Azure by monitoring actions such as unusual data access patterns or potential data exfiltration.
 
 - **Malware scanning** - Scan storage accounts for malware by analyzing objects for known threats and suspicious content. This helps identify and mitigate potential security risks from malicious objects that might be stored or uploaded to Azure storage accounts. As a result, it enhances the overall security posture of data storage.
+
+- **Event-driven response** - Trigger automated remediation when malware is detected by integrating with Azure Event Grid. Connect Azure Functions or Logic Apps to auto-delete, quarantine, or send alerts for malicious blobs in near real time. See [set up automated remediation for malware detection](defender-for-storage-configure-malware-scan.md).
 
 You can [enable Defender for Storage](tutorial-enable-storage-plan.md) agentlessly at the subscription level, resource level, or at scale.
 

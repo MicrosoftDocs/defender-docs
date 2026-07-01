@@ -24,7 +24,9 @@ Hunting bookmarks in Microsoft Sentinel helps you preserve the queries and query
 This article explains how to create, view, and manage hunting bookmarks in Microsoft Sentinel and how to use them during investigations.
 
 >[!NOTE]
-> Bookmarks can only be created in the Azure portal. While you can't add bookmarks in the Microsoft Defender portal, you can see bookmarks that were already created.
+> **Microsoft Sentinel hunting bookmarks:** Bookmarks can only be created in the Azure portal, under **Microsoft Sentinel** > **Threat management** > **Hunting**. In the Microsoft Defender portal, you can view bookmarks that were already created, but you can't add new ones.
+>
+> **Advanced hunting bookmarks:** Bookmarks aren't available in Advanced hunting, which provides a unified query experience across Microsoft Defender and Microsoft Sentinel data. However, bookmarks are still available in **Microsoft Sentinel** > **Threat management** > **Hunting**, which provides the Microsoft Sentinel-specific hunting experience. You can also use alternatives such as incident tags, saved queries, or custom hunting tables to preserve and track investigation context.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 

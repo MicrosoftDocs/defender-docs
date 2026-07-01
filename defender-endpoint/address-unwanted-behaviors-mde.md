@@ -37,7 +37,7 @@ This article explains how to address these unwanted behaviors and includes examp
 
 At a high level, the process for addressing an unwanted behavior in Defender for Endpoint is as follows:
 
-1. Identify which capability is causing the unwanted behavior. To make your determination, determine if there's a misconfiguration with Microsoft Defender Antivirus, endpoint detection and response, attack surface reduction, or controlled folder access. Use information in the Microsoft Defender portal or on the device.
+1. Identify which capability is causing the unwanted behavior. To make your determination, determine if there's a misconfiguration with Microsoft Defender Antivirus, endpoint detection and response, attack surface reduction (ASR) rules, or controlled folder access (CFA). Use information in the Microsoft Defender portal or on the device.
 
    | Location | What to do |
    |---|---|
@@ -110,7 +110,7 @@ In this scenario, an app is detected as PUA, and you want to allow it to run.
 
 In this scenario, a legitimate app is blocked from writing to folders that are protected by controlled folder access.
 
-**How to address**: Add the app to the "allowed" list for controlled folder access. See [Allow specific apps to make changes to controlled folders](customize-controlled-folders.md#allow-specific-apps-to-make-changes-to-controlled-folders).
+**How to address**: Add the app to the "allowed" list for controlled folder access. See [Allow apps to modify files in protected folders](controlled-folder-access-configure.md#allow-apps-to-modify-files-in-protected-folders-in-the-windows-security-app).
 
 ### A third-party app is detected as malicious by Microsoft Defender Antivirus
 

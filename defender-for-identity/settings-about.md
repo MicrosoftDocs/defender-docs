@@ -1,16 +1,19 @@
 ---
 title: About page in Microsoft Defender XDR 
 description: Learn how to collect important details about your Defender for Identity workspace in Microsoft Defender XDR.
-ms.date: 07/14/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
-# About page for Defender for Identity
+# View information on the Defender for Identity About page
 
-This article explains how to use the About page to collect important details about your Defender for Identity workspace in Microsoft Defender XDR.
+This article explains how to use the About page to collect important details about your Defender for Identity workspace in Microsoft Defender XDR. Before you begin, make sure you meet the [Defender for Identity prerequisites](prerequisites.md).
 
-## Details on About page
+<a name="details-on-about-page"></a>
+## Information shown on the Defender for Identity About page
 
 To access the About page, in  [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**. Under **General**, select **About**.
 
@@ -27,8 +30,9 @@ The About page provides the following details:
 
 This information can be helpful when troubleshooting issues and opening support tickets. Additionally, you can find the name of your workspace (workspace) which is necessary for configuring your [proxy or firewall](configure-proxy.md#enable-access-to-defender-for-identity-service-urls-in-the-proxy-server).
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Defender for Identity prerequisites](prerequisites.md)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+- [Microsoft Defender for Identity community forum](<https://aka.ms/MDIcommunity>)
 

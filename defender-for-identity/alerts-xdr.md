@@ -17,7 +17,7 @@ To identify the format of each alert, check the **Detection source** field on th
 
 Alert names in the XDR structure differ from the alert names in the classic structure, but alert IDs stay consistent between the two structures.
 
-For more information, see [Security alerts in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-alerts) and [Investigate alerts in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-alerts#alert-sources).
+For more information, see [Security alerts in Microsoft Defender](/microsoft-365/security/defender/investigate-alerts) and [Investigate alerts in Microsoft Defender](/microsoft-365/security/defender/investigate-alerts#alert-sources).
 
 ## Alerts by category
 

@@ -10,12 +10,14 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.custom: 
+- msecd-doc-authoring-1014
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 07/14/2023
+ms.date: 06/15/2026
 appliesto:
 - Microsoft Defender XDR
+ai-usage: ai-assisted
 ---
 
 # Address false positives or false negatives in Microsoft Defender XDR
@@ -32,12 +34,16 @@ The following sections describe how to perform these tasks.
 
 ## Report a false positive/negative to Microsoft for analysis
 
+Use the following table to determine where to submit false positives or false negatives for analysis.
+
 |Item missed or wrongly detected |Service  |What to do  |
 |---------|---------|---------|
 |- Email message <br/>- Email attachment <br/>- URL in an email message<br/>- URL in an Office file      |[Microsoft Defender for Office 365](/defender-office-365/mdo-about)        |[Submit suspected spam, phish, URLs, and files to Microsoft for scanning](/defender-office-365/submissions-admin)         |
 |File or app on a device    |[Microsoft Defender for Endpoint](/windows/security/threat-protection)         |[Submit a file to Microsoft for malware analysis](https://www.microsoft.com/wdsi/filesubmission)         |
 
 ## Adjust an alert to prevent false positives from recurring
+
+Use the following table to choose the appropriate method for preventing similar false positives from recurring.
 
 |Scenario |Service |What to do |
 |--------|--------|--------|
@@ -60,4 +66,5 @@ If a remediation action was taken on an entity (such as a device or an email mes
 
 - [View the details and results of an automated investigation](m365d-autoir-results.md)
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](advanced-hunting-overview.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

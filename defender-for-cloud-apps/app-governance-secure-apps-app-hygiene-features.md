@@ -1,5 +1,5 @@
 ---
-title: Secure apps with app governance hygiene features
+title: Secure OAuth apps with app governance hygiene features | Microsoft Defender for Cloud Apps
 ms.date: 06/16/2026
 ms.topic: how-to
 description: Use app governance hygiene features to identify unused apps, manage unused credentials, and review expiring credentials in Microsoft Defender.
@@ -9,7 +9,7 @@ ms.custom: msecd-doc-authoring-1014
 ---
 
 
-# Secure apps with app hygiene features
+# Secure OAuth apps with app hygiene features
 
 > [!NOTE]
 > Management of unused credentials and expiring credentials is available to app governance customers with a Microsoft Entra Workload ID Premium license. For more information, see [What are workload identities?](/azure/active-directory/workload-identities/workload-identities-overview)

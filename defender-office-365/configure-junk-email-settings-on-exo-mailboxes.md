@@ -9,11 +9,13 @@ ms.collection:
   - tier2
 description: Admins can learn how to configure the junk email settings in Exchange Online mailboxes. Many of these settings are available to users in Outlook or Outlook on the web.
 ms.service: defender-office-365
-ms.date: 04/02/2026
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure junk email settings on Exchange Online mailboxes
@@ -28,14 +30,14 @@ But, there are also specific anti-spam settings that admins can configure on ind
 
 - **Junk email settings that users configure for themselves in Outlook or Outlook on the web**: The _safelist collection_ is the Safe Senders list, the Safe Recipients list, and the Blocked Senders list on each mailbox. The entries in these lists determine whether the message is delivered to the Inbox or the Junk Email folder. Users can configure the safelist collection for their own mailboxes in Outlook or Outlook on the web (formerly known as Outlook Web App or OWA). Admins can configure the safelist collection on any user's mailbox.
 
-Microsoft 365 adds the header `X-Forefront-Antispam-Report: SFV:BLK` to incoming messages from senders in a user's Blocked Senders list, and any future messages from that sender are classified as spam. The message is delivered to the user's Junk Email folder or to quarantine based on the action configured in the applicable anti-spam policy (our [recommended action](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings) is **Move message to Junk Email folder**).
+Microsoft 365 adds the header `X-Forefront-Antispam-Report: SFV:BLK` to incoming messages from senders in a user's Blocked Senders list, and any future messages from that sender are classified as spam. The message is delivered to the user's Junk Email folder or to quarantine based on the action configured in the applicable anti-spam policy (our [recommended anti-spam policy setting](recommended-settings-for-eop-and-office365.md#anti-spam-policy-settings) is **Move message to Junk Email folder**).
 
 If the sender is in the user's Safe Senders list, the message is delivered to their Inbox.
 
 Admins can use Exchange Online PowerShell to configure entries in the safelist collection on mailboxes (the Safe Senders list, the Safe Recipients list, and the Blocked Senders list).
 
 > [!NOTE]
-> Messages from senders in user Safe Senders lists skip content filtering (the SCL is -1). To prevent users from adding entries to their Safe Senders lists, use Group Policy as mentioned in the [About junk email settings in Outlook](#about-outlook-junk-email-settings) section later in this article. Policy filtering, Content filtering, and Defender for Office 365 checks are still applied to the messages.
+> Messages from senders in user Safe Senders lists skip content filtering (the SCL is -1). To prevent users from adding entries to their Safe Senders lists, use [Group Policy](/microsoft-365-apps/outlook/email-security/deploy-junk-email-settings) to configure client-side Junk Email Filter settings in Outlook. Policy filtering, Content filtering, and Defender for Office 365 checks are still applied to the messages.
 >
 > Microsoft 365 uses a mail flow delivery agent to route messages to the Junk Email folder. It doesn't use the junk email rule in the mailbox. The _Enabled_ parameter on the **Set-MailboxJunkEmailConfiguration** cmdlet in Exchange Online PowerShell has no effect on mail flow in cloud mailboxes. Microsoft 365 routes messages based on the actions set in anti-spam policies. The user's Safe Senders list and Blocked Senders list continue to work as usual.
 
@@ -53,7 +55,7 @@ Admins can use Exchange Online PowerShell to configure entries in the safelist c
 
 ## Use Exchange Online PowerShell to configure the safelist collection on a mailbox
 
-The safelist collection on a mailbox includes the Safe Senders list, the Safe Recipients list, and the Blocked Senders list. By default, users can configure the safelist collection on their own mailboxes in Outlook or Outlook on the web. Admins can use the corresponding parameters on the **Set-MailboxJunkEmailConfiguration** cmdlet to configure the safelist collection on a user's mailbox. These parameters are described in the following table.
+A mailbox's _safelist collection_ consists of the Safe Senders list, the Safe Recipients list, and the Blocked Senders list. By default, users can configure the safelist collection on their own mailboxes in Outlook or Outlook on the web. Admins can use the corresponding parameters on the **Set-MailboxJunkEmailConfiguration** cmdlet to configure the safelist collection on a user's mailbox. The following table maps each **Set-MailboxJunkEmailConfiguration** parameter to the corresponding junk email setting in Outlook and Outlook on the web.
 
 |Parameter on Set-MailboxJunkEmailConfiguration|Junk Email Options in Outlook|Junk email settings in Outlook on the web|
 |---|---|---|
@@ -69,7 +71,7 @@ The safelist collection on a mailbox includes the Safe Senders list, the Safe Re
   - **Quarantine**: Domain entries aren't honored (messages from those senders are quarantined). Email address entries are honored (messages from those senders aren't quarantined) if either of the following statements is true:
     - The message isn't identified as malware or high confidence phishing (malware and high confidence phishing messages are quarantined).
     - The email address, URL, or file in the email message isn't in a block entry in the [Tenant Allow/Block](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list).
-- With directory synchronization, domain entries aren't synchronized by default, but you can enable synchronization for domains. For more information, see [Configure Content Filtering to Use Safe Domain Data: Exchange 2013 Help | Microsoft Learn](/exchange/configure-content-filtering-to-use-safe-domain-data-exchange-2013-help).
+- With directory synchronization, domain entries aren't synchronized by default, but you can enable synchronization for domains. For more information, see [Configure content filtering to use safe domain data](/exchange/configure-content-filtering-to-use-safe-domain-data-exchange-2013-help).
 
 To configure the safelist collection on a mailbox, use the following syntax:
 
@@ -142,7 +144,7 @@ The safelist collection (the Safe Senders list, the Safe Recipients list, and th
 
   > Cannot/Unable add to the server Junk E-mail lists. You are over the size allowed on the server. The Junk E-mail filter on the server is disabled until your Junk E-mail lists have been reduced to the size allowed by the server.
 
-  For more information about this limit and how to change it, see [KB2669081](https://support.microsoft.com/help/2669081).
+  For more information about this limit and how to change it, see [Junk email filter size limit in Exchange Online (KB2669081)](https://support.microsoft.com/help/2669081).
 
 - The synchronized safelist collection in Microsoft 365 has the following synchronization limits:
 

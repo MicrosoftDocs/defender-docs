@@ -116,7 +116,7 @@ In the support table, **NA** indicates that the feature isn't available.
 |[Defender for Containers](defender-for-containers-introduction.md)<br/>[Review detailed feature support](support-matrix-defender-for-containers.md) | GA | GA | NA | GA|
 |[DevOps Security](defender-for-devops-introduction.md) | GA | NA | NA | NA|
 |[Defender for Domain Name System (DNS)](defender-for-dns-introduction.md) | GA | GA | NA | GA|
-|[Defender for Key Vault](defender-for-key-vault-introduction.md) | GA | NA | NA | NA|
+|[Defender for Key Vault](defender-for-key-vault-introduction.md) | GA | GA | NA | NA|
 |[Defender for Resource Manager](defender-for-resource-manager-introduction.md) | GA | GA | NA | NA|
 |[Defender for Servers](plan-defender-for-servers.md) Plan 1 (P1) and Plan 2 (P2) <br><br/>[Review detailed feature support](support-matrix-defender-for-servers.md) | GA | GA | NA | NA|
 |[Defender for Storage](defender-for-storage-introduction.md) | GA | GA | NA | NA|
@@ -135,7 +135,7 @@ In the support table, **NA** indicates that the feature isn't available.
 | **DEFENDER FOR SERVERS FEATURES** | | | | |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | GA | GA<sup>[2](#footnote2)</sup> | NA |  NA |
 | **AI SERVICES FEATURES** | | | | |
-| [Suspicious prompt evidence](ai-onboarding.md#enable-suspicious-prompt-evidence) | GA | NA | NA | NA | 
+| [Suspicious prompt evidence](ai-onboarding.md#enable-suspicious-prompt-evidence) | GA | NA | NA | NA |
 | [Data security for AI interactions](ai-onboarding.md#enable-data-security-for-microsoft-foundry-with-microsoft-purview) | Preview | NA | NA | NA |
 | [AI model security](ai-model-security.md) | Preview | NA | NA | NA |
 | [Data and AI security dashboard](data-aware-security-dashboard-overview.md) | GA | NA | NA | NA |

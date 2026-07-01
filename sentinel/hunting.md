@@ -123,6 +123,9 @@ Threat hunting typically requires reviewing mountains of log data looking for ev
 
 During the hunting and investigation process, you might come across query results that look unusual or suspicious. Bookmark these items to refer back to them in the future, such as when creating or enriching an incident for investigation. Events such as potential root causes, indicators of compromise, or other notable events should be raised as a bookmark. If a key event you bookmarked is severe enough to warrant an investigation, escalate the bookmarked event to an incident.
 
+> [!NOTE]
+> Bookmarks aren't available in Advanced hunting, which provides a unified query experience across Microsoft Defender and Microsoft Sentinel data. However, bookmarks are still available in **Microsoft Sentinel** > **Threat management** > **Hunting**, which provides the Microsoft Sentinel-specific hunting experience. You can also use alternatives such as incident tags, saved queries, or custom hunting tables to preserve and track investigation context.
+
 - In your results, mark the checkboxes for any rows you want to preserve, and select **Add bookmark**. Selecting **Add bookmark** creates a bookmark for each marked row that contains the row results and the query that created the results. You can add your own tags and notes to each bookmark.
 
   - As with scheduled analytics rules, you can enrich your bookmarks with entity mappings to extract multiple entity types and identifiers, and MITRE ATT&CK mappings to associate particular tactics and techniques.

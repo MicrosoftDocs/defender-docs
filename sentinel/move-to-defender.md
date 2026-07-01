@@ -5,7 +5,7 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: soulisabag
 ms.topic: how-to #Required; leave this attribute/value as-is
-ms.date: 06/15/2026
+ms.date: 06/22/2026
 ms.collection: usx-security
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
@@ -62,7 +62,7 @@ The following table provides additional details and links so that you can compar
 
 |Area of support |Azure portal |Defender portal  |
 |---------|---------|---------|
-|**BCDR**     | Customers are responsible for replicating their data        |  Microsoft Defender uses automation for BCDR on control panes.       |
+|**Business continuity and disaster recovery (BCDR)**     | Customers are responsible for replicating their data        |  Microsoft Defender uses automation for BCDR on control planes.       |
 |**Data storage and processing**  |   - [Data storage location](geographical-availability-data-residency.md#data-storage-location) <br>- [Supported regions](geographical-availability-data-residency.md#supported-regions)      |  [Data storage location](/defender-xdr/data-privacy#data-storage-location)       |
 |**Data retention**     |  [Data retention](geographical-availability-data-residency.md#data-retention)    | [Data retention](/defender-xdr/data-privacy#data-retention)      |
 |**Data sharing**     |  [Data sharing](geographical-availability-data-residency.md#data-sharing-for-microsoft-sentinel)       |  [Data sharing](/defender-xdr/data-privacy#data-sharing)       |
@@ -93,7 +93,7 @@ For more information about multitenant and multi-workspace configuration, see:
 
 - [**Azure Lighthouse documentation**](/azure/lighthouse/how-to/manage-sentinel-workspaces). Azure Lighthouse lets you use Microsoft Sentinel data from other tenants across onboarded workspaces. For example, you can run cross-workspace queries with the `workspace()` operator in Advanced hunting and analytics rules.
 
-- [**Microsoft Entra B2B**](/entra/identity/multi-tenant-organizations/overview#b2b-direct-connect). Microsoft Entra B2B lets you access data across tenants. GDAP for Microsoft Sentinel is in preview.
+- [**Microsoft Entra B2B**](/entra/identity/multi-tenant-organizations/overview#b2b-direct-connect). Microsoft Entra B2B lets you access data across tenants. Granular Delegated Admin Privileges (GDAP) for Microsoft Sentinel is in preview.
 
 ## Configure and review your settings and content
 
@@ -109,12 +109,14 @@ In multi-workspace environments, the Microsoft Defender XDR connector is connect
 
 From a Log Analytics perspective, Microsoft Sentinel’s integration into Microsoft Defender doesn't change how Microsoft Sentinel stores log data in Log Analytics. Despite the front-end unification, the Microsoft Sentinel backend remains fully integrated with Log Analytics for data storage, search, and correlation.
 
-Alerts related to Defender products are streamed directly from the [Microsoft Defender XDR connector](/azure/sentinel/connect-microsoft-365-defender) to ensure consistency. Make sure that you have incidents and alerts from this connector turned on in your workspace. Once you have this data connector configured in your workspace, [offboarding the workspace from Microsoft Defender](/unified-secops/microsoft-sentinel-onboard#offboard-microsoft-sentinel) also disconnects the Microsoft Defender XDR connector.
+Alerts related to Defender products are streamed directly from the [Microsoft Defender connector](/azure/sentinel/connect-microsoft-365-defender) to ensure consistency. Make sure that you have incidents and alerts from this connector turned on in your workspace. Once you have this data connector configured in your workspace, [offboarding the workspace from Microsoft Defender](/unified-secops/microsoft-sentinel-onboard#offboard-microsoft-sentinel) also disconnects the Microsoft Defender connector.
 
 > [!NOTE]
 > This change in connectors results in schema differences for some alerts. For a detailed comparison, see [Alert schema differences: Standalone vs. Microsoft Defender XDR connector](security-alert-schema-differences.md).
 
-For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](connect-microsoft-365-defender.md).
+To migrate analytics rule incident creation and alert grouping settings, see [Migrate Microsoft Sentinel incident creation rules and alert grouping settings to Defender XDR](/unified-secops-platform/migrate-sentinel-incident-creation-rules-alert-grouping).
+
+For more information, see [Connect data from Microsoft Defender to Microsoft Sentinel](connect-microsoft-365-defender.md).
 
 #### Integrate with Microsoft Defender for Cloud
 
@@ -157,7 +159,7 @@ When moving to the Defender portal, the following changes are important to note:
 
 | Feature    | Description    |
 |--------------|-----|
-| **Custom detection rules**   | If you have detection use cases that involve both Defender XDR and Microsoft Sentinel data,  where you don't need to retain Defender XDR data for more than 30 days, we recommend creating [custom detection rules](/defender-xdr/custom-detections-overview) that query data from both Microsoft Sentinel and Defender XDR tables. <br><br>This is supported without needing to ingest Defender XDR data into Microsoft Sentinel. For more information, see [Use Microsoft Sentinel custom functions in advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-defender-use-custom-rules#custom-detection-rules). |
+| **Custom detection rules**   | If you have detection use cases that involve both Defender XDR and Microsoft Sentinel data, where you don't need to retain Defender XDR data for more than 30 days, we recommend creating [custom detection rules](/defender-xdr/custom-detections-overview) that query data from both Microsoft Sentinel and Defender XDR tables. <br><br>This is supported without needing to ingest Defender XDR data into Microsoft Sentinel. For more information, see [Use Microsoft Sentinel custom functions in advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-defender-use-custom-rules#custom-detection-rules). |
 | **Alert correlation**     | In the Defender portal, correlations are automatically applied to alerts against both Microsoft Defender data and third-party data ingested from Microsoft Sentinel, regardless of alert scenarios. <br><br>The criteria used to correlate alerts together in a single incident are part of the Defender portal's proprietary, internal correlation logic. For more information, see [Alert correlation and incident merging in the Defender portal](/defender-xdr/alerts-incidents-correlation).  |
 | **Alert grouping and incident merging**       | While you will still see the alert grouping configuration in Analytics rules, the [Defender XDR correlation engine](/defender-xdr/alerts-incidents-correlation) fully controls alert grouping and incident merging when necessary in the Defender portal. This ensures a comprehensive view of the full attack story by stitching together relevant alerts for multi-stage attacks. <br><br>For example, multiple individual analytics rules configured to generate an incident for each alert may result in merged incidents if they match Defender XDR correlation logic. |
 | **Alert visibility**   | If you have Microsoft Sentinel analytics rules configured to trigger alerts only (see [Configure incident creation settings](create-analytics-rules.md#configure-the-incident-creation-settings)), with incident creation turned off, these alerts aren't visible in the Defender portal.               |
@@ -177,7 +179,7 @@ The following limitations apply to Microsoft Sentinel automation rules and playb
 The unified experience in the Defender portal introduces notable changes to incidents and alerts from APIs. It supports API calls based on the [Microsoft Graph REST API v1.0](/graph/api/resources/security-api-overview?view=graph-rest-1.0&preserve-view=true), which can be used for automation related to alerts, incidents, advanced hunting, and more.
 
 The [Microsoft Sentinel API](/rest/api/securityinsights/api-versions) continues to support actions against Microsoft Sentinel resources, like analytics rules, automation rules and more.   For interacting with unified incidents and alerts, we recommend that you use the Microsoft Graph REST API.
-If you're using the Microsoft Sentinel `SecurityInsights` API to interact with Microsoft Sentinel incidents, you may need to update your automation conditions and trigger criteria due to changes in the response body.
+If you're using the Microsoft Sentinel `SecurityInsights` API to interact with Microsoft Sentinel incidents, you might need to update your automation conditions and trigger criteria due to changes in the response body.
 
 The following table lists fields that are important in the response snippets, and compares them across the Azure and Defender portals:
 
@@ -206,7 +208,7 @@ The following table lists fields that are important in the response snippets, an
 
 ### Update incident triage processes for the Defender portal
 
-If you've used Microsoft Sentinel in the Azure portal, you'll notice significant user experience enhancements in the Defender portal. While you may need to update SOC processes and retrain your analysts, the design consolidates all relevant information in a single place to provide more streamlined and efficient workflows.
+If you've used Microsoft Sentinel in the Azure portal, you'll notice significant user experience enhancements in the Defender portal. While you might need to update SOC processes and retrain your analysts, the design consolidates all relevant information in a single place to provide more streamlined and efficient workflows.
 
 The unified incident queue in the Defender portal consolidates all incidents across products into a single view, impacting how analysts triage incidents that now contain multiple, cross-security domain alerts. For example:
 
@@ -216,6 +218,8 @@ The unified incident queue in the Defender portal consolidates all incidents acr
 Analysts can also view detection sources and product names in the Defender portal, and apply and share filters for more efficient incident and alert triage.
 
 The unified triage process can help reduce analyst workloads and even potentially combine the roles of tier 1 and tier 2 analysts. However, the unified triage process can also require broader and deeper analyst knowledge. We recommend training on the new portal interface to ensure a smooth transition.
+
+The Defender portal also provides investigation capabilities that aren't available in the Azure portal, including the [attack story and incident graph](/defender-xdr/investigate-incidents#attack-story) for visualizing the full scope of an attack, and [blast radius analysis](/defender-xdr/investigate-incidents#blast-radius-analysis) to help analysts visualize possible propagation paths, assess business impact, and prioritize containment actions.
 
 For more information, see [Incidents and alerts in the Microsoft Defender portal](/defender-xdr/incidents-overview?toc=%2Fazure%2Fsentinel%2FTOC.json&bc=%2Fazure%2Fsentinel%2Fbreadcrumb%2Ftoc.json).
 
@@ -243,7 +247,7 @@ For more information, see [Incidents and alerts in the Microsoft Defender portal
 
 After onboarding Microsoft Sentinel to the Defender portal, access and use all your existing log tables, Kusto Query Language (KQL) queries, and functions in the **Advanced hunting** page. All Microsoft Sentinel alerts that are tied to incidents are ingested into the `AlertInfo` table, accessible from the **Advanced hunting** page.
 
-Some differences exist, such as bookmarks aren't supported in **Advanced hunting**. Instead, bookmarks are supported in the Defender portal under **Microsoft Sentinel > Threat management > Hunting**.
+Bookmarks aren't available in Advanced hunting, which provides a unified query experience across Microsoft Defender and Microsoft Sentinel data. However, bookmarks are still available in **Microsoft Sentinel** > **Threat management** > **Hunting**, which provides the Microsoft Sentinel-specific hunting experience. You can also use alternatives such as incident tags, saved queries, or custom hunting tables to preserve and track investigation context.
 
 For more information, see [Advanced hunting with Microsoft Sentinel data in Microsoft Defender](/defender-xdr/advanced-hunting-microsoft-defender), especially the list of [known issues for advanced hunting with Microsoft Sentinel data](/defender-xdr/advanced-hunting-microsoft-defender), and [Keep track of data during hunting with Microsoft Sentinel](/azure/sentinel/bookmarks).
 
@@ -300,7 +304,7 @@ For more information, see [Visualize and monitor your data by using workbooks in
 
 ### Similar incidents (Preview) aren't supported in the Defender portal
 
-The Microsoft Sentinel [similar incidents in case investigations](investigate-cases.md#similar-incidents-preview) feature is in Preview, isn't supported in the Defender portal. This means that when viewing an incident details page in the Defender portal, the **Similar incidents** tab isn't available.
+The Microsoft Sentinel [similar incidents in case investigations](investigate-cases.md#similar-incidents-preview) feature is in Preview and isn't supported in the Defender portal. This means that when viewing an incident details page in the Defender portal, the **Similar incidents** tab isn't available.
 
 ## Related content
 

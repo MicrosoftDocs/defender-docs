@@ -9,9 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create end-user notification email messages for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/14/2024
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # End-user notifications for Attack simulation training
@@ -35,7 +37,7 @@ To see the available end-user notifications, open the Microsoft Defender portal 
 The following information is shown for each notification. You can sort the notifications by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Notifications**: The name of the notification.
-- **⋮** (**Actions** control): Take action on the notification. The available actions depend on the **Status** value of the notification as described in the procedure sections.
+- **⋮** (**Actions** control): Take action on the notification. The available actions depend on the **Status** value of the notification as described in [Modify end-user notifications](#modify-end-user-notifications), [Copy end-user notifications](#copy-end-user-notifications), and [Remove end-user notifications](#remove-end-user-notifications).
 - **Language**: If the notification contains multiple translations, the first two languages are shown directly. To see the remaining languages, hover over the numeric icon (for example, **+10**).
 - **Type**: The value is **Positive reinforcement notification**, **Simulation notification**, **Training assignment notification**, or **Training reminder notification**.
 - **Source**: For built-in notifications, the value is **Global**. For custom notifications, the value is **Tenant**.
@@ -83,6 +85,8 @@ On the details flyout from the **Tenant notifications** tab only, select **Edit 
 > To see details about other notifications without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 ## Create end-user notifications
+
+To create a custom end-user notification, use the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> **End user notifications** \> and then select the **Tenant notifications** tab. To go directly to the **Content library** tab where you can select **End user notifications**, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 
@@ -198,7 +202,7 @@ When you copy a custom notification on the **Tenant notifications** tab, a copy 
 
 When you copy a built-in notification on the **Global notifications** tab, a **Create copy** dialog appears. The dialog confirms that a copy of the notification was created, and is available on the **Tenant notifications** tab. If you select **Go to Tenant notification** you're taken to the **Tenant notifications** tab, where the copied built-in notification is named "\<OriginalName\> - Copy" is available. If you select **Stay here** in the dialog, you return to the **Global notifications** tab.
 
-After the copy is created, you can modify it as [previously described](#modify-end-user-notifications).
+After the copy is created, you can modify it by following the steps in [Modify end-user notifications](#modify-end-user-notifications).
 
 > [!TIP]
 > When you're creating or editing a notification, the **Use from default** control on the **Text** tab of the **Add content in default language** step in the end-user notification wizard also allows you to copy the contents of a built-in notification.
@@ -214,9 +218,12 @@ To remove an existing custom notification from the **Tenant notifications** tab,
 
 In the confirmation dialog that opens, select **Delete**.
 
-## Related links
+<a name="related-links"></a>
+## Related content
 
-[Get started using Attack simulation training](attack-simulation-training-get-started.md)
+For more information about Attack simulation training, see the following articles:
+
+- [Get started using Attack simulation training](attack-simulation-training-get-started.md)
 
 [Create a phishing attack simulation](attack-simulation-training-simulations.md)
 

@@ -82,7 +82,7 @@ For the full list of requirements, supported operating systems, and modes, see [
    - Adds `c:\demo` to the CFA protected folders list (without affecting your other protected folders).
 
    > [!NOTE]
-   > The setup and cleanup scripts adjust CFA because they're shared with the [CFA block app](defender-endpoint-demonstration-controlled-folder-access-test-tool.md) and [CFA ransomware](defender-endpoint-demonstration-controlled-folder-access.md) demonstrations. None of the ASR rule scenarios in this article use CFA. The setup script adds `c:\demo` to the CFA protected folders list but doesn't enable CFA, so the entry has no effect on this demonstration. The cleanup script disables CFA, so before you run the setup script, check your current [CFA mode](controlled-folders.md) and note the value so that you can [restore it during cleanup](#clean-up-the-demonstration):
+   > The setup and cleanup scripts adjust CFA because they're shared with the [CFA block app](defender-endpoint-demonstration-controlled-folder-access-block-app.md) and [CFA ransomware](defender-endpoint-demonstration-controlled-folder-access-ransomware.md) demonstrations. None of the ASR rule scenarios in this article use CFA. The setup script adds `c:\demo` to the CFA protected folders list but doesn't enable CFA, so the entry has no effect on this demonstration. The cleanup script disables CFA, so before you run the setup script, check your current [CFA mode](controlled-folder-access-overview.md#modes-for-cfa) and note the value so that you can [restore it during cleanup](#clean-up-the-demonstration):
    >
    > ```powershell
    > Get-MpPreference | Format-List EnableControlledFolderAccess
@@ -161,8 +161,6 @@ You should immediately see an "Action blocked" notification.
 
 ### Scenario 2: An individual ASR rule blocks its matching test file
 
-Use this scenario to test a single ASR rule against its matching demo file.
-
 1. Configure the individual rule you want to test. For example, to enable the **Block all Office applications from creating child processes** rule, run the following command in an elevated PowerShell window:
 
    ```powershell
@@ -214,7 +212,7 @@ If you ran the setup script, undo the demonstration by running the cleanup scrip
 
 1. The cleanup script is unsigned, so set the execution policy and unblock the script as described in [Set up the demonstration](#set-up-the-demonstration). Then run the cleanup script in an elevated PowerShell window.
 
-   The cleanup script sets CFA to **Disabled**. If CFA was enabled before you started, restore the [CFA mode](controlled-folders.md) that you noted in [Set up the demonstration](#set-up-the-demonstration). Replace `<mode>` with your noted value, and then run the following command in an elevated PowerShell window:
+   The cleanup script sets CFA to **Disabled**. If CFA was enabled before you started, restore the [CFA mode](controlled-folder-access-overview.md#modes-for-cfa) that you noted in [Set up the demonstration](#set-up-the-demonstration). Replace `<mode>` with your noted value, and then run the following command in an elevated PowerShell window:
 
    ```powershell
    Set-MpPreference -EnableControlledFolderAccess <mode>

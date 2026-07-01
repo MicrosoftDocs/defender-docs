@@ -52,22 +52,7 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
 ## Manage threat detections in Microsoft Intune
 
-You can manage threat detections for any devices that are [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment) using the following steps:
-
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign-in.
-
-1. In the navigation pane, select **Endpoint security**.
-
-1. Under **Manage**, select **Antivirus**. You see tabs for **Summary**, **Unhealthy endpoints**, and **Active malware**.
-
-1. Review the information on the available tabs, and then take action as necessary.
-
-    For example, when you can select a device that is listed under the **Active malware** tab, you can choose one action from the list of actions provided:
-     - Restart
-     - Quick Scan
-     - Full Scan
-     - Sync
-     - Update signatures
+To manage threat detections for any devices that are [enrolled in Microsoft Intune](/intune/intune-service/fundamentals/deployment-guide-enrollment), see <a href="/intune/device-management/reports/overview#security-reports" target ="_blank">Security reports</a> (opens in a new tab in the Intune documentation).
 
 ## FAQs
 

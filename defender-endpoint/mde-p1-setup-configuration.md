@@ -137,11 +137,7 @@ We recommend using [Intune](/mem) to manage your organization's devices and secu
 
 :::image type="content" source="/defender/media/mde-p1/endpoint-policies.png" alt-text="Screenshot of endpoint security policies in the Intune portal." lightbox="/defender/media/mde-p1/endpoint-policies.png":::
 
-To configure your next-generation protection in Intune, follow these steps:
-
-1. Go to the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in.
-
-1. Select **Endpoint security** > **Antivirus**, and then select an existing policy. (If you don't have an existing policy, create a new policy.)
+To configure your next-generation protection in Intune, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Choose the following options:
 
 1. Set or change your antivirus configuration settings. Need help? Refer to the following resources:
    - [Settings for Windows 10 Microsoft Defender Antivirus policy in Microsoft Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows)
@@ -156,7 +152,7 @@ Attack surface reduction is all about reducing the places and ways your organiza
 |Feature/capability|Description|
 |---|---|
 |[Attack surface reduction (ASR) rules](#attack-surface-reduction-asr-rules)|ASR rules target risky software behavior on Windows devices that attackers commonly exploit through malware (for example, launching scripts that download files, running obfuscated scripts, and injecting code into other processes).|
-|[Ransomware mitigation](#ransomware-mitigation)|Set up ransomware mitigation by configuring controlled folder access, which helps protect your organization's valuable data from malicious apps and threats, such as ransomware.|
+|[Ransomware mitigation](#ransomware-mitigation)|Set up ransomware mitigation by configuring controlled folder access (CFA), which helps protect your organization's valuable data from malicious apps and threats, such as ransomware.|
 |[Device control](#device-control)|Configure device control settings for your organization to allow or block removable devices (such as USB drives).|
 |[Network protection](#network-protection)|Set up network protection to prevent people in your organization from using applications that access dangerous domains or malicious content on the Internet.|
 |[Web protection](#web-protection)|Set up web threat protection to protect your organization's devices from phishing sites, exploit sites, and other untrusted or low-reputation sites. Set up web content filtering to track and regulate access to websites based on their content categories (such as Leisure, High bandwidth, Adult content, or Legal liability).|
@@ -173,76 +169,42 @@ Typically, you can enable the [standard protection rules](attack-surface-reducti
 
 ### Ransomware mitigation
 
-You get ransomware mitigation through [controlled folder access](controlled-folders.md#what-is-controlled-folder-access), which allows only trusted apps to access protected folders on your endpoints.
+You get ransomware mitigation through [controlled folder access](controlled-folder-access-overview.md), which allows only trusted apps to access protected folders on your endpoints.
 
 To configure controlled folder access in Intune, see [Configure ASR rules and exclusions in Intune using endpoint security policies](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-intune-using-endpoint-security-policies). Use the **Enable controlled folder access**, **Controlled folder access protected folders**, and **Controlled folder access allowed applications** settings in the policy.
 
-For more information, see [Protect important folders with controlled folder access](controlled-folders.md).
+For more information, see [Controlled folder access (CFA) overview](controlled-folder-access-overview.md).
 
 ### Device control
 
-You can configure Defender for Endpoint to block or allow removable devices and files on removable devices. We recommend using Intune to configure your device control settings.
+You can configure Defender for Endpoint to block or allow removable devices and files on removable devices. To use Intune to configure your device control settings, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-:::image type="content" source="/defender/media/mde-p1/mem-admintemplates.png" alt-text="Screenshot of Intune administrative templates." lightbox="/defender/media/mde-p1/mem-admintemplates.png":::
+- **Platform**: Windows 10 or later
+- **Profile type**: Templates
+- **Template name** Administrative templates
+- **Configuration settings**: **All Settings**, then type `Removable` in the search box to see all the settings that pertain to removable devices.
+    Select an item in the list, such as **All Removable Storage classes, Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting and  choose **OK**.
+- **Scope tags**: **+ Select scope tags**, then select the tags you want to use.
+- **Assignments**: **Add all users** and **+ Add all devices**.
 
-1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
-
-1. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
-
-1. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**.
-
-1. Under **Template name**, select **Administrative Templates**, and then choose **Create**.
-
-1. On the **Basics** tab, name the policy and add a description. Select **Next**.
-
-1. On the **Configuration settings** tab, select **All Settings**. Then in the search box, type `Removable` to see all the settings that pertain to removable devices.
-
-1. Select an item in the list, such as **All Removable Storage classes, Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**.
-
-1. Repeat step 6 for each setting that you want to configure. Then choose **Next**.
-
-1. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**.
-
-1. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
-
-1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
-
-1. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
 > [!TIP]
 > For more information, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](device-control-overview.md).
 
 ### Network protection
 
-With network protection, you can help protect your organization against dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet. We recommend using Intune to turn on network protection.
+With network protection, you can help protect your organization against dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet. To use Intune to turn on network protection, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings:
 
-:::image type="content" source="/defender/media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Screenshot of endpoint protection profile in the Intune portal." lightbox="/defender/media/mde-p1/mem-endpointprotectionprofile.png":::
+- **Platform**: **Windows 10 and later**
+- **Profile type**: **Templates**
+- **Template name**: **Endpoint protection**
+- **Configuration settings**: Expand **Microsoft Defender Exploit Guard**, then expand **Network filtering**
+  - Set **Network protection** to **Enable**. (You can alternately choose **Audit** to see how network protection works in your environment at first.)
+- **Assignments**: **Add all users** and **+ Add all devices** (You can alternately specify specific groups of users or devices.)
+- **Applicability Rules** : Set up a rule. The profile you're configuring is applied only to devices that meet the combined criteria you specify. For example, you might choose to assign the policy to endpoints that are running a certain OS edition only.
 
-1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
-
-1. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
-
-1. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**.
-
-1. Under **Template name**, select **Endpoint protection**, and then choose **Create**.
-
-1. On the **Basics** tab, name the policy and add a description. Select **Next**.
-
-1. On the **Configuration settings** tab, expand **Microsoft Defender Exploit Guard**, and then expand **Network filtering**.
-
-    a. Set **Network protection** to **Enable**. (You can alternately choose **Audit** to see how network protection works in your environment at first.)
-
-    a. Then choose **Next**.
-
-1. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
-
-1. On the **Applicability Rules** tab, set up a rule. The profile you're configuring is applied only to devices that meet the combined criteria you specify.
-
-    a. For example, you might choose to assign the policy to endpoints that are running a certain OS edition only.
-
-    a. Then choose **Next**.
-
-1. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
 > [!TIP]
 > You can use other methods, such as Windows PowerShell or Group Policy, to enable network protection. To learn more, see [Turn on network protection](enable-network-protection.md).

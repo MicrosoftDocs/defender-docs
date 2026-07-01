@@ -59,6 +59,9 @@ The following table shows the different possible scenarios that cause an automat
 | **When incident is updated** | <li>An incident's status is changed (closed/reopened/triaged).<li>An incident's owner is assigned or changed.<li>An incident's severity is raised or lowered.<li>Alerts are added to an incident.<li>Comments, tags, or tactics are added to an incident. |
 | **When alert is created** | <li>An alert is created by a Microsoft Sentinel **Scheduled** or **NRT** analytics rule. |
 
+> [!NOTE]
+> **In the Defender portal:** Alert triggers work only on Microsoft Sentinel alerts. To automate responses to alerts across Microsoft Sentinel, Microsoft Defender, and XDR platforms, use the **[Enhanced Alert Trigger](automation/generate-playbook.md#enhanced-alert-trigger)**.
+
 ## Create your automation rule
 
 The steps in this section apply to most automation rule scenarios.
@@ -86,6 +89,9 @@ If you want to create an automation rule to apply to a specific analytics rule, 
 ### Choose your trigger
 
 From the **Trigger** drop-down, select the appropriate trigger according to the circumstance for which you're creating the automation rule&mdash;**When incident is created**, **When incident is updated**, or **When alert is created**.
+
+> [!NOTE]
+> If your workspace is onboarded to the Microsoft Defender portal, the trigger drop-down also includes the **Case created** and **Case updated** triggers from [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview).
 
 :::image type="content" source="media/create-manage-use-automation-rules/select-trigger.png" alt-text="Screenshot of selecting the incident create or incident update trigger.":::
 
@@ -251,6 +257,8 @@ In this example, if the incident has the custom detail *DestinationEmail*, and i
 ### Add actions
 
 Choose the actions you want this automation rule to take. Available actions include **Assign owner**, **Change status**, **Change severity**, **Add tags**, and **Run playbook**. You can add as many actions as you like.
+
+If your workspace is onboarded to the Microsoft Defender portal, [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview) adds more pre-built case and alert actions to this list that don't require a playbook: **Send Case Created/Updated/SLA Exceeded Email**, **Update Case**, **Add Task**, and **Update Alert**.
 
 > [!NOTE]
 > Only the **Run playbook** action is available in automation rules using the **alert trigger**.

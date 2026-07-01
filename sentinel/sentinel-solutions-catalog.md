@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sentinel content hub catalog | Microsoft Docs
+title: Microsoft Sentinel content hub catalog
 description: Learn about domain specific solutions available in the content hub for Microsoft Sentinel and where to find the full list of solutions.
 author: EdB-MSFT
 ms.topic: reference

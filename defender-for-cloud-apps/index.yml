@@ -24,7 +24,7 @@ landingContent:
         links:
           - text: What is Defender for Cloud Apps?
             url: ./what-is-defender-for-cloud-apps.md
-          - text: Defender for Cloud Apps and zero trust monitoring
+          - text: Defender for Cloud Apps and Zero Trust monitoring
             url: zero-trust.md
       - linkListType: whats-new
         links:
@@ -131,8 +131,8 @@ landingContent:
           - text: Investigate app governance threat detections
             url: app-governance-anomaly-detection-alerts.md
           - text: Create app governance app policies
-            url: app-governance-app-policies-get-started.md
-          - text: Monitor and respond to unusual data usage
-            url: app-governance-monitor-apps-unusual-data-usage.md
+            url: app-governance-app-policies-create.md
+          - text: Investigate predefined policy alerts
+            url: app-governance-investigate-predefined-policies.md
           - text: Secure apps with app hygiene
             url: app-governance-secure-apps-app-hygiene-features.md

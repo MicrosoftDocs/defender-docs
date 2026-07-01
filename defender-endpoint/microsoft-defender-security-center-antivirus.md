@@ -137,7 +137,7 @@ Use the following steps to configure ransomware protection and recovery options 
 
 1. Under **Ransomware protection**, select **Manage ransomware protection**.
 
-1. To change **Controlled folder access** settings, see [Protect important folders with Controlled folder access](controlled-folders.md).
+1. To change **Controlled folder access** (CFA) settings, see [Configure controlled folder access (CFA)](controlled-folder-access-configure.md).
 
 1. To set up ransomware recovery options, select **Set up** under **Ransomware data recovery** and follow the instructions for linking or setting up your OneDrive account so you can easily recover from a ransomware attack.
 

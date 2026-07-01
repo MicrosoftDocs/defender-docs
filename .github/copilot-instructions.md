@@ -60,6 +60,9 @@ Below are instructions specific to this repository. These may be updated by repo
 - Never use the word "across" (use alternatives like "in," "on," "throughout," or "for").
 - Never use internal engineering jargon in customer-facing content. For example, avoid terms like "fire" (for alerts), "mixed-mode," or "mixed-environment." Instead, use plain, descriptive language (for example, "the alert appears," "credentials are validated," "environments with both v2 and v3 sensors").
 
+### Pull Requests
+
+This is a fork of `MicrosoftDocs/defender-docs-pr`. When creating pull requests, always target the upstream repo (`MicrosoftDocs/defender-docs-pr`) by using `--repo MicrosoftDocs/defender-docs-pr`. Do not create PRs against this fork.
 
 ### Authoritative security content
 

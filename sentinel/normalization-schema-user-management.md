@@ -1,5 +1,5 @@
 ---
-title: Microsoft Sentinel user management normalization schema reference | Microsoft Docs
+title: Microsoft Sentinel user management normalization schema reference
 description: This article describes the Microsoft Sentinel user management normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT

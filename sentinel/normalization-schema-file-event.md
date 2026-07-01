@@ -1,5 +1,5 @@
 ---
-title: The Advanced Security Information Model (ASIM) File Event normalization schema reference| Microsoft Docs
+title: The Advanced Security Information Model (ASIM) File Event normalization schema reference
 description: This article describes the Microsoft Sentinel File Event normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT

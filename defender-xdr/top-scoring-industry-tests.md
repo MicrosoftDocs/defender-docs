@@ -1,7 +1,7 @@
 ---
-title: Top scoring in industry tests - Microsoft Defender XDR
+title: Top scoring in industry tests - Microsoft Defender
 ms.reviewer:
-description: View the latest scores and analysis of Microsoft Defender XDR. It consistently achieves high scores in independent tests (AV-TEST, AV Comparatives, SE Labs, MITRE ATT&CK). View the latest scores and analysis.
+description: View the latest scores and analysis of Microsoft Defender. It consistently achieves high scores in independent tests (AV-TEST, AV Comparatives, SE Labs, MITRE ATT&CK). View the latest scores and analysis.
 ms.service: defender-xdr
 ms.localizationpriority: high
 ms.author: guywild
@@ -23,15 +23,15 @@ ms.date: 02/16/2021
 
 <a name='microsoft-365-defender'></a>
 
-## Microsoft Defender XDR
+## Microsoft Defender
 
-[Microsoft Defender XDR](microsoft-365-defender.md) is a unified pre- and post-breach enterprise defense suite. It natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
+[Microsoft Defender](microsoft-365-defender.md) is a unified pre- and post-breach enterprise defense suite. It natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
 
-Microsoft Defender XDR combines the capabilities of [Microsoft Defender for Endpoint](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp), [Microsoft Defender for Office 365](https://www.microsoft.com/microsoft-365/exchange/advance-threat-protection), [Microsoft Defender for Identity](https://azure.microsoft.com/features/azure-advanced-threat-protection/), [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection), and [Microsoft Defender for Cloud Apps](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/cloud-app-security) into a single solution.
+Microsoft Defender combines the capabilities of [Microsoft Defender for Endpoint](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp), [Microsoft Defender for Office 365](https://www.microsoft.com/microsoft-365/exchange/advance-threat-protection), [Microsoft Defender for Identity](https://azure.microsoft.com/features/azure-advanced-threat-protection/), [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection), and [Microsoft Defender for Cloud Apps](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/cloud-app-security) into a single solution.
 
 ### MITRE: Demonstrated real-world detection, response, and protection from advanced attacks
 
-Core to MITRE's testing approach is emulating real-world attacks to understand whether solutions can adequately detect and respond to them. While the test focused on endpoint detection and response, MITRE's simulated APT29 attack spans multiple attack domains, creating opportunities to empower defenders beyond just endpoint protection. Microsoft expanded visibility beyond the endpoint with Microsoft Defender XDR.
+Core to MITRE's testing approach is emulating real-world attacks to understand whether solutions can adequately detect and respond to them. While the test focused on endpoint detection and response, MITRE's simulated APT29 attack spans multiple attack domains, creating opportunities to empower defenders beyond just endpoint protection. Microsoft expanded visibility beyond the endpoint with Microsoft Defender.
 
 - ATT&CK-based evaluation of Microsoft Defender XDR - April 2022: [Microsoft Defender XDR demonstrates industry-leading protection in the 2022 MITRE Engenuity ATT&CK&reg; Evaluations]([Microsoft Security Blog: Microsoft Defender XDR demonstrates industry-leading protection in the 2022 MITRE Engenuity ATT&CK&reg; Evaluations](https://www.microsoft.com/en-us/security/blog/2022/04/05/microsoft-365-defender-demonstrates-industry-leading-protection-in-the-2022-mitre-engenuity-attck-evaluations/))
 
