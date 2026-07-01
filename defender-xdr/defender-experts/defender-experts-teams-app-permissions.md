@@ -26,21 +26,21 @@ ms.date: 04/21/2026
 
 **Applies to:**
 
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md)
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md)
+- [Microsoft Defender Experts Hunting](defender-experts-hunting-overview.md)
 
 You might encounter issues when setting up or using the Microsoft Defender Experts app in Microsoft Teams. Use the following guidance to diagnose and resolve them.
 
 ## App policy permissions
 
 > [!NOTE]
-> Some screenshots use Defender Experts for XDR as an example. Unless otherwise noted, the Teams app setup and troubleshooting steps are the same for Defender Experts for Hunting.
+> Some screenshots use Defender Experts MDR as an example. Unless otherwise noted, the Teams app setup and troubleshooting steps are the same for Defender Experts Hunting.
 
 The Microsoft Defender Experts app is available for Microsoft Teams by default. However, some environments might have limitations that block the app's installation because of app policy permissions in Teams. [Learn how to check Teams app permissions policies](#check-the-teams-app-permission-policies).
 
 :::image type="content" source="media/teams-restrictions-dexapp/teams-communication-issues.png" alt-text="Screenshot of Teams showing a communication restriction notification for the Defender Experts channel." lightbox="media/teams-restrictions-dexapp/teams-communication-issues.png":::
 
-When you join the Defender Experts Teams channel, you can mention or tag the Defender Experts bot in the channel by typing _@Defender Experts_. If the bot doesn't show up in the list of suggestions, Teams permissions policies might prevent the app from functioning. To learn more, see [communicating with Defender Experts for XDR](communicate-defender-experts-xdr.md).
+When you join the Defender Experts Teams channel, you can mention or tag the Defender Experts bot in the channel by typing _@Defender Experts_. If the bot doesn't show up in the list of suggestions, Teams permissions policies might prevent the app from functioning. To learn more, see [communicating with Defender Experts MDR](defender-experts-mdr-communication.md).
 
 The following screenshot is an example of the missing bot:
 
@@ -123,5 +123,5 @@ To verify your organization’s group settings, use one of the following options
 
 ## Related content
 
-- [Communicating with Defender Experts for XDR](communicate-defender-experts-xdr.md)
-- [Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
+- [Communicating with Defender Experts MDR](defender-experts-mdr-communication.md)
+- [Get started with Microsoft Defender Experts MDR](defender-experts-mdr-get-started.md)

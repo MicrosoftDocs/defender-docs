@@ -27,14 +27,14 @@ ai-usage: ai-assisted
 
 # Collaborate with experts on demand
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
 
-- [Microsoft Defender](microsoft-365-defender.md)
+- [Microsoft Defender](../microsoft-365-defender.md)
 
 > [!NOTE]
-> Ask Defender Experts is included in your Defender Experts for Hunting subscription with [quarterly allocations](before-you-begin-defender-experts.md#eligibility-and-licensing).
+> Ask Defender Experts is included in your Defender Experts Hunting subscription with [quarterly allocations](defender-experts-hunting-prerequisites.md#eligibility-and-licensing).
 
 Select **Ask Defender Experts** directly inside the Microsoft 365 security portal to get swift and accurate responses to all your threat hunting questions. Experts can provide insight to better understand the complex threats your organization might face. Ask Defender Experts can help:
 
@@ -55,9 +55,9 @@ To view and submit inquiries to Defender experts, select one of the following Mi
 | Global Reader | Read inquiries |
 | Security Admin, Security Operator, or Security Reader | Read and submit inquiries |
 
-To learn more about how Microsoft Entra ID roles map to Microsoft Defender unified RBAC permissions, see [Microsoft Entra Global roles access](compare-rbac-roles.md#microsoft-entra-global-roles-access).
+To learn more about how Microsoft Entra ID roles map to Microsoft Defender unified RBAC permissions, see [Microsoft Entra Global roles access](../compare-rbac-roles.md#microsoft-entra-global-roles-access).
 
-Microsoft Threat Experts customers using Ask Defender Experts can also use the following permissions from [Microsoft Defender unified RBAC](../defender-xdr/custom-permissions-details.md).
+Microsoft Threat Experts customers using Ask Defender Experts can also use the following permissions from [Microsoft Defender unified RBAC](../custom-permissions-details.md).
 
 |Microsoft Defender unified RBAC role|Permission level|
 |---|---|---|
@@ -135,13 +135,13 @@ You can ask Defender Experts questions like the following about threat intellige
 - We recently observed a phishing campaign conducted against our organization. Can you tell us if this was targeted specifically to our company or vertical?
 
 <a name="microsoft-defender-experts-for-hunting-alert-communications"></a>
-### Questions about Defender Experts for Hunting alert communications
+### Questions about Defender Experts Hunting alert communications
 
-The following are examples of questions related to Defender Experts for Hunting notifications:
+The following are examples of questions related to Defender Experts Hunting notifications:
 
 - Can your incident response team help us address the Defender Experts Notification that we got?
-- We received this Defender Experts Notification from Microsoft Defender Experts for Hunting. We don't have our own incident response team. What can we do now, and how can we contain the incident?
-- We received a Defender Experts Notification from Microsoft Defender Experts for Hunting. What data can you provide to us that we can pass on to our incident response team?
+- We received this Defender Experts Notification from Microsoft Defender Experts Hunting. We don't have our own incident response team. What can we do now, and how can we contain the incident?
+- We received a Defender Experts Notification from Microsoft Defender Experts Hunting. What data can you provide to us that we can pass on to our incident response team?
 
 ## Services that aren't in scope for Defender Experts
 
@@ -168,6 +168,6 @@ After you submit inquiries and review responses, learn how to interpret the find
 
 For more information, see the following resource:
 
-- [Understand the Defender Experts for Hunting report in Microsoft Defender](defender-experts-report.md)
+- [Understand the Defender Experts Hunting report in Microsoft Defender](defender-experts-hunting-report.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

@@ -16,13 +16,13 @@ ms.custom:
 - cx-ean
 ms.date: 06/16/2026
 appliesto:
-  - Microsoft Defender XDR
+  - Microsoft Defender
 ai-usage: ai-assisted
 ---
 
 # Access incident notifications using Graph API
 
-[Defender Experts Notifications](onboarding-defender-experts-for-hunting.md#receive-defender-experts-notifications) are incidents that have been generated from hunting conducted by Defender Experts in your environment. They contain information regarding the hunting investigation and recommended actions provided by Defender Experts. You can now access DENs using the [Microsoft Graph security API](/graph/api/resources/security-api-overview).
+[Defender Experts Notifications](defender-experts-hunting-onboarding.md#receive-defender-experts-notifications) are incidents that have been generated from hunting conducted by Defender Experts in your environment. They contain information regarding the hunting investigation and recommended actions provided by Defender Experts. You can now access DENs using the [Microsoft Graph security API](/graph/api/resources/security-api-overview).
 
 > [!NOTE]
 > Any incident in the Microsoft Defender portal is a collection of correlated alerts. [Microsoft Graph security incident resource type](/graph/api/resources/security-incident)
@@ -66,5 +66,5 @@ Your approach to consuming Defender Experts Notifications from the API will vary
 <a name="next-step"></a>
 ## Next step
 
-- [Collaborate with Experts on Demand](experts-on-demand.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+- [Collaborate with Experts on Demand](defender-experts-hunting-ask-experts.md)
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

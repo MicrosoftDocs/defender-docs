@@ -1,7 +1,7 @@
 ---
-title: Get started with Microsoft Defender Experts for XDR
+title: Get started with Microsoft Defender Experts MDR
 ms.reviewer:
-description: Defender Experts for XDR let you determine the individuals or groups within your organization that need to be notified if there's a critical incident
+description: Defender Experts MDR let you determine the individuals or groups within your organization that need to be notified if there's a critical incident
 ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
@@ -18,11 +18,11 @@ ms.custom:
 ms.date: 02/27/2026
 ---
 
-# Get started with Microsoft Defender Experts for XDR
+# Get started with Microsoft Defender Experts MDR
 
 **Applies to:**
 
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md)
 
 For onboarding instructions, watch this short video:
 
@@ -36,19 +36,19 @@ Select the link in the welcome email to directly launch the Defender Experts set
 
 ## Grant permissions to our experts
 
-By default, Defender Experts for XDR requires **Service provider access** that lets our experts sign into your tenant and deliver services based on assigned security roles. [Learn more about cross-tenant access](/azure/active-directory/external-identities/cross-tenant-access-overview)
+By default, Defender Experts MDR requires **Service provider access** that lets our experts sign into your tenant and deliver services based on assigned security roles. [Learn more about cross-tenant access](/azure/active-directory/external-identities/cross-tenant-access-overview)
 
 You also need to grant our experts one or both of the following permissions:
 
 - **Investigate incidents and guide my responses** (default) – This option lets our experts proactively monitor and investigate incidents and guide you through any necessary response actions. (Access level: Security Reader)
 - **Respond directly to active threats** (recommended) – This option lets our experts contain and remediate active threats immediately while investigating, thus reducing the threat's impact, and improving your overall response efficiency. (Access level: Security Operator)
 
-:::image type="content" source="media/get-started-xdr/managed-exclusions.png" alt-text="Screenshot of manage exclusions option while setting up Defender Experts for XDR." lightbox="media/get-started-xdr/managed-exclusions.png":::
+:::image type="content" source="media/get-started-xdr/managed-exclusions.png" alt-text="Screenshot of manage exclusions option while setting up Defender Experts MDR." lightbox="media/get-started-xdr/managed-exclusions.png":::
 
 > [!IMPORTANT]
 > If you skip providing additional permissions, our experts won't be able to take certain response actions to secure your organization.  
 >
-> Even though our experts are granted these relatively powerful permissions, they'll only have individual access to specific areas for a limited period. [Learn more about how Defender Experts for XDR permissions work](dex-xdr-permissions.md)
+> Even though our experts are granted these relatively powerful permissions, they'll only have individual access to specific areas for a limited period. [Learn more about how Defender Experts MDR permissions work](defender-experts-mdr-permissions.md).
 
 **To grant our experts permissions:**
 
@@ -62,7 +62,7 @@ To edit or update permissions after the initial setup, go to **Settings** > **De
 
 ## Exclude devices and users from remediation
 
-Defender Experts for XDR lets you exclude devices and users from remediation actions taken by our experts and instead get remediation guidance for those entities. These exclusions are based on identified [device groups](/defender-endpoint/machine-groups) in Microsoft Defender for Endpoint and identified [user groups](/entra/fundamentals/concept-learn-about-groups) in Microsoft Entra ID.
+Defender Experts MDR lets you exclude devices and users from remediation actions taken by our experts and instead get remediation guidance for those entities. These exclusions are based on identified [device groups](/defender-endpoint/machine-groups) in Microsoft Defender for Endpoint and identified [user groups](/entra/fundamentals/concept-learn-about-groups) in Microsoft Entra ID.
 
 **To exclude device groups:**
 
@@ -92,7 +92,7 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 1. Back on the **User groups** tab, review the list of excluded user groups. If you want to remove a user group from the exclusion list, choose it then select **Remove user group**.
 1. Select **Next** to confirm your exclusion list and proceed to [adding contact persons or groups](#tell-us-who-to-contact-for-important-matters). Otherwise, select **Skip**, and all your added exclusions are discarded.
 
-:::image type="content" source="media/get-started-xdr/exclude-user-groups.png" alt-text="Screenshot to exclude user groups in Defender Experts for XDR." lightbox="media/get-started-xdr/exclude-user-groups.png":::
+:::image type="content" source="media/get-started-xdr/exclude-user-groups.png" alt-text="Screenshot to exclude user groups in Defender Experts MDR." lightbox="media/get-started-xdr/exclude-user-groups.png":::
 
 > [!NOTE]
 > You can only exclude users by adding them to a Microsoft Entra ID security group. On-premises Microsoft Entra ID users can't be excluded at this time.
@@ -102,7 +102,7 @@ To edit or update exclusions after the initial setup, go to **Settings** > **Def
 <!--
 ### Exclude all high-value devices or users automatically
 
-Defender Experts for XDR also lets you exclude automatically identified high-value devices and users, such as key executives, or sensitive admins, from remediation actions by our experts:
+Defender Experts MDR also lets you exclude automatically identified high-value devices and users, such as key executives, or sensitive admins, from remediation actions by our experts:
 
 - **High-value devices** are devices in your organization that were [identified as such](/defender-vulnerability-management/tvm-assign-device-value) in Defender for Endpoint
 - **High-value users** are users in your organization that were tagged with the [Sensitive tag](/defender-for-identity/entity-tags#sensitive--tags) in Microsoft Defender for Identity and the [priority account tag](/microsoft-365/admin/setup/priority-accounts) in Microsoft Defender for Office 365
@@ -151,7 +151,7 @@ To edit or update your notification contacts after the initial setup, go to **Se
 
 ## Receive managed response notifications and updates in Microsoft Teams
 
-Apart from email and [in-portal chat](communicate-defender-experts-xdr.md#in-portal-chat), you can also use Microsoft Teams to receive updates about managed responses and communicate with experts in real time. When you turn on this setting, you create a new team named **Defender Experts team**. Managed response notifications related to ongoing incidents are sent as new posts in the **Managed response** channel. [Learn more about using Teams chat](communicate-defender-experts-xdr.md#teams-chat).
+Apart from email and [in-portal chat](defender-experts-mdr-communication.md#in-portal-chat), you can also use Microsoft Teams to receive updates about managed responses and communicate with experts in real time. When you turn on this setting, you create a new team named **Defender Experts team**. Managed response notifications related to ongoing incidents are sent as new posts in the **Managed response** channel. [Learn more about using Teams chat](defender-experts-mdr-communication.md#teams-chat).
 
 > [!IMPORTANT]
 > Defender Experts have access to all messages posted on any channel in the created **Defender Experts team**. To prevent Defender Experts from accessing messages in this team, go to **Apps** in Teams, and then navigate to **Manage your apps** > **Defender Experts** > **Remove**. You can't reverse this removal action.
@@ -202,17 +202,17 @@ The readiness assessment has two parts:
 
 After you complete all the required tasks and meet the onboarding targets in your readiness assessment, the monitoring phase of your Defender Experts service starts. For a few days, our experts start monitoring your environment closely to identify latent threats, sources of risk, and normal activity. As we get better understanding of your critical assets, we can streamline the service and fine-tune our responses.
 
-Once our experts begin to perform comprehensive response work on your behalf, you'll start receiving [notifications about incidents](managed-detection-and-response-xdr.md#incident-updates) that require remediation steps and targeted recommendations on critical incidents. You can also [chat with our experts](communicate-defender-experts-xdr.md) or your Security Delivery Experts (SDXs) regarding important queries and regular business and security posture reviews. Additionally you can also [view real-time reports](reports-xdr.md) on the number of incidents we've investigated and resolved on your behalf.
+Once our experts begin to perform comprehensive response work on your behalf, you'll start receiving [notifications about incidents](defender-experts-mdr-managed-response.md#incident-updates) that require remediation steps and targeted recommendations on critical incidents. You can also [chat with our experts](defender-experts-mdr-communication.md) or your Security Delivery Experts (SDXs) regarding important queries and regular business and security posture reviews. Additionally you can also [view real-time reports](defender-experts-mdr-reports.md) on the number of incidents we've investigated and resolved on your behalf.
 
 ### Next step
 
-- [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Get real-time visibility with Defender Experts reports](reports-xdr.md)
-- [Communicating with experts in the Microsoft Defender Experts service](communicate-defender-experts-xdr.md)
+- [Managed detection and response](defender-experts-mdr-managed-response.md)
+- [Get real-time visibility with Defender Experts reports](defender-experts-mdr-reports.md)
+- [Communicating with experts in the Microsoft Defender Experts service](defender-experts-mdr-communication.md)
 
 ### See also
 
-- [General information on Defender Experts service](frequently-asked-questions.md)
-- [How Microsoft Defender Experts permissions work](dex-xdr-permissions.md)
+- [General information on Defender Experts service](defender-experts-mdr-faq.md)
+- [How Microsoft Defender Experts permissions work](defender-experts-mdr-permissions.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

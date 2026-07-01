@@ -29,7 +29,7 @@ ai-usage: ai-assisted
 
 **Applies to:**
 
-- [Microsoft Defender Experts for Servers](dex-servers-overview.md)
+- [Microsoft Defender Experts for Servers](defender-experts-servers-overview.md)
 
 Set up Defender Experts for Servers in the Microsoft Defender portal by onboarding cloud resources, granting permissions, configuring notifications, and preparing your environment.
 
@@ -67,7 +67,7 @@ To select your coverage options:
 
 1. Select **Save**.
 
-   - If you're an existing Defender Experts for XDR customer, no additional action is needed (the provisioning script, permissions, and setup steps don't apply), and server coverage starts immediately.
+   - If you're an existing Defender Experts MDR customer, no additional action is needed (the provisioning script, permissions, and setup steps don't apply), and server coverage starts immediately.
    - If you're a new Defender Experts customer, saving your selection opens the Defender Experts onboarding wizard.
 
 1. Select **Continue** to proceed with the onboarding wizard to complete the following steps, or select **Cancel** to go back.
@@ -108,8 +108,8 @@ To grant permissions:
 
 To finish the setup:
 1. Continue with the onboarding wizard to set up the following configurations:
-   - [Notification contacts](get-started-xdr.md#tell-us-who-to-contact-for-important-matters)
-   - [Microsoft Teams notifications](get-started-xdr.md#receive-managed-response-notifications-and-updates-in-microsoft-teams)
+   - [Notification contacts](defender-experts-mdr-get-started.md#tell-us-who-to-contact-for-important-matters)
+   - [Microsoft Teams notifications](defender-experts-mdr-get-started.md#receive-managed-response-notifications-and-updates-in-microsoft-teams)
 
 1. Review and submit settings. The onboarding wizard finishes its initial setup.
 
@@ -124,7 +124,7 @@ After you onboard your cloud workloads, take note of the following information:
 
 ## Turn off Defender Experts for Servers service
 
-To disable the service, [contact your Service Delivery Expert](communicate-defender-experts-xdr.md). 
+To disable the service, [contact your Service Delivery Expert](defender-experts-mdr-communication.md). 
 
 > [!NOTE]
 > Charges continue until the service is fully turned off within 48 hours.
@@ -132,11 +132,11 @@ To disable the service, [contact your Service Delivery Expert](communicate-defen
 
 ## Related content
 
-- [Microsoft Defender Experts for Servers overview](dex-servers-overview.md)
-- [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Communicating with experts in the Microsoft Defender Experts service](communicate-defender-experts-xdr.md)
-- [Get real-time visibility with Defender Experts reports](reports-xdr.md)
-- [Understanding Defender Experts coverage for servers and cloud workloads](faq-cloud-coverage-defender-experts.md)
-- [How Defender Experts permissions work](dex-xdr-permissions.md)
+- [Microsoft Defender Experts for Servers overview](defender-experts-servers-overview.md)
+- [Managed detection and response](defender-experts-mdr-managed-response.md)
+- [Communicating with experts in the Microsoft Defender Experts service](defender-experts-mdr-communication.md)
+- [Get real-time visibility with Defender Experts reports](defender-experts-mdr-reports.md)
+- [Understanding Defender Experts coverage for servers and cloud workloads](defender-experts-faq-cloud-coverage.md)
+- [How Defender Experts permissions work](defender-experts-mdr-permissions.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

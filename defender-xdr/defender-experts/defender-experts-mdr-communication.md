@@ -21,14 +21,14 @@ ms.date: 03/16/2026
 
 **Applies to:**
 
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- [Microsoft Defender Experts for Servers](dex-servers-overview.md)
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md)
+- [Microsoft Defender Experts for Servers](defender-experts-servers-overview.md)
 
 The Microsoft Defender Experts service provides you with multiple channels of communication to discuss incidents with our experts, ask them questions on demand, or get service readiness or operations support from your Security Delivery Experts (SDXs), if included in your service.
 
 ## Incident and managed response notifications
 
-When an incident requires your attention, such as the incidents our experts issue [managed response actions](managed-detection-and-response-xdr.md), you receive notifications through one or more of the following channels:
+When an incident requires your attention, such as the incidents our experts issue [managed response actions](defender-experts-mdr-managed-response.md), you receive notifications through one or more of the following channels:
 
 ### In-portal chat
 
@@ -47,9 +47,9 @@ To leave feedback about your chat experience, select the **thumbs up** or **thum
 
 ### Teams chat
 
-Apart from using the in-portal chat, you can also engage in real-time chat conversations with Defender Experts directly within Microsoft Teams. This capability provides you and your security operations center (SOC) team more flexibility when responding to incidents that require managed response. [Learn more about turning on notifications and chat on Teams](get-started-xdr.md#receive-managed-response-notifications-and-updates-in-microsoft-teams).
+Apart from using the in-portal chat, you can also engage in real-time chat conversations with Defender Experts directly within Microsoft Teams. This capability provides you and your security operations center (SOC) team more flexibility when responding to incidents that require managed response. [Learn more about turning on notifications and chat on Teams](defender-experts-mdr-get-started.md#receive-managed-response-notifications-and-updates-in-microsoft-teams).
 
-Once you turn on chat on Teams, a new team named **Defender Experts team** is created and the Defender Experts Teams app is installed in it. Each incident that requires your attention is posted on this team's **Managed response** channel as a new post. To engage with our experts (for example, ask follow-up questions about the investigation summary or actions published by Defender Experts), use the **Reply** text bar and type your message. If you have issues setting up the Defender Experts channel or tagging @*Defender Experts*, see [troubleshooting Defender Experts app permissions in Microsoft Teams](../defender-xdr/teams-restrictions-dexapp.md).
+Once you turn on chat on Teams, a new team named **Defender Experts team** is created and the Defender Experts Teams app is installed in it. Each incident that requires your attention is posted on this team's **Managed response** channel as a new post. To engage with our experts (for example, ask follow-up questions about the investigation summary or actions published by Defender Experts), use the **Reply** text bar and type your message. If you have issues setting up the Defender Experts channel or tagging @*Defender Experts*, see [troubleshooting Defender Experts app permissions in Microsoft Teams](defender-experts-teams-app-permissions.md).
 
 :::image type="content" source="media/communicate-defender-experts-xdr/teams-chat-managed-response-01.png" alt-text="Screenshot of managed response teams channel." lightbox="media/communicate-defender-experts-xdr/teams-chat-managed-response-01.png":::
 
@@ -77,18 +77,18 @@ However, our experts can also send emails to your identified notification contac
 
 ### Phone call
 
-In break-glass scenarios or matters that require immediate attention (for example, malware on high-value infrastructure, ransomware, data exfiltration, insider threat, or other signs of a determined human adversary), the experts reach out to your identified **incident notification contacts** by using the details you provided, including calling their listed phone numbers. [Learn more about adding contact persons or groups for incident notifications](get-started-xdr.md#tell-us-who-to-contact-for-important-matters).
+In break-glass scenarios or matters that require immediate attention (for example, malware on high-value infrastructure, ransomware, data exfiltration, insider threat, or other signs of a determined human adversary), the experts reach out to your identified **incident notification contacts** by using the details you provided, including calling their listed phone numbers. [Learn more about adding contact persons or groups for incident notifications](defender-experts-mdr-get-started.md#tell-us-who-to-contact-for-important-matters).
 
 ## Ask Defender Experts
 
-While the previous scenarios involve the experts initiating communication with you, you can also request advanced threat expertise on demand by selecting **Ask Defender Experts** directly inside the Microsoft Defender portal. [Learn more](experts-on-demand.md).
+While the previous scenarios involve the experts initiating communication with you, you can also request advanced threat expertise on demand by selecting **Ask Defender Experts** directly inside the Microsoft Defender portal. [Learn more](defender-experts-hunting-ask-experts.md).
 
 ## Collaborating with your Security Delivery Expert
 
-The Security Delivery Expert (SDX) is responsible for managing the overall relationship for your organization with the Defender Experts for XDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
+The Security Delivery Expert (SDX) is responsible for managing the overall relationship for your organization with the Defender Experts MDR service. They are your trusted advisor working along with XDR experts' team to help you protect your organization.
 
 > [!NOTE]
-> Security Delivery Experts are included if your Defender Experts service is licensed for 500 or more seats.
+> Security Delivery Experts are included if your Defender Experts service is licensed for 500 or more devices.
 
 The SDX provides the following services:
 
@@ -99,12 +99,12 @@ The SDX provides the following services:
   - Provide tailored service delivery content and reporting, including periodic business reviews.
   - Serve as a single point of contact for feedback and escalations related to Defender Experts Service.
 
-The SDX engages with your identified **service review contacts**. [Learn more about adding contact persons or groups for service review and delivery](get-started-xdr.md#tell-us-who-to-contact-for-important-matters)
+The SDX engages with your identified **service review contacts**. [Learn more about adding contact persons or groups for service review and delivery](defender-experts-mdr-get-started.md#tell-us-who-to-contact-for-important-matters).
 
 ### See also
 
-- [Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
-- [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Get real-time visibility with Defender Experts reports](reports-xdr.md)
+- [Get started with Microsoft Defender Experts MDR](defender-experts-mdr-get-started.md)
+- [Managed detection and response](defender-experts-mdr-managed-response.md)
+- [Get real-time visibility with Defender Experts reports](defender-experts-mdr-reports.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

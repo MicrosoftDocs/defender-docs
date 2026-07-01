@@ -1,7 +1,7 @@
 ---
 title: MSSP guide for Microsoft Defender Experts service
 description: Learn how Defender Experts services can work with another managed security service providers (MSSPs) in different scenarios.
-#customer intent: As a customer, I want to know how the Defender Experts for Hunting and Defender Experts for XDR can work together with existing managed security service providers.
+#customer intent: As a customer, I want to know how the Defender Experts Hunting and Defender Experts MDR can work together with existing managed security service providers.
 author: poliveria
 ms.author: pauloliveria
 ms.date: 03/03/2026
@@ -14,12 +14,12 @@ ms.custom:
 # How MSSP partners can work with Defender Experts 
 
 **Applies to:** 
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md) 
-- [Microsoft Defender Experts for Servers](dex-servers-overview.md) 
-- [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) 
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md) 
+- [Microsoft Defender Experts for Servers](defender-experts-servers-overview.md) 
+- [Microsoft Defender Experts Hunting](defender-experts-hunting-overview.md) 
 - Microsoft Defender Experts for Hunting - Servers 
 
-Some Microsoft Defender Experts customers (Microsoft Defender Experts for Hunting or Microsoft Defender Experts for XDR) might also use services from another managed security services provider (MSSP). This service combination often happens when a customer's security operations center (SOC) isn't fully staffed, or when the MSSP partner manages other security products and services on behalf of the customer.
+Some Microsoft Defender Experts customers (Microsoft Defender Experts Hunting or Microsoft Defender Experts MDR) might also use services from another managed security services provider (MSSP). This service combination often happens when a customer's security operations center (SOC) isn't fully staffed, or when the MSSP partner manages other security products and services on behalf of the customer.
 
 This article shows how MSSP partners can work together with Microsoft Defender Experts on different areas. 
 If you're an MSSP partner supporting a customer, contact the Security Delivery Expert (SDX) from Defender Experts for more information.
@@ -27,7 +27,7 @@ If you're an MSSP partner supporting a customer, contact the Security Delivery
 
 ## Work with Defender Experts for Hunting
 
-The following table lists the scope of work and responsibilities the Defender Experts for Hunting and MSSP partners have in various scenarios:
+The following table lists the scope of work and responsibilities the Defender Experts Hunting and MSSP partners have in various scenarios:
 
 | **Area** | **Defender Experts** | **Customer SOC (in-house or MSSP)** | **Notes on access** | **Notes for MSSP partners** |
 |---|---|---|---|---|
@@ -40,9 +40,9 @@ The following table lists the scope of work and responsibilities the Defender E
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 
-## Work with Defender Experts for XDR 
+## Work with Defender Experts MDR 
 
-The following table lists the scope of work and responsibilities the Defender Experts for XDR and MSSP partners have in various scenarios:
+The following table lists the scope of work and responsibilities the Defender Experts MDR and MSSP partners have in various scenarios:
 
 | **Area** | **Defender Experts** | **Customer SOC (in-house or MSSP)** | **Notes on access** | **Notes for MSSP partners** |
 |---|---|---|---|---|

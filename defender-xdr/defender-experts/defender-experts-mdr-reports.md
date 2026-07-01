@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender Experts report 
 ms.reviewer:
-description: Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of our expert analysts.
+description: Defender Experts MDR includes an interactive, on-demand report that provides a clear summary of our expert analysts.
 ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
@@ -22,8 +22,8 @@ ms.date: 10/31/2025
 
 **Applies to:**
 
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- [Microsoft Defender Experts for Servers](dex-servers-overview.md)
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md)
+- [Microsoft Defender Experts for Servers](defender-experts-servers-overview.md)
 
 For Defender Experts reports instructions, check out this short video.
 
@@ -49,7 +49,7 @@ The top section of the report overview shows the percentage of resolved incident
 - **Incidents resolved** - The total number of investigated incidents that were closed.
 - **Resolved directly** - The number of investigated incidents that we closed directly on your behalf.
 - **Resolved with your help** - The number of investigated incidents that were resolved because of your action on one or more managed response tasks.
-- **Third-party enriched** - The number of incidents that were enriched with third-party network signals. This data is available when you're enrolled in the [third-party network enrichment](third-party-enrichment-defender-experts.md).
+- **Third-party enriched** - The number of incidents that were enriched with third-party network signals. This data is available when you're enrolled in the [third-party network enrichment](defender-experts-mdr-third-party-enrichment.md).
 
 ### Average time to resolve incidents
 
@@ -95,8 +95,8 @@ The **Trends** tab also has the **Managed response task completion and efficienc
 
 ## See also
 
-- [Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
-- [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Communicating with experts in the Microsoft Defender Experts service](communicate-defender-experts-xdr.md)
+- [Get started with Microsoft Defender Experts MDR](defender-experts-mdr-get-started.md)
+- [Managed detection and response](defender-experts-mdr-managed-response.md)
+- [Communicating with experts in the Microsoft Defender Experts service](defender-experts-mdr-communication.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

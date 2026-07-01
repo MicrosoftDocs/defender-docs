@@ -296,7 +296,7 @@ Microsoft Security team blog posts:
 - [Three steps to prevent and recover from ransomware (September 2021)](https://www.microsoft.com/security/blog/2021/09/07/3-steps-to-prevent-and-recover-from-ransomware/)
 - [A guide to combatting human-operated ransomware: Part 1 (September 2021)](https://www.microsoft.com/security/blog/2021/09/20/a-guide-to-combatting-human-operated-ransomware-part-1/)
 
-  Key steps on how Microsoft's Detection and Response Team (DART) conducts ransomware incident investigations.
+  Key steps on how Microsoft Defender Experts Cybersecurity Incident Response conducts ransomware incident investigations.
 
 - [A guide to combatting human-operated ransomware: Part 2 (September 2021)](https://www.microsoft.com/security/blog/2021/09/27/a-guide-to-combatting-human-operated-ransomware-part-2/)
 

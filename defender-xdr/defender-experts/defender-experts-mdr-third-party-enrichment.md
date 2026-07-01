@@ -1,7 +1,7 @@
 ---
-title: What is third-party network signal enrichment in Microsoft Defender Experts for XDR?
+title: What is third-party network signal enrichment in Microsoft Defender Experts MDR?
 ms.reviewer:
-description: This document describes how incorporating third-party network signals can enrich the Microsoft Defender Experts for XDR service.
+description: This document describes how incorporating third-party network signals can enrich the Microsoft Defender Experts MDR service.
 ms.service: defender-experts-for-xdr
 ms.author: pauloliveria
 author: poliveria
@@ -17,10 +17,10 @@ ms.custom:
 ms.date: 08/01/2025
 ---
 
-# Enriching Defender Experts for XDR with third-party network signals
+# Enriching Defender Experts MDR with third-party network signals
 
 **Applies to:**
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md)
 - Microsoft Defender Experts for Servers
 
 Microsoft Defender Experts lets you incorporate third-party network signals from Palo Alto Networks, Fortinet, and Zscaler **for enrichment**. By enriching Microsoft Defender incidents with these network signals, our security analysts not only gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response, they could also provide you with a more holistic view of the threat in your environment. 
@@ -43,7 +43,7 @@ The Defender Experts team employs a threat-centric methodology that monitors pot
 
 ## Example scenario
 
-**Scenario:** Defender Experts for XDR used third-party network signals to uncover lateral movement and potential data exfiltration attempts. 
+**Scenario:** Defender Experts MDR used third-party network signals to uncover lateral movement and potential data exfiltration attempts. 
 
 1. **Detection:** Microsoft Defender for Identity generated an _Atypical Travel_ alert for `User A`, who appeared to sign in from India and Germany within a short time period using different devices and IP addresses. While the activity suggested a potential credential compromise or session hijacking, initial reviews across standard identity and cloud monitoring systems didn't show obvious signs of compromise, unusual access to cloud applications, inbox rule changes, or privilege escalation. 
 2. **Correlation:** With third-party network signal enrichment, Defender Experts were able to see firewall logs from Palo Alto Networks, which revealed attempts to reach unauthorized remote access tools. Meanwhile, Zscaler proxy data highlighted encrypted interactions with a legacy on-premises SharePoint server that wasn’t protected by cloud access security policies.
@@ -51,11 +51,11 @@ The Defender Experts team employs a threat-centric methodology that monitors pot
 4. **Response:** Once Defender Experts confirmed malicious access, they initiated a coordinated response across identity, network, and device domains. They revoked active tokens, isolated affected devices, and hardened mobile policy configurations to enforce Conditional Access more strictly.
 
 ## Ingesting third-party network signals for enrichment
-If you're a Microsoft Defender customer, [reach out to your Security Delivery Expert](communicate-defender-experts-xdr.md#collaborating-with-your-security-delivery-expert) if you're interested in enabling the third-party network signal enrichment.
+If you're a Microsoft Defender customer, [reach out to your Security Delivery Expert](defender-experts-mdr-communication.md#collaborating-with-your-security-delivery-expert) if you're interested in enabling the third-party network signal enrichment.
 
 ### Prerequisites
 
-To enable third-party network signals enrichment, you must have a Microsoft Sentinel instance onboarded to Microsoft Defender. [Learn more about Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
+To enable third-party network signals enrichment, you must have a Microsoft Sentinel instance onboarded to Microsoft Defender. [Learn more about Defender integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
 
 Your Sentinel instance must also have the following settings and configurations:
 
@@ -82,7 +82,7 @@ For more information, read [Geographical availability and data residency in Micr
 
 **Can I opt in for the third-party network coverage without an existing Defender Experts license?**
 
-No, you must have an existing Microsoft Defender XDR license to get third-party network coverage.
+No, you must have an existing Microsoft Defender license to get third-party network coverage.
 
 **What type of third-party data should I choose to be ingested for network signal enrichment?**
 
@@ -116,5 +116,5 @@ Customers are charged for data ingestion through Microsoft Sentinel. There's no 
 
 ### See also
 
-- [Start using Defender Experts for XDR service](start-using-mdex-xdr.md)
-- [Communicating with experts in the Microsoft Defender Experts for XDR service](communicate-defender-experts-xdr.md)
+- [Start using Defender Experts MDR service](defender-experts-mdr-start-using.md)
+- [Communicating with experts in the Microsoft Defender Experts MDR service](defender-experts-mdr-communication.md)

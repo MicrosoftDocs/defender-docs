@@ -46,9 +46,9 @@ Defender Experts for Servers augments your security operation center (SOC) with 
 
 ## Prerequisites and licensing
 
-Defender Experts for Servers is a standalone service that you can purchase independently. It doesn't require a [Microsoft Defender Experts for XDR](dex-xdr-overview.md) enrollment. You can purchase and use this service independently.
+Defender Experts for Servers is a standalone service that you can purchase independently. It doesn't require a [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md) enrollment. You can purchase and use this service independently.
 
-If your organization also has Defender Experts for XDR, the two services complement each other. Defender Experts for XDR covers your broader Microsoft Defender environment (endpoints, email, identity, and cloud apps), while Defender Experts for Servers provides dedicated coverage for your server infrastructure protected by Defender for Cloud.
+If your organization also has Defender Experts MDR, the two services complement each other. Defender Experts MDR covers your broader Microsoft Defender environment (endpoints, email, identity, and cloud apps), while Defender Experts for Servers provides dedicated coverage for your server infrastructure protected by Defender for Cloud.
 
 To get started with this Defender Experts for Servers, you need the following items:
 
@@ -57,20 +57,20 @@ To get started with this Defender Experts for Servers, you need the following it
 
 Depending on the coverage you're looking for, you can enable the Defender for Servers plan for an Azure subscription, AWS account, or GCP project.
 
-For more information, see [Before you begin using Defender Experts](before-you-begin-xdr.md)
+For more information, see [Before you begin using Defender Experts](defender-experts-mdr-prerequisites.md)
 
 ## Service capabilities
 
 Defender Experts for Servers delivers managed security operations for your server workloads through a combination of automation and human expertise. The service includes the following capabilities:
 
-- **Managed detection and response:** Expert analysts manage your server-related incidents in the Microsoft Defender incident queue, handle triage and investigation on your behalf, and partner with your team to take action or guide you through response. For details, see [Managed detection and response](managed-detection-and-response-xdr.md).
+- **Managed detection and response:** Expert analysts manage your server-related incidents in the Microsoft Defender incident queue, handle triage and investigation on your behalf, and partner with your team to take action or guide you through response. For details, see [Managed detection and response](defender-experts-mdr-managed-response.md).
 
-- **Proactive threat hunting:** [Microsoft Defender Experts for Hunting - Servers](defender-experts-for-hunting.md) is built in to extend your team's threat hunting capabilities and prioritize significant threats targeting your servers.
+- **Proactive threat hunting:** [Microsoft Defender Experts Hunting - Servers](defender-experts-hunting-overview.md) is built in to extend your team's threat hunting capabilities and prioritize significant threats targeting your servers.
     > [!NOTE]
-    > Defender Experts for Hunting - Servers is also available as a standalone service offering. For more information, contact your Microsoft account representative.
-- **Ask Defender Experts:** Select [Ask Defender Experts](experts-on-demand.md) in the Microsoft Defender portal to get expert advice about threats your organization is facing.
-- **Live dashboards and reports:** Get a transparent view of operations on your behalf and noise-free, actionable insights into what matters for you, coupled with detailed analytics. For details, see [Defender Experts reports](reports-xdr.md).
-- **Third-party network signal enrichment:** Enrich your Defender Experts experience with third-party network signals from Palo Alto Networks, Fortinet, and Zscaler to gain a more comprehensive view of an attack's path. For details, see [Third-party network signal enrichment](third-party-enrichment-defender-experts.md).
+    > Defender Experts Hunting - Servers is also available as a standalone service offering. For more information, contact your Microsoft account representative.
+- **Ask Defender Experts:** Select [Ask Defender Experts](defender-experts-hunting-ask-experts.md) in the Microsoft Defender portal to get expert advice about threats your organization is facing.
+- **Live dashboards and reports:** Get a transparent view of operations on your behalf and noise-free, actionable insights into what matters for you, coupled with detailed analytics. For details, see [Defender Experts reports](defender-experts-mdr-reports.md).
+- **Third-party network signal enrichment:** Enrich your Defender Experts experience with third-party network signals from Palo Alto Networks, Fortinet, and Zscaler to gain a more comprehensive view of an attack's path. For details, see [Third-party network signal enrichment](defender-experts-mdr-third-party-enrichment.md).
 
 ## Server and cloud workload coverage
 
@@ -82,9 +82,9 @@ All Defender for Servers Plan 1 and Plan 2 alerts are in scope. [DNS alerts](/az
 
 ## Related content
 
-- [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Understanding Defender Experts coverage for servers and cloud workloads](faq-cloud-coverage-defender-experts.md)
-- [Get real-time visibility with Defender Experts reports](reports-xdr.md)
-- [Communicating with experts in the Microsoft Defender Experts service](communicate-defender-experts-xdr.md)
+- [Managed detection and response](defender-experts-mdr-managed-response.md)
+- [Understanding Defender Experts coverage for servers and cloud workloads](defender-experts-faq-cloud-coverage.md)
+- [Get real-time visibility with Defender Experts reports](defender-experts-mdr-reports.md)
+- [Communicating with experts in the Microsoft Defender Experts service](defender-experts-mdr-communication.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

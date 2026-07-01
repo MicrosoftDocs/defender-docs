@@ -1,8 +1,8 @@
 ---
-title: Subscribe to Microsoft Defender Experts for Hunting
+title: Subscribe to Microsoft Defender Experts Hunting
 ms.reviewer:
-description: If you're new to Microsoft Defender XDR and Defender Experts for Hunting, this is how you onboard, receive, and set up Defender Experts Notifications.
-#customer intent: As a security admin, I want to onboard to Defender Experts for Hunting so that I can receive expert threat notifications and respond to security incidents.
+description: If you're new to Microsoft Defender and Defender Experts Hunting, this is how you onboard, receive, and set up Defender Experts Notifications.
+#customer intent: As a security admin, I want to onboard to Defender Experts Hunting so that I can receive expert threat notifications and respond to security incidents.
 ms.service: defender-experts-for-hunting
 ms.author: pauloliveria
 author: poliveria
@@ -21,30 +21,30 @@ ai-usage: ai-assisted
 ms.date: 06/16/2026
 ---
 
-# Start using Microsoft Defender Experts for Hunting
+# Start using Microsoft Defender Experts Hunting
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender](../microsoft-365-defender.md)
 
-To get started with the Microsoft Defender Experts for Hunting service, onboard to the service, set up notification contacts, and configure Defender Experts Notifications.
+To get started with the Microsoft Defender Experts Hunting service, onboard to the service, set up notification contacts, and configure Defender Experts Notifications.
 
-## Onboard to Defender Experts for Hunting
+## Onboard to Defender Experts Hunting
 
-If you're new to Microsoft Defender XDR and Defender Experts for Hunting:
+If you're new to Microsoft Defender and Defender Experts Hunting:
 
-1. When you receive your welcome email, select **Log into Microsoft Defender XDR**.
+1. When you receive your welcome email, select **Log into Microsoft Defender**.
 1. Sign in if you already have a Microsoft account. If you don't have a Microsoft account, create one.
-1. The Microsoft Defender XDR quick tour introduces you to the security suite, where the capabilities are, and how important they are. Select **Take a quick tour**.
+1. The Microsoft Defender quick tour introduces you to the security suite, where the capabilities are, and how important they are. Select **Take a quick tour**.
 1. Read the short descriptions about what the Microsoft Defender Experts service is and the capabilities it provides. Select **Next**. You see the welcome page:
 
-    ![Screenshot of the Microsoft Defender XDR welcome page with a card for the Defender Experts for Hunting service.](./media/onboarding-defender-experts-for-hunting/start-using-defender-experts-for-hunting.png)
+    ![Screenshot of the Microsoft Defender welcome page with a card for the Defender Experts Hunting service.](./media/onboarding-defender-experts-for-hunting/start-using-defender-experts-for-hunting.png)
 
 ## Tell us who to contact for important matters
 
-Defender Experts for Hunting lets you set up **Notification contacts**. These contacts are the individuals or groups within your organization that Microsoft needs to notify if there are critical incidents or service updates:
+Defender Experts Hunting lets you set up **Notification contacts**. These contacts are the individuals or groups within your organization that Microsoft needs to notify if there are critical incidents or service updates:
 
 - **Incident notification contacts** – These contacts are persons or teams that Microsoft can notify for any critical incidents or hunting clarifications that require immediate response.
 
@@ -65,7 +65,7 @@ The Defender Experts Notifications service includes:
 
 The following screenshot shows a sample Defender Experts Notification:
 
-![Screenshot of a Defender Experts Notification in Microsoft Defender XDR showing the threat title, executive summary, and recommendations.](./media/onboarding-defender-experts-for-hunting/receive-defender-experts-notification.png)
+![Screenshot of a Defender Experts Notification in Microsoft Defender showing the threat title, executive summary, and recommendations.](./media/onboarding-defender-experts-for-hunting/receive-defender-experts-notification.png)
 
 ### Where to find Defender Experts Notifications
 
@@ -74,8 +74,8 @@ You can receive Defender Experts Notifications from Defender Experts through the
 - The Defender portal's [Incidents](https://security.microsoft.com/incidents) page
 - The Defender portal's [Alerts](https://security.microsoft.com/alerts) page
 - OData alerting [Get alerts API](/defender-endpoint/api/get-alerts) and [SIEM integration REST API](/defender-endpoint/configure-siem)
-- [DeviceAlertEvents](advanced-hunting-migrate-from-mde.md#map-devicealertevents-table) table in Advanced hunting
-- Your email if you [configure an email notifications rule](onboarding-defender-experts-for-hunting.md#set-up-defender-experts-email-notifications)
+- [DeviceAlertEvents](../advanced-hunting-migrate-from-mde.md#map-devicealertevents-table) table in Advanced hunting
+- Your email if you [configure an email notifications rule](defender-experts-hunting-onboarding.md#set-up-defender-experts-email-notifications)
 - Your Microsoft Teams if you [set up Defender Experts Teams notifications](#set-up-defender-experts-teams-notifications)
 
 ### Filter to view just the Defender Experts Notifications
@@ -83,17 +83,17 @@ You can receive Defender Experts Notifications from Defender Experts through the
 You can filter your incidents and alerts if you want to only see the Defender Experts Notifications among the many alerts. To filter incidents and alerts to show only Defender Experts Notifications:
 
 1. On the navigation menu, go to **Incidents & alerts** > **Incidents** > select the ![Screenshot of the Filter control used to filter incidents on the Incidents page](./media/onboarding-defender-experts-for-hunting/filter.png) icon.
-1. Scroll down to **Service/detection sources** then select the **Microsoft Defender Experts** checkboxes under *Microsoft Defender for Endpoint* and *Microsoft Defender XDR*.
+1. Scroll down to **Service/detection sources** then select the **Microsoft Defender Experts** checkboxes under *Microsoft Defender for Endpoint* and *Microsoft Defender*.
 1. Select **Apply**.
 
 ### Set up Defender Experts email notifications
 
-You can set up Microsoft Defender XDR to notify you or your staff by using an email about new incidents or updates to existing incidents, including those observed by Microsoft Defender Experts. [Learn more about getting incident notifications by email](m365d-notifications-incidents.md).
+You can set up Microsoft Defender to notify you or your staff by using an email about new incidents or updates to existing incidents, including those observed by Microsoft Defender Experts. [Learn more about getting incident notifications by email](../m365d-notifications-incidents.md).
 
-1. In the Microsoft Defender XDR navigation pane, select **Settings** > **Microsoft Defender XDR** > **Email notifications** > **Incidents**.
-1. Update your existing email notification rules or create a new one. For more information, see [Auditing](auditing.md).
+1. In the Microsoft Defender navigation pane, select **Settings** > **Microsoft Defender** > **Email notifications** > **Incidents**.
+1. Update your existing email notification rules or create a new one. For more information, see [Auditing](defender-experts-mdr-auditing.md).
 1. On the rule's **Notification settings** page, make sure to configure the following values:
-    - **Source** – Choose **Microsoft Defender Experts** under **Microsoft Defender XDR** and **Microsoft Defender for Endpoint**.
+    - **Source** – Choose **Microsoft Defender Experts** under **Microsoft Defender** and **Microsoft Defender for Endpoint**.
     - **Alert severity** – Choose the alert severities that trigger an incident notification. For example, if you only want to be informed about high-severity incidents, select High.
 
 ### Set up Defender Experts Teams notifications
@@ -124,19 +124,19 @@ When Teams notifications are enabled:
 After setup, the system creates the Defender Experts team and the **Hunting notifications** channel, and provides a link to open the Teams channel. A welcome message appears in Teams confirming the setup is complete.
 
 > [!TIP]
-> If the setup fails, see [Configuring the Microsoft Defender Experts app in Teams](teams-restrictions-dexapp.md) for troubleshooting guidance.
+> If the setup fails, see [Configuring the Microsoft Defender Experts app in Teams](defender-experts-teams-app-permissions.md) for troubleshooting guidance.
 
 ### Generate sample Defender Experts Notifications
 
-You can generate a sample Defender Experts Notification to start experiencing the Defender Experts for Hunting service without waiting for an actual critical activity in your environment. By generating a sample notification, you can also test any [email notifications](#set-up-defender-experts-email-notifications) configured in the Microsoft Defender portal for this service. You can also test the configuration of playbooks (if configured for such notifications) and rules in your Security Information and Event Management (SIEM) environment.
+You can generate a sample Defender Experts Notification to start experiencing the Defender Experts Hunting service without waiting for an actual critical activity in your environment. By generating a sample notification, you can also test any [email notifications](#set-up-defender-experts-email-notifications) configured in the Microsoft Defender portal for this service. You can also test the configuration of playbooks (if configured for such notifications) and rules in your Security Information and Event Management (SIEM) environment.
 
 A sample Defender Experts Notification appears in your **Incidents** page with the title *Defender Experts: Test Notification from Microsoft Defender Experts*. The notification's title, summary, and recommendations are placeholder text, while the other elements such as alerts are randomly generated from events present in your tenant and aren't actually impacted.
 
-:::image type="content" source="./media/onboarding-defender-experts-for-hunting/sample-den-dexh.png" alt-text="Screenshot of a sample Defender Experts Notification in the Incidents page for Defender Experts for Hunting." lightbox="./media/onboarding-defender-experts-for-hunting/sample-den-dexh.png":::
+:::image type="content" source="./media/onboarding-defender-experts-for-hunting/sample-den-dexh.png" alt-text="Screenshot of a sample Defender Experts Notification in the Incidents page for Defender Experts Hunting." lightbox="./media/onboarding-defender-experts-for-hunting/sample-den-dexh.png":::
 
 **To generate a sample notification:**
 
-1. In your Microsoft Defender XDR navigation pane, go to **Settings** > **Defender Experts** and then select **Sample notifications**.
+1. In your Microsoft Defender navigation pane, go to **Settings** > **Defender Experts** and then select **Sample notifications**.
 1. Select **Generate a sample notification**. A green status message appears, confirming that your sample notification is ready for review.
 1. Under **Recently generated Defender Experts Notification**, select a link from the list to view its corresponding generated sample notification. The most recent sample appears at the top of the list. Selecting a link redirects you to the **Incidents** page.
 
@@ -144,6 +144,6 @@ A sample Defender Experts Notification appears in your **Incidents** page with t
 
 ## Next step
 
-- [Access Defender Experts Notifications using Microsoft Graph security API](access-den-graph-api.md)
+- [Access Defender Experts Notifications using Microsoft Graph security API](defender-experts-hunting-graph-api.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

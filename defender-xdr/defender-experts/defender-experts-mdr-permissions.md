@@ -21,8 +21,8 @@ ms.date: 08/01/2025
 
 **Applies to:**
 
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- [Microsoft Defender Experts for Servers](dex-servers-overview.md)
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md)
+- [Microsoft Defender Experts for Servers](defender-experts-servers-overview.md)
 
 For Microsoft Defender Experts incident investigations, when our experts need access to your tenants, we follow the just-in-time and least privilege principles to provide the right level of access at the right time. To deliver on these requirements, we built the Microsoft Defender Experts permissions platform using the following capabilities in Microsoft Entra ID:
 
@@ -44,6 +44,6 @@ These policies are configured during the onboarding process and require the rele
 
 ### See also
 
-[Important considerations for Microsoft Defender Experts](additional-information-xdr.md)
+[Important considerations for Microsoft Defender Experts](defender-experts-mdr-considerations.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

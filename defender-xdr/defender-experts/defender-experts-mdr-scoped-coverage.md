@@ -1,5 +1,5 @@
 ---
-title: Scoped coverage in Microsoft Defender Experts for XDR
+title: Scoped coverage in Microsoft Defender Experts MDR
 ms.reviewer:
 description: Defender Experts scoped coverage covers a specific section of the organization where SOC support is limited.
 ms.service: defender-experts-for-xdr
@@ -16,14 +16,14 @@ ms.custom:
 ms.date: 08/01/2025
 ---
 
-# Scoped coverage in Microsoft Defender Experts for XDR
+# Scoped coverage in Microsoft Defender Experts MDR
 
 **Applies to:**
 
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md)
 - Microsoft Defender Experts for Servers
 
-Microsoft Defender Experts for XDR offers scoped coverage for customers who wish to have Defender Experts cover only a section of their organization (for example, specific geography, subsidiary, or function) that requires security operations center (SOC) support or where their security support is limited.
+Microsoft Defender Experts MDR offers scoped coverage for customers who wish to have Defender Experts cover only a section of their organization (for example, specific geography, subsidiary, or function) that requires security operations center (SOC) support or where their security support is limited.
 
 You can define a specific set of devices and/or users for which Defender Experts will offer support. Any incident that impacts any of the defined set of devices and users will be considered in scope, and our experts will provide the necessary response actions to mitigate the threat.
 
@@ -43,7 +43,7 @@ You can create a predefined Microsoft Defender for Endpoint device group or a Mi
 The devices and users you add to these groups are then considered as the set of assets that are in scope for this service.
 
 > [!NOTE]
-> You need **Security admin** permissions to create the device and user groups. [Learn more about granting permissions to our experts](get-started-xdr.md#grant-permissions-to-our-experts).
+> You need **Security admin** permissions to create the device and user groups. [Learn more about granting permissions to our experts](defender-experts-mdr-get-started.md#grant-permissions-to-our-experts).
 
 > [!TIP]
 > The device group should be in the highest order of priority for the devices under it, to be considered in scope. This is a known product limitation.
@@ -53,9 +53,9 @@ Currently, the service doesn't offer support to rename these predefined groups, 
 The following section lists down questions that you or your SOC team might have regarding scoped coverage:
 
 1. **What aspects of the XDR service remain consistent with Defender Experts scoped coverage?**
-   - This service doesn't change our pricing structure. You still pay for Defender Experts service based on [E5](before-you-begin-xdr.md#licensing-and-service-onboarding-prerequisites) and Microsoft Defender for Endpoint for Servers for your desired user base.
+   - This service doesn't change our pricing structure. You still pay for Defender Experts service based on [E5](defender-experts-mdr-prerequisites.md#licensing-and-service-onboarding-prerequisites) and Microsoft Defender for Endpoint for Servers for your desired user base.
    - This service doesn't scope according to individual Microsoft Defender products and services (such as Microsoft Defender for Endpoint, Microsoft Defender for Office 365, or Microsoft Defender for Cloud). That is, the minimum baseline for scoped coverage is still the E5 license.
-   - There's no change in permissions for analysts in Defender Experts for XDR. Defender Experts analysts will still have access to your entire tenant and not just the scoped assets.
+   - There's no change in permissions for analysts in Defender Experts MDR. Defender Experts analysts will still have access to your entire tenant and not just the scoped assets.
 
 2. **Can I change the scoped assets later?**
 
@@ -63,9 +63,9 @@ The following section lists down questions that you or your SOC team might have 
 
 3. **What type of response actions does this service provide?**
 
-   There are no changes to existing response actions that are in scope. Read our [FAQs related to Microsoft Defender Experts for XDR Managed response](../defender-xdr/frequently-asked-questions.md) to learn more.
+   There are no changes to existing response actions that are in scope. Read our [FAQs related to Microsoft Defender Experts MDR Managed response](defender-experts-mdr-faq.md) to learn more.
 
 ### See also
 
-- [Get started with Microsoft Defender Experts for XDR service](managed-detection-and-response-xdr.md)
-- [Understanding and managing Defender Experts for XDR incident updates](faq-incident-notifications-xdr.md)
+- [Get started with Microsoft Defender Experts MDR service](defender-experts-mdr-managed-response.md)
+- [Understanding and managing Defender Experts MDR incident updates](defender-experts-mdr-faq-managed-response.md#understanding-managed-response-notifications)

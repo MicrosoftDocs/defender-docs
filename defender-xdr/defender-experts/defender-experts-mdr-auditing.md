@@ -19,12 +19,12 @@ ms.date: 06/16/2026
 ai-usage: ai-assisted
 ---
 
-# Audit Defender Experts actions and administrator changes in Microsoft Defender XDR
+# Audit Defender Experts actions and administrator changes in Microsoft Defender
 
 **Applies to:**
 
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- [Microsoft Defender Experts for Servers](dex-servers-overview.md)
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md)
+- [Microsoft Defender Experts for Servers](defender-experts-servers-overview.md)
 
 As a tenant administrator, you can use Microsoft Purview to search the audit logs for the times Microsoft Defender Experts signed into your tenant and the actions they did there to perform their investigations. You can also search the audit logs for the changes done by your tenant administrators to the Defender Experts settings.
 
@@ -72,5 +72,5 @@ In addition to using Audit New Search in the Microsoft Purview portal, you can u
 <a name="see-also"></a>
 ## See also
 
-- For prerequisites, limitations, and other guidance, see [Important considerations for Microsoft Defender Experts](additional-information-xdr.md).
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+- For prerequisites, limitations, and other guidance, see [Important considerations for Microsoft Defender Experts](defender-experts-mdr-considerations.md).
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]

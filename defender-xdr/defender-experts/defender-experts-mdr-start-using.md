@@ -22,10 +22,10 @@ ms.custom: msecd-doc-authoring-1014
 
 **Applies to:**
 
-- [Microsoft Defender Experts for XDR](dex-xdr-overview.md)
-- [Microsoft Defender Experts for Servers](dex-servers-overview.md)
+- [Microsoft Defender Experts MDR](defender-experts-mdr-overview.md)
+- [Microsoft Defender Experts for Servers](defender-experts-servers-overview.md)
 
-After you complete the [onboarding steps and readiness checks](get-started-xdr.md) for the Microsoft Defender Experts service and the experts start performing comprehensive response work on your behalf, you receive notifications about incidents that require remediation steps and targeted recommendations on critical incidents. You can also start chatting with the experts or your security delivery experts (SDXs) and view reports on the number of incidents they investigated and resolved.
+After you complete the [onboarding steps and readiness checks](defender-experts-mdr-get-started.md) for the Microsoft Defender Experts service and the experts start performing comprehensive response work on your behalf, you receive notifications about incidents that require remediation steps and targeted recommendations on critical incidents. You can also start chatting with the experts or your security delivery experts (SDXs) and view reports on the number of incidents they investigated and resolved.
 
 This article describes the different in-portal experiences in Microsoft Defender where you can view and perform the previously mentioned Defender Experts notifications and activities, among others. These experiences provide you visibility into the experts' activities and clear entry points into tasks that require your attention.
 
@@ -35,7 +35,7 @@ You can view and monitor Defender Experts activities in the following sections o
 - As a status card in the portal home page
 - In the portal navigation menu
 
-:::image type="content" source="media/start-using-mdex-xdr/defender-experts-experiences.png" alt-text="Screenshot of the Microsoft defender portal with the Defender Experts experiences highlighted." lightbox="media/start-using-mdex-xdr/defender-experts-experiences.png":::
+:::image type="content" source="media/start-using-mdex-xdr/defender-experts-experiences.png" alt-text="Screenshot of the Microsoft Defender portal with the Defender Experts experiences highlighted." lightbox="media/start-using-mdex-xdr/defender-experts-experiences.png":::
 
 <a name="home-page-card"></a>
 ### Find Defender Experts from the home page card
@@ -100,6 +100,6 @@ The Defender Experts overview page serves as your starting point to:
 - Navigate to detailed experiences for investigations, hunting results, or follow-up actions.
 
 For more information, see the following articles:
-- [Managed detection and response](managed-detection-and-response-xdr.md)
-- [Communicating with experts in the Microsoft Defender Experts service](communicate-defender-experts-xdr.md)
-- [Get real-time visibility with Defender Experts reports](reports-xdr.md)
+- [Managed detection and response](defender-experts-mdr-managed-response.md)
+- [Communicating with experts in the Microsoft Defender Experts service](defender-experts-mdr-communication.md)
+- [Get real-time visibility with Defender Experts reports](defender-experts-mdr-reports.md)
