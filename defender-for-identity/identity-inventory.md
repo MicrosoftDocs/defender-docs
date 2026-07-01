@@ -167,7 +167,7 @@ The **Identities** list highlights key details for each non-human identity, incl
 | Content type | Shows whether the identity has admin or user-only consent. For identities with only user consent, the total consented users are shown. Identities with admin consent have broad access to all data, unless access policies and other restrictions limit that access. |
 | Publisher | Publisher of the identity and their verification status. |
 | Last used | Last time the identity signed in. This data is tracked only back to June 1, 2022. |
-| Used by AI agents (Preview) | Shows the name of the AI agent platform whose agents use the service principal, such as Copilot Studio or Azure AI Foundry. |
+| Used by AI agents (Preview) | Shows the name of the AI agent platform whose agents use the service principal, such as Copilot Studio or Azure AI Foundry. To view the specific Copilot Studio agent connected to a service principal, expand the OAuth app node in the [Graph tab](/defender-cloud-apps/app-governance-visibility-insights-view-apps#graph-tab). |
 
 For Microsoft Entra ID identities, select **Create new policy** to set up a governance policy that automatically responds when high-risk apps appear. Use the built-in **New high risk app** template for a quick setup, or create a custom policy with risk score as a policy condition.
 
