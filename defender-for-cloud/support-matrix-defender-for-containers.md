@@ -112,7 +112,7 @@ The following table lists the features provided by Defender for Containers for t
 | Binary drift blocking | Blocks binary drift in runtime containers | EKS | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | AWS |
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | EKS | GA | GA | Enabled with plan | **Defender for Containers** | AWS |
 | DNS Detection | Detects suspicious DNS activity from container workloads | EKS | GA | - | Requires **Defender sensor via Helm** | **Defender for Containers** | AWS |
-| Malware detection | Detection of malware | EKS nodes | Preview | Preview | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | - |
+| Malware detection | Detection of malware | EKS nodes | GA | GA | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | - |
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | EKS | Preview | - | Requires **Defender sensor** and **K8S access API** | **Defender for Containers** | AWS |
 | Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | EKS | GA | - | Requires **Defender sensor** | **Defender for Containers** | AWS |
 
@@ -139,7 +139,7 @@ The following table lists the features provided by Defender for Containers for t
 | Binary drift blocking | Blocks binary drift in runtime containers | GKE | Preview | - | Requires **Defender sensor via Helm** | **Defender for Containers** | GCP |
 | Control plane detection | Detection of suspicious activity for Kubernetes based on Kubernetes audit trail | GKE | GA | GA | Enabled with plan | **Defender for Containers** | GCP |
 | DNS Detection | Detects suspicious DNS activity from container workloads | GKE | GA | - | Requires **Defender sensor via Helm** | **Defender for Containers** | GCP |
-| Malware detection | Detection of malware | GKE nodes | Preview | Preview | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | - |
+| Malware detection | Detection of malware | GKE nodes | GA | GA | Requires **Agentless scanning for machines** | **Defender for Containers** or **Defender for Servers Plan 2** | - |
 | Response actions in XDR | Provides automated and manual remediation in Microsoft XDR | GKE | Preview | - | Requires **Defender sensor** and **K8S access API** | **Defender for Containers** | GCP |
 | Workload detection | Monitors containerized workloads for threats and gives alerts to suspicious activities | GKE | GA | - | Requires **Defender sensor** | **Defender for Containers** | GCP |
 
