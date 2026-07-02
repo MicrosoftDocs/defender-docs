@@ -16,7 +16,7 @@ ai-usage: ai-assisted
 
 Local AI agents, including coding assistants, CLI tools, desktop AI apps, and autonomous agent platforms, run with user privileges on endpoints. These agents act on text from prompts, files, web content, and tool output, and can't reliably separate trusted content from hidden instructions. A single injected instruction can misuse agent access to exfiltrate data, modify code, or run harmful commands.
 
-Microsoft Defender provides AI agent runtime protection by inspecting key points in the agent loop: user prompts, pre-tool calls, and post-tool responses. This helps detect prompt injection and dangerous actions, and audit or block them before they execute. To learn more about how runtime protection audits and blocks prompt injection, see [What runtime protection detects](#what-runtime-protection-detects) and [How it works](#how-it-works).
+Microsoft Defender provides AI agent runtime protection by inspecting key points in the agent loop: user prompts, tool requests before execution, and tool responses after execution. This helps detect prompt injection and high-risk agent actions, audit them, and block supported actions before they run. Defender supports two inspection approaches: agent-native event inspection for agents that expose vendor-supported event interfaces, and network inspection for agents that communicate over supported network paths. To learn more about how runtime protection audits and blocks prompt injection, see [What runtime protection detects](#what-runtime-protection-detects) and [How it works](#how-it-works).
 
 :::image type="content" source="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png" alt-text="Screenshot showing the blocking notification displayed to the user when Defender detects and blocks a prompt injection attack on a local AI agent." lightbox="media/configure-ai-agent-runtime-protection/ai-runtime-agent-block-and-toast.png":::
 
@@ -33,17 +33,32 @@ For example, a coding agent fetches a project's documentation to answer a questi
 
 ## How it works
 
-Runtime protection uses agent hooks — defined points in an agent's execution where an external tool can inspect and act on the agent's actions. Agents such as Claude Code and GitHub Copilot CLI expose these hook points, and Defender uses them to inspect agent activity.
+Runtime protection uses two approaches to inspect agent activity:
 
-When an agent supports hooks, Defender receives payloads at key stages in the agentic loop:
+### Agent-native event inspection
+
+Agent-native event inspection uses vendor-supported event interfaces exposed by the agent. These interfaces provide structured checkpoints in the agent workflow, such as when a user submits a prompt, when the agent requests to use a tool, or after a tool returns a response. Agents such as Claude Code, Codex CLI, and GitHub Copilot CLI expose these event interfaces, and Defender uses them to inspect agent activity and apply audit or block decisions where supported
+
+When an agent exposes a vendor-supported agent event interface, Defender receives payloads at key stages in the agentic loop:
 
 - **User prompt**: The prompt submitted to the agent.
 - **Pre-tool call**: The tool invocation request before execution.
 - **Post-tool response**: The tool response after execution completes.
 
-Defender scans these payloads for prompt injection before a risky action is allowed to continue. Each scan is a fast, inline check at one of these points rather than continuous monitoring of the agent process, so the added latency is minimal.
+Defender scans these payloads for prompt injection and high-risk agent activity. Defender can audit or block activity at each supported event point. Depending on the event type, blocking can prevent the prompt from being processed, prevent a requested tool action from running, or prevent a tool response from continuing in the agent loop.
 
-For more information on agent hooks, see [Claude Code hooks](https://code.claude.com/docs/en/hooks) and [GitHub Copilot hooks](https://docs.github.com/copilot/how-tos/copilot-cli/customize-copilot/use-hooks).
+Each scan is a fast, inline check at one of these event points rather than continuous monitoring of the agent process, so the added latency is minimal.
+
+For vendor documentation about these agent event interfaces, see [Claude Code documentation](https://code.claude.com/docs/en/hooks), [Codex CLI documentation](https://developers.openai.com/codex/hooks), and [GitHub Copilot documentation](https://docs.github.com/copilot/reference/hooks-reference).
+
+### Network inspection
+
+Network inspection extends runtime protection to agents that don't expose agent-native event interfaces. Instead of relying on structured agent events, Defender inspects supported agent-to-Large Language Model (LLM) network flows to detect prompt injection in transit.
+
+Use network inspection when you want to protect agents that communicate with LLM services over the network but don't expose a vendor-supported event interface. This helps close the coverage gap for agents that would otherwise have no runtime protection before or during interaction with the model.
+
+> [!NOTE]
+> Network inspection doesn't support agents that use certificate pinning or HTTP/3.
 
 ## What happens when you enable runtime protection
 
@@ -67,12 +82,14 @@ For the full investigation workflow, including user and SOC experiences, see [Re
 
 ## Supported agents
 
-The following table lists the local AI agents that Defender supports for runtime protection and links to each agent's hooks documentation.
+The following table lists the local AI agents that Defender supports for runtime protection through agent-native event inspection.
 
 | Agent | Hooks documentation |
 |-------|---------------------|
 | [Claude Code](https://code.claude.com/) | [Claude Code hooks](https://code.claude.com/docs/en/hooks) |
+| [Codex CLI](https://developers.openai.com/codex/cli) | [Codex CLI hooks](https://developers.openai.com/codex/hooks) |
 | [GitHub Copilot CLI](https://docs.github.com/en/copilot) | [GitHub Copilot hooks](https://docs.github.com/copilot/how-tos/copilot-cli/customize-copilot/use-hooks) |
+|[GitHub Copilot app](https://docs.github.com/en/copilot/how-tos/github-copilot-app/getting-started) | [GitHub Copilot app hooks](https://docs.github.com/en/copilot/reference/hooks-reference) |
 
 ## Broader AI security capabilities
 
