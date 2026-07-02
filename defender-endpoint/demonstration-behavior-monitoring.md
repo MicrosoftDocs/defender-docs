@@ -1,4 +1,4 @@
-﻿---
+---
 title: Behavior Monitoring demonstration
 description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
@@ -7,15 +7,12 @@ author: limwainstein
 ms.author: lwainstein
 ms.reviewer: yonghree
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
-search.appverid: met150
 ms.date: 03/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -54,7 +51,7 @@ When real-time protection is enabled, the result shows a value of `True`.
 
 ### Enable Behavior Monitoring for Microsoft Defender for Endpoint
 
-For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [how to enable Behavior Monitoring](/defender-endpoint/behavior-monitor).
+For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [how to enable Behavior Monitoring](behavior-monitor.md).
 
 ### Demonstration of how Behavior Monitoring works in Windows and Windows Server
 

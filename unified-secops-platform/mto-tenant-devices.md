@@ -1,14 +1,8 @@
 ---
 title: Devices in multitenant management 
 description: Learn about multitenant device view in multitenant management of the Microsoft Defender XDR.
-search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.author: guywild
 author: guywi-ms
-ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
+ms.author: guywild
 ms.collection: 
   - m365-security
   - highpri

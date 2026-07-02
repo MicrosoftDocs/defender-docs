@@ -1,4 +1,4 @@
-﻿---
+---
 title: Hello World for Microsoft Defender for Endpoint API
 ms.reviewer:
 description: Create a practice 'Hello world'-style API call to the Microsoft Defender for Endpoint API.
@@ -6,16 +6,15 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
-ms.custom: api
-search.appverid: met150
+ms.custom:
+  - api
+  - sfi-image-nochange
 ms.date: 01/08/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -104,6 +103,9 @@ Done! You've successfully registered an application!
 
 ### Step 2 - Get a token using the App and use this token to access the API
 
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
+
 Copy the following script to PowerShell ISE or to a text editor, and save it as `Get-Token.ps1`. Running this script generates a token and saves it in the working folder under the name `Latest-token.txt`.
 
 ```powershell
@@ -113,7 +115,7 @@ $tenantId = '' ### Paste your tenant ID here
 $appId = '' ### Paste your Application (client) ID here
 $appSecret = '' ### Paste your Application secret (App key) here to test, and then store it in a safe place!
 
-$resourceAppIdUri = 'https://api.security.microsoft.com/'
+$resourceAppIdUri = 'https://api.securitycenter.microsoft.com/'
 $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
 $authBody = [Ordered] @{
   resource = "$resourceAppIdUri"

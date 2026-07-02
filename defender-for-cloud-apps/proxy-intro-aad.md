@@ -35,6 +35,8 @@ Conditional Access app control uses access policies and session policies to moni
 
 Each policy has conditions to define *who* (which user or group of users), *what* (which cloud apps), and *where* (which locations and networks) the policy is applied to. After you determine the conditions, route your users first to Defender for Cloud Apps. There, you can apply the access and session controls to help protect your data.
 
+Conditional Access policies are applied at the application level, not at the individual file level. As a result, you can't exclude specific files from the policy settings.
+
 Access and session policies include the following types of activities:
 
 |Activity |Description |
@@ -85,6 +87,8 @@ Defender for Cloud Apps identifies apps by using data from the cloud app catalog
 
 ## Scope of support for session control
 
+Session controls apply only to web browser–based access and are enforced during interactive browser sessions.
+
 Although session controls are built to work with any browser on any major platform on any operating system, we support the latest versions of the following browsers:
 
 - [Microsoft Edge](https://www.microsoft.com/edge)
@@ -93,6 +97,31 @@ Although session controls are built to work with any browser on any major platfo
 - [Apple Safari](https://www.apple.com/safari/)
 
 Microsoft Edge users benefit from in-browser protection, without redirecting to a reverse proxy. For more information, see [In-browser protection with Microsoft Edge for Business (preview)](in-browser-protection.md).
+
+> [!IMPORTANT]  
+> The Microsoft Teams desktop application isn’t supported for Conditional Access App Control session controls.
+> Session controls, such as *Block download (preview)*, don’t apply to the Microsoft Teams desktop application. 
+
+### Restricting access for unsupported clients
+
+When you need to restrict access to content in Microsoft Teams, the available controls depend on the client type:
+
+- **Browser access (supported for session controls):**  
+  Apply Conditional Access App Control session controls, such as *Block download (preview)*, to supported browser sessions.
+
+- **Microsoft Teams desktop application (not supported for session controls):**  
+  Use an access control approach that prevents sign-in from the desktop application for the targeted users, while allowing browser access where session controls can be enforced.
+
+> [!NOTE]  
+> If desktop access is allowed, users might be able to download content through the Microsoft Teams desktop application, even when browser session controls are configured.
+
+### Validate your configuration
+
+After configuring policies, verify behavior across supported and unsupported clients:
+
+1. Sign in with a user that matches the policy scope.  
+2. Confirm that the expected restrictions are enforced in a supported browser session.  
+3. Verify behavior in the Microsoft Teams desktop application to confirm that access is restricted.
 
 ## App support for TLS 1.2+
 

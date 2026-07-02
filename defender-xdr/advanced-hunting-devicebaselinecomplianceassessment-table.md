@@ -1,16 +1,11 @@
 ---
 title: DeviceBaselineComplianceAssessment table in the advanced hunting schema
 description: Learn about the baseline compliance assessment snapshot, indicating the status of various security configurations related to baseline profiles on devices in Microsoft Defender XDR.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
 ms.author: pauloliveria
 author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3

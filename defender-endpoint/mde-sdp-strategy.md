@@ -5,7 +5,6 @@ keywords: mde safe deployment practices
 author: paulinbar
 ms.author: painbar
 ms.reviewer: yongrhee
-manager: bagol
 ms.date: 04/29/2025
 ms.topic: install-set-up-deploy
 ms.service: defender-endpoint

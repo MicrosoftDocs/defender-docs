@@ -48,6 +48,7 @@
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
       "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
       "titleSuffix": "Microsoft Defender for Endpoint",
+      "manager": "bagol",
       "searchScope": ["Microsoft Defender Endpoint"],
       "contributors_to_exclude": [
         "dstrome",
@@ -66,7 +67,14 @@
         "Ruchika-mittal01"
       ]
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "author": {
+        "malware/**": "chrisda"
+      },
+      "ms.author": {
+        "malware/**": "chrisda"
+      }
+    },
     "template": [],
     "dest": "defender-endpoint"
   }

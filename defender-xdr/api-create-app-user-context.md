@@ -2,21 +2,14 @@
 title: Create an app to access Microsoft Defender XDR APIs on behalf of a user
 description: Learn how to access Microsoft Defender XDR APIs on behalf of a user.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: edbaynash
 author: EdB-MSFT
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
  - m365-security
  - tier3
  - must-keep
 ms.topic: reference
-search.appverid: 
-  - MOE150
-  - MET150
 ms.custom: api
 ms.date: 04/15/2025
 appliesto:

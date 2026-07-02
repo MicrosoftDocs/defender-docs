@@ -1,9 +1,11 @@
 ---
 title: Protect your Workday environment | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Workday app to Defender for Cloud Apps using the API connector.
-ms.date: 08/18/2025
+description: Connect Workday to Microsoft Defender for Cloud Apps with the API connector to monitor user activity and detect anomalous behavior.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 # How Defender for Cloud Apps helps protect your Workday environment
 
@@ -14,12 +16,16 @@ Connecting Workday to Defender for Cloud Apps gives you improved insights into y
 
 ## Main threats
 
+Workday deployments commonly face the following threats:
+
 - Compromised accounts and insider threats
 - Data leakage
 - Insufficient security awareness
 - Unmanaged bring your own device (BYOD)
 
 ## How Defender for Cloud Apps helps to protect your environment
+
+Use the following guidance to help protect your Workday environment with Defender for Cloud Apps:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
@@ -37,7 +43,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-Currently, there are no governance controls available for Workday. If you are interested in having governance actions for this connector, you can [open a support ticket](/defender-xdr/contact-defender-support) with details of the actions you want.
+Currently, there are no governance controls available for Workday. If you are interested in having governance actions for this connector, you can [open a Microsoft Defender support ticket](/defender-xdr/contact-defender-support) with details of the actions you want.
 
 For more information about remediating threats from apps, see [Governing connected apps](governance-actions.md).
 
@@ -48,7 +54,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect Workday to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Workday account using the app connector API. This connection gives you visibility into and control over Workday use. For information about how Defender for Cloud Apps protects Workday, see [Protect Workday](protect-workday.md).
+The following instructions explain how to connect Microsoft Defender for Cloud Apps to your existing Workday account using the app connector API. This connection gives you visibility into and control over Workday use. For information about how Defender for Cloud Apps protects Workday, see [Protect Workday](protect-workday.md).
 
 ### Quick start
 
@@ -83,11 +89,13 @@ For more information about setting up Workday integration users, security groups
 
 ### How to connect Workday to Defender for Cloud Apps using OAuth
 
+Perform the following steps in Workday to prepare the OAuth connection:
+
 1. Sign in to Workday with an account that is a member of the security group mentioned in the prerequisites.
 
 1. Search for "Edit tenant setup – system", and under **User Activity Logging**, select **Enable User Activity Logging**.
 
-    ![Screenshot of allowing user activity logging.](media/connect-workday-enable-logging.png)
+    ![Screenshot of the Workday tenant setup page with the Enable User Activity Logging option selected.](media/connect-workday-enable-logging.png)
 
 1. Search for "Edit tenant setup – security", and under **OAuth 2.0 Settings**, select **OAuth 2.0 Clients Enabled**.
 
@@ -104,7 +112,7 @@ For more information about setting up Workday integration users, security groups
     | Non-Expiring Refresh Tokens | Yes |
     | Scope (Functional Areas) | **Staffing** and **System** |
 
-    ![Screenshot of registering API client.](media/connect-workday-register-api-client.png)
+    ![Screenshot of the Workday Register API Client page with client name, grant type, and scope fields.](media/connect-workday-register-api-client.png)
 
 1. Once registered, make a note for the following parameters, and then select **Done**.
 
@@ -114,7 +122,7 @@ For more information about setting up Workday integration users, security groups
     * Token Endpoint
     * Authorization Endpoint
 
-    ![Screenshot of confirming registration of API client.](media/connect-workday-register-api-client-confirm.png)
+    ![Screenshot of the Workday API client registration confirmation showing the Client ID, Client Secret, and endpoint values.](media/connect-workday-register-api-client-confirm.png)
 
 >[!NOTE]
 >If the Workday account is enabled with SAML SSO, then append the query string parameter `'redirect=n'` to the authorization endpoint.
@@ -123,25 +131,27 @@ For more information about setting up Workday integration users, security groups
 
 ### How to connect Defender for Cloud Apps to Workday
 
+Complete the following steps in Microsoft Defender for Cloud Apps to add the Workday connector:
+
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 
 1. In the **App connectors** page, select **+Connect an app**, and then **Workday**.
 
-    ![Screenshot of adding app connector.](media/connect-workday-add-app.png)
+    ![Screenshot of the App Connectors page with the Connect an app option and Workday selected.](media/connect-workday-add-app.png)
 
 1. In the next screen, give your connector a name and then select **Next**.
 
-    ![Screenshot of adding instance name.](media/connect-workday-add-app-connect.png)
+    ![Screenshot of the Workday app connector setup page with the connector instance name field.](media/connect-workday-add-app-connect.png)
 
 1. On the **Enter details** page, fill out the details with the information you noted earlier, and then select **Next**.
 
-    ![Screenshot of filling out app details.](media/connect-workday-add-app-connect-details.png)
+    ![Screenshot of the Workday connector Enter details page with Client ID, Client Secret, and endpoint fields.](media/connect-workday-add-app-connect-details.png)
 
 1. In the **External link** page, select **Connect Workday**.
 
 1. In Workday, a pop-up appears asking you if you want to allow Defender for Cloud Apps access to your Workday account. To proceed, select **Allow**.
 
-    ![Screenshot of authorizing access to app.](media/connect-workday-add-app-allow.png)
+    ![Screenshot of the Workday permission prompt asking to allow Defender for Cloud Apps access to the account.](media/connect-workday-add-app-allow.png)
 
 1. In Defender for Cloud Apps, you should see a message that Workday was successfully connected.
 

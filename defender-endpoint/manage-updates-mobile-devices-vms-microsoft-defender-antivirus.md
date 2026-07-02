@@ -1,32 +1,31 @@
-﻿---
+---
 title: Define how mobile devices are updated by Microsoft Defender Antivirus
 description: Manage how mobile devices, such as laptops, should be updated with Microsoft Defender Antivirus protection updates.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: batamig
-ms.author: bagol
-ms.custom: nextgen
+author: chrisda
+ms.author: chrisda
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
-search.appverid: met150
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 
 # Manage updates for mobile devices and virtual machines (VMs)
 
 Mobile devices and VMs may require more configuration to ensure performance is not impacted by updates.
 
-There are two settings that are useful for these devices:
+There are two settings that are useful for mobile devices and VMs:
 
 - Opt in to Microsoft Update on mobile computers without a WSUS connection
 - Prevent Security intelligence updates when running on battery power
@@ -42,6 +41,8 @@ The following articles may also be useful in these situations:
 
 ### Supported operating systems
 
+The following operating systems are supported:
+
 - Windows
 
 
@@ -49,7 +50,7 @@ The following articles may also be useful in these situations:
 
 You can use Microsoft Update to keep Security intelligence on mobile devices running Microsoft Defender Antivirus up to date when they are not connected to the corporate network or don't otherwise have a WSUS connection.
 
-This means that protection updates can be delivered to devices (via Microsoft Update) even if you have set WSUS to override Microsoft Update.
+Opting in to Microsoft Update means that protection updates can be delivered to devices (via Microsoft Update) even if you have set WSUS to override Microsoft Update.
 
 You can opt in to Microsoft Update on the mobile device in one of the following ways:
 
@@ -58,6 +59,8 @@ You can opt in to Microsoft Update on the mobile device in one of the following 
 - Manually opt in every computer on your network through the **Settings** menu.
 
 ### Use Group Policy to opt in to Microsoft Update
+
+Perform the following steps to enable Microsoft Update by using Group Policy:
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and select **Edit**.
 
@@ -71,11 +74,15 @@ You can opt in to Microsoft Update on the mobile device in one of the following 
 
 ### Use a VBScript to opt in to Microsoft Update
 
+Use the following process to create and run a VBScript that opts devices in to Microsoft Update:
+
 1. Use the instructions in the MSDN article [Opt-In to Microsoft Update](/windows/win32/wua_sdk/opt-in-to-microsoft-update) to create the VBScript.
 
 1. Run the VBScript you created on each computer in your network.
 
 ### Manually opt in to Microsoft Update
+
+To manually opt a device in to Microsoft Update, complete the following steps:
 
 1. Open **Windows Update** in **Update & security** settings on the computer you want to opt in.
 
@@ -89,6 +96,8 @@ You can configure Microsoft Defender Antivirus to only download protection updat
 
 ### Use Group Policy to prevent security intelligence updates on battery power
 
+Perform the following steps to prevent security intelligence updates when devices are running on battery power:
+
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), choose the Group Policy Object you want to configure, and open it for editing.
 
 1. In the **Group Policy Management Editor** go to **Computer configuration**.
@@ -97,19 +106,21 @@ You can configure Microsoft Defender Antivirus to only download protection updat
 
 1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Signature Updates**, and then set **Allow security intelligence updates when running on battery power** to **Disabled**. Then select **OK**.
 
-This action prevents protection updates from downloading when the PC is on battery power.
+Disabling **Allow security intelligence updates when running on battery power** prevents protection updates from downloading when the PC is on battery power.
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
 ## Related articles
+
+The following articles provide related guidance:
 
 - [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md)
 - [Update and manage Microsoft Defender Antivirus in Windows 10](deploy-manage-report-microsoft-defender-antivirus.md)

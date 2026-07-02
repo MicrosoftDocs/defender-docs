@@ -1,22 +1,18 @@
 ---
 title: Message trace in the Microsoft Defender portal
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
   - m365-security
   - tier2
 ms.localizationpriority: medium
 ms.assetid: 3e64f99d-ac33-4aba-91c5-9cb4ca476803
-ms.custom: 
+ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Admins can use the Message trace link in the Microsoft Defender portal to find out what happened to messages.
 ms.service: defender-office-365
-search.appverid: met150
 ms.date: 10/9/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>

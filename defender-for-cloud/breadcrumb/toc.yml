@@ -1,7 +1,8 @@
-- name: 'Microsoft Defender'
-  tocHref: /defender/
-  topicHref: /defender/index
+items:
+- name: Azure
+  tocHref: /azure/
+  topicHref: /azure/index
   items:
-    - name: 'Microsoft Defender for Cloud'
-      tocHref: /defender-for-cloud/
-      topicHref: /defender-for-cloud/index
+  - name: Defender for Cloud
+    tocHref: /azure/defender-for-cloud/
+    topicHref: /azure/defender-for-cloud/

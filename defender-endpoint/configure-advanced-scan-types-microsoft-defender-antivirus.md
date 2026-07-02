@@ -5,11 +5,10 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.reviewer: pahuijbr
-manager: bagol
 ms.subservice: ngp
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
@@ -18,15 +17,16 @@ ms.collection:
 - tier2
 - mde-ngp
 ms.topic: how-to
-search.appverid: met150
+ai-usage: ai-assisted
 ---
 
 # Configure Microsoft Defender Antivirus scanning options
 
+You can configure Microsoft Defender Antivirus to scan email storage files, reparse points, network files, and archived files (such as .zip files). You can configure these scanning options by using Microsoft Intune, Microsoft Configuration Manager, Group Policy, PowerShell, or WMI.
 
 ## Use Microsoft Intune to configure scanning options
 
-For more information, see [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
+You can configure Microsoft Defender Antivirus scanning options in Microsoft Intune by using device restriction profiles. For more information, see [Configure device restriction settings in Microsoft Intune](/intune/intune-service/configuration/device-restrictions-configure) and [Microsoft Defender Antivirus device restriction settings for Windows 10 in Intune](/intune/intune-service/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
 
 
 ## Prerequisites
@@ -37,7 +37,7 @@ For more information, see [Configure device restriction settings in Microsoft In
 
 ## Use Microsoft Configuration Manager to configure scanning options
 
-For details on configuring Microsoft Configuration Manager (current branch), see [How to create and deploy anti-malware policies: Scan settings](/configmgr/protect/deploy-use/endpoint-antimalware-policies#scan-settings).
+For details on configuring Microsoft Configuration Manager (current branch), see [How to create and deploy anti-malware policies: Scan settings](/intune/configmgr/protect/deploy-use/endpoint-antimalware-policies#scan-settings).
 
 ## Use Group Policy to configure scanning options
 
@@ -52,13 +52,15 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 
 1. In the **Group Policy Management Editor** go to **Computer configuration** and select **Administrative templates**.
 
-1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**, and then select a location (refer to [Settings and locations](#settings-and-locations) in this article).
+1. Expand the tree to **Windows components** \> **Microsoft Defender Antivirus**, and then select a location (refer to the [Settings and locations](#settings-and-locations) section).
 
 1. Edit the policy object.
 
 1. Select **OK**, and repeat for any other settings.
 
 ### Settings and locations
+
+The following table lists the available scanning policy settings, their Group Policy locations, and the corresponding PowerShell parameters.
 
 |Policy item and location|Default setting <br/>(if not configured)|PowerShell `Set-MpPreference` parameter <br/>or WMI property for `MSFT_MpPreference` class|
 |---|---|---|
@@ -74,7 +76,7 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 |Specify the maximum CPU load (as a percentage) during a scan. <p> **Scan** > **Specify the maximum percentage of CPU utilization during a scan**|50|`-ScanAvgCPULoadFactor`<br/><br/> The maximum CPU load isn't a hard limit, but is guidance for the scanning engine to not exceed the maximum on average. Manual scans ignore this setting and run without any CPU limits.|
 |Specify the maximum size (in kilobytes) of archive files that should be scanned.<br/>**Scan** > **Specify the maximum size of archive files to be scanned**|No limit|Not available <br/><br/>The default value of 0 applies no limit|
 |Configure low CPU priority for scheduled scans<br/>**Scan** > **Configure low CPU priority for scheduled scans**|Disabled|Not available|
-|Configure scanning of network files <br/>**Scan** > **Configure scanning of network files**|Enabled|-DisableScanningNetworkFiles|
+|Configure scanning of network files <br/>**Scan** > **Configure scanning of network files**|Disabled|-DisableScanningNetworkFiles|
 |CPU throttling type <br/>**Scan** > **CPU throttling type**|Disabled|-ThrottleForScheduledScanOnly |
 |Scan excluded files and directories during quick scan <br/>**Scan** > **Scan excluded files and directories during quick scan**|Disabled|Not available|
 
@@ -112,6 +114,6 @@ If Microsoft Defender Antivirus detects a threat inside an email message, the fo
 
 ## Scanning mapped network drives
 
-On any OS, only the network drives that are mapped at system level, are scanned. User-level mapped network drives aren't scanned. User-level mapped network drives are those that a user maps in their session manually and using their own credentials.
+On all supported operating systems, only the network drives that are mapped at system level are scanned. User-level mapped network drives aren't scanned. User-level mapped network drives are those that a user maps in their session manually and using their own credentials.
 
 

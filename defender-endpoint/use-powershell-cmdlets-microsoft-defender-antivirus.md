@@ -1,27 +1,25 @@
-﻿---
+---
 title: Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus
 description: In Windows 10 and Windows 11, you can use PowerShell cmdlets to run scans, update Security intelligence, and change settings in Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 10/20/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: yongrhee
-manager: bagol
 ms.subservice: ngp
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 # Use PowerShell cmdlets to configure and manage Microsoft Defender Antivirus
 
@@ -33,9 +31,9 @@ For a list of the cmdlets and their functions and available parameters, see the 
 PowerShell cmdlets are most useful in Windows Server environments that don't rely on a graphical user interface (GUI) to configure software.
 
 > [!NOTE]
-> PowerShell cmdlets should not be used as a replacement for a full network policy management infrastructure, such as [Microsoft Endpoint Configuration Manager](/configmgr), [Group Policy Management Console](use-group-policy-microsoft-defender-antivirus.md), or [Microsoft Defender Antivirus Group Policy ADMX templates](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+> PowerShell cmdlets should not be used as a replacement for a full network policy management infrastructure, such as [Microsoft Configuration Manager](/intune/configmgr), [Group Policy Management Console](use-group-policy-microsoft-defender-antivirus.md), or [Microsoft Defender Antivirus Group Policy ADMX templates](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
-Changes made with PowerShell will affect local settings on the endpoint where the changes are deployed or made. This means that deployments of policy with Microsoft Defender for Endpoint security settings management, Microsoft Intune, Microsoft Configuration Manager Tenant Attach, or Group Policy can overwrite changes made with PowerShell.
+Changes made with PowerShell will affect local settings on the endpoint where the changes are deployed or made. Because PowerShell changes only local settings on the endpoint, deployments of policy with Microsoft Defender for Endpoint security settings management, Microsoft Intune, Microsoft Configuration Manager Tenant Attach, or Group Policy can overwrite changes made with PowerShell.
 
 You can [configure which settings can be overridden locally with local policy overrides](configure-local-policy-overrides-microsoft-defender-antivirus.md).
 
@@ -49,6 +47,8 @@ PowerShell is typically installed under the folder `%SystemRoot%\system32\Window
 
 ## Use Microsoft Defender Antivirus PowerShell cmdlets
 
+Use the following steps to run Microsoft Defender Antivirus PowerShell cmdlets:
+
 1. In the Windows search bar, type **powershell**.
 1. Select **Windows PowerShell** from the results to open the interface.
 1. Enter the PowerShell command and any parameters.
@@ -56,7 +56,7 @@ PowerShell is typically installed under the folder `%SystemRoot%\system32\Window
 > [!NOTE]
 > You may need to open PowerShell in administrator mode. Right-click the item in the Start menu, click **Run as administrator** and click **Yes** at the permissions prompt.
 
-To open online help for any of the cmdlets type the following:
+To view the full online documentation for any Defender PowerShell cmdlet, including additional parameters and examples, use the following command:
 
 ```PowerShell
 Get-Help <cmdlet> -Online
@@ -70,7 +70,7 @@ Microsoft Defender Antivirus can be configured using PowerShell cmdlets. These a
 
 - [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus): Check Microsoft Defender Antivirus status and protection settings.
 - [Set-MpPreference](/powershell/module/defender/set-mppreference): Configure preferences, such as exclusions, scan schedules, and cloud-delivered protection.
-- [Update-MpSignature](/powershell/module/defender/updatempsignature): Update security intelligence.
+- [Update-MpSignature](/powershell/module/defender/update-mpsignature): Update security intelligence.
 - [Start-MpScan](/powershell/module/defender/start-mpscan): Trigger quick, full, or custom scans.
 - [Get-MpThreat](/powershell/module/defender/get-mpthreat) or [Get-MpThreatDetection](/powershell/module/defender/get-mpthreatdetection): Review detected and remediated threats.
 
@@ -81,7 +81,7 @@ For full syntax and parameter options, see [Microsoft Defender Antivirus cmdlets
 > - If you're looking for Antivirus related information for other platforms, see:
 >   - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 >   - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
->   - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+>   - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 >   - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 >   - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 >   - [Configure Defender for Endpoint on Android features](android-configure.md)

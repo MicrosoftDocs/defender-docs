@@ -4,7 +4,6 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: deniseb
 audience: ITPro
 ms.topic: how-to
 ms.date: 6/20/2023
@@ -51,7 +50,7 @@ A SIEM server can receive data from a wide variety of Microsoft 365 services and
 |---|---|---|
 |[Microsoft Defender for Office 365](mdo-about.md)|Audit logs|[SIEM integration with Microsoft Defender for Office 365](siem-integration-with-office-365-ti.md)|
 |[Microsoft Defender for Endpoint](/windows/security/threat-protection/)|HTTPS endpoint hosted in Azure <p> REST API|[Pull alerts to your SIEM tools](/defender-endpoint/configure-siem)|
-|[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)|Log integration|[SIEM integration with Microsoft Defender for Cloud Apps](/cloud-app-security/siem)|
+|[Microsoft Defender for Cloud Apps](/defender-cloud-apps/what-is-defender-for-cloud-apps)|Log integration|[SIEM integration with Microsoft Defender for Cloud Apps](/defender-cloud-apps/siem)|
 
 > [!TIP]
 > Take a look at [Microsoft Sentinel](/azure/sentinel/overview). Microsoft Sentinel comes with connectors for Microsoft solutions. These connectors are available "out of the box" and provide for real-time integration. You can use Microsoft Sentinel with your Microsoft Defender XDR solutions and Microsoft 365 services, including Office 365, Microsoft Entra ID, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and more.
@@ -68,7 +67,7 @@ Make sure that audit logging is turned on before you configure SIEM server integ
 Verify the following requirements:
 
 - Your current Microsoft 365 subscription (for example, Microsoft Defender for Office 365 Plan 2) allows for Microsoft Sentinel integration.
-- Your account in Microsoft Defender for Office 365 or Microsoft Defender XDR is a *Security Administrator*.
+- Your account in Microsoft Defender for Office 365 or Microsoft Defender is a *Security Administrator*.
 - Verify that you have *Write permissions in Microsoft Sentinel*.
 
 1. Navigate to Microsoft Sentinel.

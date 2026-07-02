@@ -1,21 +1,18 @@
 ---
 title: Set up the Standard or Strict preset security policies for Microsoft Defender for Office 365
-description: Step to set up preset security policies in Microsoft Defender for Office 365 so you have the security recommended by the product. Preset policies set a security profile of either *Standard* or *Strict*. Set these and Microsoft Defender for Office 365 will manage and maintain these security controls for you.
+description: Assign users to the Standard or Strict preset security policies in Microsoft Defender for Office 365. These recommended policies apply and maintain Microsoft's best-practice protection settings automatically.
 ms.service: defender-office-365
-f1.keywords: 
- - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 12/30/2025
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Set up steps for the Standard or Strict preset security policies in Microsoft Defender for Office 365
@@ -26,7 +23,8 @@ Standard and Strict preset security policies apply predefined security control s
 
 Use the steps below to assign accounts to a Standard or Strict preset security policy and allow Defender for Office 365 to manage ongoing security control updates.
 
-## What you will need
+<a name="what-you-will-need"></a>
+## Prerequisites
 
 - Microsoft Defender for Office 365 Plan 1 or higher (Included in E5)
 - Sufficient permissions (Security Administrator role)
@@ -40,10 +38,10 @@ Our Strict preset security policy has more aggressive limits and settings for se
 
 - Ensure that the selected users have admin coverage to review and release emails if the end user thinks that the mail might be good and requests that the message be released to them.
 
-- If the criteria above are met, then the user should be placed in the Strict preset security policy. Otherwise the user should be placed in the Standard preset security policy.
+- If the user requires more aggressive detections and has admin coverage to review and release blocked messages, place the user in the Strict preset security policy. Otherwise, place the user in the Standard preset security policy.
 
 > [!TIP]
-> For information on what Standard and Strict security policies are, see this [article](../recommended-settings-for-eop-and-office365.md).
+> For information on what Standard and Strict security policies are, see [Recommended settings for EOP and Microsoft Defender for Office 365 security](../recommended-settings-for-eop-and-office365.md).
 
 ## Enable Security Presets in Microsoft Defender for Office 365
 
@@ -64,13 +62,14 @@ Once you've chosen between the Standard and Strict security preset policies for 
 1. Click on the **Confirm** button.
 
 > [!TIP]
-> To learn more about preset security policies see [this article](../preset-security-policies.md).
+> To learn more, see [Preset security policies in Microsoft Defender for Office 365](../preset-security-policies.md).
 
-## Your next step is Config Analyzer
+<a name="your-next-step-is-config-analyzer"></a>
+## Next step: Use Config Analyzer
 
-Use config analyzer to determine if your users are configured per Microsoft's best practices.
+Use [Configuration analyzer](../configuration-analyzer-for-security-policies.md) to determine whether your users are configured according to Microsoft's best practices.
 
 > [!TIP]
 > Configuration analyzer allows admins to find and fix threat policies where the settings are below the Standard or Strict protection profile settings in preset security policies. For more information, see [Configuration analyzer for threat policies in cloud organizations](../configuration-analyzer-for-security-policies.md).
 
-We recommend preset security policies because they *ensure* admins are exercising Microsoft best practices. However, customized configurations are required is some cases. Learn about the reasons to use custom threat policies [in this article](../mdo-deployment-guide.md#determine-your-protection-policy-strategy).
+We recommend preset security policies because they *ensure* admins are exercising Microsoft best practices. However, customized configurations are required is some cases. Learn about the [reasons to use custom threat policies](../mdo-deployment-guide.md#determine-your-protection-policy-strategy).

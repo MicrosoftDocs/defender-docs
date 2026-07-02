@@ -1,9 +1,11 @@
 ---
 title: Onboard non-Microsoft IdP custom apps for Conditional Access app control | Microsoft Defender for Cloud Apps
 description: Learn how to deploy Conditional Access app control with Microsoft Defender for Cloud Apps, for custom apps with a non-Microsoft IdP.
-ms.date: 01/04/2024
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Onboard non-Microsoft IdP custom apps for Conditional Access app control
@@ -12,7 +14,7 @@ ms.reviewer: AmitMishaeli
 
 Access and session controls in Microsoft Defender for Cloud apps work with both catalog and custom apps. While Microsoft Entra ID apps are automatically onboarded to use Conditional Access app control, if you're working with a non-Microsoft IdP, you'll need to onboard your app manually.
 
-This article describes how to both configure your IdP to work with Defender for Cloud Apps, and then also manually onboard each custom app. In contrast, [catalog apps from a non-Microsoft IdP](proxy-deployment-featured-idp.md) are automatically onboarded when you configure the integration between your IdP and Defender for Cloud Apps.
+This section explains how to configure your IdP to work with Defender for Cloud Apps and how to manually onboard each custom app. In contrast, [catalog apps from a non-Microsoft IdP](proxy-deployment-featured-idp.md) are automatically onboarded when you configure the integration between your IdP and Defender for Cloud Apps.
 
 ## Prerequisites
 
@@ -26,6 +28,8 @@ This article describes how to both configure your IdP to work with Defender for 
 
 ## Add admins to your app onboarding/maintenance list
 
+Add the admins who will onboard and maintain your apps for Conditional Access app control.
+
 1. In Microsoft Defender XDR, select **Settings > Cloud Apps > Conditional Access App Control > App onboarding/maintenance**.
 
 1. Enter the usernames or emails of any users who will be onboarding your app, and then select **Save**.
@@ -34,7 +38,7 @@ For more information, see [Diagnose and troubleshoot with the Admin View toolbar
 
 ## Configure your IdP to work with Defender for Cloud Apps
 
-This procedure describes how to route app sessions from other IdP solutions to Defender for Cloud Apps.
+The following procedure describes how to route app sessions from other IdP solutions to Defender for Cloud Apps.
 
 > [!TIP]
 > The following articles provide detailed examples of this procedure:
@@ -69,7 +73,7 @@ This procedure describes how to route app sessions from other IdP solutions to D
     > - Some identity providers do not allow you to change the SAML attributes or URL properties of a gallery / catalog app.
     > - When you configure a custom app, you can test the app with Defender for Cloud Apps access and session controls, without changing your organization's existing configured behavior.
 
-    Copy your app's single sign-on configuration information for use later in this procedure. When you're finished, select **Next** to continue.
+    Copy your app's single sign-on configuration information. You enter these values in your IdP configuration in a later step. When you're finished, select **Next** to continue.
 
 1. Continuing on the **IDENTITY PROVIDER** page of the wizard, either upload a metadata file from your IdP or enter app data manually.
 
@@ -78,7 +82,7 @@ This procedure describes how to route app sessions from other IdP solutions to D
     - The **Single sign-on service URL**. This is the URL that your IdP uses to receive single sign-on requests. 
     - A SAML certificate, if your IdP provides one. In such cases, select the **Use identity provider's SAML certificate** option, and then upload the certificate file.
 
-1. Continuing on the **IDENTITY PROVIDER** page of the wizard, copy both the single sign-on URL and all attributes and values for use later in this procedure.
+1. Continuing on the **IDENTITY PROVIDER** page of the wizard, copy both the single sign-on URL and all attributes and values to enter in your IdP's custom app settings in the next step.
 
     When you're done, select **Next** to continue.
 
@@ -120,7 +124,7 @@ If you're working with a custom app that's not automatically populated in the ap
 
 1. Select the **App: Select apps…** dropdown menu to search for your app.
 
-If your app is already listed, continue with the [procedure for catalog apps instead](proxy-deployment-featured-idp.md#sign-in-to-your-app-using-a-user-scoped-to-the-policy).
+If your app is already listed, continue with [Sign in to your app using a user scoped to the policy](proxy-deployment-featured-idp.md#sign-in-to-your-app-using-a-user-scoped-to-the-policy).
 
 **To add your app manually**:
 

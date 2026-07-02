@@ -5,6 +5,7 @@ ms.date: 11/02/2025
 ms.topic: how-to
 ms.service: defender-for-cloud-apps
 ms.reviewer: gayasalomon
+ms.custom: sfi-image-nochange
 #customer-intent: As a security administrator, I want my Copilot Studio AI agents to be protected against suspicious or harmful actions so that I can reduce security risks to my organization.
 ---
 
@@ -25,7 +26,7 @@ If Microsoft Defender determines that a prompt is suspicious:
 > The onboarding process for real-time protection during agent runtime requires configuration in Power Platform and collaboration with other administrators.
 
 1. Sign in to the **[Microsoft Defender portal](https://security.microsoft.com)**:
-1. Navigate to **System > Settings > Cloud Apps > Copilot Studio AI Agents**.
+1. Go to ****System > Settings > Security for AI****.
 1. Check the Microsoft 365 App Connector status. If the Microsoft 365 connector is not connected, [Enable the Microsoft 365 app connector](protect-office-365.md#connect-microsoft-365-to-microsoft-defender-for-cloud-apps).
     > [!NOTE]
     > If the Microsoft 365 connector isn’t connected, real-time agent protection during runtime continues to block suspicious activity on the AI agent, but alerts and incidents related to these actions won't appear in the Microsoft Defender portal. 

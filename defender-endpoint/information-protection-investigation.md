@@ -1,12 +1,10 @@
-﻿---
+---
 title: Use Microsoft Defender for Endpoint sensitivity labels to protect your data and prioritize security incident response
 description: Learn how to use Defender for Endpoint sensitivity labels to protect, prioritize, and investigate incidents that involve data loss, dlp, security incidents.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - ContentEngagementFY23
@@ -14,15 +12,17 @@ ms.collection:
  - EngageScoreSep2022
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
 
+ai-usage: ai-assisted
 ---
 # Microsoft Defender for Endpoint sensitivity labels protect and prioritize incident response
 
+## Use sensitivity labels in Defender for Endpoint
 
 A typical advanced persistent threat lifecycle (or APT) involves some data exfiltration -- the point at which data is *taken* from the organization. In those situations, sensitivity labels can tell security operations where to start by spelling out what data is highest priority to protect.
 
@@ -57,7 +57,7 @@ Learn how to use data sensitivity labels to prioritize incident investigation.
 
 1. Select the devices that store sensitive data and search through the timeline to identify which files might be impacted then take appropriate action to ensure that data is protected.
 
-   You can narrow down the events shown on the device timeline by searching for data sensitivity labels. Doing this shows only events associated with files that the label name.
+   You can narrow down the events shown on the device timeline by searching for data sensitivity labels. Searching for data sensitivity labels shows only events associated with files that match the label name.
 
    :::image type="content" source="media/machine-timeline-labels.png" alt-text="The device timeline with narrowed down search results based on label" lightbox="media/machine-timeline-labels.png":::
 

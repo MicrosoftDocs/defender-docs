@@ -2,13 +2,8 @@
 title: The Teams Message Entity Panel in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: e100fe7c-f2a1-4b7d-9e08-622330b83653
 ms.collection:
   - m365-security
@@ -20,6 +15,9 @@ ms.date: 01/13/2026
 appliesto:
  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ---
 
 # The Teams message entity panel in Microsoft Defender for Office 365
@@ -52,7 +50,7 @@ There are no direct links to the Teams message entity panel from the top levels 
   - Select the **Teams messages** tab \> select an entry by clicking anywhere in the row other than the check box.
   - Select the **User reported** tab \> select a Teams entry by clicking anywhere in the row other than the check box. The details flyout that opens is the Teams message entity panel.
 
-    You can filter the entries by selecting :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Message type** \> **Teams**.
+    You can filter the entries by selecting :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** \> **Message type** \> **Teams**.
 
 - From the **Advanced Hunting** page at <https://security.microsoft.com/v2/advanced-hunting>, select a **TeamsMessageId** value (link) from the **MessageEvents** table in the query results. The details flyout that opens is the Teams message entity panel. For example:
 
@@ -124,13 +122,11 @@ The rest of the Teams message entity panel contains the following information, r
 ## Remove users from Teams chats in the Teams message entity panel
 
 > [!TIP]
-> Currently, this feature is in Preview, isn't available in all organizations, and is subject to change.
->
 > You can only remove _internal_ users in your organization from a chat.
 >
 > When you remove users from a chat, the sender of the chat isn't blocked, and the removed users can start new chats with the sender.
 
-In the Teams entity panel, you can select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout (often under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions**) to remove users from a Teams chat.
+In the Teams entity panel, you can select :::image type="icon" source="media/defender-portal-icon-take-actions.png" border="false"::: **Take action** at the top of the flyout (often under :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More actions**) to remove users from a Teams chat.
 
 Do the following steps in the **Take action** wizard:
 

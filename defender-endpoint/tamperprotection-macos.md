@@ -1,36 +1,43 @@
-﻿---
+---
 title: Protect macOS security settings with tamper protection
 description: Use tamper protection to prevent malicious apps from changing important macOS security settings.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-search.appverid: met150
-ms.date: 08/01/2024
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ms.custom:
+  - msecd-doc-authoring-1014
+  - sfi-ga-nochange
+  - sfi-image-nochange
 
+ai-usage: ai-assisted
 ---
 # Protect macOS security settings with tamper protection
 
 
-Tamper protection in macOS helps prevent unwanted changes to security settings from being made by unauthorized users. Tamper protection helps prevent unauthorized removal of Microsoft Defender for Endpoint on macOS. This capability also helps important security files, processes, and configuration settings from being tampered.
+Tamper protection in macOS helps prevent unwanted changes to security settings from being made by unauthorized users. Tamper protection helps prevent unauthorized removal of Microsoft Defender for Endpoint on macOS. Tamper protection also helps prevent important security files, processes, and configuration settings from being tampered with.
 
 > [!IMPORTANT]
-> Starting March of 2023, Microsoft Defender for Endpoint on macOS respects the selection for tamper protection applied via the global tamper protection switch under advanced settings in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). You can choose to enforce (block/audit/disable) your own macOS tamper protection settings by using a Mobile Device Management (MDM) solution such as Intune or JAMF (recommended). If the tamper protection setting wasn't enforced via MDM, a local administrator can continue to manually change the setting with the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
+> Microsoft Defender for Endpoint on macOS uses the tamper protection setting configured in the [Microsoft Defender portal](https://security.microsoft.com) as a default value. 
+> You can enforce tamper protection by configuring the setting through a Mobile Device Management (MDM) solution such as Microsoft Intune or Jamf.
+>
+> When an MDM policy is applied, it takes precedence over both the portal setting and any local configuration.
+>
+>If the tamper protection setting isn't enforced via MDM, a local administrator can manually change the setting using the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
 
 You can set the "tamper protection" setting in the following modes:
 
-|Article|Description|
+|Mode|Description|
 |---|---|
 |Disabled|Tamper protection is completely off.|
 |Audit|Tampering operations are logged, but not blocked. This mode is the default after installation.|
@@ -57,9 +64,10 @@ When tamper protection is set to audit or block mode, you can expect the followi
 
 Here's an example of a system message in response to a blocked action:
 
-![Screenshot of operation blocked message.](media/operation-blocked.png)
+:::image type="content" source="media/tamper-protection-macos/operation-blocked.png" alt-text="Screenshot of the operation blocked pop-up message.":::
 
-You can configure the "tamper protection" mode by providing the mode name as enforcement-level.
+
+You can configure tamper protection by setting enforcement-level to `disabled`, `audit`, or `block`.
 
 > [!NOTE]
 >
@@ -84,7 +92,7 @@ Make sure that the following requirements are met:
 - Ensure that Defender for Endpoint has **Full Disk Access** authorization.
 
    > [!NOTE]
-   > Both having SIP enabled and all configuration done via MDM is not mandatory, but is required for a fully secured device. Otherwise, a local administrator can make tampering changes that macOS manages. For example, enabling **TCC** (Transparency, Consent & Control) through a Mobile Device Management solution such as [Intune](mac-install-with-intune.md), will eliminates the risk of a Security Administrator revoking **Full Disk Access** Authorization by a local admin.
+   > Both having SIP enabled and all configuration done via MDM isn't mandatory, but is required for a fully secured device. Otherwise, a local administrator can make tampering changes that macOS manages. For example, enabling **TCC** (Transparency, Consent & Control) through a Mobile Device Management solution such as [Intune](mac-install-with-intune.md) eliminates the risk of a Security Administrator revoking **Full Disk Access** Authorization by a local admin.
 
 ## Configure tamper protection on macOS devices
 
@@ -95,16 +103,18 @@ Microsoft Defender evaluates these settings in the following order. If a higher 
     - [JAMF](#jamf)
     - [Intune](#intune)
 
-2. [Manual configuration](#manual-configuration) (with `mdatp config tamper-protection enforcement-level --value { disabled|audit|block }`)
+1. [Manual configuration](#manual-configuration) (with `mdatp config tamper-protection enforcement-level --value { disabled|audit|block }`)
 
-3. If tamper protection is enabled in the [Microsoft Defender portal](https://security.microsoft.com), "block" mode is used (in preview; not available to all customers).
+1. If tamper protection is enabled in the [Microsoft Defender portal](https://security.microsoft.com), "block" mode is used.
+1. If tamper protection is disabled in the Microsoft Defender portal:
 
-   - If the device is licensed, then "audit" mode is used by default.
-   - If the device isn't licensed, then tamper protection is in the "block" mode.
+   - Devices with a valid license default to "audit" mode.
+   - Devices without a license default to "disabled" mode.
 
-### Before you begin
+<a name="before-you-begin-1"></a>
+### Verify device health and license
 
-Make sure that your device is licensed and healthy (corresponding values report `true`):
+To verify that Defender for Endpoint is healthy and correctly licensed on the device, run the following health check command:
 
 ```bash
 mdatp health
@@ -122,16 +132,19 @@ tamper_protection                           : "audit"
 
 ### Manual configuration
 
-1. Use the following command to switch to the most restrictive mode:
+In `block` mode, tamper protection actively prevents unauthorized changes to Defender for Endpoint settings, files, and processes. Use the following steps to enable block mode manually:
 
-```console
-sudo mdatp config tamper-protection enforcement-level --value block
-```
+1. Use the following command to switch to block mode:
 
-![Image of manual configuration command](media/manual-config-cmd.png)
+    ```console
+      sudo mdatp config tamper-protection enforcement-level --value block
+    ```
 
-> [!NOTE]
-> You must use managed configuration profile (deployed via MDM) on production devices. If a local admin changed tamper protection mode via a manual configuration, they can change it to a less restrictive mode at any time as well. If tamper protection mode was set via a managed profile, only a Security Administrator will be able to undo it.
+    :::image type="content" source="media/tamper-protection-macos/manual-config-cmd.png" alt-text="Screenshot of the manual configuration.":::
+
+
+    > [!NOTE]
+    > You must use managed configuration profile (deployed via MDM) on production devices. If a local admin changed tamper protection mode via a manual configuration, they can change it to a less restrictive mode at any time as well. If tamper protection mode was set via a managed profile, only a Security Administrator is able to undo it.
 
 1. Verify the result.
 
@@ -174,9 +187,10 @@ full_disk_access_enabled                    : true
 
 Notice that the `tamper_protection` is now set to `block`.
 
-### JAMF
+<a name="jamf"></a>
+### Configure tamper protection with JAMF
 
-Configure tamper protection mode in Microsoft Defender for Endpoint [configuration profile](mac-jamfpro-policies.md), by adding the following settings:
+To enable tamper protection in block mode through JAMF, add the following `tamperProtection` settings to your Microsoft Defender for Endpoint [configuration profile](mac-jamfpro-policies.md):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -193,17 +207,25 @@ Configure tamper protection mode in Microsoft Defender for Endpoint [configurati
 ```
 
 > [!NOTE]
-> If you already have a configuration profile for Microsoft Defender for Endpoint then you need to *add* settings to it. You should not create a second configuration profile.
+> If you already have a configuration profile for Microsoft Defender for Endpoint, then you need to *add* settings to it. You shouldn't create a second configuration profile.
 
-### Intune
-#### Settings catalog
-You can create a new settings catalog profile to add the Tamper protection configuration, or you can add it to an existing one. The setting "Enforcement level" can be found under category "Microsoft Defender" and subcategory "Tamper protection". Afterwards, choose the desired level.
+<a name="intune"></a>
+### Configure tamper protection with Intune
 
-#### Custom profile
-As an alternative, you can also configure Tamper protection via a custom profile. For more information, see [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).
+You can configure tamper protection in Intune by using either the settings catalog or a custom profile.
+
+<a name="settings-catalog"></a>
+#### Configure tamper protection using the Intune settings catalog
+You can create a new settings catalog profile to add the tamper protection configuration, or you can add the tamper protection configuration to an existing profile. The setting "Enforcement level" can be found under category "Microsoft Defender" and subcategory "Tamper protection". Afterwards, choose the desired level.
+
+<a name="custom-profile"></a>
+#### Configure tamper protection using an Intune custom profile
+Instead of using the settings catalog, you can configure tamper protection via a custom profile. For more information, see [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).
 
 > [!NOTE]
 > For Intune configuration, you can create a new profile configuration file to add the Tamper protection configuration, or you can add these parameters to the existing one. Choose the desired level.
+
+The following example shows a complete Intune custom configuration profile that enables tamper protection in block mode on macOS devices via MDM:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -259,14 +281,18 @@ As an alternative, you can also configure Tamper protection via a custom profile
     </dict>
 </plist>
 ```
-#### Check status
+
+<a name="check-status"></a>
+#### Check tamper protection status in Intune
+
 Check the tamper protection status by running the following command:
 
 `mdatp health --field tamper_protection`
 
-The result shows "block" if tamper protection is on:
+The output of `mdatp health --field tamper_protection` shows "block" if tamper protection is on:
 
-![Image of tamper protection in block mode](media/tp-block-mode.png)
+:::image type="content" source="media/tamper-protection-macos/tp-block-mode.png" alt-text="Screenshot of tamper protection in block mode.":::
+
 
 You can also run full `mdatp health` and look for the "tamper_protection" in the output.
 
@@ -284,12 +310,16 @@ Tampering alert is raised in the Microsoft Defender portal
 
 ### Verify block mode and audit modes
 
+Use the following indicators to verify tamper protection activity in both block and audit modes:
+
 - Using Advanced hunting, you see tampering alerts appear
 - Tampering events can be found in the local device logs: `sudo grep -F '[{tamperProtection}]' /Library/Logs/Microsoft/mdatp/microsoft_defender_core.log`
 
-![Screenshot of tamper protection log.](media/tamper-protection-log.png)
+:::image type="content" source="media/tamper-protection-macos/tamper-protection-log.png" alt-text="Screenshot of tamper protection log.":::
 
 ### DIY scenarios
+
+Use the following do-it-yourself scenarios to test whether tamper protection blocks common tampering attempts:
 
 - With tamper protection set to "block", attempt different methods to uninstall Defender for Endpoint. For example, drag the app tile into trash or uninstall tamper protection using the command line.
 - Try to stop the Defender for Endpoint process (kill).
@@ -305,13 +335,17 @@ Tampering alert is raised in the Microsoft Defender portal
   - /Library/Managed Preferences/com.microsoft.wdav.atp.offboarding.plist
   - /usr/local/bin/mdatp
 
-## Turning off Tamper Protection
+<a name="turning-off-tamper-protection"></a>
+## Turn off tamper protection
 
-You can turn off Tamper Protection using any of the following methods.
+You can turn off tamper protection using any of the following methods.
+
+> [!WARNING]
+> Disabling tamper protection reduces protection against unauthorized changes to Microsoft Defender for Endpoint. Only disable tamper protection for approved troubleshooting or policy changes, and re-enable it as soon as possible.
 
 ### Manual configuration
 
-Use the following command:
+To disable tamper protection locally from the command line, run the following command:
 
 ```console
 sudo mdatp config tamper-protection enforcement-level --value disabled
@@ -319,9 +353,9 @@ sudo mdatp config tamper-protection enforcement-level --value disabled
 
 ## JAMF
 
-Change the `enforcementLevel` value to "disabled" [in your configuration profile](mac-preferences.md#tamper-protection), and push it to the device:
+To disable tamper protection through JAMF, change the `enforcementLevel` value to "disabled" [in your configuration profile](mac-preferences.md#tamper-protection), and push it to the device:
 
-```console
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -394,7 +428,8 @@ Add the following configuration in your Intune [profile](mac-preferences.md#tamp
 </plist>
 ```
 
-## Exclusions
+<a name="exclusions"></a>
+## Configure tamper protection exclusions
 
 > [!NOTE]
 > Available in version `101.98.71` or later.
@@ -403,8 +438,8 @@ Tamper protection prevents any macOS process from making changes to Microsoft De
 
 Internally, Microsoft Defender makes exceptions to certain macOS processes, under certain circumstances.
 As an example, macOS can upgrade Defender's package, if tamper protection verifies the packages authenticity.
-There are other exclusions as well.
-For example, macOS MDM process can replace Microsoft's Defender's managed configuration files.
+Microsoft Defender also excludes MDM-related processes in certain scenarios.
+For example, the macOS MDM process can replace Microsoft Defender's managed configuration files.
 
 There are situations when a Security Administrator needs to restart Defender on all or some managed devices.
 Typically it's done by creating and running a JAMF's policy that runs a script on remote devices (or similar operations for other MDM vendors.)
@@ -416,19 +451,21 @@ While Microsoft Defender provides built-in exclusions for JAMF and Intune, it ca
 Instead, a Security Administrator can add their own exclusions to tamper protection.
 Exclusions can be done only through MDM profile, not local configuration.
 
-To do that, you need to first figure out the path to the MDM helper process that runs policies. You can do it either by following the MDM vendor's documentation. You can also initiate tampering with a test policy, get an alert in the Security Portal, inspect the hierarchy of processes that initiated the attack, and pick the process that looks like an MDM helper candidate.
+To configure a tamper protection exclusion, first determine the path to the MDM helper process that runs policies. You can do it either by following the MDM vendor's documentation. You can also initiate tampering with a test policy, get an alert in the Security Portal, inspect the hierarchy of processes that initiated the attack, and pick the process that looks like an MDM helper candidate.
 
-Once the process path is identified, you have few choices on how to configure an exclusion:
+Once you identify the path of the MDM helper process, you have a few choices for configuring a tamper protection exclusion:
 
 - By the path itself. It's the simplest (you already have this path) and the least secure way to do it, in other words, not recommended.
 - By getting the signing ID from the executable, either TeamIdentifier or signing Identifier, by running `codesign -dv --verbose=4 path_to_helper` (look for Identifier and TeamIdentifier, the latter isn't available for Apple's own tools.)
 - Or by using a combination of those attributes.
 
-Example:
+For example, to obtain the signing identifier and TeamIdentifier needed for a tamper protection exclusion, inspect the MDM helper executable with `codesign`:
 
 ```bash
 codesign -dv --verbose=4 /usr/bin/ruby
 ```
+
+The output shows the `Identifier` and `TeamIdentifier` values that you can use to configure the exclusion in your MDM profile:
 
 ```console
 Executable=/usr/bin/ruby
@@ -463,7 +500,7 @@ Sealed Resources=none
 Internal requirements count=1 size=64
 ```
 
-Configure [preferences](mac-preferences.md#exclusions), for example for JAMF:
+The following example shows a JAMF configuration profile that enables tamper protection in block mode and adds a process exclusion. Deploy this profile via MDM when you need to allow a specific process to perform operations that tamper protection would otherwise block. Configure [preferences](mac-preferences.md#exclusions), for example for JAMF:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -507,11 +544,13 @@ But, for example, `/usr/bin/ruby /Library/Application Support/Global Manager/glo
 
 ### Issue: Tamper protection is reported as disabled
 
-If running the command `mdatp health` reports that the tamper protection is disabled, even if you enabled it and more than an hour has passed since the onboarding, then you can check if you have the right configuration by running the following command:
+If running the command `mdatp health` reports that the tamper protection is disabled, even if you enabled it and more than an hour has passed since the onboarding, then you can check if you have the right configuration by running the following command to retrieve the detailed tamper protection status, including the effective mode, configuration source, and managed exclusions:
 
 ```bash
 mdatp health --details tamper_protection
 ```
+
+The following sample output shows the current tamper protection mode, configuration source, and any managed exclusions delivered by policy. Verify that `tamper_protection` and `configuration_source` match your intended configuration:
 
 ```console
 tamper_protection                           : "audit"
@@ -536,7 +575,7 @@ configuration_is_managed                    : false
 - `configuration_local`, `configuration_portal`, `configuration_default` tells the mode that would be used, *if the corresponding configuration channel was used*. (As an example, you can configure tamper protection to the "block" mode via an MDM profile, and `configuration_default` tells you `audit`. It only means that *if you remove* your profile, and the mode wasn't set with `mdatp config` or through Security Portal, then it uses the default mode, which is `audit`.)
 
 > [!NOTE]
-> You need to inspect Microsoft Defender's logs to get the same information prior to version 101.98.71. Here's an example.
+> You need to inspect Microsoft Defender's logs to get the same information prior to version 101.98.71. To confirm the most recent tamper protection feature-state entry in the Defender core log, run the following command:
 
 ```console
 $ sudo grep -F '[{tamperProtection}]: Feature state:' /Library/Logs/Microsoft/mdatp/microsoft_defender_core.log | tail -n 1

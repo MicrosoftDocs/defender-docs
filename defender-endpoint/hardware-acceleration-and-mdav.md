@@ -1,9 +1,8 @@
-﻿---
+---
 title: Hardware acceleration and Microsoft Defender Antivirus.
 description: How Microsoft Defender Antivirus incorporates hardware acceleration and Microsoft Defender Antivirus.
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: overview
@@ -12,12 +11,9 @@ ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
-audience: ITPro
 ms.localizationpriority: medium
 ms.custom: partner-contribution
 ROBOTS: NOINDEX, NOFOLLOW
-search.appverid: MET150
-f1 keywords: NOCSH
 appliesto:
   - Microsoft Defender for Individuals
   - Microsoft Defender Antivirus

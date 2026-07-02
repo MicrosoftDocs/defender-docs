@@ -1,14 +1,13 @@
-﻿---
+---
 title: Configure custom exclusions for Microsoft Defender Antivirus
 description: You can exclude files (including files modified by specified processes) and folders from Microsoft Defender Antivirus scans.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 02/09/2026
+ms.date: 06/16/2026
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
+ms.custom: nextgen, msecd-doc-authoring-1014
 ms.reviewer: ksarens
-manager: bagol
 ms.subservice: ngp
 ms.audience: ITPro
 ms.topic: how-to
@@ -16,15 +15,15 @@ ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
 ---
 
 # Configure custom exclusions for Microsoft Defender Antivirus
 
-In general, you shouldn't need to define exclusions for Microsoft Defender Antivirus. However, you can exclude files, folders, processes, and process-opened files from Microsoft Defender Antivirus scans. These types of exclusions are known as _custom exclusions_. This article describes how to use Microsoft Intune to define custom exclusions for Microsoft Defender Antivirus in Microsoft Windows.
+In general, you shouldn't need to define exclusions for Microsoft Defender Antivirus. However, you can exclude files, folders, processes, and process-opened files from Microsoft Defender Antivirus scans. File, folder, process, and process-opened-file exclusions are known as _custom exclusions_. This article describes how to use Microsoft Intune to define custom exclusions for Microsoft Defender Antivirus in Microsoft Windows.
 
 Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-demand scans](run-scan-microsoft-defender-antivirus.md), and [always-on real-time protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md). Exclusions for process-opened files apply only to real-time protection.
 
@@ -59,7 +58,7 @@ Custom exclusions apply to [scheduled scans](schedule-antivirus-scans.md), [on-d
     - Malware protection.
     - [File IOCs](indicator-file.md).
     - [Certificate IOCs](indicator-certificates.md).
-  - Process exclusions on any platform prevent [network protection](network-protection.md) and [attack surface reduction rules](attack-surface-reduction.md) from inspecting traffic or enforcing rules for excluded processes.
+  - Process exclusions on any platform prevent [network protection](network-protection.md) and [attack surface reduction (ASR) rules](attack-surface-reduction-rules-overview.md) from inspecting traffic or enforcing rules for excluded processes.
 
 - Periodically review and audit exclusions. Recheck and re-enforce mitigations as part of your review process. To avoid confusion, your security team should preserve context around why a certain exclusion was required.
 
@@ -96,10 +95,18 @@ To create a new AV policy in Microsoft Intune using the Microsoft Defender Antiv
    - **Excluded paths** section: Exclusions by location (path). Also known as _file and folder exclusions_. Separate each path and enter one path per line. For more information, see [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths).
    - **Excluded processes** section: Exclusions for files opened by specified processes. Separate each file type in the list, with one file type per line. The processes themselves aren't excluded. To exclude processes, you can use file and folder exclusions. For more information, see [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses).
 
-   To add an exclusion, select **Add**, and then enter the value in the box that appears. Repeat this step as many times as necessary.
+   To add an exclusion, select **Add**, and then enter the value in the box that appears. Repeat the add-exclusion action as many times as necessary.
 
    > [!TIP]
-   > Environment variables (for example, `%USERPROFILE%`) aren't interpreted in exclusion settings. We recommend using an explicit file paths.
+   >
+   > - The Microsoft Defender Antivirus service runs in the system context using the LocalSystem account. Therefore, environment variables like `%USERPROFILE%` are expanded using the LocalSystem profile rather than the signed-in user's profile, which means they resolve to different paths than you might expect. For more information, see [System environment variables](configure-extension-file-exclusions-microsoft-defender-antivirus.md#system-environment-variables).
+   >
+   > - Don't use **user** environment variables as wildcards in folder and process exclusions in Microsoft Defender Antivirus. Only use the following types of environment variables as wildcards:
+   >
+   > - System environment variables.
+   > - Environment variables that apply to processes running as the NT AUTHORITY\SYSTEM account.
+   >
+   > For more information, see [Use wildcards in the file name and folder path or extension exclusion lists](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists).
 
    To remove an exclusion or an empty box, select the check box next to the entry, and then select **Remove**.
 
@@ -115,7 +122,7 @@ To create a new AV policy in Microsoft Intune using the Microsoft Defender Antiv
 
    When you select a custom group, you can use the **Target type** setting to **Include** or **Exclude** the group members.
 
-   Repeat this step as many times as necessary.
+   Repeat the group-selection process as many times as necessary.
 
    When you're finished on the **Assignments** tab, select **Next**.
 

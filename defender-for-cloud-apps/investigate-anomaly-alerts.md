@@ -1,9 +1,11 @@
 ---
 title: How to investigate anomaly detection alerts | Microsoft Defender for Cloud Apps
 description: This article explains how to investigate the Defender for Cloud Apps anomaly detection alerts issued when attacks are detected against your organization.
-ms.date: 05/19/2024
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: gayasalomon
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # How to investigate anomaly detection alerts
@@ -16,22 +18,20 @@ Microsoft Defender for Cloud Apps provides security detections and alerts for ma
 >
 > You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
 
-## MITRE ATT\&CK
+<a name="mitre-attck"></a>
+## MITRE ATT&CK coverage for anomaly detection alerts
 
 To explain and make it easier to map the relationship between Defender for Cloud Apps alerts and the familiar MITRE ATT\&CK Matrix, we've categorized the alerts by their corresponding MITRE ATT\&CK tactic. This extra reference makes it easier to understand the suspected attacks technique potentially in use when a Defender for Cloud Apps alert is triggered.
 
 This guide provides information about investigating and remediating Defender for Cloud Apps alerts in the following categories.
 
 > [!div class="checklist"]
->
-> - [Initial Access](#initial-access-alerts)
-> - [Execution](#execution-alerts)
-> - [Persistence](#persistence-alerts)
-> - [Privilege Escalation](#privilege-escalation-alerts)
-> - [Credential Access](#credential-access-alerts)
-> - [Collection](#collection-alerts)
-> - [Exfiltration](#exfiltration-alerts)
-> - [Impact](#impact-alerts)
+- [Initial Access](#initial-access-alerts)
+- [Persistence](#persistence-alerts)
+- [Privilege Escalation](#privilege-escalation-alerts)
+- [Credential Access](#credential-access-alerts)
+- [Collection](#collection-alerts)
+- [Exfiltration](#exfiltration-alerts)
 
 ## Security alert classifications
 
@@ -51,9 +51,10 @@ You should use the following general guidelines when investigating any type of a
   - Browser and version
   - IP address and location
 
-## Initial access alerts
+<a name="initial-access-alerts"></a>
+## Initial access alerts: Detect attempts to gain an initial foothold
 
-This section describes alerts indicating that a malicious actor might be attempting to gain an initial foothold into your organization.
+The Initial Access alerts indicate that a malicious actor might be attempting to gain an initial foothold into your organization.
 
 ### Activity from anonymous IP address
 
@@ -181,7 +182,7 @@ To ban access to the app, on the **Google** or **Salesforce** tabs on the **App 
 
 **Understand the scope of the breach**
 
-- Follow the tutorial on how to [investigate risky OAuth apps](investigate-risky-oauth.md).
+- Follow the [Investigate risky OAuth apps](investigate-risky-oauth.md) tutorial.
 
 ### Misleading publisher name for an OAuth app
 
@@ -200,91 +201,17 @@ This detection identifies apps with characters, such as foreign letters, that re
 
 1. On the **Google** or **Salesforce** tabs on the **App governance** page, select the app to open the **App drawer**, and then select **Related activity**. This opens the **Activity log** page filtered for activities performed by the app. Keep in mind that some apps perform activities that are registered as having been performed by a user. These activities are automatically filtered out of the results in the activity log. For further investigation using the activity log, see [Activity log](activity-filters.md).
 1. If you suspect that an app is suspicious, we recommended that you investigate the app's name and publisher in different app stores. When checking app stores, focus on the following types of apps:
-    - Apps with a low number of downloads.
-    - Apps with a low rating or score or bad comments.
-    - Apps with a suspicious publisher or website.
-    - Apps that haven't been recently updated. This might indicate an app that is no longer supported.
-    - Apps that have irrelevant permissions. This might indicate that an app is risky.
+   - Apps with a low number of downloads.
+   - Apps with a low rating or score or bad comments.
+   - Apps with a suspicious publisher or website.
+   - Apps that haven't been recently updated. This might indicate an app that is no longer supported.
+   - Apps that have irrelevant permissions. This might indicate that an app is risky.
 1. If you still suspect that an app is suspicious, you can research the app name, publisher, and URL online.
 
-## Execution alerts
+<a name="persistence-alerts"></a>
+## Persistence alerts: Detect attempts to maintain a foothold
 
-This section describes alerts indicating that a malicious actor might be attempting to run malicious code in your organization.
-
-### Multiple storage deletion activities
-
-Activities in a single session indicating that a user performed an unusual number of cloud storage or database deletions from resources such as Azure blobs, AWS S3 buckets, or Cosmos DB when compared to the baseline learned. This can indicate an attempted breach of your organization.
-
-**Learning period**
-
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
-
-**TP**, **B-TP**, or **FP**?
-
-1. **TP**: If you're to confirm that the deletions were unauthorized.
-
-    **Recommended action**: Suspend the user, reset their password, and scan all devices for malicious threats. Review all user activity for other indicators of compromise and explore the scope of impact.
-1. **FP**: If, after your investigation, you're able to confirm that the administrator was authorized to perform these deletion activities.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Contact the user and confirm the activity.
-1. Review the activity log for other indicators of compromise and see who made the change.
-1. Review that user's activities for changes to other services.
-
-### Multiple VM creation activities
-
-Activities in a single session indicating that a user performed an unusual number of VM creation actions when compared to the baseline learned. Multiple VM creations on a breached Cloud infrastructure could indicate an attempt to run crypto mining operations from within your organization.
-
-**Learning period**
-
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
-
-**TP**, **B-TP**, or **FP**?
-
-To improve accuracy and alert only when there's a strong indication of a breach, this detection establishes a baseline on each environment in the organization to reduce **B-TP** incidents, such as an administrator legitimately created more VMs than the established baseline, and only alert when the unusual behavior is detected.
-
-- **TP**: If you're able to confirm that the creation activities weren't performed by a legitimate user.
-
-    **Recommended action**: Suspend the user, reset their password, and scan all devices for malicious threats. Review all user activity for other indicators of compromise and explore the scope of impact. In addition, contact the user, confirm their legitimate actions, and then make sure you disable or delete any compromised VMs.
-- **B-TP**: If, after your investigation, you're able to confirm that the administrator was authorized to perform these creation activities.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Review all user activity for other indicators of compromise.
-1. Review the resources created or modified by the user and verify that they conform with your organization's policies.
-
-### Suspicious creation activity for cloud region (preview)
-
-Activities indicating that a user performed an unusual resource creation action in an uncommon AWS region when compared to the baseline learned. Resource creation in uncommon cloud regions could indicate an attempt to perform a malicious activity such as crypto mining operations from within your organization.
-
-**Learning period**
-
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
-
-**TP**, **B-TP**, or **FP**?
-
-To improve accuracy and alert only when there's a strong indication of a breach, this detection establishes a baseline on each environment in the organization to reduce **B-TP** incidents.
-
-- **TP**: If you're able to confirm that the creation activities weren't performed by a legitimate user.
-
-    **Recommended action**: Suspend the user, reset their password, and scan all devices for malicious threats. Review all user activity for other indicators of compromise and explore the scope of impact. In addition, contact the user, confirm their legitimate actions, and then make sure you disable or delete any compromised cloud resources.
-- **B-TP**: If, after your investigation, you're able to confirm that the administrator was authorized to perform these creation activities.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Review all user activity for other indicators of compromise.
-1. Review the resources created and verify that they conform with your organization's policies.
-
-## Persistence alerts
-
-This section describes alerts indicating that a malicious actor might be attempting to maintain their foothold in your organization.
+The Persistence alerts indicate that a malicious actor might be attempting to maintain their foothold in your organization.
 
 ### Activity performed by terminated user
 
@@ -303,28 +230,11 @@ Activity performed by a terminated user can indicate that a terminated employee 
 
 1. Cross-reference HR records to confirm that user is terminated.
 1. Validate the existence of the Microsoft Entra user account.
-    > [!NOTE]
-    > If using Microsoft Entra Connect, validate the on-premises Active Directory object and confirm a successful sync cycle.
+   > [!NOTE]
+   > If using Microsoft Entra Connect, validate the on-premises Active Directory object and confirm a successful sync cycle.
+   
 1. Identify all apps that the terminated user had access to and decommission the accounts.
 1. Update decommissioning procedures.
-
-### Suspicious change of CloudTrail logging service
-
-Activities in a single session indicating that, a user performed suspicious changes to the AWS CloudTrail logging service. This can indicate an attempted breach of your organization. When disabling CloudTrail, operational changes are no longer be logged. An attacker can perform malicious activities while avoiding a CloudTrail audit event, such as modifying an S3 bucket from private to public.
-
-**TP**, **B-TP**, or **FP**?
-
-1. **TP**: If you're able to confirm that the activity wasn't performed by a legitimate user.
-
-    **Recommended action**: Suspend the user, reset their password, and reverse the CloudTrail activity.
-1. **FP**: If you're able to confirm that the user legitimately disabled the CloudTrail service.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Review the activity log for other indicators of compromise and see who made the change to the CloudTrail service.
-1. Optional: Create a playbook using Power Automate to contact users and their managers to verify their activity.
 
 ### Suspicious email deletion activity (by user)
 
@@ -347,7 +257,7 @@ Activities in a single session indicating that, a user performed suspicious emai
 - Review all user activity for other indicators of compromise such as the [Suspicious inbox forwarding](#suspicious-inbox-forwarding) alert followed by an [Impossible Travel](#impossible-travel) alert. Look for:
 
     1. New SMTP forwarding rules, as follows:
-        - Check for malicious forwarding rule names. Rule names can vary from simple names, such as "Forward All Emails" and "Auto forward", or deceptive names, such as a barely visible ".". Forwarding rule names can even be empty, and the forwarding recipient can be a single email account or an entire list. Malicious rules can also be hidden from the user interface. Once detected, you can use this helpful [blog post](/archive/blogs/hkong/how-to-delete-corrupted-hidden-inbox-rules-from-a-mailbox-using-mfcmapi) on how to delete hidden rules from mailboxes.
+        - Check for malicious forwarding rule names. Rule names can vary from simple names, such as "Forward All Emails" and "Auto forward", or deceptive names, such as a barely visible ".". Forwarding rule names can even be empty, and the forwarding recipient can be a single email account or an entire list. Malicious rules can also be hidden from the user interface. Once detected, you can learn [how to delete corrupted hidden inbox rules from a mailbox using MFCMAPI](/archive/blogs/hkong/how-to-delete-corrupted-hidden-inbox-rules-from-a-mailbox-using-mfcmapi).
         - If you detect an unrecognized forwarding rule to an unknown internal or external email address, you can assume that the inbox account was compromised.
     1. New inbox rules, such as "delete all", "move messages to another folder", or those with obscure naming conventions, for example "…".
     1. An increase in sent emails.
@@ -377,9 +287,10 @@ Activities indicating that an attacker gained access to a user's inbox and creat
 1. Collect IP address and location information for the action.
 1. Review activities performed from the IP address used to create the rule to detect other compromised users.
 
-## Privilege escalation alerts
+<a name="privilege-escalation-alerts"></a>
+## Privilege escalation alerts: Detect attempts to gain higher-level permissions
 
-This section describes alerts indicating that a malicious actor might be attempting to gain higher-level permissions in your organization.
+The Privilege Escalation alerts indicate that a malicious actor might be attempting to gain higher-level permissions in your organization.
 
 ### Unusual administrative activity (by user)
 
@@ -403,9 +314,10 @@ Establishing a new user's activity pattern requires an initial learning period o
 1. Review all user activity for other indicators of compromise such as [Suspicious inbox forwarding](#suspicious-inbox-forwarding) or [Impossible Travel](#impossible-travel).
 1. Review other configuration changes, such as creating a user account that might be used for persistence.
 
-## Credential access alerts
+<a name="credential-access-alerts"></a>
+## Credential access alerts: Detect attempts to steal account credentials
 
-This section describes alerts indicating that a malicious actor might be attempting to steal account names and passwords from your organization.
+The Credential Access alerts indicate that a malicious actor might be attempting to steal account names and passwords from your organization.
 
 ### Multiple failed login attempts
 
@@ -480,9 +392,10 @@ The learning period for this detection is 30 days.
 
 1. Investigate if an attacker has access to generating OAuth access tokens.
 
-## Collection alerts
+<a name="collection-alerts"></a>
+## Collection alerts: Detect attempts to gather data from your organization
 
-This section describes alerts indicating that a malicious actor might be attempting to gather data of interest to their goal from your organization.
+The Collection alerts indicate that a malicious actor might be attempting to gather data of interest to their goal from your organization.
 
 ### Multiple Power BI report sharing activities
 
@@ -550,9 +463,10 @@ Establishing a new user's activity pattern requires an initial learning period o
 1. Review the impersonation activities to identify potential malicious activities.
 1. Review delegated access configuration.
 
-## Exfiltration alerts
+<a name="exfiltration-alerts"></a>
+## Exfiltration alerts: Detect attempts to steal data from your organization
 
-This section describes alerts indicating that a malicious actor might be attempting to steal data from your organization.
+The Exfiltration alerts indicate that a malicious actor might be attempting to steal data from your organization.
 
 ### Suspicious inbox forwarding
 
@@ -575,7 +489,7 @@ Activities indicating that an attacker gained access to a user's inbox and creat
 1. Review all user activity for additional indicators of compromise such as the alert is followed by an [Impossible Travel](#impossible-travel) alert. Look for:
 
     1. New SMTP forwarding rules, as follows:
-        - Check for malicious forwarding rule names. Rule names can vary from simple names, such as "Forward All Emails" and "Auto forward", or deceptive names, such as a barely visible ".". Forwarding rule names can even be empty, and the forwarding recipient can be a single email account or an entire list. Malicious rules can also be hidden from the user interface. Once detected, you can use this helpful [blog post](/archive/blogs/hkong/how-to-delete-corrupted-hidden-inbox-rules-from-a-mailbox-using-mfcmapi) on how to delete hidden rules from mailboxes.
+        - Check for malicious forwarding rule names. Rule names can vary from simple names, such as "Forward All Emails" and "Auto forward", or deceptive names, such as a barely visible ".". Forwarding rule names can even be empty, and the forwarding recipient can be a single email account or an entire list. Malicious rules can also be hidden from the user interface. Once detected, you can learn [how to delete corrupted hidden inbox rules from a mailbox using MFCMAPI](/archive/blogs/hkong/how-to-delete-corrupted-hidden-inbox-rules-from-a-mailbox-using-mfcmapi).
         - If you detect an unrecognized forwarding rule to an unknown internal or external email address, you can assume that the inbox account was compromised.
     1. New inbox rules, such as "delete all", "move messages to another folder", or those with obscure naming conventions, for example "…".
 1. Review activities performed from the IP address used to create the rule to detect other compromised users.
@@ -652,34 +566,6 @@ Establishing a new user's activity pattern requires an initial learning period o
 1. Review the sensitivity of the shared files with the resource owner and validate the access level.
 1. Create a file policy for similar documents to detect future sharing of sensitive files.
 
-## Impact alerts
-
-This section describes alerts indicating that a malicious actor might be attempting to manipulate, interrupt, or destroy your systems and data in your organization.
-
-### Multiple delete VM activities
-
-Activities in a single session indicating that a user performed an unusual number of VM deletions when compared to the baseline learned. Multiple VM deletions could indicate an attempt to disrupt or destroy an environment. However, there are many normal scenarios where VMs are deleted.
-
-**TP**, **B-TP**, or **FP**?
-
-To improve accuracy and alert only when there's a strong indication of a breach, this detection establishes a baseline on each environment in the organization to reduce **B-TP** incidents and only alert when the unusual behavior is detected.
-
-**Learning period**
-
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
-
-- **TP**: If you're able to confirm that the deletions were unauthorized.
-
-    **Recommended action**: Suspend the user, reset their password, and scan all devices for malicious threats. Review all user activity for other indicators of compromise and explore the scope of impact.
-- **B-TP**: If, after your investigation, you're able to confirm that the administrator was authorized to perform these deletion activities.
-
-    **Recommended action**: Dismiss the alert.
-
-**Understand the scope of the breach**
-
-1. Contact the user and confirm the activity.
-1. Review all user activity for additional indicators of compromise such as the alert is followed by one of the following alerts: [Impossible Travel](#impossible-travel), [Activity from anonymous IP address](#activity-from-anonymous-ip-address), or [Activity from infrequent country](#activity-from-infrequent-country).
-
 ### Ransomware activity
 
 Ransomware is a cyberattack in which an attacker locks victims out of their devices or blocks them from accessing their files until the victim pays a ransom. Ransomware can be spread by a malicious shared file or compromised network. Defender for Cloud Apps uses security research expertise, threat intelligence, and learned behavioral patterns to identify ransomware activity. For example, a high rate of file uploads, or files deletions, might represent an encryption process that is common among ransomware operations.
@@ -731,15 +617,6 @@ Establishing a new user's activity pattern requires an initial learning period o
 
 1. Review the deletion activities and create a list of deleted files. If needed, recover the deleted files.
 1. Optionally, create a playbook using Power Automate to contact users and their managers to verify the activity.
-
-### Investigation priority score increase (legacy)
-
-Starting November 2024, **Investigate risky users** support for Microsoft Defender for Cloud Apps is retired. If this feature was used in your organization and is needed, we recommend using the Entra risk score feature. Please use the following resources for additional information:
-
-- [Investigate risk Microsoft Entra ID Protection - Microsoft Entra ID Protection | Microsoft Learn](/entra/id-protection/howto-identity-protection-investigate-risk)
-
-- [Microsoft Entra ID Protection risk-based access policies - Microsoft Entra ID Protection | Microsoft Learn](/entra/id-protection/concept-identity-protection-policies)
-
 
 ## See also
 

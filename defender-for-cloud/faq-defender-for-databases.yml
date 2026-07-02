@@ -1,0 +1,105 @@
+### YamlMime:FAQ
+metadata:
+  title: Common Questions - Defender for Databases
+  description: Get answers to frequently asked questions about Microsoft Defender for Databases.
+  ms.topic: faq
+  ms.service: defender-for-cloud
+  ms.date: 05/18/2025
+title: Common questions about Microsoft Defender for Databases
+summary: Get answers to common questions about Microsoft Defender for Databases.
+
+
+sections:
+  - name: Ignored
+    questions:
+      - question: |
+          Is there a performance effect from deploying Microsoft Defender for SQL Servers on Machines?
+        answer: |
+          Microsoft Defender for SQL Servers on Machines focuses on security, but it has a split architecture to balance data uploading and speed with performance:
+
+          - Some of our detectors, including an [Extended Events trace](/azure/azure-sql/database/xevent-db-diff-from-svr) named `SQLAdvancedThreatProtectionTraffic`, run on the machine for real-time speed advantages.
+          - Other detectors run in the cloud to spare the machine from heavy computational loads.
+
+          Lab tests of our solution showed CPU usage averaging 3% for peak slices, compared against benchmark loads. An analysis of our current user data shows a negligible effect on CPU and memory usage.
+
+          Performance always varies between environments, machines, and loads. These statements serve as a general guideline, not a guarantee for any individual deployment.
+
+      - question: |
+          What happens to the old scan results and baselines after I switch to express configuration?
+        answer: |
+          Old results and baseline settings remain available on your storage account, but they won't be updated or used by the system. You don't need to maintain these files for SQL vulnerability assessment to work after you switch to express configuration, but you can keep your old baseline definitions for future reference.
+
+          When express configuration is enabled, you don't have direct access to the result and baseline data because it's stored on internal Microsoft storage.
+
+      - question: |
+          Why is my Azure SQL server marked as unhealthy for "SQL servers should have vulnerability assessment configured," even though I set it up properly by using classic configuration?
+        answer: |
+          The policy behind this recommendation checks for the existence of subassessments for the server. With classic configuration, system databases are scanned only if at least one user database exists. A server without any user databases doesn't have scans or reported scan results, which causes the policy to remain unhealthy.
+
+          Switching to express configuration mitigates the issue by enabling scheduled and manual scans for system databases.
+
+      - question: |
+          Can I set up recurring scans with express configuration?
+        answer: |
+          Express configuration automatically sets up recurring scans for all databases under your server. This behavior is the default, and it isn't configurable at the server or database level.
+
+      - question: |
+          Is there a way with express configuration to get the weekly email report that's provided in classic configuration?
+        answer: |
+          You can use workflow automation and Logic Apps email scheduling, by following the Microsoft Defender for Cloud processes:
+
+          - Time-based triggers
+          - Scan-based triggers
+          - Support for disabled rules
+
+      - question: |
+          Why can't I set database policies anymore?
+        answer: |
+          The SQL vulnerability assessment reports all vulnerabilities and misconfigurations in your environment, so including all databases is helpful. Defender for SQL Servers on Machines is billed per server, not per database.
+
+      - question: |
+          Can I revert to classic configuration?
+        answer: |
+          Yes. You can revert to classic configuration by using the existing REST APIs and PowerShell cmdlets. When you revert to classic configuration, a notification appears in the Azure portal for changing to express configuration.
+
+      - question: |
+          Will express configuration become available for other types of SQL?
+        answer: |
+          Stay tuned for updates!
+
+      - question: |
+          Can I choose which experience is the default?
+        answer: |
+          No. Express configuration is the default for every new, supported Azure SQL database.
+
+      - question: |
+          Does express configuration change scanning behavior?
+        answer: |
+          No, express configuration provides the same scanning behavior and performance.
+
+      - question: |
+          Does express configuration have any effect on pricing?
+        answer: |
+          Express configuration doesn't require a storage account, so you don't need to pay extra storage fees unless you choose to keep old scan and baseline data.
+
+      - question: |
+          What does the 1-MB cap per rule mean?
+        answer: |
+          Any individual rule can't produce results that are more than 1 MB. When results for the rule reach that limit, they stop. You can't set a baseline for the rule, the rule isn't included in the overall recommendation health, and the results appear as **Not applicable**.
+
+      - question: |
+          After I enable Microsoft Defender for SQL Servers on Machines, how long do I need to wait to see a successful deployment?
+        answer: |
+          It takes approximately 30 minutes to update the protection status via the SQL IaaS Agent Extension, assuming that all the prerequisites are fulfilled.
+
+      - question: |
+          How does Defender for SQL Servers on Machines collect logs from the SQL server?
+        answer: |
+          Defender for SQL Servers on Machines uses Extended Events, beginning with SQL Server 2017. On previous versions of SQL Server, Defender for SQL Servers on Machines collects the logs by using the SQL Server audit logs.
+
+additionalContent: |
+
+  ## Related content
+  
+  [Protect your databases with Defender for Databases](quickstart-enable-database-protections.md)
+  

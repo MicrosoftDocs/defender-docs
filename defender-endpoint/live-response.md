@@ -1,22 +1,21 @@
-﻿---
+---
 title: Investigate entities on devices using live response in Microsoft Defender for Endpoint
 description: Access a device using a secure remote shell connection to do investigative work and take immediate response actions on a device in real time.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-search.appverid: met150
-ms.date: 01/05/2026
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Investigate entities on devices using live response
@@ -35,20 +34,23 @@ With live response, analysts can do all of the following tasks:
 - Upload a PowerShell script or executable to the library and run it on a device from a tenant level.
 - Take or undo remediation actions.
 
+> [!TIP]
+> You can upload, view, and manage files used for live response from the [Library management](configure-libraries-live-response.md) page.
+
 ## Prerequisites
 
-Devices must be running one of the following versions of Windows
+Devices must be running one of the following supported operating systems and versions
 
 ### Supported operating systems
 
 - **Windows 11**
 
 - **Windows 10**:
-  - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later.
-  - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384).
-  - [Version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818).
-  - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795).
-  - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816).
+  - [Windows 10, version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later.
+  - [Windows 10, version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384).
+  - [Windows 10, version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [Windows 10 update KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818).
+  - [Windows 10, version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [Windows 10 update KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795).
+  - [Windows 10, version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [Windows 10 update KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816).
 
 - **macOS**: Version `101.43.84` or later. Supported on Intel-based and ARM-based macOS devices.
 
@@ -57,12 +59,12 @@ Devices must be running one of the following versions of Windows
 - **Windows Server 2022** or later.
 
 - **Windows Server 2019**:
-  - Version 1903 (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) or later.
-  - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)).
+  - Version 1903 (with [Windows 10 update KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) or later.
+  - Version 1809 (with [Windows 10 update KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)).
 
 - **Windows Server 2016 and Windows Server 2012 R2**:
   - Requires the [Unified Agent](update-agent-mma-windows.md#update-mma-on-your-devices).
-  - We also recommend the patch for the latest sensor version: [KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac).
+  - We also recommend the patch for the latest sensor version: [Microsoft Defender for Endpoint update for EDR sensor KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac).
   - If you use a static proxy, live response doesn't work as expected for offline down-level servers onboarded using the streamlined method. Consider using a system proxy instead.
 
 - **Azure Stack HCI OS**: Version 23H2 or later.
@@ -90,7 +92,7 @@ Devices must be running one of the following versions of Windows
 - **Ensure that you have the appropriate permissions**:   Only users who are provisioned with the appropriate permissions can initiate a session. For more information on role assignments, see [Create and manage roles](user-roles.md).
 
   > [!IMPORTANT]
-  > The option to upload a file to the library is only available to users with "Manage Security Settings" permission. The button is greyed out for users with only delegated permissions.
+  > The option to upload a file to the library via live response is only available to users with "Manage Security Settings" permission. The button is greyed out for users with only delegated permissions. You can also upload files to the library from the [Library management](configure-libraries-live-response.md) page, for which you don't need this permission.
 
   Depending on the role that's been granted to you, you can run basic or advanced live response commands. Users permissions are controlled by RBAC custom role.
 
@@ -110,6 +112,8 @@ The dashboard also gives you access to actions for the session. For example:
 - Command log
 
 ## Initiate a live response session on a device
+
+Perform the following steps to initiate a live response session on a device.
 
 > [!NOTE]
 > Live response actions initiated from the Device page are not available in the MachineActions API.
@@ -169,7 +173,7 @@ The following commands are available for user roles that are granted the ability
 |`isolate`|Disconnects the device from the network while retaining connectivity to the Defender for Endpoint service.|N|Y|N|
 |`release`|Releases a device from network isolation.|N|Y|N|
 |`run`|Runs a PowerShell script from the library on the device.|Y|Y|Y|
-|`library`|Lists files that were uploaded to the live response library.|Y|Y|Y|
+|`library`|Lists files that were uploaded to the live response library. You can also view and manage these files from the [Library management](configure-libraries-live-response.md) page.|Y|Y|Y|
 |`putfile`|Puts a file from the library to the device. Files are saved in a working folder and are deleted when the device restarts by default.|Y|Y|Y|
 |`remediate`|Remediates an entity on the device. The remediation action varies, depending on the entity type: <ul><li>**File**: delete</li><li>**Process**: stop, delete image file </li><li>**Service**: stop, delete image file</li><li>**Registry entry**: delete</li><li>**Scheduled task**: remove</li><li>**Startup folder item**: delete file</li></ul> <br/> This command has a prerequisite command. You can use the `-auto` command in conjunction with remediate to automatically run the prerequisite command.|Y|Y|Y|
 |`scan`|Runs a quick antivirus scan to help identify and remediate malware.|N|Y|Y|
@@ -185,7 +189,10 @@ The following commands are available for user roles that are granted the ability
 
 The commands that you can use in the console follow similar principles as [Windows Commands](/windows-server/administration/windows-commands/windows-commands#BKMK_c).
 
-The advanced commands offer a more robust set of actions that allow you to take more powerful actions such as download and upload a file, run scripts on the device, and take remediation actions on an entity.
+Advanced live response commands offer a more robust set of actions that allow you to take more powerful actions such as download and upload a file, run scripts on the device, and take remediation actions on an entity.
+
+> [!TIP]
+> You can upload, view, and manage files used for live response from the [Library management](configure-libraries-live-response.md) page.
 
 ### Get a file from the device
 
@@ -223,6 +230,10 @@ You can have a collection of PowerShell and Bash scripts that can run on devices
 
 #### To upload a file in the library
 
+You can either upload a file to the library from the live response session console or from the [Library management](configure-libraries-live-response.md) page.
+
+To upload a file to the library from the live response session console:
+
 > [!NOTE]
 > There are restrictions on the characters that can be uploaded to the library. Use alphanumeric characters and some symbols (specifically, `-`, `_`, or `.`).
 
@@ -238,7 +249,7 @@ You can have a collection of PowerShell and Bash scripts that can run on devices
 
 1. Select **Confirm**.
 
-1. (Optional) To verify that the file was uploaded to the library, run the `library` command.
+1. (Optional) To verify that the file was uploaded to the library, run the `library` command or check the [Library management](configure-libraries-live-response.md) page.
 
 ### Cancel a command
 
@@ -251,6 +262,8 @@ Anytime during a session, you can cancel a command by pressing CTRL + C.
 
 Before you can run a PowerShell/Bash script, you must first upload it to the library.
 
+You can upload a script to the library from the live response session console or from the [Library management](configure-libraries-live-response.md) page.
+
 After uploading the script to the library, use the `run` command to run the script.
 
 If you plan to use an unsigned PowerShell script in the session, you'll need to enable the setting in the [Advanced features settings](advanced-features.md) page.
@@ -259,6 +272,8 @@ If you plan to use an unsigned PowerShell script in the session, you'll need to 
 > Allowing the use of unsigned scripts may increase your exposure to threats.
 
 ## Apply command parameters
+
+Use the following approaches to view and apply command parameters.
 
 - View the console help to learn about command parameters. To learn about an individual command, run:
 
@@ -321,6 +336,8 @@ Select the **Command log** tab to see the commands used on the device during a s
 
 ## Limitations
 
+The following limitations apply to live response sessions and commands.
+
 - Live response sessions are limited to 50 live response sessions at a time.
 - Live response session inactive timeout value is 30 minutes.
 - Individual live response commands have a time limit of 10 minutes, with the exception of `getfile`, `findfile`, and `run`, which have a limit of 30 minutes.
@@ -332,6 +349,8 @@ Select the **Command log** tab to see the commands used on the device during a s
   - `library` limit: 250 MB
 
 ## Related article
+
+For more examples, see the following article.
 
 - [Live response command examples](live-response-command-examples.md)
 

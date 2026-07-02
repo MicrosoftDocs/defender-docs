@@ -1,25 +1,22 @@
 ---
 title:  Provide feedback on the Microsoft Defender for Endpoint Client Analyzer tool
-description: Provide feedback on the Microsoft Defender for Endpoint client analyzer tool
+description: Learn how to submit feedback or suggestions for the Microsoft Defender for Endpoint Client Analyzer through the Defender portal or the centralized feedback platform.
 ms.service: defender-endpoint
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.subservice: ngp
-search.appverid: met150
 appliesto:
    - Microsoft Defender for Endpoint Plan 1
    - Microsoft Defender for Endpoint Plan 2
-ms.date: 01/15/2026
+ms.date: 06/16/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Provide feedback on the Microsoft Defender for Endpoint client analyzer tool

@@ -1,11 +1,7 @@
 ---
 title: Integrate Rapid7 data connector in Microsoft Security Exposure Management
 description: Learn how to the Rapid7 data connector in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: rayne-wiselman
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 11/06/2024
 ---
 

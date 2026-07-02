@@ -8,7 +8,6 @@ ms.date: 02/03/2026
 ms.topic: how-to
 ms.subservice: reference
 ms.appliesTo: Microsoft Defender for Business and Microsoft Defender for Endpoint Plans 1 and 2
-search.appverid: met150
 ---
 
 # Create an app to access Microsoft Defender for Endpoint without a user
@@ -89,6 +88,9 @@ https://login.microsoftonline.com/common/oauth2/authorize?prompt=consent&client_
 ## Get an access token
 
 This section lists a few methods for getting your app's [access token](/entra/identity-platform/v2-oauth2-client-creds-grant-flow#get-a-token).
+
+> [!TIP]
+> Some Microsoft Defender for Endpoint APIs continue to require access tokens issued for the legacy resource `https://api.securitycenter.microsoft.com`. If the token audience doesn't match the resource expected by the API, requests fail with `403 Forbidden`, even if the API endpoint uses `https://api.security.microsoft.com`. Use `https://api.securitycenter.microsoft.com` as the resource or scope when acquiring tokens.
 
 # [PowerShell](#tab/PowerShell)
 

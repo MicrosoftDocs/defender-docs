@@ -1,31 +1,30 @@
-﻿---
+---
 title: About regular quick and full scans with Microsoft Defender Antivirus
 description: Learn about recurring (scheduled) scans, including when they should run and whether they run as full or quick scans
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 12/12/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: pauhijbr, ksarens, yongrhee, bsabetghadam
-manager: bagol
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier3
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
+ai-usage: ai-assisted
 ---
 
 # About scheduled quick or full Microsoft Defender Antivirus scans
 
-You can set up regular, scheduled antivirus scans on devices. These scheduled scans are in addition to always-on, real-time protection and [on-demand antivirus](run-scan-microsoft-defender-antivirus.md) scans. When you schedule a scan, you can specify the type of scan, when the scan should occur, and if the scan should occur after a [protection update](manage-protection-updates-microsoft-defender-antivirus.md) or when a device isn't being used. You can also set up special scans to complete remediation actions if needed.
+You can set up regular, scheduled antivirus scans on devices. These scheduled scans are in addition to always-on, real-time protection and [on-demand antivirus](run-scan-microsoft-defender-antivirus.md) scans. When you schedule a scan, you can specify the type of scan, when the scan should occur, and if the scan should occur after a [Microsoft Defender Antivirus protection update](manage-protection-updates-microsoft-defender-antivirus.md) or when a device isn't being used. You can also set up special scans to complete remediation actions if needed.
 
 For scheduled scan instructions, see the following articles:
 
@@ -39,6 +38,8 @@ For scheduled scan instructions, see the following articles:
 
 ### Supported operating systems
 
+Scheduled antivirus scans are supported on the following operating systems:
+
 - Windows
 
 ## Comparing the quick scan, full scan, and custom scan
@@ -47,12 +48,12 @@ The following table describes the different types of scans you can configure. Fo
 
 | Scan type | Description |
 |:---|:---|
-| Quick scan <br/>(*recommended*) | A quick scan looks at all the locations where there could be malware registered to start with the system, such as registry keys and known Windows startup folders. Quick scans also run on mounted removable devices, such as USB drives. <br/><br/>A quick scan helps provide strong protection against malware that starts with the system and kernel-level malware, together with [always-on real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), which reviews files when they're opened and closed, and whenever a user navigates to a folder.<br/><br/>Preview: In most cases, a quick scan is sufficient and is the recommended option for scheduled scans. Starting with the December 2023 (4.18.2311.x.x) release of [Platform Update](microsoft-defender-antivirus-updates.md), you have the option named "Quick scan include exclusions" to scan all files and directories that are excluded from real-time protection that is using contextual exclusions.  By enabling this policy, the excluded files and folders are scanned during a quick scan.  Note:  While in preview, management is available in Intune - Settings Catalog.|
+| Quick scan <br/>(*recommended*) | A quick scan looks at all the locations where there could be malware registered to start with the system, such as registry keys and known Windows startup folders. Quick scans also run on mounted removable devices, such as USB drives. <br/><br/>A quick scan helps provide strong protection against malware that starts with the system and kernel-level malware, together with [always-on real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), which reviews files when they're opened and closed, and whenever a user navigates to a folder.<br/><br/>Preview: In most cases, a quick scan is sufficient and is the recommended option for scheduled scans. Starting with the December 2023 (4.18.2311.x.x) release of [Microsoft Defender Antivirus platform updates](microsoft-defender-antivirus-updates.md), you have the option named "Quick scan include exclusions" to scan all files and directories that are excluded from real-time protection that is using contextual exclusions.  By enabling this policy, the excluded files and folders are scanned during a quick scan.  Note:  While in preview, management is available in Intune - Settings Catalog.|
 | Full scan | A full scan begins with a quick scan and then scans all mounted fixed disks and removable/network drives (if the full scan is configured to do so).<br/><br/>A full scan can take a few hours or days to complete, depending on the amount and type of data that needs to be scanned.<br/><br/> The full scan uses the security intelligence definitions installed at the time the scan starts. If new updates are released during the full scan, another full scan is required in order to scan for new threat detections contained in the latest update.<br/><br/> Due to the time and resources involved, we generally don't recommend scheduling full scans.|
 | Custom scan | A custom scan runs on files and folders that you specify. For example, you can choose to scan a USB drive or a specific folder on your device's local drive.|
 
 > [!TIP]
-> If you have a Network-Attached Storage (NAS) or Storage Area Network (SAN), you can use Internet Content Adaption Protocol (ICAP) scanning with the Microsoft Defender Antivirus engine. For more information, see [Tech Community Blog: MetaDefender ICAP with Windows Defender Antivirus: World-class security for hybrid environments](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/metadefender-icap-with-windows-defender-antivirus-world-class/ba-p/800234).   
+> If you have a Network-Attached Storage (NAS) or Storage Area Network (SAN), you can use Internet Content Adaptation Protocol (ICAP) scanning, which enables antivirus scanning of network storage traffic, with the Microsoft Defender Antivirus engine. For more information, see [Tech Community Blog: MetaDefender ICAP with Windows Defender Antivirus: World-class security for hybrid environments](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/metadefender-icap-with-windows-defender-antivirus-world-class/ba-p/800234).   
 
 ## How to choose a scan type
 
@@ -67,6 +68,8 @@ Use the following table to choose a scan type. Also see [Microsoft Defender Anti
 | You have installed or re-enabled Microsoft Defender Antivirus | Quick scan or full scan <br/><br/>A quick scan checks the processes, memory, profiles, and certain locations on the device. If you prefer, you can choose to run a full scan after you have enabled or installed Microsoft Defender Antivirus. Just keep in mind it can take a while to run a full scan. |
 
 ## Important points to keep in mind
+
+Keep the following points in mind when configuring scheduled scans:
 
 - You can configure two types of scheduled scans:
 
@@ -92,17 +95,17 @@ Use the following table to choose a scan type. Also see [Microsoft Defender Anti
 
 ## Scheduled quick scan performance optimization 
 
-As a performance optimization, Microsoft Defender Antivirus skips running scheduled quick scans in some situations. This optimization only applies to a quick scan when initiated by a schedule – it doesn't affect a quick scan initiated by an [on-demand antivirus](run-scan-microsoft-defender-antivirus.md) scan. This optimization reduces performance degradation by avoiding running a quick scan when it isn't necessary and won't affect protection.
+As a performance optimization, Microsoft Defender Antivirus skips running scheduled quick scans in some situations. This optimization only applies to a quick scan when initiated by a schedule – this optimization doesn't affect a quick scan initiated by an [on-demand antivirus](run-scan-microsoft-defender-antivirus.md) scan. This optimization reduces performance degradation by avoiding a scheduled quick scan when that scan isn't necessary and skipping the scan won't affect protection.
 
-By default, if a qualified quick scan ran within the last seven days, a new quick scan won't be initiated. A quick scan is considered to be *qualified* if:
+With this optimization enabled, Microsoft Defender Antivirus skips a newly scheduled quick scan if a qualified quick scan ran within the last seven days. A quick scan is considered to be *qualified* if:
 
-- The scan occurs after the last [Security Intelligence Update](microsoft-defender-antivirus-updates.md) was installed; 
+- The scan occurs after the last [Microsoft Defender Antivirus security intelligence update](microsoft-defender-antivirus-updates.md) was installed; 
 - [Real-time protection](configure-protection-features-microsoft-defender-antivirus.md) wasn't disabled during that time period; and, 
 - The machine was rebooted.  
 
 This optimization *doesn't* apply to the following conditions: 
 
-- If Microsoft Defender for Endpoint is [Managed](configuration-management-reference-microsoft-defender-antivirus.md)  
+- If Microsoft Defender for Endpoint is [managed by a configuration tool such as Intune or Group Policy](configuration-management-reference-microsoft-defender-antivirus.md)  
 - If Microsoft Defender [Endpoint Detection and Response (EDR)](overview-endpoint-detection-response.md) is installed 
 - If the computer was restarted since the last quick scan
 - If [real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) is disabled after the last quick scan occurred 
