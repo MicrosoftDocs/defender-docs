@@ -59,6 +59,10 @@ These new alerts were added to the Defender for Identity security alerts:
 
 - **Microsoft Entra roles visibility**: The Permissions tab now shows assigned Microsoft Entra roles alongside API permissions. For more information, see [View your app details with app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps).
 
+### Visibility into service principals used by AI agents (Preview)
+
+The non-human identity inventory now identifies which Entra ID service principals are used by AI agents. A new "Used by AI agents" column and insight card help you find and prioritize these identities. For more information, see [View the Identity inventory](identity-inventory.md).
+
 ## May 2026
 
 ### Sensor v3.x supports all identity roles on domain controllers

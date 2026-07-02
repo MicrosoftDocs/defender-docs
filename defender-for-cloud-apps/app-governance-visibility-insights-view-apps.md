@@ -76,6 +76,8 @@ Shows a 1-100 risk score for the app, where higher values mean greater risk. The
 
 Shows a visual identity graph that illustrates how the app connects to other entities in your organization, like users, resources, SaaS workloads, and critical assets. Select any node or edge in the graph to open a details pane with deeper context. When applicable, the pane also shows attack paths involving the selected nodes or edges. To explore further, select **View in map** below the graph to open the full Attack Map experience in a new window.
 
+The graph can also surface the AI agent behind an app. For OAuth apps tied to Microsoft Copilot Studio agents, expand the OAuth app node to view the connected agent.
+
 > [!NOTE]
 > The Graph tab is available only for OAuth apps registered in Microsoft Entra ID.
 
