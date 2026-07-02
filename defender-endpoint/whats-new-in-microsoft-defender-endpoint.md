@@ -26,7 +26,7 @@ For recent releases of Microsoft Defender for Endpoint, including build numbers,
 
 Learn more about [Preview features](/defender-xdr/preview).
 
-## July 2026
+## July
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
@@ -36,6 +36,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Release - Android |Build 1.0.9029.0101 |GA |Release version 1.0.9029.0101 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#android--june-2026--platform-1090030101). |
 |Release - macOS |Build 101.26042.0020 |GA |Release version 20.126042.20.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--june-2026--101260420020).|
 |Feature |[Local AI agent discovery — macOS support and new agents](local-agent-discovery-overview.md#supported-local-ai-agents-and-mcp-server-configurations) |Preview |Local AI agent discovery now supports macOS endpoints in addition to Windows. This update also adds discovery support for new agents including Junie CLI, Kiro CLI, Warp, Hermes Agent, Goose Desktop, Perplexity Desktop, Kiro IDE, Devin Desktop (formerly Windsurf), and QClaw. For more information, see [Local AI agent discovery](local-agent-discovery-overview.md).|
 |Feature |[Enhanced Defender deployment tool for Windows](defender-deployment-tool-windows.md) | GA |The new version of the tool streamlines onboarding and enhances security by:<br/>- Bundling the onboarding package directly into the tool's executable.<br/>- Generating a key during deployment package creation that is required for running the tool.<br/>- Enabling users to configure an expiry date for the package to reduce the risk of unauthorized use.<br/><br/>In addition:<br/>- You have the option of downloading the package as either an *.exe* or a *.zip* file, whichever best suits your organization's needs.<br/>- A new Deployment packages page in the Defender portal facilitates management of downloaded packages by providing centralized visibility into all the packages and their current status. |
