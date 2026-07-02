@@ -143,6 +143,7 @@ These statistics highlight non-human identities that might need prioritization. 
 | Unused | The number of non-human identities with no recent sign-in activity. |
 | External unverified publishers | The number of non-human identities from unverified external publishers. |
 | New | The number of recently discovered non-human identities. |
+| Used by AI agents (Preview) | The number of Entra ID service principals used by AI agents. |
 
 ### Non-human identity details
 
@@ -166,6 +167,7 @@ The **Identities** list highlights key details for each non-human identity, incl
 | Consent type | Shows whether the identity has admin or user-only consent. For identities with only user consent, the total consented users are shown. Identities with admin consent have broad access to all data, unless access policies and other restrictions limit that access. |
 | Publisher | Publisher of the identity and their verification status. |
 | Last used | Last time the identity signed in. This data is tracked only back to June 1, 2022. |
+| Used by AI agents (Preview) | Shows the name of the AI agent platform whose agents use the Entra ID service principal, such as Copilot Studio or Azure AI Foundry. To view the specific Copilot Studio agent connected to the service principal, expand the OAuth app node in the [Graph tab](/defender-cloud-apps/app-governance-visibility-insights-view-apps#graph-tab). |
 
 ### Respond to high-risk identities
 
