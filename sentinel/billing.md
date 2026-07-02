@@ -77,9 +77,9 @@ The data lake tier incurs charges based on usage of various data lake capabiliti
 
 Once onboarded, usage from Microsoft Sentinel workspaces begins to be billed through the previously described meters rather than existing long-term retention (formerly known as Archive), search, or auxiliary logs ingestion meters.
 
-Usage reporting in the Defender portal reflects usage through Sentinel programmatic and UI interfaces surfaces. However the Log Analytics workspace is still accessible through Log Analytics and Azure Monitor. If queries are run via those services to consume data (via query or search jobs) the billing will happen on the workspace resource.
+Usage reporting in the Microsoft Defender portal reflects usage from Sentinel programmatic interfaces and UI surfaces. However, the Log Analytics workspace is still accessible in Log Analytics and Azure Monitor. If you run queries or search jobs from those services, billing is charged to the workspace resource.
 
-Any querying or searching done through Log Analytics UI against Data Lake enabled workspaces will incur Data Lake query charges against the workspace resource (instead of the platform resource where it would normally show up). For that reason, that usage also doesn't get reflect in usage reporting in Defender under cost management.
+Queries or searches run in the Log Analytics UI against data lake-enabled workspaces incur data lake query charges on the workspace resource (instead of the platform resource where they normally appear). As a result, that usage isn't reflected in Defender Cost Management usage reporting.
 
 ### Microsoft Sentinel graph
 
