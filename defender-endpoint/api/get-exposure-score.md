@@ -2,39 +2,25 @@
 title: Get exposure score
 description: Retrieves the organizational exposure score.
 ms.service: defender-endpoint
-author: denisebmsft
-ms.author: deniseb
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 11/13/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Get exposure score
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Retrieves the organizational exposure score.
 
@@ -42,10 +28,10 @@ Retrieves the organizational exposure score.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
----|---|---
-Application|Score.Read.All|'Read Threat and Vulnerability Management score'
-Delegated (work or school account)|Score.Read|'Read Threat and Vulnerability Management score'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|Score.Read.All|'Read Threat and Vulnerability Management score'|
+|Delegated (work or school account)|Score.Read|'Read Threat and Vulnerability Management score'|
 
 ## HTTP request
 
@@ -55,9 +41,9 @@ GET /api/exposureScore
 
 ## Request headers
 
-Name|Type|Description
----|---|---
-Authorization|String|Bearer {token}. **Required**.
+|Name|Type|Description|
+|---|---|---|
+|Authorization|String|Bearer {token}. **Required**.|
 
 ## Request body
 
@@ -79,10 +65,7 @@ GET https://api.security.microsoft.com/api/exposureScore
 
 ### Response
 
-Here is an example of the response.
-
-> [!NOTE]
-> The response list shown here may be truncated for brevity.
+Here's an example of a shortened response list.
 
 ```json
 {
@@ -91,9 +74,3 @@ Here is an example of the response.
     "score": 33.491554051195706
 }
 ```
-
-## See also
-
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management exposure score](/defender-vulnerability-management/tvm-exposure-score)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

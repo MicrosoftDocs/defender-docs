@@ -1,12 +1,8 @@
 ---
 title: Working with the data connectors in Microsoft Security Exposure Management
 description: Learn about using the data connectors in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: rayne-wiselman
 ms.topic: overview
-ms.service: exposure-management
-ms.date: 11/04/2024
+ms.date: 09/21/2025
 ---
 
 # Getting value from your data connectors
@@ -46,6 +42,9 @@ Benefits of using the external data connectors include:
 - Enriching context with business application or operational affiliation
 - Visualizing through the Attack Map tool
 - Exploring using advanced hunting queries via KQL
+
+> [!NOTE]
+> Currently vulnerabilities retrieved from data connectors only appear in the Exposure Graph, and can be explored in the Attack Surface Map or using Advanced Hunting.
 
 ### Connectors data in the Device Inventory
 

@@ -2,31 +2,24 @@
 title: Troubleshoot issues and find answers on FAQs related to Microsoft Defender for Endpoint on iOS
 description: Troubleshooting and FAQ - Microsoft Defender for Endpoint on iOS
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
-ms.topic: conceptual
+ms.topic: faq
 ms.subservice: ios
-search.appverid: met150
 ms.date: 01/22/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-image-nochange
 
+---
 # Troubleshoot issues and find answers to FAQs on Microsoft Defender for Endpoint on iOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 This article provides troubleshooting information to help you address issues that might arise with Microsoft Defender for Endpoint on iOS.
 
@@ -44,9 +37,9 @@ While enabled by default, there might be some cases that require you to disable 
 
 1. On your iOS device, open the **Settings** app, select **General**, and then select **VPN**.
 
-2. Select the **i** button for Defender for Endpoint.
+1. Select the **i** button for Defender for Endpoint.
 
-3. Toggle off **Connect On Demand** to disable VPN.
+1. Toggle off **Connect On Demand** to disable VPN.
 
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="media/ios-vpn-config.png" alt-text="The Connect on demand option" lightbox="media/ios-vpn-config.png":::
@@ -94,6 +87,9 @@ After onboarding, it takes few hours for device to show up in the Device invento
 > [!NOTE]
 > Sometimes, the device name is not consistent with that in Microsoft Intune admin center. The device name in the Microsoft Defender portal is of the format <username_iPhone/iPad*>. You can also use your Microsoft Entra device ID to identify the device in the Microsoft Defender portal.
 
+> [!Note]
+> Users that manually change the time on their mobile devices risk causing a mismatch in times between the client and the broker service that processes authentication tokens. This can cause unintentional behavior where tokens are viewed as expired. In order to avoid this, ensure end users have the ***Set Automatically*** field enabled under ***Settings > General > Date & time***
+
 ## Data and Privacy
 
 For details about data collected and privacy, see [Privacy Information - Microsoft Defender for Endpoint on iOS](ios-privacy.md).
@@ -127,24 +123,25 @@ If a user faces an issue that isn't already addressed in the above sections or i
 
    1. Open the MS Defender app on the iOS/iPadOS device.
    
-   2. Select the menu (profile icon) on the top-left corner, and then select **Help and Feedback**.
+   1. Select the menu (profile icon) on the top-left corner, and then select **Help and Feedback**.
    
-   3. Choose from the given options. Under troubleshooting, select **Send Logs to Microsoft**.
+   1. Choose from the given options. Under troubleshooting, select **Send Logs to Microsoft**.
 
-   4. Share Incident ID to your support engineer.
+   1. Share Incident ID to your support engineer.
 
-2. Users can use the following steps to send feedback if they are having sign in issues or the **Send Feedback** option is disabled (example GCC customers):
+1. Users can use the following steps to send feedback if they are having sign in issues or the **Send Feedback** option is disabled (example GCC customers):
 
    1. Sign out of the MS Defender app (applicable when Send Feedback option is disabled).
 
-   2. Select **Sign in with a different account**.
+   1. Select **Sign in with a different account**.
 
-   3. Select **Get help signing in**.
+   1. Select **Get help signing in**.
 
-   4. Select **Report a problem**, and provide details about the issue you are facing. Don't include personal information, such as your email account.
+   1. Select **Report a problem**, and provide details about the issue you are facing. Don't include personal information, such as your email account.
 
-   5. Select the toggle to include diagnostic data, and submit your feedback. 
+   1. Select the toggle to include diagnostic data, and submit your feedback. 
    
-   6. Sign back in to the app (applicable if user has signed out).
+   1. Sign back in to the app (applicable if user has signed out).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

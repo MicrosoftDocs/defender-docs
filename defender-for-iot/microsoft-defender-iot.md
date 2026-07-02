@@ -5,8 +5,7 @@ ms.service: defender-for-iot
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: rayne-wiselman
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 06/11/2024
 ---
 

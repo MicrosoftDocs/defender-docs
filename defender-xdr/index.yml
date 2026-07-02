@@ -11,8 +11,8 @@ metadata:
   ms.topic: landing-page # Required
   ms.collection: essentials-navigation
   ms.custom: intro-hub-or-landing
-  author: dansimp #Required; your GitHub user alias, with correct capitalization.
-  ms.author: dansimp #Required; microsoft alias of author; optional team alias.
+  author: guywi-ms
+  ms.author: guywild
   ms.date: 01/06/2025
   ms.localizationpriority: high
 
@@ -65,19 +65,19 @@ landingContent:
           url: deploy-configure-m365-defender.md
 
   # Card
-  - title: Microsoft's unified security operations platform
+  - title: Unified security operations in the Defender portal
     linkLists:
       - linkListType: overview
         links:
-          - text: "What is Microsoft's unified SecOps platform?"
+          - text: "What are unified security operations?"
             url: /unified-secops-platform/overview-unified-security
           - text: "Microsoft Defender portal overview"
             url: /unified-secops-platform/overview-defender-portal
       - linkListType: deploy
         links:
-          - text: "Plan your unified SecOps deployment"
+          - text: "Plan for unified security operations"
             url: /unified-secops-platform/overview-plan
-          - text: "Deploy Microsoft's unified SecOps platform"
+          - text: "Deploy for unified security operations"
             url: /unified-secops-platform/overview-deploy
 
 # Card

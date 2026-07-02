@@ -1,13 +1,8 @@
 ---
 title: Troubleshoot issues in Microsoft Defender multitenant management
 description: Learn about issues in Microsoft Defender multitenant management and how to fix or troubleshoot them.
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: diannegali
-author: diannegali
-ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
+author: guywi-ms
+ms.author: guywild
 ms.collection: 
   - m365-security
   - highpri
@@ -51,11 +46,11 @@ Here’s an example of the policy setting in the Microsoft Entra admin center.
 
 ## Content assignment failure in cross-cloud tenant management
 
-You see the following error when assigning content to tenant groups:
+You see the following error when assigning content to distribution profiles:
 
-:::image type="content" source="media/mto-troubleshoot/tenant-perms-error-small.png" alt-text="Screenshot of permissions error when assigning content to tenants" lightbox="media/mto-troubleshoot/tenant-perms-error.png":::
+:::image type="content" source="media/mto-troubleshoot/tenant-perms-error.png" alt-text="Screenshot of permissions error when assigning content to tenants" lightbox="media/mto-troubleshoot/tenant-perms-error.png":::
 
-When a cross-cloud tenant is added to a tenant group and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won't be available for content management, which causes the error. This is a recognized limitation of cross-cloud tenant management and is currently under review.
+When a cross-cloud tenant is added to a distribution profile and subsequently removed from cross-cloud visibility, the tenant's name is removed from the tenant list and won't be available for content management, which causes the error. This is a recognized limitation of cross-cloud tenant management and is currently under review.
 
 ## Related content
 

@@ -2,23 +2,17 @@
 title: Microsoft Defender XDR prerequisites
 description: Learn about the licensing, hardware and software requirements, and other configuration settings for Microsoft Defender XDR
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
-ms.author: macapara
-author: mjcaparas
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
-ms.topic: conceptual
-search.appverid: 
-  - MOE150
-  - MET150
+ms.topic: install-set-up-deploy
 ms.date: 04/03/2025
 appliesto:
 - Microsoft Defender XDR
+ms.custom: sfi-ga-nochange
 ---
 
 # Microsoft Defender XDR prerequisites
@@ -34,7 +28,7 @@ Microsoft Defender XDR natively correlates Microsoft security products' signals,
 Any of these licenses give you access to Microsoft Defender XDR features via the Microsoft Defender portal without any additional cost:
 
 - Microsoft 365 E5 or A5
-- Microsoft 365 E3 with the Microsoft 365 E5 Security add-on
+- Microsoft 365 E3 with the Microsoft Defender Suite add-on
 - Microsoft 365 E3 with the Enterprise Mobility + Security E5 add-on
 - Microsoft 365 A3 with the Microsoft 365 A5 Security add-on
 - Windows 10 Enterprise E5 or A5
@@ -62,7 +56,7 @@ For more information, [view the Microsoft 365 Enterprise service plans](https://
 Go to Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.com/)) to view your existing licenses. In the admin center, go to **Billing** \> **Licenses**.
 
 > [!NOTE]
-> You need to be assigned either the **Billing admin** or **Global reader** [role in Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) to be able to see license information. If you encounter access problems, contact a Global Administrator.
+> You need to be assigned either the **Billing admin** or higher [role in Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) to be able to see license information. If you encounter access problems, contact a Global Administrator.
 
 ## Required permissions
 

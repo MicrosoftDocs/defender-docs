@@ -1,29 +1,25 @@
 ---
 title: MessageUrlInfo table in the advanced hunting schema
 description: Learn about the MessageUrlInfo table in the advanced hunting schema which contains information about URLs sent through Microsoft Teams messages in your organization. 
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom:
 - cx-ti
 - cx-ah
-appliesto: 
-- Microsoft Defender XDR 
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/18/2025
+ms.date: 08/13/2025
 ---
 
-# MessageUrlInfo (Preview)
+# MessageUrlInfo
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -31,6 +27,8 @@ ms.date: 03/18/2025
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The `MessageUrlInfo` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about URLs sent through Microsoft Teams messages in your organization. 
+
+This advanced hunting table is populated by records from Microsoft Defender for Office 365. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Office 365 in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 

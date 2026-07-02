@@ -1,23 +1,17 @@
 ---
 title: Threat investigation & response capabilities in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
 ms.date: 10/10/2023
-audience: Admin
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 32405da5-bee1-4a4b-82e5-8399df94c512
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-ga-nochange
 description: Learn about threat investigation and response capabilities in Microsoft Defender for Office 365 Plan.
 ms.service: defender-office-365
 appliesto:
@@ -31,7 +25,7 @@ appliesto:
 Threat investigation and response capabilities in [Microsoft Defender for Office 365](mdo-about.md) help security analysts and administrators protect their organization's Microsoft 365 for business users by:
 
 - Making it easy to identify, monitor, and understand cyberattacks.
-- Helping to quickly address threats in Exchange Online, SharePoint Online, OneDrive for Business and Microsoft Teams.
+- Helping to quickly address threats in Exchange Online, SharePoint, OneDrive and Microsoft Teams.
 - Providing insights and knowledge to help security operations prevent cyberattacks against their organization.
 - Employing [automated investigation and response in Office 365](air-about.md) for critical email-based threats.
 
@@ -58,7 +52,7 @@ To view and use this report in the Microsoft Defender portal at <https://securit
 
 This feature is only available if you have an active Office 365 E5 or G5 or Microsoft 365 E5 or G5 subscription or the Threat Intelligence add-on. For more information, see the Office 365 Enterprise E5 product page.
 
-Data from Microsoft Defender for Office 365 is incorporated into Microsoft Defender XDR to conduct a comprehensive security investigation across Office 365 mailboxes and Windows devices.
+Data from Microsoft Defender for Office 365 is incorporated into Microsoft Defender to conduct a comprehensive security investigation in Office 365 mailboxes and Windows devices.
 
 ### Incidents
 
@@ -97,7 +91,7 @@ Microsoft Defender for Office 365 uses role-based access control. Permissions ar
 >
 > - [Permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 > - [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference)
-> - [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
+> - [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac)
 
 |Activity|Roles and permissions|
 |---|---|
@@ -110,7 +104,7 @@ Microsoft Defender for Office 365 uses role-based access control. Permissions ar
 |View email preview/download .eml of ANY email in Explorer|One of the following: <ul><li>**Security Administrator**</li><li>**Security Reader**</li></ul> <br/> These roles can be assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>).|
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Next steps
 

@@ -1,17 +1,14 @@
 ---
 title: Microsoft Defender XDR for US Government customers
 description: Learn about the Microsoft Defender XDR for US Government customers requirements and capabilities available
-search.appverid: met150
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security-compliance
 - tier3
-ms.topic: conceptual
+ms.topic: article
 ms.date: 12/07/2021
 ---
 

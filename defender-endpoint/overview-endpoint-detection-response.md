@@ -3,18 +3,15 @@ title: Overview of endpoint detection and response capabilities
 ms.reviewer: 
 description: Learn about the endpoint detection and response capabilities in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-edr
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: edr
-search.appverid: met150
 ms.date: 03/26/2025
 ---
 
@@ -24,7 +21,7 @@ ms.date: 03/26/2025
 - [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+
 
 Endpoint detection and response capabilities in Defender for Endpoint provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
@@ -44,10 +41,14 @@ Inspired by the "assume breach" mindset, Defender for Endpoint continuously coll
 
 The response capabilities give you the power to promptly remediate threats by acting on the affected entities.
 
+## Automatic attack disruption
+
+Defender for Endpoint signals contribute to [automatic attack disruption](/defender-xdr/automatic-attack-disruption) in Microsoft Defender XDR. Attack disruption uses signal correlation and AI to automatically contain active attacks in progress—such as ransomware, business email compromise, and adversary-in-the-middle attacks—limiting lateral movement and reducing overall impact. Automatic attack disruption works with other Defender XDR sources to contain compromised assets, including automatically disabling compromised user accounts and isolating affected devices.
+
 ## See also
 
 - [Incidents queue](view-incidents-queue.md)
 - [Alerts queue](alerts-queue.md)
 - [Devices list](machines-view-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

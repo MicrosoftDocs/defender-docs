@@ -2,18 +2,16 @@
 title: IP address entity page in Microsoft Defender
 description: The IP address entity page in the Microsoft Defender portal helps you in your investigation of IP address entities that appear in incidents and alerts. The page has all the important information about each entity. If an alert or incident indicates that an IP address is the source or target of suspicious behavior, check and investigate the IP address.
 ms.service: defender-xdr
-ms.author: yelevin
-author: yelevin
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - usx-security
-ms.topic: conceptual
-ms.date: 03/27/2024
-search.appverid: met150
+ms.topic: concept-article
+ms.date: 06/12/2026
+ai-usage: ai-assisted
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
@@ -32,6 +30,7 @@ You can find information from the following sections in the IP address entity pa
 - [Overview](#overview)
 - [Incidents and alerts](#incidents-and-alerts)
 - [Observed in organization](#observed-in-organization)
+- [Threat Intelligence Insights](#threat-intelligence-insights)
 - [Sentinel events](#sentinel-events)
 
 
@@ -65,6 +64,36 @@ To see a full page view of an incident or alert, select its title.
 ## Observed in organization
 
 The **Observed in organization** section provides a list of devices that have a connection with this IP and the last event details for each device (the list is limited to 100 devices).
+
+## Threat Intelligence Insights
+
+The **Threat Intelligence Insights** tab surfaces enrichment data from [Microsoft Threat Intelligence](defender-threat-intelligence.md) directly on the IP address entity page. These enrichments provide globally observed intelligence to help you assess the risk of an IP address during an investigation.
+
+For a general overview of entity enrichments, see [View threat intelligence in entity pages](entity-page-threat-intelligence.md).
+
+### Reputation
+
+The reputation section displays a risk assessment for the IP address based on Microsoft's detection rules and intelligence. The reputation score indicates whether the IP address is known to be malicious, suspicious, or benign, helping analysts quickly prioritize their investigation.
+
+### Attributed threat reports
+
+When Microsoft has linked the IP address to a known threat actor or campaign, this section shows related threat analytics reports. These reports provide context about the threat actor's tactics, techniques, and procedures (TTPs).
+
+### Infrastructure relationships
+
+The infrastructure relationships section provides detailed data about the IP address, including:
+
+| Data set | Description |
+|---|---|
+| **DNS records** | Historical and current DNS resolution data associated with the IP address. |
+| **WHOIS information** | Registration details for the IP address, including registrant, dates, and registrar. |
+| **Host pairs** | Relationships between hosts based on observed connections in web content. |
+| **Subdomains** | Known subdomains that resolve to the IP address. |
+| **TLS/SSL certificates** | Certificate details including issuer, validity, and subject alternative names. |
+| **Services** | Detected network services running on the IP address. |
+| **Components** | Web technologies and frameworks identified on the IP address. |
+| **Trackers** | Web analytics and tracking codes observed on the IP address. |
+| **Cookies** | Cookie names observed in responses from the IP address. |
 
 ## Sentinel events
 
@@ -120,7 +149,7 @@ Response actions run along the top of a specific IP entity page and include:
 | **Investigate in Activity log** | Opens the Microsoft 365 Activity log screen for you to look for the IP address in other logs. |
 | **Go hunt** | Opens the **Advanced hunting** page, with a built-in hunting query to find instances of this IP address. |
 
-## Related topics
+## Related content
 
 - [Microsoft Defender XDR overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)

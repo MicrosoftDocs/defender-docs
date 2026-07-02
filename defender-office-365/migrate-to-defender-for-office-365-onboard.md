@@ -1,23 +1,16 @@
 ---
 title: "Migrate to Microsoft Defender for Office 365 Phase 3: Onboard"
-f1.keywords: 
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: Admin
-ms.topic: conceptual
+ms.author: chrisda
+ms.topic: upgrade-and-migration-article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.collection:
   - m365-security
   - m365solution-mdo-migration
   - highpri
   - tier1
 ms.custom: migrationguides
-description: "Complete the steps for migrating from a third-party protection service or device to Microsoft Defender for Office 365 protection."
+description: "Complete the steps for migrating from a non-Microsoft protection service or device to Microsoft Defender for Office 365 protection."
 ms.service: defender-office-365
 ms.date: 6/15/2023
 appliesto:
@@ -159,7 +152,7 @@ Use the following features to monitor and iterate on the protection settings in 
 - [Mail flow insights](/exchange/monitoring/mail-flow-insights/mail-flow-insights)
 - [Mail flow reports](/exchange/monitoring/mail-flow-reports/mail-flow-reports)
 
-If your organization uses a third-party service for user reported messages, you can integrate that data into your feedback loop.
+If your organization uses a non-Microsoft service for user reported messages, you can integrate that data into your feedback loop.
 
 ## Step 6: (Optional) Add more users to your pilot and iterate
 
@@ -179,7 +172,7 @@ As you find and fix issues, you can add more users to the pilot groups (and corr
 Do the steps in this section when you're ready to switch your MX records to point to Microsoft 365.
 
 1. Extend the pilot policies to the entire organization. Fundamentally, there are different ways to extend the policies:
-   - Use [preset security](preset-security-policies.md) policies and divide your users between the Standard protection profile and the Strict protection profile (make sure everyone is covered). Preset security policies are applied before any custom policies that you've created or any default policies. You can turn off your individual pilot policies without deleting them.
+   - Use [preset security](preset-security-policies.md) policies and divide your users between the Standard protection profile and the Strict protection profile (make sure everyone is covered). Preset security policies are applied before any custom threat policies or the default threat policies. You can turn off your individual pilot policies without deleting them.
 
      The drawback to preset security policies is you can't change many of the important settings after you've created them.
 

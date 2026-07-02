@@ -1,13 +1,9 @@
 ---
 title: "Improve Security Posture and Reduce Risk"
-description: Provides an overview of solutions that help reduce security risk in Microsoft's unified security operations platform.
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: bagol
-author: batamig
-ms.localizationpriority: medium
+description: Provides an overview of solutions that help reduce security risk in the Microsoft Defender portal.
+author: guywi-ms
+ms.author: guywild
 ms.date: 02/05/2025
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -20,7 +16,7 @@ ms.topic: concept-article
 
 Security teams need a comprehensive strategy to reduce vulnerabilities, prevent breaches, and mitigate threats in real time.
 
-Microsoft's unified SecOps platform provides a set of integrated tools and solutions that work together to help security teams proactively reduce security risk.
+The Microsoft Defender portal provides a set of integrated tools and solutions that work together to help security teams proactively reduce security risk.
 
 Proactive security management allows you to manage cybersecurity as an ongoing risk, rather than series of unpredictable events. Proactive risk management helps to reduce the likelihood of breaches, minimize business disruptions when attacks do occur, and raise security awareness as an ongoing practice across the business.
 
@@ -42,7 +38,7 @@ Activity | Details
 
 ## Microsoft solutions
 
-A range of solutions within Microsoft's unified SecOps platform helps security teams to proactively improve security posture.
+A range of solutions in the Microsoft Defender portal help security teams to proactively improve security posture.
 
 Solution | Details | Capabilities
 --- | --- | ---

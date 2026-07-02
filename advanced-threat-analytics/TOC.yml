@@ -1,0 +1,23 @@
+- name: Understand and Explore
+  items:
+  - name: What's new in ATA?
+    items:
+    - name: What's new in ATA version 1.9
+    - name: What's new in ATA version 1.8
+    - name: What's new in ATA version 1.7
+    - name: What's new in ATA version 1.6
+    - name: What's new in ATA version 1.5
+  - name: ATA data security and privacy
+    href: ata-privacy-compliance.md
+- name: Plan and Design
+- name: Deploy
+  items:
+  - name: ATA Gateway additional steps
+- name: Use
+  items:
+  - name: Manage system-generated logs
+    href: manage-telemetry-settings.md
+  - name: Working with the ATA Console
+  - name: ATA reference information
+- name: Investigate
+- name: Troubleshoot

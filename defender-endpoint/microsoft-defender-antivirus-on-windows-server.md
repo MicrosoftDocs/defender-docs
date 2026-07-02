@@ -1,46 +1,42 @@
----
+﻿---
 title: Microsoft Defender Antivirus on Windows Server
-description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025.
+description: Learn how to enable and configure Microsoft Defender Antivirus on Windows Server 2016 and later as well as 5Azure Stack HCI OS version 23H2 and later.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.reviewer: pahuijbr
-manager: deniseb
-ms.topic: conceptual
-ms.date: 04/18/2025
+ms.topic: how-to
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2
 - m365initiative-defender-endpoint
 - mde-ngp
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Antivirus
 
+---
 # Microsoft Defender Antivirus on Windows Server
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-- Microsoft Defender Antivirus
-
-Microsoft Defender Antivirus is available in the following editions/versions of Windows Server:
-
-- Windows Server 2025
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server, version 1803 or later
-- Windows Server 2016
-- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
 
 ## Overview
 
 By default, Microsoft Defender Antivirus is installed and functional on Windows Server 2016 and later. For Windows Server 2012 R2, Microsoft Defender Antivirus is installed when the device is onboarded to Defender for Endpoint using the [modern unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2). 
 
 This article describes how to enable the user interface, install or reinstall Microsoft Defender Antivirus, verify that Microsoft Defender Antivirus is running, and update your antimalware security intelligence. This article also describes how to set Microsoft Defender Antivirus to passive mode if you're using a non-Microsoft antivirus/anti-malware solution on Windows Server.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows server 2016 and later
+- Windows Server, version 1803 or later
+- Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
+- Azure Stack HCI OS version 23H2 and later
 
 ## Enable the user interface on Windows Server
 
@@ -64,7 +60,7 @@ If you need to install or reinstall Microsoft Defender Antivirus on Windows Serv
 | Use PowerShell to install Microsoft Defender Antivirus | 1. On your Windows Server, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender` |
 
 > [!NOTE]
-> Event messages for the antimalware engine included with Microsoft Defender Antivirus can be found in [Microsoft Defender Antivirus Events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+> Event messages for the antimalware engine included with Microsoft Defender Antivirus can be found in [Microsoft Defender Antivirus Events](troubleshoot-microsoft-defender-antivirus.yml).
 
 ## Verify Microsoft Defender Antivirus is running
 
@@ -78,11 +74,11 @@ To verify that firewall protection is turned on using PowerShell, run the follow
 To view verify the state of all services using Command Prompt, run the following command: `sc query state= all`.
 
 > [!IMPORTANT]
-> Beginning with [platform version 4.18.2208.0 and later](/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Defender for Endpoint, the "Turn off Windows Defender" setting in [Group Policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it places Microsoft Defender Antivirus into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature allows Microsoft Defender Antivirus to switch to active mode but not to passive mode.
+> Beginning with [platform version 4.18.2208.0 and later](msda-updates-previous-versions-technical-upgrade-support.md#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Defender for Endpoint, the "Turn off Windows Defender" setting in [Group Policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) no longer completely disables Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it places Microsoft Defender Antivirus into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature allows Microsoft Defender Antivirus to switch to active mode but not to passive mode.
 >
 > If "Turn off Windows Defender" is already set before onboarding the device to Defender for Endpoint, there's no change and Microsoft Defender Antivirus remains disabled.
 >
-> To switch Microsoft Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
+> To switch Microsoft Defender Antivirus to passive mode, even if it was disabled before onboarding, you can apply the [ForceDefenderPassiveMode configuration](switch-to-mde-phase-2.md#manually-set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) with a value of `1`. To place it into active mode, switch this value to `0` instead.
 >
 > Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is toggled to active mode, tamper protection will prevents Microsoft Defender Antivirus from going into passive mode, even if `ForceDefenderPassiveMode` is set to `1`.
 
@@ -90,7 +86,7 @@ To view verify the state of all services using Command Prompt, run the following
 
 To get your regular security intelligence updates, the Windows Update service must be running. If you use an update management service, like Windows Server Update Services (WSUS), make sure Microsoft Defender Antivirus Security intelligence updates are approved for the computers you manage.
 
-By default, Windows Update doesn't download and install updates automatically on Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025. You can change this configuration by using one of the following methods:
+By default, Windows Update doesn't download and install updates automatically on Windows Server 2016 and later, and Azure Stack HCI OS version 23H2 and later. You can change this configuration by using one of the following methods:
 
 | Method | Description |
 |---|---|
@@ -124,21 +120,21 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 
 1. Check the status of Microsoft Defender Antivirus by following the guidance in [Verify Microsoft Defender Antivirus is running](#verify-microsoft-defender-antivirus-is-running) (in this article).
 
-2. If necessary, set Microsoft Defender Antivirus to active mode manually by following these steps:
+1. If necessary, set Microsoft Defender Antivirus to active mode manually by following these steps:
 
-   1. On your Windows Server device, open Registry Editor as an administrator.
+    a. On your Windows Server device, open Registry Editor as an administrator.
 
-   2. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
+    a. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 
-   3. Set or define a `REG_DWORD` entry called `ForceDefenderPassiveMode`, and set its value to `0`.
+    a. Set or define a `REG_DWORD` entry called `ForceDefenderPassiveMode`, and set its value to `0`.
 
-   4. Reboot the device.
+    a. Reboot the device.
 
 > [!TIP]
 > If you still need help, see the following troubleshooting items:
 > 
 > - [Microsoft Defender Antivirus seems to be stuck in passive mode](switch-to-mde-troubleshooting.md#microsoft-defender-antivirus-seems-to-be-stuck-in-passive-mode).
-> - [I'm having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016](switch-to-mde-troubleshooting.md#i-am-having-trouble-re-enabling-microsoft-defender-antivirus-on-windows-server-2016).
+> - [I'm having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016](switch-to-mde-troubleshooting.md#im-having-trouble-re-enabling-microsoft-defender-antivirus-on-windows-server-2016).
 
 ## See also
 
@@ -148,4 +144,5 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 - [Troubleshoot performance issues related to real-time protection](troubleshoot-performance-issues.md)
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

@@ -1,26 +1,21 @@
 ---
 title: What is Microsoft Defender XDR?
 description: Microsoft Defender XDR is a coordinated threat protection solution designed to protect devices, identity, data, and applications.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-audience: ITPro
 ms.custom: 
 - admindeeplinkDEFENDER
 - intro-overview
 ms.collection:
 - essentials-overview
 - tier1
-ms.topic: conceptual
+ms.topic: overview
 adobe-target: true
 ms.date: 08/19/2024
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-manager: deniseb
 ---
 
 # What is Microsoft Defender XDR?
@@ -29,7 +24,7 @@ manager: deniseb
 
 Microsoft Defender XDR is a unified pre- and post-breach enterprise defense suite that natively coordinates detection, prevention, investigation, and response across endpoints, identities, email, and applications to provide integrated protection against sophisticated attacks.
 
-Microsoft Defender XDR helps security teams protect and detect their organizations by using information from other Microsoft security products, including:
+Microsoft Defender XDR helps security teams protect their organizations and detect threats by using information from other Microsoft security products, including:
 
 - [**Microsoft Defender for Endpoint**](/defender-endpoint/microsoft-defender-endpoint)
 - [**Microsoft Defender for Office 365**](/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet)
@@ -41,6 +36,8 @@ Microsoft Defender XDR helps security teams protect and detect their organizatio
 - [**Microsoft Data Loss Prevention**](/microsoft-365/compliance/dlp-learn-about-dlp)
 - [**App Governance**](/defender-cloud-apps/app-governance-manage-app-governance)
 - [**Microsoft Purview Insider Risk Management**](/purview/insider-risk-management-solution-overview)
+- [**Microsoft Security Exposure Management**](/security-exposure-management)
+
 
 With the integrated Microsoft Defender XDR solution, security professionals can stitch together the threat signals that each of these products receive and determine the full scope and impact of the threat; how it entered the environment, what it's affected, and how it's currently impacting the organization. Microsoft Defender XDR takes automatic action to prevent or stop the attack and self-heal affected mailboxes, endpoints, and user identities.
 

@@ -5,11 +5,11 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
-ms.author: bcarter
-author: brendacarter
+ms.author: abbyweisberg
+author: AbbyMSFT
+ms.reviewer: maelgami
 ms.date: 03/14/2025
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection:
   - m365-security
@@ -256,9 +256,9 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 
 ## SIEM integration
 
-You can integrate Defender for Cloud Apps with Microsoft Sentinel as part of Microsoft's [unified security operations platform](/unified-secops-platform/), or with a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
+You can integrate Defender for Cloud Apps with Microsoft Sentinel for unified security operations in the [Defender portal](/unified-secops-platform/), or with a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
-Microsoft Sentinel includes a Microsoft Defender for XDR data connector to bring all signals from Defender XDR, including Defender for Cloud Apps, to Microsoft Sentinel. Use the Defender portal as a unified security operations (SecOps) platform.
+The Defender portal supports unified security operations with Microsoft Sentinel, bringing signals from Defender XDR, including Defender for Cloud Apps, to Microsoft Sentinel.
 
 For more information, see:
 

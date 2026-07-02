@@ -3,36 +3,24 @@ title: Better together - Microsoft Defender Antivirus and Office 365 (including 
 description: Office 365, which includes OneDrive, goes together wonderfully with Microsoft Defender Antivirus. Read this article to learn more.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
-ms.topic: conceptual
-author: emmwalshh
-ms.author: ewalsh
+ms.topic: article
+author: chrisda
+ms.author: chrisda
 ms.custom: 
 - nextgen
 - admindeeplinkDEFENDER
 ms.reviewer: yonghree 
-manager: deniseb
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
-search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 10/20/2025
+appliesto:
+- Microsoft Defender for Endpoint Plan 1
+- Microsoft Defender for Endpoint Plan 2
 ---
 
 # Better together: Microsoft Defender Antivirus and Office 365
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- Microsoft Defender Antivirus
-- Microsoft 365
-
-**Platforms**
-- Windows
 
 You might already know that:
 
@@ -46,9 +34,15 @@ You might already know that:
 
  1. [You get ransomware protection and recovery](#ransomware-protection-and-recovery).
 
- 2. [Integration means better protection](#integration-means-better-protection).
+ 1. [Integration means better protection](#integration-means-better-protection).
 
 Read the following sections to learn more.
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## Ransomware protection and recovery
 
@@ -56,9 +50,9 @@ When you save your files to [OneDrive](/onedrive), and [Microsoft Defender Antiv
 
 1. **You are told about the threat**. (If your organization is using [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), your security operations team is notified, too.)
 
-2. **Microsoft Defender Antivirus helps you (and your organization's security team) remove the ransomware** from your device(s). (If your organization is using Microsoft Defender for Endpoint, your security operations team can determine whether other devices are infected and take appropriate action, too.)
+1. **Microsoft Defender Antivirus helps you (and your organization's security team) remove the ransomware** from your device(s). (If your organization is using Microsoft Defender for Endpoint, your security operations team can determine whether other devices are infected and take appropriate action, too.)
 
-3. **You get the option to recover your files in OneDrive**. With the OneDrive Files Restore feature, you can recover your files in OneDrive to the state they were in before the ransomware attack occurred. See [Ransomware detection and recovering your files](https://support.office.com/article/0d90ec50-6bfd-40f4-acc7-b8c12c73637f).
+1. **You get the option to recover your files in OneDrive**. With the OneDrive Files Restore feature, you can recover your files in OneDrive to the state they were in before the ransomware attack occurred. See [Ransomware detection and recovering your files](https://support.office.com/article/0d90ec50-6bfd-40f4-acc7-b8c12c73637f).
 
 Think of the time and hassle this can save. 
 
@@ -86,7 +80,7 @@ Protection from ransomware is one great reason to put your files in OneDrive. An
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
@@ -101,4 +95,3 @@ Protection from ransomware is one great reason to put your files in OneDrive. An
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

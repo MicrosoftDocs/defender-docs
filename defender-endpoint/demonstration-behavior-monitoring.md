@@ -3,43 +3,39 @@ title: Behavior Monitoring demonstration
 description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
 ms.subservice: ngp
-author: emmwalshh
-ms.author: ewalsh
+author: limwainstein
+ms.author: lwainstein
 ms.reviewer: yonghree
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
-ms.topic: conceptual
-search.appverid: met150
+ms.topic: article
 ms.date: 03/04/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 
+---
 # Behavior Monitoring demonstration
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 Behavior monitoring in Microsoft Defender Antivirus monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns, behavior monitoring focuses on observing how software behaves in real-time.
 
-## Scenario requirements and setup
 
-- Client devices must be running Windows 11, Windows 10, Windows 8.1, Windows 7 SP1, or macOS
-
-- Server devices must be running Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, or Windows Server 2008 R2
+## Prerequisites
 
 - [Microsoft Defender Real-time protection is enabled](#verify-microsoft-defender-real-time-protection-is-enabled)
 
 - [Behavior Monitoring is enabled](#enable-behavior-monitoring-for-microsoft-defender-for-endpoint)
+
+- Client devices must be running Windows 11, Windows 10, Windows 8.1, Windows 7 SP1, or macOS
+
+- Server devices must be running Windows Server 2008 R2, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 
 ## Windows
 
@@ -55,7 +51,7 @@ When real-time protection is enabled, the result shows a value of `True`.
 
 ### Enable Behavior Monitoring for Microsoft Defender for Endpoint
 
-For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [how to enable Behavior Monitoring](/defender-endpoint/behavior-monitor).
+For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [how to enable Behavior Monitoring](behavior-monitor.md).
 
 ### Demonstration of how Behavior Monitoring works in Windows and Windows Server
 
@@ -137,15 +133,15 @@ To demonstrate how Behavior Monitoring blocks a payload:
    sleep 5
    ```
 
-2. Save as `BM_test.sh`.
+1. Save as `BM_test.sh`.
 
-3. Run the following command to make the bash script executable:
+1. Run the following command to make the bash script executable:
 
    ```bash
    sudo chmod u+x BM_test.sh
    ```
 
-4. Run the bash script:
+1. Run the bash script:
 
    ```bash
    sudo bash BM_test.sh
@@ -176,3 +172,4 @@ To demonstrate how Behavior Monitoring blocks a payload:
    ```
 
 If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the [Microsoft Defender portal](https://security.microsoft.com), and you see an alert titled, *Suspicious 'MacOSChangeFileTest' behavior was blocked*.
+

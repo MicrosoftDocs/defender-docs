@@ -3,32 +3,23 @@ title: Deployment with a different Mobile Device Management (MDM) system for Mic
 description: Install Microsoft Defender for Endpoint on macOS on other management solutions.
 ms.service: defender-endpoint
 ms.reviewer: joshbregman
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: paulinbar
+ms.author: painbar
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: macos
-search.appverid: met150
 ms.date: 04/16/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Deployment with a different Mobile Device Management (MDM) system for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
  
 ## Prerequisites and system requirements
 
@@ -101,7 +92,7 @@ To set up profiles:
 
 Apple regularly creates new types of payloads with new versions of an OS.
 You need to visit the above mentioned page, and publish new profiles once they became available.
-We post notifications to our [What's New page](mac-whatsnew.md) once we make changes like that.
+We post notifications to our [What's New page](microsoft-defender-endpoint-releases.md#macos-releases) once we make changes like that.
 
 ### Defender for Endpoint configuration settings
 
@@ -176,4 +167,5 @@ It can miss some errors, and it isn't aware of some design decisions that system
 ## Check installation status
 
 Run [Microsoft Defender for Endpoint](mac-install-with-jamf.md) on a client device to check the onboarding status.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

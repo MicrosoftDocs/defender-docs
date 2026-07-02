@@ -1,35 +1,34 @@
 ---
 title: How to schedule an update for Microsoft Defender for Endpoint on Linux
-description: Learn how to schedule an update for Microsoft Defender for Endpoint on Linux to better protect your organization's assets.
+description: Use crontab to schedule Microsoft Defender for Endpoint updates on Linux, with examples for RHEL, SLES, Ubuntu, and configuration management tools.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: linux
-search.appverid: met150
-ms.date: 05/12/2025
+ms.date: 06/17/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
+# Schedule security intelligence updates for Microsoft Defender for Endpoint on Linux
 
-# Schedule an update for Microsoft Defender for Endpoint on Linux
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
 
 To run an update on Microsoft Defender for Endpoint on Linux, see [Deploy updates for Microsoft Defender for Endpoint on Linux](linux-updates.md).
 
 Linux and Unix have a tool called **crontab** (similar to Task Scheduler) to be able to run scheduled tasks.
 
-## Prerequisite
+<a name="prerequisite"></a>
+## Prerequisites
 
 > [!NOTE]
 > To get a list of all the time zones, run the following command:
@@ -42,11 +41,14 @@ Linux and Unix have a tool called **crontab** (similar to Task Scheduler) to be 
 > - `America/Chicago`
 > - `America/Denver`
 
-## To set the Cron job
+<a name="to-set-the-cron-job"></a>
+## Set the cron job
 
 Use the following commands:
 
 ### Backup crontab entries
+
+Use the following command to back up the current crontab entries before making changes:
 
 ```bash
 sudo crontab -l > /var/tmp/cron_backup_201118.dat
@@ -56,9 +58,9 @@ sudo crontab -l > /var/tmp/cron_backup_201118.dat
 > In our example, `201118` == `YYMMDD`.
 
 > [!TIP]
-> Do this before you edit or remove.
+> Back up your crontab entries before you edit or remove them.
 
-To edit the crontab, and add a new job as a root user:
+To edit the root user's crontab and add a new job:
 
 ```bash
 sudo crontab -e
@@ -79,7 +81,7 @@ And
 0 2 * * sat /bin/mdatp scan quick>~/mdatp_cron_job.log
 ```
 
-See [Schedule scans with Microsoft Defender for Endpoint (Linux)](schedule-antivirus-scan-crontab.md)
+For instructions on creating a scheduled antivirus scan job, see [Schedule scans with Microsoft Defender for Endpoint (Linux)](schedule-antivirus-scan-crontab.md).
 
 Press "Insert"
 
@@ -108,9 +110,9 @@ CRON_TZ=America/Los_Angeles
 > ```
 
 > [!NOTE]
-> In the previous examples, we specified `00` minutes, 6 a.m. (hour using the 24-hour format), any day of the month, any month, on Sundays. 
+> In the RHEL, SLES, Ubuntu, and Debian cron entries, `0 6 * * sun` specifies 00 minutes, 6 a.m. (hour using the 24-hour format), any day of the month, any month, on Sundays. 
 > `[$(date +\%d) -le 15]` doesn't run unless it's equal or less than the 15th day (third week). 
-> This means the job runs at 6 a.m. every Sunday, but only if the day of the month is the 15th or earlier.
+> This cron schedule means the job runs at 6 a.m. every Sunday, but only if the day of the month is the 15th or earlier.
 
 Press "Esc"
 
@@ -135,11 +137,14 @@ To inspect the mdatp_cron_job.log
 sudo nano mdatp_cron_job.log
 ```
 
-## For those who use Ansible, Chef, or Puppet
+<a name="for-those-who-use-ansible-chef-or-puppet"></a>
+## Configure scheduled updates with Ansible, Chef, or Puppet
 
 Use the following commands:
 
 ### To set cron jobs in Ansible
+
+Use Ansible's cron module to manage cron jobs:
 
 ```bash
 cron - Manage cron.d and crontab entries
@@ -165,9 +170,12 @@ Automating with Puppet: Cron jobs and scheduled tasks
 
 See <https://puppet.com/blog/automating-puppet-cron-jobs-and-scheduled-tasks/> for more information.
 
-## Additional information
+<a name="additional-information"></a>
+## Common crontab commands and examples
 
 ### To get help with crontab
+
+Run the following command to view the crontab manual page:
 
 ```bash
 man crontab
@@ -175,17 +183,23 @@ man crontab
 
 ### To get a list of crontab file of the current user
 
+Run the following command to list the current user's crontab entries:
+
 ```bash
 crontab -l
 ```
 
 ### To get a list of crontab file of another user
 
+Run the following command to list another user's crontab entries:
+
 ```bash
 crontab -u username -l
 ```
 
 ### To back up crontab entries
+
+Use the following command to back up the current crontab entries:
 
 ```bash
 crontab -l > /var/tmp/cron_backup.dat
@@ -196,11 +210,15 @@ crontab -l > /var/tmp/cron_backup.dat
 
 ### To restore crontab entries
 
+Run the following command to restore crontab entries from a backup file:
+
 ```bash
 crontab /var/tmp/cron_backup.dat
 ```
 
 ### To edit the crontab and add a new job as a root user
+
+Use the following command to edit the root user's crontab and add a new job:
 
 ```bash
 sudo crontab -e
@@ -208,11 +226,15 @@ sudo crontab -e
 
 ### To edit the crontab and add a new job
 
+Run the following command to edit the current user's crontab and add a new job:
+
 ```bash
 crontab -e
 ```
 
 ### To edit other user's crontab entries
+
+Run the following command to edit another user's crontab entries:
 
 ```bash
 crontab -u username -e
@@ -220,17 +242,24 @@ crontab -u username -e
 
 ### To remove all crontab entries
 
+Use the following command to remove all crontab entries for the current user:
+
 ```bash
 crontab -r
 ```
 
 ### To remove other user's crontab entries
 
+Use the following command to remove another user's crontab entries:
+
 ```bash
 crontab -u username -r
 ```
 
-### Explanation
+<a name="explanation"></a>
+### Cron expression field reference
+
+The following diagram explains the fields in a cron expression:
 
 <pre>
 +—————- minute (values: 0 - 59) (special characters: , - * /)  <br>
@@ -240,4 +269,5 @@ crontab -u username -r
 | | | | +—- day of week (values: 0 - 6) (Sunday=0 or 7) (special characters: , - * / L W C) <br>
 | | | | |*****command to be executed
 </pre>
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

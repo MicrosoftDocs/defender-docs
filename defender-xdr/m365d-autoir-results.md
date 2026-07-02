@@ -1,16 +1,11 @@
 ---
 title: Details and results of an automated investigation
 description: View the results and key findings of automated investigation in Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-- NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/28/2025
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -82,7 +77,7 @@ Use the incident page to view detailed information about an incident, including 
 
 Use the investigation details view to see past, current, and pending activity pertaining to an investigation. Here's an example.
 
-:::image type="content" source="/defender/media/mtp-air-investdetails.png" alt-text="The investigation details page in the Microsoft Defender portal" lightbox="/defender/media/mtp-air-investdetails.png":::
+:::image type="content" source="media/m365d-autoir-results/mtp-air-investdetails.png" alt-text="The investigation details page in the Microsoft Defender portal" lightbox="media/m365d-autoir-results/mtp-air-investdetails.png":::
 
 In the Investigation details view, you can see information on the **Investigation graph**, **Alerts**, **Mailboxes**, **Devices**, **Users**, **Evidence**, **Entities**, **Log**, and **Pending actions** tabs, described in the following table.
 

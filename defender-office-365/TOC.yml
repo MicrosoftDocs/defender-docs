@@ -6,11 +6,12 @@
      items:
        - name: Microsoft Defender for Office 365 overview
          href: mdo-about.md
-       - name: Exchange Online Protection overview
+       - name: Overview of the built-in security features for all cloud mailboxes
          href: eop-about.md
        - name: What's new in Defender for Office 365
          href: defender-for-office-365-whats-new.md
-
+       - name: Microsoft Defender for Office 365 for US Government customers
+         href: mdo-gov.md
    - name: Get started
      items:
      - name: Get started with Microsoft Defender for Office 365
@@ -23,7 +24,7 @@
        href: secure-by-default.md
      - name: Zero Trust for Defender for Office 365
        href: zero-trust-with-microsoft-365-defender-office-365.md
-     - name: Mail flow in EOP
+     - name: Mail flow in cloud organizations
        href: mail-flow-about.md
      - name: Defender for Office 365 in Microsoft Teams
        href: mdo-support-teams-about.md
@@ -40,7 +41,7 @@
        href: trial-user-guide-defender-for-office-365.md
 
    - name: Deploy
-     items: 
+     items:
      - name: Pilot and deploy Defender for Office 365
        href: /defender-xdr/pilot-deploy-defender-office-365?toc=/defender-office-365/TOC.json&bc=/defender-office-365/breadcrumb/toc.json
      - name: Get started with Microsoft Defender for Office 365
@@ -57,12 +58,16 @@
          href: email-authentication-dmarc-configure.md
        - name: Configure trusted ARC sealers
          href: email-authentication-arc-configure.md
-     - name: Step 2 - Configure protection policies
+       - name: Troubleshoot email authentication
+         href: email-authentication-troubleshoot.md
+     - name: Step 2 - Configure threat policies
        items:
        - name: Preset security policies
          href: preset-security-policies.md
-       - name: Recommended settings for configuring EOP and Defender for Office 365 Security
+       - name: Recommended email and collaboration threat policy settings for cloud organizations
          href: recommended-settings-for-eop-and-office365.md
+       - name: Quickly configure Microsoft Teams protection
+         href: mdo-support-teams-quick-configure.md
      - name: Step 3 - Assign permissions
        items:
        - name: Defender for Office 365 permissions
@@ -101,9 +106,6 @@
        items:
        - name: Defender for Office 365 SecOps guide
          href: mdo-sec-ops-guide.md
-     - name: Quickly configure Microsoft Teams protection
-       href: mdo-support-teams-quick-configure.md
-
    - name: Migrate
      items:
        - name: Migrate to Defender for Office 365
@@ -121,21 +123,23 @@
          href: mdo-sec-ops-guide.md
        - name: SecOps guide for Teams protection in Defender for Office 365
          href: mdo-support-teams-sec-ops-guide.md
+       - name: SecOps guide for email authentication in Microsoft 365
+         href: email-auth-sec-ops-guide.md
        - name: Threat classification
          href: mdo-threat-classification.md
        - name: Security recommendations for priority accounts
          href: priority-accounts-security-recommendations.md
        - name: Usage card in Defender for Office 365
          href: mdo-usage-card-about.md
-       - name: Protection policies
+       - name: Threat policies
          items:
          - name: Preset security policies
            href: preset-security-policies.md
-         - name: Recommended settings for configuring EOP and Defender for Office 365 Security
+         - name: Recommended email and collaboration threat policy settings for cloud organizations
            href: recommended-settings-for-eop-and-office365.md
-         - name: Configuration analyzer for protection policies
+         - name: Configuration analyzer for threat policies
            href: configuration-analyzer-for-security-policies.md
-         - name: Anti-malware in EOP
+         - name: Anti-malware in cloud organizations
            items:
            - name: Anti-malware protection
              href: anti-malware-protection-about.md
@@ -145,25 +149,27 @@
              href: anti-malware-protection-faq.yml
            - name: Zero-hour auto purge (ZAP)
              href: zero-hour-auto-purge.md
-           - name: Virus detection in SharePoint Online
+           - name: Virus detection in SharePoint
              href: anti-malware-protection-for-spo-odfb-teams-about.md
-         - name: Anti-spam in EOP
+         - name: Anti-spam in cloud organizations
            items:
            - name: Anti-spam protection
              href: anti-spam-protection-about.md
            - name: Configure anti-spam policies
              href: anti-spam-policies-configure.md
+           - name: Troubleshoot anti-spam policy issues
+             href: anti-spam-policies-troubleshooting.md
            - name: Advanced Spam Filter (ASF) settings
              href: anti-spam-policies-asf-settings-about.md
            - name: What's the difference between junk email and bulk email?
              href: anti-spam-spam-vs-bulk-about.md
            - name: Spam confidence level (SCL)
              href: anti-spam-spam-confidence-level-scl-about.md
-           - name: Bulk complaint level (BCL)
+           - name: Bulk email detection and bulk complaint level (BCL)
              href: anti-spam-bulk-complaint-level-bcl-about.md
            - name: Bulk senders insight
              href: anti-spam-bulk-senders-insight.md
-           - name: Backscatter in EOP
+           - name: Backscatter messages cloud organizations
              href: anti-spam-backscatter-about.md
            - name: Configure junk email settings on Exchange Online mailboxes
              href: configure-junk-email-settings-on-exo-mailboxes.md
@@ -171,15 +177,15 @@
              href: anti-spam-protection-faq.yml
            - name: Zero-hour auto purge (ZAP)
              href: zero-hour-auto-purge.md
-           - name: Configure EOP to deliver spam to Junk Email folders in on-premises Exchange
+           - name: Deliver cloud-detected spam to the Junk Email folder in on-premises mailboxes
              href: /exchange/standalone-eop/configure-eop-spam-protection-hybrid
-         - name: Anti-phishing in EOP and Defender for Office 365
+         - name: Anti-phishing for all cloud mailboxes and Defender for Office 365
            items:
            - name: Anti-phishing protection
              href: anti-phishing-protection-about.md
            - name: Anti-phishing policies
              href: anti-phishing-policies-about.md
-           - name: Configure anti-phishing policies in EOP
+           - name: Configure anti-phishing policies for all cloud mailboxes
              href: anti-phishing-policies-eop-configure.md
            - name: Configure anti-phishing policies in Defender for Office 365
              href: anti-phishing-policies-mdo-configure.md
@@ -187,7 +193,7 @@
              href: anti-phishing-protection-spoofing-about.md
            - name: Anti-spoofing protection FAQ
              href: anti-phishing-protection-spoofing-faq.yml
-           - name: How EOP validates the From address
+           - name: How Microsoft 365 validates the From address
              href: anti-phishing-from-email-address-validation.md
            - name: Tune anti-phishing protection
              href: anti-phishing-protection-tuning.md
@@ -211,7 +217,7 @@
              href: safe-links-about.md
            - name: Set up Safe Links policies in Defender for Office 365
              href: safe-links-policies-configure.md
-         - name: Outbound spam protection in EOP
+         - name: Outbound spam protection in cloud organizations
            items:
            - name: Outbound spam protection
              href: outbound-spam-protection-about.md
@@ -223,7 +229,9 @@
              href: outbound-spam-high-risk-delivery-pool-about.md
            - name: Restore restricted users
              href: outbound-spam-restore-restricted-users.md
-         - name: Connection filtering in EOP
+           - name: Troubleshoot outbound sending limits
+             href: outbound-spam-sending-limits-troubleshoot.md
+         - name: Connection filtering in cloud organizations
            items:
            - name: Configure the connection filtering policy
              href: connection-filter-policies-configure.md
@@ -253,6 +261,8 @@
              href: tenant-allow-block-list-urls-configure.md
            - name: Allow or block IPv6 addresses using the Tenant Allow/Block List
              href: tenant-allow-block-list-ip-addresses-configure.md
+           - name: Block domains in Microsoft Teams using the Tenant Allow/Block List
+             href: tenant-allow-block-list-teams-domains-configure.md
          - name: Admin submissions
            href: submissions-admin.md
          - name: Create block sender lists
@@ -287,8 +297,6 @@
            href: attack-simulation-training-settings.md
          - name: Attack simulation training deployment considerations and FAQ
            href: attack-simulation-training-faq.md
-         - name: Microsoft Teams in Attack simulation training
-           href: attack-simulation-training-teams.md
        - name: Connectors for mail flow
          items:
          - name: Configure mail flow using connectors
@@ -355,10 +363,10 @@
            href: reports-email-security.md
          - name: Defender for Office 365 reports
            href: reports-defender-for-office-365.md
-       - name: Safe Documents in Microsoft 365 A5 or E5 Security
-         items:
-         - name: Safe Documents in A5 or E5 Security
-           href: safe-documents-in-e5-plus-security-about.md
+         - name: Defender for Office 365 Overview dashboard
+           href: reports-mdo-email-collaboration-dashboard.md
+       - name: Safe Documents in Microsoft 365 A5/E5/G5 or Microsoft Defender Suite
+         href: safe-documents-in-e5-plus-security-about.md
 
    - name: Investigate and Respond
      items:
@@ -376,11 +384,11 @@
          href: campaigns.md
        - name: Report suspicious messages and files
          items:
-         - name: Report suspicious email or files to Microsoft
+         - name: Report suspicious email, Teams messages, or files to Microsoft
            href: submissions-report-messages-files-to-microsoft.md
          - name: Admin submissions
            href: submissions-admin.md
-         - name: Enable the Report Message and Report Phishing add-ins
+         - name: Transition from the Report Message and Report Phishing add-ins
            href: submissions-users-report-message-add-in-configure.md
          - name: Report phishing and suspicious emails in Outlook for admins
            href: submissions-outlook-report-messages.md
@@ -471,7 +479,7 @@
               href: air-auto-remediation.md
          - name: Detect and address compromised user accounts in AIR
            href: address-compromised-users-quickly.md
-         - name: Integrate AIR with a custom solution or third-party solution
+         - name: Integrate AIR with a custom solution or non-Microsoft solution
            href: air-custom-reporting.md
          - name: Email analysis in investigations
            href: email-analysis-investigations.md
@@ -490,6 +498,8 @@
        href: mdo-data-retention.md
      - name: Privacy in Defender for Office 365
        href: mdo-privacy.md
+     - name: Defender for Office 365 ICES Vendor Ecosystem integration guide
+       href: mdo-ices-vendor-ecosystem.md
      - name: External email senders - Microsoft 365 resources
        items:
        - name: Microsoft 365 services for external email senders
@@ -538,7 +548,7 @@
           href: step-by-step-guides/connect-microsoft-defender-for-office-365-to-microsoft-sentinel.md
         - name: How to enable DMARC Reporting for Microsoft Online Email Routing Address (MOERA) and parked Domains
           href: step-by-step-guides/how-to-enable-dmarc-reporting-for-microsoft-online-email-routing-address-moera-and-parked-domains.md
-        - name: Use Microsoft Defender for Office 365 in SharePoint Online
+        - name: Use Microsoft Defender for Office 365 in SharePoint
           href: step-by-step-guides/utilize-microsoft-defender-for-office-365-in-sharepoint-online.md
         - name: Tune bulk email filtering
           href: step-by-step-guides/tune-bulk-mail-filtering-walkthrough.md
@@ -554,14 +564,14 @@
           href: step-by-step-guides/how-to-run-attack-simulations-for-your-team.md
         - name: How to setup automated attacks and training within Attack simulation training
           href: step-by-step-guides/how-to-setup-attack-simulation-training-for-automated-attacks-and-training.md
-        - name: Optimize and correct security policies with configuration analyzer
+        - name: Optimize and correct threat policies with configuration analyzer
           href: step-by-step-guides/optimize-and-correct-security-policies-with-configuration-analyzer.md
-        - name: Protect your c-suite with priority account protection
-          href: step-by-step-guides/protect-your-c-suite-with-priority-account-protection.md
         - name: Search for emails and remediate threats using Threat Explorer in Microsoft Defender XDR
           href: step-by-step-guides/search-for-emails-and-remediate-threats.md
         - name: How to prioritize and manage Automated Investigations and Response (AIR)
           href: step-by-step-guides/how-to-prioritize-and-manage-automated-investigations-and-response-air.md
+        - name: Add Advanced Hunting community queries to Microsoft Defender XDR and Microsoft Sentinel
+          href: step-by-step-guides/add-advanced-hunting-community-queries.md
       - name: Diagnose
         items:
         - name: Understanding overrides within the email entity page in Microsoft Defender

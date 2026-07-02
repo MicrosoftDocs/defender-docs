@@ -4,15 +4,14 @@ description: Get to the key training resources for quick ramp-up of your securit
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
   - m365-security
   - tier3
-ms.topic: conceptual
+ms.topic: concept-article
 search.appverid: 
   - MOE150
   - MET150

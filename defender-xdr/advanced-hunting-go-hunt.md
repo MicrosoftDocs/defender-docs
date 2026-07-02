@@ -1,48 +1,47 @@
 ---
 title: Get relevant info about an entity with go hunt
-description: Learn how to use the go hunt tool on to quickly query for relevant information about an entity or event using advanced hunting.
-search.appverid: met150
+description: Use the go hunt action in Microsoft Defender XDR to automatically run advanced hunting queries for selected events and entities during investigations.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier1
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
-ms.topic: conceptual
-ms.date: 04/22/2024
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
+ms.topic: how-to
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Quickly hunt for entity or event information with go hunt
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
 
-With the *go hunt* action, you can quickly investigate events and various entity types using powerful query-based [advanced hunting](advanced-hunting-overview.md) capabilities. This action automatically runs an advanced hunting query to find relevant information about the selected event or entity.
 
-The *go hunt* action is available in various sections of Microsoft Defender XDR. This action is available to view once event or entity details are displayed. For example, you can use the *go hunt* option from the following sections:
+With the *go hunt* action, you can quickly investigate events and various entity types using powerful query-based [advanced hunting](advanced-hunting-overview.md) capabilities. The *go hunt* action automatically runs an advanced hunting query to find relevant information about the selected event or entity.
 
-- In the [incident page](investigate-incidents.md#summary), you can review details about users, devices, and many other entities associated with an incident. As you select an entity, you get additional information and the various actions you could take on that entity. In the example below, a mailbox is selected, showing details about the mailbox and the option to hunt for more information about the mailbox.
+The *go hunt* action is available in various sections of Microsoft Defender XDR. The *go hunt* action appears once event or entity details are displayed. For example, you can use the *go hunt* option from the following sections:
 
-    :::image type="content" source="/defender/media/go-hunt-1-incident.png" alt-text="The Mailboxes page with the Go hunt option in the Microsoft Defender portal " lightbox="/defender/media/go-hunt-1-incident.png":::
+- In the [incident summary page](investigate-incidents.md#summary), you can review details about users, devices, and many other entities associated with an incident. As you select an entity, you get additional information and the various actions you could take on that entity. In the example below, a mailbox is selected, showing details about the mailbox and the option to hunt for more information about the mailbox.
+
+    :::image type="content" source="media/advanced-hunting-go-hunt/go-hunt-1-incident.png" alt-text="The Mailboxes page with the Go hunt option in the Microsoft Defender portal " lightbox="media/advanced-hunting-go-hunt/go-hunt-1-incident.png":::
 
 - In the incident page, you can also access a list of entities under the **Evidence** tab. Selecting one of those entities provides an option to quickly hunt for information about that entity.
 
-    :::image type="content" source="/defender/media/go-hunt-2-entity.png" alt-text="The Go hunt option for a piece of evidence in the Incident page in Microsoft Defender portal" lightbox="/defender/media/go-hunt-2-entity.png":::
+    :::image type="content" source="media/advanced-hunting-go-hunt/go-hunt-2-entity.png" alt-text="The Go hunt option for a piece of evidence in the Incident page in Microsoft Defender portal" lightbox="media/advanced-hunting-go-hunt/go-hunt-2-entity.png":::
 
 - When viewing the timeline for a device, you can select an event in the timeline to view additional information about that event. Once an event is selected, you get the option to hunt for other relevant events in advanced hunting.
 
-    :::image type="content" source="/defender/media/go-hunt-3-event.png" alt-text="The Hunt for related events option on an event's page in the Timelines tab in Microsoft Defender portal" lightbox="/defender/media/go-hunt-3-event.png":::
+    :::image type="content" source="media/advanced-hunting-go-hunt/go-hunt-3-event.png" alt-text="The Hunt for related events option on an event's page in the Timelines tab in Microsoft Defender portal" lightbox="media/advanced-hunting-go-hunt/go-hunt-3-event.png":::
 
 Selecting **Go hunt** or **Hunt for related events** passes different queries, depending on whether you've selected an entity or an event.
 
@@ -96,9 +95,10 @@ search in (DeviceFileEvents, DeviceProcessEvents, DeviceEvents, DeviceRegistryEv
 | project-reorder Relevance
 ```
 
-## Adjust the query
+<a name="adjust-the-query"></a>
+## Adjust the generated hunt query
 
-With some knowledge of the [query language](advanced-hunting-query-language.md), you can adjust the query to your preference. For example, you can adjust this line, which determines the size of the time window:
+With some knowledge of the [advanced hunting query language](advanced-hunting-query-language.md), you can adjust the query to your preference. For example, you can adjust the `Timestamp between` line, which determines the size of the time window:
 
 ```kusto
 Timestamp between ((selectedTimestamp - 1h) .. (selectedTimestamp + 1h))
@@ -112,7 +112,8 @@ In addition to modifying the query to get more relevant results, you can also:
 > [!NOTE]
 > Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)

@@ -1,14 +1,11 @@
 ---
 title: Microsoft Defender for Endpoint Controlled folder access (CFA) demonstration test tool
 description: See how malicious apps and threats are evaluated and countered by Microsoft Defender Antivirus.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
 ms.reviewer: yongrhee
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -16,14 +13,13 @@ ms.collection:
 ms.topic: article
 ms.subservice: asr
 ms.date: 03/10/2025
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Controlled folder access (CFA) demonstration test tool (block script)
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Controlled Folder Access helps you protect valuable data from malicious apps and threats, such as ransomware. All apps (any executable file, including .exe, .scr, .dll files and others) are assessed by Microsoft Defender Antivirus, which then determines if the app is malicious or safe. If the app is determined to be malicious or suspicious, then it will not be allowed to make changes to any files in any protected folder.
 
@@ -71,13 +67,13 @@ You can perform these manual steps instead:
   Set-MpPreference -EnableControlledFolderAccess Enabled
   ```
 
-2. Download the CFA [test tool](https://demo.wd.microsoft.com/Content/CFAtool.exe)
-3. Execute the PowerShell commands above
+1. Download the CFA [test tool](https://demo.wd.microsoft.com/Content/CFAtool.exe)
+1. Execute the PowerShell commands above
 
 ## Scenario: Use the CFA test tool to simulate an untrusted process writing to a protected folder
 
 1. Launch CFA test tool
-2. Select the desired folder and create file
+1. Select the desired folder and create file
 - You can find more information [here](evaluate-controlled-folder-access.md).
 
 ## Clean-up
@@ -90,4 +86,5 @@ Set-MpPreference -EnableControlledFolderAccess Disabled
 
 ## See also
 [Controlled folder access](/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

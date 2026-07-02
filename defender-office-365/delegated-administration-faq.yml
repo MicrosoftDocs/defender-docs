@@ -3,9 +3,8 @@ metadata:
   title: Delegated administration FAQ
   f1.keywords:
     - NOCSH
-  ms.author: chrisda
   author: chrisda
-  manager: deniseb
+  ms.author: chrisd
   ms.date: 6/22/2023
   audience: ITPro
   ms.topic: faq
@@ -19,11 +18,11 @@ metadata:
   description: Admins can view frequently asked questions and answers about delegated administration tasks in Microsoft 365 for Microsoft partners and resellers.
   ms.service: defender-office-365
 
-title: Delegated administration FAQ
+title: Frequently asked questions - Delegated administration
 summary: |
   [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-  This article provides frequently asked questions and answers about delegated administration tasks in Microsoft 365 for Microsoft partners and resellers. Delegated administration includes the ability to manage Exchange Online Protection (EOP) settings for other tenants (companies).
+  This article provides frequently asked questions and answers about delegated administration tasks in Microsoft 365 for Microsoft partners and resellers. Delegated administration includes the ability to manage the built-in security features for all cloud mailboxes in other tenants (companies).
 
 sections:
   - name: Ignored
@@ -39,7 +38,7 @@ sections:
       - question: |
           I'm a customer, not a reseller. How can I set up delegated administrator for my subtenants?
         answer: |
-          Delegated administration is only available for resellers and partners. However, there's a sample PowerShell script to help you apply policies to your subtenants (companies). For more information, see [Sample script for applying EOP settings to multiple tenants](/exchange/standalone-eop/sample-script-standalone-eop-settings-to-multiple-tenants).
+          Delegated administration is only available for resellers and partners. However, there's a sample PowerShell script to help you view policies in your subtenants (companies). For more information, see [Sample script to view Built-in security add-on for on-premises mailboxes settings for multiple on-premises organizations](/exchange/standalone-eop/sample-script-standalone-eop-settings-to-multiple-tenants).
 
       - question: |
           Can I prevent my subtenant admin from modifying my policy?

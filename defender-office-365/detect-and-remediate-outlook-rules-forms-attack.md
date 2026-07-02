@@ -1,24 +1,20 @@
 ---
 title: Detect and remediate the Outlook rules and custom forms injections attacks.
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: deniseb
 ms.date: 9/7/2023
-audience: ITPro
-ms.topic: conceptual
+ms.topic: how-to
 ms.collection:
   - tier2
   - m365-security
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 description: Learn how to recognize and remediate the Outlook rules and custom forms injections attacks in Office 365
-ms.custom: seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -123,7 +119,7 @@ The simplest way to verify a rules or custom forms attack is to run the [Get-All
 You need to be a member of the Global Administrator<sup>\*</sup> role in [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal) or the Organization Management role group in [Exchange Online](/exchange/permissions-exo/permissions-exo), because the script connects to every mailbox in the organization to read rules and forms.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 1. Use an account with local administrator rights to sign in to the computer where you intend to run the script.
 
@@ -194,7 +190,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
     Get-InboxRule -Mailbox laura@contoso.onmicrosoft.com -Identity "Suspicious Rule Name" | Format-List
     ```
 
-  For detailed syntax and parameter information, see [Get-InboxRule](/powershell/module/exchange/get-inboxrule).
+  For detailed syntax and parameter information, see [Get-InboxRule](/powershell/module/exchangepowershell/get-inboxrule).
 
 - **Remove Inbox rules from a mailbox**:
 
@@ -210,7 +206,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
     Get-InboxRule -Mailbox laura@contoso.onmicrosoft.com | Remove-InboxRule
     ```
 
-  For detailed syntax and parameter information, see [Remove-InboxRule](/powershell/module/exchange/remove-inboxrule).
+  For detailed syntax and parameter information, see [Remove-InboxRule](/powershell/module/exchangepowershell/remove-inboxrule).
 
 - **Turn off an Inbox rule for further investigation**:
 
@@ -218,7 +214,7 @@ After you connect to the required Exchange PowerShell environment, you can take 
   Disable-InboxRule -Mailbox laura@contoso.onmicrosoft.com -Identity "Suspicious Rule Name"
   ```
 
-  For detailed syntax and parameter information, see [Disable-InboxRule](/powershell/module/exchange/disable-inboxrule).
+  For detailed syntax and parameter information, see [Disable-InboxRule](/powershell/module/exchangepowershell/disable-inboxrule).
 
 ## How to minimize future attacks
 
@@ -228,7 +224,7 @@ The Rules and Forms exploits are only used by an attacker after they've stolen o
 
 The best way to protect user accounts (especially admin accounts) is to [set up MFA for users](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication). You should also:
 
-- Monitor how user accounts are [accessed and used](/entra/identity/monitoring-health/overview-monitoring-health). You may not prevent the initial breach, but you can shorten the duration and the effects of the breach by detecting it sooner. You can use these [Office 365 Cloud App Security policies](/cloud-app-security/what-is-cloud-app-security) to monitor accounts and alert you to unusual activity:
+- Monitor how user accounts are [accessed and used](/entra/identity/monitoring-health/overview-monitoring-health). You may not prevent the initial breach, but you can shorten the duration and the effects of the breach by detecting it sooner. You can use these [Office 365 Cloud App Security policies](/defender-cloud-apps/what-is-defender-for-cloud-apps) to monitor accounts and alert you to unusual activity:
 
   - **Multiple failed login attempts**: Triggers an alert when users perform multiple failed sign in activities in a single session with respect to the learned baseline, which could indicate an attempted breach.
 
@@ -269,9 +265,9 @@ Look for the key `EnableUnsafeClientMailRules`:
 
 Customers with on-premises Exchange installations should consider blocking older versions of Outlook that don't have patches available. Details on this process can be found in the article [Configure Outlook client blocking](/exchange/configure-outlook-client-blocking-exchange-2013-help).
 
-## See also:
+## See also
 
-- [Malicious Outlook Rules](https://silentbreaksecurity.com/malicious-outlook-rules/) by SilentBreak Security Post about Rules Vector provides a detailed review of how the Outlook Rules.
+- [Malicious Outlook Rules](https://www.netspi.com/blog/technical/adversary-simulation/malicious-outlook-rules/) by SilentBreak Security Post about Rules Vector provides a detailed review of how the Outlook Rules.
 - [MAPI over HTTP and Mailrule Pwnage](https://sensepost.com/blog/2016/mapi-over-http-and-mailrule-pwnage/) on the Sensepost blog about Mailrule Pwnage discusses a tool called Ruler that lets you exploit mailboxes through Outlook rules.
 - [Outlook forms and shells](https://sensepost.com/blog/2017/outlook-forms-and-shells/) on the Sensepost blog about Forms Threat Vector.
 - [Ruler Codebase](https://github.com/sensepost/ruler)

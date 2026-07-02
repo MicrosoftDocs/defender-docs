@@ -2,11 +2,9 @@
 title: Onboard devices to Microsoft Defender for Endpoint
 description: Learn how to onboard endpoints to Microsoft Defender for Endpoint service.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -14,24 +12,19 @@ ms.collection:
   - m365-initiative-defender-endpoint
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 05/08/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender Vulnerability Management
 
+---
 # Onboard devices to Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+[!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## Onboard devices using any of the supported management tools
 
@@ -41,15 +34,15 @@ If you're onboarding devices in the Microsoft Defender portal, follow these step
 
 1. Make sure to review the [Minimum requirements for Defender for Endpoint](minimum-requirements.md).
 
-2. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Endpoints**, and then, under **Device management**, select **Onboarding**.
 
    :::image type="content" source="media/mde-device-onboarding-ui.png" alt-text="Screenshot showing device onboarding in the Microsoft Defender portal for Defender for Endpoint.":::
 
-3. Under **Select operating system to start onboarding process**, select the operating system for the device.
+1. Under **Select operating system to start onboarding process**, select the operating system for the device.
 
-4. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](/defender-endpoint/configure-device-connectivity#prerequisites).)
+1. Under **Connectivity type**, select either **Streamlined** or **Standard**. (See [prerequisites for streamlined connectivity](configure-device-connectivity.md#prerequisites).)
 
-5. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, as appropriate). For more information, see the following articles:
+1. Under **Deployment method**, select an option. Then download the onboarding package (and installation package, as appropriate). For more information, see the following articles:
 
    - [Onboard client devices running Windows or macOS to Microsoft Defender for Endpoint](onboard-client.md)
    - [Onboard servers through Microsoft Defender for Endpoint's onboarding experience](onboard-server.md)
@@ -71,7 +64,7 @@ This table provides an example of the deployment rings you might use:
 |Deployment ring|Description|
 |---|---|
 |Evaluate|Ring 1: Identify 50 devices to onboard to the service for testing.|
-|Pilot|Ring 2: Identify and onboard the next 50-100 endpoints in a production environment. Microsoft Defender for Endpoint supports various endpoints that you can onboard to the service, for more information, see [Select deployment method](deployment-strategy.md#step-2-select-your-deployment-method).|
+|Pilot|Ring 2: Identify and onboard the next 50-100 endpoints in a production environment. Microsoft Defender for Endpoint supports various endpoints that you can onboard to the service. For more information, see [Select deployment method](deployment-strategy.md#step-2-select-your-deployment-method).|
 |Full deployment|Ring 3: Roll out service to the rest of environment in larger increments. For more information, see [Get started with your Microsoft Defender for Endpoint deployment](mde-planning-guide.md).
 
 ### Exit criteria
@@ -118,7 +111,7 @@ To provide some guidance on your deployments, in this section we guide you throu
 The tools in the example deployments are:
 
 - [Onboarding using Microsoft Configuration Manager](onboarding-endpoint-configuration-manager.md)
-- [Onboarding using Microsoft Intune](onboarding-endpoint-manager.md)
+- [Deploy endpoint detection and response policy with Intune](/intune/device-configuration/endpoint-security/deploy-edr).
 
 For some additional information and guidance, check out the [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)  or  [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx) to see the various paths for deploying Defender for Endpoint.
 
@@ -130,4 +123,5 @@ After onboarding the endpoints move on to the next step where you'll configure t
 
 - [Step 5 - Configure capabilities](onboard-configure.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

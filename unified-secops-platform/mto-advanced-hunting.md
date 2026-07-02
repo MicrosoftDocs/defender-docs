@@ -1,39 +1,32 @@
 ---
 title: Advanced hunting in Microsoft Defender multitenant management
 description: Learn about advanced hunting in Microsoft Defender multitenant management
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: deniseb
-author: denisebmsft
-ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
+author: poliveria
+ms.author: pauloliveria
 ms.collection: 
 - m365-security
 - highpri
 - tier1
 - usx-security
-ms.topic: conceptual
-ms.date: 05/02/2025
+ms.topic: article
+ms.date: 10/28/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # Advanced hunting in Microsoft Defender multitenant management
 
 Advanced hunting in Microsoft Defender multitenant management allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants and workspaces at the same time. If you have multiple tenants with Microsoft Sentinel workspaces onboarded to the Microsoft Defender portal, search for security information and event management (SIEM) data together with extended detection and response (XDR) data across multiple tenants and workspaces.
- 
 
 Multiple workspaces per tenant are supported in multitenant Advanced hunting as preview.
-
 
 ## Quotas
 
 In multitenant environments, advanced hunting queries can return a maximum of 50,000 records in total. The result set from each individual tenant is capped at 50,000 divided by the number of tenants queried. 
 
 For more information about service limits in advanced hunting, read [Understand advanced hunting quotas](/defender-xdr/advanced-hunting-limits#understand-advanced-hunting-quotas-and-usage-parameters).
-
 
 ## Run cross-tenant queries
 
@@ -49,6 +42,8 @@ You can run any query that you already have access to in the multitenant managem
 
    :::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query side pane scope" lightbox="media/mto-advanced-hunting/mto-cross-tenants-sidepane.png":::
 
+    When you select multiple tenants, the query runs independently in each tenant, and the combined results are displayed in a single table. For example, the sample query below (`DeviceEvents | take 10`) returns 10 results per tenant, resulting in a total equal to 10 multiplied by the number of tenants selected.
+      
 1. When you're done, select **Apply** > **Run query**.
 
    :::image type="content" source="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png" alt-text="Screenshot of the Microsoft Defender XDR ross tenants advanced hunting query scope column" lightbox="media/mto-advanced-hunting/mto-cross-tenants-query-tenant-id.png":::
@@ -59,18 +54,18 @@ You can run any query that you already have access to in the multitenant managem
    DeviceEvents
    | take 10
    | project TenantId = WorkspaceID
-
+   ```
+   
    Or, to query multiple workspaces in the same tenant, use a query similar to the following:
-
+   
    ```kusto
    Usage
    | union workspace("WorkpaceA").Usage
    | take 10
    ```
 
-
-> [!NOTE]
-> If you have tables with the same name but different schemas in multiple workspaces and want to use them in the same query, you should use the workspace operator to uniquely identify the table that you need.
+>[!IMPORTANT]
+> Running queries across multiple tenants using the `adx(x)` operator will run separate ADX queries per tenant and aggregate them, which might return duplicate results. Use the `adx(x)` operator with multiple tenants only if you need to join tenant results with ADX data. For more information about ADX in Advanced hunting, see [Use Microsoft Sentinel functions, saved queries, and custom rules](/defender-xdr/advanced-hunting-defender-use-custom-rules#use-adx-operator-for-azure-data-explorer-queries).
 
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
@@ -83,7 +78,7 @@ If you're using [Azure Lighthouse](/azure/lighthouse/overview) to grant your ten
 - **TenantA**: *WorkspaceA1*, *WorkspaceA2*
 - **TenantB**: *WorkspaceB1*, *WorkspaceB2*
 
-And you want to query across both *WorkspaceA1* and *WorkspaceB1*, select **TenantA** and **WorkspaceA1** in the **Tenant scope** selector. Then in your query, use the `workspace()` operator to call *WorkspaceB2*. For example:
+And if you want to query across both *WorkspaceA1* and *WorkspaceB1*, select **TenantA** and **WorkspaceA1** in the **Tenant scope** selector. Then in your query, use the `workspace()` operator to call *WorkspaceB2*. For example:
 
 ```kusto 
 union workspace("WorkspaceB2").Usage, Usage
@@ -100,15 +95,13 @@ For more information, see [Query multiple workspaces](/azure/sentinel/extend-sen
 
 ## View schema tables
 
-You can view the [advanced hunting schema tables](/defender-xdr/advanced-hunting-schema-tables) in the left pane inside the advanced hunting page under the **Schema** tab. 
+View the [advanced hunting schema tables](/defender-xdr/advanced-hunting-schema-tables) in the left pane inside the advanced hunting page under the **Schema** tab. 
 
 The schema list is a unified view of all tables from all your tenants regardless of the tenant selected in the upper right tenant selector.
 
 This could mean that some tables that appear here might only be available for query in some tenants, like custom Microsoft Sentinel tables.
 
-
 ## View and manage custom detection rules
-
 
 You can also manage custom detection rules from multiple tenants in the custom detection rules page.
 
@@ -137,11 +130,6 @@ To manage detection rules:
    :::image type="content" source="media/mto-advanced-hunting/custom-detection-rule-details.png" alt-text="Screenshot of the Microsoft Defender XDR custom detection rule details page" lightbox="media/mto-advanced-hunting/custom-detection-rule-details.png":::
 
 1. Select **Open detection rules** to view this rule in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com). To learn more, see [Custom detection rules](/defender-xdr/custom-detection-rules).
-
-
-
-
-
 
 ## Related content
 

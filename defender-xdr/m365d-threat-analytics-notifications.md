@@ -3,30 +3,26 @@ title: Get email notifications for Threat analytics updates
 ms.reviewer: 
 description: Set up email notifications to get notified of new Threat analytics reports in Microsoft Defender XDR.
 ms.service: defender-xdr
-f1.keywords:
-- NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security 
 - m365initiative-m365-defender 
 - tier1
-ms.topic: conceptual
-ms.custom: seo-marvel-apr2020
-search.appverid: met150
-ms.date: 01/17/2025
+ms.topic: how-to
+ms.custom: seo-marvel-apr2020, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 appliesto:
 - Microsoft Defender XDR
+ai-usage: ai-assisted
 ---
 
-# Get email notifications for Threat analytics updates
+# Get email notifications for Threat analytics updates in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-You can set up email notifications that send you updates on [threat analytics](threat-analytics.md) reports.
+You can set up email notifications that send you updates on [threat analytics](threat-analytics.md) reports. These notifications alert security administrators and analysts when new threat analytics reports are published or existing reports are updated in Microsoft Defender XDR. This article walks you through creating a notification rule, choosing which report types or tags to track, and adding recipients.
 
 ## Set up email notifications for report updates
 
@@ -41,23 +37,23 @@ To set up email notifications for threat analytics reports, perform the followin
    > [!NOTE]
    > The name and description fields for a new notification rule only accept English letters and numbers. Punctuations like spaces, dashes, underscores, aren't supported.
 
-   ![Screenshot of the naming screen, with all fields filled out and the "Turn rule on" checkbox checked](/defender/media/threat-analytics/ta_create_notification_2.png)
+   ![Screenshot of the notification rule naming step with rule details entered and the rule enabled](media/m365d-threat-analytics-notifications/ta_create_notification_2.png)
 
 4. Choose the reports you want to be notified about. You can choose to be updated about all newly published or updated reports or only those reports of a certain type or with a specific tag.
 
-   ![Screenshot of the notification screen, with Ransomware tags selected and a drop down menu for types open](/defender/media/threat-analytics/ta_create_notification_3.png)
+   ![Screenshot of the notification configuration step with Ransomware tags selected and notification types available for selection](media/m365d-threat-analytics-notifications/ta_create_notification_3.png)
 
 5. Add at least one recipient to receive the notification emails. You can also use this screen to send a test email to check the notification settings.
 
-   ![Screenshot of the recipients screen. There are 3 recipients listed, and a test email has been sent, as indicated by a green checkmark](/defender/media/threat-analytics/ta_create_notification_4.png)
+   ![Screenshot of the recipients step showing three recipients and confirmation that a test email was sent](media/m365d-threat-analytics-notifications/ta_create_notification_4.png)
 
 6. Review your new rule. Select **Edit** at the end of each subsection to change any of the settings. Once your review is complete, select **Create rule**.
 
-   ![Screenshot of the review screen. An edit button is highlighted in red](/defender/media/threat-analytics/ta_create_notification_5.png)
+   ![Screenshot of the review step showing the option to edit the notification rule before creation](media/m365d-threat-analytics-notifications/ta_create_notification_5.png)
 
 7. Select **Done** to complete the process and close the flyout. 
 
-   ![Screenshot of the rule created screen. A successfully created rule will display green checkmarks along the sidebar, and a big green check in the main area of the screen](/defender/media/threat-analytics/ta_create_notification_6.png)
+   ![Screenshot of the rule created screen showing green checkmarks along the sidebar and a green check in the main area](media/m365d-threat-analytics-notifications/ta_create_notification_6.png)
 
 Your new rule now appears in the list of Threat analytics email notifications.
 

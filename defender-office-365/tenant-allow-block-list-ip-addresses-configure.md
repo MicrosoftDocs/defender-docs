@@ -1,43 +1,39 @@
 ---
 title: Allow or block IPv6 addresses using the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
-ms.author: chrisda
 author: chrisda
-manager: deniseb
-audience: ITPro
+ms.author: chrisda
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier1
 description: Admins can learn how to allow or block IPv6 addresses in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 02/26/2025
+ms.date: 01/26/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Allow or block IPv6 addresses using the Tenant Allow/Block List
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, admins can create and manage entries for IPv6 addresses in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
+In all organizations with cloud mailboxes, admins can create and manage entries for IPv6 addresses in the Tenant Allow/Block List. For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
 This article describes how admins can manage entries for IPv6 addresses in the Microsoft Defender portal and in Exchange Online PowerShell.
 
 > [!NOTE]
-> IPv4 ranges aren't supported yet. Admins can create and manage entries for IPv4 addresses in the [Connection filter policy](connection-filter-policies-configure.md).
+> IPv4 addresses (both single addresses and ranges) aren't supported in the Tenant Allow/Block List for this feature. Only IPv6 addresses are supported here.
+> To allow or block IPv4 addresses, use the [default connection filter policy](connection-filter-policies-configure.md) instead.
 
 ## What do you need to know before you begin?
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
-- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - IPv6 addresses are supported only in the following formats:
   - Single addresses in colon-hexadecimal format. For example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
@@ -45,14 +41,25 @@ This article describes how admins can manage entries for IPv6 addresses in the M
   - CIDR IPv6 range. For example, 2001:0db8::/32. 1-128 range is supported.
 
 - Entry limits for IP addresses:
-  - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 (1000 IP entries in total).
-  - **Defender for Office 365 Plan 1**: The maximum number of allow entries is 1000, and the maximum number of block entries is 1000 (2000 IP entries in total).
-  - **Defender for Office 365 Plan 2**: The maximum number of allow entries is 5000, and the maximum number of block entries is 10000 (15000 IP entries in total).
+  - **Microsoft 365 organizations without Defender for Office 365**: A maximum of 1000 total IP entries:
+    - Allow entries: 500 maximum.
+    - Block entries: 500 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 1 (included or in an add-on subscription)**: A maximum of 2000 total IP entries:
+    - Allow entries: 1000 maximum.
+    - Block entries: 1000 maximum.
+  - **Microsoft 365 organizations with Defender for Office 365 Plan 2 (included or in an add-on subscription)**: A maximum of 15000 total IP entries:
+    - Allow entries: 5000 maximum.
+    - Block entries: 10000 maximum.
 
 - An entry should be active within 5 minutes.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Exchange Online permissions** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Detection tuning (manage)** or **Authorization and settings/Security settings/Core security settings (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
+    - _Add and remove entries from the Tenant Allow/Block List_: Membership assigned with the following permissions:
+      - **Authorization and settings/Security settings/Detection tuning (manage)**
+    - _Read-only access to the Tenant Allow/Block List_:
+      - **Authorization and settings/Security settings/Read-only**.
+      - **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Add and remove entries from the Tenant Allow/Block List_: Membership in one of the following role groups:
       - **Organization Management** or **Security Administrator** (Security admin role).
@@ -62,10 +69,16 @@ This article describes how admins can manage entries for IPv6 addresses in the M
       - **Security Reader**
       - **View-Only Configuration**
       - **View-Only Organization Management**
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in one of the following roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
+    - _Add and remove entries from the Tenant Allow/Block List_: Membership in one of the following roles:
+      - **Global Administrator**<sup>\*</sup>
+      - **Security Administrator**
+    - _Read-only access to the Tenant Allow/Block List_: Membership in one of the following roles:
+      - **Global Reader**
+      - **Security Reader**
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Create allow entries for IPv6 addresses
 
@@ -75,11 +88,11 @@ You can create allow entries for IPv6 addresses directly in the Tenant Allow/Blo
 
 ### Use the Microsoft Defender portal to create allow entries for IPv6 addresses in the Tenant Allow/Block List
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. On the **Tenant Allow/Block Lists** page, select the **IP addresses** tab.
 
-3. On the **IP addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Allow**.
+3. On the **IP addresses** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Allow**.
 
 4. In the **Allow IP addresses** flyout that opens, configure the following settings:
 
@@ -112,7 +125,7 @@ This example adds an allow entry for the specified IP address that never expires
 New-TenantAllowBlockListItems -ListType IP -Allow -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -NoExpiration
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ## Create block entries for IPv6 addresses
 
@@ -122,11 +135,11 @@ Incoming email messages from IPv6 addresses in block entries are blocked at the 
 
 ### Use the Microsoft Defender portal to create block entries for IPv6 addresses in the Tenant Allow/Block List
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. On the **Tenant Allow/Block Lists** page, select the **IP addresses** tab.
 
-3. On the **IP addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **IP addresses** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Block**.
 
 4. In the **Block IP addresses** flyout that opens, configure the following settings:
 
@@ -153,17 +166,17 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 New-TenantAllowBlockListItems -ListType IP -Block -Entries "IPAddress1","IPAddress2",..."IPAddressN" <-ExpirationDate Date | -NoExpiration> [-Notes <String>]
 ```
 
-This example adds an block entry for the specified IP address that never expires.
+This example adds a block entry for the specified IP address that never expires.
 
 ```powershell
 New-TenantAllowBlockListItems -ListType IP -Block -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -NoExpiration
 ```
 
-For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchangepowershell/new-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to view entries for IPv6 addresses in the Tenant Allow/Block List
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 Select the **IP addresses** tab.
 
@@ -177,20 +190,20 @@ On the **IP addresses** tab, you can sort the entries by clicking on an availabl
 - **Remove on**: The expiration date.
 - **Notes**
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Action**: The available values are **Allow** and **Block**.
 - **Never expire**: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: or :::image type="icon" source="media/scc-toggle-off.png" border="false":::
 - **Last updated**: Select **From** and **To** dates.
 - **Last used date**: Select **From** and **To** dates.
 - **Remove on**: Select **From** and **To** dates.
-- **Modified by**: Provide an incomplete or complete email address to search by it. 
+- **Modified by**: Provide an incomplete or complete email address to search by it.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
+To group the entries, select :::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
 
 ### Use PowerShell to view entries for IPv6 addresses in the Tenant Allow/Block List
 
@@ -218,17 +231,17 @@ This example filters the results by blocked IP address.
 Get-TenantAllowBlockListItems -ListType IP -Block
 ```
 
-For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchange/get-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Get-TenantAllowBlockListItems](/powershell/module/exchangepowershell/get-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to modify entries for IPv6 addresses in the Tenant Allow/Block List
 
 For existing IP addresses entries, you can change the expiration date and note.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Select the **IP addresses** tab
 
-3. On the **IP addresses** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. On the **IP addresses** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 
 4. In the **Edit IP addresses** flyout that opens, the following settings are available:
    - **Block entries**:
@@ -264,18 +277,18 @@ This example changes the expiration date of the specified IP address block entry
 Set-TenantAllowBlockListItems -ListType IP -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -ExpirationDate "9/1/2024"
 ```
 
-For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchangepowershell/set-tenantallowblocklistitems).
 
 ## Use the Microsoft Defender portal to remove entries for IPv6 addresses from the Tenant Allow/Block List
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Select the **IP addresses** tab.
 
 3. On the **IP addresses** tab, do one of the following steps:
 
-   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout.
+   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
+   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** at the top of the flyout.
 
      > [!TIP]
      > To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
@@ -301,7 +314,7 @@ This example removes the specified IP address block from the Tenant Allow/Block 
 Remove-TenantAllowBlockListItems -ListType IP -Entries "2001:db8:3333:4444:5555:6666:7777:8882"
 ```
 
-For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchange/remove-tenantallowblocklistitems).
+For detailed syntax and parameter information, see [Remove-TenantAllowBlockListItems](/powershell/module/exchangepowershell/remove-tenantallowblocklistitems).
 
 ## Related articles
 

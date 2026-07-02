@@ -1,24 +1,22 @@
 ---
 title: ExposureGraphEdges table in the advanced hunting schema
 description: Learn about the ExposureGraphEdges table of the advanced hunting schema, which provides attack surface information, to help you understand how potential threats might reach, and compromise, valuable assets.
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: rayne-wiselman
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 03/13/2024
+ms.date: 03/28/2025
 ---
 
 # ExposureGraphEdges
@@ -35,6 +33,9 @@ ms.date: 03/13/2024
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The `ExposureGraphEdges` table in the [advanced hunting](advanced-hunting-overview.md) schema provides visibility into relationships between entities and assets in the enterprise exposure graph. This visibility can help uncover critical organizational assets and explore entity relationships and attack paths. Use this reference to construct queries that return information from this table.
+
+This advanced hunting table is populated by records from various Microsoft Defender services, including Defender for Endpoint, Defender for Identity, Defender for Cloud, Entra ID, and others. The table also gets populated by third-party data through the various Security Exposure Management data connectors. The more security products you deploy, the richer the graph becomes with more meaningful data. If your organization hasn’t deployed any service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy services in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 

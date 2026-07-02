@@ -1,168 +1,83 @@
 ---
 title: Microsoft Defender for Endpoint
-description: Microsoft Defender for Endpoint is an enterprise endpoint security platform that helps defend against advanced persistent threats.
+description: Learn about Microsoft Defender for Endpoint, an enterprise endpoint security platform that helps defend against advanced persistent threats.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+author: paulinbar
+ms.author: painbar
 ms.localizationpriority: high
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - essentials-overview
 ms.custom: intro-overview
-ms.topic: conceptual
-search.appverid: met150
-ms.date: 05/07/2025
+ms.topic: overview
+ms.date: 06/17/2026
+ai-usage: ai-assisted
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Endpoint for servers
+  - Microsoft Defender for Business servers
 ---
 
-# Microsoft Defender for Endpoint
+# Microsoft Defender for Endpoint overview
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help organizations prevent, detect, investigate, and respond to advanced threats on their endpoints. These endpoints include laptops, phones, tablets, PCs, access points, routers, and firewalls.
+<!-- TODO: Starting June 2, update the endpoints list to include "agents" after Project Raven release. -->
 
-**Applies to:**
+As the endpoint security pillar of [Microsoft Defender](/defender-xdr/), Defender for Endpoint feeds endpoint signals into the unified Defender portal. The portal correlates these signals with alerts from identity, email, and cloud workloads to form complete incident views. Your security team can trace an attack from a phishing email to a compromised endpoint to lateral movement - all in one place.
 
-- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](/defender-xdr)
+Defender for Endpoint also integrates with the broader Microsoft security ecosystem, including:
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+* [Intune](/intune/intune-service/)
+* [Microsoft Defender for Cloud](/azure/defender-for-cloud/)
+* [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
+* [Microsoft Defender for Identity](/defender-for-identity/)
+* [Microsoft Defender for Office](/defender-office-365/)
+* [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
+* [Microsoft Sentinel](/azure/sentinel/)
+* [Microsoft threat intelligence](threat-protection-integration.md)
 
-Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats. Example endpoints include laptops, phones, tablets, PCs, access points, routers, and firewalls.
+## Operating systems
 
-> [!TIP]
-> Microsoft Defender for Endpoint is available in two plans, Defender for Endpoint Plan 1 and Plan 2. A new Microsoft Defender Vulnerability Management add-on is now available for Plan 2.
->
-> For more information on the features and capabilities included in each plan, including the Defender Vulnerability Management add-on, see [Microsoft 365 guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+Microsoft Defender for Endpoint supports the following operating systems: Windows, macOS, Linux, Android, and iOS. For detailed information about capabilities on each platform, see the following articles.
 
+- [Microsoft Defender for Endpoint on Windows](microsoft-defender-endpoint-windows.md)
+- [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
+- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
+- [Microsoft Defender for Endpoint on Android and iOS](mtd.md)
 
-Watch the following video to learn more about Defender for Endpoint:
+For detailed system requirements and supported versions, see [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).
 
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=88c39a8e-5b13-418e-9093-f8d6100ca728]
+## Licensing
 
-Defender for Endpoint uses the following combination of technology built into Windows 10 and Microsoft's robust cloud service:
-
-- **Endpoint behavioral sensors**: Embedded in Windows 10, these sensors collect and process behavioral signals from the operating system and send this sensor data to your private, isolated, cloud instance of Microsoft Defender for Endpoint.
-
-- **Cloud security analytics**: Using big data, device learning, and unique Microsoft optics across the Windows ecosystem, enterprise cloud products (such as Office 365), and online assets, behavioral signals are translated into insights, detections, and recommended responses to advanced threats.
-
-- **Threat intelligence**: Generated by Microsoft hunters, security teams, and augmented by threat intelligence provided by partners, threat intelligence enables Defender for Endpoint to identify attacker tools, techniques, and procedures, and generate alerts when they're observed in collected sensor data.
-
-<center><h2>Microsoft Defender for Endpoint</center></h2>
-<table>
-<tr>
-<td><a href="#tvm"><center><img src="media/logo-mdvm.png" alt="Vulnerability Management"> <br><b> Core Defender Vulnerability Management</b></center></a></td>
-<td><a href="#asr"><center><img src="media/asr-icon.png" alt="Attack surface reduction"><br><b>Attack surface reduction</b></center></a></td>
-<td><center><a href="#ngp"><img src="media/ngp-icon.png" alt="Next-generation protection"><br> <b>Next-generation protection</b></a></center></td>
-<td><center><a href="#edr"><img src="media/edr-icon.png" alt="Endpoint detection and response"><br> <b>Endpoint detection and response</b></a></center></td>
-<td><center><a href="#ai"><img src="media/air-icon.png" alt="Automated investigation and remediation"><br> <b>Automated investigation and remediation</b></a></center></td>
-<td><center><a href="#mte"><img src="media/mte-icon.png" alt="Microsoft Threat Experts"><br> <b>Microsoft Threat Experts</b></a></center></td>
-</tr>
-<tr>
-<td colspan="7">
-<a href="#apis"><center><b>Centralized configuration and administration, APIs</a></b></center></td>
-</tr>
-<tr>
-<td colspan="7"><a href="#mtp"><center><b>Microsoft Defender XDR</a></center></b></td>
-</tr>
-</table>
-<br>
-
-<p></p>
-
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=95c63786-0382-413d-8a75-eb373e825fa6]
+Defender for Endpoint is available with several licensing options, including Defender for Endpoint Plan 1, Plan 2, and Microsoft Defender for Business. Microsoft 365 E5 and Microsoft 365 E5 Security include Defender for Endpoint Plan 2. For licensing requirements, see [Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements#licensing-requirements). For full plan comparison and pricing, see [Microsoft Defender for Endpoint plans and pricing](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint#Licensing).
 
 > [!TIP]
-> - Learn about the latest enhancements in Defender for Endpoint: [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
-> - Microsoft Defender for Endpoint demonstrated industry-leading optics and detection capabilities in the recent MITRE evaluation. Read: [Insights from the MITRE ATT&CK-based evaluation](https://cloudblogs.microsoft.com/microsoftsecure/2018/12/03/insights-from-the-mitre-attack-based-evaluation-of-windows-defender-atp/).
+> The more Microsoft Defender workloads you deploy (identity, email, cloud apps, and endpoints), the stronger your overall protection becomes. Each workload contributes signals that enrich detection, correlation, and automated response in the unified Defender portal.
 
-> [!TIP]
-> For more information about Defender for Endpoint capabilities across Windows, Mac, and Linux, see [Supported Microsoft Defender for Endpoint capabilities by platform](/defender-endpoint/supported-capabilities-by-platform).
+## Defender for Endpoint capabilities
 
-<a name="tvm"></a>
+Defender for Endpoint provides a comprehensive set of capabilities, including [endpoint detection and response](overview-endpoint-detection-response.md), [autonomous protection](/defender-xdr/automatic-attack-disruption) with [automatic attack disruption](/defender-xdr/automatic-attack-disruption) and [predictive shielding](/defender-xdr/shield-predict-threats), [next-generation protection](next-generation-protection.md) with ransomware prevention, [attack surface reduction](overview-attack-surface-reduction.md), [vulnerability management](/defender-vulnerability-management/defender-vulnerability-management), [Endpoint Attack Notifications](endpoint-attack-notifications.md), and [APIs](api/management-apis.md) for integration with your existing workflows.
 
-**[Core Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)**
+For guidance on planning and rolling out Defender for Endpoint in your environment, see [Plan your Defender for Endpoint deployment](mde-planning-guide.md). Before you begin, review [Minimum requirements](minimum-requirements.md) to confirm your environment is ready. To learn about new and upcoming capabilities, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md). To turn on preview features in your environment, see [Preview features in Microsoft Defender XDR](/defender-xdr/preview).
 
-Built-in core vulnerability management capabilities use a modern risk-based approach to the discovery, assessment, prioritization, and remediation of endpoint vulnerabilities and misconfigurations. To further enhance your ability to assess your security posture and reduce risk, a new Defender Vulnerability Management add-on for Plan 2 is available.
+For a step-by-step workflow for piloting and deploying Defender for Endpoint in a production environment, including onboarding endpoints and verifying pilot groups, see [Pilot and deploy Defender for Endpoint](/defender-xdr/pilot-deploy-defender-endpoint).
 
-For more information on the different vulnerability management capabilities available to you, see [Compare Microsoft Defender Vulnerability Management offerings](/defender-vulnerability-management/defender-vulnerability-management-capabilities).
+For platform-specific capabilities, see the [Windows](microsoft-defender-endpoint-windows.md), [Linux](microsoft-defender-endpoint-linux.md), [macOS](microsoft-defender-endpoint-mac.md), and [Android and iOS mobile threat defense](mtd.md) documentation.
 
-<a name="asr"></a>
+### APIs and integrations
 
-**[Attack surface reduction](overview-attack-surface-reduction.md)**
+Use these capabilities to integrate Microsoft Defender for Endpoint with your existing security tools and workflows, and automate tasks by using APIs. [Management and automation APIs](api/management-apis.md) enable you to automate workflows and integrate Defender for Endpoint into your existing processes. You can also use [partner integrations](partner-integration.md) to connect with Microsoft and non-Microsoft security solutions.
 
-The attack surface reduction set of capabilities provides the first line of defense in the stack. By ensuring configuration settings are properly set and exploit mitigation techniques are applied, the capabilities resist attacks and exploitation. This set of capabilities also includes [network protection](network-protection.md) and [web protection](web-protection-overview.md), which regulate access to malicious IP addresses, domains, and URLs.
+## Privacy and compliance
 
-<a name="ngp"></a>
+Defender for Endpoint is built with privacy, data protection, and regulatory compliance as core principles. For details on how Defender for Endpoint collects, stores, and protects your data, see [Data storage and privacy](data-storage-privacy.md).
 
-**[Next-generation protection](next-generation-protection.md)**
+Defender for Endpoint supports a [Zero Trust](zero-trust-with-microsoft-defender-endpoint.md) security model, helping you verify identities and device health before granting access. To learn more about Microsoft's data handling practices and privacy commitments, visit the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy) and [Privacy at Microsoft](https://privacy.microsoft.com/). For an overview of how Microsoft manages data privacy and protection in compliance with global standards, see [Privacy and data management](/compliance/assurance/assurance-privacy).
 
-To further reinforce the security perimeter of your network, Microsoft Defender for Endpoint uses next-generation protection designed to catch all types of emerging threats.
+## Related content
 
-<a name="edr"></a>
-
-**[Endpoint detection and response](overview-endpoint-detection-response.md)**
-
-Endpoint detection and response capabilities are put in place to detect, investigate, and respond to advanced threats that might have made it past the first two security pillars. [Advanced hunting](/defender-xdr/advanced-hunting-overview) provides a query-based threat-hunting tool that lets you proactively find breaches and create custom detections.
-
-<a name="ai"></a>
-
-**[Automated investigation and remediation](automated-investigations.md)**
-
-In conjunction with being able to quickly respond to advanced attacks, Microsoft Defender for Endpoint offers automatic investigation and remediation capabilities that help reduce the volume of alerts in minutes at scale.
-
-<a name="ss"></a>
-
-**[Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices)**
-
-Defender for Endpoint includes Microsoft Secure Score for Devices to help you dynamically assess the security state of your enterprise network, identify unprotected systems, and take recommended actions to improve the overall security of your organization.
-
-<a name="mte"></a>
-
-**[Microsoft Threat Experts](endpoint-attack-notifications.md)**
-
-Microsoft Defender for Endpoint's new managed threat hunting service provides proactive hunting, prioritization, and more context and insights that further empower Security operation centers (SOCs) to identify and respond to threats quickly and accurately.
-
-> [!IMPORTANT]
-> Defender for Endpoint customers need to apply for the Microsoft Threat Experts managed threat hunting service to get proactive Targeted Attack Notifications and to collaborate with experts on demand. Experts on Demand is an add-on service. Targeted Attack Notifications are always included after you have been accepted into Microsoft Threat Experts managed threat hunting service.
->
-> If you aren't enrolled yet and would like to experience its benefits, go to **Settings** \> **General** \> **Advanced features** \> **Microsoft Threat Experts** to apply. Once accepted, you'll get the benefits of Targeted Attack Notifications, and start a 90-day trial of Experts on Demand. Contact your Microsoft representative to get a full Experts on Demand subscription.
-
-<a name="apis"></a>
-
-**[Centralized configuration and administration, APIs](api/management-apis.md)**
-
-Integrate Microsoft Defender for Endpoint into your existing workflows.
-
-<a name="mtp"></a>
-
-**[Integration with Microsoft solutions](threat-protection-integration.md)**
-
-Defender for Endpoint directly integrates with various Microsoft solutions, including:
-
-- Microsoft Defender for Cloud
-- Microsoft Sentinel
-- Intune
-- Microsoft Defender for Cloud Apps
-- Microsoft Defender for Identity
-- Microsoft Defender for Office
-- Skype for Business
-
-**[Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)**
-
-With Microsoft Defender XDR, Defender for Endpoint, and various Microsoft security solutions, you have a unified pre- and post-breach enterprise defense suite that natively integrates across endpoint, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.
-
-## Security, privacy, and compliance information
-
-- [Zero Trust with Microsoft Defender for Endpoint](zero-trust-with-microsoft-defender-endpoint.md)
-
-- [Microsoft Trust Center - Data protection and privacy](https://www.microsoft.com/trust-center/privacy)
-
-- [Privacy at Microsoft](https://privacy.microsoft.com/)
-
-- [Privacy & data management overview](/compliance/assurance/assurance-privacy)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+* [Pilot and deploy Defender for Endpoint](/defender-xdr/pilot-deploy-defender-endpoint)
+* [Plan your Defender for Endpoint deployment](mde-planning-guide.md)
+* [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)

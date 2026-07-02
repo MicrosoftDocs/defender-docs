@@ -1,22 +1,20 @@
 ---
 title: CloudAppEvents table in the advanced hunting schema
 description: Learn about events from cloud apps and services in the CloudAppEvents table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
 ms.date: 05/15/2025
 ---
@@ -25,14 +23,15 @@ ms.date: 05/15/2025
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-- Microsoft Defender XDR
+
 
 The `CloudAppEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about events involving accounts and objects in Office 365 and other [cloud apps and services](#apps-and-services-covered). Use this reference to construct queries that return information from this table.
 
 ## Prerequisites
+This advanced hunting table is populated by records from Microsoft Defender for Cloud Apps. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Cloud Apps in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
-To make sure the `CloudAppEvents` data is populated:
+
+To make sure the `CloudAppEvents` table is populated:
 
 1.  Go to the Defender portal and select **Settings > Cloud apps > App connectors**.
 

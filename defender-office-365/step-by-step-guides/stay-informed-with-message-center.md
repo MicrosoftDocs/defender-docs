@@ -2,27 +2,24 @@
 title: Steps to set up a weekly digest email of message center changes for Microsoft Defender for Office 365
 description: The steps to set up a weekly digest email of message center activity to stay up-to-date about changes to Microsoft Defender for Office 365.
 ms.service: defender-office-365
-f1.keywords: 
- - NOCSH
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-manager: jarogers
-audience: ITPro
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
 ms.topic: how-to
-search.appverid: met150
-ms.date: 01/31/2023
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Set up a digest notification of changes to Microsoft Defender for Office 365 using the message center
 
-Would it be convenient if, every week, a digest email of Microsoft Defender for Office 365 changes from the Microsoft message center landed in your inbox?
+## Receive a weekly Message center digest email
 
-The message center is where admins learn about official *service announcements and feature changes*, via visiting the site (desktop or mobile app), consulting Microsoft Planner, or *by email*.
+This article shows admins how to configure a weekly digest email from the Microsoft 365 message center for Microsoft Defender for Office 365 service announcements and feature changes. The message center delivers updates through the admin portal (desktop or mobile app), Microsoft Planner, or email. By setting up the weekly digest, you receive a summary of relevant changes directly in your inbox.
 
 ## Before you begin
 
@@ -33,18 +30,21 @@ What you'll need before you get started.
 
 ## Steps to set up a weekly digest mail of message center changes and notifications
 
+Perform the following steps to configure a weekly digest of message center changes in the Microsoft 365 admin center.
+
 1. Log in to the **Admin Center** at <https://admin.microsoft.com>.
 1. On the left-hand navigation, select **Show All**.
 1. Expand **Health** and press **Message Center**.
-1. On the page that loads, select **Preferences**.
-1. A flyout appears on the right, select the **Email** tab.
+1. On the **Message Center** page, select **Preferences**.
+1. In the **Preferences** flyout that opens on the right, select the **Email** tab.
 1. Make sure the email notification settings are as expected. You can select **Other e-mail addresses** if you want the digest to be sent to different users or a shared mailbox.
 1. Select the **Send me a weekly digest about services I select** box, and select the services you wish to receive information about, as a minimum you should select **Exchange Online** & **Microsoft Defender XDR**.
 1. Press **Save**.
 
 You're done.
 
-## Learn More
+<a name="learn-more"></a>
+## Related content
 
 [Track new and changed features in the Microsoft 365 Message center](/Microsoft-365/admin/manage/message-center)
 

@@ -1,20 +1,16 @@
 ---
 title: "Enhancing your organization's security posture"
-description: Provides an overview of security posture management and risk reduction in Microsoft's unified security operations platform.
-search.appverid: met150
-ms.service: unified-secops-platform
+description: Provides an overview of security posture management and risk reduction in the Microsoft Defender portal.
+author: deblanger
 ms.author: dlanger
-author: dlanger
-ms.localizationpriority: medium
 ms.date: 02/05/2025
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
 ms.topic: overview
 
-# customer intent: As a security professional, I want to understand how Microsoft's unified security operations platform, specifically tools like Microsoft Security Exposure Management can enhance my organization's security posture by providing comprehensive visibility, prioritizing remediation efforts, and continuously monitoring for threats.
+# customer intent: As a security professional, I want to understand how Microsoft Defender services, specifically tools like Microsoft Security Exposure Management, can enhance my organization's security posture by providing comprehensive visibility, prioritizing remediation efforts, and continuously monitoring for threats.
 ---
 
 # Microsoft Security Exposure Management for enhanced security posture

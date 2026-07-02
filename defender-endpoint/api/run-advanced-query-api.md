@@ -3,92 +3,85 @@ title: Advanced Hunting API
 ms.reviewer:
 description: Learn to use the advanced hunting API to run advanced queries on Microsoft Defender for Endpoint. Find out about limitations and see an example.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
 - must-keep
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 03/12/2026
+appliesto:
+  - Microsoft Defender for Endpoint
 ---
 
 # Advanced hunting API
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
-**Applies to:**
-- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 > [!WARNING]
 > This advanced hunting API is an older version with limited capabilities. A more comprehensive version of the advanced hunting API that can query more tables is already available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. See **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**
 
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
+[!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
-
-[!include[Improve request performance](../../includes/improve-request-performance.md)]
-
-
+[!INCLUDE [Improve request performance](../../includes/improve-request-performance.md)]
 
 ## Limitations
 
-1. You can only run a query on data from the last 30 days.
+- You can only run a query on data from the last 30 days.
 
-2. The results include a maximum of 100,000 rows.
+- The results include a maximum of 100,000 rows.
 
-3. The number of executions is limited per tenant:
-   - API calls: Up to 45 calls per minute, and up to 1,500 calls per hour.
-   - Execution time: 10 minutes of running time every hour and 3 hours of running time a day.
+- The number of executions is limited per tenant:
+  - API calls: Up to 45 calls per minute, and up to 1,500 calls per hour.
+  - Execution time: 10 minutes of running time every hour and 3 hours of running time a day.
 
-4. The maximal execution time of a single request is 200 seconds.
+- The maximal execution time of a single request is 200 seconds.
 
-5. `429` response represents reaching quota limit either by number of requests or by CPU. Read response body to understand what limit was reached.
+- `429` response represents reaching quota limit either by number of requests or by CPU. Read response body to understand what limit was reached.
 
-6. The maximum query result size of a single request can't exceed 124 MB. If exceeded, an HTTP 400 Bad Request with the message "Query execution has exceeded the allowed result size. Optimize your query by limiting the number of results and try again" occurs.
+- The maximum query result size of a single request can't exceed 50 MB. If exceeded, an HTTP 400 Bad Request with the message "Query execution has exceeded the allowed result size. Optimize your query by limiting the number of results and try again" occurs.
 
 ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Microsoft Defender for Endpoint APIs](apis-intro.md)
 
 |Permission type|Permission|Permission display name|
-|:---|:---|:---|
+|---|---|---|
 |Application|AdvancedQuery.Read.All|`Run advanced queries`|
 |Delegated (work or school account)|AdvancedQuery.Read|`Run advanced queries`|
 
 > [!NOTE]
 > When obtaining a token using user credentials:
 >
-> - The user needs to have the `View Data` role assigned in Microsoft Entra ID
-> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
+> - The user needs to have the `View Data` role assigned in Microsoft Entra ID.
+> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information).
 >
-> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
+>   Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## HTTP request
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/advancedqueries/run
+POST https://api.security.microsoft.com/api/advancedqueries/run
 ```
 
 ## Request headers
 
-Header|Value
-:---|:---
-Authorization|Bearer {token}. **Required**.
-Content-Type|application/json
+|Header|Value|
+|---|---|
+|Authorization|Bearer {token}. **Required**.|
+|Content-Type|application/json|
 
 ## Request body
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
-:---|:---|:---
-Query|Text|The query to run. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Query|Text|The query to run. **Required**.|
 
 ## Response
 
@@ -101,17 +94,11 @@ If successful, this method returns 200 OK, and _QueryResponse_ object in the res
 Here's an example of the request.
 
 ```http
-POST https://api.securitycenter.microsoft.com/api/advancedqueries/run
+POST https://api.security.microsoft.com/api/advancedqueries/run
 ```
 
 ```json
-{
-    "Query":"DeviceProcessEvents
-|where InitiatingProcessFileName =~ 'powershell.exe'
-|where ProcessCommandLine contains 'appdata'
-|project Timestamp, FileName, InitiatingProcessFileName, DeviceId
-|limit 2"
-}
+{"Query":"DeviceProcessEvents |where InitiatingProcessFileName =~ 'powershell.exe' |where ProcessCommandLine contains 'appdata'|project Timestamp, FileName, InitiatingProcessFileName, DeviceId|limit 2"}
 ```
 
 ### Response example

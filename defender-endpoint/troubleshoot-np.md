@@ -1,32 +1,27 @@
 ---
 title: Troubleshoot problems with Network protection
-description: Resources and sample code to troubleshoot issues with Network protection in Microsoft Defender for Endpoint.
+description: Troubleshoot false positives, false negatives, and network performance issues with Network protection in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
-author: denisebmsft
-ms.author: deniseb
+author: chrisda
+ms.author: chrisda
 ms.reviewer: oogunrinde, yongrhee
-manager: deniseb
 ms.subservice: asr
 ms.topic: how-to
 ms.collection:
 - m365-security
 - tier3
 - mde-asr
-search.appverid: met150
-ms.date: 02/24/2025
+ms.date: 06/16/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Troubleshoot network protection
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business?branch=main)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 This article provides troubleshooting information for [network protection](network-protection.md), in cases, such as:
 
@@ -36,16 +31,17 @@ This article provides troubleshooting information for [network protection](netwo
 There are four steps to troubleshooting these problems:
 
 1. Confirm prerequisites
-2. Use audit mode to test the rule
-3. Add exclusions for the specified rule (for false positives)
-4. Submit support logs
+1. Use audit mode to test the rule
+1. Add exclusions for the specified rule (for false positives)
+1. Submit support logs
 
 ## Confirm prerequisites
 
 Network protection works on devices with the following conditions:
 
 > [!div class="checklist"]
-> > - Endpoints are running Windows 10 Pro or Enterprise edition, version 1709 or higher.
+>
+> - Endpoints are running Windows 10 Pro or Enterprise edition, version 1709 or higher.
 > - Endpoints are using Microsoft Defender Antivirus as the sole antivirus protection app. [See what happens when you're using a non-Microsoft antivirus solution](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
 > - [Real-time protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-real-time-protection-microsoft-defender-antivirus) is enabled.
 > - [Behavior Monitoring](behavior-monitor.md) is enabled.
@@ -55,7 +51,7 @@ Network protection works on devices with the following conditions:
 
 ## Use audit mode
 
-You can enable network protection in audit mode and then visit a website designed to demo the feature. All website connections are allowed by network protection but an event is logged to indicate any connection that would be blocked if network protection were enabled.
+You can enable network protection in audit mode and then visit the [network protection demo site](https://smartscreentestratings2.net) to test the feature. All website connections are allowed by network protection but an event is logged to indicate any connection that would be blocked if network protection were enabled.
 
 1. Set network protection to **Audit mode**.
 
@@ -63,11 +59,11 @@ You can enable network protection in audit mode and then visit a website designe
    Set-MpPreference -EnableNetworkProtection AuditMode
    ```
 
-2. Perform the connection activity that is causing an issue (for example, attempt to visit the site, or connect to the IP address you do or don't want to block).
+1. Perform the connection activity that is causing an issue (for example, attempt to visit the site, or connect to the IP address you do or don't want to block).
 
-3. [Review the network protection event logs](network-protection.md#review-network-protection-events-in-windows-event-viewer) to see if the feature would block the connection if it were set to **Enabled**.
+1. [Review the network protection event logs](network-protection.md#review-network-protection-events-in-windows-event-viewer) to see if the feature would block the connection if it were set to **Enabled**.
 
-   If network protection isn't blocking a connection that you're expecting it should block, enable the feature.
+   If network protection isn't blocking a connection that you're expecting it should block, re-enable the feature to restore enforcement:
 
    ```PowerShell
    Set-MpPreference -EnableNetworkProtection Enabled
@@ -75,7 +71,7 @@ You can enable network protection in audit mode and then visit a website designe
 
 ## Report a false positive or false negative
 
-If you've tested the feature with the demo site and with audit mode, and network protection is working on preconfigured scenarios, but isn't working as expected for a specific connection, use the [Windows Defender Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/filesubmission) to report a false negative or false positive for network protection. With an E5 subscription, you can also [provide a link to any associated alert](alerts-queue.md).
+If you've tested the feature with the demo site and with audit mode, and network protection is working on preconfigured scenarios, but isn't working as expected for a specific connection, use the [Windows Defender Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/filesubmission) to report a false negative or false positive for network protection. With an E5 subscription, you can also provide a link to any associated alert from the [Alerts queue](alerts-queue.md).
 
 See [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
 
@@ -85,15 +81,16 @@ The current exclusion options are:
 
 1. Setting up a custom allow indicator.
 
-2. Using IP exclusions: `Add-MpPreference -ExclusionIpAddress 192.168.1.1`.
+1. Using IP exclusions: `Add-MpPreference -ExclusionIpAddress 192.168.1.1`.
 
-3. Excluding an entire process. For more information, see [Microsoft Defender Antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md).
+1. Excluding an entire process. For more information, see [Microsoft Defender Antivirus exclusions](configure-exclusions-microsoft-defender-antivirus.md).
 
-## Network Performance issues
+<a name="network-performance-issues"></a>
+## Troubleshoot network performance issues
 
-In certain circumstances, a network protections component might contribute to slow network connections to Domain Controllers and/or Exchange servers. You might also notice Event ID 5783 NETLOGON errors.
+In certain circumstances, a network protections component might contribute to slow network connections to Domain Controllers and/or Exchange servers. You might also notice Event ID 5783 NETLOGON errors, which indicate authentication-related connectivity failures between the device and a Domain Controller.
 
-To attempt to solve these issues, change Network Protection from 'block mode' to either '[audit mode](troubleshoot-np.md)' or 'disabled'. If your network issues are fixed, follow the next steps to find out which component in Network Protection is contributing to the behavior.
+To attempt to solve these issues, change Network Protection from 'block mode' to either '[audit mode](troubleshoot-np.md)' or 'disabled'. If your network issues are fixed, use the following component-isolation procedure to find out which component in Network Protection is contributing to the behavior.
 
 Disable the following components in order and test your network connectivity performance after disabling each one:
 
@@ -113,31 +110,23 @@ If your network performance issues persist after following these troubleshooting
 
 ## Collect diagnostic data for file submissions
 
-When you report a problem with network protection, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues.
+When you report a problem with network protection, you're asked to collect and submit diagnostic data for Microsoft support and engineering teams to help troubleshoot issues. You complete this step by running `MpCmdrun.exe -GetFiles`, which saves the diagnostic data at `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
 
-1. Open an elevated command prompt and change to the Windows Defender directory:
-
-   ```console
-   cd c:\program files\windows defender
-   ```
-
-2. Run this command to generate the diagnostic logs:
-
-   ```console
-   mpcmdrun -getfiles
-   ```
-
-3. Attach the file to the submission form. By default, diagnostic logs are saved at `C:\ProgramData\Microsoft\Windows Defender\Support\MpSupportFiles.cab`.
+For detailed instructions, see [Collect Microsoft Defender Antivirus diagnostic data](collect-diagnostic-data.md).
 
 ## Resolve connectivity issues with network protection (for E5 customers)
 
-Due to the environment where network protection runs, Microsoft is unable to see your operating system proxy settings. In some cases, network protection clients are unable to reach the cloud service. To resolve connectivity issues with network protection, configure one of the following registry keys so that network protection becomes aware of the proxy configuration:
+Because network protection can't see your operating system proxy settings, network protection clients might be unable to reach the cloud service in some environments. To resolve these connectivity issues, configure one of the following registry keys so that network protection becomes aware of the proxy configuration:
+
+To configure a static proxy server, set the proxy address and port:
 
 ```powershell
 Set-MpPreference -ProxyServer <proxy IP address: Port>
 ```
 
 ---OR---
+
+If your environment uses a proxy auto-configuration (PAC) file instead of a static proxy, specify the PAC URL:
 
 ```powershell
 Set-MpPreference -ProxyPacUrl <Proxy PAC url>
@@ -146,8 +135,8 @@ Set-MpPreference -ProxyPacUrl <Proxy PAC url>
 You can configure the registry key by using PowerShell, Microsoft Configuration Manager, or Group Policy. Here are some resources to help:
 
 - [Working with Registry Keys](/powershell/scripting/samples/working-with-registry-keys)
-- [Configure custom client settings for Endpoint Protection](/mem/configmgr/protect/deploy-use/endpoint-protection-configure-client)
-- [Use Group Policy settings to manage Endpoint Protection](/mem/configmgr/protect/deploy-use/endpoint-protection-group-policies)
+- [Configure custom client settings for Endpoint Protection](/intune/configmgr/protect/deploy-use/endpoint-protection-configure-client)
+- [Use Group Policy settings to manage Endpoint Protection](/intune/configmgr/protect/deploy-use/endpoint-protection-group-policies)
 
 ## See also
 
@@ -156,5 +145,3 @@ You can configure the registry key by using PowerShell, Microsoft Configuration 
 - [Evaluate network protection](evaluate-network-protection.md)
 - [Enable network protection](enable-network-protection.md)
 - [Address false positives/negatives in Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

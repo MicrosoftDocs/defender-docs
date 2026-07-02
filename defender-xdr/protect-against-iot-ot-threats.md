@@ -5,9 +5,7 @@ ms.service: defender-xdr
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-manager: raynew
-audience: ITPro
-ms.topic: conceptual
+ms.topic: article
 ms.date: 01/20/2024
 appliesto:
     - Microsoft Defender for XDR

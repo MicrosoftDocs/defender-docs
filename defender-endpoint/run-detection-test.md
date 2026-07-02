@@ -1,62 +1,59 @@
 ---
 title: Run a detection test on a device recently onboarded to Microsoft Defender for Endpoint
 description: Run the detection test script on a device recently onboarded to the Microsoft Defender for Endpoint service to verify that it's properly added.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-ms.date: 03/01/2025
-manager: deniseb
-audience: ITPro
+ms.date: 06/17/2026
 ms.collection: 
 - m365-security
 - tier1
-ms.topic: conceptual
+ms.topic: how-to
 ms.subservice: onboard
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1 and 2
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Run a detection test on a device recently onboarded to Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server 2019
-- Windows Server 2022
-- Windows Server 2025
-- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-When you add a device to the Microsoft Defender for Endpoint service for management, it's referred to as onboarding. Onboarding allows devices to report signals about their health status to the service.
+When you add a device to the Microsoft Defender for Endpoint service for management, it's referred to as onboarding. Onboarding allows devices to report signals about their health status to Microsoft Defender for Endpoint.
 
 Verifying that a device is added to the service successfully is a critical step in the entire deployment process. It helps ensure that all the devices expected are being managed. 
 
+## Prerequisites
+
+### Supported operating systems
+
+The following operating systems are supported for this detection test:
+
+- Windows Server 2012 R2
+- Windows Server 2016 and later
+- Azure Stack HCI OS, version 23H2 and later
+
 ## Verify Microsoft Defender for Endpoint onboarding of a device using a PowerShell detection test
 
-Run the following PowerShell script on a newly onboarded device to verify that it's properly reporting to the Defender for Endpoint service.
+Run the following PowerShell script on a newly onboarded device to verify that the device is properly reporting to the Defender for Endpoint service.
 
 1. On the device, open Command Prompt as an administrator. 
 
-2. At the prompt, copy and run the following command:
+1. At the prompt, copy and run the following command:
 
    ```powershell
    powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
    ```
 
-The Command Prompt window closes automatically. If successful, a new alert appears in the portal for the onboarded device in about 10 minutes.
+   The Command Prompt window closes automatically. If the script runs successfully, a new alert appears in the Microsoft Defender portal for the onboarded device in about 10 minutes.
 
-> [!NOTE]
-> You can also [use the EICAR test string](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus) to perform this test. You will receive a notification on the endpoint and an alert in the Microsoft Defender portal.
+    > [!NOTE]
+    > You can also [Configure extension file exclusions for Microsoft Defender Antivirus](configure-extension-file-exclusions-microsoft-defender-antivirus.md) to perform this test. You'll receive a notification on the endpoint and an alert in the Microsoft Defender portal.
 
 ## Related articles
 
-- [Onboard client devices](onboard-client.md)
-- [Onboard servers](onboard-server.md)
+- [Onboard client devices to Microsoft Defender for Endpoint](onboard-client.md)
+- [Onboard servers to Microsoft Defender for Endpoint](onboard-server.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

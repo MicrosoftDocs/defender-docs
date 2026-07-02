@@ -5,11 +5,10 @@ search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.date: 01/12/2025
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -146,7 +145,7 @@ On the machines that you installed the sensor on, configure Windows event log co
 
 | Step | Description | More information |
 |---|---|---|
-| 1 | Configure Windows event log collection | [Event collection with Microsoft Defender for Identity](/defender-for-identity/deploy/event-collection-overview) <br><br>[Configure audit policies for Windows event logs](/defender-for-identity/deploy/configure-windows-event-collection) |
+| 1 | Configure Windows event log collection | [Configure Windows event auditing](/defender-for-identity/deploy/configure-windows-event-collection) |
 
 <a name="step-4"></a>
 
@@ -182,9 +181,9 @@ For more information, see:
 
 ## SIEM integration
 
-You can integrate Defender for Identity with Microsoft Sentinel as part of Microsoft's [unified security operations platform](/unified-secops-platform/), or with a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
+You can integrate Defender for Identity with Microsoft Sentinel for unified security operations in the [Defender portal](/unified-secops-platform/), or with a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
-Microsoft Sentinel supports a Microsoft Defender for XDR data connector to bring all signals from Defender XDR, including Defender for Identity, to Microsoft Sentinel. Use the Defender portal as a unified security operations (SecOps) platform.
+The Defender portal supports unified security operations with Microsoft Sentinel, bringing signals from Defender XDR, including Defender for Identity, to Microsoft Sentinel.
 
 For more information, see:
 
@@ -195,7 +194,7 @@ For more information, see:
 
 Incorporate the following into your SecOps processes:
 
-- [View the ITDR dashboard](/defender-for-identity/dashboard)
+- [View the Identity Security dashboard](/defender-for-identity/dashboard)
 - [View and manage Defender for Identity health issues](/defender-for-identity/health-alerts)
 
 ## Next step for the end-to-end deployment of Microsoft Defender XDR

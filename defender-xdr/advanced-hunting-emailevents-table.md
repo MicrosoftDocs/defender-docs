@@ -1,39 +1,37 @@
 ---
 title: EmailEvents table in the advanced hunting schema
 description: Learn about events associated with Microsoft 365 emails in the EmailEvents table of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom:
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 03/28/2025
 ---
 
 # EmailEvents
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
 
-- Microsoft Defender XDR
 
 
 The `EmailEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about events involving the processing of emails on Microsoft Defender for Office 365. Use this reference to construct queries that return information from this table.
 
 > [!TIP]
 > For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
+
+This advanced hunting table is populated by records from Defender for Office 365. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Office 365 in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -81,6 +79,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AdditionalFields` | `string` | Additional information about the entity or event |
 | `LatestDeliveryLocation`* | `string` | Last known location of the email |
 |`LatestDeliveryAction`* | `string` | Last known action attempted on an email by the service or by an admin through manual remediation |
+|`DistributionList` | `string` | Name of the distribution list (DL) to which the email was sent, if applicable; in cases of nested DLs, it shows the top-level list |
 
 > [!NOTE]
 >\* The `LatestDeliveryLocation` and `LatestDeliveryAction` columns are **not** available in the Streaming API. 

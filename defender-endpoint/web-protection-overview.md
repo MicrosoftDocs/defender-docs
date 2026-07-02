@@ -1,37 +1,30 @@
 ---
-title: Web protection
-description: Learn about the web protection in Microsoft Defender for Endpoint and how it can protect your organization.
-search.appverid: met150
+title: Web protection in Microsoft Defender for Endpoint
+description: Overview of web threat protection, web content filtering, and custom indicators in Microsoft Defender for Endpoint, including browser support, precedence rules, and advanced hunting queries.
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 04/02/2025
-manager: deniseb
-audience: ITPro
+ms.date: 06/16/2026
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
-ms.custom: partner-contribution
-ms.topic: conceptual
+ms.custom: partner-contribution, msecd-doc-authoring-1014
+ms.topic: how-to
 ms.subservice: asr
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
+ai-usage: ai-assisted
 ---
+# Web protection in Microsoft Defender for Endpoint
 
-# Web protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
-
-## About web protection
+<a name="about-web-protection"></a>
+## Overview
 
 Web protection in Microsoft Defender for Endpoint is a capability made up of [Web threat protection](web-threat-protection.md), [Web content filtering](web-content-filtering.md), and [Custom indicators](indicators-overview.md). Web protection lets you secure your devices against web threats and helps you regulate unwanted content. You can find Web protection reports in the Microsoft Defender portal by going to **Reports > Web protection**.
 
@@ -89,7 +82,7 @@ For more information, see [Web content filtering](web-content-filtering.md).
 
 ## Order of precedence
 
-Web protection is made up of the following components, listed in order of precedence. Each of these components is enforced by the SmartScreen client in Microsoft Edge and by the Network Protection client in all other browsers and processes.
+When multiple web protection policies could apply to the same URL or IP request, the order of precedence determines which policy wins. Web protection is made up of the following components, listed in order of precedence. Each of these components is enforced by the SmartScreen client in Microsoft Edge and by the Network Protection client in all other browsers and processes.
 
 - Custom indicators (IP/URL, Microsoft Defender for Cloud Apps policies)
   - Allow
@@ -104,11 +97,11 @@ Web protection is made up of the following components, listed in order of preced
 > [!NOTE]
 > Microsoft Defender for Cloud Apps currently generates indicators only for blocked URLs.
 
-The order of precedence relates to the order of operations by which a URL or IP is evaluated. For example, if you have a web content filtering policy you can create exclusions through custom IP/URL indicators. Custom Indicators of compromise (IoC) are higher in the order of precedence than WCF blocks.
+The order of precedence describes the sequence in which web protection components (custom indicators, web threat protection, and web content filtering) evaluate a URL or IP. For example, if you have a web content filtering policy you can create exclusions through custom IP/URL indicators. Custom Indicators of compromise (IoC) are higher in the order of precedence than WCF blocks.
 
 Similarly, during a conflict between indicators, allows always take precedence over blocks (override logic). That means that an allow indicator takes precedence over any block indicator that is present.
 
-The following table summarizes some common configurations that would present conflicts within the web protection stack. It also identifies the resulting determinations based on the precedence described earlier in this article.
+The following table summarizes some common configurations that would present conflicts within the web protection stack. It also identifies the resulting determinations based on the [order of precedence](#order-of-precedence) for web protection components.
 
 |Custom Indicator policy|Web threat policy|WCF policy|Defender for Cloud Apps policy|Result|
 |---|---|---|---|---|
@@ -120,7 +113,7 @@ Internal IP addresses aren't supported by custom indicators. For a warn policy w
 
 ## Protect browsers
 
-In all web protection scenarios, SmartScreen and Network Protection can be used together to ensure protection across both Microsoft and non-Microsoft browsers and processes. SmartScreen is built directly into Microsoft Edge, while Network Protection monitors traffic in non-Microsoft browsers and processes. The following diagram illustrates this concept. This diagram of the two clients working together to provide multiple browser/app coverages is accurate for all features of Web Protection (Indicators, Web Threats, Content Filtering).
+In all web protection scenarios, SmartScreen and Network Protection can be used together to ensure protection across both Microsoft and non-Microsoft browsers and processes. SmartScreen is built directly into Microsoft Edge, while Network Protection monitors traffic in non-Microsoft browsers and processes. The following diagram illustrates how SmartScreen and Network Protection work together across Microsoft and non-Microsoft browsers and processes. This diagram of the two clients working together to provide multiple browser/app coverages is accurate for all features of Web Protection (Indicators, Web Threats, Content Filtering).
 
 > :::image type="content" source="/defender/media/web-protection-protect-browsers.png" alt-text="The usage of smartScreen and Network Protection together" lightbox="/defender/media/web-protection-protect-browsers.png":::
 
@@ -142,7 +135,7 @@ The following table shows the responses and their correlated features.
 
 ## Advanced hunting for web protection
 
-Kusto queries in advanced hunting can be used to summarize web protection blocks in your organization for up to 30 days. These queries use the information listed above to distinguish between the various sources of blocks and summarize them in a user-friendly manner. For example, the following query lists all WCF blocks originating from Microsoft Edge.
+Kusto queries in advanced hunting can be used to summarize web protection blocks in your organization for up to 30 days. These queries use the response categories from the [Troubleshoot endpoint blocks](#troubleshoot-endpoint-blocks) table to distinguish between the various sources of blocks and summarize them in a user-friendly manner. For example, to find WCF blocks detected by SmartScreen in Microsoft Edge, run the following query:
 
 ```kusto
 DeviceEvents
@@ -152,7 +145,7 @@ DeviceEvents
 | where Experience == "CustomPolicy"
 ```
 
-Similarly, you can use the following query to list all WCF blocks originating from Network Protection (for example, a WCF block in a non-Microsoft browser). The `ActionType` is updated and `Experience` changed to `ResponseCategory`.
+To identify WCF blocks enforced by Network Protection in non-Microsoft browsers, use the following query. In this query, the `ActionType` is `ExploitGuardNetworkProtectionBlocked` and the filter field is `ResponseCategory` instead of `Experience`.
 
 ```kusto
 DeviceEvents
@@ -162,9 +155,10 @@ DeviceEvents
 | where ResponseCategory == "CustomPolicy"
 ```
 
-To list blocks that are due to other features (like Custom Indicators), refer to the table listed earlier in this article. The table outlines each feature and their respective response category. These queries can be modified to search for telemetry related to specific machines in your organization. The ActionType shown in each query shows only those connections that were blocked by a Web Protection feature, and not all network traffic.
+To list blocks that are due to other features (like Custom Indicators), refer to the [ResponseCategory table](#troubleshoot-endpoint-blocks). The ResponseCategory table outlines each feature and its respective response category. These queries can be modified to search for telemetry related to specific machines in your organization. The ActionType shown in each query shows only those connections that were blocked by a Web Protection feature, and not all network traffic.
 
-## User experience
+<a name="user-experience"></a>
+## What users see when web protection blocks content
 
 If a user visits a web page that poses a risk of malware, phishing, or other web threats, Microsoft Edge displays a block page that resembles the following image:
 
@@ -178,9 +172,9 @@ In any case, no block pages are shown in non-Microsoft browsers, and the user in
 
 ## Report false positives
 
-To report a false positive for sites that have been deemed dangerous by SmartScreen, use the link that appears on the block page in Microsoft Edge (as shown earlier in this article).
+To report a false positive for sites that have been deemed dangerous by SmartScreen, use the link that appears on the Microsoft Edge block page.
 
-For WCF, you can override a block using an Allow indicator, and optionally dispute the category of a domain. Navigate to the **Domains** tab of the WCF reports. You see an ellipsis beside each of the domains. Hover over this ellipsis and select **Dispute Category**. A flyout opens. Set the priority of the incident and provide some other details, such as the suggested category. For more information on how to turn on WCF and how to dispute categories, see [Web content filtering](web-content-filtering.md).
+For Web content filtering (WCF), you can override a block using an Allow indicator, and optionally dispute the category of a domain. Navigate to the **Domains** tab of the WCF reports. You see an ellipsis beside each of the domains. Hover over this ellipsis and select **Dispute Category**. A flyout opens. Set the priority of the incident and provide some other details, such as the suggested category. For more information on how to turn on WCF and how to dispute categories, see [Web content filtering](web-content-filtering.md).
 
 For more information on how to submit false positives/negatives, see [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md).
 
@@ -191,4 +185,5 @@ For more information on how to submit false positives/negatives, see [Address fa
 |[Web threat protection](web-threat-protection.md) | Prevent access to phishing sites, malware vectors, exploit sites, untrusted or low-reputation sites, and sites that are blocked.|
 |[Web content filtering](web-content-filtering.md) | Track and regulate access to websites based on their content categories.|
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

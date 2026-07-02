@@ -1,14 +1,11 @@
 ---
 title: Microsoft Defender for Endpoint demonstration scenarios
 description: Lists Microsoft Defender for Endpoint demonstration scenarios that you can run.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -16,21 +13,17 @@ ms.collection:
 ms.topic: article
 ms.subservice: ngp
 ms.date: 10/16/2024
+appliesto:
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
+  - Microsoft Defender Antivirus
 ---
 
 # Microsoft Defender for Endpoint - demonstration scenarios
 
-**Applies to:**
-
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Endpoint Plan 1 or 2](microsoft-defender-endpoint.md)
-- Microsoft Defender for Servers
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
-
 Demonstration scenarios help you learn about the capabilities of Microsoft Defender for Endpoint on Windows, Mac, and Linux. Demonstration scenarios are provided for the following Microsoft Defender for Endpoint protection areas:
 
-- Attack surface protection (**ASR**)
+- Attack surface reduction protection (**ASR**)
 - Next Generation Protection (**NGP**)
 - Endpoint detection and response (**EDR**)
 
@@ -63,10 +56,8 @@ The following table lists the available demonstrations alphabetically, with thei
 
 ## See also
 
-[Attack surface protection overview](overview-attack-surface-reduction.md)
-[Test attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
+[Attack surface protection overview](attack-surface-reduction-overview.md)
+[Attack surface reduction (ASR) rules deployment overview](attack-surface-reduction-rules-deployment.md)
 [Next Generation Protection overview](next-generation-protection.md)
 [Endpoint detection and response overview](overview-endpoint-detection-response.md)
 [Microsoft Defender for Endpoint security blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bg-p/MicrosoftDefenderATPBlog)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

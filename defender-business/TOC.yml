@@ -8,7 +8,7 @@
     - name: Requirements
       href: mdb-requirements.md
     - name: What's new in Defender for Business?
-      href: /Microsoft-365/business-premium/m365bp-mdb-whats-new?toc=/defender-business/toc.json&bc=/defender-business/breadcrumb/toc.json
+      href: mdb-whats-new.md
     - name: Preview features
       href: /defender-xdr/preview
   - name: Resources for partners
@@ -90,13 +90,13 @@
     - name: Understand policy order
       href: mdb-policy-order.md
   - name: Maintain your environment
-    href: /Microsoft-365/business-premium/m365bp-mdb-maintain-environment?bc=%2defender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
+    href: /microsoft-365/business-premium/m365bp-mdb-maintain-environment?bc=%2defender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
   - name: Reference information
     items:
     - name: Security, privacy, and compliance
       href: mdb-security-privacy-compliance.md
     - name: Top 10 ways to secure your business data
-      href: /Microsoft-365/business-premium/secure-your-business-data?bc=%2Fdefender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
+      href: /microsoft-365/admin/security-and-compliance/m365b-security-best-practices?bc=%2Fdefender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
     - name: How to get help or contact support
       href: /microsoft-365/admin/get-help-support
     - name: Frequently asked questions

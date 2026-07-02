@@ -1,24 +1,22 @@
 ---
 title: DeviceProcessEvents table in the advanced hunting schema
 description: Learn about the process spawning or creation events in the DeviceProcessEventstable of the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 - cx-ti
 - cx-ah
+appliesto:
+    - Microsoft Defender XDR
+    - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 09/06/2024
+ms.date: 03/28/2025
 ---
 
 # DeviceProcessEvents
@@ -26,16 +24,12 @@ ms.date: 09/06/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-**Applies to:**
-- Microsoft Defender XDR
-- Microsoft Defender for Endpoint
-
-
-
 The `DeviceProcessEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about process creation and related events. Use this reference to construct queries that return information from this table.
 
 > [!TIP]
 > For detailed information about the events types (`ActionType` values) supported by a table, use the built-in schema reference available in Microsoft Defender XDR.
+
+This advanced hunting table is populated by records from Microsoft Defender for Endpoint. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Endpoint in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -109,6 +103,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ProcessRemoteSessionIP` | `string` | IP address of the remote device from which the created process's RDP session was initiated |
 | `ProcessUniqueId` | `string` | Unique identifier of the process; this is equal to the Process Start Key in Windows devices |
 | `InitiatingProcessUniqueId` | `string` | Unique identifier of the initiating process; this is equal to the Process Start Key in Windows devices |
+| `LogonID`|`long` |A unique identifier for the user initiating the event, enabling attribution of process activity to the originating interactive user across privilege escalation and session transitions. This field is located inside AdditionalFields/InitiatingProcessPosixEffectiveUser|
 
 
 ## Related topics

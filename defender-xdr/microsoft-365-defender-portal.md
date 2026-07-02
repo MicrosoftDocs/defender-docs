@@ -1,15 +1,10 @@
 ---
 title: Microsoft Defender XDR in the Microsoft Defender portal
 description: Learn about Microsoft Defender XDR and how other services complement in the Microsoft Defender portal.
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
-ms.author: deniseb
-author: denisebmsft
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
@@ -18,8 +13,8 @@ ms.collection:
 ms.custom:
   - admindeeplinkDEFENDER
   - intro-overview
-ms.topic: conceptual
-ms.date: 01/10/2025
+ms.topic: article
+ms.date: 10/31/2025
 ---
 
 # Microsoft Defender XDR in the Microsoft Defender portal
@@ -64,11 +59,11 @@ The Microsoft Defender portal emphasizes *unity, clarity, and common goals*. Sea
 
 Microsoft Defender XDR [correlates alerts and events](alerts-incidents-correlation.md) from all Microsoft security solutions across all assets in your entire organization into incidents. **Incidents** are a collection of alerts that are related to a single threat or attack. Incidents are prioritized based on the severity of the threat and the potential impact on your organization.
 
-:::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="media/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="media/incidents-ss-incidents.png":::
 
 Selecting an incident name displays a page that demonstrates the value of centralizing security information as you get better insights into the full extend of a threat, from email, to identity, to endpoints.
 
-:::image type="content" source="/defender/media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="/defender/media/incidents-overview/incidents-ss-incident-summary.png":::
+:::image type="content" source="media/microsoft-365-defender-portal/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="media/microsoft-365-defender-portal/incidents-ss-incident-summary.png":::
 
 Take the time to review the incidents in your environment, drill down into each alert, and practice building an understanding of how to access the information and determine next steps in your analysis.
 
@@ -88,7 +83,6 @@ Automated actions are capabilities within Microsoft Defender XDR that help you a
 
 - [Automated investigation and response](m365d-autoir.md)
 - [Attack disruption](automatic-attack-disruption.md)
-- [Deception](deception-overview.md)
 
 These actions can be reviewed and managed in the [**Action Center**](m365d-action-center.md) page in the Microsoft Defender portal.
 
@@ -121,7 +115,7 @@ You can manage settings for Microsoft Defender XDR in the **Settings > Microsoft
 
 The Microsoft Defender portal's search function is located at the top of the page. As you type, suggestions are provided so that it's easier to find entities. The enhanced search results page centralizes the results from all entities.
 
-:::image type="content" source="/defender/media/microsoft-365-defender-portal/search-panel.png" alt-text="Screenshot of the search bar in the Microsoft Defender portal." lightbox="/defender/media/microsoft-365-defender-portal/search-panel.png":::
+:::image type="content" source="/defender-xdr/media/microsoft-365-defender-portal/search-panel.png" alt-text="Screenshot of the search bar in the Microsoft Defender portal." lightbox="/defender-xdr/media/microsoft-365-defender-portal/search-panel.png":::
 
 Search results are categorized by sections related to your search terms. You can search across the following entities in the Microsoft Defender portal:
 
@@ -138,7 +132,7 @@ Search also provides results from relevant links in the Microsoft Tech Community
 
 Notifications are messages that inform you about important events or updates in the Defender portal. They help you stay on top of your security tasks and alerts.
 
-:::image type="content" source="/defender/media/microsoft-365-defender-portal/notifications-panel.png" alt-text="Screenshot of the notifications icon in the Microsoft Defender portal." lightbox="/defender/media/microsoft-365-defender-portal/notifications-panel.png":::
+:::image type="content" source="/defender-xdr/media/microsoft-365-defender-portal/notifications-panel.png" alt-text="Screenshot of the notifications icon in the Microsoft Defender portal." lightbox="/defender-xdr/media/microsoft-365-defender-portal/notifications-panel.png":::
 
 Notifications are in the top bar of the portal's user interface. You can access them by clicking on the notification icon, which looks like a bell. A number on the icon indicates that you have that number of unread notifications.
 
@@ -164,7 +158,7 @@ With this learning path from Microsoft Learn, you can understand Microsoft Defen
 
 |Training:|Mitigate threats using Microsoft Defender XDR|
 |---|---|
-|![Microsoft Defender XDR training icon.](/defender/media/microsoft-365-defender/m365-defender-secure-organization.svg)|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
+|:::image type="content" source="media/microsoft-365-defender-portal/m365-defender-secure-organization.png" alt-text="Microsoft Defender XDR training icon.":::|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
 
 > [!div class="nextstepaction"]
 > [Start >](/training/paths/sc-200-mitigate-threats-using-microsoft-365-defender/)

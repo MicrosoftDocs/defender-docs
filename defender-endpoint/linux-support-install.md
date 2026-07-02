@@ -3,31 +3,23 @@ title: Troubleshoot installation issues for Microsoft Defender for Endpoint on L
 ms.reviewer: gopkr
 description: Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
-ms.topic: conceptual
+ms.topic: troubleshooting-general
 ms.subservice: linux
-search.appverid: met150
 ms.date: 10/11/2024
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 ## Verify that the installation succeeded
 
@@ -77,13 +69,15 @@ If the Microsoft Defender for Endpoint installation fails due to missing depende
 
 The following external package dependencies exist for the mdatp package:
 
-- The mdatp RPM package requires `glibc >= 2.17`, `audit`, `policycoreutils`, `semanage`, `selinux-policy-targeted`, `mde-netfilter` 
-- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `auditd`, `mde-netfilter` 
-
-The mde-netfilter package also has the following package dependencies:
-
-- For DEBIAN the mde-netfilter package requires `libnetfilter-queue1`, `libglib2.0-0`  
-- For RPM the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2` 
+- The mdatp RPM package requires `glibc >= 2.17`
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`
+> For version older than `101.25032.0000`:
+> - RPM package needs: `mde-netfilter`, `pcre`
+> - DEBIAN package needs: `mde-netfilter`, `libpcre3`
+> - The `mde-netfilter` package also has the following package dependencies:
+    - For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1` and `libglib2.0-0`
+    - For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, and `glib2`
+> Beginning with version `101.25042.0003`, uuid-runtime is no longer required as an external-dependency.
 
 ## Installation failed
 
@@ -119,7 +113,7 @@ service mdatp status
     sudo useradd --system --no-create-home --user-group --shell /usr/sbin/nologin mdatp
     ```
 
-2. Try enabling and restarting the service using:
+1. Try enabling and restarting the service using:
 
     ```bash
     sudo service mdatp start
@@ -129,7 +123,7 @@ service mdatp status
     sudo service mdatp restart
     ```
 
-3. If mdatp.service isn't found upon running the previous command, run:
+1. If mdatp.service isn't found upon running the previous command, run:
 
     ```bash
     sudo cp /opt/microsoft/mdatp/conf/mdatp.service <systemd_path> 
@@ -137,13 +131,12 @@ service mdatp status
 
     where `<systemd_path>` is `/lib/systemd/system` for Ubuntu and Debian distributions and /usr/lib/systemd/system` for Rhel, CentOS, Oracle, and SLES. Then rerun step 2.
 
-4. If the above steps don't work, check if SELinux is installed and in enforcing mode. If so, try setting it to permissive (preferably) or disabled mode. It can be done by setting the parameter `SELINUX` to `permissive` or `disabled` in `/etc/selinux/config` file, followed by reboot. Check the man-page of selinux for more details.
+1. If the above steps don't work, check if SELinux is installed and in enforcing mode. If so, try setting it to permissive (preferably) or disabled mode. It can be done by setting the parameter `SELINUX` to `permissive` or `disabled` in `/etc/selinux/config` file, followed by reboot. Check the man-page of selinux for more details.
 
    Now try restarting the mdatp service using step 2. Revert the configuration change immediately though for security reasons after trying it and reboot.
 
-5. If `/opt` directory is a symbolic link, create a bind mount for `/opt/microsoft`.
-
-6. Ensure that the daemon has executable permission.
+1. If `/opt` directory is a symbolic link, create a bind mount for `/opt/microsoft`.
+1. Ensure that the daemon has executable permission.
 
     ```bash
     ls -l /opt/microsoft/mdatp/sbin/wdavdaemon
@@ -161,7 +154,7 @@ service mdatp status
 
     and retry running step 2.
 
-7. Ensure that the file system containing wdavdaemon isn't mounted with `noexec`.
+1. Ensure that the file system containing wdavdaemon isn't mounted with `noexec`.
 
 ## If the Defender for Endpoint service is running, but the EICAR text file detection doesn't work
 
@@ -171,7 +164,7 @@ service mdatp status
     findmnt -T <path_of_EICAR_file>
     ```
 
-    Currently supported file systems for on-access activity are listed [here](/defender-endpoint/mde-linux-prerequisites). Any files outside these file systems aren't scanned.
+    Currently supported file systems for on-access activity are listed [here](mde-linux-prerequisites.md). Any files outside these file systems aren't scanned.
 
 ## Command-line tool mdatp isn't working
 
@@ -195,4 +188,5 @@ service mdatp status
 
     Path to a zip file that contains the logs are displayed as an output. Reach out to our customer support with these logs.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

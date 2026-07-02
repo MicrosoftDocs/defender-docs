@@ -2,18 +2,18 @@
 title:                     Detecting human-operated ransomware attacks with Microsoft Defender XDR
 description:               This article describes proactive detection of new or ongoing human-operated ransomware attacks with the Microsoft Defender portal
 search.appverid: MET150    
-author:                    nic-name
-ms.author:                 noriordan
-manager:                   dolmont
+ms.author: pauloliveria
+author: poliveria
+ms.reviewer: noriordan
 audience:                  ITPro
 ms.topic:                  article
 ms.date:                   05/30/2022 
-ms.service:                microsoft-365-security
-ms.subservice:             m365d
+ms.service: defender-xdr
 ms.localizationpriority:   medium
 ms.collection: 
   - msftsolution-secops
   - tier1
+ms.custom:                 cx-rw
 f1.keywords:               NOCSH
 ---
 
@@ -52,7 +52,7 @@ Business operation disruptions are likely when responding to a ransomware attack
 
 Here's the qualitative relationship of the impact of a ransomware attack and your time to respond for no detection vs. proactive detection and response.
 
-![The qualitative relationship of the impact of a ransomware attack and your time to respond for no detection vs. proactive detection and response, showing the impact to your business reduces, the quicker you respond.](/defender/media/defender/playbook-detecting-ransomware-m365-defender-qualitative-diagram.png)
+![The qualitative relationship of the impact of a ransomware attack and your time to respond for no detection vs. proactive detection and response, showing the impact to your business reduces, the quicker you respond.](./media/playbook-detecting-ransomware-m365-defender/playbook-detecting-ransomware-m365-defender-qualitative-diagram.png)
 
 ### Proactive detection via common malware tools and techniques
 
@@ -161,8 +161,8 @@ Attacker is creating new entities to further their reach, install malware agents
 |Activity|Signal source|Alternate security portal|
 |---|---|---|
 |New apps that are installed|Defender for Cloud Apps with the app governance add-on|Defender for Cloud Apps|
-|New user accounts|Azure Identity Protection|Defender for Cloud Apps|
-|Role changes|Azure Identity Protection|Defender for Cloud Apps|
+|New user accounts|Microsoft Entra ID Protection|Defender for Cloud Apps|
+|Role changes|Microsoft Entra ID Protection|Defender for Cloud Apps|
 
 #### Suspicious behavior
 
@@ -242,7 +242,7 @@ From the **Detection details** section of many threat analytics reports, you can
 
 ### Microsoft Defender XDR APIs
 
-You can also use the Microsoft Defender XDR APIs to query the Microsoft Defender XDR incidents and alerts data in your tenant. A custom app can filter the data, filter it based on custom settings, and then provide a filtered list of links to alerts and incidents that you can easily select to go right to that alert or incident. See [List incidents API in Microsoft Defender XDR| Microsoft Docs](./api-list-incidents.md). You can also integrate your SIEM with Microsoft Defender, see [Integrate your SIEM tools with Microsoft Defender XDR](./configure-siem-defender.md).
+You can also use the Microsoft Defender XDR APIs to query the Microsoft Defender XDR incidents and alerts data in your tenant. A custom app can filter the data, filter it based on custom settings, and then provide a filtered list of links to alerts and incidents that you can easily select to go right to that alert or incident. See [List incidents API in Microsoft Defender XDR](./api-list-incidents.md). You can also integrate your SIEM with Microsoft Defender, see [Integrate your SIEM tools with Microsoft Defender XDR](./configure-siem-defender.md).
 
 <a name='microsoft-365-defender-sentinel-integration'></a>
 

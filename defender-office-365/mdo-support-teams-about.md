@@ -1,56 +1,76 @@
 ---
-title: Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams
-f1.keywords: 
-  - NOCSH
-ms.author: chrisda
+title: Microsoft Defender for Office 365 support for Microsoft Teams
 author: chrisda
-manager: deniseb
-audience: Admin
+ms.author: chrisda
 ms.topic: overview
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
-ms.collection: 
+ms.collection:
   - m365-security
   - tier1
-description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365 Plan 2.
+description: Admins can learn about Microsoft Teams features in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 04/03/2025
+ms.date: 04/20/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams
-
-[!include[Prerelease information](../includes/prerelease.md)]
+# Microsoft Defender for Office 365 support for Microsoft Teams
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-With the increased use of collaboration tools like Microsoft Teams, the possibility of malicious attacks using chat messages has also increased. Microsoft Defender for Office 365 already provides the following Teams protection features:
+With the increased use of collaboration tools like Microsoft Teams, the possibility of malicious attacks using chat messages has also increased. This article describes the Microsoft 365 and Microsoft Defender for Office 365 protection features for Microsoft Teams.
+
+All licenses of Microsoft Teams in Microsoft 365 include the following built-in protections:
+
+- [Built-in virus protection in SharePoint, SharePoint Embedded, OneDrive, and Microsoft Teams](anti-malware-protection-for-spo-odfb-teams-about.md)
+- [Microsoft Teams external domain anomalies report](/microsoftteams/teams-analytics-and-reports/external-domain-anomalies-report).
+- **Near real-time URL protection in Teams messages**: Known, malicious URLs in Teams messages are delivered with a warning. Messages found to contain malicious URLs up to 48 hours after delivery also receive a warning. The warning is added to messages in internal and external chats and channels for all URL verdicts (not just malware or high confidence phishing).
+
+  :::image type="content" source="media/teams-message-url-warning.png" alt-text="Screenshot showing a Microsoft Teams message with a URL warning." lightbox="media/teams-message-url-warning.png":::
+
+Microsoft Defender for Office 365 Plan 1 provides the following extra Teams protection features:
 
 - Time of click protection for URLs and files in Teams messages through [Safe Links for Microsoft Teams](safe-links-about.md#safe-links-settings-for-microsoft-teams) and [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
-- Allow/block [URLs](tenant-allow-block-list-urls-configure.md) and [files](tenant-allow-block-list-files-configure.md) inside Teams using Tenant Allow Block Lists.
-
-In Microsoft 365 E5 and Defender for Office 365 Plan 2, we've extended Teams protection with a set of capabilities that are designed to disrupt the attack chain:
-
-- **Report suspicious Teams messages**: Users can report malicious Teams messages. Depending on the reported message settings in the organization, the reported messages go to the specified reporting mailbox, to Microsoft, or both. For more information, see [User reported settings in Teams](submissions-teams.md) and [MC 1037768](https://admin.cloud.microsoft/?ref=MessageCenter/:/messages/MC1037768).
-
+- Allow/block [domains and addresses](tenant-allow-block-list-teams-domains-configure.md), [URLs](tenant-allow-block-list-urls-configure.md) and [files](tenant-allow-block-list-files-configure.md) inside Teams using the Tenant Allow Block List.
 - **Zero-hour auto protection (ZAP) for Teams**: ZAP is an existing email protection feature that detects and neutralizes spam, phishing, and malware messages after delivery by moving the messages to the Junk Email folder or quarantine.
 
-  ZAP for Teams quarantines messages in Teams chats or channels that are found to be malware or high confidence phishing. For more information, see [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
+  ZAP for Teams quarantines messages in internal Teams chats or channels that are found to be malware or high confidence phishing. For more information, see [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
 
   Instructions to configure ZAP for Teams protection are in the next section.
 
-- **Teams messages in quarantine**: As with email messages that are identified as malware or high confidence phishing, only admins are able to manage Teams messages that are quarantined by ZAP for Teams by default. For more information, see [Manage quarantined Teams messages](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-microsoft-teams-quarantined-messages).
+- **Teams messages in quarantine**: By default, only admins are allowed to manage Teams messages quarantined by ZAP for Teams. This is the same default limitation for email messages identified as malware or high confidence phishing. For more information, see [Manage quarantined Teams messages](quarantine-admin-manage-messages-files.md#use-the-microsoft-defender-portal-to-manage-microsoft-teams-quarantined-messages).
 
-- The **Teams message entity panel** is a single place to store all Teams message metadata for immediate SecOps review. Any threats coming from Teams chats, group chats, meeting chats, and other channels can be found in one place as soon as they're assessed. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365 Plan 2](teams-message-entity-panel.md).
+- **Teams message entity panel**: A single place to store all Teams message metadata for immediate SecOps review. Any threats coming from Teams chats, group chats, meeting chats, and other channels can be found in one place as soon as they're assessed. For more information, see [the Teams message entity panel](teams-message-entity-panel.md).
 
-- **Attack simulation training using Teams messages**: To ensure users are resilient to phishing attacks in Microsoft Teams, admins can configure phishing simulations using Teams messages instead of email messages. For more information, see [Microsoft Teams in Attack simulation training](attack-simulation-training-teams.md).
+- **Report Teams items**: Users can report Teams items (messages or calls) as malicious or not malicious. Depending on the reported items settings in the organization, reported items go to the specified reporting mailbox, to Microsoft, or both. For more information, see [User reported settings in Teams](submissions-teams.md) and the following video:
 
-- **Hunting on Teams messages with URLs**: You can now hunt on Teams messages containing URL across three new advanced hunting tables: [MessageEvents](/defender-xdr/advanced-hunting-messageevents-table), [MessagePostDeliveryEvents](/defender-xdr/advanced-hunting-messagepostdeliveryevents-table), and [MessageURLInfo](/defender-xdr/advanced-hunting-messageurlinfo-table).
+Microsoft 365 E5 and Defender for Office 365 Plan 2 extend Teams protection with a set of extra capabilities designed to disrupt the attack chain:
 
-## Configure ZAP for Teams protection in Defender for Office 365 Plan 2
+- **Remove users from Teams chat**: To remediate malicious attacks, you can remove users from teams chats directly from the [Teams message entity panel](teams-message-entity-panel.md#remove-users-from-teams-chats-in-the-teams-message-entity-panel).
+
+- **Hunting on Teams messages with URLs**: You can hunt for Teams messages containing URL across three new advanced hunting tables: [MessageEvents](/defender-xdr/advanced-hunting-messageevents-table), [MessagePostDeliveryEvents](/defender-xdr/advanced-hunting-messagepostdeliveryevents-table), and [MessageURLInfo](/defender-xdr/advanced-hunting-messageurlinfo-table).
+
+These features are summarized in the following table:
+
+|Feature|All Teams<br/>licenses|Defender for Office 365<br/>Plan 1|Defender for Office 365<br/>Plan 2|
+|---|:---:|:---:|:---:|
+|Built-in virus protection (SharePoint, OneDrive, Teams)|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Microsoft Teams external domain anomalies report|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Near real-time URL warnings (up to 48 hours post-delivery)|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Safe Links (time-of-click URL protection)||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Safe Attachments (time-of-click file protection)||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Tenant Allow/Block List (domains, URLs, files)||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Zero-hour auto purge (ZAP) for Teams||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Teams messages in quarantine (admin-managed)||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Teams message entity panel||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|User-reported Teams items||:::image type="icon" source="media/feature_present_icon.png":::|:::image type="icon" source="media/feature_present_icon.png":::|
+|Remove users from Teams chats (admin remediation)|||:::image type="icon" source="media/feature_present_icon.png":::|
+|Advanced hunting on Teams messages|||:::image type="icon" source="media/feature_present_icon.png":::|
+
+<a name='configure-zap-for-teams-protection-in-defender-for-office-365-plan-2'></a>
+
+## Configure ZAP for Teams protection in Defender for Office 365
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **Microsoft Teams protection**. Or, to go directly to the **Microsoft Teams protection** page, use <https://security.microsoft.com/securitysettings/teamsProtectionPolicy>.
 
@@ -63,7 +83,7 @@ In Microsoft 365 E5 and Defender for Office 365 Plan 2, we've extended Teams pro
    - **Quarantine policies** section: You can select the existing quarantine policy to use for messages that are quarantined by ZAP for Teams protection as **Malware** or **High confidence phishing**. Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
      > [!NOTE]
-     > Quarantine notifications are disabled in the policy named AdminOnlyAccessPolicy. To notify recipients that have messages quarantined as malware or high confidence phishing, create or use an existing quarantine policy where quarantine notifications are turned on. For instructions, see [Create quarantine policies in the Microsoft Defender portal](quarantine-policies.md#step-1-create-quarantine-policies-in-the-microsoft-defender-portal).
+     > Currently, quarantined Teams messages are available only to admins, and users don't receive quarantine notifications (the AdminOnlyAccess quarantine policy is used).
 
    - **Exclude these participants** section: Specify the **Users**, **Groups**, or **Domains** to exclude from ZAP for Teams protection. Exclusions matter for message _recipients_, not message _senders_. For more information, see [Zero-hour auto purge (ZAP) in Microsoft Teams](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-in-microsoft-teams).
 
@@ -100,7 +120,7 @@ Get-TeamsProtectionPolicy | Format-List Name,ZapEnabled,HighConfidencePhishQuara
 Get-TeamsProtectionPolicyRule | Format-List Name,TeamsProtectionPolicy,ExceptIfSentTo,ExceptIfSentToMemberOf,ExceptIfRecipientDomainIs
 ```
 
-For detailed syntax and parameter information, see [Get-TeamsProtectionPolicy](/powershell/module/exchange/get-teamsprotectionpolicy) and [Get-TeamsProtectionPolicyRule](/powershell/module/exchange/get-teamsprotectionpolicyrule).
+For detailed syntax and parameter information, see [Get-TeamsProtectionPolicy](/powershell/module/exchangepowershell/get-teamsprotectionpolicy) and [Get-TeamsProtectionPolicyRule](/powershell/module/exchangepowershell/get-teamsprotectionpolicyrule).
 
 #### Use PowerShell to modify the Teams protection policy
 
@@ -116,7 +136,7 @@ This example enables ZAP for Teams and changes the quarantine policy that's used
 Set-TeamsProtectionPolicy -Identity "Teams Protection Policy" -ZapEnabled $true -HighConfidencePhishQuarantineTag AdminOnlyWithNotifications
 ```
 
-For detailed syntax and parameter information, see [Set-TeamsProtectionPolicy](/powershell/module/exchange/set-teamsprotectionpolicy).
+For detailed syntax and parameter information, see [Set-TeamsProtectionPolicy](/powershell/module/exchangepowershell/set-teamsprotectionpolicy).
 
 #### Use PowerShell to create the Teams protection policy rule
 
@@ -137,7 +157,7 @@ This example creates the Teams protection policy rule with members of the group 
 New-TeamsProtectionPolicyRule -Name "Teams Protection Policy Rule" -TeamsProtectionPolicy "Teams Protection Policy" -ExceptIfSentToMemberOf research@contoso.onmicrosoft.com
 ```
 
-For detailed syntax and parameter information, see [New-TeamsProtectionPolicyRule](/powershell/module/exchange/new-teamsprotectionpolicyrule).
+For detailed syntax and parameter information, see [New-TeamsProtectionPolicyRule](/powershell/module/exchangepowershell/new-teamsprotectionpolicyrule).
 
 #### Use PowerShell to modify the Teams protection policy rule
 
@@ -149,7 +169,7 @@ Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" [-ExceptI
 
 **Notes**:
 
-- For information about the syntax for adding, removing, and replacing all values for the _ExceptIfSentTo_, _ExceptIfSentToMemberOf_, and _ExceptIfRecipientDomainIs_ parameters, see the parameter descriptions in [Set-TeamsProtectionPolicyRule](/powershell/module/exchange/set-teamsprotectionpolicyrule).
+- For information about the syntax for adding, removing, and replacing all values for the _ExceptIfSentTo_, _ExceptIfSentToMemberOf_, and _ExceptIfRecipientDomainIs_ parameters, see the parameter descriptions in [Set-TeamsProtectionPolicyRule](/powershell/module/exchangepowershell/set-teamsprotectionpolicyrule).
 - To empty the _ExceptIfSentTo_, _ExceptIfSentToMemberOf_, or _ExceptIfRecipientDomainIs_ parameters, use the value `$null`.
 
 This example modifies the existing Teams protection policy rule by excluding recipients in the domains research.contoso.com and research.contoso.net from ZAP for Teams protection.
@@ -158,7 +178,7 @@ This example modifies the existing Teams protection policy rule by excluding rec
 Set-TeamsProtectionPolicyRule -Identity "Teams Protection Policy Rule" -ExceptIfRecipientDomainIs research.contoso.com,research.contoso.net
 ```
 
-For detailed syntax and parameter information, see [Set-TeamsProtectionPolicyRule](/powershell/module/exchange/set-teamsprotectionpolicyrule).
+For detailed syntax and parameter information, see [Set-TeamsProtectionPolicyRule](/powershell/module/exchangepowershell/set-teamsprotectionpolicyrule).
 
 ## See also
 

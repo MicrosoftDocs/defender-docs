@@ -6,19 +6,16 @@ ms.service: defender-experts-for-xdr
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-ms.author: vpattnaik
-author: vpattnai
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
-ms.topic: conceptual
+ms.topic: article
 ms.custom: 
 - cx-ti
 - cx-dex
-search.appverid: met150
 ms.date: 03/05/2025
 appliesto:
   - Microsoft Defender XDR
@@ -28,7 +25,7 @@ appliesto:
 
 **Applies to:**
 
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender](microsoft-365-defender.md)
 
 To realize the benefits of Microsoft Defender Experts for XDR, you and your security operations center (SOC) team must take note of the following considerations to ensure timely incident remediation, improve your organization's security posture, and protect your organization from threats.
 

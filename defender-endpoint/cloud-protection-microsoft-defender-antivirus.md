@@ -3,33 +3,26 @@ title: Cloud protection and Microsoft Defender Antivirus
 description: Learn about cloud protection and Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.reviewer: mkaminska
-manager: deniseb
 ms.custom: nextgen
 ms.subservice: ngp
-ms.topic: conceptual
-ms.date: 03/26/2025
+ms.topic: concept-article
+ms.date: 10/20/2025
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+  - Microsoft Defender for Business
+  - Microsoft Defender for Individuals
 
+---
 # Cloud protection and Microsoft Defender Antivirus
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Individuals](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals)
-- Microsoft Defender Antivirus
-
-**Platforms**
-- Windows
 
 Next-generation technologies in Microsoft Defender Antivirus provide near-instant, automated protection against new and emerging threats. To identify new threats dynamically, next-generation technologies work with large sets of interconnected data in the Microsoft Intelligent Security Graph and powerful artificial intelligence (AI) systems driven by advanced machine learning models. Cloud protection works together with Microsoft Defender Antivirus to deliver accurate, real-time, and intelligent protection. 
 
@@ -37,6 +30,12 @@ Next-generation technologies in Microsoft Defender Antivirus provide near-instan
 
 > [!TIP]
 > We recommend keeping cloud protection turned on. To learn more, see [Why cloud protection should be turned on](enable-cloud-protection-microsoft-defender-antivirus.md#why-cloud-protection-should-be-turned-on). 
+
+## Prerequisites
+
+### Supported operating systems
+
+- Windows
 
 ## How cloud protection works
 
@@ -60,11 +59,14 @@ The following blog posts illustrate how cloud protection works:
 > [!NOTE]
 > The Microsoft Defender Antivirus cloud service is a mechanism for delivering updated protection to your network and endpoints. As a cloud service, it is not simply protection for files stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection to your endpoints at a rate that is far faster than traditional security intelligence updates.
 
+
+
 ## How to get cloud protection 
 
 Cloud protection is enabled by default. However, you might need to re-enable it if it has been disabled as part of previous organizational policies. To learn more, see [Turn on cloud protection](enable-cloud-protection-microsoft-defender-antivirus.md).
 
 If your subscription includes Windows 10 E5, you can take advantage of emergency dynamic intelligence updates, which provide near real-time protection from emerging threats. When you turn on cloud protection, fixes for malware issues can be delivered via the cloud within minutes, instead of waiting for the next update. See [Configure Microsoft Defender Antivirus to automatically receive new protection updates based on reports from our cloud service](manage-event-based-updates-microsoft-defender-antivirus.md#cloud-report-updates).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+
 

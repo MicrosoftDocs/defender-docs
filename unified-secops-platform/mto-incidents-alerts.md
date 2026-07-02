@@ -1,23 +1,19 @@
 ---
 title: View and manage incidents and alerts in Microsoft Defender multitenant management
 description: Learn about incidents and alerts in Microsoft Defender multitenant management
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: deniseb
-author: denisebmsft
-ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
+author: guywi-ms
+ms.author: guywild
 ms.collection: 
   - m365-security
   - highpri
   - tier1
   - usx-security
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/20/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # View and manage incidents and alerts in Microsoft Defender multitenant management

@@ -1,13 +1,10 @@
 ---
 title: Microsoft Defender for Endpoint Controlled folder access (CFA) demonstrations
 description: Demonstrates how Controlled Folder Access protects valuable data from malicious apps and threats, such as ransomware.
-search.appverid: met150
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
 - m365-security
 - tier2
@@ -15,14 +12,13 @@ ms.collection:
 ms.topic: article
 ms.subservice: asr
 ms.date: 10/11/2024
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 ---
 
 # Controlled folder access (CFA) demonstrations (block ransomware)
 
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Controlled folder access helps you protect valuable data from malicious apps and threats, such as ransomware. Microsoft Defender Antivirus assesses all apps (any executable file, including .exe, .scr, .dll files and others) and then determines if the app is malicious or safe. If the app is determined to be malicious or suspicious, then the app can't make changes to any files in any protected folder.
 
@@ -73,9 +69,9 @@ Or, you can perform these manual steps instead:
 
 1. Create a folder under `c:` named `demo`, as in `c:\demo`.
 
-2. Save this [clean file](https://demo.wd.microsoft.com/Content/testfile_safe.txt) into `c:\demo` (we need something to encrypt).
+1. Save this [clean file](https://demo.wd.microsoft.com/Content/testfile_safe.txt) into `c:\demo` (we need something to encrypt).
 
-3. Run the PowerShell commands listed earlier in this article.
+1. Run the PowerShell commands listed earlier in this article.
 
 Next, check that status of the *Aggressive Ransomware Prevention* ASR rule and disable it for the duration of this test if it's enabled:
 
@@ -99,15 +95,15 @@ Add-MpPreference -AttackSurfaceReductionRules_Ids C1DB55AB-C21A-4637-BB3F-A12568
    Set-MpPreference -EnableControlledFolderAccess Enabled
    ```
 
-2. Add the demo folder to protected folders list using PowerShell command:
+1. Add the demo folder to protected folders list using PowerShell command:
 
    ```powershell
    Set-MpPreference -ControlledFolderAccessProtectedFolders C:\demo\
    ```
 
-3. Download the ransomware [test file](https://demo.wd.microsoft.com/Content/ransomware_testfile_unsigned.exe).
+1. Download the ransomware [test file](https://demo.wd.microsoft.com/Content/ransomware_testfile_unsigned.exe).
 
-4. Execute the ransomware test file. Note that it isn't ransomware; it simply tries to encrypt `c:\demo`.
+1. Execute the ransomware test file. Note that it isn't ransomware; it simply tries to encrypt `c:\demo`.
 
 #### Scenario 1 expected results
 
@@ -121,7 +117,7 @@ About five seconds after executing the ransomware test file, you should see a no
    Set-MpPreference -EnableControlledFolderAccess Disabled
    ```
 
-2. Execute the ransomware [test file](https://demo.wd.microsoft.com/Content/ransomware_testfile_unsigned.exe).
+1. Execute the ransomware [test file](https://demo.wd.microsoft.com/Content/ransomware_testfile_unsigned.exe).
 
 #### Scenario 2 expected results
 
@@ -136,9 +132,9 @@ About five seconds after executing the ransomware test file, you should see a no
    Set-MpPreference -EnableControlledFolderAccess Disabled
    ```
 
-2. Clean up `c:\demo` encryption by using the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe)
+1. Clean up `c:\demo` encryption by using the [encrypt/decrypt file](https://demo.wd.microsoft.com/Content/ransomware_cleanup_encrypt_decrypt.exe)
 
-3. If the *Aggressive Ransomware Prevention* ASR rule was enabled and you disabled it at the beginning of this test, enable it again:
+1. If the *Aggressive Ransomware Prevention* ASR rule was enabled and you disabled it at the beginning of this test, enable it again:
 
    ```powershell
    Add-MpPreference -AttackSurfaceReductionRules_Ids C1DB55AB-C21A-4637-BB3F-A12568109D35 -AttackSurfaceReductionRules_Actions Enabled
@@ -148,4 +144,5 @@ About five seconds after executing the ransomware test file, you should see a no
 
 [Controlled folder access](/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard?ocid=wd-av-demo-cfa-bottom)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+
