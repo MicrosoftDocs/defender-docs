@@ -11,19 +11,19 @@ This article lists weekly operational activities that we recommend you perform w
 
 ## Review SaaS security posture management
 
-**Where**: In the Microsoft Defender XDR Portal, select **Secure Score**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Secure Score**.
 
 **Persona**: Security and Compliance administrators, SOC analysts
 
 SaaS Security Posture Management (SSPM) capabilities in Microsoft Defender for Cloud Apps enable you to get deeper visibility, automatically identify SaaS app misconfigurations, and help you remediate those misconfigurations to improve your organizational security. 
 
-Defender for Cloud Apps SSPM features are integrated into Microsoft Defender XDR so that security teams can see their holistic security posture across the enterprise with Microsoft Secure Score.
+Defender for Cloud Apps SSPM features are integrated into Microsoft Defender so that security teams can see their holistic security posture across the enterprise with Microsoft Secure Score.
 
 To view Secure Score recommendations per product, in Microsoft Defender XDR, select **Secure Score** > **Recommended actions**, and group the list by **Product**.
 
 ## Check app connectors, log collectors, and SIEM agent health
 
-**Where**: In the Microsoft Defender XDR Portal, select **Settings > Cloud apps**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), select **Settings > Cloud apps**.
 
 **Persona**: Security and Compliance administrators, SOC analysts
 
@@ -33,7 +33,7 @@ If you're using a SIEM agent, system alerts can be sent directly to your SIEM sy
 
 We also recommend reviewing the following settings to ensure that they're correct and up to date:
 
-|Status to check  |Where to check in Microsoft Defender XDR  |
+|Status to check  |Where to check in the Defender portal  |
 |---------|---------|
 |**App connectors**     |  **Settings > Cloud apps > Connected apps > App Connectors**       |
 |**Conditional Access App Control apps**     |  **Settings > Cloud apps > Connected apps > Conditional Access App Control apps**       |
@@ -59,7 +59,7 @@ For more information, see [Track new and changed features in the Microsoft 365 M
 
 ## Review the governance log
 
-**Where**: In the Microsoft Defender XDR Portal, under **Cloud apps**, select **Governance log**.
+**Where**: In the [Microsoft Defender portal](https://security.microsoft.com), under **Cloud apps**, select **Governance log**.
 
 **Persona**: Security and Compliance administrators
 

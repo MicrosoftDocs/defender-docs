@@ -3,6 +3,7 @@ title: Configure activity monitoring to protect user privacy
 description: This article provides information about how to configure your activity monitoring to comply with your user privacy policy.
 ms.date: 01/29/2023
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Configure activity monitoring to protect user privacy
 
@@ -66,4 +67,4 @@ Once an admin has been granted the appropriate permission to view private activi
 > When you export activities with the **Show private activities** option selected, the activities inside the export are still private, and no activity details are exposed.
 >  
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support)

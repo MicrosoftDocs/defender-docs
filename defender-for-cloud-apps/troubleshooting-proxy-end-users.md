@@ -3,6 +3,7 @@ title: Troubleshooting access and session controls for end-users | Microsoft Def
 description: This article describes how to troubleshoot common access and session control issues experienced by end-users with Microsoft Defender for Cloud Apps.
 ms.date: 05/15/2024
 ms.topic: troubleshooting
+ms.custom: sfi-image-nochange
 ---
 
 # Troubleshooting access and session controls for end-users
@@ -69,7 +70,7 @@ If an end user receives a general failure after signing into an app from a non-M
  
     ![Screenshot of the SAML information page.](media/proxy-deploy-add-idp-ext-conf.png).
    
-1. If you still can't access the app, open a [support ticket](support-and-ts.md).
+1. If you still can't access the app, open a [support ticket](/defender-xdr/contact-defender-support).
 
 ## Something Went Wrong page appears
 
@@ -115,7 +116,7 @@ If the session is being proxied, use the following steps to verify the policy:
 
         1. Go to the [Microsoft 365 admin portal](https://admin.microsoft.com/AdminPortal/Home?#/servicehealth) and monitor notifications about system downtime.
 
-1. If you still not able to see blocked activity, open a [support ticket](support-and-ts.md).
+1. If you still not able to see blocked activity, open a [support ticket](/defender-xdr/contact-defender-support).
 
 ## Downloads aren't being protected
 
@@ -155,7 +156,7 @@ If the end user can't successfully encrypt the document, use the following steps
 
     If the file type isn't supported, in the session policy, you can select **Block download of any file that in unsupported by native protection or where native protection is unsuccessful**.
 
-1. If you still not able to see blocked activity, open a [support ticket](support-and-ts.md).
+1. If you still not able to see blocked activity, open a [support ticket](/defender-xdr/contact-defender-support).
 
 ## Navigating to a particular URL of a suffixed app and landing on a generic page
 
@@ -174,7 +175,7 @@ For example, if the original URL is:
 `https://www.github.com/organization/threads/threadnumber`, change it to
 `https://www.github.com.mcas.ms/organization/threads/threadnumber`
 
-Microsoft Edge users benefit from in-browser protection, aren't redirected to a reverse proxy, and shouldn't need the `.mcas.ms` suffix added. For apps experiencing context loss, open a [support ticket](support-and-ts.md).
+Microsoft Edge users benefit from in-browser protection, aren't redirected to a reverse proxy, and shouldn't need the `.mcas.ms` suffix added. For apps experiencing context loss, open a [support ticket](/defender-xdr/contact-defender-support).
 
 <a name="app-additional-considerations"></a>
 

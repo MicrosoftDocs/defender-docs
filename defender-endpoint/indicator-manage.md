@@ -1,51 +1,50 @@
-﻿---
-title: Manage indicators
+---
+title: Manage indicators in Microsoft Defender for Endpoint
 ms.reviewer:
 description: Manage indicators for a file hash, IP address, URLs, or domains that define the detection, prevention, and exclusion of entities.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-asr
 ms.topic: how-to
 ms.subservice: asr
-search.appverid: met150
-ms.date: 10/28/2024
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
-# Manage indicators
+# Manage indicators in Microsoft Defender for Endpoint
 
 
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select the tab of the entity type you'd like to manage.
+1. Select the tab for the indicator type you want to manage, such as **File hashes**, **IP addresses**, **URLs/domains**, or **Certificates**.
 
-3. Update the details of the indicator and select **Save** or select the **Delete** button if you'd like to remove the entity from the list.
+1. Update the indicator details, and then select **Save**. To remove the indicator from the list, select **Delete**.
 
 ## Import a list of IoCs
 
-You can also choose to upload a CSV file that defines the attributes of indicators, the action to be taken, and other details.
+You can upload indicators from a CSV file that defines indicator attributes, actions, and other details.
 
-Download the sample CSV to know the supported column attributes.
+Download the sample indicators CSV file from the import page to review the supported column attributes.
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Indicators** (under **Rules**).
 
-2. Select the tab of the entity type you'd like to import indicators for.
+1. Select the tab of the entity type you'd like to import indicators for.
 
-3. Select **Import** \> **Choose file**.
+1. Select **Import** \> **Choose file**.
 
-4. Select **Import**. Repeat for all the files you'd like to import.
+1. Select **Import**. Repeat for all the files you'd like to import.
 
-5. Select **Done**.
+1. Select **Done**.
 
 > [!NOTE]
 > Only 500 indicators can be uploaded for each batch. 
@@ -56,7 +55,7 @@ The following table shows the supported parameters.
 | Parameter|Type|Description |
 | ---| ---| --- |
 | indicatorType|Enum|Type of the indicator. Possible values are: `FileSha1`, `FileSha256`, `IpAddress`, `DomainName`, and `Url`. <br/> **Required** |
-| indicatorValue|String|Identity of the [Indicator](api/ti-indicator.md) entity. <br/> **Required** |
+| indicatorValue|String|Identity of the [Indicator API resource](api/ti-indicator.md) entity. <br/> **Required** |
 | action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: `Allowed`, `Audit`, `BlockAndRemediate`, `Warn`, and `Block`. <br/> **Required** |
 | title|String|Indicator alert title.<br/> **Required** |
 | description|String| Description of the indicator.<br/> **Required** |
@@ -84,5 +83,5 @@ Watch this video to learn how Microsoft Defender for Endpoint provides multiple 
 - [Create indicators based on certificates](indicator-certificates.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

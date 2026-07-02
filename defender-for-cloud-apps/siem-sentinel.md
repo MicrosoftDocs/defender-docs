@@ -1,12 +1,14 @@
 ---
 title: Microsoft Sentinel integration 
-description: This article provides information integrating Microsoft Sentinel with Defender for Cloud Apps.
-ms.date: 10/29/2025
+description: Learn how to integrate Microsoft Sentinel with Microsoft Defender for Cloud Apps to centralize monitoring of alerts and discovery data.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart 
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# Microsoft Sentinel integration (Preview)
+# Set up Microsoft Sentinel integration for Defender for Cloud Apps (Preview)
 
 > [!IMPORTANT]
 > **Deprecation Notice: Microsoft Defender for Cloud Apps SIEM Agents**
@@ -14,12 +16,12 @@ ms.reviewer: Naama-Goldbart
 > As part of our ongoing convergence process across Microsoft Defender workloads, Microsoft Defender for Cloud Apps SIEM agents will be deprecated starting **November 2025**. 
 >
 >
-> Existing Microsoft Defender for Cloud Apps SIEM agents will continue to function as is until that time. As of June 19, 2025, **no new SIEM agents can be configured**, but [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), will remain supported and can still be added.
+> Existing Microsoft Defender for Cloud Apps SIEM agents will continue to function as is until November 2025. As of June 19, 2025, **no new SIEM agents can be configured**, but [Microsoft Sentinel](siem-sentinel.md) agent integration (Preview), will remain supported and can still be added.
 >
 > We recommend transitioning to APIs that support the management of activities and alerts data from multiple workloads.
 > These APIs enhance security monitoring and management and offer additional capabilities using data from multiple Microsoft Defender workloads.
 >
-> To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to the following supported APIs:
+> To ensure continuity and access to data currently available through Microsoft Defender for Cloud Apps SIEM agents, we recommend transitioning to supported APIs such as the Microsoft Defender XDR Streaming API, IdentityLogonEvents, the Microsoft Graph Security Alerts API, and the Microsoft Defender XDR incidents API:
 >
 > - For alerts and activities, see: [Microsoft Defender XDR Streaming API](/defender-xdr/streaming-api).
 > - For Microsoft Entra ID Protection logon events, see [IdentityLogonEvents](/defender-xdr/advanced-hunting-identitylogonevents-table) table in the advanced hunting schema. 
@@ -34,7 +36,7 @@ Benefits of using Microsoft Sentinel include:
 * Out-of-the-box visualizations.
 * Use tools such as Microsoft Power BI or Microsoft Sentinel workbooks to create your own discovery data visualizations that fit your organizational needs.
 
-Additional integration solutions include:
+Other supported integration solutions for Defender for Cloud Apps include:
 
 * **Generic SIEMs** - Integrate Defender for Cloud Apps with your generic SIEM server. For information in integrating with a Generic SIEM, see [Generic SIEM integration](siem.md).
 * **Microsoft security graph API** - An intermediary service (or broker) that provides a single programmatic interface to connect multiple security providers. For more information, see [Security solution integrations using the Microsoft Graph Security API](/graph/security-integration#list-of-connectors-from-microsoft).
@@ -67,7 +69,7 @@ For more information, see:
 
 1. Under **System**, select **SIEM agents > Add SIEM agent > Sentinel**. For example:
 
-    ![Screenshot showing Add SIEM integration menu.](media/siem0.png)
+    ![Screenshot of the SIEM agents page in Defender for Cloud Apps showing the Add SIEM agent option with Sentinel selected.](media/siem0.png)
 
     > [!NOTE]
     > The option to add Microsoft Sentinel is not available if you have previously performed the integration.
@@ -78,11 +80,11 @@ For more information, see:
 
     For example:
 
-    ![Screenshot showing start page of Configure Microsoft Sentinel integration.](media/siem-sentinel-configuration.png)
+    ![Screenshot of the Configure Microsoft Sentinel integration wizard where you select alerts and discovery logs data types to forward.](media/siem-sentinel-configuration.png)
 
-1. Select **Next**, and continue to Microsoft Sentinel to finalize the integration. For information on configuring Microsoft Sentinel, see [the Microsoft Sentinel data connector for Defender for Cloud Apps](/azure/sentinel/data-connectors-reference#microsoft-defender-for-cloud-apps). For example:
+1. Select **Next**, and continue to Microsoft Sentinel to finalize the integration. For information on configuring Microsoft Sentinel, see [Microsoft Sentinel data connector for Defender for Cloud Apps](/azure/sentinel/data-connectors-reference#microsoft-defender-for-cloud-apps). For example:
 
-    ![Screenshot showing finish page of Configure Microsoft Sentinel integration.](media/siem-sentinel-configuration-complete.png)
+    ![Screenshot of the completion page confirming that the Microsoft Sentinel integration setup is finished and ready to finalize in Microsoft Sentinel.](media/siem-sentinel-configuration-complete.png)
 
 > [!NOTE]
 > New discovery logs will usually appear in Microsoft Sentinel within 15 minutes of configuring them in Defender for Cloud Apps. However, it may take longer depending on system environment conditions. For more information, see [Handle ingestion delay in analytics rules](/azure/sentinel/ingestion-delay).
@@ -102,7 +104,7 @@ The following table describes each field in the **McasShadowItReporting** schema
 
 | Field | Type | Description | Examples |
 | --- | --- | --- | --- |
-| **TenantId** | String | Workspace ID | b459b4u5-912x-46d5-9cb1-p43069212nb4 |
+| **TenantId** | String | Workspace ID | aaaabbbb-0000-cccc-1111-dddd2222eeee |
 | **SourceSystem** | String | Source system – static value | Azure |
 | **TimeGenerated [UTC]** | DateTime | Date of discovery data | 2019-07-23T11:00:35.858Z |
 | **StreamName** | String | Name of the specific stream | Marketing Department |
@@ -125,37 +127,39 @@ The following table describes each field in the **McasShadowItReporting** schema
 
 Once the integration is completed, you can also use the Defender for Cloud Apps data stored in Microsoft Sentinel in other tools.
 
-This section describes how you can use Microsoft Power BI to easily shape and combine data to build reports and dashboards that meet the needs of your organization.
+You can use Microsoft Power BI with Defender for Cloud Apps data in Microsoft Sentinel to shape and combine data and build reports and dashboards that meet the needs of your organization.
 
 To get started:
 
 1. In Power BI, import queries from Microsoft Sentinel for Defender for Cloud Apps data. For more information, see [Import Azure Monitor log data into Power BI](/azure/azure-monitor/logs/log-powerbi).
-1. [Install the Defender for Cloud Apps Shadow IT Discovery app](https://aka.ms/MCASShadowITReporting) and [connect it](#connect-the-defender-for-cloud-apps-app) to your discovery log data to view the built-in Shadow IT Discovery dashboard.
+1. [Install the Defender for Cloud Apps Shadow IT Discovery app](https://aka.ms/MCASShadowITReporting) and connect it to your discovery log data to view the built-in Shadow IT Discovery dashboard. To connect the app, open it in Power BI, select **Connect**, enter your Microsoft Sentinel workspace ID, and then sign in. For detailed steps, see [Connect the Defender for Cloud Apps app](#connect-the-defender-for-cloud-apps-app).
 
     > [!NOTE]
     > Currently, the app is not published on Microsoft AppSource. Therefore, you may need to contact your Power BI admin for permissions to install the app.
 
     For example:
     
-    ![Screenshot showing the Shadow IT Discovery dashboard.](media/siem-sentinel-configuration-powerbi-dashboard.png)
+    ![Screenshot of the Shadow IT Discovery dashboard in Power BI showing discovered cloud app usage and activity metrics from Defender for Cloud Apps.](media/siem-sentinel-configuration-powerbi-dashboard.png)
 
 1. Optionally, build custom dashboards in Power BI Desktop and tweak it to fit the visual analytics and reporting requirements of your organization.
 
 ### Connect the Defender for Cloud Apps app
 
+Use the following steps to connect the Defender for Cloud Apps Shadow IT Discovery app in Power BI.
+
 1. In Power BI, select **Apps > Shadow IT Discovery** app.
 
 1. On the **Get started with your new app** page, select **Connect**. For example:
 
-    ![Screenshot showing connect app data page.](media/siem-sentinel-powerbi-connect.png)
+    ![Screenshot of the Power BI Get started with your new app page where you select Connect to link the Shadow IT Discovery app to Microsoft Sentinel data.](media/siem-sentinel-powerbi-connect.png)
 
 1. On the workspace ID page, enter your Microsoft Sentinel workspace ID as displayed in your log analytics overview page, and then select **Next**. For example:
 
-    ![Screenshot showing request for workspace ID.](media/siem-sentinel-powerbi-workspace-id.png)
+    ![Screenshot of the Power BI prompt to enter the Microsoft Sentinel workspace ID for connecting the Shadow IT Discovery app.](media/siem-sentinel-powerbi-workspace-id.png)
 
 1. On the authentication page, specify the authentication method and privacy level, and then select **Sign in**. For example:
 
-    ![Screenshot showing the authentication page.](media/siem-sentinel-powerbi-authentication.png)
+    ![Screenshot of the authentication page for signing in to connect the Power BI Shadow IT Discovery app to Microsoft Sentinel data.](media/siem-sentinel-powerbi-authentication.png)
 
 1. After connecting your data, go to the workspace **Datasets** tab and select **Refresh**. This will update the report with your own data.
 

@@ -1,12 +1,9 @@
 ---
 title: Investigate security metrics in Microsoft Security Exposure Management
 description: Learn how to investigate metrics in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: rayne-wiselman
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 11/18/2024
+ms.custom: sfi-image-nochange
 
 ---
 

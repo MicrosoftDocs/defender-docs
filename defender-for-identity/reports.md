@@ -22,7 +22,7 @@ Available reports include:
 |**Summary**| Presents a dashboard of your system status, including: <br><br>- **Summary**: A summary of detected network activity <br>- **Open health issues**: Lists Defender for Identity health issues you should take care of. <br><br> Suspicious activities and health issues are listed by type. |
 |**Modification to sensitive groups**     |    Lists every time a modification is made to sensitive groups, such as admins, or manually tagged accounts or groups. <br><br>If you're using Defender for Identity standalone sensors, make sure that [events are forwarded from your domain controllers to the standalone sensors](deploy/configure-event-forwarding.md) in order to receive a full report about your sensitive groups.     |
 |**Passwords exposed in cleartext**     | Lists all source computer and account passwords detected by Defender for Identity being sent in clear text. <br><br>**Note**: Some services use the LDAP non-secure protocol to send account credentials in plain text. This can even happen for sensitive accounts. Attackers monitoring network traffic can catch and then reuse these credentials for malicious purposes.     |
-| **Lateral movement paths to sensitive accounts** | Lists the sensitive accounts that are exposed via lateral movement paths, for the selected report period. <br><br>For more information, see [Lateral movement paths](understand-lateral-movement-paths.md). |
+
 
 ## Generate a report on demand
 
@@ -72,5 +72,4 @@ To remove a scheduled report and stop it from being sent:
 ## Related content
 
 - [Investigate assets](investigate-assets.md)
-- [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md)
 - [Microsoft Defender for Identity's security posture assessments](security-assessment.md)

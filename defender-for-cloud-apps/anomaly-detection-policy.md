@@ -4,6 +4,7 @@ description: This article provides a description of Anomaly detection policies a
 ms.date: 03/01/2023
 ms.topic: how-to
 ms.reviewer: Ronen-Refaeli
+ms.custom: sfi-image-nochange
 ---
 
 # Create Defender for Cloud Apps anomaly detection policies
@@ -34,6 +35,9 @@ Based on the policy results, security alerts are triggered. Defender for Cloud A
 > - [Suspicious email deletion activity](#suspicious-email-deletion-activity-preview)
 > - [Activity from anonymous IP addresses](#activity-from-anonymous-ip-addresses)
 > - [Suspicious inbox forwarding](#suspicious-inbox-forwarding).
+> - [Unusual ISP for an OAuth App](#unusual-isp-for-an-oauth-app).
+> - [Suspicious file access activity (by user)](#unusual-activities-by-user).
+> - [Ransomware activity](#ransomware-activity).
 >
 > You will continue to receive the same standard of protection without disruption to your existing security coverage. No action is required from your side.
 
@@ -89,6 +93,9 @@ This detection identifies that users were active from an IP address that has bee
 
 ### Ransomware activity
 
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to Ransomware payment instruction file uploaded to {Application}. If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
+
 Defender for Cloud Apps extended its ransomware detection capabilities with anomaly detection to ensure a more comprehensive coverage against sophisticated Ransomware attacks. Using our security research expertise to identify behavioral patterns that reflect ransomware activity, Defender for Cloud Apps ensures holistic and robust protection. If Defender for Cloud Apps identifies, for example, a high rate of file uploads or file deletion activities it may represent an adverse encryption process. This data is collected in the logs received from connected APIs and is then combined with learned behavioral patterns and threat intelligence, for example, known ransomware extensions. For more information about how Defender for Cloud Apps detects ransomware, see [Protecting your organization against ransomware](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware).
 
 ### Activity performed by terminated user
@@ -101,7 +108,7 @@ The detection looks for users whose accounts were deleted in Microsoft Entra ID,
 ### Activity from suspicious IP addresses
 
 > [!NOTE]
-> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Successful logon from a suspicious IP address**.
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **Successful logon from a suspicious IP address** and **Activity from a password-spray associated IP address**.
 >
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
@@ -146,6 +153,11 @@ Scans the OAuth apps connected to your environment and triggers an alert when an
 
 ### Unusual ISP for an OAuth App
 
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model and renamed to **OAuth application activity from an unknown ISP**.
+>
+> If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
+
 This policy profiles your environment and triggers alerts when an OAuth app connects to your cloud applications from an uncommon ISP. This policy may indicate that an attacker tried to use a legitimate compromised app to perform malicious activities on your cloud applications.
 
 ### Unusual activities (by user)
@@ -161,7 +173,10 @@ These detections identify users who perform:
 * Unusual multiple VM creation activities (preview)
 * Unusual multiple storage deletion activities (preview)
 * Unusual region for cloud resource (preview)
-* Unusual file access
+
+> [!NOTE]
+> As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, the policy with the title "Suspicious file access activity (by user)" has been disabled, migrated to the new dynamic model and renamed to **Suspicious file access indicative of lateral movement** and **Suspicious file access from untrusted ISP and user agent with malicious IP indicator**.
+> If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
 These policies look for activities within a single session with respect to the baseline learned, which could indicate on a breach attempt. These detections leverage a machine-learning algorithm that profiles the users log on pattern and reduces false positives. These detections are part of the heuristic anomaly detection engine that profiles your environment and triggers alerts with respect to a baseline that was learned on your organization's activity.
 
@@ -229,14 +244,10 @@ You can triage the various alerts triggered by the new anomaly detection policie
    
 1. For malware infected files, After files are detected, you can then see a list of **Infected files**. Select the malware file name in the file drawer to open a malware report that provides you with information about that type of malware the file is infected with.
 
-## Related videos
-
-> [!div class="nextstepaction"]
-> [Threat protection webinar](webinars.md#on-demand-webinars)
 
 ## Next steps
 
 > [!div class="nextstepaction"]
 > [Best practices for protecting your organization](best-practices.md)
 
-[!INCLUDE [Open support ticket](includes/support.md)]
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support)

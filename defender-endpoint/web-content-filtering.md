@@ -1,33 +1,27 @@
-﻿---
+---
 title: Web content filtering
 description: Use web content filtering in Microsoft Defender for Endpoint to track and regulate access to websites based on their content categories.
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: lwainstein
+author: limwainstein
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 08/18/2025
-manager: bagol
-audience: ITPro
+ms.date: 06/16/2026
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
 ms.topic: how-to
 ms.subservice: asr
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-
+ai-usage: ai-assisted
 ---
-# Web content filtering
 
-
-> [!TIP]
-
+# Web content filtering in Microsoft Defender for Endpoint
 
 ## What is web content filtering?
 
@@ -35,9 +29,11 @@ Web content filtering is part of the [Web protection](web-protection-overview.md
 
 Configure policies across your device groups to block selected categories. Blocking a category prevents users within specified device groups from accessing URLs associated with the category. For any category that's not blocked, the URLs are automatically audited. Your users can access audited URLs without disruption, and you gather access statistics to help create a more custom policy decision. Your users see a block notification if an element on the page they're viewing is making calls to a blocked resource.
 
-Web content filtering is available in major web browsers, with blocks performed by Windows Defender SmartScreen (Microsoft Edge) and network protection (Chrome, Firefox, Brave, and Opera). For more information about browser support, see the [prerequisites](#prerequisites) section.
+Web content filtering is available in major web browsers, with blocks performed by Windows Defender SmartScreen (Microsoft Edge) and network protection (Chrome, Firefox, Brave, and Opera). Supported browsers include Microsoft Edge, Google Chrome, Mozilla Firefox, Brave, Opera, and Internet Explorer. For the full list of requirements, see the [web content filtering prerequisites](#prerequisites) section in this article.
 
 ## Benefits of web content filtering
+
+Web content filtering provides the following benefits:
 
 - Users are prevented from accessing websites in blocked categories, whether they're browsing on-premises or away.
 - Your security team can access web reports in the same central location, with visibility over actual blocks and web usage.
@@ -48,15 +44,16 @@ Web content filtering is available in major web browsers, with blocks performed 
 
 Ensure you meet the requirements described in the following table:
 
-| Requirement | Description |
-|:---|:---|
-| Subscription | Your subscription must include one of the following plans:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 A5<br/>- Microsoft Defender Suite<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 or Plan 2](/defender-xdr/eval-defender-endpoint-overview)<br/>- [Microsoft Defender for Business](/defender-business/mdb-overview)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
-| Portal access | You must have access to the [Microsoft Defender portal](https://security.microsoft.com). |
-| Operating system | Your organization's devices must be running one of the following operating systems with the [latest antivirus/antimalware updates](microsoft-defender-antivirus-updates.md): <br/>- Windows 11<br/>- Windows 10 Anniversary Update (version 1607) or later <br/>- Windows Server 2019 or later <br/>- For macOS availability, see [Network Protection for macOS](network-protection-macos.md)<br/>- For Linux availability, see [Network Protection for Linux](network-protection-linux.md)|
-| Browser | Your devices must be running one of the following browsers: <br/>- Microsoft Edge<br/>- Google Chrome<br/>- Mozilla Firefox<br/>- Brave<br/>- Opera<br/>- Internet Explorer|
-|Related protection | [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and [network protection](network-protection.md) must be enabled on your organization's devices. |
+|Requirement|Description|
+|---|---|
+|Subscription|Your subscription must include one of the following plans:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 A5<br/>- Microsoft Defender Suite<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 or Plan 2](/defender-xdr/eval-defender-endpoint-overview)<br/>- [Microsoft Defender for Business](/defender-business/mdb-overview)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
+|Portal access|You must have access to the [Microsoft Defender portal](https://security.microsoft.com).|
+|Operating system|Your organization's devices must be running one of the following operating systems with the [latest antivirus/antimalware updates](microsoft-defender-antivirus-updates.md): <br/>- Windows 11<br/>- Windows 10 Anniversary Update (version 1607) or later <br/>- Windows Server 2019 or later <br/>- For macOS availability, see [Network Protection for macOS](network-protection-macos.md)<br/>- For Linux availability, see [Network Protection for Linux](network-protection-linux.md)|
+|Browser|Your devices must be running one of the following browsers: <br/>- Microsoft Edge<br/>- Google Chrome<br/>- Mozilla Firefox<br/>- Brave<br/>- Opera<br/>- Internet Explorer|
+|Related protection|[Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and [network protection](network-protection.md) must be enabled on your organization's devices.|
 
-## Data handling
+<a name="data-handling"></a>
+## Web content filtering data storage and privacy
 
 Data is stored in the region that was selected as part of your [Microsoft Defender for Endpoint data handling settings](data-storage-privacy.md). Your data won't leave the data center in that region. Your data won't be shared with any third parties, including our data providers.
 
@@ -73,27 +70,23 @@ The result is that categories 1-4 are all blocked, as illustrated in the followi
 
 ## Turn on web content filtering
 
-1. Sign into the [Microsoft Defender portal](https://security.microsoft.com).
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **System** \> **Settings** \> **Endpoints** \> **General** section \> **Advanced features**. Or, to go directly to the **Advanced features** page, use <https://security.microsoft.com/securitysettings/endpoints/integration>.
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced Features**.
-
-3. Scroll down until you see **Web content filtering**.
-
-4. Switch the toggle to **On**, and then select **Save preferences**.
+On the **Advanced features** page, verify the **Web content filtering** toggle is **On**. If necessary, slide the toggle to **On**, and then select **Save preferences**.
 
 ### Configure web content filtering policies
 
-Web content filtering policies specify which site categories are blocked on which device groups. To manage the policies, go to **Settings** \> **Endpoints** \> **Web content filtering** (under **Rules**).
+Web content filtering policies specify which site categories are blocked on which device groups. To manage the policies, go to **Settings** \> **Endpoints** \> **Rules** section \> **Web content filtering**.
 
 Policies can be deployed to block any of the following parent or child categories:
 
-|Parent category | Child categories |
+|Parent category|Child categories|
 |---|---|
-| **Adult content** | - **Cults**: Sites related to groups or movements whose members demonstrate passion for a belief system that is different from those that are socially accepted.<br/><br/>- **Gambling**: Online gambling and sites that promote gambling.<br/><br/>- **Nudity**: Sites that provide full-frontal and semi-nude images or videos, typically in artistic form, and might allow the download or sale of such materials.<br/><br/>- **Pornography / Sexually explicit**: Sites containing sexually explicit content. Any form of sexually oriented material is also listed here.<br/><br/>- **Sex education**: Sites that discuss sex and sexuality, including sites that provide education about human reproduction and contraception, sites that offer advice on preventing infection from sexual diseases, and sites that offer advice on sexual health matters.<br/><br/>- **Tasteless**: Sites oriented towards content unsuitable for children to view or that an employer would be uncomfortable with their staff accessing, but not necessarily violent or pornographic.<br/><br/>- **Violence**: Sites that display or promote content related to violence against humans or animals. |
-|**High bandwidth** | - **Download sites**: Sites whose primary function is to allow users to download media content or software applications.<br/><br/>- **Image sharing**: Sites that are used primarily for searching or sharing photos, including those that have social aspects.<br/><br/>- **Peer-to-peer**: Sites that host peer-to-peer (P2P) software or facilitate the sharing of files using P2P software.<br/><br/>- **Streaming media & downloads**: Sites whose primary function is the distribution of streaming media, or sites that allow users to search, watch, or listen to streaming media. |
-| **Legal liability** | - **Child abuse images**: Sites that include child abuse content.<br/><br/>- **Criminal activity**: Sites that give instruction on, advise about, or promote illegal activities.<br/><br/>- **Hacking**: Sites that provide resources for illegal or questionable use of computer software or hardware, including sites that distribute copyrighted material that has been cracked.<br/><br/>- **Hate & intolerance**: Sites promoting aggressive, degrading, or abusive opinions about any section of the population that could be identified by race, religion, gender, age, nationality, physical disability, economic situation, sexual orientations or any other lifestyle choice.<br/><br/>- **Illegal drug**: Sites that sell illegal/controlled substances, promote substance abuse, or sell related paraphernalia.<br/><br/>- **Illegal software**: Sites that contain or promote the use of malware, spyware, botnets, phishing scams, or piracy & copyright theft.<br/><br/>- **School cheating**: Sites related to plagiarism or school cheating.<br/><br/>- **Self-harm**: Sites that promote self-harm, including cyberbullying sites that contain abusive and/or threatening messages towards users.<br/><br/>- **Weapons**: Any site that sells weapons or advocates the use of weapons, including but not limited to guns, knives, and ammunition. |
-| **Leisure** | - **Chat**: Sites that are primarily web-based chat rooms.<br/><br/>- **Games**: Sites relating to video or computer games, including sites that promote gaming through hosting online services or information related to gaming.<br/><br/>- **Instant messaging**: Sites that can be used to download instant messaging software or client based instant messaging.<br/><br/>- **Professional network**: Sites that provide professional networking services.<br/><br/>- **Social networking**: Sites that provide social networking services.<br/><br/>- **Web-based email**: Sites offering web-based mail services. |
-| **Uncategorized** | - **Newly registered domains**: Sites that are newly registered in the past 30 days and haven't yet been moved to another category.<br/><br/>- **Parked domains**: Sites that have no content or are parked for later use. |
+|**Adult content**|- **Cults**: Sites related to groups or movements whose members demonstrate passion for a belief system that is different from those that are socially accepted.<br/><br/>- **Gambling**: Online gambling and sites that promote gambling.<br/><br/>- **Nudity**: Sites that provide full-frontal and semi-nude images or videos, typically in artistic form, and might allow the download or sale of such materials.<br/><br/>- **Pornography / Sexually explicit**: Sites containing sexually explicit content. Any form of sexually oriented material is also listed here.<br/><br/>- **Sex education**: Sites that discuss sex and sexuality, including sites that provide education about human reproduction and contraception, sites that offer advice on preventing infection from sexual diseases, and sites that offer advice on sexual health matters.<br/><br/>- **Tasteless**: Sites oriented towards content unsuitable for children to view or that an employer would be uncomfortable with their staff accessing, but not necessarily violent or pornographic.<br/><br/>- **Violence**: Sites that display or promote content related to violence against humans or animals.|
+|**High bandwidth**|- **Download sites**: Sites whose primary function is to allow users to download media content or software applications.<br/><br/>- **Image sharing**: Sites that are used primarily for searching or sharing photos, including those that have social aspects.<br/><br/>- **Peer-to-peer**: Sites that host peer-to-peer (P2P) software or facilitate the sharing of files using P2P software.<br/><br/>- **Streaming media & downloads**: Sites whose primary function is the distribution of streaming media, or sites that allow users to search, watch, or listen to streaming media.|
+|**Legal liability**|- **Child abuse images**: Sites that include child abuse content.<br/><br/>- **Criminal activity**: Sites that give instruction on, advise about, or promote illegal activities.<br/><br/>- **Hacking**: Sites that provide resources for illegal or questionable use of computer software or hardware, including sites that distribute copyrighted material that has been cracked.<br/><br/>- **Hate & intolerance**: Sites promoting aggressive, degrading, or abusive opinions about any section of the population that could be identified by race, religion, gender, age, nationality, physical disability, economic situation, sexual orientations or any other lifestyle choice.<br/><br/>- **Illegal drug**: Sites that sell illegal/controlled substances, promote substance abuse, or sell related paraphernalia.<br/><br/>- **Illegal software**: Sites that contain or promote the use of malware, spyware, botnets, phishing scams, or piracy & copyright theft.<br/><br/>- **School cheating**: Sites related to plagiarism or school cheating.<br/><br/>- **Self-harm**: Sites that promote self-harm, including cyberbullying sites that contain abusive and/or threatening messages towards users.<br/><br/>- **Weapons**: Any site that sells weapons or advocates the use of weapons, including but not limited to guns, knives, and ammunition.|
+|**Leisure**|- **Chat**: Sites that are primarily web-based chat rooms.<br/><br/>- **Games**: Sites relating to video or computer games, including sites that promote gaming through hosting online services or information related to gaming.<br/><br/>- **Instant messaging**: Sites that can be used to download instant messaging software or client based instant messaging.<br/><br/>- **Professional network**: Sites that provide professional networking services.<br/><br/>- **Social networking**: Sites that provide social networking services.<br/><br/>- **Web-based email**: Sites offering web-based mail services.|
+|**Uncategorized**|- **Newly registered domains**: Sites that are newly registered in the past 30 days and haven't yet been moved to another category.<br/><br/>- **Parked domains**: Sites that have no content or are parked for later use.|
 
 > [!NOTE]
 > Uncategorized contains only newly registered domains and parked domains, and does not include all other sites outside of these categories.
@@ -103,25 +96,27 @@ Policies can be deployed to block any of the following parent or child categorie
 
 To add a new policy, follow these steps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), choose **Settings** > **Endpoints** > **Web content filtering** > **+ Add policy**.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **System**\> **Settings** \> **Endpoints** \> **Rules** section \> **Web content filtering**. Or, to go directly to the **Web content filtering** page, use <https://security.microsoft.com/securitysettings/endpoints/web_content_filtering_policy>.
 
-2. Specify a name.
+2. On the **Web content filtering** page, select **+ Add policy**.
 
-3. Select the categories to block. Use the expand icon to fully expand each parent category and select specific web content categories.
+3. The **Add Policy** wizard opens. On the **General** page, specify a unique, descriptive name for the policy, and then select **Next**.
 
-4. Specify the policy scope. Select the device groups to specify where to apply the policy. Only devices in the selected device groups will be prevented from accessing websites in the selected categories.
+4. On the **Blocked categories** page, select one or more web content categories to block (such as **Adult content**, **High bandwidth**, **Legal liability**, **Leisure**, or **Uncategorized**), and then select **Next**.
 
-   > [!IMPORTANT]
-   > If you're using either Microsoft 365 Business Premium or Defender for Business, your web content filtering policy is applied to all users by default. Scoping does not apply.
+5. On the **Scope** page, specify the device groups the policy is applied to. The default value is **Select all** for **Machine groups**. Select **Next**.
 
-5. Review the summary and save the policy.
+   > [!TIP]
+   > If you're using Microsoft 365 Business Premium or Microsoft Defender for Business, the web content filtering policy is applied to all users by default. Scoping doesn't apply.
+
+6. On the **Summary** page, review your settings, and select **Back** to make changes. When you're finished, select **Submit**.
 
 > [!NOTE]
-- There might be up to 2 hours of latency between the time a policy is created and when it's enforced on the device.
+>
+> - There might be up to 2 hours of latency between the time a policy is created and when it's enforced on the device.
 > - You can deploy a policy without selecting any categories to block. This action creates an audit-only policy to help you understand user behavior before creating a block policy.
-- If you are removing a policy or changing device groups at the same time, there could be a delay in policy deployment.
-- Blocking the "Uncategorized" category could lead to unexpected and undesired results.
-
+> - If you're removing a policy or changing device groups at the same time, there could be a delay in policy deployment.
+> - Blocking the "Uncategorized" category could lead to unexpected and undesired results.
 
 ## End-user experience
 
@@ -137,11 +132,24 @@ It's possible to override the blocked category in web content filtering to allow
 
 To define an Allow indicator, follow these steps:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** \> **Endpoints** \> **Indicators** \> **URL/Domain** \> **Add Item**.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Endpoints** \> **Rules** section \> **Indicators**. Or, to go directly to the **Indicators** page, use <https://security.microsoft.com/securitysettings/endpoints/custom_ti_indicators>.
 
-2. Enter the domain of the site.
+2. On the **URLs/Domains** tab, select **+ Add Item**.
 
-3. Set the policy action to **Allow**.
+3. The **Add Indicator** wizard opens. On the **Indicator** tab, enter the following information:
+   - **URL/Domain**
+   - **Title**: Enter a unique, descriptive name.
+   - **Expires on (UTC)**: Select **Never** (default) or **Custom** to enter an expiration date.
+
+   In the **Statistics** section, you can select **Show statistics** to understand the effects of adding this custom indicator.
+
+   When you're finished on the **Indicator** page, select **Next**.
+
+4. On the **Action** page, select **Allow**, and then select **Next**.
+
+5. On the **Organizational scope** page, select a device group scope. The default value is **All devices in my organization**. Select **Next**.
+
+6. On the **Summary** page, review your settings, and select **Back** to make changes. When you're finished, select **Submit**.
 
 ### Dispute categories
 
@@ -151,7 +159,8 @@ To dispute the category of a domain, navigate to **Reports** \> **Web protection
 
 A panel opens where you can select the priority and add more details such as the suggested category for recategorization. Once you complete the form, select **Submit**. Our team will review the request within one business day. For faster manual unblocking, create a [custom allow indicator](indicator-ip-domain.md).
 
-## Web content filtering cards and details
+<a name="web-content-filtering-cards-and-details"></a>
+## Monitor web content filtering reports
 
 Select **Reports** \> **Web protection** to view cards with information about web content filtering and web threat protection. The following cards provide summary information about web content filtering.
 
@@ -159,7 +168,7 @@ Select **Reports** \> **Web protection** to view cards with information about we
 
 This card lists the parent web content categories with the largest increase or decrease in the number of access attempts. You can explore changes in web activity patterns in your organization from last 30 days, 3 months, or 6 months. Select a category name to view more information.
 
-In the first 30 days of using this feature, your organization might not have enough data to display this information.
+In the first 30 days of using web content filtering, your organization might not have enough data to display the Web activity by category card.
 
 :::image type="content" source="media/web-activity-by-category600.png" alt-text="The web activity by category card" lightbox="media/web-activity-by-category600.png":::
 
@@ -189,22 +198,21 @@ Use the time range filter at the top left of the page to select a time period. Y
 
 ### Known issues and limitations
 
-- Web Content Filtering is restricted to specific browsers via process name. This means that web content filtering doesn't work when there is a local proxy application in place (such as Fiddler), due to the originating process name being masked. Web content filtering does not function in isolated browser sessions (i.e. Microsoft Defender Application Guard). 
+- Web Content Filtering is restricted to specific browsers via process name. This means that web content filtering doesn't work when there is a local proxy application in place (such as Fiddler), due to the originating process name being masked. Web content filtering does not function in isolated browser sessions (i.e. Microsoft Defender Application Guard).
 
-- Web Content Filtering is based on Network Protection. Blocking in third-party browsers requires that the browser be configured [properly to enable content inspection](network-protection.md#required-browser-configuration). Because full URLs are not available in third-party browsers, blocking access to certain web applications may require creating a custom block indicator for the application's login page. Keep in mind, such a block might block users from accessing other services associated with the same website.
+- Web Content Filtering is based on Network Protection. Blocking in third-party browsers requires [required browser configuration for content inspection](network-protection.md#required-browser-configuration). Because full URLs are not available in third-party browsers, blocking access to certain web applications may require creating a custom block indicator for the application's login page. Keep in mind, such a block might block users from accessing other services associated with the same website.
 
 - Web Content Filtering classifies billions of URLs, but new sites are added every day, and new sites may not be immediately detected. Even after a site is categorized, the content on any site may change at any time. Classifying a site's content is inherently a subjective process. Given these constraints, you should expect that new sites may not be immediately categorized, and a site's category may be changed at any time. For full control over your users' access to sites, create a Custom Indicator to allow or block the site.
 
 - If you are using Microsoft 365 Business Premium or Microsoft Defender for Business, you can only define a single web content filtering policy for your environment.
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Web protection overview](web-protection-overview.md)
 - [Web threat protection](web-threat-protection.md)
 - [Monitor web security](web-protection-monitoring.md)
-
 - [Respond to web threats](web-protection-response.md)
 - [Requirements for Network Protection](web-content-filtering.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

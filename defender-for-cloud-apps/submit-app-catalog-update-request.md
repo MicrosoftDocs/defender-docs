@@ -1,13 +1,15 @@
 ---
 title: Submit an App Catalog update request
-description: This article provides instructions for app owners and nonapp owners on how to submit an update request for an app in the Defender for Cloud Apps catalog.
-ms.date: 06/30/2025
+description: Learn how app owners and nonapp owners can submit update requests for apps in the Defender for Cloud Apps catalog.
+ms.date: 06/16/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Submit an App Catalog update request
 
-To keep the Microsoft Defender for Cloud Apps (MDA) catalog accurate and secure, use the right submission method based on your relationship to the app and the type of update needed.
+To keep the Microsoft Defender for Cloud Apps (MDA) catalog accurate, use the submission method that fits your role and the type of update you need. App owners can submit updates through a self-attestation questionnaire, while other users can request risk score changes or suggest catalog corrections. This article explains each submission path and what to expect during processing.
 
 ## App owners or verified vendors
 
@@ -37,7 +39,7 @@ We thoroughly validate all catalog update requests to ensure accuracy and releva
 - The app must qualify as a SaaS product.
 - The request must include complete and verifiable information.
 
-After we validate and accept your request, the standard turnaround time for a catalog update is approximately three weeks.
+After we validate and accept your request, the standard turnaround time for a catalog update is approximately seven weeks.
 
 ## All other requests
 
@@ -48,6 +50,8 @@ For general inquiries, metadata corrections, or update requests that don’t fal
 
 
 ## Related articles
+
+For more information, see the following articles:
 
 - [Find your cloud app and calculate risk scores](risk-score.md)
 - [Attest your apps](attest-your-app.md)

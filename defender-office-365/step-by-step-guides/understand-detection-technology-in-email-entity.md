@@ -3,22 +3,22 @@ title:       Understanding detection technology within the email entity page in 
 description: Guide to understanding the detection technology shown on the Email entity page in Microsoft Defender for Office 365. What the detection technologies mean, how they're triggered, and how to resolve false positives (see the admin submission video).
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.service: microsoft-365-security
 ms.topic: how-to
-ms.date: 06/19/2025
-audience: ITPro
+ms.date: 06/12/2026
 ms.collection:
 - m365-guidance-templates
 - m365-security
 - tier3
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Understanding detection technology in the email entity page of Microsoft Defender for Office 365
 
-If a threat is detected on the Microsoft Defender for Office 365 [*email entity page*](../mdo-email-entity-page.md), threat information displays on the left-hand flyout. This panel also shows you the **detection technology** that led to that verdict.
+If a threat is detected on the Microsoft Defender for Office 365 [*email entity page*](../mdo-email-entity-page.md), threat information displays on the left-hand flyout. The threat-information flyout also shows you the **detection technology** that produced the threat verdict.
 
-This article is all about helping you **understand the different detection technologies**, how they work, and how to avoid any false alarms. Stay tuned for the Admin Submissions video at the end.
+The following sections help you **understand the different detection technologies**, how the detection technologies work, and how to avoid any false alarms. An Admin Submissions video is included at the end.
 
 ## Detection technology details table
 
@@ -32,7 +32,7 @@ To resolve false positives like the ones listed in the following table, you shou
 |Advanced filter|Machine learning models to detect phishing and spam.||
 |Antimalware protection|Detection from signature based anti-malware.||
 |Bulk|Detection for advertising/marketing and similar message types with their relative bulk complaint levels (BCL).|[Step-by-Step guide on how to tune bulk thresholds](tune-bulk-mail-filtering-walkthrough.md)|
-|Campaign|Messages identified and grouped as part of a malware or phishing campaign.|[Learn more about campaigns](track-and-respond-to-emerging-threats-with-campaigns.md)|
+|Campaign|Messages identified and grouped as part of a malware or phishing campaign.|[Campaigns in Microsoft Defender for Office 365](track-and-respond-to-emerging-threats-with-campaigns.md)|
 |Domain reputation|The message was sent from a domain that was identified as spam or phishing domain, based on internal or external signals.||
 |File detonation|Safe Attachments detected a malicious attachment during detonation within a sandbox.||
 |File detonation reputation|File attachments previously detected by Safe Attachments during detonation.||
@@ -55,5 +55,7 @@ To resolve false positives like the ones listed in the following table, you shou
 |URL malicious reputation|The message contains a URL that was previously identified as malicious or spam by other sources.||
 
 ## Watch a video on submitting messages to Microsoft to learn more
+
+Watch the following video for an overview of how to submit messages to Microsoft.
 
 > [!VIDEO https://www.youtube.com/embed/ta5S09Yz6Ks]

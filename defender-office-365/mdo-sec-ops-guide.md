@@ -1,16 +1,9 @@
 ---
 title: Security Operations Guide for Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: Admin
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.collection:
   - zerotrust-solution
   - msftsolution-secops
@@ -19,7 +12,7 @@ ms.collection:
 ms.custom:
 description: A prescriptive playbook for SecOps personnel to manage Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 01/10/2025
+ms.date: 05/21/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -192,7 +185,7 @@ Permissions for managing Defender for Office 365 in the Microsoft Defender porta
 
 The following permissions (roles and role groups) are available in Defender for Office 365 and can be used to grant access to security team members:
 
-- **Microsoft Defender XDR Unified role based access control (RBAC)**: A single permissions management experience that provides one central location for administrators to control user permissions across different security solutions. For more information, see [Microsoft Defender XDR Unified RBAC](/defender-xdr/manage-rbac).
+- **Microsoft Defender unified role based access control (RBAC)**: A single permissions management experience that provides one central location for administrators to control user permissions across different security solutions. For more information, see [Microsoft Defender unified RBAC](/defender-xdr/manage-rbac).
   - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
   - _Preview and download email messages_: **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
   - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**.
@@ -229,9 +222,9 @@ The following permissions (roles and role groups) are available in Defender for 
 
 ### SIEM/SOAR integration
 
-Defender for Office 365 exposes most of its data through a set of programmatic APIs. These APIs help you automate workflows and make full use of Defender for Office 365 capabilities. Data is available through the [Microsoft Defender XDR APIs](/defender-xdr/api-overview) and can be used to integrate Defender for Office 365 into existing SIEM/SOAR solutions.
+Defender for Office 365 exposes most of its data through a set of programmatic APIs. These APIs help you automate workflows and make full use of Defender for Office 365 capabilities. Data is available through the [Microsoft Defender APIs](/defender-xdr/api-overview) and can be used to integrate Defender for Office 365 into existing SIEM/SOAR solutions.
 
-- [Incident API](/defender-xdr/api-incident): Defender for Office 365 alerts and automated investigations are active parts of incidents in Microsoft Defender XDR. Security teams can focus on what's critical by grouping the full attack scope and all impacted assets together.
+- [Incident API](/defender-xdr/api-incident): Defender for Office 365 alerts and automated investigations are active parts of incidents in Microsoft Defender. Security teams can focus on what's critical by grouping the full attack scope and all impacted assets together.
 
 - [Event streaming API](/defender-xdr/streaming-api): Allows shipping of real-time events and alerts into a single data stream as they happen. Supported event types in Defender for Office 365 include:
   - [EmailAttachmentInfo](/defender-xdr/advanced-hunting-emailattachmentinfo-table)
@@ -266,6 +259,9 @@ Organizations have multiple options for configuring user reported messages. Depe
 - When user reported messages are configured to send messages only to the organization's mailbox, security teams should actively send user-reported false positives and false negatives to Microsoft via admin submissions.
 
 When a user reports a message as phishing, Defender for Office 365 generates an alert, and the alert triggers an AIR playbook. Incident logic correlates this information to other alerts and events where possible. This consolidation of information helps security teams triage, investigate, and respond to user reported messages.
+
+> [!TIP]
+> In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails at scale, reducing repetitive investigation work and accelerating response.
 
 The submission pipeline in the service follows a tightly integrated process when user report messages and admins submit messages. This process includes:
 
@@ -309,6 +305,7 @@ Designate the reporting mailbox where user reported messages are sent on the **U
 > - The reporting mailbox must be an Exchange Online mailbox.
 > - The non-Microsoft reporting tool must include the original reported message as an uncompressed .EML or .MSG attachment in the message that's sent to the reporting mailbox (don't just forward the original message to the reporting mailbox). For more information, see [Message submission format for non-Microsoft reporting tools](submissions-user-reported-messages-custom-mailbox.md#message-submission-format-for-non-microsoft-reporting-tools).
 > - The reporting mailbox requires specific prerequisites to allow potentially bad messages to be delivered without being filtered or altered. For more information, see [Configuration requirements for the reporting mailbox](submissions-user-reported-messages-custom-mailbox.md#configuration-requirements-for-the-reporting-mailbox).
+> - In [attack simulation training in Defender for Office 365 Plan 2](attack-simulation-training-get-started.md), simulation messages reported by non-Microsoft tools aren't captured in attack simulation reports.
 
 When a user reported message arrives in the reporting mailbox, Defender for Office 365 automatically generates the alert named **Email reported by user as malware or phish**. This alert launches an [AIR playbook](air-examples.md#example-a-user-reported-phishing-message-launches-an-investigation-playbook). The playbook performs a series of automated investigations steps:
 
@@ -316,9 +313,9 @@ When a user reported message arrives in the reporting mailbox, Defender for Offi
 - Gather data about the threats and _entities_ related to that email (for example, files, URLs, and recipients).
 - Provide recommended actions for the SecOps team to take based on the investigation findings.
 
-**Email reported by user as malware or phish** alerts, automated investigations and their recommended actions are automatically correlated to incidents in Microsoft Defender XDR. This correlation further simplifies the triage and response process for security teams. If multiple users report the same or similar messages, all of the users and messages are correlated into the same incident.
+**Email reported by user as malware or phish** alerts, automated investigations and their recommended actions are automatically correlated to incidents in Microsoft Defender. This correlation further simplifies the triage and response process for security teams. If multiple users report the same or similar messages, all of the users and messages are correlated into the same incident.
 
-Data from alerts and investigations in Defender for Office 365 is automatically compared to alerts and investigations in the other Microsoft Defender XDR products:
+Data from alerts and investigations in Defender for Office 365 is automatically compared to alerts and investigations in the other Microsoft Defender products:
 
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Cloud Apps

@@ -2,21 +2,14 @@
 title: Alert classification for suspicious inbox forwarding rules
 description: Alert classification for suspicious inbox forwarding rules to review the alerts and take recommended actions to remediate the attack and protect your network.
 ms.service: defender-xdr
-f1.keywords: 
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid: 
-  - MOE150
-  - met150
 ms.date: 04/18/2025
 appliesto:
   - Microsoft Defender XDR
@@ -55,7 +48,7 @@ Suspicious inbox forwarding rules might be difficult to detect because maintenan
 
 Here's the workflow to identify suspicious email forwarding rules.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-workflow.png" alt-text="Alert investigation workflow for inbox forwarding rules" lightbox="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-workflow.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-workflow.png" alt-text="Alert investigation workflow for inbox forwarding rules" lightbox="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-workflow.png":::
 
 ## Investigation steps
 
@@ -65,11 +58,11 @@ This section contains detailed step-by-step guidance to respond to the incident 
 
 Here's an example of an inbox forwarding rule alert in the alert queue.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-queue.png" alt-text="Example of a notification in the alert queue" lightbox="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-queue.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-queue.png" alt-text="Example of a notification in the alert queue" lightbox="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-queue.png":::
 
 Here's an example of the details of alert that was triggered by a malicious inbox forwarding rule.
 
-:::image type="content" source="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-description.png" alt-text="Details of alert that was triggered by a malicious inbox forwarding rule" lightbox="/defender/media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-description.png":::
+:::image type="content" source="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-description.png" alt-text="Details of alert that was triggered by a malicious inbox forwarding rule" lightbox="media/alert-grading-playbook-inbox-forwarding-rules/alert-grading-playbook-inbox-forwarding-rules-alert-description.png":::
 
 ### Investigate rule parameters
 

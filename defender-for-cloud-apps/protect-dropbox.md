@@ -1,20 +1,21 @@
 ---
 title: Protect your Dropbox environment | Microsoft Defender for Cloud Apps
-description: Learn how about connecting your Dropbox app to Defender for Cloud Apps using the API connector.
-ms.date: 12/26/2023
+description: Connect Dropbox to Microsoft Defender for Cloud Apps by using the API connector to monitor user activity, detect threats and external sharing risks, and enable automated remediation controls.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
+
 # How Defender for Cloud Apps helps protect your Dropbox environment
 
-
-
-As a cloud file storage and collaboration tool, Dropbox enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Dropbox may expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents can be caused by malicious actors, or by unaware employees.
+As a cloud file storage and collaboration tool, Dropbox enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Dropbox may expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. These data exposure incidents can be caused by malicious actors or unaware employees.
 
 Connecting Dropbox to Defender for Cloud Apps gives you improved insights into your users' activities, provide threat detection using machine learning based anomaly detections, information protection detections such as detecting external information sharing, and enabling automated remediation controls.
 
 > [!NOTE]
-> Dropbox have made changes to the way that shared folders are stored. The scan will be updated in due course to include these Teams Spaces.
+> Dropbox changed the way shared folders are stored, moving them to Team Spaces. The Defender for Cloud Apps file scan will be updated in due course to include Team Spaces.
 
 ## Main threats
 
@@ -43,7 +44,7 @@ You can use the following built-in policy templates to detect and notify you abo
 | Activity policy template | Logon from a risky IP address<br />Mass download by a single user<br />Potential ransomware activity |
 | File policy template | Detect a file shared with an unauthorized domain<br />Detect a file shared with personal email addresses<br />Detect files with PII/PCI/PHI |
 
-For more information about creating policies, see [Create a policy](control-cloud-apps-with-policies.md#create-a-policy).
+For more information about creating policies, see [Create a policy in Defender for Cloud Apps](control-cloud-apps-with-policies.md#create-a-policy).
 
 ## Automate governance controls
 
@@ -60,7 +61,8 @@ For more information about remediating threats from apps, see [Governing connect
 
 Review our best practices for [securing and collaborating with external users](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
 
-## SaaS security posture management
+<a name="saas-security-posture-management"></a>
+## SaaS security posture management for Dropbox
 
 [Connect Dropbox](#connect-dropbox-to-microsoft-defender-for-cloud-apps) to automatically get security posture recommendations for Dropbox in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **Dropbox**. Dropbox supports security recommendations to *Enable web session timeout for web users*.
 
@@ -71,9 +73,9 @@ For more information, see:
 
 ## Connect Dropbox to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Dropbox account using the connector APIs. This connection gives you visibility into and control over Dropbox use. For information about how Defender for Cloud Apps protects Dropbox, see [Protect Dropbox](protect-dropbox.md).
+Use the following instructions to connect Microsoft Defender for Cloud Apps to your existing Dropbox account using the connector APIs. This connection gives you visibility into and control over Dropbox use.
 
-Because Dropbox enables access to files from shared links without signing in, Defender for Cloud Apps registers these users as Unauthenticated users. If you see unauthenticated Dropbox users, it may indicate users who aren't from your organization, or they might be recognized users from within your organization who didn't sign in.
+Dropbox enables access to files from shared links without signing in, Defender for Cloud Apps registers these users as Unauthenticated users. If you see unauthenticated Dropbox users, it might indicate users who aren't from your organization, or they might be recognized users from within your organization who didn't sign in.
 
 **To connect Dropbox to Defender for Cloud Apps**
 
@@ -81,7 +83,7 @@ Because Dropbox enables access to files from shared links without signing in, De
 
 1. In the **App connectors** page, select **+Connect an app**, followed by **Dropbox**.
 
-    ![connect dropbox.](media/connect-dropbox.png "connect dropbox")
+    :::image type="content" source="media/connect-dropbox/connect-an-app-drop-box.png" alt-text="Screenshot that shows how to connect Dropbox in the Microsoft Defender portal." lightbox="media/connect-dropbox/connect-an-app-drop-box.png":::
 
 1. In the next window, give the connector a name and select **Next**.
 
@@ -104,9 +106,6 @@ Because Dropbox enables access to files from shared links without signing in, De
 
 If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 
-## Next steps
+## Related content
 
-> [!div class="nextstepaction"]
-> [Control cloud apps with policies](control-cloud-apps-with-policies.md)
-
-[!INCLUDE [Open support ticket](includes/support.md)]
+- [Control cloud apps with policies](control-cloud-apps-with-policies.md)

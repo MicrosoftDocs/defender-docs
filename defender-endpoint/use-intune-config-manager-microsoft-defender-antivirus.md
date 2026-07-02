@@ -1,56 +1,59 @@
-﻿---
+---
 title: Configure Microsoft Defender Antivirus using Microsoft Intune
 description: Use Microsoft Intune to configure Microsoft Defender Antivirus and Endpoint Protection
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: batamig
-ms.author: bagol
-ms.custom: nextgen
-ms.date: 05/07/2025
+author: chrisda
+ms.author: chrisda
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: phuijbr, yongrhee
-manager: bagol
 ms.subservice: ngp
-audience: ITPro
 ms.topic: how-to
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp
-search.appverid: met150
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Use Microsoft Intune to configure and manage Microsoft Defender Antivirus
 
 
 ## Compatibility
 
-- Microsoft Defender Antivirus using Intune is available on the following platforms:
+Microsoft Defender Antivirus management through Intune is supported on the following platforms:
+
 - Windows 10 and later
 
-You can use the Microsoft Intune family of products to configure Microsoft Defender Antivirus settings, like [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) and [Configuration Manager](/mem/configmgr/core/understand/introduction).
+You can use the Microsoft Intune family of products to configure Microsoft Defender Antivirus settings, like [Microsoft Intune](/intune/intune-service/fundamentals/what-is-intune) and [Configuration Manager](/intune/configmgr/core/understand/introduction).
 
 ### Configure Microsoft Defender Antivirus settings in Intune
 
-1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), and sign in.
+To create and configure a Microsoft Defender Antivirus policy in Intune, perform the following steps:
 
-2. Navigate to **Endpoint Security**.
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com), and sign in.
 
-3. Under **Manage**, choose **Antivirus**.
+1. Navigate to **Endpoint Security**.
 
-4. Click **Create Policy**, choose **Windows** as the platform and **Microsoft Defender Antivirus** for the profile type then select on **Create**.
+1. Under **Manage**, choose **Antivirus**.
 
-5. Enter a **Name** for the policy and optionally a description and select **Next** to go to **Configuration settings**.
+1. Click **Create Policy**, choose **Windows** as the platform and **Microsoft Defender Antivirus** for the profile type then select on **Create**.
 
-6. Edit your Microsoft Defender Antivirus settings.
+1. Enter a **Name** for the policy and optionally a description and select **Next** to go to **Configuration settings**.
 
-7. Choose **Review + save**.
+1. Edit your Microsoft Defender Antivirus settings.
 
-You can explore the list of settings that can be configured in a **Microsoft Defender Antivirus** policy within Intune.
+1. Choose **Review + save**.
+
+The following CSP settings can be configured in a **Microsoft Defender Antivirus** policy within Intune.
 
 ## Policies and settings
+
+The following sections describe the available Microsoft Defender Antivirus policy settings that you can configure in Intune.
 
 ### Allow Archive Scanning
 
@@ -96,7 +99,8 @@ You can explore the list of settings that can be configured in a **Microsoft Def
   - How the software operates
   - Its impact on your computer.
 
-#### Settings:
+<a name="settings"></a>
+#### Cloud-delivered protection options
 
   - **Not configured** - The setting reverts to the system default (cloud-delivered protection is turned off).
   - **Not allowed** - Cloud-delivered protection is turned off.
@@ -221,7 +225,10 @@ You can explore the list of settings that can be configured in a **Microsoft Def
 ### Cloud Block Level
    CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#cloudblocklevel)
 
-This policy setting controls the level of intensity that Microsoft Defender Antivirus uses when blocking and scanning suspicious files. To use this feature, **Allow cloud protection** must be enabled
+> [!IMPORTANT]
+> Prerequisite: **Allow cloud protection** must be enabled before you configure this setting.
+
+This policy setting controls the level of intensity that Microsoft Defender Antivirus uses when blocking and scanning suspicious files.
   
   - **Not configured** - The setting reverts to the system default blocking level (0x0).
   - **(0x0)Default state** - Default Microsoft Defender Antivirus blocking level.
@@ -305,7 +312,7 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
   Allows administrators to specify a list of files that processes can open without being scanned. For more details on how these exclusions can be defined you can read this article: [Exclusions based on file extension and folder location](./configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 > [!NOTE]
-> When tamper protection is turned on the exclusions can't be modified and new exclusions can't be added. These exclusions need to [meet some conditions](./manage-tamper-protection-intune.md) for tamper protection to work.
+> When tamper protection is turned on the exclusions can't be modified and new exclusions can't be added. These exclusions need to [meet certain tamper protection conditions](./manage-tamper-protection-intune.md) for tamper protection to work.
 
 > [!IMPORTANT]
 > Defining exclusions reduces the protection provided by Microsoft Defender Antivirus.
@@ -418,7 +425,7 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 
    CSP: [DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp#configurationdisablelocaladminmerge)
 
-  When this value is set to no, it gives a local admin the ability to [specify some settings](./configure-local-policy-overrides-microsoft-defender-antivirus.md) on their devices by using the Windows Security app, local Group Policy settings, or PowerShell cmdlets (where appropriate).
+  When this value is set to no, it gives a local admin the ability to [configure local policy overrides for Microsoft Defender Antivirus](./configure-local-policy-overrides-microsoft-defender-antivirus.md) on their devices by using the Windows Security app, local Group Policy settings, or PowerShell cmdlets (where appropriate).
 
   - **Not configured** - The setting reverts to the system default.
   - **Enable local admin merge (default)** - Unique items defined in preference settings that are configured by a local administrator merge into the resulting effective policy. If there are conflicts, management settings from Intune policy override local preference settings.
@@ -595,19 +602,20 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
   - **The Defender core service stops using the OneDsCollector framework to rapidly collect telemetry, impacting Microsoft's ability to quickly recognize and address poor performance, false positives, and other problems**.
   
 > [!TIP]
-> Need help? See [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security).
+> Need help? See [Manage endpoint security in Microsoft Intune](/intune/intune-service/protect/endpoint-security).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
 > - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
+> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos)
 > - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-## Related articles
+<a name="related-articles"></a>
+## Related content
 
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 - [Reference articles for management and configuration tools](configuration-management-reference-microsoft-defender-antivirus.md)
@@ -629,5 +637,4 @@ This policy setting controls the level of intensity that Microsoft Defender Anti
 >
 > You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions.
 > See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

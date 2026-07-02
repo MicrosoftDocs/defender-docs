@@ -3,6 +3,7 @@ title: Troubleshooting data encryption with your own key
 description: This article provides a list of problems that can prevent Defender for Cloud Apps from accessing your Azure Key Vault key used to encrypt collected data at rest.
 ms.date: 01/29/2023
 ms.topic: troubleshooting-general
+ms.custom: sfi-image-nochange
 ---
 
 
@@ -26,7 +27,7 @@ The following table lists the possible scenarios that can cause data encryption 
 | <a name="key-expired"></a>**Encryption key has expired** | In the selected key's settings, make sure that the expiration date and time hasn't passed.<br />![Screenshot showing key expiration date.](media/cloud-app-security-byok/byok-kv-key-expiration-date.PNG) |
 | <a name="key-not-found"></a>**Encryption key not found or deleted** | Verify that the selected key exists in your Key Vault. If key was deleted, recover and enable it again. If the key was moved to another Key Vault, move it back to the selected Key Vault. |
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](./support-and-ts.md).
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).
 
 ## Next steps
 

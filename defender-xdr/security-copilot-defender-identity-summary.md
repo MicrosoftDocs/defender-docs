@@ -2,23 +2,17 @@
 title: Summarize identity information with Microsoft Copilot in Microsoft Defender
 description: Summarize an identity information with Microsoft Copilot in Microsoft Defender to investigate identities.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - security-copilot
   - magic-ai-copilot
 ms.topic: concept-article
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 10/14/2024
+ms.update-cycle: 180-days
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel with Defender XDR in the Microsoft Defender portal
@@ -99,7 +93,7 @@ In the Security Copilot standalone portal, you can use the following prompt to g
 
 ## Provide feedback
 
-Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. To provide feedback, navigate to the bottom of the Copilot side panel and select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/create-report/copilot-defender-feedback.png).
+Microsoft highly encourages you to provide feedback to Copilot, as it's crucial for a capability's continuous improvement. To provide feedback, navigate to the bottom of the Copilot side panel and select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](media/copilot-in-defender/create-report/copilot-defender-feedback.png).
 
   :::image type="content" source="./media/security-copilot-defender-identity-summary/feedback-textbox.png" alt-text="Screenshot that shows the Feedback text box where you can share your feedback.":::
 

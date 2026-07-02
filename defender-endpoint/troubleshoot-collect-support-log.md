@@ -1,28 +1,22 @@
-﻿---
+---
 title: Collect support logs in Microsoft Defender for Endpoint using live response
 description: Learn how to collect logs using live response to troubleshoot Microsoft Defender for Endpoint issues
 ms.service: defender-endpoint
-ms.author: bagol
-author: batamig
+ms.author: chrisda
+author: chrisda
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-edr
 ms.topic: troubleshooting
 ms.subservice: edr
-search.appverid: met150
 ms.date: 07/04/2025
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-
 ---
+
 # Collect support logs in Microsoft Defender for Endpoint using live response
-
-
-
 
 When contacting support, you might be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool.
 
@@ -38,17 +32,16 @@ This article provides instructions on how to run the tool via Live Response on W
    - If you require network and [Windows Filter Platform](/windows-hardware/drivers/network/windows-filtering-platform-architecture-overview) related logs, then use `..\Tools\MDELiveAnalyzerNet.ps1`.
    - If you require [Process Monitor](/sysinternals/downloads/procmon) logs, then use `..\Tools\MDELiveAnalyzerAppCompat.ps1`.
 
-2. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate.
+1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate.
 
-3. Select **Upload file to library**.
+1. Select **Upload file to library**.
 
    :::image type="content" source="media/upload-file.png" alt-text="The upload file" lightbox="media/upload-file.png":::
 
-4. Select **Choose file**.
-
+1. Select **Choose file**.
    :::image type="content" source="media/choose-file.png" alt-text="The choose file button-1" lightbox="media/choose-file.png":::
 
-5. Select the downloaded file named `MDELiveAnalyzer.ps1`, and then select on **Confirm**.
+1. Select the downloaded file named `MDELiveAnalyzer.ps1`, and then select on **Confirm**.
 
    :::image type="content" source="media/analyzer-file.png" alt-text="The choose file button-2" lightbox="media/analyzer-file.png":::
 
@@ -101,7 +94,7 @@ Due to the limited commands available in Live Response the steps detailed must b
 
 #### Binary Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](overview-client-analyzer.md). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -127,7 +120,7 @@ The following script performs the first six steps of the [Running the Binary ver
    
 #### Python Client Analyzer Install Script
 
-The following script performs the first six steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/overview-client-analyzer). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Python version of the Client Analyzer](overview-client-analyzer.md). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -157,13 +150,13 @@ The following script performs the first six steps of the [Running the Python ver
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate.
 
-2. Select **Upload file to library**.
+1. Select **Upload file to library**.
 
-3. Select **Choose file**.
+1. Select **Choose file**.
 
-4. Select the downloaded file named `InstallXMDEClientAnalyzer.sh`, and then select **Confirm**.
+1. Select the downloaded file named `InstallXMDEClientAnalyzer.sh`, and then select **Confirm**.
 
-5. While still in the LiveResponse session, use the following commands to install the analyzer:
+1. While still in the LiveResponse session, use the following commands to install the analyzer:
 
    ```console
    run InstallXMDEClientAnalyzer.sh
@@ -217,13 +210,13 @@ The Python Client Analyzer accepts command line parameters to perform different 
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate. 
 
-2. Select **Upload file to library**.
+1. Select **Upload file to library**.
 
-3. Select **Choose file**.
+1. Select **Choose file**.
 
-4. Select the downloaded file named `MDESupportTool.sh`, and then select **Confirm**.
+1. Select the downloaded file named `MDESupportTool.sh`, and then select **Confirm**.
 
-5. While still in the Live Response session, use the following commands to run the analyzer and collect the resulting file.
+1. While still in the Live Response session, use the following commands to run the analyzer and collect the resulting file.
 
    ```
    run MDESupportTool.sh -parameters "--bypass-disclaimer -d"
@@ -236,5 +229,5 @@ The Python Client Analyzer accepts command line parameters to perform different 
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
 - [Understand the analyzer HTML report](analyzer-report.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
 

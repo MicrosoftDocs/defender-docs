@@ -1,14 +1,8 @@
 ---
 title: Advanced hunting in Microsoft Defender multitenant management
 description: Learn about advanced hunting in Microsoft Defender multitenant management
-search.appverid: met150
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
-ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
+author: poliveria
+ms.author: pauloliveria
 ms.collection: 
 - m365-security
 - highpri
@@ -19,6 +13,7 @@ ms.date: 10/28/2025
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 ---
 
 # Advanced hunting in Microsoft Defender multitenant management
@@ -83,7 +78,7 @@ If you're using [Azure Lighthouse](/azure/lighthouse/overview) to grant your ten
 - **TenantA**: *WorkspaceA1*, *WorkspaceA2*
 - **TenantB**: *WorkspaceB1*, *WorkspaceB2*
 
-And you want to query across both *WorkspaceA1* and *WorkspaceB1*, select **TenantA** and **WorkspaceA1** in the **Tenant scope** selector. Then in your query, use the `workspace()` operator to call *WorkspaceB2*. For example:
+And if you want to query across both *WorkspaceA1* and *WorkspaceB1*, select **TenantA** and **WorkspaceA1** in the **Tenant scope** selector. Then in your query, use the `workspace()` operator to call *WorkspaceB2*. For example:
 
 ```kusto 
 union workspace("WorkspaceB2").Usage, Usage

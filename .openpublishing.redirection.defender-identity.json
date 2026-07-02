@@ -1,8 +1,28 @@
 {
   "redirections": [
     {
+      "source_path": "defender-for-identity/deploy/event-collection-overview.md",
+      "redirect_url": "/defender-for-identity/deploy/configure-windows-event-collection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-for-identity/deploy/download-sensor.md",
+      "redirect_url": "/defender-for-identity/deploy/install-sensor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-for-identity/deploy/prerequisites-sensor-version-3.md",
+      "redirect_url": "/defender-for-identity/deploy/deploy-sensor-v3",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "defender-for-identity/security-assessment-do-not-expire-passwords.md",
       "redirect_url": "/defender-for-identity/security-assessment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/investigate-assets.md",
+      "redirect_url": "/defender-for-identity/identity-inventory",
       "redirect_document_id": false
     },
     {
@@ -13,6 +33,11 @@
     {
       "source_path": "defender-for-identity/active-directory-federation-services.md",
       "redirect_url": "/defender-for-identity/deploy/active-directory-federation-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/architecture.md",
+      "redirect_url": "/defender-for-identity/what-is",
       "redirect_document_id": false
     },
     {
@@ -864,6 +889,271 @@
       "source_path": "defender-for-identity/automated-response-exclusions.md",
       "redirect_url": "/defender-xdr/automatic-attack-disruption-exclusions",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "defender-for-identity/support.md",
+      "redirect_url": "/defender-xdr/contact-defender-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/assign-multi-factor-authentication-okta-privileged-user-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-okta-password-privileged-user-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/high-number-of-okta-accounts-with-privileged-role-assigned.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/highly-privileged-okta-api-token.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/limit-number-okta-super-admin-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-dormant-okta-privileged-accounts.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/cloud-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/accounts-with-non-default-pgid.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-remove-suspicious-access-rights.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-password-krbtgt-account.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-password-domain-administrator-account.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-dormant-entities.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-non-admin-accounts-dcsync.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/ensure-privileged-accounts-with-sensitive-flag.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-clear-text.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-laps.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-discoverable-passwords-active-directory-account-attributes.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-inactive-service-account.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-riskiest-lmp.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unconstrained-kerberos.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unsecure-sid-history-attribute.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unsecure-account-attributes.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-weak-cipher.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-enforce-encryption-rpc.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-insecure-adcs-certificate-enrollment.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-owner.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-ca-acl.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-acl.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-misconfigured-enrollment-agent.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-overly-permissive-template.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/prevent-certificate-enrollment-esc15.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-prevent-users-request-certificate.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-edit-vulnerable-ca-setting.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/gpo-assigns-unprivileged-identities.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/modified-unprivileged-accounts-gpo.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/reversible-passwords-group-policy.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/built-in-active-directory-guest-account-is-enabled.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/domain-controller-account-password-change.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-print-spooler.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-remove-local-admins.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unmonitored-domain-controller.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-active-directory-certificate-services-server.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-active-directory-federation-services-servers.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/unmonitored-entra-connect-servers.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/security-assessment-unsecure-domain-configurations.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/identity-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-replication-permissions-microsoft-entra-connect.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/remove-unsafe-permissions-sensitive-entra-connect.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/replace-entra-connect-default-admin.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/change-password-microsoft-entra-seamless-single-sign-on.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/rotate-password-microsoft-entra-connect.md",
+      "redirect_url": "/defender-for-identity/security-posture-assessments/hybrid-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/link-unlink-account-to-identity.md",
+      "redirect_url": "/defender-for-identity/manage-related-identities-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/deploy/remote-calls-sam.md",
+      "redirect_url": "/defender-for-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-for-identity/understand-lateral-movement-paths.md",
+      "redirect_url": "/defender-for-identity",
+      "redirect_document_id": false
+    },
   ]
 }

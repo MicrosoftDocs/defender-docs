@@ -1,18 +1,15 @@
 ---
 title: Manage security operations cases natively in the Microsoft Defender portal
 description: Learn about the case management capabilities in the Defender portal for managing and standardizing unified security operations.
-search.appverid: met150
-ms.service: unified-secops-platform
-ms.author: yelevin
-author: yelevin
-ms.localizationpriority: medium
+author: mberdugo
+ms.author: monaberdugo
 ms.date: 05/04/2025
-audience: ITPro
 ms.collection:
 - M365-security-compliance
 - tier1
 - usx-security
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 
 # customer intent: As a business decision maker for a security operations center, I want to learn about the case management tools available in the Microsoft Defender portal so I can unify security tickets and increase visibility across hybrid, multitenant, and multicloud environments, and disrupt attacks on identities, endpoints, email, cloud apps, and data in real time.
 ---
@@ -61,15 +58,15 @@ Case management is available in the Defender portal, and to use it, you must hav
 
 For more information, see [Connect Microsoft Sentinel to the Defender portal](microsoft-sentinel-onboard.md).
 
-Use Defender XDR unified RBAC or Microsoft Sentinel roles to grant access to case management features.
+Use Defender unified RBAC or Microsoft Sentinel roles to grant access to case management features.
 
-| Cases feature | Microsoft Defender Unified RBAC | Microsoft Sentinel role |
+| Cases feature | Microsoft Defender unified RBAC | Microsoft Sentinel role |
 | ------------- | ------------------------------- | ----------------------- |
 | View only</br>- case queue</br>- case details</br>- tasks</br>- comments</br>- case audits | Security operations > Security data basics (read)| Microsoft Sentinel Reader |
 | Create and Manage</br>- cases and case tasks</br>- assign</br>- update status</br>- link and unlink incidents | Security operations > Alerts (manage) | Microsoft Sentinel Responder |
 | Customize case status options | Authorization and setting > Core Security settings (manage)| Microsoft Sentinel Contributor |
 
-For more information, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
+For more information, see [Microsoft Defender unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
 ## Case queue
 
@@ -130,7 +127,7 @@ Alternatively, if the IR team needs to escalate one or more incidents to the hun
 
 :::image type="content" source="media/cases-overview/link-incident-from-incident-graph.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
-#### Link indicators
+#### Link indicators (preview)
 
 Linking a case to relevant indicators of compromise (IOCs) helps your SecOps teams understand the broader context of a threat.
 
@@ -162,7 +159,7 @@ You can attach up to 10 files per comment.
 
 To add attachments to your case, go to the **Case details** page, select the **Attachments** tab, select **Upload**, select your file, and wait for the upload to complete. Once uploaded, the file is scanned in the background for malware. When the scan is complete, anyone with access to the case can download the file. If the file you want to upload is actually a malware sample, you can wrap it in a password-protected ZIP file.
 
-#### Add attachment to a comment
+#### Add attachment to a comment (preview)
 
 To add an attachment to a comment:
 
@@ -171,12 +168,12 @@ To add an attachment to a comment:
 1. Select the file you want to attach from your computer.
 1. Select **Send** to save the comment.
 
-  :::image type="content" source="media/cases-overview/attach-file-to-comment-send.png" alt-text="Screenshot showing the Send button to save the comment.":::
+   :::image type="content" source="media/cases-overview/attach-file-to-comment-send.png" alt-text="Screenshot showing the Send button to save the comment.":::
 
-- To attach a screenshot to your comment, paste it into the text editor.
-- To delete an attached file from the comment, select the bin icon while hovering over it.
-
-### Delete Case
+   - To attach a screenshot to your comment, paste it into the text editor.
+   - To delete an attached file from the comment, select the bin icon while hovering over it.
+    
+### Delete Case (preview)
 
 To delete a case:
 

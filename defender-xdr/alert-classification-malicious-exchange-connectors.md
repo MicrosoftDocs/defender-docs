@@ -2,21 +2,14 @@
 title: Alert classification for malicious Exchange connectors
 description: Learn how to classify alerts on malicious Exchange connectors activity and protect your network from attacks.
 ms.service: defender-xdr
-f1.keywords:
-  - NOCSH
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
-search.appverid:
-  - MOE150
-  - MET150
 ms.date: 04/18/2025
 appliesto:
   - Microsoft Defender XDR

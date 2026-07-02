@@ -1,22 +1,17 @@
 ---
 title: Use Azure Privileged Identity Management (PIM) in Microsoft Defender for Office 365 to limit admin access to cyber security tools.
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.date: 2/20/2024
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: high
-search.appverid:
-  - MET150
 ms.assetid: 56fee1c7-dc37-470e-9b09-33fff6d94617
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
   - seo-marvel-apr2020
+  - sfi-image-nochange
 description: Learn to integrate Azure PIM in order to grant just-in-time, time limited access to users to do elevated privilege tasks in Microsoft Defender for Office 365, lowering risk to your data.
 ms.service: defender-office-365
 ---
@@ -68,7 +63,7 @@ Use one of the following methods:
 
 Or
 
-- Create a custom role in Microsoft Defender XDR Unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender XDR Unified RBAC model](/defender-xdr/manage-rbac#start-using-microsoft-defender-xdr-unified-rbac-model).
+- Create a custom role in Microsoft Defender unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender unified RBAC model](/defender-xdr/manage-rbac#start-using-microsoft-defender-unified-rbac-model).
 
 For either method:
 
@@ -89,7 +84,7 @@ For either method:
 ### Nest the newly created security group into the role group
 
 > [!NOTE]
-> This step is required only if you used an Email & collaboration role group in [Create a role or role group with the required permissions](#create-a-role-or-role-group-with-the-required-permissions). Defender XDR Unified RBAC supports direct permissions assignments to Microsoft Entra groups, and you can add members to the group for PIM.
+> This step is required only if you used an Email & collaboration role group in [Create a role or role group with the required permissions](#create-a-role-or-role-group-with-the-required-permissions). Defender unified RBAC supports direct permissions assignments to Microsoft Entra groups, and you can add members to the group for PIM.
 
 1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
 

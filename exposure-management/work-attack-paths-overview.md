@@ -1,12 +1,8 @@
 ---
 title: Overview of attack paths in Microsoft Security Exposure Management
 description: Learn how to mitigate security risks using attack paths in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: overview
-ms.service: exposure-management
-ms.date: 09/09/2025
+ms.date: 05/14/2026
 
 ---
 
@@ -48,15 +44,22 @@ Here's how Exposure Management helps you to identify and resolve attack paths.
 
 ### Cloud attack paths
 
-Cloud Attack paths illustrate routes that adversaries could exploit to move laterally within your environment, starting from external exposure and progressing toward meaningful impact within your environment. They help security teams visualize and prioritize real-world risks across their attack surface, focusing on externally-driven, exploitable threats that adversaries could use to compromise your organization.
+Cloud attack paths illustrate routes that adversaries could exploit to move laterally within your environment, starting from external exposure and progressing toward meaningful impact within your environment. They help security teams visualize and prioritize real-world risks across their attack surface, focusing on externally-driven, exploitable threats that adversaries could use to compromise your organization. With the integration of Defender for Cloud in the Defender portal, cloud attack paths provide enhanced visualization and analysis capabilities across Azure, AWS, and GCP environments.
+
 
 Cloud attack paths reflect real, externally driven and exploitable risks, helping you cut through the noise and act faster. The paths focus on external entry points and how attackers could progress through your environment reaching business-critical targets.
 
-Attack Path expands cloud threat detection to cover a broad range of cloud resources, including storage accounts, containers, serverless environments, unprotected repositories, unmanaged APIs, and AI agents. Each attack path is built from a real, exploitable weakness such as exposed endpoints, misconfigured access settings, or leaked credentials, ensuring that identified threats reflect genuine risk scenarios. By analyzing cloud configuration data and performing active reachability scans, the system validates whether exposures are accessible from outside the environment, reducing false positives and emphasizing threats that are both real and actionable.
+**Comprehensive cloud coverage**: Attack paths expand cloud threat detection to cover a broad range of cloud resources, including storage accounts, containers, serverless environments, unprotected repositories, unmanaged APIs, and AI agents. Each attack path is built from a real, exploitable weakness such as exposed endpoints, misconfigured access settings, or leaked credentials, ensuring that identified threats reflect genuine risk scenarios.
+
+**Advanced validation**: By analyzing cloud configuration data and performing active reachability scans, the system validates whether exposures are accessible from outside the environment, reducing false positives and emphasizing threats that are both real and actionable.
+
 
 ### On-premises attack paths
 
-Attack paths now terminate automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise
+Attack paths now terminate automatically when they reach End Game assets (Domain Admins, Enterprise Admins, Administrators, or Domain Controllers). These assets provide full domain control if compromised. The visualization and prioritization of attack path risks for on-premises infrastructure provide consistent clarity, enabling security teams to focus on high-impact scenarios and reduce noise.
+
+>[!NOTE]
+>For on-premises attack paths, you might occasionally see an attack path highlighted without a directly associated recommendation in the same view. In these scenarios, the attack paths are still generated based on observed risk signals, while device-related vulnerabilities and security recommendations remain available under the **Devices Experience** for the specific device involved in the attack path.
 
 ## Next steps
 

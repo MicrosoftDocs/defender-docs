@@ -1,15 +1,9 @@
 ---
 title: Anti-phishing protection
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: concept-article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: 75af74b2-c7ea-4556-a912-8c48e07271d3
 ms.collection: 
   - m365-security
@@ -20,7 +14,7 @@ description: Admins can learn about the anti-phishing protection features in the
 ms.service: defender-office-365
 ms.date: 07/01/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -39,7 +33,7 @@ appliesto:
 
 - **Ransomware** that encrypts your data and demands payment to decrypt it almost always starts in phishing messages. Anti-phishing protection can't help you decrypt encrypted files, but it can help detect the initial phishing messages that are associated with the ransomware campaign. For more information about recovering from a ransomware attack, see [Ransomware incident response playbooks](/security/ransomware/).
 
-With the growing complexity of attacks, it's even difficult for trained users to identify sophisticated phishing messages. Fortunately, the default email protections for cloud mailboxes and the additional features in Microsoft Defender for Office 365 can help.
+With the growing complexity of attacks, it's even difficult for trained users to identify sophisticated phishing messages. Fortunately, [the built-in security features for all cloud mailboxes](eop-about.md) and [the additional features in Microsoft Defender for Office 365](/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet) can help.
 
 ## Anti-phishing protection for all cloud mailboxes
 

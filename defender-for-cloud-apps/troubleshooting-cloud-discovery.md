@@ -2,7 +2,7 @@
 title: Troubleshooting cloud discovery errors 
 description: This article provides a list of cloud discovery frequent errors and resolution recommendations for each.
 ms.date: 02/19/2025
-ms.topic: conceptual
+ms.topic: article
 ---
 # Troubleshooting cloud discovery errors
 
@@ -12,7 +12,7 @@ This article provides a list of cloud discovery errors and resolution recommenda
 
 Even after Discovery is set up, customers might continue hardening the Operating System in order to meet compliance standards. However, this action might cause interference with the containerization service itself.
 
-## Microsoft Defender for Endpoint integration
+## Microsoft Defender for Endpoint integration errors
 
 If you integrated Microsoft Defender for Endpoint with Defender for Cloud Apps, and you don't see the results of the integration.
 
@@ -37,6 +37,8 @@ You can track the processing of cloud discovery logs using the governance log. T
 
 ## Log collector errors
 
+The [Log collector Diagnostic script](https://github.com/microsoft/Microsoft-Defender-for-Cloud-Apps/tree/main/Sample%20scripts/Log-Collector-Diag-Script) automates the collection and compression of logs and diagnostic data for troubleshooting Log Collector containers on Linux (Docker/Podman) to improve workflow efficiency. If you need to contact support, run the script and share the generated log bundle for faster case resolution.
+
 |Issue|Resolution|
 |----|----|
 |Couldn't connect to the log collector over FTP| 1. Verify that you're using FTP credentials and not SSH credentials. <br />2. Verify that the FTP client you're using isn't set to SFTP (Secure File Transfer Protocol).  |
@@ -51,6 +53,8 @@ You can track the processing of cloud discovery logs using the governance log. T
 |Issue|Resolution|
 |----|----|
 |Discovery data was uploaded and parsed successfully but the cloud discovery dashboard looks empty|The Dashboard might be filtered on data your logs don't have so there's no data to show. Try changing the filters in the cloud discovery dashboard to show different types of data to see the results.|
+
+The [Log collector Diagnostic script](https://github.com/microsoft/Microsoft-Defender-for-Cloud-Apps/tree/main/Sample%20scripts/Log-Collector-Diag-Script) automates the collection and compression of logs and diagnostic data for troubleshooting Log Collector containers on Linux (Docker/Podman) to improve workflow efficiency. If you need to contact support, run the script and share the generated log bundle for faster case resolution.
 
 ## Next steps
 

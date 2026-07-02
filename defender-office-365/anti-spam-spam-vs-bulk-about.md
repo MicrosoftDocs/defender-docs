@@ -1,15 +1,9 @@
 ---
 title: What's the difference between junk email and bulk email?
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
 ms.assetid: 8079f193-1b40-4081-9e5d-d0e50dfbcc59
 ms.collection: 
   - m365-security
@@ -20,7 +14,7 @@ description: Admins can learn about the differences between junk email (spam) an
 ms.service: defender-office-365
 ms.date: 07/25/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -71,7 +65,7 @@ If your Microsoft 365 organization has Defender for Office 365 Plan 1 or Plan 2 
 
 2. Select **View data by Email \> Spam** and **Chart breakdown by Detection Technology**.
 
-3. Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. In the **Filters** flyout that opens, select only **Bulk** in the **Detection** section.
+3. Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. In the **Filters** flyout that opens, select only **Bulk** in the **Detection** section.
 
    Use the **Bulk complaint level** slider to adjust the bulk detections by BCL value.
 
@@ -79,7 +73,7 @@ If your Microsoft 365 organization has Defender for Office 365 Plan 1 or Plan 2 
 
 4. Back on the **Threat protection status** page, select one of the bulk messages from the details table below the chart by clicking anywhere in the row other than the check box next to the first column.
 
-   In the message details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** at the top of the flyout to see details about the message in [the Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+   In the message details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-open.png" border="false"::: **Open email entity** at the top of the flyout to see details about the message in [the Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
 
 5. After you identify wanted and unwanted bulk senders, adjust the bulk threshold in the default anti-spam policy and in custom anti-spam policies. If some bulk senders don't fit within your bulk threshold, [report the messages to Microsoft for analysis](submissions-admin.md#report-good-email-to-microsoft).
 

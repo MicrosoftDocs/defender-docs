@@ -1,16 +1,18 @@
 ---
-title: Get started with app governance visibility and insights | Microsoft Defender for Cloud Apps
-ms.date: 08/12/2025
+title: Get started with app governance visibility and insights
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewr: shragar
-description: Get started with app governance visibility and insights in Microsoft Defender XDR for Microsoft Defender for Cloud Apps.
+description: Open the app governance dashboard in Microsoft Defender, verify required roles, and start reviewing visibility and insight data for OAuth apps.
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
-# Get started with visibility and insights
+# Get started with visibility and insights in app governance
 
 Start by viewing the [app governance dashboard](https://aka.ms/appgovernance) on the **App governance > Overview** tab in the Microsoft Defender Portal.
 
-Your sign-in account must have one of the [required app governance administrator roles](app-governance-get-started.md#roles) to view any app governance data.
+Your sign-in account must have one of the [app governance administrator roles](app-governance-get-started.md#roles) to view any app governance data.
 
 For example:
 
@@ -25,10 +27,10 @@ The dashboard on the **Overview** tab contains a summary of your app ecosystem:
 |**Tenant summary**     | The count of key app and incident categories.        |
 |**Latest incidents**     |   The 10 most recent active incidents in the tenant      |
 |**Data usage**     |  Mouse over each month column in the graph to see the corresponding value: <br><br>- **Total data usage**: Tracks total data accessed by all apps in the tenant through Graph API over the last four calendar months. Currently includes emails, files, and chat and channel messages read and written by apps that access Microsoft 365 using Graph API.<br><br>  - **Data usage by resource type**: Data usage over the last four calendar months, broken down by resource type. Currently includes emails, files, and chat and channel messages read and written by apps that access Microsoft 365 using Graph API.       |
-|**Apps that accessed data across Microsoft 365 services**     |  The count of apps that have accessed data with and without sensitivity labels on SharePoint, OneDrive, Exchange Online, and Teams in the last 30 days. <br><br>For example, in the screenshot above, 99 apps accessed OneDrive in the last 30 days, out of which 27 apps accessed data with sensitivity labels.       |
-|**Sensitivity labels accessed**     |     Count of apps that accessed labeled data across SharePoint, OneDrive, Exchange Online, and Teams in the last 30 days, sorted by the count. <br><br>For example, in the screenshot above, 90 apps accessed confidential data on SharePoint, OneDrive, Exchange Online, and Teams.    |
+|**Apps that accessed data across Microsoft 365 services**     |  The count of apps that have accessed data with and without sensitivity labels on SharePoint, OneDrive, Exchange Online, and Teams in the last 30 days. <br><br>For example, in the Overview dashboard, 99 apps accessed OneDrive in the last 30 days, of which 27 apps accessed data with sensitivity labels.       |
+|**Sensitivity labels accessed**     |     Count of apps that accessed labeled data across SharePoint, OneDrive, Exchange Online, and Teams in the last 30 days, sorted by the count. <br><br>For example, in the Overview dashboard, 90 apps accessed confidential data on SharePoint, OneDrive, Exchange Online, and Teams.    |
 |**Predefined policies**     |  Count of active and total predefined policies that identify risky apps, such as apps with excessive privileges, unusual characteristics, or suspicious activities.       |
-|**App categories**     |  The top apps sorted by these categories:  <br><br>- **All categories**: Sorts across all available categories.<br>  - **Highly privileged**: High privilege is an internally determined category based on platform machine learning and signals.<br>  - **Overprivileged**: When app governance receives data that indicates that a permission granted to an application hasn't been used in the last 90 days, that application is overprivileged. App governance must be operating for at least 90 days to determine if any app is overprivileged.  <br>- **Unverified publisher**: Applications that haven't received [publisher certification](/azure/active-directory/develop/publisher-verification-overview) are considered unverified.<br>  - **App only permissions**: [Application permissions](/azure/active-directory/develop/v2-permissions-and-consent#permission-types) are used by apps that can run without a signed-in user present. Apps with permissions to access data across the tenant are potentially a higher risk.<br>- **New apps**: New apps that have been registered in the last seven days.       |
+|**App categories**     |  The top apps sorted by these categories:  <br><br>- **All categories**: Sorts across all available categories.<br>  - **Highly privileged**: High privilege is an internally determined category based on platform machine learning and signals.<br>  - **Overprivileged**: When app governance receives data that indicates that a permission granted to an application hasn't been used in the last 90 days, that application is overprivileged. App governance must be operating for at least 90 days to determine if any app is overprivileged.<br> - **Unused**: Apps that have not signed in within the last 90 days  <br>- **Unverified publisher**: Applications that haven't received [publisher certification](/azure/active-directory/develop/publisher-verification-overview) are considered unverified.<br>  - **App only permissions**: [Application permissions](/azure/active-directory/develop/v2-permissions-and-consent#permission-types) are used by apps that can run without a signed-in user present. Apps with permissions to access data across the tenant are potentially a higher risk.<br>- **New apps**: New apps that have been registered in the last seven days.       |
 
 ## View app insights
 
@@ -56,25 +58,28 @@ One of the primary value points for app governance is the ability to quickly vie
       
    - **Publisher verified**
       
-    Use one of the following nondefault filters to further customize the apps listed:
+   - **Last used**
+      
+   - **Services accessed**
+      
+   - **Sensitivity labels accessed**
+      
+       Use one of the following nondefault filters to further customize the apps listed:
 
-    - **Last modified**
-      
-       - **Added on**
-      
-       - **Certification**
-      
-       - **Users**
-      
-       - **Services accessed**
-      
-       - **Data usage**
-      
-       - **Sensitivity labels accessed**
+       - **Last modified**
    
-     > [!TIP]
-     > Save the query to save the currently selected filters for use again in the future.
-     
+       - **Added on**
+   
+       - **Certification**
+   
+       - **Users**
+   
+       - **Data usage**
+
+    > [!TIP]
+    > Save the query to save the currently selected filters for use again in the future.
+   
+   
 1. Select the name of an app to view more details. For example:
 
     :::image type="content" source="media/app-governance-visibility-insights-get-started/app-governance-app-list-view.png" alt-text="Screenshot of the app details pan showing an app summary." lightbox="media/app-governance-visibility-insights-get-started/app-governance-app-list-view.png":::

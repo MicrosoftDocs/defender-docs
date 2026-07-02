@@ -3,20 +3,19 @@ title: Performance analyzer for Microsoft Defender Antivirus
 description: Describes the procedure to tune the performance of Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-audience: ITPro
-author: batamig
-ms.author: bagol
-ms.date: 10/20/2025
+author: chrisda
+ms.author: chrisda
+ms.date: 06/16/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-manager: bagol
 ms.collection: 
 - m365-security
 - mde-ngp
 ms.topic: how-to
 ms.subservice: ngp
-search.appverid: met150
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Performance analyzer for Microsoft Defender Antivirus
@@ -45,6 +44,8 @@ Some options to analyze include:
 
 ## Prerequisites 
 
+### Required versions
+
 - Platform Version: `4.18.2108.7` or later
 - PowerShell Version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
 - For Windows Server 2012 R2, the Windows ADK (Windows Performance Toolkit) is needed. [Download and install the Windows ADK](/windows-hardware/get-started/adk-install)
@@ -55,9 +56,10 @@ Some options to analyze include:
    - Windows 10
    - Windows 11
    - Windows Server 2016 and later
-   - Windows Server 2012 R2 (when onboarded using [modern, unified solution](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))
+   - Windows Server 2012 R2 (when onboarded using [the modern unified solution for Windows Server 2016 and Windows Server 2012 R2](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2))
 
-## Running performance analyzer
+<a name="running-performance-analyzer"></a>
+## Run the Microsoft Defender Antivirus performance analyzer
 
 The high-level process for running the performance analyzer involves the following steps:
 
@@ -68,7 +70,8 @@ The high-level process for running the performance analyzer involves the followi
 
 2. Analyze the scan results using different recording reports.
 
-## Using performance analyzer
+<a name="using-performance-analyzer"></a>
+## Record and analyze events with the Microsoft Defender Antivirus performance analyzer
 
 To start recording system events, open PowerShell in administrator mode and perform the following steps:
 
@@ -80,11 +83,11 @@ To start recording system events, open PowerShell in administrator mode and perf
 
    where `-RecordTo` parameter specifies full path location in which the trace file is saved. For more cmdlet information, see [Microsoft Defender Antivirus cmdlets](/powershell/module/defender).
 
-2. If there are processes or services thought to be affecting performance, reproduce the situation by carrying out the relevant tasks.
+1. If there are processes or services thought to be affecting performance, reproduce the situation by carrying out the relevant tasks.
 
-3. Press **ENTER** to stop and save recording, or **Ctrl+C** to cancel recording.
+1. Press **ENTER** to stop and save recording, or **Ctrl+C** to cancel recording.
 
-4. Analyze the results using the performance analyzer's `Get-MpPerformanceReport` parameter. For example, on executing the command `Get-MpPerformanceReport -Path <recording.etl> -TopFiles 3 -TopScansPerFile 10`, the user is provided with a list of top-ten scans for the top three files affecting performance.
+1. Analyze the results using the performance analyzer's `Get-MpPerformanceReport` parameter. For example, on executing the command `Get-MpPerformanceReport -Path <recording.etl> -TopFiles 3 -TopScansPerFile 10`, the user is provided with a list of top-ten scans for the top three files affecting performance.
 
    For more information on command-line parameters and options, see the [New-MpPerformanceRecording](/powershell/module/defenderperformance/new-mpperformancerecording)   and [Get-MpPerformanceReport](/powershell/module/defenderperformance/get-mpperformancereport).
 
@@ -101,13 +104,16 @@ Based on the query, the user is able to view data for scan counts, duration (tot
 
 The results of the performance analyzer can also be exported and converted to a CSV or JSON file. This article includes examples that describe the process of "export" and "convert" through sample code.
 
-Starting with Defender version `4.18.2206.X`, users are able to view scan skip reason information under `SkipReason` column. The possible values are:
+Starting with Defender version `4.18.2206.X`, users are able to view scan skip reason information under `SkipReason` column. The possible values for the `SkipReason` column are:
 
 - Not Skipped
 - Optimization (typically due to performance reasons)
 - User skipped (typically due to user-set exclusions)
 
-### For CSV
+<a name="for-csv"></a>
+### Export or convert performance analyzer results to CSV
+
+Use the following commands to export or convert performance analyzer results to CSV.
 
 - **To export**:
 
@@ -121,15 +127,20 @@ Starting with Defender version `4.18.2206.X`, users are able to view scan skip r
     (Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 100).TopScans | ConvertTo-Csv -NoTypeInformation
     ```
 
-### For JSON
+<a name="for-json"></a>
+### Convert performance analyzer results to JSON
+
+Use the following command to convert performance analyzer results to JSON.
 
 - **To convert**:
     ```powershell
     (Get-MpPerformanceReport -Path .\Repro-Install.etl -Topscans 1000).TopScans | ConvertTo-Json -Depth 1
     ```
 
-To ensure machine-readable output for exporting with other data processing systems, it's recommended to use `-Raw` parameter for `Get-MpPerformanceReport`. See the following sections for more details.
+To ensure machine-readable output for exporting with other data processing systems, it's recommended to use `-Raw` parameter for `Get-MpPerformanceReport`. For more details, see [For CSV](#for-csv) and [For JSON](#for-json).
 
-### [Microsoft Defender Antivirus Performance Analyzer reference](/defender-endpoint/performance-analyzer-reference)
+## Reference
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+For detailed information about performance analyzer cmdlet parameters, options, and output fields, see [Microsoft Defender Antivirus Performance Analyzer reference](performance-analyzer-reference.md).
+
+

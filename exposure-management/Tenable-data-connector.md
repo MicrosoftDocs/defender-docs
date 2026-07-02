@@ -1,11 +1,7 @@
 ---
 title: Integrate Tenable data connector in Microsoft Security Exposure Management
 description: Learn how to the Tenable data connector in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: rayne-wiselman
 ms.topic: overview
-ms.service: exposure-management
 ms.date: 09/24/2024
 ---
 

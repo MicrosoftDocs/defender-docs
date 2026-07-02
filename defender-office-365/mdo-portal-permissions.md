@@ -1,27 +1,21 @@
 ---
 title: Microsoft Defender for Office 365 permissions in the Microsoft Defender portal
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: bagol
 ms.audience: Admin
 ms.topic: how-to
-audience: Admin
 ms.localizationpriority: high
 ms.collection: 
   - m365-security
   - tier1
-search.appverid: 
-  - MOE150
-  - MET150
 description: Admins can learn how to manage Microsoft Defender for Office 365 (Email & collaboration) permissions in the Microsoft Defender portal.
-ms.custom: 
-- seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ms.date: 09/29/2025
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
@@ -37,10 +31,10 @@ To manage Defender for Office 365 permissions in the Microsoft Defender portal, 
 You need to be member of the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID or a member of the **Organization Management** role group in Defender for Office 365 permissions. Specifically, the **Role Management** role in Defender for Office 365 allows users to view, create, and modify Defender for Office 365 role groups. By default, that role is assigned only to the **Organization Management** role group (and by extension, global administrators).
 
 - Some Defender for Office 365 features require additional permissions in Exchange Online. For more information, see [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
-- Microsoft Defender XDR has its own Unified role-based access control (RBAC). This model provides a single permissions management experience in one central location where admins can control permissions across different security solutions. These permissions are different from the permissions described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
+- Microsoft Defender has its own Unified role-based access control (RBAC). This model provides a single permissions management experience in one central location where admins can control permissions for different security solutions. These permissions are different from the permissions described in this article. For more information, see [Microsoft Defender role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
   > [!IMPORTANT]
-  > If you activate Defender XDR RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender XDR Unified RBAC.
+  > If you activate Defender unified RBAC for Email & collaboration, the permissions page at <https://security.microsoft.com/emailandcollabpermissions> is no longer available in the Defender portal, so you need to ensure that you configure or import your roles _before_ you activate Defender unified RBAC.
 
   :::image type="content" source="media/defender-xdr-rbac-permissions-page.png" alt-text="Screenshot of the Permissions page in the Microsoft Defender portal showing Microsoft Defender XDR roles and Email & Collaboration roles." lightbox="media/defender-xdr-rbac-permissions-page.png":::
 
@@ -117,7 +111,7 @@ The following actions are available for Email & collaboration role groups in the
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 
-2. On the **Permissions** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new role group wizard.
+2. On the **Permissions** page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create** to start the new role group wizard.
 
 3. On the **Name your role group** page, enter the following information:
    - **Name**: Enter a unique name for the role group.
@@ -129,7 +123,7 @@ The following actions are available for Email & collaboration role groups in the
 
    1. In the **Chose roles** flyout that opens, select **Add** at the top of the flyout.
 
-   2. In the new **Choose roles** flyout that opens, select one or more roles. Select the **Name** column header to sort the list by name, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the role.
+   2. In the new **Choose roles** flyout that opens, select one or more roles. Select the **Name** column header to sort the list by name, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the role.
 
       After you've selected one or more roles to add, select **Add** at the bottom of the flyout.
 
@@ -147,7 +141,7 @@ The following actions are available for Email & collaboration role groups in the
 
    1. In the **Choose members** flyout that opens, select **Add** at the top of the flyout.
 
-   2. In the new **Choose members** flyout that opens, select one or more users. Select a column header to sort the list by **Name** or **Email address**, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the user.
+   2. In the new **Choose members** flyout that opens, select one or more users. Select a column header to sort the list by **Name** or **Email address**, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the user.
 
       After you've selected one or more users to add, select **Add** at the bottom of the flyout.
 
@@ -171,7 +165,7 @@ Back on the **Permissions** page, the new role group is listed.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 
-2. On the **Permissions** page, select the role group from the list. Use the **Name** column header to sort the list by name, or the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the role group.
+2. On the **Permissions** page, select the role group from the list. Use the **Name** column header to sort the list by name, or the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the role group.
 
 3. In the role group details flyout that opens, select **Copy role group** at the top of the flyout.
 
@@ -185,11 +179,11 @@ The roles and members are populated with the values from the role you're copying
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 
-2. On the **Permissions** page, select the role group from the list. Use the **Name** column header to sort the list by name, or the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the role group.
+2. On the **Permissions** page, select the role group from the list. Use the **Name** column header to sort the list by name, or the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the role group.
 
 3. In the role group details flyout that opens, do one of the following steps:
 
-   - Select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit role group** at the top of the flyout. In the edit role group wizard that opens, select the **Choose members** tab.
+   - Select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit role group** at the top of the flyout. In the edit role group wizard that opens, select the **Choose members** tab.
    - In the **Members** section of the flyout, select **Edit**.
 
 4. On the **Choose members** tab of the edit role group wizard that opens, do one of the following steps:
@@ -198,13 +192,13 @@ The roles and members are populated with the values from the role you're copying
 
 5. In the **Choose members** flyout that opens, do one of the following steps:
 
-   - **Add members**: Select **Add** at the top of the flyout. In the new **Choose members** flyout that opens, select one or more users. Select a column header to sort the list by **Name** or **Email address**, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the user.
+   - **Add members**: Select **Add** at the top of the flyout. In the new **Choose members** flyout that opens, select one or more users. Select a column header to sort the list by **Name** or **Email address**, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the user.
 
      After you've selected one or more users to add, select **Add** at the bottom of the flyout.
 
      Back in the original **Choose members** flyout, the added users are shown in the **Members** section.
 
-   - **Remove members**: Select **Remove** at the top of the flyout. In the new **Choose members** flyout that opens, select one or more users. Select a column header to sort the list by **Name** or **Email address**, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the user.
+   - **Remove members**: Select **Remove** at the top of the flyout. In the new **Choose members** flyout that opens, select one or more users. Select a column header to sort the list by **Name** or **Email address**, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the user.
 
      After you've selected one or more users to remove, select **Remove**.
 
@@ -223,11 +217,11 @@ The roles and members are populated with the values from the role you're copying
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 
-2. On the **Permissions** page, select the role group from the list. Select the **Name** column header to sort the list by name, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the role group.
+2. On the **Permissions** page, select the role group from the list. Select the **Name** column header to sort the list by name, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the role group.
 
 3. In the role group details flyout that opens, do one of the following steps:
 
-   - Select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit role group** at the top of the flyout. In the edit role group wizard that opens, select the **Choose roles** tab.
+   - Select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit role group** at the top of the flyout. In the edit role group wizard that opens, select the **Choose roles** tab.
    - In the **Assigned roles** section of the flyout, select **Edit**.
 
 4. On the **Choose roles** tab of the edit role group wizard that opens, do one of the following steps:
@@ -236,13 +230,13 @@ The roles and members are populated with the values from the role you're copying
 
 5. In the **Choose roles** flyout that opens, do one of the following steps:
 
-   - **Add roles**: Select **Add** at the top of the flyout. In the new **Choose roles** flyout that opens, select one or more roles. Roles that are already assigned are grayed out. Select the **Name** column header to sort the list by name, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the role.
+   - **Add roles**: Select **Add** at the top of the flyout. In the new **Choose roles** flyout that opens, select one or more roles. Roles that are already assigned are grayed out. Select the **Name** column header to sort the list by name, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the role.
 
      After you've selected one or more roles to add, select **Add** at the bottom of the flyout.
 
      Back in the original **Choose roles** flyout, the added roles are shown in the **Roles** section.
 
-   - **Remove roles**: Select **Remove** at the top of the flyout. In the new **Choose roles** flyout that opens, select one or more roles. Select a column header to sort the list by **Name**, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the role.
+   - **Remove roles**: Select **Remove** at the top of the flyout. In the new **Choose roles** flyout that opens, select one or more roles. Select a column header to sort the list by **Name**, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the role.
 
      After you've selected one or more roles to remove, select **Remove**.
 
@@ -261,7 +255,7 @@ The roles and members are populated with the values from the role you're copying
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 
-2. On the **Permissions** page, select the role group from the list. Select the **Name** column header to sort the list by name, or use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find the role group.
+2. On the **Permissions** page, select the role group from the list. Select the **Name** column header to sort the list by name, or use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box to find the role group.
 
 3. In the role group details flyout that opens, select **Delete role group** at the top of the flyout.
 

@@ -4,6 +4,7 @@ description: This article describes the process Defender for Cloud Apps follows 
 ms.date: 06/26/2025
 ms.topic: how-to
 ms.reviewer: MayaAbelson
+ms.custom: sfi-ga-blocked
 ---
 # DLP content inspection in Microsoft Defender for Cloud Apps
 
@@ -19,6 +20,10 @@ You can also define which file elements are inspected—content, metadata, or fi
 ## Prerequisites
 
 To inspect encrypted files, and enable scanning of labels a [Global Administrator](/entra/identity/enterprise-apps/configure-admin-consent-workflow) must first grant one‑time admin consent to Defender for Cloud Apps in Microsoft Entra ID.
+
+
+> [!NOTE]
+> Microsoft recommends that you use roles with the fewest permissions. This strategy helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To do this, in the Defender portal go to **Settings > Cloud Apps > Microsoft Information Protection > Inspect protected files**, and select **Grant permission**.
 

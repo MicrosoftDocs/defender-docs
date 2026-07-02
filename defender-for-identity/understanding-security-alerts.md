@@ -4,6 +4,7 @@ description: This article explains how to view and manage Microsoft Defender for
 ms.date: 05/08/2025
 ms.topic: how-to
 ms.reviewer: rlitinsky
+ms.custom: sfi-image-nochange
 ---
 
 # View and Manage security alerts
@@ -28,7 +29,6 @@ Alerts from the last seven days are displayed with the following information:
 - Last activity
 
 :::image type="content" source="media/understanding-security-alerts/filtered-alerts.png" alt-text="Screenshot showing the Alerts page in the Defender portal. Two alerts named Suspected brute-force are listed with full alert details."  lightbox="media/understanding-security-alerts/filtered-alerts.png":::
-
 
 
 ## Customize the view of the alerts queue
@@ -66,7 +66,7 @@ You can access individual alerts from multiple locations, by selecting the alert
 The alerts page provides context into the alert, by combining attack signals and alerts related to the selected alert to construct a detailed alert story. The alerts page helps you quickly triage, investigate, and take effective action on alerts.
 
 > [!NOTE]
-> Microsoft Defender for Identity alerts currently appear in two different layouts in the Microsoft Defender XDR portal. 
+> Microsoft Defender for Identity alerts currently appear in two different layouts in the Microsoft Defender portal. 
 > While the alert views show different information, all alerts are based on Defender for Identity collected data. The differences in layout and information shown are part of an ongoing transition to a unified alerting experience across Microsoft Defender products.
 
 To view alerts from both Defender for Identity and Defender XDR, select **Filter**, then under **Service sources** choose **Microsoft Defender for Identity** and **Defender XDR**, and select **Apply**:
@@ -158,5 +158,4 @@ For more information, see [Tune an alert](/microsoft-365/security/defender/inves
 
 - [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
 - [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)
-- [Working with lateral movement paths](/defender-for-identity/understand-lateral-movement-paths)
-- [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+

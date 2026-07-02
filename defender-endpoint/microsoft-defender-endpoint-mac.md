@@ -1,21 +1,19 @@
-﻿---
-title: Microsoft Defender for Endpoint on macOS overview
+---
+title: Microsoft Defender for Endpoint on macOS
 ms.reviewer: joshbregman
-description: An introduction and overview of Microsoft Defender for Endpoint on macOS.
+description: Learn about Microsoft Defender for Endpoint on macOS capabilities, including threat protection, EDR, vulnerability management, and deployment options for Mac devices.
 ms.service: defender-endpoint
-author: batamig
-ms.author: bagol
+author: paulinbar
+ms.author: painbar
 ms.localizationpriority: medium
-manager: bagol
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
-ms.topic: install-set-up-deploy
+ms.topic: overview
 ms.subservice: macos
-search.appverid: met150
-ms.date: 07/01/2025
+ai-usage: ai-assisted
+ms.date: 05/19/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -25,142 +23,91 @@ appliesto:
 ---
 # Microsoft Defender for Endpoint on macOS
 
+Microsoft Defender for Endpoint on macOS helps organizations prevent, detect, investigate, and respond to advanced threats on Mac devices. Built natively on Apple's system extension architecture, it delivers enterprise-grade protection optimized for macOS workloads - from software development to content creation - with seamless integration into your existing security operations through the Microsoft Defender portal.
 
+## Security capabilities for macOS environments
 
-This article provides an overview of Microsoft Defender for Endpoint on macOS, including its capabilities and features. It also includes links to additional resources for more information.
+The following table describes the core security capabilities offered by Microsoft Defender for Endpoint on macOS.
 
+| Capability | Description |
+|---|---|
+| **Next-generation protection** | Provides real-time prevention against malware and emerging threats using cloud-based machine learning, behavioral monitoring, and heuristics. |
+| **Endpoint detection and response (EDR)** | Delivers deep visibility into endpoint activity and enables rapid investigation and response to advanced attacks. |
+| **Posture management** | Provides risk-based vulnerability management with intelligent prioritization, remediation, and tracking. |
+| **Streamlined management and operations** | Simplifies deployment, configuration, and management through existing MDM tools and the Defender portal. |
+| **Seamless integration and extensibility** | Extends visibility and response through native macOS architecture alignment, APIs, SIEM connectors, and the broader Defender suite. |
 
-This article describes how to install, configure, update, and use Defender for Endpoint on Mac.
- 
+### Next-generation protection
+
+Protect macOS endpoints from malware and advanced threats using real-time, behavior-based, and cloud-powered protection capabilities.
+
+| Capability | Description |
+|---|---|
+| **Real-time protection** | [Next-generation antivirus protection](next-generation-protection.md) powered by local and cloud-based machine learning, behavioral monitoring, and heuristics. |
+| **Cloud-delivered protection** | Provides near-instant detection and blocking of new and emerging threats, including infostealers, supply chain attacks, and other threats targeting macOS. |
+| **[Security settings configuration](mac-preferences.md)** | Configure antivirus, cloud protection, and scan options, [detect and block potentially unwanted applications](mac-pua.md), and define custom [indicators of compromise](indicator-ip-domain.md) for IP addresses and URLs. |
+| **[Network protection](network-protection-macos.md) and [web protection](web-protection-overview.md)** | Helps protect Mac devices from web-based threats by controlling connections to malicious or unwanted sites. |
+| **[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)** | Safeguards security settings from unauthorized changes. |
+| **[Device control](mac-device-control-overview.md)** | Monitors and restricts access to removable media - including USB storage, Bluetooth, and other peripherals - with granular policies deployed through [Intune](mac-device-control-intune.md) or [JAMF](mac-device-control-jamf.md). |
+
+### Endpoint detection and response (EDR)
+
+Detect, investigate, and respond to sophisticated attacks powered by AI-driven analytics and Microsoft Threat Intelligence.
+
+| Capability | Description |
+|---|---|
+| **AI-driven detection** | Uses AI and advanced analytics to [detect and respond to threats](overview-endpoint-detection-response.md) in close to real time. |
+| **Centralized management** | The Microsoft Defender portal at <https://security.microsoft.com> provides a central location to view detections and manage your organization's devices. |
+| **[Advanced hunting](/defender-xdr/advanced-hunting-overview)** | Enables proactive threat hunting by querying raw event data for deeper insight into activity on Mac endpoints. |
+| **[Response actions](respond-machine-alerts.md)** | Includes running antivirus scans, isolating devices, collecting investigation packages, and collecting files for deep analysis. |
+| **[Live response](live-response.md)** | Provides remote shell connections for in-depth investigations directly on macOS devices. |
+
+### Posture management
+
+Continuously assess vulnerabilities and security posture to reduce risk exposure and prioritize remediation.
+
+| Capability | Description |
+|---|---|
+| **[Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)** | Provides risk-based vulnerability management with intelligent prioritization, remediation, and tracking to help you manage and secure your Mac devices. |
+| **[Exposure score](/defender-vulnerability-management/tvm-exposure-score)** | Provides a comprehensive view of your organization's risk exposure for your macOS fleet. |
+| **[Security recommendations](/defender-vulnerability-management/tvm-security-recommendation)** | Provides actionable guidance to reduce endpoint risk. |
+| **[Remediation tracking](/defender-vulnerability-management/tvm-remediation)** | Tracks remediation activities and exposure reduction. |
+| **[Software inventory](/defender-vulnerability-management/tvm-software-inventory)** | Provides visibility into installed software on your macOS fleet. |
+
+## Streamlined management and operations
+
+Microsoft Defender for Endpoint on macOS provides flexible deployment and centralized management capabilities designed to simplify configuration, monitoring, and integration with other security tools in macOS environments.
+
+| Capability | Description |
+|---|---|
+| **MDM integration** | Integrates with the management tools your organization already uses, including [Microsoft Intune](mac-install-with-intune.md), [JAMF](mac-install-with-jamf.md), and [other MDM solutions](mac-install-with-other-mdm.md). |
+| **[Security settings configuration](mac-preferences.md)** | Centrally configure security settings, and [security settings management](/intune/intune-service/protect/mde-security-integration) lets you manage security policies directly from the Microsoft Defender portal without requiring full Intune enrollment. |
+| **[Software updates](mac-updates.md)** | Delivered through Microsoft AutoUpdate (MAU), ensuring your Mac fleet stays current with the latest protection. |
+| **[Management APIs](api/management-apis.md)** | Provides programmatic access to device management, vulnerability management, and threat intelligence. |
+
+## Seamless integration and extensibility
+
+Microsoft Defender for Endpoint on macOS integrates with existing security tools and workflows, extending into the broader Microsoft Defender ecosystem for unified visibility and coordinated security operations.
+
+| Capability | Description |
+|---|---|
+| **[System extensions](mac-support-sys-ext.md)** | Built on Apple's system extension architecture for long-term stability and compatibility, with native support for both Intel and Apple Silicon (Mx) processors. |
+| **[API integration](api/apis-intro.md)** | Integrates seamlessly with the broader Microsoft Defender suite through API integration. |
+| **SIEM connectors** | Enables connectivity with SIEM solutions for centralized monitoring and automated response. |
+| **[Power BI support](api/api-power-bi.md)** | Extends visibility through Power BI reporting and role-based access control (RBAC). |
+
 [!INCLUDE [side-by-side-scenarios](includes/side-by-side-scenarios.md)]
 
 ## What's new in the latest release
 
-[What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
+To learn about what's new in endpoint security, see the latest updates in [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md). To learn about the latest macOS updates, see [What's new in Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-releases.md#macos-releases).
 
-[What's new in Microsoft Defender for Endpoint on Mac](mac-whatsnew.md)
-
-> [!TIP]
-> If you have any feedback that you would like to share, submit it by opening Microsoft Defender for Endpoint on Mac on your device and navigating to **Help** \> **Send feedback**.
-
+If you have feedback to share, open Microsoft Defender for Endpoint on your Mac device, and then go to **Help** > **Send feedback**. 
 To get the latest features, including preview capabilities, configure your macOS device running Defender for Endpoint to use the Beta channel (formerly `Insider-Fast`).
 
-## How to install Microsoft Defender for Endpoint on Mac
+## Related content
 
-### Prerequisites
-
-- A Defender for Endpoint subscription and access to the Microsoft Defender portal
-- Beginner-level experience in macOS and BASH scripting
-- Administrative privileges on the device (in manual deployment)
-
-### Installation instructions
-
-There are several methods and deployment tools that you can use to install and configure Defender for Endpoint on Mac.
-
-- [Microsoft Intune-based deployment](mac-install-with-intune.md)
-- Non-Microsoft management tools:
-  - [JAMF-based deployment](mac-install-with-jamf.md)
-  - [Other MDM products](mac-install-with-other-mdm.md)
-- [Manual deployment](mac-install-manually.md) via command line.
-
-### System requirements
-
-These three most recent major releases of macOS are supported.
-
-- 26 (Tahoe)
-
-- 15.0.1 (Sequoia)
-- 14 (Sonoma)
-- Supported processors: x64 and ARM64 (Mx processors)
-
-- Disk space: 1GB
-
-- Beta versions of macOS aren't supported.
-
-> [!IMPORTANT]
-> On macOS 11 (Big Sur) and later, Defender for Endpoint requires more configuration profiles. If you're an existing customer upgrading from earlier versions of macOS, make sure to deploy the extra configuration profiles listed on [New configuration profiles for macOS Big Sur and newer versions of macOS](mac-sysext-policies.md) and detailed in [installation instructions](#installation-instructions).
-
-After you've enabled the service, you might need to configure your network or firewall to allow outbound connections between it and your endpoints.
-
-### Licensing requirements
-
-Defender for Endpoint on Mac requires one of the following Microsoft Volume Licensing offers:
-
-- Microsoft 365 E5
-- Microsoft Defender Suite
-- Microsoft 365 A5
-- Windows 10 Enterprise E5
-- Microsoft 365 Business Premium
-- Windows 11 Enterprise E5
-- Microsoft Defender for Endpoint P2 (included in Microsoft 365 E5 and E5 Security)
-- Microsoft Defender for Endpoint P1 (included in [Microsoft 365 E3](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-plan-1-now-included-in-m365-e3/ba-p/3060639))
-
-> [!NOTE]
-> Eligible licensed users might use Microsoft Defender for Endpoint on up to five concurrent devices.
-> Microsoft Defender for Endpoint is also available for purchase from a Cloud Solution Provider (CSP). When purchased via a CSP, it doesn't require Microsoft Volume Licensing offers listed.
-
-### Configuring Exclusions
-
-When adding exclusions, be mindful of [common exclusion mistakes for Microsoft Defender Antivirus](common-exclusion-mistakes-microsoft-defender-antivirus.md).
-
-### Network connections
-
-Ensure that connectivity is possible from your devices to Microsoft Defender for Endpoint cloud services. To prepare your environment, please reference [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
-
-Defender for Endpoint can connect through a proxy server by using the following methods:
-
-- Proxy autoconfig (PAC)
-- Web Proxy Autodiscovery Protocol (WPAD)
-- Manual static proxy configuration
-
-If a proxy or firewall is blocking anonymous traffic, make sure that anonymous traffic is permitted in the previously listed URLs.
-
-> [!WARNING]
-> Authenticated proxies aren't supported. Ensure that only PAC, WPAD, or a static proxy is being used.
-> SSL inspection and intercepting proxies are also not supported for security reasons. Configure an exception for SSL inspection and your proxy server to directly pass through data from Microsoft Defender for Endpoint on macOS to the relevant URLs without interception. Adding your interception certificate to the global store won't allow for interception.
-
-#### Test network connectivity
-
-To test that a connection isn't blocked, open `https://x.cp.wd.microsoft.com/api/report` and `https://cdn.x.cp.wd.microsoft.com/ping` in a browser.
-
-If you prefer the command line, you can also check the connection by running the following command in Terminal:
-
-```bash
-curl -w ' %{url_effective}\n' 'https://x.cp.wd.microsoft.com/api/report' 'https://cdn.x.cp.wd.microsoft.com/ping'
-```
-
-The output from this command should be similar to the following:
-
- `OK https://x.cp.wd.microsoft.com/api/report`
-
- `OK https://cdn.x.cp.wd.microsoft.com/ping`
-
-> [!CAUTION]
-> We recommend that you keep [System Integrity Protection](https://support.apple.com/HT204899) (SIP) enabled on client devices. SIP is a built-in macOS security feature that prevents low-level tampering with the OS, and is enabled by default.
-
-Once Defender for Endpoint is installed, connectivity can be validated by running the following command in Terminal:
-
-```bash
-mdatp connectivity test
-```
-
-## How to update Microsoft Defender for Endpoint on Mac
-
-Microsoft regularly publishes software updates to improve performance, security, and to deliver new features. To update Defender for Endpoint on macOS, a program named Microsoft AutoUpdate (MAU) is used. To learn more, see [Deploy updates for Microsoft Defender for Endpoint on Mac](mac-updates.md).
-
-## How to configure Microsoft Defender for Endpoint on Mac
-
-Guidance for how to configure the product in enterprise environments is available in [Set preferences for Microsoft Defender for Endpoint on Mac](mac-preferences.md).
-
-## macOS kernel and system extensions
-
-Starting with macOS 11 (Big Sur), Defender for Endpoint has been fully migrated from kernel extension to system extensions.
-
-## Resources
-
-- For more information about logging, uninstalling, or other articles, see [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md).
-- [Privacy for Microsoft Defender for Endpoint on macOS](mac-privacy.md).
-- [Turn on Network protection for macOS](network-protection-macos.md)
-
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+- [Review the prerequisites for Defender for Endpoint on macOS](microsoft-defender-endpoint-mac-prerequisites.md)
+- [Resources for Microsoft Defender for Endpoint on macOS](mac-resources.md)
+- [Configure Defender for Endpoint on macOS](mac-preferences.md)
 

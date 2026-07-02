@@ -1,16 +1,18 @@
 ---
-title: Configure automatic log upload for continuous reports
-description: This article describes the process configuring automatic log upload for continuous reports in Defender for Cloud Apps.
-ms.date: 02/20/2023
+title: Configure automatic log upload for continuous reports in Microsoft Defender for Cloud Apps
+description: Set up a log collector to automatically upload logs over Syslog or FTP for continuous cloud discovery reports in Microsoft Defender for Cloud Apps.
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Configure automatic log upload for continuous reports
 
 Log collectors enable you to easily automate log upload from your network. The log collector runs on your network and receives logs over Syslog or FTP. Each log is automatically processed, compressed, and transmitted to the portal. FTP logs are uploaded to Microsoft Defender for Cloud Apps after the file finished the FTP transfer to the Log Collector. For Syslog, the Log Collector writes the received logs to the disk. Then the collector uploads the file to Defender for Cloud Apps when the file size is larger than 40 KB.
 
-After a log is uploaded to Defender for Cloud Apps, it's moved to a backup directory. The backup directory stores the last 20 logs. When new logs arrive, the old ones are deleted. Whenever the log collector disk space is full, the log collector drops new logs until it has more free disk space (this shouldn't happen if prerequisites are properly met). You'll receive a warning on the **Log collectors** tab of the **Upload logs automatically** settings when this happens.
+After a log is uploaded to Defender for Cloud Apps, it's moved to a backup directory. The backup directory stores the last 20 logs. When new logs arrive, the old ones are deleted. Whenever the log collector disk space is full, the log collector drops new logs until it has more free disk space (this shouldn't happen if prerequisites are properly met). You'll receive a warning on the **Log collectors** tab of the **Upload logs automatically** settings when the log collector drops new logs because disk space is full.
 
 Before setting up automatic log file collection, verify your log matches the expected log type. You want to make sure Defender for Cloud Apps can parse your specific file. For more information, see [Using traffic logs for cloud discovery](create-snapshot-cloud-discovery-reports.md#log-format).
 
@@ -22,11 +24,16 @@ Before setting up automatic log file collection, verify your log matches the exp
 
 ## Prerequisites
 
+Make sure your environment meets the following system requirements:
+
 - Disk space 250 GB
 - CPU cores: 2
 - CPU Architecture: Intel® 64 and AMD 64
 - RAM: 4 GB
 - Set your firewall as described in [Network requirements](/defender-cloud-apps/network-requirements)
+
+> [!Note]
+> To install a new log collector version, you must stop the log collector, remove the current image, and then install the new one.
 
 > [!NOTE]
 > If you have an existing log collector and want to remove it before deploying it again, or if you simply want to remove it, run the following commands:
@@ -34,10 +41,6 @@ Before setting up automatic log file collection, verify your log matches the exp
 > `docker stop <collector_name>`
 >
 > `docker rm <collector_name>`
-
-
-> [!Note]
-> To install a new log collector version, you'll need to stop your log collector, remove the current image, and install the new one.
 
 ## Log collector performance
 

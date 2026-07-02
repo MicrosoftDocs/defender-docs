@@ -2,8 +2,6 @@
 title: Login pages in Attack simulation training
 author: chrisda
 ms.author: chrisda
-manager: bagol
-audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -11,7 +9,6 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to create and manage login pages for simulated phishing attacks in Microsoft Defender for Office 365 Plan 2.
-search.appverid: met150
 ms.date: 06/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -35,7 +32,7 @@ To see the available login pages, open the Microsoft Defender portal at <https:/
 
 - **Tenant login pages** tab: Contains the custom login pages that you created.
 
-The following information is shown for each login page. You can sort the login pages by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The following information is shown for each login page. You can sort the login pages by clicking on an available column header. Select :::image type="icon" source="media/defender-portal-icon-customize.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Name**
 - **⋮** (**Actions** control): Take action on the login page. The available actions depend on the **Status** value of the login page as described in the procedure sections.
@@ -45,14 +42,14 @@ The following information is shown for each login page. You can sort the login p
 - **Created by**: For built-in login pages, the value is **Microsoft**. For custom login pages, the value is the UPN of the user who created the login page.
 - **Last modified**
 
-To find a login page in the list, type part of the login page name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
+To find a login page in the list, type part of the login page name in the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and then press the ENTER key.
 
-Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the login pages by **Language** or **Status**.
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to filter the login pages by **Language** or **Status**.
 
 When you select a login page from the list by clicking anywhere in the row other than the check box next to the name, a details flyout appears with the following information:
 
-- :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** is available only in custom login pages on the **Tenant login pages** tab.
-- :::image type="icon" source="media/m365-cc-sc-set-as-default-icon.png" border="false"::: **Mark as default** to make this login page the default selection in **Credential Harvest** or **Link in Attachment** [payloads](attack-simulation-training-payloads.md) or [payload automations](attack-simulation-training-payload-automations.md). If the login page is already the default, :::image type="icon" source="media/m365-cc-sc-set-as-default-icon.png" border="false"::: **Mark as default** isn't available.
+- :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** is available only in custom login pages on the **Tenant login pages** tab.
+- :::image type="icon" source="media/defender-portal-icon-set-as-default.png" border="false"::: **Mark as default** to make this login page the default selection in **Credential Harvest** or **Link in Attachment** [payloads](attack-simulation-training-payloads.md) or [payload automations](attack-simulation-training-payload-automations.md). If the login page is already the default, :::image type="icon" source="media/defender-portal-icon-set-as-default.png" border="false"::: **Mark as default** isn't available.
 - **Preview** tab: View the login page as users see it. **Page 1** and **Page 2** links are available at the bottom of the page for two-page login pages.
 - **Details** tab: View details about the login page:
   - **Description**
@@ -69,10 +66,10 @@ When you select a login page from the list by clicking anywhere in the row other
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> and then select **Login pages**. To go directly to the **Content library** tab where you can select **Login pages**, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 
-2. On the **Tenant login pages** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new** to start the new login page wizard.
+2. On the **Tenant login pages** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create new** to start the new login page wizard.
 
    > [!NOTE]
-   > At any point after you name the login page during the new login page wizard, you can select **Save and close** to save your progress and continue later. The incomplete login page has the **Status** value **Draft**. You can pick up where you left off by selecting the login page from the list and then clicking the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+   > At any point after you name the login page during the new login page wizard, you can select **Save and close** to save your progress and continue later. The incomplete login page has the **Status** value **Draft**. You can pick up where you left off by selecting the login page from the list and then clicking the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
    >
    > You can also create login pages during the creation of simulations or simulation automations. For more information, see [Create a simulation: Select a payload and login page](attack-simulation-training-simulations.md#select-a-payload-and-login-page) and [Create a simulation automation: Select payloads and login pages](attack-simulation-training-simulation-automations.md#select-payloads-and-login-pages).
 
@@ -150,9 +147,9 @@ You can't modify built-in login pages on the **Global login pages** tab. You can
 
 To modify an existing custom login page on the **Tenant login pages** tab, do one of the following steps:
 
-- Select the login page from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
-- Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
-- Select the login page from the list by clicking anywhere in the row other than the check box next to the name. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+- Select the login page from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
+- Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
+- Select the login page from the list by clicking anywhere in the row other than the check box next to the name. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit**.
 
 The login page wizard opens with the settings and values of the selected login page. The steps are the same as described in the [Create login pages](#create-login-pages) section.
 
@@ -160,8 +157,8 @@ The login page wizard opens with the settings and values of the selected login p
 
 To copy an existing login page on the **Tenant login pages** or **Global login pages** tabs, do one of the following steps:
 
-- Select the login page from the list by clicking the check box next to the name, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Create a copy** action that appears.
-- Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Create a copy**.
+- Select the login page from the list by clicking the check box next to the name, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Create a copy** action that appears.
+- Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Create a copy**.
 
 The login page wizard opens with the settings and values of the selected login page. The steps are the same as described in the [Create login pages](#create-login-pages) section.
 
@@ -178,8 +175,8 @@ You can't remove built-in login pages from the **Global login pages** tab. You c
 
 To remove an existing custom login page from the **Tenant login pages** tab, do one of the following steps:
 
-- Select the login page from the list by clicking the check box next to the name, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-- Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete**.
+- Select the login page from the list by clicking the check box next to the name, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
+- Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete**.
 
 ## Make a login page the default
 
@@ -187,8 +184,8 @@ The default login page is the default selection that's used in **Credential Harv
 
 To make a login page the default on the **Tenant login pages** or **Global login pages** tabs, do one of the following steps:
 
-- Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/m365-cc-sc-set-as-default-icon.png" border="false"::: **Mark as default**.
-- Select the login page from the list by clicking anywhere in the row other than the check box next to the name. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-set-as-default-icon.png" border="false"::: **Mark as default**.
+- Select **⋮** (**Actions**) next to the **Name** value of the login page, and then select :::image type="icon" source="media/defender-portal-icon-set-as-default.png" border="false"::: **Mark as default**.
+- Select the login page from the list by clicking anywhere in the row other than the check box next to the name. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-set-as-default.png" border="false"::: **Mark as default**.
 - Select **Make this the default login page** on the **Configure login page** page in the wizard when you [create or modify a login page](#create-login-pages).
 
 > [!NOTE]
