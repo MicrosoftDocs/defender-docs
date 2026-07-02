@@ -3,7 +3,7 @@ title: Reference table for all container security recommendations in Microsoft D
 description: This article lists all Microsoft Defender for Cloud container security recommendations that help you harden and protect your resources.
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 06/08/2026
+ms.date: 06/30/2026
 ms.custom: generated
 ai-usage: ai-assisted
 ---
@@ -143,19 +143,6 @@ Use customer-managed keys to manage the encryption at rest of the contents of yo
 
 **Type**: Kubernetes data plane
 
-### Containers should only use allowed AppArmor profiles
-
-> [!NOTE]
-> This recommendation is set for deprecation at GA of the new container-level misconfiguration recommendations. It will be replaced by a container-level equivalent.
-
-**Description**: Containers running on Kubernetes clusters should be limited to allowed AppArmor profiles only.
-AppArmor (Application Armor) is a Linux security module that protects an operating system and its applications from security threats. To use it, a system administrator associates an AppArmor security profile with each program.
-(Related policy: [Kubernetes cluster containers should only use allowed AppArmor profiles](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f511f5417-5d12-434d-ab2e-816901e72a5e)).
-
-**Severity**: High
-
-**Type**: Kubernetes data plane
-
 ### Container with privilege escalation should be avoided
 
 **Description**: Containers shouldn't run with privilege escalation to root in your Kubernetes cluster.
@@ -210,18 +197,6 @@ The AllowPrivilegeEscalation attribute controls whether a process can gain more 
 **Severity**: High
 
 **Type**: Kubernetes Data plane
-
-### Kubernetes clusters should not grant CAPSYSADMIN security capabilities
-
-> [!NOTE]
-> This recommendation is set for deprecation at GA of the new container-level misconfiguration recommendations. It will be replaced by a container-level equivalent.
-
-**Description**: To reduce the attack surface of your containers, restrict CAP_SYS_ADMIN Linux capabilities. For more information, see <https://aka.ms/kubepolicydoc>.
-(No related policy)
-
-**Severity**: High
-
-**Type**: Kubernetes data plane
 
 ### Kubernetes clusters should not use the default namespace
 
@@ -285,19 +260,9 @@ Privileged containers have all of the root capabilities of a host machine. They 
 
 **Type**: Kubernetes Data plane
 
-### Services should listen on allowed ports only
+### Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods
 
-> [!NOTE]
-> This recommendation is set for deprecation at GA of the new container-level misconfiguration recommendations.
-
-**Description**: To reduce the attack surface of your Kubernetes cluster, restrict access to the cluster by limiting services access to the configured ports.
-(Related policy: [Ensure services listen only on allowed ports in Kubernetes cluster](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f233a2a17-77ca-4fb1-9b6b-69223d272a44)).
-
-**Severity**: Medium
-
-### Upgrade Azure Kubernetes Service to remove vulnerabilities from AKS system pods (Preview)
-
-**Type**: [Preview] Upgrade Azure Kubernetes Service Version
+**Type**: Upgrade Azure Kubernetes Service Version
 
 **Description**: Defender for Cloud scans AKS-managed system pods for known vulnerabilities (CVEs). When vulnerabilities are detected, this recommendation identifies the minimum AKS version upgrade that resolves each CVE, giving you a clear and actionable remediation path. This recommendation applies to system pods managed by AKS, not customer workloads. For each CVE, the recommendation lists CVSS score, and the minimum AKS version that includes the fix.
 (No related policy)
@@ -306,35 +271,9 @@ Privileged containers have all of the root capabilities of a host machine. They 
 
 **Type**: Vulnerability Assessment
 
-### Usage of host networking and ports should be restricted
-
-> [!NOTE]
-> This recommendation is set for deprecation at GA of the new container-level misconfiguration recommendations.
-
-**Description**: Restrict pod access to the host network and the allowable host port range in a Kubernetes cluster. Pods created with the hostNetwork attribute enabled will share the node's network space. To avoid compromised container from sniffing network traffic, we recommend not putting your pods on the host network. If you need to expose a container port on the node's network, and using a Kubernetes Service node port does not meet your needs, another possibility is to specify a hostPort for the container in the pod spec.
-(Related policy: [Kubernetes cluster pods should only use approved host network and port range](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f82985f06-dc18-4a48-bc1c-b9f4f0098cfe)).
-
-**Severity**: Medium
-
-**Type**: Kubernetes data plane
-
-### Usage of pod HostPath volume mounts should be restricted to a known list to restrict node access from compromised containers
-
-> [!NOTE]
-> This recommendation is set for deprecation at GA of the new container-level misconfiguration recommendations.
-
-**Description**: We recommend limiting pod HostPath volume mounts in your Kubernetes cluster to the configured allowed host paths. If there's a compromise, the container node access from the containers should be restricted.
-(Related policy: [Kubernetes cluster pod hostPath volumes should only use allowed host paths](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f098fc59e-46c7-4d99-9b16-64990e543d75)).
-
-**Severity**: Medium
-
-**Type**: Kubernetes Data plane
-
-
-
 ## AWS container recommendations
 
-### Artifact encryption should be enabled on CodeBuild projects (Preview)
+### Artifact encryption should be enabled on CodeBuild projects
 
 **Description**: Defender for Cloud identified unencrypted build artifacts in AWS CodeBuild projects that store output in Amazon S3. Build artifacts are files produced during a build, such as packages, binaries, and reports. If artifact encryption is disabled, sensitive build output can be exposed to unauthorized access or disclosure.
 
@@ -381,19 +320,19 @@ When you enable Microsoft Defender for Containers and deploy Azure Arc to your E
 
 **Severity**: High
 
-### Privileged mode should be disabled on CodeBuild projects (Preview)
+### Privileged mode should be disabled on CodeBuild projects
 
 **Description**: Defender for Cloud identified enabled privileged mode in AWS CodeBuild project environments. Privileged mode allows the build container broader access to the host and Docker runtime. This poses a risk of privilege escalation and unauthorized access if a build process or dependency is compromised.
 
 **Severity**: Medium
 
-### Secure SSL should be enabled on CodeBuild source connections (Preview)
+### Secure SSL should be enabled on CodeBuild source connections
 
 **Description**: Defender for Cloud identified insecure SSL settings in AWS CodeBuild source connections. SSL protects data exchanged between CodeBuild and the source repository by encrypting the connection and validating the remote endpoint. This poses a risk of source code interception or tampering if encrypted transport is not enforced.
 
 **Severity**: Medium
 
-### Source provider authentication should be enabled on CodeBuild projects (Preview)
+### Source provider authentication should be enabled on CodeBuild projects
 
 **Description**: Defender for Cloud identified missing source provider authentication in AWS CodeBuild projects that connect to external source repositories. Source provider authentication verifies that CodeBuild accesses the repository by using an approved connection or credential. This poses a risk of unauthorized repository access and source code exposure if access to a private repository is not properly controlled. Public repositories do not require this setting.
 
@@ -515,7 +454,7 @@ All the [Kubernetes data plane security recommendations](kubernetes-workload-pro
 
 ## External container registries recommendations
 
-### [Preview] Container images in Docker Hub registry should have vulnerability findings resolved
+### Container images in Docker Hub registry should have vulnerability findings resolved
 
 **Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Remediating vulnerabilities in container images helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards."
 

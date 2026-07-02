@@ -74,59 +74,36 @@ Perform the following steps to enable the Defender for Endpoint integration in t
 
 ### Step 3: Create and assign the compliance policy in Intune
 
-Use the following steps to create and assign the compliance policy in Intune.
+To create and assign the compliance policy in Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating a new policy, choose the following options:
 
-1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Devices** \> **Manage devices** section \> **Compliance**. Or, to go directly to the **Devices \| Compliance** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/compliance>.
-
-2. On the **Policies** tab of the **Devices \| Compliance** page, select **Create policy**.
-
-3. On the **Create a policy** flyout that opens, configure the following settings:
-   - **Platform**: Select **Windows 10 and later**.
-   - **Profile type**: Select **Windows 10/11 compliance policy**.
-
-   Select **Create**.
-
-4. The **Windows 10/11 compliance policy** wizard opens.  On the **Basics** tab, configure the following settings:
-   - **Name**: Enter a unique, descriptive name for the policy.
-   - **Description**: Enter an optional description.
-
-   Select **Next**.
-
-5. On the **Compliance settings** tab, expand **Microsoft Defender for Endpoint**. Set **Require the device to be at or under the Device Threat Level** to your preferred level:
-   - **Clear**: This level is the most secure. The device cannot have any existing threats and still access company resources. If any threats are found, the device is evaluated as noncompliant.
-   - **Low**: The device is compliant if only low-level threats exist. Devices with medium or high threat levels are not compliant.
-   - **Medium**: The device is compliant if the threats found on the device are low or medium. If high-level threats are detected, the device is determined as noncompliant.
-   - **High**: This level is the least secure, and allows all threat levels. So devices that with high, medium or low threat levels are considered compliant.
-
-   Select **Next**.
-
-6. On the **Actions for noncompliance** tab, the following settings are already configured (and you can't change them):
-   - **Action**: Mark device noncompliant.
-   - **Schedule (days after noncompliance)**: Immediately.
-
+- **Platform**: Select **Windows 10 and later**.
+- **Profile type**: Select **Windows 10/11 compliance policy**.
+- **Basics**: Configure the following settings:
+  - **Name**: Enter a unique, descriptive name for the policy.
+  - **Description**: Enter an optional description.
+- **Compliance settings**: Expand **Microsoft Defender for Endpoint**. Set **Require the device to be at or under the Device Threat Level** to your preferred level:
+  - **Clear**: This level is the most secure. The device cannot have any existing threats and still access company resources. If any threats are found, the device is evaluated as noncompliant.
+  - **Low**: The device is compliant if only low-level threats exist. Devices with medium or high threat levels are not compliant.
+  - **Medium**: The device is compliant if the threats found on the device are low or medium. If high-level threats are detected, the device is determined as noncompliant.
+  - **High**: This level is the least secure, and allows all threat levels. So devices that with high, medium or low threat levels are considered compliant.
+- **Actions for noncompliance**: The following settings are already configured (and you can't change them):
+  - **Action**: Mark device noncompliant.
+  - **Schedule (days after noncompliance)**: Immediately.
    You can add the following actions:
-
-   - **Send email to end user**: The following options are available:
-     - **Schedule (days after noncompliance)**: The default value is 0, but you can enter a different value up to 365.
-     - **Message template**: Select **None selected** to find and select a template.
-     - **Additional recipients (via email)**: Select **None selected** to find and select Microsoft Entra groups to notify.
-
-   - **Add device to retire list**: The only available option is **Schedule (days after noncompliance)**: The default value is 0, but you can enter a different value up to 365.
-
+  - **Send email to end user**: The following options are available:
+    - **Schedule (days after noncompliance)**: The default value is 0, but you can enter a different value up to 365.
+    - **Message template**: Select **None selected** to find and select a template.
+    - **Additional recipients (via email)**: Select **None selected** to find and select Microsoft Entra groups to notify.
+  - **Add device to retire list**: The only available option is **Schedule (days after noncompliance)**: The default value is 0, but you can enter a different value up to 365.
    To delete an action, select **...** \> **Delete** on the entry. You might need to use the horizontal scroll bar to see **...**.
+- **Assignments**: Configure the following settings:
+  - **Included groups** section: Select one of the following options:
+    - **Add groups**: Select one or more groups to include.
+    - **Add all users**
+    - **Add all devices**
+  - **Excluded groups**: Select **Add groups** to specify groups to exclude.
 
-   When you're finished on the **Actions for noncompliance** tab, select **Next**.
-
-7. On the **Assignments** tab, configure the following settings:
-   - **Included groups** section: Select one of the following options:
-     - **Add groups**: Select one or more groups to include.
-     - **Add all users**
-     - **Add all devices**
-   - **Excluded groups**: Select **Add groups** to specify groups to exclude.
-
-   When you're finished on the **Assignments** tab, select **Next**.
-
-8. On the **Review + create** tab, review the settings, and then select **Create**.
+On the **Review + create** tab, review the settings, and then select **Create**.
 
 <a name='step-5-create-a-microsoft-entra-conditional-access-policy'></a>
 

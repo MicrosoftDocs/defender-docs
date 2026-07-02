@@ -22,9 +22,12 @@ appliesto:
 
 ai-usage: ai-assisted
 ---
+
 # View the details and results of an automated investigation
 
 This article explains how to open and use the investigation details view in Microsoft Defender for Endpoint to monitor [automated investigation](automated-investigations.md) status, review evidence, and approve pending remediation actions. You can access investigation details both during and after the investigation process if you have the required permissions.
+
+[!INCLUDE [AIR deprecation note](includes/air-deprecation-note.md)]
 
 <a name="unified-investigation-page"></a>
 ## Overview of the unified investigation page

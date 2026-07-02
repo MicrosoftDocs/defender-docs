@@ -2,7 +2,7 @@
 title: Transition from grouped to individual recommendations in Defender for Cloud
 description: Learn about the transition from grouped to individual recommendations in Microsoft Defender for Cloud, including operational impacts and best practices.
 ms.topic: best-practice
-ms.date: 02/17/2026
+ms.date: 06/29/2026
 ms.custom: sfi-image-nochange
 #customer intent: As a security administrator, I want to understand the transition from grouped to individual recommendations so that I can adapt my workflows and maintain effective security posture management.
 ai-usage: ai-assisted
@@ -333,7 +333,15 @@ The following grouped recommendations transition under Microsoft Defender for De
 
 ### Microsoft Defender for Identity
 
-Grouped recommendations for Microsoft Defender for Identity and their end-states are being confirmed with the Identity product team. This section will be updated with the relevant recommendations, recommendation IDs, and recommendation categories.
+**Replaced by a single new recommendation** — the following grouped recommendations are each replaced by a specific new individual recommendation with a fixed assessment key. Update your governance rules, exemptions, and continuous export to use the **new assessment key** directly.
+
+| Assessment | Old assessment key | New assessment key |
+|---|---|---|
+| Guest accounts with read permissions on Azure resources should be removed | `fde1c0c9-0fd2-4ecc-87b5-98956cbc1095` | `422107c6-5b9a-46a6-bb1d-26ef1cc52d65` |
+| Guest accounts with write permissions on Azure resources should be removed | `0354476c-a12a-4fcc-a79d-f0ab7ffffdbb` | `009678ce-adce-4c94-9cc8-cfc2bd0c6a06` |
+| Guest accounts with owner permissions on Azure resources should be removed | `20606e75-05c4-48c0-9d97-add6daa2109a` | `f2864482-b329-4310-8c06-3cf74fe880c5` |
+| Disabled accounts with read and write permissions on Azure resources should be removed | `1ff0b4c9-ed56-4de6-be9c-d7ab39645926` | `9b4f4dd4-24fc-42ba-9978-2a1cf575d36d` |
+| Disabled accounts with owner permissions on Azure resources should be removed | `050ac097-3dda-4d24-ab6d-82568e7a50cf` | `a4899b81-b689-4e0d-aa29-45983ab8b7fc` |
 
 ## Next steps
 

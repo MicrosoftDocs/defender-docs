@@ -67,33 +67,15 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 
 ## Turn tamper protection on (or off) in Microsoft Intune
 
-Use the following steps to create an antivirus policy in Microsoft Intune that turns tamper protection on or off for your devices:
+To create an antivirus policy in Microsoft Intune that turns tamper protection on or off for your devices, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating the policy, use these settings::
 
-1. In the Microsoft Intune admin center at <https://intune.microsoft.com>, go to **Endpoint security**. On the **Endpoint security \| Overview** page, select **Antivirus** in the **Manage** section. Or, to go directly to the **Endpoint security \| Antivirus** page, use <https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/antivirus>.
-
-2. On the **Summary** tab of the **Endpoint security \| Antivirus** page, select **Create policy** in the **AV policies** section.
-
-3. On the **Create a profile** flyout that opens, configure the following settings:
-   - **Platform**: Select **Windows**.
-   - **Profile**: Select **Windows Security Experience**.
-
-   Select **Create**.
-
-4. The **Create policy** wizard opens. On the **Basics** tab, configure the following settings:
-   - **Name**: Enter a unique, descriptive name for the policy.
-   - **Description**: Enter an optional description.
-
-   Select **Next**.
-
-5. On the **Configuration settings** tab, **Tamper protection (device)** is available in the **Defender** section. Select **On**, and then select **Next**.
-
-   :::image type="content" source="media/turnontamperprotectinmem.png" alt-text="Turn tamper protection turned on with Intune" lightbox="media/turnontamperprotectinmem.png":::
-
-6. On the **Scope tags** tab, the scope tag named **Default** is select by default, but you can remove it and select other existing scope tags. When you're finished, select **Next**.
-
-7. On the **Assignments** tab, click in the box, select **All users**, click in the box again, and then select select **All Devices**. Verify the **Target type** value is **Include** for both, and then select **Next**.
-
-8. On the **Review + create** tab, verify the settings, and then select **Save**.
+- **Policy type**": Antivirus
+- **Platform**: Windows
+- **Profile**: Windows Security Experience
+- **Basics**: Enter an name and description for your policy.
+- **Configuration settings**: Turn **Tamper protection (device)** on in the **Defender** section
+- **Scope tags**: If your organization is using [scope tags](/intune/intune-service/fundamentals/scope-tags), select the tags you want to use
+- **Assignments**: Select **All users** and **All Devices**. Verify the **Target type** value is **Include** for both.
 
 ## Tamper protection for antivirus exclusions
 

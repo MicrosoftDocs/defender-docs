@@ -1,5 +1,5 @@
 ---
-title: Normalization and the Advanced Security Information Model (ASIM) | Microsoft Docs
+title: Normalization and the Advanced Security Information Model (ASIM)
 description: This article explains how Microsoft Sentinel normalizes data from many different sources using the Advanced Security Information Model (ASIM)
 ms.author: edbaynash
 author: EdB-MSFT

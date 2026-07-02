@@ -94,7 +94,7 @@ Analyst reports also include detections and mitigations from [Defender for Offic
 
 While detections allow you to identify and stop the tracked threat automatically, many attack activities leave subtle traces that require more inspection. Some attack activities exhibit behaviors that can also be normal, so detecting them dynamically can result in operational noise or even false positives. Hunting queries let you proactively locate these potentially malicious components or behaviors.
 
-### Microsoft Defender XDR advanced hunting queries
+### Microsoft Defender advanced hunting queries
 
 [Advanced hunting](advanced-hunting-overview.md) provides a query interface based on Kusto Query Language that simplifies locating subtle indicators of threat activity. It also lets you surface contextual information and verify whether indicators are connected to a threat.
 

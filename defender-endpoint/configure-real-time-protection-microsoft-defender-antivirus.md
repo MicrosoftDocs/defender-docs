@@ -43,18 +43,28 @@ The following operating systems support always-on protection:
 
 You can use Intune to configure antivirus policies, and then apply those policies across devices in your organization. Antivirus policies help security admins focus on managing the discrete group of antivirus settings for managed devices. Each antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender Antivirus for macOS and Windows devices, or for the user experience in the Windows Security app on Windows devices. For more information, see [Antivirus policy for endpoint security in Intune](/intune/intune-service/protect/endpoint-security-antivirus-policy).
 
-1. Go to the [Intune admin center](https://intune.microsoft.com/) and sign in.
+To create a new policy and manage antivirus settings with Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When creating a new policy for Windows, choose the following options:
 
-1. In the navigation pane, choose **Endpoint security** and then, under **Manage**, choose **Antivirus**.
+- **Policy type**: Antivirus
+- **Platform**: Windows 10, Windows 11, and Windows Server
+- **Profile**: Microsoft Defender Antivirus
+- **Basics**: Type a name and description for your policy.
+- **Configuration settings**: Expand **Defender** and select the settings you want to use for your policy. To get help with your settings, refer to [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx).
+- **Scope tags**: Choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+- **Assignments**: Select the groups to receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/intune/intune-service/configuration/device-profile-assign).
 
-1. Select an existing policy, or choose **+ Create Policy** to create a new policy. 
+When creating a new policy for macOS, choose the following options:
 
-   | Task | What to do |
-   |---|---|
-   | Create a new policy for Windows devices | 1. In the **Create a profile** step, in the **Platform** list, select **Windows 10, Windows 11, and Windows Server**. For **Profile**, select **Microsoft Defender Antivirus**. Then choose **Create**.<br/><br/>2. On the **Basics** step, type a name and description for your policy, and then choose **Next**.<br/><br/>3. On the **Configuration settings** step, expand **Defender**, select the settings you want to use for your policy, and then choose **Next**. To get help with your settings, refer to [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx). <br/><br/>4. On the **Scope tags** step, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile, and then select **Next** to continue.<br/><br/>5. On the **Assignments** page, select the groups to receive this profile, and then select **Next**. For more information on assigning profiles, see [Assign user and device profiles](/intune/intune-service/configuration/device-profile-assign).<br/><br/>6. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.  |
-   | Create a new policy for macOS devices | 1. In the **Create a profile** step, in the **Platform** list, select **macOS**. For **Profile**, select **Antivirus**. Then choose **Create**.<br/><br/>2. On the **Basics** step, type a name and description for your policy, and then choose **Next**.<br/><br/>3. On the **Configuration settings** step, select the settings you want to use for your policy, and then choose **Next**. To get help with your settings, refer to [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).<br/><br/>4. On the **Scope tags** step, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile, and then select **Next** to continue.<br/><br/>5. On the **Assignments** page, select the groups to receive this profile, and then select **Next**. For more information on assigning profiles, see [Assign user and device profiles](/intune/intune-service/configuration/device-profile-assign).<br/><br/>6. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.  |
-   | Edit an existing policy for Windows devices | 1. Select an antivirus policy for Windows devices. <br/><br/>2. Next to **Configuration settings**, choose **Edit**. <br/><br/>3. Expand **Defender**, and then edit settings for your policy. To get help with your settings, refer to [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx). <br/><br/>4. select **Review + save**, and then select **Save**.  |
-   | Edit an existing policy for macOS devices | 1. Select an antivirus policy for macOS devices. <br/><br/>2. Select **Properties**, and then, next to **Configuration settings**, choose **Edit**. <br/><br/>3. Under **Microsoft Defender for Endpoint**, edit settings for your policy. To get help with your settings, refer to [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).<br/><br/>4. select **Review + save**, and then select **Save**.  |
+- **Platform**: macOS
+- **Profile**: Antivirus
+- **Basics**: Type a name and description for your policy. On the 
+- **Configuration settings**: Select the settings you want to use for your policy. To get help with your settings, refer to [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).
+- **Scope tags**: Choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile
+- **Assignments**: Select the groups to receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/intune/intune-service/configuration/device-profile-assign)
+
+To edit an existing policy for Windows devices, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Select your policy, expand **Defender**, and edit settings for your policy. To get help with your settings, refer to [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx).
+
+To edit an existing policy for macOS devices, select your policy, select **Properties**, and choose **Edit** next to **Configuration settings**. Edit the policy settings under **Microsoft Defender for Endpoint**. To get help with your settings, refer to [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md).
 
 ## Are you using Group Policy?
 

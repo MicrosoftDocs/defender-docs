@@ -1,12 +1,12 @@
 ---
-title: Cloud security reporting in Microsoft Defender portal (Preview)
+title: Cloud security reporting in Microsoft Defender portal
 description: Learn how to create, customize, and export cloud security reports in Microsoft Defender portal, including built-in reports and custom report options.
 ms.topic: how-to
-ms.date: 05/04/2026
+ms.date: 06/30/2026
 ai-usage: ai-assisted
 ---
 
-# Cloud security reporting in Microsoft Defender portal (Preview)
+# Cloud security reporting in Microsoft Defender portal
 
 Microsoft Defender portal provides integrated reporting capabilities for cloud security data, enabling you to create, customize, and share security insights across your organization.
 
@@ -19,6 +19,7 @@ Cloud security reporting enables you to:
 - View built-in cloud security reports such as **CNAPP Executive Summary** and **Cloud Posture**
 - Customize existing reports by duplicating and modifying sections, cards, and layout
 - Create custom reports from scratch by defining sections and selecting relevant cards
+- Customize cards in custom reports to display data that matches your reporting needs
 - Export reports to PDF for sharing with stakeholders
 - Control report access using visibility settings (Private, Tenant-level access, or Public)
 - Filter and organize reports by type (built-in or custom) and visibility
@@ -30,7 +31,6 @@ Before using cloud security reporting, ensure the following requirements are met
 ### Environment requirements
 
 - A Microsoft Defender for Cloud paid plan is enabled
-- Preview features are enabled in the Microsoft Defender portal
 
 ### Required roles and permissions
 
@@ -160,12 +160,37 @@ You can create custom reports to address specific reporting needs.
 1. Add content to your report:
    - Create sections to organize information
    - Add cards to display specific data
+   - Customize cards that are labeled **Customizable** to configure additional options
    - Edit card titles as needed
    - Adjust card sizes for optimal layout
 
     :::image type="content" source="media/cloud-security-reporting/report-add-card.png" alt-text="Screenshot of Add card panel in a report showing secure score charts, filter options, and a search bar.":::
 
 1. Select **Save**.
+
+## Customize cards in a custom report
+
+When building or editing a custom report, you can browse the card catalog and configure each card before adding it to your report. Cards labeled **Customizable** support additional configuration options, such as filters for workload or recommendation category.
+
+**To add and customize a card:**
+
+1. In your custom report, select **+ Add card**.
+
+    :::image type="content" source="media/cloud-security-reporting/add-card.png" alt-text="Screenshot of the Add card panel showing available cloud security cards including Cloud secure score over time, Cloud secure score by workload, Cloud threat detection, and Total cloud security alerts." lightbox="media/cloud-security-reporting/add-card.png":::
+
+1. In the **Add card** panel, browse or search the catalog. Use the **Product area** and **Chart type** filters to narrow the list.
+1. Select **+** on a card to open the **Add card to report** dialog.
+
+    :::image type="content" source="media/cloud-security-reporting/customize-card.png" alt-text="Screenshot of the Add card to report dialog showing card name, description, section, position, card size, and custom fields options for the Cloud secure score over time card." lightbox="media/cloud-security-reporting/customize-card.png":::
+
+1. Configure the card settings:
+   - **Card name**: Edit the display name for the card.
+   - **Description**: Add context that appears below the card title.
+   - **Section**: Assign the card to an existing section or create a new one.
+   - **Position**: Choose where in the report the card appears.
+   - **Card size**: Select 1/6, 1/3, 1/2, 2/3, or Full width.
+   - **Custom fields**: Available for cards labeled **Customizable**. Configure filters such as workload or recommendation category to tailor the card's data.
+1. Select **Add** to insert the card into the report.
 
 ## Duplicate and edit a report
 

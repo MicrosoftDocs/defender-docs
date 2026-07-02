@@ -158,7 +158,7 @@ For more information, see [Revoke user access in an emergency in Microsoft Entra
 
 Identify and remove any suspicious devices added by an attacker. Also, ensure any unrecognized MFA methods are removed to secure the user's account.
 
-For instructions, see [Manage user authentication options](/entra/identity/authentication/howto-mfa-userdevicesettings#manage-user-authentication-options)
+For instructions, see [Manage user authentication options](/entra/identity/authentication/howto-mfa-userdevicesettings#manage-user-authentication-options).
 
 ### Step 4: Review the list of applications with user consent
 
@@ -267,16 +267,16 @@ By analyzing the provided logs, you can pinpoint the specific time frame that re
 
 Complete the following tasks after you finish the investigation:
 
-1. If you disabled the account during the investigation, reset the password and then enable the account as described in [Step 1: Disable the affected user account](#step-1-disable-the-affected-user-account)
+1. If you disabled the account during the investigation, reset the password and then enable the account as described in [Step 1: Disable the affected user account](#step-1-disable-the-affected-user-account).
 
 2. If the account was used to send spam or a high volume of email, it's likely that the mailbox is blocked from sending mail. Remove the user from the Restricted entities page as described in [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md).
 
 <a name="more-resources"></a>
-## Additional resources for investigating compromised email accounts
+## Related content
 
 For related guidance, see the following resources:
 
-[Detect and Remediate Outlook Rules and Custom Forms Injections Attacks](detect-and-remediate-outlook-rules-forms-attack.md)
+- [Detect and Remediate Outlook Rules and Custom Forms Injections Attacks](detect-and-remediate-outlook-rules-forms-attack.md)
 
 [Detect and Remediate Illicit Consent Grants](detect-and-remediate-illicit-consent-grants.md)
 

@@ -509,6 +509,8 @@
               href: automate-incident-handling-with-automation-rules.md
             - name: Create automation rules
               href: create-manage-use-automation-rules.md
+            - name: Create basic automation rules with Simple Flows
+              href: automation/create-basic-automation-rules-simple-flows.md
             - name: Add advanced conditions to automation rules
               href: add-advanced-conditions-to-automation-rules.md
             - name: Create incident tasks using automation rules

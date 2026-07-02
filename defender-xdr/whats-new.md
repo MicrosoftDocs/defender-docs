@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 06/08/2026
+ms.date: 07/01/2026
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -29,14 +29,20 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## July 2026
+
+- (GA) **Security for Microsoft Agent 365 with Defender**: With a Microsoft Agent 365 license, Microsoft Defender provides discovery, security posture, threat detection and investigation, and real-time protection for the AI agents in your tenant. Onboarding includes enabling data collection, connecting the Microsoft 365 app connector, and connecting Copilot Studio for real-time protection of Copilot Studio agents. For more information, see [Protect AI agents using Microsoft Defender](security-for-ai/defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender) and [Enable security for AI agents using Microsoft Defender](security-for-ai/get-started-defender-security-for-ai.md).
+
 ## June 2026
 
+- The [Phishing Triage Agent](phishing-triage-agent.md) and [Security Alert Triage Agent](security-alert-triage-agent.md) now use the more limited **Email & collaboration content: Emails associated with alerts (read)** permission instead of the broader **Email & Collaboration content: All Emails (read)** permission. This least-privilege permission restricts agent access to only email content associated with alerts, improving the security posture of your agent configuration.
 - (Preview) **Entity enrichments with threat intelligence**: Entity pages for IP addresses, domains, URLs, and files now include a **Threat Intelligence Insights** tab that surfaces enrichment data from Microsoft Threat Intelligence directly in the investigation workflow. Enrichments include reputation scores, attributed threat reports, infrastructure relationships, and sandbox analysis, eliminating the need to switch between separate tools during investigations. For more information, see [View threat intelligence in entity pages](entity-page-threat-intelligence.md).
 - (Preview) The **Identity Security dashboard** now includes a new **Human identities** card that shows your human identities by source (Entra ID, SaaS, and on-premises), giving you a single view of where your human identities live. For more information, see [Identity Security dashboard](/defender-for-identity/dashboard).
 - (Preview) On the **Coverage and maturity** page, the **Review and improve coverage** side panel for SaaS Identities now includes an **Observed** column and a **Show Only Observed Applications** toggle. By default, the panel shows only SaaS applications detected in your environment. Turn off the toggle to see other supported SaaS applications you can onboard to expand your identity coverage. For more information, see [Coverage and maturity](identity-security/coverage-maturity.md).
 - (Preview) Local AI agent discovery on Windows endpoints: as part of the [Defender AI agents experience](/defender-xdr/security-for-ai/defender-security-for-ai), Microsoft Defender now automatically discovers supported local AI agents running on onboarded Windows devices - including coding agents and IDE extensions, desktop AI assistants, local AI runtimes, and agent platforms. Discovered agents appear as assets in the AI agent inventory, exposure map, and advanced hunting, giving security teams visibility into local AI agent usage across the organization. For more information, see [Discover local AI agents](/defender-endpoint/discover-local-ai-agents).
 - (Preview) Local AI agent runtime protection on Windows endpoints: as part of the [Defender AI agents experience](/defender-xdr/security-for-ai/defender-security-for-ai), runtime protection for supported local AI agents on Windows endpoints is now available in public preview. Microsoft Defender inspects the agent loop (user prompts, tool calls, and tool responses) and can block risky activity before it executes, helping stop prompt injection and unsafe agent actions at the device level. Blocked and audited events appear as alerts in Microsoft Defender to support incident correlation and investigation workflows. For more information, see [Set up AI agent runtime protection with Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection).
 - (GA) The following advanced hunting schema tables are now generally available:
+    - The [DisruptionAndResponseEvents](advanced-hunting-disruptionandresponseevents-table.md) table contains information about automatic attack disruption events in Microsoft Defender XDR.
     - The [`CloudAuditEvents`](advanced-hunting-cloudauditevents-table.md) table contains information about cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud.
     - The [`CloudDnsEvents`](advanced-hunting-clouddnsevents-table.md) table contains information about DNS activity events from cloud infrastructure environments.
     - The [`CloudProcessEvents`](advanced-hunting-cloudprocessevents-table.md) table contains information about process events in multicloud hosted environments.
@@ -44,7 +50,7 @@ You can also get product updates and important notifications through the [messag
 
 ## May 2026
 
-- **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts for Hunting - Servers** are now offered as standalone offerings for customers who wish to avail managed extended detection and response and threat hunting services for their on-premises and multicloud servers protected by Microsoft Defender for Cloud. These services were previously offered as add-ons to Microsoft Defender Experts for XDR and Microsoft Defender Experts for Hunting, respectively. [Learn more.](dex-servers-overview.md)
+- **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts Hunting - Servers** are now offered as standalone offerings for customers who wish to avail managed extended detection and response and threat hunting services for their on-premises and multicloud servers protected by Microsoft Defender for Cloud. These services were previously offered as add-ons to Microsoft Defender Experts MDR and Microsoft Defender Experts Hunting, respectively. [Learn more.](defender-experts/defender-experts-servers-overview.md)
 - (Preview) [Automatic attack disruption](automatic-attack-disruption.md) can now isolate compromised devices from the network when high-confidence incident analysis indicates the device is being used as an active foothold. Isolation blocks attacker communication and lateral movement while keeping the device connected to security services. The action is time-limited, scoped to devices involved in the incident, and can be released by security operators at any time. [Learn more](/defender-endpoint/respond-machine-alerts#isolate-device-automatic-attack-disruption)
 - In advanced hunting, the **Take action** wizard now lets customers allow or block top-level domains and files attachment hashes in emails based on query results. [Learn more](advanced-hunting-take-action.md#take-various-actions-on-emails).
 - The [hunting graph](advanced-hunting-graph.md) in advanced hunting now includes new identity-focused predefined scenarios. These scenarios help you discover attack paths, privilege escalation routes, and credential access risks across on-premises and cloud environments, including Kerberoast and AS-REP roast paths, domain compromise routes, OAuth application risks, and guest user access to cloud resources.
@@ -55,7 +61,7 @@ You can also get product updates and important notifications through the [messag
 - (Preview) You can now view the current status of automatic attack disruption and predictive shielding actions related to a specific incident. You view this data in the **Activities** tab of the incident page. [Learn more](autoad-results.md#track-the-action-status-in-the-activities-tab-preview)
 - (Preview) The [`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table in advanced hunting now includes additional columns that provide deeper visibility into AI agents operating in your Microsoft 365 environment. These fields expand coverage beyond Copilot Studio to all agent types, including Microsoft Foundry, third-party marketplace, and custom line-of-business agents.
 - (GA) [Built-in alert tuning rules](investigate-alerts.md#built-in-alert-tuning-rules) are now generally available. Built-in alert tuning rules suppress alerts from common benign activity in Defender for Endpoint and Defender for Office 365 without affecting Automated Investigation and Response (AIR) investigations and email notifications.
-- Microsoft Defender Experts for XDR customers can now see **Defender Experts** as a distinct entry in the Microsoft Defender portal navigation menu. This feature adds to the existing home page status card as in-portal experiences that provide consistent and predictable access to the service. [Learn more](start-using-mdex-xdr.md) 
+- Microsoft Defender Experts MDR customers can now see **Defender Experts** as a distinct entry in the Microsoft Defender portal navigation menu. This feature adds to the existing home page status card as in-portal experiences that provide consistent and predictable access to the service. [Learn more](defender-experts/defender-experts-mdr-start-using.md).
 
 ## March 2026
 
@@ -76,7 +82,7 @@ You can also get product updates and important notifications through the [messag
 
 ## February 2026
 
-- Microsoft Defender Experts for Hunting customers can now set up [Notification contacts](onboarding-defender-experts-for-hunting.md#tell-us-who-to-contact-for-important-matters). These contacts are the individuals or groups that Microsoft needs to notify if there are critical incidents or service updates.
+- Microsoft Defender Experts Hunting customers can now set up [Notification contacts](defender-experts/defender-experts-hunting-onboarding.md#tell-us-who-to-contact-for-important-matters). These contacts are the individuals or groups that Microsoft needs to notify if there are critical incidents or service updates.
 - (GA) The following advanced hunting schema tables are now generally available:
     - The [`IdentityAccountInfo`](advanced-hunting-identityaccountinfo-table.md) table contains information about account information from various sources, including Microsoft Entra ID. It also includes information and link to the identity that owns the account.
     - The [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) table contains information about Microsoft Entra interactive and non-interactive sign-ins.
@@ -110,8 +116,8 @@ You can also get product updates and important notifications through the [messag
 
 ## October 2025
 
-- [Microsoft Defender Experts for XDR reports](reports-xdr.md) now include a **Trends** tab that provides you with the monthly volume of investigated and resolved incidents for the last six months. The tab visualizes the data according to the incidents' severity, MITRE tactic, and threat type. This section gives you insight into how Defender Experts are tangibly improving your security operations by showing important operational metrics on a month-over-month basis.
-- [Microsoft Defender Experts for Hunting reports](defender-experts-report.md) now include an **Emerging threats** section that details the proactive, hypothesis-based hunts Defender Experts conducted in your environment. Each report also now includes investigation summaries for nearly every hunt that Defender Experts conduct in your environment, regardless of whether they identified a confirmed threat.
+- [Microsoft Defender Experts MDR reports](defender-experts/defender-experts-mdr-reports.md) now include a **Trends** tab that provides you with the monthly volume of investigated and resolved incidents for the last six months. The tab visualizes the data according to the incidents' severity, MITRE tactic, and threat type. This section gives you insight into how Defender Experts are tangibly improving your security operations by showing important operational metrics on a month-over-month basis.
+- [Microsoft Defender Experts Hunting reports](defender-experts/defender-experts-hunting-report.md) now include an **Emerging threats** section that details the proactive, hypothesis-based hunts Defender Experts conducted in your environment. Each report also now includes investigation summaries for nearly every hunt that Defender Experts conduct in your environment, regardless of whether they identified a confirmed threat.
 
 ## September 2025
 
@@ -127,8 +133,8 @@ You can also get product updates and important notifications through the [messag
    - The [`IdentityEvents`](advanced-hunting-identityevents-table.md) table contains information about identity events obtained from other cloud identity service providers
 - (Preview) Advanced hunting now lets you investigate Microsoft Defender for Cloud behaviors. For more information, see [Investigate behaviors with advanced hunting](/defender-cloud-apps/behaviors).
 - (Preview) In advanced hunting, the number of [query results](advanced-hunting-query-results.md) displayed in the Microsoft Defender portal has been increased to 100,000. 
-- (GA) [Microsoft Defender Experts for XDR](dex-xdr-overview.md) and [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) customers can now expand their service coverage to include server and cloud workloads protected by Microsoft Defender for Cloud through the respective add-ons, **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts for Hunting - Servers**. [Learn more](faq-cloud-coverage-defender-experts.md)
-- (GA) Defender Experts for XDR customers can now [incorporate third-party network signals](third-party-enrichment-defender-experts.md) for enrichment. This feature allows our security analysts to gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response. It also provides customers with a more holistic view of the threat in their environments.
+- (GA) [Microsoft Defender Experts MDR](defender-experts/defender-experts-mdr-overview.md) and [Microsoft Defender Experts Hunting](defender-experts/defender-experts-hunting-overview.md) customers can now expand their service coverage to include server and cloud workloads protected by Microsoft Defender for Cloud through the respective add-ons, **Microsoft Defender Experts for Servers** and **Microsoft Defender Experts Hunting - Servers**. [Learn more](defender-experts/defender-experts-faq-cloud-coverage.md).
+- (GA) Defender Experts MDR customers can now [incorporate third-party network signals](defender-experts/defender-experts-mdr-third-party-enrichment.md) for enrichment. This feature allows our security analysts to gain a more comprehensive view of an attack's path that allows for faster and more thorough detection and response. It also provides customers with a more holistic view of the threat in their environments.
 - (GA) In advanced hunting, you can now [view all your user-defined rules](custom-detection-manage.md)—both custom detection rules and analytics rules—in the **Detection rules** page. This feature also brings the following improvements:
     - You can now filter for *every* column (in addition to **Frequency** and **Organizational scope**).
     - For multiworkspace organizations that onboard multiple workspaces to Microsoft Defender, you can now view the **Workspace ID** column and filter by workspace. 

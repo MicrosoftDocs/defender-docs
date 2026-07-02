@@ -78,23 +78,14 @@ Keep the following details in mind when using block at first sight:
 
 ## Turn on block at first sight with Microsoft Intune
 
-Use the following steps to enable block at first sight with Microsoft Intune:
+To enable block at first sight with Microsoft Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When modifying an existing policy or creating a new policy, choose the following options:
 
-1. In the Microsoft Intune admin center (<https://intune.microsoft.com>), go to **Endpoint security** \> **Antivirus**.
+- **Policy type**: Antivirus
+- **Platform**: When creating a new policy, select **Windows 10, Windows 11, or Windows Server**.
+- **Allow cloud protection**: Allowed. Turns on Cloud Protection.
+- **Submit Samples Consent**: Select either **Send all samples automatically** or **Send safe samples automatically**
 
-1. Select an existing policy, or create a new policy using the **Microsoft Defender Antivirus** profile type. In our example, we selected **Windows 10, Windows 11, or Windows Server** for the platform.
-
-   :::image type="content" source="media/intune-mdav-policy.png" alt-text="Screenshot of new MDAV policy creation in Intune." lightbox="media/intune-mdav-policy.png":::
-
-1. Set **Allow cloud protection** to **Allowed. Turns on Cloud Protection**. 
-   :::image type="content" source="media/intune-mdav-cpallowed.png" alt-text="Screenshot of Cloud Protection set to allowed in Intune.":::
-
-1. Scroll down to **Submit Samples Consent**, and select one of the following settings:
-
-   - **Send all samples automatically**
-   - **Send safe samples automatically**
-
-1. Apply the Microsoft Defender Antivirus profile to a group, such as **All users**, **All devices**, or **All users and devices**.
+Apply the Microsoft Defender Antivirus profile to a group, such as **All users**, **All devices**, or **All users and devices**.
 
 ## Turn on block at first sight with Group Policy
 
@@ -141,19 +132,10 @@ You can confirm that block at first sight is enabled on individual client device
 > [!CAUTION]
 > Disabling block at first sight lowers the protection state of your devices and your network.
 
-Use the following steps to turn off block at first sight with Microsoft Intune:
+To disable block at first sight with Microsoft Intune, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Choose the following options:
 
-1. Go to the Microsoft Intune admin center (<https://intune.microsoft.com>) and sign in.
-
-1. Go to **Endpoint security** \> **Antivirus**, and then select your Microsoft Defender Antivirus policy.
-
-1. Under **Manage**, choose **Properties**.
-
-1. Next to **Configuration settings**, choose **Edit**.
-
-1. Set **Allow cloud protection** to **Not allowed. Turns off Cloud Protection**. 
-
-1. Review and save your settings.
+- **Policy**: **Antivirus**, then select your Microsoft Defender Antivirus policy
+- **Allow cloud protection**: Not allowed. Turns off Cloud Protection
 
 ### Turn off block at first sight with Group Policy
 

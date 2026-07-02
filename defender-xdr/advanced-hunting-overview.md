@@ -84,7 +84,7 @@ You need to be assigned permissions before you can run advanced hunting queries.
   - **Security Reader**
   - **Global Reader**
 
-  Your access to endpoint data is determined by role-based access control (RBAC) settings in Microsoft Defender for Endpoint. For more information, see [Manage access to Microsoft Defender XDR with Microsoft Entra global roles](m365d-permissions.md).
+  Your access to endpoint data is determined by role-based access control (RBAC) settings in Microsoft Defender for Endpoint. For more information, see [Manage access to Microsoft Defender with Microsoft Entra global roles](m365d-permissions.md).
 
 ## Data freshness and update frequency
 
@@ -108,7 +108,7 @@ The following table describes the available quotas and usage parameters.
 
 | Quota or parameter | Size | Refresh cycle | Description |
 | --- | --- | --- | --- |
-| Date range | 30 days for Defender XDR data unless streamed through Microsoft Sentinel | Every query | Each query can look up Defender XDR data from up to the past 30 days, or longer if streamed through Microsoft Sentinel |
+| Date range | 30 days for Defender data unless streamed through Microsoft Sentinel | Every query | Each query can look up Defender data from up to the past 30 days, or longer if streamed through Microsoft Sentinel |
 | Result set | 100,000 rows | Every query | Each query can return up to 100,000 records. |
 | Timeout | 10 minutes | Every query | Each query can run for up to 10 minutes. If it doesn't complete within 10 minutes, the service displays an error. |
 | CPU resources | Based on tenant size | Every 15 minutes | The portal displays a warning whenever a query runs and the tenant consumes over 10% of allocated resources. [Queries are blocked](advanced-hunting-errors.md) if the tenant reaches 100% until after the next 15-minute cycle. |
@@ -133,13 +133,13 @@ Write queries in UTC.
 
 ### Results
 
-Microsoft Defender XDR converts advanced hunting results to the [timezone](m365d-time-zone.md) you set.
+Microsoft Defender converts advanced hunting results to the [timezone](m365d-time-zone.md) you set.
 
 ## Extend data retention with Streaming APIs
 
 To extend the 30-day retention for advanced hunting, see the following resources:
 
-- Microsoft Defender XDR [Streaming API](/defender-xdr/streaming-api)
+- Microsoft Defender [Streaming API](/defender-xdr/streaming-api)
 - Microsoft Defender for Endpoint [Raw Data Streaming API](/defender-endpoint/api/raw-data-export)
 
 > [!NOTE]

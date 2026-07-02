@@ -35,16 +35,26 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
 
 ### Sensor v0.11 (deployed by Helm or Arc for K8s)
 
-**Sensor v0.11.3 — Preview**
+**Sensor v0.11.4 — GA**
 
-- **Released:** June 2026
+- **Released:** July 2026
 
 - **What's included:**
 
-  - Public Preview of EKS/GKE Private clusters support
-
+  - General Availability of EKS/GKE Private clusters support.  For the private clusters documentation page [Private clusters](defender-for-containers-private-clusters.md)
+  
 ### Sensor v0.10 (deployed by Helm or Arc for K8s)
 
+**Sensor v0.10.6 — GA**
+
+- **Released:** July 2026
+
+- **What's included:**
+
+  - Security fixes: including patching vulnerabilities in authentication, runtime components, and dependencies to address credential exposure risks
+  - Performance improvement - Reduced process event filtering CPU usage
+  - Improved authentication stability by using projected service account tokens (PSAT) with the correct audience for cloud token exchange
+  
 **Sensor v0.10.5 — GA**
 
 - **Released:** May 2026
@@ -90,7 +100,18 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
     
 ### Sensor v0.9 (AKS 1.35 or by Helm)
 
-**Sensor v0.9.58— GA**
+
+**Sensor v0.9.62— GA**
+
+- **Released:** July 2026
+
+- **What's included:**
+
+  - Security fixes: including patching vulnerabilities in authentication, runtime components, and dependencies to address credential exposure risks
+  - Performance improvement - Reduced process event filtering CPU usage
+  - Improved authentication stability by using projected service account tokens (PSAT) with the correct audience for cloud token exchange
+
+**Sensor v0.9.58 — GA**
 
 - **Released:** May 2026
 
@@ -102,7 +123,7 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
     
   - Upgraded Go and related dependencies to address security vulnerabilities and improve runtime stability
     
-**Sensor v0.9.53— Preview**
+**Sensor v0.9.53 — Preview**
 
 - **Released:** April 2026
  
@@ -197,6 +218,16 @@ Each stable (GA) version is supported for 12 months from its GA release date. Af
   - Bug fixes and security enhancements  
     
 ### Sensor v0.8 (AKS versions 1.34 and below)
+
+**Sensor v0.8.55 — GA**
+
+- **Released:** July 2026
+
+- **What's included:**
+
+  - Security fixes: including patching vulnerabilities in authentication, runtime components, and dependencies to address credential exposure risks
+  - Performance improvement - Reduced process event filtering CPU usage
+  - Improved authentication stability by using projected service account tokens (PSAT) with the correct audience for cloud token exchange
 
 **Sensor v0.8.51 — GA**
 

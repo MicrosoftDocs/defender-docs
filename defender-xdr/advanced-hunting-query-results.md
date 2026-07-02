@@ -207,7 +207,7 @@ A notification appears to inform you that the item was successfully added to **F
 You can do the same for your saved functions, queries, and custom detections in their respective **Favorites** sections right under each tab (**Functions**, **Queries**, and **Detection Rules**).
 
 > [!NOTE]
-> Some tables in this article might not be available at Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
+> Some tables in this article might not be available at Microsoft Defender for Endpoint. [Turn on Microsoft Defender](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## Automatic timeline rendering
 

@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 08/27/2025
+ms.date: 06/10/2026
 ms.reviewer: efratka
 ms.collection:
  - SMB
@@ -28,10 +28,8 @@ When you're setting up or maintaining Defender for Business, an important task i
   - [Next-generation protection](mdb-next-generation-protection.md)
   - [Firewall protection](mdb-firewall.md)
 
-- **Other policies**:
-  - [Web content filtering](mdb-web-content-filtering.md)
-  - [Controlled folder access](mdb-controlled-folder-access.md) (*requires Microsoft Intune*)
-  - [Attack surface reduction rules](mdb-asr.md) (*ASR rules are configured in Intune*)
+- **Other settings**:
+  - [Attack surface reduction features](mdb-asr.md)
 
 - **Settings for advanced features**:
   - [Turn on (or off) advanced features](mdb-portal-advanced-feature-settings.md#view-settings-for-advanced-features);
@@ -49,7 +47,7 @@ The following table explains both options.
 
 |Option|Description|
 |---|---|
-|Defender portal|A one-stop shop for managing company devices, security policies, and security settings in Defender for Business. With a simplified configuration process, you can use the Defender portal to: <ul><li>Onboard devices.</li><li>Access your security policies and settings.</li><li>Use the [Microsoft Defender Vulnerability Management dashboard](mdb-view-tvm-dashboard.md).</li><li>[view and manage incidents](mdb-view-manage-incidents.md)</li></ul>. **Note**: Currently, controlled folder access and attack surface reduction rules are set up and configured in the Microsoft Intune admin center.|
+|Defender portal|A one-stop shop for managing company devices, security policies, and security settings in Defender for Business. With a simplified configuration process, you can use the Defender portal to: <ul><li>Onboard devices.</li><li>Access your security policies and settings.</li><li>Use the [Microsoft Defender Vulnerability Management dashboard](mdb-view-tvm-dashboard.md).</li><li>[view and manage incidents](mdb-view-manage-incidents.md)</li></ul>.|
 |Intune admin center|Although Defender for Business doesn't include Microsoft Intune, you can use the Intune admin center to: <ul><li>Manage your company devices and apps, including how they access your company data.</li><li>Onboard devices and access your security policies and settings in Intune.</li><li>Set up and configure attack surface reduction rules.</li></ul> If your company has Intune, you can continue using Intune to manage your devices and security policies. To learn more, see [Manage device security with endpoint security policies in Microsoft Intune](/intune/intune-service/protect/endpoint-security-policy)|
 
 If you use Intune, and you attempt to view or edit security policies in the Defender portal by going to **Configuration management** \> **Device configuration**, you're prompted to choose whether to continue using Intune, or switch to using the Defender portal, as shown in the following screenshot:
@@ -68,6 +66,6 @@ In the preceding screenshot, **Use Defender for Business configuration instead**
 1. [Review or edit your next-generation protection policies](mdb-next-generation-protection.md) to apply antivirus/antimalware protection, and enable network protection.
 2. [Review or edit your firewall policies](mdb-firewall.md).
 3. [Set up your web content filtering policy](mdb-web-content-filtering.md) and enable web protection automatically.
-4. [Set up your controlled folder access policy](mdb-controlled-folder-access.md) for ransomware protection.
-5. [Enable your attack surface reduction rules](mdb-asr.md).
+4. [Configure controlled folder access (CFA)](/defender-endpoint/controlled-folder-access-overview#deployment-and-configuration-methods-for-cfa) for ransomware protection.
+5. [Enable your attack surface reduction (ASR) rules](/defender-endpoint/attack-surface-reduction-rules-overview#deployment-and-configuration-methods-for-asr-rules).
 6. [Review settings for advanced features and the Microsoft Defender portal](mdb-portal-advanced-feature-settings.md).

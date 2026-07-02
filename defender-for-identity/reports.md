@@ -17,7 +17,7 @@ Microsoft Defender XDR provides Defender for Identity reports, which you can eit
 
 ## Access Defender for Identity reports in Microsoft Defender XDR
 
-To access Defender for Identity reports in Microsoft Defender XDR, from the navigation menu on the left, select **Reports** > **Identities** > **Report management**.
+To access Defender for Identity reports in Microsoft Defender, from the navigation menu on the left, select **Reports** > **Identities** > **Report management**.
 
 Available reports include:
 
@@ -53,7 +53,7 @@ To define a schedule for a report to be sent to you by email:
 
     1. On the **Set schedule** page, define the conditions in which you want to send the report, and the time you want it sent.
 
-        Your report is sent according to your Microsoft Defender XDR time zone settings (*Local* or UTC). For more information, see [Set the time zone for Microsoft Defender XDR](/microsoft-365/security/defender/m365d-time-zone).
+        Your report is sent according to your Microsoft Defender time zone settings (*Local* or UTC). For more information, see [Set the time zone for Microsoft Defender](/microsoft-365/security/defender/m365d-time-zone).
 
     1. On the **Recipients** page, enter and add email addresses for anyone you want to receive the report. Select **Next** to complete the scheduling.
 

@@ -1,5 +1,5 @@
 ---
-title: The Advanced Security Information Model (ASIM) Asset Entity normalization schema reference | Microsoft Docs
+title: The Advanced Security Information Model (ASIM) Asset Entity normalization schema reference
 description: This article displays the Microsoft Sentinel Asset Entity normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT

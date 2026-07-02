@@ -114,7 +114,7 @@ The following table describes preconfigured settings for Defender for Business a
 
 - [Set up your firewall policies](mdb-firewall.md) and [custom rules for firewall policies](mdb-firewall.md).
 - [Set up your web content filtering policy](mdb-web-content-filtering.md) and enable web protection automatically.
-- [Set up your controlled folder access policy](mdb-controlled-folder-access.md) for ransomware protection.
-- [Enable your attack surface reduction rules](mdb-asr.md).
+- [Configure controlled folder access (CFA)](/defender-endpoint/controlled-folder-access-overview#deployment-and-configuration-methods-for-cfa) for ransomware protection.
+- [Enable your attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-overview#deployment-and-configuration-methods-for-asr-rules).
 - [Review settings for advanced features and the Microsoft Defender portal](mdb-portal-advanced-feature-settings.md).
 - [Use your vulnerability management dashboard in Microsoft Defender for Business](mdb-view-tvm-dashboard.md)

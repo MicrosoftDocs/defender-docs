@@ -53,7 +53,7 @@ As an ordinary user (not an admin), the **default** capabilities that are availa
 |**Mail flow rules (transport rules)**||||
 |&nbsp;&nbsp;&nbsp;Mail flow rules that quarantine email messages (directly, not by marking them as spam).||||
 
-In [supported protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), _quarantine policies_ define what users are allowed to do to quarantined messages based on why the message was quarantined. Default quarantine policies enforce the historical capabilities for messages as described in the default user quarantine capabilities table earlier in this article. Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
+In [supported protection features](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), _quarantine policies_ define what users are allowed to do to quarantined messages based on why the message was quarantined. Default quarantine policies enforce the historical capabilities for messages as described in the default user quarantine capabilities table at the beginning of this article. Admins can create and apply custom quarantine policies that define less restrictive or more restrictive capabilities for users. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
 You view and manage your quarantined messages in the Microsoft Defender portal or (if an admin set it up) quarantine notifications from quarantine policies.
 
@@ -174,7 +174,7 @@ After you find a specific quarantined message, select the message to view detail
 
 #### View quarantined message details
 
-To view details for a quarantined message, perform the following steps:
+To view the details of a quarantined message, perform the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Quarantine** \> **Email** tab. Or, to go directly to the **Email** tab on the **Quarantine** page, use <https://security.microsoft.com/quarantine?viewid=Email>.
 
@@ -256,7 +256,7 @@ If your quarantine policy allows it, you can release a quarantined email message
 >
 > If the Release button is greyed out, this is an expected behavior. Some quarantined messages can't be released by users, based on the quarantine reason or assigned quarantine policy. In such cases, you can only request release, or an admin must release the message.
 
-Releasing a quarantined email isn't available for released email messages (the **Release status** value is **Released**).
+The **Release** action isn't available for released email messages (the **Release status** value is **Released**).
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
@@ -287,7 +287,7 @@ If your quarantine policy doesn't allow you to directly release a message, you c
 >
 > A quarantine policy can allow you to release a message or request the release of a message, but both options aren't available for the same message. A quarantine policy can also prevent you from releasing or requesting the release of quarantined messages.
 
-Requesting release isn't available for email messages where you already requested release (the **Release status** value is **Released requested**).
+The **Request release** action isn't available for email messages where you already requested release (the **Release status** value is **Released requested**).
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 

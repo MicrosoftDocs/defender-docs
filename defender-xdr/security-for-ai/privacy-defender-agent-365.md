@@ -16,7 +16,7 @@ ms.custom: msecd-doc-authoring-1012
 
 # Data handling and privacy in Microsoft Defender as part of Agent 365
 
-As part of [Microsoft Agent 365](https://www.microsoft.com/microsoft-agent-365), Microsoft Defender provides AI agent security capabilities, including agent discovery, posture assessment, threat detection, and real-time protection. These capabilities, which are part of the **Security for AI** experience in the Microsoft Defender portal, give security teams visibility into AI agents and infrastructure, supporting detection, investigation, and response to risks such as prompt-based attacks, unsafe tool usage, credential exposure, and data exfiltration. For more information, see [Protect AI agents using Microsoft Defender (Preview)](./defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender-preview).
+As part of [Microsoft Agent 365](https://www.microsoft.com/microsoft-agent-365), Microsoft Defender provides AI agent security capabilities, including agent discovery, posture assessment, threat detection, and real-time protection. These capabilities, which are part of the **Security for AI** experience in the Microsoft Defender portal, give security teams visibility into AI agents and infrastructure, supporting detection, investigation, and response to risks such as prompt-based attacks, unsafe tool usage, credential exposure, and data exfiltration. For more information, see [Protect AI agents using Microsoft Defender](./defender-security-for-ai.md#protect-ai-agents-using-microsoft-defender).
 
 This article describes how Microsoft Defender collects, stores, and uses data for these AI agent security capabilities. For commitments that apply to all Agent 365 services, see [Data handling, data residency, and compliance in Agent 365 observability](/microsoft-agent-365/admin/data-residency-protection-compliance).
 
@@ -48,7 +48,7 @@ Once created, the tenant can't be moved to a different location.
 As part of Agent 365, Microsoft Defender retains:
 
 - **Observability and session data**, such as trace payloads, inputs and outputs, and user identifiers, for up to 30 days. During this time, the data is available in the Microsoft Defender portal.
-- **Agent inventory data and data shared with [Microsoft Defender XDR](/defender-xdr/data-privacy)** for up to 180 days.
+- **Agent inventory data and data shared with [Microsoft Defender](/defender-xdr/data-privacy)** for up to 180 days.
 
 Microsoft Defender deletes this customer data within 30 days of contract termination or expiration.
 
@@ -62,7 +62,7 @@ Microsoft doesn't use customer data to train AI models without user consent. As 
 
 As part of Agent 365, Microsoft Defender shares data, including customer data, with other Microsoft products the customer has licensed. These might include:
 
-- Microsoft Defender XDR
+- Microsoft Defender
 - Microsoft Defender for Endpoint
 - Microsoft Security Exposure Management
 - Microsoft Entra ID Protection

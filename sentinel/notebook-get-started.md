@@ -4,12 +4,13 @@ description: Walk through the Getting Started Guide For Microsoft Sentinel ML No
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 02/20/2025
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to use Jupyter notebooks with MSTICPy in Microsoft Sentinel so that I can efficiently perform threat hunting and data analysis with minimal coding.
@@ -18,9 +19,9 @@ ms.custom: sfi-image-nochange
 
 # Get started with Jupyter notebooks and MSTICPy in Microsoft Sentinel
 
-This article describes how to run the **Getting Started Guide For Microsoft Sentinel ML Notebooks** notebook, which sets up basic configurations for running Jupyter notebooks in Microsoft Sentinel and provides examples for running simple queries.
+This article describes how to run the **Getting Started Guide For Microsoft Sentinel ML Notebooks** notebook, which sets up basic configurations for running Jupyter notebooks in Microsoft Sentinel and provides examples for running simple queries. Before you begin, make sure you complete the [prerequisites](#prerequisites), including permissions, Python setup, and external data provider accounts.
 
-The **Getting Started Guide for Microsoft Sentinel ML Notebooks** notebook uses [MSTICPy](https://msticpy.readthedocs.io/en/latest/), a powerful Python library designed to enhance security investigations and threat hunting within Microsoft Sentinel notebooks. It provides built-in tools for data enrichment, visualization, anomaly detection, and automated queries, helping analysts streamline their workflow without extensive custom coding.
+The **Getting Started Guide for Microsoft Sentinel ML Notebooks** notebook uses [MSTICPy](https://msticpy.readthedocs.io/en/latest/), a powerful Python library designed to enhance security investigations and threat hunting within Microsoft Sentinel notebooks. MSTICPy provides built-in tools for data enrichment, visualization, anomaly detection, and automated queries, helping analysts streamline their workflow without extensive custom coding.
 
 For more information, see [Use notebooks to power investigations](hunting.md#use-notebooks-to-power-investigations) and [Use Jupyter notebooks to hunt for security threats](notebooks.md).
 
@@ -39,14 +40,14 @@ Before you begin, make sure you have the required permissions and resources.
 
 ## Install and run the Getting Started Guide notebook
 
-This procedure describes how to launch your notebook with Microsoft Sentinel.
+The following steps describe how to launch the Getting Started Guide notebook with Microsoft Sentinel.
 
 1. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Threat management** > **Notebooks**. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Threat management**, select **Notebooks**. 
 
 1. From the **Templates** tab, select **A Getting Started Guide For Microsoft Sentinel ML Notebooks** .
 1. Select **Create from template**.
 1. Edit the name and select the Azure Machine Learning workspace as appropriate.
-1. Select **Save** to save it to your Azure Machine Learning workspace.
+1. Select **Save** to save the notebook to your Azure Machine Learning workspace.
 
 1. Select **Launch notebook** to run the notebook. The notebook contains a series of cells:
 
@@ -70,11 +71,11 @@ The **Getting Started Guide For Microsoft Sentinel ML Notebooks** notebook inclu
 |**Introduction**     | Describe notebook basics and provides sample code you can run to see how notebooks work.      |
 |**Initializing the notebook and MSTICPy**     | Helps you get your environment ready to run the rest of the notebook.   When initializing the notebook, configuration warnings about missing settings are expected because you didn't configure anything yet.     |
 |**Querying Data from Microsoft Sentinel**     | Helps you verify, configure, and test Microsoft Sentinel settings. Use the code in this section to authenticate to Microsoft Sentinel and run a sample query to test the connection.        |
-|**Configure and test external data providers (VirusTotal and Maxmind GeoLite2)**     | Helps you configure settings for VirusTotal, as a sample threat intelligence service, and MaxMind GeoLite2, as a sample geo-location lookup service. Use the code in this section to run sample queries against these data providers to test them.|
+|**Configure and test external data providers (VirusTotal and Maxmind GeoLite2)**     | Helps you configure settings for VirusTotal, as a sample threat intelligence service, and MaxMind GeoLite2, as a sample geo-location lookup service. Use the code in this section to run sample queries against these data providers to test the provider connections.|
 
-The code in the **Getting Started Guide For Microsoft Sentinel ML Notebooks** launches the **MpConfigEdit** tool, which has series of tabs for configuring your notebook environment. As you make changes in **MpConfigEdit** tool, make sure to save your changes before continuing. Settings for the notebook are stored in the **msticpyconfig.yaml** file, which is automatically populated with initial details for your workspace. 
+The code in the **Getting Started Guide For Microsoft Sentinel ML Notebooks** launches the **MpConfigEdit** tool, which has series of tabs for configuring your notebook environment. As you make changes in the **MpConfigEdit** tool, make sure to save your changes before proceeding to the next tab. Settings for the notebook are stored in the **msticpyconfig.yaml** file, which is automatically populated with initial details for your workspace. 
 
-Make sure to read through the markdown cells carefully so that you understand the process completely, including each of the settings and the **msticpyconfig.yaml** file. Next steps, extra resources, and frequently asked questions from the [Azure Sentinel Notebooks wiki](https://github.com/Azure/Azure-Sentinel-Notebooks/wiki/) are linked from the end of the notebook.
+Make sure to read through the markdown cells carefully so that you understand the notebook configuration process completely, including each of the settings and the **msticpyconfig.yaml** file. Next steps, extra resources, and frequently asked questions from the [Azure Sentinel Notebooks wiki](https://github.com/Azure/Azure-Sentinel-Notebooks/wiki/) are linked from the end of the notebook.
 
 ## Customize your queries (optional)
 
@@ -115,9 +116,9 @@ For more information, see:
 
 ## Apply guidance to other notebooks
 
-The steps in this article describe how to run the **Getting Started Guide for Microsoft Sentinel ML Notebooks** notebook in your Azure Machine Learning workspace via Microsoft Sentinel. You can also use this article as guidance for performing similar steps to run notebooks in other environments, including locally. 
+The steps in this article describe how to run the **Getting Started Guide for Microsoft Sentinel ML Notebooks** notebook in your Azure Machine Learning workspace via Microsoft Sentinel. You can also use this article as guidance for launching and configuring notebooks in other environments, including locally. 
 
-Several Microsoft Sentinel notebooks don't use MSTICPy, such as the **Credential Scanner** notebooks, or the PowerShell and C# examples. Notebooks that don't use MSTICpy don't need the MSTICPy configuration described in this article.
+Several Microsoft Sentinel notebooks don't use [MSTICPy](https://msticpy.readthedocs.io/en/latest/) (the Python library for security investigations in Microsoft Sentinel notebooks), such as the **Credential Scanner** notebooks, or the PowerShell and C# examples. Notebooks that don't use MSTICpy don't need the MSTICPy configuration described in [Install and run the Getting Started Guide notebook](#install-and-run-the-getting-started-guide-notebook).
 
 Try out other Microsoft Sentinel notebooks, such as:
 

@@ -9,7 +9,7 @@ ms.custom: sfi-ga-nochange
 
 # Prerequisites and support
 
-This article describes the requirements and prerequisites for using Microsoft Security Exposure Management in the unified Microsoft Defender XDR portal.
+This article describes the requirements and prerequisites for using Microsoft Security Exposure Management in the unified Microsoft Defender portal.
 
 ## Portal access and setup
 

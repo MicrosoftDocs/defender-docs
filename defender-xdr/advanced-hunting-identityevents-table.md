@@ -28,7 +28,7 @@ The `IdentityEvents` table in the [advanced hunting](advanced-hunting-overview.m
 > [!IMPORTANT]
 > Some information relates to prereleased product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-This advanced hunting table is populated by records from Microsoft Defender for Identity. If your organization hasn’t deployed the service in Microsoft Defender XDR, queries that use the table aren’t going to work or return any results. For more information about how to deploy Defender for Identity in Defender XDR, read [Deploy supported services](deploy-supported-services.md).
+This advanced hunting table is populated by records from Microsoft Defender for Identity. If your organization hasn't deployed the service in Microsoft Defender, queries that use the table aren't going to work or return any results. For more information about how to deploy Defender for Identity in the Defender portal, read [Deploy supported services](deploy-supported-services.md).
 
 >[!NOTE]
 >This advanced hunting table is populated only when other identity services like Okta are connected to Defender for Identity. 
