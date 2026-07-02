@@ -2,11 +2,9 @@
 title: View and organize the Microsoft Defender for Endpoint Alerts queue
 description: Learn about how the Microsoft Defender for Endpoint alerts queues work, and how to sort and filter lists of alerts.
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
@@ -14,17 +12,12 @@ ms.collection:
 ms.topic: article
 ms.date: 03/26/2025
 ms.subservice: edr
-search.appverid: met150
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # View and organize the Microsoft Defender for Endpoint Alerts queue
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The **Alerts queue** shows a list of alerts that were flagged from devices in your network. By default, the queue displays alerts seen in the last 7 days in a grouped view. The most recent alerts are shown at the top of the list helping you see the most recent alerts first.
 
@@ -132,11 +125,12 @@ You can choose to filter the alerts based on their Automated investigation state
 
 ## Related topics
 
-- [Manage Microsoft Defender for Endpoint alerts](manage-alerts.md)
+- [Manage Microsoft Defender for Endpoint alerts](/defender-xdr/investigate-alerts?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json#manage-alerts)
 - [Investigate Microsoft Defender for Endpoint alerts](investigate-alerts.md)
 - [Investigate a file associated with a Microsoft Defender for Endpoint alert](investigate-files.md)
 - [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md)
 - [Investigate an IP address associated with a Microsoft Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Microsoft Defender for Endpoint alert](investigate-domain.md)
 - [Investigate a user account in Microsoft Defender for Endpoint](investigate-user.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

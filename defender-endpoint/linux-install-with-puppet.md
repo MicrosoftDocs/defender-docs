@@ -6,28 +6,20 @@ ms.service: defender-endpoint
 ms.author: painbar
 author: paulinbar
 ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-linux
 ms.topic: install-set-up-deploy
 ms.subservice: linux
-search.appverid: met150
-ms.date: 08/11/2025
----
+ms.date: 05/21/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Deploy Microsoft Defender for Endpoint on Linux with Puppet
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender for Endpoint for servers
-- Microsoft Defender for Servers Plan 1 or Plan 2
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 You can deploy [Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) by using a variety of tools and methods. This article describes how to deploy Defender for Endpoint on Linux using Puppet. To use another method, refer to the [Related content section](#related-content).
 
@@ -47,24 +39,7 @@ Download the onboarding package from Microsoft Defender portal.
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
-
-2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
-
-3. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
-
-   :::image type="content" source="media/portal-onboarding-linux-2.png" alt-text="The option to download the onboarded package.":::
-
-4. Extract the contents of the archive.
-
-   ```bash
-   unzip WindowsDefenderATPOnboardingPackage.zip
-   ```
-
-   ```console
-   Archive:  WindowsDefenderATPOnboardingPackage.zip
-   inflating: mdatp_onboard.json
-   ```
+[!INCLUDE [linux-get-deployment-package-third-party-tools](includes/linux-get-deployment-package-third-party-tools.md)]
 
 ## Create a directory structure
 
@@ -72,9 +47,9 @@ You need to create a directory structure for deploying Defender for Endpoint on 
 
 1. Under the **modules** folder if your Puppet installation, create the folders `install_mdatp/files` and `install_mdatp/manifests`. The **modules** folder is typically located at `/etc/puppetlabs/code/environments/production/modules` on your Puppet server. 
 
-2. Copy the `mdatp_onboard.json` file created earlier to the `install_mdatp/files` folder. 
+1. Copy the `mdatp_onboard.json` file created earlier to the `install_mdatp/files` folder. 
 
-3. Create an `init.pp` file that contains the deployment instructions:
+1. Create an `init.pp` file that contains the deployment instructions:
 
    ```bash
    pwd
@@ -112,7 +87,7 @@ There are two ways to create a manifest file:
   wget https://raw.githubusercontent.com/microsoft/mdatp-xplat/refs/heads/master/linux/installation/mde_installer.sh /etc/puppetlabs/code/environments/production/modules/install_mdatp/files/
   ```
 
-2. Add the following content to the `install_mdatp/manifests/init.pp` file. You can also download the file directly from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/puppet.install_mdatp_simplified.init.pp)
+1. Add the following content to the `install_mdatp/manifests/init.pp` file. You can also download the file directly from [GitHub](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/third_party_installation_playbooks/puppet.install_mdatp_simplified.init.pp)
 
   ```bash
 
@@ -309,22 +284,21 @@ If you experience any installation issues, for self-troubleshooting, follow thes
 
 1. For information on how to find the log that's generated automatically when an installation error occurs, see [Log installation issues](linux-resources.md#log-installation-issues).
 
-2. For information about common installation issues, see [Installation issues](/defender-endpoint/linux-support-install).
+1. For information about common installation issues, see [Installation issues](linux-support-install.md).
 
-3. If health of the device is `false`, see [Defender for Endpoint agent health issues](/defender-endpoint/health-status).
+1. If health of the device is `false`, see [Defender for Endpoint agent health issues](health-status.md).
 
-4. For product performance issues, see [Troubleshoot performance issues](/defender-endpoint/linux-support-perf).
+1. For product performance issues, see [Troubleshoot performance issues](linux-support-perf.md).
+1. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](linux-support-connectivity.md).
 
-5. For proxy and connectivity issues, see [Troubleshoot cloud connectivity issues](/defender-endpoint/linux-support-connectivity).
-
-To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](/defender-endpoint/overview-client-analyzer).
+To get support from Microsoft, open a support ticket, and provide the log files created by using the [client analyzer](overview-client-analyzer.md).
 
 ## How to configure policies for Microsoft Defender on Linux
 
 To configure antivirus and EDR settings, see the following articles:
 
-- [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
-- [Set preferences for Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) describes settings you can configure.
+- [Defender for Endpoint security settings management](/intune/intune-service/protect/mde-security-integration) describes how to configure settings in the Microsoft Defender portal. (*This method is recommended*.)
+- [Set preferences for Defender for Endpoint on Linux](linux-preferences.md) describes settings you can configure.
 
 ## Operating system upgrades
 
@@ -354,4 +328,5 @@ class remove_mdatp {
 - [Deployment guidance for Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
 - [Install Defender for Endpoint on Linux to a custom path](linux-custom-location-installation.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

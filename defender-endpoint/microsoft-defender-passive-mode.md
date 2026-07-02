@@ -1,18 +1,16 @@
 ---
 title: Defender for Endpoint with Defender Antivirus in passive mode
-ms.topic: conceptual
+ms.topic: article
 description: Understand how Defender Antivirus in passive mode works and when to use it.
 ms.service: defender-endpoint
-author: KesemSharabi
-ms.author: kesharab
+author: chrisda
+ms.author: chrisda
 ms.localizationpriority: high
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier1
 - mde-ngp
 ms.subservice: ngp
-search.appverid: met150
 ms.date: 03/26/2025
 ---
 
@@ -25,8 +23,6 @@ Microsoft Defender for Endpoint is a comprehensive security solution designed to
 Some of the key benefits of Defender Antivirus in passive mode are:
 
 * **EDR Block mode** - Post-breach protection by detecting and remediating threats missed by the active antimalware solution
-
-* **Data Loss Prevention (DLP)** - Endpoint DLP functionalities operate normally, ensuring sensitive data is safeguarded.
 
 * **Security intelligence updates** - Microsoft Defender Antivirus continues to receive updates to stay aware of the latest threats.
 
@@ -103,11 +99,11 @@ Follow these steps to verify that Microsoft Defender Antivirus is in passive mod
 
 1. Open the Windows Security app.
 
-2. Select **Virus & threat protection**.
+1. Select **Virus & threat protection**.
 
-3. Under **Who’s protecting me?**, select **Manage providers**.
+1. Under **Who’s protecting me?**, select **Manage providers**.
 
-4. On the *Security providers* page, verify the antivirus provider and state.
+1. On the *Security providers* page, verify the antivirus provider and state.
 
 ## Additional resources
 

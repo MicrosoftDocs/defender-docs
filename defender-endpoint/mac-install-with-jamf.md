@@ -2,33 +2,24 @@
 title: Deploying Microsoft Defender for Endpoint on macOS with Jamf Pro
 description: Deploying Microsoft Defender for Endpoint on macOS with Jamf Pro
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
-manager: deniseb
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: install-set-up-deploy
 ms.subservice: macos
-search.appverid: met150
 ms.date: 05/08/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
 
+---
 # Deploying Microsoft Defender for Endpoint on macOS with Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 Learn how to deploy Microsoft Defender for Endpoint on macOS with Jamf Pro.
 
@@ -44,4 +35,5 @@ This is a multi-step process. You need to complete all of the following steps:
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

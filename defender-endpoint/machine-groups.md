@@ -2,32 +2,24 @@
 title: Create and manage device groups in Microsoft Defender for Endpoint
 description: Create device groups and set automated remediation levels on them by confirming the rules that apply on the group
 ms.service: defender-endpoint
-ms.author: ewalsh
-author: emmwalshh
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 ms.topic: how-to
 ms.subservice: onboard
-search.appverid: met150
-ms.date: 03/26/2025
+ms.date: 06/17/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create and manage device groups
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Entra ID
-- Office 365
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 > [!NOTE]
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
@@ -58,26 +50,43 @@ As part of the process of creating a device group, you'll:
 
 ## Create a device group
 
-1. In the navigation pane, select **Settings** \> **Endpoints** \> **Permissions** \> **Device groups**.
+> [!NOTE]
+> Device Groups in Defender for Business are managed differently. For more information, see [Device groups in Microsoft Defender for Business](/defender-business/mdb-create-edit-device-groups).
 
-2. Click **Add device group**.
+> [!NOTE]
+> You can create up to 2,000 device groups per tenant.
 
-3. Enter the group name and automation settings and specify the matching rule that determines which devices belong to the group. See [How the automated investigation starts](automated-investigations.md#how-the-automated-investigation-starts).
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Endpoints** \> **Permissions** section \> **Device groups**. Or, to go directly to the device groups tab, use <https://security.microsoft.com/securitysettings/endpoints/machine_groups>.
 
-    > [!TIP]
-    > If you want to use tagging for grouping devices, see [Create and manage device tags](machine-tags.md).
+1. On the device groups tab, select **Add device group**.
 
-4. Preview several devices that will be matched by this rule. If you're satisfied with the rule, click the **User access** tab.
+1. The **Add device group** wizard opens. On the **General** page, configure the following settings:
+   - **Device group name**: Enter a unique, descriptive name for the device group.
+   - **Remediation level**: Select one of the following values:
+     - **No automated response**
+     - **Semi - Approval required for all folders**
+     - **Semi - Approval required for non-temporary folders**
+     - **Semi - Approval required for system folders**
+     - **Full remediation**
+   - **Description**: Enter an optional description.
 
-5. Assign the user groups that can access the device group you created.
+   Select **Next**
+
+1. On the **Devices** page, configure the matching rule that determines which devices belong to the group. For instructions, see [How the automated investigation starts](automated-investigations.md#how-the-automated-investigation-starts).
+
+   > [!TIP]
+   > To use tagging for grouping devices, see [Create and manage device tags](machine-tags.md).
+
+   Select **Next**.
+
+1. On the **Preview devices** page, select **Show preview** to show up to 10 devices that match the device rule you configured on the previous page. If you're satisfied with the results, select **Next**.
+
+1. On the **User access** page, assign the user groups that can access the device group you created.
 
     > [!NOTE]
     > You can only grant access to Microsoft Entra user groups that have been assigned to RBAC roles.
 
-6. Click **Close**. The configuration changes are applied.
-
-    > [!NOTE]
-    > Device Groups in Defender for Business are managed differently. For more information, see [Device groups in Microsoft Defender for Business](/defender-business/mdb-create-edit-device-groups).
+   When you're ready to create the device group, select **Submit**.
 
 ## Manage device groups
 
@@ -95,21 +104,22 @@ Devices that aren't matched to any groups are added to Ungrouped devices (defaul
 
 ### Add device group definitions
 
-Device group definitions can also include multiple values for each condition. You can set multiple tags, device names, and domains to the definition of a single device group.
+A device group definition can include multiple values for each condition. You can set multiple tags, device names, and domains to the definition of a single device group.
 
 1. Create a new device group, then select **Devices** tab.
-2. Add the first value for one of the conditions.
-3. Select `+` to add more rows of the same property type.
+1. Add the first value for one of the conditions.
+1. Select `+` to add more rows of the same property type.
 
 > [!TIP]
 > Use the 'OR' operator between rows of the same condition type, which allows multiple values per property.
 > You can add up to 10 rows (values) for each property type - tag, device name, domain.
 
-For more information on linking to device groups definitions, see [Device groups - Microsoft 365 security](https://sip.security.microsoft.com/homepage).
+For more information about device group definitions, see [Device groups - Microsoft 365 security](https://sip.security.microsoft.com/homepage).
 
-## Related topics
+<a name="related-topics"></a>
+## Related content
 
 - [Manage portal access using role-based based access control](rbac.md)
 - [Create and manage device tags](machine-tags.md)
 - [Get list of tenant device groups using Graph API](/graph/api/device-list-memberof)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,16 +1,11 @@
 ---
 title: Automated investigation and response in Microsoft Defender XDR
 description: Get an overview of automated investigation and response capabilities, also called self-healing, in Microsoft Defender XDR
-search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
-- NOCSH
-ms.author: diannegali
-author: diannegali
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
 ms.date: 04/28/2025
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
@@ -93,7 +88,7 @@ To view investigations, go to the **Incidents** page. Select an incident, and th
 
 The Automated investigation & response card is available in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) homepage. This card provides visibility to the total number of available remediation actions. The card also gives an overview of all the alerts and required approval time for each alert.
 
-:::image type="content" source="/defender/media/automated-investigation-response-card.png" alt-text="Screenshot that shows the automated investigation & response card.":::
+:::image type="content" source="media/m365d-autoir/automated-investigation-response-card.png" alt-text="Screenshot that shows the automated investigation & response card.":::
 
 Using the Automated investigation & response card, your security operations team can quickly navigate to the Action center by selecting the **View pending actions** link, and then taking appropriate actions. The card enables your security operations team to more effectively manage actions that are pending approval.
 

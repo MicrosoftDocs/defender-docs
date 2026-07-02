@@ -1,16 +1,11 @@
 ---
 title: Advanced hunting example for Microsoft Defender for Office 365
 description: Get started searching for email threats using advanced hunting
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -57,7 +52,7 @@ Quickly navigating to Kusto query language to hunt for issues is an advantage of
 
 1. Select **Run query**.
 
-    :::image type="content" source="/defender/media/ah-query-example-new.png" alt-text="The Advanced hunting page (under Hunting) with Query selected at the top of the query panel, and running a Kusto query to capture ZAP actions over the last seven days." lightbox="/defender/media/ah-query-example-new.png":::
+    :::image type="content" source="media/advanced-hunting-email-threats/ah-query-example-new.png" alt-text="The Advanced hunting page (under Hunting) with Query selected at the top of the query panel, and running a Kusto query to capture ZAP actions over the last seven days." lightbox="/defender/media/ah-query-example-new.png":::
 
     The data from this query appears in the **Results** panel below the query itself. Results include information like `DeviceName`, `AccountDisplayName`, and `ZapTime` in a customizable result set. Results can also be exported for your records. To save the query for reuse, select **Save** \> **Save As** to add the query to your list of queries, shared, or community queries.
 

@@ -1,24 +1,18 @@
 ---
 title: Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
-f1.keywords: 
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid: 
-  - MET150
-  - MOE150
 ms.assetid: 07e76024-0c80-40dc-8c48-1dd0d0f863cb
 ms.collection: 
   - m365-security
   - SPO_Content
   - tier2
 description: Admins can learn how to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, including how to set alerts for detected files.
-ms.custom: 
-- seo-marvel-apr2020
+ms.custom:
+  - seo-marvel-apr2020
+  - sfi-ga-nochange
 ms.service: defender-office-365
 ms.date: 08/05/2025
 appliesto:
@@ -50,7 +44,7 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
     - _Use SharePoint Online PowerShell to prevent people from downloading malicious files_: **Global Administrator**<sup>\*</sup> or **SharePoint Administrator**.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - Verify that audit logging is enabled for your organization (it's on by default). For instructions, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
@@ -58,9 +52,9 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
 
 ## Step 1: Use the Microsoft Defender portal to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section. Or, to go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section. Or, to go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
-2. On the **Safe Attachments** page, select :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**.
+2. On the **Safe Attachments** page, select :::image type="icon" source="media/defender-portal-icon-gear.png" border="false"::: **Global settings**.
 
 3. In the **Global settings** flyout that opens, go to the **Protect files in SharePoint, OneDrive, and Microsoft Teams** section.
 
@@ -101,9 +95,9 @@ For detailed syntax and parameter information, see [Set-SPOTenant](/powershell/m
 
 You can create an alert policy that notifies admins when Safe Attachments for SharePoint, OneDrive, and Microsoft Teams detects a malicious file. To learn more about alert policies, see [Alert policies in the Microsoft Defender portal](alert-policies-defender-portal.md).
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Alert policy**. To go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpolicies>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Alert policy**. To go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpolicies>.
 
-2. On the **Alert policy** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **New alert policy** to start the new alert policy wizard.
+2. On the **Alert policy** page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **New alert policy** to start the new alert policy wizard.
 
 3. On the **Name your alert, categorize it, and choose a severity** page, configure the following settings:
    - **Name**: Type a unique and descriptive name. For example, **Malicious Files in Libraries**.
@@ -153,7 +147,7 @@ For detailed syntax and parameter information, see [New-ProtectionAlert](/powers
 
 - To verify you successfully turned on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, use either of the following steps:
 
-  - In the Microsoft Defender portal, go to **Policies & rules** \> **Threat Policies** \> **Policies** section \> **Safe Attachments**, select **Global settings**, and verify the value of the **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams** setting.
+  - In the Microsoft Defender portal, go to **Policies & rules** \> **Threat policies** \> **Policies** section \> **Safe Attachments**, select **Global settings**, and verify the value of the **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams** setting.
 
   - In Exchange Online PowerShell, run the following command to verify the property setting:
 

@@ -1,12 +1,11 @@
 ---
 title: External Attack Surface Management Initiative
 description: Learn how to get MDEASM insights into your corporate attack surface with the initiative in Microsoft Security Exposure Management.
-ms.author: dlanger
-author: dlanger
-manager: ornat-spodek
 ms.topic: how-to
-ms.service: exposure-management
 ms.date: 05/27/2025
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ---
 
 

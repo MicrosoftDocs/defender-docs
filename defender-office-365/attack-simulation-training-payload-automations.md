@@ -2,8 +2,6 @@
 title: Payload automations for Attack simulation training
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
 ms.localizationpriority: medium
@@ -11,10 +9,10 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn how to use payload automations (payload harvesting) to collect and launch automated simulations for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-search.appverid: met150
 ms.date: 06/24/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ms.custom: sfi-image-nochange
 ---
 
 # Payload automations for Attack simulation training
@@ -53,12 +51,12 @@ To create a payload automation, do the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com/>, go to **Email & collaboration** \> **Attack simulation training** \> **Automations** tab \> **Payload automations**. To go directly to the **Automations** tab where you can select **Payload automations**, use <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
-2. On the **Payload automations** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create automation** to start the new payload automation wizard.
+2. On the **Payload automations** page, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Create automation** to start the new payload automation wizard.
 
    :::image type="content" source="media/attack-sim-training-sim-automations-create.png" alt-text="The Create simulation button on the Payload automations tab in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-sim-automations-create.png":::
 
    > [!NOTE]
-   > At any point after you name the payload automation during the new payload automation wizard, you can select **Save and close** to save your progress and continue configuring the payload automation later. The incomplete payload automation has the **Status** value **Draft** in **Payload automations** on the **Automations** tab. You can pick up where you left off by selecting the payload automation and clicking :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit automation**.
+   > At any point after you name the payload automation during the new payload automation wizard, you can select **Save and close** to save your progress and continue configuring the payload automation later. The incomplete payload automation has the **Status** value **Draft** in **Payload automations** on the **Automations** tab. You can pick up where you left off by selecting the payload automation and clicking :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit automation**.
    >
    > Currently, payload harvesting isn't enabled in GCC environments due to data gathering restrictions.
 
@@ -71,7 +69,7 @@ To create a payload automation, do the following steps:
 
 4. On the **Run conditions** page, select the conditions of the real phishing attack that determines when the automation runs.
 
-   Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add condition** and then select from one of the following conditions:
+   Select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add condition** and then select from one of the following conditions:
 
    - **No. of users targeted in the campaign**: In the boxes that appear, configure the following settings:
      - **Equal to**, **Less than**, **Greater than**, **Less than or equal to**, or **Greater than or equal to**.
@@ -89,9 +87,9 @@ To create a payload automation, do the following steps:
 
    You can use each condition only once. Multiple conditions use AND logic (\<Condition1\> and \<Condition2\>).
 
-   To add another condition, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add condition**.
+   To add another condition, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add condition**.
 
-   To remove a condition after you add it, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false":::.
+   To remove a condition after you add it, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false":::.
 
    When you're finished on the **Run conditions** page, select **Next**.
 
@@ -111,9 +109,9 @@ To create a payload automation, do the following steps:
 
 You can turn on or turn off payload automations with the **Status** value **Ready**. You can't turn on or turn off incomplete payload automations with the **Status** value **Draft**.
 
-To turn on a payload automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn on** action that appears, and then select **Confirm** in the dialog.
+To turn on a payload automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn on** action that appears, and then select **Confirm** in the dialog.
 
-To turn off a payload automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/m365-cc-sc-turn-on-off-icon.png" border="false"::: **Turn off** action that appears, and then select **Confirm** in the dialog.
+To turn off a payload automation, select it from the list by clicking the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-turn-on-off.png" border="false"::: **Turn off** action that appears, and then select **Confirm** in the dialog.
 
 ## Modify payload automations
 
@@ -121,14 +119,14 @@ You can only modify payload automations with the **Status** value **Draft** or t
 
 To modify an existing payload automation on the **Payload automations** page, do one of the following steps:
 
-- Select the payload automation from the list by selecting the check box next to the name. Select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit automation** action that appears.
+- Select the payload automation from the list by selecting the check box next to the name. Select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit automation** action that appears.
 - Select the payload automation from the list by clicking anywhere in the row except the check box. In the details flyout that opens, on the **General** tab, select **Edit** in the **Name**, **Description**, or **Run conditions** sections.
 
 The payload automation wizard opens with the settings and values of the selected payload automation. The steps are the same as described in the [Create payload automations](#create-payload-automations) section.
 
 ## Remove payload automations
 
-To remove a payload automation, select the payload automation from the list by clicking the check box. Select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the dialog.
+To remove a payload automation, select the payload automation from the list by clicking the check box. Select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the dialog.
 
 ## View payload automation details
 

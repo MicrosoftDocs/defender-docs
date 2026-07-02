@@ -1,26 +1,20 @@
 ---
 title: Investigate malicious email that was delivered in Microsoft 365, find and investigate malicious email
 keywords: TIMailData-Inline, Security Incident, incident, Microsoft Defender for Endpoint PowerShell, email malware, compromised users, email phish, email malware, read email headers, read headers, open email headers,special actions
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
 ms.date: 2/27/2024
-audience: ITPro
 ms.topic: how-to
 
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
-  - MOE150
 ms.assetid: 8f54cd33-4af7-4d1b-b800-68f8818e5b2a
 ms.collection:
   - m365-security
   - tier1
 description: Learn how to use threat investigation and response capabilities to find and investigate malicious email.
 ms.custom:
-- seo-marvel-apr2020
+  - seo-marvel-apr2020
+  - sfi-image-nochange
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -162,7 +156,7 @@ The **Email** tab (view) in the details area of the **[All email](threat-explore
 
 For example, Use the **Delivery Action**, **Original delivery location**, and **Last delivery location** columns in the **Email** tab (view) to get a complete picture of where the affected messages went. The values were explained in Step 4.
 
-Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
+Use :::image type="icon" source="media/defender-portal-icon-download.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
 
 ## Remediate malicious email that was delivered
 

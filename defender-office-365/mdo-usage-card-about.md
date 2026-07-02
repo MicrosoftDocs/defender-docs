@@ -3,9 +3,8 @@ title: Usage card in Microsoft Defender for Office 365
 keywords: AIR, autoIR, Microsoft Defender for Endpoint, automated, investigation, response, remediation, threats, advanced, threat, protection
 f1.keywords:
 - NOCSH
-author: dansimp
-ms.author: dansimp
-manager: deniseb
+author: chrisda
+ms.author: chrisda
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
@@ -16,6 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.custom:
+  - sfi-ga-nochange
 description: Learn about your organization's active usage of Microsoft Defender for Office 365 licenses versus the actual number of licenses purchased.
 ms.service: defender-office-365
 ms.date: 1/17/2024
@@ -55,7 +55,7 @@ For members of **Billing Administrator** and **Global Administrator**<sup>\*</su
 These items aren't available for member of **Global Reader**, **Security Administrator**, **Security Operator**, or **Security Reader** roles.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Understand usage details
 
@@ -80,7 +80,7 @@ The details flyout that opens contains the following information from the last 2
 **See licensing details** is available for members of the **Security Operator** and  **Global Administrators**<sup>\*</sup> roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Frequently asked questions
 

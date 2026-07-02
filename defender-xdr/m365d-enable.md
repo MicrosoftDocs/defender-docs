@@ -4,10 +4,9 @@ description: Learn how to enable Microsoft Defender XDR and start integrating yo
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: guywild
+author: guywi-ms
 ms.localizationpriority: medium
-manager: dansimp
 audience: ITPro
 ms.collection: 
     - m365-security
@@ -19,6 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 08/12/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # Turn on Microsoft Defender XDR
@@ -99,7 +99,7 @@ Once the service is provisioned, it adds:
 - [Advanced hunting](advanced-hunting-overview.md) capabilities
 - Threat analytics
 
-:::image type="content" source="/defender/media/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="/defender/media/overview-incident.png":::
+:::image type="content" source="media/m365d-enable/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="media/m365d-enable/overview-incident.png":::
 *Microsoft Defender portal with incidents management and other capabilities*
 
 ### Getting Microsoft Defender for Identity data 

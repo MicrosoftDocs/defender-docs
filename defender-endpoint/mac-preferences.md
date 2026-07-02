@@ -2,33 +2,29 @@
 title: Set preferences for Microsoft Defender for Endpoint on macOS
 description: Configure Microsoft Defender for Endpoint on macOS in enterprise organizations.
 ms.service: defender-endpoint
-author: emmwalshh
-ms.author: ewalsh
-manager: deniseb
+author: paulinbar
+ms.author: painbar
 ms.reviewer: joshbregman
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-search.appverid: met150
-ms.date: 07/01/2025
+ms.date: 06/17/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Set preferences for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-- [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
 > [!IMPORTANT]
-> This article contains instructions for how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations. To configure Microsoft Defender for Endpoint on macOS using the command-line interface, see [Resources](mac-resources.md#configuring-from-the-command-line).
+> This article contains instructions for how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations. To configure Microsoft Defender for Endpoint on macOS using the command-line interface, see [Configure from the command line](mac-resources.md#configuring-from-the-command-line).
 
 ## Summary
 
@@ -43,7 +39,7 @@ The configuration profile is a *.plist* file that consists of entries identified
 > [!CAUTION]
 > The layout of the configuration profile depends on the management console that you're using. The following sections contain examples of configuration profiles for JAMF and Intune.
 
-The top level of the configuration profile includes product-wide preferences and entries for subareas of Microsoft Defender for Endpoint, which are explained in more detail in the next sections.
+The top level of the configuration profile includes product-wide preferences and entries for subareas of Microsoft Defender for Endpoint, including antivirus engine, cloud-delivered protection, user interface, endpoint detection and response (EDR), and tamper protection.
 
 ### Antivirus engine preferences
 
@@ -54,7 +50,7 @@ The *antivirusEngine* section of the configuration profile is used to manage the
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|antivirusEngine|
 |**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Comments**|The dictionary contents include settings for enforcement level, behavior monitoring, file hash computation, scan exclusions, allowed threats, threat type settings, and scan history retention.|
 
 #### Enforcement level for antivirus engine
 
@@ -291,7 +287,7 @@ Specify threat types.
 
 ##### Action to take
 
-Specify what action to take when a threat of the type specified in the preceding section is detected. Choose from the following options:
+Specify what action to take when a threat of the type identified by the `key` setting is detected. Choose from the following options:
 
 - **Audit**: your device isn't protected against this type of threat, but an entry about the threat is logged.
 - **Block**: your device is protected against this type of threat and you're notified in the user interface and the Microsoft Defender portal.
@@ -350,7 +346,7 @@ Configure the cloud-driven protection features of Microsoft Defender for Endpoin
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|cloudService|
 |**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Comments**|The dictionary contents include settings for cloud-delivered protection, diagnostic collection level, cloud block level, automatic sample submissions, security intelligence updates, and proxy configuration.|
 
 #### Enable / disable cloud-delivered protection
 
@@ -459,7 +455,7 @@ Manage the preferences for the user interface of Microsoft Defender for Endpoint
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|userInterface|
 |**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Comments**|The dictionary contents include settings for the status menu icon visibility, the feedback option, and consumer version sign-in control.|
 
 #### Show / hide status menu icon
 
@@ -505,7 +501,7 @@ Manage the preferences of the endpoint detection and response (EDR) component of
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|edr|
 |**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Comments**|The dictionary contents include settings for device tags and group identifiers.|
 
 #### Device tags
 
@@ -567,7 +563,7 @@ Manage the preferences of the tamper protection component of Microsoft Defender 
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|tamperProtection|
 |**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Comments**|The dictionary contents include settings for enforcement level and exclusions.|
 
 #### Enforcement level
 
@@ -597,7 +593,7 @@ Args can be provided additionally, to specify allowed process more precisely.
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|exclusions|
 |**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Comments**|The dictionary contents include settings for path, team ID, signing ID, and process arguments.|
 
 ##### Path
 
@@ -659,6 +655,8 @@ The following configuration profile (or, if there's JAMF, a property list that c
 
 ### Property list for JAMF recommended configuration profile
 
+Use the following property list in JAMF for the recommended configuration profile:
+
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -704,6 +702,8 @@ The following configuration profile (or, if there's JAMF, a property list that c
 
 ### Intune recommended profile
 
+Use the following XML for the recommended Intune profile:
+
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -739,7 +739,7 @@ The following configuration profile (or, if there's JAMF, a property list that c
                 <key>PayloadOrganization</key>
                 <string>Microsoft</string>
                 <key>PayloadIdentifier</key>
-                <string>
+                <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
                 <key>PayloadDisplayName</key>
                 <string>Microsoft Defender for Endpoint configuration settings</string>
                 <key>PayloadDescription</key>
@@ -795,6 +795,8 @@ The following configuration profile (or, if there's JAMF, a property list that c
 The following templates contain entries for all settings described in this document and can be used for more advanced scenarios where you want more control over Microsoft Defender for Endpoint on macOS.
 
 ### Property list for JAMF full configuration profile
+
+The following property list shows the full JAMF configuration profile with all available settings:
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -946,6 +948,8 @@ The following templates contain entries for all settings described in this docum
 ```
 
 ### Intune full profile
+
+The following XML shows the full Intune configuration profile with all available settings:
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -1168,23 +1172,27 @@ From the JAMF console, open **Computers** \> **Configuration Profiles**, navigat
 
 1. Open **Devices** \> **Configuration Profiles**. Select **Create Profile**.
 
-2. Choose a name for the profile. Change **Platform=macOS** to **Profile type=Templates** and choose **Custom** in the template name section. Select **Configure**.
+1. Choose a name for the profile. Change **Platform=macOS** to **Profile type=Templates** and choose **Custom** in the template name section. Select **Configure**.
 
-3. Save the .plist produced earlier as `com.microsoft.wdav.xml`.
+1. Save the .plist produced earlier as `com.microsoft.wdav.xml`.
 
-4. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
+1. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
 
-5. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
+1. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
 
-6. Select **OK**.
+1. Select **OK**.
 
-7. Select **Manage** \> **Assignments**. In the **Include** tab, select **Assign to All Users & All devices**.
+1. Select **Manage** \> **Assignments**. In the **Include** tab, select **Assign to All Users & All devices**.
 
 > [!CAUTION]
 > You must enter the correct custom configuration profile name; otherwise, these preferences won't be recognized by Microsoft Defender for Endpoint.
 
-## Resources
+<a name="resources"></a>
+## Related content
+
+The following resource provides additional guidance on macOS configuration profiles:
 
 - [Configuration Profile Reference (Apple developer documentation)](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

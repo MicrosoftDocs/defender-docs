@@ -1,20 +1,15 @@
 ---
 title: Configure and review priority account protection in Microsoft Defender for Office 365
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
 ms.date: 07/07/2025
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - sfi-ga-nochange
 description: Admins can learn how to turn on priority account protection in Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
 appliesto:
@@ -44,7 +39,7 @@ This article describes how to confirm that priority account protection is turned
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 - As previously described, priority account protection is applied to accounts that have the **Priority account** tag applied to them. For instructions, see [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts).
 
@@ -98,7 +93,7 @@ For information about where the Priority account tag and other user tags are ava
 
 The **Threat protection status** report brings together information about malicious content and malicious email detected and blocked by the built-in protections in Microsoft 365 and by Defender for Office 365. For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
 
-In the previously mentioned views in the report, the option **Priority account protection** and the value **Yes** is available when you select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. This option allows you to filter the data in the report by priority account protection detections.
+In the previously mentioned views in the report, the option **Priority account protection** and the value **Yes** is available when you select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. This option allows you to filter the data in the report by priority account protection detections.
 
 ### Threat Explorer
 

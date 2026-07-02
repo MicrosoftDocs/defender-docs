@@ -1,41 +1,35 @@
 ---
 title: View the details and results of an automated investigation
 description: During and after an automated investigation, you can view the results and key findings
-search.appverid: met150
-f1.keywords:
-- NOCSH
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.service: defender-endpoint
 ms.subservice: edr
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 - mde-edr
 ms.topic: how-to
-ms.custom: 
-- autoir
-- admindeeplinkDEFENDER
+ms.custom:
+  - msecd-doc-authoring-1014
+  - autoir
+  - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 04/04/2025
----
+ms.date: 06/16/2026
+appliesto:
+  - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
+---
 # View the details and results of an automated investigation
 
-**Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+This article explains how to open and use the investigation details view in Microsoft Defender for Endpoint to monitor [automated investigation](automated-investigations.md) status, review evidence, and approve pending remediation actions. You can access investigation details both during and after the investigation process if you have the required permissions.
 
-With Microsoft Defender for Endpoint, when an [automated investigation](automated-investigations.md) runs, details about that investigation are available both during and after the automated investigation process. If you have the necessary permissions, you can view those details in an investigation details view. The investigation details view provides you with up-to-date status and the ability to approve any pending actions.
+<a name="unified-investigation-page"></a>
+## Overview of the unified investigation page
 
-## (NEW!) Unified investigation page
-
-The investigation page is updated to include information across your devices, email, and collaboration content. The new, unified investigation page defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)  and [Microsoft Defender for Office 365](/defender-office-365/mdo-about).
-
-> [!TIP]
-> To learn more about what's changing, see [(NEW!) Unified investigation page](/microsoft-365/security/mtp/mtp-autoir-results).
+The unified investigation page shows information about your devices, email, and collaboration content in one place. It uses a common language and gives a consistent experience for automatic investigations across [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about). For more information, see [Details and results of an automated investigation](/defender-xdr/m365d-autoir-results).
 
 ## Open the investigation details view
 
@@ -49,9 +43,9 @@ You can open the investigation details view by using one of the following method
 The improved [Action center](auto-investigation-action-center.md) brings together [remediation actions](manage-auto-investigation.md#remediation-actions) across your devices, email & collaboration content, and identities. Listed actions include remediation actions that were taken automatically or manually. In the Action center, you can view actions that are awaiting approval and actions that were already approved or completed. You can also navigate to more details, such as an investigation page.
 
 1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> and sign in.
-2. In the navigation pane, choose **Action center**.
-3. On either the **Pending** or **History** tab, select an item. Its flyout pane opens.
-4. Review the information in the flyout pane, and then take one of the following steps:
+1. In the navigation pane, choose **Action center**.
+1. On either the **Pending** or **History** tab, select an item. Its flyout pane opens.
+1. Review the information in the flyout pane, and then take one of the following steps:
    - Select **Open investigation page** to view more details about the investigation.
    - Select **Approve** to initiate a pending action.
    - Select **Reject** to prevent a pending action from being taken.
@@ -62,16 +56,15 @@ The improved [Action center](auto-investigation-action-center.md) brings togethe
 Use an incident details page to view detailed information about an incident, including alerts that were triggered information about any affected devices, user accounts, or mailboxes.
 
 1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> and sign in.
-2. In the navigation pane, choose **Incidents & alerts** \> **Incidents**.
-3. Select an item in the list, and then choose **Open incident page**.
-4. Select the **Investigations** tab, and then select an investigation in the list. Its flyout pane opens.
-5. Select **Open investigation page**.
+1. In the navigation pane, choose **Incidents & alerts** \> **Incidents**.
+1. Select an item in the list, and then choose **Open incident page**.
+1. Select the **Investigations** tab, and then select an investigation in the list. Its flyout pane opens.
+1. Select **Open investigation page**.
 
-## Investigation details
+<a name="investigation-details"></a>
+## Review investigation details
 
-Use the investigation details view to see past, current, and pending activity pertaining to an investigation. The investigation details view resembles the following image:
-
-In the Investigation details view, you can see information on the **Investigation graph**, **Alerts**, **Devices**, **Identities**, **Key findings**, **Entities**, **Log**, and **Pending actions** tabs, described in the following table.
+Use the investigation details view to see past, current, and pending activity pertaining to an investigation. In the investigation details view, you can see information on the **Investigation graph**, **Alerts**, **Devices**, **Identities**, **Key findings**, **Entities**, **Log**, and **Pending actions** tabs, described in the following table.
 
 > [!NOTE]
 > - The specific tabs you see in an investigation details page depends on what your subscription includes. For example, if your subscription doesn't include Microsoft Defender for Office 365 Plan 2, you won't see a **Mailboxes** tab.
@@ -90,7 +83,8 @@ In the Investigation details view, you can see information on the **Investigatio
 |**Log**|Provides a chronological, detailed view of all the investigation actions taken after an alert was triggered.|
 |**Pending actions**|Lists items that require approval to proceed. Go to the Action center (<https://security.microsoft.com/action-center>) to approve pending actions.|
 
-## Investigation states
+<a name="investigation-states"></a>
+## Understand investigation states
 
 The following table lists investigation states and what they indicate.
 
@@ -103,7 +97,7 @@ The following table lists investigation states and what they indicate.
 |Failed     | At least one investigation analyzer ran into a problem where it couldn't complete the investigation. If an investigation fails after remediation actions were approved, the remediation actions might still have succeeded.|
 |Successfully remediated| An automated investigation completed, and all remediation actions were completed or approved.|
 
-To provide more context about how investigation states show up, the following table lists alerts and their corresponding automated investigation state. This table is included as an example of what a security operations team might see in the Microsoft Defender portal.
+To provide more context about how investigation states appear in the Microsoft Defender portal, the following table lists alerts and their corresponding automated investigation state. This table is included as an example of what a security operations team might see in the Microsoft Defender portal.
 
 |Alert name | Severity | Investigation state | Status | Category |
 |-----------|----------|---------------------|--------|----------|
@@ -146,4 +140,5 @@ To provide more context about how investigation states show up, the following ta
 
 - [Review remediation actions following an automated investigation](manage-auto-investigation.md)
 - [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

@@ -2,11 +2,9 @@
 title: Assign roles and permissions
 description: Configure permissions deploying Microsoft Defender for Endpoint
 ms.service: defender-endpoint
-ms.author: deniseb
-author: denisebmsft
+ms.author: painbar
+author: paulinbar
 ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
 ms.collection:
   - m365-security
   - m365solution-endpointprotect
@@ -15,21 +13,15 @@ ms.collection:
   - tier1
 ms.topic: install-set-up-deploy
 ms.subservice: onboard
-search.appverid: met150
 ms.date: 01/28/2025
----
+appliesto:
+  - Microsoft Defender for Endpoint Plan 1
+  - Microsoft Defender for Endpoint Plan 2
+ms.custom: sfi-ga-nochange
 
+---
 # Assign roles and permissions for Microsoft Defender for Endpoint deployment
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](/defender-xdr)
-
-> Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://go.microsoft.com/fwlink/p/?linkid=2225630)
 
 The next step when deploying Defender for Endpoint is to assign roles and permissions for the Defender for Endpoint deployment.
 
@@ -68,4 +60,5 @@ The following example table serves to identify the Cyber Defense Operations Cent
 
 After assigning roles and permissions to view and manage Defender for Endpoint it's time for [Step 3 - Identify your architecture and choose your deployment method](deployment-strategy.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+
+

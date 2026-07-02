@@ -2,28 +2,24 @@
 title: Remediate malicious email that was delivered in Office 365
 author: chrisda
 ms.author: chrisda
-manager: orspodek
 ms.topic: concept-article
 ms.collection:
 - m365-security
 - tier1
-audience: admin
-f1.keywords:
-  - NOCSH
 ms.localizationpriority: medium
-search.appverid: MET150
 description: Threat remediation
 ms.service: defender-office-365
-ms.date: 07/28/2025
+ms.date: 09/16/2025
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ms.custom: sfi-image-nochange
 ---
 
 # Remediate malicious email delivered in Office 365
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Remediation means to take a prescribed action against a threat. Malicious email sent to your organization can be cleaned up by the system, through zero-hour auto purge (ZAP), or by security teams through remediation actions like *move to inbox*, *move to junk*, *move to deleted items*, *soft delete*, or *hard delete*. Microsoft Defender for Office 365 Plan 2/E5 enables security teams to remediate threats in email and collaboration functionality through manual and automated investigation.
+Remediation means to take a prescribed action against a threat. Malicious email sent to your organization can be cleaned up by the system, through [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md), or by security teams through [remediation actions](threat-explorer-threat-hunting.md#the-take-action-wizard) like *move to inbox*, *move to junk*, *move to deleted items*, *soft delete*, or *hard delete*. Microsoft Defender for Office 365 Plan 2 (included in Microsoft 365 A5/E5/E5) enables security teams to remediate threats in email and collaboration functionality through manual and automated investigation.
 
 ## What you need to know before you begin
 
@@ -42,11 +38,11 @@ Remediation means to take a prescribed action against a threat. Malicious email 
 
 ## Manual and automated remediation
 
-*Manual hunting* occurs when security teams identify threats manually by using the search and filtering capabilities in Explorer (Threat Explorer). Manual email remediation can be triggered through any email view (*Malware*, *Phish*, or *All email*) after you identify a set of emails that need to be remediated.
+*Manual hunting* occurs when security teams identify threats manually by using the search and filtering capabilities in [Explorer (Threat Explorer)](threat-explorer-real-time-detections-about.md). [Manual email remediation](threat-explorer-threat-hunting.md#the-take-action-wizard) can be triggered through any email view (*Malware*, *Phish*, or *All email*) after you identify a set of emails that need to be remediated.
 
 :::image type="content" source="media/microsoft-365-defender-threat-explorer-manual-remediation.png"  lightbox="media/microsoft-365-defender-threat-explorer-manual-remediation.png" alt-text="Screenshot of manual hunting in Explorer (Threat Explorer) by date.":::
 
-Security teams can use Explorer to select emails in several ways:
+Security teams can use [Explorer](threat-explorer-real-time-detections-about.md) to select emails in several ways:
 
 - Choose emails by hand: Use filters in various views. Select up to 100 emails to remediate.
 
@@ -63,17 +59,17 @@ Once emails are selected through Explorer, you can start remediation by taking d
 
 - Two-step approval: An "add to remediation" action can be taken by admins who don't have appropriate permissions or who need to wait to execute the action. In this case, the targeted emails are added to a remediation container. Approval is needed before the remediation is executed.
 
-**Automated investigation and response** actions are triggered by alerts or by security operations teams from Explorer. These results might include recommended remediation actions that must be approved by a security operations team. These actions are included on the **Action** tab in the automated investigation.
+**[Automated investigation and response](air-about.md)** actions are triggered by alerts or by security operations teams from Explorer. These results might include recommended remediation actions that must be approved by a security operations team. These actions are included on the **Action** tab in the automated investigation.
 
 :::image type="content" source="media/tp-RemediationArticle3.png" alt-text="Email with malware on the Zapped page showing the time of ZAP execution." lightbox="media/tp-RemediationArticle3.png":::
 
-All remediation (direct approvals) created in Explorer, Advanced hunting, or through Automated investigation are displayed in the Action center at **Actions & Submissions** \> **Action center** \> **History** tab (<https://security.microsoft.com/action-center/history>).
+All remediation (direct approvals) created in Explorer, Advanced hunting, or through Automated investigation are displayed in the Action center in the Microsoft Defender portal at **Actions & Submissions** \> **Action center** \> **History** tab (<https://security.microsoft.com/action-center/history>).
 
 Manual actions pending approval using the two-step approval process (added to the remediation by one security operation team member, and reviewed and approved by another security operation team member) are visible at **Actions & Submissions** \> **Action center** \> **Pending** tab (<https://security.microsoft.com/action-center/pending>). After approval, they're visible at **Actions & Submissions** \> **Action center** \> **History** tab (<https://security.microsoft.com/action-center/history>).
 
 :::image type="content" source="media/microsoft-365-defender-action-center-history.png" lightbox="media/microsoft-365-defender-action-center-history.png" alt-text="The unified Action Center shows you 30 days of remediation actions.":::
 
-Unified Action Center shows remediation actions for the past 30 days. Actions taken through Explorer are listed by the name that the security operations team provided when the remediation was created as well as approval ID, Investigation ID. Actions taken through automated investigations have titles that begin with the related alert that triggered the investigation, such as *Zap email cluster*.
+The [unified Action center](/defender-xdr/m365d-action-center) shows remediation actions for the past 30 days. Actions taken through Explorer are listed by the name that the security operations team provided when the remediation was created as well as approval ID, Investigation ID. Actions taken through automated investigations have titles that begin with the related alert that triggered the investigation, such as *Zap email cluster*.
 
 Open any remediation item to view details about it, including its remediation name, approval ID, Investigation ID, creation date, description, status, action source, action type, decided by, status. It also opens a side pane with action details, email cluster details, alert, and Incident details.
 
@@ -106,11 +102,11 @@ Open any remediation item to view details about it, including its remediation na
 
       **Delete sender's copy**: Also try to soft delete the message from the sender's Sent Items folder if the sender is the organization.
 
-    - **Hard delete**: Purge the deleted message. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items). If you use [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac), you also need the **Email & collaboration metadata (read)** permission to hard delete messages.
+    - **Hard delete**: Purge the deleted message and the corresponding calendar entry for meeting invite messages. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items). If you use [Microsoft Defender Unified role based access control (RBAC)](/defender-xdr/manage-rbac), you also need the **Email & collaboration content (read)** permission to hard delete messages.
 
   > [!NOTE]
   > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD) admins can take the actions **Soft delete**, **Move to junk folder**, **Move to deleted items**, **Hard delete**, and **Move to inbox**. The actions **Delete sender's copy** and **Move to inbox** from quarantine folder aren't available. Also, the action logs are available only at <https://security.microsoft.com/threatincidents>, not in the **Action Center** at <https://security.microsoft.com/action-center>.
-  
+
   Suspicious messages are categorized as either remediable or nonremediable. In most cases, the total of remediable and nonremediable messages equals the total number of messages submitted. But the totals might not match because of system delays, time-outs, or expired messages. Messages expire based on the Explorer retention period for your organization.
 
   Unless you're remediating old messages after your organization's Explorer retention period, it's advisable to retry remediating items if you see number inconsistencies. For system delays, remediation updates are typically refreshed within a few hours.
@@ -124,9 +120,9 @@ Open any remediation item to view details about it, including its remediation na
 
   Only remediable email messages are acted on during remediation. Nonremediable emails can't be remediated by Microsoft 365, because they aren't stored in cloud mailboxes.
 
-  Admins can take actions on emails in quarantine if necessary, but those emails expire out of quarantine if they're not manually purged. By default, emails quarantined because of malicious content aren't accessible by users, so security personnel don't have to take any action to get rid of threats in quarantine. If the emails are on-premises or external, the user can be contacted to address the suspicious email. Or the admins can use separate email server/security tools for removal. These emails can be identified by applying the *delivery location = on-premises* external filter in Explorer. For failed or dropped email, or email not accessible by users, there isn't any email to mitigate, since these mails don't reach the mailbox.
+  Admins can take actions on emails in [quarantine](quarantine-admin-manage-messages-files.md) if necessary, but those emails expire out of quarantine if they're not manually purged. By default, emails quarantined because of malicious content aren't accessible by users, so security personnel don't have to take any action to get rid of threats in quarantine. If the emails are on-premises or external, the user can be contacted to address the suspicious email. Or the admins can use separate email server/security tools for removal. These emails can be identified by applying the *delivery location = on-premises* external filter in Explorer. For failed or dropped email, or email not accessible by users, there isn't any email to mitigate, since these mails don't reach the mailbox.
 
-- **Action logs**: Shows the messages remediated, successful, failed, already in destination.
+- **[Action logs](/defender-xdr/microsoft-xdr-auditing)**: Shows the messages remediated, successful, failed, already in destination.
 
   Status can be:
 

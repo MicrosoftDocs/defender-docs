@@ -1,13 +1,8 @@
 ---
 title: Manage unified role-based access control in multitenant management
 description: Overview of how to manage the unified role-based access control multitenant management in the Microsoft Defender portal.
-ms.service: microsoft-defender
-ms.subservice: unified-security-operations
-ms.author: bagol
-author: batamig
-ms.localizationpriority: medium
-manager: orspodek
-audience: ITPro
+author: guywi-ms
+ms.author: guywild
 ms.collection: 
 - m365-security
 - highpri
@@ -17,6 +12,7 @@ ms.date: 08/06/2025
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
+ms.custom: sfi-image-nochange
 # customer intent: To learn how to create, delete, import, and edit roles in the unified role-based access control in Microsoft Defender multitenant management.
 ---
 
@@ -108,4 +104,4 @@ To import roles, follow these steps:
 
 6. Review the details then select **Submit** to finish importing the roles.
 
-To learn more about unified RBAC, see [Microsoft Defender XDR unified role-based access control](/defender-xdr/manage-rbac).
+To learn more about unified RBAC, see [Microsoft Defender unified role-based access control](/defender-xdr/manage-rbac).

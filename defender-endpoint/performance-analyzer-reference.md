@@ -1,23 +1,20 @@
 ---
 title: Microsoft Defender Antivirus Performance Analyzer reference
 description: Microsoft Defender Antivirus Performance Analyzer reference
-author: emmwalshh
-ms.author: ewalsh
+author: chrisda
+ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting
 ms.date: 11/22/2024
 ms.subservice: ngp
-manager: deniseb
 ms.localizationpriority: medium
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier2
 - mde-ngp 
 ms.custom: 
 - partner-contribution
-f1.keywords: NOCSH 
 ai-usage: human-only
 ---
 
@@ -29,6 +26,15 @@ You can use the following new PowerShell cmdlets to tune the performance of Micr
 
 - [New-MpPerformanceRecording](#new-mpperformancerecording)
 - [Get-MpPerformanceReport](#get-mpperformancereport)
+
+## Prerequsites
+
+### Supported operating systems
+
+Windows Version 10 and later.
+
+> [!NOTE]
+> This feature is available starting with platform version `4.18.2108.X` and later.
 
 ### New-MpPerformanceRecording
 
@@ -127,12 +133,6 @@ The performance analyzer provides an insight into problematic files that could c
 
 For more information on the performance analyzer, see [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) docs.
 
-**Supported OS versions**:
-
-Windows Version 10 and later.
-
-> [!NOTE]
-> This feature is available starting with platform version `4.18.2108.X` and later.
 
 #### Examples: Get-MpPerformanceReport
 
@@ -450,4 +450,4 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+

@@ -1,16 +1,11 @@
 ---
 title: Naming changes in the Microsoft Defender XDR advanced hunting schema
 description: Track and review naming changes tables and columns in the advanced hunting schema
-search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords: 
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
@@ -21,7 +16,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 05/28/2025
+ms.date: 06/03/2026
 ---
 
 # Advanced hunting schema - Naming changes
@@ -37,19 +32,65 @@ Naming changes are automatically applied to queries that are saved in Microsoft 
 - Queries that are run using the API
 - Queries that are saved elsewhere outside Microsoft Defender XDR
 
+## June 2026
 
+- The [`AIAgentsInfo`](advanced-hunting-aiagentsinfo-table.md) table is transitioning to the [`AgentsInfo`](advanced-hunting-agentsinfo-table.md) table. The `AIAgentsInfo` table was originally built for Copilot Studio scenarios, and many of its columns were specific to that platform. The new `AgentsInfo` table provides a unified schema that supports agent inventory and governance for all agent types, including Copilot Studio, Microsoft Foundry, Microsoft 365 Copilot, third-party agents, and endpoint-discovered agents. Microsoft Agent 365 customers should use the `AgentsInfo` table today.
+
+    Key changes in the new table include expanded coverage for agent identity, authentication, permissions, lifecycle, and configuration. The new schema also includes a `RawAgentInfo` column that stores additional agent data in JSON format, ensuring no data loss as the schema evolves.
+
+    To prepare for this change:
+    - Update your advanced hunting queries to use the `AgentsInfo` table instead of `AIAgentsInfo`.
+    - Review and update any filters, projections, or joins that reference `AIAgentsInfo` column names, as column names have changed in the new table.
+    - Update any queries run through the API or saved outside Microsoft Defender XDR. Saved queries in Microsoft Defender XDR, including custom detection rules, are updated automatically.
+
+    The `AIAgentsInfo` table remains accessible until July 1, 2026, to allow time for migration.
+
+## November 2025
+- The Boolean field values in advanced hunting results will change from numeric (`1` and `0`) to textual (`True` and `False`) on February 25, 2026. While your queries and custom detection rules won't be affected by this change, you might want to update your automated processes (for example, scripts, playbooks, or integrations) parsing these values.
+
+
+- The [`AADSignInEventsBeta`](advanced-hunting-aadsignineventsbeta-table.md) and  [`AADSpnSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md) tables are being replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md) and [`EntraIdSpnSignInEvents`](advanced-hunting-entraidspnsigninevents-table.md), respectively. These changes are being made to remove the former tables' preview status and to align them with the existing product branding.
+
+    The `EntraIdSignInEvents` and `EntraIdSpnSignInEvents` tables are now available. The legacy `AADSignInEventsBeta`and `AADSpnSignInEventsBeta` tables will remain in the schema for 30 days to allow time for updating your queries. Your custom detections will be updated automatically and won't require any changes. On December 9, 2025, `AADSignInEventsBeta`and `AADSpnSignInEventsBeta` will be removed from the schema.
+
+## September 2025
+
+In the [AADSignInEventsBeta](./advanced-hunting-aadspnsignineventsbeta-table.md) table, the `AadDeviceId` column is being replaced with a new column, called `EntraIdDeviceId`, to align with current product branding. The legacy `AadDeviceId` column will remain in the schema for 30 days to allow time for updating in your queries. After this period of 30 days, `AadDeviceId` will be removed from the schema.
 
 ## May 2025
 In the [`IdentityInfo`](advanced-hunting-identityinfo-table.md) table, the `SourceProvider` column was replaced by the `IdentityEnvironment` column. This change was made to streamline the unified `IdentityInfo` table with a similar table in Microsoft Sentinel log analytics. Note that a new column, `SourceProviders` (with an *s*) was added in the unified table. This column refers to the source providers of the accounts for the identity.
 
+## May 2021
 
-## December 2020
+The `AppFileEvents` table has been deprecated. The `CloudAppEvents` table includes information that used to be in the `AppFileEvents` table, along with other activities in cloud services.
 
-| Table name | Original column name | New column name | Reason for change
-|--|--|--|--|
-| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailAction` | `EmailAction` | Customer feedback |
-| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailActionPolicy` | `EmailActionPolicy` | Customer feedback |
-| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailActionPolicyGuid` | `EmailActionPolicyGuid` | Customer feedback |
+## March 2021
+
+The `DeviceTvmSoftwareInventoryVulnerabilities` table has been deprecated. Replacing it are the `DeviceTvmSoftwareInventory` and `DeviceTvmSoftwareVulnerabilities` tables.
+
+## February 2021
+
+- In the [EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md) and [EmailEvents](advanced-hunting-emailevents-table.md) tables, the `MalwareFilterVerdict` and `PhishFilterVerdict` columns have been replaced by the `ThreatTypes` column. The `MalwareDetectionMethod` and `PhishDetectionMethod` columns were also replaced by the `DetectionMethods` column. This streamlining allows us to provide more information under the new columns. The mapping is provided below.
+
+    | Table name | Original column name | New column name | Reason for change
+    |--|--|--|--|
+    | `EmailAttachmentInfo` | `MalwareDetectionMethod` <br> `PhishDetectionMethod` | `DetectionMethods` | Include more detection methods |
+    | `EmailAttachmentInfo`  | `MalwareFilterVerdict` <br>`PhishFilterVerdict` | `ThreatTypes` | Include more threat types |
+    | `EmailEvents` | `MalwareDetectionMethod` <br> `PhishDetectionMethod` | `DetectionMethods` | Include more detection methods |
+    | `EmailEvents` | `MalwareFilterVerdict` <br>`PhishFilterVerdict` | `ThreatTypes` | Include more threat types |
+
+
+- In the `EmailAttachmentInfo` and `EmailEvents` tables, the `ThreatNames` column was added to give more information about the email threat. This column contains values like Spam or Phish.
+
+- In the [DeviceInfo](advanced-hunting-deviceinfo-table.md) table, the `DeviceObjectId` column was replaced by the `AadDeviceId` column based on customer feedback.
+
+- In the [DeviceEvents](advanced-hunting-deviceevents-table.md) table, several ActionType names were modified to better reflect the description of the action. Details of the changes can be found below.
+
+    | Table name | Original ActionType name | New ActionType name | Reason for change
+    |--|--|--|--|
+    | `DeviceEvents` | `UsbDriveMount` | `UsbDriveMounted` | Customer feedback |
+    | `DeviceEvents` | `UsbDriveUnmount` | `UsbDriveUnmounted` | Customer feedback |
+    | `DeviceEvents` | `WriteProcessMemoryApiCall` | `WriteToLsassProcessMemory` | Customer feedback |
 
 ## January 2021
 
@@ -74,37 +115,15 @@ In the [`IdentityInfo`](advanced-hunting-identityinfo-table.md) table, the `Sour
 
 `DetectionSource` is available in the [AlertInfo](advanced-hunting-alertinfo-table.md) table. `ServiceSource` is available in the [AlertEvidence](advanced-hunting-alertevidence-table.md) and [AlertInfo](advanced-hunting-alertinfo-table.md) tables. 
 
-## February 2021
 
-1. In the [EmailAttachmentInfo](advanced-hunting-emailattachmentinfo-table.md) and [EmailEvents](advanced-hunting-emailevents-table.md) tables, the `MalwareFilterVerdict` and `PhishFilterVerdict` columns have been replaced by the `ThreatTypes` column. The `MalwareDetectionMethod` and `PhishDetectionMethod` columns were also replaced by the `DetectionMethods` column. This streamlining allows us to provide more information under the new columns. The mapping is provided below.
+## December 2020
 
-    | Table name | Original column name | New column name | Reason for change
-    |--|--|--|--|
-    | `EmailAttachmentInfo` | `MalwareDetectionMethod` <br> `PhishDetectionMethod` | `DetectionMethods` | Include more detection methods |
-    | `EmailAttachmentInfo`  | `MalwareFilterVerdict` <br>`PhishFilterVerdict` | `ThreatTypes` | Include more threat types |
-    | `EmailEvents` | `MalwareDetectionMethod` <br> `PhishDetectionMethod` | `DetectionMethods` | Include more detection methods |
-    | `EmailEvents` | `MalwareFilterVerdict` <br>`PhishFilterVerdict` | `ThreatTypes` | Include more threat types |
+| Table name | Original column name | New column name | Reason for change
+|--|--|--|--|
+| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailAction` | `EmailAction` | Customer feedback |
+| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailActionPolicy` | `EmailActionPolicy` | Customer feedback |
+| [EmailEvents](advanced-hunting-emailevents-table.md) | `FinalEmailActionPolicyGuid` | `EmailActionPolicyGuid` | Customer feedback |
 
-
-2. In the `EmailAttachmentInfo` and `EmailEvents` tables, the `ThreatNames` column was added to give more information about the email threat. This column contains values like Spam or Phish.
-
-3. In the [DeviceInfo](advanced-hunting-deviceinfo-table.md) table, the `DeviceObjectId` column was replaced by the `AadDeviceId` column based on customer feedback.
-
-4. In the [DeviceEvents](advanced-hunting-deviceevents-table.md) table, several ActionType names were modified to better reflect the description of the action. Details of the changes can be found below.
-
-    | Table name | Original ActionType name | New ActionType name | Reason for change
-    |--|--|--|--|
-    | `DeviceEvents` | `UsbDriveMount` | `UsbDriveMounted` | Customer feedback |
-    | `DeviceEvents` | `UsbDriveUnmount` | `UsbDriveUnmounted` | Customer feedback |
-    | `DeviceEvents` | `WriteProcessMemoryApiCall` | `WriteToLsassProcessMemory` | Customer feedback |
-
-## March 2021
-
-The `DeviceTvmSoftwareInventoryVulnerabilities` table has been deprecated. Replacing it are the `DeviceTvmSoftwareInventory` and `DeviceTvmSoftwareVulnerabilities` tables.
-
-## May 2021
-
-The `AppFileEvents` table has been deprecated. The `CloudAppEvents` table includes information that used to be in the `AppFileEvents` table, along with other activities in cloud services.
 
 ## Related topics
 - [Advanced hunting overview](advanced-hunting-overview.md)

@@ -1,25 +1,21 @@
 ---
 title: Allow or block email using the Tenant Allow/Block List
-f1.keywords:
-  - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: orspodek
-audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-search.appverid:
-  - MET150
 ms.collection:
   - m365-security
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 08/13/2025
+ms.date: 02/23/2026
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Default email protections for cloud mailboxes</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ms.custom: sfi-ga-nochange
+#customer intent: As a security administrator, I need step‑by‑step procedures to create, modify, and troubleshoot Tenant Allow/Block List entries (including spoofed senders) using the Microsoft Defender portal and Exchange Online PowerShell so I can control delivery overrides, prevent spoofing, and reduce false positives without increasing security risk.
 ---
 
 # Allow or block email using the Tenant Allow/Block List
@@ -60,10 +56,10 @@ This article describes how admins can manage entries for email senders in the Mi
 - An entry should be active within 5 minutes.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): 
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** and **Email & collaboration** \> **Exchange Online permissions** are both :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
     - *Add and remove entries from the Tenant Allow/Block List*: Membership assigned with the following permissions:
       - **Authorization and settings/Security settings/Detection tuning (manage)**
-    - *Read-only access to the Tenant Allow/Block List*: 
+    - *Read-only access to the Tenant Allow/Block List*:
       - **Authorization and settings/Security settings/Read-only**.
       - **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
@@ -78,7 +74,7 @@ This article describes how admins can manage entries for email senders in the Mi
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions *and* permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Domains and email addresses in the Tenant Allow/Block List
 
@@ -114,11 +110,11 @@ To create allow entries for domains and email addresses, use either of the follo
 
 #### Use the Microsoft Defender portal to create allow entries for domains and email addresses in the Tenant Allow/Block List
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. On the **Tenant Allow/Block Lists** page, verify that the **Domains & addresses** tab is selected.
 
-3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Allow**.
+3. On the **Domains & addresses** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**, and then select **Allow**.
 
 4. In the **Allow domains & addresses** flyout that opens, configure the following settings:
 
@@ -171,11 +167,11 @@ Email from these blocked senders is marked as *high confidence phishing* and qua
 
 #### Use the Microsoft Defender portal to create block entries for domains and email addresses in the Tenant Allow/Block List
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. On the **Tenant Allow/Block Lists** page, verify that the **Domains & addresses** tab is selected.
 
-3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**, and then select **Block**.
+3. On the **Domains & addresses** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**, and then select **Block**.
 
 4. In the **Block domains & addresses** flyout that opens, configure the following settings:
 
@@ -212,7 +208,7 @@ For detailed syntax and parameter information, see [New-TenantAllowBlockListItem
 
 ### Use the Microsoft Defender portal to view entries for domains and email addresses in the Tenant Allow/Block List
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 Verify the **Domains & addresses** tab is selected.
 
@@ -230,20 +226,20 @@ On the **Domains & addresses** tab, you can sort the entries by clicking on an a
 - **Remove on**: The expiration date.
 - **Notes**
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Action**: The values are **Allow** and **Block**.
 - **Never expire**: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: or :::image type="icon" source="media/scc-toggle-off.png" border="false":::
 - **Last updated**: Select **From** and **To** dates.
 - **Last used date**: Select **From** and **To** dates.
 - **Remove on**: Select **From** and **To** dates.
-- **Modified by**: Provide an incomplete or complete email address to search by it. 
+- **Modified by**: Provide an incomplete or complete email address to search by it.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
+To group the entries, select :::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
 
 #### Use PowerShell to view entries for domains and email addresses in the Tenant Allow/Block List
 
@@ -271,11 +267,11 @@ For detailed syntax and parameter information, see [Get-TenantAllowBlockListItem
 
 In existing domain and email address entries, you can change the expiration date and note.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Verify the **Domains & addresses** tab is selected.
 
-3. On the **Domains & addresses** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. On the **Domains & addresses** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 
 4. In the **Edit domains & addresses** flyout that opens, the following settings are available:
    - **Block entries**:
@@ -298,7 +294,7 @@ In existing domain and email address entries, you can change the expiration date
    When you're finished in the **Edit domains & addresses** flyout, select **Save**.
 
 > [!TIP]
-> In the details flyout of an entry on the **Domains & addresses** tab, use :::image type="icon" source="media/m365-cc-sc-view-submission-icon.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
+> In the details flyout of an entry on the **Domains & addresses** tab, use :::image type="icon" source="media/defender-portal-icon-view-submission.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
 
 #### Use PowerShell to modify entries for domains and email addresses in the Tenant Allow/Block List
 
@@ -318,14 +314,14 @@ For detailed syntax and parameter information, see [Set-TenantAllowBlockListItem
 
 ### Use the Microsoft Defender portal to remove entries for domains and email addresses from the Tenant Allow/Block List
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Verify the **Domains & addresses** tab is selected.
 
 3. On **Domains & addresses** tab, do one of the following steps:
 
-   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout.
+   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
+   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** at the top of the flyout.
 
      > [!TIP]
      > - To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
@@ -377,11 +373,11 @@ To create allow entries for *spoofed senders*, use any of the following methods:
 
 In the Tenant Allow/Block List, you can create allow entries for spoofed senders before [spoof intelligence](anti-spoofing-spoof-intelligence.md) detects and blocks them.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. On the **Tenant Allow/Block Lists** page, select the **Spoofed senders** tab.
 
-3. On the **Spoofed senders** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**.
+3. On the **Spoofed senders** tab, select :::image type="icon" source="media/defender-portal-icon-create.png" border="false"::: **Add**.
 
 4. In the **Add new domain pairs** flyout that opens, configure the following settings:
 
@@ -456,7 +452,7 @@ For detailed syntax and parameter information, see [New-TenantAllowBlockListSpoo
 
 ### Use the Microsoft Defender portal to view entries for spoofed senders in the Tenant Allow/Block List
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 Verify the **Spoofed senders** tab is selected.
 
@@ -467,16 +463,16 @@ On the **Spoofed senders** tab, you can sort the entries by clicking on an avail
 - **Spoof type**: The available values are **Internal** or **External**.
 - **Action**: The available values are **Block** or **Allow**.
 
-To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Action**: The available values are **Allow** and **Block**.
 - **Spoof type**: The available values are **Internal** and **External**.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/defender-portal-icon-clear-filters.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
+To group the entries, select :::image type="icon" source="media/defender-portal-icon-group.png" border="false"::: **Group** and then select one of the following values:
 
 - **Action**
 - **Spoof type**
@@ -515,11 +511,11 @@ For detailed syntax and parameter information, see [Get-TenantAllowBlockListSpoo
 
 When you modify an allow or block entry for spoofed senders in the Tenant Allow/Block list, you can only change the entry from **Allow** to **Block**, or vice-versa.
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Select the **Spoofed senders** tab.
 
-3. Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 
 4. In the **Edit spoofed sender** flyout that opens, select **Allow** or **Block**, and then select **Save**.
 
@@ -541,11 +537,11 @@ For detailed syntax and parameter information, see [Set-TenantAllowBlockListSpoo
 
 ### Use the Microsoft Defender portal to remove entries for spoofed senders from the Tenant Allow/Block List
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat Policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
 2. Select the **Spoofed senders** tab.
 
-3. On the **Spoofed senders** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
+3. On the **Spoofed senders** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/defender-portal-icon-delete.png" border="false"::: **Delete** action that appears.
 
    > [!TIP]
    > You can select multiple entries by selecting each check box, or select all entries by selecting the check box next to the **Spoofed user** column header.
@@ -582,6 +578,9 @@ A domain pair for a spoofed sender in the Tenant Allow/Block List uses the follo
   - If the source IP address has no PTR record, then the sending infrastructure is identified as \<source IP\>/24 (for example, 192.168.100.100/24).
   - A verified DKIM domain.
   - The wildcard character (\*).
+
+  > [!TIP]
+  > Spoofed sender entries that use PTR record domains for the sending infrastructure don't work if PTR record resolutions fails for the domain. For those domains, use the IP address as the sending infrastructure (for example, 192.168.100.100/24).
 
 Here are some examples of valid domain pairs to identify spoofed senders:
 

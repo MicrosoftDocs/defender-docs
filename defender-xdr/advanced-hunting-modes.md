@@ -3,18 +3,15 @@ title: Choose between guided and advanced modes for hunting in Microsoft Defende
 description: Guided hunting in Microsoft Defender XDR does not require KQL knowledge while advanced hunting allows you to write a query from scratch.
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-f1.keywords:
-  - NOCSH
-ms.author: maccruz
-author: schmurky
+ms.author: pauloliveria
+author: poliveria
 ms.localizationpriority: medium
-manager: dansimp
-audience: ITPro
 ms.collection:
   - m365-security
   - m365initiative-m365-defender
   - tier2
 ms.custom:
+- msecd-doc-authoring-1014
 - cx-ti
 - cx-ah
 - seo-marvel-apr2020
@@ -22,8 +19,8 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-search.appverid: met150
-ms.date: 03/28/2025
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Choose between guided and advanced modes to hunt in Microsoft Defender XDR
@@ -32,7 +29,7 @@ ms.date: 03/28/2025
 
 
 
-You can find the **advanced hunting** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![hunting icon](/defender/media/guided-hunting/hunting-icon.png).
+You can find the **advanced hunting** page by going to the left navigation bar in the Microsoft Defender portal and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![Icon for advanced hunting in the Microsoft Defender portal navigation bar](./media/advanced-hunting-modes/hunting-icon.png).
 
 In the **advanced hunting** page, two modes are supported:
 
@@ -50,17 +47,17 @@ Advanced mode features a query editor area where users can create queries from s
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-When you open the advanced hunting page for the first time after guided hunting is made available to you, you are invited to take the tour to learn more about the different parts of the page like the tabs and query areas.
+When you open the advanced hunting page for the first time after guided mode (guided hunting) is made available to you, you are invited to take the tour to learn more about the different parts of the page like the tabs and query areas.
 
-To take the tour, select **Take tour** when this banner appears:
+To take the tour, select **Take tour** when the guided hunting invitation banner appears:
 
-[![banner inviting user to take the tour](/defender/media/guided-hunting/1-guided-hunting-banner-tb.png)](/defender/media/guided-hunting/1-guided-hunting-banner.png#lightbox)
+[![Image of a guided hunting banner prompting the user to take the tour](./media/advanced-hunting-modes/1-guided-hunting-banner-tb.png)](./media/advanced-hunting-modes/1-guided-hunting-banner.png#lightbox)
 
-Follow the blue teaching bubbles that appear throughout the page and select **Next** to move from one step to the next.
+Follow the blue teaching bubbles that appear throughout the page and select **Next** to advance to the next teaching bubble.
 
 You can take the tour again at any time by going to **Help resources** > **Learn more** and selecting **Take the tour**.
 
-![Screenshot of help resources](/defender/media/guided-hunting/help-resources.png)
+![Screenshot of Help resources menu with Learn more and Take the tour options](./media/advanced-hunting-modes/help-resources.png)
 
 You can then start building your query to hunt for threats. The following articles can help you get the most out of hunting in guided mode:
 
@@ -73,14 +70,14 @@ You can then start building your query to hunt for threats. The following articl
 
 ## Get started with advanced hunting mode
 
-We recommend going through these steps to quickly get started with advanced hunting:
+We recommend using the following learning resources to quickly get started with advanced hunting:
 
 | Learning goal | Description | Resource |
 |--|--|--|
 | **Learn the language** | Advanced hunting is based on [Kusto query language](/azure/kusto/query/), supporting the same syntax and operators. Start learning the query language by running your first query. | [Query language overview](advanced-hunting-query-language.md) |
 | **Learn how to use the query results** | Learn about charts and various ways you can view or export your results. Explore how you can quickly tweak queries, drill down to get richer information, and take response actions. | - [Work with query results in advanced mode](advanced-hunting-query-results.md)<br /> - [Take action on query results](advanced-hunting-take-action.md) <br /> - [Link query results to an incident](advanced-hunting-link-to-incident.md)  |
 | **Understand the schema** | Get a good, high-level understanding of the tables in the schema and their columns. Learn where to look for data when constructing your queries. | - [Schema reference](advanced-hunting-schema-tables.md) <br />- [Transition from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md) |
-| **Get expert tips and examples** | Train for free with guides from Microsoft experts. Explore collections of predefined queries covering different threat hunting scenarios. | - [Get expert training](advanced-hunting-expert-training.md) <br />- [Use shared queries](advanced-hunting-shared-queries.md) <br />- [Go hunt](advanced-hunting-go-hunt.md) <br />- [Hunt for threats across devices, emails, apps, and identities](advanced-hunting-query-emails-devices.md) |
+| **Get expert tips and examples** | Train for free with guides from Microsoft experts. Explore collections of predefined queries covering different threat hunting scenarios. | - [Get expert training](advanced-hunting-expert-training.md) <br />- [Use shared queries](advanced-hunting-shared-queries.md) <br />- [Quickly investigate entities with Go hunt](advanced-hunting-go-hunt.md) <br />- [Hunt for threats across devices, emails, apps, and identities](advanced-hunting-query-emails-devices.md) |
 | **Optimize queries and handle errors** | Understand how to create efficient and error-free queries. | - [Query best practices](advanced-hunting-best-practices.md)<br />- [Handle errors](advanced-hunting-errors.md) |
 | **Create custom detection rules** | Understand how you can use advanced hunting queries to trigger alerts and take response actions automatically. | - [Custom detections overview](custom-detections-overview.md) <br />- [Custom detection rules](custom-detection-rules.md)|
 
