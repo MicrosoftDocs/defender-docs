@@ -5,13 +5,15 @@ description: This article outlines the filter functionality available in Microso
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 12/14/2022
+ms.date: 06/15/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # IP block asset filters
 
-These filters specifically apply to IP block assets. Use these filters when searching for a specific subset of IP blocks.  
+This article lists the inventory filters available for IP block assets in Microsoft Defender External Attack Surface Management. Use these filters to search for a specific subset of IP blocks based on criteria such as IP version, ASN, BGP prefix, IP block range, and Whois registration details. Each filter supports specific operators and value formats, which are described in the tables below.  
 
 ## Defined value filters
 

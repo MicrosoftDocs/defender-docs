@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 04/03/2026
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.collection:
@@ -18,22 +18,26 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Evaluate Microsoft Defender Antivirus using Group Policy
 
-This article explains how to enable and test the key protection features in Microsoft Defender Antivirus and Microsoft Defender Exploit Guard in current versions of Microsoft Windows and Windows Server.
+This article explains how to enable and test the key protection features in Microsoft Defender Antivirus and Microsoft Defender Exploit Guard in current versions of Microsoft Windows and Windows Server. The features covered include real-time protection, cloud-delivered protection, scan settings, network protection, attack surface reduction rules, and controlled folder access. Use the Group Policy settings in this guide to configure these features for evaluation in domain-joined or workgroup environments.
 
 ## Prerequisites
 
 ### Supported operating systems
 
+The following operating systems are supported for this evaluation:
+
 - Windows 10 or later
 - Windows Server 2016 or later
 
-## Use Microsoft Defender Antivirus using Group Policy to enable the features
+<a name="use-microsoft-defender-antivirus-using-group-policy-to-enable-the-features"></a>
+## Use Group Policy to enable Microsoft Defender Antivirus features
 
-This section describes how to use a [Group Policy Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) to configure Microsoft Defender Antivirus for evaluation.
+Use a [Group Policy Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) to configure Microsoft Defender Antivirus for evaluation.
 
 1. Download the latest Administrative Template files from [Links to download the Administrative Templates files based on the operating system version](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
 
@@ -55,9 +59,10 @@ This section describes how to use a [Group Policy Central Store](/troubleshoot/w
      1. Open the Group Policy Editor (gpedit.msc).
      1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
-For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
+For more information about creating and managing a Group Policy Central Store, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
 
-## MDAV and potentially unwanted applications (PUA)
+<a name="mdav-and-potentially-unwanted-applications-pua"></a>
+## Evaluate potentially unwanted application protection in Microsoft Defender Antivirus
 
 **Root**:
 
@@ -98,7 +103,10 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 |Select cloud protection level|Enabled, High blocking level|
 |Configure extended cloud check|Enabled, 50|
 
-## Scans
+<a name="scans"></a>
+## Configure and evaluate scan settings
+
+Configure the following scan settings in Group Policy to enable comprehensive file and script scanning:
 
 |Description|Setting|
 |---|---|
@@ -113,6 +121,8 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 |Turn on reparse point scanning|Enabled|
 
 ## Security Intelligence updates
+
+Configure the following settings to manage how security intelligence updates are downloaded and applied:
 
 |Description|Setting|
 |---|---|
@@ -130,7 +140,10 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 |Configure local administrator merge behavior for lists|Disabled|
 |Control whether or not exclusions are visible to local admins|Enabled|
 
-## Threat Severity Default Action
+<a name="threat-severity-default-action"></a>
+## Configure threat severity default actions
+
+Use the following settings to configure the action that Microsoft Defender Antivirus takes when it detects threats at each severity level. These settings override the default remediation action for detected threats and ensure that all threat levels are quarantined.
 
 **Threats**:
 
@@ -154,14 +167,15 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 |---|---|
 |Enable headless UI mode|Disabled|
 
-## Network Protection
+<a name="network-protection"></a>
+## Configure network protection
 
 **Microsoft Defender Exploit Guard\\Network Protection**:
 
 |Description|Setting|
 |---|---|
 |Prevent users and apps from accessing dangerous websites|Enabled, Block|
-|This settings controls whether Network Protection can be configured into block or audit mode on Windows Server|Enabled|
+|Allow Network Protection on Windows Server|Enabled|
 
 To enable Network Protection for Windows Servers, for now, please use PowerShell:
 
@@ -170,11 +184,12 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 |Windows Server 2012 R2 and later|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true`|
 |Windows Server 2016 and Windows Server 2012 R2 [unified MDE client](update-agent-mma-windows.md#upgrade-to-the-new-agent-for-defender-for-endpoint)|`Set-MpPreference -AllowNetworkProtectionOnWinServer $true -AllowNetworkProtectionDownLevel $true`|
 
-## Attack surface reduction rules
+<a name="attack-surface-reduction-rules"></a>
+## Configure attack surface reduction rules
 
-1. Go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**.
+1. In the Group Policy Editor, go to **Computer Configuration** \> **Administrative Templates** \> **Windows Components** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack Surface Reduction**.
 
-2. Select **Next**.
+2. Double-click **Configure Attack Surface Reduction rules**, select **Enabled**, and then select **Show** to configure each rule with the values in the following table.
 
 |Value name|ASR rule name|Value|
 |---|---|---|
@@ -203,9 +218,10 @@ To enable Network Protection for Windows Servers, for now, please use PowerShell
 > [!TIP]
 > Some rules might block behavior you find acceptable in your organization. In these cases, change the rule from 1 (Block) to 2 (Audit) to prevent unwanted blocks.
 
-## Controlled Folder Access
+<a name="controlled-folder-access"></a>
+## Configure Controlled Folder Access
 
-Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**.
+Controlled Folder Access helps protect valuable data from malicious apps and threats such as ransomware. To enable Controlled Folder Access, navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**.
 
 |Description|Setting|
 |---|---|
@@ -221,9 +237,9 @@ For more information, see [How do I configure or manage tamper protection?](prev
 
 ## Check the Cloud Protection network connectivity
 
-It's important to verify that Cloud Protection network connectivity is working during your penetration testing.
+Verify that Microsoft Defender Antivirus cloud protection network connectivity is working before you test detections or protections.
 
-In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
+To test connectivity to Microsoft Defender cloud protection services, change to the latest platform folder and run the MAPS validation command. In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
 > [!TIP]
 > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
@@ -242,7 +258,7 @@ The latest 'Platform Update' version Production channel (GA) is available here:
 
 [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update)
 
-To see the installed version of 'Platform Update', run the following command in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**):
+To verify the Microsoft Defender Antivirus platform version installed on the device, run the following command in an elevated PowerShell session (a PowerShell window you opened by selecting **Run as administrator**):
 
 ```powershell
 Get-MpComputerStatus | Format-Table AMProductVersion
@@ -254,7 +270,7 @@ The latest 'Security Intelligence Update' version is available here:
 
 [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
 
-To see the installed version of 'Security Intelligence Update', run the following command in an elevated PowerShell session:
+To confirm that the latest security intelligence update is installed, check the antivirus signature version by running the following command in an elevated PowerShell session:
 
 ```powershell
 Get-MpComputerStatus | Format-Table AntivirusSignatureVersion
@@ -266,7 +282,7 @@ The latest scan 'engine update' version is available here:
 
 [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft anti-malware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
 
-To see the installed version of 'Engine Update', run the following command in an elevated PowerShell session:
+To determine which Microsoft Defender Antivirus engine version is running on the device, run the following command in an elevated PowerShell session:
 
 ```powershell
 Get-MpComputerStatus | Format-Table AMEngineVersion
@@ -274,7 +290,8 @@ Get-MpComputerStatus | Format-Table AMEngineVersion
 
 If your settings don't take effect, you might have a conflict. To resolve conflicts, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
-## For False Negatives (FNs) submissions
+<a name="for-false-negatives-fns-submissions"></a>
+## Submit files for false negative analysis
 
 If you have any questions about a detection that Microsoft Defender AV makes, or you discover a missed detection, you can submit a file to us.
 

@@ -12,6 +12,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - sfi-ga-nochange
   - cx-ti
   - cx-ah
@@ -21,7 +22,8 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 05/12/2026
+ms.date: 06/16/2026
+ai-usage: ai-assisted
 ---
 
 # Take action on advanced hunting query results
@@ -42,7 +44,7 @@ If you can't take action, contact a Global Administrator about getting the follo
 
 To take action on emails through advanced hunting, you need a role in Microsoft Defender for Office 365 to [search and purge emails](/defender-office-365/scc-permissions).
 
-- [Microsoft Defender XDR Unified role based access control (URBAC)](manage-rbac.md): Membership assigned with the following URBAC permissions enables the **Take action** option in advanced hunting and grants users the required permissions to perform remediation actions:
+- [Microsoft Defender Unified role based access control (URBAC)](manage-rbac.md): Membership assigned with the following URBAC permissions enables the **Take action** option in advanced hunting and grants users the required permissions to perform remediation actions:
   - **Security operations** \> **Security data** \> **Response (manage)**: Required to approve or dismiss remediation actions.
   - **Security operations** \> **Security data** \> **Email & collaboration advanced actions (manage)**: Required to take actions on emails (move, soft delete, hard delete).
 
@@ -72,7 +74,7 @@ To learn more about how to quarantine files and restore them, see [Response acti
 > [!NOTE]
 > To locate files and quarantine them, the query results should also include `DeviceId` values as device identifiers.
 
-To take any of these actions, select one or more records in your query results and then select **Take actions**. A wizard guides you through the process of selecting and then submitting your preferred actions.
+To take any of the device or file actions described in this section, select one or more records in your query results and then select **Take actions**. A wizard guides you through the process of selecting and then submitting your preferred actions.
 
 :::image type="content" source="media/advanced-hunting-take-action/take-action-multiple.png" alt-text="Screenshot of the take actions option in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-action/take-action-multiple.png":::
 
@@ -106,7 +108,7 @@ Apart from device-focused remediation steps, you can also take actions on emails
 
 - **Submit to Microsoft** - select this action to submit false positive or false negative emails to Microsoft.
 
-  As part of the submission, you can also add URLs and URL domains, sender domains, and file attachments to the Tenant Allow/Block List to immediately resolve the issue while Microsoft evaluates the submission.
+  As part of the submission, you can also add URLs and URL domains, sender domains, and file attachments to the Tenant Allow/Block List to immediately mitigate the reported false positive or false negative while Microsoft evaluates the submission.
 
     > [!IMPORTANT]
     > To block a URL or URL domain, join the [`EmailUrlInfo`](advanced-hunting-emailurlinfo-table.md) table with `NetworkMessageId` to get the required details. To block an attachment (file), join the [`EmailAttachmentInfo`](advanced-hunting-emailattachmentinfo-table.md) table with `NetworkMessageId` to get the file's hash.
@@ -131,10 +133,10 @@ These email actions also apply to [custom detections](custom-detections-overview
 
 The [action center](m365d-action-center.md) under **Action center** \
 
-> **History** ([security.microsoft.com/action-center/history](https://security.microsoft.com/action-center/history)) records each action individually. To check the status of each action, go to the action center.
+> **History** ([Action center history](https://security.microsoft.com/action-center/history)) records each action individually. To check the status of each action, go to the action center.
 
 > [!NOTE]
-> Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats by using more data sources. To move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR, see [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
+> Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender](m365d-enable.md) to hunt for threats by using more data sources. To move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender, see [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## Related content
 

@@ -8,7 +8,9 @@ ms.reviewer: zeinam
 ms.topic: how-to  
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
-ms.date: 04/29/2026
+ms.date: 06/12/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 # Customer intent: As a security engineer or data scientist, I want to explore and analyze security data in the Microsoft Sentinel data lake using Jupyter notebooks, so that I can gain insights and build advanced analytics solutions.
 ---
@@ -54,7 +56,7 @@ The Microsoft Sentinel extension for Visual Studio Code (VS Code) is installed f
 1. Select the Extensions Marketplace in the left toolbar.
 1. Search for *Sentinel*.
 1. Select the **Microsoft Sentinel** extension and select **Install**.
-1. After the extension is installed, the Microsoft Sentinel ![the sentinel icon](./media/notebook-jobs/sentinel-icon.png) icon appears in the left toolbar.
+1. After the extension is installed, the Microsoft Sentinel ![Icon used to open the Microsoft Sentinel extension in Visual Studio Code](./media/notebook-jobs/sentinel-icon.png) icon appears in the left toolbar.
 
   :::image type="content" source="./media/notebooks/install-Sentinel-extension.png" lightbox="./media/notebooks/install-sentinel-extension.png" alt-text="A screenshot showing the extension market place.":::  
 
@@ -68,8 +70,10 @@ Install the GitHub Copilot extension for Visual Studio Code to enable code compl
 After installing the Microsoft Sentinel extension, you can start exploring data lake tier tables and creating Jupyter notebooks to analyze the data.
 
 ### Sign in to the Microsoft Sentinel extension
+
+To sign in to the Microsoft Sentinel extension, follow these steps:
  
-1. Select the Microsoft Sentinel ![the sentinel icon](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar.
+1. Select the Microsoft Sentinel ![Icon used to open the Microsoft Sentinel extension in VS Code](./media/notebook-jobs/sentinel-icon.png) icon in the left toolbar.
 
 1. A dialog appears with the following text **The extension "Microsoft Sentinel" wants to sign in using Microsoft**. Select **Allow**.
 
@@ -91,9 +95,9 @@ After installing the Microsoft Sentinel extension, you can start exploring data 
 
 Once you sign in, the Sentinel extension displays a list of **Lake tables** and **Jobs** in the left pane. The tables are grouped by the database and category. Federated tables are displayed under the **Federated tables** category under **System tables**. Select a table to see the column definitions.
 
-For information on Jobs, see [Jobs and Scheduling](#jobs-and-scheduling). For more information on federated tables, see [Using federated tables in the Microsoft Sentinel data lake](using-data-federation.md).
+For information on Jobs, see [Jobs and scheduling](#jobs-and-scheduling). For more information on federated tables, see [Using federated tables in the Microsoft Sentinel data lake](using-data-federation.md).
 
-:::image type="content" source="./media/notebooks/tables-and-jobs.png" lightbox="./media/notebooks/tables-and-jobs.png" alt-text="A screenshot showing the list of tables, jobs, and the selected table's metadata."::: 
+:::image type="content" source="./media/notebooks/tables-and-jobs.png" lightbox="./media/notebooks/tables-and-jobs.png" alt-text="Screenshot of the Sentinel extension showing Lake tables and Jobs in the left pane and metadata for the selected table."::: 
 
 ## Create a new notebook
  
@@ -133,7 +137,7 @@ For information on Jobs, see [Jobs and Scheduling](#jobs-and-scheduling). For mo
 1. Select **Microsoft Sentinel** from the list for a list of runtime pools.
   :::image type="content" source="./media/notebooks/select-runtime.png" lightbox="./media/notebooks/select-runtime.png" alt-text="A screenshot showing the runtime picker.":::  
 
-1. Select **Medium** to run the notebook in the medium sized runtime pool. For more information on the different runtimes, see [Selecting the appropriate Microsoft Sentinel runtime](#select-the-appropriate-runtime-pool).
+1. Select **Medium** to run the notebook in the medium sized runtime pool. For more information on the different runtimes, see [Select the appropriate runtime pool](#select-the-appropriate-runtime-pool).
   :::image type="content" source="./media/notebooks/select-kernel-size.png" lightbox="./media/notebooks/select-kernel-size.png" alt-text="A screenshot showing the run pool size picker.":::  
 
 
@@ -146,7 +150,8 @@ When the session is started, the code in the notebook runs and the results are d
 
 For sample notebooks that demonstrate how to interact with the Microsoft Sentinel data lake, see [Sample notebooks for Microsoft Sentinel data lake](./notebook-examples.md).
 
-### Status bar
+<a name="status-bar"></a>
+### Monitor notebook state from the status bar
 
 The status bar at the bottom of the notebook provides information about the current state of the notebook and the Spark session. The status bar includes the following information:
 
@@ -184,8 +189,8 @@ The following example shows GitHub Copilot generating a code review.
 
 ## Microsoft Sentinel Provider class
 
-To connect to the Microsoft Sentinel data lake, use the `SentinelLakeProvider` class.
-This class is part of the `access_module.data_loader` module and provides methods to interact with the data lake. To use this class, import it and create an instance of the class using a `spark` session.
+To connect to the Microsoft Sentinel data lake, use the `MicrosoftSentinelProvider` class.
+The `MicrosoftSentinelProvider` class is part of the `sentinel_lake.providers` module and provides methods to interact with the data lake. To connect your Spark notebook to Microsoft Sentinel data lake tables, import the class and create an instance using a `spark` session:
 
 ```python
 from sentinel_lake.providers import MicrosoftSentinelProvider
@@ -226,7 +231,8 @@ Messages logs and error messages are displayed in three areas in Visual Studio C
 
     :::image type="content" source="media/notebooks/inline-toast-messages.png" lightbox="media/notebooks/inline-toast-messages.png" alt-text="A screenshot showing a toast message and an in-line error message.":::
    
-## Jobs and scheduling
+<a name="jobs-and-scheduling"></a>
+## Create and manage notebook jobs and schedules
 
 You can schedule jobs to run at specific times or intervals using the Microsoft Sentinel extension for Visual Studio Code. Jobs allow you to automate data processing tasks to summarize, transform, or analyze data in the Microsoft Sentinel data lake. Jobs are also used to process data and write results to custom tables in the data lake tier or analytics tier. For more information on creating and managing jobs, see [Create and manage Jupyter notebook jobs](./notebook-jobs.md).
 
@@ -243,4 +249,4 @@ For common errors and solutions when working with notebooks, see [Troubleshoot n
 - [Sample notebooks for Microsoft Sentinel data lake](./notebook-examples.md)
 - [Microsoft Sentinel Provider class reference](./sentinel-provider-class-reference.md)
 - [Microsoft Sentinel data lake overview](./sentinel-lake-overview.md)
-- [Microsoft Sentinel data lake roles and permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
+- [Microsoft Sentinel data lake roles and permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake)

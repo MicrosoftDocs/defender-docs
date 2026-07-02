@@ -72,6 +72,8 @@
        items:
        - name: Defender for Office 365 permissions
          href: mdo-portal-permissions.md
+       - name: Unified RBAC permissions for Defender for Office 365
+         href: defender-office-365-unified-rbac-permissions.md
        - name: Permissions - Defender for Office 365 and Microsoft Purview
          href: scc-permissions.md
        - name: Microsoft Defender XDR RBAC
@@ -384,7 +386,7 @@
          href: campaigns.md
        - name: Report suspicious messages and files
          items:
-         - name: Report suspicious email or files to Microsoft
+         - name: Report suspicious email, Teams messages, or files to Microsoft
            href: submissions-report-messages-files-to-microsoft.md
          - name: Admin submissions
            href: submissions-admin.md
@@ -552,6 +554,8 @@
           href: step-by-step-guides/utilize-microsoft-defender-for-office-365-in-sharepoint-online.md
         - name: Tune bulk email filtering
           href: step-by-step-guides/tune-bulk-mail-filtering-walkthrough.md
+        - name: Configure Unified RBAC for Defender for Office 365
+          href: step-by-step-guides/configure-unified-rbac-defender-office-365.md
       - name: Use
         items:
         - name: Track and respond to emerging security threats with campaigns view in Microsoft Defender for Office 365

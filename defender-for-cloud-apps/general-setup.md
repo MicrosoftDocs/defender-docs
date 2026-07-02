@@ -1,9 +1,10 @@
 ---
 title: Basic setup
 description: Set up your Defender for Cloud Apps environment and enable the Identity inventory integration to get a centralized view of identities.
-ms.date: 04/15/2026
+ms.date: 06/16/2026
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-106
+ms.custom: msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 # Basic setup for Defender for Cloud Apps
 
@@ -16,6 +17,8 @@ The following procedure gives you instructions for customizing your Microsoft De
 For portal access requirements, see [Portal access](network-requirements.md#portal-access).
 
 ## Set up your Defender for Cloud Apps environment
+
+Perform the following steps to set up your Defender for Cloud Apps environment:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**.
 
@@ -39,7 +42,7 @@ For portal access requirements, see [Portal access](network-requirements.md#port
 
 ## Enable Identity inventory integration
 
-Enable this integration to ingest cloud app accounts into the [Identity inventory](/defender-for-identity/identity-inventory), providing a centralized view of identities across on-premises, cloud, and SaaS environments.
+Enable Identity Inventory Integration to ingest cloud app accounts into the [Identity inventory](/defender-for-identity/identity-inventory), providing a centralized view of identities across on-premises, cloud, and SaaS environments.
 
 Review the following important considerations before enabling this setting:
 
@@ -55,7 +58,7 @@ Review the following important considerations before enabling this setting:
 
   These features continue to use the Cloud Application Accounts inventory. For more information, see the relevant Defender for Cloud Apps documentation.
 - The existing **Cloud Apps Accounts view remains available** to ensure backward compatibility.
-- After you enable it, **this integration can't be disabled**.
+- After you enable Identity Inventory Integration, **the integration can't be disabled**.
 
 <!-- TODO: Confirm with Itai whether the fwlink (https://go.microsoft.com/fwlink/?LinkId=2359589) is live and what it points to. -->
 

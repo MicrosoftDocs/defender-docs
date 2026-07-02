@@ -3,7 +3,7 @@ title: What's new in Defender for Cloud features
 description: Learn about new, updated, and deprecated features in Microsoft Defender for Cloud, including preview releases, general availability updates, and upcoming changes.
 ms.topic: overview
 ms.custom: references_regions
-ms.date: 06/18/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
 ---
 
@@ -29,10 +29,61 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## July 2026
+
+| Date | Category | Update |
+| -------- | -------- | -------- |
+| July 1, 2026 | GA | [New container security capabilities are now generally available](#new-container-security-capabilities-are-now-generally-available) |
+| July 1, 2026 | GA | [Kubernetes misconfiguration enforcement in Defender for Containers is now generally available](#kubernetes-misconfiguration-enforcement-in-defender-for-containers-is-now-generally-available) |
+| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+| July 1, 2026 | GA | [Discovery and posture for serverless container workloads is now generally available](#discovery-and-posture-for-serverless-container-workloads-is-now-generally-available) |
+
+### New container security capabilities are now generally available
+
+July 1, 2026
+
+The following container security capabilities in Microsoft Defender for Cloud are now generally available:
+
+- **Container-level misconfiguration recommendations for Kubernetes** — agentless, container-level KSPM recommendations in Defender CSPM that assess individual containers rather than entire clusters. The following cluster-level recommendations are now deprecated: HostPath volume mount restrictions, allowed ports enforcement, host networking/ports restrictions, CAP_SYS_ADMIN capability restrictions, and AppArmor profile restrictions. Learn more about [container security recommendations](recommendations-reference-container.md).
+- **Upgrade Azure Kubernetes Service Version recommendation** — actionable recommendation to remediate vulnerabilities in AKS-managed system pods by identifying the minimum AKS version upgrade required. Learn more about [reviewing and remediating Kubernetes node vulnerabilities](kubernetes-nodes-va.md) and [security recommendations for containers](recommendations-reference-container.md).
+- **Vulnerability assessment for runtime-discovered container images on EKS and GKE** — extends vulnerability assessment to runtime-discovered images on Amazon EKS and Google GKE, providing unified coverage across Azure, AWS, and GCP. Learn more about [vulnerability assessment for containers](view-and-remediate-vulnerabilities-containers.md).
+- **Kubernetes node vulnerability assessment for EKS and GKE** — extends Kubernetes node (host) vulnerability assessment to EKS and GKE, bringing parity with the existing AKS capability. Learn more about [Kubernetes node vulnerability assessment](kubernetes-nodes-va.md).
+- **Scanning support for Docker Hardened container images** — extends vulnerability scanning coverage to Docker Hardened container images. For all supported distributions, see [Registries and images support for vulnerability assessment](support-matrix-defender-for-containers.md#registries-and-images-support-for-vulnerability-assessment).
+
+
+### Kubernetes misconfiguration enforcement in Defender for Containers is now generally available
+
+July 1, 2026
+
+Kubernetes misconfiguration enforcement in Microsoft Defender for Containers is now generally available. This feature evaluates Kubernetes resource configurations at admission time and can audit or block deployments that don't meet Microsoft security best-practice rules.
+
+With this release, Kubernetes misconfiguration enforcement is available through automatic provisioning.
+
+- **AKS and Azure Arc-enabled Kubernetes:** Enable Defender for Containers with Kubernetes API access.
+- **AWS and GCP:** Enable Defender for Containers with Agentless threat protection.
+
+Manual deployment with Helm is still supported.
+
+Learn more about [Kubernetes misconfiguration enforcement](kubernetes-misconfiguration-enforcement.md).
+
+### Discovery and posture for serverless container workloads is now generally available
+
+July 1, 2026
+
+Discovery and posture for serverless container workloads is now generally available in Microsoft Defender for Cloud.
+
+This capability provides inventory visibility, security recommendations for misconfigurations and vulnerability assessment findings, and attack path analysis for Azure Container Apps, Azure Container Instances, and Amazon Elastic Container Service (ECS) on AWS Fargate.
+
+Learn more about [Discovery and posture for serverless container workloads](posture-for-serverless-containers.md).
+
 ## June 2026
 
 | Date | Category | Update |
 | -------- | -------- | -------- |
+| June 30, 2026 | Update | [Support for additional Azure regions in the UAE geography for Defender for APIs and API security posture management with Defender CSPM](#support-for-additional-azure-regions-in-the-uae-geography-for-defender-for-apis-and-api-security-posture-management-with-defender-cspm) |
+| June 30, 2026 | GA | [General availability of Defender for Key Vault in Azure Government cloud](#general-availability-of-defender-for-key-vault-in-azure-government-cloud) |
+| June 30, 2026 | GA | [Expanded multicloud security coverage is now generally available](#expanded-multicloud-security-coverage-is-now-generally-available) |
+| June 30, 2026 | GA | [Cloud security reporting is now generally available](#cloud-security-reporting-is-now-generally-available) |
 | June 18, 2026 | GA | [API security posture management for Function Apps and Logic Apps is now generally available](#api-security-posture-management-for-function-apps-and-logic-apps-is-now-generally-available) |
 | June 17, 2026 | Update | [Expanded container support for cloud scopes](#expanded-container-support-for-cloud-scopes) |
 | June 9, 2026 | Preview | [New multicloud security recommendations now in public preview](#new-multicloud-security-recommendations-now-in-public-preview) |
@@ -45,6 +96,73 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | June 1, 2026 | Preview | [Container-level misconfiguration recommendations for Kubernetes (Preview)](#container-level-misconfiguration-recommendations-for-kubernetes-preview) |
 | June 1, 2026 | Preview | [New actionable recommendation to upgrade AKS for system pod vulnerabilities (Preview)](#new-actionable-recommendation-to-upgrade-aks-for-system-pod-vulnerabilities-preview) |
 | June 1, 2026 | GA | [Serverless protection for Azure and AWS is now generally available](#serverless-protection-for-azure-and-aws-is-now-generally-available) |
+
+### Support for additional Azure regions in the UAE geography for Defender for APIs and API security posture management with Defender CSPM
+
+June 30, 2026
+
+Microsoft Defender for APIs and API security posture management with Defender CSPM has expanded to provide its capabilities in the following Azure regions:
+
+- UAE North
+- UAE Central
+
+Customers who have Azure API Management services in these regions can now use the capabilities offered by Microsoft Defender for APIs and API security posture management with Defender CSPM. API discovery and security posture capabilities in Defender CSPM for Azure Function Apps and Azure Logic Apps have also been expanded to these regions.
+
+Learn more about [Microsoft Defender for APIs](defender-for-apis-introduction.md) and [API security posture management with Defender CSPM](api-security-posture-overview.md).
+
+### General availability of Defender for Key Vault in Azure Government cloud
+
+June 30, 2026
+
+With this general availability announcement, the Defender for Key Vault plan in Azure Government cloud now aligns with the commercial cloud offering in feature coverage and runtime protection capabilities.
+
+For more information about Microsoft Defender for Key Vault, see [Overview of Microsoft Defender for Key Vault](/azure/defender-for-cloud/defender-for-key-vault-introduction).
+
+For more information about feature and cloud availability, see [Support matrix for Defender for Cloud](/azure/defender-for-cloud/support-matrix-defender-for-cloud).
+
+### Expanded multicloud security coverage is now generally available
+
+June 30, 2026
+
+Microsoft Defender for Cloud's expanded multicloud security coverage is now generally available. This release significantly broadens posture assessment for AWS and GCP environments, adding support for about 90 new resource types and over 200 new security recommendations across data, identity and access, networking, compute, and container categories.
+
+**What's included in this release:**
+
+- Over 200 new security recommendations for AWS and GCP resources are now generally available and contribute to your Cloud secure score.
+- Support for about 90 additional AWS and GCP resource types, including services such as Amazon EMR, Amazon Neptune, AWS DMS, AWS DataSync, Amazon FSx, Amazon Kendra, Amazon Keyspaces, Amazon Kinesis, Amazon MQ, Amazon QuickSight, AWS AppFlow, AWS AppSync, AWS CodeBuild, AWS Cognito, AWS Comprehend, and more.
+
+**Cloud secure score impact:**
+
+With GA, these recommendations now affect your Cloud secure score. If you see score changes, they reflect the broader scope of your evaluated AWS and GCP estate — not a degradation of your environment's security. As more resources are assessed, you get more complete visibility and better prioritization of remediation work.
+
+To help you understand what changed and why, the portal includes:
+
+- **"New" tag**: Recommendations introduced in the last 30 days are marked with a **New** tag in the recommendations list, so you can quickly identify recently added findings.
+- **Change log**: Select **View updates** on the Cloud secure score card to open a change log entry that explains which new recommendations were added and how they affect your score.
+- **Portal banner**: A banner on the Cloud secure score page highlights score changes caused by the expansion and links to the change log for context.
+
+For a full list of new and updated recommendations, see [What's new in recommendations and alerts](release-notes-recommendations-alerts.md). 
+
+
+To review the complete multicloud recommendation catalog, see the recommendations reference by category:
+
+- [Compute recommendations](recommendations-reference-compute.md)
+- [Container recommendations](recommendations-reference-container.md)
+- [Data recommendations](recommendations-reference-data.md)
+- [Identity and access recommendations](recommendations-reference-identity-access.md)
+- [Networking recommendations](recommendations-reference-networking.md)
+
+To understand how Cloud secure score is calculated and what affects it, see [Secure score in Defender for Cloud](secure-score-security-controls.md).
+
+### Cloud security reporting is now generally available
+
+June 30, 2026
+
+Cloud security reporting in Microsoft Defender portal is now generally available. You can create, customize, and share cloud security insights across your organization using built-in and custom reports.
+
+With this release, you can also customize cards when building custom reports, allowing you to tailor the data each card displays to match your specific reporting needs.
+
+Learn more about [cloud security reporting](cloud-security-reporting.md).
 
 ### API security posture management for Function Apps and Logic Apps is now generally available
 
@@ -352,7 +470,7 @@ The classic secure score in the Azure portal is also affected by these individua
 
 Grouped recommendation types are deprecated from the Azure portal and will be removed on July 31, 2026. These recommendations are currently tagged as **Set for deprecation**.
 
-For more information, see [security recommendations](review-security-recommendations.md).
+For more information, see [security recommendations](review-security-recommendations.md) and [transitioning from grouped to individual recommendations](transition-grouped-individual-recommendations.md).
 
 ### Daily score calculation enhancement for risk-based Cloud secure score
 

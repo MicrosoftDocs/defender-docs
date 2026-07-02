@@ -40,7 +40,7 @@ Register the required resource provider in the Azure subscription where you plan
 ## Set up Microsoft Entra App Registration
 
 > [!NOTE]
-> You must have Administrator role or Microsoft Entra ID must be set to allow non-Administrators to register apps. You must also have an Owner or User Access Administrator role to assign the service principal a role. For more information, see [Create a Microsoft Entra app & service principal in the portal - Microsoft identity platform \| Microsoft Docs](/azure/active-directory/develop/howto-create-service-principal-portal).
+> You must have Administrator role or Microsoft Entra ID must be set to allow non-Administrators to register apps. You must also have an Owner or User Access Administrator role to assign the service principal a role. For more information, see [Create a Microsoft Entra app & service principal in the portal - Microsoft identity platform](/azure/active-directory/develop/howto-create-service-principal-portal).
 
 1. Create a new registration (which inherently creates a service principal) in
 **Microsoft Entra ID** \> **App registrations** \> **New registration.**
@@ -102,7 +102,7 @@ You can create Event Hubs within your Namespace and **all** the Event Types (Tab
 
 Instead of exporting all the Event Types (Tables) into one Event Hub, you can export each table into different Event Hubs inside your Event Hubs Namespace (one Event Hub per Event Type).
 
-In this option, Microsoft Defender XDR creates Event Hubs for you.
+In this option, Microsoft Defender creates Event Hubs for you.
 
 > [!NOTE]
 > If you are using an Event Hub Namespace that is **not** part of an Event Hub Cluster, you're only able to choose up to 10 Event Types (Tables) to export in each Export Settings you define, due to an Azure limitation of 10 Event Hub per Event Hub Namespace.
@@ -125,7 +125,7 @@ For these Event Hubs (not namespace), you need to configure a Shared Access Poli
 
 <a name='configure-microsoft-365-defender-to-send-email-tables'></a>
 
-## Configure Microsoft Defender XDR to send email tables
+## Configure Microsoft Defender to send email tables
 
 <a name='set-up-microsoft-365-defender-send-email-tables-to-splunk-via-event-hubs'></a>
 

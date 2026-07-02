@@ -8,11 +8,12 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom:
+ms.custom: msecd-doc-authoring-1014
 description: Admins can learn how to create and manage payloads for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/09/2026
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
 ---
 
 # Payloads in Attack simulation training
@@ -66,7 +67,7 @@ The information that's available on the tabs is described in the following list:
     - **Ready**
     - **Draft**: Available only on the **Tenant payloads** tab.
     - **Archive**: Archived payloads are visible only when **Show archived payloads** is toggled on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
-  - **⋮** (**Actions** control)<sup>\*</sup>: Take action on the payload. The available actions depend on the **Status** value of the payload as described in the procedure sections. This control always appears at the end of the payload row.
+  - **⋮** (**Actions** control)<sup>\*</sup>: Take action on the payload. The available actions depend on the **Status** value of the payload as described in [Modify payloads](#modify-payloads), [Copy payloads](#copy-payloads), [Archive payloads](#archive-payloads), and [Send a test](#send-a-test). This control always appears at the end of the payload row.
 
   > [!TIP]
   > To see all columns, you likely need to do one or more of the following steps:
@@ -141,7 +142,7 @@ QR code payloads are available in five languages to address real-world scenarios
 
 :::image type="content" source="media/attack-sim-training-payloads-global-qr-codes.png" alt-text="Screenshot of the Global payloads tab showing the QR code payloads returned after searching for the value QR." lightbox="media/attack-sim-training-payloads-global-qr-codes.png":::
 
-You can also create custom payloads that use QR codes as phishing links as described in the next section.
+You can also create custom payloads that use QR codes as phishing links as described in [Create payloads](#create-payloads).
 
 > [!TIP]
 > Before you use a QR code payload in simulations, be sure to examine the available fields and content in the payload.
@@ -442,7 +443,7 @@ The **Status** value of the payload changes to **Archive**, and the payload is n
 
 To see archived payloads on the **Tenant payloads** tab, toggle **Show archived payloads** to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
 
-After you archive a payload, you can restore it or remove it as described in the following subsections.
+After you archive a payload, you can restore it as described in [Restore archived payloads](#restore-archived-payloads) or remove it as described in [Remove archived payloads](#remove-archived-payloads).
 
 ### Restore archived payloads
 
@@ -451,9 +452,12 @@ To restore an archive payload on the **Tenant payloads** tab, do the following s
 1. Set the **Show archived payloads** toggle to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
 2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/defender-portal-icon-archive.png" border="false"::: **Restore**.
 
-After you restore the archived payload, the **Status** value changes to **Draft**. Toggle **Show archived payloads** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the restored payload. To return the payload to the **Status** value **Ready**, [edit the payload](#modify-payloads), review or change the settings, and then select **Submit**.
+After you restore the archived payload, the **Status** value changes to **Draft**. Toggle **Show archived payloads** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the restored payload. To return the payload to the **Status** value **Ready**, [modify the payload](#modify-payloads), review or change the settings, and then select **Submit**.
 
 ### Remove archived payloads
+
+> [!WARNING]
+> Deleting an archived payload permanently removes it and can't be undone.
 
 To remove an archived payload from the **Tenant payloads** tab, do the following steps:
 
@@ -466,7 +470,8 @@ On the **Tenant payloads** or **Global payloads** tabs, you can send a copy of t
 
 Select the payload by clicking the check box next to the name, and then select the :::image type="icon" source="media/defender-portal-icon-send.png" border="false"::: **Send a test** button that appears.
 
-## Related links
+<a name="related-links"></a>
+## Related content
 
 [Get started using Attack simulation training](attack-simulation-training-get-started.md)
 

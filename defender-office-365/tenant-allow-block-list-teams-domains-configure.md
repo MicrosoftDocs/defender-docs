@@ -9,12 +9,13 @@ ms.collection:
   - tier1
 description: Admins can learn how to block domains and addresses in Microsoft Teams using the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 03/12/2026
+ms.date: 07/01/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-ms.custom: sfi-ga-nochange
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Block domains and addresses in Microsoft Teams using the Tenant Allow/Block List
@@ -35,15 +36,17 @@ These entries also appear on the **Organization settings** tab of the **External
 
 For more information about the Tenant Allow/Block List, see [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md).
 
-This article describes how security admins can manage entries for blocked domains and addresses in Teams admin center using the Microsoft Defender portal.
+This section explains how security admins can manage blocked domain and sender entries for Teams in the Microsoft Defender portal. These entries also appear in the Microsoft Teams admin center. Before you begin, review the required permissions and settings in [What do you need to know before you begin?](#what-do-you-need-to-know-before-you-begin).
 
 ## What do you need to know before you begin?
 
+Review the following requirements and considerations before you create or manage block entries for Teams senders.
+
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>. Then, go to the **Teams senders** tab.
 
-- Check the [Microsoft Teams external domain anomalies report](/microsoftteams/teams-analytics-and-reports/external-domain-anomalies-report).
+- Before adding a block entry, check the [Microsoft Teams external domain anomalies report](/microsoftteams/teams-analytics-and-reports/external-domain-anomalies-report) to identify suspicious external domains that might need to be blocked.
 
-- After you add the block entry for the domain or sender address in Teams, all new Teams communication from that organization is blocked. Block communication includes new Teams meetings, chats, channels, and calls. Existing Teams meetings, chats, channels, and calls are deleted.
+- After you add the block entry for the domain or sender address in Teams, all new Teams communication from that organization is blocked. Block communication includes new Teams meetings, chats, channels, and calls. 
 
 - On the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>, the following settings are required to create and manage block entries for domains and senders in Teams using the Tenant Allow/Block List:
   - **Teams and Skype for Business users in external organizations** must be **Allow all external domains** or **Block only specific external domains**.
@@ -56,7 +59,7 @@ This article describes how security admins can manage entries for blocked domain
 
 - Block entries for domains and senders in Teams never expire.
 
-- An entry should be active within 24 hours.
+- A blocked domain or sender entry in Teams should be active within 24 hours.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
@@ -85,7 +88,7 @@ This article describes how security admins can manage entries for blocked domain
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
-On the **Teams senders** tab, select the **Teams senders**.
+Select the **Teams senders** tab.
 
 On the **Teams senders** tab, you can sort the entries by clicking on an available column header. The following columns are available:
 
@@ -94,6 +97,8 @@ On the **Teams senders** tab, you can sort the entries by clicking on an availab
 Use the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
 ### Remove block entries for domains and addresses in Teams in the Tenant Allow/Block List
+
+Use the following steps to remove blocked domain or sender address entries from the Teams senders list.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Rules** section \> **Tenant Allow/Block Lists**. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
@@ -109,6 +114,8 @@ Use the :::image type="icon" source="media/defender-portal-icon-search.png" bord
    Back on the **Teams senders** tab, the entry is no longer listed. After a few minutes, the blocked domain and addresses disappears from the **Organization settings** tab of the **External access** page in the Microsoft Teams admin center at <https://admin.teams.microsoft.com/company-wide-settings/external-communications>.
 
 ## Related articles
+
+For related guidance, see the following articles:
 
 - [Managing external access in Teams admin center](/microsoftteams/trusted-organizations-external-meetings-chat?tabs=organization-settings#specify-trusted-microsoft-365-organizations)
 - [Report false positives and false negatives in Teams](submissions-teams.md)

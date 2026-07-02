@@ -4,19 +4,20 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: dhagarwal
 ms.topic: how-to
-ms.date: 04/07/2026
+ms.date: 06/15/2026
 ms.localizationpriority: medium
 ms.assetid: 4250c4bc-6102-420b-9e0a-a95064837676
 ms.collection:
   - m365-security
   - tier2
-description: Learn how to transition from the Report Message or the Report Phishing add-ins for all version of Outlook to the build in Report button all versions of Outlook.
+description: Migrate from the Report Message and Report Phishing add-ins to the built-in Report button in Outlook, including removal steps, user scoping, and deprecation guidance.
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-ms.custom: sfi-ga-nochange
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Transition from the Microsoft Report Message or the Report Phishing add-ins
@@ -24,11 +25,11 @@ ms.custom: sfi-ga-nochange
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 > [!IMPORTANT]
-> The Microsoft Report Message and Report Phishing add-ins are now in maintenance mode and will eventually be deprecated. We recommend transitioning from the add-ins to the built-in **Report** button. The **Report** button is supported in virtually all consumer and enterprise Outlook clients. For more information, see the [Frequently asked questions](#frequently-asked-questions) section in this article.
+> The Microsoft Report Message and Report Phishing add-ins are now in maintenance mode and will eventually be deprecated. We recommend transitioning from the add-ins to the built-in **Report** button. The **Report** button is supported in virtually all consumer and enterprise Outlook clients. For more information, see the [Frequently asked questions](#frequently-asked-questions) about the deprecation timeline, migration guidance, and the built-in **Report** button capabilities.
 
 The built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) makes it easy for users to report false positives and false negatives to Microsoft for analysis. False positives are good email that was blocked or sent to the Junk Email folder. False negatives are unwanted email or phishing that was delivered to the Inbox.
 
-Microsoft uses these user reported messages to improve the effectiveness of email protection technologies. For example, suppose people are reporting many messages as phishing using the **Report** button. This information surfaces in the Security Dashboard and other reports. This information probably indicates the anti-phishing policies in your organization need to be updated.
+Microsoft uses these user reported messages to improve the effectiveness of email protection technologies. For example, suppose people are reporting many messages as phishing using the **Report** button. These phishing reports surface in the Security Dashboard and other reports. A high volume of phishing reports probably indicates that the anti-phishing policies in your organization need to be updated.
 
 > [!NOTE]
 > When reporting multiple messages or an email thread (conversation) using the built-in **Report** button, each message is submitted as a **separate, individual report** with its own sender, subject, and timestamp.
@@ -54,9 +55,11 @@ The following table describes the advantages of the built-in **Report** button o
 
 <sup>\*</sup>User reporting from shared and delegate mailboxes is available in [select supported clients](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 
-The rest of this article describes how to remove the Report Message and Report Phishing add-ins.
+The following sections describe how to remove or scope the Report Message and Report Phishing add-ins.
 
 ## What do you need to know before you begin?
+
+Verify the following permissions and prerequisites before you remove or scope the Report Message or Report Phishing add-ins.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Security data/Response (manage)** or **Security operations/Security data/Read-only**.
@@ -83,7 +86,7 @@ The rest of this article describes how to remove the Report Message and Report P
    > [!TIP]
    > Admins in Microsoft 365 GCC High or DoD need to use the Microsoft 365 admin center at <https://portal.office365.us/adminportal/home#/Settings/AddIns> and then select **Settings** \> **Add-ins**.
    >
-   > Although the screenshots in the following steps show the **Report Phishing** add-in, the steps are identical for the **Report Message** add-in.
+   > Although the screenshots in this procedure show the **Report Phishing** add-in, the steps are identical for the **Report Message** add-in.
 
 2. On the **Deployed apps** tab of the **Integrated apps** page, select the **Report Message** add-in or the **Report Phishing** add-in by clicking anywhere in the row.
 
@@ -109,12 +112,14 @@ The rest of this article describes how to remove the Report Message and Report P
 
 ## Scope the Report Message or Report Phishing add-ins to a set of users
 
+Instead of removing the add-ins entirely, you can limit them to specific users or groups during the transition to the built-in **Report** button.
+
 1. In the Microsoft 365 admin center at <https://admin.microsoft.com>, expand **Show all** if necessary, and then go to **Settings** \> **Integrated apps**. Or, to go directly to the **Integrated apps** page, use <https://admin.microsoft.com/Adminportal/Home#/Settings/IntegratedApps>.
 
    > [!TIP]
    > Admins in Microsoft 365 GCC High, or DoD need to use the Microsoft 365 admin center at <https://portal.office365.us/adminportal/home#/Settings/AddIns> and then select **Settings** \> **Add-ins**.
    >
-   > Although the screenshots in the following steps show the **Report Phishing** add-in, the steps are identical for the **Report Message** add-in.
+   > Although the screenshots in this procedure show the **Report Phishing** add-in, the steps are identical for the **Report Message** add-in.
 
 2. On the **Deployed apps** tab of the **Integrated apps** page, select the **Report Message** add-in or the **Report Phishing** add-in by doing one of the following steps:
    - Select the add-in by clicking anywhere in the row. In the details flyout that opens, select the **Users** tab.
@@ -146,11 +151,13 @@ The rest of this article describes how to remove the Report Message and Report P
 
 ## Frequently asked questions
 
+The following questions address common concerns about the add-in deprecation, migration to the built-in **Report** button, and rollout considerations.
+
 ### Q: Why are the add-ins being deprecated?
 
 A: The add-ins are being deprecated for the following reasons:
 
-- There are security issues with the add-in which makes them unsafe for the organization. Given Microsoft's commitment to safety, they need to be deprecated.
+- There are security issues with the add-ins that make them unsafe for the organization. Given Microsoft's commitment to safety, they need to be deprecated.
 - The add-ins can't architecturally support functionality that customers keep asking for.
 
 Therefore, we decided to move to the built-in **Report** button to better serve your requirements.
@@ -169,7 +176,7 @@ A: We recommend you update clients in the Microsoft admin center or ask users to
 
 ### Q: The Report phishing add-in offers a single report option but the built-in Report button has more options. What can I do?
 
-A: This design was finalized after partnership with more than 50 customers and a Private Preview of approximately two and half years. Many customers who had this question are actually much more comfortable with the built-in **Report** button. They have transitioned completely to the built-in **Report** button.
+A: This design was finalized after partnership with more than 50 customers and a Private Preview of approximately two and half years. Many customers who had this question are actually much more comfortable with the built-in **Report** button and have transitioned completely to it.
 
 The built-in **Report** button is a split button. Clicking on the button without using the dropdown list reports the message as phishing. Use the dropdown list to report messages as junk or not junk.
 
@@ -177,7 +184,7 @@ We recommend that you try the built-in **Report** button. If you're still facing
 
 ### Q: I can't scope the built-in Report button, which prevents me from rolling it out. What can I do?
 
-A: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leaves a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the built-in **Report** button without scoping ability. Instead, they scoped non-Microsoft add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
+A: This behavior is by design. We think the built-in **Report** button provides a base level of protection for all users, including shared and delegate mailboxes. Scoping the built-in **Report** button to a limited number of users can result in forgetting about those users, which leaves a security gap that can be exploited by attackers. Many customers totaling more than a million users migrated smoothly to the built-in **Report** button without scoping ability. Instead, those customers scoped non-Microsoft add-in buttons or the Microsoft add-ins as they rolled out the built-in **Report** button across the organization.
 
 If you're looking to scope the functionality for experimentation, we recommend using a test environment.
 
@@ -187,11 +194,11 @@ A: Raise a design change request (DCR) via Microsoft support.
 
 ### Q: Is there a way to keep the add-in but remove the built-in Report button?
 
-A: No. Unfortunately, due to the previously stated reasons, the add-ins will be deprecated. There's no way to keep the add-in and remove the built-in **Report** button. You can remove the add-in from the **Deployed apps** tab of the **Integrated apps** page as previously described.
+A: No. Unfortunately, due to the previously stated reasons, the add-ins will be deprecated. There's no way to keep the add-in and remove the built-in **Report** button. To remove the add-in, go to **Settings** \> **Integrated apps** in the Microsoft 365 admin center, select the add-in on the **Deployed apps** tab, and then select **Remove app**.
 
 ### Q: What is the recommendation for moving from the add-ins to a non-Microsoft reporting add-in?
 
-A: After you remove the add-in from the **Deployed apps** tab of the **Integrated apps** page as previously described, install the non-Microsoft add-in according to their instructions.
+A: After you [remove the add-in](#remove-the-report-message-or-report-phishing-add-ins) from the **Deployed apps** tab of the **Integrated apps** page, install the non-Microsoft add-in according to their instructions.
 
 On the [User reported settings page](submissions-user-reported-messages-custom-mailbox.md) in the Defender portal, you need to do the following steps:
 

@@ -1,21 +1,18 @@
 ---
-title: Discover AI agents and assess security posture using Microsoft Defender (Preview)
+title: Discover AI agents and assess security posture using Microsoft Defender
 description: Learn how to discover AI agents in your organization, assess their security posture, and manage risks using Microsoft Defender's AI agent inventory and Advanced Hunting capabilities.
-ms.service: defender-xdr
+ms.service: microsoft-defender
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: itaicohen
 ms.topic: article
 ms.date: 11/20/2025
-appliesto:
-    - Microsoft Defender for XDR
-    - Microsoft Defender for Cloud Apps
-    - Microsoft Defender for Cloud
+ai-usage: ai-assisted
 
 #Customer intent: As a security administrator, I want to discover and assess the security posture of my organization's AI agents so that I can manage risks and configurations.
 ---
 
-# Discover AI agents and assess security posture using Microsoft Defender (Preview)
+# Discover AI agents and assess security posture using Microsoft Defender
 
 Microsoft Defender lets you discover all of the Microsoft Agent 365 managed agents in your organization and view their configuration details using two experiences in the Microsoft Defender portal: 
 
@@ -28,8 +25,8 @@ This article explains how to discover AI agents, assess their security posture, 
 
 ## Prerequisites
 
-- [Onboard to Microsoft Agent 365](/microsoft-agent-365/overview) (except for endpoints that use the [AI agent runtime protection feature](/defender-endpoint/ai-agent-runtime-protection-overview), which are included in Agent 365 by default).
-- [Enable preview features](../preview.md) in the Microsoft Defender portal to access the `AgentsInfo` table in Advanced Hunting and get AI agent-related evidence in alerts.
+- Enable security for AI agents, including the Microsoft 365 app connector. See [Enable security for AI agents using Microsoft Defender](get-started-defender-security-for-ai.md).
+- To discover local AI agents that run on endpoints, set up [AI agent runtime protection in Microsoft Defender for Endpoint](/defender-endpoint/configure-ai-agent-runtime-protection). Discovery requires Microsoft Defender for Endpoint and Microsoft Defender Antivirus in active mode. Local agents are onboarded separately from cloud agents.
 
 ## Discover AI agents and assess security posture using Advanced Hunting
 
@@ -47,7 +44,7 @@ To view your Agent 365-managed agents and their configuration details:
 1. Select **Investigation & response** > **Hunting** > **Advanced hunting**.
 1. Query the `AgentsInfo` table.
 
-    **To manage security posture**, use the prebuilt queries that Microsoft provides and maintains for AI agents. To access these queries, select the **Queries** tab, then select **AI Agents**. For more information, see [Sample queries](/defender-xdr/advanced-hunting-aiagentsinfo-table).
+    **To manage security posture**, use the prebuilt queries that Microsoft provides and maintains for AI agents. To access these queries, select the **Queries** tab, then select **AI Agents**. For more information, see [Sample queries](/defender-xdr/advanced-hunting-agentsinfo-table).
 
     Create your own queries using Kusto Query Language (KQL). For example, run this query to get a list of all AI agents registered with Microsoft Agent 365, along with their key security information:
 
@@ -69,7 +66,7 @@ To view your Agent 365-managed agents and their configuration details:
     - To learn how to query local AI agents discovered on endpoint devices, see [Discover local AI agents in Microsoft Defender for Endpoint](/defender-endpoint/discover-local-ai-agents).
     - To learn about advanced hunting, see [Proactively hunt for threats with Advanced Hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
-## Discover and manage AI agents using the AI Assets page (Preview)
+## Discover and manage AI agents using the AI Assets page
 
 The **AI Assets** page in the Defender portal provides a centralized view of all agents you build with Microsoft agent plaforms, supported non-Microsoft cloud platforms, and [local AI agents](/defender-endpoint/local-agent-discovery-overview) discovered on endpoints.
 
@@ -92,6 +89,8 @@ To view your AI agent inventory:
 
 ## Next steps
 
-- [Detect, block, and investigate threats to AI agents using Microsoft Defender](ai-agent-detection-protection.md)
+- [Detect and investigate threats to AI agents using Microsoft Defender](ai-agent-detection-protection.md)
+
+- [Protect AI agents in real time using Microsoft Defender](ai-agent-real-time-protection.md)
 - [Protect AI agents from emerging threats and vulnerabilities using Microsoft Defender](defender-security-for-ai.md)
 - [Microsoft Defender for Cloud AI security posture management](/azure/defender-for-cloud/ai-security-posture).

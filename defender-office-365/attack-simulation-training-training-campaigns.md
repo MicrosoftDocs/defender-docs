@@ -8,10 +8,12 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-description: Admins can learn how to create training campaigns in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 10/23/2025
+description: Admins can learn how to create Training campaigns in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Training campaigns in Attack simulation training
@@ -48,7 +50,7 @@ The **Training** tab sows the following information for each Training campaign t
   - **Failed**<sup>\*\*</sup>
   - **Scheduled**<sup>\*\*</sup>
 
-  For more information about the **Status** values, see the [Set the training threshold](#set-the-training-threshold) section later in this article.
+  For more information about the **Status** values, see [Set the training threshold](#set-the-training-threshold).
 
 > [!TIP]
 > To see all columns, you likely need to do one or more of the following steps:
@@ -64,7 +66,7 @@ Select :::image type="icon" source="media/defender-portal-icon-filter.png"::: **
 
 To find a Training campaign in the list, type part of the campaign name in the :::image type="icon" source="media/defender-portal-icon-search.png"::: **Search** box and then press the ENTER key.
 
-To see details about in-progress or completed Training campaigns, see the [View Training campaign reports](#view-training-campaign-reports) section.
+To see details about in-progress or completed Training campaigns, see [View Training campaign reports](#view-training-campaign-reports).
 
 ## Create Training campaigns
 
@@ -77,7 +79,14 @@ To create a Training campaign, do the following steps:
 
 2. On the **Training** tab, select :::image type="icon" source="media/defender-portal-icon-filter.png"::: **Create new** to start the new Training campaign wizard.
 
-   The following sections describe the steps and configuration options to create a Training campaign.
+   The remaining wizard pages describe the steps and configuration options to create a Training campaign:
+
+   - [Name and describe the Training campaign](#name-and-describe-the-training-campaign)
+   - [Target users](#target-users)
+   - [Exclude users](#exclude-users)
+   - [Select training modules](#select-training-modules)
+   - [Select end user notifications](#select-end-user-notifications)
+   - [Schedule the Training campaign](#schedule-the-training-campaign)
 
    > [!NOTE]
    > At any point after you name the Training campaign during the new Training campaign wizard, you can select **Save and close** to save your progress and continue later. The incomplete Training campaign has the **Status** value **Draft**. You can pick up where you left off by selecting the Training campaign and then clicking the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
@@ -252,7 +261,7 @@ On the **Select end user notification** page, select from the following notifica
 
     When you're finished on the **Review notification** page, select **Close** to return to the **Select end user notification** page.
 
-- **Customized end user notifications**: No other configuration options are available on the page. When you select **Next**, you need to select a **Training assignment notification** and a **Training reminder notification** to use for the Training campaign as described in the next two subsections.
+- **Customized end user notifications**: No other configuration options are available on the page. When you select **Next**, you need to select a **Training assignment notification** and a **Training reminder notification** to use for the Training campaign as described in [Select a training assignment notification](#select-a-training-assignment-notification) and [Select a training reminder notification](#select-a-training-reminder-notification).
 
 When you're finished on the **Select end user notification** page, select **Next**.
 
@@ -399,7 +408,7 @@ The training threshold starts when a training module is assigned to a user.
 
 We recommend that the training threshold is greater than the number of days that a user has to complete a training module.
 
-In the training campaign user report, the **Status** value shows the effect of the training threshold on users and their assigned trainings modules:
+In the Training campaign user report, the **Status** value shows the effect of the training threshold on users and their assigned trainings modules:
 
 - **Completed**: The user completed the training module.
 - **In Progress**: The user started the training module.

@@ -9,14 +9,16 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - sfi-ga-nochange
 description: Admins can learn how to apply Standard and Strict policy settings across the built-in security features for all cloud mailboxes and Microsoft Defender for Office 365
 ms.service: defender-office-365
-ms.date: 05/22/2026
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
 ---
 
 # Preset security policies in cloud organizations
@@ -36,9 +38,9 @@ The following preset security policies are available:
   - Aren't included in the **Standard** or **Strict** preset security policies.
   - Aren't included in custom Safe Attachments or Safe Links policies.
 
-For details about these preset security policies, see the [Appendix](#appendix) section at the end of this article.
+For details about profiles, policies, settings, and precedence, see [Appendix: Profiles, settings, and policy precedence in preset security policies](#appendix).
 
-The rest of this article how to configure preset security policies.
+The following sections describe how to configure preset security policies.
 
 ## What do you need to know before you begin?
 
@@ -57,6 +59,8 @@ The rest of this article how to configure preset security policies.
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
 ## Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users
+
+Use the following steps to assign the Standard or Strict preset security policy to users in the Microsoft Defender portal.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 
@@ -107,9 +111,9 @@ The rest of this article how to configure preset security policies.
 
 4. On the **Apply Defender for Office 365 protection** page, identify the internal recipients who receive (recipient conditions) or don't receive (recipient exceptions) the [Defender for Office 365 protections](#policies-in-preset-security-policies).
 
-   The settings and behavior are exactly like the **Apply Exchange Online Protection** page in the previous step.
+   The settings and behavior are the same as on the **Apply Exchange Online Protection** page described in step 3.
 
-   You can also select **Previously selected recipients** to use the same recipients you selected on the previous page.
+   You can also select **Previously selected recipients** to use the same recipients you selected on the **Apply Exchange Online Protection** page.
 
    When you're finished on the **Apply Defender for Office 365 protection** page, select **Next**.
 
@@ -180,7 +184,7 @@ The rest of this article how to configure preset security policies.
 
 ## Use the Microsoft Defender portal to modify the assignments of Standard and Strict preset security policies
 
-The steps to modify the assignment of the **Standard protection** or **Strict protection** preset security policy are the same as when you initially [assigned the preset security policies to users](#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
+To modify the assignment of the **Standard protection** or **Strict protection** preset security policy, follow the steps in [Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users](#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users) and update the existing policy assignments as needed.
 
 To disable the **Standard protection** or **Strict protection** preset security policies while still preserving the existing conditions and exceptions, slide the toggle to :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**. To enable the policies, slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
@@ -489,7 +493,8 @@ For the Standard and Strict preset security policies, you can specify recipient 
 
   For detailed syntax and parameter information, see [Set-EOPProtectionPolicyRule](/powershell/module/exchangepowershell/set-eopprotectionpolicyrule) and [Set-ATPProtectionPolicyRule](/powershell/module/exchangepowershell/Set-atpprotectionpolicyrule).
 
-## Appendix
+<a name="appendix"></a>
+## Appendix: Profiles, settings, and policy precedence in preset security policies
 
 Preset security policies consist of the following elements:
 
@@ -537,14 +542,14 @@ Preset security policies use special versions of the individual threat policies 
   - [Safe Links policies](safe-links-policies-configure.md) named **Standard Preset Security Policy**, **Strict Preset Security Policy**, and **Built-in Protection Policy**.
   - [Safe Attachments policies](safe-attachments-policies-configure.md) named **Standard Preset Security Policy**, **Strict Preset Security Policy**, and **Built-in Protection Policy**.
 
-As previously described, you can apply the built-in security features for all cloud mailboxes to different users than Defender for Office 365 protections, or you can apply all protections to the same recipients.
+You can apply the built-in security features for all cloud mailboxes to different users than Defender for Office 365 protections, or you can apply all protections to the same recipients.
 
 ### Policy settings in preset security policies
 
-You can't modify the individual threat policies in the preset security protection profiles. Threat policies associated with the Standard or Strict preset security policies are _always_ applied before default or custom threat policies, and Strict policies are _always_ applied before Standard policies as described in the [Order of precedence](#order-of-precedence-for-preset-security-policies-and-other-threat-policies) section in this article
+You can't modify the individual threat policies in the preset security protection profiles. Threat policies associated with the Standard or Strict preset security policies are _always_ applied before default or custom threat policies, and Strict policies are _always_ applied before Standard policies. For details, see [Order of precedence for preset security policies and other threat policies](#order-of-precedence-for-preset-security-policies-and-other-threat-policies)
 
 - The Standard, Strict, and Built-in protection threat policy settings, including the associated [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy), are listed in the feature tables in [Recommended email and collaboration threat policy settings for cloud organizations](recommended-settings-for-eop-and-office365.md).
-- You can also use Exchange Online PowerShell to quickly see all of the policy setting values as explained [earlier in this article](#use-powershell-to-view-individual-threat-policies-in-preset-security-policies).
+- You can also use Exchange Online PowerShell to quickly see all of the policy setting values. For instructions, see [Use PowerShell to view individual threat policies in preset security policies](#use-powershell-to-view-individual-threat-policies-in-preset-security-policies).
 
 But, you need to configure the individual users (senders) and domains to receive [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) in Defender for Office 365. Otherwise, preset security policies automatically configure the following types of impersonation protection:
 

@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 ms.topic: how-to
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen
-ms.date: 04/11/2025
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.collection:
@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Evaluate Microsoft Defender Antivirus using PowerShell
@@ -54,7 +55,7 @@ The Windows Event Log also records detection and engine events. For more informa
 
 ## Cloud protection features
 
-Standard definition updates can take hours to prepare and deliver. Our cloud-delivered protection service can deliver this protection in seconds. For more information, see [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
+Standard definition updates can take hours to prepare and deliver. Our cloud-delivered protection service can deliver updated malware protection in seconds. For more information, see [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md).
 
 - **Enable the Microsoft Defender Cloud for near-instant protection and increased protection**:
 
@@ -164,9 +165,9 @@ Typically, you get Microsoft Defender Antivirus updates from Windows update once
 
 ## Advanced threat mitigation and prevention
 
-Exploit protection provides features that help protect devices from known malicious behaviors and attacks on vulnerable technologies.
+Exploit protection provides features that help protect devices from known malicious behaviors and attacks on vulnerable technologies. Controlled folder access protects sensitive data in specific folders by preventing untrusted apps from writing to those locations.
 
-- **Prevent malicious and suspicious apps (such as ransomware) from making changes to protected folders with [controlled folders](controlled-folders.md)**:
+- **Prevent malicious and suspicious apps (such as ransomware) from making changes to protected folders with [controlled folder access (CFA)](controlled-folder-access-overview.md)**:
 
   ```powershell
   Set-MpPreference -EnableControlledFolderAccess Enabled
@@ -199,7 +200,7 @@ Exploit protection provides features that help protect devices from known malici
 
 ### Enable tamper protection
 
-For more information, see [How do I configure or manage tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md).
+Tamper protection prevents unauthorized changes to your security settings. For more information about configuring tamper protection, see [How do I configure or manage tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md).
 
 #### Check the Cloud Protection network connectivity
 
@@ -230,7 +231,8 @@ For more information, see [Microsoft Defender Offline](microsoft-defender-offlin
 Set-MpPreference -UILockdown 0
 ```
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 - [Cloud protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)

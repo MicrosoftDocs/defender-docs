@@ -26,22 +26,22 @@ appliesto:
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-Microsoft Defender XDR is built on top of an integration-ready platform.
+Microsoft Defender is built on top of an integration-ready platform.
 
-Use the Microsoft Defender XDR APIs to automate workflows based on the shared incident and advanced hunting tables.
+Use the Microsoft Defender APIs to automate workflows based on the shared incident and advanced hunting tables.
 
 - **[Combined incidents queue](api-incident.md)** - Focus on what's critical by grouping the full attack scope and all impacted assets together under the incident API.
 
-- **[Cross-product threat hunting](api-advanced-hunting.md)** - Leverage your security team's organizational knowledge to hunt for signs of compromise, by creating your own custom queries to sift over raw data collected across multiple protection products.
+- **[Cross-product threat hunting](api-advanced-hunting.md)** - Leverage your security team's organizational knowledge to hunt for signs of compromise, by creating your own custom queries to sift over raw data collected from multiple protection products.
 
 - **[Event streaming API](streaming-api.md)** - Ship real-time events and alerts in a single data stream as they occur.
 
-Along with these Microsoft Defender XDR-specific APIs, each of our other security products expose [additional APIs](api-articles.md) to help you take advantage of their unique capabilities.
+Along with these Microsoft Defender-specific APIs, each of our other security products expose [additional APIs](api-articles.md) to help you take advantage of their unique capabilities.
 
 > [!NOTE]
 > The transition to the unified portal should not affect the PowerBi dashboards based on Microsoft Defender for Endpoint APIs. You can continue to work with the existing APIs regardless of the interactive portal transition.
 
-Watch this short video to learn how you can use Microsoft Defender XDR to automate workflows and integrate apps.  
+Watch this short video to learn how you can use Microsoft Defender XDR to automate workflows and integrate apps.
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=f6300637-b48e-49d7-aa76-2778a711ae6c]
 
 ## Learn more
@@ -53,9 +53,9 @@ Watch this short video to learn how you can use Microsoft Defender XDR to automa
 | [Access the Microsoft Defender XDR APIs](api-access.md) |
 | **Build apps** |
 | [Create a 'Hello world' app](api-hello-world.md) |
-| [Create an app to access Microsoft Defender XDR APIs on behalf of a user](api-create-app-user-context.md) |
-| [Create an app to access Microsoft Defender XDR without a user](api-create-app-web.md) |
-| [Create an app with multi-tenant partner access to Microsoft Defender XDR APIs](api-partner-access.md) |
+| [Create an app to access Microsoft Defender APIs on behalf of a user](api-create-app-user-context.md) |
+| [Create an app to access Microsoft Defender without a user](api-create-app-web.md) |
+| [Create an app with multi-tenant partner access to Microsoft Defender APIs](api-partner-access.md) |
 | **Troubleshoot and maintain your apps** |
 | [Understand API error codes](api-error-codes.md) |
 | [Manage secrets in your apps with Azure Key Vault](/training/modules/manage-secrets-with-azure-key-vault/) |

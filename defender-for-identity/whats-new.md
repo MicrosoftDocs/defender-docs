@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 05/26/2026
+ms.date: 06/22/2026
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality.
 ms.reviewer: AbbyMSFT
@@ -26,6 +26,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## June 2026
 
+### Identity risk score is now generally available
+
+The [identity risk score](/defender-xdr/investigate-users#risk-score-tab) is now generally available. The score ranges from 0 to 100 and reflects how likely an identity is to be compromised and how much damage a compromise could cause, based on the identity's criticality level and privileged role assignments. The **Risk score** tab on the **Identity** page provides a detailed breakdown of risk factors, percentile comparison, and risk trends.
+
 ### New Defender for Identity security alerts
 
 These new alerts were added to the Defender for Identity security alerts:
@@ -48,6 +52,12 @@ These new alerts were added to the Defender for Identity security alerts:
 **New alerts related to other identity providers**:
 
 - [SailPoint ISC suspected brute-force attack](alerts-xdr.md#sailpoint-isc-suspected-brute-force-attack)
+
+### NHI inventory enhancements (Preview)
+
+- **Expanded Entra ID inventory**: The non-human identity inventory now includes all Microsoft Entra service principals, not just those with API permissions. For more information, see [View the Identity inventory](identity-inventory.md).
+
+- **Microsoft Entra roles visibility**: The Permissions tab now shows assigned Microsoft Entra roles alongside API permissions. For more information, see [View your app details with app governance](/defender-cloud-apps/app-governance-visibility-insights-view-apps).
 
 ## May 2026
 

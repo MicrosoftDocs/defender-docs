@@ -2,7 +2,7 @@
 title: Review Security Recommendations
 description: Learn how to review security recommendations in Microsoft Defender for Cloud to improve the security posture of your environments.
 ms.topic: how-to
-ms.date: 06/09/2026
+ms.date: 06/30/2026
 ms.custom: sfi-image-nochange
 zone_pivot_groups: defender-portal-experience
 #customer intent: As a security analyst, I want to learn how to review security recommendations in Microsoft Defender for Cloud so that I can improve the security posture of my environments.
@@ -58,6 +58,16 @@ These category tabs can help you focus your view by security category so that yo
    > When you select a security category filter, both the recommendations list and the summary cards update to reflect only the recommendations in that category.
 
 1. Select a recommendation.
+
+### Identify new recommendations
+
+To help you stay aware of changes that might affect your environment and Secure Score, Defender for Cloud provides several indicators for recently introduced recommendations:
+
+- **"New" tag**: Recommendations introduced in the last 30 days are marked with a **New** tag in the recommendations list. Use this tag to quickly identify findings that are new to your environment and prioritize review.
+- **Change log**: Select **View updates** on the Secure Score card to open the change log, which shows which recommendations were recently added and how they affect your score.
+- **Portal banner**: When new GA recommendations are added that affect Secure Score, a banner appears on the Secure Score page to notify you of the change and link to the change log.
+
+If you notice a Secure Score change after a large release of new recommendations, the change reflects the broader scope of your evaluated estate — not a degradation of your environment's security. Use the change log and "New" tag to identify which recommendations are driving the change.
 
 ### Recommendation views
 
@@ -132,6 +142,16 @@ The **Recommendations** page within Exposure Management provides a prioritized l
 
    > [!NOTE]
    > When you select a security category filter, both the recommendations list and the summary cards update to reflect only the recommendations in that category.
+
+### Identify new recommendations
+
+To help you stay aware of changes that might affect your environment and Secure Score, Defender for Cloud provides several indicators for recently introduced recommendations:
+
+- **"New" tag**: Recommendations introduced in the last 30 days are marked with a **New** tag in the recommendations list. Use this tag to quickly identify findings that are new to your environment and prioritize review.
+- **Change log**: Select **View updates** on the Secure Score card to open the change log, which shows which recommendations were recently added and how they affect your score.
+- **Portal banner**: When new GA recommendations are added that affect Secure Score, a banner appears on the Secure Score page to notify you of the change and link to the change log.
+
+If you notice a Secure Score change after a large release of new recommendations, the change reflects the broader scope of your evaluated estate — not a degradation of your environment's security. Use the change log and "New" tag to identify which recommendations are driving the change.
 
 ### Recommendations summary cards
 
@@ -350,7 +370,7 @@ You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a
 >[!NOTE]
 >If your dashboards or automations currently rely on Sub Assessment APIs or queries, plan to migrate to the Assessment APIs / securityFindings equivalents for the individual recommendation format. During the side by side period, you might see duplicate data (legacy grouped + new individual). Use **Preview/New** version UI tags or API filters to focus on one format and avoid double counting. The Open query entry point can help you generate updated queries from the portal.
 
-:::zone-end
+::: zone-end
 
 ## Related content
 

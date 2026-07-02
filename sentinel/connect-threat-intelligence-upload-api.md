@@ -97,6 +97,6 @@ Enter these values in the configuration of your integrated TIP or custom solutio
 
 In this article, you learned how to connect your TIP to Microsoft Sentinel. To learn more about using threat intelligence in Microsoft Sentinel, see the following articles:
 
-- [Understand threat intelligence](understand-threat-intelligence.md).
+- [Understand threat intelligence](understand-threat-intelligence.md)
 - [Work with threat indicators](work-with-threat-indicators.md) throughout the Microsoft Sentinel experience.
 - Get started detecting threats with [built-in analytics rules](detect-threats-built-in.md) or [custom analytics rules](detect-threats-custom.md) in Microsoft Sentinel.

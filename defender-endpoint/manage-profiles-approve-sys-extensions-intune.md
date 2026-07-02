@@ -1,6 +1,6 @@
 ---
-title: Manage profiles and approve extensions using Intune
-description: Manage profiles and approve extensions using Intune for Microsoft Defender for Endpoint to work properly on macOS.
+title: Approve Microsoft Defender for Endpoint macOS extensions using the Intune settings catalog
+description: Approve Microsoft Defender for Endpoint macOS system extensions using the Intune settings catalog.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
@@ -9,7 +9,9 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 01/16/2026
+ms.date: 06/16/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Manage profiles and approve extensions using Intune
@@ -21,7 +23,8 @@ ms.date: 01/16/2026
 
 This article describes how to use the Intune settings catalog to approve the required extensions for macOS policies.
 
-## Intune system extensions policy
+<a name="intune-system-extensions-policy"></a>
+## Configure the Intune system extensions policy
 
 Do the following procedures to approve the required system extensions using the settings catalog.
 

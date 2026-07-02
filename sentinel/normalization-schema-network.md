@@ -1,5 +1,5 @@
 ---
-title: The Advanced Security Information Model (ASIM) Network Session normalization schema reference | Microsoft Docs
+title: The Advanced Security Information Model (ASIM) Network Session normalization schema reference
 description: This article displays the Microsoft Sentinel Network Session normalization schema.
 ms.author: edbaynash
 author: EdB-MSFT

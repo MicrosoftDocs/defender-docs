@@ -2,9 +2,12 @@
 title: Criticality Levels for Classifications
 description: Lists of all the current criticality levels for classifications in Microsoft Security Exposure Management.
 ms.topic: reference
+ms.author: dlanger
+author: dlanger
 ms.service: exposure-management
-ms.date: 05/18/2026
+ms.date: 06/30/2026
 ms.custom: sfi-ga-nochange
+ai-usage: ai-assisted
 ---
 
 # Predefined classifications - Microsoft Security Research
@@ -20,6 +23,7 @@ Current asset types are:
 * [Device](#device)
 * [Identity](#identity)
 * [Cloud resource](#cloud-resource)
+* [AI agent](#ai-agent)
 
 > [!Note]
 > The critical asset out-of-the-box classification logic classifies your assets based on asset behavior accumulated from Microsoft Defender workloads and  third-party integrations set up in your environment.
@@ -121,6 +125,9 @@ Current asset types are:
 | Senior Executive (Information)     | Identity | Very High | Identities with this classification belong to senior executives in the field of Information. |
 | Senior Executive (Execution)       | Identity | Very High | Identities with this classification belong to senior executives in the field of Execution. |
 | Senior Executive (Human Resources) | Identity | Very High | Identities with this classification belong to senior executives in the field of Human Resources. |
+| Widespread Local Admin on Servers | Identity | High | This rule applies to identities that are configured as local administrators on a high number of servers in the environment. |
+| Widespread Local Admin on Workstations | Identity | High | This rule applies to identities that are configured as local administrators on a high number of workstations in the environment. |
+| Widespread Local Admin on Servers and Workstations | Identity | Very High | This rule applies to identities that are configured as local administrators on a high number of both servers and workstations in the environment. **Note**: This rule logic relies on the predefined critical identity classifications "Widespread Local Admin on Servers" and "Widespread Local Admin on Workstations". |
 
 ##### Cloud resource
 
@@ -138,5 +145,29 @@ Current asset types are:
 | Locked Azure Kubernetes Service cluster              | Cloud resource | Low                       | This is an Azure Kubernetes Service cluster that is safeguarded by a lock. Locks are used to protect assets from deletion and modifications. Usually, administrators use locks to safeguard critical cloud assets in their environment, and to protect them from accidental deletion and unauthorized modifications. |
 | Premium tier Azure Kubernetes Service cluster        | Cloud resource | High                      | This rule applies to Azure Kubernetes Service clusters with premium tier cluster management. Premium tiers are recommended for running production or mission-critical workloads that need high availability and reliability. |
 | Azure Kubernetes Service cluster with multiple nodes | Cloud resource | High                      | This rule applies to Azure Kubernetes Service clusters with a large number of nodes. This often indicates that the cluster is used for critical workloads, such as production workloads. |
-| Azure Arc Kubernetes cluster with multiple nodes                | Cloud Resource | High                      | This rule applies to Azure Arc Kubernetes clusters with a large number of nodes. This often indicates that the cluster is used for critical workloads, such as production workloads. |
-| APIs with Sensitive Data | Cloud Resource | Medium | This rule applies to APIs that contain sensitive data. This often indicates that the API is used for critical production workloads, and might require additional monitoring and protection. |
+| Azure Arc Kubernetes cluster with multiple nodes                | Cloud resource | High                      | This rule applies to Azure Arc Kubernetes clusters with a large number of nodes. This often indicates that the cluster is used for critical workloads, such as production workloads. |
+| APIs with Sensitive Data | Cloud resource | Medium | This rule applies to APIs that contain sensitive data. This often indicates that the API is used for critical production workloads, and might require additional monitoring and protection. |
+| Microsoft Entra ID | SaaS application | Very High | Core identity and access control plane for the tenant. Compromise can enable tenant-wide privilege escalation, persistent access, role manipulation, token abuse, application ownership takeover, and conditional access or policy tampering. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Azure | SaaS application | Very High | Cloud infrastructure and management plane for workloads, networking, storage, and secrets. Compromise can result in full environment takeover, workload disruption, secret exposure, and governance/control-plane abuse. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft 365 Defender | SaaS application | High | Unified security operations and detection platform for identities, endpoints, email, and cloud apps. Compromise can blind detection, suppress or manipulate incidents and alerts, and interfere with security response actions. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft SharePoint Online | SaaS application | Medium | Enterprise content and collaboration backbone with tenant-wide access to sites, files, and document repositories. Compromise can enable bulk data exfiltration, ransomware-style impact, and widespread document exposure. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Teams | SaaS application | Medium | Organization-wide collaboration and communication hub for chats, meetings, calls, and files. Compromise can enable surveillance, internal reconnaissance, lateral movement, and abuse of integrated SharePoint and Exchange content. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Intune | SaaS application | High | Endpoint management and compliance control plane for enterprise devices. Compromise can enable device reconfiguration, remote wipe/reset, BitLocker key access, policy tampering, and fleet-wide operational disruption. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Exchange Online | SaaS application | Medium | Primary organizational email and calendaring surface. Compromise can enable mailbox access, impersonation, phishing/BEC operations, message manipulation, and large-scale email data exfiltration. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft OneDrive | SaaS application | Medium | User and enterprise cloud file storage platform with scalable access to user content. Compromise can enable silent bulk exfiltration of sensitive files at scale. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Dynamics 365 | SaaS application | High | Business-critical CRM and ERP platform containing customer, financial, operational, and service data. Compromise can lead to business-data exposure, process abuse, and high-impact operational disruption. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Purview | SaaS application | High | Governance, compliance, and information protection platform for eDiscovery, DLP, labeling, and lifecycle controls. Compromise can cause severe compliance, legal, and regulatory impact through abuse of highly privileged governance capabilities. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Office Online | SaaS application | Medium | Web-based productivity layer for document interaction for Word, Excel, and PowerPoint via browser workflows. Compromise can amplify access to enterprise documents through inherited SharePoint and OneDrive-connected data paths. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Power BI | SaaS application | Low | Business intelligence and reporting platform with access to strategic, financial, and operational analytics. Compromise can expose sensitive insight data, reports, and dashboards used for decision-making. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Power Apps | SaaS application | Medium | Low-code application platform capable of connecting to business systems and data sources. Compromise can turn applications into access brokers and indirectly expose or manipulate critical connected systems. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Power Automate | SaaS application | Medium | Workflow automation platform that enables headless data movement and orchestration for services and connectors. Compromise can support persistence, silent data transfer, and chaining throughout enterprise applications. Requires onboarding to Microsoft Defender for Cloud Apps. |
+| Microsoft Universal Print | SaaS application | Low | Cloud print management service with service-specific printer and print-job permissions. Compromise is typically limited to a niche workload and has relatively low enterprise-wide security impact compared to core control planes. Requires onboarding to Microsoft Defender for Cloud Apps. |
+
+##### AI agent
+
+| Classification | Asset type | Default criticality level | Description |
+| -------------- | ---------- | ------------------------- | ----------- |
+| Executive-Sponsored AI Agent | AI agent | Medium | This rule applies to AI agents that are created or owned by senior executives in the organization. As such, these agents may be granted access to sensitive data and act on the executive's behalf. Compromise could lead to unauthorized actions performed under executive authority, and exposure of sensitive executive-level data - without the executive's identity being directly compromised. |
+| AI Agent with Privileged Business System Write Access | AI agent | Medium | This rule applies to AI agents configured with tools that can perform high-risk write operations on business-critical systems. These operations include creating, modifying, and deleting records such as sales orders, customer data, financial transactions, and legal agreements. Compromise could lead to significant business impact. |
+
+

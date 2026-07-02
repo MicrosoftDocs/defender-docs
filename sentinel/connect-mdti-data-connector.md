@@ -70,7 +70,7 @@ To enable the data connector, complete the following steps:
 
 After the connector status displays **Connected**, the ingested intelligence is available for use in the `TI map...` analytics rules. For more information, see [Use threat indicators in analytics rules](use-threat-indicators-in-analytics-rules.md). 
 
-Find the new intelligence in the management interface or directly in **Logs** by querying the `ThreatIntelligenceIndicator` table. For more information, see [Work with threat intelligence](work-with-threat-indicators.md).
+Find the new intelligence in the management interface or directly in **Logs** by querying the `ThreatIntelIndicators` table. For more information, see [Work with threat intelligence](work-with-threat-indicators.md).
 
 ## Related content
 
@@ -78,4 +78,4 @@ After you connect the Defender Threat Intelligence data connector, explore these
 
 - Learn about [What is Defender Threat Intelligence?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
 - Get started with the [Defender Threat Intelligence portal](/defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal).
-- [Use matching analytics to detect threats](use-matching-analytics-to-detect-threats.md).
+- [Use matching analytics to detect threats](use-matching-analytics-to-detect-threats.md)

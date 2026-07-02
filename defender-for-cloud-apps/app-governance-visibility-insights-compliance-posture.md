@@ -1,12 +1,12 @@
 ---
-title: Determine your app compliance posture with app governance | Microsoft Defender for Cloud Apps
+title: Determine your OAuth app compliance posture with app governance | Microsoft Defender for Cloud Apps
 ms.date: 08/18/2025
 ms.topic: concept-article
 description: Determine your app compliance posture with app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ms.reviewer: shragar
 ---
 
-# Determine your app compliance posture
+# Determine your OAuth app compliance posture
 
 This article describes the cards shown on the **App governance > Overview** page with compliance posture data.
 

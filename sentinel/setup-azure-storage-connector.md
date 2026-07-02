@@ -3,9 +3,11 @@ title: Set up the Azure Storage connector to stream logs to Microsoft Sentinel
 description: Learn how to set up the Azure Storage Blob connector to ingest logs from Azure Storage into Microsoft Sentinel using the Codeless Connector Framework.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 02/08/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #customer intent: As a security engineer, I want to set up an Azure Storage Blob connector so that I can ingest logs from Azure Storage into Microsoft Sentinel.
 
@@ -44,11 +46,15 @@ The connector authenticates to the Storage Account by using a service principal 
 
 ## Create an Azure Storage Blob connector
 
+Perform the following steps to create an Azure Storage Blob connector:
+
 1. Review and adapt the example ARM template in the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md#build-the-azure-storage-blob-ccf-data-connector). Set the container name, queue name (if not auto-created), blob prefix/suffix filters, and destination table mapping.
-2. Deploy the template by following [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md#data-connection-rules). Ensure the deployment scope matches the storage account and Microsoft Sentinel workspace.
+2. Deploy the template by following [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md#data-connection-rules). Ensure the deployment scope matches the storage account and Microsoft Sentinel workspace.
 3. After deployment, confirm the connector instance is created in Microsoft Sentinel and that the Event Grid subscription status is **Healthy**.
 
 ## Validate the connector
+
+Use the following checks to validate that the connector is working correctly:
 
 - Upload a sample file that matches your prefix/suffix filter and confirm that queue messages are created and consumed.
 - Verify ingestion in the target table in Microsoft Sentinel and check for errors in the connector health blade.
@@ -61,6 +67,6 @@ For troubleshooting steps, see [Troubleshoot Azure Storage Blob connector issues
 ## Related content
 
 - [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md)
-- [Create a codeless connector for Microsoft Sentinel](create-codeless-connector.md)
+- [Create a codeless connector for Microsoft Sentinel](isv/create-codeless-connector.md)
 - [Enable network security on connector integrated storage resources](enable-storage-network-security.md)
 - [Troubleshoot Azure Storage Blob connector issues](azure-storage-blob-connector-troubleshoot.md)

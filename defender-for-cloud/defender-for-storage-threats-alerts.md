@@ -69,3 +69,4 @@ Storage aggregated logs in Defender XDR's Advanced Hunting give security teams a
 ## Related content
 
 - [Understanding malware scanning results](understand-malware-scan-results.md)
+- [Manage false-positive security recommendations for Defender for Storage](defender-for-storage-false-positive-recommendations.md)

@@ -1,14 +1,16 @@
 ---
 title: Weekly operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a weekly basis.
-ms.date: 01/29/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: martin77s
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Weekly operational guide - Microsoft Defender for Identity
 
-This article reviews the Microsoft Defender for Identity activities we recommend for your team on a weekly basis.
+This article reviews the Microsoft Defender for Identity activities we recommend for your team on a weekly basis. These tasks include reviewing Secure Score recommendations, responding to emerging threats with custom detections, and proactively hunting for threats. Performing these checks each week helps security administrators and SOC analysts identify identity-related risks early and maintain a strong security posture.
 
 ## Review Secure score recommendations
 
@@ -16,7 +18,7 @@ This article reviews the Microsoft Defender for Identity activities we recommend
 
 **Persona**: Security and compliance administrators, SOC analysts
 
-Microsoft Secure score recommendations are based on the Microsoft security recommendations that are most relevant to your organization. Secure score recommendations for Defender for Identity include monitoring for on-premises identities and identity infrastructure weak points.
+Microsoft Secure Score shows security recommendations that matter most to your organization. For Defender for Identity, these recommendations focus on monitoring on-premises identities and weak points in your identity infrastructure.
 
 To view Secure Score recommendations per product, in Microsoft Defender, select **Secure score > Recommended actions**, and group the list by **Product**.
 
@@ -33,7 +35,7 @@ For more information, see:
 
 We recommend that you configure custom detections in Microsoft Defender to monitor and respond to various events and system states, such as suspected breach activity and misconfigured endpoints.
 
-Custom detection rules can automatically trigger both alerts and response actions, and are based on advanced hunting queries. Run your custom detection rules regularly to generate alerts and take relevant response actions.
+Custom detection rules use advanced hunting queries. They can trigger alerts and response actions automatically. Run these rules regularly to stay on top of new alerts and take action.
 
 For more information, see:
 

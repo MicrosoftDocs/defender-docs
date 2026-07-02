@@ -1,6 +1,6 @@
 ---
-title: Grant access to managed security service provider (MSSP)
-description: Take the necessary steps to configure MSSP integration with the Microsoft Defender for Endpoint.
+title: Configure multitenant delegated access for an MSSP in Microsoft Defender for Endpoint
+description: Set up delegated multitenant access for an MSSP in Microsoft Defender for Endpoint by configuring RBAC, Microsoft Entra ID groups, and Governance Access Packages.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: painbar
@@ -10,11 +10,12 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 03/26/2025
+ms.date: 06/17/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 ---
 
 # Grant managed security service provider (MSSP) access (preview)
@@ -34,9 +35,11 @@ To implement a multitenant delegated access solution, take the following steps:
 
 ## Enable role-based access controls in Microsoft Defender for Endpoint
 
+Complete the following steps to enable role-based access controls and connect them with Microsoft Entra ID groups.
+
 1. **Create access groups for MSSP resources in Customer Entra ID: Groups**
 
-    These groups are linked to the Roles you create in Defender for Endpoint. To do so, in the customer Entra ID tenant, create three groups. In our example approach, we create the following groups:
+    These groups are linked to the Roles you create in Defender for Endpoint. To create these access groups, in the customer Entra ID tenant, create three groups. In our example approach, we create the following groups:
 
     - Tier 1 Analyst
     - Tier 2 Analyst
@@ -56,17 +59,19 @@ To implement a multitenant delegated access solution, take the following steps:
 
 ## Configure Governance Access Packages
 
+Use the following steps to configure Governance Access Packages for MSSP access.
+
 1. **Add MSSP as Connected Organization in Customer Entra ID: Identity Governance**
 
     Adding the MSSP as a connected organization allows the MSSP to request and have access provisioned.
 
-    To do so, in the customer Entra ID tenant, access Identity Governance: Connected organization. Add a new organization and search for your MSSP Analyst tenant via Tenant ID or Domain. We suggest creating a separate Entra ID tenant for your MSSP Analysts.
+    To add the MSSP as a connected organization, in the customer Entra ID tenant, access Identity Governance: Connected organization. Add a new organization and search for your MSSP Analyst tenant via Tenant ID or Domain. We suggest creating a separate Entra ID tenant for your MSSP Analysts.
 
 1. **Create a resource catalog in Customer Entra ID: Identity Governance**
 
     Resource catalogs are a logical collection of access packages, created in the customer Entra ID tenant.
 
-    To do so, in the customer Entra ID tenant,  access Identity Governance: Catalogs, and add **New Catalog**. In our example, it's called, **MSSP Accesses**.
+    To create a resource catalog, in the customer Entra ID tenant, access Identity Governance: Catalogs, and add **New Catalog**. In our example, it's called, **MSSP Accesses**.
 
     :::image type="content" source="media/goverance-catalog.png" alt-text="The new catalog page" lightbox="media/goverance-catalog.png":::
 
@@ -76,7 +81,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
     Access packages are the collection of rights and accesses that a requestor is granted upon approval.
 
-    To do so, in the customer Entra ID tenant, access Identity Governance: Access Packages, and add **New Access Package**. Create an access package for the MSSP approvers and each analyst tier. For example, the following Tier 1 Analyst configuration creates an access package that:
+    To create an access package, in the customer Entra ID tenant, access Identity Governance: Access Packages, and add **New Access Package**. Create an access package for the MSSP approvers and each analyst tier. For example, a Tier 1 Analyst access package can be configured to:
 
     - Requires a member of the Entra ID group **MSSP Analyst Approvers** to authorize new requests
     - Has annual access reviews, where the SOC analysts can request an access extension
@@ -90,26 +95,27 @@ To implement a multitenant delegated access solution, take the following steps:
 
 1. **Provide access request link to MSSP resources from Customer Entra ID: Identity Governance**
 
-    The My Access portal link is used by MSSP SOC analysts to request access via the access packages created. The link is durable, meaning the same link may be used over time for new analysts. The analyst request goes into a queue for approval by the **MSSP Analyst Approvers**.
+    The My Access portal link is used by MSSP SOC analysts to request access through the MSSP access packages created in Identity Governance. The My Access portal link is durable and can be reused over time for new analysts. The analyst request goes into a queue for approval by the **MSSP Analyst Approvers**.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/access-properties.png" alt-text="The Properties page" lightbox="media/access-properties.png":::
 
-    The link is located on the overview page of each access package.
+    The My Access portal link is located on the overview page of each access package.
 
-## Manage access
+<a name="manage-access"></a>
+## Manage MSSP access in Microsoft Defender for Endpoint
 
 1. Review and authorize access requests in Customer and/or MSSP MyAccess.
 
     Access requests are managed in the customer My Access, by members of the MSSP Analyst Approvers group.
 
-    To do so, access the customer's MyAccess using: `https://myaccess.microsoft.com/@<Customer Domain>`.
+    To review and authorize access requests, access the customer's MyAccess using: `https://myaccess.microsoft.com/@<Customer Domain>`.
 
     Example: `https://myaccess.microsoft.com/@M365x440XXX.onmicrosoft.com#/`
 
 1. Approve or deny requests in the **Approvals** section of the UI.
 
-    At this point, analyst access is provisioned, and each analyst should be able to access the customer's Microsoft Defender portal: `https://security.microsoft.com/?tid=<CustomerTenantId>`
+    After a request is approved, analyst access is provisioned, and each analyst should be able to access the customer's Microsoft Defender portal: `https://security.microsoft.com/?tid=<CustomerTenantId>`
 
 ## Related articles
 

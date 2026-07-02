@@ -5,15 +5,17 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: mmagenheim
 ms.topic: how-to
-ms.date: 12/22/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #Customer intent: As a security analyst, I want to learn the basics of navigating, triaging, and managing Microsoft Sentinel incidents in the Azure portal so that I can start investigating and responding to security incidents.
 ---
 
 # Navigate, triage, and manage Microsoft Sentinel incidents in the Azure portal
 
-This article describes how to navigate and run basic triage on your incidents in the Azure portal.
+This article describes how to navigate and run basic triage on your incidents in the Azure portal. You learn how to search for and filter incidents, assign ownership, update status and severity, and close resolved incidents.
 
 ## Prerequisites
 
@@ -39,9 +41,9 @@ This article describes how to navigate and run basic triage on your incidents in
 
 1. Your security operations team might have [automation rules](automate-incident-handling-with-automation-rules.md#automatic-assignment-of-incidents) in place to perform basic triage on new incidents and assign them to the proper personnel.
 
-    In that case, filter the incident list by **Owner** to limit the list to the incidents assigned to you or to your team. This filtered set represents your personal workload.
+    In that case, filter the incident list by **Owner** to limit the list to the incidents assigned to you or to your team. The incidents filtered by owner represent your personal workload.
 
-    Otherwise, you can perform basic triage yourself. Start by filtering the list of incidents by available filtering criteria, whether status, severity, or product name. For more information, see [Search for incidents](#search-for-incidents).
+    If automation rules aren't assigning incidents, you can perform basic triage yourself. Start by filtering the list of incidents by available filtering criteria, whether status, severity, or product name. For more information, see [Search for incidents](#search-for-incidents).
 
 1. Triage a specific incident and take initial action on it immediately, right from the details pane on the **Incidents** page, without having to enter the incident’s full details page. For example:
 
@@ -113,7 +115,7 @@ Using advanced search options changes the search behavior as follows:
 
 ## Close an incident
 
-Once you resolve a particular incident (for example, when your investigation reaches its conclusion), set the incident’s status to **Closed**. When you do so, you're asked to classify the incident by specifying the reason you're closing it. This step is mandatory. 
+Once you resolve a particular incident (for example, when your investigation reaches its conclusion), set the incident’s status to **Closed**. When you do so, you're asked to classify the incident by specifying the reason you're closing it. Selecting a classification is mandatory. 
 
 Select **Select classification** and choose one of the following from the drop-down list:
 
@@ -127,7 +129,7 @@ Select **Select classification** and choose one of the following from the drop-d
 
 For more information about false positives and benign positives, see [Handle false positives in Microsoft Sentinel](false-positives.md).
 
-After choosing the appropriate classification, add some descriptive text in the **Comment** field. This is useful in the event you need to refer back to this incident. Select **Apply** when you’re done, and the incident is closed.
+After choosing the appropriate classification, add descriptive text in the **Comment** field. A descriptive comment is useful if you need to refer back to the incident later. Select **Apply** when you’re done, and the incident is closed.
 
 :::image type="content" source="media/investigate-incidents/closing-reasons-comment-apply.png" alt-text="Screenshot of closing an incident.":::
 

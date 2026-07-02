@@ -1,15 +1,16 @@
 ---
-title: Track your Microsoft Sentinel migration with a workbook | Microsoft Docs
+title: Track your Microsoft Sentinel migration with a workbook
 description: Learn how to track your migration with a workbook, how to customize and manage the workbook, and how to use the workbook tabs for useful Microsoft Sentinel actions.
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/14/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security operations center (SOC) manager, I want to manage the migration to Microsoft Sentinel so that I can ensure a smooth transition and maintain security monitoring effectiveness.
@@ -53,7 +54,7 @@ The next step is to deploy the related watchlist from the Microsoft Sentinel Git
 
 ## Update the watchlist with deployment and migration actions
 
-This step is crucial to the tracking setup process. If you skip this step, the workbook doesn't reflect the items for tracking.
+Updating the watchlist with deployment and migration actions is crucial to the tracking setup process. If you skip updating the watchlist, the workbook doesn't reflect the items for tracking.
 
 To update the watchlist with deployment and migration actions:
 
@@ -70,7 +71,7 @@ In addition, your team might update or complete tasks during the deployment proc
 
 ## View deployment status
 
-To quickly view the deployment progress, in the **Microsoft Sentinel Deployment and Migration** workbook, select **Deployment** and scroll down to locate the **Summary of progress**. This area displays the deployment status, including the following information:
+To quickly view the deployment progress, in the **Microsoft Sentinel Deployment and Migration** workbook, select **Deployment** and scroll down to locate the **Summary of progress**. The **Summary of progress** section displays the deployment status, including the following information:
 
 - Tables reporting data
 - Number of tables reporting data
@@ -103,21 +104,21 @@ To configure a data connector:
 
 ## Deploy and monitor analytics and incidents
 
-When the data is reported in the workspace, configure and monitor analytics rules. In the **Microsoft Sentinel Deployment and Migration** workbook, select the **Analytics** tab to view all deployed rule templates and lists. This view indicates which rules are currently in use and how often the rules generate incidents. 
+When the data is reported in the workspace, configure and monitor analytics rules. In the **Microsoft Sentinel Deployment and Migration** workbook, select the **Analytics** tab to view all deployed rule templates and lists. The **Analytics** tab indicates which rules are currently in use and how often the rules generate incidents. 
 
 :::image type="content" source="media/migration-track/migration-track-analytics.png" alt-text="Screenshot of the workbook's Analytics tab." lightbox="media/migration-track/migration-track-analytics.png":::
 
-If you need more coverage, select **Review MITRE coverage** below the table on the left. Use this option to define which areas receive more coverage and which rules are deployed, at any stage of the migration project.
+If you need more coverage, select **Review MITRE coverage** below the table on the left. Use the **Review MITRE coverage** option to define which areas receive more coverage and which rules are deployed, at any stage of the migration project.
 
 :::image type="content" source="media/migration-track/migration-track-mitre.png" alt-text="Screenshot of the workbook's MITRE Coverage view." lightbox="media/migration-track/migration-track-mitre.png":::
 
-When you deploy the analytics rules and the Defender product connector is configured to send the alerts, monitor incident creation and frequency under **Deployment > Summary of progress**. This area displays metrics regarding alert generation by product, title, and classification, to indicate the health of the SOC and which alerts require the most attention. If alerts are generating too much volume, return to the **Analytics** tab to modify the logic.
+When you deploy the analytics rules and the Defender product connector is configured to send the alerts, monitor incident creation and frequency under **Deployment > Summary of progress**. The **Summary of progress** section displays metrics regarding alert generation by product, title, and classification, to indicate the health of the SOC and which alerts require the most attention. If alerts are generating too much volume, return to the **Analytics** tab to modify the logic.
 
 :::image type="content" source="media/migration-track/migration-track-analytics-monitor.png" alt-text="Screenshot of the summary of progress under the workbook's Analytics tab." lightbox="media/migration-track/migration-track-analytics-monitor.png":::
 
 ## Deploy and utilize workbooks
 
-To visualize information regarding the data ingestion and detections that Microsoft Sentinel performs, in the **Microsoft Sentinel Deployment and Migration** workbook, select **Workbooks**. Similar to the **Data Connectors** tab, use the **Monitor** and **Configure** views to view monitoring and configuration information. 
+To visualize information regarding the data ingestion and detections that Microsoft Sentinel performs, in the **Microsoft Sentinel Deployment and Migration** workbook, select **Workbooks**. Use the **Monitor** view for monitoring information and the **Configure** view for configuration information. 
 
 Here are some useful tasks to do in the **Workbooks** tab: 
 
@@ -139,15 +140,16 @@ When you configure data ingestion, detections, and visualizations, you can now l
 - The last date the rule was modified and the user that modified the rule
 - The date the rule was created
 
-To view, deploy, and test automation within the current section of the workbook, select **Deploy automation resources** on the bottom left.
+To view, deploy, and test automation in the **Automation** section of the workbook, select **Deploy automation resources** on the bottom left.
 
-Learn about Microsoft Sentinel SOAR capabilities [for playbooks](automate-responses-with-playbooks.md) and [for automation rules](automate-incident-handling-with-automation-rules.md). 
+Learn about Microsoft Sentinel SOAR capabilities: [Automate responses with playbooks](automate-responses-with-playbooks.md) and [Automate incident handling with automation rules](automate-incident-handling-with-automation-rules.md). 
 
 :::image type="content" source="media/migration-track/migration-track-automation.png" alt-text="Screenshot of the workbook's Automation tab." lightbox="media/migration-track/migration-track-automation.png":::
 
-## Deploy and monitor U E B A
+<a name="deploy-and-monitor-u-e-b-a"></a>
+## Deploy and monitor UEBA
 
-Because data reporting and detections happen at the entity level, it's essential to monitor entity behavior and trends. To enable the U E B A feature within Microsoft Sentinel, in the **Microsoft Sentinel Deployment and Migration** workbook, select **UEBA**. Here you can customize the entity timelines for entity pages, and view which entity related tables are populated with data. 
+Because data reporting and detections happen at the entity level, it's essential to monitor entity behavior and trends. User and entity behavior analytics (UEBA) helps you do this. To enable the UEBA feature within Microsoft Sentinel, in the **Microsoft Sentinel Deployment and Migration** workbook, select **UEBA**. Here you can customize the entity timelines for entity pages, and view which entity related tables are populated with data. 
 
 :::image type="content" source="media/migration-track/migration-track-ueba.png" alt-text="Screenshot of the workbook's U E B A tab."::: 
 

@@ -1,8 +1,8 @@
 ---
-title: Use Azure Privileged Identity Management (PIM) in Microsoft Defender for Office 365 to limit admin access to cyber security tools.
+title: Configure Azure PIM for Microsoft Defender for Office 365 admin access
 author: chrisda
 ms.author: chrisda
-ms.date: 2/20/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.localizationpriority: high
 ms.assetid: 56fee1c7-dc37-470e-9b09-33fff6d94617
@@ -10,10 +10,12 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
+  - msecd-doc-authoring-1014
   - seo-marvel-apr2020
   - sfi-image-nochange
 description: Learn to integrate Azure PIM in order to grant just-in-time, time limited access to users to do elevated privilege tasks in Microsoft Defender for Office 365, lowering risk to your data.
 ms.service: defender-office-365
+ai-usage: ai-assisted
 ---
 
 # Privileged Identity Management (PIM) and why to use it with Microsoft Defender for Office 365
@@ -44,10 +46,10 @@ This article uses the scenario for a user named Alex on the security team. We ca
 5. Select **Add Assignments** \> **No member selected** \> select or type the name to search for the correct member.
 6. Select the **Select** button to choose the member you need to add for PIM privileges \> select **Next** \> make no changes on the Add Assignment page (both assignment type _Eligible_ and duration _Permanently Eligible_ are defaults) and **Assign**.
 
-The name of the user (Alex in this scenario) appears under Eligible assignments on the next page. This result means they're able to PIM into the role with the settings configured earlier.
+The name of the user (Alex in this scenario) appears under Eligible assignments on the next page. The user's appearance under Eligible assignments means they can activate the role in PIM with the settings configured earlier.
 
 > [!NOTE]
-> For a quick review of Privileged Identity Management see [this video](https://www.youtube.com/watch?v=VQMAg0sa_lE).
+> For a quick review of Privileged Identity Management see [Privileged Identity Management overview](https://www.youtube.com/watch?v=VQMAg0sa_lE).
 
 :::image type="content" source="media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG" alt-text="The Role setting details - Security Reader page" lightbox="media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG":::
 
@@ -63,7 +65,7 @@ Use one of the following methods:
 
 Or
 
-- Create a custom role in Microsoft Defender unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender unified RBAC model](/defender-xdr/manage-rbac#start-using-microsoft-defender-unified-rbac-model).
+- Create a custom role in Microsoft Defender unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender unified RBAC model](/defender-xdr/manage-rbac#start-using-microsoft-defender-unified-rbac-model). For Defender for Office 365-specific role templates and configuration steps, see [How to configure Unified RBAC for Defender for Office 365](step-by-step-guides/configure-unified-rbac-defender-office-365.md).
 
 For either method:
 
@@ -71,6 +73,8 @@ For either method:
 - Don't add members. Add the required permissions, save, and then go to the next step.
 
 ### Create the security group in Microsoft Entra ID for elevated permissions
+
+Create a Microsoft Entra security group to hold the elevated permissions and enable PIM for the group.
 
 1. Browse back to the [Microsoft Entra Admin Center](https://aad.portal.azure.com/) and navigate to **Microsoft Entra ID** \> **Groups** \> **New Group**.
 2. Name your Microsoft Entra group to reflect its purpose, **no owners or members are required** right now.
@@ -86,7 +90,7 @@ For either method:
 > [!NOTE]
 > This step is required only if you used an Email & collaboration role group in [Create a role or role group with the required permissions](#create-a-role-or-role-group-with-the-required-permissions). Defender unified RBAC supports direct permissions assignments to Microsoft Entra groups, and you can add members to the group for PIM.
 
-1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
+1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command to add the Azure security group as a member of the role group, which grants the group's members the permissions assigned to that role group:
 
    ```powershell
    Add-RoleGroupMember "<Role Group Name>" -Member "<Azure Security Group>"`
@@ -94,10 +98,12 @@ For either method:
 
 ## Test your configuration of PIM with Defender for Office 365
 
+Use the following steps to verify that the PIM configuration grants the expected day-to-day and elevated access.
+
 1. Sign in with the test user (Alex), who should have no administrative access within the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender) at this point.
-2. Navigate to PIM, where the user can activate their day-to-day security reader role.
+2. In the Microsoft Entra Admin Center, open **Privileged Identity Management** and activate the day-to-day Security Reader role.
 3. If you try to purge an email using Threat Explorer, you get an error stating you need more permissions.
-4. PIM a second time into the more elevated role, after a short delay you should now be able to purge emails without issue.
+4. Activate the elevated Search and Purge PIM group in Privileged Identity Management. After a short delay, you should be able to purge emails without issue.
 
    :::image type="content" source="media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG" alt-text="The Actions pane under the Email tab" lightbox="media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG":::
 

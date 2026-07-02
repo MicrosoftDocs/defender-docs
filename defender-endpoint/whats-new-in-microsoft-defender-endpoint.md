@@ -7,7 +7,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 06/15/2026
+ms.date: 06/22/2026
 ai-usage: ai-assisted
 ms.collection:
 - m365-security
@@ -30,6 +30,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
+|Release - macOS |Build 101.26042.0020 |GA |Release version 20.126042.20.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#macos--june-2026--101260420020).|
 |Feature |[Local AI agent discovery — macOS support and new agents](local-agent-discovery-overview.md#supported-local-ai-agents-and-mcp-server-configurations) |Preview |Local AI agent discovery now supports macOS endpoints in addition to Windows. This update also adds discovery support for new agents including Junie CLI, Kiro CLI, Warp, Hermes Agent, Goose Desktop, Perplexity Desktop, Kiro IDE, Devin Desktop (formerly Windsurf), and QClaw. For more information, see [Local AI agent discovery](local-agent-discovery-overview.md).|
 |Feature |[Enhanced Defender deployment tool for Windows](defender-deployment-tool-windows.md) | GA |The new version of the tool streamlines onboarding and enhances security by:<br/>- Bundling the onboarding package directly into the tool's executable.<br/>- Generating a key during deployment package creation that is required for running the tool.<br/>- Enabling users to configure an expiry date for the package to reduce the risk of unauthorized use.<br/><br/>In addition:<br/>- You have the option of downloading the package as either an *.exe* or a *.zip* file, whichever best suits your organization's needs.<br/>- A new Deployment packages page in the Defender portal facilitates management of downloaded packages by providing centralized visibility into all the packages and their current status. |
 |Feature |[Selective Response Actions](./restrict-response-actions-high-value-assets.md) |GA |Selective Response Actions enables organizations to tailor high-impact security operations on devices during onboarding. It provides precise control over how response actions are applied on Tier-0 systems and other high-value assets, helping maintain operational stability while delivering strong protection. |
@@ -70,7 +71,7 @@ Learn more about [Preview features](/defender-xdr/preview).
 
 |Type  |Feature  |Preview/GA  |Description  |
 |---------|------------|-------------|-------------|
-|Feature| New Microsoft Secure Score recommendations |Preview |Microsoft Secure Score now includes new recommendations to help organizations proactively prevent common endpoint attack techniques: <br> - **Block outbound network connections from Microsoft HTML Application Host (mshta.exe):** Helps mitigate attacks that leverage mshta.exe (a trusted Windows binary) to execute malicious scripts and communicate with external command-and-control (C2) infrastructure. Blocking outbound connections from mshta.exe disrupts common attack chains, prevents payload download and data exfiltration, and reduces the risk of living-off-the-land attacks. This is relevant for emerging attack campaigns, for example, ClickFix campaigns, where attackers abuse legitimate tools like mshta.exe to execute malicious content delivered through user interaction.|
+|Feature| New Microsoft Secure Score recommendations |GA |Microsoft Secure Score now includes new recommendations to help organizations proactively prevent common endpoint attack techniques: <br> - **Block outbound network connections from Microsoft HTML Application Host (mshta.exe):** Helps mitigate attacks that leverage mshta.exe (a trusted Windows binary) to execute malicious scripts and communicate with external command-and-control (C2) infrastructure. Blocking outbound connections from mshta.exe disrupts common attack chains, prevents payload download and data exfiltration, and reduces the risk of living-off-the-land attacks. This is relevant for emerging attack campaigns, for example, ClickFix campaigns, where attackers abuse legitimate tools like mshta.exe to execute malicious content delivered through user interaction.|
 |Release - Linux |Build 101.26021.0002 |GA |Release version 30.126021.0002.0 released: See [enhancements and features for this release](microsoft-defender-endpoint-releases.md#linux--march-2026--101260210002). |
 |Release - Windows |Windows Defender Antivirus: Platform 4.18.26020.6 / Engine 1.1.26020.3 |GA |See [enhancements and features for this release](msda-updates-previous-versions-technical-upgrade-support.md#february-2026-platform-418260206--engine-11260203). |
 |Feature |[Library management for live response](configure-libraries-live-response.md) |GA |Library management for live response is now generally available. This feature provides a centralized view for managing files and scripts used during live response sessions. |

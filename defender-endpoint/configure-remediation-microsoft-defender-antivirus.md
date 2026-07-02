@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
 ms.topic: how-to
-ms.custom: nextgen
-ms.date: 04/28/2026
+ms.custom: nextgen, msecd-doc-authoring-1014
+ms.date: 06/16/2026
 ai-usage: ai-assisted
 ms.reviewer: yongrhee
 ms.collection: 
@@ -35,7 +35,7 @@ When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remov
 > [!IMPORTANT]
 > Microsoft Defender Antivirus detects and remediates files based on many factors. Sometimes, completing a remediation requires a reboot. Even if the detection is later determined to be a false positive, the reboot must be completed to ensure all additional remediation steps have been completed.
 >
-> If you are certain Microsoft Defender Antivirus quarantined a file based on a false positive, you can restore the file from quarantine after the device reboots. See [Restore quarantined files in Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md). To avoid this problem in the future, you can exclude files from the scans. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
+> If you are certain Microsoft Defender Antivirus quarantined a file based on a false positive, you can restore the file from quarantine after the device reboots. See [Restore quarantined files in Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md). To avoid false-positive quarantines in the future, you can exclude files from the scans. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
 
 Also see [About regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md) for more remediation-related settings.
 
@@ -69,7 +69,7 @@ To configure remediation actions using a Microsoft Intune Endpoint Security **An
   - **Block**
 
   > [!WARNING]
-  > **Allow** doesn't remediate detected threats and suppresses ongoing detection events. Don't configure this action when [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled. Use **Allow** only in specialized environments (for example, industrial control systems or critical infrastructure) where:
+  > **Allow** doesn't remediate detected threats and suppresses ongoing detection events. Don't configure this action when [tamper protection is enabled](prevent-changes-to-security-settings-with-tamper-protection.md). Use **Allow** only in specialized environments (for example, industrial control systems or critical infrastructure) where:
   >
   > - Automatic remediation isn't practical for operations.
   > - Other procedures exist to respond to detected threats.
@@ -88,6 +88,8 @@ If you're using Configuration Manager, see the following articles:
 
 ## Configure remediation options using Group Policy
 
+Use the following steps to configure remediation options in Group Policy:
+
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), and edit the Group Policy Object you want to configure.
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration** and then select **Administrative templates**.
@@ -103,13 +105,13 @@ If you're using Configuration Manager, see the following articles:
    |Root<br/>Turn off routine remediation.|Specify whether Microsoft Defender Antivirus automatically remediates threats, or whether to prompt the user.|Disabled. Threats are remediated automatically.|
    |Quarantine<br/>Configure removal of items from Quarantine folder.|Specify how many days items should be kept in quarantine before being removed.|90 days|
    |Threats \> Specify threats upon which default action shouldn't be taken when detected.|Specify how specific threats (using their threat ID) should be remediated. You can specify whether the specific threat should be quarantined, removed, or ignored.|Not applicable|
-   |Threats \> Specify threat alert levels at which default action shouldn't be taken when detected.|Every threat that is detected by Microsoft Defender Antivirus is assigned a threat level: <ul><li>`1`: Low</li><li>`2`: Medium</li><li>`4`: High</li><li>`5`: Severe</li></ul> Use this setting to specify how threats for each level are remediated. Valid values are: <ul><li>`2`: Quarantine</li><li>`3`: Remove</li><li>`6`: Ignore</li><li>`11`: None</li></ul> **Warning**: The actions Ignore (`6`) and None (`11`) don't remediate detected threats. Ignore (`6`) suppresses ongoing detection events, while None (`11`) continues to generate alerts and Protection History entries. Don't configure either action when [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) is enabled. Use these actions only in specialized environments (for example, industrial control systems or critical infrastructure) where Automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, or compensating security controls are deployed. Use standard remediation actions (Quarantine (`2`) or Remove (`3`)) in all other environments.|Not applicable|
+   |Threats \> Specify threat alert levels at which default action shouldn't be taken when detected.|Every threat that is detected by Microsoft Defender Antivirus is assigned a threat level: <ul><li>`1`: Low</li><li>`2`: Medium</li><li>`4`: High</li><li>`5`: Severe</li></ul> Use this setting to specify how threats for each level are remediated. Valid values are: <ul><li>`2`: Quarantine</li><li>`3`: Remove</li><li>`6`: Ignore</li><li>`11`: None</li></ul> **Warning**: The actions Ignore (`6`) and None (`11`) don't remediate detected threats. Ignore (`6`) suppresses ongoing detection events, while None (`11`) continues to generate alerts and Protection History entries. Don't configure either action when [tamper protection is enabled](prevent-changes-to-security-settings-with-tamper-protection.md). Use these actions only in specialized environments (for example, industrial control systems or critical infrastructure) where Automatic remediation isn't practical for operations, other procedures exist to respond to detected threats, or compensating security controls are deployed. Use standard remediation actions (Quarantine (`2`) or Remove (`3`)) in all other environments.|Not applicable|
 
 1. Select **OK**.
 
 ## Configure remediation options using PowerShell or WMI
 
-You can also use the [`Set-MpPreference` PowerShell cmdlet](/powershell/module/defender/set-mppreference) or [`MSFT_MpPreference` WMI class](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal) to configure these settings.
+You can also use the [`Set-MpPreference` PowerShell cmdlet](/powershell/module/defender/set-mppreference) or [`MSFT_MpPreference` WMI class](/previous-versions/windows/desktop/defender/windows-defender-wmiv2-apis-portal) to configure the threat default-action and remediation settings.
 
 ## See also
 

@@ -1,23 +1,24 @@
 ---
 title: Enable and update Microsoft Defender Antivirus on Windows Server
-description: Learn how to enable and update Microsoft Defender Antivirus on Windows Server
+description: Enable or re-enable Microsoft Defender Antivirus on Windows Server and update the platform when the feature was previously disabled or uninstalled.
 ms.service: defender-endpoint
 ms.author: chrisda
 author: chrisda
 ms.reviewer: yongrhee
 ms.localizationpriority: high
-ms.date: 05/01/2025
+ms.date: 06/16/2026
 ms.collection:
 - m365-security
 - tier2
 - mde-ngp
-ms.custom: intro-overview
+ms.custom: intro-overview, msecd-doc-authoring-1014
 ms.topic: how-to
 ms.subservice: ngp
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
+ai-usage: ai-assisted
 ---
 
 # Enable and update Defender Antivirus to the latest version on Windows Server
@@ -25,6 +26,8 @@ appliesto:
 This article describes how to enable and update Microsoft Defender Antivirus on Windows Server. You'd use the procedures in this article if Microsoft Defender Antivirus was previously disabled or uninstalled.
 
 ## Enable and update Microsoft Defender Antivirus on Windows Server
+
+Perform the following steps to enable and update Microsoft Defender Antivirus on Windows Server:
 
 1. Install the latest [servicing stack updates](/windows/deployment/update/servicing-stack-updates).
 
@@ -67,7 +70,7 @@ On Windows Server 2016 you might need to use the `-WdEnable` option on the MpCmd
 
 ## Re-enable Microsoft Defender Antivirus on Windows Server if it was uninstalled
 
-In case the Defender feature was uninstalled/removed, you can add it back.
+If the Defender feature was uninstalled or removed, you can reinstall the feature.
 
 1. In an elevated Command Prompt, run the following commands:
 
@@ -90,4 +93,4 @@ In case the Defender feature was uninstalled/removed, you can add it back.
 
 ## Related articles
 
-[Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
+- [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)

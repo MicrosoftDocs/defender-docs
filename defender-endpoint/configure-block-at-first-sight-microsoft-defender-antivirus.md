@@ -7,9 +7,10 @@ author: chrisda
 ms.author: chrisda
 ms.reviewer: marcmcc
 ms.custom:
+  - msecd-doc-authoring-1014
   - nextgen
   - sfi-image-nochange
-ms.date: 10/20/2025
+ms.date: 06/16/2026
 ms.subservice: ngp
 ms.topic: how-to
 ms.collection: 
@@ -20,11 +21,12 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
+ai-usage: ai-assisted
 ---
 # Turn on block at first sight
 
 
-This article describes an antivirus/antimalware feature known as "block at first sight", and describes how to enable block at first sight for your organization.
+This article describes an antivirus/antimalware feature known as "block at first sight", and describes how to enable block at first sight for your organization. Before you begin, review the [Prerequisites](#prerequisites) section for required settings and supported operating systems.
 
 > [!TIP]
 > This article is intended for enterprise admins and IT Pros who manage security settings for organizations. If you aren't an enterprise admin or IT Pro but you have questions about block at first sight, see the [Not an enterprise admin or IT Pro?](#not-an-enterprise-admin-or-it-pro) section.
@@ -34,6 +36,8 @@ This article describes an antivirus/antimalware feature known as "block at first
 
 ### Supported operating systems
 
+Block at first sight is supported on the following operating systems:
+
 - Windows
 
 
@@ -41,7 +45,7 @@ This article describes an antivirus/antimalware feature known as "block at first
 
 Block at first sight is a threat protection feature of next-generation protection that detects new malware and blocks it within seconds. Block at first sight is enabled when certain security settings are enabled: 
 
-- [Cloud protection](cloud-protection-microsoft-defender-antivirus.md) is turned on;
+- [Cloud protection](cloud-protection-microsoft-defender-antivirus.md) (also called *cloud-delivered protection* in Windows Security) is turned on;
 - [Sample submission](cloud-protection-microsoft-antivirus-sample-submission.md) is configured for samples to be sent automatically; and
 - [Microsoft Defender Antivirus is up to date](microsoft-defender-antivirus-updates.md) on devices.
 
@@ -60,33 +64,28 @@ Microsoft Defender Antivirus uses multiple detection and prevention technologies
 
 ## A few things to know about block at first sight
 
+Keep the following details in mind when using block at first sight:
+
 - Block at first sight can block nonportable executable files (such as JS, VBS, or macros) and executable files, running the [latest Defender antimalware platform](microsoft-defender-antivirus-updates.md) on Windows or Windows Server.
 
 - Block at first sight only uses the cloud protection backend for executable files and nonportable executable files that are downloaded from the Internet, or that originate from the Internet zone. A hash value of the `.exe` file is checked via the cloud backend to determine if the file is a previously undetected file.
 
 - If the cloud backend is unable to make a determination, Microsoft Defender Antivirus locks the file and uploads a copy to the cloud. The cloud performs more analysis to reach a determination before it either allows the file to run or blocks it in all future encounters, depending on whether it determines the file to be malicious or not a threat.
 
-- In many cases, this process can reduce the response time for new malware from hours to seconds.
+- In many cases, this cloud-based analysis and blocking process can reduce the response time for new malware from hours to seconds.
 
 - You can [specify how long a file should be prevented from running](configure-cloud-block-timeout-period-microsoft-defender-antivirus.md) while the cloud-based protection service analyzes the file. And, you can [customize the message displayed on users' desktops](/windows/security/threat-protection/windows-defender-security-center/wdsc-customize-contact-information) when a file is blocked. You can change the company name, contact information, and message URL.
 
 ## Turn on block at first sight with Microsoft Intune
 
-1. In the Microsoft Intune admin center (<https://intune.microsoft.com>), go to **Endpoint security** \> **Antivirus**.
+To enable block at first sight with Microsoft Intune, see <a href="/intune/intune-service/protect/endpoint-security-policy#create-endpoint-security-policies" target="_blank">Create an endpoint security policy</a> (opens in a new tab in the Intune documentation). When modifying an existing policy or creating a new policy, choose the following options:
 
-1. Select an existing policy, or create a new policy using the **Microsoft Defender Antivirus** profile type. In our example, we selected **Windows 10, Windows 11, or Windows Server** for the platform.
+- **Policy type**: Antivirus
+- **Platform**: When creating a new policy, select **Windows 10, Windows 11, or Windows Server**.
+- **Allow cloud protection**: Allowed. Turns on Cloud Protection.
+- **Submit Samples Consent**: Select either **Send all samples automatically** or **Send safe samples automatically**
 
-   :::image type="content" source="media/intune-mdav-policy.png" alt-text="Screenshot of new MDAV policy creation in Intune." lightbox="media/intune-mdav-policy.png":::
-
-1. Set **Allow cloud protection** to **Allowed. Turns on Cloud Protection**. 
-   :::image type="content" source="media/intune-mdav-cpallowed.png" alt-text="Screenshot of Cloud Protection set to allowed in Intune.":::
-
-1. Scroll down to **Submit Samples Consent**, and select one of the following settings:
-
-   - **Send all samples automatically**
-   - **Send safe samples automatically**
-
-1. Apply the Microsoft Defender Antivirus profile to a group, such as **All users**, **All devices**, or **All users and devices**.
+Apply the Microsoft Defender Antivirus profile to a group, such as **All users**, **All devices**, or **All users and devices**.
 
 ## Turn on block at first sight with Group Policy
 
@@ -121,7 +120,7 @@ You can confirm that block at first sight is enabled on individual client device
 > [!NOTE]
 >
 > - If the prerequisite settings are configured and deployed using Group Policy, the settings described in this section are greyed-out and unavailable for use on individual endpoints.
-> - Changes made through a Group Policy Object must first be deployed to individual endpoints before the setting gets updated in Windows Settings.
+> - Changes made through a Group Policy Object must first be deployed to individual endpoints before the **Cloud-delivered protection** and **Automatic sample submission** settings get updated in Windows Settings.
 
 ## Turn off block at first sight
 
@@ -130,19 +129,20 @@ You can confirm that block at first sight is enabled on individual client device
 
 ### Turn off block at first sight with Microsoft Intune
 
-1. Go to the Microsoft Intune admin center (<https://intune.microsoft.com>) and sign in.
+> [!CAUTION]
+> Disabling block at first sight lowers the protection state of your devices and your network.
 
-1. Go to **Endpoint security** \> **Antivirus**, and then select your Microsoft Defender Antivirus policy.
+To disable block at first sight with Microsoft Intune, see <a href="/intune/device-configuration/endpoint-security/manage-policies#modify-existing-policies" target="_blank">Modify existing policies</a> (opens in a new tab in the Intune documentation). Choose the following options:
 
-1. Under **Manage**, choose **Properties**.
-
-1. Next to **Configuration settings**, choose **Edit**.
-
-1. Set **Allow cloud protection** to **Not allowed. Turns off Cloud Protection**. 
-
-1. Review and save your settings.
+- **Policy**: **Antivirus**, then select your Microsoft Defender Antivirus policy
+- **Allow cloud protection**: Not allowed. Turns off Cloud Protection
 
 ### Turn off block at first sight with Group Policy
+
+> [!CAUTION]
+> Disabling block at first sight lowers the protection state of your devices and your network.
+
+Use the following steps to turn off block at first sight with Group Policy:
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure, and then select **Edit**.
 
@@ -178,6 +178,8 @@ If you have a personal device that isn't managed by an organization, you might b
      > Turning off block at first sight lowers the level of protection for your device. We don't recommend permanently disabling block at first sight.
 
 ## See also
+
+For more information about Microsoft Defender Antivirus and related features, see the following resources:
 
 - [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)
 - [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)

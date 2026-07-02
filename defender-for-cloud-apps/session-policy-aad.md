@@ -1,9 +1,11 @@
 ---
 title: Create session policies | Microsoft Defender for Cloud Apps
 description: Learn how to configure Microsoft Defender for Cloud Apps session policies with Conditional Access app control to gain visibility into user session activities and block downloads.
-ms.date: 05/15/2024
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Create Microsoft Defender for Cloud Apps session policies
@@ -75,7 +77,7 @@ This procedure describes how to create a new session policy in Defender for Clou
 
     For example:
 
-    :::image type="content" source="media/session-policy-aad/onboarded-apps-filter.png" alt-text="Screenshot of a sample filter when creating an access policy.":::
+    :::image type="content" source="media/session-policy-aad/onboarded-apps-filter.png" alt-text="Screenshot of the Activities matching all of the following section with activity filter options configured for a session policy.":::
 
     Select **Edit and preview results** to get a preview of the types of activities that would be returned with your current selection.
 
@@ -136,7 +138,7 @@ Make sure to sign in with a user that matches your policy.
 
 - Verify that the behavior and functionality of the app isn't adversely affected by performing common actions such as downloading and uploading files.
 
-- If you're working with custom, non-Microsoft IdP apps, check each of the domains that you've [manually added for your app](troubleshooting-proxy.md#add-domains-for-your-app).
+- If you're working with custom, non-Microsoft IdP apps, check each of the domains listed in [Add domains for your app](troubleshooting-proxy.md#add-domains-for-your-app).
 
 If you encounter errors or issues, use the admin toolbar to gather resources such as `.har` files and recorded sessions for filing a support ticket.
 
@@ -153,7 +155,7 @@ By default, users are notified when their sessions are being monitored. If you'd
 
 In Microsoft Defender XDR, select **Settings > Cloud apps > Conditional Access App Control > User monitoring**.
 
-Make one of the following selections:
+On the **User monitoring** page, choose one of the following notification settings:
 
 - Clear the **Notify users that their activity is being monitored** option altogether
 - Keep the selection and select to use either the default message or to customize your message.
@@ -169,24 +171,24 @@ To export Cloud discovery logs from the cloud discovery dashboard:
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **Conditional Access App Control**.
 1. Above the table, select the export button. For example:
 
-    :::image type="content" source="media/activity-filters/export-button.png" alt-text="Screenshot that shows the export button.":::
+    :::image type="content" source="media/activity-filters/export-button.png" alt-text="Screenshot that shows the export button for downloading Conditional Access App Control traffic logs from the cloud discovery dashboard.":::
 
    
-1. Select the range of the report and select **Export**. This process may take some time.
+1. Select the range of the report and select **Export**. Exporting the report may take some time.
 1. To download the exported log after the report is ready, in the Microsoft Defender Portal go to **Reports** -> **Cloud Apps** and then **Exported reports**.
 1. In the table, select the relevant report from the list of **Conditional Access App Control traffic logs** and select **Download**. For example:
 
-    ![Screenshot of the download button.](media/download-button.png)
+    ![Screenshot of the download button in the toolbar.](media/download-button.png)
    
 ## Supported activities for session policies
 
-The following sections provide more details about each activity supported by Defender for Cloud Apps session policies.
+Defender for Cloud Apps session policies support activities including [monitor only](#monitor-only), [block all downloads](#block-download), [require step-up authentication](#require-step-up-authentication), [block specific activities](#block-activities), [protect files on download](#protect-download), [protect uploads of sensitive files](#protect-upload), [block malware on upload or download](#block-malware-on-upload-or-download), and [educate users to protect sensitive files](#educate-users-to-protect-sensitive-files).
 
 ### Monitor only
 
 The **Monitor only** [session control type](#type) monitors only the *Login* activity. 
 
-To monitor other activities, select one of the other session control types and use the **Audit** [action](#actions).
+To monitor other activities, select **Block activities**, **Control file download (with inspection)**, or **Control file upload (with inspection)** as the session control type, and use the **Audit** [action](#actions).
 
 To monitor activities other than downloads and uploads, you must have at least one [block per activity](#block-specific-activities) policy in your monitor policy.
 

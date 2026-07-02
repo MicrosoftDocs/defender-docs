@@ -1,14 +1,16 @@
 ---
 title: Monthly operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a monthly basis.
-ms.date: 01/29/2024
+ms.date: 06/15/2026
 ms.topic: how-to
 ms.reviewer: martin77s
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Monthly operational guide - Microsoft Defender for Identity
 
-This article reviews the Microsoft Defender for Identity activities we recommend for your team on a monthly basis.
+This article reviews the Microsoft Defender for Identity activities we recommend for your team on a monthly basis. These tasks include reviewing and adjusting alert tuning configurations and tracking new feature changes across Microsoft Defender XDR and Defender for Identity. This guide is intended for security administrators and SOC analysts responsible for maintaining an effective detection and response posture.
 
 ## Review tuned alerts and adjust tuning if needed
 
@@ -27,6 +29,8 @@ For more information, see [Investigate Defender for Identity security alerts in 
 
 <a name="track-new-changes-in-microsoft-defender-xdr-and-defender-for-identity"></a>
 ## Track new changes in Microsoft Defender and Defender for Identity
+
+Use the following resources to stay informed about recent changes and new features in Microsoft Defender XDR and Defender for Identity:
 
 **Where**:
 

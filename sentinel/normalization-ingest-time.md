@@ -1,5 +1,5 @@
 ---
-title: Ingest time normalization | Microsoft Docs
+title: Ingest time normalization
 description: This article explains how Microsoft Sentinel normalizes data at ingest
 ms.author: edbaynash
 author: EdB-MSFT

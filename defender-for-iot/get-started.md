@@ -1,13 +1,14 @@
 ---
-title: Get started and set up a license for Microsoft Defender for IoT in the Defender portal
-description: This article describes how to get started and set up a license for Microsoft Defender for IoT in the Defender portal.
+title: Set up a trial license for Microsoft Defender for IoT in the Defender portal
+description: This article describes how to set up a trial license for Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 05/19/2024
+ms.date: 06/11/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
+ai-usage: ai-assisted
 ---
 
 # Get started with Microsoft Defender for IoT in the Defender portal
@@ -50,7 +51,7 @@ Turn on the public preview features in the Microsoft Defender XDR settings to en
 
 ## Upgrade to a permanent license
 
-After assessing the trial version, you can [upgrade to a full license](manage-license.md). For more information, see [license overview](license-overview.md).
+After evaluating your Defender for IoT trial license, you can [upgrade to a full license](manage-license.md). For more information, see [license overview](license-overview.md).
 
 ## Next steps
 

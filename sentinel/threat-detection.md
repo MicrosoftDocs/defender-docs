@@ -1,5 +1,5 @@
 ---
-title: Threat detection in Microsoft Sentinel | Microsoft Docs
+title: Threat detection in Microsoft Sentinel
 description: Understand how threat detection works in Microsoft Sentinel. Learn about different types of analytics rules and templates, and the generation of alerts and incidents.
 ms.author: guywild
 author: guywi-ms

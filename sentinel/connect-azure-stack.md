@@ -1,11 +1,13 @@
 ---
-title: Onboard your Azure Stack Hub virtual machines to Microsoft Sentinel | Microsoft Docs
+title: Onboard your Azure Stack Hub virtual machines to Microsoft Sentinel
 description: This article shows you how to provision the Azure Monitor, Update, and Configuration Management virtual machine extension on Azure Stack Hub virtual machines and start monitoring them with Microsoft Sentinel.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 11/09/2021
+ms.date: 06/15/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 #Customer intent: As a security engineer, I want to connect Azure Stack Hub virtual machines to Microsoft Sentinel so that analysts can efficiently monitor and manage security threats across our hybrid cloud environment.
 
@@ -31,14 +33,14 @@ Add the **Azure Monitor, Update, and Configuration Management** virtual machine 
 
 1. Select the **Azure Monitor, Update, and Configuration Management** extension and select **Create**. The **Install extension** configuration window opens.
 
-   ![Azure Monitor, Update, and Configuration Management Settings](./media/connect-azure-stack/azure-monitor-extension-fix.png)  
+   ![Screenshot of the Azure Stack Hub portal showing the Install extension settings page for the Azure Monitor, Update, and Configuration Management extension.](./media/connect-azure-stack/azure-monitor-extension-fix.png)  
 
    >[!NOTE]
    > If you do not see the **Azure Monitor, Update and Configuration Management** extension listed in your marketplace, reach out to your Azure Stack Hub operator to make it available.
 
 1. On the Microsoft Sentinel menu, select **Workspace settings** followed by **Advanced**, and copy  the **Workspace ID** and **Workspace Key (Primary Key)**. 
 
-1. In the Azure Stack Hub **Install extension** window, paste them in the indicated fields and select **OK**.
+1. In the Azure Stack Hub **Install extension** window, paste the **Workspace ID** and **Workspace Key (Primary Key)** into the indicated fields, and select **OK**.
 
 1. After the extension installation completes, its status shows as **Provisioning Succeeded**. It might take up to one hour for the virtual machine to appear in the Microsoft Sentinel portal.
 

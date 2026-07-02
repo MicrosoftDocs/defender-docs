@@ -21,6 +21,14 @@ Defender for Containers supports multiple sensor deployment models, including au
 
 Before you install the sensor by using Helm, complete the following prerequisites:
 
+- Make sure [`helm`](https://helm.sh/docs/intro/install/) and `curl` are installed and available in your command-line environment.
+
+  To check whether the tools are available, run:
+
+  ```bash
+  helm version
+  curl --version
+
 - Implement all prerequisite requirements for the Defender for Containers sensor as described in the [Defender sensor network requirements](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-aks%23network-requirements).
 
 - Enable Defender for Containers in the target subscription or security connector:

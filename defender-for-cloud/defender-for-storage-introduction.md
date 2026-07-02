@@ -1,7 +1,7 @@
 ---
 title: What is Microsoft Defender for Storage
 description: Learn about the benefits, features, and security capabilities of Microsoft Defender for Storage to protect your data and workloads.
-ms.date: 05/13/2025
+ms.date: 06/28/2026
 ms.topic: overview
 #customer intent: As a security professional, I want to understand the features and benefits of Microsoft Defender for Storage so that I can ensure the security of my data.
 ai-usage: ai-assisted
@@ -26,6 +26,8 @@ Defender for Storage includes the following features:
 - **Sensitive data threat detection** - Identify and protect sensitive data within storage accounts by detecting suspicious activities that might indicate a potential security threat. Defender for Storage enhances the security of sensitive information stored in Azure by monitoring actions such as unusual data access patterns or potential data exfiltration.
 
 - **Malware scanning** - Scan storage accounts for malware by analyzing objects for known threats and suspicious content. This helps identify and mitigate potential security risks from malicious objects that might be stored or uploaded to Azure storage accounts. As a result, it enhances the overall security posture of data storage.
+
+- **Event-driven response** - Trigger automated remediation when malware is detected by integrating with Azure Event Grid. Connect Azure Functions or Logic Apps to auto-delete, quarantine, or send alerts for malicious blobs in near real time. See [set up automated remediation for malware detection](defender-for-storage-configure-malware-scan.md).
 
 You can [enable Defender for Storage](tutorial-enable-storage-plan.md) agentlessly at the subscription level, resource level, or at scale.
 
@@ -111,7 +113,28 @@ Hash reputation analysis detects malware in Blob storage and Azure Files by comp
 
 In summary, malware scanning, available exclusively on the new plan for Blob storage, provides a comprehensive approach to malware detection. It achieves this by analyzing the full content of files and incorporating hash reputation analysis into its methodology.
 
+## Enable Defender for Storage
+
+You can enable Defender for Storage at the subscription level or the storage account level. Enabling at the subscription level is recommended to help ensure comprehensive coverage.
+
+| Scope | Coverage | Best for |
+|---|---|---|
+| Subscription | All existing and new storage accounts in the subscription are automatically protected. | Most organizations. Ensures no accounts are missed. |
+| Storage account | Protection applies to a single, specific storage account. | Scenarios where you need custom settings on individual accounts, or where subscription-level enablement isn't possible. |
+
+> [!NOTE]
+> When you enable Defender for Storage at the subscription level, you can still override settings for specific storage accounts. See [Advanced configurations for malware scanning](advanced-configurations-for-malware-scanning.md).
+
+### Enablement options
+
+- **Azure portal** - Enable interactively for one or more subscriptions. See [Enable Defender for Storage](tutorial-enable-storage-plan.md).
+- **Infrastructure as code** - Use Terraform, Bicep, or ARM templates for repeatable deployments. See [Enable Defender for Storage using infrastructure as code](defender-for-storage-infrastructure-as-code-enablement.md).
+- **PowerShell** - Enable for multiple subscriptions with a script. See [Enable at scale with PowerShell](defender-for-storage-infrastructure-as-code-enablement.md#enable-at-scale-with-powershell).
+- **Azure Policy** - Automatically enforce enablement on new subscriptions and help prevent configuration drift. See [Enable automatically with Azure Policy](defender-for-storage-infrastructure-as-code-enablement.md#enable-automatically-with-azure-policy).
+
 ## Related content
 
 - [Enable Defender for Storage](tutorial-enable-storage-plan.md)
+- [Enable Defender for Storage using infrastructure as code](defender-for-storage-infrastructure-as-code-enablement.md)
+- [Manage false-positive security recommendations for Defender for Storage](defender-for-storage-false-positive-recommendations.md)
 - Check out [common questions](faq-defender-for-storage.yml) about Defender for Storage.

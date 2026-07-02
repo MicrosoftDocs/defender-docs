@@ -5,11 +5,13 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 10/16/2024
+ms.date: 06/15/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 
 
 #Customer intent: As a security analyst, I want to visualize and monitor data on a unified dashboard so that I can efficiently track incidents, automation, data records, and analytics in my environment.
@@ -18,11 +20,13 @@ ms.collection: usx-security
 
 # Visualize collected data on the Overview page
 
-After connecting your data sources to Microsoft Sentinel, use the **Overview** page to view, monitor, and analyze activities across your environment. This article describes the widgets and graphs available on Microsoft Sentinel's **Overview** dashboard.
+After connecting your data sources to Microsoft Sentinel, use the **Overview** page to view, monitor, and analyze activities across your environment. This article describes the widgets and graphs available on Microsoft Sentinel's **Overview** dashboard, including insights into incidents, automation efficiency, data ingestion, and analytics rule status to help you quickly assess the security posture of your environment.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
 ## Prerequisites
+
+Before you access the Overview page, make sure you meet the following prerequisite:
 
 - Make sure that you have reader access to Microsoft Sentinel resources. For more information, see [Roles and permissions in Microsoft Sentinel](roles.md).
 
@@ -32,7 +36,7 @@ If your workspace is onboarded to the Microsoft Defender portal, select **Genera
 
 :::image type="content" source="media/get-visibility/dashboard.png" alt-text="Screenshot of the Microsoft Sentinel Overview dashboard.":::
 
-Data for each section of the dashboard is precalculated, and the last refresh time is shown at the top of each section. Select **Refresh** at the top of the page to refresh the entire page.
+Data for each section of the Overview dashboard is precalculated, and the last refresh time is shown at the top of each section. Select **Refresh** at the top of the page to refresh the entire page.
 
 ## View incident data
 
@@ -48,7 +52,7 @@ The **Incidents** section lists the following data:
 - The total number of incidents of each severity.
 - The number of closed incidents of each type of closing classification.
 - Incident statuses by creation time, in four hour intervals.
-- The mean time to acknowledge an incident and the mean time to close an incident, with a link to the SOC efficiency workbook.
+- The mean time to acknowledge an incident and the mean time to close an incident, with a link to the **SOC efficiency** workbook. For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](monitor-your-data.md).
 
 Select **Manage incidents** to jump to the Microsoft Sentinel **Incidents** page for more details.
 
@@ -70,9 +74,9 @@ After deploying automation with Microsoft Sentinel, monitor your workspace's aut
    - **avgWith** is the average time it takes for an incident to be resolved by automation.
    - **resolvedByAutomation** is the number of incidents that are resolved by automation.
 
-- Below the summary, a graph summarizes the numbers of actions performed by automation, by type of action.
+- The automation actions graph summarizes the numbers of actions performed by automation, by type of action.
 
-- At the bottom of the section, find a count of the active automation rules with a link to the **Automation** page. 
+- The section also includes a count of the active automation rules with a link to the **Automation** page.
 
 Select the **configure automation rules** link to the jump the **Automation** page, where you can configure more automation.
 

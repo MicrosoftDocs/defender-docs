@@ -1,5 +1,5 @@
 ---
-title: Automation in Microsoft Sentinel | Microsoft Docs
+title: Automation in Microsoft Sentinel
 description: Learn about Microsoft Sentinel security orchestration, automation, and response (SOAR) capabilities and components, including automation rules and playbooks.
 ms.topic: concept-article
 ms.author: monaberdugo

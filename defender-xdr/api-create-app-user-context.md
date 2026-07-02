@@ -23,29 +23,29 @@ appliesto:
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-This page describes how to create an application to get programmatic access to Microsoft Defender XDR on behalf of a single user.
+Create an application to get programmatic access to Microsoft Defender on behalf of a single user.
 
-If you need programmatic access to Microsoft Defender XDR without a defined user (for example, if you're writing a background app or daemon), see [Create an app to access Microsoft Defender XDR without a user](api-create-app-web.md). If you need to provide access for multiple tenants—for example, if you're serving a large organization or a group of customers—see [Create an app with partner access to Microsoft Defender XDR APIs](api-partner-access.md).If you're not sure which kind of access you need, see [Get started](api-access.md).
+If you need programmatic access to Microsoft Defender without a defined user (for example, if you're writing a background app or daemon), see [Create an app to access Microsoft Defender without a user](api-create-app-web.md). If you need to provide access for multiple tenants—for example, if you're serving a large organization or a group of customers—see [Create an app with partner access to Microsoft Defender APIs](api-partner-access.md). If you're not sure which kind of access you need, see [Get started](api-access.md).
 
-Microsoft Defender XDR exposes much of its data and actions through a set of programmatic APIs. Those APIs help you automate workflows and make use of Microsoft Defender XDR's capabilities. This API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+Microsoft Defender exposes much of its data and actions through a set of programmatic APIs. Those APIs help you automate workflows and make use of Microsoft Defender's capabilities. This API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
 In general, you'll need to take the following steps to use these APIs:
 
 - Create a Microsoft Entra application.
 - Get an access token using this application.
-- Use the token to access Microsoft Defender XDR API.
+- Use the token to access Microsoft Defender API.
 
 This article explains how to:
 
 - Create a Microsoft Entra application
-- Get an access token to Microsoft Defender XDR
+- Get an access token to Microsoft Defender
 - Validate the token
 
 > [!NOTE]
-> When accessing Microsoft Defender XDR API on behalf of a user, you will need the correct application permissions and user permissions.
+> When accessing Microsoft Defender API on behalf of a user, you need the correct application permissions and user permissions.
 
 > [!TIP]
-> If you have the permission to perform an action in the portal, you have the permission to perform the action in the API. For more information about roles and permissions, see [Manage access to Microsoft Defender XDR with Microsoft Entra global roles](m365d-permissions.md).
+> If you have the permission to perform an action in the portal, you have the permission to perform the action in the API. For more information about roles and permissions, see [Manage access to Microsoft Defender with Microsoft Entra global roles](m365d-permissions.md).
 
 ## Create an app
 
@@ -123,9 +123,9 @@ In the following image, you can see a decoded token acquired from an app, with `
 
 <a name='use-the-token-to-access-the-microsoft-365-defender-api'></a>
 
-## Use the token to access the Microsoft Defender XDR API
+## Use the token to access the Microsoft Defender API
 
-1. Choose the API you want to use (incidents, or advanced hunting). For more information, see [Supported Microsoft Defender XDR APIs](api-supported.md).
+1. Choose the API you want to use (incidents, or advanced hunting). For more information, see [Supported Microsoft Defender APIs](api-supported.md).
 2. In the http request you're about to send, set the authorization header to `"Bearer" <token>`, *Bearer* being the authorization scheme, and *token* being your validated token.
 3. The token will expire within one hour. You can send more than one request during this time  with the same token.
 
@@ -142,8 +142,8 @@ The following example shows how to send a request to get a list of incidents **u
 
 ## Related articles
 
-- [Microsoft Defender XDR APIs overview](api-overview.md)
-- [Access the Microsoft Defender XDR APIs](api-access.md)
+- [Microsoft Defender APIs overview](api-overview.md)
+- [Access the Microsoft Defender APIs](api-access.md)
 - [Create a 'Hello world' app](api-hello-world.md)
 - [Create an app to access Microsoft Defender XDR without a user](api-create-app-web.md)
 - [Create an app with multi-tenant partner access to Microsoft Defender XDR APIs](api-partner-access.md)

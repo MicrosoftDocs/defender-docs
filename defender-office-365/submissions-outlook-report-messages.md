@@ -7,13 +7,15 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier1
-description: Learn how to report phishing and suspicious emails in supported versions of Outlook using the built-in Report button.
+description: Learn how users report phishing and suspicious emails in supported Outlook clients using the built-in Report button, and how admins configure where those reports are sent and review them in Microsoft 365.
 ms.service: defender-office-365
-ms.date: 12/05/2025
+ms.date: 06/15/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: As an admin, I need to configure Outlook reporting and understand how reported phishing and suspicious emails are processed by Microsoft Defender so I can triage and remediate threats.
 ---
 
@@ -56,6 +58,8 @@ The **Report** button is available in supported versions of Outlook if both of t
 If user reporting is turned off and a non-Microsoft add-in button is selected, the **Report** button isn't available in supported versions of Outlook.
 
 ### Use the built-in Report button in Outlook to report junk and phishing messages
+
+Users can use the built-in **Report** button to report junk or phishing messages in supported versions of Outlook:
 
 - Users can report a message as junk from the Inbox or any email folder other than Junk Email folder.
 - Users can report a message as phishing from any email folder.
@@ -100,7 +104,8 @@ To review messages that users reported to Microsoft, admins can use the **User r
 > [!NOTE]
 > If the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in the organization send user reported messages (email and [Microsoft Teams](submissions-teams.md)) to Microsoft (exclusively or in addition to the reporting mailbox), we do the same checks as when admins submit messages to Microsoft for analysis from the **Submissions** page. So, submitting or resubmitting messages to Microsoft is useful to admins only for messages that were never submitted to Microsoft, or when you disagree with the original verdict.
 
-## More information
+<a name="more-information"></a>
+## Related content
 
 Admins can watch this short video to learn how to use Microsoft Defender for Office 365 to easily investigate user reported messages. Admins can determine the contents of a message and how to respond by applying the appropriate remediation action.
 

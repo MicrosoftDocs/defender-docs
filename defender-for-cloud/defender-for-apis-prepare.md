@@ -3,7 +3,7 @@ title: Support and prerequisites for deploying the Defender for APIs plan
 description: Learn about the requirements for Defender for APIs deployment in Microsoft Defender for Cloud
 ms.service: defender-for-cloud
 ms.topic: checklist
-ms.date: 03/31/2026
+ms.date: 06/29/2026
 ms.custom: references_regions
 ai-usage: ai-assisted
 ---
@@ -30,6 +30,7 @@ Defender for APIs is available in the Azure commercial cloud, in these regions:
 - South Africa (South Africa North, South Africa West)
 - Sweden (Sweden Central, Sweden South)
 - Switzerland (Switzerland North, Switzerland West)
+- UAE (UAE Central, UAE North)
 - UK (UK South, UK West)
 - US (East US, East US 2, West US, West US 2, West US 3, Central US, North Central US, South Central US, West Central US, East US 2 EUAP, Central US EUAP)
 

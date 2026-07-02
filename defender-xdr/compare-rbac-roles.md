@@ -140,7 +140,7 @@ Use the following table to learn how your existing permissions for Microsoft Def
 >
 > - Virtually all app governance experiences are controlled by Microsoft Entra ID roles **only**. The only exception is the [OAuthAppInfo table in advanced hunting](advanced-hunting-oauthappinfo-table.md). Unified RBAC permissions in Defender for Cloud Apps grant access to the app governance data in this specific table.
 >
-> - In the [unified alerts and incidents experiences in Defender XDR](investigate-alerts.md), access to app governance data is controlled by Microsoft Entra ID **only**.
+> - In the [unified alerts and incidents experiences in Defender](investigate-alerts.md), access to app governance data is controlled by Microsoft Entra ID **only**.
 >
 >   For more information about permissions in app governance, see [App governance roles](/defender-cloud-apps/app-governance-get-started#roles).
 >
@@ -193,7 +193,7 @@ The following roles aren't available in unified RBAC and must be managed in the 
 
 ### Sample permission mappings of Microsoft Sentinel built-in roles to Microsoft Defender unified RBAC roles
 
-These are examples of the permissions that can be assigned to the users based on their roles in Microsoft Sentinel. As unified RBAC provides the option to have more granular permissions on Microsoft Defender XDR, you can utilize that granularity to separate certain Microsoft Defender XDR permissions on Tier level as well. For example, you can apply Live Response Basic to Tier 1, but Live Response Advanced permission to Tier 2.
+These are examples of the permissions that can be assigned to the users based on their roles in Microsoft Sentinel XDR. As unified RBAC provides the option to have more granular permissions on Microsoft Defender XDR, you can utilize that granularity to separate certain Microsoft Defender permissions on Tier level as well. For example, you can apply Live Response Basic to Tier 1, but Live Response Advanced permission to Tier 2.
 
 If some users need only read access to Microsoft Sentinel SIEM raw data, they can also utilize Log Analytics [Granular RBAC](/azure/azure-monitor/logs/granular-rbac-log-analytics) functionality to scope access to only specific data saved in Log Analytics workspace. Please note that Granular RBAC will not scope access to Microsoft Sentinel incidents, alerts, watchlists, UEBA, TI, or any other Microsoft Sentinel SIEM features.
 
@@ -201,14 +201,14 @@ If some users need only read access to Microsoft Sentinel SIEM raw data, they ca
 |---|---|---|---|
 | Security Analysts | Microsoft Sentinel Responder | Microsoft Sentinel's Resource Group | View data, incidents, workbooks, and other Microsoft Sentinel resources. Manage incidents (assign, dismiss, etc.) |
 | Security Analysts | Microsoft Sentinel Playbook Operator | Microsoft Sentinel's Resource Group (or the Resource Group where Playbooks are stored) | List, view and run playbooks. To attach playbooks to analytics rules, Microsoft Sentinel Contributor role is needed |
-| Security Analysts | Security Operator Unified RBAC role | Microsoft Defender portal | View, investigate, and respond to security threats alerts<br />Manage Microsoft Defender XDR security settings<br />List of URBAC permissions equivalent for Security Operator Entra ID role are listed on this link:<br />/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access |
+| Security Analysts | Security Operator Unified RBAC role | Microsoft Defender portal | View, investigate, and respond to security threats alerts<br />Manage Microsoft Defender security settings<br />List of URBAC permissions equivalent for Security Operator Entra ID role are listed on this link:<br />/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access |
 | Security Engineer | Microsoft Sentinel Contributor | Microsoft Sentinel's Resource Group | View data, incidents, workbooks, and other Microsoft Sentinel resources. Manage incidents (assign, dismiss, etc.). Create and edit workbooks, analytics rules, and other Microsoft Sentinel resources. |
 | Security Engineer | Logic Apps Contributor | Microsoft Sentinel's Resource Group (or the Resource Group where Playbooks are stored) | Run and modify playbooks.<br />Attach playbooks to analytics rules and automation rules. |
 | Security Engineer | Monitoring Contributor | Subscription and/or Resource group and/or An existing data collection rule | Create or edit data collection rules |
 | Security Engineer | Log Analytics Contributor | Microsoft Sentinel's Resource Group | Use the Search feature |
 | Security Engineer | Virtual Machine Contributor Azure Connected Machine Resource Administrator | Virtual machines, virtual machine scale sets Arc-enabled servers | Deploy DCR associations (i.e. to assign rules to the machine) |
 | Security Engineer | Template Spec Contributor | Microsoft Sentinel's Resource Group | Deploy v2.0 solutions from Content hub. |
-| Security Engineer | Security Administrator Unified RBAC role | Microsoft Defender portal | Monitor security-related policies across Microsoft Defender XDR services<br />Manage security threats and alerts<br />View reports<br /><br />List of URBAC permissions equivalent for Security Administrator Entra ID role are listed on this link:<br />/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access |
+| Security Engineer | Security Administrator Unified RBAC role | Microsoft Defender portal | Monitor security-related policies across Microsoft Defender services<br />Manage security threats and alerts<br />View reports<br /><br />List of URBAC permissions equivalent for Security Administrator Entra ID role are listed on this link:<br />/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access |
 | Security Architect | Microsoft Sentinel Contributor | Microsoft Sentinel's Resource Group | View data, incidents, workbooks, and other Microsoft Sentinel resources. Manage incidents (assign, dismiss, etc.). Create and edit workbooks, analytics rules, and other Microsoft Sentinel resources. |
 | Security Architect | User Access Administrator | Microsoft Sentinel's Resource Group | This is privileged role! This permission is needed to onboard Microsoft Sentinel SIEM to Microsoft Defender portal. |
 | Security Architect | Security Administrator | Entara ID Tenant level | This is a privileged role! Users with this role have permissions to manage security-related features in the Microsoft 365 Defender portal, Microsoft Entra ID Protection, Microsoft Entra Authentication, Azure Information Protection, and Microsoft Purview compliance portal.<br /><br />This permission is needed to onboard Microsoft Sentinel SIEM to Microsoft Defender portal, offboard the workspace, or change primary/secondary workspace. |

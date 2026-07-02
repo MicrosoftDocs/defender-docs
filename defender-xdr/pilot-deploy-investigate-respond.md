@@ -1,6 +1,6 @@
 ---
-title: How do I investigate and respond using Microsoft Defender XDR?
-description: How to investigate and respond to cyberattacks using Microsoft Defender XDR.
+title: Investigate and respond to incidents in Microsoft Defender XDR
+description: Walk through attack simulations and tutorials, then use Microsoft Defender XDR to investigate and respond to incidents with automated investigation and advanced hunting.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
@@ -8,7 +8,7 @@ f1.keywords:
 ms.localizationpriority: medium
 ms.author: guywild
 author: guywi-ms
-ms.date: 03/20/2025
+ms.date: 06/15/2026
 audience: ITPro
 ms.collection: 
   - m365-security
@@ -18,6 +18,8 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 #customer intent: To learn how to investigate and respond to attacks using Microsoft Defender XDR.
 appliesto:
    - Microsoft Defender XDR
@@ -81,11 +83,11 @@ For more information, see [What is Microsoft Defender Threat Intelligence (Defen
 
 The Microsoft Defender portal has built-in capabilities to create simulated attacks on your pilot environment:
 
-- Attack simulation training for Microsoft Defender XDR for Office 365 at [https://security.microsoft.com/attacksimulator](https://security.microsoft.com/attacksimulator).
+- [Attack simulation training](https://security.microsoft.com/attacksimulator) for Microsoft Defender XDR for Office 365.
 
   In the Microsoft Defender portal, select **Email & collaboration > Attack simulation training**.
 
-- Attack tutorials & simulations for Microsoft Defender XDR for Endpoint at [https://security.microsoft.com/tutorials/simulations](https://security.microsoft.com/tutorials/simulations).
+- [Attack tutorials & simulations](https://security.microsoft.com/tutorials/simulations) for Microsoft Defender XDR for Endpoint.
 
   In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, select **Endpoints > Tutorials & simulations**.
 
@@ -151,7 +153,7 @@ First, you need to add an isolated AD DS domain controller and a Windows device 
 
    - Runs Windows 10 version 1903 or a later version.
    - Is joined to the AD DS domain controller domain.
-   - Has [Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features) enabled. If you're having trouble enabling Microsoft Defender Antivirus, see this [troubleshooting topic](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
+   - Has [Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features) enabled. If you're having trouble enabling Microsoft Defender Antivirus, see [Ensure that Microsoft Defender Antivirus is not disabled by a policy](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
    - Is [onboarded to Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 If you use tenant and device groups, create a dedicated device group for the test device and push it to top level.
@@ -286,7 +288,7 @@ Select the IP address in the alert process tree to view the IP address details p
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/fig8.png" alt-text="A screenshot of an example for unexpected behavior by a process run with no command line arguments." lightbox="media/pilot-deploy-investigate-respond/fig8.png":::
 
-The following figure displays the selected IP Address details page (clicking on IP address in the Alert process tree).
+When you select an IP address in the alert process tree, the IP address details page opens and shows additional information about the address.
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/fig9.png" alt-text="A screenshot of an example of the IP address details page." lightbox="media/pilot-deploy-investigate-respond/fig9.png":::
 
@@ -300,7 +302,7 @@ In this detection, an alert is triggered when the SMB session enumeration runs a
 
 #### Review the device timeline with Microsoft Defender for Endpoint
 
-After exploring the various alerts in this incident, navigate back to the incident page you investigated earlier. Select the **Devices** tab in the incident page to review the devices involved in this incident as reported by Microsoft Defender for Endpoint and Microsoft Defender for Identity.
+After exploring the various alerts in this incident, return to the incident's main **Incident** page in the Microsoft Defender portal. Select the **Devices** tab in the incident page to review the devices involved in this incident as reported by Microsoft Defender for Endpoint and Microsoft Defender for Identity.
 
 Select the name of the device where the attack was conducted, to open the entity page for that specific device. In that page, you can see alerts that were triggered and related events.
 
@@ -318,7 +320,7 @@ For example, scroll down until you find the alert event **Suspicious process inj
 
 On the incident page, select the **Users** tab to display the list of users involved in the attack. The table contains additional information about each user, including each user's **Investigation Priority** score.
 
-Select the user name to open the user's profile page where further investigation can be conducted. [Read more about investigating risky users](/cloud-app-security/tutorial-ueba#identify).
+Select the user name to open the user's profile page where further investigation can be conducted. For more information, see [Investigate risky users in Defender for Cloud Apps](/cloud-app-security/tutorial-ueba#identify).
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/fig13.png" alt-text="A screenshot of an example Defender for Cloud Apps user page." lightbox="media/pilot-deploy-investigate-respond/fig13.png":::
 
@@ -329,7 +331,7 @@ Select the user name to open the user's profile page where further investigation
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=340dee63-452a-4d4b-9ca3-562206a4bc23]
 
-Navigate back to the incident in the Microsoft Defender portal. The **Investigations** tab in the **Incident** page shows the automated investigations that were triggered by Microsoft Defender for Identity and Microsoft Defender for Endpoint. The screenshot below displays only the automated investigation triggered by Defender for Endpoint. By default, Defender for Endpoint automatically remediates the artifacts found in the queue, which requires remediation.
+Navigate back to the incident in the Microsoft Defender portal. The **Investigations** tab in the **Incident** page shows the automated investigations that were triggered by Microsoft Defender for Identity and Microsoft Defender for Endpoint. In this example, only the automated investigation triggered by Defender for Endpoint is displayed. By default, Defender for Endpoint automatically remediates the artifacts found in the queue, which requires remediation.
 
 :::image type="content" source="media/pilot-deploy-investigate-respond/fig14.png" alt-text="A screenshot of an example of the automated investigations related to the incident." lightbox="media/pilot-deploy-investigate-respond/fig14.png":::
 
@@ -455,7 +457,7 @@ For more information, see [Automated investigation and response](m365d-autoir.md
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=197cbd32-a06e-4efc-ade0-0c9875d7b105]
 
 
-If the [optional fileless PowerShell attack simulation](pilot-deploy-investigate-respond.md#simulate-an-attack-with-an-isolated-domain-controller-and-client-device-optional) were a real attack that had already reached the credential access stage, you can use advanced hunting at any point in the investigation to proactively search through events and records in the network using what you already know from the generated alerts and affected entities. 
+If the [optional fileless PowerShell attack simulation](pilot-deploy-investigate-respond.md#simulate-an-attack-with-an-isolated-domain-controller-and-client-device-optional) were a real attack that had already reached the credential access stage, you can use advanced hunting at any point in the incident investigation to proactively search through events and records in the network using what you already know from the generated alerts and affected entities. 
 
 For instance, based on information in the [User and IP address reconnaissance (SMB)](pilot-deploy-investigate-respond.md#alert-user-and-ip-address-reconnaissance-smb-source-microsoft-defender-for-identity) alert, you can use the `IdentityDirectoryEvents` table to find all the SMB session enumeration events, or find more discovery activities in various other protocols in Microsoft Defender for Identity data using the `IdentityQueryEvents` table.
 
@@ -477,7 +479,7 @@ There's a single internal mailbox and device required for this simulation. You'l
 
     b. Join the test device to the test domain.
 
-    c. [Turn on Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features). If you're having trouble enabling Microsoft Defender Antivirus, see [this troubleshooting topic](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
+    c. [Turn on Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features). If you're having trouble enabling Microsoft Defender Antivirus, see [Ensure that Microsoft Defender Antivirus is not disabled by a policy](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding#ensure-that-microsoft-defender-antivirus-is-not-disabled-by-a-policy).
 
     d. [Onboard to Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
@@ -580,7 +582,7 @@ Once you have created a query that identifies information that you'd like to **g
 
 Custom detections will run the query according to the frequency you set, and the results of the queries will create security alerts, based on the impacted assets you choose. Those alerts will be correlated to incidents and can be triaged as any other security alert generated by one of the products.
 
-1. On the query page, remove lines 7 and 8 that were added in step 7 of the Go hunting instructions and select **Create detection rule**.
+1. On the query page, remove the `distinct SHA1` and `invoke FileProfile()` lines you added in the previous procedure, and then select **Create detection rule**.
 
    :::image type="content" source="media/pilot-deploy-investigate-respond/advanced-hunting-incident-response-try-3.png" alt-text="A screenshot of the Query editing section of the Advanced Hunting page in the Microsoft Defender portal." lightbox="media/pilot-deploy-investigate-respond/advanced-hunting-incident-response-try-3.png":::
 
@@ -625,6 +627,7 @@ Custom detections will run the query according to the frequency you set, and the
 
 See [Get expert training on advanced hunting](advanced-hunting-expert-training.md) to get started.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 Incorporate information from [Investigate and respond with Microsoft Defender XDR](incident-response-overview.md) into your SecOps processes.

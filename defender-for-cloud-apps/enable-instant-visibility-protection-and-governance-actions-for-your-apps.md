@@ -1,9 +1,11 @@
 ---
 title: Connect apps to get visibility and control 
 description: This article describes the process for connecting apps with API connectors to apps in your organization's cloud.
-ms.date: 04/19/2026
+ms.date: 06/16/2026
 ms.topic: how-to
 ms.reviewer: Shweta Choudhary
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1014
 ---
 
 # Connect apps to get visibility and control with Microsoft Defender for Cloud Apps
@@ -17,12 +19,13 @@ Microsoft Defender for Cloud Apps uses the APIs provided by the cloud provider. 
 
 ## Multi-instance support
 
-Defender for Cloud Apps supports multiple instances of the same connected app. For example, if you have more than one instance of Salesforce (one for sales, one for marketing) you can connect both to Defender for Cloud Apps. You can manage the different instances from the same console to create granular policies and deeper investigation. This support applies only to API connected apps, not to Cloud Discovered apps, or Proxy connected apps.
+Defender for Cloud Apps supports multiple instances of the same connected app. For example, if you have more than one instance of Salesforce (one for sales, one for marketing) you can connect both to Defender for Cloud Apps. You can manage the different instances from the same console to create granular policies and deeper investigation. Multi-instance support applies only to API connected apps, not to Cloud Discovered apps, or Proxy connected apps.
 
 > [!NOTE]
 > Multi-instance isn't supported for Microsoft 365 and Azure.
 
-## How it works
+<a name="how-it-works"></a>
+## How app connectors scan and collect data
 
 Defender for Cloud Apps is deployed with system admin privileges to allow full access to all objects in your environment.
 
@@ -32,7 +35,7 @@ The App Connector flow is as follows:
 1. Defender for Cloud Apps requests the user list. The first time it makes the request, it might take some time until the scan completes. After the user scan finishes, Defender for Cloud Apps moves on to activities and files. As soon as the scan starts, some activities are available in Defender for Cloud Apps.
 1. After completion of the user request, Defender for Cloud Apps periodically scans users, groups, activities, and files. All activities are available after the first full scan.
 
-This connection might take some time depending on the size of the tenant, the number of users, and the size and number of files that need to be scanned.
+The initial app connector setup and first scan might take some time depending on the size of the tenant, the number of users, and the size and number of files that need to be scanned.
 
 Depending on the app to which you're connecting, API connection enables the following items:
 
@@ -49,7 +52,10 @@ The following tables list, per cloud app, which abilities are supported with App
 >[!NOTE]
 >Since not all app connectors support all abilities, some rows might be empty.
 
-### Users and activities
+<a name="users-and-activities"></a>
+### User and activity visibility per connected app
+
+The following table shows which user and activity visibility capabilities each app connector supports.
 
 |   App                | List accounts                        | List groups                          | List privileges                      | Log on activity                      | User activity                               | Administrative activity   |
 | ----------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------------- | ------------------------- |
@@ -83,6 +89,8 @@ The following tables list, per cloud app, which abilities are supported with App
 
 ### User, app governance, and security configuration visibility
 
+The following table lists governance and security configuration visibility features available for each connected app.
+
 |  App      | User governance     | View app permissions   | Revoke app permissions    | SaaS Security Posture Management (SSPM) |
 | --------- | ------------------- | ---------------------- | ------------------------- | --------------------------------------- |
 | [Asana](protect-asana.md)  |  |  |  |  |
@@ -113,7 +121,10 @@ The following tables list, per cloud app, which abilities are supported with App
 | [Zendesk](protect-zendesk.md)  |  |  |  | ✔ |
 |  [Zoom](protect-zoom.md)   |  |  |  | Preview  |
 
-### Information protection
+<a name="information-protection"></a>
+### Information protection capabilities per connected app
+
+The following table summarizes information protection features supported by each app connector.
 
 |     App              | DLP - Periodic backlog scan       | DLP - Near real-time scan                | Sharing control           | File governance           | Apply sensitivity labels from Microsoft Purview Information Protection |
 | ----------------- | ------------------------- | ---------------------------------------- | ------------------------- | ------------------------- | ------------------------------------------ |
@@ -147,6 +158,8 @@ The following tables list, per cloud app, which abilities are supported with App
 
 ## Prerequisites
 
+Review the following requirements before you enable app connectors.
+
 - When working with the [Microsoft 365 connector](protect-office-365.md), you'll need a license for each service where you want to view security recommendations. For example, to view recommendations for Microsoft Forms, you'll need a license that supports Forms.
 
 - For some apps, you might need to allow list IP addresses to enable Defender for Cloud Apps to collect logs and provide access for the Defender for Cloud Apps console. For more information, see [Network requirements](network-requirements.md).
@@ -158,6 +171,7 @@ The following tables list, per cloud app, which abilities are supported with App
 
 To enable an app connector for the first time, configure an API connection for the specific cloud app you want to connect. See the individual connector guides for each app for detailed instructions.
 
+### Enable an app connector
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com/).
 1. Go to **Cloud Apps** > **Connected apps**.
@@ -168,12 +182,15 @@ To enable an app connector for the first time, configure an API connection for t
 Each cloud app has its own enablement process based on the APIs it supports.
 
 
-### ExpressRoute
+<a name="expressroute"></a>
+### ExpressRoute integration with Defender for Cloud Apps
 
 Defender for Cloud Apps is deployed in Azure and fully integrated with [ExpressRoute](/azure/expressroute/expressroute-introduction). All interactions with the Defender for Cloud Apps apps and traffic sent to Defender for Cloud Apps, including upload of discovery logs, is routed via ExpressRoute for improved latency, performance, and security.
 For more information about  Microsoft Peering, see [ExpressRoute circuits and routing domains](/azure/expressroute/expressroute-circuit-peerings).
 
 ## Disable app connectors
+
+Review the following information before you disable an app connector.
 
 > [!NOTE]
 >

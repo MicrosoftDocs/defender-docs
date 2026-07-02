@@ -61,6 +61,6 @@ The following table describes web content categories you can choose for your web
 
 ## Next steps
 
-- [Set up controlled folder access](mdb-controlled-folder-access.md)
+- [Deployment and configuration methods for controlled folder access (CFA)](/defender-endpoint/controlled-folder-access-overview#deployment-and-configuration-methods-for-cfa)
 - [Enable your attack surface reduction rules](mdb-asr.md).
 - [Review settings for advanced features and the Microsoft Defender portal](mdb-portal-advanced-feature-settings.md).
