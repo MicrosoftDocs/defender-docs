@@ -60,8 +60,6 @@ This update applies to new enablement only. Existing subscriptions on these plan
 
 For migration steps, see [Introduction to Microsoft Defender for Containers](defender-for-containers-introduction.md), [Protect your servers with Defender for Servers](tutorial-enable-servers-plan.md), [Protect your key vaults with Defender for Key Vault](tutorial-enable-key-vault-plan.md), and [Protect your resources with Defender for Resource Manager](tutorial-enable-resource-manager-plan.md).
 
-To validate coverage and availability after migration, see [Support matrices for Defender for Cloud](support-matrix-defender-for-cloud.md).
-
 No official retirement date has been announced for these plans. Customers are encouraged to migrate to the recommended plans.
 
 ### New container security capabilities are now generally available
